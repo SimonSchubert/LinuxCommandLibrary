@@ -34,7 +34,7 @@ Import a **VPN** connection from file
 
 # SYNOPSIS
 
-**nmcli connection** {_show_|_up_|_down_|_add_|_modify_|_delete_|_reload_|_load_|_import_|_export_} [_ARGUMENTS_]
+**nmcli connection** {_show_|_up_|_down_|_add_|_edit_|_modify_|_clone_|_delete_|_monitor_|_reload_|_load_|_migrate_|_import_|_export_} [_ARGUMENTS_]
 
 # DESCRIPTION
 
@@ -54,17 +54,29 @@ Import a **VPN** connection from file
 **add**
 > Create a new connection profile
 
+**edit [id|uuid]**
+> Launch the interactive connection editor
+
 **modify id|uuid**
-> Change connection properties
+> Change connection properties. Property values support `+`/`-` prefixes to append or remove list items
+
+**clone id|uuid NEW_NAME**
+> Duplicate an existing profile under a new name
 
 **delete id|uuid**
 > Remove a connection profile
+
+**monitor [id|uuid]**
+> Watch activity changes for all or a specific profile in real time
 
 **reload**
 > Reload all connection files from disk
 
 **load filename**
-> Load a connection file
+> Load a single connection file on disk into NetworkManager
+
+**migrate**
+> Migrate profiles from legacy keyfile/ifcfg locations into the default store
 
 **import type TYPE file FILE**
 > Import an external connection (e.g., VPN)
@@ -84,6 +96,23 @@ Import a **VPN** connection from file
 **ipv4.method**: auto, manual, or disabled
 **ipv6.method**: auto, manual, or ignore
 **ipv4.dns**: DNS server addresses
+
+# COMMON GLOBAL OPTIONS
+
+**--ask**
+> Interactively prompt for any required but missing argument. Not suitable for scripts.
+
+**--wait** _seconds_
+> Override the default timeout when waiting on an operation such as **up**.
+
+**--active**
+> On **show**, list only currently active connections.
+
+**--offline**
+> Edit connection files without going through the running NetworkManager daemon.
+
+**--temporary**
+> On **modify**, keep the change in memory only — discarded at daemon restart.
 
 # CAVEATS
 

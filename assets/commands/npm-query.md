@@ -31,7 +31,25 @@ queries dependency graph with selectors
 # PARAMETERS
 
 _SELECTOR_
-> CSS-like query selector.
+> CSS-like query selector. Supports pseudo-classes (`:root`, `:type(dev)`, `:outdated`, `:deprecated`, `:vuln`, `:attr`, `:semver`, `:path`), attribute selectors (`[name=foo]`, `[name^=@scope]`, `[keywords=cli]`) and combinators (` `, `>`, `,`).
+
+**--global**
+> Query the globally-installed tree instead of the project.
+
+**--workspace** _NAME_
+> Restrict the query to the given workspace(s).
+
+**--workspaces**
+> Apply across every workspace.
+
+**--include-workspace-root**
+> Include the workspace root package in the results.
+
+**--package-lock-only**
+> Read from `package-lock.json` only, do not touch `node_modules`.
+
+**--expect-result-count** _N_, **--expect-results** _BOOL_
+> Make npm exit non-zero if the result count does not match.
 
 **--help**
 > Display help information.

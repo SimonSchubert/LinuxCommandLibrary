@@ -48,6 +48,39 @@ ClamAV virus database updater
 **-l** _FILE_, **--log** _FILE_
 > Log file path.
 
+**-F**, **--foreground**
+> When combined with **-d**, stay in the foreground instead of detaching.
+
+**-u** _USER_, **--user** _USER_
+> When started as root, drop privileges to the given user.
+
+**--datadir** _PATH_
+> Override the database directory (default `/var/lib/clamav`).
+
+**--stdout**
+> Write all log output to stdout.
+
+**--show-progress**
+> Show a progress bar during downloads.
+
+**--quiet**
+> Only print error messages.
+
+**--no-warnings**
+> Suppress warning messages.
+
+**--update-db** _NAME_
+> Only update the named database (`main`, `daily`, `bytecode`).
+
+**--on-update-execute** _CMD_
+> Run _CMD_ after a successful update.
+
+**--on-error-execute** _CMD_
+> Run _CMD_ when an update fails.
+
+**-V**, **--version**
+> Print version information and exit.
+
 **--help**
 > Display help information.
 

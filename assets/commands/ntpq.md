@@ -30,9 +30,6 @@ Print **NTP system variables** values
 
 # PARAMETERS
 
-**-p, --peers**
-> Print a summary of all configured peers
-
 **-n, --numeric**
 > Display addresses numerically without DNS resolution
 
@@ -43,7 +40,25 @@ Print **NTP system variables** values
 > Enable debugging output
 
 **-i, --interactive**
-> Force interactive mode
+> Force interactive mode.
+
+**-4**, **-6**
+> Resolve hostnames using IPv4 or IPv6 only.
+
+**-w, --wide**
+> Use a wider peer table so long hostnames are not truncated.
+
+**-k** _FILE_, **--keyfile** _FILE_
+> Read symmetric keys from _FILE_ for authenticated control requests.
+
+**-a** _KEYID_, **--authentication** _KEYID_
+> Use the given key id when sending authenticated queries.
+
+**-p, --peers**
+> Print a summary of all configured peers (same as interactive `peers`).
+
+**-V, --version**
+> Print version information and exit.
 
 # DESCRIPTION
 

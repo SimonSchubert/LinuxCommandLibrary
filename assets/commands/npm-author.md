@@ -35,14 +35,19 @@ configuration sets default author for new packages
 **init-author-url**
 > Package author URL.
 
-**--help**
-> Display help information.
+**init-license**
+> Default SPDX license id for new packages (default: `ISC`).
+
+**init-version**
+> Default semver version for new packages (default: `1.0.0`).
 
 # DESCRIPTION
 
-**npm author** configuration sets default author for new packages. Used by npm init.
+**npm-author** is a configuration concept rather than a standalone subcommand: it refers to the `init-author-*` keys read by **npm init** (and **npm create**) when populating the `author` field of a new `package.json`.
 
-The settings populate package.json author field. Saves time during initialization.
+Setting these values with **npm config set** once — typically in the user-level `~/.npmrc` — saves retyping them every time a new package is initialized. They can also be set per-project via a local `.npmrc`.
+
+The underlying config keys are unset by default; if they are empty, `npm init` prompts for a value interactively.
 
 # CAVEATS
 

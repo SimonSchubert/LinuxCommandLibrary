@@ -51,6 +51,12 @@ The tool can add repositories from URLs (creating .repo files automatically), en
 **--setopt** _opt=val_
 > Set configuration option
 
+**--save**
+> Persist `--setopt` changes to the appropriate configuration file (by default changes are session-only).
+
+**--dump-variables**
+> Print the effective values of the built-in DNF variables (`$releasever`, `$basearch`, …).
+
 **--help-cmd**
 > Display help
 
@@ -64,8 +70,8 @@ The tool can add repositories from URLs (creating .repo files automatically), en
 
 # CAVEATS
 
-Requires dnf-plugins-core. Repository changes require root privileges. Changes persist in /etc/yum.repos.d/.
+Requires **dnf-plugins-core** on DNF 4. On DNF 5 (Fedora 41+) the plugin has been merged into the main binary and the subcommand is invoked as **dnf5 config-manager**; most flags carry over but **--set-enabled**/**--set-disabled** become **enable**/**disable** subcommands. Repository changes require root. Changes to `.repo` files persist in `/etc/yum.repos.d/`.
 
 # SEE ALSO
 
-[dnf](/man/dnf)(8), [yum-config-manager](/man/yum-config-manager)(1)
+[dnf](/man/dnf)(8), [dnf5](/man/dnf5)(8), [yum-config-manager](/man/yum-config-manager)(1), [yum](/man/yum)(8)

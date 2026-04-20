@@ -38,4 +38,4 @@ Arch Linux specific. Only checks packages that were originally installed from th
 
 # SEE ALSO
 
-[checkupdates](/man/checkupdates)(1), [yay](/man/yay)(1), [paru](/man/paru)(1)
+[checkupdates](/man/checkupdates)(1), [yay](/man/yay)(1), [paru](/man/paru)(1), [pacman](/man/pacman)(8)

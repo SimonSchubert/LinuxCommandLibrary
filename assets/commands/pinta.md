@@ -22,11 +22,17 @@ simple image editing program
 
 # PARAMETERS
 
-**--help**
+**-h**, **--help**
 > Show help.
 
-**--version**
+**-V**, **--version**
 > Show version.
+
+**--display** _DISPLAY_
+> X11 display to open on.
+
+**--gapplication-service**
+> Run as a background D-Bus service that other apps can open files with.
 
 # DESCRIPTION
 

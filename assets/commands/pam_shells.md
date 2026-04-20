@@ -36,5 +36,5 @@ Requires **/etc/shells** to exist and contain valid shell paths (one absolute pa
 
 # SEE ALSO
 
-[pam](/man/pam)(8), [chsh](/man/chsh)(1)
+[pam](/man/pam)(8), [pam_unix](/man/pam_unix)(8), [pam_deny](/man/pam_deny)(8), [chsh](/man/chsh)(1), [getent](/man/getent)(1), [login](/man/login)(1)
 

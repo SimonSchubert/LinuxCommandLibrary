@@ -44,5 +44,5 @@ pam_ftp enables **anonymous FTP authentication** with email validation.
 
 # SEE ALSO
 
-[pam](/man/pam)(8), [vsftpd](/man/vsftpd)(8)
+[pam](/man/pam)(8), [pam_unix](/man/pam_unix)(8), [vsftpd](/man/vsftpd)(8)
 

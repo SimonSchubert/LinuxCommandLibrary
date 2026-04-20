@@ -66,4 +66,4 @@ The built-in server agent requires **Ollama** to be running locally. The A2A Pro
 
 # SEE ALSO
 
-[curl](/man/curl)(1)
+[curl](/man/curl)(1), [ollama](/man/ollama)(1)

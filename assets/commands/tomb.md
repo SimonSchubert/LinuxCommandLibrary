@@ -70,6 +70,24 @@ Encrypted storage volume manager
 **resize**
 > Change the size of a tomb
 
+**passwd**
+> Change the passphrase protecting a key file
+
+**setkey**
+> Replace the key of an existing tomb with a different one
+
+**bury**
+> Hide a key file inside a JPEG image (steganography)
+
+**exhume**
+> Recover a key file previously buried in an image
+
+**engrave**
+> Print a key as a QR code for paper backup
+
+**index**, **search**, **recompose**
+> Maintain and query a recoll full-text index of tombs
+
 **-s SIZE**
 > Specify size in megabytes
 
@@ -81,6 +99,15 @@ Encrypted storage volume manager
 
 **-o MOUNT_OPTIONS**
 > Specify mount options
+
+**--kdf** _N_
+> Use strong KDF with _N_ rounds of key derivation (hardens against brute-force).
+
+**--tomb-pwd** _FD_
+> Read passphrase from file descriptor _FD_ (for automation).
+
+**-g, --gpg-key** _KEYID_
+> Encrypt the tomb key with a GPG public key instead of a passphrase.
 
 # CAVEATS
 

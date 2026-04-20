@@ -32,7 +32,7 @@ ncurses-based GPU process monitor, similar to htop but for GPUs
 
 **nvtop** is an ncurses-based GPU process monitor, similar to htop but for GPUs. It displays real-time GPU utilization, memory usage, temperature, and running processes.
 
-The tool supports NVIDIA, AMD, and Intel GPUs, providing a unified interface for monitoring GPU resources.
+The tool supports a wide range of accelerators: NVIDIA (Kepler and newer, proprietary driver), AMD (amdgpu, kernel 5.14+), Intel (i915/Xe, kernel 5.19+), Qualcomm Adreno (msm, kernel 6.0+), Apple Silicon (M1/M2, experimental), Broadcom VideoCore on the Raspberry Pi, Rockchip NPUs, Huawei Ascend, MetaX and Enflame cards.
 
 # PARAMETERS
 
@@ -57,14 +57,21 @@ The tool supports NVIDIA, AMD, and Intel GPUs, providing a unified interface for
 **--no-header**
 > Hide header.
 
+**-h**, **--help**
+> Show help and exit.
+
+**-v**, **--version**
+> Print version information and exit.
+
 # KEYBOARD SHORTCUTS
 
 **F1/q**: Quit
-**F2**: Setup
+**F2**: Setup (interactive options window)
 **F3**: Search
 **F4**: Filter
 **F6**: Sort
 **F9**: Kill process
+**F12**: Save preferences for future sessions
 
 # CAVEATS
 
@@ -76,4 +83,4 @@ NVIDIA needs driver 410+. AMD needs ROCm. Intel needs i915 driver. Feature suppo
 
 # SEE ALSO
 
-[nvidia-smi](/man/nvidia-smi)(1), [gpustat](/man/gpustat)(1), [htop](/man/htop)(1), [radeontop](/man/radeontop)(1)
+[nvidia-smi](/man/nvidia-smi)(1), [gpustat](/man/gpustat)(1), [htop](/man/htop)(1), [radeontop](/man/radeontop)(1), [amdgpu_top](/man/amdgpu_top)(1)

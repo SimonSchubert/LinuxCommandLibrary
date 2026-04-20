@@ -65,6 +65,12 @@ Select specific **output columns**
 **-s, --sysroot** _DIR_
 > Gather memory data for another Linux instance.
 
+**-P, --pairs**
+> Produce key="value" output, suitable for shell `eval`.
+
+**-h, --help**, **-V, --version**
+> Show help or version information.
+
 # CAVEATS
 
 Only available on Linux. Requires sysfs to be mounted. Shows kernel's view of memory, not physical DIMM information.

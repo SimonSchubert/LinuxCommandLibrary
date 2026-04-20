@@ -91,4 +91,4 @@ Various **chatgpt-cli** implementations emerged after OpenAI released the ChatGP
 
 # SEE ALSO
 
-[llm](/man/llm)(1), [ollama](/man/ollama)(1), [sgpt](/man/sgpt)(1)
+[llm](/man/llm)(1), [ollama](/man/ollama)(1), [sgpt](/man/sgpt)(1), [aichat](/man/aichat)(1)

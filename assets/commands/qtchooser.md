@@ -45,6 +45,15 @@ Display **help**
 **--install _name_ _path_**
 > Register a Qt installation
 
+**-qt=**_version_
+> Short form of **--qt**, accepted directly on wrapper binaries (e.g. `qmake -qt=5`).
+
+**-run-tool=**_tool_
+> Short form of **--run-tool**.
+
+**-list-versions**, **-print-env**
+> Single-dash aliases of the corresponding long options.
+
 # DESCRIPTION
 
 **qtchooser** manages multiple Qt installations on a system. It allows developers to switch between different Qt versions (Qt4, Qt5, Qt6) for building applications.
@@ -64,7 +73,7 @@ The tool wraps Qt development binaries (qmake, moc, uic, etc.) and directs them 
 
 # CAVEATS
 
-Not all distributions use qtchooser.
+Not all distributions use qtchooser; Debian/Ubuntu still do, but Fedora and Arch dropped the wrapper in favor of qualified binary names (`qmake-qt5`, `qmake6`). Qt 6 installations frequently do not register themselves — you may need to **--install** them manually.
 
 # HISTORY
 

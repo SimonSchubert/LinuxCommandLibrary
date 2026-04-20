@@ -40,17 +40,20 @@ Packages not found in local node_modules are automatically installed into a glob
 
 # PARAMETERS
 
-**-p, --package** _name_
-> Specify package when binary name differs
+**-p**, **--package** _name_
+> Specify the package to install when the binary name differs from the package name.
 
 **--bun**
-> Force running with Bun instead of Node.js
+> Force running with Bun even if the executable carries a Node shebang.
 
-**-c, --config** _file_
-> Specify bunfig.toml config file
+**--no-install**
+> Fail instead of fetching when the package is not already cached.
 
 **--silent**
-> Suppress output
+> Suppress installation-related output.
+
+**--verbose**
+> Print extra detail during installation.
 
 # BEHAVIOR
 

@@ -78,9 +78,15 @@ manages instance flavors in OpenStack
 
 # DESCRIPTION
 
-**openstack flavor** manages instance flavors (size templates) in OpenStack. Flavors define compute, memory, and storage resources for virtual machines. Part of OpenStack unified CLI.
+**openstack flavor** manages instance flavors (size templates) in OpenStack Nova. Flavors define compute, memory and storage resources for virtual machines. Properties set via **--property** (aka extra_specs) control scheduler and hypervisor behavior — common keys include `hw:cpu_policy`, `hw:mem_page_size`, `hw:numa_nodes`, `quota:disk_read_bytes_sec` and `aggregate_instance_extra_specs:*`. The **set** command can also add or remove tenant access for private flavors via `--project` / `--project-domain`.
+
+Part of OpenStack unified CLI (`python-openstackclient`), superseding the old `nova flavor-*` commands.
+
+# CAVEATS
+
+Modifying a flavor is not possible in-place: change a property via **set**/**unset**, or delete and recreate for size changes. Running instances continue to use the original flavor. Admin role is required for create/delete and for setting most properties.
 
 # SEE ALSO
 
-[openstack-server](/man/openstack-server)(1), [openstack](/man/openstack)(1)
+[openstack](/man/openstack)(1), [openstack-server](/man/openstack-server)(1), [openstack-image](/man/openstack-image)(1), [openstack-volume](/man/openstack-volume)(1)
 

@@ -4,17 +4,21 @@ generates shell completion scripts
 
 # TLDR
 
-**Generate bash completion**
+**Print the completion script** (same output for bash and zsh)
+
+```npm completion```
+
+**Load completion for the current bash session**
+
+```source <(npm completion)```
+
+**Persist for bash**
 
 ```npm completion >> ~/.bashrc```
 
-**Generate zsh completion**
+**Persist for zsh** (requires `compinit` to be loaded first)
 
 ```npm completion >> ~/.zshrc```
-
-**Output completion script**
-
-```npm completion```
 
 # SYNOPSIS
 
@@ -33,7 +37,7 @@ The command outputs script to stdout. Append to shell rc file.
 
 # CAVEATS
 
-Requires shell restart. Bash and zsh supported. Source after adding.
+Only **bash** and **zsh** are supported. The script will do nothing under other shells (fish, PowerShell). When used in zsh, `bashcompinit` must be active, which zsh's own `compinit` handles automatically in any modern setup. Reload the shell (or `source` the rc file) after appending.
 
 # HISTORY
 

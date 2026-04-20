@@ -98,4 +98,4 @@ Requires root/sudo privileges and a wireless adapter supporting monitor mode and
 
 # SEE ALSO
 
-[aircrack-ng](/man/aircrack-ng)(1), [hashcat](/man/hashcat)(1), [tcpdump](/man/tcpdump)(1), [iwconfig](/man/iwconfig)(8)
+[aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1), [hashcat](/man/hashcat)(1), [tcpdump](/man/tcpdump)(1), [iwconfig](/man/iwconfig)(8)

@@ -45,6 +45,15 @@ CSS code quality checker
 **--list-rules**
 > Show all available rules.
 
+**--quiet**
+> Suppress the `csslint: There are <n> problems` summary line.
+
+**--version**
+> Print the csslint version and exit.
+
+**--help**
+> Show usage information.
+
 # DESCRIPTION
 
 **csslint** is a tool for checking CSS code quality. It identifies potential problems like inefficient selectors, browser compatibility issues, and stylistic errors. The tool checks for patterns that may cause cross-browser issues, performance problems, or maintenance difficulties.
@@ -58,4 +67,4 @@ Rules are categorized by severity and cover topics like selector performance, bo
 
 # SEE ALSO
 
-[stylelint](/man/stylelint)(1), [sass](/man/sass)(1)
+[sass](/man/sass)(1), [prettier](/man/prettier)(1), [postcss](/man/postcss)(1)

@@ -37,10 +37,16 @@ Darling is particularly useful for developers who need to test macOS application
 # PARAMETERS
 
 **shell** [_command_]
-> Run a command or open interactive shell
+> Run a command, or open an interactive macOS shell when no argument is given.
 
 **shutdown**
-> Stop the Darling service
+> Stop the Darling service and unmount the prefix.
+
+**version**
+> Print the Darling version.
+
+**help**
+> Show usage information.
 
 # CAVEATS
 
@@ -52,4 +58,4 @@ Not all macOS software is compatible. Requires the Darling kernel module. Perfor
 
 # SEE ALSO
 
-[wine](/man/wine)(1)
+[wine](/man/wine)(1), [proton](/man/proton)(1)

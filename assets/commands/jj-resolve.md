@@ -29,14 +29,14 @@ helps resolve merge conflicts
 _PATH_
 > Specific file to resolve.
 
-**--list**
-> List files with conflicts.
+**-l**, **--list**
+> List files with conflicts instead of launching a merge tool.
 
 **--tool** _NAME_
-> Merge tool to use.
+> Merge tool to use. The tool must be configured in `ui.merge-editor` or `merge-tools.<name>`. Mutually exclusive with **--list**.
 
-**-r** _REV_
-> Revision with conflicts.
+**-r**, **--revision** _REVSET_
+> Revision whose conflicts should be resolved (default `@`).
 
 **--help**
 > Display help information.
@@ -57,4 +57,4 @@ jj resolve is part of **Jujutsu**, supporting its unique approach to treating co
 
 # SEE ALSO
 
-[jj](/man/jj)(1), [jj-squash](/man/jj-squash)(1), [jj-status](/man/jj-status)(1)
+[jj](/man/jj)(1), [jj-squash](/man/jj-squash)(1), [jj-status](/man/jj-status)(1), [jj-new](/man/jj-new)(1), [jj-describe](/man/jj-describe)(1)

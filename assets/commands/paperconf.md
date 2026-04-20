@@ -30,20 +30,41 @@ displays paper size information
 
 # PARAMETERS
 
-_PAPER_
-> Paper name (a4, letter, etc.).
+**-p** _PAPER_
+> Select the paper name to query (a4, letter, legal, …). Without this, the system default is used.
+
+**-d**
+> Use libpaper's built-in default instead of the system setting.
+
+**-a**
+> Iterate over every known paper.
+
+**-n**
+> Print the paper name.
+
+**-N**
+> Print the paper name with the first letter capitalized.
+
+**-s**
+> Print size as width followed by height.
 
 **-w**
-> Show width.
+> Print width.
 
 **-h**
-> Show height.
+> Print height.
+
+**-c**
+> Express dimensions in centimetres.
 
 **-m**
-> Output in millimeters.
+> Express dimensions in millimetres.
 
-**-p** _PAPER_
-> Specify paper type.
+**-i**
+> Express dimensions in inches (default is PostScript points).
+
+**-z**
+> Return an error when an unknown paper is given instead of falling back.
 
 # DESCRIPTION
 

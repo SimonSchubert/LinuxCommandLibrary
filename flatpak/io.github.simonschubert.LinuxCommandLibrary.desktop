@@ -6,5 +6,5 @@ Icon=io.github.simonschubert.LinuxCommandLibrary
 Type=Application
 Categories=Utility;
 Keywords=Linux;Command;Terminal;Reference;Cheatsheet;
-StartupWMClass=compose-window
+StartupWMClass=com-linuxcommandlibrary-MainKt
 Terminal=false

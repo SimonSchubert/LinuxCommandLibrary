@@ -31,25 +31,58 @@ creates and verifies signatures
 # PARAMETERS
 
 **-G**
-> Generate key pair.
+> Generate a new key pair.
 
 **-S**
-> Sign file.
+> Sign a file.
 
 **-V**
-> Verify signature.
+> Verify a signature.
+
+**-R**
+> Re-create a public key file from an existing secret key.
 
 **-m** _FILE_
-> File to sign/verify.
+> File to sign or verify.
+
+**-o**
+> With **-S**, emit a pre-hashed signature (required for files >1 GiB).
+
+**-H**
+> With **-V**, require the signature to be a pre-hashed signature.
+
+**-q**
+> Quiet mode; suppress the "Comment" banner on successful verification.
+
+**-Q**
+> Pretty-print the public key and the signature comment.
+
+**-s** _FILE_
+> Secret key file (default `~/.minisign/minisign.key`).
 
 **-p** _FILE_
 > Public key file.
 
 **-P** _KEY_
-> Public key string.
+> Public key supplied on the command line (base64).
+
+**-x** _FILE_
+> Signature file path (default `<input>.minisig`).
 
 **-c** _COMMENT_
-> Signature comment.
+> Untrusted comment stored in the signature.
+
+**-t** _COMMENT_
+> Trusted comment (signed, cannot be tampered with without invalidating the signature).
+
+**-f**
+> Force: overwrite existing files without prompting.
+
+**-W**
+> Do not encrypt the newly generated secret key.
+
+**-v**
+> Show the minisign version and exit.
 
 **--help**
 > Display help information.
@@ -70,5 +103,5 @@ Minisign was created by **Frank Denis** as a dead-simple tool for signing files.
 
 # SEE ALSO
 
-[gpg](/man/gpg)(1), [signify](/man/signify)(1), [age](/man/age)(1)
+[gpg](/man/gpg)(1), [age](/man/age)(1), [ssh-keygen](/man/ssh-keygen)(1)
 

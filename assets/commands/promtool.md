@@ -72,7 +72,16 @@ Prometheus configuration and query utility
 > Get all debug information.
 
 **tsdb** _subcommand_
-> TSDB database operations.
+> TSDB database operations (`analyze`, `dump`, `create-blocks-from`, `list`, `bench write`).
+
+**check service-discovery** _FILE_ _JOB_
+> Validate service-discovery configuration.
+
+**check web-config** _FILE_
+> Validate Prometheus web / TLS configuration.
+
+**push metrics** _URL_ _FILE_
+> Push a file of Prometheus exposition to the given remote write endpoint.
 
 **--start** _TIME_
 > Query start time.

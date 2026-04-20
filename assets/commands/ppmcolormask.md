@@ -1,73 +1,65 @@
 # TAGLINE
 
-Create bitmap mask from color selection
+Create a PBM mask from one or more colors in a PPM image
 
 # TLDR
 
-**Create mask for color**
+**Mask a single color** (modern syntax)
 
-```ppmcolormask [color] [input.ppm] > [mask.pbm]```
+```ppmcolormask -color=[red] [input.ppm] > [mask.pbm]```
 
-**Mask for red**
+**Mask several colors at once**
 
-```ppmcolormask red [input.ppm] > [mask.pbm]```
+```ppmcolormask -color=[red,pink,salmon] [input.ppm] > [mask.pbm]```
 
-**Mask for hex color**
+**Use a hex/RGB color**
 
-```ppmcolormask "#ff0000" [input.ppm] > [mask.pbm]```
+```ppmcolormask -color=[rgb:ff/00/00] [input.ppm] > [mask.pbm]```
 
-**Mask for RGB value**
+**Use Berlin-Kay fuzzy color matching**
 
-```ppmcolormask "rgb:ff/00/00" [input.ppm] > [mask.pbm]```
+```ppmcolormask -color=[bk:red,bk:orange] [input.ppm] > [mask.pbm]```
+
+**Obsolete positional form** (single exact color)
+
+```ppmcolormask [red] [input.ppm] > [mask.pbm]```
+
+**Feed a non-PPM image via pipe**
+
+```jpegtopnm [photo.jpg] | ppmcolormask -color=[white] > [mask.pbm]```
 
 # SYNOPSIS
+
+**ppmcolormask** **-color=**_color_list_ [_ppmfile_]
 
 **ppmcolormask** _color_ [_ppmfile_]
 
 # PARAMETERS
 
-**color**
-> Target color (name, hex, or rgb format).
+**-color=**_color_list_
+> Mandatory. Comma-separated list of colors to mask. Each color may be a named color (`red`), a hex/rgb specifier (`rgb:ff/00/00`, `#ff0000`), or a Berlin-Kay fuzzy match prefixed with `bk:`.
+
+**-quiet**
+> Common libnetpbm option: suppress informational messages on stderr.
 
 # DESCRIPTION
 
-**ppmcolormask** creates a bitmap mask from a PPM image where matching pixels are white (1) and non-matching are black (0). Useful for selecting regions by color.
+**ppmcolormask** reads a PPM image and writes a PBM bitmap of the same dimensions. In the output, pixels matching any color in the **-color** list are **black**; all other pixels are **white**. The resulting mask is meant to be fed to programs such as **pamcomp** (as an alpha channel) or used with **pnmpaste** for region replacement.
 
-Part of Netpbm toolkit.
+The Berlin-Kay (`bk:`) form applies a Sugeno-type fuzzy inference over HSV values, so related shades of a named color all match. The positional (non-`-color`) form is retained only for backwards compatibility and supports just one exact color.
 
-# EXAMPLES
-
-```bash
-# Mask white pixels
-ppmcolormask white image.ppm > white_mask.pbm
-
-# Mask specific color
-ppmcolormask "#00ff00" image.ppm > green_mask.pbm
-
-# Use mask to replace color
-ppmcolormask blue original.ppm > mask.pbm
-pnmpaste replacement.ppm 0 0 original.ppm -and mask.pbm > result.ppm
-
-# Chain with conversion
-jpegtopnm photo.jpg | ppmcolormask red | pnmtopng > red_mask.png
-```
-
-# COLOR FORMATS
-
-```
-Named:  red, green, blue, white, black...
-Hex:    #rrggbb or #rgb
-RGB:    rgb:rr/gg/bb
-```
+If _ppmfile_ is omitted, input is read from standard input; output is always written to standard output.
 
 # CAVEATS
 
-Exact color match only. For range matching, use pamfunc or similar. Output is PBM bitmap.
+The non-`bk:` match is exact — small rounding differences from JPEG or scaling can miss pixels. For range or tolerance-based matching, use **pambackground** (for background selection) or pre-quantize the image with **ppmquant**.
+
+Output is always PBM, so a mask cannot encode partial transparency; convert with **pgmtopbm** or use `pnmtopng -transparent` if that is what you actually need.
 
 # HISTORY
 
-ppmcolormask is part of **Netpbm** by **Jef Poskanzer**, providing color-based masking functionality.
+**ppmcolormask** is part of the **Netpbm** toolkit originally written by **Jef Poskanzer**. The `-color` form (accepting a color list and Berlin-Kay matching) superseded the positional-color form in Netpbm 10.32.
 
 # SEE ALSO
 
-[pammasksharpen](/man/pammasksharpen)(1), [pnmcomp](/man/pnmcomp)(1), [pgmtopbm](/man/pgmtopbm)(1), [netpbm](/man/netpbm)(1)
+[pamcomp](/man/pamcomp)(1), [ppmchange](/man/ppmchange)(1), [pambackground](/man/pambackground)(1), [pbmmask](/man/pbmmask)(1), [pnmtopng](/man/pnmtopng)(1), [pnmcomp](/man/pnmcomp)(1), [netpbm](/man/netpbm)(1)

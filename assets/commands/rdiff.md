@@ -34,13 +34,31 @@ Compute and apply rsync-style file deltas
 # PARAMETERS
 
 **-b** _blocksize_
-> Block size for signature.
+> Block size (bytes) for the signature. Smaller = more accurate delta but larger signature.
 
 **-s**, **--statistics**
-> Show statistics.
+> Print signature / delta timing and size statistics.
 
 **-S** _sum_
-> Strong checksum length.
+> Length (bytes) of the strong checksum in the signature (default 8).
+
+**-H** _hash_
+> Hash algorithm: `md4` (legacy) or `blake2` (default for librsync ≥ 2).
+
+**-R**, **--rollsum**, **-I**, **--rabinkarp**
+> Select the rolling checksum variant (rabinkarp is the default).
+
+**-f**, **--force**
+> Overwrite the output file if it already exists.
+
+**-z**, **--compress** _FORMAT_
+> Compress deltas with `gzip` or `bzip2` when writing.
+
+**-v**, **--verbose**
+> Increase verbosity. Repeat for more detail.
+
+**-V**, **--version**
+> Print librsync version and exit.
 
 # DESCRIPTION
 

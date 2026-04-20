@@ -56,7 +56,34 @@ List commit objects in reverse chronological order
 > Show ancestry path.
 
 **--objects**
-> Include objects.
+> Include all referenced object IDs (trees, blobs), useful for packing.
+
+**--all**
+> Walk every ref under `refs/`, plus HEAD.
+
+**--branches**[=_pattern_], **--tags**[=_pattern_], **--remotes**[=_pattern_]
+> Walk matching refs under the respective namespace.
+
+**--no-merges**, **--merges**
+> Exclude or include merge commits (equivalent to `--max-parents=1` / `--min-parents=2`).
+
+**--min-parents** _n_, **--max-parents** _n_
+> Filter commits by parent count.
+
+**--reverse**
+> Print commits in chronological order.
+
+**--topo-order**, **--date-order**
+> Order output topologically or by commit date.
+
+**--left-right**
+> With `A...B`, mark commits as `<` (from A) or `>` (from B).
+
+**--boundary**
+> Include excluded boundary commits, prefixed with `-`.
+
+**--grep** _pattern_, **--committer** _pattern_
+> Filter by commit message / committer identity, in addition to **--author**.
 
 # DESCRIPTION
 
@@ -66,4 +93,4 @@ Common uses include counting commits, finding merge bases, and building commit r
 
 # SEE ALSO
 
-[git-log](/man/git-log)(1), [git-rev-parse](/man/git-rev-parse)(1)
+[git-log](/man/git-log)(1), [git-rev-parse](/man/git-rev-parse)(1), [git-cherry](/man/git-cherry)(1)

@@ -93,6 +93,30 @@ free, open-source office productivity suite including word processor
 **--terminate_after_init**
 > Exit after loading (for testing).
 
+**--norestore**
+> Disable automatic crash recovery.
+
+**--nologo**
+> Suppress the splash screen on startup.
+
+**--nolockcheck**
+> Disable checks for remote running instances.
+
+**--invisible**
+> Start without any UI (no window, no tray icon).
+
+**--cat** _file_
+> Dump document text content to standard output, then exit.
+
+**-p** _file..._
+> Print the given files to the default printer and exit.
+
+**--pt** _printer_ _file..._
+> Print to the named printer and exit.
+
+**--version**
+> Print version information and exit.
+
 **--help**
 > Display help.
 
@@ -153,4 +177,4 @@ Headless conversion requires the full LibreOffice installation. Some complex doc
 
 # SEE ALSO
 
-[pandoc](/man/pandoc)(1), [wkhtmltopdf](/man/wkhtmltopdf)(1), [unoconv](/man/unoconv)(1), [abiword](/man/abiword)(1)
+[pandoc](/man/pandoc)(1), [wkhtmltopdf](/man/wkhtmltopdf)(1), [unoconv](/man/unoconv)(1)

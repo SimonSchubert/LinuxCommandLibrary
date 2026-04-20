@@ -49,6 +49,12 @@ native graph database platform for connected data
 **console**
 > Run in foreground.
 
+**version**
+> Print Neo4j version information and exit.
+
+**help**
+> Print usage information for the **neo4j** launcher.
+
 # DESCRIPTION
 
 **Neo4j** is a native graph database platform for connected data. It uses the Cypher query language and stores data as nodes and relationships.
@@ -80,7 +86,7 @@ RETURN n.name, m.name
 
 # CAVEATS
 
-Memory-intensive for large graphs. Community edition single-node only. Requires Java. Default browser UI on port 7474.
+Memory-intensive for large graphs. Community edition is single-node only. Requires Java 21 or later (starting with the 2025 calendar-versioned releases). Default endpoints: Neo4j Browser on port **7474**, Bolt protocol on port **7687**. Administrative actions (initial password, dump/load, database create) are handled by **neo4j-admin**, not **neo4j**.
 
 # HISTORY
 
@@ -88,4 +94,4 @@ Neo4j was developed by **Neo4j, Inc.** (originally Neo Technology), with version
 
 # SEE ALSO
 
-[cypher-shell](/man/cypher-shell)(1), [redis](/man/redis)(1), [mongodb](/man/mongodb)(1)
+[cypher-shell](/man/cypher-shell)(1), [redis-cli](/man/redis-cli)(1), [mongosh](/man/mongosh)(1)

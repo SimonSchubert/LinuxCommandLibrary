@@ -60,19 +60,64 @@ The `bootstrap` command creates an initial single-node cluster with a monitor an
 **shell**
 > Enter interactive shell in Ceph container
 
+**enter**
+> Run a command inside an existing Ceph container
+
+**ls**
+> List all Ceph daemons running on this host
+
+**ps**
+> Show status of daemons (alias of `ls --no-extra-info`)
+
+**check-host**
+> Verify host prerequisites (packages, time sync, container runtime)
+
+**prepare-host**
+> Install missing prerequisites
+
+**gather-facts**
+> Collect host inventory information
+
+**adopt**
+> Adopt a daemon from a legacy (non-cephadm) deployment
+
 **logs**
 > View daemon logs
+
+**rm-cluster**
+> Destroy the local cluster state (dangerous)
 
 # PARAMETERS
 
 **--mon-ip** _ip_
 > Monitor IP address for bootstrap
 
+**--cluster-network** _CIDR_
+> Restrict the OSD replication network to the given subnet.
+
+**--ssh-user** _USER_
+> User cephadm should SSH to remote hosts as (default `root`).
+
+**--initial-dashboard-user**, **--initial-dashboard-password**
+> Credentials for the Ceph Dashboard created during bootstrap.
+
+**--skip-dashboard**
+> Do not enable the dashboard.
+
+**--fsid** _UUID_
+> Reuse an existing cluster FSID instead of generating one.
+
 **--name** _name_
 > Service or daemon name
 
 **--image** _image_
 > Container image to use
+
+**--docker**
+> Force the use of Docker instead of Podman.
+
+**-v**, **--verbose**
+> Increase logging verbosity.
 
 # CAVEATS
 

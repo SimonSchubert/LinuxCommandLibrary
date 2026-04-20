@@ -1,74 +1,92 @@
 # TAGLINE
 
-Write OS images to SD cards for Raspberry Pi
+Write OS images to SD cards and USB drives for Raspberry Pi
 
 # TLDR
 
-**Start Raspberry Pi Imager**
+**Launch the GUI**
 
 ```rpi-imager```
 
-**Write image to device**
+**Write an image in headless CLI mode**
 
 ```rpi-imager --cli [image.img] [/dev/sdX]```
 
-**Enable SSH during imaging**
+**Write and verify against a known SHA-256**
 
-```rpi-imager --cli --enable-ssh [image.img] [/dev/sdX]```
+```rpi-imager --cli --sha256 [hash] [image.img] [/dev/sdX]```
 
-**Set hostname**
+**Write without verification (faster, no integrity check)**
 
-```rpi-imager --cli --hostname [mypi] [image.img] [/dev/sdX]```
+```rpi-imager --cli --disable-verify [image.img] [/dev/sdX]```
 
-**Configure WiFi**
+**Quiet CLI mode** (suitable for scripts)
 
-```rpi-imager --cli --wifi-ssid [network] --wifi-password [pass] [image.img] [/dev/sdX]```
+```rpi-imager --cli --quiet [image.img] [/dev/sdX]```
+
+**Use a custom OS list repository**
+
+```rpi-imager --repo [https://your-host/os-list.json]```
+
+**Disable telemetry**
+
+```rpi-imager --disable-telemetry```
 
 # SYNOPSIS
 
-**rpi-imager** [_--cli_] [_options_] [_image_] [_device_]
+**rpi-imager** [**--cli**] [_options_] [_image_] [_device_]
 
 # PARAMETERS
 
 **--cli**
-> Command-line mode.
+> Command-line mode — no GUI is shown.
 
-**--enable-ssh**
-> Enable SSH.
+**--debug**
+> Verbose debug output; on Windows a console window is attached.
 
-**--hostname** _NAME_
-> Set hostname.
+**--version**
+> Print the application version and exit.
 
-**--wifi-ssid** _SSID_
-> WiFi network.
+**--repo** _URL_
+> Load the OS list from a custom URL or local file path.
 
-**--wifi-password** _PASS_
-> WiFi password.
+**--qm** _FILE_
+> Load a custom Qt `.qm` translation file.
 
-**--first-run-script** _FILE_
-> Custom setup script.
+**--refresh-interval** _MIN_
+> Seconds between OS-list refreshes (minimum 1440 minutes when non-zero).
 
-**--locale** _LOCALE_
-> System locale.
+**--refresh-jitter** _MIN_
+> Jitter added to the refresh interval (minimum 180 minutes when non-zero).
 
-**--timezone** _TZ_
-> Timezone.
+**--disable-telemetry**, **--enable-telemetry**
+> Turn off or restore telemetry. The setting is persisted.
+
+**--disable-verify**
+> CLI only. Skip the post-write re-read verification pass.
+
+**--sha256** _HASH_
+> CLI only. Verify the written data matches the given SHA-256.
+
+**--quiet**
+> CLI only. Suppress progress output.
+
+**--help**
+> Display usage information.
 
 # DESCRIPTION
 
-**rpi-imager** is the official Raspberry Pi Foundation tool for writing operating system images to SD cards and USB drives. It offers both a graphical interface for interactive use and a **--cli** mode for scripted, headless image writing.
+**rpi-imager** is the official Raspberry Pi imaging tool for writing operating-system images onto SD cards and USB drives. The GUI handles image discovery, download, and first-boot customization (hostname, SSH, Wi-Fi, locale, timezone, user account). The **--cli** mode is a scripting interface: it writes a single image to a single device and verifies the result. Customization options such as hostname and Wi-Fi are only exposed in the GUI — they are not CLI flags.
 
-A key feature is pre-boot configuration: options like **--enable-ssh**, **--hostname**, **--wifi-ssid**, and **--wifi-password** inject settings into the image before first boot, enabling headless Raspberry Pi setup without ever connecting a monitor or keyboard. Additional customization includes locale, timezone, and first-run scripts for automated provisioning.
-
-The tool downloads and caches official Raspberry Pi OS images along with third-party operating systems, and verifies write integrity by comparing checksums after writing to detect SD card corruption.
+The tool downloads and caches official and third-party images from a JSON list, verifies the download by checksum, and re-reads the device after writing to detect silently failing SD cards.
 
 # CAVEATS
 
-Requires root/admin for device access. Wrong device selection destroys data. Verify target carefully.
+Writing requires root/admin privileges on the target device; selecting the wrong device destroys data — verify the path twice. Preseeding SSH/Wi-Fi from a script requires the GUI (which writes a cloud-init-style `firstrun` payload) or a separate tool such as `systemd-firstboot`.
 
 # HISTORY
 
-**rpi-imager** was released by the **Raspberry Pi Foundation** in **2020** to replace third-party imaging tools. It simplifies SD card preparation with built-in customization.
+**rpi-imager** was released by **Raspberry Pi Ltd** in **March 2020** to replace third-party imaging tools. The **--cli** mode, SHA-256 verification, and telemetry controls were added in subsequent releases.
 
 # SEE ALSO
 
