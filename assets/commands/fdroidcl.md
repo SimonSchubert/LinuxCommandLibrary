@@ -24,6 +24,18 @@ command-line client for F-Droid repository
 
 ```fdroidcl show [app.id]```
 
+**Refresh repository** index
+
+```fdroidcl update```
+
+**List connected Android devices**
+
+```fdroidcl devices```
+
+**Download an APK** without installing
+
+```fdroidcl download [app.id]```
+
 # SYNOPSIS
 
 **fdroidcl** _command_ [_options_] [_arguments_]

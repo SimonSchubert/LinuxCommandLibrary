@@ -67,6 +67,18 @@ _PATH1_ _PATH2_
 **-S** _arg_, **--skin=**_arg_
 > Specify skin name.
 
+**-P** _FILE_, **--printwd=**_FILE_
+> Write the last working directory of the panel to _FILE_ on exit (used by the **mc** wrapper script so that quitting with **F10** cd's the outer shell).
+
+**-F**, **--datadir-info**
+> Print the compiled-in data-directory paths and exit.
+
+**-g**, **--oldmouse**
+> Use "normal tracking" mouse mode (for terminals that do not support the modern protocol).
+
+**-X**, **--no-x11**
+> Do not use X11 to query modifier-key state.
+
 **--help**
 > Display help information.
 

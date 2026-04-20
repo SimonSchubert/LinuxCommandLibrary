@@ -24,6 +24,10 @@ Set default file creation permission mask
 
 ```umask [000]```
 
+**Set symbolic mask**
+
+```umask u=rwx,g=rx,o=rx```
+
 # SYNOPSIS
 
 **umask** [_-S_] [_mode_]

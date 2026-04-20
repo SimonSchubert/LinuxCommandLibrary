@@ -8,6 +8,22 @@ Configurable and extensible terminal email client
 
 ```meli```
 
+**Use a specific configuration file**
+
+```meli --config [path/to/config.toml]```
+
+**Create or edit a draft** from stdin
+
+```meli compose < [draft.txt]```
+
+**Print a sample configuration**
+
+```meli --print-default-config```
+
+**List available themes**
+
+```meli --print-default-theme```
+
 # SYNOPSIS
 
 **meli** [_options_]

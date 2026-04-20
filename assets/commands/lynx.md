@@ -28,6 +28,18 @@ text-based web browser
 
 ```lynx -cfg=[config.cfg] [url]```
 
+**Dump without link list**
+
+```lynx -dump -nolist [url]```
+
+**Send a POST request**
+
+```lynx -post_data [url] < [data_file]```
+
+**Set a custom user agent**
+
+```lynx -useragent="[MyAgent/1.0]" [url]```
+
 # SYNOPSIS
 
 **lynx** [_options_] [_url_]
@@ -50,7 +62,25 @@ _URL_
 > Configuration file.
 
 **-nolist**
-> Dump without link list.
+> Dump without list of references at end of document.
+
+**-post_data**
+> Send form data via POST from stdin.
+
+**-useragent** _STRING_
+> Set custom User-Agent header.
+
+**-auth** _USER:PASS_
+> HTTP basic authentication credentials.
+
+**-head**
+> Send a HEAD request and show headers.
+
+**-width** _N_
+> Screen width for formatting (default 80).
+
+**-traversal**
+> Crawl links starting from the URL.
 
 **--help**
 > Display help information.

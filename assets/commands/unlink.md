@@ -1,48 +1,54 @@
 # TAGLINE
 
-Remove a single file via system call
+Remove a single file via the unlink(2) system call
 
 # TLDR
 
-**Remove file**
+**Remove a regular file**
 
 ```unlink [file]```
 
-**Remove symlink**
+**Remove a symbolic link (removes the link, not the target)**
 
 ```unlink [symlink]```
 
+**Display version information**
+
+```unlink --version```
+
 # SYNOPSIS
 
-**unlink** _file_
+**unlink** _FILE_
+
+**unlink** _OPTION_
 
 # PARAMETERS
 
-_file_
-> File to remove.
+_FILE_
+> Exactly one file path to unlink.
 
 **--help**
-> Show help.
+> Display a brief help message and exit.
 
 **--version**
-> Show version.
+> Output version information and exit.
 
 # DESCRIPTION
 
-**unlink** removes a single file by directly calling the unlink(2) system call. It provides a minimal interface for file removal, accepting exactly one filename argument with no options for recursion, prompting, or force overwriting.
+**unlink** calls the **unlink(2)** system call to remove the directory entry for a single file. It accepts exactly one operand and has no options for recursion, interactive prompting, or force behavior.
 
-The command removes the directory entry for the specified file and decrements its link count. If no other hard links point to the same inode and no processes have the file open, the file's data is freed. For files with multiple hard links, only the specified link is removed while the data remains accessible through other links.
+When the last link to a file is removed and no process still has it open, the underlying inode and data blocks are freed. For files with multiple hard links, only the named link is removed; data remains accessible through the remaining links. Removing a symbolic link deletes the link itself, not the target.
 
-Unlike **rm**, unlink cannot remove directories and does not accept multiple files or glob patterns. This simplicity makes it predictable and safe for scripting where removing exactly one file is intended, with no risk of accidentally matching extra files through pattern expansion.
+Unlike **rm**, **unlink** cannot operate on directories, cannot accept multiple operands, and does not expand shell globs specially. This minimalism makes it predictable for scripts that need to remove exactly one path with no risk of accidentally matching additional files.
 
 # CAVEATS
 
-Single file only. No recursive. Use rm for more features.
+Only a single operand is accepted; passing two or more arguments is an error. Directories cannot be removed — use **rmdir(1)** or **rm -r** for that. Many shells ship **unlink** as a utility from GNU coreutils; the built-in shell form (e.g. in ksh) may behave slightly differently.
 
 # HISTORY
 
-**unlink** is a standard Unix command that directly calls the unlink(2) system call to remove a directory entry.
+**unlink** is a long-standing Unix utility that exposes the **unlink(2)** system call. The GNU coreutils implementation conforms to **POSIX.1-2001**.
 
 # SEE ALSO
 
-[rm](/man/rm)(1), [ln](/man/ln)(1), [unlink](/man/unlink)(2)
+[rm](/man/rm)(1), [rmdir](/man/rmdir)(1), [ln](/man/ln)(1)

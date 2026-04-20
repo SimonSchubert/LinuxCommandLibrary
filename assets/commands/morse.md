@@ -1,68 +1,73 @@
 # TAGLINE
 
-converts text to and from Morse code
+Translate text to Morse code
 
 # TLDR
 
-**Convert text to Morse code**
+**Translate text to Morse code (dots and dashes)**
 
-```morse "[Hello World]"```
+```morse -s "[Hello World]"```
 
-**Convert Morse to text**
+**Translate plaintext to audible Morse (speaker)**
+
+```morse -p "[Hello World]"```
+
+**Decode Morse dots/dashes back to text**
 
 ```morse -d "[.... . .-.. .-.. ---]"```
 
-**Play Morse as sound**
+**Read text from a file instead of arguments**
 
-```morse -a "[Hello]"```
+```morse -e [file.txt]```
 
-**Output with custom speed**
+**Adjust words-per-minute when playing audio**
 
-```morse -w [20] "[text]"```
-
-**Input from file**
-
-```morse < [file.txt]```
+```morse -p -w [20] "[CQ]"```
 
 # SYNOPSIS
 
-**morse** [_options_] [_text_]
+**morse** [**-dlps**] [**-e** _file_] [**-w** _wpm_] [**-c** _cpm_] [_string_...]
 
 # PARAMETERS
 
-_TEXT_
-> Text to convert to Morse code.
+_string_
+> Text to encode (or Morse dots/dashes to decode with **-d**).
 
 **-d**
-> Decode Morse to text.
+> Decode Morse (dots and dashes) to text.
 
-**-a**
-> Play audio output.
+**-e** _file_
+> Read input from _file_ instead of the command line.
 
-**-w** _WPM_
-> Words per minute speed.
+**-l**
+> Generate "line-mode" output suitable for LED flashers.
+
+**-p**
+> Play Morse audibly via the speaker.
 
 **-s**
-> Silent mode.
+> Output short dots/dashes instead of "dit"/"dah".
 
-**--help**
-> Display help information.
+**-w** _wpm_
+> Words-per-minute when playing audio (default 20).
+
+**-c** _cpm_
+> Characters-per-minute. Alternative to **-w**.
 
 # DESCRIPTION
 
-**morse** converts text to and from Morse code. It can produce audio output.
+**morse** reads input text from arguments or a file and prints the corresponding Morse code. With **-s** the output is the familiar **... --- ...** form; the default form spells out **dit** and **dah**. With **-p** each symbol is played through the system speaker at a configurable speed. With **-d** the tool performs the inverse translation, converting dots and dashes back to text.
 
-The tool encodes and decodes Morse. Supports audio playback on capable terminals.
+Lower-case and upper-case letters are treated the same. Unknown characters are silently skipped.
 
 # CAVEATS
 
-Part of bsdgames. Audio requires sound support. ASCII output by default.
+Audible output (**-p**) requires a console or PC speaker; on most modern Linux systems it falls back to nothing unless **pcspkr** is loaded. The **bsdgames** implementation ships different flags on Linux and macOS — consult your local man page if the exact flags differ.
 
 # HISTORY
 
-morse originated in **BSD games**, providing educational Morse code conversion since the early BSD distributions.
+**morse** is one of the classic **BSD games**, present since early 4BSD distributions as a teaching aid for amateur radio operators.
 
 # SEE ALSO
 
-[beep](/man/beep)(1), [say](/man/say)(1), [espeak](/man/espeak)(1)
-
+[beep](/man/beep)(1), [espeak](/man/espeak)(1), [ham](/man/ham)(1)

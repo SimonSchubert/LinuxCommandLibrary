@@ -27,10 +27,25 @@ Show **user** unit file
 # PARAMETERS
 
 **--user**
-> Show user unit files
+> Query the calling user's **systemd --user** manager instead of the system manager.
 
 **--system**
-> Show system unit files (default)
+> Query the system manager (default).
+
+**--no-pager**
+> Do not pipe output through a pager.
+
+**--root=**_PATH_
+> Read unit files from an alternate filesystem root (useful for inspecting a chroot or mounted image).
+
+**--image=**_PATH_
+> Read unit files from a disk image file at _PATH_.
+
+**-M**, **--machine=**_NAME_
+> Operate on the systemd manager inside the named container or VM.
+
+**-l**, **--full**
+> Do not ellipsize displayed paths.
 
 # DESCRIPTION
 

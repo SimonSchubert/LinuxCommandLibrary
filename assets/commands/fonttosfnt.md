@@ -62,4 +62,4 @@ fonttosfnt is part of the **X.Org** font utilities, providing conversion between
 
 # SEE ALSO
 
-[bdftopcf](/man/bdftopcf)(1), [mkfontscale](/man/mkfontscale)(1), [fontforge](/man/fontforge)(1)
+[bdftopcf](/man/bdftopcf)(1), [fontforge](/man/fontforge)(1)

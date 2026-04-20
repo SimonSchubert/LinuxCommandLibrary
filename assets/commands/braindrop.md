@@ -8,6 +8,14 @@ TUI client for Raindrop.io bookmarks
 
 ```braindrop```
 
+**Specify API token**
+
+```braindrop --api-key [YOUR_TOKEN]```
+
+**Use a custom theme**
+
+```braindrop --theme [textual-dark]```
+
 # SYNOPSIS
 
 **braindrop** [_options_]

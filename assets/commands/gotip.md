@@ -23,19 +23,15 @@ Daily builds of Go from development tree
 # PARAMETERS
 
 **download** [_CL_]
-> Download and install Go development version
+> Fetch and build the current Go development tree into **$HOME/sdk/gotip**. When a Gerrit change-list number is supplied, that CL is applied on top before building.
 
-**version**
-> Print version information
-
-**-h, --help**
-> Display help and exit
+Any other argument is passed through unchanged to the **go** tool inside the installed gotip SDK, so **gotip build**, **gotip test**, **gotip env**, etc. all Just Work.
 
 # DESCRIPTION
 
 **gotip** provides access to daily builds of Go from the development tree. It allows developers to test upcoming Go features and bug fixes before they are released in stable versions.
 
-The tool downloads pre-built binaries from the Go build servers, making it easy to try the latest development version without compiling from source.
+Unlike the numbered `go1.XX` download wrappers, **gotip download** builds the toolchain from source at the latest **master** commit of **golang/go**, so a working Go installation is required to bootstrap it. To refresh the installation, delete **~/sdk/gotip/.unpacked-success** (or the whole directory) and re-run **gotip download**.
 
 # USAGE
 

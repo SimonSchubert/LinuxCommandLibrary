@@ -4,9 +4,9 @@ Collection of classic BSD Unix text-based games
 
 # TLDR
 
-**Play text adventure game**
+**Play the Colossal Cave text adventure**
 
-```adventure```
+```bsdgames-adventure```
 
 **Play Tetris clone**
 
@@ -20,10 +20,6 @@ Collection of classic BSD Unix text-based games
 
 ```worm```
 
-**Display random fortune**
-
-```fortune```
-
 **Play hangman**
 
 ```hangman```
@@ -36,14 +32,14 @@ Collection of classic BSD Unix text-based games
 
 ```backgammon```
 
-**Generate random numbers from dice**
+**Show the answer to "wtf"** (abbreviation lookup)
 
-```roll [2d6]```
+```wtf [lol]```
 
 # INCLUDED GAMES
 
-**adventure**
-> Classic Colossal Cave text adventure.
+**bsdgames-adventure**
+> Classic Colossal Cave text adventure (renamed from **adventure** to avoid clashes).
 
 **tetris-bsd**
 > Terminal-based Tetris clone.
@@ -90,6 +86,15 @@ Collection of classic BSD Unix text-based games
 **trek**
 > Star Trek themed strategy game.
 
+**wtf**
+> Look up common internet abbreviations.
+
+**wargames**
+> Nod to the 1983 film; prints a classic prompt on launch.
+
+**morse**, **caesar**, **rot13**, **primes**, **arithmetic**, **bcd**, **ppt**
+> Classic tiny Unix utilities shipped alongside the games.
+
 # DESCRIPTION
 
 **bsdgames** is a collection of classic text-based games originating from BSD Unix systems. These games represent decades of Unix gaming history, ranging from the earliest text adventures to terminal-based arcade games.
@@ -108,4 +113,4 @@ The BSD games collection evolved alongside Unix at **UC Berkeley** from the **19
 
 # SEE ALSO
 
-[nethack](/man/nethack)(6), [angband](/man/angband)(6), [fortune](/man/fortune)(6), [cowsay](/man/cowsay)(1)
+[nethack](/man/nethack)(6), [angband](/man/angband)(6), [cowsay](/man/cowsay)(1)

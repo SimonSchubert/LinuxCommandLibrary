@@ -8,66 +8,80 @@ system information fetcher written in Rust
 
 ```macchina```
 
-**Use specific theme**
+**Use a specific theme**
 
 ```macchina --theme [Hydrogen]```
 
-**Show with custom ASCII art**
+**Show only specific readouts**
 
-```macchina --ascii-art [/path/to/art.txt]```
+```macchina --show [host,kernel,uptime]```
 
-**Show only specific fields**
+**Show memory and disk usage as percentages**
 
-```macchina --show [Host,Kernel,Uptime]```
+```macchina -m -p```
 
-**Hide specific fields**
+**Display full, un-truncated kernel and uptime strings**
 
-```macchina --hide [GPU,Disk]```
+```macchina --long-kernel --long-uptime```
 
 **List available themes**
 
 ```macchina --list-themes```
 
-**Export current config**
+**Diagnose configuration issues**
 
-```macchina --export-config```
-
-**Disable ASCII art**
-
-```macchina --no-ascii```
+```macchina --doctor```
 
 # SYNOPSIS
 
-**macchina** [_--theme name_] [_--show fields_] [_--hide fields_] [_options_]
+**macchina** [_--theme name_] [_--show fields_] [_options_]
 
 # PARAMETERS
 
 **-t**, **--theme** _NAME_
-> Use specified theme.
+> Use the named theme.
 
 **-o**, **--show** _FIELDS_
-> Show only specified readouts.
-
-**-x**, **--hide** _FIELDS_
-> Hide specified readouts.
+> Show only the listed readouts (comma-separated).
 
 **-c**, **--config** _FILE_
-> Use custom config file.
+> Use an alternate configuration file.
 
-**--no-ascii**
-> Disable ASCII art.
-
-**--ascii-art** _FILE_
-> Use custom ASCII art from file.
-
-**--list-themes**
-> List available themes.
-
-**--export-config**
-> Print current configuration.
+**-l**, **--list-themes**
+> List available themes and exit.
 
 **-d**, **--doctor**
 > Check configuration for issues.
+
+**-m**, **--memory-percentage**
+> Display memory usage as a percentage.
+
+**-p**, **--disk-space-percentage**
+> Display disk-space usage as a percentage.
+
+**-D**, **--disks**
+> Show one line per detected disk.
+
+**-C**, **--physical-cores**
+> Count physical CPU cores instead of logical ones.
+
+**-U**, **--long-uptime**
+> Render uptime in a long, human-readable form.
+
+**-K**, **--long-kernel**
+> Render the full kernel version string without truncation.
+
+**-S**, **--long-shell**
+> Print the absolute path of the user shell, not just its name.
+
+**-s**, **--current-shell**
+> Report the shell of the current process instead of the login shell.
+
+**-i**, **--interface** _NAME_
+> Report the address of a specific network interface.
+
+**--ascii-artists**
+> Show the credits for the built-in ASCII art.
 
 **-v**, **--version**
 > Show version.
@@ -83,7 +97,7 @@ Information includes: host, kernel, OS, uptime, packages, shell, terminal, CPU, 
 
 Themes control colors, formatting, and layout. Built-in themes range from minimal to elaborate. Custom themes can be created in TOML format.
 
-ASCII art can display distribution logos or custom artwork. The art adapts to terminal colors defined by the theme.
+ASCII art can display distribution logos or custom artwork. The art adapts to terminal colors defined by the theme and is configured via the active theme rather than a dedicated CLI flag.
 
 Configuration is stored in ~/.config/macchina/macchina.toml. It defines default theme, visible readouts, custom colors, and ASCII settings.
 

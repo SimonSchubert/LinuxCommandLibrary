@@ -65,6 +65,10 @@ TUI utility for running multiple commands in parallel with switchable terminals
 
 When the signal server is enabled in the configuration, procmux starts an HTTP server that allows processes to be controlled remotely via the signal subcommands. The app supports process filtering, autostart options, descriptions, and meta tags.
 
+# CAVEATS
+
+Processes that rely on interpolation (configured prompt inputs) cannot be started or restarted through the signal subcommands because the required input values are only available inside the interactive TUI.
+
 # HISTORY
 
 **procmux** was created by **napisani** and is written in **Python**.

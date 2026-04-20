@@ -90,4 +90,4 @@ Jsonnet was developed at **Google** by **Dave Cunningham** around **2014**. It a
 
 # SEE ALSO
 
-[jq](/man/jq)(1), [yq](/man/yq)(1), [dhall](/man/dhall)(1), [cue](/man/cue)(1)
+[jq](/man/jq)(1), [yq](/man/yq)(1), [dhall](/man/dhall)(1)

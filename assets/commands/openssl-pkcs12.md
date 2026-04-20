@@ -57,6 +57,21 @@ creates and parses PKCS#12 files
 **-name** _name_
 > Friendly name.
 
+**-password** _arg_
+> Input/output PKCS#12 password source (e.g., `pass:secret`, `file:path`, `env:VAR`, `stdin`).
+
+**-passin** _arg_, **-passout** _arg_
+> Separate input / output password sources.
+
+**-legacy**
+> Use legacy algorithms for compatibility with older software (OpenSSL 3+).
+
+**-clcerts**
+> Output client certificates only (exclude CAs).
+
+**-info**
+> Print information about the PKCS#12 file's structure.
+
 # DESCRIPTION
 
 **openssl pkcs12** creates and parses PKCS#12 files (.p12, .pfx). These files bundle private keys, certificates, and CA chains into a single encrypted file.

@@ -1,10 +1,10 @@
 # TAGLINE
 
-Node.js installation path finder for nvs
+Print the installation path of the active Node.js version
 
 # TLDR
 
-**Get Node.js installation location**
+**Print the path** of the currently active Node.js installation
 
 ```get-nodeinstalllocation```
 
@@ -14,11 +14,15 @@ Node.js installation path finder for nvs
 
 # DESCRIPTION
 
-**get-nodeinstalllocation** displays the installation directory of Node.js versions managed by nvs (Node Version Switcher). It shows where the currently active Node.js installation is located on disk.
+**get-nodeinstalllocation** is a helper shim that outputs the absolute filesystem path of the Node.js installation currently on the user's **PATH**. It is typically provided by Node.js version managers or distribution packaging scripts so that tooling (installers, build systems, editor integrations) can locate the active Node.js tree without parsing environment variables.
 
-This is primarily used on Windows systems as part of the nvs toolchain for managing multiple Node.js versions. The command helps scripts and tools locate the Node.js binary and associated files for the active version.
+The equivalent query using plain Node.js is `node -e "console.log(process.execPath)"` or, on POSIX systems, `dirname "$(readlink -f "$(command -v node)")"`.
+
+# CAVEATS
+
+This is a vendor-specific wrapper rather than an upstream Node.js command. Behavior depends on how your Node.js was installed; if no such script exists on your system, prefer `which node` / `command -v node` or `node -p "process.execPath"` to obtain the same information.
 
 # SEE ALSO
 
-[nvs](/man/nvs)(1), [nvm](/man/nvm)(1)
+[node](/man/node)(1), [which](/man/which)(1), [readlink](/man/readlink)(1)
 

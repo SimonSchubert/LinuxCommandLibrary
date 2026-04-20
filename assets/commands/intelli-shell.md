@@ -1,47 +1,80 @@
 # TAGLINE
 
-Like IntelliSense but for shells
+IntelliSense-style command template manager for your shell
 
 # TLDR
 
-**Search saved commands** interactively
+**Search saved commands interactively (shell hotkey)**
 
 ```# Press Ctrl+Space in your shell```
 
-**Bookmark the last command**
+**Bookmark the last executed command (shell hotkey)**
 
 ```# Press Ctrl+B in your shell```
 
-**Fix the current command with AI**
+**Fix the current command with AI (shell hotkey)**
 
 ```# Press Ctrl+X in your shell```
 
-**Add a command template**
+**Add a command template from the CLI**
 
-```intelli-shell add "[command_template]"```
+```intelli-shell new "[command_template]" -d "[description]"```
 
-**Search commands**
+**Search commands from the CLI**
 
 ```intelli-shell search "[query]"```
 
+**Import commands from a file or URL**
+
+```intelli-shell import [path_or_url]```
+
+**Export your command library**
+
+```intelli-shell export [path]```
+
 # SYNOPSIS
 
-**intelli-shell** _command_ [_options_]
+**intelli-shell** _subcommand_ [_options_]
+
+# SUBCOMMANDS
+
+**new**
+> Create a new command template.
+
+**search**
+> Search stored commands (optionally interactively).
+
+**replace**
+> Replace variables of a given command.
+
+**import**
+> Import commands from a file, URL, or Gist.
+
+**export**
+> Export commands to a file.
+
+**fix**
+> Use an LLM to suggest fixes for a command.
+
+**completions**
+> Generate shell completions.
 
 # DESCRIPTION
 
-**intelli-shell** is a command template and snippet manager that transforms your terminal into a structured, searchable library of commands. It works on **Bash**, **Zsh**, **Fish**, **Nushell**, and **PowerShell** with standalone binaries for Linux, macOS, and Windows.
+**intelli-shell** is a cross-platform command template and snippet manager written in **Rust**. It turns your terminal into a searchable library of commands that can be recalled with a keybinding and expanded with parameterized variables.
 
-Features include seamless shell integration with **Ctrl+Space** for search, **Ctrl+B** for bookmarking, dynamic variables with smart completions, AI-powered command generation, and workspace awareness. When a search query matches an alias, it is autocompleted instantly.
+It integrates with **Bash**, **Zsh**, **Fish**, **Nushell**, and **PowerShell**. Once the shell hook is installed, **Ctrl+Space** opens an interactive fuzzy search over your stored commands, **Ctrl+B** bookmarks the last executed line, and **Ctrl+X** asks a configured LLM to fix the current line.
+
+Templates support dynamic variables such as `{{file}}` with optional suggestion generators, workspace-local command sets, and tag-based categorization.
 
 # CAVEATS
 
-Shell plugin installation is required for keybinding integration. AI-powered features require an API key configuration. Workspace awareness relies on directory-specific configuration files.
+Shell integration requires sourcing the hook script provided by **intelli-shell init** in your shell's rc file. AI-powered fixes require configuring an API key (OpenAI, Gemini, Anthropic, etc.) in **~/.config/intelli-shell/config.toml**. Workspace awareness relies on **.intellishell** files in project directories.
 
 # HISTORY
 
-**intelli-shell** was created by **lasantosr** and is written in **Rust**. It was designed to bring IDE-like autocomplete and command management capabilities to the terminal shell.
+**intelli-shell** is maintained by **lasantosr** and is written in **Rust**. It was created to bring IDE-like autocomplete and command management to the terminal.
 
 # SEE ALSO
 
-[fzf](/man/fzf)(1), [navi](/man/navi)(1), [hoard](/man/hoard)(1)
+[fzf](/man/fzf)(1), [navi](/man/navi)(1), [atuin](/man/atuin)(1), [mcfly](/man/mcfly)(1)

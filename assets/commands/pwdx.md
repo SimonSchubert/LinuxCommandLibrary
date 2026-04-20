@@ -38,4 +38,4 @@ The process must be accessible to the user running pwdx. For processes owned by 
 
 # SEE ALSO
 
-[ps](/man/ps)(1), [pgrep](/man/pgrep)(1), [lsof](/man/lsof)(8)
+[ps](/man/ps)(1), [pgrep](/man/pgrep)(1), [lsof](/man/lsof)(8), [readlink](/man/readlink)(1), [proc](/man/proc)(5)

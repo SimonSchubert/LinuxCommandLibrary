@@ -8,22 +8,45 @@ Interactive Vim tutorial
 
 ```vimtutor```
 
-**Start in specific language**
+**Start in a specific language**
 
 ```vimtutor [de]```
 
-**Start with different vim**
+**Start chapter 2** (only available in **en** and **fr**)
 
-```VIMRUNTIME=/path vimtutor```
+```vimtutor -c 2```
+
+**Launch the tutorial in the GUI version** of Vim
+
+```vimtutor -g```
+
+**List all supported languages**
+
+```vimtutor --list```
 
 # SYNOPSIS
 
-**vimtutor** [_language_]
+**vimtutor** [_-g_] [_-c chapter_] [_language_]
 
 # PARAMETERS
 
 _LANGUAGE_
-> Two-letter language code (en, de, fr, etc.).
+> ISO-639 language code (e.g. **en**, **de**, **fr**, **ja**).
+
+**-l**, **--language** _CODE_
+> Select the tutorial language explicitly. Glued form **-l**_code_ / **--language**_code_ also accepted.
+
+**-c**, **--chapter** _N_
+> Load chapter _N_ (1 or 2). Chapter 2 is only shipped in **en** and **fr**.
+
+**-g**, **--gui**
+> Start the GUI version of Vim (**gvim**) instead of the terminal binary.
+
+**--list**
+> List available language codes and exit.
+
+**-h**, **--help**
+> Display help.
 
 # DESCRIPTION
 

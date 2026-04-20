@@ -43,37 +43,82 @@ Fast and user-friendly build system
 # PARAMETERS
 
 _COMMAND_
-> Meson subcommand (setup, compile, test, install, configure, dist, subprojects, wrap).
+> Meson subcommand (see list below).
+
+**init**
+> Create a minimal meson.build for a new project in the current directory.
 
 **setup** _DIR_
-> Configure build directory.
+> Configure a build directory (the canonical first step).
 
 **compile** **-C** _DIR_
-> Build project.
+> Build the project.
 
 **test** **-C** _DIR_
-> Run tests.
+> Run the project's test suite.
 
 **install** **-C** _DIR_
-> Install project.
+> Install the built project into the configured prefix.
 
 **configure** _DIR_
-> Change build options without reconfiguring.
+> Change build options on an existing build directory without wiping it.
 
 **dist**
-> Create source distribution tarball.
+> Create a signed source distribution tarball.
+
+**introspect**
+> Print a JSON-formatted description of targets, tests, options, etc.
+
+**subprojects**, **wrap**
+> Manage meson subprojects and **.wrap** dependency files.
+
+**devenv**
+> Spawn a shell with the build environment (e.g. **PATH**, **PKG_CONFIG_PATH**) pre-set.
+
+**rewrite**
+> Programmatically modify **meson.build** files.
+
+**env2mfile**
+> Generate a cross- or native-file from current environment variables.
+
+**format**
+> Auto-format **meson.build** files (alias **fmt**).
 
 **-D** _OPT=VAL_
-> Set build option (e.g., -Dbuildtype=release, -Dprefix=/usr).
+> Set a build option (e.g. **-Dbuildtype=release**, **-Dprefix=/usr**).
 
 **--buildtype** _TYPE_
-> Build type: plain, debug, debugoptimized, release, minsize, custom.
+> Build type: **plain**, **debug**, **debugoptimized**, **release**, **minsize**, **custom**.
 
 **--prefix** _PATH_
-> Installation prefix (default: /usr/local).
+> Installation prefix (default **/usr/local**).
+
+**--backend** _BACKEND_
+> Backend to generate: **ninja** (default), **vs**, **vs2017**, **xcode**, etc.
+
+**--default-library** _TYPE_
+> Default library type: **static**, **shared**, or **both**.
+
+**--cross-file** _FILE_
+> Use a cross-compilation definition file.
+
+**--native-file** _FILE_
+> Override native compiler/tool selection on the host.
+
+**--reconfigure**
+> Re-run configuration using the stored options without wiping the build directory.
 
 **--wipe**
-> Wipe and reconfigure existing build directory.
+> Wipe and reconfigure an existing build directory.
+
+**--werror**, **--warnlevel** _N_
+> Treat warnings as errors, or set compiler warning level (0-3/everything).
+
+**--optimization** _LEVEL_
+> Optimization level (**0**, **g**, **1**, **2**, **3**, **s**).
+
+**--vsenv**
+> Activate a Visual Studio environment before building on Windows.
 
 **--help**
 > Display help information.

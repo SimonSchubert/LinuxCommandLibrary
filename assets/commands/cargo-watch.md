@@ -100,7 +100,7 @@ Requires installation via `cargo install cargo-watch`. File system events may no
 
 # HISTORY
 
-**cargo-watch** was created by **F\u00e9lix Saparelli** (passcod) in **2015** to provide file watching functionality for Rust development. It built upon the notify crate for cross-platform file system events. The tool has become a standard part of many Rust developers' workflows, inspired by similar tools in other ecosystems like nodemon for Node.js.
+**cargo-watch** was created by **Félix Saparelli** (passcod) in **2015** to provide file watching functionality for Rust development. It built upon the notify crate for cross-platform file system events. The tool has become a standard part of many Rust developers' workflows, inspired by similar tools in other ecosystems like nodemon for Node.js.
 
 # SEE ALSO
 

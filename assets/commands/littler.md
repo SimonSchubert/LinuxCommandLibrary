@@ -76,4 +76,4 @@ littler was created by **Dirk Eddelbuettel** and **Jeff Horner** in **2006** to 
 
 # SEE ALSO
 
-[R](/man/R)(1), [Rscript](/man/Rscript)(1), [rpy2](/man/rpy2)(1)
+[R](/man/R)(1), [Rscript](/man/Rscript)(1)

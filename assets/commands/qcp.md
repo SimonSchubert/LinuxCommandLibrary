@@ -1,89 +1,71 @@
 # TAGLINE
 
-Copy files with progress display
+Copy files by editing the destination filenames in a text editor
 
 # TLDR
 
-**Copy with progress**
+**Edit filenames** and copy matching files in the current directory
 
-```qcp [source] [destination]```
+```qcp```
 
-**Copy directory**
+**Copy specific files**, editing their destination names in $EDITOR
 
-```qcp -r [source_dir] [destination_dir]```
+```qcp [*.txt]```
 
-**Preserve attributes**
+**Use dual-column format** (source and destination on the same line)
 
-```qcp -p [source] [destination]```
+```qcp --format=dual [*.jpg]```
 
-**Verbose copy**
+**Preview what would happen** without actually copying
 
-```qcp -v [source] [destination]```
+```qcp --dummy [*.log]```
+
+**Recursive listing** like `ls -R`
+
+```qcp -R [src/]```
 
 # SYNOPSIS
 
-**qcp** [_options_] _source_ _destination_
+**qcp** [_options_] [_file_...]
 
 # PARAMETERS
 
-**-r**, **--recursive**
-> Copy directories recursively.
+**-f**, **--format=**_FORMAT_
+> Edit format: **destination** (default, edit only the new name), **dual** (two columns with source on the left), or **single** (single column, shared source/destination).
 
-**-p**, **--preserve**
-> Preserve file attributes.
-
-**-v**, **--verbose**
-> Verbose output.
-
-**-f**, **--force**
-> Overwrite without prompt.
+**-o**, **--options=**_OPTIONS_
+> Comma-separated format options (e.g. **source-comments**, **autodetect**).
 
 **-i**, **--interactive**
-> Prompt before overwrite.
+> Drop into a command-mode prompt after editing instead of applying immediately.
+
+**-e**, **--editor=**_PROGRAM_
+> Override the editor (defaults to **$VISUAL**, then **$EDITOR**, then **vi**).
+
+**--ls=**_PROGRAM_
+> Use an alternative **ls** implementation to generate the file list.
+
+**--dummy**
+> Print the operations that would be performed but do not copy anything.
+
+**-v**, **--verbose**
+> Show each copy as it is performed.
+
+**--help**, **--version**
+> Display help or version information.
+
+Many **ls**-style flags are passed through: **-a**, **-A**, **-B**, **-d**, **-r**, **-R**, **-S**, **-t**, **-u**, **-U**, **-X**, **--sort=**_WORD_, **--time=**_WORD_.
 
 # DESCRIPTION
 
-**qcp** (quick copy) is a file copy utility that may refer to various enhanced copy tools with features like progress bars, speed display, or queued copying.
+**qcp** (quick copy) opens a temporary buffer in **$EDITOR** listing the files you supplied (or the contents of the current directory if none are given) and lets you type the destination names in place. When you save and exit, **qcp** copies each source to the edited destination.
 
-Note: Specific implementation varies. Common alternatives include pv, rsync, or gcp.
-
-# EXAMPLES
-
-```bash
-# Basic copy
-qcp file.txt /backup/
-
-# Directory copy
-qcp -r /data /backup/
-
-# Preserve permissions
-qcp -p important.doc /archive/
-
-# Force overwrite
-qcp -f new.conf /etc/app.conf
-```
-
-# ALTERNATIVES
-
-```bash
-# rsync with progress
-rsync -ah --progress source dest
-
-# pv for progress
-pv file.iso > /dev/sdX
-
-# cp with verbose
-cp -v source dest
-```
+It is the copy-oriented sibling of **qmv**, the rename utility from the **renameutils** package by Oskar Liljeblad. Because all edits happen in a text editor, common editor features — search and replace, multi-cursor editing, macros — become powerful batch-copy primitives.
 
 # CAVEATS
 
-Tool availability varies by distribution. May refer to different utilities. Check which qcp is installed.
-
-# HISTORY
-
-Various "quick copy" or enhanced copy tools have been developed to improve on basic cp functionality.
+Part of the **renameutils** package. Not related to any "quick copy" progress-bar utility; **qcp** does not display transfer progress. Existing destination files are overwritten without prompting by default — use **--dummy** first if you are unsure.
 
 # SEE ALSO
 
-[cp](/man/cp)(1), [rsync](/man/rsync)(1), [pv](/man/pv)(1), [gcp](/man/gcp)(1)
+[qmv](/man/qmv)(1), [cp](/man/cp)(1), [mv](/man/mv)(1), [rsync](/man/rsync)(1)

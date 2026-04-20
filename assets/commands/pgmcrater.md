@@ -18,21 +18,26 @@ generates synthetic terrain with impact craters as grayscale heightmap
 
 # PARAMETERS
 
-**-width** _n_
-> Output width in pixels.
+**-width** _n_, **-xsize** _n_
+> Output width in pixels (default 256).
 
-**-height** _n_
-> Output height in pixels.
+**-height** _n_, **-ysize** _n_
+> Output height in pixels (default 256).
 
 **-number** _n_
-> Number of craters.
+> Number of craters to generate.
 
-**-gamma** _n_
-> Gamma correction value.
+**-gamma** _g_
+> Gamma correction value applied to the shaded relief output.
+
+**-randomseed** _n_
+> Seed for the random number generator; use a fixed value for reproducible output.
 
 # DESCRIPTION
 
-**pgmcrater** generates synthetic terrain with impact craters as grayscale heightmap. Useful for creating planetary surface textures. Part of Netpbm toolkit.
+**pgmcrater** generates synthetic terrain populated with impact craters and outputs it as a grayscale PGM heightmap rendered via shaded relief. It is useful for creating planetary surface textures and procedural terrain.
+
+As of Netpbm 10.27 **pgmcrater** is obsolete; it is now a thin wrapper that pipes **pamcrater** into **pamshadedrelief** and **pamtopnm**. Prefer those primitives for new workflows.
 
 # SEE ALSO
 

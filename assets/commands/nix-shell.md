@@ -49,6 +49,21 @@ _PATH_
 **-A** _ATTR_
 > Use specific attribute.
 
+**-I** _PATH_
+> Add path to Nix expression search path (e.g., `-I nixpkgs=/path/to/nixpkgs`).
+
+**--command** _CMD_
+> Run a command then stay in the shell (unlike `--run`, which exits after).
+
+**--keep** _VAR_
+> Keep an environment variable when using `--pure`.
+
+**--packages**
+> Long form of `-p`.
+
+**-i** _INTERPRETER_
+> Use as a shebang interpreter (see `#!nix-shell` scripts).
+
 **--help**
 > Display help information.
 

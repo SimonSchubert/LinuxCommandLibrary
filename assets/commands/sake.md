@@ -38,17 +38,38 @@ Task runner for local and remote hosts via SSH
 **ssh** _SERVER_
 > SSH into a configured server.
 
-**list servers**
-> List all configured servers.
+**list servers**, **list tasks**, **list tags**
+> List configured servers, tasks, or tags.
 
-**list tasks**
-> List all defined tasks.
+**describe** _servers_|_tasks_
+> Show detailed information about configured servers or tasks.
+
+**edit task** _TASK_, **edit server** _SERVER_
+> Open the corresponding sake.yaml entry in **$EDITOR**.
+
+**completion** _bash_|_zsh_|_fish_
+> Print a shell completion script.
 
 **--all**
 > Target all servers.
 
+**--tags** _TAG_
+> Target servers matching one or more tags.
+
+**--limit** _N_
+> Limit execution to the first _N_ matching servers.
+
+**--config** _FILE_
+> Use the specified configuration file instead of auto-discovering sake.yaml.
+
 **--output** _FORMAT_
-> Output format: table, text, or json.
+> Output format: **table**, **text**, **json**, **html**, or **markdown**.
+
+**--strategy** _free_|_row_|_column_
+> Execution strategy across multiple servers.
+
+**--parallel**
+> Run tasks on target servers concurrently rather than serially.
 
 # DESCRIPTION
 

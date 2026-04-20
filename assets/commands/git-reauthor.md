@@ -4,44 +4,58 @@ Rewrite commit authorship history
 
 # TLDR
 
-**Change author of commits**
+**Change the email address** of matching commits
 
-```git reauthor --old-email [old@email.com] --correct-email [new@email.com]```
+```git reauthor -o [old@email.com] -e [new@email.com]```
 
-**Change name and email**
+**Change both name and email**
 
-```git reauthor --old-email [old@email.com] --correct-name "[New Name]" --correct-email [new@email.com]```
+```git reauthor -o [old@email.com] -n "[New Name]" -e [new@email.com]```
 
-**Reauthor specific range**
+**Use values from `git config user.name` / `user.email`**
 
-```git reauthor --old-email [old@email.com] --correct-email [new@email.com] [commit-range]```
+```git reauthor --use-config -o [old@email.com]```
+
+**Rewrite all identities** (prompts interactively)
+
+```git reauthor --all```
+
+**Rewrite only the committer** (not author)
+
+```git reauthor -o [old@email.com] -e [new@email.com] -t committer```
 
 # SYNOPSIS
 
-**git reauthor** [_options_] [_range_]
+**git reauthor** [_options_]
 
 # PARAMETERS
 
-**--old-email** _EMAIL_
-> Email to match.
+**-o**, **--old-email** _EMAIL_
+> Email address to match on existing commits.
 
-**--correct-email** _EMAIL_
-> New email address.
+**-e**, **--correct-email** _EMAIL_
+> Replacement email address.
 
-**--correct-name** _NAME_
-> New author name.
+**-n**, **--correct-name** _NAME_
+> Replacement author/committer name.
 
-_RANGE_
-> Commit range to process.
+**-c**, **--use-config**
+> Take the replacement name/email from the current **git config** values.
+
+**-a**, **--all**
+> Rewrite all identities found in history (interactive).
+
+**-t**, **--type** _TYPE_
+> Which identity to rewrite: **author**, **committer**, or **both** (default).
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**git reauthor** rewrites commit history to correct author information. It updates author names and email addresses throughout the specified commit range for all commits matching the old email.
+**git reauthor** rewrites commit history to correct author (and/or committer) information. It updates names and email addresses across all local branches and tags for every commit whose identity matches the supplied old email.
 
-The command is useful for fixing incorrect attribution, consolidating identities after email changes, or correcting authorship before publishing a repository. Since it rewrites history, it should only be used on branches that have not been shared.
+The command is useful for fixing incorrect attribution, consolidating identities after email changes, or correcting authorship before publishing a repository. Because it rewrites history and changes every commit SHA in the rewritten range, it should only be used on branches that have not been shared.
 
 # CAVEATS
 
@@ -53,4 +67,4 @@ git reauthor is part of **git-extras**, providing a convenient wrapper for the c
 
 # SEE ALSO
 
-[git-commit](/man/git-commit)(1), [git-filter-repo](/man/git-filter-repo)(1)
+[git-commit](/man/git-commit)(1), [git-rebase](/man/git-rebase)(1), [git-filter-repo](/man/git-filter-repo)(1)

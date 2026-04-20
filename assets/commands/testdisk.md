@@ -20,44 +20,41 @@ Recover lost partitions and boot sectors
 
 ```sudo testdisk /log [/dev/sdX]```
 
-**Run in scripted mode** with commands
-
-```sudo testdisk /cmd [/dev/sdX] [commands]```
-
 **List partitions** on a device
 
 ```sudo testdisk /list [/dev/sdX]```
 
-**Specify a directory** for recovered files
+**Dump raw sectors** to the log
 
-```sudo testdisk /d [path/to/recovery_dir] /cmd [/dev/sdX] [commands]```
+```sudo testdisk /dump [/dev/sdX]```
+
+**Show the version** and exit
+
+```testdisk /version```
 
 # SYNOPSIS
 
-**testdisk** [_/log_] [_/logname file.log_] [_/debug_] [_/d recup_dir_] [_/cmd device commands_] [_device|image_]
+**testdisk** [_/log_] [_/debug_] [_/list_] [_/dump_] [_/version_] [_device|image_]
 
 # PARAMETERS
 
 **/log**
-> Create a testdisk.log file recording all operations and analysis results.
-
-**/logname** _file.log_
-> Specify a custom log file name instead of the default testdisk.log.
+> Append all operations and analysis results to **testdisk.log** in the current directory.
 
 **/debug**
 > Enable debug mode with additional detailed output.
 
 **/list**
-> Display partition information for the specified device or image.
+> Display partition information for the specified device or image and exit.
 
-**/d** _recup_dir_
-> Specify the directory to store recovered files (should be on a different device than the one being recovered).
+**/dump**
+> Dump raw sector contents into the log for post-mortem inspection.
 
-**/cmd**
-> Run in non-interactive scripted mode with the specified command sequence.
+**/version**
+> Print the TestDisk version and exit.
 
 **device**
-> The disk device to analyze (e.g., /dev/sda, /dev/nvme0n1).
+> The disk device to analyze (e.g. **/dev/sda**, **/dev/nvme0n1**).
 
 **image**
 > A disk image file to analyze instead of a physical device.
@@ -68,7 +65,7 @@ Recover lost partitions and boot sectors
 
 TestDisk supports a wide range of file systems including FAT12/FAT16/FAT32, NTFS, exFAT, ext2/ext3/ext4, HFS/HFS+, JFS, ReiserFS, XFS, and many others. It works with various partition table types including DOS/MBR, GPT, Mac, and BSD disklabels.
 
-The utility operates in an ncurses-based interactive menu by default, guiding users through the recovery process. For automation, scripted mode is available via **/cmd**. TestDisk also includes a file recovery feature accessible through its Advanced menu, allowing recovery of deleted files from supported file systems.
+The utility operates in an ncurses-based interactive menu, guiding users through the recovery process. TestDisk also includes a file recovery feature accessible through its Advanced menu, allowing recovery of deleted files from supported file systems.
 
 # CAVEATS
 

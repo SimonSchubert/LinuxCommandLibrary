@@ -43,10 +43,16 @@ compare CSV files and show differences
 
 # DESCRIPTION
 
-**csv-diff** compares two CSV files and shows added, removed, and changed rows. It's useful for tracking changes in data exports, database dumps, or any tabular data.
+**csv-diff** compares two CSV, TSV, or JSON files and shows added, removed, and changed rows. It's useful for tracking changes in data exports, database dumps, or any tabular data.
 
-Part of the csvkit tools or available as a standalone Python package.
+A **--key** column must be specified so rows can be matched across files. Output is human-readable by default, and machine-readable JSON is available via **--json**.
+
+The tool is a standalone Python package by **Simon Willison**, installable via `pip install csv-diff`. It is distinct from csvkit.
+
+# CAVEATS
+
+Rows without a stable unique key cannot be meaningfully compared; choose a column guaranteed to be present on both sides. Large files are loaded fully into memory.
 
 # SEE ALSO
 
-[csvformat](/man/csvformat)(1), [diff](/man/diff)(1)
+[csvkit](/man/csvkit)(1), [diff](/man/diff)(1), [jq](/man/jq)(1)

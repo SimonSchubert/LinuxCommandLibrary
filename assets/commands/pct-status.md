@@ -1,16 +1,16 @@
 # TAGLINE
 
-displays the current status of a Proxmox LXC container, showing whether it is
+Show the running state of a Proxmox LXC container
 
 # TLDR
 
-**Check** container status
+**Check** container status (prints e.g. `status: running`)
 
-```pct status 100```
+```pct status [100]```
 
-Show **verbose** details
+**Show verbose** runtime and configuration details
 
-```pct status 100 --verbose```
+```pct status [100] --verbose```
 
 # SYNOPSIS
 

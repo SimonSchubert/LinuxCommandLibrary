@@ -103,4 +103,4 @@ Homebrew Cask was created as a separate project in **2012** by **phinze** (Alfre
 
 # SEE ALSO
 
-[brew](/man/brew)(1), [brew-bundle](/man/brew-bundle)(1), [mas](/man/mas)(1)
+[brew](/man/brew)(1), [brew-bundle](/man/brew-bundle)(1)

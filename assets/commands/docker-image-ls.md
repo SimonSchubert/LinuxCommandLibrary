@@ -48,6 +48,11 @@ list Docker images on the system
 **--no-trunc**
 > Don't truncate output.
 
+**--tree**
+> Display multi-platform images as a tree (experimental; Docker API 1.47+).
+
+Valid **--filter** keys: **dangling**=_true_|_false_, **label**=_key_[=_value_], **before**=_image_, **since**=_image_, **reference**=_pattern_.
+
 # DESCRIPTION
 
 **docker image ls** lists Docker images stored in the local image cache, displaying information including repository name, tag, image ID, creation time, and virtual size. This command provides visibility into which images are available for creating containers and how much disk space they consume.

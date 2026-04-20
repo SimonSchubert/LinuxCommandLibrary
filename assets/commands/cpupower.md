@@ -36,22 +36,37 @@ Subcommands include frequency-info, frequency-set, idle-info, idle-set, and moni
 > Specify CPU(s) to operate on (e.g., 0, 1-3, all)
 
 **frequency-info**
-> Show current frequency settings
+> Show current frequency settings.
 
 **frequency-set**
-> Modify frequency settings
+> Modify frequency settings.
 
 **idle-info**
-> Show idle state information
+> Show idle state information.
+
+**idle-set**
+> Enable/disable specific idle states.
 
 **monitor**
-> Monitor CPU frequency and idle states
+> Report CPU frequency and idle residency statistics.
 
-**--governor** _gov_
-> Set frequency governor
+**info**
+> Show kernel configuration and hardware information.
+
+**-g, --governor**
+> Set frequency governor (with frequency-set) or show available governors (with frequency-info).
+
+**-u, --max** _FREQ_
+> Set maximum frequency (requires frequency-set).
+
+**-d, --min** _FREQ_
+> Set minimum frequency (requires frequency-set).
+
+**-f, --freq** _FREQ_
+> Set exact frequency (requires userspace governor).
 
 **-m, --human**
-> Human-readable output
+> Human-readable output.
 
 # CAVEATS
 

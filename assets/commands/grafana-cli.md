@@ -12,6 +12,10 @@ Grafana plugin and administration manager
 
 ```grafana-cli plugins ls```
 
+**Update all installed plugins**
+
+```grafana-cli plugins update-all```
+
 **Update plugin**
 
 ```grafana-cli plugins update [plugin-id]```
@@ -20,33 +24,72 @@ Grafana plugin and administration manager
 
 ```grafana-cli plugins remove [plugin-id]```
 
-**List available plugins**
+**List available plugins** in the remote repository
 
 ```grafana-cli plugins list-remote```
 
+**Reset the admin password**
+
+```grafana-cli admin reset-admin-password [newpassword]```
+
 # SYNOPSIS
 
-**grafana-cli** [_options_] _command_
+**grafana-cli** [_global-options_] _command_ _subcommand_ [_args_]
+
+# COMMANDS
+
+**plugins install** _ID_ [_VERSION_]
+> Install a plugin, optionally pinning to a specific version.
+
+**plugins ls**
+> List installed plugins.
+
+**plugins update** _ID_
+> Update a single plugin to the latest compatible version.
+
+**plugins update-all**
+> Update every installed plugin.
+
+**plugins remove** _ID_
+> Remove an installed plugin.
+
+**plugins list-remote**
+> List all plugins available in the configured repository.
+
+**plugins list-versions** _ID_
+> List available versions for a given plugin.
+
+**admin reset-admin-password** _PASSWORD_
+> Reset the built-in admin account password.
+
+**admin data-migration encrypt-datasource-passwords**
+> Migrate plaintext data-source passwords to the secureJsonData field.
 
 # PARAMETERS
 
-**plugins install** _ID_
-> Install plugin.
+**--config** _FILE_
+> Use an alternate **grafana.ini** configuration file.
 
-**plugins ls**
-> List installed.
-
-**plugins update** _ID_
-> Update plugin.
-
-**plugins remove** _ID_
-> Remove plugin.
-
-**plugins list-remote**
-> List available plugins.
+**--homepath** _DIR_
+> Grafana home directory used to locate config and plugin paths.
 
 **--pluginsDir** _DIR_
-> Plugin directory.
+> Override the plugin install directory.
+
+**--pluginUrl** _URL_
+> Install a plugin from a custom URL (zip) instead of the plugin repository.
+
+**--repo** _URL_
+> Use a different plugin repository.
+
+**--insecure**
+> Skip TLS verification when downloading plugins.
+
+**-d**, **--debug**
+> Enable debug output.
+
+**-v**, **--version**
+> Show the CLI version.
 
 **--help**
 > Display help information.

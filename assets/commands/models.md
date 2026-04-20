@@ -4,27 +4,64 @@ CLI and TUI for browsing LLM models and coding agents
 
 # TLDR
 
-**Browse available LLM models**
+**Launch the interactive TUI**
 
 ```models```
 
-**Search for a specific model**
+**List all models**
+
+```models list```
+
+**Search for a model** across providers
 
 ```models search "[query]"```
 
-**List coding agents**
+**Show details** for a specific model
 
-```models agents```
+```models show [provider/model-id]```
+
+**List providers**
+
+```models providers```
+
+**View coding agent status**
+
+```agents status```
 
 # SYNOPSIS
 
-**models** [_command_] [_options_]
+**models** [_subcommand_] [_options_]
+
+**agents** [_subcommand_] [_options_]
+
+# SUBCOMMANDS
+
+**list**
+> List available models.
+
+**show** _MODEL_
+> Show detailed information for a specific model.
+
+**search** _QUERY_
+> Search for models across all providers.
+
+**providers**
+> List model providers.
+
+**benchmarks** _list_|_show_
+> Browse published benchmark results.
+
+**status** _list_|_show_|_sources_
+> Inspect tracked data sources and their status.
+
+**link**
+> Create symlink aliases for models.
 
 # DESCRIPTION
 
 **models** is a fast CLI and TUI for browsing LLM models and tracking coding agents from the terminal. It aggregates data from models.dev and lets you browse and filter AI model providers, search across multiple providers, view context limits, pricing, and capabilities, copy model IDs, and export data as JSON.
 
-For coding agents, it maintains a curated list, detects installed versions, and tracks GitHub metrics like stars, releases, and update availability.
+A sibling **agents** command maintains a curated list of coding agents, detects installed versions, and tracks GitHub metrics like stars, releases, and update availability.
 
 # CAVEATS
 

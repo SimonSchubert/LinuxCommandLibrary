@@ -31,25 +31,43 @@ Fast jq clone focused on correctness and speed
 # PARAMETERS
 
 **-r**, **--raw-output**
-> Output raw strings without quotes
+> Print strings without JSON quoting.
 
 **-R**, **--raw-input**
-> Read input as raw strings
+> Read input as raw strings, one per line.
 
 **-s**, **--slurp**
-> Read entire input into an array
+> Collect all input values into a single array.
 
 **-c**, **--compact-output**
-> Compact output format
+> Emit JSON on a single line.
+
+**-S**, **--sort-keys**
+> Sort object keys in the output.
+
+**--indent** _N_
+> Use _N_ spaces per indent level (default **2**).
+
+**--tab**
+> Use a tab for each indent level.
+
+**-C**, **--color-output**
+> Force colored output even when stdout is not a TTY.
+
+**-M**, **--monochrome-output**
+> Disable colored output.
+
+**-i**, **--in-place**
+> Rewrite each input file with the result of the filter.
 
 **--from** _FORMAT_
-> Input format (json, yaml, cbor, toml)
+> Input format: **json**, **yaml**, **cbor**, **toml**, **xml**, **csv**, **tsv**, **raw**, **raw0**, **xjon**.
 
 **--to** _FORMAT_
-> Output format (json, yaml, cbor, toml)
+> Output format (same set as **--from**).
 
 **-n**, **--null-input**
-> Use null as input
+> Use **null** as the input value.
 
 # DESCRIPTION
 

@@ -20,6 +20,14 @@ restores file contents from another revision
 
 ```jj restore --to [revision] --from [source]```
 
+**Restore files matching a revset**
+
+```jj restore -c [revision] [path]```
+
+**Restore and keep changes as a new commit**
+
+```jj restore --changes-in [revision]```
+
 # SYNOPSIS
 
 **jj** **restore** [_options_] [_paths_...]

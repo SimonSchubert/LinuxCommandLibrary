@@ -1,5 +1,3 @@
-# TLDR
-
 # TAGLINE
 
 Search Mageia package files and metadata

@@ -53,4 +53,4 @@ ADscript was developed for audio programming applications, providing a high-leve
 
 # SEE ALSO
 
-[faust](/man/faust)(1), [csound](/man/csound)(1)
+[csound](/man/csound)(1)

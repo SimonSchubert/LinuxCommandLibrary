@@ -27,7 +27,7 @@ Connect to a specific **port**
 # PARAMETERS
 
 **-h** _host_
-> Server hostname (default: irc6.oftc.net)
+> Server hostname (default: **irc.oftc.net**).
 
 **-p** _port_
 > Server port (default: 6667)
@@ -53,10 +53,13 @@ Connect to a specific **port**
 > Send message to channel or user
 
 **:s #channel|user**
-> Set default active channel/user for messages
+> Set default active channel/user for messages.
+
+**: COMMAND**
+> Any line starting with **:** is sent verbatim to the server as a raw IRC command (e.g. **:TOPIC #chan :new topic**).
 
 **text without colon**
-> Send raw IRC command directly to server
+> Sent as a message to the currently active target set with **:s**.
 
 # DESCRIPTION
 

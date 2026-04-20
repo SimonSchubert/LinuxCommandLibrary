@@ -4,43 +4,63 @@ AI-powered command-line assistant for shell commands
 
 # TLDR
 
-**Explain a command**
+**Launch the interactive Copilot agent**
 
-```gh copilot explain "[command]"```
+```gh copilot```
 
-**Suggest a command**
+**Run a one-off prompt** non-interactively
 
-```gh copilot suggest "[what you want to do]"```
+```gh copilot -p "[how do I rebase onto main?]"```
 
-**Configure Copilot CLI**
+**Pick a specific model**
 
-```gh copilot config```
+```gh copilot --model [claude-sonnet-4.5]```
 
-**Get shell alias**
+**Remove the bundled Copilot binary**
 
-```gh copilot alias [bash|zsh|fish]```
+```gh copilot --remove```
 
 # SYNOPSIS
 
-**gh copilot** _command_ [_args_]
+**gh copilot** [_options_] [_prompt_]
 
 # PARAMETERS
 
-**explain** _command_
-> Get explanation of a command.
+**-p**, **--prompt** _TEXT_
+> Run a one-off prompt and print the response.
 
-**suggest** _description_
-> Suggest command for task.
+**--model** _MODEL_
+> Select the LLM model used by Copilot.
 
-**config**
-> Configure Copilot CLI.
+**--allow-tool** _TOOL_, **--deny-tool** _TOOL_, **--allow-all-tools**
+> Per-tool execution policy for the agent's built-in tools.
 
-**alias** _shell_
-> Get alias configuration for shell.
+**--banner**
+> Force the startup banner (useful inside scripts).
+
+**--experimental**
+> Opt in to experimental features.
+
+**--remove**
+> Uninstall the bundled standalone **copilot** binary managed by **gh**.
+
+# SLASH COMMANDS (interactive mode)
+
+**/login**
+> Authenticate with GitHub Copilot.
+
+**/model**
+> Switch the active model.
+
+**/lsp**
+> Configure Language Server Protocol integrations.
+
+**/feedback**
+> Send feedback to GitHub.
 
 # DESCRIPTION
 
-**GitHub Copilot CLI** is an AI-powered command-line assistant that explains commands and suggests shell commands based on natural language descriptions. It is a GitHub CLI extension that helps users understand complex commands and discover the right command for a task without memorizing syntax.
+**gh copilot** (previously an extension with **suggest** and **explain** subcommands) is now a thin launcher that downloads and runs the standalone **copilot** binary — GitHub's agentic coding assistant. The older **suggest**/**explain**/**config**/**alias** subcommands are deprecated; invoke **copilot** for an interactive agent session or pass **-p** for scripted use.
 
 The tool supports various shells and command-line tools, providing interactive suggestions that can be copied or executed directly.
 

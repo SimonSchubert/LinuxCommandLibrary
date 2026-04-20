@@ -4,49 +4,85 @@ streams the system log from iOS devices
 
 # TLDR
 
-**Stream system log**
+**Stream system log** from the attached device
 
 ```idevicesyslog```
 
-**Filter by process**
+**Include only** messages from specific processes (pipe-separated)
 
-```idevicesyslog -p [Safari]```
+```idevicesyslog -p [Safari|WebKit]```
 
-**Target specific device**
+**Target a specific device** by UDID
 
 ```idevicesyslog -u [udid]```
 
-**Match pattern**
+**Print only** lines containing a pattern
 
 ```idevicesyslog -m "[error]"```
 
-**Exclude pattern**
+**Exclude processes** (pipe-separated)
 
-```idevicesyslog -e "[debug]"```
+```idevicesyslog -e "[SpringBoard|backboardd]"```
+
+**Stream over network** instead of USB
+
+```idevicesyslog -n```
+
+**Save output** to a file
+
+```idevicesyslog -o [device.log]```
 
 # SYNOPSIS
 
 **idevicesyslog** [_options_]
 
+**idevicesyslog** **pidlist**
+
+**idevicesyslog** **archive** _PATH_ [_options_]
+
 # PARAMETERS
 
-**-u** _UDID_
-> Target device.
+**-u**, **--udid** _UDID_
+> Target a specific device by UDID.
 
-**-p** _PROCESS_
-> Filter by process name.
+**-n**, **--network**
+> Connect to a network-attached device instead of USB.
 
-**-m** _PATTERN_
-> Match pattern.
+**-p**, **--process** _PROCESS_
+> Include messages from the given process names (**|** separated).
 
-**-e** _PATTERN_
-> Exclude pattern.
+**-e**, **--exclude** _PROCESS_
+> Exclude messages from the given process names (**|** separated).
 
-**-n**
-> Use network connection.
+**-m**, **--match** _STRING_
+> Print only messages containing _STRING_.
+
+**-M**, **--unmatch** _STRING_
+> Print only messages **not** containing _STRING_.
+
+**-t**, **--trigger** _STRING_
+> Start logging when a message containing _STRING_ is seen.
+
+**-T**, **--untrigger** _STRING_
+> Stop logging when a message containing _STRING_ is seen.
+
+**-k**, **--kernel**, **-K**, **--no-kernel**
+> Include or exclude kernel messages.
+
+**-o**, **--output** _FILE_
+> Write the log stream to _FILE_ in addition to the terminal.
+
+**-x**, **--exit**
+> Exit when the device disconnects.
+
+**--no-colors**, **--colors**
+> Disable or force ANSI color output.
+
+**-q**, **--quiet**
+> Suppress banner / status output.
 
 **-d**, **--debug**
-> Debug output.
+> Enable debug output.
 
 **--help**
 > Display help information.
@@ -67,4 +103,4 @@ idevicesyslog is part of **libimobiledevice** for iOS log streaming.
 
 # SEE ALSO
 
-[idevice_id](/man/idevice_id)(1), [ideviceinfo](/man/ideviceinfo)(1), [adb](/man/adb)(1)
+[idevice_id](/man/idevice_id)(1), [ideviceinfo](/man/ideviceinfo)(1), [idevicepair](/man/idevicepair)(1), [adb](/man/adb)(1)

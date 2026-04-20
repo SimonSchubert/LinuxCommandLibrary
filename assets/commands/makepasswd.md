@@ -20,13 +20,13 @@ generates random passwords suitable for user accounts
 
 ```makepasswd --string '[A-Za-z0-9!@#]'```
 
-**Generate crypted password** (for /etc/shadow)
+**Generate a crypted password** (for /etc/shadow, MD5 scheme)
 
 ```makepasswd --crypt-md5```
 
-**Generate from word list**
+**Use a fixed random seed** for reproducible output
 
-```makepasswd --randomseed --count [3]```
+```makepasswd --randomseed [42] --count [3]```
 
 **Specify minimum and maximum length**
 
@@ -65,11 +65,20 @@ generates random passwords suitable for user accounts
 **--cryptsalt** _N_
 > Salt for crypt.
 
-**--randomseed**
-> Use random seed.
+**--randomseed** _N_
+> Seed the random generator with _N_ (use **0** for true randomness, a fixed value for reproducibility).
 
 **--rerandom** _N_
-> Re-seed every N passwords.
+> Re-seed the random generator every _N_ passwords.
+
+**--repeatpass** _N_
+> Emit each generated password _N_ times (useful with **--crypt** to pair cleartext with hash).
+
+**--nocrypt**
+> Skip cryptographic hashing and output the cleartext only.
+
+**--verbose**, **--noverbose**
+> Toggle explanatory output.
 
 # DESCRIPTION
 

@@ -6,7 +6,7 @@ Brute-force WPS pins to recover WPA/WPA2 passphrases
 
 **Brute-force** the WPS pin of an access point
 
-```bully -b "[mac]" -c "[channel]" -B "[interface]"```
+```bully -b [mac] -c [channel] [interface]```
 
 Display **help**
 

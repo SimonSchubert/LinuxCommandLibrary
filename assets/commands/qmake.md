@@ -83,8 +83,17 @@ Generate build files for Qt projects
 **-v**
 > Display version information.
 
-**-h**, **--help**
-> Display help information.
+**-Wall**, **-Wnone**, **-Wparser**, **-Wlogic**
+> Control qmake warning levels.
+
+**-cache** _FILE_, **-nocache**
+> Use an alternative **.qmake.cache** file or skip it entirely.
+
+**-nodepend**
+> Disable automatic dependency generation.
+
+**-help**
+> Display help information (single-dash form is canonical).
 
 # DESCRIPTION
 

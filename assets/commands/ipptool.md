@@ -31,31 +31,52 @@ versatile testing tool for IPP printers and servers
 # PARAMETERS
 
 **-t**
-> Generate test report output
+> Generate CUPS-style test report output.
 
 **-v**
-> Verbose mode; show all attributes
+> Verbose mode; display every request and response attribute.
 
-**-f** _filename_
-> File to use as document data for print tests
+**-q**
+> Quiet mode; suppress the normal summary output.
+
+**-l**
+> Produce plain-text (list) output rather than the default report.
+
+**-c**
+> Produce comma-separated (CSV) output.
+
+**-X**
+> Produce Apple plist XML output.
+
+**-P** _FILE_
+> In addition to the normal report, write machine-readable plist XML results to _FILE_.
+
+**-f** _FILENAME_
+> File to use as document data for print-job tests.
 
 **-d** _name=value_
-> Define a variable for use in test files
+> Define a variable for use in test files (may be repeated).
 
 **-I**
-> Ignore errors and continue testing
+> Ignore errors and continue with the next test rather than aborting.
 
 **-S**
-> Test with TLS/SSL encryption
+> Use encryption (TLS/SSL) when connecting to the printer.
 
-**-T** _seconds_
-> Timeout for each request
+**-T** _SECONDS_
+> Request timeout in seconds.
 
-**-V** _version_
-> IPP version to use (1.0, 1.1, 2.0, 2.1, 2.2)
+**-V** _VERSION_
+> IPP version to advertise (**1.0**, **1.1**, **2.0**, **2.1**, **2.2**).
+
+**-4**, **-6**
+> Force IPv4 or IPv6 connections respectively.
+
+**-C**
+> Use HTTP/1.1 chunked transfer encoding for requests.
 
 **--help**
-> Display help information
+> Display help information.
 
 # DESCRIPTION
 

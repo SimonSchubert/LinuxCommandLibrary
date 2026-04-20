@@ -22,5 +22,5 @@ sets the working copy to a specific revision for editing
 
 # SEE ALSO
 
-[jj](/man/jj)(1), [jj-new](/man/jj-new)(1), [jj-checkout](/man/jj-checkout)(1)
+[jj](/man/jj)(1), [jj-new](/man/jj-new)(1), [jj-squash](/man/jj-squash)(1)
 

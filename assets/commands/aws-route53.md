@@ -61,6 +61,12 @@ Route 53 connects user requests to infrastructure running in AWS (such as EC2 in
 **Query Logging**
 > create-query-logging-config, delete-query-logging-config, get-query-logging-config, list-query-logging-configs
 
+**CIDR Collections** (for IP-based routing)
+> create-cidr-collection, delete-cidr-collection, change-cidr-collection, list-cidr-collections, list-cidr-blocks, list-cidr-locations
+
+**Tagging / Misc**
+> list-tags-for-resource, list-tags-for-resources, change-tags-for-resource, get-checker-ip-ranges, wait
+
 # CAVEATS
 
 DNS changes made via **change-resource-record-sets** are not instantaneous; propagation can take up to 60 seconds. Use **get-change** with the change ID to check propagation status. Hosted zone IDs must include the **/hostedzone/** prefix in some commands. Route 53 has API rate limits that may affect bulk operations.

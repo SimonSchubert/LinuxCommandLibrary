@@ -12,11 +12,11 @@ Display mail sender information from a mailbox
 
 ```from [username]```
 
-**Show sender and subject lines**
+**Filter messages by sender** address/substring
 
-```from -s```
+```from -s [alice@example.com]```
 
-**Count the number of messages**
+**Count the number of messages** (GNU mailutils only)
 
 ```from -c```
 
@@ -26,27 +26,33 @@ Display mail sender information from a mailbox
 
 # SYNOPSIS
 
-**from** [_options_] [_user_]
+**from** [_-f file_] [_-s sender_] [_user_]
 
 # PARAMETERS
 
 _USER_
 > Username to check mail for (reads their system mailbox).
 
-**-s**
-> Show the Subject line along with the sender.
-
-**-c**
-> Print only the count of messages.
+**-s** _SENDER_
+> Only print headers from messages whose From address matches the given string. _Note:_ this does **not** show subject lines.
 
 **-f** _FILE_
-> Read from the specified mailbox file instead of the default.
+> Read from the specified mailbox file instead of the default system mailbox.
+
+**-c**
+> Print only the count of messages. _GNU mailutils only_; not available in BSD/OpenBSD **from**.
+
+**-d**, **--debug**
+> Print debugging information. _GNU mailutils only._
+
+**-V**, **--version**
+> Display version information. _GNU mailutils only._
 
 # DESCRIPTION
 
-**from** displays a summary of the "From" lines in a mailbox, showing who mail is from. It reads the system mailbox (typically /var/mail/username) and displays sender information for each message.
+**from** displays the header of each message in a mailbox, showing who mail is from (and, depending on the implementation, subject and date). It reads the system mailbox (typically /var/mail/username) and prints one line per message.
 
-The tool provides a quick overview of pending mail without opening a full mail client. With **-s**, it also shows subject lines for quick scanning of message content. This is useful for checking mail status in shell scripts, cron jobs, or quick terminal checks.
+The tool provides a quick overview of pending mail without opening a full mail client. With **-s**, output is filtered to messages whose sender matches the given address or substring. This is useful for checking mail status in shell scripts, cron jobs, or quick terminal checks.
 
 # CAVEATS
 
@@ -58,4 +64,4 @@ Only works with mbox format mailboxes. May not work with modern mail delivery sy
 
 # SEE ALSO
 
-[mail](/man/mail)(1), [biff](/man/biff)(1), [mailx](/man/mailx)(1)
+[mail](/man/mail)(1), [biff](/man/biff)(1), [mailx](/man/mailx)(1), [sendmail](/man/sendmail)(1)

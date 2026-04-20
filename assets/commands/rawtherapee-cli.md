@@ -26,29 +26,53 @@ Batch process RAW photos from the command line
 
 # PARAMETERS
 
-**-o** _path_
+**-c** _FILES_
+> Specify input files/directories to convert. Must be the **last** argument.
+
+**-o** _PATH_
 > Output file or directory.
 
-**-p** _file_
-> Processing profile (.pp3).
+**-O** _PATH_
+> Like **-o** but also copies the applied .pp3 profile as a sidecar file next to the output.
 
-**-c** _files_
-> Input files to convert.
+**-p** _FILE.pp3_
+> Apply the given processing profile.
 
-**-j** [_quality_]
-> Output JPEG (quality 1-100).
+**-d**
+> Use the built-in default processing profile.
 
-**-t**
-> Output TIFF.
+**-s**, **-S**
+> Use an existing sidecar .pp3 next to the input. **-S** skips images with no sidecar; **-s** silently falls back to the default profile.
+
+**-q** _FILE_
+> Use an alternative sidecar file for every processed image.
+
+**-a**
+> Process all supported files, including hidden ones.
+
+**-j**[_1-100_]
+> Output JPEG; quality is **attached** with no space (e.g. `-j95`). Forces 8-bit output.
+
+**-js**_1_|_2_|_3_
+> JPEG chroma subsampling: **1** = 4:2:0, **2** = 4:2:2, **3** = 4:4:4.
+
+**-t**[**z**]
+> Output TIFF; append **z** (`-tz`) for ZIP compression.
 
 **-n**
-> Output PNG.
+> Output PNG (uncompressed).
 
-**-b** _bits_
-> Bit depth (8 or 16).
+**-b**_8_|_16_|_16f_|_32_
+> Output bit depth for TIFF/PNG (JPEG is always 8-bit).
+
+**-f**
+> Fast-export mode (reduced quality, faster processing).
 
 **-Y**
-> Overwrite existing.
+> Overwrite existing output files.
+
+**-h**, **-?**
+> Display help.
 
 # DESCRIPTION
 

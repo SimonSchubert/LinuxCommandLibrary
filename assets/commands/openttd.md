@@ -8,21 +8,33 @@ transport simulation
 
 ```openttd```
 
-**Start with specific config**
+**Start with a specific config file**
 
 ```openttd -c [config.cfg]```
 
-**Start dedicated server**
+**Start a dedicated server**
 
 ```openttd -D```
 
-**Load savegame**
+**Load a savegame** on startup
 
 ```openttd -g [savegame.sav]```
 
-**Play scenario**
+**Start a new game** with a specific map generator seed
 
-```openttd -G [scenario.scn]```
+```openttd -G [12345]```
+
+**Connect to a network game**
+
+```openttd -n [host:3979]```
+
+**Start at a specific year**
+
+```openttd -t [1970]```
+
+**Run at a fixed resolution**
+
+```openttd -r [1280x720]```
 
 # SYNOPSIS
 
@@ -31,19 +43,58 @@ transport simulation
 # PARAMETERS
 
 **-c** _FILE_
-> Configuration file.
+> Use the specified configuration file instead of openttd.cfg.
 
-**-D**
-> Dedicated server mode.
+**-D** [_host_[_:port_]]
+> Run as a dedicated server (no graphical client).
 
-**-g** _FILE_
-> Load savegame.
+**-f**
+> Fork to the background (used with **-D** on Unix-like systems).
 
-**-G** _FILE_
-> Load scenario.
+**-g** [_FILE_]
+> Start with a savegame loaded; without an argument, starts a new game immediately.
 
-**-n** _HOST_
-> Connect to server.
+**-G** _SEED_
+> Set the random seed used to generate the map.
+
+**-n** _HOST_[_:PORT_][_#PLAYER_]
+> Join the network game running at _HOST_.
+
+**-p** _PASSWORD_
+> Password for the dedicated server (used with **-D**).
+
+**-t** _YEAR_
+> Starting year for the new game.
+
+**-r** _WIDTHxHEIGHT_
+> Set screen resolution.
+
+**-b** _BLITTER_
+> Select a blitter (graphics renderer).
+
+**-v** _DRIVER_
+> Select the video driver.
+
+**-s** _DRIVER_
+> Select the sound driver.
+
+**-m** _DRIVER_
+> Select the music driver.
+
+**-I** _SET_, **-S** _SET_, **-M** _SET_
+> Select the base graphics set, sound set, and music set respectively.
+
+**-e**
+> Start in the scenario editor.
+
+**-q** _FILE_
+> Write information about a savegame to stdout and exit.
+
+**-d** [_LEVEL_]
+> Enable debug output at the given verbosity level.
+
+**-x**
+> Do not automatically save the configuration on exit.
 
 **--help**
 > Display help information.

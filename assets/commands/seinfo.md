@@ -108,4 +108,4 @@ Policy files must be readable by the user running seinfo. When analyzing modular
 
 # SEE ALSO
 
-[sesearch](/man/sesearch)(1), [sediff](/man/sediff)(1), [semanage](/man/semanage)(8), [getenforce](/man/getenforce)(1), [selinux](/man/selinux)(8)
+[sesearch](/man/sesearch)(1), [semanage](/man/semanage)(8), [getenforce](/man/getenforce)(1)

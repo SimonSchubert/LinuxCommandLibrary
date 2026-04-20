@@ -4,17 +4,29 @@ provides a command-line interface to the Intelligent Platform Management
 
 # TLDR
 
-Start the **IPMI driver** for local connections
+Show **chassis power status**
 
-```systemctl start ipmidrv```
+```sudo ipmitool chassis status```
 
-Open IPMI **shell** on local hardware
+**Power on / off / cycle** the server remotely
 
-```sudo ipmitool shell```
+```ipmitool -I lanplus -H [ip] -U [user] -P [pass] chassis power on```
 
-Open IPMI shell on **remote host**
+Read all **sensors**
 
-```ipmitool -H [ip_address] -U [username] shell```
+```sudo ipmitool sensor list```
+
+Show **System Event Log** (SEL)
+
+```sudo ipmitool sel list```
+
+Configure **IPMI LAN** on channel 1
+
+```sudo ipmitool lan print 1```
+
+Activate **Serial-over-LAN** console
+
+```ipmitool -I lanplus -H [ip] -U [user] sol activate```
 
 # SYNOPSIS
 
@@ -68,4 +80,4 @@ IPMI was developed by Intel, HP, NEC, and Dell starting in **1998**. ipmitool be
 
 # SEE ALSO
 
-[ipmi-sensors](/man/ipmi-sensors)(8), [ipmi-chassis](/man/ipmi-chassis)(8), [bmc-info](/man/bmc-info)(8)
+[systemctl](/man/systemctl)(1), [dmidecode](/man/dmidecode)(8)

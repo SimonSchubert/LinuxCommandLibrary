@@ -49,5 +49,5 @@ The tool accepts Git revision specifiers (HEAD, branch names, commit hashes) to 
 
 # SEE ALSO
 
-[dvc-status](/man/dvc-status)(1), [git-diff](/man/git-diff)(1)
+[dvc](/man/dvc)(1), [git-diff](/man/git-diff)(1)
 

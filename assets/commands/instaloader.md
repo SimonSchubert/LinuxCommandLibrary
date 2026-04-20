@@ -35,37 +35,55 @@ Download **stories** and IGTV (login required)
 # PARAMETERS
 
 **-l**, **--login** _USER_
-> Login username for authentication
+> Log in as _USER_. Prompts for the password interactively and caches the session locally.
 
 **-p**, **--password** _PASS_
-> Login password
+> Supply the password on the command line. **Discouraged**: leaks into shell history and process list; prefer the interactive prompt.
+
+**-f**, **--sessionfile** _FILE_
+> Read/write the session cookie from/to _FILE_ instead of the default location.
+
+**--load-cookies** _BROWSER_
+> Import the Instagram cookies of an already-logged-in browser (e.g. **firefox**, **chrome**).
 
 **-s**, **--stories**
-> Download stories (requires login)
+> Also download stories of every listed target (requires login).
 
 **--igtv**
-> Download IGTV videos
+> Also download IGTV/Reel videos.
 
 **--highlights**
-> Download story highlights
+> Download story highlights.
 
 **-G**, **--geotags**
-> Download geotag information
+> Save geotag information as .txt alongside posts.
 
 **-F**, **--fast-update**
-> Stop when reaching already-downloaded content
+> Stop iterating a target once the first already-downloaded item is reached.
+
+**--post-filter** _EXPR_, **--only-if** _EXPR_
+> Python expression evaluated per post (e.g. `--post-filter=viewer_has_liked`); only matching posts are downloaded.
+
+**--storyitem-filter** _EXPR_
+> Same, applied to story items.
+
+**--no-pictures**, **--no-videos**, **--no-captions**, **--no-metadata-json**, **--no-profile-pic**, **--no-posts**
+> Opt out of individual content types.
+
+**--dirname-pattern** _PATTERN_, **--filename-pattern** _PATTERN_
+> Customize output paths using Python format strings.
 
 **-q**, **--quiet**
-> Suppress user interaction prompts
+> Suppress interactive prompts and progress messages.
 
 **--user-agent** _UA_
-> Custom HTTP user agent string
+> Send a custom HTTP **User-Agent** header.
 
 # DESCRIPTION
 
 **instaloader** downloads pictures, videos, captions, and metadata from Instagram profiles. It can archive complete profiles including posts, stories, IGTV, and highlights.
 
-For best quality media and access to private profiles or stories, login credentials are required. Downloaded content includes metadata like captions, comments, and geolocation when available.
+Targets can be profile names, hashtags (**"#tag"**), location IDs (**%id**), or the special selectors **:feed**, **:stories**, **:saved**. Prefixing a profile with **@** downloads its list of followees instead. For best quality media and access to private profiles or stories, login credentials are required. Downloaded content includes metadata like captions, comments, and geolocation when available.
 
 # CAVEATS
 

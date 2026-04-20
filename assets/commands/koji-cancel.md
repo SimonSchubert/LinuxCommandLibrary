@@ -12,13 +12,17 @@ Cancel **multiple tasks**
 
 ```koji cancel [task_id1] [task_id2]```
 
-Cancel with **verbose output**
+Cancel a **build** by NVR or build ID
 
-```koji cancel --verbose [task_id]```
+```koji cancel [package-1.0-1.fc38]```
 
-Display **help**
+Cancel **entire task tree** (task and all descendants)
 
-```koji cancel --help```
+```koji cancel --full [task_id]```
+
+**Force** cancellation on non-owned tasks (admin only)
+
+```koji cancel --force [task_id]```
 
 # SYNOPSIS
 
@@ -31,16 +35,19 @@ Display **help**
 # PARAMETERS
 
 **task_id**
-> The ID of the task to cancel (can specify multiple)
+> Numeric task ID, or build NVR / build ID (can specify multiple).
 
-**--verbose**
-> Show verbose output during cancellation
+**--justone**
+> Cancel only the task itself, not its descendant subtasks.
+
+**--full**
+> Cancel the task and all of its descendants (full task tree).
 
 **--force**
-> Force cancellation even if task appears complete
+> Allow an admin to cancel a task owned by another user.
 
 **-h, --help**
-> Display help information
+> Display help information.
 
 # CAVEATS
 

@@ -67,10 +67,40 @@ create and start a new container
 > Remove container on exit.
 
 **--network** _network_
-> Connect to network.
+> Connect to the specified network (bridge, host, none, or a user-defined network).
 
 **-w**, **--workdir** _dir_
-> Working directory inside container.
+> Working directory inside the container.
+
+**-u**, **--user** _user_[_:group_]
+> Username/UID (and optionally group/GID) to run as.
+
+**--entrypoint** _cmd_
+> Override the image's default **ENTRYPOINT**.
+
+**--restart** _policy_
+> Restart policy: **no**, **on-failure**[**:**_N_], **always**, or **unless-stopped**.
+
+**--pull** _policy_
+> Pull policy before running: **always**, **missing** (default), or **never**.
+
+**-m**, **--memory** _bytes_
+> Hard memory limit (e.g. _512m_, _2g_).
+
+**--cpus** _n_
+> Number of CPUs the container may use (e.g. **1.5**).
+
+**--hostname** _name_
+> Hostname assigned inside the container.
+
+**--privileged**
+> Grant extended privileges to the container.
+
+**--read-only**
+> Mount the container's root filesystem read-only.
+
+**--platform** _os/arch_
+> Set the platform for the image (e.g. **linux/amd64**).
 
 # DESCRIPTION
 
