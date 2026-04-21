@@ -1432,6 +1432,7 @@ ctest.md
 ctop.md
 ctr.md
 ctrlaltdel.md
+ctx.md
 ctypes.md
 cu.md
 cucumber.md
@@ -3130,6 +3131,7 @@ hn.md
 hoard.md
 holehe.md
 hollywood.md
+holos.md
 home-manager.md
 homectl.md
 homeshick.md
@@ -4250,6 +4252,7 @@ mdns-scanner.md
 mdp.md
 mdpdf.md
 mdtt.md
+mdv.md
 mediainfo.md
 mediamtx.md
 medusa.md
@@ -4682,6 +4685,7 @@ nh-os.md
 nh-search.md
 nh.md
 nhentai.md
+ni.md
 nice.md
 nicotine.md
 nikto.md
@@ -6049,6 +6053,7 @@ pvck.md
 pvcreate.md
 pvdisplay.md
 pve-firewall.md
+pve-microvm-template.md
 pveam.md
 pvecm.md
 pveperf.md
@@ -6909,6 +6914,7 @@ soxi.md
 spa-acp-tool.md
 spa-inspect.md
 spa-json-dump.md
+spa-monitor.md
 spa-resample.md
 spark.md
 spctoppm.md
@@ -7108,6 +7114,7 @@ swaybg.md
 swayidle.md
 swaylock.md
 swaymsg.md
+swaynag.md
 swc.md
 swift.md
 swiftc.md
