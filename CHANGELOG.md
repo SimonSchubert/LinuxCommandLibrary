@@ -1,3 +1,12 @@
+## v3.7.9 — 2026-04-21
+
+### Features
+- Added new Linux commands
+
+### Improvements
+- Improved existing command documentation
+- Upgraded Android Gradle Plugin and removed versions plugin
+
 ## v3.7.8 — 2026-04-20
 
 ### Features

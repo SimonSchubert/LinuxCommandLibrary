@@ -1,0 +1,3 @@
+Added new Linux commands
+Improved existing command documentation
+Upgraded Android Gradle Plugin and removed versions plugin
