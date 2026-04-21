@@ -1,7 +1,4 @@
-import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
-
 plugins {
-    alias(libs.plugins.ben.manes.versions)
     alias(libs.plugins.spotless)
     alias(libs.plugins.kotlin.multiplatform) apply false
     alias(libs.plugins.android.application) apply false
@@ -9,12 +6,6 @@ plugins {
 }
 
 group = "com.inspiredandroid"
-
-tasks.withType<DependencyUpdatesTask> {
-    rejectVersionIf {
-        isNonStable(candidate.version)
-    }
-}
 
 configure<com.diffplug.gradle.spotless.SpotlessExtension> {
     kotlin {
@@ -33,11 +24,4 @@ configure<com.diffplug.gradle.spotless.SpotlessExtension> {
         target("**/*.gradle.kts")
         ktlint()
     }
-}
-
-fun isNonStable(version: String): Boolean {
-    val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.uppercase().contains(it) }
-    val regex = "^[0-9,.v-]+(-r)?$".toRegex()
-    val isStable = stableKeyword || regex.matches(version)
-    return isStable.not()
 }
