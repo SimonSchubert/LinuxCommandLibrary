@@ -46,46 +46,60 @@ Syntax-aware prose linter
 > Use specified configuration file (.vale.ini).
 
 **--ext** _extension_
-> Specify file extension for stdin input (e.g., `.md`, `.rst`).
+> Assign a file extension to stdin input (e.g., `.md`, `.rst`).
 
 **--glob** _pattern_
-> Include files matching glob pattern.
+> Only lint files matching the glob pattern.
+
+**--filter** _expr_
+> Filter rules by a CEL-style expression (e.g. `".Level == 'error'"`).
 
 **--minAlertLevel** _level_
-> Minimum alert level: suggestion, warning, error.
+> Minimum alert level: `suggestion`, `warning`, or `error`.
 
 **--output** _format_
-> Output format: text, JSON, line, SARIF.
+> Output format: `CLI` (default), `JSON`, `line`, or path to a template file.
 
 **--no-exit**
 > Always exit with status 0 regardless of errors.
 
 **--no-wrap**
-> Don't wrap output lines.
+> Do not wrap output lines.
+
+**--no-global**
+> Skip loading the global configuration.
 
 **--relative**
-> Report paths relative to current directory.
+> Report paths relative to the current directory.
 
 **--sort**
 > Sort output by file path and line number.
 
 **--ignore-syntax**
-> Lint without syntax-aware parsing.
-
-**ls-dirs**
-> Show configured directories (StylesPath, etc.).
-
-**ls-config**
-> Show active configuration.
-
-**sync**
-> Download and install configured styles.
+> Treat all input as plain text (skip syntax-aware parsing).
 
 **-v**, **--version**
 > Display version information.
 
 **-h**, **--help**
 > Display help message.
+
+# SUBCOMMANDS
+
+**sync**
+> Download and install packages declared in the configuration.
+
+**ls-config**
+> Print the active configuration as JSON.
+
+**ls-dirs**
+> Print the location of Vale's configuration directories.
+
+**ls-metrics** _file_
+> Print readability and other metrics for the given file.
+
+**ls-vars**
+> Print the supported environment variables.
 
 # DESCRIPTION
 

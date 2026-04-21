@@ -4,25 +4,33 @@ Escape strings for systemd unit names
 
 # TLDR
 
-**Escape** the given text
+**Escape the given text**
 
 ```systemd-escape [text]```
 
-**Reverse** the escaping process
+**Reverse the escaping process**
 
-```systemd-escape -u [text]```
+```systemd-escape -u [escaped_text]```
 
-**Treat** the given text as a path
+**Treat the given text as a path (collapses slashes and "..")**
 
-```systemd-escape -p [text]```
+```systemd-escape -p [/path/to/resource]```
 
-**Append** a suffix to the escaped text
+**Append a unit suffix to the escaped text**
 
-```systemd-escape --suffix [suffix] [text]```
+```systemd-escape --suffix [service] [text]```
 
-**Use** a template and inject the escaped text
+**Insert the escaped text into a template unit**
 
-```systemd-escape --template [template] [text]```
+```systemd-escape --template [getty@.service] [tty1]```
+
+**Build a .mount unit name from a path**
+
+```systemd-escape -p --suffix=mount [/tmp/waldi/foobar/]```
+
+**Mangle partially-unescaped input into a valid unit name**
+
+```systemd-escape -m [some string]```
 
 # SYNOPSIS
 
@@ -30,34 +38,53 @@ Escape strings for systemd unit names
 
 # PARAMETERS
 
-**-u, --unescape**
-> Reverse the escaping (decode)
+**-u**, **--unescape**
+> Reverse the escaping (decode). Cannot be combined with **--suffix=** or **--mangle**.
 
-**-p, --path**
-> Escape a file system path
+**-p**, **--path**
+> Treat the argument as a file system path, simplifying slashes and ".." components. Useful for generating strings that match the `%f` specifier.
 
-**--suffix _suffix_**
-> Append unit type suffix (.service, .mount, etc.)
+**--suffix=**_suffix_
+> Append a unit type suffix such as `service` or `mount` to the escaped string. Incompatible with **--template=**, **--unescape**, and **--mangle**.
 
-**--template _template_**
-> Insert escaped string into template at @ position
+**--template=**_template_
+> Insert the escaped string at the `@` position of a template unit name like `foobar@.service`. With **--unescape**, extracts and unescapes just the instance portion.
 
-**-m, --mangle**
-> Mangle string to be suitable as unit name
+**-m**, **--mangle**
+> Escape only obviously-unescaped characters and append a suitable unit suffix if missing. Incompatible with **--suffix=**, **--template=**, and **--unescape**.
 
 **--instance**
-> Print only the instance part of a template
+> Used with **--unescape --template=**: print only the instance portion of a template unit name.
+
+**-h**, **--help**
+> Show help text.
+
+**--version**
+> Show version information.
 
 # DESCRIPTION
 
-**systemd-escape** converts arbitrary strings into valid systemd unit name components. Systemd unit names have strict naming rules, and this tool handles the encoding of special characters.
+**systemd-escape** converts arbitrary strings into valid systemd unit name components, or reverses that conversion. Systemd unit names have strict naming rules: only alphanumerics, `:`, `_`, and `.` are permitted; other characters are encoded as `\xNN` sequences, and `/` becomes `-`.
 
-This is particularly useful when creating mount units or template instances where paths or other strings must be encoded. The escaping follows systemd's unit name escaping rules.
+The tool is especially useful when constructing **.mount** or **.swap** units from paths, or when instantiating template units such as `foo@.service` with a dynamic instance string.
+
+# EXAMPLES
+
+```bash
+$ systemd-escape 'Hallöchen, Meister'
+Hall\xc3\xb6chen\x2c\x20Meister
+
+$ systemd-escape -u 'Hall\xc3\xb6chen\x2c\x20Meister'
+Hallöchen, Meister
+
+$ systemd-escape -p --suffix=mount "/tmp//waldi/foobar/"
+tmp-waldi-foobar.mount
+```
 
 # CAVEATS
 
-Forward slashes in paths become dashes when escaped. The **--path** option handles leading slashes specially. Empty strings and certain special cases have defined escape sequences. Part of the systemd suite.
+Forward slashes in paths become dashes when escaped, and leading slashes are stripped by **--path**. Some option combinations are mutually exclusive (see above). Part of the systemd suite and available wherever systemd is installed.
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [systemd.unit](/man/systemd.unit)(5), [systemd.mount](/man/systemd.mount)(5)
+[systemctl](/man/systemctl)(1)

@@ -4,21 +4,37 @@ ASCII/ANSI art editor with animation support
 
 # TLDR
 
-**Launch** the ASCII art editor
+**Launch** the ASCII/ANSI art editor
 
 ```durdraw```
 
-**Open** a file for editing
+**Open a file** (.dur or ASCII/ANSI) for editing
 
-```durdraw [filename.ans]```
+```durdraw [filename.dur]```
 
-**Create** a new file with specific dimensions
+**Create a new canvas** with specific dimensions
 
-```durdraw -w 80 -h 25 [filename.ans]```
+```durdraw -W [80] -H [25]```
 
-**Play** an animation file
+**Use the maximum canvas size** that fits the terminal
 
-```durdraw -p [animation.ans]```
+```durdraw -m```
+
+**Play a .dur animation** and exit
+
+```durdraw -p [animation.dur]```
+
+**Loop an animation** a fixed number of times
+
+```durdraw -p -x [3] [animation.dur]```
+
+**Force 16- or 256-color mode**
+
+```durdraw --256color```
+
+**Export loaded art to .ansi** and exit
+
+```durdraw --export-ansi [input.dur]```
 
 # SYNOPSIS
 
@@ -26,38 +42,71 @@ ASCII/ANSI art editor with animation support
 
 # PARAMETERS
 
-**-w, --width** _N_
-> Set canvas width (default: 80)
+_FILENAME_
+> A .dur, ASCII, or ANSI file to load.
 
-**-h, --height** _N_
-> Set canvas height (default: 25)
+**-p**, **--play**
+> Play .dur file(s) then exit.
 
-**-p, --play**
-> Play animation mode
+**-x**, **--times** _N_
+> Play _N_ times (requires **-p**).
 
-**-f, --fps** _N_
-> Set animation frames per second
+**--startup**
+> Show the startup screen.
 
-**--export** _FORMAT_
-> Export format: png, gif, txt
+**-w**, **--wait**
+> Pause on the startup screen.
 
-**--no-mouse**
-> Disable mouse support
+**--256color**
+> Force 256-color mode.
 
-**--ascii-only**
-> Restrict to ASCII characters only
+**--16color**
+> Force 16-color mode.
 
-**-v, --version**
-> Display version and exit
+**-b**, **--blackbg**
+> Use a black background instead of the terminal default.
 
-**--help**
-> Display help and exit
+**-W**, **--width** _N_
+> Set canvas width.
+
+**-H**, **--height** _N_
+> Set canvas height.
+
+**-m**, **--max**
+> Use the largest canvas that fits the terminal.
+
+**--nomouse**
+> Disable mouse support.
+
+**--cursor** _STYLE_
+> Cursor style: block, underscore, or pipe.
+
+**--notheme**
+> Disable theme support.
+
+**--theme** _FILE_
+> Load a custom theme file.
+
+**--cp437**
+> Use Code Page 437 encoding (beta).
+
+**--export-ansi**
+> Export loaded art to an .ansi file and exit.
+
+**-u**, **--undosize** _N_
+> Number of undo history states (default: 100).
+
+**-V**, **--version**
+> Show version and exit.
+
+**-h**, **--help**
+> Display help and exit.
 
 # DESCRIPTION
 
-**durdraw** is a terminal-based ASCII and ANSI art editor with animation support. It allows users to create text-based artwork with color support, save in various formats, and create frame-by-frame animations.
+**durdraw** is a versatile curses-based ASCII, ANSI, and Unicode art editor for drawing in Linux, Unix, and macOS terminals. It supports 16- and 256-color palettes, CP437 and Unicode, customizable themes, mouse input, and frame-by-frame animation with adjustable delay.
 
-The editor provides a retro computing aesthetic with modern features like mouse support, color picker, brush tools, and layer management. It's popular in the ASCII art community for creating both static and animated artworks.
+Files are saved in durdraw's native JSON-based `.dur` format, which preserves animation frames and metadata. Static art can be exported to `.ansi` for sharing on traditional ANSI art boards. Animations can be played back in the terminal with **durdraw -p** or the **durview** companion tool.
 
 # KEYBINDINGS
 
@@ -97,8 +146,8 @@ Requires terminal with proper ANSI support. Animation playback depends on termin
 
 # HISTORY
 
-**durdraw** was developed as a modern ASCII/ANSI art editor combining the nostalgia of DOS-based art programs with contemporary features. It has become popular in the ANSI art scene for its animation capabilities.
+**durdraw** was created by Sam "cmang" Foster as a modern successor to DOS-era ANSI editors like TheDraw and ACiDDraw, bringing terminal art creation to Linux, Unix, and macOS with features such as 256-color support, Unicode, and frame animation.
 
 # SEE ALSO
 
-[pablodraw](/man/pablodraw)(1), [asciio](/man/asciio)(1), [gimp](/man/gimp)(1), [imagemagick](/man/imagemagick)(1)
+[gimp](/man/gimp)(1), [imagemagick](/man/imagemagick)(1)

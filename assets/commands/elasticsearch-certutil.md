@@ -45,22 +45,55 @@ Elasticsearch TLS certificate generator
 # PARAMETERS
 
 **--ca** _file_
-> CA certificate to use.
+> Path to existing CA in PKCS#12 format (cert mode).
+
+**--ca-cert** _file_
+> Path to CA certificate in PEM format.
+
+**--ca-key** _file_
+> Path to CA private key in PEM format.
+
+**--ca-pass** _password_
+> Password for the CA private key.
 
 **--out** _file_
 > Output file path.
 
 **--pem**
-> Output in PEM format.
+> Output in PEM format instead of PKCS#12.
 
 **--dns** _names_
-> DNS names for certificate.
+> Comma-separated list of DNS names for the certificate.
 
 **--ip** _addresses_
-> IP addresses for certificate.
+> Comma-separated list of IP addresses for the certificate.
+
+**--name** _name_
+> Filename (without extension) for generated certificate.
 
 **--pass** _password_
-> Password for output file.
+> Password for the generated private key.
+
+**--days** _n_
+> Certificate validity period in days (default: 1095).
+
+**--keysize** _bits_
+> RSA key size in bits (default: 2048).
+
+**--multiple**
+> Generate certificates for multiple instances.
+
+**--in** _file_
+> YAML file describing instances to generate certificates for.
+
+**--self-signed**
+> Create a self-signed certificate (cert mode).
+
+**-s**, **--silent**
+> Minimal output.
+
+**-v**, **--verbose**
+> Verbose output.
 
 # DESCRIPTION
 
@@ -72,5 +105,5 @@ elasticsearch-certutil streamlines security configuration required for productio
 
 # SEE ALSO
 
-[elasticsearch](/man/elasticsearch)(1), [elasticsearch-keystore](/man/elasticsearch-keystore)(1)
+[elasticsearch](/man/elasticsearch)(1), [elasticsearch-keystore](/man/elasticsearch-keystore)(1), [elasticsearch-users](/man/elasticsearch-users)(1)
 

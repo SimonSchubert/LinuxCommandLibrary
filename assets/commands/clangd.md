@@ -4,29 +4,29 @@ C/C++ language server for IDE features
 
 # TLDR
 
-**Start clangd** language server
+**Start the language server (normally launched by an editor)**
 
 ```clangd```
 
-**Start with specific compile commands database**
+**Use a specific compile_commands.json directory**
 
 ```clangd --compile-commands-dir=[/path/to/build]```
 
-**Enable more inlay hints**
+**Enable persistent background indexing and clang-tidy checks**
 
-```clangd --inlay-hints```
+```clangd --background-index --clang-tidy```
 
-**Start with background indexing**
+**Reduce memory pressure on large projects**
 
-```clangd --background-index```
+```clangd --pch-storage=memory -j=[4]```
 
-**Limit memory usage**
+**Parse a single file outside the server loop to debug config**
 
-```clangd --malloc-trim --pch-storage=memory```
+```clangd --check=[src/main.cpp]```
 
-**Enable verbose logging**
+**Enable verbose logging for troubleshooting**
 
-```clangd --log=verbose```
+```clangd --log=verbose --pretty```
 
 **Check version**
 
@@ -46,41 +46,62 @@ The server communicates over stdin/stdout using JSON-RPC, making it compatible w
 
 # PARAMETERS
 
-**--compile-commands-dir=** _dir_
-> Directory containing compile_commands.json.
+**--compile-commands-dir=** _DIR_
+> Look for compile_commands.json in _DIR_ instead of the source tree.
 
 **--background-index**
-> Build an index in the background.
+> Index project sources in the background and persist the index on disk for faster startup.
 
 **--clang-tidy**
-> Enable clang-tidy diagnostics.
+> Run clang-tidy checks as part of diagnostics.
 
-**--completion-style=** _style_
-> Style of completion (detailed, bundled).
+**--completion-style=** _STYLE_
+> Granularity of completion items: `detailed` (one per overload) or `bundled` (grouped).
 
-**--header-insertion=** _mode_
-> Auto-include headers (iwyu, never).
+**--header-insertion=** _MODE_
+> Auto-include headers on completion: `iwyu` (include-what-you-use) or `never`.
 
-**--inlay-hints**
-> Enable inlay hints.
+**--all-scopes-completion**
+> Suggest symbols from namespaces not currently in scope, inserting qualifiers as needed.
 
-**--log=** _level_
-> Log level (error, info, verbose).
+**--fallback-style=** _STYLE_
+> clang-format style applied when no .clang-format file is found (e.g. `LLVM`, `Google`).
 
-**--pch-storage=** _type_
-> PCH storage (disk, memory).
+**--log=** _LEVEL_
+> Log verbosity on stderr: `error`, `info`, or `verbose`.
 
-**--query-driver=** _paths_
-> Allow system includes from compilers.
+**--pretty**
+> Pretty-print JSON-RPC output (useful with --log for debugging).
 
-**-j** _threads_
-> Number of worker threads.
+**--pch-storage=** _TYPE_
+> Store precompiled headers on `disk` (default, low memory) or in `memory` (faster).
+
+**--query-driver=** _GLOBS_
+> Comma-separated globs of compiler binaries clangd may execute to detect system include paths.
+
+**-j** _N_
+> Number of async worker threads (also used for background indexing).
+
+**--limit-results=** _N_
+> Cap the number of results returned per request (default 100; 0 = unlimited).
+
+**--limit-references=** _N_
+> Cap the number of references returned (default 1000; 0 = unlimited).
+
+**--offset-encoding=** _ENC_
+> Force position encoding: `utf-8`, `utf-16`, or `utf-32`.
 
 **--enable-config**
-> Enable .clangd configuration files.
+> Read user and project configuration from `.clangd` and `clangd/config.yaml` YAML files.
+
+**--check** [= _FILE_ ]
+> Parse a single file in isolation instead of running as a server; useful for reproducing crashes or diagnosing setup.
 
 **--version**
 > Display version information.
+
+**--help**
+> Display available options (use `--help-hidden` to include experimental flags).
 
 # CONFIGURATION
 
@@ -103,4 +124,4 @@ Requires compile_commands.json or compile_flags.txt for accurate analysis. Initi
 
 # SEE ALSO
 
-[clang](/man/clang)(1), [clang-format](/man/clang-format)(1), [clang-tidy](/man/clang-tidy)(1), [ccls](/man/ccls)(1)
+[clang](/man/clang)(1), [clang-format](/man/clang-format)(1), [clang-tidy](/man/clang-tidy)(1)

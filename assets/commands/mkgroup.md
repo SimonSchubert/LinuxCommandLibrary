@@ -1,65 +1,86 @@
 # TAGLINE
 
-generates Unix /etc/group from Windows
+Generate /etc/group from Windows group information (Cygwin)
 
 # TLDR
 
-**List local groups**
+**Write local groups to /etc/group**
 
-```mkgroup -l```
+```mkgroup -l > /etc/group```
 
-**List domain groups**
+**Print groups from the current domain**
 
 ```mkgroup -d```
 
-**Output to file**
+**Print groups from a specific domain**
 
-```mkgroup -l > [/etc/group]```
+```mkgroup -d [DOMAIN]```
 
-**List specific domain**
+**Print local groups from another machine**
 
-```mkgroup -d -D [DOMAIN]```
+```mkgroup -l [MACHINE]```
 
-**Show SID information**
+**Exclude Windows BUILTIN groups**
 
-```mkgroup -s```
+```mkgroup -l -b```
+
+**Only look up a single group**
+
+```mkgroup -g [GROUPNAME]```
 
 # SYNOPSIS
 
-**mkgroup** [_options_]
+**mkgroup** [_options_] [_machine_ | _domain_]
 
 # PARAMETERS
 
-**-l**
-> List local groups.
+**-l**, **--local** [_machine_]
+> Print local group accounts (of the current machine or a named one).
 
-**-d**
-> List domain groups.
+**-L**, **--Local** [_machine_]
+> Like **-l**, but prefix each groupname with the machine name.
 
-**-D** _DOMAIN_
-> Specify domain.
+**-d**, **--domain** [_domain_]
+> Print domain groups (current domain, or the one specified).
 
-**-s**
-> Include SID info.
+**-c**, **--current**
+> Print the current (primary) group of the user.
 
-**--help**
-> Display help information.
+**-S**, **--separator** _CHAR_
+> Use _CHAR_ instead of '+' as domain\group separator in groupname.
+
+**-o**, **--id-offset** _OFFSET_
+> Change the default offset (0x10000) added to GIDs from non-local domains.
+
+**-g**, **--group** _GROUPNAME_
+> Only return information for the specified group.
+
+**-b**, **--no-builtin**
+> Don't print the BUILTIN groups.
+
+**-U**, **--unix** _GROUPLIST_
+> Print UNIX groups when using **-l** on a UNIX Samba server.
+
+**-h**, **--help**
+> Display help.
+
+**-v**, **--version**
+> Print version information.
 
 # DESCRIPTION
 
-**mkgroup** generates Unix /etc/group from Windows. It's part of Cygwin for Windows integration.
+**mkgroup** is a Cygwin helper that prints group information in the format used by Unix `/etc/group` (name:passwd:gid:members), derived from Windows user/group databases (SAM for local accounts, Active Directory for domain accounts).
 
-The tool converts Windows group information to Unix format. Used for Cygwin setup.
+Modern Cygwin reads group information directly from Windows via the `nsswitch.conf` mechanism, so a static `/etc/group` file is usually unnecessary. Generating one with **mkgroup** is still useful when the machine is frequently disconnected from its domain controller, when you need deterministic GIDs, or when integrating with Samba.
 
 # CAVEATS
 
-Cygwin specific. Windows environment only. Maps Windows to Unix groups.
+Cygwin-only; has no effect on native Linux systems (use `getent group` or edit `/etc/group` directly there). Since Cygwin 1.7.34, a static `/etc/group` is optional and in most cases not recommended. Generated GIDs for non-local accounts are offset by 0x10000 by default to avoid collisions.
 
 # HISTORY
 
-mkgroup is a **Cygwin** utility for generating Unix group file from Windows user database.
+**mkgroup** is part of the **Cygwin** base-files package, alongside **mkpasswd**. It dates back to the early days of Cygwin when `/etc/passwd` and `/etc/group` were mandatory for POSIX compatibility on Windows. As of Cygwin 1.7.34 (2014), direct lookup via the Windows API became the default, making the tool optional.
 
 # SEE ALSO
 
-[mkpasswd](/man/mkpasswd)(1), [cygwin](/man/cygwin)(1), [groupadd](/man/groupadd)(8)
-
+[mkpasswd](/man/mkpasswd)(1), [groupadd](/man/groupadd)(8)

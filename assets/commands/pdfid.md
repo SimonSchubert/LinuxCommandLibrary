@@ -6,46 +6,76 @@ scans PDF files for keywords that indicate potentially malicious content
 
 **Analyze PDF structure**
 
-```pdfid [file.pdf]```
+```pdfid.py [file.pdf]```
 
 **Scan multiple files**
 
-```pdfid [file1.pdf] [file2.pdf]```
+```pdfid.py [file1.pdf] [file2.pdf]```
 
-**Extra analysis mode**
+**Report entropy and EOF statistics (extra analysis)**
 
-```pdfid -e [file.pdf]```
+```pdfid.py --extra [file.pdf]```
 
-**Output as JSON**
+**Recursively scan a directory for PDFs**
 
-```pdfid -j [file.pdf]```
+```pdfid.py --scan [path/to/directory]```
+
+**Show only non-zero keyword counts**
+
+```pdfid.py --nozero [file.pdf]```
+
+**Create a disarmed copy (neutralize /JS, /JavaScript, /AA, /OpenAction, /Launch)**
+
+```pdfid.py --disarm [file.pdf]```
+
+**Report all names, not just the default keyword list**
+
+```pdfid.py --all [file.pdf]```
 
 # SYNOPSIS
 
-**pdfid** [_options_] _file_...
+**pdfid.py** [_options_] _file_...
 
 # PARAMETERS
 
-**-e**
-> Extra data analysis.
+**--all**
+> Detect all names in the PDF, not only the predefined keyword list.
 
-**-j**
-> JSON output.
+**--extra**
+> Calculate entropy and EOF statistics.
 
-**-s**
-> Scan subfiles.
+**--disarm**
+> Write a disarmed copy of the PDF with dangerous elements neutralized.
 
-**-d**
-> Disarm (remove /JS and /Launch).
+**--force**
+> Process the file even if it lacks a valid %PDF header.
 
-**-n**
-> Only show counts that are non-zero.
+**--nozero**
+> Suppress keywords with zero counts in the output.
 
-**-f**
-> Force analysis even without valid %PDF header.
+**--output** _FILE_
+> Write results to the specified file.
 
-**-p** _PLUGIN_
-> Use specified plugin for additional analysis.
+**--scan**
+> Recursively scan a directory for PDF files.
+
+**--plugins** _PLUGINS_
+> Load one or more plugin modules (comma-separated) for extended analysis.
+
+**--pluginoptions** _OPTIONS_
+> Pass options to the loaded plugins.
+
+**--select** _EXPR_
+> Filter results using a Python expression.
+
+**--csv**
+> Format output as comma-separated values.
+
+**--literalfilenames**
+> Treat filenames literally without wildcard expansion.
+
+**--verbose**
+> Show detailed error messages and stack traces.
 
 # DESCRIPTION
 
@@ -70,11 +100,16 @@ PDFiD 0.2.7 document.pdf
 
 ```
 /JS, /JavaScript  - Embedded JavaScript
-/OpenAction       - Automatic actions
+/AA, /OpenAction  - Automatic/additional actions
 /Launch           - Launch external programs
 /EmbeddedFile     - Embedded files
-/AcroForm         - Interactive forms
+/AcroForm, /XFA   - Interactive forms
+/JBIG2Decode      - JBIG2 filter (historical exploit surface)
+/RichMedia        - Flash/rich media content
+/ObjStm, /Encrypt - Object streams / encryption
 ```
+
+Obfuscated variants (hex-encoded names) are reported in parentheses alongside the plain count, e.g. `/JS 1(1)` means one occurrence with one obfuscated.
 
 # CAVEATS
 

@@ -23,10 +23,10 @@ terminal sudoku puzzle game
 # PARAMETERS
 
 **-s** _SIZE_
-> Set puzzle size (2-7). Default is 3 (standard 9x9 grid).
+> Set puzzle size. The grid becomes (size*size) x (size*size). Default is 3 (a standard 9x9 grid); 2 gives 4x4, 4 gives 16x16.
 
 **-f**
-> Fast (flawed) puzzle generation. Automatically enabled for sizes larger than 4.
+> Fast (flawed) puzzle generation. Generates a puzzle that may have more than one solution but runs in reasonable time. Automatically enabled for sizes larger than 4.
 
 **-h**
 > Display help information.

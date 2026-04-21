@@ -48,16 +48,16 @@ _SCRIPT_
 > Login shell (reads profile files).
 
 **-r**
-> Restricted shell (limits operations like cd and path changes).
+> Restricted shell (limits `cd`, path changes, and redirections). Equivalent to invoking as `rksh`.
 
 **-s**
 > Read commands from standard input.
 
 **-o** _OPTION_
-> Set shell option (e.g., vi, emacs, posix, noclobber, errexit).
+> Set shell option (e.g., `vi`, `emacs`, `posix`, `noclobber`, `errexit`, `noglob`, `pipefail`).
 
 **+o** _OPTION_
-> Unset shell option.
+> Unset the given shell option.
 
 **-i**
 > Force interactive shell mode.
@@ -74,8 +74,14 @@ _SCRIPT_
 **-v**
 > Print shell input lines as they are read.
 
-**--help**
-> Display help information.
+**-a**
+> Export all assigned variables automatically.
+
+**-u**
+> Treat unset variables as an error when substituting.
+
+**-R** _file_
+> Write a cross-reference listing to _file_ (ksh93 only).
 
 # DESCRIPTION
 

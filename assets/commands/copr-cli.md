@@ -4,17 +4,29 @@ COPR build system client
 
 # TLDR
 
+**Show the authenticated user**
+
+```copr-cli whoami```
+
 **Create a new COPR project**
 
-```copr-cli create [project_name] --chroot [fedora-39-x86_64]```
+```copr-cli create [project_name] --chroot [fedora-rawhide-x86_64] --chroot [epel-9-x86_64]```
 
-**Build a package from SRPM**
+**Build a package from a local SRPM**
 
 ```copr-cli build [project_name] [package.src.rpm]```
 
-**Build from a spec file URL**
+**Build from an SRPM URL**
 
-```copr-cli build [project_name] --url [https://example.com/spec.src.rpm]```
+```copr-cli build [project_name] [https://example.com/package.src.rpm]```
+
+**Build from a PyPI package**
+
+```copr-cli buildpypi [project_name] --packagename [requests]```
+
+**Watch an in-progress build**
+
+```copr-cli watch-build [build_id]```
 
 **List your COPR projects**
 
@@ -23,6 +35,10 @@ COPR build system client
 **Check build status**
 
 ```copr-cli status [build_id]```
+
+**Cancel a running build**
+
+```copr-cli cancel [build_id]```
 
 **Download built packages**
 
@@ -38,35 +54,71 @@ COPR build system client
 
 # PARAMETERS
 
+**whoami**
+> Print the user authenticated by the configured API token.
+
+**list** [_OWNER_]
+> List projects belonging to the current user or the specified owner.
+
+**list-chroots**
+> List chroots available on the COPR server.
+
 **create** _NAME_
-> Create a new COPR project.
+> Create a new COPR project (requires at least one --chroot).
 
-**build** _PROJECT_ _SRPM_
-> Submit a build to a project.
-
-**list**
-> List your COPR projects.
-
-**status** _BUILD_ID_
-> Check the status of a build.
-
-**download-build** _BUILD_ID_
-> Download the built RPMs.
+**modify** _PROJECT_
+> Modify settings of an existing project.
 
 **delete** _PROJECT_
 > Delete a project.
 
-**--chroot** _CHROOT_
-> Specify build target (e.g., fedora-39-x86_64, epel-9-x86_64).
+**build** _PROJECT_ _SRPM_|_URL_
+> Submit a build from a local SRPM or an SRPM URL.
 
-**--url** _URL_
-> Build from an SRPM URL instead of local file.
+**buildpypi** _PROJECT_
+> Build from a PyPI source package.
+
+**buildgem** _PROJECT_
+> Build from a RubyGems gem.
+
+**buildscm** _PROJECT_
+> Build from a remote SCM repository (git/svn).
+
+**build-distgit** _PROJECT_
+> Build a package from a DistGit repository.
+
+**status** _BUILD_ID_
+> Print the current status of a build.
+
+**watch-build** _BUILD_ID_
+> Follow a build until it completes.
+
+**cancel** _BUILD_ID_
+> Cancel a running build.
+
+**download-build** _BUILD_ID_ [_DEST_]
+> Download the built RPMs for the given build.
+
+**regenerate-repos** _PROJECT_
+> Regenerate the repository metadata for a project.
+
+**-r**, **--chroot** _CHROOT_
+> Specify the build target (e.g., fedora-rawhide-x86_64, epel-9-x86_64). May be repeated.
 
 **--nowait**
-> Don't wait for build to complete.
+> Submit the build without waiting for it to finish.
+
+**--background**
+> Run the build in the background (lower priority than normal builds).
+
+**--after-build-id** _ID_
+> Make this build run after the specified build completes (batch dependency).
+
+**--timeout** _SECONDS_
+> Override the default build timeout.
 
 **--config** _FILE_
-> Use alternate configuration file.
+> Use an alternate configuration file (default: ~/.config/copr).
 
 # CONFIGURATION
 

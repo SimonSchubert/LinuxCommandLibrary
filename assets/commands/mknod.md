@@ -26,27 +26,33 @@ Create a device file with **default SELinux context**
 
 # SYNOPSIS
 
-**mknod** [**-m** _mode_] [**-Z**] [**--context**[=_ctx_]] _name_ _type_ [_major_ _minor_]
+**mknod** [_OPTION_]... _NAME_ _TYPE_ [_MAJOR_ _MINOR_]
 
 # PARAMETERS
 
-**-m, --mode _mode_**
-> Set file permission bits instead of default (a=rw minus umask)
+**-m**, **--mode**=_MODE_
+> Set file permission bits to MODE (symbolic or numeric), not the default a=rw minus umask.
 
 **-Z**
-> Apply default SELinux security context
+> Set the SELinux security context to the default type.
 
-**--context[=_ctx_]**
-> Set SELinux or SMACK security context to specified value
+**--context**[=_CTX_]
+> Like -Z, or if CTX is specified set the SELinux or SMACK security context to CTX.
+
+**--help**
+> Display help and exit.
+
+**--version**
+> Output version information and exit.
 
 **b**
-> Create block (buffered) special file; requires major and minor numbers
+> Create a block (buffered) special file; MAJOR and MINOR are required.
 
-**c, u**
-> Create character (unbuffered) special file; requires major and minor numbers
+**c**, **u**
+> Create a character (unbuffered) special file; MAJOR and MINOR are required.
 
 **p**
-> Create FIFO (named pipe); major and minor must be omitted
+> Create a FIFO (named pipe); MAJOR and MINOR must be omitted.
 
 # DESCRIPTION
 

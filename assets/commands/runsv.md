@@ -39,20 +39,28 @@ Control interface via supervise directory. The sv command communicates here.
 **log/run** - Logger service (optional)
 **supervise/** - Created by runsv for control
 
-# CONTROL SIGNALS
+# CONTROL COMMANDS
 
-**u** - Up (start)
-**d** - Down (stop)
-**o** - Once
-**p** - Pause
-**c** - Continue
-**h** - Hangup
-**t** - Terminate
-**k** - Kill
+Written to _service_/supervise/control (typically via **sv**):
+
+**u** - Up; start service and restart if it stops
+**d** - Down; send TERM+CONT and don't restart
+**o** - Once; start but don't restart on exit
+**p** - Pause (SIGSTOP)
+**c** - Continue (SIGCONT)
+**h** - Hangup (SIGHUP)
+**a** - Alarm (SIGALRM)
+**i** - Interrupt (SIGINT)
+**q** - Quit (SIGQUIT)
+**1** - SIGUSR1
+**2** - SIGUSR2
+**t** - Terminate (SIGTERM)
+**k** - Kill (SIGKILL)
+**x** - Exit runsv and close log pipes
 
 # CAVEATS
 
-Usually run by runsvdir, not directly. Service directory must have correct permissions. Run script must be executable.
+Usually run by **runsvdir**, not directly. Service directory must have correct permissions and an executable **run** script. A **down** file in the service directory prevents automatic startup. Exits with status 111 on startup errors or if another runsv is already supervising the same directory.
 
 # HISTORY
 
@@ -60,4 +68,4 @@ Usually run by runsvdir, not directly. Service directory must have correct permi
 
 # SEE ALSO
 
-[runit](/man/runit)(8), [sv](/man/sv)(8), [runsvdir](/man/runsvdir)(8), [svlogd](/man/svlogd)(8)
+[runit](/man/runit)(8), [sv](/man/sv)(8), [runsvdir](/man/runsvdir)(8), [svlogd](/man/svlogd)(8), [chpst](/man/chpst)(8)

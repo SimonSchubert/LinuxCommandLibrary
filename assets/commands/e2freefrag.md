@@ -26,11 +26,14 @@ Useful for identifying fragmentation patterns that could impact sequential I/O p
 
 # PARAMETERS
 
-**-c** _size_
-> Chunk size in KB for histogram
+**-c** _chunk_kb_
+> Report the number of free chunks of the given size (in KB). Must be a power of two and larger than the filesystem block size.
+
+**-h**
+> Display usage information.
 
 _device_
-> Filesystem device to analyze
+> Filesystem device (e.g. **/dev/sda1**) to analyze.
 
 # CAVEATS
 
@@ -38,4 +41,4 @@ Filesystem should be unmounted or mounted read-only for accurate results. Part o
 
 # SEE ALSO
 
-[e4defrag](/man/e4defrag)(8), [dumpe2fs](/man/dumpe2fs)(8), [e2fsck](/man/e2fsck)(8)
+[e4defrag](/man/e4defrag)(8), [dumpe2fs](/man/dumpe2fs)(8), [e2fsck](/man/e2fsck)(8), [debugfs](/man/debugfs)(8), [tune2fs](/man/tune2fs)(8)

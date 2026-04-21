@@ -22,11 +22,19 @@ Google WebP image encoder
 
 **Convert with alpha channel** preservation
 
-```cwebp -alpha_q [90] [input.png] -o [output.webp]```
+```cwebp -alpha_q [100] [input.png] -o [output.webp]```
 
 **Use near-lossless** compression
 
 ```cwebp -near_lossless [60] [input.png] -o [output.webp]```
+
+**Maximum compression effort** (slowest, smallest)
+
+```cwebp -m 6 -q [80] [input.jpg] -o [output.webp]```
+
+**Use a preset** tuned for photos
+
+```cwebp -preset photo -q [80] [input.jpg] -o [output.webp]```
 
 # SYNOPSIS
 
@@ -44,25 +52,31 @@ Google WebP image encoder
 > Encode image losslessly.
 
 **-near_lossless** _LEVEL_
-> Near-lossless preprocessing (0-100, 0 is maximum preprocessing).
+> Near-lossless preprocessing (0-100, default 100 = no preprocessing; 60 is typical). Triggers lossless mode.
 
 **-alpha_q** _QUALITY_
-> Alpha channel quality (0-100).
+> Alpha channel quality (0-100, default 100 = lossless alpha).
 
 **-resize** _WIDTH_ _HEIGHT_
-> Resize to specified dimensions.
+> Resize to the given dimensions. A value of 0 for one dimension preserves the aspect ratio.
 
 **-crop** _X_ _Y_ _W_ _H_
-> Crop the input image.
+> Crop the input image to the rectangle at (_X_,_Y_) with width _W_ and height _H_.
 
 **-preset** _NAME_
-> Preset: default, photo, picture, drawing, icon, text.
+> Preset: default, photo, picture, drawing, icon, text. Must appear before other options.
 
 **-m** _METHOD_
-> Compression method (0-6, higher is slower/better).
+> Compression method (0-6, default 4; higher is slower but produces smaller files).
 
 **-z** _LEVEL_
-> Lossless compression preset (0-9).
+> Lossless compression preset (0-9, 0 fastest / 9 slowest; a good default is 6).
+
+**-exact**
+> Preserve RGB values in fully transparent areas (lossless only).
+
+**-mt**
+> Use multi-threading if available.
 
 **-v**
 > Verbose output.
@@ -71,7 +85,7 @@ Google WebP image encoder
 
 **cwebp** is Google's encoder for the WebP image format. WebP provides superior compression compared to JPEG and PNG while supporting both lossy and lossless modes, as well as animation and alpha transparency.
 
-The encoder accepts PNG, JPEG, TIFF, and WebP inputs. For lossy compression, the **-q** parameter controls the quality-size tradeoff. For lossless, the **-z** parameter controls compression effort.
+The encoder accepts PNG, JPEG, TIFF, and WebP inputs (animated PNG and WebP are not supported). For lossy compression, the **-q** parameter controls the quality-size tradeoff. For lossless, the **-z** parameter controls compression effort. Using **-o -** sends the encoded output to stdout.
 
 WebP is widely supported in web browsers and offers 25-34% smaller file sizes than JPEG at equivalent quality. The lossless mode typically achieves 26% smaller files than PNG.
 

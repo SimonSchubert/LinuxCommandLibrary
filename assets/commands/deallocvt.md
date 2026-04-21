@@ -4,43 +4,58 @@ deallocate unused virtual terminal memory
 
 # TLDR
 
-**Deallocate unused** virtual terminals
+**Deallocate all unused virtual terminals**
 
-```deallocvt```
+```sudo deallocvt```
 
-**Deallocate specific** virtual terminal
+**Deallocate a specific virtual terminal**
 
-```deallocvt [7]```
+```sudo deallocvt [7]```
 
-**Deallocate range** of terminals
+**Deallocate a range of virtual terminals**
 
-```deallocvt [7] [8] [9]```
+```sudo deallocvt [7] [8] [9]```
+
+**Target a specific console device**
+
+```sudo deallocvt -C [/dev/tty1]```
+
+**Show version information**
+
+```deallocvt -V```
 
 # SYNOPSIS
 
-**deallocvt** [_N_...]
+**deallocvt** [_options_] [_N_...]
 
 # PARAMETERS
 
 _N_
-> Virtual terminal number(s) to deallocate. Without arguments, deallocates all unused terminals.
+> Virtual terminal number(s) to deallocate. Without arguments, all unused terminals are freed.
+
+**-C**, **--console=**_DEV_
+> Operate on the specified console device (e.g. `/dev/tty1`).
+
+**-V**, **--version**
+> Print version information and exit.
+
+**-h**, **--help**
+> Print usage information and exit.
 
 # DESCRIPTION
 
-**deallocvt** releases the memory allocated to unused virtual terminal (VT) entries. Virtual terminals that are not in use but have been opened consume kernel memory; this command frees that memory.
+**deallocvt** deallocates kernel memory and data structures for unused virtual consoles. A virtual console is considered unused when it is not the active console and no process or text selection is referring to it.
 
-When called without arguments, it deallocates all unused virtual terminals. When given specific terminal numbers, it deallocates only those terminals. A terminal cannot be deallocated if it is the current terminal or has active processes.
-
-This utility is mainly useful on systems with limited memory where the kernel memory used by unused VTs is significant.
+When invoked without arguments, it deallocates all unused virtual terminals. When given specific terminal numbers (corresponding to `/dev/ttyN`), it deallocates only those. A terminal cannot be deallocated if it is the current terminal or if it has active processes.
 
 # CAVEATS
 
-Requires root privileges. Cannot deallocate the current VT or VTs with active processes. Deallocating a VT means it must be reallocated when next used, which has a small overhead.
+Requires root privileges. Cannot deallocate the current VT or VTs with active processes. Deallocating a VT means it will be reallocated the next time it is used, with a small overhead. Mostly useful on memory-constrained systems.
 
 # HISTORY
 
-deallocvt is part of the **kbd** (keyboard) package for Linux console utilities. It provides low-level management of Linux virtual terminal resources, used since the early days of the Linux console system.
+**deallocvt** is part of the **kbd** package for Linux console utilities and was originally authored by **Andries Brouwer**. It provides low-level management of Linux virtual terminal resources.
 
 # SEE ALSO
 
-[chvt](/man/chvt)(1), [openvt](/man/openvt)(1), [fgconsole](/man/fgconsole)(1)
+[chvt](/man/chvt)(1), [fgconsole](/man/fgconsole)(1)

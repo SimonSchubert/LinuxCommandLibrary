@@ -4,70 +4,72 @@ creates posters from PDF
 
 # TLDR
 
-**Create 2x2 poster**
+**Create an A3 poster on A4 pages from an A1 source**
 
-```pdfposter -p 2x2 [input.pdf] [output.pdf]```
+```pdfposter -p a3 -m a4 [input.pdf] [output.pdf]```
 
-**Scale to A0 size**
+**Scale input by factor of 4**
 
 ```pdfposter -s 4 [input.pdf] [output.pdf]```
 
-**Specify output media**
+**Target A0 poster on A4 media**
 
-```pdfposter -m a4 [input.pdf] [output.pdf]```
+```pdfposter -p a0 -m a4 [input.pdf] [output.pdf]```
 
-**Create poster with overlap**
+**Use a custom media size (with margins)**
 
-```pdfposter -p 3x3 -o [10mm] [input.pdf] [output.pdf]```
+```pdfposter -m 160x247mm [input.pdf] [output.pdf]```
 
-**Preview without writing**
+**Preview without writing output (dry run)**
 
-```pdfposter -n -p 2x2 [input.pdf] [output.pdf]```
+```pdfposter -n -p 2xa4 [input.pdf] [output.pdf]```
 
 # SYNOPSIS
 
-**pdfposter** [_-p tiles_] [_-s scale_] [_-m media_] _input_ _output_
+**pdfposter** [_options_] _infile_ _outfile_
 
 # PARAMETERS
 
-**-p** _COLSxROWS_
-> Tile layout.
+**-p** _BOX_, **--poster-size** _BOX_
+> Target poster size (e.g. `a0`, `2xa4`, `30x40cm`).
 
-**-s** _SCALE_
-> Scale factor.
+**-s** _NUMBER_, **--scale** _NUMBER_
+> Linear scaling factor applied to the input.
 
-**-m** _SIZE_
-> Output media size.
+**-m** _BOX_, **--media-size** _BOX_
+> Output media (page) size (default: A4).
 
-**-o** _SIZE_
-> Overlap between tiles.
+**-A**, **--art-box**
+> Use ArtBox instead of TrimBox for the input page.
 
-**-n**
-> Dry run, no output.
+**-n**, **--dry-run**
+> Show what would be done without writing output.
 
-**-v**
-> Verbose output.
+**-v**, **--verbose**
+> Verbose output (repeat for more detail).
+
+**--help-media-names**
+> List recognized media and distance names.
+
+**--version**
+> Display version information.
 
 # DESCRIPTION
 
-**pdfposter** creates posters from PDF. It tiles pages for large prints.
+**pdfposter** scales and tiles a PDF document so a single page can be printed on multiple sheets and assembled into a large poster.
 
-Splits single page into multiple. Print and assemble.
+The desired output size is defined with **-p**/**--poster-size** or a direct **-s**/**--scale** factor; **-m**/**--media-size** selects the paper that tiles are rendered onto. Many standard media names (A4, A3, Letter, ...) are accepted, as are explicit distances such as `10x15cm` or `160x247mm`.
 
-Scale factor determines size. 2x means twice original.
-
-Tile specification sets layout. 2x2 makes 4 pages.
-
-Overlap helps assembly. Tiles share edges.
+Only the first page of the input is used. The program computes the number of tiles needed and writes a multi-page PDF whose pages, when printed and joined, recreate the scaled original.
 
 # CAVEATS
 
-Requires PyPDF2 or pypdf. Python-based tool. Large posters need many pages.
+Python-based tool built on pypdf/PyPDF2. Only the first page of the input is tiled. Combine with `pdfjam` or `pdftk` if you need to pre-select a page.
 
 # HISTORY
 
-**pdfposter** was created for making large posters from PDF documents by splitting them across multiple printable pages.
+**pdfposter** was written by **Hartmut Goebel** as a Python alternative to `poster`(1), which operates on PostScript. It has been packaged by major Linux distributions since the mid-2000s.
 
 # SEE ALSO
 
-[pdfjam](/man/pdfjam)(1), [poster](/man/poster)(1), [pdfnup](/man/pdfnup)(1)
+[pdfjam](/man/pdfjam)(1), [poster](/man/poster)(1), [pdfnup](/man/pdfnup)(1), [pdftk](/man/pdftk)(1)

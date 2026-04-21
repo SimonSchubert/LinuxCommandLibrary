@@ -4,56 +4,79 @@ Web Application Firewall detection tool
 
 # TLDR
 
-**Detect WAF**
+**Detect WAF** protecting a site
 
 ```wafw00f [https://example.com]```
 
-**Test multiple URLs**
+**Scan multiple URLs** in one run
+
+```wafw00f [https://site1.com] [https://site2.com]```
+
+**Read targets** from an input file
 
 ```wafw00f -i [urls.txt]```
 
-**List known WAFs**
+**List all known WAFs** that can be detected
 
 ```wafw00f -l```
 
-**Verbose output**
-
-```wafw00f -v [https://example.com]```
-
-**Test all WAFs**
+**Find all** matching WAFs (don't stop at first match)
 
 ```wafw00f -a [https://example.com]```
 
-**Output to file**
+**Verbose output** for debugging (repeatable)
 
-```wafw00f -o [output.txt] [https://example.com]```
+```wafw00f -vv [https://example.com]```
+
+**Route through a proxy** (e.g. Burp Suite)
+
+```wafw00f -p [http://127.0.0.1:8080] [https://example.com]```
+
+**Save output** as CSV, JSON, or text (format inferred from extension)
+
+```wafw00f -o [result.json] [https://example.com]```
 
 # SYNOPSIS
 
-**wafw00f** [_-l_] [_-a_] [_-v_] [_options_] _url_
+**wafw00f** [_options_] _url_ [_url_ ...]
 
 # PARAMETERS
 
-**-l**, **--list**
-> List known WAFs.
+**-h**, **--help**
+> Show help message and exit.
 
-**-a**, **--findall**
-> Test all WAFs.
-
-**-i** _FILE_
-> Input file.
-
-**-o** _FILE_
-> Output file.
+**-V**, **--version**
+> Print the current version and exit.
 
 **-v**, **--verbose**
-> Verbose output.
+> Enable verbosity. Can be repeated (e.g. **-vv**) for more detail.
 
-**-t** _TEST_
-> Specific test.
+**-a**, **--findall**
+> Find all WAFs matching the signatures; do not stop after the first match.
 
-**-p** _PROXY_
-> Use proxy.
+**-r**, **--noredirect**
+> Do not follow 3xx redirections.
+
+**-t** _TEST_, **--test**=_TEST_
+> Test for one specific WAF (name from **-l** output).
+
+**-l**, **--list**
+> List all WAFs that wafw00f is able to detect.
+
+**-p** _PROXY_, **--proxy**=_PROXY_
+> Use an HTTP/SOCKS5 proxy, e.g. _http://host:8080_, _socks5://host:1080_, _http://user:pass@host:8080_.
+
+**-H** _FILE_, **--headers**=_FILE_
+> Pass custom headers from a text file, overwriting the default header set.
+
+**-i** _FILE_, **--input-file**=_FILE_
+> Read targets from a text, CSV, or JSON file.
+
+**-o** _FILE_, **--output**=_FILE_
+> Write results to a file. Format is chosen from the extension (csv, json, text).
+
+**-f** _FORMAT_, **--format**=_FORMAT_
+> Force output format regardless of filename extension.
 
 # DESCRIPTION
 
@@ -73,8 +96,8 @@ For authorized testing only. Some WAFs may block detection. False positives poss
 
 # HISTORY
 
-**wafw00f** was created for web application security testing. It helps penetration testers identify protection measures.
+**wafw00f** was originally written by **Sandro Gauci** and released by **EnableSecurity** around **2009**. It has since become a standard recon tool, bundled with Kali Linux and actively maintained on GitHub. The name is a pun on "WAF" combined with a dog's bark.
 
 # SEE ALSO
 
-[nmap](/man/nmap)(1), [nikto](/man/nikto)(1), [wfuzz](/man/wfuzz)(1)
+[nmap](/man/nmap)(1), [nikto](/man/nikto)(1), [wfuzz](/man/wfuzz)(1), [burpsuite](/man/burpsuite)(1)

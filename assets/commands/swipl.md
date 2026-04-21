@@ -31,22 +31,46 @@ SWI-Prolog logic programming interpreter
 # PARAMETERS
 
 **-g** _GOAL_
-> Initial goal.
+> Goal executed before entering the interactive top level. May appear multiple times.
 
 **-t** _GOAL_
-> Top-level goal.
+> Use goal as the interactive top level instead of the default prolog/0 (commonly **halt** for scripts).
 
 **-o** _FILE_
-> Output executable.
+> Specify the output file when used with **-c**.
 
 **-c** _FILES_
-> Compile files.
+> Compile files into an intermediate code (saved state) file.
 
 **-s** _FILE_
-> Load script.
+> Load file as a script after initialization.
 
-**--quiet**
-> Suppress banner.
+**-f** _FILE_
+> Use file as the initialization file instead of the default **init.pl**. Use **-f none** to skip init.
+
+**-l** _FILE_
+> Load file (compatibility with other Prolog systems).
+
+**-x** _BOOTFILE_
+> Boot from an alternative saved state.
+
+**-O**
+> Enable optimized compilation.
+
+**-D** _NAME_[=_VALUE_]
+> Set a Prolog flag.
+
+**--stack-limit=**_SIZE_
+> Limit combined Prolog stack size (suffix b, k, m, g).
+
+**-q**, **--quiet**
+> Suppress informational messages and startup banner.
+
+**--version**
+> Print version and architecture.
+
+**--help**
+> Print brief help summary.
 
 # DESCRIPTION
 

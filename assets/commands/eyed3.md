@@ -33,25 +33,55 @@ Useful for organizing music libraries and batch tagging MP3 collections.
 # PARAMETERS
 
 **-t, --title** _text_
-> Set track title
+> Set track title.
 
 **-A, --album** _text_
-> Set album name
+> Set album name.
 
 **-a, --artist** _text_
-> Set artist name
+> Set artist name.
 
-**-n, --track-num** _num_
-> Set track number
+**-b, --album-artist** _text_
+> Set album artist (compilations, multi-artist albums).
 
-**--add-image** _path:type:_
-> Add image to file
+**-n, --track** _num_
+> Set track number.
+
+**-N, --track-total** _num_
+> Set total number of tracks.
+
+**-d, --disc-num** _num_
+> Set disc number.
 
 **-G, --genre** _genre_
-> Set genre
+> Set genre (name or numeric ID3v1 code).
 
-**-Y, --year** _year_
-> Set release year
+**-Y, --release-year** _year_
+> Set release year.
+
+**-c, --comment** _text_
+> Add a comment.
+
+**--add-image** _path:type[:description]_
+> Add an image (APIC frame); TYPE from `--list-image-types` (e.g. FRONT_COVER).
+
+**--remove-all-images**
+> Remove all embedded images.
+
+**--write-images** _dir_
+> Extract images to a directory.
+
+**--to-v2.3**, **--to-v2.4**, **--to-v1.1**
+> Convert the tag to the specified ID3 version.
+
+**--remove-v1**, **--remove-v2**, **--remove-all**
+> Remove ID3 v1.x, v2.x, or all tags.
+
+**--preserve-file-times**
+> Keep original file modification timestamps.
+
+**-Q, --quiet**
+> Suppress output.
 
 # CAVEATS
 

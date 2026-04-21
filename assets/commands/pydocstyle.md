@@ -57,10 +57,25 @@ Check Python docstring conventions
 > Count only.
 
 **--match** _PATTERN_
-> File pattern.
+> Only check files whose names match the regular expression _PATTERN_ (default: `(?!test_).*\.py`).
+
+**--match-dir** _PATTERN_
+> Only recurse into directories whose names match the regular expression _PATTERN_ (default: `[^\.].*`).
+
+**--add-ignore** _CODES_
+> Add codes to the existing ignore list (does not replace).
+
+**--add-select** _CODES_
+> Add codes to the existing select list (does not replace).
 
 **--config** _FILE_
-> Config file.
+> Use the specified configuration file instead of auto-discovery.
+
+**-d**, **--debug**
+> Print debug information.
+
+**-v**, **--verbose**
+> Print status information during run.
 
 # CONVENTIONS
 
@@ -95,10 +110,12 @@ Configuration files set project defaults. pyproject.toml and setup.cfg supported
 
 Style preferences vary. May need tuning for project needs. Not all edge cases covered.
 
+**Deprecated:** as of late 2023 pydocstyle is no longer actively maintained; its checks were reimplemented in **Ruff** under the `D` prefix, which is the recommended replacement.
+
 # HISTORY
 
-**pydocstyle** started as **pep257** before expanding to support multiple conventions. It helps Python projects maintain consistent documentation.
+**pydocstyle** started as **pep257** before expanding to support multiple conventions (PEP 257, NumPy, Google). Development slowed with the rise of **Ruff**, which provides a faster, drop-in implementation of pydocstyle's rules. The PyCQA project announced deprecation in November 2023, recommending migration to Ruff.
 
 # SEE ALSO
 
-[pylint](/man/pylint)(1), [flake8](/man/flake8)(1), [mypy](/man/mypy)(1)
+[ruff](/man/ruff)(1), [pylint](/man/pylint)(1), [flake8](/man/flake8)(1), [mypy](/man/mypy)(1), [black](/man/black)(1)

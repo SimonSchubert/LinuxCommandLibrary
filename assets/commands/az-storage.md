@@ -85,15 +85,22 @@ Azure Storage offers multiple storage types: Blob storage for unstructured data,
 **-d, --destination** _value_
 > Destination path (local or URL)
 
-**--recursive** _value_
-> Process subdirectories recursively
+**--recursive**
+> Process subdirectories recursively.
 
 **--auth-mode** _value_
-> Authentication mode: key or login
+> Authentication mode: **key** (uses account key) or **login** (uses Azure AD credentials).
+
+**--sas-token** _value_
+> Shared access signature token used to authenticate the request.
 
 # CAVEATS
 
-Commands support multiple authentication methods: account key, SAS token, Azure AD login, or connection string. The **copy** command uses AzCopy under the hood and supports S3-to-Azure transfers. Wildcard patterns work differently than shell globbing; use **--include-pattern** and **--exclude-pattern**.
+Commands support multiple authentication methods: account key, SAS token, Azure AD login, or connection string. The **copy** and **remove** commands use AzCopy under the hood and support S3-to-Azure and Google Cloud Storage-to-Azure transfers. Wildcard patterns work differently than shell globbing; use **--include-pattern** and **--exclude-pattern** for filtering. Some subcommands require installing the **storage-preview** extension.
+
+# HISTORY
+
+**az storage** is part of the **Azure CLI**, Microsoft's cross-platform command-line tool first released in **2014** (originally as **xplat-cli**). The modern `az` interface rewritten in Python launched in **2017**. The **az storage copy** and **az storage remove** commands integrate **AzCopy v10**, replacing older upload/download flows with a faster, resumable transfer engine.
 
 # SEE ALSO
 

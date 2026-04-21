@@ -74,13 +74,13 @@ List available **devices**
 **set-profile, spr** _id_
 > Set active profile
 
-**list-ports, lpo**
+**list-ports, lp** [_id_]
 > List available ports
 
-**set-port, spo** _id_
+**set-port, sp** _id_
 > Set active port
 
-**list-devices, ld**
+**list-devices, ld** [_id_]
 > List available devices
 
 **get-volume, gv** _id_
@@ -89,8 +89,23 @@ List available **devices**
 **set-volume, v** _id_ _level_
 > Set device volume
 
+**inc-volume, v+** _id_
+> Increase device volume
+
+**dec-volume, v-** _id_
+> Decrease device volume
+
+**get-mute, gm** _id_
+> Get device mute state
+
+**set-mute, sm** _id_ _value_
+> Set device mute state
+
 **toggle-mute, m** _id_
 > Toggle device mute state
+
+**help, h**
+> Show available commands
 
 **quit, q**
 > Exit the tool

@@ -4,9 +4,17 @@ ask kernel to forget about a partition
 
 # TLDR
 
-Tell kernel to **forget** partition 1 of /dev/sda
+**Forget partition 1 of /dev/sda**
 
 ```sudo delpart [/dev/sda] [1]```
+
+**Forget an NVMe partition**
+
+```sudo delpart [/dev/nvme0n1] [3]```
+
+**Show help**
+
+```delpart --help```
 
 # SYNOPSIS
 
@@ -14,22 +22,32 @@ Tell kernel to **forget** partition 1 of /dev/sda
 
 # DESCRIPTION
 
-**delpart** asks the Linux kernel to forget about a partition. This is a low-level command that updates the kernel's in-memory partition table without modifying the actual partition table on disk.
+**delpart** asks the Linux kernel to forget about the specified partition (by number) on the given block device. It is a thin wrapper around the `BLKPG_DEL_PARTITION` ioctl and updates only the kernel's in-memory view — the on-disk partition table is not touched.
 
-Used when the on-disk partition table has been modified and the kernel needs to be informed of the change without rebooting. This is particularly useful after manually editing partition tables with tools like fdisk or parted, allowing the changes to take effect immediately.
+Typical use is after manually editing a partition table with **fdisk** or **parted** while other partitions on the same disk remain busy: **delpart** removes the kernel node for a single partition so it can be recreated with **addpart**, avoiding a full re-read of the table (as **partprobe** or `blockdev --rereadpt` would attempt).
 
 # PARAMETERS
 
 _device_
-> The block device (e.g., /dev/sda)
+> The block device containing the partition (e.g., /dev/sda, /dev/nvme0n1).
 
 _partition_
-> Partition number to remove
+> The partition number to remove from the kernel's view.
+
+**-h**, **--help**
+> Display help and exit.
+
+**-V**, **--version**
+> Display version information and exit.
 
 # CAVEATS
 
-Does not modify the partition table on disk, only kernel's view. The partition must not be in use (mounted, etc.). Changes may be reverted on reboot if the on-disk table differs. Part of util-linux.
+Requires root privileges. The partition must not be in use — unmount filesystems and stop any swap, LVM, or RAID components on it first, or the ioctl will fail with **EBUSY**. Only the kernel's view is updated; on reboot the kernel re-reads the on-disk table, so the partition will reappear unless the table was also edited. Part of the util-linux package.
+
+# HISTORY
+
+**delpart** ships as part of **util-linux**, which is maintained by Karel Zak and distributed via the Linux Kernel Archive. It complements **addpart** and **resizepart** as minimal ioctl wrappers intended for scripts that modify partitions on live systems.
 
 # SEE ALSO
 
-[addpart](/man/addpart)(8), [partprobe](/man/partprobe)(8), [fdisk](/man/fdisk)(8)
+[addpart](/man/addpart)(8), [partx](/man/partx)(8), [partprobe](/man/partprobe)(8), [fdisk](/man/fdisk)(8), [parted](/man/parted)(8)

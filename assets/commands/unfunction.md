@@ -16,14 +16,21 @@ Remove shell function definitions
 
 ```unfunction -m "[pattern]*"```
 
+**Force removal without errors for undefined names**
+
+```unfunction -f [function_name]```
+
 # SYNOPSIS
 
-**unfunction** [_-m_] _name_ [_name ..._]
+**unfunction** [_-fm_] _name_ [_name ..._]
 
 # PARAMETERS
 
 **-m**
-> Treat arguments as patterns and remove all matching functions
+> Treat each _name_ as a pattern (using standard zsh pattern-matching) and remove all functions whose names match.
+
+**-f**
+> Suppress errors when a given name does not correspond to a defined function.
 
 # DESCRIPTION
 

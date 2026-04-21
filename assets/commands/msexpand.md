@@ -1,48 +1,62 @@
 # TAGLINE
 
-expands Microsoft compressed files
+expand Microsoft COMPRESS.EXE compressed files
 
 # TLDR
 
-**Expand compressed file**
+**Expand a compressed file** (output written to stdout)
 
 ```msexpand [file.ex_]```
 
-**Expand to specific output**
+**Expand a file and save the result**
 
-```msexpand [file.ex_] [output.exe]```
+```msexpand [file.ex_] > [file.exe]```
+
+**Decompress from standard input**
+
+```cat [file.ex_] | msexpand > [file.exe]```
 
 **Expand multiple files**
 
-```msexpand [*.ex_]```
+```msexpand [file1.dl_] [file2.ex_]```
+
+**Print version information**
+
+```msexpand -V```
 
 # SYNOPSIS
 
-**msexpand** [_options_] _files_
+**msexpand** [**-h**]
+
+**msexpand** [**-V**]
+
+**msexpand** [_name_...]
 
 # PARAMETERS
 
-_FILES_
-> Compressed files to expand.
+_name_
+> One or more compressed input files. If omitted, input is read from standard input.
 
-**--help**
-> Display help information.
+**-h**
+> Display a short usage message.
+
+**-V**
+> Display version information.
 
 # DESCRIPTION
 
-**msexpand** expands Microsoft compressed files. It handles files compressed with MS COMPRESS.EXE.
+**msexpand** decompresses files produced by **mscompress**(1) or the Microsoft **COMPRESS.EXE** utility (for example, the `*.??_` files found on Windows 3.x and early Windows 9x installation media).
 
-The tool decompresses legacy Windows installation files. Part of cabextract/mscompress utilities.
+When invoked without file arguments, msexpand reads compressed data from standard input and writes the decompressed output to standard output. When one or more filenames are supplied, each is decompressed to standard output in order; redirect the output to save the result to a file.
 
 # CAVEATS
 
-Legacy format. Files typically end in _ (underscore). Use cabextract for CAB files.
+Handles only the legacy SZDD/KWAJ single-file compression format. It does not understand Microsoft CAB archives (use **cabextract**(1) for those) or modern ZIP archives. Unlike the original DOS `EXPAND.EXE`, msexpand does not rename the output file automatically.
 
 # HISTORY
 
-msexpand was created to decompress **Microsoft COMPRESS** format files used in older Windows distributions.
+Part of the **mscompress** package, developed as a free re-implementation of the Microsoft COMPRESS/EXPAND file format so that legacy Windows installation files can be unpacked on Unix systems.
 
 # SEE ALSO
 
 [cabextract](/man/cabextract)(1), [unzip](/man/unzip)(1), [7z](/man/7z)(1)
-

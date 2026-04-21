@@ -20,13 +20,21 @@ development server with live reload
 
 ```live-server --open=[index.html]```
 
-**Watch specific files**
+**Watch specific paths**
 
 ```live-server --watch=[src/,public/]```
 
 **Disable browser open**
 
 ```live-server --no-browser```
+
+**Serve SPA** (fallback to index.html)
+
+```live-server --entry-file=[index.html]```
+
+**Enable HTTPS and CORS**
+
+```live-server --https=[https-config.js] --cors```
 
 # SYNOPSIS
 
@@ -35,24 +43,60 @@ development server with live reload
 # PARAMETERS
 
 _DIRECTORY_
-> Directory to serve.
+> Directory to serve (defaults to current).
 
-**--port** _PORT_
-> Server port number.
+**--port=**_PORT_
+> Server port (default: 8080, or PORT env var).
 
-**--host** _HOST_
-> Host address to bind.
+**--host=**_HOST_
+> Host address to bind (default: 0.0.0.0, or IP env var).
 
-**--open** _PATH_
-> Path to open in browser.
+**--open=**_PATH_
+> Path to open in browser on start.
 
-**--watch** _PATHS_
-> Directories to watch for changes.
+**--watch=**_PATHS_
+> Comma-separated paths to watch for changes.
+
+**--ignore=**_PATHS_
+> Comma-separated paths to exclude from watching.
 
 **--no-browser**
-> Don't open browser.
+> Don't auto-launch browser.
 
-**--help**
+**--browser=**_BROWSER_
+> Specify which browser to open.
+
+**--no-css-inject**
+> Reload full page on CSS changes instead of live-injecting.
+
+**--entry-file=**_PATH_
+> Fallback file for missing requests (useful for SPAs).
+
+**--mount=**_ROUTE:PATH_
+> Map a URL route to a directory.
+
+**--proxy=**_ROUTE:URL_
+> Proxy requests matching route to URL.
+
+**--https=**_PATH_
+> Path to HTTPS configuration module.
+
+**--cors**
+> Enable CORS for all requests.
+
+**--wait=**_MS_
+> Delay (ms) before reloading (default: 100).
+
+**-q**, **--quiet**
+> Suppress log output.
+
+**-V**, **--verbose**
+> Verbose logging.
+
+**-v**, **--version**
+> Show version.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
@@ -71,5 +115,5 @@ live-server was created to simplify front-end development with automatic browser
 
 # SEE ALSO
 
-[http-server](/man/http-server)(1), [serve](/man/serve)(1), [python](/man/python)(1)
+[http-server](/man/http-server)(1), [serve](/man/serve)(1), [browser-sync](/man/browser-sync)(1), [nodemon](/man/nodemon)(1), [python](/man/python)(1)
 

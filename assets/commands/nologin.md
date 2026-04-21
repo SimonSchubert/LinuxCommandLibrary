@@ -18,22 +18,26 @@ Set a user's **login shell to nologin** to prevent logging in
 
 # PARAMETERS
 
-**-c, --command _string_**
-> Ignored (for compatibility with shells)
+**-c**, **--command** _command_
+> Ignored (accepted only for shell compatibility).
 
-**--help**
-> Display help information
+**-h**, **--help**
+> Display help and exit.
 
-**--version**
-> Display version information
+**-V**, **--version**
+> Display version information and exit.
+
+Other shell options (**-i**, **-l**, **--noprofile**, **--norc**, **--posix**, **--rcfile**, **-r**) are also accepted and ignored so that programs invoking a shell do not crash.
 
 # DESCRIPTION
 
-**nologin** is a special shell that politely refuses login attempts. When set as a user's login shell, any attempt to log in as that user (via SSH, console, or su) is rejected with a message.
+**nologin** displays a message that an account is not available and exits non-zero. It is designed as a replacement shell for accounts that should not be able to log in interactively.
 
-This is commonly used for system accounts (daemon, nobody, www-data) that should never have interactive logins, or for temporarily disabling user accounts without deleting them.
+When set as a user's login shell, any attempt to log in as that user (via SSH, console, or **su**) is rejected. It is commonly used for system accounts (daemon, nobody, www-data) or to temporarily disable user accounts without deleting them.
 
-The default rejection message can be customized by creating **/etc/nologin.txt** with the desired text. If this file exists, its contents are displayed when login is refused.
+If **/etc/nologin.txt** exists, nologin displays its contents instead of the default message. On Linux (util-linux) the attempt is also written to **syslog**.
+
+Note: per-account **nologin** (this tool) is distinct from the **pam_nologin** PAM module, which disables all non-root logins system-wide via **/etc/nologin** or **/var/run/nologin**.
 
 # CAVEATS
 

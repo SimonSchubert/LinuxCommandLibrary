@@ -59,7 +59,16 @@ The tool simplifies USE flag management by providing a command-line interface to
 > Remove the specified USE flag from configuration
 
 **-i, --info**
-> Show information about a USE flag
+> Show information about a USE flag (description, status, type).
+
+**-I, --info-installed**
+> Like **--info**, but also list currently installed packages that use the flag.
+
+**-h, --help**
+> Display help information.
+
+**-v, --version**
+> Display version information.
 
 # CONFIGURATION
 
@@ -79,4 +88,4 @@ Global USE flags are set in /etc/portage/make.conf. Local USE flags are set in /
 
 # SEE ALSO
 
-[emerge](/man/emerge)(1), [equery](/man/equery)(1), [portage](/man/portage)(5)
+[emerge](/man/emerge)(1), [equery](/man/equery)(1), [eselect](/man/eselect)(1)

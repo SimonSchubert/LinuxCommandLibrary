@@ -1,6 +1,6 @@
 # TAGLINE
 
-Funtoo system personality manager
+Funtoo Linux system personality manager
 
 # TLDR
 
@@ -64,6 +64,9 @@ Available modules include: **sync**, **profile**, **query**, **doc**, **boot**, 
 **config**
 > View and modify /etc/ego.conf settings
 
+**help** [_module_]
+> Show help for ego or a specific module.
+
 # CONFIGURATION
 
 **/etc/ego.conf**
@@ -71,7 +74,11 @@ Available modules include: **sync**, **profile**, **query**, **doc**, **boot**, 
 
 # CAVEATS
 
-Funtoo Linux specific. Not available on Gentoo or other distributions. Requires proper /etc/ego.conf configuration.
+Funtoo Linux specific. Not available on stock Gentoo or other distributions. Requires proper /etc/ego.conf configuration. Ego is a wrapper around and intended eventual replacement for **eselect** on Funtoo; the shortcut `epro` is equivalent to `ego profile`.
+
+# HISTORY
+
+**ego** was introduced by the **Funtoo Linux** project, a Gentoo-derived distribution led by Daniel Robbins (the original Gentoo founder). It consolidates previously separate utilities (profile selection, Portage tree sync, bootloader generation) into a single modular command and replaces portions of eselect on Funtoo systems.
 
 # SEE ALSO
 

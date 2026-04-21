@@ -59,22 +59,43 @@ Manage passwords and secrets from the terminal
 > Synchronize with the Bitwarden server.
 
 **list** _object_
-> List items (items, folders, collections, organizations).
+> List items (items, folders, collections, organizations, org-members, org-collections, send).
 
 **get** _object_ _id_
-> Get a specific item (item, password, username, totp, notes).
+> Get a specific object (item, password, username, uri, totp, notes, exposed, attachment, folder, template).
 
 **create** _object_
-> Create a new item (accepts JSON from stdin).
+> Create a new item (item, folder, attachment, org-collection); accepts base64-encoded JSON.
 
 **edit** _object_ _id_
-> Edit an existing item.
+> Edit an existing item (item, folder, org-collection).
 
 **delete** _object_ _id_
-> Delete an item.
+> Delete an item. Use **--permanent** to bypass the trash.
+
+**restore** _object_ _id_
+> Restore an item from the trash.
+
+**import** _format_ _path_
+> Import data from a third-party format or JSON export.
+
+**export**
+> Export the vault. Options: **--format** json|csv|encrypted_json, **--output** _path_.
 
 **generate**
-> Generate a secure password.
+> Generate a password or passphrase.
+
+**encode**
+> Base64-encode stdin (commonly used to pipe JSON into create/edit).
+
+**status**
+> Show status (server URL, last sync, email, vault state) as JSON.
+
+**serve**
+> Start a local REST API server (**--port**, **--hostname**).
+
+**config** _setting_ _value_
+> Configure CLI settings (e.g. `bw config server <url>`).
 
 **--session** _key_
 > Session key from unlock (or set BW_SESSION env var).
@@ -82,11 +103,23 @@ Manage passwords and secrets from the terminal
 **--search** _query_
 > Search filter for list commands.
 
+**--pretty**
+> Pretty-print JSON output.
+
+**--raw**
+> Output raw value instead of JSON.
+
+**--nointeraction**
+> Do not prompt for input (for scripts).
+
 **-u**, **-l**, **-n**, **-s**
 > Password generation: uppercase, lowercase, numbers, special.
 
 **--length** _n_
-> Password length for generation.
+> Password length for generation (minimum 5).
+
+**--passphrase**
+> Generate a passphrase instead of a password (use with **--words**, **--separator**, **--capitalize**).
 
 # DESCRIPTION
 

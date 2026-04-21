@@ -8,6 +8,10 @@ Interactive Ruby console with Rails loaded
 
 ```rails console```
 
+**Use the short alias**
+
+```rails c```
+
 **Start in sandbox mode** (all database changes rolled back on exit)
 
 ```rails console --sandbox```
@@ -16,24 +20,29 @@ Interactive Ruby console with Rails loaded
 
 ```rails console -e [production|test|development]```
 
-**Start console in production environment**
+**Sandbox in a specific environment**
 
-```rails console --environment=production```
+```rails console -e staging --sandbox```
 
 # SYNOPSIS
 
-**rails console** [**-e** _environment_] [**--sandbox**] [**-h**]
+**rails console** [**-e** _environment_] [**--sandbox**] [**--skip-executor**] [**-h**]
+
+**rails c** [_options_]
 
 # PARAMETERS
 
 **-e**, **--environment** _ENV_
-> Specify the Rails environment (development, test, production)
+> Specify the Rails environment (development, test, production). Defaults to development.
 
 **--sandbox**, **-s**
-> Rollback any database changes made during the session on exit
+> Rollback any database changes made during the session on exit.
+
+**--skip-executor**, **-w**
+> Do not wrap the console with the Rails Executor (skips query cache, reloading, and callbacks).
 
 **-h**, **--help**
-> Show help information
+> Show help information.
 
 # DESCRIPTION
 
@@ -53,4 +62,4 @@ Sandbox mode only protects database changes. File system modifications, external
 
 # SEE ALSO
 
-[rails](/man/rails)(1), [irb](/man/irb)(1), [rails-db](/man/rails-db)(1), [ruby](/man/ruby)(1)
+[rails](/man/rails)(1), [irb](/man/irb)(1), [rails-db](/man/rails-db)(1), [rails-server](/man/rails-server)(1), [ruby](/man/ruby)(1)

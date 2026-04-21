@@ -4,61 +4,82 @@ generate kernel module dependency files
 
 # TLDR
 
-**Generate module dependencies**
+**Generate module dependencies** for the running kernel
 
 ```depmod```
 
-**Generate for specific** kernel version
+**Generate for a specific kernel version**
 
-```depmod [5.15.0-generic]```
+```depmod [6.8.0-generic]```
 
-**Force regeneration** of all maps
+**Probe all modules** (the default when no filename is given)
 
 ```depmod -a```
 
-**Show what would be done**
+**Quick mode**: regenerate only if modules are newer than modules.dep
+
+```depmod -A```
+
+**Preview without writing** (prints to stdout)
 
 ```depmod -n```
 
-**Generate for modules** in specific directory
+**Use a staging module tree root**
 
-```depmod -b [/path/to/root]```
+```depmod -b [/path/to/root] [6.8.0-generic]```
 
-**Show verbose output**
+**Report unresolved symbols** against a System.map
 
-```depmod -v```
+```depmod -e -F [/boot/System.map-6.8.0] [6.8.0-generic]```
 
 # SYNOPSIS
 
-**depmod** [_options_] [_kernel_version_]
+**depmod** [**-aAenvw**] [**-b** _basedir_] [**-F** _System.map_] [**-C** _config_] [_kernel_version_]
+
+**depmod** [_options_] _module_files_...
 
 # PARAMETERS
 
 _KERNEL_VERSION_
-> Kernel version to process (defaults to running kernel).
+> Kernel version to process. Defaults to the running kernel (`uname -r`).
 
 **-a**, **--all**
-> Probe all modules.
+> Probe all modules. Enabled by default when no filenames are given.
 
-**-n**, **--dry-run**
-> Show what would be done without writing files.
+**-A**, **--quick**
+> Exit silently unless a module is newer than modules.dep.
 
 **-b**, **--basedir** _DIR_
-> Use directory as module tree root.
+> Prepend _DIR_ to /lib/modules/<version>; useful for staging roots.
+
+**-o**, **--outdir** _DIR_
+> Write generated files to _DIR_ instead of the module tree.
 
 **-e**, **--errsyms**
-> Report unresolved symbols.
+> Report symbols a module requires that are not provided by other modules or the kernel.
+
+**-F**, **--filesyms** _System.map_
+> Use _System.map_ to resolve kernel-provided symbols when using **-e**.
+
+**-E**, **--symvers** _Module.symvers_
+> With **-e**, also report symbol version (modversion) mismatches.
+
+**-n**, **--show**, **--dry-run**
+> Print resulting modules.dep and map files to stdout instead of writing them.
 
 **-v**, **--verbose**
-> Verbose output.
+> Print each symbol dependency and providing module.
 
 **-w**
-> Warn on duplicate modules.
+> Warn about duplicate dependencies, aliases, or symbol versions.
 
 **-C**, **--config** _FILE_
-> Use specified configuration file.
+> Override the default configuration file or directory.
 
-**--help**
+**-V**, **--version**
+> Show version and exit.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
@@ -84,4 +105,4 @@ depmod is part of the **kmod** utilities (formerly module-init-tools), used for 
 
 # SEE ALSO
 
-[modprobe](/man/modprobe)(8), [lsmod](/man/lsmod)(8), [insmod](/man/insmod)(8), [rmmod](/man/rmmod)(8)
+[modprobe](/man/modprobe)(8), [lsmod](/man/lsmod)(8), [insmod](/man/insmod)(8), [rmmod](/man/rmmod)(8), [kmod](/man/kmod)(8)

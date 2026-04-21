@@ -8,29 +8,33 @@ Compile and run benchmarks for a Rust project
 
 ```cargo bench```
 
-**Run specific benchmark**
+**Run benchmarks whose name contains a substring**
 
 ```cargo bench [bench_name]```
 
-**Compile without running**
+**Compile benchmarks without running**
 
 ```cargo bench --no-run```
 
-**Run all benchmarks in workspace**
+**Run benchmarks across the whole workspace**
 
 ```cargo bench --workspace```
 
-**Continue on failure**
+**Continue running on benchmark failure**
 
 ```cargo bench --no-fail-fast```
 
-**Benchmark specific package**
+**Benchmark a specific package**
 
 ```cargo bench -p [package]```
 
-**Benchmark all targets**
+**Benchmark a specific bench target**
 
-```cargo bench --all-targets```
+```cargo bench --bench [bench_target]```
+
+**Pass arguments through to the bench binary**
+
+```cargo bench -- --save-baseline [name]```
 
 # SYNOPSIS
 
@@ -38,65 +42,89 @@ Compile and run benchmarks for a Rust project
 
 # DESCRIPTION
 
-**cargo bench** compiles and executes benchmarks. By default, it uses the bench profile with optimizations enabled and debugging disabled. Benchmarks are run serially in a single thread.
+**cargo bench** compiles and executes benchmark targets of the current package. By default, it uses the `bench` profile (optimizations on, debug info minimal) and runs benchmarks serially.
 
-The working directory is set to the package root directory.
+Arguments after `--` are forwarded to the compiled benchmark binary, which is how Criterion and libtest options such as `--save-baseline` or `--test` are passed through.
 
 # PARAMETERS
 
 **--no-run**
-> Compile but don't run benchmarks
+> Compile benchmarks but do not execute them.
 
 **--no-fail-fast**
-> Run all benchmarks regardless of failures
+> Run every benchmark even if earlier ones fail.
 
 **--all-targets**
-> Benchmark lib, bins, tests, benches, examples
+> Benchmark all targets (equivalent to `--lib --bins --tests --benches --examples`).
 
 **--workspace**
-> Benchmark all workspace members
+> Benchmark all packages in the workspace.
 
-**-p**, **--package** _spec_
-> Benchmark only specified packages
+**--exclude** _SPEC_
+> Exclude packages from a `--workspace` run.
+
+**-p**, **--package** _SPEC_
+> Benchmark only the specified package(s).
 
 **--lib**
-> Benchmark library
+> Benchmark only the library target.
 
 **--bins**
-> Benchmark all binaries
+> Benchmark all binary targets.
+
+**--bin** _NAME_
+> Benchmark only the named binary.
 
 **--benches**
-> Benchmark all bench targets
+> Benchmark all `bench = true` targets.
 
-**--profile** _name_
-> Build with specific profile
+**--bench** _NAME_
+> Benchmark only the named bench target.
 
-**-j**, **--jobs** _n_
-> Number of parallel build jobs
+**--examples**
+> Benchmark all example targets.
 
-**--features** _features_
-> Enable specified features
+**--profile** _NAME_
+> Build with a specific profile (defaults to `bench`).
+
+**--target** _TRIPLE_
+> Build for the given target triple.
+
+**-j**, **--jobs** _N_
+> Number of parallel build jobs (affects compilation, not benchmark execution).
+
+**-F**, **--features** _FEATURES_
+> Space- or comma-separated list of features to activate.
 
 **--all-features**
-> Enable all features
+> Activate all features of every selected package.
 
 **--no-default-features**
-> Disable default features
+> Do not activate the `default` feature.
+
+**--manifest-path** _PATH_
+> Path to `Cargo.toml`.
+
+**--locked**
+> Require `Cargo.lock` to remain unchanged.
+
+**--offline**
+> Do not access the network.
 
 # BENCHMARKING FRAMEWORKS
 
 **libtest bench**
-> Built-in, requires nightly Rust
+> Built-in `#[bench]` harness, requires nightly Rust.
 
 **Criterion**
-> Popular stable harness, feature-rich
+> Popular stable harness with statistical analysis and baselines.
 
 **Iai**
-> Instruction-counting benchmarks
+> Instruction-counting benchmarks using Cachegrind.
 
 # CAVEATS
 
-Built-in benchmarking requires nightly Rust. The --jobs flag affects build parallelism, not benchmark execution. Consider Criterion for stable Rust.
+The built-in `#[bench]` attribute is unstable and requires nightly Rust; on stable, use a custom harness such as **Criterion** declared with `harness = false` in `Cargo.toml`. The `--jobs` flag controls build parallelism, not benchmark execution. Results can be noisy without CPU pinning and a quiet system.
 
 # SEE ALSO
 

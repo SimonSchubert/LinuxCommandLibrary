@@ -1,60 +1,49 @@
 # TAGLINE
 
-simple command scheduler that runs commands after a specified delay
+Shell keyword separating the loop variable from the list in for and select loops
 
 # TLDR
 
-**Schedule command**
+**Iterate over a list of words**
 
-```in [2h] [command]```
+```for fruit in apple banana cherry; do echo "$fruit"; done```
 
-**Run at specific time**
+**Iterate over a glob**
 
-```in [14:30] [command]```
+```for f in *.txt; do echo "$f"; done```
 
-**Schedule with minutes**
+**Iterate over command substitution**
 
-```in [30m] [command]```
+```for user in $(cat users.txt); do echo "$user"; done```
 
-**Run tomorrow**
+**Iterate over a brace-expansion range**
 
-```in [1d] [command]```
+```for i in {1..10}; do echo "$i"; done```
+
+**Interactive menu with select**
+
+```select opt in start stop quit; do echo "$opt"; done```
 
 # SYNOPSIS
 
-**in** _time_ _command_
+**for** _name_ **in** [_words_ ...]**;** **do** _commands_**;** **done**
 
-# PARAMETERS
-
-_TIME_
-> Time specification (e.g., 2h, 30m, 1d, 14:30).
-
-_COMMAND_
-> Command to execute.
-
-**h**
-> Hours suffix.
-
-**m**
-> Minutes suffix.
-
-**d**
-> Days suffix.
+**select** _name_ **in** [_words_ ...]**;** **do** _commands_**;** **done**
 
 # DESCRIPTION
 
-**in** is a simple command scheduler that runs commands after a specified delay. It provides an alternative to at with simpler time syntax.
+**in** is a reserved word of the POSIX shell grammar, used as a delimiter between the loop variable and the word list in **for** and **select** compound commands and in **case** statements. It is not a standalone program and cannot be invoked directly; shells such as bash, zsh, dash, and ksh parse it as part of the surrounding control structure.
 
-The tool backgrounds the sleep and command execution. Output is typically mailed or discarded.
+Inside a **for** loop, the variable named before **in** is assigned successively to each word produced by the list after **in** (which may be literal words, glob expansions, command substitutions, or parameter expansions). When the word list is omitted entirely, the loop iterates over the positional parameters "$@".
 
 # CAVEATS
 
-Shell-dependent implementation. Not POSIX standard. Consider at for portability.
+**in** is a keyword, not an executable; `which in` will typically return nothing. It has no flags or options of its own. Behavior depends on the surrounding shell construct and on POSIX quoting/expansion rules.
 
 # HISTORY
 
-in is a simplified scheduling utility found in some shell environments as an alias or script wrapper around sleep and command execution.
+**in** comes from the Bourne shell and has been part of the POSIX shell specification since its inception. It is inherited by all POSIX-compatible shells including bash, ksh, zsh, and dash, and by the C shell family in similar form.
 
 # SEE ALSO
 
-[at](/man/at)(1), [sleep](/man/sleep)(1), [cron](/man/cron)(8), [batch](/man/batch)(1)
+[for](/man/for)(1), [while](/man/while)(1), [do](/man/do)(1), [done](/man/done)(1), [read](/man/read)(1)

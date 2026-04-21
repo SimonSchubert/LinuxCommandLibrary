@@ -4,60 +4,98 @@ Convert Perl POD documentation to HTML
 
 # TLDR
 
-**Convert POD to HTML**
+**Convert POD file to HTML**
 
 ```pod2html --infile=[file.pod] --outfile=[file.html]```
 
-**Convert with title**
+**Convert with a custom HTML title**
 
-```pod2html --title="[Title]" [file.pod] > [file.html]```
+```pod2html --title="[My Module]" --infile=[file.pod] --outfile=[file.html]```
 
-**Include CSS**
+**Include an external CSS stylesheet**
 
-```pod2html --css=[style.css] [file.pod] > [file.html]```
+```pod2html --css=[style.css] --infile=[file.pod] --outfile=[file.html]```
+
+**Convert without generating a table of contents**
+
+```pod2html --noindex --infile=[file.pod] --outfile=[file.html]```
+
+**Add backlinks from headings back to the top of the page**
+
+```pod2html --backlink --infile=[file.pod] --outfile=[file.html]```
+
+**Flush the pod2html cache before conversion**
+
+```pod2html --flush --infile=[file.pod] --outfile=[file.html]```
 
 # SYNOPSIS
 
-**pod2html** [_options_] [_file_]
+**pod2html** [_options_]
 
 # PARAMETERS
 
-_FILE_
-> Input POD file.
+**--infile=**_name_
+> POD input file. Defaults to STDIN.
 
-**--infile** _FILE_
-> Input file.
+**--outfile=**_name_
+> HTML output file. Defaults to STDOUT.
 
-**--outfile** _FILE_
-> Output file.
+**--title=**_name_
+> Set the HTML document title.
 
-**--title** _TITLE_
-> HTML title.
+**--css=**_URL_
+> Link to a cascading style sheet.
 
-**--css** _URL_
-> CSS stylesheet link.
+**--index** / **--noindex**
+> Include or omit a table of contents at the top of the HTML output. Enabled by default.
 
-**--index**
-> Generate index.
+**--backlink** / **--nobacklink**
+> Add links from each heading back to the top of the page.
 
-**--noindex**
-> Skip index generation.
+**--header** / **--noheader**
+> Emit banner headers and footers derived from the POD NAME section.
+
+**--htmldir=**_name_
+> Directory used when generating relative cross-references to other HTML files.
+
+**--htmlroot=**_URL_
+> Base URL for absolute HTML cross-reference links.
+
+**--podpath=**_dirs_
+> Colon-separated list of directories containing pod files used for resolving L<> links.
+
+**--podroot=**_name_
+> Base directory for library pod files.
+
+**--cachedir=**_name_
+> Directory in which pod2html stores its cache. Default: current directory.
+
+**--flush**
+> Clear the cache before processing.
+
+**--recurse** / **--norecurse**
+> Recurse into subdirectories specified by **--podpath**.
+
+**--quiet** / **--verbose**
+> Suppress warnings or show progress messages.
+
+**--poderrors** / **--nopoderrors**
+> Include or omit a POD errors section in the output.
 
 # DESCRIPTION
 
-**pod2html** converts Perl POD (Plain Old Documentation) files into HTML pages with hyperlinked cross-references. It generates a table of contents from section headings and converts POD formatting directives into appropriate HTML markup.
+**pod2html** converts Perl POD (Plain Old Documentation) source into HTML, resolving L<> hyperlinks and converting POD formatting directives to HTML markup. It can optionally prepend a table of contents built from =head directives and insert backlinks between headings and the top of the document.
 
-The **--title** option sets the HTML page title, and **--css** adds a stylesheet link. Use **--index** or **--noindex** to control table of contents generation. Part of the standard Perl distribution.
+The utility relies on a cache (by default stored in the working directory) that maps pod names to URLs so that cross-references between pages are resolved efficiently across multiple runs. Use **--flush** after moving or renaming source pods.
 
 # CAVEATS
 
-Perl-specific format. Part of standard Perl installation.
+The cache is created in the current directory by default and can surprise users who expect a stateless tool; use **--cachedir** to relocate it or **--flush** to rebuild it.
 
 # HISTORY
 
-pod2html was created for **Perl POD** documentation conversion.
+**pod2html** ships with the standard Perl distribution as part of the Pod::Html module and has been included since early Perl 5 releases.
 
 # SEE ALSO
 
-[pod2man](/man/pod2man)(1), [pod2text](/man/pod2text)(1), [perldoc](/man/perldoc)(1)
-
+[pod2man](/man/pod2man)(1), [pod2text](/man/pod2text)(1), [perldoc](/man/perldoc)(1), [perl](/man/perl)(1)

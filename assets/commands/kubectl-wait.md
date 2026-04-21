@@ -12,21 +12,29 @@ blocks until conditions are met
 
 ```kubectl wait --for=delete pod/[pod-name]```
 
+**Wait for creation**
+
+```kubectl wait --for=create secret/[name]```
+
 **Wait with timeout**
 
 ```kubectl wait --for=condition=Ready pod/[pod-name] --timeout=[60s]```
 
-**Wait for deployment**
+**Wait for deployment available**
 
 ```kubectl wait --for=condition=Available deployment/[name]```
 
-**Wait with selector**
+**Wait with label selector across resources**
 
 ```kubectl wait --for=condition=Ready pods -l [app=myapp]```
 
-**Wait for JSON path**
+**Wait for a JSONPath value**
 
 ```kubectl wait --for=jsonpath='{.status.phase}'=Running pod/[name]```
+
+**Wait across all namespaces**
+
+```kubectl wait --for=condition=Ready pods --all -A```
 
 # SYNOPSIS
 
@@ -35,19 +43,34 @@ blocks until conditions are met
 # PARAMETERS
 
 _RESOURCE_
-> Resource to wait for.
+> Resource(s) to wait on, e.g. `pod/busybox`, `deployment/web`, or a type like `pods`.
 
-**--for** _CONDITION_
-> Condition to wait for.
+**--for** _EXPR_
+> Condition to wait on. Accepts `create`, `delete`, `condition=<name>[=<value>]`, or `jsonpath='{...}'[=<value>]`. Default condition value is `true`.
 
 **--timeout** _DURATION_
-> Wait timeout.
+> Maximum time to wait (e.g. 30s, 5m). Default is 30s. Zero means check once; a negative value waits up to a week.
 
-**-l** _SELECTOR_
-> Label selector.
+**--all**
+> Select all resources of the given type in the namespace.
 
-**-n** _NAMESPACE_
+**-A**, **--all-namespaces**
+> Operate across all namespaces.
+
+**-l**, **--selector** _QUERY_
+> Label selector to filter resources.
+
+**--field-selector** _QUERY_
+> Field selector to filter resources.
+
+**-f**, **--filename** _FILE_
+> Identify the resource(s) via a manifest file or directory.
+
+**-n**, **--namespace** _NS_
 > Target namespace.
+
+**-o**, **--output** _FORMAT_
+> Output format (json, yaml, name, go-template, jsonpath, ...).
 
 **--help**
 > Display help information.
@@ -68,4 +91,4 @@ kubectl wait provides synchronization for **Kubernetes** automation and scriptin
 
 # SEE ALSO
 
-[kubectl](/man/kubectl)(1), [kubectl-get](/man/kubectl-get)(1)
+[kubectl](/man/kubectl)(1), [kubectl-get](/man/kubectl-get)(1), [kubectl-apply](/man/kubectl-apply)(1), [kubectl-rollout](/man/kubectl-rollout)(1), [kubectl-describe](/man/kubectl-describe)(1)

@@ -6,23 +6,27 @@ Create and install libvirt virtual machines
 
 **Create** a VM with 1GB RAM, 12GB storage, and start Debian installation
 
-```virt-install -n [vm_name] --memory [1024] --disk path=[path/to/image.qcow2],size=[12] -c [path/to/debian.iso]```
+```virt-install -n [vm_name] --memory [1024] --vcpus [2] --disk path=[path/to/image.qcow2],size=[12] --cdrom [path/to/debian.iso] --osinfo [debian12]```
 
 **Create** a UEFI-based VM with Q35 chipset and 4GB RAM
 
-```virt-install -n [vm_name] --arch x86_64 --virt-type kvm --machine q35 --boot uefi --memory [4096] --disk path=[path/to/image.raw],size=[16] -c [path/to/fedora.iso]```
+```virt-install -n [vm_name] --arch x86_64 --virt-type kvm --machine q35 --boot uefi --memory [4096] --vcpus [4] --disk path=[path/to/image.raw],size=[16] --cdrom [path/to/fedora.iso] --osinfo [fedora40]```
 
-**Create** a diskless live VM without sound or USB
+**Import** an existing disk image as a VM (no installation)
 
-```virt-install -n [vm_name] --memory [512] --disk none --controller type=usb,model=none --sound none --autoconsole none --install no_install=yes -c [path/to/live.iso]```
+```virt-install -n [vm_name] --memory [2048] --vcpus [2] --disk path=[path/to/image.qcow2] --import --osinfo [detect=on]```
 
 **Create** a VM with specific CPU topology and host-model CPU
 
-```virt-install -n [vm_name] --cpu host-model,topology.sockets=1,topology.cores=4,topology.threads=2 --memory [16384] --disk path=[path/to/image.qcow2],size=[250] -c [path/to/os.iso]```
+```virt-install -n [vm_name] --cpu host-model,topology.sockets=1,topology.cores=4,topology.threads=2 --memory [16384] --disk path=[path/to/image.qcow2],size=[250] --cdrom [path/to/os.iso]```
 
-**Create** a VM with automated kickstart installation from remote resources
+**Perform** an automated kickstart installation from a remote tree
 
-```virt-install -n [vm_name] --memory [2048] --disk path=[path/to/image.qcow2],size=[20] -l [https://download.fedoraproject.org/.../] -x "inst.ks=[https://path/to/kickstart]"```
+```virt-install -n [vm_name] --memory [2048] --disk path=[path/to/image.qcow2],size=[20] --location [https://download.fedoraproject.org/...] --extra-args "inst.ks=[https://path/to/kickstart]"```
+
+**Boot** a VM via PXE with a bridged network
+
+```virt-install -n [vm_name] --memory [2048] --disk path=[path/to/image.qcow2],size=[20] --network bridge=[br0] --pxe --osinfo [linux2022]```
 
 # SYNOPSIS
 
@@ -30,38 +34,68 @@ Create and install libvirt virtual machines
 
 # PARAMETERS
 
-**-n, --name _name_**
-> Name for the new virtual machine
+**-n**, **--name** _NAME_
+> Unique name for the new virtual machine.
 
-**--memory _size_**
-> Memory allocation in MB
+**--memory** _SIZE_
+> Guest memory in MiB (or use suboptions like memory=2048,currentMemory=1024).
 
-**--disk _spec_**
-> Disk specification (path, size, format)
+**--vcpus** _N_
+> Number of virtual CPUs; supports suboptions for sockets/cores/threads and hotplug limits.
 
-**-c, --cdrom _path_**
-> CD-ROM/ISO image for installation
+**--cpu** _MODEL_
+> CPU model and features (e.g. host-model, host-passthrough, topology.sockets=...).
 
-**-l, --location _url_**
-> Installation source URL
+**--disk** _SPEC_
+> Storage specification (path=, size=, format=, bus=, cache=...). Use `--disk none` for diskless VMs.
 
-**--cpu _model_**
-> CPU model and topology configuration
+**-c**, **--cdrom** _PATH_
+> ISO file or CDROM device used as installation media.
 
-**--boot _options_**
-> Boot configuration (uefi, bios, etc.)
+**-l**, **--location** _URL_|_PATH_
+> Installation tree location (HTTP/FTP/NFS URL or local directory) for network installs.
 
-**--virt-type _type_**
-> Hypervisor type (kvm, qemu, xen)
+**--pxe**
+> Boot from the network (PXE) for installation.
 
-**--machine _type_**
-> Machine type (q35, pc, etc.)
+**--import**
+> Skip OS installation and build the guest around an existing disk image.
 
-**-x, --extra-args _args_**
-> Additional kernel arguments
+**--boot** _OPTIONS_
+> Post-install boot configuration (uefi, bios, boot order, loader paths).
 
-**--autoconsole _type_**
-> Console auto-connect behavior
+**--osinfo** _ID_
+> Optimize the guest for a specific OS (libosinfo short-id, e.g. fedora40, debian12, win11). Replaces legacy --os-variant.
+
+**--network** _SPEC_
+> Network interface (e.g. bridge=br0, network=default, type=direct). May be repeated.
+
+**--graphics** _TYPE_
+> Graphical display: vnc, spice, or none.
+
+**--virt-type** _TYPE_
+> Hypervisor type (kvm, qemu, xen).
+
+**--machine** _TYPE_
+> Machine type (q35, pc, etc.).
+
+**-x**, **--extra-args** _ARGS_
+> Extra kernel command-line arguments passed to --location installs.
+
+**--unattended**
+> Perform an automated installation using libosinfo install scripts.
+
+**--autoconsole** _TYPE_
+> Console auto-connect behavior (graphical, text, none). Replaces --noautoconsole.
+
+**--noreboot**
+> Do not reboot the guest automatically after the installer completes.
+
+**--wait** _MINUTES_
+> How long to wait for installation to complete (-1 = wait forever, 0 = don't wait).
+
+**--dry-run**
+> Validate options and show the generated XML without creating the VM.
 
 # DESCRIPTION
 

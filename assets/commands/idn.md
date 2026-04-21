@@ -4,7 +4,7 @@ Encode and decode internationalized domain names
 
 # TLDR
 
-**Encode a Unicode domain to Punycode (ACE)**
+**Encode a Unicode domain to ACE/Punycode (default mode)**
 
 ```echo "münchen.de" | idn```
 
@@ -12,17 +12,21 @@ Encode and decode internationalized domain names
 
 ```echo "xn--mnchen-3ya.de" | idn --idna-to-unicode```
 
-**Encode a domain with stringprep processing**
+**Apply Nameprep stringprep to input**
 
-```idn --stringprep [domain]```
+```echo "[string]" | idn --stringprep```
 
-**Encode using IDNA ToASCII operation**
+**Explicitly run IDNA ToASCII on an argument**
 
-```idn --idna-to-ascii [example.日本]```
+```idn --idna-to-ascii [münchen.de]```
 
-**Quiet mode** (suppress informational messages)
+**Encode or decode raw Punycode (no IDNA wrapping)**
 
-```idn -q [domain]```
+```echo "[label]" | idn --punycode-encode```
+
+**Quiet mode (suppress informational messages)**
+
+```idn --quiet [domain]```
 
 # SYNOPSIS
 
@@ -31,56 +35,61 @@ Encode and decode internationalized domain names
 # PARAMETERS
 
 _strings_
-> Domain names to convert. Read from stdin if not provided.
+> Domain names or labels to convert. Read from standard input if not provided.
 
-**--idna-to-ascii**
-> Convert domain from Unicode to ASCII-Compatible Encoding (ACE). This is the default operation.
+**-a**, **--idna-to-ascii**
+> Convert input to ACE according to IDNA. This is the default mode.
 
-**--idna-to-unicode**
-> Convert domain from ACE (Punycode) back to Unicode.
+**-u**, **--idna-to-unicode**
+> Convert input from ACE (Punycode) back to Unicode using IDNA.
 
-**--stringprep**
-> Perform Nameprep stringprep processing on input.
+**-s**, **--stringprep**
+> Prepare the string according to the Nameprep profile.
 
-**--punycode-encode**
-> Encode raw input using Punycode algorithm (without IDNA processing).
+**-e**, **--punycode-encode**
+> Encode raw input with the Punycode algorithm, without IDNA pre/post processing.
 
-**--punycode-decode**
-> Decode raw Punycode input (without IDNA processing).
+**-d**, **--punycode-decode**
+> Decode raw Punycode input, without IDNA pre/post processing.
 
 **-n**, **--nfkc**
-> Apply Unicode NFKC normalization.
+> Normalize input according to Unicode v3.2 NFKC.
 
 **-p** _profile_, **--profile**=_profile_
-> Use specified stringprep profile (e.g., Nameprep, iSCSI, SASL).
+> Use the named stringprep profile. Valid values: `Nameprep`, `iSCSI`, `Nodeprep`, `Resourceprep`, `trace`, `SASLprep`.
 
-**--no-tld**
-> Skip TLD-specific validity checks.
+**--allow-unassigned**
+> Toggle the IDNA `AllowUnassigned` flag (default off).
 
 **--usestd3asciirules**
-> Apply STD3 ASCII rules (forbid non-LDH characters).
+> Toggle the IDNA `UseSTD3ASCIIRules` flag (default off); forbids non-LDH characters.
 
-**-q**, **--quiet**
-> Suppress informational messages.
+**--no-tld**
+> Skip TLD-specific validity checks (only affects `--idna-to-ascii` / `--idna-to-unicode`).
+
+**--quiet**
+> Silent operation.
 
 **--debug**
-> Show debug information during processing.
+> Print debugging information, including the detected character set.
 
-**--help**
-> Display help information.
+**-h**, **--help**
+> Print help and exit.
 
-**--version**
-> Display version information.
+**-V**, **--version**
+> Print version and exit.
 
 # DESCRIPTION
 
-**idn** converts internationalized domain names (IDN) between Unicode and ASCII-Compatible Encoding (ACE/Punycode). It implements the IDNA (Internationalized Domain Names in Applications) standard, allowing domain names with non-ASCII characters to be represented in the DNS system.
+**idn** converts internationalized domain names between Unicode and ASCII-Compatible Encoding (ACE / Punycode). It implements the IDNA (Internationalized Domain Names in Applications) standard, allowing domain names with non-ASCII characters to be represented in the DNS.
 
-The encoding process applies Nameprep string preparation (case folding, normalization, prohibited character checks) before Punycode encoding. ACE-encoded labels use the **xn--** prefix. The tool reads from command-line arguments or standard input when no strings are provided.
+The encoding pipeline applies Nameprep stringprep (case folding, NFKC normalization, prohibited-character checks) before Punycode encoding. ACE-encoded labels use the **xn--** prefix. The tool reads strings from command-line arguments, or from standard input if none are supplied.
+
+Input is expected in the locale's preferred charset; override this by setting the **CHARSET** environment variable. To process a string starting with `-`, use `--` to mark the end of options (e.g. `idn --quiet -a -- -foo`).
 
 # CAVEATS
 
-This tool implements **IDNA 2003** (RFC 3490). For the newer **IDNA 2008** standard (RFC 5891), use **idn2** from the libidn2 package. The two standards differ in handling of some characters (e.g., German eszett, Greek final sigma). Part of **GNU Libidn**.
+This tool implements **IDNA 2003** (RFC 3490). For the newer **IDNA 2008** standard (RFC 5891), use **idn2** from the libidn2 package. The two standards differ in handling of several characters (e.g. German eszett `ß`, Greek final sigma `ς`). Part of **GNU Libidn**.
 
 # HISTORY
 

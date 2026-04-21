@@ -1,6 +1,6 @@
 # TAGLINE
 
-Update everything with one command
+upgrade everything on a system with a single command
 
 # TLDR
 
@@ -8,7 +8,7 @@ Update everything with one command
 
 ```topgrade```
 
-**Upgrade specific steps only**
+**Run only specific steps**
 
 ```topgrade --only [system] --only [brew]```
 
@@ -20,86 +20,92 @@ Update everything with one command
 
 ```topgrade --dry-run```
 
-**Run without asking confirmation**
+**Answer yes to all prompts**
 
 ```topgrade -y```
 
-**Show available steps**
+**List available steps**
 
-```topgrade --list```
+```topgrade --show-skipped```
 
-**Cleanup after upgrade**
+**Only check for updates**, do not install
 
-```topgrade --cleanup```
+```topgrade --check```
 
-**Edit configuration**
+**Edit the configuration file**
 
 ```topgrade --edit-config```
 
 # SYNOPSIS
 
-**topgrade** [_--only steps_] [_--disable steps_] [_-y_] [_--dry-run_] [_options_]
+**topgrade** [_options_]
 
 # PARAMETERS
 
 **-y**, **--yes**
-> Say yes to all prompts.
+> Answer yes to all confirmation prompts.
 
 **-n**, **--dry-run**
-> Print commands without running.
+> Print the commands that would run without executing them.
 
-**--only** _STEPS_
-> Run only specified steps.
+**--only** _STEP_
+> Run only the specified step. May be passed multiple times.
 
-**--disable** _STEPS_
-> Skip specified steps.
+**--disable** _STEP_
+> Skip the specified step for this run. May be passed multiple times.
 
-**--cleanup**
-> Remove old packages/caches.
+**--check**
+> Only check for available updates without installing them.
 
-**--list**
-> List available steps.
+**-c**, **--cleanup**
+> Clean up old package versions and caches after upgrading.
+
+**--show-skipped**
+> List steps that would be skipped with the current configuration.
 
 **-e**, **--edit-config**
-> Open config file in editor.
+> Open the topgrade configuration file in `$EDITOR`.
 
-**-c**, **--config** _FILE_
-> Use specific config file.
+**--config** _FILE_
+> Use an alternate configuration file.
 
 **--no-retry**
-> Don't retry failed steps.
+> Do not prompt to retry failed steps.
 
 **-t**, **--tmux**
-> Run in new tmux session.
+> Run topgrade inside a new tmux session.
 
 **-k**, **--keep**
-> Keep going if step fails.
+> Keep the terminal open after execution finishes.
 
 **-v**, **--verbose**
-> Verbose output.
+> Produce verbose output.
+
+**--remote-host-limit** _REGEX_
+> Limit remote execution to hosts matching the regex (when using the remote-hosts feature).
+
+**-V**, **--version**
+> Print version information.
+
+**-h**, **--help**
+> Show help.
 
 # DESCRIPTION
 
-**topgrade** updates everything on your system with a single command. It detects installed package managers, language tools, and applications, running their update commands in sequence.
+**topgrade** detects which package managers, language toolchains, and applications are installed, and runs the appropriate update command for each in sequence. Missing tools are silently skipped, so the same binary and configuration can be reused across machines with different software sets.
 
-Supported systems include: OS packages (apt, pacman, brew, dnf, zypper), programming languages (rustup, pip, npm, gem, cargo), containers (docker, flatpak, snap), and applications (firmware, vim plugins, etc.).
+Supported sources include OS package managers (apt, pacman, dnf, zypper, brew), language ecosystems (rustup, pip, pipx, npm, gem, cargo, go), container tools (docker, flatpak, snap, nix), editor plugins (vim, neovim, emacs), shells (fisher, zinit, oh-my-zsh), firmware (fwupd), and many more.
 
-Detection is automatic - topgrade checks what's installed and runs appropriate updates. Missing tools are silently skipped. This enables using one config across different machines.
-
-Configuration (~/.config/topgrade.toml) controls behavior: which steps to disable, custom commands to run, and step-specific settings. The --only and --disable flags override config for single runs.
-
-The tool shows what it's updating with colored output. Failures are reported but don't necessarily stop other updates. Retry logic handles transient issues.
-
-Cleanup mode removes old package versions and caches, reclaiming disk space after updates.
+Behavior is driven by a TOML configuration file at `$XDG_CONFIG_HOME/topgrade.toml` (or `~/.config/topgrade.toml`). Steps can be disabled by default there, and custom pre/post commands and remote hosts can be defined. The **--only** and **--disable** flags override configuration for the current run.
 
 # CAVEATS
 
-Running all updates takes time. Some updates require sudo. Network issues may cause failures. Version conflicts possible if mixing update sources. May restart services unexpectedly. Test new versions before production use.
+A full upgrade can take a long time and may prompt for `sudo`. Transient network or mirror issues may cause individual steps to fail; topgrade keeps going and reports a summary at the end. Mixing several package sources can lead to version conflicts, and some updates may restart services.
 
 # HISTORY
 
-**topgrade** was created by **Rafael Fernández López** (r12f) around **2018**. Written in Rust, it addresses the challenge of remembering update commands for multiple package managers. The project has grown to support an extensive list of tools and platforms.
+**topgrade** was created by **Roey Darwish Dror** (**r-darwish**) in **2018** as a Rust utility to avoid remembering the update command for every package manager. After the original author stepped away, the project was forked and is now maintained by the community-run **topgrade-rs** organization on GitHub.
 
 # SEE ALSO
 
-[apt](/man/apt)(1), [brew](/man/brew)(1), [pacman](/man/pacman)(8), [flatpak](/man/flatpak)(1)
+[apt](/man/apt)(1), [brew](/man/brew)(1), [pacman](/man/pacman)(8), [flatpak](/man/flatpak)(1), [snap](/man/snap)(1)

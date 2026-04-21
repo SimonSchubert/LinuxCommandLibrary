@@ -1,36 +1,24 @@
 # TAGLINE
 
-render 3D models as ASCII art in the terminal
+Render 3D models as ASCII art in the terminal
 
 # TLDR
 
-**View a 3D model** as ASCII art in the terminal
+**View an OBJ** model as ASCII art in the terminal
 
 ```3d-ascii-viewer [path/to/model.obj]```
 
-**View with specific dimensions**
+**View an STL** model
 
-```3d-ascii-viewer -w [80] -h [40] [model.obj]```
+```3d-ascii-viewer [path/to/model.stl]```
 
-**Render with colored output**
+**Enable color** using materials referenced in the OBJ's MTL file
 
 ```3d-ascii-viewer --color [model.obj]```
 
-**View STL file** with rotation
+**Show help** and list all supported options
 
-```3d-ascii-viewer --rotate-x [45] --rotate-y [30] [model.stl]```
-
-**Set custom ASCII characters** for shading
-
-```3d-ascii-viewer --charset " .:-=+*#%@" [model.obj]```
-
-**Enable wireframe mode**
-
-```3d-ascii-viewer --wireframe [model.obj]```
-
-**Output to file** instead of terminal
-
-```3d-ascii-viewer [model.obj] > [output.txt]```
+```3d-ascii-viewer --help```
 
 # SYNOPSIS
 
@@ -38,60 +26,31 @@ render 3D models as ASCII art in the terminal
 
 # PARAMETERS
 
-**-w**, **--width** _n_
-> Set output width in characters.
-
-**-h**, **--height** _n_
-> Set output height in characters.
+_model_file_
+> Path to a Wavefront `.obj` or `.stl` model file.
 
 **--color**
-> Enable colored ASCII output using ANSI codes.
-
-**--rotate-x** _degrees_
-> Rotate model around the X axis.
-
-**--rotate-y** _degrees_
-> Rotate model around the Y axis.
-
-**--rotate-z** _degrees_
-> Rotate model around the Z axis.
-
-**--wireframe**
-> Render as wireframe instead of solid.
-
-**--charset** _chars_
-> Custom characters for brightness levels (dark to light).
-
-**--scale** _factor_
-> Scale the model by the specified factor.
-
-**--fps** _n_
-> Frames per second for animation mode.
-
-**--animate**
-> Continuously rotate the model.
+> Use the **diffuse color** of each material referenced in the companion MTL file. Requires a terminal supporting color redefinition and enough ncurses color pairs.
 
 **--help**
-> Display help information.
+> Print usage information and exit.
 
 # DESCRIPTION
 
-**3d-ascii-viewer** renders 3D model files as ASCII art in the terminal. It converts 3D geometry into text-based representations using characters of varying density to simulate shading and depth.
+**3d-ascii-viewer** (by autopawn) is a minimal viewer that renders 3D models as animated ASCII art directly in the terminal, using ncurses and no graphics library. It continuously rotates the model, with characters of varying density representing surface shading and depth.
 
-The tool supports common 3D formats including OBJ and STL files. Models are rendered using a simple rasterization approach where surface brightness determines which ASCII character is used. Darker areas use sparse characters like dots while brighter areas use dense characters like @ or #.
+The viewer supports Wavefront `.obj` and `.stl` files. For OBJ files, an accompanying `.mtl` material file can be used together with **--color** to tint each face by its diffuse material color.
 
-For interactive exploration, the animate mode continuously rotates the model, creating a spinning effect in the terminal. The color mode adds ANSI color codes for enhanced visual output on terminals that support them.
-
-Output dimensions default to the terminal size but can be overridden for specific use cases like generating ASCII art for text files or documentation. The tool is useful for quick model inspection without launching a full 3D viewer.
+Because output is text in a standard terminal, the viewer is useful over SSH, in tmux panes, or in any environment where a full 3D GUI is not available.
 
 # CAVEATS
 
-Complex models with many polygons may render slowly or lose detail. Terminal font and aspect ratio affect the visual output. Color support depends on terminal capabilities. Very small output dimensions may produce unrecognizable results.
+Requires the ncurses developer libraries to build (`libncurses-dev` on Debian-based systems). Complex, high-polygon models may render slowly or lose detail. The visual result depends strongly on the terminal's font, aspect ratio, and color capabilities; very small windows may produce unrecognizable output. The **--color** mode needs a terminal that supports redefining colors and enough color pairs.
 
 # HISTORY
 
-ASCII art renderers for 3D content emerged alongside the demoscene and terminal art communities. Various implementations exist across programming languages, with modern versions supporting standard 3D file formats. The technique builds on decades of ASCII art tradition dating back to early computing.
+**3d-ascii-viewer** is an open-source experiment by `autopawn` demonstrating real-time 3D rasterization to ASCII characters without any graphics libraries. It continues a long tradition of terminal 3D renderers from the demoscene and ASCII-art communities.
 
 # SEE ALSO
 
-[meshlab](/man/meshlab)(1), [openscad](/man/openscad)(1), [blender](/man/blender)(1), [figlet](/man/figlet)(1)
+[blender](/man/blender)(1), [openscad](/man/openscad)(1), [meshlab](/man/meshlab)(1), [figlet](/man/figlet)(1)

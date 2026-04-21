@@ -1,6 +1,6 @@
 # TAGLINE
 
-brings down network interfaces that were previously configured with ifup
+Bring down network interfaces previously configured with ifup
 
 # TLDR
 
@@ -12,6 +12,22 @@ brings down network interfaces that were previously configured with ifup
 
 ```ifdown -a```
 
+**Show** commands without running them (dry run)
+
+```ifdown -n [eth0]```
+
+**Force** deconfiguration even if interface state says it is down
+
+```ifdown --force [eth0]```
+
+**Verbose** output
+
+```ifdown -v [eth0]```
+
+**Use an alternate** interfaces file
+
+```ifdown -i [/path/to/interfaces] [eth0]```
+
 # SYNOPSIS
 
 **ifdown** [_options_] _interface_
@@ -19,16 +35,46 @@ brings down network interfaces that were previously configured with ifup
 # PARAMETERS
 
 **-a**, **--all**
-> Disable all interfaces marked as auto in /etc/network/interfaces
+> Affect all defined interfaces, brought down in the order listed in the state file.
+
+**--allow** _CLASS_
+> Only act on interfaces listed in an `allow-CLASS` stanza in /etc/network/interfaces (e.g. `allow-hotplug`).
+
+**-i** _FILE_, **--interfaces**=_FILE_
+> Read interface definitions from _FILE_ instead of /etc/network/interfaces.
+
+**--state-dir**=_DIR_
+> Keep interface state in _DIR_ instead of /run/network.
+
+**-X** _PATTERN_, **--exclude**=_PATTERN_
+> Exclude interfaces matching _PATTERN_.
+
+**-o** _OPTION=VALUE_
+> Set _OPTION_ to _VALUE_ as if defined in /etc/network/interfaces.
+
+**-n**, **--no-act**
+> Don't configure any interfaces or run up/down commands (dry run).
 
 **-v**, **--verbose**
-> Print verbose information
+> Show commands as they are executed.
 
-**--force**
-> Force deconfiguration even if interface is not up
+**-f**, **--force**
+> Force deconfiguration even if ifupdown believes the interface is not up.
+
+**--ignore-errors**
+> Continue even if a command or script fails.
+
+**--no-mappings**
+> Do not run mappings during deconfiguration.
 
 **--no-scripts**
-> Don't run any pre/post scripts
+> Don't run any scripts under /etc/network/if-*.d/.
+
+**-V**, **--version**
+> Show copyright and version information.
+
+**-h**, **--help**
+> Show summary of options.
 
 # DESCRIPTION
 

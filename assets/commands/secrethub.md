@@ -34,26 +34,32 @@ Encrypted secret management service CLI
 
 # PARAMETERS
 
-**write**
-> Store secret.
+**write** _path_
+> Store a secret at the given path (reads value from stdin or prompt).
 
-**read**
-> Retrieve secret.
+**read** _path_
+> Retrieve and print a secret value.
 
-**ls**
-> List secrets.
+**ls** _path_
+> List secrets, directories, or repositories at a path.
 
-**run**
-> Execute with secrets.
+**run** **--** _command_
+> Execute a command with secrets injected as environment variables.
 
-**inject**
-> Template injection.
+**inject** **-i** _template_ **-o** _output_
+> Render a template, substituting secret references with actual values.
 
-**repo**
-> Repository management.
+**repo init** _path_
+> Initialize a new repository.
+
+**generate** _path_
+> Generate and store a random secret at the given path.
 
 **--clip**
-> Copy to clipboard.
+> Copy the secret to the clipboard instead of printing it (with **read**).
+
+**--env-file** _file_
+> Load environment variable references from a file (with **run**).
 
 # DESCRIPTION
 
@@ -69,8 +75,8 @@ Service discontinued. Use alternatives. Account required.
 
 # HISTORY
 
-**SecretHub** was a secret management service. It was acquired by **1Password** and integrated into their platform.
+**SecretHub** was a secret management service founded in the Netherlands. It was **acquired by 1Password in April 2021** and subsequently **discontinued**, with service end-of-life on **January 1, 2022**. Functionality was absorbed into 1Password Secrets Automation and the 1Password CLI (**op**). Existing users were provided migration guides for Python, Go, JavaScript, Terraform, and the Kubernetes operator.
 
 # SEE ALSO
 
-[vault](/man/vault)(1), [pass](/man/pass)(1), [aws-secrets](/man/aws-secrets)(1)
+[op](/man/op)(1), [vault](/man/vault)(1), [pass](/man/pass)(1)

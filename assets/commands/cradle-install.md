@@ -1,50 +1,60 @@
 # TAGLINE
 
-Install Cradle packages and dependencies
+Install the Cradle PHP framework and its packages
 
 # TLDR
 
-**Install all packages** from configuration
+**Run the interactive installer with defaults**
 
 ```cradle install```
 
-**Install specific package**
-
-```cradle install [package_name]```
-
-**Force install** (overwrite existing)
+**Force install, overwriting existing files**
 
 ```cradle install -f```
 
-**Install skipping SQL setup**
+**Install without running SQL setup**
 
 ```cradle install --skip-sql```
 
-**Install skipping versioning**
+**Install without updating package versions**
 
 ```cradle install --skip-versioning```
 
-**Install with database credentials**
+**Install without creating cache directories**
+
+```cradle install --skip-mkdir```
+
+**Install without adjusting file permissions**
+
+```cradle install --skip-chmod```
+
+**Supply database credentials on the command line**
 
 ```cradle install -h [127.0.0.1] -u [root] -p [password]```
 
 # SYNOPSIS
 
-**cradle** **install** [_options_] [_packages..._]
+**cradle** **install** [_options_]
 
 # PARAMETERS
 
 **-f**, **--force**
-> Force installation, overwriting existing files.
+> Force installation, overwriting any previously installed files.
 
 **--skip-sql**
-> Skip SQL database setup during installation.
+> Skip the SQL setup step (databases, seed data, schema import).
 
 **--skip-versioning**
-> Skip version checks during installation.
+> Skip updating package version metadata.
+
+**--skip-mkdir**
+> Skip creation of cache, upload, and log directories.
+
+**--skip-chmod**
+> Skip setting filesystem permissions on generated directories.
 
 **-h** _HOST_
-> Database host address.
+> Database host used when SQL setup is enabled.
 
 **-u** _USER_
 > Database username.
@@ -54,10 +64,18 @@ Install Cradle packages and dependencies
 
 # DESCRIPTION
 
-**cradle install** installs packages and dependencies for the Cradle PHP framework. It manages package installation within the Cradle ecosystem, handling framework-specific modules and extensions.
+**cradle install** is the bootstrap subcommand of the **Cradle** PHP framework CLI. It walks through the first-run setup: importing SQL schemas, writing configuration under `config/`, creating cache and upload directories, applying file permissions, and registering active packages with the framework.
 
-When run without arguments, it installs all dependencies listed in the project's package configuration. When given a specific package name, it installs that package and updates the dependency manifest.
+The command is idempotent when **-f** is not given; existing configuration and files are preserved, and individual phases can be turned off with the various `--skip-*` flags for use in Docker images, CI, or partial redeploys.
+
+# CAVEATS
+
+Must be run from the root of a Cradle project. Credentials passed via **-p** on the command line are visible in the process list; prefer environment variables or a prepared `config/settings.php` when security matters.
+
+# HISTORY
+
+**cradle install** is part of the **CradlePHP** project (github.com/CradlePHP). It started as an experimental admin package manager and was merged into the core `cradle` CLI as the standard installer.
 
 # SEE ALSO
 
-[cradle](/man/cradle)(1), [composer](/man/composer)(1)
+[cradle](/man/cradle)(1), [composer](/man/composer)(1), [php](/man/php)(1)

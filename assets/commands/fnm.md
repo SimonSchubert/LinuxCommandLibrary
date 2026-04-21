@@ -4,15 +4,19 @@ fast Node.js version manager written in Rust
 
 # TLDR
 
-**Install Node version**
+**Install a specific Node.js version**
 
-```fnm install [18]```
+```fnm install [18.17.0]```
 
-**Use specific version**
+**Install the latest LTS release**
+
+```fnm install --lts```
+
+**Switch the current shell to a version**
 
 ```fnm use [18]```
 
-**Set default version**
+**Set the default global version**
 
 ```fnm default [18]```
 
@@ -20,9 +24,13 @@ fast Node.js version manager written in Rust
 
 ```fnm list```
 
-**List remote versions**
+**List versions available for download**
 
 ```fnm list-remote```
+
+**Enable automatic switching on cd and evaluate shell init**
+
+```eval "$(fnm env --use-on-cd)"```
 
 # SYNOPSIS
 
@@ -30,31 +38,55 @@ fast Node.js version manager written in Rust
 
 # PARAMETERS
 
-_COMMAND_
-> Operation: install, use, list, uninstall, default, etc.
+**install** [_VERSION_] [**--lts**]
+> Download and install a Node.js version. Accepts full versions (18.17.0), major versions (18), `latest`, or `--lts` for the newest LTS.
 
-**install** _VERSION_
-> Install Node.js version.
-
-**use** _VERSION_
-> Switch to version.
+**use** _VERSION_ [**--install-if-missing**]
+> Switch the current shell to _VERSION_. With `--install-if-missing`, installs the version first if it is not present.
 
 **default** _VERSION_
-> Set default version.
-
-**list**
-> List installed versions.
-
-**list-remote**
-> List available versions.
-
-**uninstall** _VERSION_
-> Remove version.
+> Set the default global Node.js version used in new shells.
 
 **current**
-> Show active version.
+> Print the active Node.js version.
 
-**--help**
+**list**, **ls**
+> List all versions installed locally.
+
+**list-remote**, **ls-remote**
+> List all versions available from the distribution mirror.
+
+**uninstall** _VERSION_
+> Remove an installed Node.js version.
+
+**alias** _VERSION_ _NAME_
+> Create a named alias for a version.
+
+**unalias** _NAME_
+> Remove a named alias.
+
+**exec** **--using=**_VERSION_ _CMD_
+> Run _CMD_ with a specific Node.js version without switching the shell.
+
+**env** [**--shell**=_SHELL_] [**--use-on-cd**]
+> Print shell configuration to be eval'd; enables fnm in the current shell and optionally auto-switches on directory change.
+
+**completions** **--shell**=_SHELL_
+> Print shell completion scripts for bash, zsh, fish, or PowerShell.
+
+**--node-dist-mirror** _URL_
+> Use an alternative Node.js distribution mirror.
+
+**--fnm-dir** _PATH_
+> Override the fnm installation directory (default `~/.fnm`).
+
+**--log-level** _LEVEL_
+> Control verbosity (quiet, error, info).
+
+**--version**, **-V**
+> Display version information.
+
+**--help**, **-h**
 > Display help information.
 
 # DESCRIPTION
@@ -75,7 +107,7 @@ fnm emphasizes speed with Rust implementation and cross-platform support includi
 
 # CAVEATS
 
-Requires shell configuration for auto-switching. Not all nvm features supported. Separate from npm/pnpm.
+Shell integration via `eval "$(fnm env --use-on-cd)"` is required for `fnm use`, automatic version switching on `cd`, and keeping PATH in sync. fnm is not a drop-in replacement for **nvm**: it does not source bash profile or provide all nvm subcommands. Installed Node versions are stored under `$FNM_DIR` (default `~/.fnm`); the active version is symlinked into a per-shell directory, so different shells can have different active versions.
 
 # HISTORY
 

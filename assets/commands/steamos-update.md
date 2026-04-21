@@ -4,13 +4,17 @@ Update SteamOS system image
 
 # TLDR
 
-**Update** SteamOS
+**Update** SteamOS to the latest version
 
-```steamos-update```
+```sudo steamos-update```
 
-**Check** for updates
+**Check** if updates are available without installing
 
 ```steamos-update check```
+
+**Enable read-write** mode first (if modifying root filesystem before updates)
+
+```sudo steamos-readonly disable```
 
 # SYNOPSIS
 
@@ -30,9 +34,11 @@ Update SteamOS system image
 
 The A/B partition scheme ensures a reliable fallback if an update fails - the previous working partition remains available for recovery.
 
+**steamos-update** returns exit code **0** when an update was applied or is available (depending on subcommand), and **7** when the system is already up to date (useful for scripting).
+
 # CAVEATS
 
-Requires network connectivity. Updates may require significant download sizes. The system will reboot after installation. Update availability depends on the selected branch (stable, beta, or main).
+Requires network connectivity and root privileges to apply updates. Updates can be large. The system reboots into the updated partition after installation. Update availability depends on the selected branch (stable, beta, or main), chosen with **steamos-select-branch**. Running on non-SteamOS systems is not supported.
 
 # HISTORY
 
@@ -40,4 +46,4 @@ Requires network connectivity. Updates may require significant download sizes. T
 
 # SEE ALSO
 
-[steamos-select-branch](/man/steamos-select-branch)(1), [steamos-finalize-install](/man/steamos-finalize-install)(1)
+[steamos-select-branch](/man/steamos-select-branch)(1), [steamos-finalize-install](/man/steamos-finalize-install)(1), [steamos-readonly](/man/steamos-readonly)(1)

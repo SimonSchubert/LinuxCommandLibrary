@@ -51,13 +51,16 @@ Adjust X11 display gamma correction
 **-quiet**
 > Suppress normal output.
 
+**-help**
+> Show usage summary and exit.
+
 # DESCRIPTION
 
-**xgamma** queries and sets gamma correction values for X11 displays. Gamma affects mid-tone brightness; values below 1.0 increase contrast while values above 1.0 decrease it.
+**xgamma** queries and alters the gamma correction of a monitor via the XFree86-VidModeExtension. Gamma affects mid-tone brightness; values below 1.0 increase contrast while values above 1.0 decrease it.
 
-The tool adjusts the video lookup table (LUT) through the X server. Default gamma is 1.0. Separate control of red, green, and blue channels allows color temperature adjustment.
+When invoked without gamma arguments, xgamma prints the current red, green, and blue gamma values to standard output. Gamma values are transmitted to the X server with three decimal places of precision. Separate control of red, green, and blue channels allows color temperature adjustment.
 
-Settings are temporary and reset on X server restart. For persistence, add xgamma commands to ~/.xinitrc or ~/.xprofile, or configure in xorg.conf.
+Settings are temporary and reset on X server restart. For persistence, add xgamma commands to ~/.xinitrc or ~/.xprofile, or configure in xorg.conf. The **DISPLAY** environment variable provides the default host and display number.
 
 # CAVEATS
 
@@ -65,8 +68,8 @@ X11 only; no effect on Wayland. Settings don't persist across reboots without sc
 
 # HISTORY
 
-**xgamma** is part of the X.Org utility collection, providing simple gamma correction since early X11 implementations. While largely superseded by xrandr for display configuration, xgamma remains useful for quick gamma adjustments.
+**xgamma** is part of the X.Org utility collection and was originally authored by **Kaleb Keithley** and **David Dawes**. It relies on the XFree86-VidModeExtension, which is considered obsolete; modern setups should prefer **xrandr** with the RandR 1.2+ gamma properties.
 
 # SEE ALSO
 
-[xrandr](/man/xrandr)(1), [redshift](/man/redshift)(1), [xcalib](/man/xcalib)(1), [xbrightness](/man/xbrightness)(1)
+[xrandr](/man/xrandr)(1), [redshift](/man/redshift)(1)

@@ -57,6 +57,9 @@ Text-mode interface for Git
 **refs**
 > Start in refs view showing branches and tags
 
+**reflog**
+> Start in reflog view
+
 **stash**
 > Start in stash view
 
@@ -66,19 +69,25 @@ Text-mode interface for Git
 # PARAMETERS
 
 **+**_number_
-> Show first view with specified line number selected
+> Show first view with the specified line selected.
 
-**-v**, **--version**
-> Show version and exit
+**-C** _path_
+> Run as if tig was started in _path_ instead of the current directory.
 
-**-h**, **--help**
-> Show help message and exit
+**--all**
+> Pretend all refs are listed on the command line (shows every branch).
 
 **--stdin**
-> Read git command output from stdin (pager mode)
+> Read commit IDs or git output from standard input (pager mode).
 
 **--pretty=raw**
-> Process stdin formatted as git log --pretty=raw output
+> Process stdin formatted as `git log --pretty=raw` output.
+
+**-v**, **--version**
+> Show version and exit.
+
+**-h**, **--help**
+> Show help message and exit.
 
 # DESCRIPTION
 

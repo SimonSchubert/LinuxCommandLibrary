@@ -22,15 +22,36 @@ Insert module with **parameters**
 
 # PARAMETERS
 
-**filename**
-> Path to the kernel module file (.ko)
+_filename_
+> Path to the kernel module file (**.ko**). Use **-** to read the module from standard input.
 
-**module options**
-> Parameters to pass to the module
+_module options_
+> Key=value parameters passed to the module on load.
+
+**-f**, **--force**
+> Disable kernel version and vermagic checks. Dangerous: can cause memory corruption or crashes.
+
+**--force-modversion**
+> Ignore module version symbol mismatches.
+
+**--force-vermagic**
+> Ignore vermagic string mismatches.
+
+**-s**, **--syslog**
+> Send error messages to syslog instead of stderr.
+
+**-v**, **--verbose**
+> Print detailed information about what insmod is doing.
+
+**-V**, **--version**
+> Show program version and exit.
+
+**-h**, **--help**
+> Show help and exit.
 
 # CAVEATS
 
-insmod is a low-level tool that does not resolve dependencies. Use **modprobe** instead for most cases, as it handles dependencies and uses module names rather than file paths.
+insmod is a low-level tool that does not resolve dependencies and requires the full path to the **.ko** file. Use **modprobe** instead for most cases, as it handles dependencies and uses module names rather than file paths. Detailed error diagnostics typically appear in **dmesg** rather than on stderr. Loading modules requires root privileges.
 
 # HISTORY
 
@@ -38,4 +59,4 @@ insmod is a low-level tool that does not resolve dependencies. Use **modprobe** 
 
 # SEE ALSO
 
-[modprobe](/man/modprobe)(8), [rmmod](/man/rmmod)(8), [lsmod](/man/lsmod)(8), [modinfo](/man/modinfo)(8)
+[modprobe](/man/modprobe)(8), [rmmod](/man/rmmod)(8), [lsmod](/man/lsmod)(8), [modinfo](/man/modinfo)(8), [depmod](/man/depmod)(8), [kmod](/man/kmod)(8), [dmesg](/man/dmesg)(1)

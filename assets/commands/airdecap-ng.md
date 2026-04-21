@@ -12,13 +12,17 @@ Decrypt WEP and WPA/WPA2 encrypted capture files
 
 ```airdecap-ng -p [passphrase] -e [SSID] [capture.cap]```
 
-**Remove wireless headers** (convert to ethernet)
+**Keep 802.11 headers** (don't strip wireless headers)
 
-```airdecap-ng -l [capture.cap]```
+```airdecap-ng -l -w [hex_key] [capture.cap]```
 
 Decrypt with **BSSID filter**
 
 ```airdecap-ng -p [passphrase] -e [SSID] -b [00:11:22:33:44:55] [capture.cap]```
+
+Decrypt using a **Pairwise Master Key** (PMK)
+
+```airdecap-ng -k [pmk_hex] -e [SSID] [capture.cap]```
 
 # SYNOPSIS
 
@@ -26,9 +30,9 @@ Decrypt with **BSSID filter**
 
 # DESCRIPTION
 
-**airdecap-ng** decrypts WEP and WPA/WPA2 encrypted capture files when you know the key. It produces an unencrypted capture file that can be analyzed with tools like Wireshark.
+**airdecap-ng** decrypts WEP and WPA/WPA2 encrypted capture files when you know the key. It produces an unencrypted capture file (by default suffixed with **-dec.cap**) that can be analyzed with tools like Wireshark.
 
-The tool can also strip 802.11 wireless headers to convert captures to standard ethernet format, useful when analyzing the actual network traffic content.
+By default, 802.11 wireless headers are stripped so the output resembles a standard Ethernet capture. Use **-l** to preserve the original 802.11 frames.
 
 # PARAMETERS
 
@@ -45,14 +49,14 @@ The tool can also strip 802.11 wireless headers to convert captures to standard 
 > Access point MAC address filter
 
 **-l**
-> Remove 802.11 header (don't decrypt, just convert to ethernet format).
+> Don't remove the 802.11 header from decrypted output (keep wireless frames).
 
 **-k** _pmk_
-> Use the specified Pairwise Master Key (in hex) instead of passphrase.
+> Use the specified WPA/WPA2 Pairwise Master Key (in hex) instead of passphrase.
 
 # CAVEATS
 
-For WPA decryption, you need the passphrase AND the SSID. The capture file must contain the 4-way handshake for initial WPA key derivation. Output file is named input-dec.cap by default.
+For WPA decryption, you need the passphrase AND the SSID. The capture file must contain a valid 4-way handshake, and only data packets that follow a successful handshake will be decrypted. Output file is named _input_-dec.cap by default. Single file names are recommended over shell wildcards.
 
 # HISTORY
 

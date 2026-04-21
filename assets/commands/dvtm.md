@@ -12,7 +12,7 @@ dynamic virtual terminal manager
 
 ```dvtm -m ^a```
 
-**Enable mouse support**
+**Toggle default mouse support**
 
 ```dvtm -M```
 
@@ -23,6 +23,10 @@ dynamic virtual terminal manager
 **Use a status FIFO** for the status bar
 
 ```dvtm -s [/tmp/dvtm-status]```
+
+**Persist session with abduco**
+
+```abduco -A [mysession] dvtm```
 
 # SYNOPSIS
 
@@ -67,12 +71,17 @@ The tool provides dynamic layouts, tagging, and keyboard-driven window managemen
 
 # DEFAULT KEYS
 
+Default modifier (MOD) is **Ctrl+g**.
+
 **Mod+c**: Create window
 **Mod+x**: Close window
 **Mod+j/k**: Focus next/previous
 **Mod+h/l**: Resize master
 **Mod+Enter**: Zoom window
 **Mod+Space**: Toggle layout
+**Mod+[1-9]**: Jump to window by number
+**Mod+e**: Enter copy mode
+**Mod+p**: Paste
 **Mod+q**: Quit
 
 # LAYOUTS
@@ -84,7 +93,7 @@ The tool provides dynamic layouts, tagging, and keyboard-driven window managemen
 
 # CAVEATS
 
-Limited compared to tmux/screen. No built-in session persistence (use dtach). Configuration requires recompilation. Modifier key may conflict with applications.
+Limited compared to tmux/screen. No built-in session persistence; pair with **abduco** (recommended) or **dtach**. Configuration requires editing config.h and recompiling. Default modifier Ctrl+g may need to be rebound if it conflicts with applications.
 
 # HISTORY
 

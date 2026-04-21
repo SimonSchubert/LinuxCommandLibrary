@@ -8,45 +8,69 @@ Roguelike dungeon exploration game
 
 ```angband```
 
-**Start with a specific user savefile**
+**Load a specific character savefile**
 
-```angband -u [username]```
+```angband -u[character]```
 
-**Start with a specific graphics mode**
+**Start a brand-new character** (skip load)
 
-```angband -g```
+```angband -n```
 
-**Start in wizard (debug) mode**
+**Run with the X11 front end**, opening 4 windows
+
+```angband -mx11 -- -n4```
+
+**Run with the SDL front end**
+
+```angband -msdl```
+
+**Start in wizard (debug) mode**, disables high scores
 
 ```angband -w```
 
-**Display version information**
+**Show top high scores**
 
-```angband -v```
+```angband -s[10]```
+
+**Display the usage message**
+
+```angband -h```
 
 # SYNOPSIS
 
-**angband** [**-u** _user_] [**-g**] [**-w**] [**-v**]
+**angband** [_options_] [**--** _suboptions_]
 
 # PARAMETERS
 
-**-u** _user_
-> Use a specific user name for the savefile.
+**-h**
+> Display usage information.
 
-**-g**
-> Enable graphical tile display (if supported).
+**-n**
+> Start a new character (do not load an existing savefile).
 
 **-w**
-> Start in wizard mode for debugging and testing.
+> Enable wizard (debug) mode; high scores are disabled.
 
-**-v**
-> Display version information and exit.
+**-g**
+> Request graphics mode when the front end supports it.
 
-**-d** _path_
-> Set the path for data files.
+**-r**
+> Rebalance monsters.
 
-**-s** _path_
-> Set the path for save files.
+**-s**_num_
+> Show the specified number of high scores and exit.
+
+**-u**_who_
+> Load the savefile belonging to character _who_.
+
+**-m**_sys_
+> Select the core display system (**gcu** for curses/console, **x11**, **sdl**, etc.).
+
+**-d**_lib_**=**_path_
+> Override a library subdirectory path. Valid _lib_ keys include **help**, **info**, **user**, **save**, **data**, **scores**, **xtra**, **edit**, and **file**.
+
+**--**
+> Pass any remaining arguments to the selected front end (e.g. **-n**_N_ to open _N_ X11 windows).
 
 # PREVIEW
 
@@ -92,4 +116,4 @@ Angband originated as a variant of **Moria** (1983), which itself was inspired b
 
 # SEE ALSO
 
-[nethack](/man/nethack)(1), [crawl](/man/crawl)(6), [tome](/man/tome)(6), [moria](/man/moria)(6)
+[nethack](/man/nethack)(1), [crawl](/man/crawl)(6), [tome](/man/tome)(6), [moria](/man/moria)(6), [rogue](/man/rogue)(6)

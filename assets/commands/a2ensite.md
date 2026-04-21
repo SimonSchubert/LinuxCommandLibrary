@@ -8,9 +8,21 @@ Enable Apache2 virtual host sites
 
 ```sudo a2ensite [virtual_host]```
 
+**Enable multiple** sites at once
+
+```sudo a2ensite [site1] [site2]```
+
+**Enable the default** site
+
+```sudo a2ensite 000-default```
+
 Don't show **informative messages**
 
 ```sudo a2ensite -q [virtual_host]```
+
+**Reload** Apache after enabling to apply changes
+
+```sudo systemctl reload apache2```
 
 # SYNOPSIS
 
@@ -28,7 +40,23 @@ The first virtual host handles unmatched requests, so it should be named **000-d
 > Don't show informative messages
 
 **-m, --maintmode**
-> Enables maintainer mode; the program invocation is effectuated automatically by a maintainer script
+> Enables maintainer mode; the program invocation is effectuated automatically by a maintainer script. Not intended for end users.
+
+# EXIT STATUS
+
+**0** - all sites processed successfully.
+
+**1** - an error occurred.
+
+**2** - an invalid option was used.
+
+# FILES
+
+**/etc/apache2/sites-available/**
+> Directory containing available site configuration files.
+
+**/etc/apache2/sites-enabled/**
+> Directory of symlinks to enabled site configurations (managed by a2ensite/a2dissite).
 
 # CAVEATS
 

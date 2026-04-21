@@ -20,9 +20,9 @@ console keyboard translation table dumper
 
 ```dumpkeys --funcs-only```
 
-**Output in C format**
+**Output action codes numerically (hex)**
 
-```dumpkeys -c```
+```dumpkeys -n```
 
 **Save keymap to file**
 
@@ -35,31 +35,43 @@ console keyboard translation table dumper
 # PARAMETERS
 
 **-f**, **--full-table**
-> Output all key bindings, not just modified.
-
-**-k**, **--keys-only**
-> Output only key bindings, not function strings.
-
-**--funcs-only**
-> Output only function key strings.
-
-**-c**, **--cformat**
-> Output in C source format.
+> Output all key bindings in canonical form (keymaps line followed by rows for all modifier combinations).
 
 **-1**, **--separate-lines**
-> One action per line.
+> Write one line per (modifier, keycode) pair; prefix plain keycodes with "plain".
 
-**-S** _shape_
-> Output shape: 0, 1, or 2.
+**-S** _shape_, **--shape**=_shape_
+> Select output format: 2 (default), 4 (one line per keycode), 8 (one line per modifier-keycode), or 16 (stop at first gap).
 
 **-n**, **--numeric**
-> Output keycodes numerically.
+> Output action codes in hexadecimal rather than symbolic notation.
+
+**-t**, **--funcs-only**
+> Output only function key string definitions.
+
+**-k**, **--keys-only**
+> Output only key bindings, excluding function strings.
+
+**-d**, **--compose-only**
+> Output only compose key combinations (requires kernel compose support).
+
+**-c** _charset_, **--charset**=_charset_
+> Interpret character codes using the given charset (iso-8859-1..iso-8859-9).
+
+**-C** _dev_, **--console**=_dev_
+> Target the specified console device.
 
 **-i**, **--short-info**
-> Display kernel keymap information.
+> Display keyboard driver characteristics (keycode range, bindable actions, function key count).
 
-**-l**, **--long-info**
-> Display detailed keymap information.
+**-l**, **-s**, **--long-info**
+> Display long-form info: short-info plus a list of action symbols and values.
+
+**-v**, **--verbose**
+> Enable verbose output.
+
+**-V**, **--version**
+> Print version information and exit.
 
 # DESCRIPTION
 
@@ -86,4 +98,4 @@ dumpkeys is part of the **kbd** package for Linux console keyboard utilities. It
 
 # SEE ALSO
 
-[loadkeys](/man/loadkeys)(1), [showkey](/man/showkey)(1), [setxkbmap](/man/setxkbmap)(1), [keymaps](/man/keymaps)(5)
+[loadkeys](/man/loadkeys)(1), [showkey](/man/showkey)(1), [setxkbmap](/man/setxkbmap)(1)

@@ -1,79 +1,64 @@
 # TAGLINE
 
-composite images with blend modes
+combine lines of two files using boolean operations
 
 # TLDR
 
-**Combine two images** using the default compose operator
+**Output lines that appear in both files** (intersection)
 
-```combine [image1.png] [image2.png] [output.png]```
+```combine [file1] and [file2]```
 
-**Combine using a specific** compose method
+**Output lines in file1 but not in file2** (difference)
 
-```combine -compose [multiply] [image1.png] [image2.png] [output.png]```
+```combine [file1] not [file2]```
 
-**Combine images with a displacement map**
+**Output lines that are in either file** (union)
 
-```combine -compose [displace] [image.png] [map.png] [output.png]```
+```combine [file1] or [file2]```
 
-**Combine RGB channels** from separate images
+**Output lines present in exactly one file** (symmetric difference)
 
-```combine -channel [RGB] -combine [red.png] [green.png] [blue.png] [output.png]```
+```combine [file1] xor [file2]```
 
-**Use difference blending** to highlight changes
+**Read one input from standard input**
 
-```combine -compose [difference] [original.png] [modified.png] [diff.png]```
-
-**Combine with screen** blend mode
-
-```combine -compose [screen] [base.png] [overlay.png] [output.png]```
+```cat [file1] | combine - and [file2]```
 
 # SYNOPSIS
 
-**combine** [_options_] _image1_ _image2_ _output_
+**combine** _file1_ **and**|**not**|**or**|**xor** _file2_
 
 # PARAMETERS
 
-**-compose** _METHOD_
-> Specify the compositing method (over, multiply, screen, difference, etc.).
+**and**
+> Output lines in _file1_ that are also in _file2_ (intersection).
 
-**-channel** _TYPE_
-> Apply operation to specific channels (R, G, B, A, RGB, RGBA).
+**not**
+> Output lines in _file1_ that are not in _file2_ (set difference).
 
-**-gravity** _TYPE_
-> Position for overlay image (center, north, south, east, west, etc.).
+**or**
+> Output lines in _file1_ or in _file2_ (union); _file2_ lines are appended.
 
-**-geometry** _GEOMETRY_
-> Size and offset for positioning the overlay.
+**xor**
+> Output lines in exactly one of _file1_ or _file2_ (symmetric difference).
 
-**-alpha** _TYPE_
-> Control alpha channel handling (on, off, set, etc.).
-
-**-blend** _GEOMETRY_
-> Blend percentages for source and destination images.
-
-**-dissolve** _PERCENT_
-> Dissolve source image into destination.
-
-**-watermark** _BRIGHTNESS_
-> Apply as a watermark with specified brightness.
+_file1_, _file2_
+> Input files. Use **-** to read from standard input.
 
 # DESCRIPTION
 
-**combine** is an ImageMagick command for compositing two images together using various blending modes. It provides Photoshop-like layer compositing operations from the command line.
+**combine** performs boolean set operations on the lines of two files, treating each file as a set of lines. Input does not need to be sorted; output lines appear in the order they occur in _file1_ (with _file2_ lines appended for **or**).
 
-The tool supports numerous composition methods including standard blend modes (multiply, screen, overlay, soft-light), mathematical operations (add, subtract, difference), and specialized methods for masking and channel manipulation.
-
-When combining images, the first image serves as the base or destination, and the second image is composited over it according to the specified method. Gravity and geometry options control positioning when images differ in size.
+The command is part of the **moreutils** collection of handy Unix utilities and is useful for quickly computing set relationships on plain text data without piping through **sort**, **uniq**, and **comm**.
 
 # CAVEATS
 
-The **combine** command is a legacy alias in ImageMagick. Modern usage recommends **magick composite** or **convert** with **-composite** for more flexibility. Image dimensions and color spaces should typically match for predictable results.
+The operations are not commutative: swapping _file1_ and _file2_ can change the output order. Duplicate lines within a file are preserved in the output; pipe through **sort -u** for symmetric, deduplicated results. On some distributions the binary is installed as **combine** from moreutils, but may conflict with ImageMagick's legacy **combine** tool - check **which combine** or use the package's full path.
 
 # HISTORY
 
-combine is part of **ImageMagick**, first released in **1990** by John Cristy. It evolved alongside digital image editing software, implementing composition algorithms similar to those in Adobe Photoshop. The command provides scriptable access to these professional compositing techniques.
+**combine** is part of **moreutils**, a collection of Unix utilities maintained by Joey Hess since around **2006**. It provides set-theoretic operations that would otherwise require multiple pipeline stages with **sort** and **comm**.
 
 # SEE ALSO
 
-[composite](/man/composite)(1), [convert](/man/convert)(1), [montage](/man/montage)(1), [magick](/man/magick)(1)
+[comm](/man/comm)(1), [sort](/man/sort)(1), [uniq](/man/uniq)(1), [join](/man/join)(1), [diff](/man/diff)(1), [grep](/man/grep)(1)

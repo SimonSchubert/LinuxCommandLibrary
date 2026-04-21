@@ -24,6 +24,18 @@ Mistral AI command-line coding assistant
 
 ```vibe --agent [my_custom_agent]```
 
+**Resume the most recent session**
+
+```vibe --continue```
+
+**Resume a specific session**
+
+```vibe --resume [session_id]```
+
+**Limit turns and cost in non-interactive mode**
+
+```vibe --prompt "[fix lint errors]" --max-turns [10] --max-price [2.50]```
+
 **Reference a file in prompt**
 
 ```vibe``` then ```@[path/to/file.py] [explain this code]```
@@ -39,27 +51,66 @@ Mistral AI command-line coding assistant
 # PARAMETERS
 
 **--prompt** _TEXT_
-> Run non-interactively with the provided prompt (auto-approve enabled by default)
+> Run non-interactively with the provided prompt (auto-approve enabled by default).
 
 **--auto-approve**
-> Automatically approve all tool executions without prompting
+> Automatically approve all tool executions without prompting.
 
 **--agent** _NAME_
-> Load a custom agent configuration from ~/.vibe/agents/NAME.toml
+> Select an agent profile (built-ins: default, plan, accept-edits, auto-approve) or load a custom TOML from the agents directory.
+
+**-c**, **--continue**
+> Resume the most recent session.
+
+**--resume** _SESSION_ID_
+> Resume a specific session by ID.
+
+**--max-turns** _N_
+> Limit the number of assistant turns in non-interactive mode.
+
+**--max-price** _DOLLARS_
+> Abort the session if cost exceeds the specified dollar amount.
+
+**--enabled-tools** _TOOL_
+> Restrict which built-in tools are available (supports glob patterns).
+
+**--output** _FORMAT_
+> Output format: `text`, `json`, or `stream`.
+
+**--workdir** _PATH_
+> Set the working directory for the session.
+
+**--setup**
+> Run interactive API key configuration.
 
 # INTERACTIVE CONTROLS
 
 **Ctrl+J** or **Shift+Enter**
-> Insert newline for multi-line input
+> Insert newline for multi-line input.
 
-**@**_filename_
-> Autocomplete file paths in prompts
+**Ctrl+G**
+> Edit the current input in an external editor.
 
-**!**_command_
-> Execute shell commands directly, bypassing the agent
+**Ctrl+O**
+> Toggle the tool output view.
+
+**Ctrl+T**
+> Toggle the todo list view.
+
+**Ctrl+R**
+> Start voice recording (Escape to cancel).
 
 **Shift+Tab**
-> Toggle auto-approve mode on/off
+> Toggle auto-approve mode on/off.
+
+**@**_filename_
+> Autocomplete file paths in prompts.
+
+**!**_command_
+> Execute shell commands directly, bypassing the agent.
+
+**/**_command_
+> Run a built-in or custom slash command (e.g. `/help`).
 
 # BUILT-IN TOOLS
 
@@ -85,7 +136,7 @@ Vibe runs in interactive chat mode by default, offering a conversational AI agen
 
 # CAVEATS
 
-Requires a Mistral API key set via **MISTRAL_API_KEY** environment variable or stored in **~/.vibe/.env**. The tool targets UNIX environments; Windows is supported but Linux and macOS are the primary platforms. Auto-approve mode executes commands without confirmation, which can be dangerous.
+Requires a Mistral API key set via **MISTRAL_API_KEY** environment variable or stored in **~/.vibe/.env** (override the config home with **VIBE_HOME**). Install via `curl -LsSf https://mistral.ai/vibe/install.sh | bash`, `uv tool install mistral-vibe`, or `pip install mistral-vibe`. Linux and macOS are the primary platforms; Windows is supported but secondary. Auto-approve mode executes commands without confirmation and can be destructive — prefer the **plan** agent for review-first workflows.
 
 # HISTORY
 

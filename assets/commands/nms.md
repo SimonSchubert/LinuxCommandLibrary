@@ -1,63 +1,67 @@
 # TAGLINE
 
-creates a decrypting text effect
+Recreate the on-screen decryption effect from the movie Sneakers
 
 # TLDR
 
-**Decrypt text effect**
+**Decrypt piped text (press any key to reveal)**
 
 ```echo "[text]" | nms```
 
-**Auto reveal**
+**Auto-decrypt without waiting for a keypress**
 
 ```echo "[text]" | nms -a```
 
-**Foreground color**
+**Set the foreground colour of revealed text**
 
-```echo "[text]" | nms -f [green]```
+```echo "[text]" | nms -f green```
 
-**Clear screen first**
+**Clear the screen before and restore it after**
 
-```echo "[text]" | nms -c```
+```ls -l | nms -c```
 
-**Set reveal speed**
+**Mask blank spaces as well as visible characters**
 
 ```echo "[text]" | nms -s```
 
+**Decrypt the output of a command**
+
+```curl -s wttr.in | nms -a -f cyan```
+
 # SYNOPSIS
 
-**nms** [_options_]
+**nms** [_-acsv_] [**-f** _color_]
 
 # PARAMETERS
 
 **-a**
-> Auto-reveal (no key press).
-
-**-f** _COLOR_
-> Foreground color.
-
-**-c**
-> Clear screen first.
+> Auto-decrypt: start the reveal immediately without waiting for a keypress.
 
 **-s**
-> Slow reveal effect.
+> Mask single blank spaces too (tabs and newlines remain unmasked).
 
-**--help**
-> Display help information.
+**-f** _COLOR_
+> Foreground colour of the revealed text. Accepts `white`, `yellow`, `black`, `magenta`, `blue` (default), `green`, `red`, `cyan`, or an `#RRGGBB` hex value.
+
+**-c**
+> Clear the screen before running and restore the terminal state after completion.
+
+**-v**
+> Print the version and exit.
 
 # DESCRIPTION
 
-**nms** creates a decrypting text effect. Inspired by movie hacking scenes.
+**nms** ("No More Secrets") reads text from standard input, displays it as random noise, and then animates a character-by-character decryption to the original content, recreating the famous data-decryption sequence from the 1992 film *Sneakers*.
 
-The tool animates text reveal. Fun terminal effect for presentations.
+Because it reads stdin, **nms** composes naturally with pipes, letting you drop the effect on top of the output of any command. A companion program, **sneakers**, is also shipped by the project and provides the interactive terminal version of the movie scene.
 
 # CAVEATS
 
-Visual effect only. Reads from stdin. Terminal required.
+Purely a visual effect -- it does not alter the piped data, just the way it is displayed. Requires a terminal that supports ANSI escape sequences and is at least as large as the input text. Very large inputs can take a noticeable amount of time to reveal; use **-a** to skip the keypress pause.
 
 # HISTORY
 
-nms recreates the **movie-style** text decryption effect seen in films like Sneakers.
+**No More Secrets** was created by **Brian Barto** and first released on GitHub in **2016**. It became a popular novelty tool in the Linux community and is packaged by most major distributions.
 
 # SEE ALSO
 

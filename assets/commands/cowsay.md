@@ -39,43 +39,48 @@ cowsay has become an iconic part of Unix culture, often paired with fortune for 
 # PARAMETERS
 
 **-f** _cowfile_
-> Specify cow file
+> Use the specified cow file.
 
 **-l**
-> List available cows
+> List available cow files on the current COWPATH.
 
 **-e** _eyes_
-> Set eye appearance
+> Set eye appearance (first two characters; default **oo**).
 
 **-T** _tongue_
-> Set tongue appearance
+> Set tongue appearance (two characters; default blank).
 
 **-W** _width_
-> Word wrap width
+> Word-wrap column (default 40).
 
 **-n**
-> No word wrap
+> Disable word wrapping; preserve the input as-is.
+
+**-b**
+> Borg mode (eyes **==**).
 
 **-d**
-> Dead cow mode
+> Dead cow mode (eyes **XX**, tongue **U**).
 
 **-g**
-> Greedy mode
+> Greedy mode (eyes **$$**).
 
 **-p**
-> Paranoid mode
+> Paranoid mode (eyes **@@**).
 
 **-s**
-> Stoned mode
+> Stoned mode (eyes **\*\***, tongue **U**).
 
 **-t**
-> Tired mode
+> Tired mode (eyes **--**).
 
 **-w**
-> Wired mode
+> Wired mode (eyes **OO**).
 
 **-y**
-> Young mode
+> Youthful mode (eyes **..**).
+
+Note: **-e** and **-T** are ignored if any mode flag is also given.
 
 # AVAILABLE COWS
 

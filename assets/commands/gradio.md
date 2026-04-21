@@ -4,51 +4,80 @@ Machine learning web interface builder
 
 # TLDR
 
-**Run Gradio app**
+**Run a Gradio app** with hot-reload (restarts on file changes)
+
+```gradio [app.py]```
+
+**Run directly with Python** (no auto-reload)
 
 ```python [app.py]```
 
-**Launch with share link**
+**Deploy the current directory** as a Hugging Face Space
 
-```gradio [app.py] --share```
+```gradio deploy```
 
-**Specify port**
+**Deploy with a custom title** and entry file
 
-```gradio [app.py] --server-port [7861]```
+```gradio deploy --title [my-app] --app-file [app.py]```
 
-**Enable debug mode**
+**Print the Gradio environment info** for bug reports
 
-```gradio [app.py] --debug```
+```gradio environment```
+
+**Run with debug output** enabled
+
+```GRADIO_DEBUG=1 python [app.py]```
 
 # SYNOPSIS
 
-**gradio** [_file_] [_options_]
+**gradio** _file_ [**--demo-name** _name_] [**--watch-dirs** _dirs_]
+
+**gradio** **deploy** [**--title** _title_] [**--app-file** _file_]
+
+**gradio** **environment**
 
 # PARAMETERS
 
 _file_
-> Python file with Gradio interface.
+> Python file containing a Gradio app. Running **gradio file.py** launches it with auto-reload, equivalent to **python file.py** but restarting on edits.
 
-**--share**
-> Create public shareable link.
+**deploy**
+> Subcommand: upload the current directory to Hugging Face Spaces, respecting **.gitignore**.
 
-**--server-port** _port_
-> Port number (default 7860).
+**environment**
+> Subcommand: print Gradio, Python, and OS version info useful for issue reports.
 
-**--server-name** _host_
-> Host address.
+**--title** _title_
+> (**deploy**) Name the Hugging Face Space.
 
-**--debug**
-> Enable debug mode.
+**--app-file** _file_
+> (**deploy**) Path to the entry Python file (default: **app.py**).
 
-**--reload**
-> Auto-reload on changes.
+**--demo-name** _name_
+> Name of the demo variable inside the script (default: **demo**).
+
+**--watch-dirs** _dirs_
+> Additional directories to watch for hot-reload.
+
+# ENVIRONMENT
+
+**GRADIO_SERVER_PORT**
+> Port to bind (default: **7860**).
+
+**GRADIO_SERVER_NAME**
+> Interface to bind. Use **0.0.0.0** to listen on all interfaces.
+
+**GRADIO_DEBUG**
+> Set to **1** to keep the main thread alive and print stack traces (useful in Colab).
+
+**GRADIO_TEMP_DIR**
+> Directory for temporary files such as uploaded media.
 
 # DESCRIPTION
 
-**Gradio** is a Python library for creating machine learning demos and web interfaces. It allows rapid prototyping of ML models with interactive UIs, supporting inputs like text, images, audio, and video.
+**Gradio** is a Python library for building machine-learning demos and web UIs, plus a small companion CLI. The **gradio** command wraps **python** to run a script with live reload - whenever the watched files change, the server restarts and the browser refreshes automatically, which is the main reason to use **gradio app.py** instead of **python app.py** during development.
 
-Gradio interfaces can be shared via temporary public URLs, making it easy to demonstrate models to others. It is widely used in the Hugging Face ecosystem.
+The CLI also exposes **gradio deploy**, which packages the working directory and pushes it to **Hugging Face Spaces** for hosting, and **gradio environment**, which prints diagnostic information. Server settings such as port, host, share links, and authentication are normally configured via arguments to **demo.launch()** inside the Python script, or via **GRADIO_*** environment variables.
 
 # PYTHON EXAMPLE
 
@@ -64,7 +93,7 @@ demo.launch()
 
 # CAVEATS
 
-Requires Python 3.7+. Share links expire after 72 hours. Large models need appropriate resources. WebSocket connections required for interactivity.
+The **gradio** CLI is thin: most configuration happens in **demo.launch(...)** inside your Python script, not via flags. Share links created with **share=True** expire after 72 hours and tunnel through Gradio infrastructure. **gradio deploy** requires a Hugging Face token (via **huggingface-cli login**). Requires Python 3.10+ in recent versions.
 
 # HISTORY
 
@@ -72,4 +101,4 @@ Gradio was created by **Abubakar Abid** and team, acquired by **Hugging Face** i
 
 # SEE ALSO
 
-[streamlit](/man/streamlit)(1), [python](/man/python)(1), [flask](/man/flask)(1)
+[streamlit](/man/streamlit)(1), [python](/man/python)(1), [flask](/man/flask)(1), [uvicorn](/man/uvicorn)(1), [huggingface-cli](/man/huggingface-cli)(1)
