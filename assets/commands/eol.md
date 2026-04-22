@@ -1,69 +1,77 @@
 # TAGLINE
 
-Line ending format detector and converter
+report and convert end-of-line characters in text files
 
 # TLDR
 
-**Check line endings** in file
+**Report line-ending style** of a file
 
 ```eol [file.txt]```
 
-**Convert to Unix** line endings
+**Convert to Unix** (LF)
 
-```eol -u [file.txt]```
+```eol -c LF [file.txt]```
 
-**Convert to Windows** line endings
+**Convert to Windows** (CRLF)
 
-```eol -d [file.txt]```
+```eol -c CRLF [file.txt]```
 
-**Convert to Mac** classic endings
+**Convert to the platform's native** style
 
-```eol -m [file.txt]```
+```eol -c native [file.txt]```
 
-**Process multiple files**
+**Recursively find files** with DOS line endings
 
-```eol -u [*.txt]```
+```eol -r -f dos [path]```
+
+**Skip a directory** while scanning
+
+```eol -r -x .git [path]```
 
 # SYNOPSIS
 
-**eol** [_options_] _files_...
+**eol** [_options_] _path_...
 
 # PARAMETERS
 
-_FILES_
-> Files to process.
+**-c**, **--convert** _NAME_
+> Convert files to the given EOL style. _NAME_ is one of LF, CRLF, CR, NATIVE (aliases: unix, dos/windows, mac, native — case-insensitive).
 
-**-u**, **--unix**
-> Convert to Unix (LF).
+**-f**, **--find** _NAME_
+> List files that have the given EOL style. Accepts the same names as `-c` plus NONE and MIXED.
 
-**-d**, **--dos**
-> Convert to DOS/Windows (CRLF).
+**-r**, **--recursive**
+> Recurse into directories (off by default).
 
-**-m**, **--mac**
-> Convert to classic Mac (CR).
+**-x**, **--skip** _PATTERN_
+> Skip files or directories matching _PATTERN_ (e.g. `.git`, `*.pyc`).
+
+**-v**, **--verbose**
+> Show debug-level output.
 
 **-q**, **--quiet**
-> Quiet mode.
+> Only show warnings and errors.
 
-**--help**
-> Display help information.
+**--test**
+> Run the tool's self-tests and exit.
+
+**-h**, **--help**
+> Show help.
 
 # DESCRIPTION
 
-**eol** detects and converts line ending formats in text files. It handles the three common conventions: Unix (LF), DOS/Windows (CRLF), and classic Mac (CR).
+**eol** is a command-line script (and Python module) for inspecting and converting end-of-line characters in text files. With no action flag it reports each file's detected EOL style (Unix/LF, Windows/CRLF, Mac Classic/CR, mixed, or none).
 
-Without conversion options, eol reports the current line ending format of files. With conversion flags, it transforms files to the specified format in place.
-
-The tool is useful for cross-platform development and fixing files with inconsistent or incorrect line endings.
+Use `-c` to rewrite files to a chosen style, or `-f` to locate files that already use a particular style. Directory traversal is off unless `-r` is given. Binary files are detected and skipped by default.
 
 # CAVEATS
 
-In-place conversion modifies files. Binary files may be corrupted. Mixed line endings may need multiple passes. Backup important files first.
+Conversion rewrites files in place; keep a backup or use version control. Files with mixed line endings are normalized to the target style on `-c`. This is the **trentm/eol** Python tool; other distributions ship unrelated programs also named _eol_.
 
 # HISTORY
 
-eol is one of several line ending conversion tools, addressing the long-standing incompatibility between Unix, Windows, and classic Mac text file formats that dates back to early computing.
+**eol** was written by **Trent Mick** and is distributed on PyPI as the `eol` package. The project has been maintained on GitHub since the late 2000s.
 
 # SEE ALSO
 
-[dos2unix](/man/dos2unix)(1), [unix2dos](/man/unix2dos)(1), [file](/man/file)(1)
+[dos2unix](/man/dos2unix)(1), [unix2dos](/man/unix2dos)(1), [file](/man/file)(1), [tr](/man/tr)(1)

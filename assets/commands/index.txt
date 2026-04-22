@@ -3841,6 +3841,7 @@ latexpand.md
 latte-dock.md
 launchctl.md
 lavadecode.md
+lavat.md
 laydown.md
 lazyagent.md
 lazycelery.md

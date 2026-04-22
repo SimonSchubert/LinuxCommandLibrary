@@ -113,4 +113,4 @@ AppArmor was developed by **Immunix Inc.** in the late **1990s** and acquired by
 
 # SEE ALSO
 
-[aa-status](/man/aa-status)(8), [aa-enforce](/man/aa-enforce)(8), [aa-complain](/man/aa-complain)(8), [aa-notify](/man/aa-notify)(8), [selinux](/man/selinux)(8)
+[aa-status](/man/aa-status)(8), [aa-enforce](/man/aa-enforce)(8), [aa-complain](/man/aa-complain)(8), [aa-notify](/man/aa-notify)(8)

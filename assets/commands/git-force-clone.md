@@ -1,46 +1,55 @@
 # TAGLINE
 
-Clone repository forcibly removing target directory
+force-clone a repository, replacing the target directory if it exists
 
 # TLDR
 
-**Force clone to directory**
+**Force clone** into a directory, removing any existing contents first
 
 ```git force-clone [url] [directory]```
 
-**Force clone to existing directory**
+**Force clone at a specific branch**
+
+```git force-clone -b [branch] [url] [directory]```
+
+**Force clone and reset to the remote head** even if the dir is a checkout
 
 ```git force-clone [https://github.com/owner/repo.git] [existing-dir]```
 
 # SYNOPSIS
 
-**git force-clone** _url_ _directory_
+**git force-clone** [**-b** _BRANCH_] _URL_ _DIRECTORY_
 
 # PARAMETERS
 
 _URL_
-> Repository URL to clone.
+> Repository URL (https, ssh, git, or local path).
 
 _DIRECTORY_
-> Target directory (will be overwritten).
+> Target directory. If it already exists and contains a clone of the same repo, its contents are reset to match the remote. If it exists but is a different repo (or random files), it is removed and re-cloned.
+
+**-b** _BRANCH_
+> Check out _BRANCH_ after cloning.
 
 **--help**
-> Display help information.
+> Show help.
 
 # DESCRIPTION
 
-**git force-clone** clones a repository, forcibly removing any existing directory at the target path. It combines rm -rf with git clone, ensuring a fresh clone regardless of what previously existed at the destination.
+**git force-clone** from the **git-extras** suite guarantees the target directory ends up as a fresh, clean clone of the given URL. It is the "just give me what's on the remote" hammer for deployment scripts:
 
-The command is useful for deployment scripts where you always want a clean clone state. However, it is dangerous as it unconditionally deletes the target directory without confirmation.
+- If the directory does not exist, it clones normally.
+- If the directory is already a clone of the same URL, it fetches and hard-resets the working tree to match the remote, discarding any local changes.
+- If the directory exists but is a different repository (or contains unrelated files), it removes the directory and re-clones.
 
 # CAVEATS
 
-**Deletes target directory without confirmation.** Part of git-extras. Use with extreme caution.
+**Destructive.** Uncommitted changes in the target directory are lost without confirmation. Local branches not pushed to the remote will be removed if the directory is re-cloned. Use with care, especially in interactive contexts — prefer `git fetch` + `git reset --hard` when you only need to resync and want to keep other local state.
 
 # HISTORY
 
-git force-clone is part of **git-extras**, providing a convenience command for scripts requiring guaranteed fresh clones.
+**git force-clone** is part of **git-extras**, the long-running collection of git helpers by **TJ Holowaychuk** and contributors.
 
 # SEE ALSO
 
-[git-clone](/man/git-clone)(1), [git-fresh-branch](/man/git-fresh-branch)(1)
+[git-clone](/man/git-clone)(1), [git-reset](/man/git-reset)(1), [git-fetch](/man/git-fetch)(1), [git-extras](/man/git-extras)(1)

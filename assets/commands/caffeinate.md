@@ -1,18 +1,18 @@
 # TAGLINE
 
-Prevent the system from sleeping
+create a macOS power-management assertion to keep the system awake
 
 # TLDR
 
-**Prevent the system from sleeping indefinitely**
+**Prevent idle sleep** indefinitely (press Ctrl-C to stop)
 
 ```caffeinate```
 
-**Prevent display from sleeping**
+**Prevent the display from sleeping**
 
 ```caffeinate -d```
 
-**Prevent idle sleep for a duration** (seconds)
+**Prevent idle sleep for a duration** (in seconds)
 
 ```caffeinate -t [3600]```
 
@@ -20,17 +20,21 @@ Prevent the system from sleeping
 
 ```caffeinate -i [make]```
 
-**Prevent sleep while a process is running** (by PID)
+**Combine flags** — keep display and disk awake for 1 hour
+
+```caffeinate -dim -t [3600]```
+
+**Hold the assertion until a process** (by PID) exits
 
 ```caffeinate -w [pid]```
 
-**Prevent system sleep on AC power**
+**Prevent system sleep** (stronger, only effective on AC power)
 
 ```caffeinate -s```
 
 # SYNOPSIS
 
-**caffeinate** [_-disu_] [_-t timeout_] [_-w pid_] [_utility_ [_arguments_]]
+**caffeinate** [**-disum**] [**-t** _timeout_] [**-w** _pid_] [_utility_ [_arguments_]]
 
 # PARAMETERS
 
@@ -38,32 +42,41 @@ Prevent the system from sleeping
 > Prevent the display from sleeping.
 
 **-i**
-> Prevent the system from idle sleeping.
-
-**-s**
-> Prevent the system from sleeping (AC power only).
+> Prevent the system from idle sleeping. (default when no assertion flag is given)
 
 **-m**
 > Prevent the disk from idle sleeping.
 
+**-s**
+> Prevent the system from sleeping. Only effective when plugged into AC power on a laptop.
+
 **-u**
-> Declare that user is active, simulating user activity.
+> Declare that the user is active. The assertion is released automatically after 5 seconds (or sooner if cancelled) — useful to bump activity without holding it indefinitely.
 
 **-t** _timeout_
-> Timeout in seconds after which the assertion is dropped.
+> Release the assertion after _timeout_ seconds. Without this flag the assertion holds until caffeinate is terminated or the wrapped utility exits.
 
 **-w** _pid_
-> Wait for the process with the given PID to exit before releasing the assertion.
+> Hold the assertion until the process with the given PID exits.
+
+_utility_ [_arguments_]
+> If a utility is given, caffeinate runs it and holds the assertion until it exits. `caffeinate -i make` is the idiomatic pattern.
 
 # DESCRIPTION
 
-**caffeinate** creates assertions to prevent the system from sleeping. When called with a utility argument, it runs the command and holds the assertion until the command exits. Without a utility, it holds the assertion until it is terminated (Ctrl+C).
+**caffeinate** creates one or more **IOKit power-management assertions** to suppress different kinds of sleep. It is the supported way to prevent macOS from entering display, idle, disk, or system sleep for the duration of a task.
 
-Multiple flags can be combined (e.g., **-di**) to create multiple assertions simultaneously.
+When invoked with a utility, caffeinate forks and runs the utility with the assertion(s) held until the utility exits. Without a utility, it runs until it receives a signal (e.g. Ctrl-C) or until `-t` expires. Multiple flags may be combined; each adds its own assertion.
 
 # CAVEATS
 
-This is a macOS command. Only prevents sleep while the command is running. The **-s** flag only works on AC power. Without any flags, caffeinate creates an assertion to prevent idle sleep.
+macOS only (shipped in `/usr/bin/caffeinate` since OS X 10.8 Mountain Lion). On battery, `-s` may be ignored — `-i` is the reliable choice for laptops. `-u` gives only a brief nudge; use `-d -i` for longer guarantees. Creating an assertion does not override closing the laptop lid (clamshell) — for that, use `pmset`.
+
+For Linux, the equivalent is `systemd-inhibit` or `caffeine` (GNOME applet). For X11, `xset s off -dpms` controls screensaver and DPMS.
+
+# HISTORY
+
+**caffeinate** was introduced in **Mac OS X 10.8 (Mountain Lion, 2012)** by Apple as the supported CLI replacement for ad-hoc scripts that poked mouse events to keep the Mac awake. It wraps the IOKit `IOPMAssertion` API.
 
 # SEE ALSO
 

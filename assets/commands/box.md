@@ -1,109 +1,125 @@
 # TAGLINE
 
-Interact with Box cloud storage from the terminal.
+official CLI for interacting with Box cloud storage
 
 # TLDR
 
-**Login to Box**
+**Authenticate** (JWT, OAuth, or CCG, depending on config)
 
 ```box login```
 
-**List files** in a folder
+**List items** in a folder
 
 ```box folders:items [folder_id]```
 
-**Upload a file**
+**Upload a file** to a folder
 
 ```box files:upload [file.txt] --parent-id [folder_id]```
 
-**Download a file**
+**Download a file** by id
 
 ```box files:download [file_id]```
 
-**Create a folder**
+**Create a subfolder**
 
-```box folders:create [parent_id] --name "[folder_name]"```
+```box folders:create [parent_id] "[folder_name]"```
 
-**Search for files**
+**Search** content
 
 ```box search "[query]"```
 
-**Get file information**
-
-```box files:get [file_id]```
-
-**Share a file** with a link
+**Create a shared link** for a file
 
 ```box shared-links:create [file_id] --type file```
 
 **Execute bulk operations** from CSV
 
-```box bulk [commands.csv]```
+```box [command] --bulk-file-path [commands.csv]```
+
+**Act on behalf of another user** (admin only)
+
+```box users:get [user_id] --as-user [user_id]```
+
+**Output as JSON**
+
+```box files:get [file_id] --json```
 
 # SYNOPSIS
 
-**box** _command_ [_options_]
+**box** _topic_**:**_command_ [_arguments_] [_options_]
 
 # DESCRIPTION
 
-**box** is the official command-line interface for Box cloud storage. It allows users to interact with Box APIs from the terminal, performing file operations, managing users, and automating workflows without writing code.
+**box** (the **@box/cli** package) is the official Node.js command-line tool for the Box API. It wraps the Box Content API so that technical and non-technical users can perform file, folder, user, and admin operations without writing code.
 
-The CLI supports bulk operations using CSV files, making it useful for batch processing and administrative tasks.
+Commands are grouped by topic, e.g. `files:upload`, `folders:items`, `users:list`, `collaborations:add`. Most commands accept Box identifiers (IDs) rather than paths; `box folders:items 0` lists the root folder. The CLI supports CSV-driven bulk execution via `--bulk-file-path`, letting each row invoke one API call.
 
-# SUBCOMMANDS
+# SUBCOMMAND TOPICS
 
-**Files**
-> files:upload, files:download, files:get, files:delete, files:copy, files:move
+**files** — upload, download, get, update, delete, copy, move, rename, lock, unlock, versions
+**folders** — create, get, items, delete, update, copy, move, rename
+**search** — search by query across the enterprise
+**users** — list, get, create, update, delete, terminate-session
+**groups** — list, create, update, delete, memberships
+**shared-links** — create/get/update/delete on files, folders, and web links
+**collaborations** — add, list, update, remove
+**tasks**, **comments**, **web-links**, **metadata**, **legal-holds**, **retention-policies**, **events**, **webhooks**, **terms-of-service**
+**configure** — create, switch, import, or set environments (auth configs)
 
-**Folders**
-> folders:create, folders:items, folders:get, folders:delete, folders:copy
+# COMMON OPTIONS
 
-**Users**
-> users:list, users:get, users:create, users:update
+**-h**, **--help**
+> Show help for the CLI or a specific command.
 
-**Search**
-> search
+**-q**, **--quiet**
+> Suppress non-error output to stderr.
 
-**Shared Links**
-> shared-links:create, shared-links:get, shared-links:delete
+**-v**, **--verbose**
+> Verbose debug output.
 
-**Collaboration**
-> collaborations:add, collaborations:list
+**--as-user** _USER_ID_
+> Make the request on behalf of the given user (admin with App User or enterprise auth).
 
-**Bulk**
-> bulk (execute commands from CSV)
-
-# PARAMETERS
-
-**--parent-id** _id_
-> Parent folder ID for upload/create operations
-
-**--name** _name_
-> Name for new items
-
-**--as-user** _id_
-> Execute as another user (admin)
-
-**--csv**
-> Output in CSV format
+**--token** _TOKEN_
+> Use the given OAuth/JWT access token instead of the saved environment.
 
 **--json**
-> Output in JSON format
+> Output in JSON.
 
-**--save**
-> Save output to file
+**--csv**
+> Output in CSV.
 
-**--fields** _list_
-> Specify fields to return
+**--save** / **--save-to-file-path** _PATH_
+> Save command output to a file.
+
+**--fields** _LIST_
+> Comma-separated list of fields to include in the response.
+
+**--bulk-file-path** _FILE_
+> Read a CSV/JSON file of input rows and run the command once per row.
+
+**--no-color**
+> Disable colored output.
+
+# CONFIGURATION
+
+**~/.box**
+> Default directory for saved environments and application auth configs.
+
+**box configure:environments:add** _FILE_
+> Adds a new auth environment from a JWT configuration JSON file.
+
+**box configure:environments:switch** _NAME_
+> Switches the active environment.
 
 # CAVEATS
 
-Requires a Box Developer account and application configuration. OAuth 2.0 authentication is needed for user-level access. Some operations require admin privileges. Rate limits apply to API calls.
+Requires Node.js 18+ and a Box developer application (JWT, OAuth 2.0, or Client Credentials Grant) with the scopes needed for the target operations. Many admin commands require an enterprise access token. API rate limits apply.
 
 # HISTORY
 
-The Box CLI was released as an open-source project to provide command-line access to Box's cloud storage platform. It is built on Node.js and uses the Box API for all operations.
+The **Box CLI** is maintained by **Box, Inc.** as the official open-source command-line interface for the Box Content API. It is distributed on npm as `@box/cli` (formerly `box-cli`). Repository: github.com/box/boxcli.
 
 # SEE ALSO
 
-[rclone](/man/rclone)(1), [aws-s3](/man/aws-s3)(1), [gsutil](/man/gsutil)(1)
+[rclone](/man/rclone)(1), [gsutil](/man/gsutil)(1)

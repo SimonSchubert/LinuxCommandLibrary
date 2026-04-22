@@ -1,32 +1,44 @@
 # TAGLINE
 
-displays detailed information about user accounts on a Linux system including
+display information about known users and groups on the system
 
 # TLDR
 
-Display **all users**
+**Show all users** (default view)
 
 ```lslogins```
 
-Display users in **specific group**
-
-```lslogins --groups [group]```
-
-Display **user accounts** only
+**Show only user accounts** (non-system)
 
 ```lslogins --user-accs```
 
-Display **system accounts**
+**Show only system accounts**
 
 ```lslogins --system-accs```
 
-Display **last logins**
+**Show details for a specific user**
+
+```lslogins [username]```
+
+**List members of specific groups**
+
+```lslogins --groups [group1,group2]```
+
+**Show last-login information**
 
 ```lslogins --last```
 
-Display **supplementary groups**
+**Show failed login attempts**
+
+```lslogins --failed```
+
+**Show supplementary group memberships**
 
 ```lslogins --supp-groups```
+
+**Pick specific columns**
+
+```lslogins -o [USER,UID,GID,HOMEDIR,SHELL]```
 
 # SYNOPSIS
 
@@ -34,34 +46,86 @@ Display **supplementary groups**
 
 # DESCRIPTION
 
-**lslogins** displays detailed information about user accounts on a Linux system including login times, password status, and group memberships. It provides more detail than traditional tools like who or w.
+**lslogins** displays information about known users and groups on a Linux system, combining data from `/etc/passwd`, `/etc/shadow`, `/etc/group`, `lastlog`, `faillog`, and wtmp. It is a more comprehensive replacement for piecing together output from `who`, `last`, `id`, and `getent`.
+
+By default it prints a table with one row per user. Output columns and format can be tuned with `-o`, `--raw`, `--json`, `--colon-separate`, and `--export` for scripting.
 
 # PARAMETERS
 
-**-g, --groups GROUPS**
-> Show users in specified groups
+**-a**, **--acc-expiration**
+> Show last password change and account/password expiration dates.
 
-**-u, --user-accs**
-> Show user (non-system) accounts only
+**-c**, **--colon-separate**
+> Separate user records with a colon instead of a newline.
 
-**-s, --system-accs**
-> Show system accounts only
+**-e**, **--export**
+> Output in `NAME="value"` shell-sourceable form.
 
-**-L, --last**
-> Show last login information
+**-f**, **--failed**
+> Include data about each user's last failed login.
 
-**-G, --supp-groups**
-> Show supplementary groups
+**-G**, **--supp-groups**
+> Show supplementary groups.
 
-**-o, --output COLUMNS**
-> Specify output columns
+**-g**, **--groups** _GROUPS_
+> Only show users that belong to one of the listed groups (comma-separated).
 
-**-r, --raw**
-> Raw output format
+**-L**, **--last**
+> Show last-login information from `lastlog`.
 
-**-n, --noheadings**
-> Suppress column headers
+**-l**, **--logins** _LOGINS_
+> Only show users whose login name or UID is in the comma-separated list.
+
+**-n**, **--newline**
+> Print each field on its own line.
+
+**--noheadings**
+> Suppress column headers.
+
+**--notruncate**
+> Do not truncate long output columns.
+
+**-o**, **--output** _LIST_
+> Comma-separated list of columns to display. Use `--help` for the full column list.
+
+**--output-all**
+> Print all available columns.
+
+**-p**, **--pwd**
+> Show password status information.
+
+**-r**, **--raw**
+> Raw, unformatted output.
+
+**-s**, **--system-accs**
+> Show only system accounts (UID below the configured threshold).
+
+**-u**, **--user-accs**
+> Show only non-system user accounts.
+
+**-J**, **--json**
+> Output in JSON.
+
+**-Z**, **--context**
+> Show SELinux user context.
+
+**--time-format** _TYPE_
+> `short`, `full`, or `iso` formatting for date columns.
+
+**-V**, **--version**
+> Print version information.
+
+**-h**, **--help**
+> Show help and the list of supported columns.
+
+# CAVEATS
+
+Some columns (last login, failed login, password expiration) require the calling user to have read access to `/var/log/lastlog`, `/var/log/faillog`, or `/etc/shadow` — typically root. Distributions that do not ship `lastlog`/`faillog` will show empty values for those columns.
+
+# HISTORY
+
+**lslogins** was added to **util-linux** (upstream by **Ondrej Oprala**) to consolidate information previously spread across `who`, `last`, `lastlog`, `faillog`, and `getent passwd`.
 
 # SEE ALSO
 
-[who](/man/who)(1), [last](/man/last)(1), [id](/man/id)(1), [getent](/man/getent)(1)
+[who](/man/who)(1), [last](/man/last)(1), [id](/man/id)(1), [getent](/man/getent)(1), [passwd](/man/passwd)(1)

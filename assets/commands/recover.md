@@ -1,93 +1,104 @@
 # TAGLINE
 
-Restore files from dump backup archives
+alias for **restore** — extract files from a dump(8) backup
 
 # TLDR
 
-**Restore files from a dump archive** interactively
+This command is commonly an alias/symlink for **restore**. See the full documentation:
 
-```restore -i -f [backup.dump]```
+```tldr restore```
 
-**List contents of a dump archive**
+**Interactive restore** from a dump file
 
-```restore -t -f [backup.dump]```
+```recover -if [backup.dump]```
 
-**Restore a full filesystem** from backup
+**List the table of contents** of a dump archive
 
-```restore -r -f [backup.dump]```
+```recover -tf [backup.dump]```
 
-**Restore specific files** from backup
+**Full filesystem restore** (to the current directory)
 
-```restore -x -f [backup.dump] [path/to/file]```
+```recover -rf [backup.dump]```
 
-**Compare backup with current filesystem**
+**Extract specific files**
 
-```restore -C -f [backup.dump]```
+```recover -xvf [backup.dump] [path/to/file]```
+
+**Compare archive with filesystem**
+
+```recover -Cf [backup.dump]```
 
 # SYNOPSIS
 
-**restore** [**-itrxCvf**] [_file_] [_args_]
+**recover** [**-irtxCR**] [_options_] [_files_]
+
+# DESCRIPTION
+
+**recover** is an alternative name/symlink for the **restore** utility used by the **dump/restore** ext2/3/4 backup system. It reads a backup archive produced by `dump(8)` and writes the selected files back to disk. Interactive mode (`-i`) gives you a tiny shell for browsing the archive: `ls`, `cd`, `pwd`, `add`, `delete`, `extract`, `quit`.
+
+On some systems (notably **NSR/NetWorker**), `recover` refers instead to a very different tool — the client-side restore interface for the Legato/EMC NetWorker backup server. The flags and behavior below describe the dump/restore lineage; for NetWorker, consult `recover(8)` on that system.
 
 # PARAMETERS
 
 **-i**
-> Interactive restore mode; browse and select files
-
-**-t**
-> List table of contents of backup archive
+> Interactive restore: browse the archive and pick files.
 
 **-r**
-> Restore entire filesystem (for full restores)
+> Restore an entire filesystem. Run in an empty, freshly created filesystem.
+
+**-R**
+> Resume a previously interrupted `-r` restore.
+
+**-t**
+> Print the table of contents of the archive.
 
 **-x**
-> Extract specified files from backup
+> Extract the named files (or the whole archive if no names given).
 
 **-C**
-> Compare backup with filesystem; report differences
+> Compare archive contents with the filesystem.
 
 **-f** _file_
-> Specify backup file or device (required)
+> Archive file or device (e.g. `/dev/nst0` or `backup.dump`). Use `-` for stdin.
 
 **-v**
-> Verbose mode; show files as they are restored
+> Verbose: print each file as it is processed.
+
+**-N**
+> Do everything except actually writing files to disk (dry run).
+
+**-y**
+> Do not ask whether to abort on tape errors; always try to continue.
 
 **-h**
-> Extract files by inode number from directory hierarchy
+> Do not recurse into directory hierarchies when extracting.
 
 **-m**
-> Extract by inode numbers only
+> Extract by inode number instead of name.
 
 **-s** _n_
-> Skip to tape volume n when restoring multi-volume backup
+> Skip to the _n_th dump file on a multi-file tape.
 
 **-b** _size_
-> Set block size for tape reads
-
-# DESCRIPTION
-
-**restore** reads backup archives created by the **dump** command and restores files to the filesystem. It supports both full filesystem restoration and selective file extraction.
-
-In interactive mode (**-i**), restore provides a shell-like interface to browse the backup contents, mark files for extraction with **add**, and restore selected files with **extract**. Commands include **ls**, **cd**, **pwd**, **add**, **delete**, **extract**, and **quit**.
-
-The dump/restore system is one of the oldest Unix backup solutions, specifically designed for ext2/ext3/ext4 filesystems. It understands filesystem structure and can perform incremental backups efficiently.
+> Block size (in kilobytes) for reads.
 
 # INTERACTIVE COMMANDS
 
-**ls** [_dir_]: List directory contents
-**cd** _dir_: Change directory in backup
-**pwd**: Print current directory
-**add** _name_: Mark file for extraction
-**delete** _name_: Unmark file
-**extract**: Extract marked files
-**quit**: Exit restore
+`ls` [_dir_] — list entries
+`cd` _dir_ — change directory within the archive
+`pwd` — print current archive directory
+`add` _name_ — mark for extraction
+`delete` _name_ — unmark
+`extract` — extract marked files
+`setmodes` — set owners/permissions on extracted directories
+`verbose` — toggle verbose output
+`quit` — exit
 
 # CAVEATS
 
-The restore command works with dump archives, not general-purpose backup formats. Other backup tools (tar, rsync) require their own restore procedures.
+Only understands archives created by `dump(8)`; `tar`, `cpio`, `rsync` archives require their own restore tools. Full (`-r`) restores must run in an empty filesystem. Restores preserve inode numbers, so restoring onto a live tree can overwrite or interleave files.
 
-Restoring to the original location may overwrite existing files. Consider restoring to an alternate directory first, then moving files as needed.
-
-Full filesystem restores (**-r**) should be performed on an empty filesystem. The target filesystem should be formatted before restoration.
+`recover` may not exist on your system; use `restore` directly if it is missing. On NetWorker systems, `recover` is a different program entirely.
 
 # SEE ALSO
 

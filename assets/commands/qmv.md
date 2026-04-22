@@ -1,28 +1,32 @@
 # TAGLINE
 
-Rename files using a text editor
+rename files by editing their names in a text editor
 
 # TLDR
 
-**Rename files in editor**
+**Rename files** listed in an editor (dual-column, default)
 
 ```qmv [files]```
 
-**Rename all files in directory**
+**Rename everything** in the current directory
 
 ```qmv *```
 
-**Use specific editor**
+**Pick a specific editor** for this run
 
-```EDITOR=[vim] qmv [files]```
+```qmv -e [vim] [files]```
 
-**Dual column format**
+**Use single-column format** (source and destination on alternating lines)
+
+```qmv -f sc [files]```
+
+**Use destination-only format**
 
 ```qmv -f do [files]```
 
-**Destination only format**
+**Dry run**: show what would happen without renaming
 
-```qmv -f dc [files]```
+```qmv --dummy [files]```
 
 **Verbose output**
 
@@ -30,45 +34,60 @@ Rename files using a text editor
 
 # SYNOPSIS
 
-**qmv** [_-f format_] [_-v_] [_options_] [_files_]
+**qmv** [_options_] [_files_...]
 
 # PARAMETERS
 
-**-f**, **--format** _FORMAT_
-> Column format.
+**-f**, **--format=**_FORMAT_
+> Edit format to use: `dc` (dual-column, default), `sc` (single-column), or `do` (destination-only).
+
+**-o**, **--options=**_OPTIONS_
+> Pass comma-separated options to the selected edit format (e.g. `swap`, `blank`, `autowidth`). Use `--options=help` for a list.
+
+**-e**, **--editor=**_PROGRAM_
+> Text editor to open the file list in. Falls back to `$VISUAL`, `$EDITOR`, then a built-in default.
+
+**--command=**_COMMAND_
+> Use _COMMAND_ to perform renames instead of `mv`.
+
+**--ls=**_PROGRAM_
+> Path to the `ls` program used to list directory contents.
+
+**-i**, **--interactive**
+> Start in command mode rather than invoking the editor immediately.
 
 **-v**, **--verbose**
-> Verbose output.
+> Print each rename as it is performed.
 
-**-o**, **--options** _OPTS_
-> Editor options.
-
-**-e**, **--editor** _CMD_
-> Editor command.
+**--dummy**
+> Do everything as usual except the actual renames (dry run).
 
 **--help**
-> Show help.
+> Show option summary.
+
+**--version**
+> Show version information.
 
 # FORMATS
 
-**do** - Dual column, original and destination
-**dc** - Destination column only
-**so** - Single column, original only
+**dc** — Dual-column (default): source on the left, destination on the right. Only edit the right side.
+**sc** — Single-column: alternating lines of source and destination.
+**do** — Destination-only: one destination per line; relies on file order matching the source list.
 
 # DESCRIPTION
 
-**qmv** (quick move) opens a list of filenames in a text editor, allowing you to rename files by editing their names directly. After saving and closing the editor, all modified filenames are applied as rename operations, making it easy to perform batch renames using familiar editor features like search-and-replace, macros, and multi-cursor editing.
+**qmv** (quick move) opens a list of filenames in a text editor so you can batch-rename by editing the destination column. When the editor exits, qmv compares the edited file with the original and applies each change as a rename. This lets you use familiar editor features — search and replace, macros, multi-cursor — for bulk renames.
 
-The default dual-column format shows original and destination names side by side for clear visualization of changes. Alternative formats show destination names only or original names only. Only lines that differ between source and destination trigger actual renames, so unchanged files are left untouched.
+qmv detects potential conflicts (cycles, collisions) and resolves them via intermediate renames. If a destination exists, you are prompted before overwriting.
 
 # CAVEATS
 
-Part of renameutils package. Editor must be text-based. Conflicts handled interactively.
+Part of the **renameutils** package. Editor must be text-based. Do not edit the source column in the default `dc` format — only the destination side. Renames inside directories not listed will not be applied.
 
 # HISTORY
 
-**qmv** is part of the **renameutils** package created by **Oskar Liljeblad**. It provides intuitive file renaming using familiar editor interfaces.
+**qmv** is part of the **renameutils** package created by **Oskar Liljeblad** and released under the GPL. The companion tool **qcp** performs the same workflow for copying files.
 
 # SEE ALSO
 
-[qcp](/man/qcp)(1), [rename](/man/rename)(1), [mmv](/man/mmv)(1), [vidir](/man/vidir)(1)
+[qcp](/man/qcp)(1), [rename](/man/rename)(1), [mmv](/man/mmv)(1), [vidir](/man/vidir)(1), [mv](/man/mv)(1)

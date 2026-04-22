@@ -1,12 +1,16 @@
 # TAGLINE
 
-pixel-level image difference calculator
+compute a pixel-by-pixel difference image between two input images
 
 # TLDR
 
-Calculate **difference** between images
+**Compute the difference** of two images and save it
 
-```diffimg [path/to/image1.ext] [path/to/image2.ext] [path/to/output.ext]```
+```diffimg [image1.png] [image2.png] [diff.png]```
+
+**Use it for visual regression tests**
+
+```diffimg [expected.png] [actual.png] [report/diff.png]```
 
 # SYNOPSIS
 
@@ -14,31 +18,35 @@ Calculate **difference** between images
 
 # DESCRIPTION
 
-**diffimg** calculates pixel-level differences between two images by comparing corresponding pixels and generating a difference image. Each pixel in the output represents the delta between the input images at that position, making visual changes immediately apparent.
+**diffimg** computes the per-pixel difference between two equally sized images and writes the result to a third file. Each output pixel encodes the delta between the corresponding pixels of the two inputs — identical areas appear black, changed areas light up. This makes it an easy drop-in for visual regression checks, before/after comparisons, and QA pipelines.
 
-The tool performs per-pixel subtraction or comparison operations, highlighting areas where images differ. This is valuable for visual regression testing in web development, where screenshots of UI components can be compared across code changes to detect unintended visual modifications.
-
-Common use cases include comparing rendered output before and after changes, detecting image manipulation, and automated quality assurance for graphics pipelines. The tool supports multiple image formats including PNG, JPEG, GIF, and PostScript.
+Implementations vary — some are Python/PIL wrappers, some are Qt-based GUIs with a CLI front end, and some are Go/Rust rewrites. All agree on the basic three-argument signature and on support for PNG, JPEG, and GIF input.
 
 # PARAMETERS
 
 _image1_
-> First input image
+> First input image.
 
 _image2_
-> Second input image
+> Second input image. Must be the same dimensions as _image1_.
 
 _output_
-> Output difference image
+> Path where the difference image will be written. The extension selects the output format.
 
 # SUPPORTED FORMATS
 
-Supports .png, .gif, .jpg, and .ps image formats.
+PNG, JPEG, GIF, and (where ImageMagick is available under the hood) PostScript and TIFF.
 
 # CAVEATS
 
-Images should be the same size for meaningful comparison. Output shows pixel differences, not perceptual differences.
+Both images must have the same dimensions; resize or crop first if they don't. Output reflects raw pixel deltas, not perceptual differences — a 1-pixel shift lights up every edge. For perceptual or structural comparisons, use **compare** (ImageMagick) with `-metric SSIM` or a dedicated tool like `pixelmatch`, `odiff`, or `perceptualdiff`.
+
+Different tools also named `diffimg` exist — check `diffimg --version` or the package description to know which you have.
+
+# HISTORY
+
+Multiple tools named **diffimg** have circulated since the early 2000s. The most widely packaged is a Python CLI/GUI by **Jonathan Zurflueh (thebulb)**. Other implementations include Qt-based desktop GUIs and Go/Rust rewrites.
 
 # SEE ALSO
 
-[compare](/man/compare)(1), [diff](/man/diff)(1)
+[compare](/man/compare)(1), [diff](/man/diff)(1), [convert](/man/convert)(1)

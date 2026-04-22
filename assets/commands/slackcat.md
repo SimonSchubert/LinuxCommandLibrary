@@ -1,32 +1,44 @@
 # TAGLINE
 
-Pipe command output to Slack channels
+pipe command output and files to Slack channels
 
 # TLDR
 
-**Send message**
+**Run first-time OAuth setup**
 
-```slackcat -c [channel] -m "[message]"```
+```slackcat --configure```
 
-**Pipe to channel**
+**Send a one-shot message** to a channel
 
-```cat [file] | slackcat -c [channel]```
+```slackcat -c [channel] -m "[hello]"```
 
-**Upload file**
+**Pipe stdin** into Slack as a snippet
+
+```[command] | slackcat -c [channel]```
+
+**Upload a file**
 
 ```slackcat -c [channel] [file.txt]```
 
-**Send as snippet**
+**Override the upload filename / filetype**
 
-```slackcat -c [channel] --filename [code.py] [file.py]```
+```slackcat -c [channel] -n [log.py] --filetype [python] [file.py]```
 
-**Tee mode**
+**Also print to stdout** (tee mode)
 
-```cat [file] | slackcat -c [channel] --tee```
+```[command] | slackcat -c [channel] --tee```
 
-**Stream output**
+**Stream tail output** into Slack
 
-```tail -f [log] | slackcat -c [channel] --stream```
+```tail -f [/var/log/app.log] | slackcat -c [channel] --stream```
+
+**Dry run** (don't actually post)
+
+```[command] | slackcat -c [channel] --noop```
+
+**Use a different profile** from the config file
+
+```slackcat -p [profile] -c [channel] [file]```
 
 # SYNOPSIS
 
@@ -34,38 +46,57 @@ Pipe command output to Slack channels
 
 # PARAMETERS
 
-**-c** _CHANNEL_
-> Target channel.
+**-c**, **--channel** _CHANNEL_
+> Target channel (public/private) or group. Required unless set in config.
 
-**-m** _TEXT_
-> Message text.
+**-m**, **--message** _TEXT_
+> Post _TEXT_ as a message (don't read stdin or file).
 
-**--filename** _NAME_
-> Upload filename.
+**-n**, **--filename** _NAME_
+> Override the filename shown in Slack when uploading a snippet.
+
+**--filetype** _TYPE_
+> Explicit Slack filetype for syntax highlighting (`python`, `shell`, `javascript`, …). Useful when piping stdin.
+
+**--comment** _TEXT_
+> Initial comment attached to a snippet upload.
+
+**-p**, **--profile** _NAME_
+> Use a specific profile from the slackcat config file.
 
 **--tee**
-> Also print to stdout.
+> Copy input to stdout as well as to Slack.
 
 **--stream**
-> Stream mode.
+> Treat input as a live stream; keep posting updates as new data arrives instead of buffering a single snippet.
 
 **--noop**
-> Dry run.
+> Do not actually upload; print what would be sent.
 
-# DESCRIPTION
+**--configure**
+> Run interactive OAuth configuration to create/update the slackcat config.
 
-**slackcat** pipes command-line output and files directly to Slack channels, bridging terminal workflows with team communication. It accepts input from stdin, command arguments, or file uploads, sending the content as messages or file snippets to a specified channel.
+**-h**, **--help**
+> Show help.
 
-Stream mode (**--stream**) sends output continuously as it arrives, useful for tailing log files into Slack in real time. Tee mode (**--tee**) simultaneously prints output to stdout and sends it to Slack, preserving normal terminal behavior while sharing with the team.
+**-v**, **--version**
+> Show version.
+
+# CONFIGURATION
+
+**~/.slackcat**
+> INI-style config with `[default]` and named profile sections. Keys include `token`, `team`, `default_channel`.
+
+Slack tokens must have `files:write`, `chat:write`, and related scopes. `slackcat --configure` walks through OAuth to set these.
 
 # CAVEATS
 
-Requires Slack token. API configuration needed. Rate limits apply.
+Requires a Slack app / user token. Slack rate-limits uploads and chat messages (tier-dependent). Very large files or high-frequency streams may hit the 1 MB/message snippet limit — `--stream` rotates to a new snippet when that happens.
 
 # HISTORY
 
-**slackcat** was created to pipe command-line output directly to Slack channels for team communication.
+**slackcat** was created by **Bradley Cicenas** (`bcicen`) and is written in **Go**. Source: github.com/bcicen/slackcat.
 
 # SEE ALSO
 
-[slack](/man/slack)(1), [curl](/man/curl)(1), [tee](/man/tee)(1)
+[curl](/man/curl)(1), [tee](/man/tee)(1), [jq](/man/jq)(1)

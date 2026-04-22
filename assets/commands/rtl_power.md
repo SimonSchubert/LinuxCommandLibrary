@@ -1,24 +1,32 @@
 # TAGLINE
 
-Scan frequency spectrum with RTL-SDR dongle
+wideband spectrum scanner for RTL-SDR USB dongles
 
 # TLDR
 
-**Scan frequency range**
+**Scan the FM broadcast band** with 125 kHz bins, 10 s per row
 
-```rtl_power -f [88M:108M:125k] -g 50 -i 10 [output.csv]```
+```rtl_power -f [88M:108M:125k] -g [50] -i [10] [fm_band.csv]```
 
-**Single measurement**
+**Single sweep** of the aviation band (no integration)
 
-```rtl_power -f [400M:410M:10k] -1 [output.csv]```
+```rtl_power -f [118M:137M:25k] -1 [airband.csv]```
 
-**Continuous scan**
+**Continuously integrate** with 60 s rows
 
-```rtl_power -f [118M:137M:25k] -i 60 [output.csv]```
+```rtl_power -f [144M:148M:10k] -i [60] [ham2m.csv]```
 
-**With exit time**
+**Run for one hour then exit**
 
-```rtl_power -f [88M:108M:125k] -e [1h] [output.csv]```
+```rtl_power -f [88M:108M:125k] -e [1h] [fm.csv]```
+
+**Pick a specific device** (multiple dongles)
+
+```rtl_power -d [1] -f [400M:410M:10k] [out.csv]```
+
+**Apply a PPM frequency correction**
+
+```rtl_power -p [58] -f [400M:410M:10k] [out.csv]```
 
 # SYNOPSIS
 
@@ -26,62 +34,71 @@ Scan frequency spectrum with RTL-SDR dongle
 
 # PARAMETERS
 
-**-f** _freq_range_
-> Frequency range (start:stop:step).
+**-f** _lower:upper:bin-size_
+> Frequency range and bin size (e.g. `88M:108M:125k`). Bin size sets FFT resolution.
+
+**-i** _seconds_
+> Integration interval per row. Longer values reduce noise but increase row period. Default: 10.
 
 **-g** _gain_
-> Gain (0=auto).
-
-**-i** _interval_
-> Integration time in seconds.
-
-**-1**
-> Single measurement.
-
-**-e** _duration_
-> Exit after duration.
-
-**-d** _index_
-> Device index.
+> Tuner gain in dB (usable range depends on tuner). `0` selects automatic gain.
 
 **-p** _ppm_
-> PPM error.
+> Frequency correction in parts-per-million.
+
+**-c** _crop_
+> Crop percentage (0–1) to discard from each tuning's edges (to avoid filter roll-off).
+
+**-s** _sample-rate_
+> Hardware sample rate (default 2048000).
+
+**-w** _window_
+> FFT window function: `rectangle`, `hamming`, `blackman`, `blackman-harris`, `hann-poisson`, `youssef` (default).
+
+**-F** _n_
+> Enable extra integration by averaging _n_ FFT buffers (`-F 9` is typical for very wide scans).
+
+**-O**
+> Enable offset tuning (useful with some tuners to push away DC spike).
+
+**-d** _index_
+> Device index for systems with multiple dongles.
+
+**-e** _duration_
+> Exit after the given time (e.g. `30s`, `15m`, `1h`, `1d`).
+
+**-1**
+> Perform a single measurement pass and exit.
+
+**-h**
+> Hold the currently tuned frequency (debug).
+
+**-**
+> Write CSV to stdout instead of a file.
+
+# OUTPUT
+
+Tab- or comma-separated rows of:
+
+```
+date, time, freq_low, freq_high, step, samples, dB_bin_0, dB_bin_1, ...
+```
+
+Pipe to **heatmap.py** (ships with rtl-sdr) for a waterfall image.
 
 # DESCRIPTION
 
-**rtl_power** is a spectrum analyzer using RTL-SDR. It scans frequency ranges and outputs power levels to CSV, useful for finding active frequencies and spectrum analysis.
+**rtl_power** turns an RTL-SDR USB dongle into a wideband spectrum analyzer by repeatedly retuning across the requested range, taking short FFT captures per tuning, and logging averaged power per frequency bin. It is the standard tool for long-running band surveys, RFI hunting, and unattended spectrum recording.
 
-# EXAMPLES
-
-```bash
-# FM broadcast band scan
-rtl_power -f 88M:108M:125k -g 50 -i 10 fm_band.csv
-
-# Airband scan
-rtl_power -f 118M:137M:25k -i 30 airband.csv
-
-# Single sweep
-rtl_power -f 400M:500M:100k -1 sweep.csv
-
-# Run for 1 hour
-rtl_power -f 144M:148M:10k -e 1h -i 60 ham2m.csv
-
-# Visualize with heatmap
-rtl_power -f 88M:108M:125k -i 10 -e 1h output.csv
-# Then use heatmap.py
-```
-
-# OUTPUT FORMAT
-
-CSV with: date, time, freq_low, freq_high, step, samples, dB values...
+Ranges wider than the dongle's instantaneous bandwidth (~2–3 MHz usable) are stitched together by fast retuning; expect small seams where tunings meet.
 
 # CAVEATS
 
-Requires RTL-SDR dongle. Large frequency ranges take time. Use heatmap.py for visualization.
+Requires an RTL-SDR-compatible DVB-T dongle and the `rtl-sdr` tools. Wider ranges and smaller bin sizes dramatically increase CPU and scan time. Temperature drift affects PPM accuracy; calibrate with `rtl_test -p` on a known beacon.
 
 # HISTORY
 
-rtl_power is part of **rtl-sdr** tools by **osmocom** for spectrum analysis with low-cost SDR dongles.
+**rtl_power** ships with the **rtl-sdr** tools, originally written by **Kyle Keen** and maintained by Osmocom. The project was born from the discovery (circa 2012) that Realtek RTL2832U DVB-T demod chips could be switched into I/Q SDR mode.
 
 # SEE ALSO
 

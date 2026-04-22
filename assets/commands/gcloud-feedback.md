@@ -1,35 +1,39 @@
 # TAGLINE
 
-submit feedback to Google Cloud
+open a feedback form for the Google Cloud CLI
 
 # TLDR
 
-**Send feedback to Google**
+**Open the feedback form** in the browser
 
 ```gcloud feedback```
 
-**Include log files**
+**Attach a log file** to the feedback
 
-```gcloud feedback --log-file [log_path]```
+```gcloud feedback --log-file [path/to/gcloud.log]```
 
 # SYNOPSIS
 
-**gcloud** **feedback** [_options_]
+**gcloud feedback** [**--log-file=**_LOG_FILE_] [_GCLOUD_WIDE_FLAGS_...]
 
 # PARAMETERS
 
-**--log-file** _file_
-> Attach log file to feedback.
+**--log-file** _FILE_
+> Path to a `gcloud` log file to attach (typically from `~/.config/gcloud/logs/`). When provided, gcloud reads the log and pastes a link to it into the new-issue URL along with the trace info so the CLI team can reproduce the problem.
+
+**gcloud wide flags**
+> All global flags apply: `--help`, `--quiet`, `--verbosity`, `--configuration`, `--user-output-enabled`, `--log-http`, etc.
 
 # DESCRIPTION
 
-**gcloud feedback** provides a direct channel for reporting issues, bugs, and feature requests to the Google Cloud SDK team. When invoked, it opens your default web browser to a feedback form pre-populated with relevant system information.
+**gcloud feedback** opens the official Google Cloud CLI issue tracker in your default browser, pre-filled with system information (gcloud version, platform, Python version) so reports don't start empty. It is the recommended way to report bugs or request features for the CLI itself; for feedback on specific Google Cloud products, use their in-console "Send feedback" widgets.
 
-The command can optionally attach log files to help the team diagnose issues. This is particularly useful when reporting errors or unexpected behavior, as the logs provide context about what operations were attempted.
+With `--log-file`, gcloud opens the log, strips sensitive headers, and makes it easy to share a recent failure trace with the filed report.
 
-gcloud feedback is the recommended way to contribute to improving the Google Cloud CLI tools, whether reporting bugs encountered during use or suggesting enhancements to existing functionality.
+# CAVEATS
+
+Requires a browser — on headless machines the URL is printed to stdout instead. Logs may contain resource names and project IDs; review before pasting into a public issue. For security vulnerabilities, use the private security contact, not the public issue tracker.
 
 # SEE ALSO
 
-[gcloud](/man/gcloud)(1), [gcloud-help](/man/gcloud-help)(1)
-
+[gcloud](/man/gcloud)(1), [gcloud-help](/man/gcloud-help)(1), [gcloud-version](/man/gcloud-version)(1)

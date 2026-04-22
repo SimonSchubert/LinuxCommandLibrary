@@ -1,59 +1,64 @@
 # TAGLINE
 
-manage DVD-RAM media settings
+check or set features of DVD-RAM discs
 
 # TLDR
 
-**Show DVD-RAM status**
+**Show current settings** of a DVD-RAM disc
 
 ```dvd-ram-control [/dev/dvd]```
 
-**Enable write** protection
+**Make the disc read-only** (persistent write protection)
 
-```dvd-ram-control -p 1 [/dev/dvd]```
+```dvd-ram-control -rdonly [/dev/dvd]```
 
-**Disable write** protection
+**Re-enable read/write** access
 
-```dvd-ram-control -p 0 [/dev/dvd]```
+```dvd-ram-control -rdwr [/dev/dvd]```
 
-**Format DVD-RAM**
+**Enable automatic write relocation** (AWRE)
 
-```dvd-ram-control -f [/dev/dvd]```
+```dvd-ram-control -awre [/dev/dvd]```
+
+**Enable automatic read relocation** (ARRE)
+
+```dvd-ram-control -arre [/dev/dvd]```
 
 # SYNOPSIS
 
-**dvd-ram-control** [_options_] _device_
+**dvd-ram-control** [**-arre**] [**-awre**] [**-rdonly**|**-rdwr**] _/dev/dvd_
 
 # PARAMETERS
 
-_DEVICE_
-> DVD-RAM drive device.
+_/dev/dvd_
+> The DVD-RAM drive device to operate on.
 
-**-p** _0|1_
-> Set write protection (0=off, 1=on).
+**-rdonly**
+> Turn on persistent write protection (read-only).
 
-**-f**
-> Format the disc.
+**-rdwr**
+> Turn off persistent write protection (read-write).
 
-**-v**
-> Verbose output.
+**-awre**
+> Toggle Automatic Write Relocation Enable.
+
+**-arre**
+> Toggle Automatic Read Relocation Enable.
 
 # DESCRIPTION
 
-**dvd-ram-control** manages DVD-RAM media settings including write protection and formatting. DVD-RAM discs can be written like hard drives without special burning software.
+**dvd-ram-control** is part of the **dvd+rw-tools** suite and lets you inspect or change low-level features of a DVD-RAM disc. Running it with no option flags prints the current state of the disc's Persistent Write Protection and AWRE/ARRE flags. Adding a flag toggles or sets the corresponding feature in the drive's defect management data.
 
-Write protection prevents accidental modification of disc contents. Formatting prepares new discs or erases existing content for reuse.
-
-DVD-RAM was designed for random access similar to hard drives, making these controls analogous to disk management operations.
+Persistent Write Protection (**-rdonly** / **-rdwr**) turns the whole disc into a read-only or read-write medium; AWRE and ARRE control automatic sector reallocation on write or read errors.
 
 # CAVEATS
 
-Only works with DVD-RAM media. Formatting erases all data. Write protection is disc-level. Requires compatible drive.
+Only works with DVD-RAM media (not DVD±R, DVD±RW, or Blu-ray). Needs access to the raw device (usually as root or as a member of the `cdrom`/`disk` group). Persistent Write Protection can outlive the current session — re-enable read/write explicitly before attempting to burn.
 
 # HISTORY
 
-dvd-ram-control provides management for **DVD-RAM** media, a rewritable format designed for data storage with direct file system access, popular for backup and archival use.
+**dvd-ram-control** ships with **dvd+rw-tools** by **Andy Polyakov**, a suite of utilities for working with DVD±RW, DVD±R, and DVD-RAM media on Unix.
 
 # SEE ALSO
 
-[dvd+rw-mediainfo](/man/dvd+rw-mediainfo)(1)
+[dvd+rw-mediainfo](/man/dvd+rw-mediainfo)(1), [growisofs](/man/growisofs)(1)

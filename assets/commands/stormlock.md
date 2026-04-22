@@ -1,69 +1,100 @@
 # TAGLINE
 
-Distributed locking with lease expiration
+simple centralized lock with lease expiration
 
 # TLDR
 
-**Acquire lock**
+**Acquire a lease** on a resource
 
-```stormlock acquire [lock-name]```
+```stormlock acquire [resource]```
 
-**Release lock**
+**Acquire with explicit TTL**
 
-```stormlock release [lock-name] [lease-id]```
+```stormlock acquire --ttl [60s] [resource]```
 
-**Check lock**
+**Release a lease** using its id
 
-```stormlock check [lock-name]```
+```stormlock release [resource] [lease-id]```
 
-**With TTL**
+**Renew an existing lease**
 
-```stormlock acquire --ttl [60s] [lock-name]```
+```stormlock renew [resource] [lease-id]```
 
-**List locks**
+**Show the current lease** for a resource
 
-```stormlock list```
+```stormlock current [resource]```
+
+**Print only the lease id**
+
+```stormlock current --id-only [resource]```
+
+**Check whether a lease is still held**
+
+```stormlock is-held [resource] [lease-id]```
 
 # SYNOPSIS
 
-**stormlock** _command_ [_--ttl duration_] [_options_] [_name_]
+**stormlock** _subcommand_ [_options_] _resource_ [_lease-id_]
 
 # PARAMETERS
 
-**acquire**
-> Get lock.
+**acquire** _RESOURCE_ [**--ttl** _DUR_]
+> Attempt to acquire a lease. On success prints the lease id.
 
-**release**
-> Free lock.
+**release** _RESOURCE_ _LEASE_ID_
+> Release the given lease on the given resource.
 
-**check**
-> Check status.
+**renew** _RESOURCE_ _LEASE_ID_ [**--ttl** _DUR_]
+> Extend the lease duration.
 
-**list**
-> Show all locks.
+**current** _RESOURCE_ [**--id-only**]
+> Show the current lease holder and id. `--id-only` prints only the id.
 
-**--ttl** _DUR_
-> Lock timeout.
+**is-held** _RESOURCE_ _LEASE_ID_
+> Exit with status 0 if the given lease is still active, non-zero otherwise.
 
-**--backend** _TYPE_
-> Storage backend.
+**-c**, **--config** _FILE_
+> Path to the configuration file. Overrides `STORMLOCK_CONFIG`.
+
+**--ttl** _DURATION_
+> Time-to-live for the lease (e.g. `30s`, `5m`, `1h`). Defaults come from the config file.
+
+**--help**
+> Show help.
+
+# CONFIGURATION
+
+**~/.config/stormlock/config.toml**
+> Default configuration location. Uses INI/TOML syntax with `[default]`, per-resource, and `[backend.<name>]` sections. Common keys: `ttl`, `principal`, `backend`.
+
+**STORMLOCK_CONFIG**
+> Overrides the configuration file path.
+
+# BACKENDS
+
+Supported storage backends:
+
+- **etcd** — uses etcd leases.
+- **redis** — uses Redis keys with TTL.
+- **dynamodb** — AWS DynamoDB table with conditional writes.
+- **postgresql** — PostgreSQL row with expiry column.
+
+Custom backends can be added by implementing the `stormlock.Backend` interface and registering it via Python entry points.
 
 # DESCRIPTION
 
-**stormlock** provides distributed locking primitives for coordinating access to shared resources across multiple processes and services. It uses a lease-based model where locks automatically expire after a configurable time-to-live, preventing deadlocks caused by crashed or unresponsive processes.
+**stormlock** is a simple centralized lock manager aimed at human operators and scripts that need occasional coordination (deployments, migrations, cron runs). Each lock is associated with a principal (who holds it) and a lease with a TTL that auto-expires, so a crashed holder cannot deadlock the resource.
 
-The tool supports multiple storage backends including Redis and etcd, allowing it to integrate with existing infrastructure. The basic workflow involves acquiring a lock by name (which returns a lease ID), performing the protected operation, and then releasing the lock using the lease ID. The TTL mechanism ensures that locks are eventually freed even if the holder fails to release them.
-
-Stormlock is designed for simple distributed coordination scenarios such as preventing concurrent deployments, serializing database migrations, or ensuring only one instance of a batch job runs at a time across a cluster of machines.
+Typical flow: `stormlock acquire <resource>` prints a lease id; run the protected work; `stormlock release <resource> <lease-id>` when done. For long-running work, periodically call `stormlock renew` to extend the lease.
 
 # CAVEATS
 
-Backend required. Network dependent. Lease management needed.
+Requires a reachable backend. Locks are advisory — cooperating clients must all check the lock before acting. TTL must be tuned to be longer than the worst-case work unit (or renewed during it). The tool is written in Python; install via `pip install stormlock[etcd,redis,...]` with the backend extras you need.
 
 # HISTORY
 
-**stormlock** provides distributed locking primitives for coordinating access to shared resources across processes.
+**stormlock** is maintained by **Thayne McCombs** (tmccombs) on GitHub. It is released under the Apache 2.0 license.
 
 # SEE ALSO
 
-[flock](/man/flock)(1), [redis-cli](/man/redis-cli)(1), [etcdctl](/man/etcdctl)(1)
+[flock](/man/flock)(1), [redis-cli](/man/redis-cli)(1), [etcdctl](/man/etcdctl)(1), [consul](/man/consul)(1)

@@ -1,70 +1,112 @@
 # TAGLINE
 
-Parse HTML using CSS selectors
+parse and query HTML at the command line using CSS selectors
 
 # TLDR
 
-**Extract element by selector**
+**Filter elements by selector** from stdin
 
 ```cat [file.html] | pup '[selector]'```
 
-**Get text content**
+**Extract text content** of matching elements
 
 ```cat [file.html] | pup '[selector] text{}'```
 
-**Get attribute**
+**Extract an attribute value** (e.g. `href`)
 
 ```cat [file.html] | pup '[selector] attr{href}'```
 
-**Extract from URL**
+**Read from a file instead of stdin**
+
+```pup -f [file.html] '[selector]'```
+
+**Parse HTML fetched from a URL**
 
 ```curl -s [url] | pup '[selector]'```
 
-**Output as JSON**
+**Output matching elements as JSON**
 
 ```cat [file.html] | pup '[selector] json{}'```
 
+**Number the matching elements**
+
+```cat [file.html] | pup -n '[selector]'```
+
+**Pretty-print with 4-space indent and color**
+
+```cat [file.html] | pup -c --indent 4 '[selector]'```
+
+**Limit printed nesting depth**
+
+```cat [file.html] | pup -l [2] '[selector]'```
+
 # SYNOPSIS
 
-**pup** [_options_] [_selectors_]
+**pup** [_options_] ['_selectors_ [_display-function_]']
 
 # PARAMETERS
 
-_SELECTORS_
-> CSS selectors.
+**-f**, **--file** _FILE_
+> Read HTML from _FILE_ instead of stdin.
+
+**-c**, **--color**
+> Colorize output.
+
+**-p**, **--plain**
+> Do not HTML-escape the output.
+
+**--pre**
+> Preserve whitespace (useful inside `<pre>`/`<code>`).
+
+**-i**, **--indent** _N_|_CHAR_
+> Indent by _N_ spaces (or by the given character).
+
+**-l**, **--limit** _N_
+> Limit output nesting depth to _N_ levels.
+
+**-n**, **--number**
+> Print the number of matching elements instead of the elements themselves.
+
+**--charset** _ENCODING_
+> Force input character encoding (default: auto-detect).
+
+**-h**, **--help**
+> Show help.
+
+**--version**
+> Show version.
+
+# SELECTORS AND DISPLAY FUNCTIONS
+
+**CSS selectors**
+> Standard CSS syntax — `div.class`, `#id`, `a[href^="http"]`, `ul > li:first-child`, `tr:nth-child(even)`, etc. Multiple selectors can be chained with spaces to walk into nested structures.
 
 **text{}**
-> Extract text content.
+> Emit text content (depth-first) of each matching element.
 
-**attr{NAME}**
-> Extract attribute.
+**attr{**_NAME_**}**
+> Emit the value of the _NAME_ attribute of each matching element.
 
 **json{}**
-> JSON output.
+> Emit matching elements as a JSON array of `{tag, attrs, children, text}` objects.
 
-**-p**
-> Pretty print.
-
-**-n**
-> Number results.
+**slice{**_N_**}** / **slice{**_N:M_**}**
+> Return only the _N_th (or _N_ through _M_-1) of matching elements.
 
 # DESCRIPTION
 
-**pup** is a command-line tool for parsing and extracting data from HTML documents using CSS selectors. It reads HTML from standard input and applies selectors to filter elements, making it straightforward to extract structured data from web pages when combined with tools like **curl** or **wget**.
+**pup** is the HTML counterpart to **jq** — it reads an HTML document from stdin (or a file via `-f`), applies a CSS-style selector to filter elements, and optionally runs a display function (`text{}`, `attr{…}`, `json{}`, `slice{…}`) to project matches into the form you want. It is a single static Go binary with no runtime dependencies, which makes it ideal for scraping pipelines and Makefiles.
 
-Selectors follow standard CSS syntax including element names, classes, IDs, attributes, and pseudo-classes. Special display functions like **text{}** extract text content, **attr{name}** retrieves attribute values, and **json{}** outputs matching elements as structured JSON. Multiple selectors can be chained to navigate nested document structures.
-
-pup fills a similar role to **jq** but for HTML rather than JSON, providing a lightweight alternative to full-featured scraping frameworks for quick data extraction tasks in shell scripts and pipelines.
+Because it understands most of CSS3 (including common pseudo-classes), many scraping problems reduce to a single pipe: `curl | pup 'selector json{}' | jq`.
 
 # CAVEATS
 
-CSS selector syntax. Written in Go.
+pup reads the whole input into memory — not suitable for multi-gigabyte HTML. The last upstream release was in 2016; fork `eiriklv/pup` and several drop-in replacements (`htmlq`, `xq`, `xidel`) provide newer features such as XPath or CSS4 selectors.
 
 # HISTORY
 
-pup was created as a **command-line HTML parser** using CSS selectors.
+**pup** was written by **Eric Chiang** in **Go**. Its syntax is explicitly modelled after **jq**: the same "query string + optional display function" mental model, applied to HTML.
 
 # SEE ALSO
 
-[jq](/man/jq)(1), [htmlq](/man/htmlq)(1), [xidel](/man/xidel)(1)
-
+[jq](/man/jq)(1), [htmlq](/man/htmlq)(1), [xidel](/man/xidel)(1), [curl](/man/curl)(1)

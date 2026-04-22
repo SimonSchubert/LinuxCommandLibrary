@@ -110,7 +110,7 @@ Query **TLS key**
 
 # CAVEATS
 
-This command works with systemd-resolved. If systemd-resolved is not running, many commands will fail. Use **flush-caches** after making DNS configuration changes.
+Requires **systemd-resolved** to be running and `/etc/resolv.conf` to point at its stub resolver (`127.0.0.53`) for host resolution to actually use it. Per-link settings (`dns`, `domain`, `dnssec`) apply only until the next time the interface is brought up unless persisted via a `systemd-networkd` .network file or NetworkManager. `flush-caches` drops cached answers but does not change configured upstream servers.
 
 # HISTORY
 

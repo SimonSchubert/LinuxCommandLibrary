@@ -1,73 +1,127 @@
 # TAGLINE
 
-Command-line client for the APT daemon
+command-line client for the **aptdaemon** package management service
 
 # TLDR
 
 **Install** packages via aptd
 
-```aptdcon --install [package1] [package2]```
+```aptdcon --install "[package1 package2]"```
 
 **Remove** packages
 
-```aptdcon --remove [package]```
+```aptdcon --remove "[package]"```
 
-**Upgrade** all packages
+**Purge** packages (remove config too)
 
-```aptdcon --safe-upgrade```
+```aptdcon --purge "[package]"```
 
-**Refresh** package cache
+**Upgrade named packages**
+
+```aptdcon --upgrade "[package]"```
+
+**Upgrade the whole system**
+
+```aptdcon --upgrade-system```
+
+**Refresh the package cache**
 
 ```aptdcon --refresh```
 
-Run with **progress** display
+**Fix broken dependencies**
 
-```aptdcon --install [package] --show-terminal```
+```aptdcon --fix-depends```
+
+**Install packages while showing dpkg's terminal output**
+
+```aptdcon --install "[package]" --show-terminal```
 
 # SYNOPSIS
 
-**aptdcon** [_--install packages_] [_--remove packages_] [_--upgrade_] [_options_]
+**aptdcon** [_action_] [_options_]
 
 # DESCRIPTION
 
-**aptdcon** is a command-line client for the aptd daemon. It communicates with aptd via D-Bus to perform package management operations, providing a terminal interface to the same backend used by GUI package managers.
+**aptdcon** is a command-line client for **aptdaemon**, a system-wide D-Bus service that serializes APT operations and performs PolicyKit-based authentication. It exposes the same backend used by GNOME Software, Software-Properties-GTK, and update-manager, so actions dispatched via `aptdcon` cooperate cleanly with running GUI package managers.
 
-Operations are queued and executed by aptd, with authentication handled through PolicyKit.
+Operations are queued on the daemon; multiple `aptdcon` invocations simply hand off to `aptd`, which runs them in sequence. PolicyKit prompts for authentication as needed (via a graphical or tty agent).
 
 # PARAMETERS
 
-**-i** _pkgs_, **--install** _pkgs_
-> Install packages
+**-i** _PKGS_, **--install** _PKGS_
+> Install the listed packages.
 
-**-r** _pkgs_, **--remove** _pkgs_
-> Remove packages
+**--reinstall** _PKGS_
+> Reinstall the listed packages.
 
-**--upgrade**
-> Upgrade all packages
+**-r** _PKGS_, **--remove** _PKGS_
+> Remove the listed packages (keep config files).
 
-**--safe-upgrade**
-> Safe upgrade (don't remove packages)
+**-p** _PKGS_, **--purge** _PKGS_
+> Remove and purge the listed packages (delete config files too).
+
+**-u** _PKGS_, **--upgrade** _PKGS_
+> Upgrade the listed packages.
+
+**--upgrade-system**
+> Upgrade all packages on the system (equivalent to `apt upgrade`).
 
 **--refresh**
-> Update package cache
+> Update the package lists.
+
+**--fix-install**
+> Complete a previously cancelled installation via dpkg.
+
+**--fix-depends**
+> Attempt to resolve unsatisfied dependencies.
+
+**--add-vendor-key** _PUBLIC_KEY_FILE_
+> Install a vendor signing key from a file.
+
+**--add-vendor-key-from-keyserver** _KEY_ID_
+> Fetch and install a vendor key from a keyserver.
+
+**--key-server** _KEYSERVER_
+> Use _KEYSERVER_ for key downloads.
+
+**--remove-vendor-key** _FINGERPRINT_
+> Remove the vendor key with the given fingerprint.
+
+**--list-trusted-vendors**
+> List trusted software vendors and their keys.
+
+**--add-repository** _'DEB_LINE'_
+> Add the given `deb` line to sources.
+
+**--sources-file** _FILE_
+> Alternative sources.list location for repository management.
 
 **--show-terminal**
-> Show dpkg terminal output
+> Attach to dpkg's interactive terminal (prompts, progress).
 
-**--version-detailed**
-> Show detailed version information
+**--hide-terminal**
+> Suppress dpkg terminal output.
+
+**--allow-unauthenticated**
+> Allow install of packages that are not from a trusted vendor.
+
+**-d**, **--debug**
+> Print extra diagnostic information.
 
 **-h**, **--help**
-> Show help
+> Show help.
+
+**-v**, **--version**
+> Show aptdcon version.
 
 # CAVEATS
 
-Requires aptd to be running. Uses D-Bus for communication. May require PolicyKit authentication. Less capable than direct apt commands.
+Requires the **aptdaemon** service. On systems without aptd (modern Ubuntu/Debian are migrating to `packagekit`), `apt` or `apt-get` is the direct replacement. PolicyKit authorization is required for all mutating actions, so expect a password prompt in a GUI agent or tty.
 
 # HISTORY
 
-**aptdcon** was created as a command-line interface to the aptd daemon, allowing terminal users to leverage the same infrastructure as GUI tools.
+**aptdaemon** (and its clients `aptdcon` and `aptd-cli`) was written by **Sebastian Heinlein** for Ubuntu to provide a single D-Bus-coordinated place for PackageKit/Software Center/Update Manager to call APT.
 
 # SEE ALSO
 
-[aptd](/man/aptd)(1), [apt](/man/apt)(8), [apt-get](/man/apt-get)(8)
+[aptd](/man/aptd)(1), [apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [pkcon](/man/pkcon)(1), [pkexec](/man/pkexec)(1)

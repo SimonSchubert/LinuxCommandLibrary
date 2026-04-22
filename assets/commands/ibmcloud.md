@@ -1,74 +1,105 @@
 # TAGLINE
 
-CLI for IBM Cloud
+CLI for managing resources on IBM Cloud
 
 # TLDR
 
-**Login to IBM Cloud**
+**Log in interactively**
 
 ```ibmcloud login```
 
-**Login with SSO**
+**Log in with single sign-on**
 
 ```ibmcloud login --sso```
 
-**Set target region**
+**Log in non-interactively** with an API key
 
-```ibmcloud target -r [us-south]```
+```ibmcloud login --apikey [API_KEY]```
 
-**List resources**
+**Set the target region and resource group**
+
+```ibmcloud target -r [us-south] -g [default]```
+
+**List resource instances**
 
 ```ibmcloud resource service-instances```
 
-**Get account info**
+**Show account information**
 
 ```ibmcloud account show```
 
-**List available plugins**
+**Install a plugin** from the IBM Cloud repo
 
-```ibmcloud plugin repo-plugins```
+```ibmcloud plugin install [plugin-name]```
+
+**List installed plugins**
+
+```ibmcloud plugin list```
 
 # SYNOPSIS
 
-**ibmcloud** _command_ [_options_]
+**ibmcloud** _command_ [_subcommand_] [_options_]
 
 # PARAMETERS
 
-_COMMAND_
-> Subcommand to execute.
+**login** [**--sso**] [**--apikey** _KEY_] [**-r** _REGION_] [**-g** _GROUP_] [**-c** _ACCOUNT_ID_]
+> Authenticate against IBM Cloud. `--sso` uses single sign-on, `--apikey` uses a platform API key.
 
-**login**
-> Authenticate.
+**logout**
+> End the current session.
 
-**target**
-> Set target region/org.
+**target** [**-r** _REGION_] [**-g** _GROUP_] [**-o** _ORG_] [**-s** _SPACE_]
+> Set or show the current target region, resource group, Cloud Foundry org, or space.
 
-**account**
-> Account operations.
+**account** _subcommand_
+> Manage accounts (e.g. `account show`, `account users`, `account list`).
 
-**resource**
-> Resource management.
+**resource** _subcommand_
+> Manage resource groups and service instances (e.g. `resource groups`, `resource service-instances`, `resource service-instance-create`).
 
-**plugin**
-> Plugin management.
+**plugin** _subcommand_
+> Manage plugins: `install`, `uninstall`, `list`, `update`, `repo-plugins`.
 
-**--help**
-> Display help information.
+**cf** _subcommand_
+> Cloud Foundry commands (requires the `cloud-foundry` plugin).
+
+**iam** _subcommand_
+> Manage users, service IDs, API keys, and access policies.
+
+**config** [**--http-timeout** _N_] [**--color** _on|off_] [**--locale** _LOCALE_] [**--check-version** _true|false_]
+> Configure CLI behavior (HTTP timeout, output color, locale, version check).
+
+**--help**, **-h**
+> Display help.
+
+**--version**
+> Print the CLI version.
 
 # DESCRIPTION
 
-**ibmcloud** is the CLI for IBM Cloud. It manages cloud resources, services, and infrastructure across IBM Cloud platform.
+**ibmcloud** is the official command-line interface for IBM Cloud. It wraps IBM Cloud's REST APIs for account, IAM, and resource management, and exposes service-specific functionality through installable plugins.
 
-The tool provides access to compute, storage, AI services, and Kubernetes. It supports plugins for extended functionality.
+Most workflows begin with `ibmcloud login` followed by `ibmcloud target` to select the region and resource group. From there, `resource`, `iam`, and plugin commands create and manage services, clusters, and functions. Plugins such as `kubernetes-service`, `code-engine`, `container-registry`, and `cloud-databases` add service-specific subcommands.
+
+# CONFIGURATION
+
+**~/.bluemix/config.json**
+> Stores session, target, and configuration information.
+
+**IBMCLOUD_API_KEY**
+> If set, used by `ibmcloud login` to authenticate non-interactively.
+
+**IBMCLOUD_HOME**
+> Overrides the default `~/.bluemix` configuration directory.
 
 # CAVEATS
 
-Requires IBM Cloud account. Plugins for services. Region-specific operations.
+Requires an IBM Cloud account and network access to `cloud.ibm.com`. Many service commands live in plugins, which must be installed first. Some regions require specific resource groups; running commands before `ibmcloud target` often yields "no target" errors.
 
 # HISTORY
 
-ibmcloud is the official CLI for **IBM Cloud** (formerly Bluemix), IBM's cloud computing platform.
+**ibmcloud** is the official CLI for **IBM Cloud** (formerly **Bluemix**). The current binary unified and replaced the older `bluemix` (`bx`) CLI around 2018, adopting the `ibmcloud` command name along with IBM's Bluemix-to-IBM-Cloud rebrand.
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [gcloud](/man/gcloud)(1), [az](/man/az)(1)
+[aws](/man/aws)(1), [gcloud](/man/gcloud)(1), [az](/man/az)(1), [oc](/man/oc)(1), [kubectl](/man/kubectl)(1)

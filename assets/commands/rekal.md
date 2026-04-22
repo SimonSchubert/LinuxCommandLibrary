@@ -80,9 +80,9 @@ Git-anchored intent ledger for AI development teams
 
 # DESCRIPTION
 
-**rekal** captures AI session context at every git commit, creating a permanent, append-only record of development reasoning and conversations alongside code changes. It stores two databases: a shared **data.db** containing sessions, turns, tool calls, checkpoints, and files touched, and a local **index.db** with full-text indexes, vector embeddings, and file co-occurrence graphs for search.
+**rekal** captures AI session context at every git commit, creating a permanent, append-only record of development reasoning and conversations alongside code changes. It stores two databases: a shared **data.db** (turns, tool calls, checkpoints, files touched — distributed via a dedicated git orphan branch) and a local **index.db** (full-text index, vector embeddings, file co-occurrence graphs) used only for search.
 
-The tool integrates with git hooks to automatically capture checkpoints when commits are made. Search uses hybrid retrieval combining FTS5 keyword search with semantic vector search. Data is shared across teams via a dedicated git branch, keeping conversation history decentralized with no external services required.
+The tool installs git hooks so checkpoints are written automatically on every commit. Retrieval is a hybrid of BM25 lexical search, LSA, and Nomic vector embeddings, returning scored JSON with the best-matching turn index for progressive drill-down. A session of 2–10 MB of raw transcripts compresses to roughly 300 bytes on disk. Embeddings ship with the binary — no API keys, accounts, or external services.
 
 # CAVEATS
 
@@ -94,4 +94,4 @@ rekal was created by the **rekal-dev** team and written in **Go**. It was first 
 
 # SEE ALSO
 
-[git](/man/git)(1), [sqlite3](/man/sqlite3)(1)
+[git](/man/git)(1), [claude](/man/claude)(1)

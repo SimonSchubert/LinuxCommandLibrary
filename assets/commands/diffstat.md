@@ -69,10 +69,18 @@ patch file statistics generator
 
 # DESCRIPTION
 
-**diffstat** reads output from diff and produces a histogram showing insertions, deletions, and modifications per file. It is commonly used to summarize patch statistics.
+**diffstat** reads output from `diff` (or any unified/context diff, including `git diff`, `svn diff`, `hg diff`, or a `patch` file) and produces a histogram showing insertions, deletions, and modifications per file. It is commonly used to summarize patch size and churn.
 
-Reads from stdin by default, or from a specified file.
+By default `diffstat` reads from stdin; a file argument reads from that file. Filenames in the header lines drive grouping; the `-p` option strips leading path components the same way as `patch -p`.
+
+# CAVEATS
+
+Histograms are scaled — the width (controlled by `-w`) only sets the maximum bar length, not the absolute number of changes. When running on a diff with both added and removed files, use `-c` for a compact summary. Binary files and empty diffs produce no output.
+
+# HISTORY
+
+**diffstat** was written by **Thomas E. Dickey** in 1992 as a companion tool to GNU diff. It ships in most Linux distributions in the `diffstat` package.
 
 # SEE ALSO
 
-[diff](/man/diff)(1), [patch](/man/patch)(1)
+[diff](/man/diff)(1), [patch](/man/patch)(1), [git-diff](/man/git-diff)(1), [colordiff](/man/colordiff)(1)

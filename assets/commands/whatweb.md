@@ -81,8 +81,12 @@ Output can be formatted as JSON, XML, verbose text, or SQL for database storage.
 
 # CAVEATS
 
-Only use on systems you are authorized to scan. Aggressive modes may be detected by intrusion detection systems. Requires Ruby.
+Only use on systems you are authorized to scan. Aggressive modes (`-a 3` and `-a 4`) send many requests and are typically flagged by WAFs and IDS/IPS. Requires Ruby 2.x or newer. Plugin results can produce false positives on heavily customized sites.
+
+# HISTORY
+
+**whatweb** was created by **Andrew Horton** (urbanadventurer) and **Brendan Coles** as an open-source web fingerprinting framework. Source: github.com/urbanadventurer/WhatWeb.
 
 # SEE ALSO
 
-[wappalyzer](/man/wappalyzer)(1), [nmap](/man/nmap)(1), [nikto](/man/nikto)(1)
+[wappalyzer](/man/wappalyzer)(1), [nmap](/man/nmap)(1), [nikto](/man/nikto)(1), [curl](/man/curl)(1), [httpx](/man/httpx)(1)

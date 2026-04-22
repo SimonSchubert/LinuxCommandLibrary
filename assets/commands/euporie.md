@@ -1,92 +1,138 @@
 # TAGLINE
 
-Jupyter notebooks in the terminal
+Jupyter notebooks, consoles, and previews in the terminal
 
 # TLDR
 
-**Launch** euporie
+**Open a notebook** in the terminal editor
 
-```euporie```
+```euporie notebook [notebook.ipynb]```
 
-**Open** a notebook
+**Start a Jupyter console** connected to a kernel
 
-```euporie [notebook.ipynb]```
+```euporie console --kernel [python3]```
 
-**Create** new notebook
+**Render a notebook** to the terminal without opening it
 
-```euporie --new```
+```euporie preview [notebook.ipynb]```
 
-**Connect** to remote kernel
+**Save a rendered preview** to a file
 
-```euporie --kernel [kernel_name]```
+```euporie preview --save-as [output.txt] [notebook.ipynb]```
+
+**Run euporie as a multi-user SSH hub**
+
+```euporie hub --host [0.0.0.0] --port [8022]```
+
+**Pick a color scheme**
+
+```euporie notebook --color-scheme [dark] [notebook.ipynb]```
 
 # SYNOPSIS
 
-**euporie** [_options_] [_notebook_]
+**euporie** _app_ [_options_] [_notebook_]
+
+**euporie** **notebook** | **console** | **preview** | **hub** [_options_]
+
+# APPS / SUBCOMMANDS
+
+**notebook**
+> Interactive notebook editor with Jupyter-like keybindings.
+
+**console**
+> Line-by-line REPL against any Jupyter kernel.
+
+**preview**
+> Render a notebook to stdout, a pager, or a file (no kernel required).
+
+**hub**
+> Multi-user SSH server — each client gets their own notebook editor.
 
 # PARAMETERS
 
-**--new**
-> Create new notebook
-
 **--kernel** _NAME_
-> Connect to kernel
+> Jupyter kernel to connect to (e.g. `python3`, `ir`, `julia-1.10`).
 
 **--no-kernel**
-> Open without kernel
+> Open the notebook without starting a kernel.
 
-**--theme** _THEME_
-> Set color theme: dark, light
+**--color-scheme** _NAME_
+> Color scheme: `default`, `light`, `dark`, `inverse`, or a custom scheme.
+
+**--syntax-theme** _NAME_
+> Pygments theme for code cells.
+
+**--tab-size** _N_
+> Number of spaces per tab.
+
+**--terminal-graphics** _MODE_
+> Image protocol: `sixel`, `iterm`, `kitty`, or `none`.
 
 **--log-level** _LEVEL_
-> Set logging level
+> Logging verbosity (`debug`, `info`, `warning`, `error`).
 
-**-v, --version**
-> Display version and exit
+**--log-file** _FILE_
+> Path to a log file.
 
-**-h, --help**
-> Display help and exit
+**--host** _HOST_ (hub)
+> Bind address for the SSH hub.
+
+**--port** _PORT_ (hub)
+> Listen port for the SSH hub.
+
+**--save-as** _FILE_ (preview)
+> Write rendered output to _FILE_ instead of stdout.
+
+**--page** (preview)
+> Pipe rendered output to `$PAGER`.
+
+**-v**, **--version**
+> Show version and exit.
+
+**-h**, **--help**
+> Show help.
 
 # DESCRIPTION
 
-**euporie** is a terminal-based Jupyter notebook interface. It allows users to create, edit, and run Jupyter notebooks entirely within the terminal, without requiring a web browser.
+**euporie** is a suite of terminal applications that bring the Jupyter ecosystem to the shell. Each subcommand is a self-contained app sharing the same rendering engine for markdown, LaTeX, syntax-highlighted code, and rich output (including inline images via sixel, iTerm2, or kitty graphics protocols).
 
-The tool supports the full Jupyter notebook format, including markdown cells, code cells with syntax highlighting, and rich output display. It integrates with existing Jupyter kernels for executing code in various languages.
+The **notebook** app is a full editor that can execute cells, manage kernels, and save `.ipynb` files. The **console** app is a REPL front-end for any installed Jupyter kernel. The **preview** app is non-interactive and suitable for CI pipelines or scripting. The **hub** exposes the notebook editor over SSH so multiple users can share a server's resources.
 
-# KEYBINDINGS
+# CONFIGURATION
 
-**Enter**
-> Edit cell / Execute cell (when in edit mode)
+Per-app configuration can be set via environment variables prefixed with the app name, e.g. `EUPORIE_NOTEBOOK_COLOR_SCHEME=dark`, `EUPORIE_CONSOLE_KERNEL=python3`. A config file at `~/.config/euporie/euporie.toml` is loaded by all apps.
 
-**Esc**
-> Enter command mode
+# KEYBINDINGS (notebook)
 
-**a/b**
-> Insert cell above/below
+**Enter / Esc**
+> Toggle edit and command mode in the current cell.
+
+**a** / **b**
+> Insert cell above / below.
 
 **dd**
-> Delete cell
+> Delete current cell.
 
-**y/m**
-> Change cell type (code/markdown)
+**y** / **m** / **r**
+> Change cell type to code / markdown / raw.
 
-**↑/↓**
-> Navigate cells
+**Ctrl-Enter** / **Shift-Enter**
+> Run cell / run and go to next.
 
-**Ctrl+S**
-> Save notebook
+**Ctrl-S**
+> Save notebook.
 
-**q**
-> Quit
+**Ctrl-Q**
+> Quit.
 
 # CAVEATS
 
-Requires Jupyter kernel for code execution. Rich output (images, plots) has limited display. Complex notebooks may have rendering issues. Terminal must support required Unicode and escape sequences.
+Rich output (images, plots) requires a terminal that implements sixel, iTerm2, or kitty graphics. Complex JavaScript-based widgets (ipywidgets) have limited support. The hub app needs a host key and user authentication — see the docs for hub configuration.
 
 # HISTORY
 
-**euporie** was created to bring Jupyter notebooks to terminal-only environments, enabling notebook workflows in SSH sessions and minimal systems without web browsers.
+**euporie** is developed by **Josiah Outram Halstead** (joouha) and written in **Python** on top of **prompt_toolkit**. It is distributed on PyPI as `euporie` (install with `pip install euporie`).
 
 # SEE ALSO
 
-[jupyter](/man/jupyter)(1), [ipython](/man/ipython)(1), [nbterm](/man/nbterm)(1), [nbdime](/man/nbdime)(1)
+[jupyter](/man/jupyter)(1), [ipython](/man/ipython)(1)
