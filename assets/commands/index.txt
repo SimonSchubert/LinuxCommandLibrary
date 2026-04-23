@@ -116,6 +116,7 @@ ag.md
 agate.md
 age-keygen.md
 age.md
+agent-vault.md
 agetty.md
 agg.md
 ahost.md
@@ -583,6 +584,7 @@ babel.md
 babeld.md
 backgammon.md
 backlight_control.md
+backlit-kbd.md
 bacon.md
 badblocks.md
 bagels.md
@@ -2371,6 +2373,7 @@ gcrane-gc.md
 gcrane-help.md
 gcrane-ls.md
 gcrane.md
+gcx.md
 gdal2tiles.py.md
 gdal_contour.md
 gdal_translate.md
@@ -6138,6 +6141,7 @@ pyinfra.md
 pylint.md
 pymol.md
 pypy.md
+pyra.md
 pyright.md
 pyrit.md
 pysentation.md
@@ -8207,6 +8211,7 @@ xsv.md
 xte.md
 xteddy.md
 xterm.md
+xtrace.md
 xtrlock.md
 xvfb-run.md
 xvminitoppm.md
