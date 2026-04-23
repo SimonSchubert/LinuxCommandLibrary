@@ -1437,6 +1437,7 @@ ctrlaltdel.md
 ctx.md
 ctypes.md
 cu.md
+cubemastercli.md
 cucumber.md
 cuda-gdb.md
 cuebreakpoints.md
