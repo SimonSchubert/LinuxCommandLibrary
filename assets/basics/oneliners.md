@@ -88,7 +88,7 @@
 ```[sort](/man/sort) file | [uniq](/man/uniq)```
 
 ## Find files by name
-```[find](/man/find) . -name "*.log"```
+```[find](/man/find) . -iname "*.log"```
 
 ## Find files larger than 100MB
 ```[find](/man/find) . -type f -size +100M```
@@ -268,7 +268,7 @@
 ```[ls](/man/ls) | [wc](/man/wc) -l```
 
 ## Find broken symlinks
-```[find](/man/find) . -type l -! -exec test -e {} \; -print```
+```[find](/man/find) . -xtype l```
 
 ## Quick HTTP server in Ruby
 ```[ruby](/man/ruby) -run -e httpd . -p 8000```
