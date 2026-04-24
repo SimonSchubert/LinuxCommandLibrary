@@ -117,6 +117,7 @@ agate.md
 age-keygen.md
 age.md
 agent-vault.md
+agentbox.md
 agetty.md
 agg.md
 ahost.md
@@ -2870,6 +2871,7 @@ gotty.md
 gotz.md
 gouldtoppm.md
 gource.md
+gova.md
 gow.md
 gox.md
 gpasswd.md
