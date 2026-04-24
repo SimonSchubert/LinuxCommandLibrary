@@ -1,6 +1,6 @@
 pkgbase = lcl-gui-bin
 	pkgdesc = Linux command reference and cheat sheets - desktop application
-	pkgver = 3.7.9
+	pkgver = 3.7.10
 	pkgrel = 1
 	url = https://github.com/SimonSchubert/LinuxCommandLibrary
 	arch = x86_64
@@ -21,7 +21,7 @@ pkgbase = lcl-gui-bin
 	provides = lcl-gui
 	conflicts = lcl-gui
 	options = !strip
-	source = LinuxCommandLibrary-3.7.9-linux-x86_64.tar.gz::https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v3.7.9/LinuxCommandLibrary-3.7.9-linux-x86_64.tar.gz
-	sha256sums = 1edfeb5c0a186a3c26f84e9671f468950d9684e66f91980ab7d8df618e1d3d30
+	source = LinuxCommandLibrary-3.7.10-linux-x86_64.tar.gz::https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v3.7.10/LinuxCommandLibrary-3.7.10-linux-x86_64.tar.gz
+	sha256sums = 6fa159fabfe0f508e27384bbb3647a024dab22153c897b662924889d94a99a27
 
 pkgname = lcl-gui-bin
