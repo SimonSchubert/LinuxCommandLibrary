@@ -2,7 +2,7 @@
 
 ![Icon](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandLibrary/master/art/web_hi_res_144.png)
 
-The app currently has **8407** manual pages, **28+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
+The app currently has **8416** manual pages, **28+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
 
 [![App Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/app_store_badge.png)](https://apps.apple.com/us/app/linux-command-library/id1219649976)
 [![Play Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/play_store_badge.png)](https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca)
@@ -92,11 +92,11 @@ The source code is licensed under the Apache 2.0 license and the copyright of th
 
 #### Monthly
 
-<a href="https://github.com/Dvd741"><img src="https://avatars.githubusercontent.com/u/143085981?s=60&v=4" width="60px" alt="Dvd741" /></a> <a href="https://github.com/benhaotang"><img src="https://avatars.githubusercontent.com/u/50174724?s=60&v=4" width="60px" alt="benhaotang" /></a> <a href="https://github.com/vicenteserra"><img src="https://avatars.githubusercontent.com/u/10818763?s=60&v=4" width="60px" alt="vicenteserra" /></a> <a href="https://github.com/vili-pet"><img src="https://avatars.githubusercontent.com/u/199537307?s=60&v=4" width="60px" alt="vili-pet" /></a> 
+<a href="https://github.com/benhaotang"><img src="https://avatars.githubusercontent.com/u/50174724?s=60&v=4" width="60px" alt="benhaotang" /></a> <a href="https://github.com/vicenteserra"><img src="https://avatars.githubusercontent.com/u/10818763?s=60&v=4" width="60px" alt="vicenteserra" /></a> <a href="https://github.com/vili-pet"><img src="https://avatars.githubusercontent.com/u/199537307?s=60&v=4" width="60px" alt="vili-pet" /></a> 
 
 #### Previous
 
-<a href="https://github.com/Loh-San"><img src="https://avatars.githubusercontent.com/u/94805454?s=60&v=4" width="60px" alt="Loh-San" /></a> 
+<a href="https://github.com/Dvd741"><img src="https://avatars.githubusercontent.com/u/143085981?s=60&v=4" width="60px" alt="Dvd741" /></a> <a href="https://github.com/Loh-San"><img src="https://avatars.githubusercontent.com/u/94805454?s=60&v=4" width="60px" alt="Loh-San" /></a> 
 
 ### Thanks to
 

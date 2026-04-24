@@ -1,3 +1,12 @@
+## v3.7.10 — 2026-04-24
+
+### Features
+- Added new Linux commands
+
+### Improvements
+- Updated oneliners
+- Upgraded dependencies
+
 ## v3.7.9 — 2026-04-21
 
 ### Features
