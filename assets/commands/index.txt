@@ -3880,6 +3880,7 @@ ldc.md
 ldconfig.md
 ldd.md
 lddd.md
+leaf.md
 leaftoppm.md
 leave.md
 lebab.md
@@ -7022,6 +7023,7 @@ starship.md
 startplasma-wayland.md
 startplasma-x11.md
 startx.md
+stash.md
 stat.md
 staticcheck.md
 stdbuf.md
@@ -7933,6 +7935,7 @@ vscli.md
 vsftpd.md
 vso.md
 vt.md
+vtcode.md
 vtysh.md
 vue-build.md
 vue-init.md
