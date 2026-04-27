@@ -99,17 +99,36 @@ tmux is widely used for remote server administration, pair programming, and mana
 
 # KEY BINDINGS (after Ctrl-b)
 
+**?**: List all key bindings
+
+## Session Commands
+
 **d**: Detach from session
+**$**: Rename current session
+
+## Window Commands
+
+**,**: Rename current window
+**&**: Kill current window
 **c**: Create new window
 **n/p**: Next/previous window
 **0-9**: Switch to window number
+**l**: Move to previously selected window
+
+## Pane Commands
+
+**!**: Transform current pane into a new window
+**x**: Kill current pane
+**z**: Zoom pane (toggle)
 **"**: Split pane horizontally
 **%**: Split pane vertically
 **o**: Switch pane
-**x**: Kill pane
-**z**: Zoom pane (toggle)
+**Pg Up/Down/Left/Right**: Change to pane above, below, left, or right of current pane.
+**Space**: Arrange current window by one of seven pane layouts (see M-1 to M-7 in **?** command)
+
+
+**:**: Input a `tmux` parameter from within a session
 **[**: Enter copy mode
-**?**: List all key bindings
 
 # CONFIGURATION
 
