@@ -44,9 +44,12 @@ Temporary disposable email from terminal
 > Recent emails.
 
 **-b** _BROWSER_
-> Browser to open.
+> Open email in the specified browser instead of plain text in the terminal.
 
-**--help**
+**-t**, **--text**
+> Force text mode rendering (do not open in a browser).
+
+**-h**, **--help**
 > Show help.
 
 # DESCRIPTION

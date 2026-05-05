@@ -35,19 +35,31 @@ allows Windows WiFi drivers on Linux
 # PARAMETERS
 
 **-i** _INF_
-> Install driver from INF.
+> Install driver from given .inf file (also copies referenced .sys/.bin into /etc/ndiswrapper).
 
 **-l**
-> List installed drivers.
+> List installed drivers and the matching hardware/PCI ID.
 
 **-r** _NAME_
-> Remove driver.
+> Remove an installed driver.
 
 **-m**
-> Write modprobe config.
+> Write a modprobe alias for the wireless interface (writes to /etc/modprobe.d).
+
+**-ma**
+> Write module alias configuration.
+
+**-mi**
+> Write module install configuration.
 
 **-v**
-> Verbose/hardware info.
+> Show driver and hardware (device ID) information.
+
+**-d** _DEVID_:_DRIVER_
+> Use DRIVER for the device with the given PCI/USB id.
+
+**-e** _DRIVER_
+> Remove a driver from the system.
 
 **--help**
 > Display help information.

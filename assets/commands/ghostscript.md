@@ -57,6 +57,12 @@ Interpreter for PostScript and PDF file manipulation
 **-dCompatibilityLevel** _ver_
 > PDF version (1.4, 1.5, etc.).
 
+**-q**
+> Quiet mode; suppress startup messages.
+
+**-dSAFER**
+> Restrict file operations for safety (default in recent versions).
+
 # DESCRIPTION
 
 **Ghostscript** (gs) is an interpreter for PostScript and PDF. It renders documents to various output formats, converts between formats, and processes print jobs. It is the engine behind many PDF tools and print systems on Unix/Linux.

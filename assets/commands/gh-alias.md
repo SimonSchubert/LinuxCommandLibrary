@@ -33,7 +33,10 @@ GitHub CLI command alias management
 > Create an alias.
 
 **delete**
-> Remove an alias.
+> Remove an alias (use **--all** to remove all).
+
+**import**
+> Import aliases from a YAML file (or stdin with `-`).
 
 # PARAMETERS
 

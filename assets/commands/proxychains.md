@@ -24,6 +24,10 @@ Route TCP connections through proxy servers
 
 ```proxychains ssh [user]@[host]```
 
+**Chain proxychains with a browser**
+
+```proxychains firefox```
+
 # SYNOPSIS
 
 **proxychains** [**-q**] [**-f** _config_file_] _program_ [_args_]

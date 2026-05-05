@@ -100,4 +100,4 @@ ClamAV was created by Tomasz Kojm in **2001** as a GPL-licensed antivirus toolki
 
 # SEE ALSO
 
-[freshclam](/man/freshclam)(1), [clamd](/man/clamd)(8), [clamdscan](/man/clamdscan)(1), [sigtool](/man/sigtool)(1)
+[freshclam](/man/freshclam)(1), [clamd](/man/clamd)(8), [clamdscan](/man/clamdscan)(1)

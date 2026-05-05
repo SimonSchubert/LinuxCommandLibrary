@@ -47,13 +47,13 @@ Create with specific **number of inodes**
 > Read bad blocks list from file (one block number per line)
 
 **-1**
-> Create Minix version 1 filesystem (default)
+> Create Minix version 1 filesystem; this is the original default and remains the default in many distributions.
 
-**-2, -v**
-> Create Minix version 2 filesystem
+**-2**, **-v**
+> Create Minix version 2 filesystem (supports larger files).
 
 **-3**
-> Create Minix version 3 filesystem
+> Create Minix version 3 filesystem (supports filenames up to 60 characters).
 
 **--lock[=_mode_]**
 > Use exclusive BSD locking; mode can be yes, no, or nonblock
@@ -80,4 +80,4 @@ The Minix filesystem was created by **Andrew S. Tanenbaum** for the **Minix oper
 
 # SEE ALSO
 
-[mkfs](/man/mkfs)(8), [fsck](/man/fsck)(8), [fsck.minix](/man/fsck.minix)(8)
+[mkfs](/man/mkfs)(8), [fsck](/man/fsck)(8)

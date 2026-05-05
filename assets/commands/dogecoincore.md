@@ -71,5 +71,5 @@ Running a full node requires downloading the entire Dogecoin blockchain. The dae
 
 # SEE ALSO
 
-[electrum](/man/electrum)(1), [geth](/man/geth)(1)
+[bitcoind](/man/bitcoind)(1), [bitcoin-cli](/man/bitcoin-cli)(1), [electrum](/man/electrum)(1), [geth](/man/geth)(1)
 

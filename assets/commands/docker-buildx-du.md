@@ -20,9 +20,9 @@ Show disk usage of Docker build cache
 
 ```docker buildx du --filter until=[24h]```
 
-**Format output** as JSON
+**Filter** cache records by type
 
-```docker buildx du --format json```
+```docker buildx du --filter type=[regular]```
 
 # SYNOPSIS
 
@@ -31,19 +31,13 @@ Show disk usage of Docker build cache
 # PARAMETERS
 
 **--filter** _key=value_
-> Filter output using key-value selectors.
-
-**--format** _format_
-> Format output using a Go template or predefined format (e.g., json).
-
-**--timeout** _duration_
-> Override default timeout for loading builder status (default: 20s).
+> Filter output using key-value selectors (e.g., `until=24h`, `type=...`).
 
 **--verbose**
 > Show detailed output with additional metadata.
 
 **--builder** _name_
-> Target a specific builder instance.
+> Target a specific builder instance (overrides the default).
 
 # DESCRIPTION
 

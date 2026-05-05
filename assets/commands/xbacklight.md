@@ -30,20 +30,29 @@ Set with **fade** effect
 
 # PARAMETERS
 
+**-get**
+> Print current brightness percentage (default when no action given).
+
 **-set** _PERCENT_
-> Set brightness to percentage
+> Set brightness to percentage.
 
 **-inc** _PERCENT_
-> Increase brightness by percentage
+> Increase brightness by percentage.
 
 **-dec** _PERCENT_
-> Decrease brightness by percentage
+> Decrease brightness by percentage.
 
 **-time** _MS_
-> Fade duration in milliseconds
+> Fade duration in milliseconds.
 
 **-steps** _N_
-> Number of steps for fade
+> Number of steps for fade.
+
+**-display** _DISPLAY_
+> X display to use.
+
+**-help**
+> Display help information.
 
 # DESCRIPTION
 

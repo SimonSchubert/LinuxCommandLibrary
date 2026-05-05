@@ -34,10 +34,20 @@ Show **global** manpath
 **-c, --catpath**
 > Show catpath instead of manpath
 
+**-V, --version**
+> Display version information
+
+**-h, --help**
+> Display help
+
 # ENVIRONMENT
 
 **MANPATH**: Override default search path
 **PATH**: Used to derive manpath if MANPATH unset
+
+# CAVEATS
+
+If **MANPATH** is set, **manpath** generally returns its value unaltered (or augmented per the configuration files). Otherwise it derives the path from **/etc/manpath.config** and **PATH**.
 
 # SEE ALSO
 

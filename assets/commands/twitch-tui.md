@@ -16,11 +16,28 @@ Twitch chat client in the terminal
 
 ```twt --version```
 
+**Connect to a specific channel**
+
+```twt -c [channel_name]```
+
+**Use a custom config file**
+
+```twt --config [path/to/config.toml]```
+
 # SYNOPSIS
 
 **twt** [_options_]
 
 # PARAMETERS
+
+**-c** _CHANNEL_, **--channel** _CHANNEL_
+> Channel to connect to on launch (overrides config).
+
+**-C** _PATH_, **--config** _PATH_
+> Path to a custom configuration file.
+
+**-t** _TOKEN_, **--token** _TOKEN_
+> Twitch OAuth token (overrides config token).
 
 **-h**, **--help**
 > Display help information.

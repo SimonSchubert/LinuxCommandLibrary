@@ -33,17 +33,44 @@ creates new Laravel projects with automation
 _NAME_
 > Project directory name.
 
-**--editor** _EDITOR_
-> Editor to open project.
+**-e**, **--editor** _EDITOR_
+> Editor command to open the project after install.
+
+**-m**, **--message** _MSG_
+> Initial git commit message.
+
+**-p**, **--path** _PATH_
+> Path where the project will be created.
+
+**-b**, **--browser** _URL_
+> Open a browser at the given URL after install.
+
+**-l**, **--link**
+> Create a Valet link to the project.
+
+**-s**, **--secure**
+> Configure Valet with HTTPS for the project.
 
 **--create-db**
-> Create MySQL database.
+> Create a corresponding MySQL database.
+
+**--dbuser** _USER_
+> Database user (default: root).
+
+**--dbpassword** _PASS_
+> Database password.
 
 **--auth**
-> Add authentication.
+> Run php artisan make:auth scaffolding (legacy Laravel).
 
 **--dev**
-> Use dev Laravel version.
+> Use the development Laravel version.
+
+**--node**
+> Run npm install after creation.
+
+**--mix**
+> Run npm run dev (Laravel Mix) after creation.
 
 **--quiet**
 > Minimal output.

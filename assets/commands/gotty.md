@@ -40,10 +40,28 @@ _COMMAND_
 > Server port.
 
 **-c** _CRED_, **--credential** _CRED_
-> Basic auth credentials.
+> Basic authentication credentials in the form user:pass.
 
-**--random-url**
-> Generate random URL path.
+**-r**, **--random-url**
+> Add a random string to the URL path.
+
+**-t**, **--tls**
+> Enable TLS/SSL.
+
+**--tls-crt** _PATH_
+> Path to TLS certificate file.
+
+**--tls-key** _PATH_
+> Path to TLS key file.
+
+**--reconnect**
+> Allow client to reconnect after the connection is closed.
+
+**--once**
+> Quit after the first client disconnects.
+
+**--config** _FILE_
+> Configuration file path.
 
 **--help**
 > Display help information.

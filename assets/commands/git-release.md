@@ -33,10 +33,14 @@ Create version release tags
 
 # DESCRIPTION
 
-**git release** creates a release by tagging the current commit with the specified version number and optionally pushing it to the remote. This git-extras command streamlines the release workflow by combining tag creation, optional signing, and publishing in one operation.
+**git release** creates a release by tagging the current commit with the specified version number and pushing the tag (and any pending commits) to the remote. It is part of the **git-extras** suite of utilities and streamlines the release workflow by combining tag creation, optional signing, and publishing in one operation.
 
 Common usage follows semantic versioning (e.g., `git release 1.2.3`). The command creates an annotated tag, which can include release notes via the `-m` option and cryptographic signing via `-s` for verification.
 
+# CAVEATS
+
+Requires **git-extras** to be installed; this command is not part of core Git. Tags are pushed to the configured remote, which may trigger CI/CD release pipelines.
+
 # SEE ALSO
 
-[git-tag](/man/git-tag)(1), [git-extras](/man/git-extras)(1)
+[git](/man/git)(1), [git-tag](/man/git-tag)(1), [git-extras](/man/git-extras)(1)

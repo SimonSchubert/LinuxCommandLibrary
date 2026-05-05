@@ -48,4 +48,4 @@ git merge-one-file is part of **Git's** merge infrastructure, implementing per-f
 
 # SEE ALSO
 
-[git-merge](/man/git-merge)(1), [git-merge-file](/man/git-merge-file)(1)
+[git-merge](/man/git-merge)(1), [git-merge-file](/man/git-merge-file)(1), [git-merge-index](/man/git-merge-index)(1)

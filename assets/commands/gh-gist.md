@@ -43,36 +43,42 @@ manage code snippets and shareable files
 # SUBCOMMANDS
 
 **create**
-> Create a gist.
+> Create a new gist from files or stdin.
 
 **list**
-> List gists.
+> List your gists.
 
 **view**
-> View a gist.
+> View a gist's contents.
 
 **edit**
-> Edit a gist.
+> Edit one of your gists.
 
 **delete**
 > Delete a gist.
 
 **clone**
-> Clone a gist.
+> Clone a gist locally via git.
 
 **rename**
-> Rename gist file.
+> Rename a file in a gist.
 
 # PARAMETERS
 
 **-p**, **--public**
-> Make gist public.
+> Make the gist public (default is secret).
 
 **-d**, **--desc** _text_
 > Gist description.
 
 **-f**, **--filename** _name_
-> Set filename.
+> Provide a filename for content read from standard input.
+
+**-w**, **--web**
+> Open the gist in a web browser after creating or viewing.
+
+**-r**, **--raw**
+> Print raw, non-rendered content when viewing.
 
 # DESCRIPTION
 
@@ -84,5 +90,5 @@ The CLI provides full lifecycle management from creation through editing and del
 
 # SEE ALSO
 
-[gh](/man/gh)(1), [gist](/man/gist)(1)
+[gh](/man/gh)(1), [gist](/man/gist)(1), [git](/man/git)(1)
 

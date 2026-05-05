@@ -47,7 +47,19 @@ _URL_
 > Profile directory.
 
 **--app** _URL_
-> Open as app.
+> Open the URL in app mode (no toolbar or address bar).
+
+**--incognito**
+> Alias for **--inprivate** on some builds.
+
+**--proxy-server** _HOST:PORT_
+> Use the specified proxy server for connections.
+
+**--disable-extensions**
+> Start with all extensions disabled.
+
+**--version**
+> Display browser version.
 
 **--help**
 > Display help information.

@@ -24,9 +24,17 @@ collection of useful Unix utilities that don't quite fit anywhere else
 
 ```vidir [directory]```
 
-**Parallel: run in parallel**
+**Parallel: run a command for each argument concurrently**
 
-```parallel [cmd] -- [arg1] [arg2] [arg3]```
+```parallel -j [4] [cmd] -- [arg1] [arg2] [arg3]```
+
+**Ifne: run command only if stdin is non-empty**
+
+```[command] | ifne [other_command]```
+
+**Errno: look up errno values**
+
+```errno [ENOENT]```
 
 # SYNOPSIS
 
@@ -41,14 +49,20 @@ Key tools include sponge, ts, chronic, vidir, parallel, ifdata, and more.
 # KEY UTILITIES
 
 ```
-sponge   - Soak up stdin, write to file
-ts       - Add timestamps to lines
-chronic  - Run quietly unless fails
-vidir    - Edit directory in $EDITOR
-parallel - Run commands in parallel
-pee      - Tee to multiple commands
-ifdata   - Get network interface info
-combine  - Combine file sets
+sponge   - Soak up stdin, then write to file
+ts       - Prepend timestamps to lines
+chronic  - Run a command quietly unless it fails
+vidir    - Edit a directory listing in $EDITOR
+parallel - Run multiple jobs concurrently
+pee      - Tee stdin to multiple command pipelines
+ifdata   - Query network interface info
+combine  - Combine sets of lines from two files (and, or, not, xor)
+ifne     - Run a command only if stdin is non-empty
+errno    - Look up errno names and descriptions
+mispipe  - Pipe two commands, returning the exit status of the first
+isutf8   - Check if files are valid UTF-8
+lckdo    - Run a command with a lock held
+zrun     - Decompress arguments before running a command
 ```
 
 # SPONGE EXAMPLE

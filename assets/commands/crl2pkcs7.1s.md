@@ -66,4 +66,4 @@ PKCS#7 was defined by RSA Security as part of the Public-Key Cryptography Standa
 
 # SEE ALSO
 
-[crl](/man/crl)(1), [pkcs7](/man/pkcs7)(1), [x509](/man/x509)(1), [openssl](/man/openssl)(1)
+[openssl](/man/openssl)(1), [openssl-crl](/man/openssl-crl)(1), [openssl-x509](/man/openssl-x509)(1), [x509](/man/x509)(1)

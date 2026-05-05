@@ -24,7 +24,7 @@ statically-typed compiled language with Ruby-inspired syntax
 
 ```crystal spec```
 
-**Check code for errors** without compiling
+**Check formatting** without modifying files
 
 ```crystal tool format --check [path/to/file.cr]```
 
@@ -112,4 +112,4 @@ Compilation can be slow and memory-intensive for large projects. Cross-compilati
 
 # SEE ALSO
 
-[shards](/man/shards)(1), [ruby](/man/ruby)(1), [rustc](/man/rustc)(1), [llvm](/man/llvm)(1)
+[shards](/man/shards)(1), [ruby](/man/ruby)(1), [rustc](/man/rustc)(1)

@@ -4,43 +4,52 @@ Send stdin input to running pueue tasks
 
 # TLDR
 
-**Send input to task**
+**Send input to a running task**
 
 ```pueue send [task_id] "[input]"```
 
-**Send newline**
+**Send a yes response to a prompt**
+
+```pueue send [task_id] "yes"```
+
+**Send a newline (empty line)**
 
 ```pueue send [task_id] ""```
 
-**Send special character**
+**Send escaped sequences (interpret backslash escapes)**
 
-```pueue send [task_id] "\n"```
+```pueue send -e [task_id] "line1\nline2"```
 
 # SYNOPSIS
 
-**pueue send** _task_id_ _input_
+**pueue send** [_-e_] _task_id_ _input_
 
 # PARAMETERS
 
 _TASK_ID_
-> Task to send input to.
+> Numeric ID of the running task to receive input.
 
 _INPUT_
-> Text to send.
+> String written to the task's stdin. A newline is appended automatically.
+
+**-e**, **--escape**
+> Interpret backslash escapes such as `\n`, `\t`, `\\`.
 
 # DESCRIPTION
 
-**pueue send** writes text to the stdin of a running task, enabling interaction with commands that prompt for user input. This is useful for tasks that require confirmation or data entry while running in the background pueue queue.
+**pueue send** writes text to the standard input of a running task in the **pueue** queue, enabling interaction with commands that prompt for user input. This is useful for confirming prompts, supplying passphrases, or feeding data to long-running tasks that the daemon supervises.
+
+The target task must have been started with stdin attached (the default for **pueue add**) and must currently be in the running state.
 
 # CAVEATS
 
-Task must be running. Part of pueue.
+The task must be running; queued, paused, or finished tasks cannot receive input. Each invocation appends a newline. Sensitive input (passwords, tokens) is visible in shell history and process arguments.
 
 # HISTORY
 
-pueue send provides **stdin input** to running tasks.
+**pueue** is a command-line task queue manager written in Rust by **Arne Beer**. The **send** subcommand was added to allow non-interactive queues to handle programs that occasionally require stdin.
 
 # SEE ALSO
 
-[pueue](/man/pueue)(1), [pueue-follow](/man/pueue-follow)(1)
+[pueue](/man/pueue)(1), [pueue-add](/man/pueue-add)(1), [pueue-follow](/man/pueue-follow)(1), [pueue-log](/man/pueue-log)(1), [pueue-status](/man/pueue-status)(1)
 

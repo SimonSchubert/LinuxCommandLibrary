@@ -75,7 +75,13 @@ Print full **Apache configuration**
 > Test configuration syntax
 
 **-M**
-> List loaded modules
+> List loaded modules (passed to httpd)
+
+**-V**
+> Show httpd compile-time settings and version
+
+**-l**
+> List statically compiled modules
 
 **-h**
 > Display help

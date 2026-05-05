@@ -86,4 +86,4 @@ This tool is explicitly not a benchmarking tool. Numbers may be suffixed with s,
 
 # SEE ALSO
 
-[stress-ng](/man/stress-ng)(1), [top](/man/top)(1), [free](/man/free)(1)
+[stress-ng](/man/stress-ng)(1), [sysbench](/man/sysbench)(1), [memtester](/man/memtester)(1), [fio](/man/fio)(1), [top](/man/top)(1), [free](/man/free)(1), [vmstat](/man/vmstat)(1), [uptime](/man/uptime)(1)

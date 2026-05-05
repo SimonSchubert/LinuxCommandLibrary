@@ -63,11 +63,14 @@ Modern typesetting system and compiler
 **--font-path** _PATH_
 > Additional font search path.
 
-**--format** _FORMAT_
-> Output format: pdf, png, svg.
+**-f**, **--format** _FORMAT_
+> Force output format (pdf, png, svg). Normally inferred from output extension.
 
 **--ppi** _NUM_
-> Pixels per inch for raster output.
+> Pixels per inch for raster output (default 144).
+
+**--pages** _RANGE_
+> Comma-separated list of pages to export (e.g. 1-3,5).
 
 **--diagnostic-format** _FMT_
 > Diagnostic format: human, short.

@@ -20,7 +20,7 @@ Manage Azure networking resources
 
 ```az network application-gateway create --name [myAppGateway] -g [resource-group] --sku [Standard_v2]```
 
-**List all network resources** in a resource group
+**List virtual networks** in a resource group
 
 ```az network vnet list -g [resource-group]```
 

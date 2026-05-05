@@ -26,17 +26,35 @@ executes commands on remote Windows systems via SMB
 
 # PARAMETERS
 
-**-hashes** _lm:nt_
-> Use NTLM hashes for authentication.
+**-hashes** _LMHASH:NTHASH_
+> Use NTLM hashes for authentication (LM hash may be empty).
 
 **-k**
-> Use Kerberos authentication.
+> Use Kerberos authentication. Grabs credentials from ccache file (KRB5CCNAME).
 
-**-service-name** _name_
-> Name for the service.
+**-no-pass**
+> Don't ask for password (useful with -k).
 
-**-codec** _codec_
-> Output encoding.
+**-aesKey** _HEX_
+> AES key for Kerberos authentication (128 or 256 bits).
+
+**-dc-ip** _IP_
+> IP of the domain controller.
+
+**-target-ip** _IP_
+> Target IP (overrides target hostname resolution).
+
+**-service-name** _NAME_
+> Name for the SMB server share.
+
+**-remote-binary-name** _NAME_
+> Custom remote binary name on target (default: random).
+
+**-codec** _CODEC_
+> Output codec used to decode remote stdout (default: locale-aware).
+
+**-debug**
+> Enable verbose debug output.
 
 # DESCRIPTION
 
@@ -48,5 +66,5 @@ Requires administrator access on target. Leaves artifacts on target system. For 
 
 # SEE ALSO
 
-[impacket-smbclient](/man/impacket-smbclient)(1), [impacket-wmiexec](/man/impacket-wmiexec)(1)
+[impacket-smbclient](/man/impacket-smbclient)(1)
 

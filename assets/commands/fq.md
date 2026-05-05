@@ -77,8 +77,8 @@ Large files may consume significant memory. Some formats have incomplete support
 
 # HISTORY
 
-**fq** was created to bring the power of jq to binary data, making it easier to inspect and understand binary file formats without specialized tools.
+**fq** was created by **Mattias Wadman** and first released in **2021**, bringing the power of jq to binary data and making it easier to inspect and understand binary file formats without specialized tools.
 
 # SEE ALSO
 
-[jq](https://stedolan.github.io/jq/), [xxd](https://linux.die.net/man/1/xxd), [hexdump](https://linux.die.net/man/1/hexdump), [binwalk](https://github.com/ReFirmLabs/binwalk)
+[jq](/man/jq)(1), [xxd](/man/xxd)(1), [hexdump](/man/hexdump)(1), [binwalk](/man/binwalk)(1)

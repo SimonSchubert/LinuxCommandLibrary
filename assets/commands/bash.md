@@ -70,6 +70,15 @@ Bash is backward-compatible with the original Bourne shell (sh) while adding num
 **--norc**
 > Don't read ~/.bashrc
 
+**--posix**
+> Behave according to POSIX standard
+
+**-r**, **--restricted**
+> Start a restricted shell
+
+**--version**
+> Display bash version
+
 # FEATURES
 
 - Command history (readline)

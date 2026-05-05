@@ -37,17 +37,23 @@ SQLite CLI with auto-completion
 _DATABASE_
 > SQLite database file path.
 
-**-e** _QUERY_
+**-e**, **--execute** _QUERY_
 > Execute query and exit.
 
 **--table**
-> Output as table.
+> Output as table format.
 
 **--csv**
 > Output as CSV.
 
-**-D** _FILE_
-> Execute commands from file.
+**--auto-vertical-output**
+> Automatically switch to vertical output for wide rows.
+
+**-l**, **--list-dsn**
+> List configured DSNs.
+
+**--llm-api-key** _KEY_
+> API key for AI-assisted SQL features.
 
 **--help**
 > Display help information.

@@ -1,5 +1,3 @@
-# TLDR
-
 # TAGLINE
 
 Merge passwd and shadow files for auditing
@@ -34,4 +32,4 @@ Requires root privileges to read shadow file. Should only be used for authorized
 
 # SEE ALSO
 
-[john](/man/john)(8), [passwd](/man/passwd)(5), [shadow](/man/shadow)(5)
+[john](/man/john)(8), [passwd](/man/passwd)(5)

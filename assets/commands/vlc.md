@@ -28,7 +28,7 @@ Cross-platform multimedia player and streamer
 
 ```vlc --loop [file]```
 
-**Play at specific volume** (0-512, 256 = 100%)
+**Play at specific volume** (0-1024, 256 = 100%)
 
 ```vlc --volume=[200] [file]```
 
@@ -55,7 +55,7 @@ Cross-platform multimedia player and streamer
 > Random playback
 
 **--volume** _N_
-> Set volume (0-512, 256 = 100%)
+> Set volume (0-1024, 256 = 100%)
 
 **--play-and-exit**
 > Exit after playing

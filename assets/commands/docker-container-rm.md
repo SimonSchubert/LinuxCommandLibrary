@@ -37,13 +37,19 @@ remove one or more containers
 > Remove anonymous volumes.
 
 **-l**, **--link**
-> Remove specified link.
+> Remove the specified inter-container network link rather than the container itself.
 
 # DESCRIPTION
 
 **docker container rm** removes one or more containers from the Docker host, freeing disk space occupied by the container's read-write layer and metadata. Containers must be stopped before removal unless the **-f** flag is used to force removal of running containers.
 
 The **-v** option also removes anonymous volumes associated with the container, which is useful for complete cleanup. Named volumes are preserved by default to prevent accidental data loss.
+
+The shorthand **docker rm** is equivalent to **docker container rm**.
+
+# CAVEATS
+
+Forcing removal of a running container with **-f** sends SIGKILL without giving the process a chance to clean up. To prune all stopped containers in one step use **docker container prune**.
 
 # SEE ALSO
 
