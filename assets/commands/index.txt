@@ -114,6 +114,7 @@ afm2tfm.md
 afmtodit.md
 ag.md
 agate.md
+age-inspect.md
 age-keygen.md
 age.md
 agent-vault.md
@@ -3222,6 +3223,7 @@ huntd.md
 hurl.md
 husky.md
 hut.md
+hw-probe.md
 hwatch.md
 hwclock.md
 hwdb.md
