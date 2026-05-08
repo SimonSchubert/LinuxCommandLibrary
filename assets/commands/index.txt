@@ -701,6 +701,7 @@ bkp.md
 black.md
 blackfire.md
 blahaj.md
+blaise.md
 blastdbcmd.md
 blastn.md
 blastp.md
@@ -1846,6 +1847,7 @@ drracket.md
 drupal-check.md
 drupal.md
 drush.md
+ds4.md
 dsniff.md
 dss.md
 dstask.md
@@ -5547,6 +5549,7 @@ pidof.md
 pidstat.md
 pigz.md
 pihole.md
+pii-shield.md
 pik.md
 pikman.md
 pillager.md
@@ -5843,6 +5846,7 @@ powerprofilesctl.md
 powershell.md
 powerstat.md
 powertop.md
+powertop2tuned.md
 ppdc.md
 ppdhtml.md
 ppdi.md
@@ -6762,6 +6766,7 @@ setquota.md
 setsebool.md
 setserial.md
 setsid.md
+setup-alpine.md
 setxkbmap.md
 sf.md
 sfdisk.md
@@ -7060,6 +7065,7 @@ steam.md
 steamcmd.md
 steamos-add-to-steam.md
 steamos-boot-install.md
+steamos-bootdebug.md
 steamos-chroot.md
 steamos-devmode.md
 steamos-dump-info.md
@@ -8193,6 +8199,7 @@ xidel.md
 ximtoppm.md
 xinit.md
 xinput.md
+xkbcli.md
 xkbcomp.md
 xkcdpass.md
 xkill.md
