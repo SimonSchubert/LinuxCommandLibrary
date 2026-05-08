@@ -19,10 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -67,7 +64,6 @@ internal fun BasicsPaneScreen(
     val basicsRepository: BasicsRepository = koinInject()
 
     val categories by categoriesViewModel.basicCategories.collectAsState()
-    var selectedTitle by rememberSaveable { mutableStateOf("") }
 
     LaunchedEffect(pendingSelection) {
         val id = pendingSelection ?: return@LaunchedEffect
@@ -85,14 +81,6 @@ internal fun BasicsPaneScreen(
             pendingSelection == null
         ) {
             navigator.navigateTo(ListDetailPaneScaffoldRole.Detail, list.first().id)
-        }
-    }
-
-    LaunchedEffect(navigator.currentDestination?.contentKey, categories) {
-        val id = navigator.currentDestination?.contentKey
-        if (id != null) {
-            val match = categories.firstOrNull { it.id == id }
-            if (match != null) selectedTitle = match.title
         }
     }
 
@@ -166,6 +154,7 @@ internal fun BasicsPaneScreen(
                     } else {
                         val koinScope = currentKoinScope()
                         val usesCardLayout = basicsRepository.usesCardLayout(navSelectedId)
+                        val selectedTitle = categories.firstOrNull { it.id == navSelectedId }?.title.orEmpty()
                         Column(
                             modifier = Modifier
                                 .fillMaxSize()
