@@ -1266,6 +1266,7 @@ compsize.md
 compton.md
 con2fbmap.md
 conan.md
+concord.md
 concourse.md
 conda-activate.md
 conda-clean.md
@@ -3776,6 +3777,7 @@ krunvm.md
 kscreen-console.md
 kscreen-doctor.md
 ksh.md
+kstack.md
 ksvgtopng5.md
 ktea.md
 ktool.md
@@ -3924,6 +3926,7 @@ lexy.md
 lf.md
 lft.md
 lftp.md
+lg.md
 libalpm.md
 libinput.md
 libreoffice.md
@@ -5606,6 +5609,8 @@ pipenv.md
 piper.md
 pipes.sh.md
 pipetron.md
+pipewire-aes67.md
+pipewire-avb.md
 pipewire-pulse.md
 pipewire.md
 pipx.md
@@ -6118,6 +6123,8 @@ pw-jack.md
 pw-link.md
 pw-loopback.md
 pw-metadata.md
+pw-midi2play.md
+pw-midi2record.md
 pw-mididump.md
 pw-midiplay.md
 pw-midirecord.md
@@ -6481,6 +6488,7 @@ rkdeveloptool.md
 rkhunter.md
 rlatopam.md
 rletopnm.md
+rlisp.md
 rlog.md
 rlogin.md
 rlwrap.md
