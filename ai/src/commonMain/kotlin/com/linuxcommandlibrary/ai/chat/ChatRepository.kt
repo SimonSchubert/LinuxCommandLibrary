@@ -64,8 +64,14 @@ Keep responses concise and practical. Use code blocks for commands."""
     fun isConfigured(): Boolean {
         val config = loadConfig()
         return when (config.providerType) {
-            LlmProviderType.OLLAMA -> config.baseUrl.isNotBlank() || config.providerType.defaultBaseUrl.isNotBlank()
-            else -> config.apiKey.isNotBlank()
+            LlmProviderType.OLLAMA ->
+                config.baseUrl.isNotBlank() || config.providerType.defaultBaseUrl.isNotBlank()
+
+            LlmProviderType.OPENAI ->
+                config.apiKey.isNotBlank()
+
+            LlmProviderType.OPENAI_COMPATIBLE ->
+                config.baseUrl.isNotBlank() && config.modelId.isNotBlank()
         }
     }
 
