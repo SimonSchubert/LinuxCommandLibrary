@@ -46,5 +46,7 @@
     <string name="ai_input_placeholder">Ask a Linux question…</string>
     <string name="ai_supported_providers">Supported providers:\n• OpenAI — requires API key (platform.openai.com)\n• Ollama — local LLM server, default http://localhost:11434\n• OpenAI-compatible — Groq, LM Studio, LocalAI and others</string>
     <string name="ai_not_configured">AI provider not configured. Please open Settings and add an API key.</string>
+    <string name="ai_error_format">Error: %s</string>
+    <string name="ai_error_unknown">An unknown error occurred.</string>
 
 </resources>

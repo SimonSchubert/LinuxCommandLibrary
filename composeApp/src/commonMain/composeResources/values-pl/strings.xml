@@ -46,5 +46,7 @@
     <string name="ai_input_placeholder">Zadaj pytanie o Linuksa…</string>
     <string name="ai_supported_providers">Obsługiwani dostawcy:\n• OpenAI — wymaga klucza API (platform.openai.com)\n• Ollama — lokalny serwer LLM, domyślnie http://localhost:11434\n• Kompatybilny z OpenAI — Groq, LM Studio, LocalAI i inne</string>
     <string name="ai_not_configured">Dostawca AI nie jest skonfigurowany. Otwórz Ustawienia i dodaj klucz API.</string>
+    <string name="ai_error_format">Błąd: %s</string>
+    <string name="ai_error_unknown">Wystąpił nieznany błąd.</string>
 
 </resources>

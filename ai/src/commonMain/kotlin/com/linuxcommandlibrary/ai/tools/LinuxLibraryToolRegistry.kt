@@ -6,8 +6,9 @@ import com.linuxcommandlibrary.ai.mcp.McpContentType
 import com.linuxcommandlibrary.ai.mcp.McpException
 import com.linuxcommandlibrary.ai.mcp.McpTool
 import com.linuxcommandlibrary.ai.mcp.McpToolCallResult
-import com.linuxcommandlibrary.app.data.CommandsRepository
 import com.linuxcommandlibrary.app.data.BasicsRepository
+import com.linuxcommandlibrary.app.data.BasicGroupMatch
+import com.linuxcommandlibrary.app.data.CommandsRepository
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.jsonPrimitive
@@ -128,7 +129,7 @@ class LinuxLibraryToolRegistry(
 
     private fun searchBasics(arguments: JsonObject?): McpToolCallResult {
         val query = arguments?.get("query")?.jsonPrimitive?.content ?: ""
-        val matches = basicsRepository.getBasicGroupsByQuery(query).take(10)
+        val matches = basicsRepository.getMatchingGroups(query).take(10)
         val text = if (matches.isEmpty()) {
             "No basics sections found for query: '$query'"
         } else {

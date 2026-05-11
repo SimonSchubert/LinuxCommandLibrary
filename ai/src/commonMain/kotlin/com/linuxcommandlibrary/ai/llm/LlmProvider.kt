@@ -30,4 +30,7 @@ interface LlmProvider {
      * @return [Flow] of incremental text deltas; collect until the flow completes.
      */
     fun stream(messages: List<LlmMessage>, tools: List<McpTool> = emptyList()): Flow<String>
+
+    /** Release underlying HTTP client resources. */
+    fun close()
 }

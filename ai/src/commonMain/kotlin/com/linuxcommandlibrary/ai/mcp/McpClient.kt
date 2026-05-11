@@ -2,6 +2,7 @@ package com.linuxcommandlibrary.ai.mcp
 
 import com.linuxcommandlibrary.ai.jsonrpc.JsonRpcError
 import com.linuxcommandlibrary.ai.jsonrpc.JsonRpcErrorCode
+import com.linuxcommandlibrary.ai.jsonrpc.JsonRpcId
 import com.linuxcommandlibrary.ai.jsonrpc.JsonRpcJson
 import com.linuxcommandlibrary.ai.jsonrpc.JsonRpcRequest
 import com.linuxcommandlibrary.ai.jsonrpc.JsonRpcResponse
@@ -65,11 +66,16 @@ class McpClient(
 
     /**
      * Send the `notifications/initialized` notification (no response expected).
+     * Fire-and-forget: many servers return no body for notifications, so we discard
+     * the response entirely.
      */
     suspend fun notifyInitialized() {
-        postRaw(
-            JsonRpcRequest(method = McpMethod.INITIALIZED, params = JsonNull, id = null),
-        )
+        runCatching {
+            client.post(endpointUrl) {
+                contentType(ContentType.Application.Json)
+                setBody(JsonRpcRequest(method = McpMethod.INITIALIZED, params = JsonNull, id = null))
+            }
+        }
     }
 
     // ──────────────────────────────────────────────

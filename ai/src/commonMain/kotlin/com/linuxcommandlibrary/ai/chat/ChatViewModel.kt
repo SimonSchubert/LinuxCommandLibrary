@@ -98,7 +98,7 @@ class ChatViewModel(
                             messages = state.messages.map { msg ->
                                 if (msg.id == assistantMessageId) {
                                     msg.copy(
-                                        content = "Error: ${e.message}",
+                                        content = e.message ?: "",
                                         isStreaming = false,
                                         isError = true,
                                     )

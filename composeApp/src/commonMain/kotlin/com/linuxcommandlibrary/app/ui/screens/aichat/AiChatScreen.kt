@@ -52,6 +52,8 @@ import com.linuxcommandlibrary.ai.chat.ChatViewModel
 import com.linuxcommandlibrary.ai.llm.LlmRole
 import com.linuxcommandlibrary.app.resources.Res
 import com.linuxcommandlibrary.app.resources.ai_assistant
+import com.linuxcommandlibrary.app.resources.ai_error_format
+import com.linuxcommandlibrary.app.resources.ai_error_unknown
 import com.linuxcommandlibrary.app.resources.ai_input_placeholder
 import com.linuxcommandlibrary.app.resources.ai_not_configured
 import com.linuxcommandlibrary.app.resources.ai_send
@@ -196,8 +198,14 @@ private fun MessageBubble(message: ChatMessage) {
                         strokeWidth = 2.dp,
                     )
                 } else {
+                    val displayText = if (message.isError) {
+                        val detail = message.content.ifBlank { stringResource(Res.string.ai_error_unknown) }
+                        stringResource(Res.string.ai_error_format, detail)
+                    } else {
+                        message.content
+                    }
                     Text(
-                        text = message.content,
+                        text = displayText,
                         style = MaterialTheme.typography.bodyMedium,
                         color = if (message.isError) {
                             MaterialTheme.colorScheme.error

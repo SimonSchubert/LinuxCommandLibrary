@@ -144,13 +144,30 @@ Keep responses concise and practical. Use code blocks for commands."""
     //  Internal helpers
     // ──────────────────────────────────────────────
 
+    /**
+     * Cached provider keyed by the config it was created from.
+     * Re-used on subsequent calls so that each [sendMessage] / [streamMessage]
+     * does not spin up a fresh Ktor [HttpClient] (and associated thread pool).
+     * The old provider is closed whenever the config changes.
+     */
+    @Volatile
+    private var cachedProvider: Pair<LlmConfig, LlmProvider>? = null
+
     private fun buildProvider(): LlmProvider {
         val config = loadConfig()
-        return when (config.providerType) {
+        cachedProvider?.let { (cachedConfig, provider) ->
+            if (cachedConfig == config) return provider
+            closeProvider(provider)
+        }
+        val newProvider: LlmProvider = when (config.providerType) {
             LlmProviderType.OLLAMA -> OllamaProvider(config)
             else -> OpenAiProvider(config)
         }
+        cachedProvider = config to newProvider
+        return newProvider
     }
+
+    private fun closeProvider(provider: LlmProvider) = provider.close()
 
     private suspend fun executeToolCall(call: LlmToolCall): String {
         val result = runCatching {
