@@ -37,13 +37,27 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.linuxcommandlibrary.app.platform.showRateAppButton
 import com.linuxcommandlibrary.app.resources.Res
+import com.linuxcommandlibrary.app.resources.acknowledgements
 import com.linuxcommandlibrary.app.resources.af_linode
 import com.linuxcommandlibrary.app.resources.af_proton
 import com.linuxcommandlibrary.app.resources.app_logo
+import com.linuxcommandlibrary.app.resources.icons_thanks
+import com.linuxcommandlibrary.app.resources.linode_content_description
+import com.linuxcommandlibrary.app.resources.man_pages
+import com.linuxcommandlibrary.app.resources.man_pages_licence
+import com.linuxcommandlibrary.app.resources.proton_content_description
+import com.linuxcommandlibrary.app.resources.rate_the_app
+import com.linuxcommandlibrary.app.resources.referral_links_description
+import com.linuxcommandlibrary.app.resources.sponsor_on_github
+import com.linuxcommandlibrary.app.resources.support_this_project
+import com.linuxcommandlibrary.app.resources.tldr_licence
+import com.linuxcommandlibrary.app.resources.tldr_pages
+import com.linuxcommandlibrary.app.resources.version_format
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
 import com.linuxcommandlibrary.shared.Version
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun AppInfoDialog(
@@ -76,7 +90,7 @@ fun AppInfoDialog(
                     fontWeight = FontWeight.Bold,
                 )
                 Text(
-                    "Version ${Version.APP_VERSION}",
+                    stringResource(Res.string.version_format, Version.APP_VERSION),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
                 )
@@ -97,7 +111,7 @@ fun AppInfoDialog(
                             elevation = ButtonDefaults.buttonElevation(defaultElevation = 0.dp),
                             colors = ButtonDefaults.buttonColors(contentColor = Color.White),
                         ) {
-                            Text("Rate the app")
+                            Text(stringResource(Res.string.rate_the_app))
                         }
                     }
                     OutlinedButton(
@@ -121,13 +135,13 @@ fun AppInfoDialog(
                 HorizontalDivider(color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.12f))
                 Spacer(Modifier.height(20.dp))
                 Text(
-                    "Support this project",
+                    stringResource(Res.string.support_this_project),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold,
                 )
                 Spacer(Modifier.height(4.dp))
                 Text(
-                    "By using my referral links for these amazing products.",
+                    stringResource(Res.string.referral_links_description),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
                 )
@@ -145,13 +159,13 @@ fun AppInfoDialog(
                         modifier = Modifier.size(18.dp),
                     )
                     Spacer(Modifier.width(8.dp))
-                    Text("Sponsor on GitHub")
+                    Text(stringResource(Res.string.sponsor_on_github))
                 }
                 Spacer(Modifier.height(12.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                     Image(
                         painter = painterResource(Res.drawable.af_proton),
-                        contentDescription = "Proton Free",
+                        contentDescription = stringResource(Res.string.proton_content_description),
                         modifier = Modifier
                             .weight(1f)
                             .clip(RoundedCornerShape(12.dp))
@@ -162,7 +176,7 @@ fun AppInfoDialog(
                     )
                     Image(
                         painter = painterResource(Res.drawable.af_linode),
-                        contentDescription = "Linode Cloud",
+                        contentDescription = stringResource(Res.string.linode_content_description),
                         modifier = Modifier
                             .weight(1f)
                             .clip(RoundedCornerShape(12.dp))
@@ -176,35 +190,35 @@ fun AppInfoDialog(
                 Spacer(Modifier.height(24.dp))
 
                 Text(
-                    "Acknowledgements",
+                    stringResource(Res.string.acknowledgements),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold,
                 )
                 Spacer(Modifier.height(8.dp))
                 Text(
-                    "Man pages",
+                    stringResource(Res.string.man_pages),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Medium,
                 )
                 Text(
-                    "Licence information about the man page is usually specified in the man detail page under the category Author, Copyright or Licence.",
+                    stringResource(Res.string.man_pages_licence),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
                 )
                 Spacer(Modifier.height(12.dp))
                 Text(
-                    "TLDR pages",
+                    stringResource(Res.string.tldr_pages),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Medium,
                 )
                 Text(
-                    "The MIT License (MIT) Copyright (c) 2014 the TLDR team and contributors",
+                    stringResource(Res.string.tldr_licence),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
                 )
                 Spacer(Modifier.height(12.dp))
                 Text(
-                    "Thanks to icons8.com for the icons",
+                    stringResource(Res.string.icons_thanks),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
                 )

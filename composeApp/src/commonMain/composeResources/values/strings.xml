@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Linux Command Library</string>
+    <string name="commands">Commands</string>
+    <string name="basics">Basics</string>
+    <string name="tips">Tips</string>
+    <string name="info">Info</string>
+    <string name="add_bookmark">Add bookmark</string>
+    <string name="remove_bookmark">Remove bookmark</string>
+    <string name="collapse_all">Collapse all</string>
+    <string name="expand_all">Expand all</string>
+    <string name="search">Search</string>
+    <string name="back">Back</string>
+    <string name="reset">Reset</string>
+    <string name="share">Share</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="bookmarked">Bookmarked</string>
+    <string name="rate_the_app">Rate the app</string>
+    <string name="sponsor_on_github">Sponsor on GitHub</string>
+    <string name="support_this_project">Support this project</string>
+    <string name="referral_links_description">By using my referral links for these amazing products.</string>
+    <string name="acknowledgements">Acknowledgements</string>
+    <string name="man_pages">Man pages</string>
+    <string name="man_pages_licence">Licence information about the man page is usually specified in the man detail page under the category Author, Copyright or Licence.</string>
+    <string name="tldr_pages">TLDR pages</string>
+    <string name="tldr_licence">The MIT License (MIT) Copyright (c) 2014 the TLDR team and contributors</string>
+    <string name="icons_thanks">Thanks to icons8.com for the icons</string>
+    <string name="command_not_found">404 command not found</string>
+    <string name="select_a_category">Select a category</string>
+    <string name="select_a_command">Select a command</string>
+    <string name="version_format">Version %1$s</string>
+    <string name="proton_content_description">Proton Free</string>
+    <string name="linode_content_description">Linode Cloud</string>
+
+</resources>

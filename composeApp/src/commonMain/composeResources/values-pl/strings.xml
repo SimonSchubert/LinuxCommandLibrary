@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Biblioteka Poleceń Linux</string>
+    <string name="commands">Polecenia</string>
+    <string name="basics">Podstawy</string>
+    <string name="tips">Wskazówki</string>
+    <string name="info">Informacje</string>
+    <string name="add_bookmark">Dodaj zakładkę</string>
+    <string name="remove_bookmark">Usuń zakładkę</string>
+    <string name="collapse_all">Zwiń wszystko</string>
+    <string name="expand_all">Rozwiń wszystko</string>
+    <string name="search">Szukaj</string>
+    <string name="back">Wstecz</string>
+    <string name="reset">Resetuj</string>
+    <string name="share">Udostępnij</string>
+    <string name="copy_to_clipboard">Kopiuj do schowka</string>
+    <string name="bookmarked">Dodano do zakładek</string>
+    <string name="rate_the_app">Oceń aplikację</string>
+    <string name="sponsor_on_github">Wesprzyj na GitHub</string>
+    <string name="support_this_project">Wesprzyj ten projekt</string>
+    <string name="referral_links_description">Korzystając z moich linków partnerskich do tych niesamowitych produktów.</string>
+    <string name="acknowledgements">Podziękowania</string>
+    <string name="man_pages">Strony man</string>
+    <string name="man_pages_licence">Informacje licencyjne dotyczące strony man są zwykle określone na stronie szczegółów w kategorii Autor, Copyright lub Licencja.</string>
+    <string name="tldr_pages">Strony TLDR</string>
+    <string name="tldr_licence">Licencja MIT (MIT) Copyright (c) 2014 zespół TLDR i współtwórcy</string>
+    <string name="icons_thanks">Dziękujemy icons8.com za ikony</string>
+    <string name="command_not_found">404 nie znaleziono polecenia</string>
+    <string name="select_a_category">Wybierz kategorię</string>
+    <string name="select_a_command">Wybierz polecenie</string>
+    <string name="version_format">Wersja %1$s</string>
+    <string name="proton_content_description">Proton Free</string>
+    <string name="linode_content_description">Linode Cloud</string>
+
+</resources>

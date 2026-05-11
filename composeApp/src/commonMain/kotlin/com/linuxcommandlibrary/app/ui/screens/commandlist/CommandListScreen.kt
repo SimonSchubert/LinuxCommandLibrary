@@ -18,6 +18,8 @@ import androidx.compose.ui.input.pointer.pointerHoverIcon
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.CommandInfo
 import com.linuxcommandlibrary.app.platform.showFastScrollBar
+import com.linuxcommandlibrary.app.resources.Res
+import com.linuxcommandlibrary.app.resources.bookmarked
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
 import com.linuxcommandlibrary.app.ui.composables.FastScrollBar
 import com.linuxcommandlibrary.app.ui.composables.HighlightedText
@@ -25,6 +27,7 @@ import com.linuxcommandlibrary.app.ui.composables.WithScrollbar
 import com.linuxcommandlibrary.app.ui.composables.debouncedClickable
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
 import com.linuxcommandlibrary.app.ui.composables.selectableListItemColors
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun CommandListScreen(
@@ -109,7 +112,7 @@ fun CommandListItem(
             {
                 Icon(
                     painter = bookmarkPainter,
-                    contentDescription = "Bookmarked",
+                    contentDescription = stringResource(Res.string.bookmarked),
                 )
             }
         } else {

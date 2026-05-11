@@ -28,6 +28,8 @@ import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.BasicGroup
 import com.linuxcommandlibrary.app.data.BasicGroupMatch
+import com.linuxcommandlibrary.app.resources.Res
+import com.linuxcommandlibrary.app.resources.command_not_found
 import com.linuxcommandlibrary.app.ui.composables.HighlightedText
 import com.linuxcommandlibrary.app.ui.composables.WithScrollbar
 import com.linuxcommandlibrary.app.ui.composables.debouncedClickable
@@ -35,6 +37,7 @@ import com.linuxcommandlibrary.app.ui.composables.getIconId
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
 import com.linuxcommandlibrary.app.ui.composables.selectableListItemColors
 import com.linuxcommandlibrary.app.ui.screens.commandlist.CommandListItem
+import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
@@ -86,7 +89,7 @@ fun SearchContent(
                 .clickable(enabled = false, onClick = {})
                 .background(MaterialTheme.colorScheme.background),
         ) {
-            Text("404 command not found", modifier = Modifier.align(Alignment.Center))
+            Text(stringResource(Res.string.command_not_found), modifier = Modifier.align(Alignment.Center))
         }
     } else {
         WithScrollbar(

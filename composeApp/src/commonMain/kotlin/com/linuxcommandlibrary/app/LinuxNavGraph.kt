@@ -21,6 +21,9 @@ import com.linuxcommandlibrary.app.nav.LinuxNavState
 import com.linuxcommandlibrary.app.nav.RouteKey
 import com.linuxcommandlibrary.app.nav.TabStackTop
 import com.linuxcommandlibrary.app.platform.AppNavHost
+import com.linuxcommandlibrary.app.resources.Res
+import com.linuxcommandlibrary.app.resources.info
+import com.linuxcommandlibrary.app.resources.tips
 import com.linuxcommandlibrary.app.ui.AppIcons
 import com.linuxcommandlibrary.app.ui.composables.PaneTopBar
 import com.linuxcommandlibrary.app.ui.screens.AppInfoDialog
@@ -28,6 +31,7 @@ import com.linuxcommandlibrary.app.ui.screens.basics.BasicsPaneScreen
 import com.linuxcommandlibrary.app.ui.screens.commands.CommandsPaneScreen
 import com.linuxcommandlibrary.app.ui.screens.tips.TipsScreen
 import com.linuxcommandlibrary.app.ui.screens.tips.TipsViewModel
+import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 
 @Composable
@@ -102,7 +106,7 @@ private fun TipsTab(state: LinuxNavState) {
         var showInfo by rememberSaveable { mutableStateOf(false) }
         Column(modifier = Modifier.fillMaxSize()) {
             PaneTopBar(
-                title = "Tips",
+                title = stringResource(Res.string.tips),
                 actions = {
                     IconButton(
                         modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
@@ -110,7 +114,7 @@ private fun TipsTab(state: LinuxNavState) {
                     ) {
                         Icon(
                             imageVector = AppIcons.Info,
-                            contentDescription = "Info",
+                            contentDescription = stringResource(Res.string.info),
                         )
                     }
                 },
