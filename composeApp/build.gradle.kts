@@ -49,6 +49,7 @@ kotlin {
         commonMain {
             dependencies {
                 api(project(":viewmodels"))
+                api(project(":ai"))
                 implementation(libs.compose.runtime)
                 implementation(libs.compose.foundation)
                 implementation(libs.compose.material3)

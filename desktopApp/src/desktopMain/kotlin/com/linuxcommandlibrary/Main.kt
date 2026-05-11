@@ -7,6 +7,7 @@ import androidx.compose.ui.window.rememberWindowState
 import com.linuxcommandlibrary.app.App
 import com.linuxcommandlibrary.app.di.commonModule
 import com.linuxcommandlibrary.app.di.platformModule
+import com.linuxcommandlibrary.ai.di.aiModule
 import org.koin.core.context.startKoin
 
 fun main() {
@@ -17,7 +18,7 @@ fun main() {
 
     application {
         startKoin {
-            modules(commonModule, platformModule())
+            modules(commonModule, platformModule(), aiModule)
         }
 
         Window(
