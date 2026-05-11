@@ -103,8 +103,8 @@ fun AiSettingsScreen(onBack: () -> Unit) {
                             text = { Text(type.displayName) },
                             onClick = {
                                 selectedProvider = type
-                                if (baseUrl.isBlank()) baseUrl = type.defaultBaseUrl
-                                if (modelId.isBlank()) modelId = type.defaultModel
+                                baseUrl = type.defaultBaseUrl
+                                modelId = type.defaultModel
                                 providerDropdownExpanded = false
                             },
                         )
