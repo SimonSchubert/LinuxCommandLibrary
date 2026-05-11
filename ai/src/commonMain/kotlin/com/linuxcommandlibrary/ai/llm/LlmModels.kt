@@ -16,10 +16,17 @@ enum class LlmRole { SYSTEM, USER, ASSISTANT, TOOL }
 
 /**
  * A single turn in a conversation, with an optional tool-call result.
+ *
+ * When [role] is [LlmRole.ASSISTANT] and the model issued tool calls, [toolCalls] holds
+ * those requests so that follow-up requests to OpenAI-compatible APIs can replay the
+ * `tool_calls` payload (required for subsequent [LlmRole.TOOL] result messages to be
+ * accepted).
  */
 data class LlmMessage(
     val role: LlmRole,
     val content: String,
+    /** Tool-call instructions issued by the model (assistant turns only). */
+    val toolCalls: List<LlmToolCall>? = null,
     /** Present when this message carries a tool-call result (role == TOOL). */
     val toolCallId: String? = null,
     val toolName: String? = null,

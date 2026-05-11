@@ -111,11 +111,23 @@ class OpenAiProvider(
     ) = OpenAiChatRequest(
         model = modelId,
         messages = messages.map { msg ->
+            val rawToolCalls = msg.toolCalls?.map { tc ->
+                OpenAiToolCall(
+                    id = tc.id,
+                    function = OpenAiFunctionCall(
+                        name = tc.name,
+                        // JsonObject.toString() produces valid compact JSON
+                        arguments = tc.arguments.toString(),
+                    ),
+                )
+            }
             OpenAiMessage(
                 role = msg.role.name.lowercase(),
-                content = msg.content,
+                // OpenAI requires content to be null (not "") when tool_calls are present
+                content = if (rawToolCalls != null) msg.content.ifBlank { null } else msg.content,
                 toolCallId = msg.toolCallId,
                 name = msg.toolName,
+                toolCalls = rawToolCalls,
             )
         },
         tools = tools.takeIf { it.isNotEmpty() }?.map { tool ->

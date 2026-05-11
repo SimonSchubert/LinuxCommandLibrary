@@ -106,8 +106,15 @@ Keep responses concise and practical. Use code blocks for commands."""
             if (response.toolCalls.isEmpty()) {
                 return@runCatching response.content
             }
-            // Append the assistant tool-call turn
-            messages.add(LlmMessage(role = LlmRole.ASSISTANT, content = response.content))
+            // Append the assistant tool-call turn, including the tool_calls payload so
+            // that OpenAI-compatible APIs can match subsequent tool-result messages by ID.
+            messages.add(
+                LlmMessage(
+                    role = LlmRole.ASSISTANT,
+                    content = response.content,
+                    toolCalls = response.toolCalls,
+                ),
+            )
             // Execute each tool and append results
             response.toolCalls.forEach { call ->
                 val result = executeToolCall(call)
