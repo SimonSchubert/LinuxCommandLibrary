@@ -47,11 +47,19 @@ import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.ai.chat.ChatMessage
+import com.linuxcommandlibrary.ai.chat.ChatRepository
 import com.linuxcommandlibrary.ai.chat.ChatViewModel
 import com.linuxcommandlibrary.ai.llm.LlmRole
+import com.linuxcommandlibrary.app.resources.Res
+import com.linuxcommandlibrary.app.resources.ai_assistant
+import com.linuxcommandlibrary.app.resources.ai_input_placeholder
+import com.linuxcommandlibrary.app.resources.ai_not_configured
+import com.linuxcommandlibrary.app.resources.ai_send
+import com.linuxcommandlibrary.app.resources.ai_settings
 import com.linuxcommandlibrary.app.ui.AppIcons
 import com.linuxcommandlibrary.app.ui.composables.PaneTopBar
 import kotlinx.coroutines.launch
+import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 
 /**
@@ -74,10 +82,12 @@ fun AiChatScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
 
+    val notConfiguredStr = stringResource(Res.string.ai_not_configured)
     LaunchedEffect(uiState.errorMessage) {
-        val msg = uiState.errorMessage ?: return@LaunchedEffect
+        val key = uiState.errorMessage ?: return@LaunchedEffect
+        val displayMsg = if (key == ChatRepository.NOT_CONFIGURED_ERROR_KEY) notConfiguredStr else key
         scope.launch {
-            snackbarHostState.showSnackbar(msg)
+            snackbarHostState.showSnackbar(displayMsg)
             viewModel.dismissError()
         }
     }
@@ -85,7 +95,7 @@ fun AiChatScreen(
     Box(modifier = Modifier.fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize()) {
             PaneTopBar(
-                title = "AI Assistant",
+                title = stringResource(Res.string.ai_assistant),
                 onBack = onBack,
                 actions = {
                     IconButton(
@@ -94,7 +104,7 @@ fun AiChatScreen(
                     ) {
                         Icon(
                             imageVector = AppIcons.Info,
-                            contentDescription = "AI Settings",
+                            contentDescription = stringResource(Res.string.ai_settings),
                         )
                     }
                 },
@@ -224,7 +234,7 @@ private fun ChatInputBar(
             value = text,
             onValueChange = { text = it },
             modifier = Modifier.weight(1f),
-            placeholder = { Text("Zadaj pytanie o Linuksa…") },
+            placeholder = { Text(stringResource(Res.string.ai_input_placeholder)) },
             enabled = enabled,
             maxLines = 5,
             shape = RoundedCornerShape(24.dp),
@@ -263,7 +273,7 @@ private fun ChatInputBar(
         ) {
             Icon(
                 imageVector = AppIcons.Send,
-                contentDescription = "Wyślij",
+                contentDescription = stringResource(Res.string.ai_send),
                 tint = if (text.isNotBlank() && enabled) {
                     MaterialTheme.colorScheme.onPrimary
                 } else {

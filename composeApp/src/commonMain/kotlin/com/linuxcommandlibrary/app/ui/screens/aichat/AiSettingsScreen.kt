@@ -32,7 +32,18 @@ import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.ai.chat.ChatViewModel
 import com.linuxcommandlibrary.ai.llm.LlmConfig
 import com.linuxcommandlibrary.ai.llm.LlmProviderType
+import com.linuxcommandlibrary.app.resources.Res
+import com.linuxcommandlibrary.app.resources.ai_api_key_label
+import com.linuxcommandlibrary.app.resources.ai_api_key_placeholder
+import com.linuxcommandlibrary.app.resources.ai_model_id_label
+import com.linuxcommandlibrary.app.resources.ai_provider_label
+import com.linuxcommandlibrary.app.resources.ai_provider_section
+import com.linuxcommandlibrary.app.resources.ai_save_config
+import com.linuxcommandlibrary.app.resources.ai_server_url_label
+import com.linuxcommandlibrary.app.resources.ai_settings_title
+import com.linuxcommandlibrary.app.resources.ai_supported_providers
 import com.linuxcommandlibrary.app.ui.composables.PaneTopBar
+import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 
 /**
@@ -54,7 +65,7 @@ fun AiSettingsScreen(onBack: () -> Unit) {
     var providerDropdownExpanded by remember { mutableStateOf(false) }
 
     Column(modifier = Modifier.fillMaxSize()) {
-        PaneTopBar(title = "Ustawienia AI", onBack = onBack)
+        PaneTopBar(title = stringResource(Res.string.ai_settings_title), onBack = onBack)
 
         Column(
             modifier = Modifier
@@ -63,7 +74,7 @@ fun AiSettingsScreen(onBack: () -> Unit) {
                 .padding(24.dp),
         ) {
             Text(
-                text = "Dostawca modelu LLM",
+                text = stringResource(Res.string.ai_provider_section),
                 style = MaterialTheme.typography.titleMedium,
             )
             Spacer(Modifier.height(12.dp))
@@ -77,7 +88,7 @@ fun AiSettingsScreen(onBack: () -> Unit) {
                     value = selectedProvider.displayName,
                     onValueChange = {},
                     readOnly = true,
-                    label = { Text("Dostawca") },
+                    label = { Text(stringResource(Res.string.ai_provider_label)) },
                     trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(providerDropdownExpanded) },
                     modifier = Modifier.fillMaxWidth().menuAnchor(),
                     shape = RoundedCornerShape(12.dp),
@@ -106,8 +117,8 @@ fun AiSettingsScreen(onBack: () -> Unit) {
                 OutlinedTextField(
                     value = apiKey,
                     onValueChange = { apiKey = it },
-                    label = { Text("Klucz API") },
-                    placeholder = { Text("sk-…") },
+                    label = { Text(stringResource(Res.string.ai_api_key_label)) },
+                    placeholder = { Text(stringResource(Res.string.ai_api_key_placeholder)) },
                     visualTransformation = PasswordVisualTransformation(),
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                     modifier = Modifier.fillMaxWidth(),
@@ -119,7 +130,7 @@ fun AiSettingsScreen(onBack: () -> Unit) {
             OutlinedTextField(
                 value = baseUrl,
                 onValueChange = { baseUrl = it },
-                label = { Text("URL serwera") },
+                label = { Text(stringResource(Res.string.ai_server_url_label)) },
                 placeholder = { Text(selectedProvider.defaultBaseUrl) },
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(12.dp),
@@ -130,7 +141,7 @@ fun AiSettingsScreen(onBack: () -> Unit) {
             OutlinedTextField(
                 value = modelId,
                 onValueChange = { modelId = it },
-                label = { Text("Identyfikator modelu") },
+                label = { Text(stringResource(Res.string.ai_model_id_label)) },
                 placeholder = { Text(selectedProvider.defaultModel) },
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(12.dp),
@@ -155,18 +166,13 @@ fun AiSettingsScreen(onBack: () -> Unit) {
                     .pointerHoverIcon(PointerIcon.Hand),
                 shape = RoundedCornerShape(12.dp),
             ) {
-                Text("Zapisz konfigurację")
+                Text(stringResource(Res.string.ai_save_config))
             }
 
             Spacer(Modifier.height(16.dp))
 
             Text(
-                text = buildString {
-                    appendLine("Obsługiwane dostawcy:")
-                    appendLine("• OpenAI — wymaga klucza API (platform.openai.com)")
-                    appendLine("• Ollama — lokalny serwer LLM, domyślnie http://localhost:11434")
-                    appendLine("• Kompatybilny z OpenAI — Groq, LM Studio, LocalAI i inne")
-                },
+                text = stringResource(Res.string.ai_supported_providers),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
             )

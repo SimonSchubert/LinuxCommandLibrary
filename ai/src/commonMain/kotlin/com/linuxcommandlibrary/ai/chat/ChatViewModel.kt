@@ -42,7 +42,7 @@ class ChatViewModel(
     fun sendMessage(text: String) {
         if (text.isBlank()) return
         if (!chatRepository.isConfigured()) {
-            _uiState.update { it.copy(errorMessage = "AI provider not configured. Please open Settings and add an API key.") }
+            _uiState.update { it.copy(errorMessage = ChatRepository.NOT_CONFIGURED_ERROR_KEY) }
             return
         }
 

@@ -32,5 +32,19 @@
     <string name="version_format">Wersja %1$s</string>
     <string name="proton_content_description">Proton Free</string>
     <string name="linode_content_description">Linode Cloud</string>
+    <string name="ai_assistant">Asystent AI</string>
+    <string name="ai_settings">Ustawienia AI</string>
+    <string name="ai_settings_title">Konfiguracja dostawcy AI</string>
+    <string name="ai_provider_label">Dostawca</string>
+    <string name="ai_provider_section">Dostawca modelu LLM</string>
+    <string name="ai_api_key_label">Klucz API</string>
+    <string name="ai_api_key_placeholder">sk-…</string>
+    <string name="ai_server_url_label">URL serwera</string>
+    <string name="ai_model_id_label">Identyfikator modelu</string>
+    <string name="ai_save_config">Zapisz konfigurację</string>
+    <string name="ai_send">Wyślij</string>
+    <string name="ai_input_placeholder">Zadaj pytanie o Linuksa…</string>
+    <string name="ai_supported_providers">Obsługiwani dostawcy:\n• OpenAI — wymaga klucza API (platform.openai.com)\n• Ollama — lokalny serwer LLM, domyślnie http://localhost:11434\n• Kompatybilny z OpenAI — Groq, LM Studio, LocalAI i inne</string>
+    <string name="ai_not_configured">Dostawca AI nie jest skonfigurowany. Otwórz Ustawienia i dodaj klucz API.</string>
 
 </resources>

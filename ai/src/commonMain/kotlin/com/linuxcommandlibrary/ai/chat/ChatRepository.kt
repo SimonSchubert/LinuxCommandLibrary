@@ -30,6 +30,7 @@ class ChatRepository(
         private const val KEY_API_KEY = "ai_api_key"
         private const val KEY_BASE_URL = "ai_base_url"
         private const val KEY_MODEL_ID = "ai_model_id"
+        const val NOT_CONFIGURED_ERROR_KEY = "ai_not_configured"
 
         /** Default system prompt injected into every conversation. */
         const val SYSTEM_PROMPT = """You are a helpful Linux assistant built into the Linux Command Library app.

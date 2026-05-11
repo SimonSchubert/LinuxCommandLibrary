@@ -16,10 +16,11 @@ import io.ktor.client.request.setBody
 import io.ktor.http.ContentType
 import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.JsonObject
-import java.util.concurrent.atomic.AtomicLong
 
 /**
  * Lightweight MCP client that communicates over HTTP using JSON-RPC 2.0.
@@ -40,8 +41,11 @@ class McpClient(
         install(ContentNegotiation) { json(JsonRpcJson) }
     }
 
-    private val idCounter = AtomicLong(1L)
-    private fun nextId() = jsonRpcId(idCounter.getAndIncrement())
+    private val idMutex = Mutex()
+    private var idCounter = 0L
+    private suspend fun nextId(): JsonRpcId {
+        return idMutex.withLock { jsonRpcId(++idCounter) }
+    }
 
     // ──────────────────────────────────────────────
     //  Lifecycle
