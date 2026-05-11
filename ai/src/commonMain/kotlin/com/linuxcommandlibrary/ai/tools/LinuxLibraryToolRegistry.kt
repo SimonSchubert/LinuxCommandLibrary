@@ -7,7 +7,6 @@ import com.linuxcommandlibrary.ai.mcp.McpException
 import com.linuxcommandlibrary.ai.mcp.McpTool
 import com.linuxcommandlibrary.ai.mcp.McpToolCallResult
 import com.linuxcommandlibrary.app.data.BasicsRepository
-import com.linuxcommandlibrary.app.data.BasicGroupMatch
 import com.linuxcommandlibrary.app.data.CommandsRepository
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.buildJsonObject

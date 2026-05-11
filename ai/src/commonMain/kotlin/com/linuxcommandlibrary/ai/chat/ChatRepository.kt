@@ -12,6 +12,8 @@ import com.linuxcommandlibrary.ai.tools.LinuxLibraryToolRegistry
 import com.linuxcommandlibrary.shared.platform.PreferencesStorage
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 
 /**
  * Orchestrates conversation between the user and the configured LLM provider.
@@ -90,8 +92,7 @@ Keep responses concise and practical. Use code blocks for commands."""
         history: List<LlmMessage>,
         userMessage: String,
     ): Result<String> = runCatching {
-        val provider = buildProvider()
-        val tools = toolRegistry.allTools()
+        val provider = buildProvider()        val tools = toolRegistry.allTools()
 
         val messages = buildList {
             add(LlmMessage(role = LlmRole.SYSTEM, content = SYSTEM_PROMPT))
@@ -127,7 +128,7 @@ Keep responses concise and practical. Use code blocks for commands."""
      * Stream the assistant response token by token.
      * Note: streaming does not support tool calls in this implementation.
      */
-    fun streamMessage(
+    suspend fun streamMessage(
         history: List<LlmMessage>,
         userMessage: String,
     ): Flow<String> {
@@ -149,14 +150,17 @@ Keep responses concise and practical. Use code blocks for commands."""
      * Re-used on subsequent calls so that each [sendMessage] / [streamMessage]
      * does not spin up a fresh Ktor [HttpClient] (and associated thread pool).
      * The old provider is closed whenever the config changes.
+     *
+     * [providerMutex] serialises the check-then-act so that concurrent coroutines
+     * cannot simultaneously observe a stale cache and create duplicate providers.
      */
-    @Volatile
+    private val providerMutex = Mutex()
     private var cachedProvider: Pair<LlmConfig, LlmProvider>? = null
 
-    private fun buildProvider(): LlmProvider {
+    private suspend fun buildProvider(): LlmProvider = providerMutex.withLock {
         val config = loadConfig()
         cachedProvider?.let { (cachedConfig, provider) ->
-            if (cachedConfig == config) return provider
+            if (cachedConfig == config) return@withLock provider
             closeProvider(provider)
         }
         val newProvider: LlmProvider = when (config.providerType) {
@@ -164,7 +168,7 @@ Keep responses concise and practical. Use code blocks for commands."""
             else -> OpenAiProvider(config)
         }
         cachedProvider = config to newProvider
-        return newProvider
+        newProvider
     }
 
     private fun closeProvider(provider: LlmProvider) = provider.close()
