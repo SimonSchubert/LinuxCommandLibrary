@@ -126,7 +126,8 @@ class OpenAiProvider(
                 // OpenAI requires content to be null (not "") when tool_calls are present
                 content = if (rawToolCalls != null) msg.content.ifBlank { null } else msg.content,
                 toolCallId = msg.toolCallId,
-                name = msg.toolName,
+                // `name` is not a valid field for tool-role messages in the OpenAI API
+                name = if (msg.role == LlmRole.TOOL) null else msg.toolName,
                 toolCalls = rawToolCalls,
             )
         },

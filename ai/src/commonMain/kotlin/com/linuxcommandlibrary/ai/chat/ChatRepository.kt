@@ -92,7 +92,8 @@ Keep responses concise and practical. Use code blocks for commands."""
         history: List<LlmMessage>,
         userMessage: String,
     ): Result<String> = runCatching {
-        val provider = buildProvider()        val tools = toolRegistry.allTools()
+        val provider = buildProvider()
+        val tools = toolRegistry.allTools()
 
         val messages = buildList {
             add(LlmMessage(role = LlmRole.SYSTEM, content = SYSTEM_PROMPT))
