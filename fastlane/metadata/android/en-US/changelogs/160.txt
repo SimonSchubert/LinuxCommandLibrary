@@ -1,0 +1,4 @@
+Add new Linux commands
+Snappier navigation in the basics section
+Refine command documentation
+Upgrade SDKs and dependencies

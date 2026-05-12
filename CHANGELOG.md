@@ -1,3 +1,13 @@
+## v4.0.3 — 2026-05-12
+
+### Features
+- Added new Linux commands across multiple batches
+
+### Improvements
+- Snappier navigation in the basics section
+- Refined command documentation across many entries
+- Upgraded SDKs and dependencies
+
 ## v4.0.2 — 2026-05-01
 
 ### Features
