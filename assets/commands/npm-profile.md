@@ -4,45 +4,81 @@ manages npm registry user profile
 
 # TLDR
 
-**Show profile**
+**Show all profile** properties
 
 ```npm profile get```
 
-**Set profile field**
+**Get a specific** profile property (e.g. email, fullname, homepage)
+
+```npm profile get [property]```
+
+**Set a profile field** (email, fullname, homepage, twitter, github)
 
 ```npm profile set [field] [value]```
 
-**Enable 2FA**
+**Change password** (interactive prompt)
 
-```npm profile enable-2fa```
+```npm profile set password```
+
+**Enable two-factor authentication** (defaults to auth-and-writes)
+
+```npm profile enable-2fa [auth-only|auth-and-writes]```
 
 **Disable 2FA**
 
 ```npm profile disable-2fa```
 
+**Output as JSON**
+
+```npm profile get --json```
+
 # SYNOPSIS
 
-**npm** **profile** _command_ [_options_]
+**npm profile enable-2fa** [_auth-only_|_auth-and-writes_]
+
+**npm profile disable-2fa**
+
+**npm profile get** [_key_]
+
+**npm profile set** _key_ _value_
 
 # PARAMETERS
 
-**get** _field_
-> Get profile value.
+**get** [_property_]
+> Display all profile properties or one specific property.
 
-**set** _field_ _value_
-> Set profile value.
+**set** _property_ _value_
+> Set a profile property. Supported: email, fullname, homepage, freenode, twitter, github.
 
-**enable-2fa** _mode_
-> Enable 2FA (auth-only, auth-and-writes).
+**set password**
+> Interactively change the account password.
+
+**enable-2fa** [_mode_]
+> Enable two-factor authentication. Mode is `auth-only` (login/auth changes) or `auth-and-writes` (also publish, dist-tag, access changes). Default is `auth-and-writes`.
 
 **disable-2fa**
-> Disable 2FA.
+> Disable two-factor authentication.
+
+**--registry** _URL_
+> Override the registry URL (default https://registry.npmjs.org/).
+
+**--otp** _CODE_
+> Provide a one-time password for 2FA-protected actions.
+
+**--json**
+> Output results as JSON.
 
 # DESCRIPTION
 
-**npm profile** manages npm registry user profile. View and update profile settings. Configure two-factor authentication for account security.
+**npm profile** manages your user profile on the npm registry. It can view and update profile settings (email, fullname, homepage, social handles), change your password interactively, and configure two-factor authentication for account security.
+
+This command depends on the registry implementation; third-party registries may not support all subcommands.
+
+# CAVEATS
+
+Most subcommands only work against npmjs.com or compatible registries. The command is unaware of workspaces. Changing email or enabling 2FA may require an OTP when prompted.
 
 # SEE ALSO
 
-[npm](/man/npm)(1), [npm-adduser](/man/npm-adduser)(1)
+[npm](/man/npm)(1), [npm-adduser](/man/npm-adduser)(1), [npm-access](/man/npm-access)(1), [npm-config](/man/npm-config)(1)
 

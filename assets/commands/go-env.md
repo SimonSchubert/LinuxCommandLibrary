@@ -58,4 +58,4 @@ Variables set with -w take precedence over shell environment variables. The go/e
 
 # SEE ALSO
 
-[go](/man/go)(1), [go-build](/man/go-build)(1)
+[go](/man/go)(1), [go-build](/man/go-build)(1), [go-mod](/man/go-mod)(1)

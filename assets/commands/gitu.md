@@ -85,4 +85,4 @@ Requires Git repository. Some advanced Git features may not be supported. Large 
 
 # SEE ALSO
 
-[git](/man/git)(1), [lazygit](https://github.com/jesseduffield/lazygit), [magit](https://magit.vc/)
+[git](/man/git)(1), [lazygit](/man/lazygit)(1), [tig](/man/tig)(1)

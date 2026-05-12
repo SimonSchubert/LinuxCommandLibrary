@@ -83,5 +83,5 @@ The tool supports multiple environment files (.env.production, .env.staging), au
 
 # SEE ALSO
 
-[dotenv](/man/dotenv)(1), [env](/man/env)(1)
+[env](/man/env)(1), [direnv](/man/direnv)(1), [sops](/man/sops)(1)
 

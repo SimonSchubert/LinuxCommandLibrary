@@ -49,4 +49,4 @@ ecryptfs-verify is part of the **eCryptfs** utilities, providing validation for 
 
 # SEE ALSO
 
-[ecryptfs-setup-private](/man/ecryptfs-setup-private)(1), [mount.ecryptfs](/man/mount.ecryptfs)(8)
+[ecryptfs](/man/ecryptfs)(7), [ecryptfs-setup-private](/man/ecryptfs-setup-private)(1), [ecryptfs-find](/man/ecryptfs-find)(1)

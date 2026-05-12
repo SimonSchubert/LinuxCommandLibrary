@@ -61,5 +61,5 @@ Mumble was created in **2005** as an open-source alternative to proprietary voic
 
 # SEE ALSO
 
-[murmur](/man/murmur)(1), [teamspeak](/man/teamspeak)(1), [discord](/man/discord)(1)
+[discord](/man/discord)(1), [signal-desktop](/man/signal-desktop)(1)
 

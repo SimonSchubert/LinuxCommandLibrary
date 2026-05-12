@@ -46,4 +46,4 @@ Path values may vary based on system configuration and user context. The tool re
 
 # SEE ALSO
 
-[file-hierarchy](/man/file-hierarchy)(7), [systemd](/man/systemd)(1)
+[file-hierarchy](/man/file-hierarchy)(7), [systemctl](/man/systemctl)(1), [systemd-analyze](/man/systemd-analyze)(1)

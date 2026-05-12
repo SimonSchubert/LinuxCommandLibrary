@@ -61,4 +61,4 @@ The free Community Edition has limited functionality; Professional Edition is pa
 
 # SEE ALSO
 
-[mitmproxy](/man/mitmproxy)(1), [owasp-zap](/man/owasp-zap)(1), [nikto](/man/nikto)(1)
+[mitmproxy](/man/mitmproxy)(1), [nikto](/man/nikto)(1), [sqlmap](/man/sqlmap)(1)
