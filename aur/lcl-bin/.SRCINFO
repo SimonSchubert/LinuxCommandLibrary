@@ -1,6 +1,6 @@
 pkgbase = lcl-bin
 	pkgdesc = Linux command reference and cheat sheets for your terminal
-	pkgver = 4.0.2
+	pkgver = 4.0.3
 	pkgrel = 1
 	url = https://github.com/SimonSchubert/LinuxCommandLibrary
 	arch = x86_64
@@ -10,7 +10,7 @@ pkgbase = lcl-bin
 	depends = libxcrypt-compat
 	provides = lcl
 	conflicts = lcl
-	source = LinuxCommandLibrary-4.0.2-cli-linux-x64.zip::https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v4.0.2/LinuxCommandLibrary-4.0.2-cli-linux-x64.zip
-	sha256sums = a04e1fe581cfa5f1072f53251a7f77eecabf5b914ae1c3626ed3280f6f9ea1bc
+	source = LinuxCommandLibrary-4.0.3-cli-linux-x64.zip::https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v4.0.3/LinuxCommandLibrary-4.0.3-cli-linux-x64.zip
+	sha256sums = 72a2bfc9dabbacb167ce270bc8c17ca9e86a616e9d042edcd14d1f2092f3c338
 
 pkgname = lcl-bin
