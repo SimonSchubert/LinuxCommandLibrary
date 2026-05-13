@@ -1389,6 +1389,7 @@ createrepo.md
 createuser.md
 cribbage.md
 crictl.md
+criu.md
 crl.1s.md
 crl2pkcs7.1s.md
 croc.md
@@ -4634,6 +4635,7 @@ ndiswrapper.md
 neato.md
 nebula.md
 ned.md
+needle.md
 needrestart.md
 needs.md
 nemo.md
@@ -5606,6 +5608,7 @@ pip.md
 pip3.md
 pipeform.md
 pipenv.md
+piper-tts.md
 piper.md
 pipes.sh.md
 pipetron.md
@@ -6503,6 +6506,7 @@ rnm.md
 robo.md
 robotfindskitten.md
 robots.md
+rockboxd.md
 rocky.md
 rofi.md
 rogue.md
@@ -7673,6 +7677,7 @@ ubuntu-bug.md
 ubuntu-drivers.md
 ubuntu-security-status.md
 ubus.md
+uc.md
 uci.md
 uconv.md
 udevadm.md
@@ -8142,6 +8147,7 @@ x-cmd.md
 x0vncserver.md
 x11docker.md
 x11vnc.md
+x509-certificate-exporter.md
 x509.md
 x8.md
 x86_64.md
