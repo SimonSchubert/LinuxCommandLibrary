@@ -267,6 +267,7 @@ apt-ftparchive.md
 apt-get.md
 apt-install.md
 apt-key.md
+apt-list.md
 apt-mark.md
 apt-moo.md
 apt-secure.md
@@ -1156,6 +1157,7 @@ clang-format.md
 clang-tidy.md
 clang.md
 clangd.md
+claude-pee.md
 claude.md
 claws.md
 clear.md
@@ -2202,6 +2204,7 @@ fish.md
 fisher.md
 fitstopnm.md
 fixfiles.md
+fixmynpm.md
 fkill.md
 flac.md
 flake8.md
@@ -4724,6 +4727,7 @@ nh-search.md
 nh.md
 nhentai.md
 ni.md
+nibble.md
 nice.md
 nicotine.md
 nikto.md
@@ -6518,6 +6522,7 @@ ropgadget.md
 ropper.md
 roqet.md
 roswell.md
+rotunda.md
 roumon.md
 route.md
 routel.md
@@ -7460,6 +7465,7 @@ tio.md
 tiptop.md
 tiup.md
 tiv.md
+tkst.md
 tldr-lint.md
 tldr.md
 tldrl.md
@@ -7694,6 +7700,7 @@ ug.md
 ugdb.md
 ugm.md
 ugrep.md
+uigen.md
 uinput.md
 ul.md
 ulimit.md
@@ -7715,6 +7722,7 @@ uncrustify.md
 unexpand.md
 unflatten.md
 unfunction.md
+unhash.md
 unicornscan.md
 unimatrix.md
 uniq.md
