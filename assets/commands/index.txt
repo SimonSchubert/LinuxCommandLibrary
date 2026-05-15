@@ -122,6 +122,7 @@ agent-vault.md
 agentbox.md
 agetty.md
 agg.md
+agy.md
 ahost.md
 aic.md
 aichat.md
@@ -208,6 +209,7 @@ antigen.md
 antimicrox.md
 antlr.md
 anytopnm.md
+aoe.md
 aoss.md
 apache.md
 apache2.md
@@ -8079,6 +8081,7 @@ whatwaf.md
 whatweb.md
 whereis.md
 which.md
+whichllm.md
 while.md
 whiptail.md
 whisper.md
