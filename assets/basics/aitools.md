@@ -25,6 +25,9 @@
 ```[dirac](/man/dirac)```
 ```[vtcode](/man/vtcode)```
 ```[wuphf](/man/wuphf)```
+```[agy](/man/agy)```
+```[aoe](/man/aoe)```
+```[rotunda](/man/rotunda)```
 
 ## AI Assistants
 ```[openclaw](/man/openclaw)```
@@ -52,6 +55,7 @@
 ```[ollama](/man/ollama)```
 ```[llamafile](/man/llamafile)```
 ```[llama.cpp](/man/llama.cpp)```
+```[whichllm](/man/whichllm)```
 
 ## AI Terminal Utilities
 ```[mods](/man/mods)```
@@ -71,3 +75,7 @@
 ```[llmcat](/man/llmcat)```
 ```[memweave](/man/memweave)```
 ```[agentbox](/man/agentbox)```
+```[claude-pee](/man/claude-pee)```
+```[tkst](/man/tkst)```
+```[agent-skills-eval](/man/agent-skills-eval)```
+```[pii-shield](/man/pii-shield)```

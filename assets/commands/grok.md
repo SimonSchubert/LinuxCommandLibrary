@@ -87,4 +87,4 @@ Grok CLI emerged as an open-source project in **2024** following xAI's public re
 
 # SEE ALSO
 
-[claude](/man/claude)(1), [copilot](/man/copilot)(1), [gh](/man/gh)(1)
+[grok-build](/man/grok-build)(1), [claude](/man/claude)(1), [copilot](/man/copilot)(1), [gh](/man/gh)(1)
