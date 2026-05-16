@@ -2950,6 +2950,7 @@ groff_font.md
 groffer.md
 grog.md
 grohtml.md
+grok-build.md
 grok.md
 grolbp.md
 grolj4.md
@@ -7966,6 +7967,7 @@ vite.md
 vitepress.md
 vitest.md
 vitetris.md
+vitree.md
 viu.md
 vivaldi-stable.md
 vivaldi.md
