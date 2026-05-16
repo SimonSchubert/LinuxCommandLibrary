@@ -1,3 +1,13 @@
+## v4.0.4 — 2026-05-16
+
+### Features
+- Added new Linux commands across multiple batches
+- Expanded the AI tools basics category
+
+### Improvements
+- Refined command documentation across many entries
+- Upgraded dependencies
+
 ## v4.0.3 — 2026-05-12
 
 ### Features

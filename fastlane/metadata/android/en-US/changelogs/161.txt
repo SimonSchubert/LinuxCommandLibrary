@@ -1,0 +1,4 @@
+Add new Linux commands
+Expand AI tools basics
+Refine command documentation
+Upgrade dependencies
