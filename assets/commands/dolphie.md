@@ -6,108 +6,127 @@ MySQL/MariaDB/ProxySQL real-time monitoring TUI
 
 **Connect** to MySQL server and monitor
 
-```dolphie -u [username] -p [password] -h [host]```
+```dolphie -u [username] --ask-pass -h [host]```
 
-**Connect** with configuration file
+**Connect** using a URI
+
+```dolphie mysql://[user]:[pass]@[host]:[port]```
+
+**Connect** using a configuration file
 
 ```dolphie -c [config.ini]```
 
 **Monitor** ProxySQL instance
 
-```dolphie --proxysql -u [user] -p [pass] -h [host]```
+```dolphie --host [host] --port 6032 -u [user] --ask-pass```
 
 **Auto-refresh** every 2 seconds
 
-```dolphie --refresh-interval 2 [connection_options]```
+```dolphie -r 2 -h [host] -u [user]```
+
+**Read credentials** from a MySQL config file
+
+```dolphie -m ~/.my.cnf -h [host]```
+
+**Record** a session for later replay
+
+```dolphie -R -h [host] -u [user]```
 
 # SYNOPSIS
 
-**dolphie** [_options_]
+**dolphie** [_options_] [_uri_]
 
 # PARAMETERS
 
-**-u, --user** _USERNAME_
-> Database username
+**-u**, **--user** _USERNAME_
+> Database username.
 
-**-p, --password** _PASSWORD_
-> Database password
+**-p**, **--password** _PASSWORD_
+> Database password. Prefer **--ask-pass** or a config file to avoid leaking through shell history.
 
-**-h, --host** _HOST_
-> Database host (default: localhost)
+**--ask-pass**
+> Prompt for the password interactively.
 
-**-P, --port** _PORT_
-> Database port (default: 3306)
+**-h**, **--host** _HOST_
+> Database host (default: localhost).
 
-**-S, --socket** _SOCKET_
-> Unix socket file path
+**-P**, **--port** _PORT_
+> Database port (default: 3306; 6032 for ProxySQL).
 
-**-c, --config** _FILE_
-> Configuration file path
+**-S**, **--socket** _SOCKET_
+> Unix socket file path.
 
-**--proxysql**
-> Connect to ProxySQL instead of MySQL/MariaDB
+**-c**, **--config-file** _FILE_
+> Path to a Dolphie configuration file.
 
-**--refresh-interval** _SECONDS_
-> Dashboard refresh interval (default: 1)
+**-m**, **--mycnf-file** _FILE_
+> MySQL-style config file to read credentials from.
 
-**--show-processlist**
-> Show processlist by default
+**-l**, **--login-path** _NAME_
+> Login path from `~/.mylogin.cnf`.
 
-**--use-certificates**
-> Use SSL certificates for connection
+**-C**, **--cred-profile** _NAME_
+> Named credential profile defined in the Dolphie config file.
+
+**-r**, **--refresh-interval** _SECONDS_
+> Data collection cycle (default: 1).
+
+**--panels** _LIST_
+> Comma-separated panels to display at startup (dashboard, processlist, graphs, replication, ...).
+
+**--graph-marker** _MARKER_
+> Style used for graph markers (default: braille).
+
+**--ssl-mode** _MODE_
+> REQUIRED, VERIFY_CA, or VERIFY_IDENTITY.
 
 **--ssl-ca** _FILE_
-> SSL CA certificate file
+> SSL CA certificate file.
 
 **--ssl-cert** _FILE_
-> SSL client certificate file
+> SSL client certificate file.
 
 **--ssl-key** _FILE_
-> SSL client key file
+> SSL client private key file.
 
-**-v, --version**
-> Display version and exit
+**-H**, **--hostgroup** _NAME_
+> Connect to a group of hosts defined in the config.
+
+**--heartbeat-table** _TABLE_
+> pt-heartbeat table reference (MySQL only) for replication lag.
+
+**-R**, **--record**
+> Record the session to disk for later replay.
+
+**-D**, **--daemon**
+> Run headless in daemon mode; recording is enabled automatically.
+
+**--replay-file** _FILE_
+> Replay a previously recorded session.
+
+**--show-trxs-only**
+> Filter the processlist to active transactions only.
+
+**-V**, **--version**
+> Display version and exit.
 
 **--help**
-> Display help and exit
+> Display help and exit.
 
 # DESCRIPTION
 
-**dolphie** is a real-time monitoring tool for MySQL, MariaDB, and ProxySQL databases. It provides a terminal user interface (TUI) dashboard showing key performance metrics, process lists, replication status, and query statistics.
+**dolphie** is a real-time terminal user interface for monitoring MySQL, MariaDB, and ProxySQL. It shows dashboards, graphs, processlists, replication status, lock waits, transactions, and resource usage, similar in spirit to **mytop** and **innotop** but built on a modern TUI framework.
 
-The tool displays information similar to top or htop but specifically designed for database monitoring, including active connections, slow queries, lock waits, and resource usage.
-
-# KEYBINDINGS
-
-**q**
-> Quit
-
-**p**
-> Toggle processlist view
-
-**l**
-> Toggle lock view
-
-**r**
-> Toggle replication view
-
-**s**
-> Change sort column in processlist
-
-**k**
-> Kill a process (enter PID)
-
-**?**
-> Show help
+Beyond live monitoring, dolphie can record a session to disk and replay it later, run in daemon mode to collect metrics continuously, and aggregate multiple hosts via hostgroups.
 
 # CAVEATS
 
-Requires appropriate database privileges (PROCESS, SUPER, REPLICATION CLIENT). Connection credentials must be kept secure. Continuous querying may impact database performance. SSL certificates must be properly configured for secure connections.
+Requires the **PROCESS**, **REPLICATION CLIENT** and (for **KILL**) **SUPER** privileges on MySQL. Continuous polling at a very low refresh interval can add load to the monitored server. Passing **-p** on the command line exposes the password in `ps` and shell history: prefer **--ask-pass**, a config file, or a login path.
 
 # HISTORY
 
-**dolphie** was created to provide a MySQL-focused monitoring solution similar to tools like mytop and innotop, but with a modern TUI interface and support for newer database versions and ProxySQL.
+**dolphie** was created by **Charles Thompson** as a modern, Python-based replacement for **mytop** and **innotop**, with first-class support for MySQL 8, MariaDB, and ProxySQL, and features such as recording, daemon mode, and SSL/TLS connections.
 
 # SEE ALSO
 
-[mysql](/man/mysql)(1), [mytop](/man/mytop)(1), [innotop](/man/innotop)(1), [htop](/man/htop)(1)
+[mysql](/man/mysql)(1), [mytop](/man/mytop)(1), [htop](/man/htop)(1)

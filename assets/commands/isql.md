@@ -20,17 +20,17 @@ ODBC command-line SQL client
 
 ```isql -b [dsn_name] < [query.sql]```
 
-**Use custom column delimiter**
+**Use custom column delimiter** (comma)
 
-```isql -d0x2C [dsn_name]```
+```isql -d, [dsn_name]```
 
 **Output as HTML table**
 
 ```isql -w [dsn_name]```
 
-**Use column headers with delimiter**
+**Use column headers with tab delimiter** (hex)
 
-```isql -b -c -d0x09 [dsn_name]```
+```isql -b -c -x0x09 [dsn_name]```
 
 # SYNOPSIS
 
@@ -53,11 +53,17 @@ _PASSWORD_
 **-b**
 > Batch mode (no headers, no prompts).
 
-**-d** _HEX_
-> Column delimiter as hex code (e.g., 0x09 for TAB, 0x2C for comma).
+**-d** _DELIMITER_
+> Column delimiter character (e.g., -d, for comma).
+
+**-x** _HEX_
+> Column delimiter as a hex code (e.g., -x0x09 for TAB).
 
 **-c**
-> Output column names on first row (with -d or -x).
+> Output column names on first row (use with -d or -x).
+
+**-m** _NUM_
+> Limit column display width to NUM characters.
 
 **-w**
 > Format output as HTML table.
@@ -69,7 +75,10 @@ _PASSWORD_
 > Use SQLExecDirect instead of Prepare.
 
 **-k**
-> Use SQLDriverConnect.
+> Use SQLDriverConnect (DSN-less connection strings).
+
+**-l** _LOCALE_
+> Set locale.
 
 **-3**
 > Use ODBC 3 calls.
@@ -85,13 +94,13 @@ _PASSWORD_
 
 # DESCRIPTION
 
-**isql** is an ODBC command-line SQL client. It connects to any database with an ODBC driver.
+**isql** is an ODBC command-line SQL client included with unixODBC. It connects to any database with an ODBC driver using a DSN configured in odbc.ini, and executes SQL queries interactively or from a script piped on standard input.
 
-The tool executes SQL queries interactively or from files. It provides database-agnostic access through ODBC.
+Built-in runtime commands include `help` (list tables), `help <table>` (list columns), and `quit` to exit the session.
 
 # CAVEATS
 
-Requires ODBC drivers. DSN must be configured. Part of unixODBC.
+Requires ODBC drivers and a DSN configured in /etc/odbc.ini or ~/.odbc.ini. Part of unixODBC.
 
 # HISTORY
 

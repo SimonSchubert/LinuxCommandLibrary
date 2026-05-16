@@ -16,9 +16,9 @@ Build an image and run an **interactive shell** in the container
 
 ```mkosi shell```
 
-**Boot an image** in a virtual machine using QEMU
+**Boot an image** in a virtual machine
 
-```mkosi qemu```
+```mkosi vm```
 
 **Force rebuild** of existing image
 
@@ -47,8 +47,8 @@ Display **help**
 **boot**
 > Boot systemd in image container
 
-**vm, qemu**
-> Boot image in virtual machine using QEMU
+**vm** (alias: **qemu**)
+> Boot image in virtual machine (QEMU by default).
 
 **ssh**
 > Connect to booted VM via SSH

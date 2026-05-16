@@ -4,7 +4,7 @@ minecraft server management CLI
 
 # TLDR
 
-**List servers**
+**List configured** servers
 
 ```mcli server list```
 
@@ -12,61 +12,61 @@ minecraft server management CLI
 
 ```mcli server info [server]```
 
-**Start server**
+**Start a server**
 
 ```mcli server start [server]```
 
-**Stop server**
+**Stop a server**
 
 ```mcli server stop [server]```
 
-**Create backup**
+**Attach to the server** console
+
+```mcli server attach [server]```
+
+**Create a backup**
 
 ```mcli backup create [server]```
 
-**View logs**
+**Tail server** logs
 
 ```mcli log [server]```
 
 # SYNOPSIS
 
-**mcli** _command_ [_options_]
+**mcli** _command_ [_subcommand_] [_options_]
 
 # PARAMETERS
 
-_COMMAND_
-> Operation to perform.
-
 **server**
-> Server management.
+> Manage server lifecycle: list, info, start, stop, restart, attach.
 
 **backup**
-> Backup operations.
+> Create, list, or restore server backups.
 
 **log**
-> View logs.
+> Show or tail server logs.
 
 **config**
-> Configuration.
+> Read or modify mcli/server configuration.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**mcli** is a Minecraft server management CLI. It manages multiple Minecraft server instances.
+**mcli** is a command-line interface for managing one or more Minecraft server instances on a Linux host. It wraps the server JAR lifecycle, console attachment, world backups, and per-instance configuration behind a single CLI.
 
-The tool handles starting, stopping, backups, and configuration of game servers.
+Servers are typically defined in a configuration file or directory; `mcli server list` enumerates them, and the `start`/`stop`/`attach` subcommands act on a named instance. Backups are produced from the world directory while the server is running or stopped, depending on configuration.
 
 # CAVEATS
 
-Minecraft specific. Java required. Server resources needed.
+Requires a working Java runtime to launch the underlying server JAR. The user running mcli needs read/write access to the server directories. Console attachment usually depends on **screen** or **tmux** being installed.
 
 # HISTORY
 
-mcli provides command-line management for **Minecraft** server instances and their operations.
+**mcli** is a community-built tool that grew out of the practical need to script Minecraft server admin tasks on Linux machines, replacing ad-hoc shell wrappers around `screen` and the server JAR.
 
 # SEE ALSO
 
 [java](/man/java)(1), [screen](/man/screen)(1), [tmux](/man/tmux)(1)
-

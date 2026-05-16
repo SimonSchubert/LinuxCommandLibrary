@@ -1,80 +1,117 @@
 # TAGLINE
 
-Query and manage stored enumeration results
+query and manage stored amass enumeration results
 
 # TLDR
 
-**List** all enumerations in database
+**List** enumerations for a domain
 
-```amass db -list```
+```amass db -list -d [example.com]```
 
-**Show** results from specific enumeration
+**Show** results from a specific enumeration index
 
-```amass db -d [example.com] -enum [1]```
+```amass db -show -d [example.com] -enum [1]```
 
-**Export** to JSON
+**Print discovered names** only
+
+```amass db -names -d [example.com]```
+
+**Show discovered IP addresses** for a domain
+
+```amass db -show -ip -d [example.com]```
+
+**Export** all results for a domain to JSON
 
 ```amass db -d [example.com] -json [output.json]```
 
-Show **names** for a domain
+**Print ASN summary** for a domain
 
-```amass db -d [example.com] -names```
-
-Show discovered **IP addresses**
-
-```amass db -d [example.com] -ip```
+```amass db -summary -d [example.com]```
 
 # SYNOPSIS
 
-**amass db** [_-d domain_] [_-enum index_] [_options_]
+**amass db** [_options_]
 
 # DESCRIPTION
 
-**amass db** manages the graph database used by amass to store enumeration results. It allows querying past enumerations, exporting data, and managing stored results.
+**amass db** queries the local graph database that stores results from previous **amass enum** runs. It lists past enumerations, prints their findings, exports them to JSON, and can scope queries by domain, enumeration index, and data source.
 
-The database persists discovered assets, enabling tracking of changes over time and correlation across multiple enumeration runs.
+The database persists discovered assets so changes between scans can be tracked and results correlated across runs.
 
 # PARAMETERS
 
-**-list**
-> List all enumerations in database
-
 **-d** _domain_
-> Filter by target domain
+> Domain name(s) to filter by, comma-separated. May be repeated.
 
-**-enum** _index_
-> Select specific enumeration by index
+**-df** _file_
+> File containing root domain names, one per line.
 
-**-names**
-> Show discovered DNS names
-
-**-ip**
-> Show discovered IP addresses
-
-**-asn**
-> Show discovered ASN information
-
-**-json** _file_
-> Export results to JSON file
-
-**-dir** _path_
-> Database directory
+**-list**
+> Print a numbered list of enumerations, filtered by the provided domains.
 
 **-show**
-> Show details for enumeration
+> Print results for the enumeration index and domains provided.
+
+**-enum** _index_
+> Identify an enumeration via the index from **-list**.
+
+**-names**
+> Print only the discovered DNS names.
+
+**-ip**
+> Show IP addresses for discovered names.
+
+**-ipv4**
+> Show only IPv4 addresses.
+
+**-ipv6**
+> Show only IPv6 addresses.
+
+**-src**
+> Print the data source for each discovered name.
+
+**-summary**
+> Print the ASN table summary only.
+
+**-demo**
+> Censor output to make it suitable for demonstrations.
+
+**-nocolor**
+> Disable colorized output.
+
+**-silent**
+> Disable all output during execution (useful with **-json**/**-o**).
+
+**-config** _file_
+> Path to the INI configuration file.
+
+**-dir** _path_
+> Path to the directory containing the graph database (default: `~/.config/amass`).
+
+**-json** _file_
+> Path to a JSON output file.
+
+**-o** _file_
+> Path to a text file capturing stdout/stderr.
+
+**-h**, **-help**
+> Show the program usage message.
 
 # CONFIGURATION
 
 **~/.config/amass/config.ini**
 > Amass configuration file defining data sources, API keys, and scope settings.
 
+**~/.config/amass/**
+> Default location of the graph database (overridable with **-dir**).
+
 # CAVEATS
 
-Database can grow large over time; consider periodic cleanup. Export format may change between amass versions. Database location defaults to ~/.config/amass/.
+The database can grow large over time; periodic pruning or rotating the **-dir** path is sensible. The **db** subcommand was deprecated in Amass v4 in favor of the standalone **oam_subs** / **oam-tools** utilities; this page documents the v3-era CLI still found in many distributions.
 
 # HISTORY
 
-The database functionality was added to amass to support persistent storage of enumeration results and enable change tracking features introduced in later versions.
+**amass** is an **OWASP** project originally created by **Jeff Foley** (caffix) for in-depth attack surface mapping. The graph database and **db** subcommand were added in the v3 series to support persistent storage of enumeration results and change tracking. In **v4** the database tooling was split out into **oam-tools** (`oam_subs`, etc.).
 
 # SEE ALSO
 

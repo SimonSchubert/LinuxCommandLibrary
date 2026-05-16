@@ -73,22 +73,31 @@ Python web scraping and crawling framework
 > Run spider from file.
 
 **-o** _FILE_, **--output** _FILE_
-> Output file (json, csv, xml).
+> Append crawled items to a file. Format is inferred from the extension (json, jsonl, csv, xml).
 
-**-s** _SETTING=VALUE_
-> Override setting.
+**-O** _FILE_, **--overwrite-output** _FILE_
+> Same as **-o** but overwrites any existing file.
+
+**-s** _NAME=VALUE_, **--set** _NAME=VALUE_
+> Override a setting (e.g. **-s LOG_LEVEL=INFO**).
 
 **-a** _NAME=VALUE_
-> Spider argument.
+> Pass an argument to the spider (read via **self.<NAME>**).
 
 **-t** _FORMAT_, **--output-format** _FORMAT_
-> Output format.
+> Explicitly set the output format when the filename does not indicate it.
 
 **--nolog**
-> Disable logging.
+> Disable logging entirely.
 
-**--loglevel** _LEVEL_
-> Log level: DEBUG, INFO, WARNING.
+**--loglevel** _LEVEL_, **-L** _LEVEL_
+> Set log level: DEBUG, INFO, WARNING, ERROR, CRITICAL.
+
+**--logfile** _FILE_
+> Write log output to a file.
+
+**--profile** _FILE_
+> Write Python cProfile stats to file.
 
 # DESCRIPTION
 

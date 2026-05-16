@@ -20,52 +20,61 @@ Start a **slideshow**
 
 ```eog --slide-show [path/to/directory]```
 
-Open a single image **without** image collection
+Open a single image **without** image gallery
 
-```eog --single-window [path/to/image.jpg]```
+```eog --disable-gallery [path/to/image.jpg]```
 
-Open an image in a **new** window instance
+Open an image in a **new** instance
 
 ```eog --new-instance [path/to/image.jpg]```
 
 # SYNOPSIS
 
-**eog** [_options_] [_files_]
+**eog** [_options_] [_files..._]
 
 # DESCRIPTION
 
-**eog** (Eye of GNOME) is the official image viewer for the GNOME desktop environment. It provides a fast, lightweight interface for displaying images in various formats including JPEG, PNG, GIF, SVG, and many others. The viewer supports slideshows, fullscreen viewing, and basic image operations like rotation and zooming.
+**eog** (Eye of GNOME) is the official image viewer for the GNOME desktop environment. It provides a fast, lightweight interface for displaying images in many formats including JPEG, PNG, GIF, SVG, TIFF, BMP, and more. The viewer supports slideshows, fullscreen viewing, zoom, rotation, and basic image operations.
 
-The application integrates seamlessly with GNOME desktop services and file managers, supporting drag-and-drop, thumbnail generation, and EXIF metadata display. While designed for GNOME, eog can run on other desktop environments, though some features may require GNOME libraries.
+The application integrates with GNOME desktop services and file managers, supporting drag-and-drop, thumbnail generation, and EXIF metadata display. While designed for GNOME, eog can run on other desktop environments, though some features may require GNOME libraries.
 
 # PARAMETERS
 
-**--fullscreen**
-> Open in fullscreen mode
+**-f**, **--fullscreen**
+> Open in fullscreen mode.
 
-**--slide-show**
-> Start slideshow
+**-s**, **--slide-show**
+> Open in slideshow mode.
 
-**--single-window**
-> Open without collection sidebar
+**-g**, **--disable-gallery**
+> Disable the image gallery panel.
 
-**--new-instance**
-> Open in new window instance
+**-n**, **--new-instance**
+> Open in a new instance rather than reusing an existing one.
 
-**-n, --new-instance**
-> Start new instance
+**-w**, **--single-window**
+> Force all images to be opened in a single window.
+
+**--display=**_DISPLAY_
+> X display to use.
+
+**--version**
+> Display version information.
+
+**-?**, **--help**
+> Show help message.
 
 # CONFIGURATION
 
 **~/.config/eog/**
-> Configuration directory for user preferences and settings managed through GNOME.
+> User configuration directory for preferences managed through GNOME.
 
 **dconf/gsettings**
-> Settings accessible via gsettings for org.gnome.eog schema controlling UI, plugins, and behavior.
+> Settings accessible via `gsettings` for the `org.gnome.eog` schema controlling UI, plugins, and behavior.
 
 # CAVEATS
 
-GNOME desktop application. Some features may not work outside GNOME. Large images may consume significant memory.
+Designed for GNOME desktop; some features may not work outside GNOME. Large images may consume significant memory. As of GNOME 43, eog has been superseded in many distributions by **Loupe** (the new default GNOME image viewer written in Rust).
 
 # SEE ALSO
 

@@ -24,46 +24,65 @@ Reference Wayland compositor
 
 ```weston --backend=wayland```
 
+**Run with Xwayland** for X11 client compatibility
+
+```weston --xwayland```
+
 **Specify display socket name**
 
-```weston --socket=[wayland-1]```
+```weston -S [wayland-1]```
 
 **Start with specific configuration file**
 
-```weston --config=[path/to/weston.ini]```
+```weston -c [path/to/weston.ini]```
 
 # SYNOPSIS
 
-**weston** [**--backend**=_backend_] [**--shell**=_shell_] [**--socket**=_name_] [**--config**=_file_] [_options_]
+**weston** [**-B**=_backend_] [**--shell**=_shell_] [**-S**=_name_] [**-c**=_file_] [_options_]
 
 # PARAMETERS
 
-**--backend**=_backend_
+**-B**, **--backend**=_backend_
 > Compositor backend: drm (native), x11, wayland, headless, rdp, vnc, pipewire.
 
 **--shell**=_shell_
 > Shell plugin: desktop (default), fullscreen, kiosk, ivi.
 
-**--socket**=_name_
+**-S**, **--socket**=_name_
 > Wayland socket name for clients to connect.
 
-**--config**=_file_
+**-c**, **--config**=_file_
 > Path to configuration file. Default is $XDG_CONFIG_HOME/weston.ini or ~/.config/weston/weston.ini.
-
-**--modules**=_module_
-> Load additional modules.
 
 **--no-config**
 > Do not read configuration file.
 
+**--modules**=_module_
+> Load additional modules (comma-separated).
+
+**--renderer**=_name_
+> Select rendering engine (gl, pixman, vulkan, noop).
+
+**--xwayland**
+> Enable X11 application support via Xwayland.
+
+**-i**, **--idle-time**=_seconds_
+> Idle timeout before screen saver.
+
 **--log**=_file_
 > Log file path.
 
+**-l**, **--logger-scopes**=_scopes_
+> Comma-separated logger scopes to enable.
+
+**--debug**
+> Enable debug protocol extension.
+
 **--width**=_pixels_
-> Initial output width (for windowed backends).
+> Initial output width (windowed backends).
 
 **--height**=_pixels_
-> Initial output height (for windowed backends).
+> Initial output height (windowed backends).
 
 **--scale**=_factor_
 > Output scale factor.

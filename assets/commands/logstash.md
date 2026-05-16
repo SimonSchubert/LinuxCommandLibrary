@@ -1,6 +1,6 @@
 # TAGLINE
 
-server-side data processing pipeline that ingests data from multiple
+Server-side data processing pipeline for ingesting, transforming, and shipping data
 
 # TLDR
 
@@ -28,7 +28,7 @@ server-side data processing pipeline that ingests data from multiple
 
 ```logstash -f [config.conf] --config.reload.automatic```
 
-**Show installed plugins**
+**List installed plugins**
 
 ```logstash-plugin list```
 
@@ -51,19 +51,19 @@ server-side data processing pipeline that ingests data from multiple
 **-t**, **--config.test_and_exit**
 > Test configuration and exit.
 
-**--config.reload.automatic**
+**-r**, **--config.reload.automatic**
 > Automatically reload config on changes.
 
 **--config.reload.interval** _SECONDS_
 > Config reload check interval.
 
-**--pipeline.workers** _NUM_
+**-w**, **--pipeline.workers** _NUM_
 > Number of pipeline worker threads.
 
-**--pipeline.batch.size** _NUM_
+**-b**, **--pipeline.batch.size** _NUM_
 > Events per batch.
 
-**--pipeline.batch.delay** _MS_
+**-u**, **--pipeline.batch.delay** _MS_
 > Batch delay in milliseconds.
 
 **-l**, **--path.logs** _PATH_
@@ -81,11 +81,14 @@ server-side data processing pipeline that ingests data from multiple
 **-n**, **--node.name** _NAME_
 > Node name for cluster identification.
 
-**--http.host** _HOST_
-> API host (default: 127.0.0.1).
+**--api.http.host** _HOST_
+> Monitoring API host (default: 127.0.0.1).
 
-**--http.port** _PORT_
-> API port (default: 9600).
+**--api.http.port** _PORT_
+> Monitoring API port (default: 9600).
+
+**--path.settings** _DIR_
+> Directory containing logstash.yml.
 
 **-V**, **--version**
 > Display version.
@@ -95,24 +98,24 @@ server-side data processing pipeline that ingests data from multiple
 
 # DESCRIPTION
 
-**Logstash** is a server-side data processing pipeline that ingests data from multiple sources, transforms it, and sends it to various destinations. It's part of the Elastic Stack (ELK: Elasticsearch, Logstash, Kibana).
+**Logstash** is a server-side data processing pipeline that ingests data from multiple sources, transforms it, and sends it to various destinations. It is part of the Elastic Stack (ELK: Elasticsearch, Logstash, Kibana).
 
 Configuration uses three sections: **input** (data sources like files, beats, syslog), **filter** (transformations like grok, mutate, geoip), and **output** (destinations like Elasticsearch, file, stdout). Configs use a Ruby-like DSL.
 
 The grok filter is particularly powerful for parsing unstructured log data into structured fields using pattern matching. Common patterns for web logs, syslog, and other formats are included.
 
-Multiple pipelines can run simultaneously with separate configurations. Pipeline-to-pipeline communication allows complex routing. Persistent queues provide durability across restarts.
+Multiple pipelines can run simultaneously with separate configurations defined in `pipelines.yml`. Pipeline-to-pipeline communication allows complex routing. Persistent queues provide durability across restarts.
 
-Plugins extend functionality - hundreds of input, filter, and output plugins are available. The codec system handles data serialization (JSON, multiline, etc.).
+Plugins extend functionality: hundreds of input, filter, and output plugins are available via `logstash-plugin`. The codec system handles data serialization (JSON, multiline, etc.).
 
 # CAVEATS
 
-JVM-based with significant memory requirements (1GB+ heap typical). Startup is slow. Complex grok patterns can be CPU-intensive. Configuration errors only show at startup or reload. Plugin compatibility varies with Logstash versions.
+JVM-based with significant memory requirements (1GB+ heap typical). Startup is slow. Complex grok patterns can be CPU-intensive. Configuration errors only surface at startup or reload. Plugin compatibility varies with Logstash versions.
 
 # HISTORY
 
-**Logstash** was created by **Jordan Sissel** in **2009** as a tool for managing logs and events. Originally independent, it was acquired by **Elastic** (then Elasticsearch) in **2013** and became a core part of the ELK Stack. The project has evolved from a simple log shipper to a full data processing pipeline, with major rewrites including the move to a persistent queue architecture.
+**Logstash** was created by **Jordan Sissel** in **2009** as a tool for managing logs and events. Originally independent, it was acquired by **Elastic** (then Elasticsearch) in **2013** and became a core part of the ELK Stack. The project evolved from a simple log shipper to a full data processing pipeline, with major rewrites including the move to a persistent queue architecture.
 
 # SEE ALSO
 
-[filebeat](/man/filebeat)(1), [elasticsearch](/man/elasticsearch)(1), [fluentd](/man/fluentd)(1), [vector](/man/vector)(1)
+[filebeat](/man/filebeat)(1), [elasticsearch](/man/elasticsearch)(1)

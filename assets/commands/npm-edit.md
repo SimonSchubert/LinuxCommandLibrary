@@ -1,70 +1,54 @@
 # TAGLINE
 
-opens an installed package's directory in the default editor
+open an installed package's directory in the default editor
 
 # TLDR
 
-**Edit installed package**
+**Edit an installed package**
 
 ```npm edit [package]```
 
-**Edit with specific editor**
+**Edit a nested subpackage**
 
-```EDITOR=vim npm edit [package]```
+```npm edit [package]/[subpackage]```
+
+**Edit with a specific editor**
+
+```EDITOR=[vim] npm edit [package]```
+
+**Configure the default editor** persistently
+
+```npm config set editor [code]```
 
 # SYNOPSIS
 
-**npm edit** _pkg_
-
-# PARAMETERS
-
-**pkg**
-> Package name to edit.
+**npm edit** _pkg_[**/**_subpkg_...]
 
 # DESCRIPTION
 
-**npm edit** opens an installed package's directory in the default editor. This allows direct modification of package code for debugging or local patches.
+**npm edit** opens an installed package's directory in the default editor so it can be inspected or modified in place under `node_modules`. After the editor exits, npm rebuilds the package so any changes (for example to native addons) take effect.
 
-The editor is determined by the EDITOR environment variable.
+The editor is taken from the npm **editor** config, which defaults to the **EDITOR** or **VISUAL** environment variables (or `notepad.exe` on Windows, `vi` on Unix).
 
-# EXAMPLE
+# PARAMETERS
 
-```bash
-# Edit lodash package
-npm edit lodash
-# Opens in $EDITOR at node_modules/lodash
+_pkg_
+> Name of the dependency to edit.
 
-# Use specific editor
-EDITOR=code npm edit express
-```
+**/**_subpkg_
+> Optional nested package path, to drill into a transitive dependency under `node_modules`.
 
-# USE CASES
-
-```
-- Debug package issues
-- Apply local patches
-- Inspect package internals
-- Test modifications
-```
+**editor** (config)
+> Editor used to open the package. Set with `npm config set editor <name>` or via **EDITOR**/**VISUAL**.
 
 # CAVEATS
 
-Changes lost on npm install/update. Use patch-package for persistent patches. Editing in node_modules is generally discouraged.
-
-# ALTERNATIVES
-
-```bash
-# Use patch-package for persistent changes
-npx patch-package package-name
-
-# Or fork the package
-git clone https://github.com/user/package
-```
+Changes made to files in `node_modules` are lost the next time npm reinstalls or updates the package. For persistent local modifications use **patch-package** or fork the package upstream. **npm edit** is not workspace-aware: in a workspace it operates on the root `node_modules`.
 
 # HISTORY
 
-npm edit has been part of npm since early versions, providing quick access to edit installed dependencies.
+**npm edit** has been part of **npm** since early releases, providing a quick way to read or hack on installed dependencies during debugging.
 
 # SEE ALSO
 
-[npm](/man/npm)(1), [npm-explore](/man/npm-explore)(1), [patch-package](/man/patch-package)(1)
+[npm](/man/npm)(1), [npm-explore](/man/npm-explore)(1)

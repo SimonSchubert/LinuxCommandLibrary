@@ -1,6 +1,6 @@
 # TAGLINE
 
-package manager for the Haxe programming language
+Package manager for the Haxe programming language
 
 # TLDR
 
@@ -8,21 +8,21 @@ package manager for the Haxe programming language
 
 ```haxelib install [library]```
 
-**Install specific version**
+**Install a specific version**
 
 ```haxelib install [library] [version]```
 
-**Install from zip file**
+**Install from a zip file**
 
 ```haxelib install [file.zip]```
 
-**Update a library**
+**Update a single library**
 
 ```haxelib update [library]```
 
-**Update all libraries**
+**Update all installed libraries**
 
-```haxelib upgrade```
+```haxelib update```
 
 **List installed libraries**
 
@@ -36,6 +36,14 @@ package manager for the Haxe programming language
 
 ```haxelib remove [library]```
 
+**Use a git repository as a library**
+
+```haxelib git [library] [https://github.com/user/repo.git]```
+
+**Point a library at a local development directory**
+
+```haxelib dev [library] [path/to/source]```
+
 # SYNOPSIS
 
 **haxelib** _command_ [_arguments_]
@@ -43,34 +51,72 @@ package manager for the Haxe programming language
 # SUBCOMMANDS
 
 **install** _name_ [_version_]
-> Install a library.
+> Install a library from the haxelib repository or a local zip.
 
-**update** _name_
-> Update a single library.
+**update** [_name_]
+> Update a single library, or all installed libraries when no name is given.
 
 **upgrade**
-> Update all installed libraries.
+> Update every installed library to the latest version.
 
-**remove** _name_
-> Remove a library.
+**remove** _name_ [_version_]
+> Remove an installed library.
 
 **list**
-> List installed libraries.
+> List installed libraries and their versions.
 
 **search** _query_
-> Search for libraries.
+> Search the haxelib repository for libraries matching _query_.
 
 **info** _name_
-> Show library information.
+> Show information about a library.
 
-**run** _name_
-> Run a library's run script.
+**run** _name_ [_args..._]
+> Execute a library's run script.
+
+**dev** _name_ _path_
+> Point a library at a local development directory. Pass no path to clear.
+
+**git** _name_ _url_ [_branch_]
+> Use a git repository as the source for a library.
+
+**hg** _name_ _url_ [_branch_]
+> Use a mercurial repository as the source for a library.
+
+**path** _name..._
+> Print source paths, dependencies, and compiler defines for the given libraries.
+
+**libpath** _name..._
+> Print the root path of each library, one per line.
+
+**version**
+> Print the haxelib version.
+
+**config**
+> Print the haxelib repository path.
+
+**setup** [_path_]
+> Configure the haxelib repository path.
+
+**newrepo**
+> Create a local repository in the current directory.
+
+**deleterepo**
+> Remove the local repository in the current directory.
+
+**selfupdate**
+> Update haxelib itself.
 
 # DESCRIPTION
 
-**haxelib** is the package manager for the Haxe programming language. It allows searching, installing, upgrading, and removing libraries from the haxelib repository at lib.haxe.org. Libraries can be installed from the repository, git repositories, or local zip files.
+**haxelib** is the package manager for the **Haxe** programming language. It installs, updates, and removes libraries from the central registry at `lib.haxe.org`, and also supports installing libraries from git or mercurial repositories or local zip archives.
+
+The `dev` command points a library at a local working copy, which is the standard workflow for developing a library and testing it inside another project. The `newrepo` command creates a per-project library directory so each project can pin its own dependency versions.
+
+# CAVEATS
+
+The default repository is shared system-wide; use `haxelib newrepo` for project-local installs. Library names are case-sensitive on case-sensitive filesystems.
 
 # SEE ALSO
 
-[haxe](/man/haxe)(1), [npm](/man/npm)(1)
-
+[npm](/man/npm)(1)

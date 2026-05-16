@@ -1,45 +1,38 @@
 # TAGLINE
 
-Convert dictionaries from ispell to aspell format
+Import old personal dictionaries into GNU Aspell
 
 # TLDR
 
-**Import** ispell dictionary
+**Import** old personal dictionaries (Ispell and Aspell) automatically
 
-```aspell-import --ispell [dict.hash]```
+```aspell-import```
 
-Import from **old format**
+**Invoke explicitly** through Perl if /usr/bin/perl is missing
 
-```aspell-import old [wordlist] [new_dict]```
+```perl $(which aspell-import)```
 
 # SYNOPSIS
 
-**aspell-import** [_--ispell_|_--run-together_|_old_] _source_ [_destination_]
+**aspell-import**
 
 # DESCRIPTION
 
-**aspell-import** converts dictionaries from other spell checkers (particularly ispell) to aspell format. This enables migration of custom dictionaries when switching spell checkers.
+**aspell-import** is a Perl script that searches for old personal dictionaries from **Ispell** and earlier versions of **Aspell**, then imports them into the current user's GNU Aspell personal word list. It is intended to be run once after installing Aspell or upgrading from Ispell.
 
-The tool handles format conversion and creates aspell-compatible dictionary files.
+The script scans the user's home directory and standard dictionary locations, converts each entry, and writes a header line so the result is a valid Aspell personal dictionary.
 
 # PARAMETERS
 
-**--ispell**
-> Import from ispell hash file
-
-**--run-together**
-> Import run-together list
-
-**old**
-> Import from old aspell format
+This command takes no command-line options. Run it without arguments.
 
 # CAVEATS
 
-Not all ispell features translate to aspell. Backup original dictionaries before conversion. May require manual adjustment for complex dictionaries.
+The script must be able to find a working Perl interpreter at `/usr/bin/perl`. If Perl is installed elsewhere, invoke the script with `perl /path/to/aspell-import`. Existing Aspell personal dictionaries may be overwritten, so back them up first. Ispell affix rules are not migrated, only word lists.
 
 # HISTORY
 
-**aspell-import** facilitates migration from ispell to aspell, recognizing that users have accumulated custom dictionaries.
+**aspell-import** ships with **GNU Aspell** and was added so users could migrate accumulated personal word lists when moving from Ispell to Aspell.
 
 # SEE ALSO
 

@@ -39,3 +39,4 @@ scripts
 /screenshotTests/src/test/snapshots
 /fastlane/play-store-key.json
 /fastlane/report.xml
+/fastlane/play-bulk-bucket

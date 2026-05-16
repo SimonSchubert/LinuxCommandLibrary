@@ -1,59 +1,72 @@
 # TAGLINE
 
-Remove unreachable objects
+Prune unreachable objects from the object database
 
 # TLDR
 
-**Prune unreachable objects**
+**Prune unreachable** loose objects
 
 ```git prune```
 
-**Dry run**
+**Dry run** to see what would be removed
 
 ```git prune -n```
 
-**Prune verbose**
+**Verbose** output
 
 ```git prune -v```
 
-**Prune older than date**
+**Only prune objects** older than a given age
 
-```git prune --expire [2.weeks.ago]```
+```git prune --expire=2.weeks.ago```
+
+**Prune everything** reachable-only right now (no grace period)
+
+```git prune --expire=now```
+
+**Keep objects reachable** from an extra head
+
+```git prune -- [refs/heads/topic]```
 
 # SYNOPSIS
 
-**git prune** [_options_]
+**git prune** [**-n**] [**-v**] [**--progress**] [**--expire** _time_] [**--**] [_heads_...]
 
 # PARAMETERS
 
 **-n**, **--dry-run**
-> Show what would be removed.
+> Do not remove anything, just report what would be removed.
 
 **-v**, **--verbose**
-> Report removed objects.
-
-**--expire** _DATE_
-> Only prune older than date.
+> Report all removed objects.
 
 **--progress**
-> Show progress.
+> Show progress while pruning.
 
-**--help**
-> Display help information.
+**--expire** _time_
+> Only prune loose objects older than _time_ (e.g. `now`, `2.weeks.ago`).
+
+**--**
+> Treat the remaining arguments as heads rather than options.
+
+_heads_
+> Additional refs whose reachable objects should be kept, in addition to all packed refs.
 
 # DESCRIPTION
 
-**git prune** removes unreachable objects from the object database. Objects become unreachable when their referencing commits are deleted, rebased away, or otherwise orphaned.
+**git prune** removes loose objects from `.git/objects` that are not reachable from any reference. Objects become unreachable when commits are amended, rebased away, branches deleted, or stashes dropped, leaving dangling content in the object database.
 
-The command is typically run as part of `git gc` rather than directly. The `--expire` option prevents pruning recent objects that might still be needed by concurrent operations, providing a safety margin.
+The command is normally invoked indirectly through **git gc**, which sets an appropriate **--expire** time (the `gc.pruneExpire` config, defaulting to `2.weeks.ago`) so that very recent objects are kept around for safety. The expiry window protects concurrent operations and recently created objects that the reflog has not yet started referencing.
+
+Note that **git prune** only touches loose objects. Unreachable objects already inside a packfile are removed by **git repack -A**.
 
 # CAVEATS
 
-Usually run by git gc. Can delete objects needed by concurrent operations. Use expire time for safety.
+Aggressive expiry (`--expire=now`) can delete objects that are still useful for recovery via the reflog or that another git process is currently writing. Do not run prune manually while other git commands are running in the same repository. To prune stale worktree metadata under `.git/worktrees`, use **git worktree prune** instead.
 
 # HISTORY
 
-git prune is a core **Git** maintenance command for removing unreachable objects, typically invoked through git gc.
+**git prune** is one of the original plumbing commands shipped with Git. Its day-to-day role has shifted toward being an internal step of **git gc**, but it remains useful for explicit cleanup after large rewrite operations.
 
 # SEE ALSO
 

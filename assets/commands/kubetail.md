@@ -4,70 +4,122 @@ tails logs from multiple pods simultaneously
 
 # TLDR
 
-**Tail pod logs**
+**Tail pods matching a name pattern**
 
-```kubetail [pod-name-pattern]```
+```kubetail [pod-name-prefix]```
 
-**Tail with label**
+**Tail pods by label selector**
 
 ```kubetail -l [app=myapp]```
 
-**Tail in namespace**
+**Tail in a specific namespace**
 
 ```kubetail [pattern] -n [namespace]```
 
-**Tail specific container**
+**Tail a specific container** (repeatable)
 
 ```kubetail [pattern] -c [container]```
 
-**Follow with timestamps**
+**Show only the last N minutes of logs**
 
-```kubetail [pattern] -t```
+```kubetail [pattern] -s [10m]```
 
-**Colored output**
+**Show timestamps**
 
-```kubetail [pattern] -k [pod]```
+```kubetail [pattern] --timestamps```
+
+**Tail with regex matching**
+
+```kubetail "[^app1|.*demo.*]" --regex```
+
+**Dry-run: list matching pods without tailing**
+
+```kubetail [pattern] -d```
 
 # SYNOPSIS
 
-**kubetail** [_options_] _pattern_
+**kubetail** [_pod-pattern_] [_options_]
 
 # PARAMETERS
 
 _PATTERN_
-> Pod name pattern.
+> Pod name pattern (prefix match by default, regex with --regex).
 
-**-l** _SELECTOR_
-> Label selector.
+**-c**, **--container** _NAME_
+> Container name (repeatable for multiple containers).
 
-**-n** _NAMESPACE_
+**-t**, **--context** _CONTEXT_
+> Kubernetes context to use.
+
+**-l**, **--selector** _SELECTOR_
+> Label selector (e.g., app=myapp).
+
+**-n**, **--namespace** _NAMESPACE_
 > Target namespace.
 
-**-c** _CONTAINER_
-> Container name.
+**-e**, **--regex** _MODE_
+> Match mode: regex or substring.
 
-**-t**
-> Show timestamps.
+**-s**, **--since** _DURATION_
+> Show logs since relative duration (e.g., 10m, 1h).
 
-**-k** _FIELD_
-> Color by field.
+**-p**, **--previous** _BOOL_
+> Retrieve logs from previous pod instances.
 
-**--help**
+**-f**, **--follow** _BOOL_
+> Follow log stream (default true).
+
+**-d**, **--dry-run**
+> Print matching pods/containers without tailing.
+
+**-k**, **--colored-output** _MODE_
+> Coloring mode: pod, line (default), loglevel, or false.
+
+**-z**, **--skip-colors** _LIST_
+> Comma-separated color indices to skip.
+
+**-P**, **--prefix** _BOOL_
+> Toggle pod name prefix on each line.
+
+**-b**, **--line-buffered** _BOOL_
+> Control line buffering.
+
+**-j**, **--jq** _SELECTOR_
+> Apply jq selector to JSON log lines.
+
+**-r**, **--cluster** _NAME_
+> Kubeconfig cluster name.
+
+**--tail** _LINES_
+> Limit number of recent lines per pod.
+
+**--timestamps**
+> Display timestamps on log lines.
+
+**-i**, **--show-color-index** _BOOL_
+> Display color index with pod prefix.
+
+**-v**, **--version**
+> Show version.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**kubetail** is a bash script that aggregates and tails log output from multiple Kubernetes pods simultaneously. It matches pods by name pattern or label selector and streams their logs in a single terminal, using color-coded output to visually distinguish which lines come from which pod.
+**kubetail** is a Bash script that aggregates and tails log output from multiple Kubernetes pods simultaneously. It matches pods by name prefix, regex, or label selector and streams their logs in a single terminal, using color-coded output to distinguish lines from different pods.
 
-The tool is especially useful when debugging distributed applications or microservices where relevant log entries are spread across several pod replicas. It supports filtering by namespace, targeting specific containers within multi-container pods, and displaying timestamps alongside log lines. Under the hood, kubetail spawns multiple `kubectl logs --follow` processes and merges their output.
+The tool is useful when debugging distributed applications or microservices where related log entries are spread across several pod replicas. Under the hood, kubetail spawns multiple `kubectl logs --follow` processes and merges their output, optionally filtering by namespace, container, or duration.
+
+Defaults for most flags can be set via environment variables such as KUBETAIL_NAMESPACE, KUBETAIL_SINCE, KUBETAIL_TAIL, and KUBETAIL_COLORED_OUTPUT.
 
 # CAVEATS
 
-Third-party tool. Bash script. Requires kubectl.
+Third-party Bash script (not part of kubectl). Requires `kubectl` configured with cluster access. For Go-based alternatives with similar functionality, see stern.
 
 # HISTORY
 
-kubetail was created to simplify tailing logs from multiple Kubernetes pods with a single command.
+kubetail was created by Johan Haleby to simplify tailing logs from multiple Kubernetes pods with a single command.
 
 # SEE ALSO
 

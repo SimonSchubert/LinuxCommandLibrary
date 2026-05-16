@@ -1,61 +1,86 @@
 # TAGLINE
 
-attaches serial line input devices to the Linux input layer
+attach a serial line to an input-layer device
 
 # TLDR
 
-Attach a **Pulse8 CEC** device
+Attach a **Pulse8 CEC** adapter
 
-```inputattach --pulse8-cec [/dev/ttyACM0]```
+```sudo inputattach --pulse8-cec /dev/ttyACM0```
 
-Display **help** and list supported devices
+Attach a **Wacom W8001** pen-only tablet at 19200 baud
+
+```sudo inputattach --baud 19200 --w8001 /dev/ttyS0```
+
+Attach an **ELO touchscreen** and fork into the background
+
+```sudo inputattach --daemon --elo /dev/ttyS0```
+
+Attach a **Microsoft serial mouse**
+
+```sudo inputattach --microsoft /dev/ttyS0```
+
+List **supported devices**
 
 ```inputattach --help```
 
 # SYNOPSIS
 
-**inputattach** [_options_] _device_
+**inputattach** [_options_] _mode_ _device_
 
 # PARAMETERS
 
-**--pulse8-cec**
-> Pulse8 HDMI CEC adapter
-
-**--wacom_iv**
-> Wacom tablet (protocol IV)
-
-**--w8001**
-> Wacom W8001 tablet
-
-**--touchit213**
-> TouchIT 213 touchscreen
-
-**--elo**
-> ELO touchscreen
-
-**--mtouch**
-> MicroTouch touchscreen
-
 **--daemon**
-> Run in background as daemon
+> Fork into the background after attaching.
+
+**--always**
+> Ignore initialization failures and keep the device attached.
+
+**--noinit**
+> Skip device initialization.
 
 **--baud** _RATE_
-> Set serial port baud rate
+> Override the default serial baud rate.
+
+**--help**
+> Display help and list all supported device modes.
+
+Mode flags (select one):
+
+**--microsoft**, **--mouseman**, **--intellimouse**, **--mousesystems**
+> Common serial mouse protocols.
+
+**--elo**, **--mtouch**, **--touchit213**, **--fujitsu**
+> Serial touchscreen protocols.
+
+**--w8001**, **--wacom_iv**, **--wacom_v**
+> Wacom serial tablet protocols.
+
+**--pulse8-cec**, **--rainshadow-cec**
+> HDMI-CEC adapters that present as serial devices.
+
+**--magellan**, **--spaceorb**, **--spaceball**
+> 6-DOF serial input devices.
+
+**--sunkbd**, **--lkkbd**, **--stowaway**
+> Serial keyboard protocols.
 
 # DESCRIPTION
 
-**inputattach** attaches serial line input devices to the Linux input layer. It allows various input devices connected via serial ports (including USB serial adapters) to be recognized as standard Linux input devices.
+**inputattach** attaches a serial line to the Linux input subsystem. It reads raw bytes from the named serial device, decodes them according to the chosen protocol, and feeds the resulting events into the kernel where they appear as standard input devices under `/dev/input/`.
 
-Once attached, devices appear in /dev/input/ and work with standard input APIs. This is useful for touchscreens, tablets, and other specialized input devices that communicate via serial protocols.
+The program is part of the **linuxconsoletools** package. After attaching, devices can be used with libinput, evdev, X.Org, or any other consumer of the Linux input layer. With **--daemon**, inputattach detaches from the controlling terminal so it can be started from rc scripts or systemd units.
+
+For Wacom W8001 hardware, the default rate of 38400 bps covers pen-and-touch and touch-only devices. Pen-only devices need **--baud 19200**.
 
 # CAVEATS
 
-Requires appropriate permissions on the serial device. Device-specific options must match the connected hardware. May need to run as daemon for persistent attachment.
+Usually requires root or write access to the serial node. The mode flag must match the connected hardware; the wrong protocol will produce no events or garbage. Once attached, the device remains owned by inputattach until the process exits.
 
 # HISTORY
 
-inputattach has been part of the Linux input utilities for many years, providing support for legacy serial input devices. It remains useful for specialized hardware that uses serial communication protocols.
+inputattach is maintained as part of **linuxconsoletools** (formerly joyutils). The Wacom variants are also distributed by the **linuxwacom** project for use with serial Wacom tablets.
 
 # SEE ALSO
 
-[evtest](/man/evtest)(1), [libinput](/man/libinput)(1), [udev](/man/udev)(7)
+[evtest](/man/evtest)(1), [libinput](/man/libinput)(1)

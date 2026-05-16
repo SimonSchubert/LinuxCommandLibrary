@@ -1,60 +1,78 @@
 # TAGLINE
 
-graph edge coloring tool
+color edges of a laid-out graph for visual distinction
 
 # TLDR
 
-**Color graph edges**
+**Color edges** and write the result
 
 ```edgepaint [graph.dot] -o [colored.dot]```
 
-**Color with specific** angle
+**Set the minimum** incidence angle (degrees)
 
-```edgepaint -angle [15] [graph.dot]```
+```edgepaint --angle=15 [graph.dot] -o [out.dot]```
 
-**Use specific color** scheme
+**Use a specific** color scheme
 
-```edgepaint -color_scheme [accent8] [graph.dot]```
+```edgepaint --color_scheme=accent8 [graph.dot] -o [out.dot]```
+
+**Allow edges sharing an endpoint** to keep the same color
+
+```edgepaint --share_endpoint [graph.dot] -o [out.dot]```
+
+**Pipe through dot** to render a PNG
+
+```dot graph.dot | edgepaint | dot -Tpng -o out.png```
 
 # SYNOPSIS
 
-**edgepaint** [_options_] [_input_] **-o** _output_
+**edgepaint** [_options_] [_input_] [**-o** _output_]
 
 # PARAMETERS
 
-_INPUT_
-> Input DOT file.
+_input_
+> Input DOT file with node positions already laid out. Reads stdin if omitted.
 
 **-o** _FILE_
-> Output file.
+> Write output to FILE instead of stdout.
 
-**-angle** _N_
-> Minimum angle between colors.
+**--accuracy**=_e_
+> Precision for finding maximally different coloring at each node. Default 0.01.
 
-**-color_scheme** _NAME_
-> Color scheme to use.
+**--angle**=_a_
+> Color two edges differently if their incidence angle is less than _a_ degrees. Default 15.
 
-**-share_endpoint**
-> Share colors at endpoints.
+**--color_scheme**=_c_
+> Color palette: `rgb`, `gray`, `lab` (default), a list of hex colors, or any Brewer scheme name (e.g. `accent8`, `set19`).
 
-**--help**
-> Display help information.
+**--lightness**=_l1,l2_
+> Lightness range, only with `lab`. Integers 0-100. Default `0,70`.
+
+**--random_seed**=_s_
+> Seed for the randomized coloring. Negative values run multiple iterations with different seeds.
+
+**--share_endpoint**
+> Edges that share a node and are nearly anti-parallel (~180 degrees apart) are not treated as conflicting.
+
+**-v**
+> Verbose output.
+
+**-?**
+> Print usage and exit.
 
 # DESCRIPTION
 
-**edgepaint** assigns colors to edges in a graph to improve visual distinction. It's part of Graphviz and helps make complex graphs more readable by ensuring adjacent edges have different colors.
+**edgepaint** assigns colors to the edges of a graph so that adjacent or near-parallel edges receive maximally distinct colors. It expects a graph that has already been laid out (for example by **dot** or **neato**), since the algorithm uses the geometric positions of edges to decide which pairs should differ.
 
-The tool uses graph coloring algorithms to minimize color similarity between edges that share nodes or cross each other. This makes edge paths easier to follow in dense graphs.
-
-edgepaint is typically used after layout with dot or other Graphviz tools.
+Colors are written into each edge's `color` attribute and the modified DOT is emitted on stdout (or to the file given with **-o**). The default `lab` color scheme produces perceptually distinct hues; alternative Brewer schemes give a fixed small palette.
 
 # CAVEATS
 
-Input must be already laid out graph. Limited color schemes available. Very dense graphs may still be hard to read.
+Input must already contain edge geometry from a layout engine; otherwise edgepaint cannot determine angles. Very dense graphs may exhaust the palette and still produce visually similar edges. The Brewer schemes have a fixed number of colors, so large graphs should prefer `lab`.
 
 # HISTORY
 
-edgepaint is part of **Graphviz**, developed at **AT&T Labs Research**. It addresses the practical problem of visual edge distinction in automatically laid out graphs.
+**edgepaint** is part of **Graphviz**, originally developed at **AT&T Labs Research**. It implements ideas from Yifan Hu's work on edge coloring for graph readability.
 
 # SEE ALSO
 

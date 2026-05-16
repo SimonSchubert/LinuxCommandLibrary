@@ -76,11 +76,20 @@ Show package **status**
 **--unpack file.deb**
 > Unpack but don't configure a package
 
-**--get-selections**
+**--get-selections** [_pattern_]
 > Get list of package selections
 
 **--set-selections**
 > Set package selections from stdin
+
+**--audit**, **-C**
+> Search for partially installed packages and suggest how to fix them.
+
+**--force-**_things_
+> Override safety checks (e.g. **--force-all**, **--force-overwrite**). Use with care.
+
+**--no-act**, **--dry-run**, **--simulate**
+> Show what would be done without making changes.
 
 # CAVEATS
 

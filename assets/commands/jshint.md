@@ -24,9 +24,17 @@ JavaScript code quality tool
 
 ```jshint --verbose [file.js]```
 
-**Show specific warnings**
+**Show non-error data**
 
 ```jshint --show-non-errors [file.js]```
+
+**Exclude paths**
+
+```jshint --exclude [node_modules/,vendor/] [src/]```
+
+**Use a custom reporter**
+
+```jshint --reporter [checkstyle] [src/]```
 
 # SYNOPSIS
 
@@ -38,29 +46,50 @@ _FILE_
 > JavaScript files to lint.
 
 **--config** _FILE_
-> Configuration file.
+> Path to the configuration file (default: .jshintrc lookup from the file's directory upward).
 
 **--verbose**
-> Show error codes.
+> Include warning/error code (e.g. W117) in the output.
 
 **--reporter** _NAME_
-> Output format reporter.
+> Use a custom reporter: jslint, checkstyle, unix, or a path to a reporter module.
 
 **--extract** _MODE_
-> Extract JS from HTML.
+> Extract JavaScript from HTML before linting: auto, always, never (default never).
+
+**--extra-ext** _LIST_
+> Comma-separated list of additional file extensions to lint (default .js).
+
+**--exclude** _PATHS_
+> Comma-separated list of directories or files to skip.
+
+**--exclude-path** _FILE_
+> Use a file in .gitignore syntax (e.g. .jshintignore) to skip paths.
+
+**--prereq** _FILES_
+> Files included before each linted file to provide globals.
+
+**--filename** _NAME_
+> Treat stdin input as having this filename when matching configuration.
+
+**--show-non-errors**
+> Show additional analysis data (functions, globals).
+
+**--version**
+> Print the installed version.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**JSHint** is a JavaScript code quality tool. It detects errors and potential problems in JavaScript.
+**JSHint** is a JavaScript static analysis tool that detects errors and potential problems in code. It is configurable through a **.jshintrc** JSON file (or a **jshintConfig** field in package.json), allowing teams to enforce a chosen coding style.
 
-The tool is configurable to enforce coding standards. It integrates with editors and build systems.
+The CLI accepts files, directories, or stdin (use **-** as the filename). When given a directory, JSHint recursively lints every file with an extension matching **--extra-ext** (.js by default). Ignored paths can be listed in **.jshintignore**.
 
 # CAVEATS
 
-Node.js-based. Consider ESLint for modern projects. Configuration important.
+Requires Node.js. JSHint development has slowed; **ESLint** is generally preferred for new projects, especially when using modern ECMAScript or TypeScript. JSHint does not understand JSX or TypeScript natively.
 
 # HISTORY
 
@@ -68,4 +97,4 @@ JSHint was forked from **JSLint** by **Anton Kovalyov** in 2011 to provide a mor
 
 # SEE ALSO
 
-[eslint](/man/eslint)(1), [prettier](/man/prettier)(1), [tslint](/man/tslint)(1)
+[eslint](/man/eslint)(1), [prettier](/man/prettier)(1), [tslint](/man/tslint)(1), [node](/man/node)(1)

@@ -4,7 +4,7 @@ create new GitHub issues with metadata
 
 # TLDR
 
-**Create issue interactively**
+**Create an issue** interactively
 
 ```gh issue create```
 
@@ -12,21 +12,29 @@ create new GitHub issues with metadata
 
 ```gh issue create -t "[title]" -b "[body]"```
 
-**Create with labels**
+**Read the body from a** file (use - for stdin)
 
-```gh issue create -t "[title]" -l [bug] -l [urgent]```
+```gh issue create -t "[title]" -F [body.md]```
 
-**Create and assign**
+**Open the editor** to compose the issue
 
-```gh issue create -t "[title]" -a [username]```
+```gh issue create -e```
 
-**Create from template**
+**Add labels and assignees**
 
-```gh issue create --template [bug_report.md]```
+```gh issue create -t "[title]" -l [bug] -l [urgent] -a [@me]```
 
-**Create in specific repo**
+**Use an issue template** by name
+
+```gh issue create -T "[Bug report]"```
+
+**Target a specific** repository
 
 ```gh issue create -R [owner/repo] -t "[title]"```
+
+**Open the browser** form
+
+```gh issue create -w```
 
 # SYNOPSIS
 
@@ -34,42 +42,48 @@ create new GitHub issues with metadata
 
 # PARAMETERS
 
-**-t**, **--title** _title_
-> Issue title.
+**-t**, **--title** _string_
+> Issue title. Prompts if omitted.
 
-**-b**, **--body** _body_
-> Issue body.
+**-b**, **--body** _string_
+> Issue body. Prompts if omitted.
 
-**-l**, **--label** _label_
-> Add labels.
+**-F**, **--body-file** _file_
+> Read the body from a file. Use `-` to read from stdin.
 
-**-a**, **--assignee** _user_
-> Assign users.
+**-e**, **--editor**
+> Skip prompts and open `$EDITOR` to write the title and body.
+
+**-l**, **--label** _name_
+> Add a label by name. Repeatable.
+
+**-a**, **--assignee** _login_
+> Assign a user by login. `@me` self-assigns. Repeatable.
 
 **-m**, **--milestone** _name_
-> Set milestone.
+> Set the milestone by name.
 
-**-p**, **--project** _name_
-> Add to project.
+**-p**, **--project** _title_
+> Add the issue to a project by title. Repeatable.
 
-**--template** _file_
-> Use template.
+**-T**, **--template** _name_
+> Use an issue template by name.
 
-**-R**, **--repo** _owner/repo_
-> Repository.
+**--recover** _file_
+> Recover input from a failed previous run.
 
 **-w**, **--web**
-> Open in browser.
+> Open a browser to create the issue.
+
+**-R**, **--repo** _[HOST/]OWNER/REPO_
+> Target a specific repository.
 
 # DESCRIPTION
 
-**gh issue create** creates a new GitHub issue with comprehensive metadata support. Issues can be created interactively with prompts or non-interactively with command-line flags for automation.
+**gh issue create** files a new issue on GitHub with comprehensive metadata support. Without flags it walks through an interactive prompt for title, body, labels, assignees, and project assignment. With flags, every field can be supplied non-interactively for use in scripts and CI.
 
-The command supports issue templates, which provide structured formats for bug reports, feature requests, or custom issue types. Templates ensure consistent information gathering. Labels categorize issues, assignees designate responsible parties, and milestones group related work.
-
-Issues can be added directly to GitHub Projects and opened in a browser for immediate editing. The --web flag launches the browser-based creation form when more complex formatting is needed.
+Issue templates configured on the repository can be selected with **-T/--template** by name; the template body is used as the starting text. **-F/--body-file** is convenient for piping the output of another tool (for example a generated bug report) directly into a new issue. The alias `gh issue new` is equivalent.
 
 # SEE ALSO
 
-[gh-issue](/man/gh-issue)(1), [gh-issue-list](/man/gh-issue-list)(1)
-
+[gh-issue](/man/gh-issue)(1)

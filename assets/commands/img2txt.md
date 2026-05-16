@@ -55,7 +55,13 @@ Convert image to **HTML** format
 > Dithering algorithm (none, ordered2, ordered4, ordered8, random, fstein)
 
 **-f**, **--format** _FORMAT_
-> Output format: ansi, utf8, html, html3, irc, bbfr, ps, svg, tga, caca
+> Output format: ansi, utf8, html, html3, irc, bbfr, ps, svg, tga, caca (default ansi).
+
+**-v**, **--version**
+> Show version information.
+
+**-h**, **--help**
+> Display help.
 
 # DESCRIPTION
 

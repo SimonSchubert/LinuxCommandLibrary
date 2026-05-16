@@ -1,48 +1,51 @@
 # TAGLINE
 
-generates keyboard modifier mappings
+translate a Linux keytable file into an xmodmap file
 
 # TLDR
 
-**Generate modmap**
+**Translate a Linux console keymap** to xmodmap format
 
-```mk_modmap```
+```mk_modmap [keymap_file]```
 
-**Output to file**
+**Save the output** to a file
 
-```mk_modmap > [modmap.txt]```
+```mk_modmap [keymap_file] > [keymap.xmodmap]```
 
-**With specific display**
+**Translate with verbose** output
 
-```mk_modmap -display [host:0]```
+```mk_modmap -v [keymap_file]```
+
+**Dump the current keymap** and convert it
+
+```dumpkeys | mk_modmap```
 
 # SYNOPSIS
 
-**mk_modmap** [_options_]
+**mk_modmap** [**-v**] _keymap_file_
 
 # PARAMETERS
 
-**-display** _DISPLAY_
-> X display to query.
+**-v**
+> Verbose output during conversion.
 
-**--help**
-> Display help information.
+_keymap_file_
+> A Linux console keytable file (as produced by `dumpkeys` or shipped under `/usr/share/keymaps`).
 
 # DESCRIPTION
 
-**mk_modmap** generates keyboard modifier mappings. It outputs xmodmap format for X11.
+**mk_modmap** translates a Linux console keytable file into a file that can be parsed by **xmodmap** and used within X11. The translated result is written to standard output. It requires the X11 header files to be installed at build time.
 
-The tool reads current keyboard configuration and creates a modmap file for backup or transfer.
+The tool is part of the **xkeycaps** package. Modern X.Org versions initialize their keymap from the active Linux keymap, so mk_modmap is rarely needed on contemporary systems.
 
 # CAVEATS
 
-X11 specific. Output for xmodmap. Keyboard configuration only.
+X11 specific. Output for xmodmap. Not all console key actions have a direct xmodmap equivalent. Largely obsolete on modern X.Org and Wayland setups.
 
 # HISTORY
 
-mk_modmap is an **X11** utility for extracting keyboard modifier mappings to xmodmap format.
+mk_modmap ships with **xkeycaps**, originally written by Jamie Zawinski. It dates to early X11/Linux days when keyboard layouts were configured separately for the console and X server.
 
 # SEE ALSO
 
 [xmodmap](/man/xmodmap)(1), [xev](/man/xev)(1), [setxkbmap](/man/setxkbmap)(1)
-

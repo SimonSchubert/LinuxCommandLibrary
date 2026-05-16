@@ -83,4 +83,4 @@ Requires network connectivity for multiplayer. Public servers vary in availabili
 
 # SEE ALSO
 
-[xpilot-ng-server](/man/xpilot-ng-server)(6), [netrek](/man/netrek)(6)
+[xpilot](/man/xpilot)(6)

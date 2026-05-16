@@ -12,17 +12,25 @@ Analyze and visualize Kubernetes RBAC policies
 
 ```rbac-tool viz --outformat html > [rbac.html]```
 
-**Look up permissions for a specific subject**
+**Look up roles assigned to a specific subject**
 
 ```rbac-tool lookup -e [user@example.com]```
 
-**Generate RBAC policy from audit log**
+**List policy rules for a subject**
 
-```rbac-tool gen --from-audit [audit.log]```
+```rbac-tool policy-rules -e [system:serviceaccount:default:.*]```
 
-**Audit RBAC for security issues**
+**Analyze RBAC for risky configurations**
 
-```rbac-tool audit```
+```rbac-tool analysis```
+
+**Generate a ClusterRole from audit events**
+
+```rbac-tool auditgen -f [audit.log]```
+
+**Show current user's permissions**
+
+```rbac-tool whoami```
 
 # SYNOPSIS
 
@@ -31,69 +39,88 @@ Analyze and visualize Kubernetes RBAC policies
 # COMMANDS
 
 **analysis**
-> Analyze RBAC configuration.
+> Examine RBAC permissions to identify overly permissive principals and risky configurations.
 
 **viz**
-> Visualize RBAC.
+> Generate a visual representation of RBAC relationships (DOT or HTML).
 
-**who-can** _verb_ _resource_
-> Find subjects with permission.
-
-**gen**
-> Generate RBAC policy.
-
-**audit**
-> Audit permissions.
+**who-can** _verb_ _kind_|_kind/name_|_url_
+> Find all subjects with permission to perform a given action on a resource.
 
 **lookup**
-> Lookup subject permissions.
+> List Roles and ClusterRoles assigned to specified users, service accounts, or groups.
 
-# DESCRIPTION
+**policy-rules**
+> List RBAC policy rules associated with the given subjects.
 
-**rbac-tool** analyzes and visualizes Kubernetes RBAC (Role-Based Access Control) configurations. It helps understand permissions, find security issues, and generate policies.
+**generate** | **gen**
+> Generate a Role or ClusterRole with explicit permissions.
 
-# EXAMPLES
+**auditgen**
+> Generate RBAC policies from Kubernetes audit events.
 
-```bash
-# Who can delete pods?
-rbac-tool who-can delete pods
+**show**
+> Generate a ClusterRole containing the cluster's available permissions.
 
-# Who can access secrets?
-rbac-tool who-can get secrets -n default
+**whoami**
+> Display the currently authenticated subject as seen by the API server.
 
-# Visualize RBAC as HTML
-rbac-tool viz --outformat html > rbac.html
+**version**
+> Print rbac-tool version.
 
-# Analyze cluster RBAC
-rbac-tool analysis
+# PARAMETERS
 
-# Audit for issues
-rbac-tool audit
+**--outformat** _FORMAT_
+> Output format. For **viz**: `dot` or `html`. For data commands: `json`, `yaml`, `table`.
 
-# Generate policy from audit log
-rbac-tool gen --from-audit audit.log
-```
+**-e** _REGEX_
+> Subject filter as a regular expression (used with **lookup**, **policy-rules**).
 
-# OUTPUT FORMATS
+**--config** _FILE_
+> Custom analysis ruleset file (used with **analysis**).
 
-```
---outformat dot    # Graphviz DOT
---outformat html   # Interactive HTML
---outformat json   # JSON
-```
+**--cluster-context** _NAME_
+> kubeconfig context to use.
+
+**--exclude-namespaces** _LIST_
+> Comma-separated namespaces to exclude from visualization.
+
+**--generated-type** _TYPE_
+> Role or ClusterRole (used with **generate**).
+
+**--allowed-verbs** _LIST_
+> Verbs to include in generated role.
+
+**--allowed-groups** _LIST_
+> API groups to include in generated role.
+
+**--deny-resources** _LIST_
+> Resources to exclude from generated role.
+
+**--for-groups** _LIST_
+> API groups to include with the **show** command.
+
+**-f** _PATH_|_URL_
+> Source file, directory, or HTTP URL of audit events (used with **auditgen**).
 
 # CONFIGURATION
 
 **~/.kube/config**
-> Default kubeconfig file specifying cluster connections and authentication. Used by rbac-tool to connect to the target cluster.
+> Default kubeconfig used to connect to the target cluster.
+
+# DESCRIPTION
+
+**rbac-tool** analyzes and visualizes Kubernetes RBAC (Role-Based Access Control) configurations. It helps administrators understand who can do what, identify over-privileged subjects, generate least-privilege policies, and visualize the role/subject graph.
+
+The `viz` command produces a Graphviz DOT graph or an interactive HTML page. `policy-rules` and `lookup` accept regular expressions, making it easy to query large clusters.
 
 # CAVEATS
 
-Requires kubectl configuration. Some commands need cluster-admin access. Kubernetes-specific.
+Requires a working kubeconfig. Some commands need cluster-admin privileges to enumerate all roles and bindings. Generated policies should be reviewed before applying.
 
 # HISTORY
 
-rbac-tool was created to help Kubernetes administrators understand and manage complex RBAC configurations.
+**rbac-tool** is developed by **Alcide** (now part of Rapid7) and released under Apache 2.0. It was built to help Kubernetes administrators understand and manage complex RBAC configurations.
 
 # SEE ALSO
 

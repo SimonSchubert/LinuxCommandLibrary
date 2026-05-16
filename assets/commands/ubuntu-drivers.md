@@ -24,6 +24,18 @@ Show **devices** and available drivers
 
 ```ubuntu-drivers devices```
 
+**List only recommended** drivers
+
+```ubuntu-drivers list --recommended```
+
+**List GPGPU (server)** drivers
+
+```ubuntu-drivers list --gpgpu```
+
+**Install only free** drivers
+
+```sudo ubuntu-drivers install --free-only```
+
 # SYNOPSIS
 
 **ubuntu-drivers** [_options_] _command_
@@ -47,10 +59,22 @@ Show **devices** and available drivers
 > Show devices and available drivers
 
 **autoinstall**
-> Install drivers automatically (used during installation)
+> Install drivers automatically (used during system installation).
 
 **debug**
-> Print debug information for troubleshooting
+> Print debug information for troubleshooting.
+
+**--gpgpu**
+> Operate on GPGPU/server drivers (for compute workloads, not display). Use with list or install.
+
+**--recommended**
+> Restrict list/install to recommended drivers only.
+
+**--free-only**
+> Only consider free (non-proprietary) packages.
+
+**--package-list** _FILE_
+> Write the list of selected packages to FILE (used by installers).
 
 # CAVEATS
 
