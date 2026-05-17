@@ -893,6 +893,7 @@ bunny.md
 bunx.md
 bunzip2.md
 bup.md
+burn.md
 burp.md
 burpsuite.md
 busctl.md
@@ -1227,6 +1228,7 @@ coderabbit.md
 codesign.md
 codespell.md
 codex.md
+codiff.md
 codium.md
 cody.md
 coffee.md
@@ -3931,6 +3933,7 @@ lev_comp.md
 lex.md
 lexy.md
 lf.md
+lfk.md
 lft.md
 lftp.md
 lg.md
