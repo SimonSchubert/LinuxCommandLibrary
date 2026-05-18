@@ -7192,6 +7192,7 @@ switch_root.md
 switcheroo-control.md
 swupd.md
 swww.md
+sx.md
 sxhkd.md
 sxiv.md
 syft.md
@@ -7677,6 +7678,7 @@ typeorm.md
 typeset.md
 typespeed.md
 typioca.md
+typos.md
 typst.md
 typtea.md
 tz.md
