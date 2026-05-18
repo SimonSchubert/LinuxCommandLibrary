@@ -77,4 +77,4 @@ licensecheck originated in Debian as a tool for checking license compliance in p
 
 # SEE ALSO
 
-[license](/man/license)(1), [reuse](/man/reuse)(1), [scancode](/man/scancode)(1)
+[license](/man/license)(1), [reuse](/man/reuse)(1)

@@ -118,4 +118,4 @@ Capabilities vary by terminal type; not all terminals support all features. Alwa
 
 # SEE ALSO
 
-[terminfo](/man/terminfo)(5), [infocmp](/man/infocmp)(1), [tic](/man/tic)(1), [clear](/man/clear)(1), [reset](/man/reset)(1)
+[infocmp](/man/infocmp)(1), [tic](/man/tic)(1), [clear](/man/clear)(1), [reset](/man/reset)(1)

@@ -59,20 +59,18 @@ _COMMAND_
 
 # DESCRIPTION
 
-**flutter** is the command-line tool for the Flutter UI framework. It manages projects, dependencies, builds, and development workflows for cross-platform applications.
+**flutter** is the command-line tool that drives the Flutter UI framework. It scaffolds projects, manages package dependencies through **pub**, runs builds for each supported platform, and orchestrates the developer loop including hot-reload and hot-restart during **flutter run**.
 
-Flutter creates native apps for iOS, Android, web, and desktop from a single Dart codebase. The CLI handles hot reload during development and production builds for distribution.
-
-The doctor command verifies installation and identifies missing platform tools.
+A single Dart codebase compiles to native binaries for **iOS**, **Android**, **macOS**, **Linux**, **Windows**, and to JavaScript/WebAssembly for the web. The **doctor** subcommand inspects the host machine and reports missing prerequisites such as the Android SDK, Xcode, command-line tools, and the appropriate device emulators. **flutter devices** lists currently attached or running targets that **flutter run** can deploy to.
 
 # CAVEATS
 
-Requires platform SDKs (Android SDK, Xcode). Large initial download. Different platforms need different setup.
+Each target platform requires its native SDK on the host: Android SDK plus a JDK for Android, Xcode plus CocoaPods for iOS/macOS, Visual Studio for Windows, GTK/clang for Linux. Initial channel switches (**flutter channel stable | beta | master**) trigger a large download. **flutter upgrade** updates only the active channel; downgrading typically requires **flutter downgrade** or a fresh checkout of a specific tag.
 
 # HISTORY
 
-Flutter was created by **Google** and released in 2017. It provides a reactive UI framework with its own rendering engine, enabling consistent appearance across platforms.
+**Flutter** was announced by **Google** at I/O **2017** and reached **1.0** in **December 2018**. The framework uses its own GPU-accelerated rendering engine (originally Skia, now also Impeller) instead of native widget toolkits, which is what gives it identical appearance across platforms. Dart **3** brought sound null safety and patterns to the toolchain.
 
 # SEE ALSO
 
-[dart](/man/dart)(1), [flutter-pub](/man/flutter-pub)(1), [adb](/man/adb)(1)
+[dart](/man/dart)(1), [flutter-pub](/man/flutter-pub)(1), [adb](/man/adb)(1), [xcrun](/man/xcrun)(1)

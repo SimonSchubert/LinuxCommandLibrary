@@ -43,7 +43,7 @@ If there are no arguments or only null arguments, eval returns exit status 0. Ot
 
 # CAVEATS
 
-Security risk with untrusted input. Can execute arbitrary commands. Debugging eval'd commands is difficult. Quoting must be handled carefully.
+Security risk with untrusted input. Because arguments are re-parsed by the shell, **eval** with user-supplied strings is functionally equivalent to **system(unsanitized)** in C - it can run arbitrary commands, including via metacharacters and command substitution. Quoting must be planned in two layers (the layer eval sees and the layer the resulting command sees), which makes debugging difficult. Prefer arrays (**"$cmd[@]"** in bash/zsh) or **printf -v** when only variable indirection is needed, and reserve **eval** for cases like **eval "$(ssh-agent -s)"** where the input is trusted.
 
 # HISTORY
 

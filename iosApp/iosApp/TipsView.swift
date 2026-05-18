@@ -157,7 +157,6 @@ final class TipsStore: ObservableObject {
 
     deinit {
         task?.cancel()
-        viewModel.cancel()
     }
 
     func tapLink(_: String) {

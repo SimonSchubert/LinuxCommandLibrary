@@ -107,4 +107,4 @@ Editing block devices or system files requires root. No undo history - only reve
 
 # SEE ALSO
 
-[xxd](/man/xxd)(1), [hexdump](/man/hexdump)(1), [od](/man/od)(1), [bless](/man/bless)(1), [ghex](/man/ghex)(1)
+[xxd](/man/xxd)(1), [hexdump](/man/hexdump)(1), [od](/man/od)(1), [dd](/man/dd)(1)

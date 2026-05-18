@@ -101,4 +101,4 @@ Requires Git to be initialized and configured. Remote sync requires valid Git re
 
 # SEE ALSO
 
-[git](/man/git)(1), [todo.txt](/man/todo.txt)(1), [task](/man/task)(1), [org-mode](/man/org-mode)(1)
+[git](/man/git)(1), [task](/man/task)(1)

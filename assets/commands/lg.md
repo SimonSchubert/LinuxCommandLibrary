@@ -67,4 +67,4 @@ Looking Glass was introduced with **GNOME Shell 3.0** in **April 2011** as an in
 
 # SEE ALSO
 
-[gnome-shell](/man/gnome-shell)(1), [gjs](/man/gjs)(1), [gsettings](/man/gsettings)(1), [dconf](/man/dconf)(1)
+[gsettings](/man/gsettings)(1), [dconf](/man/dconf)(1)

@@ -48,4 +48,4 @@ The target directory must be empty or nonexistent; the tool will not overwrite e
 
 # SEE ALSO
 
-[apport-cli](/man/apport-cli)(1), [gdb](/man/gdb)(1), [apport-retrace](/man/apport-retrace)(1), [coredumpctl](/man/coredumpctl)(1)
+[apport-cli](/man/apport-cli)(1), [apport](/man/apport)(1), [apport-bug](/man/apport-bug)(1), [gdb](/man/gdb)(1), [coredumpctl](/man/coredumpctl)(1)

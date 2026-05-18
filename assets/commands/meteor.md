@@ -57,17 +57,17 @@ _COMMAND_
 
 # DESCRIPTION
 
-**meteor** is a full-stack JavaScript framework. It builds web and mobile apps with reactive data.
+**meteor** is the command-line driver for the **Meteor.js** full-stack JavaScript framework. Running **meteor** in a project directory bundles the client, server, and database scripts together, starts a local MongoDB instance, watches the source tree for changes, and serves the application with hot-code reload to connected clients.
 
-The tool provides real-time updates, hot code push, and integrated build system.
+Beyond the dev server, the CLI bootstraps new projects (**meteor create**), installs Atmosphere or npm packages (**meteor add**, **meteor npm install**), produces architecture-specific bundles for deployment (**meteor build**), and pushes apps to Meteor's hosted **Galaxy** platform (**meteor deploy**). Underneath sits a reactive data layer (DDP) that synchronizes documents between server-side MongoDB collections and client-side Minimongo caches over WebSockets.
 
 # CAVEATS
 
-Node.js based. MongoDB default. Learning curve for reactivity.
+Node.js-based; modern versions require Node 14 or later. MongoDB is the only first-class database, though external SQL stores can be reached through community packages. The reactivity model (Tracker, publications, subscriptions) has a learning curve and can become a performance bottleneck at scale.
 
 # HISTORY
 
-Meteor was created by **Meteor Development Group** in 2012 as a real-time web application platform.
+**Meteor** was launched by **Meteor Development Group** in **2012** and released **1.0** in **2014**. Stewardship moved to **Tiny** in **2022**, where development continues alongside Meteor's Galaxy hosting service.
 
 # SEE ALSO
 

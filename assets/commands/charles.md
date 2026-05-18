@@ -69,4 +69,4 @@ Charles Proxy was created by **Karl von Randow** and first released in **2002**.
 
 # SEE ALSO
 
-[mitmproxy](/man/mitmproxy)(1), [burpsuite](/man/burpsuite)(1), [wireshark](/man/wireshark)(1), [fiddler](/man/fiddler)(1)
+[mitmproxy](/man/mitmproxy)(1), [burpsuite](/man/burpsuite)(1), [wireshark](/man/wireshark)(1)

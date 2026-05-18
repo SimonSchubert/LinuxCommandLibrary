@@ -30,12 +30,14 @@ Upgrade the runtime itself
 
 # DESCRIPTION
 
-**bun upgrade** updates the Bun runtime itself to a newer version. By default, it upgrades to the latest stable release. Use **--canary** to get the latest development features (may be unstable).
+**bun upgrade** updates the **Bun** JavaScript runtime binary in place to a newer version. By default, it fetches the latest stable release from the official GitHub release feed and replaces the running binary. **--canary** switches to the rolling canary channel that tracks the development branch, useful for trying unreleased features or reproducing bug reports. **--version** pins the upgrade (or downgrade) to a specific published release.
+
+The command does not touch project-level packages installed under **node_modules** - those are managed by **bun install**. After upgrading, **bun --version** should report the new version. To update Bun managed by a package manager (Homebrew, npm, Scoop, ...), use that manager instead so its records stay in sync.
 
 # CAVEATS
 
-Canary builds may contain bugs or breaking changes. Production environments should use stable releases.
+Canary builds may contain bugs or breaking changes; production environments should pin to stable releases. The Bun binary must be writable by the current user; system-wide installs typically require **sudo** or the use of the original installer. **bun upgrade** does not migrate the **bun.lockb** lockfile format if a release introduces a new on-disk format.
 
 # SEE ALSO
 
-[bun](/man/bun)(1), [bun-info](/man/bun-info)(1)
+[bun](/man/bun)(1), [bun-info](/man/bun-info)(1), [npm](/man/npm)(1), [node](/man/node)(1)

@@ -57,17 +57,19 @@ _DB_ADDRESS_
 
 # DESCRIPTION
 
-**mongo** is the legacy MongoDB shell. It provides interactive JavaScript interface to MongoDB.
+**mongo** is the original interactive shell shipped with the **MongoDB** server up through release **4.4**. It is a JavaScript REPL that connects to a **mongod** or **mongos** process via the MongoDB wire protocol and exposes the database as a tree of JavaScript objects: **db**, **db.collection**, and helper methods like **find()**, **insertOne()**, and **aggregate()**.
 
-The tool connects to mongod instances. Supports queries, administration, and scripting.
+Connections accept a MongoDB URI (**mongodb://** or **mongodb+srv://**) or individual flags such as **--host**, **--port**, **-u** / **-p** / **--authenticationDatabase** for authentication, and **--tls** / **--ssl** for encrypted transports. A trailing JavaScript file plus **--eval** lets the shell be used in scripts, returning the result of the last expression on stdout.
+
+Beyond the shell, **mongo** is widely used for administrative tasks: creating users, configuring replica sets, sharding, and inspecting server status with **db.serverStatus()**.
 
 # CAVEATS
 
-Deprecated in favor of mongosh. MongoDB 4.4 and earlier. JavaScript-based.
+Deprecated and removed from official MongoDB distributions starting with **MongoDB 6.0**; new installations ship only **mongosh**, which speaks the same protocol but uses Node.js as its runtime and supports newer features such as advanced text formatting, snippets, and improved auto-completion. Some legacy administrative scripts still target **mongo**'s specific JavaScript environment (SpiderMonkey) and may need minor changes to run under **mongosh**.
 
 # HISTORY
 
-mongo was the original **MongoDB** shell, now replaced by mongosh for MongoDB 5.0+.
+The **mongo** shell appeared with the very first public MongoDB releases in **2009**. It was officially deprecated when **mongosh** entered general availability in **MongoDB 5.0** (July 2021) and was dropped from MongoDB Server **6.0** packages in **2022**.
 
 # SEE ALSO
 

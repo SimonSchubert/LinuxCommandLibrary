@@ -4,11 +4,11 @@ Chromium-based browser for the terminal
 
 # TLDR
 
-**Open URL**
+**Open a URL**
 
 ```carbonyl [https://example.com]```
 
-**Run via Docker**
+**Run inside Docker** without a local install
 
 ```docker run --rm -ti fathyb/carbonyl [https://youtube.com]```
 
@@ -16,50 +16,28 @@ Chromium-based browser for the terminal
 
 ```npm install --global carbonyl```
 
+**Quit** the running browser
+
+```press [q]```
+
 # SYNOPSIS
 
 **carbonyl** [_url_]
 
 # DESCRIPTION
 
-**carbonyl** is a Chromium-based browser that runs entirely in the terminal. It renders web pages using Unicode block characters and ANSI colors, supporting WebGL, WebGPU, audio/video playback, and animations at 60 FPS.
+**carbonyl** is a Chromium-based browser that runs entirely in the terminal. It is a fork of Chromium whose rendering pipeline has been rerouted to output Unicode block characters and ANSI color escapes instead of pushing pixels to a window server. This lets it run audio, video, WebGL, WebGPU, JavaScript, and animations at 60 FPS over an SSH session or in a kiosk-mode console where no graphical display is available.
 
-Unlike traditional text browsers, Carbonyl provides near-full web compatibility by forking Chromium and rerouting its rendering pipeline to terminal output.
-
-# FEATURES
-
-**Full web support**
-> WebGL, WebGPU, audio, video, animations
-
-**High performance**
-> 60 FPS rendering, 0% idle CPU usage
-
-**No window server**
-> Works in safe-mode console and SSH sessions
-
-**Fast startup**
-> Launches in under one second
-
-# INSTALLATION
-
-**npm**
-```
-npm install --global carbonyl
-```
-
-**Docker**
-```
-docker run --rm -ti fathyb/carbonyl https://github.com
-```
-
-# RENDERING
-
-Uses Unicode character U+2584 (▄) as virtual pixels with ANSI color codes. Each terminal cell represents two vertical pixels.
+Unlike traditional text browsers (lynx, w3m, elinks), carbonyl renders the full DOM and CSS just as Chromium would, so layouts behave the same as on a desktop browser. Each terminal cell encodes two stacked pixels using U+2584 (lower half block) with foreground and background colors, giving an effective resolution of (columns x 2) by (rows x 2) pixels.
 
 # CAVEATS
 
-Does not support browser extensions (yet). Cannot download files directly. No built-in ad blocking. Uses 50x less CPU than Browsh for equivalent content.
+Does not yet support browser extensions or downloading files directly. Ad blocking and password management must be handled by external proxies or a side-channel browser. CPU usage scales with FPS and page complexity; pages with constant animations will keep the terminal busy redrawing.
+
+# HISTORY
+
+**carbonyl** was released by **Fathy Boundjadj** in **2022** as an experimental Chromium fork. It generated wide interest as a proof of concept for running modern web applications, including videos and games, in a terminal emulator.
 
 # SEE ALSO
 
-[browsh](/man/browsh)(1), [lynx](/man/lynx)(1), [w3m](/man/w3m)(1)
+[browsh](/man/browsh)(1), [lynx](/man/lynx)(1), [w3m](/man/w3m)(1), [elinks](/man/elinks)(1)

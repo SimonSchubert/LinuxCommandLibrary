@@ -98,4 +98,4 @@ Clonezilla was created by **Steven Shiau** and the DRBL (Diskless Remote Boot in
 
 # SEE ALSO
 
-[dd](/man/dd)(1), [partclone](/man/partclone)(8), [partimage](/man/partimage)(1), [rsync](/man/rsync)(1)
+[dd](/man/dd)(1), [partclone](/man/partclone)(8), [rsync](/man/rsync)(1), [ddrescue](/man/ddrescue)(1)

@@ -57,19 +57,19 @@ _GOAL_
 
 # DESCRIPTION
 
-**mvn idea** generates IntelliJ IDEA project files. It creates .ipr, .iml, and .iws files.
+**mvn idea** invokes the legacy Maven IDEA Plugin, which generates IntelliJ IDEA project files (**.ipr**, **.iml**, and **.iws**) from a Maven POM. The plugin reads dependencies, source folders, and resources and writes them into IDEA's XML project metadata so the project opens without further configuration.
 
-The plugin converts Maven project to IDEA format. Modern IDEA imports pom.xml directly.
+Modern IntelliJ IDEA imports **pom.xml** files directly through its built-in Maven integration, making this plugin largely obsolete. It remains useful only in legacy build setups or CI scripts that need to materialize IDEA project files without launching the IDE.
 
 # CAVEATS
 
-Deprecated approach. IDEA imports Maven natively. Legacy project support.
+The plugin is no longer actively developed and was retired from the official Maven project. The generated **.iml** files may use older IDEA module formats incompatible with newer IDEA releases. Prefer File > Open on the **pom.xml** in modern IDEA.
 
 # HISTORY
 
-The Maven IDEA Plugin was created before **IntelliJ IDEA** gained native Maven import support.
+The Maven IDEA Plugin (groupId **org.apache.maven.plugins**, artifactId **maven-idea-plugin**) was created before IntelliJ IDEA gained native Maven import support. It was officially retired by Apache Maven once IDEA's first-class Maven integration matured.
 
 # SEE ALSO
 
-[mvn](/man/mvn)(1), [mvn-eclipse](/man/mvn-eclipse)(1), [idea](/man/idea)(1)
+[mvn](/man/mvn)(1), [mvn-compile](/man/mvn-compile)(1), [idea](/man/idea)(1)
 

@@ -41,9 +41,15 @@ return low-level information on Docker objects
 
 # DESCRIPTION
 
-**docker inspect** returns low-level information on Docker objects including containers, images, volumes, and networks. Output is JSON by default. This command is essential for debugging and automation, providing complete metadata about Docker objects including configuration, state, network settings, and mounts.
+**docker inspect** returns low-level information on Docker objects including containers, images, volumes, and networks. Output is JSON by default, an array of result objects, one per argument.
+
+The **--format** flag accepts a Go template for extracting specific fields, useful in shell scripts to capture values like IP addresses, mount points, or exit codes. The **{{json .Field}}** template emits raw JSON for a sub-object. The **--type** flag disambiguates when an image and container share the same name.
+
+# CAVEATS
+
+When multiple objects share a name, **--type** must be used to disambiguate. For containers, **--size** adds **SizeRw** and **SizeRootFs** fields but is expensive on large filesystems. The output schema differs between containers, images, networks, and volumes, so format templates are not portable across object types.
 
 # SEE ALSO
 
-[docker-container-inspect](/man/docker-container-inspect)(1), [docker-image-inspect](/man/docker-image-inspect)(1)
+[docker](/man/docker)(1), [docker-ps](/man/docker-ps)(1), [docker-images](/man/docker-images)(1)
 

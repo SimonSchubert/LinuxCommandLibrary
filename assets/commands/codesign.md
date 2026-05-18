@@ -106,4 +106,4 @@ Option order matters (verb before noun). Use --force to replace signatures. Requ
 
 # SEE ALSO
 
-[security](/man/security)(1), [spctl](/man/spctl)(8), [xcrun](/man/xcrun)(1)
+[xcrun](/man/xcrun)(1), [xcodebuild](/man/xcodebuild)(1)

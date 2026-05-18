@@ -77,4 +77,4 @@ smartd is part of **smartmontools**, originally developed by Bruce Allen startin
 
 # SEE ALSO
 
-[smartctl](/man/smartctl)(8), [smartd.conf](/man/smartd.conf)(5), [hddtemp](/man/hddtemp)(8)
+[smartctl](/man/smartctl)(8), [hddtemp](/man/hddtemp)(8)

@@ -37,6 +37,14 @@ The resulting tar archive contains the complete image structure, including all f
 
 Output can be directed to a file with **-o** or to stdout, allowing for flexible integration with compression tools like gzip or transmission over network connections. Use **docker image load** to restore images from these archives.
 
+# CAVEATS
+
+The archive contains the image's filesystem layers as raw tar files; it is **not** identical to a **docker export** archive (which dumps a running container's filesystem flat without history). Saving by image **ID** rather than name preserves no repository tags in the archive; pass a **name:tag** to retain them. Archives produced by newer Docker engines use the OCI manifest format and may not load cleanly into very old engines.
+
+# HISTORY
+
+**docker save** was part of the original Docker CLI from **2013**. The subcommand was reorganized under the **docker image** namespace in **Docker 1.13** (January 2017) while keeping the legacy short form as an alias.
+
 # SEE ALSO
 
-[docker-save](/man/docker-save)(1), [docker-image-load](/man/docker-image-load)(1)
+[docker-save](/man/docker-save)(1), [docker-image-load](/man/docker-image-load)(1), [docker-load](/man/docker-load)(1)

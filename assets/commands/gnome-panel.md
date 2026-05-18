@@ -29,13 +29,13 @@ traditional GNOME desktop panel and taskbar
 
 # DESCRIPTION
 
-**gnome-panel** is the traditional GNOME desktop panel. It provides the taskbar, application menu, system tray, and applet hosting for the GNOME Flashback session.
+**gnome-panel** provides the classic GNOME 2-style panel used by the **GNOME Flashback** session. It hosts the application menu, window list, system tray, clock, notification area, workspace switcher, and any number of applets (PanelApplets), arranged across one or more screen-edge panels. Layouts, applets, and applet preferences are stored in **dconf** under **/org/gnome/gnome-panel/**.
 
-The panel displays running applications, provides quick launch buttons, and hosts status applets. It is used in GNOME Flashback for a classic desktop experience.
+The panel is launched automatically when a user logs into the GNOME Flashback session; **--replace** stops a running instance and starts a fresh one, useful after editing configuration or installing new applets.
 
 # CAVEATS
 
-Part of GNOME Flashback. Modern GNOME uses gnome-shell. Requires GNOME session.
+Part of GNOME Flashback. Modern GNOME (3.x and later) uses **gnome-shell** instead, which does not load gnome-panel applets. Requires a working DBus session bus, **gnome-settings-daemon**, and the panel's GSettings schemas.
 
 # HISTORY
 
@@ -43,4 +43,4 @@ gnome-panel was the main **GNOME 2** panel, now maintained as part of GNOME Flas
 
 # SEE ALSO
 
-[gnome-calculator](/man/gnome-calculator)(1), [gnome-screenshot](/man/gnome-screenshot)(1)
+[gnome-calculator](/man/gnome-calculator)(1), [gnome-screenshot](/man/gnome-screenshot)(1), [gsettings](/man/gsettings)(1)

@@ -30,7 +30,9 @@ Show **quota**
 
 # DESCRIPTION
 
-**btrfs** is the primary management tool for btrfs filesystems. Btrfs is a modern copy-on-write (COW) filesystem for Linux featuring snapshots, subvolumes, checksums, and built-in RAID support.
+**btrfs** is the primary management tool for Btrfs (B-tree filesystem), a modern copy-on-write Linux filesystem with built-in support for snapshots, subvolumes, transparent compression, online resizing, multi-device pools, checksumming, and RAID0/1/10/5/6. The command dispatches to subcommand groups (**subvolume**, **filesystem**, **device**, **balance**, **scrub**, **send**, **receive**, **quota**, **qgroup**, **inspect-internal**, ...) that map directly to filesystem operations.
+
+Most subcommands operate on a mounted Btrfs path. The kernel does the heavy lifting; the **btrfs** binary issues IOCTLs to invoke balance, scrub, snapshot, defrag, and other operations. The **send** / **receive** pair enables efficient incremental replication of snapshots to remote hosts or backup volumes.
 
 # PARAMETERS
 

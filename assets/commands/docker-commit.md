@@ -46,8 +46,12 @@ While useful for debugging, experimentation, or saving a working state, this app
 
 # CAVEATS
 
-Does not include data in volumes. The resulting image lacks build history and is not reproducible.
+Does not include data in volumes mounted into the container. The resulting image lacks meaningful build history and is not reproducible from source. By default the container is paused for the duration of the commit (**--pause=true**); pass **--pause=false** to keep it running, at the risk of capturing an inconsistent filesystem snapshot if writes are in flight.
+
+# HISTORY
+
+**docker commit** has been in the Docker CLI since the project's first public release in **2013**. It predates Dockerfiles and was the original way to build images; modern workflows prefer **docker build** for reproducibility and **docker commit** for ad-hoc debug snapshots only.
 
 # SEE ALSO
 
-[docker](/man/docker)(1), [docker-build](/man/docker-build)(1), [docker-save](/man/docker-save)(1)
+[docker](/man/docker)(1), [docker-build](/man/docker-build)(1), [docker-save](/man/docker-save)(1), [docker-diff](/man/docker-diff)(1)

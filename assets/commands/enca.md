@@ -53,11 +53,9 @@ _FILES_
 
 # DESCRIPTION
 
-**enca** (Extremely Naive Charset Analyser) detects character encodings of text files using language-based heuristics. It can identify various encodings including legacy charsets for Central/Eastern European languages.
+**enca** (Extremely Naive Charset Analyser) detects character encodings of text files using language-based statistical heuristics, and can convert files between encodings by piping through **iconv**. It is particularly strong on legacy 8-bit charsets used for Slavic and Central/Eastern European languages (ISO-8859-2/5, KOI8-R, CP1250/1251, Mazovia, T.61, ...), where simpler tools like **file -i** struggle.
 
-The tool works best with language hints, as many encodings are ambiguous without context. It can also convert files between encodings.
-
-enca is useful for handling files with unknown or legacy encodings, particularly for Slavic and other non-Western European languages.
+Detection works best with a language hint passed via **-L**; without it, **enca** falls back to a general profile and may return ambiguous matches. The output is one detected encoding per file by default, or extended information with **-d** or **-v**. Conversion is performed in place with **-x** _ENCODING_, which calls **iconv** under the hood; pair it with **--cstocs** for transliteration when the target charset lacks specific characters.
 
 # CAVEATS
 
