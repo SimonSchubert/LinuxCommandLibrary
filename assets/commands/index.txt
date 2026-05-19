@@ -3656,6 +3656,7 @@ just.js.md
 just.md
 jwt-ui.md
 jwt.md
+jxlinfo.md
 k3d.md
 k3s.md
 k6.md
