@@ -107,4 +107,4 @@ Remind was written by **David F. Skoll** starting in 1990 as a flexible calendar
 
 # SEE ALSO
 
-[wyrd](/man/wyrd)(1), [calcurse](/man/calcurse)(1), [cal](/man/cal)(1)
+[calcurse](/man/calcurse)(1), [cal](/man/cal)(1)

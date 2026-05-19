@@ -56,4 +56,4 @@ sync has been part of Unix since the early days, ensuring filesystem consistency
 
 # SEE ALSO
 
-[fsync](/man/fsync)(2), [umount](/man/umount)(8), [shutdown](/man/shutdown)(8)
+[umount](/man/umount)(8), [shutdown](/man/shutdown)(8)

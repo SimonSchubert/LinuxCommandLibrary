@@ -4,9 +4,25 @@ PAM dynamic group assignment configuration
 
 # TLDR
 
-**View group.conf**
+**View** the group.conf file
 
 ```cat /etc/security/group.conf```
+
+**Add user** to **audio** group on every console login (rule line)
+
+```*;tty*;[user];Al0000-2400;audio```
+
+**Grant** **video** and **cdrom** to weekday logins only
+
+```login;*;[user];Wk0800-1800;video,cdrom```
+
+**Service-specific rule** for SSH only
+
+```sshd;*;[user];Al0000-2400;developers```
+
+**Enable** the module in PAM (in **/etc/pam.d/login**)
+
+```auth optional pam_group.so```
 
 # DESCRIPTION
 

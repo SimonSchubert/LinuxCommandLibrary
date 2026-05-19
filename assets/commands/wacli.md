@@ -101,4 +101,4 @@ wacli was created by **Peter Steinberger** (steipete) and written in **Go**. The
 
 # SEE ALSO
 
-[signal-cli](/man/signal-cli)(1), [neomutt](/man/neomutt)(1)
+[neomutt](/man/neomutt)(1)

@@ -68,5 +68,5 @@ Midori was created as a lightweight **GTK+** web browser for Xfce and other mini
 
 # SEE ALSO
 
-[firefox](/man/firefox)(1), [epiphany](/man/epiphany)(1), [surf](/man/surf)(1)
+[firefox](/man/firefox)(1), [surf](/man/surf)(1)
 

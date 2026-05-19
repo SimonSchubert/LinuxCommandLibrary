@@ -1,6 +1,6 @@
 # TAGLINE
 
-**/etc/pam
+Per-service PAM configuration directory
 
 # TLDR
 

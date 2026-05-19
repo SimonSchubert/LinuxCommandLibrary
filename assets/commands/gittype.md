@@ -63,4 +63,4 @@ Requires internet connection to fetch code snippets. Code snippets may vary in c
 
 # SEE ALSO
 
-[typespeed](https://github.com/typeracer/typespeed), [ttyper](https://github.com/max-niederman/ttyper), [monkeytype](https://monkeytype.com/)
+[typespeed](/man/typespeed)(1), [ttyper](/man/ttyper)(1)

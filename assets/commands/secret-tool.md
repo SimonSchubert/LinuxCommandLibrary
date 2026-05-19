@@ -4,56 +4,74 @@ Store and retrieve secrets via desktop keyring
 
 # TLDR
 
-**Store** a secret with label
+**Store** a secret (reads value from stdin) with a label and attribute pair
 
-```secret-tool store --label=label key value```
+```secret-tool store --label="[My password]" [attribute] [value]```
 
-**Retrieve** a secret
+**Look up** a stored secret by attribute
 
-```secret-tool lookup key key_name```
+```secret-tool lookup [attribute] [value]```
 
-**Search** for information about a secret
+**Search** for secrets matching attributes (metadata only)
 
-```secret-tool search key key_name```
+```secret-tool search [attribute] [value]```
 
-**Delete** a stored secret
+**Search and unlock** with all matching secrets shown
 
-```secret-tool clear key key_name```
+```secret-tool search --all --unlock [attribute] [value]```
+
+**Clear** all secrets matching attributes
+
+```secret-tool clear [attribute] [value]```
 
 # SYNOPSIS
 
-**secret-tool** _command_ [_options_] _attributes_
+**secret-tool store** **--label**=_label_ [_attribute_ _value_]...
+
+**secret-tool lookup** [_attribute_ _value_]...
+
+**secret-tool search** [**--all**] [**--unlock**] [_attribute_ _value_]...
+
+**secret-tool clear** [_attribute_ _value_]...
+
+# COMMANDS
+
+**store**
+> Store a secret. The password is read from stdin. Requires **--label** and one or more attribute/value pairs to identify the entry.
+
+**lookup**
+> Print the password of a secret matching the given attribute/value pairs.
+
+**search**
+> List secrets matching the attribute/value pairs. By default shows only the first match without unlocking.
+
+**clear**
+> Remove all secrets that match the given attribute/value pairs.
 
 # PARAMETERS
 
-**store**
-> Store a new secret
-
 **--label** _label_
-> Label for the secret
+> Human-readable label for the secret (required for **store**).
 
-**lookup**
-> Retrieve a secret
+**--all**
+> Show all matching secrets, not just the first (search only).
 
-**search**
-> Get information about secrets
-
-**clear**
-> Delete a secret
+**--unlock**
+> Unlock locked collections during the search.
 
 # DESCRIPTION
 
-**secret-tool** stores and retrieves passwords using the Freedesktop Secret Service API. It communicates with keyring implementations like gnome-keyring or KWallet.
+**secret-tool** stores and retrieves passwords using the Freedesktop Secret Service API. It communicates with running keyring daemons such as gnome-keyring or KWallet over D-Bus.
 
-Secrets are identified by key-value attribute pairs for flexible organization.
+Secrets are not addressed by name but by arbitrary attribute/value pairs (for example `service mybackup user alice`). The same pairs used to store a secret must be supplied to look it up or remove it.
 
 # CAVEATS
 
-Requires a secret service provider to be running. Secrets are stored encrypted but accessible to applications using the Secret Service.
+Requires a running Secret Service provider (gnome-keyring-daemon or kwalletd). Stored secrets are encrypted on disk but accessible to any application running as the user. Passwords are read from stdin during **store** to avoid leaking them via process listings.
 
 # HISTORY
 
-Part of **libsecret** package, providing command-line access to the Freedesktop Secret Service.
+Part of **libsecret**, the GNOME library implementing the Freedesktop Secret Service specification. **secret-tool** was added as a convenience CLI so the keyring could be scripted without writing D-Bus code.
 
 # SEE ALSO
 

@@ -92,4 +92,4 @@ Docker build has been a core Docker feature since the initial release in **2013*
 
 # SEE ALSO
 
-[docker](/man/docker)(1), [docker-run](/man/docker-run)(1), [dockerfile](/man/dockerfile)(5), [docker-compose](/man/docker-compose)(1)
+[docker](/man/docker)(1), [docker-run](/man/docker-run)(1), [docker-compose](/man/docker-compose)(1)

@@ -1,6 +1,6 @@
 # TAGLINE
 
-automatically detects and removes margins from PDF pages using
+Crop white margins from PDF pages using Ghostscript and pdfTeX
 
 # TLDR
 

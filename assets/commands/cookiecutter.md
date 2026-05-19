@@ -86,4 +86,4 @@ Templates must follow cookiecutter conventions. Git required for remote template
 
 # SEE ALSO
 
-[copier](/man/copier)(1), [yeoman](/man/yeoman)(1), [cargo-generate](/man/cargo-generate)(1)
+[copier](/man/copier)(1), [git](/man/git)(1)

@@ -4,63 +4,85 @@ Manage TigerGraph Cloud instances
 
 # TLDR
 
-**List instances**
+**Log in** to TigerGraph Cloud
 
-```tgcloud instance list```
+```tgcloud login```
 
-**Create instance**
+**List solutions** (cloud instances)
 
-```tgcloud instance create [name]```
+```tgcloud solution list```
 
-**Delete instance**
+**Create a solution** interactively
 
-```tgcloud instance delete [name]```
+```tgcloud solution create```
 
-**Show status**
+**Start a solution**
 
-```tgcloud instance status [name]```
+```tgcloud solution start [solution_id]```
 
-**Start instance**
+**Stop a solution**
 
-```tgcloud instance start [name]```
+```tgcloud solution stop [solution_id]```
+
+**Terminate (delete) a solution**
+
+```tgcloud solution terminate [solution_id]```
+
+**Backup a solution**
+
+```tgcloud backup create [solution_id]```
 
 # SYNOPSIS
 
 **tgcloud** _command_ [_subcommand_] [_options_]
 
+# SUBCOMMANDS
+
+**login**
+> Authenticate against TigerGraph Cloud using your account credentials or API token.
+
+**logout**
+> Sign out of the current session.
+
+**solution list**
+> List all solutions (cloud instances) in the account.
+
+**solution create**
+> Create a new solution (configure region, tier, version, etc.).
+
+**solution start** _id_ / **solution stop** _id_
+> Start or stop a solution.
+
+**solution terminate** _id_
+> Permanently delete a solution and its data.
+
+**backup create** _id_ / **backup list** _id_ / **backup restore** _id_
+> Manage solution backups.
+
+**user list**
+> List users in the organization.
+
 # PARAMETERS
 
-**instance**
-> Instance operations.
+**--help**, **-h**
+> Show command help.
 
-**list**
-> List instances.
-
-**create**
-> Create instance.
-
-**delete**
-> Delete instance.
-
-**status**
-> Show status.
-
-**--help**
-> Show help.
+**--verbose**
+> Verbose output.
 
 # DESCRIPTION
 
-**tgcloud** is the command-line interface for managing TigerGraph Cloud graph database instances. It provides programmatic control over cloud-hosted TigerGraph deployments, enabling instance lifecycle management including creation, deletion, starting, stopping, and status monitoring.
+**tgcloud** is the command-line interface for managing TigerGraph Cloud graph database instances ("solutions"). It provides programmatic control over cloud-hosted TigerGraph deployments, enabling instance lifecycle management (create, start, stop, terminate), backup operations, and user/organization management.
 
 The tool is designed for automation and scripting workflows, allowing DevOps teams to manage TigerGraph Cloud infrastructure from the terminal or CI/CD pipelines without using the web console.
 
 # CAVEATS
 
-TigerGraph account needed. Cloud service. Authentication required.
+Requires a TigerGraph Cloud account and active subscription. Authentication via **tgcloud login** is mandatory before other commands. Terminate operations are irreversible and delete all data in the solution unless a backup exists.
 
 # HISTORY
 
-**tgcloud** is the CLI tool for managing **TigerGraph Cloud** graph database instances.
+**tgcloud** is the official CLI for **TigerGraph Cloud**, the managed offering of the TigerGraph graph database platform.
 
 # SEE ALSO
 

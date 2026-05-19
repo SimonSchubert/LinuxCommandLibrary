@@ -40,4 +40,4 @@ The name **uc** is ambiguous and collides with Perl's built-in **uc()** function
 
 # SEE ALSO
 
-[lc](/man/lc)(1), [tc](/man/tc)(1), [tr](/man/tr)(1), [iconv](/man/iconv)(1)
+[tc](/man/tc)(1), [tr](/man/tr)(1), [iconv](/man/iconv)(1)

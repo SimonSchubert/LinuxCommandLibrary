@@ -79,4 +79,4 @@ When run without arguments, the command prompts interactively for title, body, a
 
 # SEE ALSO
 
-[gh-pr](/man/gh-pr)(1), [gh-pr-list](/man/gh-pr-list)(1)
+[gh-pr](/man/gh-pr)(1), [gh](/man/gh)(1)

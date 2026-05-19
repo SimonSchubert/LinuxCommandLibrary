@@ -106,4 +106,4 @@ Requires Balena account. Device must run BalenaOS. Internet connectivity needed 
 
 # SEE ALSO
 
-[docker](/man/docker)(1), [kubectl](/man/kubectl)(1), [etcher](/man/etcher)(1)
+[docker](/man/docker)(1), [kubectl](/man/kubectl)(1)

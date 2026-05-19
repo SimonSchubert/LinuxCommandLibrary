@@ -107,4 +107,4 @@ DSS state (storage class, MLflow endpoint, kubeconfig reference) is persisted un
 
 # SEE ALSO
 
-[kubectl](/man/kubectl)(1), [microk8s](/man/microk8s)(1), [snap](/man/snap)(1), [mlflow](/man/mlflow)(1), [jupyter](/man/jupyter)(1)
+[kubectl](/man/kubectl)(1), [snap](/man/snap)(1), [mlflow](/man/mlflow)(1), [jupyter](/man/jupyter)(1)

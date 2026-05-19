@@ -38,4 +38,4 @@ Requires AUR SSH access to be configured. The PKGBUILD must pass validation befo
 
 # SEE ALSO
 
-[makepkg](/man/makepkg)(8), [git](/man/git)(1), [mksrcinfo](/man/mksrcinfo)(1)
+[makepkg](/man/makepkg)(8), [git](/man/git)(1), [pacman](/man/pacman)(8)

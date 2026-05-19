@@ -40,28 +40,20 @@ builds PHP versions from source for use with phpenv or standalone
 
 # DESCRIPTION
 
-**php-build** builds PHP versions from source for use with phpenv or standalone. It handles downloading, configuring, compiling, and installing multiple PHP versions.
-# List versions
-php-build --definitions
+**php-build** builds PHP versions from source for use with phpenv or standalone. It handles downloading, configuring, compiling, and installing multiple PHP versions, including selecting the correct OpenSSL/curl/ICU dependencies and applying patches for older releases.
 
-# Install PHP 8.2
-php-build 8.2.0 ~/.phpenv/versions/8.2.0
-
-# With extensions
-PHP_BUILD_CONFIGURE_OPTS="--with-curl --with-openssl" \
-php-build 8.1.0 /opt/php-8.1.0
-
-# Install with verbose output
-php-build -v 8.2.5 ~/.php/8.2.5
-```
+It is normally invoked via **phpenv install** but can also be run directly to install a PHP version into any prefix.
 
 # ENVIRONMENT
 
-```bash
-PHP_BUILD_CONFIGURE_OPTS  # Extra configure options
-PHP_BUILD_EXTRA_MAKE_ARGUMENTS  # Extra make arguments
-PHP_BUILD_ROOT  # Build directory
-```
+**PHP_BUILD_CONFIGURE_OPTS**
+> Extra options passed to the PHP **./configure** script.
+
+**PHP_BUILD_EXTRA_MAKE_ARGUMENTS**
+> Additional arguments passed to **make** during compilation.
+
+**PHP_BUILD_ROOT**
+> Build root directory.
 
 # CAVEATS
 

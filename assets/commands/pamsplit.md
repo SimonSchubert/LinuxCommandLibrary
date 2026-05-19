@@ -1,47 +1,54 @@
 # TAGLINE
 
-splits multi-image files
+splits a multi-image PAM/PNM stream into separate files
 
 # TLDR
 
-**Split multi-image file**
+**Split** a multi-image PAM/PNM stream into numbered files
 
-```pamsplit [input.pam] [output%d.pam]```
+```pamsplit [input.pam] "[image%d.pam]"```
 
-**Split with padding**
+**Pad** the sequence number to a fixed width
 
-```pamsplit [input.pam] [output%03d.pam]```
+```pamsplit -padname [4] [input.pam] "[image%d.pam]"```
+
+**Use default filenames** (image0.pam, image1.pam, ...)
+
+```pamsplit [input.pam]```
+
+**Read from stdin** while writing numbered outputs
+
+```cat [stream.pnm] | pamsplit - "[frame%d.pnm]"```
 
 # SYNOPSIS
 
-**pamsplit** [_options_] _input_ _output_template_
+**pamsplit** [**-padname** _digits_] [_inputfile_] [_outputpattern_]
 
 # PARAMETERS
 
-_INPUT_
-> Multi-image PAM/PNM file.
+_inputfile_
+> Multi-image PAM/PNM input file. Use **-** or omit to read from stdin.
 
-_OUTPUT_TEMPLATE_
-> Output filename with %d placeholder.
+_outputpattern_
+> Output filename pattern containing a single **%d** which is replaced with the (zero-based) image index. Defaults to **image%d**.
 
-**-padname** _WIDTH_
-> Pad sequence numbers.
+**-padname** _digits_
+> Pad the sequence number with leading zeros to at least _digits_ characters (so **-padname 3** produces image000, image001, ...). Useful for ensuring lexicographic ordering of output files.
 
 # DESCRIPTION
 
-**pamsplit** splits multi-image files. Creates separate files per image.
+**pamsplit** reads a Netpbm stream that contains multiple concatenated PAM, PNM, PBM, PGM, or PPM images and writes each image to a separate file. The output filenames are generated from a printf-style pattern that includes a **%d** for the image index.
 
-The tool extracts image sequences. Part of Netpbm.
+The tool is the inverse of **pnmcat** / **pamcat** and is part of the **Netpbm** package.
 
 # CAVEATS
 
-Part of Netpbm. %d for sequence number. Multi-image input.
+The output pattern must contain exactly one **%d** specifier. Existing files at the generated paths are silently overwritten. For PBM/PGM/PPM streams without alpha channels, **pamsplit** preserves the original format of each frame.
 
 # HISTORY
 
-pamsplit is part of **Netpbm** for splitting multi-image files.
+**pamsplit** is part of the **Netpbm** package by Bryan Henderson and others, and supersedes the older **pnmsplit** utility from PBMplus.
 
 # SEE ALSO
 
 [pamundice](/man/pamundice)(1), [pnmcat](/man/pnmcat)(1), [netpbm](/man/netpbm)(1)
-

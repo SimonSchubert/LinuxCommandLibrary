@@ -47,4 +47,4 @@ hbpldecode was developed as part of **foo2hbpl** for Linux printing support of H
 
 # SEE ALSO
 
-[foo2hbpl](/man/foo2hbpl)(1), [hbpltops](/man/hbpltops)(1)
+[foo2hbpl](/man/foo2hbpl)(1)

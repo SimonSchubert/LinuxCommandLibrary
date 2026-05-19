@@ -4,25 +4,29 @@ Low-level node recovery and cluster operations
 
 # TLDR
 
-**Repurpose node as voting-only**
+**Clean up data** after repurposing the node (removes data no longer used by its current roles)
 
 ```elasticsearch-node repurpose```
 
-**Detach node from cluster**
+**Detach node from its cluster** so it can join another
 
 ```elasticsearch-node detach-cluster```
 
-**Override cluster state version**
+**Override cluster state version** to allow downgrade
 
 ```elasticsearch-node override-version```
 
-**Remove custom metadata**
+**Remove custom metadata** from cluster state
 
-```elasticsearch-node remove-customs```
+```elasticsearch-node remove-customs [customs]```
 
-**Unsafe bootstrap cluster**
+**Unsafely bootstrap a new cluster** from this node (data loss possible)
 
 ```elasticsearch-node unsafe-bootstrap```
+
+**Remove cluster settings** from persisted state
+
+```elasticsearch-node remove-settings [settings]```
 
 # SYNOPSIS
 
@@ -31,34 +35,42 @@ Low-level node recovery and cluster operations
 # SUBCOMMANDS
 
 **repurpose**
-> Change node roles.
+> Clean up data and indices on a node whose roles have changed so that data is no longer required (e.g. switching a data node to master-only).
 
 **detach-cluster**
-> Detach from cluster.
+> Forcibly detach the node from its current cluster, allowing it to join a new one. Used when the previous cluster is permanently lost.
 
 **override-version**
-> Override version check.
+> Override the on-disk cluster state version when starting on a newer Elasticsearch than the data was written by.
 
-**remove-customs**
-> Remove custom metadata.
+**remove-customs** _patterns_
+> Remove custom metadata entries matching the supplied patterns from the on-disk cluster state.
+
+**remove-settings** _patterns_
+> Remove persistent cluster settings matching the supplied patterns.
 
 **unsafe-bootstrap**
-> Unsafely bootstrap cluster.
+> Bootstrap a new single-node cluster from this node's on-disk data when the original cluster cannot be recovered. Can cause data loss.
 
 # PARAMETERS
 
 **-E** _setting=value_
-> Override configuration setting.
+> Override an Elasticsearch configuration setting for the tool invocation.
 
-# DESCRIPTION
+**-h**, **--help**
+> Show help.
 
-**elasticsearch-node** performs low-level operations on an Elasticsearch node. Used for recovery scenarios when the cluster is not functioning normally.
+**-s**, **--silent**
+> Show minimal output.
+
+**-v**, **--verbose**
+> Show verbose output.
 
 # CAVEATS
 
-These commands can cause data loss. Only use when following official Elasticsearch documentation for specific recovery procedures.
+These commands can cause data loss and divergence between nodes. Run only on a stopped node, on every affected node, and only after consulting the official Elasticsearch documentation for the specific recovery scenario. Always back up the data directory first.
 
 # SEE ALSO
 
-[elasticsearch](/man/elasticsearch)(1), [elasticsearch-shard](/man/elasticsearch-shard)(1)
+[elasticsearch](/man/elasticsearch)(1)
 

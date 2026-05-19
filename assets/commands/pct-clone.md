@@ -4,13 +4,25 @@ creates a copy of an existing Proxmox LXC container
 
 # TLDR
 
-**Clone** a container
+**Clone** a container (linked clone by default)
 
-```pct clone template_id new_id```
+```pct clone [template_id] [new_id]```
 
 Clone with custom **hostname**
 
-```pct clone template_id new_id --hostname name```
+```pct clone [template_id] [new_id] --hostname [name]```
+
+Create a **full (independent) copy**
+
+```pct clone [template_id] [new_id] --full```
+
+Clone to a **specific storage**
+
+```pct clone [template_id] [new_id] --full --storage [storage_name]```
+
+Clone with a **descriptive note**
+
+```pct clone [template_id] [new_id] --description "[note]"```
 
 # SYNOPSIS
 

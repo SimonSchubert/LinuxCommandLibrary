@@ -80,4 +80,4 @@ Requires Erlang/OTP installed. Native compilation deprecated in OTP 24+. Include
 
 # SEE ALSO
 
-[erl](/man/erl)(1), [rebar3](/man/rebar3)(1), [dialyzer](/man/dialyzer)(1), [escript](/man/escript)(1)
+[erl](/man/erl)(1)

@@ -22,7 +22,7 @@ Format **recursively**
 
 Format with **custom options**
 
-```astyle --indent=spaces=4 --brackets=attach [file.cpp]```
+```astyle --indent=spaces=4 --style=kr [file.cpp]```
 
 # SYNOPSIS
 
@@ -37,13 +37,13 @@ The tool supports various predefined styles (Google, Mozilla, GNU, etc.) and ext
 # PARAMETERS
 
 **--style=**_name_
-> Predefined style: allman, google, kr, linux, mozilla, gnu, java
+> Predefined style: allman, java, kr, stroustrup, whitesmith, vtk, ratliff, gnu, linux, horstmann, 1tbs, google, mozilla, webkit, pico, lisp.
 
 **--indent=**_type_
-> Indentation: spaces=n, tab, force-tab=n
+> Indentation: spaces=n, tab, force-tab=n.
 
-**--brackets=**_type_
-> Bracket style: attach, linux, break
+**--attach-braces** / **--break-braces**
+> Attach or break opening braces from headers (replaces the older **--brackets** option).
 
 **--indent-classes**
 > Indent class blocks

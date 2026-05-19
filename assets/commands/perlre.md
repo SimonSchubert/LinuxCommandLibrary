@@ -53,6 +53,10 @@ m/pattern/i     # Case insensitive
 /x  - Extended (allow whitespace)
 /o  - Compile once
 ```
+
+# CAPTURES
+
+```perl
 # Match and capture
 if ($text =~ /(\d+)/) {
     print "Found: $1\n";
@@ -87,4 +91,4 @@ Perl regular expressions were designed by **Larry Wall** and evolved through Per
 
 # SEE ALSO
 
-[perl](/man/perl)(1), [perlretut](/man/perlretut)(1), [perlreref](/man/perlreref)(1), [pcre](/man/pcre)(3)
+[perl](/man/perl)(1), [perldoc](/man/perldoc)(1)

@@ -106,4 +106,4 @@ The GNU Debugger (GDB) originated in **1986** as part of the GNU Project. ARM cr
 
 # SEE ALSO
 
-[openocd](/man/openocd)(1), [gdb](/man/gdb)(1), [arm-none-eabi-gcc](/man/arm-none-eabi-gcc)(1)
+[openocd](/man/openocd)(1), [gdb](/man/gdb)(1)
