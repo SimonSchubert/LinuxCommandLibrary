@@ -2,9 +2,13 @@ package com.linuxcommandlibrary.app.ui.screens.basicgroups
 
 import com.linuxcommandlibrary.app.data.BasicCommand
 import com.linuxcommandlibrary.app.data.BasicGroup
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.ImmutableMap
+import kotlinx.collections.immutable.persistentListOf
+import kotlinx.collections.immutable.persistentMapOf
 
 data class BasicGroupsUiState(
-    val basicGroups: List<BasicGroup> = emptyList(),
-    val collapsedMap: Map<Long, Boolean> = emptyMap(),
-    val commandsByGroupId: Map<Long, List<BasicCommand>> = emptyMap(),
+    val basicGroups: ImmutableList<BasicGroup> = persistentListOf(),
+    val collapsedMap: ImmutableMap<Long, Boolean> = persistentMapOf(),
+    val commandsByGroupId: ImmutableMap<Long, ImmutableList<BasicCommand>> = persistentMapOf(),
 )

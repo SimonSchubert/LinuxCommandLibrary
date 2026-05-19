@@ -2,6 +2,9 @@ package com.linuxcommandlibrary.app.ui.screens.commanddetail
 
 import com.linuxcommandlibrary.app.data.CommandsRepository
 import com.linuxcommandlibrary.app.data.DataManager
+import kotlinx.collections.immutable.persistentListOf
+import kotlinx.collections.immutable.toImmutableList
+import kotlinx.collections.immutable.toImmutableMap
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -36,14 +39,15 @@ class CommandDetailViewModel(
                     .map { it.groupValues[1] }
                     .filter { commandsRepository.hasCommand(it) }
                     .toList()
-            } ?: emptyList()
+                    .toImmutableList()
+            } ?: persistentListOf()
 
             _state.update {
                 CommandDetailUiState(
                     sections = sectionsData,
                     expandedSectionsMap = sectionsData.associate { section ->
                         section.id to isAutoExpandEnabled
-                    },
+                    }.toImmutableMap(),
                     isBookmarked = dataManager.hasBookmark(commandName),
                     seeAlsoCommands = seeAlsoCommands,
                 )
@@ -58,7 +62,7 @@ class CommandDetailViewModel(
     fun onToggleAllExpanded() {
         val isAllExpanded = _state.value.isAllExpanded()
         _state.update {
-            val updatedMap = it.expandedSectionsMap.mapValues { !isAllExpanded }
+            val updatedMap = it.expandedSectionsMap.mapValues { !isAllExpanded }.toImmutableMap()
             it.copy(expandedSectionsMap = updatedMap)
         }
         dataManager.setAutoExpandSections(!isAllExpanded)
@@ -69,7 +73,7 @@ class CommandDetailViewModel(
             val updatedMap = it.expandedSectionsMap.toMutableMap()
             val currentValue = updatedMap[id] ?: false
             updatedMap[id] = !currentValue
-            it.copy(expandedSectionsMap = updatedMap.toMap())
+            it.copy(expandedSectionsMap = updatedMap.toImmutableMap())
         }
     }
 

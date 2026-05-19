@@ -2,6 +2,8 @@ package com.linuxcommandlibrary.app.ui.screens.basiccategories
 
 import com.linuxcommandlibrary.app.data.BasicCategory
 import com.linuxcommandlibrary.app.data.BasicsRepository
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -13,7 +15,7 @@ class BasicCategoriesViewModel(
     private val basicsRepository: BasicsRepository,
     private val scope: CoroutineScope,
 ) {
-    private val _basicCategories = MutableStateFlow<List<BasicCategory>>(emptyList())
+    private val _basicCategories = MutableStateFlow<ImmutableList<BasicCategory>>(persistentListOf())
     val basicCategories = _basicCategories.asStateFlow()
 
     private var loadJob: Job? = null

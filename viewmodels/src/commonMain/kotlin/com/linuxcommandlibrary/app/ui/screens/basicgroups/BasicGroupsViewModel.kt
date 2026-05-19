@@ -1,6 +1,7 @@
 package com.linuxcommandlibrary.app.ui.screens.basicgroups
 
 import com.linuxcommandlibrary.app.data.BasicsRepository
+import kotlinx.collections.immutable.toImmutableMap
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -40,13 +41,13 @@ class BasicGroupsViewModel(
             val newMap = currentState.collapsedMap.toMutableMap()
             val currentValue = currentState.collapsedMap[id] ?: true
             newMap[id] = !currentValue
-            currentState.copy(collapsedMap = newMap.toMap())
+            currentState.copy(collapsedMap = newMap.toImmutableMap())
         }
     }
 
     fun expand(id: Long) {
         _uiState.update { currentState ->
-            currentState.copy(collapsedMap = currentState.collapsedMap + (id to false))
+            currentState.copy(collapsedMap = (currentState.collapsedMap + (id to false)).toImmutableMap())
         }
     }
 }

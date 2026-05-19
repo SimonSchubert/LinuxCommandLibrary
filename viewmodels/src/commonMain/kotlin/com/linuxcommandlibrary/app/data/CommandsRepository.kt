@@ -2,17 +2,20 @@ package com.linuxcommandlibrary.app.data
 
 import com.linuxcommandlibrary.shared.MarkdownParser
 import com.linuxcommandlibrary.shared.platform.AssetReader
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
+import kotlinx.collections.immutable.toImmutableList
 
 class CommandsRepository(private val assetReader: AssetReader) {
 
-    private var cachedCommands: List<CommandInfo>? = null
+    private var cachedCommands: ImmutableList<CommandInfo>? = null
     private var cachedCommandNames: Set<String>? = null
     private var cachedQueryIndex: List<Pair<CommandInfo, String>>? = null
 
-    private val sectionsCache = linkedMapOf<String, List<CommandSectionInfo>>()
+    private val sectionsCache = linkedMapOf<String, ImmutableList<CommandSectionInfo>>()
     private val sectionsCacheMaxSize = 50
 
-    fun getCommands(): List<CommandInfo> {
+    fun getCommands(): ImmutableList<CommandInfo> {
         cachedCommands?.let { return it }
 
         val files = assetReader.listFiles("commands")
@@ -27,6 +30,7 @@ class CommandsRepository(private val assetReader: AssetReader) {
                     name = name,
                 )
             }
+            .toImmutableList()
 
         cachedCommands = commands
         cachedCommandNames = commands.mapTo(HashSet()) { it.name }
@@ -34,10 +38,10 @@ class CommandsRepository(private val assetReader: AssetReader) {
         return commands
     }
 
-    fun getCommandsByQuery(query: String): List<CommandInfo> {
+    fun getCommandsByQuery(query: String): ImmutableList<CommandInfo> {
         val lowerQuery = query.lowercase()
         if (cachedQueryIndex == null) getCommands()
-        val index = cachedQueryIndex ?: return emptyList()
+        val index = cachedQueryIndex ?: return persistentListOf()
 
         return index
             .filter { (_, lowerName) -> lowerName.contains(lowerQuery) }
@@ -49,6 +53,7 @@ class CommandsRepository(private val assetReader: AssetReader) {
                 ),
             )
             .map { (cmd, _) -> cmd }
+            .toImmutableList()
     }
 
     fun hasCommand(name: String): Boolean {
@@ -57,14 +62,14 @@ class CommandsRepository(private val assetReader: AssetReader) {
         return name in names
     }
 
-    fun getSections(commandName: String): List<CommandSectionInfo> {
+    fun getSections(commandName: String): ImmutableList<CommandSectionInfo> {
         sectionsCache.remove(commandName)?.let {
             sectionsCache[commandName] = it
             return it
         }
 
         val sections = try {
-            val content = assetReader.readFile("commands/$commandName.md") ?: return emptyList()
+            val content = assetReader.readFile("commands/$commandName.md") ?: return persistentListOf()
 
             MarkdownParser.splitByHeaders(content, "# ").map { (title, sectionContent) ->
                 CommandSectionInfo(
@@ -75,8 +80,9 @@ class CommandsRepository(private val assetReader: AssetReader) {
                 )
             }.filter { it.title.uppercase() != "TAGLINE" }
                 .sortedBy { it.getSortPriority() }
+                .toImmutableList()
         } catch (e: Exception) {
-            emptyList()
+            persistentListOf()
         }
 
         sectionsCache[commandName] = sections

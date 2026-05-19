@@ -3,6 +3,9 @@ package com.linuxcommandlibrary.app.ui.screens.commandlist
 import com.linuxcommandlibrary.app.data.CommandInfo
 import com.linuxcommandlibrary.app.data.CommandsRepository
 import com.linuxcommandlibrary.app.data.DataManager
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
+import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -15,7 +18,7 @@ class CommandListViewModel(
     private val commandsRepository: CommandsRepository,
     private val scope: CoroutineScope,
 ) {
-    private val _commands = MutableStateFlow<List<CommandInfo>>(emptyList())
+    private val _commands = MutableStateFlow<ImmutableList<CommandInfo>>(persistentListOf())
     val commands = _commands.asStateFlow()
 
     /**
@@ -34,7 +37,7 @@ class CommandListViewModel(
         loadJob = scope.launch(Dispatchers.Default) {
             val all = commandsRepository.getCommands()
             dataManager.bookmarkNames.collect { bookmarks ->
-                _commands.value = all.sortedBy { it.name !in bookmarks }
+                _commands.value = all.sortedBy { it.name !in bookmarks }.toImmutableList()
             }
         }
     }

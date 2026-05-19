@@ -15,6 +15,7 @@ import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteItem
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffold
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteType
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerIcon
@@ -35,15 +36,18 @@ internal fun LinuxNavigationSuite(
     content: @Composable () -> Unit,
 ) {
     val hoverModifier = Modifier.pointerHoverIcon(PointerIcon.Hand)
-    val itemColors = NavigationItemColors(
-        selectedIconColor = MaterialTheme.colorScheme.onSurface,
-        selectedTextColor = MaterialTheme.colorScheme.onSurface,
-        selectedIndicatorColor = MaterialTheme.colorScheme.surfaceContainerHighest,
-        unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
-        unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
-        disabledIconColor = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.38f),
-        disabledTextColor = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.38f),
-    )
+    val colorScheme = MaterialTheme.colorScheme
+    val itemColors = remember(colorScheme) {
+        NavigationItemColors(
+            selectedIconColor = colorScheme.onSurface,
+            selectedTextColor = colorScheme.onSurface,
+            selectedIndicatorColor = colorScheme.surfaceContainerHighest,
+            unselectedIconColor = colorScheme.onSurfaceVariant,
+            unselectedTextColor = colorScheme.onSurfaceVariant,
+            disabledIconColor = colorScheme.onSurfaceVariant.copy(alpha = 0.38f),
+            disabledTextColor = colorScheme.onSurfaceVariant.copy(alpha = 0.38f),
+        )
+    }
     val currentKey = state.currentKey()
     NavigationSuiteScaffold(
         navigationSuiteType = layoutType,

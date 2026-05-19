@@ -24,7 +24,7 @@ import com.linuxcommandlibrary.shared.TipSectionElement
 import kotlinx.collections.immutable.ImmutableList
 
 fun buildTextElementString(
-    elements: List<TextElement>,
+    elements: ImmutableList<TextElement>,
     textColor: Color = Color.Unspecified,
     linkColor: Color = Color.Unspecified,
     onNavigate: ((NavEvent) -> Unit)? = null,
@@ -82,7 +82,7 @@ fun buildTextElementString(
 
 @Composable
 fun TipSectionContent(
-    sections: List<TipSectionElement>,
+    sections: ImmutableList<TipSectionElement>,
     onNavigate: (NavEvent) -> Unit,
     textColor: Color = Color.Unspecified,
     commandVerticalPadding: Dp = 0.dp,

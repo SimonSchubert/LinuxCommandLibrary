@@ -2,6 +2,7 @@ package com.linuxcommandlibrary.app.ui.screens.search
 
 import com.linuxcommandlibrary.app.data.BasicsRepository
 import com.linuxcommandlibrary.app.data.CommandsRepository
+import kotlinx.collections.immutable.persistentListOf
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -30,7 +31,7 @@ class SearchViewModel(
         searchJob?.cancel()
         if (searchText.isBlank()) {
             _uiState.update {
-                it.copy(filteredCommands = emptyList(), filteredBasicGroups = emptyList())
+                it.copy(filteredCommands = persistentListOf(), filteredBasicGroups = persistentListOf())
             }
             return
         }

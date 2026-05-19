@@ -2,6 +2,8 @@ package com.linuxcommandlibrary.app.ui.screens.basicgroups
 
 import com.linuxcommandlibrary.app.data.BasicsRepository
 import com.linuxcommandlibrary.shared.BasicGroup
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -16,7 +18,7 @@ class BasicEditorViewModel(
 ) {
     val showTitles: Boolean = categoryId != "terminalgames"
 
-    private val _groups = MutableStateFlow<List<BasicGroup>>(emptyList())
+    private val _groups = MutableStateFlow<ImmutableList<BasicGroup>>(persistentListOf())
     val groups = _groups.asStateFlow()
 
     private var loadJob: Job? = null

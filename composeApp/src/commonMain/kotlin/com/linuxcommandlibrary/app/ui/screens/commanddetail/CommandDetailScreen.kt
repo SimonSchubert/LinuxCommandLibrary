@@ -30,7 +30,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.unit.dp
@@ -41,6 +41,7 @@ import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
 import com.linuxcommandlibrary.app.ui.composables.WithScrollbar
 import com.linuxcommandlibrary.app.ui.composables.rememberDebouncedClick
 import com.linuxcommandlibrary.shared.TipSectionElement
+import kotlinx.collections.immutable.ImmutableList
 
 @Composable
 fun CommandDetailScreen(
@@ -97,7 +98,7 @@ fun CommandDetailContent(
 private fun CommandSectionColumn(
     section: CommandSectionInfo,
     isExpanded: Boolean,
-    seeAlsoCommands: List<String>,
+    seeAlsoCommands: ImmutableList<String>,
     onToggleExpanded: (Long) -> Unit,
     onNavigate: (NavEvent) -> Unit,
 ) {
@@ -121,7 +122,7 @@ private fun CommandSectionColumn(
             imageVector = AppIcons.ExpandMore,
             contentDescription = null,
             tint = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.rotate(chevronRotation),
+            modifier = Modifier.graphicsLayer { rotationZ = chevronRotation },
         )
     }
 
@@ -151,8 +152,8 @@ private fun CommandSectionColumn(
 
 @Composable
 private fun SeeAlsoSectionContent(
-    parsedContent: List<TipSectionElement>,
-    seeAlsoCommands: List<String>,
+    parsedContent: ImmutableList<TipSectionElement>,
+    seeAlsoCommands: ImmutableList<String>,
     onNavigate: (NavEvent) -> Unit,
 ) {
     if (seeAlsoCommands.isNotEmpty()) {
@@ -182,7 +183,7 @@ private fun SeeAlsoSectionContent(
 
 @Composable
 private fun DefaultSectionContent(
-    parsedContent: List<TipSectionElement>,
+    parsedContent: ImmutableList<TipSectionElement>,
     onNavigate: (NavEvent) -> Unit,
 ) {
     Column(

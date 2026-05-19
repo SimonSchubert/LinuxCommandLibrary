@@ -27,7 +27,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.unit.dp
@@ -40,6 +40,9 @@ import com.linuxcommandlibrary.app.ui.composables.WithScrollbar
 import com.linuxcommandlibrary.app.ui.composables.getIconId
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
 import com.linuxcommandlibrary.shared.getCommandList
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
+import kotlinx.collections.immutable.toImmutableList
 
 @Composable
 fun BasicGroupsScreen(
@@ -96,7 +99,7 @@ fun BasicGroupsContent(
                 ) { basicGroup ->
                     BasicGroupColumn(
                         basicGroup = basicGroup,
-                        commands = uiState.commandsByGroupId[basicGroup.id] ?: emptyList(),
+                        commands = uiState.commandsByGroupId[basicGroup.id] ?: persistentListOf(),
                         isExpanded = !(uiState.collapsedMap[basicGroup.id] ?: true),
                         onToggleCollapse = { toggleCollapse(basicGroup.id) },
                         onNavigate = onNavigate,
@@ -110,7 +113,7 @@ fun BasicGroupsContent(
 @Composable
 fun BasicGroupColumn(
     basicGroup: BasicGroup,
-    commands: List<BasicCommand> = emptyList(),
+    commands: ImmutableList<BasicCommand> = persistentListOf(),
     isExpanded: Boolean,
     onToggleCollapse: () -> Unit,
     onNavigate: (NavEvent) -> Unit = {},
@@ -144,7 +147,7 @@ fun BasicGroupColumn(
             imageVector = AppIcons.ExpandMore,
             contentDescription = null,
             tint = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.rotate(chevronRotation),
+            modifier = Modifier.graphicsLayer { rotationZ = chevronRotation },
         )
     }
 
@@ -169,13 +172,13 @@ fun BasicGroupColumn(
 
 @Composable
 private fun ExpandedGroupContent(
-    commands: List<BasicCommand>,
+    commands: ImmutableList<BasicCommand>,
     onNavigate: (NavEvent) -> Unit,
 ) {
     Column(modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)) {
         commands.forEach { basicCommand ->
             val elements = remember(basicCommand.command, basicCommand.mans) {
-                basicCommand.command.getCommandList(basicCommand.mans)
+                basicCommand.command.getCommandList(basicCommand.mans).toImmutableList()
             }
             CommandView(
                 command = basicCommand.command,

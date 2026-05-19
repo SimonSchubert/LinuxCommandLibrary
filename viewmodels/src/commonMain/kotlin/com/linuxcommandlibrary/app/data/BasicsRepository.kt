@@ -4,13 +4,20 @@ import com.linuxcommandlibrary.shared.BasicInfo
 import com.linuxcommandlibrary.shared.MarkdownParser
 import com.linuxcommandlibrary.shared.basicsSortOrder
 import com.linuxcommandlibrary.shared.platform.AssetReader
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.ImmutableMap
+import kotlinx.collections.immutable.persistentListOf
+import kotlinx.collections.immutable.persistentMapOf
+import kotlinx.collections.immutable.toImmutableList
+import kotlinx.collections.immutable.toImmutableMap
 
 class BasicsRepository(private val assetReader: AssetReader) {
 
-    private var cachedCategories: List<BasicCategory>? = null
-    private val cachedGroupsAndCommands = mutableMapOf<String, Pair<List<BasicGroup>, Map<Long, List<BasicCommand>>>>()
+    private var cachedCategories: ImmutableList<BasicCategory>? = null
+    private val cachedGroupsAndCommands =
+        mutableMapOf<String, Pair<ImmutableList<BasicGroup>, ImmutableMap<Long, ImmutableList<BasicCommand>>>>()
 
-    fun getCategories(): List<BasicCategory> {
+    fun getCategories(): ImmutableList<BasicCategory> {
         cachedCategories?.let { return it }
 
         val files = assetReader.listFiles("basics")
@@ -27,6 +34,7 @@ class BasicsRepository(private val assetReader: AssetReader) {
                 }
             }
             .sortedBy { basicsSortOrder.indexOf(it.title) }
+            .toImmutableList()
 
         cachedCategories = categories
         return categories
@@ -39,14 +47,17 @@ class BasicsRepository(private val assetReader: AssetReader) {
         null
     }
 
-    fun getGroupsAndCommands(categoryId: String): Pair<List<BasicGroup>, Map<Long, List<BasicCommand>>> {
+    fun getGroupsAndCommands(
+        categoryId: String,
+    ): Pair<ImmutableList<BasicGroup>, ImmutableMap<Long, ImmutableList<BasicCommand>>> {
         cachedGroupsAndCommands[categoryId]?.let { return it }
 
         val groups = mutableListOf<BasicGroup>()
         val commandsByGroupId = mutableMapOf<Long, MutableList<BasicCommand>>()
 
         try {
-            val content = assetReader.readFile("basics/$categoryId.md") ?: return Pair(emptyList(), emptyMap())
+            val content = assetReader.readFile("basics/$categoryId.md")
+                ?: return Pair(persistentListOf(), persistentMapOf())
 
             val groupSections = MarkdownParser.splitByHeaders(content, "## ")
 
@@ -73,7 +84,10 @@ class BasicsRepository(private val assetReader: AssetReader) {
             // Return empty on error
         }
 
-        val result = Pair<List<BasicGroup>, Map<Long, List<BasicCommand>>>(groups, commandsByGroupId)
+        val result = Pair(
+            groups.toImmutableList(),
+            commandsByGroupId.mapValues { it.value.toImmutableList() }.toImmutableMap(),
+        )
         cachedGroupsAndCommands[categoryId] = result
         return result
     }
@@ -88,8 +102,8 @@ class BasicsRepository(private val assetReader: AssetReader) {
     fun usesCardLayout(categoryId: String): Boolean = categoryId.endsWith("texteditor") ||
         categoryId in setOf("shellscripting", "tmux", "regularexpressions", "terminalgames")
 
-    fun getMatchingGroups(query: String): List<BasicGroupMatch> {
-        if (query.isBlank()) return emptyList()
+    fun getMatchingGroups(query: String): ImmutableList<BasicGroupMatch> {
+        if (query.isBlank()) return persistentListOf()
         val lower = query.lowercase()
         val matches = mutableListOf<BasicGroupMatch>()
         for (category in getCategories()) {
@@ -105,7 +119,7 @@ class BasicsRepository(private val assetReader: AssetReader) {
                 }
             }
         }
-        return matches
+        return matches.toImmutableList()
     }
 
     private fun parseCommandLine(line: String): Pair<String, String> {

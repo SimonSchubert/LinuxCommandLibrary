@@ -4,18 +4,20 @@ import com.linuxcommandlibrary.shared.MarkdownParser
 import com.linuxcommandlibrary.shared.TipInfo
 import com.linuxcommandlibrary.shared.TipSectionElement
 import com.linuxcommandlibrary.shared.platform.AssetReader
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
 
 class TipsRepository(private val assetReader: AssetReader) {
 
-    fun getTips(): List<TipInfo> = try {
-        val content = assetReader.readFile("tips.md") ?: return emptyList()
+    fun getTips(): ImmutableList<TipInfo> = try {
+        val content = assetReader.readFile("tips.md") ?: return persistentListOf()
         parseTips(content)
     } catch (e: Exception) {
-        emptyList()
+        persistentListOf()
     }
 
-    private fun parseTips(content: String): List<TipInfo> {
+    private fun parseTips(content: String): ImmutableList<TipInfo> {
         val tips = mutableListOf<TipInfo>()
 
         val tipBlocks = content.split(Regex("(?=^## )", RegexOption.MULTILINE))
@@ -39,7 +41,7 @@ class TipsRepository(private val assetReader: AssetReader) {
             )
         }
 
-        return tips
+        return tips.toImmutableList()
     }
 
     private fun parseContent(lines: List<String>): List<TipSectionElement> {

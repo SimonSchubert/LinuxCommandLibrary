@@ -5,7 +5,9 @@ import com.linuxcommandlibrary.app.platform.showAndroidTerminalTip
 import com.linuxcommandlibrary.shared.TextElement
 import com.linuxcommandlibrary.shared.TipInfo
 import com.linuxcommandlibrary.shared.TipSectionElement
+import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
+import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
@@ -18,9 +20,9 @@ class TipsViewModel(
     // coroutines on a Koin-managed scope.
     val tips = MutableStateFlow(loadInitialTips()).asStateFlow()
 
-    private fun loadInitialTips(): List<TipInfo> {
+    private fun loadInitialTips(): ImmutableList<TipInfo> {
         val tips = tipsRepository.getTips()
-        return if (showAndroidTerminalTip) tips + createTerminalSetupTip() else tips
+        return if (showAndroidTerminalTip) (tips + createTerminalSetupTip()).toImmutableList() else tips
     }
 
     private fun createTerminalSetupTip(): TipInfo {
