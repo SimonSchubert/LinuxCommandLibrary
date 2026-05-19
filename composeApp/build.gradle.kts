@@ -6,7 +6,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools:sdk-common:31.10.0")
+        classpath(libs.android.sdk.common)
     }
 }
 

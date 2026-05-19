@@ -25,7 +25,7 @@ android {
 
     sourceSets {
         getByName("main") {
-            assets.srcDirs(
+            assets.directories.add(
                 "${project(":composeApp").projectDir}/build/generated/compose/resourceGenerator/preparedResources/commonMain",
             )
         }
@@ -121,7 +121,7 @@ dependencies {
     testImplementation(libs.kotlinx.collections.immutable)
     testImplementation(libs.koin.core)
     testImplementation(libs.koin.compose)
-    testImplementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.10.0")
-    testImplementation("androidx.lifecycle:lifecycle-runtime-compose:2.10.0")
-    testImplementation("androidx.savedstate:savedstate-compose:1.4.0")
+    testImplementation(libs.androidx.lifecycle.viewmodel.compose)
+    testImplementation(libs.androidx.lifecycle.runtime.compose)
+    testImplementation(libs.androidx.savedstate.compose)
 }
