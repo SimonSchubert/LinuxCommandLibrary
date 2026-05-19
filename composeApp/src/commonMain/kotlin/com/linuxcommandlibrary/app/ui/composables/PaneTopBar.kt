@@ -16,6 +16,9 @@ import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.platform.backIcon
+import com.linuxcommandlibrary.app.resources.Res
+import com.linuxcommandlibrary.app.resources.back
+import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -39,7 +42,7 @@ fun PaneTopBar(
                     modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
                     onClick = onBack,
                 ) {
-                    Icon(imageVector = backIcon, contentDescription = "Back")
+                    Icon(imageVector = backIcon, contentDescription = stringResource(Res.string.back))
                 }
             }
         },

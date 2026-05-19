@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Biblioteka Poleceń Linux</string>
+    <string name="commands">Polecenia</string>
+    <string name="basics">Podstawy</string>
+    <string name="tips">Wskazówki</string>
+    <string name="info">Informacje</string>
+    <string name="add_bookmark">Dodaj zakładkę</string>
+    <string name="remove_bookmark">Usuń zakładkę</string>
+    <string name="collapse_all">Zwiń wszystko</string>
+    <string name="expand_all">Rozwiń wszystko</string>
+    <string name="search">Szukaj</string>
+    <string name="back">Wstecz</string>
+    <string name="reset">Resetuj</string>
+    <string name="share">Udostępnij</string>
+
+</resources>

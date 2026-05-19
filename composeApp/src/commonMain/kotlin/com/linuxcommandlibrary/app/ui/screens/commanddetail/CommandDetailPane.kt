@@ -14,9 +14,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import com.linuxcommandlibrary.app.NavEvent
+import com.linuxcommandlibrary.app.resources.Res
+import com.linuxcommandlibrary.app.resources.add_bookmark
+import com.linuxcommandlibrary.app.resources.collapse_all
+import com.linuxcommandlibrary.app.resources.expand_all
+import com.linuxcommandlibrary.app.resources.remove_bookmark
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
 import com.linuxcommandlibrary.app.ui.composables.PaneTopBar
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
+import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.currentKoinScope
 import org.koin.core.parameter.parametersOf
 
@@ -54,7 +60,7 @@ fun CommandDetailPane(
                 ) {
                     Icon(
                         painter = expandPainter,
-                        contentDescription = if (isAllExpanded) "Collapse all" else "Expand all",
+                        contentDescription = if (isAllExpanded) stringResource(Res.string.collapse_all) else stringResource(Res.string.expand_all),
                     )
                 }
                 IconButton(
@@ -65,7 +71,7 @@ fun CommandDetailPane(
                 ) {
                     Icon(
                         painter = bookmarkPainter,
-                        contentDescription = if (uiState.isBookmarked) "Remove bookmark" else "Add bookmark",
+                        contentDescription = if (uiState.isBookmarked) stringResource(Res.string.remove_bookmark) else stringResource(Res.string.add_bookmark),
                     )
                 }
             },

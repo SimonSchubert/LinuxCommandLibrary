@@ -27,6 +27,9 @@ import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.BasicsRepository
 import com.linuxcommandlibrary.app.nav.TabStackEntry
 import com.linuxcommandlibrary.app.nav.TabStackEntryContent
+import com.linuxcommandlibrary.app.resources.Res
+import com.linuxcommandlibrary.app.resources.search
+import com.linuxcommandlibrary.app.resources.select_a_category
 import com.linuxcommandlibrary.app.ui.composables.InlineSearchField
 import com.linuxcommandlibrary.app.ui.composables.PaneTopBar
 import com.linuxcommandlibrary.app.ui.composables.SearchOverlayBox
@@ -40,6 +43,7 @@ import com.linuxcommandlibrary.app.ui.screens.basicgroups.BasicGroupsViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.currentKoinScope
 import org.koin.compose.koinInject
 import org.koin.core.parameter.parametersOf
@@ -112,7 +116,7 @@ internal fun BasicsPaneScreen(
                         .fillMaxSize()
                         .background(MaterialTheme.colorScheme.surface),
                 ) {
-                    InlineSearchField(searchState = searchState, placeholder = "Search")
+                    InlineSearchField(searchState = searchState, placeholder = stringResource(Res.string.search))
                     SearchOverlayBox(
                         searchState = searchState,
                         onNavigate = onNavigate,
@@ -146,7 +150,7 @@ internal fun BasicsPaneScreen(
                             contentAlignment = Alignment.Center,
                         ) {
                             Text(
-                                text = "Select a category",
+                                text = stringResource(Res.string.select_a_category),
                                 style = MaterialTheme.typography.bodyLarge,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )

@@ -3,6 +3,7 @@ package com.inspiredandroid.linuxcommandbibliotheca
 import android.app.Application
 import com.linuxcommandlibrary.app.di.commonModule
 import com.linuxcommandlibrary.app.di.platformModule
+import com.linuxcommandlibrary.ai.di.aiModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin
@@ -15,7 +16,7 @@ class LinuxApplication : Application() {
         startKoin {
             androidLogger()
             androidContext(this@LinuxApplication)
-            modules(commonModule, platformModule())
+            modules(commonModule, platformModule(), aiModule)
         }
     }
 }

@@ -1,15 +1,20 @@
 package com.linuxcommandlibrary.app.nav
 
+import com.linuxcommandlibrary.app.resources.Res
+import com.linuxcommandlibrary.app.resources.basics
+import com.linuxcommandlibrary.app.resources.commands
+import com.linuxcommandlibrary.app.resources.tips
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
+import org.jetbrains.compose.resources.StringResource
 
 internal data class TopLevelDestination(
     val key: RouteKey,
-    val label: String,
+    val label: StringResource,
     val icon: AppIcon,
 )
 
 internal val TopLevelDestinations: List<TopLevelDestination> = listOf(
-    TopLevelDestination(RouteKey.Basics, "Basics", AppIcon.PUZZLE),
-    TopLevelDestination(RouteKey.Tips, "Tips", AppIcon.IDEA),
-    TopLevelDestination(RouteKey.Commands, "Commands", AppIcon.SEARCH),
+    TopLevelDestination(RouteKey.Basics, Res.string.basics, AppIcon.PUZZLE),
+    TopLevelDestination(RouteKey.Tips, Res.string.tips, AppIcon.IDEA),
+    TopLevelDestination(RouteKey.Commands, Res.string.commands, AppIcon.SEARCH),
 )

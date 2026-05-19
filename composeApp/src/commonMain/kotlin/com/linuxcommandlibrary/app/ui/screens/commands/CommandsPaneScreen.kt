@@ -24,6 +24,9 @@ import androidx.compose.ui.Modifier
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.nav.TabStackEntry
 import com.linuxcommandlibrary.app.nav.TabStackEntryContent
+import com.linuxcommandlibrary.app.resources.Res
+import com.linuxcommandlibrary.app.resources.search
+import com.linuxcommandlibrary.app.resources.select_a_command
 import com.linuxcommandlibrary.app.ui.composables.InlineSearchField
 import com.linuxcommandlibrary.app.ui.composables.SearchOverlayBox
 import com.linuxcommandlibrary.app.ui.composables.SearchState
@@ -33,6 +36,7 @@ import com.linuxcommandlibrary.app.ui.screens.commandlist.CommandListViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 
 @OptIn(ExperimentalMaterial3AdaptiveApi::class)
@@ -113,7 +117,7 @@ internal fun CommandsPaneScreen(
                 } else {
                     val selected = navigator.currentDestination?.contentKey
                     if (selected == null) {
-                        EmptyDetailPlaceholder("Select a command")
+                        EmptyDetailPlaceholder(stringResource(Res.string.select_a_command))
                     } else {
                         CommandDetailPane(
                             commandName = selected,
@@ -145,7 +149,7 @@ private fun CommandsListPane(
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.surface),
     ) {
-        InlineSearchField(searchState = searchState, placeholder = "Search")
+        InlineSearchField(searchState = searchState, placeholder = stringResource(Res.string.search))
         SearchOverlayBox(
             searchState = searchState,
             onNavigate = onNavigate,

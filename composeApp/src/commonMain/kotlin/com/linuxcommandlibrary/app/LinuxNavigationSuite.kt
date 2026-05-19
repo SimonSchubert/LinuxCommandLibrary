@@ -25,6 +25,7 @@ import com.linuxcommandlibrary.app.nav.TopLevelDestinations
 import com.linuxcommandlibrary.app.nav.route
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
 import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
+import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalMaterial3AdaptiveApi::class)
 @Composable
@@ -67,7 +68,7 @@ internal fun LinuxNavigationSuite(
                             modifier = Modifier.size(24.dp),
                         )
                     },
-                    label = { Text(dest.label) },
+                    label = { Text(stringResource(dest.label)) },
                     colors = itemColors,
                 )
             }
