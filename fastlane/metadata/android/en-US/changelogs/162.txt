@@ -1,0 +1,4 @@
+Add new Linux commands
+Refine command documentation
+Improve app performance
+Clean up Gradle build configuration

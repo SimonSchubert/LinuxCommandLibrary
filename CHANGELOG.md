@@ -1,3 +1,13 @@
+## v4.0.5 — 2026-05-19
+
+### Features
+- Added new Linux commands across multiple batches
+
+### Improvements
+- Refined command documentation across many entries
+- Improved app performance
+- Cleaned up Gradle build configuration
+
 ## v4.0.4 — 2026-05-16
 
 ### Features
