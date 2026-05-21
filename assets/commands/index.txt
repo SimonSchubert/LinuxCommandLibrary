@@ -1492,10 +1492,12 @@ d8.md
 daemon.md
 daemonize.md
 daff.md
+dagger.md
 dagster.md
 dalfox.md
 daphne.md
 daps.md
+dari-docs.md
 darkhttpd.md
 darktable-cli.md
 darling.md
@@ -1669,6 +1671,7 @@ dnf-install.md
 dnf-module.md
 dnf-repoquery.md
 dnf-reposync.md
+dnf-system-upgrade.md
 dnf-versionlock.md
 dnf.md
 dnf4.md
@@ -6511,6 +6514,7 @@ rmarkdown.md
 rmdir.md
 rmlint.md
 rmmod.md
+rmux.md
 rnano.md
 rndc.md
 rnm.md
@@ -7022,6 +7026,7 @@ sq.md
 sqfscat.md
 sqfstar.md
 sqlcmd.md
+sqlfluff.md
 sqlit.md
 sqlite-utils.md
 sqlite3.md
@@ -8337,6 +8342,7 @@ yank.md
 yaourt.md
 yap.md
 yapf.md
+yapsnap.md
 yara.md
 yarac.md
 yard.md
