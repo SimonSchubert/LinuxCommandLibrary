@@ -6581,6 +6581,7 @@ rtmon.md
 rtmpdump.md
 rtorrent.md
 rtv.md
+rubish.md
 rubocop.md
 ruby.md
 rucola.md
@@ -7716,6 +7717,7 @@ ugm.md
 ugrep.md
 uigen.md
 uinput.md
+ukify.md
 ul.md
 ulimit.md
 umask.md
