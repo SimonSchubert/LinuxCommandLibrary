@@ -1,3 +1,11 @@
+## v4.0.6 — 2026-05-26
+
+### Features
+- Added new Linux commands across multiple batches
+
+### Improvements
+- Upgraded dependencies and SDKs
+
 ## v4.0.5 — 2026-05-19
 
 ### Features
