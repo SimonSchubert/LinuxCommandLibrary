@@ -2341,6 +2341,7 @@ fuck.md
 fulcio.md
 func.md
 function.md
+fungible.md
 funzip.md
 fuser.md
 fusermount.md
@@ -3731,6 +3732,7 @@ kimi.md
 kind.md
 kinfocenter.md
 kinit.md
+kioclient.md
 kismet.md
 kite.md
 kiterunner-brute.md
@@ -3751,6 +3753,7 @@ knife.md
 knock.md
 knockd.md
 knotc.md
+ko.md
 koboldcpp.md
 kodi-send.md
 koji-build.md
@@ -6661,6 +6664,7 @@ samba.md
 samhain.md
 sample.md
 sampler.md
+samply.md
 samtools.md
 sane-find-scanner.md
 saned.md
