@@ -24,3 +24,51 @@ platform :android do
     )
   end
 end
+
+platform :ios do
+  desc "Build, archive, upload to App Store Connect, submit for review, auto-release"
+  lane :deploy do
+    app_store_connect_api_key(
+      key_id: ENV.fetch("ASC_KEY_ID"),
+      issuer_id: ENV.fetch("ASC_ISSUER_ID"),
+      key_filepath: File.expand_path("~/.appstoreconnect/private_keys/AuthKey_#{ENV.fetch('ASC_KEY_ID')}.p8"),
+      in_house: false,
+    )
+    build_app(
+      project: "iosApp/iosApp.xcodeproj",
+      scheme: "iosApp",
+      configuration: "Release",
+      export_method: "app-store",
+      export_options: "iosApp/ExportOptions.plist",
+      output_directory: "build/ios",
+      clean: true,
+      xcargs: "-allowProvisioningUpdates",
+    )
+    notes_path = File.join(__dir__, "metadata/ios/en-US/release_notes.txt")
+    unless File.exist?(notes_path)
+      UI.user_error!("Release notes file missing: #{notes_path}. Run /release first (it writes this file in step 7), or create it manually with the 'What's New' text.")
+    end
+    release_notes = File.read(notes_path).strip
+    upload_to_testflight(
+      changelog: release_notes,
+      skip_submission: true,
+      skip_waiting_for_build_processing: false,
+    )
+    upload_to_app_store(
+      metadata_path: File.join(__dir__, "metadata/ios"),
+      release_notes: { "en-US" => release_notes },
+      skip_binary_upload: true,
+      skip_screenshots: true,
+      skip_metadata: false,
+      submit_for_review: true,
+      automatic_release: true,
+      force: true,
+      precheck_include_in_app_purchases: false,
+      submission_information: {
+        export_compliance_uses_encryption: false,
+        content_rights_contains_third_party_content: false,
+        add_id_info_uses_idfa: false,
+      },
+    )
+  end
+end

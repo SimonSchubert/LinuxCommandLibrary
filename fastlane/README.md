@@ -33,6 +33,19 @@ Deploy AAB to Play Store production
 
 ----
 
+
+## iOS
+
+### ios deploy
+
+```sh
+[bundle exec] fastlane ios deploy
+```
+
+Build, archive, upload to App Store Connect, submit for review, auto-release
+
+----
+
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
 
 More information about _fastlane_ can be found on [fastlane.tools](https://fastlane.tools).
