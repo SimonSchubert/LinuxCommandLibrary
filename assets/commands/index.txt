@@ -2861,6 +2861,7 @@ go.md
 goaccess.md
 gobackup.md
 gobang.md
+gobee.md
 gobuster.md
 gocr.md
 gocryptfs.md
@@ -6358,6 +6359,7 @@ random.md
 ranger.md
 rankmirrors.md
 ranlib.md
+rapel.md
 rapper.md
 rar.md
 rar2john.md
