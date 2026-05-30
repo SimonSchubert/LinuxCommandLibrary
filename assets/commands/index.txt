@@ -144,7 +144,9 @@ airolib-ng.md
 airpaste.md
 airserv-ng.md
 airshare.md
+airtop.md
 airtun-ng.md
+aislop.md
 ajson.md
 ak.md
 alacritty.md
@@ -3085,6 +3087,7 @@ haproxy.md
 hardcover-tui.md
 hardhat.md
 hardinfo.md
+hardlink.md
 harlequin.md
 has.md
 hash.md
@@ -3405,6 +3408,7 @@ incus.md
 indent.md
 indxbib.md
 infection.md
+inference-snaps.md
 influx.md
 info.md
 infocmp.md
@@ -6457,6 +6461,7 @@ remmina.md
 remote-viewer.md
 removepkg.md
 rename.md
+rename.ul.md
 rename.util.md
 renice.md
 renux.md
@@ -7434,6 +7439,7 @@ tetris.md
 tewi.md
 tex-fmt.md
 tex.md
+texconfig.md
 texcount.md
 texdoc.md
 texliveonfly.md
