@@ -57,4 +57,4 @@ Supported models (as of 2026) include DeepSeek R1, Google Gemma 3/4, Nemotron, Q
 
 # SEE ALSO
 
-[ollama](ollama)(1), [llama.cpp](llama.cpp) tools, [huggingface-cli](huggingface-cli)(1)
+[ollama](/man/ollama)(1), [llama.cpp](/man/llama.cpp) tools, [huggingface-cli](/man/huggingface-cli)(1)

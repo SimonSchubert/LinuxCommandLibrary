@@ -53,4 +53,4 @@ Because it only operates on basenames and does not cross directory boundaries by
 
 # SEE ALSO
 
-[rename](rename)(1) (Perl version on Debian), [mmv](mmv)(1), [prename](prename)(1)
+[rename](/man/rename)(1) (Perl version on Debian), [mmv](/man/mmv)(1), [prename](/man/prename)(1)

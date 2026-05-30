@@ -61,4 +61,4 @@ Hard links are directory entries pointing to the same inode. Deleting one name d
 
 # SEE ALSO
 
-[cp](cp)(1), [ln](ln)(1), [find](find)(1), [fdupes](fdupes)(1), [rdfind](rdfind)(1)
+[cp](/man/cp)(1), [ln](/man/ln)(1), [find](/man/find)(1), [fdupes](/man/fdupes)(1), [rdfind](/man/rdfind)(1)

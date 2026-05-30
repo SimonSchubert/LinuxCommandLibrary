@@ -24,22 +24,6 @@ Run in CI mode and fail the build below a threshold
 
 ```aislop ci```
 
-# SYNOPSIS
-
-**aislop** [_command_] [_options_] [_path_]
-
-# DESCRIPTION
-
-**aislop** is a fast, deterministic CLI that detects the characteristic patterns left behind by AI coding agents (Claude Code, Cursor, Codex, etc.). It scores code on a 0–100 scale and can automatically fix many mechanical issues.
-
-Instead of relying on LLMs at runtime, aislop uses a combination of formatters, linters, AST analysis, and a large set of hand-written rules targeting narrative comments, trivial comments, `as any` casts, hallucinated imports, swallowed exceptions, dead code, oversized functions, and other "slop" patterns that compile and pass tests but degrade long-term maintainability.
-
-The tool supports TypeScript/JavaScript, Python, Go, Rust, Ruby, PHP, and Java. It is designed to run in editors, pre-commit hooks, CI pipelines, and as a quality gate before accepting agent-generated changes.
-
-# TLDR
-
-(Additional practical examples)
-
 Scan staged files only
 
 ```aislop scan --staged```
@@ -51,6 +35,18 @@ Run with a custom config and fail CI if score drops below 80
 Print the prompt you can hand to an agent for the remaining issues
 
 ```aislop fix --prompt```
+
+# SYNOPSIS
+
+**aislop** [_command_] [_options_] [_path_]
+
+# DESCRIPTION
+
+**aislop** is a fast, deterministic CLI that detects the characteristic patterns left behind by AI coding agents (Claude Code, Cursor, Codex, etc.). It scores code on a 0–100 scale and can automatically fix many mechanical issues.
+
+Instead of relying on LLMs at runtime, aislop uses a combination of formatters, linters, AST analysis, and a large set of hand-written rules targeting narrative comments, trivial comments, `as any` casts, hallucinated imports, swallowed exceptions, dead code, oversized functions, and other "slop" patterns that compile and pass tests but degrade long-term maintainability.
+
+The tool supports TypeScript/JavaScript, Python, Go, Rust, Ruby, PHP, and Java. It is designed to run in editors, pre-commit hooks, CI pipelines, and as a quality gate before accepting agent-generated changes.
 
 # PARAMETERS
 
@@ -101,4 +97,4 @@ exclude:
 
 # SEE ALSO
 
-[oxlint](oxlint), [ruff](ruff), [clippy](clippy), [biome](biome)
+[oxlint](/man/oxlint), [ruff](/man/ruff), [clippy](/man/clippy), [biome](/man/biome)

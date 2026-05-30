@@ -63,4 +63,4 @@ The tool is written in Go, has zero runtime dependencies besides the binary, and
 
 # SEE ALSO
 
-[curl](curl)(1), [wget](wget)(1), [aria2c](aria2c)(1)
+[curl](/man/curl)(1), [wget](/man/wget)(1), [aria2c](/man/aria2c)(1)

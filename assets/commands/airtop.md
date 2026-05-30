@@ -48,4 +48,4 @@ The dashboard is fully interactive: resize the terminal and the layout reflows. 
 
 # SEE ALSO
 
-[iw](iw)(8), [nmcli](nmcli)(1), [wavemon](wavemon)(1), [kismet](kismet)(1)
+[iw](/man/iw)(8), [nmcli](/man/nmcli)(1), [wavemon](/man/wavemon)(1), [kismet](/man/kismet)(1)

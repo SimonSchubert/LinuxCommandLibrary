@@ -45,4 +45,4 @@ Running `texconfig` with no arguments starts the full-screen interactive configu
 
 # SEE ALSO
 
-[tlmgr](tlmgr)(1), [tex](tex)(1), [kpsewhich](kpsewhich)(1)
+[tlmgr](/man/tlmgr)(1), [tex](/man/tex)(1), [kpsewhich](/man/kpsewhich)(1)
