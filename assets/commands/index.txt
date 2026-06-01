@@ -779,6 +779,7 @@ brasero.md
 brave.md
 brctl.md
 break.md
+breathe.md
 brew-autoremove.md
 brew-bundle.md
 brew-cask.md
@@ -3005,6 +3006,7 @@ gruyere.md
 grv.md
 grype.md
 gs.md
+gsd-meta-manager.md
 gsettings.md
 gshadow.md
 gsql.md
@@ -7445,6 +7447,7 @@ texdoc.md
 texliveonfly.md
 textlint.md
 textql.md
+textsnap.md
 textual-astview.md
 textual-paint.md
 tfjournal.md
