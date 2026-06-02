@@ -1570,6 +1570,7 @@ deluser.md
 deno.md
 dep.md
 depmod.md
+depsguard.md
 desktop-file-validate.md
 detect-secrets.md
 detex.md
@@ -3775,6 +3776,7 @@ koji-taginfo.md
 koji-untag-build.md
 koji.md
 komac.md
+komi-learn.md
 kompose.md
 kondo.md
 konsave.md
@@ -6179,6 +6181,7 @@ pwunconv.md
 pxelinux-options.md
 pxelinux.md
 py-spy.md
+py-sql-cleaner.md
 py3clean.md
 py3versions.md
 pyats-shell.md
@@ -7134,6 +7137,7 @@ stormy.md
 stow.md
 strace.md
 stratis.md
+streambed.md
 streamer.md
 streamlink.md
 streamlit.md
@@ -7861,6 +7865,7 @@ v4l2-compliance.md
 v4l2-ctl.md
 v4l2loopback-ctl.md
 vacuumdb.md
+vaen.md
 vagrant-box.md
 vagrant-destroy.md
 vagrant-global-status.md
