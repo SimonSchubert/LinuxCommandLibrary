@@ -50,4 +50,4 @@ Grammarly was founded in **2009** by **Alex Shevchenko**, **Max Lytvyn**, and **
 
 # SEE ALSO
 
-[languagetool](/man/languagetool)(1), [aspell](/man/aspell)(1), [vale](/man/vale)(1)
+[aspell](/man/aspell)(1), [hunspell](/man/hunspell)(1), [vale](/man/vale)(1), [proselint](/man/proselint)(1)

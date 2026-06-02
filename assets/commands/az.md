@@ -92,7 +92,7 @@ az config set defaults.location=eastus
 
 # CAVEATS
 
-Requires Azure subscription and authentication. Some operations are destructive. API rate limits may apply. Large outputs can be slow. Not all Azure features available immediately in CLI. Use --dry-run when available.
+Requires an active Azure subscription and prior `az login`. Some operations are destructive and have no undo. API throttling can affect large bulk scripts. New Azure services may take weeks or months to gain full CLI parity. Prefer **--query** with JMESPath over piping through shell tools for reliable scripting.
 
 # HISTORY
 

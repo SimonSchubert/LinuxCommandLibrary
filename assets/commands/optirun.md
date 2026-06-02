@@ -71,4 +71,4 @@ Bumblebee was created as a Linux solution for NVIDIA Optimus laptops, which lack
 
 # SEE ALSO
 
-[primusrun](/man/primusrun)(1), [nvidia-settings](/man/nvidia-settings)(1), [prime-select](/man/prime-select)(1)
+[nvidia-settings](/man/nvidia-settings)(1)

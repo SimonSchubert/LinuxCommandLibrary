@@ -48,25 +48,6 @@ Convert reStructuredText to HTML
 
 **rst2html** converts reStructuredText documents to HTML. It's part of Docutils, providing the reference implementation for RST processing.
 
-# EXAMPLES
-
-```bash
-# Basic conversion
-rst2html readme.rst readme.html
-
-# To stdout
-rst2html readme.rst > output.html
-
-# With CSS
-rst2html --stylesheet=style.css doc.rst doc.html
-
-# Embedded styles
-rst2html --embed-stylesheet doc.rst doc.html
-
-# Minimal HTML
-rst2html --no-doc-title --no-generator doc.rst min.html
-```
-
 # RST SYNTAX
 
 ```rst
@@ -96,4 +77,4 @@ rst2html is part of **Docutils** by **David Goodger** and contributors, implemen
 
 # SEE ALSO
 
-[rst2pdf](/man/rst2pdf)(1), [sphinx-build](/man/sphinx-build)(1), [pandoc](/man/pandoc)(1)
+[sphinx-build](/man/sphinx-build)(1), [pandoc](/man/pandoc)(1)

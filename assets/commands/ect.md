@@ -18,11 +18,15 @@ lossless image compression optimizer
 
 **Optimize recursively**
 
-```ect --recurse [directory]```
+```ect -recurse [directory]```
 
-**Keep original files**
+**Preserve modification time**
 
-```ect --keep [image.png]```
+```ect -keep [image.png]```
+
+**Strip metadata for smallest size**
+
+```ect -strip [image.png]```
 
 **Optimize JPEG** losslessly
 
@@ -38,21 +42,36 @@ _FILES_
 > Image files to optimize.
 
 **-1** to **-9**
-> Compression level (9 = maximum).
+> Compression level (1 = fast, 9 = slowest/strongest). Default is **-3**.
 
-**--recurse**
+**-recurse**
 > Process directories recursively.
 
-**--keep**
-> Keep original files.
+**-keep**
+> Preserve file modification time.
 
-**--strip**
-> Remove metadata.
+**-strip**
+> Strip metadata (EXIF, comments, color profiles).
 
-**--gzip**
-> Optimize gzip files.
+**-progressive**
+> Encode JPEGs as progressive.
 
-**--help**
+**-gzip**
+> Optimize gzip files instead of treating them as images.
+
+**-zip**
+> Optimize ZIP archives.
+
+**-quiet**
+> Suppress non-error output.
+
+**--mt-deflate**[=_N_]
+> Multithread the deflate stage; optionally pin to _N_ threads.
+
+**--mt-file**[=_N_]
+> Process multiple input files in parallel.
+
+**-help**
 > Display help information.
 
 # DESCRIPTION
@@ -65,7 +84,7 @@ ECT is useful for web optimization, reducing bandwidth and storage while maintai
 
 # CAVEATS
 
-High compression levels are slow. Original files overwritten by default. Some metadata may be stripped. Very large files may use significant memory.
+High compression levels are very slow (level 9 may take minutes per image). Files are rewritten in place. Use **-strip** if you need the absolute smallest output, since metadata is kept by default.
 
 # HISTORY
 

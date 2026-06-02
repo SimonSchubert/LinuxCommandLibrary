@@ -38,10 +38,23 @@ Output shows the boolean name and its current state (on/off). Use **setsebool** 
 
 # COMMON BOOLEANS
 
-**httpd_can_network_connect** - Allow Apache to initiate network connections
-**httpd_can_connect_ftp** - Allow Apache to connect to FTP servers
-**allow_user_exec_content** - Allow users to execute content in home/tmp
-**virt_use_nfs** - Allow virtual machines to use NFS
+**httpd_can_network_connect**
+> Allow Apache to initiate network connections
+
+**httpd_can_connect_ftp**
+> Allow Apache to connect to FTP servers
+
+**allow_user_exec_content**
+> Allow users to execute content in home/tmp
+
+**virt_use_nfs**
+> Allow virtual machines to use NFS
+
+**ssh_chroot_rw_homedirs**
+> Allow SSH to write to chrooted home directories
+
+**samba_enable_home_dirs**
+> Allow Samba to share user home directories
 
 # CAVEATS
 

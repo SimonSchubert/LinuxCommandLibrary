@@ -61,5 +61,5 @@ Unlike archives, bundles preserve Git history and can be incrementally fetched f
 
 # SEE ALSO
 
-[git-archive](/man/git-archive)(1), [git-clone](/man/git-clone)(1)
+[git-archive](/man/git-archive)(1), [git-clone](/man/git-clone)(1), [git-fetch](/man/git-fetch)(1), [git-pull](/man/git-pull)(1)
 

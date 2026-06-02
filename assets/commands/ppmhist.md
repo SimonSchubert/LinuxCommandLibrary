@@ -20,25 +20,27 @@ Display color histogram of PPM images
 
 **ppmhist** [_options_] [_file_]
 
+# DESCRIPTION
+
+**ppmhist** reads a PPM (Portable Pixmap) image and prints a color histogram showing each distinct color and the number of pixels using it. It is part of the Netpbm toolkit and is useful for analyzing palette usage, identifying dominant colors, and preparing colormaps for quantization.
+
+By default the output is a sorted text table. With **-map**, the output is itself a valid PPM file representing the colormap, which can be fed to other Netpbm tools.
+
 # PARAMETERS
 
 **-map**
-> Output as colormap file.
+> Output a colormap as a PPM file rather than a text table.
 
 **-nomap**
-> Output as text histogram.
+> Force text histogram output (the default).
 
 **-noheader**
-> Omit header line.
+> Omit the leading header line from text output.
 
 **-sort** _method_
-> Sort by (frequency, rgb).
-
-# DESCRIPTION
-
-**ppmhist** displays a color histogram of a PPM image. Shows each color and its frequency. Part of Netpbm toolkit for image analysis.
+> Sort entries by _frequency_ or _rgb_.
 
 # SEE ALSO
 
-[pgmhist](/man/pgmhist)(1), [pnmcolormap](/man/pnmcolormap)(1)
+[pgmhist](/man/pgmhist)(1), [pnmcolormap](/man/pnmcolormap)(1), [ppmtopgm](/man/ppmtopgm)(1)
 

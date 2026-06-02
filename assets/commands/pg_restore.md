@@ -57,20 +57,8 @@ restores PostgreSQL databases from archives created by pg_dump
 # DESCRIPTION
 
 **pg_restore** restores PostgreSQL databases from archives created by pg_dump in custom, directory, or tar format. It cannot restore plain SQL dumps (use psql for those).
-# Basic restore
-pg_restore -d mydb backup.dump
 
-# Create database and restore
-pg_restore -C -d postgres backup.dump
-
-# Selective restore
-pg_restore -l backup.dump > toc.txt
-# Edit toc.txt to comment out unwanted items
-pg_restore -d mydb -L toc.txt backup.dump
-
-# Parallel restore
-pg_restore -d mydb -j 4 backup.dump
-```
+The tool can selectively restore objects using a table-of-contents file, run multiple parallel jobs (directory format only), and optionally create the target database before restoring.
 
 # CAVEATS
 

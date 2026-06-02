@@ -4,17 +4,25 @@ command-line tool for reading and writing to KDE Wallet
 
 # TLDR
 
-List **all entries** in Passwords folder
+List **all entries** in the default folder
 
 ```kwallet-query kdewallet --list-entries```
 
-List entries in **specific folder**
+List entries in a **specific folder**
 
 ```kwallet-query kdewallet --list-entries --folder [folder_name]```
 
-List **all folders**
+List **all folders** in a wallet
 
 ```kwallet-query kdewallet --list-entries --folder ""```
+
+**Read a password** entry from a folder
+
+```kwallet-query kdewallet --folder [folder] --read-password [entry]```
+
+**Write a password** to a folder (reads value from stdin)
+
+```kwallet-query kdewallet --folder [folder] --write-password [entry] < [secret.txt]```
 
 Display **help**
 
@@ -50,7 +58,11 @@ Display **help**
 
 # CAVEATS
 
-Wallet must be unlocked before querying. Sensitive data will be displayed in plaintext when reading entries.
+Wallet must be unlocked before querying. Sensitive data will be displayed in plaintext when reading entries. The wallet daemon **kwalletd** must be running, otherwise queries will fail to connect.
+
+# HISTORY
+
+**KWallet** is the credential storage subsystem of **KDE**, introduced in the early 2000s as KDE's equivalent to GNOME Keyring. **kwallet-query** was added to provide a non-interactive, scriptable interface to wallet contents for scripts and headless setups, complementing the graphical **kwalletmanager**.
 
 # SEE ALSO
 

@@ -14,7 +14,7 @@ validates whether provided credentials allow RDP access to a Windows system
 
 **Check RDP on a non-standard port**
 
-```impacket-rdp_check '[domain]/[user]:[password]@[192.168.1.100]:3390```
+```impacket-rdp_check '[domain]/[user]:[password]@[192.168.1.100]:3390'```
 
 # SYNOPSIS
 

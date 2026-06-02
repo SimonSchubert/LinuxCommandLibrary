@@ -84,4 +84,4 @@ memcached was developed by **Brad Fitzpatrick** at **LiveJournal** in **2003** t
 
 # SEE ALSO
 
-[redis](/man/redis)(1), [redis-cli](/man/redis-cli)(1), [valkey](/man/valkey)(1)
+[redis-cli](/man/redis-cli)(1)

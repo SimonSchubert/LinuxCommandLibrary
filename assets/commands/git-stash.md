@@ -92,4 +92,4 @@ Use `pop` to restore and remove a stash, or `apply` to restore while keeping it.
 
 # SEE ALSO
 
-[git-checkout](/man/git-checkout)(1), [git-reset](/man/git-reset)(1)
+[git-checkout](/man/git-checkout)(1), [git-reset](/man/git-reset)(1), [git-restore](/man/git-restore)(1), [git-commit](/man/git-commit)(1), [git-switch](/man/git-switch)(1)

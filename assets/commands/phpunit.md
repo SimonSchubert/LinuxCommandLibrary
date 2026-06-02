@@ -54,13 +54,18 @@ _FILES_
 
 # DESCRIPTION
 
-**phpunit** is PHP testing framework. Unit and integration testing.
+**phpunit** is the de facto unit and integration testing framework for PHP, based on the xUnit family. It discovers and runs test classes that extend `PHPUnit\Framework\TestCase`, providing rich assertions, data providers, test doubles, and code coverage reporting.
 
-The tool provides assertions and mocks. Standard PHP testing tool.
+Tests are typically organized under a `tests/` directory and configured via a `phpunit.xml` file at the project root, which defines test suites, bootstrap files, and coverage filters. Results can be output in TestDox, JUnit XML, and other formats for CI integration.
+
+# CONFIGURATION
+
+**phpunit.xml**, **phpunit.xml.dist**
+> Project configuration: test suites, bootstrap, coverage filters, and PHP settings.
 
 # CAVEATS
 
-Configuration via phpunit.xml. Coverage needs Xdebug/PCOV.
+Configuration via phpunit.xml. Code coverage requires Xdebug or PCOV to be installed. Major versions (9, 10, 11) have removed deprecated APIs, so test code may need updates when upgrading.
 
 # HISTORY
 

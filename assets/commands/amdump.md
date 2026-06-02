@@ -84,4 +84,4 @@ Amanda (Advanced Maryland Automatic Network Disk Archiver) was developed at the 
 
 # SEE ALSO
 
-[amcheck](/man/amcheck)(8), [amrecover](/man/amrecover)(8), [amflush](/man/amflush)(8), [amcleanup](/man/amcleanup)(8), [amanda](/man/amanda)(8)
+[amcheck](/man/amcheck)(8), [amrecover](/man/amrecover)(8)

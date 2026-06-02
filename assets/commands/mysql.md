@@ -71,5 +71,5 @@ mysql was created as the standard CLI for **MySQL** database, maintained by Orac
 
 # SEE ALSO
 
-[mysqladmin](/man/mysqladmin)(1), [mysqldump](/man/mysqldump)(1), [mycli](/man/mycli)(1)
+[mysqladmin](/man/mysqladmin)(1), [mysqldump](/man/mysqldump)(1), [mycli](/man/mycli)(1), [mariadb](/man/mariadb)(1), [psql](/man/psql)(1), [sqlite3](/man/sqlite3)(1)
 
