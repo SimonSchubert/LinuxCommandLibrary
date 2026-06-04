@@ -2754,6 +2754,7 @@ git-unlock.md
 git-unpack-file.md
 git-update-index.md
 git-update-ref.md
+git-update-server-info.md
 git-utimes.md
 git-var.md
 git-verify-commit.md
@@ -3710,6 +3711,7 @@ kdialog.md
 kdiff3.md
 kdig.md
 kdocker.md
+keen.md
 keep-alive.md
 keep-header.md
 keepass2.md
@@ -5327,6 +5329,7 @@ particle.md
 partprobe.md
 partx.md
 paru.md
+paseo.md
 pass-cli.md
 pass-otp.md
 pass.md
@@ -6209,6 +6212,7 @@ pygitzen.md
 pygmentize.md
 pyhtmlizer.md
 pyinfra.md
+pyinstaller.md
 pylint.md
 pymol.md
 pypy.md
