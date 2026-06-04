@@ -591,6 +591,7 @@ b3sum.md
 b4n.md
 babel.md
 babeld.md
+babo.md
 backgammon.md
 backlight_control.md
 backlit-kbd.md
@@ -4454,6 +4455,7 @@ mmove.md
 mmroff.md
 mmv.md
 mn.md
+mnemo.md
 moc.md
 mocha.md
 mock.md
