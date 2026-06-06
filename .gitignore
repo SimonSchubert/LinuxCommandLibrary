@@ -18,6 +18,8 @@ local.properties
 *.jar
 /html
 .claude
+.grok
+.opencode
 /v86-prototype
 .kotlin
 processed.txt

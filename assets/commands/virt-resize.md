@@ -75,4 +75,4 @@ Cannot resize in place; needs separate output disk. VM must be shut down. Shrink
 
 # SEE ALSO
 
-[qemu-img](/man/qemu-img)(1), [virt-sparsify](/man/virt-sparsify)(1), [virt-filesystems](/man/virt-filesystems)(1), [guestfish](/man/guestfish)(1)
+[qemu-img](/man/qemu-img)(1), [virt-sparsify](/man/virt-sparsify)(1), [virt-customize](/man/virt-customize)(1)

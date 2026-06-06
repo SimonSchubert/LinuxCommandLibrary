@@ -25,7 +25,3 @@ Only works with ZSA keyboards. Advanced QMK features may require editing source 
 # HISTORY
 
 **Oryx** is developed by **ZSA Technology Labs**.
-
-# SEE ALSO
-
-[qmk](/man/qmk)(1)

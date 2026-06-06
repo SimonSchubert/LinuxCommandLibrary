@@ -22,13 +22,13 @@ prints the user's login name
 
 # DESCRIPTION
 
-**logname** prints the user's login name. It reads from the utmp file to determine the original login.
+**logname** prints the name of the user who originally logged in on the controlling terminal. It uses the `getlogin` system call, which determines the login name from the session's utmp record rather than from environment variables (which cannot be trusted).
 
-Unlike whoami, logname shows the login name even after su or sudo commands.
+Unlike **whoami**, which reports the current effective user, **logname** keeps showing the original login name after **su** or **sudo** switch the effective user.
 
 # CAVEATS
 
-May fail if not run from a terminal. Differs from whoami after su. POSIX standard command.
+Fails with "no login name" when there is no controlling terminal (for example in some cron jobs or daemons). Differs from **whoami** after **su**. POSIX standard command.
 
 # HISTORY
 

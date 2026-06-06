@@ -16,20 +16,27 @@ Convert PPM images to BMP format
 
 ```ppmtobmp -os2 [input.ppm] > [output.bmp]```
 
+**Force 8 bits per pixel**
+
+```ppmtobmp -bpp 8 [input.ppm] > [output.bmp]```
+
 # SYNOPSIS
 
-**ppmtobmp** [_options_] [_file_]
+**ppmtobmp** [**-windows**|**-os2**] [**-bpp** _n_] [**-mapfile** _file_] [_ppmfile_]
 
 # PARAMETERS
 
 **-windows**
-> Windows BMP format.
+> Produce a Microsoft Windows BMP file. This is the default (since August 2000).
 
 **-os2**
-> OS/2 BMP format.
+> Produce an OS/2 BMP file.
 
 **-bpp** _bits_
-> Bits per pixel (1, 4, 8, 24).
+> Bits per pixel in the output: 1, 4, 8, or 24. By default ppmtobmp picks the smallest value that can represent all colors in the input.
+
+**-mapfile** _file_
+> Use the given file as the BMP palette (colormap) instead of computing one automatically. Useful when you need specific palette index values.
 
 # DESCRIPTION
 

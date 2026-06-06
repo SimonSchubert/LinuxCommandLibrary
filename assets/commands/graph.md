@@ -31,7 +31,7 @@
 # PARAMETERS
 
 **-T** _type_
-> Output format: ps, png, gif, svg, X.
+> Output format: X, png, pnm, gif, svg, ai, ps, cgm, fig, pcl, hpgl, regis, meta, tek. Defaults to meta (GNU graphics metafile, viewable with plot).
 
 **-x** _min_ _max_
 > X-axis range.
@@ -81,7 +81,7 @@ The tool supports multiple datasets, various line and symbol styles, and extensi
 
 # CAVEATS
 
-Part of plotutils package. Limited interactivity. For complex plots, consider gnuplot. PostScript is default output.
+Part of plotutils package. Limited interactivity. For complex plots, consider gnuplot. The default output type is the GNU metafile format; use **-T** to select a concrete format such as png, svg, or ps.
 
 # HISTORY
 
@@ -89,4 +89,4 @@ graph is part of **GNU plotutils**, maintained by the GNU project. The package p
 
 # SEE ALSO
 
-[gnuplot](/man/gnuplot)(1), [plotutils](/man/plotutils)(1), [plot](/man/plot)(1)
+[gnuplot](/man/gnuplot)(1), [plot](/man/plot)(1)

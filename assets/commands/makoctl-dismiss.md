@@ -43,7 +43,7 @@ Dismiss **without history**
 **-g, --group**
 > Dismiss all notifications in first group
 
-**-h, --no-history**
+**--no-history**
 > Don't add dismissed notifications to history
 
 # SEE ALSO

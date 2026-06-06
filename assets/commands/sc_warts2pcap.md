@@ -12,9 +12,9 @@ Convert scamper warts files to pcap format
 
 ```sc_warts2pcap -o [output.pcap] [input.warts]```
 
-**Sort packets by timestamp**
+**Sort packets into timestamp order**
 
-```sc_warts2pcap -s [input.warts] > [output.pcap]```
+```sc_warts2pcap -s sort [input.warts] > [output.pcap]```
 
 # SYNOPSIS
 
@@ -25,12 +25,12 @@ Convert scamper warts files to pcap format
 **-o** _file_
 > Write output to the specified file instead of stdout.
 
-**-s**
-> Sort packets by timestamp before writing.
+**-s** _sort_
+> Sort the pcap records in timestamp order before writing. By default packets are written in the order they appear in the warts file. Sorting requires loading all packets into memory first.
 
 # DESCRIPTION
 
-**sc_warts2pcap** converts scamper warts-format files to pcap (packet capture) format. This enables analysis of scamper measurement data using standard network tools like Wireshark or tcpdump. The tool extracts raw packets embedded in warts traces (such as those from ping, traceroute, and tbit measurements) and writes them as pcap records.
+**sc_warts2pcap** converts scamper warts-format files to pcap (packet capture) format. This enables analysis of scamper measurement data using standard network tools like Wireshark or tcpdump. The tool extracts raw packets embedded in the tbit, sting, and sniff warts objects and writes them as pcap records.
 
 Part of the **scamper** network measurement toolkit.
 

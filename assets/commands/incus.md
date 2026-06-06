@@ -24,9 +24,17 @@ system container and virtual machine manager
 
 ```incus exec [name] -- [command]```
 
-**Open shell in instance**
+**Open a shell in an instance**
 
-```incus exec [name] -- bash```
+```incus shell [name]```
+
+**Copy a file into an instance**
+
+```incus file push [local/path] [name]/[remote/path]```
+
+**Show detailed instance info**
+
+```incus info [name]```
 
 **Stop an instance**
 
@@ -59,6 +67,15 @@ system container and virtual machine manager
 
 **exec** _name_ **--** _cmd_
 > Run command in instance.
+
+**shell** _name_
+> Open an interactive shell in an instance.
+
+**info** _name_
+> Show detailed instance configuration and state.
+
+**file** _push|pull|edit_
+> Transfer or edit files inside an instance.
 
 **list**
 > List all instances.

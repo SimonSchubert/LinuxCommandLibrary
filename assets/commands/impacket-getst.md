@@ -98,4 +98,4 @@ Part of the **Impacket** library by **SecureAuth** (now **Fortra**). The S4U ext
 
 # SEE ALSO
 
-[impacket-gettgt](/man/impacket-gettgt)(1), [impacket-getuserspns](/man/impacket-getuserspns)(1), [impacket-secretsdump](/man/impacket-secretsdump)(1), [klist](/man/klist)(1)
+[impacket-gettgt](/man/impacket-gettgt)(1), [impacket-getuserspns](/man/impacket-getuserspns)(1), [impacket-secretsdump](/man/impacket-secretsdump)(1)

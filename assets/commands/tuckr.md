@@ -4,54 +4,83 @@ Symlink-based dotfile manager
 
 # TLDR
 
-**Deploy dotfiles**
+**Symlink all dotfiles into place**
 
-```tuckr deploy```
+```tuckr add \*```
 
-**Deploy specific group**
+**Symlink specific groups**
 
-```tuckr deploy [group]```
+```tuckr add [neovim] [zsh]```
 
-**Add file to group**
+**Symlink everything except some groups**
 
-```tuckr add [group] [file]```
+```tuckr add \* -e [neovim]```
 
-**Remove symlinks**
+**Set up groups and run their hooks**
 
-```tuckr remove```
+```tuckr set [group]```
 
-**Check status**
+**Remove deployed dotfiles**
+
+```tuckr rm [group]```
+
+**Show symlinking status**
 
 ```tuckr status```
 
+**Copy existing files into a group**
+
+```tuckr push [group] [file]```
+
 # SYNOPSIS
 
-**tuckr** _command_ [_group_] [_file_]
+**tuckr** _command_ [_group_...] [_options_]
 
 # PARAMETERS
 
-**deploy**
-> Create symlinks.
+**add** (alias **a**)
+> Deploy dotfiles for the given groups by creating symlinks.
 
-**remove**
-> Remove symlinks.
+**rm**
+> Remove the deployed dotfiles from the system.
 
-**add**
-> Add file to group.
+**set**
+> Set up groups and run their hooks.
 
-**status**
-> Show status.
+**unset**
+> Remove groups and run their cleanup hooks.
+
+**status** (alias **s**)
+> Show the symlinking status of dotfiles.
+
+**push**
+> Copy existing files into a group.
+
+**pop**
+> Remove groups from the dotfiles directory.
+
+**encrypt** (alias **e**)
+> Encrypt files and store them under Secrets.
+
+**decrypt** (alias **d**)
+> Decrypt files.
+
+**groupis**
+> Report which group a file belongs to.
 
 **init**
-> Initialize repo.
+> Initialize the dotfile directory.
+
+**-e** _GROUP_
+> Exclude the given group when used with add.
 
 # DESCRIPTION
 
 **tuckr** is a dotfile manager that organizes configuration files into logical groups and deploys them as symlinks. Each group represents a set of related dotfiles (such as vim, zsh, or git), allowing selective deployment of configurations across different machines.
 
-The deploy command creates symlinks from the dotfile repository to their expected locations in the home directory. Groups can be deployed individually or all at once, and the status command shows which groups are currently linked. The remove command cleanly unlinks deployed symlinks.
+The add command creates symlinks from the dotfile repository to their expected locations in the home directory. Groups can be linked individually or all at once with the `\*` wildcard, and the status command shows which groups are currently linked. The rm command cleanly unlinks deployed symlinks, while set additionally runs per-group setup hooks.
 
-The tool uses a simple directory structure where each subdirectory represents a group, mirroring the home directory layout within it.
+The tool uses a simple directory structure with Configs, Hooks, and Secrets directories, where each subdirectory under Configs represents a group that mirrors the home directory layout within it. Inspired by GNU Stow, it adds hooks and encrypted secrets without requiring symlink-aware tooling.
 
 # CAVEATS
 

@@ -35,8 +35,11 @@ This makes it significantly easier to perform system administration tasks on a m
 **new_root**
 > Path to the directory to use as the new root filesystem
 
-**-u, --userspec user**
-> Specify the user to run the shell or command as
+**-u** _user_[:_group_]
+> Run the shell or command as the specified non-root user and optional group.
+
+**-N**
+> Unshare mode: create new mount and user namespaces with unshare, allowing a non-root user to run arch-chroot.
 
 **command**
 > Optional command to run instead of the default shell (Bash)

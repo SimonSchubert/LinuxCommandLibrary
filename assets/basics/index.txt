@@ -1,4 +1,5 @@
 aitools.md
+backupimaging.md
 compressionarchiving.md
 cryptocurrencies.md
 emacstexteditor.md

@@ -12,9 +12,13 @@ scan PHP dependencies for security vulnerabilities
 
 ```composer audit --format=json```
 
-**Audit and exit with error** on vulnerabilities
+**Audit only production dependencies**
 
-```composer audit --locked```
+```composer audit --no-dev```
+
+**Audit the locked packages and report abandoned ones as failures**
+
+```composer audit --locked --abandoned=fail```
 
 # SYNOPSIS
 
@@ -23,13 +27,19 @@ scan PHP dependencies for security vulnerabilities
 # PARAMETERS
 
 **--format** _format_
-> Output format: table, plain, json, summary.
+> Output format: `table` (default), `plain`, `json`, or `summary`.
 
 **--locked**
-> Audit packages from composer.lock.
+> Audit the exact versions recorded in composer.lock instead of the installed packages.
 
 **--no-dev**
-> Ignore development dependencies.
+> Ignore development (require-dev) dependencies.
+
+**--abandoned** _mode_
+> How to treat abandoned packages: `ignore`, `report`, or `fail` (Composer 2.8+).
+
+**--ignore** _package_
+> Ignore the advisories for the given package. Repeatable.
 
 # DESCRIPTION
 

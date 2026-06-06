@@ -28,6 +28,14 @@ Display content or metadata of repository objects
 
 ```git cat-file tree [hash]```
 
+**Batch-print info and content for objects on stdin**
+
+```git cat-file --batch```
+
+**Batch-check type and size for objects on stdin**
+
+```git cat-file --batch-check```
+
 # SYNOPSIS
 
 **git** **cat-file** [_options_] _object_
@@ -44,7 +52,16 @@ Display content or metadata of repository objects
 > Pretty-print content.
 
 **-e**
-> Check if object exists.
+> Exit with zero status if the object exists and is valid.
+
+**--batch**
+> Print object info and content for each object id read from stdin.
+
+**--batch-check**
+> Print object type and size for each object id read from stdin.
+
+**--textconv**
+> Show content as transformed by a configured textconv filter.
 
 **blob**
 > Show blob.
@@ -65,5 +82,5 @@ Common use cases include examining specific versions of files without checking t
 
 # SEE ALSO
 
-[git-show](/man/git-show)(1), [git-hash-object](/man/git-hash-object)(1)
+[git-show](/man/git-show)(1), [git-hash-object](/man/git-hash-object)(1), [git-ls-tree](/man/git-ls-tree)(1), [git-rev-parse](/man/git-rev-parse)(1), [git-verify-pack](/man/git-verify-pack)(1)
 

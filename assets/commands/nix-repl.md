@@ -1,24 +1,24 @@
 # TAGLINE
 
-starts interactive Nix shell
+Start an interactive Nix expression evaluator
 
 # TLDR
 
-**Start Nix REPL**
+**Start the Nix REPL**
 
 ```nix repl```
 
-**Load nixpkgs**
+**Load the nixpkgs package set into scope**
 
-```nix repl '<nixpkgs>'```
+```nix repl --expr 'import <nixpkgs> {}'```
 
-**Load flake**
+**Open a REPL with a flake's outputs in scope**
 
 ```nix repl [.#]```
 
-**Load file**
+**Load a Nix file's attributes into scope**
 
-```nix repl [file.nix]```
+```nix repl --file [default.nix]```
 
 # SYNOPSIS
 
@@ -27,27 +27,59 @@ starts interactive Nix shell
 # PARAMETERS
 
 _FILES_
-> Nix files to load.
+> Nix files whose top-level attributes are brought into scope.
 
 **--expr** _EXPR_
-> Evaluate expression first.
+> Evaluate the given expression and bring its attributes into scope.
+
+**--file** _PATH_
+> Load attributes from the given Nix file (deprecated positional form still works).
+
+**--arg** _NAME_ _EXPR_
+> Pass the named argument as a Nix expression to the loaded file or flake.
+
+**--argstr** _NAME_ _STRING_
+> Pass the named argument as a string.
 
 **--help**
 > Display help information.
 
+# REPL COMMANDS
+
+**:?**
+> Show the list of available REPL commands.
+
+**:l** _PATH_
+> Load a Nix file and add its attributes to the scope.
+
+**:r**
+> Reload all loaded files.
+
+**:b** _EXPR_
+> Build a derivation and print its output paths.
+
+**:e** _EXPR_
+> Open the location of the given value in `$EDITOR`.
+
+**:t** _EXPR_
+> Show the type of the given expression.
+
+**:q**
+> Exit the REPL (Ctrl-D also works).
+
 # DESCRIPTION
 
-**nix repl** starts interactive Nix shell. Evaluate expressions interactively.
+**nix repl** starts an interactive read-eval-print loop for the Nix expression language. It is useful for exploring package attributes, debugging expressions, and prototyping configuration.
 
-The tool provides tab completion. Load packages and explore attributes.
+Expressions are evaluated lazily. The REPL offers tab completion for attribute names and accepts colon-prefixed meta commands (see REPL COMMANDS) in addition to ordinary Nix expressions.
 
 # CAVEATS
 
-Part of Nix CLI. :? for help. Expression evaluation.
+Part of the experimental `nix` command (enable with `experimental-features = nix-command flakes`). The older standalone `nix-repl` binary is deprecated in favor of `nix repl`. Use `:?` inside the REPL for the full command list.
 
 # HISTORY
 
-nix repl provides **interactive evaluation** for exploring and debugging Nix expressions.
+`nix repl` provides interactive evaluation for exploring and debugging Nix expressions. It superseded the separate `nix-repl` tool when the unified `nix` command was introduced.
 
 # SEE ALSO
 

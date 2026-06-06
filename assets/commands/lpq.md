@@ -22,7 +22,7 @@ displays the print queue status
 
 **Show queue for a specific user**
 
-```lpq -P [printer] [username]```
+```lpq -U [username]```
 
 **Continuous updates** every N seconds
 
@@ -30,24 +30,30 @@ displays the print queue status
 
 # SYNOPSIS
 
-**lpq** [_options_] [_user_]
+**lpq** [_-E_] [_-U username_] [_-h server[:port]_] [_-P destination[/instance]_] [_-a_] [_-l_] [_+interval_]
 
 # PARAMETERS
 
-_USER_
-> Show jobs for specific user.
+**-E**
+> Force encryption when connecting to the server.
 
-**-P** _PRINTER_
-> Specify printer.
+**-U** _USERNAME_
+> Use an alternate username.
+
+**-h** _SERVER[:PORT]_
+> Use an alternate server.
+
+**-P** _DESTINATION[/INSTANCE]_
+> Specify an alternate printer or class name.
 
 **-a**
-> Show all printers.
+> Show jobs on all printers.
 
 **-l**
-> Long listing format.
+> Long (verbose) listing format.
 
 **+** _INTERVAL_
-> Repeat every interval seconds.
+> Continuously report the queue every _interval_ seconds until empty.
 
 **--help**
 > Display help information.
@@ -68,5 +74,5 @@ lpq originated in **BSD Unix** for viewing print queues, now implemented by CUPS
 
 # SEE ALSO
 
-[lp](/man/lp)(1), [lpr](/man/lpr)(1), [lprm](/man/lprm)(1), [lpstat](/man/lpstat)(1)
+[lp](/man/lp)(1), [lpr](/man/lpr)(1), [lprm](/man/lprm)(1), [lpstat](/man/lpstat)(1), [cancel](/man/cancel)(1)
 

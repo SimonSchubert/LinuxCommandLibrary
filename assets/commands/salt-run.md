@@ -43,10 +43,16 @@ Execute Salt runner modules on the master
 > List recent jobs.
 
 **jobs.lookup_jid** _jid_
-> Get job results.
+> Get the results of a previously run job by its JID.
 
-**--output** _format_
-> Output format.
+**jobs.active**
+> Show jobs currently running across all minions.
+
+**--out**, **--output** _format_
+> Output format (json, yaml, highstate, etc.).
+
+**-c** _DIR_, **--config-dir** _DIR_
+> Use a custom Salt master configuration directory.
 
 # DESCRIPTION
 

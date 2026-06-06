@@ -74,4 +74,4 @@ seatd requires appropriate permissions to access device nodes. The socket path m
 
 # SEE ALSO
 
-[libseat](/man/libseat)(3), [sway](/man/sway)(1), [elogind](/man/elogind)(8), [logind](/man/logind)(8)
+[sway](/man/sway)(1)

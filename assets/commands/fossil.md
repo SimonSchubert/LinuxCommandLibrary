@@ -60,6 +60,18 @@ distributed version control with integrated project management
 **commit**
 > Record changes.
 
+**update**
+> Update the checkout to a later version or branch.
+
+**diff**
+> Show changes in the working copy.
+
+**revert**
+> Revert files to their committed state.
+
+**branch**
+> Create or list branches.
+
 **pull**
 > Pull from remote.
 
@@ -70,7 +82,7 @@ distributed version control with integrated project management
 > Sync with remote.
 
 **ui**
-> Start web interface.
+> Start the built-in web interface (and open a browser).
 
 **timeline**
 > Show commit history.

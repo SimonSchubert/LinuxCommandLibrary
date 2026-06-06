@@ -12,11 +12,11 @@ optimizes JPEG files by removing metadata and optionally reducing quality
 
 ```jpegoptim -m [85] [image.jpg]```
 
-**Optimize to target size**
+**Optimize to target size** (kilobytes or percentage)
 
 ```jpegoptim --size=[500k] [image.jpg]```
 
-**Strip metadata**
+**Strip all metadata**
 
 ```jpegoptim --strip-all [image.jpg]```
 
@@ -24,11 +24,11 @@ optimizes JPEG files by removing metadata and optionally reducing quality
 
 ```jpegoptim [*.jpg]```
 
-**Keep original** and create new
+**Write optimized copy** to another directory, keeping the original
 
 ```jpegoptim -d [output_dir] [image.jpg]```
 
-**Show statistics**
+**Simulate** (print results without writing)
 
 ```jpegoptim -n [image.jpg]```
 
@@ -44,35 +44,59 @@ The tool is useful for web images, photo galleries, and reducing storage require
 
 # PARAMETERS
 
-**-m** _quality_
-> Set maximum quality (0-100).
+**-m** _quality_, **--max**=_quality_
+> Set maximum image quality factor (0-100). Disables the default lossless mode.
 
-**--size** _size_
-> Target file size.
+**-S** _size_, **--size**=_size_
+> Try to optimize to the given size, in kilobytes (e.g. 500k) or as a percentage (1%-99%). Disables lossless mode.
 
-**-d** _dir_
-> Output directory.
+**-d** _dir_, **--dest**=_dir_
+> Write optimized files to an alternative destination directory instead of overwriting the originals.
+
+**-f**, **--force**
+> Force optimization even if the result is larger than the original.
+
+**-T** _threshold_, **--threshold**=_threshold_
+> Keep the old file if the size gain is below the given threshold percentage.
 
 **-n**, **--noaction**
-> Simulate (don't modify).
+> Simulate: print results without modifying any file.
 
 **-o**, **--overwrite**
-> Overwrite original.
+> Overwrite an existing target file in the destination directory (only meaningful with -d).
 
 **-p**, **--preserve**
-> Preserve file times.
+> Preserve file modification and access times.
+
+**-r**, **--retry**
+> Recursively re-optimize until the file size stops shrinking.
+
+**-w** _max_, **--workers**=_max_
+> Set the maximum number of parallel threads (default 1).
+
+**-t**, **--totals**
+> Print totals after processing all files.
 
 **--strip-all**
-> Strip all markers.
+> Strip all markers (metadata) from output.
 
 **--strip-com**
-> Strip comments.
+> Strip comment markers.
 
 **--strip-exif**
-> Strip EXIF data.
+> Strip Exif data.
 
 **--strip-icc**
-> Strip color profiles.
+> Strip ICC color profile markers.
+
+**--strip-xmp**
+> Strip XMP markers.
+
+**--all-progressive**
+> Force all output files to be progressive (use --all-normal for baseline).
+
+**--stdin**, **--stdout**
+> Read input from standard input / write output to standard output.
 
 **-q**, **--quiet**
 > Quiet mode.

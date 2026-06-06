@@ -28,6 +28,10 @@ Show test **metadata** with context
 
 ```tmt lint```
 
+**Run** all tests in a container
+
+```tmt run```
+
 Use **filter**
 
 ```tmt tests ls -f [tag:foo] -f [tier:0]```

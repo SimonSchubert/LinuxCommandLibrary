@@ -30,7 +30,7 @@ Rename with **auto-confirm**
 > Answer yes to all prompts
 
 **-A, --autobackup y|n**
-> Auto backup metadata
+> Automatically back up metadata after the change (default y).
 
 **--noudevsync**
 > Disable udev synchronisation

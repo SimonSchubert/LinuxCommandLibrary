@@ -64,4 +64,4 @@ grub-mkrescue is part of GRUB 2 (GRand Unified Bootloader), the successor to GNU
 
 # SEE ALSO
 
-[grub-install](/man/grub-install)(8), [grub-mkimage](/man/grub-mkimage)(1), [xorriso](/man/xorriso)(1)
+[grub-install](/man/grub-install)(8), [grub-mkconfig](/man/grub-mkconfig)(8), [mkisofs](/man/mkisofs)(8)

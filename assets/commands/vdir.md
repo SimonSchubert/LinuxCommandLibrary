@@ -4,15 +4,11 @@ List directory contents in long format
 
 # TLDR
 
-**List directory**
+**List directory contents in long format**
 
 ```vdir```
 
-**Long format with details**
-
-```vdir```
-
-**Include hidden**
+**Include hidden files**
 
 ```vdir -a```
 
@@ -20,9 +16,13 @@ List directory contents in long format
 
 ```vdir -h```
 
-**Sort by time**
+**Sort by modification time, newest first**
 
 ```vdir -t```
+
+**Reverse the sort order**
+
+```vdir -r```
 
 # SYNOPSIS
 

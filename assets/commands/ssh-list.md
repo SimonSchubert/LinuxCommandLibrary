@@ -19,7 +19,10 @@ TUI SSH connection manager for quick access
 # CONFIGURATION
 
 **~/.ssh/ssh-list.json**
-> Stores SSH connection entries and settings.
+> Stores the SSH connection entries.
+
+**~/.ssh/ssh-list_config.toml**
+> Stores application settings and appearance options.
 
 # HISTORY
 

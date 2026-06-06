@@ -4,70 +4,82 @@ high-performance packet sniffer
 
 # TLDR
 
-**Capture packets**
+**Capture from an interface to a pcap file**
 
-```netsniff-ng -i [eth0] -o [capture.pcap]```
+```netsniff-ng --in [eth0] --out [capture.pcap]```
 
-**Read pcap file**
+**Replay a pcap file** onto the network
 
-```netsniff-ng -i [capture.pcap]```
+```netsniff-ng --in [capture.pcap] --out [eth0]```
 
-**Filter packets**
+**Apply a tcpdump/BPF filter** while capturing
 
-```netsniff-ng -i [eth0] -f "[tcp port 80]"```
+```netsniff-ng --in [eth0] --out [capture.pcap] "[tcp port 80]"```
 
-**High-speed capture**
+**Capture and print packets** to the console (no file)
 
-```netsniff-ng -i [eth0] --ring-size [64MB] -o [capture.pcap]```
+```netsniff-ng --in [eth0] --out - --verbose```
 
-**Show packet details**
+**Rotate output** into a directory, one file per interval
 
-```netsniff-ng -i [eth0] -V```
+```netsniff-ng --in [eth0] --out [dir/] --interval [60sec]```
 
-**Capture to directory**
+**Set the kernel ring buffer size** for high-speed capture
 
-```netsniff-ng -i [eth0] -P [output/]```
+```netsniff-ng --in [eth0] --out [capture.pcap] --ring-size [64MiB]```
 
 # SYNOPSIS
 
-**netsniff-ng** [_options_]
+**netsniff-ng** [_options_] [_filter-expression_]
 
 # PARAMETERS
 
-**-i** _INPUT_
-> Input interface or file.
+**-i**, **-d**, **--in**, **--dev** _INPUT_
+> Input source: a network device, a pcap file, or **-** for stdin.
 
-**-o** _OUTPUT_
-> Output file.
+**-o**, **--out** _OUTPUT_
+> Output sink: a network device, a pcap file, a directory (with --interval), or **-** for stdout.
 
-**-f** _FILTER_
-> BPF filter expression.
+**-f**, **--filter** _EXPR_
+> Apply a low-level (BPF) or high-level (tcpdump-style) packet filter. A bare filter expression on the command line is also accepted.
 
 **--ring-size** _SIZE_
-> Ring buffer size.
+> Set the mmap ring buffer size, e.g. **10MiB**, **1GiB**.
 
-**-V**
-> Verbose packet display.
+**-F**, **--interval** _NUM_
+> When writing to a directory, start a new pcap file every NUM packets, or by time/size (e.g. **60sec**, **100MiB**).
 
-**-P** _DIR_
-> Output directory.
+**-s**, **--silent**
+> Do not print captured packets to the console.
 
-**--help**
-> Display help information.
+**-V**, **--verbose**
+> Print/dump each captured packet in verbose form.
+
+**-T**, **--magic** _PCAP_MAGIC_
+> Set the pcap file format magic (link-layer/timestamp variant).
+
+**-b**, **--bind-cpu** _CPU_
+> Pin the capture process to the given CPU.
+
+**-H**, **--prio-high**
+> Run the process with high scheduling priority.
+
+**-V**, **--version**, **-h**, **--help**
+> Show version or help information.
 
 # DESCRIPTION
 
-**netsniff-ng** is a high-performance packet sniffer. It uses zero-copy mechanisms for speed.
+**netsniff-ng** is a high-performance, zero-copy network analyzer, packet capture and replay tool. It uses the Linux kernel's **PACKET_MMAP** RX_RING/TX_RING interface to move packets between kernel and user space without copying, allowing capture and transmission close to line rate.
 
-The tool captures at line rate. Supports BPF filtering and pcap output.
+It can capture live traffic to a pcap file, replay a pcap back onto an interface, and rotate captures into per-interval files for long-running collection. Filtering accepts both raw BPF and tcpdump-style expressions.
 
 # CAVEATS
 
-Requires root. High-performance focus. Part of netsniff-ng toolkit.
+Requires root (or **CAP_NET_RAW** / **CAP_NET_ADMIN**). It is part of the netsniff-ng toolkit, which also includes trafgen, mausezahn, ifpps, flowtop, and astraceroute. Some link types and timestamp formats depend on driver and kernel support.
 
 # HISTORY
 
-netsniff-ng was created for **high-speed packet capture** using Linux kernel zero-copy features.
+**netsniff-ng** was created by **Daniel Borkmann** in **2009** as a free, Linux-native, zero-copy packet analyzer, and grew into the broader netsniff-ng networking toolkit. It is licensed under the GPLv2.
 
 # SEE ALSO
 

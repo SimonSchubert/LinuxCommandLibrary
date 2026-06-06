@@ -115,4 +115,4 @@ Supports dynamic frameworks on iOS 8+. Static framework support since version 0.
 
 # SEE ALSO
 
-[swift](/man/swift)(1), [xcodebuild](/man/xcodebuild)(1), [pod](/man/pod)(1)
+[swift](/man/swift)(1), [xcodebuild](/man/xcodebuild)(1), [git](/man/git)(1)

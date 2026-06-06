@@ -28,7 +28,7 @@ Modular SQL linter and auto-formatter with dialect support
 
 ```sqlfluff lint --exclude-rules [L034,L036] [path/to/file.sql]```
 
-**Generate a starter** configuration file
+**Render** a templated query (expand Jinja/dbt) without linting
 
 ```sqlfluff render --dialect [ansi] [query.sql]```
 
@@ -129,4 +129,4 @@ Templated SQL must parse after rendering; unresolved variables raise template er
 
 # SEE ALSO
 
-[dbt](/man/dbt)(1), [pgformatter](/man/pgformatter)(1), [sqlcheck](/man/sqlcheck)(1), [psql](/man/psql)(1)
+[dbt](/man/dbt)(1), [psql](/man/psql)(1)

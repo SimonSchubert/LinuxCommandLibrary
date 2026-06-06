@@ -28,11 +28,17 @@ Uptime monitoring CLI with alerting support
 **--timeout** _seconds_
 > Request timeout in seconds (default: 10).
 
+**--count** _n_
+> Number of checks to perform (0 = infinite, the default).
+
 **--webhook-url** _url_
 > Webhook URL for alerts (Slack or Discord).
 
-**--assert-status** _code_
-> Expected HTTP status code (default: 200).
+**--assert-text** _text_
+> Expected response body text used to validate each check.
+
+**--simple**
+> Print plain text output instead of the interactive TUI.
 
 # DESCRIPTION
 

@@ -51,7 +51,10 @@ _TYPE_
 > Trace from root to answer.
 
 **-D**
-> Enable DNSSEC validation.
+> Enable DNSSEC, setting the DO (DNSSEC OK) bit in the query.
+
+**-S**
+> Chase the signatures of the answer up to a known key or trust anchor (requires OpenSSL support).
 
 **-t**
 > Use TCP instead of UDP.

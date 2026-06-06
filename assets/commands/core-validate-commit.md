@@ -4,13 +4,21 @@ Node.js commit message validator
 
 # TLDR
 
-**Validate a commit message**
+**Validate a specific commit**
 
 ```core-validate-commit [commit_sha]```
 
-**Validate with specific rules**
+**Validate the most recent commit (HEAD)**
 
-```core-validate-commit --rules [rules.json] [commit_sha]```
+```core-validate-commit```
+
+**Validate a range of commits**
+
+```core-validate-commit [main..HEAD]```
+
+**List the validation rules being applied**
+
+```core-validate-commit --list```
 
 # SYNOPSIS
 

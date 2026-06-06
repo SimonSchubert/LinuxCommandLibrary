@@ -55,6 +55,12 @@ List every configuration value and filter with **grep**
 **HOST_NAME_MAX**
 > Maximum length of a hostname
 
+**ARG_MAX**
+> Maximum length of arguments to the exec functions
+
+**_NPROCESSORS_CONF**
+> Number of processors configured
+
 **_NPROCESSORS_ONLN**
 > Number of processors currently online
 

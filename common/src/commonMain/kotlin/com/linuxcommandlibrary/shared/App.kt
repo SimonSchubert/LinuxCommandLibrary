@@ -103,6 +103,7 @@ val basicsSortOrder =
         "Package manager",
         "Text Processing",
         "Compression & Archiving",
+        "Backup & Imaging",
         "Hacking tools",
         "Terminal games",
         "Cryptocurrencies",
