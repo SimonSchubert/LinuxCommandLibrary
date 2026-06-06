@@ -88,4 +88,4 @@ rec2csv is part of **GNU recutils** by **Jose E. Marchesi** for managing plain t
 
 # SEE ALSO
 
-[recsel](/man/recsel)(1), [recins](/man/recins)(1), [recdel](/man/recdel)(1), [csv2rec](/man/csv2rec)(1)
+[recsel](/man/recsel)(1), [recins](/man/recins)(1), [recdel](/man/recdel)(1)

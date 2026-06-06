@@ -1,62 +1,61 @@
 # TAGLINE
 
-web accessibility testing extension
+configure GitHub CLI accessibility settings
 
 # TLDR
 
-**Run accessibility audit**
+**Show accessibility guidance and settings**
 
-```gh a11y audit [url]```
+```gh a11y```
 
-**Audit current repository**
+**Open the GitHub Accessibility site in the browser**
 
-```gh a11y audit```
+```gh a11y --web```
 
-**Generate report**
+**Enable accessible 4-bit color palette**
 
-```gh a11y audit --output [report.json]```
+```gh config set accessible_colors enabled```
 
-**Check specific page**
+**Enable accessible prompter for screen readers**
 
-```gh a11y audit [url] --rules [wcag2a]```
+```gh config set accessible_prompter enabled```
+
+**Disable motion-based spinners in favor of text indicators**
+
+```gh config set spinner disabled```
 
 # SYNOPSIS
 
-**gh a11y** _command_ [_options_]
+**gh** **a11y** [_flags_]
 
 # PARAMETERS
 
-**audit**
-> Run accessibility audit on a URL or repository.
-
-**--output** _FILE_
-> Output file for report.
-
-**--rules** _RULESET_
-> WCAG ruleset to apply (wcag2a, wcag2aa).
-
-**--format** _FORMAT_
-> Output format (json, csv, html).
+**-w**, **--web**
+> Open the GitHub Accessibility site in the default web browser.
 
 **--help**
-> Display help information.
+> Show help for command.
 
 # DESCRIPTION
 
-**gh a11y** is a GitHub CLI extension for accessibility testing. It analyzes web pages and applications for WCAG compliance, identifying accessibility issues that may affect users with disabilities.
+**gh a11y** is an alias for **gh accessibility**. It displays guidance on GitHub CLI's accessibility experiences and how to enable them. The command itself only prints guidance; individual features are turned on through **gh config set** or environment variables.
 
-The extension integrates with GitHub workflows, allowing accessibility checks to be part of pull request reviews and CI/CD pipelines. It generates reports in various formats for documentation and tracking.
+**Accessible colors**: enables a 4-bit ANSI color palette with increased contrast based on the terminal background. Enable with `gh config set accessible_colors enabled` or the `GH_ACCESSIBLE_COLORS` environment variable.
 
-gh a11y helps teams maintain accessible web applications throughout development.
+**Label colors**: displays issue and pull request label colors using their custom RGB hex values in true-color terminals. Enable with `gh config set color_labels enabled` or the `GH_COLOR_LABELS` environment variable.
+
+**Accessible prompter**: replaces cursor-manipulating interactive prompts with non-interactive equivalents that work correctly with speech synthesizers and braille displays. Enable with `gh config set accessible_prompter enabled` or the `GH_ACCESSIBLE_PROMPTER` environment variable.
+
+**Text-based spinners**: replaces animated spinner characters with plain text progress indicators. Enable with `gh config set spinner disabled` or the `GH_SPINNER_DISABLED` environment variable.
 
 # CAVEATS
 
-Extension must be installed via **gh extension install**. Results are automated checks; manual testing also recommended.
+Accessibility features were introduced as a **public preview** in GitHub CLI v2.72.0. This is a built-in core command, not a separately installed extension. Running `gh a11y` alone only displays guidance text.
 
 # HISTORY
 
-gh a11y is a community **GitHub CLI extension** that brings accessibility testing to the gh ecosystem, building on web accessibility standards and tooling.
+GitHub CLI accessibility features were announced in **May 2025** as a public preview, with **gh accessibility** (and its **gh a11y** alias) added to surface the available settings.
 
 # SEE ALSO
 
-[gh](/man/gh)(1), [gh-extension](/man/gh-extension)(1)
+[gh-accessibility](/man/gh-accessibility)(1), [gh](/man/gh)(1), [gh-config](/man/gh-config)(1)

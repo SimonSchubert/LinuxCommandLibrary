@@ -62,4 +62,4 @@ GDM was created as part of the **GNOME project** to provide a display manager in
 
 # SEE ALSO
 
-[lightdm](/man/lightdm)(1), [sddm](/man/sddm)(1), [xinit](/man/xinit)(1)
+[ly](/man/ly)(1), [slim](/man/slim)(1), [xinit](/man/xinit)(1)

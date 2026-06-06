@@ -64,4 +64,4 @@ joe was created by **Joseph H. Allen** in 1991 as a modeless text editor with fa
 
 # SEE ALSO
 
-[nano](/man/nano)(1), [vim](/man/vim)(1), [emacs](/man/emacs)(1), [jmacs](/man/jmacs)(1)
+[nano](/man/nano)(1), [vim](/man/vim)(1), [emacs](/man/emacs)(1)

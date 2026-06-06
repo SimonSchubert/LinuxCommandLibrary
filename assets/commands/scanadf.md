@@ -79,4 +79,4 @@ scanadf is part of the **SANE** (Scanner Access Now Easy) project, providing spe
 
 # SEE ALSO
 
-[scanimage](/man/scanimage)(1), [sane-find-scanner](/man/sane-find-scanner)(1), [xsane](/man/xsane)(1), [convert](/man/convert)(1)
+[scanimage](/man/scanimage)(1), [sane-find-scanner](/man/sane-find-scanner)(1), [convert](/man/convert)(1)

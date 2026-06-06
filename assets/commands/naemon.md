@@ -75,4 +75,4 @@ Naemon was forked from Nagios Core in **2013** by op5 and Consol to create a fas
 
 # SEE ALSO
 
-[nagios](/man/nagios)(8), [icinga2](/man/icinga2)(8), [thruk](/man/thruk)(1), [check_mk](/man/check_mk)(1)
+[nagios](/man/nagios)(8), [icinga2](/man/icinga2)(8), [check_mk](/man/check_mk)(1)

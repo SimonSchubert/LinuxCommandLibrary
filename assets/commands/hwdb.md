@@ -77,4 +77,4 @@ Changes require hwdb update and udevadm trigger. Modalias format varies by bus t
 
 # SEE ALSO
 
-[udevadm](/man/udevadm)(8), [udev](/man/udev)(7), [systemd-udevd](/man/systemd-udevd)(8)
+[udevadm](/man/udevadm)(8)

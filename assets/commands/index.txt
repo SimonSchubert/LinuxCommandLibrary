@@ -1698,6 +1698,7 @@ doas.md
 docbook2html.md
 dockdiver.md
 docker-build.md
+docker-buildx-create.md
 docker-buildx-du.md
 docker-buildx-ls.md
 docker-buildx-prune.md
@@ -3121,6 +3122,7 @@ helix.md
 hello.md
 helm-install.md
 helm.md
+helmfile.md
 help.md
 help2man.md
 heretek.md
@@ -4083,6 +4085,7 @@ lorder.md
 lorem.md
 losetup.md
 lotus-miner.md
+lowfat.md
 lowriter.md
 lp.md
 lpadmin.md
@@ -5088,6 +5091,7 @@ opencode.md
 openconnect.md
 opencubicplayer.md
 openfortivpn.md
+openhack.md
 openocd.md
 openrc.md
 openrgb.md

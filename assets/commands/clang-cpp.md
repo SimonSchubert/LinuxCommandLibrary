@@ -49,4 +49,4 @@ This is the LLVM/Clang equivalent of **cpp** from GCC.
 
 # SEE ALSO
 
-[clang](/man/clang)(1), [cpp](/man/cpp)(1), [clang++](/man/clang++)(1)
+[clang](/man/clang)(1), [clang++](/man/clang++)(1)

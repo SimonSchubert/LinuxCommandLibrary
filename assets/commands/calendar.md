@@ -20,11 +20,11 @@ Display reminders from a calendar file
 
 ```calendar -f [path/to/calendar]```
 
-**Show all upcoming events** (no date limit)
+**Pretend today is a specific date**
 
-```calendar -a```
+```calendar -t [1225]```
 
-**Display reminders for everyone** on the system
+**Process reminders for everyone** on the system (root, sends mail)
 
 ```calendar -a```
 

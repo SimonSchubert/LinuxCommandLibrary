@@ -32,4 +32,4 @@ Only supports **Linux x86-64** targets. Requires debug symbols in the binary (co
 
 # SEE ALSO
 
-[gdb](/man/gdb)(1), [lldb](/man/lldb)(1), [rust-gdb](/man/rust-gdb)(1)
+[gdb](/man/gdb)(1), [lldb](/man/lldb)(1)
