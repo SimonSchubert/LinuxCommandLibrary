@@ -1,4 +1,4 @@
-The app currently has <b>8506</b> manual pages, <b>28</b> basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
+The app currently has <b>8537</b> manual pages, <b>30</b> basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
 
 <b>Categories</b>
 
@@ -6,6 +6,7 @@ The app currently has <b>8506</b> manual pages, <b>28</b> basic categories and a
 * AI tools
 * System information
 * System control
+* System Recovery
 * Users & Groups
 * Files & Folders
 * Input
@@ -19,6 +20,7 @@ The app currently has <b>8506</b> manual pages, <b>28</b> basic categories and a
 * Package manager
 * Text Processing
 * Compression & Archiving
+* Backup & Imaging
 * Hacking tools
 * Terminal games
 * Cryptocurrencies

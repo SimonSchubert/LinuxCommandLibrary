@@ -1,3 +1,13 @@
+## v4.1.0 — 2026-06-07
+
+### Features
+- Added system recovery and backup imaging content
+- Added new Linux commands across multiple batches
+
+### Improvements
+- Refined command documentation across many entries
+- Upgraded dependencies
+
 ## v4.0.6 — 2026-05-26
 
 ### Features
