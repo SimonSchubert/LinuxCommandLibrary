@@ -489,5 +489,7 @@ fun BasicCategory.getIconId(): AppIcon = when (title) {
     "JSON" -> AppIcon.JSON
     "Fun" -> AppIcon.FUN
     "AI tools" -> AppIcon.AGENT
+    "Backup & Imaging" -> AppIcon.SAVE
+    "System Recovery" -> AppIcon.HEALING
     else -> AppIcon.MOUSE
 }

@@ -374,6 +374,8 @@ class WebsiteBuilder(
         "Input" -> "icon-mouse.svg"
         "JSON" -> "icon-json.svg"
         "Fun" -> "icon-fun.svg"
+        "Backup & Imaging" -> "icon-save.svg"
+        "System Recovery" -> "icon-healing.svg"
         "VIM Text Editor" -> "icon-text-edit.svg"
         "Emacs Text Editor" -> "icon-text-edit.svg"
         "Nano Text Editor" -> "icon-text-edit.svg"

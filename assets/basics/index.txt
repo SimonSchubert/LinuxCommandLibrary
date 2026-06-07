@@ -21,6 +21,7 @@ shellscripting.md
 ssh.md
 systemcontrol.md
 systeminformation.md
+systemrecovery.md
 terminalgames.md
 textprocessing.md
 tmux.md

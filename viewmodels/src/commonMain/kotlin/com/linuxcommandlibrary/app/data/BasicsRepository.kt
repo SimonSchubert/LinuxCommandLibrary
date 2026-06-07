@@ -100,7 +100,7 @@ class BasicsRepository(private val assetReader: AssetReader) {
     }
 
     fun usesCardLayout(categoryId: String): Boolean = categoryId.endsWith("texteditor") ||
-        categoryId in setOf("shellscripting", "tmux", "regularexpressions", "terminalgames", "backupimaging")
+        categoryId in setOf("shellscripting", "tmux", "regularexpressions", "terminalgames", "backupimaging", "systemrecovery")
 
     fun getMatchingGroups(query: String): ImmutableList<BasicGroupMatch> {
         if (query.isBlank()) return persistentListOf()

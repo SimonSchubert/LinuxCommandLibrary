@@ -90,6 +90,7 @@ val basicsSortOrder =
         "AI tools",
         "System information",
         "System control",
+        "System Recovery",
         "Users & Groups",
         "Files & Folders",
         "Input",
