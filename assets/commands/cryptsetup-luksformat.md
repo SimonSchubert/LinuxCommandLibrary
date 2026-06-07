@@ -28,23 +28,47 @@ LUKS provides standardized on-disk encryption with multiple key slots, secure ke
 
 # PARAMETERS
 
-**--label** _label_
-> Set LUKS2 label
-
 **--type** _type_
-> LUKS type (luks1, luks2)
+> LUKS type: luks1 or luks2. Defaults to luks2.
 
-**--cipher** _cipher_
-> Encryption cipher
+**-c**, **--cipher** _cipher_
+> Encryption cipher specification. Compiled-in default (typically aes-xts-plain64).
 
-**--key-size** _bits_
-> Key size in bits
+**-s**, **--key-size** _bits_
+> Key size in bits, must be a multiple of 8. For XTS the volume key is split between two ciphers, so 512 yields AES-256.
 
-**--hash** _hash_
-> Hash algorithm for PBKDF
+**-h**, **--hash** _hash_
+> Hash algorithm used in the LUKS key setup and volume key digest.
 
-**--iter-time** _ms_
-> PBKDF iteration time in milliseconds
+**-i**, **--iter-time** _ms_
+> Milliseconds to spend on PBKDF passphrase processing. Higher values increase brute-force resistance.
+
+**--pbkdf** _algo_
+> PBKDF algorithm for LUKS2: pbkdf2, argon2i, or argon2id (the default).
+
+**-d**, **--key-file** _file_
+> Read the passphrase from a file. Use - to read from standard input.
+
+**-l**, **--keyfile-size** _bytes_
+> Read at most this many bytes from the key file.
+
+**-y**, **--verify-passphrase**
+> Ask for the passphrase twice and fail if the entries differ.
+
+**-q**, **--batch-mode**
+> Suppress all confirmation questions. Useful for scripting.
+
+**--use-urandom**, **--use-random**
+> Select the kernel RNG (/dev/urandom or /dev/random) used to generate the volume key.
+
+**--sector-size** _bytes_
+> Encryption sector size for LUKS2: a power of two between 512 and 4096.
+
+**--label** _label_
+> Set the LUKS2 device label.
+
+**--integrity** _algo_
+> Enable authenticated disk encryption with the given integrity algorithm (LUKS2 only).
 
 # CAVEATS
 

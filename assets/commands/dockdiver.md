@@ -1,24 +1,28 @@
 # TAGLINE
 
-Docker image secrets scanner
+explore and extract Docker registry contents
 
 # TLDR
 
-**Scan Docker Hub** for secrets
+**List all repositories** in a registry
 
-```dockdiver -u [username]```
+```dockdiver -url [registry_host] -list```
 
-**Scan specific image**
+**Dump a specific repository**
 
-```dockdiver -i [image:tag]```
+```dockdiver -url [registry_host] -dump [repository]```
 
-**Scan with output** file
+**Dump every repository** into a directory
 
-```dockdiver -u [username] -o [results.txt]```
+```dockdiver -url [registry_host] -dump-all -dir [output_dir]```
 
-**Scan with custom** patterns
+**Authenticate with basic** credentials
 
-```dockdiver -i [image:tag] -p [patterns.json]```
+```dockdiver -url [registry_host] -username [user] -password [pass] -list```
+
+**Use a bearer token** and skip TLS verification
+
+```dockdiver -url [registry_host] -bearer [token] -insecure -dump-all```
 
 # SYNOPSIS
 
@@ -26,40 +30,70 @@ Docker image secrets scanner
 
 # PARAMETERS
 
-**-u** _USERNAME_
-> Docker Hub username to scan.
+**-url** _STRING_
+> Base URL or hostname of the Docker registry (required).
 
-**-i** _IMAGE_
-> Specific image to analyze.
+**-port** _INT_
+> Registry port used when not specified in the URL. Default 5000.
 
-**-o** _FILE_
-> Output file for results.
+**-list**
+> List all repositories in the registry.
 
-**-p** _FILE_
-> Custom pattern file.
+**-dump** _REPOSITORY_
+> Download a single repository (manifest, config blob, and layer tarballs).
 
-**-v**
-> Verbose output.
+**-dump-all**
+> Download all repositories found in the registry.
 
-**--help**
-> Display help information.
+**-dir** _DIRECTORY_
+> Output directory for dumped files. Default docker_dump.
+
+**-username** _STRING_
+> Username for HTTP Basic authentication.
+
+**-password** _STRING_
+> Password for HTTP Basic authentication.
+
+**-bearer** _STRING_
+> Bearer token for the Authorization header.
+
+**-headers** _JSON_
+> Custom request headers as JSON, e.g. '{"X-Custom": "Value"}'.
+
+**-insecure**
+> Skip TLS certificate verification.
+
+**-rate** _INT_
+> Requests per second. Default 3.
+
+**-timeout** _DURATION_
+> HTTP request timeout, e.g. 10s or 500ms. Default 30s.
+
+**-proxy** _URL_
+> Proxy URL (http, https, or socks5).
+
+**-proxy-username** _STRING_
+> Username for SOCKS5 proxy authentication.
+
+**-proxy-password** _STRING_
+> Password for SOCKS5 proxy authentication.
 
 # DESCRIPTION
 
-**dockdiver** is a security tool for analyzing Docker images and Docker Hub repositories for exposed secrets, credentials, and sensitive information. It scans image layers to identify potentially dangerous data leakage.
+**dockdiver** is a Go utility that enumerates and extracts the contents of a Docker registry exposed over the Registry HTTP API V2. It can list repositories, dump a single repository, or dump every repository, retrieving manifests, configuration blobs, and layer tarballs while verifying each blob with its SHA256 digest.
 
-The tool searches for common secret patterns including API keys, passwords, private keys, and credentials embedded in Docker images. It can scan individual images or entire user repositories.
+It is aimed at penetration testing, bug bounty, and CTF scenarios where a registry (often a self-hosted one on port 5000) is reachable and may expose images that contain source code, configuration, or credentials. Authentication via Basic credentials or a bearer token, custom headers, proxy support, and a configurable request rate make it suitable for working against access-controlled or rate-limited registries.
 
-dockdiver helps security teams audit container images before deployment and identify credential exposure in public registries.
+This tool targets the registry itself rather than the public Docker Hub web interface, and it downloads raw image data for offline inspection rather than scanning layers for secrets on its own.
 
 # CAVEATS
 
-Scanning large images may take time. Some secrets may be obfuscated or encoded. Only scans accessible images. Pattern matching may produce false positives.
+Only registries reachable over the HTTP API V2 are supported. Use against registries you are authorized to access. Dumping all repositories can transfer large amounts of data; the default rate of 3 requests per second limits load and helps avoid tripping rate limits.
 
 # HISTORY
 
-dockdiver was created as a security research tool to address the widespread problem of secrets being accidentally committed to Docker images. It automates the discovery of exposed credentials in container registries.
+dockdiver is an open-source Go tool published on GitHub by MachiavelliII. It ships with a registry lab environment in its lab directory for safe testing.
 
 # SEE ALSO
 
-[dive](/man/dive)(1), [trivy](/man/trivy)(1), [grype](/man/grype)(1)
+[dive](/man/dive)(1), [trivy](/man/trivy)(1), [grype](/man/grype)(1), [docker-pull](/man/docker-pull)(1)

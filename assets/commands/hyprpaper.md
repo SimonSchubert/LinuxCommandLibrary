@@ -16,17 +16,21 @@ Start the **hyprpaper service**
 
 ```hyprctl hyprpaper wallpaper "[monitor],[path/to/image.png]"```
 
-**Reload** wallpaper (preload, set, and unload unused)
+**Reload** wallpaper (set/change without preloading first)
 
 ```hyprctl hyprpaper reload "[monitor],[path/to/image.png]"```
+
+Set wallpaper on **all monitors** (empty monitor field)
+
+```hyprctl hyprpaper wallpaper ",[path/to/image.png]"```
+
+**Unload** all preloaded wallpapers
+
+```hyprctl hyprpaper unload all```
 
 List **preloaded** wallpapers
 
 ```hyprctl hyprpaper listloaded```
-
-List **active** wallpapers with monitors
-
-```hyprctl hyprpaper listactive```
 
 # SYNOPSIS
 

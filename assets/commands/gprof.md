@@ -46,13 +46,19 @@ GNU execution profiler
 > Show functions never called.
 
 **-c**, **--static-call-graph**
-> Include static call graph.
+> Discover child functions by scanning the machine code, even if never called at runtime.
 
 **-A**, **--annotated-source**
 > Print annotated source.
 
 **-l**, **--line**
 > Line-by-line profiling.
+
+**-s**, **--sum**
+> Accumulate several profile data files into a summary `gmon.sum`.
+
+**-i**, **--file-info**
+> Print summary information about the profile data file, then exit.
 
 # DESCRIPTION
 

@@ -43,7 +43,7 @@ list Docker images stored locally
 > Filter output.
 
 **--format** _string_
-> Format output using Go template.
+> Format output using a custom template: table, table TEMPLATE, json, or a Go template string.
 
 **--no-trunc**
 > Don't truncate output.
@@ -54,5 +54,5 @@ list Docker images stored locally
 
 # SEE ALSO
 
-[docker-image-ls](/man/docker-image-ls)(1), [docker-rmi](/man/docker-rmi)(1)
+[docker-image-ls](/man/docker-image-ls)(1), [docker-rmi](/man/docker-rmi)(1), [docker-pull](/man/docker-pull)(1)
 

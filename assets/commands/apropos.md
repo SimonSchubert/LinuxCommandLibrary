@@ -20,9 +20,9 @@ Search with **regex**
 
 ```apropos -r "[network.*config]"```
 
-Show **long descriptions**
+**Match all** keywords (AND)
 
-```apropos -l [keyword]```
+```apropos -a [keyword1] [keyword2]```
 
 # SYNOPSIS
 
@@ -32,7 +32,7 @@ Show **long descriptions**
 
 **apropos** searches the manual page names and short descriptions for keywords, helping you find relevant commands when you don't know the exact name.
 
-The search queries the whatis database built by mandb. Multiple keywords are OR'd together; use regex for AND behavior.
+The search queries the whatis database built by mandb. By default each keyword is treated as a regular expression. Multiple keywords are OR'd together; use **-a** to require all of them to match.
 
 # PARAMETERS
 
@@ -40,7 +40,7 @@ The search queries the whatis database built by mandb. Multiple keywords are OR'
 > Search for exact keyword match
 
 **-r**, **--regex**
-> Interpret keyword as regular expression
+> Interpret each keyword as a regular expression. This is the default behaviour.
 
 **-w**, **--wildcard**
 > Interpret keyword as shell wildcard
@@ -49,7 +49,7 @@ The search queries the whatis database built by mandb. Multiple keywords are OR'
 > Search only specified manual sections
 
 **-l**, **--long**
-> Don't truncate output lines
+> Do not trim output to the terminal width.
 
 **-a**, **--and**
 > Require all keywords to match

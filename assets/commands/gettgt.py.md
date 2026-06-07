@@ -4,62 +4,68 @@ Kerberos ticket granting ticket requester
 
 # TLDR
 
-**Get TGT for** user
+**Get a TGT with** a password
 
 ```getTGT.py [domain]/[username]:[password] -dc-ip [dc_ip]```
 
-**Using NTLM hash**
+**Get a TGT using** an NTLM hash
 
-```getTGT.py [domain]/[username] -hashes :[ntlm_hash] -dc-ip [dc_ip]```
+```getTGT.py [domain]/[username] -hashes :[nthash] -dc-ip [dc_ip]```
 
-**Using AES key**
+**Get a TGT using** an AES key
 
 ```getTGT.py [domain]/[username] -aesKey [aes_key] -dc-ip [dc_ip]```
 
-**Save to file**
+**Prompt for the password** instead of passing it inline
 
-```getTGT.py [domain]/[username]:[password] -dc-ip [dc_ip] -o [ticket.ccache]```
+```getTGT.py [domain]/[username] -dc-ip [dc_ip]```
 
 # SYNOPSIS
 
-**getTGT.py** _domain_/_user_ [_options_]
+**getTGT.py** _domain_/_user_[:_password_] [_options_]
 
 # PARAMETERS
 
-_DOMAIN/USER_
-> Domain and username.
+_DOMAIN/USER_[:_PASSWORD_]
+> Target identity. The password is optional and is prompted for if omitted.
 
 **-dc-ip** _IP_
-> Domain controller IP.
+> IP address of the domain controller. Defaults to the domain FQDN if omitted.
 
 **-hashes** _LMHASH:NTHASH_
-> NTLM hashes.
+> NTLM hashes to authenticate with. The LM half may be left empty (`:NTHASH`).
 
 **-aesKey** _KEY_
-> AES encryption key.
+> AES key (128 or 256 bit) for Kerberos authentication.
 
-**-o** _FILE_
-> Output file.
+**-k**
+> Use Kerberos credentials from the ccache file (KRB5CCNAME), falling back to the supplied credentials.
 
-**--help**
-> Display help information.
+**-no-pass**
+> Do not prompt for a password, useful together with -k.
+
+**-debug**
+> Turn on DEBUG output.
+
+**-ts**
+> Add a timestamp to each log line.
 
 # DESCRIPTION
 
-**getTGT.py** is an Impacket tool that requests Kerberos TGT (Ticket Granting Tickets) from Active Directory domain controllers. It authenticates using passwords, hashes, or AES keys.
+**getTGT.py** is an Impacket example script that requests a Kerberos Ticket Granting Ticket (TGT) from an Active Directory domain controller, given a password, an NTLM hash, or an AES key. The official description reads: "Given a password, hash or aesKey, it will request a TGT and save it as ccache."
 
-The tool obtains tickets for use in Kerberos-based attacks or legitimate authentication. Tickets can be exported in ccache format for use with other tools.
+The resulting ticket is written to a ccache file named after the principal (for example `username.ccache`). Set the **KRB5CCNAME** environment variable to that file and other Impacket tools, or native utilities, can reuse the ticket for pass-the-ticket authentication.
 
-getTGT.py enables Kerberos ticket acquisition in penetration testing.
+There is no dedicated output flag: the ccache filename is derived from the username automatically.
 
 # CAVEATS
 
-**Authorized testing only.** Requires valid credentials. Tickets have limited lifetime.
+**Authorized testing only.** Requires valid credentials and clock sync with the domain controller, since large time skew breaks Kerberos. Tickets have a limited lifetime.
 
 # HISTORY
 
-getTGT.py is part of **Impacket**, the Python network protocol toolkit for Active Directory security testing.
+getTGT.py is part of **Impacket**, the Python network protocol toolkit for Active Directory security testing, originally by Core Security and now maintained by Fortra.
 
 # SEE ALSO
 
-[getST.py](/man/getST.py)(1), [GetNPUsers.py](/man/GetNPUsers.py)(1)
+[GetNPUsers.py](/man/GetNPUsers.py)(1), [getuserspns.py](/man/getuserspns.py)(1), [kerberos](/man/kerberos)(7), [kinit](/man/kinit)(1)

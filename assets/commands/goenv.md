@@ -12,6 +12,10 @@ Go version manager
 
 ```goenv install [1.21.0]```
 
+**Install the latest stable version**
+
+```goenv install latest```
+
 **List installed versions**
 
 ```goenv versions```
@@ -54,7 +58,13 @@ Go version manager
 > Set global default version.
 
 **local** _version_
-> Set directory-specific version.
+> Set directory-specific version (writes a `.go-version` file).
+
+**shell** _version_
+> Set a shell-specific version via the `GOENV_VERSION` variable.
+
+**which** _command_
+> Show the full path to the executable that goenv will invoke.
 
 **rehash**
 > Rebuild shim executables.

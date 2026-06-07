@@ -22,6 +22,9 @@ Gradle build artifact removal task
 
 # PARAMETERS
 
+**clean**_TaskName_
+> Task rule that deletes only the outputs of a named task, e.g. `cleanJar` removes the JAR produced by the `jar` task.
+
 **--info**
 > Info logging.
 
@@ -30,9 +33,9 @@ Gradle build artifact removal task
 
 # DESCRIPTION
 
-**gradle clean** removes the build directory and all generated output. It deletes compiled classes, packaged artifacts, and cached build data, ensuring a fresh build environment.
+**gradle clean** deletes the project build directory (the path set by `layout.buildDirectory`, by default `build/`) and everything in it. It removes compiled classes, packaged artifacts, and cached build output, ensuring a fresh build environment.
 
-The task is useful when builds become inconsistent or caches are corrupted, forcing a complete rebuild on the next invocation.
+The task is provided by Gradle's base plugin, which is applied by the Java, Application, and most other language plugins. It is useful when builds become inconsistent or caches are corrupted, forcing a complete rebuild on the next invocation.
 
 # CAVEATS
 

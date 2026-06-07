@@ -39,17 +39,29 @@ _FILES_
 **:reload**
 > Reload current modules.
 
-**:type** _EXPR_
+**:type**, **:t** _EXPR_
 > Show expression type.
 
-**:info** _NAME_
-> Show info about name.
+**:kind**, **:k** _TYPE_
+> Show the kind of a type.
 
-**:quit**
+**:info** _NAME_
+> Show info about name, including definition and instances.
+
+**:browse** _MODULE_
+> List identifiers exported by a module.
+
+**:set** _OPTION_
+> Set a GHCi or compiler option for the session.
+
+**:main** _ARGS_
+> Run the program's `main` with the given arguments.
+
+**:quit**, **:q**
 > Exit GHCi.
 
-**-i** _DIR_
-> Add to import path.
+**-i** _DIR1:...:DIRn_
+> Add directories to the source file search path.
 
 **--help**
 > Display help information.
@@ -63,7 +75,10 @@ GHCi supports all GHC language extensions and can compile modules on the fly. It
 # CONFIGURATION
 
 **~/.ghci**
-> Startup file loaded when GHCi starts, containing default settings, imports, and custom commands.
+> Per-user startup file loaded when GHCi starts, containing default settings, imports, and custom commands.
+
+**./.ghci**
+> Project-local startup file loaded after the user file (must have safe permissions to be read).
 
 # CAVEATS
 
@@ -75,4 +90,4 @@ GHCi was introduced with **GHC 5.0** in **2001**, providing interactive Haskell 
 
 # SEE ALSO
 
-[ghc](/man/ghc)(1), [ghcid](/man/ghcid)(1), [cabal](/man/cabal)(1)
+[ghc](/man/ghc)(1), [ghcid](/man/ghcid)(1), [cabal](/man/cabal)(1), [stack](/man/stack)(1), [runghc](/man/runghc)(1)

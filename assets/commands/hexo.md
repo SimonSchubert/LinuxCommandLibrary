@@ -46,17 +46,26 @@ _COMMAND_
 **generate**, **g**
 > Generate static files.
 
+**publish** _TITLE_
+> Move a draft into the posts folder as a published post.
+
 **server**, **s**
 > Start local server.
 
 **deploy**, **d**
 > Deploy to remote.
 
+**list** _TYPE_
+> List site data (for example posts, pages, routes, tags).
+
 **clean**
-> Clean cache and public.
+> Remove the cache file (`db.json`) and generated `public` directory.
 
 **-p**, **--port** _PORT_
-> Server port.
+> Server port (default 4000).
+
+**-w**, **--watch**
+> Watch for file changes (with `generate` or `server`).
 
 **--help**
 > Display help information.

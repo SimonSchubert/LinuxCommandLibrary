@@ -4,58 +4,66 @@ Navigate to parent directories by name
 
 # TLDR
 
-**Go back** to parent directory by name
+**Go back** to a parent directory by name (or its first few letters)
 
-```bd [dirname]```
+```bd [name]```
 
-**List** parent directories
+**Case-sensitive** match
 
-```bd -l```
+```bd -s [name]```
+
+**Run a command** in a parent directory without changing to it
+
+```ls `bd [name]` ```
 
 # SYNOPSIS
 
-**bd** _directory-name_
+**bd** [_-si_] _name_
 
 # DESCRIPTION
 
-**bd** (back directory) is a bash utility for quickly navigating to parent directories by name instead of using multiple `cd ../../../` commands. It searches upward in the directory tree for a matching directory name.
+**bd** (back directory) is a bash utility for quickly navigating to a parent directory by name instead of typing multiple `cd ../../../` commands. It searches upward in the current path for a directory whose name matches (matching on the first few letters is enough).
 
-The tool simplifies navigation in deep directory structures.
+If several ancestors share the same name, bd jumps to the closest one (the immediate parent is not considered a match). It is installed as a shell alias so the directory change persists in your shell:
+
+```alias bd=". bd -si"```
 
 # PARAMETERS
 
-**-l**, **--list**
-> List all parent directories
+**-s**
+> Case-sensitive matching (the default alias uses **-si** for case-insensitive).
 
-**-h**, **--help**
-> Show help
+**-i**
+> Case-insensitive matching (no-op when already the default).
 
 # WORKFLOW
 
 ```bash
 # Current path: /home/user/projects/myapp/src/components
-# Jump to 'myapp' directory
+# Jump up to 'myapp'
 bd myapp
 # Now in: /home/user/projects/myapp
 
-# List available parent directories
-bd -l
+# Or just the first letters
+bd my
+
+# Use a parent path inline without leaving the current directory
+cp file.txt `bd projects`
 ```
 
 # FEATURES
 
-- Fuzzy matching on directory names
-- Tab completion support
-- Fast parent directory navigation
-- Integration with bash/zsh
+- Prefix matching on parent directory names
+- Bash completion support (via the bundled completion file)
+- Closest-match resolution when names repeat in the path
 
 # CAVEATS
 
-Requires installation and sourcing in shell config. Only works upward (not sideways). Name must be unique in path. Not available by default on most systems.
+Requires installation and an alias in your shell config (the alias sources the script so the `cd` sticks). Only walks upward through the current path, not into sibling trees. Built for bash; separate ports exist for zsh and fish. Not available by default on most systems.
 
 # HISTORY
 
-**bd** was created by Vignesh Warar around **2013** to simplify navigating up directory trees by name.
+**bd** was created by Vigneshwaran Raveendran (vigneshwaranr) to simplify navigating up directory trees by name.
 
 # SEE ALSO
 

@@ -28,56 +28,74 @@ web server and reverse proxy
 
 ```nginx -v```
 
+**Test config and dump it** to stdout
+
+```nginx -T```
+
 **Use specific config**
 
 ```nginx -c [/etc/nginx/nginx.conf]```
 
-**Prefix path**
+**Set global directives** at startup
 
-```nginx -p [/var/www]```
+```nginx -g "[daemon off;]"```
 
 # SYNOPSIS
 
-**nginx** [_options_]
+**nginx** [_-?hqtTvV_] [_-s signal_] [_-p prefix_] [_-e filename_] [_-c filename_] [_-g directives_]
 
 # PARAMETERS
 
+**-?**, **-h**
+> Print help for command-line parameters.
+
 **-t**
-> Test configuration.
+> Test the configuration file: nginx checks the syntax and then tries to open files referenced in the configuration.
+
+**-T**
+> Same as **-t**, but additionally dump the configuration files to standard output (1.9.2+).
+
+**-q**
+> Suppress non-error messages during configuration testing.
 
 **-s** _SIGNAL_
-> Send signal (stop, quit, reload, reopen).
+> Send a signal to the master process. The signal may be one of: **stop** (fast shutdown), **quit** (graceful shutdown), **reload** (reload configuration), or **reopen** (reopen log files).
+
+**-p** _PREFIX_
+> Set the path prefix, that is, a directory that will keep server files. Default is _/usr/local/nginx_.
+
+**-e** _FILE_
+> Use an alternative error log file. The special value **stderr** logs to standard error (1.19.5+).
 
 **-c** _FILE_
-> Configuration file.
+> Use an alternative configuration file instead of the default _prefix/conf/nginx.conf_.
+
+**-g** _DIRECTIVES_
+> Set global configuration directives, for example `nginx -g "pid /var/run/nginx.pid;"`.
 
 **-v**
-> Show version.
+> Print the nginx version.
 
 **-V**
-> Show version and config.
-
-**-p** _PATH_
-> Prefix path.
-
-**--help**
-> Display help information.
+> Print the nginx version, compiler version, and configure parameters.
 
 # DESCRIPTION
 
-**nginx** is a web server and reverse proxy. It handles HTTP, HTTPS, and mail proxy.
+**nginx** ("engine x") is a high-performance HTTP and reverse proxy server, as well as a mail (IMAP/POP3/SMTP) proxy server. It is designed to handle a large number of concurrent connections with a low, predictable memory footprint using an event-driven, asynchronous architecture.
 
-The tool serves static content. Supports load balancing and caching.
+Running **nginx** with no arguments starts the server (in the foreground or as a daemon, depending on the configuration). Once running, the master process is controlled at runtime by sending signals with **-s** rather than by restarting. Changes to the configuration are applied with `nginx -s reload`, which starts new worker processes and gracefully shuts down the old ones.
+
+Beyond serving static files, nginx is widely used as a reverse proxy, load balancer, TLS terminator, and HTTP cache in front of application servers.
 
 # CAVEATS
 
-Requires configuration. Runs as daemon. Different from Apache config.
+Behavior is driven entirely by the configuration file; always validate changes with **-t** before reloading. Paths printed in help and defaults are relative to the compile-time prefix and often differ on distribution packages (commonly _/etc/nginx/nginx.conf_).
 
 # HISTORY
 
-nginx was created by **Igor Sysoev** in 2004 to handle high concurrency with low memory usage.
+nginx was created by **Igor Sysoev** and first publicly released in **2004** to solve the C10k problem of handling many simultaneous connections. It is now developed by **F5, Inc.** and powers a large share of the busiest sites on the web.
 
 # SEE ALSO
 
-[apache2](/man/apache2)(1), [caddy](/man/caddy)(1), [haproxy](/man/haproxy)(1)
+[apache2](/man/apache2)(8), [caddy](/man/caddy)(1), [haproxy](/man/haproxy)(1)
 
