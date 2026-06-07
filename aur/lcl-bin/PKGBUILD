@@ -2,7 +2,7 @@
 # https://github.com/SimonSchubert/LinuxCommandLibrary
 
 pkgname=lcl-bin
-pkgver=4.0.6
+pkgver=4.1.0
 pkgrel=1
 pkgdesc='Linux command reference and cheat sheets for your terminal'
 arch=('x86_64')
@@ -17,7 +17,7 @@ provides=('lcl')
 conflicts=('lcl')
 
 source=("LinuxCommandLibrary-${pkgver}-cli-linux-x64.zip::https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v${pkgver}/LinuxCommandLibrary-${pkgver}-cli-linux-x64.zip")
-sha256sums=('96f2bf17a07bfc0fd43bf12458a0fbcd5579d9c7689fc80259c86f5e0a6461e1')
+sha256sums=('bf00f8fb7f2d19f5ecf0c88a78765cf70ba6fd581150de6a070776e6cf39526e')
 
 package() {
     install -Dm755 "${srcdir}/lcl" "${pkgdir}/usr/bin/lcl"
