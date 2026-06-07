@@ -1039,6 +1039,7 @@ cbt.md
 cc.md
 ccache.md
 ccat.md
+ccgs.md
 ccomps.md
 ccrypt.md
 ccxt.md
@@ -3729,6 +3730,7 @@ kexec.md
 key.dns_resolver.md
 keyb.md
 keybase.md
+keybench.md
 keychain.md
 keycloak.md
 keyctl.md
@@ -3969,6 +3971,7 @@ libuser-lid.md
 license.md
 licensecheck.md
 licensor.md
+lich.md
 lid.idutils.md
 lid.libuser.md
 lid.md
@@ -5351,6 +5354,7 @@ patch.md
 patchwork.md
 pathchk.md
 pathos.md
+patina.md
 patool.md
 pavucontrol.md
 pax.md
@@ -7377,6 +7381,7 @@ tailscale.md
 tailspin.md
 tailwindcss.md
 takeout.md
+tako-vm.md
 talk.md
 talosctl.md
 taproom.md
