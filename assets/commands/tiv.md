@@ -20,60 +20,70 @@ Display images in terminal using ANSI
 
 ```tiv [image1.png] [image2.jpg] [image3.gif]```
 
-**Display all images in directory**
+**Show a directory as a thumbnail grid**
 
 ```tiv [/path/to/images/]```
 
-**Display with 256 colors**
+**Use a custom number of thumbnail columns**
 
-```tiv -256 [image.png]```
+```tiv -c [5] [/path/to/images/]```
+
+**Use 256-color mode** (e.g. macOS Terminal)
+
+```tiv -2 [image.png]```
 
 # SYNOPSIS
 
-**tiv** [_options_] _file_|_directory_ [...]
+**tiv** [_options_] _image_ [_image_...]
 
 # PARAMETERS
 
-**-w** _width_
-> Set output width in characters.
+**-w** _num_
+> Set the maximum output width to _num_ characters.
 
-**-h** _height_
-> Set output height in characters.
+**-h** _num_
+> Set the maximum output height to _num_ lines.
 
-**-256**
-> Use 256-color mode instead of true color.
-
-**-x** _num_
-> Image x-offset in pixels.
-
-**-y** _num_
-> Image y-offset in pixels.
+**-2**, **--256**
+> Use 256 colors instead of 24-bit true color. Needed to display properly on macOS Terminal.
 
 **-0**
-> Do not output newline after image.
+> No block character adjustment: always use the top half block character.
+
+**-c** _num_
+> Number of thumbnail columns in 'dir' mode (3 by default).
+
+**-d**, **--dir**
+> Force 'dir' (thumbnail grid) mode. Selected automatically for more than one input.
+
+**-f**, **--full**
+> Force 'full' mode. Selected automatically for a single input.
+
+**-C** _hex_
+> Use _hex_ color (0xFFFFFF white by default) as the background for transparent PNG/GIF.
+
+**-x**
+> Use new Unicode Teletext/legacy characters (experimental).
 
 **--help**
 > Display help information.
 
-**--version**
-> Display version information.
-
 # DESCRIPTION
 
-**tiv** (Terminal Image Viewer) displays images directly in the terminal using ANSI escape codes and Unicode block characters. It converts images to a text representation that approximates the original using colored characters.
+**tiv** (Terminal Image Viewer) displays images directly in the terminal using RGB ANSI escape codes and Unicode block graphics characters. It maps each 4x8 pixel cell to the block character and foreground/background colors that best approximate the original.
 
-The viewer supports various image formats through ImageMagick including PNG, JPEG, GIF, BMP, and more. It automatically scales images to fit the terminal dimensions while preserving aspect ratio.
+Images are loaded with the bundled CImg library: PNG support is compiled in, while other formats (JPEG, GIF, BMP, and more) are handled by invoking ImageMagick's `convert`. Images are scaled to fit the terminal while preserving aspect ratio.
 
-For best results, use a terminal with true color (24-bit) support. The 256-color fallback mode works on older terminals but produces lower quality output. Unicode block characters provide approximately 2x vertical resolution compared to standard characters.
+When given a directory or more than one file, **tiv** switches to 'dir' mode and renders a grid of thumbnails (override with **-f**/**-d**). For best results, use a terminal with true color (24-bit) support. The **-2** 256-color mode works on older terminals but produces lower quality output. Block characters provide roughly 2x vertical resolution compared to standard characters.
 
 # CAVEATS
 
-Quality depends on terminal capabilities and font. Requires true color terminal support for best results. Large images may take longer to render. Animated GIFs display only the first frame. Results vary significantly between terminal emulators.
+Quality depends on terminal capabilities and font. True color terminal support gives the best results. Non-PNG formats require ImageMagick to be installed. Animated GIFs display only the first frame. Results vary significantly between terminal emulators.
 
 # HISTORY
 
-**tiv** was developed as a lightweight way to preview images without leaving the terminal. Multiple implementations exist with varying features, the most popular being the C++ TerminalImageViewer by Stefan Haustein. The tool gained popularity among developers who work primarily in terminal environments and need quick visual feedback.
+**tiv** is the C++ TerminalImageViewer by Stefan Haustein, a lightweight way to preview images without leaving the terminal. It renders with RGB ANSI codes and Unicode block characters and is popular among developers who work primarily in terminals. Several unrelated tools also ship a `tiv` binary, so behavior can differ between installations.
 
 # SEE ALSO
 
-[img2txt](/man/img2txt)(1), [catimg](/man/catimg)(1), [chafa](/man/chafa)(1), [jp2a](/man/jp2a)(1), [timg](/man/timg)(1)
+[chafa](/man/chafa)(1), [viu](/man/viu)(1), [timg](/man/timg)(1), [catimg](/man/catimg)(1), [img2txt](/man/img2txt)(1), [jp2a](/man/jp2a)(1)

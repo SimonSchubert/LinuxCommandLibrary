@@ -4,47 +4,74 @@ Sysfs device information viewer
 
 # TLDR
 
-List **bus** device attributes
+List all buses, classes, and **root devices**
 
-```systool -b [pci|usb|...] -v```
+```systool```
 
-List **class** device attributes
+List **bus** devices with all attribute values
 
-```systool -c [drm|block|...] -v```
+```systool -b [pci] -v```
 
-Show **drivers** for a bus
+List **class** devices with all attribute values
+
+```systool -c [net] -v```
+
+Show only the **drivers** on a bus
 
 ```systool -b [bus] -D```
 
+Show attributes of a specific **module**
+
+```systool -m [module_name] -v```
+
+Show a single named **attribute** for a device
+
+```systool -A [attribute] -b [bus] [device]```
+
 # SYNOPSIS
 
-**systool** [_OPTIONS_]
+**systool** [_options_ [_device_]]
 
 # PARAMETERS
 
-**-b** _BUS_
-> Show devices on specified bus (pci, usb, etc.)
+**-b** _bus_
+> Show information for a specific bus (pci, usb, etc.).
 
-**-c** _CLASS_
-> Show devices of specified class (block, drm, etc.)
+**-c** _class_
+> Show information for a specific class (block, net, drm, etc.).
+
+**-m** _module_
+> Show information for a specific module.
+
+**-a**
+> Show attributes of the requested resource.
 
 **-v**
-> Show all attributes verbosely
+> Show all attributes with values.
+
+**-A** _attribute_
+> Show the value of a single named attribute for the requested resource.
+
+**-d**
+> Show only devices.
 
 **-D**
-> Show only device drivers
+> Show only drivers.
 
-**-d** _DEVICE_
-> Show specific device
+**-P**
+> Show the device's parent.
 
-**-p** _PATH_
-> Show device at sysfs path
+**-p**
+> Show the absolute sysfs path to the resource.
+
+**-h**
+> Show usage.
 
 # DESCRIPTION
 
-**systool** displays system device information from sysfs by bus and class. It provides a convenient interface to browse `/sys/bus/` and `/sys/class/` hierarchies.
+**systool** displays system device information from sysfs by bus, class, and topology. It provides a convenient interface to browse the `/sys/bus/`, `/sys/class/`, and `/sys/module/` hierarchies.
 
-Available buses can be found in `/sys/bus/` and classes in `/sys/class/`. Common buses include pci, usb, and scsi; common classes include block, net, and drm.
+Run without parameters, **systool** lists all available bus types, device classes, and root devices. Passing a _device_ name after the options limits output to that single device. Available buses can be found in `/sys/bus/` and classes in `/sys/class/`; common buses include pci, usb, and scsi, and common classes include block, net, and drm.
 
 # CAVEATS
 
@@ -56,4 +83,4 @@ Requires the sysfsutils package. Information comes from the kernel's sysfs inter
 
 # SEE ALSO
 
-[lspci](/man/lspci)(8), [lsusb](/man/lsusb)(8), [udevadm](/man/udevadm)(8)
+[lspci](/man/lspci)(8), [lsusb](/man/lsusb)(8), [lsmod](/man/lsmod)(8), [udevadm](/man/udevadm)(8)
