@@ -1335,6 +1335,7 @@ couchdb.md
 counter-strike-2.md
 countmail.md
 countryfetch.md
+courtside.md
 coverage.md
 cowbuilder.md
 cowpatty.md
@@ -4266,6 +4267,7 @@ mapfile.md
 mapscii.md
 mapscrn.md
 marchat.md
+mariadb-binlog.md
 mariadb-install-db.md
 mariadb.md
 marimo.md
@@ -4769,6 +4771,7 @@ nikto.md
 nim.md
 nimble.md
 ninja.md
+ninoxai.md
 ninvaders.md
 nitch.md
 nitrogen.md
@@ -5320,6 +5323,7 @@ paperconf.md
 paperconfig.md
 paperkey.md
 papermc.md
+papernews.md
 papis.md
 paprefs.md
 par2.md
