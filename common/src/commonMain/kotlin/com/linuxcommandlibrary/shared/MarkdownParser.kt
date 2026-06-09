@@ -60,14 +60,15 @@ object MarkdownParser {
     }
 
     /**
-     * Parse code content for man page links [text](/man/command) into CommandElement list.
+     * Parse code content for markdown links into CommandElement list.
+     * Handles [text](/man/command) cross references and [text](https://...) external resource links.
      */
     fun parseCodeToElements(code: String): List<CommandElement> {
         val elements = mutableListOf<CommandElement>()
         var remaining = code
 
-        // Parse [text](/man/command) markdown links
-        val linkRegex = Regex("""\[([^\]]+)]\(/man/([^)]+)\)""")
+        // Parse [text](target) markdown links, classifying the target afterwards
+        val linkRegex = Regex("""\[([^\]]+)]\(([^)]+)\)""")
 
         while (remaining.isNotEmpty()) {
             val match = linkRegex.find(remaining)
@@ -79,9 +80,19 @@ object MarkdownParser {
                         elements.add(CommandElement.Text(textBefore))
                     }
                 }
-                // Add the man link (use the command name from the URL path)
-                val manName = match.groupValues[2]
-                elements.add(CommandElement.Man(manName))
+                val label = match.groupValues[1]
+                val target = match.groupValues[2]
+                when {
+                    // Man page cross reference (use the command name from the URL path)
+                    target.startsWith("/man/") -> elements.add(CommandElement.Man(target.removePrefix("/man/")))
+
+                    // External resource link (clickable, opens in browser)
+                    target.startsWith("http://") || target.startsWith("https://") ->
+                        elements.add(CommandElement.Url(label, target))
+
+                    // Unknown target: fall back to the display text
+                    else -> elements.add(CommandElement.Text(label))
+                }
 
                 // Continue with remaining text
                 remaining = remaining.substring(match.range.last + 1)
@@ -99,9 +110,9 @@ object MarkdownParser {
 
     /**
      * Strip markdown link syntax from code content.
-     * Replaces [text](/man/command) with just the display text.
+     * Replaces [text](target) with just the display text.
      */
-    fun cleanMarkdownCommand(code: String): String = code.replace(Regex("""\[([^\]]+)]\(/man/[^)]+\)"""), "$1")
+    fun cleanMarkdownCommand(code: String): String = code.replace(Regex("""\[([^\]]+)]\([^)]+\)"""), "$1")
 
     /**
      * Parse markdown content into sections suitable for display.
@@ -116,6 +127,16 @@ object MarkdownParser {
             val line = lines[i]
 
             when {
+                // HTML comment (hidden metadata, e.g. <!-- verified: 2026-06-09 -->) - never rendered
+                line.trim().startsWith("<!--") -> {
+                    // Skip the comment; for a multi-line comment, skip until the closing marker
+                    if (!line.trim().endsWith("-->")) {
+                        i++
+                        while (i < lines.size && !lines[i].trim().endsWith("-->")) i++
+                    }
+                    i++
+                }
+
                 // Inline code block ```code``` (must have content between markers, length > 6)
                 line.trim().let { it.startsWith("```") && it.endsWith("```") && it.length > 6 } -> {
                     val codeContent = line.trim().removeSurrounding("```")

@@ -48,7 +48,7 @@ data class CommandSectionInfo(
 
 /**
  * Get sort priority for command sections by title string.
- * TLDR first, SEE ALSO and AUTHOR/HISTORY last.
+ * TLDR first, then AUTHOR/HISTORY/SEE ALSO/RESOURCES last.
  */
 fun getSectionSortPriority(title: String): Int = when (title.uppercase()) {
     "TLDR" -> 0
@@ -63,6 +63,7 @@ fun getSectionSortPriority(title: String): Int = when (title.uppercase()) {
     "HISTORY" -> 91
     "AUTHOR" -> 92
     "SEE ALSO" -> 93
+    "RESOURCES" -> 94
     else -> 50
 }
 

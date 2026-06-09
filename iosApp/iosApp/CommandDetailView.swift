@@ -27,6 +27,14 @@ struct CommandDetailView: View {
                                 onTapLink: store.tapLink,
                                 onTapUrl: store.tapUrl
                             )
+                        } else if section.title == "RESOURCES" {
+                            ResourcesChips(
+                                links: store.state.resources,
+                                fallback: section.parsedContent,
+                                onTapMan: store.tapMan,
+                                onTapLink: store.tapLink,
+                                onTapUrl: store.tapUrl
+                            )
                         } else {
                             MarkdownView(
                                 elements: section.parsedContent,
@@ -128,6 +136,38 @@ private struct SeeAlsoChips: View {
     }
 }
 
+/// External resource links (Source code / Homepage / Documentation) shown as
+/// tappable chips that open the URL in the browser, mirroring See Also.
+private struct ResourcesChips: View {
+    let links: [ResourceLink]
+    let fallback: [TipSectionElement]
+    let onTapMan: (String) -> Void
+    let onTapLink: (String) -> Void
+    let onTapUrl: (String) -> Void
+
+    var body: some View {
+        if links.isEmpty {
+            MarkdownView(
+                elements: fallback,
+                onTapMan: onTapMan,
+                onTapLink: onTapLink,
+                onTapUrl: onTapUrl
+            )
+        } else {
+            FlowLayout(spacing: 8) {
+                ForEach(links, id: \.url) { link in
+                    Button(link.label) {
+                        onTapUrl(link.url)
+                        Haptics.selection()
+                    }
+                    .buttonStyle(.bordered)
+                    .tint(.brandRed)
+                }
+            }
+        }
+    }
+}
+
 /// Wrapping flow layout — places children left-to-right, breaking to a new row
 /// when the next child would overflow the proposed width. Used by See Also chips.
 private struct FlowLayout: Layout {
@@ -200,7 +240,8 @@ final class CommandDetailStore: ObservableObject {
         sections: [],
         expandedSectionsMap: [:],
         isBookmarked: false,
-        seeAlsoCommands: []
+        seeAlsoCommands: [],
+        resources: []
     )
 
     private var stateTask: Task<Void, Never>?

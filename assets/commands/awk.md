@@ -96,3 +96,13 @@ Different awk implementations (gawk, mawk, nawk) have varying feature sets. Regu
 # SEE ALSO
 
 [sed](/man/sed)(1), [grep](/man/grep)(1), [cut](/man/cut)(1), [perl](/man/perl)(1), [gawk](/man/gawk)(1)
+
+# RESOURCES
+
+```[Source code](https://cgit.git.savannah.gnu.org/cgit/gawk.git)```
+
+```[Homepage](https://www.gnu.org/software/gawk/)```
+
+```[Documentation](https://www.gnu.org/software/gawk/manual/)```
+
+<!-- verified: 2026-06-09 -->

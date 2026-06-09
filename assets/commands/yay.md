@@ -439,3 +439,11 @@ The yay command, short for "**Yet Another Yogurt**," is an AUR (Arch User Reposi
 # SEE ALSO
 
 [makepkg](/man/makepkg)(8), [pacman](/man/pacman)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/Jguer/yay)```
+
+```[Documentation](https://github.com/Jguer/yay/wiki)```
+
+<!-- verified: 2026-06-09 -->

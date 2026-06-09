@@ -87,3 +87,13 @@ Initially developed internally at **Google in 2001** as a way to handle structur
 # SEE ALSO
 
 [buff](/man/buff)(1), [grpc](/man/grpc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/protocolbuffers/protobuf)```
+
+```[Homepage](https://protobuf.dev)```
+
+```[Documentation](https://protobuf.dev/reference/)```
+
+<!-- verified: 2026-06-09 -->

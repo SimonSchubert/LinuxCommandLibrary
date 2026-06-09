@@ -33,6 +33,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.CommandSectionInfo
@@ -85,6 +86,7 @@ fun CommandDetailContent(
                         section = section,
                         isExpanded = uiState.expandedSectionsMap[section.id] ?: false,
                         seeAlsoCommands = uiState.seeAlsoCommands,
+                        resources = uiState.resources,
                         onToggleExpanded = onToggleExpanded,
                         onNavigate = onNavigate,
                     )
@@ -99,6 +101,7 @@ private fun CommandSectionColumn(
     section: CommandSectionInfo,
     isExpanded: Boolean,
     seeAlsoCommands: ImmutableList<String>,
+    resources: ImmutableList<ResourceLink>,
     onToggleExpanded: (Long) -> Unit,
     onNavigate: (NavEvent) -> Unit,
 ) {
@@ -144,6 +147,12 @@ private fun CommandSectionColumn(
                     onNavigate = onNavigate,
                 )
 
+                "RESOURCES" -> ResourcesSectionContent(
+                    parsedContent = section.parsedContent,
+                    resources = resources,
+                    onNavigate = onNavigate,
+                )
+
                 else -> DefaultSectionContent(parsedContent = section.parsedContent, onNavigate = onNavigate)
             }
         }
@@ -163,13 +172,45 @@ private fun SeeAlsoSectionContent(
         ) {
             seeAlsoCommands.forEach { name ->
                 SuggestionChip(
-                    modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
+                    modifier = Modifier.pointerHoverIcon(PointerIcon.Hand, overrideDescendants = true),
                     onClick = rememberDebouncedClick {
                         onNavigate(NavEvent.ToCommand(name))
                     },
                     label = {
                         Text(
                             text = name,
+                            color = MaterialTheme.colorScheme.onSurface,
+                        )
+                    },
+                )
+            }
+        }
+    } else {
+        DefaultSectionContent(parsedContent = parsedContent, onNavigate = onNavigate)
+    }
+}
+
+@Composable
+private fun ResourcesSectionContent(
+    parsedContent: ImmutableList<TipSectionElement>,
+    resources: ImmutableList<ResourceLink>,
+    onNavigate: (NavEvent) -> Unit,
+) {
+    if (resources.isNotEmpty()) {
+        val uriHandler = LocalUriHandler.current
+        FlowRow(
+            modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            resources.forEach { resource ->
+                SuggestionChip(
+                    modifier = Modifier.pointerHoverIcon(PointerIcon.Hand, overrideDescendants = true),
+                    onClick = rememberDebouncedClick {
+                        uriHandler.openUri(resource.url)
+                    },
+                    label = {
+                        Text(
+                            text = resource.label,
                             color = MaterialTheme.colorScheme.onSurface,
                         )
                     },

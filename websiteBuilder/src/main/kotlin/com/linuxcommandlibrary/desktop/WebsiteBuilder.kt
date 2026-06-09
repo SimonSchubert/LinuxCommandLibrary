@@ -756,6 +756,26 @@ class WebsiteBuilder(
                                                 }
                                             }
 
+                                            "RESOURCES" -> {
+                                                // Render external links as clickable chips, like SEE ALSO
+                                                p {
+                                                    val links = section.elements
+                                                        .filterIsInstance<TipSectionElement.Code>()
+                                                        .flatMap { it.elements }
+                                                        .filterIsInstance<CommandElement.Url>()
+                                                    links.forEachIndexed { index, link ->
+                                                        if (index > 0) {
+                                                            unsafe { +" &middot; " }
+                                                        }
+                                                        a(link.url) {
+                                                            target = ATarget.blank
+                                                            rel = "noopener"
+                                                            text(link.command)
+                                                        }
+                                                    }
+                                                }
+                                            }
+
                                             "TLDR" -> {
                                                 div {
                                                     unsafe {

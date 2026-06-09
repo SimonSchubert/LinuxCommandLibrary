@@ -2,6 +2,9 @@ package com.linuxcommandlibrary.app.ui.screens.commanddetail
 
 import com.linuxcommandlibrary.app.data.CommandsRepository
 import com.linuxcommandlibrary.app.data.DataManager
+import com.linuxcommandlibrary.shared.CommandElement
+import com.linuxcommandlibrary.shared.TipSectionElement
+import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.collections.immutable.toImmutableMap
@@ -42,6 +45,11 @@ class CommandDetailViewModel(
                     .toImmutableList()
             } ?: persistentListOf()
 
+            val resourcesSection = sectionsData.find { it.title == "RESOURCES" }
+            val resources = resourcesSection?.parsedContent
+                ?.let { extractResourceLinks(it) }
+                ?: persistentListOf()
+
             _state.update {
                 CommandDetailUiState(
                     sections = sectionsData,
@@ -50,6 +58,7 @@ class CommandDetailViewModel(
                     }.toImmutableMap(),
                     isBookmarked = dataManager.hasBookmark(commandName),
                     seeAlsoCommands = seeAlsoCommands,
+                    resources = resources,
                 )
             }
         }
@@ -91,3 +100,16 @@ class CommandDetailViewModel(
         dataManager.addBookmark(commandName)
     }
 }
+
+/**
+ * Collect the external links from a parsed RESOURCES section into chip-ready data.
+ * Each link is a one-line code block holding a single [CommandElement.Url].
+ */
+private fun extractResourceLinks(
+    elements: ImmutableList<TipSectionElement>,
+): ImmutableList<ResourceLink> = elements
+    .filterIsInstance<TipSectionElement.Code>()
+    .flatMap { it.elements }
+    .filterIsInstance<CommandElement.Url>()
+    .map { ResourceLink(label = it.command, url = it.url) }
+    .toImmutableList()

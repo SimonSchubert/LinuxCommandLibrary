@@ -16,12 +16,36 @@ class CommandDetailScreen(private val commandName: String) : Screen {
                 appendLine(Theme.header(section.title))
                 appendLine()
                 // Convert markdown to CLI-friendly format
-                val formatted = formatContent(section.content)
+                val formatted = if (section.title == "RESOURCES") {
+                    formatResourcesContent(section.content)
+                } else {
+                    formatContent(section.content)
+                }
                 appendLine(formatted)
                 appendLine()
             }
         }
         viewer = ContentViewer.fromText(content, pageSize = 20)
+    }
+
+    // Render the RESOURCES section as plain "Label: url" lines (terminals auto-linkify the URL).
+    // Drops the hidden "<!-- verified: ... -->" metadata comment.
+    private fun formatResourcesContent(content: String): String {
+        val linkRegex = Regex("""```\[([^\]]+)]\((https?://[^)]+)\)```""")
+        return content.lines()
+            .mapNotNull { line ->
+                val trimmed = line.trim()
+                when {
+                    trimmed.isEmpty() -> null
+
+                    trimmed.startsWith("<!--") -> null
+
+                    else -> linkRegex.find(trimmed)
+                        ?.let { "  ${Theme.boldText(it.groupValues[1])}: ${it.groupValues[2]}" }
+                        ?: line
+                }
+            }
+            .joinToString("\n")
     }
 
     private fun formatContent(content: String): String = content

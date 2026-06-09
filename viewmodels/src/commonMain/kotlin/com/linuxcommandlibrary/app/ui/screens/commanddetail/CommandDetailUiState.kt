@@ -11,6 +11,16 @@ data class CommandDetailUiState(
     val expandedSectionsMap: ImmutableMap<Long, Boolean> = persistentMapOf(),
     val isBookmarked: Boolean = false,
     val seeAlsoCommands: ImmutableList<String> = persistentListOf(),
+    val resources: ImmutableList<ResourceLink> = persistentListOf(),
 ) {
     fun isAllExpanded(): Boolean = expandedSectionsMap.all { it.value }
 }
+
+/**
+ * An external resource link shown as a chip in the RESOURCES section
+ * (e.g. label "Source code" opening the upstream repository URL).
+ */
+data class ResourceLink(
+    val label: String,
+    val url: String,
+)

@@ -38,12 +38,20 @@ What the command does and when to use it
 
 # SEE ALSO
 [related-command](/man/related-command)(1)
+
+# RESOURCES
+```[Source code](https://github.com/owner/repo)```
+```[Homepage](https://example.org)```
+```[Documentation](https://example.org/docs)```
+<!-- verified: 2026-06-09 -->
 ```
 
 **Required:** TAGLINE, TLDR, SYNOPSIS, DESCRIPTION, SEE ALSO
 
-**Recommended:** PARAMETERS, CAVEATS, HISTORY, CONFIGURATION
+**Recommended:** PARAMETERS, CAVEATS, HISTORY, CONFIGURATION, RESOURCES
 
 Use only these markdown elements: `` ``` ``, `**bold**`, `>` blockquotes, and `#` for section headers.
+
+The optional RESOURCES section lists official external links and is the one place links open in a browser: each is a one-line code block `` ```[Label](https://url)``` `` with the label being `Source code`, `Homepage`, or `Documentation` (shown as a tappable chip). It ends with a hidden `<!-- verified: YYYY-MM-DD -->` comment recording when the links were last checked.
 
 See [`awk.md`](assets/commands/awk.md) as a reference example.
