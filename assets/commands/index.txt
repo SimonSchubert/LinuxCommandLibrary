@@ -1859,6 +1859,7 @@ dpkg.md
 dracut.md
 drawing.md
 drawio.md
+drift.md
 driftnet.md
 drill.md
 drive.md
@@ -3826,6 +3827,7 @@ ktea.md
 ktool.md
 ktop.md
 ktor.md
+ktx.md
 kube-capacity.md
 kube-fzf.md
 kube-linter.md
@@ -4662,6 +4664,7 @@ nbmemoblocks.md
 nbmines.md
 nbpipes.md
 nbreversi.md
+nbsdgames.md
 nbsos.md
 nbsudoku.md
 nbtscan.md
@@ -5609,6 +5612,7 @@ picotool.md
 picttoppm.md
 pidof.md
 pidstat.md
+pifs.md
 pigz.md
 pihole.md
 pii-shield.md

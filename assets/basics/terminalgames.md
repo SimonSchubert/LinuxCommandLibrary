@@ -277,6 +277,15 @@ ______/  \________
  #####  ###
 ```
 
+## nbsdgames
+```[nbsdgames](/man/nbsdgames)```
+```
+ New BSD Games
+ 1 Jewels  2 Sudoku
+ 3 Mines   4 Reversi
+ > Select a game:
+```
+
 ## nethack
 ```[nethack-console](/man/nethack-console)```
 ```
