@@ -30,9 +30,9 @@ List **user-installed apps** only
 
 # DESCRIPTION
 
-**pm list packages** enumerates installed applications on an Android device. This is the same command as **adb shell pm list** but specifically for listing packages.
+**pm list packages** enumerates installed applications on an Android device. It is a subcommand of the package manager's **pm list** group, restricted to listing application packages.
 
-Output is in the format **package:com.example.app** with one package per line. Use grep or other tools to filter results.
+Output is in the format **package:com.example.app** with one package per line. An optional _filter_ argument limits results to packages whose name contains the given text. Use grep or other tools for more complex filtering.
 
 # PARAMETERS
 
@@ -67,4 +67,12 @@ Part of the Android Package Manager since the platform's initial release in **20
 
 # SEE ALSO
 
-[adb-shell-pm](/man/adb-shell-pm)(1), [adb-shell-pm-list](/man/adb-shell-pm-list)(1), [adb](/man/adb)(1)
+[adb-shell-pm](/man/adb-shell-pm)(1), [adb-shell-pm-list](/man/adb-shell-pm-list)(1), [adb-shell](/man/adb-shell)(1), [adb](/man/adb)(1)
+
+# RESOURCES
+
+```[Source code](https://android.googlesource.com/platform/packages/modules/adb/)```
+
+```[Documentation](https://developer.android.com/tools/adb)```
+
+<!-- verified: 2026-06-11 -->

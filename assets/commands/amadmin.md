@@ -4,23 +4,27 @@ Administrative interface for Amanda backup management
 
 # TLDR
 
-**Check** configuration validity
+Dump the full internal **configuration** representation
 
 ```amadmin [config_name] config```
 
-**List** backup status
+Show when each disk was last dumped and the next planned **level**
 
-```amadmin [config_name] status```
+```amadmin [config_name] info [hostname]```
 
-Force a **new full backup**
+Force a **new full backup** of a host on the next run
 
 ```amadmin [config_name] force [hostname]```
 
-**Delete** a specific backup
+**Remove** a host or disk from the configuration database
 
-```amadmin [config_name] delete host [hostname]```
+```amadmin [config_name] delete [hostname]```
 
-List **disks** in configuration
+Show how backups are **balanced** across run days
+
+```amadmin [config_name] balance```
+
+List the **disks** in the configuration
 
 ```amadmin [config_name] disklist```
 
@@ -30,35 +34,35 @@ List **disks** in configuration
 
 # DESCRIPTION
 
-**amadmin** is the administrative interface for Amanda (Advanced Maryland Automatic Network Disk Archiver), an open-source backup solution. It performs backup management tasks including checking configurations, forcing backups, and managing tape/disk labels.
+**amadmin** is the administrative interface for Amanda (Advanced Maryland Automatic Network Disk Archiver), an open-source backup solution. It performs interactive maintenance on a backup configuration: forcing full dumps, inspecting the backup database, and querying where past dumps were stored.
 
-The tool provides control over backup schedules, storage allocation, and retention policies defined in Amanda configurations.
+The first argument is always the configuration name, followed by a subcommand. **amadmin** operates on Amanda's own database and schedule; it does not run backups itself (use **amdump**) or label volumes (use **amlabel**).
 
 # PARAMETERS
 
 **config**
-> Show and validate configuration
+> Dump the full internal representation of the configuration in text format
 
-**status**
-> Display current backup status
+**info** [_host_ [_disk_]]
+> Show the current information Amanda has recorded for hosts and disks
 
-**disklist**
-> List configured disks
+**disklist** [_host_ [_disk_]]
+> List the disklist entries Amanda will back up
 
-**force** _host_
-> Force a full backup on next run
+**force** _host_ [_disk_]
+> Force a full backup of the host or disk on the next run
 
-**unforce** _host_
-> Remove force flag
+**unforce** _host_ [_disk_]
+> Undo a previous force request
 
-**delete host** _host_
-> Delete host from tape database
+**delete** _host_ [_disk_]
+> Remove a host or disk from the Amanda database (does not change the disklist file)
 
-**delete tape** _label_
-> Delete tape/volume from database
+**balance** [**--days** _num_]
+> Show how full backups are balanced across the run cycle
 
-**balance**
-> Show backup level balance
+**find** [_host_ [_disk_]]
+> Show which volumes hold the dumps for the given hosts and disks
 
 # CONFIGURATION
 
@@ -79,3 +83,13 @@ Requires Amanda to be properly installed and configured. Some operations require
 # SEE ALSO
 
 [amcheck](/man/amcheck)(8), [amdump](/man/amdump)(8), [amrecover](/man/amrecover)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/zmanda/amanda)```
+
+```[Homepage](https://www.amanda.org/)```
+
+```[Documentation](https://manpages.ubuntu.com/manpages/noble/man8/amadmin.8.html)```
+
+<!-- verified: 2026-06-11 -->

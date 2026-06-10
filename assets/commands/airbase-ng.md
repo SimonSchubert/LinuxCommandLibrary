@@ -8,13 +8,13 @@ Create software-based wireless access points for penetration testing
 
 ```sudo airbase-ng -e "[FakeSSID]" -c [6] [wlan0mon]```
 
-Create **open AP** for capturing handshakes
+Create AP with **WPA1/TKIP**
 
-```sudo airbase-ng -e "[TargetSSID]" -c [6] -W 1 [wlan0mon]```
+```sudo airbase-ng -e "[SSID]" -c [6] -z 2 [wlan0mon]```
 
-Create AP with **WPA2** encryption
+Create AP with **WPA2/CCMP**
 
-```sudo airbase-ng -e "[SSID]" -c [6] -z 4 [wlan0mon]```
+```sudo airbase-ng -e "[SSID]" -c [6] -Z 4 [wlan0mon]```
 
 Respond to **all probes**
 
@@ -22,7 +22,7 @@ Respond to **all probes**
 
 # SYNOPSIS
 
-**airbase-ng** [_-e essid_] [_-c channel_] [_-W wep_] [_-z wpa_] [_options_] _interface_
+**airbase-ng** [_-e essid_] [_-c channel_] [_-a bssid_] [_options_] _interface_
 
 # DESCRIPTION
 
@@ -38,26 +38,32 @@ The tool creates virtual interfaces (at0) that can be used to route traffic, ena
 **-c** _channel_
 > Operating channel
 
+**-a** _bssid_
+> Set the BSSID (MAC address) of the access point
+
 **-W** _0|1_
-> WEP mode (0: open, 1: shared key)
+> Set the WEP flag advertised in beacons (0 = off, 1 = on; default 0)
 
 **-z** _type_
-> WPA encryption (2: TKIP, 4: CCMP)
+> Set WPA1 cipher: 1 = WEP40, 2 = TKIP, 4 = CCMP, 5 = WEP104
 
-**-a** _bssid_
-> Set specific BSSID
+**-Z** _type_
+> Same as **-z** but for WPA2
 
 **-P**
-> Respond to all probe requests
+> Respond to all probe requests, including those for other ESSIDs
 
 **-C** _seconds_
-> Beacon interval
+> Enable beaconing of probed ESSID values (used with **-P**), at this interval
 
 **-v**
 > Verbose output
 
 **-F** _prefix_
-> Write captured packets to file
+> Write all sent and received frames to a pcap file with this prefix
+
+**-I** _interval_
+> Set the beacon interval in milliseconds
 
 **--caffe-latte**
 > Caffe-Latte attack mode
@@ -75,4 +81,14 @@ For authorized security testing only. Requires interface in monitor mode. Creati
 
 # SEE ALSO
 
-[aircrack-ng](/man/aircrack-ng)(1), [airmon-ng](/man/airmon-ng)(1), [aireplay-ng](/man/aireplay-ng)(1)
+[aircrack-ng](/man/aircrack-ng)(1), [airmon-ng](/man/airmon-ng)(1), [aireplay-ng](/man/aireplay-ng)(1), [airodump-ng](/man/airodump-ng)(1), [airtun-ng](/man/airtun-ng)(1), [airdecap-ng](/man/airdecap-ng)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aircrack-ng/aircrack-ng)```
+
+```[Homepage](https://www.aircrack-ng.org/)```
+
+```[Documentation](https://www.aircrack-ng.org/documentation.html)```
+
+<!-- verified: 2026-06-11 -->

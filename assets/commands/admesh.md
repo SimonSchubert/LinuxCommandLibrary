@@ -38,10 +38,10 @@ STL mesh analysis, repair, and transformation tool
 
 # PARAMETERS
 
-**--write-binary-stl** _file_
+**-b** _file_, **--write-binary-stl** _file_
 > Output repaired mesh in binary STL format.
 
-**--write-ascii-stl** _file_
+**-a** _file_, **--write-ascii-stl** _file_
 > Output repaired mesh in ASCII STL format.
 
 **--fill-holes**
@@ -53,26 +53,35 @@ STL mesh analysis, repair, and transformation tool
 **--normal-values**
 > Recalculate normal vectors for all facets.
 
-**--exact**
-> Only check for perfectly matched edges.
+**-e**, **--exact**
+> Check each facet of the mesh for its 3 neighbors using exact vertex matching.
 
-**--nearby**
-> Find and connect nearby facets.
+**-n**, **--nearby**
+> Find and connect facets that are almost aligned but do not match exactly due to rounding errors.
 
-**--remove-unconnected**
-> Remove facets that cannot be connected.
+**-t** _tolerance_, **--tolerance** _tolerance_
+> Search distance used by **--nearby**. Defaults to the shortest edge length of the mesh.
+
+**-i** _n_, **--iterations** _n_
+> Number of times to run the nearby check with progressively larger tolerances (default: 2).
+
+**-u**, **--remove-unconnected**
+> Remove facets that have zero neighbors after the exact and nearby checks.
 
 **--scale** _factor_
 > Scale the model by the given factor.
 
 **--translate** _x,y,z_
-> Move the model by the specified offset.
+> Translate the mesh so its minimum x, y, z values are at the given coordinates.
 
 **--x-rotate**, **--y-rotate**, **--z-rotate** _angle_
-> Rotate model around the specified axis (in degrees).
+> Rotate model counterclockwise about the specified axis (in degrees).
+
+**--xy-mirror**, **--yz-mirror**, **--xz-mirror**
+> Mirror the mesh in the specified plane.
 
 **--merge** _file_
-> Merge another STL file into the input.
+> Merge another STL file into the input (no automatic translation).
 
 **-v**, **--verbose**
 > Display detailed processing information.
@@ -95,4 +104,12 @@ ADMesh was originally developed by **Anthony D. Martin** in the **mid-1990s** to
 
 # SEE ALSO
 
-[meshlab](/man/meshlab)(1), [openscad](/man/openscad)(1), [blender](/man/blender)(1), [slic3r](/man/slic3r)(1)
+[meshlab](/man/meshlab)(1), [openscad](/man/openscad)(1), [blender](/man/blender)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/admesh/admesh)```
+
+```[Documentation](https://admesh.readthedocs.io/)```
+
+<!-- verified: 2026-06-11 -->

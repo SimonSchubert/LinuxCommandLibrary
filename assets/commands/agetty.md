@@ -89,3 +89,11 @@ Part of **util-linux** package. Alternative to the traditional **getty** command
 # SEE ALSO
 
 [login](/man/login)(1), [init](/man/init)(8), [getty](/man/getty)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man8/agetty.8.html)```
+
+<!-- verified: 2026-06-11 -->

@@ -25,3 +25,13 @@ Alire is a source package manager for Ada/SPARK projects, providing dependency m
 # SEE ALSO
 
 [alr](/man/alr)(1), [alr-help](/man/alr-help)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/alire-project/alire)```
+
+```[Homepage](https://alire.ada.dev/)```
+
+```[Documentation](https://alire.ada.dev/docs/)```
+
+<!-- verified: 2026-06-11 -->

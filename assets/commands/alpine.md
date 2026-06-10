@@ -32,24 +32,41 @@ Alpine is the successor to Pine and was developed by the University of Washingto
 > Open directly to message composition screen to send to specified address
 
 **-i**
-> Start in the INBOX folder
+> Start up in the FOLDER INDEX screen instead of the main menu.
 
-**-f folder**
-> Open a specific folder
+**-f** _folder_
+> Open _folder_ instead of INBOX (in the first folder collection).
 
-**-c context**
-> Set folder collection context
+**-c** _number_
+> Folder collection number for the **-f** argument.
 
-**-d debug_level**
-> Enable debugging output
+**-d** _debug-level_
+> Output diagnostic information at debug level 0 to 9.
 
-**-p pinerc**
-> Use alternate configuration file
+**-p** _config-file_
+> Use _config-file_ as the personal configuration file instead of ~/.pinerc.
+
+**-n** _number_
+> Start with the message numbered _number_ as the current message.
+
+**-z**
+> Enable use of suspend (Ctrl-Z) to put Alpine in the background.
 
 # CONFIGURATION
 
+Configuration is normally edited interactively with the **Setup** command (S) from the main menu, which writes changes back to the personal configuration file.
+
 **~/.pinerc**
-> Main configuration file for Alpine. Stores mail server settings, folder paths, display preferences, and feature flags.
+> Personal configuration file for Alpine. Stores mail server settings, folder collections, display preferences, and feature flags.
+
+**~/.addressbook**
+> Personal address book.
+
+**/etc/pine.conf**
+> System-wide default configuration.
+
+**/etc/pine.conf.fixed**
+> System-wide non-overridable configuration set by the administrator.
 
 # CAVEATS
 
@@ -61,4 +78,12 @@ Alpine was developed by the **University of Washington** as a successor to **Pin
 
 # SEE ALSO
 
-[mutt](/man/mutt)(1), [mail](/man/mail)(1), [pico](/man/pico)(1), [nano](/man/nano)(1)
+[mutt](/man/mutt)(1), [mail](/man/mail)(1), [pico](/man/pico)(1), [nano](/man/nano)(1), [pine](/man/pine)(1)
+
+# RESOURCES
+
+```[Source code](https://repo.or.cz/alpine.git)```
+
+```[Homepage](https://alpineapp.email/)```
+
+<!-- verified: 2026-06-11 -->

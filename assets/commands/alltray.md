@@ -86,3 +86,9 @@ AllTray was created by Jochen Baier in **2005** to provide a universal solution 
 # SEE ALSO
 
 [kdocker](/man/kdocker)(1), [trayer](/man/trayer)(1), [stalonetray](/man/stalonetray)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/mbt/AllTray)```
+
+<!-- verified: 2026-06-11 -->

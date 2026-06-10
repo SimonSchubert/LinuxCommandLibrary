@@ -16,9 +16,9 @@ Create tunnel with **WPA passphrase**
 
 ```sudo airtun-ng -a [AP_BSSID] -p [passphrase] -e [SSID] [wlan0mon]```
 
-Create **repeater** mode tunnel
+Bidirectional tunnel (**inject and receive**)
 
-```sudo airtun-ng -a [AP_BSSID] -r [capture.cap] [wlan0mon]```
+```sudo airtun-ng -a [AP_BSSID] -w [hex_key] -b [wlan0mon]```
 
 # SYNOPSIS
 
@@ -36,19 +36,28 @@ The tool can operate in WEP or WPA mode, creating a virtual ethernet interface t
 > Access point MAC address
 
 **-w** _key_
-> WEP key in hexadecimal
+> WEP key in hexadecimal (encrypt outgoing packets)
+
+**-y** _file_
+> Read PRGA (keystream) from file instead of a WEP key
 
 **-p** _passphrase_
-> WPA passphrase
+> WPA passphrase (decrypt packets; use with **-a** and **-e**)
 
 **-e** _essid_
 > Network name (required for WPA)
 
-**-t** _flag_
-> Tunnel type: 0=auto, 1=WDS, 2=normal
+**-i** _iface_
+> Capture packets from this additional interface
+
+**-t** _tods_
+> Frame destination: 0 = to client, 1 = to AP, 2 = WDS/Bridge
+
+**-b**
+> Bidirectional mode (send and receive)
 
 **-r** _file_
-> Replay packets from capture file
+> Read frames to inject from a pcap file
 
 **-h** _mac_
 > Source MAC address
@@ -63,4 +72,14 @@ For authorized testing only. Interface must be in monitor mode. WPA mode require
 
 # SEE ALSO
 
-[aircrack-ng](/man/aircrack-ng)(1), [airbase-ng](/man/airbase-ng)(1)
+[aircrack-ng](/man/aircrack-ng)(1), [airbase-ng](/man/airbase-ng)(1), [airdecap-ng](/man/airdecap-ng)(1), [airodump-ng](/man/airodump-ng)(1), [aireplay-ng](/man/aireplay-ng)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aircrack-ng/aircrack-ng)```
+
+```[Homepage](https://www.aircrack-ng.org/)```
+
+```[Documentation](https://www.aircrack-ng.org/documentation.html)```
+
+<!-- verified: 2026-06-11 -->

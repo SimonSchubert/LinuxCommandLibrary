@@ -72,6 +72,9 @@ Manage SQLAlchemy database migrations
 **show** _revision_
 > Display details of a specific revision.
 
+**check**
+> Check whether autogenerate would produce new migration operations (non-zero exit if the schema is out of date).
+
 **merge** _revisions_ [_-m message_]
 > Merge multiple branch heads into one.
 
@@ -118,4 +121,12 @@ Autogenerate cannot detect all changes (table renames, column type changes on so
 
 # SEE ALSO
 
-[flask-migrate](/man/flask-migrate)(1), [django-admin](/man/django-admin)(1), [sqlalchemy](/man/sqlalchemy)(1), [psql](/man/psql)(1)
+[django-admin](/man/django-admin)(1), [psql](/man/psql)(1), [sqlite3](/man/sqlite3)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/sqlalchemy/alembic)```
+
+```[Documentation](https://alembic.sqlalchemy.org/)```
+
+<!-- verified: 2026-06-11 -->

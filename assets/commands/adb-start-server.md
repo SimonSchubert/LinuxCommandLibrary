@@ -32,4 +32,12 @@ The adb server architecture has been part of the Android SDK since its initial r
 
 # SEE ALSO
 
-[adb](/man/adb)(1), [adb-kill-server](/man/adb-kill-server)(1), [adb-devices](/man/adb-devices)(1)
+[adb](/man/adb)(1), [adb-kill-server](/man/adb-kill-server)(1), [adb-devices](/man/adb-devices)(1), [adb-connect](/man/adb-connect)(1)
+
+# RESOURCES
+
+```[Source code](https://android.googlesource.com/platform/packages/modules/adb/)```
+
+```[Documentation](https://developer.android.com/tools/adb)```
+
+<!-- verified: 2026-06-11 -->

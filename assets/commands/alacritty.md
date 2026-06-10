@@ -24,9 +24,15 @@ Set **window title**
 
 ```alacritty --title "[My Terminal]"```
 
+**Migrate** an old YAML config to TOML
+
+```alacritty migrate```
+
 # SYNOPSIS
 
-**alacritty** [_-e command_] [_--working-directory dir_] [_--config-file file_] [_options_]
+**alacritty** [_options_] [**-e** _command_ ...]
+
+**alacritty** _subcommand_ [_options_]
 
 # DESCRIPTION
 
@@ -36,32 +42,50 @@ Configuration is done through a TOML or YAML file (depending on version), suppor
 
 # PARAMETERS
 
-**-e** _command_
-> Execute command instead of default shell
+**-e**, **--command** _command_ _args_
+> Execute command and arguments instead of the default shell (must be the last argument).
 
 **--working-directory** _path_
-> Set initial working directory
+> Start the shell in the specified working directory.
 
 **--config-file** _file_
-> Use alternate configuration file
+> Use an alternate configuration file.
 
-**--title** _title_
-> Set window title
+**-T**, **--title** _title_
+> Set the window title.
 
 **--class** _class_
-> Set window class (X11/Wayland)
+> Set the window class hint on Linux/BSD (X11 only).
 
-**-o** _options_
-> Override config file options
+**-o**, **--option** _key=value_
+> Override configuration file options.
 
 **--hold**
-> Keep window open after command exits
+> Keep the window open after the child process exits.
 
-**-v**, **--version**
-> Display version information
+**--daemon**
+> Do not spawn an initial window (run in the background for IPC).
+
+**--embed** _id_
+> X11 window ID to embed Alacritty within.
+
+**--socket** _path_
+> Path for the IPC socket creation.
+
+**-V**, **--version**
+> Display version information.
+
+**-q**, **-v**
+> Decrease (**-q**, **-qq**) or increase (**-v**, **-vv**, **-vvv**) verbosity.
 
 **--print-events**
-> Print all events for debugging
+> Print all events to stdout for debugging.
+
+**migrate**
+> Subcommand that converts an existing YAML configuration file to TOML.
+
+**msg**
+> Subcommand to send IPC messages (for example **create-window**, **config**) to a running daemon instance.
 
 # CONFIGURATION
 
@@ -82,3 +106,11 @@ Requires GPU with OpenGL 3.3+ support. No tabs or splits (use tmux/screen). Conf
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [screen](/man/screen)(1), [kitty](/man/kitty)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/alacritty/alacritty)```
+
+```[Homepage](https://alacritty.org/)```
+
+<!-- verified: 2026-06-11 -->

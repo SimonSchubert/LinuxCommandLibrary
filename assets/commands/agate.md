@@ -42,22 +42,28 @@ The server automatically generates TLS certificates if not provided, handles mul
 > Address to bind (default: 0.0.0.0:1965)
 
 **--certs** _dir_
-> Directory for TLS certificates
-
-**--key** _file_
-> TLS private key file
-
-**--cert** _file_
-> TLS certificate file
+> Directory holding the TLS certificate/key pairs (default: .certificates). Certificates are generated automatically per hostname if missing.
 
 **--lang** _code_
-> Default language for text/gemini responses
+> Default language code for text/gemini responses.
 
 **--log-ip**
-> Log client IP addresses
+> Log client IP addresses.
 
-**--central-conf**
-> Use central .meta files for configuration
+**-C**, **--central-conf**
+> Read a single .meta configuration file from the content root instead of per-directory files.
+
+**--serve-secret**
+> Serve files and directories whose names start with a dot (served as hidden by default).
+
+**-3**, **--only-tls13**
+> Disable TLSv1.2, accepting only TLSv1.3 connections.
+
+**--skip-port-check**
+> Do not require the port in the request URL to match the listening port (useful behind a proxy).
+
+**-s**, **--silent**
+> Disable logging output.
 
 # CAVEATS
 
@@ -69,4 +75,10 @@ Gemini requires TLS; unencrypted connections are not supported. The default Gemi
 
 # SEE ALSO
 
-[gemini](/man/gemini)(1), [gmni](/man/gmni)(1), [nginx](/man/nginx)(8)
+[nginx](/man/nginx)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/mbrubeck/agate)```
+
+<!-- verified: 2026-06-11 -->

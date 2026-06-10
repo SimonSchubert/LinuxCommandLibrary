@@ -43,7 +43,10 @@ The tool is designed for documentation, README files, and other written content,
 > Treat input as plain text (not markdown)
 
 **--html**
-> Treat input as HTML
+> Search for and treat input as HTML (.html, .htm) files
+
+**--mdx**
+> Search for and treat input as MDX (.mdx) files
 
 **--config** _file_
 > Configuration file path
@@ -52,13 +55,19 @@ The tool is designed for documentation, README files, and other written content,
 > Output format: json, compact, or default
 
 **--quiet**
-> Only report errors
+> Only report errors, suppressing files without problems
 
 **--why**
-> Show detailed explanations
+> Show source of every message (which rule triggered it)
+
+**--diff**
+> Ignore unchanged lines (useful in CI to only report on the diff)
 
 **-v**, **--version**
 > Display version
+
+**-h**, **--help**
+> Display help text
 
 # CONFIGURATION
 
@@ -79,3 +88,11 @@ May produce false positives; review suggestions in context. Technical terms or p
 # SEE ALSO
 
 [write-good](/man/write-good)(1), [proselint](/man/proselint)(1), [vale](/man/vale)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/get-alex/alex)```
+
+```[Homepage](https://alexjs.com/)```
+
+<!-- verified: 2026-06-11 -->

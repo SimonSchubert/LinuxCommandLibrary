@@ -90,4 +90,12 @@ Active mode generates DNS traffic that may trigger alerts. Brute-forcing can tak
 
 # SEE ALSO
 
-[amass](/man/amass)(1), [amass-intel](/man/amass-intel)(1), [subfinder](/man/subfinder)(1)
+[amass](/man/amass)(1), [amass-intel](/man/amass-intel)(1), [amass-track](/man/amass-track)(1), [subfinder](/man/subfinder)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/owasp-amass/amass)```
+
+```[Documentation](https://github.com/owasp-amass/amass/blob/master/doc/user_guide.md)```
+
+<!-- verified: 2026-06-11 -->

@@ -49,14 +49,14 @@ age supports encryption to one or more recipients, passphrase encryption, and ca
 **-p**, **--passphrase**
 > Encrypt with passphrase
 
-**-r** _recipient_
-> Encrypt to recipient public key (repeatable)
+**-r**, **--recipient** _recipient_
+> Encrypt to recipient public key (repeatable).
 
-**-R** _file_
-> Read recipients from file (one per line)
+**-R**, **--recipients-file** _file_
+> Read recipients from file, one per line (repeatable).
 
-**-i** _identity_
-> Identity file for decryption
+**-i**, **--identity** _identity_
+> Identity (private key) file for decryption (repeatable). May also be used with **-e** for SSH or encrypted identities.
 
 **-o** _file_
 > Output file (default: stdout)
@@ -70,8 +70,16 @@ age does not sign files; use age + signify or minisign for authenticated encrypt
 
 # HISTORY
 
-**age** was designed by Filippo Valsorda at Google and released in **2019**. It was created to address the complexity and usability issues of GPG while providing a secure, simple encryption tool suitable for modern use cases.
+**age** was designed by Ben Cartwright-Cox and Filippo Valsorda and first released in **2019**. It was created to address the complexity and usability issues of GPG while providing a secure, simple encryption tool suitable for modern use cases.
 
 # SEE ALSO
 
 [age-keygen](/man/age-keygen)(1), [gpg](/man/gpg)(1), [ssh-keygen](/man/ssh-keygen)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/FiloSottile/age)```
+
+```[Homepage](https://age-encryption.org/)```
+
+<!-- verified: 2026-06-11 -->

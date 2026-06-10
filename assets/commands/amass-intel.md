@@ -33,28 +33,28 @@ This command is typically used at the beginning of reconnaissance to identify al
 # PARAMETERS
 
 **-org** _name_
-> Organization name to research
+> Search string matched against AS description information
 
 **-asn** _number_
-> Autonomous System Number (can include AS prefix)
+> ASNs separated by commas (can be used multiple times)
 
 **-cidr** _range_
-> IP range in CIDR notation
+> CIDRs separated by commas (can be used multiple times)
 
-**-ip** _address_
-> Single IP address
+**-addr** _ips_
+> IPs and ranges (for example 192.168.1.1-254) separated by commas
 
 **-whois**
-> Perform reverse WHOIS lookups
+> Run all discovered domains through reverse WHOIS
 
 **-d** _domain_
-> Domain for WHOIS lookup
+> Domain names separated by commas (can be used multiple times)
 
 **-active**
-> Enable active methods
+> Enable active recon methods
 
-**-src**
-> Show data sources
+**-ip**
+> Show the IP addresses for discovered names
 
 **-o** _file_
 > Output file
@@ -77,4 +77,12 @@ Organization name matching is fuzzy; review results for accuracy. WHOIS data may
 
 # SEE ALSO
 
-[amass](/man/amass)(1), [amass-enum](/man/amass-enum)(1), [whois](/man/whois)(1)
+[amass](/man/amass)(1), [amass-enum](/man/amass-enum)(1), [amass-track](/man/amass-track)(1), [whois](/man/whois)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/owasp-amass/amass)```
+
+```[Documentation](https://github.com/owasp-amass/amass/blob/master/doc/user_guide.md)```
+
+<!-- verified: 2026-06-11 -->

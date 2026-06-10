@@ -62,4 +62,12 @@ Reverse forwarding is available on Android 5.0+ only. The feature requires the a
 
 # SEE ALSO
 
-[adb](/man/adb)(1), [adb-forward](/man/adb-forward)(1)
+[adb](/man/adb)(1), [adb-forward](/man/adb-forward)(1), [adb-shell](/man/adb-shell)(1), [scrcpy](/man/scrcpy)(1)
+
+# RESOURCES
+
+```[Source code](https://android.googlesource.com/platform/packages/modules/adb/)```
+
+```[Documentation](https://developer.android.com/tools/adb)```
+
+<!-- verified: 2026-06-11 -->

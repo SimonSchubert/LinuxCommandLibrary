@@ -12,9 +12,9 @@ Manage APT repository sources
 
 ```add-apt-repository -r [repository_spec]```
 
-**Update** the package cache after adding a repository
+Add a repository **without** updating the package cache afterwards
 
-```add-apt-repository --update [repository_spec]```
+```add-apt-repository -n [repository_spec]```
 
 Allow **source packages** to be downloaded from the repository
 
@@ -36,7 +36,7 @@ Add a **PPA** (Personal Package Archive)
 
 **add-apt-repository** is a Debian/Ubuntu utility that manages third-party APT repository sources. It can add entries to /etc/apt/sources.list or create individual files in /etc/apt/sources.list.d/, and can also remove previously added repositories.
 
-The tool is most commonly used to add PPAs (Personal Package Archives) from Launchpad, handling both the source list entry and the associated GPG key import automatically. It can optionally update the package cache after modifying sources.
+The tool is most commonly used to add PPAs (Personal Package Archives) from Launchpad, handling both the source list entry and the associated GPG key import automatically. By default it updates the package cache after modifying sources; pass **-n** to skip this step.
 
 # PARAMETERS
 
@@ -92,4 +92,12 @@ Developed for **Ubuntu** to simplify the process of adding PPAs (Personal Packag
 
 # SEE ALSO
 
-[apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [sources.list](/man/sources.list)(5), [apt-key](/man/apt-key)(8)
+[apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [apt-cache](/man/apt-cache)(8), [apt-key](/man/apt-key)(8)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/software-properties)```
+
+```[Documentation](https://manpages.ubuntu.com/manpages/noble/man1/add-apt-repository.1.html)```
+
+<!-- verified: 2026-06-11 -->

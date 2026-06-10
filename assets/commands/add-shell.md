@@ -20,7 +20,7 @@ Add **multiple** shells
 
 **add-shell** is a Debian utility that safely adds new shell paths to /etc/shells. The /etc/shells file lists valid login shells that users can select with **chsh**.
 
-The tool checks for duplicates and validates the path before adding it, making it safer than manually editing /etc/shells.
+It copies /etc/shells to /etc/shells.tmp, appends any given shells that are not already present, then copies the temporary file back over /etc/shells. Skipping already-present entries makes it safe to call repeatedly from package maintainer scripts. Its counterpart **remove-shell** deletes entries.
 
 # PARAMETERS
 
@@ -37,4 +37,12 @@ Requires root privileges. The shell executable must exist and be valid. Not avai
 
 # SEE ALSO
 
-[remove-shell](/man/remove-shell)(8), [chsh](/man/chsh)(1), [shells](/man/shells)(5)
+[chsh](/man/chsh)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/debianutils)```
+
+```[Documentation](https://manpages.ubuntu.com/manpages/noble/man8/add-shell.8.html)```
+
+<!-- verified: 2026-06-11 -->

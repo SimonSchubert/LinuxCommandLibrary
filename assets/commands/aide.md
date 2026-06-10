@@ -28,9 +28,9 @@ Use **regex** to limit AIDE to a specific string
 
 ```sudo aide -l [regex]```
 
-Send reporter results to a **URL**
+Set the **log level**
 
-```sudo aide -r [reporterurl]```
+```sudo aide -L [warning] -C```
 
 # SYNOPSIS
 
@@ -48,13 +48,16 @@ Once an initial database is created, AIDE can compare the current state of the f
 > Initialize the database; must be moved to the appropriate place before using --check
 
 **-C, --check**
-> Check the database for inconsistencies; requires an initialized database
+> Check the database for inconsistencies; requires an initialized database (this is the default command)
 
 **-u, --update**
 > Check and update the database non-interactively; input and output databases must be different
 
 **-E, --compare**
 > Compare two databases as defined in config file
+
+**-n, --dry-init**
+> Traverse the file system and report matched entries without writing a database
 
 **-D, --config-check**
 > Stop after reading configuration file to check for errors
@@ -65,17 +68,17 @@ Once an initial database is created, AIDE can compare the current state of the f
 **-l, --limit regex**
 > Restrict operations to entries matching a regex pattern
 
-**-r, --report url**
-> Specify output destination URL
-
-**-V, --verbose**
-> Control verbosity level (0-255; default: 5)
+**-L, --log-level level**
+> Set the log level, overriding the config file (replaces the removed --verbose option)
 
 **-B, --before**
 > Set config parameters before file reading
 
 **-A, --after**
 > Set config parameters after file reading
+
+**-v, --version**
+> Print version information and exit
 
 # CONFIGURATION
 
@@ -84,12 +87,20 @@ Once an initial database is created, AIDE can compare the current state of the f
 
 # CAVEATS
 
-Exit codes combine: 1 (new files), 2 (removed files), and 4 (changed files). The database must be stored securely, preferably on read-only media.
+Exit codes combine: 1 (new files), 2 (removed files), and 4 (changed files). The database must be stored securely, preferably on read-only media. The **-r/--report** and **-V/--verbose** options were removed in AIDE 0.17; use the **report_url** and **report_level** configuration options (or **-L/--log-level**) instead.
 
 # HISTORY
 
-Originally developed as an open-source alternative to proprietary file integrity checkers like Tripwire.
+Originally developed as an open-source alternative to proprietary file integrity checkers like Tripwire. Since version 0.17 the report and verbose command-line flags were replaced by configuration directives and the **-L/--log-level** option.
 
 # SEE ALSO
 
 [tripwire](/man/tripwire)(8), [md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aide/aide)```
+
+```[Homepage](https://aide.github.io/)```
+
+<!-- verified: 2026-06-11 -->

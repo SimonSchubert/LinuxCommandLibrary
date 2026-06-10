@@ -80,4 +80,12 @@ The package manager command has been part of Android since its initial release i
 
 # SEE ALSO
 
-[adb](/man/adb)(1), [adb-shell](/man/adb-shell)(1), [adb-install](/man/adb-install)(1), [adb-uninstall](/man/adb-uninstall)(1)
+[adb](/man/adb)(1), [adb-shell](/man/adb-shell)(1), [adb-shell-pm-list-packages](/man/adb-shell-pm-list-packages)(1), [adb-install](/man/adb-install)(1), [adb-uninstall](/man/adb-uninstall)(1)
+
+# RESOURCES
+
+```[Source code](https://android.googlesource.com/platform/packages/modules/adb/)```
+
+```[Documentation](https://developer.android.com/tools/adb)```
+
+<!-- verified: 2026-06-11 -->

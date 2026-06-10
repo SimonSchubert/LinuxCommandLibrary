@@ -34,3 +34,13 @@ Alire is a source package manager for Ada/SPARK, similar to Rust's cargo or OCam
 # SEE ALSO
 
 [alr](/man/alr)(1), [alr-version](/man/alr-version)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/alire-project/alire)```
+
+```[Homepage](https://alire.ada.dev/)```
+
+```[Documentation](https://alire.ada.dev/docs/)```
+
+<!-- verified: 2026-06-11 -->

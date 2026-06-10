@@ -45,3 +45,11 @@ Wireless ADB debugging has been available since early Android versions but requi
 # SEE ALSO
 
 [adb](/man/adb)(1), [adb-disconnect](/man/adb-disconnect)(1), [adb-pair](/man/adb-pair)(1), [adb-devices](/man/adb-devices)(1)
+
+# RESOURCES
+
+```[Source code](https://android.googlesource.com/platform/packages/modules/adb/)```
+
+```[Documentation](https://developer.android.com/tools/adb)```
+
+<!-- verified: 2026-06-11 -->

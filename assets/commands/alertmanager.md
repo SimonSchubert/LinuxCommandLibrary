@@ -16,9 +16,9 @@ Handle alert deduplication, grouping, and routing for Prometheus
 
 ```alertmanager --config.file=[alertmanager.yml] --cluster.peer=[peer1:9094] --cluster.peer=[peer2:9094]```
 
-**Validate configuration file**
+**Validate a configuration file** with amtool
 
-```alertmanager --config.file=[alertmanager.yml] --config.check```
+```amtool check-config [alertmanager.yml]```
 
 **Start with custom web listen address**
 
@@ -34,7 +34,10 @@ Handle alert deduplication, grouping, and routing for Prometheus
 > Path to the Alertmanager configuration file.
 
 **--storage.path** _path_
-> Directory for storing notification state and silences.
+> Base path for data storage of notification state and silences (default: **data/**).
+
+**--data.retention** _duration_
+> How long to keep notification and silence data (default: **120h**).
 
 **--web.listen-address** _address_
 > Address to listen on for the web UI and API (default: **:9093**).
@@ -57,8 +60,8 @@ Handle alert deduplication, grouping, and routing for Prometheus
 **--log.format** _format_
 > Log format: logfmt or json.
 
-**--config.check**
-> Validate configuration and exit.
+**--web.route-prefix** _prefix_
+> Prefix for the internal routes of web endpoints (defaults to the path of **--web.external-url**).
 
 # DESCRIPTION
 
@@ -77,7 +80,7 @@ The web UI at the configured listen address provides alert management, silence c
 
 # CAVEATS
 
-Alertmanager requires a properly configured YAML file; invalid configuration prevents startup. Cluster mode requires all peers to be mutually reachable on the cluster port. Notification state is stored locally; losing storage can cause duplicate notifications. Time-based grouping may delay critical alerts if intervals are set too long.
+Alertmanager requires a properly configured YAML file; invalid configuration prevents startup. The binary has no dedicated config-check flag; validate configuration with **amtool check-config** before deploying. Cluster mode requires all peers to be mutually reachable on the cluster port. Notification state is stored locally; losing storage can cause duplicate notifications. Time-based grouping may delay critical alerts if intervals are set too long.
 
 # HISTORY
 
@@ -86,3 +89,13 @@ Alertmanager requires a properly configured YAML file; invalid configuration pre
 # SEE ALSO
 
 [prometheus](/man/prometheus)(1), [amtool](/man/amtool)(1), [grafana](/man/grafana)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/prometheus/alertmanager)```
+
+```[Homepage](https://prometheus.io/)```
+
+```[Documentation](https://prometheus.io/docs/alerting/latest/alertmanager/)```
+
+<!-- verified: 2026-06-11 -->

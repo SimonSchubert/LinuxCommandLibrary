@@ -80,4 +80,14 @@ Pre-computation only helps for known ESSIDs. Database files can become very larg
 
 # SEE ALSO
 
-[aircrack-ng](/man/aircrack-ng)(1), [genpmk](/man/genpmk)(1), [cowpatty](/man/cowpatty)(1)
+[aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1), [genpmk](/man/genpmk)(1), [cowpatty](/man/cowpatty)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aircrack-ng/aircrack-ng)```
+
+```[Homepage](https://www.aircrack-ng.org/)```
+
+```[Documentation](https://www.aircrack-ng.org/documentation.html)```
+
+<!-- verified: 2026-06-11 -->

@@ -67,6 +67,15 @@ Alire connects to the community-maintained crate index, enabling easy discovery 
 **update**
 > Update dependencies to latest versions
 
+**toolchain**
+> Manage the GNAT compilers and build tools (gprbuild)
+
+**test**
+> Run the crate test suite in batch mode
+
+**settings**
+> View or modify global and local configuration
+
 **--help**
 > Show help for command
 
@@ -80,4 +89,14 @@ Requires GNAT Ada compiler to be installed. Some crates may have platform-specif
 
 # SEE ALSO
 
-[gnatmake](/man/gnatmake)(1), [gprbuild](/man/gprbuild)(1), [cargo](/man/cargo)(1)
+[alr-help](/man/alr-help)(1), [alr-version](/man/alr-version)(1), [gnatmake](/man/gnatmake)(1), [gprbuild](/man/gprbuild)(1), [cargo](/man/cargo)(1), [opam](/man/opam)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/alire-project/alire)```
+
+```[Homepage](https://alire.ada.dev/)```
+
+```[Documentation](https://alire.ada.dev/docs/)```
+
+<!-- verified: 2026-06-11 -->

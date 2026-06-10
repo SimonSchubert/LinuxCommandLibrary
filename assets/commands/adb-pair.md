@@ -40,3 +40,11 @@ Wireless debugging with pairing was introduced in Android 11, released in **2020
 # SEE ALSO
 
 [adb](/man/adb)(1), [adb-connect](/man/adb-connect)(1), [adb-disconnect](/man/adb-disconnect)(1)
+
+# RESOURCES
+
+```[Source code](https://android.googlesource.com/platform/packages/modules/adb/)```
+
+```[Documentation](https://developer.android.com/tools/adb)```
+
+<!-- verified: 2026-06-11 -->

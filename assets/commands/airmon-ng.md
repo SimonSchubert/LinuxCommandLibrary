@@ -53,11 +53,7 @@ The tool can identify and kill processes that might interfere with monitor mode 
 
 # OUTPUT
 
-Without arguments, airmon-ng lists:
-- Interface name
-- Chipset information
-- Driver in use
-- Current mode (managed/monitor)
+Without arguments, **airmon-ng** lists the PHY name, interface name, driver in use, and chipset for each detected wireless device.
 
 # CAVEATS
 
@@ -69,4 +65,14 @@ Enabling monitor mode disconnects from any connected network. Some drivers don't
 
 # SEE ALSO
 
-[aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1), [iwconfig](/man/iwconfig)(8)
+[aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1), [aireplay-ng](/man/aireplay-ng)(1), [iw](/man/iw)(8), [iwconfig](/man/iwconfig)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/aircrack-ng/aircrack-ng)```
+
+```[Homepage](https://www.aircrack-ng.org/)```
+
+```[Documentation](https://www.aircrack-ng.org/documentation.html)```
+
+<!-- verified: 2026-06-11 -->

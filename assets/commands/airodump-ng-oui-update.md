@@ -29,3 +29,13 @@ Requires internet connectivity and root privileges. The IEEE OUI database is upd
 # SEE ALSO
 
 [airodump-ng](/man/airodump-ng)(1), [aircrack-ng](/man/aircrack-ng)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aircrack-ng/aircrack-ng)```
+
+```[Homepage](https://www.aircrack-ng.org/)```
+
+```[Documentation](https://www.aircrack-ng.org/documentation.html)```
+
+<!-- verified: 2026-06-11 -->

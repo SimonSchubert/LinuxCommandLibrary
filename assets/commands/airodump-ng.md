@@ -46,10 +46,16 @@ The tool shows network names, encryption types, signal strength, channel, MAC ad
 > Output file prefix (creates .cap, .csv, .kismet.csv, .kismet.netxml)
 
 **--band** _band_
-> Band: a (5GHz), b (2.4GHz), g (2.4GHz)
+> Band(s) to scan: a (5GHz), b and g (2.4GHz). Letters can be combined, e.g. abg
 
 **-a**
-> Filter unassociated clients
+> Filter out (hide) unassociated clients
+
+**--encrypt** _suite_
+> Filter access points by encryption (e.g. WEP, WPA, WPA2, OPN)
+
+**--essid** _essid_
+> Filter access points by ESSID
 
 **--write-interval** _seconds_
 > Time between file writes
@@ -76,4 +82,14 @@ For authorized security testing only. Requires monitor mode interface. Capture f
 
 # SEE ALSO
 
-[aircrack-ng](/man/aircrack-ng)(1), [aireplay-ng](/man/aireplay-ng)(1), [airmon-ng](/man/airmon-ng)(1), [wireshark](/man/wireshark)(1)
+[aircrack-ng](/man/aircrack-ng)(1), [aireplay-ng](/man/aireplay-ng)(1), [airmon-ng](/man/airmon-ng)(1), [airodump-ng-oui-update](/man/airodump-ng-oui-update)(1), [wireshark](/man/wireshark)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aircrack-ng/aircrack-ng)```
+
+```[Homepage](https://www.aircrack-ng.org/)```
+
+```[Documentation](https://www.aircrack-ng.org/documentation.html)```
+
+<!-- verified: 2026-06-11 -->

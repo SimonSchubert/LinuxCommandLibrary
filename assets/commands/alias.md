@@ -1,6 +1,6 @@
 # TAGLINE
 
-Create shorthand names for commands.
+Create shorthand names for commands
 
 # TLDR
 
@@ -44,10 +44,16 @@ Aliases are not expanded in shell scripts by default. They don't accept argument
 
 # PERSISTENT ALIASES
 
-To make aliases permanent, add them to your shell configuration:
-- Bash: ~/.bashrc or ~/.bash_aliases
-- Zsh: ~/.zshrc or ~/.zsh_aliases
-- Fish: use **alias --save** or edit ~/.config/fish/config.fish
+To make aliases permanent, add them to your shell configuration.
+
+**Bash**
+> ~/.bashrc or ~/.bash_aliases
+
+**Zsh**
+> ~/.zshrc or ~/.zsh_aliases
+
+**Fish**
+> Use **alias --save** or edit ~/.config/fish/config.fish
 
 # HISTORY
 

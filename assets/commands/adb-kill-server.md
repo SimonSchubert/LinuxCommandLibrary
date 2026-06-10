@@ -32,4 +32,12 @@ The client-server architecture of adb has been part of the Android SDK since its
 
 # SEE ALSO
 
-[adb](/man/adb)(1), [adb-start-server](/man/adb-start-server)(1), [adb-devices](/man/adb-devices)(1)
+[adb](/man/adb)(1), [adb-start-server](/man/adb-start-server)(1), [adb-devices](/man/adb-devices)(1), [adb-disconnect](/man/adb-disconnect)(1)
+
+# RESOURCES
+
+```[Source code](https://android.googlesource.com/platform/packages/modules/adb/)```
+
+```[Documentation](https://developer.android.com/tools/adb)```
+
+<!-- verified: 2026-06-11 -->

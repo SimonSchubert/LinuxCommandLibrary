@@ -8,13 +8,13 @@ Android application installer
 
 ```adb install [app.apk]```
 
-**Replace** existing application
+**Reinstall** existing application, keeping its data
 
 ```adb install -r [app.apk]```
 
-Install to **SD card** if possible
+Allow installation of a **test APK**
 
-```adb install -s [app.apk]```
+```adb install -t [app.apk]```
 
 Install allowing **version downgrade**
 
@@ -26,7 +26,7 @@ Install **granting all permissions**
 
 # SYNOPSIS
 
-**adb install** [_-lrtsdg_] _file_
+**adb install** [_-rtdgf_] [_options_] _file_
 
 # DESCRIPTION
 
@@ -36,36 +36,39 @@ The command provides various options to control installation behavior, including
 
 # PARAMETERS
 
-**-l**
-> Install with forward lock (deprecated)
-
 **-r**
-> Replace existing application (keep data)
+> Reinstall an existing app, keeping its data
 
 **-t**
 > Allow installation of test APKs
 
-**-s**
-> Install on SD card instead of internal storage
-
 **-d**
-> Allow version code downgrade (debuggable packages only)
+> Allow version code downgrade
 
 **-g**
-> Grant all runtime permissions automatically
+> Grant all runtime permissions listed in the manifest
 
-**--abi** _abi_
-> Override platform's default ABI
+**-f**
+> Install package on the internal system memory
 
-**-p**
-> Partial application install (install base splits)
+**-i** _installer_package_name_
+> Specify the installer package name
 
-**--instant**
-> Install as instant app
+**--user** _user_id_
+> Install the package for a specific user (default: all users)
+
+**--install-location** _location_
+> Set install location: 0 (default), 1 (internal), 2 (external media)
+
+**--fastdeploy**
+> Update only the changed parts of an already installed package
+
+**--incremental**
+> Stream the APK in the background; launch before fully installed (requires APK Signature Scheme v4). Append **--wait** to block until done, or use **--no-incremental** to disable
 
 # CAVEATS
 
-Installation may fail if the APK is signed with a different key than the existing installation (requires uninstall first). Some devices restrict installation from unknown sources. Downgrade installation requires the app to be debuggable or using **-d** flag.
+Installation may fail if the APK is signed with a different key than the existing installation (requires uninstall first). Some devices restrict installation from unknown sources. Downgrading an installed version requires the **-d** flag. To install an app split into multiple APKs, use **adb install-multiple** instead.
 
 # HISTORY
 
@@ -73,4 +76,12 @@ Installation may fail if the APK is signed with a different key than the existin
 
 # SEE ALSO
 
-[adb](/man/adb)(1), [adb-uninstall](/man/adb-uninstall)(1), [aapt](/man/aapt)(1), [apksigner](/man/apksigner)(1)
+[adb](/man/adb)(1), [adb-uninstall](/man/adb-uninstall)(1), [adb-shell-pm](/man/adb-shell-pm)(1), [aapt](/man/aapt)(1), [apksigner](/man/apksigner)(1)
+
+# RESOURCES
+
+```[Source code](https://android.googlesource.com/platform/packages/modules/adb/)```
+
+```[Documentation](https://developer.android.com/tools/adb)```
+
+<!-- verified: 2026-06-11 -->

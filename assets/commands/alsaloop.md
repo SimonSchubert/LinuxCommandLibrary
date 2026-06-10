@@ -22,7 +22,7 @@ Run in **daemon** mode
 
 # SYNOPSIS
 
-**alsaloop** [_-C capture_] [_-P playback_] [_-r rate_] [_-f format_] [_options_]
+**alsaloop** [**-C** _capture_] [**-P** _playback_] [**-r** _rate_] [**-f** _format_] [_options_]
 
 # DESCRIPTION
 
@@ -32,32 +32,38 @@ The tool handles buffer management, sample rate conversion if needed, and attemp
 
 # PARAMETERS
 
-**-C** _device_
-> Capture (input) device
+**-C**, **--cdevice** _device_
+> Capture (input) PCM device. Default is **default**.
 
-**-P** _device_
-> Playback (output) device
+**-P**, **--pdevice** _device_
+> Playback (output) PCM device. Default is **default**.
 
-**-r** _rate_
-> Sample rate in Hz
+**-r**, **--rate** _rate_
+> Sample rate in Hz. Default is **48000**.
 
-**-f** _format_
-> Sample format (S16_LE, S24_LE, S32_LE, etc.)
+**-f**, **--format** _format_
+> Sample format such as S16_LE or S32_LE. Default is **S16_LE**.
 
-**-c** _channels_
-> Number of channels
+**-c**, **--channels** _channels_
+> Number of channels. Default is **2**.
 
 **-d**, **--daemonize**
-> Run as daemon
+> Daemonize the main process and log messages to syslog.
 
-**-s** _seconds_
-> Process time limit
+**-s**, **--seconds** _seconds_
+> Duration of the loop in seconds.
 
-**-t** _ms_
-> Loop latency in milliseconds
+**-t**, **--tlatency** _usec_
+> Requested latency in microseconds (1/1000000 sec).
 
-**--sync** _mode_
-> Sync mode: none, simple, captshift, playshift
+**-S**, **--sync** _mode_
+> Synchronization mode: none, simple, captshift, playshift, samplerate, or auto.
+
+**-n**, **--resample**
+> Enable rate resampling using alsa-lib.
+
+**-T**, **--thread** _number_
+> Thread number; -1 creates a unique thread. Jobs with the same number share a thread.
 
 # CAVEATS
 
@@ -70,3 +76,11 @@ Latency depends on buffer sizes and hardware capabilities. Different sample rate
 # SEE ALSO
 
 [arecord](/man/arecord)(1), [aplay](/man/aplay)(1), [alsactl](/man/alsactl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/alsa-project/alsa-utils)```
+
+```[Homepage](https://www.alsa-project.org/)```
+
+<!-- verified: 2026-06-11 -->

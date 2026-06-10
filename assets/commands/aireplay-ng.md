@@ -55,16 +55,19 @@ The tool requires a wireless interface in monitor mode with injection capability
 > Fragmentation attack
 
 **-6**
-> Cafe-latte attack
+> Caffe-Latte attack (capture WEP key from a client)
 
 **-7**
-> Client-oriented fragmentation
+> Client-oriented fragmentation attack (cfrag)
 
 **-9**
 > Injection test
 
 **-a** _bssid_
-> Target access point MAC
+> Access point MAC address (filter or replay)
+
+**-b** _bssid_
+> Access point MAC address (attack-specific, e.g. ARP replay and fragmentation)
 
 **-c** _client_
 > Target client MAC
@@ -73,10 +76,16 @@ The tool requires a wireless interface in monitor mode with injection capability
 > Target network name
 
 **-h** _mac_
-> Source MAC address
+> Source MAC address (your interface or a connected client)
+
+**-x** _pps_
+> Number of packets per second to inject
+
+**-D**
+> Disable AP detection (do not wait for the AP to be seen)
 
 **-r** _file_
-> Read packets from capture file
+> Read packets to inject from a capture file
 
 # CAVEATS
 
@@ -88,4 +97,14 @@ For authorized penetration testing only. Requires interface with injection suppo
 
 # SEE ALSO
 
-[aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1), [airmon-ng](/man/airmon-ng)(1)
+[aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1), [airmon-ng](/man/airmon-ng)(1), [airbase-ng](/man/airbase-ng)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aircrack-ng/aircrack-ng)```
+
+```[Homepage](https://www.aircrack-ng.org/)```
+
+```[Documentation](https://www.aircrack-ng.org/documentation.html)```
+
+<!-- verified: 2026-06-11 -->

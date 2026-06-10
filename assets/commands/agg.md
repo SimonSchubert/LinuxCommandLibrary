@@ -37,31 +37,43 @@ The tool is written in Rust and provides options for customizing output appearan
 # PARAMETERS
 
 **--font-size** _size_
-> Font size in pixels (default: 14)
+> Font size in pixels (default: 16).
 
 **--font-family** _name_
-> Font family name
+> Comma-separated list of font families to use.
+
+**--font-dir** _dir_
+> Additional directory to scan for fonts.
+
+**--line-height** _factor_
+> Line height as a multiple of the font size (default: 1.4).
 
 **--speed** _factor_
-> Playback speed multiplier
+> Playback speed multiplier (default: 1).
 
 **--theme** _name_
-> Color theme (asciinema, dracula, monokai, solarized-dark, solarized-light)
+> Color theme (asciinema, dracula, github-dark, github-light, gruvbox-dark, kanagawa, monokai, nord, solarized-dark, solarized-light). Default: dracula.
 
 **--cols** _n_
-> Terminal width in columns
+> Override terminal width in columns (default: from the recording).
 
 **--rows** _n_
-> Terminal height in rows
+> Override terminal height in rows (default: from the recording).
 
-**--fps** _n_
-> Frames per second (default: variable)
+**--fps-cap** _n_
+> Maximum frames per second (default: 30).
 
 **--renderer** _type_
-> Renderer: fontdue or resvg
+> Rendering backend: swash (default) or resvg.
 
 **--idle-time-limit** _seconds_
-> Maximum idle time between frames
+> Limit idle time between frames to this many seconds (default: 5).
+
+**--no-loop**
+> Disable looping; play the animation only once.
+
+**--last-frame-duration** _seconds_
+> How long to hold the last frame (default: 3).
 
 # CAVEATS
 
@@ -73,4 +85,12 @@ Large or long recordings produce large GIF files. Consider adjusting speed or id
 
 # SEE ALSO
 
-[asciinema](/man/asciinema)(1), [gif](/man/gif)(1), [ffmpeg](/man/ffmpeg)(1)
+[asciinema](/man/asciinema)(1), [ffmpeg](/man/ffmpeg)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/asciinema/agg)```
+
+```[Documentation](https://docs.asciinema.org/manual/agg/)```
+
+<!-- verified: 2026-06-11 -->

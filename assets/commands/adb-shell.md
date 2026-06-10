@@ -57,4 +57,12 @@ Shell commands run as the "shell" user with limited permissions. Root access req
 
 # SEE ALSO
 
-[adb](/man/adb)(1), [adb-shell-pm](/man/adb-shell-pm)(1), [toybox](/man/toybox)(1)
+[adb](/man/adb)(1), [adb-shell-pm](/man/adb-shell-pm)(1), [adb-shell-pm-list-packages](/man/adb-shell-pm-list-packages)(1), [adb-install](/man/adb-install)(1), [toybox](/man/toybox)(1)
+
+# RESOURCES
+
+```[Source code](https://android.googlesource.com/platform/packages/modules/adb/)```
+
+```[Documentation](https://developer.android.com/tools/adb)```
+
+<!-- verified: 2026-06-11 -->

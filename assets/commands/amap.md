@@ -4,29 +4,29 @@ Identify application protocols on network ports
 
 # TLDR
 
-**Identify** service on a port
+**Identify** the service on a port (application mapping is the default mode)
 
-```amap -b [192.168.1.1] [80]```
+```amap [192.168.1.1] [80]```
 
-Scan **port range**
+Scan a **port range**
 
 ```amap [192.168.1.1] [1-1000]```
 
-Scan with **banner grabbing**
+Just **grab banners** without sending triggers
 
 ```amap -B [192.168.1.1] [80]```
 
-Use **UDP** scan
+Identify a service over **UDP**
 
 ```amap -u [192.168.1.1] [53]```
 
-Scan **quietly** (minimal output)
+Scan **quietly**, reporting only identified ports
 
 ```amap -q [192.168.1.1] [80]```
 
 # SYNOPSIS
 
-**amap** [_options_] _target_ _port_[_-port_]
+**amap** [_mode_] [_options_] _target_ _port_[_-port_] [_port_ ...]
 
 # DESCRIPTION
 
@@ -36,38 +36,50 @@ The tool compares responses against a signature database to fingerprint applicat
 
 # PARAMETERS
 
-**-b**
-> Banner grabbing mode (just grab banners)
+**-A**
+> Map applications: send triggers and analyse responses (this is the default mode)
 
 **-B**
-> Banner and identification mode
+> Just grab banners, do not send triggers
+
+**-P**
+> No banner or application identification: act as a full-connect port scanner
+
+**-b**
+> Print ASCII banners when one is received
 
 **-u**
-> UDP mode (default is TCP)
+> Ports given on the command line are UDP (default is TCP)
+
+**-6**
+> Use IPv6 instead of IPv4
+
+**-1**
+> Only send triggers to a port until the first identification
 
 **-q**
-> Quiet mode (less output)
+> Quiet: do not report closed or timed-out ports as unidentified
 
 **-v**
 > Verbose output
 
-**-1**
-> Stop after first match
+**-H**
+> Skip potentially harmful triggers
 
-**-6**
-> IPv6 mode
-
-**-A**
-> Aggressive mode (more triggers)
+**-R**
+> Do not identify the RPC service
 
 **-p** _proto_
-> Only scan for specific protocol
+> Send only the single named protocol trigger
 
 **-i** _file_
-> Read targets from file
+> Read hosts and ports from an nmap-generated machine-readable file
 
 **-o** _file_
-> Write results to file
+> Log the output of amap to a file
+
+**-m**
+> Make the log file output machine readable (colon separated)
 
 # CONFIGURATION
 
@@ -88,3 +100,11 @@ For authorized security testing only. May trigger intrusion detection systems. S
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [netcat](/man/netcat)(1), [masscan](/man/masscan)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/vanhauser-thc/THC-Archive)```
+
+```[Homepage](https://www.thc.org/)```
+
+<!-- verified: 2026-06-11 -->

@@ -40,4 +40,12 @@ Does not affect USB connections. The device remains in TCP/IP mode after disconn
 
 # SEE ALSO
 
-[adb](/man/adb)(1), [adb-connect](/man/adb-connect)(1), [adb-kill-server](/man/adb-kill-server)(1)
+[adb](/man/adb)(1), [adb-connect](/man/adb-connect)(1), [adb-pair](/man/adb-pair)(1), [adb-kill-server](/man/adb-kill-server)(1)
+
+# RESOURCES
+
+```[Source code](https://android.googlesource.com/platform/packages/modules/adb/)```
+
+```[Documentation](https://developer.android.com/tools/adb)```
+
+<!-- verified: 2026-06-11 -->

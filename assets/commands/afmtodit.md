@@ -8,9 +8,9 @@ Adobe font metrics to groff font description converter
 
 ```afmtodit [font.afm] [textmap] [fontname]```
 
-Include **kerning** information
+Generate **italic corrections** (in thousandths of an em)
 
-```afmtodit -k [font.afm] [textmap] [fontname]```
+```afmtodit -i [50] [font.afm] [textmap] [fontname]```
 
 Convert with **encoding** file
 
@@ -24,45 +24,48 @@ Convert with **encoding** file
 
 **afmtodit** converts Adobe Font Metrics (AFM) files to font description files suitable for use with the groff typesetting system. It creates the font metrics files that groff's PostScript driver needs to properly position and space characters when typesetting documents.
 
-The tool maps PostScript glyph names to groff character names using a user-supplied map file, and can include kerning pairs and ligature information in the output. It also supports synthetic transformations such as oblique slanting, making it possible to generate italic variants from roman font metrics without a separate AFM file.
+The tool maps PostScript glyph names to groff character names using a user-supplied map file, and includes kerning pairs and ligature information in the output by default. It also computes a slant parameter (from the AFM ItalicAngle or the **-a** option) that groff uses when positioning accents over italic glyphs.
 
 # PARAMETERS
 
 **-a** _n_
-> Slant angle for synthetic oblique fonts
+> Slant value written to the font file, used by groff to position accents (default: negative ItalicAngle from the AFM file).
 
 **-c**
-> Include unnamed characters
+> Include identifying comments for the PostScript font in the output.
 
 **-d** _file_
-> DESC file for device resolution
+> Use an alternate device description (DESC) file instead of the default.
 
 **-e** _file_
-> Encoding file specifying character order
+> Reencode the PostScript font using the given encoding file.
 
 **-f** _name_
-> Internal font name
+> Internal name of the groff font.
 
 **-i** _n_
-> Italic correction values
+> Generate italic and subscript corrections from _n_ (in thousandths of an em).
 
 **-k**
-> Include kerning information
+> Omit kerning data; use only for monospaced (constant-width) fonts.
 
 **-m**
-> Prevent font name guessing
+> Prevent negative left italic correction values.
 
 **-n**
-> No ligatures
+> Do not output a ligatures command; use for monospaced fonts.
 
 **-o** _file_
 > Output file name
 
 **-s**
-> Treat as special font
+> Mark the font as special.
 
 **-v**
-> Print version
+> Print version information and exit.
+
+**-x**
+> Do not use the built-in Adobe Glyph List.
 
 # CAVEATS
 
@@ -74,4 +77,14 @@ Requires valid AFM files from the font vendor. The text map file must correctly 
 
 # SEE ALSO
 
-[groff](/man/groff)(1), [addftinfo](/man/addftinfo)(1), [pfbtops](/man/pfbtops)(1)
+[groff](/man/groff)(1), [addftinfo](/man/addftinfo)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/groff.git)```
+
+```[Homepage](https://www.gnu.org/software/groff/)```
+
+```[Documentation](https://www.gnu.org/software/groff/manual/)```
+
+<!-- verified: 2026-06-11 -->

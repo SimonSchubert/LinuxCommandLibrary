@@ -24,9 +24,9 @@ Manage the authentik identity provider
 
 ```ak import_blueprint [blueprint.yaml]```
 
-**Generate a recovery key**
+**Generate a recovery link valid for a number of minutes**
 
-```ak create_recovery_key [username]```
+```ak create_recovery_key [minutes] [username]```
 
 **Show version**
 
@@ -54,8 +54,11 @@ Manage the authentik identity provider
 **createsuperuser**
 > Create an administrative user interactively.
 
-**create_recovery_key** _user_ _duration_
-> Generate account recovery link.
+**create_recovery_key** _minutes_ _user_
+> Generate an account recovery link valid for the given number of minutes.
+
+**dump_config**
+> Print the full effective configuration as YAML.
 
 **export_blueprint**
 > Export current configuration as blueprint YAML.
@@ -91,7 +94,7 @@ The **server** command starts the web interface and API server. Background tasks
 
 Blueprints provide declarative configuration management. Export configurations with **export_blueprint** for version control or migration, and apply them with **import_blueprint**.
 
-For account recovery when users are locked out, **create_recovery_key** generates a time-limited recovery URL. This requires access to the server command line.
+For account recovery when users are locked out, **create_recovery_key** generates a time-limited recovery URL. The first argument is the validity in minutes and the second is the username. This requires access to the server command line.
 
 authentik supports various authentication protocols including SAML, OAuth2/OIDC, LDAP, SCIM, and proxy authentication for applications that don't support SSO natively.
 
@@ -114,3 +117,13 @@ authentik was created by **Jens Langhammer** and first released in **2020** as a
 # SEE ALSO
 
 [authelia](/man/authelia)(1), [keycloak](/man/keycloak)(1), [vault](/man/vault)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/goauthentik/authentik)```
+
+```[Homepage](https://goauthentik.io/)```
+
+```[Documentation](https://docs.goauthentik.io/)```
+
+<!-- verified: 2026-06-11 -->

@@ -27,10 +27,10 @@ The command only updates the kernel's in-memory partition table; it does not cre
 > The partition number to add
 
 **start**
-> The starting sector of the partition
+> The beginning of the partition, in 512-byte sectors
 
 **length**
-> The length of the partition in sectors
+> The length of the partition, in 512-byte sectors
 
 # CAVEATS
 
@@ -43,3 +43,11 @@ Part of the **util-linux** package, which provides essential system utilities fo
 # SEE ALSO
 
 [delpart](/man/delpart)(8), [partx](/man/partx)(8), [fdisk](/man/fdisk)(8), [parted](/man/parted)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man8/addpart.8.html)```
+
+<!-- verified: 2026-06-11 -->
