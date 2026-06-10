@@ -84,3 +84,13 @@ Part of the **fish shell** (friendly interactive shell), a modern command-line s
 # SEE ALSO
 
 [fish](/man/fish)(1), [alias](/man/alias)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/fish-shell/fish-shell)```
+
+```[Homepage](https://fishshell.com)```
+
+```[Documentation](https://fishshell.com/docs/current/cmds/abbr.html)```
+
+<!-- verified: 2026-06-10 -->

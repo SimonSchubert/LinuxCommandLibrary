@@ -62,4 +62,12 @@ ssh-copy-id is a convenience script included with **OpenSSH** to simplify the pu
 
 # SEE ALSO
 
-[ssh](/man/ssh)(1), [ssh-keygen](/man/ssh-keygen)(1), [ssh-add](/man/ssh-add)(1), [sshd_config](/man/sshd_config)(5)
+[ssh](/man/ssh)(1), [ssh-keygen](/man/ssh-keygen)(1), [ssh-add](/man/ssh-add)(1), [sshd](/man/sshd)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/openssh/openssh-portable)```
+
+```[Homepage](https://www.openssh.com/)```
+
+<!-- verified: 2026-06-10 -->

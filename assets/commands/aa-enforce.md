@@ -16,6 +16,10 @@ Enable profiles from a **specific directory**
 
 ```sudo aa-enforce -d [path/to/profiles]```
 
+Set enforce mode **without reloading** the policy
+
+```sudo aa-enforce --no-reload [path/to/profile]```
+
 # SYNOPSIS
 
 **aa-enforce** _executable_ [_executable_ ...] [_-d /path/to/profiles_] [_--no-reload_]
@@ -44,4 +48,14 @@ Part of the **AppArmor** utilities package for managing application security pro
 
 # SEE ALSO
 
-[aa-complain](/man/aa-complain)(8), [aa-disable](/man/aa-disable)(8), [aa-status](/man/aa-status)(8), [apparmor](/man/apparmor)(7)
+[aa-complain](/man/aa-complain)(8), [aa-disable](/man/aa-disable)(8), [aa-logprof](/man/aa-logprof)(8), [aa-status](/man/aa-status)(8), [apparmor](/man/apparmor)(7)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/apparmor/apparmor)```
+
+```[Homepage](https://apparmor.net/)```
+
+```[Documentation](https://gitlab.com/apparmor/apparmor/-/wikis/home)```
+
+<!-- verified: 2026-06-10 -->

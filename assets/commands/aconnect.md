@@ -26,7 +26,13 @@ List only **input** ports
 
 # SYNOPSIS
 
-**aconnect** [_-l_] [_-i_] [_-o_] [_sender_] [_receiver_]
+**aconnect** [_-options_] _sender_ _receiver_
+
+**aconnect** **-d** [_-options_] _sender_ _receiver_
+
+**aconnect** **-i**|**-o** [_-options_]
+
+**aconnect** **-x**
 
 # DESCRIPTION
 
@@ -54,6 +60,12 @@ The tool is essential for setting up MIDI routing in Linux audio workflows, allo
 **-e**, **--exclusive**
 > Connect ports exclusively (no other connections allowed)
 
+**-r**, **--real** _queue_
+> Convert time-stamps using the given real-time queue
+
+**-t**, **--tick** _queue_
+> Convert time-stamps using the given tick queue
+
 # CAVEATS
 
 Connections made with aconnect are not persistent; they're lost when the MIDI device is disconnected or the system reboots. For persistent connections, use tools like **qjackctl** or write startup scripts. Client numbers may change between sessions.
@@ -65,3 +77,11 @@ Connections made with aconnect are not persistent; they're lost when the MIDI de
 # SEE ALSO
 
 [amidi](/man/amidi)(1), [aplaymidi](/man/aplaymidi)(1), [arecordmidi](/man/arecordmidi)(1), [aseqdump](/man/aseqdump)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/alsa-project/alsa-utils)```
+
+```[Homepage](https://www.alsa-project.org/)```
+
+<!-- verified: 2026-06-10 -->

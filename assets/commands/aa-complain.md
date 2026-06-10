@@ -46,4 +46,14 @@ Part of the **AppArmor** utilities package for managing application security pro
 
 # SEE ALSO
 
-[aa-enforce](/man/aa-enforce)(8), [aa-disable](/man/aa-disable)(8), [aa-status](/man/aa-status)(8), [aa-audit](/man/aa-audit)(8), [apparmor](/man/apparmor)(7)
+[aa-enforce](/man/aa-enforce)(8), [aa-disable](/man/aa-disable)(8), [aa-logprof](/man/aa-logprof)(8), [aa-status](/man/aa-status)(8), [aa-audit](/man/aa-audit)(8), [apparmor](/man/apparmor)(7)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/apparmor/apparmor)```
+
+```[Homepage](https://apparmor.net/)```
+
+```[Documentation](https://gitlab.com/apparmor/apparmor/-/wikis/home)```
+
+<!-- verified: 2026-06-10 -->

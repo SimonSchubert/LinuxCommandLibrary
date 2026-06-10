@@ -73,3 +73,9 @@ Command-line passwords visible in process list. Less secure than SSH keys. Not r
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [ssh-keygen](/man/ssh-keygen)(1), [expect](/man/expect)(1), [ssh-agent](/man/ssh-agent)(1)
+
+# RESOURCES
+
+```[Homepage](https://sourceforge.net/projects/sshpass/)```
+
+<!-- verified: 2026-06-10 -->

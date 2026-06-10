@@ -12,28 +12,21 @@ generate human-readable backtrace from a coredump
 
 ```abrt-action-generate-backtrace -v -d [/var/spool/abrt/ccpp-2024-01-15]```
 
-**Generate backtrace** with additional debuginfo directories
-
-```abrt-action-generate-backtrace -d [problem_dir] -i [/usr/lib/debug:/opt/debug]```
-
-**Generate backtrace** with timeout for gdb
+**Generate backtrace** with a timeout for gdb
 
 ```abrt-action-generate-backtrace -d [problem_dir] -t [300]```
 
 # SYNOPSIS
 
-**abrt-action-generate-backtrace** [**-v**] [**-d** _DIR_] [**-i** _DIR1[:DIR2]..._] [**-t** _NUM_]
+**abrt-action-generate-backtrace** [**-v**] [**-d** _DIR_] [**-t** _NUM_]
 
 # PARAMETERS
 
 **-d** _DIR_
-> Path to the problem directory containing the coredump file
+> Path to the problem directory containing the coredump file. Defaults to the current working directory
 
 **-v**
 > Be more verbose; can be specified multiple times for increased verbosity
-
-**-i** _DIR1[:DIR2]..._
-> Additional debuginfo directories to search for debugging symbols
 
 **-t** _NUM_
 > Kill gdb if it runs for more than NUM seconds (timeout)
@@ -58,4 +51,12 @@ ABRT (Automatic Bug Reporting Tool) was developed by **Red Hat** starting around
 
 # SEE ALSO
 
-[gdb](/man/gdb)(1), [abrt-cli](/man/abrt-cli)(1), [coredumpctl](/man/coredumpctl)(1), [abrt](/man/abrt)(8)
+[gdb](/man/gdb)(1), [abrt-cli](/man/abrt-cli)(1), [coredumpctl](/man/coredumpctl)(1), [abrt](/man/abrt)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/abrt/abrt)```
+
+```[Documentation](https://abrt.readthedocs.io/)```
+
+<!-- verified: 2026-06-10 -->

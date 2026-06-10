@@ -67,12 +67,9 @@ minimal 7z-only file archiver
 
 # DESCRIPTION
 
-**7zr** is a minimal, reduced version of the 7-Zip command-line tool that only supports the 7z format. It's the lightest-weight option in the 7-Zip family.
+**7zr** is a minimal, reduced version of the 7-Zip command-line tool that only supports the 7z format. It is the lightest-weight option in the 7-Zip family.
 
-7zr is ideal when:
-- Only 7z format is needed
-- Minimal dependencies are desired
-- Embedding in scripts or systems with size constraints
+7zr is ideal when only the 7z format is needed, when minimal dependencies are desired, or when embedding in scripts or systems with size constraints.
 
 The command syntax matches 7z and 7za. For 7z-only operations, 7zr provides the smallest footprint.
 
@@ -87,3 +84,11 @@ The "r" stands for "reduced" - minimal format support, not recursive.
 # SEE ALSO
 
 [7z](/man/7z)(1), [7za](/man/7za)(1), [tar](/man/tar)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ip7z/7zip)```
+
+```[Homepage](https://www.7-zip.org/)```
+
+<!-- verified: 2026-06-10 -->

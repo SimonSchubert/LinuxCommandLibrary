@@ -74,4 +74,10 @@ Requires root privileges or appropriate permissions to access ACPI events. Event
 
 # SEE ALSO
 
-[acpi](/man/acpi)(1), [acpi_listen](/man/acpi_listen)(1), [systemctl](/man/systemctl)(1), [loginctl](/man/loginctl)(1)
+[acpi](/man/acpi)(1), [acpi_listen](/man/acpi_listen)(8), [systemctl](/man/systemctl)(1), [loginctl](/man/loginctl)(1)
+
+# RESOURCES
+
+```[Source code](https://sourceforge.net/projects/acpid2/)```
+
+<!-- verified: 2026-06-10 -->

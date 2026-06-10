@@ -74,4 +74,12 @@ The default driver may attempt to open an X11 window rather than display in the 
 
 # SEE ALSO
 
-[bb](/man/bb)(1), [aview](/man/aview)(1), [asciiview](/man/asciiview)(1), [cmatrix](/man/cmatrix)(1), [sl](/man/sl)(1)
+[bb](/man/bb)(1), [cmatrix](/man/cmatrix)(1), [sl](/man/sl)(1)
+
+# RESOURCES
+
+```[Source code](https://sourceforge.net/projects/aa-project/)```
+
+```[Homepage](https://aa-project.sourceforge.net/aalib/)```
+
+<!-- verified: 2026-06-10 -->

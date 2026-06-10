@@ -68,4 +68,10 @@ This tool is intended for authorized security testing only. Unauthorized use aga
 
 # SEE ALSO
 
-[arpspoof](/man/arpspoof)(8), [ettercap](/man/ettercap)(8), [mitmproxy](/man/mitmproxy)(1)
+[arpspoof](/man/arpspoof)(8), [ettercap](/man/ettercap)(8), [mitmproxy](/man/mitmproxy)(1), [dsniff](/man/dsniff)(8), [bettercap](/man/bettercap)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/moxie0/sslstrip)```
+
+<!-- verified: 2026-06-10 -->

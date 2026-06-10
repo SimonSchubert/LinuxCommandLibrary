@@ -107,4 +107,12 @@ Requires a 1Password account and must be authenticated before most operations. T
 
 # SEE ALSO
 
-[pass](/man/pass)(1), [gopass](/man/gopass)(1), [vault](/man/vault)(1), [gpg](/man/gpg)(1)
+[op](/man/op)(1), [pass](/man/pass)(1), [gopass](/man/gopass)(1), [vault](/man/vault)(1), [gpg](/man/gpg)(1)
+
+# RESOURCES
+
+```[Homepage](https://1password.com/)```
+
+```[Documentation](https://developer.1password.com/docs/cli/)```
+
+<!-- verified: 2026-06-10 -->

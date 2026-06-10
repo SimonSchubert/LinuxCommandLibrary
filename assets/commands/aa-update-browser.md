@@ -22,7 +22,7 @@ Show what changes would be made **(dry-run)**
 
 # SYNOPSIS
 
-**aa-update-browser** [_-l_] [_-d profile_] [_-u abstractions profile_]
+**aa-update-browser** [_option_] _profile_
 
 # DESCRIPTION
 
@@ -32,17 +32,17 @@ Browser abstractions provide pre-defined access rules for common browser operati
 
 # PARAMETERS
 
-**-l, --list**
-> List available browser abstraction profiles
+**-l**
+> Show the supported browser abstractions.
 
-**-d, --dry-run**
-> Show what changes would be made to a profile without applying them
+**-d**
+> Dry-run. Only show what would be done to the given profile without applying changes.
 
-**-u, --update**
-> Update a profile with the specified abstractions (comma-separated)
+**-u** _ABSTRACTIONS_
+> Update the given profile with the comma-separated list of ABSTRACTIONS. Specifying '' removes all abstractions.
 
-**-h, --help**
-> Display help information
+**-h**
+> Display help information.
 
 # CAVEATS
 
@@ -54,4 +54,14 @@ Part of the **AppArmor** utilities package for managing application security pro
 
 # SEE ALSO
 
-[aa-enforce](/man/aa-enforce)(8), [aa-complain](/man/aa-complain)(8), [apparmor](/man/apparmor)(7)
+[aa-logprof](/man/aa-logprof)(8), [aa-enforce](/man/aa-enforce)(8), [aa-complain](/man/aa-complain)(8), [apparmor](/man/apparmor)(7)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/apparmor/apparmor)```
+
+```[Homepage](https://apparmor.net/)```
+
+```[Documentation](https://gitlab.com/apparmor/apparmor/-/wikis/home)```
+
+<!-- verified: 2026-06-10 -->

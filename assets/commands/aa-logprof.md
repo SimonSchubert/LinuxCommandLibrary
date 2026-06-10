@@ -59,4 +59,14 @@ Part of the **AppArmor** utilities package for managing application security pro
 
 # SEE ALSO
 
-[aa-genprof](/man/aa-genprof)(8), [aa-enforce](/man/aa-enforce)(8), [aa-complain](/man/aa-complain)(8), [auditd](/man/auditd)(8), [apparmor](/man/apparmor)(7)
+[aa-genprof](/man/aa-genprof)(8), [aa-cleanprof](/man/aa-cleanprof)(8), [aa-enforce](/man/aa-enforce)(8), [aa-complain](/man/aa-complain)(8), [auditd](/man/auditd)(8), [apparmor](/man/apparmor)(7)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/apparmor/apparmor)```
+
+```[Homepage](https://apparmor.net/)```
+
+```[Documentation](https://gitlab.com/apparmor/apparmor/-/wikis/home)```
+
+<!-- verified: 2026-06-10 -->

@@ -56,6 +56,9 @@ This approach allows safe system updates where changes can be rolled back if iss
 **pkg apply**
 > Apply pending package changes; requires reboot
 
+**upgrade**
+> Update the boot partition to the latest OCI image
+
 **rollback**
 > Rollback to the previous system state
 
@@ -82,3 +85,11 @@ Developed for **Vanilla OS**, a Linux distribution focused on providing an immut
 # SEE ALSO
 
 [apt](/man/apt)(8), [dnf](/man/dnf)(8), [ostree](/man/ostree)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Vanilla-OS/ABRoot)```
+
+```[Homepage](https://vanillaos.org)```
+
+<!-- verified: 2026-06-10 -->

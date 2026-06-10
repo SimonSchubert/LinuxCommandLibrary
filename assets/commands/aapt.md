@@ -69,4 +69,12 @@ The tool handles resource compilation, XML processing, asset packaging, and APK 
 
 # SEE ALSO
 
-[apksigner](/man/apksigner)(1), [apktool](/man/apktool)(1), [adb](/man/adb)(1)
+[aapt2](/man/aapt2)(1), [apksigner](/man/apksigner)(1), [apktool](/man/apktool)(1), [zipalign](/man/zipalign)(1), [adb](/man/adb)(1)
+
+# RESOURCES
+
+```[Source code](https://android.googlesource.com/platform/frameworks/base/+/refs/heads/main/tools/aapt)```
+
+```[Documentation](https://developer.android.com/tools/aapt2)```
+
+<!-- verified: 2026-06-10 -->

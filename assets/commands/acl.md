@@ -90,3 +90,11 @@ POSIX ACLs were developed in the **1990s** as part of the POSIX 1003.1e draft st
 # SEE ALSO
 
 [chmod](/man/chmod)(1), [chown](/man/chown)(1), [getfacl](/man/getfacl)(1), [setfacl](/man/setfacl)(1), [ls](/man/ls)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.nongnu.org/cgit/acl.git)```
+
+```[Homepage](https://savannah.nongnu.org/projects/acl/)```
+
+<!-- verified: 2026-06-10 -->

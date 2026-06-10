@@ -57,3 +57,11 @@ Requires Ghostscript to be installed for most conversions. Some complex PostScri
 # SEE ALSO
 
 [gs](/man/gs)(1), [ps2pdf](/man/ps2pdf)(1), [epstopdf](/man/epstopdf)(1), [convert](/man/convert)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/pts/a2ping)```
+
+```[Documentation](https://ctan.org/pkg/a2ping)```
+
+<!-- verified: 2026-06-10 -->

@@ -85,4 +85,12 @@ Requires PyTorch to be installed. Configuration should match your actual hardwar
 
 # SEE ALSO
 
-[python](/man/python)(1), [torchrun](/man/torchrun)(1), [deepspeed](/man/deepspeed)(1)
+[python](/man/python)(1), [torchrun](/man/torchrun)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/huggingface/accelerate)```
+
+```[Documentation](https://huggingface.co/docs/accelerate)```
+
+<!-- verified: 2026-06-10 -->

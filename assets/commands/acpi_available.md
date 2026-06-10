@@ -32,4 +32,10 @@ This tool only checks for basic ACPI availability, not whether specific ACPI fea
 
 # SEE ALSO
 
-[acpi](/man/acpi)(1), [acpid](/man/acpid)(8), [apm_available](/man/apm_available)(1)
+[acpi](/man/acpi)(1), [acpid](/man/acpid)(8), [acpi_listen](/man/acpi_listen)(8), [apm_available](/man/apm_available)(1)
+
+# RESOURCES
+
+```[Source code](https://sourceforge.net/projects/acpid2/)```
+
+<!-- verified: 2026-06-10 -->

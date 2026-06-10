@@ -89,4 +89,10 @@ Created to provide a simple command-line interface to ACPI information on Linux 
 
 # SEE ALSO
 
-[acpi_listen](/man/acpi_listen)(1), [acpid](/man/acpid)(8)
+[acpi_listen](/man/acpi_listen)(8), [acpid](/man/acpid)(8), [acpi_available](/man/acpi_available)(1)
+
+# RESOURCES
+
+```[Source code](https://sourceforge.net/projects/acpiclient/)```
+
+<!-- verified: 2026-06-10 -->

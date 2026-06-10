@@ -79,4 +79,14 @@ Desktop notifications require a running display server and proper DISPLAY enviro
 
 # SEE ALSO
 
-[apparmor](/man/apparmor)(7), [aa-status](/man/aa-status)(8), [aa-enforce](/man/aa-enforce)(8), [aa-complain](/man/aa-complain)(8), [journalctl](/man/journalctl)(1)
+[aa-logprof](/man/aa-logprof)(8), [aa-decode](/man/aa-decode)(8), [aa-status](/man/aa-status)(8), [aa-complain](/man/aa-complain)(8), [journalctl](/man/journalctl)(1), [apparmor](/man/apparmor)(7)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/apparmor/apparmor)```
+
+```[Homepage](https://apparmor.net/)```
+
+```[Documentation](https://gitlab.com/apparmor/apparmor/-/wikis/home)```
+
+<!-- verified: 2026-06-10 -->

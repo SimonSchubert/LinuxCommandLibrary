@@ -30,7 +30,7 @@
 
 # SYNOPSIS
 
-**ssdeep** [**-m** _file_] [**-k** _file_] [**-vprdsblcxa**] [**-t** _val_] [_files_]
+**ssdeep** [**-m** _file_] [**-k** _file_] [**-vprdsblcxag**] [**-t** _val_] [_files_]
 
 # PARAMETERS
 
@@ -71,7 +71,10 @@
 > Silent mode. Suppress warnings.
 
 **-x**
-> Display signature with filename (compact output).
+> Signature file matching. Treat input files as signature files and compare them against the known set.
+
+**-g**
+> Cluster mode. Group similar files into clusters of related items.
 
 # DESCRIPTION
 
@@ -91,4 +94,12 @@ Fuzzy hashing is not a replacement for cryptographic hashes when verifying exact
 
 # SEE ALSO
 
-[md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1), [hashdeep](/man/hashdeep)(1), [tlsh](/man/tlsh)(1)
+[md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1), [hashdeep](/man/hashdeep)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ssdeep-project/ssdeep)```
+
+```[Homepage](https://ssdeep-project.github.io/ssdeep/)```
+
+<!-- verified: 2026-06-10 -->

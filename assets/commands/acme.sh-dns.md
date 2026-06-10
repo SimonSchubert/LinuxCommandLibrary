@@ -86,3 +86,11 @@ DNS validation support was added to **acme.sh** in **2016** following the ACME p
 # SEE ALSO
 
 [acme.sh](/man/acme.sh)(1), [certbot](/man/certbot)(1), [dig](/man/dig)(1), [nslookup](/man/nslookup)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/acmesh-official/acme.sh)```
+
+```[Documentation](https://github.com/acmesh-official/acme.sh/wiki/dnsapi)```
+
+<!-- verified: 2026-06-10 -->

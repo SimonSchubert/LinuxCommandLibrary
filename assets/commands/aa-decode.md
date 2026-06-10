@@ -4,21 +4,21 @@ Decode hex-encoded strings in AppArmor logs
 
 # TLDR
 
-**Decode** a hex string
+**Decode** a single hex-encoded string
 
 ```aa-decode [hexstring]```
 
-Decode a **log file**
+Decode hex-encoded paths in a **log file** via stdin
 
-```sudo aa-decode [logfile]```
+```aa-decode < [/var/log/audit/audit.log]```
 
-Decode logs from **stdin**
-
-```sudo aa-decode - < [logfile]```
-
-Pipe kernel logs through **aa-decode**
+Pipe **kernel logs** through aa-decode
 
 ```cat /var/log/kern.log | aa-decode```
+
+Decode the **current journal** AppArmor entries
+
+```journalctl -k | aa-decode```
 
 # SYNOPSIS
 
@@ -45,4 +45,14 @@ Part of the **AppArmor** utilities package for managing application security pro
 
 # SEE ALSO
 
-[aa-status](/man/aa-status)(8), [aa-notify](/man/aa-notify)(8), [apparmor](/man/apparmor)(7)
+[aa-logprof](/man/aa-logprof)(8), [aa-notify](/man/aa-notify)(8), [aa-status](/man/aa-status)(8), [apparmor](/man/apparmor)(7)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/apparmor/apparmor)```
+
+```[Homepage](https://apparmor.net/)```
+
+```[Documentation](https://gitlab.com/apparmor/apparmor/-/wikis/home)```
+
+<!-- verified: 2026-06-10 -->

@@ -28,6 +28,8 @@
 
 **ssh-agent** [**-c** | **-s**] [**-Dd**] [**-a** _SOCKET_] [**-t** _LIFE_] [_COMMAND_ [_ARGS_...]]
 
+**ssh-agent** [**-c** | **-s**] **-k**
+
 # PARAMETERS
 
 **-s**
@@ -69,4 +71,12 @@ ssh-agent was developed as part of OpenSSH, originally created by Tatu Ylönen a
 
 # SEE ALSO
 
-[ssh-add](/man/ssh-add)(1), [ssh](/man/ssh)(1), [ssh-keygen](/man/ssh-keygen)(1)
+[ssh-add](/man/ssh-add)(1), [ssh](/man/ssh)(1), [ssh-keygen](/man/ssh-keygen)(1), [sshd](/man/sshd)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/openssh/openssh-portable)```
+
+```[Homepage](https://www.openssh.com/)```
+
+<!-- verified: 2026-06-10 -->

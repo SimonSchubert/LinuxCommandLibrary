@@ -33,4 +33,10 @@ Part of the **acpid** (ACPI daemon) package, which provides a framework for hand
 
 # SEE ALSO
 
-[acpi](/man/acpi)(1), [acpid](/man/acpid)(8)
+[acpi](/man/acpi)(1), [acpid](/man/acpid)(8), [acpi_available](/man/acpi_available)(1)
+
+# RESOURCES
+
+```[Source code](https://sourceforge.net/projects/acpid2/)```
+
+<!-- verified: 2026-06-10 -->

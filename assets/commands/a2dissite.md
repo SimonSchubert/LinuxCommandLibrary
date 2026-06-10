@@ -48,3 +48,11 @@ Created as part of the Apache2 package for **Debian GNU/Linux**. Part of the a2e
 # SEE ALSO
 
 [a2ensite](/man/a2ensite)(8), [a2enmod](/man/a2enmod)(8), [a2dismod](/man/a2dismod)(8), [a2enconf](/man/a2enconf)(8), [a2disconf](/man/a2disconf)(8), [apache2ctl](/man/apache2ctl)(8)
+
+# RESOURCES
+
+```[Homepage](https://httpd.apache.org/)```
+
+```[Documentation](https://manpages.debian.org/a2dissite)```
+
+<!-- verified: 2026-06-10 -->

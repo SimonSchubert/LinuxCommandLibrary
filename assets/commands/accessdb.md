@@ -45,3 +45,11 @@ The database format is specific to man-db and may change between versions. This 
 # SEE ALSO
 
 [man](/man/man)(1), [mandb](/man/mandb)(8), [whatis](/man/whatis)(1), [apropos](/man/apropos)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/man-db/man-db)```
+
+```[Homepage](https://man-db.gitlab.io/man-db/)```
+
+<!-- verified: 2026-06-10 -->

@@ -107,3 +107,13 @@ Requires slurmdbd and the multifactor priority plugin. Share values are relative
 # SEE ALSO
 
 [sprio](/man/sprio)(1), [sacctmgr](/man/sacctmgr)(1), [sreport](/man/sreport)(1), [scontrol](/man/scontrol)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/SchedMD/slurm)```
+
+```[Homepage](https://slurm.schedmd.com/)```
+
+```[Documentation](https://slurm.schedmd.com/sshare.html)```
+
+<!-- verified: 2026-06-10 -->

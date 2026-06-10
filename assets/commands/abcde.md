@@ -136,4 +136,12 @@ Requires backend programs for ripping (cdparanoia or cdda2wav) and encoding (lam
 
 # SEE ALSO
 
-[cdparanoia](/man/cdparanoia)(1), [lame](/man/lame)(1), [flac](/man/flac)(1), [oggenc](/man/oggenc)(1), [opusenc](/man/opusenc)(1), [cd-discid](/man/cd-discid)(1)
+[cdparanoia](/man/cdparanoia)(1), [lame](/man/lame)(1), [flac](/man/flac)(1), [opusenc](/man/opusenc)(1)
+
+# RESOURCES
+
+```[Source code](https://git.einval.com/cgi-bin/gitweb.cgi?p=abcde.git)```
+
+```[Homepage](https://abcde.einval.com/)```
+
+<!-- verified: 2026-06-10 -->

@@ -44,10 +44,20 @@ The generated Perl code attempts to mimic the behavior of awk as closely as poss
 
 The generated Perl code may require manual cleanup for optimal style and performance. Some complex awk constructs or GNU awk extensions may not translate perfectly. The translator assumes POSIX awk behavior.
 
+**a2p** is deprecated and was removed from the core Perl distribution in Perl 5.22 (2015). It is no longer shipped with modern Perl. Use it only on older systems, or rewrite awk scripts in Perl directly.
+
 # HISTORY
 
-**a2p** was written by Larry Wall, the creator of Perl, and first appeared with Perl 1.0 in **1987**. It was one of the earliest tools designed to help users migrate from Unix scripting tools to Perl during a time when Perl was being positioned as a replacement for awk, sed, and shell scripting.
+**a2p** was written by Larry Wall, the creator of Perl, and first appeared with Perl 1.0 in **1987**. It was one of the earliest tools designed to help users migrate from Unix scripting tools to Perl during a time when Perl was being positioned as a replacement for awk, sed, and shell scripting. It was removed from the Perl core distribution in Perl 5.22 (2015).
 
 # SEE ALSO
 
-[awk](/man/awk)(1), [perl](/man/perl)(1), [s2p](/man/s2p)(1)
+[awk](/man/awk)(1), [perl](/man/perl)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.perl.org/)```
+
+```[Documentation](https://perldoc.perl.org/perl5220delta)```
+
+<!-- verified: 2026-06-10 -->

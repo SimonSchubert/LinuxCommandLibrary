@@ -80,4 +80,12 @@ Part of **GNU Accounting Utilities**, based on traditional UNIX accounting tools
 
 # SEE ALSO
 
-[last](/man/last)(1), [lastlog](/man/lastlog)(8), [login](/man/login)(1), [sa](/man/sa)(8), [wtmp](/man/wtmp)(5)
+[last](/man/last)(1), [lastlog](/man/lastlog)(8), [login](/man/login)(1), [sa](/man/sa)(8), [accton](/man/accton)(8), [lastcomm](/man/lastcomm)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/acct/)```
+
+```[Documentation](https://www.gnu.org/software/acct/manual/)```
+
+<!-- verified: 2026-06-10 -->

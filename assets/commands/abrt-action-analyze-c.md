@@ -44,4 +44,12 @@ Part of **ABRT** (Automatic Bug Reporting Tool), developed by Red Hat for Fedora
 
 # SEE ALSO
 
-[abrt-cli](/man/abrt-cli)(1), [abrt-action-analyze-backtrace](/man/abrt-action-analyze-backtrace)(1)
+[abrt-cli](/man/abrt-cli)(1), [abrt-action-analyze-backtrace](/man/abrt-action-analyze-backtrace)(1), [abrt-action-generate-backtrace](/man/abrt-action-generate-backtrace)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/abrt/abrt)```
+
+```[Documentation](https://abrt.readthedocs.io/)```
+
+<!-- verified: 2026-06-10 -->

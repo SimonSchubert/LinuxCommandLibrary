@@ -87,3 +87,13 @@ Only works on running jobs; use **sacct** for completed jobs. Requires the jobac
 # SEE ALSO
 
 [sacct](/man/sacct)(1), [squeue](/man/squeue)(1), [scontrol](/man/scontrol)(1), [srun](/man/srun)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/SchedMD/slurm)```
+
+```[Homepage](https://slurm.schedmd.com/)```
+
+```[Documentation](https://slurm.schedmd.com/sstat.html)```
+
+<!-- verified: 2026-06-10 -->

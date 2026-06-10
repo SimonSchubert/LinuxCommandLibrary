@@ -21,3 +21,11 @@ View documentation for the original command
 # SEE ALSO
 
 [abrt-cli](/man/abrt-cli)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/abrt/abrt)```
+
+```[Documentation](https://abrt.readthedocs.io/)```
+
+<!-- verified: 2026-06-10 -->

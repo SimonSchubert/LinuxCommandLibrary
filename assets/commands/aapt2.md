@@ -88,4 +88,12 @@ aapt2 has stricter validation than the original aapt and will fail on malformed 
 
 # SEE ALSO
 
-[apksigner](/man/apksigner)(1), [zipalign](/man/zipalign)(1), [adb](/man/adb)(1), [bundletool](/man/bundletool)(1)
+[aapt](/man/aapt)(1), [apksigner](/man/apksigner)(1), [zipalign](/man/zipalign)(1), [adb](/man/adb)(1), [bundletool](/man/bundletool)(1)
+
+# RESOURCES
+
+```[Source code](https://android.googlesource.com/platform/frameworks/base/+/refs/heads/main/tools/aapt2)```
+
+```[Documentation](https://developer.android.com/tools/aapt2)```
+
+<!-- verified: 2026-06-10 -->

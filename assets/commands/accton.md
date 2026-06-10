@@ -46,4 +46,12 @@ Process accounting originated in early Unix systems at Bell Labs in the **1970s*
 
 # SEE ALSO
 
-[sa](/man/sa)(8), [lastcomm](/man/lastcomm)(1), [acct](/man/acct)(5), [dump-acct](/man/dump-acct)(8)
+[sa](/man/sa)(8), [lastcomm](/man/lastcomm)(1), [ac](/man/ac)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/acct/)```
+
+```[Documentation](https://www.gnu.org/software/acct/manual/)```
+
+<!-- verified: 2026-06-10 -->

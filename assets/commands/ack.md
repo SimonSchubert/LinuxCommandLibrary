@@ -100,3 +100,11 @@ The tool provides built-in file type filtering, allowing searches limited to spe
 # SEE ALSO
 
 [grep](/man/grep)(1), [ag](/man/ag)(1), [rg](/man/rg)(1), [git-grep](/man/git-grep)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/beyondgrep/ack3)```
+
+```[Homepage](https://beyondgrep.com/)```
+
+<!-- verified: 2026-06-10 -->
