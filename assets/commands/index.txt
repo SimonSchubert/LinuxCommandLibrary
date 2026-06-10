@@ -588,6 +588,11 @@ b2-tools.md
 b2.md
 b2sum.md
 b3sum.md
+b4-am.md
+b4-prep.md
+b4-send.md
+b4-shazam.md
+b4.md
 b4n.md
 babel.md
 babeld.md
@@ -1167,6 +1172,7 @@ clang.md
 clangd.md
 claude-pee.md
 claude.md
+clawpatrol.md
 claws.md
 clear.md
 clef.md
@@ -3524,6 +3530,8 @@ isutf8.md
 iverilog.md
 ivpn.md
 iw-dev.md
+iw-event.md
+iw-phy.md
 iw.md
 iwconfig.md
 iwctl.md
@@ -4773,6 +4781,7 @@ nimble.md
 ninja.md
 ninoxai.md
 ninvaders.md
+niri.md
 nitch.md
 nitrogen.md
 nix-build.2.md
@@ -4971,6 +4980,7 @@ ntpdate.md
 ntpq.md
 nu.md
 nuclei.md
+nucleus.md
 nudoku.md
 nullclaw.md
 numactl.md
@@ -5144,6 +5154,7 @@ opera.md
 ophcrack.md
 opkg.md
 opldecode.md
+oproxy.md
 opt.md
 optimus-manager.md
 optipng.md
