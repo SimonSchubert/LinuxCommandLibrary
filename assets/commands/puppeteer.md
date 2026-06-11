@@ -81,4 +81,4 @@ Puppeteer was developed by the **Google Chrome DevTools** team, released in 2017
 
 # SEE ALSO
 
-[playwright](/man/playwright)(1), [selenium](/man/selenium)(1), [cypress](/man/cypress)(1)
+[playwright](/man/playwright)(1)

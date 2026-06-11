@@ -54,4 +54,4 @@ File permissions must be 0640 or stricter. Edit with vigr -s to prevent corrupti
 
 # SEE ALSO
 
-[group](/man/group)(5), [shadow](/man/shadow)(5), [gpasswd](/man/gpasswd)(1), [grpck](/man/grpck)(8)
+[group](/man/group)(5), [gpasswd](/man/gpasswd)(1), [grpck](/man/grpck)(8)

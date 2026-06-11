@@ -101,4 +101,4 @@ nfsstat has been part of NFS tools since the early implementations at **Sun Micr
 
 # SEE ALSO
 
-[nfsd](/man/nfsd)(8), [mountstats](/man/mountstats)(8), [showmount](/man/showmount)(8), [rpcinfo](/man/rpcinfo)(8)
+[nfsd](/man/nfsd)(8), [showmount](/man/showmount)(8), [rpcinfo](/man/rpcinfo)(8)

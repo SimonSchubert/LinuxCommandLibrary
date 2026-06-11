@@ -47,4 +47,4 @@ Requires i3lock and ImageMagick or similar for blur effects. Screenshot capture 
 
 # SEE ALSO
 
-[i3lock](/man/i3lock)(1), [slock](/man/slock)(1), [xscreensaver](/man/xscreensaver)(1)
+[i3lock](/man/i3lock)(1), [xscreensaver](/man/xscreensaver)(1)

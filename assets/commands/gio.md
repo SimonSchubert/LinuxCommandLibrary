@@ -83,4 +83,4 @@ gio was introduced in GLib 2.50 (**2016**) as a unified command-line interface f
 
 # SEE ALSO
 
-[xdg-open](/man/xdg-open)(1), [gvfs](/man/gvfs)(7), [nautilus](/man/nautilus)(1)
+[xdg-open](/man/xdg-open)(1), [nautilus](/man/nautilus)(1)

@@ -47,5 +47,5 @@ Define and manage Pixi project tasks
 
 # SEE ALSO
 
-[pixi](/man/pixi)(1), [pixi-run](/man/pixi-run)(1)
+[pixi](/man/pixi)(1)
 

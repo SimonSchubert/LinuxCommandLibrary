@@ -115,4 +115,4 @@ System load affects results - close other applications for accurate measurements
 
 # SEE ALSO
 
-[time](/man/time)(1), [perf](/man/perf)(1), [bench](/man/bench)(1), [pv](/man/pv)(1)
+[time](/man/time)(1), [perf](/man/perf)(1), [pv](/man/pv)(1)

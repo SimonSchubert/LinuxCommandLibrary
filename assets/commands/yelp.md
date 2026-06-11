@@ -70,4 +70,4 @@ GNOME-centric; other desktops may have different help systems. Some documentatio
 
 # SEE ALSO
 
-[man](/man/man)(1), [info](/man/info)(1), [devhelp](/man/devhelp)(1)
+[man](/man/man)(1), [info](/man/info)(1)

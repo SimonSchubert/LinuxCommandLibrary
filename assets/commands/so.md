@@ -38,4 +38,3 @@ Terminal interface for Stack Overflow
 
 # SEE ALSO
 
-[howdoi](/man/howdoi)(1), [how2](/man/how2)(1)

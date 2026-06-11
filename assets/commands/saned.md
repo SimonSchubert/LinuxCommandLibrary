@@ -74,4 +74,4 @@ saned is part of the **SANE** (Scanner Access Now Easy) project, which began in 
 
 # SEE ALSO
 
-[scanimage](/man/scanimage)(1), [sane-find-scanner](/man/sane-find-scanner)(1), [xsane](/man/xsane)(1), [sane-net](/man/sane-net)(5)
+[scanimage](/man/scanimage)(1), [sane-find-scanner](/man/sane-find-scanner)(1)

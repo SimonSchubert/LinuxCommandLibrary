@@ -87,4 +87,4 @@ IDA was created by **Ilfak Guilfanov** and first released in **1991**. It's deve
 
 # SEE ALSO
 
-[ghidra](/man/ghidra)(1), [radare2](/man/radare2)(1), [objdump](/man/objdump)(1)
+[radare2](/man/radare2)(1), [objdump](/man/objdump)(1)

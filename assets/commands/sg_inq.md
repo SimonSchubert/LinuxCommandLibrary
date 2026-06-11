@@ -116,4 +116,4 @@ Requires root privileges to access raw device nodes. On Linux 2.4 kernels, only 
 
 # SEE ALSO
 
-[sg_vpd](/man/sg_vpd)(8), [sdparm](/man/sdparm)(8), [lsscsi](/man/lsscsi)(1), [smartctl](/man/smartctl)(8), [hdparm](/man/hdparm)(8)
+[lsscsi](/man/lsscsi)(1), [smartctl](/man/smartctl)(8), [hdparm](/man/hdparm)(8)

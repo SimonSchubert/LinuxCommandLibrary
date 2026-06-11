@@ -55,4 +55,4 @@ dh_numpy was created for the Debian Python ecosystem to manage the complexity of
 
 # SEE ALSO
 
-[dh](/man/dh)(1), [dh_python3](/man/dh_python3)(1), [numpy](/man/numpy)(3)
+[dh](/man/dh)(1)

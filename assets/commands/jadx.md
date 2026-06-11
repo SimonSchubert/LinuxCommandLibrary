@@ -71,4 +71,4 @@ jadx was created as an improvement over older Android decompilers, focusing on p
 
 # SEE ALSO
 
-[apktool](/man/apktool)(1), [dex2jar](/man/dex2jar)(1), [jd-cli](/man/jd-cli)(1)
+[apktool](/man/apktool)(1), [dex2jar](/man/dex2jar)(1)

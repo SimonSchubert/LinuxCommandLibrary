@@ -91,4 +91,4 @@ CMS was standardized as **RFC 5652** in **2009**, building upon PKCS#7 from RSA 
 
 # SEE ALSO
 
-[smime](/man/smime)(1), [pkcs7](/man/pkcs7)(1), [x509](/man/x509)(1), [openssl](/man/openssl)(1)
+[x509](/man/x509)(1), [openssl](/man/openssl)(1)

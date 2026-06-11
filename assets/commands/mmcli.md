@@ -99,4 +99,4 @@ Some operations require root privileges, particularly SMS and connection managem
 
 # SEE ALSO
 
-[ModemManager](/man/ModemManager)(8), [NetworkManager](/man/NetworkManager)(8), [nmcli](/man/nmcli)(1)
+[NetworkManager](/man/NetworkManager)(8), [nmcli](/man/nmcli)(1)

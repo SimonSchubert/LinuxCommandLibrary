@@ -83,5 +83,5 @@ command-line tool for writing ID3 tags to MP3 files
 
 # SEE ALSO
 
-[id3v2](/man/id3v2)(1), [eyeD3](/man/eyeD3)(1), [mp3info](/man/mp3info)(1)
+[id3v2](/man/id3v2)(1), [mp3info](/man/mp3info)(1)
 

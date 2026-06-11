@@ -64,5 +64,5 @@ R was created by **Ross Ihaka and Robert Gentleman** at University of Auckland.
 
 # SEE ALSO
 
-[Rscript](/man/Rscript)(1), [python](/man/python)(1)
+[python](/man/python)(1)
 

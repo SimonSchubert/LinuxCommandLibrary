@@ -69,4 +69,4 @@ Xvfb must be installed. Some applications may behave differently in virtual X. P
 
 # SEE ALSO
 
-[xvfb](/man/xvfb)(1), [xinit](/man/xinit)(1), [xauth](/man/xauth)(1)
+[xinit](/man/xinit)(1), [xauth](/man/xauth)(1)

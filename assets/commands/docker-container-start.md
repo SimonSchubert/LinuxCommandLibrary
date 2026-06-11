@@ -40,4 +40,4 @@ The container resumes with its original configuration, including environment var
 
 # SEE ALSO
 
-[docker-start](/man/docker-start)(1), [docker-container-stop](/man/docker-container-stop)(1)
+[docker-start](/man/docker-start)(1)

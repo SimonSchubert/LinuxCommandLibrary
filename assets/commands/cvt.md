@@ -68,4 +68,4 @@ The CVT standard was developed by **VESA** (Video Electronics Standards Associat
 
 # SEE ALSO
 
-[gtf](/man/gtf)(1), [xrandr](/man/xrandr)(1), [xorg.conf](/man/xorg.conf)(5)
+[gtf](/man/gtf)(1), [xrandr](/man/xrandr)(1)

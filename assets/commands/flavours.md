@@ -84,4 +84,3 @@ flavours was created as a Rust alternative to existing Base16 managers. Base16 i
 
 # SEE ALSO
 
-[base16-shell](/man/base16-shell)(1), [pywal](/man/pywal)(1)

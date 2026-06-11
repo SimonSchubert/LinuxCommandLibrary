@@ -90,4 +90,4 @@ rspamadm is part of **Rspamd** by **Vsevolod Stakhov**, an advanced spam filteri
 
 # SEE ALSO
 
-[rspamd](/man/rspamd)(8), [rspamc](/man/rspamc)(1), [spamassassin](/man/spamassassin)(1)
+[rspamd](/man/rspamd)(8), [rspamc](/man/rspamc)(1)

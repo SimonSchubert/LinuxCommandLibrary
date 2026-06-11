@@ -60,4 +60,4 @@ gif2webp is part of the WebP project developed by Google. WebP was announced in 
 
 # SEE ALSO
 
-[cwebp](/man/cwebp)(1), [dwebp](/man/dwebp)(1), [webpinfo](/man/webpinfo)(1), [convert](/man/convert)(1)
+[cwebp](/man/cwebp)(1), [dwebp](/man/dwebp)(1), [convert](/man/convert)(1)

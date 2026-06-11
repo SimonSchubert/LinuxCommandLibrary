@@ -55,4 +55,4 @@ fuck is part of **The Fuck** project created by Vladimir Iakovlev. The applicati
 
 # SEE ALSO
 
-[thefuck](/man/thefuck)(1), [bash](/man/bash)(1)
+[bash](/man/bash)(1)

@@ -40,4 +40,4 @@ Requires KDE Plasma desktop environment. The VNC password is passed on the comma
 
 # SEE ALSO
 
-[krfb](/man/krfb)(1), [x11vnc](/man/x11vnc)(1), [vncviewer](/man/vncviewer)(1)
+[x11vnc](/man/x11vnc)(1), [vncviewer](/man/vncviewer)(1)

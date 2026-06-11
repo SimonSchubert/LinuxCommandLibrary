@@ -57,4 +57,4 @@ Typically started automatically by D-Bus activation. GUI package managers depend
 
 # SEE ALSO
 
-[aptdcon](/man/aptdcon)(1), [apt](/man/apt)(8), [packagekit](/man/packagekit)(8)
+[aptdcon](/man/aptdcon)(1), [apt](/man/apt)(8)

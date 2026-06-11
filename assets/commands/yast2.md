@@ -98,4 +98,4 @@ SUSE-specific; not available on other distributions. Some modules require root p
 
 # SEE ALSO
 
-[zypper](/man/zypper)(8), [systemctl](/man/systemctl)(1), [cockpit](/man/cockpit)(8)
+[zypper](/man/zypper)(8), [systemctl](/man/systemctl)(1)

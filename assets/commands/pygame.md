@@ -81,4 +81,4 @@ Pygame was created by **Pete Shinners** in 2000 as a Python wrapper for SDL, ena
 
 # SEE ALSO
 
-[python](/man/python)(1), [sdl2](/man/sdl2)(3), [pyglet](/man/pyglet)(1)
+[python](/man/python)(1)

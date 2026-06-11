@@ -89,4 +89,4 @@ nftables was developed by the **Netfilter** project, authored primarily by **Pat
 
 # SEE ALSO
 
-[iptables](/man/iptables)(8), [firewalld](/man/firewalld)(1), [ufw](/man/ufw)(8), [netfilter](/man/netfilter)(7)
+[iptables](/man/iptables)(8), [firewalld](/man/firewalld)(1), [ufw](/man/ufw)(8)

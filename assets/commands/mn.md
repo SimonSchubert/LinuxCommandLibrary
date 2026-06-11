@@ -143,4 +143,4 @@ Micronaut was created by **Graeme Rocher** (creator of Grails) at **Object Compu
 
 # SEE ALSO
 
-[gradle](/man/gradle)(1), [maven](/man/maven)(1), [quarkus](/man/quarkus)(1), [spring-boot](/man/spring-boot)(1)
+[gradle](/man/gradle)(1), [maven](/man/maven)(1), [quarkus](/man/quarkus)(1)

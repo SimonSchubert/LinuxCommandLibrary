@@ -73,4 +73,4 @@ Safety was developed by **PyUp.io** as an open-source tool to improve Python sup
 
 # SEE ALSO
 
-[pip-audit](/man/pip-audit)(1), [pip](/man/pip)(1), [bandit](/man/bandit)(1), [pipenv](/man/pipenv)(1)
+[pip](/man/pip)(1), [pipenv](/man/pipenv)(1)

@@ -91,4 +91,4 @@ Avoid deprecated stream ciphers (rc4-md5, aes-cfb, etc.) as they lack authentica
 
 # SEE ALSO
 
-[ss-local](/man/ss-local)(1), [ss-tunnel](/man/ss-tunnel)(1), [ss-redir](/man/ss-redir)(1), [ss-manager](/man/ss-manager)(1)
+[ss-local](/man/ss-local)(1)

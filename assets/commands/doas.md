@@ -84,4 +84,4 @@ Configuration syntax differs from sudo; migration requires rewriting rules. Fewe
 
 # SEE ALSO
 
-[doas.conf](/man/doas.conf)(5), [sudo](/man/sudo)(8), [su](/man/su)(1), [sudoers](/man/sudoers)(5)
+[sudo](/man/sudo)(8), [su](/man/su)(1)

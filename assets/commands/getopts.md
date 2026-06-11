@@ -68,4 +68,4 @@ getopts is defined by the POSIX standard and available in all POSIX-compliant sh
 
 # SEE ALSO
 
-[getopt](/man/getopt)(1), [bash](/man/bash)(1), [shift](/man/shift)(1)
+[getopt](/man/getopt)(1), [bash](/man/bash)(1)

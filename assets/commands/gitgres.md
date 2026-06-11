@@ -62,4 +62,4 @@ The project is research-grade: storing repositories in PostgreSQL incurs differe
 
 # SEE ALSO
 
-[git](/man/git)(1), [psql](/man/psql)(1), [libgit2](/man/libgit2)(3)
+[git](/man/git)(1), [psql](/man/psql)(1)

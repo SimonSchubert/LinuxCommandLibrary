@@ -28,4 +28,3 @@ Requires an internet connection to fetch data from the MLB stats API.
 
 # SEE ALSO
 
-[sportstracker](/man/sportstracker)(1)

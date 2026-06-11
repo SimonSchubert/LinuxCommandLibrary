@@ -71,4 +71,4 @@ Cached passwords in the kernel keyring are cleared on reboot. The **--no-tty** o
 
 # SEE ALSO
 
-[systemd](/man/systemd)(1), [systemd-tty-ask-password-agent](/man/systemd-tty-ask-password-agent)(1), [cryptsetup](/man/cryptsetup)(8)
+[systemd-tty-ask-password-agent](/man/systemd-tty-ask-password-agent)(1), [cryptsetup](/man/cryptsetup)(8)

@@ -50,5 +50,5 @@ initializes the MariaDB data directory and system tables
 
 # SEE ALSO
 
-[mariadb](/man/mariadb)(1), [mariadbd](/man/mariadbd)(1)
+[mariadb](/man/mariadb)(1)
 

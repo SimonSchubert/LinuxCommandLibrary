@@ -73,4 +73,4 @@ The dumb HTTP transport and its helper commands appeared in early Git releases, 
 
 # SEE ALSO
 
-[git](/man/git)(1), [git-http-backend](/man/git-http-backend)(1), [git-daemon](/man/git-daemon)(1), [git-repack](/man/git-repack)(1)
+[git](/man/git)(1), [git-daemon](/man/git-daemon)(1), [git-repack](/man/git-repack)(1)

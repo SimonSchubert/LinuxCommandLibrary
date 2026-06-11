@@ -72,4 +72,4 @@ Host-encrypted credentials are tied to the specific machine. TPM2-encrypted cred
 
 # SEE ALSO
 
-[systemd.exec](/man/systemd.exec)(5), [systemctl](/man/systemctl)(1)
+[systemctl](/man/systemctl)(1)

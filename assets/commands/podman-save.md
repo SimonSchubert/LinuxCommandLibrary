@@ -81,4 +81,4 @@ podman save is part of **Podman** by **Red Hat**, providing Docker-compatible im
 
 # SEE ALSO
 
-[podman-load](/man/podman-load)(1), [podman-export](/man/podman-export)(1), [podman-push](/man/podman-push)(1)
+[podman-load](/man/podman-load)(1), [podman-export](/man/podman-export)(1)

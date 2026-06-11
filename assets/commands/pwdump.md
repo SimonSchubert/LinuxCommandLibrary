@@ -69,4 +69,4 @@ pwdump was developed for Windows password auditing. Multiple versions (pwdump2-7
 
 # SEE ALSO
 
-[john](/man/john)(1), [hashcat](/man/hashcat)(1), [mimikatz](/man/mimikatz)(1), [secretsdump.py](/man/secretsdump.py)(1)
+[john](/man/john)(1), [hashcat](/man/hashcat)(1)

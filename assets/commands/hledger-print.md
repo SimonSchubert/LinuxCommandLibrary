@@ -67,4 +67,4 @@ Print is a core **hledger** command for displaying and extracting transactions f
 
 # SEE ALSO
 
-[hledger](/man/hledger)(1), [hledger-register](/man/hledger-register)(1), [hledger-import](/man/hledger-import)(1)
+[hledger](/man/hledger)(1), [hledger-import](/man/hledger-import)(1)

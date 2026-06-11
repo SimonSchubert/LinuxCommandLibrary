@@ -23,5 +23,5 @@ _index_
 
 # SEE ALSO
 
-[pamsplit](/man/pamsplit)(1), [pamcat](/man/pamcat)(1)
+[pamsplit](/man/pamsplit)(1)
 

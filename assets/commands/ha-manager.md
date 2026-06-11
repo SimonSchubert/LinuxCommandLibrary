@@ -83,4 +83,4 @@ ha-manager is part of **Proxmox VE**, an open-source virtualization platform. Pr
 
 # SEE ALSO
 
-[pve-ha-manager](/man/pve-ha-manager)(1), [pvecm](/man/pvecm)(1), [qm](/man/qm)(1)
+[pvecm](/man/pvecm)(1), [qm](/man/qm)(1)

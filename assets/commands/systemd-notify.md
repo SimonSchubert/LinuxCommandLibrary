@@ -55,4 +55,4 @@ Only useful within systemd service contexts. The service must be configured with
 
 # SEE ALSO
 
-[systemd](/man/systemd)(1), [systemctl](/man/systemctl)(1), [systemd.service](/man/systemd.service)(5)
+[systemctl](/man/systemctl)(1)

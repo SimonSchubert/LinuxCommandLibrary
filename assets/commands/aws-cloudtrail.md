@@ -130,4 +130,4 @@ lookup-events only searches the last 90 days; use Athena on S3 logs for older ev
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [aws-s3](/man/aws-s3)(1), [aws-athena](/man/aws-athena)(1), [aws-config](/man/aws-config)(1)
+[aws](/man/aws)(1), [aws-s3](/man/aws-s3)(1), [aws-athena](/man/aws-athena)(1)

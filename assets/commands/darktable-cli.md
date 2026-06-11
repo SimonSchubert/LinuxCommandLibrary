@@ -82,4 +82,4 @@ darktable was created by **Johannes Hanika** and first released in **2009** as a
 
 # SEE ALSO
 
-[darktable](/man/darktable)(1), [rawtherapee-cli](/man/rawtherapee-cli)(1), [dcraw](/man/dcraw)(1), [exiftool](/man/exiftool)(1)
+[rawtherapee-cli](/man/rawtherapee-cli)(1), [dcraw](/man/dcraw)(1), [exiftool](/man/exiftool)(1)

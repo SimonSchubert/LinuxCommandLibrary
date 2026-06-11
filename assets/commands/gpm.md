@@ -81,4 +81,4 @@ gpm was created by Alessandro Rubini in **1994** to bring mouse support to the L
 
 # SEE ALSO
 
-[Xorg](/man/Xorg)(1), [console](/man/console)(4)
+[Xorg](/man/Xorg)(1)

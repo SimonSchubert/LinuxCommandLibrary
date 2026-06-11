@@ -90,4 +90,4 @@ Use for network planning and troubleshooting. Online tools available at cidr.xyz
 
 # SEE ALSO
 
-[ip](/man/ip)(8), [ifconfig](/man/ifconfig)(8), [netmask](/man/netmask)(1)
+[ip](/man/ip)(8), [ifconfig](/man/ifconfig)(8)

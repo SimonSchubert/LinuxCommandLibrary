@@ -69,4 +69,4 @@ gau was created for security research and bug bounty hunting, providing easy acc
 
 # SEE ALSO
 
-[waybackurls](/man/waybackurls)(1), [hakrawler](/man/hakrawler)(1), [gospider](/man/gospider)(1)
+[waybackurls](/man/waybackurls)(1), [hakrawler](/man/hakrawler)(1)

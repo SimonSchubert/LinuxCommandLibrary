@@ -67,4 +67,4 @@ Quick mode (**-q**) configures only DHCP — Wi-Fi must be set up manually with 
 
 # SEE ALSO
 
-[setup-disk](/man/setup-disk)(8), [setup-interfaces](/man/setup-interfaces)(8), [setup-sshd](/man/setup-sshd)(8), [setup-keymap](/man/setup-keymap)(8), [lbu](/man/lbu)(8), [apk](/man/apk)(8)
+[lbu](/man/lbu)(8), [apk](/man/apk)(8)

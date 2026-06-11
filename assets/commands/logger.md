@@ -62,4 +62,4 @@ Levels: emerg, alert, crit, err, warning, notice, info, debug
 
 # SEE ALSO
 
-[journalctl](/man/journalctl)(1), [syslog](/man/syslog)(3), [rsyslog](/man/rsyslog)(8)
+[journalctl](/man/journalctl)(1)

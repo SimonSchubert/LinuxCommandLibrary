@@ -110,4 +110,4 @@ This utility is in legacy mode and only receives critical bug fixes. The **-l** 
 
 # SEE ALSO
 
-[sg_modes](/man/sg_modes)(8), [sg_inq](/man/sg_inq)(8), [sdparm](/man/sdparm)(8), [lsscsi](/man/lsscsi)(1), [sg_vpd](/man/sg_vpd)(8)
+[sg_inq](/man/sg_inq)(8), [lsscsi](/man/lsscsi)(1)

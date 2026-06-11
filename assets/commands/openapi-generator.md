@@ -82,4 +82,4 @@ OpenAPI Generator was forked from Swagger Codegen in **2018** by **William Cheng
 
 # SEE ALSO
 
-[swagger](/man/swagger)(1), [oapi-codegen](/man/oapi-codegen)(1), [redoc](/man/redoc)(1)
+[oapi-codegen](/man/oapi-codegen)(1)

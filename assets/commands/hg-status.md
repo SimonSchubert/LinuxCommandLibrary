@@ -61,5 +61,5 @@ displays the state of files in the working directory
 
 # SEE ALSO
 
-[hg](/man/hg)(1), [hg-diff](/man/hg-diff)(1), [hg-commit](/man/hg-commit)(1)
+[hg](/man/hg)(1), [hg-commit](/man/hg-commit)(1)
 

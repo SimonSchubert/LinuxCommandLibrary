@@ -30,4 +30,4 @@ Terminal UI for Redis data viewing and management
 
 # SEE ALSO
 
-[redis-cli](/man/redis-cli)(1), [iredis](/man/iredis)(1), [redis-commander](/man/redis-commander)(1)
+[redis-cli](/man/redis-cli)(1)

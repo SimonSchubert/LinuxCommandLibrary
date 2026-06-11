@@ -111,4 +111,3 @@ Requires the AX.25 kernel stack and an attached AX.25 interface; **beacon** will
 
 # SEE ALSO
 
-[ax25](/man/ax25)(4), [axports](/man/axports)(5), [kissattach](/man/kissattach)(8), [axlisten](/man/axlisten)(1), [call](/man/call)(1)

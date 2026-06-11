@@ -88,4 +88,4 @@ Certificate Revocation Lists were defined in **X.509** standards and implemented
 
 # SEE ALSO
 
-[x509](/man/x509)(1), [ca](/man/ca)(1), [verify](/man/verify)(1), [openssl](/man/openssl)(1)
+[x509](/man/x509)(1), [verify](/man/verify)(1), [openssl](/man/openssl)(1)

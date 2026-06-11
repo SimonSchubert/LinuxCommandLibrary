@@ -114,4 +114,4 @@ VPC CIDR blocks cannot overlap with peered VPCs. Each subnet exists in one avail
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [aws-ec2](/man/aws-ec2)(1), [ip](/man/ip)(1), [aws-directconnect](/man/aws-directconnect)(1)
+[aws](/man/aws)(1), [aws-ec2](/man/aws-ec2)(1), [ip](/man/ip)(1)

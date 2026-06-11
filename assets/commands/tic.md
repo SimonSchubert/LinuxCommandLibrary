@@ -56,4 +56,4 @@ Installing to system directories requires root privileges. Syntax errors in sour
 
 # SEE ALSO
 
-[infocmp](/man/infocmp)(1), [toe](/man/toe)(1), [terminfo](/man/terminfo)(5)
+[infocmp](/man/infocmp)(1), [toe](/man/toe)(1)

@@ -49,4 +49,3 @@ idmap_rfc2307 is part of **Samba** for enterprise Unix/Windows ID mapping.
 
 # SEE ALSO
 
-[smb.conf](/man/smb.conf)(5), [idmap_ad](/man/idmap_ad)(8), [winbindd](/man/winbindd)(8)

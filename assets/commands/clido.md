@@ -32,4 +32,4 @@ Tasks are stored locally in plain text files and can be managed without requirin
 
 # SEE ALSO
 
-[task](/man/task)(1), [todo.txt](/man/todo.txt)(1)
+[task](/man/task)(1)

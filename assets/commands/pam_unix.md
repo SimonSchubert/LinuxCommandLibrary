@@ -57,5 +57,5 @@ pam_unix provides **traditional Unix authentication** via passwd/shadow.
 
 # SEE ALSO
 
-[pam](/man/pam)(8), [passwd](/man/passwd)(5), [shadow](/man/shadow)(5)
+[pam](/man/pam)(8), [passwd](/man/passwd)(5)
 

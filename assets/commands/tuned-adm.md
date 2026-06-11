@@ -63,4 +63,4 @@ Requires the tuned service to be running. Profile changes take effect immediatel
 
 # SEE ALSO
 
-[tuned](/man/tuned)(8), [tuned.conf](/man/tuned.conf)(5), [cpupower](/man/cpupower)(1)
+[tuned](/man/tuned)(8), [cpupower](/man/cpupower)(1)

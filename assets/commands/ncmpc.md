@@ -78,4 +78,4 @@ ncmpc was created by **Kalle Wallin** as one of the first curses clients for MPD
 
 # SEE ALSO
 
-[mpd](/man/mpd)(1), [mpc](/man/mpc)(1), [ncmpcpp](/man/ncmpcpp)(1), [vimpc](/man/vimpc)(1)
+[mpd](/man/mpd)(1), [mpc](/man/mpc)(1), [ncmpcpp](/man/ncmpcpp)(1)

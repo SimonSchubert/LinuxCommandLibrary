@@ -85,4 +85,4 @@ Border effect functionality is deprecated and defaults to "none". **gnome-screen
 
 # SEE ALSO
 
-[scrot](/man/scrot)(1), [import](/man/import)(1), [xwd](/man/xwd)(1)
+[scrot](/man/scrot)(1), [import](/man/import)(1)

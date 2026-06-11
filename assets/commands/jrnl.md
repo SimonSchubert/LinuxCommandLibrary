@@ -112,4 +112,4 @@ Plain text storage means entries are readable without jrnl. Encryption adds pass
 
 # SEE ALSO
 
-[taskwarrior](/man/taskwarrior)(1), [note](/man/note)(1), [vim](/man/vim)(1), [nano](/man/nano)(1)
+[taskwarrior](/man/taskwarrior)(1), [vim](/man/vim)(1), [nano](/man/nano)(1)

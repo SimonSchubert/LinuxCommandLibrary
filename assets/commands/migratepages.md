@@ -56,4 +56,4 @@ migratepages is part of the **numactl** package, developed for controlling NUMA 
 
 # SEE ALSO
 
-[numactl](/man/numactl)(8), [numastat](/man/numastat)(8), [mbind](/man/mbind)(2), [set_mempolicy](/man/set_mempolicy)(2)
+[numactl](/man/numactl)(8), [numastat](/man/numastat)(8), [mbind](/man/mbind)(2)

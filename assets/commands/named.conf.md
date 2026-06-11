@@ -74,4 +74,4 @@ Syntax errors prevent BIND from starting. Use named-checkconf to validate. Permi
 
 # SEE ALSO
 
-[named](/man/named)(8), [named-checkconf](/man/named-checkconf)(8), [rndc](/man/rndc)(8), [dig](/man/dig)(1)
+[named](/man/named)(8), [rndc](/man/rndc)(8), [dig](/man/dig)(1)

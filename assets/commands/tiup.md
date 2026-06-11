@@ -139,4 +139,4 @@ TiDB was created by **PingCAP** and first released in **2015**. Inspired by Goog
 
 # SEE ALSO
 
-[mysql](/man/mysql)(1), [cockroach](/man/cockroach)(1), [yugabyte](/man/yugabyte)(1)
+[mysql](/man/mysql)(1), [cockroach](/man/cockroach)(1)

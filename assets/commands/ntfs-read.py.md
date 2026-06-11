@@ -59,5 +59,5 @@ ntfs-read.py is part of **Impacket**, a collection of Python classes for working
 
 # SEE ALSO
 
-[ntfs-3g](/man/ntfs-3g)(1), [ntfsfix](/man/ntfsfix)(1), [ntfsclone](/man/ntfsclone)(1), [impacket](/man/impacket)(1), [getTGT.py](/man/getTGT.py)(1)
+[ntfs-3g](/man/ntfs-3g)(1), [ntfsfix](/man/ntfsfix)(1), [ntfsclone](/man/ntfsclone)(1), [impacket](/man/impacket)(1)
 

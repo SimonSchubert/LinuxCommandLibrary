@@ -64,5 +64,5 @@ Mixxx started in 2001 as an open-source alternative to commercial **DJ software*
 
 # SEE ALSO
 
-[audacity](/man/audacity)(1), [ardour](/man/ardour)(1), [jack](/man/jack)(1)
+[audacity](/man/audacity)(1), [ardour](/man/ardour)(1)
 

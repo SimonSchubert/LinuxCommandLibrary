@@ -91,4 +91,4 @@ Only SlurmUser (typically root) can set triggers. Programs run on slurmctld node
 
 # SEE ALSO
 
-[scontrol](/man/scontrol)(1), [slurmctld](/man/slurmctld)(8), [slurm.conf](/man/slurm.conf)(5)
+[scontrol](/man/scontrol)(1), [slurmctld](/man/slurmctld)(8)

@@ -82,4 +82,4 @@ AWStats was created by Laurent Destailleur and first released in **2000**. It be
 
 # SEE ALSO
 
-[webalizer](/man/webalizer)(1), [goaccess](/man/goaccess)(1), [analog](/man/analog)(1), [apache2](/man/apache2)(8)
+[goaccess](/man/goaccess)(1), [apache2](/man/apache2)(8)

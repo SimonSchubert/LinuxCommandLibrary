@@ -86,4 +86,4 @@ Camelot was created by **Vinayak Mehta** and released in **2019** as an open-sou
 
 # SEE ALSO
 
-[tabula](/man/tabula)(1), [pdftotext](/man/pdftotext)(1), [pdfplumber](/man/pdfplumber)(1)
+[tabula](/man/tabula)(1), [pdftotext](/man/pdftotext)(1)

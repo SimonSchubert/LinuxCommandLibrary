@@ -117,4 +117,4 @@ Not suitable for very large databases - consider physical backups. Memory usage 
 
 # SEE ALSO
 
-[mysql](/man/mysql)(1), [mysqlpump](/man/mysqlpump)(1), [mariadb-dump](/man/mariadb-dump)(1), [pg_dump](/man/pg_dump)(1)
+[mysql](/man/mysql)(1), [pg_dump](/man/pg_dump)(1)

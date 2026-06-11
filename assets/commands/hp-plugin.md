@@ -60,4 +60,4 @@ hp-plugin is part of **HPLIP** for installing proprietary components needed by c
 
 # SEE ALSO
 
-[hp-setup](/man/hp-setup)(1), [hp-check](/man/hp-check)(1), [hplip](/man/hplip)(1)
+[hp-setup](/man/hp-setup)(1), [hp-check](/man/hp-check)(1)

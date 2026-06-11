@@ -22,4 +22,3 @@ Real-time satellite tracking and orbit prediction in the terminal
 
 # SEE ALSO
 
-[gpredict](/man/gpredict)(1), [termtrack](/man/termtrack)(1), [stellarium](/man/stellarium)(1)

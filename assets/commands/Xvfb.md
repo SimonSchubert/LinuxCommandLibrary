@@ -99,4 +99,4 @@ No GPU acceleration. Some applications may behave differently without real displ
 
 # SEE ALSO
 
-[X](/man/X)(7), [Xserver](/man/Xserver)(1), [xvfb-run](/man/xvfb-run)(1), [xdpyinfo](/man/xdpyinfo)(1)
+[xvfb-run](/man/xvfb-run)(1), [xdpyinfo](/man/xdpyinfo)(1)

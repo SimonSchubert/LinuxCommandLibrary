@@ -74,5 +74,5 @@ ln is a traditional **Unix** command dating back to the original Unix system for
 
 # SEE ALSO
 
-[link](/man/link)(1), [unlink](/man/unlink)(1), [readlink](/man/readlink)(1), [symlink](/man/symlink)(7)
+[link](/man/link)(1), [unlink](/man/unlink)(1), [readlink](/man/readlink)(1)
 

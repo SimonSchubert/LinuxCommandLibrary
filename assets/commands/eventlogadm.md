@@ -63,4 +63,4 @@ eventlogadm is part of **Samba**, providing Windows event log compatibility for 
 
 # SEE ALSO
 
-[smbd](/man/smbd)(8), [nmbd](/man/nmbd)(8), [samba](/man/samba)(7)
+[samba](/man/samba)(7)

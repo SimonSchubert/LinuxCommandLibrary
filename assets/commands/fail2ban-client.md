@@ -69,4 +69,4 @@ Requires fail2ban-server to be running. Jail names are defined in configuration 
 
 # SEE ALSO
 
-[fail2ban-server](/man/fail2ban-server)(1), [iptables](/man/iptables)(8)
+[iptables](/man/iptables)(8)

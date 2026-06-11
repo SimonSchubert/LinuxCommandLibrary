@@ -73,4 +73,4 @@ Conversion fidelity depends on the underlying libraries (html-to-markdown, excel
 
 # SEE ALSO
 
-[pandoc](/man/pandoc)(1), [html2md](/man/html2md)(1), [pdftotext](/man/pdftotext)(1), [docx2txt](/man/docx2txt)(1)
+[pandoc](/man/pandoc)(1), [pdftotext](/man/pdftotext)(1)

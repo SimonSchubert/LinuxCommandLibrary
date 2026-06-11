@@ -91,4 +91,4 @@ Requires root privileges to scan all processes. Some processes may be difficult 
 
 # SEE ALSO
 
-[needrestart](/man/needrestart)(1), [lsof](/man/lsof)(8), [apt](/man/apt)(8), [needs-restarting](/man/needs-restarting)(1)
+[needrestart](/man/needrestart)(1), [lsof](/man/lsof)(8), [apt](/man/apt)(8)

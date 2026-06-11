@@ -99,4 +99,4 @@ Some X11-specific features may not work (screen capture, global hotkeys). Perfor
 
 # SEE ALSO
 
-[Xorg](/man/Xorg)(1), [Xserver](/man/Xserver)(1), [wayland](/man/wayland)(7), [sway](/man/sway)(1)
+[Xorg](/man/Xorg)(1), [sway](/man/sway)(1)

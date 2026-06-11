@@ -73,7 +73,6 @@ Install with **pip install drift-spark**. Optional extras: **[qdrant]**, **[pgve
 
 # SEE ALSO
 
-[spark-submit](/man/spark-submit)(1), [qdrant](/man/qdrant)(1)
 
 # RESOURCES
 

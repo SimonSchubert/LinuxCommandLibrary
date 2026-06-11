@@ -88,4 +88,4 @@ RAxML was developed by **Alexandros Stamatakis** for high-performance phylogenet
 
 # SEE ALSO
 
-[raxml-ng](/man/raxml-ng)(1), [iqtree](/man/iqtree)(1), [fasttree](/man/fasttree)(1), [phyml](/man/phyml)(1)
+[iqtree](/man/iqtree)(1)

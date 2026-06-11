@@ -40,5 +40,5 @@ qpdldecode is part of **splix** Samsung printer drivers.
 
 # SEE ALSO
 
-[splix](/man/splix)(1), [cups](/man/cups)(1)
+[cups](/man/cups)(1)
 

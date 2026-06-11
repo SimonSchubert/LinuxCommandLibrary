@@ -64,4 +64,4 @@ Maltego was developed by **Paterva** in South Africa, first released in **2008**
 
 # SEE ALSO
 
-[theharvester](/man/theharvester)(1), [recon-ng](/man/recon-ng)(1), [spiderfoot](/man/spiderfoot)(1), [shodan](/man/shodan)(1)
+[recon-ng](/man/recon-ng)(1)

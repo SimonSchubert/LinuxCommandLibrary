@@ -85,4 +85,4 @@ Requires valid AWS credentials with Route53 permissions. API calls may incur AWS
 
 # SEE ALSO
 
-[route53](/man/route53)(1), [aws](/man/aws)(1), [curl](/man/curl)(1), [dig](/man/dig)(1)
+[aws](/man/aws)(1), [curl](/man/curl)(1), [dig](/man/dig)(1)

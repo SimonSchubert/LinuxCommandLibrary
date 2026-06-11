@@ -57,4 +57,4 @@ Kite was an AI coding assistant company that discontinued service in **2022**. C
 
 # SEE ALSO
 
-[copilot](/man/copilot)(1), [tabnine](/man/tabnine)(1)
+[copilot](/man/copilot)(1)

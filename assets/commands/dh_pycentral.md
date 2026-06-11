@@ -49,4 +49,4 @@ dh_pycentral was part of **python-central**, developed around **2006** for Debia
 
 # SEE ALSO
 
-[dh_python3](/man/dh_python3)(1), [dh](/man/dh)(1), [python](/man/python)(1)
+[dh](/man/dh)(1), [python](/man/python)(1)

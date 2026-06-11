@@ -113,4 +113,4 @@ Initial blockchain sync takes hours to days depending on hardware and network. F
 
 # SEE ALSO
 
-[bitcoind](/man/bitcoind)(1), [bitcoin-cli](/man/bitcoin-cli)(1), [bitcoin-wallet](/man/bitcoin-wallet)(1)
+[bitcoind](/man/bitcoind)(1), [bitcoin-cli](/man/bitcoin-cli)(1)

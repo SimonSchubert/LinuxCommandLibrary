@@ -84,4 +84,4 @@ OpenDNSSEC was developed to simplify DNSSEC deployment, providing automated key 
 
 # SEE ALSO
 
-[ods-enforcer](/man/ods-enforcer)(8), [ods-signer](/man/ods-signer)(8), [opendnssec](/man/opendnssec)(7)
+[ods-enforcer](/man/ods-enforcer)(8)

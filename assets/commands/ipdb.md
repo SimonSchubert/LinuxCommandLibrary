@@ -75,4 +75,4 @@ ipdb was created as a drop-in replacement for pdb that leverages IPython's featu
 
 # SEE ALSO
 
-[pdb](/man/pdb)(1), [ipython](/man/ipython)(1), [pudb](/man/pudb)(1)
+[ipython](/man/ipython)(1), [pudb](/man/pudb)(1)

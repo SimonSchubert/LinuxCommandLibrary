@@ -141,4 +141,4 @@ The **gphoto** project was started in **1997** by **Scott Fritzinger** to give L
 
 # SEE ALSO
 
-[ffmpeg](/man/ffmpeg)(1), [v4l2-ctl](/man/v4l2-ctl)(1), [exiftool](/man/exiftool)(1), [darktable](/man/darktable)(1)
+[ffmpeg](/man/ffmpeg)(1), [v4l2-ctl](/man/v4l2-ctl)(1), [exiftool](/man/exiftool)(1)

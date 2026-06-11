@@ -67,4 +67,4 @@ Godot was created by **Juan Linietsky** and **Ariel Manzur**, open-sourced in **
 
 # SEE ALSO
 
-[unity](/man/unity)(1), [blender](/man/blender)(1)
+[blender](/man/blender)(1)

@@ -65,4 +65,4 @@ Available only in **Zsh**; Bash uses **hash -d** to remove a single entry and ha
 
 # SEE ALSO
 
-[hash](/man/hash)(1), [unalias](/man/unalias)(1), [unset](/man/unset)(1), [zsh](/man/zsh)(1), [zshbuiltins](/man/zshbuiltins)(1)
+[hash](/man/hash)(1), [unalias](/man/unalias)(1), [unset](/man/unset)(1), [zsh](/man/zsh)(1)

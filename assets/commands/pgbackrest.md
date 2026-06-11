@@ -143,4 +143,4 @@ The **stanza** name must match the value used in **archive_command** and on ever
 
 # SEE ALSO
 
-[pg_basebackup](/man/pg_basebackup)(1), [pg_dump](/man/pg_dump)(1), [postgres](/man/postgres)(1), [barman](/man/barman)(1), [wal-g](/man/wal-g)(1)
+[pg_basebackup](/man/pg_basebackup)(1), [pg_dump](/man/pg_dump)(1), [postgres](/man/postgres)(1)

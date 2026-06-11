@@ -75,5 +75,5 @@ manages multiple Java JDK installations and sets JAVA_HOME automatically
 
 # SEE ALSO
 
-[java](/man/java)(1), [sdkman](/man/sdkman)(1)
+[java](/man/java)(1)
 

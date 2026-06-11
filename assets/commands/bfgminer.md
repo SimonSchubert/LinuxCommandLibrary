@@ -115,4 +115,4 @@ BFGMiner was forked from **CGMiner** in **2012** by Luke Dashjr to focus on FPGA
 
 # SEE ALSO
 
-[cgminer](/man/cgminer)(1), [minerd](/man/minerd)(1), [xmrig](/man/xmrig)(1)
+[cgminer](/man/cgminer)(1), [xmrig](/man/xmrig)(1)

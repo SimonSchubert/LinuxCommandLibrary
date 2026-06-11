@@ -92,4 +92,4 @@ rpcbind replaces the older **portmap** from Sun RPC, providing improved security
 
 # SEE ALSO
 
-[rpcinfo](/man/rpcinfo)(8), [nfs](/man/nfs)(5), [mount.nfs](/man/mount.nfs)(8)
+[rpcinfo](/man/rpcinfo)(8)

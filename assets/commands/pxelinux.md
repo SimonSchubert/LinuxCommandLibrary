@@ -71,4 +71,4 @@ PXELINUX was developed by **H. Peter Anvin** as part of the SYSLINUX project for
 
 # SEE ALSO
 
-[syslinux](/man/syslinux)(1), [tftpd](/man/tftpd)(8), [dhcpd](/man/dhcpd)(8)
+[syslinux](/man/syslinux)(1), [dhcpd](/man/dhcpd)(8)

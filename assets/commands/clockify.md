@@ -96,4 +96,4 @@ Clockify was founded in **2017** by COING as a free time tracking solution. The 
 
 # SEE ALSO
 
-[toggl](/man/toggl)(1), [watson](/man/watson)(1), [timew](/man/timew)(1)
+[watson](/man/watson)(1), [timew](/man/timew)(1)

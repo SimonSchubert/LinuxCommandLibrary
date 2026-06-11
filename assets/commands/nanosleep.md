@@ -69,4 +69,4 @@ nanosleep was introduced in **POSIX.1-2001** to provide high-resolution sleep fu
 
 # SEE ALSO
 
-[sleep](/man/sleep)(3), [usleep](/man/usleep)(3), [clock_nanosleep](/man/clock_nanosleep)(2), [select](/man/select)(2)
+[sleep](/man/sleep)(3), [usleep](/man/usleep)(3)

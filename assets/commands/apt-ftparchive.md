@@ -69,4 +69,4 @@ Release files should be signed with gpg for secure repositories. Large repositor
 
 # SEE ALSO
 
-[apt](/man/apt)(8), [reprepro](/man/reprepro)(1), [dpkg-scanpackages](/man/dpkg-scanpackages)(1)
+[apt](/man/apt)(8)

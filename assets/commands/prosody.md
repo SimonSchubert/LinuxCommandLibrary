@@ -104,4 +104,3 @@ Prosody was created by **Matthew Wild** starting in 2008 as a modern, lightweigh
 
 # SEE ALSO
 
-[ejabberd](/man/ejabberd)(1), [openfire](/man/openfire)(1), [xmpp](/man/xmpp)(7)

@@ -78,4 +78,4 @@ Quagga is largely superseded by FRRouting (FRR). Default VTY password should be 
 
 # SEE ALSO
 
-[ospfd](/man/ospfd)(8), [bgpd](/man/bgpd)(8), [ripd](/man/ripd)(8), [vtysh](/man/vtysh)(1), [frr](/man/frr)(8)
+[ospfd](/man/ospfd)(8), [bgpd](/man/bgpd)(8), [ripd](/man/ripd)(8), [vtysh](/man/vtysh)(1)

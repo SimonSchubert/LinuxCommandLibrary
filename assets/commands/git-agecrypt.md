@@ -133,4 +133,4 @@ Both **git-crypt** and **git-agecrypt** rely on Git filters, which means **git l
 
 # SEE ALSO
 
-[git-crypt](/man/git-crypt)(1), [age](/man/age)(1), [agebox](/man/agebox)(1), [sops](/man/sops)(1), [git](/man/git)(1)
+[git-crypt](/man/git-crypt)(1), [age](/man/age)(1), [sops](/man/sops)(1), [git](/man/git)(1)

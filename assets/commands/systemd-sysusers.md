@@ -65,4 +65,4 @@ Configuration files use a declarative format defining users and groups. Users cr
 
 # SEE ALSO
 
-[sysusers.d](/man/sysusers.d)(5), [systemd-tmpfiles](/man/systemd-tmpfiles)(8), [useradd](/man/useradd)(8)
+[systemd-tmpfiles](/man/systemd-tmpfiles)(8), [useradd](/man/useradd)(8)

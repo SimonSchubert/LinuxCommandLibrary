@@ -100,4 +100,4 @@ The -b flag exposes passwords in process listings. Basic authentication sends cr
 
 # SEE ALSO
 
-[apache2](/man/apache2)(8), [nginx](/man/nginx)(8), [openssl](/man/openssl)(1), [htdigest](/man/htdigest)(1)
+[apache2](/man/apache2)(8), [nginx](/man/nginx)(8), [openssl](/man/openssl)(1)

@@ -75,5 +75,5 @@ mysqld is the **MySQL** database server, originally developed by MySQL AB and no
 
 # SEE ALSO
 
-[mysql](/man/mysql)(1), [mysqladmin](/man/mysqladmin)(1), [mysqld_safe](/man/mysqld_safe)(1)
+[mysql](/man/mysql)(1), [mysqladmin](/man/mysqladmin)(1)
 

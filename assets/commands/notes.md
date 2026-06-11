@@ -88,4 +88,4 @@ Various command-line note tools exist; implementations include those by **Nick N
 
 # SEE ALSO
 
-[nb](/man/nb)(1), [jrnl](/man/jrnl)(1), [zk](/man/zk)(1), [vim](/man/vim)(1)
+[nb](/man/nb)(1), [jrnl](/man/jrnl)(1), [vim](/man/vim)(1)

@@ -47,4 +47,4 @@ grub-mklayout was developed as part of **GNU GRUB 2** to support international k
 
 # SEE ALSO
 
-[grub](/man/grub)(8), [ckbcomp](/man/ckbcomp)(1), [loadkeys](/man/loadkeys)(1)
+[grub](/man/grub)(8), [loadkeys](/man/loadkeys)(1)

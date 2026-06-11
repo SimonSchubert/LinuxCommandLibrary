@@ -113,4 +113,4 @@ VM must be shut down. Don't run as root unless necessary. Snapshot disk before m
 
 # SEE ALSO
 
-[virt-sysprep](/man/virt-sysprep)(1), [virt-builder](/man/virt-builder)(1), [guestfish](/man/guestfish)(1), [guestmount](/man/guestmount)(1)
+[virt-sysprep](/man/virt-sysprep)(1)

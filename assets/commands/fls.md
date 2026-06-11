@@ -75,4 +75,4 @@ fls is part of **The Sleuth Kit** created by Brian Carrier. It evolved from earl
 
 # SEE ALSO
 
-[ils](/man/ils)(1), [icat](/man/icat)(1), [mmls](/man/mmls)(1)
+[ils](/man/ils)(1), [mmls](/man/mmls)(1)

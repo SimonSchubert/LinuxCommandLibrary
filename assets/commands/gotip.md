@@ -55,4 +55,4 @@ Development versions may be unstable. Not recommended for production use. Requir
 
 # SEE ALSO
 
-[go](/man/go)(1), [dl.golang.org](https://dl.golang.org/), [go.dev](https://go.dev/)
+[go](/man/go)(1)

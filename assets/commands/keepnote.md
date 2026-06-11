@@ -50,4 +50,4 @@ KeepNote was created by **Matt Rasmussen** as an open-source note-taking applica
 
 # SEE ALSO
 
-[joplin](/man/joplin)(1), [zim](/man/zim)(1), [cherrytree](/man/cherrytree)(1)
+[joplin](/man/joplin)(1)

@@ -89,4 +89,4 @@ realsr-ncnn-vulkan is based on **Real-ESRGAN** research, ported to ncnn by **nih
 
 # SEE ALSO
 
-[waifu2x-ncnn-vulkan](/man/waifu2x-ncnn-vulkan)(1), [esrgan](/man/esrgan)(1), [imagemagick](/man/imagemagick)(1)
+[waifu2x-ncnn-vulkan](/man/waifu2x-ncnn-vulkan)(1), [imagemagick](/man/imagemagick)(1)

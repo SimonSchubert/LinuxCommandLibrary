@@ -67,4 +67,4 @@ ionice was introduced as part of util-linux to provide user control over the CFQ
 
 # SEE ALSO
 
-[nice](/man/nice)(1), [renice](/man/renice)(1), [schedtool](/man/schedtool)(8)
+[nice](/man/nice)(1), [renice](/man/renice)(1)

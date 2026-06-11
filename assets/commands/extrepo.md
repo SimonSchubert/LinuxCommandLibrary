@@ -60,4 +60,4 @@ Requires root privileges for enable/disable operations. Only repositories vetted
 
 # SEE ALSO
 
-[apt](/man/apt)(8), [add-apt-repository](/man/add-apt-repository)(1), [sources.list](/man/sources.list)(5)
+[apt](/man/apt)(8), [add-apt-repository](/man/add-apt-repository)(1)

@@ -105,4 +105,4 @@ Rankings depend on third-party benchmarks; new models appear before their scores
 
 # SEE ALSO
 
-[ollama](/man/ollama)(1), [llama-cli](/man/llama-cli)(1), [llm](/man/llm)(1), [huggingface-cli](/man/huggingface-cli)(1)
+[ollama](/man/ollama)(1), [llm](/man/llm)(1), [huggingface-cli](/man/huggingface-cli)(1)

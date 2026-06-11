@@ -37,4 +37,3 @@ Images must be PNG format. Configuration file format is specific. Without --pref
 
 # SEE ALSO
 
-[Xcursor](/man/Xcursor)(3)

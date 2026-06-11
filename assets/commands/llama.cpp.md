@@ -82,4 +82,4 @@ llama.cpp was created by **Georgi Gerganov** in March **2023** after Meta releas
 
 # SEE ALSO
 
-[llamafile](/man/llamafile)(1), [ollama](/man/ollama)(1), [ggml](/man/ggml)(1)
+[llamafile](/man/llamafile)(1), [ollama](/man/ollama)(1)

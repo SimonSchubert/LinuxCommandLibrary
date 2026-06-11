@@ -123,4 +123,4 @@ Display numbers start at 0 (port 5900). Double-colon specifies raw port number. 
 
 # SEE ALSO
 
-[vncserver](/man/vncserver)(1), [Xvnc](/man/Xvnc)(1), [x11vnc](/man/x11vnc)(1), [ssh](/man/ssh)(1)
+[vncserver](/man/vncserver)(1), [x11vnc](/man/x11vnc)(1), [ssh](/man/ssh)(1)

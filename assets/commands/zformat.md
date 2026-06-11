@@ -88,4 +88,4 @@ Ternary expressions can be nested and the delimiter character after the specifie
 
 # SEE ALSO
 
-[zsh](/man/zsh)(1), [zstyle](/man/zstyle)(1), [zmodload](/man/zmodload)(1), [zparseopts](/man/zparseopts)(1)
+[zsh](/man/zsh)(1), [zstyle](/man/zstyle)(1)

@@ -91,4 +91,4 @@ Users require CAP_SYS_NICE capability to modify scheduling attributes. SCHED_BAT
 
 # SEE ALSO
 
-[nice](/man/nice)(1), [renice](/man/renice)(1), [taskset](/man/taskset)(1), [sched](/man/sched)(7)
+[nice](/man/nice)(1), [renice](/man/renice)(1), [taskset](/man/taskset)(1)

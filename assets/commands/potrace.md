@@ -90,4 +90,4 @@ potrace was written by **Peter Selinger** as an improved alternative to autotrac
 
 # SEE ALSO
 
-[inkscape](/man/inkscape)(1), [convert](/man/convert)(1), [autotrace](/man/autotrace)(1)
+[inkscape](/man/inkscape)(1), [convert](/man/convert)(1)

@@ -140,4 +140,3 @@ RAUC was created by **Jan Lübbe** and **Enrico Jörns** at **Pengutronix** and 
 
 # SEE ALSO
 
-[mkfs.squashfs](/man/mkfs.squashfs)(1), [casync](/man/casync)(1), [swupdate](/man/swupdate)(1), [mender](/man/mender)(1), [fwupd](/man/fwupd)(1)

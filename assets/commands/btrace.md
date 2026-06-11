@@ -80,4 +80,4 @@ Target JVM must have similar or compatible Java version. Some operations are res
 
 # SEE ALSO
 
-[jstack](/man/jstack)(1), [jmap](/man/jmap)(1), [java](/man/java)(1), [async-profiler](/man/async-profiler)(1)
+[jstack](/man/jstack)(1), [jmap](/man/jmap)(1), [java](/man/java)(1)

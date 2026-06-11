@@ -129,4 +129,4 @@ CGMiner was created by **Con Kolivas** (ckolivas) and first released in **2011**
 
 # SEE ALSO
 
-[bfgminer](/man/bfgminer)(1), [minerd](/man/minerd)(1), [xmrig](/man/xmrig)(1)
+[bfgminer](/man/bfgminer)(1), [xmrig](/man/xmrig)(1)

@@ -74,4 +74,4 @@ Requires a test runner to be configured. Karma is the default but alternatives l
 
 # SEE ALSO
 
-[ng](/man/ng)(1), [ng-e2e](/man/ng-e2e)(1), [karma](/man/karma)(1), [jest](/man/jest)(1)
+[ng](/man/ng)(1), [ng-e2e](/man/ng-e2e)(1), [jest](/man/jest)(1)

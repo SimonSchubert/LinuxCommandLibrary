@@ -57,4 +57,4 @@ gresource was developed as part of **GLib** by the **GNOME** project to provide 
 
 # SEE ALSO
 
-[glib-compile-resources](/man/glib-compile-resources)(1), [gtk-builder](/man/gtk-builder)(1)
+[glib-compile-resources](/man/glib-compile-resources)(1)

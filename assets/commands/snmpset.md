@@ -110,4 +110,4 @@ Modifying SNMP values can affect device operation and network stability. Ensure 
 
 # SEE ALSO
 
-[snmpget](/man/snmpget)(1), [snmpwalk](/man/snmpwalk)(1), [snmptranslate](/man/snmptranslate)(1), [snmpd](/man/snmpd)(8)
+[snmpget](/man/snmpget)(1), [snmpwalk](/man/snmpwalk)(1), [snmptranslate](/man/snmptranslate)(1)

@@ -84,4 +84,4 @@ pwqcheck is part of **passwdqc** by **Solar Designer**, providing proactive pass
 
 # SEE ALSO
 
-[pwqgen](/man/pwqgen)(1), [passwd](/man/passwd)(1), [pam_passwdqc](/man/pam_passwdqc)(8)
+[pwqgen](/man/pwqgen)(1), [passwd](/man/passwd)(1)

@@ -74,4 +74,4 @@ jp2a was created to convert JPEG images to ASCII art for terminal display and te
 
 # SEE ALSO
 
-[img2txt](/man/img2txt)(1), [aalib](/man/aalib)(3), [cacaview](/man/cacaview)(1)
+[img2txt](/man/img2txt)(1), [cacaview](/man/cacaview)(1)

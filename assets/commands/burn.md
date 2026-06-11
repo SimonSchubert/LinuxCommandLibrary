@@ -100,4 +100,4 @@ Requires a working **cdrecord** or **wodim** plus **mkisofs**/**genisoimage** in
 
 # SEE ALSO
 
-[wodim](/man/wodim)(1), [cdrecord](/man/cdrecord)(1), [growisofs](/man/growisofs)(1), [genisoimage](/man/genisoimage)(1), [xorriso](/man/xorriso)(1)
+[wodim](/man/wodim)(1), [cdrecord](/man/cdrecord)(1), [growisofs](/man/growisofs)(1), [genisoimage](/man/genisoimage)(1)

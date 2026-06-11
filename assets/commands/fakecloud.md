@@ -92,4 +92,4 @@ fakecloud covers the common AWS services but is not bit-for-bit identical with p
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [localstack](/man/localstack)(1), [moto](/man/moto)(1), [terraform](/man/terraform)(1)
+[aws](/man/aws)(1), [terraform](/man/terraform)(1)

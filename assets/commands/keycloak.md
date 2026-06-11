@@ -125,4 +125,4 @@ Keycloak was created by **Red Hat** and first released in **September 2014**. It
 
 # SEE ALSO
 
-[authentik](/man/authentik)(1), [authelia](/man/authelia)(1), [vault](/man/vault)(1)
+[authelia](/man/authelia)(1), [vault](/man/vault)(1)

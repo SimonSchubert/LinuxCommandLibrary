@@ -87,4 +87,4 @@ GSettings was introduced in GLib 2.26 (**2010**) as a replacement for GConf. It 
 
 # SEE ALSO
 
-[dconf](/man/dconf)(1), [gconf](/man/gconf)(1)
+[dconf](/man/dconf)(1)

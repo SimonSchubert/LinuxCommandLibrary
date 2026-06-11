@@ -36,4 +36,4 @@ Requires Spotify API credentials for music data. Image display depends on termin
 
 # SEE ALSO
 
-[neofetch](/man/neofetch)(1), [spotify-tui](/man/spotify-tui)(1)
+[neofetch](/man/neofetch)(1)

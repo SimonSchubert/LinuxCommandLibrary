@@ -115,4 +115,4 @@ Core dumps may contain sensitive data. Ensure proper permissions on extracted fi
 
 # SEE ALSO
 
-[systemd-coredump](/man/systemd-coredump)(8), [gdb](/man/gdb)(1), [journalctl](/man/journalctl)(1), [coredump.conf](/man/coredump.conf)(5)
+[gdb](/man/gdb)(1), [journalctl](/man/journalctl)(1)

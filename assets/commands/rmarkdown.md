@@ -89,4 +89,4 @@ R Markdown was developed by **RStudio** (now Posit) building on knitr by **Yihui
 
 # SEE ALSO
 
-[Rscript](/man/Rscript)(1), [pandoc](/man/pandoc)(1), [quarto](/man/quarto)(1)
+[pandoc](/man/pandoc)(1), [quarto](/man/quarto)(1)

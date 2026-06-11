@@ -84,4 +84,4 @@ dotnet tool was introduced in **.NET Core 2.1** (**2018**) to provide extensibil
 
 # SEE ALSO
 
-[dotnet](/man/dotnet)(1), [dotnet-ef](/man/dotnet-ef)(1), [nuget](/man/nuget)(1)
+[dotnet](/man/dotnet)(1), [dotnet-ef](/man/dotnet-ef)(1)

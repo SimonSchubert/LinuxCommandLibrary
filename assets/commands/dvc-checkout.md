@@ -59,4 +59,4 @@ dvc checkout is part of **DVC**, providing Git-like checkout semantics for versi
 
 # SEE ALSO
 
-[dvc](/man/dvc)(1), [dvc-pull](/man/dvc-pull)(1), [git-checkout](/man/git-checkout)(1)
+[dvc](/man/dvc)(1), [git-checkout](/man/git-checkout)(1)

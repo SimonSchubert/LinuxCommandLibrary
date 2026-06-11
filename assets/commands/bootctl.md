@@ -118,4 +118,4 @@ Requires an EFI system partition. The default ESP paths checked are /efi/, /boot
 
 # SEE ALSO
 
-[systemd-boot](/man/systemd-boot)(7), [kernel-install](/man/kernel-install)(8), [loader.conf](/man/loader.conf)(5)
+[kernel-install](/man/kernel-install)(8)

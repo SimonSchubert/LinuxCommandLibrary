@@ -85,4 +85,4 @@ Requires scsynth audio server for audio synthesis. The SuperCollider IDE provide
 
 # SEE ALSO
 
-[scsynth](/man/scsynth)(1), [jack](/man/jack)(1), [csound](/man/csound)(1), [puredata](/man/puredata)(1)
+[csound](/man/csound)(1)

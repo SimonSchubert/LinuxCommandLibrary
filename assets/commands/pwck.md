@@ -57,5 +57,5 @@ pwck is a **shadow-utils** utility for password file verification.
 
 # SEE ALSO
 
-[grpck](/man/grpck)(8), [passwd](/man/passwd)(1), [shadow](/man/shadow)(5)
+[grpck](/man/grpck)(8), [passwd](/man/passwd)(1)
 

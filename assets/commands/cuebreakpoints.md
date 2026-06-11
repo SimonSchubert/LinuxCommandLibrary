@@ -67,4 +67,4 @@ cuebreakpoints is part of **cuetools**, a set of utilities for working with CUE 
 
 # SEE ALSO
 
-[cuetag](/man/cuetag)(1), [cueprint](/man/cueprint)(1), [shnsplit](/man/shnsplit)(1), [flac](/man/flac)(1)
+[cuetag](/man/cuetag)(1), [shnsplit](/man/shnsplit)(1), [flac](/man/flac)(1)

@@ -62,4 +62,4 @@ Repacking is useful after many small commits or after importing objects. The `-a
 
 # SEE ALSO
 
-[git-gc](/man/git-gc)(1), [git-prune-packed](/man/git-prune-packed)(1)
+[git-gc](/man/git-gc)(1)

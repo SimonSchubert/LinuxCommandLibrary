@@ -119,4 +119,4 @@ Always compare the 6-digit code on **both** machines before confirming a pair â€
 
 # SEE ALSO
 
-[ssh](/man/ssh)(1), [mosh](/man/mosh)(1), [magic-wormhole](/man/magic-wormhole)(1)
+[ssh](/man/ssh)(1), [mosh](/man/mosh)(1)

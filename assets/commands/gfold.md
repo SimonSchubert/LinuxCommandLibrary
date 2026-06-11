@@ -68,4 +68,4 @@ Large directory trees may take time to scan. Requires read access to repository 
 
 # SEE ALSO
 
-[git](/man/git)(1), [ghq](/man/ghq)(1), [myrepos](https://myrepos.branchable.com/)
+[git](/man/git)(1), [ghq](/man/ghq)(1)

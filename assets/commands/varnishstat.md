@@ -95,4 +95,4 @@ Requires access to Varnish shared memory. Statistics reset on Varnish restart. F
 
 # SEE ALSO
 
-[varnishd](/man/varnishd)(1), [varnishhist](/man/varnishhist)(1), [varnishlog](/man/varnishlog)(1), [varnishtop](/man/varnishtop)(1)
+[varnishd](/man/varnishd)(1), [varnishhist](/man/varnishhist)(1), [varnishlog](/man/varnishlog)(1)

@@ -67,4 +67,4 @@ gdbserver is part of **GDB** (GNU Debugger), enabling remote debugging scenarios
 
 # SEE ALSO
 
-[gdb](/man/gdb)(1), [gdbinit](/man/gdbinit)(5)
+[gdb](/man/gdb)(1)

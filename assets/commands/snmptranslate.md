@@ -89,4 +89,4 @@ Translation accuracy depends on having the correct MIBs installed and loaded. Ve
 
 # SEE ALSO
 
-[snmpget](/man/snmpget)(1), [snmpset](/man/snmpset)(1), [snmpwalk](/man/snmpwalk)(1), [snmpd](/man/snmpd)(8)
+[snmpget](/man/snmpget)(1), [snmpset](/man/snmpset)(1), [snmpwalk](/man/snmpwalk)(1)

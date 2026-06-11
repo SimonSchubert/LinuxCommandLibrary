@@ -98,4 +98,4 @@ Puma was created by **Evan Phoenix** in 2011 as a replacement for Mongrel, focus
 
 # SEE ALSO
 
-[unicorn](/man/unicorn)(1), [passenger](/man/passenger)(1), [rails](/man/rails)(1), [rack](/man/rack)(1)
+[rails](/man/rails)(1)

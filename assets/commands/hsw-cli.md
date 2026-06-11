@@ -73,4 +73,4 @@ hsw-cli is the wallet-specific CLI for **Handshake**, complementing the hsd-cli 
 
 # SEE ALSO
 
-[hsd-cli](/man/hsd-cli)(1), [hsd](/man/hsd)(1)
+[hsd-cli](/man/hsd-cli)(1)

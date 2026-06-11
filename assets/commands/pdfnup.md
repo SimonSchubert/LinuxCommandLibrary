@@ -69,4 +69,4 @@ pdfnup is part of **pdfjam** by **David Firth**, providing n-up functionality th
 
 # SEE ALSO
 
-[pdfjam](/man/pdfjam)(1), [pdfbook](/man/pdfbook)(1), [psnup](/man/psnup)(1)
+[pdfjam](/man/pdfjam)(1), [pdfbook](/man/pdfbook)(1)

@@ -62,4 +62,4 @@ Never run ldd on untrusted executables as it may execute arbitrary code. For unt
 
 # SEE ALSO
 
-[ld.so](/man/ld.so)(8), [ldconfig](/man/ldconfig)(8), [objdump](/man/objdump)(1), [pldd](/man/pldd)(1)
+[ld.so](/man/ld.so)(8), [ldconfig](/man/ldconfig)(8), [objdump](/man/objdump)(1)

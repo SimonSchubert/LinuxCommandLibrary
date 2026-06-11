@@ -30,4 +30,4 @@ Tracer for execve syscalls and pre-exec behavior
 
 # SEE ALSO
 
-[strace](/man/strace)(1), [ltrace](/man/ltrace)(1), [execsnoop](/man/execsnoop)(1)
+[strace](/man/strace)(1), [ltrace](/man/ltrace)(1)

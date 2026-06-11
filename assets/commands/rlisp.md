@@ -90,4 +90,4 @@ RLISP was developed in the early **1970s** at the **University of Utah** (Anthon
 
 # SEE ALSO
 
-[reduce](/man/reduce)(1), [csl](/man/csl)(1), [psl](/man/psl)(1), [maxima](/man/maxima)(1)
+[maxima](/man/maxima)(1)

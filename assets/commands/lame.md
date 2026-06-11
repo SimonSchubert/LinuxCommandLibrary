@@ -77,4 +77,4 @@ LAME (Lame Ain't an MP3 Encoder) was started in 1998 and became the leading open
 
 # SEE ALSO
 
-[ffmpeg](/man/ffmpeg)(1), [sox](/man/sox)(1), [oggenc](/man/oggenc)(1)
+[ffmpeg](/man/ffmpeg)(1), [sox](/man/sox)(1)

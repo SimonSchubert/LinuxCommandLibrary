@@ -85,4 +85,4 @@ Requires binary trace data from blkparse -d, not raw blktrace files. Large trace
 
 # SEE ALSO
 
-[blktrace](/man/blktrace)(8), [blkparse](/man/blkparse)(1), [iowatcher](/man/iowatcher)(1), [iostat](/man/iostat)(1)
+[blktrace](/man/blktrace)(8), [blkparse](/man/blkparse)(1), [iostat](/man/iostat)(1)

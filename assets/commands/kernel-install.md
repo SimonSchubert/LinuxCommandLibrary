@@ -47,4 +47,4 @@ kernel-install is part of systemd, providing a standardized way to manage kernel
 
 # SEE ALSO
 
-[bootctl](/man/bootctl)(1), [systemd-boot](/man/systemd-boot)(7), [dracut](/man/dracut)(8)
+[bootctl](/man/bootctl)(1), [dracut](/man/dracut)(8)

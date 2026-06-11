@@ -119,4 +119,4 @@ Requires running winbindd daemon. Authentication via -a is for testing only; use
 
 # SEE ALSO
 
-[winbindd](/man/winbindd)(8), [samba](/man/samba)(7), [net](/man/net)(8), [ntlm_auth](/man/ntlm_auth)(1)
+[samba](/man/samba)(7), [net](/man/net)(8)

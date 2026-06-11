@@ -123,4 +123,4 @@ NATS was created by **Derek Collison** and first released in **2010** as a Ruby 
 
 # SEE ALSO
 
-[rabbitmqctl](/man/rabbitmqctl)(1), [kafka-console-producer](/man/kafka-console-producer)(1), [mosquitto_pub](/man/mosquitto_pub)(1)
+[rabbitmqctl](/man/rabbitmqctl)(1), [mosquitto_pub](/man/mosquitto_pub)(1)

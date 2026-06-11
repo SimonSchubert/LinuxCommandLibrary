@@ -45,5 +45,5 @@ Rules can be added, listed, and removed to adapt to changing infrastructure requ
 
 # SEE ALSO
 
-[doctl-databases](/man/doctl-databases)(1), [doctl-compute-firewall](/man/doctl-compute-firewall)(1)
+[doctl-databases](/man/doctl-databases)(1)
 

@@ -92,4 +92,4 @@ Incremental stream requires base snapshot at destination. Force (-F) destroys in
 
 # SEE ALSO
 
-[zfs-send](/man/zfs-send)(8), [zfs-snapshot](/man/zfs-snapshot)(8), [zfs](/man/zfs)(8), [zpool](/man/zpool)(8)
+[zfs-send](/man/zfs-send)(8), [zfs](/man/zfs)(8), [zpool](/man/zpool)(8)

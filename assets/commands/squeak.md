@@ -87,4 +87,4 @@ On 64-bit Linux systems, running 32-bit Squeak images requires 32-bit compatibil
 
 # SEE ALSO
 
-[pharo](/man/pharo)(1), [gst](/man/gst)(1), [smalltalkci](/man/smalltalkci)(1)
+[pharo](/man/pharo)(1), [smalltalkci](/man/smalltalkci)(1)

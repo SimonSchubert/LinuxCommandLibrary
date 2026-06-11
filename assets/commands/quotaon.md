@@ -98,4 +98,4 @@ Disk quotas originated in **BSD Unix** and were adopted by Linux for managing di
 
 # SEE ALSO
 
-[quotaoff](/man/quotaoff)(8), [quotacheck](/man/quotacheck)(8), [edquota](/man/edquota)(8), [repquota](/man/repquota)(8)
+[quotacheck](/man/quotacheck)(8), [edquota](/man/edquota)(8), [repquota](/man/repquota)(8)

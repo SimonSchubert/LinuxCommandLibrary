@@ -79,4 +79,4 @@ cs resolve is part of Coursier's dependency management capabilities. Resolution 
 
 # SEE ALSO
 
-[cs](/man/cs)(1), [cs-fetch](/man/cs-fetch)(1), [mvn](/man/mvn)(1), [gradle](/man/gradle)(1)
+[cs](/man/cs)(1), [mvn](/man/mvn)(1), [gradle](/man/gradle)(1)

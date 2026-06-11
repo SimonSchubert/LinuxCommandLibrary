@@ -72,4 +72,4 @@ perldiag is part of **Perl** core documentation by **Larry Wall** and the Perl c
 
 # SEE ALSO
 
-[perl](/man/perl)(1), [perlre](/man/perlre)(1), [splain](/man/splain)(1), [perldoc](/man/perldoc)(1)
+[perl](/man/perl)(1), [perlre](/man/perlre)(1), [perldoc](/man/perldoc)(1)

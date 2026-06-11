@@ -92,4 +92,4 @@ Apache Avro was created by **Doug Cutting** (also creator of Hadoop and Lucene) 
 
 # SEE ALSO
 
-[parquet-tools](/man/parquet-tools)(1), [kafka-avro-console-consumer](/man/kafka-avro-console-consumer)(1)
+[parquet-tools](/man/parquet-tools)(1)

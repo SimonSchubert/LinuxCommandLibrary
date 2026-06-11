@@ -62,4 +62,3 @@ GetUserSPNs.py is part of **Impacket**, implementing the Kerberoasting attack te
 
 # SEE ALSO
 
-[GetNPUsers.py](/man/GetNPUsers.py)(1), [getTGT.py](/man/getTGT.py)(1)

@@ -68,4 +68,4 @@ pppoe-stop is part of **rp-pppoe** (Roaring Penguin PPPoE) by **David F. Skoll**
 
 # SEE ALSO
 
-[pppoe-start](/man/pppoe-start)(8), [pppoe-status](/man/pppoe-status)(8), [pppd](/man/pppd)(8), [pppoe](/man/pppoe)(8)
+[pppd](/man/pppd)(8), [pppoe](/man/pppoe)(8)

@@ -53,4 +53,4 @@ BIN files must match the layout described in the CUE sheet exactly. Multi-sessio
 
 # SEE ALSO
 
-[cdrdao](/man/cdrdao)(1), [cue2toc](/man/cue2toc)(1), [wodim](/man/wodim)(1)
+[cdrdao](/man/cdrdao)(1), [wodim](/man/wodim)(1)

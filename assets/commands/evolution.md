@@ -76,4 +76,4 @@ Evolution was originally developed by **Ximian** starting in **1999**, acquired 
 
 # SEE ALSO
 
-[thunderbird](/man/thunderbird)(1), [gnome-contacts](/man/gnome-contacts)(1), [gnome-calendar](/man/gnome-calendar)(1)
+[thunderbird](/man/thunderbird)(1)

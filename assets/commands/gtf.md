@@ -60,4 +60,4 @@ gtf was developed for **XFree86/X.Org** to generate VESA GTF compliant modelines
 
 # SEE ALSO
 
-[cvt](/man/cvt)(1), [xrandr](/man/xrandr)(1), [xorg.conf](/man/xorg.conf)(5)
+[cvt](/man/cvt)(1), [xrandr](/man/xrandr)(1)

@@ -66,4 +66,4 @@ FontForge (originally PfaEdit) was created by **George Williams** starting in 20
 
 # SEE ALSO
 
-[fc-query](/man/fc-query)(1), [ttx](/man/ttx)(1), [otfinfo](/man/otfinfo)(1)
+[fc-query](/man/fc-query)(1)

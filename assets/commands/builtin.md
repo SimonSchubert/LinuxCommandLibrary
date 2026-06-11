@@ -74,4 +74,4 @@ Only works with shell built-in commands. No effect on external commands. Behavio
 
 # SEE ALSO
 
-[command](/man/command)(1), [type](/man/type)(1), [enable](/man/enable)(1)
+[command](/man/command)(1), [type](/man/type)(1)

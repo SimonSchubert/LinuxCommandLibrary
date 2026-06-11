@@ -117,4 +117,4 @@ CRLs are defined in X.509 standard as part of PKI infrastructure, implemented in
 
 # SEE ALSO
 
-[openssl-ca](/man/openssl-ca)(1), [openssl-verify](/man/openssl-verify)(1), [openssl-ocsp](/man/openssl-ocsp)(1)
+[openssl-ca](/man/openssl-ca)(1), [openssl-verify](/man/openssl-verify)(1)

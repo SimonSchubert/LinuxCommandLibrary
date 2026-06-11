@@ -30,4 +30,4 @@ Colorful and customizable TUI clock
 
 # SEE ALSO
 
-[tock](/man/tock)(1), [tty-clock](/man/tty-clock)(1), [peaclock](/man/peaclock)(1)
+[tock](/man/tock)(1), [tty-clock](/man/tty-clock)(1)

@@ -73,4 +73,3 @@ Blaise is a young, actively-developed compiler — language and compiler flags c
 
 # SEE ALSO
 
-[fpc](/man/fpc)(1), [lazbuild](/man/lazbuild)(1), [delphi](/man/delphi)(1), [qbe](/man/qbe)(1)

@@ -63,4 +63,4 @@ kexec was developed to enable fast reboots and kernel crash dumping. It was merg
 
 # SEE ALSO
 
-[kdump](/man/kdump)(8), [systemctl](/man/systemctl)(1), [reboot](/man/reboot)(8)
+[systemctl](/man/systemctl)(1), [reboot](/man/reboot)(8)

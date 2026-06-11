@@ -67,4 +67,4 @@ Only works within loops (for, while, until). Breaking more levels than exist exi
 
 # SEE ALSO
 
-[continue](/man/continue)(1), [return](/man/return)(1), [exit](/man/exit)(1)
+[continue](/man/continue)(1), [exit](/man/exit)(1)

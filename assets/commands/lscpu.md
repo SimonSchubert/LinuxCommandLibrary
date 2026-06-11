@@ -75,4 +75,4 @@ Part of **util-linux** package. Provides a convenient way to view CPU informatio
 
 # SEE ALSO
 
-[cpuinfo](/man/cpuinfo)(5), [dmidecode](/man/dmidecode)(8), [nproc](/man/nproc)(1)
+[dmidecode](/man/dmidecode)(8), [nproc](/man/nproc)(1)

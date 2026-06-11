@@ -60,4 +60,4 @@ Requires **ffmpeg** and **ffprobe** to be installed and discoverable in **PATH**
 
 # SEE ALSO
 
-[ffmpeg](/man/ffmpeg)(1), [ffprobe](/man/ffprobe)(1), [HandBrakeCLI](/man/HandBrakeCLI)(1)
+[ffmpeg](/man/ffmpeg)(1), [ffprobe](/man/ffprobe)(1)

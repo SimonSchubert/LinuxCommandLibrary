@@ -64,5 +64,5 @@ MAKEDEV was the traditional way to create device files before **udev** automated
 
 # SEE ALSO
 
-[mknod](/man/mknod)(1), [udev](/man/udev)(7), [udevadm](/man/udevadm)(8)
+[mknod](/man/mknod)(1), [udevadm](/man/udevadm)(8)
 

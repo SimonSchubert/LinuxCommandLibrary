@@ -20,4 +20,4 @@ This is a low-level plumbing command used for debugging and inspecting Git's int
 
 # SEE ALSO
 
-[git-verify-pack](/man/git-verify-pack)(1), [git-index-pack](/man/git-index-pack)(1)
+[git-verify-pack](/man/git-verify-pack)(1)

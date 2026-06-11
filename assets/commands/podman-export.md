@@ -67,4 +67,4 @@ podman export is part of **Podman**, providing Docker-compatible container expor
 
 # SEE ALSO
 
-[podman-import](/man/podman-import)(1), [podman-save](/man/podman-save)(1), [podman-commit](/man/podman-commit)(1), [podman-ps](/man/podman-ps)(1)
+[podman-import](/man/podman-import)(1), [podman-save](/man/podman-save)(1), [podman-ps](/man/podman-ps)(1)

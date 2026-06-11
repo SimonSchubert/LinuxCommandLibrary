@@ -54,4 +54,4 @@ grap2graph was developed as part of the **GNU groff** project to facilitate grap
 
 # SEE ALSO
 
-[grap](/man/grap)(1), [groff](/man/groff)(1), [pic2graph](/man/pic2graph)(1)
+[grap](/man/grap)(1), [groff](/man/groff)(1)

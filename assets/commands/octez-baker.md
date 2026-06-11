@@ -63,4 +63,4 @@ The Tezos baker is part of the **Tezos** blockchain developed by **Arthur and Ka
 
 # SEE ALSO
 
-[octez-node](/man/octez-node)(1), [octez-client](/man/octez-client)(1), [octez-accuser](/man/octez-accuser)(1)
+[octez-node](/man/octez-node)(1), [octez-client](/man/octez-client)(1)

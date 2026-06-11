@@ -44,5 +44,5 @@ Create a new Vagrantfile configuration
 
 # SEE ALSO
 
-[vagrant](/man/vagrant)(1), [vagrant-up](/man/vagrant-up)(1), [vagrant-box](/man/vagrant-box)(1)
+[vagrant](/man/vagrant)(1), [vagrant-box](/man/vagrant-box)(1)
 

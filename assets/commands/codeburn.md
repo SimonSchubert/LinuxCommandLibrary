@@ -139,4 +139,4 @@ Requires **Node.js 20+** and that you have actually used one of the supported to
 
 # SEE ALSO
 
-[ccusage](/man/ccusage)(1), [claude](/man/claude)(1), [codex](/man/codex)(1)
+[claude](/man/claude)(1), [codex](/man/codex)(1)

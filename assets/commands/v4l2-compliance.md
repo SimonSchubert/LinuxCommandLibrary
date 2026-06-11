@@ -83,4 +83,4 @@ Always use latest version from git for driver development. Some test failures ma
 
 # SEE ALSO
 
-[v4l2-ctl](/man/v4l2-ctl)(1), [v4l2-dbg](/man/v4l2-dbg)(1), [qv4l2](/man/qv4l2)(1), [media-ctl](/man/media-ctl)(1)
+[v4l2-ctl](/man/v4l2-ctl)(1)

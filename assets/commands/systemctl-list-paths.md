@@ -61,4 +61,4 @@ The **list-paths** subcommand provides a focused view of filesystem-triggered un
 
 # SEE ALSO
 
-[systemctl-list-units](/man/systemctl-list-units)(1), [systemd.path](/man/systemd.path)(5), [systemctl](/man/systemctl)(1)
+[systemctl-list-units](/man/systemctl-list-units)(1), [systemctl](/man/systemctl)(1)

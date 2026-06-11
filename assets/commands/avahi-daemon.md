@@ -106,4 +106,4 @@ Requires network multicast support to function properly. IPv4 link-local address
 
 # SEE ALSO
 
-[avahi-daemon.conf](/man/avahi-daemon.conf)(5), [avahi.hosts](/man/avahi.hosts)(5), [avahi.service](/man/avahi.service)(5), [avahi-browse](/man/avahi-browse)(1), [avahi-publish](/man/avahi-publish)(1), [avahi-dnsconfd](/man/avahi-dnsconfd)(8)
+[avahi-browse](/man/avahi-browse)(1), [avahi-publish](/man/avahi-publish)(1), [avahi-dnsconfd](/man/avahi-dnsconfd)(8)

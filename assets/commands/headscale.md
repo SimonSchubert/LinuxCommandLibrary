@@ -119,4 +119,4 @@ Headscale was created by **Juan Font** and first released in **2020**. It provid
 
 # SEE ALSO
 
-[tailscale](/man/tailscale)(1), [wireguard](/man/wireguard)(1), [nebula](/man/nebula)(1)
+[tailscale](/man/tailscale)(1), [nebula](/man/nebula)(1)

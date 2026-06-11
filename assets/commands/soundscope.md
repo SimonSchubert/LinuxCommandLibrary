@@ -26,4 +26,4 @@ TUI audio analyzer with real-time visualization
 
 # SEE ALSO
 
-[cava](/man/cava)(1), [sox](/man/sox)(1), [cli-visualizer](/man/cli-visualizer)(1)
+[cava](/man/cava)(1), [sox](/man/sox)(1)

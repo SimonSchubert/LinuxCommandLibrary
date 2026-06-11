@@ -85,4 +85,4 @@ matrix-commander was created to provide a simple command-line interface for Matr
 
 # SEE ALSO
 
-[element](/man/element)(1), [gomuks](/man/gomuks)(1), [weechat](/man/weechat)(1)
+[gomuks](/man/gomuks)(1), [weechat](/man/weechat)(1)

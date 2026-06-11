@@ -54,4 +54,4 @@ Requires root privileges. Package names must match repository names exactly. Ins
 
 # SEE ALSO
 
-[dnf](/man/dnf)(8), [dnf-remove](/man/dnf-remove)(8), [rpm](/man/rpm)(8)
+[dnf](/man/dnf)(8), [rpm](/man/rpm)(8)

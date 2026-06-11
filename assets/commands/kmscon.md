@@ -57,4 +57,4 @@ kmscon was developed as part of the systemd project to provide a modern replacem
 
 # SEE ALSO
 
-[getty](/man/getty)(8), [agetty](/man/agetty)(8), [fbterm](/man/fbterm)(1)
+[getty](/man/getty)(8), [agetty](/man/agetty)(8)

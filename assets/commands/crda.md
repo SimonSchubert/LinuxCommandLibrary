@@ -50,4 +50,4 @@ CRDA was developed as part of the Linux wireless-regdb project to manage wireles
 
 # SEE ALSO
 
-[iw](/man/iw)(1), [regdbdump](/man/regdbdump)(8), [wireless-regdb](/man/wireless-regdb)(7)
+[iw](/man/iw)(1)

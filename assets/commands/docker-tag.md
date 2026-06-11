@@ -30,5 +30,5 @@ create tags for Docker images
 
 # SEE ALSO
 
-[docker-image-tag](/man/docker-image-tag)(1), [docker-push](/man/docker-push)(1)
+[docker-image-tag](/man/docker-image-tag)(1)
 

@@ -78,5 +78,5 @@ mp3info was created as a simple **ID3 tag** viewer and editor for command-line M
 
 # SEE ALSO
 
-[id3v2](/man/id3v2)(1), [eyeD3](/man/eyeD3)(1), [ffprobe](/man/ffprobe)(1)
+[id3v2](/man/id3v2)(1), [ffprobe](/man/ffprobe)(1)
 

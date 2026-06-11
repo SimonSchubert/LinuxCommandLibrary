@@ -94,4 +94,4 @@ KVM acceleration on RISC-V requires a host CPU with the H extension; otherwise e
 
 # SEE ALSO
 
-[qemu-system-x86_64](/man/qemu-system-x86_64)(1), [qemu-img](/man/qemu-img)(1), [qemu-nbd](/man/qemu-nbd)(1)
+[qemu-system-x86_64](/man/qemu-system-x86_64)(1), [qemu-img](/man/qemu-img)(1)

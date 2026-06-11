@@ -42,4 +42,4 @@ Part of the edirect package from NCBI. Works with piped input from esearch. Requ
 
 # SEE ALSO
 
-[esearch](/man/esearch)(1), [einfo](/man/einfo)(1), [efetch](/man/efetch)(1)
+[esearch](/man/esearch)(1), [einfo](/man/einfo)(1)

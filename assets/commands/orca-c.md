@@ -54,5 +54,5 @@ Orca was created by **Hundred Rabbits** as an esoteric livecoding environment.
 
 # SEE ALSO
 
-[sonic-pi](/man/sonic-pi)(1), [supercollider](/man/supercollider)(1)
+[supercollider](/man/supercollider)(1)
 

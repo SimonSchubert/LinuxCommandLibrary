@@ -30,4 +30,4 @@ Serverless command-line Fediverse client
 
 # SEE ALSO
 
-[toot](/man/toot)(1), [tut](/man/tut)(1), [tuisky](/man/tuisky)(1)
+[toot](/man/toot)(1), [tuisky](/man/tuisky)(1)

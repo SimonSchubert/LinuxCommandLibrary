@@ -73,4 +73,4 @@ SPDX identifiers required. Some licenses complex. Learning curve for setup.
 
 # SEE ALSO
 
-[licensecheck](/man/licensecheck)(1), [spdx](/man/spdx)(1)
+[licensecheck](/man/licensecheck)(1)

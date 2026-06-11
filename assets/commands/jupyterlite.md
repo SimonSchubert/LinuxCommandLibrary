@@ -111,4 +111,4 @@ JupyterLite was released in **2021** by the **Project Jupyter** team, leveraging
 
 # SEE ALSO
 
-[jupyter-lab](/man/jupyter-lab)(1), [pyodide](/man/pyodide)(1), [jupyter](/man/jupyter)(1)
+[jupyter-lab](/man/jupyter-lab)(1), [jupyter](/man/jupyter)(1)

@@ -134,4 +134,4 @@ Calibration is sensitive to dataset quality and length; using domain-mismatched 
 
 # SEE ALSO
 
-[python](/man/python)(1), [vllm](/man/vllm)(1), [llama.cpp](/man/llama.cpp)(1)
+[python](/man/python)(1), [llama.cpp](/man/llama.cpp)(1)

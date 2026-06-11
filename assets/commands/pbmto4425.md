@@ -18,5 +18,5 @@ converts PBM bitmaps to AT&T 4425 terminal display format
 
 # SEE ALSO
 
-[pbmtoascii](/man/pbmtoascii)(1), [pbmtoterm](/man/pbmtoterm)(1)
+[pbmtoascii](/man/pbmtoascii)(1)
 

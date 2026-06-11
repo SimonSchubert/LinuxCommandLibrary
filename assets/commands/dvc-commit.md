@@ -45,5 +45,5 @@ Use dvc commit after editing data files, adding content to tracked directories, 
 
 # SEE ALSO
 
-[dvc-add](/man/dvc-add)(1), [dvc-push](/man/dvc-push)(1)
+[dvc-add](/man/dvc-add)(1)
 

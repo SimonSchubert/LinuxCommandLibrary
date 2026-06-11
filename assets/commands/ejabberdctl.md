@@ -95,4 +95,4 @@ ejabberd was developed by **Alexey Shchepin** starting in **2002**, written in E
 
 # SEE ALSO
 
-[prosodyctl](/man/prosodyctl)(1), [ejabberd.yml](/man/ejabberd.yml)(5), [xmpp](/man/xmpp)(7)
+[prosodyctl](/man/prosodyctl)(1)

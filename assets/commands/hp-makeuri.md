@@ -60,4 +60,4 @@ hp-makeuri is part of **HPLIP** (HP Linux Imaging and Printing) for device URI g
 
 # SEE ALSO
 
-[hp-setup](/man/hp-setup)(1), [lpadmin](/man/lpadmin)(1), [hp-probe](/man/hp-probe)(1)
+[hp-setup](/man/hp-setup)(1), [lpadmin](/man/lpadmin)(1)

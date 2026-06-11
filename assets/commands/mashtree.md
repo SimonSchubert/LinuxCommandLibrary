@@ -55,4 +55,3 @@ Mashtree was developed by Lee Katz at the CDC (Centers for Disease Control and P
 
 # SEE ALSO
 
-[mash](/man/mash)(1), [quicktree](/man/quicktree)(1), [fasttree](/man/fasttree)(1)

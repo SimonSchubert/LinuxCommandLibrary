@@ -109,4 +109,4 @@ Operations that modify the MOK database (import, delete, enable/disable validati
 
 # SEE ALSO
 
-[sbsign](/man/sbsign)(1), [sbverify](/man/sbverify)(1), [efibootmgr](/man/efibootmgr)(8)
+[efibootmgr](/man/efibootmgr)(8)

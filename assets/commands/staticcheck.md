@@ -88,4 +88,4 @@ Check categories are disabled by default in some contexts. ST checks (style) inc
 
 # SEE ALSO
 
-[go](/man/go)(1), [golangci-lint](/man/golangci-lint)(1), [gofmt](/man/gofmt)(1), [revive](/man/revive)(1)
+[go](/man/go)(1), [golangci-lint](/man/golangci-lint)(1), [gofmt](/man/gofmt)(1)

@@ -53,4 +53,4 @@ i3status was created by Michael Stapelberg as part of the i3 window manager proj
 
 # SEE ALSO
 
-[i3](/man/i3)(1), [i3bar](/man/i3bar)(1), [polybar](/man/polybar)(1), [waybar](/man/waybar)(5)
+[i3](/man/i3)(1), [polybar](/man/polybar)(1), [waybar](/man/waybar)(5)

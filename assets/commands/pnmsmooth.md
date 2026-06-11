@@ -71,4 +71,4 @@ pnmsmooth is part of **Netpbm** by **Jef Poskanzer**, providing simple image smo
 
 # SEE ALSO
 
-[pnmconvol](/man/pnmconvol)(1), [pgmenhance](/man/pgmenhance)(1), [pnmsharpen](/man/pnmsharpen)(1), [netpbm](/man/netpbm)(1)
+[pnmconvol](/man/pnmconvol)(1), [pgmenhance](/man/pgmenhance)(1), [netpbm](/man/netpbm)(1)

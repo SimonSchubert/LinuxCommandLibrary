@@ -26,4 +26,4 @@ This utility is primarily for internal use by the Cinnamon desktop environment a
 
 # SEE ALSO
 
-[cinnamon](/man/cinnamon)(1), [cinnamon-session](/man/cinnamon-session)(1)
+[cinnamon](/man/cinnamon)(1)

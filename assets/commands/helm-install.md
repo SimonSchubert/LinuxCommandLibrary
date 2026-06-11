@@ -65,5 +65,5 @@ deploys a Helm chart to a Kubernetes cluster, creating a new release
 
 # SEE ALSO
 
-[helm](/man/helm)(1), [helm-upgrade](/man/helm-upgrade)(1), [kubectl](/man/kubectl)(1)
+[helm](/man/helm)(1), [kubectl](/man/kubectl)(1)
 

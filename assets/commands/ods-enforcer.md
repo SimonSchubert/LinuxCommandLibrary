@@ -86,4 +86,4 @@ OpenDNSSEC enforcer implements automated key management following DNSSEC best pr
 
 # SEE ALSO
 
-[ods-control](/man/ods-control)(8), [ods-signer](/man/ods-signer)(8), [dnssec-keygen](/man/dnssec-keygen)(8)
+[ods-control](/man/ods-control)(8)

@@ -113,4 +113,4 @@ Requires root/administrator for TUN/TAP creation. Firewalls must allow VPN traff
 
 # SEE ALSO
 
-[wireguard](/man/wireguard)(1), [ipsec](/man/ipsec)(8), [stunnel](/man/stunnel)(8), [ssh](/man/ssh)(1)
+[ipsec](/man/ipsec)(8), [stunnel](/man/stunnel)(8), [ssh](/man/ssh)(1)

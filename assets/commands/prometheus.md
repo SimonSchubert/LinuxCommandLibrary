@@ -85,4 +85,4 @@ Prometheus was created at **SoundCloud** starting in 2012 and joined the **CNCF*
 
 # SEE ALSO
 
-[grafana](/man/grafana)(1), [alertmanager](/man/alertmanager)(1), [node_exporter](/man/node_exporter)(1)
+[grafana](/man/grafana)(1), [alertmanager](/man/alertmanager)(1)

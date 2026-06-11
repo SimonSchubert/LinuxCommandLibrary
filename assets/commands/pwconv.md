@@ -37,5 +37,5 @@ pwconv is part of **shadow-utils** for shadow password migration.
 
 # SEE ALSO
 
-[pwunconv](/man/pwunconv)(8), [grpconv](/man/grpconv)(8), [shadow](/man/shadow)(5)
+[pwunconv](/man/pwunconv)(8), [grpconv](/man/grpconv)(8)
 

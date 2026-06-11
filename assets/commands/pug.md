@@ -96,4 +96,4 @@ Pug was created by **TJ Holowaychuk** as Jade in 2010, renamed to Pug in 2016 du
 
 # SEE ALSO
 
-[ejs](/man/ejs)(1), [handlebars](/man/handlebars)(1), [node](/man/node)(1)
+[node](/man/node)(1)

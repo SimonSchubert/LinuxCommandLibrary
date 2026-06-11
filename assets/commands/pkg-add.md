@@ -84,4 +84,4 @@ pkg_add is part of the **OpenBSD** and **NetBSD** package tools, providing simpl
 
 # SEE ALSO
 
-[pkg_delete](/man/pkg_delete)(1), [pkg_info](/man/pkg_info)(1), [pkg](/man/pkg)(1)
+[pkg](/man/pkg)(1)

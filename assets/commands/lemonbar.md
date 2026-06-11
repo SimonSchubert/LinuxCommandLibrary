@@ -82,4 +82,4 @@ lemonbar was created as **bar** by **LemonBoy** around **2012**, renamed to lemo
 
 # SEE ALSO
 
-[polybar](/man/polybar)(1), [i3status](/man/i3status)(1), [dzen2](/man/dzen2)(1)
+[polybar](/man/polybar)(1), [i3status](/man/i3status)(1)

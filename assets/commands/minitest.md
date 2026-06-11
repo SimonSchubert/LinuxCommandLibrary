@@ -84,4 +84,4 @@ Minitest was created by **Ryan Davis** (zenspider) as a minimal testing framewor
 
 # SEE ALSO
 
-[rspec](/man/rspec)(1), [rake](/man/rake)(1), [ruby](/man/ruby)(1), [test-unit](/man/test-unit)(1)
+[rspec](/man/rspec)(1), [rake](/man/rake)(1), [ruby](/man/ruby)(1)

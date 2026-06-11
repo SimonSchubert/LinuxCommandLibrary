@@ -47,4 +47,4 @@ kde-inhibit is part of KDE's command-line tools, providing a way to control desk
 
 # SEE ALSO
 
-[systemd-inhibit](/man/systemd-inhibit)(1), [xdg-screensaver](/man/xdg-screensaver)(1), [caffeine](/man/caffeine)(1)
+[systemd-inhibit](/man/systemd-inhibit)(1), [caffeine](/man/caffeine)(1)

@@ -87,4 +87,4 @@ clogin was developed as part of **RANCID** (Really Awesome New Cisco confIg Diff
 
 # SEE ALSO
 
-[rancid](/man/rancid)(1), [jlogin](/man/jlogin)(1), [expect](/man/expect)(1)
+[expect](/man/expect)(1)

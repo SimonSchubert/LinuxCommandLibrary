@@ -91,4 +91,4 @@ dmd was created by **Walter Bright**, who began developing D in **1999** as a su
 
 # SEE ALSO
 
-[ldc](/man/ldc)(1), [gdc](/man/gdc)(1), [rdmd](/man/rdmd)(1)
+[ldc](/man/ldc)(1), [gdc](/man/gdc)(1)

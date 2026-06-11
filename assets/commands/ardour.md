@@ -112,4 +112,4 @@ Ardour was created by Paul Davis, who is also responsible for the JACK Audio Con
 
 # SEE ALSO
 
-[jackd](/man/jackd)(1), [qjackctl](/man/qjackctl)(1), [audacity](/man/audacity)(1), [lmms](/man/lmms)(1)
+[jackd](/man/jackd)(1), [audacity](/man/audacity)(1), [lmms](/man/lmms)(1)

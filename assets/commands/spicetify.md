@@ -100,4 +100,3 @@ May break with Spotify updates. Requires Spotify desktop. Backup before updating
 
 # SEE ALSO
 
-[spotify](/man/spotify)(1)

@@ -94,4 +94,4 @@ Must be run as root or with appropriate permissions for device access. The brail
 
 # SEE ALSO
 
-[orca](/man/orca)(1), [espeak](/man/espeak)(1), [screen](/man/screen)(1)
+[espeak](/man/espeak)(1), [screen](/man/screen)(1)

@@ -27,4 +27,4 @@ Requires root privileges. Only detects Linux installations, not other operating 
 
 # SEE ALSO
 
-[os-prober](/man/os-prober)(1), [grub-mkconfig](/man/grub-mkconfig)(8), [update-grub](/man/update-grub)(8)
+[grub-mkconfig](/man/grub-mkconfig)(8), [update-grub](/man/update-grub)(8)

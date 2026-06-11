@@ -108,4 +108,4 @@ Qt was created by **Trolltech** in 1991, later acquired by **Nokia**, then **Dig
 
 # SEE ALSO
 
-[qmake](/man/qmake)(1), [cmake](/man/cmake)(1), [designer](/man/designer)(1)
+[qmake](/man/qmake)(1), [cmake](/man/cmake)(1)

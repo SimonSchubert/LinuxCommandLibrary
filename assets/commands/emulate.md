@@ -97,4 +97,4 @@ The **emulate** builtin has been part of zsh since the early **1990s**, introduc
 
 # SEE ALSO
 
-[zsh](/man/zsh)(1), [zshbuiltins](/man/zshbuiltins)(1), [zshoptions](/man/zshoptions)(1), [setopt](/man/setopt)(1), [bash](/man/bash)(1), [ksh](/man/ksh)(1)
+[zsh](/man/zsh)(1), [setopt](/man/setopt)(1), [bash](/man/bash)(1), [ksh](/man/ksh)(1)

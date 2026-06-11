@@ -86,4 +86,4 @@ editcap is part of the **Wireshark** project, originally **Ethereal**, created b
 
 # SEE ALSO
 
-[wireshark](/man/wireshark)(1), [tshark](/man/tshark)(1), [mergecap](/man/mergecap)(1), [capinfos](/man/capinfos)(1)
+[wireshark](/man/wireshark)(1), [tshark](/man/tshark)(1)

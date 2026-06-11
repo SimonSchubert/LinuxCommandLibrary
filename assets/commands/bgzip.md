@@ -101,4 +101,4 @@ Slightly larger files than maximum gzip compression. Requires .gzi index for ran
 
 # SEE ALSO
 
-[gzip](/man/gzip)(1), [tabix](/man/tabix)(1), [htslib](/man/htslib)(7)
+[gzip](/man/gzip)(1), [tabix](/man/tabix)(1)

@@ -66,4 +66,4 @@ Wallet must be unlocked before querying. Sensitive data will be displayed in pla
 
 # SEE ALSO
 
-[kwalletmanager](/man/kwalletmanager)(1), [secret-tool](/man/secret-tool)(1)
+[secret-tool](/man/secret-tool)(1)

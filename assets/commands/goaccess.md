@@ -79,4 +79,4 @@ goaccess was created by Gerardo Orellana and first released in **2009**. It gain
 
 # SEE ALSO
 
-[awstats](/man/awstats)(1), [webalizer](/man/webalizer)(1), [nginx](/man/nginx)(8), [apache2](/man/apache2)(8)
+[awstats](/man/awstats)(1), [nginx](/man/nginx)(8), [apache2](/man/apache2)(8)

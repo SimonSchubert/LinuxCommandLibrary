@@ -34,4 +34,4 @@ The tool is primarily used in automated CI/CD pipelines to ensure that all commi
 
 # SEE ALSO
 
-[git](/man/git)(1), [commitlint](/man/commitlint)(1)
+[git](/man/git)(1)

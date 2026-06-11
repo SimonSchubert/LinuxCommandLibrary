@@ -98,4 +98,4 @@ The dotnet CLI was introduced with **.NET Core** in **2016** as Microsoft's cros
 
 # SEE ALSO
 
-[msbuild](/man/msbuild)(1), [nuget](/man/nuget)(1)
+[msbuild](/man/msbuild)(1)

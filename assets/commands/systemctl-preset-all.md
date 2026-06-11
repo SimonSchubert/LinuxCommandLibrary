@@ -51,4 +51,4 @@ The **preset-all** subcommand provides a way to reset the entire system to distr
 
 # SEE ALSO
 
-[systemctl-preset](/man/systemctl-preset)(1), [systemctl-enable](/man/systemctl-enable)(1), [systemd.preset](/man/systemd.preset)(5)
+[systemctl-preset](/man/systemctl-preset)(1), [systemctl-enable](/man/systemctl-enable)(1)

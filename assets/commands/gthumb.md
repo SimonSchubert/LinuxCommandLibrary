@@ -64,4 +64,4 @@ gThumb was created by **Paolo Bacchilega** as an image viewer for the **GNOME** 
 
 # SEE ALSO
 
-[eog](/man/eog)(1), [feh](/man/feh)(1), [shotwell](/man/shotwell)(1)
+[eog](/man/eog)(1), [feh](/man/feh)(1)

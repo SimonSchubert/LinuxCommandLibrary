@@ -114,4 +114,4 @@ Requires Python 3.7+. The Snakefile must be valid Python syntax. When using **--
 
 # SEE ALSO
 
-[make](/man/make)(1), [nextflow](/man/nextflow)(1), [cwltool](/man/cwltool)(1), [dvc](/man/dvc)(1)
+[make](/man/make)(1), [nextflow](/man/nextflow)(1), [dvc](/man/dvc)(1)

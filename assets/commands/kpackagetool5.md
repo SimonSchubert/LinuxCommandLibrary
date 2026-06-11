@@ -71,4 +71,4 @@ kpackagetool5 is part of KDE Frameworks 5, providing package management for Plas
 
 # SEE ALSO
 
-[kpackagetool6](/man/kpackagetool6)(1), [plasmapkg2](/man/plasmapkg2)(1)
+[kpackagetool6](/man/kpackagetool6)(1)

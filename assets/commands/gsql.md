@@ -76,4 +76,4 @@ GSQL was developed by **TigerGraph** (formerly GraphSQL), founded by **Yu Xu** i
 
 # SEE ALSO
 
-[neo4j](/man/neo4j)(1), [arangosh](/man/arangosh)(1)
+[neo4j](/man/neo4j)(1)

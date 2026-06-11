@@ -95,4 +95,4 @@ Datasette was created by **Simon Willison** (co-creator of Django) and first rel
 
 # SEE ALSO
 
-[sqlite3](/man/sqlite3)(1), [csvs-to-sqlite](/man/csvs-to-sqlite)(1), [sqlite-utils](/man/sqlite-utils)(1)
+[sqlite3](/man/sqlite3)(1), [sqlite-utils](/man/sqlite-utils)(1)

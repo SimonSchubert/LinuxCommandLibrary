@@ -49,4 +49,4 @@ Scanning large filesystems can be slow. Remote filesystems require network acces
 
 # SEE ALSO
 
-[du](/man/du)(1), [ncdu](/man/ncdu)(1), [filelight](/man/filelight)(1)
+[du](/man/du)(1), [ncdu](/man/ncdu)(1)

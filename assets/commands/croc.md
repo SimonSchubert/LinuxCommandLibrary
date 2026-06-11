@@ -106,4 +106,4 @@ Default relay is public (croc.schollz.com). For sensitive transfers, run your ow
 
 # SEE ALSO
 
-[rsync](/man/rsync)(1), [scp](/man/scp)(1), [magic-wormhole](/man/magic-wormhole)(1)
+[rsync](/man/rsync)(1), [scp](/man/scp)(1)

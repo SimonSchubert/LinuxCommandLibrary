@@ -72,4 +72,3 @@ PII detection is best-effort: false negatives (missed PII) are inevitable with N
 
 # SEE ALSO
 
-[presidio-analyze](/man/presidio-analyze)(1), [presidio-anonymize](/man/presidio-anonymize)(1), [scrubadub](/man/scrubadub)(1)

@@ -70,4 +70,4 @@ Kid3 was created by **Urs Fleisch** as a simple tag editor for KDE. It evolved t
 
 # SEE ALSO
 
-[id3v2](/man/id3v2)(1), [eyeD3](/man/eyeD3)(1), [easytag](/man/easytag)(1)
+[id3v2](/man/id3v2)(1), [easytag](/man/easytag)(1)

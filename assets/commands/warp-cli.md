@@ -70,4 +70,4 @@ Cloudflare service. Registration required. Daemon must run.
 
 # SEE ALSO
 
-[wireguard](/man/wireguard)(1), [cloudflared](/man/cloudflared)(1)
+[cloudflared](/man/cloudflared)(1)

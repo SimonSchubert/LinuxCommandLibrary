@@ -89,4 +89,4 @@ fs_cli is part of the FreeSWITCH project, an open-source communications platform
 
 # SEE ALSO
 
-[asterisk](/man/asterisk)(8), [freeswitch](/man/freeswitch)(1)
+[asterisk](/man/asterisk)(8)

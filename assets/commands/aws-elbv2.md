@@ -113,4 +113,4 @@ Target groups are bound to a specific load balancer type and cannot be shared be
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [aws-elb](/man/aws-elb)(1), [aws-ec2](/man/aws-ec2)(1), [aws-wafv2](/man/aws-wafv2)(1)
+[aws](/man/aws)(1), [aws-elb](/man/aws-elb)(1), [aws-ec2](/man/aws-ec2)(1)

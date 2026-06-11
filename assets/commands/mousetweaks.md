@@ -61,5 +61,4 @@ mousetweaks was developed as part of **GNOME's accessibility** initiative to ass
 
 # SEE ALSO
 
-[orca](/man/orca)(1), [at-spi2-core](/man/at-spi2-core)(1), [gnome-settings-daemon](/man/gnome-settings-daemon)(1)
 

@@ -58,4 +58,4 @@ enc2xs is part of the **Encode** module in Perl core, supporting the creation of
 
 # SEE ALSO
 
-[perl](/man/perl)(1), [piconv](/man/piconv)(1)
+[perl](/man/perl)(1)

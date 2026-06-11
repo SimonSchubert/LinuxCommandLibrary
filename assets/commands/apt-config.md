@@ -58,4 +58,4 @@ Configuration is hierarchical; lower-level options override higher ones. Command
 
 # SEE ALSO
 
-[apt.conf](/man/apt.conf)(5), [apt](/man/apt)(8), [apt-get](/man/apt-get)(8)
+[apt](/man/apt)(8), [apt-get](/man/apt-get)(8)

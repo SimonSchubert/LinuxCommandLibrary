@@ -84,4 +84,4 @@ Changes to /etc/exports require `exportfs -ra` to take effect. Security relies o
 
 # SEE ALSO
 
-[nfs](/man/nfs)(5), [exportfs](/man/exportfs)(8), [nfsd](/man/nfsd)(8), [mountd](/man/mountd)(8)
+[nfsd](/man/nfsd)(8)

@@ -80,4 +80,4 @@ NetworkManager was developed by **Red Hat** starting in **2004** to simplify net
 
 # SEE ALSO
 
-[nmcli](/man/nmcli)(1), [nmtui](/man/nmtui)(1), [systemd-networkd](/man/systemd-networkd)(8), [netctl](/man/netctl)(1)
+[nmcli](/man/nmcli)(1), [nmtui](/man/nmtui)(1), [netctl](/man/netctl)(1)

@@ -50,4 +50,4 @@ The **add-requires** subcommand was added to **systemctl** in systemd version **
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [systemctl-add-wants](/man/systemctl-add-wants)(1), [systemd.unit](/man/systemd.unit)(5)
+[systemctl](/man/systemctl)(1), [systemctl-add-wants](/man/systemctl-add-wants)(1)

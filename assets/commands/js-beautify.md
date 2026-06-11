@@ -93,4 +93,4 @@ js-beautify was created by **Einar Lielmanis** as an online tool, later expanded
 
 # SEE ALSO
 
-[prettier](/man/prettier)(1), [eslint](/man/eslint)(1), [uglifyjs](/man/uglifyjs)(1)
+[prettier](/man/prettier)(1), [eslint](/man/eslint)(1)

@@ -84,4 +84,4 @@ JACK was created primarily by **Paul Davis** starting in **2002**. It became the
 
 # SEE ALSO
 
-[jack_connect](/man/jack_connect)(1), [qjackctl](/man/qjackctl)(1), [pulseaudio](/man/pulseaudio)(1)
+[jack_connect](/man/jack_connect)(1), [pulseaudio](/man/pulseaudio)(1)

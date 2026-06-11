@@ -118,4 +118,4 @@ Requires **systemd-resolved** to be running and `/etc/resolv.conf` to point at i
 
 # SEE ALSO
 
-[systemd-resolved](/man/systemd-resolved)(8), [dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [resolved.conf](/man/resolved.conf)(5)
+[dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [resolved.conf](/man/resolved.conf)(5)

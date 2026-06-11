@@ -30,4 +30,4 @@ Mastodon CLI and TUI client
 
 # SEE ALSO
 
-[tut](/man/tut)(1), [tuisky](/man/tuisky)(1), [servitor](/man/servitor)(1)
+[tuisky](/man/tuisky)(1), [servitor](/man/servitor)(1)

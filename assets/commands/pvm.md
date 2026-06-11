@@ -156,4 +156,4 @@ PVM is **legacy** software: active development stopped in the mid-2000s and it h
 
 # SEE ALSO
 
-[pvmd3](/man/pvmd3)(1), [pvm_intro](/man/pvm_intro)(1), [xpvm](/man/xpvm)(1), [mpirun](/man/mpirun)(1)
+[mpirun](/man/mpirun)(1)

@@ -42,4 +42,4 @@ Authored by **Rui Carmo** (rcarmo) and first released on GitHub in **2025** as p
 
 # SEE ALSO
 
-[qm](/man/qm)(1), [pve-oci-import](/man/pve-oci-import)(1), [pvesh](/man/pvesh)(1), [qemu-system-x86_64](/man/qemu-system-x86_64)(1)
+[qm](/man/qm)(1), [pvesh](/man/pvesh)(1), [qemu-system-x86_64](/man/qemu-system-x86_64)(1)

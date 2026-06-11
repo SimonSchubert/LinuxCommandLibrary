@@ -112,4 +112,4 @@ rndc is part of **BIND** (Berkeley Internet Name Domain) by **ISC** (Internet Sy
 
 # SEE ALSO
 
-[named](/man/named)(8), [rndc-confgen](/man/rndc-confgen)(8), [named.conf](/man/named.conf)(5)
+[named](/man/named)(8), [named.conf](/man/named.conf)(5)

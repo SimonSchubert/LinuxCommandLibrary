@@ -49,4 +49,4 @@ galleta (Spanish for "cookie") is part of forensic toolkit collections for analy
 
 # SEE ALSO
 
-[pasco](/man/pasco)(1), [strings](/man/strings)(1)
+[strings](/man/strings)(1)

@@ -91,4 +91,4 @@ RANCID was developed by **Shrubbery Networks** for automating network device con
 
 # SEE ALSO
 
-[clogin](/man/clogin)(1), [rancid-cvs](/man/rancid-cvs)(1), [oxidized](/man/oxidized)(1)
+[clogin](/man/clogin)(1), [rancid-cvs](/man/rancid-cvs)(1)

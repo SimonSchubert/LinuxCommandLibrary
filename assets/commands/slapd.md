@@ -103,4 +103,4 @@ Running with **-d** flag prevents daemonization and is intended for debugging on
 
 # SEE ALSO
 
-[ldapsearch](/man/ldapsearch)(1), [ldapadd](/man/ldapadd)(1), [ldapmodify](/man/ldapmodify)(1), [slapcat](/man/slapcat)(8), [slapadd](/man/slapadd)(8), [slappasswd](/man/slappasswd)(8)
+[ldapsearch](/man/ldapsearch)(1), [ldapadd](/man/ldapadd)(1), [ldapmodify](/man/ldapmodify)(1)

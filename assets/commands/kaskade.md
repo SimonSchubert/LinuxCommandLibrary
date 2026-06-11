@@ -32,4 +32,3 @@ Requires a running Kafka cluster. Schema Registry integration requires a running
 
 # SEE ALSO
 
-[kafka-console-consumer](/man/kafka-console-consumer)(1)

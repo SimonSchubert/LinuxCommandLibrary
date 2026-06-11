@@ -64,5 +64,5 @@ openconnect was created as an **open-source alternative** to Cisco AnyConnect cl
 
 # SEE ALSO
 
-[openvpn](/man/openvpn)(1), [vpnc](/man/vpnc)(1), [wireguard](/man/wireguard)(1)
+[openvpn](/man/openvpn)(1), [vpnc](/man/vpnc)(1)
 

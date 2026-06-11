@@ -129,4 +129,4 @@ YugabyteDB was created by **Yugabyte, Inc.** founded by former Facebook engineer
 
 # SEE ALSO
 
-[psql](/man/psql)(1), [cqlsh](/man/cqlsh)(1), [cockroach](/man/cockroach)(1), [tidb](/man/tidb)(1)
+[psql](/man/psql)(1), [cqlsh](/man/cqlsh)(1), [cockroach](/man/cockroach)(1)

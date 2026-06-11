@@ -103,4 +103,4 @@ Only works with MP3 (ID3). For other formats use different tools. Large pictures
 
 # SEE ALSO
 
-[id3v2](/man/id3v2)(1), [eyeD3](/man/eyeD3)(1), [ffmpeg](/man/ffmpeg)(1), [mutagen-inspect](/man/mutagen-inspect)(1)
+[id3v2](/man/id3v2)(1), [ffmpeg](/man/ffmpeg)(1)

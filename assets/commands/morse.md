@@ -70,4 +70,4 @@ Audible output (**-p**) requires a console or PC speaker; on most modern Linux s
 
 # SEE ALSO
 
-[beep](/man/beep)(1), [espeak](/man/espeak)(1), [ham](/man/ham)(1)
+[beep](/man/beep)(1), [espeak](/man/espeak)(1)

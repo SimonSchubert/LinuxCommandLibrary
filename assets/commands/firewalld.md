@@ -84,4 +84,4 @@ firewalld was developed by Red Hat and introduced in **Fedora 15** (2011) as a r
 
 # SEE ALSO
 
-[firewall-cmd](/man/firewall-cmd)(1), [firewall-offline-cmd](/man/firewall-offline-cmd)(1), [nft](/man/nft)(8), [iptables](/man/iptables)(8)
+[firewall-cmd](/man/firewall-cmd)(1), [nft](/man/nft)(8), [iptables](/man/iptables)(8)

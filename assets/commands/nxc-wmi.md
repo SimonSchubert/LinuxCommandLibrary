@@ -63,5 +63,5 @@ nxc wmi provides **WMI-based execution** capabilities within NetExec.
 
 # SEE ALSO
 
-[nxc](/man/nxc)(1), [wmic](/man/wmic)(1), [impacket](/man/impacket)(1)
+[nxc](/man/nxc)(1), [impacket](/man/impacket)(1)
 

@@ -73,4 +73,4 @@ initramfs-tools replaced the older initrd mechanism on Debian. It provides a mod
 
 # SEE ALSO
 
-[mkinitramfs](/man/mkinitramfs)(8), [initramfs.conf](/man/initramfs.conf)(5), [dracut](/man/dracut)(8)
+[mkinitramfs](/man/mkinitramfs)(8), [dracut](/man/dracut)(8)

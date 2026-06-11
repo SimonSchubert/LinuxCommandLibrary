@@ -56,4 +56,4 @@ Requires devices that support SCSI Persistent Reservations. Used in clustered st
 
 # SEE ALSO
 
-[sg_persist](/man/sg_persist)(8), [blockdev](/man/blockdev)(8)
+[blockdev](/man/blockdev)(8)

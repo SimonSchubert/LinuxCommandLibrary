@@ -71,4 +71,4 @@ knife is part of **Chef**, the infrastructure automation platform created by **O
 
 # SEE ALSO
 
-[chef](/man/chef)(1), [chef-client](/man/chef-client)(8), [berkshelf](/man/berks)(1)
+[chef](/man/chef)(1), [berkshelf](/man/berks)(1)

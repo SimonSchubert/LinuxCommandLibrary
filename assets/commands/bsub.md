@@ -73,4 +73,4 @@ Available queues and resource limits depend on cluster configuration. Jobs may w
 
 # SEE ALSO
 
-[bjobs](/man/bjobs)(1), [bkill](/man/bkill)(1), [bhist](/man/bhist)(1), [slurm](/man/slurm)(1)
+[bjobs](/man/bjobs)(1), [bkill](/man/bkill)(1), [bhist](/man/bhist)(1)

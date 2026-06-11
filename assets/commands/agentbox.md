@@ -90,4 +90,4 @@ AgentBox emerged in the **2024–2025** wave of AI-agent sandbox services alongs
 
 # SEE ALSO
 
-[docker](/man/docker)(1), [e2b](/man/e2b)(1), [modal](/man/modal)(1), [npm](/man/npm)(1)
+[docker](/man/docker)(1), [npm](/man/npm)(1)

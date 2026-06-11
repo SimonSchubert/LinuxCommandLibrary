@@ -99,4 +99,4 @@ Requires appropriate permissions to access bgpd control socket. Some commands ma
 
 # SEE ALSO
 
-[bgpd](/man/bgpd)(8), [bgpd.conf](/man/bgpd.conf)(5), [ospfctl](/man/ospfctl)(8), [vtysh](/man/vtysh)(1)
+[bgpd](/man/bgpd)(8), [vtysh](/man/vtysh)(1)

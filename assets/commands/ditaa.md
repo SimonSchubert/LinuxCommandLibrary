@@ -97,4 +97,4 @@ ditaa was created by **Stathis Sideris** in **2004** as an open-source Java appl
 
 # SEE ALSO
 
-[graphviz](/man/graphviz)(1), [plantuml](/man/plantuml)(1), [asciiflow](/man/asciiflow)(1), [mermaid](/man/mermaid)(1)
+[graphviz](/man/graphviz)(1), [plantuml](/man/plantuml)(1), [mermaid](/man/mermaid)(1)

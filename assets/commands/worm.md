@@ -48,4 +48,4 @@ Worm is part of the **BSD games** collection, a set of classic text-based games 
 
 # SEE ALSO
 
-[snake](/man/snake)(6), [rogue](/man/rogue)(6), [nethack](/man/nethack)(6), [tetris-bsd](/man/tetris-bsd)(6)
+[rogue](/man/rogue)(6), [nethack](/man/nethack)(6), [tetris-bsd](/man/tetris-bsd)(6)

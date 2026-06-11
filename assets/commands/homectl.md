@@ -97,4 +97,4 @@ homectl and systemd-homed were introduced in systemd 245 (**2020**) by Lennart P
 
 # SEE ALSO
 
-[useradd](/man/useradd)(8), [usermod](/man/usermod)(8), [loginctl](/man/loginctl)(1), [systemd-homed](/man/systemd-homed)(8)
+[useradd](/man/useradd)(8), [usermod](/man/usermod)(8), [loginctl](/man/loginctl)(1)

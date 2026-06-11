@@ -76,4 +76,4 @@ The **build** package was created by the Python Packaging Authority (PyPA) as pa
 
 # SEE ALSO
 
-[pip](/man/pip)(1), [twine](/man/twine)(1), [setuptools](/man/setuptools)(1), [flit](/man/flit)(1), [hatch](/man/hatch)(1)
+[pip](/man/pip)(1), [twine](/man/twine)(1), [flit](/man/flit)(1), [hatch](/man/hatch)(1)

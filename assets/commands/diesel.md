@@ -104,4 +104,4 @@ Diesel was created by **Sean Griffin** (also a Ruby on Rails contributor) and fi
 
 # SEE ALSO
 
-[sqlx](/man/sqlx)(1), [sea-orm](/man/sea-orm)(1), [cargo](/man/cargo)(1)
+[sqlx](/man/sqlx)(1), [cargo](/man/cargo)(1)

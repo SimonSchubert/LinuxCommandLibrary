@@ -100,4 +100,4 @@ Blackfire was created by **SensioLabs** (the company behind Symfony) and launche
 
 # SEE ALSO
 
-[php](/man/php)(1), [xdebug](/man/xdebug)(1), [curl](/man/curl)(1)
+[php](/man/php)(1), [curl](/man/curl)(1)

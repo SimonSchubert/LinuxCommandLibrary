@@ -82,4 +82,4 @@ Requires root privileges to access drive S.M.A.R.T. data. The drive type prefix 
 
 # SEE ALSO
 
-[smartctl](/man/smartctl)(8), [sensors](/man/sensors)(1), [lm-sensors](/man/lm-sensors)(1)
+[smartctl](/man/smartctl)(8), [sensors](/man/sensors)(1)

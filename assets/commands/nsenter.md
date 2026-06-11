@@ -93,4 +93,4 @@ Entering a PID namespace causes nsenter to fork by default. Use **--no-fork** to
 
 # SEE ALSO
 
-[unshare](/man/unshare)(1), [clone](/man/clone)(2), [setns](/man/setns)(2), [namespaces](/man/namespaces)(7)
+[unshare](/man/unshare)(1), [clone](/man/clone)(2), [namespaces](/man/namespaces)(7)

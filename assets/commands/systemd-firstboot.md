@@ -87,4 +87,4 @@ Some settings require the **--force** flag to overwrite existing configuration. 
 
 # SEE ALSO
 
-[systemd](/man/systemd)(1), [localectl](/man/localectl)(1), [timedatectl](/man/timedatectl)(1), [hostnamectl](/man/hostnamectl)(1)
+[localectl](/man/localectl)(1), [timedatectl](/man/timedatectl)(1), [hostnamectl](/man/hostnamectl)(1)

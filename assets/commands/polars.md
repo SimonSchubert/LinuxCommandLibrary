@@ -86,4 +86,4 @@ Polars was created by **Ritchie Vink** in **2020** as a fast alternative to pand
 
 # SEE ALSO
 
-[duckdb](/man/duckdb)(1), [datafusion-cli](/man/datafusion-cli)(1), [xsv](/man/xsv)(1), [miller](/man/miller)(1)
+[duckdb](/man/duckdb)(1), [xsv](/man/xsv)(1), [miller](/man/miller)(1)

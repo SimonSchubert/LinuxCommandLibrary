@@ -94,4 +94,4 @@ django-admin is part of **Django**, created by **Adrian Holovaty** and **Simon W
 
 # SEE ALSO
 
-[python](/man/python)(1), [pip](/man/pip)(1), [manage.py](/man/manage.py)(1)
+[python](/man/python)(1), [pip](/man/pip)(1)

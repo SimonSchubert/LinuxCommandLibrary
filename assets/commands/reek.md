@@ -103,4 +103,4 @@ Reek was created by **Kevin Rutherford** as a Ruby code smell detector based on 
 
 # SEE ALSO
 
-[rubocop](/man/rubocop)(1), [ruby](/man/ruby)(1), [brakeman](/man/brakeman)(1)
+[rubocop](/man/rubocop)(1), [ruby](/man/ruby)(1)

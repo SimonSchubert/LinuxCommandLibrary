@@ -97,4 +97,4 @@ Must be run as **root**. Refuses to write to filesystems above **85%** utilisati
 
 # SEE ALSO
 
-[oled](/man/oled)(8), [ps](/man/ps)(1), [top](/man/top)(1), [strace](/man/strace)(1), [perf](/man/perf)(1), [proc](/man/proc)(5)
+[ps](/man/ps)(1), [top](/man/top)(1), [strace](/man/strace)(1), [perf](/man/perf)(1), [proc](/man/proc)(5)

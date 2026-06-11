@@ -64,5 +64,5 @@ mkreiserfs was part of **ReiserFS** tools, a journaling filesystem created by Ha
 
 # SEE ALSO
 
-[mkfs.reiserfs](/man/mkfs.reiserfs)(8), [reiserfsck](/man/reiserfsck)(8), [mkfs](/man/mkfs)(8)
+[mkfs](/man/mkfs)(8)
 

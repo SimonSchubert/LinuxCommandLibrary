@@ -87,4 +87,4 @@ Fontconfig was initiated by Keith Packard in **2000** for improved font handling
 
 # SEE ALSO
 
-[fc-list](/man/fc-list)(1), [fc-match](/man/fc-match)(1), [fc-query](/man/fc-query)(1), [fc-scan](/man/fc-scan)(1), [fc-cat](/man/fc-cat)(1)
+[fc-list](/man/fc-list)(1), [fc-match](/man/fc-match)(1), [fc-query](/man/fc-query)(1), [fc-scan](/man/fc-scan)(1)

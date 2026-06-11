@@ -95,4 +95,4 @@ Maven was created at the **Apache Software Foundation** in **2002** by Jason van
 
 # SEE ALSO
 
-[gradle](/man/gradle)(1), [ant](/man/ant)(1), [java](/man/java)(1), [mvnw](/man/mvnw)(1)
+[gradle](/man/gradle)(1), [ant](/man/ant)(1), [java](/man/java)(1)

@@ -71,4 +71,4 @@ Juju was created by **Canonical** for service orchestration, evolving from a con
 
 # SEE ALSO
 
-[maas](/man/maas)(1), [lxc](/man/lxc)(1), [snap](/man/snap)(8)
+[lxc](/man/lxc)(1), [snap](/man/snap)(8)

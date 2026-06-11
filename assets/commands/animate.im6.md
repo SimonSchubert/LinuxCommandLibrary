@@ -57,4 +57,4 @@ The .im6 naming convention was introduced when ImageMagick 7 was released in **2
 
 # SEE ALSO
 
-[animate](/man/animate)(1), [display.im6](/man/display.im6)(1), [convert.im6](/man/convert.im6)(1)
+[animate](/man/animate)(1), [display.im6](/man/display.im6)(1)

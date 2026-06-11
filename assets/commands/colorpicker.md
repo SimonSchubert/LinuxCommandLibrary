@@ -36,4 +36,3 @@ Useful for designers and developers who need to quickly sample colors from exist
 
 # SEE ALSO
 
-[xcolor](/man/xcolor)(1), [grabc](/man/grabc)(1)

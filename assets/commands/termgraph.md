@@ -116,4 +116,4 @@ Requires Python 3. Terminal width limits chart size. Color support depends on te
 
 # SEE ALSO
 
-[gnuplot](/man/gnuplot)(1), [spark](/man/spark)(1), [asciichart](/man/asciichart)(1)
+[gnuplot](/man/gnuplot)(1), [spark](/man/spark)(1)

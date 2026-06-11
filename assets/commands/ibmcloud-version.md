@@ -40,4 +40,4 @@ ibmcloud version is part of the **IBM Cloud** CLI.
 
 # SEE ALSO
 
-[ibmcloud](/man/ibmcloud)(1), [ibmcloud-plugin](/man/ibmcloud-plugin)(1)
+[ibmcloud](/man/ibmcloud)(1)

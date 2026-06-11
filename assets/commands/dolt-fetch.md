@@ -42,5 +42,4 @@ The --prune option removes remote-tracking branches that no longer exist on the 
 
 # SEE ALSO
 
-[dolt-pull](/man/dolt-pull)(1), [dolt-push](/man/dolt-push)(1)
 

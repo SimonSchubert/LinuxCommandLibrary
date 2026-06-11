@@ -80,4 +80,4 @@ Bytecode not portable between Lua versions. Stripping debug info prevents meanin
 
 # SEE ALSO
 
-[lua](/man/lua)(1), [luajit](/man/luajit)(1), [luarocks](/man/luarocks)(1)
+[lua](/man/lua)(1), [luajit](/man/luajit)(1)

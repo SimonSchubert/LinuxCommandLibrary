@@ -52,4 +52,4 @@ faked-sysv is part of the **fakeroot** package created for Debian package buildi
 
 # SEE ALSO
 
-[fakeroot](/man/fakeroot)(1), [faked-tcp](/man/faked-tcp)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1)
+[fakeroot](/man/fakeroot)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1)

@@ -29,4 +29,4 @@ Requires root privileges. The target VT must exist. On systems with graphical de
 
 # SEE ALSO
 
-[fgconsole](/man/fgconsole)(1), [openvt](/man/openvt)(1), [deallocvt](/man/deallocvt)(1)
+[fgconsole](/man/fgconsole)(1), [deallocvt](/man/deallocvt)(1)

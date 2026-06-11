@@ -82,4 +82,4 @@ Neutron was originally called Quantum, renamed in **2013**. It's part of OpenSta
 
 # SEE ALSO
 
-[openstack](/man/openstack)(1), [nova](/man/nova)(1), [ovs-vsctl](/man/ovs-vsctl)(1)
+[openstack](/man/openstack)(1), [nova](/man/nova)(1)

@@ -66,4 +66,3 @@ gnuplot was created in **1986** by Thomas Williams and Colin Kelley, becoming a 
 
 # SEE ALSO
 
-[matplotlib](/man/matplotlib)(1), [feedgnuplot](/man/feedgnuplot)(1)

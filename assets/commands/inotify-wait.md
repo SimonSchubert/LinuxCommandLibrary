@@ -74,4 +74,4 @@ inotifywait is part of **inotify-tools**, created to provide command-line access
 
 # SEE ALSO
 
-[inotifywatch](/man/inotifywatch)(1), [fswatch](/man/fswatch)(1), [entr](/man/entr)(1), [watch](/man/watch)(1)
+[fswatch](/man/fswatch)(1), [entr](/man/entr)(1), [watch](/man/watch)(1)

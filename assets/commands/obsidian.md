@@ -78,4 +78,4 @@ Obsidian was created by **Shida Li** and **Erica Xu**, who previously worked on 
 
 # SEE ALSO
 
-[vim](/man/vim)(1), [logseq](/man/logseq)(1), [zettlr](/man/zettlr)(1), [joplin](/man/joplin)(1)
+[vim](/man/vim)(1), [joplin](/man/joplin)(1)

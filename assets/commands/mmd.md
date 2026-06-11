@@ -51,5 +51,5 @@ mmd is part of **mtools**, providing mkdir functionality for MS-DOS filesystems 
 
 # SEE ALSO
 
-[mcopy](/man/mcopy)(1), [mdel](/man/mdel)(1), [mdir](/man/mdir)(1)
+[mcopy](/man/mcopy)(1), [mdel](/man/mdel)(1)
 

@@ -89,4 +89,4 @@ Processing was created by **Casey Reas** and **Ben Fry** at MIT Media Lab in 200
 
 # SEE ALSO
 
-[p5](/man/p5)(1), [openframeworks](/man/openframeworks)(1), [java](/man/java)(1)
+[p5](/man/p5)(1), [java](/man/java)(1)

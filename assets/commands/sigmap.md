@@ -59,4 +59,4 @@ Signal numbers are **not portable** across architectures; **SIGUSR1** is **10** 
 
 # SEE ALSO
 
-[signal](/man/signal)(7), [kill](/man/kill)(1), [trap](/man/trap)(1), [execve](/man/execve)(2)
+[kill](/man/kill)(1), [trap](/man/trap)(1)

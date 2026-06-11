@@ -67,4 +67,4 @@ ike-scan was created by **Roy Hills** for IPsec VPN discovery and fingerprinting
 
 # SEE ALSO
 
-[nmap](/man/nmap)(1), [strongswan](/man/strongswan)(8), [ipsec](/man/ipsec)(8)
+[nmap](/man/nmap)(1), [ipsec](/man/ipsec)(8)

@@ -61,5 +61,5 @@ mfterm provides interactive **MIFARE Classic** card manipulation for security re
 
 # SEE ALSO
 
-[mfoc](/man/mfoc)(1), [nfc-list](/man/nfc-list)(1), [libnfc](/man/libnfc)(1)
+[mfoc](/man/mfoc)(1)
 

@@ -76,4 +76,4 @@ osmconvert was developed by **Markus Weber** as a fast alternative to osmosis fo
 
 # SEE ALSO
 
-[osmosis](/man/osmosis)(1), [osm2pgsql](/man/osm2pgsql)(1), [osmfilter](/man/osmfilter)(1)
+[osm2pgsql](/man/osm2pgsql)(1)

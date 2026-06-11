@@ -77,4 +77,4 @@ gpio is part of **WiringPi**, created by **Gordon Henderson** for Raspberry Pi G
 
 # SEE ALSO
 
-[gpiodetect](/man/gpiodetect)(1), [gpioset](/man/gpioset)(1), [gpioget](/man/gpioget)(1), [raspi-gpio](/man/raspi-gpio)(1)
+[raspi-gpio](/man/raspi-gpio)(1)

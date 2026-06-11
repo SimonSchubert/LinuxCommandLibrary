@@ -57,4 +57,4 @@ EasyTAG was started by **Jérôme Couderc** in **2000** and has been maintained 
 
 # SEE ALSO
 
-[id3v2](/man/id3v2)(1), [eyeD3](/man/eyeD3)(1), [kid3](/man/kid3)(1), [picard](/man/picard)(1)
+[id3v2](/man/id3v2)(1), [kid3](/man/kid3)(1), [picard](/man/picard)(1)

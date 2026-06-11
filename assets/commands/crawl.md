@@ -106,4 +106,4 @@ Dungeon Crawl Stone Soup forked from **Linley's Dungeon Crawl** in **2006** when
 
 # SEE ALSO
 
-[nethack](/man/nethack)(6), [angband](/man/angband)(6), [tome](/man/tome)(6), [brogue](/man/brogue)(6)
+[nethack](/man/nethack)(6), [angband](/man/angband)(6), [tome](/man/tome)(6)

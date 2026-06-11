@@ -26,4 +26,4 @@ Requires authentication with at least one Mastodon or Bluesky account. Credentia
 
 # SEE ALSO
 
-[toot](/man/toot)(1), [tut](/man/tut)(1)
+[toot](/man/toot)(1)

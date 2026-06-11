@@ -26,4 +26,4 @@ Swiss army knife bootstrapping 1000+ CLI tools
 
 # SEE ALSO
 
-[homebrew](/man/homebrew)(1), [nix](/man/nix)(1), [asdf](/man/asdf)(1)
+[nix](/man/nix)(1), [asdf](/man/asdf)(1)

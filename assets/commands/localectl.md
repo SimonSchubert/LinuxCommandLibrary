@@ -101,4 +101,4 @@ Setting the console keymap with set-keymap automatically updates the X11 keymap 
 
 # SEE ALSO
 
-[systemd-localed](/man/systemd-localed)(8), [locale](/man/locale)(1), [loadkeys](/man/loadkeys)(1), [locale.conf](/man/locale.conf)(5)
+[locale](/man/locale)(1), [loadkeys](/man/loadkeys)(1)

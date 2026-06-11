@@ -18,5 +18,5 @@ copies PAM images, normalizing format details
 
 # SEE ALSO
 
-[pamtopnm](/man/pamtopnm)(1), [pnmtopam](/man/pnmtopam)(1)
+[pamtopnm](/man/pamtopnm)(1)
 

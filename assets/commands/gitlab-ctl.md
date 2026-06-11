@@ -75,4 +75,4 @@ The `reconfigure` command is used after modifying `gitlab.rb` to apply the new s
 
 # SEE ALSO
 
-[gitlab-backup](/man/gitlab-backup)(1), [gitlab-rake](/man/gitlab-rake)(1)
+[gitlab-backup](/man/gitlab-backup)(1)

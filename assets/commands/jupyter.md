@@ -71,4 +71,4 @@ Jupyter was spun off from **IPython** in 2014, expanding to support multiple lan
 
 # SEE ALSO
 
-[ipython](/man/ipython)(1), [jupytext](/man/jupytext)(1), [nbconvert](/man/nbconvert)(1)
+[ipython](/man/ipython)(1), [jupytext](/man/jupytext)(1)

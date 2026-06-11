@@ -57,4 +57,4 @@ The script runs with elevated privileges and is executed automatically by **avah
 
 # SEE ALSO
 
-[avahi-autoipd](/man/avahi-autoipd)(8), [dhclient-script](/man/dhclient-script)(8), [ip](/man/ip)(8), [ifconfig](/man/ifconfig)(8)
+[avahi-autoipd](/man/avahi-autoipd)(8), [ip](/man/ip)(8), [ifconfig](/man/ifconfig)(8)

@@ -58,5 +58,5 @@ Commits can create new branches, add tags, and include metadata like timestamps 
 
 # SEE ALSO
 
-[fossil-add](/man/fossil-add)(1), [fossil-status](/man/fossil-status)(1)
+[fossil-add](/man/fossil-add)(1)
 

@@ -66,4 +66,4 @@ The **arch-wiki** tool was created to provide quick terminal access to the Arch 
 
 # SEE ALSO
 
-[man](/man/man)(1), [tldr](/man/tldr)(1), [howdoi](/man/howdoi)(1)
+[man](/man/man)(1), [tldr](/man/tldr)(1)

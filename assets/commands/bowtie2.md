@@ -103,4 +103,4 @@ Index must be built before alignment using bowtie2-build. Memory usage scales wi
 
 # SEE ALSO
 
-[bowtie](/man/bowtie)(1), [bwa](/man/bwa)(1), [samtools](/man/samtools)(1), [hisat2](/man/hisat2)(1)
+[bwa](/man/bwa)(1), [samtools](/man/samtools)(1)

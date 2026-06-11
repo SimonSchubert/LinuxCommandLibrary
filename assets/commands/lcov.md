@@ -71,4 +71,4 @@ lcov was created for the **Linux Test Project** to provide graphical code covera
 
 # SEE ALSO
 
-[gcov](/man/gcov)(1), [genhtml](/man/genhtml)(1), [gcovr](/man/gcovr)(1)
+[gcov](/man/gcov)(1), [genhtml](/man/genhtml)(1)

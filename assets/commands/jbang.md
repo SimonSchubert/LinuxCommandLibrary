@@ -71,4 +71,4 @@ jbang was created by **Max Rydahl Andersen** to make Java scripting as easy as P
 
 # SEE ALSO
 
-[java](/man/java)(1), [javac](/man/javac)(1), [groovy](/man/groovy)(1), [kotlin](/man/kotlin)(1)
+[java](/man/java)(1), [javac](/man/javac)(1), [kotlin](/man/kotlin)(1)

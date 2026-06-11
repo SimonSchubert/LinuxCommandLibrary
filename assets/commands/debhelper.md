@@ -105,4 +105,4 @@ Debhelper was created by **Joey Hess** in **1997** to simplify Debian packaging.
 
 # SEE ALSO
 
-[dh](/man/dh)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1), [dh_make](/man/dh_make)(1), [debuild](/man/debuild)(1)
+[dh](/man/dh)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1), [debuild](/man/debuild)(1)

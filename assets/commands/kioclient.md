@@ -120,4 +120,4 @@ The set of usable URL schemes depends on installed KIO worker packages. A scheme
 
 # SEE ALSO
 
-[dolphin](/man/dolphin)(1), [konqueror](/man/konqueror)(1), [kdialog](/man/kdialog)(1), [xdg-open](/man/xdg-open)(1), [gio](/man/gio)(1)
+[dolphin](/man/dolphin)(1), [kdialog](/man/kdialog)(1), [xdg-open](/man/xdg-open)(1), [gio](/man/gio)(1)

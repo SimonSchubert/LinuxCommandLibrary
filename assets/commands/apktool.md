@@ -82,4 +82,4 @@ Rebuilt APKs must be signed before installation. Some protection schemes may pre
 
 # SEE ALSO
 
-[apksigner](/man/apksigner)(1), [jadx](/man/jadx)(1), [smali](/man/smali)(1)
+[apksigner](/man/apksigner)(1), [jadx](/man/jadx)(1)

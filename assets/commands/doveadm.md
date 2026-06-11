@@ -88,4 +88,4 @@ Requires proper Dovecot configuration. Some commands need root or dovecot user. 
 
 # SEE ALSO
 
-[dovecot](/man/dovecot)(1), [dsync](/man/dsync)(1), [postfix](/man/postfix)(1), [mutt](/man/mutt)(1)
+[dovecot](/man/dovecot)(1), [postfix](/man/postfix)(1), [mutt](/man/mutt)(1)

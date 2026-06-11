@@ -79,4 +79,3 @@ This utility was developed for Ubuntu's encrypted home directory feature. It was
 
 # SEE ALSO
 
-[ecryptfs-mount-private](/man/ecryptfs-mount-private)(1), [ecryptfs-umount-private](/man/ecryptfs-umount-private)(1), [ecryptfs-recover-private](/man/ecryptfs-recover-private)(1)

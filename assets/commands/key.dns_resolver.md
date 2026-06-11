@@ -43,4 +43,4 @@ key.dns_resolver is part of the **Linux kernel** keyring utilities, supporting D
 
 # SEE ALSO
 
-[keyctl](/man/keyctl)(1), [dig](/man/dig)(1), [dnssec-keygen](/man/dnssec-keygen)(8)
+[keyctl](/man/keyctl)(1), [dig](/man/dig)(1)

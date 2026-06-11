@@ -80,4 +80,3 @@ Requires KDC access. Tickets expire and need renewal. Keytabs need protection. C
 
 # SEE ALSO
 
-[klist](/man/klist)(1), [kdestroy](/man/kdestroy)(1), [kpasswd](/man/kpasswd)(1), [krb5.conf](/man/krb5.conf)(5)

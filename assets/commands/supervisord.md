@@ -77,4 +77,4 @@ Not a replacement for init systems. Single point of failure. Needs its own monit
 
 # SEE ALSO
 
-[supervisorctl](/man/supervisorctl)(1), [systemd](/man/systemd)(1)
+[supervisorctl](/man/supervisorctl)(1)

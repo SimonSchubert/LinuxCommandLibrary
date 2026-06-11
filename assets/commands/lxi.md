@@ -66,4 +66,3 @@ The lxi-tools project was created to provide open-source tools for communicating
 
 # SEE ALSO
 
-[gpib](/man/gpib)(7), [sigrok-cli](/man/sigrok-cli)(1)

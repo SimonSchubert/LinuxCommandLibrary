@@ -117,4 +117,4 @@ Requires Bash. Task numbers change when tasks are added or deleted. Use archive 
 
 # SEE ALSO
 
-[task](/man/task)(1), [taskwarrior](/man/taskwarrior)(1), [t](/man/t)(1), [remind](/man/remind)(1)
+[task](/man/task)(1), [taskwarrior](/man/taskwarrior)(1), [remind](/man/remind)(1)

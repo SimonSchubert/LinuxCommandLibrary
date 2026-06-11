@@ -96,4 +96,4 @@ Cordova originated as **PhoneGap**, created by Nitobi Software in **2009**. Adob
 
 # SEE ALSO
 
-[ionic](/man/ionic)(1), [npm](/man/npm)(1), [phonegap](/man/phonegap)(1)
+[ionic](/man/ionic)(1), [npm](/man/npm)(1)

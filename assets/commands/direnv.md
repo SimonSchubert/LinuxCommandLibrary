@@ -111,4 +111,4 @@ Shell hook must be added to config for automatic operation. .envrc files must be
 
 # SEE ALSO
 
-[source](/man/source)(1), [env](/man/env)(1), [export](/man/export)(1), [nix-shell](/man/nix-shell)(1), [virtualenv](/man/virtualenv)(1)
+[env](/man/env)(1), [export](/man/export)(1), [nix-shell](/man/nix-shell)(1), [virtualenv](/man/virtualenv)(1)

@@ -103,4 +103,4 @@ Facter was created by **Luke Kanies** as part of the Puppet project at **Puppet 
 
 # SEE ALSO
 
-[puppet](/man/puppet)(8), [ohai](/man/ohai)(1), [ansible](/man/ansible)(1)
+[puppet](/man/puppet)(8), [ansible](/man/ansible)(1)

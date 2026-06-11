@@ -71,5 +71,5 @@ mozillavpn was launched by **Mozilla** in 2020 as a privacy-focused VPN service 
 
 # SEE ALSO
 
-[wg](/man/wg)(1), [wireguard](/man/wireguard)(1), [openvpn](/man/openvpn)(1)
+[wg](/man/wg)(1), [openvpn](/man/openvpn)(1)
 

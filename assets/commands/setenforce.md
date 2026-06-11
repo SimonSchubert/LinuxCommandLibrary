@@ -40,4 +40,4 @@ Requires root privileges. Cannot enable/disable SELinux entirely; only toggles b
 
 # SEE ALSO
 
-[getenforce](/man/getenforce)(8), [semanage-permissive](/man/semanage-permissive)(8), [sestatus](/man/sestatus)(8), [selinux](/man/selinux)(8)
+[getenforce](/man/getenforce)(8), [semanage-permissive](/man/semanage-permissive)(8), [sestatus](/man/sestatus)(8)

@@ -56,4 +56,4 @@ grohtml was developed as part of **GNU groff** to enable web publishing of groff
 
 # SEE ALSO
 
-[groff](/man/groff)(1), [grops](/man/grops)(1), [gropdf](/man/gropdf)(1)
+[groff](/man/groff)(1), [grops](/man/grops)(1)

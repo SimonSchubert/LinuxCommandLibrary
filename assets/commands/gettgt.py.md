@@ -68,4 +68,4 @@ getTGT.py is part of **Impacket**, the Python network protocol toolkit for Activ
 
 # SEE ALSO
 
-[GetNPUsers.py](/man/GetNPUsers.py)(1), [getuserspns.py](/man/getuserspns.py)(1), [kerberos](/man/kerberos)(7), [kinit](/man/kinit)(1)
+[getuserspns.py](/man/getuserspns.py)(1), [kerberos](/man/kerberos)(7), [kinit](/man/kinit)(1)

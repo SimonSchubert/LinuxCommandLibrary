@@ -59,4 +59,4 @@ goobook was created to bridge the gap between command-line email clients like mu
 
 # SEE ALSO
 
-[mutt](/man/mutt)(1), [abook](/man/abook)(1)
+[mutt](/man/mutt)(1)

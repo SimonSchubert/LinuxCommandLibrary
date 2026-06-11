@@ -66,4 +66,4 @@ Canfield solitaire is named after **Richard A. Canfield**, a 19th-century Americ
 
 # SEE ALSO
 
-[solitaire](/man/solitaire)(6), [mille](/man/mille)(6)
+[mille](/man/mille)(6)

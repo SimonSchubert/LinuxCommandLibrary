@@ -79,4 +79,4 @@ recset is part of **GNU recutils** by **Jose E. Marchesi** for managing text dat
 
 # SEE ALSO
 
-[recsel](/man/recsel)(1), [recins](/man/recins)(1), [recdel](/man/recdel)(1), [recutils](/man/recutils)(7)
+[recsel](/man/recsel)(1), [recins](/man/recins)(1), [recdel](/man/recdel)(1)

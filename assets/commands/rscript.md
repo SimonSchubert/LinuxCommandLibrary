@@ -66,4 +66,4 @@ Requires a full R installation. Package dependencies must be installed separatel
 
 # SEE ALSO
 
-[R](/man/R)(1), [littler](/man/littler)(1), [python](/man/python)(1)
+[littler](/man/littler)(1), [python](/man/python)(1)

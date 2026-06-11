@@ -95,4 +95,4 @@ The **blink(1)** was created by **Tod Kurt** of **ThingM** and successfully fund
 
 # SEE ALSO
 
-[usbreset](/man/usbreset)(1), [lsusb](/man/lsusb)(8)
+[lsusb](/man/lsusb)(8)

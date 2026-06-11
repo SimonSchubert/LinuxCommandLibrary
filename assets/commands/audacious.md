@@ -87,4 +87,4 @@ Plugin availability varies by distribution. Some formats require additional code
 
 # SEE ALSO
 
-[mpv](/man/mpv)(1), [vlc](/man/vlc)(1), [rhythmbox](/man/rhythmbox)(1)
+[mpv](/man/mpv)(1), [vlc](/man/vlc)(1)

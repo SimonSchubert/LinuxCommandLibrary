@@ -100,4 +100,4 @@ Graphical output requires Cairo/X11 libraries. Some virtual environments may sho
 
 # SEE ALSO
 
-[hwloc-info](/man/hwloc-info)(1), [hwloc-bind](/man/hwloc-bind)(1), [lscpu](/man/lscpu)(1), [numactl](/man/numactl)(8)
+[lscpu](/man/lscpu)(1), [numactl](/man/numactl)(8)

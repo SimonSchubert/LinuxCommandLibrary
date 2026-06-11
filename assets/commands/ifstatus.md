@@ -37,4 +37,4 @@ ifstatus is part of netifd, the OpenWRT network interface daemon introduced in O
 
 # SEE ALSO
 
-[ubus](/man/ubus)(1), [uci](/man/uci)(1), [netifd](/man/netifd)(8)
+[ubus](/man/ubus)(1), [uci](/man/uci)(1)

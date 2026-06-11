@@ -57,4 +57,4 @@ hd-idle was created as a solution for external drives that lack proper power man
 
 # SEE ALSO
 
-[hdparm](/man/hdparm)(8), [sdparm](/man/sdparm)(8), [smartctl](/man/smartctl)(8)
+[hdparm](/man/hdparm)(8), [smartctl](/man/smartctl)(8)

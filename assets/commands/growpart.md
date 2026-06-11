@@ -48,4 +48,4 @@ growpart is part of the cloud-utils package, developed by Canonical for Ubuntu a
 
 # SEE ALSO
 
-[fdisk](/man/fdisk)(8), [parted](/man/parted)(8), [resize2fs](/man/resize2fs)(8), [xfs_growfs](/man/xfs_growfs)(8)
+[fdisk](/man/fdisk)(8), [parted](/man/parted)(8), [resize2fs](/man/resize2fs)(8)

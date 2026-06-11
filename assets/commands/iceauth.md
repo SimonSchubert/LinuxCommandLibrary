@@ -63,4 +63,4 @@ iceauth is part of **X.Org** for managing ICE protocol authentication, used in X
 
 # SEE ALSO
 
-[xauth](/man/xauth)(1), [xsm](/man/xsm)(1), [Xorg](/man/Xorg)(1)
+[xauth](/man/xauth)(1), [Xorg](/man/Xorg)(1)

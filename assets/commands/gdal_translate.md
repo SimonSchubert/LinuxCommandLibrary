@@ -80,4 +80,4 @@ GDAL was started by **Frank Warmerdam** in **1998** and is now an OSGeo project.
 
 # SEE ALSO
 
-[gdalwarp](/man/gdalwarp)(1), [gdalinfo](/man/gdalinfo)(1), [ogr2ogr](/man/ogr2ogr)(1), [gdal_merge.py](/man/gdal_merge.py)(1)
+[gdalwarp](/man/gdalwarp)(1), [gdalinfo](/man/gdalinfo)(1), [ogr2ogr](/man/ogr2ogr)(1)

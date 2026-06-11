@@ -70,4 +70,4 @@ Requires the shared-mime-info database to be installed. Detection accuracy depen
 
 # SEE ALSO
 
-[file](/man/file)(1), [xdg-mime](/man/xdg-mime)(1), [mimeopen](/man/mimeopen)(1)
+[file](/man/file)(1), [xdg-mime](/man/xdg-mime)(1)

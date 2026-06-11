@@ -85,4 +85,4 @@ Miniflare was created by **Brendan Coll** in **2021** to enable local Cloudflare
 
 # SEE ALSO
 
-[wrangler](/man/wrangler)(1), [workerd](/man/workerd)(1), [cloudflared](/man/cloudflared)(1)
+[wrangler](/man/wrangler)(1), [cloudflared](/man/cloudflared)(1)

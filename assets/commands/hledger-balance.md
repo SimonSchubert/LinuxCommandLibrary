@@ -77,4 +77,4 @@ Balance is a core command in **hledger** for displaying account summaries in pla
 
 # SEE ALSO
 
-[hledger](/man/hledger)(1), [hledger-register](/man/hledger-register)(1), [hledger-incomestatement](/man/hledger-incomestatement)(1)
+[hledger](/man/hledger)(1), [hledger-incomestatement](/man/hledger-incomestatement)(1)

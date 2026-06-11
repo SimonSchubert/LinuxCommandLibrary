@@ -52,5 +52,4 @@ manage Docker system resources and disk usage
 
 # SEE ALSO
 
-[docker-info](/man/docker-info)(1), [docker-volume-prune](/man/docker-volume-prune)(1)
 

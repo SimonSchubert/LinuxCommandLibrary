@@ -74,4 +74,4 @@ Requires a graphical display (X11 or Wayland with XWayland). Commands are sent t
 
 # SEE ALSO
 
-[ssh](/man/ssh)(1), [cssh](/man/cssh)(1), [tmux](/man/tmux)(1)
+[ssh](/man/ssh)(1), [tmux](/man/tmux)(1)

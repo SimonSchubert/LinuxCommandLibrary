@@ -66,4 +66,4 @@ Requires root privileges. Port ranges are specified as **start-end** (e.g., 8080
 
 # SEE ALSO
 
-[semanage](/man/semanage)(8), [ss](/man/ss)(8), [netstat](/man/netstat)(8), [selinux](/man/selinux)(8)
+[semanage](/man/semanage)(8), [ss](/man/ss)(8), [netstat](/man/netstat)(8)

@@ -142,4 +142,4 @@ When PyInstaller is invoked with a spec file, most CLI options have no effect: t
 
 # SEE ALSO
 
-[python](/man/python)(1), [py2exe](/man/py2exe)(1), [cx_freeze](/man/cx_freeze)(1), [nuitka](/man/nuitka)(1), [shiv](/man/shiv)(1)
+[python](/man/python)(1)

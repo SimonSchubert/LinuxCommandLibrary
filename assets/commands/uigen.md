@@ -72,4 +72,4 @@ Renders **React** today; Svelte and Vue renderers are on the roadmap but not yet
 
 # SEE ALSO
 
-[swagger-codegen](/man/swagger-codegen)(1), [openapi-generator](/man/openapi-generator)(1), [redoc](/man/redoc)(1), [npx](/man/npx)(1)
+[swagger-codegen](/man/swagger-codegen)(1), [openapi-generator](/man/openapi-generator)(1), [npx](/man/npx)(1)

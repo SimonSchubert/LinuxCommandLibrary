@@ -84,4 +84,4 @@ nvidia-settings is developed by **NVIDIA Corporation** as the official configura
 
 # SEE ALSO
 
-[nvidia-smi](/man/nvidia-smi)(1), [xrandr](/man/xrandr)(1), [xorg.conf](/man/xorg.conf)(5)
+[nvidia-smi](/man/nvidia-smi)(1), [xrandr](/man/xrandr)(1)

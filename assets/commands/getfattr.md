@@ -60,4 +60,4 @@ Extended attributes became widely available in Linux with kernel 2.6 in the earl
 
 # SEE ALSO
 
-[setfattr](/man/setfattr)(1), [attr](/man/attr)(1), [getfacl](/man/getfacl)(1), [xattr](/man/xattr)(7)
+[setfattr](/man/setfattr)(1), [attr](/man/attr)(1), [getfacl](/man/getfacl)(1)

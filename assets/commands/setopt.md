@@ -81,4 +81,4 @@ Unlike **set -o**, a bad option name does not abort execution of subsequent shel
 
 # SEE ALSO
 
-[unsetopt](/man/unsetopt)(1), [zshoptions](/man/zshoptions)(1), [zshbuiltins](/man/zshbuiltins)(1), [zsh](/man/zsh)(1), [set](/man/set)(1)
+[unsetopt](/man/unsetopt)(1), [zsh](/man/zsh)(1), [set](/man/set)(1)

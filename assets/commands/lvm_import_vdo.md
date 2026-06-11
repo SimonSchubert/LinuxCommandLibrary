@@ -66,4 +66,4 @@ This operation is **irreversible**; the original VDO volume format cannot be res
 
 # SEE ALSO
 
-[lvm](/man/lvm)(8), [lvcreate](/man/lvcreate)(8), [vdo](/man/vdo)(8)
+[lvm](/man/lvm)(8), [lvcreate](/man/lvcreate)(8)

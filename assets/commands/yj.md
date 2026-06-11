@@ -118,4 +118,4 @@ Only **HCL v1** is supported. Modern Terraform files using HCL2 syntax may not p
 
 # SEE ALSO
 
-[jq](/man/jq)(1), [yq](/man/yq)(1), [toml](/man/toml)(1), [python](/man/python)(1)
+[jq](/man/jq)(1), [yq](/man/yq)(1), [python](/man/python)(1)

@@ -71,4 +71,4 @@ Ledger was created by **John Wiegley** as a powerful plain text accounting syste
 
 # SEE ALSO
 
-[hledger](/man/hledger)(1), [beancount](/man/beancount)(1)
+[hledger](/man/hledger)(1)

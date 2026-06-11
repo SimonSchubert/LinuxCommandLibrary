@@ -90,4 +90,4 @@ Error counts persist until cleared. CKSUM errors may indicate controller or cabl
 
 # SEE ALSO
 
-[zpool](/man/zpool)(8), [zpool-events](/man/zpool-events)(8), [zpool-scrub](/man/zpool-scrub)(8), [zfs](/man/zfs)(8)
+[zpool](/man/zpool)(8), [zpool-events](/man/zpool-events)(8), [zfs](/man/zfs)(8)

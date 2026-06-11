@@ -87,4 +87,4 @@ dep was developed by the Go community and released in **2016** as the official e
 
 # SEE ALSO
 
-[go](/man/go)(1), [govendor](/man/govendor)(1), [glide](/man/glide)(1)
+[go](/man/go)(1)

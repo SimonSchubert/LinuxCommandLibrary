@@ -74,4 +74,4 @@ Requires root or equivalent privileges to bind DHCP/TFTP ports. May conflict wit
 
 # SEE ALSO
 
-[dnsmasq](/man/dnsmasq)(1), [ipxe](/man/ipxe)(1), [pxelinux](/man/pxelinux)(1), [tftp](/man/tftp)(1)
+[dnsmasq](/man/dnsmasq)(1), [pxelinux](/man/pxelinux)(1), [tftp](/man/tftp)(1)

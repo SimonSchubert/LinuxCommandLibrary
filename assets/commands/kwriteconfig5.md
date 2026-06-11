@@ -61,4 +61,4 @@ kwriteconfig5 is part of KDE Frameworks 5, complementing kreadconfig5 for readin
 
 # SEE ALSO
 
-[kreadconfig5](/man/kreadconfig5)(1), [kwriteconfig6](/man/kwriteconfig6)(1), [dconf](/man/dconf)(1)
+[kreadconfig5](/man/kreadconfig5)(1), [dconf](/man/dconf)(1)

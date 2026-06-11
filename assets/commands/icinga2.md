@@ -80,4 +80,4 @@ Icinga was forked from **Nagios** in **2009** due to disagreements about project
 
 # SEE ALSO
 
-[nagios](/man/nagios)(8), [prometheus](/man/prometheus)(1), [zabbix](/man/zabbix)(1)
+[nagios](/man/nagios)(8), [prometheus](/man/prometheus)(1)

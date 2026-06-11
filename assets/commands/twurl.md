@@ -63,4 +63,4 @@ Twitter API changes. Developer account needed. Ruby required.
 
 # SEE ALSO
 
-[curl](/man/curl)(1), [httpie](/man/httpie)(1), [twitter](/man/twitter)(1)
+[curl](/man/curl)(1), [httpie](/man/httpie)(1)

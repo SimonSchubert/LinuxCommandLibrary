@@ -55,4 +55,4 @@ SCAP Workbench is part of the **OpenSCAP** ecosystem, developed to provide graph
 
 # SEE ALSO
 
-[oscap](/man/oscap)(8), [openscap](/man/openscap)(8), [lynis](/man/lynis)(8)
+[oscap](/man/oscap)(8), [lynis](/man/lynis)(8)

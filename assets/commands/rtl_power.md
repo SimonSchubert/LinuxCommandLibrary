@@ -102,4 +102,4 @@ Requires an RTL-SDR-compatible DVB-T dongle and the `rtl-sdr` tools. Wider range
 
 # SEE ALSO
 
-[rtl_fm](/man/rtl_fm)(1), [rtl_sdr](/man/rtl_sdr)(1), [rtl_test](/man/rtl_test)(1)
+[rtl_fm](/man/rtl_fm)(1), [rtl_sdr](/man/rtl_sdr)(1)

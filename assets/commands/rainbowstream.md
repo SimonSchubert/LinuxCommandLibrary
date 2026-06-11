@@ -99,4 +99,4 @@ Requires Twitter API access. API changes may break functionality. Rate limits ap
 
 # SEE ALSO
 
-[twurl](/man/twurl)(1), [t](/man/t)(1)
+[twurl](/man/twurl)(1)

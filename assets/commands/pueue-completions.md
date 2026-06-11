@@ -46,4 +46,4 @@ Unlike many Rust CLI tools that print completions to stdout, **pueue completions
 
 # SEE ALSO
 
-[pueue](/man/pueue)(1), [pueued](/man/pueued)(1)
+[pueue](/man/pueue)(1)

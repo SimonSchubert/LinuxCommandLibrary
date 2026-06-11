@@ -18,5 +18,5 @@ creates a visual index of images from a Kodak PhotoCD file
 
 # SEE ALSO
 
-[pcdovtoppm](/man/pcdovtoppm)(1), [hpcdtoppm](/man/hpcdtoppm)(1)
+[pcdovtoppm](/man/pcdovtoppm)(1)
 

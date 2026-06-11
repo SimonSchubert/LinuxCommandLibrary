@@ -42,4 +42,4 @@ Only available in **zsh**; not a POSIX shell feature. Has no effect in non-inter
 
 # SEE ALSO
 
-[zsh](/man/zsh)(1), [bash](/man/bash)(1), [glob](/man/glob)(7)
+[zsh](/man/zsh)(1), [bash](/man/bash)(1)

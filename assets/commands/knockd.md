@@ -56,4 +56,4 @@ Port knocking was introduced as a security-through-obscurity technique in the ea
 
 # SEE ALSO
 
-[knock](/man/knock)(1), [iptables](/man/iptables)(8), [fwknop](/man/fwknop)(8)
+[knock](/man/knock)(1), [iptables](/man/iptables)(8)

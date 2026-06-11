@@ -98,4 +98,4 @@ Amazon EFS was announced at **AWS re:Invent 2015** and became generally availabl
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [mount](/man/mount)(8), [nfs](/man/nfs)(5), [aws-fsx](/man/aws-fsx)(1)
+[aws](/man/aws)(1), [mount](/man/mount)(8)

@@ -57,5 +57,5 @@ archiver for creating and manipulating static library archives
 
 # SEE ALSO
 
-[ar](/man/ar)(1), [llvm-ranlib](/man/llvm-ranlib)(1)
+[ar](/man/ar)(1)
 

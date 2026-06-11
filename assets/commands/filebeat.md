@@ -130,4 +130,4 @@ Filebeat is part of the **Beats** family of lightweight data shippers developed 
 
 # SEE ALSO
 
-[metricbeat](/man/metricbeat)(1), [logstash](/man/logstash)(1), [elasticsearch](/man/elasticsearch)(1), [journalctl](/man/journalctl)(1)
+[logstash](/man/logstash)(1), [elasticsearch](/man/elasticsearch)(1), [journalctl](/man/journalctl)(1)

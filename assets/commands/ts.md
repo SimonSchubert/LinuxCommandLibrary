@@ -97,4 +97,4 @@ ts requires the **moreutils** package, which may not be installed by default. Th
 
 # SEE ALSO
 
-[date](/man/date)(1), [strftime](/man/strftime)(3), [sponge](/man/sponge)(1), [chronic](/man/chronic)(1)
+[date](/man/date)(1), [sponge](/man/sponge)(1), [chronic](/man/chronic)(1)

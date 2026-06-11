@@ -74,4 +74,4 @@ Conversion may not be perfect. Obfuscated code remains obfuscated. Some Dalvik f
 
 # SEE ALSO
 
-[apktool](/man/apktool)(1), [jadx](/man/jadx)(1), [jd-gui](/man/jd-gui)(1), [smali](/man/smali)(1)
+[apktool](/man/apktool)(1), [jadx](/man/jadx)(1)

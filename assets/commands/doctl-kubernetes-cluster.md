@@ -65,4 +65,4 @@ Cluster operations include scaling node pools, managing worker node composition,
 
 # SEE ALSO
 
-[doctl-kubernetes](/man/doctl-kubernetes)(1), [kubectl](/man/kubectl)(1)
+[kubectl](/man/kubectl)(1)

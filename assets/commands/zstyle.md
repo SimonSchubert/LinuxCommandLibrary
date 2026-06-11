@@ -110,4 +110,4 @@ The **zstyle** builtin was introduced as part of the **zsh/zutil** module to sup
 
 # SEE ALSO
 
-[zsh](/man/zsh)(1), [compinit](/man/compinit)(1), [vcs_info](/man/vcs_info)(1)
+[zsh](/man/zsh)(1)

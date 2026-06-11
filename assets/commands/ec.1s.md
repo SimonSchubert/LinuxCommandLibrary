@@ -61,4 +61,4 @@ OpenSSL EC support was added as elliptic curve cryptography became standard for 
 
 # SEE ALSO
 
-[openssl](/man/openssl)(1), [openssl-ecparam](/man/openssl-ecparam)(1)
+[openssl](/man/openssl)(1)

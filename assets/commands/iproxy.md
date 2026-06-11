@@ -61,4 +61,4 @@ Requires **usbmuxd** to be running for USB connections. SSH access requires a ja
 
 # SEE ALSO
 
-[usbmuxd](/man/usbmuxd)(8), [idevice_id](/man/idevice_id)(1), [ideviceinfo](/man/ideviceinfo)(1), [ssh](/man/ssh)(1)
+[idevice_id](/man/idevice_id)(1), [ideviceinfo](/man/ideviceinfo)(1), [ssh](/man/ssh)(1)

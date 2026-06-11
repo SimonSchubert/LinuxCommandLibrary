@@ -82,4 +82,4 @@ npm search has been part of npm since early versions, providing command-line acc
 
 # SEE ALSO
 
-[npm](/man/npm)(1), [npm-view](/man/npm-view)(1), [npm-info](/man/npm-info)(1)
+[npm](/man/npm)(1), [npm-view](/man/npm-view)(1)

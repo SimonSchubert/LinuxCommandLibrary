@@ -72,4 +72,4 @@ Requires appropriate kernel watchdog driver. Improper configuration can cause un
 
 # SEE ALSO
 
-[watchdog.conf](/man/watchdog.conf)(5), [systemd](/man/systemd)(1), [dmesg](/man/dmesg)(1)
+[dmesg](/man/dmesg)(1)

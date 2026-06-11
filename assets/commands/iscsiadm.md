@@ -81,4 +81,4 @@ iscsiadm is part of the Open-iSCSI project, which provides the standard iSCSI im
 
 # SEE ALSO
 
-[iscsid](/man/iscsid)(8), [targetcli](/man/targetcli)(8), [lsblk](/man/lsblk)(8)
+[lsblk](/man/lsblk)(8)

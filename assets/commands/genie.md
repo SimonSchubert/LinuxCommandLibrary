@@ -60,4 +60,3 @@ genie was created by Arkane Systems to address the lack of systemd support in WS
 
 # SEE ALSO
 
-[systemd](/man/systemd)(1), [wsl](/man/wsl)(1)

@@ -43,4 +43,4 @@ dolt version follows standard version reporting conventions, providing essential
 
 # SEE ALSO
 
-[dolt](/man/dolt)(1), [git-version](/man/git-version)(1)
+[dolt](/man/dolt)(1)

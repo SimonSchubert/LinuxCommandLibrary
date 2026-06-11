@@ -95,4 +95,4 @@ The /proc filesystem was introduced in **Unix System V** and extensively expande
 
 # SEE ALSO
 
-[sysfs](/man/sysfs)(5), [ps](/man/ps)(1), [top](/man/top)(1), [proc](/man/proc)(5)
+[ps](/man/ps)(1), [top](/man/top)(1), [proc](/man/proc)(5)

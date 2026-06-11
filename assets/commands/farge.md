@@ -57,4 +57,3 @@ Requires clipboard and notification tools. Works on X11 and Wayland with appropr
 
 # SEE ALSO
 
-[xcolor](/man/xcolor)(1), [gpick](/man/gpick)(1)

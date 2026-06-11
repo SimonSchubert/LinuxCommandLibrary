@@ -48,4 +48,4 @@ This information is essential for planning database deployments and ensuring con
 
 # SEE ALSO
 
-[doctl-databases](/man/doctl-databases)(1), [doctl-databases-create](/man/doctl-databases-create)(1)
+[doctl-databases](/man/doctl-databases)(1)

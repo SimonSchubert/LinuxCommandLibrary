@@ -26,4 +26,4 @@ Terminal-based markdown note manager
 
 # SEE ALSO
 
-[nb](/man/nb)(1), [zk](/man/zk)(1), [wiki-tui](/man/wiki-tui)(1)
+[nb](/man/nb)(1), [wiki-tui](/man/wiki-tui)(1)

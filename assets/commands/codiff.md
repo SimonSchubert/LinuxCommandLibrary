@@ -73,4 +73,4 @@ Input files must contain compatible debug information; stripped binaries produce
 
 # SEE ALSO
 
-[pahole](/man/pahole)(1), [pfunct](/man/pfunct)(1), [pglobal](/man/pglobal)(1), [pdwtags](/man/pdwtags)(1), [readelf](/man/readelf)(1), [objdump](/man/objdump)(1)
+[readelf](/man/readelf)(1), [objdump](/man/objdump)(1)

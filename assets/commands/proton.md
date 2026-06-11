@@ -94,4 +94,4 @@ Proton was announced by **Valve** in **August 2018** as part of the Steam Play i
 
 # SEE ALSO
 
-[wine](/man/wine)(1), [steam](/man/steam)(1), [lutris](/man/lutris)(1), [winetricks](/man/winetricks)(1)
+[wine](/man/wine)(1), [steam](/man/steam)(1), [winetricks](/man/winetricks)(1)

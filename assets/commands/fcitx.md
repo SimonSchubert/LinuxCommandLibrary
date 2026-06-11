@@ -74,4 +74,4 @@ fcitx was created by **Yuking** in 2002 as a Chinese input method for Linux. It 
 
 # SEE ALSO
 
-[fcitx5](/man/fcitx5)(1), [ibus](/man/ibus)(1), [fcitx-configtool](/man/fcitx-configtool)(1)
+[fcitx5](/man/fcitx5)(1), [ibus](/man/ibus)(1)

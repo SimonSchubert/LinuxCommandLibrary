@@ -82,4 +82,4 @@ Can only extract archives, not create them. Use **gcab** to create cabinet files
 
 # SEE ALSO
 
-[gcab](/man/gcab)(1), [unzip](/man/unzip)(1), [7z](/man/7z)(1)
+[unzip](/man/unzip)(1), [7z](/man/7z)(1)

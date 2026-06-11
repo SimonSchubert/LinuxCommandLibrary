@@ -98,4 +98,4 @@ Requires root privileges to adjust system time. Cannot run simultaneously with o
 
 # SEE ALSO
 
-[chronyc](/man/chronyc)(1), [chrony.conf](/man/chrony.conf)(5), [ntpd](/man/ntpd)(8), [timedatectl](/man/timedatectl)(1)
+[chronyc](/man/chronyc)(1), [ntpd](/man/ntpd)(8), [timedatectl](/man/timedatectl)(1)

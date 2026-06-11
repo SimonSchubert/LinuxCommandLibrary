@@ -63,4 +63,4 @@ growisofs was developed by **Andy Polyakov** as part of the **dvd+rw-tools** pac
 
 # SEE ALSO
 
-[mkisofs](/man/mkisofs)(1), [cdrecord](/man/cdrecord)(1), [dvd+rw-format](/man/dvd+rw-format)(1)
+[mkisofs](/man/mkisofs)(1), [cdrecord](/man/cdrecord)(1)

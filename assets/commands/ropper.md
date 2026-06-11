@@ -87,4 +87,4 @@ For authorized security research only. Complex tool requiring exploit knowledge.
 
 # SEE ALSO
 
-[ROPgadget](/man/ROPgadget)(1), [pwntools](/man/pwntools)(1), [radare2](/man/radare2)(1)
+[pwntools](/man/pwntools)(1), [radare2](/man/radare2)(1)

@@ -75,4 +75,4 @@ The configuration file must exist and be valid YAML. When using workers, each wo
 
 # SEE ALSO
 
-[register_new_matrix_user](/man/register_new_matrix_user)(1), [hash_password](/man/hash_password)(1), [systemctl](/man/systemctl)(1)
+[register_new_matrix_user](/man/register_new_matrix_user)(1), [systemctl](/man/systemctl)(1)

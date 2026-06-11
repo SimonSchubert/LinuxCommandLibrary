@@ -66,4 +66,4 @@ Manage GitLab CI/CD pipelines
 
 # SEE ALSO
 
-[glab](/man/glab)(1), [gitlab-ci](/man/gitlab-ci)(1)
+[glab](/man/glab)(1)

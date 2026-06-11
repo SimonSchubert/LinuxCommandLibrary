@@ -82,4 +82,4 @@ Apport refuses to create reports if the package or dependencies are outdated; se
 
 # SEE ALSO
 
-[apport-unpack](/man/apport-unpack)(1), [apport-retrace](/man/apport-retrace)(1), [ubuntu-bug](/man/ubuntu-bug)(1)
+[apport-unpack](/man/apport-unpack)(1), [ubuntu-bug](/man/ubuntu-bug)(1)

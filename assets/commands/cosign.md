@@ -104,4 +104,4 @@ Always sign by digest (@sha256:...) not tag. Multiple signatures can be attached
 
 # SEE ALSO
 
-[docker](/man/docker)(1), [podman](/man/podman)(1), [notation](/man/notation)(1)
+[docker](/man/docker)(1), [podman](/man/podman)(1)

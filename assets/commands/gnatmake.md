@@ -74,4 +74,4 @@ Multiple main files can be specified to build several executables. Dependencies 
 
 # SEE ALSO
 
-[gcc](/man/gcc)(1), [gnatbind](/man/gnatbind)(1), [gnatlink](/man/gnatlink)(1)
+[gcc](/man/gcc)(1)

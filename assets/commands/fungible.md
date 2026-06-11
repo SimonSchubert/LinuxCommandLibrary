@@ -70,4 +70,4 @@ Full keybindings are shown in-app with `?`.
 
 # SEE ALSO
 
-[ledger](/man/ledger)(1), [hledger](/man/hledger)(1), [beancount](/man/beancount)
+[ledger](/man/ledger)(1), [hledger](/man/hledger)(1)

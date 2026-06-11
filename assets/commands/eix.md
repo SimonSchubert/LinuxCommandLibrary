@@ -60,4 +60,4 @@ Gentoo Linux specific. Requires running eix-update to build cache. Cache must be
 
 # SEE ALSO
 
-[emerge](/man/emerge)(1), [equery](/man/equery)(1), [eix-update](/man/eix-update)(1)
+[emerge](/man/emerge)(1), [equery](/man/equery)(1)

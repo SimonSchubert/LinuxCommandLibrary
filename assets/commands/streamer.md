@@ -92,4 +92,4 @@ Requires Video4Linux (V4L/V4L2) compatible capture device. Some distributions pa
 
 # SEE ALSO
 
-[xawtv](/man/xawtv)(1), [ffmpeg](/man/ffmpeg)(1), [v4l2-ctl](/man/v4l2-ctl)(1), [cheese](/man/cheese)(1)
+[ffmpeg](/man/ffmpeg)(1), [v4l2-ctl](/man/v4l2-ctl)(1), [cheese](/man/cheese)(1)

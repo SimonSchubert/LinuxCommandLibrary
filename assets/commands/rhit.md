@@ -38,4 +38,4 @@ Nginx log explorer for the terminal
 
 # SEE ALSO
 
-[goaccess](/man/goaccess)(1), [ngxtop](/man/ngxtop)(1), [broot](/man/broot)(1)
+[goaccess](/man/goaccess)(1), [broot](/man/broot)(1)

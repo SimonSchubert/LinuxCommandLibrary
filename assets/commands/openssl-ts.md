@@ -102,5 +102,5 @@ Requires that the TSA certificate chains to a CA in the supplied trust store. Us
 
 # SEE ALSO
 
-[openssl](/man/openssl)(1), [x509](/man/x509)(1ssl), [gpg](/man/gpg)(1)
+[openssl](/man/openssl)(1), [gpg](/man/gpg)(1)
 

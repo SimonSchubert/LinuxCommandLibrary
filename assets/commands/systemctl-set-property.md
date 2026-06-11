@@ -55,4 +55,4 @@ The **set-property** subcommand enables runtime resource control adjustments, su
 
 # SEE ALSO
 
-[systemctl-show](/man/systemctl-show)(1), [systemctl-revert](/man/systemctl-revert)(1), [systemd.resource-control](/man/systemd.resource-control)(5)
+[systemctl-show](/man/systemctl-show)(1), [systemctl-revert](/man/systemctl-revert)(1)

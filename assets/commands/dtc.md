@@ -63,5 +63,4 @@ The tool includes validation and warning systems to catch common errors in devic
 
 # SEE ALSO
 
-[fdtdump](/man/fdtdump)(1), [fdtget](/man/fdtget)(1)
 

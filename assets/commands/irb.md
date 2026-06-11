@@ -71,4 +71,4 @@ irb has been part of **Ruby** since early versions, created by **Keiju Ishitsuka
 
 # SEE ALSO
 
-[ruby](/man/ruby)(1), [pry](/man/pry)(1), [gem](/man/gem)(1), [bundle](/man/bundle)(1)
+[ruby](/man/ruby)(1), [gem](/man/gem)(1), [bundle](/man/bundle)(1)

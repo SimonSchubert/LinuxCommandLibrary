@@ -72,4 +72,4 @@ Install from the project's GitHub repository using `pipx`:
 
 # SEE ALSO
 
-[claude](/man/claude), [pipx](/man/pipx), [oras](/man/oras)
+[claude](/man/claude), [pipx](/man/pipx)

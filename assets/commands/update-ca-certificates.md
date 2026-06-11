@@ -63,4 +63,4 @@ This command is primarily available on **Debian** and **Ubuntu** based distribut
 
 # SEE ALSO
 
-[openssl](/man/openssl)(1), [c_rehash](/man/c_rehash)(1)
+[openssl](/man/openssl)(1)

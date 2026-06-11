@@ -71,4 +71,4 @@ jinfo has been part of the **JDK** since Java 5, providing runtime configuration
 
 # SEE ALSO
 
-[java](/man/java)(1), [jps](/man/jps)(1), [jstack](/man/jstack)(1), [jcmd](/man/jcmd)(1)
+[java](/man/java)(1), [jps](/man/jps)(1), [jstack](/man/jstack)(1)

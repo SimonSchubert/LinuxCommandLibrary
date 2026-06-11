@@ -105,4 +105,4 @@ Requires Node.js 16+. Generated code uses TypeScript. Some features need additio
 
 # SEE ALSO
 
-[node](/man/node)(1), [npm](/man/npm)(1), [express](/man/express)(1), [typescript](/man/typescript)(1)
+[node](/man/node)(1), [npm](/man/npm)(1), [express](/man/express)(1)

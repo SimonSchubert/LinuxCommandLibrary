@@ -60,4 +60,4 @@ lckdo was part of **moreutils** for running commands under file locks, now repla
 
 # SEE ALSO
 
-[flock](/man/flock)(1), [lockfile](/man/lockfile)(1), [chronic](/man/chronic)(1)
+[flock](/man/flock)(1), [chronic](/man/chronic)(1)

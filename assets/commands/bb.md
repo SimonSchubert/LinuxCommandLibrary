@@ -87,4 +87,4 @@ Not full Clojure (some features missing). Not as fast as compiled code. Limited 
 
 # SEE ALSO
 
-[clojure](/man/clojure)(1), [lein](/man/lein)(1), [janet](/man/janet)(1)
+[clojure](/man/clojure)(1), [lein](/man/lein)(1)

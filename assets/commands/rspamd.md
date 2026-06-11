@@ -101,4 +101,4 @@ Rspamd was created by **Vsevolod Stakhov** starting in 2008 as a fast, extensibl
 
 # SEE ALSO
 
-[rspamadm](/man/rspamadm)(1), [rspamc](/man/rspamc)(1), [spamassassin](/man/spamassassin)(1)
+[rspamadm](/man/rspamadm)(1), [rspamc](/man/rspamc)(1)

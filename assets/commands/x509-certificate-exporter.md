@@ -81,4 +81,4 @@ Developed at **ENIX** (a French infrastructure company) and released under the *
 
 # SEE ALSO
 
-[prometheus](/man/prometheus)(1), [openssl](/man/openssl)(1ssl), [blackbox_exporter](/man/blackbox_exporter)(1), [node_exporter](/man/node_exporter)(1)
+[prometheus](/man/prometheus)(1)

@@ -76,4 +76,4 @@ ID3v2 was developed as an extension to the original ID3v1 tag format, which was 
 
 # SEE ALSO
 
-[mid3v2](/man/mid3v2)(1), [eyeD3](/man/eyeD3)(1), [ffmpeg](/man/ffmpeg)(1)
+[mid3v2](/man/mid3v2)(1), [ffmpeg](/man/ffmpeg)(1)

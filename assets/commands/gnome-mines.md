@@ -43,4 +43,4 @@ Minesweeper originated in the **1960s** and became famous through Microsoft Wind
 
 # SEE ALSO
 
-[gnome-sudoku](/man/gnome-sudoku)(1), [gnome-2048](/man/gnome-2048)(1)
+[gnome-sudoku](/man/gnome-sudoku)(1)

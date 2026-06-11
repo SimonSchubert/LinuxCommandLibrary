@@ -111,4 +111,4 @@ Requires Tailscale account. Control plane is cloud-based. Some features need pai
 
 # SEE ALSO
 
-[wg](/man/wg)(8), [wireguard](/man/wireguard)(8), [ssh](/man/ssh)(1), [openvpn](/man/openvpn)(8)
+[wg](/man/wg)(8), [ssh](/man/ssh)(1), [openvpn](/man/openvpn)(8)

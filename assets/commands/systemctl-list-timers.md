@@ -68,4 +68,4 @@ The **list-timers** subcommand provides an overview of scheduled tasks, replacin
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [systemd.timer](/man/systemd.timer)(5), [crontab](/man/crontab)(1)
+[systemctl](/man/systemctl)(1), [crontab](/man/crontab)(1)

@@ -51,4 +51,4 @@ Requires framebuffer support in kernel. May require root privileges. Incorrect s
 
 # SEE ALSO
 
-[fbi](/man/fbi)(1), [fbterm](/man/fbterm)(1)
+[fbi](/man/fbi)(1)

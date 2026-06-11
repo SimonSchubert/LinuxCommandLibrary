@@ -47,4 +47,4 @@ Command-line file transfer between computers with end-to-end encryption
 
 # SEE ALSO
 
-[croc](/man/croc)(1), [magic-wormhole](/man/magic-wormhole)(1), [scp](/man/scp)(1)
+[croc](/man/croc)(1), [scp](/man/scp)(1)

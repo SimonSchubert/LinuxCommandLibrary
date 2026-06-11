@@ -77,4 +77,4 @@ GetNPUsers.py is part of **Impacket**, a collection of Python classes for workin
 
 # SEE ALSO
 
-[GetUserSPNs.py](/man/GetUserSPNs.py)(1), [secretsdump.py](/man/secretsdump.py)(1), [hashcat](/man/hashcat)(1), [john](/man/john)(1)
+[hashcat](/man/hashcat)(1), [john](/man/john)(1)

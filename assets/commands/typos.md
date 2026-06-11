@@ -142,4 +142,4 @@ The **[default.extend-words]** and **[default.extend-identifiers]** tables eithe
 
 # SEE ALSO
 
-[aspell](/man/aspell)(1), [hunspell](/man/hunspell)(1), [misspell](/man/misspell)(1), [codespell](/man/codespell)(1)
+[aspell](/man/aspell)(1), [hunspell](/man/hunspell)(1), [codespell](/man/codespell)(1)

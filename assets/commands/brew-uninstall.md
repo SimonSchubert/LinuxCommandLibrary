@@ -72,4 +72,4 @@ Cannot uninstall packages not managed by Homebrew. Use --force carefully as it r
 
 # SEE ALSO
 
-[brew](/man/brew)(1), [brew-install](/man/brew-install)(1), [brew-autoremove](/man/brew-autoremove)(1), [brew-deps](/man/brew-deps)(1)
+[brew](/man/brew)(1), [brew-install](/man/brew-install)(1), [brew-autoremove](/man/brew-autoremove)(1)

@@ -74,4 +74,4 @@ jhsdb was introduced in **JDK 9** as a unified tool replacing separate serviceab
 
 # SEE ALSO
 
-[jstack](/man/jstack)(1), [jmap](/man/jmap)(1), [jinfo](/man/jinfo)(1), [jcmd](/man/jcmd)(1)
+[jstack](/man/jstack)(1), [jmap](/man/jmap)(1), [jinfo](/man/jinfo)(1)

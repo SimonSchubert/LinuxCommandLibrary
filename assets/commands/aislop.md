@@ -97,4 +97,4 @@ exclude:
 
 # SEE ALSO
 
-[oxlint](/man/oxlint), [ruff](/man/ruff), [clippy](/man/clippy), [biome](/man/biome)
+[ruff](/man/ruff), [clippy](/man/clippy), [biome](/man/biome)

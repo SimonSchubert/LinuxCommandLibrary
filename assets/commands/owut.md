@@ -138,4 +138,4 @@ owut was created by **efahl** and published on GitHub as an open-source project 
 
 # SEE ALSO
 
-[sysupgrade](/man/sysupgrade)(1), [opkg](/man/opkg)(1)
+[opkg](/man/opkg)(1)

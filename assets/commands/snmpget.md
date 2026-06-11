@@ -108,4 +108,4 @@ Scalar OIDs require a **.0** index suffix; omitting it is a common error. SNMPv1
 
 # SEE ALSO
 
-[snmpwalk](/man/snmpwalk)(1), [snmpset](/man/snmpset)(1), [snmptranslate](/man/snmptranslate)(1), [snmptrap](/man/snmptrap)(1), [snmpd](/man/snmpd)(8)
+[snmpwalk](/man/snmpwalk)(1), [snmpset](/man/snmpset)(1), [snmptranslate](/man/snmptranslate)(1)

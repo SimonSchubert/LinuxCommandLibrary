@@ -44,5 +44,5 @@ Avoid using -pw: on command line as it exposes the password in process lists and
 
 # SEE ALSO
 
-[keepassxc](/man/keepassxc)(1), [keepassxc-cli](/man/keepassxc-cli)(1)
+[keepassxc-cli](/man/keepassxc-cli)(1)
 

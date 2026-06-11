@@ -109,4 +109,4 @@ May require root/sudo for system-wide installation. Some modules require a C com
 
 # SEE ALSO
 
-[cpanm](/man/cpanm)(1), [perl](/man/perl)(1), [perlbrew](/man/perlbrew)(1), [carton](/man/carton)(1), [cpm](/man/cpm)(1)
+[cpanm](/man/cpanm)(1), [perl](/man/perl)(1), [perlbrew](/man/perlbrew)(1), [carton](/man/carton)(1)

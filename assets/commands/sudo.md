@@ -133,4 +133,4 @@ sudo was originally written by **Bob Coggeshall** and **Cliff Spencer** at SUNY 
 
 # SEE ALSO
 
-[su](/man/su)(1), [visudo](/man/visudo)(8), [sudoers](/man/sudoers)(5), [doas](/man/doas)(1)
+[su](/man/su)(1), [visudo](/man/visudo)(8), [doas](/man/doas)(1)

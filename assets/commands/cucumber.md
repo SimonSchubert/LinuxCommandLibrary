@@ -86,4 +86,4 @@ Step definitions must match scenario steps exactly. Shared state between steps c
 
 # SEE ALSO
 
-[rspec](/man/rspec)(1), [behave](/man/behave)(1), [jest](/man/jest)(1), [pytest](/man/pytest)(1)
+[rspec](/man/rspec)(1), [jest](/man/jest)(1), [pytest](/man/pytest)(1)

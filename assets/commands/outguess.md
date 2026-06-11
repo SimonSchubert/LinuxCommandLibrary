@@ -74,4 +74,4 @@ OutGuess was developed by **Niels Provos** as a steganographic tool resistant to
 
 # SEE ALSO
 
-[steghide](/man/steghide)(1), [openstego](/man/openstego)(1), [stegdetect](/man/stegdetect)(1)
+[steghide](/man/steghide)(1), [openstego](/man/openstego)(1)

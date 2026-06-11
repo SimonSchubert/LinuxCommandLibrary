@@ -76,4 +76,4 @@ oapi-codegen was created by **DeepMap, Inc.** to provide high-quality Go code ge
 
 # SEE ALSO
 
-[openapi-generator](/man/openapi-generator)(1), [swagger](/man/swagger)(1), [go-swagger](/man/go-swagger)(1)
+[openapi-generator](/man/openapi-generator)(1)

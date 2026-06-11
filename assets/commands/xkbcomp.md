@@ -76,4 +76,4 @@ Complex syntax requires understanding XKB architecture. Without $DISPLAY, only c
 
 # SEE ALSO
 
-[setxkbmap](/man/setxkbmap)(1), [xkbevd](/man/xkbevd)(1), [xmodmap](/man/xmodmap)(1), [xev](/man/xev)(1)
+[setxkbmap](/man/setxkbmap)(1), [xmodmap](/man/xmodmap)(1), [xev](/man/xev)(1)

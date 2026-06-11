@@ -77,4 +77,4 @@ Requires C compiler installed. Platform-specific extensions not portable. Annota
 
 # SEE ALSO
 
-[python](/man/python)(1), [gcc](/man/gcc)(1), [pip](/man/pip)(1), [numba](/man/numba)(1)
+[python](/man/python)(1), [gcc](/man/gcc)(1), [pip](/man/pip)(1)

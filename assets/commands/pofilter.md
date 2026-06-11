@@ -93,4 +93,4 @@ pofilter is part of the **Translate Toolkit** developed by **Translate House** f
 
 # SEE ALSO
 
-[msgfmt](/man/msgfmt)(1), [pomerge](/man/pomerge)(1), [pocount](/man/pocount)(1), [translate-toolkit](/man/translate-toolkit)(1)
+[msgfmt](/man/msgfmt)(1), [pocount](/man/pocount)(1)

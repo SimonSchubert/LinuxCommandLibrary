@@ -53,4 +53,3 @@ Requires offline access to the Windows partition. Cannot reset Microsoft account
 
 # SEE ALSO
 
-[reged](/man/reged)(1), [hivex](/man/hivex)(3)

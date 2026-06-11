@@ -81,4 +81,4 @@ Streambed needs Postgres logical replication to be enabled (`wal_level = logical
 
 # SEE ALSO
 
-[pg_basebackup](/man/pg_basebackup)(1), [pg_recvlogical](/man/pg_recvlogical)(1), [trino](/man/trino), [duckdb](/man/duckdb)
+[pg_basebackup](/man/pg_basebackup)(1), [pg_recvlogical](/man/pg_recvlogical)(1)

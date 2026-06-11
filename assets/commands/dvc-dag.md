@@ -45,5 +45,4 @@ The default output is ASCII art suitable for terminal viewing. The --dot option 
 
 # SEE ALSO
 
-[dvc-run](/man/dvc-run)(1), [dvc-repro](/man/dvc-repro)(1)
 

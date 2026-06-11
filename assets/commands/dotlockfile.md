@@ -73,4 +73,4 @@ dotlockfile implements the traditional Unix lockfile convention, widely used for
 
 # SEE ALSO
 
-[flock](/man/flock)(1), [lockfile](/man/lockfile)(1)
+[flock](/man/flock)(1)

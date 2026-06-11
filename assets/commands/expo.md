@@ -88,4 +88,4 @@ Expo was created to simplify React Native development, providing a managed workf
 
 # SEE ALSO
 
-[react-native](/man/react-native)(1), [npm](/man/npm)(1), [eas](/man/eas)(1)
+[react-native](/man/react-native)(1), [npm](/man/npm)(1)

@@ -22,5 +22,5 @@ Similar to git status, it provides a clear overview of repository state, indicat
 
 # SEE ALSO
 
-[dolt-add](/man/dolt-add)(1), [dolt-diff](/man/dolt-diff)(1)
+[dolt-add](/man/dolt-add)(1)
 

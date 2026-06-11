@@ -88,4 +88,4 @@ PyTorch was developed by **Facebook AI Research** (FAIR), released in 2016 as a 
 
 # SEE ALSO
 
-[tensorflow](/man/tensorflow)(1), [python](/man/python)(1), [nvidia-smi](/man/nvidia-smi)(1)
+[python](/man/python)(1), [nvidia-smi](/man/nvidia-smi)(1)

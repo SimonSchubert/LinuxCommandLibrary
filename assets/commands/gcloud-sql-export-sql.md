@@ -42,5 +42,4 @@ The tool supports both MySQL and PostgreSQL instances. Exports can target specif
 
 # SEE ALSO
 
-[gcloud-sql-import-sql](/man/gcloud-sql-import-sql)(1), [gcloud-sql](/man/gcloud-sql)(1)
 

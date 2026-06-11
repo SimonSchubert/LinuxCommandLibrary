@@ -84,4 +84,4 @@ recins is part of **GNU recutils** by **Jose E. Marchesi** for text-based databa
 
 # SEE ALSO
 
-[recsel](/man/recsel)(1), [recdel](/man/recdel)(1), [recset](/man/recset)(1), [recutils](/man/recutils)(7)
+[recsel](/man/recsel)(1), [recdel](/man/recdel)(1), [recset](/man/recset)(1)

@@ -101,4 +101,4 @@ The **aticonfig** utility was part of AMD's proprietary Catalyst driver package 
 
 # SEE ALSO
 
-[radeon-profile](/man/radeon-profile)(1), [corectrl](/man/corectrl)(1), [xrandr](/man/xrandr)(1), [nvidia-settings](/man/nvidia-settings)(1)
+[xrandr](/man/xrandr)(1), [nvidia-settings](/man/nvidia-settings)(1)

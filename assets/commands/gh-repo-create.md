@@ -76,4 +76,4 @@ When run interactively without arguments, the command guides you through reposit
 
 # SEE ALSO
 
-[gh-repo](/man/gh-repo)(1), [gh-repo-clone](/man/gh-repo-clone)(1)
+[gh-repo](/man/gh-repo)(1)

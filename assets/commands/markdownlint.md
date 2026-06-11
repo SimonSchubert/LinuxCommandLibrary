@@ -91,4 +91,4 @@ markdownlint was created by **David Anson** as a Node.js library, with the CLI w
 
 # SEE ALSO
 
-[prettier](/man/prettier)(1), [remark](/man/remark)(1), [markdown](/man/markdown)(1), [vale](/man/vale)(1)
+[prettier](/man/prettier)(1), [markdown](/man/markdown)(1), [vale](/man/vale)(1)

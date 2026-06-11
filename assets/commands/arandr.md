@@ -47,4 +47,4 @@ Requires a running X server with XRandR 1.2 or later support. Does not work with
 
 # SEE ALSO
 
-[xrandr](/man/xrandr)(1), [xorg.conf](/man/xorg.conf)(5), [lxrandr](/man/lxrandr)(1)
+[xrandr](/man/xrandr)(1)

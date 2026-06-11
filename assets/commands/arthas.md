@@ -81,4 +81,4 @@ Attaching to production JVMs should be done carefully. Some features may impact 
 
 # SEE ALSO
 
-[jstack](/man/jstack)(1), [jmap](/man/jmap)(1), [jconsole](/man/jconsole)(1)
+[jstack](/man/jstack)(1), [jmap](/man/jmap)(1)

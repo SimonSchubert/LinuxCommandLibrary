@@ -50,4 +50,4 @@ kreadconfig5 is part of the KDE Frameworks, providing command-line access to KDE
 
 # SEE ALSO
 
-[kwriteconfig5](/man/kwriteconfig5)(1), [kreadconfig6](/man/kreadconfig6)(1), [dconf](/man/dconf)(1)
+[kwriteconfig5](/man/kwriteconfig5)(1), [dconf](/man/dconf)(1)

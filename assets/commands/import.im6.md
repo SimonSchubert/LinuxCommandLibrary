@@ -57,4 +57,4 @@ import.im6 is the versioned name for **ImageMagick 6** import, allowing coexiste
 
 # SEE ALSO
 
-[import](/man/import)(1), [convert.im6](/man/convert.im6)(1), [display.im6](/man/display.im6)(1)
+[import](/man/import)(1), [display.im6](/man/display.im6)(1)

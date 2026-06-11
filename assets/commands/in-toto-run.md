@@ -63,4 +63,4 @@ in-toto-run is the primary recording tool in **in-toto**, developed at **NYU** f
 
 # SEE ALSO
 
-[in-toto-record](/man/in-toto-record)(1), [in-toto-verify](/man/in-toto-verify)(1), [in-toto-sign](/man/in-toto-sign)(1)
+[in-toto-record](/man/in-toto-record)(1), [in-toto-sign](/man/in-toto-sign)(1)

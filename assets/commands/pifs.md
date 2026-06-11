@@ -42,7 +42,7 @@ Lookup performance is impractical for real workloads; the project README notes t
 
 # SEE ALSO
 
-[fusermount](/man/fusermount)(1), [mount](/man/mount)(8), [inferencefs](https://github.com/philipl/inferencefs)
+[fusermount](/man/fusermount)(1), [mount](/man/mount)(8)
 
 # RESOURCES
 

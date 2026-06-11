@@ -87,4 +87,4 @@ Bash programmable completion was added to Bash in version **2.04** (2000). The b
 
 # SEE ALSO
 
-[bash](/man/bash)(1), [complete](/man/complete)(builtin), [compgen](/man/compgen)(builtin)
+[bash](/man/bash)(1)

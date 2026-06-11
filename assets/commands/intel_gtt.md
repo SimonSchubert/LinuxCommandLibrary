@@ -47,4 +47,4 @@ intel_gtt is part of **intel-gpu-tools**, developed for low-level debugging of I
 
 # SEE ALSO
 
-[intel_reg_read](/man/intel_reg_read)(1), [intel_gpu_top](/man/intel_gpu_top)(1), [intel_error_decode](/man/intel_error_decode)(1)
+[intel_reg_read](/man/intel_reg_read)(1), [intel_error_decode](/man/intel_error_decode)(1)

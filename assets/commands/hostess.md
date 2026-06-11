@@ -65,5 +65,4 @@ Modifying /etc/hosts requires elevated privileges. Set HOSTESS_PATH to override 
 
 # SEE ALSO
 
-[hosts](/man/hosts)(5)
 

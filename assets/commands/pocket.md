@@ -87,4 +87,4 @@ Pocket CLI clients are community-developed tools for interacting with the **Pock
 
 # SEE ALSO
 
-[curl](/man/curl)(1), [wget](/man/wget)(1), [wallabag](/man/wallabag)(1)
+[curl](/man/curl)(1), [wget](/man/wget)(1)

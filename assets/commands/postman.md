@@ -88,4 +88,4 @@ Postman was founded by **Abhinav Asthana** in 2014, evolving from a Chrome exten
 
 # SEE ALSO
 
-[curl](/man/curl)(1), [httpie](/man/httpie)(1), [insomnia](/man/insomnia)(1)
+[curl](/man/curl)(1), [httpie](/man/httpie)(1)

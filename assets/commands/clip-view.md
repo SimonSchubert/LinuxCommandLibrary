@@ -24,4 +24,4 @@ The tool is particularly handy for scripting workflows that involve the clipboar
 
 # SEE ALSO
 
-[xclip](/man/xclip)(1), [xsel](/man/xsel)(1), [pbpaste](/man/pbpaste)(1)
+[xclip](/man/xclip)(1), [xsel](/man/xsel)(1)

@@ -44,5 +44,5 @@ mounts disk images on iOS devices
 
 # SEE ALSO
 
-[ideviceinfo](/man/ideviceinfo)(1), [idevicedebug](/man/idevicedebug)(1)
+[ideviceinfo](/man/ideviceinfo)(1)
 

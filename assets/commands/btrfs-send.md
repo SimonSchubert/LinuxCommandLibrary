@@ -80,4 +80,4 @@ Source subvolume must be read-only. Parent snapshot must exist on receive side f
 
 # SEE ALSO
 
-[btrfs-receive](/man/btrfs-receive)(8), [btrfs-subvolume](/man/btrfs-subvolume)(8), [btrfs](/man/btrfs)(8), [rsync](/man/rsync)(1)
+[btrfs-subvolume](/man/btrfs-subvolume)(8), [btrfs](/man/btrfs)(8), [rsync](/man/rsync)(1)

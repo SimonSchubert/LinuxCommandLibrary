@@ -74,4 +74,4 @@ htpdate was created by Eddy Vervest as an alternative to NTP for environments wh
 
 # SEE ALSO
 
-[ntpd](/man/ntpd)(8), [chrony](/man/chrony)(8), [systemd-timesyncd](/man/systemd-timesyncd)(8), [date](/man/date)(1)
+[ntpd](/man/ntpd)(8), [chrony](/man/chrony)(8), [date](/man/date)(1)

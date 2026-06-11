@@ -70,4 +70,4 @@ Requires ncurses library. Uses same libpurple plugins as Pidgin. Account configu
 
 # SEE ALSO
 
-[pidgin](/man/pidgin)(1), [irssi](/man/irssi)(1), [weechat](/man/weechat)(1)
+[irssi](/man/irssi)(1), [weechat](/man/weechat)(1)

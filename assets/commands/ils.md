@@ -67,4 +67,4 @@ ils is part of **The Sleuth Kit** by **Brian Carrier** for filesystem forensics.
 
 # SEE ALSO
 
-[fls](/man/fls)(1), [icat](/man/icat)(1), [mmls](/man/mmls)(1)
+[fls](/man/fls)(1), [mmls](/man/mmls)(1)

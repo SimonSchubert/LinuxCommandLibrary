@@ -84,4 +84,4 @@ poster was written by **Jos van Eijndhoven** for creating large format prints fr
 
 # SEE ALSO
 
-[psnup](/man/psnup)(1), [pstops](/man/pstops)(1), [ps2pdf](/man/ps2pdf)(1)
+[ps2pdf](/man/ps2pdf)(1)

@@ -133,4 +133,4 @@ Ktor was created by **JetBrains** and first released in **2017**. It was designe
 
 # SEE ALSO
 
-[gradle](/man/gradle)(1), [kotlin](/man/kotlin)(1), [micronaut](/man/micronaut)(1), [spring-boot](/man/spring-boot)(1)
+[gradle](/man/gradle)(1), [kotlin](/man/kotlin)(1)

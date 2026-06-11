@@ -54,4 +54,4 @@ Requires appropriate kernel support for Thunderbolt. Security level is set in BI
 
 # SEE ALSO
 
-[boltctl](/man/boltctl)(1), [thunderbolt](/man/thunderbolt)(7), [udevadm](/man/udevadm)(8)
+[boltctl](/man/boltctl)(1), [udevadm](/man/udevadm)(8)

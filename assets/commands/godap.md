@@ -85,4 +85,4 @@ Requires LDAP server access. Bind credentials must have appropriate permissions.
 
 # SEE ALSO
 
-[ldapsearch](/man/ldapsearch)(1), [ldapvi](http://www.lichteblau.com/ldapvi/), [jxplorer](http://jxplorer.org/)
+[ldapsearch](/man/ldapsearch)(1)

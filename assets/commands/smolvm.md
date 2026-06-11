@@ -105,4 +105,4 @@ smolvm was created by **Smol Machines** and written in **Rust**. It was develope
 
 # SEE ALSO
 
-[qemu](/man/qemu)(1), [docker](/man/docker)(1), [podman](/man/podman)(1), [firecracker](/man/firecracker)(1)
+[qemu](/man/qemu)(1), [docker](/man/docker)(1), [podman](/man/podman)(1)

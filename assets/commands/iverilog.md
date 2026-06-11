@@ -71,4 +71,4 @@ Icarus Verilog was created by **Stephen Williams** as an open-source alternative
 
 # SEE ALSO
 
-[vvp](/man/vvp)(1), [gtkwave](/man/gtkwave)(1), [verilator](/man/verilator)(1), [yosys](/man/yosys)(1)
+[gtkwave](/man/gtkwave)(1), [verilator](/man/verilator)(1), [yosys](/man/yosys)(1)

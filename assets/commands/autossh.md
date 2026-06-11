@@ -73,4 +73,4 @@ Monitoring ports must be free on both sides. ServerAliveInterval in SSH config c
 
 # SEE ALSO
 
-[ssh](/man/ssh)(1), [systemd](/man/systemd)(1), [tmux](/man/tmux)(1)
+[ssh](/man/ssh)(1), [tmux](/man/tmux)(1)

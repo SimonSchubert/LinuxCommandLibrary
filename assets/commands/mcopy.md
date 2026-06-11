@@ -71,5 +71,5 @@ mcopy is part of **mtools**, a collection of utilities for accessing MS-DOS disk
 
 # SEE ALSO
 
-[mdir](/man/mdir)(1), [mdel](/man/mdel)(1), [mformat](/man/mformat)(1)
+[mdel](/man/mdel)(1)
 

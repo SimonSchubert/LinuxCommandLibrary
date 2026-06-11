@@ -81,4 +81,4 @@ Requires kubectl and access to a Kubernetes cluster. Hot reload performance depe
 
 # SEE ALSO
 
-[kubectl](/man/kubectl)(1), [skaffold](/man/skaffold)(1), [tilt](/man/tilt)(1)
+[kubectl](/man/kubectl)(1), [skaffold](/man/skaffold)(1)

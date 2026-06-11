@@ -66,4 +66,4 @@ The getrandom() system call was added to Linux kernel **3.17** in **2014** by Th
 
 # SEE ALSO
 
-[random](/man/random)(4), [urandom](/man/urandom)(4), [openssl-rand](/man/openssl-rand)(1)
+[random](/man/random)(4), [openssl-rand](/man/openssl-rand)(1)

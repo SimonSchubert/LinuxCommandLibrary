@@ -63,4 +63,4 @@ imgtool is part of **MCUboot**, an open-source secure bootloader for microcontro
 
 # SEE ALSO
 
-[mcuboot](/man/mcuboot)(1), [openssl](/man/openssl)(1)
+[openssl](/man/openssl)(1)

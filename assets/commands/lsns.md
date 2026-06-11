@@ -92,4 +92,4 @@ Non-root users may see incomplete results as some namespace information requires
 
 # SEE ALSO
 
-[nsenter](/man/nsenter)(1), [unshare](/man/unshare)(1), [namespaces](/man/namespaces)(7), [ip-netns](/man/ip-netns)(8)
+[nsenter](/man/nsenter)(1), [unshare](/man/unshare)(1), [namespaces](/man/namespaces)(7)

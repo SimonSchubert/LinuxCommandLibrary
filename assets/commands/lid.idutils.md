@@ -79,4 +79,4 @@ The lid command is part of **GNU idutils**, originally written by Greg McGary. T
 
 # SEE ALSO
 
-[mkid](/man/mkid)(1), [gid](/man/gid)(1), [fid](/man/fid)(1), [grep](/man/grep)(1)
+[mkid](/man/mkid)(1), [grep](/man/grep)(1)

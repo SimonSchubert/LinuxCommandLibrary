@@ -73,4 +73,4 @@ lint was written by **Stephen C. Johnson** at Bell Labs in **1978**. The name co
 
 # SEE ALSO
 
-[splint](/man/splint)(1), [cppcheck](/man/cppcheck)(1), [clang-tidy](/man/clang-tidy)(1), [gcc](/man/gcc)(1)
+[cppcheck](/man/cppcheck)(1), [clang-tidy](/man/clang-tidy)(1), [gcc](/man/gcc)(1)

@@ -89,4 +89,4 @@ pudb was created by **Andreas Klöckner** as a visual alternative to pdb, inspir
 
 # SEE ALSO
 
-[pdb](/man/pdb)(1), [ipdb](/man/ipdb)(1), [gdb](/man/gdb)(1), [python](/man/python)(1)
+[ipdb](/man/ipdb)(1), [gdb](/man/gdb)(1), [python](/man/python)(1)

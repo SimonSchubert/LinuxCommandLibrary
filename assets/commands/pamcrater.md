@@ -36,5 +36,5 @@ generates synthetic terrain with impact craters, useful for creating planetary
 
 # SEE ALSO
 
-[pgmcrater](/man/pgmcrater)(1), [pamgauss](/man/pamgauss)(1)
+[pgmcrater](/man/pgmcrater)(1)
 

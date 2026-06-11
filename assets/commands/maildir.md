@@ -62,4 +62,4 @@ Maildir was developed by **Daniel J. Bernstein** for his **qmail** MTA in **1995
 
 # SEE ALSO
 
-[mbox](/man/mbox)(5), [mutt](/man/mutt)(1), [dovecot](/man/dovecot)(1), [offlineimap](/man/offlineimap)(1)
+[mutt](/man/mutt)(1), [dovecot](/man/dovecot)(1), [offlineimap](/man/offlineimap)(1)

@@ -82,4 +82,4 @@ minimap2 was developed by **Heng Li** (author of BWA) and published in **2018** 
 
 # SEE ALSO
 
-[bwa](/man/bwa)(1), [samtools](/man/samtools)(1), [paftools](/man/paftools)(1), [seqtk](/man/seqtk)(1)
+[bwa](/man/bwa)(1), [samtools](/man/samtools)(1)

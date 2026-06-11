@@ -61,4 +61,4 @@ Inhibitor locks should be used sparingly to avoid blocking normal system operati
 
 # SEE ALSO
 
-[systemd](/man/systemd)(1), [systemctl](/man/systemctl)(1), [loginctl](/man/loginctl)(1)
+[systemctl](/man/systemctl)(1), [loginctl](/man/loginctl)(1)

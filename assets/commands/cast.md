@@ -117,4 +117,4 @@ Requires access to an Ethereum RPC endpoint. Private keys should be handled secu
 
 # SEE ALSO
 
-[forge](/man/forge)(1), [anvil](/man/anvil)(1), [chisel](/man/chisel)(1), [geth](/man/geth)(1)
+[forge](/man/forge)(1), [chisel](/man/chisel)(1), [geth](/man/geth)(1)

@@ -87,4 +87,4 @@ Doom Emacs was created by **Henrik Lissner** starting around **2016**. The doom 
 
 # SEE ALSO
 
-[emacs](/man/emacs)(1), [spacemacs](/man/spacemacs)(1)
+[emacs](/man/emacs)(1)

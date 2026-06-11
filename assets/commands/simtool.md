@@ -34,4 +34,4 @@ macOS only. Requires Xcode with simulator runtimes installed.
 
 # SEE ALSO
 
-[xcrun](/man/xcrun)(1), [ios-deploy](/man/ios-deploy)(1), [idb](/man/idb)(1)
+[xcrun](/man/xcrun)(1)

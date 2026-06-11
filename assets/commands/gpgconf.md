@@ -76,4 +76,4 @@ The tool is commonly used to reload gpg-agent after configuration changes, list 
 
 # SEE ALSO
 
-[gpg](/man/gpg)(1), [gpg-agent](/man/gpg-agent)(1)
+[gpg](/man/gpg)(1)

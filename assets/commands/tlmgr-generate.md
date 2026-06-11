@@ -37,5 +37,5 @@ Regenerate TeX Live configuration files
 
 # SEE ALSO
 
-[tlmgr](/man/tlmgr)(1), [updmap](/man/updmap)(1), [fmtutil](/man/fmtutil)(1)
+[tlmgr](/man/tlmgr)(1)
 

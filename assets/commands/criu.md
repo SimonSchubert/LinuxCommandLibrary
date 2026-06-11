@@ -85,4 +85,4 @@ CRIU was started in **2011** by **Pavel Emelyanov** of the OpenVZ / Virtuozzo te
 
 # SEE ALSO
 
-[runc](/man/runc)(8), [ptrace](/man/ptrace)(2), [setns](/man/setns)(2), [lxc-checkpoint](/man/lxc-checkpoint)(1)
+[runc](/man/runc)(8), [ptrace](/man/ptrace)(2)

@@ -22,4 +22,4 @@ View Spotify listening activity in the terminal
 
 # SEE ALSO
 
-[spotify-tui](/man/spotify-tui)(1), [ncspot](/man/ncspot)(1), [spotify-player](/man/spotify-player)(1)
+[ncspot](/man/ncspot)(1)

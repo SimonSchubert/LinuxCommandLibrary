@@ -106,4 +106,4 @@ Beeline was introduced as the recommended HiveServer2 client to replace the orig
 
 # SEE ALSO
 
-[hive](/man/hive)(1), [spark-sql](/man/spark-sql)(1), [impala-shell](/man/impala-shell)(1), [presto](/man/presto)(1)
+[hive](/man/hive)(1)

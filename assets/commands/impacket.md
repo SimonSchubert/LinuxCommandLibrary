@@ -69,4 +69,4 @@ Impacket was created by **SecureAuth** (now part of Delinea). It's widely used i
 
 # SEE ALSO
 
-[crackmapexec](/man/crackmapexec)(1), [mimikatz](/man/mimikatz)(1), [responder](/man/responder)(1)
+[crackmapexec](/man/crackmapexec)(1)

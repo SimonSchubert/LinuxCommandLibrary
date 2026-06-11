@@ -70,4 +70,4 @@ Development slowed significantly. Many distributions no longer package it. Mono 
 
 # SEE ALSO
 
-[rhythmbox](/man/rhythmbox)(1), [clementine](/man/clementine)(1), [audacious](/man/audacious)(1)
+[clementine](/man/clementine)(1), [audacious](/man/audacious)(1)

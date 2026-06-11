@@ -53,4 +53,4 @@ Immich was created by **Alex Tran** as an open-source alternative to Google Phot
 
 # SEE ALSO
 
-[immich-cli](/man/immich-cli)(1), [docker](/man/docker)(1), [photoprism](/man/photoprism)(1)
+[immich-cli](/man/immich-cli)(1), [docker](/man/docker)(1)

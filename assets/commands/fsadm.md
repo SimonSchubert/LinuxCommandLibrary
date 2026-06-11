@@ -70,4 +70,4 @@ If no size is specified with resize, the filesystem will be grown to fill the en
 
 # SEE ALSO
 
-[lvresize](/man/lvresize)(8), [resize2fs](/man/resize2fs)(8), [xfs_growfs](/man/xfs_growfs)(8), [fsck](/man/fsck)(8)
+[lvresize](/man/lvresize)(8), [resize2fs](/man/resize2fs)(8), [fsck](/man/fsck)(8)

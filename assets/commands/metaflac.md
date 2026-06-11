@@ -101,4 +101,4 @@ metaflac is part of the **FLAC** project created by **Josh Coalson** in **2000**
 
 # SEE ALSO
 
-[flac](/man/flac)(1), [ffmpeg](/man/ffmpeg)(1), [mid3v2](/man/mid3v2)(1), [eyeD3](/man/eyeD3)(1)
+[flac](/man/flac)(1), [ffmpeg](/man/ffmpeg)(1), [mid3v2](/man/mid3v2)(1)

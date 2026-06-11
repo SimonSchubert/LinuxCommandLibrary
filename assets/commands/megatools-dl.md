@@ -55,4 +55,4 @@ Mega.nz link formats change occasionally; ensure megatools is up to date. Large 
 
 # SEE ALSO
 
-[megatools](/man/megatools)(1), [wget](/man/wget)(1), [curl](/man/curl)(1), [aria2c](/man/aria2c)(1)
+[wget](/man/wget)(1), [curl](/man/curl)(1), [aria2c](/man/aria2c)(1)

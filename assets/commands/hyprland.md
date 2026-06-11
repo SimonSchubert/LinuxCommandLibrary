@@ -87,4 +87,4 @@ Hyprland was created by **vaxerski** in **2022** as a feature-rich Wayland compo
 
 # SEE ALSO
 
-[sway](/man/sway)(1), [waybar](/man/waybar)(1), [wlroots](/man/wlroots)(7)
+[sway](/man/sway)(1), [waybar](/man/waybar)(1)

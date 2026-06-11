@@ -80,4 +80,3 @@ Requires root privileges for most operations. The **test** command simulates eve
 
 # SEE ALSO
 
-[udev](/man/udev)(7), [systemd-udevd](/man/systemd-udevd)(8), [udev.rules](/man/udev.rules)(7)

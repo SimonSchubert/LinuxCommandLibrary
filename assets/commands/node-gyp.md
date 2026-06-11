@@ -88,4 +88,4 @@ node-gyp was created by **Nathan Rajlich** (TooTallNate) to simplify building na
 
 # SEE ALSO
 
-[npm](/man/npm)(1), [node](/man/node)(1), [cmake-js](/man/cmake-js)(1)
+[npm](/man/npm)(1), [node](/man/node)(1)

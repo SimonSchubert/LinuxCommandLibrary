@@ -71,4 +71,4 @@ Gova was created by **NV404** and published at **github.com/NV404/gova** with do
 
 # SEE ALSO
 
-[go](/man/go)(1), [wails](/man/wails)(1), [fyne](/man/fyne)(1)
+[go](/man/go)(1)

@@ -94,4 +94,4 @@ Requires key access for decryption. Multiple keys recommended for redundancy. Ke
 
 # SEE ALSO
 
-[age](/man/age)(1), [gpg](/man/gpg)(1), [vault](/man/vault)(1), [sealed-secrets](/man/sealed-secrets)(1)
+[age](/man/age)(1), [gpg](/man/gpg)(1), [vault](/man/vault)(1)

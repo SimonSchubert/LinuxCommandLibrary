@@ -22,4 +22,4 @@ This command is deprecated. Use **resolvectl** instead for DNS resolution and ma
 
 # SEE ALSO
 
-[resolvectl](/man/resolvectl)(1), [systemd-resolved](/man/systemd-resolved)(8)
+[resolvectl](/man/resolvectl)(1)

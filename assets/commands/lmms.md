@@ -68,5 +68,5 @@ LMMS (Linux MultiMedia Studio) was created to provide a free, cross-platform alt
 
 # SEE ALSO
 
-[ardour](/man/ardour)(1), [audacity](/man/audacity)(1), [jack](/man/jack)(1)
+[ardour](/man/ardour)(1), [audacity](/man/audacity)(1)
 

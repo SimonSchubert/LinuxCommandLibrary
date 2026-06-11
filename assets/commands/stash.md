@@ -87,4 +87,4 @@ Stash was started in **2018** by **WithoutPants** as an open-source alternative 
 
 # SEE ALSO
 
-[ffmpeg](/man/ffmpeg)(1), [jellyfin](/man/jellyfin)(1), [plex](/man/plex)(1)
+[ffmpeg](/man/ffmpeg)(1)

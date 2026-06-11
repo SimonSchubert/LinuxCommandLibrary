@@ -66,4 +66,4 @@ For password generation, base64 encoding includes characters (+, /, =) that may 
 
 # SEE ALSO
 
-[openssl](/man/openssl)(1), [dd](/man/dd)(1), [head](/man/head)(1), [/dev/urandom](/man/urandom)(4)
+[openssl](/man/openssl)(1), [dd](/man/dd)(1), [head](/man/head)(1)

@@ -26,4 +26,4 @@ Requires an NVIDIA Jetson board. May need elevated privileges for full sensor ac
 
 # SEE ALSO
 
-[nvtop](/man/nvtop)(1), [htop](/man/htop)(1), [jtop](/man/jtop)(1)
+[nvtop](/man/nvtop)(1), [htop](/man/htop)(1)

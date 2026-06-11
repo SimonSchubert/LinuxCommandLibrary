@@ -59,4 +59,4 @@ Requires collectd to be installed. Configuration issues in collectd will cause r
 
 # SEE ALSO
 
-[collectd](/man/collectd)(1), [collectdctl](/man/collectdctl)(1), [systemd](/man/systemd)(1)
+[collectd](/man/collectd)(1)

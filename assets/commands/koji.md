@@ -74,4 +74,4 @@ Koji was developed by Red Hat and released in **2007** as the build system for F
 
 # SEE ALSO
 
-[mock](/man/mock)(1), [rpmbuild](/man/rpmbuild)(8), [fedpkg](/man/fedpkg)(1)
+[mock](/man/mock)(1), [rpmbuild](/man/rpmbuild)(8)

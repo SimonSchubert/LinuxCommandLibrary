@@ -30,4 +30,4 @@ Static analysis tool for GitHub Actions security
 
 # SEE ALSO
 
-[actionlint](/man/actionlint)(1), [semgrep](/man/semgrep)(1)
+[semgrep](/man/semgrep)(1)

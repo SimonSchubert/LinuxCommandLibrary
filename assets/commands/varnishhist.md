@@ -84,4 +84,4 @@ Requires access to Varnish shared memory (typically needs appropriate group memb
 
 # SEE ALSO
 
-[varnishd](/man/varnishd)(1), [varnishstat](/man/varnishstat)(1), [varnishlog](/man/varnishlog)(1), [varnishtop](/man/varnishtop)(1)
+[varnishd](/man/varnishd)(1), [varnishstat](/man/varnishstat)(1), [varnishlog](/man/varnishlog)(1)

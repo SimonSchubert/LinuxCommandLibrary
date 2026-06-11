@@ -76,4 +76,4 @@ X11 screen lockers have fundamental security limitations. Consider xsecurelock f
 
 # SEE ALSO
 
-[xscreensaver](/man/xscreensaver)(1), [xsecurelock](/man/xsecurelock)(1), [physlock](/man/physlock)(1), [i3lock](/man/i3lock)(1)
+[xscreensaver](/man/xscreensaver)(1), [physlock](/man/physlock)(1), [i3lock](/man/i3lock)(1)

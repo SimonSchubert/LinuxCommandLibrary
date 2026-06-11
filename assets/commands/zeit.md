@@ -30,4 +30,4 @@ Simple command-line tool for tracking time
 
 # SEE ALSO
 
-[watson](/man/watson)(1), [timewarrior](/man/timewarrior)(1)
+[watson](/man/watson)(1)

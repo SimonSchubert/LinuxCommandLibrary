@@ -48,4 +48,4 @@ Snap was developed by **Canonical** as part of Ubuntu, first introduced in **Ubu
 
 # SEE ALSO
 
-[snap](/man/snap)(8), [snapcraft](/man/snapcraft)(1), [flatpak](/man/flatpak)(1), [apparmor](/man/apparmor)(7)
+[snap](/man/snap)(8), [flatpak](/man/flatpak)(1), [apparmor](/man/apparmor)(7)

@@ -48,5 +48,5 @@ The target process must be running with the same user or you need root privilege
 
 # SEE ALSO
 
-[jps](/man/jps)(1), [jmap](/man/jmap)(1), [jcmd](/man/jcmd)(1)
+[jps](/man/jps)(1), [jmap](/man/jmap)(1)
 

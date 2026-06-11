@@ -64,4 +64,4 @@ Detection relies on various heuristics and may not detect all virtualization typ
 
 # SEE ALSO
 
-[systemd-nspawn](/man/systemd-nspawn)(1), [systemd](/man/systemd)(1), [machinectl](/man/machinectl)(1)
+[systemd-nspawn](/man/systemd-nspawn)(1), [machinectl](/man/machinectl)(1)

@@ -22,4 +22,4 @@ Dead simple TUI task timer
 
 # SEE ALSO
 
-[watson](/man/watson)(1), [timewarrior](/man/timewarrior)(1), [pomo](/man/pomo)(1)
+[watson](/man/watson)(1), [pomo](/man/pomo)(1)

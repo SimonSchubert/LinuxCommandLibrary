@@ -95,4 +95,4 @@ Refer was written by **Mike Lesk** at Bell Labs in the 1970s as part of the Unix
 
 # SEE ALSO
 
-[groff](/man/groff)(1), [troff](/man/troff)(1), [sortbib](/man/sortbib)(1), [lookbib](/man/lookbib)(1)
+[groff](/man/groff)(1), [troff](/man/troff)(1), [lookbib](/man/lookbib)(1)

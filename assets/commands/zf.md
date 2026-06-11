@@ -26,4 +26,4 @@ Fuzzy finder optimized for filtering file paths
 
 # SEE ALSO
 
-[fzf](/man/fzf)(1), [skim](/man/skim)(1), [fzy](/man/fzy)(1)
+[fzf](/man/fzf)(1)

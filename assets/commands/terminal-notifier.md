@@ -83,4 +83,4 @@ terminal-notifier was created by **Eloy Durán** (julienXX) as an open-source to
 
 # SEE ALSO
 
-[osascript](/man/osascript)(1), [notify-send](/man/notify-send)(1)
+[notify-send](/man/notify-send)(1)

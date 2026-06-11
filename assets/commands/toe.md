@@ -70,4 +70,4 @@ Only lists entries in terminfo format, not old termcap files. The default direct
 
 # SEE ALSO
 
-[tic](/man/tic)(1), [infocmp](/man/infocmp)(1), [tput](/man/tput)(1), [terminfo](/man/terminfo)(5), [tset](/man/tset)(1)
+[tic](/man/tic)(1), [infocmp](/man/infocmp)(1), [tput](/man/tput)(1), [tset](/man/tset)(1)

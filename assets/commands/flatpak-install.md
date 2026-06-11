@@ -94,4 +94,4 @@ Flatpak was developed by Red Hat's Alexander Larsson, with the first stable rele
 
 # SEE ALSO
 
-[flatpak](/man/flatpak)(1), [flatpak-uninstall](/man/flatpak-uninstall)(1), [flatpak-update](/man/flatpak-update)(1), [flatpak-list](/man/flatpak-list)(1), [flatpak-run](/man/flatpak-run)(1)
+[flatpak](/man/flatpak)(1), [flatpak-update](/man/flatpak-update)(1), [flatpak-run](/man/flatpak-run)(1)

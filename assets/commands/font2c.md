@@ -65,4 +65,4 @@ font2c tools exist in various forms for embedded development, converting vector 
 
 # SEE ALSO
 
-[fontforge](/man/fontforge)(1), [otf2bdf](/man/otf2bdf)(1)
+[fontforge](/man/fontforge)(1)

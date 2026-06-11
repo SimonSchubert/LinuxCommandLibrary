@@ -44,5 +44,4 @@ This two-file approach allows Git to track data versions (via .dvc file) without
 
 # SEE ALSO
 
-[dvc-push](/man/dvc-push)(1), [dvc-pull](/man/dvc-pull)(1)
 

@@ -88,4 +88,4 @@ qdel is part of the **PBS** (Portable Batch System) originally developed at NASA
 
 # SEE ALSO
 
-[qsub](/man/qsub)(1), [qstat](/man/qstat)(1), [qhold](/man/qhold)(1), [scancel](/man/scancel)(1)
+[qsub](/man/qsub)(1), [qstat](/man/qstat)(1), [scancel](/man/scancel)(1)

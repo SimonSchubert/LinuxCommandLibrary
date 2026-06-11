@@ -92,4 +92,4 @@ Requires Ruby knowledge for recipe development. Chef Server setup needed for cen
 
 # SEE ALSO
 
-[knife](/man/knife)(1), [kitchen](/man/kitchen)(1), [inspec](/man/inspec)(1), [ansible](/man/ansible)(1), [puppet](/man/puppet)(1)
+[knife](/man/knife)(1), [ansible](/man/ansible)(1), [puppet](/man/puppet)(1)

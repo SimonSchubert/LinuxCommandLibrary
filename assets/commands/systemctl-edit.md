@@ -57,4 +57,4 @@ The **edit** subcommand was added to **systemctl** to simplify unit customizatio
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [systemd.unit](/man/systemd.unit)(5), [systemctl-revert](/man/systemctl-revert)(1)
+[systemctl](/man/systemctl)(1), [systemctl-revert](/man/systemctl-revert)(1)

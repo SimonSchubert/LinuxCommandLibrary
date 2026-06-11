@@ -78,4 +78,4 @@ Only switches versions - use ruby-install to install rubies. Does not override c
 
 # SEE ALSO
 
-[ruby-install](/man/ruby-install)(1), [rbenv](/man/rbenv)(1), [rvm](/man/rvm)(1)
+[rbenv](/man/rbenv)(1), [rvm](/man/rvm)(1)

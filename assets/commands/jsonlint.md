@@ -84,4 +84,4 @@ Various jsonlint implementations exist. The concept originated from JavaScript l
 
 # SEE ALSO
 
-[jq](/man/jq)(1), [python-json](/man/python-json)(1), [ajv](/man/ajv)(1)
+[jq](/man/jq)(1)

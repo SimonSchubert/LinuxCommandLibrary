@@ -70,4 +70,4 @@ handlr was created as a Rust-based alternative to the xdg-utils suite, focusing 
 
 # SEE ALSO
 
-[xdg-open](/man/xdg-open)(1), [xdg-mime](/man/xdg-mime)(1), [mimeopen](/man/mimeopen)(1)
+[xdg-open](/man/xdg-open)(1), [xdg-mime](/man/xdg-mime)(1)

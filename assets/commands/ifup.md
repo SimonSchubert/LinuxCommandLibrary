@@ -46,4 +46,4 @@ ifup is part of the ifupdown package, the traditional network interface configur
 
 # SEE ALSO
 
-[ifdown](/man/ifdown)(8), [ip](/man/ip)(8), [interfaces](/man/interfaces)(5)
+[ifdown](/man/ifdown)(8), [ip](/man/ip)(8)

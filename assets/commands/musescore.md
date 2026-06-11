@@ -68,5 +68,5 @@ MuseScore was first released in **2002** as open-source alternative to commercia
 
 # SEE ALSO
 
-[mscore](/man/mscore)(1), [lilypond](/man/lilypond)(1), [abc2midi](/man/abc2midi)(1)
+[mscore](/man/mscore)(1), [lilypond](/man/lilypond)(1)
 

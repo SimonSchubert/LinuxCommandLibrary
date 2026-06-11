@@ -73,4 +73,4 @@ Because circuits are executed in the cloud, **circuit data leaves the local mach
 
 # SEE ALSO
 
-[python](/man/python)(1), [qiskit](/man/qiskit)(1), [pip](/man/pip)(1)
+[python](/man/python)(1), [pip](/man/pip)(1)

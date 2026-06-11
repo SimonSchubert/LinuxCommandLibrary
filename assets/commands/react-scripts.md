@@ -92,4 +92,4 @@ react-scripts was created by **Facebook** as part of Create React App (2016) to 
 
 # SEE ALSO
 
-[create-react-app](/man/create-react-app)(1), [npm](/man/npm)(1), [vite](/man/vite)(1)
+[npm](/man/npm)(1), [vite](/man/vite)(1)

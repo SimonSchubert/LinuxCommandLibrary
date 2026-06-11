@@ -40,5 +40,5 @@ Keep the key file secure and backed up. Losing the key means losing access to ba
 
 # SEE ALSO
 
-[tarsnap](/man/tarsnap)(1), [tarsnap-keymgmt](/man/tarsnap-keymgmt)(1)
+[tarsnap](/man/tarsnap)(1)
 

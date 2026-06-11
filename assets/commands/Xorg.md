@@ -92,4 +92,4 @@ X.Org Server is the successor to XFree86 and the reference implementation of the
 
 # SEE ALSO
 
-[startx](/man/startx)(1), [xinit](/man/xinit)(1), [xrandr](/man/xrandr)(1), [xorg.conf](/man/xorg.conf)(5)
+[startx](/man/startx)(1), [xinit](/man/xinit)(1), [xrandr](/man/xrandr)(1)

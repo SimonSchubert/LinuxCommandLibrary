@@ -90,4 +90,4 @@ netctl was developed for **Arch Linux** as a replacement for netcfg, using syste
 
 # SEE ALSO
 
-[networkctl](/man/networkctl)(1), [ip](/man/ip)(8), [NetworkManager](/man/NetworkManager)(8), [systemd-networkd](/man/systemd-networkd)(8)
+[networkctl](/man/networkctl)(1), [ip](/man/ip)(8), [NetworkManager](/man/NetworkManager)(8)

@@ -76,4 +76,4 @@ Meilisearch was created by **Clément Renault** in **2018** as an open-source, e
 
 # SEE ALSO
 
-[elasticsearch](/man/elasticsearch)(1), [typesense](/man/typesense)(1), [sonic](/man/sonic)(1)
+[elasticsearch](/man/elasticsearch)(1)

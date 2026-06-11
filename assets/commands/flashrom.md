@@ -90,4 +90,4 @@ Flashrom originated from the **LinuxBIOS** (now coreboot) project around **2005*
 
 # SEE ALSO
 
-[dd](/man/dd)(1), [hexdump](/man/hexdump)(1), [coreboot](https://coreboot.org)
+[dd](/man/dd)(1), [hexdump](/man/hexdump)(1)

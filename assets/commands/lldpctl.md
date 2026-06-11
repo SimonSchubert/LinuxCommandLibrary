@@ -47,4 +47,4 @@ LLDP was standardized as IEEE 802.1AB in **2005** as a vendor-neutral discovery 
 
 # SEE ALSO
 
-[lldpd](/man/lldpd)(8), [tcpdump](/man/tcpdump)(8)
+[tcpdump](/man/tcpdump)(8)

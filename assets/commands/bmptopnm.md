@@ -37,4 +37,4 @@ Some BMP variants may not be fully supported. For compressed BMP files, decompre
 
 # SEE ALSO
 
-[pnmtobmp](/man/pnmtobmp)(1), [bmptoppm](/man/bmptoppm)(1), [pnmtopng](/man/pnmtopng)(1), [netpbm](/man/netpbm)(1)
+[bmptoppm](/man/bmptoppm)(1), [pnmtopng](/man/pnmtopng)(1), [netpbm](/man/netpbm)(1)

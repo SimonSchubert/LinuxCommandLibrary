@@ -93,4 +93,4 @@ Requires root to change other users' passwords. PAM modules may enforce addition
 
 # SEE ALSO
 
-[chage](/man/chage)(1), [usermod](/man/usermod)(8), [shadow](/man/shadow)(5), [login.defs](/man/login.defs)(5)
+[chage](/man/chage)(1), [usermod](/man/usermod)(8), [login.defs](/man/login.defs)(5)

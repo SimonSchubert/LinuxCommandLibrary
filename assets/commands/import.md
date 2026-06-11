@@ -74,4 +74,4 @@ import is part of the **ImageMagick** suite, created by **John Cristy** in 1987 
 
 # SEE ALSO
 
-[convert](/man/convert)(1), [display](/man/display)(1), [scrot](/man/scrot)(1), [xwd](/man/xwd)(1)
+[convert](/man/convert)(1), [display](/man/display)(1), [scrot](/man/scrot)(1)

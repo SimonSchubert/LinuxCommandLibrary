@@ -53,5 +53,5 @@ disassembles
 
 # SEE ALSO
 
-[monop](/man/monop)(1), [ilasm](/man/ilasm)(1)
+[monop](/man/monop)(1)
 

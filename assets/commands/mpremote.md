@@ -79,5 +79,5 @@ mpremote was developed by the **MicroPython** project as the official device man
 
 # SEE ALSO
 
-[rshell](/man/rshell)(1), [ampy](/man/ampy)(1), [python](/man/python)(1)
+[python](/man/python)(1)
 

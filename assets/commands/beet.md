@@ -86,4 +86,4 @@ Initial library import of large collections can be time-consuming. MusicBrainz q
 
 # SEE ALSO
 
-[id3v2](/man/id3v2)(1), [mp3info](/man/mp3info)(1), [puddletag](/man/puddletag)(1)
+[id3v2](/man/id3v2)(1), [mp3info](/man/mp3info)(1)

@@ -74,4 +74,4 @@ krunvm was created by **Red Hat** as a simple tool for managing microVMs using l
 
 # SEE ALSO
 
-[podman](/man/podman)(1), [docker](/man/docker)(1), [firecracker](/man/firecracker)(1)
+[podman](/man/podman)(1), [docker](/man/docker)(1)

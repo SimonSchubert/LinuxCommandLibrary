@@ -43,4 +43,4 @@ Primarily used for repository maintenance and comparison. Not needed for normal 
 
 # SEE ALSO
 
-[apt-ftparchive](/man/apt-ftparchive)(1), [dpkg-scanpackages](/man/dpkg-scanpackages)(1)
+[apt-ftparchive](/man/apt-ftparchive)(1)

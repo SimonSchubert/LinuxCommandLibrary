@@ -135,4 +135,4 @@ websocat was created by **Vitaly Shukela** (vi) and first released around **2017
 
 # SEE ALSO
 
-[nc](/man/nc)(1), [curl](/man/curl)(1), [socat](/man/socat)(1), [wscat](/man/wscat)(1)
+[nc](/man/nc)(1), [curl](/man/curl)(1), [socat](/man/socat)(1)

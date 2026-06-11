@@ -64,4 +64,4 @@ Requires an e2e testing framework to be installed and configured. Protractor was
 
 # SEE ALSO
 
-[ng](/man/ng)(1), [ng-test](/man/ng-test)(1), [cypress](/man/cypress)(1), [playwright](/man/playwright)(1)
+[ng](/man/ng)(1), [ng-test](/man/ng-test)(1), [playwright](/man/playwright)(1)

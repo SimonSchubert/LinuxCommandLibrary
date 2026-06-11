@@ -74,4 +74,4 @@ Some commands require graphviz (dot) for visualization. Boot timing data is only
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [journalctl](/man/journalctl)(1), [systemd](/man/systemd)(1), [bootctl](/man/bootctl)(1)
+[systemctl](/man/systemctl)(1), [journalctl](/man/journalctl)(1), [bootctl](/man/bootctl)(1)

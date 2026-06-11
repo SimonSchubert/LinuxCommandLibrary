@@ -56,4 +56,4 @@ fprind works with **libfprint** and fprintd to provide fingerprint authenticatio
 
 # SEE ALSO
 
-[fprintd](/man/fprintd)(1), [pam-fprint](/man/pam-fprint)(8)
+[fprintd](/man/fprintd)(1)

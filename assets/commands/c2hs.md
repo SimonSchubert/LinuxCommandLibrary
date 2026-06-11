@@ -76,4 +76,4 @@ Generated code is BSD licensed. Requires C header files to be accessible. Comple
 
 # SEE ALSO
 
-[hsc2hs](/man/hsc2hs)(1), [ghc](/man/ghc)(1), [cabal](/man/cabal)(1)
+[ghc](/man/ghc)(1), [cabal](/man/cabal)(1)

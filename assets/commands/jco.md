@@ -67,4 +67,4 @@ jco was created by the **Bytecode Alliance** as JavaScript tooling for the WebAs
 
 # SEE ALSO
 
-[wasm-tools](/man/wasm-tools)(1), [wasmtime](/man/wasmtime)(1), [wasm-bindgen](/man/wasm-bindgen)(1)
+[wasmtime](/man/wasmtime)(1)

@@ -106,4 +106,4 @@ Carton was created by **Tatsuhiko Miyagawa** (also creator of Plack/PSGI and cpa
 
 # SEE ALSO
 
-[cpanm](/man/cpanm)(1), [cpan](/man/cpan)(1), [plackup](/man/plackup)(1)
+[cpanm](/man/cpanm)(1), [cpan](/man/cpan)(1)

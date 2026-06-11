@@ -57,4 +57,4 @@ identify.im6 is part of **ImageMagick 6**, maintained separately from ImageMagic
 
 # SEE ALSO
 
-[identify](/man/identify)(1), [convert.im6](/man/convert.im6)(1), [mogrify.im6](/man/mogrify.im6)(1)
+[identify](/man/identify)(1), [mogrify.im6](/man/mogrify.im6)(1)

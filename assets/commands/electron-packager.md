@@ -64,5 +64,5 @@ Package Electron apps for distribution
 
 # SEE ALSO
 
-[electron-builder](/man/electron-builder)(1), [electron](/man/electron)(1)
+[electron](/man/electron)(1)
 

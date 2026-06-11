@@ -46,4 +46,4 @@ When called without the --body flag, the command opens your default editor for c
 
 # SEE ALSO
 
-[gh-pr](/man/gh-pr)(1), [gh-issue-comment](/man/gh-issue-comment)(1)
+[gh-pr](/man/gh-pr)(1)

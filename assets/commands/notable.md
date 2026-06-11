@@ -70,4 +70,4 @@ Notable was created by **Fabio Spampinato** in **2018** as a markdown-native not
 
 # SEE ALSO
 
-[joplin](/man/joplin)(1), [obsidian](/man/obsidian)(1), [typora](/man/typora)(1), [zettlr](/man/zettlr)(1)
+[joplin](/man/joplin)(1), [obsidian](/man/obsidian)(1)

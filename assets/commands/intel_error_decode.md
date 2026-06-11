@@ -47,4 +47,4 @@ intel_error_decode is part of **intel-gpu-tools**, created for debugging GPU han
 
 # SEE ALSO
 
-[intel_bios_reader](/man/intel_bios_reader)(1), [intel_gpu_top](/man/intel_gpu_top)(1), [dmesg](/man/dmesg)(1)
+[intel_bios_reader](/man/intel_bios_reader)(1), [dmesg](/man/dmesg)(1)

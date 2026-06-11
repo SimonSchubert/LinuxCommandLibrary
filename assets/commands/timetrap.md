@@ -77,4 +77,4 @@ Ruby required. Command-line only. Manual entry.
 
 # SEE ALSO
 
-[watson](/man/watson)(1), [timew](/man/timew)(1), [tog](/man/tog)(1)
+[watson](/man/watson)(1), [timew](/man/timew)(1)

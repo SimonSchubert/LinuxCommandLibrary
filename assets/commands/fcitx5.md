@@ -82,4 +82,4 @@ Fcitx (Flexible Context Input X) was originally developed for Chinese input on L
 
 # SEE ALSO
 
-[fcitx5-configtool](/man/fcitx5-configtool)(1), [ibus](/man/ibus)(1), [ibus-daemon](/man/ibus-daemon)(1)
+[ibus](/man/ibus)(1)

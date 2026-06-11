@@ -96,4 +96,4 @@ cpanminus was created by **Tatsuhiko Miyagawa** in **2010** as a zero-configurat
 
 # SEE ALSO
 
-[cpan](/man/cpan)(1), [carton](/man/carton)(1), [perl](/man/perl)(1), [local::lib](/man/local::lib)(3pm)
+[cpan](/man/cpan)(1), [carton](/man/carton)(1), [perl](/man/perl)(1)

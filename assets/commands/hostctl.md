@@ -82,4 +82,3 @@ Modifying the hosts file requires **root/administrator** privileges. Incorrect e
 
 # SEE ALSO
 
-[hosts](/man/hosts)(5)

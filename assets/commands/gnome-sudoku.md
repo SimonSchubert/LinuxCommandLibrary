@@ -45,4 +45,4 @@ Sudoku became a worldwide puzzle phenomenon in the **2000s** after being popular
 
 # SEE ALSO
 
-[gnome-mines](/man/gnome-mines)(1), [gnome-2048](/man/gnome-2048)(1)
+[gnome-mines](/man/gnome-mines)(1)

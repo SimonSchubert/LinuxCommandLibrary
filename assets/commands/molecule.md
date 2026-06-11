@@ -110,4 +110,4 @@ Docker/Podman required for containerized testing. Some roles need privileged con
 
 # SEE ALSO
 
-[ansible](/man/ansible)(1), [ansible-lint](/man/ansible-lint)(1), [testinfra](/man/testinfra)(1), [docker](/man/docker)(1)
+[ansible](/man/ansible)(1), [ansible-lint](/man/ansible-lint)(1), [docker](/man/docker)(1)

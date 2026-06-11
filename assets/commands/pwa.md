@@ -80,4 +80,4 @@ PWAs were introduced by **Google** in 2015 as a way to deliver app-like experien
 
 # SEE ALSO
 
-[workbox](/man/workbox)(1), [lighthouse](/man/lighthouse)(1), [vite](/man/vite)(1)
+[lighthouse](/man/lighthouse)(1), [vite](/man/vite)(1)

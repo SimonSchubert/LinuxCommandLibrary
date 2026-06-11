@@ -83,4 +83,4 @@ Steep learning curve for synthesis programming. Real-time performance depends on
 
 # SEE ALSO
 
-[sox](/man/sox)(1), [pd](/man/pd)(1), [supercollider](/man/supercollider)(1), [ffmpeg](/man/ffmpeg)(1)
+[sox](/man/sox)(1), [supercollider](/man/supercollider)(1), [ffmpeg](/man/ffmpeg)(1)

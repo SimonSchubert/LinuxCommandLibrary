@@ -82,4 +82,4 @@ Started by **Jeff McCune** and the **holos-run** collective in **2023** to addre
 
 # SEE ALSO
 
-[cue](/man/cue)(1), [helm](/man/helm)(1), [kustomize](/man/kustomize)(1), [kubectl](/man/kubectl)(1), [argocd](/man/argocd)(1)
+[helm](/man/helm)(1), [kustomize](/man/kustomize)(1), [kubectl](/man/kubectl)(1), [argocd](/man/argocd)(1)

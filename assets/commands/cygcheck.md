@@ -83,4 +83,4 @@ cygcheck was developed as part of the **Cygwin** project, which was started by C
 
 # SEE ALSO
 
-[cygwin](/man/cygwin)(7), [ldd](/man/ldd)(1), [dpkg](/man/dpkg)(1)
+[ldd](/man/ldd)(1), [dpkg](/man/dpkg)(1)

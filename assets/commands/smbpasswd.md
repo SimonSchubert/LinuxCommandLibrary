@@ -70,4 +70,4 @@ Users must exist in the Unix system before being added to Samba. If a Unix accou
 
 # SEE ALSO
 
-[pdbedit](/man/pdbedit)(8), [samba](/man/samba)(7), [smb.conf](/man/smb.conf)(5)
+[pdbedit](/man/pdbedit)(8), [samba](/man/samba)(7)

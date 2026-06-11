@@ -18,5 +18,5 @@ converts PBM bitmaps to Atari Degas PI3 high-resolution format
 
 # SEE ALSO
 
-[pi3topbm](/man/pi3topbm)(1), [pbmtopi1](/man/pbmtopi1)(1)
+[pi3topbm](/man/pi3topbm)(1)
 

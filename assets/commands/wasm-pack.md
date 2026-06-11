@@ -112,4 +112,4 @@ Requires Rust toolchain with wasm32-unknown-unknown target. First build may down
 
 # SEE ALSO
 
-[cargo](/man/cargo)(1), [wasm-bindgen](/man/wasm-bindgen)(1), [wasmtime](/man/wasmtime)(1), [npm](/man/npm)(1)
+[cargo](/man/cargo)(1), [wasmtime](/man/wasmtime)(1), [npm](/man/npm)(1)

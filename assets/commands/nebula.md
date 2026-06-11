@@ -128,4 +128,4 @@ Nebula was created at **Slack** and open-sourced in **November 2019**. It was de
 
 # SEE ALSO
 
-[wireguard](/man/wireguard)(1), [headscale](/man/headscale)(1), [tailscale](/man/tailscale)(1), [zerotier-one](/man/zerotier-one)(1)
+[headscale](/man/headscale)(1), [tailscale](/man/tailscale)(1), [zerotier-one](/man/zerotier-one)(1)

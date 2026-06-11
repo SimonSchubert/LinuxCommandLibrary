@@ -47,4 +47,4 @@ Part of the edirect package from NCBI. Requires internet connection. Output is t
 
 # SEE ALSO
 
-[elink](/man/elink)(1), [efetch](/man/efetch)(1), [einfo](/man/einfo)(1)
+[elink](/man/elink)(1), [einfo](/man/einfo)(1)

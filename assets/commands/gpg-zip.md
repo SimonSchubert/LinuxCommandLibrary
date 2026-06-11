@@ -66,4 +66,4 @@ This tool is deprecated in favor of **gpgtar**, which provides the same function
 
 # SEE ALSO
 
-[gpgtar](/man/gpgtar)(1), [gpg](/man/gpg)(1), [tar](/man/tar)(1)
+[gpg](/man/gpg)(1), [tar](/man/tar)(1)

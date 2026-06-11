@@ -86,4 +86,4 @@ Requires proper permissions on log directories. Configuration is done via files 
 
 # SEE ALSO
 
-[sv](/man/sv)(8), [runsv](/man/runsv)(8), [chpst](/man/chpst)(8), [multilog](/man/multilog)(8)
+[sv](/man/sv)(8), [runsv](/man/runsv)(8), [chpst](/man/chpst)(8)

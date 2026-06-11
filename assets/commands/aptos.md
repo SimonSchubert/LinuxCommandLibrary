@@ -101,4 +101,4 @@ Aptos emerged from the Diem (formerly Libra) blockchain project developed at **M
 
 # SEE ALSO
 
-[solana](/man/solana)(1), [sui](/man/sui)(1), [foundry](/man/foundry)(1)
+[solana](/man/solana)(1), [sui](/man/sui)(1)

@@ -47,4 +47,4 @@ The **switch-root** subcommand formalizes the initramfs-to-real-root transition 
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [systemd](/man/systemd)(1), [pivot_root](/man/pivot_root)(2)
+[systemctl](/man/systemctl)(1), [pivot_root](/man/pivot_root)(2)

@@ -95,4 +95,4 @@ The daemon must be running for clients like **spd-say** to work. At least one sp
 
 # SEE ALSO
 
-[spd-say](/man/spd-say)(1), [spd-conf](/man/spd-conf)(1), [espeak-ng](/man/espeak-ng)(1), [festival](/man/festival)(1)
+[spd-say](/man/spd-say)(1), [espeak-ng](/man/espeak-ng)(1), [festival](/man/festival)(1)

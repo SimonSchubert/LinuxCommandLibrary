@@ -64,4 +64,3 @@ Security is intentionally limited: repositories must be explicitly exported (via
 
 # SEE ALSO
 
-[git-http-backend](/man/git-http-backend)(1)

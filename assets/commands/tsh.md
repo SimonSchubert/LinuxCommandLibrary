@@ -148,4 +148,4 @@ Teleport was created by **Gravitational** (now Teleport) in **2016** to provide 
 
 # SEE ALSO
 
-[ssh](/man/ssh)(1), [kubectl](/man/kubectl)(1), [tctl](/man/tctl)(1)
+[ssh](/man/ssh)(1), [kubectl](/man/kubectl)(1)

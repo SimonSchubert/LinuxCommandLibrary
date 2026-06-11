@@ -70,4 +70,4 @@ ppmbrighten is part of **Netpbm** by **Jef Poskanzer** and contributors for basi
 
 # SEE ALSO
 
-[ppmcolormask](/man/ppmcolormask)(1), [ppmgamma](/man/ppmgamma)(1), [pamaltsat](/man/pamaltsat)(1), [netpbm](/man/netpbm)(1)
+[ppmcolormask](/man/ppmcolormask)(1), [ppmgamma](/man/ppmgamma)(1), [netpbm](/man/netpbm)(1)

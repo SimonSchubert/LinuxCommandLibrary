@@ -89,4 +89,4 @@ diffoscope was created by the **Reproducible Builds** project, specifically by *
 
 # SEE ALSO
 
-[diff](/man/diff)(1), [cmp](/man/cmp)(1), [reprotest](/man/reprotest)(1)
+[diff](/man/diff)(1), [cmp](/man/cmp)(1)

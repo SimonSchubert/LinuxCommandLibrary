@@ -75,4 +75,4 @@ Different from ctags (Vim tags). TAGS file can grow large. Needs regeneration af
 
 # SEE ALSO
 
-[ctags](/man/ctags)(1), [emacs](/man/emacs)(1), [cscope](/man/cscope)(1), [global](/man/global)(1)
+[ctags](/man/ctags)(1), [emacs](/man/emacs)(1), [cscope](/man/cscope)(1)

@@ -57,4 +57,4 @@ hp-check is part of **HPLIP** (HP Linux Imaging and Printing), providing diagnos
 
 # SEE ALSO
 
-[hp-setup](/man/hp-setup)(1), [hp-info](/man/hp-info)(1), [hplip](/man/hplip)(1)
+[hp-setup](/man/hp-setup)(1), [hp-info](/man/hp-info)(1)

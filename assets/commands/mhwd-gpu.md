@@ -59,4 +59,4 @@ Requires root privileges for configuration changes. Incorrect Xorg configuration
 
 # SEE ALSO
 
-[mhwd](/man/mhwd)(1), [mhwd-kernel](/man/mhwd-kernel)(1), [nvidia-settings](/man/nvidia-settings)(1), [xorg.conf](/man/xorg.conf)(5)
+[mhwd](/man/mhwd)(1), [mhwd-kernel](/man/mhwd-kernel)(1), [nvidia-settings](/man/nvidia-settings)(1)

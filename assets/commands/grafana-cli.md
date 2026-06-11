@@ -110,4 +110,3 @@ grafana-cli was developed alongside **Grafana** to provide command-line manageme
 
 # SEE ALSO
 
-[grafana-server](/man/grafana-server)(1)

@@ -75,5 +75,5 @@ MSBuild was created by **Microsoft** as the build platform for .NET, first relea
 
 # SEE ALSO
 
-[dotnet](/man/dotnet)(1), [nuget](/man/nuget)(1), [make](/man/make)(1)
+[dotnet](/man/dotnet)(1), [make](/man/make)(1)
 

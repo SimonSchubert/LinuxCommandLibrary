@@ -81,4 +81,4 @@ s_client has been part of OpenSSL since early versions, essential for SSL/TLS te
 
 # SEE ALSO
 
-[openssl-s_server](/man/openssl-s_server)(1), [openssl-verify](/man/openssl-verify)(1), [curl](/man/curl)(1)
+[openssl-verify](/man/openssl-verify)(1), [curl](/man/curl)(1)

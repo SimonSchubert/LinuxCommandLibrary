@@ -109,4 +109,4 @@ Dart was developed by Google and first announced in **2011**. It was initially d
 
 # SEE ALSO
 
-[flutter](/man/flutter)(1), [pub](/man/pub)(1), [node](/man/node)(1), [go](/man/go)(1)
+[flutter](/man/flutter)(1), [node](/man/node)(1), [go](/man/go)(1)

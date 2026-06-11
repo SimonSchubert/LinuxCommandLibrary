@@ -78,4 +78,4 @@ Time and memory complexity are O(m·n) in the lengths of the two sequences, so *
 
 # SEE ALSO
 
-[water](/man/water)(1), [stretcher](/man/stretcher)(1), [matcher](/man/matcher)(1), [blastp](/man/blastp)(1)
+[blastp](/man/blastp)(1)

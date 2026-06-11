@@ -79,4 +79,4 @@ debugreiserfs was developed as part of the **reiserfsprogs** package. ReiserFS w
 
 # SEE ALSO
 
-[reiserfsck](/man/reiserfsck)(8), [mkfs.reiserfs](/man/mkfs.reiserfs)(8), [debugfs](/man/debugfs)(8)
+[debugfs](/man/debugfs)(8)

@@ -44,4 +44,4 @@ Requires KDE Plasma desktop environment. Some modules require root privileges fo
 
 # SEE ALSO
 
-[kcmshell5](/man/kcmshell5)(1), [kwriteconfig5](/man/kwriteconfig5)(1)
+[kwriteconfig5](/man/kwriteconfig5)(1)

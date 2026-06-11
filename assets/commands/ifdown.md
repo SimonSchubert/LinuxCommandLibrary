@@ -92,4 +92,4 @@ ifdown is part of the ifupdown package, the traditional network interface config
 
 # SEE ALSO
 
-[ifup](/man/ifup)(8), [ip](/man/ip)(8), [interfaces](/man/interfaces)(5)
+[ifup](/man/ifup)(8), [ip](/man/ip)(8)

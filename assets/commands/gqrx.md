@@ -77,4 +77,4 @@ Gqrx was created by **Alexandru Csete** (OZ9AEC) around **2011** as a user-frien
 
 # SEE ALSO
 
-[rtl_sdr](/man/rtl_sdr)(1), [gnuradio](/man/gnuradio)(1), [cubicsdr](/man/cubicsdr)(1)
+[rtl_sdr](/man/rtl_sdr)(1), [gnuradio](/man/gnuradio)(1)

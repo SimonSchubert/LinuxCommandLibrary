@@ -73,4 +73,4 @@ gedit was created in **1998** as part of the GNOME project. It was designed to b
 
 # SEE ALSO
 
-[nano](/man/nano)(1), [vim](/man/vim)(1), [kate](/man/kate)(1), [gnome-text-editor](/man/gnome-text-editor)(1)
+[nano](/man/nano)(1), [vim](/man/vim)(1), [kate](/man/kate)(1)

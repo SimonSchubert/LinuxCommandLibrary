@@ -81,4 +81,4 @@ Part of the **Samba** suite since Samba 3.0, replacing older password database t
 
 # SEE ALSO
 
-[smbpasswd](/man/smbpasswd)(8), [smb.conf](/man/smb.conf)(5), [samba](/man/samba)(7)
+[smbpasswd](/man/smbpasswd)(8), [samba](/man/samba)(7)

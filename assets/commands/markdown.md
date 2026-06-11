@@ -76,4 +76,4 @@ Markdown was created by **John Gruber** with contributions from **Aaron Swartz**
 
 # SEE ALSO
 
-[pandoc](/man/pandoc)(1), [marked](/man/marked)(1), [cmark](/man/cmark)(1), [grip](/man/grip)(1)
+[pandoc](/man/pandoc)(1), [cmark](/man/cmark)(1), [grip](/man/grip)(1)

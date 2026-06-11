@@ -96,4 +96,4 @@ Packets captured with "any" interface (cooked mode) cannot be properly edited. S
 
 # SEE ALSO
 
-[tcpreplay](/man/tcpreplay)(1), [tcpprep](/man/tcpprep)(1), [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1)
+[tcpreplay](/man/tcpreplay)(1), [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1)

@@ -114,4 +114,4 @@ The project is self-described as **pre-alpha**; keyboard shortcuts, views, and f
 
 # SEE ALSO
 
-[clickhouse-client](/man/clickhouse-client)(1), [htop](/man/htop)(1), [top](/man/top)(1)
+[htop](/man/htop)(1), [top](/man/top)(1)

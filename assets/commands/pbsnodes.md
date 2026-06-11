@@ -89,4 +89,4 @@ PBS was developed at **NASA Ames** in the early 1990s for cluster job scheduling
 
 # SEE ALSO
 
-[qstat](/man/qstat)(1), [qsub](/man/qsub)(1), [qdel](/man/qdel)(1), [slurm](/man/slurm)(1)
+[qstat](/man/qstat)(1), [qsub](/man/qsub)(1), [qdel](/man/qdel)(1)

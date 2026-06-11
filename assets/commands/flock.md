@@ -82,4 +82,4 @@ Use **shared** (read) lock
 
 # SEE ALSO
 
-[flock](/man/flock)(2), [lockfile](/man/lockfile)(1)
+[flock](/man/flock)(2)

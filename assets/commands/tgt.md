@@ -22,4 +22,4 @@ TUI client for Telegram
 
 # SEE ALSO
 
-[nchat](/man/nchat)(1), [telegram-cli](/man/telegram-cli)(1), [scli](/man/scli)(1)
+[scli](/man/scli)(1)

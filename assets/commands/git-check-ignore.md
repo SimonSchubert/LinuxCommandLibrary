@@ -80,4 +80,4 @@ git check-ignore was added to **Git** to help debug gitignore rules, addressing 
 
 # SEE ALSO
 
-[git-status](/man/git-status)(1), [gitignore](/man/gitignore)(5)
+[git-status](/man/git-status)(1)

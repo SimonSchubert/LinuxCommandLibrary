@@ -61,5 +61,5 @@ Mutter is derived from **Metacity** and became the standard GNOME window manager
 
 # SEE ALSO
 
-[gnome-shell](/man/gnome-shell)(1), [muffin](/man/muffin)(1), [metacity](/man/metacity)(1)
+[muffin](/man/muffin)(1)
 

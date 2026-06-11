@@ -28,4 +28,4 @@ This command is **not supported under LVM2**. Modern LVM2 installations should u
 
 # SEE ALSO
 
-[lvmsar](/man/lvmsar)(8), [dmstats](/man/dmstats)(8), [iostat](/man/iostat)(1), [lvm](/man/lvm)(8)
+[lvmsar](/man/lvmsar)(8), [iostat](/man/iostat)(1), [lvm](/man/lvm)(8)

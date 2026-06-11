@@ -69,4 +69,4 @@ dcg represents a category of code generation tools that emerged to address the c
 
 # SEE ALSO
 
-[protoc](/man/protoc)(1), [thrift](/man/thrift)(1), [swagger](/man/swagger)(1)
+[protoc](/man/protoc)(1), [thrift](/man/thrift)(1)

@@ -37,5 +37,5 @@ Restart Vagrant machine with updated config
 
 # SEE ALSO
 
-[vagrant](/man/vagrant)(1), [vagrant-halt](/man/vagrant-halt)(1), [vagrant-up](/man/vagrant-up)(1)
+[vagrant](/man/vagrant)(1), [vagrant-halt](/man/vagrant-halt)(1)
 

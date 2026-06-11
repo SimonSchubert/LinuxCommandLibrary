@@ -67,4 +67,4 @@ Different versions have different options. whois package version differs from ex
 
 # SEE ALSO
 
-[passwd](/man/passwd)(1), [openssl](/man/openssl)(1), [crypt](/man/crypt)(3), [chpasswd](/man/chpasswd)(1)
+[passwd](/man/passwd)(1), [openssl](/man/openssl)(1), [chpasswd](/man/chpasswd)(1)

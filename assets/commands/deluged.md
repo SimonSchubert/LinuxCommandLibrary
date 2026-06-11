@@ -81,4 +81,4 @@ deluged is the core component of the Deluge BitTorrent client, developed since *
 
 # SEE ALSO
 
-[deluge](/man/deluge)(1), [deluge-console](/man/deluge-console)(1), [deluge-web](/man/deluge-web)(1)
+[deluge](/man/deluge)(1), [deluge-console](/man/deluge-console)(1)

@@ -72,4 +72,4 @@ fc-list is part of **fontconfig**, created by **Keith Packard** around **2000** 
 
 # SEE ALSO
 
-[fc-cache](/man/fc-cache)(1), [fc-match](/man/fc-match)(1), [fc-query](/man/fc-query)(1), [fonts-conf](/man/fonts-conf)(5)
+[fc-cache](/man/fc-cache)(1), [fc-match](/man/fc-match)(1), [fc-query](/man/fc-query)(1)

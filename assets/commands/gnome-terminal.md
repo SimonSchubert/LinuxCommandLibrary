@@ -77,4 +77,4 @@ gnome-terminal has been part of GNOME since version 1.0 in **1999**. It uses the
 
 # SEE ALSO
 
-[bash](/man/bash)(1), [xterm](/man/xterm)(1), [tilix](/man/tilix)(1), [alacritty](/man/alacritty)(1)
+[bash](/man/bash)(1), [xterm](/man/xterm)(1), [alacritty](/man/alacritty)(1)

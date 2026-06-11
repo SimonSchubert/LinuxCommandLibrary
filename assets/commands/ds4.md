@@ -38,4 +38,4 @@ Reading from **/dev/hidraw\*** typically requires **root** privileges or a udev 
 
 # SEE ALSO
 
-[evtest](/man/evtest)(1), [jstest](/man/jstest)(1), [hid-recorder](/man/hid-recorder)(1)
+[evtest](/man/evtest)(1), [jstest](/man/jstest)(1)

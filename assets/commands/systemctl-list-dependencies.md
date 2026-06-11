@@ -65,4 +65,4 @@ The **list-dependencies** subcommand helps understand the complex dependency rel
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [systemctl-list-units](/man/systemctl-list-units)(1), [systemd.unit](/man/systemd.unit)(5)
+[systemctl](/man/systemctl)(1), [systemctl-list-units](/man/systemctl-list-units)(1)

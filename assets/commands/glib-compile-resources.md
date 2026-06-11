@@ -78,4 +78,3 @@ glib-compile-resources was introduced with GLib 2.32 in **March 2012** as part o
 
 # SEE ALSO
 
-[glib-genmarshal](/man/glib-genmarshal)(1), [glib-mkenums](/man/glib-mkenums)(1), [gtk4-builder-tool](/man/gtk4-builder-tool)(1)

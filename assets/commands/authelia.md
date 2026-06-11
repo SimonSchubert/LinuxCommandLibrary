@@ -127,4 +127,4 @@ Authelia was created by **Clement Michaud** in **2016** as a simple authenticati
 
 # SEE ALSO
 
-[authentik](/man/authentik)(1), [keycloak](/man/keycloak)(1), [nginx](/man/nginx)(1), [traefik](/man/traefik)(1)
+[keycloak](/man/keycloak)(1), [nginx](/man/nginx)(1), [traefik](/man/traefik)(1)

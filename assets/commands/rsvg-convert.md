@@ -86,4 +86,4 @@ rsvg-convert is part of **librsvg** by the **GNOME Project**, originally by **Ra
 
 # SEE ALSO
 
-[inkscape](/man/inkscape)(1), [convert](/man/convert)(1), [cairosvg](/man/cairosvg)(1)
+[inkscape](/man/inkscape)(1), [convert](/man/convert)(1)

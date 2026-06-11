@@ -104,4 +104,4 @@ javac has been part of the Java Development Kit since Java 1.0 in **1996**. The 
 
 # SEE ALSO
 
-[java](/man/java)(1), [jar](/man/jar)(1), [javadoc](/man/javadoc)(1), [jdb](/man/jdb)(1)
+[java](/man/java)(1), [jar](/man/jar)(1), [javadoc](/man/javadoc)(1)

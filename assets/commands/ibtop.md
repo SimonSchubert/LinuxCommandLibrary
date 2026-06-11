@@ -26,4 +26,4 @@ Only useful on systems with InfiniBand hardware. Requires appropriate permission
 
 # SEE ALSO
 
-[htop](/man/htop)(1), [ibstat](/man/ibstat)(8)
+[htop](/man/htop)(1)

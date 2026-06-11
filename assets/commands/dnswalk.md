@@ -72,4 +72,4 @@ dnswalk was written by **David Barr** in the early 1990s as a DNS debugging and 
 
 # SEE ALSO
 
-[dig](/man/dig)(1), [named-checkzone](/man/named-checkzone)(8), [nslookup](/man/nslookup)(1)
+[dig](/man/dig)(1), [nslookup](/man/nslookup)(1)

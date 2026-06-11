@@ -71,4 +71,4 @@ CD-ROM sources are lower priority than network repositories. Physical media can 
 
 # SEE ALSO
 
-[apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [sources.list](/man/sources.list)(5)
+[apt](/man/apt)(8), [apt-get](/man/apt-get)(8)

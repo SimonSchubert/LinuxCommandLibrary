@@ -111,4 +111,3 @@ The **Environment Modules** system originated at DOE computing facilities in the
 
 # SEE ALSO
 
-[modulefile](/man/modulefile)(5), [ml](/man/ml)(1)

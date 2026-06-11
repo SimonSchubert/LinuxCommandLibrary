@@ -26,5 +26,5 @@ _height_
 
 # SEE ALSO
 
-[pamtoyuv](/man/pamtoyuv)(1), [yuvtoppm](/man/yuvtoppm)(1)
+[yuvtoppm](/man/yuvtoppm)(1)
 

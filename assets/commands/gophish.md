@@ -54,4 +54,4 @@ Gophish was created by **Jordan Wright** in **2015** as an open-source alternati
 
 # SEE ALSO
 
-[setoolkit](/man/setoolkit)(1), [king-phisher](/man/king-phisher)(1)
+[setoolkit](/man/setoolkit)(1)

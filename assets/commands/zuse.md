@@ -22,4 +22,4 @@ Sleek minimal IRC client for the terminal
 
 # SEE ALSO
 
-[irssi](/man/irssi)(1), [weechat](/man/weechat)(1), [tiny](/man/tiny)(1)
+[irssi](/man/irssi)(1), [weechat](/man/weechat)(1)

@@ -50,4 +50,4 @@ Part of the **Impacket** toolkit. The tool only converts between ccache and kirb
 
 # SEE ALSO
 
-[impacket](/man/impacket)(1), [kinit](/man/kinit)(1), [klist](/man/klist)(1)
+[impacket](/man/impacket)(1), [kinit](/man/kinit)(1)

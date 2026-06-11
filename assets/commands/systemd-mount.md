@@ -74,4 +74,4 @@ Mount points created are transient and don't persist across reboots. For persist
 
 # SEE ALSO
 
-[mount](/man/mount)(8), [systemd.mount](/man/systemd.mount)(5), [udisksctl](/man/udisksctl)(1)
+[mount](/man/mount)(8), [udisksctl](/man/udisksctl)(1)

@@ -79,4 +79,4 @@ Introduced in GnuPG 2.3 as a replacement for the older **gpg --card-edit** workf
 
 # SEE ALSO
 
-[gpg](/man/gpg)(1), [gpg-agent](/man/gpg-agent)(1)
+[gpg](/man/gpg)(1)

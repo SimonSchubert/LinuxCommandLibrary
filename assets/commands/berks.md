@@ -111,4 +111,4 @@ Berkshelf was created by **Jamie Winsor** and **Seth Vargo** in **2012** to solv
 
 # SEE ALSO
 
-[chef](/man/chef)(1), [knife](/man/knife)(1), [kitchen](/man/kitchen)(1)
+[chef](/man/chef)(1), [knife](/man/knife)(1)

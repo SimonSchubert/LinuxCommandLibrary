@@ -63,4 +63,4 @@ Mendeley was founded in **2007** in London by **Victor Henning**, **Jan Reichelt
 
 # SEE ALSO
 
-[zotero](/man/zotero)(1), [jabref](/man/jabref)(1), [papis](/man/papis)(1), [citationsy](/man/citationsy)(1)
+[zotero](/man/zotero)(1), [jabref](/man/jabref)(1), [papis](/man/papis)(1)

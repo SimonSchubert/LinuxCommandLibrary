@@ -90,4 +90,4 @@ Limited environment variables. No output unless redirected or mailed. Time is in
 
 # SEE ALSO
 
-[cron](/man/cron)(8), [at](/man/at)(1), [systemd-timer](/man/systemd-timer)(5)
+[cron](/man/cron)(8), [at](/man/at)(1)

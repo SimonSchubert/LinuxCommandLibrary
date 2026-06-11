@@ -95,4 +95,4 @@ dcraw was written by **Dave Coffin** starting in **1997**, initially to decode h
 
 # SEE ALSO
 
-[rawtherapee](/man/rawtherapee)(1), [darktable](/man/darktable)(1), [ufraw](/man/ufraw)(1), [exiftool](/man/exiftool)(1)
+[exiftool](/man/exiftool)(1)

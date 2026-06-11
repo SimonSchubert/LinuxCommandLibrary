@@ -92,4 +92,4 @@ dnsx was developed by **ProjectDiscovery**, creators of other security tools lik
 
 # SEE ALSO
 
-[dig](/man/dig)(1), [massdns](/man/massdns)(1), [shuffledns](/man/shuffledns)(1)
+[dig](/man/dig)(1), [massdns](/man/massdns)(1)

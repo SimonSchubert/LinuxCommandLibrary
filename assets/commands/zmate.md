@@ -26,4 +26,4 @@ Instant terminal sharing using Zellij sessions
 
 # SEE ALSO
 
-[tmate](/man/tmate)(1), [zellij](/man/zellij)(1), [tmux](/man/tmux)(1)
+[zellij](/man/zellij)(1), [tmux](/man/tmux)(1)

@@ -81,4 +81,4 @@ Not a general-purpose Linux command - **yourmemory** is meaningful only when lau
 
 # SEE ALSO
 
-[claude](/man/claude)(1), [mem0](/man/mem0)(1), [pip](/man/pip)(1)
+[claude](/man/claude)(1), [pip](/man/pip)(1)

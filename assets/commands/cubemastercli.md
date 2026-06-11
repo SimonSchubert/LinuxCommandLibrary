@@ -87,4 +87,4 @@ cubemastercli tpl watch --job-id <job_id>
 
 # SEE ALSO
 
-[docker](/man/docker)(1), [firecracker](/man/firecracker)(1), [kvm](/man/kvm)(4), [qemu](/man/qemu)(1)
+[docker](/man/docker)(1), [kvm](/man/kvm)(4), [qemu](/man/qemu)(1)

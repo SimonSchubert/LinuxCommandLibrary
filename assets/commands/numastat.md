@@ -85,4 +85,4 @@ numastat is part of **numactl**, providing NUMA statistics similar to the origin
 
 # SEE ALSO
 
-[numactl](/man/numactl)(8), [migratepages](/man/migratepages)(8), [numa](/man/numa)(7)
+[numactl](/man/numactl)(8), [migratepages](/man/migratepages)(8)

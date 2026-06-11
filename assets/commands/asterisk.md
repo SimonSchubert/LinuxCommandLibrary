@@ -93,4 +93,4 @@ Requires proper configuration of SIP/PJSIP, dialplans, and extensions. Telephony
 
 # SEE ALSO
 
-[asterisk-cli](/man/asterisk-cli)(8), [sip.conf](/man/sip.conf)(5)
+[asterisk-cli](/man/asterisk-cli)(8)

@@ -32,4 +32,4 @@ File format is specific to the tool. Multiple simultaneous editors on the same f
 
 # SEE ALSO
 
-[taskell](/man/taskell)(1), [taskwarrior](/man/taskwarrior)(1)
+[taskwarrior](/man/taskwarrior)(1)

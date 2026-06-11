@@ -102,4 +102,4 @@ Package names are permanent on PyPI. Version numbers can't be reused. Credential
 
 # SEE ALSO
 
-[pip](/man/pip)(1), [build](/man/build)(1), [setuptools](/man/setuptools)(1), [flit](/man/flit)(1)
+[pip](/man/pip)(1), [build](/man/build)(1), [flit](/man/flit)(1)

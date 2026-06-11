@@ -4,7 +4,7 @@ Download RPM packages without installing
 
 # TLDR
 
-This command is an alias of [dnf download](/man/dnf%20download).
+This command is an alias of [dnf download](/man/dnf-download).
 
 Historical YUM package downloader for Fedora installations, now deprecated.
 

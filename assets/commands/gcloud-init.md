@@ -41,5 +41,5 @@ gcloud init can be run multiple times to create different named configurations f
 
 # SEE ALSO
 
-[gcloud](/man/gcloud)(1), [gcloud-auth-login](/man/gcloud-auth-login)(1)
+[gcloud](/man/gcloud)(1)
 

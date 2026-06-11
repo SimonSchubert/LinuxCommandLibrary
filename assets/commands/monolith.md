@@ -110,4 +110,4 @@ Large pages with many assets produce large files. Base64 encoding increases size
 
 # SEE ALSO
 
-[wget](/man/wget)(1), [curl](/man/curl)(1), [httrack](/man/httrack)(1), [singlefile](/man/singlefile)(1)
+[wget](/man/wget)(1), [curl](/man/curl)(1), [httrack](/man/httrack)(1)

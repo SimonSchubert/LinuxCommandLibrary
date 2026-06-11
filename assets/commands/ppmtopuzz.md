@@ -18,5 +18,5 @@ Convert PPM to X puzzle image format
 
 # SEE ALSO
 
-[puzzletoppm](/man/puzzletoppm)(1), [ppmtoxpm](/man/ppmtoxpm)(1)
+[ppmtoxpm](/man/ppmtoxpm)(1)
 

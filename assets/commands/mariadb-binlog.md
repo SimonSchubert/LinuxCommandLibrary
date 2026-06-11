@@ -89,4 +89,4 @@ Remote log reading requires a running server and appropriate privileges.
 
 # SEE ALSO
 
-[mysqlbinlog](/man/mysqlbinlog)(1), [mariadb](/man/mariadb)(1), [mariadbd](/man/mariadbd)(8)
+[mysqlbinlog](/man/mysqlbinlog)(1), [mariadb](/man/mariadb)(1)

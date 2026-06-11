@@ -81,4 +81,4 @@ gnome-extensions was introduced in GNOME 3.34 (**2019**) as a modern replacement
 
 # SEE ALSO
 
-[gnome-shell](/man/gnome-shell)(1), [dconf](/man/dconf)(1)
+[dconf](/man/dconf)(1)

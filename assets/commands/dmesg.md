@@ -106,4 +106,4 @@ Part of **util-linux** package. The kernel ring buffer has been part of Linux si
 
 # SEE ALSO
 
-[journalctl](/man/journalctl)(1), [syslog](/man/syslog)(3), [tail](/man/tail)(1)
+[journalctl](/man/journalctl)(1), [tail](/man/tail)(1)

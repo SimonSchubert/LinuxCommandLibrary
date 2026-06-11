@@ -90,4 +90,4 @@ foreman was created by David Dollar at Heroku in **2011** as a way to manage Pro
 
 # SEE ALSO
 
-[systemd](/man/systemd)(1), [supervisor](/man/supervisor)(1), [pm2](/man/pm2)(1)
+[pm2](/man/pm2)(1)

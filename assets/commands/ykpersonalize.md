@@ -86,4 +86,4 @@ Programming overwrites existing slot configuration. Access codes prevent reconfi
 
 # SEE ALSO
 
-[ykman](/man/ykman)(1), [ykchalresp](/man/ykchalresp)(1), [ykinfo](/man/ykinfo)(1)
+[ykman](/man/ykman)(1), [ykinfo](/man/ykinfo)(1)

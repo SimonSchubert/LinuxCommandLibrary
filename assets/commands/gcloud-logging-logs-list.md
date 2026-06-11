@@ -45,5 +45,4 @@ This command is useful for discovering what logs are available before reading th
 
 # SEE ALSO
 
-[gcloud-logging](/man/gcloud-logging)(1), [gcloud-logging-read](/man/gcloud-logging-read)(1)
 

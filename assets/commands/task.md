@@ -134,4 +134,4 @@ Taskwarrior was created by **Paul Beckingham** and first released in **2006**. I
 
 # SEE ALSO
 
-[taskrc](/man/taskrc)(5), [todo.txt-cli](/man/todo.txt-cli)(1), [remind](/man/remind)(1), [calcurse](/man/calcurse)(1)
+[todo.txt-cli](/man/todo.txt-cli)(1), [remind](/man/remind)(1), [calcurse](/man/calcurse)(1)

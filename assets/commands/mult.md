@@ -47,4 +47,4 @@ Commands with side effects will execute those effects on every run. Use with cau
 
 # SEE ALSO
 
-[watch](/man/watch)(1), [repeat](/man/repeat)(1)
+[watch](/man/watch)(1)

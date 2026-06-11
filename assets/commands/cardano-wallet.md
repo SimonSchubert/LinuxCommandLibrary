@@ -104,4 +104,4 @@ Requires a synced cardano-node. Database must be persisted for wallet recovery. 
 
 # SEE ALSO
 
-[cardano-cli](/man/cardano-cli)(1), [cardano-node](/man/cardano-node)(1), [cardano-address](/man/cardano-address)(1)
+[cardano-cli](/man/cardano-cli)(1), [cardano-node](/man/cardano-node)(1)

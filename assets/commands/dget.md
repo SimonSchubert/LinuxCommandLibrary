@@ -46,4 +46,4 @@ Requires network access. Source package downloads require valid GPG signatures u
 
 # SEE ALSO
 
-[apt-get](/man/apt-get)(8), [dpkg-source](/man/dpkg-source)(1), [debuild](/man/debuild)(1)
+[apt-get](/man/apt-get)(8), [debuild](/man/debuild)(1)

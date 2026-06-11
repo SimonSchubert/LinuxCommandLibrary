@@ -86,4 +86,4 @@ X11 only; no Wayland support. The str command has limited Unicode support. Some 
 
 # SEE ALSO
 
-[xdotool](/man/xdotool)(1), [xbindkeys](/man/xbindkeys)(1), [xmacro](/man/xmacro)(1), [xinput](/man/xinput)(1)
+[xdotool](/man/xdotool)(1), [xbindkeys](/man/xbindkeys)(1), [xinput](/man/xinput)(1)

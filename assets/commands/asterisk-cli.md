@@ -133,4 +133,4 @@ The Asterisk daemon must be running before connecting with **-r**. Some commands
 
 # SEE ALSO
 
-[asterisk](/man/asterisk)(8), [freeswitch](/man/freeswitch)(1), [kamailio](/man/kamailio)(8)
+[asterisk](/man/asterisk)(8)

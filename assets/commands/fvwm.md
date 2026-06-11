@@ -83,4 +83,4 @@ FVWM was derived from TWM by **Robert Nation** in **1993**. The name originally 
 
 # SEE ALSO
 
-[openbox](/man/openbox)(1), [i3](/man/i3)(1), [twm](/man/twm)(1), [xorg](/man/xorg)(1)
+[openbox](/man/openbox)(1), [i3](/man/i3)(1), [twm](/man/twm)(1)

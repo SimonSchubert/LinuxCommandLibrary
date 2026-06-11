@@ -132,4 +132,3 @@ The **tpm2-tools** project is maintained by the **tpm2-software** community and 
 
 # SEE ALSO
 
-[tpm2-abrmd](/man/tpm2-abrmd)(8), [tpm2_getrandom](/man/tpm2_getrandom)(1), [tpm2_pcrread](/man/tpm2_pcrread)(1), [tpm2_startup](/man/tpm2_startup)(1)

@@ -58,4 +58,4 @@ Support for upcalls to cifs.idmap was introduced in **Linux kernel 3.0**. The pr
 
 # SEE ALSO
 
-[mount.cifs](/man/mount.cifs)(8), [cifscreds](/man/cifscreds)(1), [request-key](/man/request-key)(8)
+[mount.cifs](/man/mount.cifs)(8), [cifscreds](/man/cifscreds)(1)

@@ -44,5 +44,5 @@ Display project dependency tree
 
 # SEE ALSO
 
-[uv](/man/uv)(1), [pipdeptree](/man/pipdeptree)(1)
+[uv](/man/uv)(1)
 

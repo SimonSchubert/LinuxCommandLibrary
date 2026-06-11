@@ -66,4 +66,3 @@ Part of the EMBOSS suite. Input must be valid FASTA format. Large word sizes can
 
 # SEE ALSO
 
-[cusp](/man/cusp)(1), [wordcount](/man/wordcount)(1)

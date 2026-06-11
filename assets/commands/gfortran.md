@@ -72,4 +72,4 @@ gfortran replaced g77 as GCC's Fortran compiler starting with GCC 4.0. It suppor
 
 # SEE ALSO
 
-[gcc](/man/gcc)(1), [f2py](/man/f2py)(1), [ifort](/man/ifort)(1)
+[gcc](/man/gcc)(1), [f2py](/man/f2py)(1)

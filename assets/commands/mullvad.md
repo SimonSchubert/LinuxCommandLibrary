@@ -109,4 +109,4 @@ Requires Mullvad subscription. Daemon must be running (mullvad-daemon service). 
 
 # SEE ALSO
 
-[wg](/man/wg)(1), [openvpn](/man/openvpn)(1), [wireguard](/man/wireguard)(1), [nordvpn](/man/nordvpn)(1)
+[wg](/man/wg)(1), [openvpn](/man/openvpn)(1), [nordvpn](/man/nordvpn)(1)

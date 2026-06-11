@@ -88,4 +88,4 @@ Brasero was developed as part of the GNOME desktop environment to provide a simp
 
 # SEE ALSO
 
-[wodim](/man/wodim)(1), [growisofs](/man/growisofs)(1), [cdrecord](/man/cdrecord)(1), [k3b](/man/k3b)(1)
+[wodim](/man/wodim)(1), [growisofs](/man/growisofs)(1), [cdrecord](/man/cdrecord)(1)

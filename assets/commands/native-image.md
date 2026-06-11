@@ -123,4 +123,4 @@ GraalVM was developed at **Oracle Labs**, based on research into dynamic compila
 
 # SEE ALSO
 
-[java](/man/java)(1), [javac](/man/javac)(1), [quarkus](/man/quarkus)(1), [micronaut](/man/micronaut)(1)
+[java](/man/java)(1), [javac](/man/javac)(1), [quarkus](/man/quarkus)(1)

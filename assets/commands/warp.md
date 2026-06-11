@@ -30,4 +30,4 @@ Secure and simple terminal sharing
 
 # SEE ALSO
 
-[tmux](/man/tmux)(1), [screen](/man/screen)(1), [tmate](/man/tmate)(1)
+[tmux](/man/tmux)(1), [screen](/man/screen)(1)

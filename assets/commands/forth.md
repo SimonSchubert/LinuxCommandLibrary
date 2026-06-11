@@ -76,4 +76,4 @@ Forth was invented by **Charles H. Moore** in the late **1960s** for controlling
 
 # SEE ALSO
 
-[gforth](/man/gforth)(1), [lisp](/man/lisp)(1), [dc](/man/dc)(1)
+[dc](/man/dc)(1)

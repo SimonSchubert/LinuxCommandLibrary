@@ -51,4 +51,4 @@ Requires **signal-cli** to be installed and registered. Cannot quote messages or
 
 # SEE ALSO
 
-[signal-cli](/man/signal-cli)(1), [nchat](/man/nchat)(1), [toot](/man/toot)(1)
+[toot](/man/toot)(1)

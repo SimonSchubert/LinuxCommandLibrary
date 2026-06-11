@@ -96,4 +96,4 @@ Flatpak-builder was developed alongside **Flatpak** by Alexander Larsson at Red 
 
 # SEE ALSO
 
-[flatpak](/man/flatpak)(1), [flatpak-build](/man/flatpak-build)(1), [flatpak-install](/man/flatpak-install)(1)
+[flatpak](/man/flatpak)(1), [flatpak-install](/man/flatpak-install)(1)

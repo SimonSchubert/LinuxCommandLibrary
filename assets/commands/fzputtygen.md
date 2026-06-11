@@ -69,4 +69,4 @@ fzputtygen is adapted from **PuTTYgen** for use with FileZilla. It provides key 
 
 # SEE ALSO
 
-[ssh-keygen](/man/ssh-keygen)(1), [puttygen](/man/puttygen)(1), [filezilla](/man/filezilla)(1)
+[ssh-keygen](/man/ssh-keygen)(1), [filezilla](/man/filezilla)(1)

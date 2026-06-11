@@ -27,5 +27,5 @@ converts PBM bitmap images to X11 bitmap format
 
 # SEE ALSO
 
-[xbmtopbm](/man/xbmtopbm)(1), [pbmtoxpm](/man/pbmtoxpm)(1)
+[xbmtopbm](/man/xbmtopbm)(1)
 

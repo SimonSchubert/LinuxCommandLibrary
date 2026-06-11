@@ -50,4 +50,4 @@ ideviceenterrecovery is part of **libimobiledevice** for iOS device management o
 
 # SEE ALSO
 
-[idevice_id](/man/idevice_id)(1), [idevicepair](/man/idevicepair)(1), [idevicerestore](/man/idevicerestore)(1)
+[idevice_id](/man/idevice_id)(1), [idevicepair](/man/idevicepair)(1)

@@ -101,4 +101,4 @@ Requires graphviz for graph generation. CPU profiles need sufficient sample time
 
 # SEE ALSO
 
-[go tool pprof](/man/go-tool-pprof)(1), [perf](/man/perf)(1), [flamegraph](/man/flamegraph)(1)
+[perf](/man/perf)(1), [flamegraph](/man/flamegraph)(1)

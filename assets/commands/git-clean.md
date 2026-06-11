@@ -72,4 +72,4 @@ git clean is a core **Git** command for maintaining clean working directories, p
 
 # SEE ALSO
 
-[git-status](/man/git-status)(1), [git-reset](/man/git-reset)(1), [gitignore](/man/gitignore)(5)
+[git-status](/man/git-status)(1), [git-reset](/man/git-reset)(1)

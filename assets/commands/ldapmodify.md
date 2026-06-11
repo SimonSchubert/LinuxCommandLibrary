@@ -91,4 +91,4 @@ Schema must allow modifications. Use correct changetype. Hyphen (-) separates mu
 
 # SEE ALSO
 
-[ldapadd](/man/ldapadd)(1), [ldapsearch](/man/ldapsearch)(1), [ldapdelete](/man/ldapdelete)(1)
+[ldapadd](/man/ldapadd)(1), [ldapsearch](/man/ldapsearch)(1)

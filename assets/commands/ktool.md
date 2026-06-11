@@ -44,4 +44,4 @@ Designed specifically for Apple Mach-O binary format. Not applicable to ELF or P
 
 # SEE ALSO
 
-[otool](/man/otool)(1), [nm](/man/nm)(1), [lipo](/man/lipo)(1)
+[nm](/man/nm)(1)

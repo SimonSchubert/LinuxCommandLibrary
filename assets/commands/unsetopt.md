@@ -54,4 +54,4 @@ Zsh only. Use setopt to enable. See zshoptions(1).
 
 # SEE ALSO
 
-[setopt](/man/setopt)(1), [zshoptions](/man/zshoptions)(1), [zsh](/man/zsh)(1)
+[setopt](/man/setopt)(1), [zsh](/man/zsh)(1)

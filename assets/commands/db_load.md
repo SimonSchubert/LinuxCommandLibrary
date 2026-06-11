@@ -90,4 +90,4 @@ Berkeley DB was developed at **UC Berkeley** starting in **1991** as a replaceme
 
 # SEE ALSO
 
-[db_dump](/man/db_dump)(1), [sqlite3](/man/sqlite3)(1), [mdb_load](/man/mdb_load)(1)
+[sqlite3](/man/sqlite3)(1)

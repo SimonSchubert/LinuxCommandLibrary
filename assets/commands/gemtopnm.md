@@ -18,5 +18,5 @@ GEM IMG to PNM converter
 
 # SEE ALSO
 
-[gemtopbm](/man/gemtopbm)(1), [pnmtogem](/man/pnmtogem)(1)
+[gemtopbm](/man/gemtopbm)(1)
 

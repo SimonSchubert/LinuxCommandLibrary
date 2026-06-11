@@ -78,4 +78,4 @@ py3clean is part of Debian's **dh-python** package for Python 3 packaging and cl
 
 # SEE ALSO
 
-[pyclean](/man/pyclean)(1), [py3compile](/man/py3compile)(1), [python3](/man/python3)(1)
+[pyclean](/man/pyclean)(1), [python3](/man/python3)(1)

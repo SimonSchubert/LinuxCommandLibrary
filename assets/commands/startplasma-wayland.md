@@ -42,4 +42,4 @@ Starting from a console may require the DBus session wrapper depending on your s
 
 # SEE ALSO
 
-[startplasma-x11](/man/startplasma-x11)(1), [kwin_wayland](/man/kwin_wayland)(1), [plasmashell](/man/plasmashell)(1), [dbus-run-session](/man/dbus-run-session)(1)
+[startplasma-x11](/man/startplasma-x11)(1), [plasmashell](/man/plasmashell)(1)

@@ -51,4 +51,4 @@ The **preset** subcommand implements policy-based enablement, allowing distribut
 
 # SEE ALSO
 
-[systemctl-preset-all](/man/systemctl-preset-all)(1), [systemctl-enable](/man/systemctl-enable)(1), [systemd.preset](/man/systemd.preset)(5)
+[systemctl-preset-all](/man/systemctl-preset-all)(1), [systemctl-enable](/man/systemctl-enable)(1)

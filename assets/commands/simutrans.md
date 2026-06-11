@@ -122,4 +122,4 @@ Some command-line options like **-async** and **-net** are only available on Lin
 
 # SEE ALSO
 
-[openttd](/man/openttd)(6), [lincity-ng](/man/lincity-ng)(6)
+[openttd](/man/openttd)(6)

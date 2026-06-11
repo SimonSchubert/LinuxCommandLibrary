@@ -111,4 +111,4 @@ dm-crypt was merged into the Linux kernel in version **2.6** (2004). **LUKS** wa
 
 # SEE ALSO
 
-[cryptsetup](/man/cryptsetup)(8), [crypttab](/man/crypttab)(5), [luks](/man/luks)(8)
+[cryptsetup](/man/cryptsetup)(8), [crypttab](/man/crypttab)(5)

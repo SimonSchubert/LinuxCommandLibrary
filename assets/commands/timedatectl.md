@@ -92,4 +92,4 @@ Setting time manually (set-time) disables NTP synchronization. RTC in local time
 
 # SEE ALSO
 
-[systemd-timedated](/man/systemd-timedated)(8), [hwclock](/man/hwclock)(8), [date](/man/date)(1)
+[hwclock](/man/hwclock)(8), [date](/man/date)(1)

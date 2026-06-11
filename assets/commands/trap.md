@@ -65,4 +65,4 @@ Originated in the **Bourne shell** in Unix V7 (1979). The concept of trapping si
 
 # SEE ALSO
 
-[kill](/man/kill)(1), [signal](/man/signal)(7), [bash](/man/bash)(1)
+[kill](/man/kill)(1), [bash](/man/bash)(1)

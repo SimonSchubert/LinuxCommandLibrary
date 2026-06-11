@@ -49,4 +49,4 @@ greed was originally created by **Matt Day** and is maintained by **Eric S. Raym
 
 # SEE ALSO
 
-[snake](/man/snake)(1), [worm](/man/worm)(1), [bsdgames](/man/bsdgames)(6)
+[worm](/man/worm)(1), [bsdgames](/man/bsdgames)(6)

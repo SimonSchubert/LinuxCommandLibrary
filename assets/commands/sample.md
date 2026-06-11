@@ -76,4 +76,3 @@ Sampling only captures functions executing at sample points, so very fast functi
 
 # SEE ALSO
 
-[spindump](/man/spindump)(8), [leaks](/man/leaks)(1), [heap](/man/heap)(1), [instruments](/man/instruments)(1)

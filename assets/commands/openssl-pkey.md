@@ -84,4 +84,4 @@ The pkey command provides unified key handling across different algorithms in Op
 
 # SEE ALSO
 
-[openssl-genpkey](/man/openssl-genpkey)(1), [openssl-rsa](/man/openssl-rsa)(1), [openssl-ec](/man/openssl-ec)(1)
+[openssl-genpkey](/man/openssl-genpkey)(1), [openssl-rsa](/man/openssl-rsa)(1)

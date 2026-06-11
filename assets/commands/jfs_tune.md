@@ -60,4 +60,4 @@ jfs_tune is part of **jfsutils**, providing administration tools for the JFS fil
 
 # SEE ALSO
 
-[mkfs.jfs](/man/mkfs.jfs)(8), [fsck.jfs](/man/fsck.jfs)(8), [tune2fs](/man/tune2fs)(8)
+[tune2fs](/man/tune2fs)(8)

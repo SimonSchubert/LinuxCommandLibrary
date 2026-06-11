@@ -110,4 +110,4 @@ Jobs run with limited environment. Set PATH explicitly in crontab. Output mailed
 
 # SEE ALSO
 
-[crontab](/man/crontab)(5), [at](/man/at)(1), [systemd.timer](/man/systemd.timer)(5)
+[crontab](/man/crontab)(5), [at](/man/at)(1)

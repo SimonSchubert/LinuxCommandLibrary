@@ -64,4 +64,4 @@ WOFF2 output requires the **brotli** Python package. Some complex OpenType featu
 
 # SEE ALSO
 
-[fonttools](/man/fonttools)(1), [woff2_compress](/man/woff2_compress)(1)
+[fonttools](/man/fonttools)(1)

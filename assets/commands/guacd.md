@@ -57,5 +57,5 @@ guacamole proxy daemon, the core component of Apache Guacamole
 
 # SEE ALSO
 
-[sshd](/man/sshd)(1), [xrdp](/man/xrdp)(1)
+[sshd](/man/sshd)(1)
 

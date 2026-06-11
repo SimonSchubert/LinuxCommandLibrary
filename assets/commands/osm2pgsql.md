@@ -84,4 +84,3 @@ osm2pgsql was developed for the **OpenStreetMap** project to enable map renderin
 
 # SEE ALSO
 
-[imposm](/man/imposm)(1), [osmosis](/man/osmosis)(1), [postgresql](/man/postgresql)(1), [postgis](/man/postgis)(1)

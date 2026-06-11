@@ -30,5 +30,5 @@ _files_
 
 # SEE ALSO
 
-[pamsplit](/man/pamsplit)(1), [pamchannel](/man/pamchannel)(1)
+[pamsplit](/man/pamsplit)(1)
 

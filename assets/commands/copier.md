@@ -91,4 +91,4 @@ Requires Python 3.10+ and Git 2.27+. Templates versioned by Git tags. Use --trus
 
 # SEE ALSO
 
-[cookiecutter](/man/cookiecutter)(1), [yeoman](/man/yeoman)(1)
+[cookiecutter](/man/cookiecutter)(1)

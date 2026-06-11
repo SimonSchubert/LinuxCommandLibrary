@@ -118,4 +118,4 @@ First run is slow due to JIT compilation (time-to-first-plot problem). Package p
 
 # SEE ALSO
 
-[python](/man/python)(1), [R](/man/R)(1), [matlab](/man/matlab)(1), [octave](/man/octave)(1)
+[python](/man/python)(1), [matlab](/man/matlab)(1), [octave](/man/octave)(1)

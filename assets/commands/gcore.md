@@ -52,4 +52,4 @@ gcore is part of **GDB** (GNU Debugger), providing non-destructive core dump gen
 
 # SEE ALSO
 
-[gdb](/man/gdb)(1), [kill](/man/kill)(1), [core](/man/core)(5)
+[gdb](/man/gdb)(1), [kill](/man/kill)(1)

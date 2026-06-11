@@ -114,4 +114,4 @@ Part of **systemd**, networkctl was introduced to provide command-line managemen
 
 # SEE ALSO
 
-[systemd-networkd](/man/systemd-networkd.service)(8), [systemd.network](/man/systemd.network)(5), [systemd.netdev](/man/systemd.netdev)(5), [ip](/man/ip)(8)
+[ip](/man/ip)(8)

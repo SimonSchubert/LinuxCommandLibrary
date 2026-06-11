@@ -43,4 +43,4 @@ idmapwb is part of **Samba Winbind** for Windows-Unix identity integration.
 
 # SEE ALSO
 
-[winbindd](/man/winbindd)(8), [wbinfo](/man/wbinfo)(1), [smb.conf](/man/smb.conf)(5)
+[wbinfo](/man/wbinfo)(1)

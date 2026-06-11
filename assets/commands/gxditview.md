@@ -57,4 +57,4 @@ gxditview was developed as part of **GNU groff** as an X11 previewer, derived fr
 
 # SEE ALSO
 
-[groff](/man/groff)(1), [groffer](/man/groffer)(1), [xditview](/man/xditview)(1)
+[groff](/man/groff)(1), [groffer](/man/groffer)(1)

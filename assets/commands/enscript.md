@@ -86,5 +86,5 @@ enscript supports customization through configuration files and command-line opt
 
 # SEE ALSO
 
-[a2ps](/man/a2ps)(1), [lpr](/man/lpr)(1)
+[lpr](/man/lpr)(1)
 

@@ -89,4 +89,4 @@ Writing to an unencrypted private-key file removes the existing passphrase. Ensu
 
 # SEE ALSO
 
-[openssl](/man/openssl)(1), [openssl-genpkey](/man/openssl-genpkey)(1), [openssl-pkcs8](/man/openssl-pkcs8)(1), [openssl-rsa](/man/openssl-rsa)(1)
+[openssl](/man/openssl)(1), [openssl-genpkey](/man/openssl-genpkey)(1), [openssl-rsa](/man/openssl-rsa)(1)

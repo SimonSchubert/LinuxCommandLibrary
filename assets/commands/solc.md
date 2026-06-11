@@ -117,4 +117,4 @@ Different Solidity versions may have incompatible syntax; use **solc-select** to
 
 # SEE ALSO
 
-[solc-select](/man/solc-select)(1), [forge](/man/forge)(1), [hardhat](/man/hardhat)(1), [remix](/man/remix)(1)
+[forge](/man/forge)(1), [hardhat](/man/hardhat)(1)

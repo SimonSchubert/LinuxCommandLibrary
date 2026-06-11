@@ -91,4 +91,4 @@ inotifywait is part of inotify-tools, created to provide user-space access to Li
 
 # SEE ALSO
 
-[inotifywatch](/man/inotifywatch)(1), [entr](/man/entr)(1), [fswatch](/man/fswatch)(1), [fatrace](/man/fatrace)(1)
+[entr](/man/entr)(1), [fswatch](/man/fswatch)(1), [fatrace](/man/fatrace)(1)

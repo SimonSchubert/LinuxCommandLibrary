@@ -73,4 +73,4 @@ The function file must be in a directory listed in **$fpath**. The file name mus
 
 # SEE ALSO
 
-[zsh](/man/zsh)(1), [source](/man/source)(1), [compinit](/man/compinit)(1)
+[zsh](/man/zsh)(1)

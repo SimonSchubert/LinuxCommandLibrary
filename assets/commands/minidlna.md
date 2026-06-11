@@ -68,5 +68,4 @@ MiniDLNA (ReadyMedia) was created as a lightweight **DLNA** server for embedded 
 
 # SEE ALSO
 
-[plex](/man/plex)(1), [jellyfin](/man/jellyfin)(1), [kodi](/man/kodi)(1)
 

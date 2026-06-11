@@ -101,4 +101,4 @@ The **-mmcu** option must match the target hardware exactly. Optimization level 
 
 # SEE ALSO
 
-[gcc](/man/gcc)(1), [avr-objcopy](/man/avr-objcopy)(1), [avrdude](/man/avrdude)(1), [arduino-cli](/man/arduino-cli)(1)
+[gcc](/man/gcc)(1), [avrdude](/man/avrdude)(1), [arduino-cli](/man/arduino-cli)(1)

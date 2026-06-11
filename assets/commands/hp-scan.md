@@ -67,4 +67,4 @@ hp-scan is part of **HPLIP** (HP Linux Imaging and Printing) for scanning on HP 
 
 # SEE ALSO
 
-[hp-setup](/man/hp-setup)(1), [scanimage](/man/scanimage)(1), [simple-scan](/man/simple-scan)(1)
+[hp-setup](/man/hp-setup)(1), [scanimage](/man/scanimage)(1)

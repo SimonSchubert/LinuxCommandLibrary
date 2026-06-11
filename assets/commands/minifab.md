@@ -56,5 +56,5 @@ simplifies Hyperledger Fabric network deployment
 
 # SEE ALSO
 
-[peer](/man/peer)(1), [docker](/man/docker)(1)
+[docker](/man/docker)(1)
 

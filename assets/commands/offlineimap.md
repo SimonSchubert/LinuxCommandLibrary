@@ -96,4 +96,4 @@ Initial sync of large mailboxes takes time. Configuration can be complex. Deprec
 
 # SEE ALSO
 
-[isstralsync](/man/isstralsync)(1), [mbsync](/man/mbsync)(1), [mutt](/man/mutt)(1), [notmuch](/man/notmuch)(1)
+[mbsync](/man/mbsync)(1), [mutt](/man/mutt)(1), [notmuch](/man/notmuch)(1)

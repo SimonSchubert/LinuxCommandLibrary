@@ -36,4 +36,4 @@ Tasks are stored locally. No built-in sync or collaboration features.
 
 # SEE ALSO
 
-[taskwarrior](/man/taskwarrior)(1), [todo.txt](/man/todo.txt)(1)
+[taskwarrior](/man/taskwarrior)(1)

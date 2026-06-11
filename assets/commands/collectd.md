@@ -72,4 +72,4 @@ Configuration requires careful setup of input and output plugins. Some plugins m
 
 # SEE ALSO
 
-[collectdmon](/man/collectdmon)(1), [collectd.conf](/man/collectd.conf)(5)
+[collectdmon](/man/collectdmon)(1)

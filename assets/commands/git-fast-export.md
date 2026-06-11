@@ -51,4 +51,4 @@ The export format is line-oriented and human-readable. Combined with git fast-im
 
 # SEE ALSO
 
-[git-fast-import](/man/git-fast-import)(1), [git-filter-branch](/man/git-filter-branch)(1)
+[git-filter-branch](/man/git-filter-branch)(1)

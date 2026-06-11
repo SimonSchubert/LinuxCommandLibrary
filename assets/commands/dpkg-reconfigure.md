@@ -48,4 +48,4 @@ Debian/Ubuntu specific. Not all packages support reconfiguration. Some reconfigu
 
 # SEE ALSO
 
-[dpkg](/man/dpkg)(1), [debconf](/man/debconf)(7)
+[dpkg](/man/dpkg)(1)

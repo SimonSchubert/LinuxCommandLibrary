@@ -72,4 +72,4 @@ Searching large directory trees can be slow. The tool does not index files; each
 
 # SEE ALSO
 
-[find](/man/find)(1), [locate](/man/locate)(1), [catfish](/man/catfish)(1), [gnome-search-tool](/man/gnome-search-tool)(1)
+[find](/man/find)(1), [locate](/man/locate)(1)

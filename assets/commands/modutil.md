@@ -53,5 +53,5 @@ manages PKCS#11 security modules in NSS databases
 
 # SEE ALSO
 
-[certutil](/man/certutil)(1), [pk12util](/man/pk12util)(1)
+[certutil](/man/certutil)(1)
 

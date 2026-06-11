@@ -30,4 +30,4 @@ Blazingly fast general-purpose fuzzy finder TUI
 
 # SEE ALSO
 
-[fzf](/man/fzf)(1), [skim](/man/skim)(1), [telescope.nvim](/man/telescope.nvim)(1)
+[fzf](/man/fzf)(1)

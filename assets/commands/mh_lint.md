@@ -61,5 +61,5 @@ mh_lint is part of **MISS_HIT**, a MATLAB/Simulink code quality tool suite.
 
 # SEE ALSO
 
-[mh_metric](/man/mh_metric)(1), [mh_style](/man/mh_style)(1), [mlint](/man/mlint)(1)
+[mh_metric](/man/mh_metric)(1)
 

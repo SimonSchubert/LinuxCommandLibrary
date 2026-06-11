@@ -62,4 +62,4 @@ Lime was started by **Fredrik Ehnbom** in **2013** as an attempt to create an op
 
 # SEE ALSO
 
-[sublime](/man/sublime)(1), [vim](/man/vim)(1), [nano](/man/nano)(1), [code](/man/code)(1)
+[vim](/man/vim)(1), [nano](/man/nano)(1), [code](/man/code)(1)

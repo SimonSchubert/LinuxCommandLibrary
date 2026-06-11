@@ -58,5 +58,5 @@ fetch container logs from STDOUT and STDERR
 
 # SEE ALSO
 
-[docker-container-logs](/man/docker-container-logs)(1), [docker-events](/man/docker-events)(1)
+[docker-container-logs](/man/docker-container-logs)(1)
 

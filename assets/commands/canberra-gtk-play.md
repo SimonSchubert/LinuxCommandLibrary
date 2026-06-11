@@ -67,4 +67,4 @@ The **libcanberra** project, which includes canberra-gtk-play, was initiated aro
 
 # SEE ALSO
 
-[paplay](/man/paplay)(1), [aplay](/man/aplay)(1)
+[aplay](/man/aplay)(1)

@@ -78,4 +78,4 @@ Requires Soulseek network account. Network has its own culture and expectations 
 
 # SEE ALSO
 
-[soulseekqt](/man/soulseekqt)(1), [transmission](/man/transmission)(1), [deluge](/man/deluge)(1)
+[transmission](/man/transmission)(1), [deluge](/man/deluge)(1)

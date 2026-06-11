@@ -57,4 +57,4 @@ X11 only. Requires X server running. Part of X.Org utilities.
 
 # SEE ALSO
 
-[date](/man/date)(1), [strftime](/man/strftime)(3)
+[date](/man/date)(1)

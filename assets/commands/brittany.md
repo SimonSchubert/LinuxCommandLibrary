@@ -78,4 +78,4 @@ Some less common Haskell syntax elements are not fully supported. In-source comm
 
 # SEE ALSO
 
-[ormolu](/man/ormolu)(1), [fourmolu](/man/fourmolu)(1), [stylish-haskell](/man/stylish-haskell)(1), [ghc](/man/ghc)(1)
+[ghc](/man/ghc)(1)

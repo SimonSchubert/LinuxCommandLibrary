@@ -78,4 +78,4 @@ Runs as root by default; user-level jobs require additional configuration. Job d
 
 # SEE ALSO
 
-[cron](/man/cron)(8), [crontab](/man/crontab)(1), [systemd.timer](/man/systemd.timer)(5)
+[cron](/man/cron)(8), [crontab](/man/crontab)(1)

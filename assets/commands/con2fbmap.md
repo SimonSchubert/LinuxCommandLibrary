@@ -46,4 +46,4 @@ Requires root privileges to change mappings. Only works on systems using the Lin
 
 # SEE ALSO
 
-[fbset](/man/fbset)(1), [setterm](/man/setterm)(1)
+[fbset](/man/fbset)(1)

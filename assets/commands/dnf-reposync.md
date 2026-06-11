@@ -64,4 +64,4 @@ Requires dnf-plugins-core. Large repositories require significant disk space and
 
 # SEE ALSO
 
-[dnf](/man/dnf)(8), [createrepo](/man/createrepo)(8), [reposync](/man/reposync)(1)
+[dnf](/man/dnf)(8), [createrepo](/man/createrepo)(8)

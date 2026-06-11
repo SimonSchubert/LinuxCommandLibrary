@@ -110,4 +110,4 @@ SystemVerilog support is limited. Complex designs may require multiple synthesis
 
 # SEE ALSO
 
-[nextpnr](/man/nextpnr)(1), [iverilog](/man/iverilog)(1), [verilator](/man/verilator)(1)
+[iverilog](/man/iverilog)(1), [verilator](/man/verilator)(1)

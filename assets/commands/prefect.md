@@ -114,4 +114,4 @@ Prefect was founded by **Jeremiah Lowin** in **2018** as a modern alternative to
 
 # SEE ALSO
 
-[dagster](/man/dagster)(1), [airflow](/man/airflow)(1), [luigi](/man/luigi)(1), [argo](/man/argo)(1)
+[dagster](/man/dagster)(1), [airflow](/man/airflow)(1), [luigi](/man/luigi)(1)

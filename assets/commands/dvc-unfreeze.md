@@ -22,5 +22,5 @@ re-enable frozen pipeline stages
 
 # SEE ALSO
 
-[dvc-freeze](/man/dvc-freeze)(1), [dvc-repro](/man/dvc-repro)(1)
+[dvc-freeze](/man/dvc-freeze)(1)
 

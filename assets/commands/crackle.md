@@ -43,4 +43,4 @@ Only effective against BLE Legacy Pairing (Bluetooth 4.0/4.1). LE Secure Connect
 
 # SEE ALSO
 
-[wireshark](/man/wireshark)(1), [btlejack](/man/btlejack)(1)
+[wireshark](/man/wireshark)(1)

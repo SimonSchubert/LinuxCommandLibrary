@@ -71,5 +71,5 @@ lit was developed as part of the **LLVM** project to provide a flexible, fast te
 
 # SEE ALSO
 
-[llvm-lit](/man/llvm-lit)(1), [pytest](/man/pytest)(1), [make](/man/make)(1)
+[pytest](/man/pytest)(1), [make](/man/make)(1)
 

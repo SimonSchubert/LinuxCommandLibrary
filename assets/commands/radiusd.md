@@ -104,4 +104,3 @@ FreeRADIUS is the most widely deployed RADIUS server, started in 1999 by **Alan 
 
 # SEE ALSO
 
-[radtest](/man/radtest)(1), [radclient](/man/radclient)(1), [radwho](/man/radwho)(1)

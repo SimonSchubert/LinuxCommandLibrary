@@ -74,5 +74,5 @@ mosquitto_pub is the **publishing client** distributed with the Eclipse Mosquitt
 
 # SEE ALSO
 
-[mosquitto_sub](/man/mosquitto_sub)(1), [mosquitto](/man/mosquitto)(1), [mqtt](/man/mqtt)(1)
+[mosquitto_sub](/man/mosquitto_sub)(1), [mosquitto](/man/mosquitto)(1)
 

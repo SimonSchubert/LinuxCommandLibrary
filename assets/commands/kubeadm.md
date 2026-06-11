@@ -73,4 +73,4 @@ kubeadm was created as the official cluster bootstrapping tool for **Kubernetes*
 
 # SEE ALSO
 
-[kubectl](/man/kubectl)(1), [kubelet](/man/kubelet)(8), [kops](/man/kops)(1)
+[kubectl](/man/kubectl)(1), [kops](/man/kops)(1)

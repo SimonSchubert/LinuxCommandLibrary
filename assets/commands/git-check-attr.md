@@ -50,4 +50,4 @@ Output shows each path with its attribute values, using "set", "unset", or "unsp
 
 # SEE ALSO
 
-[gitattributes](/man/gitattributes)(5), [git-check-ignore](/man/git-check-ignore)(1)
+[git-check-ignore](/man/git-check-ignore)(1)

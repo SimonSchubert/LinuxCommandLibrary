@@ -32,5 +32,4 @@ The command is useful for verifying backup completion, checking backup integrity
 
 # SEE ALSO
 
-[gcloud-sql-backups](/man/gcloud-sql-backups)(1), [gcloud-sql-backups-list](/man/gcloud-sql-backups-list)(1)
 

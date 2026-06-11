@@ -66,4 +66,4 @@ grops was developed as part of **GNU groff** by **James Clark** as the primary o
 
 # SEE ALSO
 
-[groff](/man/groff)(1), [gropdf](/man/gropdf)(1), [ps2pdf](/man/ps2pdf)(1)
+[groff](/man/groff)(1), [ps2pdf](/man/ps2pdf)(1)

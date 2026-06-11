@@ -55,4 +55,4 @@ Detection is heuristic and not 100% accurate, especially for short texts or ambi
 
 # SEE ALSO
 
-[file](/man/file)(1), [iconv](/man/iconv)(1), [uchardet](/man/uchardet)(1), [enca](/man/enca)(1)
+[file](/man/file)(1), [iconv](/man/iconv)(1), [enca](/man/enca)(1)

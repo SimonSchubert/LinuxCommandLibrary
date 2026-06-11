@@ -73,4 +73,4 @@ For **Chromecast** output the local port **7881** must be reachable from the ren
 
 # SEE ALSO
 
-[mpd](/man/mpd)(1), [snapserver](/man/snapserver)(1), [shairport-sync](/man/shairport-sync)(1), [squeezelite](/man/squeezelite)(1)
+[mpd](/man/mpd)(1)

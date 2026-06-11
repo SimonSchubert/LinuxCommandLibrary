@@ -87,4 +87,4 @@ OCaml was developed at **INRIA** (French computing research institute), evolving
 
 # SEE ALSO
 
-[ocamlopt](/man/ocamlopt)(1), [ocamldep](/man/ocamldep)(1), [dune](/man/dune)(1), [opam](/man/opam)(1)
+[ocamlopt](/man/ocamlopt)(1), [dune](/man/dune)(1), [opam](/man/opam)(1)

@@ -61,4 +61,4 @@ hangman has been part of **BSD games** collection since early Unix systems, prov
 
 # SEE ALSO
 
-[bsdgames](/man/bsdgames)(6), [words](/man/words)(4), [fortune](/man/fortune)(6)
+[bsdgames](/man/bsdgames)(6), [fortune](/man/fortune)(6)

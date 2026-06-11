@@ -129,4 +129,4 @@ Recon-ng was developed by **Tim Tomes** while working at Black Hills Information
 
 # SEE ALSO
 
-[maltego](/man/maltego)(1), [theharvester](/man/theharvester)(1), [amass](/man/amass)(1), [nmap](/man/nmap)(1)
+[maltego](/man/maltego)(1), [amass](/man/amass)(1), [nmap](/man/nmap)(1)

@@ -80,4 +80,4 @@ Pharo forked from **Squeak** Smalltalk in 2008, focusing on clean, innovative Sm
 
 # SEE ALSO
 
-[squeak](/man/squeak)(1), [gst](/man/gst)(1), [smalltalk](/man/smalltalk)(1)
+[squeak](/man/squeak)(1)

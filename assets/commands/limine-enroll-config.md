@@ -46,4 +46,4 @@ The configuration hash must be regenerated and re-enrolled whenever limine.conf 
 
 # SEE ALSO
 
-[limine](/man/limine)(1), [limine-entry-tool](/man/limine-entry-tool)(1), [sbsign](/man/sbsign)(1)
+[limine](/man/limine)(1), [limine-entry-tool](/man/limine-entry-tool)(1)

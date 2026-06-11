@@ -73,4 +73,4 @@ Void Linux specific (XBPS package manager). Some packages may overwrite manual c
 
 # SEE ALSO
 
-[xbps-install](/man/xbps-install)(1), [xbps-remove](/man/xbps-remove)(1), [xbps-query](/man/xbps-query)(1), [xbps-pkgdb](/man/xbps-pkgdb)(1)
+[xbps-install](/man/xbps-install)(1), [xbps-remove](/man/xbps-remove)(1), [xbps-query](/man/xbps-query)(1)

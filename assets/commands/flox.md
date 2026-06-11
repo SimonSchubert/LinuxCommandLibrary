@@ -75,4 +75,4 @@ flox was created to make **Nix** accessible to mainstream developers. It provide
 
 # SEE ALSO
 
-[nix](/man/nix)(1), [direnv](/man/direnv)(1), [devbox](/man/devbox)(1)
+[nix](/man/nix)(1), [direnv](/man/direnv)(1)

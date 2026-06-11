@@ -59,4 +59,4 @@ State (sessions, encryption keys, room cache) is persisted under matrirc's data 
 
 # SEE ALSO
 
-[matrix-appservice-irc](/man/matrix-appservice-irc)(1), [weechat](/man/weechat)(1), [irssi](/man/irssi)(1)
+[weechat](/man/weechat)(1), [irssi](/man/irssi)(1)

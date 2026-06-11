@@ -52,4 +52,4 @@ git bugreport was added to **Git** to standardize bug reporting and ensure neces
 
 # SEE ALSO
 
-[git](/man/git)(1), [git-diagnose](/man/git-diagnose)(1)
+[git](/man/git)(1)

@@ -87,4 +87,4 @@ ANSI escape sequences were standardized in **ECMA-48** in **1976**, based on ear
 
 # SEE ALSO
 
-[tput](/man/tput)(1), [dircolors](/man/dircolors)(1), [lolcat](/man/lolcat)(1), [terminfo](/man/terminfo)(5)
+[tput](/man/tput)(1), [dircolors](/man/dircolors)(1), [lolcat](/man/lolcat)(1)

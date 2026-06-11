@@ -81,4 +81,4 @@ MAME was started by **Nicola Salmoria** in **1997**. It merged with MESS in 2015
 
 # SEE ALSO
 
-[retroarch](/man/retroarch)(1), [mednafen](/man/mednafen)(1), [dosbox](/man/dosbox)(1)
+[retroarch](/man/retroarch)(1), [dosbox](/man/dosbox)(1)

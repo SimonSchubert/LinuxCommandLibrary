@@ -74,4 +74,4 @@ ctypes was created by **Thomas Heller** and merged into Python's standard librar
 
 # SEE ALSO
 
-[cffi](/man/cffi)(3py), [cython](/man/cython)(1), [pybind11](/man/pybind11)(3py)
+[cython](/man/cython)(1)

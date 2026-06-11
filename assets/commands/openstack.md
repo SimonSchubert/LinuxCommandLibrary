@@ -94,4 +94,4 @@ The unified OpenStack client was introduced to replace service-specific CLIs (no
 
 # SEE ALSO
 
-[nova](/man/nova)(1), [neutron](/man/neutron)(1), [cinder](/man/cinder)(1), [glance](/man/glance)(1)
+[nova](/man/nova)(1), [neutron](/man/neutron)(1), [glance](/man/glance)(1)

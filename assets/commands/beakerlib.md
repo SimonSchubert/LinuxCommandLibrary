@@ -97,4 +97,4 @@ BeakerLib was developed at **Red Hat** as part of the **Beaker** integration tes
 
 # SEE ALSO
 
-[bats](/man/bats)(1), [shunit2](/man/shunit2)(1), [beaker](/man/beaker)(1)
+[bats](/man/bats)(1)

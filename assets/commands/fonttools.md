@@ -57,4 +57,4 @@ fonttools originated in the late 1990s, created by Just van Rossum. It became on
 
 # SEE ALSO
 
-[fc-cache](/man/fc-cache)(1), [fc-list](/man/fc-list)(1), [ttx](/man/ttx)(1)
+[fc-cache](/man/fc-cache)(1), [fc-list](/man/fc-list)(1)

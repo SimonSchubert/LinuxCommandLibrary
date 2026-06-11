@@ -71,5 +71,5 @@ open has been part of **macOS** for launching files with associated applications
 
 # SEE ALSO
 
-[xdg-open](/man/xdg-open)(1), [start](/man/start)(1)
+[xdg-open](/man/xdg-open)(1)
 
