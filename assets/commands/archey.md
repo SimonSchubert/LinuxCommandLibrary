@@ -43,3 +43,9 @@ Originally created for **Arch Linux** by Melik Manukyan. Various forks exist inc
 # SEE ALSO
 
 [neofetch](/man/neofetch)(1), [screenfetch](/man/screenfetch)(1), [fastfetch](/man/fastfetch)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/HorlogeSkynet/archey4)```
+
+<!-- verified: 2026-06-11 -->

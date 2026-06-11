@@ -51,3 +51,9 @@ Write support is experimental and may not work reliably with all archive formats
 # SEE ALSO
 
 [fusermount](/man/fusermount)(1), [tar](/man/tar)(1), [mount](/man/mount)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/cybernoid/archivemount)```
+
+<!-- verified: 2026-06-11 -->

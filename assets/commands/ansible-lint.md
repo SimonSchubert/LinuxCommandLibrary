@@ -14,7 +14,7 @@ Lint **all files** in directory
 
 Lint with **specific profile**
 
-```ansible-lint -p [production] [playbook.yml]```
+```ansible-lint --profile [production] [playbook.yml]```
 
 **List** all rules
 
@@ -30,7 +30,7 @@ Output in **JSON** format
 
 # SYNOPSIS
 
-**ansible-lint** [_-p profile_] [_-x skip_] [_-f format_] [_playbooks_]
+**ansible-lint** [_--profile profile_] [_-x skip_] [_-f format_] [_files_]
 
 # DESCRIPTION
 
@@ -43,29 +43,35 @@ The tool helps maintain consistent, high-quality Ansible code and catch common m
 **-L**, **--list-rules**
 > List all available rules
 
+**-T**, **--list-tags**
+> List all the tags and the rules they cover
+
 **-x** _rules_, **--skip-list** _rules_
-> Skip specific rules
+> Skip specific rules or tags
 
 **-w** _rules_, **--warn-list** _rules_
-> Treat rules as warnings only
+> Treat the listed rules or tags as warnings only
 
-**-p** _profile_, **--profile** _profile_
-> Select rule profile (min, basic, moderate, safety, shared, production)
+**--profile** _profile_
+> Select a rule profile: min, basic, moderate, safety, shared, or production
 
 **-f** _format_, **--format** _format_
-> Output format: rich, plain, json, codeclimate, sarif
+> Output format: brief, full, md, json (alias of codeclimate), codeclimate, quiet, pep8, sarif
 
-**--fix**
-> Attempt to fix linting errors
+**--fix** [_rules_]
+> Auto-fix violations, optionally limited to specific rules or tags
 
 **-q**, **--quiet**
-> Quieter output
+> Quieter output (may be given twice)
 
 **--strict**
-> Treat warnings as errors
+> Return a non-zero exit code on warnings
+
+**--offline**
+> Disable installation of requirements and dependencies
 
 **-c** _file_, **--config-file** _file_
-> Configuration file
+> Use the specified configuration file
 
 # CONFIGURATION
 
@@ -86,3 +92,11 @@ Not all rules apply to all use cases; configure skip-list appropriately. The --f
 # SEE ALSO
 
 [ansible](/man/ansible)(1), [ansible-playbook](/man/ansible-playbook)(1), [yamllint](/man/yamllint)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ansible/ansible-lint)```
+
+```[Documentation](https://docs.ansible.com/projects/lint/)```
+
+<!-- verified: 2026-06-11 -->

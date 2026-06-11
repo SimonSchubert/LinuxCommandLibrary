@@ -12,13 +12,13 @@ Run OSS applications using ALSA emulation
 
 ```aoss [game_binary]```
 
-**Run with debug output**
+**Choose the ALSA PCM device** the OSS /dev/dsp maps to
 
-```ALSA_DEBUG=1 aoss [application]```
+```ALSA_OSS_PCM_DEVICE=[plughw:0,0] aoss [application]```
 
 # SYNOPSIS
 
-**aoss** _command_ [_arguments_]
+**aoss** _osscommand_ [_arguments_]
 
 # DESCRIPTION
 
@@ -26,7 +26,7 @@ Run OSS applications using ALSA emulation
 
 Many older Linux applications and games were written to use the OSS **/dev/dsp** and **/dev/mixer** device interfaces. Since modern Linux systems primarily use ALSA, these applications would fail to produce sound without a compatibility layer. The aoss wrapper provides this translation transparently.
 
-The wrapper sets the **LD_PRELOAD** environment variable to load **libaoss.so**, which hooks into the application's file operations on OSS device nodes and redirects them through ALSA's PCM interface.
+The wrapper sets the **LD_PRELOAD** environment variable to load **libaoss.so**, which hooks into the application's file operations on OSS device nodes and redirects them through ALSA's PCM interface. The PCM device to open can be set explicitly with the **ALSA_OSS_PCM_DEVICE** environment variable, overriding the default (dsp0).
 
 # CAVEATS
 
@@ -39,3 +39,11 @@ The aoss wrapper was developed as part of the **alsa-oss** package to ease the t
 # SEE ALSO
 
 [padsp](/man/padsp)(1), [alsamixer](/man/alsamixer)(1), [aplay](/man/aplay)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/alsa-project/alsa-oss)```
+
+```[Homepage](https://www.alsa-project.org/)```
+
+<!-- verified: 2026-06-11 -->

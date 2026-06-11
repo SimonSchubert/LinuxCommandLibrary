@@ -59,23 +59,35 @@ Encrypted files can be edited, viewed, and used in playbooks without manual decr
 **view** _file_
 > View encrypted file contents
 
-**encrypt_string**
-> Encrypt a string for embedding
+**encrypt_string** _string_
+> Encrypt a string for embedding in a playbook or vars file
 
 **rekey** _files_
-> Change encryption password
+> Re-encrypt files with a new password
 
 **--vault-password-file** _file_
-> File containing vault password
+> File containing the vault password
 
-**--vault-id** _label_
-> Vault identity label
+**--vault-id** _label@source_
+> Vault identity to use (label plus password source)
 
-**--ask-vault-pass**
-> Prompt for vault password
+**-J**, **--ask-vault-pass**
+> Prompt for the vault password
+
+**-n** _name_, **--name** _name_
+> Variable name to assign (encrypt_string only)
+
+**--encrypt-vault-id** _id_
+> Vault id to use when encrypting (when several are provided)
+
+**--output** _file_
+> Write output to the named file instead of stdout
 
 **--new-vault-password-file** _file_
-> New password file for rekey
+> Password file holding the new password for rekey
+
+**--new-vault-id** _id_
+> Vault id holding the new password for rekey
 
 # CONFIGURATION
 
@@ -99,3 +111,11 @@ Vault password must be available during playbook runs. Encrypted files should be
 # SEE ALSO
 
 [ansible-playbook](/man/ansible-playbook)(1), [ansible](/man/ansible)(1), [gpg](/man/gpg)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ansible/ansible)```
+
+```[Documentation](https://docs.ansible.com/ansible/latest/cli/ansible-vault.html)```
+
+<!-- verified: 2026-06-11 -->

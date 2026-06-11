@@ -16,9 +16,9 @@ Show **verbose** status
 
 ```apm -m```
 
-Show battery **percentage**
+**Continuously monitor** and update status
 
-```apm -l```
+```apm -M```
 
 **Suspend** the system
 
@@ -26,7 +26,7 @@ Show battery **percentage**
 
 # SYNOPSIS
 
-**apm** [_-vVmsSlba_]
+**apm** [_-VvmMsSdin_]
 
 # DESCRIPTION
 
@@ -36,29 +36,26 @@ APM has largely been superseded by ACPI on modern systems, but the command may s
 
 # PARAMETERS
 
-**-v**, **--verbose**
-> Verbose output
-
 **-V**, **--version**
-> Print version
+> Print the version of the program and exit.
+
+**-v**, **--verbose**
+> Also print version information for the APM subsystem.
 
 **-m**, **--minutes**
-> Show minutes of battery remaining
+> Print the time remaining as a number of minutes instead of hh:mm.
+
+**-M**, **--monitor**
+> Continuously monitor and update the status information.
 
 **-s**, **--suspend**
-> Suspend the system
+> Request that the machine be put into the APM suspend state.
 
 **-S**, **--standby**
-> Enter standby mode
+> Request that the machine be put into the APM standby state.
 
-**-l**, **--life**
-> Show battery percentage
-
-**-b**, **--brief**
-> Brief output
-
-**-a**, **--ac**
-> Show AC power status
+**-d**, **--debug**
+> Print APM status information in a format more useful for debugging.
 
 # CAVEATS
 

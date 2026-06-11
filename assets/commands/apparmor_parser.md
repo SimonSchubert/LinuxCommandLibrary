@@ -30,7 +30,7 @@ Replace a profile while **skipping cache** reads
 
 # SYNOPSIS
 
-**apparmor_parser** [_options_] [_profile_]
+**apparmor_parser** [_options_] _command_ [_profiles_...]
 
 # DESCRIPTION
 
@@ -47,35 +47,50 @@ Replace a profile while **skipping cache** reads
 **-R, --remove**
 > Remove a profile from the kernel
 
-**-C, --complain**
-> Load profile in complain mode (logs but doesn't block)
+**-C, --Complain**
+> Force the profile to load in complain mode (logs violations but does not block).
+
+**-B, --binary**
+> Treat the input as precompiled binary cache files rather than text profiles.
 
 **-p, --preprocess**
-> Preprocess the profile (resolve includes)
+> Preprocess the profile by flattening includes, without loading it.
 
 **-o, --ofile file**
-> Write binary output to file
+> Write the binary compiled profile to the given file.
 
 **-S, --stdout**
-> Print binary profile to stdout
+> Write the binary compiled profile to stdout.
 
 **-Q, --skip-kernel-load**
-> Don't load profile into kernel
+> Perform all actions except actually loading the profile into the kernel.
 
 **-T, --skip-read-cache**
-> Skip reading from cache
+> Skip reading from the cache; always recompile.
 
 **-W, --write-cache**
-> Write profile to cache
+> Write the compiled profile to the cache directory.
+
+**-K, --skip-cache**
+> Disable both reading and writing of the cache.
 
 **-L, --cache-loc dir**
-> Specify cache directory location
+> Specify the cache directory location.
+
+**-m, --match-string string**
+> Override the kernel feature set used when compiling.
 
 **-v, --verbose**
-> Verbose output
+> Report each profile as it is loaded and show warnings.
 
 **-d, --debug**
-> Enable debug output
+> Check syntactic correctness; given twice, also dump the parser's interpretation.
+
+**--warn=n**
+> Enable specific compilation warnings.
+
+**--abort-on-error**
+> Stop processing on the first error rather than continuing.
 
 # CONFIGURATION
 
@@ -96,3 +111,11 @@ Part of the **AppArmor** application security framework developed by Immunix and
 # SEE ALSO
 
 [aa-status](/man/aa-status)(8), [aa-enforce](/man/aa-enforce)(8), [aa-complain](/man/aa-complain)(8), [apparmor](/man/apparmor)(7)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/apparmor/apparmor)```
+
+```[Documentation](https://gitlab.com/apparmor/apparmor/-/wikis/home)```
+
+<!-- verified: 2026-06-11 -->

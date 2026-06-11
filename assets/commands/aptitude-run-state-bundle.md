@@ -41,3 +41,9 @@ Used for debugging purposes. The bundle's state may not match current repository
 # SEE ALSO
 
 [aptitude](/man/aptitude)(8), [aptitude-create-state-bundle](/man/aptitude-create-state-bundle)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/apt-team/aptitude)```
+
+<!-- verified: 2026-06-11 -->

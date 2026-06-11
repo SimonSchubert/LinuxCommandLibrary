@@ -21,3 +21,11 @@ View documentation for the original command
 # SEE ALSO
 
 [aa-status](/man/aa-status)(8)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/apparmor/apparmor)```
+
+```[Homepage](https://apparmor.net)```
+
+<!-- verified: 2026-06-11 -->

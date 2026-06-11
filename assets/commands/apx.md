@@ -28,6 +28,10 @@ View documentation for managing **subsystems**
 
 ```apx [subsystem] run [command]```
 
+**Export** an application from a subsystem to the host
+
+```apx [subsystem] export --app [application]```
+
 # SYNOPSIS
 
 **apx** [_subsystem_] _command_ [_options_]
@@ -61,8 +65,20 @@ Packages are installed in isolated subsystems based on Podman containers. Applic
 **run**
 > Run a command in a subsystem
 
+**search**
+> Search for packages in a subsystem
+
+**update**
+> Update the list of available packages in a subsystem
+
+**upgrade**
+> Upgrade installed packages in a subsystem
+
 **export**
-> Export an application to the host system
+> Export an application or binary from a subsystem to the host system
+
+**unexport**
+> Remove a previously exported application or binary
 
 # CONFIGURATION
 
@@ -83,3 +99,13 @@ Requires Podman for container management. First-time subsystem creation download
 # SEE ALSO
 
 [apx-pkgmanagers](/man/apx-pkgmanagers)(1), [apx-stacks](/man/apx-stacks)(1), [apx-subsystems](/man/apx-subsystems)(1), [podman](/man/podman)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Vanilla-OS/apx)```
+
+```[Homepage](https://apx.vanillaos.org/)```
+
+```[Documentation](https://docs.vanillaos.org/docs/en/apx)```
+
+<!-- verified: 2026-06-11 -->

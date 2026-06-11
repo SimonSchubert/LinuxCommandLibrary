@@ -79,14 +79,29 @@ Install, upgrade, and manage packages.
 **source package**
 > Fetch source packages
 
+**build-dep package**
+> Install the build dependencies of a source package
+
+**satisfy string**
+> Satisfy dependency strings (as used in Build-Depends); prefix an argument with 'Conflicts: ' to express a conflict
+
 **-y, --yes**
-> Automatic yes to prompts
+> Automatic yes to prompts; run non-interactively
+
+**-s, --simulate**
+> No action; simulate the events that would occur without changing the system
 
 **-d, --download-only**
-> Download packages but don't install
+> Download packages but don't unpack or install
 
 **--no-install-recommends**
 > Don't install recommended packages
+
+**--reinstall**
+> Reinstall packages already at the newest version
+
+**--only-upgrade**
+> Only upgrade already-installed packages; ignore requests to install new ones
 
 **-f, --fix-broken**
 > Attempt to fix broken dependencies
@@ -113,3 +128,11 @@ Part of the **APT** (Advanced Package Tool) suite developed for Debian in **1998
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-cache](/man/apt-cache)(8), [dpkg](/man/dpkg)(1), [aptitude](/man/aptitude)(8)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/apt-team/apt)```
+
+```[Documentation](https://manpages.debian.org/apt-get)```
+
+<!-- verified: 2026-06-11 -->

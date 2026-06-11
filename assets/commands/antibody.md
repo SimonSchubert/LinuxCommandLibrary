@@ -34,6 +34,8 @@ Bundle a **single plugin**
 
 Plugins are specified in a text file with one repository per line. Antibody bundles them into shell code that can be sourced in your .zshrc.
 
+> **antibody is deprecated.** No new features or bugfixes are being added. The maintainer recommends **antidote** as a drop-in replacement.
+
 # PARAMETERS
 
 **bundle** [_plugin_]
@@ -74,8 +76,16 @@ Plugin updates require running antibody update; they don't auto-update. Static l
 
 # HISTORY
 
-**antibody** was created as a faster alternative to Antigen, the popular Zsh plugin manager, using Go for improved performance.
+**antibody** was created by **Carlos Alexandro Becker** as a faster alternative to Antigen, the popular Zsh plugin manager, using Go for improved performance. The project has since been deprecated and superseded by **antidote**, a Zsh reimplementation by mattmc3.
 
 # SEE ALSO
 
 [zsh](/man/zsh)(1), [antigen](/man/antigen)(1), [zinit](/man/zinit)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/getantibody/antibody)```
+
+```[Homepage](https://getantibody.github.io/)```
+
+<!-- verified: 2026-06-11 -->

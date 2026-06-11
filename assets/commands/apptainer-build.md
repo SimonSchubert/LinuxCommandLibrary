@@ -51,16 +51,31 @@ Definition files (**.def**) provide a reproducible way to specify base images, s
 > Overwrite an existing image file without prompting
 
 **-f, --fakeroot**
-> Build using fakeroot for unprivileged container builds
+> Build using fakeroot, appearing to run as root (default for unprivileged definition builds).
 
 **--disable-cache**
-> Do not use cached images during the build process
+> Do not use or create cached images during the build process.
 
 **--no-cleanup**
-> Do not clean up the build environment on failure
+> Retain the temporary build directory after a failed build (for debugging).
 
-**--update**
-> Run the %post script on an existing sandbox container
+**-u, --update**
+> Run the definition over an existing sandbox container, rerunning sections such as %post.
+
+**-T, --notest**
+> Build the container without running the %test section.
+
+**--section** _name_
+> Run only the given definition sections instead of all of them (e.g. post, environment).
+
+**-e, --encrypt**
+> Build an image with an encrypted filesystem (set APPTAINER_ENCRYPTION_PASSPHRASE or APPTAINER_ENCRYPTION_PEM_PATH).
+
+**--build-arg** _key=value_
+> Replace {{ key }} placeholders in the definition file with the given value.
+
+**--arch** _arch_
+> Architecture to build for (default: amd64).
 
 # CONFIGURATION
 
@@ -73,4 +88,14 @@ Building containers often requires elevated privileges or fakeroot configuration
 
 # SEE ALSO
 
-[apptainer](/man/apptainer)(1), [apptainer-pull](/man/apptainer-pull)(1), [docker](/man/docker)(1)
+[apptainer](/man/apptainer)(1), [apptainer-pull](/man/apptainer-pull)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-exec](/man/apptainer-exec)(1), [apptainer-shell](/man/apptainer-shell)(1), [docker](/man/docker)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/apptainer/apptainer)```
+
+```[Homepage](https://apptainer.org)```
+
+```[Documentation](https://apptainer.org/docs/)```
+
+<!-- verified: 2026-06-11 -->

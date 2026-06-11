@@ -4,60 +4,91 @@ Download APKs from app stores
 
 # TLDR
 
-**Download** an APK from Google Play
+**Download** an APK from the default source (APKPure)
 
 ```apkeep -a [com.example.app] .```
 
-Download **specific version**
+Download a **specific version**
 
 ```apkeep -a [com.example.app]@[version] .```
 
-Download using **credentials file**
+Download from **Google Play** using an account email and AAS token
 
-```apkeep -a [com.example.app] -c [credentials.txt] .```
+```apkeep -a [com.example.app] -d google-play -e [user@gmail.com] -t [aas_token] .```
+
+Download from **F-Droid**
+
+```apkeep -a [com.example.app] -d f-droid .```
 
 List available **versions**
 
 ```apkeep -a [com.example.app] -l```
 
+Download many apps listed in a **CSV file**
+
+```apkeep -c [apps.csv] .```
+
 # SYNOPSIS
 
-**apkeep** [_-a package_] [_-c credentials_] [_-l_] _output_dir_
+**apkeep** <**-a** _app_id[@version]_ | **-c** _csv_> [_options_] _OUTPATH_
 
 # DESCRIPTION
 
-**apkeep** downloads APK files from Google Play Store and other Android app sources. It can fetch current or specific historical versions of applications, useful for security research, app archival, or accessing region-restricted apps.
+**apkeep** downloads APK files from several Android app sources. It can fetch current or specific historical versions of applications, useful for security research, app archival, or accessing apps without a device.
 
-The tool authenticates with Google Play to download APKs, requiring valid credentials or tokens.
+By default it downloads from APKPure, which requires no credentials. Downloading from Google Play requires an account email and an AAS token. Apps can be specified individually with **-a** or in bulk from a CSV file with **-c**.
 
 # PARAMETERS
 
-**-a** _package_
-> Application package name (optionally with @version)
+**-a, --app** _app_id[@version]_
+> App ID, optionally with @version (e.g. com.instagram.android).
 
-**-c** _file_
-> Credentials file
+**-c, --csv** _file_
+> CSV file listing app IDs to download in bulk.
 
-**-l**
-> List available versions
+**-f, --field** _n_
+> CSV field (column) containing app IDs. Default is **1**.
 
-**-d** _device_
-> Device configuration to spoof
+**-v, --version-field** _n_
+> CSV field containing versions.
 
-**-s** _source_
-> Source: googleplay, apkmirror, fdroid
+**-d, --download-source** _source_
+> Where to download from: **apk-pure** (default), **google-play**, **f-droid**, **huawei-app-gallery**.
 
-**-o** _format_
-> Output format
+**-l, --list-versions**
+> List the available versions of an app instead of downloading.
+
+**-e, --email** _email_
+> Google account email address (required for google-play).
+
+**-t, --aas-token** _token_
+> Google AAS token (required for google-play).
+
+**-o, --options** _opts_
+> Comma-separated extra options for the download source (e.g. arch=arm64-v8a).
+
+**-r, --parallel** _n_
+> Number of parallel APK fetches to run at a time. Default is **4**.
+
+**-s, --sleep-duration** _ms_
+> Sleep duration in milliseconds before each download request. Default is **0**.
 
 # CAVEATS
 
-Requires valid Google Play credentials for most downloads. Google may rate-limit or block excessive downloads. Downloaded APKs are licensed to the account used.
+Google Play downloads require a valid account email and AAS token; see the project documentation for how to obtain one. Servers may rate-limit or block excessive downloads, so use **-s** to throttle. Downloaded APKs remain subject to their original license.
 
 # HISTORY
 
-**apkeep** was developed for legitimate APK archival and security research purposes, providing command-line access to Android app stores.
+**apkeep** was developed by the EFF Threat Lab and first released in **2021**, written in Rust, providing command-line access to multiple Android app sources for archival and security research.
 
 # SEE ALSO
 
-[adb](/man/adb)(1), [apktool](/man/apktool)(1)
+[adb](/man/adb)(1), [apktool](/man/apktool)(1), [aapt](/man/aapt)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/EFForg/apkeep)```
+
+```[Homepage](https://www.eff.org/pages/apkeep)```
+
+<!-- verified: 2026-06-11 -->

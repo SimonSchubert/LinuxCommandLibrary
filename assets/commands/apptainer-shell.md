@@ -45,8 +45,14 @@ Open an interactive shell inside a container
 **--bind**, **-B** _src[:dest[:opts]]_
 > Bind mount a host path into the container.
 
-**--overlay** _image_
-> Use overlay filesystem for writable layer.
+**--overlay**, **-o** _image_
+> Use an overlay image for a writable layer.
+
+**--writable**, **-w**
+> Make the container filesystem read-write (default is read-only).
+
+**--writable-tmpfs**
+> Add a writable tmpfs overlay; changes are discarded on exit.
 
 **--nv**
 > Enable NVIDIA GPU support.
@@ -58,31 +64,28 @@ Open an interactive shell inside a container
 > Use minimal /dev and empty other directories.
 
 **--containall**, **-C**
-> Full containment with clean environment and PID namespace.
+> Full containment of filesystems, PID, IPC, and environment.
 
 **--cleanenv**, **-e**
 > Clean environment before starting shell.
 
 **--env** _VAR=value_
-> Set environment variable in container.
+> Set an environment variable in the container.
 
-**--home** _path_
-> Set custom home directory.
+**--home**, **-H** _path_
+> Set a custom home directory.
 
 **--pwd** _path_
-> Initial working directory in container.
+> Initial working directory in the container.
 
-**--fakeroot**
-> Run with fake root privileges.
+**--fakeroot**, **-f**
+> Run with apparent root privileges without host root.
 
-**--net**
-> Enable network namespace.
+**--net**, **-n**
+> Run in a new network namespace.
 
-**--shell** _path_
-> Specify shell to use (default: /bin/sh).
-
-**--writable-tmpfs**
-> Add writable tmpfs overlay.
+**--shell**, **-s** _path_
+> Specify the shell to use (default: /bin/sh).
 
 **--no-home**
 > Do not bind the home directory.
@@ -108,3 +111,13 @@ The shell command has been a core Singularity/Apptainer feature since the projec
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-exec](/man/apptainer-exec)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-build](/man/apptainer-build)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/apptainer/apptainer)```
+
+```[Homepage](https://apptainer.org)```
+
+```[Documentation](https://apptainer.org/docs/)```
+
+<!-- verified: 2026-06-11 -->

@@ -36,38 +36,44 @@ For ad-hoc commands, ansible executes modules against hosts matching a pattern. 
 
 # PARAMETERS
 
-**-m** _module_
-> Module to execute (default: command)
+**-m** _module_, **--module-name** _module_
+> Name of the module to execute (default: command)
 
-**-a** _args_
-> Module arguments
+**-a** _args_, **--args** _args_
+> Module arguments as key=value or JSON
 
-**-i** _inventory_
-> Inventory file or path
+**-i** _inventory_, **--inventory** _inventory_
+> Inventory file/path or comma-separated host list
 
-**--become**
-> Run operations with privilege escalation
+**-b**, **--become**
+> Run operations with privilege escalation (become)
 
 **-K**, **--ask-become-pass**
 > Prompt for privilege escalation password
 
-**-u** _user_
+**-u** _user_, **--user** _user_
 > Connect as this user
 
 **-k**, **--ask-pass**
-> Prompt for SSH password
+> Prompt for SSH connection password
 
-**-f** _forks_
-> Number of parallel processes
+**-f** _forks_, **--forks** _forks_
+> Number of parallel processes (default: 5)
 
-**-v**, **-vvv**
-> Increase verbosity
+**-l** _pattern_, **--limit** _pattern_
+> Further limit selected hosts to an additional pattern
 
-**--check**
-> Dry run (don't make changes)
+**-v**, **-vvv**, **--verbose**
+> Increase verbosity (repeat for more detail)
+
+**-C**, **--check**
+> Dry run; predict changes without applying them
+
+**--diff**
+> Show differences in changed files (works with --check)
 
 **--list-hosts**
-> List hosts matching pattern
+> Output a list of matching hosts; do not execute
 
 # CONFIGURATION
 
@@ -93,4 +99,12 @@ Requires Python on managed nodes. SSH key-based authentication is recommended. W
 
 # SEE ALSO
 
-[ansible-playbook](/man/ansible-playbook)(1), [ansible-inventory](/man/ansible-inventory)(1), [ansible-vault](/man/ansible-vault)(1)
+[ansible-playbook](/man/ansible-playbook)(1), [ansible-inventory](/man/ansible-inventory)(1), [ansible-vault](/man/ansible-vault)(1), [ansible-doc](/man/ansible-doc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ansible/ansible)```
+
+```[Documentation](https://docs.ansible.com/ansible/latest/cli/ansible.html)```
+
+<!-- verified: 2026-06-11 -->

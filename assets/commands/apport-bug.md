@@ -53,3 +53,11 @@ Apport was developed by Canonical for Ubuntu, first introduced around **2006** a
 # SEE ALSO
 
 [apport-cli](/man/apport-cli)(1), [apport-unpack](/man/apport-unpack)(1), [ubuntu-bug](/man/ubuntu-bug)(1)
+
+# RESOURCES
+
+```[Source code](https://git.launchpad.net/apport)```
+
+```[Documentation](https://wiki.ubuntu.com/Apport)```
+
+<!-- verified: 2026-06-11 -->

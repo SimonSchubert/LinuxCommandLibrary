@@ -12,9 +12,9 @@ Reverse engineer and analyze Android applications
 
 ```androguard decompile -o [output_dir] [app.apk]```
 
-Show **permissions** in APK
+Show **manifest permissions** in an APK
 
-```androguard axml -i [app.apk] | grep permission```
+```androguard axml [app.apk] | grep permission```
 
 **Disassemble** DEX to smali
 
@@ -37,31 +37,43 @@ The tool provides both command-line utilities and a Python API for programmatic 
 # PARAMETERS
 
 **analyze**
-> Interactive analysis session
+> Open an IPython shell to start reverse engineering interactively
 
 **decompile**
-> Decompile APK to Java source code
+> Decompile an APK to Java source and create control flow graphs
 
 **disassemble**
-> Disassemble DEX to smali
+> Disassemble Dalvik (DEX) bytecode
 
 **axml**
-> Parse and display Android XML files
+> Parse and display the AndroidManifest.xml or other AXML files
+
+**arsc**
+> Decode resources.arsc
+
+**apkid**
+> Print the package name, version code, and version name of an APK
 
 **sign**
-> Analyze APK signatures
+> Print the fingerprints of all certificates inside an APK
 
 **cg**
-> Generate call graph
+> Generate a call graph and export it to a graph format
 
 **-o** _dir_
-> Output directory
+> Output directory (required for decompile)
 
 **-i** _file_
-> Input file
+> Input APK (legacy; the APK is usually given as a positional argument)
 
 **-f** _format_
-> Output format
+> Control flow graph format (png, jpg, raw)
+
+**-d** _name_
+> Decompiler to use (default: DAD)
+
+**-l** _regex_
+> Limit processing to methods matching a regex
 
 # CAVEATS
 
@@ -74,3 +86,11 @@ Decompilation is not always perfect; obfuscated code may be difficult to read. S
 # SEE ALSO
 
 [apktool](/man/apktool)(1), [jadx](/man/jadx)(1), [dex2jar](/man/dex2jar)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/androguard/androguard)```
+
+```[Documentation](https://androguard.readthedocs.io)```
+
+<!-- verified: 2026-06-11 -->

@@ -20,9 +20,13 @@ Stream specific **episode range**
 
 ```animdl stream "[anime name]" -r [1-10]```
 
-Use specific **provider**
+Use a specific **provider** via a query prefix
 
-```animdl stream "[anime name]" --provider [gogoanime]```
+```animdl stream "[provider]:[anime name]"```
+
+**Grab** stream links to stdout for external use
+
+```animdl grab "[anime name]"```
 
 # SYNOPSIS
 
@@ -79,3 +83,9 @@ Depends on third-party streaming sites that may become unavailable. Download spe
 # SEE ALSO
 
 [ani-cli](/man/ani-cli)(1), [youtube-dl](/man/youtube-dl)(1), [mpv](/man/mpv)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/justfoolingaround/animdl)```
+
+<!-- verified: 2026-06-11 -->

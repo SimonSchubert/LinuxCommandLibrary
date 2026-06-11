@@ -78,6 +78,12 @@ Zsh plugin manager inspired by Vundle
 **purge** _bundle_
 > Remove a specific bundle from the system
 
+**snapshot**
+> Record the exact commit of every bundle into a snapshot file for reproducible setups
+
+**restore** _snapshot_
+> Reinstall all bundles at the versions recorded in a snapshot file
+
 # DESCRIPTION
 
 **Antigen** is a plugin manager for zsh, inspired by Vundle for vim and Pathogen. It simplifies managing shell plugins (called bundles) by handling installation, loading, and updates automatically.
@@ -107,3 +113,11 @@ Antigen was created by **Shrikant Sharat Kandula** around **2012** to bring Vund
 # SEE ALSO
 
 [oh-my-zsh](/man/oh-my-zsh)(1), [zsh](/man/zsh)(1), [zinit](/man/zinit)(1), [zplug](/man/zplug)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/zsh-users/antigen)```
+
+```[Documentation](https://github.com/zsh-users/antigen/wiki)```
+
+<!-- verified: 2026-06-11 -->

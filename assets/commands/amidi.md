@@ -26,7 +26,7 @@ Send **system exclusive** data
 
 # SYNOPSIS
 
-**amidi** [_-l_] [_-p port_] [_-s file_] [_-r file_] [_-d_] [_-S hex_]
+**amidi** [_-l_] [_-p port_] [_-s file_] [_-r file_] [_-S hex_] [_-d_] [_options_]
 
 # DESCRIPTION
 
@@ -39,26 +39,35 @@ Unlike higher-level MIDI sequencers, amidi doesn't interpret MIDI timing or song
 **-l**, **--list-devices**
 > List available hardware MIDI ports
 
+**-L**, **--list-rawmidis**
+> List all RawMIDI definitions (useful when debugging configuration files)
+
 **-p** _port_, **--port=**_port_
-> MIDI port to use (e.g., hw:1,0,0)
+> RawMIDI port to use (e.g., hw:1,0,0). Defaults to port 0 on card 0
 
 **-s** _file_, **--send=**_file_
-> Send contents of file to port
+> Send the raw MIDI commands in file to the port (e.g., a .syx file)
 
 **-r** _file_, **--receive=**_file_
-> Receive data and write to file
+> Receive data from the port and write it to file
 
 **-S** _hex_, **--send-hex=**_hex_
-> Send hexadecimal bytes
+> Send the bytes given as hexadecimal numbers to the port
 
 **-d**, **--dump**
-> Print received data as hex
+> Print received data as hexadecimal bytes
 
 **-t** _seconds_, **--timeout=**_seconds_
-> Timeout for receive operations
+> Stop receiving when no data arrives for the given time
 
 **-a**, **--active-sensing**
-> Don't ignore active sensing messages
+> Do not ignore Active Sensing bytes (FEh)
+
+**-c**, **--clock**
+> Do not ignore Clock bytes (F8h)
+
+**-i** _ms_, **--sysex-interval=**_ms_
+> Add a delay between each SysEx message sent, useful for firmware updates
 
 # CAVEATS
 
@@ -71,3 +80,11 @@ Works only with hardware MIDI ports, not virtual/software ports. SysEx transfers
 # SEE ALSO
 
 [aconnect](/man/aconnect)(1), [aplaymidi](/man/aplaymidi)(1), [arecordmidi](/man/arecordmidi)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/alsa-project/alsa-utils)```
+
+```[Homepage](https://www.alsa-project.org)```
+
+<!-- verified: 2026-06-11 -->

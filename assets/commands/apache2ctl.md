@@ -68,10 +68,16 @@ Restart **gracefully** without dropping connections
 > Test configuration file syntax
 
 **-M**
-> List loaded modules
+> List loaded (static and shared) modules
 
 **-S**
-> Print full Apache configuration
+> Show the parsed virtual host settings and listening ports
+
+**-V**
+> Show version, build settings, and compile-time configuration
+
+**-l**
+> List modules compiled into the server
 
 # CONFIGURATION
 
@@ -101,3 +107,13 @@ Part of the **Apache HTTP Server** project, one of the oldest and most widely us
 # SEE ALSO
 
 [apachectl](/man/apachectl)(8), [a2enmod](/man/a2enmod)(8), [a2dismod](/man/a2dismod)(8), [a2ensite](/man/a2ensite)(8), [httpd](/man/httpd)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/apache/httpd)```
+
+```[Homepage](https://httpd.apache.org/)```
+
+```[Documentation](https://manpages.debian.org/bookworm/apache2/apache2ctl.8.en.html)```
+
+<!-- verified: 2026-06-11 -->

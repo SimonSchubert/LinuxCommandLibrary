@@ -38,8 +38,11 @@ Manage Prometheus Alertmanager from the command line
 
 # PARAMETERS
 
-**alert**
-> Query and manage alerts.
+**alert query**
+> View and search through current alerts.
+
+**alert add**
+> Add a new alert to Alertmanager.
 
 **silence add** _matchers_
 > Create a new silence matching the specified labels.
@@ -47,35 +50,53 @@ Manage Prometheus Alertmanager from the command line
 **silence query**
 > List active silences.
 
+**silence update** _id_
+> Update an existing silence (e.g., extend its duration).
+
 **silence expire** _id_
 > Remove a silence by its ID.
 
+**silence import**
+> Import silences from a JSON file or stdin.
+
 **check-config** _file_
-> Validate an Alertmanager configuration file.
+> Validate Alertmanager configuration files.
 
 **cluster show**
-> Display cluster membership status.
+> Display cluster membership status and peers.
 
-**config routes**
+**config show**
+> Display the current Alertmanager configuration.
+
+**config routes show**
 > Display routing tree from configuration.
 
 **config routes test** _labels_
 > Test which route matches given labels.
 
+**template render**
+> Render a template definition for testing.
+
 **--alertmanager.url** _url_
-> Alertmanager URL (default: **http://localhost:9093**).
+> Alertmanager URL (default: **http://localhost:9093/**).
 
 **--comment** _text_
-> Comment for a silence (required).
+> Comment for a silence (required unless configured otherwise).
 
 **--author** _name_
-> Author of a silence.
+> Author of a silence (CreatedBy field).
 
 **--duration** _duration_
-> Duration for a silence (e.g., 1h, 30m).
+> Duration for a silence (default: 1h, e.g., 30m, 2h).
+
+**--end** _time_
+> Set silence expiration as an RFC3339 timestamp.
+
+**--timeout** _duration_
+> Timeout for API requests (default: 30s).
 
 **-o**, **--output** _format_
-> Output format: simple, extended, json.
+> Output format: simple, extended, json (default: simple).
 
 # DESCRIPTION
 
@@ -101,3 +122,11 @@ Requires network access to the Alertmanager API endpoint. Silences require a com
 # SEE ALSO
 
 [alertmanager](/man/alertmanager)(1), [prometheus](/man/prometheus)(1), [promtool](/man/promtool)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/prometheus/alertmanager)```
+
+```[Documentation](https://prometheus.io/docs/alerting/latest/alertmanager/)```
+
+<!-- verified: 2026-06-11 -->

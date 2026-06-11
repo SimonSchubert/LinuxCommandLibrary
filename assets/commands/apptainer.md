@@ -68,7 +68,16 @@ Key features include GPU and MPI support, cryptographic container signing, overl
 > Display container metadata
 
 **instance**
-> Manage running container instances
+> Manage containers running as background services
+
+**cache**
+> Manage the local image cache
+
+**overlay**
+> Manage an EXT3 writable overlay image
+
+**key**
+> Manage OpenPGP keys used for signing and verification
 
 **sign**
 > Cryptographically sign a container
@@ -94,4 +103,14 @@ Apptainer originated as **Singularity**, created in **2015** by Gregory Kurtzer 
 
 # SEE ALSO
 
-[docker](/man/docker)(1), [podman](/man/podman)(1), [buildah](/man/buildah)(1)
+[singularity](/man/singularity)(1), [docker](/man/docker)(1), [podman](/man/podman)(1), [buildah](/man/buildah)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/apptainer/apptainer)```
+
+```[Homepage](https://apptainer.org)```
+
+```[Documentation](https://apptainer.org/docs/)```
+
+<!-- verified: 2026-06-11 -->

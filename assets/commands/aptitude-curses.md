@@ -28,4 +28,10 @@ This is the same as running **aptitude** without arguments. The separate command
 
 # SEE ALSO
 
-[aptitude](/man/aptitude)(8)
+[aptitude](/man/aptitude)(8), [apt](/man/apt)(8), [dpkg](/man/dpkg)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/apt-team/aptitude)```
+
+<!-- verified: 2026-06-11 -->

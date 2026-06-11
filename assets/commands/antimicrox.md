@@ -35,34 +35,43 @@ Map gamepad inputs to keyboard and mouse
 # PARAMETERS
 
 **--profile** _file_
-> Load a specific controller profile at startup.
+> Use the specified profile as the default for the selected controllers.
 
-**--profile-dir** _directory_
-> Set the directory for profile storage.
+**--profile-controller** _value_
+> Apply the profile only to the controller with the given number or identifier.
 
 **--tray**
-> Start minimized to the system tray.
+> Launch in the system tray only.
 
 **--hidden**
-> Start without any visible window or tray icon.
-
-**--daemon**
-> Run in daemon mode for background operation.
-
-**--list**
-> List all connected game controllers.
-
-**--map** _device:profile_
-> Map a specific device to a profile.
+> Launch without the main window.
 
 **--no-tray**
-> Disable system tray icon entirely.
+> Launch with the tray menu disabled.
 
-**--log-level** _level_
-> Set logging verbosity: debug, info, warn, error.
+**-d**, **--daemon**
+> Launch as a daemon (background operation).
 
-**--eventgen** _backend_
-> Select event generation backend (uinput, xtest).
+**-l**, **--list**
+> Print information about controllers detected by SDL.
+
+**--map** _value_
+> Open the game controller mapping window for the given controller.
+
+**--unload** [_value_]
+> Unload the currently enabled profile(s).
+
+**--startSet** _number_ [_value_]
+> Start controllers on the specified set.
+
+**--next**
+> Advance to the next profile loading set option.
+
+**--log-level** {_debug_,_info_,_warn_}
+> Enable logging at the given level (default: warn).
+
+**--eventgen** {_xtest_,_uinput_}
+> Select the event generation backend (default: xtest).
 
 # DESCRIPTION
 
@@ -87,4 +96,12 @@ AntiMicroX is a fork of **AntiMicro**, which was itself inspired by **QJoyPad**.
 
 # SEE ALSO
 
-[jstest](/man/jstest)(1), [xdotool](/man/xdotool)(1), [qjoypad](/man/qjoypad)(1)
+[jstest](/man/jstest)(1), [xdotool](/man/xdotool)(1), [qjoypad](/man/qjoypad)(1), [evtest](/man/evtest)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/AntiMicroX/antimicrox)```
+
+```[Documentation](https://antimicrox.github.io/)```
+
+<!-- verified: 2026-06-11 -->

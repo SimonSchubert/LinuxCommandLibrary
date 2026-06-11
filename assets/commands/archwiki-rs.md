@@ -4,21 +4,29 @@ Browse the Arch Linux Wiki from the terminal
 
 # TLDR
 
-**Search** Arch Wiki
+**Search** the Arch Wiki by title
 
-```archwiki-rs search [query]```
+```archwiki-rs search "[query]"```
 
-**Read** an article
+**Search** within page text content
 
-```archwiki-rs read "[Installation guide]"```
+```archwiki-rs search "[query]" -t```
 
-**List** recent articles
+**Read** a page in the terminal
 
-```archwiki-rs recent```
+```archwiki-rs read-page "[Neovim]"```
 
-Open article in **browser**
+**Read** a page as Markdown
 
-```archwiki-rs open "[Pacman]"```
+```archwiki-rs read-page "[Neovim]" --format markdown```
+
+**Download** page and category names for offline search
+
+```archwiki-rs sync-wiki```
+
+**List** all available pages
+
+```archwiki-rs list-pages```
 
 # SYNOPSIS
 
@@ -26,32 +34,41 @@ Open article in **browser**
 
 # DESCRIPTION
 
-**archwiki-rs** is a command-line tool for browsing the Arch Linux Wiki from the terminal. It can search articles, display content, and open pages in a browser.
+**archwiki-rs** is a command-line tool for browsing the Arch Linux Wiki from the terminal. It can search pages by title or text, render page content as plain text or Markdown, and cache pages for offline reading.
 
 The tool provides offline-capable access to Arch Wiki documentation, useful for system administration and troubleshooting.
 
 # PARAMETERS
 
+**read-page** _page_
+> Fetch and display a wiki page. Use **--format** to choose the output format (e.g. markdown).
+
 **search** _query_
-> Search for articles
+> Search pages by title; add **-t** to search page text content instead.
 
-**read** _title_
-> Display article content
+**list-pages**
+> List all available wiki pages (tree by default, **-f** for a flat list, **-c** to filter by category).
 
-**open** _title_
-> Open in web browser
+**list-categories**
+> List all available wiki categories.
 
-**recent**
-> Show recent articles
+**list-languages**
+> List the supported page languages.
 
-**random**
-> Show random article
+**sync-wiki**
+> Download the page and category names used by the search and list commands.
 
-**--lang** _code_
-> Language code (en, de, etc.)
+**local-wiki**
+> Download a complete local copy of the Arch Wiki (makes many requests).
 
-**--offline**
-> Use cached content only
+**info**
+> Show application metadata and configuration, such as the cache directory.
+
+**completions** _shell_
+> Generate a shell completion file.
+
+**--json**, **--json-raw**
+> Emit machine-readable JSON output.
 
 # CAVEATS
 
@@ -64,3 +81,9 @@ Content may be outdated if used offline. Formatting may differ from web version.
 # SEE ALSO
 
 [man](/man/man)(1), [tldr](/man/tldr)(1), [curl](/man/curl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/lucifayr/archwiki-rs)```
+
+<!-- verified: 2026-06-11 -->

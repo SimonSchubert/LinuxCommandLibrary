@@ -16,6 +16,10 @@ Only update **repository indexes**
 
 ```apk add [package]```
 
+**Install** without caching the index (common in Dockerfiles)
+
+```apk add --no-cache [package]```
+
 **Remove** a package
 
 ```apk del [package]```
@@ -79,20 +83,38 @@ Display **information** about a specific package
 **policy**
 > Show repository policy for packages
 
+**version**
+> Compare package versions or check for available upgrades
+
+**fetch**
+> Download packages from repositories to the current directory
+
+**stats**
+> Show statistics about the package database
+
 **-U, --update-cache**
-> Update package lists before operation
+> Update package lists before the operation (alias for --cache-max-age 0)
 
 **-v, --verbose**
-> Print more verbose information
+> Print more verbose information (repeat for more detail)
+
+**-q, --quiet**
+> Print less information
 
 **-d, --description**
 > Search in package descriptions
 
-**--allow-untrusted**
-> Install local packages without verification
+**--no-cache**
+> Do not use or update any local cache; fetch the index directly
 
-**-X, --repository**
-> Specify supplemental repositories
+**--allow-untrusted**
+> Install packages with untrusted or missing signatures
+
+**-X, --repository** _url_
+> Specify a supplemental repository
+
+**-p, --root** _dir_
+> Manage a filesystem rooted at the given directory
 
 # CONFIGURATION
 
@@ -116,3 +138,11 @@ Developed for **Alpine Linux**, a security-oriented, lightweight Linux distribut
 # SEE ALSO
 
 [apt](/man/apt)(8), [dnf](/man/dnf)(8), [pacman](/man/pacman)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/alpinelinux/apk-tools)```
+
+```[Documentation](https://wiki.alpinelinux.org/wiki/Alpine_Package_Keeper)```
+
+<!-- verified: 2026-06-11 -->

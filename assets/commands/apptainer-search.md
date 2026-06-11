@@ -33,14 +33,24 @@ By default, searches are performed against the Sylabs Container Library. Alterna
 # PARAMETERS
 
 **--arch** _architecture_
-> Filter results by CPU architecture
+> Filter results by CPU architecture (default: amd64).
 
 **--signed**
-> Only show containers with cryptographic signatures
+> Only show containers with cryptographic signatures.
 
 **--library** _url_
-> Search in a specific Container Library
+> Specify an alternate Container Library URI to search.
 
 # SEE ALSO
 
-[apptainer](/man/apptainer)(1), [apptainer-pull](/man/apptainer-pull)(1)
+[apptainer](/man/apptainer)(1), [apptainer-pull](/man/apptainer-pull)(1), [apptainer-push](/man/apptainer-push)(1), [apptainer-delete](/man/apptainer-delete)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/apptainer/apptainer)```
+
+```[Homepage](https://apptainer.org)```
+
+```[Documentation](https://apptainer.org/docs/)```
+
+<!-- verified: 2026-06-11 -->

@@ -40,47 +40,53 @@ Unlike ad-hoc ansible commands, playbooks define complete automation workflows w
 
 # PARAMETERS
 
-**-i** _inventory_
-> Inventory file or path
+**-i** _inventory_, **--inventory** _inventory_
+> Inventory file/path or comma-separated host list
 
 **-e** _vars_, **--extra-vars** _vars_
-> Extra variables (key=value or @file.yml)
+> Extra variables (key=value, YAML/JSON, or @file.yml)
 
-**--tags** _tags_
-> Run only tasks with these tags
+**-t** _tags_, **--tags** _tags_
+> Run only plays and tasks tagged with these values
 
 **--skip-tags** _tags_
-> Skip tasks with these tags
+> Skip plays and tasks whose tags match these values
 
-**--become**
-> Run with privilege escalation
+**-b**, **--become**
+> Run with privilege escalation (become)
 
 **-K**, **--ask-become-pass**
-> Prompt for become password
+> Prompt for privilege escalation password
 
-**--check**
+**-C**, **--check**
 > Dry run without making changes
 
-**--diff**
-> Show differences in changed files
+**-D**, **--diff**
+> Show differences in changed files (works with --check)
 
 **-l** _hosts_, **--limit** _hosts_
-> Limit to specific hosts
+> Further limit selected hosts to an additional pattern
 
 **--list-tasks**
-> List tasks without executing
+> List all tasks that would be executed
 
 **--list-tags**
-> List available tags
+> List all available tags
 
 **-f** _forks_, **--forks** _forks_
-> Parallel processes
+> Number of parallel processes (default: 5)
 
 **--start-at-task** _task_
-> Start at specific task
+> Start the playbook at the task matching this name
 
 **--step**
-> Prompt before each task
+> Confirm each task before running
+
+**--syntax-check**
+> Check the playbook syntax without executing it
+
+**--flush-cache**
+> Clear the fact cache for every host in inventory
 
 # CONFIGURATION
 
@@ -106,4 +112,12 @@ Playbook syntax errors fail fast; use --syntax-check first. Check mode may not w
 
 # SEE ALSO
 
-[ansible](/man/ansible)(1), [ansible-vault](/man/ansible-vault)(1), [ansible-lint](/man/ansible-lint)(1)
+[ansible](/man/ansible)(1), [ansible-vault](/man/ansible-vault)(1), [ansible-lint](/man/ansible-lint)(1), [ansible-galaxy](/man/ansible-galaxy)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ansible/ansible)```
+
+```[Documentation](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)```
+
+<!-- verified: 2026-06-11 -->

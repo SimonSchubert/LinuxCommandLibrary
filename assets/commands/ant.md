@@ -61,11 +61,35 @@ Build files (typically build.xml) define targets containing tasks. Ant executes 
 **-e**, **-emacs**
 > Output without adornment
 
+**-S**, **-silent**
+> Print nothing but task outputs and build failures
+
 **-k**, **-keep-going**
-> Continue on error
+> Execute all targets that do not depend on failed targets
 
 **-lib** _path_
-> Additional classpath
+> Specify a path to search for jars and classes
+
+**-l** _file_, **-logfile** _file_
+> Write log output to the given file
+
+**-logger** _classname_
+> Class that performs logging
+
+**-propertyfile** _name_
+> Load all properties from file (-D properties take precedence)
+
+**-noinput**
+> Do not allow interactive input
+
+**-s** _file_, **-find** _file_
+> Search for the buildfile towards the root of the filesystem and use it
+
+**-nice** _number_
+> Niceness for the main thread: 1 (lowest) to 10 (highest), default 5
+
+**-diagnostics**
+> Print information helpful for diagnosing problems and exit
 
 **-version**
 > Show version
@@ -81,3 +105,13 @@ Requires Java Runtime Environment. XML build files can become verbose for comple
 # SEE ALSO
 
 [mvn](/man/mvn)(1), [gradle](/man/gradle)(1), [make](/man/make)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/apache/ant)```
+
+```[Homepage](https://ant.apache.org/)```
+
+```[Documentation](https://ant.apache.org/manual/)```
+
+<!-- verified: 2026-06-11 -->

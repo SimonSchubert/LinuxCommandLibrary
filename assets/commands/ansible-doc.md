@@ -40,23 +40,26 @@ The tool can list all available modules and filter by plugin type, making it use
 
 # PARAMETERS
 
-**-l**, **--list**
-> List available modules or plugins
+**-l** [_filter_], **--list** [_filter_]
+> List available plugins; optional filter can be a namespace or collection name
 
 **-s**, **--snippet**
-> Show playbook snippet for module
+> Show a playbook snippet (for inventory, lookup, and module plugin types)
 
 **-t** _type_, **--type** _type_
-> Plugin type: module, callback, connection, lookup, etc.
+> Plugin type to look up (default: module). Choices include module, become, cache, callback, cliconf, connection, httpapi, inventory, lookup, netconf, shell, vars, strategy, test, filter, role, keyword
 
 **-F**, **--list_files**
-> Show module source files
+> Show plugin names and their source files (implies --list)
+
+**-e** _entry_point_, **--entry-point** _entry_point_
+> Select the entry point for a role (with -t role)
 
 **-j**, **--json**
-> Output in JSON format
+> Change output into JSON format
 
 **-M** _path_, **--module-path** _path_
-> Additional module search path
+> Prepend colon-separated path(s) to the module library
 
 # CONFIGURATION
 
@@ -77,3 +80,11 @@ Documentation quality varies between core and community modules. Some modules ma
 # SEE ALSO
 
 [ansible](/man/ansible)(1), [ansible-galaxy](/man/ansible-galaxy)(1), [ansible-playbook](/man/ansible-playbook)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ansible/ansible)```
+
+```[Documentation](https://docs.ansible.com/ansible/latest/cli/ansible-doc.html)```
+
+<!-- verified: 2026-06-11 -->

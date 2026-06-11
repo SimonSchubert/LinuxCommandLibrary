@@ -67,3 +67,9 @@ The ARC format was created by System Enhancement Associates in **1985** and was 
 # SEE ALSO
 
 [unzip](/man/unzip)(1), [tar](/man/tar)(1), [gzip](/man/gzip)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/hyc/arc)```
+
+<!-- verified: 2026-06-11 -->

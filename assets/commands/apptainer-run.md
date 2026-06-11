@@ -45,8 +45,14 @@ Execute the default runscript of a container.
 **--bind**, **-B** _src[:dest[:opts]]_
 > Bind mount a host path into the container.
 
-**--overlay** _image_
+**--overlay**, **-o** _image_
 > Use an overlay image for a writable layer.
+
+**--writable**, **-w**
+> Make the container filesystem read-write (default is read-only).
+
+**--writable-tmpfs**
+> Add a writable tmpfs overlay; changes are discarded on exit.
 
 **--nv**
 > Enable NVIDIA GPU support.
@@ -58,28 +64,25 @@ Execute the default runscript of a container.
 > Use minimal /dev and empty home/tmp directories.
 
 **--containall**, **-C**
-> Full containment with clean environment.
+> Full containment of filesystems, PID, IPC, and environment.
 
 **--cleanenv**, **-e**
 > Clean environment before running.
 
 **--env** _VAR=value_
-> Set environment variable.
+> Set an environment variable.
 
-**--home** _path_
-> Specify custom home directory.
+**--home**, **-H** _path_
+> Specify a custom home directory.
 
 **--pwd** _path_
-> Set working directory inside container.
+> Set working directory inside the container.
 
-**--fakeroot**
-> Run with fake root privileges.
+**--fakeroot**, **-f**
+> Run with apparent root privileges without host root.
 
-**--net**
-> Enable network namespace.
-
-**--writable-tmpfs**
-> Add writable tmpfs overlay.
+**--net**, **-n**
+> Run in a new network namespace.
 
 **--app** _name_
 > Run a specific SCIF app within the container.
@@ -113,3 +116,13 @@ The run command has been central to Singularity/Apptainer since the project bega
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-exec](/man/apptainer-exec)(1), [apptainer-shell](/man/apptainer-shell)(1), [apptainer-run-help](/man/apptainer-run-help)(1), [apptainer-build](/man/apptainer-build)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/apptainer/apptainer)```
+
+```[Homepage](https://apptainer.org)```
+
+```[Documentation](https://apptainer.org/docs/)```
+
+<!-- verified: 2026-06-11 -->

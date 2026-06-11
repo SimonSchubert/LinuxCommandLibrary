@@ -4,9 +4,13 @@ Manage containerized subsystems for isolated package installations
 
 # TLDR
 
-**Create** new subsystem
+**Create** new subsystem interactively
 
 ```apx subsystems new```
+
+**Create** a subsystem from a named stack
+
+```apx subsystems new --name [name] --stack [stack]```
 
 **List** subsystems
 
@@ -39,7 +43,7 @@ Manage containerized subsystems for isolated package installations
 # PARAMETERS
 
 **new**
-> Interactively create a new subsystem
+> Create a new subsystem. Interactive unless name and stack are given.
 
 **list**
 > List all available subsystems
@@ -51,10 +55,22 @@ Manage containerized subsystems for isolated package installations
 > Remove a subsystem
 
 **-n, --name** _name_
-> Specify subsystem name
+> Specify the subsystem name (new, reset, rm)
+
+**-s, --stack** _stack_
+> Specify the stack to base the subsystem on (new)
+
+**-H, --home** _path_
+> Set a custom home directory for the subsystem (new)
+
+**-i, --init**
+> Use systemd inside the subsystem container (new)
+
+**-j, --json**
+> Output the subsystem list as JSON (list)
 
 **-f, --force**
-> Force the operation without confirmation
+> Force the operation without confirmation (reset, rm)
 
 # CAVEATS
 
@@ -66,4 +82,14 @@ Subsystems require container runtime support. Removing or resetting a subsystem 
 
 # SEE ALSO
 
-[apx-stacks](/man/apx-stacks)(1), [distrobox](/man/distrobox)(1)
+[apx](/man/apx)(1), [apx-stacks](/man/apx-stacks)(1), [distrobox](/man/distrobox)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Vanilla-OS/apx)```
+
+```[Homepage](https://apx.vanillaos.org/)```
+
+```[Documentation](https://docs.vanillaos.org/docs/en/apx)```
+
+<!-- verified: 2026-06-11 -->

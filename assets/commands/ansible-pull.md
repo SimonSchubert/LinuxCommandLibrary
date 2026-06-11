@@ -37,34 +37,40 @@ This is useful for scaling to many nodes, bootstrap scenarios, or environments w
 # PARAMETERS
 
 **-U** _url_, **--url** _url_
-> Git repository URL
+> Repository URL to pull from
 
-**-C** _branch_, **--checkout** _branch_
+**-C** _checkout_, **--checkout** _checkout_
 > Branch, tag, or commit to checkout
 
 **-d** _dir_, **--directory** _dir_
-> Local directory for repository
+> Local destination directory for the checkout
 
-**-i** _inventory_
-> Inventory (often "localhost,")
+**-i** _inventory_, **--inventory** _inventory_
+> Inventory file/path or comma-separated host list (often "localhost,")
+
+**-m** _name_, **--module-name** _name_
+> SCM module used to check out the repo: git, subversion, hg, or bzr (default: git)
 
 **-o**, **--only-if-changed**
-> Only run playbook if repo changed
+> Only run the playbook if the repository has changed
 
-**--sleep** _seconds_
-> Random sleep before running (for staggering)
+**-s** _seconds_, **--sleep** _seconds_
+> Sleep a random interval (0 to seconds) before starting, to stagger runs
 
 **--purge**
-> Delete local repo before cloning
+> Purge the checkout after the playbook run completes
 
 **-f**, **--force**
-> Force run even if checkout fails
+> Run the playbook even if the repository update fails
 
 **--full**
-> Full clone instead of shallow
+> Do a full clone instead of a shallow one
+
+**--verify-commit**
+> Verify the GPG signature of the checked-out commit (git only)
 
 **--accept-host-key**
-> Accept SSH host key
+> Add the repository host key if not already present
 
 # CONFIGURATION
 
@@ -79,7 +85,7 @@ This is useful for scaling to many nodes, bootstrap scenarios, or environments w
 
 # CAVEATS
 
-Requires git and ansible on the target node. Credentials for private repos need configuration. Failure leaves node in potentially inconsistent state.
+Requires git (or the chosen SCM) and ansible on the target node. Credentials for private repos need configuration. Failure leaves the node in a potentially inconsistent state. If no playbook is given, ansible-pull looks for one named after the host's fully qualified domain name, then its hostname, and finally local.yml.
 
 # HISTORY
 
@@ -88,3 +94,11 @@ Requires git and ansible on the target node. Credentials for private repos need 
 # SEE ALSO
 
 [ansible-playbook](/man/ansible-playbook)(1), [ansible](/man/ansible)(1), [git](/man/git)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ansible/ansible)```
+
+```[Documentation](https://docs.ansible.com/ansible/latest/cli/ansible-pull.html)```
+
+<!-- verified: 2026-06-11 -->

@@ -32,6 +32,10 @@ List all **installed** packages
 
 ```apt list --installed```
 
+List packages that **can be upgraded**
+
+```apt list --upgradable```
+
 **Remove** unused dependencies
 
 ```sudo apt autoremove```
@@ -56,7 +60,10 @@ List all **installed** packages
 > Perform upgrades, removing packages if necessary
 
 **install package**
-> Install or upgrade specified packages
+> Install or upgrade specified packages; use _package=version_ to pin a version or _package/codename_ to select a release
+
+**reinstall package**
+> Reinstall packages already at the newest version
 
 **remove package**
 > Remove specified packages
@@ -74,7 +81,10 @@ List all **installed** packages
 > Display package information
 
 **list**
-> List packages matching criteria
+> List packages matching criteria (use **--installed**, **--upgradable**, or **--all-versions**)
+
+**satisfy string**
+> Satisfy dependency strings (as used in Build-Depends)
 
 **edit-sources**
 > Edit sources.list files
@@ -84,6 +94,9 @@ List all **installed** packages
 
 **-q, --quiet**
 > Quiet output
+
+**-t, --target-release release**
+> Prefer packages from the given release (e.g. a backports suite)
 
 **--no-install-recommends**
 > Don't install recommended packages
@@ -119,3 +132,11 @@ Intended for interactive use; for scripts, **apt-get** is recommended for more s
 # SEE ALSO
 
 [apt-get](/man/apt-get)(8), [apt-cache](/man/apt-cache)(8), [dpkg](/man/dpkg)(1), [aptitude](/man/aptitude)(8)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/apt-team/apt)```
+
+```[Documentation](https://manpages.debian.org/apt)```
+
+<!-- verified: 2026-06-11 -->

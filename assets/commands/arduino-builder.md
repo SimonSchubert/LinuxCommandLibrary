@@ -59,3 +59,11 @@ Deprecated in favor of arduino-cli. Requires specifying multiple paths. Board pa
 # SEE ALSO
 
 [arduino](/man/arduino)(1), [arduino-cli](/man/arduino-cli)(1), [avr-gcc](/man/avr-gcc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/arduino/arduino-builder)```
+
+```[Homepage](https://www.arduino.cc)```
+
+<!-- verified: 2026-06-11 -->

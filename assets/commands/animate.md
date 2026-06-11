@@ -49,19 +49,25 @@ The viewer provides interactive controls for playback, including pause, single-s
 > Image colorspace
 
 **-coalesce**
-> Merge a GIF animation sequence
+> Merge a GIF animation sequence into full frames
 
 **-dispose** _method_
 > Frame disposal method
 
-**-remote**
-> Accept commands via X Window
+**-display** _server_
+> X server to display the animation on
+
+**-backdrop**
+> Display the image centered on a backdrop
 
 **-window** _id_
-> Display in existing window
+> Display in an existing window
 
-**-pause**
-> Start paused
+**-remote** _command_
+> Send a command to an already running animate program
+
+**-pause** _seconds_
+> Extra pause at the end of each animation loop
 
 # CAVEATS
 
@@ -73,4 +79,14 @@ Requires X Window System. Large animations consume significant memory. Frame tim
 
 # SEE ALSO
 
-[display](/man/display)(1), [convert](/man/convert)(1), [identify](/man/identify)(1)
+[display](/man/display)(1), [magick](/man/magick)(1), [convert](/man/convert)(1), [identify](/man/identify)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ImageMagick/ImageMagick)```
+
+```[Homepage](https://imagemagick.org)```
+
+```[Documentation](https://imagemagick.org/script/animate.php)```
+
+<!-- verified: 2026-06-11 -->

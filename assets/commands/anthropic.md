@@ -10,7 +10,7 @@ Interact with Claude AI from the command line
 
 **Send a message** with a specific model
 
-```anthropic -g user "[prompt]" -m [claude-3-5-sonnet-20241022]```
+```anthropic -g user "[prompt]" -m [claude-opus-4-8]```
 
 **Analyze an image** with Claude
 
@@ -38,7 +38,7 @@ Interact with Claude AI from the command line
 > Add a message with the specified role (user/assistant) and content. Can be repeated for multi-turn conversations.
 
 **-m**, **--model** _model_
-> Specify the Claude model to use. Default: claude-3-opus-20240229.
+> Specify the Claude model to use. The built-in default is claude-3-opus-20240229, which has since been retired, so pass a current model such as claude-opus-4-8 or claude-sonnet-4-6.
 
 **-s**, **--system** _prompt_
 > System message providing context or instructions for the conversation.
@@ -66,12 +66,18 @@ The tool supports multi-turn conversations by chaining multiple **-g** flags, en
 
 # CAVEATS
 
-Requires an **ANTHROPIC_API_KEY** environment variable to be set with valid API credentials. PDF processing requires the **Poppler** library to be installed on the system. API usage incurs costs based on token consumption.
+Requires an **ANTHROPIC_API_KEY** environment variable to be set with valid API credentials. PDF processing requires the **Poppler** library (used by **pdf2image**) to be installed on the system; it is not needed if you never pass PDFs. The hardcoded default model (claude-3-opus-20240229) has been retired, so supply a current model with **-m**. API usage incurs costs based on token consumption.
 
 # HISTORY
 
-The anthropic-cli tool was developed as a community project to provide command-line access to Anthropic's Claude models. It leverages the official Anthropic Python SDK and was created to fill the gap for developers preferring terminal-based workflows over web interfaces.
+The anthropic-cli tool is a community project by **dvcrn** that provides command-line access to Anthropic's Claude models. It wraps the official Anthropic Python SDK and was created for developers who prefer terminal-based workflows over web interfaces. It is distributed on PyPI as **anthropic-cli** and is unrelated to Anthropic's own **claude** (Claude Code) and **ant** command-line tools.
 
 # SEE ALSO
 
 [claude](/man/claude)(1), [ollama](/man/ollama)(1), [llm](/man/llm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/dvcrn/anthropic-cli)```
+
+<!-- verified: 2026-06-11 -->

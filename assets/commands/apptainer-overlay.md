@@ -37,16 +37,16 @@ Overlays can be embedded directly into a SIF file or created as standalone image
 # PARAMETERS
 
 **-s, --size** _size_
-> Size of the overlay image in MiB
+> Size of the EXT3 writable overlay in MiB (default: 64).
 
 **-S, --sparse**
-> Create a sparse file instead of allocating full disk space
+> Create a sparse file instead of allocating full disk space.
 
 **-f, --fakeroot**
-> Create overlay for use with fakeroot
+> Make the overlay layout usable by actions run with --fakeroot.
 
 **--create-dir** _path_
-> Create a specific directory in the overlay layout
+> Directory to create as part of the overlay layout (can be repeated).
 
 # CAVEATS
 
@@ -54,4 +54,14 @@ Overlays require filesystem support for loop devices and EXT3. Sparse overlays s
 
 # SEE ALSO
 
-[apptainer](/man/apptainer)(1), [apptainer-build](/man/apptainer-build)(1)
+[apptainer](/man/apptainer)(1), [apptainer-build](/man/apptainer-build)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-shell](/man/apptainer-shell)(1), [apptainer-exec](/man/apptainer-exec)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/apptainer/apptainer)```
+
+```[Homepage](https://apptainer.org)```
+
+```[Documentation](https://apptainer.org/docs/)```
+
+<!-- verified: 2026-06-11 -->

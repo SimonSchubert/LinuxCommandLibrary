@@ -37,16 +37,16 @@ The command requires authentication with the target library and appropriate perm
 # PARAMETERS
 
 **-A, --arch** _architecture_
-> Delete the image for a specific CPU architecture
+> Delete the image for a specific CPU architecture (default: amd64).
 
 **-F, --force**
-> Force delete without confirmation prompt
+> Force delete without confirmation prompt.
 
 **--library** _url_
-> Specify an alternate Container Library URL
+> Specify the Container Library URL to delete from.
 
 **--no-https**
-> Use HTTP instead of HTTPS for the connection
+> Use HTTP instead of HTTPS for the library connection.
 
 # CAVEATS
 
@@ -54,4 +54,14 @@ This operation is irreversible. Deleted images cannot be recovered. Ensure you h
 
 # SEE ALSO
 
-[apptainer](/man/apptainer)(1), [apptainer-push](/man/apptainer-push)(1), [apptainer-pull](/man/apptainer-pull)(1)
+[apptainer](/man/apptainer)(1), [apptainer-push](/man/apptainer-push)(1), [apptainer-pull](/man/apptainer-pull)(1), [apptainer-search](/man/apptainer-search)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/apptainer/apptainer)```
+
+```[Homepage](https://apptainer.org)```
+
+```[Documentation](https://apptainer.org/docs/)```
+
+<!-- verified: 2026-06-11 -->

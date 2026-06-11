@@ -36,39 +36,48 @@ Install from **requirements file**
 
 **ansible-galaxy** manages Ansible roles and collections from Ansible Galaxy and other sources. Galaxy is a public repository of community-contributed content, providing reusable automation components.
 
-The tool can install, create, and manage roles (traditional content) and collections (bundled content including modules, plugins, and roles).
+The tool can install, create, and manage roles (traditional content) and collections (bundled content including modules, plugins, and roles). Subcommands are grouped by content type as **ansible-galaxy role** _command_ and **ansible-galaxy collection** _command_; if the type is omitted, role is assumed (for example, "ansible-galaxy install" is equivalent to "ansible-galaxy role install").
 
 # PARAMETERS
 
 **install** _name_
-> Install role or collection
+> Install a role (or use "collection install" for a collection)
 
 **init** _name_
-> Create new role scaffold
+> Create a new role or collection scaffold
 
 **list**
-> List installed roles/collections
+> List installed roles or collections
 
 **search** _query_
 > Search Galaxy for roles
 
-**remove** _name_
-> Remove installed role/collection
+**info** _name_
+> Show detailed information about a role or collection
 
-**-r** _file_, **--role-file** _file_
-> Requirements file
+**remove** _name_
+> Remove an installed role or collection
+
+**build**
+> Build a collection artifact (collection only)
+
+**publish** _tarball_
+> Publish a collection to a Galaxy server (collection only)
+
+**-r** _file_, **--role-file** _file_, **--requirements-file** _file_
+> Install items listed in a YAML requirements file
 
 **-p** _path_, **--roles-path** _path_
-> Installation path for roles
+> Installation path for roles (--collections-path for collections)
 
 **--force**
-> Force overwrite existing
+> Force overwrite of an existing role or collection
 
 **-s** _server_, **--server** _server_
-> Galaxy server URL
+> Galaxy API server URL
 
 **--offline**
-> Work offline (installed content only)
+> Work offline (init/install/verify, using installed content only)
 
 # CONFIGURATION
 
@@ -92,3 +101,11 @@ Galaxy content is community-maintained; review before use in production. Collect
 # SEE ALSO
 
 [ansible](/man/ansible)(1), [ansible-playbook](/man/ansible-playbook)(1), [ansible-doc](/man/ansible-doc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ansible/ansible)```
+
+```[Documentation](https://docs.ansible.com/ansible/latest/cli/ansible-galaxy.html)```
+
+<!-- verified: 2026-06-11 -->
