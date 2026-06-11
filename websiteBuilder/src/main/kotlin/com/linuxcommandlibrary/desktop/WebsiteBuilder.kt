@@ -93,6 +93,7 @@ fun main() {
 
     val folder = File("html")
     folder.mkdir()
+    minifier.copyWebImages()
 
     websiteBuilder.createCommandsHtmlFile(folder)
 

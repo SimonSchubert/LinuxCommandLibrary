@@ -5,6 +5,15 @@ import java.nio.file.Files
 
 class Minifier {
 
+    fun copyWebImages() {
+        val imagesDir = File("html/images")
+        imagesDir.mkdirs()
+        val sourceImages = File("websiteBuilder/src/main/resources/images")
+        sourceImages.listFiles { file -> file.isFile && file.extension == "svg" }?.forEach { source ->
+            File(imagesDir, source.name).writeText(source.readText())
+        }
+    }
+
     fun minifyScriptsAndSheets(isRelease: Boolean) {
         val scriptsDir = File("html/scripts")
         scriptsDir.mkdir()
