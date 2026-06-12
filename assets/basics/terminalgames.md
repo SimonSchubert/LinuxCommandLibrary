@@ -1,6 +1,7 @@
 # Terminal games
 
 ## 2048
+Slide and merge number tiles until one of them reaches 2048.
 ```[2048](/man/2048)```
 ```
   .    2    .    .
@@ -10,6 +11,7 @@
 ```
 
 ## adventure
+The original 1977 Colossal Cave text adventure: explore a cave by typing commands.
 ```[adventure](/man/adventure)```
 ```
 You are in a building.
@@ -18,6 +20,7 @@ You are in a valley.
 ```
 
 ## angband
+Deep, Tolkien-themed dungeon roguelike; descend 100 levels to defeat Morgoth.
 ```[angband](/man/angband)```
 ```
  ######
@@ -28,6 +31,7 @@ You are in a valley.
 ```
 
 ## atc
+Real-time air traffic control: route planes to runways and exits before they collide.
 ```[atc](/man/atc)```
 ```
  .  .  .  *  .  .
@@ -37,6 +41,7 @@ You are in a valley.
 ```
 
 ## backgammon
+The classic dice-and-checkers board game against the computer.
 ```[backgammon](/man/backgammon)```
 ```
 13 14 15 16 17 18
@@ -46,6 +51,7 @@ You are in a valley.
 ```
 
 ## battleship
+Guess coordinates to sink the computer's hidden fleet.
 ```[nbbattleship](/man/nbbattleship)```
 ```
    A B C D E F
@@ -56,6 +62,7 @@ You are in a valley.
 ```
 
 ## battlestar
+A BSD text adventure aboard a doomed starship.
 ```[battlestar](/man/battlestar)```
 ```
 You are in the cockpit.
@@ -66,6 +73,7 @@ of broken instrumentation.
 ```
 
 ## boggle
+Find as many words as possible in a 4x4 letter grid before time runs out.
 ```[boggle](/man/boggle)```
 ```
  D O G S
@@ -75,6 +83,7 @@ of broken instrumentation.
 ```
 
 ## bombardier
+Bomb the skyscrapers flat so your ever-lower-flying plane can land.
 ```[bombardier](/man/bombardier)```
 ```
       ==>
@@ -84,6 +93,7 @@ of broken instrumentation.
 ```
 
 ## boulder dash
+Dig through caves, collect diamonds, and do not get crushed by falling boulders.
 ```[cavezofphear](/man/cavezofphear)```
 ```
  ###########
@@ -94,6 +104,7 @@ of broken instrumentation.
 ```
 
 ## checkers
+Draughts against the computer.
 ```[nbcheckers](/man/nbcheckers)```
 ```
  . x . x . x . x
@@ -104,6 +115,7 @@ of broken instrumentation.
 ```
 
 ## chess
+Play chess against the GNU Chess engine.
 ```[gnuchess](/man/gnuchess)```
 ```
  r n b q k b n r
@@ -115,6 +127,7 @@ of broken instrumentation.
 ```
 
 ## crawl
+Dungeon Crawl Stone Soup: a modern, polished roguelike famous for its variety of species and gods.
 ```[crawl](/man/crawl)```
 ```
  ####
@@ -125,6 +138,7 @@ of broken instrumentation.
 ```
 
 ## cribbage
+The classic card game with pegging and a crib, against the computer.
 ```[cribbage](/man/cribbage)```
 ```
  Your hand:
@@ -134,6 +148,7 @@ of broken instrumentation.
 ```
 
 ## curseofwar
+Fast-paced real-time strategy: grow your country and overrun the enemy.
 ```[curseofwar](/man/curseofwar)```
 ```
  ~~~~~~~~.....####
@@ -143,6 +158,7 @@ of broken instrumentation.
 ```
 
 ## dopewars
+Buy low, sell high, and pay off your debt in this trading game through New York's boroughs.
 ```[dopewars](/man/dopewars)```
 ```
  Bronx -> Manhattan
@@ -152,6 +168,7 @@ of broken instrumentation.
 ```
 
 ## empire
+Turn-based war game of exploration, production, and conquest.
 ```[empire](/man/empire)```
 ```
  . . + . ~ ~ ~ ~
@@ -161,6 +178,7 @@ of broken instrumentation.
 ```
 
 ## fifteen
+The 15-puzzle: slide numbered tiles into order using the one empty space.
 ```[nbfifteen](/man/nbfifteen)```
 ```
 +--+--+--+--+
@@ -172,6 +190,7 @@ of broken instrumentation.
 ```
 
 ## go
+Play Go against the GNU Go engine.
 ```[gnugo](/man/gnugo)```
 ```
     A B C D E F G
@@ -183,6 +202,7 @@ of broken instrumentation.
 ```
 
 ## gomoku
+Get five stones in a row before the computer does.
 ```[gomoku](/man/gomoku)```
 ```
  . . . . . . . .
@@ -193,6 +213,7 @@ of broken instrumentation.
 ```
 
 ## greed
+Clear the board: each number you step on is exactly how far your next move in that direction goes.
 ```[greed](/man/greed)```
 ```
  4 7 2 9 1 3 8
@@ -202,6 +223,7 @@ of broken instrumentation.
 ```
 
 ## hangman
+Guess the word one letter at a time before the gallows are complete.
 ```[hangman](/man/hangman)```
 ```
  +---+
@@ -213,6 +235,7 @@ _|_
 ```
 
 ## hunt
+Multiplayer maze shooter from BSD: hunt other players over the network.
 ```[hunt](/man/hunt)```
 ```
  ######  ######
@@ -223,6 +246,7 @@ _|_
 ```
 
 ## interactive fiction
+Frotz plays Z-machine interactive fiction, including the Infocom classics like Zork.
 ```[frotz](/man/frotz)```
 ```
 West of House
@@ -233,6 +257,7 @@ field west of a house.
 ```
 
 ## memory
+Flip cards and find the matching pairs.
 ```[nbmemoblocks](/man/nbmemoblocks)```
 ```
  [?] [?] [A] [?]
@@ -241,6 +266,7 @@ field west of a house.
 ```
 
 ## mille bornes
+The French card racing game: drive 1000 miles while hitting opponents with flat tires.
 ```[mille](/man/mille)```
 ```
  HAND: [Go] [25] [75]
@@ -249,6 +275,7 @@ field west of a house.
 ```
 
 ## mines
+Minesweeper: open every square that is not a mine.
 ```[nbmines](/man/nbmines)```
 ```[freesweep](/man/freesweep)```
 ```
@@ -259,6 +286,7 @@ field west of a house.
 ```
 
 ## moon-buggy
+Drive across the moon and jump the craters.
 ```[moon-buggy](/man/moon-buggy)```
 ```
          *
@@ -268,6 +296,7 @@ ______/  \________
 ```
 
 ## moria
+Descend the dungeon to slay the Balrog; the roguelike that inspired angband.
 ```[moria](/man/moria)```
 ```
  #####
@@ -278,6 +307,7 @@ ______/  \________
 ```
 
 ## nbsdgames
+A whole collection of curses mini games in one package: jewels, sudoku, mines, reversi, and more.
 ```[nbsdgames](/man/nbsdgames)```
 ```
  New BSD Games
@@ -287,6 +317,7 @@ ______/  \________
 ```
 
 ## nethack
+The legendary dungeon roguelike where almost anything can be eaten, worn, thrown, or cursed.
 ```[nethack-console](/man/nethack-console)```
 ```
  ------       -----
@@ -297,6 +328,7 @@ ______/  \________
 ```
 
 ## ninvaders
+Space Invaders in ncurses.
 ```[ninvaders](/man/ninvaders)```
 ```
  /\ /\ /\ /\ /\
@@ -307,6 +339,7 @@ ______/  \________
 ```
 
 ## omega
+A roguelike with a twist: a city, a countryside, and guilds beyond the dungeons.
 ```[omega-rpg](/man/omega-rpg)```
 ```
  ########
@@ -318,6 +351,7 @@ ______/  \________
 ```
 
 ## pacman
+Eat the dots, dodge the ghosts.
 ```[pacman4console](/man/pacman4console)```
 ```
  ############
@@ -328,6 +362,7 @@ ______/  \________
 ```
 
 ## phantasia
+Multiplayer fantasy role-playing: level your character from wanderer to council of the gods.
 ```[phantasia](/man/phantasia)```
 ```
  Phantasia -- Level 3
@@ -337,6 +372,7 @@ ______/  \________
 ```
 
 ## pipes
+Rotate and connect pipe segments before the water arrives.
 ```[nbpipes](/man/nbpipes)```
 ```
  .  |  .  .  .
@@ -346,6 +382,7 @@ ______/  \________
 ```
 
 ## reversi
+Othello: flip your opponent's discs by flanking them.
 ```[nbreversi](/man/nbreversi)```
 ```
  . . . . . . . .
@@ -356,6 +393,7 @@ ______/  \________
 ```
 
 ## robotfindskitten
+A zen simulation: you are robot, one of these symbols is kitten, touch things to find out.
 ```[robotfindskitten](/man/robotfindskitten)```
 ```
         #
@@ -365,6 +403,7 @@ ______/  \________
 ```
 
 ## robots
+Lure the chasing robots into crashing into each other.
 ```[robots](/man/robots)```
 ```
  . . . . . . . . .
@@ -375,6 +414,7 @@ ______/  \________
 ```
 
 ## rogue
+The 1980 original that named the whole roguelike genre.
 ```[rogue](/man/rogue)```
 ```
  ---------
@@ -385,6 +425,7 @@ ______/  \________
 ```
 
 ## sail
+Naval combat in the age of sail, from the BSD games collection.
 ```[sail](/man/sail)```
 ```
  ~~~~~~~~  Wind: NE
@@ -395,6 +436,7 @@ ______/  \________
 ```
 
 ## ski jump
+Time the take-off and landing to win the ski jumping cup.
 ```[asciijump](/man/asciijump)```
 ```
   \O/
@@ -405,6 +447,7 @@ ______/________
 ```
 
 ## slashem
+A NetHack variant with more classes, monsters, and levels.
 ```[slashem](/man/slashem)```
 ```
  ------       -----
@@ -415,7 +458,9 @@ ______/________
 ```
 
 ## snake
+Eat, grow, and do not bite your own tail.
 ```[nsnake](/man/nsnake)```
+```[snake4](/man/snake4)```
 ```[worm](/man/worm)```
 ```
  . . . . . . . . .
@@ -425,6 +470,7 @@ ______/________
 ```
 
 ## solitaire
+Classic single-player card games: Klondike (tty-solitaire) and Canfield.
 ```[tty-solitaire](/man/tty-solitaire)```
 ```[canfield](/man/canfield)```
 ```
@@ -434,6 +480,7 @@ ______/________
 ```
 
 ## sos
+The pencil-and-paper game: form the sequence S-O-S to score.
 ```[nbsos](/man/nbsos)```
 ```
  S O S . .
@@ -443,6 +490,7 @@ ______/________
 ```
 
 ## star trek
+Command the Enterprise and hunt Klingons across the galaxy in this 1970s classic.
 ```[trek](/man/trek)```
 ```
  . . . . . * . .
@@ -453,6 +501,7 @@ ______/________
 ```
 
 ## sudoku
+Fill the grid so every row, column, and box contains 1 to 9.
 ```[nudoku](/man/nudoku)```
 ```[nbsudoku](/man/nbsudoku)```
 ```
@@ -462,9 +511,11 @@ ______/________
 ```
 
 ## tetris
+Falling blocks; bastet cruelly always gives you the worst possible piece.
 ```[tetris-bsd](/man/tetris-bsd)```
 ```[bastet](/man/bastet)```
 ```[vitetris](/man/vitetris)```
+```[tint](/man/tint)```
 ```
     []
     [][]
@@ -477,6 +528,7 @@ ______/________
 ```
 
 ## typespeed
+Type the words racing across the screen before they reach the other side.
 ```[typespeed](/man/typespeed)```
 ```
  defend -->
@@ -486,6 +538,7 @@ ______/________
 ```
 
 ## wumpus
+Hunt the Wumpus through a cave of connected rooms, armed with crooked arrows.
 ```[wump](/man/wump)```
 ```
  You are in room 12.
@@ -497,6 +550,7 @@ ______/________
 ```
 
 ## zangband
+An angband variant set in Roger Zelazny's Amber multiverse.
 ```[zangband](/man/zangband)```
 ```
  ##.##

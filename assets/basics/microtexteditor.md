@@ -6,11 +6,12 @@ Micro is a modern terminal text editor with intuitive keybindings. If you know *
 
 | Key | Description |
 |-----|-------------|
-| **Ctrl+q** | Quit micro |
+| **Ctrl+q** | Quit (or close the current tab/split) |
 | **Ctrl+s** | Save current file |
 | **Ctrl+o** | Open a file |
 | **Ctrl+g** | Open the help menu |
 | **Ctrl+e** | Open the command bar |
+| **Alt+g** | Show what every key does in a bar at the bottom |
 
 ## Navigation
 Standard arrow keys, Home, End, Page Up, and Page Down all work as expected. These shortcuts provide additional movement.
@@ -19,15 +20,18 @@ Standard arrow keys, Home, End, Page Up, and Page Down all work as expected. The
 |-----|-------------|
 | **Ctrl+Left** | Move to previous word |
 | **Ctrl+Right** | Move to next word |
-| **Ctrl+Up** | Scroll up without moving cursor |
-| **Ctrl+Down** | Scroll down without moving cursor |
+| **Alt+{** | Move to previous paragraph |
+| **Alt+}** | Move to next paragraph |
 | **Home** | Move to beginning of line |
 | **End** | Move to end of line |
 | **Ctrl+Home** | Move to start of file |
 | **Ctrl+End** | Move to end of file |
 
+Jump to a line with the command bar: press **Ctrl+e**, then type the goto command.
+```goto 42```
+
 ## Selection
-Hold **Shift** with any movement key to select text. These shortcuts select larger regions.
+Hold **Shift** with any movement key to select text.
 
 | Key | Description |
 |-----|-------------|
@@ -50,56 +54,63 @@ Copy, cut, and paste use the familiar system shortcuts.
 | **Ctrl+v** | Paste from clipboard |
 | **Ctrl+k** | Cut the current line |
 | **Ctrl+d** | Duplicate the current line |
-| **Ctrl+u** | Upper/lowercase selection toggle |
 | **Tab** | Indent selection or insert tab |
-| **Backtab** | Unindent selection |
+| **Shift+Tab** | Unindent selection |
+| **Ctrl+u** | Start/stop recording a macro |
+| **Ctrl+j** | Play the recorded macro |
 
 ## Search and Replace
-Micro supports incremental search and regex-aware find and replace.
+Search is incremental: matches highlight as you type.
 
 | Key | Description |
 |-----|-------------|
 | **Ctrl+f** | Find |
 | **Ctrl+n** | Find next match |
 | **Ctrl+p** | Find previous match |
-| **Ctrl+r** | Toggle find and replace |
 | **Alt+F** | Find literal (no regex) |
 
+Replace runs from the command bar (**Ctrl+e**). It asks for confirmation at each match unless you add **-a**.
+```replace "search" "replacement"```
+```replace -a "search" "replacement"```
+
+## Multiple Cursors
+Edit several places at once. Type normally and every cursor applies the change; press **Escape** to return to a single cursor.
+
+| Key | Description |
+|-----|-------------|
+| **Ctrl+Click** | Place an additional cursor |
+| **Alt+n** | Spawn a cursor at the next match of the current word |
+| **Alt+x** | Skip the current match |
+| **Alt+p** | Remove the last added cursor |
+| **Alt+c** | Remove all extra cursors |
+| **Alt+m** | Spawn a cursor on every match |
+
 ## Tabs and Splits
-Micro supports multiple open files in tabs and split views.
+Open files side by side or in tabs. Splits are created from the command bar (**Ctrl+e**).
+```vsplit other.txt```
+```hsplit notes.txt```
+```tab third.txt```
 
 | Key | Description |
 |-----|-------------|
 | **Ctrl+t** | Open a new tab |
 | **Alt+,** | Switch to previous tab |
 | **Alt+.** | Switch to next tab |
-| **Ctrl+w** | Close current tab |
+| **Ctrl+w** | Jump to the next split |
+| **Ctrl+q** | Close the current split or tab |
+
+## Useful Commands & Options
+The command bar (**Ctrl+e**) also changes settings, permanently stored in ~/.config/micro/settings.json.
+```set tabsize 4```
+```set tabstospaces on```
+```set ruler off```
+```set colorscheme monokai```
+```help defaultkeys```
+
+| Key | Description |
+|-----|-------------|
+| **Ctrl+r** | Toggle line numbers (ruler) |
 | **Ctrl+b** | Run a shell command |
-| **Ctrl+j** | Jump to a matching bracket |
-| **Ctrl+l** | Toggle line numbers |
-| **Alt+g** | Toggle gutter |
 
 ## Mouse
-Micro has built-in mouse support. Click to place the cursor, scroll to navigate, and drag to select text.
-
-| Key | Description |
-|-----|-------------|
-| **Mouse wheel** | Scroll up and down |
-| **Click** | Place cursor |
-| **Drag** | Select text |
-| **Ctrl+Click** | Place additional cursor (multi-cursor mode) |
-| **Alt+n** | Spawn a multi-cursor at next search match |
-| **Alt+m** | Spawn a multi-cursor on every search match |
-| **Alt+p** | Remove the last multi-cursor |
-| **Alt+c** | Remove all multi-cursors |
-| **Alt+x** | Skip current multi-cursor match |
-
-## Emacs-style Navigation
-These alternative keybindings are available for Emacs users.
-
-| Key | Description |
-|-----|-------------|
-| **Alt+f** | Move forward one word |
-| **Alt+b** | Move backward one word |
-| **Alt+a** | Move to beginning of line |
-| **Alt+e** | Move to end of line |
+Micro has built-in mouse support: click to place the cursor, drag to select text, scroll with the wheel, and double-click to select a word.

@@ -38,9 +38,12 @@ A trailing slash on the source matters: `src/` copies the **contents** of src, w
 > Always do a `--dry-run` first when using `--delete`, so you can confirm nothing important will be wiped.
 
 ## Backups over SSH
-`rsync` can back up to or from a remote host over SSH, transferring only changes.
-```[rsync](/man/rsync) -avz -e [ssh](/man/ssh) /data/ user@host:/backup/data/```
+When either side of an `rsync` is `user@host:path`, the transfer runs over SSH automatically, still copying only changes. Add `-z` to compress on slow links.
+```[rsync](/man/rsync) -avz /data/ user@host:/backup/data/```
 ```[rsync](/man/rsync) -avz user@host:/var/www/ /mnt/backup/www/```
+
+Pass SSH options, such as a non-standard port, through `-e`.
+```[rsync](/man/rsync) -avz -e "[ssh](/man/ssh) -p 2222" /data/ user@host:/backup/data/```
 
 For a quick one-off copy of a single file, `scp` is simpler.
 ```[scp](/man/scp) backup.tar.gz user@host:/backup/```
@@ -49,19 +52,21 @@ For a quick one-off copy of a single file, `scp` is simpler.
 With `--link-dest`, `rsync` hard-links unchanged files to a previous backup, so each snapshot looks complete but only uses extra space for files that changed.
 ```[rsync](/man/rsync) -a --delete --link-dest=/backup/prev /data/ /backup/2026-06-06/```
 
-This gives you browseable, dated snapshots at the storage cost of an incremental backup. Rotate by pointing each new run at the previous day's directory.
+This gives you browseable, dated snapshots at the storage cost of an incremental backup. Rotate by pointing each new run at the previous day's directory. **rsnapshot** automates exactly this scheme with a config file and retention levels.
 
 ## Archiving Backups
 A `tar` archive bundles many files into one, ideal for a point-in-time snapshot. Combine with compression to save space.
 ```[tar](/man/tar) czf backup-$(date +%F).tar.gz /home/user```
 ```[tar](/man/tar) xzf backup-2026-06-06.tar.gz```
 
-For large datasets, `zstd` is faster and compresses well; pipe `tar` through it.
-```[tar](/man/tar) cf - /data | [zstd](/man/zstd) -19 -o data.tar.zst```
+For large datasets, `zstd` compresses much faster than gzip at similar or better ratios.
+```[tar](/man/tar) --zstd -cf backup.tar.zst /data```
 
-`tar` supports **incremental** archives with a snapshot file that tracks what changed between runs.
-```[tar](/man/tar) czg backup.snar -f full.tar.gz /data```
-```[tar](/man/tar) czg backup.snar -f incr.tar.gz /data```
+`tar` supports **incremental** archives: `-g` keeps a snapshot file that records what changed between runs. The first run is a full backup; later runs with the same snapshot file only store changes.
+```[tar](/man/tar) czf full.tar.gz -g backup.snar /data```
+```[tar](/man/tar) czf incr1.tar.gz -g backup.snar /data```
+
+To restore, extract the full archive first, then each incremental in order.
 
 Stream an archive straight to a remote host without a temporary file.
 ```[tar](/man/tar) czf - /data | [ssh](/man/ssh) user@host "cat > /backup/data.tar.gz"```
@@ -87,13 +92,29 @@ Initialize a `borg` repository, then create a compressed, deduplicated archive.
 ```[restic](/man/restic) -r /mnt/backup/repo init```
 ```[restic](/man/restic) -r /mnt/backup/repo backup /home/user```
 
-Prune old snapshots with a retention policy so backups do not grow forever.
+Prune old snapshots with a retention policy so backups do not grow forever. With `borg`, run `compact` afterwards to actually free the space.
 ```[borg](/man/borg) prune --keep-daily=7 --keep-weekly=4 /mnt/backup/repo```
+```[borg](/man/borg) compact /mnt/backup/repo```
+```[restic](/man/restic) -r /mnt/backup/repo forget --keep-daily 7 --keep-weekly 4 --prune```
+
+Test a restore by extracting a snapshot to a scratch directory, or mount the repository and browse it.
+```[restic](/man/restic) -r /mnt/backup/repo restore latest --target /tmp/restore-test```
+```[borg](/man/borg) mount /mnt/backup/repo /mnt/restore```
+
+> If the repository is encrypted, the backup is only as safe as the key and passphrase. Export the key and store it somewhere that is not inside the backup.
+
+## Databases & Live Data
+Copying a running database's files mid-write produces a corrupt backup. Dump to a consistent snapshot first, then back up the dump like any other file.
+```[mysqldump](/man/mysqldump) --all-databases > mysql-backup.sql```
+```[pg_dumpall](/man/pg_dumpall) > postgres-backup.sql```
+```[sqlite3](/man/sqlite3) app.db ".backup app-backup.db"```
+
+The same applies to anything that writes constantly (virtual machine disks, mail spools): stop the writer, dump it, or back up from a filesystem snapshot (see below).
 
 ## Disk & Partition Imaging
 `dd` copies data block by block, making an exact image of a disk or partition. Identify the target device first with `lsblk` and double-check it.
 ```[lsblk](/man/lsblk)```
-```[dd](/man/dd) if=/dev/sda of=/dev/sdb bs=64K status=progress```
+```[dd](/man/dd) if=/dev/sda of=/dev/sdb bs=4M status=progress```
 
 Save a partition to a compressed image file instead of another disk.
 ```[dd](/man/dd) if=/dev/sda1 bs=4M status=progress | [gzip](/man/gzip) > sda1.img.gz```
@@ -101,20 +122,21 @@ Save a partition to a compressed image file instead of another disk.
 Restore an image back onto a device.
 ```[gunzip](/man/gunzip) -c sda1.img.gz | [dd](/man/dd) of=/dev/sda1 bs=4M status=progress```
 
-> `dd` writes wherever you point it with no confirmation. A wrong `of=` value will destroy data instantly. Check the device name twice, then once more.
+> `dd` writes wherever you point it with no confirmation. A wrong `of=` value will destroy data instantly. Check the device name twice, then once more. Image only **unmounted** partitions, an image of a filesystem that is changing underneath you is inconsistent.
 
 | Option | Description |
 |-----|-------------|
 | **if=** | Input file or device |
 | **of=** | Output file or device |
-| **bs=** | Block size (larger is usually faster) |
+| **bs=** | Block size (4M is a good default) |
 | **status=progress** | Show transfer progress |
 | **conv=noerror,sync** | Keep going past read errors, pad blocks |
+| **conv=fsync** | Flush to the device before exiting |
 | **count=** | Copy only N blocks |
 
 ## Writing Images to USB
-To write an installer ISO to a USB stick, `dd` it to the whole device (not a partition).
-```[dd](/man/dd) if=distro.iso of=/dev/sdc bs=4M status=progress oflag=sync```
+To write an installer ISO to a USB stick, `dd` it to the whole device (not a partition). `conv=fsync` makes sure everything is flushed before the command returns.
+```[dd](/man/dd) if=distro.iso of=/dev/sdc bs=4M status=progress conv=fsync```
 
 Plain `cp` and `cat` can also stream an image to a device.
 ```[cp](/man/cp) distro.iso /dev/sdc && [sync](/man/sync)```
@@ -127,15 +149,14 @@ When a drive is failing, use `ddrescue` instead of `dd`: it retries bad sectors,
 ```[ddrescue](/man/ddrescue) /dev/sda rescue.img rescue.map```
 ```[ddrescue](/man/ddrescue) -r3 /dev/sda rescue.img rescue.map```
 
-`partclone` images only the **used** blocks of a filesystem, so it is faster and smaller than a full `dd` of an empty-ish partition.
+`partclone` images only the **used** blocks of a filesystem, so it is faster and smaller than a full `dd` of an empty-ish partition. Use `-c` to create an image and `-r` to restore it.
 ```[partclone](/man/partclone).ext4 -c -s /dev/sda1 -o sda1.img```
-
-For accidentally deleted files or corrupted partition tables, `testdisk` repairs partitions and `photorec` carves files back by signature.
-```[testdisk](/man/testdisk) /dev/sda```
-```[photorec](/man/photorec) /dev/sda```
+```[partclone](/man/partclone).ext4 -r -s sda1.img -o /dev/sda1```
 
 `clonezilla` wraps these tools into a guided disk-cloning environment for bare-metal backups.
 ```[clonezilla](/man/clonezilla)```
+
+> For repairing a system that no longer boots, recovering deleted files with `testdisk` and `photorec`, and reading SMART health, see the **System Recovery** basics page.
 
 ## Filesystem-level Snapshots
 Modern filesystems and volume managers can snapshot a live system instantly, giving you a stable, consistent view to back up from.
@@ -146,10 +167,19 @@ Modern filesystems and volume managers can snapshot a live system instantly, giv
 | **Btrfs** | `btrfs subvolume snapshot / /snap` |
 | **ZFS** | `zfs snapshot pool/data@backup` |
 
-Create an LVM snapshot, back it up while the system keeps running, then remove it.
+Create an LVM snapshot, mount it read-only, and back it up while the system keeps running. Remove the snapshot when done so it stops consuming space.
 ```[lvcreate](/man/lvcreate) -s -n root_snap -L 5G /dev/vg0/root```
+```[mount](/man/mount) -o ro /dev/vg0/root_snap /mnt/snap```
+```[rsync](/man/rsync) -a /mnt/snap/ /mnt/backup/root/```
+```[umount](/man/umount) /mnt/snap && [lvremove](/man/lvremove) /dev/vg0/root_snap```
+
+Btrfs and ZFS snapshots are even cheaper, create them read-only (`-r`) so the backup source cannot change.
 ```[btrfs](/man/btrfs) subvolume snapshot -r / /.snapshots/2026-06-06```
 ```[zfs](/man/zfs) snapshot tank/home@2026-06-06```
+
+`snapper` and `timeshift` automate scheduled Btrfs/LVM snapshots with retention.
+```[snapper](/man/snapper) create --description "before upgrade"```
+```[timeshift](/man/timeshift) --create```
 
 > Snapshots live on the same disk and are not a backup by themselves. Copy them somewhere else.
 
@@ -158,9 +188,12 @@ Create an LVM snapshot, back it up while the system keeps running, then remove i
 ```[rclone](/man/rclone) copy /data remote:backup/data```
 ```[rclone](/man/rclone) sync /data remote:backup/data --progress```
 
-Mount a remote as a local folder, or check what would change without transferring.
-```[rclone](/man/rclone) mount remote:backup /mnt/remote```
+Check what would change without transferring, verify a finished backup, or mount a remote as a local folder.
 ```[rclone](/man/rclone) sync /data remote:backup --dry-run```
+```[rclone](/man/rclone) check /data remote:backup/data```
+```[rclone](/man/rclone) mount remote:backup /mnt/remote```
+
+> Like `rsync --delete`, `rclone sync` makes the destination match the source, including deletions. Use `copy` when you only want to add files.
 
 ## Verify & Automate
 A backup is only good if it is intact. Record checksums when you make a backup, then verify them on restore.

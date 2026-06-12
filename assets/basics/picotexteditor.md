@@ -1,16 +1,19 @@
 # Pico Text Editor
 
 ## Getting Started
-Pico is the built-in editor from the Pine email client and the predecessor to Nano. It shows available shortcuts at the bottom of the screen. The **^** symbol means Ctrl.
+Pico is the built-in editor from the Pine email client and the predecessor of Nano. It shows available shortcuts at the bottom of the screen; the **^** symbol means Ctrl.
 ```[pico](/man/pico) textfile.txt```
+```[pico](/man/pico) +25 textfile.txt```
 
 | Key | Description |
 |-----|-------------|
 | **Ctrl+g** | Display help text |
 | **Ctrl+x** | Exit pico (prompts to save if modified) |
 
+> Many systems no longer ship pico; its open-source successor **nano** uses the same keybindings, and **pico** is often just an alias for it.
+
 ## Navigation
-Use arrow keys for basic movement, or these shortcuts for faster navigation.
+Use arrow keys for basic movement, or these Emacs-style shortcuts.
 
 | Key | Description |
 |-----|-------------|
@@ -22,6 +25,7 @@ Use arrow keys for basic movement, or these shortcuts for faster navigation.
 | **Ctrl+e** | Move to end of line |
 | **Ctrl+v** | Scroll down one page |
 | **Ctrl+y** | Scroll up one page |
+| **Ctrl+c** | Show current cursor position |
 
 ## File Operations
 Pico prompts for a filename when saving.
@@ -42,6 +46,12 @@ Use **Ctrl+^** to start selecting text, then move the cursor to extend the selec
 | **Ctrl+u** | Paste (uncut) the last cut text |
 | **Ctrl+i** | Insert a tab |
 | **Ctrl+j** | Justify the current paragraph |
-| **Ctrl+w** | Search for text |
 | **Ctrl+t** | Spell check |
 | **Ctrl+l** | Refresh the display |
+
+## Search
+**Ctrl+W** stands for "Where is". Press **Enter** at the prompt to repeat the previous search.
+
+| Key | Description |
+|-----|-------------|
+| **Ctrl+w** | Search for text |

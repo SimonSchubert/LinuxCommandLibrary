@@ -2,6 +2,7 @@ package com.linuxcommandlibrary.app.data
 
 import com.linuxcommandlibrary.shared.BasicInfo
 import com.linuxcommandlibrary.shared.MarkdownParser
+import com.linuxcommandlibrary.shared.TipSectionElement
 import com.linuxcommandlibrary.shared.basicsSortOrder
 import com.linuxcommandlibrary.shared.platform.AssetReader
 import kotlinx.collections.immutable.ImmutableList
@@ -14,8 +15,8 @@ import kotlinx.collections.immutable.toImmutableMap
 class BasicsRepository(private val assetReader: AssetReader) {
 
     private var cachedCategories: ImmutableList<BasicCategory>? = null
-    private val cachedGroupsAndCommands =
-        mutableMapOf<String, Pair<ImmutableList<BasicGroup>, ImmutableMap<Long, ImmutableList<BasicCommand>>>>()
+    private val cachedGroupsAndSections =
+        mutableMapOf<String, Pair<ImmutableList<BasicGroup>, ImmutableMap<Long, ImmutableList<TipSectionElement>>>>()
 
     fun getCategories(): ImmutableList<BasicCategory> {
         cachedCategories?.let { return it }
@@ -47,13 +48,13 @@ class BasicsRepository(private val assetReader: AssetReader) {
         null
     }
 
-    fun getGroupsAndCommands(
+    fun getGroupsAndSections(
         categoryId: String,
-    ): Pair<ImmutableList<BasicGroup>, ImmutableMap<Long, ImmutableList<BasicCommand>>> {
-        cachedGroupsAndCommands[categoryId]?.let { return it }
+    ): Pair<ImmutableList<BasicGroup>, ImmutableMap<Long, ImmutableList<TipSectionElement>>> {
+        cachedGroupsAndSections[categoryId]?.let { return it }
 
         val groups = mutableListOf<BasicGroup>()
-        val commandsByGroupId = mutableMapOf<Long, MutableList<BasicCommand>>()
+        val sectionsByGroupId = mutableMapOf<Long, ImmutableList<TipSectionElement>>()
 
         try {
             val content = assetReader.readFile("basics/$categoryId.md")
@@ -64,21 +65,7 @@ class BasicsRepository(private val assetReader: AssetReader) {
             for ((description, groupContent) in groupSections) {
                 val groupId = (categoryId + description).hashCode().toLong()
                 groups.add(BasicGroup(id = groupId, description = description))
-                commandsByGroupId[groupId] = mutableListOf()
-
-                var commandIndex = 0
-                val lines = groupContent.lines()
-
-                for (line in lines) {
-                    if (line.trim().startsWith("```") && line.trim().endsWith("```") && line.trim().length > 6) {
-                        val (command, mans) = parseCommandLine(line)
-                        val commandId = (categoryId + groupId + commandIndex).hashCode().toLong()
-                        commandsByGroupId[groupId]?.add(
-                            BasicCommand(id = commandId, command = command, mans = mans),
-                        )
-                        commandIndex++
-                    }
-                }
+                sectionsByGroupId[groupId] = MarkdownParser.parseMarkdownContent(groupContent)
             }
         } catch (e: Exception) {
             // Return empty on error
@@ -86,9 +73,9 @@ class BasicsRepository(private val assetReader: AssetReader) {
 
         val result = Pair(
             groups.toImmutableList(),
-            commandsByGroupId.mapValues { it.value.toImmutableList() }.toImmutableMap(),
+            sectionsByGroupId.toImmutableMap(),
         )
-        cachedGroupsAndCommands[categoryId] = result
+        cachedGroupsAndSections[categoryId] = result
         return result
     }
 
@@ -107,7 +94,7 @@ class BasicsRepository(private val assetReader: AssetReader) {
         val lower = query.lowercase()
         val matches = mutableListOf<BasicGroupMatch>()
         for (category in getCategories()) {
-            val (groups, _) = getGroupsAndCommands(category.id)
+            val (groups, _) = getGroupsAndSections(category.id)
             for (group in groups) {
                 if (group.description.lowercase().contains(lower)) {
                     matches += BasicGroupMatch(
@@ -120,19 +107,5 @@ class BasicsRepository(private val assetReader: AssetReader) {
             }
         }
         return matches.toImmutableList()
-    }
-
-    private fun parseCommandLine(line: String): Pair<String, String> {
-        val codeContent = line.trim().removeSurrounding("```")
-
-        val manRegex = Regex("""\[([^\]]+)]\(/man/([^)]+)\)""")
-        val mans = manRegex.findAll(codeContent)
-            .map { it.groupValues[2] }
-            .distinct()
-            .joinToString(",")
-
-        val command = codeContent.replace(manRegex, "$1").trim()
-
-        return Pair(command, mans)
     }
 }

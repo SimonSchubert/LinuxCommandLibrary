@@ -32,17 +32,15 @@ import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
-import com.linuxcommandlibrary.app.data.BasicCommand
 import com.linuxcommandlibrary.app.data.BasicGroup
 import com.linuxcommandlibrary.app.ui.AppIcons
-import com.linuxcommandlibrary.app.ui.composables.CommandView
+import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
 import com.linuxcommandlibrary.app.ui.composables.WithScrollbar
 import com.linuxcommandlibrary.app.ui.composables.getIconId
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
-import com.linuxcommandlibrary.shared.getCommandList
+import com.linuxcommandlibrary.shared.TipSectionElement
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
-import kotlinx.collections.immutable.toImmutableList
 
 @Composable
 fun BasicGroupsScreen(
@@ -99,7 +97,7 @@ fun BasicGroupsContent(
                 ) { basicGroup ->
                     BasicGroupColumn(
                         basicGroup = basicGroup,
-                        commands = uiState.commandsByGroupId[basicGroup.id] ?: persistentListOf(),
+                        sections = uiState.sectionsByGroupId[basicGroup.id] ?: persistentListOf(),
                         isExpanded = !(uiState.collapsedMap[basicGroup.id] ?: true),
                         onToggleCollapse = { toggleCollapse(basicGroup.id) },
                         onNavigate = onNavigate,
@@ -113,7 +111,7 @@ fun BasicGroupsContent(
 @Composable
 fun BasicGroupColumn(
     basicGroup: BasicGroup,
-    commands: ImmutableList<BasicCommand> = persistentListOf(),
+    sections: ImmutableList<TipSectionElement> = persistentListOf(),
     isExpanded: Boolean,
     onToggleCollapse: () -> Unit,
     onNavigate: (NavEvent) -> Unit = {},
@@ -163,7 +161,7 @@ fun BasicGroupColumn(
             elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
         ) {
             ExpandedGroupContent(
-                commands = commands,
+                sections = sections,
                 onNavigate = onNavigate,
             )
         }
@@ -172,19 +170,14 @@ fun BasicGroupColumn(
 
 @Composable
 private fun ExpandedGroupContent(
-    commands: ImmutableList<BasicCommand>,
+    sections: ImmutableList<TipSectionElement>,
     onNavigate: (NavEvent) -> Unit,
 ) {
-    Column(modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)) {
-        commands.forEach { basicCommand ->
-            val elements = remember(basicCommand.command, basicCommand.mans) {
-                basicCommand.command.getCommandList(basicCommand.mans).toImmutableList()
-            }
-            CommandView(
-                command = basicCommand.command,
-                elements = elements,
-                onNavigate = onNavigate,
-            )
-        }
+    Column(modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp)) {
+        TipSectionContent(
+            sections = sections,
+            onNavigate = onNavigate,
+            commandVerticalPadding = 4.dp,
+        )
     }
 }

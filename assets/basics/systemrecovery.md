@@ -1,12 +1,13 @@
 # System Recovery
 
 ## Recovery Strategy
-When a machine will not boot or behaves badly, work from the outside in: get a shell, see the disk, then repair the smallest broken thing. Most recoveries follow the same arc, boot rescue media, mount or `chroot` into the install, fix the bootloader, filesystem, or config, then reboot.
+When a machine will not boot or behaves badly, work from the outside in: get a shell, see the disk, then repair the smallest broken thing. Most recoveries follow the same arc: boot rescue media, mount or `chroot` into the install, fix the bootloader, filesystem, or config, then reboot.
 
 | Symptom | Reach for |
 |-----|-------------|
 | **No bootloader** | `[grub-install](/man/grub-install)` |
-| **Emergency shell** | `[systemctl](/man/systemctl)` |
+| **Kernel can't find root device** | `[update-initramfs](/man/update-initramfs)` |
+| **Boot drops to emergency mode** | `[findmnt](/man/findmnt)` |
 | **Lost root password** | `[passwd](/man/passwd)` |
 | **Dirty filesystem** | `[fsck](/man/fsck)` |
 | **Broken packages** | `[dpkg](/man/dpkg)` |
@@ -19,7 +20,7 @@ When a machine will not boot or behaves badly, work from the outside in: get a s
 Almost every repair starts from a second environment, so a broken install is not running while you fix it. Boot a live USB (any distribution's installer works) or your distribution's dedicated rescue image, then drop to a terminal.
 
 Write a live image to a USB stick from another machine.
-```[dd](/man/dd) if=linux.iso of=/dev/sdc bs=4M status=progress oflag=sync```
+```[dd](/man/dd) if=linux.iso of=/dev/sdc bs=4M status=progress conv=fsync```
 
 Many distributions also ship a **rescue** entry in GRUB, and systemd offers built-in recovery shells you can request from the boot menu (see *Rescue & Emergency Mode* below). Use a live USB when the bootloader itself is gone.
 
@@ -43,7 +44,7 @@ Before mounting anything, identify the partitions. `lsblk` shows the block-devic
 
 ## Activate LVM & Encrypted Volumes
 If the root filesystem lives on LVM or LUKS, the live system will not see it until you bring it up. Unlock an encrypted partition first, then scan for volume groups.
-```[cryptsetup](/man/cryptsetup) luksOpen /dev/sda2 cryptroot```
+```[cryptsetup](/man/cryptsetup) open /dev/sda2 cryptroot```
 ```[vgscan](/man/vgscan)```
 ```[vgchange](/man/vgchange) -ay```
 ```[lvscan](/man/lvscan)```
@@ -73,7 +74,7 @@ On Arch and its derivatives, `arch-chroot` does all of this in one step.
 When you finish, `exit` the chroot and unmount everything in reverse, recursively.
 ```[umount](/man/umount) -R /mnt```
 
-> Without `/dev`, `/proc`, and `/sys` mounted, tools like `grub-install` and `update-initramfs` fail in confusing ways. The bind mounts are not optional.
+> Without `/dev`, `/proc`, and `/sys` mounted, tools like `grub-install` and `update-initramfs` fail in confusing ways. The bind mounts are not optional. After each `--rbind`, run `mount --make-rslave /mnt/dev` (and the same for the others) so the later `umount -R /mnt` cannot propagate back and unmount the live system's own `/dev` and `/sys`.
 
 ## Repair the Bootloader
 A missing or broken bootloader leaves you at a `grub>` prompt or with no menu at all. From inside the chroot, reinstall GRUB to the disk, then regenerate its config.
@@ -105,9 +106,9 @@ If a kernel update was interrupted or the early-boot image is broken (a "cannot 
 ```[dracut](/man/dracut) -f --regenerate-all```
 
 ## Rescue & Emergency Mode
-You do not always need a live USB. systemd ships two recovery targets you can request at the GRUB menu: **rescue** (single-user, most services stopped) and **emergency** (a bare shell, almost nothing mounted).
+You do not always need a live USB. systemd ships two recovery targets you can request at the GRUB menu: **rescue** (single-user, most services stopped) and **emergency** (a bare shell, root mounted read-only, almost nothing else).
 
-At the menu, highlight the entry, press `e` to edit, and append to the `linux` line:
+At the menu, highlight the entry, press `e` to edit, append to the `linux` line, then press `Ctrl-X` (or `F10`) to boot it:
 ```systemd.unit=rescue.target```
 ```systemd.unit=emergency.target```
 
@@ -115,9 +116,10 @@ To bypass init entirely and get a root shell with no password, append this inste
 ```init=/bin/bash```
 ```[mount](/man/mount) -o remount,rw /```
 
-From an already-running system, you can switch into these modes directly.
+From an already-running system, you can switch into these modes directly, and resume a normal boot once the problem is fixed.
 ```[systemctl](/man/systemctl) rescue```
 ```[systemctl](/man/systemctl) emergency```
+```[systemctl](/man/systemctl) default```
 
 > After `init=/bin/bash`, the normal shutdown path is gone. Run `sync` and reboot with the magic SysRq keys or `mount -o remount,ro /` before a hard reset, so you do not corrupt the filesystem.
 
@@ -131,7 +133,7 @@ Without rescue media, use the `init=/bin/bash` trick above, remount root read-wr
 ```[passwd](/man/passwd) root```
 ```[exec](/man/exec) /sbin/init```
 
-> If accounts use a separate `/etc/shadow` on an encrypted or LVM volume, unlock and mount it first, or `passwd` will silently edit the wrong file.
+> On SELinux systems (Fedora, RHEL), run `touch /.autorelabel` after changing the password this way. Otherwise the rewritten `/etc/shadow` keeps a wrong security label and can lock you out again on the next boot.
 
 ## Filesystem Repair
 A dirty or corrupt filesystem can block boot. **Always check an unmounted filesystem**, never the live root. Boot rescue media, leave the partition unmounted, then run the right checker.
@@ -227,4 +229,4 @@ A whole-disk image holds a partition table, not a single filesystem, so attach i
 
 Copy the data you need off the image, reinstall the OS, then restore from backups. A clean reinstall is often faster and safer than chasing a deeply corrupted system.
 
-> Every recovery is easier with a current backup and a tested restore. The work you do here is the price of not having one, see the **Backup & Imaging** page.
+> Every recovery is easier with a current backup and a tested restore. The work you do here is the price of not having one: see the **Backup & Imaging** page.

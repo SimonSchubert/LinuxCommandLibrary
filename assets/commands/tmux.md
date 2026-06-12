@@ -8,7 +8,7 @@ Terminal multiplexer with session persistence
 
 ```tmux```
 
-**Start a named session**
+**Start a new named session**
 
 ```tmux new -s [session_name]```
 
@@ -16,136 +16,159 @@ Terminal multiplexer with session persistence
 
 ```tmux ls```
 
-**Attach to last session**
+**Attach to the most recently used session**
 
 ```tmux attach```
 
-**Attach to named session**
+**Attach to a named session**
 
 ```tmux attach -t [session_name]```
+
+**Detach from the current session** (inside tmux)
+
+```Ctrl-b d```
 
 **Kill a session**
 
 ```tmux kill-session -t [session_name]```
 
-**Detach from session** (inside tmux)
+**Start a detached session running a command**
 
-```Ctrl-b d```
+```tmux new -d -s [session_name] '[command]'```
 
-**Create new window** (inside tmux)
+**Reload the configuration file**
 
-```Ctrl-b c```
-
-**Split pane horizontally**
-
-```Ctrl-b "```
-
-**Split pane vertically**
-
-```Ctrl-b %```
+```tmux source-file ~/.tmux.conf```
 
 # SYNOPSIS
 
-**tmux** [_command_] [_flags_]
-
-# DESCRIPTION
-
-**tmux** (terminal multiplexer) enables multiple terminal sessions within a single window. Sessions persist when disconnected, allowing users to detach and reattach later, making it essential for remote work.
-
-A tmux session contains windows (like tabs), and windows contain panes (splits). The prefix key (default Ctrl-b) followed by a command key triggers actions. Configuration is stored in ~/.tmux.conf.
-
-tmux is widely used for remote server administration, pair programming, and managing complex terminal workflows. Sessions survive SSH disconnections, preventing work loss.
+**tmux** [**-2CDlNuvV**] [**-c** _shell-command_] [**-f** _file_] [**-L** _socket-name_] [**-S** _socket-path_] [_command_ [_flags_]]
 
 # PARAMETERS
 
-**new** [**-s** _name_]
-> Create new session.
+**-2**
+> Force tmux to assume the terminal supports 256 colours.
 
-**attach** [**-t** _target_]
-> Attach to existing session.
+**-c** _shell-command_
+> Execute shell-command using the default shell, like sh -c.
 
-**ls**, **list-sessions**
-> List sessions.
+**-f** _file_
+> Specify an alternative configuration file.
+
+**-L** _socket-name_
+> Use a named socket, allowing independent servers to run in parallel.
+
+**-S** _socket-path_
+> Specify a full path to the server socket instead of a name.
+
+**-u**
+> Force tmux to assume the terminal supports UTF-8.
+
+**-V**
+> Report the tmux version.
+
+**new-session**, **new** [**-d**] [**-s** _name_]
+> Create a new session; -d starts it detached.
+
+**attach-session**, **attach** [**-t** _target_]
+> Attach to an existing session.
+
+**list-sessions**, **ls**
+> List managed sessions.
+
+**detach-client**, **detach**
+> Detach the current client from its session.
 
 **kill-session** [**-t** _target_]
-> Kill a session.
+> Destroy a session, closing its windows.
 
 **kill-server**
-> Kill tmux server and all sessions.
+> Kill the tmux server and all sessions.
 
-**detach**
-> Detach from session.
+**split-window** [**-h**] [**-v**]
+> Split the active pane; -h side by side, -v top and bottom (default).
 
-**send-keys**
-> Send keys to a pane.
+**send-keys** [**-t** _target_] _keys_
+> Send key strokes to a window or pane.
 
 **source-file** _file_
-> Load configuration file.
+> Execute commands from a configuration file.
+
+**list-keys**, **lsk**
+> List all bound keys and the commands they run.
+
+**resize-pane** [**-UDLR**] [_amount_]
+> Resize the active pane in the given direction.
 
 **swap-window** [**-s** _src_] [**-t** _dst_]
 > Swap two windows.
 
-**resize-pane** [**-UDLR**] [_amount_]
-> Resize pane in given direction.
+# KEY BINDINGS
 
-**-f** _file_
-> Specify alternative configuration file.
-
-**-L** _socket-name_
-> Use named socket (allows independent servers).
-
-**-S** _socket-path_
-> Specify full path to server socket.
-
-# KEY BINDINGS (after Ctrl-b)
+All bindings are pressed after the prefix **Ctrl-b**:
 
 **?**: List all key bindings
-
-## Session Commands
+**:**: Open the tmux command prompt
 
 **d**: Detach from session
 **$**: Rename current session
+**s**: Choose a session interactively
+**(** / **)**: Switch to previous/next session
 
-## Window Commands
-
-**,**: Rename current window
-**&**: Kill current window
 **c**: Create new window
-**n/p**: Next/previous window
-**0-9**: Switch to window number
-**l**: Move to previously selected window
+**,**: Rename current window
+**&**: Kill current window (asks for confirmation)
+**n** / **p**: Next/previous window
+**0-9**: Switch to window by number
+**l**: Switch to the last selected window
+**w**: Choose a window interactively
 
-## Pane Commands
+**"**: Split pane into top and bottom
+**%**: Split pane into left and right
+**Up/Down/Left/Right**: Move to the pane in that direction
+**o**: Cycle through panes
+**q**: Show pane numbers (press a number to select)
+**x**: Kill current pane (asks for confirmation)
+**z**: Toggle zoom of the current pane
+**!**: Break current pane out into a new window
+**{** / **}**: Swap current pane with the previous/next one
+**Space**: Cycle through preset pane layouts
 
-**!**: Transform current pane into a new window
-**x**: Kill current pane
-**z**: Zoom pane (toggle)
-**"**: Split pane horizontally
-**%**: Split pane vertically
-**o**: Switch pane
-**Pg Up/Down/Left/Right**: Change to pane above, below, left, or right of current pane.
-**Space**: Arrange current window by one of seven pane layouts (see M-1 to M-7 in **?** command)
+**[**: Enter copy mode (scroll back, search, copy text)
+**]**: Paste the most recently copied text
 
+# DESCRIPTION
 
-**:**: Input a `tmux` parameter from within a session
-**[**: Enter copy mode
+**tmux** (terminal multiplexer) lets a single terminal hold multiple sessions, each containing windows (like tabs) that can be split into panes. It runs as a client-server system: the server keeps sessions alive in the background, and clients attach to and detach from them at will.
+
+Because sessions persist on the server, work survives SSH disconnections and intentional detaches - reattaching with **tmux attach** restores everything exactly as it was. This makes tmux essential for remote server administration, long-running jobs, and pair programming (multiple clients can attach to the same session).
+
+Inside tmux, the prefix key (default **Ctrl-b**) followed by a command key triggers actions, and the command prompt (prefix **:**) accepts any tmux command by name. Behaviour, key bindings, and the status bar are customised through the configuration file.
 
 # CONFIGURATION
 
-**~/.tmux.conf**
-> User configuration file for key bindings, status bar customization, default options, and plugin settings. Loaded automatically on server start.
+**~/.tmux.conf**, **~/.config/tmux/tmux.conf**
+> User configuration file for key bindings, status bar customisation, default options, and plugins. Read when the server starts; reload a running server with **tmux source-file**.
 
 **/etc/tmux.conf**
-> System-wide configuration applied to all users.
+> System-wide configuration applied before the user file.
 
 # CAVEATS
 
-Default prefix (Ctrl-b) conflicts with some applications. Scrolling requires copy mode. Some terminal features may not work identically. Nested tmux requires different prefix handling.
+The default prefix **Ctrl-b** shadows the readline/emacs "back one character" binding; many users rebind it to **Ctrl-a**. Scrolling back through output requires entering copy mode first. tmux sets **TERM** to screen or tmux-256color inside sessions, which can confuse programs that test for specific terminals. When nesting tmux inside tmux, press the prefix twice to send it to the inner session. Configuration changes only take effect after the file is sourced or the server restarts.
 
 # HISTORY
 
-**tmux** was created by **Nicholas Marriott** in **2007** as a replacement for GNU Screen with a cleaner codebase and more features. It was included in OpenBSD in **2009** and quickly became the preferred terminal multiplexer for many Unix users. The project continues active development with regular feature additions.
+**tmux** was written by **Nicholas Marriott** and first released in **2007** as a BSD-licensed alternative to GNU Screen with a cleaner codebase and a client-server design. It became part of the OpenBSD base system in **2009** (OpenBSD 4.6), and a portable version is packaged for Linux, macOS, and other platforms. The project remains under active development.
 
 # SEE ALSO
 
-[screen](/man/screen)(1), [byobu](/man/byobu)(1), [dtach](/man/dtach)(1)
+[screen](/man/screen)(1), [zellij](/man/zellij)(1), [byobu](/man/byobu)(1), [dtach](/man/dtach)(1), [abduco](/man/abduco)(1), [tmuxinator](/man/tmuxinator)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tmux/tmux)```
+
+```[Documentation](https://github.com/tmux/tmux/wiki)```
+
+<!-- verified: 2026-06-12 -->

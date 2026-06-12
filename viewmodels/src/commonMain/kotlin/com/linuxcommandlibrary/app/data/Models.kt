@@ -21,12 +21,6 @@ data class BasicGroupMatch(
     val categoryTitle: String,
 )
 
-data class BasicCommand(
-    val id: Long,
-    val command: String,
-    val mans: String,
-)
-
 data class CommandInfo(
     val id: Long,
     val name: String,
