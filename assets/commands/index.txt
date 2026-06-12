@@ -751,6 +751,7 @@ boltd.md
 bombadillo.md
 bombardier.md
 bondai.md
+boo.md
 bookokrat.md
 boot.md
 bootc-switch.md
