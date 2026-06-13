@@ -168,6 +168,24 @@ enum class AppIcon {
     WEBCAM,
     WIFI,
     WIFI_START,
+
+    // Material Symbols additions (purpose-fit basics group icons)
+    NUMBERS,
+    CALCULATE,
+    SWAP_HORIZ,
+    FIND_REPLACE,
+    TRENDING_UP,
+    SCHEDULE,
+    HISTORY,
+    QR_CODE,
+    HARD_DRIVE,
+    DIFFERENCE,
+    RECORD,
+    RECEIPT_LONG,
+    CLOUD,
+    ACCOUNT_TREE,
+    INVENTORY,
+    CONTENT_CUT,
 }
 
 fun BasicGroup.getIconId(categoryTitle: String): AppIcon = basicGroupIconsByCategory[categoryTitle]?.get(description)

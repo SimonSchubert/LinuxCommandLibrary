@@ -167,6 +167,22 @@ fun appIconAssetName(icon: AppIcon): String = when (icon) {
     AppIcon.WEBCAM -> "ic_webcam_white_48dp"
     AppIcon.WIFI -> "ic_wifi_black_24dp"
     AppIcon.WIFI_START -> "ic_wifi_start"
+    AppIcon.NUMBERS -> "ic_numbers"
+    AppIcon.CALCULATE -> "ic_calculate"
+    AppIcon.SWAP_HORIZ -> "ic_swap_horiz"
+    AppIcon.FIND_REPLACE -> "ic_find_replace"
+    AppIcon.TRENDING_UP -> "ic_trending_up"
+    AppIcon.SCHEDULE -> "ic_schedule"
+    AppIcon.HISTORY -> "ic_history"
+    AppIcon.QR_CODE -> "ic_qr_code"
+    AppIcon.HARD_DRIVE -> "ic_hard_drive"
+    AppIcon.DIFFERENCE -> "ic_difference"
+    AppIcon.RECORD -> "ic_record"
+    AppIcon.RECEIPT_LONG -> "ic_receipt_long"
+    AppIcon.CLOUD -> "ic_cloud"
+    AppIcon.ACCOUNT_TREE -> "ic_account_tree"
+    AppIcon.INVENTORY -> "ic_inventory"
+    AppIcon.CONTENT_CUT -> "ic_content_cut"
 }
 
 fun assetNameForCategory(category: BasicCategory): String = appIconAssetName(category.getIconId())

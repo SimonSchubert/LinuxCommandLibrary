@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.painter.Painter
 import com.linuxcommandlibrary.app.resources.Res
+import com.linuxcommandlibrary.app.resources.ic_account_tree
 import com.linuxcommandlibrary.app.resources.ic_add_rule
 import com.linuxcommandlibrary.app.resources.ic_add_user_to_group_white_48dp
 import com.linuxcommandlibrary.app.resources.ic_agent
@@ -14,16 +15,20 @@ import com.linuxcommandlibrary.app.resources.ic_bluetooth_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_bluetooth_start
 import com.linuxcommandlibrary.app.resources.ic_bookmark_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_bookmark_border_black_24dp
+import com.linuxcommandlibrary.app.resources.ic_calculate
 import com.linuxcommandlibrary.app.resources.ic_change_folder_white
 import com.linuxcommandlibrary.app.resources.ic_check_black_24dp
+import com.linuxcommandlibrary.app.resources.ic_cloud
 import com.linuxcommandlibrary.app.resources.ic_code_white_48dp
 import com.linuxcommandlibrary.app.resources.ic_collapse_all
+import com.linuxcommandlibrary.app.resources.ic_content_cut
 import com.linuxcommandlibrary.app.resources.ic_create_file_white
 import com.linuxcommandlibrary.app.resources.ic_create_new_folder_white
 import com.linuxcommandlibrary.app.resources.ic_delete_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_delete_file_white
 import com.linuxcommandlibrary.app.resources.ic_delete_folder_white_48dp
 import com.linuxcommandlibrary.app.resources.ic_desktop_windows_black_24dp
+import com.linuxcommandlibrary.app.resources.ic_difference
 import com.linuxcommandlibrary.app.resources.ic_dns_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_edit_group
 import com.linuxcommandlibrary.app.resources.ic_electronics
@@ -37,12 +42,15 @@ import com.linuxcommandlibrary.app.resources.ic_file_edit_white_48dp
 import com.linuxcommandlibrary.app.resources.ic_file_link_white_48dp
 import com.linuxcommandlibrary.app.resources.ic_file_move_white
 import com.linuxcommandlibrary.app.resources.ic_file_permission_white_48dp
+import com.linuxcommandlibrary.app.resources.ic_find_replace
 import com.linuxcommandlibrary.app.resources.ic_fingerprint_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_flash_on_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_folder_black_40dp
 import com.linuxcommandlibrary.app.resources.ic_folder_list_white
 import com.linuxcommandlibrary.app.resources.ic_folder_path_white
+import com.linuxcommandlibrary.app.resources.ic_hard_drive
 import com.linuxcommandlibrary.app.resources.ic_healing_black_24dp
+import com.linuxcommandlibrary.app.resources.ic_history
 import com.linuxcommandlibrary.app.resources.ic_icon_bitcoin
 import com.linuxcommandlibrary.app.resources.ic_icon_controller
 import com.linuxcommandlibrary.app.resources.ic_icon_fun
@@ -115,6 +123,7 @@ import com.linuxcommandlibrary.app.resources.ic_icons8_visible
 import com.linuxcommandlibrary.app.resources.ic_icons8_work
 import com.linuxcommandlibrary.app.resources.ic_idea
 import com.linuxcommandlibrary.app.resources.ic_info_40dp
+import com.linuxcommandlibrary.app.resources.ic_inventory
 import com.linuxcommandlibrary.app.resources.ic_ip_address
 import com.linuxcommandlibrary.app.resources.ic_keyboard_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_list_groups_white_48dp
@@ -124,15 +133,20 @@ import com.linuxcommandlibrary.app.resources.ic_list_user_white_48dp
 import com.linuxcommandlibrary.app.resources.ic_loupe_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_memory_slot
 import com.linuxcommandlibrary.app.resources.ic_network_card_40dp
+import com.linuxcommandlibrary.app.resources.ic_numbers
 import com.linuxcommandlibrary.app.resources.ic_package_40
 import com.linuxcommandlibrary.app.resources.ic_power_settings_new_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_public_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_puzzle
+import com.linuxcommandlibrary.app.resources.ic_qr_code
+import com.linuxcommandlibrary.app.resources.ic_receipt_long
+import com.linuxcommandlibrary.app.resources.ic_record
 import com.linuxcommandlibrary.app.resources.ic_refresh_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_remote
 import com.linuxcommandlibrary.app.resources.ic_remove_user_from_group_white_48dp
 import com.linuxcommandlibrary.app.resources.ic_remove_user_group
 import com.linuxcommandlibrary.app.resources.ic_report_black_24dp
+import com.linuxcommandlibrary.app.resources.ic_schedule
 import com.linuxcommandlibrary.app.resources.ic_search_40dp
 import com.linuxcommandlibrary.app.resources.ic_search_history_white_48dp
 import com.linuxcommandlibrary.app.resources.ic_search_in_file_white_48dp
@@ -143,8 +157,10 @@ import com.linuxcommandlibrary.app.resources.ic_share_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_stop_bluetooth
 import com.linuxcommandlibrary.app.resources.ic_stop_wifi
 import com.linuxcommandlibrary.app.resources.ic_storage_black_24dp
+import com.linuxcommandlibrary.app.resources.ic_swap_horiz
 import com.linuxcommandlibrary.app.resources.ic_switch_video_white_48dp
 import com.linuxcommandlibrary.app.resources.ic_timer_black_24dp
+import com.linuxcommandlibrary.app.resources.ic_trending_up
 import com.linuxcommandlibrary.app.resources.ic_usb_black_48dp
 import com.linuxcommandlibrary.app.resources.ic_user_password
 import com.linuxcommandlibrary.app.resources.ic_video_trimming_40dp
@@ -319,6 +335,22 @@ fun rememberIconPainter(icon: AppIcon): Painter {
             AppIcon.WEBCAM -> Res.drawable.ic_webcam_white_48dp
             AppIcon.WIFI -> Res.drawable.ic_wifi_black_24dp
             AppIcon.WIFI_START -> Res.drawable.ic_wifi_start
+            AppIcon.NUMBERS -> Res.drawable.ic_numbers
+            AppIcon.CALCULATE -> Res.drawable.ic_calculate
+            AppIcon.SWAP_HORIZ -> Res.drawable.ic_swap_horiz
+            AppIcon.FIND_REPLACE -> Res.drawable.ic_find_replace
+            AppIcon.TRENDING_UP -> Res.drawable.ic_trending_up
+            AppIcon.SCHEDULE -> Res.drawable.ic_schedule
+            AppIcon.HISTORY -> Res.drawable.ic_history
+            AppIcon.QR_CODE -> Res.drawable.ic_qr_code
+            AppIcon.HARD_DRIVE -> Res.drawable.ic_hard_drive
+            AppIcon.DIFFERENCE -> Res.drawable.ic_difference
+            AppIcon.RECORD -> Res.drawable.ic_record
+            AppIcon.RECEIPT_LONG -> Res.drawable.ic_receipt_long
+            AppIcon.CLOUD -> Res.drawable.ic_cloud
+            AppIcon.ACCOUNT_TREE -> Res.drawable.ic_account_tree
+            AppIcon.INVENTORY -> Res.drawable.ic_inventory
+            AppIcon.CONTENT_CUT -> Res.drawable.ic_content_cut
         }
     }
     return painterResource(resource)
