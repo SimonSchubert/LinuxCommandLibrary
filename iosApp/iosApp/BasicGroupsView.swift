@@ -69,6 +69,7 @@ struct BasicGroupsView: View {
 private final class BasicGroupsStore: ObservableObject {
     private let viewModel: BasicGroupsViewModel
     @Published private(set) var state = BasicGroupsUiState(
+        categoryTitle: "",
         basicGroups: [],
         collapsedMap: [:],
         sectionsByGroupId: [:]
