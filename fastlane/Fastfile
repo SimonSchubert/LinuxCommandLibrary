@@ -66,7 +66,6 @@ platform :ios do
       precheck_include_in_app_purchases: false,
       submission_information: {
         export_compliance_uses_encryption: false,
-        content_rights_contains_third_party_content: false,
         add_id_info_uses_idfa: false,
       },
     )
