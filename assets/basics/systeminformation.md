@@ -29,7 +29,7 @@ Current CPU load: **top** in batch mode for a one-shot value, **mpstat** for per
 ```[cat](/man/cat) /proc/meminfo```
 ```[vmstat](/man/vmstat)```
 
-> In **free**, look at the "available" column, not "free": Linux uses spare RAM for disk cache and releases it when programs need it.
+In **free**, look at the "available" column, not "free": Linux uses spare RAM for disk cache and releases it when programs need it.
 
 ## Processes
 Snapshot with **ps**, live view with **top** or one of its friendlier successors.

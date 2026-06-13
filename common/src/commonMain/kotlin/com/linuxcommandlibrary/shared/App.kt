@@ -98,7 +98,7 @@ val basicsSortOrder =
         "JSON",
         "Network",
         "Search & Find",
-        "GIT",
+        "Git",
         "SSH",
         "Video & Audio",
         "Package manager",

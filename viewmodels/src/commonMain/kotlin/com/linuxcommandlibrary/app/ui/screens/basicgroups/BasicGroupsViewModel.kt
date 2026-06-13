@@ -22,9 +22,14 @@ class BasicGroupsViewModel(
 
     init {
         loadJob = scope.launch(Dispatchers.Default) {
+            val categoryTitle = basicsRepository.getCategories()
+                .firstOrNull { it.id == categoryId }
+                ?.title
+                .orEmpty()
             val (groups, sectionsMap) = basicsRepository.getGroupsAndSections(categoryId)
             _uiState.update {
                 it.copy(
+                    categoryTitle = categoryTitle,
                     basicGroups = groups,
                     sectionsByGroupId = sectionsMap,
                 )

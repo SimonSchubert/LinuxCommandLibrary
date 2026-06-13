@@ -14,7 +14,7 @@ Copy a file or command output to the clipboard, and paste it back out.
 ```[xsel](/man/xsel) -b < [file]```
 ```[xsel](/man/xsel) -b```
 
-> X11 has two clipboards: the regular one (**-sel clip**, pasted with Ctrl+V) and the primary selection (pasted with the middle mouse button).
+X11 has two clipboards: the regular one (**-sel clip**, pasted with Ctrl+V) and the primary selection (pasted with the middle mouse button).
 
 ## Clipboard on Wayland
 ```[wl-copy](/man/wl-copy) "Hello world"```
@@ -47,4 +47,4 @@ Move to an absolute screen position, or relative to the current position.
 ```[wtype](/man/wtype) -k Escape```
 ```[ydotool](/man/ydotool) key 1:1 1:0```
 
-> Find keycodes for ydotool in /usr/include/linux/input-event-codes.h, for example KEY_ENTER is 28 and KEY_LEFTALT is 56.
+Find keycodes for ydotool in /usr/include/linux/input-event-codes.h, for example KEY_ENTER is 28 and KEY_LEFTALT is 56.

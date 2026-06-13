@@ -12,7 +12,7 @@ A good backup follows the **3-2-1 rule**: keep **3** copies of your data, on **2
 | **Push to cloud storage** | `[rclone](/man/rclone)` |
 | **Snapshot a live filesystem** | `[lvm](/man/lvm)`, `[btrfs](/man/btrfs)`, `[zfs](/man/zfs)` |
 
-> A backup you have never restored is only a hope. Test your restores regularly.
+**Test your restores regularly** - a backup you have never restored is only a hope.
 
 ## File Backups with rsync
 `rsync` copies only the differences between source and destination, which makes repeat backups fast. The `-a` (archive) flag preserves permissions, timestamps, symlinks, and ownership.
@@ -35,7 +35,7 @@ A trailing slash on the source matters: `src/` copies the **contents** of src, w
 | **--exclude** | Skip matching paths |
 | **--progress** | Show per-file progress |
 
-> Always do a `--dry-run` first when using `--delete`, so you can confirm nothing important will be wiped.
+**Always dry-run first:** when using `--delete`, do a `--dry-run` so you can confirm nothing important will be wiped.
 
 ## Backups over SSH
 When either side of an `rsync` is `user@host:path`, the transfer runs over SSH automatically, still copying only changes. Add `-z` to compress on slow links.
@@ -71,7 +71,7 @@ To restore, extract the full archive first, then each incremental in order.
 Stream an archive straight to a remote host without a temporary file.
 ```[tar](/man/tar) czf - /data | [ssh](/man/ssh) user@host "cat > /backup/data.tar.gz"```
 
-> See the **Compression & Archiving** basics page for the full set of `tar`, `gzip`, `xz`, and `zstd` options.
+See the **Compression & Archiving** basics page for the full set of `tar`, `gzip`, `xz`, and `zstd` options.
 
 ## Snapshot & Dedup Tools
 Dedicated backup programs add deduplication, encryption, compression, and retention policies on top of plain copies. They store each file's blocks once, so re-running a backup is cheap.
@@ -101,7 +101,7 @@ Test a restore by extracting a snapshot to a scratch directory, or mount the rep
 ```[restic](/man/restic) -r /mnt/backup/repo restore latest --target /tmp/restore-test```
 ```[borg](/man/borg) mount /mnt/backup/repo /mnt/restore```
 
-> If the repository is encrypted, the backup is only as safe as the key and passphrase. Export the key and store it somewhere that is not inside the backup.
+**If the repository is encrypted, the backup is only as safe as the key and passphrase.** Export the key and store it somewhere that is not inside the backup.
 
 ## Databases & Live Data
 Copying a running database's files mid-write produces a corrupt backup. Dump to a consistent snapshot first, then back up the dump like any other file.
@@ -122,7 +122,7 @@ Save a partition to a compressed image file instead of another disk.
 Restore an image back onto a device.
 ```[gunzip](/man/gunzip) -c sda1.img.gz | [dd](/man/dd) of=/dev/sda1 bs=4M status=progress```
 
-> `dd` writes wherever you point it with no confirmation. A wrong `of=` value will destroy data instantly. Check the device name twice, then once more. Image only **unmounted** partitions, an image of a filesystem that is changing underneath you is inconsistent.
+**Careful:** `dd` writes wherever you point it with no confirmation. A wrong `of=` value will destroy data instantly. Check the device name twice, then once more. Image only **unmounted** partitions: an image of a filesystem that is changing underneath you is inconsistent.
 
 | Option | Description |
 |-----|-------------|
@@ -156,7 +156,7 @@ When a drive is failing, use `ddrescue` instead of `dd`: it retries bad sectors,
 `clonezilla` wraps these tools into a guided disk-cloning environment for bare-metal backups.
 ```[clonezilla](/man/clonezilla)```
 
-> For repairing a system that no longer boots, recovering deleted files with `testdisk` and `photorec`, and reading SMART health, see the **System Recovery** basics page.
+For repairing a system that no longer boots, recovering deleted files with `testdisk` and `photorec`, and reading SMART health, see the **System Recovery** basics page.
 
 ## Filesystem-level Snapshots
 Modern filesystems and volume managers can snapshot a live system instantly, giving you a stable, consistent view to back up from.
@@ -181,7 +181,7 @@ Btrfs and ZFS snapshots are even cheaper, create them read-only (`-r`) so the ba
 ```[snapper](/man/snapper) create --description "before upgrade"```
 ```[timeshift](/man/timeshift) --create```
 
-> Snapshots live on the same disk and are not a backup by themselves. Copy them somewhere else.
+**Snapshots live on the same disk and are not a backup by themselves.** Copy them somewhere else.
 
 ## Cloud & Remote Sync
 `rclone` syncs files to dozens of cloud providers (S3, Backblaze, Google Drive, and more) after a one-time `rclone config`.
@@ -193,7 +193,7 @@ Check what would change without transferring, verify a finished backup, or mount
 ```[rclone](/man/rclone) check /data remote:backup/data```
 ```[rclone](/man/rclone) mount remote:backup /mnt/remote```
 
-> Like `rsync --delete`, `rclone sync` makes the destination match the source, including deletions. Use `copy` when you only want to add files.
+**Careful:** like `rsync --delete`, `rclone sync` makes the destination match the source, including deletions. Use `copy` when you only want to add files.
 
 ## Verify & Automate
 A backup is only good if it is intact. Record checksums when you make a backup, then verify them on restore.
@@ -204,4 +204,4 @@ Schedule backups so they actually happen. Edit your crontab and add a nightly jo
 ```[crontab](/man/crontab) -e```
 ```0 2 * * * [rsync](/man/rsync) -a --delete /data/ /mnt/backup/data/```
 
-> Automate the backup, but verify restores by hand on a schedule. The only proven backup is one you have successfully restored.
+**Automate the backup, but verify restores by hand on a schedule.** The only proven backup is one you have successfully restored.

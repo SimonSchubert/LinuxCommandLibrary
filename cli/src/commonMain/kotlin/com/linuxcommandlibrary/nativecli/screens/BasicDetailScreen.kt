@@ -38,6 +38,12 @@ class BasicDetailScreen(
                             }
 
                             is TipSectionElement.Table -> {
+                                if (section.headers.isNotEmpty()) {
+                                    val headerText = section.headers.joinToString(" | ") { cells ->
+                                        renderTextElements(cells)
+                                    }
+                                    appendLine("  ${Theme.dim(headerText)}")
+                                }
                                 section.rows.forEach { row ->
                                     val rowText = row.joinToString(" | ") { cells ->
                                         renderTextElements(cells)

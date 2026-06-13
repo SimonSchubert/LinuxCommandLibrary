@@ -14,7 +14,7 @@ Every distribution family ships its own package manager. Find yours in the table
 | **pkg** | FreeBSD, Termux |
 | **snap**, **flatpak** | Distribution-independent app formats |
 
-> **apt** is the friendlier front end to **apt-get**/**apt-cache** and the better choice for interactive use. On Fedora, **dnf** replaced **yum**.
+**apt** is the friendlier front end to **apt-get**/**apt-cache** and the better choice for interactive use. On Fedora, **dnf** replaced **yum**.
 
 ## Install from repository
 ```[apt](/man/apt) install [packageName]```
@@ -37,7 +37,7 @@ Every distribution family ships its own package manager. Find yours in the table
 ```[flatpak](/man/flatpak) install [package.flatpakref]```
 ```[pkg](/man/pkg) add [package.txz]```
 
-> Prefer **apt install ./package.deb** over **dpkg -i**: apt resolves and installs missing dependencies, dpkg does not.
+Prefer **apt install ./package.deb** over **dpkg -i**: apt resolves and installs missing dependencies, dpkg does not.
 
 ## Remove/Uninstall
 ```[apt](/man/apt) remove [packageName]```
@@ -51,7 +51,7 @@ Every distribution family ships its own package manager. Find yours in the table
 ```[snap](/man/snap) remove [packageName]```
 ```[flatpak](/man/flatpak) uninstall [packageName]```
 
-> **apt purge** also deletes the package's system-wide configuration files; **pacman -Rs** removes the package together with dependencies nothing else needs.
+**apt purge** also deletes the package's system-wide configuration files; **pacman -Rs** removes the package together with dependencies nothing else needs.
 
 Clean up dependencies that are no longer needed by anything.
 ```[apt](/man/apt) autoremove```
@@ -106,7 +106,7 @@ Refresh the list of available packages and versions without installing anything.
 ```[snap](/man/snap) refresh```
 ```[flatpak](/man/flatpak) update```
 
-> On Arch, always sync and upgrade together with **pacman -Syu**. Refreshing the database with **-Sy** and then installing single packages can break the system (partial upgrade).
+**On Arch, always sync and upgrade together** with **pacman -Syu**. Refreshing the database with **-Sy** and then installing single packages can break the system (partial upgrade).
 
 ## Which package owns a file?
 ```[dpkg](/man/dpkg) -S /usr/bin/[file]```

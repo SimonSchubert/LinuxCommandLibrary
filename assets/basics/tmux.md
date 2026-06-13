@@ -25,7 +25,7 @@ A session is a collection of windows that keeps running in the background after 
 ```[tmux](/man/tmux) kill-session -t mysession```
 ```[tmux](/man/tmux) kill-server```
 
-> **tmux attach** without **-t** attaches to the most recently used session. **kill-server** stops tmux entirely, including all sessions.
+**tmux attach** without **-t** attaches to the most recently used session. **kill-server** stops tmux entirely, including all sessions.
 
 ## Windows
 Windows are like tabs within a session. Each window runs its own shell and is numbered, starting at 0 by default.
@@ -105,7 +105,7 @@ Press **Ctrl+b :** to open the tmux command prompt. Every keybinding is a shortc
 ```select-layout even-horizontal```
 ```setw synchronize-panes on```
 
-> **synchronize-panes** sends your typing to all panes in the window at once. Handy for running the same command on several servers. Turn it off with **setw synchronize-panes off**.
+**synchronize-panes** sends your typing to all panes in the window at once. Handy for running the same command on several servers. Turn it off with **setw synchronize-panes off**.
 
 ## Configuration
 Tmux reads **~/.tmux.conf** at server start. Useful options to add:
@@ -114,7 +114,7 @@ Tmux reads **~/.tmux.conf** at server start. Useful options to add:
 ```set -g base-index 1```
 ```setw -g pane-base-index 1```
 
-> **mouse on** enables clicking panes, dragging borders to resize, and scrolling with the wheel. **base-index 1** numbers windows from 1 instead of 0, matching the keyboard layout.
+**mouse on** enables clicking panes, dragging borders to resize, and scrolling with the wheel. **base-index 1** numbers windows from 1 instead of 0, matching the keyboard layout.
 
 Apply changes to a running server without restarting.
 ```[tmux](/man/tmux) source-file ~/.tmux.conf```

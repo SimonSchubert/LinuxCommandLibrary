@@ -6,7 +6,7 @@
 ```[adduser](/man/adduser) [name]```
 ```[passwd](/man/passwd) [name]```
 
-> Plain **useradd [name]** creates the account without a home directory, which is rarely what you want for a real user.
+Plain **useradd [name]** creates the account without a home directory, which is rarely what you want for a real user.
 
 ## Deleting & Renaming Users
 **-r** also removes the user's home directory and mail spool.
@@ -44,7 +44,7 @@ Remove a user from a group.
 ```[gpasswd](/man/gpasswd) -d [userName] [groupName]```
 ```[deluser](/man/deluser) [userName] [groupName]```
 
-> Group changes take effect at the next login. Use **newgrp [groupName]** to activate one in the current shell without logging out.
+Group changes take effect at the next login. Use **newgrp [groupName]** to activate one in the current shell without logging out.
 
 ## Granting sudo
 Membership in the admin group grants sudo rights: the group is **sudo** on Debian/Ubuntu and **wheel** on Fedora, RHEL, and Arch.

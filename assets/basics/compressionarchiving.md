@@ -33,7 +33,7 @@ List the contents before extracting an archive from an untrusted source, and ext
 ```[tar](/man/tar) tf archive.tar.gz```
 ```[tar](/man/tar) xf archive.tar.gz path/inside/archive.txt```
 
-> A well-behaved archive contains a single top-level directory. If **tar tf** shows loose files instead, extract into a fresh directory with **-C** to avoid littering your current one.
+A well-behaved archive contains a single top-level directory. If **tar tf** shows loose files instead, extract into a fresh directory with **-C** to avoid littering your current one.
 
 ## Choosing a Compressor
 All compressors trade speed against ratio. As a rule of thumb: **zstd** is the modern default, **gzip** is the universal lowest common denominator, **xz** squeezes hardest when time does not matter.
@@ -61,7 +61,7 @@ Each has a matching decompressor.
 ```[unxz](/man/unxz) [file].xz```
 ```[unzstd](/man/unzstd) [file].zst```
 
-> These tools compress single files only. To compress a directory, **tar** it first or use **zip**.
+These tools compress single files only. To compress a directory, **tar** it first or use **zip**.
 
 On multi-core machines, **xz -T0** and **zstd -T0** use all cores, and **pigz** is a parallel drop-in for gzip.
 ```[xz](/man/xz) -T0 [file]```
@@ -90,7 +90,7 @@ Extract with **unzip**, into a specific directory with **-d**, or just inspect t
 ```[unzip](/man/unzip) -l archive.zip```
 ```[zipinfo](/man/zipinfo) archive.zip```
 
-> Zip does not preserve full Unix ownership and permissions. For system backups, stick to **tar**.
+Zip does not preserve full Unix ownership and permissions. For system backups, stick to **tar**.
 
 ## 7-Zip Archives
 **7z** offers very high compression ratios and strong AES-256 encryption. **a** adds to an archive, **x** extracts with full paths, **l** lists.
@@ -99,7 +99,7 @@ Extract with **unzip**, into a specific directory with **-d**, or just inspect t
 ```[7z](/man/7z) x archive.7z```
 ```[7z](/man/7z) l archive.7z```
 
-> Use **x** to extract, not **e**: the **e** command flattens all files into the current directory, discarding their paths.
+Use **x** to extract, not **e**: the **e** command flattens all files into the current directory, discarding their paths.
 
 ## Rar Archives
 Rar is a proprietary format; **unrar** extracts it.

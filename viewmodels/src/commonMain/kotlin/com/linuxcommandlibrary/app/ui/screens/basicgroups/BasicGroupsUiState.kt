@@ -8,6 +8,7 @@ import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.persistentMapOf
 
 data class BasicGroupsUiState(
+    val categoryTitle: String = "",
     val basicGroups: ImmutableList<BasicGroup> = persistentListOf(),
     val collapsedMap: ImmutableMap<Long, Boolean> = persistentMapOf(),
     val sectionsByGroupId: ImmutableMap<Long, ImmutableList<TipSectionElement>> = persistentMapOf(),

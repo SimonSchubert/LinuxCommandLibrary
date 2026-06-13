@@ -1,27 +1,35 @@
 # Files & Folders
 
 ## Navigating
-**pwd** shows where you are, **cd** moves you somewhere else.
+**pwd** prints the directory you're currently in.
 ```[pwd](/man/pwd)```
-```[cd](/man/cd) [path]```
-```[cd](/man/cd) ..```
-```[cd](/man/cd) ~```
-```[cd](/man/cd) -```
 
-> **cd ..** goes to the parent directory, **cd ~** (or plain **cd**) to your home directory, and **cd -** back to wherever you were before.
+**cd** moves you to another directory: give it a path, or use a shortcut.
+```[cd](/man/cd) [path]```
+
+Go up one level, to the parent directory.
+```[cd](/man/cd) ..```
+
+Go to your home directory (plain **cd** does the same).
+```[cd](/man/cd) ~```
+
+Jump back to the directory you were in before.
+```[cd](/man/cd) -```
 
 ## Listing Contents
 **ls** lists a directory. **-l** shows details, **-a** includes hidden files (names starting with a dot), **-h** prints human-readable sizes.
 ```[ls](/man/ls)```
 ```[ls](/man/ls) -lah```
+
+Sort by modification time, newest first. Add **-r** to reverse any sort order.
 ```[ls](/man/ls) -lt```
+
+Show nested directories as a tree.
 ```[tree](/man/tree)```
 
 Modern replacements add colors, icons, and git status.
 ```[eza](/man/eza) -la```
 ```[lsd](/man/lsd) -la```
-
-> **ls -lt** sorts by modification time, newest first. Add **-r** to reverse any sort order.
 
 ## Viewing Files
 **cat** prints a whole file, **less** lets you scroll and search through it (press **q** to quit, **/** to search). **bat** is a cat clone with syntax highlighting.
@@ -29,16 +37,18 @@ Modern replacements add colors, icons, and git status.
 ```[less](/man/less) [fileName]```
 ```[bat](/man/bat) [fileName]```
 
-Show only the beginning or end of a file. **tail -f** keeps following a file as it grows, ideal for logs.
+Show only the beginning or end of a file.
 ```[head](/man/head) -n 20 [fileName]```
 ```[tail](/man/tail) -n 20 [fileName]```
+
+**-f** keeps following a file as it grows, ideal for logs.
 ```[tail](/man/tail) -f [logFile]```
 
-Inspect what a file is and how big it is.
+Identify what kind of file something is.
 ```[file](/man/file) [fileName]```
-```[wc](/man/wc) [fileName]```
 
-> **wc** prints lines, words, and bytes. Use **wc -l** for just the line count.
+Count lines, words, and bytes. Use **-l** for just the line count.
+```[wc](/man/wc) [fileName]```
 
 ## Creating
 **touch** creates an empty file (or updates the timestamp of an existing one). **mkdir -p** creates nested directories in one step and does not complain if they already exist.
@@ -48,36 +58,42 @@ Inspect what a file is and how big it is.
 ```> [fileName]```
 
 ## Copying, Moving, Renaming
-**cp** copies, **mv** moves and renames (there is no separate rename command). Use **-r** to copy directories recursively.
+**cp** copies a file. Use **-r** to copy a directory and everything in it.
 ```[cp](/man/cp) [fileName] [newFileName]```
 ```[cp](/man/cp) -r [folder] [folderCopy]```
+
+**mv** both moves and renames; there is no separate rename command.
 ```[mv](/man/mv) [oldName] [newName]```
 ```[mv](/man/mv) [fileName] [targetFolder]/```
 
-> Both **cp** and **mv** overwrite existing targets without asking. Add **-i** to be prompted, or **-n** to never overwrite.
+**Careful:** both **cp** and **mv** overwrite existing targets without asking. Add **-i** to be prompted first, or **-n** to never overwrite.
 
 ## Deleting
-**rm** removes files, **-r** removes directories with everything in them. There is no undo.
+**rm** removes files. **-r** removes a directory and everything in it. **There is no undo** - deletion is permanent and immediate, so double-check first. Use **rm -ri** to confirm each deletion when unsure.
 ```[rm](/man/rm) [fileName]```
 ```[rm](/man/rm) -r [folderName]```
+
+**rmdir** removes a directory only if it is already empty.
 ```[rmdir](/man/rmdir) [emptyFolderName]```
 
-> **rm** deletes permanently and immediately. For anything you are not sure about, use the trash instead, or at least run **rm -ri** to confirm each deletion.
-
-Move files to the desktop trash instead of deleting them outright.
+Safer than **rm**: move files to the desktop trash, where they can be restored.
 ```[gio](/man/gio) trash [file]```
 ```[trash-put](/man/trash-put) [file]```
+
+List or empty the trash.
 ```[trash-list](/man/trash-list)```
 ```[trash-empty](/man/trash-empty)```
 ```[gio](/man/gio) trash --empty```
 
 ## Links
-A **symbolic link** is a pointer to a path; it breaks if the target moves. A **hard link** is a second name for the same file content and keeps working until all names are deleted.
+A **symbolic link** points to a path. It breaks if the target moves, but it's what you want in almost all cases.
 ```[ln](/man/ln) -s [target] [linkName]```
-```[ln](/man/ln) [target] [linkName]```
-```[readlink](/man/readlink) -f [linkName]```
 
-> Symbolic links (**ln -s**) are what you want in almost all cases. Hard links cannot span filesystems or point at directories.
+A **hard link** is a second name for the same file content, working until all names are deleted. Hard links can't span filesystems or point at directories.
+```[ln](/man/ln) [target] [linkName]```
+
+Resolve a link to the real path it points at.
+```[readlink](/man/readlink) -f [linkName]```
 
 ## Permissions & Ownership
 Every file has an owner, a group, and permission bits for owner/group/others. **ls -l** shows them, **stat** shows everything.
@@ -108,7 +124,7 @@ Every file has an owner, a group, and permission bits for owner/group/others. **
 ```[grep](/man/grep) -rn "phrase" [folder]```
 ```[rg](/man/rg) "phrase"```
 
-> To find files by name, size, or age, see the **Search & Find** basics page.
+To find files by name, size, or age instead, see the **Search & Find** basics page.
 
 ## Comparing Files
 **diff -u** shows differences in the familiar patch format.

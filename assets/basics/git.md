@@ -16,11 +16,12 @@ Changes move in two steps: **add** puts them in the staging area, **commit** tur
 ```[git](/man/git) add .```
 ```[git](/man/git) commit -m "describe the change"```
 
-Exchange commits with the remote repository.
+Stage interactively, hunk by hunk: ideal for committing only part of your changes.
+```[git](/man/git) add -p```
+
+Exchange commits with the remote repository. **pull** is **fetch** (download) plus **merge** in one step.
 ```[git](/man/git) push```
 ```[git](/man/git) pull```
-
-> **git add -p** stages interactively, hunk by hunk: ideal for committing only part of your changes. **git pull** is **fetch** (download) plus **merge** in one step.
 
 ## Branches
 Branches are cheap pointers to commits. **switch** changes branches, **-c** creates one; **checkout** is the older command that does both jobs.
@@ -62,7 +63,7 @@ Fix the most recent commit (message or forgotten files), or undo a commit safely
 ```[git](/man/git) reset --soft HEAD~1```
 ```[git](/man/git) reset --hard HEAD~1```
 
-> **revert** is safe on shared branches because it only adds a commit. **reset --hard** and **--amend** rewrite history: avoid them on commits you have already pushed.
+**revert** is safe on shared branches because it only adds a commit. **reset --hard** and **--amend** rewrite history: avoid them on commits you have already pushed.
 
 Stop tracking files that are now in .gitignore but were committed earlier.
 ```[git](/man/git) rm -r --cached .```
@@ -76,7 +77,7 @@ Put uncommitted work aside to get a clean working directory, then bring it back 
 ```[git](/man/git) stash pop```
 ```[git](/man/git) stash apply```
 
-> **pop** applies the stash and removes it from the list; **apply** keeps it around, useful when applying the same work to several branches.
+**pop** applies the stash and removes it from the list; **apply** keeps it around, useful when applying the same work to several branches.
 
 ## Tags
 Tags mark specific commits, typically releases. Annotated tags (**-a**) store author, date, and a message.
@@ -85,7 +86,7 @@ Tags mark specific commits, typically releases. Annotated tags (**-a**) store au
 ```[git](/man/git) tag -d [tagName]```
 ```[git](/man/git) push --tags```
 
-> Tags are not pushed by default. Push them explicitly with **--tags** or **git push origin [tagName]**.
+Tags are not pushed by default. Push them explicitly with **--tags** or **git push origin [tagName]**.
 
 ## Remotes
 A remote is a named URL of another copy of the repository; **origin** is the conventional name for the main one.
@@ -93,9 +94,9 @@ A remote is a named URL of another copy of the repository; **origin** is the con
 ```[git](/man/git) remote add [remoteName] [remoteURL]```
 ```[git](/man/git) fetch [remoteName]```
 ```[git](/man/git) pull [remoteName] [branchName]```
-```[git](/man/git) push -u [remoteName] [branchName]```
 
-> **push -u** links the local branch to the remote one, so future **git push** and **git pull** work without arguments.
+**push -u** links the local branch to the remote one, so future **git push** and **git pull** work without arguments.
+```[git](/man/git) push -u [remoteName] [branchName]```
 
 ## Rewriting History
 **rebase** replays your commits on top of another branch for a linear history; **cherry-pick** copies a single commit onto the current branch.
@@ -103,7 +104,7 @@ A remote is a named URL of another copy of the repository; **origin** is the con
 ```[git](/man/git) rebase -i HEAD~3```
 ```[git](/man/git) cherry-pick [commitHash]```
 
-> Interactive rebase (**-i**) lets you reorder, squash, and reword commits. As with **reset**, never rebase commits that others may already have pulled.
+Interactive rebase (**-i**) lets you reorder, squash, and reword commits. As with **reset**, never rebase commits that others may already have pulled.
 
 ## Getting Help
 ```[git](/man/git) help [command]```

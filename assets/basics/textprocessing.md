@@ -9,7 +9,7 @@
 **sd** does the same job with simpler, regex-by-default syntax.
 ```[sd](/man/sd) "old" "new" [file]```
 
-> Any character can delimit the s command: **s|/usr/bin|/usr/local/bin|** avoids escaping slashes in paths.
+Any character can delimit the s command: **s|/usr/bin|/usr/local/bin|** avoids escaping slashes in paths.
 
 ## Delete or Print Specific Lines
 **d** deletes matching lines; **-n** with **p** prints only selected lines. Addresses can be patterns, line numbers, or ranges.
@@ -53,7 +53,7 @@ Alphabetical by default; **-n** sorts numerically, **-r** reverses, **-u** drops
 ```[sort](/man/sort) [file] | [uniq](/man/uniq) -c | [sort](/man/sort) -rn```
 ```[sort](/man/sort) [file] | [uniq](/man/uniq) -d```
 
-> The **sort | uniq -c | sort -rn** pipeline is the classic frequency counter: it ranks every distinct line by how often it occurs.
+The **sort | uniq -c | sort -rn** pipeline is the classic frequency counter: it ranks every distinct line by how often it occurs.
 
 ## Translate or Delete Characters
 **tr** maps characters from one set to another, **-d** deletes them, **-s** squeezes repeats into one.
@@ -72,7 +72,7 @@ Alphabetical by default; **-n** sorts numerically, **-r** reverses, **-u** drops
 ```[comm](/man/comm) [file1] [file2]```
 ```[comm](/man/comm) -12 [file1] [file2]```
 
-> Both **comm** and **join** require their input files to be sorted.
+Both **comm** and **join** require their input files to be sorted.
 
 ## Combine Files
 **paste** glues files together line by line; **-s** joins all lines of one file into a single line. **join** matches lines from two files on a common field, like a database join.

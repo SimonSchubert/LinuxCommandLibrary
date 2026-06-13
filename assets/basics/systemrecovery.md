@@ -14,7 +14,7 @@ When a machine will not boot or behaves badly, work from the outside in: get a s
 | **Failing disk** | `[smartctl](/man/smartctl)` |
 | **Deleted files** | `[testdisk](/man/testdisk)` |
 
-> Before you change anything on a failing disk, image it first. See the **Backup & Imaging** basics page for `ddrescue` and `dd`.
+**Before you change anything on a failing disk, image it first.** See the **Backup & Imaging** basics page for `ddrescue` and `dd`.
 
 ## Boot from Rescue Media
 Almost every repair starts from a second environment, so a broken install is not running while you fix it. Boot a live USB (any distribution's installer works) or your distribution's dedicated rescue image, then drop to a terminal.
@@ -24,7 +24,7 @@ Write a live image to a USB stick from another machine.
 
 Many distributions also ship a **rescue** entry in GRUB, and systemd offers built-in recovery shells you can request from the boot menu (see *Rescue & Emergency Mode* below). Use a live USB when the bootloader itself is gone.
 
-> Match the live system's architecture and, ideally, its toolset to the broken install. An Arch live USB has `mkinitcpio`; a Debian one has `update-initramfs`.
+Match the live system's architecture and, ideally, its toolset to the broken install. An Arch live USB has `mkinitcpio`; a Debian one has `update-initramfs`.
 
 ## See the Disks
 Before mounting anything, identify the partitions. `lsblk` shows the block-device tree, and `blkid` prints filesystem types and UUIDs so you mount the right thing.
@@ -58,7 +58,7 @@ Mount the root partition somewhere, then layer `/boot` (and the EFI partition) o
 
 If you only need to copy data off, stop here and grab the files. If the root filesystem refuses to mount cleanly, run a check on it first (see *Filesystem Repair*).
 
-> Mount read-only with `mount -o ro` when you only want to rescue data from a questionable disk, so you cannot make things worse.
+Mount read-only with `mount -o ro` when you only want to rescue data from a questionable disk, so you cannot make things worse.
 
 ## chroot into the System
 To run the broken system's own tools (its `grub`, its package manager, its `passwd`), `chroot` into it. First bind-mount the kernel's pseudo-filesystems so those tools work, including the EFI variables for UEFI bootloader fixes.
@@ -74,7 +74,7 @@ On Arch and its derivatives, `arch-chroot` does all of this in one step.
 When you finish, `exit` the chroot and unmount everything in reverse, recursively.
 ```[umount](/man/umount) -R /mnt```
 
-> Without `/dev`, `/proc`, and `/sys` mounted, tools like `grub-install` and `update-initramfs` fail in confusing ways. The bind mounts are not optional. After each `--rbind`, run `mount --make-rslave /mnt/dev` (and the same for the others) so the later `umount -R /mnt` cannot propagate back and unmount the live system's own `/dev` and `/sys`.
+**The bind mounts are not optional.** Without `/dev`, `/proc`, and `/sys` mounted, tools like `grub-install` and `update-initramfs` fail in confusing ways. After each `--rbind`, run `mount --make-rslave /mnt/dev` (and the same for the others) so the later `umount -R /mnt` cannot propagate back and unmount the live system's own `/dev` and `/sys`.
 
 ## Repair the Bootloader
 A missing or broken bootloader leaves you at a `grub>` prompt or with no menu at all. From inside the chroot, reinstall GRUB to the disk, then regenerate its config.
@@ -121,7 +121,7 @@ From an already-running system, you can switch into these modes directly, and re
 ```[systemctl](/man/systemctl) emergency```
 ```[systemctl](/man/systemctl) default```
 
-> After `init=/bin/bash`, the normal shutdown path is gone. Run `sync` and reboot with the magic SysRq keys or `mount -o remount,ro /` before a hard reset, so you do not corrupt the filesystem.
+**Careful:** after `init=/bin/bash`, the normal shutdown path is gone. Run `sync` and reboot with the magic SysRq keys or `mount -o remount,ro /` before a hard reset, so you do not corrupt the filesystem.
 
 ## Reset a Forgotten Root Password
 The simplest path is from a chroot: mount the system, `chroot` in, and just set the password.
@@ -133,7 +133,7 @@ Without rescue media, use the `init=/bin/bash` trick above, remount root read-wr
 ```[passwd](/man/passwd) root```
 ```[exec](/man/exec) /sbin/init```
 
-> On SELinux systems (Fedora, RHEL), run `touch /.autorelabel` after changing the password this way. Otherwise the rewritten `/etc/shadow` keeps a wrong security label and can lock you out again on the next boot.
+**On SELinux systems (Fedora, RHEL):** run `touch /.autorelabel` after changing the password this way. Otherwise the rewritten `/etc/shadow` keeps a wrong security label and can lock you out again on the next boot.
 
 ## Filesystem Repair
 A dirty or corrupt filesystem can block boot. **Always check an unmounted filesystem**, never the live root. Boot rescue media, leave the partition unmounted, then run the right checker.
@@ -156,7 +156,7 @@ Btrfs checks read-only by default; `--repair` is a genuine last resort that can 
 | **Btrfs** | `btrfs check`, `--repair` (last resort) |
 | **FAT / exFAT** | `fsck.vfat -a`, `fsck.exfat` |
 
-> `fsck` on a mounted, writable filesystem will corrupt it. If you must check the root device, do it from rescue media or before it is remounted read-write.
+**Careful:** `fsck` on a mounted, writable filesystem will corrupt it. If you must check the root device, do it from rescue media or before it is remounted read-write.
 
 ## Fix a Broken /etc/fstab
 A typo or a missing device in `/etc/fstab` drops the boot into emergency mode. From the emergency shell, remount root writable and fix or comment out the bad line.
@@ -169,7 +169,7 @@ Verify the file parses before rebooting; `mount -a` tries every entry and report
 ```[mount](/man/mount) -a```
 ```[findmnt](/man/findmnt) --verify```
 
-> Match devices by UUID (from `blkid`), not by `/dev/sdX`, which can change between boots and is a common cause of fstab boot failures.
+**Match devices by UUID** (from `blkid`), not by `/dev/sdX`, which can change between boots and is a common cause of fstab boot failures.
 
 ## Repair Broken Package State
 An interrupted upgrade can leave packages half-configured and the system unbootable or unusable. Run these from a chroot if the system will not boot, or directly if it limps to a shell.
@@ -205,7 +205,7 @@ If the same errors keep coming back, the drive may be dying. `smartctl` reads th
 `badblocks` scans the surface for unreadable sectors. Use the read-only mode on a disk with data on it.
 ```[badblocks](/man/badblocks) -sv /dev/sda```
 
-> A failing **Reallocated_Sector_Ct** or **Current_Pending_Sector** in `smartctl -a` means: stop, image the disk with `ddrescue`, and replace it. Repairs on dying hardware only buy minutes.
+A failing **Reallocated_Sector_Ct** or **Current_Pending_Sector** in `smartctl -a` means: stop, image the disk with `ddrescue`, and replace it. Repairs on dying hardware only buy minutes.
 
 ## Recover Deleted Files & Partitions
 When the problem is lost data rather than a broken boot, work on a **copy** of the disk, never the original. `testdisk` rebuilds damaged partition tables and recovers whole partitions.
@@ -217,7 +217,7 @@ When the problem is lost data rather than a broken boot, work on a **copy** of t
 For ext3/ext4, `extundelete` can recover recently deleted files using the journal.
 ```[extundelete](/man/extundelete) /dev/sda2 --restore-all```
 
-> The moment you realize files were deleted, unmount the filesystem or power off. Continued writes overwrite the very blocks you are trying to recover.
+**The moment you realize files were deleted, unmount the filesystem or power off.** Continued writes overwrite the very blocks you are trying to recover.
 
 ## Last Resort: Rescue, then Rebuild
 If the install is too broken to repair, salvage what you can and start fresh. Image the failing disk before it gets worse, then mount the image to extract files at your own pace.
@@ -229,4 +229,4 @@ A whole-disk image holds a partition table, not a single filesystem, so attach i
 
 Copy the data you need off the image, reinstall the OS, then restore from backups. A clean reinstall is often faster and safer than chasing a deeply corrupted system.
 
-> Every recovery is easier with a current backup and a tested restore. The work you do here is the price of not having one: see the **Backup & Imaging** page.
+Every recovery is easier with a current backup and a tested restore. The work you do here is the price of not having one: see the **Backup & Imaging** page.

@@ -9,10 +9,8 @@ Make the script executable and run it.
 ```[chmod](/man/chmod) +x script.sh```
 ```./script.sh```
 
-Use **set** options at the top of scripts to catch errors early.
+Use **set** options at the top of scripts to catch errors early: **-e** exits on the first error, **-u** treats unset variables as errors, **-o pipefail** makes a pipeline fail if any command in it fails.
 ```[set](/man/set) -euo pipefail```
-
-> **-e** exits on the first error, **-u** treats unset variables as errors, **-o pipefail** makes a pipeline fail if any command in it fails.
 
 ## Variables
 Variable assignment has **no spaces** around the **=** sign. Use double quotes around variable references to prevent word splitting.
@@ -41,7 +39,7 @@ Quoting controls what the shell expands. When in doubt, use double quotes.
 | **"text"** | Double quotes: $variables and $(commands) are expanded |
 | **\$HOME** | Backslash escapes a single character |
 
-> Always quote variable references: **"$VAR"** survives spaces in the value, unquoted **$VAR** gets split into separate words.
+Always quote variable references: **"$VAR"** survives spaces in the value, unquoted **$VAR** gets split into separate words.
 
 ## Special Variables
 These are set automatically by the shell inside a running script.
@@ -59,7 +57,7 @@ These are set automatically by the shell inside a running script.
 | **$!** | PID of the last background command |
 | **$_** | Last argument of the previous command |
 
-> Prefer **"$@"** when passing arguments on to another command: it preserves each argument as a separate word.
+Prefer **"$@"** when passing arguments on to another command: it preserves each argument as a separate word.
 
 ## String Operations
 Bash provides built-in string manipulation without needing external commands.
@@ -79,7 +77,7 @@ Bash provides built-in string manipulation without needing external commands.
 | **${VAR,}** | Lowercase first character |
 | **${VAR,,}** | Lowercase all characters |
 
-> Case conversion (**${VAR^^}**, **${VAR,,}**) requires bash 4 or later.
+Case conversion (**${VAR^^}**, **${VAR,,}**) requires bash 4 or later.
 
 ## Conditionals
 Use **[[ ]]** for conditionals in bash scripts. It supports pattern and regex matching and is safer than the older **[ ]** form. The spaces inside the brackets are required.
@@ -173,8 +171,7 @@ Use **$(( ))** for arithmetic expressions and **(( ))** for arithmetic statement
 | **$((++a))** | Pre-increment |
 | **((a += 5))** | Arithmetic assignment |
 
-> Shell arithmetic is integer only. Pipe to **bc** for floating point math.
-
+Shell arithmetic is integer only. Pipe to **bc** for floating point math.
 ```[echo](/man/echo) "scale=2; 10 / 3" | [bc](/man/bc)```
 
 ## Input and Output

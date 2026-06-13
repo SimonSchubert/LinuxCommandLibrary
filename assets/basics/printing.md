@@ -48,7 +48,7 @@ Cancel a specific job by ID (shown by **lpq** or **lpstat -o**), your most recen
 ```[lprm](/man/lprm) [jobID]```
 ```[lprm](/man/lprm) -```
 
-> **lprm -** removes all of your own jobs. Cancelling other users' jobs requires root.
+**lprm -** removes all of your own jobs. Cancelling other users' jobs requires root.
 
 ## Manage Printers
 Stop and start a printer's output, for example to clear a paper jam without losing queued jobs.
@@ -59,4 +59,4 @@ Add a printer or list available drivers and connections with CUPS admin tools (r
 ```[lpinfo](/man/lpinfo) -v```
 ```[lpadmin](/man/lpadmin) -p [printerName] -E -v ipp://[host]/ipp/print -m everywhere```
 
-> Most modern network printers support driverless printing (IPP Everywhere), which is what **-m everywhere** sets up.
+Most modern network printers support driverless printing (IPP Everywhere), which is what **-m everywhere** sets up.

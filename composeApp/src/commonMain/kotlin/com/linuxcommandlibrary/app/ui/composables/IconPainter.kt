@@ -15,6 +15,8 @@ import com.linuxcommandlibrary.app.resources.ic_bluetooth_start
 import com.linuxcommandlibrary.app.resources.ic_bookmark_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_bookmark_border_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_change_folder_white
+import com.linuxcommandlibrary.app.resources.ic_check_black_24dp
+import com.linuxcommandlibrary.app.resources.ic_code_white_48dp
 import com.linuxcommandlibrary.app.resources.ic_collapse_all
 import com.linuxcommandlibrary.app.resources.ic_create_file_white
 import com.linuxcommandlibrary.app.resources.ic_create_new_folder_white
@@ -37,6 +39,7 @@ import com.linuxcommandlibrary.app.resources.ic_file_move_white
 import com.linuxcommandlibrary.app.resources.ic_file_permission_white_48dp
 import com.linuxcommandlibrary.app.resources.ic_fingerprint_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_flash_on_black_24dp
+import com.linuxcommandlibrary.app.resources.ic_folder_black_40dp
 import com.linuxcommandlibrary.app.resources.ic_folder_list_white
 import com.linuxcommandlibrary.app.resources.ic_folder_path_white
 import com.linuxcommandlibrary.app.resources.ic_healing_black_24dp
@@ -75,6 +78,9 @@ import com.linuxcommandlibrary.app.resources.ic_icons8_github
 import com.linuxcommandlibrary.app.resources.ic_icons8_golden_fever
 import com.linuxcommandlibrary.app.resources.ic_icons8_group_foreground_selected
 import com.linuxcommandlibrary.app.resources.ic_icons8_hand_with_pen
+import com.linuxcommandlibrary.app.resources.ic_icons8_hdd
+import com.linuxcommandlibrary.app.resources.ic_icons8_home
+import com.linuxcommandlibrary.app.resources.ic_icons8_image
 import com.linuxcommandlibrary.app.resources.ic_icons8_keyboard
 import com.linuxcommandlibrary.app.resources.ic_icons8_kitchen_scales
 import com.linuxcommandlibrary.app.resources.ic_icons8_linux
@@ -88,6 +94,7 @@ import com.linuxcommandlibrary.app.resources.ic_icons8_ping_pong
 import com.linuxcommandlibrary.app.resources.ic_icons8_plus
 import com.linuxcommandlibrary.app.resources.ic_icons8_print
 import com.linuxcommandlibrary.app.resources.ic_icons8_print_file
+import com.linuxcommandlibrary.app.resources.ic_icons8_redo
 import com.linuxcommandlibrary.app.resources.ic_icons8_remove_user_male
 import com.linuxcommandlibrary.app.resources.ic_icons8_restore_window
 import com.linuxcommandlibrary.app.resources.ic_icons8_reuse
@@ -109,6 +116,7 @@ import com.linuxcommandlibrary.app.resources.ic_icons8_work
 import com.linuxcommandlibrary.app.resources.ic_idea
 import com.linuxcommandlibrary.app.resources.ic_info_40dp
 import com.linuxcommandlibrary.app.resources.ic_ip_address
+import com.linuxcommandlibrary.app.resources.ic_keyboard_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_list_groups_white_48dp
 import com.linuxcommandlibrary.app.resources.ic_list_interfaces_white_48dp
 import com.linuxcommandlibrary.app.resources.ic_list_sockets_white_48dp
@@ -121,11 +129,15 @@ import com.linuxcommandlibrary.app.resources.ic_power_settings_new_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_public_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_puzzle
 import com.linuxcommandlibrary.app.resources.ic_refresh_black_24dp
+import com.linuxcommandlibrary.app.resources.ic_remote
 import com.linuxcommandlibrary.app.resources.ic_remove_user_from_group_white_48dp
 import com.linuxcommandlibrary.app.resources.ic_remove_user_group
 import com.linuxcommandlibrary.app.resources.ic_report_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_search_40dp
+import com.linuxcommandlibrary.app.resources.ic_search_history_white_48dp
+import com.linuxcommandlibrary.app.resources.ic_search_in_file_white_48dp
 import com.linuxcommandlibrary.app.resources.ic_search_source_man_white_48dp
+import com.linuxcommandlibrary.app.resources.ic_security_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_settings_black_40dp
 import com.linuxcommandlibrary.app.resources.ic_share_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_stop_bluetooth
@@ -183,6 +195,7 @@ fun rememberIconPainter(icon: AppIcon): Painter {
             AppIcon.FUN -> Res.drawable.ic_icon_fun
             AppIcon.AGENT -> Res.drawable.ic_agent
             AppIcon.HAND_WITH_PEN -> Res.drawable.ic_icons8_hand_with_pen
+            AppIcon.IMAGE -> Res.drawable.ic_icons8_image
             AppIcon.DEFAULT_GROUP -> Res.drawable.ic_icons8_console
             AppIcon.ADD_RULE -> Res.drawable.ic_add_rule
             AppIcon.ADD_USER_TO_GROUP -> Res.drawable.ic_add_user_to_group_white_48dp
@@ -211,9 +224,12 @@ fun rememberIconPainter(icon: AppIcon): Painter {
             AppIcon.FILE_PERMISSION -> Res.drawable.ic_file_permission_white_48dp
             AppIcon.FINGERPRINT -> Res.drawable.ic_fingerprint_black_24dp
             AppIcon.FLASH -> Res.drawable.ic_flash_on_black_24dp
+            AppIcon.FOLDER_BLACK -> Res.drawable.ic_folder_black_40dp
             AppIcon.FOLDER_LIST -> Res.drawable.ic_folder_list_white
             AppIcon.FOLDER_PATH -> Res.drawable.ic_folder_path_white
             AppIcon.HEALING -> Res.drawable.ic_healing_black_24dp
+            AppIcon.HDD -> Res.drawable.ic_icons8_hdd
+            AppIcon.HOME -> Res.drawable.ic_icons8_home
             AppIcon.TRASH_ADD -> Res.drawable.ic_icons8_add_trash
             AppIcon.ADD_USER -> Res.drawable.ic_icons8_add_user
             AppIcon.ADD_USER_GROUP -> Res.drawable.ic_icons8_add_user_group
@@ -221,6 +237,8 @@ fun rememberIconPainter(icon: AppIcon): Painter {
             AppIcon.BOT -> Res.drawable.ic_icons8_bot
             AppIcon.CALENDAR -> Res.drawable.ic_icons8_calendar_1
             AppIcon.CANCEL -> Res.drawable.ic_icons8_cancel
+            AppIcon.CHECK -> Res.drawable.ic_check_black_24dp
+            AppIcon.CODE -> Res.drawable.ic_code_white_48dp
             AppIcon.PAUSE -> Res.drawable.ic_icons8_circled_pause
             AppIcon.PLAY -> Res.drawable.ic_icons8_circled_play
             AppIcon.CLIPBOARD -> Res.drawable.ic_icons8_clipboard
@@ -238,6 +256,7 @@ fun rememberIconPainter(icon: AppIcon): Painter {
             AppIcon.GOLDEN_FEVER -> Res.drawable.ic_icons8_golden_fever
             AppIcon.GROUP_SELECTED -> Res.drawable.ic_icons8_group_foreground_selected
             AppIcon.KEYBOARD -> Res.drawable.ic_icons8_keyboard
+            AppIcon.KEYBOARD_ALT -> Res.drawable.ic_keyboard_black_24dp
             AppIcon.KITCHEN_SCALES -> Res.drawable.ic_icons8_kitchen_scales
             AppIcon.LINUX -> Res.drawable.ic_icons8_linux
             AppIcon.MERGE -> Res.drawable.ic_icons8_merge
@@ -276,11 +295,16 @@ fun rememberIconPainter(icon: AppIcon): Painter {
             AppIcon.MEMORY_SLOT -> Res.drawable.ic_memory_slot
             AppIcon.POWER -> Res.drawable.ic_power_settings_new_black_24dp
             AppIcon.PUBLIC -> Res.drawable.ic_public_black_24dp
+            AppIcon.REDO -> Res.drawable.ic_icons8_redo
             AppIcon.REFRESH -> Res.drawable.ic_refresh_black_24dp
+            AppIcon.REMOTE -> Res.drawable.ic_remote
             AppIcon.REMOVE_USER_FROM_GROUP -> Res.drawable.ic_remove_user_from_group_white_48dp
             AppIcon.REMOVE_GROUP -> Res.drawable.ic_remove_user_group
             AppIcon.REPORT -> Res.drawable.ic_report_black_24dp
+            AppIcon.SEARCH_HISTORY -> Res.drawable.ic_search_history_white_48dp
+            AppIcon.SEARCH_IN_FILE -> Res.drawable.ic_search_in_file_white_48dp
             AppIcon.SEARCH_SOURCE -> Res.drawable.ic_search_source_man_white_48dp
+            AppIcon.SECURITY -> Res.drawable.ic_security_black_24dp
             AppIcon.STOP_BLUETOOTH -> Res.drawable.ic_stop_bluetooth
             AppIcon.STOP_WIFI -> Res.drawable.ic_stop_wifi
             AppIcon.STORAGE -> Res.drawable.ic_storage_black_24dp

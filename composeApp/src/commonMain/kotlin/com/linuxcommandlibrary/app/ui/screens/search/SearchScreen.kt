@@ -157,7 +157,7 @@ private fun BasicGroupSearchItem(
     isSelected: Boolean = false,
 ) {
     val iconPainter = rememberIconPainter(
-        BasicGroup(id = match.groupId, description = match.description).getIconId(),
+        BasicGroup(id = match.groupId, description = match.description).getIconId(match.categoryTitle),
     )
     ListItem(
         headlineContent = {

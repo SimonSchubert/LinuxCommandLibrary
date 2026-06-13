@@ -5,7 +5,7 @@ A regular expression (regex) is a pattern that describes a set of strings. Tools
 ```[grep](/man/grep) 'hello' file.txt```
 ```[grep](/man/grep) -i 'error' /var/log/syslog```
 
-> Put the pattern in single quotes so the shell passes it to the tool unchanged.
+Put the pattern in single quotes so the shell passes it to the tool unchanged.
 
 ## Regex Flavors
 Three dialects are in everyday use, and the same pattern can behave differently in each.
@@ -19,7 +19,7 @@ Three dialects are in everyday use, and the same pattern can behave differently 
 **Perl-Compatible Regular Expressions** (PCRE) add shortcuts like **\d**, lookarounds, and lazy quantifiers. Use **grep -P** where available.
 ```[grep](/man/grep) -P '\d{3}-\d{4}' contacts.txt```
 
-> If a pattern with **+**, **?**, or alternation silently matches nothing, check whether the tool is running in BRE mode.
+If a pattern with **+**, **?**, or alternation silently matches nothing, check whether the tool is running in BRE mode.
 
 ## Anchors
 Anchors match a position rather than a character.
@@ -61,7 +61,7 @@ A character class matches one character from a defined set.
 | **\s** | Any whitespace (space, tab, newline) |
 | **\S** | Any non-whitespace character |
 
-> GNU **grep** and **sed** accept **\w**, **\s**, and **\b** even without **-P**, but **\d** only works in PCRE. For portable scripts, use POSIX classes instead.
+GNU **grep** and **sed** accept **\w**, **\s**, and **\b** even without **-P**, but **\d** only works in PCRE. For portable scripts, use POSIX classes instead.
 
 Inside a bracket expression, most metacharacters become literal. To include a literal **]**, place it first; a literal **-** goes first or last.
 
@@ -99,7 +99,7 @@ Quantifiers control how many times the preceding element must appear.
 ```[grep](/man/grep) -E 'o{2,}' words.txt```
 ```[grep](/man/grep) -E 'https?://' urls.txt```
 
-> Quantifiers are greedy: they match as much text as possible. The star works unescaped in every flavor; in BRE, write intervals as **\{n,m\}**, and GNU tools also accept **\+** and **\?**.
+Quantifiers are greedy: they match as much text as possible. The star works unescaped in every flavor; in BRE, write intervals as **\{n,m\}**, and GNU tools also accept **\+** and **\?**.
 
 ## Groups and Alternation
 Parentheses group elements so quantifiers apply to the whole unit, and they capture what they match. The pipe symbol provides alternation.

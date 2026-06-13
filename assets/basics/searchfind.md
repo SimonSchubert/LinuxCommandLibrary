@@ -10,7 +10,7 @@ Three different jobs, three tool families: **find** walks the filesystem live an
 ```[fd](/man/fd) [query]```
 ```[fd](/man/fd) -e pdf [query]```
 
-> Searching from **/** prints permission errors for directories you cannot read; **2>/dev/null** hides them.
+Searching from **/** prints permission errors for directories you cannot read; **2>/dev/null** hides them.
 
 ## Find by Type, Size, and Age
 Tests combine freely: a number like **-7** means "less than", **+7** means "more than", a bare **7** means "exactly".
@@ -38,7 +38,7 @@ Tests combine freely: a number like **-7** means "less than", **+7** means "more
 ```[find](/man/find) . -name "*.sh" -exec [chmod](/man/chmod) +x {} +```
 ```[find](/man/find) . -type f -exec [grep](/man/grep) -l "TODO" {} +```
 
-> Test destructive commands first: replace **-delete** or **-exec rm** with **-print**, check the list, then run it for real.
+**Test destructive commands first:** replace **-delete** or **-exec rm** with **-print**, check the list, then run it for real.
 
 ## Indexed Search
 **locate** finds path names instantly from an index instead of scanning the disk. The index is updated periodically by **updatedb**, so very new files may be missing. **plocate** is the faster modern implementation.
@@ -65,7 +65,7 @@ Search the output of any command by piping it through grep.
 ```[vim](/man/vim) $([fzf](/man/fzf))```
 ```[history](/man/history) | [fzf](/man/fzf)```
 
-> fzf's shell integration binds **Ctrl+R** (history), **Ctrl+T** (files), and **Alt+C** (cd into directory).
+fzf's shell integration binds **Ctrl+R** (history), **Ctrl+T** (files), and **Alt+C** (cd into directory).
 
 ## Find Commands
 Where does a command live, and what is it really?
@@ -74,4 +74,4 @@ Where does a command live, and what is it really?
 ```type [command]```
 ```command -v [command]```
 
-> **whereis** also finds the man page and source. **type** is the shell's own view and correctly reports aliases, functions, and builtins.
+**whereis** also finds the man page and source. **type** is the shell's own view and correctly reports aliases, functions, and builtins.

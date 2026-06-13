@@ -14,7 +14,7 @@ Emacs keybindings use a shorthand notation: **C-** means hold Ctrl, and **M-** m
 | **C-g** | Cancel current command or operation |
 | **C-/** | Undo last change (also **C-x u**) |
 
-> Stuck in a command you did not mean to start? **C-g** cancels almost anything. The built-in interactive tutorial is at **C-h t**.
+Stuck in a command you did not mean to start? **C-g** cancels almost anything. The built-in interactive tutorial is at **C-h t**.
 
 ## Navigation
 Movement commands come in pairs: **C-** moves by small units, **M-** moves by larger units.
@@ -59,7 +59,7 @@ Mark a region with **C-SPC** to set the start point, then move the cursor to sel
 | **C-x C-+** | Increase text size |
 | **C-x C--** | Decrease text size |
 
-> Killed text accumulates in the **kill ring**, not just a single clipboard. Press **C-y** then repeat **M-y** to step back through everything you killed recently.
+Killed text accumulates in the **kill ring**, not just a single clipboard. Press **C-y** then repeat **M-y** to step back through everything you killed recently.
 
 ## Search and Replace
 Emacs uses incremental search: results appear as you type. Press **C-s** again to jump to the next match, **Enter** to stop at the current one, or **C-g** to cancel and return to where you started.
@@ -70,7 +70,7 @@ Emacs uses incremental search: results appear as you type. Press **C-s** again t
 | **C-r** | Search backward (incremental) |
 | **M-%** | Search and replace (query mode) |
 
-> In query replace, answer **y** to replace, **n** to skip, **!** to replace all remaining, **q** to stop.
+In query replace, answer **y** to replace, **n** to skip, **!** to replace all remaining, **q** to stop.
 
 ## Buffers and Windows
 Every open file lives in a **buffer**. Emacs can split the screen into multiple windows, each showing a buffer.

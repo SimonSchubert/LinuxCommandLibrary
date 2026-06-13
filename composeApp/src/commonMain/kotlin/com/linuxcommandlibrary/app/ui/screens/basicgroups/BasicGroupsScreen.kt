@@ -38,6 +38,7 @@ import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
 import com.linuxcommandlibrary.app.ui.composables.WithScrollbar
 import com.linuxcommandlibrary.app.ui.composables.getIconId
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
+import com.linuxcommandlibrary.app.ui.theme.mutedBodyText
 import com.linuxcommandlibrary.shared.TipSectionElement
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
@@ -97,6 +98,7 @@ fun BasicGroupsContent(
                 ) { basicGroup ->
                     BasicGroupColumn(
                         basicGroup = basicGroup,
+                        categoryTitle = uiState.categoryTitle,
                         sections = uiState.sectionsByGroupId[basicGroup.id] ?: persistentListOf(),
                         isExpanded = !(uiState.collapsedMap[basicGroup.id] ?: true),
                         onToggleCollapse = { toggleCollapse(basicGroup.id) },
@@ -111,12 +113,13 @@ fun BasicGroupsContent(
 @Composable
 fun BasicGroupColumn(
     basicGroup: BasicGroup,
+    categoryTitle: String,
     sections: ImmutableList<TipSectionElement> = persistentListOf(),
     isExpanded: Boolean,
     onToggleCollapse: () -> Unit,
     onNavigate: (NavEvent) -> Unit = {},
 ) {
-    val painter = rememberIconPainter(basicGroup.getIconId())
+    val painter = rememberIconPainter(basicGroup.getIconId(categoryTitle))
     val chevronRotation by animateFloatAsState(targetValue = if (isExpanded) 180f else 0f)
 
     Row(
@@ -177,6 +180,7 @@ private fun ExpandedGroupContent(
         TipSectionContent(
             sections = sections,
             onNavigate = onNavigate,
+            textColor = MaterialTheme.colorScheme.mutedBodyText,
             commandVerticalPadding = 4.dp,
         )
     }

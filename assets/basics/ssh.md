@@ -8,9 +8,9 @@ Connect as a user on a remote host, optionally on a non-standard port, or run a 
 
 End the session with **exit**, **logout**, or **Ctrl+d**.
 
-> First connection to a host? SSH shows its key fingerprint and stores it in ~/.ssh/known_hosts. A sudden "host key changed" warning later means the server was reinstalled, or someone is intercepting the connection.
+First connection to a host? SSH shows its key fingerprint and stores it in ~/.ssh/known_hosts. A sudden "host key changed" warning later means the server was reinstalled, or someone is intercepting the connection.
 
-> If a session hangs (network drop), type **Enter ~ .** to force-close it.
+If a session hangs (network drop), type **Enter ~ .** to force-close it.
 
 ## Keys & Passwordless Login
 Generate a key pair; **ed25519** is the modern default (use **-t rsa -b 4096** only when a legacy server requires RSA). The private key stays on your machine, the public key goes to servers.
@@ -25,7 +25,7 @@ The agent keeps decrypted keys in memory, so a passphrase-protected key only has
 ```[ssh-add](/man/ssh-add)```
 ```[ssh-add](/man/ssh-add) -l```
 
-> Always protect private keys with a passphrase, and keep ~/.ssh/id_ed25519 mode **600**. The .pub file is the one that is safe to share.
+**Always protect private keys with a passphrase**, and keep ~/.ssh/id_ed25519 mode **600**. The .pub file is the one that is safe to share.
 
 ## Client Config
 Connection settings live in **~/.ssh/config**, one block per host. After that, **ssh myserver** replaces the whole user/host/port/key incantation, and tab completion picks up the alias.
@@ -73,4 +73,4 @@ Host *
     ServerAliveInterval 60
 ```
 
-> For work that must survive a disconnect, run **tmux** on the server: reattach after reconnecting and your programs are still running (see the Tmux basics page).
+For work that must survive a disconnect, run **tmux** on the server: reattach after reconnecting and your programs are still running (see the Tmux basics page).

@@ -56,4 +56,4 @@ Set or add a field with **=**, remove one with **del()**. jq never edits in plac
 ```[dasel](/man/dasel) -r json -w yaml < file.json```
 ```[jc](/man/jc) ifconfig | [jq](/man/jq) ".[0].ipv4_addr"```
 
-> Compact output for machines: **jq -c** prints one line per document, useful for JSON Lines streams.
+Compact output for machines: **jq -c** prints one line per document, useful for JSON Lines streams.

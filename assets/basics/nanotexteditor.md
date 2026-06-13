@@ -10,7 +10,7 @@ Nano is designed to be simple and beginner-friendly. It shows the most important
 | **Ctrl+G** | Display help text |
 | **Ctrl+X** | Exit nano (prompts to save if modified) |
 
-> To save and quit: **Ctrl+X**, answer **y**, confirm the file name with **Enter**.
+To save and quit: **Ctrl+X**, answer **y**, confirm the file name with **Enter**.
 
 Useful startup options:
 
@@ -56,7 +56,7 @@ Search remembers the last term: press **Enter** at an empty search prompt to reu
 | **Alt+Q** | Repeat search, previous match |
 | **Ctrl+\\** | Search and replace |
 
-> During replace, answer **y** to replace one match, **n** to skip, **a** to replace all.
+During replace, answer **y** to replace one match, **n** to skip, **a** to replace all.
 
 ## Editing
 Cut and paste work on whole lines by default. To work on a selection, set a mark first with **Alt+A**, then move the cursor to select.
@@ -74,7 +74,7 @@ Cut and paste work on whole lines by default. To work on a selection, set a mark
 | **Ctrl+T** | Execute a command (or spell check in older versions) |
 | **Alt+#** | Toggle line numbers |
 
-> Holding **Shift** with the arrow keys also selects text in modern nano versions.
+Holding **Shift** with the arrow keys also selects text in modern nano versions.
 
 ## Configuration
 Nano reads **~/.nanorc** at startup. Options set there apply to every session.

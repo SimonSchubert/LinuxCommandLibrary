@@ -10,7 +10,7 @@ Pico is the built-in editor from the Pine email client and the predecessor of Na
 | **Ctrl+g** | Display help text |
 | **Ctrl+x** | Exit pico (prompts to save if modified) |
 
-> Many systems no longer ship pico; its open-source successor **nano** uses the same keybindings, and **pico** is often just an alias for it.
+Many systems no longer ship pico; its open-source successor **nano** uses the same keybindings, and **pico** is often just an alias for it.
 
 ## Navigation
 Use arrow keys for basic movement, or these Emacs-style shortcuts.

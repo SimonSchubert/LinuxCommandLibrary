@@ -39,7 +39,7 @@ struct BasicGroupsView: View {
                     } label: {
                         HStack(spacing: 10) {
                             IconView(
-                                assetName: IconHelperKt.assetNameForGroup(group: group),
+                                assetName: IconHelperKt.assetNameForGroup(group: group, categoryTitle: title),
                                 size: 22,
                                 tint: .brandRed
                             )

@@ -14,7 +14,7 @@ Unlike most editors, VIM does not let you type text right away. It starts in **N
 | **R** | Enter Replace mode: overwrite existing text |
 | **Esc** | Return to Normal mode |
 
-> The best way to learn is the built-in interactive tutorial: run **vimtutor** in your terminal, it takes about 30 minutes.
+The best way to learn is the built-in interactive tutorial: run **vimtutor** in your terminal, it takes about 30 minutes.
 
 ## File Management
 All commands starting with **:** are typed in Command-line mode. Press **Enter** to execute them.
@@ -89,7 +89,7 @@ VIM combines operators like **d** (delete), **y** (yank/copy), and **c** (change
 | **>> / <<** | Indent / unindent the current line |
 | **.** | Repeat the last change |
 
-> Deleted and yanked text both land in the same register, so **dd** then **p** moves a line.
+Deleted and yanked text both land in the same register, so **dd** then **p** moves a line.
 
 ## Counts & Text Objects
 Prefix any command with a number to repeat it: **3dd** deletes three lines, **2w** jumps two words. Text objects describe what is *around* the cursor: **i** means inside, **a** includes the delimiters.
