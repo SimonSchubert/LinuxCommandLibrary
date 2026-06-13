@@ -1,3 +1,17 @@
+## v4.2.0 — 2026-06-13
+
+### Features
+- Link out to documentation, source code, and homepage of commands
+- Show rich content in basics sections
+
+### Fixes
+- Fixed missing "see also" references across all command pages
+
+### Improvements
+- Added many new commands and improved existing documentation
+- New icon mappings, including Backup & Imaging and System Recovery web icons
+- Upgraded dependencies
+
 ## v4.1.0 — 2026-06-07
 
 ### Features

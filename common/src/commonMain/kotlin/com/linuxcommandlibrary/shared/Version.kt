@@ -1,5 +1,5 @@
 package com.linuxcommandlibrary.shared
 
 object Version {
-    const val APP_VERSION = "4.1.0"
+    const val APP_VERSION = "4.2.0"
 }
