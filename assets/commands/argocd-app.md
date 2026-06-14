@@ -67,6 +67,12 @@ Applications can be synced manually or automatically, with Argo CD monitoring fo
 **set** _name_
 > Modify application settings
 
+**wait** _name_
+> Block until the application reaches a Healthy/Synced state
+
+**logs** _name_
+> Stream logs from the application's pods
+
 **--repo** _url_
 > Git repository URL
 
@@ -93,3 +99,11 @@ Application management is the core functionality of Argo CD, central to the GitO
 # SEE ALSO
 
 [argocd](/man/argocd)(1), [kubectl](/man/kubectl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/argoproj/argo-cd)```
+
+```[Documentation](https://argo-cd.readthedocs.io)```
+
+<!-- verified: 2026-06-15 -->

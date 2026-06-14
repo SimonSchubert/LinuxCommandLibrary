@@ -43,6 +43,12 @@ When run with command-line options, ark can operate in batch mode without displa
 **-e, --extract**
 > Open the extraction dialog
 
+**-d, --dialog**
+> Show a dialog to choose extraction options instead of extracting silently
+
+**-f, --changetofirstpath**
+> Use the first archive entry's path as the destination (with **-b**)
+
 # CAVEATS
 
 Some archive formats require additional plugins or external programs. RAR creation requires **rar** (proprietary), while extraction works with the free **unrar**. Format support depends on installed KDE archive plugins.
@@ -50,3 +56,11 @@ Some archive formats require additional plugins or external programs. RAR creati
 # SEE ALSO
 
 [tar](/man/tar)(1), [unzip](/man/unzip)(1), [7z](/man/7z)(1)
+
+# RESOURCES
+
+```[Source code](https://invent.kde.org/utilities/ark)```
+
+```[Homepage](https://apps.kde.org/ark/)```
+
+<!-- verified: 2026-06-15 -->

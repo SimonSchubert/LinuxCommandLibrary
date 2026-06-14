@@ -29,15 +29,27 @@ By default, problems use all four basic operations. The range option controls th
 # PARAMETERS
 
 **-o** _operations_
-> Specify which operations to include: **+** (addition), **-** (subtraction), **x** (multiplication), **/** (division)
+> Specify which operations to include: **+** (addition), **-** (subtraction), **x** (multiplication), **/** (division). Defaults to **+** and **-**.
 
 **-r** _range_
-> Set the range for numbers in problems (0 to range, inclusive)
+> Largest operand used in problems (default: **10**). For addition and multiplication the operands lie between 0 and _range_; for subtraction and division both the answer and the second operand lie in that range, so results are never negative or fractional.
+
+# CAVEATS
+
+**arithmetic** asks problems repeatedly and weights operations you answer slowly or incorrectly, so they recur more often. Press **Ctrl-D** to end the session and print a summary of the number of correct answers and the time taken.
 
 # HISTORY
 
-**arithmetic** is one of the classic BSD games, originating from the early Unix systems at Bell Labs. It has been included in the **bsdgames** package for decades as a simple educational utility.
+**arithmetic** is one of the classic BSD games, originating in the Unix games collection and carried into **4.4BSD**. It ships in the **bsdgames** package on most Linux distributions as a simple educational utility.
 
 # SEE ALSO
 
 [bc](/man/bc)(1), [dc](/man/dc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/jsm28/bsd-games)```
+
+```[Homepage](https://www.polyomino.org.uk/computer/software/bsd-games/)```
+
+<!-- verified: 2026-06-15 -->

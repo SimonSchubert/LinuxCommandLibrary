@@ -74,6 +74,12 @@ Server options use URL-style query parameters (joined with **?**) for gameplay s
 **-crossplay**
 > Enable crossplay between Steam and Epic Games
 
+**-clusterid=**_id_, **-ClusterDirOverride=**_path_
+> Join a server cluster (shared player/dino transfers) using the given cluster ID and shared data directory
+
+**-NoBattlEye**
+> Run the server without BattlEye anti-cheat (clients must also disable it)
+
 # CONFIGURATION
 
 **/ShooterGame/Saved/Config/LinuxServer/GameUserSettings.ini**

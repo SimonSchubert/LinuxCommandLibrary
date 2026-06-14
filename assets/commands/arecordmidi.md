@@ -4,58 +4,61 @@ Record MIDI events to a Standard MIDI File
 
 # TLDR
 
-**Record** MIDI to file
-
-```arecordmidi -p [hw:1,0] [recording.mid]```
-
-**List** available MIDI ports
+**List** available sequencer ports
 
 ```arecordmidi -l```
 
-Record with **specific BPM**
+**Record** MIDI from a port (client:port) to a file
 
-```arecordmidi -p [hw:1,0] -b [120] [recording.mid]```
+```arecordmidi -p [20:0] [recording.mid]```
 
-Record with **metronome**
+Record with a **specific tempo** (BPM)
 
-```arecordmidi -p [hw:1,0] -m [hw:1,0] [recording.mid]```
+```arecordmidi -p [20:0] -b [120] [recording.mid]```
+
+Record with a **metronome** on another port
+
+```arecordmidi -p [20:0] -m [128:0] [recording.mid]```
 
 # SYNOPSIS
 
-**arecordmidi** [_-p port_] [_-b bpm_] [_-t ticks_] [_options_] _output.mid_
+**arecordmidi** **-p** _client:port_[_,..._] [_options_] _midifile_
 
 # DESCRIPTION
 
 **arecordmidi** records MIDI data from ALSA sequencer ports to a Standard MIDI File. It captures note events, control changes, and other MIDI messages from connected keyboards or controllers.
 
-The tool is useful for capturing performances without running a full DAW application.
+Ports are addressed as _client:port_ (for example **20:0**) or by name, as listed by the **-l** option. The tool is useful for capturing performances without running a full DAW application.
 
 # PARAMETERS
 
-**-p** _port_, **--port** _port_
-> Source port(s) to record from
+**-p** _client:port_[_,..._], **--port** _client:port_
+> Sequencer source port(s) to record from (required)
 
 **-l**, **--list**
-> List available ports
+> List possible input ports, then exit
 
 **-b** _bpm_, **--bpm** _bpm_
-> Beats per minute
+> Tempo in beats per minute (default: 120)
 
 **-t** _ticks_, **--ticks** _ticks_
-> Ticks per quarter note (default: 384)
+> Timing resolution in ticks per beat (default: 384)
+
+**-f** _frames_, **--fps** _frames_
+> Use SMPTE timing instead of musical ticks (24, 25, 29.97, or 30 fps)
 
 **-s**, **--split-channels**
-> Split channels to separate tracks
+> Write each MIDI channel to a separate track (format 1 file)
 
-**-m** _port_, **--metronome** _port_
-> Output metronome to port
+**-m** _client:port_, **--metronome** _client:port_
+> Play a metronome click on the specified port
 
-**-i** _ticks_, **--timesig** _ticks_
-> Time signature (n/d format)
+**-i** _num:den_, **--timesig** _num:den_
+> Time signature; denominator must be a power of two (default: 4:4)
 
 # CAVEATS
 
-Recording starts immediately; no countdown by default. Only records from ALSA sequencer ports, not raw MIDI. Tempo must be set manually.
+Recording starts immediately; no countdown by default. **arecordmidi** reads from ALSA sequencer ports only, not raw MIDI devices, so connect raw hardware through the sequencer (for example with **amidi** or a virtual raw-MIDI port) first. Stop the recording with **Ctrl-C**; the file is written on exit.
 
 # HISTORY
 
@@ -64,3 +67,11 @@ Recording starts immediately; no countdown by default. Only records from ALSA se
 # SEE ALSO
 
 [aplaymidi](/man/aplaymidi)(1), [aconnect](/man/aconnect)(1), [amidi](/man/amidi)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/alsa-project/alsa-utils)```
+
+```[Homepage](https://www.alsa-project.org)```
+
+<!-- verified: 2026-06-15 -->

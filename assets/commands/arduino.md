@@ -70,12 +70,22 @@ The command-line interface enables headless compilation and upload, useful for C
 
 # CAVEATS
 
-Board support packages may need installation for non-AVR boards. Serial port permissions may require user group configuration on Linux. Legacy IDE differs from Arduino IDE 2.0.
+These command-line flags belong to the **legacy Arduino IDE 1.x**, which is no longer in active development. Arduino IDE 2.x and the standalone **arduino-cli** are the recommended tools for headless builds and scripting. Board support packages may need installation for non-AVR boards, and serial port permissions may require adding your user to the **dialout** group on Linux.
 
 # HISTORY
 
-The **Arduino** project was started at the Ivrea Interaction Design Institute in **2005**. The IDE has been the primary development environment for Arduino boards since the platform's inception.
+The **Arduino** project was started at the Ivrea Interaction Design Institute in **2005**. The classic IDE (and its `arduino` command-line interface) served as the primary development environment until it was superseded by **Arduino IDE 2.x** and **arduino-cli**.
 
 # SEE ALSO
 
 [arduino-cli](/man/arduino-cli)(1), [avrdude](/man/avrdude)(1), [platformio](/man/platformio)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/arduino/Arduino)```
+
+```[Homepage](https://www.arduino.cc)```
+
+```[Documentation](https://docs.arduino.cc)```
+
+<!-- verified: 2026-06-15 -->

@@ -82,3 +82,11 @@ Requires running Argo CD server. Server must have access to Git repositories and
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [helm](/man/helm)(1), [flux](/man/flux)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/argoproj/argo-cd)```
+
+```[Documentation](https://argo-cd.readthedocs.io)```
+
+<!-- verified: 2026-06-15 -->

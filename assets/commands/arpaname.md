@@ -33,3 +33,13 @@ This is a simple conversion utility that does not perform DNS queries. It only f
 # SEE ALSO
 
 [dig](/man/dig)(1), [host](/man/host)(1), [nslookup](/man/nslookup)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.isc.org/isc-projects/bind9)```
+
+```[Homepage](https://www.isc.org/bind/)```
+
+```[Documentation](https://bind9.readthedocs.io)```
+
+<!-- verified: 2026-06-15 -->

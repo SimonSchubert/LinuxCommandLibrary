@@ -71,6 +71,12 @@ Server options are passed using URL-style query parameters (joined with **?**) f
 **-ServerPlatform=**_platforms_
 > Allow cross-platform connections (PC, XSX, PS5)
 
+**-clusterid=**_id_, **-ClusterDirOverride=**_path_
+> Join a server cluster (shared player/dino transfers) using the given cluster ID and shared data directory
+
+**-NoBattlEye**
+> Run the server without BattlEye anti-cheat (clients must also disable it)
+
 # CONFIGURATION
 
 **ShooterGame/Saved/Config/WindowsServer/GameUserSettings.ini**
