@@ -50,6 +50,17 @@ The classic dice-and-checkers board game against the computer.
               O
 ```
 
+## battle royale
+A peer-to-peer battle royale on a shrinking ASCII island; last one standing wins.
+```[ascii-royale](/man/ascii-royale)```
+```
+ ~~~~~~~~~~~~~
+ ~ . @ . o . ~
+ ~ . ### . . ~
+ ~ x . . . o ~
+ ~~~ storm ~~~
+```
+
 ## battleship
 Guess coordinates to sink the computer's hidden fleet.
 ```[nbbattleship](/man/nbbattleship)```

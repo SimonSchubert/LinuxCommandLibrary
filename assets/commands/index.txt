@@ -340,6 +340,7 @@ asak.md
 asan.md
 asar.md
 ascii-image-converter.md
+ascii-royale.md
 ascii-xfr.md
 ascii.md
 asciiart.md
@@ -1173,6 +1174,7 @@ clang.md
 clangd.md
 claude-pee.md
 claude.md
+claumon.md
 clawpatrol.md
 claws.md
 clear.md
@@ -3696,6 +3698,7 @@ k9s.md
 kafka-topics.md
 kafka.md
 kafkacat.md
+kage.md
 kaggle-competitions.md
 kaggle-config.md
 kaggle-datasets.md
@@ -4226,6 +4229,7 @@ m4b-tool.md
 mac2unix.md
 macchanger.md
 macchina.md
+mach.md
 machine-id.md
 machinectl.md
 macmon.md
@@ -7699,6 +7703,7 @@ tspin.md
 tsv-filter.md
 tsx.md
 tt.md
+ttar.md
 tts.md
 tty-clock.md
 tty-solitaire.md
