@@ -583,6 +583,7 @@ az-vm.md
 az-webapp.md
 az.md
 azcopy.md
+azdo.md
 azure-cli.md
 azurite.md
 b2-tools.md
@@ -1321,6 +1322,7 @@ consul-kv.md
 consul.md
 container-diff.md
 containerd.md
+contextspy.md
 continue.md
 conv.md
 convert.md
@@ -2231,6 +2233,7 @@ fisher.md
 fitstopnm.md
 fixfiles.md
 fixmynpm.md
+fj.md
 fkill.md
 flac.md
 flake8.md
@@ -2911,6 +2914,7 @@ gophish.md
 gops.md
 gorae.md
 goreload.md
+gosec.md
 gotelemetry.md
 gotip.md
 goto.md
@@ -5083,6 +5087,7 @@ oma.md
 omega-rpg.md
 omf.md
 omm.md
+omny.md
 omshell.md
 omz.md
 on_ac_power.md
@@ -7538,6 +7543,7 @@ tinifier.md
 tint.md
 tinyproxy.md
 tio.md
+tip.md
 tiptop.md
 tiup.md
 tiv.md
@@ -8125,6 +8131,7 @@ watson.md
 waybackurls.md
 waybar.md
 waydroid.md
+wayland-info.md
 waymore.md
 waypipe.md
 wbinfo.md
