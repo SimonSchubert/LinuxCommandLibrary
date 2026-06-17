@@ -56,9 +56,15 @@ Table in **binary**
 **-b**
 > Display ASCII table in binary
 
+**-h**, **-?**
+> Display a summary of options and a simple ASCII table
+
+**-v**
+> Display program version
+
 # CAVEATS
 
-Without arguments, shows options summary and complete ASCII table. Character aliases include common names like NUL, TAB, LF, CR, ESC, DEL for control characters.
+Without arguments, shows an options summary and the complete ASCII table. The base flags (**-d**, **-x**, **-o**, **-b**) have dual behavior: with no argument they print the full table in that base; with arguments they interpret those values in that base and print only the matching character records. Character aliases include common names like NUL, TAB, LF, CR, ESC, DEL for control characters.
 
 # HISTORY
 
@@ -67,3 +73,13 @@ Without arguments, shows options summary and complete ASCII table. Character ali
 # SEE ALSO
 
 [man](/man/man)(1), [charmap](/man/charmap)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/esr/ascii)```
+
+```[Homepage](http://www.catb.org/~esr/ascii/)```
+
+```[Documentation](http://www.catb.org/~esr/ascii/ascii.html)```
+
+<!-- verified: 2026-06-16 -->

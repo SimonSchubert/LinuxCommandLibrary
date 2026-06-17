@@ -54,6 +54,9 @@ Laravel's command-line interface for PHP development tasks.
 **migrate:rollback**
 > Rollback the last database migration
 
+**migrate:fresh**
+> Drop all tables and re-run every migration
+
 **db:seed**
 > Run database seeders
 
@@ -69,6 +72,12 @@ Laravel's command-line interface for PHP development tasks.
 **make:command** _name_
 > Create a new Artisan command
 
+**make:seeder** _name_
+> Create a new database seeder class
+
+**make:factory** _name_
+> Create a new model factory
+
 **cache:clear**
 > Clear the application cache
 
@@ -80,6 +89,15 @@ Laravel's command-line interface for PHP development tasks.
 
 **queue:work**
 > Process jobs from the queue
+
+**schedule:run**
+> Run the scheduled tasks that are due
+
+**vendor:publish**
+> Publish package assets and configuration files
+
+**about**
+> Display a summary of the application's environment and configuration
 
 **tinker**
 > Open an interactive REPL shell
@@ -93,11 +111,23 @@ Laravel's command-line interface for PHP development tasks.
 **optimize:clear**
 > Clear all cached files
 
-**--help**
+**--help**, **-h**
 > Display help for a command
 
 **-v**, **-vv**, **-vvv**
 > Increase verbosity of output
+
+**--quiet**, **-q**
+> Suppress all output
+
+**--no-interaction**, **-n**
+> Do not ask any interactive questions
+
+**--version**, **-V**
+> Display the application version
+
+**--ansi**, **--no-ansi**
+> Force or disable colored output
 
 **--env=**_environment_
 > Run command in a specific environment
@@ -123,3 +153,13 @@ Artisan was introduced with **Laravel 3** in **2012** by Taylor Otwell, inspired
 # SEE ALSO
 
 [composer](/man/composer)(1), [php](/man/php)(1), [symfony](/man/symfony)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/laravel/framework)```
+
+```[Homepage](https://laravel.com)```
+
+```[Documentation](https://laravel.com/docs/artisan)```
+
+<!-- verified: 2026-06-16 -->

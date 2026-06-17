@@ -20,9 +20,13 @@ Trace with **invocation count**
 
 ```trace -n [5] [com.example.MyClass] [myMethod]```
 
+Trace using **regex** class/method matching
+
+```trace -E [com\.example\.(Foo|Bar)] [myMethod]```
+
 # SYNOPSIS
 
-**trace** [_-n count_] [_--skipJDKMethod_] _class-pattern_ _method-pattern_ [_condition-express_]
+**trace** [_-n count_] [_-E_] [_--skipJDKMethod value_] _class-pattern_ _method-pattern_ [_condition-express_]
 
 # DESCRIPTION
 
@@ -39,13 +43,25 @@ This is invaluable for identifying performance bottlenecks without adding loggin
 > Method name (supports wildcards)
 
 **-n** _count_
-> Stop after count invocations
+> Stop after count invocations (default: 100)
 
-**--skipJDKMethod**
-> Skip tracing JDK methods
+**-E**
+> Enable regular-expression matching for the class and method patterns (default is wildcard matching)
+
+**--skipJDKMethod** _value_
+> Skip tracing JDK methods (default: true)
+
+**--exclude-class-pattern** _pattern_
+> Exclude classes matching this pattern from the trace
+
+**-m** _count_, **--maxMatch** _count_
+> Maximum number of matched classes to instrument (default: 50)
+
+**-v**
+> Print verbose detail of the condition-express evaluation
 
 **condition-express**
-> OGNL condition (e.g., '#cost > 100')
+> OGNL condition (e.g., '#cost > 100' traces only invocations slower than 100ms)
 
 # OUTPUT
 
@@ -65,3 +81,13 @@ Deep traces may produce verbose output. Performance overhead increases with trac
 # SEE ALSO
 
 [arthas](/man/arthas)(1), [arthas-watch](/man/arthas-watch)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/alibaba/arthas)```
+
+```[Homepage](https://arthas.aliyun.com)```
+
+```[Documentation](https://arthas.aliyun.com/en/doc/trace.html)```
+
+<!-- verified: 2026-06-16 -->

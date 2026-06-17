@@ -53,6 +53,9 @@ Convert AsciiDoc markup to HTML and DocBook
 **-f** _file_, **--conf-file=**_file_
 > Use additional configuration file
 
+**-e**, **--no-conf**
+> Exclude implicitly loaded configuration files
+
 **-n**, **--section-numbers**
 > Auto-number section titles
 
@@ -100,3 +103,13 @@ AsciiDoc was created by **Stuart Rackham** in **2002** as a more readable altern
 # SEE ALSO
 
 [asciidoctor](/man/asciidoctor)(1), [pandoc](/man/pandoc)(1), [markdown](/man/markdown)(1), [rst2html](/man/rst2html)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/asciidoc-py/asciidoc-py)```
+
+```[Homepage](https://asciidoc.org)```
+
+```[Documentation](https://asciidoc-py.github.io)```
+
+<!-- verified: 2026-06-16 -->

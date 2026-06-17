@@ -63,6 +63,12 @@ AsciiDoc is a lightweight markup language for writing documentation, articles, b
 **-s**, **--no-header-footer**
 > Output without HTML wrapper
 
+**-e**, **--embedded**
+> Output an embeddable document (body only, no header, footer, or styling)
+
+**-n**, **--section-numbers**
+> Auto-number section titles
+
 # CAVEATS
 
 PDF output requires asciidoctor-pdf gem. Some features require additional gems. Safe mode restricts certain features.
@@ -74,3 +80,13 @@ PDF output requires asciidoctor-pdf gem. Some features require additional gems. 
 # SEE ALSO
 
 [asciidoc](/man/asciidoc)(1), [pandoc](/man/pandoc)(1), [markdown](/man/markdown)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/asciidoctor/asciidoctor)```
+
+```[Homepage](https://asciidoctor.org)```
+
+```[Documentation](https://docs.asciidoctor.org)```
+
+<!-- verified: 2026-06-16 -->

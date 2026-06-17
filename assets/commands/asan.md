@@ -43,11 +43,17 @@ Detect memory errors at runtime via compiler instrumentation.
 **-fno-omit-frame-pointer**
 > Preserve frame pointers for better stack traces.
 
+**-O1**
+> Compile with at least -O1 for reasonable performance and readable stack traces.
+
+**-fno-optimize-sibling-calls**
+> Disable tail-call elimination for complete, accurate stack traces.
+
 **-fsanitize-recover=address**
-> Continue execution after detecting errors (not recommended).
+> Continue execution after detecting errors (required for ASAN_OPTIONS=halt_on_error=0).
 
 **-static-libasan**
-> Link ASan runtime statically.
+> Link the ASan runtime statically (GCC; Clang uses **-static-libsan**). GCC defaults to a shared runtime, Clang to a static one.
 
 # ENVIRONMENT VARIABLES
 
@@ -55,10 +61,19 @@ Detect memory errors at runtime via compiler instrumentation.
 > Runtime options for AddressSanitizer (colon-separated key=value pairs).
 
 **detect_leaks=1**
-> Enable memory leak detection (default on Linux).
+> Enable memory leak detection (default on x86_64 Linux).
+
+**detect_stack_use_after_return=1**
+> Detect use of stack memory after the function returns (default on Linux).
 
 **halt_on_error=0**
-> Continue after first error.
+> Continue after a recoverable error (only effective when compiled with -fsanitize-recover=address; default is to halt).
+
+**abort_on_error=1**
+> Call abort() instead of _exit() on error, producing a core dump.
+
+**log_path=**_path_
+> Write reports to _path_.pid instead of stderr.
 
 **verbosity=1**
 > Increase output verbosity.
@@ -68,6 +83,9 @@ Detect memory errors at runtime via compiler instrumentation.
 
 **print_stats=1**
 > Print memory usage statistics at exit.
+
+**ASAN_SYMBOLIZER_PATH**
+> Path to llvm-symbolizer used to resolve addresses to source locations.
 
 # DESCRIPTION
 
@@ -88,3 +106,11 @@ AddressSanitizer was developed at **Google** and first released with **LLVM 3.1*
 # SEE ALSO
 
 [valgrind](/man/valgrind)(1), [gcc](/man/gcc)(1), [clang](/man/clang)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/sanitizers)```
+
+```[Documentation](https://clang.llvm.org/docs/AddressSanitizer.html)```
+
+<!-- verified: 2026-06-16 -->

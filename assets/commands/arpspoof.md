@@ -18,7 +18,7 @@ Poison specific **target**
 
 # SYNOPSIS
 
-**arpspoof** [_OPTIONS_] _host_
+**arpspoof** [_-i interface_] [_-c own_|_host_|_both_] [_-t target_] [_-r_] _host_
 
 # DESCRIPTION
 
@@ -29,11 +29,14 @@ Poison specific **target**
 **-i** _interface_
 > Network interface to use
 
+**-c** _own_|_host_|_both_
+> Which hardware address to use when restoring the ARP configuration on cleanup (default: own)
+
 **-t** _target_
-> Target IP address to poison (poisons all hosts if omitted)
+> Target IP address to poison (poisons all hosts if omitted). May be repeated to specify multiple targets
 
 **-r**
-> Poison both target and host (bidirectional)
+> Poison both host and target to capture traffic in both directions (only valid in conjunction with -t)
 
 **host**
 > IP address of the host to impersonate (usually the gateway)
@@ -49,3 +52,11 @@ This is a penetration testing tool that can disrupt network traffic. Only use on
 # SEE ALSO
 
 [dsniff](/man/dsniff)(8), [tcpdump](/man/tcpdump)(8), [ettercap](/man/ettercap)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/tecknicaltom/dsniff)```
+
+```[Homepage](https://www.monkey.org/~dugsong/dsniff/)```
+
+<!-- verified: 2026-06-16 -->

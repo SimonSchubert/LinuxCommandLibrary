@@ -52,10 +52,28 @@ The tool supports reading images from local files or URLs and can output plain t
 **-i, --invert-chars**
 > Invert the character mapping (swap light and dark)
 
+**-v, --version**
+> Display the version number
+
+**-h, --help**
+> Show the help message
+
 # CAVEATS
 
 Output quality depends on the terminal font and character width. Monospace fonts produce the best results. HTML output can be viewed in web browsers for better color support. Very wide images may wrap in terminals.
 
+# HISTORY
+
+**asciiart** is a Ruby gem written by Stephen Schor (nodanaonlyzuul). It is packaged for Debian and Ubuntu and installed via **gem install asciiart**.
+
 # SEE ALSO
 
 [jp2a](/man/jp2a)(1), [img2txt](/man/img2txt)(1), [figlet](/man/figlet)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/nodanaonlyzuul/asciiart)```
+
+```[Documentation](https://github.com/nodanaonlyzuul/asciiart/blob/main/README.md)```
+
+<!-- verified: 2026-06-16 -->
