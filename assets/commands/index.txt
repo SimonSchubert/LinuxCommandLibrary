@@ -2672,6 +2672,7 @@ git-local-commits.md
 git-lock.md
 git-locked.md
 git-log.md
+git-lrc.md
 git-ls-files.md
 git-ls-remote.md
 git-ls-tree.md
@@ -4942,6 +4943,7 @@ npm-root.md
 npm-run-script.md
 npm-run.md
 npm-sbom.md
+npm-scan.md
 npm-search.md
 npm-shrinkwrap.md
 npm-star.md
