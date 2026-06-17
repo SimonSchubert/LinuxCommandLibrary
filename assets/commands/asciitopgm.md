@@ -4,30 +4,37 @@ Convert ASCII art to PGM grayscale image
 
 # TLDR
 
-**Convert** ASCII art to PGM
+**Convert** ASCII art to PGM (note: height comes before width)
 
-```asciitopgm [width] [height] < [ascii.txt] > [output.pgm]```
+```asciitopgm [height] [width] < [ascii.txt] > [output.pgm]```
+
+**Brighten** the output with a divisor
+
+```asciitopgm -divisor=[2] [height] [width] [ascii.txt] > [output.pgm]```
 
 # SYNOPSIS
 
-**asciitopgm** _width_ _height_ [_asciifile_]
+**asciitopgm** [_-divisor=integer_] _height_ _width_ [_asciifile_]
 
 # DESCRIPTION
 
-**asciitopgm** converts ASCII art text to PGM (Portable Graymap) image format. It maps characters to grayscale values based on their visual density, creating an image from text.
+**asciitopgm** converts ASCII art text to PGM (Portable Graymap) image format. Each character becomes one pixel; a large character such as a capital M produces a dark pixel, while a small one such as a period produces a light pixel.
 
-This is useful for converting legacy ASCII artwork to modern image formats or for creating images from text patterns.
+This is useful for converting legacy ASCII artwork to image formats or for creating images from text patterns. Output values range from 0 to a maximum of 127.
 
 # PARAMETERS
 
-**width**
-> Output image width in pixels
-
 **height**
-> Output image height in pixels
+> Output image height in pixels (number of rows)
+
+**width**
+> Output image width in pixels (number of columns)
 
 **asciifile**
-> Input ASCII file (or stdin)
+> Input ASCII file (reads from stdin if omitted)
+
+**-divisor** _integer_
+> Divide each character's blackness value, brightening the output. Default is 1; larger positive values produce brighter images.
 
 # CAVEATS
 
@@ -40,3 +47,11 @@ Character-to-grayscale mapping may not produce optimal results for all ASCII art
 # SEE ALSO
 
 [pgmtopbm](/man/pgmtopbm)(1), [pnmtopng](/man/pnmtopng)(1), [img2txt](/man/img2txt)(1)
+
+# RESOURCES
+
+```[Homepage](https://netpbm.sourceforge.net/)```
+
+```[Documentation](https://netpbm.sourceforge.net/doc/asciitopgm.html)```
+
+<!-- verified: 2026-06-17 -->

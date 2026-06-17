@@ -37,22 +37,28 @@ Instead of typing full paths, you can jump to frequently used directories with s
 # PARAMETERS
 
 **directory**
-> Partial directory name to match
+> Partial directory name to match.
 
-**-i** _weight_, **--increase** _weight_
-> Manually increase directory weight
+**-a** _path_, **--add** _path_
+> Manually add a path to the database.
 
-**-d** _weight_, **--decrease** _weight_
-> Manually decrease directory weight
+**-i** [_weight_], **--increase** [_weight_]
+> Increase the weight of the current directory.
+
+**-d** [_weight_], **--decrease** [_weight_]
+> Decrease the weight of the current directory.
+
+**--complete**
+> Used internally for tab completion.
 
 **--purge**
-> Remove non-existent directories
+> Remove non-existent paths from the database.
 
-**--stat**
-> Show database entries and weights
+**-s**, **--stat**
+> Show database entries and their key weights.
 
-**-h**, **--help**
-> Show help
+**-v**, **--version**
+> Show version information.
 
 # ALIASES
 
@@ -72,3 +78,9 @@ Requires shell integration (add to .bashrc/.zshrc). Database builds over time; n
 # SEE ALSO
 
 [z](/man/z)(1), [zoxide](/man/zoxide)(1), [cd](/man/cd)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/wting/autojump)```
+
+<!-- verified: 2026-06-17 -->

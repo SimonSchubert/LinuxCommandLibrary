@@ -40,6 +40,12 @@ Many systems use dash (Debian Almquist Shell) as their ash implementation. BusyB
 **-s**
 > Read commands from stdin
 
+**-e**
+> Exit immediately if a command exits with a non-zero status (errexit).
+
+**-x**
+> Print each command to stderr before executing it (xtrace).
+
 # CONFIGURATION
 
 **/etc/profile**

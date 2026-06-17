@@ -82,3 +82,9 @@ The editor emphasized community packages and Git integration.
 # SEE ALSO
 
 [code](/man/code)(1), [vim](/man/vim)(1), [emacs](/man/emacs)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/atom/atom)```
+
+<!-- verified: 2026-06-17 -->

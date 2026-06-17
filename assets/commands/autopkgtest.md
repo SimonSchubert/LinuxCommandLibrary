@@ -37,16 +37,28 @@ The tool separates the test specification from the execution environment using a
 # PARAMETERS
 
 **--test-name=**_name_
-> Run only the specified test
+> Run only the named test.
+
+**--skip-test=**_name_
+> Skip the named test.
 
 **-B, --no-built-binaries**
-> Do not build the package before testing
+> Do not build the package before testing; use the provided binaries.
 
-**--shell-fail**
-> Open a shell on test failure for debugging
+**--setup-commands=**_commands_
+> Run the given shell commands in the testbed before the tests.
 
-**-o** _directory_
-> Write test output to the specified directory
+**-U, --apt-upgrade**
+> Run apt-get update and dist-upgrade in the testbed before testing.
+
+**-s, --shell-fail**
+> Open a shell in the testbed if a test fails, for debugging.
+
+**--shell**
+> Open a shell in the testbed after every test.
+
+**-o** _directory_, **--output-dir=**_directory_
+> Write test artifacts and logs to the specified directory.
 
 # VIRTUALIZATION BACKENDS
 
@@ -72,3 +84,11 @@ The **null** backend modifies the system directly and may leave changes behind. 
 # SEE ALSO
 
 [dpkg-buildpackage](/man/dpkg-buildpackage)(1), [lxc](/man/lxc)(1), [schroot](/man/schroot)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/ci-team/autopkgtest)```
+
+```[Documentation](https://wiki.debian.org/ContinuousIntegration/autopkgtest)```
+
+<!-- verified: 2026-06-17 -->

@@ -41,31 +41,31 @@ Manipulate extended attributes on filesystem objects
 # PARAMETERS
 
 **-s** _attrname_
-> Set the named attribute.
+> Set the named attribute to the value read from stdin. If the attribute already exists, its value is replaced. Combine with **-V** to supply the value on the command line instead.
 
 **-g** _attrname_
-> Get and display the value of the named attribute.
+> Get and print to stdout the value associated with the named attribute.
 
 **-r** _attrname_
-> Remove the named attribute.
+> Remove the named attribute if it exists.
 
 **-l**
-> List all extended attributes on the file.
+> List the names of all attributes on the object together with the number of bytes in each value.
 
 **-V** _attrvalue_
-> Specify the value when setting an attribute.
+> Provide the value for a **-s** operation directly, so stdin is not read.
 
 **-L**
-> Follow symbolic links.
+> When the object is a symbolic link, operate on the target of the link rather than the link itself.
 
 **-R**
-> Operate on attributes in the root namespace (requires privileges).
+> Operate in the root (trusted) attribute namespace instead of the default user namespace. Requires privileges.
 
 **-S**
-> Operate on attributes in the security namespace.
+> Operate in the security attribute namespace.
 
 **-q**
-> Quiet mode; suppress most error messages.
+> Quiet mode; print error messages to stderr but suppress status messages on stdout.
 
 # DESCRIPTION
 
@@ -87,4 +87,12 @@ Extended attributes were added to Linux in kernel **2.6** (2003), inspired by si
 
 # SEE ALSO
 
-[getfattr](/man/getfattr)(1), [setfattr](/man/setfattr)(1), [getfacl](/man/getfacl)(1), [setfacl](/man/setfacl)(1)
+[getfattr](/man/getfattr)(1), [setfattr](/man/setfattr)(1), [getfacl](/man/getfacl)(1), [setfacl](/man/setfacl)(1), [lsattr](/man/lsattr)(1), [chattr](/man/chattr)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.nongnu.org/git/attr.git)```
+
+```[Homepage](https://savannah.nongnu.org/projects/attr)```
+
+<!-- verified: 2026-06-17 -->

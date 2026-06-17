@@ -4,13 +4,25 @@ Resolve mDNS hostnames and addresses
 
 # TLDR
 
-Resolve name to **IPv4**
+**Resolve** a hostname to an IP address
 
-```avahi-resolve -4 -n service.local```
+```avahi-resolve -n [hostname.local]```
 
-Resolve **IP** to hostname
+**Resolve** a hostname to an IPv4 address only
 
-```avahi-resolve -v -a IP```
+```avahi-resolve -4 -n [hostname.local]```
+
+**Resolve** a hostname to an IPv6 address only
+
+```avahi-resolve -6 -n [hostname.local]```
+
+**Resolve** an IP address to a hostname (reverse lookup)
+
+```avahi-resolve -a [ip_address]```
+
+**Resolve** several names at once
+
+```avahi-resolve -n [host1.local] [host2.local]```
 
 # SYNOPSIS
 
@@ -49,4 +61,12 @@ Only works with mDNS-enabled hosts (typically using .local domain). The Avahi da
 
 # SEE ALSO
 
-[avahi-browse](/man/avahi-browse)(1), [avahi-daemon](/man/avahi-daemon)(8)
+[avahi-resolve-host-name](/man/avahi-resolve-host-name)(1), [avahi-resolve-address](/man/avahi-resolve-address)(1), [avahi-publish](/man/avahi-publish)(1), [avahi-browse](/man/avahi-browse)(1), [avahi-daemon](/man/avahi-daemon)(8)
+
+# RESOURCES
+
+```[Homepage](https://avahi.org/)```
+
+```[Source code](https://github.com/avahi/avahi)```
+
+<!-- verified: 2026-06-17 -->

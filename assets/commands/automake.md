@@ -28,29 +28,29 @@ Automake provides portable makefiles that work across Unix-like systems.
 
 # PARAMETERS
 
-**--add-missing**
-> Add missing standard files (install-sh, missing, etc.)
-
-**--copy**
-> Copy files instead of symlinking
-
-**--force-missing**
-> Replace existing standard files
-
-**-W** _category_
-> Warning level
-
-**--foreign**
-> Relax GNU standards
-
-**--gnits**
-> Stricter GNU standards
-
 **-a**, **--add-missing**
-> Add missing auxiliary files
+> Add missing standard auxiliary files (install-sh, missing, etc.).
 
 **-c**, **--copy**
-> Copy auxiliary files
+> Copy auxiliary files instead of symlinking them.
+
+**--force-missing**
+> Replace standard auxiliary files even if they already exist.
+
+**-W** _category_, **--warnings=**_category_
+> Report warnings for the given category (e.g. all, none, error, portability).
+
+**--gnu**
+> Require conformance to GNU coding standards (the default).
+
+**--foreign**
+> Relax checks; allow files that GNU standards require to be absent.
+
+**--gnits**
+> Apply the stricter GNU Gnits standards.
+
+**-i**, **--ignore-deps**
+> Disable generation of automatic dependency tracking.
 
 # WORKFLOW
 
@@ -70,3 +70,11 @@ Steep learning curve. Generated Makefiles are complex. Requires understanding of
 # SEE ALSO
 
 [autoconf](/man/autoconf)(1), [autoreconf](/man/autoreconf)(1), [make](/man/make)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/automake/)```
+
+```[Documentation](https://www.gnu.org/software/automake/manual/automake.html)```
+
+<!-- verified: 2026-06-17 -->

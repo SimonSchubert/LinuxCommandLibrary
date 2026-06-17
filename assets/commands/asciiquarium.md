@@ -8,35 +8,37 @@ Display an animated ASCII art aquarium
 
 ```asciiquarium```
 
-Run in **transparent** mode
-
-```asciiquarium -t```
-
-Run with **classic colors**
+Run in **classic** mode (only the original 1.0 creatures)
 
 ```asciiquarium -c```
 
 # SYNOPSIS
 
-**asciiquarium** [_-t_] [_-c_]
+**asciiquarium** [_-c_]
+
+# PREVIEW
+
+```
+   ><(((°>     .
+  __         ><>
+ (__)   ~  ___
+ ||||  ~   |#|
+```
 
 # DESCRIPTION
 
-**asciiquarium** displays an animated ASCII art aquarium in your terminal. It features swimming fish, a castle, seaweed, and bubbles, providing a relaxing screensaver-like animation.
+**asciiquarium** displays an animated ASCII art aquarium in your terminal. It features swimming fish, a castle, seaweed, bubbles, and the occasional shark or sea monster, providing a relaxing screensaver-like animation.
 
 The program runs until interrupted and adapts to terminal size.
 
 # PARAMETERS
 
-**-t**
-> Transparent background
-
 **-c**
-> Classic mode (fewer colors)
+> Classic mode: show only the species present in version 1.0.
 
 # CONTROLS
 
-Press **q** or **Ctrl+C** to exit.
+Press **q** to quit, **r** to redraw all entities, or **p** to toggle pause.
 
 # CAVEATS
 
@@ -49,3 +51,11 @@ Requires Term::Animation Perl module. Works best with 256-color terminal support
 # SEE ALSO
 
 [cmatrix](/man/cmatrix)(1), [sl](/man/sl)(6), [cowsay](/man/cowsay)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cmatsuoka/asciiquarium)```
+
+```[Homepage](https://robobunny.com/projects/asciiquarium/html/)```
+
+<!-- verified: 2026-06-17 -->

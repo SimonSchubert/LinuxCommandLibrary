@@ -24,9 +24,9 @@ Report for **time range**
 
 ```sudo aureport -ts start_time -te end_time```
 
-List **audit files** and time range
+Report on **failed** events only
 
-```sudo aureport -t```
+```sudo aureport -au --failed --summary```
 
 # SYNOPSIS
 
@@ -38,35 +38,47 @@ List **audit files** and time range
 
 # PARAMETERS
 
+**-au, --auth**
+> Report on authentication attempts.
+
 **-l, --login**
-> Report on login events
+> Report on login events.
 
 **-s, --syscall**
-> Report on syscall events
+> Report on syscall events.
 
 **-x, --executable**
-> Report on executable events
+> Report on executable events.
 
 **-f, --file**
-> Report on file events
+> Report on files and AF_UNIX sockets.
 
 **-u, --user**
-> Report on user events
+> Report on user events.
+
+**-c, --config**
+> Report on configuration changes.
 
 **-ts, --start** _time_
-> Start time for report
+> Start time for the report. Accepts keywords such as now, recent, today, yesterday, this-week, and boot.
 
 **-te, --end** _time_
-> End time for report
+> End time for the report. Accepts the same keywords as **-ts**.
 
-**-t, --log-time**
-> List audit files and their time ranges
+**-t, --log**
+> Report the start and end times of each audit log file.
+
+**--success**
+> Process only successful events.
+
+**--failed**
+> Process only failed events.
 
 **--summary**
-> Include summary statistics
+> Include summary totals for the selected report.
 
 **-i, --interpret**
-> Interpret numeric values to names
+> Interpret numeric entities (UIDs, syscalls, and so on) into human-readable names.
 
 # CONFIGURATION
 
@@ -87,3 +99,9 @@ Requires root privileges. Reports are generated from available audit logs, so co
 # SEE ALSO
 
 [ausearch](/man/ausearch)(8), [auditctl](/man/auditctl)(8), [auditd](/man/auditd)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/linux-audit/audit-userspace)```
+
+<!-- verified: 2026-06-17 -->

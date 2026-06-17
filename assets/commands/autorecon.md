@@ -36,19 +36,25 @@ The tool first performs port scanning using **nmap**, then launches service-spec
 > Read targets from file
 
 **-o, --output** _dir_
-> Output results to specified directory
+> Output results to specified directory (default: ./results)
 
 **-p, --ports** _ports_
 > Limit scanning to specific ports (T: TCP, U: UDP, B: both)
 
 **--single-target**
-> Only scan a single target at a time
+> Place results directly in the output directory instead of per-target subdirectories
 
 **-v, --verbose**
-> Enable verbose output
+> Enable verbose output; repeat (-vv, -vvv) for more detail
 
-**--heartbeat**
-> Show periodic status updates
+**--heartbeat** _seconds_
+> Interval between status update messages (default: 60)
+
+**-m, --max-scans** _number_
+> Maximum number of concurrent scans to run
+
+**--nmap** _options_
+> Override the default nmap options used for port scanning
 
 # CONFIGURATION
 
@@ -66,3 +72,10 @@ Requires root privileges for certain scan types. Results are saved to a results 
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [nikto](/man/nikto)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Tib3rius/AutoRecon)```
+
+<!-- verified: 2026-06-17 -->
+

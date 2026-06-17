@@ -101,3 +101,11 @@ Requires appropriate IAM permissions to create and manage analyzers. External ac
 # SEE ALSO
 
 [aws-iam](/man/aws-iam)(1), [aws-organizations](/man/aws-organizations)(1), [aws-cloudtrail](/man/aws-cloudtrail)(1), [aws](/man/aws)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/accessanalyzer/)```
+
+<!-- verified: 2026-06-17 -->

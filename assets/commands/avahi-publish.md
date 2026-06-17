@@ -89,3 +89,11 @@ Requires **avahi-daemon** to be running. The registration persists only while th
 # SEE ALSO
 
 [avahi-publish-service](/man/avahi-publish-service)(1), [avahi-publish-address](/man/avahi-publish-address)(1), [avahi-resolve](/man/avahi-resolve)(1), [avahi-browse](/man/avahi-browse)(1), [avahi-daemon](/man/avahi-daemon)(8)
+
+# RESOURCES
+
+```[Homepage](https://avahi.org/)```
+
+```[Source code](https://github.com/avahi/avahi)```
+
+<!-- verified: 2026-06-17 -->

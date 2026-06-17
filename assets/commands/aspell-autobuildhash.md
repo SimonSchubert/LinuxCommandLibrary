@@ -4,31 +4,41 @@ Rebuild aspell dictionary hash files
 
 # TLDR
 
-**Rebuild** all hash files
+**Rebuild** all aspell hash files
 
 ```sudo aspell-autobuildhash```
 
-Rebuild for **specific language**
+**Force** a rebuild of every hash file
 
-```sudo aspell-autobuildhash --lang=[en]```
+```sudo aspell-autobuildhash --force```
+
+**Preview** what would be done without changing anything
+
+```sudo aspell-autobuildhash --dry-run```
 
 # SYNOPSIS
 
-**aspell-autobuildhash** [_--force_] [_--lang=lang_]
+**aspell-autobuildhash** [_--force_]
 
 # DESCRIPTION
 
-**aspell-autobuildhash** regenerates aspell's hash files from dictionary sources. These hash files are used for fast spell checking and are typically rebuilt automatically after dictionary updates.
+**aspell-autobuildhash** manages the autobuilding of aspell hash files for dictionary packages. It is part of the **dictionaries-common** package and is normally invoked automatically by dpkg triggers after a dictionary is installed or upgraded.
 
-The script scans for dictionary source files and creates corresponding hash files.
+For each aspell dictionary configured to use it, the script decides whether the hash file must be rebuilt based on the aspell compatibility level, then regenerates the hash files used for fast spell checking.
 
 # PARAMETERS
 
 **--force**
-> Force rebuild even if hash is current
+> Rebuild the hash file for all dicts providing a compat file, regardless of the compatibility levels found.
 
-**--lang=**_code_
-> Process specific language only
+**--dry-run**
+> Show what would be done, but make no actual changes.
+
+**--debug**
+> Show extra info about the script's internal work; also enables aspell affix validation.
+
+**--triggered**
+> Tell the script that it is running in the dpkg triggers stage.
 
 # CAVEATS
 
@@ -36,8 +46,14 @@ Requires root privileges to write to system dictionary directories. Automaticall
 
 # HISTORY
 
-**aspell-autobuildhash** was added to simplify dictionary management, automatically regenerating hash files after updates.
+**aspell-autobuildhash** is provided by the Debian **dictionaries-common** package, written by Agustin Martin, to automatically regenerate aspell hash files after dictionary updates.
 
 # SEE ALSO
 
 [aspell](/man/aspell)(1), [aspell-import](/man/aspell-import)(1)
+
+# RESOURCES
+
+```[Documentation](https://manpages.debian.org/testing/dictionaries-common/aspell-autobuildhash.8.en.html)```
+
+<!-- verified: 2026-06-17 -->

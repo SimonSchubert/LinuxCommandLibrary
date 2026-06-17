@@ -24,9 +24,17 @@ Create and manage REST APIs for applications
 
 ```aws apigateway create-resource --rest-api-id [api-id] --parent-id [parent-id] --path-part "[users]"```
 
-**Create a deployment** to a stage
+**Add an HTTP method** to a resource
+
+```aws apigateway put-method --rest-api-id [api-id] --resource-id [resource-id] --http-method [GET] --authorization-type NONE```
+
+**Deploy an API** to a stage
 
 ```aws apigateway create-deployment --rest-api-id [api-id] --stage-name [prod]```
+
+**Import an API** from an OpenAPI definition
+
+```aws apigateway import-rest-api --body fileb://[api.json]```
 
 **Delete a REST API**
 
@@ -64,6 +72,15 @@ Create and manage REST APIs for applications
 
 **create-deployment**
 > Deploy an API to a stage
+
+**create-stage**
+> Create a deployment stage from a deployment
+
+**import-rest-api**
+> Create an API from an OpenAPI/Swagger definition
+
+**put-rest-api**
+> Update an existing API from an OpenAPI/Swagger definition
 
 **get-stages**
 > List deployment stages
@@ -110,3 +127,11 @@ Requires AWS credentials configured via **aws configure** or environment variabl
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-lambda](/man/aws-lambda)(1), [aws-iam](/man/aws-iam)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/apigateway/)```
+
+<!-- verified: 2026-06-17 -->

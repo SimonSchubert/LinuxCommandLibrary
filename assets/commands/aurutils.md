@@ -4,23 +4,27 @@ Utilities for managing AUR packages in a local repository
 
 # TLDR
 
-**Build** AUR package
+**Build** a package and add it to a local repository
 
 ```aur build [package]```
 
-**Sync** AUR database
+**Build** an AUR package and its dependencies into a local repository
 
 ```aur sync [package]```
 
-**Search** AUR
+**Upgrade** all AUR packages in a local repository
+
+```aur sync -u```
+
+**Search** the AUR
 
 ```aur search [query]```
 
-**Check** for updates
+**Check** installed foreign packages for AUR updates
 
-```aur vercmp```
+```pacman -Qm | aur vercmp```
 
-**Fetch** PKGBUILD
+**Fetch** PKGBUILD sources
 
 ```aur fetch [package]```
 
@@ -49,16 +53,16 @@ The suite integrates with pacman, allowing AUR packages to be managed like offic
 > Search AUR
 
 **vercmp**
-> Check installed packages against AUR
+> Compare packages against the AUR, reading name and version pairs from stdin
 
 **repo**
-> Manage local repository
+> Inspect or manage a local repository database
 
-**deps**
-> Resolve dependencies
+**depends**
+> Recursively download and parse AUR dependencies
 
 **graph**
-> Generate dependency graph
+> Generate a dependency graph for topological ordering
 
 # CAVEATS
 
@@ -66,8 +70,14 @@ Requires local repository setup. More complex than yay or paru for casual use. D
 
 # HISTORY
 
-**aurutils** was developed for users wanting reproducible, local repository-based AUR package management, as opposed to direct installation helpers.
+**aurutils** was developed for users wanting reproducible, local repository-based AUR package management, as opposed to direct installation helpers. It is distributed under the ISC license.
 
 # SEE ALSO
 
-[yay](/man/yay)(1), [paru](/man/paru)(1), [makepkg](/man/makepkg)(8)
+[pacman](/man/pacman)(8), [yay](/man/yay)(1), [paru](/man/paru)(1), [makepkg](/man/makepkg)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/aurutils/aurutils)```
+
+<!-- verified: 2026-06-17 -->

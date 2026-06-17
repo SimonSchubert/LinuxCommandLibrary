@@ -32,9 +32,17 @@ Enable **Winbind** (Active Directory)
 
 ```authconfig --update --enablewinbindauth```
 
-Enable **local** authorization
+Enable **SSSD** for identity and authentication
 
-```authconfig --update --enablelocauthorize```
+```authconfig --update --enablesssd --enablesssdauth```
+
+**Create home directories** on first login
+
+```authconfig --update --enablemkhomedir```
+
+Save a **named backup** of the configuration files
+
+```authconfig --savebackup=[name]```
 
 # SYNOPSIS
 
@@ -57,11 +65,23 @@ The tool modifies system files to integrate centralized identity providers with 
 **--passalgo** _algorithm_
 > Set password hashing algorithm (sha256, sha512)
 
+**--probe**
+> Probe the network via DNS for defaults and print them, without changing anything
+
+**--enableldap**
+> Use LDAP for user information lookups (modifies nsswitch.conf)
+
 **--enableldapauth**
-> Enable LDAP authentication
+> Use LDAP for authentication (modifies the PAM stack)
 
 **--disableldapauth**
 > Disable LDAP authentication
+
+**--enablesssd**
+> Use SSSD for user information lookups
+
+**--enablesssdauth**
+> Use SSSD for authentication
 
 **--enablenis**
 > Enable Network Information Service
@@ -75,8 +95,20 @@ The tool modifies system files to integrate centralized identity providers with 
 **--enablelocauthorize**
 > Enable local authorization
 
+**--enablemkhomedir**
+> Create a user home directory automatically on first login
+
 **--enableshadow**
 > Enable shadow password file
+
+**--savebackup** _name_
+> Save a named backup of the files authconfig modifies
+
+**--restorebackup** _name_
+> Restore a previously saved named backup
+
+**--restorelastbackup**
+> Restore the automatic backup taken before the last change
 
 # CONFIGURATION
 
@@ -91,11 +123,11 @@ The tool modifies system files to integrate centralized identity providers with 
 
 # CAVEATS
 
-This tool is specific to Red Hat-based distributions (RHEL, CentOS, Fedora). It has been deprecated in favor of **authselect** on newer systems. Changes require root privileges.
+This tool is specific to Red Hat-based distributions (RHEL, CentOS, Fedora). It was deprecated in favor of **authselect** starting with RHEL 8 and Fedora 28, and removed entirely from Fedora 35 onward. On those systems, use **authselect** instead. Changes require root privileges, and **--update** must be run to persist them.
 
 # HISTORY
 
-**authconfig** was the standard authentication configuration tool for Red Hat Enterprise Linux and related distributions before being replaced by **authselect**.
+**authconfig** was the standard authentication configuration tool for Red Hat Enterprise Linux and related distributions for many years. It was superseded by **authselect**, which uses predefined profiles to manage the PAM stack and nsswitch.conf. See the authselect-migration(7) man page for equivalent commands.
 
 # SEE ALSO
 

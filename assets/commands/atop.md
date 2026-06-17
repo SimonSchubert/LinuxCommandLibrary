@@ -16,7 +16,7 @@ Display **disk** information
 
 ```atop -d```
 
-Display **background process** information
+Display the full **command line** per process
 
 ```atop -c```
 
@@ -45,7 +45,7 @@ Display the number of **processes for each user**
 > Display disk information
 
 **-c**
-> Display command line per process (background processes)
+> Display the full command line (including arguments) for each process
 
 **-y**
 > Display thread-specific resource utilization
@@ -98,3 +98,11 @@ Developed by Gerlof Langeveld. Designed to provide more detailed system monitori
 # SEE ALSO
 
 [top](/man/top)(1), [htop](/man/htop)(1), [btop](/man/btop)(1), [glances](/man/glances)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.atoptool.nl/)```
+
+```[Source code](https://github.com/Atoptool/atop)```
+
+<!-- verified: 2026-06-17 -->

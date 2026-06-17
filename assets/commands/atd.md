@@ -20,6 +20,10 @@ Daemon that executes jobs scheduled with at
 
 ```atd -b [120]```
 
+**Limit batch jobs** to when load average is below a value
+
+```atd -l [1.5]```
+
 **Process the queue once** and exit
 
 ```atd -s```
@@ -37,10 +41,10 @@ Daemon that executes jobs scheduled with at
 > Run in foreground instead of daemonizing
 
 **-s**
-> Process the at/batch queue once and exit
+> Process the at/batch queue once and exit. Equivalent to the old atrun command.
 
 **-l** _load_avg_
-> Limit batch job execution to when system load is below this value (default: 1.5)
+> Limit batch job execution to when system load is below this value (default: 0.8)
 
 **-b** _interval_
 > Minimum seconds between starting batch jobs (default: 60)
@@ -78,3 +82,9 @@ The **at** command and its daemon have origins in early Unix systems, dating bac
 # SEE ALSO
 
 [at](/man/at)(1), [atq](/man/atq)(1), [atrm](/man/atrm)(1), [batch](/man/batch)(1), [cron](/man/cron)(8), [crontab](/man/crontab)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/at)```
+
+<!-- verified: 2026-06-17 -->

@@ -42,13 +42,22 @@ The tool automatically determines which programs to run based on project configu
 > Verbose output
 
 **-s**, **--symlink**
-> Use symlinks instead of copies for auxiliary files
+> When used with --install, install symbolic links instead of copying auxiliary files
 
-**-W** _category_
-> Warning level
+**-I** _dir_, **--include=**_dir_
+> Append dir to the include path searched by aclocal, autoconf, and autoheader
+
+**-m**, **--make**
+> When applicable, run ./config.status --recheck and ./config.status, then make to update everything
+
+**-W** _category_, **--warnings=**_category_
+> Report the warnings in category (all, none, error, or a specific category)
+
+**-d**, **--debug**
+> Don't remove the temporary files
 
 **--no-recursive**
-> Don't recurse into subdirectories
+> Don't rebuild files in subdirectories (configured packages)
 
 # WORKFLOW
 
@@ -70,3 +79,12 @@ Requires autoconf, automake, and related tools installed. Can be slow on large p
 # SEE ALSO
 
 [autoconf](/man/autoconf)(1), [automake](/man/automake)(1), [libtoolize](/man/libtoolize)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/autoconf/)```
+
+```[Documentation](https://www.gnu.org/software/autoconf/manual/)```
+
+<!-- verified: 2026-06-17 -->
+

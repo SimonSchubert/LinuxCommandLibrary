@@ -59,6 +59,15 @@ The service provides API-driven access through AWS SDKs, enabling automation of 
 **get-certificate**
 > Retrieve an issued certificate in PEM format
 
+**get-certificate-authority-certificate**
+> Retrieve the CA certificate and certificate chain
+
+**get-certificate-authority-csr**
+> Retrieve the CSR for a CA so it can be signed
+
+**import-certificate-authority-certificate**
+> Import a signed certificate to activate the CA
+
 **revoke-certificate**
 > Revoke a certificate and add it to the CRL
 
@@ -94,3 +103,11 @@ Operations have API rate limits; exceeding them returns **ThrottlingException** 
 # SEE ALSO
 
 [aws-acm](/man/aws-acm)(1), [aws-iot](/man/aws-iot)(1), [aws-cloudtrail](/man/aws-cloudtrail)(1), [aws](/man/aws)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/acm-pca/)```
+
+<!-- verified: 2026-06-17 -->

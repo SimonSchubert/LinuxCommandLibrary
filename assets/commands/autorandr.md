@@ -54,8 +54,23 @@ Profiles are identified by the EDID fingerprint of connected displays, allowing 
 **--remove** _name_
 > Remove a saved profile
 
+**--list**
+> List all saved profiles
+
+**--cycle**
+> Cycle through all detected profiles
+
+**--force**
+> Force reconfiguration even if the setup is already applied
+
+**--dry-run**
+> Print the changes that would be made without applying them
+
 **--batch**
 > Run in batch mode (no confirmation)
+
+**--match-edid**
+> Match displays by EDID rather than by output name
 
 **--skip-options** _options_
 > Skip certain xrandr options when comparing
@@ -76,3 +91,10 @@ Requires xrandr to be installed. Profile matching is based on connected display 
 # SEE ALSO
 
 [xrandr](/man/xrandr)(1), [arandr](/man/arandr)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/phillipberndt/autorandr)```
+
+<!-- verified: 2026-06-17 -->
+

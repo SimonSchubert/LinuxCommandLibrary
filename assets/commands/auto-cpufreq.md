@@ -24,9 +24,13 @@ Show **statistics**
 
 ```sudo auto-cpufreq --remove```
 
-**Force** specific governor
+**Force** a specific governor
 
 ```sudo auto-cpufreq --force=powersave```
+
+**Reset** a forced governor back to automatic behavior
+
+```sudo auto-cpufreq --force=reset```
 
 **Update** auto-cpufreq
 
@@ -61,18 +65,27 @@ Show **statistics**
 > Update auto-cpufreq to latest version
 
 **--force=GOVERNOR**
-> Force a specific governor (powersave, performance)
+> Force a specific governor (powersave, performance) or use reset to return to automatic mode
 
-**--config PATH**
-> Use custom configuration file
+**--turbo=MODE**
+> Force turbo boost behavior (always, never, auto)
+
+**--config=PATH**
+> Use a custom configuration file
 
 **--debug**
-> Enable debug output
+> Show debug information
+
+**--version**
+> Show the installed auto-cpufreq version
 
 # CONFIGURATION
 
 **/etc/auto-cpufreq.conf**
-> Main configuration file. Defines governor and turbo boost preferences per power source (charger/battery).
+> System-wide configuration file. Defines governor and turbo boost preferences per power source (charger/battery).
+
+**$XDG_CONFIG_HOME/auto-cpufreq/auto-cpufreq.conf**
+> Per-user configuration file, checked before the system-wide path. A file given with --config takes precedence over both.
 
 # CAVEATS
 
@@ -85,3 +98,9 @@ Using --install creates a systemd service for automatic operation. The --live an
 # SEE ALSO
 
 [cpupower](/man/cpupower)(1), [cpufreq-info](/man/cpufreq-info)(1), [tlp](/man/tlp)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/AdnanHodzic/auto-cpufreq)```
+
+<!-- verified: 2026-06-17 -->

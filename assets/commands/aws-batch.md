@@ -24,9 +24,17 @@ Run batch computing workloads on managed infrastructure
 
 ```aws batch register-job-definition --cli-input-json file://[job-definition.json]```
 
-**Cancel a running job** by ID
+**Create a job queue** linked to a compute environment
+
+```aws batch create-job-queue --job-queue-name [my-queue] --priority [1] --compute-environment-order order=1,computeEnvironment=[my-env]```
+
+**Cancel a pending or runnable job** by ID
 
 ```aws batch cancel-job --job-id [job-id] --reason "[cancellation reason]"```
+
+**Terminate a running job** by ID
+
+```aws batch terminate-job --job-id [job-id] --reason "[termination reason]"```
 
 # SYNOPSIS
 
@@ -84,3 +92,11 @@ AWS Batch was launched in **December 2016** as a managed batch processing servic
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ec2](/man/aws-ec2)(1), [aws-ecs](/man/aws-ecs)(1), [aws-lambda](/man/aws-lambda)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/batch/)```
+
+<!-- verified: 2026-06-17 -->

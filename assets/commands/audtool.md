@@ -26,7 +26,9 @@ Set **volume**
 
 # SYNOPSIS
 
-**audtool** _command_ [_arguments_]
+**audtool** [_instance_] _command_ [_parameter_ ...] ...
+
+Commands may optionally be prefixed with **--** (GNU long-option style); both **current-song** and **--current-song** work.
 
 # DESCRIPTION
 
@@ -63,6 +65,9 @@ The tool is useful for scripts, keybindings, and automation.
 **current-song-filename**
 > Print filename of current song
 
+**current-song-length**
+> Print length of the current song in M:SS format
+
 **set-volume** _n_
 > Set volume (0-100)
 
@@ -86,3 +91,11 @@ Requires Audacious to be running. Commands fail if player is not active. Some fe
 # SEE ALSO
 
 [audacious](/man/audacious)(1), [playerctl](/man/playerctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/audacious-media-player/audacious)```
+
+```[Homepage](https://audacious-media-player.org/)```
+
+<!-- verified: 2026-06-17 -->

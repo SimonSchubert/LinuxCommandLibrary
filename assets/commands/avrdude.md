@@ -45,19 +45,31 @@ The tool is essential for Arduino development and embedded systems work with AVR
 > Memory operation (flash:w:file.hex:i)
 
 **-b** _baudrate_
-> Override baud rate
+> Override RS-232 baud rate for serial connections
 
 **-B** _bitclock_
-> Bit clock period
+> JTAG/ISP bit clock period (microseconds or frequency)
+
+**-e**
+> Perform a chip erase, resetting flash and EEPROM to 0xFF
+
+**-D**
+> Disable the automatic chip erase before flash write
+
+**-V**
+> Skip automatic verification after writing memory
 
 **-v**
-> Verbose output
+> Verbose output (repeat for more detail)
 
 **-n**
-> Dry run (no writes)
+> Dry run, do not actually write to the device
 
 **-F**
-> Force (override signature check)
+> Force operation, override signature and init checks
+
+**-t**
+> Enter interactive terminal mode for manual memory operations
 
 # MEMORY OPERATIONS
 
@@ -93,4 +105,12 @@ Incorrect fuse settings can brick the device. Requires proper permissions for se
 
 # SEE ALSO
 
-[arduino-cli](/man/arduino-cli)(1), [platformio](/man/platformio)(1), [minicom](/man/minicom)(1)
+[arduino-cli](/man/arduino-cli)(1), [avr-gcc](/man/avr-gcc)(1), [platformio](/man/platformio)(1), [minicom](/man/minicom)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/avrdudes/avrdude)```
+
+```[Documentation](https://avrdudes.github.io/avrdude/)```
+
+<!-- verified: 2026-06-17 -->

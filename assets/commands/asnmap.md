@@ -20,7 +20,11 @@ Lookup by **organization**
 
 ```asnmap -org "[Google LLC]"```
 
-Output **CIDR ranges**
+Lookup targets from a **file**
+
+```asnmap -f [targets.txt]```
+
+Output **CIDR ranges** as JSON
 
 ```asnmap -a [AS15169] -json```
 
@@ -48,14 +52,26 @@ This is useful for reconnaissance, network mapping, and understanding organizati
 **-org** _name_
 > Search by organization name
 
-**-json**
-> JSON output
+**-f**, **-file** _file_
+> Read targets to lookup from a file
+
+**-j**, **-json**
+> Display output in JSON format
+
+**-c**, **-csv**
+> Display output in CSV format
+
+**-v6**
+> Display IPv6 CIDR ranges in CLI output
 
 **-silent**
-> Silent mode
+> Display silent output (results only)
 
-**-o** _file_
-> Output file
+**-o**, **-output** _file_
+> Write output to a file
+
+**-up**, **-update**
+> Update asnmap to the latest version
 
 # CAVEATS
 
@@ -67,4 +83,10 @@ Data comes from public sources and may not be current. Some organizations have m
 
 # SEE ALSO
 
-[whois](/man/whois)(1), [dig](/man/dig)(1), [nmap](/man/nmap)(1)
+[whois](/man/whois)(1), [dig](/man/dig)(1), [nmap](/man/nmap)(1), [subfinder](/man/subfinder)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/projectdiscovery/asnmap)```
+
+<!-- verified: 2026-06-17 -->

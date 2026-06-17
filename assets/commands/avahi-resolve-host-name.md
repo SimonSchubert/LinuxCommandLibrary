@@ -6,9 +6,21 @@ Resolve hostnames to IP addresses via mDNS
 
 This command is an alias of **avahi-resolve --name**.
 
+**Resolve** a hostname to an IP address
+
+```avahi-resolve-host-name [hostname.local]```
+
+**Resolve** to an IPv4 address only
+
+```avahi-resolve-host-name -4 [hostname.local]```
+
+**Resolve** to an IPv6 address only
+
+```avahi-resolve-host-name -6 [hostname.local]```
+
 # SYNOPSIS
 
-**avahi-resolve-host-name** _hostname_
+**avahi-resolve-host-name** [_OPTIONS_] _hostname_ ...
 
 # DESCRIPTION
 
@@ -16,4 +28,12 @@ This command is an alias of **avahi-resolve --name**.
 
 # SEE ALSO
 
-[avahi-resolve](/man/avahi-resolve)(1), [avahi-browse](/man/avahi-browse)(1)
+[avahi-resolve](/man/avahi-resolve)(1), [avahi-resolve-address](/man/avahi-resolve-address)(1), [avahi-browse](/man/avahi-browse)(1), [avahi-daemon](/man/avahi-daemon)(8)
+
+# RESOURCES
+
+```[Homepage](https://avahi.org/)```
+
+```[Source code](https://github.com/avahi/avahi)```
+
+<!-- verified: 2026-06-17 -->

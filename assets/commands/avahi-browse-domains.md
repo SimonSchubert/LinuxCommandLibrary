@@ -52,6 +52,9 @@ Discover mDNS browsing domains on the network
 **-r, --resolve**
 > Automatically resolve discovered services
 
+**-a, --all**
+> Browse for all service types registered on the LAN, not just the one specified
+
 **-f, --no-fail**
 > Wait for daemon if unavailable; reconnect if disconnected
 
@@ -88,3 +91,12 @@ Part of the **Avahi** suite, developed as a free software implementation of Appl
 # SEE ALSO
 
 [avahi-browse](/man/avahi-browse)(1), [avahi-publish](/man/avahi-publish)(1), [avahi-resolve](/man/avahi-resolve)(1), [avahi-daemon](/man/avahi-daemon)(8)
+
+# RESOURCES
+
+```[Homepage](https://avahi.org/)```
+
+```[Source code](https://github.com/avahi/avahi)```
+
+<!-- verified: 2026-06-17 -->
+

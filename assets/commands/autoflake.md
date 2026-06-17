@@ -4,19 +4,23 @@ Remove unused imports and variables from Python code
 
 # TLDR
 
-**Remove** unused imports from file
+**Preview** changes as a diff without modifying the file
 
-```autoflake --in-place --remove-unused-variables [file.py]```
+```autoflake [file.py]```
 
-Remove from **all Python files**
+**Remove** all unused imports in place
+
+```autoflake --in-place --remove-all-unused-imports [file.py]```
+
+Remove unused imports recursively from **all Python files**
 
 ```autoflake --in-place --remove-all-unused-imports -r [.]```
 
-**Check** without modifying
+**Check** without modifying and exit non-zero if changes are needed
 
 ```autoflake --check [file.py]```
 
-Remove unused imports and **variables**
+Remove unused imports and **variables** in place
 
 ```autoflake --in-place --remove-unused-variables --remove-all-unused-imports [file.py]```
 
@@ -32,29 +36,44 @@ The tool uses static analysis to identify unused elements and can modify files i
 
 # PARAMETERS
 
-**--in-place**
-> Modify files directly
+**-i**, **--in-place**
+> Modify files directly instead of printing a diff
+
+**-s**, **--stdout**
+> Write the result to standard output
 
 **--remove-unused-variables**
 > Remove unused variables
 
 **--remove-all-unused-imports**
-> Remove all unused imports
+> Remove all unused imports, not just standard-library ones
+
+**--ignore-init-module-imports**
+> Leave imports in __init__.py files untouched
+
+**--expand-star-imports**
+> Expand wildcard imports (from x import *) when names can be resolved
 
 **--remove-duplicate-keys**
-> Remove duplicate dictionary keys
+> Remove duplicate keys in dictionary literals
 
 **--check**
-> Return error if changes needed (CI mode)
+> Exit non-zero if changes are needed, without modifying files (CI mode)
+
+**--check-diff**
+> Like --check, but also print the diff of proposed changes
 
 **-r**, **--recursive**
 > Process directories recursively
 
-**--exclude** _pattern_
-> Exclude files matching pattern
+**-j** _n_, **--jobs** _n_
+> Number of parallel jobs (0 uses all CPU cores)
+
+**--exclude** _globs_
+> Exclude files and directories matching the comma-separated globs
 
 **--imports** _modules_
-> Additional modules to remove
+> Comma-separated list of additional modules whose unused imports should be removed
 
 # CAVEATS
 
@@ -67,3 +86,9 @@ May incorrectly identify imports used only in type hints. Does not handle all ed
 # SEE ALSO
 
 [black](/man/black)(1), [isort](/man/isort)(1), [flake8](/man/flake8)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/PyCQA/autoflake)```
+
+<!-- verified: 2026-06-17 -->

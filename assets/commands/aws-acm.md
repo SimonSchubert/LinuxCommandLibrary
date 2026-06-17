@@ -86,6 +86,12 @@ ACM integrates seamlessly with AWS services, allowing automatic deployment and r
 **resend-validation-email**
 > Resend domain validation email for email-based validation
 
+**revoke-certificate**
+> Revoke a private certificate issued through ACM-PCA
+
+**search-certificates**
+> Search and filter certificates by domain, key type, or other criteria
+
 **update-certificate-options**
 > Update certificate configuration like certificate transparency logging
 
@@ -103,3 +109,11 @@ Certificates managed by ACM cannot be exported unless they were imported or are 
 # SEE ALSO
 
 [aws-acm-pca](/man/aws-acm-pca)(1), [aws-elbv2](/man/aws-elbv2)(1), [aws-cloudfront](/man/aws-cloudfront)(1), [aws-apigateway](/man/aws-apigateway)(1), [aws](/man/aws)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/acm/)```
+
+<!-- verified: 2026-06-17 -->

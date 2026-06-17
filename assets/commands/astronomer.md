@@ -4,73 +4,86 @@ Deploy and manage Apache Airflow on the Astronomer platform
 
 # TLDR
 
-**Deploy** Airflow DAG
+> The CLI binary is invoked as **astro**.
 
-```astronomer deploy```
+**Initialize** a new Airflow project
 
-**Initialize** new Airflow project
+```astro dev init```
 
-```astronomer dev init```
+**Start** a local Airflow environment
 
-**Start** local Airflow environment
+```astro dev start```
 
-```astronomer dev start```
+**Stop** the local environment
 
-**Stop** local environment
+```astro dev stop```
 
-```astronomer dev stop```
+**Log in** to Astronomer
 
-**Login** to Astronomer
+```astro login```
 
-```astronomer auth login```
+**Deploy** code to a Deployment
+
+```astro deploy```
 
 # SYNOPSIS
 
-**astronomer** _command_ [_options_]
+**astro** _command_ [_subcommand_] [_options_]
 
 # DESCRIPTION
 
-**astronomer** is the CLI for Astronomer, a platform for deploying and managing Apache Airflow. It provides tools for local Airflow development, deployment to Astronomer Cloud or Enterprise, and DAG management.
+**astro** is the command-line interface for Astronomer, a platform for running Apache Airflow. It makes it easy to create, test, and deploy Airflow DAGs, providing tools for local Airflow development with Docker, deployment to Astro or Astronomer Software, and management of workspaces and deployments.
 
 The tool streamlines Airflow workflows, from local testing to production deployment.
 
 # PARAMETERS
 
 **dev init**
-> Initialize Airflow project
+> Create the files needed for a new Airflow project in the current directory.
 
 **dev start**
-> Start local Airflow
+> Build the project and start a local Airflow environment in Docker containers.
 
 **dev stop**
-> Stop local Airflow
+> Pause the Docker containers running the local Airflow environment.
 
 **dev restart**
-> Restart services
+> Stop, rebuild, and restart the local environment.
 
 **deploy**
-> Deploy to Astronomer
+> Deploy project code to a Deployment.
 
-**auth login**
-> Authenticate with Astronomer
+**login**
+> Authenticate to the Astro CLI.
+
+**logout**
+> Sign out of the Astro CLI.
 
 **workspace list**
-> List workspaces
+> List available workspaces.
 
 **deployment list**
-> List deployments
+> List deployments.
 
 **version**
-> Show version
+> Show the CLI version.
 
 # CAVEATS
 
-Requires Docker for local development. Deployment requires Astronomer account. Some features specific to Astronomer platform.
+Requires Docker for local development. Deployment requires an Astronomer account. Some commands are specific to either Astro (cloud) or Astronomer Software.
 
 # HISTORY
 
-The **Astronomer CLI** was developed by Astronomer.io to simplify Apache Airflow deployment and management, released alongside their platform.
+The **Astro CLI** is developed by Astronomer (astronomer/astro-cli) to simplify Apache Airflow deployment and management. The single **astro** executable was introduced with version 1.0 to provide a shared framework across Astronomer products.
 
 # SEE ALSO
 
 [airflow](/man/airflow)(1), [docker](/man/docker)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/astronomer/astro-cli)```
+
+```[Documentation](https://www.astronomer.io/docs/astro/cli/overview)```
+
+<!-- verified: 2026-06-17 -->

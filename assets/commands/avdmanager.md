@@ -60,16 +60,25 @@ Create and manage Android Virtual Devices
 > Name for the AVD.
 
 **-k**, **--package** _path_
-> System image package path.
+> System image package path (e.g. "system-images;android-34;google_apis;x86_64").
 
 **-d**, **--device** _id_
 > Device definition to use.
 
-**-c**, **--sdcard** _size_
-> Size of SD card (e.g., 512M).
+**-g**, **--tag** _tag_
+> System image tag to use (e.g. google_apis, default, google_apis_playstore).
+
+**-b**, **--abi** _abi_
+> ABI to use for the AVD (e.g. x86_64, arm64-v8a). Auto-selected when the package has only one ABI.
+
+**-c**, **--sdcard** _value_
+> Path to a shared SD card image, or size of a new SD card (e.g. 512M).
 
 **-p**, **--path** _directory_
 > Custom location for AVD files.
+
+**-r**, **--rename** _name_
+> New name when moving an AVD (used with **move avd**).
 
 **-f**, **--force**
 > Force creation, overwriting existing AVD.
@@ -93,3 +102,9 @@ Creating an AVD requires the corresponding system image to be installed via sdkm
 # SEE ALSO
 
 [sdkmanager](/man/sdkmanager)(1), [emulator](/man/emulator)(1), [adb](/man/adb)(1)
+
+# RESOURCES
+
+```[Documentation](https://developer.android.com/tools/avdmanager)```
+
+<!-- verified: 2026-06-17 -->

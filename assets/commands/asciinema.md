@@ -4,7 +4,7 @@ Record and replay terminal sessions
 
 # TLDR
 
-**Record** terminal session
+**Record** terminal session (filename required in 3.0+)
 
 ```asciinema rec [recording.cast]```
 
@@ -24,9 +24,13 @@ Record with **idle time limit**
 
 ```asciinema rec --idle-time-limit=[2] [recording.cast]```
 
+**Live stream** a terminal session
+
+```asciinema stream -l```
+
 # SYNOPSIS
 
-**asciinema** _rec_|_play_|_upload_|_auth_ [_options_] [_file_]
+**asciinema** _rec_|_play_|_cat_|_convert_|_upload_|_stream_|_session_|_auth_ [_options_] [_file_]
 
 # DESCRIPTION
 
@@ -36,17 +40,29 @@ Unlike video screen recording, asciinema recordings are text-based, allowing cop
 
 # PARAMETERS
 
-**rec** [_file_]
-> Record terminal session
+**rec** _file_
+> Record terminal session. In 3.0+ the filename is required, and rec no longer uploads (use the upload command).
 
 **play** _file_
 > Playback recorded session
 
+**cat** _file..._
+> Concatenate two or more recordings into one (3.0+).
+
+**convert** _input_ _output_
+> Convert a recording to another asciicast format (3.0+).
+
 **upload** _file_
 > Upload recording to asciinema.org
 
+**stream**
+> Live stream the terminal session (3.0+).
+
+**session**
+> Generic session that can record, stream, or both (3.0+).
+
 **auth**
-> Authenticate with asciinema.org
+> Authenticate this install with your asciinema server account
 
 **-t** _title_, **--title** _title_
 > Recording title
@@ -68,8 +84,8 @@ Unlike video screen recording, asciinema recordings are text-based, allowing cop
 
 # CONFIGURATION
 
-**~/.config/asciinema/config**
-> User configuration file for default recording settings, API URL, and authentication token.
+**~/.config/asciinema/config.toml**
+> User configuration file (TOML) in CLI 3.0+ for default recording settings, server URL, and authentication. Earlier 2.x releases used **~/.config/asciinema/config**.
 
 # CAVEATS
 
@@ -82,3 +98,13 @@ Recordings capture exactly what appears in terminal, including sensitive data. R
 # SEE ALSO
 
 [script](/man/script)(1), [ttyrec](/man/ttyrec)(1), [agg](/man/agg)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/asciinema/asciinema)```
+
+```[Homepage](https://asciinema.org)```
+
+```[Documentation](https://docs.asciinema.org)```
+
+<!-- verified: 2026-06-17 -->

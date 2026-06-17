@@ -24,6 +24,10 @@ Automatically scale EC2 instance groups based on demand
 
 ```aws autoscaling describe-auto-scaling-instances```
 
+**Roll out a new launch template** version with an instance refresh
+
+```aws autoscaling start-instance-refresh --auto-scaling-group-name [my-asg]```
+
 **Attach a load balancer** target group
 
 ```aws autoscaling attach-load-balancer-target-groups --auto-scaling-group-name [my-asg] --target-group-arns [arn:aws:elasticloadbalancing:...]```
@@ -55,6 +59,12 @@ Automatically scale EC2 instance groups based on demand
 
 **describe-scaling-activities**
 > View scaling activity history
+
+**start-instance-refresh**
+> Replace instances to roll out a new launch template version
+
+**put-scheduled-update-group-action**
+> Create a scheduled scaling action
 
 **set-desired-capacity**
 > Set the desired number of instances
@@ -113,3 +123,11 @@ Launch templates are recommended over legacy launch configurations. Deleting a g
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ec2](/man/aws-ec2)(1), [aws-elbv2](/man/aws-elbv2)(1), [aws-cloudwatch](/man/aws-cloudwatch)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/)```
+
+<!-- verified: 2026-06-17 -->

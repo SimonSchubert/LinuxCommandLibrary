@@ -79,3 +79,13 @@ Requires PHP 5.6+. Less widely adopted than PHPUnit. Some IDE integrations may b
 # SEE ALSO
 
 [phpunit](/man/phpunit)(1), [phpspec](/man/phpspec)(1), [behat](/man/behat)(1)
+
+# RESOURCES
+
+```[Homepage](https://atoum.org/)```
+
+```[Source code](https://github.com/atoum/atoum)```
+
+```[Documentation](https://docs.atoum.org/)```
+
+<!-- verified: 2026-06-17 -->

@@ -58,8 +58,17 @@ Cost Explorer provides insights into spending patterns, forecasting, anomaly det
 **get-rightsizing-recommendation**
 > Get EC2 instance rightsizing suggestions
 
+**get-dimension-values**
+> List available values for a filter dimension (for example SERVICE)
+
+**get-usage-forecast**
+> Forecast usage quantity for a future period
+
 **create-anomaly-monitor**
 > Set up automatic anomaly detection monitoring
+
+**create-anomaly-subscription**
+> Subscribe to alerts for a detected anomaly monitor
 
 **create-cost-category-definition**
 > Define custom cost categorization rules
@@ -74,4 +83,12 @@ AWS Cost Explorer launched in **2017** as a visualization tool in the AWS Consol
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [aws-budgets](/man/aws-budgets)(1), [aws-pricing](/man/aws-pricing)(1)
+[aws](/man/aws)(1), [aws-budgets](/man/aws-budgets)(1), [aws-pricing](/man/aws-pricing)(1), [aws-cur](/man/aws-cur)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/ce/)```
+
+<!-- verified: 2026-06-17 -->

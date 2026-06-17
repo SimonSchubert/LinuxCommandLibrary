@@ -30,6 +30,19 @@ The tool is useful for reconnaissance in security assessments and for discoverin
 **domain**
 > Target domain to investigate
 
+# CONFIGURATION
+
+Some data sources need API credentials, supplied through environment variables:
+
+**FB_APP_ID**, **FB_APP_SECRET**
+> Facebook application credentials for the Facebook certificate transparency source.
+
+**VT_API_KEY**
+> VirusTotal API key.
+
+**SPYSE_API_TOKEN**
+> Spyse (findsubdomains) API token.
+
 # CAVEATS
 
 Passive reconnaissance only; generates no traffic to target. Results depend on public data sources. May include old or inactive domains.
@@ -41,3 +54,9 @@ Passive reconnaissance only; generates no traffic to target. Results depend on p
 # SEE ALSO
 
 [amass](/man/amass)(1), [subfinder](/man/subfinder)(1), [findomain](/man/findomain)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tomnomnom/assetfinder)```
+
+<!-- verified: 2026-06-17 -->

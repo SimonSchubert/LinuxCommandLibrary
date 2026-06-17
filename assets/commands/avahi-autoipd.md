@@ -88,7 +88,7 @@ The daemon responds to signals: **SIGINT** and **SIGTERM** trigger shutdown, whi
 
 # CAVEATS
 
-Link-local addresses (**169.254.0.0/16**) only enable communication within the same network segment—no routing to other networks. Won't assign addresses if a routable IP already exists unless **--force-bind** is used.
+Link-local addresses (**169.254.0.0/16**) only enable communication within the same network segment, with no routing to other networks. Won't assign addresses if a routable IP already exists unless **--force-bind** is used.
 
 # HISTORY
 
@@ -97,3 +97,12 @@ Part of the **Avahi** project, developed as a free software implementation of Ap
 # SEE ALSO
 
 [avahi-daemon](/man/avahi-daemon)(8), [dhclient](/man/dhclient)(8), [ip](/man/ip)(8), [ifconfig](/man/ifconfig)(8)
+
+# RESOURCES
+
+```[Homepage](https://avahi.org/)```
+
+```[Source code](https://github.com/avahi/avahi)```
+
+<!-- verified: 2026-06-17 -->
+

@@ -26,7 +26,11 @@ Centrally manage backups across AWS services
 
 **Start** a restore job from a recovery point
 
-```aws backup start-restore-job --recovery-point-arn [arn] --iam-role-arn [role_arn] --metadata [restore_metadata]```
+```aws backup start-restore-job --recovery-point-arn [arn] --iam-role-arn [role_arn] --metadata file://[metadata.json]```
+
+**Describe** the status of a backup job
+
+```aws backup describe-backup-job --backup-job-id [job_id]```
 
 # SYNOPSIS
 
@@ -85,6 +89,12 @@ The service integrates with **AWS Organizations** for centralized backup policie
 **list-backup-jobs**
 > View backup job history and status
 
+**describe-backup-job**
+> Get the status and details of a backup job
+
+**list-protected-resources**
+> List resources that are backed up by AWS Backup
+
 **start-restore-job**
 > Restore a resource from a recovery point
 
@@ -126,3 +136,11 @@ IAM roles with appropriate permissions are required for backup and restore opera
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-rds](/man/aws-rds)(1), [aws-dynamodb](/man/aws-dynamodb)(1), [aws-efs](/man/aws-efs)(1), [aws](/man/aws)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/backup/)```
+
+<!-- verified: 2026-06-17 -->

@@ -8,17 +8,17 @@ List pending jobs in the at queue
 
 ```atq```
 
-List jobs for **specific user**
-
-```atq -u [username]```
-
-Show **queue** details
+List jobs in a **specific queue**
 
 ```atq -q [a]```
 
+Custom **time format** for listed jobs
+
+```atq -o [%Y-%m-%d %H:%M]```
+
 # SYNOPSIS
 
-**atq** [_-q queue_] [_-u user_]
+**atq** [_-V_] [_-q queue_] [_-o fmt_]
 
 # DESCRIPTION
 
@@ -29,22 +29,21 @@ This is equivalent to **at -l**.
 # PARAMETERS
 
 **-q** _queue_
-> Show jobs from specific queue (a-z, A-Z)
+> Show only jobs in the specified queue. A queue designation consists of a single letter (a-z or A-Z). The default queue for **at** jobs is **a** and for **batch** jobs is **b**.
 
-**-u** _user_
-> Show jobs for specific user (root only)
+**-o** _fmt_
+> Use the specified **strftime**-style format for the date and time shown in the listing.
+
+**-V**
+> Print the version number to standard error and exit.
 
 # OUTPUT FORMAT
 
-Each line shows:
-- Job number
-- Execution date and time
-- Queue letter
-- Username
+Each line shows the job number, the scheduled execution date and time, the queue letter, and the owning username.
 
 # CAVEATS
 
-Non-root users can only see their own jobs. Jobs are lost if atd daemon is not running. Past jobs that couldn't run are shown.
+Non-root users can only see their own jobs; the superuser sees everyone's jobs. Jobs do not run while the **atd** daemon is not running, and past jobs that could not run are still listed until removed.
 
 # HISTORY
 
@@ -53,3 +52,9 @@ Non-root users can only see their own jobs. Jobs are lost if atd daemon is not r
 # SEE ALSO
 
 [at](/man/at)(1), [atrm](/man/atrm)(1), [atd](/man/atd)(8), [cron](/man/cron)(8)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/at)```
+
+<!-- verified: 2026-06-17 -->

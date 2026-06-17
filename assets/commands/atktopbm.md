@@ -34,3 +34,11 @@ Part of Netpbm, supporting the Andrew Toolkit format which was developed at Carn
 # SEE ALSO
 
 [pbmtoatk](/man/pbmtoatk)(1), [pnmtopng](/man/pnmtopng)(1)
+
+# RESOURCES
+
+```[Homepage](https://netpbm.sourceforge.net/)```
+
+```[Documentation](https://netpbm.sourceforge.net/doc/atktopbm.html)```
+
+<!-- verified: 2026-06-17 -->

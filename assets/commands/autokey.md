@@ -12,17 +12,17 @@ Desktop text expansion and automation utility
 
 ```autokey-qt```
 
-**Start minimized** to system tray
-
-```autokey-gtk --minimized```
-
 **Start with verbose logging**
 
 ```autokey-gtk --verbose```
 
-**Show configuration** window
+**Show configuration** window on startup
 
 ```autokey-gtk --configure```
+
+**Log mouse button events** too
+
+```autokey-gtk --mouse```
 
 # SYNOPSIS
 
@@ -33,16 +33,19 @@ Desktop text expansion and automation utility
 # PARAMETERS
 
 **-c**, **--configure**
-> Open the configuration window on startup
+> Show the configuration window on startup, even if not the first run.
 
 **-l**, **--verbose**
-> Enable verbose debug logging
+> Enable verbose (debug) logging.
 
-**-m**, **--minimized**
-> Start minimized to system tray
+**-m**, **--mouse**
+> Like --verbose but also logs mouse button events.
+
+**-V**, **--version**
+> Display version information and exit.
 
 **-h**, **--help**
-> Display help message
+> Display help message and exit.
 
 # DESCRIPTION
 
@@ -70,3 +73,11 @@ Requires X11; Wayland is not currently supported. Needs a system tray or appindi
 # SEE ALSO
 
 [xdotool](/man/xdotool)(1), [xclip](/man/xclip)(1), [espanso](/man/espanso)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/autokey/autokey)```
+
+```[Documentation](https://autokey.github.io/)```
+
+<!-- verified: 2026-06-17 -->
