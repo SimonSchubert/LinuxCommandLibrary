@@ -8075,6 +8075,7 @@ volta.md
 vortix.md
 vosk.md
 vpnc.md
+vpod.md
 vrms.md
 vsce.md
 vscli.md
@@ -8258,6 +8259,7 @@ xar.md
 xargs.md
 xauth.md
 xbacklight.md
+xbanish.md
 xbindkeys.md
 xbmtopbm.md
 xboxdrv.md
