@@ -91,3 +91,13 @@ AWS IAM launched in **May 2010** as the access control system for AWS. Roles wer
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-sts](/man/aws-sts)(1), [aws-organizations](/man/aws-organizations)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/iam/index.html)```
+
+<!-- verified: 2026-06-18 -->

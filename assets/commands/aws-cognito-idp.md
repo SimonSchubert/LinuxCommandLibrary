@@ -12,11 +12,19 @@ Manage user pools for authentication and user directories.
 
 ```aws cognito-idp admin-create-user --user-pool-id [pool-id] --username [user@example.com]```
 
+**Self-register a user** (client-side sign-up)
+
+```aws cognito-idp sign-up --client-id [client-id] --username [user@example.com] --password [Password123!]```
+
 **List all users** in a user pool
 
 ```aws cognito-idp list-users --user-pool-id [pool-id]```
 
-**Initiate authentication** for a user
+**Authenticate a user** (client-side, no admin credentials)
+
+```aws cognito-idp initiate-auth --client-id [client-id] --auth-flow USER_PASSWORD_AUTH --auth-parameters USERNAME=[username],PASSWORD=[password]```
+
+**Authenticate a user** server-side as an administrator
 
 ```aws cognito-idp admin-initiate-auth --user-pool-id [pool-id] --client-id [client-id] --auth-flow ADMIN_USER_PASSWORD_AUTH --auth-parameters USERNAME=[username],PASSWORD=[password]```
 
@@ -50,14 +58,20 @@ Cognito User Pools provides features including multi-factor authentication, pass
 **admin-create-user**
 > Create a user as an administrator
 
+**sign-up**
+> Register a user from the client side (self sign-up)
+
 **admin-delete-user**
 > Delete a user from the pool
 
 **list-users**
 > List users in a user pool
 
+**initiate-auth**
+> Start client-side authentication (USER_PASSWORD_AUTH, USER_SRP_AUTH, REFRESH_TOKEN_AUTH, CUSTOM_AUTH)
+
 **admin-initiate-auth**
-> Start server-side authentication
+> Start server-side authentication (ADMIN_USER_PASSWORD_AUTH)
 
 **admin-respond-to-auth-challenge**
 > Respond to authentication challenges (MFA, new password)
@@ -85,3 +99,13 @@ Amazon Cognito User Pools launched in **July 2016** as a managed user directory.
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-cognito-identity](/man/aws-cognito-identity)(1), [aws-iam](/man/aws-iam)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/cognito-idp/index.html)```
+
+<!-- verified: 2026-06-18 -->

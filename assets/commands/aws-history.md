@@ -12,9 +12,9 @@ Review and inspect past CLI command executions.
 
 ```aws history show [command-id]```
 
-**Enable CLI history** in AWS config file
+**Enable CLI history** recording
 
-```echo "[default]\ncli_history = enabled" >> ~/.aws/config```
+```aws configure set cli_history enabled```
 
 # SYNOPSIS
 
@@ -59,3 +59,13 @@ The **aws history** command was introduced in **AWS CLI version 2** to provide b
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-configure](/man/aws-configure)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/history/index.html)```
+
+<!-- verified: 2026-06-18 -->

@@ -109,3 +109,13 @@ Domain names must be lowercase and unique within a region. Configuration changes
 # SEE ALSO
 
 [aws](/man/aws)(1), [curl](/man/curl)(1), [aws-logs](/man/aws-logs)(1), [aws-firehose](/man/aws-firehose)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/opensearch/index.html)```
+
+<!-- verified: 2026-06-18 -->

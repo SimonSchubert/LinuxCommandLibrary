@@ -6,7 +6,7 @@ Manage cloud-based development environments.
 
 **Create a new Cloud9 EC2 environment** with a t2.micro instance
 
-```aws cloud9 create-environment-ec2 --name [my-env] --instance-type t2.micro```
+```aws cloud9 create-environment-ec2 --name [my-env] --instance-type t2.micro --image-id amazonlinux-2023-x86_64```
 
 **List all Cloud9 environments** in the account
 
@@ -66,7 +66,7 @@ Cloud9 environments run on EC2 instances and support collaborative development w
 
 # CAVEATS
 
-AWS Cloud9 is no longer available to new customers as of **2024**. Existing customers can continue using the service. Environments incur EC2 costs even when the IDE is not actively used unless auto-hibernation is configured.
+AWS Cloud9 is no longer available to new customers as of **2024**; AWS recommends migrating to AWS IDE Toolkits or AWS CloudShell. Existing customers can continue using the service. **create-environment-ec2** now requires **--image-id** (for example amazonlinux-2023-x86_64, ubuntu-22.04-x86_64; older AMIs such as ubuntu-18.04 are deprecated). Environments incur EC2 costs even when the IDE is not actively used unless auto-hibernation via **--automatic-stop-time-minutes** is configured.
 
 # HISTORY
 
@@ -75,3 +75,13 @@ AWS Cloud9 was acquired by Amazon in **2016** after being founded as an independ
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ec2](/man/aws-ec2)(1), [aws-codecommit](/man/aws-codecommit)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/cloud9/index.html)```
+
+<!-- verified: 2026-06-18 -->

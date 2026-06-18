@@ -88,3 +88,13 @@ Amazon EKS launched in **June 2018** as a managed Kubernetes service. Fargate su
 # SEE ALSO
 
 [aws](/man/aws)(1), [kubectl](/man/kubectl)(1), [aws-ecr](/man/aws-ecr)(1), [eksctl](/man/eksctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/eks/index.html)```
+
+<!-- verified: 2026-06-18 -->

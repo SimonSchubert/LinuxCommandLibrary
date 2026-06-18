@@ -20,6 +20,10 @@ Manage Azure App Configuration stores
 
 ```az appconfig kv set --name [MyAppConfig] --key [myKey] --value [myValue]```
 
+**List key-values** in the store
+
+```az appconfig kv list --name [MyAppConfig]```
+
 **Import configuration** from a file
 
 ```az appconfig kv import --name [MyAppConfig] --source file --path [config.json] --format json```
@@ -75,7 +79,7 @@ Manage Azure App Configuration stores
 
 **az appconfig** manages Azure App Configuration stores, which provide a service to centrally manage application settings and feature flags. App Configuration helps implement the Twelve-Factor App methodology by separating configuration from code.
 
-Available SKUs include Developer, Standard, and Premium, with Premium offering additional features like replicas.
+Available SKUs are Free, Developer, Standard, and Premium (default is Standard), with Premium offering additional features like geo-replication via replicas.
 
 # CAVEATS
 
@@ -84,3 +88,11 @@ Requires Azure CLI to be installed and authenticated with **az login**. Some fea
 # SEE ALSO
 
 [az](/man/az)(1), [az-config](/man/az-config)(1), [az-advisor](/man/az-advisor)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Azure/azure-cli)```
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/appconfig)```
+
+<!-- verified: 2026-06-18 -->

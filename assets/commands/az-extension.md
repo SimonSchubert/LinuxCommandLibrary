@@ -86,8 +86,17 @@ Extensions are installed per-user and can have different versions than what is b
 **--upgrade**
 > Update if already installed.
 
+**--allow-preview** _{false, true}_
+> Include preview packages for installation, if they exist.
+
+**--system**
+> Install into a system directory shared by all users instead of the per-user directory.
+
 **--pip-extra-index-urls** _urls_
-> Additional PyPI index URLs.
+> Space-separated extra package index URLs (PEP 503 compliant).
+
+**--pip-proxy** _proxy_
+> Proxy for pip to use for extension dependencies, as [user:passwd@]proxy.server:port.
 
 # CAVEATS
 
@@ -100,3 +109,11 @@ The Azure CLI extension system was introduced with **Azure CLI 2.0** in **2017**
 # SEE ALSO
 
 [az](/man/az)(1), [pip](/man/pip)(1), [az-config](/man/az-config)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Azure/azure-cli)```
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/extension)```
+
+<!-- verified: 2026-06-18 -->

@@ -4,11 +4,11 @@ Query and stream CloudWatch log groups from the terminal.
 
 # TLDR
 
-**Stream** CloudWatch logs
+**Stream** CloudWatch logs in real-time
 
 ```awslogs get [/aws/lambda/my-function] --watch```
 
-Get logs from **specific time**
+Get logs from a **specific time** range
 
 ```awslogs get [/aws/lambda/my-function] --start='[2h ago]'```
 
@@ -16,11 +16,11 @@ Get logs from **specific time**
 
 ```awslogs get [/aws/lambda/my-function] --filter-pattern '[ERROR]'```
 
-**List** log groups
+List available **log groups**
 
 ```awslogs groups```
 
-**List** log streams
+List **log streams** within a group
 
 ```awslogs streams [/aws/lambda/my-function]```
 
@@ -36,35 +36,50 @@ The tool offers real-time log streaming and time-based filtering without using t
 
 # PARAMETERS
 
-**get** _log-group_
-> Fetch logs from log group
+**get** _log-group_ [_stream-expression_]
+> Fetch logs matching the optional stream expression from a log group.
 
 **groups**
-> List available log groups
+> List available log groups.
 
 **streams** _log-group_
-> List streams in log group
+> List streams within a log group.
 
 **--watch**, **-w**
-> Stream logs in real-time
+> Watch logs as they are created (stream in real-time).
 
-**--start=**_time_
-> Start time (e.g., '2h ago', '2023-01-01')
+**--watch-interval**, **-i** _seconds_
+> Interval in seconds to poll for new log events with --watch.
 
-**--end=**_time_
-> End time
+**--start** _time_, **-s** _time_
+> Start time (e.g., '2h ago', '2023-01-01').
 
-**--filter-pattern=**_pattern_
-> CloudWatch filter pattern
+**--end** _time_, **-e** _time_
+> End time.
 
-**--profile=**_profile_
-> AWS profile to use
+**--filter-pattern** _pattern_, **-f** _pattern_
+> CloudWatch Logs filter pattern.
 
-**--region=**_region_
-> AWS region
+**--query** _query_, **-q** _query_
+> JMESPath-style query to extract fields from JSON log events.
 
-**--no-group**
-> Don't group streams together
+**--timestamp**
+> Print the timestamp of each event.
+
+**--ingestion-time**
+> Print the ingestion time of each event.
+
+**--profile** _profile_
+> AWS CLI profile to use.
+
+**--aws-region** _region_
+> AWS region (or set the AWS_REGION environment variable).
+
+**--no-group**, **-G**
+> Do not display the log group name.
+
+**--no-stream**, **-S**
+> Do not display the log stream name.
 
 # TIME SPECIFICATIONS
 
@@ -85,3 +100,9 @@ Requires AWS credentials configured. Large log queries may be slow. CloudWatch L
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-logs](/man/aws-logs)(1), [tail](/man/tail)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/jorgebastida/awslogs)```
+
+<!-- verified: 2026-06-18 -->

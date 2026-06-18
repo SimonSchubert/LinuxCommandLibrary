@@ -44,3 +44,13 @@ S3 static website hosting was introduced in **February 2011**, enabling buckets 
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3api](/man/aws-s3api)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/s3/website.html)```
+
+<!-- verified: 2026-06-18 -->

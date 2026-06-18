@@ -24,6 +24,14 @@ High-level S3 file management commands
 
 ```aws s3 sync [./local-dir] s3://[bucket-name]/[prefix/]```
 
+**Move a file** to S3 (uploads then deletes the source)
+
+```aws s3 mv [file.txt] s3://[bucket-name]/```
+
+**Generate a time-limited download URL**
+
+```aws s3 presign s3://[bucket-name]/[file.txt] --expires-in [3600]```
+
 **Create a new bucket**
 
 ```aws s3 mb s3://[bucket-name]```
@@ -97,6 +105,12 @@ For low-level S3 API access with full control over request parameters, use **aws
 **--storage-class** _value_
 > Specify storage class (STANDARD, REDUCED_REDUNDANCY, GLACIER, etc.)
 
+**--sse** _value_
+> Enable server-side encryption (AES256 or aws:kms)
+
+**--delete**
+> With sync, delete destination files that no longer exist in the source
+
 # CAVEATS
 
 The **sync** command only copies new or modified files by default; use **--delete** to remove files in the destination that don't exist in the source. Pattern matching with **--exclude** and **--include** is order-dependent; filters are applied in the order specified. The **rb** command fails on non-empty buckets unless **--force** is used.
@@ -108,3 +122,13 @@ Amazon S3 (Simple Storage Service) launched in **March 2006** as one of AWS's fi
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-s3api](/man/aws-s3api)(1), [aws-s3-cp](/man/aws-s3-cp)(1), [aws-s3-sync](/man/aws-s3-sync)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/s3/index.html)```
+
+<!-- verified: 2026-06-18 -->

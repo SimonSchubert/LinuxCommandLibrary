@@ -20,9 +20,9 @@ Manage Simple Queue Service queues and messages.
 
 ```aws sqs send-message --queue-url [queue-url] --message-body "[message content]"```
 
-**Receive messages** from a queue
+**Receive messages** with long polling (waits up to 20s)
 
-```aws sqs receive-message --queue-url [queue-url]```
+```aws sqs receive-message --queue-url [queue-url] --max-number-of-messages [10] --wait-time-seconds [20]```
 
 **Delete a message** after processing
 
@@ -74,3 +74,13 @@ Amazon SQS launched in **July 2006** as one of AWS's first services, predating S
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-sns](/man/aws-sns)(1), [aws-lambda](/man/aws-lambda)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/sqs/index.html)```
+
+<!-- verified: 2026-06-18 -->

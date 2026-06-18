@@ -84,3 +84,13 @@ The **--delete** option removes files from the destination that don't exist in t
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3-cp](/man/aws-s3-cp)(1), [rsync](/man/rsync)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html)```
+
+<!-- verified: 2026-06-18 -->

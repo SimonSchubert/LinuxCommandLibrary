@@ -73,3 +73,13 @@ Amazon SES launched in **January 2011** as AWS's email sending service, providin
 # SEE ALSO
 
 [aws](/man/aws)(1), [sendmail](/man/sendmail)(1), [mail](/man/mail)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/ses/index.html)```
+
+<!-- verified: 2026-06-18 -->

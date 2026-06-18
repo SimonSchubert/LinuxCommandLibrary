@@ -16,6 +16,10 @@ Manage serverless ETL jobs and data catalog
 
 ```aws glue get-databases```
 
+**List tables** in a database
+
+```aws glue get-tables --database-name [my-database]```
+
 **Get table schema** from the catalog
 
 ```aws glue get-table --database-name [my-database] --name [my-table]```
@@ -43,6 +47,12 @@ Manage serverless ETL jobs and data catalog
 Key components include the **Data Catalog** (central metadata repository), **Crawlers** (automatic schema discovery), **Jobs** (ETL scripts in Python or Scala), and **Triggers** (job orchestration). Glue integrates with S3, Redshift, RDS, and other data stores.
 
 # COMMANDS
+
+**create-database**
+> Create a database in the Data Catalog
+
+**create-table**
+> Register a table definition in the catalog
 
 **create-crawler**
 > Create a crawler for schema discovery
@@ -85,3 +95,13 @@ AWS Glue launched in **August 2017** as a serverless ETL service. Glue Studio fo
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-athena](/man/aws-athena)(1), [aws-s3](/man/aws-s3)(1), [aws-redshift](/man/aws-redshift)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/glue/index.html)```
+
+<!-- verified: 2026-06-18 -->

@@ -20,6 +20,10 @@ Deploy Azure resources using ARM templates and Bicep
 
 ```az deployment group validate --resource-group [rg_name] --template-file [template.json]```
 
+**Preview changes** with what-if before deploying
+
+```az deployment group what-if --resource-group [rg_name] --template-file [template.json]```
+
 **Show deployment details**
 
 ```az deployment group show --resource-group [rg_name] --name [deployment_name]```
@@ -98,8 +102,11 @@ Deployment modes include incremental (add/update resources) and complete (remove
 **--location** _region_
 > Required for subscription-scope deployments.
 
-**--confirm-with-what-if**
-> Show what-if and prompt before deploying.
+**--confirm-with-what-if**, **-c**
+> Show what-if results and prompt for confirmation before deploying.
+
+**--no-wait**
+> Do not wait for the long-running deployment to finish.
 
 # CAVEATS
 
@@ -112,3 +119,11 @@ Complete mode deletes resources not in the template; use with caution. Deploymen
 # SEE ALSO
 
 [az](/man/az)(1), [az-group](/man/az-group)(1), [az-bicep](/man/az-bicep)(1), [az-resource](/man/az-resource)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Azure/azure-cli)```
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/deployment)```
+
+<!-- verified: 2026-06-18 -->

@@ -4,9 +4,9 @@ Manage private package artifact repositories.
 
 # TLDR
 
-**Login to a CodeArtifact repository** for npm
+**Login to a CodeArtifact repository** for a package manager (tool: npm, pip, twine, dotnet, nuget, swift)
 
-```aws codeartifact login --tool npm --domain [my-domain] --repository [my-repo]```
+```aws codeartifact login --tool [npm] --domain [my-domain] --repository [my-repo]```
 
 **Get an authorization token** for a domain
 
@@ -26,7 +26,7 @@ Manage private package artifact repositories.
 
 **Get repository endpoint** for a specific format
 
-```aws codeartifact get-repository-endpoint --domain [my-domain] --repository [my-repo] --format [npm|pypi|maven|nuget]```
+```aws codeartifact get-repository-endpoint --domain [my-domain] --repository [my-repo] --format [npm|pypi|maven|nuget|cargo|ruby|swift|generic]```
 
 # SYNOPSIS
 
@@ -52,8 +52,14 @@ CodeArtifact organizes packages into **repositories** within **domains**. Domain
 **create-repository**
 > Create a repository within a domain
 
+**list-repositories**
+> List repositories across the account or domain
+
 **list-packages**
 > List packages in a repository
+
+**publish-package-version**
+> Publish a generic package version to a repository
 
 **describe-package-version**
 > Get details about a specific package version
@@ -75,3 +81,13 @@ AWS CodeArtifact was launched in **June 2020** as a managed artifact repository 
 # SEE ALSO
 
 [aws](/man/aws)(1), [npm](/man/npm)(1), [pip](/man/pip)(1), [maven](/man/maven)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/codeartifact/index.html)```
+
+<!-- verified: 2026-06-18 -->

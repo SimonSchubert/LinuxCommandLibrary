@@ -60,6 +60,12 @@ Manage Azure CLI configuration settings
 **param-persist off**
 > Disable parameter persistence.
 
+**param-persist show**
+> Show parameter persistence data.
+
+**param-persist delete**
+> Delete parameter persistence data.
+
 # PARAMETERS
 
 **--local**
@@ -81,8 +87,16 @@ The default configuration file is stored at ~/.azure/config.
 
 # CAVEATS
 
-This is an experimental command group available since Azure CLI 2.10.0. Local configurations are stored in the current working directory.
+This command group is marked **experimental** and under development (not deprecated); behavior and options may change. It has been available since Azure CLI 2.10.0. Local configurations are stored in the current working directory and take precedence over the global config.
 
 # SEE ALSO
 
 [az](/man/az)(1), [az-appconfig](/man/az-appconfig)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Azure/azure-cli)```
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/config)```
+
+<!-- verified: 2026-06-18 -->

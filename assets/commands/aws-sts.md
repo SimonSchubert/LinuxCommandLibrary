@@ -86,3 +86,13 @@ AWS STS has been available since the launch of IAM in **May 2011**, enabling tem
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-iam](/man/aws-iam)(1), [aws-sso](/man/aws-sso)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/sts/index.html)```
+
+<!-- verified: 2026-06-18 -->

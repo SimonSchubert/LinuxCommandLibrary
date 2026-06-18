@@ -109,3 +109,13 @@ Must remove all targets before deleting a rule. Schedule expressions use UTC tim
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-lambda](/man/aws-lambda)(1), [aws-sns](/man/aws-sns)(1), [aws-sqs](/man/aws-sqs)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/events/index.html)```
+
+<!-- verified: 2026-06-18 -->

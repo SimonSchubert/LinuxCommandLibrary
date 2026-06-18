@@ -60,6 +60,15 @@ Unified command-line interface for Amazon Web Services.
 **--no-cli-pager**
 > Disable paging of output.
 
+**--no-paginate**
+> Disable automatic pagination of multi-page results.
+
+**--endpoint-url** _url_
+> Override the default service endpoint URL.
+
+**--cli-binary-format** _format_
+> Format for binary input/output (base64 or raw-in-base64-out).
+
 **--debug**
 > Enable debug logging.
 
@@ -122,3 +131,13 @@ The AWS CLI was first released in **2012** to replace the older service-specific
 # SEE ALSO
 
 [aws-vault](/man/aws-vault)(1), [terraform](/man/terraform)(1), [eksctl](/man/eksctl)(1), [sam](/man/sam)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/)```
+
+<!-- verified: 2026-06-18 -->

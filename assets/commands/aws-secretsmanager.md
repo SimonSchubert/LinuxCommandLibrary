@@ -80,3 +80,13 @@ AWS Secrets Manager was launched in **April 2018** to provide a centralized secr
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ssm](/man/aws-ssm)(1), [vault](/man/vault)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/secretsmanager/index.html)```
+
+<!-- verified: 2026-06-18 -->

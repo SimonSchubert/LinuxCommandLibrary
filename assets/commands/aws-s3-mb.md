@@ -28,7 +28,10 @@ By default, the bucket is created in the region specified in your AWS configurat
 > The S3 URI for the bucket to create in the format s3://bucket-name
 
 **--region** _value_
-> Create the bucket in the specified AWS region (overrides default region)
+> Create the bucket in the specified AWS region (overrides the region from config or environment)
+
+**--tags** _key_ _value_
+> Add tags to the bucket. Specify multiple times to set several tags.
 
 # CAVEATS
 
@@ -37,3 +40,13 @@ Bucket names must be globally unique across all AWS accounts and regions. Names 
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3-rb](/man/aws-s3-rb)(1), [aws-s3-ls](/man/aws-s3-ls)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/s3/mb.html)```
+
+<!-- verified: 2026-06-18 -->

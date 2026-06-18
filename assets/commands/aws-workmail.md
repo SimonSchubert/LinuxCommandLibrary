@@ -79,3 +79,13 @@ Amazon WorkMail launched in **January 2015** as a managed email and calendaring 
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ses](/man/aws-ses)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/workmail/index.html)```
+
+<!-- verified: 2026-06-18 -->

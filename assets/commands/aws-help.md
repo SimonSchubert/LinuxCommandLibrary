@@ -20,6 +20,10 @@ Display AWS CLI command documentation
 
 ```aws ec2 describe-instances help```
 
+**List** available help topics
+
+```aws help topics```
+
 # SYNOPSIS
 
 **aws** [_service_] [_command_] **help**
@@ -75,3 +79,13 @@ The **help** command has been part of the AWS CLI since its initial release in *
 # SEE ALSO
 
 [aws](/man/aws)(1), [man](/man/man)(1), [less](/man/less)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/)```
+
+<!-- verified: 2026-06-18 -->

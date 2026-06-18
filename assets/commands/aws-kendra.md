@@ -85,3 +85,13 @@ Amazon Kendra launched in **December 2019** as an ML-powered enterprise search s
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-opensearch](/man/aws-opensearch)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/kendra/index.html)```
+
+<!-- verified: 2026-06-18 -->

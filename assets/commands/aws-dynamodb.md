@@ -72,10 +72,16 @@ Tables store items identified by primary keys (partition key, or partition + sor
 > Read all items in a table
 
 **batch-write-item**
-> Write or delete multiple items across tables
+> Write or delete multiple items across tables (up to 25 per request)
+
+**batch-get-item**
+> Retrieve multiple items by key across tables (up to 100 per request)
 
 **transact-write-items**
 > Execute multiple writes atomically
+
+**list-tables**
+> List table names in the current region
 
 # CAVEATS
 
@@ -88,3 +94,13 @@ Amazon DynamoDB launched in **January 2012** as a successor to SimpleDB. Global 
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-dynamodbstreams](/man/aws-dynamodbstreams)(1), [aws-rds](/man/aws-rds)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/index.html)```
+
+<!-- verified: 2026-06-18 -->

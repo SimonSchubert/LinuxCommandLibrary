@@ -24,6 +24,10 @@ Low-level S3 API operations
 
 ```aws s3api list-objects-v2 --bucket [bucket-name]```
 
+**Attach a bucket policy** from a JSON file
+
+```aws s3api put-bucket-policy --bucket [bucket-name] --policy file://[policy.json]```
+
 **Get bucket versioning** status
 
 ```aws s3api get-bucket-versioning --bucket [bucket-name]```
@@ -48,10 +52,13 @@ Use s3api when you need direct API access for operations not available in the hi
 > create-bucket, delete-bucket, list-buckets, head-bucket, get-bucket-location
 
 **Object Operations**
-> put-object, get-object, delete-object, delete-objects, head-object, copy-object, list-objects-v2
+> put-object, get-object, delete-object, delete-objects, head-object, copy-object, restore-object, get-object-attributes
+
+**Listing**
+> list-objects-v2, list-objects, list-object-versions
 
 **Bucket Configuration**
-> put-bucket-policy, get-bucket-policy, put-bucket-acl, get-bucket-acl, put-bucket-cors, get-bucket-cors
+> put-bucket-policy, get-bucket-policy, delete-bucket-policy, put-bucket-acl, get-bucket-acl, put-bucket-cors, get-bucket-cors, put-public-access-block, get-public-access-block
 
 **Versioning**
 > put-bucket-versioning, get-bucket-versioning, list-object-versions
@@ -75,3 +82,13 @@ The s3api commands require more verbose syntax than the high-level **aws s3** co
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3-cp](/man/aws-s3-cp)(1), [aws](/man/aws)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/s3api/index.html)```
+
+<!-- verified: 2026-06-18 -->

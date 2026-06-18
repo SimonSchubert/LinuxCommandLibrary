@@ -22,7 +22,11 @@ Manage Azure resource groups
 
 **Delete a resource group** and all its resources
 
-```az group delete -n [MyResourceGroup]```
+```az group delete -n [MyResourceGroup] --yes```
+
+**Update tags** on a resource group
+
+```az group update -n [MyResourceGroup] --tags [Dept=IT] [Env=Test]```
 
 **Export a resource group** as a template
 
@@ -65,10 +69,22 @@ Resource groups define the lifecycle scope for resources; deleting a group delet
 > Location for the resource group (e.g., westus, eastus)
 
 **--tags** _value_
-> Space-separated tags in key=value format
+> Space-separated tags in key[=value] format. Use "" to clear existing tags
+
+**--set** _value_
+> On update, set a property by path, e.g. --set tags.Dept=IT
+
+**-y, --yes**
+> Do not prompt for confirmation (delete)
+
+**--no-wait**
+> Do not wait for the long-running delete to finish
+
+**-f, --force-deletion-types** _value_
+> Resource types to force delete (e.g. Microsoft.Compute/virtualMachines)
 
 **--export-format** _value_
-> Export format: json (default) or bicep
+> Format of the exported template: json (default), bicep, or arm
 
 # CAVEATS
 
@@ -81,3 +97,11 @@ Resource groups have been fundamental to Azure Resource Manager (ARM) since its 
 # SEE ALSO
 
 [az](/man/az)(1), [az-resource](/man/az-resource)(1), [az-deployment](/man/az-deployment)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Azure/azure-cli)```
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/group)```
+
+<!-- verified: 2026-06-18 -->

@@ -20,6 +20,10 @@ Manage CloudWatch log groups, streams, and queries.
 
 ```aws logs tail [/aws/lambda/function-name] --follow```
 
+**Tail logs** from the last 10 minutes
+
+```aws logs tail [/aws/lambda/function-name] --since [10m]```
+
 **Filter logs** with a pattern
 
 ```aws logs filter-log-events --log-group-name [group_name] --filter-pattern "[ERROR]"```
@@ -86,6 +90,12 @@ CloudWatch Logs Insights enables SQL-like queries across log data. Metric filter
 **put-subscription-filter**
 > Stream logs to another service.
 
+**start-query**
+> Run a CloudWatch Logs Insights query; returns a query ID.
+
+**get-query-results**
+> Retrieve results for a query started with start-query.
+
 **--log-group-name** _name_
 > Name of the log group.
 
@@ -102,7 +112,10 @@ CloudWatch Logs Insights enables SQL-like queries across log data. Metric filter
 > End time in milliseconds since epoch.
 
 **--follow**
-> Continuously stream new logs.
+> Continuously stream new logs (tail command).
+
+**--since** _time_
+> tail from a relative time like 5m, 2h, or 1d, or an absolute timestamp.
 
 **--retention-in-days** _days_
 > Retention period (1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1096, 1827, 2192, 2557, 2922, 3288, 3653, or infinite).
@@ -118,3 +131,13 @@ Log groups have no default retention; logs are kept forever unless configured. T
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-cloudwatch](/man/aws-cloudwatch)(1), [journalctl](/man/journalctl)(1), [tail](/man/tail)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/logs/index.html)```
+
+<!-- verified: 2026-06-18 -->

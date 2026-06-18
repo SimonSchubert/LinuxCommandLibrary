@@ -8,9 +8,13 @@ Authenticate with Azure
 
 ```az login```
 
-Login with **service principal**
+Login with **service principal** using a client secret
 
-```az login --service-principal -u [app-id] -p [password] --tenant [tenant-id]```
+```az login --service-principal -u [app-id] -p [client-secret] --tenant [tenant-id]```
+
+Login with **service principal** using a certificate
+
+```az login --service-principal -u [app-id] --certificate [/path/to/cert.pem] --tenant [tenant-id]```
 
 Login with **managed identity**
 
@@ -32,7 +36,7 @@ Login to **specific tenant**
 
 **az login** authenticates the Azure CLI with your Azure account. It supports multiple authentication methods including interactive browser login, service principals, managed identities, and device code flow.
 
-The command stores authentication tokens locally for subsequent Azure CLI commands.
+By default it logs in with a user account: it uses Web Account Manager (WAM) on Windows and browser-based login on Linux and macOS, falling back to device code flow when no browser is available. The command stores authentication tokens locally for subsequent Azure CLI commands.
 
 # PARAMETERS
 
@@ -40,25 +44,37 @@ The command stores authentication tokens locally for subsequent Azure CLI comman
 > Login as service principal
 
 **-u**, **--username** _name_
-> Username or app ID
+> User name or service principal client ID
 
 **-p**, **--password** _password_
-> Password or certificate
+> User password or service principal secret. Prompts if not given. No longer accepts a certificate; use --certificate instead
 
-**--tenant** _id_
-> Tenant ID or domain
+**--certificate** _path_
+> PEM file with the key and public certificate for a service principal
 
-**--identity**
-> Login using managed identity
+**-t**, **--tenant** _id_
+> Microsoft Entra tenant ID or domain. Required for a service principal
+
+**--identity**, **-i**
+> Login using a managed identity
+
+**--client-id** _id_
+> Client ID of a user-assigned managed identity (with --identity)
+
+**--federated-token** _token_
+> Federated token for OIDC token exchange (e.g. GitHub Actions, Workload Identity)
 
 **--use-device-code**
-> Use device code authentication
+> Use device code flow (for systems without a browser)
 
 **--allow-no-subscriptions**
-> Allow login without subscriptions
+> Allow login to tenants without subscriptions, useful for tenant-level commands like az ad
+
+**--skip-subscription-discovery**
+> Skip subscription discovery during login. Requires --tenant
 
 **--scope** _scope_
-> OAuth scope for login
+> OAuth scope used in the authorize request
 
 # AUTHENTICATION METHODS
 
@@ -98,3 +114,11 @@ Tokens stored in ~/.azure directory. Interactive login requires browser. Service
 # SEE ALSO
 
 [az](/man/az)(1), [az-logout](/man/az-logout)(1), [az-account](/man/az-account)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Azure/azure-cli)```
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/reference-index)```
+
+<!-- verified: 2026-06-18 -->

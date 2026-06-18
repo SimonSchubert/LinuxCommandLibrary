@@ -102,3 +102,13 @@ Record data must be base64-encoded when using the CLI. Maximum record size is 1 
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-kinesis](/man/aws-kinesis)(1), [aws-s3](/man/aws-s3)(1), [aws-redshift](/man/aws-redshift)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/firehose/index.html)```
+
+<!-- verified: 2026-06-18 -->

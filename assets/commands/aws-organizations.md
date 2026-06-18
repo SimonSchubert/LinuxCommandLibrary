@@ -115,3 +115,13 @@ Organizations commands must run from the management account. SCPs do not grant p
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-iam](/man/aws-iam)(1), [aws-sts](/man/aws-sts)(1), [aws-sso](/man/aws-sso)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/organizations/index.html)```
+
+<!-- verified: 2026-06-18 -->

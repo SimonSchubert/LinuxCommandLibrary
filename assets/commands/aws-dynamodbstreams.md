@@ -82,3 +82,13 @@ DynamoDB Streams was announced at **AWS re:Invent 2014** and became generally av
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-dynamodb](/man/aws-dynamodb)(1), [aws-lambda](/man/aws-lambda)(1), [aws-kinesis](/man/aws-kinesis)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/dynamodbstreams/index.html)```
+
+<!-- verified: 2026-06-18 -->

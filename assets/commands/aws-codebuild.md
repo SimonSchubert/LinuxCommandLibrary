@@ -24,6 +24,10 @@ Run managed continuous integration builds.
 
 ```aws codebuild list-projects```
 
+**List recent build IDs** across the account
+
+```aws codebuild list-builds```
+
 **Get build details**
 
 ```aws codebuild batch-get-builds --ids [build-id]```
@@ -68,6 +72,9 @@ Run managed continuous integration builds.
 
 **batch-get-projects**
 > Get details of one or more projects
+
+**list-builds**
+> List build IDs across the account, most recent first
 
 **list-builds-for-project**
 > List builds for a specific project
@@ -117,3 +124,13 @@ Build timeouts default to 60 minutes; configure appropriately for long builds. I
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-codepipeline](/man/aws-codepipeline)(1), [aws-codecommit](/man/aws-codecommit)(1), [aws-s3](/man/aws-s3)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/codebuild/index.html)```
+
+<!-- verified: 2026-06-18 -->

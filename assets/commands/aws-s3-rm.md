@@ -67,3 +67,13 @@ This command deletes non-versioned objects. For versioned buckets, deletion crea
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3-rb](/man/aws-s3-rb)(1), [rm](/man/rm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/s3/rm.html)```
+
+<!-- verified: 2026-06-18 -->

@@ -24,6 +24,10 @@ Configure **specific profile**
 
 ```aws configure list-profiles```
 
+**Configure** an SSO session interactively
+
+```aws configure sso```
+
 # SYNOPSIS
 
 **aws configure** [_options_] [_command_]
@@ -39,17 +43,31 @@ The tool provides an interactive interface for setting up AWS access or programm
 **--profile** _name_
 > Configure specific named profile
 
-**set** _key_ _value_
-> Set configuration value
-
-**get** _key_
-> Get configuration value
+# SUBCOMMANDS
 
 **list**
-> Show current configuration
+> Show current configuration with the source of each value
+
+**get** _key_
+> Get a single configuration value
+
+**set** _key_ _value_
+> Set a single configuration value
+
+**import** _--csv file_
+> Import credentials from an IAM-generated CSV file
 
 **list-profiles**
 > List all configured profiles
+
+**sso**
+> Interactively configure an AWS IAM Identity Center (SSO) profile
+
+**sso-session**
+> Interactively configure a reusable SSO session
+
+**add-model**
+> Add a custom service model to the CLI
 
 # CONFIGURATION VALUES
 
@@ -91,3 +109,13 @@ Credentials stored in plain text. Use IAM roles on EC2 instead of credentials wh
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-vault](/man/aws-vault)(1), [aws-sso](/man/aws-sso)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/configure/index.html)```
+
+<!-- verified: 2026-06-18 -->

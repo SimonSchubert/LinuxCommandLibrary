@@ -12,7 +12,11 @@ Manage Git repositories hosted on AWS CodeCommit.
 
 ```aws codecommit list-repositories```
 
-**Clone a repository** using the credential helper
+**Get details** about a repository
+
+```aws codecommit get-repository --repository-name [my-repo]```
+
+**Clone a repository** using git-remote-codecommit (install with pip install git-remote-codecommit)
 
 ```git clone codecommit::[region]://[my-repo]```
 
@@ -49,6 +53,9 @@ CodeCommit supports standard Git functionality including branches, commits, and 
 **list-repositories**
 > List all repositories in the account
 
+**get-repository**
+> Get metadata about a repository, including its clone URLs
+
 **create-branch**
 > Create a new branch
 
@@ -72,7 +79,7 @@ CodeCommit supports standard Git functionality including branches, commits, and 
 
 # CAVEATS
 
-CodeCommit uses AWS IAM for authentication rather than SSH keys or passwords by default. The Git credential helper must be configured for HTTPS access. Repository size is limited to 2GB for individual files and there are quotas on API requests per second.
+AWS CodeCommit is no longer available to new customers as of mid-**2024**; existing customers can continue using it. CodeCommit uses AWS IAM for authentication rather than SSH keys or passwords by default. For HTTPS access, configure either the Git credential helper or git-remote-codecommit. Individual files are limited to 2GB and there are quotas on API requests per second.
 
 # HISTORY
 
@@ -81,3 +88,13 @@ AWS CodeCommit launched in **July 2015** as part of the AWS developer tools suit
 # SEE ALSO
 
 [aws](/man/aws)(1), [git](/man/git)(1), [aws-codebuild](/man/aws-codebuild)(1), [aws-codepipeline](/man/aws-codepipeline)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/codecommit/index.html)```
+
+<!-- verified: 2026-06-18 -->

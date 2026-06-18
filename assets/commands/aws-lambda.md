@@ -10,11 +10,15 @@ Manage serverless functions and event-driven compute.
 
 **Invoke a function** and get the response
 
-```aws lambda invoke --function-name [my-function] --payload '{"key": "value"}' response.json```
+```aws lambda invoke --function-name [my-function] --cli-binary-format raw-in-base64-out --payload '{"key": "value"}' response.json```
 
 **List all functions** in the account
 
 ```aws lambda list-functions```
+
+**Get function details** and configuration
+
+```aws lambda get-function --function-name [my-function]```
 
 **Update function code** from a ZIP file
 
@@ -56,6 +60,9 @@ Lambda supports multiple runtimes including Python, Node.js, Java, Go, Ruby, .NE
 **list-functions**
 > List all functions
 
+**get-function**
+> Get function configuration and code location
+
 **update-function-code**
 > Deploy new function code
 
@@ -88,3 +95,13 @@ AWS Lambda launched in **November 2014** as the first major serverless compute s
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-apigateway](/man/aws-apigateway)(1), [aws-events](/man/aws-events)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/lambda/index.html)```
+
+<!-- verified: 2026-06-18 -->

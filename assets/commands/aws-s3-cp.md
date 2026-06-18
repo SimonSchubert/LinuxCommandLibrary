@@ -28,6 +28,10 @@ Copy files to and from S3 buckets
 
 ```aws s3 cp [./local-dir] s3://[bucket-name]/ --recursive --exclude "*.log"```
 
+**Upload with server-side encryption**
+
+```aws s3 cp [file.txt] s3://[bucket-name]/ --sse aws:kms --sse-kms-key-id [key-id]```
+
 **Preview copy operation** without executing
 
 ```aws s3 cp [./local-dir] s3://[bucket-name]/ --recursive --dryrun```
@@ -74,6 +78,9 @@ The command supports single file transfers, recursive directory copies, and stre
 **--metadata** _value_
 > Custom metadata to store with the S3 object (JSON format)
 
+**--metadata-directive** _value_
+> COPY or REPLACE: whether to copy source metadata or replace it (S3-to-S3 copies)
+
 **--content-type** _value_
 > Override the MIME type of the uploaded object
 
@@ -96,3 +103,13 @@ When copying directories recursively, use trailing slashes consistently to contr
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3-sync](/man/aws-s3-sync)(1), [aws-s3-mv](/man/aws-s3-mv)(1), [aws-s3api](/man/aws-s3api)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/s3/cp.html)```
+
+<!-- verified: 2026-06-18 -->

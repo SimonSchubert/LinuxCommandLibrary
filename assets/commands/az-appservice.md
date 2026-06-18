@@ -40,7 +40,7 @@ Manage Azure App Service plans and environments
 
 **az appservice** is a subcommand of the Azure CLI that manages Azure App Service plans and environments. App Service plans define the compute resources and pricing tier for hosting web apps, API apps, mobile backends, and function apps.
 
-Plans determine the region, number of VM instances, instance size, and pricing tier (Free, Shared, Basic, Standard, Premium, Isolated). Multiple apps can share the same plan, sharing the allocated compute resources.
+Plans determine the region, number of VM instances, instance size, and pricing tier (Free, Shared, Basic, Standard, PremiumV2, PremiumV3, Isolated). Multiple apps can share the same plan, sharing the allocated compute resources.
 
 App Service Environments (ASE) provide fully isolated, dedicated environments for running App Service apps at high scale, with direct VNet integration and private endpoints.
 
@@ -80,13 +80,16 @@ App Service Environments (ASE) provide fully isolated, dedicated environments fo
 > Resource group containing the resource.
 
 **--sku** _sku_
-> Pricing tier (F1, D1, B1, B2, B3, S1, S2, S3, P1v2, P2v2, P3v2, etc.).
+> Pricing tier: F1 (Free), D1 (Shared), B1/B2/B3 (Basic), S1/S2/S3 (Standard), P1V2/P2V2/P3V2 (Premium V2), P0V3/P1V3/P2V3/P3V3 (Premium V3), I1V2/I2V2/I3V2 (Isolated V2), and others.
 
 **--is-linux**
-> Create a Linux plan.
+> Create a Linux plan. Linux and Windows apps cannot share a plan.
 
 **--number-of-workers** _count_
-> Number of instances to allocate.
+> Number of instances (workers) to allocate.
+
+**--zone-redundant**
+> Enable zone redundancy for high availability (Premium and Isolated SKUs only).
 
 **--location** _region_
 > Azure region.
@@ -102,3 +105,11 @@ Deleting a plan fails if it still contains apps. Free and Shared tiers cannot sc
 # SEE ALSO
 
 [az](/man/az)(1), [az-webapp](/man/az-webapp)(1), [az-functionapp](/man/az-functionapp)(1), [az-group](/man/az-group)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Azure/azure-cli)```
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/appservice)```
+
+<!-- verified: 2026-06-18 -->

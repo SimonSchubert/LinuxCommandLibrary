@@ -85,3 +85,13 @@ Amazon ECR launched in **December 2015** alongside Amazon ECS. Cross-region repl
 # SEE ALSO
 
 [aws](/man/aws)(1), [docker](/man/docker)(1), [aws-ecs](/man/aws-ecs)(1), [aws-eks](/man/aws-eks)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/ecr/index.html)```
+
+<!-- verified: 2026-06-18 -->

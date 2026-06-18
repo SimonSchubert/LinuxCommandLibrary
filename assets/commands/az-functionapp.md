@@ -12,6 +12,10 @@ Manage Azure Functions serverless apps
 
 ```az functionapp create --resource-group [rg_name] --consumption-plan-location [eastus] --runtime [node] --functions-version [4] --name [app_name] --storage-account [storage_name]```
 
+**Create a function app** on a Flex Consumption plan
+
+```az functionapp create --resource-group [rg_name] --flexconsumption-location [northeurope] --runtime [java] --name [app_name] --storage-account [storage_name]```
+
 **Create a function app** on an App Service plan
 
 ```az functionapp create --resource-group [rg_name] --plan [plan_name] --runtime [python] --runtime-version [3.11] --functions-version [4] --name [app_name] --storage-account [storage_name]```
@@ -35,6 +39,10 @@ Manage Azure Functions serverless apps
 **Set an application setting**
 
 ```az functionapp config appsettings set --name [app_name] --resource-group [rg_name] --settings "[KEY=value]"```
+
+**List functions** in an app
+
+```az functionapp function list --name [app_name] --resource-group [rg_name]```
 
 # SYNOPSIS
 
@@ -96,16 +104,22 @@ Supported runtimes include .NET, Node.js, Python, Java, PowerShell, and custom h
 > App Service plan name.
 
 **--runtime** _runtime_
-> Language runtime (node, python, dotnet, java, powershell).
+> Functions runtime stack (e.g. node, python, dotnet, dotnet-isolated, java, powershell, custom). Run `az functionapp list-runtimes` for supported values.
 
 **--runtime-version** _version_
-> Runtime version.
+> Version of the runtime stack. Run `az functionapp list-runtimes` to check compatibility.
 
 **--functions-version** _version_
-> Azure Functions runtime version (4).
+> Azure Functions runtime major version (currently 4).
 
-**--storage-account** _storage_
-> Storage account for function state.
+**--os-type** _{Linux, Windows}_
+> Operating system for the app.
+
+**--flexconsumption-location** _location_
+> Region for a Flex Consumption plan app.
+
+**--storage-account** _storage_, **-s**
+> Storage account name (or resource ID) for function state. Required.
 
 # CAVEATS
 
@@ -118,3 +132,11 @@ Function app names must be globally unique. Consumption plan has cold start late
 # SEE ALSO
 
 [az](/man/az)(1), [az-appservice](/man/az-appservice)(1), [az-storage](/man/az-storage)(1), [func](/man/func)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Azure/azure-cli)```
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/functionapp)```
+
+<!-- verified: 2026-06-18 -->

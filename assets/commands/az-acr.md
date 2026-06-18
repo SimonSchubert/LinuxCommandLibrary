@@ -55,7 +55,7 @@ The command group supports registry creation, image management, authentication, 
 > login, credential show, credential renew, token create, token delete
 
 **Image Operations**
-> build, run, import, repository list, repository show-manifests, repository delete
+> build, run, import, repository list, repository show, repository show-tags, repository delete, manifest list, manifest delete
 
 **Tasks**
 > task create, task run, task list, task show, task update, task logs
@@ -64,7 +64,7 @@ The command group supports registry creation, image management, authentication, 
 > replication create, replication delete, replication list, replication show
 
 **Advanced**
-> webhook create, webhook list, private-endpoint-connection, config content-trust, manifest list-metadata
+> webhook create, webhook list, private-endpoint-connection, network-rule add, scope-map create, config retention update
 
 # PARAMETERS
 
@@ -76,6 +76,9 @@ The command group supports registry creation, image management, authentication, 
 
 **--sku** _value_
 > Registry SKU: Basic, Standard, or Premium
+
+**--admin-enabled** _{true,false}_
+> Enable the admin user (username and password login). Disabled by default.
 
 **-t, --image** _value_
 > Image name and tag (name:tag format)
@@ -94,3 +97,11 @@ Azure Container Registry launched in **2017** as a managed Docker registry servi
 # SEE ALSO
 
 [az](/man/az)(1), [az-aks](/man/az-aks)(1), [docker](/man/docker)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Azure/azure-cli)```
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/acr)```
+
+<!-- verified: 2026-06-18 -->

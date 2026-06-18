@@ -10,7 +10,7 @@ Manage AWS Cost and Usage Report definitions.
 
 **Create a new cost and usage report** delivered to S3
 
-```aws cur put-report-definition --report-definition ReportName=[my-report],TimeUnit=DAILY,Format=textORcsv,Compression=GZIP,S3Bucket=[my-bucket],S3Prefix=[reports/],S3Region=[us-east-1]```
+```aws cur put-report-definition --report-definition ReportName=[my-report],TimeUnit=DAILY,Format=textORcsv,Compression=GZIP,AdditionalSchemaElements=RESOURCES,S3Bucket=[my-bucket],S3Prefix=[reports/],S3Region=[us-east-1]```
 
 **Delete a report definition** by name
 
@@ -18,7 +18,7 @@ Manage AWS Cost and Usage Report definitions.
 
 **Modify an existing report** definition
 
-```aws cur modify-report-definition --report-name [my-report] --report-definition ReportName=[my-report],TimeUnit=HOURLY,Format=Parquet,Compression=Parquet,S3Bucket=[my-bucket],S3Prefix=[reports/],S3Region=[us-east-1]```
+```aws cur modify-report-definition --report-name [my-report] --report-definition ReportName=[my-report],TimeUnit=HOURLY,Format=Parquet,Compression=Parquet,AdditionalSchemaElements=RESOURCES,S3Bucket=[my-bucket],S3Prefix=[reports/],S3Region=[us-east-1]```
 
 **List tags** for a report resource
 
@@ -59,7 +59,7 @@ Reports can be configured with different time granularities (hourly, daily, mont
 
 # CAVEATS
 
-Reports can take up to 24 hours to appear in S3 after creation. The API endpoint is only available in **us-east-1** region. Report data may be delayed and is not suitable for real-time cost monitoring. Legacy reports created in the console may not be visible via the API.
+Reports can take up to 24 hours to appear in S3 after creation. The API endpoint (cur.us-east-1.amazonaws.com) is only available in the **us-east-1** region. In **--report-definition**, the fields ReportName, TimeUnit, Format, Compression, AdditionalSchemaElements, S3Bucket, S3Prefix and S3Region are all required; valid Format values are textORcsv and Parquet, valid Compression values are ZIP, GZIP and Parquet. Report data may be delayed and is not suitable for real-time cost monitoring. Legacy reports created in the console may not be visible via the API.
 
 # HISTORY
 
@@ -68,3 +68,13 @@ AWS Cost and Usage Reports launched in **2015** as an evolution of the Detailed 
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ce](/man/aws-ce)(1), [aws-budgets](/man/aws-budgets)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/cur/index.html)```
+
+<!-- verified: 2026-06-18 -->

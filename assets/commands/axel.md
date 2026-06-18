@@ -4,25 +4,29 @@ Lightweight multi-connection download accelerator
 
 # TLDR
 
-**Download** file with multiple connections
+**Download** a file with multiple connections
 
 ```axel [https://example.com/file.zip]```
 
-Download with **specific connections**
+Download with a **specific number of connections**
 
 ```axel -n [16] [https://example.com/file.zip]```
 
-**Save** with different name
+**Save** with a different filename
 
 ```axel -o [output.zip] [https://example.com/file.zip]```
 
-**Quiet** mode
-
-```axel -q [https://example.com/file.zip]```
-
-Limit **speed**
+**Limit speed** to a given number of bytes per second
 
 ```axel -s [1024000] [https://example.com/file.zip]```
+
+Set a custom **user agent**
+
+```axel -U "[Mozilla/5.0]" [https://example.com/file.zip]```
+
+**Skip** the download if the file already exists
+
+```axel -c [https://example.com/file.zip]```
 
 # SYNOPSIS
 
@@ -36,32 +40,44 @@ The tool is particularly effective for large files on servers that don't rate-li
 
 # PARAMETERS
 
-**-n** _num_
-> Number of connections (default: 4)
+**--num-connections=**_num_, **-n** _num_
+> Number of connections to open.
 
-**-o** _file_
-> Output filename
+**--output=**_file_, **-o** _file_
+> Local filename to save to.
 
-**-s** _bytes_
-> Maximum speed in bytes per second
+**--max-speed=**_bytes_, **-s** _bytes_
+> Try to keep the average speed around this many bytes per second.
 
-**-a**
-> Show more detailed progress
+**--alternate**, **-a**
+> Show an alternate progress bar with per-thread status.
 
-**-q**
-> Quiet mode
+**--quiet**, **-q**
+> No output to stdout.
 
-**-H** _header_
-> Add HTTP header
+**--verbose**, **-v**
+> Show more status messages. Repeat for more detail.
 
-**-U** _agent_
-> Set user agent
+**--header=**_header_, **-H** _header_
+> Add an HTTP header in the form 'Header: Value'.
+
+**--user-agent=**_agent_, **-U** _agent_
+> Set the HTTP user agent.
+
+**--no-proxy**, **-N**
+> Do not use any proxy server.
+
+**--no-clobber**, **-c**
+> Skip the download if a file with the same name already exists.
+
+**--insecure**, **-k**
+> Do not verify the SSL certificate.
+
+**--timeout=**_secs_, **-T** _secs_
+> Set the I/O and connection timeout.
 
 **--max-redirect=**_num_
-> Maximum redirects to follow
-
-**-N**
-> No proxy
+> Maximum redirects to follow (default: 20).
 
 # FEATURES
 
@@ -91,3 +107,9 @@ Some servers block multiple connections. May be considered aggressive by some si
 # SEE ALSO
 
 [wget](/man/wget)(1), [curl](/man/curl)(1), [aria2](/man/aria2)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/axel-download-accelerator/axel)```
+
+<!-- verified: 2026-06-18 -->

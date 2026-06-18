@@ -32,6 +32,10 @@ Manage virtual servers and networking on Amazon EC2.
 
 ```aws ec2 create-key-pair --key-name [my-key] --query "KeyMaterial" --output text > [my-key.pem]```
 
+**List security groups** with their rules
+
+```aws ec2 describe-security-groups --query "SecurityGroups[*].[GroupId,GroupName]" --output table```
+
 # SYNOPSIS
 
 **aws ec2** _command_ [_options_]
@@ -59,11 +63,17 @@ EC2 commands cover instance lifecycle management, Amazon Machine Images (AMIs), 
 **terminate-instances**
 > Permanently delete instances
 
+**reboot-instances**
+> Reboot running instances
+
 **create-image**
 > Create an AMI from an instance
 
 **create-security-group**
 > Create a security group
+
+**describe-security-groups**
+> List and describe security groups
 
 **authorize-security-group-ingress**
 > Add inbound rules to security group
@@ -91,3 +101,13 @@ Amazon EC2 launched in **August 2006** as one of AWS's first services, revolutio
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-autoscaling](/man/aws-autoscaling)(1), [aws-elb](/man/aws-elb)(1), [aws-vpc](/man/aws-vpc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cli)```
+
+```[Homepage](https://aws.amazon.com/cli/)```
+
+```[Documentation](https://docs.aws.amazon.com/cli/latest/reference/ec2/index.html)```
+
+<!-- verified: 2026-06-18 -->
