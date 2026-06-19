@@ -24,9 +24,9 @@ Manage Azure Storage accounts
 
 ```az storage account keys list -n [account-name] -g [resource-group]```
 
-**Generate a SAS token**
+**Generate an account-level SAS token**
 
-```az storage account generate-sas --permissions [rwdlac] --account-name [account-name] --services [bfqt] --resource-types [sco] --expiry [2024-12-31T00:00Z]```
+```az storage account generate-sas --account-name [account-name] --services [bfqt] --resource-types [sco] --permissions [racwdl] --expiry [2026-12-31T00:00Z]```
 
 **Check name availability**
 
@@ -52,7 +52,7 @@ Different account types and SKUs offer varying performance tiers, redundancy opt
 > create, delete, list, show, update, check-name
 
 **Access**
-> keys list, keys renew, generate-sas, show-connection-string
+> keys list, keys renew, generate-sas, show-connection-string, revoke-delegation-keys
 
 **Network Security**
 > network-rule add, network-rule list, network-rule remove, private-endpoint-connection
@@ -78,13 +78,25 @@ Different account types and SKUs offer varying performance tiers, redundancy opt
 > Azure region for the storage account
 
 **--sku** _value_
-> Storage SKU: Standard_LRS, Standard_GRS, Standard_RAGRS, Standard_ZRS, Premium_LRS, Premium_ZRS
+> Storage SKU. Default **Standard_RAGRS**. Values include Standard_LRS, Standard_GRS, Standard_RAGRS, Standard_ZRS, Standard_GZRS, Standard_RAGZRS, Premium_LRS, Premium_ZRS.
 
 **--kind** _value_
-> Account kind: StorageV2, Storage, BlobStorage, FileStorage, BlockBlobStorage
+> Account kind. Default **StorageV2**. Values: StorageV2, Storage, BlobStorage, FileStorage, BlockBlobStorage.
 
 **--access-tier** _value_
-> Access tier for blob data: Hot, Cool, Cold, Premium
+> Access tier for blob data: Hot, Cool, Cold, Premium.
+
+**--https-only** _value_
+> Require HTTPS for requests. Default **true**.
+
+**--min-tls-version** _value_
+> Minimum TLS version allowed: TLS1_0, TLS1_1, TLS1_2, TLS1_3.
+
+**--allow-blob-public-access** _value_
+> Allow anonymous public access to blobs. Default **false** for new accounts.
+
+**--hns**, **--enable-hierarchical-namespace** _value_
+> Enable hierarchical namespace (Azure Data Lake Storage Gen2).
 
 # CAVEATS
 
@@ -96,4 +108,14 @@ Azure Storage was one of the first Azure services, available since the platform'
 
 # SEE ALSO
 
-[az](/man/az)(1), [az-storage](/man/az-storage)(1), [az-storage-blob](/man/az-storage-blob)(1), [az-storage-container](/man/az-storage-container)(1)
+[az](/man/az)(1), [azure-cli](/man/azure-cli)(1), [az-storage](/man/az-storage)(1), [az-storage-blob](/man/az-storage-blob)(1), [az-storage-container](/man/az-storage-container)(1), [azcopy](/man/azcopy)(1)
+
+# RESOURCES
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/storage/account)```
+
+```[Homepage](https://learn.microsoft.com/en-us/cli/azure/)```
+
+```[Source code](https://github.com/Azure/azure-cli)```
+
+<!-- verified: 2026-06-19 -->

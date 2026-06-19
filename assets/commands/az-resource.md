@@ -63,16 +63,22 @@ This command is useful for scripting cross-resource operations, bulk management,
 > Remove a resource.
 
 **update**
-> Modify resource properties.
+> Update a resource by PUT request.
+
+**patch**
+> Update a resource by PATCH request.
 
 **move**
 > Move resources between groups or subscriptions.
 
 **tag**
-> Manage resource tags.
+> Tag a resource.
 
 **invoke-action**
 > Invoke an action on a resource.
+
+**wait**
+> Wait until a condition on a resource is met (provisioning, deletion, etc.).
 
 **--ids** _ids_
 > One or more resource IDs.
@@ -93,7 +99,13 @@ This command is useful for scripting cross-resource operations, bulk management,
 > API version for the resource type.
 
 **--set** _property=value_
-> Update a property using JMESPath.
+> Update a property on the resource (e.g., properties.someProperty=value).
+
+**--add** _list property=value_
+> Add an object to a list of objects (e.g., --add tags.newKey=value).
+
+**--remove** _property/index_
+> Remove a property or an element from a list.
 
 **--tags** _tags_
 > Space-separated tags (key=value).
@@ -111,4 +123,14 @@ The generic resource commands have been part of the Azure CLI since **Azure CLI 
 
 # SEE ALSO
 
-[az](/man/az)(1), [az-group](/man/az-group)(1), [az-deployment](/man/az-deployment)(1), [az-tag](/man/az-tag)(1)
+[az](/man/az)(1), [az-group](/man/az-group)(1), [az-deployment](/man/az-deployment)(1), [az-provider](/man/az-provider)(1), [az-tag](/man/az-tag)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Azure/azure-cli)```
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/resource)```
+
+```[Homepage](https://learn.microsoft.com/en-us/cli/azure/)```
+
+<!-- verified: 2026-06-19 -->

@@ -36,6 +36,10 @@ High-performance data transfer for Azure Storage
 
 ```azcopy jobs list```
 
+**Benchmark** throughput against a container
+
+```azcopy bench "https://[account].blob.core.windows.net/[container]?[SAS_token]"```
+
 # SYNOPSIS
 
 **azcopy** _command_ [_options_]
@@ -77,32 +81,50 @@ The sync command provides one-way synchronization, copying only new or modified 
 **remove**
 > Delete blobs or files.
 
+**bench**
+> Run a throughput benchmark against a storage target.
+
+**make**
+> Create a container or file share.
+
 **--recursive**
-> Include subdirectories.
+> Include subdirectories (default false).
 
 **--include-pattern** _pattern_
-> Include files matching pattern.
+> Include files matching a semicolon-separated pattern list.
 
 **--exclude-pattern** _pattern_
-> Exclude files matching pattern.
+> Exclude files matching a semicolon-separated pattern list.
 
 **--overwrite** _mode_
-> true, false, prompt, or ifSourceNewer.
+> true, false, prompt, or ifSourceNewer (default true).
 
-**--preserve-smb-permissions**
-> Preserve Windows ACLs.
+**--put-md5**
+> Compute and store an MD5 hash with each uploaded blob (default false).
+
+**--check-md5** _mode_
+> Verify MD5 on download: NoCheck, LogOnly, FailIfDifferent, or FailIfDifferentOrMissing (default FailIfDifferent).
+
+**--from-to** _value_
+> Force the transfer direction, for example LocalBlob or BlobLocal.
+
+**--as-subdir**
+> Place the source directory as a subdirectory at the destination (default true).
+
+**--preserve-permissions**
+> Preserve ACLs and permissions (SMB or POSIX).
 
 **--block-size-mb** _size_
-> Block size for uploads.
+> Block size in MiB used for uploads and downloads (default 0, auto).
 
 **--cap-mbps** _rate_
-> Limit transfer rate.
+> Cap the transfer rate in megabits per second (default 0, uncapped).
 
 **--dry-run**
-> Show what would be transferred.
+> Show what would be transferred without performing it.
 
 **--log-level** _level_
-> Logging verbosity.
+> Logging verbosity: DEBUG, INFO, WARNING, ERROR, or NONE (default INFO).
 
 # CAVEATS
 
@@ -115,3 +137,11 @@ SAS tokens must have appropriate permissions (read, write, list, delete). URL mu
 # SEE ALSO
 
 [az](/man/az)(1), [az-storage](/man/az-storage)(1), [rsync](/man/rsync)(1), [rclone](/man/rclone)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Azure/azure-storage-azcopy)```
+
+```[Documentation](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10)```
+
+<!-- verified: 2026-06-19 -->

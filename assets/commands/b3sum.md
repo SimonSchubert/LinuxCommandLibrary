@@ -20,9 +20,13 @@ Calculate from **stdin**
 
 ```b3sum [file1] [file2] [file3]```
 
-Generate **keyed hash**
+Generate a **keyed hash** (32-byte key read from stdin)
 
-```b3sum --keyed < [keyfile] [file]```
+```b3sum --keyed [file] < [keyfile]```
+
+**Derive a key** from a context string
+
+```b3sum --derive-key "[app 2026-06-19 context]" [file]```
 
 # SYNOPSIS
 
@@ -37,25 +41,37 @@ The tool provides similar interface to md5sum and sha256sum but with much better
 # PARAMETERS
 
 **-c**, **--check**
-> Verify checksums from file
+> Read BLAKE3 sums from the file(s) and verify them.
 
 **--keyed**
-> Use keyed hashing mode
+> Keyed hashing mode; reads a 32-byte key from stdin.
 
 **--derive-key** _context_
-> Key derivation mode
+> Key derivation mode using the given context string.
 
-**--length** _bytes_
-> Output length (default: 32)
+**-l**, **--length** _bytes_
+> Output length in bytes before hex encoding (default: 32).
+
+**--seek** _offset_
+> Start output at the given byte offset (default: 0).
 
 **--num-threads** _n_
-> Number of threads to use
+> Maximum number of threads to use.
 
 **--no-mmap**
-> Disable memory mapping
+> Disable memory mapping of input files.
 
 **--no-names**
-> Omit filenames (output hash only)
+> Omit filenames; output the hash only.
+
+**--raw**
+> Write the raw hash bytes to stdout instead of hex (single input only).
+
+**--tag**
+> Produce BSD-style checksum lines.
+
+**--quiet**
+> When verifying, do not print OK for each successfully verified file.
 
 # FEATURES
 
@@ -92,4 +108,12 @@ Relatively new algorithm (2020). Less widely adopted than SHA-256. Not suitable 
 
 # SEE ALSO
 
-[b2sum](/man/b2sum)(1), [sha256sum](/man/sha256sum)(1), [xxhsum](/man/xxhsum)(1)
+[b2sum](/man/b2sum)(1), [sha256sum](/man/sha256sum)(1), [md5sum](/man/md5sum)(1), [xxhsum](/man/xxhsum)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/BLAKE3-team/BLAKE3)```
+
+```[Documentation](https://github.com/BLAKE3-team/BLAKE3/blob/master/b3sum/README.md)```
+
+<!-- verified: 2026-06-19 -->

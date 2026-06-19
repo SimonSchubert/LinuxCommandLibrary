@@ -4,17 +4,21 @@ Update the Azure CLI to the latest version
 
 # TLDR
 
-**Upgrade** Azure CLI
+**Upgrade** Azure CLI and installed extensions
 
 ```az upgrade```
 
-Upgrade **without prompting**
+Upgrade **without prompting** to review release notes
 
 ```az upgrade --yes```
 
-**Check** for updates only
+Upgrade the **CLI only**, leaving extensions untouched
 
-```az upgrade --dry-run```
+```az upgrade --all false```
+
+Include **preview** extension packages when upgrading
+
+```az upgrade --allow-preview true```
 
 # SYNOPSIS
 
@@ -22,42 +26,52 @@ Upgrade **without prompting**
 
 # DESCRIPTION
 
-**az upgrade** updates the Azure CLI to the latest version. It checks for available updates and installs them, ensuring you have access to the newest features and bug fixes.
+**az upgrade** upgrades the Azure CLI and, by default, its installed extensions to the latest available version. It checks for available updates and installs them, ensuring you have access to the newest features and bug fixes.
 
-The command handles the upgrade process automatically, including dependency updates.
+The command handles the upgrade process automatically, including dependency updates. This command is in **preview**.
 
 # PARAMETERS
 
 **-y**, **--yes**
-> Don't prompt for confirmation
+> Do not prompt for checking release notes.
 
-**--dry-run**
-> Check for updates without installing
+**--all** _{false, true}_
+> Enable updating extensions as well. Default: **true**.
 
-**--all**
-> Update all installed components
+**--allow-preview**, **--allow-preview-extensions** _{false, true}_
+> Include preview packages for extension installation, if any exist.
 
 # WORKFLOW
 
 ```bash
-# Check for updates
-az upgrade --dry-run
-
-# Upgrade with confirmation
+# Upgrade CLI and extensions with confirmation
 az upgrade
 
-# Upgrade without prompts
+# Upgrade without the release-notes prompt
 az upgrade --yes
+
+# Upgrade only the CLI, skipping extensions
+az upgrade --all false
 ```
 
 # CAVEATS
 
-Requires sufficient permissions to modify installation directory. May require restart of shell for changes to take effect. Extension updates handled separately. Not available on all installation methods (some package managers handle updates).
+Requires sufficient permissions to modify the installation directory. May require restarting the shell for changes to take effect. The command works for installations done via the official installers (MSI, Homebrew, apt/yum, etc.); some system package managers handle updates separately and may not be supported. There is no flag to only check for updates without installing.
 
 # HISTORY
 
-**az upgrade** was added to Azure CLI in **2020** to provide a built-in update mechanism, replacing manual update procedures.
+**az upgrade** was added to Azure CLI **2.11** in **August 2020** to provide a built-in update mechanism, replacing manual update procedures. It remains a preview command.
 
 # SEE ALSO
 
 [az](/man/az)(1), [az-version](/man/az-version)(1), [az-extension](/man/az-extension)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Azure/azure-cli)```
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/reference-index#az-upgrade)```
+
+```[Homepage](https://learn.microsoft.com/en-us/cli/azure/)```
+
+<!-- verified: 2026-06-19 -->

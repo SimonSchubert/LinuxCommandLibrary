@@ -4,21 +4,29 @@ Display network bandwidth usage per process
 
 # TLDR
 
-**Monitor** network usage
+**Monitor** network usage (requires root)
 
-```bandwhich```
+```sudo bandwhich```
 
-Show **raw addresses**
+Monitor a **specific interface**
 
-```bandwhich --raw```
+```sudo bandwhich --interface [eth0]```
 
-Monitor **specific interface**
+**Do not resolve** hostnames
 
-```bandwhich --interface [eth0]```
+```sudo bandwhich --no-resolve```
 
-**No resolve** hostnames
+Show only the **processes** table
 
-```bandwhich --no-resolve```
+```sudo bandwhich --processes```
+
+Show **cumulative** (total) utilization
+
+```sudo bandwhich --total-utilization```
+
+Output **machine-friendly** text instead of the UI
+
+```sudo bandwhich --raw```
 
 # SYNOPSIS
 
@@ -33,19 +41,34 @@ The tool is particularly useful for identifying bandwidth-heavy applications and
 # PARAMETERS
 
 **-i**, **--interface** _name_
-> Monitor specific interface
+> Monitor a specific network interface (may be repeated).
 
 **-r**, **--raw**
-> Show raw addresses without resolution
+> Output machine-friendly text instead of the interactive terminal UI.
 
 **-n**, **--no-resolve**
-> Don't resolve hostnames
+> Do not resolve IP addresses to hostnames.
 
 **-s**, **--show-dns**
-> Show DNS queries
+> Show DNS queries in the output.
 
 **-d**, **--dns-server** _ip_
-> DNS server for resolution
+> Use a custom DNS server for reverse lookups.
+
+**-p**, **--processes**
+> Show only the processes table.
+
+**-c**, **--connections**
+> Show only the connections table.
+
+**-a**, **--addresses**
+> Show only the remote addresses table.
+
+**-t**, **--total-utilization**
+> Show cumulative usage statistics rather than per-second rates.
+
+**-u**, **--unit-family** _family_
+> Unit format: bin-bytes, bin-bits, si-bytes, or si-bits.
 
 # FEATURES
 
@@ -70,8 +93,14 @@ Requires root/sudo for packet capture. May not capture all traffic types. Hostna
 
 # HISTORY
 
-**bandwhich** was created by Aram Drevekenin around **2019** as a modern, user-friendly alternative to tools like iftop and nethogs.
+**bandwhich** was created by Aram Drevekenin around **2019** as a modern, user-friendly alternative to tools like iftop and nethogs. It is written in Rust and is currently in passive maintenance.
 
 # SEE ALSO
 
-[iftop](/man/iftop)(8), [nethogs](/man/nethogs)(8), [netstat](/man/netstat)(8)
+[iftop](/man/iftop)(8), [nethogs](/man/nethogs)(8), [nload](/man/nload)(1), [netstat](/man/netstat)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/imsnif/bandwhich)```
+
+<!-- verified: 2026-06-19 -->

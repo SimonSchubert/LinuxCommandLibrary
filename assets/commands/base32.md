@@ -74,4 +74,12 @@ echo "JBSWY3DPEBLW64TMMQ======" | base32 -d
 
 # SEE ALSO
 
-[base64](/man/base64)(1), [basenc](/man/basenc)(1), [uuencode](/man/uuencode)(1)
+[base64](/man/base64)(1), [basenc](/man/basenc)(1), [b2sum](/man/b2sum)(1), [uuencode](/man/uuencode)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/coreutils/coreutils)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/html_node/base32-invocation.html)```
+
+<!-- verified: 2026-06-19 -->

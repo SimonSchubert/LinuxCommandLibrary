@@ -32,23 +32,32 @@ The tool is significantly faster than git-filter-branch and easier to use for co
 
 # PARAMETERS
 
-**--delete-files** _pattern_
-> Delete files matching pattern
-
-**--strip-blobs-bigger-than** _size_
-> Remove large blobs (e.g., 100M, 1G)
-
-**--replace-text** _file_
-> Replace text patterns (one per line)
+**--delete-files** _pattern_ (**-D**)
+> Delete files with the specified names (e.g. '*.class', '*.{txt,log}')
 
 **--delete-folders** _name_
-> Delete folders by name
+> Delete folders with the specified names (e.g. '.svn', '*-tmp')
+
+**--strip-blobs-bigger-than** _size_ (**-b**)
+> Strip blobs bigger than the given size (e.g. 128K, 1M, 100M)
+
+**--strip-biggest-blobs** _num_ (**-B**)
+> Strip the top NUM biggest blobs
+
+**--strip-blobs-with-ids** _file_ (**-bi**)
+> Strip blobs with the Git object ids listed in the file
+
+**--replace-text** _file_ (**-rt**)
+> Filter file content, replacing matched text (patterns one per line)
+
+**--convert-to-git-lfs** _pattern_
+> Extract files with the specified names (e.g. '*.zip') into Git LFS
 
 **--no-blob-protection**
-> Allow deletion in current commit
+> Allow the BFG to modify even your latest commit
 
 **--private**
-> Treat repo as private (no warnings)
+> Treat this rewrite as removing private data (suppresses the public-data hint)
 
 # WORKFLOW
 
@@ -85,7 +94,7 @@ secret_key==>***REMOVED***
 
 # CAVEATS
 
-Rewrites history (force push required). Protects HEAD by default (use --no-blob-protection to override). Collaborators must rebase/re-clone. May not handle complex cases (use git-filter-repo for advanced needs). Requires Java runtime.
+Rewrites history (force push required). Protects HEAD by default (use --no-blob-protection to override). Collaborators must rebase/re-clone. BFG operates on filenames and sizes, not paths: it cannot delete a file only in one directory. For path-specific or otherwise complex rewrites, use git-filter-repo. Requires a Java 11+ runtime (v1.14.0 was the last release to support Java 8).
 
 # HISTORY
 
@@ -94,3 +103,11 @@ Rewrites history (force push required). Protects HEAD by default (use --no-blob-
 # SEE ALSO
 
 [git-filter-branch](/man/git-filter-branch)(1), [git-filter-repo](/man/git-filter-repo)(1), [git](/man/git)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rtyley/bfg-repo-cleaner)```
+
+```[Homepage](https://rtyley.github.io/bfg-repo-cleaner/)```
+
+<!-- verified: 2026-06-19 -->

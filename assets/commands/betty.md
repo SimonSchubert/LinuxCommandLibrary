@@ -38,9 +38,9 @@ Natural language interface for the command line
 
 # DESCRIPTION
 
-**betty** is a friendly English-like interface for the command line. It translates natural language phrases into executable Linux commands. When you forget a command, ask Betty in plain English.
+**betty** is a friendly English-like interface for the command line, written in Ruby. It translates natural language phrases into executable commands so you do not have to leave the terminal to look up obscure syntax. When you forget a command, ask Betty in plain English.
 
-If multiple interpretations exist, Betty will ask you to select the appropriate one. Betty also displays the actual commands it executes, providing learning opportunities.
+Betty displays the command it inferred before running it. If multiple interpretations exist, it presents numbered options and asks you to select the appropriate one, providing learning opportunities along the way.
 
 # CAPABILITIES
 
@@ -48,7 +48,7 @@ If multiple interpretations exist, Betty will ask you to select the appropriate 
 > Find, count, compress, decompress files
 
 **System queries**
-> Username, date/time, disk usage
+> Username, real name, IP address, date/time, disk usage
 
 **Process management**
 > List, find, kill processes
@@ -57,17 +57,22 @@ If multiple interpretations exist, Betty will ask you to select the appropriate 
 > Count words, lines, characters
 
 **Networking**
-> Download files, web queries
+> Download files, web queries, weather
 
 **Permissions**
-> Change file permissions
+> Change file ownership and permissions
+
+**Media control**
+> Control iTunes and Spotify (play, pause, next track)
 
 # INSTALLATION
 
-Requires Ruby, Curl, and Git.
+Requires Ruby. Clone the repository and run the installer (or add the alias manually).
 
 ```
 git clone https://github.com/pickhardt/betty
+ruby betty/install.rb
+# or, manually:
 echo 'alias betty="~/betty/main.rb"' >> ~/.bashrc
 source ~/.bashrc
 ```
@@ -79,3 +84,9 @@ Requires Ruby runtime. Limited to predefined command patterns. Not suitable for 
 # SEE ALSO
 
 [man](/man/man)(1), [tldr](/man/tldr)(1), [cheat](/man/cheat)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/pickhardt/betty)```
+
+<!-- verified: 2026-06-19 -->

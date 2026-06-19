@@ -1,8 +1,10 @@
 # TAGLINE
 
-Terminal-based resource monitor written in bash
+Terminal-based resource monitor written in bash (deprecated)
 
 # TLDR
+
+> **bashtop** is deprecated and no longer maintained. Use **btop** (its C++ successor) instead.
 
 **Start** resource monitor
 
@@ -10,13 +12,15 @@ Terminal-based resource monitor written in bash
 
 # SYNOPSIS
 
-**bashtop** [_options_]
+**bashtop**
 
 # DESCRIPTION
 
 **bashtop** is a resource monitor written in bash showing CPU, memory, disk, network, and process information in a terminal UI. It provides an attractive, mouse-enabled interface for system monitoring.
 
-The tool offers game-like visuals and interactivity while remaining a pure bash script.
+The tool offers game-like visuals and interactivity while remaining a pure bash script. Command-line argument parsing was never implemented, so it is launched simply as **bashtop** and configured from its in-app menu.
+
+**bashtop** is no longer actively developed. It was first rewritten in Python as **bpytop**, and then rewritten again in C++ as **btop**, which is the recommended replacement on all platforms.
 
 # FEATURES
 
@@ -54,12 +58,18 @@ Display sections:
 
 # CAVEATS
 
-Written in pure bash (performance limitations). Superseded by bpytop (Python) and btop++ (C++). Requires bash 4.4+. High CPU usage for monitoring itself. No longer actively maintained.
+Written in pure bash, with the performance limitations that implies. Requires bash 4.4 or newer. Relatively high CPU overhead for the monitoring itself. **No longer maintained**: superseded by **bpytop** (Python) and then **btop** (C++).
 
 # HISTORY
 
-**bashtop** was created by Jakob Palme (aristocratos) in **2020** as a proof-of-concept system monitor in pure bash, later rewritten as bpytop and btop++.
+**bashtop** was created by aristocratos (Jakob Palme) in **2020** as a system monitor written entirely in bash, later rewritten as **bpytop** and then **btop**.
 
 # SEE ALSO
 
-[btop](/man/btop)(1), [htop](/man/htop)(1), [top](/man/top)(1)
+[btop](/man/btop)(1), [bpytop](/man/bpytop)(1), [htop](/man/htop)(1), [top](/man/top)(1), [glances](/man/glances)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aristocratos/bashtop)```
+
+<!-- verified: 2026-06-19 -->

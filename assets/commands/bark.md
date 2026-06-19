@@ -49,11 +49,11 @@ AI text-to-audio synthesis with expressive speech.
 
 **Bark** is a transformer-based text-to-audio model by **Suno AI**. Unlike traditional TTS, Bark generates highly expressive speech including laughter, sighs, breathing, crying, and even music.
 
-Special tokens in the text control non-speech sounds: `[laughs]`, `[sighs]`, `[gasps]`, `[clears throat]`, and `[music]`. Musical notation with `♪` symbols can generate singing. Capitalizing words adds emphasis, and `...` adds hesitation.
+Special tokens in the text control non-speech sounds: `[laughter]`, `[laughs]`, `[sighs]`, `[gasps]`, `[clears throat]`, and `[music]`. Musical notation with `♪` symbols can generate singing. Capitalizing words adds emphasis, and `...` adds hesitation. The `[MAN]` and `[WOMAN]` tokens bias the speaker's gender.
 
 Speaker presets select voice characteristics. Presets are available for multiple languages: English, German, Spanish, French, Hindi, Italian, Japanese, Korean, Polish, Portuguese, Russian, Turkish, and Chinese.
 
-Install with `pip install suno-bark`. Models are downloaded automatically on first use. GPU (CUDA) is strongly recommended for reasonable generation speed.
+Install directly from the repository with `pip install git+https://github.com/suno-ai/bark.git` (do not use `pip install bark`, which is an unrelated package). Models are downloaded automatically on first use. GPU (CUDA) is strongly recommended for reasonable generation speed.
 
 # CAVEATS
 
@@ -66,3 +66,9 @@ Slow on CPU (GPU strongly recommended). Large model downloads (~5GB). Output qua
 # SEE ALSO
 
 [piper](/man/piper)(1), [tts](/man/tts)(1), [espeak](/man/espeak)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/suno-ai/bark)```
+
+<!-- verified: 2026-06-19 -->

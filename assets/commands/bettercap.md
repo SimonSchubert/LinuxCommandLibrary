@@ -26,29 +26,50 @@ Network attack and monitoring framework
 
 # DESCRIPTION
 
-**bettercap** is a powerful network attack and monitoring framework. It provides tools for man-in-the-middle attacks, network reconnaissance, packet sniffing, credential harvesting, and WiFi attacks through a modular architecture.
+**bettercap** is the Swiss Army knife for WiFi, Bluetooth Low Energy, wireless HID hijacking, CAN-bus, and IPv4/IPv6 network reconnaissance and MITM attacks. Written in Go, it provides man-in-the-middle attacks, network reconnaissance, packet sniffing, credential harvesting, and a REST API and web UI through a modular architecture.
 
-The tool is designed for security research, penetration testing, and network analysis.
+The tool is designed for security research, penetration testing, and network analysis. It must be run as root.
 
 # PARAMETERS
 
 **-iface** _name_
-> Network interface
+> Network interface to bind to; if empty the default interface is auto-selected
 
 **-caplet** _file_
-> Run caplet script
+> Read commands from this file and run them in the interactive session
 
 **-eval** _code_
-> Evaluate expression
+> Run one or more commands (separated by ;) in the interactive session
+
+**-autostart** _modules_
+> Comma-separated list of modules to auto-start
+
+**-script** _file_
+> Load a session script
+
+**-gateway-override** _ip_
+> Use the provided IP address instead of the detected default gateway
 
 **-env-file** _file_
-> Load environment variables
+> Load environment variables from this file
+
+**-caplets-path** _dir_
+> Alternative base path for caplets
+
+**-no-history**
+> Disable the interactive session history file
+
+**-no-colors**
+> Disable output color effects
 
 **-debug**
-> Enable debug logging
+> Print debug messages
 
 **-silent**
-> Suppress banner and logs
+> Suppress all logs which are not errors
+
+**-version**
+> Print the version and exit
 
 # MODULES
 
@@ -115,4 +136,12 @@ Requires root privileges. Illegal without authorization. Can disrupt network tra
 
 # SEE ALSO
 
-[ettercap](/man/ettercap)(8), [aircrack-ng](/man/aircrack-ng)(1), [wireshark](/man/wireshark)(1)
+[ettercap](/man/ettercap)(8), [arpspoof](/man/arpspoof)(8), [nmap](/man/nmap)(1), [aircrack-ng](/man/aircrack-ng)(1), [wireshark](/man/wireshark)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/bettercap/bettercap)```
+
+```[Homepage](https://www.bettercap.org/)```
+
+<!-- verified: 2026-06-19 -->

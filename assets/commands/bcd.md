@@ -1,50 +1,49 @@
 # TAGLINE
 
-Convert between binary, decimal, and hexadecimal
+Reformat input as a punched card
 
 # TLDR
 
-**Convert decimal to binary and hex**
+**Print text** as a punched card
 
-```bcd [42]```
+```bcd [Hello]```
 
-**Convert binary to decimal and hex**
+**Read text** from standard input
 
-```bcd [0b101010]```
+```echo [hello world] | bcd```
 
-**Convert hexadecimal to decimal and binary**
+**Decode** a punched card back to text
 
-```bcd [0x2A]```
-
-**Convert multiple numbers**
-
-```bcd [255] [0xFF] [0b11111111]```
+```bcd -d < [card.txt]```
 
 # SYNOPSIS
 
-**bcd** _number_ [_number_...]
+**bcd** [_-l_] [_string_...]
+
+**bcd** **-d** [_-l_]
 
 # DESCRIPTION
 
-**bcd** is an arbitrary-precision base converter that automatically converts between binary, decimal, and hexadecimal number formats. It detects the input base and displays the value in all three formats.
+**bcd** reads the given input and reformats it as a visual representation of an IBM-style punched card, drawn with ASCII art. It is one of the classic novelty filters from the BSD games collection, alongside **ppt** (paper tape) and **morse** (Morse code).
 
-Useful for programmers, system administrators, and anyone working with different number representations in networking, hardware debugging, or reverse engineering.
+Input may be supplied as command-line arguments or on standard input. With no decode flag, the text is encoded into a punch card; only the first line is read when reading from standard input.
 
-# INPUT FORMATS
+# PARAMETERS
 
-**Decimal**
-> Plain numbers (e.g., 42, 255)
+**-d**
+> Decode a punched card on standard input back into ASCII text.
 
-**Binary**
-> Prefix with 0b (e.g., 0b101010)
-
-**Hexadecimal**
-> Prefix with 0x (e.g., 0xFF, 0x2A)
+**-l**
+> Produce or decode 80-column cards. The default is 48 columns.
 
 # CAVEATS
 
-Only handles integer numbers. Does not support floating-point values or complex mathematical operations. For general calculations, use bc instead.
+This is a novelty program, not a data tool. Only the first line of input is encoded, and characters outside the supported set are ignored. It does not perform binary, decimal, or hexadecimal base conversion: for that use **bc** or **dc**.
+
+# HISTORY
+
+**bcd** first appeared in Version 6 AT&T UNIX and emulates the punched cards used by the GE 635 and GE 645 computers at Bell Labs in the late 1960s and early 1970s. It is distributed today as part of the **bsdgames** package.
 
 # SEE ALSO
 
-[bc](/man/bc)(1), [printf](/man/printf)(1), [dc](/man/dc)(1)
+[ppt](/man/ppt)(6), [morse](/man/morse)(6), [number](/man/number)(6), [bsdgames](/man/bsdgames)(6)

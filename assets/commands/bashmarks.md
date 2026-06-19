@@ -16,6 +16,10 @@ Directory bookmarking for the shell
 
 ```l```
 
+**Print** bookmark path
+
+```p [bookmark-name]```
+
 **Delete** bookmark
 
 ```d [bookmark-name]```
@@ -73,7 +77,7 @@ d apache
 
 # CAVEATS
 
-Requires sourcing in shell config. Bookmark names must be simple (no spaces or special chars). Different from z or autojump which use frequency. Must be installed separately.
+Requires sourcing **~/.local/bin/bashmarks.sh** in your shell config. Bookmark names must be simple (no spaces or special chars). Bookmarks are stored in **~/.sdirs**. Different from z or autojump which rank directories by frequency. Must be installed separately.
 
 # HISTORY
 
@@ -82,3 +86,9 @@ Requires sourcing in shell config. Bookmark names must be simple (no spaces or s
 # SEE ALSO
 
 [z](/man/z)(1), [autojump](/man/autojump)(1), [fasd](/man/fasd)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/huyng/bashmarks)```
+
+<!-- verified: 2026-06-19 -->

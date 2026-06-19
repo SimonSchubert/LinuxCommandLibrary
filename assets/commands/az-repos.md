@@ -16,13 +16,13 @@ Manage Azure DevOps Git repositories and pull requests
 
 ```az repos create --name [MyRepo] --project [MyProject]```
 
-**Clone a repository** URL
+**Get the clone URL** of a repository
 
 ```az repos show --repository [MyRepo] --project [MyProject] --query remoteUrl```
 
 **Delete a repository**
 
-```az repos delete --id [repo-id] --project [MyProject]```
+```az repos delete --id [repo_id] --project [MyProject]```
 
 **List pull requests**
 
@@ -30,11 +30,15 @@ Manage Azure DevOps Git repositories and pull requests
 
 **Create a pull request**
 
-```az repos pr create --source-branch [feature] --target-branch [main] --title [My PR] --project [MyProject]```
+```az repos pr create --repository [MyRepo] --source-branch [feature] --target-branch [main] --title [My PR]```
 
 **Show pull request details**
 
-```az repos pr show --id [pr-id]```
+```az repos pr show --id [pr_id]```
+
+**Complete (merge) a pull request**
+
+```az repos pr update --id [pr_id] --status completed```
 
 # SYNOPSIS
 
@@ -64,33 +68,66 @@ Manage Azure DevOps Git repositories and pull requests
 > Create a pull request.
 
 **pr show**
-> Show pull request details.
+> Get the details of a pull request.
 
 **pr update**
-> Update a pull request.
+> Update a pull request (set title, description, status; complete by setting --status completed).
 
-**pr complete**
-> Complete a pull request.
+**pr checkout**
+> Check out the PR source branch locally.
+
+**pr set-vote**
+> Vote on a pull request (approve, reject, and so on).
+
+**pr reviewer**
+> Add, list, or remove pull request reviewers.
+
+**pr work-item**
+> Link or unlink work items to a pull request.
 
 **policy**
-> Manage branch policies.
+> Manage branch policies (approver-count, build, comment-required, and more).
 
 **ref**
-> Manage Git references.
+> Manage Git references (create, delete, list, lock, unlock).
 
-**import**
-> Import a repository.
+**import create**
+> Create a Git import request.
+
+# PARAMETERS
+
+**--org**, **--organization**
+> Azure DevOps organization URL, for example `https://dev.azure.com/MyOrg/`. Required unless set as a default with **az devops configure -d organization=URL** or detected from local git config.
+
+**--project**, **-p**
+> Name or ID of the project. Required unless set as a default with **az devops configure -d project=NAME**.
+
+**--repository**, **-r**
+> Name or ID of the repository.
+
+**--detect**
+> Automatically detect the organization from local git context. Accepts **true** or **false**.
 
 # DESCRIPTION
 
-**az repos** manages Azure Repos, the Git repository hosting service in Azure DevOps. It provides commands for managing repositories, pull requests, branches, and policies.
+**az repos** manages Azure Repos, the Git repository hosting service in Azure DevOps. It provides commands for managing repositories, pull requests, references, branch policies, and repository imports.
 
-This is part of the Azure DevOps CLI extension and works with Azure DevOps Services.
+This command group is part of the **azure-devops** extension and works with Azure DevOps Services.
 
 # CAVEATS
 
-Requires the Azure DevOps CLI extension (**az extension add --name azure-devops**). Only works with Azure DevOps Services, not Azure DevOps Server. Configure defaults with **az devops configure**.
+Part of the **azure-devops** extension (Azure CLI 2.30.0 or higher). The extension installs automatically the first time an **az repos** command runs, or install it manually with **az extension add --name azure-devops**. Set persistent defaults with **az devops configure -d organization=URL project=NAME** to avoid repeating **--org** and **--project**.
 
 # SEE ALSO
 
-[az-devops](/man/az-devops)(1), [az-pipelines](/man/az-pipelines)(1), [git](/man/git)(1)
+[azure-cli](/man/azure-cli)(1), [az-devops](/man/az-devops)(1), [az-pipelines](/man/az-pipelines)(1), [git](/man/git)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Azure/azure-devops-cli-extension)```
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/repos)```
+
+```[Homepage](https://learn.microsoft.com/en-us/cli/azure/)```
+
+<!-- verified: 2026-06-19 -->

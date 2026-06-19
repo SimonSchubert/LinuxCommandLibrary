@@ -49,7 +49,7 @@ The tool is part of the BlueZ Bluetooth stack and provides low-level access to C
 # PARAMETERS
 
 **-t** _transport_
-> Transport type: HCI (default), USB, BCSP, H4, 3WIRE
+> Transport type: HCI (default), USB, BCSP, H4. 3WIRE is recognized but not implemented
 
 **-d** _device_
 > Device to use (default: first HCI device or /dev/ttyS0 for serial)
@@ -67,6 +67,9 @@ The tool is part of the BlueZ Bluetooth stack and provides low-level access to C
 
 **chiprev**
 > Get chip revision
+
+**memtypes**
+> Get memory types
 
 **clock**
 > Get local Bluetooth clock
@@ -90,22 +93,34 @@ The tool is part of the BlueZ Bluetooth stack and provides low-level access to C
 > Enable transmitter
 
 **singlechan** _channel_
-> Lock to single channel
+> Lock radio on a specific channel
+
+**hoppingon**
+> Revert to channel hopping
+
+**radiotest** _test_
+> Run radio tests (tests 4, 6 and 7 are transmit tests)
 
 **psget** _key_
-> Get PS key value
+> Get value for a PS key
 
 **psset** _key_ _value_
-> Set PS key value
+> Set value for a PS key
 
-**psclear** _key_
-> Clear PS key
+**psclr** _key_
+> Clear value for a PS key
 
 **pslist**
 > List all PS keys
 
+**psread**
+> Read all PS keys
+
 **psload** _file_
-> Load PS keys from PSR file
+> Load all PS keys from a PSR file
+
+**pscheck** _file_
+> Check the syntax of a PSR file
 
 # CAVEATS
 
@@ -114,3 +129,9 @@ Only works with CSR-based Bluetooth chipsets. Modifying PS keys can alter device
 # SEE ALSO
 
 [hciconfig](/man/hciconfig)(1), [hcitool](/man/hcitool)(1), [bluetoothctl](/man/bluetoothctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/bluez/bluez)```
+
+<!-- verified: 2026-06-19 -->

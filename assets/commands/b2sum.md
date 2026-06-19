@@ -33,33 +33,44 @@ The tool is part of GNU coreutils and provides similar functionality to md5sum a
 # PARAMETERS
 
 **-c**, **--check**
-> Verify checksums from file
+> Read checksums from the file(s) and verify them.
 
 **-l**, **--length** _bits_
-> Digest length in bits (default: 512)
+> Digest length in bits, a multiple of 8 (default: 512). Ignored when verifying.
 
 **-b**, **--binary**
-> Read in binary mode
+> Read in binary mode.
 
 **-t**, **--text**
-> Read in text mode
+> Read in text mode (default).
 
 **--tag**
-> Create BSD-style checksums
+> Create a BSD-style checksum line.
+
+**-z**, **--zero**
+> End each output line with NUL, not newline.
+
+**--ignore-missing**
+> When verifying, do not fail or report status for missing files.
 
 **--quiet**
-> Don't print OK for verified files
+> When verifying, do not print OK for each successfully verified file.
+
+**--status**
+> When verifying, print nothing; signal result only via exit status.
+
+**-w**, **--warn**
+> When verifying, warn about improperly formatted checksum lines.
 
 **--strict**
-> Exit non-zero on improperly formatted checksum lines
+> When verifying, exit non-zero for any improperly formatted checksum line.
 
 # FEATURES
 
 - Fast performance
-- Configurable output length
-- Keyed hashing support
+- Configurable output length (multiple of 8 bits)
 - Verification mode
-- Compatible with standard checksum tools
+- Same interface as md5sum and sha256sum
 
 # WORKFLOW
 
@@ -84,4 +95,12 @@ Not as widely supported as SHA-256. Different tools may use BLAKE2b vs BLAKE2s. 
 
 # SEE ALSO
 
-[sha256sum](/man/sha256sum)(1), [md5sum](/man/md5sum)(1), [b3sum](/man/b3sum)(1)
+[sha256sum](/man/sha256sum)(1), [md5sum](/man/md5sum)(1), [b3sum](/man/b3sum)(1), [cksum](/man/cksum)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/coreutils/coreutils)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/html_node/b2sum-invocation.html)```
+
+<!-- verified: 2026-06-19 -->

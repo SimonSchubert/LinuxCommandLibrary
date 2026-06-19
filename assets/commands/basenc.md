@@ -26,7 +26,7 @@ Use **base2** (binary)
 
 # SYNOPSIS
 
-**basenc** [_options_] [_file_]
+**basenc** _encoding_ [_options_] [_file_]
 
 # DESCRIPTION
 
@@ -48,6 +48,9 @@ The tool is part of GNU coreutils and provides a single interface for various en
 **--base32hex**
 > Base32 with extended hex alphabet
 
+**--base58**
+> Base58 encoding (avoids visually similar characters; useful for transcription)
+
 **--base16**
 > Base16 (hexadecimal)
 
@@ -64,7 +67,7 @@ The tool is part of GNU coreutils and provides a single interface for various en
 > Decode data
 
 **-w**, **--wrap=**_cols_
-> Wrap lines at width
+> Wrap encoded lines after _cols_ characters (default: 76, 0 = no wrap)
 
 **-i**, **--ignore-garbage**
 > Ignore non-alphabet characters
@@ -87,7 +90,7 @@ echo "A" | basenc --base2msbf
 
 # CAVEATS
 
-Relatively new tool (not on older systems). Some encodings less common. Wrapping behavior varies by encoding. Not all systems have basenc (fall back to base64/base32).
+Exactly one encoding option is required. With **--z85**, encoding input length must be a multiple of 4 bytes and decoding input a multiple of 5. Relatively new tool (not on older systems); fall back to base64/base32 where basenc is unavailable.
 
 # HISTORY
 
@@ -95,4 +98,12 @@ Relatively new tool (not on older systems). Some encodings less common. Wrapping
 
 # SEE ALSO
 
-[base64](/man/base64)(1), [base32](/man/base32)(1), [xxd](/man/xxd)(1)
+[base64](/man/base64)(1), [base32](/man/base32)(1), [b2sum](/man/b2sum)(1), [xxd](/man/xxd)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/coreutils/coreutils)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/html_node/basenc-invocation.html)```
+
+<!-- verified: 2026-06-19 -->

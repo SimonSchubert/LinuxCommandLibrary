@@ -64,10 +64,13 @@ All commands work transparently with both VCF and BCF files, compressed or uncom
 > annotate, csq, fill-tags
 
 **Manipulation**
-> reheader, isec, +split, +scatter
+> reheader, isec, head, cnv, polysomy
 
 **Consensus**
 > consensus
+
+**Plugins**
+> plugin (e.g. +split, +scatter, +fill-tags, +setGT)
 
 # PARAMETERS
 
@@ -84,10 +87,28 @@ All commands work transparently with both VCF and BCF files, compressed or uncom
 > Output uncompressed BCF (fastest for piping)
 
 **-r** _region_
-> Restrict to regions (chr:from-to format)
+> Restrict to comma-separated regions (chr:from-to format), requires an index
+
+**-R** _file_
+> Restrict to regions listed in a file (VCF, BED, or tab-delimited)
+
+**-t** _region_
+> Restrict to targets, streamed without an index
+
+**-T** _file_
+> Restrict to targets listed in a file
 
 **-s** _samples_
-> Comma-separated list of samples to include
+> Comma-separated list of samples to include (prefix ^ to exclude)
+
+**-S** _file_
+> Read the sample list from a file
+
+**--threads** _int_
+> Number of extra worker threads used for output compression
+
+**-W, --write-index** _[fmt]_
+> Automatically index the output (tbi or csi)
 
 **-i** _expression_
 > Include sites matching filter expression
@@ -108,4 +129,14 @@ bcftools was developed as part of the **SAMtools** project, initially created by
 
 # SEE ALSO
 
-[samtools](/man/samtools)(1), [tabix](/man/tabix)(1), [bgzip](/man/bgzip)(1)
+[samtools](/man/samtools)(1), [tabix](/man/tabix)(1), [bgzip](/man/bgzip)(1), [vcftools](/man/vcftools)(1)
+
+# RESOURCES
+
+```[Homepage](https://samtools.github.io/bcftools/)```
+
+```[Source code](https://github.com/samtools/bcftools)```
+
+```[Documentation](https://samtools.github.io/bcftools/bcftools.html)```
+
+<!-- verified: 2026-06-19 -->

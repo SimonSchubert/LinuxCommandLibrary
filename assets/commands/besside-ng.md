@@ -20,11 +20,7 @@ Automated WiFi security auditing tool
 
 ```besside-ng -W [wlan0mon]```
 
-**Target networks matching regex**
-
-```besside-ng -R "[ESSID_pattern]" [wlan0mon]```
-
-**Upload WPA handshakes to cracking service**
+**Upload captured handshakes to a cracking server**
 
 ```besside-ng -s [wpa.darkircop.org] [wlan0mon]```
 
@@ -48,30 +44,33 @@ The tool requires a wireless interface in monitor mode. Captured WPA handshakes 
 > Target specific access point by MAC address
 
 **-c** _channel_
-> Lock to specific channel
-
-**-R** _regex_
-> Target ESSIDs matching regular expression
+> Lock to specific channel (otherwise hops across channels)
 
 **-s** _server_
-> Upload wpa.cap to cracking service
+> Upload the capture file to a WPA cracking server (e.g. wpa.darkircop.org)
 
 **-p** _pps_
-> Packet flood rate
+> Packets per second to send (flood rate)
 
 **-W**
-> WPA handshake capture only (skip WEP cracking)
+> Crack only WPA networks (skip WEP)
 
 **-v**
-> Verbose output (-vv for more)
+> Verbose mode; repeat (-vv, -vvv) for more detail
+
+**-h**
+> Show the help screen
 
 # OUTPUT FILES
 
 **wpa.cap**
-> Captured WPA handshakes
+> Captured WPA handshakes, ready for aircrack-ng
 
 **wep.cap**
 > Captured WEP traffic
+
+**besside.log**
+> Log of cracked networks and handshake status
 
 # CAVEATS
 
@@ -80,3 +79,13 @@ Requires wireless interface in monitor mode. Only use on networks you own or hav
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1), [aireplay-ng](/man/aireplay-ng)(1), [airmon-ng](/man/airmon-ng)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aircrack-ng/aircrack-ng)```
+
+```[Documentation](https://www.aircrack-ng.org/doku.php?id=besside-ng)```
+
+```[Homepage](https://www.aircrack-ng.org/)```
+
+<!-- verified: 2026-06-19 -->

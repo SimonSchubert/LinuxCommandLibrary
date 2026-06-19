@@ -44,7 +44,10 @@ Parse and extract data from HTML and XML documents
 > Find all matching elements.
 
 **soup.select(css_selector)**
-> Find elements using CSS selectors.
+> Find all elements matching a CSS selector.
+
+**soup.select_one(css_selector)**
+> Find the first element matching a CSS selector.
 
 **element.get_text()**
 > Extract text content from element.
@@ -66,7 +69,7 @@ Parse and extract data from HTML and XML documents
 **lxml**
 > Fast C-based parser (requires lxml package).
 
-**lxml-xml**
+**lxml-xml** (or **xml**)
 > XML parser using lxml.
 
 **html5lib**
@@ -98,4 +101,12 @@ Beautiful Soup was created by **Leonard Richardson** and first released in **200
 
 # SEE ALSO
 
-[scrapy](/man/scrapy)(1), [curl](/man/curl)(1), [wget](/man/wget)(1), [pup](/man/pup)(1)
+[python](/man/python)(1), [scrapy](/man/scrapy)(1), [curl](/man/curl)(1), [wget](/man/wget)(1), [pup](/man/pup)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.crummy.com/software/BeautifulSoup/)```
+
+```[Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)```
+
+<!-- verified: 2026-06-19 -->

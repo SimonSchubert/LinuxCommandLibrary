@@ -26,7 +26,7 @@ Manage Azure Blob Storage containers
 
 **Generate a SAS token** for a container
 
-```az storage container generate-sas -n [container-name] --permissions [dlrw] --expiry [2024-12-31T00:00Z] --account-name [account]```
+```az storage container generate-sas -n [container-name] --permissions [acdlrw] --expiry [2026-12-31T00:00Z] --account-name [account]```
 
 **Delete a container**
 
@@ -64,7 +64,7 @@ Containers can have different access levels: private (default), blob (anonymous 
 > policy create, policy delete, policy list, policy show, policy update
 
 **Compliance**
-> immutability-policy create, immutability-policy delete, legal-hold set, legal-hold clear
+> immutability-policy create, immutability-policy lock, immutability-policy extend, immutability-policy show, immutability-policy delete, legal-hold set, legal-hold clear, legal-hold show
 
 # PARAMETERS
 
@@ -78,10 +78,13 @@ Containers can have different access levels: private (default), blob (anonymous 
 > Storage account key
 
 **--public-access** _value_
-> Public access level: off, blob, container
+> Public access level: blob, container, off. Default off (private).
+
+**--auth-mode** _value_
+> Authentication mode: key (legacy account key) or login (your Azure AD credentials).
 
 **--fail-on-exist**
-> Fail if the container already exists
+> Throw an exception if the container already exists.
 
 **--permissions** _value_
 > SAS permissions: (a)dd, (c)reate, (d)elete, (l)ist, (r)ead, (w)rite
@@ -95,4 +98,14 @@ Container names must be 3-63 characters, lowercase letters, numbers, and hyphens
 
 # SEE ALSO
 
-[az-storage](/man/az-storage)(1), [az-storage-blob](/man/az-storage-blob)(1), [az-storage-account](/man/az-storage-account)(1)
+[az](/man/az)(1), [azure-cli](/man/azure-cli)(1), [az-storage](/man/az-storage)(1), [az-storage-blob](/man/az-storage-blob)(1), [az-storage-account](/man/az-storage-account)(1), [azcopy](/man/azcopy)(1)
+
+# RESOURCES
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/storage/container)```
+
+```[Homepage](https://learn.microsoft.com/en-us/cli/azure/)```
+
+```[Source code](https://github.com/Azure/azure-cli)```
+
+<!-- verified: 2026-06-19 -->

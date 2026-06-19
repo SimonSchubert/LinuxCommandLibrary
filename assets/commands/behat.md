@@ -54,8 +54,11 @@ Behat allows teams to describe application behavior in plain language that devel
 **--tags** _value_
 > Run only scenarios with matching tags (e.g., @smoke, @regression)
 
+**--name** _value_
+> Run only feature elements whose name matches the given string or regex
+
 **-f, --format** _value_
-> Output format: pretty, progress, html, junit, json
+> Output formatter: pretty (default), progress, junit
 
 **--out** _value_
 > Write output to a file or directory
@@ -72,15 +75,30 @@ Behat allows teams to describe application behavior in plain language that devel
 **--colors** / **--no-colors**
 > Force colored or non-colored output
 
-**--suite** _value_
+**-s, --suite** _value_
 > Run only the specified test suite
 
-**--profile** _value_
+**-p, --profile** _value_
 > Use a specific configuration profile
+
+**-c, --config** _value_
+> Use a specific configuration file (default: behat.yml or behat.yml.dist)
+
+**--dry-run**
+> Invoke formatters without actually executing tests or hooks
+
+**--stop-on-failure**
+> Stop processing on the first failed scenario
+
+**--rerun**
+> Re-run only the scenarios that failed in the previous run
+
+**--strict**
+> Fail the run unless every test explicitly passes (treat undefined/pending as failures)
 
 # CAVEATS
 
-Behat requires PHP 5.3.1 or higher. Feature files must use Gherkin syntax with proper indentation. Step definitions must be unique; duplicate definitions cause ambiguity errors. The default context file is **FeatureContext.php** in features/bootstrap/.
+Current Behat 3.x requires PHP 8.2 or higher (older 3.x releases ran on PHP 5.3.1+). Feature files must use Gherkin syntax with proper indentation. Step definitions must be unique; duplicate definitions cause ambiguity errors. The default context file is **FeatureContext.php** in features/bootstrap/.
 
 # HISTORY
 
@@ -88,4 +106,12 @@ Behat was created by **Konstantin Kudryashov** (everzet) in **2010** as the PHP 
 
 # SEE ALSO
 
-[phpunit](/man/phpunit)(1), [phpspec](/man/phpspec)(1), [cucumber](/man/cucumber)(1)
+[phpunit](/man/phpunit)(1), [phpspec](/man/phpspec)(1), [cucumber](/man/cucumber)(1), [composer](/man/composer)(1), [php](/man/php)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Behat/Behat)```
+
+```[Documentation](https://docs.behat.org/)```
+
+<!-- verified: 2026-06-19 -->

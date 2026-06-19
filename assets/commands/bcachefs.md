@@ -49,34 +49,53 @@ The filesystem supports tiered storage with automatic data movement between fast
 # SUBCOMMANDS
 
 **format**
-> Create a new bcachefs filesystem
+> Create a new bcachefs filesystem.
 
 **mount**
-> Mount a bcachefs filesystem
+> Mount a bcachefs filesystem.
+
+**fsck**
+> Check and repair a filesystem.
 
 **fs usage**
-> Display filesystem disk usage
+> Display filesystem disk usage.
 
 **device**
-> Manage devices in a filesystem
+> Manage devices in a filesystem (add, remove, evacuate, set state).
 
 **subvolume**
-> Manage subvolumes and snapshots
+> Manage subvolumes and snapshots.
 
 **data rereplicate**
-> Ensure all data meets replication requirements
+> Rewrite data so all extents meet their replication requirements.
 
 **set-fs-option**
-> Change filesystem options
+> Change filesystem options on a mounted or offline filesystem.
+
+**show-super**
+> Print the contents of a filesystem superblock.
+
+**unlock**
+> Unlock an encrypted filesystem before mounting.
 
 # CAVEATS
 
-bcachefs was merged into the Linux kernel in version **6.7**. Older kernels require external module compilation. The filesystem is still under active development; keep backups of important data.
+bcachefs was merged into the mainline Linux kernel in version **6.7** (released January 2024). Older kernels require building the external module. The filesystem is still under active development; keep backups of important data. The **bcachefs** userspace tools must match the on-disk format expected by your kernel.
 
 # HISTORY
 
-bcachefs was developed by Kent Overstreet, who also created bcache. Development began around **2015** as an evolution of bcache into a full-fledged filesystem. It was merged into mainline Linux in **2023**.
+bcachefs was developed by Kent Overstreet, who also created bcache. Development began around **2015** as an evolution of bcache into a full-fledged filesystem, and it was merged into mainline Linux in kernel **6.7** in early **2024**.
 
 # SEE ALSO
 
-[bcachefs-device](/man/bcachefs-device)(8), [mount](/man/mount)(8), [btrfs](/man/btrfs)(8)
+[bcachefs-device](/man/bcachefs-device)(8), [mkfs](/man/mkfs)(8), [fsck](/man/fsck)(8), [mount](/man/mount)(8), [btrfs](/man/btrfs)(8)
+
+# RESOURCES
+
+```[Homepage](https://bcachefs.org)```
+
+```[Source code](https://evilpiepirate.org/git/bcachefs-tools.git)```
+
+```[Documentation](https://bcachefs-docs.readthedocs.io/en/latest/)```
+
+<!-- verified: 2026-06-19 -->

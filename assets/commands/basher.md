@@ -30,7 +30,7 @@ Package manager for shell scripts
 
 **Initialize basher** in shell config
 
-```basher init```
+```basher init - [bash]```
 
 **Show package information**
 
@@ -46,7 +46,7 @@ Package manager for shell scripts
 
 Packages are installed to ~/.basher/cellar and linked to ~/.basher/bin. The package format expects executables in bin/ or the root directory, with optional man pages and completions.
 
-Basher supports packages from GitHub, GitLab, Bitbucket, or any git URL. It handles dependencies declared in package.json and can work with bash, zsh, and other shells.
+Basher supports packages from GitHub, GitLab, Bitbucket, or any git URL. A package may include a **package.sh** file declaring binaries, dependencies (DEPS), and completions, and basher works with bash, zsh, and fish.
 
 # PARAMETERS
 
@@ -71,8 +71,8 @@ Basher supports packages from GitHub, GitLab, Bitbucket, or any git URL. It hand
 **unlink** _name_
 > Remove linked package.
 
-**init**
-> Output shell initialization code.
+**init -** _shell_
+> Output shell initialization code for bash, zsh, or fish (eval its output).
 
 **commands** _package_
 > List commands provided by a package.
@@ -94,3 +94,9 @@ Requires git for package installation. Shell configuration must source basher in
 # SEE ALSO
 
 [bash](/man/bash)(1), [bpkg](/man/bpkg)(1), [git](/man/git)(1), [brew](/man/brew)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/basherpm/basher)```
+
+<!-- verified: 2026-06-19 -->

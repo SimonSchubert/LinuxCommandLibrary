@@ -10,7 +10,7 @@ Generate barcodes in PostScript format.
 
 **Generate a barcode as EPS**
 
-```barcode -b "[data]" -e EPS -o [output.eps]```
+```barcode -b "[data]" -E -o [output.eps]```
 
 **Generate Code 39 barcode**
 
@@ -42,16 +42,22 @@ Generate barcodes in PostScript format.
 > Data to encode in the barcode.
 
 **-e** _encoding_
-> Barcode encoding type (ean, upc, code39, code128, etc.).
+> Barcode encoding type (ean, upc, code39, code128, etc.). Defaults to the **BARCODE_ENCODING** environment variable or auto-detection.
+
+**-i** _file_
+> Read strings to encode from a file (default: stdin).
 
 **-o** _file_
 > Output file (default: stdout).
 
-**-g** _WxH_
-> Barcode geometry (width x height in points).
+**-g** _geometry_
+> Barcode geometry of the form _WxH+x+y_ (size and position).
 
 **-n**
-> No text; suppress human-readable label below barcode.
+> Numeric output: print only the bars, suppressing the human-readable label.
+
+**-c**
+> Omit the checksum character for encodings that allow it.
 
 **-t** _WxH_
 > Table mode: generate multiple barcodes per page.
@@ -103,3 +109,11 @@ GNU barcode was written by **Alessandro Rubini** and first released in the **lat
 # SEE ALSO
 
 [qrencode](/man/qrencode)(1), [zint](/man/zint)(1), [gs](/man/gs)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/barcode/)```
+
+```[Source code](https://git.savannah.gnu.org/cgit/barcode.git)```
+
+<!-- verified: 2026-06-19 -->

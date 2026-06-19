@@ -43,34 +43,52 @@ Music library manager and metadata organizer
 # PARAMETERS
 
 **import** [_path_]
-> Import music files into the library.
+> Import music files into the library, tagging via MusicBrainz.
 
-**ls** [_query_]
+**list** (**ls**) [_query_]
 > List tracks or albums matching query.
 
 **modify** _query_ _field=value_
 > Modify metadata for matching items.
 
-**move** [_query_]
-> Move files to match configured paths.
+**move** (**mv**) [_query_]
+> Move (or copy with -c) files to match configured paths.
 
-**rm** _query_
-> Remove items from the library.
+**remove** (**rm**) _query_
+> Remove items from the library (add -d to delete the files too).
 
-**update** [_query_]
-> Update library from file changes.
+**update** (**upd**) [_query_]
+> Update library from on-disk tag changes.
 
-**stats**
+**write** [_query_]
+> Write database metadata back into the file tags.
+
+**stats** [_query_]
 > Show library statistics.
 
+**fields**
+> List the available metadata fields for queries.
+
+**config** [**-pe**]
+> Show config (-p path, -e edit in $EDITOR).
+
 **-a**, **--album**
-> Operate on albums instead of tracks.
+> Operate on albums instead of individual tracks.
 
 **-f**, **--format** _template_
-> Custom output format.
+> Custom output format string for list output.
 
 **-A**, **--noautotag**
-> Skip automatic tagging during import.
+> Skip automatic MusicBrainz tagging during import.
+
+**-s**, **--singletons**
+> Import tracks as standalone singletons rather than albums.
+
+**-c**, **--copy** / **-C**, **--nocopy**
+> Copy files into the library directory (or leave them in place).
+
+**-t**, **--timid**
+> Prompt for confirmation on every import candidate.
 
 # QUERY SYNTAX
 
@@ -101,7 +119,7 @@ The plugin system extends functionality with features like fetching lyrics, mana
 # CONFIGURATION
 
 **~/.config/beets/config.yaml**
-> Main configuration file for library paths, import behavior, plugins, and metadata preferences.
+> Main configuration file for library paths, import behavior, plugins, and metadata preferences. Set the **BEETSDIR** environment variable to use a different directory (and library database). Run `beet config -p` to print the active path.
 
 # CAVEATS
 
@@ -113,4 +131,12 @@ Beets was created by **Adrian Sampson** starting in **2010** as a research proje
 
 # SEE ALSO
 
-[mpd](/man/mpd)(1), [kid3](/man/kid3)(1), [picard](/man/picard)(1), [metaflac](/man/metaflac)(1)
+[picard](/man/picard)(1), [kid3](/man/kid3)(1), [metaflac](/man/metaflac)(1), [mpd](/man/mpd)(1), [mpc](/man/mpc)(1), [ffmpeg](/man/ffmpeg)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/beetbox/beets)```
+
+```[Documentation](https://beets.readthedocs.io/)```
+
+<!-- verified: 2026-06-19 -->

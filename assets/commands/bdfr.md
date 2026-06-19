@@ -55,14 +55,20 @@ The tool has three modes: **download** (downloads linked media like images and v
 
 # PARAMETERS
 
-**--subreddit** _name_
-> Target subreddit(s), comma-separated for multiple
+**-s, --subreddit** _name_
+> Target subreddit(s); repeatable and comma-separated for multiple
 
-**--user** _name_
-> Target Reddit username; use "me" for authenticated user
+**-u, --user** _name_
+> Target Reddit username; use "me" for authenticated user (repeatable)
+
+**-m, --multireddit** _name_
+> Target a user's multireddit (requires --user; repeatable)
+
+**-l, --link** _url_
+> Download a single submission by URL or ID (repeatable)
 
 **-L, --limit** _n_
-> Maximum number of submissions to process
+> Maximum number of submissions per source (default: roughly 1000, the Reddit API ceiling)
 
 **--submitted**
 > Download user's submitted posts
@@ -86,18 +92,30 @@ The tool has three modes: **download** (downloads linked media like images and v
 > Time filter: all, hour, day, week, month, year
 
 **--all-comments**
-> Archive all comments on submissions
+> Archive all of a user's comments (archive mode, with --user)
+
+**-f, --format** _type_
+> Archive output format: json (default), xml, yaml
 
 **--file-scheme** _format_
-> Custom filename format (e.g., '{POSTID}')
+> Custom filename template (placeholders: {POSTID}, {TITLE}, {REDDITOR}, {SUBREDDIT}, {DATE}, {FLAIR}, {UPVOTES})
+
+**--folder-scheme** _format_
+> Custom folder template using the same placeholders
+
+**--skip** _ext_
+> Skip files with the given extension (download mode; repeatable)
+
+**--no-dupes**
+> Skip files already downloaded, detected by MD5 hash (download mode)
 
 **-v, --verbose**
-> Increase output verbosity
+> Increase output verbosity (repeatable)
 
 # CONFIGURATION
 
 **~/.config/bdfr/default_config.cfg**
-> Main configuration file with client ID, secret, and default options.
+> Main configuration file (Linux) holding client_id, client_secret, scopes, and default options. On macOS it lives under ~/Library/Application Support/bdfr.
 
 # CAVEATS
 
@@ -109,4 +127,12 @@ BDFR was created as a modernized fork of earlier Reddit downloading tools, devel
 
 # SEE ALSO
 
-[gallery-dl](/man/gallery-dl)(1), [youtube-dl](/man/youtube-dl)(1), [wget](/man/wget)(1)
+[gallery-dl](/man/gallery-dl)(1), [yt-dlp](/man/yt-dlp)(1), [youtube-dl](/man/youtube-dl)(1), [wget](/man/wget)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Serene-Arc/bulk-downloader-for-reddit)```
+
+```[Documentation](https://github.com/Serene-Arc/bulk-downloader-for-reddit/blob/master/README.md)```
+
+<!-- verified: 2026-06-19 -->

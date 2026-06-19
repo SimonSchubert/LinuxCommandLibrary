@@ -12,9 +12,17 @@ Breadth-first file search
 
 ```bfs [/path] -name ["*.txt"]```
 
-**Breadth-first** search
+**Find** only regular files
 
 ```bfs [/path] -type f```
+
+**Search** in parallel with N threads
+
+```bfs [/path] -j [8] -name ["*.c"]```
+
+**Exclude** a subtree from the search
+
+```bfs [/path] -exclude -name [node_modules]```
 
 **Execute** command
 
@@ -56,6 +64,38 @@ The tool is compatible with GNU find but uses a different traversal strategy.
 **-maxdepth** _n_
 > Maximum depth to descend
 
+# BFS-SPECIFIC FLAGS
+
+**-j** _n_
+> Search with N threads in parallel (default: number of CPUs, up to 8)
+
+**-S** _bfs|dfs|ids|eds_
+> Select the search strategy: breadth-first (default), depth-first, iterative deepening, or exponential deepening
+
+**-color** / **-nocolor**
+> Turn colors on or off (default: -color when output is a terminal)
+
+**-hidden** / **-nohidden**
+> Include or exclude hidden files (those beginning with .)
+
+**-exclude** _expression_
+> Exclude all paths matching the expression from the search
+
+**-unique**
+> Skip files that have already been seen (useful with -L)
+
+**-x**
+> Do not descend into other mount points (same as -xdev)
+
+**-status**
+> Display a status bar while searching
+
+**-files0-from** _file_
+> Read NUL-separated starting paths from a file
+
+**-D** _flag_
+> Turn on a debugging flag
+
 # DIFFERENCES FROM FIND
 
 - **Breadth-first** traversal order
@@ -90,3 +130,11 @@ Less widely available than find. Different traversal order may affect some opera
 # SEE ALSO
 
 [find](/man/find)(1), [fd](/man/fd)(1), [locate](/man/locate)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tavianator/bfs)```
+
+```[Homepage](https://tavianator.com/projects/bfs.html)```
+
+<!-- verified: 2026-06-19 -->

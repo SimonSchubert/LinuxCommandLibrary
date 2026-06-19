@@ -85,4 +85,12 @@ Not encryption (easily reversible). Increases size by ~33%. Line wrapping can ca
 
 # SEE ALSO
 
-[base32](/man/base32)(1), [basenc](/man/basenc)(1), [openssl](/man/openssl)(1)
+[base32](/man/base32)(1), [basenc](/man/basenc)(1), [b2sum](/man/b2sum)(1), [openssl](/man/openssl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/coreutils/coreutils)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/html_node/base64-invocation.html)```
+
+<!-- verified: 2026-06-19 -->

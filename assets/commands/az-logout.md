@@ -18,14 +18,14 @@ Logout **specific user**
 
 # DESCRIPTION
 
-**az logout** removes stored authentication credentials for the Azure CLI. It clears access tokens and refresh tokens from the local credential cache.
+**az logout** logs out to remove access to Azure subscriptions. It clears access tokens and refresh tokens for the account from the local credential cache.
 
 The command is useful when switching between accounts or securing a shared system.
 
 # PARAMETERS
 
 **--username** _user_
-> Logout specific account
+> Account user to log out. If missing, log out the current active account.
 
 # WORKFLOW
 
@@ -48,3 +48,13 @@ Does not revoke tokens on Azure side, only removes local cache. Service principa
 # SEE ALSO
 
 [az-login](/man/az-login)(1), [az-account](/man/az-account)(1), [az](/man/az)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Azure/azure-cli)```
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/reference-index#az-logout)```
+
+```[Homepage](https://learn.microsoft.com/en-us/cli/azure/)```
+
+<!-- verified: 2026-06-19 -->

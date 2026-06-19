@@ -29,27 +29,51 @@ Device labels organize storage into groups (like ssd or hdd) and individual devi
 # SUBCOMMANDS
 
 **add**
-> Add a new device to the filesystem
-
-**evacuate**
-> Move all data off a device in preparation for removal
+> Add a device to an existing filesystem
 
 **remove**
-> Remove a device from the filesystem
+> Remove a device from a filesystem
 
 **online**
-> Bring an offline device back online
+> Re-add a device to a running filesystem
 
 **offline**
 > Take a device offline without removing it
 
+**evacuate**
+> Move all data off of a given device
+
+**set-state** _new-state_ _device_
+> Set the device state to rw, ro, failed, or spare
+
+**resize**
+> Resize the filesystem on a device
+
 # PARAMETERS
 
-**--label** _group.name_
-> Assign a label to categorize the device (e.g., ssd.cache, hdd.bulk)
+**-l, --label** _label_
+> Assign a disk label to categorize the device (e.g., ssd.cache, hdd.bulk)
 
-**--force**
-> Force device removal even if it would reduce redundancy
+**--fs_size** _size_
+> Size of filesystem to use on the device (add)
+
+**--bucket** _size_
+> Set the bucket size (add)
+
+**--discard**
+> Enable discards on the device (add)
+
+**-f, --force**
+> Force the operation even if data redundancy would be degraded, or use a device that appears already formatted
+
+**-F, --force-metadata**
+> Force removal even if some metadata could not be migrated (remove)
+
+**--force-if-data-lost**
+> Force a state change even if data will be lost (set-state)
+
+**-o, --offline**
+> Operate on an offline device (set-state)
 
 # CAVEATS
 
@@ -57,4 +81,12 @@ Removing devices may take considerable time depending on data volume. Ensure suf
 
 # SEE ALSO
 
-[bcachefs](/man/bcachefs)(8), [mount](/man/mount)(8)
+[bcachefs](/man/bcachefs)(8), [mkfs](/man/mkfs)(8), [fsck](/man/fsck)(8), [mount](/man/mount)(8)
+
+# RESOURCES
+
+```[Homepage](https://bcachefs.org)```
+
+```[Source code](https://evilpiepirate.org/git/bcachefs-tools.git)```
+
+<!-- verified: 2026-06-19 -->

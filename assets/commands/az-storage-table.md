@@ -22,9 +22,9 @@ Manage Azure Table Storage tables
 
 **Generate a SAS token** for a table
 
-```az storage table generate-sas --name [mytable] --permissions [raud] --expiry [2024-12-31] --account-name [mystorageaccount]```
+```az storage table generate-sas --name [mytable] --permissions [raud] --expiry [2026-12-31T00:00Z] --account-name [mystorageaccount]```
 
-**Show table policy**
+**List stored access policies** for a table
 
 ```az storage table policy list --table-name [mytable] --account-name [mystorageaccount]```
 
@@ -49,17 +49,11 @@ Manage Azure Table Storage tables
 **generate-sas**
 > Generate a shared access signature for a table.
 
-**policy create**
-> Create a stored access policy.
-
-**policy delete**
-> Delete a stored access policy.
-
-**policy list**
-> List stored access policies.
+**policy create / delete / list / show / update**
+> Manage stored access policies for a table.
 
 **stats**
-> Get table statistics (geo-replication).
+> Retrieve replication statistics for the Table service (requires RA-GRS).
 
 # PARAMETERS
 
@@ -70,10 +64,16 @@ Manage Azure Table Storage tables
 > Storage account name.
 
 **--account-key**
-> Storage account key.
+> Storage account key. Env: AZURE_STORAGE_KEY.
+
+**--auth-mode** _value_
+> Authentication mode: key (legacy account key) or login (Azure AD credentials).
 
 **--permissions**
-> SAS permissions (r=read, a=add, u=update, d=delete).
+> SAS permissions for generate-sas: (r)ead/query, (a)dd, (u)pdate, (d)elete. Combinable, for example raud.
+
+**--start-pk** / **--end-pk** / **--start-rk** / **--end-rk**
+> Restrict a table SAS to a partition-key and row-key range.
 
 # DESCRIPTION
 
@@ -87,4 +87,14 @@ Requires Azure CLI and valid storage credentials. Table names must follow Azure 
 
 # SEE ALSO
 
-[az-storage-entity](/man/az-storage-entity)(1), [az-storage-queue](/man/az-storage-queue)(1), [az](/man/az)(1)
+[az](/man/az)(1), [azure-cli](/man/azure-cli)(1), [az-storage](/man/az-storage)(1), [az-storage-entity](/man/az-storage-entity)(1), [az-storage-queue](/man/az-storage-queue)(1), [az-storage-account](/man/az-storage-account)(1)
+
+# RESOURCES
+
+```[Documentation](https://learn.microsoft.com/en-us/cli/azure/storage/table)```
+
+```[Homepage](https://learn.microsoft.com/en-us/cli/azure/)```
+
+```[Source code](https://github.com/Azure/azure-cli)```
+
+<!-- verified: 2026-06-19 -->
