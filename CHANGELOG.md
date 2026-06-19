@@ -1,3 +1,12 @@
+## v4.2.1 — 2026-06-19
+
+### Features
+- Added new Linux commands across multiple batches
+
+### Improvements
+- Improved command documentation across many entries
+- Upgraded Gradle wrapper to 9.6.0
+
 ## v4.2.0 — 2026-06-13
 
 ### Features

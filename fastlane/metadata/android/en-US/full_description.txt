@@ -1,4 +1,4 @@
-The app currently has <b>8567</b> manual pages, <b>30</b> basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
+The app currently has <b>8581</b> manual pages, <b>30</b> basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
 
 <b>Categories</b>
 
