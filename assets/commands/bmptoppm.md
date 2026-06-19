@@ -24,7 +24,7 @@ Convert BMP images to PPM format
 
 **bmptoppm** reads a Microsoft Windows or OS/2 BMP file as input and produces a PPM (Portable PixMap) color image as output. This is part of the Netpbm package.
 
-This command is largely superseded by **bmptopnm**, which automatically determines the appropriate output format (PBM, PGM, or PPM) based on the input image characteristics.
+This command was replaced in Netpbm 9.25 (**March 2002**) by **bmptopnm**, which automatically determines the appropriate output format (PBM, PGM, or PPM) based on the input image characteristics. **bmptoppm** is retained only for backward compatibility and takes no options of its own.
 
 Input can be from a file or standard input; output is to standard output.
 
@@ -35,3 +35,11 @@ For grayscale BMP images, consider using **bmptopnm** instead, which will produc
 # SEE ALSO
 
 [bmptopnm](/man/bmptopnm)(1), [ppmtobmp](/man/ppmtobmp)(1), [pnmtojpeg](/man/pnmtojpeg)(1), [netpbm](/man/netpbm)(1)
+
+# RESOURCES
+
+```[Homepage](https://netpbm.sourceforge.net/)```
+
+```[Documentation](https://netpbm.sourceforge.net/doc/bmptoppm.html)```
+
+<!-- verified: 2026-06-19 -->

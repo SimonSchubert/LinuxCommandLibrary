@@ -57,11 +57,26 @@ Fast code formatter and linter for JavaScript, TypeScript, and CSS
 **ci**
 > Check for CI environments (stricter mode).
 
-**migrate**
-> Migrate from other tools (ESLint, Prettier).
+**migrate eslint** | **migrate prettier**
+> Read an existing ESLint or Prettier config and port its settings into biome.json. Add **--write** to apply.
 
 **--write**
-> Apply fixes and formatting to files.
+> Apply safe fixes and formatting to files (formerly **--apply**).
+
+**--fix**
+> Alias of **--write**; apply safe fixes.
+
+**--unsafe**
+> Also apply fixes marked unsafe (use with **--write**).
+
+**--only** _rule_
+> Run only the given lint rule or group.
+
+**--skip** _rule_
+> Skip the given lint rule or group.
+
+**--error-on-warnings**
+> Exit with an error code when warnings are emitted.
 
 **--reporter** _format_
 > Output format: summary, json, github, gitlab.
@@ -80,7 +95,7 @@ Fast code formatter and linter for JavaScript, TypeScript, and CSS
 
 # DESCRIPTION
 
-**Biome** is a fast code formatter, linter, and more for JavaScript, TypeScript, JSON, and CSS. It is designed as a unified toolchain to replace ESLint, Prettier, and other tools with a single, faster alternative.
+**Biome** is a fast code formatter, linter, and more for JavaScript, TypeScript, JSX, JSON, CSS, GraphQL, and (in newer releases) HTML. It is designed as a unified toolchain to replace ESLint, Prettier, and other tools with a single, faster alternative.
 
 Written in Rust, Biome provides exceptional performance - often 10-100x faster than JavaScript-based alternatives. It requires minimal configuration, with sensible defaults out of the box while remaining highly customizable through **biome.json**.
 
@@ -93,12 +108,22 @@ The tool integrates formatting and linting into a single pass, reducing overhead
 
 # CAVEATS
 
-Biome is relatively new and may not support all ESLint rules or Prettier options. Plugin systems are limited compared to ESLint. Some projects with unusual configurations may require adjustments during migration. CSS support is newer and less mature than JS/TS support.
+Biome may not support all ESLint rules or Prettier options, and some projects with unusual configurations require adjustments during migration. Biome 2.0 (2025) added a plugin system and type-aware linting, but the plugin ecosystem is still much smaller than ESLint's. CSS, GraphQL, and HTML support are newer than the mature JS/TS support.
 
 # HISTORY
 
-Biome emerged from **Rome Tools**, a project started by **Sebastian McKenzie** (creator of Babel) in **2020**. When Rome Tools Inc. ceased operations in **2023**, the community forked the project as Biome under a new governance model. The fork quickly gained traction, maintaining the performance-focused Rust implementation while accelerating development under community stewardship.
+Biome emerged from **Rome Tools**, a project started by **Sebastian McKenzie** (creator of Babel) in **2020**. When Rome Tools Inc. ceased operations in **2023**, the community forked the project as Biome under a new governance model. The fork quickly gained traction, maintaining the performance-focused Rust implementation while accelerating development under community stewardship. Biome 2.0, released in 2025, introduced a plugin system and type-aware linting.
 
 # SEE ALSO
 
-[eslint](/man/eslint)(1), [prettier](/man/prettier)(1), [deno](/man/deno)(1)
+[eslint](/man/eslint)(1), [prettier](/man/prettier)(1), [deno](/man/deno)(1), [node](/man/node)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/biomejs/biome)```
+
+```[Homepage](https://biomejs.dev/)```
+
+```[Documentation](https://biomejs.dev/guides/getting-started/)```
+
+<!-- verified: 2026-06-19 -->

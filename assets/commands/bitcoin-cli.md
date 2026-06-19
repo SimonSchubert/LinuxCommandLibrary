@@ -60,6 +60,15 @@ The tool is essential for interacting with Bitcoin Core nodes programmatically o
 **-regtest**
 > Use regression test network
 
+**-named**
+> Pass named arguments instead of positional ones
+
+**-getinfo**
+> Get general information from the remote server in a single call
+
+**-stdin**
+> Read extra arguments from standard input, one per line (useful for passphrases)
+
 # COMMON COMMANDS
 
 **Blockchain:**
@@ -76,6 +85,8 @@ The tool is essential for interacting with Bitcoin Core nodes programmatically o
 **Network:**
 - **getpeerinfo** - Connected peers
 - **getnetworkinfo** - Network information
+- **getmempoolinfo** - Memory pool state
+- **help** - List all commands or get help for one command
 
 # WORKFLOW
 
@@ -112,3 +123,11 @@ Requires bitcoind running. RPC credentials needed. Transactions are irreversible
 # SEE ALSO
 
 [bitcoind](/man/bitcoind)(1), [bitcoin-qt](/man/bitcoin-qt)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/bitcoin/bitcoin)```
+
+```[Homepage](https://bitcoincore.org)```
+
+<!-- verified: 2026-06-19 -->

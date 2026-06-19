@@ -41,28 +41,40 @@ The tool is essential for analyzing block I/O patterns, debugging storage perfor
 # PARAMETERS
 
 **-i** _file_
-> Input file (use "-" for stdin)
+> Base name for input files (default device.blktrace.cpu); use "-" for live stdin
 
 **-o** _file_
 > Output file (default: stdout)
 
-**-d** _dir_
-> Input directory for trace files
+**-D** _dir_
+> Prepend this directory to the input file names
+
+**-d** _file_
+> Dump a merged binary event stream to _file_
 
 **-f** _format_
-> Custom output format string
+> Custom output format string for all events
+
+**-F** _typ,format_
+> Output format string for a specific event type
 
 **-q**
 > Quiet mode; only print summary at end
 
 **-s**
-> Show per-program statistics
+> Show per-program (per-process) statistics
 
 **-t**
-> Track individual I/O completions
+> Track I/O timing; display time deltas per I/O
 
 **-w** _span_
-> Time span to process (in seconds)
+> Limit output to a time window; _end_ or _start:end_ in nanoseconds
+
+**-a** _mask_
+> Add _mask_ to the current trace action filter
+
+**-A** _hexmask_
+> Set the trace action filter to _hexmask_
 
 **-v**
 > More verbose output
@@ -89,3 +101,9 @@ blkparse was written by **Jens Axboe**, **Alan D. Brunelle**, and **Nathan Scott
 # SEE ALSO
 
 [blktrace](/man/blktrace)(8), [btrace](/man/btrace)(8), [btt](/man/btt)(1), [iostat](/man/iostat)(1)
+
+# RESOURCES
+
+```[Source code](https://git.kernel.org/pub/scm/linux/kernel/git/axboe/blktrace.git)```
+
+<!-- verified: 2026-06-19 -->

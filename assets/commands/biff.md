@@ -46,8 +46,16 @@ Using **su**(1) can cause permission issues with biff due to terminal ownership 
 
 # HISTORY
 
-The command is named after **Biff**, a dog belonging to one of the developers at the University of California, Berkeley during the development of **BSD 4.0** in the late 1970s. Biff was known for barking at the mail carrier, making the name a fitting choice for a mail notification utility.
+The command appeared in **4.0BSD** (released 1980), written by **John Foderaro** at the University of California, Berkeley. It is named after **Biff**, a dog belonging to fellow Berkeley student Heidi Stettner. The popular story that Biff barked at the mail carrier is disputed by Stettner herself, but the name stuck as a fitting choice for a mail notification utility.
+
+On modern systems the notification daemon is part of **GNU inetutils** (as in.comsat), and the biff client typically ships in a dedicated **biff** package on Debian and Ubuntu.
 
 # SEE ALSO
 
 [mail](/man/mail)(1), [sh](/man/sh)(1), [csh](/man/csh)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/inetutils/)```
+
+<!-- verified: 2026-06-19 -->

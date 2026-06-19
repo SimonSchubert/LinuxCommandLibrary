@@ -102,8 +102,16 @@ Requires the BlueZ stack and bluetoothd daemon running. Some devices require spe
 
 # HISTORY
 
-**BlueZ** is the official Linux Bluetooth protocol stack, originally developed by **Qualcomm** and maintained as an open-source project since the early **2000s**. The **bluetoothctl** utility was introduced in BlueZ 5 (released **2012**) as a replacement for the older hcitool and various other command-line utilities, consolidating Bluetooth management into a single modern interface.
+**BlueZ** is the official Linux Bluetooth protocol stack, originally written by Max Krasnyansky at **Qualcomm** and maintained as an open-source project since the early **2000s**. The **bluetoothctl** utility was introduced with BlueZ 5 (released **2012**) as a replacement for the older hcitool and various other command-line utilities, consolidating Bluetooth management into a single modern interface.
 
 # SEE ALSO
 
-[hciconfig](/man/hciconfig)(1), [rfkill](/man/rfkill)(8), [pulseaudio](/man/pulseaudio)(1)
+[hciconfig](/man/hciconfig)(1), [hcitool](/man/hcitool)(1), [rfkill](/man/rfkill)(8), [pulseaudio](/man/pulseaudio)(1)
+
+# RESOURCES
+
+```[Homepage](http://www.bluez.org/)```
+
+```[Source code](https://github.com/bluez/bluez)```
+
+<!-- verified: 2026-06-19 -->

@@ -28,17 +28,23 @@ Set **read-write**
 
 ```sudo blockdev --flushbufs /dev/sda1```
 
-Get **block size**
+Get **physical sector size**
 
 ```sudo blockdev --getpbsz /dev/sda1```
 
-Set **read-ahead**
+Set **read-ahead** in 512-byte sectors
 
 ```sudo blockdev --setra 128 /dev/sda1```
 
+**Reread** the partition table
+
+```sudo blockdev --rereadpt /dev/sda```
+
 # SYNOPSIS
 
-**blockdev** [_OPTIONS_] _device_...
+**blockdev** [**-q**] [**-v**] _command_... _device_...
+
+**blockdev** **--report** [_device_...]
 
 # DESCRIPTION
 
@@ -53,13 +59,25 @@ Set **read-ahead**
 > Get size in 512-byte sectors
 
 **--getsize64**
-> Get size in bytes
+> Print device size in bytes
+
+**--getss**
+> Print logical sector size in bytes, usually 512
 
 **--getpbsz**
-> Get physical block size
+> Get physical block (sector) size
 
 **--getbsz**
-> Get logical block size
+> Print the blocksize in bytes (the value the kernel uses internally, file-descriptor specific)
+
+**--getiomin**
+> Get minimum I/O size
+
+**--getioopt**
+> Get optimal I/O size
+
+**--getro**
+> Get read-only state. Prints 1 if read-only, 0 otherwise
 
 **--setro**
 > Set device to read-only
@@ -76,6 +94,15 @@ Set **read-ahead**
 **--getra**
 > Get current read-ahead value
 
+**--rereadpt**
+> Reread the partition table
+
+**-q**
+> Be quiet
+
+**-v**
+> Be verbose
+
 # CAVEATS
 
 Requires root privileges. Setting a device read-only while mounted may cause issues. Changes to read-ahead affect I/O performance and may not be beneficial for all workloads.
@@ -86,4 +113,12 @@ Requires root privileges. Setting a device read-only while mounted may cause iss
 
 # SEE ALSO
 
-[lsblk](/man/lsblk)(8), [blkid](/man/blkid)(8), [fdisk](/man/fdisk)(8)
+[lsblk](/man/lsblk)(8), [blkid](/man/blkid)(8), [fdisk](/man/fdisk)(8), [hdparm](/man/hdparm)(8), [partprobe](/man/partprobe)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://www.man7.org/linux/man-pages/man8/blockdev.8.html)```
+
+<!-- verified: 2026-06-19 -->

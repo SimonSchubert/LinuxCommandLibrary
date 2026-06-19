@@ -24,6 +24,10 @@ Search the **remote non-redundant** protein database
 
 ```blastp -query [query.fa] -db nr -remote```
 
+Display **help**
+
+```blastp -h```
+
 # SYNOPSIS
 
 **blastp** [_options_]
@@ -49,10 +53,13 @@ The tool is essential for identifying protein families, finding homologs across 
 > Expectation value (E) threshold for reporting matches
 
 **-task** _name_
-> Algorithm variant: blastp or blastp-fast
+> Algorithm variant: blastp (default), blastp-fast, or blastp-short
+
+**-matrix** _name_
+> Scoring matrix (default BLOSUM62; e.g. BLOSUM45, PAM30)
 
 **-outfmt** _format_
-> Output format (0=pairwise, 6=tabular, 7=tabular with headers)
+> Output format (0=pairwise, 6=tabular, 7=tabular with headers, 11=BLAST archive)
 
 **-out** _file_
 > Output file name
@@ -70,6 +77,18 @@ The tool is essential for identifying protein families, finding homologs across 
 
 Large database searches require significant memory and time. Remote searches are rate-limited by NCBI. Results should be interpreted in the context of sequence length and database size.
 
+# HISTORY
+
+BLAST was developed at NCBI (National Center for Biotechnology Information), with the original algorithm published in **1990** by Altschul et al. The BLAST+ rewrite of the command line applications was released in **2009** and is the current implementation that provides **blastp**.
+
 # SEE ALSO
 
-[blastn](/man/blastn)(1), [blastx](/man/blastx)(1), [makeblastdb](/man/makeblastdb)(1)
+[blastn](/man/blastn)(1), [blastx](/man/blastx)(1), [tblastn](/man/tblastn)(1), [makeblastdb](/man/makeblastdb)(1)
+
+# RESOURCES
+
+```[Homepage](https://blast.ncbi.nlm.nih.gov/)```
+
+```[Documentation](https://www.ncbi.nlm.nih.gov/books/NBK279690/)```
+
+<!-- verified: 2026-06-19 -->

@@ -59,27 +59,30 @@ blktrace produces binary trace files that are analyzed with blkparse, btt, or ot
 > Trace duration in seconds.
 
 **-b** _size_
-> Per-CPU buffer size in KB.
+> Per-CPU buffer size in KiB (default 512).
 
 **-n** _num_
-> Number of per-CPU buffers.
+> Number of per-CPU sub-buffers (default 4).
 
 **-a** _action_
-> Trace only specific actions.
+> Add an action to the trace filter mask (e.g. queue, complete).
 
 **-A** _mask_
-> Set action mask.
+> Set the trace filter to the given hex action mask.
 
-**-r** _relay_
-> Use specific debugfs relay path.
+**-r** _path_
+> debugfs mount point to use (default /sys/kernel/debug).
 
-**-I** _devs_
-> Add multiple devices from file.
+**-I** _file_
+> Add the devices listed in _file_ as trace targets.
 
-**-h**
-> Display help.
+**-l**, **--listen**
+> Run in server mode to receive traces over the network.
 
-**-V**
+**-h** _host_, **--host** _host_
+> Connect to the given network server when tracing.
+
+**-V**, **-v**
 > Display version.
 
 # CAVEATS
@@ -92,4 +95,10 @@ Requires root privileges. Must have debugfs mounted (usually at /sys/kernel/debu
 
 # SEE ALSO
 
-[blkparse](/man/blkparse)(1), [btt](/man/btt)(1), [iostat](/man/iostat)(1), [iotop](/man/iotop)(1)
+[blkparse](/man/blkparse)(1), [btrace](/man/btrace)(8), [btt](/man/btt)(1), [iostat](/man/iostat)(1), [iotop](/man/iotop)(1)
+
+# RESOURCES
+
+```[Source code](https://git.kernel.org/pub/scm/linux/kernel/git/axboe/blktrace.git)```
+
+<!-- verified: 2026-06-19 -->

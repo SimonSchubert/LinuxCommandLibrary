@@ -26,7 +26,11 @@ Display details about a Homebrew package
 
 **Show installed formula sizes**
 
-```brew info --size [formula]```
+```brew info --sizes [formula]```
+
+**Open the formula source page on GitHub**
+
+```brew info --github [formula]```
 
 # SYNOPSIS
 
@@ -41,13 +45,10 @@ For disabled and deprecated formulae, it also provides an explanation of the sta
 # PARAMETERS
 
 **--json** _version_
-> Output as JSON (v1 for formula default, v2 for formula and cask)
+> Print a JSON representation. The default version is v1 for formula, use v2 for formula and cask
 
 **--installed**
-> Show info for installed formulae only
-
-**--all**
-> Evaluate all available formulae and casks
+> Output a human-readable inventory of installed formulae and casks
 
 **--formula**
 > Treat all arguments as formulae
@@ -56,16 +57,19 @@ For disabled and deprecated formulae, it also provides an explanation of the sta
 > Treat all arguments as casks
 
 **--analytics**
-> Show verbose analytics data
+> Show global analytics data instead of formula or cask info
 
-**--size**
-> Show size of installed formulae and casks
+**--days** _count_
+> Show analytics over the given period, one of 30, 90 or 365 days
+
+**--github**
+> Open the GitHub source page for the formula or cask in a browser
+
+**--sizes**
+> Show the size of installed formulae and casks
 
 **--variations**
-> Include variations hash in JSON output
-
-**--github-packages-manifest**
-> Fetch GitHub Packages manifest for extra information
+> Include the variations hash in each formula's JSON output
 
 # CAVEATS
 
@@ -74,3 +78,13 @@ JSON output format may vary between Homebrew versions. Analytics data requires n
 # SEE ALSO
 
 [brew](/man/brew)(1), [brew-search](/man/brew-search)(1), [brew-list](/man/brew-list)(1), [brew-install](/man/brew-install)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Homebrew/brew)```
+
+```[Homepage](https://brew.sh)```
+
+```[Documentation](https://docs.brew.sh)```
+
+<!-- verified: 2026-06-19 -->

@@ -4,21 +4,25 @@ Expose local ports through a remote tunnel
 
 # TLDR
 
-**Expose** a local port to a remote Bore server
+**Expose** a local port using the public bore.pub server
 
-```bore local -t [remote_server_address] [local_port]```
+```bore local [local_port] --to bore.pub```
+
+**Expose** a local port to your own remote Bore server
+
+```bore local [local_port] --to [remote_server_address]```
 
 Expose a **specific local host** instead of localhost
 
-```bore local -l [host] -t [remote_server_address] [local_port]```
+```bore local [local_port] --local-host [host] --to [remote_server_address]```
 
-Specify a **remote server port** explicitly
+Request a **specific remote port** explicitly
 
-```bore local -t [remote_server_address] -p [remote_port] [local_port]```
+```bore local [local_port] --to [remote_server_address] --port [remote_port]```
 
 Use a **secret for authentication**
 
-```bore local -t [remote_server_address] -s [your_secret] [local_port]```
+```bore local [local_port] --to [remote_server_address] --secret [your_secret]```
 
 # SYNOPSIS
 
@@ -39,7 +43,7 @@ The connection is maintained as long as the command runs, and traffic is forward
 > Local host to forward from (default: localhost)
 
 **-p, --port** _port_
-> Remote port to request on the server
+> Remote port to request on the server (default: 0, meaning the server assigns a random available port)
 
 **-s, --secret** _secret_
 > Authentication secret for the server
@@ -49,8 +53,17 @@ The connection is maintained as long as the command runs, and traffic is forward
 
 # CAVEATS
 
-Remote port assignment may be automatic if not specified. Connection stability depends on network conditions. The secret must match the server's configured secret if authentication is required.
+When **--port** is 0 (the default), the server assigns a random available port and prints the resulting public address on startup. Connection stability depends on network conditions. The secret must match the server's configured secret if authentication is required. Forwarded traffic is not encrypted by bore itself.
 
 # SEE ALSO
 
 [bore](/man/bore)(1), [ssh](/man/ssh)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ekzhang/bore)```
+
+```[Homepage](https://bore.pub)```
+
+<!-- verified: 2026-06-19 -->
+

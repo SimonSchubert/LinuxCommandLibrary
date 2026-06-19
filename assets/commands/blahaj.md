@@ -1,6 +1,6 @@
 # TAGLINE
 
-Colorize text with pride flag colors
+Colorize text and print sharks with pride flag colors
 
 # TLDR
 
@@ -93,3 +93,9 @@ BLAHAJ was created by **GeopJr** as a fun terminal tool inspired by lolcat and t
 # SEE ALSO
 
 [lolcat](/man/lolcat)(1), [figlet](/man/figlet)(1), [cowsay](/man/cowsay)(1)
+
+# RESOURCES
+
+```[Source code](https://codeberg.org/GeopJr/BLAHAJ)```
+
+<!-- verified: 2026-06-19 -->

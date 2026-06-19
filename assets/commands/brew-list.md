@@ -60,19 +60,19 @@ Aliases: **brew ls**
 > List pinned formulae only
 
 **--multiple**
-> List packages with multiple versions
+> Only show formulae with multiple versions installed
 
 **-1**
 > Force output to one entry per line
 
 **-l**
-> List files in long format
+> List formulae and casks in long format
 
 **-r**
-> Reverse sort order
+> Reverse the sort order, listing the oldest entries first
 
 **-t**
-> Sort by modification time
+> Sort by time modified, listing most recently modified first
 
 # RELATED COMMANDS
 
@@ -89,3 +89,13 @@ Output format varies based on terminal capabilities and flags. Use --versions to
 # SEE ALSO
 
 [brew](/man/brew)(1), [brew-info](/man/brew-info)(1), [brew-outdated](/man/brew-outdated)(1), [brew-leaves](/man/brew-leaves)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Homebrew/brew)```
+
+```[Homepage](https://brew.sh)```
+
+```[Documentation](https://docs.brew.sh)```
+
+<!-- verified: 2026-06-19 -->

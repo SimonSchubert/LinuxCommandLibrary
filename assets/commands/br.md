@@ -20,13 +20,19 @@ Show **only directories**
 
 ```br -f```
 
+**Install** or reinstall the br shell function
+
+```broot --install```
+
 # SYNOPSIS
 
 **br** [_options_] [_path_]
 
 # DESCRIPTION
 
-**br** is a shell function that wraps **broot**, providing interactive directory tree navigation with the ability to change directories. It is the recommended way to use broot for shell integration.
+**br** is a shell function that wraps **broot**, providing interactive directory tree navigation with the ability to change the shell's working directory. It is the recommended way to use broot for shell integration. Supported shells are bash, zsh, fish, and nushell.
+
+On first run, broot offers to register the **br** function in your shell config. You can also install it manually with **broot --install**, or print the function with **broot --print-shell-function** _shell_.
 
 # PARAMETERS
 
@@ -54,4 +60,12 @@ The br function must be installed using "broot --install" for proper shell integ
 
 # SEE ALSO
 
-[broot](/man/broot)(1), [tree](/man/tree)(1), [ranger](/man/ranger)(1)
+[broot](/man/broot)(1), [tree](/man/tree)(1), [ranger](/man/ranger)(1), [nnn](/man/nnn)(1), [yazi](/man/yazi)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Canop/broot)```
+
+```[Homepage](https://dystroy.org/broot/)```
+
+<!-- verified: 2026-06-19 -->

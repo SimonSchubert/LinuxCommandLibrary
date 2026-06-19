@@ -57,11 +57,20 @@ The software is used for creating animated films, visual effects, games, and 3D 
 **--python-expr** _expr_
 > Execute Python expression
 
-**-x** _n_
-> Set render extension
+**-x** _0|1_
+> Add the file format extension to render output names (use-extension)
 
 **-E** _engine_
-> Render engine (BLENDER_EEVEE, CYCLES)
+> Render engine: CYCLES, BLENDER_EEVEE, or BLENDER_WORKBENCH (run `blender -E help` to list)
+
+**-P** _file_
+> Run the given Python script file (same as --python)
+
+**--factory-startup**
+> Skip reading the user config and startup file for a clean session
+
+**--version**
+> Print the Blender version and exit
 
 # BACKGROUND RENDERING
 
@@ -100,6 +109,18 @@ Heavy resource usage. Learning curve is steep. Background rendering requires all
 
 **Blender** was originally created by Ton Roosendaal in **1995** as in-house software, open-sourced in **2002** under GPL and has since become one of the most popular 3D creation tools.
 
+Note that order matters: arguments are evaluated left to right, so the .blend file must be given before the render flags that act on it.
+
 # SEE ALSO
 
-[gimp](/man/gimp)(1), [inkscape](/man/inkscape)(1), [ffmpeg](/man/ffmpeg)(1)
+[gimp](/man/gimp)(1), [inkscape](/man/inkscape)(1), [krita](/man/krita)(1), [ffmpeg](/man/ffmpeg)(1)
+
+# RESOURCES
+
+```[Source code](https://projects.blender.org/blender/blender)```
+
+```[Homepage](https://www.blender.org/)```
+
+```[Documentation](https://docs.blender.org/manual/en/latest/advanced/command_line/index.html)```
+
+<!-- verified: 2026-06-19 -->

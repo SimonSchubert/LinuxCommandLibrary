@@ -59,8 +59,20 @@ The tool reduces common git workflows to simpler commands while providing sugges
 **add**
 > Interactive file staging
 
+**pr**
+> View and check out GitHub pull requests interactively
+
+**release**
+> Bump tags and create a release
+
 **info**
-> Display current branch and status information
+> Display git statistics and configuration
+
+**update**
+> Update the bit CLI itself to the latest version
+
+**complete**
+> Generate shell completion
 
 All standard **git** commands are also available through bit.
 
@@ -91,3 +103,9 @@ bit was created by **Chris Walz** in **2020** as an experiment to modernize the 
 # SEE ALSO
 
 [git](/man/git)(1), [gh](/man/gh)(1), [tig](/man/tig)(1), [lazygit](/man/lazygit)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/chriswalz/bit)```
+
+<!-- verified: 2026-06-19 -->

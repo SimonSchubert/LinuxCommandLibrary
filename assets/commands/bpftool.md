@@ -66,13 +66,54 @@ eBPF is a powerful Linux kernel technology used for networking, security, tracin
 **btf**
 > Manage BTF (BPF Type Format) data
 
+**cgroup**
+> Show, attach, and detach BPF programs on cgroups
+
 **feature**
 > Probe kernel/device for BPF feature support
+
+**gen**
+> Generate skeleton C header files and BTF data from object files
+
+**struct_ops**
+> Register, unregister, and introspect BPF struct_ops
+
+**iter**
+> Create and pin BPF iterators
+
+# OPTIONS
+
+**-j**, **--json**
+> Generate JSON output.
+
+**-p**, **--pretty**
+> Generate human-readable JSON output (implies **-j**).
+
+**-d**, **--debug**
+> Print libbpf debug messages to stderr.
+
+**-f**, **--bpffs**
+> When showing programs, show file names of pinned objects.
+
+**-V**, **--version**
+> Print version number and supported features.
 
 # CAVEATS
 
 Requires root privileges or CAP_BPF capability. Output format may vary between kernel versions. Some features require specific kernel configuration options.
 
+# HISTORY
+
+**bpftool** is developed in the Linux kernel source tree under **tools/bpf/bpftool** and ships with the kernel. It is periodically synced to a stand-alone build mirror maintained by the libbpf project, which packages it independently of the full kernel tree.
+
 # SEE ALSO
 
 [bpftrace](/man/bpftrace)(8), [tc](/man/tc)(8), [perf](/man/perf)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/libbpf/bpftool)```
+
+```[Documentation](https://docs.kernel.org/bpf/index.html)```
+
+<!-- verified: 2026-06-19 -->

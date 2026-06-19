@@ -8,9 +8,9 @@ Collect Active Directory data for BloodHound analysis
 
 ```bloodhound-python -d [domain.local] -u [username] -p [password] -ns [dc_ip] -c all```
 
-**Collect specific data** (users, groups, computers)
+**Collect specific data** (comma-separated methods)
 
-```bloodhound-python -d [domain.local] -u [username] -p [password] -c [users,groups,computers]```
+```bloodhound-python -d [domain.local] -u [username] -p [password] -c [Group,LocalAdmin,Session]```
 
 **Use NTLM hash** for authentication
 
@@ -27,6 +27,10 @@ Collect Active Directory data for BloodHound analysis
 **Specify DNS server**
 
 ```bloodhound-python -d [domain.local] -u [username] -p [password] -ns [dns_server] -c all```
+
+**Collect against BloodHound CE** (use the CE ingestor)
+
+```bloodhound-ce-python -d [domain.local] -u [username] -p [password] -ns [dc_ip] -c all --zip```
 
 # SYNOPSIS
 
@@ -49,33 +53,54 @@ The tool uses graph theory to identify attack paths in Active Directory environm
 **-p, --password** _pass_
 > Password for authentication
 
-**--hashes** _LM:NT_
-> NTLM hash for pass-the-hash authentication
+**--hashes** _LMHASH:NTHASH_
+> NTLM hashes for pass-the-hash authentication. The LM portion may be left blank
+
+**--auth-method** _auto|ntlm|kerberos_
+> Authentication method to use (default: auto)
+
+**-aesKey** _hexkey_
+> AES key for Kerberos authentication (128 or 256 bit)
+
+**-no-pass**
+> Do not prompt for a password (use with -k and a ccache, or -no-pass for null sessions)
 
 **-ns, --nameserver** _ip_
-> DNS server/Domain Controller IP address
+> DNS server to query, usually a Domain Controller in the target domain
+
+**-dc** _host_
+> Override the Domain Controller hostname to query (default: detected via DNS)
+
+**-gc** _host_
+> Override the Global Catalog hostname to query
 
 **-c, --collectionmethod** _method_
-> Collection methods: all, users, groups, computers, trusts, sessions, acl, objectprops
+> Comma-separated collection methods: Default, Group, LocalAdmin, RDP, DCOM, PSRemote, Session, LoggedOn, Trusts, ACL, Container, ObjectProps, DCOnly, All
 
 **-k, --kerberos**
-> Use Kerberos authentication
+> Use Kerberos authentication. Grabs credentials from the ccache file (KRB5CCNAME environment variable)
 
 **--zip**
-> Compress output to a zip file
+> Compress the JSON output into a single zip file
 
 **-o, --outputdir** _dir_
 > Output directory for JSON files
 
+**-w** _workers_
+> Number of computer enumeration workers (default: 10)
+
 **--dns-tcp**
-> Use TCP for DNS queries
+> Use TCP instead of UDP for DNS queries
+
+**--use-ldaps**
+> Use LDAP over TLS (port 636) for the connection
 
 **-v**
 > Enable verbose output
 
 # CAVEATS
 
-Requires valid domain credentials. Some collection methods (like sessions) require specific privileges. Output is compatible with BloodHound 4.1+. Use responsibly and only on systems you have authorization to test.
+Requires valid domain credentials. Some collection methods (like Session and LoggedOn) require local administrator rights on the target hosts. The **bloodhound-python** command (legacy ingestor) targets BloodHound 4.2 and 4.3, while the separate **bloodhound-ce-python** command produces output for BloodHound Community Edition. Do not mix legacy and CE collector output. Use responsibly and only on systems you are authorized to test.
 
 # HISTORY
 
@@ -83,4 +108,12 @@ BloodHound was created by **@_wald0**, **@CptJesus**, and **@harmj0y** at **Spec
 
 # SEE ALSO
 
-[ldapsearch](/man/ldapsearch)(1), [impacket](/man/impacket)(1), [crackmapexec](/man/crackmapexec)(1)
+[ldapsearch](/man/ldapsearch)(1), [impacket](/man/impacket)(1), [netexec](/man/netexec)(1), [crackmapexec](/man/crackmapexec)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/dirkjanm/BloodHound.py)```
+
+```[Homepage](https://bloodhound.specterops.io/)```
+
+<!-- verified: 2026-06-19 -->

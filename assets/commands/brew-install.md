@@ -28,6 +28,14 @@ Install packages via Homebrew
 
 ```brew install --display-times [formula]```
 
+**Install the latest development (HEAD) version**
+
+```brew install --HEAD [formula]```
+
+**Preview what would be installed without installing**
+
+```brew install --dry-run [formula]```
+
 # SYNOPSIS
 
 **brew install** [_options_] _formula|cask_ ...
@@ -58,14 +66,23 @@ After installation, cleanup runs automatically for installed formulae or every 3
 **--verbose**
 > Print detailed build information
 
-**--build-from-source**
-> Compile formula from source instead of using bottle
+**-s, --build-from-source**
+> Compile formula from source instead of using a bottle
 
 **--force-bottle**
-> Install from bottle even if it would not normally be used
+> Install from a bottle even if it would not normally be used
+
+**--HEAD**
+> Install the HEAD version, fetching the latest commit from the upstream repository
+
+**-n, --dry-run**
+> Show what would be installed without actually installing anything
+
+**--keep-tmp**
+> Retain temporary build files after installation
 
 **--include-test**
-> Install test dependencies
+> Install test dependencies required to run brew test
 
 # ENVIRONMENT
 
@@ -85,3 +102,13 @@ Formula-specific options can be appended to the command. Bottles (precompiled bi
 # SEE ALSO
 
 [brew](/man/brew)(1), [brew-uninstall](/man/brew-uninstall)(1), [brew-upgrade](/man/brew-upgrade)(1), [brew-info](/man/brew-info)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Homebrew/brew)```
+
+```[Homepage](https://brew.sh)```
+
+```[Documentation](https://docs.brew.sh)```
+
+<!-- verified: 2026-06-19 -->

@@ -36,7 +36,10 @@ The tool is a GNU replacement for yacc with additional features and better error
 > Output file name
 
 **-d**, **--defines**
-> Generate header file with token definitions
+> Generate a header file with token definitions (also spelled **--header**)
+
+**-H**, **--header**[**=**_file_]
+> Generate the token-definitions header, optionally at a given path
 
 **-v**, **--verbose**
 > Create .output file with parser states
@@ -55,6 +58,12 @@ The tool is a GNU replacement for yacc with additional features and better error
 
 **-l**, **--no-lines**
 > Don't generate #line directives
+
+**-L**, **--language=**_lang_
+> Target output language: c, c++, or java
+
+**-y**, **--yacc**
+> Emulate POSIX yacc (default output names y.tab.c, y.tab.h)
 
 # GRAMMAR FILE FORMAT
 
@@ -103,8 +112,16 @@ Learning curve for grammar syntax. Shift/reduce and reduce/reduce conflicts poss
 
 # HISTORY
 
-**Bison** was written by Robert Corbett in **1985** as a free replacement for Unix yacc, later adopted by the GNU Project.
+**Bison** was written by Robert Corbett in **1985** as a free replacement for Unix yacc. Richard Stallman made it yacc-compatible, and it became part of the GNU Project. It is now maintained by Akim Demaille and others.
 
 # SEE ALSO
 
 [flex](/man/flex)(1), [yacc](/man/yacc)(1), [antlr](/man/antlr)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/bison/)```
+
+```[Documentation](https://www.gnu.org/software/bison/manual/)```
+
+<!-- verified: 2026-06-19 -->

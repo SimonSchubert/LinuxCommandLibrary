@@ -8,21 +8,25 @@ Manage Ethernet bridge interfaces
 
 ```sudo brctl show```
 
-**Create** bridge
+**Create** a bridge
 
-```sudo brctl add bridge_name```
+```sudo brctl addbr [bridge]```
 
-**Delete** bridge
+**Delete** a bridge
 
-```sudo brctl del bridge_name```
+```sudo brctl delbr [bridge]```
 
-**Add** interface to bridge
+**Add** an interface to a bridge
 
-```sudo brctl addif bridge_name eth0```
+```sudo brctl addif [bridge] [eth0]```
 
-**Remove** interface
+**Remove** an interface from a bridge
 
-```sudo brctl delif bridge_name eth0```
+```sudo brctl delif [bridge] [eth0]```
+
+**Enable** Spanning Tree Protocol on a bridge
+
+```sudo brctl stp [bridge] on```
 
 # SYNOPSIS
 
@@ -31,6 +35,8 @@ Manage Ethernet bridge interfaces
 # DESCRIPTION
 
 **brctl** manages Ethernet bridge interfaces on Linux. Bridges connect multiple network segments at Layer 2, allowing them to act as a single network. This is commonly used for virtualization, containers, and network infrastructure.
+
+It is part of the legacy **bridge-utils** package. No new features are added to it; modern setups should use **ip link** and the **bridge** command from iproute2 instead. For example, **brctl addbr br0** is equivalent to **ip link add br0 type bridge**, and **brctl addif br0 eth0** to **ip link set eth0 master br0**.
 
 # PARAMETERS
 
@@ -68,4 +74,12 @@ brctl is deprecated in favor of the ip and bridge commands from iproute2. Interf
 
 # SEE ALSO
 
-[bridge](/man/bridge)(8), [ip](/man/ip)(8)
+[bridge](/man/bridge)(8), [ip](/man/ip)(8), [ifconfig](/man/ifconfig)(8), [iptables](/man/iptables)(8)
+
+# RESOURCES
+
+```[Source code](https://kernel.googlesource.com/pub/scm/network/bridge/bridge-utils/)```
+
+```[Documentation](https://www.man7.org/linux/man-pages/man8/brctl.8.html)```
+
+<!-- verified: 2026-06-19 -->

@@ -61,10 +61,22 @@ Packages are configured using a **bpkg.json** file that defines metadata, depend
 > Display package metadata
 
 **update**
-> Update installed packages
+> Update the local bpkg index of available packages
 
 **source**
-> Source a package's bash files
+> Source a package's bash files into the current shell
+
+**init**
+> Interactively create a bpkg.json file
+
+**json**
+> Parse and query JSON (used internally)
+
+**show**
+> Show package readme or details from the index
+
+**list**
+> List packages available in the local index
 
 **term**
 > Terminal utilities
@@ -73,6 +85,9 @@ Packages are configured using a **bpkg.json** file that defines metadata, depend
 
 **-g, --global**
 > Install package globally to ${PREFIX:-/usr/local/bin}
+
+**-d, --dev**
+> Install development dependencies as well
 
 **-l, --list**
 > List available commands (with run)
@@ -97,3 +112,11 @@ bpkg was created as a simple package manager specifically for bash scripts, insp
 # SEE ALSO
 
 [bash](/man/bash)(1), [npm](/man/npm)(1), [basher](/man/basher)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/bpkg/bpkg)```
+
+```[Homepage](https://bpkg.sh)```
+
+<!-- verified: 2026-06-19 -->

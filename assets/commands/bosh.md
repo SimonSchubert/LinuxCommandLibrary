@@ -123,3 +123,13 @@ Steep learning curve. Complex configuration. Requires dedicated infrastructure. 
 # SEE ALSO
 
 [cf](/man/cf)(1), [terraform](/man/terraform)(1), [kubectl](/man/kubectl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cloudfoundry/bosh-cli)```
+
+```[Homepage](https://bosh.io)```
+
+```[Documentation](https://bosh.io/docs/cli-v2/)```
+
+<!-- verified: 2026-06-19 -->

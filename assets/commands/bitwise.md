@@ -30,13 +30,28 @@ Convert **hexadecimal**
 
 # PARAMETERS
 
+**-i, --interactive**
+> Force interactive mode (the default when no value or expression is given)
+
+**-w, --width** _b8|b16|b32|b64_
+> Set the bit width of the calculation
+
+**--no-color**
+> Disable colored output
+
+**-v, --version**
+> Print version information
+
+**-h, --help**
+> Show help message
+
 Values can be specified in different bases:
 > Decimal: plain numbers (123)
 > Hexadecimal: 0x prefix (0x7B)
 > Octal: 0 prefix (0173)
 > Binary: 0b prefix (0b1111011)
 
-Supports C-style arithmetic and bitwise operators.
+Supports C-style arithmetic and bitwise operators (NOT, OR, AND, XOR, and shifts). In command-line mode the result is printed in all bases at once.
 
 # CAVEATS
 
@@ -44,8 +59,14 @@ Interactive mode provides a visual bit toggle interface. Expressions with specia
 
 # HISTORY
 
-**bitwise** is an open-source terminal-based calculator for programmers.
+**bitwise** is an open-source (GPL-3.0) ncurses-based calculator written by **Ramon Fried** (mellowcandle). It targets low-level developers such as kernel and device-driver programmers who frequently work across number bases.
 
 # SEE ALSO
 
 [bc](/man/bc)(1), [calc](/man/calc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/mellowcandle/bitwise)```
+
+<!-- verified: 2026-06-19 -->

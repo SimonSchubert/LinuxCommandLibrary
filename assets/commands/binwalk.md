@@ -20,9 +20,13 @@ Analyze and extract firmware images
 
 ```binwalk -Me [firmware.bin]```
 
-**Signature** scan with hex dump
+**Carve** known and unknown contents to disk
 
-```binwalk -W [firmware.bin]```
+```binwalk -c [firmware.bin]```
+
+**List** supported signatures and extractors
+
+```binwalk -L```
 
 # SYNOPSIS
 
@@ -34,31 +38,54 @@ Analyze and extract firmware images
 
 The tool is essential for reverse engineering, security research, and firmware modification.
 
+As of version 3 (released 2024), binwalk was completely rewritten in Rust for greatly improved scanning speed, fewer false positives, and more built-in extractors. Several options from the older Python implementation (such as **--dd**, **--hexdump**, **--raw**, and **--disasm**) were removed or replaced.
+
 # PARAMETERS
 
 **-e**, **--extract**
-> Extract identified files
+> Automatically extract known file types
 
 **-M**, **--matryoshka**
 > Recursively scan extracted files
 
+**-c**, **--carve**
+> Carve both known and unknown file contents to disk
+
 **-E**, **--entropy**
-> Calculate entropy analysis
+> Generate an entropy graph (rendered with Plotly)
 
-**-W**, **--hexdump**
-> Show hex dump with results
+**-p**, **--png**
+> Save the entropy graph as a PNG file
 
-**-D**, **--dd** _type:ext_
-> Extract and rename by type
+**-a**, **--search-all**
+> Search for all signatures at all offsets
 
-**-r**, **--raw** _string_
-> Search for custom string
+**-d**, **--directory** _path_
+> Extract files and folders to a custom directory
 
-**-y**, **--disasm**
-> Disassemble executable code
+**-t**, **--threads** _count_
+> Manually specify the number of threads to use
 
-**--signature**
-> Custom signature file
+**-y**, **--include** _signatures_
+> Only scan for the given signatures
+
+**-x**, **--exclude** _signatures_
+> Do not scan for the given signatures
+
+**-l**, **--log** _file_
+> Log JSON results to a file ('-' for stdout)
+
+**-L**, **--list**
+> List supported signatures and extractors
+
+**-s**, **--stdin**
+> Read data from standard input
+
+**-q**, **--quiet**
+> Suppress normal stdout output
+
+**-v**, **--verbose**
+> During recursive extraction, display all results
 
 # FEATURES
 
@@ -85,8 +112,8 @@ binwalk -Me firmware.bin
 # Entropy analysis (finds compressed/encrypted regions)
 binwalk -E firmware.bin
 
-# Extract specific types
-binwalk -D 'gzip:gz' firmware.bin
+# Extract into a custom directory
+binwalk -e -d extracted/ firmware.bin
 ```
 
 # COMMON FINDINGS
@@ -103,8 +130,16 @@ Extraction may not work for custom formats. Encrypted sections appear as high en
 
 # HISTORY
 
-**binwalk** was created by Craig Heffner around **2010** for reverse engineering and analyzing firmware images from embedded devices.
+**binwalk** was created by Craig Heffner around **2010** for reverse engineering and analyzing firmware images from embedded devices. It is now maintained by ReFirmLabs. Version 3, a full rewrite in Rust, debuted in 2024.
 
 # SEE ALSO
 
-[foremost](/man/foremost)(1), [strings](/man/strings)(1), [file](/man/file)(1)
+[foremost](/man/foremost)(1), [strings](/man/strings)(1), [file](/man/file)(1), [dd](/man/dd)(1), [hexdump](/man/hexdump)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ReFirmLabs/binwalk)```
+
+```[Homepage](https://github.com/ReFirmLabs/binwalk)```
+
+<!-- verified: 2026-06-19 -->

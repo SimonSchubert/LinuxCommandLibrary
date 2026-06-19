@@ -69,8 +69,14 @@ Requires root privileges for writing to block devices. The bmap file must match 
 
 # HISTORY
 
-bmaptool was developed by the **Yocto Project** and **Intel** for efficient embedded Linux image deployment. It was designed to address the slow and unsafe nature of using **dd** for flashing large disk images, particularly those with significant empty space.
+bmaptool was originally developed by **Intel** for efficient embedded Linux image deployment, addressing the slow and unsafe nature of using **dd** for flashing large disk images, particularly those with significant empty space. The project moved to the **Yocto Project** in **2024**; the original Intel repository is now archived.
 
 # SEE ALSO
 
 [dd](/man/dd)(1), [pv](/man/pv)(1), [xzcat](/man/xzcat)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/yoctoproject/bmaptool)```
+
+<!-- verified: 2026-06-19 -->

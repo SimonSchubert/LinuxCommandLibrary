@@ -28,6 +28,14 @@ Deduplicating backup with compression and encryption
 
 ```borg prune --keep-daily [7] --keep-weekly [4] [/path/to/repo]```
 
+**Compact** the repository to actually free pruned space
+
+```borg compact [/path/to/repo]```
+
+**Mount** an archive to browse it as a filesystem
+
+```borg mount [/path/to/repo::backup-name] [/mnt/point]```
+
 # SYNOPSIS
 
 **borg** _command_ [_options_]
@@ -60,6 +68,9 @@ The tool provides security, efficiency, and reliability for local and remote bac
 
 **prune**
 > Delete old archives by retention policy
+
+**compact**
+> Free repository space freed by prune or delete (run after pruning)
 
 **info**
 > Show archive/repository information
@@ -107,18 +118,27 @@ borg mount /backup/repo::monday /mnt/backup
 
 # Prune old backups
 borg prune --keep-daily=7 --keep-weekly=4 /backup/repo
+
+# Reclaim the space freed by prune
+borg compact /backup/repo
 ```
 
 # FEATURES
 
-- Deduplication (chunk-level)
-- Compression (lz4, zstd, zlib)
-- Encryption (AES)
-- Remote backups over SSH
-- Sparse file support
-- Archive mounting
-- Data verification
-- Efficient storage
+**Deduplication**
+> Chunk-level deduplication shares common data across archives
+
+**Compression**
+> Supports lz4, zstd, zlib, and lzma
+
+**Encryption**
+> Authenticated AES encryption with repokey or keyfile modes
+
+**Remote backups**
+> Push backups to a remote repository over SSH
+
+**Other**
+> Sparse file support, archive mounting via FUSE, data verification, and efficient storage
 
 # CAVEATS
 
@@ -131,3 +151,14 @@ Repository corruption can lose all backups (keep offsite copies). Encryption key
 # SEE ALSO
 
 [restic](/man/restic)(1), [duplicity](/man/duplicity)(1), [rsync](/man/rsync)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/borgbackup/borg)```
+
+```[Homepage](https://www.borgbackup.org)```
+
+```[Documentation](https://borgbackup.readthedocs.io)```
+
+<!-- verified: 2026-06-19 -->
+

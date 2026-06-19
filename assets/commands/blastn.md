@@ -53,10 +53,16 @@ The tool supports multiple search algorithms including megablast (default, for h
 > Expectation value (E) threshold for reporting matches
 
 **-task** _name_
-> Algorithm variant: megablast, dc-megablast, or blastn
+> Algorithm variant: megablast (default), dc-megablast, blastn, blastn-short, or rmblastn
+
+**-word_size** _n_
+> Length of initial exact match seed (smaller finds more divergent hits)
+
+**-perc_identity** _n_
+> Report only alignments at or above this percent identity
 
 **-outfmt** _format_
-> Output format (0=pairwise, 6=tabular, 7=tabular with headers)
+> Output format (0=pairwise, 6=tabular, 7=tabular with headers, 11=BLAST archive)
 
 **-out** _file_
 > Output file name
@@ -80,4 +86,12 @@ BLAST was developed at NCBI (National Center for Biotechnology Information) with
 
 # SEE ALSO
 
-[blastp](/man/blastp)(1), [blastx](/man/blastx)(1), [makeblastdb](/man/makeblastdb)(1)
+[blastp](/man/blastp)(1), [blastx](/man/blastx)(1), [tblastn](/man/tblastn)(1), [makeblastdb](/man/makeblastdb)(1)
+
+# RESOURCES
+
+```[Homepage](https://blast.ncbi.nlm.nih.gov/)```
+
+```[Documentation](https://www.ncbi.nlm.nih.gov/books/NBK279690/)```
+
+<!-- verified: 2026-06-19 -->

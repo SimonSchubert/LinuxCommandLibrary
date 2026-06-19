@@ -8,6 +8,18 @@ Terminal-based resource monitor with graphs
 
 ```bpytop```
 
+**Start** with a low update interval (milliseconds)
+
+```bpytop --update [1000]```
+
+**Force** the TTY-friendly box-drawing mode
+
+```bpytop --low-color```
+
+**Open** the in-app help
+
+```bpytop --help```
+
 # SYNOPSIS
 
 **bpytop** [_options_]
@@ -78,8 +90,16 @@ Requires Python 3.6+. Higher CPU usage than native tools. Superseded by btop++ (
 
 # HISTORY
 
-**bpytop** was created by Jakob Palme (aristocratos) in **2020** as a Python rewrite of bashtop, later superseded by btop++ in **2021**.
+**bpytop** was created by Jakob P. Liljenberg (aristocratos) in **2020** as a Python rewrite of bashtop. The same author later began btop++ (a C++ rewrite, btop) in **2021**, which is now the actively developed successor; bpytop receives little ongoing development.
 
 # SEE ALSO
 
-[btop](/man/btop)(1), [htop](/man/htop)(1), [bashtop](/man/bashtop)(1)
+[btop](/man/btop)(1), [htop](/man/htop)(1), [bashtop](/man/bashtop)(1), [glances](/man/glances)(1), [top](/man/top)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aristocratos/bpytop)```
+
+```[Documentation](https://pypi.org/project/bpytop/)```
+
+<!-- verified: 2026-06-19 -->

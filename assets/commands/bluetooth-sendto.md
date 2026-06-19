@@ -48,3 +48,11 @@ Requires Bluetooth to be enabled and the target device to be paired and within r
 # SEE ALSO
 
 [bluetoothctl](/man/bluetoothctl)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gnome-bluetooth)```
+
+```[Documentation](https://manpages.debian.org/testing/gnome-bluetooth/bluetooth-sendto.1.en.html)```
+
+<!-- verified: 2026-06-19 -->

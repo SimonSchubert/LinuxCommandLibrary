@@ -20,6 +20,10 @@ Remove outdated downloads and old package versions
 
 ```brew cleanup --prune=[30]```
 
+**Remove all cached downloads**
+
+```brew cleanup --prune=all```
+
 **Scrub cache including latest versions**
 
 ```brew cleanup -s```
@@ -34,7 +38,9 @@ Remove outdated downloads and old package versions
 
 # DESCRIPTION
 
-**brew cleanup** removes old versions of installed formulae and casks, deletes cached downloads, and frees disk space. It cleans the Cellar and the download cache.
+**brew cleanup** removes stale lock files and outdated downloads for formulae and casks, and removes old versions of installed formulae. It cleans the Cellar and the download cache, freeing disk space.
+
+By default, downloads older than 120 days are removed. This threshold can be changed with HOMEBREW_CLEANUP_MAX_AGE_DAYS.
 
 Homebrew automatically performs cleanup after upgrades and periodically every 30 days unless HOMEBREW_NO_INSTALL_CLEANUP is set.
 
@@ -44,13 +50,13 @@ Homebrew automatically performs cleanup after upgrades and periodically every 30
 > Show what would be removed without removing
 
 **--prune** _days_
-> Remove cache files older than specified days
+> Remove all cache files older than specified days. Use --prune=all to remove everything
 
-**-s**
-> Scrub cache, including downloads for latest versions
+**-s, --scrub**
+> Scrub the cache, including downloads for even the latest versions
 
 **--prune-prefix**
-> Remove empty directories from Homebrew prefix
+> Only prune the symlinks and directories from the prefix, removing no other files
 
 **--formula**
 > Treat all arguments as formulae
@@ -79,3 +85,13 @@ Old versions are automatically removed during **brew upgrade**. The -s flag remo
 # SEE ALSO
 
 [brew](/man/brew)(1), [brew-upgrade](/man/brew-upgrade)(1), [brew-autoremove](/man/brew-autoremove)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Homebrew/brew)```
+
+```[Homepage](https://brew.sh)```
+
+```[Documentation](https://docs.brew.sh)```
+
+<!-- verified: 2026-06-19 -->

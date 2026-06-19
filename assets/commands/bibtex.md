@@ -4,19 +4,45 @@ Process bibliography references for LaTeX documents
 
 # TLDR
 
-**Generate** bibliography
+**Process the bibliography** for a document (pass the basename, without the .aux extension)
 
 ```bibtex [document]```
 
+**Process a specific** .aux file
+
+```bibtex [document.aux]```
+
+**Operate silently**, printing only error messages
+
+```bibtex -terse [document]```
+
+**Set the minimum** number of cross references for automatic inclusion
+
+```bibtex -min-crossrefs=[number] [document]```
+
 # SYNOPSIS
 
-**bibtex** _aux-file_
+**bibtex** [_options_] _auxname_[.aux]
 
 # DESCRIPTION
 
 **bibtex** processes bibliography information for LaTeX documents. It reads .aux files produced by LaTeX, looks up citations in .bib bibliography databases, formats them according to a bibliography style (.bst), and generates a .bbl file that LaTeX includes in the final document.
 
 The tool is essential for academic writing and managing citations in LaTeX.
+
+# PARAMETERS
+
+**-terse**
+> Operate silently, printing only error messages.
+
+**-min-crossrefs=**_number_
+> Minimum number of cross references required before a crossref base entry is automatically included in the bibliography (default: 2). Set a large value to disable automatic inclusion.
+
+**-help**
+> Display help and exit.
+
+**-version**
+> Display version information and exit.
 
 # WORKFLOW
 
@@ -52,11 +78,21 @@ pdflatex document.tex
 # BIBLIOGRAPHY STYLE
 
 Common styles:
-- **plain** - Numeric citations, alphabetical
-- **alpha** - Alpha-numeric citations
-- **abbrv** - Abbreviated names
-- **unsrt** - Unsorted, citation order
-- **ieeetr** - IEEE Transactions style
+
+**plain**
+> Numeric citations, sorted alphabetically.
+
+**alpha**
+> Alpha-numeric citation labels.
+
+**abbrv**
+> Like plain, but with abbreviated first names, months, and journal names.
+
+**unsrt**
+> Like plain, but entries appear in citation order.
+
+**ieeetr**
+> IEEE Transactions style.
 
 # BIB FORMAT
 
@@ -82,3 +118,9 @@ Requires multiple LaTeX/BibTeX runs. Error messages can be cryptic. BibTeX synta
 # SEE ALSO
 
 [biber](/man/biber)(1), [latex](/man/latex)(1), [pdflatex](/man/pdflatex)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.tug.org/bibtex/)```
+
+<!-- verified: 2026-06-19 -->

@@ -97,3 +97,11 @@ Key binding syntax must be passed as a single argument, matching the format used
 # SEE ALSO
 
 [bash](/man/bash)(1), [readline](/man/readline)(3)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/bash/)```
+
+```[Documentation](https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins)```
+
+<!-- verified: 2026-06-19 -->

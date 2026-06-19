@@ -103,3 +103,11 @@ bower update
 # SEE ALSO
 
 [npm](/man/npm)(1), [yarn](/man/yarn)(1), [pnpm](/man/pnpm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/bower/bower)```
+
+```[Homepage](https://bower.io)```
+
+<!-- verified: 2026-06-19 -->

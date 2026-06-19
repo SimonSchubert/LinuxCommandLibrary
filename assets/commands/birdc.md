@@ -106,8 +106,8 @@ bird> exit
 
 # CONFIGURATION
 
-**/etc/bird/bird.conf**
-> Main configuration file for the BIRD routing daemon that birdc controls.
+**/etc/bird.conf**
+> Main configuration file for the BIRD routing daemon that birdc controls. Distributions such as Debian use **/etc/bird/bird.conf** instead. The default control socket is **/run/bird/bird.ctl** (older builds use **/var/run/bird/bird.ctl**).
 
 # CAVEATS
 
@@ -115,8 +115,18 @@ Requires BIRD daemon running. Socket permissions may restrict access. Some comma
 
 # HISTORY
 
-**birdc** has been part of the BIRD suite since its creation in **1998** as the control interface for the routing daemon.
+**birdc** has been part of the BIRD suite since its creation in **1998** as the control interface for the routing daemon. BIRD was developed by Ondrej Filip, Pavel Machek, and Martin Mares, and is now maintained by CZ.NIC Labs. Up to BIRD 1.x a separate **birdc6** client controlled the IPv6 daemon; BIRD 2.x merged IPv4 and IPv6 into a single daemon, so **birdc** alone now manages both.
 
 # SEE ALSO
 
 [bird](/man/bird)(8), [bgpctl](/man/bgpctl)(8), [vtysh](/man/vtysh)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/CZ-NIC/bird)```
+
+```[Homepage](https://bird.network.cz/)```
+
+```[Documentation](https://bird.network.cz/?get_doc&f=bird.html&v=30)```
+
+<!-- verified: 2026-06-19 -->

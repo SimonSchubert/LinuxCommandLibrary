@@ -70,6 +70,12 @@ To discover a key's escape sequence, press **Ctrl+v** followed by the key at the
 **-p**
 > List bindings for prefix keys
 
+**-N** _newkeymap_ [_oldkeymap_]
+> Create a new keymap, optionally copying an existing one
+
+**-A** _oldkeymap_ _newkeymap_
+> Create an alias _newkeymap_ that points to _oldkeymap_
+
 # CAVEATS
 
 Key sequences vary between terminal emulators. Test bindings in your specific terminal environment. Function keys and special keys like Home/End may have different escape sequences depending on the terminal.
@@ -83,3 +89,11 @@ The bindkey command originated in **tcsh** (TENEX C Shell) and was later adopted
 # SEE ALSO
 
 [zsh](/man/zsh)(1), [tcsh](/man/tcsh)(1), [bash](/man/bash)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.zsh.org/)```
+
+```[Documentation](https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html)```
+
+<!-- verified: 2026-06-19 -->

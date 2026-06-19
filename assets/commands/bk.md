@@ -94,7 +94,7 @@ BitKeeper provides a simple command-line interface for managing source code hist
 
 # CAVEATS
 
-BitKeeper was proprietary until **2016** when it was released under the Apache 2.0 license. Most projects have migrated to Git. Some commands differ from Git equivalents despite similar functionality.
+BitKeeper was proprietary until **2016** when it was released under the Apache 2.0 license. Development has since ceased; the final release was **7.3.3** in **2018**. Most projects have migrated to Git. Some commands differ from Git equivalents despite similar functionality.
 
 # HISTORY
 
@@ -103,3 +103,9 @@ BitKeeper was created by **Larry McVoy** in **1998** and became famous as the ve
 # SEE ALSO
 
 [git](/man/git)(1), [hg](/man/hg)(1), [svn](/man/svn)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/bitkeeper-scm/bitkeeper)```
+
+<!-- verified: 2026-06-19 -->

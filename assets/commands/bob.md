@@ -71,13 +71,19 @@ The tool manages multiple Neovim installations, automatically downloading and se
 > Show available versions for download
 
 **sync**
-> Install version from sync file
+> Install the version pinned in the config file
+
+**update**
+> Update an installed version (use **--all** to update every version)
+
+**rollback**
+> Roll back to a previously installed nightly build
 
 **erase**
 > Remove all bob data and installations
 
-**rollback**
-> Revert to previously used version
+**complete**
+> Generate a shell completion script
 
 # VERSION SPECIFIERS
 
@@ -98,7 +104,7 @@ The tool manages multiple Neovim installations, automatically downloading and se
 
 # PARAMETERS
 
-Configuration can be set via **$BOB_CONFIG** environment variable pointing to a JSON or TOML config file.
+Configuration is read from a JSON or TOML file under the platform config directory (on Linux **~/.config/bob/config.json** or **config.toml**). The **$BOB_CONFIG** environment variable overrides this location.
 
 # CAVEATS
 
@@ -111,3 +117,9 @@ Bob was created by **Mordechai Hadad** as a modern, cross-platform solution for 
 # SEE ALSO
 
 [nvim](/man/nvim)(1), [nvm](/man/nvm)(1), [rustup](/man/rustup)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/MordechaiHadad/bob)```
+
+<!-- verified: 2026-06-19 -->

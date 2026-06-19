@@ -4,6 +4,10 @@ AI agent framework with built-in tools
 
 # TLDR
 
+**Install** with pip
+
+```pip install bondai```
+
 **Start an interactive chat session**
 
 ```bondai```
@@ -50,7 +54,7 @@ Built-in tools include **DuckDuckGoSearchTool** and **GoogleSearchTool** for web
 
 # CAVEATS
 
-Requires an **OpenAI API key** set via the OPENAI_API_KEY environment variable. Tools that execute arbitrary code (**PythonREPLTool**) or access your shell (**ShellTool**) can potentially damage your system. Running BondAI in a **Docker container** is highly recommended when using these tools. Mount a volume to share files between your system and the agent's working directory.
+Requires an **OpenAI API key** set via the OPENAI_API_KEY environment variable (or Azure OpenAI credentials). Tools that execute arbitrary code (**PythonREPLTool**) or access your shell (**ShellTool**) can potentially damage your system. Running BondAI in a **Docker container** is highly recommended when using these tools. Mount a volume to share files between your system and the agent's working directory.
 
 # HISTORY
 
@@ -59,3 +63,12 @@ BondAI was created by **Kevin Rohling** and released as an open-source project o
 # SEE ALSO
 
 [python](/man/python)(1), [docker](/man/docker)(1), [claude](/man/claude)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/krohling/bondai)```
+
+```[Homepage](https://bondai.dev)```
+
+<!-- verified: 2026-06-19 -->
+

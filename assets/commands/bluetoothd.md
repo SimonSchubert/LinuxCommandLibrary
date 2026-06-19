@@ -37,13 +37,16 @@ The daemon is typically started automatically by systemd. It reads configuration
 # PARAMETERS
 
 **-n, --nodetach**
-> Do not daemonize; log to stdout
+> Run in the foreground; do not detach and become a daemon. Log goes to stdout.
 
 **-f, --configfile** _file_
-> Use alternate configuration file
+> Use alternate configuration file instead of /etc/bluetooth/main.conf.
 
-**-d, --debug**
-> Enable verbose debug output
+**-d, --debug** [_files_]
+> Enable debug output, optionally limited to a colon-separated list of source files.
+
+**-E, --experimental**
+> Enable experimental D-Bus interfaces and features.
 
 **-p, --plugin** _name_
 > Specify plugins to load
@@ -60,6 +63,18 @@ The daemon is typically started automatically by systemd. It reads configuration
 
 Usually managed by systemd; manual invocation rarely needed. Requires root privileges. Configuration changes require daemon restart. Debug mode generates extensive output.
 
+# HISTORY
+
+**bluetoothd** is part of **BlueZ**, the official Linux Bluetooth protocol stack maintained since the early **2000s**. It replaced the older per-profile daemons of BlueZ 4 with a single plugin-based daemon in BlueZ 5 (**2012**), exposing its functionality over D-Bus.
+
 # SEE ALSO
 
 [bluetoothctl](/man/bluetoothctl)(1), [hciconfig](/man/hciconfig)(1), [hcitool](/man/hcitool)(1)
+
+# RESOURCES
+
+```[Homepage](http://www.bluez.org/)```
+
+```[Source code](https://github.com/bluez/bluez)```
+
+<!-- verified: 2026-06-19 -->

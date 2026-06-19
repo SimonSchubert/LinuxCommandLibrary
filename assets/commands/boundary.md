@@ -145,3 +145,13 @@ Boundary was announced by **HashiCorp** in **October 2020** as part of their sec
 # SEE ALSO
 
 [vault](/man/vault)(1), [ssh](/man/ssh)(1), [tsh](/man/tsh)(1), [kubectl](/man/kubectl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/hashicorp/boundary)```
+
+```[Homepage](https://developer.hashicorp.com/boundary)```
+
+```[Documentation](https://developer.hashicorp.com/boundary/docs)```
+
+<!-- verified: 2026-06-19 -->

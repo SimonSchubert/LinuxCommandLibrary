@@ -59,11 +59,17 @@ The command uses locally cached package information. Run **brew update** first t
 **--json**
 > Output in JSON format (v2 includes both formulae and casks)
 
-**--greedy**
-> Include casks with auto_updates or version :latest
+**-g, --greedy**
+> Also include outdated casks with version :latest or auto_updates true
+
+**--greedy-latest**
+> Also include outdated casks including those with version :latest
+
+**--greedy-auto-updates**
+> Also include outdated casks including those with auto_updates true
 
 **--fetch-HEAD**
-> Check upstream repository for HEAD installations
+> Fetch the upstream repository to detect outdated HEAD installations
 
 # OUTPUT FORMAT
 
@@ -80,3 +86,13 @@ Does not perform network requests; relies on local cache from brew update. Casks
 # SEE ALSO
 
 [brew](/man/brew)(1), [brew-update](/man/brew-update)(1), [brew-upgrade](/man/brew-upgrade)(1), [brew-list](/man/brew-list)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Homebrew/brew)```
+
+```[Homepage](https://brew.sh)```
+
+```[Documentation](https://docs.brew.sh)```
+
+<!-- verified: 2026-06-19 -->
