@@ -120,6 +120,7 @@ age.md
 agent-skills-eval.md
 agent-vault.md
 agentbox.md
+agenthatch.md
 agetty.md
 agg.md
 agy.md
@@ -1403,6 +1404,7 @@ crane-version.md
 crane.md
 crates-tui.md
 crawl.md
+crawlie.md
 crc32.md
 crda.md
 create-image.md
@@ -6508,6 +6510,7 @@ rehash.md
 reindexdb.md
 rekal.md
 rekor-cli.md
+relaymux.md
 relic.md
 remind.md
 remmina.md
