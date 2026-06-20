@@ -101,13 +101,7 @@ private fun showCommandNonInteractive(terminal: Terminal, commandName: String) {
 
     sections.forEach { section ->
         terminal.println(Theme.header(section.title))
-        val content = section.content
-            .replace(Regex("\\*\\*([^*]+)\\*\\*")) { Theme.boldText(it.groupValues[1]) }
-            .replace(Regex("_([^_]+)_")) { Theme.italicText(it.groupValues[1]) }
-            .replace(Regex("```([^`]+)```")) { "  ${Theme.code("$")} ${it.groupValues[1]}" }
-            .replace(Regex("\\[([^\\]]+)]\\(/man/[^)]+\\)")) { it.groupValues[1] }
-            .replace(Regex("> (.+)")) { "    ${it.groupValues[1]}" }
-        terminal.println(content)
+        terminal.println(ContentFormatter.format(section.title, section.content))
         terminal.println()
     }
 }

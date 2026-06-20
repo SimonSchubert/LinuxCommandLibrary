@@ -1,6 +1,8 @@
 package com.linuxcommandlibrary.nativecli.screens
 
 import com.github.ajalt.mordant.input.KeyboardEvent
+import com.github.ajalt.mordant.input.MouseEvent
+import com.linuxcommandlibrary.nativecli.ContentFormatter
 import com.linuxcommandlibrary.nativecli.Theme
 import com.linuxcommandlibrary.nativecli.components.ContentViewer
 import com.linuxcommandlibrary.nativecli.data.DataRepository
@@ -9,60 +11,25 @@ class CommandDetailScreen(private val commandName: String) : Screen {
 
     private val viewer: ContentViewer
 
+    // SEE ALSO / inline man references, with screen positions for click navigation.
+    private val links: List<ContentFormatter.ManLink>
+
     init {
         val sections = DataRepository.getCommandSections(commandName)
-        val content = buildString {
-            sections.forEach { section ->
-                appendLine(Theme.header(section.title))
-                appendLine()
-                // Convert markdown to CLI-friendly format
-                val formatted = if (section.title == "RESOURCES") {
-                    formatResourcesContent(section.content)
-                } else {
-                    formatContent(section.content)
-                }
-                appendLine(formatted)
-                appendLine()
-            }
+        val lines = mutableListOf<String>()
+        val collectedLinks = mutableListOf<ContentFormatter.ManLink>()
+        sections.forEach { section ->
+            lines.add(Theme.header(section.title))
+            lines.add("")
+            val formatted = ContentFormatter.formatInteractive(section.title, section.content)
+            val base = lines.size
+            lines.addAll(formatted.lines)
+            formatted.links.forEach { collectedLinks.add(it.copy(lineIndex = it.lineIndex + base)) }
+            lines.add("")
         }
-        viewer = ContentViewer.fromText(content, pageSize = 20)
+        viewer = ContentViewer(lines, pageSize = PAGE_SIZE)
+        links = collectedLinks
     }
-
-    // Render the RESOURCES section as plain "Label: url" lines (terminals auto-linkify the URL).
-    // Drops the hidden "<!-- verified: ... -->" metadata comment.
-    private fun formatResourcesContent(content: String): String {
-        val linkRegex = Regex("""```\[([^\]]+)]\((https?://[^)]+)\)```""")
-        return content.lines()
-            .mapNotNull { line ->
-                val trimmed = line.trim()
-                when {
-                    trimmed.isEmpty() -> null
-
-                    trimmed.startsWith("<!--") -> null
-
-                    else -> linkRegex.find(trimmed)
-                        ?.let { "  ${Theme.boldText(it.groupValues[1])}: ${it.groupValues[2]}" }
-                        ?: line
-                }
-            }
-            .joinToString("\n")
-    }
-
-    private fun formatContent(content: String): String = content
-        .replace(Regex("\\*\\*([^*]+)\\*\\*")) { Theme.boldText(it.groupValues[1]) } // Bold
-        .replace(Regex("_([^_]+)_")) { Theme.italicText(it.groupValues[1]) } // Italic
-        .replace(Regex("```([^`]+)```")) { "  ${Theme.code("$")} ${it.groupValues[1]}" } // Inline code blocks
-        .replace(Regex("\\[([^\\]]+)]\\(/man/[^)]+\\)")) { it.groupValues[1] } // Man links
-        .replace(Regex("> (.+)")) { "    ${it.groupValues[1]}" } // Blockquotes
-        .lines()
-        .joinToString("\n") { line ->
-            // Handle multi-line code blocks that weren't inline
-            if (line.trim().startsWith("```")) {
-                ""
-            } else {
-                line
-            }
-        }
 
     override fun render(): String {
         val sb = StringBuilder()
@@ -71,8 +38,30 @@ class CommandDetailScreen(private val commandName: String) : Screen {
         sb.appendLine()
         sb.appendLine(viewer.render())
         sb.appendLine()
-        sb.appendLine(Theme.help("[Up/Down/PgUp/PgDn] Scroll  [Home/End] Jump  [q/Esc] Back"))
+        sb.appendLine(Theme.help("[Up/Down/PgUp/PgDn] Scroll  [Home/End] Jump  [Click] Open link  [q/Esc] Back"))
         return sb.toString()
+    }
+
+    override fun handleMouse(event: MouseEvent): ScreenResult {
+        when {
+            event.wheelUp -> viewer.scrollUp()
+            event.wheelDown -> viewer.scrollDown()
+            event.left -> linkAt(event.x, event.y)?.let { command ->
+                if (DataRepository.hasCommand(command)) {
+                    return ScreenResult.Navigate(CommandDetailScreen(command))
+                }
+            }
+        }
+        return ScreenResult.Stay
+    }
+
+    // Maps a click at screen column [x]/row [y] to a man-link target command, if any.
+    private fun linkAt(x: Int, y: Int): String? {
+        val viewportRow = y - CONTENT_START_ROW
+        if (viewportRow < 0 || viewportRow >= viewer.visibleLineCount) return null
+        val contentIndex = viewer.firstVisibleLine + viewportRow
+        return links.firstOrNull { it.lineIndex == contentIndex && x >= it.startCol && x < it.endCol }
+            ?.command
     }
 
     override fun handleInput(event: KeyboardEvent): ScreenResult = when (event.key) {
@@ -117,5 +106,13 @@ class CommandDetailScreen(private val commandName: String) : Screen {
             "", "0", "back", "q", "exit" -> ScreenResult.Back
             else -> ScreenResult.Stay
         }
+    }
+
+    companion object {
+        private const val PAGE_SIZE = 20
+
+        // render() prints: blank line, section title, blank line, then the viewer content,
+        // so the first content line lands on screen row 3 (0-based). Keep in sync with render().
+        private const val CONTENT_START_ROW = 3
     }
 }

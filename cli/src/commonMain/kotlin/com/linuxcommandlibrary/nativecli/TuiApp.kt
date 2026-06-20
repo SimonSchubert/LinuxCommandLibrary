@@ -1,6 +1,8 @@
 package com.linuxcommandlibrary.nativecli
 
 import com.github.ajalt.mordant.input.KeyboardEvent
+import com.github.ajalt.mordant.input.MouseEvent
+import com.github.ajalt.mordant.input.MouseTracking
 import com.github.ajalt.mordant.input.enterRawModeOrNull
 import com.github.ajalt.mordant.input.isCtrlC
 import com.github.ajalt.mordant.terminal.Terminal
@@ -39,8 +41,6 @@ class TuiApp(private val terminal: Terminal) {
     }
 
     private fun detectRawModeSupport(): Boolean = try {
-        // Check if we're on a platform that supports raw mode
-        // Windows (mingw) has limited raw mode support
         val os = getPlatformName()
         os != "Windows"
     } catch (e: Exception) {
@@ -49,23 +49,18 @@ class TuiApp(private val terminal: Terminal) {
 
     private fun handleRawModeInput(screen: Screen): ScreenResult {
         return try {
-            val rawMode = terminal.enterRawModeOrNull()
+            val rawMode = terminal.enterRawModeOrNull(MouseTracking.Normal)
             if (rawMode == null) {
-                // Raw mode not available, fall back
                 rawModeSupported = false
                 return handleFallbackInput(screen)
             }
-
             rawMode.use { scope ->
-                val event = scope.readKey()
-                if (event.isCtrlC) {
-                    ScreenResult.Exit
-                } else {
-                    screen.handleInput(event)
+                when (val event = scope.readEvent()) {
+                    is KeyboardEvent -> if (event.isCtrlC) ScreenResult.Exit else screen.handleInput(event)
+                    is MouseEvent -> screen.handleMouse(event)
                 }
             }
         } catch (e: Exception) {
-            // Raw mode failed, fall back to line input
             rawModeSupported = false
             handleFallbackInput(screen)
         }
@@ -102,8 +97,7 @@ class TuiApp(private val terminal: Terminal) {
     }
 
     private fun clearScreen() {
-        // ANSI escape sequence to clear screen and move cursor to top-left
-        print("\u001b[2J\u001b[H")
+        print("[2J[H")
     }
 }
 

@@ -19,6 +19,8 @@ object DataRepository {
 
     fun getCommandNames(): List<String> = commandNames
 
+    fun hasCommand(name: String): Boolean = allCommands.containsKey(name)
+
     fun getCommands(): List<CommandInfo> = commandNames.map { CommandInfo(it) }
 
     fun getCommandsByQuery(query: String): List<CommandInfo> {

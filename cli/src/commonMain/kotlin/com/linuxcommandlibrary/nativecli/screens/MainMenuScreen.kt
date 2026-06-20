@@ -1,6 +1,7 @@
 package com.linuxcommandlibrary.nativecli.screens
 
 import com.github.ajalt.mordant.input.KeyboardEvent
+import com.github.ajalt.mordant.input.MouseEvent
 import com.linuxcommandlibrary.nativecli.Theme
 import com.linuxcommandlibrary.nativecli.components.ListItem
 import com.linuxcommandlibrary.nativecli.components.SelectableList
@@ -48,6 +49,14 @@ class MainMenuScreen : Screen {
         sb.appendLine()
         sb.appendLine(Theme.help("[Up/Down] Navigate  [Enter] Select  [q] Quit"))
         return sb.toString()
+    }
+
+    override fun handleMouse(event: MouseEvent): ScreenResult {
+        when {
+            event.wheelUp -> list.moveUp()
+            event.wheelDown -> list.moveDown()
+        }
+        return ScreenResult.Stay
     }
 
     override fun handleInput(event: KeyboardEvent): ScreenResult = when (event.key) {

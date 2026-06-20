@@ -11,6 +11,14 @@ class ContentViewer(
     val totalLines: Int
         get() = lines.size
 
+    // Index of the first content line currently shown (top of the viewport).
+    val firstVisibleLine: Int
+        get() = scrollOffset
+
+    // Number of content lines currently shown, so callers can map a viewport row to a content line.
+    val visibleLineCount: Int
+        get() = (scrollOffset + pageSize).coerceAtMost(lines.size) - scrollOffset
+
     val canScrollUp: Boolean
         get() = scrollOffset > 0
 
