@@ -4260,6 +4260,7 @@ mailsy.md
 mailx.md
 maim.md
 mairix.md
+make-look-scanned.md
 make.md
 makeblastdb.md
 makechrootpkg.md
@@ -4329,6 +4330,7 @@ mcli.md
 mcomp.md
 mcookie.md
 mcopy.md
+mcp-postgres.md
 mcp-probe.md
 mcptube.md
 mcs.md
@@ -5264,6 +5266,7 @@ pactl.md
 pactrans.md
 pactree.md
 padsp.md
+pagecast.md
 pageres.md
 pake.md
 palmtopnm.md
@@ -5913,6 +5916,7 @@ portablectl.md
 portageq.md
 portal.md
 ports.md
+posh.md
 postconf.md
 postcss.md
 poster.md
