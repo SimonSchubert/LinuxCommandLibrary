@@ -107,3 +107,11 @@ Capacitor was created by the Ionic team and first released in **2019** as a mode
 # SEE ALSO
 
 [ionic](/man/ionic)(1), [npm](/man/npm)(1), [npx](/man/npx)(1), [cordova](/man/cordova)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ionic-team/capacitor)```
+
+```[Homepage](https://capacitorjs.com/)```
+
+<!-- verified: 2026-06-22 -->

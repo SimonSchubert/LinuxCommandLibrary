@@ -39,3 +39,9 @@ Requires root privileges for writing to devices. Always verify the target device
 # SEE ALSO
 
 [dd](/man/dd)(1), [pv](/man/pv)(1), [balena-etcher](/man/balena-etcher)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ifd3f/caligula)```
+
+<!-- verified: 2026-06-22 -->

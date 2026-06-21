@@ -16,7 +16,7 @@ Swiss army knife of embedded Linux utilities
 
 ```busybox --install -s```
 
-**Show** version
+**Show** help and version
 
 ```busybox --help```
 
@@ -92,3 +92,9 @@ Simplified versions (fewer features than GNU tools). Some advanced options missi
 # SEE ALSO
 
 [alpine](/man/alpine)(1), [toybox](/man/toybox)(1), [coreutils](/man/coreutils)(7)
+
+# RESOURCES
+
+```[Homepage](https://busybox.net)```
+
+<!-- verified: 2026-06-22 -->

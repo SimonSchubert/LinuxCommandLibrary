@@ -65,3 +65,11 @@ The **GREP** environment variable can be set to specify an alternate grep progra
 # SEE ALSO
 
 [bzgrep](/man/bzgrep)(1), [bzegrep](/man/bzegrep)(1), [fgrep](/man/fgrep)(1), [bzip2](/man/bzip2)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/bzip2/bzip2)```
+
+```[Homepage](https://sourceware.org/bzip2/)```
+
+<!-- verified: 2026-06-22 -->

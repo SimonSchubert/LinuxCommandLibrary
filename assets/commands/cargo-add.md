@@ -105,3 +105,11 @@ Updates existing entries with specified flags. For Cargo versions before 1.62, i
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-remove](/man/cargo-remove)(1), [cargo-update](/man/cargo-update)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-add.html)```
+
+<!-- verified: 2026-06-22 -->

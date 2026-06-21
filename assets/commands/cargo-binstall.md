@@ -85,3 +85,9 @@ Package must have prebuilt binaries or binstall metadata. Falls back to cargo in
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-install](/man/cargo-install)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cargo-bins/cargo-binstall)```
+
+<!-- verified: 2026-06-22 -->

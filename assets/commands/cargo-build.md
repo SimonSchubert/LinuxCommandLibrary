@@ -111,3 +111,11 @@ Same commands work across all operating systems. First build downloads and compi
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-run](/man/cargo-run)(1), [cargo-check](/man/cargo-check)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-build.html)```
+
+<!-- verified: 2026-06-22 -->

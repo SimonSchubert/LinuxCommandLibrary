@@ -81,3 +81,11 @@ Mangled names must be complete tokens - trailing punctuation prevents demangling
 # SEE ALSO
 
 [nm](/man/nm)(1), [objdump](/man/objdump)(1), [readelf](/man/readelf)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/binutils/)```
+
+```[Documentation](https://sourceware.org/binutils/docs/)```
+
+<!-- verified: 2026-06-22 -->

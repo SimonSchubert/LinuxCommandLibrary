@@ -65,3 +65,11 @@ Without version specification, selects version based on Minimum Supported Rust V
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-search](/man/cargo-search)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-info.html)```
+
+<!-- verified: 2026-06-22 -->

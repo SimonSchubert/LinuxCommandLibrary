@@ -90,3 +90,13 @@ Enable authentication before exposing to internet. On macOS, binary is inside ca
 # SEE ALSO
 
 [calibredb](/man/calibredb)(1), [calibre](/man/calibre)(1), [ebook-convert](/man/ebook-convert)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/kovidgoyal/calibre)```
+
+```[Homepage](https://calibre-ebook.com/)```
+
+```[Documentation](https://manual.calibre-ebook.com/)```
+
+<!-- verified: 2026-06-22 -->

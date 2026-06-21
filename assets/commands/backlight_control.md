@@ -48,3 +48,9 @@ Requires appropriate permissions to write to backlight control files. May requir
 # SEE ALSO
 
 [xbacklight](/man/xbacklight)(1), [brightnessctl](/man/brightnessctl)(1), [light](/man/light)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Hendrikto/backlight_control)```
+
+<!-- verified: 2026-06-22 -->

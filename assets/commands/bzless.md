@@ -60,3 +60,11 @@ Decompresses entire file for navigation. Cannot edit files. Slower than viewing 
 # SEE ALSO
 
 [less](/man/less)(1), [bzcat](/man/bzcat)(1), [bzmore](/man/bzmore)(1), [zless](/man/zless)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/bzip2/bzip2)```
+
+```[Homepage](https://sourceware.org/bzip2/)```
+
+<!-- verified: 2026-06-22 -->

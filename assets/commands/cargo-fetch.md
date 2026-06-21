@@ -64,3 +64,11 @@ Subsequent cargo commands can run offline after fetch unless lock file changes. 
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-build](/man/cargo-build)(1), [cargo-update](/man/cargo-update)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-fetch.html)```
+
+<!-- verified: 2026-06-22 -->

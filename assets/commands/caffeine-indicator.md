@@ -21,3 +21,9 @@ Unlike the automatic caffeine daemon, this provides manual toggle control.
 # SEE ALSO
 
 [caffeine](/man/caffeine)(1), [caffeinate](/man/caffeinate)(1)
+
+# RESOURCES
+
+```[Homepage](https://launchpad.net/caffeine)```
+
+<!-- verified: 2026-06-22 -->

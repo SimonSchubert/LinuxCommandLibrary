@@ -21,3 +21,9 @@ The demo cycles through different animations including metaballs, matrix effects
 # SEE ALSO
 
 [cacaclock](/man/cacaclock)(1), [cacafire](/man/cacafire)(1), [cacaview](/man/cacaview)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cacalabs/libcaca)```
+
+<!-- verified: 2026-06-22 -->

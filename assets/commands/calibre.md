@@ -106,3 +106,13 @@ Large library can be slow. DRM removal not included (requires plugins). Qt-based
 # SEE ALSO
 
 [ebook-convert](/man/ebook-convert)(1), [calibredb](/man/calibredb)(1), [pandoc](/man/pandoc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/kovidgoyal/calibre)```
+
+```[Homepage](https://calibre-ebook.com/)```
+
+```[Documentation](https://manual.calibre-ebook.com/)```
+
+<!-- verified: 2026-06-22 -->

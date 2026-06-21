@@ -98,3 +98,11 @@ URL must be absolute with http: or https: scheme. Some servers may have WebDAV c
 # SEE ALSO
 
 [curl](/man/curl)(1), [ftp](/man/ftp)(1), [smbclient](/man/smbclient)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/notroj/cadaver)```
+
+```[Homepage](https://notroj.github.io/cadaver/)```
+
+<!-- verified: 2026-06-22 -->

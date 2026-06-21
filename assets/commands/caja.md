@@ -54,3 +54,11 @@ Caja is a fork of GNOME's Nautilus file manager, maintaining a traditional deskt
 # SEE ALSO
 
 [nautilus](/man/nautilus)(1), [dolphin](/man/dolphin)(1), [thunar](/man/thunar)(1), [ranger](/man/ranger)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/mate-desktop/caja)```
+
+```[Homepage](https://mate-desktop.org/)```
+
+<!-- verified: 2026-06-22 -->

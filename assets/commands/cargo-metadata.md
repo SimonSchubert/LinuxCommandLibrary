@@ -88,3 +88,11 @@ Output format may change between Cargo versions. Always use --format-version for
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-locate-project](/man/cargo-locate-project)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-metadata.html)```
+
+<!-- verified: 2026-06-22 -->

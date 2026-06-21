@@ -37,3 +37,9 @@ Unlike manual inhibition, caffeine works automatically based on window state.
 # SEE ALSO
 
 [caffeinate](/man/caffeinate)(1), [caffeine-indicator](/man/caffeine-indicator)(1), [xset](/man/xset)(1)
+
+# RESOURCES
+
+```[Homepage](https://launchpad.net/caffeine)```
+
+<!-- verified: 2026-06-22 -->

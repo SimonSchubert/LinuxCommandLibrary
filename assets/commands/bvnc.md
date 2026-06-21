@@ -47,9 +47,6 @@ The tool is part of the Avahi Zeroconf suite for service discovery.
 **-h, --help**
 > Show help
 
-**-V, --version**
-> Show version
-
 # RELATED BINARIES
 
 **bvnc**
@@ -76,3 +73,11 @@ Only discovers services advertised via mDNS on local network. Requires GUI envir
 # SEE ALSO
 
 [avahi-browse](/man/avahi-browse)(1), [bssh](/man/bssh)(1), [vncviewer](/man/vncviewer)(1), [avahi-daemon](/man/avahi-daemon)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/avahi/avahi)```
+
+```[Homepage](https://www.avahi.org)```
+
+<!-- verified: 2026-06-22 -->

@@ -25,3 +25,9 @@ The generated phrases combine adjectives, verbs, and nouns from a predefined lis
 # SEE ALSO
 
 [fortune](/man/fortune)(1), [cowsay](/man/cowsay)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/atomantic/buzzphrase)```
+
+<!-- verified: 2026-06-22 -->

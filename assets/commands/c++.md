@@ -108,3 +108,9 @@ The **c++** command name has been a standard convention since C++ compilers beca
 # SEE ALSO
 
 [g++](/man/g++)(1), [clang++](/man/clang++)(1), [gcc](/man/gcc)(1)
+
+# RESOURCES
+
+```[Homepage](https://gcc.gnu.org/)```
+
+<!-- verified: 2026-06-22 -->

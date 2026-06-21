@@ -63,3 +63,9 @@ Without the -s option, you cannot switch to other virtual terminals. Using -d wi
 # SEE ALSO
 
 [weston](/man/weston)(1), [sway](/man/sway)(1), [gamescope](/man/gamescope)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cage-kiosk/cage)```
+
+<!-- verified: 2026-06-22 -->

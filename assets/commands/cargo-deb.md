@@ -102,3 +102,9 @@ Automatically uses Cargo fields for name, version, license, description. The $au
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [dpkg](/man/dpkg)(1), [dpkg-deb](/man/dpkg-deb)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/kornelski/cargo-deb)```
+
+<!-- verified: 2026-06-22 -->

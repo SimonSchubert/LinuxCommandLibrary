@@ -70,3 +70,11 @@ Error messages refer to temporary filenames instead of original filenames. Files
 # SEE ALSO
 
 [diff](/man/diff)(1), [cmp](/man/cmp)(1), [bzgrep](/man/bzgrep)(1), [bzmore](/man/bzmore)(1), [bzip2](/man/bzip2)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/bzip2/bzip2)```
+
+```[Homepage](https://sourceware.org/bzip2/)```
+
+<!-- verified: 2026-06-22 -->

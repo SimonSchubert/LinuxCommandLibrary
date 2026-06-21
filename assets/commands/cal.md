@@ -68,3 +68,9 @@ By default, Sunday is shown as the first day of the week. Use **-m** to start we
 # SEE ALSO
 
 [ncal](/man/ncal)(1), [date](/man/date)(1), [calcurse](/man/calcurse)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+<!-- verified: 2026-06-22 -->

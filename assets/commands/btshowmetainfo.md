@@ -40,3 +40,9 @@ btshowmetainfo was included with the original **BitTorrent** client written by *
 # SEE ALSO
 
 [transmission-show](/man/transmission-show)(1), [aria2c](/man/aria2c)(1), [qbittorrent](/man/qbittorrent)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/effigies/BitTornado)```
+
+<!-- verified: 2026-06-22 -->

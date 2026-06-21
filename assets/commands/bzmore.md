@@ -53,3 +53,11 @@ Less feature-rich than bzless. No backward navigation. Limited search capabiliti
 # SEE ALSO
 
 [more](/man/more)(1), [bzless](/man/bzless)(1), [bzcat](/man/bzcat)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/bzip2/bzip2)```
+
+```[Homepage](https://sourceware.org/bzip2/)```
+
+<!-- verified: 2026-06-22 -->

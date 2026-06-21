@@ -100,3 +100,11 @@ Skips binaries with same name as library. Skips binaries with missing required f
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [rustdoc](/man/rustdoc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-doc.html)```
+
+<!-- verified: 2026-06-22 -->

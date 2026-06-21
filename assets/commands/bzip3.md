@@ -45,7 +45,7 @@ The tool is backward incompatible with bzip2 but provides significantly better c
 > Write to standard output
 
 **-b**, **--block** _size_
-> Block size in MiB (65-511)
+> Block size in MiB (1-511, default 16)
 
 **-j**, **--jobs** _n_
 > Number of threads
@@ -102,3 +102,9 @@ Not compatible with bzip2 (.bz2 files). Less widely supported than gzip/bzip2. R
 # SEE ALSO
 
 [bzip2](/man/bzip2)(1), [xz](/man/xz)(1), [zstd](/man/zstd)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/kspalaiologos/bzip3)```
+
+<!-- verified: 2026-06-22 -->

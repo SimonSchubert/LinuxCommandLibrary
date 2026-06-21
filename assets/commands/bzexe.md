@@ -46,3 +46,11 @@ The backup file (with ~ suffix) can be removed once the compressed executable is
 # SEE ALSO
 
 [bzip2](/man/bzip2)(1), [bunzip2](/man/bunzip2)(1), [gzexe](/man/gzexe)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/bzip2/bzip2)```
+
+```[Homepage](https://sourceware.org/bzip2/)```
+
+<!-- verified: 2026-06-22 -->

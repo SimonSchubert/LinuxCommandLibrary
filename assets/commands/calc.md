@@ -112,3 +112,11 @@ Different syntax than bc. Less commonly installed. Some functions require unders
 # SEE ALSO
 
 [bc](/man/bc)(1), [dc](/man/dc)(1), [qalc](/man/qalc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/lcn2/calc)```
+
+```[Homepage](http://www.isthe.com/chongo/tech/comp/calc/)```
+
+<!-- verified: 2026-06-22 -->

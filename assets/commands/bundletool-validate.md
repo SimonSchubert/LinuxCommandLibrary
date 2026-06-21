@@ -30,3 +30,11 @@ Requires Java Runtime Environment (JRE) version 11 or higher. Validation is stru
 # SEE ALSO
 
 [bundletool](/man/bundletool)(1), [bundletool-dump](/man/bundletool-dump)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/bundletool)```
+
+```[Documentation](https://developer.android.com/tools/bundletool)```
+
+<!-- verified: 2026-06-22 -->

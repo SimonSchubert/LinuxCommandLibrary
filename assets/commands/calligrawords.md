@@ -25,3 +25,11 @@ The application uses ODF (Open Document Format) and is comparable to Microsoft W
 # SEE ALSO
 
 [calligrasheets](/man/calligrasheets)(1), [calligrastage](/man/calligrastage)(1), [libreoffice](/man/libreoffice)(1)
+
+# RESOURCES
+
+```[Source code](https://invent.kde.org/office/calligra)```
+
+```[Homepage](https://calligra.org/)```
+
+<!-- verified: 2026-06-22 -->

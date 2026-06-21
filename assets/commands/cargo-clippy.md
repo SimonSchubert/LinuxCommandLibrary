@@ -103,3 +103,11 @@ Some lints are opinionated. Use lint configuration to customize for your project
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-check](/man/cargo-check)(1), [rustfmt](/man/rustfmt)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/rust-clippy)```
+
+```[Documentation](https://doc.rust-lang.org/clippy/)```
+
+<!-- verified: 2026-06-22 -->

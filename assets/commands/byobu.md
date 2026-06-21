@@ -129,3 +129,11 @@ F-keys may conflict with terminal emulator. Backend (tmux vs screen) affects fea
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [screen](/man/screen)(1), [zellij](/man/zellij)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/dustinkirkland/byobu)```
+
+```[Homepage](https://www.byobu.org)```
+
+<!-- verified: 2026-06-22 -->

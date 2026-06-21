@@ -126,3 +126,13 @@ Automatic HTTPS requires port 80/443 access. Let's Encrypt rate limits apply. Ce
 # SEE ALSO
 
 [nginx](/man/nginx)(8), [apache2](/man/apache2)(8), [traefik](/man/traefik)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/caddyserver/caddy)```
+
+```[Homepage](https://caddyserver.com/)```
+
+```[Documentation](https://caddyserver.com/docs/)```
+
+<!-- verified: 2026-06-22 -->

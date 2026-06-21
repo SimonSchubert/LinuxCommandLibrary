@@ -25,3 +25,11 @@ The application uses ODF (Open Document Format) and can import/export various sp
 # SEE ALSO
 
 [calligrawords](/man/calligrawords)(1), [calligraflow](/man/calligraflow)(1), [libreoffice](/man/libreoffice)(1)
+
+# RESOURCES
+
+```[Source code](https://invent.kde.org/office/calligra)```
+
+```[Homepage](https://calligra.org/)```
+
+<!-- verified: 2026-06-22 -->

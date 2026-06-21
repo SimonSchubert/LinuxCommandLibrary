@@ -76,3 +76,11 @@ Indexing large genomes requires significant memory and time. Output is uncompres
 # SEE ALSO
 
 [samtools](/man/samtools)(1), [bowtie2](/man/bowtie2)(1), [minimap2](/man/minimap2)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/lh3/bwa)```
+
+```[Homepage](https://bio-bwa.sourceforge.net/)```
+
+<!-- verified: 2026-06-22 -->

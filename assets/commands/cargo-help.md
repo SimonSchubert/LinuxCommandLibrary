@@ -72,3 +72,11 @@ Custom subcommands installed via cargo install are listed with --list. Any execu
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [rustc](/man/rustc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-help.html)```
+
+<!-- verified: 2026-06-22 -->

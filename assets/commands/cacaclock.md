@@ -37,3 +37,9 @@ The display format can be customized using strftime format specifiers.
 # SEE ALSO
 
 [cacademo](/man/cacademo)(1), [cacafire](/man/cacafire)(1), [cacaview](/man/cacaview)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cacalabs/libcaca)```
+
+<!-- verified: 2026-06-22 -->

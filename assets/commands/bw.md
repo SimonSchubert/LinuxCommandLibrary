@@ -131,3 +131,11 @@ Session key needed for most operations. Store session key securely (environment 
 # SEE ALSO
 
 [pass](/man/pass)(1), [gopass](/man/gopass)(1), [1password](/man/1password)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/bitwarden/clients)```
+
+```[Documentation](https://bitwarden.com/help/cli/)```
+
+<!-- verified: 2026-06-22 -->

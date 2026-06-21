@@ -63,3 +63,11 @@ Output is always to stdout. No options for compression level. For viewing only, 
 # SEE ALSO
 
 [bzip2](/man/bzip2)(1), [bzless](/man/bzless)(1), [bzgrep](/man/bzgrep)(1), [zcat](/man/zcat)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/bzip2/bzip2)```
+
+```[Homepage](https://sourceware.org/bzip2/)```
+
+<!-- verified: 2026-06-22 -->

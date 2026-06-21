@@ -32,9 +32,9 @@ Ruby dependency manager
 
 ```bundle list```
 
-**Check for security vulnerabilities**
+**List gems with newer versions available**
 
-```bundle audit```
+```bundle outdated```
 
 # SYNOPSIS
 
@@ -119,3 +119,11 @@ Always use **bundle exec** when running gem executables to ensure correct versio
 # SEE ALSO
 
 [gem](/man/gem)(1), [ruby](/man/ruby)(1), [rake](/man/rake)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rubygems/rubygems)```
+
+```[Homepage](https://bundler.io)```
+
+<!-- verified: 2026-06-22 -->
