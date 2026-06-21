@@ -51,3 +51,13 @@ Requires authentication to the npm registry. Scoped packages (@org/name) are pri
 # SEE ALSO
 
 [bun](/man/bun)(1), [npm-publish](/man/npm-publish)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/oven-sh/bun)```
+
+```[Homepage](https://bun.sh)```
+
+```[Documentation](https://bun.sh/docs)```
+
+<!-- verified: 2026-06-22 -->

@@ -83,3 +83,11 @@ Defragmentation may break reflinks and reduce deduplication benefits. Running de
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [btrfs-device](/man/btrfs-device)(8), [df](/man/df)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/kdave/btrfs-progs)```
+
+```[Documentation](https://btrfs.readthedocs.io/)```
+
+<!-- verified: 2026-06-22 -->

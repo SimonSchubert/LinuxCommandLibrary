@@ -98,3 +98,11 @@ Requires the body tag to be present in HTML files. HTTPS is automatically inferr
 # SEE ALSO
 
 [live-server](/man/live-server)(1), [webpack](/man/webpack)(1), [gulp](/man/gulp)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/BrowserSync/browser-sync)```
+
+```[Homepage](https://browsersync.io)```
+
+<!-- verified: 2026-06-22 -->

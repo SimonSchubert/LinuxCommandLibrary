@@ -61,3 +61,11 @@ Only useful with easside-ng for WEP network attacks. Requires a publicly accessi
 # SEE ALSO
 
 [easside-ng](/man/easside-ng)(1), [aircrack-ng](/man/aircrack-ng)(1), [wesside-ng](/man/wesside-ng)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aircrack-ng/aircrack-ng)```
+
+```[Homepage](https://www.aircrack-ng.org/)```
+
+<!-- verified: 2026-06-22 -->

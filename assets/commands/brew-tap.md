@@ -79,3 +79,13 @@ Tapped formulae are updated automatically with **brew update**. When core and ta
 # SEE ALSO
 
 [brew](/man/brew)(1), [brew-update](/man/brew-update)(1), [brew-install](/man/brew-install)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Homebrew/brew)```
+
+```[Homepage](https://brew.sh)```
+
+```[Documentation](https://docs.brew.sh)```
+
+<!-- verified: 2026-06-22 -->

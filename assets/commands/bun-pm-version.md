@@ -19,3 +19,13 @@ Print the package manager version
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-pm](/man/bun-pm)(1), [bun-upgrade](/man/bun-upgrade)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/oven-sh/bun)```
+
+```[Homepage](https://bun.sh)```
+
+```[Documentation](https://bun.sh/docs)```
+
+<!-- verified: 2026-06-22 -->

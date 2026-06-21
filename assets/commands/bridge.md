@@ -75,3 +75,11 @@ VLANs require VLAN filtering to be enabled on the bridge. Changes may disrupt ex
 # SEE ALSO
 
 [ip](/man/ip)(8), [brctl](/man/brctl)(8), [tc](/man/tc)(8)
+
+# RESOURCES
+
+```[Source code](https://git.kernel.org/pub/scm/network/iproute2/iproute2.git)```
+
+```[Documentation](https://wiki.linuxfoundation.org/networking/iproute2)```
+
+<!-- verified: 2026-06-22 -->

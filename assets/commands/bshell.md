@@ -62,3 +62,9 @@ The original Bourne Shell was developed by **Stephen Bourne** at Bell Labs and f
 # SEE ALSO
 
 [sh](/man/sh)(1), [bash](/man/bash)(1), [dash](/man/dash)(1), [ksh](/man/ksh)(1)
+
+# RESOURCES
+
+```[Source code](https://sourceforge.net/projects/schilytools/)```
+
+<!-- verified: 2026-06-22 -->

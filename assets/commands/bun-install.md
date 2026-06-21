@@ -84,3 +84,13 @@ Compatible with existing package.json files. Supports workspaces, git/http/tarba
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-add](/man/bun-add)(1), [bun-remove](/man/bun-remove)(1), [npm](/man/npm)(1), [yarn](/man/yarn)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/oven-sh/bun)```
+
+```[Homepage](https://bun.sh)```
+
+```[Documentation](https://bun.sh/docs)```
+
+<!-- verified: 2026-06-22 -->

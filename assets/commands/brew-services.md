@@ -95,3 +95,13 @@ Introduced in Homebrew 0.9.9 (February 2014) for macOS launchd support. Linux/sy
 # SEE ALSO
 
 [brew](/man/brew)(1), [launchctl](/man/launchctl)(1), [systemctl](/man/systemctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Homebrew/brew)```
+
+```[Homepage](https://brew.sh)```
+
+```[Documentation](https://docs.brew.sh)```
+
+<!-- verified: 2026-06-22 -->

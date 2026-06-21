@@ -74,3 +74,13 @@ Template availability depends on the source. GitHub templates require network ac
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-init](/man/bun-init)(1), [npm-init](/man/npm-init)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/oven-sh/bun)```
+
+```[Homepage](https://bun.sh)```
+
+```[Documentation](https://bun.sh/docs)```
+
+<!-- verified: 2026-06-22 -->

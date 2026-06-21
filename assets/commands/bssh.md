@@ -78,3 +78,11 @@ Only discovers services advertised via mDNS on local network. Requires GUI envir
 # SEE ALSO
 
 [avahi-browse](/man/avahi-browse)(1), [avahi-daemon](/man/avahi-daemon)(8), [ssh](/man/ssh)(1), [bvnc](/man/bvnc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/avahi/avahi)```
+
+```[Homepage](https://www.avahi.org/)```
+
+<!-- verified: 2026-06-22 -->

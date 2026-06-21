@@ -78,3 +78,9 @@ The tool uses a domain-command structure where domains include node (windows), d
 # SEE ALSO
 
 [bspwm](/man/bspwm)(1), [sxhkd](/man/sxhkd)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/baskerville/bspwm)```
+
+<!-- verified: 2026-06-22 -->

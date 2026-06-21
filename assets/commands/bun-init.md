@@ -62,7 +62,7 @@ The command is non-destructive when run multiple times and will not overwrite ex
 **.gitignore**
 > Git ignore patterns
 
-**bun.lockb**
+**bun.lock**
 > Lockfile (after install)
 
 # PROJECT STRUCTURE
@@ -73,7 +73,7 @@ my-project/
 ├── index.ts
 ├── .gitignore
 ├── README.md
-├── bun.lockb
+├── bun.lock
 └── package.json
 ```
 
@@ -84,3 +84,13 @@ Automatically runs **bun install** to install @types/bun. Entry point defaults t
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-create](/man/bun-create)(1), [npm-init](/man/npm-init)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/oven-sh/bun)```
+
+```[Homepage](https://bun.sh)```
+
+```[Documentation](https://bun.sh/docs)```
+
+<!-- verified: 2026-06-22 -->

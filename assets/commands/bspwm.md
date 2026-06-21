@@ -50,3 +50,9 @@ Must not be started when another window manager is running. Requires a separate 
 # SEE ALSO
 
 [bspc](/man/bspc)(1), [sxhkd](/man/sxhkd)(1), [polybar](/man/polybar)(1), [i3](/man/i3)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/baskerville/bspwm)```
+
+<!-- verified: 2026-06-22 -->

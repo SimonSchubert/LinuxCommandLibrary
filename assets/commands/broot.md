@@ -94,3 +94,11 @@ The br shell function is recommended over direct broot invocation for changing d
 # SEE ALSO
 
 [tree](/man/tree)(1), [ranger](/man/ranger)(1), [lf](/man/lf)(1), [nnn](/man/nnn)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Canop/broot)```
+
+```[Homepage](https://dystroy.org/broot/)```
+
+<!-- verified: 2026-06-22 -->

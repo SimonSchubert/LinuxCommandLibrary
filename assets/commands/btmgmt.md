@@ -96,3 +96,9 @@ Some commands require net-admin capability or root privileges. This is a low-lev
 # SEE ALSO
 
 [bluetoothctl](/man/bluetoothctl)(1), [hciconfig](/man/hciconfig)(1), [hcitool](/man/hcitool)(1), [bluetoothd](/man/bluetoothd)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/bluez/bluez)```
+
+<!-- verified: 2026-06-22 -->

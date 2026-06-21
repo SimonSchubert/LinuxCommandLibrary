@@ -80,3 +80,13 @@ Search results include both installed and available packages. Use brew info for 
 # SEE ALSO
 
 [brew](/man/brew)(1), [brew-info](/man/brew-info)(1), [brew-install](/man/brew-install)(1), [brew-list](/man/brew-list)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Homebrew/brew)```
+
+```[Homepage](https://brew.sh)```
+
+```[Documentation](https://docs.brew.sh)```
+
+<!-- verified: 2026-06-22 -->

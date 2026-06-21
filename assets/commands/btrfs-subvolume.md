@@ -73,3 +73,11 @@ Deleting a subvolume does not immediately free space; asynchronous cleanup runs 
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [btrfs-filesystem](/man/btrfs-filesystem)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/kdave/btrfs-progs)```
+
+```[Documentation](https://btrfs.readthedocs.io/)```
+
+<!-- verified: 2026-06-22 -->

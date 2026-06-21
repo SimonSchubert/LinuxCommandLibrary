@@ -58,3 +58,11 @@ These are emergency recovery tools. Always backup any recoverable data first. ch
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [btrfs-check](/man/btrfs-check)(8), [btrfs-restore](/man/btrfs-restore)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/kdave/btrfs-progs)```
+
+```[Documentation](https://btrfs.readthedocs.io/)```
+
+<!-- verified: 2026-06-22 -->

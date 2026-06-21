@@ -48,3 +48,9 @@ bsdiff was created by **Colin Percival** and first released in **2003**. He deve
 # SEE ALSO
 
 [diff](/man/diff)(1), [patch](/man/patch)(1), [xdelta](/man/xdelta)(1), [rdiff](/man/rdiff)(1)
+
+# RESOURCES
+
+```[Homepage](http://www.daemonology.net/bsdiff/)```
+
+<!-- verified: 2026-06-22 -->

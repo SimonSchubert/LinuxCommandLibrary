@@ -121,3 +121,11 @@ Requires internet for title fetching. Browser integration needs configuration. D
 # SEE ALSO
 
 [urlview](/man/urlview)(1), [qutebrowser](/man/qutebrowser)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/jarun/buku)```
+
+```[Documentation](https://github.com/jarun/buku/wiki)```
+
+<!-- verified: 2026-06-22 -->

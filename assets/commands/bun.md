@@ -118,7 +118,7 @@ bun build ./src/index.ts --outdir ./dist
 
 # CAVEATS
 
-Not 100% Node.js compatible. Some native modules don't work. Relatively new (may have bugs). Breaking changes still possible. Not all npm packages tested. Windows support experimental.
+Not 100% Node.js compatible. Some native modules don't work. Not all npm packages tested. Windows is supported natively since v1.1 (April 2024).
 
 # HISTORY
 
@@ -127,3 +127,13 @@ Not 100% Node.js compatible. Some native modules don't work. Relatively new (may
 # SEE ALSO
 
 [node](/man/node)(1), [npm](/man/npm)(1), [deno](/man/deno)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/oven-sh/bun)```
+
+```[Homepage](https://bun.sh)```
+
+```[Documentation](https://bun.sh/docs)```
+
+<!-- verified: 2026-06-22 -->

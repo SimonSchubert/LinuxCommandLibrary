@@ -71,3 +71,13 @@ Reinstalling may interrupt services that depend on the formula. Running applicat
 # SEE ALSO
 
 [brew](/man/brew)(1), [brew-install](/man/brew-install)(1), [brew-uninstall](/man/brew-uninstall)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Homebrew/brew)```
+
+```[Homepage](https://brew.sh)```
+
+```[Documentation](https://docs.brew.sh)```
+
+<!-- verified: 2026-06-22 -->

@@ -85,3 +85,11 @@ Requires modern terminal with Unicode support. Some features platform-specific. 
 # SEE ALSO
 
 [htop](/man/htop)(1), [btop](/man/btop)(1), [top](/man/top)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ClementTsang/bottom)```
+
+```[Documentation](https://clementtsang.github.io/bottom/)```
+
+<!-- verified: 2026-06-22 -->

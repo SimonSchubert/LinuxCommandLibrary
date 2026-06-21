@@ -126,3 +126,11 @@ Gemfile.lock should be committed for apps (not gems). bundle exec needed to use 
 # SEE ALSO
 
 [gem](/man/gem)(1), [ruby](/man/ruby)(1), [rake](/man/rake)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rubygems/rubygems)```
+
+```[Homepage](https://bundler.io/)```
+
+<!-- verified: 2026-06-22 -->

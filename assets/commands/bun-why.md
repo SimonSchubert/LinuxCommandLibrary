@@ -21,3 +21,13 @@ This is useful for understanding why a package appears in your node_modules, esp
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-list](/man/bun-list)(1), [npm-explain](/man/npm-explain)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/oven-sh/bun)```
+
+```[Homepage](https://bun.sh)```
+
+```[Documentation](https://bun.sh/docs)```
+
+<!-- verified: 2026-06-22 -->

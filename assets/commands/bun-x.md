@@ -30,6 +30,8 @@ Execute packages without installing
 
 If the package is already installed locally or globally, it uses that version. Otherwise, it downloads and caches the package temporarily.
 
+The standalone **bunx** command (installed alongside **bun**) is equivalent to **bun x**.
+
 Common use cases include running scaffolding tools (create-react-app, create-next-app), one-off utilities, and trying packages before installing.
 
 # CAVEATS
@@ -39,3 +41,13 @@ Packages are cached but may be removed during cache cleanup. For frequently used
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-run](/man/bun-run)(1), [npx](/man/npx)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/oven-sh/bun)```
+
+```[Homepage](https://bun.sh)```
+
+```[Documentation](https://bun.sh/docs)```
+
+<!-- verified: 2026-06-22 -->

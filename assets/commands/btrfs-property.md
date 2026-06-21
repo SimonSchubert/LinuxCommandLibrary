@@ -68,3 +68,11 @@ Setting compression on a directory only affects new files; existing files need e
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [btrfs-subvolume](/man/btrfs-subvolume)(8), [chattr](/man/chattr)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/kdave/btrfs-progs)```
+
+```[Documentation](https://btrfs.readthedocs.io/)```
+
+<!-- verified: 2026-06-22 -->

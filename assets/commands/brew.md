@@ -134,3 +134,13 @@ macOS system updates can break Homebrew. Requires Xcode Command Line Tools on ma
 # SEE ALSO
 
 [brew-install](/man/brew-install)(1), [brew-services](/man/brew-services)(1), [apt](/man/apt)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/Homebrew/brew)```
+
+```[Homepage](https://brew.sh)```
+
+```[Documentation](https://docs.brew.sh)```
+
+<!-- verified: 2026-06-22 -->

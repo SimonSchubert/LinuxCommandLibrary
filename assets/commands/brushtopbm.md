@@ -35,3 +35,9 @@ This tool handles a specific legacy format. The brush file format is rarely used
 # SEE ALSO
 
 [pbmtogo](/man/pbmtogo)(1), [pnmtopng](/man/pnmtopng)(1), [netpbm](/man/netpbm)(1)
+
+# RESOURCES
+
+```[Homepage](https://netpbm.sourceforge.net/)```
+
+<!-- verified: 2026-06-22 -->

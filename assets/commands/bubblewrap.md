@@ -104,3 +104,9 @@ Requires kernel support for user namespaces (may be disabled on some systems). N
 # SEE ALSO
 
 [flatpak](/man/flatpak)(1), [unshare](/man/unshare)(1), [firejail](/man/firejail)(1), [namespaces](/man/namespaces)(7)
+
+# RESOURCES
+
+```[Source code](https://github.com/containers/bubblewrap)```
+
+<!-- verified: 2026-06-22 -->

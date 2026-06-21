@@ -32,3 +32,13 @@ Alias for removing packages from a project
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-remove](/man/bun-remove)(1), [bun-install](/man/bun-install)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/oven-sh/bun)```
+
+```[Homepage](https://bun.sh)```
+
+```[Documentation](https://bun.sh/docs)```
+
+<!-- verified: 2026-06-22 -->

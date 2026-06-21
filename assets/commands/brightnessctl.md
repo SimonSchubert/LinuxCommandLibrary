@@ -76,3 +76,9 @@ Requires appropriate permissions (often the video group membership). Not all dev
 # SEE ALSO
 
 [xbacklight](/man/xbacklight)(1), [light](/man/light)(1), [backlight_control](/man/backlight_control)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Hummer12007/brightnessctl)```
+
+<!-- verified: 2026-06-22 -->
