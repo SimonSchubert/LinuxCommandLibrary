@@ -85,6 +85,22 @@ Highly configurable modal text editor
 **Search**: /pattern (search forward), ?pattern (search backward), n/N (next/previous match)
 **Undo/Redo**: u (undo), Ctrl+r (redo)
 
+# SYSTEM CLIPBOARD
+
+The **"+** register maps to the system clipboard, so you can copy and paste between Vim and other applications. This needs a Vim built with clipboard support; run **vim --version** and look for **+clipboard** (on Debian/Ubuntu install **vim-gtk3**).
+
+**Copy**: "+y (yank the Visual selection), "+yy (yank the current line), "+d (cut to the clipboard)
+**Paste**: "+p (paste after the cursor), "+P (paste before the cursor)
+
+The "* register accesses the primary selection (middle-click paste) on X11 and behaves like the "+ register elsewhere.
+
+# SELECT ALL
+
+**ggVG**: Select the whole file (gg to the top, V for linewise Visual, G to the bottom)
+**ggVGy**: Select all and yank to Vim's default register
+**ggVG"+y**: Select all and copy to the system clipboard
+**ggVGd**: Select all and delete (cut) the text
+
 # MODES
 
 **Normal**: Default mode for navigation and commands
