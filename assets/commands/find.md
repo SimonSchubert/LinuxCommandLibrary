@@ -24,6 +24,10 @@ search directory trees for files
 
 ```find [path] -name "[*.log]" -exec rm {} \;```
 
+**Print a custom** output format
+
+```find [path] -printf "[%p %s bytes\n]"```
+
 # SYNOPSIS
 
 **find** [_path_...] [_expression_]
@@ -56,6 +60,9 @@ _PATH_
 
 **-maxdepth** _N_
 > Maximum directory depth.
+
+**-printf** _FORMAT_
+> Print a custom format for each match (e.g. %p path, %f filename, %s size, %t time). No newline unless \n is included.
 
 **--help**
 > Display help information.
