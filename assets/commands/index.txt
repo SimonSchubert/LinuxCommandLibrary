@@ -1175,6 +1175,7 @@ clang-tidy.md
 clang.md
 clangd.md
 claude-pee.md
+claude-pulse.md
 claude.md
 claumon.md
 clawpatrol.md
@@ -2831,6 +2832,7 @@ gleam.md
 glib-compile-resources.md
 glib.md
 glow.md
+gluerun.md
 glxdemo.md
 glxgears.md
 glxinfo.md
@@ -3482,6 +3484,7 @@ ip-address.md
 ip-link.md
 ip-maddress.md
 ip-monitor.md
+ip-neighbor.md
 ip-neighbour.md
 ip-netconf.md
 ip-route-add.md
