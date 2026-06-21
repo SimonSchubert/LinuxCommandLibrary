@@ -68,3 +68,11 @@ Report is not a lint and doesn't interact with -Dwarnings. These warnings don't 
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-build](/man/cargo-build)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-report.html)```
+
+<!-- verified: 2026-06-22 -->

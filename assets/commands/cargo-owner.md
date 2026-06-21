@@ -89,3 +89,11 @@ Only existing owners can modify ownership. Users must have logged into crates.io
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-publish](/man/cargo-publish)(1), [cargo-login](/man/cargo-login)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-owner.html)```
+
+<!-- verified: 2026-06-22 -->

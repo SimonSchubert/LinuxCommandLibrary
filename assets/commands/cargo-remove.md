@@ -71,3 +71,11 @@ Does not remove dependencies from Cargo.lock until next build. Use cargo-machete
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-add](/man/cargo-add)(1), [cargo-update](/man/cargo-update)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-remove.html)```
+
+<!-- verified: 2026-06-22 -->

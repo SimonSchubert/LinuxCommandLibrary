@@ -111,3 +111,11 @@ Tests run in parallel by default. Use --test-threads=1 for sequential execution.
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-bench](/man/cargo-bench)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-test.html)```
+
+<!-- verified: 2026-06-22 -->

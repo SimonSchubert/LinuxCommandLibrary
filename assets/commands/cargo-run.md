@@ -92,3 +92,11 @@ Errors if multiple binaries exist without --bin flag. Use default-run manifest k
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-build](/man/cargo-build)(1), [cargo-test](/man/cargo-test)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-run.html)```
+
+<!-- verified: 2026-06-22 -->

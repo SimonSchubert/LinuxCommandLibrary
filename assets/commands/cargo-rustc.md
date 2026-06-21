@@ -95,3 +95,11 @@ Only one target can be compiled when passing extra arguments. Use filters (--lib
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [rustc](/man/rustc)(1), [cargo-build](/man/cargo-build)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-rustc.html)```
+
+<!-- verified: 2026-06-22 -->

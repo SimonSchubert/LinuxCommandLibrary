@@ -81,3 +81,11 @@ crates.io has 10MB size limit. Path dependencies without version keys are not al
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-publish](/man/cargo-publish)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-package.html)```
+
+<!-- verified: 2026-06-22 -->

@@ -16,6 +16,10 @@ Shell syntax for grouping and expansion
 
 ```echo {1..10}```
 
+**Sequence with a step/increment**
+
+```echo {0..20..5}```
+
 **Parameter expansion**
 
 ```echo ${var}```
@@ -45,6 +49,7 @@ Shell syntax for grouping and expansion
 - **{a..z}** → alphabet
 - **{1..10}** → numbers 1-10
 - **{01..10}** → zero-padded: 01 02 ... 10
+- **{0..20..5}** → step/increment (bash 4.0+): 0 5 10 15 20
 
 **Parameter expansion**: **${var}** accesses variables, required for:
 - Array access: **${array[0]}**

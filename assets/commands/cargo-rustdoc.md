@@ -87,3 +87,11 @@ Only one target can be documented when passing extra arguments. Use target filte
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-doc](/man/cargo-doc)(1), [rustdoc](/man/rustdoc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-rustdoc.html)```
+
+<!-- verified: 2026-06-22 -->

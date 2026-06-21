@@ -61,3 +61,9 @@ The **from** command first appeared in **BSD 3.0** in 1979 as part of the Berkel
 # SEE ALSO
 
 [biff](/man/biff)(1), [mail](/man/mail)(1)
+
+# RESOURCES
+
+```[Source code](https://cgit.freebsd.org/src/tree/usr.bin/from)```
+
+<!-- verified: 2026-06-22 -->
