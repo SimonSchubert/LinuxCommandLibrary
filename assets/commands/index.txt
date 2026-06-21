@@ -8521,6 +8521,7 @@ zenity.md
 zenmap.md
 zerobrew.md
 zeroclaw.md
+zerofree.md
 zerotier-cli.md
 zerotier-idtool.md
 zerotier-one.md
