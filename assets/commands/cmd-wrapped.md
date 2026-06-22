@@ -4,67 +4,37 @@ shell history year-in-review summary generator
 
 # TLDR
 
-**Generate your command-line wrapped** summary
+**Generate your command-line wrapped summary** (current stats)
 
 ```cmd-wrapped```
 
-**Generate wrapped for a specific shell**
+**Show statistics for a specific year**
 
-```cmd-wrapped --shell [bash|zsh|fish]```
+```cmd-wrapped [2024]```
 
-**Specify a custom history file**
+**Analyze a specific shell's history**
 
-```cmd-wrapped --history-file [path/to/.bash_history]```
-
-**Generate wrapped for a specific year**
-
-```cmd-wrapped --year [2024]```
-
-**Output in JSON format**
-
-```cmd-wrapped --json```
-
-**Show detailed statistics**
-
-```cmd-wrapped --verbose```
+```cmd-wrapped -s [zsh|bash|fish|nu|atuin]```
 
 # SYNOPSIS
 
-**cmd-wrapped** [_options_]
+**cmd-wrapped** [**-s** _shell_] [_year_]
 
 # PARAMETERS
 
-**--shell** _SHELL_
-> Specify which shell history to analyze (bash, zsh, fish).
+**-s** _shell_
+> Specify which shell history to analyze: zsh, bash, fish, nu (nushell), or atuin.
 
-**--history-file** _FILE_
-> Path to a custom history file to analyze.
-
-**--year** _YEAR_
-> Generate statistics for a specific year only.
-
-**--json**
-> Output results in JSON format for scripting.
-
-**--verbose**
-> Show additional detailed statistics.
-
-**--no-color**
-> Disable colored output.
-
-**-h**, **--help**
-> Display help information.
-
-**-V**, **--version**
-> Display version information.
+_year_
+> Positional argument selecting a specific year (e.g., 2024). Without it, current statistics are shown.
 
 # DESCRIPTION
 
-**cmd-wrapped** is a command-line tool that generates a "Spotify Wrapped" style summary of your terminal command history. It analyzes your shell history file to produce statistics about your most-used commands, busiest hours, and command patterns throughout the year.
+**cmd-wrapped** is a command-line tool that generates a "Spotify Wrapped" style summary of your terminal command history. It analyzes your shell history to produce statistics about your most-used commands, busiest hours, and command patterns over time.
 
-The tool automatically detects your default shell and locates the appropriate history file. It presents colorful, formatted output showing top commands, total commands executed, unique commands used, and temporal usage patterns.
+The tool reads the history of the detected (or specified) shell and presents colorful, formatted output showing top commands, total commands executed, unique commands used, and temporal usage patterns.
 
-cmd-wrapped supports multiple shells including Bash, Zsh, and Fish, and can process custom history files for analysis. The JSON output option enables integration with other tools or custom visualizations of your command-line habits.
+cmd-wrapped supports Zsh, Bash, Fish, Nushell, and Atuin. Pass a year as a positional argument to scope the report to that year, or `-s` to choose which shell's history to analyze.
 
 # CAVEATS
 
@@ -77,3 +47,9 @@ cmd-wrapped was created as a fun end-of-year tool inspired by **Spotify Wrapped*
 # SEE ALSO
 
 [history](/man/history)(1), [bash](/man/bash)(1), [zsh](/man/zsh)(1), [fish](/man/fish)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/YiNNx/cmd-wrapped)```
+
+<!-- verified: 2026-06-22 -->

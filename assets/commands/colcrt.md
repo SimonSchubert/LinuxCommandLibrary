@@ -49,3 +49,11 @@ Designed for older terminal handling. Modern terminals typically handle nroff ou
 # SEE ALSO
 
 [nroff](/man/nroff)(1), [col](/man/col)(1), [ul](/man/ul)(1), [man](/man/man)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man1/colcrt.1.html)```
+
+<!-- verified: 2026-06-22 -->

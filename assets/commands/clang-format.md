@@ -102,3 +102,11 @@ Style "file" uses nearest .clang-format in parent directories. Some formatting c
 # SEE ALSO
 
 [clang](/man/clang)(1), [clang-tidy](/man/clang-tidy)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/llvm/llvm-project)```
+
+```[Documentation](https://clang.llvm.org/docs/ClangFormat.html)```
+
+<!-- verified: 2026-06-22 -->

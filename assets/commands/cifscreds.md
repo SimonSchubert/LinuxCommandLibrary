@@ -75,3 +75,11 @@ The utility prompts for the password interactively; it cannot be provided on the
 # SEE ALSO
 
 [mount.cifs](/man/mount.cifs)(8), [cifs.idmap](/man/cifs.idmap)(8), [keyctl](/man/keyctl)(1)
+
+# RESOURCES
+
+```[Source code](https://git.samba.org/?p=cifs-utils.git;a=summary)```
+
+```[Documentation](https://man7.org/linux/man-pages/man1/cifscreds.1.html)```
+
+<!-- verified: 2026-06-22 -->

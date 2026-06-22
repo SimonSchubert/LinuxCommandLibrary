@@ -105,3 +105,9 @@ Requires running cmus instance. Socket permissions must allow connection. Some c
 # SEE ALSO
 
 [cmus](/man/cmus)(1), [mpd](/man/mpd)(1), [mpc](/man/mpc)(1), [playerctl](/man/playerctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cmus/cmus)```
+
+<!-- verified: 2026-06-22 -->

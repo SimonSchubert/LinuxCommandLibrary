@@ -113,3 +113,11 @@ Requires deps.edn for project configuration. Use `clojure` instead of `clj` in s
 # SEE ALSO
 
 [lein](/man/lein)(1), [java](/man/java)(1), [clojure](/man/clojure)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/clojure/brew-install)```
+
+```[Documentation](https://clojure.org/reference/deps_and_cli)```
+
+<!-- verified: 2026-06-22 -->

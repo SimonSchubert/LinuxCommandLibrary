@@ -80,3 +80,11 @@ CodeCrafters was founded to provide hands-on learning experiences for experience
 # SEE ALSO
 
 [git](/man/git)(1), [exercism](/man/exercism)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/codecrafters-io/cli)```
+
+```[Documentation](https://docs.codecrafters.io/)```
+
+<!-- verified: 2026-06-22 -->

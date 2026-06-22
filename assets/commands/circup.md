@@ -70,3 +70,11 @@ Requires a CircuitPython device to be connected and mounted. The device must be 
 # SEE ALSO
 
 [pip](/man/pip)(1), [mpremote](/man/mpremote)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/adafruit/circup)```
+
+```[Documentation](https://docs.circuitpython.org/projects/circup/)```
+
+<!-- verified: 2026-06-22 -->

@@ -98,3 +98,11 @@ Requires running clamd daemon. Most clamscan options are ignored as settings com
 # SEE ALSO
 
 [clamscan](/man/clamscan)(1), [clamd](/man/clamd)(8), [freshclam](/man/freshclam)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Cisco-Talos/clamav)```
+
+```[Documentation](https://docs.clamav.net/)```
+
+<!-- verified: 2026-06-22 -->

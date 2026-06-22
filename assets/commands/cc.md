@@ -19,3 +19,9 @@ Using **cc** in build scripts provides portability across systems where differen
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [clang](/man/clang)(1), [make](/man/make)(1)
+
+# RESOURCES
+
+```[Documentation](https://gcc.gnu.org/onlinedocs/)```
+
+<!-- verified: 2026-06-22 -->

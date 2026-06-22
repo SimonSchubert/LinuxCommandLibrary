@@ -73,3 +73,11 @@ All unrecognized control characters and escape sequences are discarded by defaul
 # SEE ALSO
 
 [nroff](/man/nroff)(1), [tbl](/man/tbl)(1), [colcrt](/man/colcrt)(1), [expand](/man/expand)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man1/col.1.html)```
+
+<!-- verified: 2026-06-22 -->

@@ -27,3 +27,11 @@ It is part of the Graphviz suite alongside dot, neato, fdp, sfdp, twopi, and cir
 # SEE ALSO
 
 [dot](/man/dot)(1), [neato](/man/neato)(1), [graphviz](/man/graphviz)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/graphviz/graphviz)```
+
+```[Homepage](https://graphviz.org/)```
+
+<!-- verified: 2026-06-22 -->

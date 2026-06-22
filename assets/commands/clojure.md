@@ -102,3 +102,11 @@ Clojure was created by Rich Hickey and released in **2007** as a modern Lisp for
 # SEE ALSO
 
 [lein](/man/lein)(1), [java](/man/java)(1), [clj](/man/clj)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/clojure/brew-install)```
+
+```[Documentation](https://clojure.org/reference/deps_and_cli)```
+
+<!-- verified: 2026-06-22 -->

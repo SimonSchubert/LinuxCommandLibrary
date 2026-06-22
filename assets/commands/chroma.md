@@ -77,3 +77,9 @@ Autodetects language from filename and content. Use --fail for fallback pipeline
 # SEE ALSO
 
 [highlight](/man/highlight)(1), [pygmentize](/man/pygmentize)(1), [bat](/man/bat)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/alecthomas/chroma)```
+
+<!-- verified: 2026-06-22 -->

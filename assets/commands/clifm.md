@@ -102,3 +102,9 @@ CLI-based, not TUI. Shell commands work directly. Highly customizable via profil
 # SEE ALSO
 
 [ranger](/man/ranger)(1), [lf](/man/lf)(1), [nnn](/man/nnn)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/leo-arch/clifm)```
+
+<!-- verified: 2026-06-22 -->

@@ -42,3 +42,11 @@ Git Cola is cross-platform, running on Linux, macOS, and Windows. It integrates 
 # SEE ALSO
 
 [git](/man/git)(1), [git-cola](/man/git-cola)(1), [gitk](/man/gitk)(1), [tig](/man/tig)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git-cola/git-cola)```
+
+```[Homepage](https://git-cola.github.io/)```
+
+<!-- verified: 2026-06-22 -->

@@ -90,3 +90,9 @@ codespell was created by Lucas De Marchi and is maintained as an open-source pro
 # SEE ALSO
 
 [aspell](/man/aspell)(1), [hunspell](/man/hunspell)(1), [spell](/man/spell)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/codespell-project/codespell)```
+
+<!-- verified: 2026-06-22 -->

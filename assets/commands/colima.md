@@ -115,3 +115,9 @@ Requires macOS 10.15+ or Linux. vz (Apple virtualization) faster on Apple Silico
 # SEE ALSO
 
 [docker](/man/docker)(1), [nerdctl](/man/nerdctl)(1), [lima](/man/lima)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/abiosoft/colima)```
+
+<!-- verified: 2026-06-22 -->

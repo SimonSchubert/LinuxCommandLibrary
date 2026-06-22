@@ -106,3 +106,11 @@ Tunnel credentials are per-tunnel. Quick tunnels are temporary. Free tier availa
 # SEE ALSO
 
 [ngrok](/man/ngrok)(1), [ssh](/man/ssh)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cloudflare/cloudflared)```
+
+```[Documentation](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/)```
+
+<!-- verified: 2026-06-22 -->

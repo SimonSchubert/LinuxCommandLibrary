@@ -119,3 +119,11 @@ Requires Civo API key configured. Kubeconfig merged to ~/.kube/config when saved
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [terraform](/man/terraform)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/civo/cli)```
+
+```[Documentation](https://www.civo.com/docs/overview/civo-cli)```
+
+<!-- verified: 2026-06-22 -->

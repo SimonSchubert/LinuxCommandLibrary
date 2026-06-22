@@ -100,3 +100,11 @@ Visual Studio Code was released by **Microsoft** in **April 2015** as a free, op
 # SEE ALSO
 
 [vim](/man/vim)(1), [nano](/man/nano)(1), [subl](/man/subl)(1), [atom](/man/atom)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/microsoft/vscode)```
+
+```[Documentation](https://code.visualstudio.com/docs/editor/command-line)```
+
+<!-- verified: 2026-06-22 -->

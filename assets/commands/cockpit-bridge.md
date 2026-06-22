@@ -44,3 +44,11 @@ Part of the Cockpit suite. Normally invoked automatically by cockpit-ws rather t
 # SEE ALSO
 
 [cockpit-ws](/man/cockpit-ws)(8), [cockpit-tls](/man/cockpit-tls)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/cockpit-project/cockpit)```
+
+```[Documentation](https://cockpit-project.org/guide/latest/)```
+
+<!-- verified: 2026-06-22 -->

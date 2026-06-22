@@ -54,3 +54,11 @@ Part of util-linux. The table mode requires consistent delimiter usage. Very lon
 # SEE ALSO
 
 [colrm](/man/colrm)(1), [cut](/man/cut)(1), [paste](/man/paste)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man1/column.1.html)```
+
+<!-- verified: 2026-06-22 -->

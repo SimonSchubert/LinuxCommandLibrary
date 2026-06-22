@@ -89,3 +89,11 @@ cjpeg originated as part of the Independent JPEG Group's free JPEG software, fir
 # SEE ALSO
 
 [djpeg](/man/djpeg)(1), [jpegtran](/man/jpegtran)(1), [convert](/man/convert)(1), [ffmpeg](/man/ffmpeg)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/libjpeg-turbo/libjpeg-turbo)```
+
+```[Homepage](https://libjpeg-turbo.org/)```
+
+<!-- verified: 2026-06-22 -->

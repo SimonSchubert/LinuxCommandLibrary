@@ -81,3 +81,9 @@ Needs clean GNU diff output. Part of patchutils package (not pre-installed). Use
 # SEE ALSO
 
 [diff](/man/diff)(1), [patch](/man/patch)(1), [interdiff](/man/interdiff)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/twaugh/patchutils)```
+
+<!-- verified: 2026-06-22 -->

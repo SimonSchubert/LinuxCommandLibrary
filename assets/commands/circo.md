@@ -76,3 +76,11 @@ Part of the Graphviz package; all layout engines (dot, neato, circo, twopi, fdp,
 # SEE ALSO
 
 [dot](/man/dot)(1), [neato](/man/neato)(1), [twopi](/man/twopi)(1), [fdp](/man/fdp)(1), [sfdp](/man/sfdp)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/graphviz/graphviz)```
+
+```[Documentation](https://graphviz.org/docs/layouts/circo/)```
+
+<!-- verified: 2026-06-22 -->

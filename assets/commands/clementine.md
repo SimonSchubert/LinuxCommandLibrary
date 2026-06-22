@@ -103,3 +103,11 @@ Clementine was created in **2010** as a fork of Amarok 1.4, preserving its Qt4-b
 # SEE ALSO
 
 [mpc](/man/mpc)(1), [mpv](/man/mpv)(1), [cmus](/man/cmus)(1), [vlc](/man/vlc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/clementine-player/Clementine)```
+
+```[Homepage](https://www.clementine-player.org/)```
+
+<!-- verified: 2026-06-22 -->

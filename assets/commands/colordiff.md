@@ -92,3 +92,11 @@ Written in Perl. Requires ANSI color support in terminal (xterm, etc.). Colors c
 # SEE ALSO
 
 [diff](/man/diff)(1), [git-diff](/man/git-diff)(1), [vimdiff](/man/vimdiff)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/daveewart/colordiff)```
+
+```[Homepage](https://www.colordiff.org/)```
+
+<!-- verified: 2026-06-22 -->

@@ -98,3 +98,11 @@ Default password in config file. Use TLS in production. Some extensions may not 
 # SEE ALSO
 
 [code](/man/code)(1), [vim](/man/vim)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/coder/code-server)```
+
+```[Documentation](https://coder.com/docs/code-server)```
+
+<!-- verified: 2026-06-22 -->

@@ -54,3 +54,11 @@ The **clear** command has been part of Unix systems since the early days, origin
 # SEE ALSO
 
 [reset](/man/reset)(1), [tput](/man/tput)(1), [stty](/man/stty)(1), [tty](/man/tty)(1)
+
+# RESOURCES
+
+```[Homepage](https://invisible-island.net/ncurses/)```
+
+```[Documentation](https://invisible-island.net/ncurses/man/clear.1.html)```
+
+<!-- verified: 2026-06-22 -->

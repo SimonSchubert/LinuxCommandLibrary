@@ -58,3 +58,11 @@ Part of the Cockpit suite. Running without TLS is insecure and should only be us
 # SEE ALSO
 
 [cockpit-bridge](/man/cockpit-bridge)(1), [cockpit-tls](/man/cockpit-tls)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/cockpit-project/cockpit)```
+
+```[Documentation](https://cockpit-project.org/guide/latest/)```
+
+<!-- verified: 2026-06-22 -->

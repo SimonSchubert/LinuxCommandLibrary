@@ -25,3 +25,11 @@ CMU window manager (CMU WM) was an early X Window System window manager from Car
 # SEE ALSO
 
 [pbmtocmuwm](/man/pbmtocmuwm)(1), [netpbm](/man/netpbm)(1)
+
+# RESOURCES
+
+```[Homepage](https://netpbm.sourceforge.net/)```
+
+```[Documentation](https://netpbm.sourceforge.net/doc/cmuwmtopbm.html)```
+
+<!-- verified: 2026-06-22 -->

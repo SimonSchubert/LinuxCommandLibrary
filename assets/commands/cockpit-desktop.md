@@ -39,3 +39,11 @@ Part of the Cockpit suite. Requires a graphical desktop environment. Uses networ
 # SEE ALSO
 
 [cockpit-ws](/man/cockpit-ws)(8), [cockpit-bridge](/man/cockpit-bridge)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cockpit-project/cockpit)```
+
+```[Documentation](https://cockpit-project.org/guide/latest/)```
+
+<!-- verified: 2026-06-22 -->

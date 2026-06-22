@@ -87,3 +87,11 @@ Cannot compare directories, only files. For text file differences, use diff inst
 # SEE ALSO
 
 [diff](/man/diff)(1), [comm](/man/comm)(1), [md5sum](/man/md5sum)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/diffutils.git)```
+
+```[Documentation](https://www.gnu.org/software/diffutils/manual/html_node/Invoking-cmp.html)```
+
+<!-- verified: 2026-06-22 -->

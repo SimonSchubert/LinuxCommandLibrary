@@ -83,3 +83,11 @@ JPEG XL was standardized as **ISO/IEC 18181** in **2022**. The format was develo
 # SEE ALSO
 
 [djxl](/man/djxl)(1), [cjpeg](/man/cjpeg)(1), [convert](/man/convert)(1), [cwebp](/man/cwebp)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/libjxl/libjxl)```
+
+```[Homepage](https://jpegxl.info/)```
+
+<!-- verified: 2026-06-22 -->

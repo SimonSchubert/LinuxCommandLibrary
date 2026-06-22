@@ -106,3 +106,9 @@ Use -M to auto-detect strongest working auth. Store password hashes instead of p
 # SEE ALSO
 
 [squid](/man/squid)(8), [privoxy](/man/privoxy)(1), [tinyproxy](/man/tinyproxy)(8)
+
+# RESOURCES
+
+```[Homepage](https://cntlm.sourceforge.net/)```
+
+<!-- verified: 2026-06-22 -->

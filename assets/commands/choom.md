@@ -40,4 +40,12 @@ Requires appropriate privileges to modify OOM scores of other users' processes. 
 
 # SEE ALSO
 
-[oom_score_adj](/man/proc)(5), [kill](/man/kill)(1), [ps](/man/ps)(1)
+[proc](/man/proc)(5), [kill](/man/kill)(1), [ps](/man/ps)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man1/choom.1.html)```
+
+<!-- verified: 2026-06-22 -->

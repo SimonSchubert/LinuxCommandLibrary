@@ -85,3 +85,9 @@ Uses Python regex syntax. Complex transformations may require scripting via Pyth
 # SEE ALSO
 
 [sed](/man/sed)(1), [perl](/man/perl)(1), [fastmod](/man/fastmod)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/facebookarchive/codemod)```
+
+<!-- verified: 2026-06-22 -->

@@ -47,3 +47,11 @@ Part of the Cockpit suite. Requires valid TLS certificates. Typically managed by
 # SEE ALSO
 
 [cockpit-ws](/man/cockpit-ws)(8), [cockpit-bridge](/man/cockpit-bridge)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cockpit-project/cockpit)```
+
+```[Documentation](https://cockpit-project.org/guide/latest/)```
+
+<!-- verified: 2026-06-22 -->

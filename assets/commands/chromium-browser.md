@@ -104,4 +104,12 @@ Command-line switches may change between versions. Check about:version for activ
 
 # SEE ALSO
 
-[google-chrome](/man/google-chrome)(1), [firefox](/man/firefox)(1)
+[google-chrome](/man/google-chrome)(1), [firefox](/man/firefox)(1), [chromium](/man/chromium)(1)
+
+# RESOURCES
+
+```[Source code](https://chromium.googlesource.com/chromium/src/)```
+
+```[Homepage](https://www.chromium.org/Home/)```
+
+<!-- verified: 2026-06-22 -->

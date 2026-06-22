@@ -114,3 +114,11 @@ chrony was originally written by **Richard Curnow** starting in **1997** to prov
 # SEE ALSO
 
 [ntpd](/man/ntpd)(8), [timedatectl](/man/timedatectl)(1), [hwclock](/man/hwclock)(8)
+
+# RESOURCES
+
+```[Homepage](https://chrony-project.org/)```
+
+```[Documentation](https://chrony-project.org/documentation.html)```
+
+<!-- verified: 2026-06-22 -->

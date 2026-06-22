@@ -125,3 +125,9 @@ Requires Ruby and the colorls gem (gem install colorls). Icons require a Nerd Fo
 # SEE ALSO
 
 [ls](/man/ls)(1), [exa](/man/exa)(1), [eza](/man/eza)(1), [lsd](/man/lsd)(1), [tree](/man/tree)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/athityakumar/colorls)```
+
+<!-- verified: 2026-06-22 -->

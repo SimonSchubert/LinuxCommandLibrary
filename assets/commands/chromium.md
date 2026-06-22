@@ -101,3 +101,11 @@ Visit **about:version** in the browser to see which flags are currently active.
 # SEE ALSO
 
 [google-chrome](/man/google-chrome)(1), [firefox](/man/firefox)(1)
+
+# RESOURCES
+
+```[Source code](https://chromium.googlesource.com/chromium/src/)```
+
+```[Homepage](https://www.chromium.org/Home/)```
+
+<!-- verified: 2026-06-22 -->

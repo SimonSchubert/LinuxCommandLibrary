@@ -69,3 +69,11 @@ The **chroot** system call originated in **Version 7 Unix** (1979) at Bell Labs.
 # SEE ALSO
 
 [arch-chroot](/man/arch-chroot)(1), [pivot_root](/man/pivot_root)(8), [unshare](/man/unshare)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/coreutils/coreutils)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/html_node/chroot-invocation.html)```
+
+<!-- verified: 2026-06-22 -->

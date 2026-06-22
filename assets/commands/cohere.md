@@ -85,3 +85,9 @@ The cohere-cli tool was created as a community project to provide terminal acces
 # SEE ALSO
 
 [anthropic](/man/anthropic)(1), [ollama](/man/ollama)(1), [llm](/man/llm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/plyght/cohere-cli)```
+
+<!-- verified: 2026-06-22 -->

@@ -87,3 +87,9 @@ Zero-indexed (first field is 0). Faster than cut for long inputs, much faster th
 # SEE ALSO
 
 [cut](/man/cut)(1), [awk](/man/awk)(1), [sed](/man/sed)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/theryangeary/choose)```
+
+<!-- verified: 2026-06-22 -->

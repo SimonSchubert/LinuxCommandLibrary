@@ -58,3 +58,9 @@ Wayland-only, does not work with X11. Requires wl-clipboard (wl-copy, wl-paste).
 # SEE ALSO
 
 [wl-copy](/man/wl-copy)(1), [wl-paste](/man/wl-paste)(1), [xclip](/man/xclip)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/sentriz/cliphist)```
+
+<!-- verified: 2026-06-22 -->

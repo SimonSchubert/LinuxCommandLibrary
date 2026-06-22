@@ -102,3 +102,11 @@ Requires cert-manager installed in cluster. Tab completion available. Preferred 
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [openssl](/man/openssl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cert-manager/cmctl)```
+
+```[Documentation](https://cert-manager.io/docs/reference/cmctl/)```
+
+<!-- verified: 2026-06-22 -->
