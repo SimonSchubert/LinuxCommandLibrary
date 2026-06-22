@@ -1240,6 +1240,7 @@ code2prompt.md
 codeburn.md
 codecov.md
 codecrafters.md
+codeflowmap.md
 codemod.md
 coderabbit.md
 codesign.md
@@ -1565,6 +1566,7 @@ deborphan.md
 debsecan.md
 debsign.md
 debtap.md
+debugbrief.md
 debugfs.md
 debuginfod-find.md
 debuginfod.md
@@ -2952,6 +2954,7 @@ gprolog.md
 gpu-screen-recorder.md
 gpustat.md
 gqrx.md
+grabc.md
 gradio.md
 gradle-build.md
 gradle-clean.md
@@ -8198,6 +8201,11 @@ wiki-tui.md
 wikiman.md
 wikit.md
 windres.md
+wine-reg-add.md
+wine-reg-copy.md
+wine-reg-delete.md
+wine-reg-query.md
+wine-reg.md
 wine.md
 winecfg.md
 winetricks.md
