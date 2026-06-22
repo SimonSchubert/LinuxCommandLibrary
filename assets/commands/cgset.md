@@ -56,3 +56,9 @@ Requires appropriate permissions (typically root). Parameter names and values ar
 # SEE ALSO
 
 [cgcreate](/man/cgcreate)(1), [cgdelete](/man/cgdelete)(1), [cgget](/man/cgget)(1), [cgexec](/man/cgexec)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/libcgroup/libcgroup)```
+
+<!-- verified: 2026-06-22 -->

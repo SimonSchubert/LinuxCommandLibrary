@@ -90,3 +90,11 @@ Output quality depends on terminal capabilities. Sixels require compatible termi
 # SEE ALSO
 
 [catimg](/man/catimg)(1), [timg](/man/timg)(1), [img2txt](/man/img2txt)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/hpjansson/chafa)```
+
+```[Homepage](https://hpjansson.org/chafa/)```
+
+<!-- verified: 2026-06-22 -->

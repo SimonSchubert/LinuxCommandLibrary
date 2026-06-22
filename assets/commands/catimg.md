@@ -76,4 +76,10 @@ Uses Unicode block characters for rendering. Quality depends on terminal font an
 
 # SEE ALSO
 
-[chafa](/man/chafa)(1), [timg](/man/timg)(1)
+[chafa](/man/chafa)(1), [timg](/man/timg)(1), [tiv](/man/tiv)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/posva/catimg)```
+
+<!-- verified: 2026-06-22 -->

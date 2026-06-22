@@ -49,3 +49,9 @@ Linux has two versions of cgroups (v1 and v2) with different interfaces. Modern 
 # SEE ALSO
 
 [cgclassify](/man/cgclassify)(1), [cgcreate](/man/cgcreate)(1), [cgexec](/man/cgexec)(1), [systemd-cgtop](/man/systemd-cgtop)(1)
+
+# RESOURCES
+
+```[Documentation](https://man7.org/linux/man-pages/man7/cgroups.7.html)```
+
+<!-- verified: 2026-06-22 -->

@@ -59,3 +59,9 @@ Requires SELinux to be enabled with MCS policy. Category names must be defined i
 # SEE ALSO
 
 [chcon](/man/chcon)(1), [semanage](/man/semanage)(8), [ls](/man/ls)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/SELinuxProject/selinux)```
+
+<!-- verified: 2026-06-22 -->

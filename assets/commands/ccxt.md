@@ -107,3 +107,11 @@ CCXT was created to provide a unified API across cryptocurrency exchanges, abstr
 # SEE ALSO
 
 [curl](/man/curl)(1), [jq](/man/jq)(1), [node](/man/node)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ccxt/ccxt)```
+
+```[Documentation](https://docs.ccxt.com)```
+
+<!-- verified: 2026-06-22 -->

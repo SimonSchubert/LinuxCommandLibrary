@@ -129,3 +129,11 @@ Use cf v8 (current supported version). Run `cf help -a` for all commands. Intera
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [heroku](/man/heroku)(1), [docker](/man/docker)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cloudfoundry/cli)```
+
+```[Documentation](https://docs.cloudfoundry.org/cf-cli/)```
+
+<!-- verified: 2026-06-22 -->

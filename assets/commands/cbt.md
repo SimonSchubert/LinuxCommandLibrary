@@ -82,3 +82,11 @@ The **cbt** tool was developed by Google as part of the Cloud Bigtable ecosystem
 # SEE ALSO
 
 [gcloud](/man/gcloud)(1), [bq](/man/bq)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/googleapis/google-cloud-go/tree/main/bigtable/cmd/cbt)```
+
+```[Documentation](https://cloud.google.com/bigtable/docs/cbt-reference)```
+
+<!-- verified: 2026-06-22 -->

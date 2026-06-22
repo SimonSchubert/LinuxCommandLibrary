@@ -94,3 +94,11 @@ Use --invert to trace where a dependency comes from. Combine with --edges featur
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-metadata](/man/cargo-metadata)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-tree.html)```
+
+<!-- verified: 2026-06-22 -->

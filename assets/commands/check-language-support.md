@@ -47,3 +47,9 @@ Ubuntu-specific tool; may not work on other distributions. Recommendations are b
 # SEE ALSO
 
 [apt](/man/apt)(8), [locale](/man/locale)(1), [localectl](/man/localectl)(1)
+
+# RESOURCES
+
+```[Homepage](https://launchpad.net/language-selector)```
+
+<!-- verified: 2026-06-22 -->

@@ -85,3 +85,11 @@ Cargo.lock is auto-maintained. Update when you want newer compatible versions. L
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-generate-lockfile](/man/cargo-generate-lockfile)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-update.html)```
+
+<!-- verified: 2026-06-22 -->

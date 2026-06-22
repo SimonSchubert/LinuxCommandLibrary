@@ -77,3 +77,11 @@ Only root or the file owner can change group ownership. Regular users can only c
 # SEE ALSO
 
 [chown](/man/chown)(1), [chmod](/man/chmod)(1), [groups](/man/groups)(1), [ls](/man/ls)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/coreutils/coreutils)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/html_node/chgrp-invocation.html)```
+
+<!-- verified: 2026-06-22 -->

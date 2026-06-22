@@ -75,3 +75,9 @@ Requires a USB CEC adapter (like Pulse-Eight). Device addresses are 0-15 where 0
 # SEE ALSO
 
 [cec-ctl](/man/cec-ctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Pulse-Eight/libcec)```
+
+<!-- verified: 2026-06-22 -->

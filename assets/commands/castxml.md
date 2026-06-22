@@ -89,3 +89,11 @@ Output format depends on selected option. GCCXML format provided for legacy comp
 # SEE ALSO
 
 [clang](/man/clang)(1), [g++](/man/g++)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/CastXML/CastXML)```
+
+```[Documentation](https://github.com/CastXML/CastXML/blob/master/doc/manual/castxml.1.rst)```
+
+<!-- verified: 2026-06-22 -->

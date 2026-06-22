@@ -78,3 +78,11 @@ Part of **GNU Coreutils**. Originated in **1971** for first Edition Unix by Ken 
 # SEE ALSO
 
 [less](/man/less)(1), [more](/man/more)(1), [head](/man/head)(1), [tail](/man/tail)(1), [tac](/man/tac)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/coreutils/coreutils)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/html_node/cat-invocation.html)```
+
+<!-- verified: 2026-06-22 -->

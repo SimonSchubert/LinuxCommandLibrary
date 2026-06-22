@@ -100,3 +100,9 @@ For authorized security testing only. Integrates well with subdomain discovery t
 # SEE ALSO
 
 [subfinder](/man/subfinder)(1), [httpx](/man/httpx)(1), [nuclei](/man/nuclei)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/edoardottt/cariddi)```
+
+<!-- verified: 2026-06-22 -->

@@ -97,3 +97,9 @@ Requires Node.js. Color support depends on terminal capabilities. Use --color to
 # SEE ALSO
 
 [tput](/man/tput)(1), [printf](/man/printf)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/chalk/chalk-cli)```
+
+<!-- verified: 2026-06-22 -->

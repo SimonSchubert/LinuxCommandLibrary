@@ -86,3 +86,9 @@ The **-f** option should be run as root. Running as non-root will report many pe
 # SEE ALSO
 
 [lpr](/man/lpr)(1), [lpq](/man/lpq)(1), [lprm](/man/lprm)(1), [lpc](/man/lpc)(8)
+
+# RESOURCES
+
+```[Source code](https://sourceforge.net/projects/lprng/)```
+
+<!-- verified: 2026-06-22 -->

@@ -111,3 +111,11 @@ Requires Node.js and AWS credentials configured. Run `cdk bootstrap` once per ac
 # SEE ALSO
 
 [aws](/man/aws)(1), [terraform](/man/terraform)(1), [pulumi](/man/pulumi)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aws/aws-cdk)```
+
+```[Documentation](https://docs.aws.amazon.com/cdk/v2/guide/cli.html)```
+
+<!-- verified: 2026-06-22 -->

@@ -58,3 +58,11 @@ The GECOS field originated from the General Electric Comprehensive Operating Sys
 # SEE ALSO
 
 [finger](/man/finger)(1), [passwd](/man/passwd)(1), [usermod](/man/usermod)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man1/chfn.1.html)```
+
+<!-- verified: 2026-06-22 -->

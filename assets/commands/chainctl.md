@@ -79,3 +79,9 @@ Requires a Chainguard account for authentication. Some commands require appropri
 # SEE ALSO
 
 [docker](/man/docker)(1), [cosign](/man/cosign)(1)
+
+# RESOURCES
+
+```[Documentation](https://edu.chainguard.dev/chainguard/chainctl/)```
+
+<!-- verified: 2026-06-22 -->

@@ -1,27 +1,45 @@
 # TAGLINE
 
-terminal interface for cheat.sh
+interactive cheatsheet manager for the terminal
 
 # TLDR
 
-**Launch cheatsh** terminal interface
+**Launch the interactive fuzzy-finder menu**
 
 ```cheatshh```
 
-**Search for a command cheatsheet**
+**Create a new command group**
 
-```cheatshh [command]```
+```cheatshh -g```
+
+**Show help**
+
+```cheatshh -h```
 
 # SYNOPSIS
 
-**cheatshh** [_query_]
+**cheatshh** [_options_]
 
 # DESCRIPTION
 
-**cheatshh** is a terminal-based interface for cheat.sh, providing quick access to cheatsheets for various commands and programming languages. It offers interactive search and browsing of community-curated examples.
+**cheatshh** is an interactive command-line tool for storing, organizing, and quickly accessing your own command cheatsheets. Rather than memorizing commands, you save them in named groups with custom descriptions and recall them through a fuzzy-finder (fzf) and whiptail menu.
 
-The cheat.sh service aggregates cheatsheets from multiple sources including tldr-pages, Stack Overflow, and community contributions. Running **cheatshh** provides a more interactive experience than manually curling **cheat.sh/command**, with features like search, navigation, and formatted output directly in the terminal.
+Alongside your stored commands, cheatshh can display **tldr** and **man** pages and pull examples from external sources such as **cheat.sh**, all configurable through its settings. It supports adding, editing, and deleting commands, bookmarking frequently used entries, and customizing colors and automatic man-page display. It is written in shell with Python components and runs on Linux and macOS.
+
+# PARAMETERS
+
+**-g**
+> Create a new command group
+
+**-h**, **--help**
+> Display help information
 
 # SEE ALSO
 
-[tldr](/man/tldr)(1), [man](/man/man)(1), [cheat](/man/cheat)(1)
+[tldr](/man/tldr)(1), [man](/man/man)(1), [cheat](/man/cheat)(1), [fzf](/man/fzf)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/AnirudhG07/cheatshh)```
+
+<!-- verified: 2026-06-22 -->

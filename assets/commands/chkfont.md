@@ -44,3 +44,11 @@ Only validates FIGlet font format, not FIGlet control files or other font format
 # SEE ALSO
 
 [figlet](/man/figlet)(6), [figlist](/man/figlist)(6), [showfigfonts](/man/showfigfonts)(6), [toilet](/man/toilet)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cmatsuoka/figlet)```
+
+```[Homepage](http://www.figlet.org)```
+
+<!-- verified: 2026-06-22 -->

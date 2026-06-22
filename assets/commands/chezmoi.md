@@ -136,3 +136,11 @@ Learning curve for templates. Git repo public by default (use private for secret
 # SEE ALSO
 
 [dotfiles](/man/dotfiles)(1), [git](/man/git)(1), [stow](/man/stow)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/twpayne/chezmoi)```
+
+```[Documentation](https://www.chezmoi.io/)```
+
+<!-- verified: 2026-06-22 -->

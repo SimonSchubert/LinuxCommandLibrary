@@ -72,3 +72,11 @@ Template file format differs from OpenSSL configuration. Some features may requi
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [gnutls-cli](/man/gnutls-cli)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/gnutls/gnutls)```
+
+```[Documentation](https://gnutls.org/manual/html_node/certtool-Invocation.html)```
+
+<!-- verified: 2026-06-22 -->

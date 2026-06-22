@@ -69,3 +69,9 @@ Requires audio capture permissions. Different audio backends need corresponding 
 # SEE ALSO
 
 [alsamixer](/man/alsamixer)(1), [pavucontrol](/man/pavucontrol)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/karlstav/cava)```
+
+<!-- verified: 2026-06-22 -->

@@ -133,3 +133,11 @@ Requires ownership or root privileges. 777 permissions are security risk. Recurs
 # SEE ALSO
 
 [chown](/man/chown)(1), [chgrp](/man/chgrp)(1), [umask](/man/umask)(1), [ls](/man/ls)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/coreutils/coreutils)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/html_node/chmod-invocation.html)```
+
+<!-- verified: 2026-06-22 -->

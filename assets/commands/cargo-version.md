@@ -23,7 +23,8 @@ Display version information for Cargo
 # SYNOPSIS
 
 **cargo version** [_options_]
-**cargo** -V [v]
+
+**cargo** [_-V_ | _--version_]
 
 # DESCRIPTION
 
@@ -74,3 +75,11 @@ Operates offline with no side effects. Useful for CI/CD and build script checks.
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [rustc](/man/rustc)(1), [rustup](/man/rustup)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-version.html)```
+
+<!-- verified: 2026-06-22 -->

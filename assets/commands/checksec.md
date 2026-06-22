@@ -82,3 +82,9 @@ Originally written by **Tobias Klein** at trapkit.de. The tool has been actively
 # SEE ALSO
 
 [readelf](/man/readelf)(1), [objdump](/man/objdump)(1), [file](/man/file)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/slimm609/checksec)```
+
+<!-- verified: 2026-06-22 -->

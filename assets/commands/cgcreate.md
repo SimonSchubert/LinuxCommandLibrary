@@ -70,3 +70,9 @@ Cgroups v1 and v2 have different hierarchies and features. On cgroups v2 systems
 # SEE ALSO
 
 [cgdelete](/man/cgdelete)(1), [cgexec](/man/cgexec)(1), [cgset](/man/cgset)(1), [cgroups](/man/cgroups)(7)
+
+# RESOURCES
+
+```[Source code](https://github.com/libcgroup/libcgroup)```
+
+<!-- verified: 2026-06-22 -->

@@ -125,3 +125,9 @@ Requires Go 1.20+ to build from source. Private keys should be protected. Use co
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [certbot](/man/certbot)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cloudflare/cfssl)```
+
+<!-- verified: 2026-06-22 -->

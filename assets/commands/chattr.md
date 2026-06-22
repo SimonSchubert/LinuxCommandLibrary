@@ -83,3 +83,11 @@ Requires appropriate capabilities or root privileges. Immutable files cannot be 
 # SEE ALSO
 
 [lsattr](/man/lsattr)(1), [chmod](/man/chmod)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tytso/e2fsprogs)```
+
+```[Documentation](https://man7.org/linux/man-pages/man1/chattr.1.html)```
+
+<!-- verified: 2026-06-22 -->

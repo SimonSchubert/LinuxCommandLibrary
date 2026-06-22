@@ -76,3 +76,11 @@ Vendored sources are read-only. Use [patch] for modifications. Resolution may di
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-fetch](/man/cargo-fetch)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/cargo)```
+
+```[Documentation](https://doc.rust-lang.org/cargo/commands/cargo-vendor.html)```
+
+<!-- verified: 2026-06-22 -->

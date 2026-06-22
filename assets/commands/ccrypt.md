@@ -99,3 +99,9 @@ Using -K on command line exposes key in process list. Use -k with keyfile or std
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [openssl](/man/openssl)(1), [age](/man/age)(1)
+
+# RESOURCES
+
+```[Homepage](https://ccrypt.sourceforge.net)```
+
+<!-- verified: 2026-06-22 -->

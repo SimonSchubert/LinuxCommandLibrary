@@ -60,3 +60,9 @@ Arch Linux specific. Requires network access for database synchronization unless
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [paru](/man/paru)(1), [yay](/man/yay)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.archlinux.org/pacman/pacman-contrib)```
+
+<!-- verified: 2026-06-22 -->

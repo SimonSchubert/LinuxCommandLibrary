@@ -94,3 +94,11 @@ CHD was developed as part of the **MAME** (Multiple Arcade Machine Emulator) pro
 # SEE ALSO
 
 [mame](/man/mame)(6)
+
+# RESOURCES
+
+```[Source code](https://github.com/mamedev/mame)```
+
+```[Documentation](https://docs.mamedev.org/tools/chdman.html)```
+
+<!-- verified: 2026-06-22 -->

@@ -79,3 +79,9 @@ Written in Go (owenthereal version) or Python (welbornprod version). Requires te
 # SEE ALSO
 
 [cat](/man/cat)(1), [bat](/man/bat)(1), [highlight](/man/highlight)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/owenthereal/ccat)```
+
+<!-- verified: 2026-06-22 -->

@@ -83,3 +83,11 @@ Only generates headers for pub extern "C" functions and #[repr(C)] types. Requir
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [bindgen](/man/bindgen)(1), [rustc](/man/rustc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/mozilla/cbindgen)```
+
+```[Documentation](https://github.com/mozilla/cbindgen/blob/master/docs.md)```
+
+<!-- verified: 2026-06-22 -->

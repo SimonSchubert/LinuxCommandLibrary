@@ -64,3 +64,11 @@ Changes are only written when explicitly choosing "Write". Incorrectly modifying
 # SEE ALSO
 
 [fdisk](/man/fdisk)(8), [parted](/man/parted)(8), [gdisk](/man/gdisk)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man8/cfdisk.8.html)```
+
+<!-- verified: 2026-06-22 -->

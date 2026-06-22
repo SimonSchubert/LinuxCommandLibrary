@@ -86,3 +86,11 @@ Custom policies can be written in Python or YAML. For accurate Terraform scannin
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [kubectl](/man/kubectl)(1), [tfsec](/man/tfsec)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/bridgecrewio/checkov)```
+
+```[Documentation](https://www.checkov.io/)```
+
+<!-- verified: 2026-06-22 -->

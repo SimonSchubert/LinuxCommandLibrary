@@ -82,3 +82,11 @@ Primarily used for legacy modem/PPP connections. Timing is critical; adjust time
 # SEE ALSO
 
 [pppd](/man/pppd)(8), [expect](/man/expect)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ppp-project/ppp)```
+
+```[Documentation](https://man7.org/linux/man-pages/man8/chat.8.html)```
+
+<!-- verified: 2026-06-22 -->

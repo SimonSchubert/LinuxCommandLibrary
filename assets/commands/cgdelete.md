@@ -54,3 +54,9 @@ Cannot delete cgroups that contain running processes. Requires appropriate permi
 # SEE ALSO
 
 [cgcreate](/man/cgcreate)(1), [cgset](/man/cgset)(1), [cgget](/man/cgget)(1), [lscgroup](/man/lscgroup)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/libcgroup/libcgroup)```
+
+<!-- verified: 2026-06-22 -->

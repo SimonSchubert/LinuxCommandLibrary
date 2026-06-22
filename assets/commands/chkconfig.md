@@ -68,3 +68,9 @@ Legacy tool for SysVinit systems. On systemd-based systems (CentOS 7+, RHEL 7+),
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [service](/man/service)(8), [update-rc.d](/man/update-rc.d)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/fedora-sysv/chkconfig)```
+
+<!-- verified: 2026-06-22 -->

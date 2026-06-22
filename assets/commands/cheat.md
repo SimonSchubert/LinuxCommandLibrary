@@ -73,3 +73,9 @@ Requires initial setup. Community cheatsheets need downloading. Not as comprehen
 # SEE ALSO
 
 [tldr](/man/tldr)(1), [man](/man/man)(1), [info](/man/info)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cheat/cheat)```
+
+<!-- verified: 2026-06-22 -->

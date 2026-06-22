@@ -55,3 +55,9 @@ Requires kernel CEC support (CONFIG_CEC). Monitor mode requires root privileges.
 # SEE ALSO
 
 [cec-client](/man/cec-client)(1)
+
+# RESOURCES
+
+```[Source code](https://git.linuxtv.org/v4l-utils.git)```
+
+<!-- verified: 2026-06-22 -->

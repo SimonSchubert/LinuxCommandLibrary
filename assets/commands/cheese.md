@@ -58,3 +58,9 @@ Requires a working webcam with Video4Linux (V4L2) support. Effects availability 
 # SEE ALSO
 
 [guvcview](/man/guvcview)(1), [v4l2-ctl](/man/v4l2-ctl)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/cheese)```
+
+<!-- verified: 2026-06-22 -->

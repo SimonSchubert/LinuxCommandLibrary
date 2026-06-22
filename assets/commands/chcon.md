@@ -98,3 +98,11 @@ Changes made with chcon are temporary and may be reset by restorecon or system r
 # SEE ALSO
 
 [restorecon](/man/restorecon)(8), [semanage](/man/semanage)(8), [ls](/man/ls)(1), [secon](/man/secon)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/coreutils/coreutils)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/html_node/chcon-invocation.html)```
+
+<!-- verified: 2026-06-22 -->
