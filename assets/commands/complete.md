@@ -124,3 +124,11 @@ Bash builtin only. Completions stored per-session. Use /etc/bash_completion.d/ f
 # SEE ALSO
 
 [compgen](/man/compgen)(1), [bash](/man/bash)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/bash.git)```
+
+```[Documentation](https://www.gnu.org/software/bash/manual/)```
+
+<!-- verified: 2026-06-22 -->

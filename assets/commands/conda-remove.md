@@ -59,3 +59,11 @@ Dependencies that are no longer needed may remain; use **conda clean** to remove
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-install](/man/conda-install)(1), [conda-clean](/man/conda-clean)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/conda/conda)```
+
+```[Documentation](https://docs.conda.io/projects/conda/en/stable/commands/remove.html)```
+
+<!-- verified: 2026-06-22 -->

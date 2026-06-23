@@ -108,3 +108,9 @@ Compton was forked from **xcompmgr** in **2011** by Christopher Jeffrey (chjj) t
 # SEE ALSO
 
 [picom](/man/picom)(1), [xcompmgr](/man/xcompmgr)(1), [i3](/man/i3)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/chjj/compton)```
+
+<!-- verified: 2026-06-22 -->

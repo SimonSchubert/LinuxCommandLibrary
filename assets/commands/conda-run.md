@@ -49,3 +49,13 @@ environment command executor
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-activate](/man/conda-activate)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/conda/conda)```
+
+```[Homepage](https://docs.conda.io)```
+
+```[Documentation](https://docs.conda.io/projects/conda/en/stable/commands/index.html)```
+
+<!-- verified: 2026-06-23 -->

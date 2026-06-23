@@ -84,3 +84,13 @@ Coolify was created by Andras Bacsai as an open-source PaaS solution. Developmen
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-compose](/man/docker-compose)(1), [dokku](/man/dokku)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/coollabsio/coolify)```
+
+```[Homepage](https://coolify.io)```
+
+```[Documentation](https://coolify.io/docs)```
+
+<!-- verified: 2026-06-23 -->

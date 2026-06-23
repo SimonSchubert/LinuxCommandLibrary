@@ -158,3 +158,13 @@ First install can be slow. Memory-intensive for large projects. Network required
 # SEE ALSO
 
 [npm](/man/npm)(1), [pip](/man/pip)(1), [bundle](/man/bundle)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/composer/composer)```
+
+```[Homepage](https://getcomposer.org)```
+
+```[Documentation](https://getcomposer.org/doc/)```
+
+<!-- verified: 2026-06-22 -->

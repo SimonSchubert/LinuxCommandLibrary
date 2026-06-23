@@ -90,3 +90,13 @@ composite is part of **ImageMagick**, originally created by John Cristy in **199
 # SEE ALSO
 
 [convert](/man/convert)(1), [montage](/man/montage)(1), [mogrify](/man/mogrify)(1), [magick](/man/magick)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ImageMagick/ImageMagick)```
+
+```[Homepage](https://imagemagick.org)```
+
+```[Documentation](https://imagemagick.org/script/composite.php)```
+
+<!-- verified: 2026-06-22 -->

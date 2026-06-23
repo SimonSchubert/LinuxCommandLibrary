@@ -36,3 +36,11 @@ Part of the crane CLI tool for container registry operations.
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-mutate](/man/crane-mutate)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/go-containerregistry)```
+
+```[Documentation](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md)```
+
+<!-- verified: 2026-06-23 -->

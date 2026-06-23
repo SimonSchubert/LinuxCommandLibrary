@@ -56,3 +56,11 @@ Requires restarting the shell or sourcing the configuration file after running.
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-activate](/man/conda-activate)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/conda/conda)```
+
+```[Documentation](https://docs.conda.io/projects/conda/en/stable/commands/init.html)```
+
+<!-- verified: 2026-06-22 -->

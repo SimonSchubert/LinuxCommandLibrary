@@ -86,3 +86,11 @@ compopt was introduced in **Bash 4.0**, released in **2009**. It was added to pr
 # SEE ALSO
 
 [complete](/man/complete)(1), [compgen](/man/compgen)(1), [bash](/man/bash)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/bash.git)```
+
+```[Documentation](https://www.gnu.org/software/bash/manual/)```
+
+<!-- verified: 2026-06-22 -->

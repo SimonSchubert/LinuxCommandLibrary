@@ -83,3 +83,9 @@ cowbuilder was created as an enhancement to **pbuilder** (Personal Builder) by u
 # SEE ALSO
 
 [pbuilder](/man/pbuilder)(8), [sbuild](/man/sbuild)(1), [debuild](/man/debuild)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/cowdancer)```
+
+<!-- verified: 2026-06-23 -->

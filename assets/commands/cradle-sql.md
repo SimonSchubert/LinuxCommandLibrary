@@ -77,3 +77,11 @@ cradle sql was developed as part of the Cradle PHP framework's CLI tools to prov
 # SEE ALSO
 
 [cradle](/man/cradle)(1), [mysql](/man/mysql)(1), [psql](/man/psql)(1), [sqlite3](/man/sqlite3)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/CradlePHP/cradle)```
+
+```[Homepage](https://cradlephp.github.io/)```
+
+<!-- verified: 2026-06-23 -->

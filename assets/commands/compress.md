@@ -81,3 +81,11 @@ The program uses a modified Lempel-Ziv algorithm starting with 9-bit codes. Typi
 # SEE ALSO
 
 [uncompress](/man/uncompress)(1), [gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1), [zcat](/man/zcat)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/vapier/ncompress)```
+
+```[Homepage](https://vapier.github.io/ncompress/)```
+
+<!-- verified: 2026-06-22 -->

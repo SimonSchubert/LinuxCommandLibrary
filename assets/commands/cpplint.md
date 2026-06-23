@@ -91,3 +91,9 @@ Designed specifically for Google style guide compliance. Some rules may not appl
 # SEE ALSO
 
 [clang-format](/man/clang-format)(1), [clang-tidy](/man/clang-tidy)(1), [cppcheck](/man/cppcheck)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cpplint/cpplint)```
+
+<!-- verified: 2026-06-23 -->

@@ -27,3 +27,11 @@ The tool is particularly useful in collaborative settings where environment.yml 
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-env](/man/conda-env)(1), [conda-list](/man/conda-list)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/conda/conda)```
+
+```[Documentation](https://docs.conda.io/projects/conda/en/stable/commands/compare.html)```
+
+<!-- verified: 2026-06-22 -->

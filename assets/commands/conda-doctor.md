@@ -41,3 +41,11 @@ This command is particularly useful when environments behave unexpectedly, packa
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-info](/man/conda-info)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/conda/conda)```
+
+```[Documentation](https://docs.conda.io/projects/conda/en/stable/commands/doctor.html)```
+
+<!-- verified: 2026-06-22 -->

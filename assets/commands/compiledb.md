@@ -68,3 +68,9 @@ Only captures commands from make output. May miss compiler calls not going throu
 # SEE ALSO
 
 [make](/man/make)(1), [bear](/man/bear)(1), [cmake](/man/cmake)(1), [clangd](/man/clangd)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/nickdiego/compiledb)```
+
+<!-- verified: 2026-06-22 -->

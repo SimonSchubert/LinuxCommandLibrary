@@ -66,3 +66,11 @@ Packages are searched in configured channels, with defaults searched first unles
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-remove](/man/conda-remove)(1), [conda-update](/man/conda-update)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/conda/conda)```
+
+```[Documentation](https://docs.conda.io/projects/conda/en/stable/commands/install.html)```
+
+<!-- verified: 2026-06-22 -->

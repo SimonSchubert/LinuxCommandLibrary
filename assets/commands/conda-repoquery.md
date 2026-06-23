@@ -50,3 +50,13 @@ Requires libmamba solver. May not be available in older conda versions.
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-search](/man/conda-search)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/conda/conda)```
+
+```[Homepage](https://docs.conda.io)```
+
+```[Documentation](https://docs.conda.io/projects/conda/en/stable/commands/index.html)```
+
+<!-- verified: 2026-06-23 -->

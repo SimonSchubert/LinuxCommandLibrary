@@ -81,8 +81,14 @@ Always run without **--notest** first to preview changes. The tool cannot detect
 
 # HISTORY
 
-convmv was written by Langsweirdt and has been a standard tool for handling encoding issues on Unix systems. It became particularly important during the transition from locale-specific encodings to UTF-8 as the universal standard in the 2000s.
+convmv was written by Björn Jacke and has been a standard tool for handling encoding issues on Unix systems. It became particularly important during the transition from locale-specific encodings to UTF-8 as the universal standard in the 2000s.
 
 # SEE ALSO
 
 [mv](/man/mv)(1), [rename](/man/rename)(1), [iconv](/man/iconv)(1), [recode](/man/recode)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.j3e.de/linux/convmv/)```
+
+<!-- verified: 2026-06-23 -->

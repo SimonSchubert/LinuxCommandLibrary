@@ -74,3 +74,13 @@ COPR was created by the Fedora Project as a community build service, similar to 
 # SEE ALSO
 
 [dnf](/man/dnf)(1), [copr-cli](/man/copr-cli)(1), [rpm](/man/rpm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/fedora-copr/copr)```
+
+```[Homepage](https://copr.fedorainfracloud.org/)```
+
+```[Documentation](https://docs.pagure.org/copr.copr/)```
+
+<!-- verified: 2026-06-23 -->

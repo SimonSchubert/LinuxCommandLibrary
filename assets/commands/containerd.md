@@ -85,3 +85,13 @@ containerd was originally developed as part of Docker and was spun out as an ind
 # SEE ALSO
 
 [ctr](/man/ctr)(1), [nerdctl](/man/nerdctl)(1), [docker](/man/docker)(1), [runc](/man/runc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/containerd/containerd)```
+
+```[Homepage](https://containerd.io)```
+
+```[Documentation](https://containerd.io/docs/)```
+
+<!-- verified: 2026-06-23 -->

@@ -97,3 +97,13 @@ CopyQ was created as an open-source clipboard manager, first released around **2
 # SEE ALSO
 
 [xclip](/man/xclip)(1), [xsel](/man/xsel)(1), [wl-copy](/man/wl-copy)(1), [pbcopy](/man/pbcopy)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/hluk/CopyQ)```
+
+```[Homepage](https://hluk.github.io/CopyQ/)```
+
+```[Documentation](https://copyq.readthedocs.io/)```
+
+<!-- verified: 2026-06-23 -->

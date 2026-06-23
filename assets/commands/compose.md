@@ -44,3 +44,9 @@ Depends on mailcap configuration. The actual editor used depends on the file's M
 # SEE ALSO
 
 [run-mailcap](/man/run-mailcap)(1), [edit](/man/edit)(1), [view](/man/view)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/mime-support)```
+
+<!-- verified: 2026-06-22 -->

@@ -68,3 +68,13 @@ GNU Coreutils was formed in **2002** by merging three GNU packages: fileutils, s
 # SEE ALSO
 
 [ls](/man/ls)(1), [cp](/man/cp)(1), [mv](/man/mv)(1), [cat](/man/cat)(1), [busybox](/man/busybox)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/coreutils.git)```
+
+```[Homepage](https://www.gnu.org/software/coreutils/)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/)```
+
+<!-- verified: 2026-06-23 -->

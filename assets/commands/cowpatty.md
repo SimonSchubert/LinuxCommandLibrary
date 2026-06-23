@@ -67,3 +67,9 @@ Requires valid captured handshake. Only for authorized security testing. SSID-sp
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [genpmk](/man/genpmk)(1), [hashcat](/man/hashcat)(1), [wifite](/man/wifite)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/joswr1ght/cowpatty)```
+
+<!-- verified: 2026-06-23 -->

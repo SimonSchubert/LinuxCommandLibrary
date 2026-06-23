@@ -63,3 +63,11 @@ Environment names cannot contain spaces. Use **--prefix** for environments outsi
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-activate](/man/conda-activate)(1), [conda-remove](/man/conda-remove)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/conda/conda)```
+
+```[Documentation](https://docs.conda.io/projects/conda/en/stable/commands/create.html)```
+
+<!-- verified: 2026-06-22 -->

@@ -160,3 +160,13 @@ Large disk space usage. Environment activation requires shell integration. Chann
 # SEE ALSO
 
 [pip](/man/pip)(1), [virtualenv](/man/virtualenv)(1), [mamba](/man/mamba)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/conda/conda)```
+
+```[Homepage](https://conda.io)```
+
+```[Documentation](https://docs.conda.io/projects/conda/en/stable/)```
+
+<!-- verified: 2026-06-22 -->

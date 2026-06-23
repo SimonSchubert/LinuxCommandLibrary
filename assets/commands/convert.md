@@ -156,3 +156,13 @@ Large images consume memory. Complex operations can be slow. Default quality set
 # SEE ALSO
 
 [mogrify](/man/mogrify)(1), [identify](/man/identify)(1), [ffmpeg](/man/ffmpeg)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ImageMagick/ImageMagick)```
+
+```[Homepage](https://imagemagick.org)```
+
+```[Documentation](https://imagemagick.org/script/convert.php)```
+
+<!-- verified: 2026-06-23 -->

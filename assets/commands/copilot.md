@@ -116,3 +116,11 @@ GitHub Copilot CLI was released by **GitHub** in **2024** as an extension of the
 # SEE ALSO
 
 [gh](/man/gh)(1), [claude](/man/claude)(1), [git](/man/git)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/github/copilot-cli)```
+
+```[Documentation](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-copilot-cli)```
+
+<!-- verified: 2026-06-23 -->

@@ -75,3 +75,13 @@ Requires root privileges and the nf_conntrack kernel module. Deleting connection
 # SEE ALSO
 
 [iptables](/man/iptables)(8), [nft](/man/nft)(8), [ss](/man/ss)(8)
+
+# RESOURCES
+
+```[Source code](https://git.netfilter.org/conntrack-tools/)```
+
+```[Homepage](https://conntrack-tools.netfilter.org/)```
+
+```[Documentation](https://www.netfilter.org/projects/conntrack-tools/)```
+
+<!-- verified: 2026-06-23 -->

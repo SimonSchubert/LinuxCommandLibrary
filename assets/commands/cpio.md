@@ -133,3 +133,13 @@ Less intuitive than tar. Requires file list from stdin. No built-in compression.
 # SEE ALSO
 
 [tar](/man/tar)(1), [find](/man/find)(1), [pax](/man/pax)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/cpio.git)```
+
+```[Homepage](https://www.gnu.org/software/cpio/)```
+
+```[Documentation](https://www.gnu.org/software/cpio/manual/)```
+
+<!-- verified: 2026-06-23 -->

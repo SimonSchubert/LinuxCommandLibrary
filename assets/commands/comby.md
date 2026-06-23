@@ -86,3 +86,13 @@ Better than regex for nested structures. Does not support indentation-sensitive 
 # SEE ALSO
 
 [sed](/man/sed)(1), [ast-grep](/man/ast-grep)(1), [semgrep](/man/semgrep)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/comby-tools/comby)```
+
+```[Homepage](https://comby.dev)```
+
+```[Documentation](https://comby.dev/docs/overview)```
+
+<!-- verified: 2026-06-22 -->

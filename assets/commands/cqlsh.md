@@ -134,3 +134,13 @@ Apache Cassandra was initially developed at **Facebook** for inbox search and op
 # SEE ALSO
 
 [scylladb](/man/scylladb)(1), [cockroach](/man/cockroach)(1), [mongo](/man/mongo)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/apache/cassandra)```
+
+```[Homepage](https://cassandra.apache.org)```
+
+```[Documentation](https://cassandra.apache.org/doc/latest/cassandra/managing/tools/cqlsh.html)```
+
+<!-- verified: 2026-06-23 -->

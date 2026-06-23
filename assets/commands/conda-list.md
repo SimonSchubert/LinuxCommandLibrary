@@ -59,3 +59,11 @@ Use regex patterns to filter the list.
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-search](/man/conda-search)(1), [conda-info](/man/conda-info)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/conda/conda)```
+
+```[Documentation](https://docs.conda.io/projects/conda/en/stable/commands/list.html)```
+
+<!-- verified: 2026-06-22 -->

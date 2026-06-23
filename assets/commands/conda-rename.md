@@ -39,3 +39,11 @@ The environment must be deactivated before renaming.
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-create](/man/conda-create)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/conda/conda)```
+
+```[Documentation](https://docs.conda.io/projects/conda/en/stable/commands/rename.html)```
+
+<!-- verified: 2026-06-22 -->

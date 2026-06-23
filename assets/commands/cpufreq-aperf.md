@@ -48,3 +48,9 @@ Requires root privileges. Only works on CPUs that support APERF/MPERF counters (
 # SEE ALSO
 
 [cpufreq-info](/man/cpufreq-info)(1), [cpufreq-set](/man/cpufreq-set)(1), [cpupower](/man/cpupower)(1)
+
+# RESOURCES
+
+```[Source code](https://git.kernel.org/pub/scm/utils/kernel/cpufreq/cpufrequtils.git/)```
+
+<!-- verified: 2026-06-23 -->

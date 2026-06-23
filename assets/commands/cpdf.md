@@ -70,3 +70,13 @@ cpdf is particularly useful for server-side PDF processing, shell scripts, and w
 # SEE ALSO
 
 [pdftk](/man/pdftk)(1), [qpdf](/man/qpdf)(1), [gs](/man/gs)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/johnwhitington/cpdf-source)```
+
+```[Homepage](https://www.coherentpdf.com/)```
+
+```[Documentation](https://www.coherentpdf.com/cpdfmanual.pdf)```
+
+<!-- verified: 2026-06-23 -->

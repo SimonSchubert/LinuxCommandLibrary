@@ -31,3 +31,11 @@ Cradle packages are modular components that can be shared across applications or
 # SEE ALSO
 
 [cradle](/man/cradle)(1), [cradle-install](/man/cradle-install)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/CradlePHP/cradle)```
+
+```[Homepage](https://cradlephp.github.io/)```
+
+<!-- verified: 2026-06-23 -->

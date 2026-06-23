@@ -99,3 +99,13 @@ Script must be regenerated if autoconf files change. Cross-compilation requires 
 # SEE ALSO
 
 [make](/man/make)(1), [autoconf](/man/autoconf)(1), [automake](/man/automake)(1), [pkg-config](/man/pkg-config)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/autoconf.git)```
+
+```[Homepage](https://www.gnu.org/software/autoconf/)```
+
+```[Documentation](https://www.gnu.org/software/autoconf/manual/)```
+
+<!-- verified: 2026-06-23 -->

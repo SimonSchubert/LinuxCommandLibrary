@@ -71,3 +71,11 @@ Channels are particularly important in conda's configuration as they determine w
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-info](/man/conda-info)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/conda/conda)```
+
+```[Documentation](https://docs.conda.io/projects/conda/en/stable/commands/config.html)```
+
+<!-- verified: 2026-06-22 -->

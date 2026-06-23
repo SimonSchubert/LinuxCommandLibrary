@@ -56,3 +56,11 @@ Using --all is the most aggressive option, clearing all cache types and freeing 
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-remove](/man/conda-remove)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/conda/conda)```
+
+```[Documentation](https://docs.conda.io/projects/conda/en/stable/commands/clean.html)```
+
+<!-- verified: 2026-06-22 -->

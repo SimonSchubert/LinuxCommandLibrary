@@ -99,3 +99,13 @@ NixOS was created by **Eelco Dolstra** based on his PhD research on the Nix pack
 # SEE ALSO
 
 [nixos-rebuild](/man/nixos-rebuild)(8), [nix-env](/man/nix-env)(1), [nix](/man/nix)(1), [home-manager](/man/home-manager)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/NixOS/nixpkgs)```
+
+```[Homepage](https://nixos.org)```
+
+```[Documentation](https://nixos.org/manual/nixos/stable/)```
+
+<!-- verified: 2026-06-23 -->

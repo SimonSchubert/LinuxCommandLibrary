@@ -100,3 +100,9 @@ Must be enabled before use. Respects packageManager in nearest package.json. Zer
 # SEE ALSO
 
 [npm](/man/npm)(1), [yarn](/man/yarn)(1), [pnpm](/man/pnpm)(1), [node](/man/node)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/nodejs/corepack)```
+
+<!-- verified: 2026-06-23 -->

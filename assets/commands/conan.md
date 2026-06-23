@@ -127,3 +127,13 @@ Conan 2.x is current; Conan 1.x is legacy. Binary compatibility configurable. In
 # SEE ALSO
 
 [cmake](/man/cmake)(1), [vcpkg](/man/vcpkg)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/conan-io/conan)```
+
+```[Homepage](https://conan.io)```
+
+```[Documentation](https://docs.conan.io)```
+
+<!-- verified: 2026-06-22 -->

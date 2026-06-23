@@ -52,3 +52,11 @@ manage container registry authentication
 # SEE ALSO
 
 [crane](/man/crane)(1), [docker-login](/man/docker-login)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/go-containerregistry)```
+
+```[Documentation](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md)```
+
+<!-- verified: 2026-06-23 -->
