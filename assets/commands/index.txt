@@ -1414,6 +1414,7 @@ create_ap.md
 createdb.md
 createrepo.md
 createuser.md
+crespo.md
 cribbage.md
 crictl.md
 criu.md
@@ -4050,6 +4051,7 @@ littler.md
 live-server.md
 lkbib.md
 lla.md
+llama-cli.md
 llama.cpp.md
 llamafile.md
 llc.md
@@ -5172,6 +5174,7 @@ openstack-volume.md
 openstack.md
 openstego.md
 openttd.md
+opentunnel.md
 openvpn.md
 openvpn3.md
 opera-stable.md
@@ -5772,6 +5775,7 @@ pm-suspend.md
 pm-utils.md
 pm2.md
 pmap.md
+pmb.md
 pmidi.md
 pmount.md
 pngcheck.md
