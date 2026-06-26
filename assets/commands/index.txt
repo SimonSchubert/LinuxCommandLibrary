@@ -5381,6 +5381,7 @@ parqeye.md
 parquet-tools.md
 parquet.md
 parqv.md
+parsehawk.md
 partclone.md
 parted.interactive.md
 parted.md
