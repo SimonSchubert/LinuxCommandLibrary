@@ -81,8 +81,14 @@ Column numbers are 1-indexed, not 0-indexed. Some operations require loading the
 
 # HISTORY
 
-csvtool was developed as a fast, lightweight CSV processor. Written in OCaml for performance, it provides an alternative to heavier tools when simple, fast transformations are needed on CSV data.
+csvtool ships with the **ocaml-csv** library, a CSV parser for OCaml originally written by Richard Jones and now maintained by Christophe Troestler. The command-line tool exposes the library's parsing for quick shell-based CSV transformations.
 
 # SEE ALSO
 
 [csvkit](/man/csvkit)(1), [cut](/man/cut)(1), [awk](/man/awk)(1), [miller](/man/miller)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Chris00/ocaml-csv)```
+
+<!-- verified: 2026-06-26 -->

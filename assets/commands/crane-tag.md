@@ -23,3 +23,11 @@ add tag alias to existing image
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-copy](/man/crane-copy)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/go-containerregistry)```
+
+```[Documentation](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_tag.md)```
+
+<!-- verified: 2026-06-26 -->

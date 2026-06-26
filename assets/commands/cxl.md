@@ -89,3 +89,11 @@ CXL was developed by the **CXL Consortium**, founded in **2019** by Intel, with 
 # SEE ALSO
 
 [ndctl](/man/ndctl)(1), [daxctl](/man/daxctl)(1), [lspci](/man/lspci)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/pmem/ndctl)```
+
+```[Documentation](https://docs.pmem.io/ndctl-user-guide/)```
+
+<!-- verified: 2026-06-26 -->

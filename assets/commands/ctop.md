@@ -74,3 +74,9 @@ Requires access to the container runtime socket (usually /var/run/docker.sock). 
 # SEE ALSO
 
 [docker](/man/docker)(1), [top](/man/top)(1), [htop](/man/htop)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/bcicen/ctop)```
+
+<!-- verified: 2026-06-26 -->

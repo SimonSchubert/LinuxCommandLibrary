@@ -34,7 +34,7 @@ Enable **clustering** support
 
 # DESCRIPTION
 
-**crond** is a daemon that executes scheduled commands from crontab files. It starts automatically at boot and checks crontab files for jobs that need to run each minute. It monitors /var/spool/cron/crontabs (user crontabs), /etc/crontab (system crontab), and /etc/cron.d/ (system cronjobs).
+**crond** is a daemon that executes scheduled commands from crontab files. It starts automatically at boot and checks crontab files for jobs that need to run each minute. It monitors /var/spool/cron/ (user crontabs), /etc/crontab (system crontab), and /etc/cron.d/ (system cronjobs). The flags below describe the **cronie** implementation, the crond shipped on most modern distributions; BusyBox and dcron provide their own crond with overlapping but not identical options.
 
 # PARAMETERS
 
@@ -70,8 +70,8 @@ Enable **clustering** support
 **/etc/cron.d/**
 > Directory containing additional system crontab files.
 
-**/var/spool/cron/crontabs/**
-> Directory containing user-specific crontab files.
+**/var/spool/cron/**
+> Directory containing user-specific crontab files (one per user). Debian's cron uses /var/spool/cron/crontabs/ instead.
 
 # CAVEATS
 
@@ -84,3 +84,9 @@ Job output is mailed to the crontab owner unless redirected to syslog with -s or
 # SEE ALSO
 
 [crontab](/man/crontab)(1), [crontab](/man/crontab)(5), [anacron](/man/anacron)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/cronie-crond/cronie)```
+
+<!-- verified: 2026-06-26 -->

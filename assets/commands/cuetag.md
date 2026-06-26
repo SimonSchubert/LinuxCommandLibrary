@@ -49,3 +49,9 @@ cuetag is part of **cuetools**, a collection of utilities for working with CUE s
 # SEE ALSO
 
 [cuebreakpoints](/man/cuebreakpoints)(1), [shnsplit](/man/shnsplit)(1), [metaflac](/man/metaflac)(1), [id3v2](/man/id3v2)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/svend/cuetools)```
+
+<!-- verified: 2026-06-26 -->

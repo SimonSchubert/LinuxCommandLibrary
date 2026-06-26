@@ -31,3 +31,11 @@ add images to manifest index
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-index](/man/crane-index)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/go-containerregistry)```
+
+```[Documentation](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_index_append.md)```
+
+<!-- verified: 2026-06-26 -->

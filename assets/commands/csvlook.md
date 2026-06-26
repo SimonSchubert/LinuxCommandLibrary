@@ -78,3 +78,11 @@ Large files may be slow to render. Wide tables may wrap in terminal. Part of csv
 # SEE ALSO
 
 [csvcut](/man/csvcut)(1), [csvstat](/man/csvstat)(1), [column](/man/column)(1), [less](/man/less)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/wireservice/csvkit)```
+
+```[Documentation](https://csvkit.readthedocs.io)```
+
+<!-- verified: 2026-06-26 -->

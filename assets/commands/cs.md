@@ -90,3 +90,11 @@ Coursier was created by Alexandre Archambault and first released around **2015**
 # SEE ALSO
 
 [scala](/man/scala)(1), [sbt](/man/sbt)(1), [java](/man/java)(1), [mvn](/man/mvn)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/coursier/coursier)```
+
+```[Documentation](https://get-coursier.io/docs/cli-overview)```
+
+<!-- verified: 2026-06-26 -->

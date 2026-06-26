@@ -116,3 +116,11 @@ Does not require Docker daemon. Uses OCI registry API directly. Credentials read
 # SEE ALSO
 
 [docker](/man/docker)(1), [skopeo](/man/skopeo)(1), [cosign](/man/cosign)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/go-containerregistry)```
+
+```[Documentation](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md)```
+
+<!-- verified: 2026-06-26 -->

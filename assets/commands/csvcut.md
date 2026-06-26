@@ -78,3 +78,11 @@ Part of csvkit, requires Python. Column indices are 1-based. Large files may be 
 # SEE ALSO
 
 [csvlook](/man/csvlook)(1), [csvstat](/man/csvstat)(1), [cut](/man/cut)(1), [awk](/man/awk)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/wireservice/csvkit)```
+
+```[Documentation](https://csvkit.readthedocs.io)```
+
+<!-- verified: 2026-06-26 -->

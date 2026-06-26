@@ -77,3 +77,11 @@ csvjoin is part of **csvkit**, created by Christopher Groskopf in **2011**. It b
 # SEE ALSO
 
 [csvstack](/man/csvstack)(1), [csvsql](/man/csvsql)(1), [join](/man/join)(1), [csvkit](/man/csvkit)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/wireservice/csvkit)```
+
+```[Documentation](https://csvkit.readthedocs.io)```
+
+<!-- verified: 2026-06-26 -->

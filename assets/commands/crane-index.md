@@ -27,3 +27,11 @@ manage multi-platform image indexes
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-index-append](/man/crane-index-append)(1), [crane-index-filter](/man/crane-index-filter)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/go-containerregistry)```
+
+```[Documentation](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_index.md)```
+
+<!-- verified: 2026-06-26 -->

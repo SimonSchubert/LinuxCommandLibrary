@@ -31,3 +31,11 @@ download container image as tarball
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-push](/man/crane-push)(1), [crane-export](/man/crane-export)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/go-containerregistry)```
+
+```[Documentation](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_pull.md)```
+
+<!-- verified: 2026-06-26 -->

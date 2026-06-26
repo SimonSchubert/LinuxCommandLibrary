@@ -56,8 +56,14 @@ The escape sequence to disconnect is: press Enter, then ~ (tilde), then . (perio
 
 # CAVEATS
 
-Usually requires root or membership in dialout/uucp groups. The escape character (~) must be at the start of a line. Part of the UUCP package or GNU coreutils.
+Usually requires root or membership in the dialout/uucp groups. The escape character (~) must be at the start of a line. cu is part of the UUCP package (commonly GNU/Taylor UUCP), not coreutils.
 
 # SEE ALSO
 
 [screen](/man/screen)(1), [minicom](/man/minicom)(1), [picocom](/man/picocom)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/uucp/)```
+
+<!-- verified: 2026-06-26 -->

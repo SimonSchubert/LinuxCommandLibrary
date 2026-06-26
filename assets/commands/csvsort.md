@@ -72,3 +72,11 @@ Requires loading entire file into memory. Part of csvkit, needs Python. Type det
 # SEE ALSO
 
 [csvcut](/man/csvcut)(1), [csvlook](/man/csvlook)(1), [sort](/man/sort)(1), [csvstat](/man/csvstat)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/wireservice/csvkit)```
+
+```[Documentation](https://csvkit.readthedocs.io)```
+
+<!-- verified: 2026-06-26 -->

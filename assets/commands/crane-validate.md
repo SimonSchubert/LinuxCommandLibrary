@@ -31,3 +31,11 @@ verify container image structure
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-manifest](/man/crane-manifest)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/go-containerregistry)```
+
+```[Documentation](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_validate.md)```
+
+<!-- verified: 2026-06-26 -->

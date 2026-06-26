@@ -82,3 +82,9 @@ Some curl flags alter TLS signature and may cause detection. Wrapper scripts set
 # SEE ALSO
 
 [curl](/man/curl)(1), [httpie](/man/httpie)(1), [wget](/man/wget)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/lwthiker/curl-impersonate)```
+
+<!-- verified: 2026-06-26 -->

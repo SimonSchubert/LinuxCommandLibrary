@@ -54,3 +54,13 @@ CUPS build configuration helper
 # SEE ALSO
 
 [cupsd](/man/cupsd)(8), [lp](/man/lp)(1), [lpr](/man/lpr)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/OpenPrinting/cups)```
+
+```[Homepage](https://www.cups.org)```
+
+```[Documentation](https://openprinting.github.io/cups/)```
+
+<!-- verified: 2026-06-26 -->

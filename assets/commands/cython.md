@@ -83,3 +83,13 @@ Cython evolved from **Pyrex**, created by Greg Ewing in **2002**. The Cython for
 # SEE ALSO
 
 [python](/man/python)(1), [gcc](/man/gcc)(1), [cythonize](/man/cythonize)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cython/cython)```
+
+```[Homepage](https://cython.org)```
+
+```[Documentation](https://docs.cython.org)```
+
+<!-- verified: 2026-06-26 -->

@@ -94,3 +94,11 @@ The C shell was written by Bill Joy at UC Berkeley in **1978** as part of BSD Un
 # SEE ALSO
 
 [tcsh](/man/tcsh)(1), [bash](/man/bash)(1), [sh](/man/sh)(1), [zsh](/man/zsh)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tcsh-org/tcsh)```
+
+```[Homepage](https://www.tcsh.org)```
+
+<!-- verified: 2026-06-26 -->

@@ -112,3 +112,11 @@ The crypttab format originated in Debian and was later adopted by systemd and ot
 # SEE ALSO
 
 [cryptsetup](/man/cryptsetup)(8), [fstab](/man/fstab)(5), [systemd-cryptsetup](/man/systemd-cryptsetup)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/crypttab.html)```
+
+<!-- verified: 2026-06-26 -->

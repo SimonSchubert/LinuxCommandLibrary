@@ -77,3 +77,11 @@ csvgrep is part of **csvkit**, created by Christopher Groskopf in **2011**. It p
 # SEE ALSO
 
 [csvcut](/man/csvcut)(1), [csvsort](/man/csvsort)(1), [grep](/man/grep)(1), [csvkit](/man/csvkit)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/wireservice/csvkit)```
+
+```[Documentation](https://csvkit.readthedocs.io)```
+
+<!-- verified: 2026-06-26 -->

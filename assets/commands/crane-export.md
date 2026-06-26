@@ -25,3 +25,11 @@ Use **-** as output to write to stdout.
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-pull](/man/crane-pull)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/go-containerregistry)```
+
+```[Documentation](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_export.md)```
+
+<!-- verified: 2026-06-26 -->

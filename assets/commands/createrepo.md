@@ -48,8 +48,14 @@ The generated metadata includes package names, versions, dependencies, file list
 
 # CAVEATS
 
-Must be rerun after adding/removing packages. For large repositories, --update is faster than full regeneration. Consider using createrepo_c for better performance.
+Must be rerun after adding/removing packages. For large repositories, --update is faster than full regeneration. The original Python createrepo is deprecated; on modern distributions the **createrepo** command is provided by **createrepo_c**, a faster C reimplementation that accepts the same core options.
 
 # SEE ALSO
 
 [yum](/man/yum)(8), [dnf](/man/dnf)(8), [rpm](/man/rpm)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/rpm-software-management/createrepo_c)```
+
+<!-- verified: 2026-06-26 -->

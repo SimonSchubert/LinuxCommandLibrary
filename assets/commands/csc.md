@@ -85,8 +85,16 @@ Modern .NET development prefers **dotnet build** over direct csc invocation. Ass
 
 # HISTORY
 
-csc has been the C# compiler since **C# 1.0 in 2002**. Originally part of .NET Framework, it was reimplemented in C# itself as the Roslyn compiler starting in **2014**. The modern csc is part of the .NET SDK and supports C# 12 and beyond.
+csc has been the C# compiler since **C# 1.0 in 2002**. Originally part of .NET Framework, it was reimplemented in C# itself as the Roslyn compiler starting in **2014**. The modern csc is part of the .NET SDK and tracks the latest language version (C# 14 with .NET 10, and beyond).
 
 # SEE ALSO
 
 [dotnet](/man/dotnet)(1), [msbuild](/man/msbuild)(1), [mono](/man/mono)(1), [mcs](/man/mcs)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/dotnet/roslyn)```
+
+```[Documentation](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/)```
+
+<!-- verified: 2026-06-26 -->

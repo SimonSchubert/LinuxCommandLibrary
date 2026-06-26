@@ -33,3 +33,13 @@ Use **cupsaccept** to accept jobs again. Requires administrator privileges.
 # SEE ALSO
 
 [cupsaccept](/man/cupsaccept)(1), [cupsdisable](/man/cupsdisable)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/OpenPrinting/cups)```
+
+```[Homepage](https://www.cups.org)```
+
+```[Documentation](https://openprinting.github.io/cups/)```
+
+<!-- verified: 2026-06-26 -->

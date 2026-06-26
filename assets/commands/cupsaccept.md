@@ -36,3 +36,13 @@ This command is an alias for **accept** and requires administrator privileges.
 # SEE ALSO
 
 [cupsreject](/man/cupsreject)(1), [cupsenable](/man/cupsenable)(1), [cupsdisable](/man/cupsdisable)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/OpenPrinting/cups)```
+
+```[Homepage](https://www.cups.org)```
+
+```[Documentation](https://openprinting.github.io/cups/)```
+
+<!-- verified: 2026-06-26 -->

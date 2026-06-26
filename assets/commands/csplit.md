@@ -65,3 +65,13 @@ Part of GNU coreutils. Without -k, output files are deleted if an error occurs. 
 # SEE ALSO
 
 [split](/man/split)(1), [cut](/man/cut)(1), [head](/man/head)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/coreutils.git)```
+
+```[Homepage](https://www.gnu.org/software/coreutils/)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/html_node/csplit-invocation.html)```
+
+<!-- verified: 2026-06-26 -->

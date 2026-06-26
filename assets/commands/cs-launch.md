@@ -77,3 +77,11 @@ cs launch is part of Coursier, created by Alexandre Archambault. The launch func
 # SEE ALSO
 
 [cs](/man/cs)(1), [cs-resolve](/man/cs-resolve)(1), [java](/man/java)(1), [scala](/man/scala)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/coursier/coursier)```
+
+```[Documentation](https://get-coursier.io/docs/cli-launch)```
+
+<!-- verified: 2026-06-26 -->

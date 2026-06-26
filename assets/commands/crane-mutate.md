@@ -50,3 +50,11 @@ modify image metadata without rebuilding
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-append](/man/crane-append)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/go-containerregistry)```
+
+```[Documentation](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_mutate.md)```
+
+<!-- verified: 2026-06-26 -->

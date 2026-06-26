@@ -45,3 +45,9 @@ This control exists from early Unix days when physical console access was common
 # SEE ALSO
 
 [reboot](/man/reboot)(8), [shutdown](/man/shutdown)(8), [systemctl](/man/systemctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+<!-- verified: 2026-06-26 -->

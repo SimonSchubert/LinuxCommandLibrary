@@ -94,3 +94,9 @@ Requires X server. Use xvfb-run for headless environments. Based on older Qt Web
 # SEE ALSO
 
 [wkhtmltoimage](/man/wkhtmltoimage)(1), [chromium](/man/chromium)(1), [firefox](/man/firefox)(1)
+
+# RESOURCES
+
+```[Homepage](http://cutycapt.sourceforge.net)```
+
+<!-- verified: 2026-06-26 -->

@@ -90,3 +90,11 @@ CVS was developed by Dick Grune in **1986** and later enhanced by Brian Berliner
 # SEE ALSO
 
 [svn](/man/svn)(1), [git](/man/git)(1), [rcs](/man/rcs)(1)
+
+# RESOURCES
+
+```[Source code](https://savannah.nongnu.org/projects/cvs/)```
+
+```[Homepage](https://www.nongnu.org/cvs/)```
+
+<!-- verified: 2026-06-26 -->

@@ -119,3 +119,13 @@ Cannot handle varying amounts of whitespace (use awk instead). Delimiter must be
 # SEE ALSO
 
 [paste](/man/paste)(1), [awk](/man/awk)(1), [tr](/man/tr)(1), [column](/man/column)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/coreutils.git)```
+
+```[Homepage](https://www.gnu.org/software/coreutils/)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/html_node/cut-invocation.html)```
+
+<!-- verified: 2026-06-26 -->

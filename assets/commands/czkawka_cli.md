@@ -88,3 +88,9 @@ The **-D** flag permanently deletes files. Always review results before deletion
 # SEE ALSO
 
 [fdupes](/man/fdupes)(1), [rmlint](/man/rmlint)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/qarmin/czkawka)```
+
+<!-- verified: 2026-06-26 -->

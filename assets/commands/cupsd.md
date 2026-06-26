@@ -59,3 +59,13 @@ Normally managed by the system service manager. Direct invocation is usually onl
 # SEE ALSO
 
 [cupsctl](/man/cupsctl)(1), [lp](/man/lp)(1), [lpstat](/man/lpstat)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/OpenPrinting/cups)```
+
+```[Homepage](https://www.cups.org)```
+
+```[Documentation](https://openprinting.github.io/cups/)```
+
+<!-- verified: 2026-06-26 -->

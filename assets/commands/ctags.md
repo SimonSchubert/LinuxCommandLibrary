@@ -127,3 +127,13 @@ Output file named 'tags' by default. Use with Vim :tag command or Ctrl-]. Univer
 # SEE ALSO
 
 [etags](/man/etags)(1), [vim](/man/vim)(1), [cscope](/man/cscope)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/universal-ctags/ctags)```
+
+```[Homepage](https://ctags.io)```
+
+```[Documentation](https://docs.ctags.io)```
+
+<!-- verified: 2026-06-26 -->

@@ -25,3 +25,11 @@ Output is written to stdout; redirect to save to a file.
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-manifest](/man/crane-manifest)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/go-containerregistry)```
+
+```[Documentation](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_blob.md)```
+
+<!-- verified: 2026-06-26 -->

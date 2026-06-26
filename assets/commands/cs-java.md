@@ -74,3 +74,11 @@ cs java was added to Coursier to provide comprehensive JDK management, complemen
 # SEE ALSO
 
 [cs](/man/cs)(1), [java](/man/java)(1), [sdk](/man/sdk)(1), [update-java-alternatives](/man/update-java-alternatives)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/coursier/coursier)```
+
+```[Documentation](https://get-coursier.io/docs/cli-java)```
+
+<!-- verified: 2026-06-26 -->

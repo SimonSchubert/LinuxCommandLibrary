@@ -82,3 +82,11 @@ CryFS was created by Sebastian Messmer as his master's thesis project, with the 
 # SEE ALSO
 
 [encfs](/man/encfs)(1), [gocryptfs](/man/gocryptfs)(1), [veracrypt](/man/veracrypt)(1), [fusermount](/man/fusermount)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cryfs/cryfs)```
+
+```[Homepage](https://www.cryfs.org)```
+
+<!-- verified: 2026-06-26 -->

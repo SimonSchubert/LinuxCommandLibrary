@@ -37,3 +37,9 @@ Part of BlueZ tools. Works on the current directory contents. CPIO format is unc
 # SEE ALSO
 
 [cpio](/man/cpio)(1), [find](/man/find)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/bluez/bluez)```
+
+<!-- verified: 2026-06-26 -->
