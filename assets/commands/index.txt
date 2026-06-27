@@ -2673,6 +2673,7 @@ git-info.md
 git-init.md
 git-instaweb.md
 git-interactive-rebase-tool.md
+git-lazy-mount.md
 git-lfs-transfer.md
 git-lfs.md
 git-local-commits.md
@@ -4115,6 +4116,7 @@ logss.md
 logstash.md
 logwatch.md
 lolcat.md
+longbridge.md
 look.md
 lookandfeeltool.md
 lookbib.md
@@ -4436,6 +4438,7 @@ minipro.md
 miniserve.md
 minisign.md
 minitest.md
+mirrord.md
 mise.md
 mispipe.md
 mitmdump.md
