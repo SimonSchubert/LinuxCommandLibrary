@@ -106,6 +106,7 @@ adguardhome.md
 adguardian-term.md
 adig.md
 admesh.md
+adrafinil.md
 adscript.md
 adventure.md
 aerc.md
@@ -6830,6 +6831,7 @@ seatd.md
 secon.md
 secret-tool.md
 secrethub.md
+secs-man.md
 security-checker.md
 sed.md
 see.md
