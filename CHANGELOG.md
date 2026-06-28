@@ -1,3 +1,13 @@
+## v4.2.2 — 2026-06-28
+
+### Features
+- Added many new Linux commands, including zerofree and Wine registry tools
+- Made the CLI TUI more interactive
+
+### Improvements
+- Improved command documentation, including Vim clipboard shortcuts and find -printf
+- Upgraded dependencies
+
 ## v4.2.1 — 2026-06-19
 
 ### Features
