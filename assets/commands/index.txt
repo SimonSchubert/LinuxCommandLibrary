@@ -628,6 +628,7 @@ basenc.md
 bash-completion.md
 bash-it.md
 bash.md
+bash4llm.md
 bashbug.md
 basher.md
 bashmarks.md
