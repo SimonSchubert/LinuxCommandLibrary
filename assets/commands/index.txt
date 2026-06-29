@@ -6968,6 +6968,7 @@ signal-desktop.md
 silentcast.md
 silicon.md
 simctl.md
+simple-mtpfs.md
 simplehttpserver.md
 simtool.md
 simutrans.md
