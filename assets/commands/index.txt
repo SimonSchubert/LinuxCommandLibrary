@@ -122,6 +122,7 @@ agent-skills-eval.md
 agent-vault.md
 agentbox.md
 agenthatch.md
+agentico.md
 agetty.md
 agg.md
 agy.md
@@ -3109,6 +3110,7 @@ hadolint.md
 haiti.md
 hakrawler.md
 hakyll-init.md
+halo.md
 halp.md
 halt.md
 haml.md
@@ -6928,6 +6930,7 @@ sgdisk.md
 sginfo.md
 sgitopnm.md
 sgpt.md
+sgrep.md
 sh.md
 sh5util.md
 sha1sum.md
@@ -8032,6 +8035,7 @@ vhs.md
 vi-mongo.md
 vi.md
 vibe.md
+viberaven.md
 viddy.md
 vidir.md
 view.md
