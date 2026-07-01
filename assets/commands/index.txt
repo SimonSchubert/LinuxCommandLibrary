@@ -1340,6 +1340,7 @@ copier.md
 copilot.md
 copr-cli.md
 copr.md
+copybara.md
 copyq.md
 cordova.md
 core-validate-commit.md
@@ -4677,6 +4678,7 @@ nano-ffmpeg.md
 nano.md
 nanobot.md
 nanoclaw.md
+nanoeuler.md
 nanosleep.md
 nap.md
 napalm.md
