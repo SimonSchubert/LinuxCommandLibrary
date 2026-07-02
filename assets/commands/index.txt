@@ -2162,6 +2162,7 @@ fastboot.md
 fastd.md
 faster-whisper.md
 fastfetch.md
+fasthex.md
 fastlane.md
 fastmod.md
 fatlabel.md
@@ -6539,6 +6540,7 @@ rekal.md
 rekor-cli.md
 relaymux.md
 relic.md
+reminal.md
 remind.md
 remmina.md
 remote-viewer.md
@@ -7007,6 +7009,7 @@ slimrb.md
 slocate.md
 sloccount.md
 slop.md
+slopo.md
 slumber.md
 slurmctld.md
 slurmd.md
@@ -8512,6 +8515,7 @@ yuvsplittoppm.md
 yuvtoppm.md
 yuy2topam.md
 z.md
+z_jail.md
 zabbix_agent2.md
 zabbix_agentd.md
 zabbix_get.md
