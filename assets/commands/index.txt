@@ -1597,6 +1597,7 @@ deno.md
 dep.md
 depmod.md
 depsguard.md
+deptrust.md
 desktop-file-validate.md
 detect-secrets.md
 detex.md
@@ -5118,6 +5119,7 @@ omny.md
 omshell.md
 omz.md
 on_ac_power.md
+onda.md
 onefetch.md
 oneko.md
 onionsearch.md
@@ -7561,6 +7563,7 @@ thunderbird.md
 tic.md
 ticker.md
 tickrs.md
+tidy-viewer.md
 tidy.md
 tifftopnm.md
 tig.md

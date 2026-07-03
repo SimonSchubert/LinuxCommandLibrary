@@ -1,93 +1,84 @@
 # TAGLINE
 
-Multi-environment context switcher for DevOps workflows
+Local search across coding agent session history
 
 # TLDR
 
-**Generate the initial configuration** directory and example contexts
+**Index all discovered local agent sessions**
 
-```ctx init```
+```ctx setup```
 
-**List all available contexts**
+**Search prior sessions by keyword**
 
-```ctx list```
+```ctx search "failed migration"```
 
-**Activate a context** (switch AWS profile, kube context, VPN, env vars, ...)
+**Search sessions that touched a file**
 
-```ctx use [context-name]```
+```ctx search --file [path/to/file.rs]```
 
-**Show the currently active context**
+**Show a matching event with surrounding context**
 
-```ctx```
+```ctx show event [ctx-event-id] --window 3```
 
-**Install shell integration** for Zsh
+**Show a compact session transcript**
 
-```eval "$(ctx shell-hook zsh)"```
-
-**Install shell integration** for Bash
-
-```eval "$(ctx shell-hook bash)"```
+```ctx show session [ctx-session-id]```
 
 # SYNOPSIS
 
-**ctx** [_command_] [_options_]
+**ctx** _command_ [_options_]
+
+# PARAMETERS
+
+**setup**
+> Discover and import local agent history into the SQLite index.
+
+**search** _query_
+> Full-text search across indexed sessions and events.
+
+**--file** _PATH_
+> Restrict search to sessions that touched the given file.
+
+**--term** _TERM_
+> Add an additional search term (repeatable).
+
+**show event** _ID_
+> Print transcript context around a specific event.
+
+**show session** _ID_
+> Print a compact session transcript.
+
+**sources**
+> List importable agent history sources on this machine.
+
+**sql** _QUERY_
+> Run read-only SQL against the local index.
+
+**--json**
+> Emit machine-readable JSON output.
 
 # DESCRIPTION
 
-**ctx** is a single-binary context switcher aimed at engineers who move between multiple clouds, clusters, and VPN networks during the day. Instead of juggling **AWS_PROFILE**, **kubectl config use-context**, VPN toggles, and SSH tunnels by hand, each environment is described once as a YAML file under **~/.config/ctx/contexts/** and then activated with **ctx use <name>**.
+**ctx** is a Rust CLI that indexes coding agent session logs already stored on your machine and makes them searchable from the shell. It imports history from Claude Code, Codex, Cursor, Pi, OpenCode, Antigravity, Factory AI Droid, and Copilot CLI, normalizing sessions and events into a local SQLite database.
 
-Switching updates the current shell session: AWS/GCP/Azure credentials, Kubernetes/Nomad contexts and namespaces, VPN connections (WireGuard, OpenVPN, Tailscale, NetBird), SSH tunnels, Docker and npm registries, Git user identity, and arbitrary environment variables are all applied together. A prompt indicator of the form **[ctx: name]** is added by the shell hook so the active environment is always visible.
+Agents often start from zero and cannot recover prior decisions, failed commands, or rejected approaches. **ctx** lets you or a current agent find that context before repeating work. Results include session IDs, event IDs, snippets, and cited matches — far more token-efficient than grepping raw transcripts.
 
-Secrets for credentials can be fetched at activation time from Bitwarden, 1Password, HashiCorp Vault, AWS Secrets Manager, or GCP Secret Manager, so plain passwords never need to live in the YAML files themselves.
-
-# COMMANDS
-
-**init**
-> Create **~/.config/ctx/** with sample context files and a default config.
-
-**list**
-> Print the available contexts along with their environment, cloud, and orchestration fields.
-
-**use** _name_
-> Activate the named context in the current shell (requires the shell hook).
-
-**shell-hook** _bash|zsh|fish_
-> Print shell integration code; evaluate it from your rc file.
-
-**version**
-> Print the ctx version.
-
-**help** [_command_]
-> Display help for a command.
-
-# CONFIGURATION
-
-Per-context files live at **~/.config/ctx/contexts/_name_.yaml**. A minimal example:
-
-```
-name: myproject-dev
-description: "My project - development"
-environment: development
-aws:
-  profile: myproject-dev
-  region: eu-west-1
-kubernetes:
-  context: dev-cluster
-  namespace: myapp
-env:
-  APP_ENV: development
-```
-
-Supported sections cover clouds (aws, gcp, azure), orchestration (kubernetes, nomad, consul), networking (vpn, ssh_tunnels), secrets, git, docker, npm, browser profiles, and IDE workspaces. Global defaults go in **~/.config/ctx/config.yaml**.
+All indexing and search runs locally. No prompts, transcripts, or history are sent to a cloud service.
 
 # CAVEATS
 
-**ctx use** only affects the shell in which it runs, because it relies on the shell hook to export variables and call external tools; opening a new shell starts with no active context until **use** is called again. Full feature support is Linux- and macOS-only; on Windows the tool must be run inside **WSL**. Activation time depends on which providers are configured — VPN or SSH tunnel steps can take several seconds.
-
-# HISTORY
-
-Created by **Valentin Lebourgeois** (**vlebo**) and first released in **2024** as an open-source multi-cloud alternative to **kubectx**/**aws-vault**-style single-purpose switchers. Written in **Go** and distributed as a single static binary via GitHub releases and a shell installer.
+Transcript text is preserved as stored locally; review output before sharing outside the machine. Source builds and package-manager installs do not self-upgrade — only installer-managed binaries support **ctx upgrade**.
 
 # SEE ALSO
 
-[kubectx](/man/kubectx)(1), [kubens](/man/kubens)(1), [aws](/man/aws)(1), [direnv](/man/direnv)(1), [tailscale](/man/tailscale)(1)
+[rg](/man/rg)(1), [jq](/man/jq)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ctxrs/ctx)```
+
+```[Homepage](https://ctx.rs)```
+
+```[Documentation](https://ctx.rs/reference/cli)```
+
+<!-- verified: 2026-07-03 -->

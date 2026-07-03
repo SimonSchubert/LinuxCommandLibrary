@@ -1,115 +1,86 @@
 # TAGLINE
 
-Embedding-based non-exact code duplication detector
+Embedding-based code duplication detector
 
 # TLDR
 
-**Initialize** a configuration file template
+**Initialize a configuration file**
 
 ```slopo init```
 
-**Validate configuration** and show all parameters
-
-```slopo show-config```
-
-**Index** source files into the local database
+**Index source code for analysis**
 
 ```slopo index```
 
-**Calculate embeddings** for indexed code units
+**Calculate embeddings for indexed code**
 
 ```slopo embed```
 
-**Analyze** similarity clusters and generate a report
+**Generate a duplication report**
 
 ```slopo analyze```
 
-**Install** from PyPI using uv
+**Validate configuration and show parameters**
 
-```uv tool install slopo```
+```slopo show-config```
 
 # SYNOPSIS
 
-**slopo** [_command_] [_options_]
+**slopo** _command_ [_options_]
 
 # PARAMETERS
 
 **init**
-> Create a configuration file template with required settings.
-
-**show-config**
-> Validate the active configuration and print all parameters with defaults.
+> Create a configuration file template.
 
 **index**
-> Parse and index code units from the configured source directory into **slopo.db**.
+> Parse and index code units from **source_dir**.
 
 **embed**
-> Batch-compute vector embeddings for indexed code via the configured provider.
+> Calculate embeddings for indexed code via a configured provider.
 
 **analyze**
-> Find similar code clusters, apply reranking, and write a report to **report_dir**.
+> Find similar code clusters and write a report to **report_dir**.
 
-**--config** _path_
+**show-config**
+> Validate config and display all parameters.
+
+**--config** _PATH_
 > Override the default configuration file location.
-
-**--help**
-> Print usage and exit.
 
 # DESCRIPTION
 
-**slopo** is a CLI tool for detecting non-exact code duplication using embedding models. It targets similar snippets written in comparable style but spread across modules or large files — the kind of duplication that exact-match tools and nearby-line review often miss.
+**slopo** is a CLI tool that detects non-exact code duplication using embedding models. Unlike copy-paste scanners, it finds semantically similar snippets spread across modules or distant locations in large files — the kind of duplication hardest for humans and AI agents to spot.
 
-For each supported code unit, slopo computes an embedding and searches for pairs with close cosine similarity. Similar embeddings are grouped into clusters, reranked by distance in the codebase, and written as a report intended for human or AI review. Clusters confirmed as false positives can be added to **slopo.ignore.txt** so later runs skip them.
+The workflow is **init** → **index** → **embed** → **analyze**. Indexing parses supported languages into AST-based code units stored in a local SQLite database (**slopo.db**). Embedding calls go through LiteLLM-compatible providers (for example Voyage AI). Analysis compares cosine similarity, groups pairs into clusters, and reranks by distance in the codebase.
 
-Supported languages include Python, TypeScript, JavaScript, Java, Kotlin, C#, Go, and Rust. Embeddings are requested through any LiteLLM-compatible provider; API keys can be set in the config or via **SLOPO_EMBEDDING_API_KEY**.
+Supported languages include Python, TypeScript, JavaScript, Java, Kotlin, C#, Go, and Rust. Reviewed clusters can be added to **slopo.ignore.txt** and excluded from future reports.
 
 # CONFIGURATION
 
-Configuration lives in a file created by **slopo init**. Key fields:
+Key settings in the config file:
 
-**source_dir**
-> Directory of code to analyze (absolute or relative path).
+> **source_dir** — directory to index (required)
+> **source_dir_exclude** — .gitignore-style exclude patterns
+> **db_file** — SQLite database path (default: slopo.db)
+> **report_dir** — output directory for analysis reports
+> **ignore_file** — text file listing reviewed cluster hashes to skip
+> **embedding_model** — model name in LiteLLM format
+> **embedding_dimensions** — vector dimensions for the model
+> **embedding_api_key** — provider key (or set **SLOPO_EMBEDDING_API_KEY**)
+> **similarity_threshold** — minimum cosine similarity between pairs
+> **rerank_threshold** — minimum score after distance-based reranking
+> **body_node_count_threshold** — minimum AST body size for a code unit
 
-**source_dir_exclude**
-> .gitignore-style patterns to skip during indexing.
-
-**db_file**
-> SQLite database path (default: **slopo.db**).
-
-**report_dir**
-> Output directory for analysis reports.
-
-**ignore_file**
-> Text file listing reviewed cluster hashes to exclude.
-
-**embedding_model**
-> Model name in LiteLLM format.
-
-**embedding_dimensions**
-> Vector dimensions supported by the model.
-
-**similarity_threshold**
-> Minimum cosine similarity between embeddings.
-
-**rerank_threshold**
-> Minimum score after distance-based reranking.
-
-**body_node_count_threshold**
-> Minimum AST body size for a code unit to be indexed.
-
-> Some parameters (**source_dir**, **embedding_model**, **embedding_dimensions**, **body_node_count_threshold**) cannot be changed after the first index without deleting **slopo.db** and re-running **index** and **embed**.
+**source_dir**, **embedding_model**, **embedding_dimensions**, and **body_node_count_threshold** cannot change after the first index without deleting **slopo.db** and re-indexing.
 
 # CAVEATS
 
-Slopo requires network access to an embedding API and stores local state in SQLite. Similar code is not always duplicate code — clusters are candidates for review, not automatic refactor targets. Increasing **body_node_count_threshold** reduces noise from very small snippets.
-
-# HISTORY
-
-Slopo was created by **rafal-qa** and released in **2025–2026** as an embedding-first alternative to line-based duplication scanners, with a focus on feeding actionable clusters to AI coding agents.
+Requires an external embedding API key and network access for the embed step. Exact-copy duplicates are reported but handled differently from merely similar code.
 
 # SEE ALSO
 
-[rg](/man/rg)(1), [jscpd](/man/jscpd)(1)
+[rg](/man/rg)(1), [ast-grep](/man/ast-grep)(1)
 
 # RESOURCES
 
@@ -117,4 +88,4 @@ Slopo was created by **rafal-qa** and released in **2025–2026** as an embeddin
 
 ```[Homepage](https://slopo.dev)```
 
-<!-- verified: 2026-07-02 -->
+<!-- verified: 2026-07-03 -->
