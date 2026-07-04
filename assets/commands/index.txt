@@ -1052,6 +1052,7 @@ cbt.md
 cc.md
 ccache.md
 ccat.md
+ccc.md
 ccgs.md
 ccomps.md
 ccrypt.md
@@ -4351,6 +4352,7 @@ mcookie.md
 mcopy.md
 mcp-postgres.md
 mcp-probe.md
+mcpsnoop.md
 mcptube.md
 mcs.md
 md5sum.md
@@ -6593,6 +6595,7 @@ ri.md
 rich.md
 riff.md
 rig.md
+rigorix.md
 rip.md
 ripd.md
 ripgrep.md
