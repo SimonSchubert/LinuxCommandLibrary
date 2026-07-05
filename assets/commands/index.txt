@@ -983,6 +983,7 @@ carbonyl.md
 cardano-cli.md
 cardano-node.md
 cardano-wallet.md
+cardiag.md
 caret.md
 cargo-add.md
 cargo-bench.md
