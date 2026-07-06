@@ -5535,6 +5535,7 @@ pecl.md
 peco.md
 pee.md
 peek.md
+peeked.md
 peekfd.md
 peerflix.md
 peerindex.md
