@@ -4341,6 +4341,7 @@ maza.md
 mbind.md
 mbsync.md
 mbw.md
+mc-scan.md
 mc.cli.md
 mc.fm.md
 mc.md
