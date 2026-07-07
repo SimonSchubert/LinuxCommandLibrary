@@ -1814,6 +1814,7 @@ doctl-serverless.md
 doctl.md
 doctum.md
 docusaurus.md
+docx.md
 dog.md
 dogecoincore.md
 doggo.md
