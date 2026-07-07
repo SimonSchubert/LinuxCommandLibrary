@@ -1723,6 +1723,7 @@ dnsx.md
 do-release-upgrade.md
 do.md
 doas.md
+doc-engine.md
 docbook2html.md
 dockdiver.md
 docker-build.md
@@ -3923,6 +3924,7 @@ kyanos.md
 kyma.md
 l123.md
 l2ping.md
+l9gpu.md
 labcoat.md
 lambo-new.md
 lambo.md
