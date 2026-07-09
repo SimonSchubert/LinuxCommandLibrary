@@ -83,6 +83,4 @@ pass, age, age-keygen
 
 ```[Source code](https://github.com/FiloSottile/passage)```
 
-```[Homepage](https://www.passwordstore.org/)```
-
 <!-- verified: 2026-07-09 -->

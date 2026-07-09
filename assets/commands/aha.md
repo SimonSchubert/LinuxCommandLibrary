@@ -73,6 +73,4 @@ ansi2html, html2text
 
 ```[Source code](https://github.com/theZiz/aha)```
 
-```[Homepage](https://theziz.github.io/aha/)```
-
 <!-- verified: 2026-07-09 -->
