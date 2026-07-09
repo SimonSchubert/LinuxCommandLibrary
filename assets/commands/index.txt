@@ -1244,6 +1244,7 @@ cockroach.md
 code-server.md
 code.md
 code2prompt.md
+codealmanac.md
 codeburn.md
 codecov.md
 codecrafters.md
@@ -1262,6 +1263,7 @@ cointop.md
 col.md
 cola.md
 colcrt.md
+coli.md
 colima.md
 collectd.md
 collectdmon.md
@@ -2369,6 +2371,7 @@ frotz.md
 frp.md
 frpc.md
 frps.md
+frugon.md
 fs_cli.md
 fsadm.md
 fsarchiver.md
@@ -3750,6 +3753,7 @@ kanha.md
 kaniko.md
 kanwas.md
 kaskade.md
+kastor.md
 kat.md
 katana.md
 kate.md
@@ -4560,6 +4564,7 @@ monolith.md
 monop.md
 mons.md
 montage.md
+moo.md
 moon-buggy.md
 mopac.md
 more.md
@@ -5089,6 +5094,7 @@ ocaml.md
 ocamlc.md
 ocamlfind.md
 ocamlopt.md
+ocr-grab.md
 ocrmypdf.md
 ocsp.1s.md
 octave.md
@@ -5134,6 +5140,7 @@ omny.md
 omshell.md
 omz.md
 on_ac_power.md
+onboard.md
 onda.md
 onefetch.md
 oneko.md
@@ -6990,6 +6997,7 @@ sidecar.md
 siege.md
 sieve.md
 sig.md
+sighthound.md
 sigmap.md
 signal-desktop.md
 silentcast.md
@@ -8345,6 +8353,7 @@ xclock.md
 xcode-select.md
 xcodebuild.md
 xcompmgr.md
+xcover.md
 xcowsay.md
 xcrun.md
 xcursorgen.md
