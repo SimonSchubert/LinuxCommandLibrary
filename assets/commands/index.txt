@@ -126,6 +126,7 @@ agentico.md
 agetty.md
 agg.md
 agy.md
+aha.md
 ahost.md
 aic.md
 aichat.md
@@ -1750,6 +1751,7 @@ docker-container-rm.md
 docker-container-run.md
 docker-container-start.md
 docker-container-stats.md
+docker-container-stop.md
 docker-container-top.md
 docker-container-update.md
 docker-container.md
@@ -1785,6 +1787,7 @@ docker-service.md
 docker-slim.md
 docker-start.md
 docker-stats.md
+docker-stop.md
 docker-swarm.md
 docker-system.md
 docker-tag.md
@@ -2285,6 +2288,10 @@ fluidsynth.md
 flutter-pub.md
 flutter.md
 flutterfire.md
+flux-bootstrap.md
+flux-build.md
+flux-check.md
+flux-create.md
 flux.md
 fluxctl.md
 fluxion.md
@@ -2398,6 +2405,7 @@ g++.md
 gacutil.md
 gallery-dl.md
 galleta.md
+gamemoderun.md
 gamescope.md
 gammastep.md
 ganache-cli.md
@@ -5412,6 +5420,7 @@ paseo.md
 pass-cli.md
 pass-otp.md
 pass.md
+passage.md
 passepartui.md
 passwd.md
 paste.md
@@ -7227,6 +7236,7 @@ stew.md
 stl2gts.md
 stlink.md
 stolonctl.md
+storagectl.md
 stormlock.md
 stormy.md
 stow.md
@@ -7526,7 +7536,9 @@ terraform-logout.md
 terraform-output.md
 terraform-plan.md
 terraform-show.md
+terraform-taint.md
 terraform-tui.md
+terraform-untaint.md
 terraform.md
 terragrunt.md
 terraria.md
@@ -8142,6 +8154,10 @@ vulkaninfo.md
 vzdump.md
 w.md
 w3m.md
+wacli-messages-context.md
+wacli-messages-list.md
+wacli-messages-search.md
+wacli-messages-show.md
 wacli.md
 wafw00f.md
 waifu2x-ncnn-vulkan.md
