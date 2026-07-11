@@ -12,9 +12,13 @@ Android DEX file analysis and disassembly tool
 
 ```dexdump -d [classes.dex]```
 
-**Dump headers only**
+**Dump file header** summary
 
 ```dexdump -f [classes.dex]```
+
+**Dump exported items** only
+
+```dexdump -e -d [classes.dex]```
 
 **Output to file**
 
@@ -30,10 +34,22 @@ Android DEX file analysis and disassembly tool
 > Disassemble code sections.
 
 **-f**
-> Display file header details.
+> Display summary information from file header.
 
 **-h**
-> Display file header summary.
+> Display file header details.
+
+**-e**
+> Display exported items only.
+
+**-a**
+> Display annotations.
+
+**-c**
+> Verify checksum and exit.
+
+**-g**
+> Dump CFG for methods (Graphviz dot format).
 
 **-l** _layout_
 > Output layout: plain, xml.
@@ -52,3 +68,9 @@ DEX files contain compiled Java bytecode for the Dalvik VM or Android Runtime (A
 # SEE ALSO
 
 [apktool](/man/apktool)(1), [jadx](/man/jadx)(1), [dex2jar](/man/dex2jar)(1)
+
+# RESOURCES
+
+```[Source code](https://android.googlesource.com/platform/art/+/refs/heads/main/dexdump/)```
+
+<!-- verified: 2026-07-11 -->

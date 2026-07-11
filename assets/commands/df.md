@@ -79,3 +79,11 @@ Part of **GNU Coreutils**. The df command originated in **Version 1 AT&T UNIX** 
 # SEE ALSO
 
 [du](/man/du)(1), [lsblk](/man/lsblk)(8), [mount](/man/mount)(8)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/coreutils/)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/html_node/df-invocation.html)```
+
+<!-- verified: 2026-07-11 -->

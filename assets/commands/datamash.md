@@ -8,9 +8,9 @@ Get **max, min, mean, median** of a column
 
 ```seq 3 | datamash max 1 min 1 mean 1 median 1```
 
-Get mean of **float numbers** (comma decimal)
+**Group by** first column and sum the second (CSV input)
 
-```echo -e '1.0\n2.5\n3.1' | tr '.' ',' | datamash mean 1```
+```datamash -t, -g 1 sum 2 < [file.csv]```
 
 Get mean with **specific precision**
 
@@ -47,7 +47,16 @@ datamash is part of the GNU project and excels at one-liners for data exploratio
 > Group by specified fields
 
 **-H, --headers**
-> First line is header
+> First line is header (both input and output)
+
+**-s, --sort**
+> Sort the input before grouping (required if input is not already sorted by the group fields)
+
+**-W, --whitespace**
+> Use whitespace (one or more spaces/tabs) as field separator
+
+**--full**
+> Print entire input line before the operation results
 
 # OPERATIONS
 
@@ -65,8 +74,16 @@ datamash is part of the GNU project and excels at one-liners for data exploratio
 
 # CAVEATS
 
-Float numbers must use comma as decimal separator in some locales (use tr to convert). Part of GNU datamash. Column numbering starts at 1.
+The decimal separator follows the current locale (period in the C locale, comma in e.g. German locales). Grouping (-g) expects sorted input unless -s is given. Column numbering starts at 1.
 
 # SEE ALSO
 
 [awk](/man/awk)(1), [cut](/man/cut)(1), [sort](/man/sort)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/datamash/)```
+
+```[Documentation](https://www.gnu.org/software/datamash/manual/)```
+
+<!-- verified: 2026-07-11 -->

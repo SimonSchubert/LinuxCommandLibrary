@@ -48,3 +48,9 @@ continue is a fundamental shell control flow statement present since the origina
 # SEE ALSO
 
 [break](/man/break)(1), [for](/man/for)(1), [while](/man/while)(1), [bash](/man/bash)(1)
+
+# RESOURCES
+
+```[Documentation](https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Builtins.html)```
+
+<!-- verified: 2026-07-11 -->

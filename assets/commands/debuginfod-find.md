@@ -6,7 +6,19 @@ client for requesting debug information from debuginfod servers
 
 Request debuginfo based on **build ID**
 
-```debuginfod-find -vv debuginfo [build_id]```
+```debuginfod-find -v debuginfo [build_id]```
+
+Fetch the **executable** for a build ID
+
+```debuginfod-find executable [build_id]```
+
+Fetch a **source file** for a build ID
+
+```debuginfod-find source [build_id] [/path/to/source.c]```
+
+Fetch debuginfo for an **ELF file** directly
+
+```debuginfod-find debuginfo [/path/to/binary]```
 
 # SYNOPSIS
 
@@ -47,3 +59,11 @@ Requires network access and configured debuginfod servers. Build IDs can be foun
 # SEE ALSO
 
 [debuginfod](/man/debuginfod)(8), [gdb](/man/gdb)(1), [readelf](/man/readelf)(1)
+
+# RESOURCES
+
+```[Homepage](https://sourceware.org/elfutils/)```
+
+```[Documentation](https://sourceware.org/elfutils/Debuginfod.html)```
+
+<!-- verified: 2026-07-11 -->

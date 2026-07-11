@@ -104,3 +104,9 @@ detect-secrets was developed at **Yelp** and open-sourced in **2018**. It was cr
 # SEE ALSO
 
 [git-secrets](/man/git-secrets)(1), [trufflehog](/man/trufflehog)(1), [gitleaks](/man/gitleaks)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Yelp/detect-secrets)```
+
+<!-- verified: 2026-07-11 -->

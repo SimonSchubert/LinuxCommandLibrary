@@ -54,3 +54,9 @@ Arch Linux specific. Converted packages may have dependency issues as package na
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [makepkg](/man/makepkg)(8), [dpkg](/man/dpkg)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/helixarch/debtap)```
+
+<!-- verified: 2026-07-11 -->

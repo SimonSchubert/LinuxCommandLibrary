@@ -46,6 +46,12 @@ Essential for Debian package maintainers to track changes between package versio
 **-D** _distribution_
 > Set distribution (stable, unstable, etc.)
 
+**-r, --release**
+> Finalize the changelog for a release
+
+**--create**
+> Create a new debian/changelog file
+
 # CONFIGURATION
 
 **~/.devscripts**
@@ -61,3 +67,11 @@ Must be run from a Debian source package directory. Requires proper debian/chang
 # SEE ALSO
 
 [dch](/man/dch)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1), [debuild](/man/debuild)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/devscripts)```
+
+```[Documentation](https://manpages.debian.org/devscripts/debchange.1)```
+
+<!-- verified: 2026-07-11 -->

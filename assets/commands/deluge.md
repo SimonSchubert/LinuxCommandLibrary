@@ -16,13 +16,17 @@ lightweight BitTorrent client with plugin architecture
 
 ```deluge "[magnet:?xt=urn:btih:...]"```
 
-**Start in specific** UI mode
+**Start a specific UI** (gtk, web, or console)
 
-```deluge -u [gtk]```
+```deluge [console]```
 
-**Connect to remote** daemon
+**Set the default UI** to launch
 
-```deluge -a -c [~/.config/deluge]```
+```deluge -s [gtk]```
+
+**Use a custom config** directory
+
+```deluge -c [path/to/config]```
 
 # SYNOPSIS
 
@@ -33,8 +37,11 @@ lightweight BitTorrent client with plugin architecture
 _TORRENT_
 > Torrent file or magnet link to add.
 
-**-u**, **--ui** _UI_
-> User interface: gtk, web, console.
+_UI_
+> UI to launch as subcommand: gtk, web, or console (e.g. deluge console).
+
+**-s**, **--set-default-ui** _UI_
+> Set the default UI to be run when no UI is specified.
 
 **-c**, **--config** _DIR_
 > Configuration directory.
@@ -45,8 +52,8 @@ _TORRENT_
 **-L**, **--loglevel** _LEVEL_
 > Logging level: none, error, warning, info, debug.
 
-**-a**, **--auto-add**
-> Auto-add torrents from watch directory.
+**-q**, **--quiet**
+> Quieten logging output (same as loglevel none).
 
 **--help**
 > Display help information.
@@ -75,3 +82,13 @@ Deluge was created in **2006** using Python and GTK. It was designed as a full-f
 # SEE ALSO
 
 [deluged](/man/deluged)(1), [deluge-console](/man/deluge-console)(1), [transmission-cli](/man/transmission-cli)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/deluge-torrent/deluge)```
+
+```[Homepage](https://deluge-torrent.org)```
+
+```[Documentation](https://dev.deluge-torrent.org/wiki/UserGuide)```
+
+<!-- verified: 2026-07-11 -->

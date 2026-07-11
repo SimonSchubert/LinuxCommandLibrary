@@ -16,17 +16,17 @@ universal database tool and SQL client
 
 ```dbeaver -con "driver=postgresql|host=localhost|database=mydb"```
 
-**Execute SQL file** on connection
+**Open a SQL file** and connect it to a datasource
 
 ```dbeaver -con "name=[connection]" -f [script.sql]```
 
-**Export data** to file
+**Run a saved task** (e.g. a data export task)
 
-```dbeaver -export "name=[connection]|table=[tablename]|file=[output.csv]"```
+```dbeaver -runTask "@[project]:[task]"```
 
-**Run in headless mode** for scripting
+**Stop a running DBeaver** instance
 
-```dbeaver-cli -con "name=[connection]" -f [script.sql]```
+```dbeaver -stop```
 
 # SYNOPSIS
 
@@ -38,10 +38,16 @@ universal database tool and SQL client
 > Connection parameters (name, driver, host, database, user, etc.).
 
 **-f** _FILE_
-> SQL script file to execute.
+> Open the file in the DBeaver UI; with -con, connect it to the datasource.
 
-**-export** _PARAMS_
-> Export data with specified parameters.
+**-runTask** _@PROJECT:TASK_
+> Execute a saved task; returns an exit code indicating success or failure.
+
+**-var** _NAME=VALUE_
+> Set a variable for -runTask (repeatable).
+
+**-stop**
+> Quit a running DBeaver instance.
 
 **-nosplash**
 > Start without splash screen.
@@ -64,7 +70,7 @@ universal database tool and SQL client
 
 The application provides a graphical interface for database management including SQL editing with syntax highlighting and autocomplete, visual query builder, ER diagrams, data export/import, and schema comparison. It also supports NoSQL databases like MongoDB and Cassandra.
 
-DBeaver includes a command-line interface for automation tasks such as running SQL scripts, exporting data, and managing connections without the GUI.
+DBeaver's command line can open connections and files in the UI and execute saved tasks (such as data export or backup tasks) via -runTask, which is the supported way to automate DBeaver operations.
 
 # CAVEATS
 
@@ -77,3 +83,13 @@ DBeaver was created by **Serge Rider** and first released in **2010**. It starte
 # SEE ALSO
 
 [mysql](/man/mysql)(1), [psql](/man/psql)(1), [sqlite3](/man/sqlite3)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/dbeaver/dbeaver)```
+
+```[Homepage](https://dbeaver.io)```
+
+```[Documentation](https://dbeaver.com/docs/dbeaver/)```
+
+<!-- verified: 2026-07-11 -->

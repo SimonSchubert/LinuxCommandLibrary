@@ -58,3 +58,9 @@ Requires network access to fetch vulnerability data. Suite must match the instal
 # SEE ALSO
 
 [apt](/man/apt)(8), [unattended-upgrades](/man/unattended-upgrades)(8)
+
+# RESOURCES
+
+```[Homepage](https://www.enyo.de/fw/software/debsecan/)```
+
+<!-- verified: 2026-07-11 -->

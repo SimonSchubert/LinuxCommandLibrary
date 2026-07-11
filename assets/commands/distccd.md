@@ -70,3 +70,11 @@ Ensure firewall allows connections on port 3632. Use --allow to restrict access 
 # SEE ALSO
 
 [distcc](/man/distcc)(1), [ccache](/man/ccache)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/distcc/distcc)```
+
+```[Homepage](https://www.distcc.org)```
+
+<!-- verified: 2026-07-11 -->

@@ -58,3 +58,11 @@ Requires root privileges. The target directory must exist. For cross-architectur
 # SEE ALSO
 
 [chroot](/man/chroot)(8), [schroot](/man/schroot)(1), [systemd-nspawn](/man/systemd-nspawn)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/installer-team/debootstrap)```
+
+```[Documentation](https://manpages.debian.org/testing/debootstrap/debootstrap.8)```
+
+<!-- verified: 2026-07-11 -->

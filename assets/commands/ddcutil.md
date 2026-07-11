@@ -73,3 +73,11 @@ Requires the i2c-dev module: `modprobe i2c-dev`. May need to add user to i2c gro
 # SEE ALSO
 
 [xrandr](/man/xrandr)(1), [modprobe](/man/modprobe)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/rockowitz/ddcutil)```
+
+```[Documentation](https://www.ddcutil.com)```
+
+<!-- verified: 2026-07-11 -->

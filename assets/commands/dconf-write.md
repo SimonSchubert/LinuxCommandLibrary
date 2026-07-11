@@ -72,3 +72,9 @@ Quoting is tricky: shell quotes wrap GVariant format. Strings need both shell qu
 # SEE ALSO
 
 [dconf](/man/dconf)(1), [dconf-read](/man/dconf-read)(1), [gsettings](/man/gsettings)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/dconf)```
+
+<!-- verified: 2026-07-11 -->

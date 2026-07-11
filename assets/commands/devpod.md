@@ -92,3 +92,13 @@ DevPod was created by **Loft Labs** and released in **2023**. It was designed to
 # SEE ALSO
 
 [devcontainer](/man/devcontainer)(1), [docker](/man/docker)(1), [code](/man/code)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/loft-sh/devpod)```
+
+```[Homepage](https://devpod.sh)```
+
+```[Documentation](https://devpod.sh/docs)```
+
+<!-- verified: 2026-07-11 -->

@@ -61,3 +61,9 @@ disown is a shell builtin found in **bash**, **zsh**, and **ksh**. It complement
 # SEE ALSO
 
 [nohup](/man/nohup)(1), [bg](/man/bg)(1), [fg](/man/fg)(1), [jobs](/man/jobs)(1)
+
+# RESOURCES
+
+```[Documentation](https://www.gnu.org/software/bash/manual/html_node/Job-Control-Builtins.html)```
+
+<!-- verified: 2026-07-11 -->

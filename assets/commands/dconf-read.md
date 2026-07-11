@@ -39,3 +39,9 @@ Returns nothing if the key doesn't exist. Values are in GVariant format. For sch
 # SEE ALSO
 
 [dconf](/man/dconf)(1), [dconf-write](/man/dconf-write)(1), [gsettings](/man/gsettings)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/dconf)```
+
+<!-- verified: 2026-07-11 -->

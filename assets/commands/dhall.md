@@ -98,3 +98,13 @@ Dhall was created by **Gabriella Gonzalez** and first released in **2016**. The 
 # SEE ALSO
 
 [jq](/man/jq)(1), [yq](/man/yq)(1), [jsonnet](/man/jsonnet)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/dhall-lang/dhall-lang)```
+
+```[Homepage](https://dhall-lang.org)```
+
+```[Documentation](https://docs.dhall-lang.org)```
+
+<!-- verified: 2026-07-11 -->

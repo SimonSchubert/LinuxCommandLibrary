@@ -40,34 +40,68 @@ Useful for running scripts or programs as background services without modifying 
 
 # PARAMETERS
 
-**--name** _name_
-> Daemon name for identification
+**-n**, **--name**=_name_
+> Guarantee a single named instance; also enables --running, --restart, --stop and --signal
 
-**-r, --respawn**
-> Restart if the command exits
+**-r**, **--respawn**
+> Respawn the client when it terminates
 
-**--attempts** _n_
-> Maximum restart attempts
+**-A**, **--attempts**=_#_
+> Respawn # times on error before delaying (default 5)
 
-**--delay** _seconds_
-> Delay between restart attempts
+**-L**, **--delay**=_seconds_
+> Delay between respawn attempt bursts
 
-**--errlog** _file_
-> Log stderr to file
+**-M**, **--limit**=_#_
+> Maximum number of respawn attempt bursts (0 = no limit)
 
-**--output** _file_
-> Log stdout to file
+**-l**, **--errlog**=_spec_
+> Send daemon's error output to syslog or a file
+
+**-o**, **--output**=_spec_
+> Send the client's stdout and stderr to syslog or a file
+
+**-E**, **--stderr**=_spec_
+> Send only the client's stderr to syslog or a file
+
+**-u**, **--user**=_user[:group]_
+> Run the client as the given user (root only)
+
+**-f**, **--foreground**
+> Run the client in the foreground (do not daemonize)
+
+**--running**
+> Check whether a named daemon is running
+
+**--restart**
+> Restart a named daemon's client
 
 **--stop**
-> Stop the named daemon
+> Terminate a named daemon process
 
 **--list**
-> List running daemons
+> Print a list of named daemons
 
 # CAVEATS
 
-Different from systemd services. For production services, consider using systemd units instead. PID file management should be coordinated to avoid conflicts.
+Different from systemd services. For production services, consider using systemd units instead. Named daemons store pidfiles in /var/run (root) or /tmp (normal users) by default; use --pidfiles to override the location.
+
+# CONFIGURATION
+
+**/etc/daemon.conf**, **/etc/daemon.conf.d/***
+> System-wide default options, applied unless --noconfig is supplied.
+
+**~/.daemonrc**, **~/.daemonrc.d/***
+> Per-user default options, read after the system configuration.
 
 # SEE ALSO
 
 [daemonize](/man/daemonize)(1), [nohup](/man/nohup)(1), [systemctl](/man/systemctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/raforg/daemon)```
+
+```[Homepage](https://libslack.org/daemon)```
+
+<!-- verified: 2026-07-11 -->

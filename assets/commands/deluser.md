@@ -63,3 +63,11 @@ Requires root privileges. Use --backup when removing important users. The user m
 # SEE ALSO
 
 [userdel](/man/userdel)(8), [adduser](/man/adduser)(8), [delgroup](/man/delgroup)(8)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/adduser)```
+
+```[Documentation](https://manpages.debian.org/deluser.8)```
+
+<!-- verified: 2026-07-11 -->

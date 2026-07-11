@@ -83,3 +83,9 @@ The dict client implements the **DICT protocol** (RFC 2229), developed in **1997
 # SEE ALSO
 
 [dictd](/man/dictd)(8), [curl](/man/curl)(1), [aspell](/man/aspell)(1)
+
+# RESOURCES
+
+```[Homepage](http://www.dict.org)```
+
+<!-- verified: 2026-07-11 -->

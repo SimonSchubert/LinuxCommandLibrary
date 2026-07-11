@@ -37,16 +37,16 @@ The tool acts as a compiler wrapper, deciding whether to compile locally or remo
 # PARAMETERS
 
 **--show-hosts**
-> Display configured hosts.
+> Print the list of hosts distcc would use, then exit.
 
-**--show-principal**
-> Show Kerberos principal.
+**--scan-includes**
+> Print the list of files that would be sent to the server, then exit.
 
-**-j** _n_
-> Maximum jobs (in make).
+**--version**
+> Display the distcc client version.
 
-**--randomize**
-> Randomize host order.
+**-j**
+> Print the concurrency level (number of servers times per-host limit).
 
 **--help**
 > Display help information.
@@ -88,3 +88,11 @@ Requires same compiler version on all hosts. Network latency adds overhead for s
 # SEE ALSO
 
 [distccd](/man/distccd)(1), [ccache](/man/ccache)(1), [make](/man/make)(1), [gcc](/man/gcc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/distcc/distcc)```
+
+```[Homepage](https://www.distcc.org)```
+
+<!-- verified: 2026-07-11 -->

@@ -34,10 +34,16 @@ The output format is suitable for merge conflict resolution.
 > Like -e but bracket conflicts
 
 **-m, --merge**
-> Output merged file
+> Output the merged file directly (implies -A unless -e, -E, or -x is given)
+
+**-x, --overlap-only**
+> Output overlapping (conflicting) changes only
+
+**-3, --easy-only**
+> Output non-overlapping changes from the third file only
 
 **-T, --initial-tab**
-> Align tabs properly
+> Make tabs line up by prefixing a tab
 
 # CAVEATS
 
@@ -46,3 +52,11 @@ File order matters: mine, older, yours. Commonly used internally by version cont
 # SEE ALSO
 
 [diff](/man/diff)(1), [merge](/man/merge)(1), [patch](/man/patch)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/diffutils/)```
+
+```[Documentation](https://www.gnu.org/software/diffutils/manual/html_node/Invoking-diff3.html)```
+
+<!-- verified: 2026-07-11 -->

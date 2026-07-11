@@ -56,7 +56,10 @@ The tool connects to the bus and becomes an eavesdropper, showing all messages m
 > Output in monitor format (default).
 
 **--pcap**
-> Output in pcap format.
+> Output in pcap format (loadable in Wireshark).
+
+**--binary**
+> Output raw binary messages.
 
 # FILTER EXPRESSIONS
 
@@ -81,3 +84,13 @@ May require permissions to eavesdrop. Some buses restrict monitoring. High traff
 # SEE ALSO
 
 [dbus-send](/man/dbus-send)(1), [busctl](/man/busctl)(1), [gdbus](/man/gdbus)(1), [qdbus](/man/qdbus)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.freedesktop.org/dbus/dbus)```
+
+```[Homepage](https://www.freedesktop.org/wiki/Software/dbus/)```
+
+```[Documentation](https://dbus.freedesktop.org/doc/dbus-monitor.1.html)```
+
+<!-- verified: 2026-07-11 -->

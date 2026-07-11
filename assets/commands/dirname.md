@@ -8,9 +8,13 @@ directory path extraction utility
 
 ```dirname [/path/to/file.txt]```
 
-**Multiple** paths
+**Multiple** paths at once
 
-```dirname -z [file1] [file2]```
+```dirname [/path/one/file1] [/path/two/file2]```
+
+**NUL-separated** output (for scripting)
+
+```dirname -z [/path/to/file]```
 
 # SYNOPSIS
 
@@ -92,3 +96,11 @@ Doesn't resolve symbolic links (use readlink). Doesn't check if path exists. Tra
 # SEE ALSO
 
 [basename](/man/basename)(1), [realpath](/man/realpath)(1), [readlink](/man/readlink)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/coreutils/)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/html_node/dirname-invocation.html)```
+
+<!-- verified: 2026-07-11 -->

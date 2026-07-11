@@ -37,8 +37,8 @@ DocBook Authoring and Publishing Suite
 **-d** _DC-FILE_
 > Doc config file specifying the document to process.
 
-**-v**, **--verbosity** _LEVEL_
-> Set verbosity level (0-3).
+**-v**[_LEVEL_], **--verbosity**=_LEVEL_
+> Set verbosity level (0-3); -v alone equals level 1.
 
 **--builddir** _DIR_
 > Custom build directory.
@@ -86,3 +86,11 @@ DAPS was developed by **SUSE** for their documentation team, released as open so
 # SEE ALSO
 
 [xmllint](/man/xmllint)(1), [xsltproc](/man/xsltproc)(1), [fop](/man/fop)(1), [asciidoctor](/man/asciidoctor)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/openSUSE/daps)```
+
+```[Documentation](https://opensuse.github.io/daps/)```
+
+<!-- verified: 2026-07-11 -->

@@ -4,13 +4,21 @@ create Distrobox containers from Linux distribution images
 
 # TLDR
 
-Create container using **Ubuntu image**
+Create a container using an **Ubuntu image**
 
-```distrobox-create [container_name] -i [ubuntu:latest]```
+```distrobox-create --name [container_name] --image [ubuntu:latest]```
 
 **Clone** an existing container
 
-```distrobox-create -c [container_name] [cloned_container_name]```
+```distrobox-create --clone [source_container] --name [new_container]```
+
+Create non-interactively, **pulling the image** and installing extra packages
+
+```distrobox-create -Y -n [dev] -i [fedora:latest] -ap "[git vim]"```
+
+**Show compatible images**
+
+```distrobox-create --compatibility```
 
 # SYNOPSIS
 
@@ -34,14 +42,29 @@ Create container using **Ubuntu image**
 **-H, --home** _path_
 > Custom home directory
 
-**--init**
-> Use init system inside container
+**-p, --pull**
+> Pull the image even if it exists locally (implies --yes)
+
+**-Y, --yes**
+> Non-interactive; pull images without asking
+
+**-ap, --additional-packages** _packages_
+> Additional packages to install during initial setup
+
+**--volume** _spec_
+> Additional volume to mount into the container
+
+**-I, --init**
+> Use an init system (like systemd) inside the container
 
 **--nvidia**
-> Enable NVIDIA GPU support
+> Integrate the host's NVIDIA drivers into the container
 
-**--root**
-> Create rootful container
+**-r, --root**
+> Create a rootful container (launch the container manager as root)
+
+**-C, --compatibility**
+> Show a list of compatible images
 
 # CAVEATS
 
@@ -50,3 +73,11 @@ Requires Podman or Docker. Images must be compatible Linux distributions. Home d
 # SEE ALSO
 
 [distrobox](/man/distrobox)(1), [distrobox-enter](/man/distrobox-enter)(1), [podman](/man/podman)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/89luca89/distrobox)```
+
+```[Homepage](https://distrobox.it)```
+
+<!-- verified: 2026-07-11 -->

@@ -20,13 +20,13 @@ clean up problematic filenames
 
 ```detox -v [files]```
 
-**Use specific sequence** file
+**Use a specific sequence** of filters
 
-```detox -s [utf_8] [files]```
+```detox -s [iso8859_1] [files]```
 
-**Clean hidden files** too
+**List available sequences**
 
-```detox -a [directory]```
+```detox -L```
 
 # SYNOPSIS
 
@@ -47,13 +47,16 @@ _FILE_
 > Verbose output showing renames.
 
 **-s** _SEQUENCE_
-> Cleaning sequence to use.
+> Cleaning sequence to use (default runs the safe and wipeup filters).
 
-**-a**
-> Work on hidden files/directories.
+**-L**
+> List the currently available sequences.
+
+**--special**
+> Work on links and special files too.
 
 **-f** _FILE_
-> Use specified configuration file.
+> Use specified configuration file instead of the defaults.
 
 **--help**
 > Display help information.
@@ -77,8 +80,14 @@ May create duplicate filenames requiring manual resolution. Irreversible without
 
 # HISTORY
 
-detox was written by **Doug Harber** to address the common problem of managing files with problematic names in Unix environments. It provides a systematic approach to filename sanitization.
+detox was written by **Doug Harple** to address the common problem of managing files with problematic names in Unix environments. It provides a systematic approach to filename sanitization.
 
 # SEE ALSO
 
 [rename](/man/rename)(1), [mv](/man/mv)(1), [convmv](/man/convmv)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/dharple/detox)```
+
+<!-- verified: 2026-07-11 -->

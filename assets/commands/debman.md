@@ -44,3 +44,9 @@ Requires network access to download packages (unless using -f). Part of the debi
 # SEE ALSO
 
 [man](/man/man)(1), [apt-get](/man/apt-get)(8), [dpkg](/man/dpkg)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/debian-goodies)```
+
+<!-- verified: 2026-07-11 -->

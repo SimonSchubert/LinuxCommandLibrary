@@ -77,11 +77,11 @@ The shell is primarily used for system scripts, package manager scripts, and sit
 **-I**
 > Ignore EOF in interactive mode
 
-**--help**
-> Show help
+**-C**
+> Don't overwrite existing files with > (noclobber)
 
-**--version**
-> Show version
+**-a**
+> Export all assigned variables (allexport)
 
 # PERFORMANCE
 
@@ -102,3 +102,11 @@ Scripts using bash-isms will fail. Use `#!/bin/bash` for bash-specific scripts. 
 # SEE ALSO
 
 [bash](/man/bash)(1), [sh](/man/sh)(1), [zsh](/man/zsh)(1)
+
+# RESOURCES
+
+```[Source code](https://git.kernel.org/pub/scm/utils/dash/dash.git)```
+
+```[Homepage](http://gondor.apana.org.au/~herbert/dash/)```
+
+<!-- verified: 2026-07-11 -->

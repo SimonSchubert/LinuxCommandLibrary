@@ -128,7 +128,7 @@ The tool supports DuckDuckGo bangs (shortcuts like !w for Wikipedia, !yt for You
 
 # CAVEATS
 
-Requires Python 3.8 or later. Results depend on DuckDuckGo's HTML interface which may change. Some features like instant answers are not available in the HTML version used by ddgr.
+Requires Python 3. Results depend on DuckDuckGo's HTML interface which may change. Some features like instant answers are not available in the HTML version used by ddgr.
 
 # HISTORY
 
@@ -137,3 +137,9 @@ ddgr was created by Arun Prakash Jana as a privacy-focused alternative to google
 # SEE ALSO
 
 [googler](/man/googler)(1), [surfraw](/man/surfraw)(1), [w3m](/man/w3m)(1), [lynx](/man/lynx)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/jarun/ddgr)```
+
+<!-- verified: 2026-07-11 -->

@@ -1,79 +1,86 @@
 # TAGLINE
 
-command-line interface for Dropbox cloud storage
+Databricks CLI extensions for workflow development
 
 # TLDR
 
-**Authenticate with Dropbox**
+**Configure a new dbx project** in the current directory
 
-```dbx auth login```
+```dbx configure --profile [DEFAULT]```
 
-**List files** in Dropbox folder
+**Deploy a workflow** to artifact storage
 
-```dbx ls [/path/to/folder]```
+```dbx deploy [workflow_name]```
 
-**Upload a file** to Dropbox
+**Launch a deployed workflow**
 
-```dbx put [local_file.txt] [/remote/path/file.txt]```
+```dbx launch [workflow_name]```
 
-**Download a file** from Dropbox
+**Execute a workflow** on an interactive cluster (without deploying)
 
-```dbx get [/remote/path/file.txt] [local_file.txt]```
+```dbx execute [workflow_name] --cluster-name=[cluster]```
 
-**Create a shared link**
+**Sync local files to DBFS** and watch for changes
 
-```dbx share [/path/to/file]```
-
-**Show account information**
-
-```dbx account info```
+```dbx sync dbfs --source [path/to/directory] --dest [path/to/remote_directory]```
 
 # SYNOPSIS
 
-**dbx** _command_ [_options_] [_arguments_]
+**dbx** _command_ [_options_]
 
 # PARAMETERS
 
-_COMMAND_
-> Operation to perform: auth, ls, get, put, share, etc.
+**configure**
+> Configure the project in the current directory.
 
-**auth login**
-> Authenticate with Dropbox account.
+**init**
+> Generate a new project skeleton from a template.
 
-**ls** _PATH_
-> List directory contents.
+**deploy** _workflow_
+> Deploy a workflow definition and its artifacts to the Databricks workspace.
 
-**get** _REMOTE_ _LOCAL_
-> Download file from Dropbox.
+**launch** _workflow_
+> Launch a previously deployed workflow as a job run.
 
-**put** _LOCAL_ _REMOTE_
-> Upload file to Dropbox.
+**execute** _workflow_
+> Run workflow code directly on an interactive (all-purpose) cluster.
 
-**share** _PATH_
-> Create shared link for file.
+**sync**
+> Synchronize local files to DBFS or a repo, optionally watching for changes.
 
-**account info**
-> Display account details.
+**destroy**
+> Delete defined workflows and optionally their assets.
 
-**--help**
-> Display help information.
+**--profile** _PROFILE_
+> Databricks CLI connection profile to use.
+
+**--environment** _ENV_
+> Project environment defined in the deployment file (default: default).
 
 # DESCRIPTION
 
-**dbx** is a command-line interface for Dropbox, allowing file operations without the graphical client. It provides functionality for uploading, downloading, listing, and sharing files stored in Dropbox cloud storage.
+**dbx** (Databricks CLI eXtensions) is a Databricks Labs tool that extends the databricks CLI with functionality for rapid development and CI/CD of Databricks workflows. It manages deployment of jobs, workflows, and their artifacts across multiple environments and workspaces.
 
-The tool requires OAuth authentication which is handled through the auth command. Once authenticated, it maintains credentials for subsequent operations. It supports both personal and business Dropbox accounts.
+Projects are described in a deployment file (deployment.yml) which defines workflows, cluster configurations, and dependencies. dbx versions and uploads artifacts, then creates or updates the corresponding Databricks jobs, making it suitable for automated pipelines.
 
-dbx is useful for scripting backup operations, automating file transfers, and accessing Dropbox on headless servers or systems without a graphical environment.
+Authentication reuses the profiles of the databricks CLI (~/.databrickscfg), so dbx works against any workspace configured there.
 
 # CAVEATS
 
-Requires network connectivity to Dropbox servers. Large file transfers may timeout. API rate limits apply to frequent operations. OAuth tokens may need periodic refresh.
+dbx has been retired by Databricks; Databricks Asset Bundles (the `databricks bundle` command in the new Databricks CLI) is the recommended replacement. Installed via pip (`pip install dbx`), it requires Python and a configured Databricks authentication profile.
 
 # HISTORY
 
-dbx is a community-developed command-line tool for Dropbox, separate from the official Dropbox CLI. Various implementations exist with similar functionality, providing command-line access to Dropbox's API for users who prefer terminal workflows.
+dbx was developed by Databricks Labs as a shortcut for "Databricks CLI eXtensions", filling the CI/CD gap before Databricks Asset Bundles became generally available. It was subsequently deprecated in favor of that first-party tooling.
 
 # SEE ALSO
 
-[rclone](/man/rclone)(1), [curl](/man/curl)(1), [rsync](/man/rsync)(1)
+[pip](/man/pip)(1), [python](/man/python)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/databrickslabs/dbx)```
+
+```[Documentation](https://dbx.readthedocs.io)```
+
+<!-- verified: 2026-07-11 -->

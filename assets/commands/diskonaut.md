@@ -16,24 +16,24 @@ terminal-based disk space navigator with treemap visualization
 
 ```diskonaut --apparent-size [directory]```
 
-**Ignore hidden files**
+**Disable the delete confirmation** prompt
 
-```diskonaut --ignore-hidden [directory]```
+```diskonaut --disable-delete-confirmation [directory]```
 
 # SYNOPSIS
 
-**diskonaut** [_options_] [_path_]
+**diskonaut** [_options_] [_folder_]
 
 # PARAMETERS
 
-_PATH_
+_FOLDER_
 > Directory to analyze (defaults to current directory).
 
-**--apparent-size**
+**-a**, **--apparent-size**
 > Show apparent file size instead of disk usage.
 
-**--ignore-hidden**
-> Ignore hidden files and directories.
+**-d**, **--disable-delete-confirmation**
+> Skip the confirmation prompt when deleting files or folders.
 
 **-h**, **--help**
 > Display help information.
@@ -60,3 +60,9 @@ diskonaut was created as a modern, terminal-based alternative to graphical disk 
 # SEE ALSO
 
 [ncdu](/man/ncdu)(1), [du](/man/du)(1), [duf](/man/duf)(1), [dust](/man/dust)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/imsnif/diskonaut)```
+
+<!-- verified: 2026-07-11 -->

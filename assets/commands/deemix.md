@@ -22,38 +22,33 @@ download tool for Deezer music streaming service
 
 **Download in specific** quality
 
-```deemix -b [FLAC] [url]```
+```deemix -b [flac] [url]```
 
-**Download from file** with URLs
+**Download multiple URLs** at once
 
-```deemix [urls.txt]```
+```deemix [url1] [url2]```
+
+**Use a portable config folder** in the current directory
+
+```deemix --portable [url]```
 
 # SYNOPSIS
 
-**deemix** [_options_] _url-or-file_
+**deemix** [_options_] _url_...
 
 # PARAMETERS
 
 _URL_
-> Deezer URL for track, album, playlist, or artist.
-
-_FILE_
-> Text file containing URLs to download.
+> Deezer URL for track, album, playlist, or artist. Multiple URLs can be given.
 
 **-p**, **--path** _DIR_
 > Output directory for downloads.
 
 **-b**, **--bitrate** _QUALITY_
-> Audio quality: 128, 320, FLAC.
+> Audio quality: 128, 320, flac.
 
-**-t**, **--tracknum**
-> Prefix files with track number.
-
-**-a**, **--album**
-> Create album folder structure.
-
-**--arl** _TOKEN_
-> Deezer ARL token for authentication.
+**--portable**
+> Create the config folder in the current directory instead of the user config directory.
 
 **--help**
 > Display help information.
@@ -70,9 +65,9 @@ _FILE_
 
 **deemix** is a download tool for Deezer music streaming service. It downloads tracks, albums, playlists, and artist discographies from Deezer with options for audio quality up to FLAC lossless format.
 
-The tool requires authentication via an ARL (Access Request License) token from a Deezer account. Downloaded files include metadata and album artwork. Output can be organized in configurable folder structures.
+The tool requires authentication via an ARL token from a Deezer account; on first run it prompts for the token and stores it in the config folder. Downloaded files include metadata and album artwork. Output can be organized in configurable folder structures via config.json.
 
-deemix supports batch downloading through URL files and can be configured for automated music library management.
+With the optional Spotify plugin configured, deemix can also resolve Spotify links to their Deezer equivalents.
 
 # CAVEATS
 
@@ -80,8 +75,14 @@ Requires valid Deezer ARL token from active subscription. FLAC quality requires 
 
 # HISTORY
 
-deemix was developed as a continuation of earlier Deezer download tools. It emerged in the late **2010s** as part of the music downloading ecosystem, providing command-line access to Deezer's streaming library.
+deemix was developed by **RemixDev** as a continuation of earlier Deezer download tools like deezloader. The original author stopped development in **2022**; community forks continue to maintain the codebase.
 
 # SEE ALSO
 
 [spotdl](/man/spotdl)(1), [youtube-dl](/man/youtube-dl)(1), [yt-dlp](/man/yt-dlp)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/RemixDev/deemix-py)```
+
+<!-- verified: 2026-07-11 -->

@@ -1,47 +1,80 @@
 # TAGLINE
 
-Android DEX file analyzer with call graph generation
+Android DEX file manipulation and analysis tool
 
 # TLDR
 
-**Analyze a DEX file**
+**Print statistics** for a DEX file
 
-```dexter -i [classes.dex]```
+```dexter -s [classes.dex]```
 
-**Generate call graph**
+**List the classes** defined in a DEX file
 
-```dexter -i [classes.dex] --callgraph```
+```dexter -l [classes.dex]```
 
-**Filter by package**
+**Disassemble** method bodies
 
-```dexter -i [classes.dex] --package [com.example]```
+```dexter -d [classes.dex]```
+
+**Extract a single class** into a new DEX file
+
+```dexter -e [com.example.MyClass] -o [out.dex] [classes.dex]```
+
+**Generate a control flow graph**
+
+```dexter --cfg [compact] [classes.dex]```
 
 # SYNOPSIS
 
-**dexter** [_options_]
+**dexter** [_flags_...] [**-e** _classname_] [**-o** _outfile_] _dexfile_
 
 # PARAMETERS
 
-**-i**, **--input** _file_
-> Input DEX or APK file.
+**-s**
+> Print stats about the DEX file sections.
 
-**--callgraph**
-> Generate method call graph.
+**-l**
+> List the classes defined in the DEX file.
 
-**--package** _name_
-> Filter by package name.
+**-d**
+> Disassemble method bodies.
 
-**-o**, **--output** _file_
-> Output file.
+**-e** _classname_
+> Extract a single class.
+
+**-o** _file_
+> Output a new .dex file.
+
+**-m**
+> Print the .dex layout map.
+
+**-v**
+> Verbose output.
+
+**--cfg** _compact_|_verbose_
+> Generate a control flow graph.
+
+**-h**
+> Display help.
 
 # DESCRIPTION
 
-**dexter** is an Android DEX file analyzer that provides detailed information about classes, methods, and bytecode. It can generate call graphs to visualize method dependencies and analyze application structure at a deeper level than basic disassemblers.
+**dexter** is a DEX (Dalvik Executable) manipulation tool from the Android Open Source Project (tools/dexter). Built on top of the dexter/slicer library, it can inspect, disassemble, and rewrite DEX files.
 
-The tool is particularly useful for understanding complex app architectures, identifying code paths, and analyzing relationships between components. Package filtering allows focusing analysis on specific parts of an application.
+Beyond read-only analysis (stats, class lists, disassembly, layout maps), dexter can produce modified .dex files, for example extracting a single class. Its control flow graph output helps when studying method-level structure of compiled Android code.
 
-Call graph generation helps security researchers identify potential attack vectors and developers understand code flow in unfamiliar codebases.
+The underlying slicer library is also used for bytecode instrumentation in Android tooling.
+
+# CAVEATS
+
+dexter operates on .dex files, not APKs; extract classes.dex from an APK first (e.g. with unzip). It is built from the AOSP source tree and is not typically packaged by Linux distributions.
 
 # SEE ALSO
 
 [dexdump](/man/dexdump)(1), [apktool](/man/apktool)(1)
+
+# RESOURCES
+
+```[Source code](https://android.googlesource.com/platform/tools/dexter/)```
+
+<!-- verified: 2026-07-11 -->

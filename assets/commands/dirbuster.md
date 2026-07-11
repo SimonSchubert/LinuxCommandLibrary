@@ -64,3 +64,9 @@ Use only against authorized targets. Java-based, requires Java runtime. Consider
 # SEE ALSO
 
 [dirb](/man/dirb)(1), [gobuster](/man/gobuster)(1), [nikto](/man/nikto)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/kalilinux/packages/dirbuster)```
+
+<!-- verified: 2026-07-11 -->

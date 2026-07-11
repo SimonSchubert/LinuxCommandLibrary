@@ -24,13 +24,13 @@ disk usage display with color-coded graphs
 
 ```dfc -e csv```
 
-**Sort by filesystem name**
+**Sort output** by filesystem name
 
-```dfc -s [name]```
+```dfc -q [name]```
 
-**Hide specific columns**
+**Show used size** and mount options
 
-```dfc -d [used,avail]```
+```dfc -d -o```
 
 **Display without colors**
 
@@ -38,27 +38,27 @@ disk usage display with color-coded graphs
 
 # SYNOPSIS
 
-**dfc** [_-adfghilmnopqsTvwWX_] [_-c when_] [_-e format_] [_-s column_] [_-t types_] [_-u unit_] [_path ..._]
+**dfc** [_-abdfhilmMnosTvwW_] [_-c when_] [_-e format_] [_-p fsname_] [_-q sortby_] [_-t fstype_] [_-u unit_]
 
 # PARAMETERS
 
 **-a**
-> Include all filesystems (pseudo, duplicate, inaccessible).
+> Show all filesystems (do not omit any).
+
+**-b**
+> Do not show the graph bar.
 
 **-c** _when_
 > Color mode: always, auto, or never.
 
-**-d** _list_
-> Hide specified columns (comma-separated).
+**-d**
+> Show used size.
 
 **-e** _format_
-> Export format: csv, html, json, or text.
+> Export to format: csv, html, json, tex, or text.
 
 **-f**
-> Disable auto-scale, print in bytes.
-
-**-g**
-> Show graph only.
+> Override auto-adjust behavior by forcing information to be displayed.
 
 **-h**
 > Display help.
@@ -72,38 +72,38 @@ disk usage display with color-coded graphs
 **-m**
 > Use SI units (powers of 1000 instead of 1024).
 
+**-M**
+> Do not print "mounted on".
+
 **-n**
 > Do not print header.
 
 **-o**
 > Show mount options.
 
-**-p**
-> Show percentage used only in the graph.
+**-p** _fsname_
+> Filter by filesystem name (prefix with - to exclude).
 
-**-q**
-> Hide the graph bar.
+**-q** _sortby_
+> Sort output by: name, type, or mount.
 
-**-s** _column_
-> Sort by column (name, type, used, avail, etc.).
+**-s**
+> Sum the total usage.
 
-**-t** _types_
-> Filter by filesystem types (comma-separated).
+**-t** _fstype_
+> Filter by filesystem types (comma-separated, prefix with - to exclude).
 
 **-T**
 > Show filesystem type.
 
 **-u** _unit_
-> Force display unit (k, m, g, t, p, e, z, y, h).
+> Force display unit (h, b, k, m, g, t, p, e, z, y).
 
 **-w**
-> Wide output (no column truncation).
+> Use a wider bar for the graph.
 
 **-W**
-> Wide output for mount points.
-
-**-X**
-> Exclude pseudo filesystems.
+> Wide path name (avoid truncation of mount points).
 
 # DESCRIPTION
 
@@ -126,3 +126,9 @@ Colors require a terminal with color support. Very long mount point names may be
 # SEE ALSO
 
 [df](/man/df)(1), [du](/man/du)(1), [ncdu](/man/ncdu)(1), [dust](/man/dust)(1), [duf](/man/duf)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rolinh/dfc)```
+
+<!-- verified: 2026-07-11 -->

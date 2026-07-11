@@ -74,3 +74,11 @@ Dia was created by **Alexander Larsson** and first released in **1998**. It was 
 # SEE ALSO
 
 [inkscape](/man/inkscape)(1), [graphviz](/man/graphviz)(1), [drawio](/man/drawio)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/dia)```
+
+```[Homepage](https://wiki.gnome.org/Apps/Dia)```
+
+<!-- verified: 2026-07-11 -->

@@ -71,3 +71,9 @@ Requires Perl. Modified output not suitable for patch application. Some themes m
 # SEE ALSO
 
 [git-diff](/man/git-diff)(1), [delta](/man/delta)(1), [colordiff](/man/colordiff)(1), [diff](/man/diff)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/so-fancy/diff-so-fancy)```
+
+<!-- verified: 2026-07-11 -->

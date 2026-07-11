@@ -161,3 +161,11 @@ Setting date requires root. System clock vs hardware clock different. Timezone a
 # SEE ALSO
 
 [timedatectl](/man/timedatectl)(1), [hwclock](/man/hwclock)(8), [cal](/man/cal)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/coreutils/)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/html_node/date-invocation.html)```
+
+<!-- verified: 2026-07-11 -->

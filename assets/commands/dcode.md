@@ -1,73 +1,66 @@
 # TAGLINE
 
-multi-format text decoder and cipher utility
+recursively detect and decode encoded strings
 
 # TLDR
 
-**Decode base64** encoded text
+**Detect and decode** a string recursively
 
-```dcode base64 "[encoded_text]"```
+```dcode "[NjM3YTQyNzQ1YTQ0NGUzMg==]"```
 
-**Decode URL** encoding
+**Decode a Caesar cipher** with a known offset
 
-```dcode url "[encoded%20text]"```
+```dcode -rot [11] "[spwwz hzcwo]"```
 
-**Decode hex** to text
+**Try all 26 offsets** of a Caesar cipher
 
-```dcode hex "[48656c6c6f]"```
+```dcode -rot all "[bpgkta xh qtiitg iwpc sr]"```
 
-**Decode ROT13** cipher
+**Reverse** a string
 
-```dcode rot13 "[encoded_text]"```
+```dcode -rev "[hello world]"```
 
-**Decode from file**
+**Decode without third-party services** (skip online hash lookups)
 
-```dcode base64 -f [encoded.txt]```
-
-**Auto-detect** encoding and decode
-
-```dcode auto "[unknown_encoding]"```
+```dcode -s "[string]"```
 
 # SYNOPSIS
 
-**dcode** _encoding_ [_options_] [_text_]
+**dcode** [_options_] "_string_"
 
 # PARAMETERS
 
-_ENCODING_
-> Encoding type: base64, url, hex, rot13, binary, etc.
+**-rot** _offset_|**all**
+> Decode a Caesar cipher with the given offset, or try all 26 offsets.
 
-_TEXT_
-> Text to decode.
+**-rev**
+> Reverse the supplied string.
 
-**-f**, **--file** _FILE_
-> Read input from file.
-
-**auto**
-> Auto-detect encoding type.
-
-**-o**, **--output** _FILE_
-> Write decoded output to file.
-
-**--help**
-> Display help information.
+**-s**
+> Safe mode: do not query third-party web services for hash lookups.
 
 # DESCRIPTION
 
-**dcode** is a command-line utility for decoding text from various encoding schemes. It supports common encodings like Base64, URL encoding, hexadecimal, and simple ciphers like ROT13.
+**dcode** is the command provided by **Decodify**, a tool that detects the encoding of a string and decodes it, recursively. If a decoded result is itself encoded, Decodify keeps going until it reaches plain text.
 
-The tool is useful for quickly decoding strings encountered in logs, URLs, configuration files, or CTF challenges. The auto-detect feature attempts to identify the encoding automatically when the type is unknown.
+Supported encodings and ciphers include Base64, hexadecimal, decimal, binary, URL encoding, FromChar, and Caesar ciphers. It can also identify MD5, SHA1, and SHA2 hashes and attempt to resolve them via online hash lookup services.
 
-dcode simplifies the workflow of decoding text that would otherwise require multiple tools or online services.
+The tool is popular for CTF challenges and security analysis, where layered or unknown encodings are common and manually chaining base64, xxd, and similar tools is tedious.
 
 # CAVEATS
 
-Auto-detection is heuristic and may misidentify encodings. Binary data may not display correctly in terminal. Some encodings have multiple variants that may decode differently.
+Hash "decoding" relies on third-party web lookup services; use -s to keep sensitive data offline. Encoding detection is heuristic and can misidentify short or ambiguous strings. Written in Python and installed from source (git clone, then make install).
 
 # HISTORY
 
-dcode is a utility tool designed to consolidate various decoding operations into a single command. Similar tools exist across different platforms, addressing the common need for quick text decoding in development and security workflows.
+Decodify was created by security researcher Somdev Sangwan (s0md3v), also known for tools like XSStrike and Photon.
 
 # SEE ALSO
 
 [base64](/man/base64)(1), [xxd](/man/xxd)(1), [uudecode](/man/uudecode)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/s0md3v/Decodify)```
+
+<!-- verified: 2026-07-11 -->

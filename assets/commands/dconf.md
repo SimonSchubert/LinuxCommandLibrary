@@ -63,6 +63,9 @@ For most users, gsettings provides a higher-level, schema-validated interface. d
 **load** _dir_
 > Load from INI format
 
+**update**
+> Compile system dconf databases from keyfiles in /etc/dconf/db (run as root after editing them)
+
 # CONFIGURATION
 
 **~/.config/dconf/user**
@@ -75,3 +78,9 @@ Values must be in GVariant format. Strings need single quotes inside double quot
 # SEE ALSO
 
 [gsettings](/man/gsettings)(1), [dconf-read](/man/dconf-read)(1), [dconf-write](/man/dconf-write)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/dconf)```
+
+<!-- verified: 2026-07-11 -->
