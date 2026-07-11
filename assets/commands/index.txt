@@ -1855,6 +1855,7 @@ dosbox.md
 dosfslabel.md
 dot.md
 dotbot.md
+dotenv-diff.md
 dotenvx.md
 dotfiles.md
 dotlockfile.md
