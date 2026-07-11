@@ -1,41 +1,46 @@
 # TAGLINE
 
-Display a specific WhatsApp message by ID
+Display a specific WhatsApp message by chat and ID
 
 # TLDR
 
-**Show a message** by its ID in JSON format
+**Show a message** by chat JID and message ID in JSON
 
-```wacli messages show AABBCC1122334455 --json```
+```wacli messages show --chat 491234567890@s.whatsapp.net --id ABC123 --json```
 
 **Show using a custom store directory**
 
-```wacli messages show AABBCC1122334455 --json --store /path/to/store```
+```wacli messages show --chat 491234567890@s.whatsapp.net --id ABC123 --json --store /path/to/store```
 
 # SYNOPSIS
 
-**wacli** **messages** **show** _message_id_ [--json] [--store _dir_]
+**wacli** **messages** **show** **--chat** _jid_ **--id** _msg_id_ [--json] [--store _dir_]
 
 # DESCRIPTION
 
-**wacli messages show** fetches and prints the full record for a single message identified by its internal ID from the local store.
+**wacli messages show** fetches and prints the full record for a single message identified by chat JID and message ID from the local store.
 
-Useful for inspecting details, media references, or for scripting when you already have an ID (e.g. from a previous search or list).
+Useful for inspecting details, media references, or scripting when you already have an ID (e.g. from a previous search or list). Deleted messages kept as local tombstones may still appear for direct `show` even when hidden from list/search.
+
+Default store path is `~/.local/state/wacli` on Linux and `~/.wacli` elsewhere.
 
 # PARAMETERS
 
-_message_id_
-> The message identifier (opaque string used by wacli store).
+**--chat** _jid_
+> Chat JID that contains the message.
+
+**--id** _msg_id_
+> Message identifier within that chat.
 
 **--json**
 > Output as JSON (recommended for further processing).
 
 **--store** _dir_
-> Use an alternate store location (default `~/.wacli`).
+> Use an alternate store location (default `~/.local/state/wacli` on Linux, `~/.wacli` elsewhere).
 
 # SEE ALSO
 
-wacli, wacli-messages-list, wacli-messages-context
+[wacli](/man/wacli)(1), [wacli-messages-list](/man/wacli-messages-list)(1), [wacli-messages-search](/man/wacli-messages-search)(1), [wacli-messages-context](/man/wacli-messages-context)(1)
 
 # RESOURCES
 
@@ -43,4 +48,4 @@ wacli, wacli-messages-list, wacli-messages-context
 
 ```[Documentation](https://wacli.sh/messages.html)```
 
-<!-- verified: 2026-07-09 -->
+<!-- verified: 2026-07-11 -->

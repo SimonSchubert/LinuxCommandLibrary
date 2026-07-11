@@ -61,14 +61,16 @@ Humans and agents use the same local CLI to search, read and validate the wiki.
 - The wiki is committed Markdown; the CLI also maintains derived indexes under ~/.codealmanac/.
 - Not a hosted service in the current contract.
 
+# SEE ALSO
+
+[claude](/man/claude)(1), [codex](/man/codex)(1)
+
 # RESOURCES
 
 ```[Source code](https://github.com/AlmanacCode/codealmanac)```
+
 ```[Homepage](https://codealmanac.com)```
+
 ```[Documentation](https://github.com/AlmanacCode/codealmanac#readme)```
 
-<!-- verified: 2026-07-10 -->
-
-# SEE ALSO
-
-claude(1)
+<!-- verified: 2026-07-11 -->

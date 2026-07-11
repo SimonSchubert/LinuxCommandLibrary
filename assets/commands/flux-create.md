@@ -16,6 +16,10 @@ Create or update Flux custom resources from the command line
 
 ```flux create helmrelease my-release --chart mychart --source HelmRepository/myrepo```
 
+**Export YAML** to stdout instead of applying to the cluster
+
+```flux create source git my-repo --url https://github.com/org/repo --branch main --export```
+
 **Create a Git authentication secret**
 
 ```flux create secret git my-git-secret --url https://github.com/org/repo --username user --password pass```
@@ -26,9 +30,9 @@ Create or update Flux custom resources from the command line
 
 # DESCRIPTION
 
-**flux create** provides a convenient way to generate Flux CRDs (GitRepository, Kustomization, HelmRelease, HelmRepository, Secret, etc.) without writing YAML by hand.
+**flux create** generates Flux custom resources (GitRepository, Kustomization, HelmRelease, HelmRepository, Secret, etc.) without writing YAML by hand.
 
-The created objects are printed to stdout (or applied when using `--export=false` behavior in context) and are usually piped to `kubectl apply` or committed to the Git repository that Flux watches.
+By default the resource is applied to the cluster. Pass **--export** to print the resource as YAML on stdout instead (for committing to Git or piping to other tools).
 
 It supports the major Flux resource kinds and many common configuration options.
 
@@ -46,9 +50,26 @@ It supports the major Flux resource kinds and many common configuration options.
 **secret git**, **secret helm**
 > Create credentials.
 
+**image**, **receiver**, **alert**, **tenant**
+> Image automation, notification receivers, alerts, and multi-tenancy helpers.
+
+# PARAMETERS
+
+**--export**
+> Export the resource in YAML format to stdout instead of applying it to the cluster.
+
+**--interval** _duration_
+> Source sync interval (default `1m0s`).
+
+**--label** _key=value_
+> Set labels on the resource (repeatable / comma-separated).
+
+**-n**, **--namespace** _ns_
+> Namespace scope (default `flux-system`).
+
 # SEE ALSO
 
-flux, flux-bootstrap, flux-get
+[flux](/man/flux)(1), [flux-bootstrap](/man/flux-bootstrap)(1), [flux-build](/man/flux-build)(1), [flux-check](/man/flux-check)(1)
 
 # RESOURCES
 
@@ -56,4 +77,4 @@ flux, flux-bootstrap, flux-get
 
 ```[Documentation](https://fluxcd.io/flux/cmd/flux_create/)```
 
-<!-- verified: 2026-07-09 -->
+<!-- verified: 2026-07-11 -->

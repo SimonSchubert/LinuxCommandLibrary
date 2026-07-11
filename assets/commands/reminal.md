@@ -81,4 +81,4 @@ reminal depends on a relay service (Cloudflare Workers by default or a self-host
 
 ```[Source code](https://github.com/harshalgajjar/Reminal)```
 
-<!-- verified: 2026-07-02 -->
+<!-- verified: 2026-07-11 -->

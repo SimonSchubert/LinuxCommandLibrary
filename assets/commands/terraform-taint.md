@@ -34,10 +34,16 @@ This was historically used to force replacement of resources that became inconsi
 > Succeed even if the resource address is not present in state.
 
 **-lock**=_true|false_
-> Acquire a state lock (default true).
+> Acquire a state lock (default true). Use `-lock=false` to disable.
 
 **-lock-timeout**=_duration_
-> Duration to retry acquiring a state lock.
+> Duration to retry acquiring a state lock (e.g. `3s`).
+
+**-var** '_NAME=VALUE_'
+> Set an input variable value (repeatable).
+
+**-var-file**=_filename_
+> Load variable values from a `.tfvars` file (repeatable).
 
 # CAVEATS
 
@@ -45,10 +51,10 @@ Tainting is deprecated in modern Terraform versions. Using `-replace` during pla
 
 # SEE ALSO
 
-terraform-apply, terraform-untaint, terraform-state
+[terraform](/man/terraform)(1), [terraform-apply](/man/terraform-apply)(1), [terraform-untaint](/man/terraform-untaint)(1)
 
 # RESOURCES
 
 ```[Documentation](https://developer.hashicorp.com/terraform/cli/commands/taint)```
 
-<!-- verified: 2026-07-09 -->
+<!-- verified: 2026-07-11 -->

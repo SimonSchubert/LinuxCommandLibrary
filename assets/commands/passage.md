@@ -4,9 +4,9 @@ Age-based password and secret manager (pass-compatible)
 
 # TLDR
 
-**Initialize** the password store
+**Create an age identity** for the store (one-time setup; there is no `init`)
 
-```passage init```
+```mkdir -p ~/.passage && age-keygen >> ~/.passage/identities```
 
 **Insert a new password** (multiline supported)
 
@@ -40,18 +40,17 @@ Age-based password and secret manager (pass-compatible)
 
 # DESCRIPTION
 
-**passage** is a password manager that stores secrets in age-encrypted files, modeled after the classic `pass` (password-store) tool but using the modern `age` encryption instead of GPG.
+**passage** is a fork of the classic `pass` (password-store) tool that stores secrets in age-encrypted files instead of GPG.
 
 Each secret lives in its own file under `~/.passage/store` (or `$PASSAGE_DIR`). The directory can be tracked with Git. passage supports insert, generate, edit, show, copy, list, and remove operations with a simple CLI.
 
-It is designed for simplicity and can be extended with shell scripts because the store is just a directory tree of encrypted files.
+For decryption, age identities at `~/.passage/identities` (or `$PASSAGE_IDENTITIES_FILE`) are used. For encryption, the nearest `.age-recipients` file is preferred; if none is found, the identities file is used.
+
+**There is no `init` command.** Set up identities yourself (for example with `age-keygen`), then start inserting secrets. Moving or copying a secret always re-encrypts it.
 
 # PARAMETERS
 
-Common subcommands and flags:
-
-**init**
-> Initialize the store and generate or import an age identity.
+Common subcommands and flags (password-store–compatible where applicable):
 
 **-c**, **--clip**
 > Copy the secret to the clipboard instead of printing.
@@ -71,16 +70,37 @@ Common subcommands and flags:
 **rm**, **remove** _name_
 > Delete an entry.
 
+**show** _name_ (or just _name_)
+> Decrypt and print an entry.
+
+# ENVIRONMENT
+
+**PASSAGE_DIR**
+> Password store location (default: `~/.passage/store`).
+
+**PASSAGE_IDENTITIES_FILE**
+> Identities file location (default: `~/.passage/identities`).
+
+**PASSAGE_AGE**
+> age binary to use (tested with `age` and `rage`).
+
+**PASSAGE_RECIPIENTS_FILE** / **PASSAGE_RECIPIENTS**
+> Override encryption recipients (`-R` / `-r` to age).
+
+Other password-store variables such as `PASSWORD_STORE_CLIP_TIME` and `PASSWORD_STORE_GENERATED_LENGTH` are respected.
+
 # CAVEATS
+
+The `init` command is **not available**. Create `~/.passage/identities` with `age-keygen` (or a password-protected / hardware-backed identity) before first use. Optionally write public recipients to `~/.passage/store/.age-recipients`.
 
 The age identity (private key) must be available when decrypting. Unlike GPG, age keys are not usually on keyservers; you are responsible for backups. Clipboard support depends on platform tools (xclip, pbcopy, wl-copy, etc.).
 
 # SEE ALSO
 
-pass, age, age-keygen
+[pass](/man/pass)(1), [age](/man/age)(1), [age-keygen](/man/age-keygen)(1)
 
 # RESOURCES
 
 ```[Source code](https://github.com/FiloSottile/passage)```
 
-<!-- verified: 2026-07-09 -->
+<!-- verified: 2026-07-11 -->

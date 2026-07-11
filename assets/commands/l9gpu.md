@@ -64,7 +64,7 @@ Requires appropriate vendor libraries or tools (NVML for NVIDIA, etc.) and Pytho
 
 # SEE ALSO
 
-[otel](/man/otel)(1), [dcgm](https://github.com/NVIDIA/DCGM)
+[nvidia-smi](/man/nvidia-smi)(1)
 
 # RESOURCES
 
@@ -74,4 +74,4 @@ Requires appropriate vendor libraries or tools (NVML for NVIDIA, etc.) and Pytho
 
 ```[Documentation](https://last9.io/docs/)```
 
-<!-- verified: 2026-07-07 -->
+<!-- verified: 2026-07-11 -->

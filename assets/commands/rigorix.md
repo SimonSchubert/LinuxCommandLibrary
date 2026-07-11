@@ -41,26 +41,38 @@ It supports Rust, TypeScript, Python and Go codebases (TypeScript is the most ma
 
 # INSTALL
 
+```bash
 cargo install --git https://github.com/arman-jalili/rigorix-oss rigorix-cli
+```
 
 Or build from source and place the rigorix binary on your PATH.
 
 Set your LLM API key, e.g.:
 
+```bash
 export RIGORIX__LLM__API_KEY="sk-ant-..."
+# or: export ANTHROPIC_API_KEY="sk-ant-..."
+```
 
 # PARAMETERS
 
 Most configuration lives in the project after `rigorix init`. Command line flags control planning vs. execution, provider selection, and non-interactive mode.
 
+**init**
+> Scaffold project config and templates.
+
+**plan** _task_
+> Classify intent, build a reviewable DAG, and optionally prompt to run it.
+
+**run** _task_
+> Plan and execute a task end to end.
+
 # CAVEATS
 
-Rigorix is intentionally less flexible than free-form chat agents. It excels at repeatable, governed workflows rather than exploratory conversation.
+Rigorix is intentionally less flexible than free-form chat agents. It excels at repeatable, governed workflows rather than exploratory conversation. An LLM API key is required for planning and generation steps.
 
-# SEE ALSO
+# RESOURCES
 
-[arman-jalili/rigorix-oss](https://github.com/arman-jalili/rigorix-oss)
+```[Source code](https://github.com/arman-jalili/rigorix-oss)```
 
-```[Source code](https://github.com/arman-jalili/rigorix-oss)
-<!-- verified: 2026-07-04 -->
-```
+<!-- verified: 2026-07-11 -->

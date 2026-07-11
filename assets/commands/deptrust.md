@@ -68,4 +68,4 @@ Provider coverage varies by ecosystem; partial or missing coverage returns **unk
 
 ```[Source code](https://github.com/clidey/deptrust)```
 
-<!-- verified: 2026-07-03 -->
+<!-- verified: 2026-07-11 -->

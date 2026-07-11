@@ -61,14 +61,16 @@ Common options include paths to modules containing the declarative files. Many c
 - Generated code is an output; the `.agent`/`.tool` files are the source of truth.
 - Requires appropriate credentials (e.g. OPENAI_API_KEY) when running generated agents.
 
+# SEE ALSO
+
+[terraform](/man/terraform)(1)
+
 # RESOURCES
 
 ```[Source code](https://github.com/weirdGuy/kastor)```
+
 ```[Homepage](https://www.getkastor.dev)```
+
 ```[Documentation](https://github.com/weirdGuy/kastor#readme)```
 
-<!-- verified: 2026-07-10 -->
-
-# SEE ALSO
-
-hcl(5), terraform(1)
+<!-- verified: 2026-07-11 -->

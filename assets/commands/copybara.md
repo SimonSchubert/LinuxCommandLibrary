@@ -65,7 +65,7 @@ Developed internally at **Google** to manage synchronized public and private cod
 
 # SEE ALSO
 
-[git](/man/git)(1), [git-filter-repo](/man/git-filter-repo)(1), [repo](/man/repo)(1)
+[git](/man/git)(1), [git-filter-repo](/man/git-filter-repo)(1)
 
 # RESOURCES
 
@@ -73,4 +73,4 @@ Developed internally at **Google** to manage synchronized public and private cod
 
 ```[Documentation](https://github.com/google/copybara/blob/master/docs/reference.md)```
 
-<!-- verified: 2026-07-01 -->
+<!-- verified: 2026-07-11 -->

@@ -54,17 +54,24 @@ Frugon can act as a transparent local proxy (`frugon capture`) that logs calls w
 **update**
 > Refresh local pricing and quality data.
 
+**pricing**, **quality**
+> Inspect local pricing and quality datasets.
+
 # PARAMETERS
 
 **analyze**
 > `--candidates` comma list of models to consider for routing
-> `--measure` sample real traffic for quality comparison (requires extra install + keys)
+> `--measure` sample real traffic for quality comparison (requires `pip install 'frugon[measure]'` + provider keys)
+> `--judge` score candidate quality when used with `--measure`
 > `--report` path to write .html or .md report
 > `--demo` use bundled sample instead of a file
+> `--verbose` extra accounting detail
 
 **capture**
 > `--out` output JSONL file (default capture.jsonl)
 > `--port` listen port (default 8787)
+> `--upstream` override the forwarding target
+> `--proxy` opt in to ambient HTTP(S)_PROXY for upstream calls (ignored by default so keys stay direct)
 > `--verbose` log one line per captured call
 
 # CAVEATS
@@ -74,14 +81,16 @@ Frugon can act as a transparent local proxy (`frugon capture`) that logs calls w
 - Quality tiers are estimates; always verify with `--measure --judge` on your data before switching production traffic.
 - Routing recommendations are offline math; they do not automatically change your application.
 
+# SEE ALSO
+
+[pipx](/man/pipx)(1), [uvx](/man/uvx)(1)
+
 # RESOURCES
 
 ```[Source code](https://github.com/Rodiun/frugon)```
+
 ```[Homepage](https://frugon.rodiun.io)```
+
 ```[Documentation](https://github.com/Rodiun/frugon#readme)```
 
-<!-- verified: 2026-07-10 -->
-
-# SEE ALSO
-
-pipx(1), uvx(1)
+<!-- verified: 2026-07-11 -->

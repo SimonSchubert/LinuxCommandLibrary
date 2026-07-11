@@ -6,39 +6,81 @@ Build Flux manifests locally for inspection or piping to kubectl
 
 **Build a Kustomization** and print the resulting manifests
 
-```flux build kustomization my-app --path ./path/to/kustomization```
+```flux build kustomization my-app --path ./path/to/local/manifests```
+
+**Build using a local Flux Kustomization file** without applying cluster state
+
+```flux build kustomization my-app --path ./path/to/local/manifests --kustomization-file ./my-app.yaml --dry-run```
 
 **Build and apply directly**
 
 ```flux build kustomization my-app --path ./kustomize | kubectl apply -f -```
 
-**Build and save to file**
+**Package manifests into an artifact** tarball
 
-```flux build kustomization my-app --path ./kustomize > manifests.yaml```
+```flux build artifact --path ./path/to/local/manifests --output ./artifact.tgz```
 
 # SYNOPSIS
 
-**flux** **build** _kind_ _name_ --path _path_ [_options_]
+**flux** **build** **kustomization** _name_ **--path** _path_ [_options_]
+
+**flux** **build** **artifact** **--path** _path_ [_options_]
 
 # DESCRIPTION
 
-**flux build** renders Flux resources (primarily Kustomizations) locally using the same logic the controllers use, without applying them to the cluster. This is useful for previewing what will be deployed, debugging kustomize overlays, or feeding manifests into other tools via pipe.
+**flux build** renders Flux resources locally using controller-compatible logic, without applying them to the cluster. Supported subcommands are **kustomization** and **artifact**.
 
-It currently supports building `kustomization` resources.
+**flux build kustomization** fetches (or loads) a Flux Kustomization, applies its transformations against the local manifests at `--path`, and writes the resulting multi-doc YAML to stdout. Useful for previewing deploys, debugging overlays, or piping to `kubectl`.
+
+**flux build artifact** packs a directory or single manifest file into a `.tgz` artifact suitable for source/OCI workflows.
 
 # PARAMETERS
 
 **kustomization** _name_
-> Name of the Kustomization resource to build.
+> Build the named Flux Kustomization against local manifests.
 
-**--path** _path_
-> Filesystem path to the kustomization directory or file.
+**artifact**
+> Build a tarball from local Kubernetes manifests.
 
-Other flags control output, namespace, etc.
+**-n**, **--namespace** _ns_
+> Namespace scope (default `flux-system`).
+
+**--timeout** _duration_
+> Timeout for the operation (default `5m0s`).
+
+**--path** _path_ (kustomization and artifact)
+> Path to local manifests / kustomization directory, or a single file for artifact builds.
+
+**--kustomization-file** _file_
+> Path to a local Flux Kustomization YAML instead of fetching it from the cluster.
+
+**--dry-run**
+> Dry-run mode without connecting to the cluster. Variable substitutions from Secrets and ConfigMaps are skipped.
+
+**--recursive**, **-r**
+> Recursively build encountered Kustomizations.
+
+**--local-sources** _Kind/namespace/name=path,..._
+> Map remote sources to local paths for recursive builds (e.g. `GitRepository/flux-system/my-repo=./path/to/local/git`).
+
+**--ignore-paths** _patterns_
+> Comma-separated `.gitignore`-style paths to exclude.
+
+**--strict-substitute**
+> Fail post-build substitution when a declared variable has no default and is missing from input vars.
+
+**--in-memory-build**
+> Use an in-memory filesystem during the build (kustomization).
+
+**-o**, **--output** _file_
+> Output path for the artifact tarball (default `artifact.tgz`).
+
+**--resolve-symlinks**
+> Resolve symlinks by copying their targets into the artifact.
 
 # SEE ALSO
 
-flux, flux-create, kustomize
+[flux](/man/flux)(1), [flux-create](/man/flux-create)(1), [kustomize](/man/kustomize)(1)
 
 # RESOURCES
 
@@ -46,4 +88,4 @@ flux, flux-create, kustomize
 
 ```[Documentation](https://fluxcd.io/flux/cmd/flux_build/)```
 
-<!-- verified: 2026-07-09 -->
+<!-- verified: 2026-07-11 -->

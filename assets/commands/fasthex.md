@@ -84,4 +84,4 @@ Install via **cargo install --git**; there are no published crate releases yet. 
 
 ```[Source code](https://github.com/CallMeAlphabet/fasthex)```
 
-<!-- verified: 2026-07-03 -->
+<!-- verified: 2026-07-11 -->

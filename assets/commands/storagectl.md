@@ -72,12 +72,12 @@ This tool is relatively new (added in systemd 261). Storage providers are an exp
 
 # SEE ALSO
 
-systemd(1), mount(8), systemd-storage-block@.service(8), systemd-storage-fs@.service(8)
+[systemctl](/man/systemctl)(1), [mount](/man/mount)(8), [machinectl](/man/machinectl)(1)
 
 # RESOURCES
 
 ```[Source code](https://github.com/systemd/systemd)```
 
-```[Documentation](https://www.freedesktop.org/software/systemd/man/storagectl.html)```
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/storagectl.html)```
 
-<!-- verified: 2026-07-09 -->
+<!-- verified: 2026-07-11 -->

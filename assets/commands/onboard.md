@@ -61,14 +61,16 @@ Most commands accept `--target`, `--radius`, `--port`, and framework/protocol se
 - Rule evaluation uses regex on import paths; tune architecture.yml carefully.
 - Primarily for developer workflow and CI gatekeeping.
 
+# SEE ALSO
+
+[ast-grep](/man/ast-grep)(1), [rg](/man/rg)(1)
+
 # RESOURCES
 
 ```[Source code](https://github.com/animesh-94/Onboard-CLI)```
+
 ```[Homepage](https://onboard-cli.vercel.app)```
+
 ```[Documentation](https://github.com/animesh-94/Onboard-CLI#readme)```
 
-<!-- verified: 2026-07-10 -->
-
-# SEE ALSO
-
-tree-sitter(1)
+<!-- verified: 2026-07-11 -->

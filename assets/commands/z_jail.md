@@ -65,7 +65,7 @@ Designed for CI pipelines, CTF jails, and lightweight code evaluation, **z_jail*
 
 # SEE ALSO
 
-[bwrap](/man/bwrap)(1), [nsjail](/man/nsjail)(1), [firejail](/man/firejail)(1), [chroot](/man/chroot)(8)
+[bwrap](/man/bwrap)(1), [firejail](/man/firejail)(1), [chroot](/man/chroot)(8)
 
 # RESOURCES
 
@@ -73,4 +73,4 @@ Designed for CI pipelines, CTF jails, and lightweight code evaluation, **z_jail*
 
 ```[Documentation](https://github.com/Division-36/Z-Jail/tree/main/docs)```
 
-<!-- verified: 2026-07-02 -->
+<!-- verified: 2026-07-11 -->

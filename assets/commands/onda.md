@@ -91,10 +91,10 @@ Region-locked streams fail without geo-unblocking. Radio Browser has no canonica
 
 # SEE ALSO
 
-[mpv](/man/mpv)(1), [radio-browser](/man/radio-browser)(1)
+[mpv](/man/mpv)(1)
 
 # RESOURCES
 
 ```[Source code](https://github.com/pedrosousa13/onda)```
 
-<!-- verified: 2026-07-03 -->
+<!-- verified: 2026-07-11 -->

@@ -24,7 +24,7 @@ Bootstrap Flux on a Kubernetes cluster using GitOps
 
 **flux bootstrap** installs Flux on a Kubernetes cluster by pushing the necessary manifests to a Git repository and configuring the cluster to sync from it. This establishes the GitOps control plane (source-controller, kustomize-controller, helm-controller, notification-controller, etc.).
 
-It supports GitHub, GitLab, Bitbucket, and generic Git repositories. The command creates the `flux-system` namespace, required secrets, and the initial GitRepository + Kustomization that keeps Flux itself up to date.
+It supports GitHub, GitLab, Gitea, Bitbucket Server, and generic Git repositories. The command creates the `flux-system` namespace, required secrets, and the initial GitRepository + Kustomization that keeps Flux itself up to date.
 
 After bootstrap, the cluster is managed declaratively from Git.
 
@@ -50,6 +50,15 @@ Common options across providers:
 **--private-key-file** _file_
 > Path to SSH private key.
 
+**--components** _list_
+> Comma-separated list of components to install (default includes source, kustomize, helm, and notification controllers).
+
+**--components-extra** _list_
+> Additional components (e.g. `image-reflector-controller,image-automation-controller`).
+
+**--token-auth**
+> Use a personal access token instead of an SSH deploy key.
+
 Other provider-specific options exist (see `flux bootstrap --help`).
 
 # CAVEATS
@@ -58,7 +67,7 @@ Bootstrap requires a working `kubectl` context with cluster admin permissions an
 
 # SEE ALSO
 
-flux, flux-check, flux-reconcile
+[flux](/man/flux)(1), [flux-check](/man/flux-check)(1), [flux-create](/man/flux-create)(1)
 
 # RESOURCES
 
@@ -66,4 +75,4 @@ flux, flux-check, flux-reconcile
 
 ```[Documentation](https://fluxcd.io/flux/cmd/flux_bootstrap/)```
 
-<!-- verified: 2026-07-09 -->
+<!-- verified: 2026-07-11 -->

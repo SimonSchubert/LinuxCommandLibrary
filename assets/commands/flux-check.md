@@ -12,6 +12,14 @@ Check Flux prerequisites and the health of installed controllers
 
 ```flux check```
 
+**Check specific components** only
+
+```flux check --components=source-controller,kustomize-controller```
+
+**Include extra components** such as image automation
+
+```flux check --components-extra=image-reflector-controller,image-automation-controller```
+
 # SYNOPSIS
 
 **flux** **check** [_options_]
@@ -29,12 +37,24 @@ Without `--pre` it connects to the cluster and reports on the installed Flux com
 **--pre**
 > Only perform pre-installation checks (no cluster connection required for most checks).
 
-**--namespace** _ns_
-> Namespace scope (default `flux-system`).
+**--components** _list_
+> Comma-separated list of components to check (default `source-controller,kustomize-controller,helm-controller,notification-controller`).
+
+**--components-extra** _list_
+> Additional components to check beyond those supplied or defaulted (comma-separated).
+
+**--poll-interval** _duration_
+> How often the health checker polls the cluster for resource state (default `5s`).
+
+**--timeout** _duration_
+> Timeout for the operation (default `5m0s`).
+
+**-n**, **--namespace** _ns_
+> Namespace scope for the CLI request (default `flux-system`).
 
 # SEE ALSO
 
-flux, flux-bootstrap
+[flux](/man/flux)(1), [flux-bootstrap](/man/flux-bootstrap)(1)
 
 # RESOURCES
 
@@ -42,4 +62,4 @@ flux, flux-bootstrap
 
 ```[Documentation](https://fluxcd.io/flux/cmd/flux_check/)```
 
-<!-- verified: 2026-07-09 -->
+<!-- verified: 2026-07-11 -->

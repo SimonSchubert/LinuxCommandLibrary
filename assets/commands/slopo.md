@@ -88,4 +88,4 @@ Requires an external embedding API key and network access for the embed step. Ex
 
 ```[Homepage](https://slopo.dev)```
 
-<!-- verified: 2026-07-03 -->
+<!-- verified: 2026-07-11 -->

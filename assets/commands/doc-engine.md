@@ -104,4 +104,4 @@ Images in Markdown are rendered only as alt text (remote images not downloaded o
 
 ```[Documentation](https://github.com/leonardosalasd/doc-engine-cli#readme)```
 
-<!-- verified: 2026-07-07 -->
+<!-- verified: 2026-07-11 -->

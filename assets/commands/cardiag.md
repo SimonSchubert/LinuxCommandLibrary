@@ -56,7 +56,7 @@ uv venv && source .venv/bin/activate
 uv pip install -e ".[scrape,web,dev,viz]"
 ```
 
-Requires Python 3.11+ and (for full use) additional optional extras. `mpv` or similar not required; playback/visualization is optional.
+Requires Python 3.11+ and (for full use) additional optional extras. Playback/visualization is optional.
 
 # USAGE
 
@@ -74,21 +74,18 @@ Training your own data:
 - `cardiag scrape youtube|tiktok ...`
 - `cardiag train`
 
-The `serve` subcommand starts a local web UI for drag-and-drop or URL-based analysis.
+The `serve` subcommand starts a local web UI for drag-and-drop or URL-based analysis. Add `--json` to inference commands for machine-readable output.
 
 # CAVEATS
 
 - Performance is modest on crude phone/social audio (literature ceiling for the problem). It reaches ~0.79 AUROC fault/normal and top-3 part accuracy 45-65 % in honest evaluation.
-- Requires a minimal root filesystem or static binary for some sandbox-like tests (not applicable to normal use).
 - Models are joblib artifacts; only load ones you trust.
 - Not a replacement for professional diagnosis.
 
-# SEE ALSO
-
-Project repository and docs for pipeline details, model card, and defense of the method.
-
 # RESOURCES
-```Source code
-https://github.com/adam-s/car-diagnosis
-```
-<!-- verified: 2026-07-05 -->
+
+```[Source code](https://github.com/adam-s/car-diagnosis)```
+
+```[Documentation](https://github.com/adam-s/car-diagnosis/blob/main/docs/MODEL_CARD.md)```
+
+<!-- verified: 2026-07-11 -->

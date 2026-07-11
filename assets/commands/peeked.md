@@ -80,10 +80,10 @@ Only provides read-only screenshot capability; no navigation, input, or page man
 
 # SEE ALSO
 
-[chrome](/man/chrome)(1)
+[claude](/man/claude)(1), [codex](/man/codex)(1)
 
 # RESOURCES
 
 ```[Source code](https://github.com/puffinsoft/peek-cli)```
 
-<!-- verified: 2026-07-06 -->
+<!-- verified: 2026-07-11 -->

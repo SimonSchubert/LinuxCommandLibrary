@@ -16,6 +16,10 @@ Cross-platform tabular data pretty-printer
 
 ```tidy-viewer -s "|" [path/to/file.psv]```
 
+**Tab-separated input** via delimiter
+
+```tidy-viewer -s $'\t' [path/to/file.tsv]```
+
 **Display with a specific color palette**
 
 ```tidy-viewer -c [3] [path/to/file.csv]```
@@ -26,21 +30,21 @@ Cross-platform tabular data pretty-printer
 
 # SYNOPSIS
 
-**tidy-viewer** [_-s_ _DELIM_] [_-c_ _N_] [_-n_ _ROWS_] [_-t_] [_options_] [_file_]
+**tidy-viewer** [_options_] [_file_]
 
 # PARAMETERS
 
 **-s**, **--delimiter** _DELIM_
-> Field separator. Default: comma.
-
-**-t**
-> Tab-separated input.
+> Field separator. Default: comma. Use a tab character for TSV.
 
 **-c**, **--color** _N_
 > Color palette: 1 (nord), 2 (one_dark), 3 (gruvbox), 4 (dracula), 5 (solarized light).
 
-**-n** _ROWS_
+**-n**, **--number-of-rows-to-output** _ROWS_
 > Number of rows to display. Default: 25.
+
+**-t**, **--title** _TITLE_
+> Optional table title.
 
 **-a**, **--color-always**
 > Force color output even when not a TTY.
@@ -48,8 +52,14 @@ Cross-platform tabular data pretty-printer
 **-f**, **--force-all-rows**
 > Print every row instead of the default preview limit.
 
-**-e**
-> Extend output to full width for paging with **less**.
+**-e**, **--extend-width-and-length**
+> Extend output beyond terminal width/length for paging with **less**.
+
+**-g**, **--sigfig** _N_
+> Significant digits for numbers (default 3, max 7).
+
+**-C**, **--config-details**
+> Show the active configuration.
 
 **-h**, **--help**
 > Show help and example configuration.
@@ -86,4 +96,4 @@ Multiple unrelated tools share the short name **tv**. This entry documents the R
 
 ```[Documentation](https://docs.rs/tidy-viewer-core)```
 
-<!-- verified: 2026-07-03 -->
+<!-- verified: 2026-07-11 -->

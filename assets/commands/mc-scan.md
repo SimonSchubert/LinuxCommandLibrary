@@ -118,7 +118,7 @@ MakerChecker and its `mc-scan` component were created to provide practical, audi
 
 # SEE ALSO
 
-[agents](/man/agents) (conceptual), other AI safety and policy tools
+[deptrust](/man/deptrust)(1), [semgrep](/man/semgrep)(1)
 
 # RESOURCES
 
@@ -128,4 +128,4 @@ MakerChecker and its `mc-scan` component were created to provide practical, audi
 
 ```[Documentation](https://makerchecker.ai/docs)```
 
-<!-- verified: 2026-07-06 -->
+<!-- verified: 2026-07-11 -->

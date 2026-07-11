@@ -98,6 +98,10 @@ There is no undo inside the CLI — use git or copies. Edits that would corrupt 
 
 The Markdown dialect preserves most formatting but literal text channels (`--text-file`) exist for content that GFM would alter.
 
+# SEE ALSO
+
+[pandoc](/man/pandoc)(1), [libreoffice](/man/libreoffice)(1)
+
 # RESOURCES
 
 ```[Source code](https://github.com/kklimuk/docx-cli)```
@@ -106,4 +110,4 @@ The Markdown dialect preserves most formatting but literal text channels (`--tex
 
 ```[Documentation](https://kklimuk.github.io/docx-cli/)```
 
-<!-- verified: 2026-07-07 -->
+<!-- verified: 2026-07-11 -->
