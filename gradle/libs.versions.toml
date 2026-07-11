@@ -10,7 +10,6 @@ composeMultiplatform = "1.11.1"
 composeMaterial3 = "1.9.0"
 composeMaterial3Adaptive = "1.2.0"
 composeBom = "2026.06.01"
-accompanistAppcompatTheme = "0.36.0"
 activityCompose = "1.13.0"
 json = "20260522"
 koinCore = "4.2.2"
@@ -32,8 +31,6 @@ savedstateCompose = "1.5.0"
 [libraries]
 kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinxSerializationCore" }
 mordant = { module = "com.github.ajalt.mordant:mordant", version.ref = "mordant" }
-accompanist-appcompat-theme = { module = "com.google.accompanist:accompanist-appcompat-theme", version.ref = "accompanistAppcompatTheme" }
-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistAppcompatTheme" }
 compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
 compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }
 compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "composeMaterial3" }

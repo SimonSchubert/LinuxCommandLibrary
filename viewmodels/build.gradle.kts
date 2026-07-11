@@ -38,7 +38,7 @@ kotlin {
         it.binaries.framework {
             baseName = "ComposeApp"
             isStatic = true
-            export(project(":common"))
+            export(dependencies.project(":common"))
         }
     }
 
@@ -64,25 +64,21 @@ kotlin {
                 implementation(libs.koin.android)
             }
         }
-
-        val desktopMain by getting {
-            dependencies {
-            }
-        }
     }
 }
 
 // Regenerate iOS Asset Catalog imagesets whenever /icons/ changes.
 // Runs scripts/svg_to_imageset.py which builds iosApp/iosApp/Assets.xcassets/Icons/
-val syncIconImageSets by tasks.registering(Exec::class) {
-    val scriptFile = rootProject.file("scripts/svg_to_imageset.py")
-    val sourceDir = rootProject.file("icons")
-    val outputDir = rootProject.file("iosApp/iosApp/Assets.xcassets/Icons")
-    inputs.file(scriptFile)
-    inputs.dir(sourceDir)
-    outputs.dir(outputDir)
-    commandLine("python3", scriptFile.absolutePath, sourceDir.absolutePath, outputDir.absolutePath)
-}
+val syncIconImageSets =
+    tasks.register<Exec>("syncIconImageSets") {
+        val scriptFile = rootProject.file("scripts/svg_to_imageset.py")
+        val sourceDir = rootProject.file("icons")
+        val outputDir = rootProject.file("iosApp/iosApp/Assets.xcassets/Icons")
+        inputs.file(scriptFile)
+        inputs.dir(sourceDir)
+        outputs.dir(outputDir)
+        commandLine("python3", scriptFile.absolutePath, sourceDir.absolutePath, outputDir.absolutePath)
+    }
 
 // Update iOS Info.plist with the app version from libs.versions.toml
 tasks.register("updateIosVersion") {

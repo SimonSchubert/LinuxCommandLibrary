@@ -40,21 +40,19 @@ object ContentFormatter {
     data class Section(val lines: List<String>, val links: List<ManLink>)
 
     /** Non-interactive rendering: man references become clickable links to the online man page. */
-    fun format(title: String, content: String): String =
-        if (title == "RESOURCES") {
-            formatResources(content)
-        } else {
-            buildDefaultSection(content) { label, command -> Theme.link(MAN_BASE_URL + command, label) }
-                .lines.joinToString("\n")
-        }
+    fun format(title: String, content: String): String = if (title == "RESOURCES") {
+        formatResources(content)
+    } else {
+        buildDefaultSection(content) { label, command -> Theme.link(MAN_BASE_URL + command, label) }
+            .lines.joinToString("\n")
+    }
 
     /** Interactive (TUI) rendering: man references become underlined, in-app navigable links. */
-    fun formatInteractive(title: String, content: String): Section =
-        if (title == "RESOURCES") {
-            Section(formatResources(content).lines(), emptyList())
-        } else {
-            buildDefaultSection(content) { label, _ -> Theme.linkText(label) }
-        }
+    fun formatInteractive(title: String, content: String): Section = if (title == "RESOURCES") {
+        Section(formatResources(content).lines(), emptyList())
+    } else {
+        buildDefaultSection(content) { label, _ -> Theme.linkText(label) }
+    }
 
     /**
      * Shared markdown -> styled-text conversion. Each line is tokenized left to right so the
@@ -139,7 +137,9 @@ object ContentFormatter {
             val trimmed = line.trim()
             when {
                 trimmed.isEmpty() -> null
+
                 trimmed.startsWith("<!--") -> null
+
                 else -> resourceLinkRegex.find(trimmed)
                     ?.let { "  ${Theme.boldText(it.groupValues[1])}: ${Theme.link(it.groupValues[2], it.groupValues[2])}" }
                     ?: line

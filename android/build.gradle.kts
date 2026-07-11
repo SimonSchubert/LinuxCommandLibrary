@@ -18,8 +18,6 @@ dependencies {
     implementation(project(":composeApp"))
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
-    implementation(libs.accompanist.appcompat.theme)
-    implementation(libs.accompanist.systemuicontroller)
 
     implementation(libs.koin.core)
     implementation(libs.koin.android)

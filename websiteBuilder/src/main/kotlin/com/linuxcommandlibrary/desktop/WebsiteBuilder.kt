@@ -14,7 +14,6 @@ import kotlinx.html.DIV
 import kotlinx.html.FlowContent
 import kotlinx.html.HEAD
 import kotlinx.html.HTMLTag
-import kotlinx.html.HtmlTagMarker
 import kotlinx.html.InputType
 import kotlinx.html.LINK
 import kotlinx.html.META
@@ -1596,7 +1595,6 @@ for(var g=0;g<grids.length;g++){var h='';for(var k=0;k<sel.length;k++){var s=sel
         return this
     }
 
-    @HtmlTagMarker
     inline fun HTMLTag.meta(
         property: String? = null,
         name: String? = null,

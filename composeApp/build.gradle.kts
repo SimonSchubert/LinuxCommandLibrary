@@ -77,7 +77,7 @@ kotlin {
             }
         }
 
-        val desktopMain by getting {
+        getByName("desktopMain") {
             dependencies {
                 implementation(compose.desktop.currentOs)
             }
@@ -99,44 +99,45 @@ compose.resources {
 // Android's painterResource cannot load SVG, only XML drawables. The iOS Asset Catalog
 // is regenerated separately by :viewmodels:syncIconImageSets (which feeds the Xcode build).
 // Generated XMLs in composeResources/drawable are gitignored build artifacts.
-val convertIconsToVectorDrawables by tasks.registering {
-    val srcDir = rootProject.file("icons")
-    val xmlOutDir = file("src/commonMain/composeResources/drawable")
+val convertIconsToVectorDrawables =
+    tasks.register("convertIconsToVectorDrawables") {
+        val srcDir = rootProject.file("icons")
+        val xmlOutDir = file("src/commonMain/composeResources/drawable")
 
-    inputs.dir(srcDir)
-    // xmlOutDir intentionally omitted from outputs — it also contains tracked raster files
-    // (webp/png) that this task must not touch.
+        inputs.dir(srcDir)
+        // xmlOutDir intentionally omitted from outputs — it also contains tracked raster files
+        // (webp/png) that this task must not touch.
 
-    doLast {
-        xmlOutDir.mkdirs()
-        val svgs = srcDir.listFiles { f -> f.extension == "svg" }?.sortedBy { it.name } ?: emptyList()
-        val sourceNames = svgs.map { it.nameWithoutExtension }.toSet()
-        var failed = 0
+        doLast {
+            xmlOutDir.mkdirs()
+            val svgs = srcDir.listFiles { f -> f.extension == "svg" }?.sortedBy { it.name } ?: emptyList()
+            val sourceNames = svgs.map { it.nameWithoutExtension }.toSet()
+            var failed = 0
 
-        svgs.forEach { svg ->
-            val xmlOut = xmlOutDir.resolve("${svg.nameWithoutExtension}.xml")
-            val errors =
-                xmlOut.outputStream().use { out ->
-                    com.android.ide.common.vectordrawable.Svg2Vector
-                        .parseSvgToXml(svg.toPath(), out)
+            svgs.forEach { svg ->
+                val xmlOut = xmlOutDir.resolve("${svg.nameWithoutExtension}.xml")
+                val errors =
+                    xmlOut.outputStream().use { out ->
+                        com.android.ide.common.vectordrawable.Svg2Vector
+                            .parseSvgToXml(svg.toPath(), out)
+                    }
+                if (errors.isNotEmpty()) {
+                    logger.warn("[convertIcons] ${svg.name}: $errors")
+                    if (errors.contains("ERROR", ignoreCase = true)) failed++
                 }
-            if (errors.isNotEmpty()) {
-                logger.warn("[convertIcons] ${svg.name}: $errors")
-                if (errors.contains("ERROR", ignoreCase = true)) failed++
             }
-        }
 
-        // Prune XMLs whose source SVG was deleted.
-        xmlOutDir.listFiles { f -> f.extension == "xml" }?.forEach { f ->
-            if (f.nameWithoutExtension !in sourceNames) {
-                f.delete()
-                logger.lifecycle("[convertIcons] removed stale: ${f.name}")
+            // Prune XMLs whose source SVG was deleted.
+            xmlOutDir.listFiles { f -> f.extension == "xml" }?.forEach { f ->
+                if (f.nameWithoutExtension !in sourceNames) {
+                    f.delete()
+                    logger.lifecycle("[convertIcons] removed stale: ${f.name}")
+                }
             }
-        }
 
-        logger.lifecycle("[convertIcons] generated ${svgs.size} XML drawables" + if (failed > 0) " ($failed failed)" else "")
+            logger.lifecycle("[convertIcons] generated ${svgs.size} XML drawables" + if (failed > 0) " ($failed failed)" else "")
+        }
     }
-}
 
 tasks
     .matching {

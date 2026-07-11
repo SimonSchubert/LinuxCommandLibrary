@@ -12,11 +12,12 @@ group = "com.linuxcommandlibrary"
 version = libs.versions.appVersion.get()
 
 // Replace the ProGuard tool classpath with one that resolves kotlin-metadata-jvm
-// at the Kotlin version we're building against. Compose Multiplatform 1.10.3 ships
-// ProGuard 7.7.0 with kotlin-metadata-jvm 2.1.0 (caps at metadata format 2.2) which
-// can't read `.kotlin_module` files from Kotlin 2.3.x builds, both ours and third
-// party deps like koin-compose 4.2.0. Letting Gradle resolve both deps together
-// avoids the split classpath we'd get from just prepending.
+// at the Kotlin version we're building against. Compose Multiplatform (still 7.7.0
+// as of 1.11.1) ships ProGuard with kotlin-metadata-jvm 2.1.0 (caps at metadata
+// format 2.2) which can't read `.kotlin_module` files from Kotlin 2.3+ builds, both
+// ours and third party deps like koin-compose. Letting Gradle resolve both deps
+// together avoids the split classpath we'd get from just prepending. Drop this once
+// CMP ships a ProGuard whose kotlin-metadata-jvm understands our Kotlin version.
 val proguardClasspath =
     configurations
         .detachedConfiguration(
@@ -41,7 +42,7 @@ kotlin {
     }
 
     sourceSets {
-        val desktopMain by getting {
+        getByName("desktopMain") {
             dependencies {
                 implementation(project(":composeApp"))
                 implementation(project(":common"))
@@ -86,17 +87,17 @@ compose.desktop {
 
 // Generate index files for asset directories
 tasks.register("generateAssetIndexes") {
+    val assetsDir = file("../assets")
     doLast {
-        val assetsDir = file("../assets")
         listOf("commands", "basics").forEach { dir ->
-            val targetDir = file("$assetsDir/$dir")
+            val targetDir = assetsDir.resolve(dir)
             if (targetDir.exists()) {
                 val files =
                     targetDir
                         .listFiles { f -> f.extension == "md" }
                         ?.map { it.name }
                         ?.sorted() ?: emptyList()
-                file("$targetDir/index.txt").writeText(files.joinToString("\n") + "\n")
+                targetDir.resolve("index.txt").writeText(files.joinToString("\n") + "\n")
             }
         }
     }

@@ -45,7 +45,9 @@ class CommandDetailScreen(private val commandName: String) : Screen {
     override fun handleMouse(event: MouseEvent): ScreenResult {
         when {
             event.wheelUp -> viewer.scrollUp()
+
             event.wheelDown -> viewer.scrollDown()
+
             event.left -> linkAt(event.x, event.y)?.let { command ->
                 if (DataRepository.hasCommand(command)) {
                     return ScreenResult.Navigate(CommandDetailScreen(command))

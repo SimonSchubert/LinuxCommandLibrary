@@ -128,10 +128,14 @@ final class CommandsStore: ObservableObject {
             let bLower = lowerNames[b]
             let aExact = aLower == needle
             let bExact = bLower == needle
-            if aExact != bExact { return aExact }
+            if aExact != bExact {
+                return aExact
+            }
             let aPrefix = aLower.hasPrefix(needle)
             let bPrefix = bLower.hasPrefix(needle)
-            if aPrefix != bPrefix { return aPrefix }
+            if aPrefix != bPrefix {
+                return aPrefix
+            }
             return allCommands[a].name < allCommands[b].name
         }
         return matches.map { allCommands[$0] }

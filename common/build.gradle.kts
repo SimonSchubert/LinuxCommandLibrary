@@ -57,41 +57,34 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
-        androidMain {
-            dependencies {
-            }
-        }
-        val desktopMain by getting {
-            dependencies {
-            }
-        }
     }
 }
 
 // Task to generate Version.kt from libs.versions.toml
-val generateVersionFile by tasks.registering {
-    val appVersion = libs.versions.appVersion.get()
-    val outputDir = file("src/commonMain/kotlin/com/linuxcommandlibrary/shared")
-    val outputFile = file("$outputDir/Version.kt")
+val generateVersionFile =
+    tasks.register("generateVersionFile") {
+        val appVersion = libs.versions.appVersion.get()
+        val outputDir = file("src/commonMain/kotlin/com/linuxcommandlibrary/shared")
+        val outputFile = file("$outputDir/Version.kt")
 
-    inputs.property("appVersion", appVersion)
-    outputs.file(outputFile)
+        inputs.property("appVersion", appVersion)
+        outputs.file(outputFile)
 
-    doLast {
-        outputDir.mkdirs()
-        outputFile.writeText(
-            """
+        doLast {
+            outputDir.mkdirs()
+            outputFile.writeText(
+                """
             |package com.linuxcommandlibrary.shared
             |
             |object Version {
             |    const val APP_VERSION = "$appVersion"
             |}
             |
-            """.trimMargin(),
-        )
-        println("Generated Version.kt with version $appVersion")
+                """.trimMargin(),
+            )
+            println("Generated Version.kt with version $appVersion")
+        }
     }
-}
 
 // Make compilation depend on version generation
 tasks

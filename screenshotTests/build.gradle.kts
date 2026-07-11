@@ -32,11 +32,12 @@ android {
     }
 }
 
-val preparePaparazzi by tasks.registering {
-    dependsOn(":composeApp:prepareComposeResourcesTaskForCommonMain")
-    dependsOn(":composeApp:copyNonXmlValueResourcesForCommonMain")
-    dependsOn(":composeApp:convertXmlValueResourcesForCommonMain")
-}
+val preparePaparazzi =
+    tasks.register("preparePaparazzi") {
+        dependsOn(":composeApp:prepareComposeResourcesTaskForCommonMain")
+        dependsOn(":composeApp:copyNonXmlValueResourcesForCommonMain")
+        dependsOn(":composeApp:convertXmlValueResourcesForCommonMain")
+    }
 
 tasks
     .matching {

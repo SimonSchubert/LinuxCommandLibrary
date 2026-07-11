@@ -58,6 +58,11 @@ fun LinuxApp(initialDeeplink: String? = null) {
     val layoutType = navigationSuiteTypeFor(adaptiveInfo)
     val isCompact = layoutType == NavigationSuiteType.NavigationBar
 
+    // Deprecated in CMP 1.11 in favor of androidx.navigationevent's NavigationEventHandler, but
+    // that reads LocalNavigationEventDispatcherOwner, which CMP only wires up via its internal
+    // compat local that this BackHandler uses - migrating would throw on desktop/iOS. Revisit
+    // once CMP provides the public local (see JetBrains/compose-multiplatform).
+    @Suppress("DEPRECATION")
     BackHandler(enabled = state.isBackEnabled()) { state.onBack() }
 
     // Wrapped in movableContentOf so the navigation graph (and its mounted ListDetailPaneScaffold
