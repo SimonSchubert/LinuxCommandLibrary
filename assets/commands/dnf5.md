@@ -17,3 +17,11 @@ See documentation for the original command.
 # SEE ALSO
 
 [dnf](/man/dnf)(8), [dnf4](/man/dnf4)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/rpm-software-management/dnf5)```
+
+```[Documentation](https://dnf5.readthedocs.io/)```
+
+<!-- verified: 2026-07-11 -->

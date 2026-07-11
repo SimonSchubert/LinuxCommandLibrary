@@ -50,3 +50,11 @@ search Docker Hub for container images
 
 [docker-pull](/man/docker-pull)(1), [docker-images](/man/docker-images)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/docker/cli)```
+
+```[Documentation](https://docs.docker.com/reference/cli/docker/)```
+
+<!-- verified: 2026-07-11 -->
+

@@ -84,3 +84,9 @@ Delve was created by **Derek Parker** and released in **2014**. It was developed
 # SEE ALSO
 
 [go](/man/go)(1), [gdb](/man/gdb)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/go-delve/delve)```
+
+<!-- verified: 2026-07-11 -->

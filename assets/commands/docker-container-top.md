@@ -25,3 +25,11 @@ The command accepts standard **ps** options to customize the output format and c
 # SEE ALSO
 
 [docker-top](/man/docker-top)(1), [docker-container-stats](/man/docker-container-stats)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/docker/cli)```
+
+```[Documentation](https://docs.docker.com/reference/cli/docker/)```
+
+<!-- verified: 2026-07-11 -->

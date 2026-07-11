@@ -58,3 +58,11 @@ Groups can be referenced by name or ID. Optional packages in groups aren't insta
 # SEE ALSO
 
 [dnf](/man/dnf)(8), [dnf-install](/man/dnf-install)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/rpm-software-management/dnf)```
+
+```[Documentation](https://dnf.readthedocs.io/en/latest/command_ref.html)```
+
+<!-- verified: 2026-07-11 -->

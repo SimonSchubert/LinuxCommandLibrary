@@ -104,3 +104,11 @@ docker run has been the fundamental Docker command since the initial release in 
 
 [docker](/man/docker)(1), [docker-build](/man/docker-build)(1), [docker-ps](/man/docker-ps)(1), [docker-exec](/man/docker-exec)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/docker/cli)```
+
+```[Documentation](https://docs.docker.com/reference/cli/docker/)```
+
+<!-- verified: 2026-07-11 -->
+

@@ -101,3 +101,9 @@ DKMS requires kernel headers to be installed. Module sources are stored in /usr/
 # SEE ALSO
 
 [modprobe](/man/modprobe)(8), [insmod](/man/insmod)(8), [make](/man/make)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/dell/dkms)```
+
+<!-- verified: 2026-07-11 -->

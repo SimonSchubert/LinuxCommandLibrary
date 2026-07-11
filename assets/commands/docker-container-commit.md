@@ -23,3 +23,11 @@ create image from container state
 # SEE ALSO
 
 [docker-commit](/man/docker-commit)(1), [docker-container](/man/docker-container)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/docker/cli)```
+
+```[Documentation](https://docs.docker.com/reference/cli/docker/)```
+
+<!-- verified: 2026-07-11 -->

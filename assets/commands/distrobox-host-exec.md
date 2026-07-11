@@ -37,3 +37,11 @@ Only works from inside a Distrobox container. The command must exist on the host
 # SEE ALSO
 
 [distrobox](/man/distrobox)(1), [distrobox-enter](/man/distrobox-enter)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/89luca89/distrobox)```
+
+```[Homepage](https://distrobox.it/)```
+
+<!-- verified: 2026-07-11 -->

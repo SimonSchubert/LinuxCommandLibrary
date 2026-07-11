@@ -84,3 +84,11 @@ dmsetup is part of the **device-mapper** component of **LVM2**, developed primar
 # SEE ALSO
 
 [lvm](/man/lvm)(8), [cryptsetup](/man/cryptsetup)(8), [dmraid](/man/dmraid)(8)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/lvmteam/lvm2)```
+
+```[Homepage](https://sourceware.org/lvm2/)```
+
+<!-- verified: 2026-07-11 -->

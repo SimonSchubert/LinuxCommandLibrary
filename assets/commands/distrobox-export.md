@@ -6,23 +6,23 @@ export container applications and binaries to host system
 
 **Export an app** to the host
 
-```distrobox-export -a [package] -ef "--foreground"```
+```distrobox-export --app [mpv]```
 
-**Export a binary** to host
+**Export an app** with extra launch flags
 
-```distrobox-export -b [path/to/binary] -ep [path/to/binary_on_host]```
+```distrobox-export --app [atom] --extra-flags "--foreground"```
 
-Export binary to **~/.local/bin**
+**Export a binary** to ~/.local/bin
 
-```distrobox-export -b [path/to/binary] -ep [path/to/export]```
+```distrobox-export --bin [/usr/bin/vim] --export-path [~/.local/bin]```
 
-**Export a service** as root
+**List** apps already exported from this container
 
-```distrobox-export --service [package] -ef "--allow-newer-config" -S```
+```distrobox-export --list-apps```
 
 **Delete** an exported application
 
-```distrobox-export -a [package] -d```
+```distrobox-export --app [atom] --delete```
 
 # SYNOPSIS
 
@@ -30,37 +30,54 @@ Export binary to **~/.local/bin**
 
 # DESCRIPTION
 
-**distrobox-export** exports applications, binaries, or services from a Distrobox container to the host system. Exported apps appear in the host's application menu, and binaries become available in the host's PATH.
+**distrobox-export** exports applications or binaries from a Distrobox container to the host system. Exported apps appear in the host's application menu, and exported binaries become available on the host through a small wrapper script that runs them inside the container.
 
-Run this command from inside the container.
+Run this command from inside the container. Use either **--app** or **--bin**, not both together.
 
 # PARAMETERS
 
 **-a, --app** _app_
-> Export application (creates desktop entry)
+> Export application by name or absolute path to a .desktop file (creates a desktop entry)
 
 **-b, --bin** _binary_
-> Export binary
+> Export a binary by its absolute path inside the container
 
-**-s, --service** _service_
-> Export systemd service
+**--list-apps**
+> List applications already exported from this container
+
+**--list-binaries**
+> List binaries already exported from this container
 
 **-ep, --export-path** _path_
-> Destination path for binary
+> Destination path for an exported binary (e.g. ~/.local/bin)
+
+**-el, --export-label** _label_
+> Label appended to the exported application name (defaults to "(on _container_)"; use "none" to disable)
 
 **-ef, --extra-flags** _flags_
-> Extra flags for exported item
+> Extra flags passed to the command when the exported item runs
+
+**-nf, --enter-flags** _flags_
+> Extra flags passed to the underlying `distrobox enter`
 
 **-S, --sudo**
-> Run service as root inside container
+> Run the exported item as root inside the container
 
 **-d, --delete**
-> Remove exported item
+> Un-export the specified application or binary
 
 # CAVEATS
 
-Must be run from inside the container. Exported apps depend on the container running. Deleting the container breaks exported applications.
+Must be run from inside the container. Exported apps depend on the container existing (it is started automatically on launch). Deleting the container breaks exported applications and binaries.
 
 # SEE ALSO
 
 [distrobox](/man/distrobox)(1), [distrobox-enter](/man/distrobox-enter)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/89luca89/distrobox)```
+
+```[Homepage](https://distrobox.it/)```
+
+<!-- verified: 2026-07-11 -->

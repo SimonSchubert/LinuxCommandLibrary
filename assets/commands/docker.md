@@ -201,3 +201,13 @@ Requires Docker daemon running. Root or docker group membership needed. Networki
 # SEE ALSO
 
 [docker-compose](/man/docker-compose)(1), [podman](/man/podman)(1), [kubectl](/man/kubectl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/docker/cli)```
+
+```[Homepage](https://www.docker.com/)```
+
+```[Documentation](https://docs.docker.com/reference/cli/docker/)```
+
+<!-- verified: 2026-07-11 -->

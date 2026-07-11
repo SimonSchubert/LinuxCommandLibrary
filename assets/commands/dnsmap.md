@@ -54,3 +54,9 @@ Use only against authorized domains. May trigger security alerts. DNS wildcards 
 # SEE ALSO
 
 [dnsrecon](/man/dnsrecon)(1), [fierce](/man/fierce)(1), [nslookup](/man/nslookup)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/makefu/dnsmap)```
+
+<!-- verified: 2026-07-11 -->

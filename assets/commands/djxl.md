@@ -77,3 +77,11 @@ djxl is part of the **libjxl** reference implementation of JPEG XL, developed by
 # SEE ALSO
 
 [cjxl](/man/cjxl)(1), [djpeg](/man/djpeg)(1), [convert](/man/convert)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/libjxl/libjxl)```
+
+```[Homepage](https://jpegxl.info/)```
+
+<!-- verified: 2026-07-11 -->

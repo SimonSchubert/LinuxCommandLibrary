@@ -73,3 +73,9 @@ dive was created by **Alex Goodman** and released in **2018**. It was developed 
 # SEE ALSO
 
 [docker](/man/docker)(1), [podman](/man/podman)(1), [skopeo](/man/skopeo)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/wagoodman/dive)```
+
+<!-- verified: 2026-07-11 -->

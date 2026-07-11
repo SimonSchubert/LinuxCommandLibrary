@@ -34,3 +34,11 @@ The command provides quick access to account details without navigating the web 
 
 [doctl](/man/doctl)(1), [doctl-auth](/man/doctl-auth)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/digitalocean/doctl)```
+
+```[Documentation](https://docs.digitalocean.com/reference/doctl/)```
+
+<!-- verified: 2026-07-11 -->
+

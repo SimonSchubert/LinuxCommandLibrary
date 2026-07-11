@@ -84,3 +84,11 @@ doctl apps was added to the DigitalOcean CLI when App Platform launched in **202
 # SEE ALSO
 
 [doctl](/man/doctl)(1), [heroku](/man/heroku)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/digitalocean/doctl)```
+
+```[Documentation](https://docs.digitalocean.com/reference/doctl/reference/apps/)```
+
+<!-- verified: 2026-07-11 -->

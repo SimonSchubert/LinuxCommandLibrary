@@ -79,3 +79,11 @@ Legacy version, newer systems use dnf5. Command abbreviations supported (in, rm,
 # SEE ALSO
 
 [dnf](/man/dnf)(8), [dnf5](/man/dnf5)(8), [rpm](/man/rpm)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/rpm-software-management/dnf)```
+
+```[Documentation](https://dnf.readthedocs.io/)```
+
+<!-- verified: 2026-07-11 -->

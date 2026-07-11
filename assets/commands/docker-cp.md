@@ -48,3 +48,11 @@ Unlike volume mounts which are configured at container creation, **docker cp** e
 # SEE ALSO
 
 [docker-container-cp](/man/docker-container-cp)(1), [docker](/man/docker)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/docker/cli)```
+
+```[Documentation](https://docs.docker.com/reference/cli/docker/)```
+
+<!-- verified: 2026-07-11 -->

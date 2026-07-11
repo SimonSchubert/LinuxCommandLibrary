@@ -20,3 +20,11 @@ change container name identifier
 
 [docker-container-rename](/man/docker-container-rename)(1), [docker-run](/man/docker-run)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/docker/cli)```
+
+```[Documentation](https://docs.docker.com/reference/cli/docker/)```
+
+<!-- verified: 2026-07-11 -->
+

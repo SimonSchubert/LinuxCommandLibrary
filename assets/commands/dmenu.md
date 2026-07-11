@@ -70,3 +70,11 @@ X11 only (see bemenu for Wayland). Items must be newline-separated. Part of suck
 # SEE ALSO
 
 [rofi](/man/rofi)(1), [bemenu](/man/bemenu)(1), [fzf](/man/fzf)(1)
+
+# RESOURCES
+
+```[Source code](https://git.suckless.org/dmenu/)```
+
+```[Homepage](https://tools.suckless.org/dmenu/)```
+
+<!-- verified: 2026-07-11 -->

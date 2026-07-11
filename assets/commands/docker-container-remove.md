@@ -21,3 +21,11 @@ Removing containers is important for maintaining system cleanliness and freeing 
 # SEE ALSO
 
 [docker-container-rm](/man/docker-container-rm)(1), [docker-rm](/man/docker-rm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/docker/cli)```
+
+```[Documentation](https://docs.docker.com/reference/cli/docker/)```
+
+<!-- verified: 2026-07-11 -->

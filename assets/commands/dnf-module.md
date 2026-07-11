@@ -57,3 +57,11 @@ Only one stream of a module can be active at a time. Enabling a stream doesn't i
 # SEE ALSO
 
 [dnf](/man/dnf)(8), [dnf-install](/man/dnf-install)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/rpm-software-management/dnf)```
+
+```[Documentation](https://dnf.readthedocs.io/en/latest/command_ref.html)```
+
+<!-- verified: 2026-07-11 -->

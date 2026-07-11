@@ -84,3 +84,13 @@ dmypy was introduced as part of **mypy**, originally created by **Jukka Lehtosal
 # SEE ALSO
 
 [mypy](/man/mypy)(1), [python](/man/python)(1), [pyright](/man/pyright)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/python/mypy)```
+
+```[Homepage](https://mypy-lang.org/)```
+
+```[Documentation](https://mypy.readthedocs.io/en/stable/mypy_daemon.html)```
+
+<!-- verified: 2026-07-11 -->

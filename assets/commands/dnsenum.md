@@ -24,7 +24,7 @@ DNS enumeration and reconnaissance tool
 
 ```dnsenum --threads [10] [domain.com]```
 
-**Perform zone transfer**
+**Skip reverse** lookups
 
 ```dnsenum --noreverse [domain.com]```
 
@@ -41,22 +41,34 @@ _DOMAIN_
 > DNS server to query.
 
 **--enum**
-> Shorthand for DNS enumeration.
+> Shortcut equivalent to --threads 5 -s 15 -w.
 
 **-f** _FILE_
-> Wordlist for brute force.
+> Subdomain wordlist for brute force.
 
 **--threads** _N_
-> Number of threads.
+> Number of threads for parallel queries.
 
 **-o** _FILE_
-> Output file (XML format).
+> Write output to FILE in XML (magictree) format.
 
 **--noreverse**
 > Skip reverse lookups.
 
 **--private**
-> Include private IPs.
+> Show and save private (RFC 1918) IP addresses.
+
+**-p** _N_, **--pages** _N_
+> Number of Google search pages to scrape (default 5).
+
+**-s** _N_, **--scrap** _N_
+> Maximum number of subdomains scraped from Google.
+
+**-r**, **--recursion**
+> Recurse on discovered subdomains.
+
+**-w**, **--whois**
+> Perform whois queries on class C network ranges.
 
 **--help**
 > Display help information.
@@ -80,3 +92,9 @@ dnsenum is a Perl-based tool developed for the security community. It became a s
 # SEE ALSO
 
 [dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [fierce](/man/fierce)(1), [dnsrecon](/man/dnsrecon)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/fwaeytens/dnsenum)```
+
+<!-- verified: 2026-07-11 -->

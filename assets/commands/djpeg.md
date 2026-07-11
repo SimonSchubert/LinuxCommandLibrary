@@ -80,3 +80,11 @@ djpeg is part of the **libjpeg** project created by the **Independent JPEG Group
 # SEE ALSO
 
 [cjpeg](/man/cjpeg)(1), [jpegtran](/man/jpegtran)(1), [convert](/man/convert)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/libjpeg-turbo/libjpeg-turbo)```
+
+```[Homepage](https://libjpeg-turbo.org/)```
+
+<!-- verified: 2026-07-11 -->

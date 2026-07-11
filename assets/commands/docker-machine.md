@@ -80,3 +80,9 @@ Docker Machine is deprecated. Docker Desktop or cloud-native solutions are now p
 
 [docker](/man/docker)(1), [docker-context](/man/docker-context)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/docker/machine)```
+
+<!-- verified: 2026-07-11 -->
+

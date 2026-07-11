@@ -65,3 +65,9 @@ Requires network access to DNS servers. Tracing may take time for complex delega
 # SEE ALSO
 
 [dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [host](/man/host)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.mavetju.org/unix/dnstracer.php)```
+
+<!-- verified: 2026-07-11 -->

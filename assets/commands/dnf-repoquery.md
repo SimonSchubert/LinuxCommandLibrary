@@ -48,3 +48,11 @@ Can query both installed and repository packages. Output format can be customize
 # SEE ALSO
 
 [dnf](/man/dnf)(8), [rpm](/man/rpm)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/rpm-software-management/dnf)```
+
+```[Documentation](https://dnf.readthedocs.io/en/latest/command_ref.html)```
+
+<!-- verified: 2026-07-11 -->

@@ -51,3 +51,11 @@ Requires dnf-plugins-core. Changelog availability depends on package maintainers
 # SEE ALSO
 
 [dnf](/man/dnf)(8), [rpm](/man/rpm)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/rpm-software-management/dnf-plugins-core)```
+
+```[Documentation](https://dnf-plugins-core.readthedocs.io/en/latest/changelog.html)```
+
+<!-- verified: 2026-07-11 -->

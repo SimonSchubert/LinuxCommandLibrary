@@ -71,3 +71,11 @@ optimize and reduce Docker image sizes
 
 [docker-build](/man/docker-build)(1), [docker-images](/man/docker-images)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/slimtoolkit/slim)```
+
+```[Homepage](https://slimtoolkit.org/)```
+
+<!-- verified: 2026-07-11 -->
+

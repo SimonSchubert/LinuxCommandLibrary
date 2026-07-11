@@ -34,3 +34,11 @@ Only shows containers created by Distrobox, not regular Docker/Podman containers
 # SEE ALSO
 
 [distrobox](/man/distrobox)(1), [distrobox-create](/man/distrobox-create)(1), [podman](/man/podman)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/89luca89/distrobox)```
+
+```[Homepage](https://distrobox.it/)```
+
+<!-- verified: 2026-07-11 -->

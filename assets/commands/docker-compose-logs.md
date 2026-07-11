@@ -59,3 +59,11 @@ view compose service logs
 # SEE ALSO
 
 [docker-compose](/man/docker-compose)(1), [docker-logs](/man/docker-logs)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/docker/compose)```
+
+```[Documentation](https://docs.docker.com/reference/cli/docker/compose/)```
+
+<!-- verified: 2026-07-11 -->

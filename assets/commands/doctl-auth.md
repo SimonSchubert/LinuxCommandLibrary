@@ -73,3 +73,11 @@ doctl auth is part of the **doctl** CLI developed by **DigitalOcean**. Multi-con
 # SEE ALSO
 
 [doctl](/man/doctl)(1), [doctl-compute-droplet](/man/doctl-compute-droplet)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/digitalocean/doctl)```
+
+```[Documentation](https://docs.digitalocean.com/reference/doctl/reference/auth/)```
+
+<!-- verified: 2026-07-11 -->

@@ -44,3 +44,11 @@ You can configure both the day of the week and the hour (in UTC) when maintenanc
 
 [doctl-databases](/man/doctl-databases)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/digitalocean/doctl)```
+
+```[Documentation](https://docs.digitalocean.com/reference/doctl/reference/databases/)```
+
+<!-- verified: 2026-07-11 -->
+

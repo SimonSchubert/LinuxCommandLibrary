@@ -70,3 +70,11 @@ native Docker clustering and orchestration
 
 [docker-node](/man/docker-node)(1), [docker-service](/man/docker-service)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/docker/cli)```
+
+```[Documentation](https://docs.docker.com/reference/cli/docker/)```
+
+<!-- verified: 2026-07-11 -->
+

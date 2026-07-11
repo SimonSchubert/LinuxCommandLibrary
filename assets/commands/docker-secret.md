@@ -54,3 +54,11 @@ Only available in Swarm mode. Secrets cannot be updated; create a new version an
 
 [docker-swarm](/man/docker-swarm)(1), [docker-service](/man/docker-service)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/docker/cli)```
+
+```[Documentation](https://docs.docker.com/reference/cli/docker/)```
+
+<!-- verified: 2026-07-11 -->
+
