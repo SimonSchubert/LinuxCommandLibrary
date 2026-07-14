@@ -84,25 +84,3 @@ compose.desktop {
         }
     }
 }
-
-// Generate index files for asset directories
-tasks.register("generateAssetIndexes") {
-    val assetsDir = file("../assets")
-    doLast {
-        listOf("commands", "basics").forEach { dir ->
-            val targetDir = assetsDir.resolve(dir)
-            if (targetDir.exists()) {
-                val files =
-                    targetDir
-                        .listFiles { f -> f.extension == "md" }
-                        ?.map { it.name }
-                        ?.sorted() ?: emptyList()
-                targetDir.resolve("index.txt").writeText(files.joinToString("\n") + "\n")
-            }
-        }
-    }
-}
-
-tasks.named("desktopProcessResources") {
-    dependsOn("generateAssetIndexes")
-}

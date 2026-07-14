@@ -51,6 +51,7 @@ kotlin {
             dependencies {
                 implementation(libs.kotlinx.collections.immutable)
             }
+            kotlin.srcDir(layout.buildDirectory.dir("generated/kotlin"))
         }
         commonTest {
             dependencies {
@@ -60,19 +61,20 @@ kotlin {
     }
 }
 
-// Task to generate Version.kt from libs.versions.toml
+// Task to generate Version.kt from libs.versions.toml, into the generated source dir
+// registered on commonMain above.
 val generateVersionFile =
     tasks.register("generateVersionFile") {
         val appVersion = libs.versions.appVersion.get()
-        val outputDir = file("src/commonMain/kotlin/com/linuxcommandlibrary/shared")
-        val outputFile = file("$outputDir/Version.kt")
+        val outputDir = layout.buildDirectory.dir("generated/kotlin/com/linuxcommandlibrary/shared")
 
         inputs.property("appVersion", appVersion)
-        outputs.file(outputFile)
+        outputs.dir(outputDir)
 
         doLast {
-            outputDir.mkdirs()
-            outputFile.writeText(
+            val dir = outputDir.get().asFile
+            dir.mkdirs()
+            dir.resolve("Version.kt").writeText(
                 """
             |package com.linuxcommandlibrary.shared
             |
