@@ -65,10 +65,34 @@ Important note: dstat is deprecated and no longer maintained. The Python 2 codeb
 **--list**
 > List available plugins
 
+**-a, --all**
+> Equivalent to **-cdngy**, the default set
+
+**-f, --full**
+> Expand aggregated statistics into one column per CPU, disk, or interface
+
+**--output** _file_
+> Also write the statistics to a CSV file
+
 # CAVEATS
 
-Deprecated - consider using dool or sysstat tools instead. Plugin availability depends on system configuration.
+**dstat is deprecated and unmaintained.** It was written for Python 2, and while distributions carry patches to keep it importable under Python 3, it breaks on modern systems in ways nobody upstream is fixing. Some plugins fail outright, and a few crash on newer kernels.
+
+The direct replacement is **dool**, a maintained Python 3 fork that keeps the same command-line interface, so `dool -cdngy` behaves like the dstat you remember. Otherwise, the sysstat suite (`vmstat`, `iostat`, `sar`, `pidstat`) covers the same ground and is actively maintained, at the cost of needing several commands where dstat used one.
+
+Note also that the first line of output is an average since boot rather than a measurement of the interval, which is a trap it shares with `vmstat`: discard it, or use a count of at least two.
+
+# HISTORY
+
+dstat was written by **Dag Wieers** in **2004**, and its pitch was straightforward: `vmstat`, `iostat`, `netstat`, and `ifstat` each showed you one part of the picture, in a different format, on a different schedule, and correlating them by eye across four terminals was miserable. dstat put them in one aligned, colour-coded, plugin-extensible table with a shared timeline, which turned out to be exactly what people wanted when hunting a bottleneck. Its dependence on Python 2 eventually outlived Python 2 itself, and the project was retired in favour of the **dool** fork.
 
 # SEE ALSO
 
-[vmstat](/man/vmstat)(8), [iostat](/man/iostat)(1), [sar](/man/sar)(1)
+[vmstat](/man/vmstat)(8), [iostat](/man/iostat)(1), [sar](/man/sar)(1), [pidstat](/man/pidstat)(1), [htop](/man/htop)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/dagwieers/dstat)```
+
+<!-- verified: 2026-07-14 -->
+

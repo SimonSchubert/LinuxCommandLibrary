@@ -16,36 +16,55 @@ documentation generator for source code
 
 ```doxygen -u [Doxyfile]```
 
-**Generate for wizard** GUI
+**Generate a minimal config** without the explanatory comments
+
+```doxygen -g -s [Doxyfile]```
+
+**Read the config from stdin** and generate
+
+```cat [Doxyfile] | doxygen -```
+
+**Launch the GUI** front end
 
 ```doxywizard```
 
 # SYNOPSIS
 
-**doxygen** [_options_] [_configfile_]
+**doxygen** [_configfile_]
+
+**doxygen** [**-g**|**-u**|**-s**|**-l**|**-w**|**-x**] [_file_]
 
 # PARAMETERS
 
 _CONFIGFILE_
-> Configuration file (default: Doxyfile).
+> The configuration file to use. Defaults to `Doxyfile` in the current directory. A single **-** reads the configuration from standard input.
 
 **-g** [_FILE_]
-> Generate default configuration file.
+> Generate a template configuration file, fully commented. Writes `Doxyfile` if no name is given.
 
 **-u** [_FILE_]
-> Update config file to current version.
+> Update an existing configuration file to the current Doxygen version, preserving your settings and adding any new options with their defaults.
 
 **-s**
-> Omit comments in generated config.
+> Omit the explanatory comments. Combines with **-g** and **-u** to produce a short config that is far easier to keep in version control.
 
-**-l**
-> Generate layout file.
+**-x** [_FILE_]
+> Print the differences between the given configuration and the defaults. The quickest way to see what a project has actually customised.
 
-**-w**
-> Generate style sheets.
+**-l** [_FILE_]
+> Generate a layout file (`DoxygenLayout.xml`) that controls the ordering and presence of sections in the output.
+
+**-w** _FORMAT_ ...
+> Generate style sheet or template files. _FORMAT_ is `html`, `latex`, or `rtf`.
+
+**-d** _MODE_
+> Enable a debug mode, such as `Preprocessor` or `FilterOutput`.
+
+**-b**
+> Run with unbuffered output, so progress appears immediately when piped.
 
 **-v**, **--version**
-> Show version.
+> Show the version and exit.
 
 **--help**
 > Display help information.
@@ -61,16 +80,33 @@ _CONFIGFILE_
 
 The tool parses source code, builds a cross-referenced documentation structure, and renders it with class diagrams, call graphs, and inheritance trees. Special comment markers (///, /**, etc.) identify documentation blocks.
 
-Doxygen supports Markdown in comments and can generate documentation from plain header files without inline comments.
+Doxygen understands Markdown inside comments, and it will happily document a codebase that has no documentation comments at all, producing a browsable, cross-referenced index of every class, function, and file from the declarations alone. That is often reason enough to run it on an unfamiliar project.
+
+Beyond C++ and C it handles Java, Python, C#, PHP, Objective-C, Fortran, and IDL, and it will read Javadoc- and Qt-style comment blocks as well as its own.
 
 # CAVEATS
 
-Complex projects need extensive configuration. Large codebases may take time to process. Graphviz required for diagrams. Output quality depends on comment quality.
+The generated `Doxyfile` is enormous, several hundred settings with page after page of comments. Generating it with **-g -s** and keeping only what you change makes it reviewable; **-x** shows what an inherited config actually alters.
+
+Diagrams are the usual disappointment. Class hierarchies, collaboration diagrams, call graphs, and include graphs all require **Graphviz**, so `HAVE_DOT` must be set to `YES` and `dot` must be on the PATH, otherwise Doxygen silently falls back to crude built-in images. Call graphs on a large codebase also generate an enormous number of images and can make a build take hours.
+
+Doxygen only documents what it can parse. Heavy preprocessor use, template metaprogramming, and macros that expand into declarations routinely confuse it, which is what `ENABLE_PREPROCESSING`, `MACRO_EXPANSION`, and `PREDEFINED` exist to work around. And the output is only as good as the comments: run with `WARN_IF_UNDOCUMENTED` and `WARN_AS_ERROR` in CI if the documentation is meant to stay complete.
 
 # HISTORY
 
-Doxygen was created by **Dimitri van Heesch** and first released in **1997**. It became the de facto standard for C/C++ documentation, supporting additional languages and output formats over time.
+Doxygen was written by **Dimitri van Heesch** and first released in **1997**, originally as a tool for generating Qt-style documentation for his own C++ code. It filled an obvious gap, since Java had Javadoc but C++ had nothing comparable, and it became the de facto standard for C and C++ documentation almost by default. It is still maintained by van Heesch, now on GitHub, close to three decades on.
 
 # SEE ALSO
 
-[cppcheck](/man/cppcheck)(1), [javadoc](/man/javadoc)(1), [sphinx-build](/man/sphinx-build)(1)
+[dot](/man/dot)(1), [cppcheck](/man/cppcheck)(1), [javadoc](/man/javadoc)(1), [sphinx-build](/man/sphinx-build)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/doxygen/doxygen)```
+
+```[Homepage](https://www.doxygen.nl)```
+
+```[Documentation](https://www.doxygen.nl/manual/index.html)```
+
+<!-- verified: 2026-07-14 -->
+

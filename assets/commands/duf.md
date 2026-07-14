@@ -36,6 +36,10 @@ modern disk usage and free space utility
 
 ```duf --inodes```
 
+**Choose which columns** to display
+
+```duf --output mountpoint,size,used,avail,usage```
+
 # SYNOPSIS
 
 **duf** [_options_] [_paths_...]
@@ -51,49 +55,66 @@ duf automatically handles various filesystem types and units, displaying sizes i
 # PARAMETERS
 
 **--all**
-> Show all filesystems including pseudo.
+> Include pseudo, duplicate, and inaccessible filesystems.
 
-**--only** _types_
-> Show only specified filesystem types.
+**--only** _devices_ / **--hide** _devices_
+> Show only, or hide, specific **device groups**: `local`, `network`, `fuse`, `special`, `loops`, `binds`. Comma-separated.
 
-**--hide** _paths_
-> Hide specific mount points.
+**--only-fs** _types_ / **--hide-fs** _types_
+> Show only, or hide, specific **filesystem types** such as `ext4` or `tmpfs`.
 
-**--hide-fs** _types_
-> Hide specific filesystem types.
-
-**--hide-mp** _paths_
-> Hide mount points.
+**--only-mp** _paths_ / **--hide-mp** _paths_
+> Show only, or hide, specific **mount points**. Wildcards are supported.
 
 **--inodes**
-> Show inode information.
+> List inode usage instead of block usage.
 
 **--json**
-> Output as JSON.
+> Output every device as JSON.
 
 **--output** _fields_
-> Specify output columns.
+> Choose the columns to display, comma-separated.
 
 **--sort** _field_
-> Sort by field (size, used, avail, usage, inodes, type, mountpoint).
+> Sort by a column. Defaults to `mountpoint`.
 
 **--style** _style_
-> Output style (unicode, ascii).
+> Table style: `unicode` or `ascii`.
 
 **--theme** _theme_
-> Color theme (dark, light).
+> Colour theme: `dark`, `light`, or `ansi`.
 
 **--width** _n_
 > Maximum output width.
 
+**--avail-threshold** _sizes_
+> Colouring thresholds (yellow, red) for the available column. Defaults to `10G,1G`.
+
+**--usage-threshold** _fractions_
+> Colouring thresholds (yellow, red) for the usage bars, as fractions from 0 to 1. Defaults to `0.5,0.9`.
+
+**--warnings**
+> Print warnings to stderr.
+
 # CAVEATS
 
-Requires terminal with color support for best experience. Network filesystems may show stale information if unavailable. Some special filesystems may report unusual values. Root privileges may be needed to see all mount points.
+The grouping flags are easy to mix up. **--only** and **--hide** take *device groups* (`local`, `network`, `fuse`, `special`, `loops`, `binds`), not filesystem types or paths. For filesystem types use **--only-fs**/**--hide-fs**, and for paths **--only-mp**/**--hide-mp**.
+
+duf is a display tool, not a `df` replacement in scripts: the table is meant for humans, and colour and box-drawing characters will corrupt anything that parses it. Use **--json** when the output feeds another program.
+
+By default it omits pseudo-filesystems, so a mount you expect to see may need **--all** to appear. A hung network filesystem can make duf block, exactly as `df` does, since both must stat the mount point.
 
 # HISTORY
 
-**duf** was created by **Christian Muehlhaeuser** in **2020** as a modern, user-friendly alternative to the traditional df command. Written in Go, it was designed to provide better visual output and easier interpretation of disk space information. The tool gained popularity quickly in the developer community for its clean interface and practical features.
+**duf** was written by **Christian Muehlhaeuser** in **2020** in Go, one of a wave of tools that took a venerable Unix utility and asked what it would look like if the terminal had colour, Unicode, and a wide screen, which it had not when `df` was written. It caught on quickly, since reading `df` output is a small daily irritation for a great many people and duf's grouped, colour-coded table removes it.
 
 # SEE ALSO
 
-[df](/man/df)(1), [du](/man/du)(1), [ncdu](/man/ncdu)(1), [dust](/man/dust)(1)
+[df](/man/df)(1), [du](/man/du)(1), [ncdu](/man/ncdu)(1), [dust](/man/dust)(1), [dua](/man/dua)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/muesli/duf)```
+
+<!-- verified: 2026-07-14 -->
+

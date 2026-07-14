@@ -51,4 +51,11 @@ Requires appropriate permissions to access DRM device files under /dev/dri/. May
 
 # SEE ALSO
 
-[amdgpu_top](/man/amdgpu_top)(1), [nvidia-smi](/man/nvidia-smi)(1), [lspci](/man/lspci)(8), [xrandr](/man/xrandr)(1)
+[amdgpu_top](/man/amdgpu_top)(1), [nvidia-smi](/man/nvidia-smi)(1), [lspci](/man/lspci)(8), [xrandr](/man/xrandr)(1), [modetest](/man/modetest)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.freedesktop.org/emersion/drm_info)```
+
+<!-- verified: 2026-07-14 -->
+

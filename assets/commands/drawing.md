@@ -38,8 +38,23 @@ _files_
 
 # CAVEATS
 
-GNOME application, requires GTK. For advanced editing, use GIMP. Supports common raster formats (PNG, JPEG, BMP).
+Drawing is a **raster** editor, so scaling an image up loses quality and there is nothing resembling vector objects: use Inkscape for anything that must stay sharp at any size. It has no layers, which is the single feature people miss most, and no colour management, adjustment curves, or plugin system. That is a deliberate scope choice rather than an oversight, and anything beyond a quick edit belongs in GIMP or Krita.
+
+It is a GTK application built for GNOME. It runs on other desktops, but it is distributed mainly as a **Flatpak**, so the version in a distribution's own repositories is often well behind.
+
+# HISTORY
+
+Drawing was created by **Romain Vigier** (maoschanz) around **2018**, as a deliberately simple raster editor for GNOME. Its stated inspiration was the old Microsoft Paint: something that opens instantly, lets you scribble an arrow onto a screenshot, and gets out of the way. The niche was real, since GNOME had no equivalent, and GIMP is a heavy answer to a light question. It was later adapted to run on phones, and ships as the default image editor in some mobile Linux distributions.
 
 # SEE ALSO
 
-[gimp](/man/gimp)(1), [inkscape](/man/inkscape)(1)
+[gimp](/man/gimp)(1), [inkscape](/man/inkscape)(1), [krita](/man/krita)(1), [pinta](/man/pinta)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/maoschanz/drawing)```
+
+```[Homepage](https://apps.gnome.org/Drawing/)```
+
+<!-- verified: 2026-07-14 -->
+

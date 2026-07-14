@@ -65,14 +65,20 @@ echo "Result: $(( 5 + 3 ))"
 
 # CAVEATS
 
-**((...))** only handles integers. For floating-point, use **bc** or **awk**.
+Two different constructs are easily confused. **$((...))**, arithmetic *expansion*, **is POSIX** and works in every shell including dash. **((...))**, the arithmetic *command*, is **not** POSIX: it comes from ksh and works in bash, ksh, and zsh, but not in dash. In a `#!/bin/sh` script use `[ "$(( a + b ))" -gt 0 ]` rather than `(( a + b > 0 ))`.
 
-Division is integer division: **$(( 5 / 2 ))** gives **2**, not **2.5**.
+Only **integers** are supported. `$(( 5 / 2 ))` is **2**, not 2.5, and there is no way to get a fractional result: use **bc** or **awk** for real arithmetic.
 
-Return value logic is inverted from typical boolean: **(( 0 ))** returns failure (exit 1), **(( 1 ))** returns success (exit 0).
+The exit status is inverted relative to the value, which trips up almost everyone once. A non-zero result means success (status 0) and a zero result means failure (status 1), because the construct is designed to read as a C-style truth test. The practical consequence is that `(( count-- ))` as the last line of a function returns failure when `count` reaches zero, and under `set -e` that will terminate the script. Write `(( count-- )) || true` when the value may be zero.
 
-This is a bash/zsh feature, not POSIX. Use **$((...))** for better portability.
+Beware also that a leading zero makes a number **octal** inside arithmetic context: `$(( 010 ))` is 8. This bites scripts handling zero-padded dates, where `$(( 08 ))` is an error rather than eight. Force base ten with `10#`, as in `$(( 10#$month ))`.
+
+**\*\*** (exponentiation) is a bash/ksh/zsh extension and is not available everywhere, and the operator is not defined in POSIX arithmetic.
+
+# HISTORY
+
+Arithmetic in the original Bourne shell meant calling out to the external **expr** command, which was slow and needed escaping for almost every operator. The **Korn shell** introduced both `let` and the `((...))` command to make arithmetic a first-class part of the language, and POSIX subsequently standardised the `$((...))` expansion form, though not the `((...))` command. bash and zsh support all of them, which is why the same script can be written three different ways and why `expr` still turns up in old code.
 
 # SEE ALSO
 
-[bash](/man/bash)(1), [bc](/man/bc)(1), [expr](/man/expr)(1), [let](/man/let)(1)
+[bash](/man/bash)(1), [bc](/man/bc)(1), [expr](/man/expr)(1), [let](/man/let)(1), [double-bracket](/man/double-bracket)(1)

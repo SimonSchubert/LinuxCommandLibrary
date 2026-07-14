@@ -12,7 +12,7 @@ lightweight notification daemon for desktops
 
 ```dunst -config [path/to/dunstrc]```
 
-**Print notifications** to stdout instead of displaying
+**Print notifications** to stdout as well as displaying them
 
 ```dunst -print```
 
@@ -20,9 +20,13 @@ lightweight notification daemon for desktops
 
 ```notify-send "Title" "Message body"```
 
-**Check configuration syntax**
+**Show the most recent** notification again
 
-```dunst -print```
+```dunstctl history-pop```
+
+**Toggle Do Not Disturb**
+
+```dunstctl set-paused toggle```
 
 **Start with verbose output**
 
@@ -75,12 +79,27 @@ Dunst integrates with **dunstctl** for runtime control and **dunstify** for send
 
 # CAVEATS
 
-Only one notification daemon should run at a time; stop others before starting dunst. Some features require compositor support on Wayland. Icon display requires icon theme configuration. Configuration file must be valid; errors prevent startup.
+Notification daemons are **D-Bus activated**, and only one can own the `org.freedesktop.Notifications` name at a time. If a desktop environment already ships one (GNOME and KDE both do), dunst will refuse to start, or will start and never receive anything, depending on who claimed the name first. This is why dunst is mostly seen alongside tiling window managers, which ship no daemon of their own.
+
+The corollary is that dunst does not need to be launched at all in the ordinary case: D-Bus starts it on the first notification. Adding it to an autostart script *and* relying on activation is a common way to end up with two instances.
+
+Note that the flags take a **single dash**, even the long ones: `-config`, `-verbosity`, not `--config`.
+
+Configuration is reloaded on SIGUSR2 in recent versions, but many settings are still read at startup, and an invalid `dunstrc` prevents dunst from starting at all, which on a bare window manager means notifications silently stop working with no visible error. Check with `dunst -verbosity debug` from a terminal when that happens.
 
 # HISTORY
 
-**dunst** was created by Sascha Kruse around **2012** as a minimalist notification daemon for users of tiling window managers who wanted lightweight, customizable notifications. The project has been actively maintained with contributions from the community, gaining features like Wayland support and improved styling options.
+**dunst** was created by **Sascha Kruse** around **2012**, for people running a tiling window manager who found that the notification daemons on offer were either tied to a full desktop environment or drew popups they could not restyle. Its configuration file, which lets any notification be matched on app name, summary, body, or urgency and then restyled or acted upon, is what set it apart and is still the reason people choose it. Wayland support arrived later, and **mako** now fills much the same role for those who want a Wayland-native daemon.
 
 # SEE ALSO
 
 [dunstctl](/man/dunstctl)(1), [dunstify](/man/dunstify)(1), [notify-send](/man/notify-send)(1), [mako](/man/mako)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/dunst-project/dunst)```
+
+```[Homepage](https://dunst-project.org)```
+
+<!-- verified: 2026-07-14 -->
+
