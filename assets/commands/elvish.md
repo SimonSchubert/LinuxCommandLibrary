@@ -38,6 +38,18 @@ _SCRIPT_
 **--norc**
 > Don't load rc file.
 
+**-i**
+> Force interactive mode even when input is not a terminal.
+
+**--compileonly**
+> Parse and compile the code but do not execute it, reporting any errors.
+
+**--json**
+> Print output of --compileonly as JSON.
+
+**--version**
+> Print the Elvish version and exit.
+
 **--help**
 > Display help information.
 
@@ -68,3 +80,13 @@ Elvish was created by **Qi Xiao** starting around **2014** as a shell designed f
 # SEE ALSO
 
 [bash](/man/bash)(1), [zsh](/man/zsh)(1), [fish](/man/fish)(1), [nushell](/man/nushell)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/elves/elvish)```
+
+```[Homepage](https://elv.sh/)```
+
+```[Documentation](https://elv.sh/ref/)```
+
+<!-- verified: 2026-07-14 -->

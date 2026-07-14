@@ -12,6 +12,10 @@ Fallback branch in shell conditional statements
 
 ```if [ $x -lt 0 ]; then echo "negative"; elif [ $x -eq 0 ]; then echo "zero"; else echo "positive"; fi```
 
+**Fall back when a file is missing**
+
+```if [ -f [config.yml] ]; then echo "using config"; else echo "using defaults"; fi```
+
 # SYNOPSIS
 
 **if** _condition_; **then** _commands_; **else** _commands_; **fi**
@@ -26,7 +30,7 @@ This is a fundamental shell scripting construct for handling the "otherwise" cas
 
 # CAVEATS
 
-Shell keyword, not standalone command. Must be within if/fi block. Cannot have condition. Only one else per if statement.
+else is a shell reserved word, not a program, so it cannot be used outside an if block. Unlike if and elif it takes no condition and no **then**, and only one else may appear per if statement, always as the last branch before **fi**. A `case` statement has no else: its catch-all is the `*)` pattern.
 
 # HISTORY
 
@@ -34,4 +38,4 @@ else is part of POSIX shell syntax from the Bourne shell, created by **Stephen B
 
 # SEE ALSO
 
-[if](/man/if)(1), [elif](/man/elif)(1), [test](/man/test)(1), [bash](/man/bash)(1)
+[if](/man/if)(1), [elif](/man/elif)(1), [fi](/man/fi)(1), [test](/man/test)(1), [bash](/man/bash)(1)

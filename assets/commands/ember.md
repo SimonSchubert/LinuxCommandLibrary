@@ -85,3 +85,13 @@ Ember CLI was created to provide a standard toolchain for Ember.js development. 
 # SEE ALSO
 
 [npm](/man/npm)(1), [node](/man/node)(1), [angular](/man/angular)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ember-cli/ember-cli)```
+
+```[Homepage](https://emberjs.com/)```
+
+```[Documentation](https://cli.emberjs.com/release/)```
+
+<!-- verified: 2026-07-14 -->

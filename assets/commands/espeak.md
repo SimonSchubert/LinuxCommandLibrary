@@ -59,8 +59,20 @@ _WORDS_
 **--voices**
 > List available voices.
 
+**-a** _AMPLITUDE_
+> Amplitude/volume (0 to 200, default 100).
+
+**-g** _GAP_
+> Word gap, in units of 10 ms.
+
 **-m**
-> Interpret SSML markup.
+> Interpret SSML markup in the input.
+
+**-x**
+> Write phoneme mnemonics to stdout instead of speaking.
+
+**--stdout**
+> Write WAV audio to standard output.
 
 **--help**
 > Display help information.
@@ -79,8 +91,16 @@ Voice quality robotic compared to neural TTS. Some language support limited. Pro
 
 # HISTORY
 
-eSpeak was created by **Jonathan Duddington** and released as open source. Its formant synthesis approach prioritizes small size and multi-language support over naturalistic voice quality.
+eSpeak was created by **Jonathan Duddington** and released as open source. Its formant synthesis approach prioritizes small size and multi-language support over naturalistic voice quality. Development of the original eSpeak stopped around 2015; the actively maintained fork **espeak-ng** is now the recommended version, and on many distributions `espeak` is a compatibility wrapper around it.
 
 # SEE ALSO
 
 [espeak-ng](/man/espeak-ng)(1), [festival](/man/festival)(1), [pico2wave](/man/pico2wave)(1)
+
+# RESOURCES
+
+```[Homepage](https://espeak.sourceforge.net/)```
+
+```[Source code](https://sourceforge.net/projects/espeak/files/espeak/)```
+
+<!-- verified: 2026-07-14 -->

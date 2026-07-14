@@ -20,9 +20,13 @@ decode WebP images to other formats
 
 ```dwebp -info [image.webp]```
 
-**Convert with** alpha channel
+**Resize** while decoding (0 keeps the aspect ratio)
 
-```dwebp [image.webp] -o [output.png]```
+```dwebp [image.webp] -resize [800] [0] -o [output.png]```
+
+**Crop** a rectangle out of the image
+
+```dwebp [image.webp] -crop [x] [y] [width] [height] -o [output.png]```
 
 **Flip image** vertically
 
@@ -52,13 +56,43 @@ _INPUT_
 **-pgm**
 > Output PGM format (grayscale).
 
+**-pam**
+> Output PAM format (preserves the alpha channel).
+
+**-alpha**
+> Output only the alpha plane as a grayscale image.
+
 **-info**
 > Print image info only.
 
 **-flip**
 > Flip image vertically.
 
-**--help**
+**-crop** _x_ _y_ _w_ _h_
+> Decode only the given rectangle of the image.
+
+**-resize** _width_ _height_ (or **-scale**)
+> Rescale the decoded image. A value of 0 for one dimension preserves the aspect ratio.
+
+**-nofancy**
+> Disable fancy (higher quality) upsampling.
+
+**-nodither**
+> Disable dithering.
+
+**-mt**
+> Use multi-threading for decoding.
+
+**-quiet**
+> Suppress informational output.
+
+**-v**
+> Print decoding time.
+
+**-version**
+> Print the library version and exit.
+
+**-h**
 > Display help information.
 
 # DESCRIPTION
@@ -71,7 +105,7 @@ dwebp is useful for converting WebP images from web sources to formats compatibl
 
 # CAVEATS
 
-Output file extension doesn't determine format (use flags). Animation not fully supported. Large images may use significant memory.
+The output file extension does not select the format; use the format flags. Animated WebP files are not handled by dwebp, only their first frame or nothing at all: use anim_dump or webpmux for animations. PNG output is the default and requires libpng at build time.
 
 # HISTORY
 
@@ -80,3 +114,13 @@ dwebp is part of **libwebp**, Google's reference implementation of the WebP imag
 # SEE ALSO
 
 [cwebp](/man/cwebp)(1), [gif2webp](/man/gif2webp)(1), [convert](/man/convert)(1)
+
+# RESOURCES
+
+```[Source code](https://chromium.googlesource.com/webm/libwebp)```
+
+```[Homepage](https://developers.google.com/speed/webp)```
+
+```[Documentation](https://developers.google.com/speed/webp/docs/dwebp)```
+
+<!-- verified: 2026-07-14 -->

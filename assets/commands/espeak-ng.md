@@ -56,11 +56,26 @@ _WORDS_
 **-p** _PITCH_
 > Pitch adjustment.
 
-**-x**
-> Input is phonemes.
+**-p** _PITCH_
+> Pitch adjustment (0 to 99, default 50).
 
-**--voices**
-> List voices.
+**-a** _AMPLITUDE_
+> Amplitude/volume (0 to 200, default 100).
+
+**-g** _GAP_
+> Word gap, in units of 10 ms.
+
+**-x**
+> Write the translated phoneme mnemonics to stdout instead of speaking.
+
+**--ipa**
+> Write phonemes using the International Phonetic Alphabet.
+
+**--stdout**
+> Write the audio as WAV data to standard output.
+
+**--voices**[=_lang_]
+> List available voices, optionally filtered by language.
 
 **--help**
 > Display help information.
@@ -83,4 +98,12 @@ espeak-ng was forked from eSpeak by **Reece H. Dunn** to continue development af
 
 # SEE ALSO
 
-[espeak](/man/espeak)(1), [festival](/man/festival)(1), [mimic](/man/mimic)(1)
+[espeak](/man/espeak)(1), [festival](/man/festival)(1), [mimic](/man/mimic)(1), [pico2wave](/man/pico2wave)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/espeak-ng/espeak-ng)```
+
+```[Documentation](https://github.com/espeak-ng/espeak-ng/blob/master/docs/guide.md)```
+
+<!-- verified: 2026-07-14 -->

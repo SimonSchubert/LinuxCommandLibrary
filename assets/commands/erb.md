@@ -92,3 +92,11 @@ ERB was created by **Masatoshi Seki** and included in Ruby's standard library. I
 # SEE ALSO
 
 [ruby](/man/ruby)(1), [irb](/man/irb)(1), [haml](/man/haml)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ruby/erb)```
+
+```[Documentation](https://docs.ruby-lang.org/en/master/ERB.html)```
+
+<!-- verified: 2026-07-14 -->

@@ -10,15 +10,29 @@ Epson ESC/P2 to PBM format converter
 
 # SYNOPSIS
 
-**escp2topbm** [_options_] [_input_]
+**escp2topbm** [_escp2file_]
 
 # DESCRIPTION
 
-**escp2topbm** converts Epson ESC/P2 printer control language output to PBM (Portable Bitmap) format. This tool is part of the Netpbm image processing toolkit and is useful for converting printer-ready documents to portable bitmap images.
+**escp2topbm** reads an Epson ESC/P2 printer data stream and writes the graphics it contains as a PBM (Portable Bitmap) image on standard output. If no file is given it reads from standard input. It is part of the Netpbm image processing toolkit.
 
-ESC/P2 is Epson's enhanced printer control language that was widely used in dot-matrix and inkjet printers. The tool reads the binary ESC/P2 data stream and extracts the raster graphics into a standard PBM format that can be further processed or converted to other image formats.
+ESC/P2 is Epson's enhanced printer control language, widely used in dot-matrix and inkjet printers. escp2topbm extracts the bitmap raster embedded in such a stream, which lets you recover or inspect the image that would have been printed. It is essentially the inverse of pbmtoepson.
+
+# PARAMETERS
+
+escp2topbm defines no options of its own; it accepts the options common to all Netpbm programs, such as **-plain** and **-quiet** (the common **-plain** option had no effect before Netpbm 10.72).
 
 # SEE ALSO
 
-[pbmtoescp2](/man/pbmtoescp2)(1), [pbmtoepson](/man/pbmtoepson)(1)
+[pbmtoescp2](/man/pbmtoescp2)(1), [pbmtoepson](/man/pbmtoepson)(1), [pnmtopng](/man/pnmtopng)(1)
+
+# RESOURCES
+
+```[Source code](https://sourceforge.net/p/netpbm/code/HEAD/tree/)```
+
+```[Homepage](https://netpbm.sourceforge.net/)```
+
+```[Documentation](https://netpbm.sourceforge.net/doc/escp2topbm.html)```
+
+<!-- verified: 2026-07-14 -->
 

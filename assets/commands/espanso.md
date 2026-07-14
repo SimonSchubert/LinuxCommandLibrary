@@ -62,6 +62,18 @@ _COMMAND_
 **status**
 > Show service status.
 
+**service register**
+> Register espanso to start automatically on login.
+
+**env-path register**
+> Add the espanso binary to the system PATH.
+
+**match list**
+> List all currently active matches.
+
+**path**
+> Print the resolved config, packages and runtime directories.
+
 **--help**
 > Display help information.
 
@@ -92,3 +104,13 @@ Espanso was created by **Federico Terzi** as an open-source, cross-platform alte
 # SEE ALSO
 
 [xdotool](/man/xdotool)(1), [autokey](/man/autokey)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/espanso/espanso)```
+
+```[Homepage](https://espanso.org/)```
+
+```[Documentation](https://espanso.org/docs/)```
+
+<!-- verified: 2026-07-14 -->

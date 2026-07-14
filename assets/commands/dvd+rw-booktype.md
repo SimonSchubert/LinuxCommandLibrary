@@ -4,57 +4,74 @@ modify DVD booktype for compatibility
 
 # TLDR
 
-**Query current booktype**
+**Query current booktype** settings of the drive and loaded media
 
 ```dvd+rw-booktype [/dev/dvd]```
 
-**Set booktype** to DVD-ROM
+Set the booktype of the **currently loaded disc** to DVD-ROM
 
-```dvd+rw-booktype -dvd-rom [/dev/dvd]```
+```dvd+rw-booktype -dvd-rom-spec -media [/dev/dvd]```
 
-**Set booktype** to DVD+R
+Make the drive **default to DVD-ROM booktype** for every future recording
 
-```dvd+rw-booktype -dvd+r [/dev/dvd]```
+```dvd+rw-booktype -dvd-rom-spec -unit [/dev/dvd]```
 
-**Reset to** default
+Set the drive default **only for DVD+R** recordings
 
-```dvd+rw-booktype -default [/dev/dvd]```
+```dvd+rw-booktype -dvd-rom-spec -unit+r [/dev/dvd]```
+
+Restore the **native booktype** of the loaded DVD+RW disc
+
+```dvd+rw-booktype -dvd+rw-spec -media [/dev/dvd]```
+
+**Print drive inquiry** information
+
+```dvd+rw-booktype -inq [/dev/dvd]```
 
 # SYNOPSIS
 
-**dvd+rw-booktype** [_options_] _device_
+**dvd+rw-booktype** [**-dvd-rom-spec**|**-dvd+rw-spec**|**-dvd+r-spec**|**-inq**] [**-media**|**-unit**|**-unit+rw**|**-unit+r**] _device_
 
 # PARAMETERS
 
-_DEVICE_
-> DVD drive device path.
+_device_
+> DVD drive device path, e.g. /dev/dvd or /dev/sr0.
 
-**-dvd-rom**
-> Set booktype to DVD-ROM.
+**-dvd-rom-spec**
+> Use the DVD-ROM book type specification.
 
-**-dvd+r**
-> Set booktype to DVD+R.
+**-dvd+rw-spec**
+> Use the native DVD+RW book type specification.
 
-**-dvd+rw**
-> Set booktype to DVD+RW.
-
-**-default**
-> Reset to manufacturer default.
+**-dvd+r-spec**
+> Use the native DVD+R book type specification.
 
 **-inq**
-> Query drive information.
+> Print drive inquiry information and exit.
+
+**-media**
+> Apply the chosen specification to the currently loaded disc.
+
+**-unit**
+> Store the chosen specification as the drive default for future recordings.
+
+**-unit+rw**
+> Store the drive default for DVD+RW recordings only.
+
+**-unit+r**
+> Store the drive default for DVD+R recordings only.
 
 # DESCRIPTION
 
-**dvd+rw-booktype** changes the booktype setting on DVD+R and DVD+RW media. Booktype determines how the disc identifies itself to players, affecting compatibility.
+**dvd+rw-booktype** changes the book type field recorded on DVD+R and DVD+RW media. The book type is what a player reads to decide which kind of disc it is holding, so it directly affects playback compatibility.
 
-Setting booktype to DVD-ROM improves compatibility with older DVD players that may not recognize DVD+R/+RW formats. The change is permanent and cannot be undone after disc finalization.
+Presenting a DVD+R or DVD+RW disc as DVD-ROM makes many older standalone players and set-top boxes accept it, because those units predate the DVD+ formats. A specification flag chooses the identity to write; a target flag chooses whether it applies to the loaded disc (**-media**) or becomes the drive's default for future burns (**-unit** and its variants).
 
-This is primarily useful for creating video DVDs that need to play on standalone players with limited format support.
+Running the command with only a device argument prints the current drive and media settings without changing anything.
 
 # CAVEATS
 
-Not all drives support booktype modification. Change is permanent per disc. Only affects DVD+ media. Must be done before finalizing.
+Not every drive supports book type modification, and support often depends on the firmware. Changing the book type of a DVD+R disc is a one-way operation: the field is written into the disc's control data and cannot be rewritten. DVD+RW media can be changed repeatedly. The command does not affect DVD-R/-RW media at all.
 
 # HISTORY
 

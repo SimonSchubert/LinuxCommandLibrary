@@ -76,6 +76,21 @@ The tool can display existing metadata and modify fields like title, author, pub
 **--comments** _text_
 > Set description/comments.
 
+**--rating** _n_
+> Set the rating (1 to 5).
+
+**--author-sort** _name_
+> Set the string used to sort by author.
+
+**--to-opf** _file.opf_
+> Write the book's metadata to an OPF file.
+
+**--from-opf** _file.opf_
+> Read metadata from an OPF file and apply it to the book.
+
+**--identifier** _id:value_
+> Set an identifier, e.g. `--identifier doi:10.1234/foo`. Repeatable.
+
 # CAVEATS
 
 Not all formats support all metadata fields. PDF metadata limited. Changes are in-place by default. Some metadata requires specific format support.
@@ -87,3 +102,13 @@ Not all formats support all metadata fields. PDF metadata limited. Changes are i
 # SEE ALSO
 
 [ebook-convert](/man/ebook-convert)(1), [calibre](/man/calibre)(1), [exiftool](/man/exiftool)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/kovidgoyal/calibre)```
+
+```[Homepage](https://calibre-ebook.com/)```
+
+```[Documentation](https://manual.calibre-ebook.com/generated/en/ebook-meta.html)```
+
+<!-- verified: 2026-07-14 -->

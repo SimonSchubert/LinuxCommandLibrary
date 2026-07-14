@@ -58,4 +58,14 @@ eqn was written by **Brian Kernighan** and **Lorinda Cherry** at Bell Labs in th
 
 # SEE ALSO
 
-[groff](/man/groff)(1), [troff](/man/troff)(1), [tbl](/man/tbl)(1), [pic](/man/pic)(1)
+[groff](/man/groff)(1), [troff](/man/troff)(1), [tbl](/man/tbl)(1), [pic](/man/pic)(1), [neqn](/man/neqn)(1)
+
+# RESOURCES
+
+```[Source code](https://cgit.git.savannah.gnu.org/cgit/groff.git)```
+
+```[Homepage](https://www.gnu.org/software/groff/)```
+
+```[Documentation](https://www.gnu.org/software/groff/manual/groff.html)```
+
+<!-- verified: 2026-07-14 -->

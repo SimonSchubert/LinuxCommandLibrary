@@ -63,7 +63,28 @@ _ENTRY_POINTS_
 > Generate source maps.
 
 **--target** _VERSION_
-> JavaScript target version.
+> JavaScript target version, e.g. es2020 or chrome100.
+
+**--outdir** _DIR_
+> Output directory (use instead of --outfile when there are multiple outputs).
+
+**--format** _FORMAT_
+> Output module format: iife, cjs or esm.
+
+**--loader:**_.ext=loader_
+> How to load a given file extension (js, ts, jsx, json, text, base64, dataurl, file, ...).
+
+**--define:**_K=V_
+> Substitute a global identifier with a constant expression at build time.
+
+**--external:**_pkg_
+> Exclude a package from the bundle and leave the import in place.
+
+**--splitting**
+> Enable code splitting (esm format only).
+
+**--metafile** _FILE_
+> Write a JSON file describing the build, for bundle analysis.
 
 **--help**
 > Display help information.
@@ -87,3 +108,13 @@ esbuild was created by **Evan Wallace** (co-founder of Figma) and released in **
 # SEE ALSO
 
 [webpack](/man/webpack)(1), [rollup](/man/rollup)(1), [vite](/man/vite)(1), [swc](/man/swc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/evanw/esbuild)```
+
+```[Homepage](https://esbuild.github.io/)```
+
+```[Documentation](https://esbuild.github.io/api/)```
+
+<!-- verified: 2026-07-14 -->

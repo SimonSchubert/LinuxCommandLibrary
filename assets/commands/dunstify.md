@@ -32,6 +32,14 @@ desktop notification sender for dunst
 
 ```dunstify -i [icon_name] "[message]"```
 
+**Print the notification ID** so it can be replaced later
+
+```dunstify -p "[message]"```
+
+**Close a notification** by ID
+
+```dunstify -C [id]```
+
 # SYNOPSIS
 
 **dunstify** [_options_] _summary_ [_body_]
@@ -56,11 +64,29 @@ desktop notification sender for dunst
 **-C**, **--close** _id_
 > Close notification by ID.
 
-**-h**, **--hints** _hint_
-> Set hints.
+**-h**, **--hints** _TYPE:NAME:VALUE_
+> Set a hint, e.g. `int:value:50` for a progress bar.
 
 **-p**, **--printid**
-> Print notification ID.
+> Print the notification ID (use it later with **-r** or **-C**).
+
+**-a**, **--appname** _name_
+> Name of the sending application.
+
+**-I**, **--raw_icon** _path_
+> Send the icon as raw image data instead of a name or path.
+
+**-b**, **--block**
+> Block until the notification is closed; exit code reports how it was closed.
+
+**-c**, **--capabilities**
+> Print the notification server capabilities and exit.
+
+**-s**, **--serverinfo**
+> Print notification server information and exit.
+
+**-v**, **--version**
+> Print version and exit.
 
 # DESCRIPTION
 
@@ -73,4 +99,14 @@ Additional features include action buttons that can trigger commands when clicke
 # SEE ALSO
 
 [dunst](/man/dunst)(1), [dunstctl](/man/dunstctl)(1), [notify-send](/man/notify-send)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/dunst-project/dunst)```
+
+```[Homepage](https://dunst-project.org/)```
+
+```[Documentation](https://dunst-project.org/documentation/)```
+
+<!-- verified: 2026-07-14 -->
 

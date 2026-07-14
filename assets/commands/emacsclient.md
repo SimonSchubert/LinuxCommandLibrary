@@ -96,3 +96,13 @@ Requires Emacs server to be running (or use -a to start daemon). Terminal mode (
 # SEE ALSO
 
 [emacs](/man/emacs)(1), [vim](/man/vim)(1), [nano](/man/nano)(1)
+
+# RESOURCES
+
+```[Source code](https://cgit.git.savannah.gnu.org/cgit/emacs.git)```
+
+```[Homepage](https://www.gnu.org/software/emacs/)```
+
+```[Documentation](https://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html)```
+
+<!-- verified: 2026-07-14 -->

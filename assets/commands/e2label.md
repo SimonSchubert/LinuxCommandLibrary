@@ -4,9 +4,17 @@ change ext filesystem labels
 
 # TLDR
 
+**Display** the current volume label
+
+```sudo e2label [/dev/sda1]```
+
 Change **volume label**
 
 ```sudo e2label [/dev/sda1] "[label_name]"```
+
+**Clear** the volume label
+
+```sudo e2label [/dev/sda1] ""```
 
 # SYNOPSIS
 
@@ -28,8 +36,16 @@ _new-label_
 
 # CAVEATS
 
-Labels are limited to 16 characters. For longer labels, use tune2fs. Part of e2fsprogs. Filesystem should be unmounted when changing labels.
+Labels are limited to 16 characters and are silently truncated if longer. e2label is a thin wrapper around **tune2fs -L**, so the two are interchangeable. The filesystem may be mounted while the label is changed, but the new label is only picked up by udev and /dev/disk/by-label after the next scan. Part of the **e2fsprogs** package.
 
 # SEE ALSO
 
-[tune2fs](/man/tune2fs)(8), [blkid](/man/blkid)(8), [mount](/man/mount)(8)
+[tune2fs](/man/tune2fs)(8), [blkid](/man/blkid)(8), [mount](/man/mount)(8), [e2undo](/man/e2undo)(8)
+
+# RESOURCES
+
+```[Source code](https://git.kernel.org/pub/scm/fs/ext2/e2fsprogs.git)```
+
+```[Homepage](https://e2fsprogs.sourceforge.net/)```
+
+<!-- verified: 2026-07-14 -->

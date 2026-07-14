@@ -65,4 +65,10 @@ file        - Identify file type
 
 # SEE ALSO
 
-[readelf](/man/readelf)(1), [objdump](/man/objdump)(1), [nm](/man/nm)(1), [ldd](/man/ldd)(1)
+[readelf](/man/readelf)(1), [objdump](/man/objdump)(1), [nm](/man/nm)(1), [ldd](/man/ldd)(1), [file](/man/file)(1), [strip](/man/strip)(1)
+
+# RESOURCES
+
+```[Documentation](https://man7.org/linux/man-pages/man5/elf.5.html)```
+
+<!-- verified: 2026-07-14 -->

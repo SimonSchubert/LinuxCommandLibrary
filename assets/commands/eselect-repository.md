@@ -72,3 +72,11 @@ Gentoo Linux specific. Repositories must be synced after enabling. Part of app-e
 # SEE ALSO
 
 [eselect](/man/eselect)(1), [emerge](/man/emerge)(1), [emaint](/man/emaint)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/gentoo/eselect-repository)```
+
+```[Documentation](https://wiki.gentoo.org/wiki/Eselect/Repository)```
+
+<!-- verified: 2026-07-14 -->

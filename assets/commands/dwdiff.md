@@ -8,25 +8,33 @@ word-by-word file comparison
 
 ```dwdiff [file1.txt] [file2.txt]```
 
-**Show only deletions and insertions**
-
-```dwdiff -c [file1.txt] [file2.txt]```
-
 **Use color output**
 
 ```dwdiff -c [file1.txt] [file2.txt]```
+
+**Show only the changes**, suppressing words common to both files
+
+```dwdiff -3 [file1.txt] [file2.txt]```
 
 **Show line numbers**
 
 ```dwdiff -L [file1.txt] [file2.txt]```
 
-**Ignore whitespace differences**
+**Ignore case** differences
 
-```dwdiff -w [file1.txt] [file2.txt]```
+```dwdiff -i [file1.txt] [file2.txt]```
 
-**Show statistics only**
+**Treat punctuation as delimiters** so words are split more finely
+
+```dwdiff -P [file1.txt] [file2.txt]```
+
+**Print statistics** about how much changed
 
 ```dwdiff -s [file1.txt] [file2.txt]```
+
+**Page the diff** with less-style highlighting
+
+```dwdiff -l [file1.txt] [file2.txt] | less -R```
 
 # SYNOPSIS
 
@@ -34,35 +42,62 @@ word-by-word file comparison
 
 # PARAMETERS
 
-**-c**, **--color**
-> Color output (default in terminals).
+**-c**[_spec_], **--color**[**=**_spec_]
+> Color the output. An optional _spec_ overrides the delete and insert colors.
 
-**-L**, **--line-numbers**
-> Show line numbers.
+**-l**, **--less-mode**
+> Use overstriking (underline for deletions, bold for insertions), suitable for piping to less -R.
+
+**-L**[_width_], **--line-numbers**[**=**_width_]
+> Show line numbers at the start of each line.
 
 **-s**, **--statistics**
-> Print statistics at end.
-
-**-w**, **--ignore-whitespace**
-> Ignore whitespace differences.
+> Print word counts and change percentages when done.
 
 **-i**, **--ignore-case**
-> Case-insensitive comparison.
+> Ignore differences in case when comparing words.
 
-**-d** _delimiters_
-> Characters that delimit words.
+**-I**, **--ignore-formatting**
+> Ignore formatting changes such as bold or underline markup.
 
-**-P**
-> Use punctuation as delimiters.
+**-d** _chars_, **--delimiters=**_chars_
+> Characters to treat as word delimiters.
 
-**-1**
-> Read old file from stdin.
+**-P**, **--punctuation**
+> Use punctuation characters as delimiters.
 
-**-2**
-> Read new file from stdin.
+**-W** _chars_, **--white-space=**_chars_
+> Characters to treat as whitespace.
 
-**-3**
-> Use pager for output.
+**-1**, **--no-deleted**
+> Suppress words deleted from the first file.
+
+**-2**, **--no-inserted**
+> Suppress words inserted in the second file.
+
+**-3**, **--no-common**
+> Suppress words common to both files, leaving only the changes.
+
+**-C** _num_, **--context=**_num_
+> Show _num_ lines of context around each change.
+
+**-A** _algo_, **--algorithm=**_algo_
+> Comparison algorithm: best, normal or fast.
+
+**-w** _string_, **--start-delete=**_string_
+> String marking the start of deleted text (default `[-`).
+
+**-x** _string_, **--stop-delete=**_string_
+> String marking the end of deleted text (default `-]`).
+
+**-y** _string_, **--start-insert=**_string_
+> String marking the start of inserted text (default `{+`).
+
+**-z** _string_, **--stop-insert=**_string_
+> String marking the end of inserted text (default `+}`).
+
+**--diff-input**
+> Read unified diff output instead of two files.
 
 **--wdiff-output**
 > Produce wdiff-compatible output.
@@ -92,3 +127,9 @@ dwdiff was written by **G.P. Halkes** as an improved alternative to the older wd
 # SEE ALSO
 
 [wdiff](/man/wdiff)(1), [diff](/man/diff)(1), [colordiff](/man/colordiff)(1), [vimdiff](/man/vimdiff)(1)
+
+# RESOURCES
+
+```[Homepage](https://os.ghalkes.nl/dwdiff.html)```
+
+<!-- verified: 2026-07-14 -->

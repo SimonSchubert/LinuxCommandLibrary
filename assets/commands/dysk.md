@@ -36,17 +36,32 @@ Provides filtering and sorting capabilities for focused analysis.
 
 # PARAMETERS
 
+**-a, --all**
+> Show all mount points, including pseudo, removable and remote ones
+
 **-s, --sort** _field_
 > Sort by field (free, size, used, filesystem, etc.)
 
 **-f, --filter** _expr_
 > Filter expression
 
-**--json**
+**-c, --csv**
+> Output as CSV
+
+**-j, --json**
 > Output as JSON
 
-**--csv**
-> Output as CSV
+**--cols** _cols_
+> Choose which columns are shown
+
+**-l, --list-cols**
+> List the available columns
+
+**--units** _si|binary_
+> Size units: SI (1M = 1,000,000 B) or binary (1M = 1,048,576 B)
+
+**--color** _auto|yes|no_
+> Control colored output
 
 # FILTER EXPRESSIONS
 
@@ -64,8 +79,16 @@ Provides filtering and sorting capabilities for focused analysis.
 
 # CAVEATS
 
-Written in Rust. Disk type detection depends on system information availability.
+Linux only: dysk reads /proc/mounts and sysfs, so it does not run on macOS or BSD. Disk type detection (SSD vs HDD) depends on what the kernel exposes and can be blank for virtual or remote filesystems. The project was previously named **lfs**.
 
 # SEE ALSO
 
-[df](/man/df)(1), [lsblk](/man/lsblk)(8)
+[df](/man/df)(1), [lsblk](/man/lsblk)(8), [duf](/man/duf)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Canop/dysk)```
+
+```[Homepage](https://dystroy.org/dysk/)```
+
+<!-- verified: 2026-07-14 -->

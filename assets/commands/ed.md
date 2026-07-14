@@ -32,6 +32,10 @@ standard Unix line editor
 
 ```wq```
 
+**Edit a file non-interactively** by piping commands to ed
+
+```printf '%s\n' ',s/old/new/g' 'w' 'q' | ed -s [file.txt]```
+
 # SYNOPSIS
 
 **ed** [_options_] [_file_]
@@ -41,14 +45,32 @@ standard Unix line editor
 _FILE_
 > File to edit.
 
-**-p** _STRING_
-> Set command prompt.
+**-p** _STRING_, **--prompt=**_STRING_
+> Use STRING as the command prompt (there is no prompt by default).
 
-**-s**
-> Suppress diagnostics.
+**-s**, **--quiet**, **--script**
+> Suppress diagnostics, byte counts and the '!' prompt: the usual choice for scripts.
 
-**-G**
-> Enable backwards compatibility.
+**-E**, **--extended-regexp**
+> Use extended regular expressions instead of basic ones.
+
+**-G**, **--traditional**
+> Run in compatibility mode with the traditional Unix ed.
+
+**-l**, **--loose-exit-status**
+> Exit with 0 status even if a command fails.
+
+**-r**, **--restricted**
+> Restricted mode: disallow shell escapes and editing files outside the current directory.
+
+**-v**, **--verbose**
+> Print full error messages rather than a bare '?'.
+
+**--help**
+> Display help and exit.
+
+**--version**
+> Display version and exit.
 
 # DESCRIPTION
 
@@ -69,3 +91,11 @@ ed was written by **Ken Thompson** at Bell Labs in **1969**, making it one of th
 # SEE ALSO
 
 [sed](/man/sed)(1), [vi](/man/vi)(1), [ex](/man/ex)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/ed/)```
+
+```[Documentation](https://www.gnu.org/software/ed/manual/ed_manual.html)```
+
+<!-- verified: 2026-07-14 -->

@@ -26,9 +26,9 @@ system default text editor
 
 # DESCRIPTION
 
-**editor** is a symbolic link or alias to the system's default text editor. On Debian-based systems, it's managed by the alternatives system and typically points to nano, vim, or another installed editor.
+**editor** is a symbolic link to the system's default text editor. On Debian-based systems /usr/bin/editor is managed by the alternatives system and typically points to nano, vim, or another installed editor. It is a Debian convention rather than a program in its own right, and it does not exist on most non-Debian distributions.
 
-The editor command provides a standard way for programs to invoke a text editor. Commands like crontab, visudo, and git commit use the EDITOR or VISUAL environment variables to determine which editor to launch.
+The editor command provides a standard way for programs to invoke a text editor. Commands like crontab, visudo, and git commit use the EDITOR or VISUAL environment variables to determine which editor to launch, falling back to sensible-editor or /usr/bin/editor when neither is set.
 
 # CONFIGURATION
 
@@ -57,4 +57,4 @@ The editor command may not exist on all systems. Environment variables override 
 
 # SEE ALSO
 
-[vim](/man/vim)(1), [nano](/man/nano)(1), [emacs](/man/emacs)(1), [update-alternatives](/man/update-alternatives)(8)
+[vim](/man/vim)(1), [nano](/man/nano)(1), [emacs](/man/emacs)(1), [update-alternatives](/man/update-alternatives)(8), [sensible-editor](/man/sensible-editor)(1)

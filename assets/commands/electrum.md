@@ -153,3 +153,13 @@ Electrum was created by **Thomas Voegtlin** and first released in **November 201
 # SEE ALSO
 
 [bitcoin-cli](/man/bitcoin-cli)(1), [trezorctl](/man/trezorctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/spesmilo/electrum)```
+
+```[Homepage](https://electrum.org/)```
+
+```[Documentation](https://electrum.readthedocs.io/)```
+
+<!-- verified: 2026-07-14 -->

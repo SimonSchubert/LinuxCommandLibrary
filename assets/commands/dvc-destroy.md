@@ -35,5 +35,15 @@ This operation is irreversible. Make sure to backup any data or push to remote s
 
 # SEE ALSO
 
-[dvc-init](/man/dvc-init)(1)
+[dvc-init](/man/dvc-init)(1), [dvc](/man/dvc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/iterative/dvc)```
+
+```[Homepage](https://dvc.org/)```
+
+```[Documentation](https://dvc.org/doc/command-reference/destroy)```
+
+<!-- verified: 2026-07-14 -->
 

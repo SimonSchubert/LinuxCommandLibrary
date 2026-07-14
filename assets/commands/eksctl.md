@@ -32,6 +32,14 @@ AWS EKS cluster management CLI
 
 ```eksctl utils write-kubeconfig --cluster [name]```
 
+**Create a cluster from a config file**
+
+```eksctl create cluster -f [cluster.yaml]```
+
+**Upgrade the control plane** to a new Kubernetes version
+
+```eksctl upgrade cluster --name [name] --version [1.31] --approve```
+
 # SYNOPSIS
 
 **eksctl** _command_ [_options_]
@@ -52,6 +60,12 @@ _COMMAND_
 
 **--region** _REGION_
 > AWS region.
+
+**-f**, **--config-file** _FILE_
+> Declarative YAML cluster configuration; most flags have an equivalent field.
+
+**--dry-run**
+> Print the config file eksctl would apply instead of creating anything.
 
 **delete cluster** **--name** _NAME_
 > Delete cluster.
@@ -76,8 +90,16 @@ AWS credentials required. Cluster creation takes time. Incurs AWS charges. Some 
 
 # HISTORY
 
-eksctl was created by **Weaveworks** in partnership with AWS, released in **2018** to simplify EKS cluster management. It became the official CLI tool for EKS.
+eksctl was created by **Weaveworks** in partnership with AWS, released in **2018** to simplify EKS cluster management. It became the official CLI tool for EKS. After Weaveworks wound down in 2024, the project moved to the community-run **eksctl-io** organization, where it continues to be maintained.
 
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [aws](/man/aws)(1), [helm](/man/helm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/eksctl-io/eksctl)```
+
+```[Homepage](https://eksctl.io/)```
+
+<!-- verified: 2026-07-14 -->

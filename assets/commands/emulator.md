@@ -70,6 +70,24 @@ Android SDK emulator for testing apps
 **-http-proxy** _proxy_
 > HTTP proxy address.
 
+**-writable-system**
+> Make the system image writable for this session (needed for `adb remount`).
+
+**-snapshot** _name_
+> Boot from the named snapshot.
+
+**-netdelay** _delay_
+> Simulate network latency (gsm, edge, umts, none).
+
+**-netspeed** _speed_
+> Simulate network throughput (gsm, edge, umts, full).
+
+**-camera-back** _mode_
+> Back camera source: emulated, webcam0, none.
+
+**-verbose**
+> Print detailed startup and initialization messages.
+
 # CONFIGURATION
 
 **~/.android/avd/**
@@ -95,3 +113,11 @@ The Android Emulator was introduced with the first Android SDK by **Google** in 
 # SEE ALSO
 
 [adb](/man/adb)(1), [avdmanager](/man/avdmanager)(1), [sdkmanager](/man/sdkmanager)(1)
+
+# RESOURCES
+
+```[Homepage](https://developer.android.com/studio/run/emulator)```
+
+```[Documentation](https://developer.android.com/studio/run/emulator-commandline)```
+
+<!-- verified: 2026-07-14 -->

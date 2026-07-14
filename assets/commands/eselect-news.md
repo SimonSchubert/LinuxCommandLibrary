@@ -67,4 +67,12 @@ News items are repository-specific announcements from Gentoo developers about im
 
 # SEE ALSO
 
-[eselect](/man/eselect)(1), [emerge](/man/emerge)(1)
+[eselect](/man/eselect)(1), [emerge](/man/emerge)(1), [emaint](/man/emaint)(1)
+
+# RESOURCES
+
+```[Source code](https://gitweb.gentoo.org/proj/eselect.git/)```
+
+```[Documentation](https://wiki.gentoo.org/wiki/Eselect)```
+
+<!-- verified: 2026-07-14 -->

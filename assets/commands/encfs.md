@@ -83,3 +83,9 @@ Leaks file sizes and directory structure. Not resistant to watermarking attacks.
 # SEE ALSO
 
 [gocryptfs](/man/gocryptfs)(1), [cryptsetup](/man/cryptsetup)(1), [fusermount](/man/fusermount)(1), [ecryptfs](/man/ecryptfs)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/vgough/encfs)```
+
+<!-- verified: 2026-07-14 -->

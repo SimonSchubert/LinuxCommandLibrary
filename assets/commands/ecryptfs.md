@@ -83,4 +83,12 @@ eCryptfs was developed by **IBM** and first included in the Linux kernel in **20
 
 # SEE ALSO
 
-[cryptsetup](/man/cryptsetup)(8), [fscrypt](/man/fscrypt)(8), [mount](/man/mount)(8), [keyctl](/man/keyctl)(1)
+[cryptsetup](/man/cryptsetup)(8), [fscrypt](/man/fscrypt)(8), [mount](/man/mount)(8), [keyctl](/man/keyctl)(1), [ecryptfs-setup-private](/man/ecryptfs-setup-private)(1), [ecryptfs-setup-swap](/man/ecryptfs-setup-swap)(1)
+
+# RESOURCES
+
+```[Source code](https://launchpad.net/ecryptfs)```
+
+```[Homepage](https://www.ecryptfs.org/)```
+
+<!-- verified: 2026-07-14 -->

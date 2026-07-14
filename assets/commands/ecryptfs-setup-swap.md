@@ -14,12 +14,15 @@ encrypted swap configuration
 
 # SYNOPSIS
 
-**ecryptfs-setup-swap** [_device_]
+**ecryptfs-setup-swap** [**-f**|**--force**] [_device_]
 
 # PARAMETERS
 
 _DEVICE_
-> Swap partition to encrypt.
+> Swap partition to encrypt. If omitted, every active swap device is used.
+
+**-f**, **--force**
+> Set up encrypted swap even if the device already looks encrypted.
 
 # DESCRIPTION
 
@@ -39,4 +42,12 @@ ecryptfs-setup-swap is part of the **eCryptfs** utilities, addressing the securi
 
 # SEE ALSO
 
-[ecryptfs-setup-private](/man/ecryptfs-setup-private)(1), [cryptsetup](/man/cryptsetup)(8), [swapon](/man/swapon)(8)
+[ecryptfs-setup-private](/man/ecryptfs-setup-private)(1), [ecryptfs](/man/ecryptfs)(7), [cryptsetup](/man/cryptsetup)(8), [swapon](/man/swapon)(8)
+
+# RESOURCES
+
+```[Source code](https://launchpad.net/ecryptfs)```
+
+```[Homepage](https://www.ecryptfs.org/)```
+
+<!-- verified: 2026-07-14 -->

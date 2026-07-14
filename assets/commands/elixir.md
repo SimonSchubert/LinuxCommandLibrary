@@ -55,6 +55,18 @@ _SCRIPT_
 **--cookie** _COOKIE_
 > Set Erlang distribution cookie.
 
+**--no-halt**
+> Do not exit after the script finishes; keep the VM running.
+
+**--erl** _SWITCHES_
+> Pass switches through to the underlying erl command.
+
+**--rpc-eval** _NODE_ _CODE_
+> Evaluate code on a remote running node.
+
+**-v**, **--version**
+> Print the Elixir and Erlang/OTP versions.
+
 **--help**
 > Display help information.
 
@@ -77,3 +89,13 @@ Elixir was created by **José Valim** and released in **2011**, running on the E
 # SEE ALSO
 
 [iex](/man/iex)(1), [mix](/man/mix)(1), [erl](/man/erl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/elixir-lang/elixir)```
+
+```[Homepage](https://elixir-lang.org/)```
+
+```[Documentation](https://hexdocs.pm/elixir/)```
+
+<!-- verified: 2026-07-14 -->

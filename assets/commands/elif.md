@@ -12,6 +12,10 @@ Conditional else-if construct in shell scripts
 
 ```if [ $x -lt 0 ]; then echo "negative"; elif [ $x -eq 0 ]; then echo "zero"; elif [ $x -gt 0 ]; then echo "positive"; fi```
 
+**Branch on a command's exit status** rather than a test
+
+```if command -v nvim; then echo "nvim"; elif command -v vim; then echo "vim"; else echo "none"; fi```
+
 # SYNOPSIS
 
 **if** _condition_; **then** _commands_; **elif** _condition_; **then** _commands_; **fi**
@@ -26,7 +30,7 @@ This construct is fundamental to shell scripting for implementing multi-way bran
 
 # CAVEATS
 
-Shell-specific keyword (not a standalone command). Requires matching fi. Whitespace and syntax must be correct. Test brackets need spaces.
+elif is a shell reserved word, not a program, so `which elif` finds nothing and it cannot be used outside an if block. Each elif needs its own **then**, and the whole chain still ends with a single **fi**. Inside `[ ... ]` every token must be separated by spaces: `[$x -eq 1]` is a syntax error. The condition is a command list, so it branches on the exit status, and any command works there, not just test.
 
 # HISTORY
 
@@ -34,4 +38,4 @@ elif is part of POSIX shell syntax, inherited from the Bourne shell created by *
 
 # SEE ALSO
 
-[if](/man/if)(1), [else](/man/else)(1), [test](/man/test)(1), [bash](/man/bash)(1)
+[if](/man/if)(1), [else](/man/else)(1), [fi](/man/fi)(1), [test](/man/test)(1), [bash](/man/bash)(1)

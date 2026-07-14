@@ -1,56 +1,37 @@
 # TAGLINE
 
-Module manager for Escargot JavaScript engine
+Decode min12xxw printer driver output for debugging
 
 # TLDR
 
-**List Escargot** modules
+**Decode a driver data stream** piped from stdin
 
-```esc-m list```
+```min12xxw < [document.pbm] | esc-m```
 
-**Install module**
+**Inspect a captured** printer data file
 
-```esc-m install [module_name]```
-
-**Remove module**
-
-```esc-m remove [module_name]```
+```esc-m < [captured.prn]```
 
 # SYNOPSIS
 
-**esc-m** _command_ [_options_]
-
-# PARAMETERS
-
-_COMMAND_
-> Operation: list, install, remove.
-
-**list**
-> List installed modules.
-
-**install** _MODULE_
-> Install module.
-
-**remove** _MODULE_
-> Remove module.
-
-**--help**
-> Display help information.
+**esc-m**
 
 # DESCRIPTION
 
-**esc-m** is a module manager for Escargot, a lightweight JavaScript engine. It handles installation and management of JavaScript modules for Escargot-based applications.
+**esc-m** is a small debugging filter shipped with the **min12xxw** printer driver. It reads a driver data stream on standard input and prints a human-readable description of the ESC-M (compressed page) commands it contains to standard output.
 
-The tool provides basic package management functionality for the Escargot ecosystem, enabling modular development on resource-constrained devices where Escargot is commonly used.
+The tool takes no arguments and no options: it is only meant to help developers and users understand what the min12xxw driver emits for a KonicaMinolta PagePro 1200W-class printer, for example when diagnosing a printing problem or verifying the compressed raster output.
 
 # CAVEATS
 
-Limited to Escargot ecosystem. Smaller module selection than npm. Device-specific considerations may apply.
-
-# HISTORY
-
-esc-m supports **Escargot**, a lightweight JavaScript engine developed by **Samsung** for IoT and embedded devices where memory and CPU resources are limited.
+esc-m is a diagnostic aid, not a print command; it does not talk to a printer. It only understands the data format produced by the min12xxw driver, so feeding it arbitrary files produces meaningless output. It is packaged together with min12xxw (Debian's printer-driver-min12xxw) rather than as a standalone tool.
 
 # SEE ALSO
 
-[npm](/man/npm)(1), [node](/man/node)(1)
+[min12xxw](/man/min12xxw)(1)
+
+# RESOURCES
+
+```[Homepage](http://www.hinterbergen.de/mala/min12xxw/)```
+
+<!-- verified: 2026-07-14 -->
