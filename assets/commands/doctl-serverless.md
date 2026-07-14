@@ -28,35 +28,54 @@ manage DigitalOcean Functions serverless computing
 
 ```doctl serverless init --language [js] [path]```
 
+**Redeploy on every change** while developing
+
+```doctl serverless watch [path]```
+
 # SYNOPSIS
 
-**doctl** **serverless** _command_ [_options_]
+**doctl** **serverless** _command_ [_arguments_] [_flags_]
 
 # SUBCOMMANDS
 
-**connect**
-> Connect to namespace.
+**install**
+> Install the serverless support plugin that the other subcommands depend on.
 
-**deploy**
-> Deploy project.
+**upgrade** / **uninstall**
+> Bring the serverless plugin in line with this version of doctl, or remove it.
 
-**undeploy**
-> Remove deployed resources.
+**connect** [_namespace_]
+> Connect local serverless support to a functions namespace.
 
-**functions**
-> Manage functions.
-
-**activations**
-> View function activations.
-
-**init**
-> Initialize new project.
+**namespaces**
+> Create, list, and delete functions namespaces.
 
 **status**
-> Show namespace status.
+> Show whether serverless support is installed and which namespace is connected.
 
-**watch**
-> Watch project for changes.
+**init** _path_
+> Create a functions project directory. **--language** picks the runtime (`js`, `py`, `go`, `php`, ...) and **--overwrite** replaces an existing directory.
+
+**deploy** _path_
+> Deploy a functions project to the connected namespace.
+
+**watch** _path_
+> Watch a project directory and redeploy incrementally on every change.
+
+**undeploy**
+> Remove deployed functions or packages from the namespace.
+
+**get-metadata** _path_
+> Print the metadata of a functions project.
+
+**functions**
+> Work with the functions in the namespace: **list**, **get**, and **invoke**.
+
+**activations**
+> Retrieve activation records: **list**, **get**, **logs**, and **result**.
+
+**key**
+> Manage access keys for functions namespaces.
 
 # DESCRIPTION
 
@@ -66,6 +85,21 @@ The platform supports multiple programming languages including JavaScript (Node.
 
 Serverless computing is ideal for event-driven workloads, API endpoints, background processing, and applications with variable traffic patterns. DigitalOcean Functions handles scaling, load balancing, and infrastructure management automatically.
 
+Under the hood the platform is built on **Apache OpenWhisk**, which is why projects are described by a `project.yml` file and why every invocation produces an *activation* record with its own ID, logs, and result.
+
+# CAVEATS
+
+The serverless subcommands are not part of the doctl binary itself: **doctl serverless install** downloads a plugin first, and **doctl serverless upgrade** must be re-run after doctl is updated or the commands refuse to work. You also have to **connect** to a namespace before deploying, and a namespace belongs to exactly one region. Functions are subject to platform limits on execution time, memory, and payload size, and long-running or stateful workloads belong in App Platform or a Droplet instead.
+
 # SEE ALSO
 
 [doctl](/man/doctl)(1), [doctl-apps](/man/doctl-apps)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/digitalocean/doctl)```
+
+```[Documentation](https://docs.digitalocean.com/reference/doctl/reference/serverless/)```
+
+<!-- verified: 2026-07-14 -->
+

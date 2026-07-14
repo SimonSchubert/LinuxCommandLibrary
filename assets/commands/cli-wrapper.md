@@ -1,69 +1,55 @@
 # TAGLINE
 
-PHP built-in server wrapper for local development
+Debian helper that launches Mono CLI assemblies as normal commands
 
 # TLDR
 
-**Start a local development server** on default port
+Show the wrapper's built-in help (it deliberately ships **no manual page**)
 
-```cli-wrapper serve```
+```cli-wrapper --help```
 
-**Serve on a specific port**
+Run a **CLI/.NET assembly** through the system's CLI runtime
 
-```cli-wrapper serve --port [8080]```
+```cli [path/to/program.exe]```
 
-**Serve with a specific document root**
+Show which runtime **/usr/bin/cli** currently resolves to
 
-```cli-wrapper serve --docroot [public/]```
+```update-alternatives --display cli```
 
-**Run with verbose output**
+Inspect the wrapper itself
 
-```cli-wrapper serve -v```
-
-**Specify PHP binary** to use
-
-```cli-wrapper serve --php [/usr/bin/php8.1]```
+```file $(command -v cli-wrapper)```
 
 # SYNOPSIS
 
-**cli-wrapper** _command_ [_options_]
-
-# PARAMETERS
-
-**serve**
-> Start the built-in PHP development server.
-
-**--port** _PORT_
-> Port number for the server to listen on (default: 8000).
-
-**--docroot** _DIR_
-> Document root directory for serving files.
-
-**--php** _PATH_
-> Path to the PHP binary to use.
-
-**-v**, **--verbose**
-> Enable verbose output for debugging.
-
-**-h**, **--help**
-> Display help information.
+**cli-wrapper** [_options_]
 
 # DESCRIPTION
 
-**cli-wrapper** is a command-line utility designed to simplify running PHP's built-in development server with proper configuration. It is commonly used with PHP frameworks and CMSs that require specific server routing rules.
+**cli-wrapper** is a small helper shipped by the Mono runtime packages on Debian and its derivatives. Debian packages containing a CLI (Common Language Infrastructure, i.e. .NET) assembly do not put the `.exe` file in `/usr/bin` directly. They install a launcher that hands the assembly to whichever CLI runtime the system has selected, so a managed program can be invoked like any other native command.
 
-The tool wraps PHP's built-in server with sensible defaults and additional features for local development environments. It handles routing for applications that use front controllers, manages static file serving, and provides convenient options for common development scenarios.
+The runtime is registered with `update-alternatives` under the generic name **cli**. On a typical system this resolves to **mono**, but any conforming runtime can be substituted without touching the packages that depend on it. That indirection is what allows `apt` to install .NET software independently of the runtime actually present.
 
-cli-wrapper is particularly useful when working with frameworks that need specific request routing, as it can configure the server to pass all requests through the application's entry point while still serving static assets directly.
+The wrapper is minimal and is not meant to be run by hand: it exists so that packaging tools and the alternatives system have a stable target to point at.
 
 # CAVEATS
 
-The built-in PHP server is intended for development only and should not be used in production environments. It handles requests sequentially, making it unsuitable for high-traffic scenarios.
+Debian explicitly marks this command **UNDOCUMENTED**: `man cli-wrapper` only tells you to run it with a help switch and refers you to the Mono documentation. Its behaviour, and even its presence, varies between Mono versions, and it is absent from current `mono-runtime` packages, so it is mostly encountered on older Debian, Ubuntu, and Raspbian installs. Do not script against it; invoke **mono** or the generic **cli** alternative instead.
 
 # HISTORY
 
-cli-wrapper emerged from the PHP development community's need for simpler local server management. It builds upon PHP's built-in web server, introduced in **PHP 5.4** in **2012**, providing a more user-friendly interface for common development workflows.
+The wrapper dates from Debian's CLI policy work in the mid-2000s, when `cli-common` and the Mono packages introduced a runtime-agnostic way to ship .NET assemblies, at a time when Mono, Portable.NET, and other runtimes still competed. Once Mono became the only practical CLI runtime in Debian, the indirection lost most of its purpose and the wrapper was gradually retired.
 
 # SEE ALSO
 
-[php](/man/php)(1), [artisan](/man/artisan)(1), [symfony](/man/symfony)(1)
+[mono](/man/mono)(1), [update-alternatives](/man/update-alternatives)(1), [dotnet](/man/dotnet)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/mono/mono)```
+
+```[Homepage](https://www.mono-project.com)```
+
+```[Documentation](https://www.mono-project.com/docs/)```
+
+<!-- verified: 2026-07-14 -->

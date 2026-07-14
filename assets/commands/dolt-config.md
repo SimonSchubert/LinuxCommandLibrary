@@ -22,44 +22,44 @@ manage repository and global settings
 
 **Set local config**
 
-```dolt config --local --add [key] [value]```
+```dolt config --local --set [key] [value]```
 
 **Unset config value**
 
-```dolt config --unset [key]```
+```dolt config --global --unset [key]```
 
 # SYNOPSIS
 
-**dolt config** [_options_] [_name_] [_value_]
+**dolt config** [**--global**|**--local**] **--list**
+
+**dolt config** [**--global**|**--local**] **--add**|**--set** _name_ _value_
+
+**dolt config** [**--global**|**--local**] **--get** _name_
+
+**dolt config** [**--global**|**--local**] **--unset** _name_...
 
 # PARAMETERS
 
-_NAME_
-> Configuration key name.
-
-_VALUE_
-> Value to set.
-
 **--global**
-> Use global configuration.
+> Operate on the global config, shared by every repository for this user.
 
 **--local**
-> Use repository-local configuration.
+> Operate on the repository-local config.
 
-**--add** _KEY_ _VALUE_
-> Add configuration entry.
+**--set** _name_ _value_
+> Set the value of one or more config parameters.
 
-**--get** _KEY_
-> Get configuration value.
+**--add** _name_ _value_
+> Set the value of one or more config parameters (a synonym for **--set**).
 
-**--unset** _KEY_
-> Remove configuration entry.
+**--get** _name_
+> Print the value of one or more config parameters.
+
+**--unset** _name_...
+> Remove one or more config parameters.
 
 **--list**
-> List all configuration.
-
-**--help**
-> Display help information.
+> List the values of all config parameters.
 
 # DESCRIPTION
 
@@ -67,24 +67,33 @@ _VALUE_
 
 Global configuration applies to all repositories for the user, while local configuration is repository-specific. Local settings override global ones when both exist.
 
-Configuration is stored in files similar to Git's config system, with the same precedence rules for local vs. global settings.
+Configuration mirrors Git's config system, including its precedence rules, but the values are stored as JSON rather than INI. Beyond `user.name` and `user.email`, common keys include `init.defaultbranch`, `sqlserver.global.*` for server defaults, and `metrics.disabled` to opt out of usage reporting.
 
 # CONFIGURATION
 
 **~/.dolt/config_global.json**
-> Global configuration for all Dolt repositories for the current user.
+> Global configuration for all Dolt repositories belonging to the current user.
 
 **.dolt/config.json**
-> Repository-local configuration that overrides global settings.
+> Repository-local configuration, which overrides the global settings.
 
 # CAVEATS
 
-User identity required before committing. Invalid keys may be accepted without warning. Some settings require repository restart to take effect.
+An identity (`user.name` and `user.email`) must be set before the first commit; Dolt will refuse to commit without one. Unknown keys are accepted silently, so a typo in a key name fails quietly rather than erroring. **--local** only works inside a Dolt database directory. Server-related settings under `sqlserver.global.*` are read at startup, so `dolt sql-server` must be restarted for changes to take effect.
 
 # HISTORY
 
-dolt config follows **git config** conventions, providing familiar configuration management for Dolt users coming from Git-based workflows.
+dolt config follows the **git config** conventions closely, deliberately so: Dolt's whole interface is designed to be guessable by anyone who already knows Git, and configuration was one of the first commands ported when Dolt was released in 2019.
 
 # SEE ALSO
 
-[dolt](/man/dolt)(1), [git-config](/man/git-config)(1)
+[dolt](/man/dolt)(1), [dolt-commit](/man/dolt-commit)(1), [git-config](/man/git-config)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/dolthub/dolt)```
+
+```[Documentation](https://www.dolthub.com/docs/cli-reference/cli/)```
+
+<!-- verified: 2026-07-14 -->
+

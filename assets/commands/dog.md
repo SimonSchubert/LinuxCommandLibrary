@@ -30,40 +30,73 @@ command-line DNS client with colorful output
 
 **Use DNS over** TLS
 
-```dog [example.com] --tls @[dns.google]```
+```dog [example.com] --tls @[1.1.1.1]```
+
+**Print only the first result** (script-friendly)
+
+```dog [example.com] --short```
 
 # SYNOPSIS
 
-**dog** [_options_] _domain_ [_type_...] [@_server_]
+**dog** [_options_] [_domain_] [_type_...] [@_server_]
+
+Arguments are order-independent: dog recognises a record type by its name, a nameserver by the leading **@**, and treats anything else as the domain.
 
 # PARAMETERS
 
-_DOMAIN_
-> Domain name to query.
+**-q**, **--query**=_HOST_
+> Host name or domain to query (may also be given positionally).
 
-_TYPE_
-> Record type: A, AAAA, MX, NS, TXT, CNAME, etc.
+**-t**, **--type**=_TYPE_
+> Record type to look up: A, AAAA, CAA, CNAME, HINFO, MX, NS, PTR, SOA, SRV, TXT. Repeatable.
 
-@_SERVER_
-> DNS server to query.
+**-n**, **--nameserver**=_ADDR_
+> Address of the nameserver to send the query to (may also be given as @_ADDR_).
 
-**--json**, **-J**
-> Output as JSON.
+**--class**=_CLASS_
+> Network class of the query: IN (default), CH, or HS.
 
-**--short**
-> Short output format.
+**-U**, **--udp**
+> Send the query over plain UDP (the default).
 
-**--https**
-> Use DNS over HTTPS.
+**-T**, **--tcp**
+> Send the query over TCP.
 
-**--tls**
-> Use DNS over TLS.
+**-S**, **--tls**
+> Send the query using DNS-over-TLS.
 
-**--tcp**
-> Use TCP instead of UDP.
+**-H**, **--https**
+> Send the query using DNS-over-HTTPS.
+
+**--edns**=_SETTING_
+> Control EDNS: **disable**, **hide**, or **show**.
+
+**--txid**=_NUMBER_
+> Use a specific transaction ID instead of a random one.
+
+**-Z**=_TWEAKS_
+> Uncommon protocol-level tweaks, such as **aa**, **ad**, **cd**, or **bufsize=**_N_.
+
+**-1**, **--short**
+> Display nothing but the first result.
+
+**-J**, **--json**
+> Print the response as JSON.
+
+**--color**, **--colour**=_WHEN_
+> When to colourise output: **always**, **automatic**, or **never**.
+
+**--seconds**
+> Print durations as seconds instead of human-readable time units.
+
+**--time**
+> Print the time the response took to arrive.
 
 **--help**
 > Display help information.
+
+**-v**, **--version**
+> Display version information.
 
 # DESCRIPTION
 
@@ -75,12 +108,19 @@ dog provides a simplified interface compared to dig while maintaining power-user
 
 # CAVEATS
 
-Colorized output may need disabling for scripts. DoH/DoT require compatible servers. Some advanced dig features not available. Written in Rust, may need compilation.
+Upstream development has been dormant since **2021** and the project's homepage (dns.lookup.dog) is offline, so distribution packages may lag behind the repository. Colours are disabled automatically when output is not a terminal, but pass **--color=never** to be sure in scripts. DoH and DoT require a resolver that speaks them. dog does not cover every corner of dig: there is no zone transfer (AXFR), no batch `-f` file mode, and no `+trace` equivalent.
 
 # HISTORY
 
-dog was created by **Benjamin Sago** (ogham), also known for creating exa and other modern CLI tools. It was designed as a friendlier alternative to dig with support for modern encrypted DNS protocols.
+dog was created by **Benjamin Sago** (ogham), also known for the `exa` file lister, and first released in **2020**. Written in Rust, it was designed as a friendlier alternative to dig, with colourised output, order-independent arguments, and built-in support for encrypted DNS transports. It inspired **doggo**, a Go reimplementation of the same idea that is more actively maintained.
 
 # SEE ALSO
 
-[dig](/man/dig)(1), [doggo](/man/doggo)(1), [drill](/man/drill)(1)
+[dig](/man/dig)(1), [doggo](/man/doggo)(1), [drill](/man/drill)(1), [nslookup](/man/nslookup)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ogham/dog)```
+
+<!-- verified: 2026-07-14 -->
+
