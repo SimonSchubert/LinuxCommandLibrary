@@ -35,8 +35,8 @@ modules:
 
     sources:
       - type: file
-        url: https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v4.2.2/LinuxCommandLibrary-4.2.2-linux-x86_64.tar.gz
-        sha256: f096b36573157ba02439e938d84d92e50ca66a00819cb1876424badb9b08076d
+        url: https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v4.3.0/LinuxCommandLibrary-4.3.0-linux-x86_64.tar.gz
+        sha256: cf0bb3b4954fd63f7e637b15917321a7acfd523bbf24130ca83ac73d9ce41ac3
         dest-filename: LinuxCommandLibrary-linux-x86_64.tar.gz
         x-checker-data:
           type: json
