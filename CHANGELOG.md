@@ -1,3 +1,17 @@
+## v4.3.0 - 2026-07-14
+
+### Features
+- Added 68 new commands, including Docker and Proxmox container tools, Flux CD, Terraform state commands, and tidy-viewer
+
+### Fixes
+- Fixed broken resource links in new command pages
+
+### Improvements
+- Improved documentation for 197 existing commands
+- Removed deprecated Accompanist libraries
+- Upgraded dependencies, including Android Gradle Plugin 9.3.0
+- Cleaned up Gradle build scripts
+
 ## v4.2.2 — 2026-06-28
 
 ### Features
