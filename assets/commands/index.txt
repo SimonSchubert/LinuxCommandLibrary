@@ -113,11 +113,13 @@ aerc.md
 afconvert.md
 afm2tfm.md
 afmtodit.md
+aftr.md
 ag.md
 agate.md
 age-inspect.md
 age-keygen.md
 age.md
+agent-run.md
 agent-skills-eval.md
 agent-vault.md
 agentbox.md
@@ -974,6 +976,7 @@ cancel.md
 canfield.md
 capabilities.md
 capacitor.md
+capn.md
 caprover.md
 caps-log.md
 capsh.md
@@ -1185,6 +1188,7 @@ claude-pee.md
 claude-pulse.md
 claude.md
 claumon.md
+clawk.md
 clawpatrol.md
 claws.md
 clear.md
@@ -1221,6 +1225,7 @@ cluster.md
 clusterctl.md
 clusterdb.md
 clusterssh.md
+clx.md
 cmake.md
 cmark.md
 cmatrix.md
@@ -1323,6 +1328,7 @@ conda-run.md
 conda-search.md
 conda-update.md
 conda.md
+confessor.md
 confettysh.md
 configuration.nix.md
 configure.md
@@ -1427,6 +1433,7 @@ createuser.md
 crespo.md
 cribbage.md
 crictl.md
+critique.md
 criu.md
 crl.1s.md
 crl2pkcs7.1s.md
@@ -1713,6 +1720,7 @@ dnf.md
 dnf4.md
 dnf5-group.md
 dnf5.md
+dnote.md
 dns53.md
 dnsdomainname.md
 dnsenum.md
@@ -1739,6 +1747,7 @@ docker-buildx-version.md
 docker-commit.md
 docker-compose-down.md
 docker-compose-logs.md
+docker-compose-stop.md
 docker-compose-up.md
 docker-compose.md
 docker-container-commit.md
@@ -1967,6 +1976,7 @@ e2image.md
 e2label.md
 e2undo.md
 e4defrag.md
+earth-game.md
 easside-ng.md
 easytag.md
 ebook-convert.md
@@ -3754,6 +3764,7 @@ kanha.md
 kaniko.md
 kanwas.md
 kaskade.md
+kassette.md
 kastor.md
 kat.md
 katana.md
@@ -4447,6 +4458,7 @@ mimeopen..md
 mimetype.md
 mimic.md
 min12xxw.md
+mindwalk.md
 minecraft.md
 minetest.md
 minetestserver.md
@@ -5499,16 +5511,19 @@ pct-clone.md
 pct-config.md
 pct-console.md
 pct-create.md
+pct-delsnapshot.md
 pct-destroy.md
 pct-enter.md
 pct-exec.md
 pct-list.md
+pct-listsnapshot.md
 pct-mount.md
 pct-move-volume.md
 pct-move_volume.md
 pct-reboot.md
 pct-resize.md
 pct-restore.md
+pct-rollback.md
 pct-set.md
 pct-status.md
 pct-template.md
@@ -6414,6 +6429,7 @@ qt-select.md
 qt.md
 qtchooser.md
 qtcreator.md
+qtgrace.md
 qtile.md
 quarkus.md
 quarto.md
@@ -6528,6 +6544,7 @@ readonly.md
 readpe.md
 realpath.md
 realsr-ncnn-vulkan.md
+reame.md
 reaver.md
 reboot.md
 rec.md
@@ -7018,6 +7035,7 @@ sk.md
 skaffold.md
 skate.md
 skicka.md
+skillfile.md
 skipfish.md
 skopeo.md
 sl.md
