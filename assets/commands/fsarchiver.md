@@ -78,3 +78,11 @@ fsarchiver was created by **Francois Dupoux** as a more flexible alternative to 
 # SEE ALSO
 
 [partclone](/man/partclone)(8), [tar](/man/tar)(1), [dd](/man/dd)(1), [rsync](/man/rsync)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/fdupoux/fsarchiver)```
+
+```[Homepage](https://www.fsarchiver.org/)```
+
+<!-- verified: 2026-07-15 -->

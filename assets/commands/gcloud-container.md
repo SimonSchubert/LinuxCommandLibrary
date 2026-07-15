@@ -70,3 +70,9 @@ gcloud container is part of the **Google Cloud SDK** for managing GKE, Google's 
 # SEE ALSO
 
 [gcloud](/man/gcloud)(1), [kubectl](/man/kubectl)(1), [gcloud-compute](/man/gcloud-compute)(1)
+
+# RESOURCES
+
+```[Documentation](https://cloud.google.com/sdk/gcloud/reference/container)```
+
+<!-- verified: 2026-07-15 -->

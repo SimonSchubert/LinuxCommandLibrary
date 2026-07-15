@@ -78,3 +78,9 @@ func is part of **Azure Functions Core Tools** from Microsoft, enabling local de
 # SEE ALSO
 
 [az](/man/az)(1), [dotnet](/man/dotnet)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Azure/azure-functions-core-tools)```
+
+<!-- verified: 2026-07-15 -->

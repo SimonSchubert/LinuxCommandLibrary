@@ -24,3 +24,9 @@ RAM disks are typically created with size limitations defined when the ramdisk k
 
 [mount](/man/mount)(8), [umount](/man/umount)(8)
 
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+<!-- verified: 2026-07-15 -->
+

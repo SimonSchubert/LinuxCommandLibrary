@@ -70,3 +70,9 @@ fselect was created to provide an intuitive query language for file searching. I
 # SEE ALSO
 
 [find](/man/find)(1), [fd](/man/fd)(1), [locate](/man/locate)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/jhspetersson/fselect)```
+
+<!-- verified: 2026-07-15 -->

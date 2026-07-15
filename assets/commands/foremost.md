@@ -87,3 +87,9 @@ Fragmented files may not recover correctly. Output directory must be empty. Larg
 # SEE ALSO
 
 [scalpel](/man/scalpel)(1), [photorec](/man/photorec)(1), [testdisk](/man/testdisk)(1), [dd](/man/dd)(1)
+
+# RESOURCES
+
+```[Homepage](http://foremost.sourceforge.net/)```
+
+<!-- verified: 2026-07-15 -->

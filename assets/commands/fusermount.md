@@ -70,3 +70,9 @@ Lazy unmount may leave filesystem in use. Regular users need proper permissions.
 # SEE ALSO
 
 [mount](/man/mount)(1), [umount](/man/umount)(1), [sshfs](/man/sshfs)(1), [encfs](/man/encfs)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/libfuse/libfuse)```
+
+<!-- verified: 2026-07-15 -->

@@ -116,3 +116,11 @@ Requires root/sudo for raw socket access on some systems (or setuid installation
 # SEE ALSO
 
 [ping](/man/ping)(8), [nmap](/man/nmap)(1), [hping3](/man/hping3)(8), [mtr](/man/mtr)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/schweikert/fping)```
+
+```[Homepage](https://fping.org/)```
+
+<!-- verified: 2026-07-15 -->

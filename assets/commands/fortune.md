@@ -76,3 +76,9 @@ fortune originated in **Unix Version 7** (1979), inspired by fortune cookies. It
 # SEE ALSO
 
 [cowsay](/man/cowsay)(1), [figlet](/man/figlet)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/shlomif/fortune-mod)```
+
+<!-- verified: 2026-07-15 -->

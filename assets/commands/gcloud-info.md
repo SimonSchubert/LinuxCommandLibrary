@@ -57,3 +57,9 @@ gcloud info is part of the **Google Cloud SDK** diagnostic tools, providing visi
 # SEE ALSO
 
 [gcloud](/man/gcloud)(1), [gcloud-config](/man/gcloud-config)(1)
+
+# RESOURCES
+
+```[Documentation](https://cloud.google.com/sdk/gcloud/reference/info)```
+
+<!-- verified: 2026-07-15 -->

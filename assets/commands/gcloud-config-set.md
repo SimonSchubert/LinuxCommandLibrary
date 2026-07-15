@@ -70,3 +70,9 @@ gcloud config set is the property setter for the **Google Cloud SDK** configurat
 # SEE ALSO
 
 [gcloud-config](/man/gcloud-config)(1), [gcloud](/man/gcloud)(1)
+
+# RESOURCES
+
+```[Documentation](https://cloud.google.com/sdk/gcloud/reference/config/set)```
+
+<!-- verified: 2026-07-15 -->

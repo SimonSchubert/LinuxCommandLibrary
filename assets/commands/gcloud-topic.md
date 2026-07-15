@@ -55,3 +55,9 @@ displays supplementary help topics
 
 [gcloud-help](/man/gcloud-help)(1), [gcloud](/man/gcloud)(1)
 
+# RESOURCES
+
+```[Documentation](https://cloud.google.com/sdk/gcloud/reference/topic)```
+
+<!-- verified: 2026-07-15 -->
+

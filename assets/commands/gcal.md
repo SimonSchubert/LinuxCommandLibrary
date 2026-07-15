@@ -64,3 +64,11 @@ gcal is highly scriptable and can be used for complex date calculations, making 
 
 [cal](/man/cal)(1), [ncal](/man/ncal)(1)
 
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/gcal/)```
+
+```[Documentation](https://www.gnu.org/software/gcal/manual/)```
+
+<!-- verified: 2026-07-15 -->
+

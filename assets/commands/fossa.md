@@ -81,3 +81,11 @@ Requires API key and online connection to Fossa service. Analysis accuracy depen
 
 [snyk](/man/snyk)(1), [npm-audit](/man/npm-audit)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/fossas/fossa-cli)```
+
+```[Documentation](https://docs.fossa.com/)```
+
+<!-- verified: 2026-07-15 -->
+

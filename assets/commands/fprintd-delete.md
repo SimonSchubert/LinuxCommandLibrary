@@ -38,3 +38,9 @@ Deleting fingerprints cannot be undone. Users must re-enroll their fingerprints 
 # SEE ALSO
 
 [fprintd](/man/fprintd)(1), [fprintd-enroll](/man/fprintd-enroll)(1), [fprintd-list](/man/fprintd-list)(1), [fprintd-verify](/man/fprintd-verify)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.freedesktop.org/libfprint/fprintd)```
+
+<!-- verified: 2026-07-15 -->

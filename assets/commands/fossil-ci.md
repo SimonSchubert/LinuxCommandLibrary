@@ -48,3 +48,11 @@ This command is provided for convenience and compatibility with users familiar w
 
 [fossil-commit](/man/fossil-commit)(1), [fossil-add](/man/fossil-add)(1)
 
+# RESOURCES
+
+```[Homepage](https://fossil-scm.org/)```
+
+```[Documentation](https://fossil-scm.org/home/help?cmd=commit)```
+
+<!-- verified: 2026-07-15 -->
+

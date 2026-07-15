@@ -113,3 +113,11 @@ Default behavior varies by system and gcc version. Order of libraries matters fo
 # SEE ALSO
 
 [g++](/man/g++)(1), [clang](/man/clang)(1), [make](/man/make)(1), [gdb](/man/gdb)(1)
+
+# RESOURCES
+
+```[Homepage](https://gcc.gnu.org/)```
+
+```[Documentation](https://gcc.gnu.org/onlinedocs/)```
+
+<!-- verified: 2026-07-15 -->

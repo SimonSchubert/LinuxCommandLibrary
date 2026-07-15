@@ -86,3 +86,11 @@ Requires Java. Complex layouts may need tuning. Memory usage high for large docu
 # SEE ALSO
 
 [xsltproc](/man/xsltproc)(1), [pdflatex](/man/pdflatex)(1), [wkhtmltopdf](/man/wkhtmltopdf)(1), [pandoc](/man/pandoc)(1)
+
+# RESOURCES
+
+```[Homepage](https://xmlgraphics.apache.org/fop/)```
+
+```[Documentation](https://xmlgraphics.apache.org/fop/quickstartguide.html)```
+
+<!-- verified: 2026-07-15 -->

@@ -78,3 +78,9 @@ gallery-dl was created as a counterpart to youtube-dl for images. It provides co
 # SEE ALSO
 
 [youtube-dl](/man/youtube-dl)(1), [wget](/man/wget)(1), [curl](/man/curl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/mikf/gallery-dl)```
+
+<!-- verified: 2026-07-15 -->

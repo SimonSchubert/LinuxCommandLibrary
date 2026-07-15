@@ -107,3 +107,11 @@ AWK was created by Alfred Aho, Peter Weinberger, and Brian Kernighan at Bell Lab
 # SEE ALSO
 
 [awk](/man/awk)(1), [sed](/man/sed)(1), [perl](/man/perl)(1), [cut](/man/cut)(1), [grep](/man/grep)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/gawk/)```
+
+```[Documentation](https://www.gnu.org/software/gawk/manual/)```
+
+<!-- verified: 2026-07-15 -->

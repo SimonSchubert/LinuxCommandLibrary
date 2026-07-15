@@ -48,3 +48,11 @@ fprintd is part of the fprint project, which provides fingerprint reader support
 # SEE ALSO
 
 [fprintd-enroll](/man/fprintd-enroll)(1), [fprintd-list](/man/fprintd-list)(1), [fprintd-verify](/man/fprintd-verify)(1), [fprintd-delete](/man/fprintd-delete)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.freedesktop.org/libfprint/fprintd)```
+
+```[Homepage](https://fprint.freedesktop.org/)```
+
+<!-- verified: 2026-07-15 -->

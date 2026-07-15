@@ -80,3 +80,9 @@ gcov has been part of the GNU Compiler Collection (GCC) since the early 1990s. I
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [lcov](/man/lcov)(1), [gprof](/man/gprof)(1)
+
+# RESOURCES
+
+```[Documentation](https://gcc.gnu.org/onlinedocs/gcc/Gcov.html)```
+
+<!-- verified: 2026-07-15 -->

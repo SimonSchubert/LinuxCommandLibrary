@@ -38,3 +38,9 @@ The command lists image digests that have no associated tags. It does not delete
 
 [gcrane](/man/gcrane)(1), [gcrane-ls](/man/gcrane-ls)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/google/go-containerregistry)```
+
+<!-- verified: 2026-07-15 -->
+

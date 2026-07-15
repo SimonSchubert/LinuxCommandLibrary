@@ -54,3 +54,9 @@ gcloud help is the integrated documentation system for the **Google Cloud SDK**,
 # SEE ALSO
 
 [gcloud](/man/gcloud)(1), [man](/man/man)(1)
+
+# RESOURCES
+
+```[Documentation](https://cloud.google.com/sdk/gcloud/reference/help)```
+
+<!-- verified: 2026-07-15 -->

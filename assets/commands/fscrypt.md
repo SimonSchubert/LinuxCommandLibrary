@@ -78,3 +78,9 @@ fscrypt was developed by Google and first released in **2017** as a userspace to
 # SEE ALSO
 
 [cryptsetup](/man/cryptsetup)(8), [ecryptfs](/man/ecryptfs)(7), [gpg](/man/gpg)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/fscrypt)```
+
+<!-- verified: 2026-07-15 -->

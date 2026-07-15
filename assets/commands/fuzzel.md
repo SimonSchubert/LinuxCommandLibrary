@@ -102,3 +102,9 @@ fuzzel was created by Daniel Eklof (the same developer as foot terminal) and fir
 # SEE ALSO
 
 [rofi](/man/rofi)(1), [dmenu](/man/dmenu)(1), [wofi](/man/wofi)(1), [bemenu](/man/bemenu)(1)
+
+# RESOURCES
+
+```[Source code](https://codeberg.org/dnkl/fuzzel)```
+
+<!-- verified: 2026-07-15 -->

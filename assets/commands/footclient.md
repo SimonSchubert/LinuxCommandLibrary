@@ -87,3 +87,9 @@ Foot was created by Daniel Eklöf as a fast, lightweight terminal emulator desig
 # SEE ALSO
 
 [foot](/man/foot)(1), [alacritty](/man/alacritty)(1), [kitty](/man/kitty)(1), [wezterm](/man/wezterm)(1)
+
+# RESOURCES
+
+```[Source code](https://codeberg.org/dnkl/foot)```
+
+<!-- verified: 2026-07-15 -->

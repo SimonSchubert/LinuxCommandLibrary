@@ -43,3 +43,11 @@ Unlike **fossil forget**, which only works on files not yet committed, **fossil 
 
 [fossil-add](/man/fossil-add)(1), [fossil-forget](/man/fossil-forget)(1)
 
+# RESOURCES
+
+```[Homepage](https://fossil-scm.org/)```
+
+```[Documentation](https://fossil-scm.org/home/help?cmd=rm)```
+
+<!-- verified: 2026-07-15 -->
+

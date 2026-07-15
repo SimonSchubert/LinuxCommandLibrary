@@ -82,3 +82,9 @@ Originally released as **TestRPC**, it was renamed to **ganache-cli** when incor
 
 [geth](/man/geth)(1), [truffle](/man/truffle)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/trufflesuite/ganache)```
+
+<!-- verified: 2026-07-15 -->
+

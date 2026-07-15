@@ -35,3 +35,11 @@ Unlike **fossil rm** or **fossil delete**, forgotten files remain on disk untouc
 
 [fossil-rm](/man/fossil-rm)(1), [fossil-add](/man/fossil-add)(1)
 
+# RESOURCES
+
+```[Homepage](https://fossil-scm.org/)```
+
+```[Documentation](https://fossil-scm.org/home/help?cmd=forget)```
+
+<!-- verified: 2026-07-15 -->
+

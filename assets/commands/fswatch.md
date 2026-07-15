@@ -97,3 +97,9 @@ System limits on inotify watches may affect large directory monitoring (adjustab
 # SEE ALSO
 
 [inotifywait](/man/inotifywait)(1), [entr](/man/entr)(1), [watchexec](/man/watchexec)(1), [watchman](/man/watchman)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/emcrisostomo/fswatch)```
+
+<!-- verified: 2026-07-15 -->

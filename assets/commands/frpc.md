@@ -75,3 +75,11 @@ frpc is part of **frp**, an open source reverse proxy project. It provides the c
 # SEE ALSO
 
 [frps](/man/frps)(1), [frp](/man/frp)(1), [ssh](/man/ssh)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/fatedier/frp)```
+
+```[Documentation](https://gofrp.org/en/docs/)```
+
+<!-- verified: 2026-07-15 -->

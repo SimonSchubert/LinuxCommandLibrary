@@ -63,3 +63,11 @@ fwupdtool is part of the fwupd project, created by Richard Hughes in **2015**. I
 # SEE ALSO
 
 [fwupdmgr](/man/fwupdmgr)(1), [efibootmgr](/man/efibootmgr)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/fwupd/fwupd)```
+
+```[Homepage](https://fwupd.org/)```
+
+<!-- verified: 2026-07-15 -->

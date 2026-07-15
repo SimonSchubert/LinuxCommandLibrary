@@ -76,3 +76,11 @@ fwupdmgr is part of fwupd, created by Richard Hughes in **2015**. The project wa
 # SEE ALSO
 
 [fwupdtool](/man/fwupdtool)(1), [efibootmgr](/man/efibootmgr)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/fwupd/fwupd)```
+
+```[Homepage](https://fwupd.org/)```
+
+<!-- verified: 2026-07-15 -->

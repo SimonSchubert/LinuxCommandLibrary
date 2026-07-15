@@ -67,7 +67,7 @@ fgrep is particularly useful when the search pattern comes from user input or va
 
 # CAVEATS
 
-No regex support by design. Deprecated in favor of grep -F. Multiple patterns require -f option.
+No regex support by design. Deprecated in favor of grep -F; GNU grep 3.8 (2022) and later print a deprecation warning when invoked as fgrep. Multiple patterns require the -f option.
 
 # HISTORY
 
@@ -76,3 +76,9 @@ fgrep (fast grep) originated in **Unix Version 7** as an optimized grep variant 
 # SEE ALSO
 
 [grep](/man/grep)(1), [egrep](/man/egrep)(1), [rg](/man/rg)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/grep/)```
+
+<!-- verified: 2026-07-15 -->

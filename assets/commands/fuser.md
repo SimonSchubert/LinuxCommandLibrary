@@ -101,3 +101,9 @@ The **-k** option kills processes with SIGKILL by default, which cannot be caugh
 # SEE ALSO
 
 [lsof](/man/lsof)(8), [kill](/man/kill)(1), [killall](/man/killall)(1), [ps](/man/ps)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/psmisc/psmisc)```
+
+<!-- verified: 2026-07-15 -->

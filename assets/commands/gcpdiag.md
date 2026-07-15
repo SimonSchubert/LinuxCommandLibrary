@@ -65,3 +65,11 @@ gcpdiag reduces troubleshooting time by proactively identifying issues before th
 
 [gcloud](/man/gcloud)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/GoogleCloudPlatform/gcpdiag)```
+
+```[Homepage](https://gcpdiag.dev/)```
+
+<!-- verified: 2026-07-15 -->
+

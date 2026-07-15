@@ -24,3 +24,11 @@ figlist is particularly useful when exploring different text banner styles or wr
 
 [figlet](/man/figlet)(6), [showfigfonts](/man/showfigfonts)(6)
 
+# RESOURCES
+
+```[Source code](https://github.com/cmatsuoka/figlet)```
+
+```[Homepage](http://www.figlet.org/)```
+
+<!-- verified: 2026-07-15 -->
+

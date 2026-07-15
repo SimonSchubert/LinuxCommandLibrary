@@ -33,3 +33,9 @@ Requires the fprintd daemon to be running. May require appropriate permissions t
 # SEE ALSO
 
 [fprintd](/man/fprintd)(1), [fprintd-enroll](/man/fprintd-enroll)(1), [fprintd-delete](/man/fprintd-delete)(1), [fprintd-verify](/man/fprintd-verify)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.freedesktop.org/libfprint/fprintd)```
+
+<!-- verified: 2026-07-15 -->

@@ -80,3 +80,9 @@ The **exfatprogs** package was created in **2019** as the official Linux userspa
 # SEE ALSO
 
 [fsck](/man/fsck)(8), [mkfs.exfat](/man/mkfs.exfat)(8), [lsblk](/man/lsblk)(8), [mount](/man/mount)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/exfatprogs/exfatprogs)```
+
+<!-- verified: 2026-07-15 -->

@@ -67,3 +67,11 @@ The **fold** command originated in early Unix systems and was standardized in PO
 # SEE ALSO
 
 [fmt](/man/fmt)(1), [pr](/man/pr)(1), [cut](/man/cut)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/coreutils/)```
+
+```[Documentation](https://www.gnu.org/software/coreutils/manual/html_node/fold-invocation.html)```
+
+<!-- verified: 2026-07-15 -->
