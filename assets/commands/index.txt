@@ -132,6 +132,7 @@ aha.md
 ahost.md
 aic.md
 aichat.md
+aict.md
 aide.md
 aider.md
 aim.md
@@ -3013,6 +3014,7 @@ graphsignal-run.md
 graphviz.md
 greed.md
 grep.md
+grepathy.md
 gresource.md
 grex.md
 gri.md
@@ -4478,6 +4480,7 @@ miniserve.md
 minisign.md
 minitest.md
 mirrord.md
+misa.md
 mise.md
 mispipe.md
 mitmdump.md
@@ -6193,6 +6196,7 @@ pueue-switch.md
 pueue.md
 puffin.md
 pug.md
+pullrun.md
 pulsar-admin.md
 pulseaudio-ctl.md
 pulseaudio.md
