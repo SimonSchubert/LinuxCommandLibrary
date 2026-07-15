@@ -32,3 +32,9 @@ Requires appropriate permissions on input device. Device must support force-feed
 # SEE ALSO
 
 [evtest](/man/evtest)(1), [jstest](/man/jstest)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/flosse/linuxconsole)```
+
+<!-- verified: 2026-07-15 -->

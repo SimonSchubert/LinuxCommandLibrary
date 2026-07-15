@@ -84,3 +84,11 @@ fish was created by **Axel Liljencrantz** in 2005 to address shell usability iss
 # SEE ALSO
 
 [bash](/man/bash)(1), [zsh](/man/zsh)(1), [fisher](/man/fisher)(1)
+
+# RESOURCES
+
+```[Homepage](https://fishshell.com/)```
+
+```[Source code](https://github.com/fish-shell/fish-shell)```
+
+<!-- verified: 2026-07-15 -->

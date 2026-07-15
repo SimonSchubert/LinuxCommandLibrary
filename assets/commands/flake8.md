@@ -84,3 +84,11 @@ flake8 was created by **Tarek Ziadé** to unify Python linting tools. It wraps m
 # SEE ALSO
 
 [pylint](/man/pylint)(1), [black](/man/black)(1), [ruff](/man/ruff)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/PyCQA/flake8)```
+
+```[Documentation](https://flake8.pycqa.org/)```
+
+<!-- verified: 2026-07-15 -->

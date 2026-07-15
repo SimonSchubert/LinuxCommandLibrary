@@ -73,3 +73,11 @@ file dates back to **Unix Version 6** (1975). The magic file database approach w
 # SEE ALSO
 
 [stat](/man/stat)(1), [hexdump](/man/hexdump)(1), [identify](/man/identify)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.darwinsys.com/file/)```
+
+```[Source code](https://github.com/file/file)```
+
+<!-- verified: 2026-07-15 -->

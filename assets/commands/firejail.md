@@ -90,3 +90,9 @@ Some applications may not work correctly in sandbox. Profiles in /etc/firejail/.
 # SEE ALSO
 
 [bubblewrap](/man/bubblewrap)(1), [systemd-nspawn](/man/systemd-nspawn)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/netblue30/firejail)```
+
+<!-- verified: 2026-07-15 -->

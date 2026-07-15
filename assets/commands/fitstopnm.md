@@ -34,3 +34,9 @@ The tool reads multi-dimensional image data from FITS files and converts it to t
 
 [pnmtofits](/man/pnmtofits)(1), [pamtofits](/man/pamtofits)(1)
 
+# RESOURCES
+
+```[Homepage](https://netpbm.sourceforge.net/)```
+
+<!-- verified: 2026-07-15 -->
+

@@ -66,3 +66,11 @@ flutterfire was created by the **FlutterFire** team to simplify Firebase integra
 # SEE ALSO
 
 [flutter](/man/flutter)(1), [firebase](/man/firebase)(1)
+
+# RESOURCES
+
+```[Documentation](https://firebase.flutter.dev/)```
+
+```[Source code](https://github.com/invertase/flutterfire_cli)```
+
+<!-- verified: 2026-07-15 -->

@@ -66,3 +66,9 @@ foo2oak is part of **foo2zjs**, supporting printers using Oak Technology's OAKT 
 # SEE ALSO
 
 [foo2oak-wrapper](/man/foo2oak-wrapper)(1), [foo2zjs](/man/foo2zjs)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/OpenPrinting/foo2zjs)```
+
+<!-- verified: 2026-07-15 -->

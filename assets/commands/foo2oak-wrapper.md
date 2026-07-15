@@ -66,3 +66,9 @@ foo2oak-wrapper is part of the **foo2zjs** driver collection, simplifying printi
 # SEE ALSO
 
 [foo2oak](/man/foo2oak)(1), [gs](/man/gs)(1), [lpr](/man/lpr)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/OpenPrinting/foo2zjs)```
+
+<!-- verified: 2026-07-15 -->

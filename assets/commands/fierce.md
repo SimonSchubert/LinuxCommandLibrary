@@ -70,3 +70,9 @@ fierce was created by **RSnake** (Robert Hansen) as a DNS reconnaissance tool fo
 # SEE ALSO
 
 [dig](/man/dig)(1), [nmap](/man/nmap)(1), [dnsenum](/man/dnsenum)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/mschwager/fierce)```
+
+<!-- verified: 2026-07-15 -->

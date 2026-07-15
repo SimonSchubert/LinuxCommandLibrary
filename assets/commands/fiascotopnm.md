@@ -33,3 +33,9 @@ fiascotopnm is useful when working with legacy FIASCO-compressed images or when 
 
 [pnmtofiasco](/man/pnmtofiasco)(1), [pnm](/man/pnm)(5)
 
+# RESOURCES
+
+```[Homepage](https://netpbm.sourceforge.net/)```
+
+<!-- verified: 2026-07-15 -->
+

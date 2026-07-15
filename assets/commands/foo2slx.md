@@ -66,3 +66,9 @@ foo2slx is part of **foo2zjs**, providing Linux support for Lexmark printers usi
 # SEE ALSO
 
 [foo2slx-wrapper](/man/foo2slx-wrapper)(1), [foo2zjs](/man/foo2zjs)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/OpenPrinting/foo2zjs)```
+
+<!-- verified: 2026-07-15 -->

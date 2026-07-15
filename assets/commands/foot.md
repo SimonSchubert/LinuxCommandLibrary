@@ -90,3 +90,9 @@ foot was created by Daniel Eklof and first released in **2020**. It was designed
 # SEE ALSO
 
 [footclient](/man/footclient)(1), [alacritty](/man/alacritty)(1), [kitty](/man/kitty)(1), [wezterm](/man/wezterm)(1)
+
+# RESOURCES
+
+```[Source code](https://codeberg.org/dnkl/foot)```
+
+<!-- verified: 2026-07-15 -->

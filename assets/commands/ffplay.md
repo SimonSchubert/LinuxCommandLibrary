@@ -82,3 +82,11 @@ ffplay was created as a reference player demonstrating ffmpeg's decoding capabil
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [mpv](/man/mpv)(1), [vlc](/man/vlc)(1)
+
+# RESOURCES
+
+```[Homepage](https://ffmpeg.org/)```
+
+```[Documentation](https://ffmpeg.org/ffplay.html)```
+
+<!-- verified: 2026-07-15 -->

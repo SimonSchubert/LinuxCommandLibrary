@@ -20,9 +20,9 @@ ASCII art text banner generator
 
 ```figlet -w [80] "[text]"```
 
-**List available fonts**
+**Preview all available fonts**
 
-```figlet -I 2 | xargs -I {} ls /usr/share/figlet/```
+```showfigfonts```
 
 # SYNOPSIS
 
@@ -75,4 +75,12 @@ figlet (Frank, Ian & Glenn's Letters) was created in 1991 by Glenn Chappell and 
 
 # SEE ALSO
 
-[toilet](/man/toilet)(1), [banner](/man/banner)(1), [cowsay](/man/cowsay)(1)
+[toilet](/man/toilet)(1), [banner](/man/banner)(1), [cowsay](/man/cowsay)(1), [showfigfonts](/man/showfigfonts)(6)
+
+# RESOURCES
+
+```[Homepage](http://www.figlet.org/)```
+
+```[Source code](https://github.com/cmatsuoka/figlet)```
+
+<!-- verified: 2026-07-15 -->

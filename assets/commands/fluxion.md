@@ -60,3 +60,9 @@ Fluxion evolved from earlier WiFi auditing tools, providing an automated framewo
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [wifite](/man/wifite)(1), [hostapd](/man/hostapd)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/FluxionNetwork/fluxion)```
+
+<!-- verified: 2026-07-15 -->

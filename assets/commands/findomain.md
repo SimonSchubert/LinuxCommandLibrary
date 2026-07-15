@@ -83,3 +83,9 @@ API keys needed for some sources. Results depend on available data. Does not per
 # SEE ALSO
 
 [amass](/man/amass)(1), [subfinder](/man/subfinder)(1), [sublist3r](/man/sublist3r)(1), [dnsx](/man/dnsx)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Findomain/Findomain)```
+
+<!-- verified: 2026-07-15 -->

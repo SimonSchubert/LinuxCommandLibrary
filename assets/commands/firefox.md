@@ -90,3 +90,9 @@ Firefox emerged from the **Mozilla** project in 2002 as Phoenix, renamed Firefox
 # SEE ALSO
 
 [chromium](/man/chromium)(1), [google-chrome](/man/google-chrome)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.mozilla.org/firefox/)```
+
+<!-- verified: 2026-07-15 -->

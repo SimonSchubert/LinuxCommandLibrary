@@ -71,3 +71,11 @@ The mask feature was added to **Flatpak** to give users control over automatic u
 # SEE ALSO
 
 [flatpak](/man/flatpak)(1), [flatpak-update](/man/flatpak-update)(1), [flatpak-install](/man/flatpak-install)(1)
+
+# RESOURCES
+
+```[Homepage](https://flatpak.org/)```
+
+```[Source code](https://github.com/flatpak/flatpak)```
+
+<!-- verified: 2026-07-15 -->

@@ -73,3 +73,9 @@ fluxctl was part of **Flux v1** by Weaveworks. Flux pioneered GitOps for Kuberne
 # SEE ALSO
 
 [flux](/man/flux)(1), [kubectl](/man/kubectl)(1), [argocd](/man/argocd)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/fluxcd/flux)```
+
+<!-- verified: 2026-07-15 -->

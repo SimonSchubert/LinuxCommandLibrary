@@ -73,3 +73,11 @@ ffmpeg device support evolved with multimedia hardware APIs. V4L2 support came w
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [ffprobe](/man/ffprobe)(1), [v4l2-ctl](/man/v4l2-ctl)(1)
+
+# RESOURCES
+
+```[Homepage](https://ffmpeg.org/)```
+
+```[Documentation](https://ffmpeg.org/ffmpeg-devices.html)```
+
+<!-- verified: 2026-07-15 -->

@@ -78,3 +78,11 @@ Flow was created at **Facebook** (now Meta) in 2014 to add type safety to their 
 # SEE ALSO
 
 [tsc](/man/tsc)(1), [eslint](/man/eslint)(1), [node](/man/node)(1)
+
+# RESOURCES
+
+```[Homepage](https://flow.org/)```
+
+```[Source code](https://github.com/facebook/flow)```
+
+<!-- verified: 2026-07-15 -->

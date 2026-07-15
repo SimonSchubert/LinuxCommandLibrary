@@ -92,3 +92,11 @@ Part of the **Flatpak** project developed by Alexander Larsson at Red Hat. Flatp
 # SEE ALSO
 
 [flatpak](/man/flatpak)(1), [flatpak-install](/man/flatpak-install)(1), [flatpak-mask](/man/flatpak-mask)(1), [flatpak-remote-info](/man/flatpak-remote-info)(1)
+
+# RESOURCES
+
+```[Homepage](https://flatpak.org/)```
+
+```[Source code](https://github.com/flatpak/flatpak)```
+
+<!-- verified: 2026-07-15 -->

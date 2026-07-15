@@ -106,3 +106,11 @@ The development server is not suitable for production use. Debug mode exposes se
 # SEE ALSO
 
 [gunicorn](/man/gunicorn)(1), [uvicorn](/man/uvicorn)(1), [python](/man/python)(1), [pip](/man/pip)(1), [django-admin](/man/django-admin)(1)
+
+# RESOURCES
+
+```[Documentation](https://flask.palletsprojects.com/)```
+
+```[Source code](https://github.com/pallets/flask)```
+
+<!-- verified: 2026-07-15 -->

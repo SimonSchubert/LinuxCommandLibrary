@@ -66,3 +66,9 @@ foo2hbpl2-wrapper is part of the **foo2zjs** driver collection, providing easy c
 # SEE ALSO
 
 [foo2hbpl2](/man/foo2hbpl2)(1), [gs](/man/gs)(1), [lpr](/man/lpr)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/OpenPrinting/foo2zjs)```
+
+<!-- verified: 2026-07-15 -->

@@ -72,3 +72,9 @@ Flarectl is particularly useful for infrastructure-as-code workflows, CI/CD pipe
 
 [cloudflared](/man/cloudflared)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/cloudflare/cloudflare-go)```
+
+<!-- verified: 2026-07-15 -->
+

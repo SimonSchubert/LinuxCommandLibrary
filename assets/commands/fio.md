@@ -60,14 +60,6 @@ _JOBFILES_
 **--help**
 > Display help information.
 
-# CONFIGURATION
-
-**~/.fio**
-> Global job configuration file for default settings.
-
-**/etc/fio/fio.conf**
-> System-wide configuration file.
-
 # DESCRIPTION
 
 **fio** (Flexible I/O Tester) is a versatile I/O benchmark tool for testing storage performance. It simulates various workload patterns and measures throughput, IOPS, and latency.
@@ -87,3 +79,11 @@ fio was created by **Jens Axboe**, the Linux block layer maintainer. It's the mo
 # SEE ALSO
 
 [dd](/man/dd)(1), [hdparm](/man/hdparm)(1), [ioping](/man/ioping)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/axboe/fio)```
+
+```[Documentation](https://fio.readthedocs.io/)```
+
+<!-- verified: 2026-07-15 -->

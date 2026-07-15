@@ -66,3 +66,9 @@ foo2hp is part of **foo2zjs**, Rick Richardson's open source driver collection. 
 # SEE ALSO
 
 [foo2hp2600-wrapper](/man/foo2hp2600-wrapper)(1), [foo2zjs](/man/foo2zjs)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/OpenPrinting/foo2zjs)```
+
+<!-- verified: 2026-07-15 -->

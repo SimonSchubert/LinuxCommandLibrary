@@ -72,3 +72,9 @@ fisher was created by **Jorge Bucaran** as a minimal, fast plugin manager for fi
 # SEE ALSO
 
 [fish](/man/fish)(1), [omf](/man/omf)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/jorgebucaran/fisher)```
+
+<!-- verified: 2026-07-15 -->

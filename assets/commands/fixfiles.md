@@ -97,3 +97,9 @@ A full filesystem relabel can take significant time. Using -B with onboot then r
 # SEE ALSO
 
 [restorecon](/man/restorecon)(8), [setfiles](/man/setfiles)(8), [chcon](/man/chcon)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/SELinuxProject/selinux)```
+
+<!-- verified: 2026-07-15 -->

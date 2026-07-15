@@ -61,3 +61,9 @@ ffserver was part of ffmpeg from early versions until its **removal in 2018** (f
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [nginx](/man/nginx)(1), [vlc](/man/vlc)(1)
+
+# RESOURCES
+
+```[Homepage](https://ffmpeg.org/)```
+
+<!-- verified: 2026-07-15 -->

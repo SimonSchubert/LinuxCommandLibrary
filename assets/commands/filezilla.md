@@ -16,13 +16,13 @@ graphical FTP/SFTP client
 
 ```filezilla [sftp://user@host]```
 
-**Open site manager**
+**Open the Site Manager on startup**
 
-```filezilla --site [sitename]```
+```filezilla -s```
 
-**Start minimized**
+**Connect to a saved site**
 
-```filezilla -a```
+```filezilla -c [0/sitename]```
 
 # SYNOPSIS
 
@@ -33,22 +33,22 @@ graphical FTP/SFTP client
 _URL_
 > Server URL to connect to.
 
-**--site** _NAME_
-> Connect to saved site.
-
-**-a**, **--admin**
-> Enable admin mode (minimized).
+**-c** _PATH_, **--site** _PATH_
+> Connect to a saved Site Manager entry (path form, e.g. 0/name). Cannot be combined with -s.
 
 **-s**, **--sitemanager**
-> Open Site Manager.
+> Open the Site Manager at startup.
 
-**-l** _PATH_, **--local** _PATH_
-> Local start directory.
+**-a** _PATH_, **--local** _PATH_
+> Set the local start directory.
 
-**--version**
+**-l** _TYPE_, **--logontype** _TYPE_
+> Logon type (ask or interactive) when connecting via an FTP URL.
+
+**-v**, **--version**
 > Display version.
 
-**--help**
+**-h**, **--help**
 > Display help information.
 
 # CONFIGURATION
@@ -78,3 +78,9 @@ FileZilla was created by **Tim Kosse** in 2001, initially as a school project. I
 # SEE ALSO
 
 [sftp](/man/sftp)(1), [ftp](/man/ftp)(1), [lftp](/man/lftp)(1)
+
+# RESOURCES
+
+```[Homepage](https://filezilla-project.org/)```
+
+<!-- verified: 2026-07-15 -->

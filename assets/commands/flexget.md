@@ -93,3 +93,11 @@ FlexGet can run as a daemon for continuous monitoring or execute tasks on-demand
 
 [transmission-cli](/man/transmission-cli)(1)
 
+# RESOURCES
+
+```[Homepage](https://flexget.com/)```
+
+```[Source code](https://github.com/Flexget/Flexget)```
+
+<!-- verified: 2026-07-15 -->
+

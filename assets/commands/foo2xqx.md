@@ -59,3 +59,9 @@ foo2xqx is part of **foo2zjs**, adding support for HP printers using the XQX pro
 # SEE ALSO
 
 [foo2xqx-wrapper](/man/foo2xqx-wrapper)(1), [foo2zjs](/man/foo2zjs)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/OpenPrinting/foo2zjs)```
+
+<!-- verified: 2026-07-15 -->

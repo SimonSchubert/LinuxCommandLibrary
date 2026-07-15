@@ -67,3 +67,9 @@ file-roller is part of the **GNOME desktop** project, providing archive manageme
 # SEE ALSO
 
 [tar](/man/tar)(1), [zip](/man/zip)(1), [7z](/man/7z)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/file-roller)```
+
+<!-- verified: 2026-07-15 -->

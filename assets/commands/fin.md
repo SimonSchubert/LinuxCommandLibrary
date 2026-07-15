@@ -81,3 +81,9 @@ fin is part of **Docksal**, a Docker-based development environment tool. Created
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-compose](/man/docker-compose)(1), [drush](/man/drush)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/docksal/docksal)```
+
+<!-- verified: 2026-07-15 -->

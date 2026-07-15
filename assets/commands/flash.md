@@ -61,3 +61,9 @@ Flash was created by **Bryan Jenks** (tallguyjenks) as a lightweight terminal al
 # SEE ALSO
 
 [fzf](/man/fzf)(1), [bat](/man/bat)(1), [cat](/man/cat)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tallguyjenks/fla.sh)```
+
+<!-- verified: 2026-07-15 -->
