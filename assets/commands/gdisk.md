@@ -69,3 +69,11 @@ gdisk (GPT fdisk) was created by Roderick W. Smith and first released around **2
 # SEE ALSO
 
 [fdisk](/man/fdisk)(8), [parted](/man/parted)(8), [cfdisk](/man/cfdisk)(8), [sgdisk](/man/sgdisk)(8)
+
+# RESOURCES
+
+```[Homepage](https://www.rodsbooks.com/gdisk/)```
+
+```[Source code](https://sourceforge.net/projects/gptfdisk/)```
+
+<!-- verified: 2026-07-15 -->

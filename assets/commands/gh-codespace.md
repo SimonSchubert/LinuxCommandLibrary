@@ -81,3 +81,11 @@ manage cloud-hosted development environments
 
 [gh](/man/gh)(1), [gh-repo](/man/gh-repo)(1)
 
+# RESOURCES
+
+```[Documentation](https://cli.github.com/manual/gh_codespace)```
+
+```[Source code](https://github.com/cli/cli)```
+
+<!-- verified: 2026-07-15 -->
+

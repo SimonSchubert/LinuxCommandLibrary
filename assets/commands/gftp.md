@@ -49,8 +49,14 @@ GTK application requires X/Wayland. FTP credentials sent in cleartext. Some feat
 
 # HISTORY
 
-gfTP was created by **Brian Masney** in 1998 as a GTK-based FTP client for Linux, later adding support for SFTP and other protocols.
+gFTP was created by **Brian Masney** in 1998 as a GTK-based FTP client for Linux, later adding support for SFTP and other protocols.
 
 # SEE ALSO
 
 [ftp](/man/ftp)(1), [sftp](/man/sftp)(1), [filezilla](/man/filezilla)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/masneyb/gftp)```
+
+<!-- verified: 2026-07-15 -->

@@ -77,3 +77,11 @@ gh run was added to the **GitHub CLI** alongside broader GitHub Actions integrat
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-workflow](/man/gh-workflow)(1), [gh-pr-checks](/man/gh-pr-checks)(1)
+
+# RESOURCES
+
+```[Documentation](https://cli.github.com/manual/gh_run)```
+
+```[Source code](https://github.com/cli/cli)```
+
+<!-- verified: 2026-07-15 -->

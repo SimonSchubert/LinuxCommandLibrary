@@ -70,3 +70,11 @@ gdal2tiles.py is part of **GDAL** (Geospatial Data Abstraction Library), providi
 # SEE ALSO
 
 [gdalinfo](/man/gdalinfo)(1), [gdal_translate](/man/gdal_translate)(1)
+
+# RESOURCES
+
+```[Documentation](https://gdal.org/programs/gdal2tiles.html)```
+
+```[Source code](https://github.com/OSGeo/gdal)```
+
+<!-- verified: 2026-07-15 -->

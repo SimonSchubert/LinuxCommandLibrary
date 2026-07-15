@@ -37,7 +37,7 @@ Wake-on-LAN magic packet sender
 > Use broadcast address.
 
 **-D**
-> Debug mode; show packet contents.
+> Increase debug level; show packet contents (repeat for more).
 
 **-p** _password_
 > SecureOn password (6 bytes).
@@ -72,3 +72,9 @@ Wake-on-LAN was developed in **1996** by AMD and HP as part of the Advanced Mana
 # SEE ALSO
 
 [wol](/man/wol)(1), [wakeonlan](/man/wakeonlan)(1), [ethtool](/man/ethtool)(8)
+
+# RESOURCES
+
+```[Documentation](https://manpages.debian.org/etherwake)```
+
+<!-- verified: 2026-07-15 -->

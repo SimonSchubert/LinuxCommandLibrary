@@ -73,3 +73,11 @@ gdalinfo is part of **GDAL** (Geospatial Data Abstraction Library), providing ra
 # SEE ALSO
 
 [gdalwarp](/man/gdalwarp)(1), [gdal_translate](/man/gdal_translate)(1), [ogrinfo](/man/ogrinfo)(1)
+
+# RESOURCES
+
+```[Documentation](https://gdal.org/programs/gdalinfo.html)```
+
+```[Source code](https://github.com/OSGeo/gdal)```
+
+<!-- verified: 2026-07-15 -->

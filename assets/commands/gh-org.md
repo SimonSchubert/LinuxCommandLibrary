@@ -48,3 +48,11 @@ gh org was added to the **GitHub CLI** to provide basic organization commands, c
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-repo](/man/gh-repo)(1)
+
+# RESOURCES
+
+```[Documentation](https://cli.github.com/manual/gh_org)```
+
+```[Source code](https://github.com/cli/cli)```
+
+<!-- verified: 2026-07-15 -->

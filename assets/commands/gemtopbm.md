@@ -24,3 +24,11 @@ This converter is primarily useful for digital preservation, retro computing ent
 
 [pbmtogem](/man/pbmtogem)(1), [gemtopnm](/man/gemtopnm)(1)
 
+# RESOURCES
+
+```[Homepage](https://netpbm.sourceforge.net/)```
+
+```[Documentation](https://netpbm.sourceforge.net/doc/gemtopnm.html)```
+
+<!-- verified: 2026-07-15 -->
+

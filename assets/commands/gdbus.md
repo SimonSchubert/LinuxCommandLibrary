@@ -89,3 +89,11 @@ gdbus was introduced as part of GLib's GDBus implementation in **2010** (GLib 2.
 # SEE ALSO
 
 [dbus-send](/man/dbus-send)(1), [busctl](/man/busctl)(1), [qdbus](/man/qdbus)(1)
+
+# RESOURCES
+
+```[Documentation](https://docs.gtk.org/gio/gdbus.html)```
+
+```[Source code](https://gitlab.gnome.org/GNOME/glib)```
+
+<!-- verified: 2026-07-15 -->

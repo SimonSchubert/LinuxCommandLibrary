@@ -68,3 +68,11 @@ gh secret set is part of the **GitHub CLI's** secret management commands, provid
 # SEE ALSO
 
 [gh-secret](/man/gh-secret)(1), [gh-run](/man/gh-run)(1)
+
+# RESOURCES
+
+```[Documentation](https://cli.github.com/manual/gh_secret_set)```
+
+```[Source code](https://github.com/cli/cli)```
+
+<!-- verified: 2026-07-15 -->

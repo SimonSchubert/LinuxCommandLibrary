@@ -39,3 +39,9 @@ Users rarely need to interact with gdm-binary directly, as system management com
 
 [gdm](/man/gdm)(8), [gdm-restart](/man/gdm-restart)(1)
 
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gdm)```
+
+<!-- verified: 2026-07-15 -->
+

@@ -47,3 +47,9 @@ Hash tables are SSID-specific. Large wordlists create large hash files. Only for
 # SEE ALSO
 
 [cowpatty](/man/cowpatty)(1), [aircrack-ng](/man/aircrack-ng)(1), [hashcat](/man/hashcat)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/joswr1ght/cowpatty)```
+
+<!-- verified: 2026-07-15 -->

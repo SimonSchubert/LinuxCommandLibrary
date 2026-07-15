@@ -96,3 +96,11 @@ gdalwarp is part of **GDAL** (Geospatial Data Abstraction Library), originally d
 # SEE ALSO
 
 [gdal_translate](/man/gdal_translate)(1), [gdalinfo](/man/gdalinfo)(1), [ogr2ogr](/man/ogr2ogr)(1), [gdalbuildvrt](/man/gdalbuildvrt)(1)
+
+# RESOURCES
+
+```[Documentation](https://gdal.org/programs/gdalwarp.html)```
+
+```[Source code](https://github.com/OSGeo/gdal)```
+
+<!-- verified: 2026-07-15 -->

@@ -78,3 +78,11 @@ The extension system was added to **GitHub CLI** in **2021**, enabling community
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-a11y](/man/gh-a11y)(1)
+
+# RESOURCES
+
+```[Documentation](https://cli.github.com/manual/gh_extension)```
+
+```[Source code](https://github.com/cli/cli)```
+
+<!-- verified: 2026-07-15 -->

@@ -70,3 +70,11 @@ getopt dates back to early Unix systems. The enhanced version in util-linux was 
 # SEE ALSO
 
 [getopts](/man/getopts)(1), [bash](/man/bash)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://www.man7.org/linux/man-pages/man1/getopt.1.html)```
+
+<!-- verified: 2026-07-15 -->

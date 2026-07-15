@@ -34,7 +34,7 @@ _PR-NUMBER_
 > Pull request number (defaults to current branch).
 
 **--merge**
-> Use merge commit (default).
+> Create a standard merge commit.
 
 **--squash**
 > Squash commits into one.
@@ -74,3 +74,11 @@ gh pr merge is part of the **GitHub CLI**, implementing all merge strategies ava
 # SEE ALSO
 
 [gh-pr](/man/gh-pr)(1), [gh-pr-checks](/man/gh-pr-checks)(1), [git-merge](/man/git-merge)(1)
+
+# RESOURCES
+
+```[Documentation](https://cli.github.com/manual/gh_pr_merge)```
+
+```[Source code](https://github.com/cli/cli)```
+
+<!-- verified: 2026-07-15 -->

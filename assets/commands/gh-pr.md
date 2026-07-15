@@ -80,3 +80,11 @@ gh pr is a core command in the **GitHub CLI**, providing the pull request workfl
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-pr-merge](/man/gh-pr-merge)(1), [gh-pr-checks](/man/gh-pr-checks)(1)
+
+# RESOURCES
+
+```[Documentation](https://cli.github.com/manual/gh_pr)```
+
+```[Source code](https://github.com/cli/cli)```
+
+<!-- verified: 2026-07-15 -->

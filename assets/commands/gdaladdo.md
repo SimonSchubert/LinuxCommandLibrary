@@ -57,3 +57,11 @@ Overviews can be stored internally in the file or as separate .ovr sidecar files
 
 [gdal_translate](/man/gdal_translate)(1), [gdalinfo](/man/gdalinfo)(1)
 
+# RESOURCES
+
+```[Documentation](https://gdal.org/programs/gdaladdo.html)```
+
+```[Source code](https://github.com/OSGeo/gdal)```
+
+<!-- verified: 2026-07-15 -->
+

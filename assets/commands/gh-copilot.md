@@ -48,7 +48,19 @@ The suggest subcommand generates shell, git, or gh commands based on task descri
 
 This integration brings GitHub Copilot's AI capabilities directly into the terminal workflow, requiring an active GitHub Copilot subscription.
 
+# CAVEATS
+
+Deprecated. The **gh copilot** extension was archived in **October 2025** in favor of the standalone, agentic **GitHub Copilot CLI** (invoked as **copilot**). Existing installations still work, but new users should install the replacement instead.
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-agent](/man/gh-agent)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/github/gh-copilot)```
+
+```[Documentation](https://docs.github.com/copilot/github-copilot-in-the-cli)```
+
+<!-- verified: 2026-07-15 -->
 

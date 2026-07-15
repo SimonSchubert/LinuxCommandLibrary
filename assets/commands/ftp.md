@@ -81,3 +81,9 @@ ftp is one of the oldest Internet protocols, standardized in **RFC 959** (1985).
 # SEE ALSO
 
 [sftp](/man/sftp)(1), [lftp](/man/lftp)(1), [curl](/man/curl)(1)
+
+# RESOURCES
+
+```[Documentation](https://manpages.debian.org/ftp)```
+
+<!-- verified: 2026-07-15 -->

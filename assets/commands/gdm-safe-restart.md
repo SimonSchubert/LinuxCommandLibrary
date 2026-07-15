@@ -22,3 +22,9 @@ If any users are currently logged in, the command will check for active sessions
 
 [gdm-restart](/man/gdm-restart)(1), [gdm-stop](/man/gdm-stop)(1)
 
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gdm)```
+
+<!-- verified: 2026-07-15 -->
+

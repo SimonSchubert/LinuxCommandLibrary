@@ -49,3 +49,11 @@ The command supports adding new SSH keys from public key files, typically genera
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-gpg-key](/man/gh-gpg-key)(1)
+
+# RESOURCES
+
+```[Documentation](https://cli.github.com/manual/gh_ssh-key)```
+
+```[Source code](https://github.com/cli/cli)```
+
+<!-- verified: 2026-07-15 -->

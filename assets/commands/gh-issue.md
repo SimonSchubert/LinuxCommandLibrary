@@ -95,3 +95,11 @@ Integration with pull requests allows linking issues to code changes, with autom
 
 [gh](/man/gh)(1), [gh-pr](/man/gh-pr)(1)
 
+# RESOURCES
+
+```[Documentation](https://cli.github.com/manual/gh_issue)```
+
+```[Source code](https://github.com/cli/cli)```
+
+<!-- verified: 2026-07-15 -->
+

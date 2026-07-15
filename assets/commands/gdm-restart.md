@@ -26,3 +26,9 @@ Restarting GDM will terminate all user sessions. Save your work before running t
 
 [gdm](/man/gdm)(8), [gdm-stop](/man/gdm-stop)(1)
 
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gdm)```
+
+<!-- verified: 2026-07-15 -->
+

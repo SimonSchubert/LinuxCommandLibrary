@@ -74,3 +74,11 @@ getty dates back to **early Unix**, managing teletypes and terminals. Modern Lin
 # SEE ALSO
 
 [agetty](/man/agetty)(1), [login](/man/login)(1), [init](/man/init)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://manpages.debian.org/agetty)```
+
+<!-- verified: 2026-07-15 -->

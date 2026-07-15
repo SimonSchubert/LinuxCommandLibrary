@@ -46,3 +46,11 @@ Capabilities are an alternative to setuid programs, providing more granular priv
 # SEE ALSO
 
 [setcap](/man/setcap)(8), [capabilities](/man/capabilities)(7)
+
+# RESOURCES
+
+```[Source code](https://git.kernel.org/pub/scm/libs/libcap/libcap.git/)```
+
+```[Documentation](https://manpages.debian.org/getcap)```
+
+<!-- verified: 2026-07-15 -->

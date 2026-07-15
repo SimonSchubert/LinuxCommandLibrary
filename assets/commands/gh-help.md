@@ -67,3 +67,11 @@ gh help follows Unix man page conventions, providing comprehensive command docum
 # SEE ALSO
 
 [gh](/man/gh)(1), [man](/man/man)(1)
+
+# RESOURCES
+
+```[Documentation](https://cli.github.com/manual/)```
+
+```[Source code](https://github.com/cli/cli)```
+
+<!-- verified: 2026-07-15 -->

@@ -81,3 +81,11 @@ gh auth is part of the **GitHub CLI**, providing secure authentication workflows
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-config](/man/gh-config)(1)
+
+# RESOURCES
+
+```[Documentation](https://cli.github.com/manual/gh_auth)```
+
+```[Source code](https://github.com/cli/cli)```
+
+<!-- verified: 2026-07-15 -->

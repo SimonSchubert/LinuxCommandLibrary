@@ -71,3 +71,11 @@ gettext was developed by **GNU** for internationalization. It became the standar
 # SEE ALSO
 
 [xgettext](/man/xgettext)(1), [msgfmt](/man/msgfmt)(1), [envsubst](/man/envsubst)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/gettext/)```
+
+```[Documentation](https://www.gnu.org/software/gettext/manual/gettext.html)```
+
+<!-- verified: 2026-07-15 -->

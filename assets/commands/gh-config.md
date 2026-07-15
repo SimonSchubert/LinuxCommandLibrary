@@ -69,3 +69,11 @@ gh config is part of the **GitHub CLI**, providing user customization following 
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-auth](/man/gh-auth)(1)
+
+# RESOURCES
+
+```[Documentation](https://cli.github.com/manual/gh_config)```
+
+```[Source code](https://github.com/cli/cli)```
+
+<!-- verified: 2026-07-15 -->

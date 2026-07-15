@@ -55,3 +55,11 @@ ACLs must be supported by the filesystem (mount with acl option). The default AC
 # SEE ALSO
 
 [setfacl](/man/setfacl)(1), [chmod](/man/chmod)(1)
+
+# RESOURCES
+
+```[Homepage](https://savannah.nongnu.org/projects/acl/)```
+
+```[Documentation](https://manpages.debian.org/getfacl)```
+
+<!-- verified: 2026-07-15 -->

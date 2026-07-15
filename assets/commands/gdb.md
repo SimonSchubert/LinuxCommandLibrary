@@ -86,3 +86,11 @@ gdb was written by **Richard Stallman** in 1986 as part of the GNU Project. It b
 # SEE ALSO
 
 [gcore](/man/gcore)(1), [gdbserver](/man/gdbserver)(1), [lldb](/man/lldb)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/gdb/)```
+
+```[Documentation](https://sourceware.org/gdb/current/onlinedocs/gdb/)```
+
+<!-- verified: 2026-07-15 -->

@@ -80,3 +80,11 @@ gh repo is a core command in the **GitHub CLI**, handling repository operations 
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-pr](/man/gh-pr)(1), [git-clone](/man/git-clone)(1)
+
+# RESOURCES
+
+```[Documentation](https://cli.github.com/manual/gh_repo)```
+
+```[Source code](https://github.com/cli/cli)```
+
+<!-- verified: 2026-07-15 -->

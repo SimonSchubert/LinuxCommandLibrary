@@ -35,4 +35,10 @@ gdmsetup was the traditional GDM configuration tool. Modern GNOME systems integr
 
 # SEE ALSO
 
-[gdm](/man/gdm)(1), [dconf](/man/dconf)(1)
+[gdm](/man/gdm)(8), [dconf](/man/dconf)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gdm)```
+
+<!-- verified: 2026-07-15 -->

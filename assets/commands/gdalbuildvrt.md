@@ -63,3 +63,11 @@ Virtual datasets save disk space and processing time compared to creating physic
 
 [gdaladdo](/man/gdaladdo)(1), [gdal_translate](/man/gdal_translate)(1)
 
+# RESOURCES
+
+```[Documentation](https://gdal.org/programs/gdalbuildvrt.html)```
+
+```[Source code](https://github.com/OSGeo/gdal)```
+
+<!-- verified: 2026-07-15 -->
+

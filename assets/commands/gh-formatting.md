@@ -24,3 +24,11 @@ Understanding formatting options is essential for integrating gh into scripts an
 
 [gh](/man/gh)(1), [gh-help](/man/gh-help)(1)
 
+# RESOURCES
+
+```[Documentation](https://cli.github.com/manual/gh_help_formatting)```
+
+```[Source code](https://github.com/cli/cli)```
+
+<!-- verified: 2026-07-15 -->
+

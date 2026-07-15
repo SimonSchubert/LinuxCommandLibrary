@@ -66,3 +66,9 @@ genhtml is part of **lcov**, the Linux Test Project coverage tool. It provides H
 # SEE ALSO
 
 [lcov](/man/lcov)(1), [gcov](/man/gcov)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/linux-test-project/lcov)```
+
+<!-- verified: 2026-07-15 -->

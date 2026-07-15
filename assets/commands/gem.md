@@ -85,3 +85,13 @@ RubyGems was created in 2004 to standardize Ruby library distribution. It became
 # SEE ALSO
 
 [bundle](/man/bundle)(1), [ruby](/man/ruby)(1), [rvm](/man/rvm)(1)
+
+# RESOURCES
+
+```[Homepage](https://rubygems.org/)```
+
+```[Documentation](https://guides.rubygems.org/command-reference/)```
+
+```[Source code](https://github.com/rubygems/rubygems)```
+
+<!-- verified: 2026-07-15 -->
