@@ -4,25 +4,29 @@ reverse regex matching string generator
 
 # TLDR
 
-**Generate strings from** regex
+**Generate all strings** matching a regex
 
-```exrex '[a-z]{3}'```
+```exrex '[a-z]{2}'```
 
-**Generate all matches**
-
-```exrex -a '[0-9]{2}'```
-
-**Limit output count**
-
-```exrex -c [10] '[a-z]+'```
-
-**Random generation**
+Generate a single **random** matching string
 
 ```exrex -r '[A-Za-z0-9]{8}'```
 
-**Print match count**
+**Count** the number of matching strings
 
-```exrex -n '[a-z]{2}'```
+```exrex -c '[0-9]{3}'```
+
+**Limit** the range size for unbounded quantifiers (+, *)
+
+```exrex -l [5] '[0-9]+'```
+
+Cap the **maximum number** of generated strings
+
+```exrex -m [10] '[a-z]+'```
+
+Use a custom output **delimiter**
+
+```exrex -d ', ' '[ab]{2}'```
 
 # SYNOPSIS
 
@@ -33,20 +37,29 @@ reverse regex matching string generator
 _REGEX_
 > Regular expression pattern to generate strings from.
 
-**-a**, **--all**
-> Generate all possible matching strings.
-
-**-c** _N_, **--count** _N_
-> Limit output to N strings.
-
 **-r**, **--random**
-> Generate random matching string.
+> Return a single random string that matches the regex.
 
-**-n**, **--num**
-> Print count of possible matches.
+**-c**, **--count**
+> Print the number of matching strings instead of the strings.
+
+**-l** _N_, **--limit** _N_
+> Maximum range size for unbounded quantifiers (+, *). Default is 20.
+
+**-m** _N_, **--max-number** _N_
+> Maximum number of strings to generate. Default is -1 (all).
+
+**-o** _FILE_, **--output** _FILE_
+> Write output to FILE instead of standard output.
 
 **-d** _DELIM_, **--delimiter** _DELIM_
 > Output delimiter (default newline).
+
+**-s**, **--simplify**
+> Simplify the regular expression.
+
+**-v**, **--verbose**
+> Verbose mode.
 
 **--help**
 > Display help information.
@@ -70,3 +83,9 @@ exrex is a Python-based regex string generator created for testing and security 
 # SEE ALSO
 
 [grep](/man/grep)(1), [sed](/man/sed)(1), [python](/man/python)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/asciimoo/exrex)```
+
+<!-- verified: 2026-07-15 -->

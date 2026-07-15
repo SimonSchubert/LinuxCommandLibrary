@@ -36,3 +36,9 @@ Slackware Linux specific. Extracts to current directory, not system paths. Does 
 # SEE ALSO
 
 [installpkg](/man/installpkg)(8), [removepkg](/man/removepkg)(8), [upgradepkg](/man/upgradepkg)(8), [makepkg](/man/makepkg)(8)
+
+# RESOURCES
+
+```[Homepage](http://www.slackware.com/)```
+
+<!-- verified: 2026-07-15 -->

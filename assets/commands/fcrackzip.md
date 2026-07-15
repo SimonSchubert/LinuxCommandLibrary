@@ -71,3 +71,11 @@ Use only on archives you own or have permission to access. Brute-force is slow f
 # SEE ALSO
 
 [zip](/man/zip)(1), [unzip](/man/unzip)(1), [john](/man/john)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/hyc/fcrackzip)```
+
+```[Homepage](http://oldhome.schmorp.de/marc/fcrackzip.html)```
+
+<!-- verified: 2026-07-15 -->

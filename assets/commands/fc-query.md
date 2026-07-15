@@ -29,14 +29,14 @@ extract font file information
 _FONT-FILE_
 > Font file to query (.ttf, .otf, .ttc).
 
-**--format** _FORMAT_
+**-f**, **--format** _FORMAT_
 > Output format string.
 
-**--index** _N_
-> Font index in collection.
+**-i**, **--index** _N_
+> Only query the face at the given index of each file.
 
-**-v**, **--verbose**
-> Verbose output.
+**-b**, **--ignore-blanks**
+> Ignore blank glyphs when computing supported languages.
 
 **--help**
 > Display help information.
@@ -60,3 +60,11 @@ fc-query is part of **fontconfig**, the font configuration library created by Ke
 # SEE ALSO
 
 [fc-scan](/man/fc-scan)(1), [fc-list](/man/fc-list)(1), [fc-cache](/man/fc-cache)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.freedesktop.org/fontconfig/fontconfig)```
+
+```[Homepage](https://www.freedesktop.org/wiki/Software/fontconfig/)```
+
+<!-- verified: 2026-07-15 -->

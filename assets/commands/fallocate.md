@@ -58,3 +58,11 @@ Not all filesystems support all operations. The collapse operation requires file
 # SEE ALSO
 
 [truncate](/man/truncate)(1), [dd](/man/dd)(1), [fstrim](/man/fstrim)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man1/fallocate.1.html)```
+
+<!-- verified: 2026-07-15 -->

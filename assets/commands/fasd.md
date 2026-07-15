@@ -100,3 +100,9 @@ Requires shell integration. Database builds over time. Patterns are substrings. 
 # SEE ALSO
 
 [z](/man/z)(1), [autojump](/man/autojump)(1), [zoxide](/man/zoxide)(1), [fzf](/man/fzf)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/clvv/fasd)```
+
+<!-- verified: 2026-07-15 -->

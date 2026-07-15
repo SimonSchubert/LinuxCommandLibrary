@@ -22,33 +22,42 @@ Simulate how program would act **next Friday**
 
 # DESCRIPTION
 
-**faketime** runs a command with a fake system time by intercepting time-related system calls. Useful for testing time-dependent software, debugging, and simulating future or past conditions.
+**faketime** runs a command with a fake system time by intercepting time-related system calls. It uses LD_PRELOAD to wrap functions like time(), gettimeofday(), and clock_gettime(), returning a user-specified time instead of the real system time.
 
-Uses LD_PRELOAD to intercept calls without modifying the actual system time.
+This is useful for testing time-dependent software, debugging date-related bugs, simulating future or past conditions, and testing expiration or scheduling logic. The timestamp accepts absolute dates ("YYYY-MM-DD hh:mm:ss") as well as natural-language and relative descriptions parsed via GNU date.
+
+Giving an absolute timestamp freezes the clock at that instant: repeated time queries return the same value. The advanced format (**-f**) instead lets time advance, run faster or slower, or step forward on each call.
 
 # PARAMETERS
 
 _timestamp_
-> Time specification (natural language or specific date)
+> Time specification (absolute date, natural language, or, with -f, an advanced offset/speed spec).
 
 _command_
-> Command to run with faked time
+> Command to run with the faked time.
 
 **-f**
-> Freeze time (don't advance)
+> Use the advanced timestamp specification format (offsets, per-call increments, and clock-speed multipliers).
 
-# DESCRIPTION
+**-m**
+> Use the multi-threading variant of libfaketime.
 
-**faketime** runs a command with a fake system time by intercepting time-related system calls. It uses LD_PRELOAD to wrap system calls like time(), gettimeofday(), and clock_gettime(), returning user-specified times instead of actual system time.
+**--exclude-monotonic**
+> Do not fake CLOCK_MONOTONIC queries.
 
-This is useful for testing time-dependent software behavior, debugging date-related bugs, simulating future or past conditions, and testing expiration or scheduling logic. The tool accepts both absolute timestamps and relative offsets using natural language.
-
-The freeze option (-f) prevents time from advancing, useful for testing code that expects a specific moment rather than progressing time.
+**--date-prog** _path_
+> Use an alternate GNU date-compatible program to parse the timestamp.
 
 # CAVEATS
 
-Uses LD_PRELOAD so may not work with statically linked binaries or setuid programs. Time format is flexible and accepts natural language descriptions.
+Uses LD_PRELOAD, so it may not work with statically linked binaries or setuid programs. To freeze time, give an absolute timestamp; to let it advance or scale, use the -f advanced format.
 
 # SEE ALSO
 
 [date](/man/date)(1), [timedatectl](/man/timedatectl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/wolfcw/libfaketime)```
+
+<!-- verified: 2026-07-15 -->

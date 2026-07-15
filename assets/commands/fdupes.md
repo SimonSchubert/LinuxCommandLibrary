@@ -100,3 +100,9 @@ Byte-by-byte comparison can be slow for large files. Delete operations are irrev
 # SEE ALSO
 
 [rmlint](/man/rmlint)(1), [find](/man/find)(1), [md5sum](/man/md5sum)(1), [diff](/man/diff)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/adrianlopezroche/fdupes)```
+
+<!-- verified: 2026-07-15 -->

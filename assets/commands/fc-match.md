@@ -58,4 +58,12 @@ Pattern syntax can be complex. Font matching rules depend on fontconfig configur
 
 # SEE ALSO
 
-[fc-list](/man/fc-list)(1), [fc-cache](/man/fc-cache)(1)
+[fc-list](/man/fc-list)(1), [fc-cache](/man/fc-cache)(1), [fc-pattern](/man/fc-pattern)(1), [fc-query](/man/fc-query)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.freedesktop.org/fontconfig/fontconfig)```
+
+```[Homepage](https://www.freedesktop.org/wiki/Software/fontconfig/)```
+
+<!-- verified: 2026-07-15 -->

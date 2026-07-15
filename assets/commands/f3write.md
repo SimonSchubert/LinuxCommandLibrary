@@ -80,3 +80,9 @@ f3write was created by Michel Machado as part of the F3 (Fight Flash Fraud) suit
 # SEE ALSO
 
 [f3read](/man/f3read)(1), [f3probe](/man/f3probe)(1), [f3fix](/man/f3fix)(1), [dd](/man/dd)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/AltraMayor/f3)```
+
+<!-- verified: 2026-07-15 -->

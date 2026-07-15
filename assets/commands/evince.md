@@ -58,3 +58,11 @@ GNOME desktop application. Some features require poppler library. Large document
 # SEE ALSO
 
 [okular](/man/okular)(1), [zathura](/man/zathura)(1), [xdg-open](/man/xdg-open)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/evince)```
+
+```[Homepage](https://apps.gnome.org/Evince/)```
+
+<!-- verified: 2026-07-15 -->

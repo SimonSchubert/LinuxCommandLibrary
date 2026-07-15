@@ -1,58 +1,42 @@
 # TAGLINE
 
-UTP protocol diagnostic tool
+exchange files with an EuroBraille Clio terminal
 
 # TLDR
 
-**Show UTP socket** statistics
+**Start** the interactive file transfer session
 
-```eutp stats```
-
-**List connections**
-
-```eutp list```
-
-**Trace connection**
-
-```eutp trace [socket_id]```
+```eutp```
 
 # SYNOPSIS
 
-**eutp** _command_ [_options_]
-
-# PARAMETERS
-
-_COMMAND_
-> Operation: stats, list, trace.
-
-**stats**
-> Show socket statistics.
-
-**list**
-> List active connections.
-
-**trace** _ID_
-> Trace specific connection.
-
-**--help**
-> Display help information.
+**eutp**
 
 # DESCRIPTION
 
-**eutp** is a diagnostic tool for UTP (uTorrent Transport Protocol) connections. UTP is a UDP-based transport protocol designed for BitTorrent that minimizes impact on other network traffic.
+**eutp** lets you exchange files with a Clio terminal from EuroBraille. It is part of the **brltty** braille display driver package.
 
-The tool provides visibility into UTP socket state, connection statistics, and performance metrics. It's useful for debugging libutp-based applications and understanding UTP behavior.
+The program is fully interactive and menu driven: it prompts you to choose the transfer direction (send files to the terminal or receive files from it), the file type, and the files to transfer. There are no command-line options.
 
-UTP implements congestion control similar to TCP but over UDP, making this tool relevant for BitTorrent clients and similar applications.
+When receiving files, be careful with shell special characters. Wildcards such as **\*** and **.** are interpreted by the terminal's file matching, so protect them with single quotes or backslashes to avoid unexpected results.
+
+# PARAMETERS
+
+_None._
+> eutp takes no command-line options; all interaction happens through its menus.
 
 # CAVEATS
 
-Limited to UTP protocol diagnostics. Requires applications using libutp. May need root access for some operations.
-
-# HISTORY
-
-eutp supports the UTP protocol developed by **BitTorrent, Inc.** as an alternative to TCP that's more friendly to other network traffic, implemented in the libutp library.
+Requires an EuroBraille Clio terminal connected to the system. Returns 1 on error. Special characters in file names should be quoted to prevent shell or terminal expansion.
 
 # SEE ALSO
 
-[ss](/man/ss)(8), [netstat](/man/netstat)(8)
+[brltty](/man/brltty)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/brltty/brltty)```
+
+```[Homepage](https://brltty.app/)```
+
+<!-- verified: 2026-07-15 -->

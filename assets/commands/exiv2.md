@@ -42,7 +42,7 @@ _FILES_
 > Image files to process.
 
 **-pa**
-> Print all Exif tags.
+> Print all metadata (Exif, IPTC, and XMP tags).
 
 **-pi**
 > Print IPTC tags.
@@ -84,3 +84,11 @@ exiv2 is an open-source project providing a library and command-line tool for Ex
 # SEE ALSO
 
 [exiftool](/man/exiftool)(1), [identify](/man/identify)(1), [jhead](/man/jhead)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Exiv2/exiv2)```
+
+```[Homepage](https://exiv2.org/)```
+
+<!-- verified: 2026-07-15 -->

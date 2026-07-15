@@ -102,3 +102,9 @@ Some modules require specific system support or libraries. GPU detection may nee
 # SEE ALSO
 
 [neofetch](/man/neofetch)(1), [screenfetch](/man/screenfetch)(1), [inxi](/man/inxi)(1), [hwinfo](/man/hwinfo)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/fastfetch-cli/fastfetch)```
+
+<!-- verified: 2026-07-15 -->

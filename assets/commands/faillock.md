@@ -57,3 +57,11 @@ Part of the Linux-PAM package. Records stored in /var/run/faillock/ by default. 
 # SEE ALSO
 
 [pam_faillock](/man/pam_faillock)(8), [pam](/man/pam)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/linux-pam/linux-pam)```
+
+```[Homepage](http://www.linux-pam.org/)```
+
+<!-- verified: 2026-07-15 -->

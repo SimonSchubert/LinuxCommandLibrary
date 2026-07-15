@@ -16,9 +16,9 @@ fast counterfeit flash memory detector
 
 ```sudo f3probe --destructive --min-memory [/dev/sdX]```
 
-**Probe without restoring data** (faster, data lost)
+**Probe using a specific reset method**
 
-```sudo f3probe --destructive -n [/dev/sdX]```
+```sudo f3probe --destructive --reset-type=[2] [/dev/sdX]```
 
 **Force a specific block size**
 
@@ -70,3 +70,9 @@ F3 (Fight Flash Fraud) was created by Michel Machado to combat the widespread pr
 # SEE ALSO
 
 [f3write](/man/f3write)(1), [f3read](/man/f3read)(1), [f3fix](/man/f3fix)(1), [lsblk](/man/lsblk)(8), [badblocks](/man/badblocks)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/AltraMayor/f3)```
+
+<!-- verified: 2026-07-15 -->

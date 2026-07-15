@@ -49,4 +49,10 @@ f3fix is part of the **F3** (Fight Flash Fraud) project created to combat counte
 
 # SEE ALSO
 
-[f3probe](/man/f3probe)(1), [f3read](/man/f3read)(1), [fdisk](/man/fdisk)(1)
+[f3probe](/man/f3probe)(1), [f3read](/man/f3read)(1), [f3write](/man/f3write)(1), [fdisk](/man/fdisk)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/AltraMayor/f3)```
+
+<!-- verified: 2026-07-15 -->

@@ -76,3 +76,11 @@ feed2exec was written by **Antoine Beaupré** as a flexible replacement for rss2
 # SEE ALSO
 
 [rss2email](/man/rss2email)(1), [newsboat](/man/newsboat)(1), [curl](/man/curl)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/anarcat/feed2exec)```
+
+```[Documentation](https://feed2exec.readthedocs.io/)```
+
+<!-- verified: 2026-07-15 -->

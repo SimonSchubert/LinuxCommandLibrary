@@ -70,4 +70,12 @@ Requires root privileges. Must run from /etc directory for init. Integrates with
 
 # SEE ALSO
 
-[git](/man/git)(1)
+[git](/man/git)(1), [cron](/man/cron)(8)
+
+# RESOURCES
+
+```[Source code](https://git.joeyh.name/index.cgi/etckeeper.git/)```
+
+```[Homepage](https://etckeeper.branchable.com/)```
+
+<!-- verified: 2026-07-15 -->

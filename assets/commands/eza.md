@@ -84,4 +84,12 @@ eza is a maintained fork of **exa**, which was unmaintained since 2023. It conti
 
 # SEE ALSO
 
-[ls](/man/ls)(1), [tree](/man/tree)(1), [lsd](/man/lsd)(1)
+[ls](/man/ls)(1), [tree](/man/tree)(1), [lsd](/man/lsd)(1), [exa](/man/exa)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/eza-community/eza)```
+
+```[Homepage](https://eza.rocks/)```
+
+<!-- verified: 2026-07-15 -->

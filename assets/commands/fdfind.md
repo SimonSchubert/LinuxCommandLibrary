@@ -81,4 +81,10 @@ Uses regex patterns by default, not glob syntax. Ignores hidden and .gitignore f
 
 # SEE ALSO
 
-[find](/man/find)(1), [ripgrep](/man/ripgrep)(1)
+[fd](/man/fd)(1), [find](/man/find)(1), [ripgrep](/man/ripgrep)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/sharkdp/fd)```
+
+<!-- verified: 2026-07-15 -->

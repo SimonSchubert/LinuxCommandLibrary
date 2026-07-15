@@ -54,3 +54,9 @@ Only works with ext3/ext4 filesystems. Unmount partition before recovery for bes
 # SEE ALSO
 
 [testdisk](/man/testdisk)(8), [photorec](/man/photorec)(8), [debugfs](/man/debugfs)(8)
+
+# RESOURCES
+
+```[Homepage](http://extundelete.sourceforge.net/)```
+
+<!-- verified: 2026-07-15 -->

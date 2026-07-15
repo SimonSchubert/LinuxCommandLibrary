@@ -75,3 +75,9 @@ faillog is part of the **shadow-utils** package, providing login failure trackin
 # SEE ALSO
 
 [lastlog](/man/lastlog)(1), [pam_tally2](/man/pam_tally2)(8), [login](/man/login)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/shadow-maint/shadow)```
+
+<!-- verified: 2026-07-15 -->

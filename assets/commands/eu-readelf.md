@@ -8,9 +8,21 @@ Display **all** information from ELF file
 
 ```eu-readelf [-a|--all] [path/to/file]```
 
+Display the ELF **file header**
+
+```eu-readelf [-h|--file-header] [path/to/file]```
+
+Display **section** headers
+
+```eu-readelf [-S|--section-headers] [path/to/file]```
+
+Display the **symbol** table
+
+```eu-readelf [-s|--symbols] [path/to/file]```
+
 Display **NOTE** segments/sections
 
-```eu-readelf [-n|--notes] [.note.ABI-tag] [path/to/file]```
+```eu-readelf [-n|--notes] [path/to/file]```
 
 # SYNOPSIS
 
@@ -49,3 +61,11 @@ Part of elfutils package. Output format differs slightly from GNU readelf. Used 
 # SEE ALSO
 
 [readelf](/man/readelf)(1), [objdump](/man/objdump)(1), [nm](/man/nm)(1)
+
+# RESOURCES
+
+```[Source code](https://sourceware.org/git/?p=elfutils.git)```
+
+```[Homepage](https://sourceware.org/elfutils/)```
+
+<!-- verified: 2026-07-15 -->

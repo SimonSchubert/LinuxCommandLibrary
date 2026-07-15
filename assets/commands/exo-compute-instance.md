@@ -75,5 +75,13 @@ Commands support all instance operations including resizing, rebooting, and atta
 
 # SEE ALSO
 
-[exo](/man/exo)(1), [exo-compute-block-storage](/man/exo-compute-block-storage)(1)
+[exo](/man/exo)(1), [exo-compute](/man/exo-compute)(1), [exo-compute-block-storage](/man/exo-compute-block-storage)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/exoscale/cli)```
+
+```[Homepage](https://www.exoscale.com/)```
+
+<!-- verified: 2026-07-15 -->
 

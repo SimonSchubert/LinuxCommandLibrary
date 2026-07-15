@@ -100,3 +100,11 @@ Complex configuration syntax. Requires careful security setup. Port 25 often blo
 # SEE ALSO
 
 [sendmail](/man/sendmail)(1), [postfix](/man/postfix)(1), [mailq](/man/mailq)(1), [mutt](/man/mutt)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Exim/exim)```
+
+```[Homepage](https://www.exim.org/)```
+
+<!-- verified: 2026-07-15 -->

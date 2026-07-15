@@ -86,3 +86,11 @@ Express was created by **TJ Holowaychuk** in **2010** and became the most popula
 # SEE ALSO
 
 [node](/man/node)(1), [npm](/man/npm)(1), [nodemon](/man/nodemon)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/expressjs/generator)```
+
+```[Homepage](https://expressjs.com/)```
+
+<!-- verified: 2026-07-15 -->

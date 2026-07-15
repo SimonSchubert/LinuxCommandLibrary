@@ -80,3 +80,9 @@ Voice quality varies. Large texts may be slow. Some voices require additional do
 # SEE ALSO
 
 [espeak](/man/espeak)(1), [pico2wave](/man/pico2wave)(1), [say](/man/say)(1), [flite](/man/flite)(1)
+
+# RESOURCES
+
+```[Homepage](http://www.cstr.ed.ac.uk/projects/festival/)```
+
+<!-- verified: 2026-07-15 -->

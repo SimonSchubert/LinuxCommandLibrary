@@ -74,9 +74,15 @@ Elixir version manager
 **~/.exenv/version**
 > Global default Elixir version.
 
-**.elixir-version**
-> Directory-local Elixir version file.
+**.exenv-version**
+> Directory-local Elixir version file, written by `exenv local`.
 
 # SEE ALSO
 
-[elixir](/man/elixir)(1), [mix](/man/mix)(1)
+[elixir](/man/elixir)(1), [mix](/man/mix)(1), [rbenv](/man/rbenv)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/mururu/exenv)```
+
+<!-- verified: 2026-07-15 -->

@@ -4,29 +4,33 @@ test data generator for development
 
 # TLDR
 
+**List available generators**
+
+```fakedata --generators```
+
 **Generate fake names**
 
 ```fakedata name```
 
-**Generate multiple records**
+**Combine generators** (one column each)
+
+```fakedata name email```
+
+**Generate a specific number of rows**
 
 ```fakedata -l [10] name email```
 
-**Generate with custom format**
+**Output as CSV**
 
-```fakedata --format "{{name}},{{email}}"```
+```fakedata -f csv name email```
 
-**Generate specific type**
+**Output as SQL INSERT statements**
 
-```fakedata email phone address```
+```fakedata -f sql name email```
 
-**Output as JSON**
+**Generate from a custom template** (generator names capitalized)
 
-```fakedata -f json name email```
-
-**Generate with seed**
-
-```fakedata --seed [42] name```
+```echo "{{Name}},{{Email}}" | fakedata```
 
 # SYNOPSIS
 
@@ -35,19 +39,13 @@ test data generator for development
 # PARAMETERS
 
 **-l**, **--limit** _count_
-> Number of records.
+> Number of rows to generate (default 10).
 
 **-f**, **--format** _format_
-> Output format (csv, json, tab).
-
-**--seed** _seed_
-> Random seed for reproducibility.
-
-**-c**, **--constraint** _constraint_
-> Add constraints.
+> Output format: csv, tab, or sql.
 
 **--generators**
-> List available generators.
+> List all available generators and exit.
 
 # DESCRIPTION
 
@@ -60,4 +58,10 @@ Generators can be combined in a single invocation, and the seed option enables r
 # SEE ALSO
 
 [faker](/man/faker)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/lucapette/fakedata)```
+
+<!-- verified: 2026-07-15 -->
 

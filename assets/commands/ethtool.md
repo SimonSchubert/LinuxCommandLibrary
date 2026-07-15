@@ -80,3 +80,11 @@ Not all options are supported by all drivers. Changing settings may temporarily 
 # SEE ALSO
 
 [ip](/man/ip)(8), [mii-tool](/man/mii-tool)(8), [tc](/man/tc)(8)
+
+# RESOURCES
+
+```[Source code](https://git.kernel.org/pub/scm/network/ethtool/ethtool.git/)```
+
+```[Homepage](https://www.kernel.org/pub/software/network/ethtool/)```
+
+<!-- verified: 2026-07-15 -->

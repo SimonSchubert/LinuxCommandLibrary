@@ -74,3 +74,11 @@ SKS is Exoscale's managed Kubernetes offering, providing CNCF-certified Kubernet
 # SEE ALSO
 
 [exo](/man/exo)(1), [exo-compute](/man/exo-compute)(1), [kubectl](/man/kubectl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/exoscale/cli)```
+
+```[Homepage](https://www.exoscale.com/)```
+
+<!-- verified: 2026-07-15 -->

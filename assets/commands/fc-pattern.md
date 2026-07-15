@@ -32,7 +32,7 @@ parse and display fontconfig patterns
 **-c**, **--config**
 > Apply config substitutions.
 
-**--format** _format_
+**-f**, **--format** _format_
 > Custom output format.
 
 # DESCRIPTION
@@ -47,4 +47,12 @@ Pattern syntax can be complex. Output format requires understanding fontconfig i
 
 # SEE ALSO
 
-[fc-match](/man/fc-match)(1), [fc-list](/man/fc-list)(1)
+[fc-match](/man/fc-match)(1), [fc-list](/man/fc-list)(1), [fc-query](/man/fc-query)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.freedesktop.org/fontconfig/fontconfig)```
+
+```[Homepage](https://www.freedesktop.org/wiki/Software/fontconfig/)```
+
+<!-- verified: 2026-07-15 -->

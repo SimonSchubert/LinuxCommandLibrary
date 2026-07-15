@@ -91,3 +91,9 @@ exa was created by **Benjamin Sago** (ogham) starting around **2014** as a moder
 # SEE ALSO
 
 [ls](/man/ls)(1), [eza](/man/eza)(1), [lsd](/man/lsd)(1), [tree](/man/tree)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ogham/exa)```
+
+<!-- verified: 2026-07-15 -->

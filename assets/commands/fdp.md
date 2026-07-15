@@ -69,3 +69,11 @@ fdp is part of **Graphviz**, the graph visualization software from AT&T Labs. It
 # SEE ALSO
 
 [dot](/man/dot)(1), [neato](/man/neato)(1), [sfdp](/man/sfdp)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/graphviz/graphviz)```
+
+```[Homepage](https://graphviz.org/)```
+
+<!-- verified: 2026-07-15 -->

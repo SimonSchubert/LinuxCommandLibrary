@@ -86,3 +86,11 @@ Requires Exercism account and API token. Internet connection needed for download
 # SEE ALSO
 
 [git](/man/git)(1), [npm](/man/npm)(1), [pip](/man/pip)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/exercism/cli)```
+
+```[Homepage](https://exercism.org/)```
+
+<!-- verified: 2026-07-15 -->

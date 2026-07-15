@@ -116,3 +116,9 @@ Only use on systems you have permission to test. High thread counts may trigger 
 # SEE ALSO
 
 [gobuster](/man/gobuster)(1), [dirsearch](/man/dirsearch)(1), [ffuf](/man/ffuf)(1), [dirb](/man/dirb)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/epi052/feroxbuster)```
+
+<!-- verified: 2026-07-15 -->

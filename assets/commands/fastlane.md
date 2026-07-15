@@ -84,3 +84,11 @@ fastlane integrates with tools like xcodebuild, Gradle, gym, match, and deliver 
 
 [xcodebuild](/man/xcodebuild)(1), [gradle](/man/gradle)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/fastlane/fastlane)```
+
+```[Homepage](https://fastlane.tools/)```
+
+<!-- verified: 2026-07-15 -->
+

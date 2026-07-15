@@ -26,7 +26,7 @@ Exoscale compute instance and infrastructure management
 
 **SSH to instance**
 
-```exo compute ssh [name]```
+```exo compute instance ssh [name]```
 
 **Show instance details**
 
@@ -75,3 +75,11 @@ exo compute is part of the **Exoscale CLI**, providing programmatic access to Ex
 # SEE ALSO
 
 [exo](/man/exo)(1), [exo-compute-sks](/man/exo-compute-sks)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/exoscale/cli)```
+
+```[Homepage](https://www.exoscale.com/)```
+
+<!-- verified: 2026-07-15 -->

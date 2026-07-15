@@ -37,3 +37,9 @@ FAT labels limited to 11 characters. Requires unmounted filesystem for writing. 
 # SEE ALSO
 
 [dosfslabel](/man/dosfslabel)(8), [e2label](/man/e2label)(8), [mlabel](/man/mlabel)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/dosfstools/dosfstools)```
+
+<!-- verified: 2026-07-15 -->

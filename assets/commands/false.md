@@ -16,9 +16,9 @@ return failure exit status
 
 ```false || echo "false returned failure"```
 
-**Infinite loop idiom**
+**Infinite loop idiom** (until never succeeds)
 
-```while false; do :; done```
+```until false; do :; done```
 
 # SYNOPSIS
 
@@ -51,3 +51,11 @@ false has been part of Unix since **Version 7** (1979). It's one of the simplest
 # SEE ALSO
 
 [true](/man/true)(1), [test](/man/test)(1), [bash](/man/bash)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/coreutils.git)```
+
+```[Homepage](https://www.gnu.org/software/coreutils/)```
+
+<!-- verified: 2026-07-15 -->

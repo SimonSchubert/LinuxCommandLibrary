@@ -12,13 +12,17 @@ Netflix-powered internet speed test CLI
 
 ```fast --upload```
 
-**Run single download test**
+**Output on a single line** (script-friendly)
 
-```fast --single```
+```fast --single-line```
 
 **Show JSON output**
 
 ```fast --json```
+
+**Include latency and server location**
+
+```fast --verbose```
 
 # SYNOPSIS
 
@@ -26,17 +30,17 @@ Netflix-powered internet speed test CLI
 
 # PARAMETERS
 
-**--upload**
-> Include upload speed test.
+**-u**, **--upload**
+> Measure upload speed in addition to download speed.
 
-**--single**
-> Run single download test (not parallel).
+**--single-line**
+> Reduce spacing and print output on a single line.
 
 **--json**
-> Output results in JSON.
+> Output results as JSON.
 
-**--save-data**
-> Save test data to file.
+**--verbose**
+> Include latency and server location information.
 
 # DESCRIPTION
 
@@ -65,3 +69,9 @@ fast-cli was created as a command-line interface to Netflix's Fast.com, which Ne
 # SEE ALSO
 
 [speedtest-cli](/man/speedtest-cli)(1), [iperf](/man/iperf)(1), [curl](/man/curl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/sindresorhus/fast-cli)```
+
+<!-- verified: 2026-07-15 -->

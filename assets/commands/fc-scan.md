@@ -16,36 +16,29 @@ scan font files and directories
 
 ```fc-scan --format '%{family}: %{file}\n' [directory]```
 
-**Recursive scan**
-
-```fc-scan -r [/usr/share/fonts]```
-
 # SYNOPSIS
 
-**fc-scan** [_options_] [_files_...]
+**fc-scan** [_options_] _files_...
 
 # PARAMETERS
 
 _FILES_
-> Font files or directories to scan.
+> Font files or directories to scan. Directories are scanned recursively.
 
-**--format** _FORMAT_
+**-f**, **--format** _FORMAT_
 > Output format string.
 
-**-r**, **--recurse**
-> Recursively scan directories.
+**-V**, **--version**
+> Show the program version and exit.
 
-**-v**, **--verbose**
-> Verbose output.
-
-**--help**
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
 
 **fc-scan** scans font files and directories, displaying font information in fontconfig format. Unlike fc-query which examines single files, fc-scan can process directories and multiple files.
 
-The tool outputs font patterns that fontconfig uses for font matching. Custom format strings extract specific properties. Recursive mode scans entire font directory trees.
+The tool outputs font patterns that fontconfig uses for font matching. Custom format strings extract specific properties. When given a directory, it scans the entire tree recursively.
 
 fc-scan is useful for inventorying fonts, finding duplicates, or generating font lists for documentation.
 
@@ -60,3 +53,11 @@ fc-scan is part of **fontconfig**, providing batch font scanning capabilities. I
 # SEE ALSO
 
 [fc-query](/man/fc-query)(1), [fc-list](/man/fc-list)(1), [fc-cache](/man/fc-cache)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.freedesktop.org/fontconfig/fontconfig)```
+
+```[Homepage](https://www.freedesktop.org/wiki/Software/fontconfig/)```
+
+<!-- verified: 2026-07-15 -->
