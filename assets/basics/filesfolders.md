@@ -139,6 +139,7 @@ To find files by name, size, or age instead, see the **Search & Find** basics pa
 Interactive and prettier alternatives make it easy to find what eats your disk.
 ```[ncdu](/man/ncdu)```
 ```[dust](/man/dust)```
+```[leaves](/man/leaves)```
 ```[duf](/man/duf)```
 
 ## Mounting Filesystems

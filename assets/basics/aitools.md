@@ -24,6 +24,7 @@ Agents that read, edit, and run code in your project directly from the terminal.
 ```[dirac](/man/dirac)```
 ```[vtcode](/man/vtcode)```
 ```[agy](/man/agy)```
+```[forall](/man/forall)```
 
 ## Agent Tooling
 Utilities that manage, sandbox, monitor, test, and extend coding agents.
@@ -33,6 +34,8 @@ Utilities that manage, sandbox, monitor, test, and extend coding agents.
 ```[cuabot](/man/cuabot)```
 ```[agentbox](/man/agentbox)```
 ```[smolvm](/man/smolvm)```
+```[agent-run](/man/agent-run)```
+```[clawk](/man/clawk)```
 ```[rotunda](/man/rotunda)```
 ```[claude-pee](/man/claude-pee)```
 ```[tkst](/man/tkst)```
@@ -41,6 +44,10 @@ Utilities that manage, sandbox, monitor, test, and extend coding agents.
 ```[rekal](/man/rekal)```
 ```[yourmemory](/man/yourmemory)```
 ```[memweave](/man/memweave)```
+```[capn](/man/capn)```
+```[codealmanac](/man/codealmanac)```
+```[grepathy](/man/grepathy)```
+```[confessor](/man/confessor)```
 
 ## AI Assistants
 General-purpose autonomous assistants that run locally or on your own server.
@@ -58,6 +65,8 @@ Run and optimize large language models on your own hardware.
 ```[ollama](/man/ollama)```
 ```[llamafile](/man/llamafile)```
 ```[llama.cpp](/man/llama.cpp)```
+```[coli](/man/coli)```
+```[reame](/man/reame)```
 ```[whichllm](/man/whichllm)```
 ```[auto-round](/man/auto-round)```
 
