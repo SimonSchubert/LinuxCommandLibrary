@@ -4,117 +4,160 @@ shell history expansion syntax
 
 # TLDR
 
-**Repeat the last command**
+**Repeat** the last command
 
 ```!!```
 
-**Repeat last command starting with string**
+**Rerun** the last command with sudo
+
+```sudo !!```
+
+**Repeat** the last command starting with a string
 
 ```![string]```
 
-**Repeat command number N from history**
+**Repeat** command number N from history
 
 ```![N]```
 
-**Repeat Nth last command**
+**Repeat** the Nth previous command
 
 ```!-[N]```
 
-**Substitute and repeat** (replace old with new)
-
-```^[old]^[new]```
-
-**Use last argument of previous command**
+**Reuse** the last argument of the previous command
 
 ```[command] !$```
 
+**Repeat** the last command with a substitution
+
+```^[old]^[new]```
+
+**Print** an expansion instead of running it
+
+```!![:p]```
+
 # SYNOPSIS
 
-**!** [_event_][**:**_word_][**:**_modifier_]
+**!**_event_[**:**_word_][**:**_modifier_ ...]
 
-# PARAMETERS
+**^**_old_**^**_new_[**^**]
+
+# EVENT DESIGNATORS
 
 **!!**
-> The previous command
+> The previous command. Shorthand for **!-1**.
 
 **!n**
-> Command line number n
+> Command line number n, as shown by **history**.
 
 **!-n**
-> Current command minus n
+> The command n lines back.
 
 **!string**
-> Most recent command starting with string
+> The most recent command starting with _string_.
 
 **!?string?**
-> Most recent command containing string
+> The most recent command containing _string_. The trailing **?** is optional at end of line.
 
 **!#**
-> Current command line typed so far
+> The current command line typed so far.
+
+**^old^new**
+> Quick substitution: repeat the previous command replacing the first occurrence of _old_ with _new_. Equivalent to **!!:s/old/new/**.
 
 # WORD DESIGNATORS
 
+Words are numbered from **0**, and are separated from the event by a colon. The colon may be omitted when the designator starts with **^**, **$**, **\***, **-** or **%**.
+
 **:0**
-> Command name
+> The command name.
 
 **:n**
-> Nth argument (0-indexed)
+> The nth word, counting the command as word 0. So **:1** is the first argument.
 
 **:^**
-> First argument
+> The first argument. Same as **:1**.
 
 **:$**
-> Last argument
+> The last argument.
 
-**:***
-> All arguments except command
+**:%**
+> The word matched by the most recent **?string?** search.
+
+**:\***
+> All words except the 0th. Same as **:1-$**, and expands to nothing if there is only one word.
 
 **:n-m**
-> Range of arguments
+> The range of words from n to m.
+
+**:n\***
+> From word n to the last. Same as **:n-$**.
+
+**:n-**
+> From word n to the second-to-last word.
 
 # MODIFIERS
 
 **:h**
-> Remove trailing filename (head/directory)
+> Head: remove the trailing pathname component, leaving the directory.
 
 **:t**
-> Remove leading path (tail/filename)
+> Tail: remove all leading pathname components, leaving the filename.
 
 **:r**
-> Remove file extension (root)
+> Root: remove the trailing file extension.
 
 **:e**
-> Remove all but extension
+> Extension: remove all but the extension.
 
 **:s/old/new/**
-> Substitute first occurrence
+> Substitute the first occurrence of _old_ with _new_.
 
 **:gs/old/new/**
-> Substitute all occurrences
+> Substitute all occurrences. **g** is a prefix that repeats the following modifier.
+
+**:&**
+> Repeat the previous substitution.
 
 **:p**
-> Print without executing
+> Print the resulting command without executing it, and add it to the history.
+
+**:q**
+> Quote the result, protecting it from further expansion.
+
+**:x**
+> Like **:q**, but split into words on whitespace.
 
 # DESCRIPTION
 
-**!** (history expansion) allows reusing and modifying previous commands. It's a shell feature (bash, zsh) that expands references to command history before execution.
+History expansion lets you rebuild a previous command without retyping it. It is a feature of the shell's interactive history mechanism, present in **bash**, **zsh**, **csh** and **tcsh**, and is performed very early: the line is rewritten before quoting, parameter expansion, or any other processing takes place.
 
-Common patterns:
-- **sudo !!** - Rerun last command with sudo
-- **!$** - Last argument of previous command
-- **!!:s/foo/bar/** - Repeat last command with substitution
-- **!vim** - Run most recent vim command
+A reference has three parts. The **event designator** selects a line from history, an optional **word designator** picks words out of it, and any number of **modifiers** transform the result. So **!!** repeats the whole previous line, **!!:1** takes only its first argument, and **!!:1:h** takes that argument's directory.
 
-History expansion happens before other expansions, allowing powerful command reuse with modifications.
+Several forms are common enough to be worth memorizing. **sudo !!** rerunning the previous command with privileges is the classic. **!$** grabs the last argument of the previous line, which is usually the file you were just working with, making **vim !$** a natural follow-on to **ls some/long/path/file.txt**. **^old^new** fixes a typo in the previous command in place.
+
+Because expansion happens on the input line rather than at execution, the expanded text is echoed back before it runs, so you can see exactly what the shell made of your reference.
 
 # CAVEATS
 
-History expansion can cause unexpected substitutions in strings containing **!**. Use single quotes or escape with backslash.
+The **!** character keeps its special meaning inside **double quotes**. Writing **echo "hello!"** or a password containing **!** can trigger an unexpected expansion or an "event not found" error. Single quotes suppress it, as does a backslash escape. In bash, **set +H** turns history expansion off entirely, which is a common line in **.bashrc** for people who never use it.
 
-The **!** character in double quotes may expand. Use **set +H** to disable history expansion if problematic.
+History expansion is only enabled in interactive shells, so it is not available in scripts and cannot be relied on for portable scripting.
 
-Not available in all shells or in non-interactive mode.
+**!string** silently reruns whatever it matches, which may not be the command you had in mind if your history has moved on. Append **:p** first to see the expansion before committing to it, especially with anything destructive.
+
+Details differ between shells: zsh supports extra modifiers such as **:G**, and csh's implementation, where the syntax originated, differs in a number of corners.
+
+# HISTORY
+
+History expansion originated in the **C shell**, written by **Bill Joy** at Berkeley in the late **1970s**, and its syntax was carried into **tcsh**, **bash** and **zsh** largely unchanged. In bash it is implemented by the **history library** that ships with **GNU Readline**.
 
 # SEE ALSO
 
-[history](/man/history)(1), [fc](/man/fc)(1), [bash](/man/bash)(1), [zsh](/man/zsh)(1)
+[history](/man/history)(1), [fc](/man/fc)(1), [bash](/man/bash)(1), [zsh](/man/zsh)(1), [csh](/man/csh)(1)
+
+# RESOURCES
+
+```[Documentation](https://www.gnu.org/software/bash/manual/bash.html#History-Interaction)```
+
+<!-- verified: 2026-07-16 -->

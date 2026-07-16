@@ -63,11 +63,32 @@ Stage changes in the working directory for next commit
 **-v**, **--verbose**
 > Show files as they are added.
 
-**--intent-to-add**
-> Record only that the path will be added later (stage empty content).
+**-N**, **--intent-to-add**
+> Record only that the path will be added later, staging empty content. Makes new files visible to **git diff**.
+
+**-e**, **--edit**
+> Open the diff in your editor and stage the result.
 
 **--refresh**
 > Refresh the index without adding files.
+
+**--ignore-removal**, **--no-all**
+> Stage new and modified files, but not deletions.
+
+**--ignore-errors**
+> Continue past files that cannot be added, rather than aborting.
+
+**--renormalize**
+> Re-apply the line-ending and clean filters to all tracked files. Useful after changing **.gitattributes**.
+
+**--chmod**=(**+**|**-**)**x**
+> Override the executable bit recorded in the index.
+
+**--sparse**
+> Allow updating entries outside the sparse-checkout cone.
+
+**--pathspec-from-file**=_file_
+> Read pathspecs from a file, one per line, or from **-** for standard input.
 
 # DESCRIPTION
 
@@ -87,4 +108,16 @@ git add has been part of Git since its initial release by Linus Torvalds in **20
 
 # SEE ALSO
 
-[git-commit](/man/git-commit)(1), [git-status](/man/git-status)(1), [git-reset](/man/git-reset)(1), [git-diff](/man/git-diff)(1)
+[git-commit](/man/git-commit)(1), [git-status](/man/git-status)(1), [git-restore](/man/git-restore)(1), [git-reset](/man/git-reset)(1), [git-diff](/man/git-diff)(1), [git-rm](/man/git-rm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-add)```
+
+<!-- verified: 2026-07-16 -->
+
+

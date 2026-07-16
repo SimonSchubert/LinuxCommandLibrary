@@ -1,56 +1,100 @@
 # TAGLINE
 
-runtime garbage collection trigger
+count graph components
 
 # TLDR
 
-**Run garbage collection**
+**Count** nodes and edges in a graph (the default)
 
-```gc```
+```gc [graph.dot]```
 
-**Force collection**
+**Count** connected components
 
-```gc -f```
+```gc -c [graph.dot]```
 
-**Collect specific generation**
+**Count** everything: nodes, edges, connected components and clusters
 
-```gc [generation]```
+```gc -a [graph.dot]```
 
-**Show collection stats**
+**Count** nodes only
 
-```gc -v```
+```gc -n [graph.dot]```
+
+**Recurse** into subgraphs and report counts for each
+
+```gc -r [graph.dot]```
+
+**Read** a graph from standard input
+
+```cat [graph.dot] | gc -a```
 
 # SYNOPSIS
 
-**gc** [_options_]
-
-# PARAMETERS
-
-**-f**, **--force**
-> Force garbage collection.
-
-**-v**, **--verbose**
-> Show collection statistics.
-
-**--help**
-> Display help information.
+**gc** [**-necCaDUrsv?**] [_files_]
 
 # DESCRIPTION
 
-**gc** triggers garbage collection in various runtime environments and shell contexts. The specific behavior depends on the shell or language environment.
+**gc** is a graph analogue of **wc**: it reads one or more graphs in DOT format and prints counts of their nodes, edges, connected components and clusters to standard output. With no options it reports node and edge counts. When multiple graphs are given, a total line is printed at the end.
 
-In PowerShell, gc is an alias for Get-Content. In other contexts, it may trigger memory cleanup operations. The exact functionality varies by system.
+Each input file may contain several graphs. Output is one line per graph, followed by the graph name, so results can be fed into other text tools. If no files are named, **gc** reads from standard input.
 
-The command is context-dependent and may have different meanings across shells and environments.
+Clusters are subgraphs whose name begins with **cluster**, the same convention **dot** uses when drawing boxed groups.
+
+# PARAMETERS
+
+**-n**
+> Count nodes.
+
+**-e**
+> Count edges.
+
+**-c**
+> Count connected components.
+
+**-C**
+> Count clusters (subgraphs whose name starts with **cluster**).
+
+**-a**
+> Count all of the above; equivalent to **-encC**.
+
+**-r**
+> Recurse into subgraphs, reporting counts for each.
+
+**-s**
+> Silent: suppress output and only set the exit status.
+
+**-D**
+> Only process directed graphs.
+
+**-U**
+> Only process undirected graphs.
+
+**-v**
+> Verbose output.
+
+**-?**
+> Print usage information.
 
 # CAVEATS
 
-Behavior varies by shell/environment. May be an alias. Check your specific shell documentation.
+Input must be valid **DOT** format; malformed graphs cause errors rather than counts. For directed graphs, the components counted are weakly connected components. **-D** and **-U** skip graphs of the wrong kind, so a filtered run may print nothing at all.
+
+This command is unrelated to garbage collection. In PowerShell, **gc** is an alias for **Get-Content**, and some version control wrappers alias it to a commit shortcut, so check what is on your **PATH** before assuming.
 
 # HISTORY
 
-gc appears in various contexts as a command or alias. In shells like PowerShell, it's an alias for file operations. In other systems, it may relate to garbage collection.
+**gc** is part of the **Graphviz** suite, developed at **AT&T Labs Research** starting in the early **1990s** by **Stephen North**, **Eleftherios Koutsofios**, **Emden Gansner** and others. Graphviz was open-sourced in **2004** and remains actively maintained.
 
 # SEE ALSO
 
-[cat](/man/cat)(1), [powershell](/man/powershell)(1)
+[wc](/man/wc)(1), [acyclic](/man/acyclic)(1), [ccomps](/man/ccomps)(1), [sccmap](/man/sccmap)(1), [tred](/man/tred)(1), [gvpr](/man/gvpr)(1), [dot](/man/dot)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/graphviz/graphviz)```
+
+```[Homepage](https://graphviz.org/)```
+
+```[Documentation](https://graphviz.org/docs/cli/gc/)```
+
+<!-- verified: 2026-07-16 -->
