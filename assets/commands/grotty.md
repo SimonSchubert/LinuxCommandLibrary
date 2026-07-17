@@ -30,28 +30,37 @@ _FILE_
 > Groff intermediate output.
 
 **-b**
-> Suppress bold sequences.
+> Suppress overstriking for bold characters in legacy (**-c**) output format.
 
 **-c**
-> Use old-style output (no SGR).
+> Use grotty's legacy output format (overstriking) instead of SGR escape sequences.
 
 **-d**
-> Ignore SGR escapes.
+> Ignore all drawing commands in the input.
 
 **-f**
-> Feed mode for printers.
+> Emit a form feed at the end of each page whose last line has no output.
 
 **-i**
-> Use italic font.
+> Render slanted fonts using the SGR italic attribute instead of underlining.
 
 **-o**
-> Suppress overstriking.
+> Suppress overstriking, other than for bold and/or underlined characters.
 
 **-u**
-> Suppress underlining.
+> Suppress underlining for italic characters in legacy output format.
+
+**-h**
+> Use literal horizontal tab characters in the output.
+
+**-t**
+> Assume the output device supports SGR 38/48 (24-bit color) escape sequences.
 
 **-F** _DIR_
-> Font directory.
+> Prepend _DIR_/devname to the search path for font and device description files.
+
+**-v**, **--version**
+> Show version information and exit.
 
 **--help**
 > Display help information.
@@ -73,3 +82,13 @@ grotty was developed as part of **GNU groff** to enable terminal viewing of form
 # SEE ALSO
 
 [groff](/man/groff)(1), [nroff](/man/nroff)(1), [man](/man/man)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/groff.git)```
+
+```[Homepage](https://www.gnu.org/software/groff/)```
+
+```[Documentation](https://www.gnu.org/software/groff/groff.html)```
+
+<!-- verified: 2026-07-17 -->

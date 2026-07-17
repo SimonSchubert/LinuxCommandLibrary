@@ -68,3 +68,9 @@ gron was created by **Tom Hudson** to solve the problem of searching complex JSO
 # SEE ALSO
 
 [jq](/man/jq)(1), [grep](/man/grep)(1), [json_pp](/man/json_pp)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tomnomnom/gron)```
+
+<!-- verified: 2026-07-17 -->

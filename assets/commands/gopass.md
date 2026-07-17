@@ -100,3 +100,13 @@ Requires GPG key setup. Git configuration needed for sync. Clipboard cleared aft
 # SEE ALSO
 
 [pass](/man/pass)(1), [gpg](/man/gpg)(1), [git](/man/git)(1), [1password](/man/1password)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/gopasspw/gopass)```
+
+```[Homepage](https://www.gopass.pw/)```
+
+```[Documentation](https://github.com/gopasspw/gopass/tree/master/docs)```
+
+<!-- verified: 2026-07-17 -->

@@ -64,3 +64,13 @@ Returns 0 if verification succeeds, 1 if any signature is bad, and other codes f
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [gpg2](/man/gpg2)(1)
+
+# RESOURCES
+
+```[Source code](https://dev.gnupg.org/source/gnupg/)```
+
+```[Homepage](https://www.gnupg.org/)```
+
+```[Documentation](https://www.gnupg.org/documentation/manuals/gnupg/gpgv.html)```
+
+<!-- verified: 2026-07-17 -->

@@ -47,8 +47,6 @@ random identifier and UUID generator
 
 The tool supports multiple formats including UUID, alphanumeric strings, and custom lengths. Output is cryptographically suitable for non-security-critical uses.
 
-genid provides quick random identifier generation from the command line.
-
 # CAVEATS
 
 Not for cryptographic keys. Uniqueness not guaranteed. May vary between implementations.

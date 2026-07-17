@@ -54,3 +54,11 @@ grn was created at **UC Berkeley** for the Gremlin drawing program, later includ
 # SEE ALSO
 
 [groff](/man/groff)(1), [pic](/man/pic)(1), [grap](/man/grap)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/groff.git)```
+
+```[Homepage](https://www.gnu.org/software/groff/)```
+
+<!-- verified: 2026-07-17 -->

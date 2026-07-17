@@ -41,3 +41,9 @@ grpunconv was developed as part of the **shadow** password suite to allow revert
 # SEE ALSO
 
 [grpconv](/man/grpconv)(8), [grpck](/man/grpck)(8), [pwunconv](/man/pwunconv)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/shadow-maint/shadow)```
+
+<!-- verified: 2026-07-17 -->

@@ -76,3 +76,11 @@ gocryptfs was created as a modern, audited alternative to EncFS, using authentic
 # SEE ALSO
 
 [encfs](/man/encfs)(1), [cryptsetup](/man/cryptsetup)(1), [veracrypt](/man/veracrypt)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rfjakob/gocryptfs)```
+
+```[Homepage](https://nuetzlich.net/gocryptfs/)```
+
+<!-- verified: 2026-07-17 -->

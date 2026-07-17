@@ -56,8 +56,14 @@ Accuracy varies by image quality. Works best with clean scans. Consider tesserac
 
 # HISTORY
 
-gocr (GOCR/JOCR) is an open-source OCR program developed since the late 1990s.
+**gocr** (also known as **JOCR**, since the name GOCR was already taken on SourceForge) was created by **Jörg Schulenburg** in the late 1990s as a free OCR program under the GPL.
 
 # SEE ALSO
 
 [tesseract](/man/tesseract)(1), [ocrmypdf](/man/ocrmypdf)(1)
+
+# RESOURCES
+
+```[Homepage](https://jocr.sourceforge.net/)```
+
+<!-- verified: 2026-07-17 -->

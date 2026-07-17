@@ -88,3 +88,13 @@ Graphviz was developed at **AT&T Labs Research**, with initial work by **Stephen
 # SEE ALSO
 
 [dot](/man/dot)(1), [neato](/man/neato)(1), [mermaid](/man/mermaid)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/graphviz/graphviz)```
+
+```[Homepage](https://graphviz.org/)```
+
+```[Documentation](https://graphviz.org/documentation/)```
+
+<!-- verified: 2026-07-17 -->

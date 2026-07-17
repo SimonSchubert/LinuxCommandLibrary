@@ -65,3 +65,13 @@ gRPC was developed by **Google** and open-sourced in **2015**. It's based on Goo
 # SEE ALSO
 
 [protoc](/man/protoc)(1), [grpcurl](/man/grpcurl)(1), [curl](/man/curl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/grpc/grpc)```
+
+```[Homepage](https://grpc.io/)```
+
+```[Documentation](https://grpc.io/docs/)```
+
+<!-- verified: 2026-07-17 -->

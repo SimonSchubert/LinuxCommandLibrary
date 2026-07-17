@@ -65,3 +65,9 @@ gpasswd is part of the shadow-utils package, which provides the shadow password 
 # SEE ALSO
 
 [groupadd](/man/groupadd)(8), [groupmod](/man/groupmod)(8), [usermod](/man/usermod)(8), [newgrp](/man/newgrp)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/shadow-maint/shadow)```
+
+<!-- verified: 2026-07-17 -->

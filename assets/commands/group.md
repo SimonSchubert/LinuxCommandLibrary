@@ -56,3 +56,9 @@ Direct editing not recommended; use groupadd/groupmod. Changes may require logou
 # SEE ALSO
 
 [groups](/man/groups)(1), [groupadd](/man/groupadd)(8), [groupmod](/man/groupmod)(8), [passwd](/man/passwd)(5)
+
+# RESOURCES
+
+```[Source code](https://github.com/shadow-maint/shadow)```
+
+<!-- verified: 2026-07-17 -->

@@ -24,7 +24,7 @@ Concise NVIDIA GPU status monitor
 
 ```gpustat --json```
 
-**Show GPU UUIDs**
+**Show process usernames**
 
 ```gpustat -u```
 
@@ -43,8 +43,20 @@ Concise NVIDIA GPU status monitor
 **-c**, **--show-cmd**
 > Show process commands.
 
-**-i** _seconds_
-> Refresh interval.
+**-f**, **--show-full-cmd**
+> Show full command line and CPU stats of the running process.
+
+**-F**, **--show-fan-speed**
+> Show GPU fan speed.
+
+**-P**, **--show-power**
+> Show GPU power usage/draw and limit.
+
+**-e**, **--show-codec**
+> Show encoder/decoder utilization.
+
+**-i**, **--interval**, **--watch** _seconds_
+> Run in watch mode, refreshing every _seconds_.
 
 **--json**
 > Output in JSON format.
@@ -55,11 +67,17 @@ Concise NVIDIA GPU status monitor
 **--no-header**
 > Hide header.
 
+**--no-processes**
+> Omit running-process information (memory, user, etc.).
+
 **-a**, **--show-all**
 > Show all information.
 
 **--id** _id_
 > Show specific GPU only.
+
+**-v**, **--version**
+> Display version information.
 
 # DESCRIPTION
 
@@ -78,3 +96,9 @@ Requires NVIDIA GPU and drivers. Uses nvidia-smi internally. Not suitable for no
 # SEE ALSO
 
 [nvidia-smi](/man/nvidia-smi)(1), [nvtop](/man/nvtop)(1), [htop](/man/htop)(1), [watch](/man/watch)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/wookayin/gpustat)```
+
+<!-- verified: 2026-07-17 -->

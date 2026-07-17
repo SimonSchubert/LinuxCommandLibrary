@@ -50,6 +50,16 @@ compile and install Go packages and binaries
 
 Use **@latest** or **@version** to install tools independent of current module. Without a version suffix, go install uses dependencies from the current module's go.mod.
 
+# HISTORY
+
+Since **Go 1.16**, **go install** is the recommended way to build and install commands at a specific version, taking over that role from **go get**, which was fully restricted from doing so as of **Go 1.18**.
+
 # SEE ALSO
 
 [go](/man/go)(1), [go-build](/man/go-build)(1), [go-get](/man/go-get)(1)
+
+# RESOURCES
+
+```[Documentation](https://go.dev/ref/mod#go-install)```
+
+<!-- verified: 2026-07-17 -->

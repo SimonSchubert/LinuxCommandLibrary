@@ -27,3 +27,9 @@ Gradle subproject hierarchy viewer
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [gradle-tasks](/man/gradle-tasks)(1)
+
+# RESOURCES
+
+```[Documentation](https://docs.gradle.org/current/userguide/command_line_interface.html)```
+
+<!-- verified: 2026-07-17 -->

@@ -115,3 +115,9 @@ gojq was created by **itchyny** and first released around **2019**. It was devel
 # SEE ALSO
 
 [jq](/man/jq)(1), [yq](/man/yq)(1), [jless](/man/jless)(1), [fx](/man/fx)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/itchyny/gojq)```
+
+<!-- verified: 2026-07-17 -->

@@ -71,3 +71,9 @@ go tool provides access to **Go** toolchain internals, supporting debugging and 
 # SEE ALSO
 
 [go](/man/go)(1), [go-build](/man/go-build)(1)
+
+# RESOURCES
+
+```[Documentation](https://pkg.go.dev/cmd/go#hdr-Run_specified_go_tool)```
+
+<!-- verified: 2026-07-17 -->

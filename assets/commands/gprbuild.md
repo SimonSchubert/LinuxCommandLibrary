@@ -64,3 +64,9 @@ gprbuild is part of the **GNAT** Ada toolchain, developed by AdaCore for Ada pro
 # SEE ALSO
 
 [gnat](/man/gnat)(1), [gnatmake](/man/gnatmake)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/AdaCore/gprbuild)```
+
+<!-- verified: 2026-07-17 -->

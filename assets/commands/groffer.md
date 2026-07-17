@@ -71,3 +71,11 @@ groffer was developed as part of **GNU groff** to provide a user-friendly interf
 # SEE ALSO
 
 [groff](/man/groff)(1), [man](/man/man)(1), [xpdf](/man/xpdf)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/groff.git)```
+
+```[Homepage](https://www.gnu.org/software/groff/)```
+
+<!-- verified: 2026-07-17 -->

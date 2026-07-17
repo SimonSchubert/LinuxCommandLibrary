@@ -4,43 +4,66 @@ Live reload tool for Go development
 
 # TLDR
 
-**Watch and reload Go app**
+**Watch and reload the app in the current directory**
 
 ```goreload```
 
-**Watch specific directory**
+**Watch and build a specific entry point**
 
-```goreload -d [./cmd]```
+```goreload [main.go]```
 
-**Exclude directory**
+**Watch a specific path**
 
-```goreload -e [vendor]```
+```goreload -t [./cmd/server]```
 
-**Custom build command**
+**Exclude a directory from watching**
 
-```goreload -b "go build -o app"```
+```goreload -x [vendor]```
+
+**Reload on any file change, not just .go files**
+
+```goreload --all```
+
+**Pass extra arguments to go build**
+
+```goreload --buildArgs "[-ldflags=-s -w]"```
 
 # SYNOPSIS
 
-**goreload** [_options_]
+**goreload** [_options_] [_path_]
 
 # PARAMETERS
 
-**-d** _DIR_
-> Directory to watch.
+**-t**, **--path** _DIR_
+> Directory to watch for changes (default: current directory).
 
-**-e** _DIR_
-> Exclude directory.
+**-d**, **--build** _DIR_
+> Path to build files from (default: same as **--path**).
 
-**-b** _CMD_
-> Build command.
+**-b**, **--bin** _NAME_
+> Name of the generated binary (default: .goreload).
 
-**--help**
+**-x**, **--excludeDir** _DIR_
+> Relative directory to exclude from monitoring (repeatable).
+
+**--all**
+> Reload on any file change, not just **.go** files.
+
+**--buildArgs** _ARGS_
+> Extra arguments passed through to **go build**.
+
+**--logPrefix** _PREFIX_
+> Custom prefix for log output.
+
+**-h**, **--help**
 > Display help information.
+
+**-v**, **--version**
+> Print version and exit.
 
 # DESCRIPTION
 
-**goreload** is a live reload tool for Go development. It watches source files and automatically rebuilds and restarts the application when changes are detected, eliminating manual rebuild cycles.
+**goreload** is a live reload tool for Go development, forked from **codegangsta/gin**. It watches source files and automatically rebuilds and restarts the application when changes are detected, eliminating manual rebuild cycles.
 
 The tool supports configurable watch directories, exclude patterns, and custom build commands.
 
@@ -50,8 +73,14 @@ Development tool only. Some file events may be missed. Configure exclude pattern
 
 # HISTORY
 
-goreload is one of several Go live reload tools created to improve development workflow.
+goreload was forked from **codegangsta/gin**, trimming unused features, and has itself been re-forked by several maintainers (e.g. acoshift, oxycoder) as one of many Go live-reload utilities.
 
 # SEE ALSO
 
 [air](/man/air)(1), [nodemon](/man/nodemon)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/acoshift/goreload)```
+
+<!-- verified: 2026-07-17 -->

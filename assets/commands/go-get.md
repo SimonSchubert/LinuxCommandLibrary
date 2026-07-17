@@ -37,7 +37,7 @@ _PACKAGES_
 > Update to latest version.
 
 **-d**
-> Download only, don't install.
+> Download only, don't install (default behavior since Go 1.16; the flag is now a deprecated no-op).
 
 **-t**
 > Include test dependencies.
@@ -56,12 +56,18 @@ The command resolves versions from module proxies, supporting semantic versionin
 
 # CAVEATS
 
-Behavior differs in module mode vs GOPATH. Use go install for binaries. Updates modify go.mod.
+Since **Go 1.18**, **go get** no longer builds or installs packages; it only edits go.mod/go.sum and populates the module cache. Running it outside a module, or to install a command, fails with an error pointing to **go install**. Updates modify go.mod and go.sum, which should be committed.
 
 # HISTORY
 
-go get is part of the **Go** toolchain, evolving with Go modules to provide modern dependency management.
+go get is part of the **Go** toolchain. Its build/install functionality was split off into **go install** in **Go 1.17-1.18** as part of the modules transition, leaving go get focused solely on dependency resolution.
 
 # SEE ALSO
 
 [go](/man/go)(1), [go-mod](/man/go-mod)(1), [go-install](/man/go-install)(1)
+
+# RESOURCES
+
+```[Documentation](https://go.dev/ref/mod#go-get)```
+
+<!-- verified: 2026-07-17 -->

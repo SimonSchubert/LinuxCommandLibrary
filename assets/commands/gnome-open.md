@@ -45,3 +45,11 @@ gnome-open was part of **GNOME** utilities but has been superseded by **xdg-open
 # SEE ALSO
 
 [xdg-open](/man/xdg-open)(1), [gio](/man/gio)(1), [open](/man/open)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gvfs)```
+
+```[Homepage](https://wiki.gnome.org/Projects/gvfs)```
+
+<!-- verified: 2026-07-17 -->

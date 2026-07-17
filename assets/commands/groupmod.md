@@ -30,11 +30,20 @@ Change the **group ID**
 **-p**, **--password** _PASSWORD_
 > Set encrypted group password
 
+**-a**, **--append**
+> With **-U**, append the given users to the group's existing members instead of replacing the list
+
+**-U**, **--users** _USER_[,_USER_,...]
+> Comma-separated list of usernames to set as the group's members
+
 **-R**, **--root** _CHROOT_DIR_
 > Apply changes in chroot environment
 
 **-P**, **--prefix** _PREFIX_DIR_
-> Apply changes in prefix directory
+> Apply changes in prefix directory (uses config files there without chrooting)
+
+**-h**, **--help**
+> Display help message and exit
 
 # DESCRIPTION
 

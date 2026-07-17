@@ -61,3 +61,9 @@ grpck was developed as part of the **shadow** password suite for Unix/Linux syst
 # SEE ALSO
 
 [pwck](/man/pwck)(8), [groups](/man/groups)(1), [gpasswd](/man/gpasswd)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/shadow-maint/shadow)```
+
+<!-- verified: 2026-07-17 -->

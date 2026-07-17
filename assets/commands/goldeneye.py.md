@@ -8,9 +8,9 @@ HTTP stress testing tool
 
 ```goldeneye.py [url]```
 
-Test with **100 user agents** and **200 concurrent sockets**
+Test with a custom **user-agent list** and **200 concurrent sockets**
 
-```goldeneye.py [url] -u 100 -s 200```
+```goldeneye.py [url] -u [useragents.txt] -s 200```
 
 Test without **verifying SSL** certificate
 
@@ -30,8 +30,8 @@ Display **help**
 
 # PARAMETERS
 
-**-u**, **--useragents** _NUM_
-> Number of random user agents to use
+**-u**, **--useragents** _FILE_
+> File containing a list of user agents to rotate through
 
 **-s**, **--sockets** _NUM_
 > Number of concurrent sockets
@@ -61,6 +61,16 @@ Display **help**
 
 Using this tool against systems without authorization is illegal in most jurisdictions. Only use for legitimate load testing, penetration testing with written permission, or security research on your own systems.
 
+# HISTORY
+
+**GoldenEye** was created by **Jan Seidl** (jseidl) as a proof-of-concept implementation of the Layer 7 DoS technique behind the older "GoldenEye" C tool, exploiting HTTP Keep-Alive and no-cache request headers to exhaust server connection pools.
+
 # SEE ALSO
 
 [ab](/man/ab)(1), [siege](/man/siege)(1), [wrk](/man/wrk)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/jseidl/GoldenEye)```
+
+<!-- verified: 2026-07-17 -->

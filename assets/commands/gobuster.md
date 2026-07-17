@@ -43,6 +43,18 @@ Directory and DNS brute-forcing tool
 **vhost**
 > Virtual host discovery mode.
 
+**fuzz**
+> Generic fuzzing mode using a **FUZZ** keyword placeholder in the URL, headers, or body.
+
+**s3**
+> Enumerate open Amazon S3 buckets.
+
+**gcs**
+> Enumerate open Google Cloud Storage buckets.
+
+**tftp**
+> Enumerate files on a TFTP server.
+
 **-u** _url_
 > Target URL.
 
@@ -87,3 +99,9 @@ Only for authorized security testing. May trigger WAF rules. Large wordlists slo
 # SEE ALSO
 
 [dirb](/man/dirb)(1), [ffuf](/man/ffuf)(1), [wfuzz](/man/wfuzz)(1), [feroxbuster](/man/feroxbuster)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/OJ/gobuster)```
+
+<!-- verified: 2026-07-17 -->

@@ -41,3 +41,9 @@ Gradle project properties viewer
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [gradle-tasks](/man/gradle-tasks)(1)
+
+# RESOURCES
+
+```[Documentation](https://docs.gradle.org/current/userguide/build_environment.html)```
+
+<!-- verified: 2026-07-17 -->

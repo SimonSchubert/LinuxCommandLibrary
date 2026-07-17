@@ -72,3 +72,9 @@ grim was created by Simon Ser (emersion) as part of the Wayland ecosystem toolin
 # SEE ALSO
 
 [slurp](/man/slurp)(1), [wl-copy](/man/wl-copy)(1), [scrot](/man/scrot)(1), [maim](/man/maim)(1)
+
+# RESOURCES
+
+```[Source code](https://git.sr.ht/~emersion/grim)```
+
+<!-- verified: 2026-07-17 -->

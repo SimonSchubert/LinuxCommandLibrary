@@ -1,63 +1,88 @@
 # TAGLINE
 
-Command-line Google search tool
+Search Google from the command line (surfraw elvi)
 
 # TLDR
 
-**Search Google**
+**Search Google** and open the results page in the default browser
 
 ```google "[search query]"```
 
-**Search and open first result**
+**Feel lucky**: jump straight to the first result
 
-```google -j "[query]"```
-
-**Search news**
-
-```google -N "[query]"```
+```google -lucky "[search query]"```
 
 **Search images**
 
-```google -I "[query]"```
+```google -images "[search query]"```
+
+**Search news**
+
+```google -news "[search query]"```
+
+**Limit to a number of results**
+
+```google -results=[25] "[search query]"```
+
+**Search a country-specific edition of Google**
+
+```google -country=[uk] "[search query]"```
 
 # SYNOPSIS
 
-**google** [_options_] _query_
+**google** [_options_] _words_...
 
 # PARAMETERS
 
-_QUERY_
-> Search terms.
+**-l**, **-lucky**
+> "I'm Feeling Lucky": jump directly to the first result.
 
-**-j**, **--lucky**
-> Open first result.
+**-i**, **-images**
+> Search Google Images (shorthand for **-search=images**).
 
-**-N**, **--news**
-> Search news.
+**-v**, **-videos**
+> Search Google Videos.
 
-**-I**, **--images**
-> Search images.
+**-m**, **-maps**
+> Search Google Maps.
 
-**-n** _NUM_
-> Number of results.
+**-n**, **-news**
+> Search Google News.
 
-**--help**
-> Display help information.
+**-G**, **-groups**
+> Search Google Groups.
+
+**-results=**_NUM_
+> Number of search results to return.
+
+**-country=**_CODE_
+> Regional Google site to query, given as an ISO 3166 alpha-2 country code (default **us**, i.e. google.com).
+
+**-safe=**_LEVEL_
+> SafeSearch filtering level: **default**, **off**, **moderate**, or **strict**.
 
 # DESCRIPTION
 
-**google** is a command-line tool for searching Google directly from the terminal. It displays results with titles and URLs, or opens them in a browser.
+**google** is one of the "elvi" (search engine profiles) that ship with **surfraw**. Running it builds the appropriate Google search URL from its arguments and opens it in **$BROWSER**, so no query is made without a browser being launched.
 
-The tool provides quick access to search without leaving the terminal, with flags for different search types including news and images.
+With no query words, it opens the relevant Google front page (web, images, news, etc.) instead of a results page. It can also be invoked as **sr google** [_options_] _words_ if the standalone symlink isn't installed.
 
 # CAVEATS
 
-May need API key. Rate limits apply. googler is similar alternative.
+Requires the **surfraw** package and a configured **$BROWSER**. It opens results in a browser rather than printing them to the terminal, unlike googler or ddgr.
 
 # HISTORY
 
-Various command-line Google search tools have been created for terminal-centric workflows.
+**google** is one of the bundled elvi in **surfraw**, a Unix command-line interface to a variety of web search engines, originally written by **Julian Assange** in the late 1990s and later maintained by the surfraw community.
 
 # SEE ALSO
 
 [googler](/man/googler)(1), [ddgr](/man/ddgr)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/surfraw/Surfraw)```
+
+```[Homepage](https://surfraw.org/)```
+
+<!-- verified: 2026-07-17 -->

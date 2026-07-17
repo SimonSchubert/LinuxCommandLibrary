@@ -58,3 +58,11 @@ GPicView was created as part of the **LXDE** (Lightweight X11 Desktop Environmen
 # SEE ALSO
 
 [feh](/man/feh)(1), [eog](/man/eog)(1), [sxiv](/man/sxiv)(1), [imv](/man/imv)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/lxde/gpicview)```
+
+```[Homepage](https://wiki.lxde.org/en/GPicView)```
+
+<!-- verified: 2026-07-17 -->

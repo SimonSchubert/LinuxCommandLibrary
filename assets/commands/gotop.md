@@ -63,8 +63,17 @@ Terminal-based graphical activity monitor
 **-i**, **--interface** _name_
 > Network interface filter.
 
-**-l**, **--layout** _file_
-> Custom layout file.
+**-l**, **--layout** _name_
+> Named or custom layout (e.g. minimal, battery, kitchensink).
+
+**--nvidia**
+> Enable NVIDIA GPU stats (requires nvidia-smi).
+
+**--list** _keys|colorschemes_
+> Print available key bindings or built-in color schemes and exit.
+
+**--write-config**
+> Persist current flags to the config file.
 
 **--no-cpu**
 > Disable CPU widget.
@@ -132,7 +141,7 @@ Color schemes like monokai, solarized, and vice change the appearance. Custom la
 
 # CAVEATS
 
-GPU monitoring not available in the maintained fork. Some metrics may be platform-specific. Battery widget requires supported hardware. High update rates increase CPU usage.
+NVIDIA GPU monitoring requires the **nvidia-smi** binary to be present; no AMD GPU support. Some metrics may be platform-specific (Windows support is limited compared to Linux/FreeBSD/macOS). Battery widget requires supported hardware. High update rates increase CPU usage.
 
 # HISTORY
 
@@ -141,3 +150,9 @@ gotop was originally created by **Caleb Bassi** (cjbassi) in **2018** as a Go re
 # SEE ALSO
 
 [htop](/man/htop)(1), [btm](/man/btm)(1), [gtop](/man/gtop)(1), [zenith](/man/zenith)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/xxxserxxx/gotop)```
+
+<!-- verified: 2026-07-17 -->

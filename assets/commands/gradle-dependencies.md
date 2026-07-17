@@ -49,3 +49,9 @@ The dependencies task is a standard **Gradle** diagnostic task for understanding
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [gradle-dependencyinsight](/man/gradle-dependencyinsight)(1)
+
+# RESOURCES
+
+```[Documentation](https://docs.gradle.org/current/userguide/viewing_debugging_dependencies.html)```
+
+<!-- verified: 2026-07-17 -->

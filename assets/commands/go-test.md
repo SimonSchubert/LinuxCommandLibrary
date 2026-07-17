@@ -79,8 +79,18 @@ Go package testing framework
 
 **go test** automates testing of Go packages. It compiles and runs test files (*_test.go) containing functions named Test*, Benchmark*, and Example*. Tests can run in parallel, include race detection, and generate coverage reports.
 
-The command recompiles packages as needed and caches successful test results. It supports subtests, table-driven tests, and fuzz testing for comprehensive validation.
+The command recompiles packages as needed and caches successful test results (cache is bypassed with **-count=1**). It runs **go vet** automatically on the package before testing, and supports subtests, table-driven tests, and fuzz testing for comprehensive validation.
+
+# CAVEATS
+
+Cached results are reused for unchanged tests unless **-count=1** is set. Only functions matching `Test*`, `Benchmark*`, `Example*`, and `Fuzz*` in `*_test.go` files are recognized.
 
 # SEE ALSO
 
 [go](/man/go)(1), [go-build](/man/go-build)(1)
+
+# RESOURCES
+
+```[Documentation](https://pkg.go.dev/cmd/go#hdr-Test_packages)```
+
+<!-- verified: 2026-07-17 -->

@@ -16,6 +16,10 @@ Launch the **graphical user interface** for VPN management
 
 ```gpclient launch-gui```
 
+Generate a **HIP report** (Host Integrity Protection)
+
+```gpclient hip```
+
 Use **OpenSSL workaround** to bypass legacy renegotiation errors
 
 ```gpclient connect --fix-openssl [vpn_gateway_url]```
@@ -47,17 +51,29 @@ Display **help** for any command
 **launch-gui**
 > Open graphical interface
 
+**hip**
+> Generate a HIP (Host Integrity Protection) report
+
 **--fix-openssl**
 > Apply workaround for OpenSSL legacy renegotiation
 
 **--ignore-tls-errors**
 > Skip TLS certificate validation
 
-**--gateway** _URL_
-> Specify gateway URL directly
+**-g**, **--gateway** _URL_
+> Connect directly to this gateway instead of prompting
 
-**--user** _USERNAME_
+**--auto-gateway**
+> Automatically try gateways in priority order without prompting
+
+**-u**, **--user** _USERNAME_
 > Specify username for authentication
+
+**--browser** [_BROWSER_]
+> Use external browser for SSO authentication (chrome, firefox, default, or remote)
+
+**--as-gateway**
+> Treat the server argument as a gateway instead of a portal
 
 # DESCRIPTION
 
@@ -71,8 +87,14 @@ Requires OpenConnect with GlobalProtect support. Some authentication methods (li
 
 # HISTORY
 
-gpclient (GlobalProtect-openconnect) was created as an open-source solution for Linux users needing to connect to GlobalProtect VPNs. It leverages OpenConnect's GlobalProtect protocol support, which was added in OpenConnect 8.0.
+**gpclient** is part of the **GlobalProtect-openconnect** project, created as an open-source solution for Linux users needing to connect to GlobalProtect VPNs. It leverages OpenConnect's GlobalProtect protocol support (added in OpenConnect 8.0). The project was rewritten from Python/Qt to **Rust** and **Tauri** in its 2.x series.
 
 # SEE ALSO
 
 [openconnect](/man/openconnect)(8), [openvpn](/man/openvpn)(8), [nmcli](/man/nmcli)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/yuezk/GlobalProtect-openconnect)```
+
+<!-- verified: 2026-07-17 -->

@@ -25,3 +25,11 @@ The command reads from a file argument or standard input and writes PPM output t
 # SEE ALSO
 
 [ppmtogif](/man/ppmtogif)(1), [pnmtopng](/man/pnmtopng)(1), [netpbm](/man/netpbm)(1)
+
+# RESOURCES
+
+```[Homepage](https://netpbm.sourceforge.net/)```
+
+```[Documentation](https://netpbm.sourceforge.net/doc/gouldtoppm.html)```
+
+<!-- verified: 2026-07-17 -->

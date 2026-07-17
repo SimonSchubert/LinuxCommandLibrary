@@ -52,3 +52,9 @@ golint was created by the **Go team** at Google as a style checker. It was depre
 # SEE ALSO
 
 [go](/man/go)(1), [gofmt](/man/gofmt)(1), [staticcheck](/man/staticcheck)(1), [golangci-lint](/man/golangci-lint)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/golang/lint)```
+
+<!-- verified: 2026-07-17 -->

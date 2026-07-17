@@ -68,3 +68,9 @@ gops was created by **Jaana Dogan** at Google to provide a diagnostic tool for G
 # SEE ALSO
 
 [go-tool](/man/go-tool)(1), [pprof](/man/pprof)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/gops)```
+
+<!-- verified: 2026-07-17 -->

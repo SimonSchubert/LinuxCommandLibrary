@@ -68,8 +68,11 @@ The command initializes modules, manages dependencies, and maintains reproducibl
 **go.sum**
 > Checksums of module dependencies for verification.
 
-**GONOSUMCHECK**
-> Environment variable to skip checksum verification for specific modules.
+**GOSUMDB**
+> Name of the checksum database used to verify downloaded modules; set to **off** to disable verification.
+
+**GONOSUMDB**
+> Glob patterns of module paths to exclude from checksum-database verification (defaults from **GOPRIVATE** if unset).
 
 **GOFLAGS**
 > Default flags applied to go commands, including go mod subcommands.
@@ -85,3 +88,9 @@ Go modules were introduced in **Go 1.11** as the official dependency management 
 # SEE ALSO
 
 [go](/man/go)(1), [go-get](/man/go-get)(1)
+
+# RESOURCES
+
+```[Documentation](https://go.dev/ref/mod)```
+
+<!-- verified: 2026-07-17 -->

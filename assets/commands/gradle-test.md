@@ -67,3 +67,9 @@ Gradle unit test runner
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [gradle-build](/man/gradle-build)(1)
+
+# RESOURCES
+
+```[Documentation](https://docs.gradle.org/current/userguide/java_testing.html)```
+
+<!-- verified: 2026-07-17 -->

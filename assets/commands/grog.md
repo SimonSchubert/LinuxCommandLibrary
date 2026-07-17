@@ -4,21 +4,21 @@ Groff command-line option guesser
 
 # TLDR
 
-**Guess groff options**
+**Guess the groff command needed for a file**
 
 ```grog [file.roff]```
 
-**Process and run groff**
+**Guess and immediately run groff**
 
 ```grog [file.roff] | sh```
 
-**Show command without running**
-
-```grog [file.roff]```
-
-**Process multiple files**
+**Process multiple files at once**
 
 ```grog [file1.roff] [file2.roff]```
+
+**Read from standard input**
+
+```cat [file.roff] | grog```
 
 # SYNOPSIS
 
@@ -27,19 +27,18 @@ Groff command-line option guesser
 # PARAMETERS
 
 _FILES_
-> Files to analyze.
+> Files to analyze; reads standard input if omitted or given as "-".
 
 **-C**
-> Compatibility mode.
+> Enable AT&T troff compatibility mode (also passed through to the guessed command).
 
-**--run**
-> Execute the suggested command.
+**-v**, **--version**
+> Display version information and exit.
 
-**--warnings**
-> Enable warnings.
+**-h**, **--help**
+> Display a usage message and exit.
 
-**--help**
-> Display help information.
+Any other **groff**(1) option (e.g. **-T**, **-k**) is passed through unchanged to the guessed command line.
 
 # DESCRIPTION
 
@@ -58,3 +57,13 @@ grog was developed as part of **GNU groff** to simplify determining the correct 
 # SEE ALSO
 
 [groff](/man/groff)(1), [nroff](/man/nroff)(1), [troff](/man/troff)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/groff.git)```
+
+```[Homepage](https://www.gnu.org/software/groff/)```
+
+```[Documentation](https://www.gnu.org/software/groff/groff.html)```
+
+<!-- verified: 2026-07-17 -->

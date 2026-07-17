@@ -53,6 +53,16 @@ Gradle project scaffolding generator
 
 **gradle init** creates a new Gradle project with a standard directory structure. It can run interactively, prompting for project type, language, and build script DSL, or non-interactively with command-line options. Supported types include applications and libraries for Java, Kotlin, Groovy, Scala, C++, and Swift.
 
+# CAVEATS
+
+Running in a non-empty directory may fail or skip generation if existing build files are detected. The **--incubating** APIs used for scaffolding new project types can change between Gradle versions.
+
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [gradle-build](/man/gradle-build)(1)
+
+# RESOURCES
+
+```[Documentation](https://docs.gradle.org/current/userguide/build_init_plugin.html)```
+
+<!-- verified: 2026-07-17 -->

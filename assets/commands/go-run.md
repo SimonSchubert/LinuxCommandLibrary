@@ -58,3 +58,9 @@ go run is part of the **Go** toolchain, providing convenient rapid iteration dur
 # SEE ALSO
 
 [go](/man/go)(1), [go-build](/man/go-build)(1)
+
+# RESOURCES
+
+```[Documentation](https://pkg.go.dev/cmd/go#hdr-Compile_and_run_Go_program)```
+
+<!-- verified: 2026-07-17 -->

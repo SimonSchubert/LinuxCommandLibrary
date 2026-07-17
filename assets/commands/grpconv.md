@@ -41,3 +41,9 @@ grpconv was developed as part of the **shadow** password suite to improve group 
 # SEE ALSO
 
 [grpunconv](/man/grpunconv)(8), [grpck](/man/grpck)(8), [pwconv](/man/pwconv)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/shadow-maint/shadow)```
+
+<!-- verified: 2026-07-17 -->
