@@ -67,12 +67,18 @@ hash -l
 
 # CAVEATS
 
-Shell built-in; behavior varies by shell. Hash becomes stale if commands move. Use hash -r after PATH changes or software installation. Only affects current shell session.
+Shell built-in; behavior and available options vary by shell (bash, zsh, ksh each implement their own version). The hash table becomes stale if a hashed command's file is moved or removed. Run `hash -r` after installing software or modifying PATH. Only affects the current shell session, not child processes.
 
 # HISTORY
 
-The hash command has been part of Unix shells since the Bourne shell. It provides manual control over the command path caching mechanism that shells use for performance.
+**hash** has been part of Unix shells since the Bourne shell. POSIX only mandates the `-r` option; bash extends it with `-p`, `-d`, `-t`, and `-l` for finer control over the command path cache.
 
 # SEE ALSO
 
 [type](/man/type)(1), [which](/man/which)(1), [command](/man/command)(1)
+
+# RESOURCES
+
+```[Documentation](https://www.gnu.org/software/bash/manual/bash.html#Bourne-Shell-Builtins)```
+
+<!-- verified: 2026-07-17 -->

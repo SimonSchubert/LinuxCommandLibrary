@@ -1,56 +1,54 @@
 # TAGLINE
 
-emulates a Bluetooth HCI device
+legacy BlueZ tool that emulates a Bluetooth HCI device via the hci_vhci kernel module
 
 # TLDR
 
-**Start HCI emulator**
+**Emulate an HCI device with a given local address**
 
-```sudo hciemu```
+```sudo hciemu [00:11:22:33:44:55]```
 
-**Emulate specific device**
+**Emulate a specific device type**
 
-```sudo hciemu -d [vhci]```
+```sudo hciemu -d [vhci] [00:11:22:33:44:55]```
 
-**Set device name**
+**Capture emulated traffic to a snoop file**
 
-```sudo hciemu -n [TestDevice]```
+```sudo hciemu -s [capture.snoop] [00:11:22:33:44:55]```
 
-**Verbose output**
+**Run in the foreground without detaching**
 
-```sudo hciemu -v```
+```sudo hciemu -n [00:11:22:33:44:55]```
 
 # SYNOPSIS
 
-**hciemu** [_options_]
+**hciemu** [_options_] _local-address_
 
 # PARAMETERS
 
-**-d** _DEV_
-> Device type to emulate.
+**-d** _device_
+> Device type to emulate (e.g. vhci).
 
-**-n** _NAME_
-> Device name.
+**-b** _bdaddr_
+> Bluetooth device address to emulate.
 
-**-v**
-> Verbose mode.
+**-s** _file_
+> Write captured HCI packets to a snoop file.
 
-**-h**
-> Display help.
+**-n**
+> Do not detach from the controlling terminal.
 
 # DESCRIPTION
 
-**hciemu** emulates a Bluetooth HCI (Host Controller Interface) device. It creates virtual Bluetooth adapters for testing.
-
-The tool is useful for Bluetooth protocol testing and development. It enables testing Bluetooth applications without physical hardware.
+**hciemu** is a legacy BlueZ test utility that emulates a Bluetooth Host Controller Interface (HCI) device through the **hci_vhci** kernel module. It creates a virtual Bluetooth controller with a given local address, letting the Bluetooth stack and applications be exercised without physical hardware.
 
 # CAVEATS
 
-Requires root or Bluetooth permissions. Testing tool only. Part of BlueZ.
+Requires the **hci_vhci** kernel module and root privileges. This standalone command dates from the pre-BlueZ5 bluez-utils test suite and has been dropped from the tools shipped by current Linux distributions; modern BlueZ only keeps an internal emulator library (used by its own test suite) under the same name, not a user-facing binary. For interactive Bluetooth testing today, use **bluetoothctl**.
 
 # HISTORY
 
-hciemu was developed as part of **BlueZ**, the official Linux Bluetooth stack, for testing and development purposes.
+hciemu was part of the original **BlueZ** (bluez-utils) test tools, predating BlueZ5. It has since been removed from mainstream distribution packages.
 
 # SEE ALSO
 

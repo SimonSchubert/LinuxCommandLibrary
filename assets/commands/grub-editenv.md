@@ -34,6 +34,9 @@ Display all GRUB **environment variables**
 **create**
 > Create a new empty environment file
 
+**-v**, **--verbose**
+> Print verbose messages
+
 # DESCRIPTION
 
 **grub-editenv** manages GRUB's environment block (grubenv), which stores persistent variables across boots. The environment file is typically located at /boot/grub/grubenv or /boot/grub2/grubenv.
@@ -61,3 +64,13 @@ grub-editenv is part of GRUB 2's saved default mechanism, allowing boot preferen
 # SEE ALSO
 
 [grub-set-default](/man/grub-set-default)(8), [grub-reboot](/man/grub-reboot)(8), [grub-mkconfig](/man/grub-mkconfig)(8)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/grub/)```
+
+```[Source code](https://git.savannah.gnu.org/cgit/grub.git)```
+
+```[Documentation](https://www.gnu.org/software/grub/manual/grub/grub.html)```
+
+<!-- verified: 2026-07-17 -->

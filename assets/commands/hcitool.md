@@ -8,6 +8,10 @@ bluetooth Host Controller Interface tool for monitoring, configuring
 
 ```hcitool scan```
 
+Scan for **Bluetooth Low Energy (BLE)** devices
+
+```hcitool lescan```
+
 Output the **name** of a device by MAC address
 
 ```hcitool name [bdaddr]```
@@ -42,8 +46,14 @@ Display **local devices**
 
 # PARAMETERS
 
+**-i** _hciX_
+> Use the specified HCI device instead of the first available one.
+
 **scan**
 > Scan for discoverable Bluetooth devices
+
+**lescan**
+> Scan for Bluetooth Low Energy (BLE) devices
 
 **dev**
 > List local Bluetooth adapters
@@ -92,3 +102,9 @@ hcitool is part of the BlueZ Bluetooth protocol stack for Linux. While functiona
 # SEE ALSO
 
 [bluetoothctl](/man/bluetoothctl)(1), [hciconfig](/man/hciconfig)(1), [rfkill](/man/rfkill)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/bluez/bluez/blob/master/tools/hcitool.c)```
+
+<!-- verified: 2026-07-17 -->

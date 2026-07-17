@@ -38,8 +38,14 @@ _FONT-FILE_
 **-i**, **--index** _N_
 > Face index for TTC.
 
-**--range** _RANGE_
-> Unicode range to include.
+**-n**, **--name** _NAME_
+> Set font family name.
+
+**-b**, **--bold**
+> Convert to a bold font.
+
+**-r**, **--range** _FROM-TO_
+> Unicode range(s) to include (comma-separated).
 
 **-v**, **--verbose**
 > Verbose output.
@@ -64,3 +70,13 @@ grub-mkfont was developed as part of **GNU GRUB 2** to support graphical boot me
 # SEE ALSO
 
 [grub](/man/grub)(8), [grub-mkconfig](/man/grub-mkconfig)(8), [fc-list](/man/fc-list)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/grub/)```
+
+```[Source code](https://git.savannah.gnu.org/cgit/grub.git)```
+
+```[Documentation](https://www.gnu.org/software/grub/manual/grub/grub.html)```
+
+<!-- verified: 2026-07-17 -->

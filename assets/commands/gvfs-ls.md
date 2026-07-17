@@ -1,6 +1,6 @@
 # TAGLINE
 
-lists directory contents using GVFS
+lists files and directory contents using GVFS
 
 # TLDR
 
@@ -26,12 +26,12 @@ lists directory contents using GVFS
 
 # SYNOPSIS
 
-**gvfs-ls** [_options_] _location_
+**gvfs-ls** [_options_] [_location_...]
 
 # PARAMETERS
 
 _LOCATION_
-> Directory path or URI.
+> File or directory path or URI (defaults to the current directory).
 
 **-h**, **--hidden**
 > Show hidden files.
@@ -40,28 +40,39 @@ _LOCATION_
 > Long listing format.
 
 **-a**, **--attributes** _ATTR_
-> Show specific attributes.
+> Show specific attributes, given as gvfs attribute names, a namespace, or `*` for all.
 
 **-n**, **--nofollow-symlinks**
 > Don't follow symlinks.
+
+**--version**
+> Display version information.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**gvfs-ls** lists directory contents using GVFS. It works with local directories and remote URIs, providing consistent listing across backends.
+**gvfs-ls** lists information about the given locations, similar to the traditional **ls** utility but using GVFS locations instead of local files, so paths like smb://server/share/file.txt can be listed directly.
 
-The tool shows file names and optionally detailed attributes. It supports network protocols like SMB, FTP, SSH, and WebDAV.
+Attributes requested with **-a** can be gvfs attribute names (e.g. standard::icon), a namespace (e.g. unix), or a wildcard (*), with multiple values separated by commas.
 
 # CAVEATS
 
-Deprecated in favor of gio list. GNOME dependencies. Requires running GVFS daemon.
+Part of the gvfs-bin command-line tools, deprecated in gvfs 1.31 (2016) and removed entirely in gvfs 1.38 (2018) in favor of the unified **gio** command (`gio list`). Modern distributions no longer ship gvfs-ls. Requires a running GVFS daemon to reach non-local backends.
 
 # HISTORY
 
-gvfs-ls was developed as part of **GVFS** for GNOME, now largely replaced by the **gio** command.
+**gvfs-ls** was part of GVFS's original gvfs-bin utilities, introduced for GNOME alongside GVFS in **2008** (GNOME 2.22) as a replacement for the older gnome-vfs library's tools. It has since been superseded by **gio list**.
 
 # SEE ALSO
 
 [gio](/man/gio)(1), [ls](/man/ls)(1), [gvfs-info](/man/gvfs-info)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gvfs)```
+
+```[Homepage](https://wiki.gnome.org/Projects/gvfs)```
+
+<!-- verified: 2026-07-17 -->

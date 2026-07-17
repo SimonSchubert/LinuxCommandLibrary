@@ -48,10 +48,10 @@ command-line interface for HandBrake, a powerful open-source video transcoder
 **-o**, **--output** _file_
 > Output file path.
 
-**--preset** _name_
+**-Z**, **--preset** _name_
 > Use named preset (see --preset-list).
 
-**--preset-list**
+**-z**, **--preset-list**
 > List available presets.
 
 **-t**, **--title** _number_
@@ -90,8 +90,8 @@ command-line interface for HandBrake, a powerful open-source video transcoder
 **-l**, **--height** _pixels_
 > Output height.
 
-**--two-pass**
-> Enable two-pass encoding.
+**--multi-pass**
+> Enable multi-pass encoding (replaces the older --two-pass flag).
 
 # DESCRIPTION
 
@@ -107,7 +107,7 @@ Audio and subtitle tracks can be selected, converted, or passed through. Multipl
 
 # CAVEATS
 
-Cannot output to some patent-encumbered formats. DVD/Blu-ray decryption requires libdvdcss. Quality settings don't translate directly between encoders. Hardware encoding availability depends on GPU and drivers. Two-pass encoding doubles processing time.
+Cannot output to some patent-encumbered formats. DVD/Blu-ray decryption requires libdvdcss. Quality settings don't translate directly between encoders. Hardware encoding availability depends on GPU and drivers. Multi-pass encoding takes longer than a single pass.
 
 # HISTORY
 
@@ -115,4 +115,14 @@ Cannot output to some patent-encumbered formats. DVD/Blu-ray decryption requires
 
 # SEE ALSO
 
-[ffmpeg](/man/ffmpeg)(1), [ffprobe](/man/ffprobe)(1), [mkvmerge](/man/mkvmerge)(1), [mediainfo](/man/mediainfo)(1)
+[handbrake](/man/handbrake)(1), [ffmpeg](/man/ffmpeg)(1), [ffprobe](/man/ffprobe)(1), [mkvmerge](/man/mkvmerge)(1), [mediainfo](/man/mediainfo)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/HandBrake/HandBrake)```
+
+```[Homepage](https://handbrake.fr/)```
+
+```[Documentation](https://handbrake.fr/docs/)```
+
+<!-- verified: 2026-07-17 -->

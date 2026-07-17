@@ -44,6 +44,9 @@ List available **devices**
 **-sOutputFile=FILE**
 > Specify output filename (use %d for page numbers)
 
+**-o FILE**
+> Shorthand for -sOutputFile=FILE that also implies -dNOPAUSE and -dBATCH
+
 **-r RES or -rXRESxYRES**
 > Set output resolution in DPI
 
@@ -94,3 +97,13 @@ The available devices depend on your Ghostscript installation. Use gs -h to see 
 # SEE ALSO
 
 [ps2pdf](/man/ps2pdf)(1), [pdf2ps](/man/pdf2ps)(1), [pdftops](/man/pdftops)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ArtifexSoftware/ghostpdl)```
+
+```[Homepage](https://www.ghostscript.com/)```
+
+```[Documentation](https://ghostscript.readthedocs.io/)```
+
+<!-- verified: 2026-07-17 -->

@@ -33,19 +33,37 @@ _savefile_
 > GTKWave save file (.gtkw).
 
 **-o**, **--optimize**
-> Optimize VCD loading.
+> Convert/optimize VCD to FST on load to cut down memory usage.
 
-**-c** _file_
-> Script file to execute.
+**-a** _file_, **--save** _file_
+> Specify the savefile (.gtkw) name to use.
 
-**-r** _file_
-> Read RC file.
+**-c** _n_, **--cpu** _n_
+> Number of CPUs available for parallelizable operations.
 
-**-S** _script_
-> Tcl script.
+**-r** _file_, **--rcfile** _file_
+> Override the default .gtkwaverc filename.
 
-**-T**
-> Use Tcl as scripting language.
+**-S** _file_, **--script** _file_
+> Tcl command script file to execute.
+
+**-T** _file_, **--tcl_init** _file_
+> Tcl command script file to load on startup.
+
+**-N**, **--nowm**
+> Disable the window manager for most windows.
+
+**-6**, **--dark**
+> Prefer the dark theme.
+
+**-x**, **--exit**
+> Exit immediately after loading the trace (useful for scripted conversions).
+
+**-V**, **--version**
+> Display version information.
+
+**-h**, **--help**
+> Display help information.
 
 # DESCRIPTION
 
@@ -72,3 +90,13 @@ GTKWave was written by **Tony Bybell** as an open-source waveform viewer for dig
 # SEE ALSO
 
 [iverilog](/man/iverilog)(1), [verilator](/man/verilator)(1), [ghdl](/man/ghdl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/gtkwave/gtkwave)```
+
+```[Homepage](https://gtkwave.sourceforge.net/)```
+
+```[Documentation](https://gtkwave.github.io/gtkwave/)```
+
+<!-- verified: 2026-07-17 -->

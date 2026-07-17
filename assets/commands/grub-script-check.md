@@ -52,3 +52,13 @@ grub-script-check is part of GRUB 2, providing validation for GRUB's configurati
 # SEE ALSO
 
 [grub-mkconfig](/man/grub-mkconfig)(8), [grub-install](/man/grub-install)(8), [update-grub](/man/update-grub)(8)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/grub/)```
+
+```[Source code](https://git.savannah.gnu.org/cgit/grub.git)```
+
+```[Documentation](https://www.gnu.org/software/grub/manual/grub/grub.html)```
+
+<!-- verified: 2026-07-17 -->

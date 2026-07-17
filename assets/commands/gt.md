@@ -1,67 +1,122 @@
 # TAGLINE
 
-CLI for stacked diffs workflow
+configfs-based USB gadget management tool
 
 # TLDR
 
-**Create new branch**
+**List available USB device controllers (UDCs)**
 
-```gt branch create [branch-name]```
+```gt udc```
 
-**Submit stack for review**
+**List existing gadgets**
 
-```gt stack submit```
+```gt gadget```
 
-**Sync with remote**
+**Create a new gadget**
 
-```gt repo sync```
+```gt create [gadget-name]```
 
-**List branches in stack**
+**Set gadget attributes** (vendor/product IDs)
 
-```gt log```
+```gt set [gadget-name] idVendor=[0x1d6b] idProduct=[0x0104]```
 
-**Checkout branch**
+**Create a USB function** (e.g. Ethernet)
 
-```gt branch checkout [branch-name]```
+```gt func create [gadget-name] [ecm] [usb0]```
+
+**Create a configuration and bind the function to it**
+
+```gt config create [gadget-name] [c] [1]```
+
+```gt config add [gadget-name] [c] [1] [ecm] [usb0]```
+
+**Enable a gadget on the first available UDC**
+
+```gt enable [gadget-name]```
+
+**Save the current gadget setup as a reusable template**
+
+```gt save [gadget-name] [template-name]```
+
+**Remove a gadget and all its configurations/functions**
+
+```gt rm -rf [gadget-name]```
 
 # SYNOPSIS
 
-**gt** _command_ [_options_]
+**gt** _command_ [_options_...]
+
+**gadgetctl** _command_ [_options_...]
 
 # PARAMETERS
 
 _COMMAND_
-> Subcommand to execute.
+> Subcommand to execute (see below).
 
-**branch create**
-> Create new branch.
+**udc**
+> Show the list of available USB device controllers.
 
-**stack submit**
-> Submit stack for code review.
+**create** _gadget_ [_attr=val_...]
+> Create a gadget with the given name and optionally set its attributes. `-f`/`--force` overrides an existing gadget with the same name.
 
-**repo sync**
-> Synchronize with remote.
+**rm** _gadget_
+> Remove a gadget. `-f`/`--force` disables it first if enabled; `-r`/`--recursive` also removes its configurations and functions.
 
-**log**
-> Show branch stack.
+**get** _gadget_ [_attr_]
+> Print the given attribute, or all attributes if none is specified.
 
-**--help**
-> Display help information.
+**set** _gadget_ _attr=val_...
+> Set one or more gadget attributes to new values.
+
+**enable** [_gadget_]
+> Enable a gadget on a UDC. If only one gadget/UDC exists it is chosen automatically.
+
+**disable** [_gadget_]
+> Disable a gadget. `-u`/`--udc` _udc_ disables whichever gadget is active on the given UDC.
+
+**gadget** [_name_]
+> List all gadgets, or show details for one. `-v`/`--verbose` also prints attributes; `-r`/`--recursive` also shows function/config details.
+
+**func create/rm/show** _gadget_ _type_ _instance_
+> Create, remove, or show a USB function (e.g. **ecm**, **acm**, **mass_storage**) bound to a gadget.
+
+**func list-types**
+> Print the list of function types supported by the running kernel.
+
+**config create/rm/show** _gadget_ _label_ _id_
+> Create, remove, or show a gadget configuration.
+
+**config add/del** _gadget_ _label_ _id_ _func-type_ _func-instance_
+> Bind or unbind a function to/from a configuration.
+
+**save** _gadget_ [_name_]
+> Store the gadget's current setup as a system template. `--file`, `--stdout`, and `--path` redirect where it is stored.
+
+**load** _name_ [_gadget_]
+> Create and enable a gadget from a saved template. `-o`/`--off` skips enabling it.
+
+**template** [_name_]
+> List templates, or show one template's configurations and functions.
+
+**settings set/get/append/detach** _variable_ [_value_]
+> Manage gt's own configuration variables (some of which hold lists).
 
 # DESCRIPTION
 
-**gt** (Graphite) is a CLI for stacked diffs workflow. It manages dependent branches and streamlines code review by organizing changes into logical stacks.
+**gt** (gadget-tool) configures Linux USB gadgets through the kernel's **configfs** interface, replacing manual `mkdir`/`echo` manipulation of the configfs tree with a small set of subcommands. It builds gadgets out of **functions** (e.g. Ethernet, mass storage, serial, HID) grouped into one or more **configurations**, which are then enabled on a USB Device Controller (UDC).
 
-The tool integrates with GitHub for pull request management. It simplifies rebasing and updating of branch stacks.
+**gt** operates directly on configfs and therefore needs root privileges. The companion binary **gadgetctl** talks to a **gadgetd** daemon instead using the same command syntax, but gadgetd is considered obsolete.
 
 # CAVEATS
 
-Requires GitHub. Workflow differs from traditional git. Opinionated branching model.
-
-# HISTORY
-
-gt was created by **Graphite** to bring stacked diffs workflow (similar to Phabricator) to GitHub.
+Requires root and a kernel built with USB gadget/configfs support (`CONFIGFS_FS`, `USB_CONFIGFS`, and the relevant function drivers); which function types are available depends on the running kernel. Mainly used on embedded boards and devices with a USB device-mode controller, not on typical desktop hardware.
 
 # SEE ALSO
 
-[git](/man/git)(1), [gh](/man/gh)(1), [jj](/man/jj)(1)
+[mount](/man/mount)(8), [lsusb](/man/lsusb)(8), [modprobe](/man/modprobe)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/linux-usb-gadgets/gt)```
+
+<!-- verified: 2026-07-17 -->

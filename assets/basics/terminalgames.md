@@ -212,6 +212,16 @@ Play Go against the GNU Go engine.
  3  . . . . . . .
 ```
 
+## go-fish
+Collect books of four matching cards before the computer does.
+```[go-fish](/man/go-fish)```
+```
+Your hand: 3 3 7 9 K
+Got any 7s? y
+I had a 7? Here!
+Books won: 1
+```
+
 ## gomoku
 Get five stones in a row before the computer does.
 ```[gomoku](/man/gomoku)```

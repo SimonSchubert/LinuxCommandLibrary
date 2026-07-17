@@ -30,30 +30,39 @@ Go to the **previous tab**
 
 # SYNOPSIS
 
-**guake** [_options_]
+**guake** [_options_] [_path_]
 
 # PARAMETERS
 
 **-t**, **--toggle-visibility**
-> Toggle visibility from command line
+> Toggle visibility from command line.
 
 **-n**, **--new-tab** _DIR_
-> Add new tab, optionally with working directory
+> Add a new tab, optionally with working directory set to DIR.
 
 **-s**, **--select-tab** _INDEX_
-> Select tab by index
+> Select tab by index.
 
 **-e**, **--execute-command** _CMD_
-> Execute command in the terminal
+> Execute an arbitrary command in a new tab.
 
-**-r**, **--rename-tab** _NAME_
-> Rename current tab
+**-r**, **--rename-current-tab** _TITLE_
+> Rename the current tab. Reset to default if TITLE is "-".
 
-**--show-preferences**
-> Open preferences window
+**-p**, **--preferences**
+> Show Guake preferences window.
+
+**-f**, **--fullscreen**
+> Put Guake in fullscreen mode.
+
+**--show**, **--hide**
+> Force show or hide the main window.
+
+**-V**, **--version**
+> Show Guake version number and exit.
 
 **-q**, **--quit**
-> Quit Guake
+> Quit Guake.
 
 # DESCRIPTION
 
@@ -77,8 +86,18 @@ Works best with compositing enabled. May have issues on some window managers. Co
 
 # HISTORY
 
-guake was inspired by the drop-down console in id Software's Quake game and similar terminals like Yakuake (KDE) and Tilda. It was first released around **2007** for the GNOME desktop environment.
+guake was created by **Gabriel Falcão** in **2007**, originally hosted on SourceForge, and inspired by the drop-down console in id Software's Quake game and similar terminals like Yakuake (KDE) and Tilda. It has since moved to GitHub and is maintained by a community of contributors.
 
 # SEE ALSO
 
 [yakuake](/man/yakuake)(1), [tilda](/man/tilda)(1), [gnome-terminal](/man/gnome-terminal)(1)
+
+# RESOURCES
+
+```[Homepage](https://guake.github.io/)```
+
+```[Source code](https://github.com/Guake/guake)```
+
+```[Documentation](https://guake.readthedocs.io/en/latest/)```
+
+<!-- verified: 2026-07-17 -->

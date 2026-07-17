@@ -22,48 +22,67 @@ graph stream editor, similar to awk for graphs
 
 # SYNOPSIS
 
-**gvpr** [_options_] _program_ [_files_]
+**gvpr** [_-icnqV?_] [**-o** _outfile_] [**-a** _args_] _'prog'_ | **-f** _progfile_ [_files_]
 
 # PARAMETERS
 
-_PROGRAM_
-> Gvpr program or expression.
+_'prog'_
+> Inline gvpr program text (a series of predicate-action clauses). Required unless **-f** is given.
 
 _FILES_
-> Input DOT files.
+> Input graph files in DOT format. Reads stdin if none given.
 
-**-f** _FILE_
-> Read program from file.
+**-f** _progfile_
+> Read the gvpr program from progfile instead of the command line.
 
-**-o** _FILE_
-> Output file.
+**-o** _outfile_
+> Write output to outfile instead of stdout.
+
+**-a** _args_
+> Pass a whitespace-separated argument string to the program, available as ARGV/ARGC.
 
 **-c**
-> Check syntax only.
+> Use the source graph as the output graph, so in-place edits are emitted.
 
 **-i**
-> Print node info.
+> Derive the output as the node-induced subgraph extension in the context of its root graph.
+
+**-n**
+> Disable graph read-ahead (affects the **$NG** variable).
+
+**-q**
+> Suppress warning messages.
 
 **-V**
-> Verbose mode.
+> Print version information and exit.
 
 **-?**
-> Display help information.
+> Display usage information and exit.
 
 # DESCRIPTION
 
-**gvpr** is a graph stream editor, similar to awk for graphs. It processes Graphviz graphs using a pattern-action programming language.
+**gvpr** (formerly **gpr**) is a graph pattern scanning and processing language, similar to **awk** but for graphs instead of text. Programs consist of pattern-action clauses (**BEGIN**, **BEG_G**, **N** for nodes, **E** for edges, **END_G**, **END**) that are matched against each input graph in turn.
 
-The tool can filter, transform, and analyze graphs. It supports node and edge selection, attribute manipulation, and graph restructuring.
+For each node or edge visited, gvpr evaluates the predicates in order and runs the associated action for the first (or every) match. The language provides C-like types, associative arrays, and built-in graph functions, letting programs filter, transform, restructure, or compute statistics over DOT graphs.
 
 # CAVEATS
 
-Part of Graphviz package. Learning curve for programming language. Complex operations can be slow.
+Part of the Graphviz package. The pattern-action language has a learning curve, and complex programs over large graphs can be slow.
 
 # HISTORY
 
-gvpr was developed as part of **Graphviz** at **AT&T Labs** to provide AWK-like processing for graph structures.
+gvpr was developed as part of **Graphviz** at **AT&T Labs** to provide AWK-like processing for graph structures, replacing the earlier **gpr** tool.
 
 # SEE ALSO
 
-[dot](/man/dot)(1), [awk](/man/awk)(1), [gc](/man/gc)(1)
+[dot](/man/dot)(1), [awk](/man/awk)(1), [gc](/man/gc)(1), [nop](/man/nop)(1)
+
+# RESOURCES
+
+```[Homepage](https://graphviz.org/)```
+
+```[Source code](https://gitlab.com/graphviz/graphviz)```
+
+```[Documentation](https://graphviz.org/doc/info/command.html)```
+
+<!-- verified: 2026-07-17 -->

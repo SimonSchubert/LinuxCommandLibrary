@@ -4,23 +4,31 @@ PHP code quality enforcement via git hooks
 
 # TLDR
 
-**Initialize GrumPHP**
+**Generate a starter configuration file**
 
 ```grumphp configure```
 
-**Run all tasks**
+**Run all configured tasks**
 
 ```grumphp run```
 
-**Run specific task**
+**Run specific tasks**
 
-```grumphp run --tasks=[phpcs]```
+```grumphp run --tasks=[phpcs,phpunit]```
 
-**Check git hooks**
+**Run a specific testsuite**
+
+```grumphp run --testsuite=[mytestsuite]```
+
+**Register GrumPHP's git hooks**
 
 ```grumphp git:init```
 
-**Pre-commit check**
+**Unregister GrumPHP's git hooks**
+
+```grumphp git:deinit```
+
+**Manually run the pre-commit hook tasks**
 
 ```grumphp git:pre-commit```
 
@@ -34,19 +42,28 @@ _COMMAND_
 > Command to run.
 
 **configure**
-> Initialize configuration.
+> Generate a starter grumphp.yml configuration file, guessing sensible defaults.
 
 **run**
-> Execute all configured tasks.
+> Execute all configured tasks against the codebase.
 
 **git:init**
-> Install git hooks.
+> Register GrumPHP's git hooks (run automatically after `composer install`).
+
+**git:deinit**
+> Unregister GrumPHP's git hooks.
 
 **git:pre-commit**
-> Run pre-commit tasks.
+> Run the tasks bound to the pre-commit hook.
 
-**--tasks** _TASKS_
-> Specify tasks to run.
+**git:commit-msg**
+> Run the tasks that validate the commit message.
+
+**--tasks** _TASK1,TASK2_
+> Only run the given comma-separated tasks.
+
+**--testsuite** _NAME_
+> Only run tasks belonging to the given testsuite.
 
 **--help**
 > Display help information.
@@ -73,3 +90,11 @@ GrumPHP was created by **phpro** to automate PHP code quality enforcement throug
 # SEE ALSO
 
 [composer](/man/composer)(1), [phpcs](/man/phpcs)(1), [phpstan](/man/phpstan)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/phpro/grumphp)```
+
+```[Documentation](https://github.com/phpro/grumphp/tree/v2.x/doc)```
+
+<!-- verified: 2026-07-17 -->

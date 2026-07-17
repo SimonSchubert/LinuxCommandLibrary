@@ -39,16 +39,31 @@ build and run GStreamer multimedia pipelines
 # PARAMETERS
 
 **-v**, **--verbose**
-> Verbose output.
-
-**-e**, **--eos-on-shutdown**
-> Send EOS on interrupt for clean shutdown.
-
-**--gst-debug-level** _N_
-> Set debug level (0-9).
+> Verbose output, prints properties and tags as the pipeline runs.
 
 **-q**, **--quiet**
-> Suppress status output.
+> Suppress status output (position, progress).
+
+**-e**, **--eos-on-shutdown**
+> Send EOS on interrupt for clean shutdown, instead of stopping abruptly.
+
+**-m**, **--messages**
+> Output messages posted on the pipeline's bus.
+
+**-t**, **--tags**
+> Output tags (metadata) found in the stream.
+
+**-f**, **--no-fault**
+> Do not install a fault handler (segfault backtrace helper).
+
+**--gst-debug=**_STRING_
+> Set debug levels for specific categories (e.g., **GST_SCHEDULING:5**).
+
+**--gst-debug-level=**_N_
+> Set global debug level (0-9).
+
+**--gst-plugin-path=**_PATH_
+> Add extra directories to scan for plugins.
 
 # DESCRIPTION
 
@@ -56,6 +71,20 @@ build and run GStreamer multimedia pipelines
 
 Caps filters constrain formats between elements (e.g., **video/x-raw,width=640,height=480**). Use **decodebin** or **playbin** for automatic codec selection.
 
+# CAVEATS
+
+Intended for testing and prototyping pipelines, not as a robust playback application. Press Ctrl+C to stop; without **-e** the pipeline stops immediately rather than draining buffered data.
+
 # SEE ALSO
 
 [gst-inspect-1.0](/man/gst-inspect-1.0)(1), [gst-discoverer-1.0](/man/gst-discoverer-1.0)(1), [ffmpeg](/man/ffmpeg)(1)
+
+# RESOURCES
+
+```[Homepage](https://gstreamer.freedesktop.org/)```
+
+```[Source code](https://gitlab.freedesktop.org/gstreamer/gstreamer)```
+
+```[Documentation](https://gstreamer.freedesktop.org/documentation/tools/gst-launch.html)```
+
+<!-- verified: 2026-07-17 -->

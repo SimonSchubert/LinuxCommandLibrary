@@ -77,3 +77,13 @@ GRUB 2 grub-install replaced the older GRUB Legacy installation method around **
 # SEE ALSO
 
 [grub-mkconfig](/man/grub-mkconfig)(8), [grub-set-default](/man/grub-set-default)(8), [efibootmgr](/man/efibootmgr)(8)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/grub/)```
+
+```[Source code](https://git.savannah.gnu.org/cgit/grub.git)```
+
+```[Documentation](https://www.gnu.org/software/grub/manual/grub/grub.html)```
+
+<!-- verified: 2026-07-17 -->

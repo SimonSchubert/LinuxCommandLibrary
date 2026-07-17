@@ -53,18 +53,25 @@ _FILE_
 
 # DESCRIPTION
 
-**hd** displays file contents in hexadecimal format. It's equivalent to hexdump -C, showing both hex values and ASCII representation.
+**hd** displays file contents in hexadecimal format. Invoking **hexdump** as **hd** is equivalent to running it with **-C**, showing offset, hex bytes, and the ASCII representation side by side.
 
 The tool is useful for examining binary files, analyzing data formats, and debugging. It formats output in readable columns.
 
 # CAVEATS
 
-Alias for hexdump -C on many systems. Large files produce extensive output. Binary data shown as dots in ASCII column.
+Non-printable bytes are shown as dots in the ASCII column. Large files produce extensive output; pipe through a pager or use **-n**/**-s** to limit the range.
 
 # HISTORY
 
-hd is typically a symlink to **hexdump** from **BSD** utilities, providing convenient hex dump functionality.
+**hd** originated as a BSD convenience alias for **hexdump**. On current Linux systems it's provided by the **util-linux** package (which absorbed hexdump from the older bsdmainutils package around 2017), so both **hexdump** and **hd** invoke the same binary.
 
 # SEE ALSO
 
 [hexdump](/man/hexdump)(1), [xxd](/man/xxd)(1), [od](/man/od)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux/blob/master/text-utils/hexdump.c)```
+```[Documentation](https://man7.org/linux/man-pages/man1/hexdump.1.html)```
+
+<!-- verified: 2026-07-17 -->

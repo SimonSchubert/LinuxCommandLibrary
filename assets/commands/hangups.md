@@ -1,24 +1,32 @@
 # TAGLINE
 
-terminal-based Google Hangouts client
+terminal-based Google Hangouts client (defunct: Hangouts was shut down in 2022)
 
 # TLDR
 
-**Start Google Hangouts client**
+**Start hangups** (prompts an OAuth login on first run, then caches the refresh token)
 
 ```hangups```
 
-**Connect and save credentials**
-
-```hangups --login```
-
-**Manual login**
+**Use the manual (copy-paste) OAuth login flow**
 
 ```hangups --manual-login```
 
-**Use custom key bindings**
+**Use a custom configuration file**
 
-```hangups -k [keyfile]```
+```hangups --config [hangups.conf]```
+
+**Enable verbose debug logging** to a file
+
+```hangups --debug --log [hangups.log]```
+
+**Rebind a keyboard shortcut**, e.g. quit
+
+```hangups --key-quit [ctrl q]```
+
+**Show the installed version**
+
+```hangups --version```
 
 # SYNOPSIS
 
@@ -26,38 +34,62 @@ terminal-based Google Hangouts client
 
 # PARAMETERS
 
-**--login**
-> Force new login.
+**-c**, **--config** _FILE_
+> Configuration file path.
+
+**-d**, **--debug**
+> Log detailed debugging messages.
 
 **--manual-login**
-> Manual OAuth login.
+> Use the manual (copy-paste) OAuth login flow instead of opening a browser.
 
-**-k**, **--key-bindings** _FILE_
-> Custom key bindings file.
+**--token-path** _PATH_
+> Path used to store the cached OAuth refresh token.
 
-**-c**, **--config** _FILE_
-> Configuration file.
+**--log** _FILE_
+> Log file path.
 
-**--debug**
-> Enable debug logging.
+**-D**, **--discreet-notifications**
+> Hide message details in desktop notifications.
 
-**--help**
+**--notification-type** _TYPE_
+> Type of desktop notifications to create.
+
+**--key-quit**, **--key-next-tab**, **--key-prev-tab**, **--key-close-tab**, **--key-menu** _KEY_
+> Rebind the corresponding action's key (defaults: ctrl e, ctrl d, ctrl u, ctrl w, ctrl n).
+
+**--col-scheme** _NAME_
+> Colour scheme to use.
+
+**--keep-emoticons**
+> Don't replace emoticons with corresponding emoji.
+
+**-v**, **--version**
+> Print the installed hangups version.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**hangups** is a terminal-based Google Hangouts client. It provides chat functionality from the command line with a text user interface.
-
-The application supports conversations, notifications, and multimedia sharing. It uses Google's authentication for secure access.
+**hangups** was the first third-party instant messaging client for Google Hangouts, providing a Python library plus a terminal (urwid-based) reference client. It worked by reverse-engineering Google's proprietary Hangouts protocol, which let it support features like group messaging that weren't available to XMPP-based clients.
 
 # CAVEATS
 
-Requires Google account. Hangouts being deprecated. TUI may have display issues.
+Google shut down consumer Hangouts in **November 2022** and decommissioned the API hangups depended on; the client can no longer log in or connect, and the project has seen no functional release since (last PyPI release was 0.4.18, April 2022). It is kept online for reference only, not as a usable chat client.
 
 # HISTORY
 
-hangups was created by **Tom Dryer** as an unofficial Google Hangouts client for terminal users.
+hangups was created by **Tom Dryer**, with its first release in **2014**, as an unofficial Google Hangouts client for terminal users. Several bots and bridges (HangupsBot, telepathy-hangups) were built on top of its protocol library before Hangouts itself was retired.
 
 # SEE ALSO
 
 [weechat](/man/weechat)(1), [irssi](/man/irssi)(1), [finch](/man/finch)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tdryer/hangups)```
+
+```[Documentation](https://hangups.readthedocs.io/)```
+
+<!-- verified: 2026-07-17 -->

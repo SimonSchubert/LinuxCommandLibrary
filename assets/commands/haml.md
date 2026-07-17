@@ -4,58 +4,77 @@ templating language that compiles to HTML
 
 # TLDR
 
-**Convert HAML to HTML**
+**Render a Haml file to HTML** (prints to stdout)
 
-```haml [input.haml] [output.html]```
+```haml render [input.haml]```
 
-**Convert from stdin**
+**Render and save the result to a file**
 
-```cat [input.haml] | haml```
+```haml render [input.haml] > [output.html]```
 
-**Use Rails mode**
+**Render from stdin**
 
-```haml --rails [input.haml]```
+```cat [input.haml] | haml render -```
 
-**Pretty print output**
+**Show the compiled Ruby source** instead of evaluating it
 
-```haml -f [input.haml]```
+```haml compile [input.haml]```
 
-**Check HAML syntax**
+**Check Haml syntax** without evaluating
 
-```haml -c [input.haml]```
+```haml compile --check [input.haml]```
+
+**Show the parsed syntax tree**
+
+```haml parse [input.haml]```
+
+**Display the installed Haml version**
+
+```haml version```
 
 # SYNOPSIS
 
-**haml** [_options_] [_input_] [_output_]
+**haml** _command_ [_options_] _file_
 
 # PARAMETERS
 
+**render** _file_
+> Render the Haml template and print the resulting HTML to stdout. Use **-** to read from stdin.
+
+**compile** _file_
+> Print the compiled Ruby source for the template instead of evaluating it.
+
 **-c**, **--check**
-> Check syntax only.
+> With **compile**, only parse and validate the generated Ruby; print "Syntax OK" or the error instead of the source.
 
-**-f**, **--format** _format_
-> Output format: html5, html4, xhtml.
+**temple** _file_
+> Print the intermediate Temple expression used to generate the Ruby code.
 
-**-e**, **--escape-html**
-> Escape HTML by default.
+**parse** _file_
+> Print the parsed abstract syntax tree.
+
+**version**
+> Print the installed Haml version.
 
 **-r**, **--require** _file_
-> Require Ruby library.
+> Require a Ruby library before rendering (render command only).
 
-**--style** _style_
-> Output style: nested, expanded, compact, compressed.
+**-I**, **--load-path** _path_
+> Add a directory to Ruby's load path (render command only).
 
-**-s**, **--stdin**
-> Read from stdin.
+**--no-escape-html**
+> Disable automatic escaping of `=` output (escaping is on by default).
 
-**-t**, **--trace**
-> Show full stack trace.
+**--no-escape-attrs**
+> Disable automatic escaping of attribute values (escaping is on by default).
 
 # DESCRIPTION
 
 **HAML** (HTML Abstraction Markup Language) is a templating language that compiles to HTML. It uses indentation for nesting and provides a concise syntax for HTML elements, attributes, and embedded Ruby.
 
-HAML is commonly used in Ruby on Rails applications but can be used standalone for any HTML generation.
+Since Haml 6, the engine is built on Temple and the `haml` executable is a subcommand-based CLI (render, compile, temple, parse, version) rather than a single set of flags.
+
+HAML is commonly used in Ruby on Rails applications, via the separate `haml-rails` gem, but can be used standalone for any HTML generation.
 
 # HAML SYNTAX
 
@@ -74,12 +93,22 @@ HAML is commonly used in Ruby on Rails applications but can be used standalone f
 
 # CAVEATS
 
-Requires Ruby. Whitespace-sensitive; indentation errors cause failures. Learning curve for non-Ruby developers. Less readable for complex HTML.
+Requires Ruby. Whitespace-sensitive; indentation errors cause failures. The CLI's subcommands (render, compile, temple, parse) replaced the older single-invocation `haml input output` style and flags like `--rails` or `--style` in Haml 6; scripts written for Haml 3/4/5 need updating.
 
 # HISTORY
 
-HAML was created by **Hampton Catlin** in **2006** as part of the Ruby ecosystem. It influenced many similar templating languages and remains popular in Rails development.
+HAML was created by **Hampton Catlin** in **2006** as part of the Ruby ecosystem. Haml 6 (2022) replaced the original hand-written compiler with one built on Temple, rewrote the CLI around Thor subcommands, and dropped the html4/xhtml output format options.
 
 # SEE ALSO
 
 [erb](/man/erb)(1), [slim](/man/slim)(1), [pug](/man/pug)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/haml/haml)```
+
+```[Homepage](https://haml.info/)```
+
+```[Documentation](https://haml.info/docs.html)```
+
+<!-- verified: 2026-07-17 -->

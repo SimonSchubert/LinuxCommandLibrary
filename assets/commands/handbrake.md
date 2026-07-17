@@ -1,86 +1,86 @@
 # TAGLINE
 
-open-source video transcoder
+GTK graphical interface for the HandBrake video transcoder
 
 # TLDR
 
-**Convert video to MP4**
+**Launch the HandBrake GUI**
 
-```HandBrakeCLI -i [input.mkv] -o [output.mp4]```
+```ghb```
 
-**Use preset**
+**Open a video file directly in the GUI**
 
-```HandBrakeCLI -i [input.mkv] -o [output.mp4] --preset="Fast 1080p30"```
+```ghb [video.mkv]```
 
-**Specify quality**
+**Open the GUI with a preset preselected**
 
-```HandBrakeCLI -i [input.mkv] -o [output.mp4] -q [20]```
+```ghb --preset="[Fast 1080p30]"```
 
-**Convert DVD**
+**Load a DVD/Blu-ray device or directory**
 
-```HandBrakeCLI -i [/dev/dvd] -o [output.mp4]```
+```ghb --device [/dev/dvd]```
 
-**List presets**
+**Automatically start the encode queue on launch**
 
-```HandBrakeCLI --preset-list```
+```ghb --auto-start-queue [video.mkv]```
 
-**Extract specific title**
+**Enable verbose debug logging to the terminal**
 
-```HandBrakeCLI -i [input.mkv] -o [output.mp4] -t [2]```
+```ghb --debug --console```
 
 # SYNOPSIS
 
-**HandBrakeCLI** [_options_] **-i** _source_ **-o** _output_
+**ghb** [_options_] [_file_]
 
 # PARAMETERS
 
-**-i** _source_
-> Input file or device.
+**-d**, **--device** _file_
+> Device, directory, or file to load for encoding on startup.
 
-**-o** _file_
-> Output file.
+**-p**, **--preset** _name_
+> Preset to select on startup.
 
-**-t** _title_
-> Title number to encode.
+**-x**, **--debug**
+> Enable verbose (debug-level) logging.
 
-**--preset** _name_
-> Use preset configuration.
+**-c**, **--console**
+> Write debug output to the console instead of capturing it internally.
 
-**-q** _quality_
-> Quality (0-51, lower is better).
+**-o**, **--config** _dir_
+> Override the user configuration directory.
 
-**-e** _encoder_
-> Video encoder (x264, x265, nvenc).
+**--auto-start-queue**
+> Automatically start the encode queue on launch.
 
-**-E** _encoder_
-> Audio encoder (aac, mp3, flac).
-
-**-B** _bitrate_
-> Audio bitrate.
-
-**-r** _fps_
-> Framerate.
-
-**--width** _pixels_
-> Output width.
-
-**--height** _pixels_
-> Output height.
+**--clear-queue**
+> Clear previously queued items on launch.
 
 # DESCRIPTION
 
-**HandBrake** is an open-source video transcoder. HandBrakeCLI is the command-line interface for batch processing, scripting, and headless operation.
+**HandBrake** is an open-source video transcoder. **ghb** is its native GTK graphical interface, used on Linux to pick sources, choose presets, configure video/audio/subtitle settings, and manage an encode queue interactively.
 
-It supports various input formats including DVDs, Blu-rays, and common video files, outputting to MP4, MKV, and WebM containers.
+ghb and [HandBrakeCLI](/man/handbrakecli)(1) share the same underlying libhb encoding engine and preset format: presets built or tweaked in ghb can be exported and reused from HandBrakeCLI for scripted or headless encoding, and vice versa.
+
+On Linux, ghb is installed via the distribution's package (e.g. `handbrake` on Arch, `handbrake-gtk` on Debian/Ubuntu) or as the `fr.handbrake.ghb` Flatpak.
 
 # CAVEATS
 
-DVD decryption requires libdvdcss. Hardware encoding needs compatible GPU. High-quality encoding is slow. Preset names are case-sensitive.
+Requires a graphical session (GTK4/Wayland or X11); not usable over a plain SSH connection without display forwarding. DVD/Blu-ray decryption requires libdvdcss. Hardware encoding needs a compatible GPU and drivers.
 
 # HISTORY
 
-HandBrake was created by **Eric Petit** in **2003** as a tool for ripping DVDs on BeOS. It evolved into a general-purpose video transcoder and is now maintained by a community of developers.
+HandBrake was originally created by **Eric Petit** in **2003** as "MediaFork" for BeOS, later renamed and ported to other platforms. The GTK interface was written for Linux users after the project's revival by the open-source community, and now targets GTK 4.
 
 # SEE ALSO
 
-[ffmpeg](/man/ffmpeg)(1), [vlc](/man/vlc)(1), [mencoder](/man/mencoder)(1)
+[handbrakecli](/man/handbrakecli)(1), [ffmpeg](/man/ffmpeg)(1), [vlc](/man/vlc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/HandBrake/HandBrake)```
+
+```[Homepage](https://handbrake.fr/)```
+
+```[Documentation](https://handbrake.fr/docs/)```
+
+<!-- verified: 2026-07-17 -->

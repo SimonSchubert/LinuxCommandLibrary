@@ -4,21 +4,21 @@ GRand Unified Bootloader for Linux systems
 
 # TLDR
 
-**Enter GRUB shell**
-
-```sudo grub```
-
 **Install GRUB to disk**
 
 ```sudo grub-install /dev/sda```
 
-**Update GRUB configuration**
+**Update GRUB configuration** (Debian/Ubuntu)
 
 ```sudo update-grub```
 
-**Generate config file**
+**Generate config file directly**
 
 ```sudo grub-mkconfig -o /boot/grub/grub.cfg```
+
+**Set the default boot entry**
+
+```sudo grub-set-default 0```
 
 **Check GRUB version**
 
@@ -26,9 +26,9 @@ GRand Unified Bootloader for Linux systems
 
 # SYNOPSIS
 
-**grub** [_options_]
-
 **grub-install** [_options_] _device_
+
+**grub-mkconfig** [**-o** _file_]
 
 # PARAMETERS
 
@@ -56,6 +56,8 @@ GRand Unified Bootloader for Linux systems
 
 GRUB 2 supports multiple filesystems, LVM, RAID, and encrypted partitions. It provides rescue mode for system recovery and scripting for advanced configurations.
 
+Unlike GRUB Legacy, GRUB 2 has no single unified **grub** command; its functionality is split across separate utilities such as **grub-install**, **grub-mkconfig**, **grub-set-default**, and **grub-editenv**. An interactive GRUB command line is available from the boot menu itself (press **c**), not from a running Linux shell.
+
 # CONFIGURATION
 
 **/etc/default/grub**
@@ -78,3 +80,13 @@ GRUB was created as part of the **GNU Project**. GRUB 2 was released in **2002**
 # SEE ALSO
 
 [grub-mkconfig](/man/grub-mkconfig)(8), [update-grub](/man/update-grub)(8), [grub-install](/man/grub-install)(8)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/grub/)```
+
+```[Source code](https://git.savannah.gnu.org/cgit/grub.git)```
+
+```[Documentation](https://www.gnu.org/software/grub/manual/grub/grub.html)```
+
+<!-- verified: 2026-07-17 -->

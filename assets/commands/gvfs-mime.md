@@ -45,12 +45,20 @@ The tool modifies the user's MIME database to associate applications with conten
 
 # CAVEATS
 
-Deprecated in favor of gio mime. GNOME specific. Uses desktop file names.
+Part of the gvfs-bin command-line tools, deprecated in gvfs 1.31 (2016) and removed entirely in gvfs 1.38 (2018) in favor of the unified **gio** command (`gio mime`). Modern distributions no longer ship gvfs-mime. GNOME specific; uses .desktop file IDs as handlers.
 
 # HISTORY
 
-gvfs-mime was developed as part of **GVFS** for GNOME, now largely replaced by the **gio** command.
+**gvfs-mime** was part of GVFS's original gvfs-bin utilities, introduced for GNOME alongside GVFS in **2008** (GNOME 2.22). It has since been superseded by **gio mime**.
 
 # SEE ALSO
 
 [gio](/man/gio)(1), [xdg-mime](/man/xdg-mime)(1), [update-mime-database](/man/update-mime-database)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gvfs)```
+
+```[Homepage](https://wiki.gnome.org/Projects/gvfs)```
+
+<!-- verified: 2026-07-17 -->

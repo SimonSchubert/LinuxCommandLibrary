@@ -58,3 +58,13 @@ The tool is useful for debugging multimedia issues and understanding media struc
 # SEE ALSO
 
 [gst-launch-1.0](/man/gst-launch-1.0)(1), [gst-inspect-1.0](/man/gst-inspect-1.0)(1), [mediainfo](/man/mediainfo)(1)
+
+# RESOURCES
+
+```[Homepage](https://gstreamer.freedesktop.org/)```
+
+```[Source code](https://gitlab.freedesktop.org/gstreamer/gstreamer)```
+
+```[Documentation](https://gstreamer.freedesktop.org/documentation/)```
+
+<!-- verified: 2026-07-17 -->

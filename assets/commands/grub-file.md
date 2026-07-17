@@ -20,9 +20,13 @@ Check if a file is an **ARM Linux** kernel
 
 ```grub-file --is-arm-linux [path/to/file]```
 
-Check if a file is an **x86 Linux** kernel
+Check if a file is an **x86 Linux** kernel (32 or 64-bit)
 
 ```grub-file --is-x86-linux [path/to/file]```
+
+Check if a file is an **x86 Multiboot2** kernel
+
+```grub-file --is-x86-multiboot2 [path/to/file]```
 
 Check if a file is an **x86_64 XNU** (macOS) kernel
 
@@ -49,17 +53,23 @@ Check if a file is an **x86_64 XNU** (macOS) kernel
 **--is-arm-linux**
 > Check for ARM Linux kernel
 
-**--is-x86-linux**
-> Check for x86 Linux kernel
+**--is-arm64-linux**
+> Check for ARM64 Linux kernel
 
-**--is-x86_64-linux**
-> Check for x86_64 Linux kernel
+**--is-x86-linux**
+> Check for x86 Linux kernel (covers both 32 and 64-bit)
+
+**--is-x86-linux32**
+> Check for x86 Linux kernel using the 32-bit-only boot protocol
 
 **--is-x86_64-xnu**
-> Check for macOS XNU kernel
+> Check for macOS (XNU) x86_64 kernel
 
-**--is-multiboot**
+**--is-x86-multiboot**
 > Check for Multiboot image
+
+**--is-x86-multiboot2**
+> Check for Multiboot2 image
 
 # DESCRIPTION
 
@@ -78,3 +88,13 @@ grub-file is part of GRUB 2, providing a utility for image type detection. This 
 # SEE ALSO
 
 [grub-install](/man/grub-install)(8), [grub-probe](/man/grub-probe)(8), [file](/man/file)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/grub/)```
+
+```[Source code](https://git.savannah.gnu.org/cgit/grub.git)```
+
+```[Documentation](https://www.gnu.org/software/grub/manual/grub/grub.html)```
+
+<!-- verified: 2026-07-17 -->

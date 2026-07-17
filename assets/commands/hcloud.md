@@ -10,7 +10,7 @@ command-line interface for Hetzner Cloud
 
 **Create server**
 
-```hcloud server create --name [myserver] --type [cx11] --image [ubuntu-22.04]```
+```hcloud server create --name [myserver] --type [cx22] --image [ubuntu-24.04]```
 
 **SSH to server**
 
@@ -30,27 +30,51 @@ command-line interface for Hetzner Cloud
 
 # SYNOPSIS
 
-**hcloud** _command_ [_options_]
+**hcloud** [_global-options_] _command_ _subcommand_ [_options_]
 
 # PARAMETERS
 
 _COMMAND_
-> Subcommand to execute.
+> Resource or subcommand to execute.
 
 **server**
-> Server operations.
+> Manage cloud servers.
 
 **image**
-> Image operations.
+> Manage server images and snapshots.
 
 **volume**
-> Volume operations.
+> Manage block storage volumes.
 
 **network**
-> Network operations.
+> Manage private networks.
+
+**firewall**
+> Manage firewalls and rules.
+
+**load-balancer**
+> Manage load balancers.
+
+**ssh-key**
+> Manage SSH keys.
+
+**certificate**
+> Manage TLS certificates.
 
 **context**
-> Context management.
+> Manage CLI contexts (project/API token profiles).
+
+**config**
+> Manage local CLI configuration.
+
+**--context** _name_
+> Use a specific context instead of the active one.
+
+**-o**, **--output** _format_
+> Output format: table, json, or yaml.
+
+**--debug**
+> Enable debug output.
 
 **--help**
 > Display help information.
@@ -72,3 +96,11 @@ hcloud was developed by **Hetzner** as the official CLI for their cloud platform
 # SEE ALSO
 
 [doctl](/man/doctl)(1), [aws](/man/aws)(1), [gcloud](/man/gcloud)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/hetznercloud/cli)```
+```[Documentation](https://github.com/hetznercloud/cli/blob/main/docs/reference/manual/hcloud.md)```
+```[Homepage](https://www.hetzner.com/cloud)```
+
+<!-- verified: 2026-07-17 -->

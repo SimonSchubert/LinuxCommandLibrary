@@ -44,13 +44,25 @@ Add kernel boot **arguments** to all kernel menu entries
 > Display index of default kernel
 
 **--add-kernel=**_PATH_
-> Add a new kernel entry
+> Add a new kernel entry (requires **--title**)
 
 **--remove-kernel=**_PATH_
 > Remove a kernel entry
 
 **--title=**_TITLE_
 > Set title for new kernel entry
+
+**--initrd=**_PATH_
+> Set the initrd for a new kernel entry
+
+**--copy-default**
+> Copy arguments and root device from the current default entry
+
+**--make-default**
+> Make the newly added entry the default
+
+**--grub2**
+> Use grub2-style config (default on x86_64/BLS systems)
 
 # DESCRIPTION
 
@@ -64,8 +76,14 @@ Behavior varies between GRUB Legacy, GRUB2, and BLS configurations. Some options
 
 # HISTORY
 
-grubby was developed by Red Hat to simplify bootloader management across different configurations. It became essential for automated system management and kernel updates on Red Hat-based distributions.
+grubby was developed by Red Hat to simplify bootloader management across different configurations. It became essential for automated system management and kernel updates on Red Hat-based distributions. The original **rhboot/grubby** project was retired in 2022; with the adoption of BLS, its functionality now lives on as a compatible shell script maintained in Fedora's dist-git.
 
 # SEE ALSO
 
 [grub-mkconfig](/man/grub-mkconfig)(8), [grub-set-default](/man/grub-set-default)(8), [kernel-install](/man/kernel-install)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/rhboot/grubby)```
+
+<!-- verified: 2026-07-17 -->

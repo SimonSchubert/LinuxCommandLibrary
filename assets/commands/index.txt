@@ -7859,6 +7859,7 @@ twitch-tui.md
 twm.md
 twopi.md
 twurl-accounts.md
+twurl-authorize.md
 twurl.md
 tye.md
 type.md

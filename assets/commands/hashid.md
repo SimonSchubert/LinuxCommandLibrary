@@ -46,11 +46,27 @@ python tool that identifies hash types by analyzing their length and character
 **-o**, **--outfile** _file_
 > Write output to file.
 
+**-h**, **--help**
+> Display help information.
+
+**--version**
+> Show program version.
+
 # DESCRIPTION
 
-**hashid** is a Python tool that identifies hash types by analyzing their length and character patterns. It supports over 220 unique hash types including MD5, SHA variants, NTLM, bcrypt, and salted hashes. Useful for penetration testing and security analysis to determine which cracking tool and mode to use.
+**hashID** is a Python 3 tool that identifies hash types by analyzing their length and character patterns using regular expressions. It supports over 220 unique hash types including MD5, SHA variants, NTLM, bcrypt, and salted hashes. It can analyze a single hash, a file of hashes, or a whole directory. Useful for penetration testing and security analysis to determine which cracking tool and mode to use.
+
+# CAVEATS
+
+Identification is based on pattern matching (length and character set), so results are probabilistic, not definitive; many hash types share the same format (e.g. MD5 and NTLM are both 32 hex characters).
 
 # SEE ALSO
 
 [hashcat](/man/hashcat)(1), [john](/man/john)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/psypanda/hashID)```
+```[Homepage](https://psypanda.github.io/hashID/)```
+
+<!-- verified: 2026-07-17 -->

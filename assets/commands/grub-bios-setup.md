@@ -16,23 +16,39 @@ Install GRUB in a **specific directory**
 
 ```grub-bios-setup -d /boot/grub /dev/sdX```
 
+Also make the drive **bootable as a floppy**
+
+```grub-bios-setup -a /dev/sdX```
+
 # SYNOPSIS
 
 **grub-bios-setup** [_options_] _device_
 
 # PARAMETERS
 
+**-b**, **--boot-image** _FILE_
+> Use _FILE_ as the boot image instead of boot.img
+
+**-c**, **--core-image** _FILE_
+> Use _FILE_ as the core image instead of core.img
+
 **-d**, **--directory** _DIR_
 > Use GRUB files from _DIR_ instead of default
-
-**-f**, **--force**
-> Install even if problems are detected
 
 **-m**, **--device-map** _FILE_
 > Use device map from _FILE_
 
+**-f**, **--force**
+> Install even if problems are detected
+
+**-a**, **--allow-floppy**
+> Make the drive also bootable as a floppy (may break on some BIOSes)
+
 **-s**, **--skip-fs-probe**
 > Skip filesystem probing
+
+**--no-rs-codes**
+> Do not add Reed-Solomon error-correcting codes (x86 BIOS targets only)
 
 **-v**, **--verbose**
 > Enable verbose output
@@ -54,3 +70,13 @@ grub-bios-setup is part of GRUB 2, providing the low-level MBR installation that
 # SEE ALSO
 
 [grub-install](/man/grub-install)(8), [grub-mkconfig](/man/grub-mkconfig)(8)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/grub/)```
+
+```[Source code](https://git.savannah.gnu.org/cgit/grub.git)```
+
+```[Documentation](https://www.gnu.org/software/grub/manual/grub/grub.html)```
+
+<!-- verified: 2026-07-17 -->

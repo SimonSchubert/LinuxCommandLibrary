@@ -12,7 +12,11 @@ JavaScript task runner for automation
 
 ```grunt [task-name]```
 
-**List available tasks**
+**Run multiple tasks in sequence**
+
+```grunt [task-one] [task-two]```
+
+**List available tasks and options**
 
 ```grunt --help```
 
@@ -20,13 +24,17 @@ JavaScript task runner for automation
 
 ```grunt --verbose```
 
-**Force task completion**
+**Force execution despite warnings**
 
 ```grunt --force```
 
-**Initialize Gruntfile**
+**Use an alternate Gruntfile**
 
-```grunt-init```
+```grunt --gruntfile [path/to/Gruntfile.js] [task-name]```
+
+**Perform a dry run without writing files**
+
+```grunt --no-write```
 
 # SYNOPSIS
 
@@ -35,19 +43,34 @@ JavaScript task runner for automation
 # PARAMETERS
 
 _TASKS_
-> Tasks to execute.
+> Tasks to execute, in order. Runs the **default** task if none is given.
 
 **-f**, **--force**
-> Force execution despite warnings.
+> Continue past warnings instead of aborting.
 
 **-v**, **--verbose**
-> Verbose output.
+> Verbose mode, printing more information about what Grunt is doing.
+
+**-b**, **--base** _PATH_
+> Alternate base path; file paths are relative to the Gruntfile by default.
 
 **--no-color**
 > Disable colored output.
 
 **--gruntfile** _FILE_
-> Specify Gruntfile.
+> Specify an alternate Gruntfile.
+
+**--no-write**
+> Disable writing files (dry run).
+
+**-d**, **--debug**
+> Enable debugging mode for tasks that support it.
+
+**--stack**
+> Print a stack trace when exiting with a warning or fatal error.
+
+**-V**, **--version**
+> Print the Grunt version; combine with --verbose for plugin versions too.
 
 **--help**
 > Display help information.
@@ -56,7 +79,7 @@ _TASKS_
 
 **Grunt** is a JavaScript task runner for automating repetitive tasks. It handles minification, compilation, testing, and linting through a plugin ecosystem.
 
-The tool reads configuration from Gruntfile.js. It was widely used before npm scripts and newer build tools like Gulp and webpack gained popularity.
+The tool reads configuration from Gruntfile.js. The globally-installed **grunt-cli** package provides the **grunt** command itself; it just locates and runs the version of Grunt installed locally in the project, which is what actually loads the Gruntfile and plugins. Grunt was widely used before npm scripts and newer build tools like Gulp and webpack gained popularity.
 
 # CONFIGURATION
 
@@ -77,3 +100,13 @@ Grunt was created by **Ben Alman** in **2012** as one of the first JavaScript ta
 # SEE ALSO
 
 [gulp](/man/gulp)(1), [npm](/man/npm)(1), [webpack](/man/webpack)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/gruntjs/grunt)```
+
+```[Homepage](https://gruntjs.com/)```
+
+```[Documentation](https://gruntjs.com/getting-started)```
+
+<!-- verified: 2026-07-17 -->

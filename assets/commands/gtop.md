@@ -44,8 +44,14 @@ Requires Node.js runtime. Higher CPU usage compared to native alternatives. Limi
 
 # HISTORY
 
-gtop was created by **Cem Akpolat** (aksakalli) and first released in **2017**. Written in Node.js using blessed-contrib, it popularized the graphical terminal monitor style. The visual design inspired many successors including gotop (Go), bashtop/bpytop (Python), and bottom (Rust). gtop remains popular for its simplicity and ease of installation via npm.
+gtop was created by **Can Güney Aksakalli** (aksakalli) and first released in **2017**. Written in Node.js using blessed-contrib, it popularized the graphical terminal monitor style. The visual design inspired many successors including gotop (Go), bashtop/bpytop (Python), and bottom (Rust). gtop remains popular for its simplicity and ease of installation via npm.
 
 # SEE ALSO
 
 [htop](/man/htop)(1), [gotop](/man/gotop)(1), [btm](/man/btm)(1), [top](/man/top)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aksakalli/gtop)```
+
+<!-- verified: 2026-07-17 -->

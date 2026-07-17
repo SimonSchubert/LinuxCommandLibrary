@@ -79,6 +79,8 @@ For large-scale operations, the `-m` flag enables parallel, multi-threaded execu
 
 # CAVEATS
 
+**gsutil is a legacy tool**: Google now recommends the newer **gcloud storage** commands (part of the Google Cloud CLI), which are faster and support features gsutil lacks, such as soft delete and managed folders. gsutil still ships with the Cloud CLI and works as before, but is only minimally maintained.
+
 Requires Google Cloud authentication. Large transfers may incur costs. ACL changes need careful consideration. Parallel operations use more resources.
 
 # HISTORY
@@ -88,3 +90,11 @@ Requires Google Cloud authentication. Large transfers may incur costs. ACL chang
 # SEE ALSO
 
 [gcloud](/man/gcloud)(1), [aws](/man/aws)(1), [azcopy](/man/azcopy)(1), [rclone](/man/rclone)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/GoogleCloudPlatform/gsutil)```
+
+```[Documentation](https://cloud.google.com/storage/docs/gsutil)```
+
+<!-- verified: 2026-07-17 -->

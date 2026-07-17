@@ -12,13 +12,17 @@ high-performance TCP/HTTP load balancer and proxy
 
 ```haproxy -c -f [/etc/haproxy/haproxy.cfg]```
 
-**Reload configuration**
+**Reload configuration** (soft-stop the old process once the new one is ready)
 
 ```haproxy -f [config.cfg] -sf $(pidof haproxy)```
 
 **Start in daemon mode**
 
 ```haproxy -D -f [config.cfg]```
+
+**Start in master-worker mode** (systemd-friendly, used by the official unit file)
+
+```haproxy -Ws -f [/etc/haproxy/haproxy.cfg] -p [/run/haproxy.pid]```
 
 **Show version**
 
@@ -55,16 +59,36 @@ high-performance TCP/HTTP load balancer and proxy
 > Default per-proxy maxconn.
 
 **-d**
-> Debug mode.
+> Debug mode; disables daemon mode and stays in the foreground.
 
 **-V**
-> Verbose mode.
+> Verbose mode (cancels -q).
+
+**-q**
+> Quiet mode; suppresses informational messages.
+
+**-v**
+> Display version and build date.
+
+**-W**
+> Master-worker mode: a master process supervises worker process(es) and reloads configuration without dropping connections.
+
+**-Ws**
+> Master-worker mode with systemd `sd_notify` support; used by the official systemd unit.
+
+**-x** _socket_
+> Retrieve listening sockets from an old process (used internally for seamless reloads).
+
+**-C** _dir_
+> Change to this directory before loading configuration files.
 
 # DESCRIPTION
 
 **HAProxy** (High Availability Proxy) is a high-performance TCP/HTTP load balancer and reverse proxy that distributes incoming traffic across pools of backend servers. Its configuration is organized around frontends (which accept client connections on bound addresses and ports) and backends (which define the set of servers that handle requests, along with the balancing algorithm -- round-robin, least-connections, source-hash, and others). Active health checks continuously probe backend servers and automatically remove unhealthy nodes from rotation.
 
-Beyond basic load balancing, HAProxy provides SSL/TLS termination, HTTP header manipulation, content-based routing via ACLs, connection rate limiting, stick tables for session persistence, and a real-time statistics dashboard. It operates in an event-driven, single-process architecture that can handle hundreds of thousands of concurrent connections with low latency and minimal resource consumption, making it a standard choice for high-traffic production environments.
+Beyond basic load balancing, HAProxy provides SSL/TLS termination, HTTP header manipulation, content-based routing via ACLs, connection rate limiting, stick tables for session persistence, and a real-time statistics dashboard. It operates on an event-driven, multi-threaded worker model that can handle hundreds of thousands of concurrent connections with low latency and minimal resource consumption, making it a standard choice for high-traffic production environments.
+
+Modern deployments typically run it in master-worker mode (**-W**/**-Ws**), where a master process supervises one or more worker processes and can reload the configuration or reload binaries without dropping established connections.
 
 # CONFIG EXAMPLE
 
@@ -90,3 +114,13 @@ HAProxy was created by **Willy Tarreau** in **2000** and has become one of the m
 # SEE ALSO
 
 [nginx](/man/nginx)(1), [envoy](/man/envoy)(1), [traefik](/man/traefik)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/haproxy/haproxy)```
+
+```[Homepage](https://www.haproxy.org/)```
+
+```[Documentation](https://docs.haproxy.org/)```
+
+<!-- verified: 2026-07-17 -->

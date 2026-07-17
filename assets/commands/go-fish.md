@@ -1,43 +1,57 @@
 # TAGLINE
 
-fish shell completion generator for Go programs
+play the classic Go Fish card game against the computer
 
 # TLDR
 
-**Generate fish completions**
+**Start a game**
 
 ```go-fish```
 
-**Specific package completions**
+**Play in "professional" mode** (randomly decide who asks first)
 
-```go-fish [package]```
+```go-fish -p```
 
 # SYNOPSIS
 
-**go-fish** [_package_]
+**go-fish** [**-p**]
 
 # PARAMETERS
 
-_PACKAGE_
-> Package to generate completions for.
+**-p**
+> Professional mode: randomly determine who asks first, instead of always letting the player start.
 
-**--help**
-> Display help information.
+# PREVIEW
+
+```
+Your hand: 3 3 7 9 K
+Got any 7s? y
+I had a 7? Here!
+Books won: 1
+```
 
 # DESCRIPTION
 
-**go-fish** generates fish shell completions for Go programs. It analyzes Go command-line flag definitions and creates fish completion scripts.
+**go-fish** is a text-interface version of the traditional children's card game, part of the **bsd-games** collection. The player and the computer are each dealt seven cards, and take turns asking each other for cards of a given rank in order to collect "books" (all four cards of that rank).
 
-The tool automates completion script generation from Go source code. It uses Go's flag package conventions to identify commands and options.
+You may only ask for a rank you already hold at least one card of. If the opponent has none, you're told to "Go Fish!" and must draw from the remaining deck; drawing the requested rank lets you go again. Completed books are set aside and that rank becomes unavailable. The game ends when either player is out of cards, and whoever has collected the most books wins.
 
 # CAVEATS
 
-Requires Go flags package usage. Fish shell specific. May need customization.
+Part of the bsd-games package, so availability depends on your distribution installing it. The computer opponent rarely bluffs and mostly plays honestly.
 
 # HISTORY
 
-go-fish was created to automate fish shell completion generation for Go command-line applications.
+**go-fish** originates from the **BSD Games** collection first assembled in the 1980s-90s and later packaged for Linux distributions as **bsd-games**/**bsdgames**.
 
 # SEE ALSO
 
-[go](/man/go)(1), [fish](/man/fish)(1)
+[hangman](/man/hangman)(6), [cribbage](/man/cribbage)(6)
+
+# RESOURCES
+
+```[Source code](https://github.com/jsm28/bsd-games)```
+
+```[Documentation](https://packages.debian.org/stable/bsdgames)```
+
+<!-- verified: 2026-07-17 -->
