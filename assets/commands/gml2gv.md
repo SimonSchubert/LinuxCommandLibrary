@@ -19,13 +19,19 @@ GML to Graphviz DOT format converter
 # PARAMETERS
 
 _FILES_
-> GML input files.
+> GML input files. Reads from stdin if omitted.
 
 **-o** _FILE_
-> Output file.
+> Output file. Writes to stdout if omitted.
+
+**-g** _NAME_
+> Name for the generated graph. Subsequent graphs get an appended integer.
+
+**-v**
+> Verbose mode.
 
 **-?**
-> Display help.
+> Display usage information and exit.
 
 # DESCRIPTION
 
@@ -44,3 +50,11 @@ gml2gv is part of **Graphviz**, providing format conversion between common graph
 # SEE ALSO
 
 [dot](/man/dot)(1), [gv2gml](/man/gv2gml)(1), [graphml2gv](/man/graphml2gv)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/graphviz/graphviz)```
+
+```[Homepage](https://graphviz.org/docs/cli/gml2gv/)```
+
+<!-- verified: 2026-07-17 -->

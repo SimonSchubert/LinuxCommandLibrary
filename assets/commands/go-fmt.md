@@ -68,3 +68,11 @@ format Go source code to standard style
 # SEE ALSO
 
 [go](/man/go)(1), [goimports](/man/goimports)(1)
+
+# RESOURCES
+
+```[Documentation](https://pkg.go.dev/cmd/gofmt)```
+
+```[Source code](https://github.com/golang/go)```
+
+<!-- verified: 2026-07-17 -->

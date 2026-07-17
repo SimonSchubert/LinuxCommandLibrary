@@ -73,3 +73,11 @@ personal and small-business financial accounting
 # SEE ALSO
 
 [gnucash-cli](/man/gnucash-cli)(1), [ledger](/man/ledger)(1), [hledger](/man/hledger)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Gnucash/gnucash)```
+
+```[Homepage](https://www.gnucash.org/)```
+
+<!-- verified: 2026-07-17 -->

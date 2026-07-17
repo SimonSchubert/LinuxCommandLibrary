@@ -43,6 +43,12 @@ Chinese national cryptographic algorithms toolkit
 **sm2verify**
 > Verify SM2 signature.
 
+**sm2encrypt**
+> Encrypt with an SM2 public key.
+
+**sm2decrypt**
+> Decrypt with an SM2 private key.
+
 **sm3**
 > Compute SM3 hash.
 
@@ -66,6 +72,9 @@ Chinese national cryptographic algorithms toolkit
 **-pass** _password_
 > Key password.
 
+**-pubout** _file_
+> Write the derived public key to a file (used with **sm2keygen**).
+
 **-encrypt**
 > Encrypt mode.
 
@@ -86,3 +95,11 @@ GmSSL was developed to support China's cryptographic standards, which are mandat
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [gpg](/man/gpg)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/guanzhi/GmSSL)```
+
+```[Homepage](http://guanzhi.github.io/GmSSL/)```
+
+<!-- verified: 2026-07-17 -->

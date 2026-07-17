@@ -41,6 +41,18 @@ Verify GPG signatures of tags
 
 This is commonly used to verify the integrity of release tags in security-sensitive workflows.
 
+# CAVEATS
+
+The signer's public key must already be available in the local GPG keyring (or configured SSH/X.509 verifier); an unknown key causes verification to fail even for a well-formed signature. Exits non-zero if any given tag lacks a valid signature.
+
 # SEE ALSO
 
 [git-tag](/man/git-tag)(1), [git-verify-commit](/man/git-verify-commit)(1)
+
+# RESOURCES
+
+```[Documentation](https://git-scm.com/docs/git-verify-tag)```
+
+```[Source code](https://github.com/git/git)```
+
+<!-- verified: 2026-07-17 -->

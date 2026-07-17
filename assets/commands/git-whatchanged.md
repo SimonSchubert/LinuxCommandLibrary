@@ -47,10 +47,18 @@ Show commit logs with file-level diff information
 
 # DESCRIPTION
 
-**git whatchanged** shows logs with the difference each commit introduces. It is similar to `git log` but defaults to showing raw diff output, making it easier to see which files were affected by each commit.
+**git whatchanged** shows logs with the difference each commit introduces. It is essentially equivalent to `git log --raw --no-merges`, making it easier to see which files were affected by each commit.
 
-This command is considered somewhat legacy; `git log` with appropriate options provides the same functionality.
+# CAVEATS
+
+This command is deprecated and scheduled for removal in a future Git release. Use `git log --raw` instead. When limiting output to a path, add `--` before the path to avoid ambiguity with branch names, e.g. `git whatchanged -- [file]`.
 
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-diff](/man/git-diff)(1)
+
+# RESOURCES
+
+```[Documentation](https://git-scm.com/docs/git-whatchanged)```
+
+<!-- verified: 2026-07-17 -->

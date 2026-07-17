@@ -47,6 +47,23 @@ gdbus                  D-Bus tool
 gsettings              GSettings CLI
 ```
 
+# PARAMETERS
+
+**glib-mkenums --template** _file_
+> Text template controlling the generated enum descriptions.
+
+**glib-genmarshal --header** / **--body**
+> Generate the marshaller header or C source respectively.
+
+**glib-compile-resources --target** _file_
+> Output file for the compiled resource bundle (C source or binary `.gresource`).
+
+**glib-compile-resources --generate-source** / **--generate-header**
+> Generate only the C source or only the header, instead of both.
+
+**glib-compile-resources --sourcedir** _dir_
+> Directory to search for referenced resource files.
+
 # CAVEATS
 
 C library, not a command. Requires understanding of C and GLib conventions. Memory management follows GLib patterns. Documentation at docs.gtk.org.
@@ -58,3 +75,11 @@ GLib was originally part of **GTK+**, extracted as a separate library in **1998*
 # SEE ALSO
 
 [pkg-config](/man/pkg-config)(1), [gdbus](/man/gdbus)(1), [gsettings](/man/gsettings)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/glib)```
+
+```[Documentation](https://docs.gtk.org/glib/)```
+
+<!-- verified: 2026-07-17 -->

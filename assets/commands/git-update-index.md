@@ -28,6 +28,10 @@ Modify index entries for tracked files
 
 ```git update-index --remove [file]```
 
+**Read paths to update from stdin**
+
+```find . -name "*.txt" | git update-index --add --stdin```
+
 # SYNOPSIS
 
 **git** **update-index** [_options_] [_files_...]
@@ -53,10 +57,37 @@ Modify index entries for tracked files
 > Remove file from index.
 
 **--refresh**
-> Refresh stat info.
+> Refresh stat info; errors on paths that need updating unless **-q** is given.
 
-**--chmod** _mode_
-> Set executable bit.
+**-q**
+> Used with **--refresh**: continue quietly even if paths need updating, instead of erroring out.
+
+**--really-refresh**
+> Like **--refresh**, but check stat information unconditionally, ignoring the assume-unchanged bit.
+
+**--chmod=(+|-)x**
+> Set or unset the executable bit for updated paths.
+
+**--stdin**
+> Read list of paths from standard input instead of the command line, one per line (or NUL-separated with **-z**).
+
+**--index-info**
+> Read index entries (mode, object, path) from standard input to add, replace, or remove entries directly.
+
+**--cacheinfo** _mode_,_object_,_path_
+> Directly insert an entry into the index without needing a corresponding file in the working tree.
+
+**-z**
+> Use NUL as the line terminator with **--stdin** or **--index-info**.
+
+**--ignore-submodules**
+> Skip submodule checks when used with **--refresh**.
+
+**--split-index**, **--no-split-index**
+> Enable or disable the split-index feature for large repositories.
+
+**--untracked-cache**, **--no-untracked-cache**
+> Enable or disable caching of untracked file information to speed up **git status**.
 
 # DESCRIPTION
 
@@ -66,4 +97,12 @@ The most common use is the `--assume-unchanged` flag, which tells Git to tempora
 
 # SEE ALSO
 
-[git-add](/man/git-add)(1), [git-rm](/man/git-rm)(1)
+[git-add](/man/git-add)(1), [git-rm](/man/git-rm)(1), [git-ls-files](/man/git-ls-files)(1)
+
+# RESOURCES
+
+```[Documentation](https://git-scm.com/docs/git-update-index)```
+
+```[Source code](https://github.com/git/git)```
+
+<!-- verified: 2026-07-17 -->

@@ -55,8 +55,16 @@ run code generation directives in Go source files
 
 # CAVEATS
 
-Environment variables $GOFILE, $GOLINE, $GOPACKAGE, and $GOROOT are set during execution. Generated files should include a comment matching **^// Code generated .* DO NOT EDIT\.$** before non-comment content.
+Environment variables $GOARCH, $GOOS, $GOFILE, $GOLINE, $GOPACKAGE, $GOROOT, $DOLLAR, and $PATH are set during execution. Generated files should include a comment matching **^// Code generated .* DO NOT EDIT\.$** before non-comment content. **go generate** is never run automatically by **go build** or **go test**; it must be invoked explicitly.
 
 # SEE ALSO
 
 [go](/man/go)(1), [go-build](/man/go-build)(1)
+
+# RESOURCES
+
+```[Documentation](https://pkg.go.dev/cmd/go#hdr-Generate_Go_files_by_processing_source)```
+
+```[Source code](https://github.com/golang/go)```
+
+<!-- verified: 2026-07-17 -->

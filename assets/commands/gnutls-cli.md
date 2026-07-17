@@ -34,8 +34,11 @@ TLS/SSL connection testing and debugging client
 
 # PARAMETERS
 
-**-p** _port_
+**-p**, **--port** _port_
 > Connect to port.
+
+**-s**, **--starttls**
+> Establish a plain-text session first and switch to TLS on EOF or SIGALRM (generic STARTTLS).
 
 **--print-cert**
 > Print server certificate.
@@ -64,6 +67,9 @@ TLS/SSL connection testing and debugging client
 **--list**
 > List supported algorithms.
 
+**-d**, **--debug** _LEVEL_
+> Set debugging verbosity level.
+
 # DESCRIPTION
 
 **gnutls-cli** is a TLS/SSL client for testing and debugging secure connections. It connects to servers, displays certificate information, and allows testing of various TLS configurations.
@@ -81,3 +87,11 @@ Certificate verification requires proper CA setup. Priority string syntax comple
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [curl](/man/curl)(1), [certtool](/man/certtool)(1), [nmap](/man/nmap)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/gnutls/gnutls)```
+
+```[Homepage](https://www.gnutls.org/)```
+
+<!-- verified: 2026-07-17 -->

@@ -61,3 +61,11 @@ gnome-software was introduced in GNOME 3.10 (**2013**) as a redesigned software 
 # SEE ALSO
 
 [flatpak](/man/flatpak)(1), [snap](/man/snap)(1), [dnf](/man/dnf)(8), [apt](/man/apt)(8)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gnome-software)```
+
+```[GNOME Help](https://help.gnome.org/users/gnome-software/stable/)```
+
+<!-- verified: 2026-07-17 -->

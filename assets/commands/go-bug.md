@@ -29,3 +29,11 @@ go bug was added to the **Go** toolchain to streamline bug reporting with automa
 # SEE ALSO
 
 [go](/man/go)(1), [go-version](/man/go-version)(1)
+
+# RESOURCES
+
+```[Documentation](https://pkg.go.dev/cmd/go#hdr-Start_a_bug_report)```
+
+```[Source code](https://github.com/golang/go)```
+
+<!-- verified: 2026-07-17 -->

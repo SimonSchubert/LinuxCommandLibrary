@@ -12,43 +12,78 @@ Self-hosted Git service with web interface
 
 ```gitea --config [/etc/gitea/app.ini]```
 
-**Generate secret key**
+**Generate a secret key**
 
-```gitea generate secret INTERNAL_TOKEN```
+```gitea generate secret [INTERNAL_TOKEN]```
 
 **Create admin user**
 
 ```gitea admin user create --username [admin] --password [password] --email [admin@example.com] --admin```
 
-**Web command**
+**Run health checks**
 
-```gitea web```
+```gitea doctor check```
+
+**Dump full installation to an archive**
+
+```gitea dump```
+
+**Run pending database migrations**
+
+```gitea migrate```
 
 # SYNOPSIS
 
-**gitea** [_command_] [_options_]
+**gitea** [_global options_] _command_ [_command options_]
 
 # PARAMETERS
 
 **web**
-> Start web server.
+> Start the web server.
 
 **admin**
-> Admin operations.
+> Perform admin operations: manage users (**user**), auth sources (**auth**), or regenerate hooks/keys (**regenerate**).
 
-**generate**
-> Generate tokens/keys.
+**cert**
+> Generate a self-signed SSL certificate.
+
+**doctor**
+> Diagnose and optionally repair problems with the installation (**check**, **recreate-table**).
 
 **dump**
-> Backup repository.
+> Export the full installation (database, repos, config, etc.) into a compressed archive.
 
-**--config** _FILE_
-> Configuration file.
+**dump-repo** / **restore-repo**
+> Migrate repository data between Gitea instances.
+
+**generate**
+> Generate random secrets/tokens: `INTERNAL_TOKEN`, `JWT_SECRET`, `SECRET_KEY`, `LFS_JWT_SECRET`.
+
+**keys**
+> Provide the `AuthorizedKeysCommand` output used for SSHD integration.
+
+**manager**
+> Control a running instance: shutdown, restart, flush queues, adjust logging.
+
+**migrate**
+> Run pending database migrations; typically run once before first startup.
+
+**-c**, **--config** _FILE_
+> Path to the configuration file (default `custom/conf/app.ini`).
+
+**-w**, **--work-path** _PATH_
+> Gitea's base working directory.
+
+**-C**, **--custom-path** _PATH_
+> Path to the custom folder.
 
 **--port** _PORT_
-> Server port.
+> Server port (web command).
 
-**--help**
+**-v**, **--version**
+> Show version information.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
@@ -72,4 +107,14 @@ Gitea was forked from **Gogs** in **2016**, becoming a community-driven project 
 
 # SEE ALSO
 
-[git](/man/git)(1), [gitlab-runner](/man/gitlab-runner)(1)
+[git](/man/git)(1), [gitlab-runner](/man/gitlab-runner)(1), [gitlab](/man/gitlab)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/go-gitea/gitea)```
+
+```[Homepage](https://about.gitea.com/)```
+
+```[Documentation](https://docs.gitea.com/)```
+
+<!-- verified: 2026-07-17 -->

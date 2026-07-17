@@ -39,14 +39,28 @@ Safely update Git reference values
 > Reflog message.
 
 **--stdin**
-> Read from stdin.
+> Read update instructions (update, create, delete, verify, symref-update, etc.) from standard input, applying them together as one atomic transaction.
+
+**-z**
+> Use NUL-terminated arguments with **--stdin** instead of quoted, whitespace-terminated strings.
+
+**--batch-updates**
+> With **--stdin**, allow individual updates in the transaction to fail without aborting the others.
 
 # DESCRIPTION
 
 **git update-ref** safely updates ref names stored in the repository. It provides atomic ref updates with optional old value verification, ensuring that a ref is only changed if it currently points to an expected value.
 
-This is a low-level plumbing command used internally by higher-level commands like `git branch` and `git tag`.
+This is a low-level plumbing command used internally by higher-level commands like `git branch` and `git tag`. With **--stdin**, multiple ref updates can be batched into a single atomic transaction.
 
 # SEE ALSO
 
-[git-symbolic-ref](/man/git-symbolic-ref)(1), [git-branch](/man/git-branch)(1)
+[git-symbolic-ref](/man/git-symbolic-ref)(1), [git-branch](/man/git-branch)(1), [git-tag](/man/git-tag)(1)
+
+# RESOURCES
+
+```[Documentation](https://git-scm.com/docs/git-update-ref)```
+
+```[Source code](https://github.com/git/git)```
+
+<!-- verified: 2026-07-17 -->

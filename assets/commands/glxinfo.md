@@ -41,13 +41,19 @@ OpenGL and GLX capability display tool
 > Display extended limits.
 
 **-v**
-> Verbose output.
+> Verbose output for the visual list.
 
 **-t**
-> Display visual table.
+> Produce a wider, more readable tabular format for the visual list.
+
+**-s**
+> Print a single extension per line.
 
 **-i**
 > Force indirect rendering.
+
+**-b**
+> Find the "best" visual and print its number.
 
 **-display** _dpy_
 > Specify X display.
@@ -72,3 +78,11 @@ Requires X server connection. Results depend on driver and configuration. Indire
 # SEE ALSO
 
 [glxgears](/man/glxgears)(1), [xdpyinfo](/man/xdpyinfo)(1), [vulkaninfo](/man/vulkaninfo)(1), [nvidia-smi](/man/nvidia-smi)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.freedesktop.org/mesa/demos)```
+
+```[Manual page](https://manpages.debian.org/testing/mesa-utils/glxinfo.1.en.html)```
+
+<!-- verified: 2026-07-17 -->

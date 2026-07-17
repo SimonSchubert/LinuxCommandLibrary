@@ -30,8 +30,11 @@ Distributed version control system for tracking code changes
 
 # PARAMETERS
 
+**init**
+> Create an empty Git repository or reinitialize an existing one.
+
 **clone** _URL_
-> Clone a repository.
+> Clone a repository into a new directory.
 
 **add** _FILES_
 > Stage files for commit.
@@ -39,26 +42,59 @@ Distributed version control system for tracking code changes
 **commit**
 > Record changes to repository.
 
+**status**
+> Show working tree status.
+
+**diff**
+> Show changes between commits, the working tree, and the index.
+
 **push**
-> Push to remote repository.
+> Update remote refs and associated objects.
 
 **pull**
 > Fetch and merge from remote.
 
+**fetch**
+> Download objects and refs from another repository without merging.
+
 **checkout**
-> Switch branches or restore files.
+> Switch branches or restore working tree files.
+
+**switch**
+> Switch branches.
 
 **branch**
 > List, create, or delete branches.
 
 **merge**
-> Merge branches.
+> Join two or more development histories together.
 
-**status**
-> Show working tree status.
+**rebase**
+> Reapply commits on top of another base tip.
 
 **log**
 > Show commit history.
+
+**remote**
+> Manage the set of tracked repositories.
+
+**-v**, **--version**
+> Print the Git suite version.
+
+**-C** _PATH_
+> Run as if git was started in _PATH_ instead of the current directory.
+
+**-c** _NAME_=_VALUE_
+> Pass a configuration value for the duration of the command.
+
+**-p**, **--paginate**
+> Pipe output into a pager (usually `less`).
+
+**--git-dir** _PATH_
+> Set the path to the repository's `.git` directory.
+
+**--work-tree** _PATH_
+> Set the path to the working tree.
 
 **--help**
 > Display help information.
@@ -90,4 +126,14 @@ Git was created by **Linus Torvalds** in **2005** for Linux kernel development a
 
 # SEE ALSO
 
-[gh](/man/gh)(1), [git-commit](/man/git-commit)(1), [git-push](/man/git-push)(1)
+[gh](/man/gh)(1), [git-commit](/man/git-commit)(1), [git-push](/man/git-push)(1), [git-log](/man/git-log)(1), [git-branch](/man/git-branch)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git)```
+
+<!-- verified: 2026-07-17 -->

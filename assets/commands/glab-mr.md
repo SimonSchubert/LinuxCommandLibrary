@@ -38,47 +38,68 @@ Manage GitLab merge requests from the command line
 > List merge requests.
 
 **create**
-> Create merge request.
+> Open a new merge request.
 
 **view**
-> View merge request.
+> Display a merge request.
 
 **checkout**
-> Checkout MR branch.
+> Check out a merge request branch locally.
+
+**update**
+> Modify merge request details (title, description, labels, etc.).
 
 **merge**
-> Merge a MR.
+> Merge a merge request.
+
+**rebase**
+> Rebase a merge request's source branch against its target.
 
 **approve**
-> Approve MR.
+> Approve a merge request.
+
+**approvers**
+> View or manage merge request approvers.
+
+**revoke**
+> Revoke approval of a merge request.
 
 **close**
-> Close MR.
+> Close a merge request.
 
 **reopen**
-> Reopen MR.
+> Reopen a closed merge request.
+
+**delete**
+> Delete a merge request.
 
 **diff**
-> Show MR diff.
+> Show changes in a merge request.
 
-# PARAMETERS
+**note**
+> Add a comment to a merge request.
 
-**-t**, **--title** _title_
-> MR title.
+**issues**
+> View issues linked to a merge request.
 
-**-d**, **--description** _text_
-> MR description.
+**subscribe** / **unsubscribe**
+> Subscribe to, or stop following, a merge request's notifications.
 
-**--draft**
-> Create as draft.
-
-**-a**, **--assignee** _users_
-> Assign users.
+**todo**
+> Add a merge request to your GitLab to-do list.
 
 # DESCRIPTION
 
-**glab mr** manages GitLab merge requests from the command line. It provides subcommands for creating, viewing, reviewing, approving, and merging MRs without leaving the terminal.
+**glab mr** manages GitLab merge requests from the command line. It provides subcommands for creating, viewing, reviewing, approving, and merging MRs without leaving the terminal. Run `glab mr <subcommand> --help` for the flags of each subcommand.
 
 # SEE ALSO
 
 [glab](/man/glab)(1), [glab-mr-create](/man/glab-mr-create)(1)
+
+# RESOURCES
+
+```[Documentation](https://docs.gitlab.com/cli/mr/)```
+
+```[Source code](https://gitlab.com/gitlab-org/cli)```
+
+<!-- verified: 2026-07-17 -->

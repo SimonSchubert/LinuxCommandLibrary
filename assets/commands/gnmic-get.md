@@ -20,23 +20,46 @@ retrieve configuration or state from gNMI devices
 
 ```gnmic get -a [router:57400] --path [/interfaces] --type config```
 
+**Print only the values, not full paths**
+
+```gnmic get -a [router:57400] --path [/system/name] --values-only```
+
+**Apply a common prefix to all paths**
+
+```gnmic get -a [router:57400] --prefix [/interfaces] --path [interface[name=eth0]]```
+
 # SYNOPSIS
 
 **gnmic get** [_options_]
 
 # PARAMETERS
 
-**-a** _ADDRESS_
-> Target address.
+**-a**, **--address** _ADDRESS_
+> Target address(es), as a global gnmic flag.
 
 **--path** _PATH_
-> YANG path to retrieve.
+> YANG path to retrieve. Repeatable for multiple paths.
+
+**--prefix** _PATH_
+> Common prefix applied to all **--path** values.
 
 **--encoding** _ENC_
-> Data encoding (json, proto).
+> Data encoding (json, json_ietf, proto, bytes, ascii).
 
 **--type** _TYPE_
-> Data type (config, state, all).
+> Data type to request: ALL, CONFIG, STATE, or OPERATIONAL. Defaults to ALL.
+
+**--model** _NAME_
+> YANG model name to include in the request.
+
+**--target** _NAME_
+> Target name to set in the gNMI prefix, for gateway/proxy setups.
+
+**--values-only**
+> Print only the returned values, omitting the full path structure.
+
+**--depth** _N_
+> gNMI extension depth value, limiting how deep results are returned.
 
 **--help**
 > Display help information.
@@ -57,4 +80,12 @@ gnmic get is a subcommand of **gnmic**, the gNMI client created by Nokia.
 
 # SEE ALSO
 
-[gnmic](/man/gnmic)(1), [gnmic-set](/man/gnmic-set)(1)
+[gnmic](/man/gnmic)(1), [gnmic-set](/man/gnmic-set)(1), [gnmic-subscribe](/man/gnmic-subscribe)(1)
+
+# RESOURCES
+
+```[Documentation](https://gnmic.openconfig.net/cmd/get/)```
+
+```[Source code](https://github.com/openconfig/gnmic)```
+
+<!-- verified: 2026-07-17 -->

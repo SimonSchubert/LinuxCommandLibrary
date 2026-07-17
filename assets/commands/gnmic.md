@@ -22,12 +22,12 @@ gNMI network management CLI client
 
 # SYNOPSIS
 
-**gnmic** [_options_] _command_
+**gnmic** [_global-flags_] _command_ [_command-flags_]
 
 # PARAMETERS
 
-**-a** _ADDRESS_
-> Target address:port.
+**capabilities**
+> Query target gNMI capabilities.
 
 **get**
 > Get configuration/state.
@@ -38,11 +38,56 @@ gNMI network management CLI client
 **subscribe**
 > Subscribe to telemetry.
 
-**capabilities**
-> Query capabilities.
+**path**
+> Generate or search YANG paths from loaded models.
+
+**prompt**
+> Interactive mode with path autocompletion.
+
+**diff**
+> Compare gNMI GetResponses or config states.
+
+**version**
+> Show gnmic version.
+
+**-a**, **--address** _TARGET_
+> Comma-separated address(es) of the target(s), host:port.
+
+**-u**, **--username** _USER_
+> Username for authentication.
+
+**-p**, **--password** _PASS_
+> Password for authentication.
 
 **--path** _PATH_
-> YANG path.
+> YANG/gNMI path.
+
+**-e**, **--encoding** _ENCODING_
+> Data encoding: json, json_ietf, bytes, proto, ascii, or config.
+
+**--insecure**
+> Disable TLS on the connection to the target.
+
+**--skip-verify**
+> Skip verification of the target's TLS certificate.
+
+**--tls-ca** _FILE_
+> TLS CA certificate file.
+
+**--tls-cert** _FILE_
+> TLS client certificate file.
+
+**--tls-key** _FILE_
+> TLS client key file.
+
+**--timeout** _DURATION_
+> gRPC timeout after which a request is cancelled (default 10s).
+
+**--config** _FILE_
+> Configuration file (default searches for .gnmic.yaml).
+
+**--log**
+> Enable logging to stderr.
 
 **--help**
 > Display help information.
@@ -71,4 +116,12 @@ gnmic was created by **Nokia** to provide a flexible gNMI client for network aut
 
 # SEE ALSO
 
-[gnmic-get](/man/gnmic-get)(1), [gnmic-set](/man/gnmic-set)(1)
+[gnmic-get](/man/gnmic-get)(1), [gnmic-set](/man/gnmic-set)(1), [gnmic-subscribe](/man/gnmic-subscribe)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/openconfig/gnmic)```
+
+```[Documentation](https://gnmic.openconfig.net/)```
+
+<!-- verified: 2026-07-17 -->

@@ -50,18 +50,40 @@ subscribe to gNMI streaming telemetry (full form)
 > Heartbeat interval for ON_CHANGE mode.
 
 **--suppress-redundant**
-> Suppress redundant updates.
+> Suppress redundant updates; only send updates when values actually change.
 
 **--updates-only**
-> Only send updates, not initial state.
+> Only send updates, not the initial state snapshot.
 
 **--quiet**
 > Do not output to stdout.
 
+**--prefix** _PATH_
+> Common prefix applied to all **--path** values.
+
+**--qos** _N_
+> DSCP value for packet marking. Defaults to 20; set to 0 to disable.
+
+**--output** _NAME_
+> Named output(s), from the config file, to write subscription results to (e.g. a Kafka or Prometheus output) instead of stdout.
+
+**--name** _NAME_
+> Run one or more subscriptions predefined in the configuration file, instead of specifying **--path** on the command line.
+
 # DESCRIPTION
 
-**gnmic subscribe** sends a gNMI Subscribe RPC to network devices for streaming telemetry. It supports multiple subscription modes: ONCE (immediate single response), POLL (on-demand), and STREAM (continuous updates). Stream mode supports SAMPLE (periodic) and ON_CHANGE (event-driven) delivery. This is the full form of the **gnmic sub** command.
+**gnmic subscribe** (aliased **gnmic sub**) sends a gNMI Subscribe RPC to network devices for streaming telemetry. It supports three subscription modes: STREAM (continuous updates, the default), ONCE (immediate single response), and POLL (on-demand). Stream mode supports SAMPLE (periodic, the default) and ON_CHANGE (event-driven) delivery.
+
+Results are printed to stdout by default, or routed to a configured output (file, Kafka, NATS, Prometheus, InfluxDB, etc.) via **--output**.
 
 # SEE ALSO
 
-[gnmic](/man/gnmic)(1), [gnmic-get](/man/gnmic-get)(1)
+[gnmic](/man/gnmic)(1), [gnmic-get](/man/gnmic-get)(1), [gnmic-set](/man/gnmic-set)(1)
+
+# RESOURCES
+
+```[Documentation](https://gnmic.openconfig.net/cmd/subscribe/)```
+
+```[Source code](https://github.com/openconfig/gnmic)```
+
+<!-- verified: 2026-07-17 -->

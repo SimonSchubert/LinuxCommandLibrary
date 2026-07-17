@@ -48,6 +48,15 @@ _SYMBOL_
 **-c**
 > Case-sensitive matching.
 
+**-cmd**
+> Treat a command (package main) like a regular package, showing its exported symbols.
+
+**-short**
+> Print a one-line representation for each symbol.
+
+**-http**
+> Serve HTML documentation over HTTP instead of printing to stdout.
+
 **--help**
 > Display help information.
 
@@ -68,3 +77,11 @@ go doc is part of the **Go** toolchain, providing documentation access following
 # SEE ALSO
 
 [go](/man/go)(1), [godoc](/man/godoc)(1)
+
+# RESOURCES
+
+```[Documentation](https://pkg.go.dev/cmd/doc)```
+
+```[Source code](https://github.com/golang/go)```
+
+<!-- verified: 2026-07-17 -->

@@ -24,6 +24,10 @@ Output **debug** info for the given command
 
 ```gksudo -u [userid] -d [command]```
 
+Ask gksudo to **print the password** to stdout
+
+```gksudo -p [command]```
+
 # SYNOPSIS
 
 **gksudo** [_options_] _command_
@@ -34,7 +38,10 @@ Output **debug** info for the given command
 > Run command as specified user (default: root)
 
 **-k**, **--preserve-env**
-> Preserve current environment variables
+> Preserve current environment variables, does not set `$HOME` or `$PATH`
+
+**-l**, **--login**
+> Make this a login shell (may cause problems with Xauthority)
 
 **-w**, **--su-mode**
 > Force use of su for authentication
@@ -45,11 +52,20 @@ Output **debug** info for the given command
 **-d**, **--debug**
 > Output debug information
 
+**-g**, **--disable-grab**
+> Disable locking of the keyboard, mouse, and focus while asking for the password
+
+**-P**, **--prompt**
+> Ask the user before grabbing the keyboard and mouse
+
 **-m**, **--message** _MSG_
 > Custom message in password dialog
 
-**-D**, **--description** _DESC_
-> Description for the command being run
+**-D**, **--description** _DESC_|_FILE_
+> Description for the command being run, used in the default message
+
+**-p**, **--print-pass**
+> Print the password to stdout, like ssh-askpass
 
 # DESCRIPTION
 
@@ -70,3 +86,9 @@ gksudo was created alongside gksu for Ubuntu and other distributions that prefer
 # SEE ALSO
 
 [pkexec](/man/pkexec)(1), [sudo](/man/sudo)(8), [gksu](/man/gksu)(1)
+
+# RESOURCES
+
+```[Debian manual page (archived)](https://manpages.debian.org/testing/gksu/gksu.1.en.html)```
+
+<!-- verified: 2026-07-17 -->

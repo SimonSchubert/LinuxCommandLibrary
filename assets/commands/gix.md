@@ -20,13 +20,17 @@ Pure Rust Git implementation CLI
 
 ```gix remote list```
 
-**Create a commit**
+**Show the commit log**
 
-```gix commit -m "[message]"```
+```gix log```
 
-**Show object info**
+**Blame a file**
 
-```gix free pack verify [path/to/pack]```
+```gix blame [path/to/file]```
+
+**Verify repository integrity**
+
+```gix verify```
 
 **List available subcommands**
 
@@ -41,34 +45,63 @@ Pure Rust Git implementation CLI
 # COMMANDS
 
 **clone** _url_ [_path_]
-> Clone a repository to local path.
+> Clone a repository into a new directory.
 
 **fetch** [_remote_]
-> Fetch updates from remote repository.
+> Fetch data from remotes and store it in the repository.
 
 **status**
-> Show working tree status.
+> Compute and show repository status.
 
-**commit** [_options_]
-> Record changes to the repository.
+**commit** _subcommand_
+> Interact with commit objects.
+
+**branch** _subcommand_
+> Interact with branches.
+
+**tag** _subcommand_
+> Interact with tag objects.
 
 **remote** _subcommand_
-> Manage remote repositories.
+> Interact with the remote hosts.
 
-**free pack** _subcommand_
-> Pack file operations and verification.
+**log** [_path_]
+> List commits in the repository, optionally limited to those changing a path.
 
-**free index** _subcommand_
-> Index file operations.
+**diff**
+> Print all changes between two objects.
 
-**free mailmap** _subcommand_
-> Mailmap operations.
+**blame** _path_
+> Blame lines in a file.
 
-**free commitgraph** _subcommand_
-> Commit graph operations.
+**worktree** _subcommand_
+> Handle worktrees.
 
-**no-repo** _subcommand_
-> Commands that don't require a repository.
+**submodule** _subcommand_
+> Interact with submodules.
+
+**index** _subcommand_
+> Interact with a worktree index like `.git/index`.
+
+**mailmap**
+> Interact with the mailmap.
+
+**commit-graph** _subcommand_
+> Interact with commit-graph files.
+
+**verify**
+> Verify the integrity of the entire repository.
+
+**credential**
+> A program just like `git credential`.
+
+**free** _subcommand_
+> Subcommands that need no Git repository to run (e.g. pack and index operations).
+
+**completions**
+> Generate shell completions to stdout or a directory.
+
+This is a subset; run **gix --help** for the full, self-documenting list of subcommands (it has grown to cover archive, clean, fsck, odb, attributes, exclude, dirwalk, merge, and more).
 
 # PARAMETERS
 
@@ -94,7 +127,7 @@ Pure Rust Git implementation CLI
 
 **gix** (gitoxide) provides two CLI binaries: **gix** for low-level plumbing operations and **ein** for high-level porcelain commands. Written entirely in Rust, it aims to be a correct, performant, and safe Git implementation.
 
-The **gix** binary serves as a testing and validation tool for the gitoxide API, providing expert-level access to Git internals. The **ein** binary is designed for everyday Git workflows with an enhanced, intuitive interface.
+The **gix** binary exposes low-level, self-documenting plumbing commands and serves as a testing and validation tool for the gitoxide API. The **ein** binary is the smaller, porcelain-facing counterpart, offering a handful of convenience commands (like **init**, **clone**, and repository-discovery tools under **tools**) aimed at everyday human use rather than API validation.
 
 Both binaries access the same underlying **gix** library ecosystem, which provides pure Rust implementations of Git protocols, object storage, reference handling, and more.
 
@@ -109,3 +142,11 @@ Gitoxide was created by **Sebastian Thiel** as an effort to rewrite Git in Rust.
 # SEE ALSO
 
 [git](/man/git)(1), [lazygit](/man/lazygit)(1), [tig](/man/tig)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/GitoxideLabs/gitoxide)```
+
+```[Crate status](https://github.com/GitoxideLabs/gitoxide/blob/main/crate-status.md)```
+
+<!-- verified: 2026-07-17 -->

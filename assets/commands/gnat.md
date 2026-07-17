@@ -72,7 +72,16 @@ GNU Ada compiler toolchain
 # PARAMETERS
 
 **-c**
-> Compile only, do not link (required for gcc with Ada).
+> Compile only, do not link (required for gcc with Ada). For gnatmake, compile and bind only, skipping the link step unless combined with **-b**.
+
+**-f**
+> Force recompilation of all sources, even if object files appear up to date (gnatmake).
+
+**-j** _N_
+> Use N processes for parallel compilation (gnatmake). Use 0 for all available cores.
+
+**-q**
+> Quiet mode: suppress the compilation commands gnatmake normally echoes.
 
 **-gnatwa**
 > Enable all warnings.
@@ -112,3 +121,11 @@ GNAT was developed by New York University under contract to the US Air Force, wi
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [gprbuild](/man/gprbuild)(1), [make](/man/make)(1)
+
+# RESOURCES
+
+```[GNAT User's Guide](https://gcc.gnu.org/onlinedocs/gnat_ugn/)```
+
+```[AdaCore GNAT Community](https://www.adacore.com/download)```
+
+<!-- verified: 2026-07-17 -->

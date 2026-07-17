@@ -8,9 +8,21 @@ Manage multiple working trees for a repository
 
 ```git worktree add [../feature-branch] [branch-name]```
 
+**Add worktree for new branch**
+
+```git worktree add -b [new-branch] [path]```
+
 **List worktrees**
 
 ```git worktree list```
+
+**Lock a worktree** (e.g. on removable media)
+
+```git worktree lock [path] --reason "[reason]"```
+
+**Move a worktree**
+
+```git worktree move [path] [new-path]```
 
 **Remove worktree**
 
@@ -20,30 +32,53 @@ Manage multiple working trees for a repository
 
 ```git worktree prune```
 
-**Add worktree for new branch**
-
-```git worktree add -b [new-branch] [path]```
-
 # SYNOPSIS
 
 **git worktree** _command_ [_options_]
 
 # PARAMETERS
 
-**add** _PATH_ _BRANCH_
-> Add new worktree.
+**add** _PATH_ [_COMMIT-ISH_]
+> Add a new worktree. Creates a new branch named after the final path component if no commit-ish is given.
 
 **list**
-> List worktrees.
+> List worktrees, one per line.
 
-**remove** _PATH_
-> Remove worktree.
+**lock** _WORKTREE_
+> Prevent a worktree from being pruned, moved, or deleted.
+
+**unlock** _WORKTREE_
+> Unlock a worktree.
+
+**move** _WORKTREE_ _NEW-PATH_
+> Move a worktree to a new location.
+
+**remove** _WORKTREE_
+> Remove a worktree, provided it is clean (no untracked or modified files).
 
 **prune**
-> Remove stale worktrees.
+> Remove worktree administrative files for working trees that no longer exist.
 
-**-b** _BRANCH_
-> Create new branch.
+**repair** [_PATH_...]
+> Repair worktree administrative files after a worktree or the main repository was moved manually.
+
+**-b** _BRANCH_, **-B** _BRANCH_
+> Create (or reset, with **-B**) a new branch when adding a worktree.
+
+**-d**, **--detach**
+> Detach HEAD in the new worktree instead of checking out a branch.
+
+**--lock**
+> Keep the new worktree locked immediately after `add`.
+
+**--reason** _STRING_
+> Explanation recorded with **lock**.
+
+**-f**, **--force**
+> Override safety checks (e.g. allow **remove** of a worktree with untracked files, or **add** with an already-checked-out branch).
+
+**-n**, **--dry-run**
+> Report what **prune** would remove, without removing it.
 
 **--help**
 > Display help information.
@@ -56,12 +91,18 @@ Worktrees share the same repository data but have separate working directories. 
 
 # CAVEATS
 
-Same branch can't be checked out twice. Worktrees share reflog. Removing worktree doesn't delete branch.
+Same branch can't be checked out in two worktrees at once. Worktrees share most refs (branches, tags), but `HEAD` and a few others are per-worktree. Removing a worktree doesn't delete its branch. If a worktree directory is deleted manually instead of via `remove`, run `git worktree prune` (or `repair`, if the main worktree or repository itself moved) to clean up stale metadata.
 
 # HISTORY
 
-git worktree was added in **Git 2.5** to enable multiple working directories from a single repository clone.
+git worktree was added in **Git 2.5** (2015) to enable multiple working directories from a single repository clone. The **move**, **lock**, and **repair** subcommands were added in later releases to improve support for worktrees on removable or network storage.
 
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-branch](/man/git-branch)(1)
+
+# RESOURCES
+
+```[Documentation](https://git-scm.com/docs/git-worktree)```
+
+<!-- verified: 2026-07-17 -->

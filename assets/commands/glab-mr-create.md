@@ -28,6 +28,14 @@ Create a new GitLab merge request
 
 ```glab mr create --fill```
 
+**Skip prompts and push the branch**
+
+```glab mr create --fill --push --yes```
+
+**Create for a linked issue**
+
+```glab mr create --related-issue [issue-number]```
+
 # SYNOPSIS
 
 **glab** **mr** **create** [_options_]
@@ -38,38 +46,73 @@ Create a new GitLab merge request
 > MR title.
 
 **-d**, **--description** _text_
-> MR description.
+> MR description. Use `-` to open an editor.
 
-**--draft**
-> Create as draft.
+**--draft**, **--wip**
+> Mark the merge request as a draft.
 
 **-a**, **--assignee** _users_
-> Assign users.
+> Assign the MR to users by username; comma-separate or repeat the flag.
 
 **--reviewer** _users_
-> Request reviewers.
+> Request review from users by username; comma-separate or repeat the flag.
 
-**--target-branch** _branch_
-> Target branch.
+**-b**, **--target-branch** _branch_
+> Target/base branch to merge into.
 
-**--source-branch** _branch_
-> Source branch.
+**-s**, **--source-branch** _branch_
+> Branch to create the MR from (default: current branch).
 
-**--fill**
-> Fill from commits.
+**-f**, **--fill**
+> Don't prompt for title/description, use commit info instead. Implies **--push**.
+
+**--fill-commit-body**
+> When multiple commits exist, fill the description with every commit body. Requires **--fill**.
 
 **-l**, **--label** _labels_
-> Add labels.
+> Add labels by name; comma-separate or repeat the flag.
 
-**--web**
-> Open in browser.
+**-m**, **--milestone** _milestone_
+> Assign a milestone by ID or title.
+
+**-i**, **--related-issue** _issue_
+> Create the MR for an issue; uses the issue title if **--title** is omitted.
+
+**--push**
+> Push local commits to the source branch after creating the MR.
+
+**--remove-source-branch**
+> Remove the source branch when the MR is merged.
+
+**--squash-before-merge**
+> Squash commits into one when merging.
+
+**-H**, **--head** _repo_
+> Use another head repository, as `OWNER/REPO`, `GROUP/NAMESPACE/REPO`, a project ID, or a full URL.
+
+**--template** _name_
+> Use a template from `.gitlab/merge_request_templates/` to pre-fill the description.
+
+**-y**, **--yes**
+> Skip the submission confirmation prompt. Use with **--fill** to skip all optional prompts.
+
+**-w**, **--web**
+> Continue MR creation in the browser.
 
 # DESCRIPTION
 
-**glab mr create** creates a new GitLab merge request from the current branch. It supports drafts, reviewer assignment, labels, and auto-filling title and description from commit messages.
+**glab mr create** creates a new GitLab merge request from the current branch. It supports drafts, reviewer assignment, labels, milestones, and auto-filling title and description from commit messages.
 
-When run without flags, it launches an interactive editor for composing the merge request.
+When run without flags, it launches an interactive prompt for composing the merge request.
 
 # SEE ALSO
 
 [glab-mr](/man/glab-mr)(1), [glab](/man/glab)(1)
+
+# RESOURCES
+
+```[Documentation](https://docs.gitlab.com/cli/mr/create/)```
+
+```[Source code](https://gitlab.com/gitlab-org/cli)```
+
+<!-- verified: 2026-07-17 -->
