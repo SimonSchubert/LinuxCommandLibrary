@@ -70,3 +70,13 @@ git rerere was added to **Git** to address the pain of resolving the same merge 
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [git-rebase](/man/git-rebase)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-rerere)```
+
+<!-- verified: 2026-07-17 -->

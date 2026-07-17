@@ -26,9 +26,9 @@ Interactive read-eval-print loop for Git
 
 # DESCRIPTION
 
-**git repl** provides an interactive shell for Git commands. Part of git-extras, it starts a read-eval-print loop where commands can be entered without the "git" prefix.
+**git repl** provides an interactive shell for Git commands. Part of git-extras, it starts a read-eval-print loop where commands can be entered without the "git" prefix; input starting with `!` runs as a raw shell command instead, and `ls` is mapped to `git ls-files`.
 
-The REPL simplifies exploratory Git sessions by reducing typing. Tab completion and command history are available. Exit with "exit" or Ctrl-D.
+The REPL simplifies exploratory Git sessions by reducing typing. Command history (via readline) is available across the session. Exit with "exit", "quit", or Ctrl-D.
 
 # CAVEATS
 
@@ -40,4 +40,12 @@ git repl is part of **git-extras**, providing an interactive environment for fre
 
 # SEE ALSO
 
-[git](/man/git)(1), [tig](/man/tig)(1)
+[git](/man/git)(1), [tig](/man/tig)(1), [git-extras](/man/git-extras)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md#git-repl)```
+
+<!-- verified: 2026-07-17 -->

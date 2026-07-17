@@ -29,3 +29,13 @@ git-mergetool--lib is part of **Git's** internal infrastructure, providing share
 # SEE ALSO
 
 [git-mergetool](/man/git-mergetool)(1), [git-difftool](/man/git-difftool)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-mergetool--lib)```
+
+<!-- verified: 2026-07-17 -->

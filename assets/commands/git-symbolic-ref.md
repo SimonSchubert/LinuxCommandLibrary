@@ -61,3 +61,13 @@ git symbolic-ref is a core **Git** plumbing command for managing symbolic refere
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-rev-parse](/man/git-rev-parse)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-symbolic-ref)```
+
+<!-- verified: 2026-07-17 -->

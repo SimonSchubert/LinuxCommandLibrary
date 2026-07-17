@@ -47,6 +47,18 @@ _PATCHES_
 **--smtp-server** _HOST_
 > SMTP server.
 
+**--smtp-encryption** _tls|ssl_
+> Encryption method for the SMTP connection.
+
+**--suppress-cc** _category_
+> Suppress auto-CC of a category (e.g. self, author, cccmd).
+
+**--compose**
+> Edit an introductory message/cover letter before sending.
+
+**--in-reply-to** _MESSAGE-ID_
+> Thread the patches as replies to a given message.
+
 **--help**
 > Display help information.
 
@@ -78,3 +90,13 @@ git send-email supports the **email-based patch workflow** used by the Linux ker
 # SEE ALSO
 
 [git-format-patch](/man/git-format-patch)(1), [git-am](/man/git-am)(1), [git-imap-send](/man/git-imap-send)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-send-email)```
+
+<!-- verified: 2026-07-17 -->

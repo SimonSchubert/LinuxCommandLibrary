@@ -80,3 +80,9 @@ git-secrets was created by **AWS Labs** to prevent AWS credential leaks. It's on
 # SEE ALSO
 
 [git](/man/git)(1), [gitleaks](/man/gitleaks)(1), [trufflehog](/man/trufflehog)(1), [detect-secrets](/man/detect-secrets)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/awslabs/git-secrets)```
+
+<!-- verified: 2026-07-17 -->

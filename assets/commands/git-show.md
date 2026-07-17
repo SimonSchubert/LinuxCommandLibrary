@@ -68,3 +68,13 @@ git show is a core **Git** command for displaying objects, providing a unified i
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-diff](/man/git-diff)(1), [git-cat-file](/man/git-cat-file)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-show)```
+
+<!-- verified: 2026-07-17 -->

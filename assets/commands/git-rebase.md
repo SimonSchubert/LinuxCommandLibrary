@@ -62,8 +62,8 @@ Reapply commits on new base
 **-x** _cmd_
 > Run command after each commit.
 
-**-p**, **--preserve-merges**
-> Preserve merge commits.
+**-r**, **--rebase-merges**
+> Recreate merge commits instead of flattening history (replaces the deprecated `--preserve-merges`).
 
 # DESCRIPTION
 
@@ -77,4 +77,14 @@ Rebasing rewrites history. Don't rebase commits that have been pushed to shared 
 
 # SEE ALSO
 
-[git-merge](/man/git-merge)(1), [git-cherry-pick](/man/git-cherry-pick)(1)
+[git-merge](/man/git-merge)(1), [git-cherry-pick](/man/git-cherry-pick)(1), [git-reset](/man/git-reset)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-rebase)```
+
+<!-- verified: 2026-07-17 -->

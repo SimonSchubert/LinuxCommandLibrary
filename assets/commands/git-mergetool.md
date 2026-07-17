@@ -45,6 +45,9 @@ _FILE_
 **--prompt**
 > Prompt before each file.
 
+**-g**, **--gui**
+> Use `merge.guitool` instead of `merge.tool`.
+
 **--help**
 > Display help information.
 
@@ -78,3 +81,13 @@ git mergetool is a core **Git** command providing integration with external merg
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [git-difftool](/man/git-difftool)(1), [vimdiff](/man/vimdiff)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-mergetool)```
+
+<!-- verified: 2026-07-17 -->

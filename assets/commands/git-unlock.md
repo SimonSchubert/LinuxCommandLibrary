@@ -14,10 +14,22 @@ Resume tracking changes to a locked file
 
 # DESCRIPTION
 
-**git unlock** removes the assume-unchanged flag from a file, allowing Git to track changes again. This reverses the effect of `git lock`, which tells Git to ignore local modifications to a file.
+**git unlock** runs `git update-index --no-skip-worktree` on a file, clearing the **skip-worktree** bit so Git resumes tracking local changes to it. This reverses `git lock`, which sets `--skip-worktree` to make Git ignore modifications to a file (typically one holding local config or secrets that shouldn't be committed).
 
 Part of the **git-extras** package.
+
+# CAVEATS
+
+Uses the `skip-worktree` bit, not `assume-unchanged`; the two are similar but intended for different purposes, and tools that check one won't necessarily see the other.
 
 # SEE ALSO
 
 [git-lock](/man/git-lock)(1), [git-update-index](/man/git-update-index)(1), [git-extras](/man/git-extras)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md#git-unlock)```
+
+<!-- verified: 2026-07-17 -->

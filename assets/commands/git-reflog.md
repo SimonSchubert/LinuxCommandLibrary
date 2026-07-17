@@ -58,11 +58,11 @@ Record and recover reference movements
 
 **git reflog** records when refs (like HEAD and branch tips) are updated, providing a safety net for recovering lost commits. After accidental resets, rebases, or branch deletions, the reflog shows where refs previously pointed, allowing recovery of otherwise unreachable commits.
 
-Entries in the reflog expire after a configurable period (default 90 days). The reflog is local only and is not shared between repositories.
+Entries expire after a configurable period: reachable entries after 90 days (`gc.reflogExpire`), unreachable ones after 30 days (`gc.reflogExpireUnreachable`). The reflog is local only and is not shared between repositories.
 
 # CAVEATS
 
-Local only, not pushed. Entries expire (default 90 days). Won't help after gc removes objects.
+Local only, not pushed. Entries expire (90 days reachable, 30 days unreachable, by default). Won't help after gc removes the underlying objects.
 
 # HISTORY
 
@@ -71,3 +71,13 @@ git reflog is a core **Git** safety feature, providing local history of ref move
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-reset](/man/git-reset)(1), [git-gc](/man/git-gc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-reflog)```
+
+<!-- verified: 2026-07-17 -->

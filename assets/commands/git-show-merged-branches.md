@@ -14,8 +14,20 @@ List branches merged into the current branch
 
 # DESCRIPTION
 
-**git show-merged-branches** lists all branches that have been fully merged into the current branch. Part of git-extras, it is useful for identifying branches that are safe to delete as cleanup candidates.
+**git show-merged-branches** lists local branches that have been fully merged into HEAD. Part of git-extras, it runs `git branch --merged` and filters out the current branch and the repository's default branch (e.g. `main`/`master`), leaving only the branches that are genuine candidates for deletion.
+
+# CAVEATS
+
+Part of git-extras package; only inspects local branches. See `git-show-unmerged-branches` for the inverse view.
 
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-delete-merged-branches](/man/git-delete-merged-branches)(1), [git-extras](/man/git-extras)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md#git-show-merged-branches)```
+
+<!-- verified: 2026-07-17 -->

@@ -14,10 +14,22 @@ Rebase with patch application
 
 # DESCRIPTION
 
-**git rebase-patch** rebases a branch while applying a patch file. This git-extras command combines rebasing with patch application, useful for maintaining patch sets on top of upstream changes.
+**git rebase-patch** finds where an old patch file still applies and replays it onto the current HEAD. This git-extras command is for patches that no longer apply cleanly to HEAD: it walks backward through parent commits, testing the patch against each historical tree with a temporary index, until it finds one it applies to. It then manufactures a commit there and cherry-picks it forward onto the current branch.
 
-The command is particularly valuable when maintaining a fork or a set of downstream patches that need to stay in sync with upstream development. It automates the workflow of rebasing to the latest upstream and reapplying separately stored patches.
+This is useful for reviving an old, bit-rotted patch without manually figuring out which commit it was written against.
+
+# CAVEATS
+
+Part of git-extras package. Only searches back along the first-parent chain from HEAD; if the patch was based on a commit outside that chain, it will not be found.
 
 # SEE ALSO
 
-[git-rebase](/man/git-rebase)(1), [git-am](/man/git-am)(1), [git-extras](/man/git-extras)(1)
+[git-rebase](/man/git-rebase)(1), [git-am](/man/git-am)(1), [git-cherry-pick](/man/git-cherry-pick)(1), [git-extras](/man/git-extras)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md#git-rebase-patch)```
+
+<!-- verified: 2026-07-17 -->

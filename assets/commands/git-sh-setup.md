@@ -29,3 +29,13 @@ git-sh-setup is part of **Git's** internal infrastructure, providing shared func
 # SEE ALSO
 
 [git-sh-i18n](/man/git-sh-i18n)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-sh-setup)```
+
+<!-- verified: 2026-07-17 -->

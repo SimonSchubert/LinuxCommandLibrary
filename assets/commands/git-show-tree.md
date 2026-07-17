@@ -1,6 +1,6 @@
 # TAGLINE
 
-Display an ASCII tree of repository branches
+Display a decorated graph of commits across all branches
 
 # TLDR
 
@@ -14,18 +14,20 @@ Display an ASCII tree of repository branches
 
 # DESCRIPTION
 
-**git show-tree** displays a visual ASCII representation of repository branches. Part of git-extras, it shows the branch structure in a tree format, making branch relationships easy to see at a glance.
-
-The command provides a quick overview of branch topology without the full commit history that `git log --graph` shows.
+**git show-tree** is a git-extras shortcut for `git log --all --graph --decorate --oneline --simplify-by-decoration`. It draws an ASCII commit graph across every branch, showing only the commits that are branch/tag tips or merge points, which makes overall repository topology easy to see at a glance.
 
 # CAVEATS
 
-Part of git-extras package. Shows local branches. For more detail, use git log --graph.
-
-# HISTORY
-
-git show-tree is part of **git-extras**, providing a simple branch visualization.
+Part of git-extras package. Only shows commits relevant to the graph shape (tips, merges, tags); use `git log --graph` directly if you need every commit.
 
 # SEE ALSO
 
-[git-branch](/man/git-branch)(1), [git-log](/man/git-log)(1)
+[git-log](/man/git-log)(1), [git-branch](/man/git-branch)(1), [git-extras](/man/git-extras)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md#git-show-tree)```
+
+<!-- verified: 2026-07-17 -->

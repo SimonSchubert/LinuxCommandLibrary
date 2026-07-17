@@ -51,6 +51,9 @@ _REFS_
 **--exit-code**
 > Exit with error if no refs found.
 
+**--symref**
+> Show underlying ref for symbolic refs (e.g. what HEAD points to).
+
 **--help**
 > Display help information.
 
@@ -71,3 +74,13 @@ git ls-remote is a core **Git** command for inspecting remote references, useful
 # SEE ALSO
 
 [git-remote](/man/git-remote)(1), [git-fetch](/man/git-fetch)(1), [git-ls-tree](/man/git-ls-tree)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-ls-remote)```
+
+<!-- verified: 2026-07-17 -->

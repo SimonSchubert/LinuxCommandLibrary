@@ -33,7 +33,7 @@ This is the standard way to create secure Git hosting accounts that can only int
 # CONFIGURATION
 
 **~/git-shell-commands/**
-> Optional directory of allowed interactive commands. If present, git-shell provides a limited interactive mode listing these commands.
+> Optional directory of allowed interactive commands. If present, git-shell provides a limited interactive mode listing these commands. A file named `no-interactive-login` in this directory (or anywhere on PATH) fully disables interactive login, printing its contents instead.
 
 # CAVEATS
 
@@ -46,3 +46,13 @@ git-shell was created to enable **secure git hosting** by providing a restricted
 # SEE ALSO
 
 [git](/man/git)(1), [ssh](/man/ssh)(1), [chsh](/man/chsh)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-shell)```
+
+<!-- verified: 2026-07-17 -->

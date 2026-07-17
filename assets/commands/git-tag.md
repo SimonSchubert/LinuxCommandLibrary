@@ -69,6 +69,15 @@ Create, list, and manage tags
 **--sort** _key_
 > Sort tags.
 
+**--points-at** _object_
+> List tags pointing at the given object.
+
+**--format** _format_
+> Format output using a `git for-each-ref`-style placeholder string.
+
+**-v**, **--verify**
+> Verify the GPG signature of a signed tag.
+
 # DESCRIPTION
 
 **git tag** creates, lists, deletes, and verifies tag objects. Tags mark specific points in history as important, typically used for release versions.
@@ -78,3 +87,13 @@ Lightweight tags are simple pointers to a commit, while annotated tags store ext
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-commit](/man/git-commit)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-tag)```
+
+<!-- verified: 2026-07-17 -->

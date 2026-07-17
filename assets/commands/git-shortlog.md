@@ -73,3 +73,13 @@ git shortlog is a core **Git** command for generating contributor summaries, com
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-authors](/man/git-authors)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-shortlog)```
+
+<!-- verified: 2026-07-17 -->

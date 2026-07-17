@@ -40,4 +40,12 @@ git touch is part of **git-extras**, combining file creation with staging for co
 
 # SEE ALSO
 
-[touch](/man/touch)(1), [git-add](/man/git-add)(1)
+[touch](/man/touch)(1), [git-add](/man/git-add)(1), [git-extras](/man/git-extras)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md#git-touch)```
+
+<!-- verified: 2026-07-17 -->

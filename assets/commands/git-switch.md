@@ -68,6 +68,20 @@ Switch between branches
 
 Use `-c` to create a new branch and switch to it in one step, or `--detach` to move to a specific commit without being on any branch.
 
+# CAVEATS
+
+Was marked experimental for several releases after its introduction; behavior has since stabilized, but check `git switch --help` on older Git installs for differences.
+
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-branch](/man/git-branch)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-switch)```
+
+<!-- verified: 2026-07-17 -->

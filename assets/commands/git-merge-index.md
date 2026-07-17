@@ -36,3 +36,13 @@ The command passes file information (including base, ours, and theirs versions w
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [git-mergetool](/man/git-mergetool)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-merge-index)```
+
+<!-- verified: 2026-07-17 -->

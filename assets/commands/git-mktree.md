@@ -38,7 +38,7 @@ Create tree object from ls-tree format
 
 **git mktree** creates a tree object from ls-tree formatted input. It reads file modes, object types, hashes, and names from stdin, creating a new tree object containing those entries. The command is the inverse of `git ls-tree`.
 
-This plumbing tool enables programmatic tree creation and manipulation in scripts. Input must be properly formatted with each line specifying mode, type, hash, and filename.
+This plumbing tool enables programmatic tree creation and manipulation in scripts. Input must be properly formatted with each line specifying mode, type, hash, and filename. With `--batch`, it accepts multiple tree descriptions separated by blank lines and writes one tree object per batch, printing each resulting hash.
 
 # CAVEATS
 
@@ -51,3 +51,13 @@ git mktree is a core **Git** plumbing command for tree object creation, enabling
 # SEE ALSO
 
 [git-ls-tree](/man/git-ls-tree)(1), [git-write-tree](/man/git-write-tree)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-mktree)```
+
+<!-- verified: 2026-07-17 -->

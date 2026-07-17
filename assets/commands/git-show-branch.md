@@ -60,3 +60,13 @@ This is useful for understanding how branches relate to each other, especially w
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-log](/man/git-log)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-show-branch)```
+
+<!-- verified: 2026-07-17 -->

@@ -56,6 +56,9 @@ Reset current HEAD to a specified state
 **-p**, **--patch**
 > Interactive reset.
 
+**--recurse-submodules**
+> Update submodule working trees to match the superproject.
+
 # DESCRIPTION
 
 **git reset** moves the current HEAD to a specified state. It can unstage files, undo commits, or completely discard changes depending on the mode used.
@@ -68,4 +71,14 @@ Hard reset discards changes permanently. Be careful with --hard on uncommitted w
 
 # SEE ALSO
 
-[git-checkout](/man/git-checkout)(1), [git-revert](/man/git-revert)(1)
+[git-checkout](/man/git-checkout)(1), [git-revert](/man/git-revert)(1), [git-restore](/man/git-restore)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-reset)```
+
+<!-- verified: 2026-07-17 -->

@@ -43,4 +43,14 @@ Common use cases include comparing a feature branch before and after rebasing, r
 
 # SEE ALSO
 
-[git-diff](/man/git-diff)(1), [git-log](/man/git-log)(1)
+[git-diff](/man/git-diff)(1), [git-log](/man/git-log)(1), [git-rebase](/man/git-rebase)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-range-diff)```
+
+<!-- verified: 2026-07-17 -->

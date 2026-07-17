@@ -68,3 +68,13 @@ git rm is a core **Git** command for removing files from version control, comple
 # SEE ALSO
 
 [git-add](/man/git-add)(1), [git-mv](/man/git-mv)(1), [rm](/man/rm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-rm)```
+
+<!-- verified: 2026-07-17 -->

@@ -27,3 +27,13 @@ Alias for git add to stage changes
 # SEE ALSO
 
 [git-add](/man/git-add)(1), [git-commit](/man/git-commit)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-add)```
+
+<!-- verified: 2026-07-17 -->

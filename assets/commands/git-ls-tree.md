@@ -74,3 +74,13 @@ git ls-tree is a core **Git** plumbing command for examining tree objects, part 
 # SEE ALSO
 
 [git-ls-files](/man/git-ls-files)(1), [git-ls-remote](/man/git-ls-remote)(1), [git-show](/man/git-show)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-ls-tree)```
+
+<!-- verified: 2026-07-17 -->

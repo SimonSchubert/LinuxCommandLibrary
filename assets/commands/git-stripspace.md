@@ -37,3 +37,13 @@ The command can also strip or add comment lines, making it useful for processing
 # SEE ALSO
 
 [git-commit](/man/git-commit)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-stripspace)```
+
+<!-- verified: 2026-07-17 -->

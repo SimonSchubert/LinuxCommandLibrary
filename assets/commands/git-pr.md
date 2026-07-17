@@ -4,57 +4,67 @@ Check out GitHub pull requests
 
 # TLDR
 
-**Check out pull request**
+**Check out pull request** into a local `pr/N` branch
 
 ```git pr [123]```
 
-**Check out from upstream**
+**Check out from a specific remote**
 
-```git pr [123] upstream```
+```git pr [123] [upstream]```
 
-**Clean up PR branch**
+**Check out from a full pull request URL**
 
-```git pr clean [123]```
+```git pr [https://github.com/owner/repo/pull/123]```
 
-**List pull requests**
+**Check out the PR's merge ref** instead of its head
 
-```git pr list```
+```git pr --merge [123]```
+
+**Delete all local `pr/*` branches**
+
+```git pr clean```
 
 # SYNOPSIS
 
-**git pr** [_number_] [_remote_]
+**git pr** [_number_ | _url_] [_remote_]
+
+**git pr** **clean**
 
 # PARAMETERS
 
 _NUMBER_
 > Pull request number.
 
+_URL_
+> Full pull request URL (any host); the remote and number are parsed from it.
+
 _REMOTE_
-> Remote name (default: origin).
+> Remote name for a numeric PR (default: origin, or `git-extras.pr.remote` if set).
 
-**clean** _NUMBER_
-> Delete local PR branch.
+**-m**, **--merge**
+> Fetch the PR's merge ref (`refs/pull/N/merge`) instead of its head ref.
 
-**list**
-> List open PRs.
-
-**--help**
-> Display help information.
+**clean**
+> Delete every local `pr/*` branch.
 
 # DESCRIPTION
 
-**git pr** checks out GitHub pull requests locally for testing, reviewing, or contributing. It fetches the pull request reference and creates a local branch named "pr/N" for the specified PR number.
+**git pr** checks out GitHub pull requests locally for testing, reviewing, or contributing. It fetches `refs/pull/N/head` (or `refs/pull/N/merge` with `-m`) into a local branch named `pr/N` and sets it up to track that ref, so `git pull` inside it re-fetches the latest revision of the PR.
 
-The command simplifies the review workflow by handling ref fetching and branch creation in a single step. For GitLab repositories, the equivalent command is `git mr`.
+For GitLab repositories, the equivalent command is `git mr`.
 
 # CAVEATS
 
-Part of git-extras package. GitHub-specific functionality. GitLab equivalent is git mr.
-
-# HISTORY
-
-git pr is part of **git-extras**, providing GitHub pull request checkout functionality for local testing and review.
+Part of git-extras package. GitHub-specific ref layout (`refs/pull/N/head`); won't work against a host that doesn't publish these refs. `git pr clean` removes **all** `pr/*` branches at once, not just one.
 
 # SEE ALSO
 
-[git-mr](/man/git-mr)(1), [gh-pr](/man/gh-pr)(1), [git-checkout](/man/git-checkout)(1)
+[git-mr](/man/git-mr)(1), [gh-pr](/man/gh-pr)(1), [git-checkout](/man/git-checkout)(1), [git-extras](/man/git-extras)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md#git-pr)```
+
+<!-- verified: 2026-07-17 -->
