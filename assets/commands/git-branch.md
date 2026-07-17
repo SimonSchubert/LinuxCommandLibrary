@@ -85,6 +85,18 @@ List, create, rename, and delete branches
 **--contains** _COMMIT_
 > List branches containing the specified commit.
 
+**--show-current**
+> Print the name of the current branch (nothing in detached HEAD state).
+
+**--sort** _KEY_
+> Sort listing by key (e.g. **-committerdate**); prefix **-** for descending order.
+
+**-f**, **--force**
+> Reset a branch to start-point even if it exists; combined with **-d** or **-m**, force delete/rename.
+
+**--points-at** _OBJECT_
+> List branches pointing at the specified object.
+
 # DESCRIPTION
 
 **git branch** lists, creates, renames, and deletes branches. Without arguments, it lists existing local branches, marking the current branch with an asterisk.
@@ -104,3 +116,13 @@ Branching has been a core Git feature since its creation by Linus Torvalds in **
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-switch](/man/git-switch)(1), [git-merge](/man/git-merge)(1), [git-fetch](/man/git-fetch)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-branch)```
+
+<!-- verified: 2026-07-17 -->

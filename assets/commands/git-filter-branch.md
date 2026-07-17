@@ -30,23 +30,41 @@ Rewrite branch history by applying filters
 
 # PARAMETERS
 
-**--tree-filter** _cmd_
-> Rewrite tree and contents.
-
 **--env-filter** _cmd_
-> Modify environment.
+> Rewrite author/committer environment variables (name, email, date).
+
+**--tree-filter** _cmd_
+> Rewrite tree and contents; checks out each commit, so slow on large repos.
+
+**--index-filter** _cmd_
+> Rewrite the index without checking out the tree; much faster than **--tree-filter**. Commonly used with **git rm --cached**.
+
+**--parent-filter** _cmd_
+> Rewrite a commit's parent list.
 
 **--msg-filter** _cmd_
 > Rewrite commit messages.
 
+**--commit-filter** _cmd_
+> Replace the commit-creation step entirely.
+
+**--tag-name-filter** _cmd_
+> Rewrite tag names pointing at rewritten commits.
+
 **--subdirectory-filter** _dir_
-> Extract subdirectory.
+> Only rewrite history touching _dir_, and make it the new project root.
 
 **--prune-empty**
-> Remove empty commits.
+> Remove commits that become empty after filtering.
+
+**--original** _namespace_
+> Namespace for backup refs (default **refs/original**).
+
+**-d** _dir_
+> Temporary directory to use (e.g. tmpfs, for I/O speed).
 
 **-f**, **--force**
-> Force overwrite backup.
+> Force the operation, overwriting an existing backup namespace.
 
 # DESCRIPTION
 
@@ -60,4 +78,14 @@ The subdirectory-filter is particularly useful for extracting a subdirectory int
 
 # SEE ALSO
 
-[git-filter-repo](/man/git-filter-repo)(1), [git-rebase](/man/git-rebase)(1)
+[git-filter-repo](/man/git-filter-repo)(1), [git-rebase](/man/git-rebase)(1), [git-rm](/man/git-rm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-filter-branch)```
+
+<!-- verified: 2026-07-17 -->

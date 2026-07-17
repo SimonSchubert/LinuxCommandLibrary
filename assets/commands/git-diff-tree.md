@@ -45,7 +45,13 @@ Compare content of tree objects
 > Suppress diff output.
 
 **--stdin**
-> Read commits from stdin.
+> Read commits from stdin, one per line; each is compared with its parent(s).
+
+**--root**
+> Include the initial commit as a big-bang diff against the empty tree (only meaningful with **--stdin** or a single _tree-ish_).
+
+**-c**, **--cc**
+> Show a combined diff for merge commits instead of only listing changed files.
 
 # DESCRIPTION
 

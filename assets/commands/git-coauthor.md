@@ -1,48 +1,53 @@
 # TAGLINE
 
-Add co-author attribution to commits
+Add co-author attribution to the last commit
 
 # TLDR
 
-**Add coauthor to last commit**
+**Add a coauthor to the last commit**
 
 ```git coauthor "[Name]" "[email@example.com]"```
 
-**Add multiple coauthors**
+**Add a second coauthor** (run again against the same commit)
 
-```git coauthor "[Name1]" "[email1]" "[Name2]" "[email2]"```
+```git coauthor "[Name2]" "[email2@example.com]"```
 
 # SYNOPSIS
 
-**git coauthor** _name_ _email_ [_name_ _email_]...
+**git coauthor** _name_ _email_
 
 # PARAMETERS
 
 _NAME_
-> Coauthor name.
+> Coauthor's name. Required.
 
 _EMAIL_
-> Coauthor email.
-
-**--help**
-> Display help information.
+> Coauthor's email. Required.
 
 # DESCRIPTION
 
-**git coauthor** adds Co-authored-by trailers to the last commit message. GitHub and GitLab recognize these trailers to attribute commits to multiple contributors.
+**git coauthor** is a **git-extras** command that amends the last commit message to add a **Co-authored-by:** trailer, the format GitHub and GitLab recognize to credit multiple contributors on one commit.
 
-The command amends the last commit, appending Co-authored-by lines in the format recognized by GitHub and GitLab. Multiple coauthors can be added in a single invocation.
+It takes exactly one name and one email per invocation. To credit several people, run the command once per coauthor: since it appends to any **Co-authored-by:** trailers already present rather than replacing them, running it repeatedly against the same commit stacks up multiple coauthors.
 
-This supports pair programming, mob programming, and collaborative coding workflows where attribution should reflect the actual contributors rather than just the person who typed the commit command.
+This supports pair programming, mob programming, and collaborative workflows where attribution should reflect everyone who contributed, not just whoever typed **git commit**.
 
 # CAVEATS
 
-Part of git-extras package. Amends last commit (rewrites history). Coauthors must match platform accounts for attribution.
+Part of the **git-extras** package. Amends the last commit, which rewrites its hash, so avoid using it on commits already pushed to a shared branch. Both name and email are required; the command has no flags and does not validate its arguments. Coauthor emails must match the contributor's platform account for GitHub/GitLab to link the attribution to a profile.
 
 # HISTORY
 
-git coauthor is part of **git-extras**, created to support GitHub's co-author trailer convention for attributing collaborative work.
+git coauthor is part of **git-extras**, the community-maintained collection of Git utility scripts, added to support GitHub's co-author trailer convention for attributing collaborative work.
 
 # SEE ALSO
 
-[git-commit](/man/git-commit)(1), [git-authors](/man/git-authors)(1)
+[git-commit](/man/git-commit)(1), [git-authors](/man/git-authors)(1), [git-extras](/man/git-extras)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md#git-coauthor)```
+
+<!-- verified: 2026-07-17 -->

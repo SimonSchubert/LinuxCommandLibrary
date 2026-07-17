@@ -21,3 +21,9 @@ Removing a submodule manually involves deinitializing it, editing .gitmodules, r
 # SEE ALSO
 
 [git-submodule](/man/git-submodule)(1), [git-extras](/man/git-extras)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+<!-- verified: 2026-07-17 -->

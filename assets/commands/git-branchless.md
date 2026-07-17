@@ -132,3 +132,11 @@ Git-branchless was created by **Waleed Khan** inspired by Meta's internal Git to
 # SEE ALSO
 
 [git](/man/git)(1), [git-absorb](/man/git-absorb)(1), [lazygit](/man/lazygit)(1), [tig](/man/tig)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/arxanas/git-branchless)```
+
+```[Documentation](https://github.com/arxanas/git-branchless/wiki)```
+
+<!-- verified: 2026-07-17 -->

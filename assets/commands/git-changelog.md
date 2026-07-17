@@ -4,61 +4,83 @@ Generate formatted changelogs from commit history
 
 # TLDR
 
-**Generate changelog**
+**Generate/update the changelog file** (auto-detected, or History.md)
 
 ```git changelog```
 
-**Changelog since tag**
+**Write the changelog to a specific file**
 
-```git changelog --tag [v1.0.0]```
+```git changelog [CHANGELOG.md]```
 
-**List commits only**
+**Print the changelog to stdout** instead of writing a file
 
-```git changelog --list```
+```git changelog --stdout```
 
-**Changelog to file**
+**List commits since a start tag**, plainly (no headers)
 
-```git changelog > CHANGELOG.md```
+```git changelog --list --start-tag [v1.0.0]```
 
-**Specify commit range**
+**Exclude merge commits**
 
-```git changelog [v1.0.0]..[v2.0.0]```
+```git changelog --no-merges```
+
+**Replace the changelog** instead of appending to it
+
+```git changelog --prune-old```
 
 # SYNOPSIS
 
-**git changelog** [_options_] [_range_]
+**git changelog** [_options_] [_file_]
 
 # PARAMETERS
 
-_RANGE_
-> Commit range for changelog.
+_FILE_
+> Output filename; defaults to an auto-detected Change*/History* file, or **History.md**.
 
-**--tag** _TAG_
-> Generate since tag.
+**-a**, **--all**
+> Include every commit, ignoring **--start-tag**/**--start-commit**/**--final-tag**.
 
-**--list**
-> List commits without formatting.
+**-l**, **--list**
+> Plain list of commits, without section titles/dates.
 
-**--no-merges**
+**-t**, **--tag** _LABEL_
+> Label to use as the section title for the most-recent, untagged commits.
+
+**-s**, **--start-tag** _TAG_
+> Oldest tag to start the commit range from.
+
+**--start-commit** _COMMIT_
+> Like **--start-tag**, but starts from a commit instead of a tag.
+
+**-f**, **--final-tag** _TAG_
+> Newest tag to end the commit range at.
+
+**-n**, **--no-merges**
 > Exclude merge commits.
 
-**--all**
-> Include all commits.
+**-m**, **--merges-only**
+> Include only merge commits, with subject and body.
 
-**--help**
+**-p**, **--prune-old**
+> Replace the existing changelog file instead of appending to it.
+
+**-x**, **--stdout**
+> Write to standard output instead of a file.
+
+**-h**, **--help**, **?**
 > Display help information.
 
 # DESCRIPTION
 
-**git changelog** generates a changelog from git commit history. It formats commits into release notes, grouped by version tags or date ranges, suitable for documentation.
+**git changelog** generates a changelog from git tags (annotated or lightweight) and commit messages. It formats commits into release notes, grouped into sections by tag, suitable for a project's CHANGELOG.
 
-The command is part of git-extras and supports various output formats. It can filter merge commits, format messages, and generate markdown-ready output suitable for inclusion in project documentation.
+If no tags exist, every commit is included; otherwise only commits since the most recent tag are shown by default (use **--start-tag**/**--final-tag** to target a specific range). An existing Change*/History* file in the current directory is auto-detected and its content appended after the newly generated section, unless **--prune-old** is given.
 
-Using tags as version markers, it groups commits into release sections, making it straightforward to maintain a CHANGELOG.md file that documents the evolution of a project.
+Commit formatting is controlled via the **changelog.format** (default `  * %s`) and **changelog.mergeformat** git config options.
 
 # CAVEATS
 
-Part of git-extras package. Quality depends on commit messages. May need customization for project conventions.
+Part of the git-extras package. Quality depends on commit messages. Tag-based grouping requires annotated or lightweight tags to already exist in the repository.
 
 # HISTORY
 
@@ -67,3 +89,11 @@ git changelog is part of **git-extras**, created by **TJ Holowaychuk** to automa
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-tag](/man/git-tag)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md#git-changelog)```
+
+<!-- verified: 2026-07-17 -->

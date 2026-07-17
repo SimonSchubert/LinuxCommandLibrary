@@ -1,10 +1,10 @@
 # TAGLINE
 
-Resume interrupted git operations
+Resume the in-progress rebase, merge, cherry-pick, or revert
 
 # TLDR
 
-**Continue interrupted operation**
+**Continue whichever operation is currently paused**
 
 ```git continue```
 
@@ -14,20 +14,28 @@ Resume interrupted git operations
 
 # DESCRIPTION
 
-**git continue** resumes an interrupted git operation. It's a convenience command from git-extras that detects the pending operation (rebase, merge, cherry-pick, revert) and runs the appropriate continue command.
+**git continue** is a **git-extras** command that resumes whichever operation Git currently has paused, without you needing to remember or look up the exact command.
 
-Instead of remembering **git rebase --continue**, **git cherry-pick --continue**, or **git merge --continue**, a single **git continue** handles any interrupted operation.
+It checks the repository's git-dir for the state files Git leaves behind mid-operation (**CHERRY_PICK_HEAD**, **MERGE_HEAD**, **REBASE_HEAD**, **REVERT_HEAD**) to work out whether a cherry-pick, merge, rebase, or revert is in progress, then runs the matching **--continue** for it, e.g. **git rebase --continue**.
 
-The command detects which operation is currently paused and executes the appropriate continue command, reducing cognitive overhead during complex conflict resolution workflows.
+The same script also implements **git-abort** (installed as a second name pointing at the same file): it picks its behavior by inspecting its own invoked name, running **--abort** instead of **--continue** for whichever operation is detected.
 
 # CAVEATS
 
-Part of git-extras package. Requires pending operation. Conflicts must be resolved first.
+Errors out with "No active operation found" if nothing is paused, and lists all of them if it somehow detects more than one. Conflicts must still be resolved and staged yourself before continuing; this command only saves you from typing the operation-specific continue command. Requires **git-extras** to be installed.
 
 # HISTORY
 
-git continue was added to **git-extras** by **TJ Holowaychuk** to simplify the common workflow of continuing interrupted git operations.
+git continue is part of **git-extras**, the community-maintained collection of Git utility scripts.
 
 # SEE ALSO
 
-[git-rebase](/man/git-rebase)(1), [git-merge](/man/git-merge)(1), [git-cherry-pick](/man/git-cherry-pick)(1)
+[git-abort](/man/git-abort)(1), [git-rebase](/man/git-rebase)(1), [git-merge](/man/git-merge)(1), [git-cherry-pick](/man/git-cherry-pick)(1), [git-revert](/man/git-revert)(1), [git-extras](/man/git-extras)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md#git-continue)```
+
+<!-- verified: 2026-07-17 -->

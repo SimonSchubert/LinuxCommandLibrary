@@ -32,6 +32,10 @@ Show differences between commits and files
 
 ```git diff [commit1] [commit2]```
 
+**Diff against merge base** (changes on a branch since it diverged)
+
+```git diff [main]...[feature-branch]```
+
 # SYNOPSIS
 
 **git diff** [_options_] [_commit_] [**--**] [_path_...]
@@ -70,6 +74,12 @@ Show differences between commits and files
 
 **-w**, **--ignore-all-space**
 > Ignore all whitespace.
+
+**-M**, **--find-renames**
+> Detect and report renamed files.
+
+**-C**, **--find-copies**
+> Detect and report copied files.
 
 # DESCRIPTION
 

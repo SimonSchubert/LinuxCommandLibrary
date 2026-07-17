@@ -24,6 +24,10 @@ Generate human-readable names for commits
 
 ```git describe --match "v*"```
 
+**Mark dirty working tree**
+
+```git describe --dirty```
+
 # SYNOPSIS
 
 **git describe** [_options_] [_commit_]
@@ -43,10 +47,16 @@ _COMMIT_
 > Only consider matching tags.
 
 **--abbrev** _N_
-> Abbreviation length.
+> Abbreviation length (default: 7, or as many digits as needed for uniqueness).
 
 **--always**
 > Show commit abbrev if no tag found.
+
+**--dirty**[=_mark_]
+> Append **-dirty** if the working tree has local modifications.
+
+**--contains**
+> Find the tag that comes after (contains) the commit, instead of the closest preceding one. Implies **--tags**.
 
 **--help**
 > Display help information.

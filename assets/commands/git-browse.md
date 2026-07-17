@@ -4,50 +4,63 @@ Open repository in web browser
 
 # TLDR
 
-**Open repository in browser**
+**Open the current repository** in the browser, using its current commit/branch
 
 ```git browse```
 
-**Open specific commit**
+**Open a specific remote's repository**
 
-```git browse [commit]```
+```git browse [upstream]```
 
-**Open specific branch**
+**Open a specific file** on a remote
 
-```git browse --branch [name]```
+```git browse [upstream] [path/to/file]```
 
-**Open issues page**
+**Jump to a specific line** in a file
 
-```git browse --issues```
+```git browse [upstream] [path/to/file] [42]```
 
-**Print URL without opening**
+**Jump to a range of lines** in a file
 
-```git browse -u```
+```git browse [upstream] [path/to/file] [1] [42]```
 
 # SYNOPSIS
 
-**git** **browse** [_options_] [_commit_]
+**git** **browse** [_remote-name_] [_filename_] [_line1_] [_line2_]
 
 # PARAMETERS
 
-**--branch** _name_
-> Open specific branch.
+_REMOTE-NAME_
+> Remote to browse; defaults to the current branch's tracked remote, or **origin**.
 
-**--issues**
-> Open issues page.
+_FILENAME_
+> Path (relative to repo root) of a file to open on the remote.
 
-**-u**, **--url**
-> Print URL only.
+_LINE1_
+> Starting line number to highlight (requires _filename_).
+
+_LINE2_
+> Ending line number, to highlight a range (requires _line1_).
 
 # DESCRIPTION
 
-**git browse** is a git-extras command that automatically detects your repository's remote URL and opens it in your default web browser. It intelligently handles GitHub, GitLab, and Bitbucket repositories, constructing the appropriate web URLs.
+**git browse** is a git-extras command that detects the current repository's remote URL and opens it in the default web browser. It recognizes GitHub, GitLab, and Bitbucket remotes and builds the correct web URL format for each, including deep links to a specific file and line (or line range) at the current commit or branch.
 
-The command can navigate directly to specific commits, branches, or repository sections like the issues page. This eliminates the need to manually type or copy repository URLs when you want to view code on the hosting platform.
+SSH remotes (**git@host:user/repo.git**) are converted to HTTPS automatically. Without a filename, it just opens the repository's landing page for the current commit/branch.
 
-The --url option allows scripting and automation by printing the URL instead of opening it, useful for integration with other tools or workflows.
+# CAVEATS
+
+Only recognizes GitHub, GitLab, and Bitbucket remote URL formats. Requires a browser opener (**open**, **xdg-open**, or **start**) available on the system.
 
 # SEE ALSO
 
 [gh-browse](/man/gh-browse)(1), [git-extras](/man/git-extras)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md#git-browse)```
+
+<!-- verified: 2026-07-17 -->
 

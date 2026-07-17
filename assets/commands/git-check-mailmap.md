@@ -28,6 +28,12 @@ _CONTACT_
 **--stdin**
 > Read contacts from stdin.
 
+**--mailmap-file** _FILE_
+> Also read the specified mailmap file, taking precedence over the repository's configured mailmap.
+
+**--mailmap-blob** _BLOB_
+> Like **--mailmap-file**, but read the mailmap from a blob in the repository.
+
 **--help**
 > Display help information.
 
@@ -55,3 +61,13 @@ git check-mailmap was added to **Git** to support debugging mailmap configuratio
 # SEE ALSO
 
 [git-shortlog](/man/git-shortlog)(1), [git-log](/man/git-log)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-check-mailmap)```
+
+<!-- verified: 2026-07-17 -->

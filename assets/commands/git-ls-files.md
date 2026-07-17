@@ -51,6 +51,15 @@ List files in index and working tree
 **--stage**, **-s**
 > Show staging info.
 
+**-x** _pattern_, **--exclude** _pattern_
+> Skip files matching pattern.
+
+**-z**
+> Terminate entries with NUL instead of newline, for safe scripting.
+
+**--full-name**
+> Show paths relative to the repository root, not the current directory.
+
 **--help**
 > Display help information.
 
@@ -71,3 +80,13 @@ git ls-files is a core **Git** plumbing command for inspecting the index, used b
 # SEE ALSO
 
 [git-status](/man/git-status)(1), [git-ls-tree](/man/git-ls-tree)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-ls-files)```
+
+<!-- verified: 2026-07-17 -->

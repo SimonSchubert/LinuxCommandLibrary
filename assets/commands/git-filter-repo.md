@@ -31,25 +31,46 @@ Fast, safe tool for rewriting Git repository history
 # PARAMETERS
 
 **--path** _PATH_
-> Filter specific paths.
+> Only keep the given path (repeatable); combine with **--invert-paths** to remove it instead.
+
+**--path-glob** _GLOB_
+> Filter paths matching a glob pattern.
+
+**--path-regex** _REGEX_
+> Filter paths matching a regex.
 
 **--invert-paths**
-> Invert path selection.
+> Invert path selection, excluding rather than including matches.
 
 **--path-rename** _OLD:NEW_
-> Rename paths in history.
+> Rename paths throughout history.
+
+**--replace-text** _FILE_
+> Replace text matching expressions listed in _FILE_ throughout history (for scrubbing secrets).
 
 **--strip-blobs-bigger-than** _SIZE_
-> Remove large blobs.
+> Remove blobs larger than _SIZE_ (e.g. 10M).
+
+**--mailmap** _FILE_
+> Rewrite author/committer names and emails using a mailmap file.
+
+**--tag-rename** _OLD:NEW_
+> Rename tags matching a pattern.
 
 **--analyze**
-> Generate analysis reports.
+> Generate an analysis report instead of rewriting anything.
 
 **--subdirectory-filter** _DIR_
-> Make subdirectory the root.
+> Make _DIR_ the new repository root, discarding everything else.
 
-**--force**
-> Skip freshness checks.
+**--dry-run**
+> Show what would change without rewriting the repo.
+
+**--partial**
+> Do a partial rewrite, leaving history mixed with unrewritten refs (skips some safety checks).
+
+**-f**, **--force**
+> Skip the fresh-clone safety check.
 
 **--help**
 > Display help information.
@@ -62,12 +83,20 @@ The tool can remove files, rename paths, strip sensitive data, change authors, a
 
 # CAVEATS
 
-**History rewriting destroys old commits.** Requires fresh clone. Collaborators must reclone. Cannot be undone.
+**History rewriting destroys old commits.** By default requires a fresh clone (no other work in progress) as a safety check; override with **--force** only when you understand the risk. Collaborators must reclone or hard-reset onto the new history. Cannot be undone.
 
 # HISTORY
 
-git filter-repo was created by **Elijah Newren** as the official replacement for git filter-branch, recommended by the git project.
+git filter-repo was created by **Elijah Newren** as the official replacement for git filter-branch, recommended by the git project itself since Git 2.24's release notes.
 
 # SEE ALSO
 
-[git](/man/git)(1), [git-rebase](/man/git-rebase)(1)
+[git](/man/git)(1), [git-rebase](/man/git-rebase)(1), [git-filter-branch](/man/git-filter-branch)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/newren/git-filter-repo)```
+
+```[Documentation](https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html)```
+
+<!-- verified: 2026-07-17 -->

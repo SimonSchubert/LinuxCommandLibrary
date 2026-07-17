@@ -39,14 +39,26 @@ Generate highly customizable changelogs from commits
 **--unreleased**
 > Only process unreleased commits.
 
+**-l**, **--latest**
+> Process commits starting from the latest tag.
+
+**--bump**
+> Bump the version for the unreleased changes based on conventional commits.
+
 **-c** _FILE_, **--config** _FILE_
 > Configuration file.
+
+**-w** _DIR_, **--workdir** _DIR_
+> Run as if git-cliff was started in the given directory.
 
 **--prepend** _FILE_
 > Prepend to existing file.
 
 **--context**
 > Print template context.
+
+**--init**
+> Generate a default configuration file.
 
 **--help**
 > Display help information.
@@ -78,3 +90,13 @@ git cliff was created by **Orhun Parmaksiz** as a highly customizable changelog 
 # SEE ALSO
 
 [git-changelog](/man/git-changelog)(1), [git-log](/man/git-log)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/orhun/git-cliff)```
+
+```[Homepage](https://git-cliff.org/)```
+
+```[Documentation](https://git-cliff.org/docs/)```
+
+<!-- verified: 2026-07-17 -->

@@ -43,3 +43,9 @@ git contrib is part of **git-extras**, created by **TJ Holowaychuk** to provide 
 # SEE ALSO
 
 [git-authors](/man/git-authors)(1), [git-shortlog](/man/git-shortlog)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+<!-- verified: 2026-07-17 -->

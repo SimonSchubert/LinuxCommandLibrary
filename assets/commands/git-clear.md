@@ -23,13 +23,25 @@ Reset and clean working directory
 
 # DESCRIPTION
 
-**git clear** is a git-extras command that combines git reset --hard and git clean operations into a single convenience command. It removes all uncommitted changes, both tracked and untracked, returning the repository to a pristine state matching HEAD.
+**git clear** is a **git-extras** command that combines **git clean -d -f -x** and **git reset --hard** into a single convenience command. It removes all uncommitted changes, tracked and untracked, including files matched by **.gitignore**, returning the repository to a pristine state matching **HEAD**.
 
-This command is useful when you want to completely abandon all local modifications and start fresh. It's more aggressive than git reset --hard alone, which only removes changes to tracked files, leaving untracked files intact.
+This is the most aggressive of the git-extras clearing commands: **git reset --hard** alone only touches tracked files, and **git-clear-soft** spares ignored files, but **git clear** wipes everything not committed. By default it asks **"Sure? - This command may delete files that cannot be recovered, including those in .gitignore [y/N]:"** before proceeding.
 
-The operation is destructive and cannot be undone, as it permanently deletes uncommitted work. The -f flag bypasses confirmation prompts, allowing automated scripts to clean repositories without user interaction. Use with caution in repositories containing valuable uncommitted work.
+The operation is destructive and cannot be undone, as it permanently deletes uncommitted work. The **-f** flag bypasses the confirmation prompt, allowing automated scripts to clean repositories without user interaction. Use with caution in repositories containing valuable uncommitted work or ignored build artifacts you meant to keep.
+
+# CAVEATS
+
+Irreversibly deletes untracked and ignored files alongside the hard reset; there is no undo. Requires **git-extras** to be installed.
 
 # SEE ALSO
 
-[git-reset](/man/git-reset)(1), [git-clean](/man/git-clean)(1), [git-extras](/man/git-extras)(1)
+[git-clear-soft](/man/git-clear-soft)(1), [git-reset](/man/git-reset)(1), [git-clean](/man/git-clean)(1), [git-extras](/man/git-extras)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md#git-clear)```
+
+<!-- verified: 2026-07-17 -->
 

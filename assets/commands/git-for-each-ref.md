@@ -35,22 +35,37 @@ Output information on each reference with custom formatting
 # PARAMETERS
 
 **--format** _format_
-> Output format string.
+> Output format string using %(fieldname) placeholders (default: `%(objectname) %(objecttype)\t%(refname)`).
 
 **--sort** _key_
-> Sort by key.
+> Sort by field name; prefix with **-** for descending. Repeatable, last key is primary.
 
 **--count** _n_
-> Limit output count.
+> Stop after showing _n_ refs.
 
 **--points-at** _object_
-> Show refs pointing to object.
+> Only list refs pointing at the given object.
 
-**--merged** _commit_
-> Show refs merged into commit.
+**--merged**[=_commit_]
+> Only list refs whose tips are reachable from _commit_ (default HEAD).
 
-**--no-merged** _commit_
-> Show refs not merged.
+**--no-merged**[=_commit_]
+> Only list refs whose tips are not reachable from _commit_ (default HEAD).
+
+**--contains**[=_commit_]
+> Only list refs that contain the given commit.
+
+**--exclude** _pattern_
+> Omit refs matching _pattern_.
+
+**--stdin**
+> Read the list of patterns from standard input instead of the argument list.
+
+**--ignore-case**
+> Case-insensitive sorting and filtering.
+
+**--shell**, **--perl**, **--python**, **--tcl**
+> Quote interpolated values as string literals for the given scripting language.
 
 # DESCRIPTION
 
@@ -62,4 +77,14 @@ This command is primarily used in scripts and Git aliases rather than direct use
 
 # SEE ALSO
 
-[git-branch](/man/git-branch)(1), [git-tag](/man/git-tag)(1)
+[git-branch](/man/git-branch)(1), [git-tag](/man/git-tag)(1), [git-rev-parse](/man/git-rev-parse)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-for-each-ref)```
+
+<!-- verified: 2026-07-17 -->

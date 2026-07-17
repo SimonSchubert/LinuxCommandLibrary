@@ -43,3 +43,9 @@ git count is part of **git-extras**, providing simple commit counting that compl
 # SEE ALSO
 
 [git-count-objects](/man/git-count-objects)(1), [git-shortlog](/man/git-shortlog)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+<!-- verified: 2026-07-17 -->

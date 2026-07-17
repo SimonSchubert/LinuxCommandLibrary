@@ -54,6 +54,15 @@ _DIRECTORY_
 **--single-branch**
 > Clone only one branch.
 
+**-o**, **--origin** _NAME_
+> Use NAME instead of "origin" for the upstream remote.
+
+**-j**, **--jobs** _N_
+> Clone submodules in parallel with N jobs.
+
+**--filter** _SPEC_
+> Partial clone: fetch objects on demand, e.g. **--filter=blob:none**.
+
 **--help**
 > Display help information.
 
@@ -80,3 +89,13 @@ git clone is a fundamental **Git** command from its initial release, providing d
 # SEE ALSO
 
 [git](/man/git)(1), [git-fetch](/man/git-fetch)(1), [git-remote](/man/git-remote)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-clone)```
+
+<!-- verified: 2026-07-17 -->

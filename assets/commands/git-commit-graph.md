@@ -36,11 +36,23 @@ Write and verify commit graph files
 **--stdin-commits**
 > Read commits from stdin.
 
+**--stdin-packs**
+> Scan pack indexes listed on stdin for commits.
+
 **--append**
 > Add to existing graph.
 
-**--split**
+**--split**[=_STRATEGY_]
 > Use incremental graph.
+
+**--changed-paths**
+> Compute Bloom filters for changed paths, speeding up history queries like **git log -- path**.
+
+**--object-dir** _DIR_
+> Object directory used to store the graph.
+
+**--shallow**
+> With **verify**, only check the tip file of a split commit graph.
 
 # DESCRIPTION
 
@@ -54,5 +66,15 @@ Modern Git versions include commit-graph maintenance as part of git gc and git m
 
 # SEE ALSO
 
-[git-gc](/man/git-gc)(1), [git-maintenance](/man/git-maintenance)(1)
+[git-gc](/man/git-gc)(1), [git-maintenance](/man/git-maintenance)(1), [git-log](/man/git-log)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-commit-graph)```
+
+<!-- verified: 2026-07-17 -->
 

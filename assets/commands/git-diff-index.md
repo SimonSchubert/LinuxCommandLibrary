@@ -27,10 +27,16 @@ Compare tree to working tree or index
 # PARAMETERS
 
 **--cached**
-> Compare tree to index only.
+> Compare tree to index only, instead of the working tree.
+
+**-m**
+> Treat files not checked out (present in the index but missing from the working tree) as modified rather than deleted.
+
+**--merge-base**
+> Use the merge base of _tree-ish_ and HEAD as the starting point for comparison.
 
 **--raw**
-> Raw diff output.
+> Raw diff output (this is the default for this command).
 
 **--quiet**
 > Exit with 1 if differences.

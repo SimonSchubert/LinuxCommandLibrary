@@ -21,3 +21,9 @@ The command uses Git's merge-base calculation to determine which branches are sa
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-extras](/man/git-extras)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+<!-- verified: 2026-07-17 -->

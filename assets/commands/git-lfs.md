@@ -51,6 +51,18 @@ Manage large file storage
 **push**
 > Push LFS objects to remote.
 
+**lock** _PATH_
+> Lock a file on the server so only you can push changes to it.
+
+**unlock** _PATH_
+> Release a server-side lock.
+
+**locks**
+> List locked files.
+
+**status**
+> Show LFS-tracked file status.
+
 **--help**
 > Display help information.
 
@@ -84,3 +96,13 @@ Git LFS was created by **GitHub** in **2015** with Atlassian, addressing the lon
 # SEE ALSO
 
 [git](/man/git)(1), [git-annex](/man/git-annex)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git-lfs/git-lfs)```
+
+```[Homepage](https://git-lfs.com/)```
+
+```[Documentation](https://github.com/git-lfs/git-lfs/tree/main/docs)```
+
+<!-- verified: 2026-07-17 -->

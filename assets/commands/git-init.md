@@ -42,6 +42,12 @@ Create empty repository
 **--shared** _permissions_
 > Set repository permissions.
 
+**--separate-git-dir** _dir_
+> Store the `.git` directory at _dir_ instead of inside the working tree.
+
+**--object-format** _format_
+> Hash algorithm for objects: sha1 (default) or sha256.
+
 **-q**, **--quiet**
 > Quiet output.
 
@@ -56,3 +62,13 @@ The `--bare` option creates a repository optimized for sharing without a working
 # SEE ALSO
 
 [git-clone](/man/git-clone)(1), [git-config](/man/git-config)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-init)```
+
+<!-- verified: 2026-07-17 -->

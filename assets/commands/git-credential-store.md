@@ -34,6 +34,9 @@ While convenient for eliminating password prompts permanently, this approach has
 **~/.git-credentials**
 > Default plain-text file where credentials are stored, one URL per line.
 
+**$XDG_CONFIG_HOME/git/credentials**
+> Second lookup location, used only if ~/.git-credentials doesn't exist.
+
 # CAVEATS
 
 Credentials are stored in plain text. Consider using a credential manager or git-credential-cache for better security.

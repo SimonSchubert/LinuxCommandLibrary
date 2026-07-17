@@ -51,8 +51,26 @@ _REVISION_
 **-w**, **--word-regexp**
 > Match whole words.
 
+**-v**, **--invert-match**
+> Select non-matching lines.
+
+**-A** _n_, **-B** _n_, **-C** _n_
+> Show _n_ lines of context after, before, or around each match.
+
+**-E**, **--extended-regexp**
+> Use extended (ERE) regex instead of the default basic (BRE) regex.
+
+**-F**, **--fixed-strings**
+> Treat pattern as literal strings, not regex.
+
+**--cached**
+> Search the index instead of the working tree.
+
+**--untracked**
+> Also search untracked files.
+
 **-e** _PATTERN_
-> Pattern argument.
+> Pattern argument; combine multiple **-e** with **--and**/**--or**/**--not**.
 
 **--help**
 > Display help information.
@@ -74,3 +92,13 @@ git grep is a core **Git** command providing optimized search that understands g
 # SEE ALSO
 
 [grep](/man/grep)(1), [git-log](/man/git-log)(1), [rg](/man/rg)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-grep)```
+
+<!-- verified: 2026-07-17 -->

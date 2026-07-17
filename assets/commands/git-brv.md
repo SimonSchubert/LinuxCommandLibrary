@@ -12,6 +12,10 @@ List branches with verbose formatting and timing information
 
 **git** **brv**
 
+# PARAMETERS
+
+Takes no options; running **git brv** always lists every local branch, most recently committed first.
+
 # DESCRIPTION
 
 **git brv** is a git-extras command that provides an enhanced branch listing with rich contextual information. It displays branches along with their last commit date, abbreviated commit hash, relative time (e.g., "2 days ago"), and commit messages in a well-formatted table.
@@ -23,4 +27,12 @@ The command is particularly useful in repositories with many branches, where und
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-extras](/man/git-extras)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md#git-brv)```
+
+<!-- verified: 2026-07-17 -->
 

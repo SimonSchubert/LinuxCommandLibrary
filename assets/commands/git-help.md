@@ -51,6 +51,12 @@ _GUIDE_
 **--info**, **-i**
 > Use info format.
 
+**--config**, **-c**
+> Print all configuration variable names known to Git.
+
+**--verbose**, **-v**
+> Print a one-line description of each command with **--all**.
+
 **--help**
 > Display help information.
 
@@ -58,7 +64,7 @@ _GUIDE_
 
 **git help** displays documentation for Git commands and conceptual guides. It opens manual pages by default, with options for web browser or info format display.
 
-The command provides access to both command documentation and conceptual guides covering topics like workflows, attributes, and revision specifications. Git includes extensive built-in documentation accessible through this interface.
+The command provides access to both command documentation and conceptual guides covering topics like workflows, attributes, and revision specifications. Git includes extensive built-in documentation accessible through this interface. Running **git** _command_ **--help** is equivalent to **git help** _command_.
 
 # CAVEATS
 
@@ -71,3 +77,13 @@ git help is a core **Git** command providing documentation access, replacing dir
 # SEE ALSO
 
 [git](/man/git)(1), [man](/man/man)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-help)```
+
+<!-- verified: 2026-07-17 -->

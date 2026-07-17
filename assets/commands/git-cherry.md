@@ -28,6 +28,9 @@ _UPSTREAM_
 _HEAD_
 > Branch to check (default: current).
 
+_LIMIT_
+> Only report commits reachable from LIMIT, further limiting output.
+
 **-v**
 > Show commit subjects.
 
@@ -56,3 +59,13 @@ git cherry is a core **Git** command for comparing branches by patch equivalence
 # SEE ALSO
 
 [git-cherry-pick](/man/git-cherry-pick)(1), [git-log](/man/git-log)(1), [git-rebase](/man/git-rebase)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-cherry)```
+
+<!-- verified: 2026-07-17 -->

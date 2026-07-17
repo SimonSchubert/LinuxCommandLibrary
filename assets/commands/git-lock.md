@@ -1,43 +1,44 @@
 # TAGLINE
 
-Advisory file locking
+Exclude a tracked file from further local changes
 
 # TLDR
 
-**Lock a file**
+**Lock a file so Git ignores local edits to it**
 
-```git lock [file.psd]```
-
-**Lock multiple files**
-
-```git lock [file1.psd] [file2.psd]```
+```git lock [config/database.yml]```
 
 # SYNOPSIS
 
-**git lock** _files_
+**git lock** _filename_
 
 # PARAMETERS
 
-_FILES_
-> Files to lock.
-
-**--help**
-> Display help information.
+_FILENAME_
+> Tracked file to lock.
 
 # DESCRIPTION
 
-**git lock** marks files as locked in git-extras. It adds files to a `.gitlock` file, indicating they shouldn't be modified by others. This provides advisory file locking for coordinating work on binary or non-mergeable files.
+**git lock**, a git-extras command, marks a single tracked file with Git's skip-worktree bit via `git update-index --skip-worktree`. Once locked, Git stops reporting local modifications to that file in `git status`/`git diff`, so edits you make won't accidentally get staged or committed.
 
-The lock is advisory and tracked in the repository, requiring team cooperation to respect locks. Use `git locked` to see currently locked files and `git unlock` to release them.
+This is meant for files that need machine-specific local changes, such as `config/database.yml`, not for coordinating edits between teammates: it has no effect on the remote or on other clones, and it does not stop anyone else from committing changes to the same file. Use `git locked` to list currently locked files and `git unlock` to restore normal tracking.
 
 # CAVEATS
 
-Part of git-extras package. Advisory only, not enforced. See git lfs lock for LFS locking.
+Part of git-extras (a thin wrapper around `git update-index --skip-worktree`), not core Git. This is a local, per-clone setting, not a shared or enforced lock. For real cross-team file locking, see `git lfs lock`.
 
 # HISTORY
 
-git lock is part of **git-extras**, providing simple advisory locking. For enforced locking, see **Git LFS lock** which provides server-side enforcement.
+git lock is part of **git-extras**, a community collection of Git utility scripts. It predates and is unrelated to Git LFS's server-enforced file locking.
 
 # SEE ALSO
 
-[git-locked](/man/git-locked)(1), [git-unlock](/man/git-unlock)(1), [git-lfs](/man/git-lfs)(1)
+[git-locked](/man/git-locked)(1), [git-unlock](/man/git-unlock)(1), [git-lfs](/man/git-lfs)(1), [git-update-index](/man/git-update-index)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md)```
+
+<!-- verified: 2026-07-17 -->

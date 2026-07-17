@@ -1,6 +1,6 @@
 # TAGLINE
 
-Show locked files
+List files locked with git lock
 
 # TLDR
 
@@ -14,18 +14,26 @@ Show locked files
 
 # DESCRIPTION
 
-**git locked** displays files currently marked as locked. It reads the `.gitlock` file and lists all files that have been locked using `git lock`, providing visibility into which files are currently claimed by team members.
+**git locked**, a git-extras command, lists files in the current repository that have been marked with the skip-worktree bit via `git lock`. Internally it runs `git ls-files -v` and filters for entries flagged **S**, Git's indicator for a skip-worktree file.
 
-This helps avoid conflicts on binary or other non-mergeable files where simultaneous edits would be problematic.
+This gives quick visibility into which locally-tracked files have local-only edits protected from being picked up by `git status`/`git add`, such as machine-specific config files.
 
 # CAVEATS
 
-Part of git-extras package. Shows advisory locks only. Locks are repository-specific.
+Part of git-extras package, not core Git. Only shows the local, per-clone skip-worktree state, not any lock shared with teammates or a remote.
 
 # HISTORY
 
-git locked is part of **git-extras**, complementing git lock to provide advisory file locking.
+git locked is part of **git-extras**, complementing git lock and git unlock.
 
 # SEE ALSO
 
-[git-lock](/man/git-lock)(1), [git-unlock](/man/git-unlock)(1)
+[git-lock](/man/git-lock)(1), [git-unlock](/man/git-unlock)(1), [git-ls-files](/man/git-ls-files)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md)```
+
+<!-- verified: 2026-07-17 -->

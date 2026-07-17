@@ -1,10 +1,10 @@
 # TAGLINE
 
-Soft reset keeping staged changes
+Reset and clean the working directory, preserving ignored files
 
 # TLDR
 
-**Soft clear working directory**
+**Clear working directory** (prompts for confirmation)
 
 ```git clear-soft```
 
@@ -14,13 +14,26 @@ Soft reset keeping staged changes
 
 # DESCRIPTION
 
-**git clear-soft** is a git-extras command that performs a soft reset to HEAD, effectively uncommitting the most recent commit while preserving all changes in the staging area. This allows you to reorganize, split, or amend commits without losing any work.
+**git clear-soft** is a **git-extras** command that discards all uncommitted work: it removes untracked files and directories and resets tracked files back to **HEAD**. It is the gentler sibling of **git-clear**, since it leaves files matched by **.gitignore** untouched instead of deleting them too.
 
-The command is particularly useful when you realize a commit should have been split into multiple smaller commits, or when commit messages need to be restructured. Unlike git reset --hard, this operation is safe as it preserves all file modifications.
+Under the hood it runs **git clean -d -f** followed by **git reset --hard**, after asking **"Sure? - This command may delete files that cannot be recovered. Files and directories in .gitignore will be preserved [y/N]:"**. Unlike **git-clear**, it takes no **-f**/**--force** flag, so the confirmation prompt cannot be skipped and the command cannot be used non-interactively.
 
-After running git clear-soft, your working directory and index remain unchanged, but HEAD moves back one commit. You can then selectively stage and commit changes with better organization or improved commit messages. This workflow supports iterative refinement of commit history before pushing to shared branches.
+# CAVEATS
+
+Destructive and irreversible for untracked, non-ignored files: they are deleted, not stashed. Only available when **git-extras** is installed; it is not part of core Git.
+
+# HISTORY
+
+git clear-soft was added to **git-extras**, the community-maintained collection of Git utility scripts, as a less destructive alternative to **git-clear** that spares ignored files.
 
 # SEE ALSO
 
-[git-clear](/man/git-clear)(1), [git-reset](/man/git-reset)(1), [git-extras](/man/git-extras)(1)
+[git-clear](/man/git-clear)(1), [git-reset](/man/git-reset)(1), [git-clean](/man/git-clean)(1), [git-extras](/man/git-extras)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/tj/git-extras)```
+
+```[Documentation](https://github.com/tj/git-extras/blob/master/Commands.md#git-clear-soft)```
+
+<!-- verified: 2026-07-17 -->

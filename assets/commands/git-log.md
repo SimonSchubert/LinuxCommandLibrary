@@ -77,3 +77,13 @@ git log is a core **Git** command from initial release, providing the essential 
 # SEE ALSO
 
 [git-show](/man/git-show)(1), [git-blame](/man/git-blame)(1), [tig](/man/tig)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-log)```
+
+<!-- verified: 2026-07-17 -->

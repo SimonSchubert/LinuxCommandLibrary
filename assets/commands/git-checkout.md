@@ -45,6 +45,15 @@ _BRANCH_
 **-f**, **--force**
 > Force switch, discard changes.
 
+**-d**, **--detach**
+> Detach HEAD at the named commit instead of updating a branch.
+
+**-p**, **--patch**
+> Interactively select hunks to restore from the index or tree.
+
+**-m**, **--merge**
+> Perform a 3-way merge between the current branch, your local changes, and the new branch.
+
 **--orphan** _BRANCH_
 > Create orphan branch.
 
@@ -70,3 +79,13 @@ git checkout is an original **Git** command that combines several operations. **
 # SEE ALSO
 
 [git-switch](/man/git-switch)(1), [git-restore](/man/git-restore)(1), [git-branch](/man/git-branch)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-checkout)```
+
+<!-- verified: 2026-07-17 -->

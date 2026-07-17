@@ -40,10 +40,19 @@ Copy files from index to working directory
 > Output prefix.
 
 **-u**, **--index**
-> Update stat info.
+> Update stat information in the index file after checking out.
 
 **-n**, **--no-create**
-> Don't create files.
+> Don't create new files, only refresh existing ones.
+
+**-z**
+> Separate input paths with NUL instead of newline (use with **--stdin**).
+
+**--stdin**
+> Read the list of paths to check out from standard input.
+
+**--stage**=(_1_|_2_|_3_|_all_)
+> Copy out unmerged files from the given stage instead of the default.
 
 # DESCRIPTION
 
@@ -56,4 +65,14 @@ The --prefix option enables extracting the index to an alternate location, usefu
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-read-tree](/man/git-read-tree)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/git/git)```
+
+```[Homepage](https://git-scm.com/)```
+
+```[Documentation](https://git-scm.com/docs/git-checkout-index)```
+
+<!-- verified: 2026-07-17 -->
 
