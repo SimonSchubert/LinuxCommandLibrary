@@ -26,27 +26,43 @@ mounts virtual filesystems through GVFS
 
 # SYNOPSIS
 
-**gvfs-mount** [_options_] [_location_]
+**gvfs-mount** [_options_] [_location_...]
+
+**gvfs-mount** **--list** [_options_]
+
+**gvfs-mount** **--unmount-scheme**=_SCHEME_
 
 # PARAMETERS
 
+_LOCATION_
+> File or directory path or URI to mount.
+
+**-m**, **--mountable**
+> Mount the specified location as a mountable, rather than the default mount operation.
+
+**-d**, **--device** _DEVICE_
+> Mount the volume with the given device file.
+
+**-u**, **--unmount**
+> Unmount the given locations.
+
+**-e**, **--eject**
+> Eject the given locations.
+
+**-s**, **--unmount-scheme** _SCHEME_
+> Unmount all mounts with the given scheme (e.g. smb, sftp).
+
 **-l**, **--list**
-> List mounted locations.
+> List all known mounts.
 
-**-u**, **--unmount** _location_
-> Unmount location.
+**-o**, **--monitor**
+> Monitor mount and unmount events.
 
-**-e**, **--eject** _location_
-> Eject media.
+**-i**, **--detail**
+> Show extra information for **--list** and **--monitor**.
 
-**-d**, **--device** _device_
-> Mount device by path.
-
-**-s**, **--unmount-scheme** _scheme_
-> Unmount all of scheme type.
-
-**-a**, **--anonymous**
-> Use anonymous authentication.
+**-h**, **--help**
+> Print a short help text and exit.
 
 # DESCRIPTION
 
@@ -67,12 +83,20 @@ gphoto2:// PTP cameras
 
 # CAVEATS
 
-Deprecated in favor of gio mount. Requires GVFS daemon. Mount points in /run/user/$UID/gvfs/. Desktop environment integration recommended.
+Part of the gvfs-bin command-line tools, deprecated in gvfs 1.31 (2016) and removed entirely in gvfs 1.38 (2018) in favor of the unified **gio** command (`gio mount`). Modern distributions no longer ship gvfs-mount. Requires a running GVFS daemon; mount points appear under /run/user/$UID/gvfs/.
 
 # HISTORY
 
-gvfs-mount was part of GVFS, developed for GNOME to provide virtual filesystem access. The gvfs-* commands have been replaced by the unified **gio** command in modern GNOME.
+**gvfs-mount** was part of GVFS's original gvfs-bin utilities, introduced for GNOME alongside GVFS in **2008** (GNOME 2.22). It has since been superseded by **gio mount**.
 
 # SEE ALSO
 
 [gio](/man/gio)(1), [mount](/man/mount)(8), [smbclient](/man/smbclient)(1), [fusermount](/man/fusermount)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gvfs)```
+
+```[Homepage](https://wiki.gnome.org/Projects/gvfs)```
+
+<!-- verified: 2026-07-17 -->

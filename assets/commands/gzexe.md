@@ -40,3 +40,11 @@ gzexe is part of the gzip package and has been available since the early 1990s. 
 # SEE ALSO
 
 [gzip](/man/gzip)(1), [upx](/man/upx)(1), [strip](/man/strip)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/gzip/)```
+
+```[Source code](https://git.savannah.gnu.org/cgit/gzip.git)```
+
+<!-- verified: 2026-07-17 -->

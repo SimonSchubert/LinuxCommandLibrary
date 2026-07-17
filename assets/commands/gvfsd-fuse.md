@@ -26,31 +26,41 @@ _MOUNTPOINT_
 > FUSE mount location.
 
 **-d**
-> Debug mode.
+> Enable FUSE debug output (implies **-f**).
 
 **-f**
-> Run in foreground.
+> Run in the foreground.
 
-**-o** _OPTIONS_
-> FUSE mount options.
+**-s**
+> Run single-threaded.
 
-**--help**
-> Display help information.
+**-o** _OPTION_
+> Pass a FUSE-specific mount option (see FUSE documentation for available settings).
 
 # DESCRIPTION
 
-**gvfsd-fuse** provides FUSE access to GVFS mounts. It creates a filesystem view of GVFS-mounted resources, enabling non-GVFS-aware applications to access remote files.
+**gvfsd-fuse** maintains a FUSE mount that exposes GVFS backends (SMB, SFTP, FTP, MTP, and others) to ordinary POSIX applications that know nothing about GVFS. The mount point is given as _PATH_, normally **$XDG_RUNTIME_DIR/gvfs** on modern systems (or the legacy **$HOME/.gvfs**).
 
-The daemon bridges GVFS backends to the standard filesystem interface. It makes SMB shares, FTP sites, and other mounts visible as regular directories.
+Unlike the deprecated gvfs-bin command-line tools (gvfs-ls, gvfs-mount, etc., all replaced by **gio**), gvfsd-fuse remains an active part of the current GVFS architecture: it is what lets non-GNOME-aware programs open files under a GVFS mount as if they were local.
+
+The daemon is normally started automatically by **gvfsd** the first time something is mounted, and does not need to be run manually.
 
 # CAVEATS
 
-Usually auto-started. Requires FUSE support. Performance varies by backend.
+Usually auto-started by gvfsd; manual invocation is rarely needed. Requires kernel FUSE support. Performance depends on the underlying GVFS backend.
 
 # HISTORY
 
-gvfsd-fuse was developed as part of **GVFS** to provide filesystem access to GVFS mounts for non-GNOME applications.
+**gvfsd-fuse** has been part of **GVFS** since GNOME 2.22 (2008), providing FUSE-based filesystem access to GVFS mounts for applications that don't use the GIO/GVFS API directly.
 
 # SEE ALSO
 
 [gvfsd](/man/gvfsd)(1), [fusermount](/man/fusermount)(1), [gio](/man/gio)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gvfs)```
+
+```[Homepage](https://wiki.gnome.org/Projects/gvfs)```
+
+<!-- verified: 2026-07-17 -->

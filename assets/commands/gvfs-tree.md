@@ -33,10 +33,10 @@ _LOCATION_
 > Show hidden files.
 
 **-l**, **--follow-symlinks**
-> Follow symbolic links.
+> Follow symbolic links, mounts and shortcuts.
 
-**--help**
-> Display help information.
+**-?**, **--help**
+> Print a short help text and exit.
 
 # DESCRIPTION
 
@@ -46,12 +46,20 @@ The tool visualizes directory trees across GVFS backends, providing a unified vi
 
 # CAVEATS
 
-Deprecated in favor of gio tree. GNOME dependencies. Large trees may be slow.
+Part of the gvfs-bin command-line tools, deprecated in gvfs 1.31 (2016) and removed entirely in gvfs 1.38 (2018) in favor of the unified **gio** command (`gio tree`). Modern distributions no longer ship gvfs-tree. Large or deeply nested remote trees may be slow to enumerate.
 
 # HISTORY
 
-gvfs-tree was developed as part of **GVFS** for GNOME, now largely replaced by the **gio** command.
+**gvfs-tree** was part of GVFS's original gvfs-bin utilities, introduced for GNOME alongside GVFS in **2008** (GNOME 2.22). It has since been superseded by **gio tree**.
 
 # SEE ALSO
 
 [gio](/man/gio)(1), [tree](/man/tree)(1), [gvfs-ls](/man/gvfs-ls)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gvfs)```
+
+```[Homepage](https://wiki.gnome.org/Projects/gvfs)```
+
+<!-- verified: 2026-07-17 -->

@@ -107,3 +107,13 @@ Cannot compress directories directly (use tar first). Original file is removed b
 # SEE ALSO
 
 [gunzip](/man/gunzip)(1), [zcat](/man/zcat)(1), [bzip2](/man/bzip2)(1), [xz](/man/xz)(1), [tar](/man/tar)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/gzip/)```
+
+```[Source code](https://git.savannah.gnu.org/cgit/gzip.git)```
+
+```[Documentation](https://www.gnu.org/software/gzip/manual/gzip.html)```
+
+<!-- verified: 2026-07-17 -->

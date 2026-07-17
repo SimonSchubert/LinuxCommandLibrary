@@ -63,3 +63,11 @@ gvfs-trash is part of **GVFS** (GNOME Virtual File System), introduced with **GN
 # SEE ALSO
 
 [gio](/man/gio)(1), [trash-cli](/man/trash-cli)(1), [rm](/man/rm)(1), [gvfs-rm](/man/gvfs-rm)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gvfs)```
+
+```[Homepage](https://wiki.gnome.org/Projects/gvfs)```
+
+<!-- verified: 2026-07-17 -->

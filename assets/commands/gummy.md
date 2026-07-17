@@ -4,62 +4,85 @@ screen brightness and color temperature manager for Linux systems running X11
 
 # TLDR
 
-Set screen **temperature** to 3000K
+**Start the gummy daemon** (required before adjustments take effect)
 
-```gummy -t [3000]```
+```gummy start```
 
-Set screen **backlight** to 50%
+Set screen **temperature** to 3400K on all screens
 
-```gummy --backlight [50]```
+```gummy -t [3400]```
 
-Set screen **pixel brightness** to 45%
+Set **brightness** to 60% on a specific screen
 
-```gummy -b [45]```
+```gummy -b [60] -s [1]```
 
-**Increase** current brightness by 10%
+**Enable automatic brightness** based on screen content
 
-```gummy -b +10```
+```gummy -B [1]```
 
-**Decrease** current brightness by 10%
+**Enable automatic temperature** with sunrise/sunset times
 
-```gummy -b -10```
+```gummy -T [1] -y [06:00] -u [16:30]```
 
-Set temperature and brightness for a **specific screen**
+**Disable automatic brightness** on a specific screen
 
-```gummy -s [1] -t [3800] -b [65]```
+```gummy -B [0] -s [1]```
 
 # SYNOPSIS
+
+**gummy** **start**
 
 **gummy** [_options_]
 
 # PARAMETERS
 
-**-t**, **--temperature** _KELVIN_
-> Set screen color temperature in Kelvin
+**start**
+> Start the gummy background daemon that applies brightness/temperature adjustments.
 
-**-b**, **--brightness** _PERCENT_
-> Set pixel brightness (use +/- for relative changes)
+**-t** _KELVIN_
+> Set screen color temperature manually.
 
-**--backlight** _PERCENT_
-> Set hardware backlight level
+**-T** _0|1_
+> Toggle automatic temperature adjustment based on sunrise/sunset times.
 
-**-s**, **--screen** _NUMBER_
-> Apply settings to specific screen (0-indexed)
+**-b** _PERCENT_
+> Set screen brightness manually.
+
+**-B** _0|1|2_
+> Toggle automatic brightness: 0 = off, 1 = based on captured screen content, 2 = based on an ambient light sensor (if available).
+
+**-y** _HH:MM_
+> Set the sunrise time used for automatic temperature.
+
+**-u** _HH:MM_
+> Set the sunset time used for automatic temperature.
+
+**-s** _NUMBER_
+> Apply the given options to a specific screen (0-indexed) instead of all screens.
+
+**-h**
+> Print help information.
 
 # DESCRIPTION
 
-**gummy** is a screen brightness and color temperature manager for Linux systems running X11. It provides both software-based (gamma) adjustments and hardware backlight control.
+**gummy** is a CLI screen manager for X11 that adjusts brightness and color temperature, automatically or manually, per screen or across all screens. Brightness is applied via gamma (and, on supported embedded displays, backlight), while temperature adjustment reduces blue light for reduced eye strain in the evening.
 
-The tool can adjust color temperature for reduced eye strain, particularly useful for night-time computing. Brightness can be controlled either through software gamma correction or hardware backlight where available.
+Automatic brightness can follow either captured screen content (estimating ambient brightness from what's being displayed) or an ambient light sensor where present. Automatic temperature follows configurable sunrise/sunset times. The **gummy start** daemon must be running for either automatic mode, or for changes to persist.
 
 # CAVEATS
 
-Requires X11; does not work with Wayland. Hardware backlight control may require appropriate permissions or udev rules. Software brightness affects gamma, not actual backlight intensity.
+Requires X11; does not work under Wayland. The upstream `Fushko/gummy` repository is no longer available on GitHub; forks/mirrors such as `Gitoffthelawn/gummy` carry the code forward. A separate configuration GUI, **gummy-conf**, exists for users who prefer not to use the CLI directly.
 
 # HISTORY
 
-gummy was developed as a simple, command-line alternative to graphical redshift applications for managing screen brightness and temperature on Linux.
+**gummy** was created by **Francesco Fusco** as a lightweight, daemon-based alternative to Redshift-style tools for managing screen brightness and color temperature on Linux/X11.
 
 # SEE ALSO
 
 [redshift](/man/redshift)(1), [xrandr](/man/xrandr)(1), [brightnessctl](/man/brightnessctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Gitoffthelawn/gummy)```
+
+<!-- verified: 2026-07-17 -->

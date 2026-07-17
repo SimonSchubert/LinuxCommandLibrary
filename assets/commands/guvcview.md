@@ -10,19 +10,23 @@ GTK+ webcam viewer and capture application
 
 **Specify video device**
 
-```guvcview -d /dev/video0```
+```guvcview -d [/dev/video0]```
 
-**Set resolution**
+**Request a resolution and format**
 
-```guvcview --resolution=[1920x1080]```
+```guvcview -x [1920x1080] -f [MJPG]```
 
-**Start with audio device**
+**Select the GUI toolkit**
 
-```guvcview -a [hw:0,0]```
+```guvcview -g [gtk3]```
 
-**Capture to file**
+**Capture video straight to a file**
 
-```guvcview -n [output.mkv]```
+```guvcview -j [output.mkv]```
+
+**Capture a single photo to a file**
+
+```guvcview -i [photo.jpg] -n [1]```
 
 # SYNOPSIS
 
@@ -30,41 +34,88 @@ GTK+ webcam viewer and capture application
 
 # PARAMETERS
 
-**-d**, **--device** _DEV_
-> Video device.
+**-d**, **--device** _DEVICE_
+> Video device to use (default: /dev/video0).
 
-**-r**, **--resolution** _WxH_
-> Video resolution.
+**-x**, **--resolution** _WxH_
+> Request a capture resolution (e.g. 640x480).
 
-**-f**, **--format** _FMT_
-> Video format.
+**-f**, **--format** _FOURCC_
+> Request a video format/FourCC (e.g. MJPG, YUYV).
 
-**-a**, **--audio** _DEV_
-> Audio device.
+**-F**, **--fps** _NUM[/DENOM]_
+> Request a frame rate.
 
-**-n**, **--video** _FILE_
-> Video output file.
+**-g**, **--gui** _API_
+> Select the GUI toolkit: none, gtk3, or qt6.
 
-**-t**, **--photo** _FILE_
-> Photo output file.
+**-r**, **--render** _API_
+> Select the render API: none, sdl, or sfml.
 
-**--help**
-> Display help information.
+**-m**, **--render_window** _FLAGS_
+> Set render window flags (none, full, max, or WIDTHxHEIGHT).
+
+**-a**, **--audio** _API_
+> Select the audio API: none, port, or pulse.
+
+**-k**, **--audio_device** _INDEX_
+> Select the audio device index for the chosen audio API.
+
+**-j**, **--video** _FILE_
+> Filename for captured video.
+
+**-u**, **--video_codec** _CODEC_
+> Video codec to use (e.g. raw, mjpg, h264, vp80).
+
+**-i**, **--image** _FILE_
+> Filename for captured photo(s).
+
+**-n**, **--photo_total** _N_
+> Total number of photos to capture.
+
+**-t**, **--photo_timer** _SECONDS_
+> Time between captured photos.
+
+**-p**, **--profile** _FILE_
+> Load a saved control profile.
+
+**-e**, **--exit_on_term**
+> Exit the app after video or image capture ends.
+
+**-z**, **--control_panel**
+> Start in control-panel-only mode.
+
+**-w**, **--verbosity** _LEVEL_
+> Set verbosity level (default: 0).
+
+**-v**, **--version**
+> Print version information.
+
+**-h**, **--help**
+> Print help.
 
 # DESCRIPTION
 
-**guvcview** is a GTK+ webcam viewer and capture application. It works with UVC (USB Video Class) compatible webcams and provides controls for camera settings.
+**guvcview** is a video capture and control application for UVC (USB Video Class) compatible webcams on Linux. It provides a live preview along with controls for camera settings such as brightness, contrast, exposure, and white balance, and can capture both video and still photos.
 
-The application supports video recording in various formats and photo capture. It exposes hardware controls like brightness, contrast, and exposure.
+Modern versions build against **GTK3** or **Qt6** for the interface (selectable with **-g**) and support multiple render backends (SDL, SFML) and audio APIs (PortAudio, PulseAudio) for recording video with sound.
 
 # CAVEATS
 
-UVC compatible cameras only. GTK dependencies. Some features driver-dependent.
+Requires a UVC-compatible camera and a V4L2-capable kernel driver. Some controls and codecs are hardware/driver dependent. Command-line flags and defaults have changed across major guvcview releases; always check `guvcview --help` for the installed version.
 
 # HISTORY
 
-guvcview was created by **Paulo Assis** as a simple webcam application for Linux using the V4L2 API.
+**guvcview** was created by **Paulo Assis** in **2008** as a simple GTK+ webcam viewer for Linux using the V4L2 API. It has since gained Qt6 GUI support and multiple render/audio backends while remaining a lightweight alternative to full video-editing suites for quick webcam preview and capture.
 
 # SEE ALSO
 
 [cheese](/man/cheese)(1), [v4l2-ctl](/man/v4l2-ctl)(1), [ffmpeg](/man/ffmpeg)(1)
+
+# RESOURCES
+
+```[Homepage](https://guvcview.sourceforge.net/)```
+
+```[Source code](https://sourceforge.net/projects/guvcview/)```
+
+<!-- verified: 2026-07-17 -->

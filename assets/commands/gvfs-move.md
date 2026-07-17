@@ -36,13 +36,16 @@ _DESTINATION_
 > Show progress.
 
 **-i**, **--interactive**
-> Prompt before overwrite.
+> Prompt before overwriting files.
 
-**-n**, **--no-target-directory**
-> Treat destination as file.
+**-b**, **--backup**
+> Backup existing destination files.
 
-**--help**
-> Display help information.
+**-T**, **--no-target-directory**
+> Don't move into destination even if it is a directory.
+
+**-h**, **--help**
+> Print a short help text and exit.
 
 # DESCRIPTION
 
@@ -52,12 +55,20 @@ The tool provides atomic moves within the same filesystem and copy-then-delete f
 
 # CAVEATS
 
-Deprecated in favor of gio move. GNOME dependencies. Cross-filesystem moves require space.
+Part of the gvfs-bin command-line tools, deprecated in gvfs 1.31 (2016) and removed entirely in gvfs 1.38 (2018) in favor of the unified **gio** command (`gio move`). Modern distributions no longer ship gvfs-move. Cross-filesystem moves require enough free space at the destination since they fall back to copy-then-delete.
 
 # HISTORY
 
-gvfs-move was developed as part of **GVFS** for GNOME, now largely replaced by the **gio** command.
+**gvfs-move** was part of GVFS's original gvfs-bin utilities, introduced for GNOME alongside GVFS in **2008** (GNOME 2.22). It has since been superseded by **gio move**.
 
 # SEE ALSO
 
 [gio](/man/gio)(1), [mv](/man/mv)(1), [gvfs-copy](/man/gvfs-copy)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gvfs)```
+
+```[Homepage](https://wiki.gnome.org/Projects/gvfs)```
+
+<!-- verified: 2026-07-17 -->
