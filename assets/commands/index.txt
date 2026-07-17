@@ -2313,6 +2313,9 @@ fly.md
 flyctl.md
 fmql.md
 fmt.md
+fmtutil-sys.md
+fmtutil-user.md
+fmtutil.md
 fnm.md
 fold.md
 font2c.md
@@ -4528,6 +4531,7 @@ mkreiserfs.md
 mksquashfs.md
 mkswap.md
 mktemp.md
+mktexfmt.md
 mktorrent.md
 mkvmerge.md
 mkvpropedit.md
@@ -5526,6 +5530,8 @@ pct-listsnapshot.md
 pct-mount.md
 pct-move-volume.md
 pct-move_volume.md
+pct-pull.md
+pct-push.md
 pct-reboot.md
 pct-resize.md
 pct-restore.md
@@ -6812,6 +6818,7 @@ sam.md
 sam2p.md
 samba.md
 samhain.md
+samosa.md
 sample.md
 sampler.md
 samply.md
@@ -7815,6 +7822,8 @@ tsx.md
 tt.md
 ttar.md
 tts.md
+ttsc.md
+ttsx.md
 tty-clock.md
 tty-solitaire.md
 tty.md
