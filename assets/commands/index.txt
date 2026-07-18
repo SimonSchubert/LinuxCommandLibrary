@@ -53,6 +53,7 @@ abrt-action-analyze-c.md
 abrt-action-generate-backtrace.md
 abrt-cli.md
 abrt.md
+abtop.md
 ac.md
 acccheck.md
 accelerate.md
@@ -218,6 +219,7 @@ antigen.md
 antimicrox.md
 antlr.md
 anytopnm.md
+aoc.md
 aoe.md
 aoss.md
 apache.md
@@ -329,6 +331,7 @@ arjun.md
 ark-survival-ascended.md
 ark-survival-evolved.md
 ark.md
+arkade.md
 arm-none-eabi-gdb.md
 arm2hpdl.md
 arp-scan.md
@@ -342,6 +345,7 @@ arthas-trace.md
 arthas-watch.md
 arthas.md
 artisan.md
+arttime.md
 as.md
 asak.md
 asan.md
@@ -366,6 +370,7 @@ asn.md
 asn1parse.1s.md
 asnmap.md
 asp.md
+aspeak.md
 aspell-autobuildhash.md
 aspell-import.md
 aspell.md
@@ -416,6 +421,7 @@ authelia.md
 authselect.md
 auto-cpufreq.md
 auto-round.md
+autocli.md
 autoconf.md
 autoexpect.md
 autoflake.md
@@ -456,6 +462,7 @@ avro-tools.md
 away.md
 awesome.md
 awk.md
+awless.md
 aws-accessanalyzer.md
 aws-acm-pca.md
 aws-acm.md
@@ -720,6 +727,7 @@ bjobs.md
 bk.md
 bkill.md
 bkp.md
+bkt.md
 black.md
 blackfire.md
 blahaj.md
@@ -858,6 +866,7 @@ btrfs-version.md
 btrfs.md
 btshowmetainfo.md
 btt.md
+bttf.md
 bubblewrap.md
 buck.md
 buddy-ng.md
@@ -1248,6 +1257,7 @@ cockpit-desktop.md
 cockpit-tls.md
 cockpit-ws.md
 cockroach.md
+code-radio.md
 code-server.md
 code.md
 code2prompt.md
@@ -1445,6 +1455,7 @@ crond.md
 cronic.md
 cronitor.md
 crontab.md
+crudini.md
 crun.md
 crunch.md
 crush.md
@@ -1667,6 +1678,7 @@ dirs.md
 dirsearch.md
 disable.md
 discord.md
+discordo.md
 discover.md
 diskonaut.md
 disown.md
@@ -1834,6 +1846,7 @@ docx.md
 dog.md
 dogecoincore.md
 doggo.md
+doitlive.md
 dokku.md
 dollar.md
 dolphie.md
@@ -1894,6 +1907,7 @@ dpkg-deb.md
 dpkg-query.md
 dpkg-reconfigure.md
 dpkg.md
+dra.md
 dracut.md
 drawing.md
 drawio.md
@@ -2426,6 +2440,7 @@ fx.md
 fzf.md
 fzputtygen.md
 fzsftp.md
+fzy.md
 g++.md
 gacutil.md
 gallery-dl.md
@@ -2601,6 +2616,7 @@ ghostscript.md
 ghostty.md
 ghq.md
 gibo.md
+gif-for-cli.md
 gif2webp.md
 gifdiff.md
 gifsicle.md
@@ -2835,6 +2851,7 @@ git-whatchanged.md
 git-who.md
 git-worktree.md
 git-write-tree.md
+git-xargs.md
 git.md
 gita.md
 gitbook.md
@@ -2849,11 +2866,13 @@ gitlab-runner.md
 gitlab.md
 gitleaks.md
 gitlint.md
+gitlogue.md
 gitmoji.md
 gitnr.md
 gitremote-helpers.md
 gitsome.md
 gitstats.md
+gitty.md
 gittype.md
 gitu.md
 gitui.md
@@ -2956,6 +2975,7 @@ goldeneye.py.md
 golint.md
 gomi.md
 gomoku.md
+gomplate.md
 gomuks.md
 goobook.md
 google-chrome-stable.md
@@ -3323,6 +3343,7 @@ huggingface-cli.md
 hugo-server.md
 hugo.md
 hummingbot.md
+hunk.md
 hunspell.md
 hunt.md
 huntd.md
@@ -3382,6 +3403,7 @@ ic.md
 ical.md
 iceauth.md
 icinga2.md
+icloudpd.md
 ico.md
 icontopbm.md
 iconv.md
@@ -3779,6 +3801,7 @@ kanban-tui.md
 kanha.md
 kaniko.md
 kanwas.md
+kapp.md
 kaskade.md
 kassette.md
 kastor.md
@@ -3827,6 +3850,7 @@ kibi.md
 kid3.md
 kill.md
 killall.md
+killport.md
 kimi.md
 kind.md
 kinfocenter.md
@@ -3890,11 +3914,13 @@ krew.md
 krfb-virtualmonitor.md
 krita.md
 krunvm.md
+kryptor.md
 kscreen-console.md
 kscreen-doctor.md
 ksh.md
 kstack.md
 ksvgtopng5.md
+kt.md
 ktea.md
 ktool.md
 ktop.md
@@ -4305,6 +4331,7 @@ macchina.md
 mach.md
 machine-id.md
 machinectl.md
+machma.md
 macmon.md
 macptopbm.md
 maestral.md
@@ -4371,6 +4398,7 @@ masscan.md
 massdns.md
 mastui.md
 mat2.md
+matcha.md
 matchpathcon.md
 mate-about.md
 mate-calc-cmd.md
@@ -4672,6 +4700,7 @@ msgunfmt.md
 msguniq.md
 msmtp.md
 mssh.md
+mssql-cli.md
 mt.md
 mtm.md
 mtr.md
@@ -4683,6 +4712,7 @@ muffin-window-demo.md
 muffin.md
 mullvad.md
 mult.md
+multi-gitter.md
 multipass.md
 multitail.md
 mumble.md
@@ -4829,6 +4859,7 @@ next.md
 nextalign.md
 nextclade.md
 nextflow.md
+nexttrace.md
 nexus.md
 nf-core.md
 nfsd.md
@@ -5276,6 +5307,7 @@ osmium.md
 ospfd.md
 ostree.md
 osv-scanner.md
+otel-cli.md
 oterm.md
 otree.md
 ots.md
@@ -5530,6 +5562,7 @@ pcapfix.md
 pcdindex.md
 pcdovtoppm.md
 pcmanfm.md
+pcp.md
 pct-clone.md
 pct-config.md
 pct-console.md
@@ -6005,6 +6038,7 @@ polybar-msg.md
 polybar.md
 pom.md
 pomo.md
+pomodoro.md
 pon.md
 pop.md
 popd.md
@@ -6366,6 +6400,7 @@ pyinfra.md
 pyinstaller.md
 pylint.md
 pymol.md
+pyp.md
 pypy.md
 pyra.md
 pyright.md
@@ -6661,6 +6696,7 @@ rev.md
 revdiff.md
 rexec.md
 rexi.md
+rfc.md
 rfkill.md
 rg.md
 rga.md
@@ -6677,6 +6713,7 @@ rip.md
 ripd.md
 ripgrep.md
 ripmime.md
+ripsecrets.md
 riscv64-unknown-elf-gcc.md
 rkdeveloptool.md
 rkhunter.md
@@ -6695,6 +6732,7 @@ rmux.md
 rnano.md
 rndc.md
 rnm.md
+rnr.md
 robo.md
 robotfindskitten.md
 robots.md
@@ -6789,6 +6827,7 @@ rustdoc.md
 rustfmt.md
 rustic.md
 rusticon.md
+rustnet.md
 rustormy.md
 rustscan.md
 rustup-check.md
@@ -6816,6 +6855,7 @@ rzip.md
 s.md
 s3cmd.md
 s3scanner.md
+s4cmd.md
 sa.md
 sacct.md
 sacctmgr.md
@@ -6909,6 +6949,7 @@ scriptreplay.md
 scrontab.md
 scrot.md
 scrun.md
+scw.md
 scylladb.md
 sd-cli.md
 sd.md
@@ -7014,6 +7055,7 @@ sfdp.md
 sfill.md
 sfsym.md
 sftp.md
+sfz.md
 sg.md
 sg_inq.md
 sg_raw.md
@@ -7891,6 +7933,7 @@ tye.md
 type.md
 typeinc.md
 typeorm.md
+typer.md
 typeset.md
 typespeed.md
 typioca.md
@@ -7909,6 +7952,7 @@ ubuntu-security-status.md
 ubus.md
 uc.md
 uci.md
+ucollage.md
 uconv.md
 udevadm.md
 udevmon.md
@@ -8287,6 +8331,7 @@ wcurl.md
 wdctl.md
 wdiff.md
 weasyprint.md
+weather.md
 weathr.md
 web-ext.md
 weblate.md
@@ -8385,6 +8430,7 @@ wrangler.md
 write-good.md
 write.md
 wrk.md
+wrkflw.md
 wtf.md
 wtfis.md
 wttr.in.md
@@ -8611,9 +8657,11 @@ yplan.md
 yq.md
 yr.md
 yt-dlp.md
+yt-fts.md
 yt-x.md
 ytfzf.md
 ytmdl.md
+ytt.md
 yugabyted.md
 yum-config-manager.md
 yum-versionlock.md

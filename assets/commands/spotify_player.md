@@ -1,73 +1,41 @@
 # TAGLINE
 
-Terminal-based Spotify TUI client
+Feature-rich Spotify client for the terminal
 
 # TLDR
 
-**Start player**
+**Start** the player TUI
 
 ```spotify_player```
 
-**With config directory**
+**CLI** playback helpers (see help)
 
-```spotify_player -C [~/.config/spotify-player]```
-
-**Daemon mode**
-
-```spotify_player -d```
-
-**Verbose logging**
-
-```spotify_player -v```
+```spotify_player [command] --help```
 
 # SYNOPSIS
 
-**spotify_player** [_-C dir_] [_-d_] [_options_]
-
-# PARAMETERS
-
-**-C** _DIR_
-> Config directory.
-
-**-d**
-> Daemon mode.
-
-**-v**
-> Verbose output.
-
-**--theme** _NAME_
-> Color theme.
-
-**--help**
-> Show help.
+**spotify_player** [*command*] [*options*]
 
 # DESCRIPTION
 
-**spotify_player** is a terminal-based Spotify client that provides a full-featured TUI (Text User Interface) for browsing, searching, and playing music from a Spotify Premium account. It uses vim-style keybindings and a modal interface for efficient keyboard-driven navigation.
+**spotify_player** is a Rust Spotify TUI with streaming, Spotify Connect control, lyrics, audio visualization, and media keys. The binary name uses an underscore. Install via **cargo install spotify_player** or distribution packages.
 
-The player supports Spotify Connect, allowing it to control playback on other devices or act as a playback target. Features include library browsing, playlist management, search, lyrics display, and artist/album exploration. A daemon mode enables headless operation for use as a Spotify Connect receiver.
+Requires Spotify authentication (OAuth / session). Many features need Spotify Premium for playback.
 
-Built on the **librespot** library for Spotify protocol support, it stores configuration and cache data in **~/.config/spotify-player/**. Custom themes and keybindings can be configured through TOML configuration files.
+# PARAMETERS
 
-# CONFIGURATION
-
-**~/.config/spotify-player/app.toml**
-> Main configuration file controlling playback settings, keybindings, theme, default device, and UI layout.
-
-**~/.config/spotify-player/theme.toml**
-> Custom color theme definitions for the TUI interface.
-
-**~/.cache/spotify-player/**
-> Cache directory for audio data and Spotify session tokens.
+Default invocation opens the TUI. Subcommands exist for non-interactive control—run **spotify_player --help**. Config lives under the XDG config directory (see upstream docs for **app.toml** / theme files).
 
 # CAVEATS
 
-Spotify Premium required. Authentication needed. librespot backend.
-
-# HISTORY
-
-**spotify_player** is a terminal-based Spotify client built on librespot, providing a TUI for Spotify Premium users.
+Spotify API and ToS constraints apply; features break when Spotify changes APIs. Streaming quality and device limits depend on account type.
 
 # SEE ALSO
 
-[spotifyd](/man/spotifyd)(1), [ncspot](/man/ncspot)(1), [cmus](/man/cmus)(1)
+[spt](/man/spt)(1), [ncspot](/man/ncspot)(1), [playerctl](/man/playerctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aome510/spotify-player)```
+
+<!-- verified: 2026-07-19 -->
