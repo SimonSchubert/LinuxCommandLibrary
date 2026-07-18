@@ -625,6 +625,7 @@ bar.md
 barcode.md
 bark.md
 barotrauma.md
+bartib.md
 basalt.md
 base32.md
 base64.md
@@ -2065,6 +2066,7 @@ enum4linux.md
 env.md
 envdiff.md
 envfetch.md
+envio.md
 envoy.md
 envsubst.md
 envx.md
@@ -2551,6 +2553,7 @@ gh-completion.md
 gh-config.md
 gh-copilot.md
 gh-cs.md
+gh-dash.md
 gh-environment.md
 gh-extension.md
 gh-formatting.md
@@ -3028,6 +3031,7 @@ grex.md
 gri.md
 grim.md
 grip.md
+grmon.md
 grn.md
 grodvi.md
 groff.md
@@ -3197,6 +3201,7 @@ helm.md
 helmfile.md
 help.md
 help2man.md
+herdr.md
 heretek.md
 heroku.md
 hevi.md
@@ -3551,6 +3556,7 @@ ip6tables-save.md
 ip6tables.md
 ipaggcreate.md
 ipaggmanip.md
+ipatool.md
 ipcalc.md
 ipcmk.md
 ipcrm.md
@@ -4235,6 +4241,7 @@ luit.md
 lumen.md
 lumon.md
 lure.md
+lux.md
 lvchange.md
 lvconvert.md
 lvcreate.md
@@ -4303,6 +4310,7 @@ macptopbm.md
 maestral.md
 mafft.md
 magento.md
+magic-cli.md
 magick-compare.md
 magick-convert.md
 magick-identify.md
@@ -5164,6 +5172,7 @@ omega-rpg.md
 omf.md
 omm.md
 omny.md
+omp.md
 omshell.md
 omz.md
 on_ac_power.md
@@ -5561,6 +5570,7 @@ pdf2svg.md
 pdfattach.md
 pdfbook.md
 pdfbook2.md
+pdfcpu.md
 pdfcrop.md
 pdfdetach.md
 pdffonts.md
@@ -5705,6 +5715,7 @@ piactl.md
 pic.md
 picard.md
 picgo.md
+pick.md
 pico.md
 pico2wave.md
 picoclaw.md
@@ -6554,6 +6565,7 @@ rdiff.md
 rdkit.md
 rdoc.md
 rdp_check.py.md
+rdrview.md
 react-native-start.md
 react-native.md
 react-scripts.md
@@ -6597,6 +6609,7 @@ refer.md
 reflac.md
 reflector.md
 reflex.md
+reg.md
 regctl.md
 regedit.md
 regex.md
@@ -6738,6 +6751,7 @@ rsync.md
 rsyncy.md
 rtcwake.md
 rtgen.md
+rtk.md
 rtl_fm.md
 rtl_power.md
 rtl_sdr.md
@@ -6834,6 +6848,7 @@ sar.md
 sass.md
 satis.md
 sattach.md
+saws.md
 saxon.md
 say.md
 sbatch.md
@@ -6927,6 +6942,7 @@ semanage.md
 semantic-release.md
 semgrep.md
 semodule.md
+semtools.md
 semver.md
 sen.md
 sendmail.md
@@ -6935,6 +6951,7 @@ sensible-browser.md
 sensible-editor.md
 sensors-detect.md
 sensors.md
+sentry-cli.md
 seq.md
 sequelize.md
 sequin.md
@@ -7196,6 +7213,7 @@ spring.md
 sprio.md
 sprof.md
 sprofile.md
+spt.md
 sputoppm.md
 sq.md
 sqfscat.md
@@ -7594,6 +7612,7 @@ terraform-taint.md
 terraform-tui.md
 terraform-untaint.md
 terraform.md
+terraformer.md
 terragrunt.md
 terraria.md
 terrascan.md
@@ -7657,6 +7676,7 @@ timidity.md
 tinboard.md
 tinifier.md
 tint.md
+tinygo.md
 tinyproxy.md
 tio.md
 tip.md
@@ -8333,6 +8353,7 @@ wireplumber.md
 wireshark.md
 wish.md
 wishlist.md
+witr.md
 wizu.md
 wkhtmltoimage.md
 wkhtmltopdf.md
@@ -8706,4 +8727,5 @@ zsteg.md
 zstyle.md
 zsync.md
 zuse.md
+zx.md
 zypper.md
