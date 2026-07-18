@@ -8,17 +8,39 @@ struct MarkdownView: View {
     let onTapMan: (String) -> Void
     let onTapLink: (String) -> Void
     let onTapUrl: (String) -> Void
+    /// Find-in-page match ranges for this section, keyed by element index. Nil when not searching
+    /// or when this section has no hits.
+    var highlights: [Int: ElementHighlight]?
+    /// When set, each element is tagged with a `ManPageAnchor` so prev/next can scroll to it.
+    var anchorSection: Int?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            ForEach(Array(elements.enumerated()), id: \.offset) { _, element in
+            ForEach(Array(elements.enumerated()), id: \.offset) { index, element in
                 TipSectionElementView(
                     element: element,
                     onTapMan: onTapMan,
                     onTapLink: onTapLink,
-                    onTapUrl: onTapUrl
+                    onTapUrl: onTapUrl,
+                    highlight: highlights?[index]
                 )
+                .modifier(MatchAnchor(section: anchorSection, element: index))
             }
+        }
+    }
+}
+
+/// Tags a view with its scroll anchor, but only while a search is running — outside search there
+/// is nothing to scroll to and the extra identity would be pure overhead.
+private struct MatchAnchor: ViewModifier {
+    let section: Int?
+    let element: Int
+
+    func body(content: Content) -> some View {
+        if let section {
+            content.id(ManPageAnchor(section: section, element: element))
+        } else {
+            content
         }
     }
 }
@@ -28,6 +50,7 @@ private struct TipSectionElementView: View {
     let onTapMan: (String) -> Void
     let onTapLink: (String) -> Void
     let onTapUrl: (String) -> Void
+    var highlight: ElementHighlight?
 
     var body: some View {
         switch onEnum(of: element) {
@@ -35,7 +58,8 @@ private struct TipSectionElementView: View {
             TextElementsView(
                 elements: textCase.elements,
                 onTapMan: onTapMan,
-                onTapLink: onTapLink
+                onTapLink: onTapLink,
+                highlight: highlight
             )
         case let .blockquote(bqCase):
             HStack(alignment: .top, spacing: 8) {
@@ -45,7 +69,8 @@ private struct TipSectionElementView: View {
                 TextElementsView(
                     elements: bqCase.elements,
                     onTapMan: onTapMan,
-                    onTapLink: onTapLink
+                    onTapLink: onTapLink,
+                    highlight: highlight
                 )
                 .foregroundColor(.secondary)
             }
@@ -54,14 +79,16 @@ private struct TipSectionElementView: View {
                 command: codeCase.command,
                 elements: codeCase.elements,
                 onTapMan: onTapMan,
-                onTapUrl: onTapUrl
+                onTapUrl: onTapUrl,
+                highlight: highlight
             )
         case let .table(tableCase):
             MarkdownTableView(
                 headers: tableCase.headers,
                 rows: tableCase.rows,
                 onTapMan: onTapMan,
-                onTapLink: onTapLink
+                onTapLink: onTapLink,
+                highlight: highlight
             )
         }
     }
@@ -73,13 +100,18 @@ private struct TextElementsView: View {
     let elements: [TextElement]
     let onTapMan: (String) -> Void
     let onTapLink: (String) -> Void
+    var highlight: ElementHighlight?
+    /// Which string this view renders within its element — always 0 except for table cells.
+    var subIndex: Int = 0
 
     var body: some View {
-        Text(buildAttributedString())
+        Text(buildAttributedString().withMatchHighlight(highlight, subIndex: subIndex))
             .environment(\.openURL, OpenURLAction(handler: handleURL))
             .fixedSize(horizontal: false, vertical: true)
     }
 
+    /// Must append exactly the substrings `List<TextElement>.toPlainText()` joins in `:common`,
+    /// in the same order — the shared search reports match offsets against that string.
     private func buildAttributedString() -> AttributedString {
         var result = AttributedString()
         for element in elements {
@@ -130,9 +162,10 @@ private struct CommandLineView: View {
     let elements: [CommandElement]
     let onTapMan: (String) -> Void
     let onTapUrl: (String) -> Void
+    var highlight: ElementHighlight?
 
     var body: some View {
-        Text(buildAttributedString())
+        Text(buildAttributedString().withMatchHighlight(highlight))
             .font(.shareTechMono(size: 14))
             .environment(\.openURL, OpenURLAction(handler: handleURL))
             .padding(10)
@@ -180,28 +213,45 @@ private struct MarkdownTableView: View {
     let rows: [[[TextElement]]]
     let onTapMan: (String) -> Void
     let onTapLink: (String) -> Void
+    var highlight: ElementHighlight?
+
+    /// Start of each row's sub-index run. Mirrors `tableCellsInRenderOrder` in `:common`, which
+    /// numbers the header row first and then each body row left to right.
+    private var rowSubIndexOffsets: [Int] {
+        var next = headers.count
+        return rows.map { row in
+            let start = next
+            next += row.count
+            return start
+        }
+    }
 
     var body: some View {
+        let offsets = rowSubIndexOffsets
         VStack(alignment: .leading, spacing: 4) {
             HStack(alignment: .top) {
-                ForEach(Array(headers.enumerated()), id: \.offset) { _, headerCell in
+                ForEach(Array(headers.enumerated()), id: \.offset) { index, headerCell in
                     TextElementsView(
                         elements: headerCell,
                         onTapMan: onTapMan,
-                        onTapLink: onTapLink
+                        onTapLink: onTapLink,
+                        highlight: highlight,
+                        subIndex: index
                     )
                     .font(.body.bold())
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
             Divider()
-            ForEach(Array(rows.enumerated()), id: \.offset) { _, row in
+            ForEach(Array(rows.enumerated()), id: \.offset) { rowIndex, row in
                 HStack(alignment: .top) {
-                    ForEach(Array(row.enumerated()), id: \.offset) { _, cell in
+                    ForEach(Array(row.enumerated()), id: \.offset) { cellIndex, cell in
                         TextElementsView(
                             elements: cell,
                             onTapMan: onTapMan,
-                            onTapLink: onTapLink
+                            onTapLink: onTapLink,
+                            highlight: highlight,
+                            subIndex: offsets[rowIndex] + cellIndex
                         )
                         .frame(maxWidth: .infinity, alignment: .leading)
                     }

@@ -8,6 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.LayoutCoordinates
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.SpanStyle
@@ -86,28 +88,43 @@ fun TipSectionContent(
     onNavigate: (NavEvent) -> Unit,
     textColor: Color = Color.Unspecified,
     commandVerticalPadding: Dp = 0.dp,
+    highlights: Map<Int, ElementHighlight>? = null,
+    onElementPositioned: ((Int, LayoutCoordinates) -> Unit)? = null,
 ) {
     val linkColor = MaterialTheme.colorScheme.primary
-    sections.forEach { section ->
+    sections.forEachIndexed { elementIndex, section ->
+        val highlight = highlights?.get(elementIndex)
+        val positionModifier = if (onElementPositioned != null && highlight != null) {
+            Modifier.onGloballyPositioned { onElementPositioned(elementIndex, it) }
+        } else {
+            Modifier
+        }
         when (section) {
             is TipSectionElement.Text -> {
-                val annotatedString = remember(section.elements, textColor, linkColor) {
+                val styledString = remember(section.elements, textColor, linkColor) {
                     buildTextElementString(section.elements, textColor, linkColor, onNavigate)
+                }
+                val annotatedString = remember(styledString, highlight) {
+                    styledString.withMatchHighlight(highlight)
                 }
                 Text(
                     text = annotatedString,
                     color = textColor,
+                    modifier = positionModifier,
                 )
             }
 
             is TipSectionElement.Blockquote -> {
-                val annotatedString = remember(section.elements, textColor) {
+                val styledString = remember(section.elements, textColor) {
                     buildTextElementString(section.elements, textColor)
+                }
+                val annotatedString = remember(styledString, highlight) {
+                    styledString.withMatchHighlight(highlight)
                 }
                 Text(
                     text = annotatedString,
                     color = textColor,
-                    modifier = Modifier.padding(start = 8.dp, bottom = 8.dp),
+                    modifier = positionModifier.padding(start = 8.dp, bottom = 8.dp),
                 )
             }
 
@@ -117,6 +134,8 @@ fun TipSectionContent(
                     elements = section.elements,
                     onNavigate = onNavigate,
                     verticalPadding = commandVerticalPadding,
+                    highlight = highlight,
+                    modifier = positionModifier,
                 )
             }
 
@@ -125,6 +144,8 @@ fun TipSectionContent(
                     headers = section.headers,
                     rows = section.rows,
                     onNavigate = onNavigate,
+                    highlight = highlight,
+                    modifier = positionModifier,
                 )
             }
         }

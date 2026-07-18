@@ -8,6 +8,7 @@ import SwiftUI
 struct CommandDetailView: View {
     let commandName: String
     @StateObject private var store: CommandDetailStore
+    @FocusState private var isSearchFieldFocused: Bool
 
     init(commandName: String, onManTap: @escaping (String) -> Void = { _ in }) {
         self.commandName = commandName
@@ -15,10 +16,61 @@ struct CommandDetailView: View {
     }
 
     var body: some View {
+        VStack(spacing: 0) {
+            if store.isSearchVisible {
+                ManPageFindBar(
+                    query: $store.searchQuery,
+                    matchCount: store.matchIndex.count,
+                    activeMatchIndex: store.activeMatchIndex,
+                    onPrevious: store.previousMatch,
+                    onNext: store.nextMatch,
+                    onClose: {
+                        isSearchFieldFocused = false
+                        store.closeSearch()
+                    },
+                    isFieldFocused: $isSearchFieldFocused
+                )
+            }
+            ScrollViewReader { proxy in
+                sectionList
+                    .onChange(of: store.activeMatchIndex) { _ in
+                        scrollToActiveMatch(proxy)
+                    }
+                    .onChange(of: store.searchQuery) { _ in
+                        scrollToActiveMatch(proxy)
+                    }
+            }
+        }
+        .navigationTitle(commandName)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                if !store.isSearchVisible {
+                    Button {
+                        store.openSearch()
+                        isSearchFieldFocused = true
+                    } label: {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.brandRed)
+                    }
+                    .accessibilityLabel("Search in page")
+
+                    BookmarkToolbarButton(
+                        isBookmarked: store.state.isBookmarked,
+                        toggle: store.toggleBookmark
+                    )
+                }
+            }
+        }
+    }
+
+    private var sectionList: some View {
         List {
-            ForEach(store.state.sections, id: \.id) { section in
+            ForEach(Array(store.state.sections.enumerated()), id: \.element.id) { sectionIndex, section in
                 Section {
-                    if store.isExpanded(sectionId: section.id) {
+                    // While searching every section is forced open so no hit can hide inside a
+                    // collapsed one. The user's own expand state is left untouched underneath.
+                    if store.isSearchVisible || store.isExpanded(sectionId: section.id) {
                         if section.title == "SEE ALSO" {
                             SeeAlsoChips(
                                 names: store.state.seeAlsoCommands,
@@ -40,7 +92,9 @@ struct CommandDetailView: View {
                                 elements: section.parsedContent,
                                 onTapMan: store.tapMan,
                                 onTapLink: store.tapLink,
-                                onTapUrl: store.tapUrl
+                                onTapUrl: store.tapUrl,
+                                highlights: store.highlights(sectionIndex: sectionIndex),
+                                anchorSection: store.isSearchVisible ? sectionIndex : nil
                             )
                             .padding(.vertical, 4)
                         }
@@ -62,17 +116,27 @@ struct CommandDetailView: View {
                         .contentShape(Rectangle())
                     }
                     .hoverEffect(.highlight)
+                    .disabled(store.isSearchVisible)
                 }
+                .id(section.id)
             }
         }
         .listStyle(.insetGrouped)
-        .navigationTitle(commandName)
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                BookmarkToolbarButton(
-                    isBookmarked: store.state.isBookmarked,
-                    toggle: store.toggleBookmark
+    }
+
+    /// Two hops, because `List` only realises rows near the viewport: scroll to the section first
+    /// so its elements exist, then land on the element holding the match.
+    private func scrollToActiveMatch(_ proxy: ScrollViewProxy) {
+        guard let match = store.activeMatch else { return }
+        let sectionIndex = Int(match.sectionIndex)
+        guard sectionIndex < store.state.sections.count else { return }
+
+        proxy.scrollTo(store.state.sections[sectionIndex].id, anchor: .top)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            withAnimation(.easeOut(duration: 0.15)) {
+                proxy.scrollTo(
+                    ManPageAnchor(section: sectionIndex, element: Int(match.elementIndex)),
+                    anchor: .center
                 )
             }
         }
@@ -246,6 +310,24 @@ final class CommandDetailStore: ObservableObject {
 
     private var stateTask: Task<Void, Never>?
 
+    // Find-in-page state. Kept here rather than in the ViewModel so it stays a pure UI concern,
+    // matching how the Compose side does it.
+    @Published private(set) var isSearchVisible = false
+    @Published private(set) var matchIndex = ManPageMatchIndex.empty
+    @Published private(set) var activeMatchIndex = 0
+    @Published var searchQuery = "" {
+        didSet {
+            guard searchQuery != oldValue else { return }
+            recomputeMatches()
+            activeMatchIndex = 0
+        }
+    }
+
+    var activeMatch: ManPageMatch? {
+        guard activeMatchIndex < matchIndex.matches.count else { return nil }
+        return matchIndex.matches[activeMatchIndex]
+    }
+
     init(commandName: String, onManTap: @escaping (String) -> Void) {
         self.commandName = commandName
         onManTap_ = onManTap
@@ -255,8 +337,50 @@ final class CommandDetailStore: ObservableObject {
             guard let self else { return }
             for await s in self.viewModel.state {
                 self.state = s
+                // Sections arrive asynchronously; a query typed before they land must be rerun.
+                self.recomputeMatches()
             }
         }
+    }
+
+    func openSearch() {
+        isSearchVisible = true
+    }
+
+    func closeSearch() {
+        isSearchVisible = false
+        searchQuery = ""
+    }
+
+    func nextMatch() {
+        guard matchIndex.count > 0 else { return }
+        activeMatchIndex = (activeMatchIndex + 1) % matchIndex.count
+    }
+
+    func previousMatch() {
+        guard matchIndex.count > 0 else { return }
+        activeMatchIndex = (activeMatchIndex - 1 + matchIndex.count) % matchIndex.count
+    }
+
+    func highlights(sectionIndex: Int) -> [Int: ElementHighlight]? {
+        guard isSearchVisible else { return nil }
+        return matchIndex.highlights(sectionIndex: sectionIndex, activeMatch: activeMatch)
+    }
+
+    /// Runs the shared KMP matcher, so iOS and Android count and number matches identically.
+    private func recomputeMatches() {
+        guard !searchQuery.isEmpty else {
+            matchIndex = .empty
+            return
+        }
+        matchIndex = ManPageMatchIndex(
+            ManPageMatchKt.findManPageMatches(
+                sections: state.sections,
+                seeAlsoCommands: state.seeAlsoCommands,
+                resources: state.resources,
+                query: searchQuery
+            )
+        )
     }
 
     deinit {

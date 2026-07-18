@@ -5,6 +5,7 @@ package com.linuxcommandlibrary.app.ui.screens.commanddetail
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.scrollBy
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -25,29 +26,47 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SuggestionChip
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
+import androidx.compose.ui.layout.LayoutCoordinates
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.CommandSectionInfo
 import com.linuxcommandlibrary.app.ui.AppIcons
+import com.linuxcommandlibrary.app.ui.composables.ElementHighlight
+import com.linuxcommandlibrary.app.ui.composables.MatchIndex
 import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
 import com.linuxcommandlibrary.app.ui.composables.WithScrollbar
 import com.linuxcommandlibrary.app.ui.composables.rememberDebouncedClick
 import com.linuxcommandlibrary.shared.TipSectionElement
 import kotlinx.collections.immutable.ImmutableList
 
+/** Leaves the jumped-to match a little below the top edge instead of flush against it. */
+private val MATCH_SCROLL_MARGIN = 48.dp
+
+private data class ElementPosKey(val sectionIndex: Int, val elementIndex: Int)
+
 @Composable
 fun CommandDetailScreen(
     viewModel: CommandDetailViewModel,
     onNavigate: (NavEvent) -> Unit,
+    searchQuery: String = "",
+    activeMatchIndex: Int = 0,
+    onMatchIndexChange: (MatchIndex) -> Unit = {},
 ) {
     val uiState by viewModel.state.collectAsState()
     val onToggleExpanded = remember(viewModel) { viewModel::onToggleExpanded }
@@ -56,6 +75,9 @@ fun CommandDetailScreen(
         uiState = uiState,
         onNavigate = onNavigate,
         onToggleExpanded = onToggleExpanded,
+        searchQuery = searchQuery,
+        activeMatchIndex = activeMatchIndex,
+        onMatchIndexChange = onMatchIndexChange,
     )
 }
 
@@ -64,8 +86,58 @@ fun CommandDetailContent(
     uiState: CommandDetailUiState,
     onNavigate: (NavEvent) -> Unit,
     onToggleExpanded: (Long) -> Unit,
+    searchQuery: String = "",
+    activeMatchIndex: Int = 0,
+    onMatchIndexChange: (MatchIndex) -> Unit = {},
 ) {
     val listState = rememberLazyListState()
+    val isSearching = searchQuery.isNotEmpty()
+
+    val matchIndex = remember(uiState.sections, uiState.seeAlsoCommands, uiState.resources, searchQuery) {
+        MatchIndex(
+            findManPageMatches(
+                sections = uiState.sections,
+                seeAlsoCommands = uiState.seeAlsoCommands,
+                resources = uiState.resources,
+                query = searchQuery,
+            ),
+        )
+    }
+    LaunchedEffect(matchIndex) {
+        onMatchIndexChange(matchIndex)
+    }
+
+    val highlightColor = MaterialTheme.colorScheme.secondaryContainer
+    val activeHighlightColor = MaterialTheme.colorScheme.primary
+    val onActiveHighlightColor = MaterialTheme.colorScheme.onPrimary
+    val activeMatch = matchIndex.matches.getOrNull(activeMatchIndex)
+
+    // Plain (non-snapshot) map on purpose: onGloballyPositioned fires every frame while scrolling,
+    // and a snapshot map would turn that into a recomposition storm. Only the scroll effect reads
+    // it, never composition.
+    val elementCoords = remember { mutableMapOf<ElementPosKey, LayoutCoordinates>() }
+    var rootCoords by remember { mutableStateOf<LayoutCoordinates?>(null) }
+    val scrollMarginPx = with(LocalDensity.current) { MATCH_SCROLL_MARGIN.toPx() }
+
+    // Two hops, because an off-screen section isn't composed and so has no coordinates yet:
+    // scroll the section into view first, then refine to the matching element once it has laid
+    // out. Both hops are non-animated so it reads as a single crisp jump, like a browser's find.
+    LaunchedEffect(activeMatch, matchIndex) {
+        val match = activeMatch ?: return@LaunchedEffect
+        listState.scrollToItem(match.sectionIndex)
+        val key = ElementPosKey(match.sectionIndex, match.elementIndex)
+        repeat(3) {
+            withFrameNanos { }
+            val root = rootCoords
+            val coords = elementCoords[key]
+            if (root != null && coords != null && coords.isAttached) {
+                val y = root.localPositionOf(coords, Offset.Zero).y
+                listState.scrollBy(y - scrollMarginPx)
+                return@LaunchedEffect
+            }
+        }
+    }
+
     SelectionContainer {
         WithScrollbar(
             state = listState,
@@ -75,20 +147,38 @@ fun CommandDetailContent(
         ) {
             LazyColumn(
                 state = listState,
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .onGloballyPositioned { rootCoords = it },
             ) {
                 itemsIndexed(
                     items = uiState.sections,
                     key = { index, _ -> index },
                     contentType = { _, _ -> "command_section_item" },
-                ) { _, section ->
+                ) { sectionIndex, section ->
+                    val highlights = remember(matchIndex, sectionIndex, activeMatch) {
+                        matchIndex.elementHighlightsFor(
+                            sectionIndex = sectionIndex,
+                            activeMatch = activeMatch,
+                            color = highlightColor,
+                            activeColor = activeHighlightColor,
+                            onActiveColor = onActiveHighlightColor,
+                        )
+                    }
                     CommandSectionColumn(
                         section = section,
-                        isExpanded = uiState.expandedSectionsMap[section.id] ?: false,
+                        // While searching everything is forced open so no hit can hide inside a
+                        // collapsed section. The user's own expand state is left untouched
+                        // underneath and comes back when the query is cleared.
+                        isExpanded = isSearching || (uiState.expandedSectionsMap[section.id] ?: false),
                         seeAlsoCommands = uiState.seeAlsoCommands,
                         resources = uiState.resources,
                         onToggleExpanded = onToggleExpanded,
                         onNavigate = onNavigate,
+                        highlights = highlights,
+                        onElementPositioned = { elementIndex, coords ->
+                            elementCoords[ElementPosKey(sectionIndex, elementIndex)] = coords
+                        },
                     )
                 }
             }
@@ -104,6 +194,8 @@ private fun CommandSectionColumn(
     resources: ImmutableList<ResourceLink>,
     onToggleExpanded: (Long) -> Unit,
     onNavigate: (NavEvent) -> Unit,
+    highlights: Map<Int, ElementHighlight>? = null,
+    onElementPositioned: ((Int, LayoutCoordinates) -> Unit)? = null,
 ) {
     val chevronRotation by animateFloatAsState(targetValue = if (isExpanded) 180f else 0f)
 
@@ -145,15 +237,24 @@ private fun CommandSectionColumn(
                     parsedContent = section.parsedContent,
                     seeAlsoCommands = seeAlsoCommands,
                     onNavigate = onNavigate,
+                    highlights = highlights,
+                    onElementPositioned = onElementPositioned,
                 )
 
                 "RESOURCES" -> ResourcesSectionContent(
                     parsedContent = section.parsedContent,
                     resources = resources,
                     onNavigate = onNavigate,
+                    highlights = highlights,
+                    onElementPositioned = onElementPositioned,
                 )
 
-                else -> DefaultSectionContent(parsedContent = section.parsedContent, onNavigate = onNavigate)
+                else -> DefaultSectionContent(
+                    parsedContent = section.parsedContent,
+                    onNavigate = onNavigate,
+                    highlights = highlights,
+                    onElementPositioned = onElementPositioned,
+                )
             }
         }
     }
@@ -164,6 +265,8 @@ private fun SeeAlsoSectionContent(
     parsedContent: ImmutableList<TipSectionElement>,
     seeAlsoCommands: ImmutableList<String>,
     onNavigate: (NavEvent) -> Unit,
+    highlights: Map<Int, ElementHighlight>? = null,
+    onElementPositioned: ((Int, LayoutCoordinates) -> Unit)? = null,
 ) {
     if (seeAlsoCommands.isNotEmpty()) {
         FlowRow(
@@ -186,7 +289,12 @@ private fun SeeAlsoSectionContent(
             }
         }
     } else {
-        DefaultSectionContent(parsedContent = parsedContent, onNavigate = onNavigate)
+        DefaultSectionContent(
+            parsedContent = parsedContent,
+            onNavigate = onNavigate,
+            highlights = highlights,
+            onElementPositioned = onElementPositioned,
+        )
     }
 }
 
@@ -195,6 +303,8 @@ private fun ResourcesSectionContent(
     parsedContent: ImmutableList<TipSectionElement>,
     resources: ImmutableList<ResourceLink>,
     onNavigate: (NavEvent) -> Unit,
+    highlights: Map<Int, ElementHighlight>? = null,
+    onElementPositioned: ((Int, LayoutCoordinates) -> Unit)? = null,
 ) {
     if (resources.isNotEmpty()) {
         val uriHandler = LocalUriHandler.current
@@ -218,7 +328,12 @@ private fun ResourcesSectionContent(
             }
         }
     } else {
-        DefaultSectionContent(parsedContent = parsedContent, onNavigate = onNavigate)
+        DefaultSectionContent(
+            parsedContent = parsedContent,
+            onNavigate = onNavigate,
+            highlights = highlights,
+            onElementPositioned = onElementPositioned,
+        )
     }
 }
 
@@ -226,6 +341,8 @@ private fun ResourcesSectionContent(
 private fun DefaultSectionContent(
     parsedContent: ImmutableList<TipSectionElement>,
     onNavigate: (NavEvent) -> Unit,
+    highlights: Map<Int, ElementHighlight>? = null,
+    onElementPositioned: ((Int, LayoutCoordinates) -> Unit)? = null,
 ) {
     Column(
         modifier = Modifier.fillMaxWidth()
@@ -236,6 +353,8 @@ private fun DefaultSectionContent(
             onNavigate = onNavigate,
             textColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
             commandVerticalPadding = 4.dp,
+            highlights = highlights,
+            onElementPositioned = onElementPositioned,
         )
     }
 }

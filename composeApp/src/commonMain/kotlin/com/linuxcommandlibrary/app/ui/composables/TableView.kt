@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.ParagraphStyle
 import androidx.compose.ui.text.SpanStyle
@@ -25,6 +26,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.shared.TextElement
+import com.linuxcommandlibrary.shared.toPlainText
 import kotlinx.collections.immutable.ImmutableList
 
 @Composable
@@ -33,6 +35,7 @@ fun TableView(
     rows: ImmutableList<ImmutableList<ImmutableList<TextElement>>>,
     onNavigate: (NavEvent) -> Unit = {},
     modifier: Modifier = Modifier,
+    highlight: ElementHighlight? = null,
 ) {
     val textMeasurer = rememberTextMeasurer()
     val density = LocalDensity.current
@@ -48,6 +51,17 @@ fun TableView(
 
     val hasHeaders = headers.any { it.toPlainText().isNotBlank() }
 
+    // Sub-index numbering must match tableCellsInRenderOrder, which the man-page search uses to
+    // address individual cells.
+    val rowSubIndexOffsets = remember(headers, rows) {
+        var next = headers.size
+        rows.map { row ->
+            val start = next
+            next += row.size
+            start
+        }
+    }
+
     Column(modifier = modifier.fillMaxWidth()) {
         if (hasHeaders) {
             Row(
@@ -57,8 +71,12 @@ fun TableView(
             ) {
                 headers.forEachIndexed { index, headerElements ->
                     val cellModifier = if (index == 0) Modifier.width(firstColumnWidth) else Modifier.weight(1f)
+                    val headerString = remember(headerElements, highlight) {
+                        AnnotatedString(headerElements.toPlainText())
+                            .withMatchHighlight(highlight, subIndex = index)
+                    }
                     Text(
-                        text = headerElements.toPlainText(),
+                        text = headerString,
                         fontWeight = FontWeight.Bold,
                         style = MaterialTheme.typography.bodyLarge.copy(textDirection = TextDirection.Ltr),
                         modifier = cellModifier
@@ -68,7 +86,7 @@ fun TableView(
             }
         }
 
-        rows.forEach { row ->
+        rows.forEachIndexed { rowIndex, row ->
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -76,7 +94,8 @@ fun TableView(
             ) {
                 row.forEachIndexed { index, cellElements ->
                     val cellModifier = if (index == 0) Modifier.width(firstColumnWidth) else Modifier.weight(1f)
-                    val annotatedString = remember(cellElements, codeColor) {
+                    val subIndex = rowSubIndexOffsets[rowIndex] + index
+                    val styledString = remember(cellElements, codeColor) {
                         buildAnnotatedString {
                             cellElements.forEach { element ->
                                 when (element) {
@@ -117,6 +136,9 @@ fun TableView(
                             }
                         }
                     }
+                    val annotatedString = remember(styledString, highlight, subIndex) {
+                        styledString.withMatchHighlight(highlight, subIndex = subIndex)
+                    }
                     Text(
                         text = annotatedString,
                         style = MaterialTheme.typography.bodyLarge.copy(textDirection = TextDirection.Ltr),
@@ -126,15 +148,5 @@ fun TableView(
                 }
             }
         }
-    }
-}
-
-private fun List<TextElement>.toPlainText(): String = this.joinToString("") { element ->
-    when (element) {
-        is TextElement.Plain -> element.text
-        is TextElement.Bold -> element.text
-        is TextElement.Italic -> element.text
-        is TextElement.Man -> element.man
-        is TextElement.Link -> element.text
     }
 }

@@ -13,8 +13,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.ParagraphStyle
 import androidx.compose.ui.text.SpanStyle
@@ -31,55 +33,75 @@ import com.linuxcommandlibrary.shared.platform.ShareHandler
 import kotlinx.collections.immutable.ImmutableList
 import org.koin.compose.koinInject
 
+/**
+ * Builds the rendered string for a code block. Kept top-level (and non-composable) so the
+ * man-page search can obtain exactly the text the user sees via `.text`, rather than
+ * re-implementing the concatenation and risking drift from what gets drawn.
+ */
+fun buildCommandElementString(
+    elements: ImmutableList<CommandElement>,
+    codeColor: Color = Color.Unspecified,
+    onNavigate: ((NavEvent) -> Unit)? = null,
+): AnnotatedString = buildAnnotatedString {
+    elements.forEach { element ->
+        when (element) {
+            is CommandElement.Text -> {
+                append(element.text)
+            }
+
+            is CommandElement.Man -> {
+                val start = this.length
+                withStyle(style = SpanStyle(color = codeColor)) {
+                    append(element.man)
+                }
+                val end = this.length
+                if (onNavigate != null) {
+                    addLink(
+                        LinkAnnotation.Clickable(
+                            tag = "man:${element.man}",
+                            linkInteractionListener = {
+                                onNavigate(NavEvent.ToCommand(element.man))
+                            },
+                        ),
+                        start,
+                        end,
+                    )
+                }
+            }
+
+            is CommandElement.Url -> {
+                val start = this.length
+                withStyle(style = SpanStyle(color = codeColor)) {
+                    append(element.command)
+                }
+                val end = this.length
+                if (onNavigate != null) {
+                    addLink(
+                        LinkAnnotation.Url(element.url),
+                        start,
+                        end,
+                    )
+                }
+            }
+        }
+    }
+}
+
 @Composable
 fun CommandView(
     command: String,
     elements: ImmutableList<CommandElement>,
     onNavigate: (NavEvent) -> Unit = {},
     verticalPadding: Dp = 6.dp,
+    highlight: ElementHighlight? = null,
+    modifier: Modifier = Modifier,
 ) {
     val codeColor = MaterialTheme.colorScheme.primary
-    val baseAnnotatedString = remember(elements, codeColor) {
-        buildAnnotatedString {
-            elements.forEach { element ->
-                when (element) {
-                    is CommandElement.Text -> {
-                        append(element.text)
-                    }
-
-                    is CommandElement.Man -> {
-                        val start = this.length
-                        withStyle(style = SpanStyle(color = codeColor)) {
-                            append(element.man)
-                        }
-                        val end = this.length
-                        addLink(
-                            LinkAnnotation.Clickable(
-                                tag = "man:${element.man}",
-                                linkInteractionListener = {
-                                    onNavigate(NavEvent.ToCommand(element.man))
-                                },
-                            ),
-                            start,
-                            end,
-                        )
-                    }
-
-                    is CommandElement.Url -> {
-                        val start = this.length
-                        withStyle(style = SpanStyle(color = codeColor)) {
-                            append(element.command)
-                        }
-                        val end = this.length
-                        addLink(
-                            LinkAnnotation.Url(element.url),
-                            start,
-                            end,
-                        )
-                    }
-                }
-            }
-        }
+    val styledAnnotatedString = remember(elements, codeColor) {
+        buildCommandElementString(elements, codeColor, onNavigate)
+    }
+    val baseAnnotatedString = remember(styledAnnotatedString, highlight) {
+        styledAnnotatedString.withMatchHighlight(highlight)
     }
 
     val finalAnnotatedString = remember(baseAnnotatedString) {
@@ -98,7 +120,7 @@ fun CommandView(
     }
 
     Surface(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .padding(vertical = verticalPadding),
         shape = RoundedCornerShape(12.dp),
