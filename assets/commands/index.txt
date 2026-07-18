@@ -1911,6 +1911,10 @@ drracket.md
 drupal-check.md
 drupal.md
 drush.md
+ds4-agent.md
+ds4-bench.md
+ds4-eval.md
+ds4-server.md
 ds4.md
 dsniff.md
 dss.md
