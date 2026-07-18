@@ -4592,6 +4592,7 @@ mons.md
 montage.md
 moo.md
 moon-buggy.md
+moonshine-voice.md
 mopac.md
 more.md
 moreutils.md
@@ -7744,6 +7745,7 @@ torify.md
 torra.md
 torsocks.md
 touch.md
+town.md
 tox.md
 toybox.md
 tpm2.md

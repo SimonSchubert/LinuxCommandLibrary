@@ -80,6 +80,7 @@ Speech recognition (speech to text) and speech synthesis (text to speech).
 ```[whisper](/man/whisper)```
 ```[faster-whisper](/man/faster-whisper)```
 ```[deepspeech](/man/deepspeech)```
+```[moonshine-voice](/man/moonshine-voice)```
 ```[piper](/man/piper)```
 ```[bark](/man/bark)```
 ```[tts](/man/tts)```
