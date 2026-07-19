@@ -1053,6 +1053,7 @@ carton.md
 cashd.md
 cast.md
 castero.md
+castor.md
 castxml.md
 cat.md
 catchsegv.md
@@ -4232,6 +4233,7 @@ lsd.md
 lsdev.md
 lsfd.md
 lshw.md
+lsinitcpio.md
 lsinitrd.md
 lsipc.md
 lsix.md
