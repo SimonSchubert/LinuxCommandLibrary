@@ -1,3 +1,13 @@
+## v4.4.0 - 2026-07-19
+
+### Features
+- Added in-page man page search with match highlighting (Android and iOS)
+- Added 139 new commands, including cloud/CLI tools (awsless, kafkactl, terraformer), MQTT clients, Kubernetes helpers (arkade, kapp, ytt), and utilities (pdfcpu, fzy, tinygo)
+- Linked recent AI and disk tools into AI tools and Files & Folders basics
+
+### Improvements
+- Improved documentation for 426 existing commands
+
 ## v4.3.0 - 2026-07-14
 
 ### Features
