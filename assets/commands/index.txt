@@ -357,6 +357,7 @@ ascii.md
 asciiart.md
 asciidoc.md
 asciidoctor.md
+asciigraph.md
 asciijump.md
 asciinema.md
 asciiquarium.md
@@ -388,6 +389,7 @@ atc.md
 atd.md
 aticonfig.md
 atktopbm.md
+atm.md
 atom.md
 atool.md
 atop.md
@@ -1036,10 +1038,12 @@ cargo-rustdoc.md
 cargo-search.md
 cargo-seek.md
 cargo-selector.md
+cargo-set-version.md
 cargo-test.md
 cargo-tree.md
 cargo-uninstall.md
 cargo-update.md
+cargo-upgrade.md
 cargo-vendor.md
 cargo-verify-project.md
 cargo-version.md
@@ -1685,6 +1689,7 @@ diskonaut.md
 disown.md
 display.im6.md
 display.md
+display3d.md
 distcc.md
 distccd.md
 distrobox-create.md
@@ -2057,6 +2062,7 @@ elink.md
 elinks.md
 elixir.md
 elm.md
+elodie.md
 else.md
 elvish.md
 emacs.md
@@ -3012,6 +3018,7 @@ gpg2.md
 gpgconf.md
 gpgv.md
 gphoto2.md
+gphotos-uploader-cli.md
 gpicview.md
 gping.md
 gpio.md
@@ -3385,6 +3392,7 @@ i3status.md
 i7z.md
 iPXE.md
 ia.md
+iam-policy-autopilot.md
 iamb.md
 ibmcloud-api.md
 ibmcloud-config.md
@@ -3787,6 +3795,7 @@ k9s.md
 kafka-topics.md
 kafka.md
 kafkacat.md
+kafkactl.md
 kage.md
 kaggle-competitions.md
 kaggle-config.md
@@ -4675,6 +4684,9 @@ mprocs.md
 mpstat.md
 mpv.md
 mq.md
+mqtt-sn-dump.md
+mqtt-sn-pub.md
+mqtt-sn-sub.md
 mqtt_check.py.md
 mqttui.md
 mr.md
@@ -5083,6 +5095,7 @@ nrm.md
 nroff.md
 nsenter.md
 nseq.1s.md
+nsh.md
 nslookup.md
 nsnake.md
 nstat.md
@@ -6047,6 +6060,7 @@ popd.md
 popeye.md
 poppler-utils.md
 portablectl.md
+portablemc.md
 portageq.md
 portal.md
 ports.md
@@ -7621,9 +7635,11 @@ tdf.md
 tea.md
 tectonic.md
 tee.md
+teensy_loader_cli.md
 tegrastats.md
 tegratop.md
 telegram-desktop.md
+telegram.md
 television.md
 telinit.md
 telnet.md
