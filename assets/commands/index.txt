@@ -546,6 +546,7 @@ aws-vpc.md
 aws-workmail.md
 aws.md
 awsesh.md
+awslocal.md
 awslogs.md
 awstats.md
 awww.md
@@ -1177,6 +1178,7 @@ ci.md
 cidr.md
 cifs.idmap.md
 cifscreds.md
+cinf.md
 cinnamon-extension-tool.md
 cinnamon-launcher.md
 cinnamon.md
@@ -1224,6 +1226,7 @@ cliphist.md
 clippy.md
 clipse.md
 clisp.md
+clitest.md
 clj.md
 cloc.md
 clockify.md
@@ -2285,6 +2288,7 @@ findomain.md
 finger.md
 fio.md
 firebase.md
+firectl.md
 firefox.md
 firejail.md
 firewall-cmd.md
@@ -2444,6 +2448,7 @@ fwconsole.md
 fwupdmgr.md
 fwupdtool.md
 fx.md
+fzf-make.md
 fzf.md
 fzputtygen.md
 fzsftp.md
@@ -2523,6 +2528,7 @@ gem.md
 gemini.md
 gemtopbm.md
 gemtopnm.md
+genact.md
 gendesk.md
 genfstab.md
 genhtml.md
@@ -3113,6 +3119,7 @@ gruyere.md
 grv.md
 grype.md
 gs.md
+gsa.md
 gsd-meta-manager.md
 gsettings.md
 gshadow.md
@@ -3176,6 +3183,7 @@ gzip.md
 h2ph.md
 h2xs.md
 ha-manager.md
+habitctl.md
 hackernews-tui.md
 hadolint.md
 haiti.md
@@ -3213,6 +3221,7 @@ hbpldecode.md
 hciconfig.md
 hciemu.md
 hcitool.md
+hcledit.md
 hcloud.md
 hd-idle.md
 hd.md
@@ -3294,6 +3303,7 @@ hostess.md
 hostid.md
 hostname.md
 hostnamectl.md
+hosts.md
 hours.md
 hp-align.md
 hp-check.md
@@ -3351,6 +3361,7 @@ huggingface-cli.md
 hugo-server.md
 hugo.md
 hummingbot.md
+huniq.md
 hunk.md
 hunspell.md
 hunt.md
@@ -3878,6 +3889,7 @@ kitty.md
 kiwi-ng.md
 kjv.md
 kl.md
+klog.md
 kmod.md
 kmon.md
 kmscon.md
@@ -4092,6 +4104,7 @@ librewolf.md
 libtool.md
 libtoolize.md
 libuser-lid.md
+license-generator.md
 license.md
 licensecheck.md
 licensor.md
@@ -5136,6 +5149,7 @@ nvcc.md
 nvidia-settings.md
 nvidia-smi-mig.md
 nvidia-smi.md
+nvidia_oc.md
 nvim.md
 nvitop.md
 nvm.fish.md
@@ -6009,6 +6023,7 @@ podman-rm.md
 podman-rmi.md
 podman-run.md
 podman-save.md
+podman-tui.md
 podman.md
 podselect.md
 poedit.md
@@ -6170,6 +6185,7 @@ pproftui.md
 ppt.md
 pptp.md
 pptpsetup.md
+pqrs.md
 pqviewer.md
 pr.md
 pre-commit.md
@@ -6601,6 +6617,7 @@ rc-status.md
 rc-update.md
 rc.md
 rclone.md
+rcon.md
 rcp.md
 rcrack.md
 rcs.md
@@ -6800,6 +6817,7 @@ rsql.md
 rss2email.md
 rsstail.md
 rst2html.md
+rsv.md
 rsvg-convert.md
 rsync.md
 rsyncy.md
@@ -7657,6 +7675,7 @@ termineter.md
 termpicker.md
 termscp.md
 termshark.md
+termtosvg.md
 termusic.md
 terraform-apply.md
 terraform-console.md
@@ -8291,6 +8310,7 @@ vue-serve.md
 vue.md
 vuepress.md
 vulkaninfo.md
+vultr-cli.md
 vzdump.md
 w.md
 w3m.md
