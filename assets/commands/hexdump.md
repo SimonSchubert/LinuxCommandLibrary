@@ -75,3 +75,11 @@ hexdump originated in BSD Unix and is part of the util-linux package on Linux sy
 # SEE ALSO
 
 [xxd](/man/xxd)(1), [od](/man/od)(1), [hexyl](/man/hexyl)(1), [strings](/man/strings)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man1/hexdump.1.html)```
+
+<!-- verified: 2026-07-19 -->

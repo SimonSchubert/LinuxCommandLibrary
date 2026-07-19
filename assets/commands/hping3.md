@@ -28,6 +28,10 @@ network tool for crafting TCP/IP packets
 
 ```sudo hping3 -S -p [80] -s [12345] [target]```
 
+**Scan a range of ports**
+
+```sudo hping3 -8 [1-1000] -S [target]```
+
 # SYNOPSIS
 
 **hping3** [_options_] _host_
@@ -55,6 +59,12 @@ network tool for crafting TCP/IP packets
 **-2**, **--udp**
 > UDP mode.
 
+**-8**, **--scan** _range_
+> Port scan mode, e.g. `-8 1-1000`.
+
+**-V**, **--verbose**
+> Verbose output.
+
 **--flood**
 > Flood mode (fast as possible).
 
@@ -77,7 +87,7 @@ network tool for crafting TCP/IP packets
 
 **hping3** is a network tool for crafting TCP/IP packets. It's used for firewall testing, port scanning, network testing, and security auditing. It provides more control than ping or traceroute.
 
-hping3 can send custom packets with specified flags, options, and payloads, making it valuable for penetration testing and troubleshooting.
+hping3 can send custom packets with specified flags, options, and payloads, making it valuable for penetration testing and troubleshooting. When no protocol mode is given, it defaults to **TCP mode**, sending headers to the target's port 0 with no flags set.
 
 # CAVEATS
 
@@ -89,4 +99,11 @@ hping was created by **Salvatore Sanfilippo** (antirez, also creator of Redis). 
 
 # SEE ALSO
 
-[nmap](/man/nmap)(1), [ping](/man/ping)(8), [tcpdump](/man/tcpdump)(1), [scapy](/man/scapy)(1)
+[hping](/man/hping)(8), [nmap](/man/nmap)(1), [ping](/man/ping)(8), [tcpdump](/man/tcpdump)(1), [scapy](/man/scapy)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/antirez/hping)```
+
+<!-- verified: 2026-07-19 -->
+

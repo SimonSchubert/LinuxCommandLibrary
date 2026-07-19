@@ -24,32 +24,54 @@ command for Helix editor
 
 ```hx --tutor```
 
+**Split all given files into vertical windows**
+
+```hx --vsplit [file1] [file2]```
+
 # SYNOPSIS
 
-**hx** [_options_] [_files_]
+**hx** [_options_] [_files_]...
 
 # PARAMETERS
 
 _FILES_
-> Files to edit.
+> Files to edit, optionally suffixed with **:LINE** or **:LINE:COLUMN**.
+
+**+**_N_
+> Open the first given file at line _N_.
 
 **--tutor**
-> Open tutorial.
+> Open the interactive tutorial.
 
-**--health** _LANG_
-> Check language support.
+**--health** [_CATEGORY_]
+> Check for setup problems; _CATEGORY_ can be a language name, or clipboard, languages, all-languages, all.
 
 **-c**, **--config** _FILE_
-> Configuration file.
+> Configuration file to use.
 
-**--grammar**
-> Fetch/build grammars.
+**-g**, **--grammar** {**fetch**|**build**}
+> Fetch or build tree-sitter grammars.
+
+**-w**, **--working-dir** _PATH_
+> Initial working directory.
+
+**--vsplit** / **--hsplit**
+> Split all given files vertically / horizontally into separate windows.
+
+**--strict**
+> Bail with an error for commands that can fail.
+
+**--log** _FILE_
+> File to use for logging.
 
 **-v**
-> Increase verbosity.
+> Increase logging verbosity (repeatable).
 
-**--help**
+**-h**, **--help**
 > Display help information.
+
+**-V**, **--version**
+> Print version information.
 
 # DESCRIPTION
 
@@ -68,3 +90,13 @@ Helix was created as a modern terminal editor, taking inspiration from **Kakoune
 # SEE ALSO
 
 [helix](/man/helix)(1), [vim](/man/vim)(1), [nvim](/man/nvim)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/helix-editor/helix)```
+
+```[Homepage](https://helix-editor.com)```
+
+```[Documentation](https://docs.helix-editor.com)```
+
+<!-- verified: 2026-07-19 -->

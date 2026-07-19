@@ -56,11 +56,30 @@ command-line HTML5 validation tool using the Nu Html Checker
 **--ignore-re** _regex_
 > Ignore errors matching regex.
 
+**--ignore** _message_
+> Ignore errors that exactly match the given message.
+
+**--also-check-css**
+> Also validate CSS files (matches *.html and *.css by default).
+
+**--config** _file_
+> Read options from a configuration file.
+
 # DESCRIPTION
 
 **html5validator** is a command-line HTML5 validation tool using the Nu Html Checker (v.Nu). Designed for static site generators and continuous integration. Returns exit code 0 for valid HTML. Requires Python 3.6+ and Java 8.
 
+# CAVEATS
+
+Requires a working **Java** runtime (OpenJDK 8+) on the **PATH**, since it shells out to the bundled **vnu.jar** to perform the actual validation.
+
 # SEE ALSO
 
 [tidy](/man/tidy)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/svenkreiss/html5validator)```
+
+<!-- verified: 2026-07-19 -->
 

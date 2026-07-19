@@ -58,14 +58,33 @@ Test single **URL** directly
 **-proxy HOST:PORT**
 > Use HTTP proxy
 
+**-jitter**
+> Vary the -rate rate randomly by about 10%, to avoid unrealistically regular traffic patterns
+
+**-throttle**
+> Limit data consumption to 33.6Kbps, to simulate a modem-speed client
+
+**-checksum**
+> Verify fetched files against a checksum computed on the first fetch of each URL
+
+**-verbose**
+> Print progress reports to stderr while the test runs
+
 # CAVEATS
 
-Either -rate or -parallel must be specified, not both. Either -fetches or -seconds must be specified to set the test duration. The URL file should contain one URL per line.
+Either -rate or -parallel must be specified, not both. Either -fetches or -seconds must be specified to set the test duration. The URL file should contain one URL per line; URLs are picked at random from the file for each fetch.
 
 # HISTORY
 
-**http_load** was developed by ACME Labs as a simple HTTP load testing tool for benchmarking web server performance.
+**http_load** was written by **Jef Poskanzer** and distributed through **ACME Labs** as a simple, single-process HTTP load testing tool for benchmarking web server throughput.
 
 # SEE ALSO
 
 [ab](/man/ab)(1), [wrk](/man/wrk)(1), [siege](/man/siege)(1), [hey](/man/hey)(1)
+
+# RESOURCES
+
+```[Source code](https://www.acme.com/software/http_load/)```
+
+<!-- verified: 2026-07-19 -->
+

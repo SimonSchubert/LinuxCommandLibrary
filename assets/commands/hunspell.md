@@ -26,48 +26,89 @@ spell checker and morphological analyzer
 
 # SYNOPSIS
 
-**hunspell** [_options_] [_files_]
+**hunspell** [_-aDGhHlmnrstvwX_] [_-d_ _dict_[,_dict2_,...]] [_-i_ _enc_] [_-p_ _dict_] [_files_]
 
 # PARAMETERS
 
 _FILES_
-> Files to check.
+> Files to check (text, HTML, XML, TeX/LaTeX, nroff/troff, or OpenDocument).
 
-**-d** _DICT_
-> Dictionary to use.
+**-d** _dict_[,_dict2_,...]
+> Dictionary/dictionaries to use, by base name.
+
+**-p** _dict_
+> Path of the personal dictionary.
 
 **-l**
-> List misspelled words.
+> List misspelled words (one per line) from the input.
 
 **-a**
-> Ispell pipe mode.
+> Ispell-compatible pipe mode; used by editors and other programs.
+
+**-D**
+> Show detected dictionary path, search path, and available dictionaries.
 
 **-G**
-> Print correct words too.
-
-**-H**
-> HTML mode.
+> Print only correct words or lines.
 
 **-L**
-> LaTeX mode.
+> Print lines containing misspelled words.
 
-**--help**
+**-H**
+> Input is HTML/SGML.
+
+**-X**
+> Input is XML.
+
+**-t**
+> Input is TeX or LaTeX.
+
+**-n**
+> Input is nroff/troff.
+
+**-O**
+> Input is OpenDocument (ODF or Flat ODF).
+
+**-s**
+> Stem the words in the input.
+
+**-m**
+> Analyze word morphology and affix data.
+
+**-i** _enc_
+> Set input encoding.
+
+**--check-url**
+> Also check URLs, e-mail addresses, and file paths.
+
+**-v**, **--version**
+> Print version number.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**Hunspell** is a spell checker and morphological analyzer. It's the default spell checker for many applications including LibreOffice and Firefox.
+**Hunspell** is a spell checker and morphological analyzer. It's the default spell checker for many applications including LibreOffice, OpenOffice, Firefox, Thunderbird, and Chrome.
 
-The tool supports many languages with dictionary files. It can check files interactively or in batch mode for scripts.
+The tool supports many languages via Myspell/Hunspell-format dictionary files, and understands compounding and complex morphology better than older spell checkers. It can check files interactively, in list mode (**-l**), or in the ispell-compatible pipe mode (**-a**) used by editors and other programs. Input format filters (**-H**, **-X**, **-t**, **-n**, **-O**) strip markup before checking.
 
 # CAVEATS
 
-Requires dictionaries for languages. Replacement for ispell. Personal dictionary support.
+Requires a dictionary for each language to be installed separately (e.g. **hunspell-en-us**). Designed as a drop-in replacement for ispell/myspell. Supports a per-user personal dictionary via **-p**.
 
 # HISTORY
 
-Hunspell was created by **László Németh** as an improved ispell-like spell checker with better language support.
+Hunspell was created by **László Németh** as an improved ispell/myspell-compatible spell checker with better Unicode, compounding, and morphological support. It remains actively maintained and is the spell-checking engine behind most major open-source office suites and browsers.
 
 # SEE ALSO
 
 [aspell](/man/aspell)(1), [ispell](/man/ispell)(1), [spell](/man/spell)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/hunspell/hunspell)```
+
+```[Homepage](https://hunspell.github.io/)```
+
+<!-- verified: 2026-07-19 -->

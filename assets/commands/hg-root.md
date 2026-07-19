@@ -18,6 +18,12 @@ prints the root directory of the Mercurial repository
 
 # PARAMETERS
 
+**--share-source**
+> Print the share source root instead, when the repository was created with the **share** extension.
+
+**-T**, **--template** _TEMPLATE_
+> Display output with the given template.
+
 **--help**
 > Display help information.
 
@@ -38,3 +44,11 @@ Root is a **Mercurial** utility command for locating the repository top-level di
 # SEE ALSO
 
 [hg](/man/hg)(1), [git-rev-parse](/man/git-rev-parse)(1), [pwd](/man/pwd)(1)
+
+# RESOURCES
+
+```[Source code](https://foss.heptapod.net/mercurial/mercurial-devel)```
+
+```[Documentation](https://wiki.mercurial-scm.org/)```
+
+<!-- verified: 2026-07-19 -->

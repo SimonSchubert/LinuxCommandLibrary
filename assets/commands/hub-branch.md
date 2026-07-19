@@ -1,6 +1,6 @@
 # TAGLINE
 
-same as **git branch** but extended with GitHub integration
+runs git's own branch command unmodified through hub
 
 # TLDR
 
@@ -50,13 +50,21 @@ same as **git branch** but extended with GitHub integration
 
 # DESCRIPTION
 
-**hub branch** is the same as **git branch** but extended with GitHub integration. Hub is a command-line wrapper for git that provides extra features for working with GitHub. Note: hub is now deprecated in favor of the official GitHub CLI (**gh**).
+**hub** is a command-line wrapper for git that adds GitHub-specific behavior to certain git subcommands (**clone**, **fetch**, **remote**, **checkout**, **merge**, and a few others) while transparently passing every other subcommand straight through to the real git binary. **branch** is not one of the commands hub extends, so `hub branch` behaves exactly like `git branch`: it lists, creates, renames, and deletes branches with no added GitHub integration.
+
+It is included here because, when hub is aliased as `git` (see `hub alias`), any git subcommand - including **branch** - can be invoked through it.
 
 # CAVEATS
 
-Hub is deprecated. Consider using the GitHub CLI (**gh**) instead.
+Hub is no longer actively maintained and has been superseded by the official GitHub CLI (**gh**). For actual GitHub-aware branch operations (e.g. checking out a pull request as a branch), see **hub checkout** or **gh pr checkout** instead.
 
 # SEE ALSO
 
 [hub](/man/hub)(1), [git-branch](/man/git-branch)(1), [gh](/man/gh)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/mislav/hub)```
+
+<!-- verified: 2026-07-19 -->
 

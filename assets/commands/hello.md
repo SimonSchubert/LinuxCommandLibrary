@@ -18,7 +18,7 @@ friendly greeting program
 
 **Show version**
 
-```hello --version```
+```hello -v```
 
 # SYNOPSIS
 
@@ -30,16 +30,13 @@ friendly greeting program
 > Custom greeting text.
 
 **-t**, **--traditional**
-> Use traditional greeting.
+> Use the traditional "hello, world" greeting.
 
-**-n**, **--next-generation**
-> Next generation greeting.
+**-h**, **--help**
+> Display help information and exit.
 
-**--help**
-> Display help information.
-
-**--version**
-> Show version.
+**-v**, **--version**
+> Show version and licensing information and exit.
 
 # DESCRIPTION
 
@@ -58,3 +55,13 @@ GNU Hello was created as part of the **GNU Project** to serve as an example prog
 # SEE ALSO
 
 [echo](/man/echo)(1), [printf](/man/printf)(1), [cowsay](/man/cowsay)(6)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/hello.git)```
+
+```[Homepage](https://www.gnu.org/software/hello/)```
+
+```[Documentation](https://www.gnu.org/software/hello/manual/)```
+
+<!-- verified: 2026-07-19 -->

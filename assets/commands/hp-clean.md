@@ -1,60 +1,79 @@
 # TAGLINE
 
-performs print head cleaning on HP printers
+Printhead cleaning utility for HPLIP-supported HP inkjet printers
 
 # TLDR
 
-**Clean print heads**
+**Clean print heads** for the default printer (opens the interactive cleaning wizard)
 
 ```hp-clean```
 
-**Specify printer**
+**Clean a specific CUPS printer** by queue name
 
 ```hp-clean -p [printer-name]```
 
-**Level 2 cleaning**
+**Clean a printer** by device URI
 
-```hp-clean -l 2```
+```hp-clean -d [device-uri]```
 
-**Level 3 deep clean**
+**Run interactively**, choosing the cleaning level (1-3) at the prompt
 
-```hp-clean -l 3```
+```hp-clean -i```
+
+**Enable debug-level logging** for troubleshooting
+
+```hp-clean -g```
 
 # SYNOPSIS
 
-**hp-clean** [_options_]
+**hp-clean** [_DEVICE-URI_|_PRINTER-NAME_] [_MODE_] [_OPTIONS_]
 
 # PARAMETERS
 
-**-p** _PRINTER_
-> Printer name.
+**-d** _device-uri_, **--device**=_device-uri_
+> Specify the target printer by CUPS device URI.
 
-**-d** _DEVICE_
-> Device URI.
+**-p** _printer_, **--printer**=_printer_
+> Specify the target printer by CUPS queue name.
 
-**-l** _LEVEL_
-> Cleaning level (1-3).
+**-i**, **--interactive**
+> Run in interactive mode.
 
-**-b** _BUS_
-> Bus type (usb, net).
+**-l** _level_, **--logging**=_level_
+> Set logging verbosity: none, info (default), error, warn, or debug.
 
-**--help**
-> Display help information.
+**-g**
+> Run with debug-level logging (equivalent to **-l debug**).
+
+**-h**, **--help**
+> Display help and exit.
 
 # DESCRIPTION
 
-**hp-clean** performs print head cleaning on HP printers. It removes dried ink and debris to restore print quality.
+**hp-clean** runs the printhead cleaning routine on HPLIP-supported HP inkjet printers, clearing dried ink and debris from the nozzles to restore print quality.
 
-The tool supports multiple cleaning levels. Higher levels are more thorough but consume more ink. Level 1 is usually sufficient.
+When launched without a specific mode it walks through an interactive wizard that lets the user pick a cleaning level from 1 to 3; higher levels clean more aggressively and consume more ink, so level 1 is usually tried first. The target printer can be selected up front with **-p** or **-d**, otherwise hp-clean prompts for one if more than one HPLIP device is installed.
+
+hp-clean only works with inkjet printers whose HPLIP plugin exposes a cleaning routine; laser printers and some low-end inkjets do not support it.
 
 # CAVEATS
 
-Part of HPLIP package. Consumes ink. Use only when needed.
+Part of the HPLIP package. Cleaning consumes ink and should only be run when print quality actually degrades (streaks, missing lines). Not all HPLIP-supported models implement printhead cleaning.
 
 # HISTORY
 
-hp-clean is part of **HPLIP** (HP Linux Imaging and Printing), HP's open-source printer driver project.
+**hp-clean** is one of the device-maintenance utilities in **HPLIP** (HP Linux Imaging and Printing), HP's open-source printer/scanner driver suite for Linux, alongside **hp-align** and **hp-linefeedcal**.
 
 # SEE ALSO
 
-[hp-align](/man/hp-align)(1), [hp-check](/man/hp-check)(1), [hp-levels](/man/hp-levels)(1)
+[hp-align](/man/hp-align)(1), [hp-check](/man/hp-check)(1), [hp-levels](/man/hp-levels)(1), [hp-info](/man/hp-info)(1)
+
+# RESOURCES
+
+```[Source code](https://sourceforge.net/projects/hplip/)```
+
+```[Homepage](https://developers.hp.com/hp-linux-imaging-and-printing)```
+
+```[Documentation](https://developers.hp.com/hp-linux-imaging-and-printing/tech_docs/man_pages/index)```
+
+<!-- verified: 2026-07-19 -->

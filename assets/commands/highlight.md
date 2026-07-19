@@ -38,20 +38,20 @@ converts source code to formatted output with syntax highlighting
 
 # DESCRIPTION
 
-**highlight** converts source code to formatted output with syntax highlighting. It supports over 200 programming languages and can output to HTML, ANSI, RTF, LaTeX, and other formats.
+**highlight** converts source code to formatted output with syntax highlighting. It supports over 250 programming and markup languages and can output to HTML, XHTML, RTF, ODT, TeX, LaTeX, SVG, Pango, BBCode, and ANSI/terminal escape sequences (including 256-color and truecolor).
 
 The tool is useful for documentation, presentations, and generating printable source listings with proper syntax coloring.
 
 # PARAMETERS
 
-**-O** _format_
-> Output format (html, ansi, xhtml, rtf, latex, tex, svg).
+**-O**, **--out-format** _format_
+> Output format: html, xhtml, latex, tex, rtf, odt, ansi, xterm256, truecolor, bbcode, pango, svg.
 
 **-S**, **--syntax** _lang_
-> Specify source language.
+> Specify source language, needed if it can't be guessed from the file suffix.
 
 **-s**, **--style** _name_
-> Color theme.
+> Color theme (add a "base16/" prefix to use a Base16 theme).
 
 **-l**, **--line-numbers**
 > Include line numbers.
@@ -71,6 +71,24 @@ The tool is useful for documentation, presentations, and generating printable so
 **--inline-css**
 > Embed CSS in HTML.
 
+**-a**, **--anchors**
+> Attach anchors to line numbers (HTML only).
+
+**-B**, **--batch-recursive** _wildcard_
+> Convert all files matching the wildcard, recursively.
+
+**--stdout**
+> In batch mode, write output to stdout instead of files.
+
+**-t**, **--replace-tabs** _num_
+> Replace tabs with the given number of spaces.
+
+**-u**, **--encoding** _enc_
+> Set output encoding to match the input file's encoding.
+
+**--config-file** _file_
+> Path to a custom language definition or theme file.
+
 # CAVEATS
 
 Language detection may need hints. Theme appearance varies by output format. Some languages have limited support.
@@ -82,3 +100,11 @@ Language detection may need hints. Theme appearance varies by output format. Som
 # SEE ALSO
 
 [pygmentize](/man/pygmentize)(1), [bat](/man/bat)(1), [source-highlight](/man/source-highlight)(1), [vim](/man/vim)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/saalen/highlight)```
+
+```[Documentation](http://andre-simon.de/doku/highlight/en/highlight.php)```
+
+<!-- verified: 2026-07-19 -->

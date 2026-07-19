@@ -68,6 +68,9 @@ official command-line interface for Hugging Face Hub
 **jobs run** _image_ _command_
 > Run compute jobs on Hugging Face infrastructure.
 
+**jobs ps**
+> List running and recent jobs.
+
 **models ls**
 > List and search models on the Hub.
 
@@ -77,8 +80,17 @@ official command-line interface for Hugging Face Hub
 **spaces ls**
 > List and search Spaces.
 
+**endpoints ls**
+> List Inference Endpoints.
+
+**collections ls**
+> List collections on the Hub.
+
 **env**
 > Print environment information for debugging.
+
+**version**
+> Print the installed hf version.
 
 # PARAMETERS
 
@@ -109,6 +121,18 @@ official command-line interface for Hugging Face Hub
 **--timeout** _duration_
 > Job timeout with units: 30m, 2h, 1d.
 
+**--format** _mode_
+> Output format: auto (default), human, agent, json, or quiet.
+
+**--json**
+> Shortcut for --format json; print structured output for scripting.
+
+**-q**, **--quiet**
+> Shortcut for --format quiet; print only IDs, one per line.
+
+**--no-truncate**
+> Show full values in tables instead of shortening long ones with "...".
+
 **--help**
 > Display help for any command.
 
@@ -133,3 +157,13 @@ The Hugging Face Hub CLI was introduced as part of the **huggingface_hub** Pytho
 # SEE ALSO
 
 [ollama](/man/ollama)(1), [git-lfs](/man/git-lfs)(1), [docker](/man/docker)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/huggingface/huggingface_hub)```
+
+```[Homepage](https://huggingface.co)```
+
+```[Documentation](https://huggingface.co/docs/huggingface_hub/en/guides/cli)```
+
+<!-- verified: 2026-07-19 -->

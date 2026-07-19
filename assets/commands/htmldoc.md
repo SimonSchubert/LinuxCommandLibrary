@@ -97,3 +97,14 @@ HTMLDOC was created by **Michael Sweet** and was originally released by Easy Sof
 # SEE ALSO
 
 [wkhtmltopdf](/man/wkhtmltopdf)(1), [weasyprint](/man/weasyprint)(1), [pandoc](/man/pandoc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/michaelrsweet/htmldoc)```
+
+```[Homepage](https://www.msweet.org/htmldoc/)```
+
+```[Documentation](https://www.msweet.org/htmldoc/htmldoc.html)```
+
+<!-- verified: 2026-07-19 -->
+

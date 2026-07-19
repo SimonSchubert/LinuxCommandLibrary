@@ -48,6 +48,18 @@ starts a built-in HTTP server for the repository
 **--web-conf** _FILE_
 > Web config file.
 
+**-A**, **--accesslog** _FILE_
+> Name of access log file to write to.
+
+**-E**, **--errorlog** _FILE_
+> Name of error log file to write to.
+
+**--certificate** _FILE_
+> SSL certificate file, to serve over HTTPS.
+
+**--print-url**
+> Start the server and print only its URL.
+
 **--help**
 > Display help information.
 

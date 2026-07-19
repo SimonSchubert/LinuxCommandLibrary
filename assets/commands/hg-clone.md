@@ -45,8 +45,20 @@ _DEST_
 **-U**, **--noupdate**
 > Clone without working directory.
 
+**-u**, **--updaterev** _REV_
+> Check out the given revision, tag, or branch instead of the tip.
+
 **--pull**
-> Use pull protocol.
+> Use pull protocol to copy metadata.
+
+**--stream**
+> Clone with minimal data processing (faster, but skips revlog delta reconstruction).
+
+**-e**, **--ssh** _CMD_
+> Specify ssh command to use.
+
+**--insecure**
+> Do not verify the server certificate.
 
 **--help**
 > Display help information.
@@ -67,4 +79,12 @@ Clone is a core **Mercurial** command since version 1.0, providing distributed r
 
 # SEE ALSO
 
-[hg](/man/hg)(1), [hg-pull](/man/hg-pull)(1), [hg-push](/man/hg-push)(1)
+[hg](/man/hg)(1), [hg-pull](/man/hg-pull)(1), [hg-push](/man/hg-push)(1), [hg-init](/man/hg-init)(1)
+
+# RESOURCES
+
+```[Source code](https://foss.heptapod.net/mercurial/mercurial-devel)```
+
+```[Documentation](https://wiki.mercurial-scm.org/)```
+
+<!-- verified: 2026-07-19 -->

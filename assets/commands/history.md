@@ -50,7 +50,9 @@ bash builtin command that displays or manipulates the command history list
 
 **history** [-anrw] [_filename_]
 
-**history** -ps _arg_
+**history** -p _arg_ [_arg_ ...]
+
+**history** -s _arg_ [_arg_ ...]
 
 # PARAMETERS
 

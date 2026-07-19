@@ -24,29 +24,65 @@ Generate a **settings file** ignoring all current hints
 
 ```hlint [path/to/file.hs] --default > .hlint.yaml```
 
+Run using **all available processors**
+
+```hlint [path/to/directory] -j```
+
+**Ignore a specific hint**
+
+```hlint [path/to/file.hs] --ignore="Use camelCase"```
+
+Output suggestions as **JSON**
+
+```hlint [path/to/file.hs] --json```
+
 # SYNOPSIS
 
 **hlint** [_options_] [_files_]
 
 # PARAMETERS
 
-**-r**, **--report**
-> Generate an HTML report of suggestions
+**-r**, **--report**[**=**_FILE_]
+> Generate an HTML report of suggestions (default: report.html)
 
 **--refactor**
-> Automatically apply suggestions using refactor tool
+> Automatically apply suggestions, using the `refactor` tool from apply-refact
 
-**--refactor-options**
-> Display available refactoring options
+**--refactor-options** _OPTIONS_
+> Pass extra options to the `refactor` executable
 
-**--default**
-> Generate default configuration ignoring current hints
+**-d**, **--default**
+> Print a default .hlint.yaml, ignoring all hints currently triggered, to stdout
 
 **-h**, **--hint** _FILE_
-> Use hints from specified file
+> Use hints from the specified file
 
-**--ignore** _HINT_
+**-i**, **--ignore** _HINT_
 > Ignore a specific hint
+
+**-s**, **--show**
+> Show all hints, including those normally skipped
+
+**-j**[_N_], **--threads**[**=**_N_]
+> Run on N processors (default: 1; -j alone uses all physical cores)
+
+**-c**, **--colour**, **--color**[**=**_always|never|auto_]
+> Control colored output
+
+**--json**
+> Output hint data as JSON
+
+**--sarif**
+> Output hint data as SARIF
+
+**-f**, **--find** _FILE_
+> Search a Haskell file for patterns to turn into new hints
+
+**-X** _EXTENSION_, **--language** _EXTENSION_
+> Enable or disable a GHC language extension (e.g. -XNoCPP)
+
+**--cpp-define** _NAME_[**=**_VALUE_], **--cpp-include** _DIR_
+> Configure the cpphs C preprocessor run over input files
 
 # DESCRIPTION
 
@@ -67,3 +103,11 @@ hlint was created by Neil Mitchell and first released around **2006**. It has be
 # SEE ALSO
 
 [ghc](/man/ghc)(1), [cabal](/man/cabal)(1), [stack](/man/stack)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ndmitchell/hlint)```
+
+```[Documentation](https://hackage.haskell.org/package/hlint)```
+
+<!-- verified: 2026-07-19 -->

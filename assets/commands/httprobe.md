@@ -53,7 +53,21 @@ takes a list of domains from stdin and probes for working HTTP and HTTPS servers
 
 **httprobe** takes a list of domains from stdin and probes for working HTTP and HTTPS servers. It outputs URLs of domains that respond to requests. Commonly used in bug bounty workflows after subdomain enumeration to filter down to live web servers before further testing.
 
+# CAVEATS
+
+Written in Go with minimal ongoing maintenance; **httpx** from ProjectDiscovery is a more actively developed alternative with additional probing and fingerprinting features.
+
+# HISTORY
+
+**httprobe** was written by **Tom Hudson** ("tomnomnom"), a security researcher known for a suite of small, composable Go tools (including **anew**, **waybackurls**, and **gf**) widely used in bug bounty and recon pipelines.
+
 # SEE ALSO
 
 [httpx](/man/httpx)(1), [curl](/man/curl)(1), [subfinder](/man/subfinder)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tomnomnom/httprobe)```
+
+<!-- verified: 2026-07-19 -->
 

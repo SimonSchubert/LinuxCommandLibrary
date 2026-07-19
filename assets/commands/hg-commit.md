@@ -48,11 +48,42 @@ saves changes to the repository as a new changeset
 **--close-branch**
 > Mark branch as closed.
 
+**-i**, **--interactive**
+> Interactively select which changes to include.
+
+**-I**, **--include** _PATTERN_
+> Include only files matching the given pattern.
+
+**-X**, **--exclude** _PATTERN_
+> Exclude files matching the given pattern.
+
+**-l**, **--logfile** _FILE_
+> Read commit message from file.
+
+**-s**, **--secret**
+> Use the secret phase for committing.
+
 # DESCRIPTION
 
 **hg commit** saves changes to the repository as a new changeset. With no files specified, all modified files are committed. Use **-m** for inline message or omit it to open an editor. The **--amend** flag modifies the parent commit instead of creating a new one.
 
+# CAVEATS
+
+Only tracked files are committed; new files need **hg add** or **-A** first. **--amend** rewrites history and should be avoided on already-shared changesets.
+
+# HISTORY
+
+Commit is a core **Mercurial** command, present since the project's first release in 2005.
+
 # SEE ALSO
 
-[hg](/man/hg)(1), [hg-add](/man/hg-add)(1), [hg-status](/man/hg-status)(1)
+[hg](/man/hg)(1), [hg-add](/man/hg-add)(1), [hg-status](/man/hg-status)(1), [hg-init](/man/hg-init)(1)
+
+# RESOURCES
+
+```[Source code](https://foss.heptapod.net/mercurial/mercurial-devel)```
+
+```[Documentation](https://wiki.mercurial-scm.org/)```
+
+<!-- verified: 2026-07-19 -->
 

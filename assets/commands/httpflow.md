@@ -59,8 +59,15 @@ Requires root for live capture. Cannot decode HTTPS. Privacy considerations appl
 
 # HISTORY
 
-httpflow was created as a tool for real-time HTTP traffic analysis and debugging.
+**httpflow** is an open-source utility built on **libpcap** that reassembles TCP streams to reconstruct HTTP requests and responses for real-time traffic analysis and debugging.
 
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [mitmproxy](/man/mitmproxy)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/six-ddc/httpflow)```
+
+<!-- verified: 2026-07-19 -->
+

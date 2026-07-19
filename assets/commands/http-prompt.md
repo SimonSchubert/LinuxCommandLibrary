@@ -1,6 +1,6 @@
 # TAGLINE
 
-interactive command-line HTTP client featuring autocomplete and syntax
+Interactive command-line HTTP client with autocomplete and syntax highlighting
 
 # TLDR
 

@@ -84,3 +84,9 @@ Some hardware detection requires root privileges. Full probing (--all) can take 
 # SEE ALSO
 
 [lshw](/man/lshw)(1), [lspci](/man/lspci)(8), [lsusb](/man/lsusb)(8), [dmidecode](/man/dmidecode)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/openSUSE/hwinfo)```
+
+<!-- verified: 2026-07-19 -->

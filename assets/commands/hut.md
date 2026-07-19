@@ -4,25 +4,29 @@ CLI for SourceHut services
 
 # TLDR
 
-**List builds**
+**Set up hut's configuration** (prompts for an OAuth2 access token)
+
+```hut init```
+
+**List your Git repositories**
+
+```hut git list```
+
+**Create a new Git repository**
+
+```hut git create [repo-name]```
+
+**List build jobs**
 
 ```hut builds list```
 
-**List todos**
+**List issue trackers**
 
 ```hut todo list```
 
-**Show project**
-
-```hut project show```
-
-**Create paste**
+**Create a paste from a file**
 
 ```hut paste create [file]```
-
-**List emails**
-
-```hut lists emails```
 
 # SYNOPSIS
 
@@ -31,39 +35,66 @@ CLI for SourceHut services
 # PARAMETERS
 
 _SERVICE_
-> SourceHut service (builds, todo, git, etc.).
+> SourceHut service to operate on.
 
 _COMMAND_
-> Service command.
+> Command within that service (commonly **list**, **create**, **show**, **update**, **delete**).
 
 **builds**
-> Build service.
-
-**todo**
-> Todo tracker.
+> Manage build jobs on builds.sr.ht.
 
 **git**
-> Git repositories.
+> Manage Git repositories on git.sr.ht.
+
+**hg**
+> Manage Mercurial repositories on hg.sr.ht.
+
+**lists**
+> Manage mailing lists and patchsets on lists.sr.ht.
+
+**meta**
+> Manage account settings, SSH/PGP keys, and profile info.
+
+**pages**
+> Publish static websites to pages.sr.ht.
 
 **paste**
-> Paste service.
+> Create and share text pastes on paste.sr.ht.
 
-**--help**
-> Display help information.
+**todo**
+> Manage issue trackers and tickets on todo.sr.ht.
+
+**graphql**
+> Run a raw GraphQL query against a given service.
+
+**init**
+> Set up hut's configuration file with an OAuth2 token.
+
+**export** / **import**
+> Back up or restore account data.
+
+**--config** _FILE_
+> Use a specific configuration file.
+
+**--instance** _NAME_
+> Select which sr.ht instance to use.
+
+**--debug**
+> Print the underlying GraphQL requests to stderr.
 
 # DESCRIPTION
 
-**hut** is the CLI for SourceHut services. It provides access to builds, todos, git hosting, mailing lists, and other sr.ht features.
+**hut** is the official command-line client for SourceHut (sr.ht) services. It provides access to builds, Git and Mercurial repositories, issue trackers, mailing lists, pastes, static site hosting, and account management, all backed by each service's GraphQL API.
 
-The tool enables automation and scripting of SourceHut workflows. It covers all major services in the platform.
+Commands follow a **hut** _service_ _command_ pattern, so most operations map directly onto one of the sr.ht services. The **graphql** subcommand also allows running arbitrary GraphQL queries against any service for tasks not otherwise covered.
 
 # CAVEATS
 
-Requires SourceHut account. Service-specific commands. OAuth authentication.
+Requires a SourceHut account and an OAuth2 access token, configured via **hut init**. Available services and their subcommands vary by sr.ht instance and hut version; run **hut help** or **hut** _service_ **--help** to see what's supported locally.
 
 # HISTORY
 
-hut is the official CLI for **SourceHut** (sr.ht), a software development platform by **Drew DeVault**.
+hut is the official CLI for **SourceHut** (sr.ht), a lightweight, privacy-focused software development platform created by **Drew DeVault**. It is written in Go and replaced earlier ad-hoc scripts for scripting SourceHut services from the command line.
 
 # SEE ALSO
 

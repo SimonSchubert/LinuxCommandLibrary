@@ -26,35 +26,37 @@ creates a fork of a GitHub repository
 
 # PARAMETERS
 
-_REPOSITORY_
-> Repository to fork.
-
 **--no-remote**
-> Don't add remote.
+> Skip adding a git remote for the fork.
 
-**--org** _ORG_
-> Fork to organization.
+**--remote-name** _REMOTE_
+> Set the name for the new git remote.
 
-**--remote-name** _NAME_
-> Remote name (default: origin).
-
-**--help**
-> Display help information.
+**--org** _ORGANIZATION_
+> Fork the repository within this organization instead of your account.
 
 # DESCRIPTION
 
 **hub fork** creates a fork of a GitHub repository. It adds a remote pointing to your fork automatically.
 
-The command forks to your account or specified organization. It sets up the remote for pushing to your fork.
+The command forks the repository detected in the current directory to your account or the specified organization, then adds a git remote for it (named **origin** by default, unless **origin** is already taken, in which case it uses your GitHub username).
 
 # CAVEATS
 
-Part of hub tool. Requires GitHub authentication. Creates copy under your account.
+Part of **hub**, which is deprecated in favor of the official GitHub CLI (**gh**); use **gh repo fork** instead. Requires GitHub authentication.
 
 # HISTORY
 
-hub fork is part of **hub**, GitHub's original CLI for repository operations.
+hub fork is part of **hub**, GitHub's original command-line wrapper around git for repository operations, created in 2012.
 
 # SEE ALSO
 
 [hub](/man/hub)(1), [gh](/man/gh)(1), [hub-clone](/man/hub-clone)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/github/hub)```
+
+```[Homepage](https://hub.github.com/)```
+
+<!-- verified: 2026-07-19 -->

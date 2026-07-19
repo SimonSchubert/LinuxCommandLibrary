@@ -59,3 +59,13 @@ help has been part of **Bash** since early versions, providing built-in document
 # SEE ALSO
 
 [man](/man/man)(1), [info](/man/info)(1), [bash](/man/bash)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/bash.git)```
+
+```[Homepage](https://www.gnu.org/software/bash/)```
+
+```[Documentation](https://www.gnu.org/software/bash/manual/)```
+
+<!-- verified: 2026-07-19 -->
