@@ -3481,6 +3481,7 @@ im-launch.md
 imagemagick.md
 imagemin.md
 imapsync.md
+imessage-cli.md
 img2pdf.md
 img2sixel.md
 img2txt.md
@@ -8769,6 +8770,7 @@ zgrep.md
 zic.md
 zig.md
 zigfetch.md
+ziggity.md
 zile.md
 zinc.md
 zinit.md
