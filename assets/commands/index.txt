@@ -1111,6 +1111,7 @@ cgset.md
 chafa.md
 chage.md
 chainctl.md
+chalie.md
 chalk-cli.md
 chardet.md
 charles.md
@@ -4653,6 +4654,7 @@ montage.md
 moo.md
 moon-buggy.md
 moonshine-voice.md
+moonshine.md
 mopac.md
 more.md
 moreutils.md
