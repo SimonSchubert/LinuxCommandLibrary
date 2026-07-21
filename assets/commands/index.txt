@@ -1071,6 +1071,9 @@ cbatticon.md
 cbindgen.md
 cbonsai.md
 cbt.md
+cbxy-detect.md
+cbxy-editor.md
+cbxy-reader.md
 cc.md
 ccache.md
 ccat.md
@@ -3574,6 +3577,7 @@ interpreter.md
 intro.md
 invoke-rc.d.md
 inxi.md
+inz.md
 ionic.md
 ionice.md
 ioping.md
@@ -5186,6 +5190,7 @@ objcopy.md
 objdump.md
 obs.md
 obscura.md
+observal.md
 obsidian.md
 oc.md
 ocaml.md
@@ -7730,6 +7735,7 @@ tgsend.md
 tgt.md
 tgutil.md
 thc-ipv6.md
+the0.md
 theHarvester.md
 theattyr.md
 thinkjettopbm.md
