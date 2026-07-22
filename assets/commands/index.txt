@@ -1951,6 +1951,7 @@ dstat.md
 dtach.md
 dtc.md
 dte.md
+dtlv.md
 dtop.md
 dtrx.md
 du.md
@@ -2034,6 +2035,7 @@ edgepaint.md
 edit.md
 editcap.md
 editor.md
+edky.md
 edquota.md
 efibootdump.md
 efibootmgr.md
@@ -2407,6 +2409,7 @@ fprintd-verify.md
 fprintd.md
 fpsync.md
 fq.md
+fractal.md
 free.md
 freecad.md
 freeramdisk.md
@@ -3541,6 +3544,7 @@ indxbib.md
 infection.md
 inference-snap.md
 inference-snaps.md
+inflexa.md
 influx.md
 info.md
 infocmp.md
@@ -6849,6 +6853,7 @@ ruff.md
 ruget.md
 rum.md
 run-help.md
+run-kit.md
 run-mailcap.md
 run0.md
 run_init.md
@@ -7118,6 +7123,7 @@ shards.md
 shasum.md
 shc.md
 shellcheck.md
+shelly.md
 sherlock.md
 shfmt.md
 shiny-mirrors.md
@@ -7957,6 +7963,7 @@ tuir.md
 tuisky.md
 tuistash.md
 tukai.md
+tund-cli.md
 tune.exfat.md
 tune2fs.md
 tuned-adm.md
