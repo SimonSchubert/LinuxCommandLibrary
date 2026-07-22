@@ -2,6 +2,7 @@ package com.linuxcommandlibrary.app.ui.screens.commanddetail
 
 import com.linuxcommandlibrary.app.data.CommandSectionInfo
 import com.linuxcommandlibrary.shared.CommandElement
+import com.linuxcommandlibrary.shared.InstallEntry
 import com.linuxcommandlibrary.shared.TextElement
 import com.linuxcommandlibrary.shared.TipSectionElement
 import kotlinx.collections.immutable.persistentListOf
@@ -108,6 +109,39 @@ class ManPageSearchTest {
 
         val asMarkdown = findManPageMatches(sections, emptyList(), emptyList(), "grep")
         assertEquals(2, asMarkdown.size, "with no chip data both sections fall back to markdown")
+    }
+
+    @Test
+    fun skipsInstallWhenRowsArePresent() {
+        val sections = listOf(
+            section("INSTALL", text(TextElement.Plain("sudo apt install grep"))),
+        )
+        val entries = listOf(
+            InstallEntry(
+                manager = "apt",
+                command = "sudo apt install grep",
+                packageName = "grep",
+                packageUrl = "https://packages.debian.org/search?keywords=grep",
+            ),
+        )
+
+        val asRows = findManPageMatches(
+            sections = sections,
+            seeAlsoCommands = emptyList(),
+            resources = emptyList(),
+            query = "grep",
+            installEntries = entries,
+        )
+        assertEquals(0, asRows.size, "install rows hide markdown, so nothing to find")
+
+        val asMarkdown = findManPageMatches(
+            sections = sections,
+            seeAlsoCommands = emptyList(),
+            resources = emptyList(),
+            query = "grep",
+            installEntries = emptyList(),
+        )
+        assertEquals(1, asMarkdown.size, "with no install rows section falls back to markdown")
     }
 
     @Test

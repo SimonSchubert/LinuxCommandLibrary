@@ -494,6 +494,23 @@ pre {
     margin-bottom: auto;
 }
 
+/* INSTALL section: reuse code-wrapper layout (command + copy, vertically centered) */
+.install-list {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin: 0.5em 0 1em 0;
+}
+
+.install-list > .code-wrapper.install-row {
+	align-items: center;
+	margin: 0;
+}
+
+.install-list .install-command.code {
+	margin-bottom: 0;
+}
+
 .code-preview {
 	color: #fff;
 	background-color: #000;

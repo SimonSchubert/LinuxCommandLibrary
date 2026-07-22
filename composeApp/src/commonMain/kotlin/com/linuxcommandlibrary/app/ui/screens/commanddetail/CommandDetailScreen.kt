@@ -22,8 +22,10 @@ import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SuggestionChip
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -43,17 +45,23 @@ import androidx.compose.ui.layout.LayoutCoordinates
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.CommandSectionInfo
+import com.linuxcommandlibrary.app.platform.shareButtonDescription
+import com.linuxcommandlibrary.app.platform.shareButtonIcon
 import com.linuxcommandlibrary.app.ui.AppIcons
 import com.linuxcommandlibrary.app.ui.composables.ElementHighlight
 import com.linuxcommandlibrary.app.ui.composables.MatchIndex
 import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
 import com.linuxcommandlibrary.app.ui.composables.WithScrollbar
 import com.linuxcommandlibrary.app.ui.composables.rememberDebouncedClick
+import com.linuxcommandlibrary.shared.InstallEntry
 import com.linuxcommandlibrary.shared.TipSectionElement
+import com.linuxcommandlibrary.shared.platform.ShareHandler
 import kotlinx.collections.immutable.ImmutableList
+import org.koin.compose.koinInject
 
 /** Leaves the jumped-to match a little below the top edge instead of flush against it. */
 private val MATCH_SCROLL_MARGIN = 48.dp
@@ -93,13 +101,20 @@ fun CommandDetailContent(
     val listState = rememberLazyListState()
     val isSearching = searchQuery.isNotEmpty()
 
-    val matchIndex = remember(uiState.sections, uiState.seeAlsoCommands, uiState.resources, searchQuery) {
+    val matchIndex = remember(
+        uiState.sections,
+        uiState.seeAlsoCommands,
+        uiState.resources,
+        uiState.installEntries,
+        searchQuery,
+    ) {
         MatchIndex(
             findManPageMatches(
                 sections = uiState.sections,
                 seeAlsoCommands = uiState.seeAlsoCommands,
                 resources = uiState.resources,
                 query = searchQuery,
+                installEntries = uiState.installEntries,
             ),
         )
     }
@@ -173,6 +188,7 @@ fun CommandDetailContent(
                         isExpanded = isSearching || (uiState.expandedSectionsMap[section.id] ?: false),
                         seeAlsoCommands = uiState.seeAlsoCommands,
                         resources = uiState.resources,
+                        installEntries = uiState.installEntries,
                         onToggleExpanded = onToggleExpanded,
                         onNavigate = onNavigate,
                         highlights = highlights,
@@ -192,6 +208,7 @@ private fun CommandSectionColumn(
     isExpanded: Boolean,
     seeAlsoCommands: ImmutableList<String>,
     resources: ImmutableList<ResourceLink>,
+    installEntries: ImmutableList<InstallEntry>,
     onToggleExpanded: (Long) -> Unit,
     onNavigate: (NavEvent) -> Unit,
     highlights: Map<Int, ElementHighlight>? = null,
@@ -232,8 +249,8 @@ private fun CommandSectionColumn(
             ),
             elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
         ) {
-            when (section.title) {
-                "SEE ALSO" -> SeeAlsoSectionContent(
+            when {
+                section.title == "SEE ALSO" -> SeeAlsoSectionContent(
                     parsedContent = section.parsedContent,
                     seeAlsoCommands = seeAlsoCommands,
                     onNavigate = onNavigate,
@@ -241,9 +258,17 @@ private fun CommandSectionColumn(
                     onElementPositioned = onElementPositioned,
                 )
 
-                "RESOURCES" -> ResourcesSectionContent(
+                section.title == "RESOURCES" -> ResourcesSectionContent(
                     parsedContent = section.parsedContent,
                     resources = resources,
+                    onNavigate = onNavigate,
+                    highlights = highlights,
+                    onElementPositioned = onElementPositioned,
+                )
+
+                section.title.equals("INSTALL", ignoreCase = true) -> InstallSectionContent(
+                    parsedContent = section.parsedContent,
+                    installEntries = installEntries,
                     onNavigate = onNavigate,
                     highlights = highlights,
                     onElementPositioned = onElementPositioned,
@@ -334,6 +359,75 @@ private fun ResourcesSectionContent(
             highlights = highlights,
             onElementPositioned = onElementPositioned,
         )
+    }
+}
+
+@Composable
+private fun InstallSectionContent(
+    parsedContent: ImmutableList<TipSectionElement>,
+    installEntries: ImmutableList<InstallEntry>,
+    onNavigate: (NavEvent) -> Unit,
+    highlights: Map<Int, ElementHighlight>? = null,
+    onElementPositioned: ((Int, LayoutCoordinates) -> Unit)? = null,
+) {
+    if (installEntries.isEmpty()) {
+        DefaultSectionContent(
+            parsedContent = parsedContent,
+            onNavigate = onNavigate,
+            highlights = highlights,
+            onElementPositioned = onElementPositioned,
+        )
+        return
+    }
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 12.dp, vertical = 8.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        installEntries.forEach { entry ->
+            InstallEntryRow(entry = entry)
+        }
+    }
+}
+
+@Composable
+private fun InstallEntryRow(entry: InstallEntry) {
+    val shareHandler: ShareHandler = koinInject()
+    val onCopy = rememberDebouncedClick {
+        shareHandler.shareText(entry.command)
+    }
+
+    // Same shape as CommandView: command + copy only.
+    Surface(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(12.dp),
+        color = MaterialTheme.colorScheme.surfaceContainerHigh,
+    ) {
+        Row(
+            modifier = Modifier.padding(start = 12.dp, end = 4.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Text(
+                text = entry.command,
+                style = MaterialTheme.typography.titleSmall.copy(fontFamily = FontFamily.Monospace),
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(vertical = 8.dp),
+            )
+            IconButton(
+                modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
+                onClick = onCopy,
+            ) {
+                Icon(
+                    imageVector = shareButtonIcon,
+                    contentDescription = shareButtonDescription,
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        }
     }
 }
 

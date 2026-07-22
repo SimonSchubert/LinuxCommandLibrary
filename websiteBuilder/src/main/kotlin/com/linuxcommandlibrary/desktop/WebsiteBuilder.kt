@@ -3,6 +3,7 @@ package com.linuxcommandlibrary.desktop
 import com.linuxcommandlibrary.shared.BasicInfo
 import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.CommandInfo
+import com.linuxcommandlibrary.shared.InstallEntries
 import com.linuxcommandlibrary.shared.MarkdownParser
 import com.linuxcommandlibrary.shared.TipInfo
 import com.linuxcommandlibrary.shared.TipSectionElement
@@ -119,7 +120,7 @@ class WebsiteBuilder(
     private val pastSponsors: List<Pair<String, String>> = emptyList(),
 ) {
 
-    private val cacheVersion = 16
+    private val cacheVersion = 19
 
     private val preInstalledCommands: Set<String>
     private val installableCommands: Set<String>
@@ -771,6 +772,45 @@ class WebsiteBuilder(
                                                             target = ATarget.blank
                                                             rel = "noopener"
                                                             text(link.command)
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            "INSTALL" -> {
+                                                val entries = InstallEntries.parseFromElements(section.elements)
+                                                if (entries.isEmpty()) {
+                                                    p {
+                                                        unsafe {
+                                                            +HtmlMarkdownRenderer.renderSections(section.elements)
+                                                        }
+                                                    }
+                                                } else {
+                                                    div {
+                                                        classes = setOf("install-list")
+                                                        entries.forEach { entry ->
+                                                            // Same pattern as code-wrapper: command + copy.
+                                                            val escapedCommand = entry.command
+                                                                .replace("&", "&amp;")
+                                                                .replace("<", "&lt;")
+                                                                .replace(">", "&gt;")
+                                                                .replace("\"", "&quot;")
+                                                                .replace("'", "&#039;")
+                                                            div {
+                                                                classes = setOf("code-wrapper", "install-row")
+                                                                span {
+                                                                    classes = setOf("code", "install-command")
+                                                                    text(entry.command)
+                                                                }
+                                                                div {
+                                                                    onClick = "javascript:copy('$escapedCommand')"
+                                                                    classes = setOf("copy-button")
+                                                                    attributes["title"] = "Copy install command"
+                                                                    unsafe {
+                                                                        +"""<img src="/images/icon-copy.svg" alt="copy" width="24" height="24">"""
+                                                                    }
+                                                                }
+                                                            }
                                                         }
                                                     }
                                                 }

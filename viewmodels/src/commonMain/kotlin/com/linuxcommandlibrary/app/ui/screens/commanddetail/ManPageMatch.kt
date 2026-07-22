@@ -1,6 +1,7 @@
 package com.linuxcommandlibrary.app.ui.screens.commanddetail
 
 import com.linuxcommandlibrary.app.data.CommandSectionInfo
+import com.linuxcommandlibrary.shared.InstallEntry
 import com.linuxcommandlibrary.shared.TipSectionElement
 import com.linuxcommandlibrary.shared.tableCellsInRenderOrder
 import com.linuxcommandlibrary.shared.toPlainText
@@ -37,16 +38,18 @@ fun findManPageMatches(
     seeAlsoCommands: List<String>,
     resources: List<ResourceLink>,
     query: String,
+    installEntries: List<InstallEntry> = emptyList(),
 ): List<ManPageMatch> {
     if (query.isEmpty()) return emptyList()
 
     val matches = mutableListOf<ManPageMatch>()
     sections.forEachIndexed { sectionIndex, section ->
-        // SEE ALSO and RESOURCES render as chips rather than text when they have data, on both
-        // platforms. Their markdown is then never on screen and must not be counted - otherwise
-        // the counter promises hits the user can never be scrolled to.
+        // SEE ALSO, RESOURCES, and INSTALL render as chips/rows rather than markdown when they
+        // have data. That markdown is never on screen and must not be counted - otherwise the
+        // counter promises hits the user can never be scrolled to.
         val rendersAsChips = (section.title == "SEE ALSO" && seeAlsoCommands.isNotEmpty()) ||
-            (section.title == "RESOURCES" && resources.isNotEmpty())
+            (section.title == "RESOURCES" && resources.isNotEmpty()) ||
+            (section.title.equals("INSTALL", ignoreCase = true) && installEntries.isNotEmpty())
         if (rendersAsChips) return@forEachIndexed
 
         section.parsedContent.forEachIndexed { elementIndex, element ->

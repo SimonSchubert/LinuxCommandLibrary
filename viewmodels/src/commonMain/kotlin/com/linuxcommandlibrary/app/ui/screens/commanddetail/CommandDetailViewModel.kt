@@ -3,6 +3,7 @@ package com.linuxcommandlibrary.app.ui.screens.commanddetail
 import com.linuxcommandlibrary.app.data.CommandsRepository
 import com.linuxcommandlibrary.app.data.DataManager
 import com.linuxcommandlibrary.shared.CommandElement
+import com.linuxcommandlibrary.shared.InstallEntries
 import com.linuxcommandlibrary.shared.TipSectionElement
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
@@ -50,6 +51,11 @@ class CommandDetailViewModel(
                 ?.let { extractResourceLinks(it) }
                 ?: persistentListOf()
 
+            val installSection = sectionsData.find { it.title.equals("INSTALL", ignoreCase = true) }
+            val installEntries = installSection?.parsedContent
+                ?.let { InstallEntries.parseFromElements(it) }
+                ?: persistentListOf()
+
             _state.update {
                 CommandDetailUiState(
                     sections = sectionsData,
@@ -59,6 +65,7 @@ class CommandDetailViewModel(
                     isBookmarked = dataManager.hasBookmark(commandName),
                     seeAlsoCommands = seeAlsoCommands,
                     resources = resources,
+                    installEntries = installEntries,
                 )
             }
         }

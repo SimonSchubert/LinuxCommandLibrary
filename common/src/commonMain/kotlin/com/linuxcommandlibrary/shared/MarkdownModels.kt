@@ -59,6 +59,7 @@ fun getSectionSortPriority(title: String): Int = when (title.uppercase()) {
     "OPTIONS" -> 5
     "EXAMPLES" -> 6
     "CONFIGURATION" -> 7
+    "INSTALL" -> 89
     "CAVEATS" -> 90
     "HISTORY" -> 91
     "AUTHOR" -> 92

@@ -87,6 +87,14 @@ struct CommandDetailView: View {
                                 onTapLink: store.tapLink,
                                 onTapUrl: store.tapUrl
                             )
+                        } else if section.title.uppercased() == "INSTALL" {
+                            InstallRows(
+                                entries: store.state.installEntries,
+                                fallback: section.parsedContent,
+                                onTapMan: store.tapMan,
+                                onTapLink: store.tapLink,
+                                onTapUrl: store.tapUrl
+                            )
                         } else {
                             MarkdownView(
                                 elements: section.parsedContent,
@@ -232,6 +240,64 @@ private struct ResourcesChips: View {
     }
 }
 
+/// Package-manager install lines: copy command (primary) + open package index (secondary).
+private struct InstallRows: View {
+    let entries: [InstallEntry]
+    let fallback: [TipSectionElement]
+    let onTapMan: (String) -> Void
+    let onTapLink: (String) -> Void
+    let onTapUrl: (String) -> Void
+
+    var body: some View {
+        if entries.isEmpty {
+            MarkdownView(
+                elements: fallback,
+                onTapMan: onTapMan,
+                onTapLink: onTapLink,
+                onTapUrl: onTapUrl
+            )
+        } else {
+            VStack(alignment: .leading, spacing: 8) {
+                ForEach(Array(entries.enumerated()), id: \.offset) { _, entry in
+                    InstallEntryRow(entry: entry)
+                }
+            }
+            .padding(.vertical, 4)
+        }
+    }
+}
+
+private struct InstallEntryRow: View {
+    let entry: InstallEntry
+
+    var body: some View {
+        // Command + copy only, vertically centered like other code rows.
+        HStack(alignment: .center, spacing: 8) {
+            Text(entry.command)
+                .font(.shareTechMono(size: 14))
+                .foregroundColor(.brandRed)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .textSelection(.enabled)
+
+            Button {
+                UIPasteboard.general.string = entry.command
+                Haptics.selection()
+            } label: {
+                Image(systemName: "doc.on.doc")
+                    .font(.body)
+                    .foregroundColor(.secondary)
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Copy install command")
+        }
+        .padding(.leading, 12)
+        .padding(.trailing, 4)
+        .padding(.vertical, 8)
+        .background(Color.secondary.opacity(0.1))
+        .cornerRadius(8)
+    }
+}
+
 /// Wrapping flow layout — places children left-to-right, breaking to a new row
 /// when the next child would overflow the proposed width. Used by See Also chips.
 private struct FlowLayout: Layout {
@@ -305,7 +371,8 @@ final class CommandDetailStore: ObservableObject {
         expandedSectionsMap: [:],
         isBookmarked: false,
         seeAlsoCommands: [],
-        resources: []
+        resources: [],
+        installEntries: []
     )
 
     private var stateTask: Task<Void, Never>?
@@ -378,7 +445,8 @@ final class CommandDetailStore: ObservableObject {
                 sections: state.sections,
                 seeAlsoCommands: state.seeAlsoCommands,
                 resources: state.resources,
-                query: searchQuery
+                query: searchQuery,
+                installEntries: state.installEntries
             )
         )
     }
