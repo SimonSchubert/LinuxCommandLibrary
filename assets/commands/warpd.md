@@ -119,6 +119,12 @@ Additional modes include **history mode** which shows hints over previously sele
 
 Requires X11 or Wayland (with wlroots-based compositors). The daemon must be running for activation key bindings to work. Key bindings may conflict with other applications. Hint mode may not label all clickable elements depending on the platform.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#warpd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdotool](/man/xdotool)(1), [keynav](/man/keynav)(1), [xbindkeys](/man/xbindkeys)(1)

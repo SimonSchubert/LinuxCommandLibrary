@@ -68,6 +68,22 @@ Only lists entries in terminfo format, not old termcap files. The default direct
 
 **toe** was developed as part of the ncurses library, which is a free software emulation of curses. The command name is a developer's pun: tic, tac (now tack), toe, forming the classic game reference. The terminfo system replaced the older termcap database to overcome size limitations and improve performance.
 
+# INSTALL
+
+```apt: sudo apt install ncurses-bin```
+
+```dnf: sudo dnf install ncurses```
+
+```pacman: sudo pacman -S ncurses```
+
+```apk: sudo apk add ncurses```
+
+```brew: brew install ncurses```
+
+```nix: nix profile install nixpkgs#ncurses```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tic](/man/tic)(1), [infocmp](/man/infocmp)(1), [tput](/man/tput)(1), [tset](/man/tset)(1)

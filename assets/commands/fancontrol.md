@@ -57,6 +57,12 @@ The daemon continuously monitors hardware temperature sensors and adjusts PWM-co
 
 Requires configured hardware monitoring (lm-sensors). Run pwmconfig first to detect fans and sensors and generate the configuration file. Requires root privileges since it accesses hardware PWM controls. The daemon runs in the foreground by default; use a systemd service or init script to run it as a background service.
 
+# INSTALL
+
+```apk: sudo apk add lm-sensors-fancontrol```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sensors](/man/sensors)(1), [hwinfo](/man/hwinfo)(1)

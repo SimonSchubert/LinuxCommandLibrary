@@ -69,6 +69,16 @@ Fish shell only. Some plugins may conflict. No automatic dependency resolution.
 
 fisher was created by **Jorge Bucaran** as a minimal, fast plugin manager for fish. It replaced the older Oh My Fish framework approach with a simpler, more direct installation method.
 
+# INSTALL
+
+```pacman: sudo pacman -S fisher```
+
+```apk: sudo apk add fisher```
+
+```brew: brew install fisher```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fish](/man/fish)(1), [omf](/man/omf)(1)

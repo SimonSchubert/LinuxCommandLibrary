@@ -71,6 +71,17 @@ Messages must be explicitly deleted after processing; SQS does not auto-delete c
 
 Amazon SQS launched in **July 2006** as one of AWS's first services, predating S3. It was redesigned in **2014** with significant improvements to throughput and latency. FIFO queues were added in **2016** to support ordered message processing.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-sns](/man/aws-sns)(1), [aws-lambda](/man/aws-lambda)(1)

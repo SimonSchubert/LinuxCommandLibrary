@@ -83,6 +83,14 @@ Large application size due to bundled Chromium. High memory usage. Security requ
 
 Electron was originally developed by **GitHub** as **Atom Shell** for the Atom editor in **2013**. It was renamed to Electron in **2015** and released as open source. The project revolutionized desktop app development by enabling web developers to build native applications.
 
+# INSTALL
+
+```pacman: sudo pacman -S electron```
+
+```nix: nix profile install nixpkgs#electron```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [npm](/man/npm)(1), [tauri](/man/tauri)(1)

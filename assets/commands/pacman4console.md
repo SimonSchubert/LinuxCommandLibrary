@@ -57,6 +57,12 @@ Requires a terminal that supports the ncurses library. Terminal size must be suf
 
 Created as a terminal-based recreation of the classic Pacman game, designed to run on console and embedded systems.
 
+# INSTALL
+
+```aur: yay -S pacman4console```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sl](/man/sl)(1), [moon-buggy](/man/moon-buggy)(1), [nsnake](/man/nsnake)(1), [ninvaders](/man/ninvaders)(1), [2048](/man/2048)(1)

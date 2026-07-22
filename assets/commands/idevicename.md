@@ -55,6 +55,16 @@ Part of libimobiledevice. Device must be paired. Name syncs after change.
 
 idevicename is part of **libimobiledevice** for iOS device property management.
 
+# INSTALL
+
+```apt: sudo apt install libimobiledevice-utils```
+
+```dnf: sudo dnf install libimobiledevice-utils```
+
+```apk: sudo apk add libimobiledevice-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [idevice_id](/man/idevice_id)(1), [ideviceinfo](/man/ideviceinfo)(1), [idevicepair](/man/idevicepair)(1)

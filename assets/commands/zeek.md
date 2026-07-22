@@ -80,6 +80,14 @@ Live capture requires root or appropriate capabilities. Pcap file analysis runs 
 
 Log rotation and management should be configured for production deployments.
 
+# INSTALL
+
+```brew: brew install zeek```
+
+```nix: nix profile install nixpkgs#zeek```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [tshark](/man/tshark)(1), [suricata](/man/suricata)(8)

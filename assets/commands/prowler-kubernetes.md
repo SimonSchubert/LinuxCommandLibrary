@@ -54,6 +54,14 @@ The tool connects to the cluster using the current kubeconfig context and evalua
 
 Requires appropriate RBAC permissions to read cluster resources. Some checks need cluster-admin access. Results reflect the current state at scan time. The `--context` flag must match an existing kubeconfig context.
 
+# INSTALL
+
+```brew: brew install prowler```
+
+```nix: nix profile install nixpkgs#prowler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [prowler](/man/prowler)(1), [kubectl](/man/kubectl)(1)

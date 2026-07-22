@@ -110,6 +110,16 @@ Format: "SSL,Email,Object Signing" (e.g., "CT,,")
 
 Requires nss-tools package. Use sql: prefix for modern databases. Handles sensitive keys; run with minimal privileges.
 
+# INSTALL
+
+```apt: sudo apt install libnss3-tools```
+
+```dnf: sudo dnf install nss-tools```
+
+```apk: sudo apk add nss-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [modutil](/man/modutil)(1)

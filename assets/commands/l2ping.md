@@ -62,6 +62,24 @@ sends L2CAP echo requests to a Bluetooth device, similar to ping for IP networks
 
 Requires root privileges. Not all Bluetooth devices respond to L2CAP pings. The Bluetooth adapter must be up and enabled.
 
+# INSTALL
+
+```apt: sudo apt install bluez```
+
+```dnf: sudo dnf install bluez```
+
+```pacman: sudo pacman -S bluez```
+
+```apk: sudo apk add bluez```
+
+```zypper: sudo zypper install bluez```
+
+```brew: brew install bluez```
+
+```nix: nix profile install nixpkgs#bluez```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hcitool](/man/hcitool)(1), [bluetoothctl](/man/bluetoothctl)(1)

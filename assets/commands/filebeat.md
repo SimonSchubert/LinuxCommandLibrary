@@ -128,6 +128,14 @@ Configuration files require strict permissions (owner read/write only) by defaul
 
 Filebeat is part of the **Beats** family of lightweight data shippers developed by **Elastic**. It evolved from Logstash Forwarder (Lumberjack) to provide a more resource-efficient solution for log collection. The Beats platform was introduced around **2015**, with Filebeat becoming the primary choice for log shipping in the Elastic Stack.
 
+# INSTALL
+
+```brew: brew install filebeat```
+
+```nix: nix profile install nixpkgs#filebeat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [logstash](/man/logstash)(1), [elasticsearch](/man/elasticsearch)(1), [journalctl](/man/journalctl)(1)

@@ -44,6 +44,18 @@ Report for **specific service**
 
 Requires service-specific filter scripts. Output volume can be large with high detail levels.
 
+# INSTALL
+
+```dnf: sudo dnf install logwatch```
+
+```pacman: sudo pacman -S logwatch```
+
+```apk: sudo apk add logwatch```
+
+```zypper: sudo zypper install logwatch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [journalctl](/man/journalctl)(1), [logrotate](/man/logrotate)(8)

@@ -50,6 +50,24 @@ If the merge conflicts, it leaves a temporary `<secondary>-rebased-on-top-of-<pr
 
 Part of git-extras. Because it uses one merge instead of replaying commits, individual commit-level history from the secondary branch relative to the primary is not preserved the way an interactive rebase would.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-rebase](/man/git-rebase)(1), [git-merge](/man/git-merge)(1), [git-extras](/man/git-extras)(1)

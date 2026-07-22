@@ -126,6 +126,20 @@ Arguments after `--` are forwarded to the compiled benchmark binary, which is ho
 
 The built-in `#[bench]` attribute is unstable and requires nightly Rust; on stable, use a custom harness such as **Criterion** declared with `harness = false` in `Cargo.toml`. The `--jobs` flag controls build parallelism, not benchmark execution. Results can be noisy without CPU pinning and a quiet system.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-test](/man/cargo-test)(1), [cargo-build](/man/cargo-build)(1)

@@ -73,6 +73,22 @@ Requires KDE libraries. Three-way merge needs common ancestor. Large files may b
 
 KDiff3 was created by **Joachim Eibl** as a Qt/KDE application for comparing and merging files. It became a popular choice for resolving version control conflicts.
 
+# INSTALL
+
+```apt: sudo apt install kdiff3```
+
+```dnf: sudo dnf install kdiff3```
+
+```pacman: sudo pacman -S kdiff3```
+
+```apk: sudo apk add kdiff3```
+
+```zypper: sudo zypper install kdiff3```
+
+```nix: nix profile install nixpkgs#kdiff3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [meld](/man/meld)(1), [vimdiff](/man/vimdiff)(1), [git-mergetool](/man/git-mergetool)(1)

@@ -91,6 +91,12 @@ Requires Unicode/ANSI terminal support. Color accuracy depends on terminal. Gene
 
 pokemon-colorscripts was created by **phoney badger** as a fun terminal decoration tool, inspired by ASCII art traditions.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pokemon-colorscripts```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neofetch](/man/neofetch)(1), [cowsay](/man/cowsay)(1), [lolcat](/man/lolcat)(1)

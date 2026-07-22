@@ -43,6 +43,14 @@ Run with **verbose** output
 
 Part of e2fsprogs package. The log file is created with timestamps for start, end, and command exit status.
 
+# INSTALL
+
+```apt: sudo apt install logsave```
+
+```apk: sudo apk add e2fsprogs-extra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [script](/man/script)(1), [tee](/man/tee)(1), [logger](/man/logger)(1)

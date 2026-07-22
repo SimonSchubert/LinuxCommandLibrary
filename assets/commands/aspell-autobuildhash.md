@@ -48,6 +48,23 @@ Requires root privileges to write to system dictionary directories. Automaticall
 
 **aspell-autobuildhash** is provided by the Debian **dictionaries-common** package, written by Agustin Martin, to automatically regenerate aspell hash files after dictionary updates.
 
+# INSTALL
+
+```apt: sudo apt install aspell```
+
+```dnf: sudo dnf install aspell```
+
+```pacman: sudo pacman -S aspell```
+
+```apk: sudo apk add aspell```
+
+```zypper: sudo zypper install aspell```
+
+```brew: brew install aspell```
+
+```nix: nix profile install nixpkgs#aspell```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aspell](/man/aspell)(1), [aspell-import](/man/aspell-import)(1)

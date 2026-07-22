@@ -35,6 +35,12 @@ Only available on OpenWRT/LEDE systems. Interface names correspond to netifd log
 
 ifstatus is part of netifd, the OpenWRT network interface daemon introduced in OpenWRT **12.09** (Attitude Adjustment). It replaced the older hotplug-based network configuration system with a more robust daemon-based approach.
 
+# INSTALL
+
+```aur: yay -S ifstatus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ubus](/man/ubus)(1), [uci](/man/uci)(1)

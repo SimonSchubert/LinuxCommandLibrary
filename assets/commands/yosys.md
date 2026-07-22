@@ -108,6 +108,20 @@ SystemVerilog support is limited. Complex designs may require multiple synthesis
 
 **yosys** was created by Clifford Wolf (now Claire Wolf) and released in 2012. It became the foundation of open-source FPGA toolchains, enabling fully open synthesis flows. The project is now maintained by YosysHQ and remains central to the open FPGA ecosystem.
 
+# INSTALL
+
+```apt: sudo apt install yosys```
+
+```dnf: sudo dnf install yosys```
+
+```pacman: sudo pacman -S yosys```
+
+```brew: brew install yosys```
+
+```nix: nix profile install nixpkgs#yosys```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iverilog](/man/iverilog)(1), [verilator](/man/verilator)(1)

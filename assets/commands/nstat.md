@@ -72,6 +72,22 @@ Statistics include packet counts, errors, retransmissions, and various protocol-
 
 Incremental mode depends on the history file; first run shows all zeros. The **-a** flag shows totals since boot, ignoring history. Part of the iproute2 package.
 
+# INSTALL
+
+```apt: sudo apt install iproute2```
+
+```pacman: sudo pacman -S iproute2```
+
+```apk: sudo apk add iproute2```
+
+```zypper: sudo zypper install iproute2```
+
+```brew: brew install iproute2```
+
+```nix: nix profile install nixpkgs#iproute2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ss](/man/ss)(8), [ip](/man/ip)(8), [netstat](/man/netstat)(8), [sar](/man/sar)(1)

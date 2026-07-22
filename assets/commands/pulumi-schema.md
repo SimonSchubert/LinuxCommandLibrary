@@ -21,6 +21,18 @@ Validate Pulumi package schemas
 
 **pulumi schema** manages Pulumi package schemas. Schemas define resource types and their properties for providers. Primarily used by provider authors for validation.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-plugin](/man/pulumi-plugin)(1)

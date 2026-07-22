@@ -63,6 +63,14 @@ package installation manager
 
 Packages are searched in configured channels, with defaults searched first unless a specific channel is specified.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-remove](/man/conda-remove)(1), [conda-update](/man/conda-update)(1)

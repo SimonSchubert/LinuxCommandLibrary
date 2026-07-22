@@ -56,6 +56,12 @@ When credentials are supplied (clear-text password, NTLM hash, or Kerberos ticke
 
 For **authorized testing only**. Some services restrict anonymous endpoint enumeration on modern Windows builds (e.g., **RestrictRemoteSAM**), so empty output does not mean no services are running.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [impacket-rpcmap](/man/impacket-rpcmap)(1), [rpcclient](/man/rpcclient)(1)

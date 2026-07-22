@@ -70,6 +70,22 @@ Command-line options allow pre-configuring search parameters, useful for creatin
 
 Searching large directory trees can be slow. The tool does not index files; each search scans the filesystem in real-time. For faster searches on large systems, consider using **locate** with an updated database.
 
+# INSTALL
+
+```apt: sudo apt install mate-utils```
+
+```dnf: sudo dnf install mate-utils```
+
+```pacman: sudo pacman -S mate-utils```
+
+```apk: sudo apk add mate-utils```
+
+```zypper: sudo zypper install mate-search-tool```
+
+```nix: nix profile install nixpkgs#mate-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [find](/man/find)(1), [locate](/man/locate)(1)

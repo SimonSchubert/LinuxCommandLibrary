@@ -84,6 +84,14 @@ Node.js specific. Requires npm install. Daemon-based.
 
 PM2 was created for **production Node.js** process management.
 
+# INSTALL
+
+```pacman: sudo pacman -S pm2```
+
+```nix: nix profile install nixpkgs#pm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [forever](/man/forever)(1), [nodemon](/man/nodemon)(1)

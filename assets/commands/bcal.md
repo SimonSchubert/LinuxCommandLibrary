@@ -98,6 +98,21 @@ Default disk geometry values are: sector size 512, max heads per cylinder 16, ma
 
 **bcal** was created by **Arun Prakash Jana** and released in **2016** as open-source software under the **GPLv3+** license. It is written in C with minimal dependencies (libc and optionally GNU Readline or BSD Editline).
 
+# INSTALL
+
+```apt: sudo apt install bcal```
+
+```dnf: sudo dnf install bcal```
+
+```aur: yay -S bcal```
+
+```zypper: sudo zypper install bcal```
+
+```brew: brew install bcal```
+
+```nix: nix profile install nixpkgs#bcal```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [bc](/man/bc)(1), [dc](/man/dc)(1), [calc](/man/calc)(1), [units](/man/units)(1), [numfmt](/man/numfmt)(1)

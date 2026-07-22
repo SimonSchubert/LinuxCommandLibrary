@@ -65,6 +65,14 @@ Requires Immich server. API key authentication. Node.js based.
 
 immich-cli is the official CLI for **Immich** photo management server.
 
+# INSTALL
+
+```brew: brew install immich-cli```
+
+```nix: nix profile install nixpkgs#immich-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [immich](/man/immich)(1), [immich-go](/man/immich-go)(1), [rclone](/man/rclone)(1)

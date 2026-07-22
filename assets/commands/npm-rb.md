@@ -45,6 +45,16 @@ Commonly needed after upgrading Node.js versions, as native addons are compiled 
 
 Alias for npm rebuild. Requires build tools (make, gcc/g++ or equivalent) to be installed. Only affects packages with native addons; pure JavaScript packages are unaffected.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-rebuild](/man/npm-rebuild)(1), [npm-install](/man/npm-install)(1), [node-gyp](/man/node-gyp)(1)

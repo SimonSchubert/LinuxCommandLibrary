@@ -118,6 +118,18 @@ Telnet transmits all data including passwords in plaintext—never use it for se
 
 The TELNET protocol was developed in **1969** as one of the earliest internet protocols, defined in RFC 15 and later RFC 854. It provided remote terminal access over ARPANET, the precursor to the internet. Telnet was the standard for remote Unix access until the mid-1990s when **SSH** emerged as a secure replacement. While deprecated for remote login, telnet remains useful for testing and debugging network services.
 
+# INSTALL
+
+```dnf: sudo dnf install telnet```
+
+```apk: sudo apk add inetutils-telnet```
+
+```zypper: sudo zypper install telnet```
+
+```brew: brew install telnet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [nc](/man/nc)(1), [netcat](/man/netcat)(1), [rlogin](/man/rlogin)(1)

@@ -118,6 +118,12 @@ Requires Kaggle account and API key. Some competitions have acceptance terms. La
 
 Kaggle was founded by **Anthony Goldbloom** and **Ben Hamner** in **2010** as a platform for predictive modeling competitions. Acquired by **Google** in **2017**. The CLI was added to enable programmatic access to platform resources. Kaggle expanded to include datasets, notebooks, and courses. It hosts one of the largest data science communities with millions of members.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kaggle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dvc](/man/dvc)(1), [mlflow](/man/mlflow)(1), [jupyter](/man/jupyter)(1)

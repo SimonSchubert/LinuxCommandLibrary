@@ -93,6 +93,12 @@ Resumable uploads require the session ID from the original upload. Bandwidth lim
 
 **odpscmd tunnel** is part of the MaxCompute Console provided by **Alibaba Cloud** for bulk data operations on MaxCompute (originally known as ODPS).
 
+# INSTALL
+
+```aur: yay -S odpscmd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [odpscmd](/man/odpscmd)(1), [odps-tunnel](/man/odps-tunnel)(1)

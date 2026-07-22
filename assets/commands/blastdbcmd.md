@@ -120,6 +120,12 @@ The tool is part of the NCBI BLAST+ suite and works with databases created by **
 
 Requires pre-formatted BLAST databases created by **makeblastdb** or downloaded from NCBI. Taxonomy information requires the BLAST taxonomy database (taxdb.btd/bti) to be installed. Large extractions may require significant time and disk space. The **-range** option uses 1-based inclusive coordinates.
 
+# INSTALL
+
+```apt: sudo apt install ncbi-blast+```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [makeblastdb](/man/makeblastdb)(1), [blastn](/man/blastn)(1), [blastp](/man/blastp)(1), [blastx](/man/blastx)(1), [tblastn](/man/tblastn)(1)

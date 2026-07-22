@@ -106,6 +106,16 @@ WASI support varies by module. Some system interfaces require explicit flags to 
 
 **Wasmer** was created by Syrus Akbary and launched in 2018. It became one of the leading standalone WebAssembly runtimes, supporting multiple languages and platforms. The project includes a package registry for distributing Wasm applications.
 
+# INSTALL
+
+```pacman: sudo pacman -S wasmer```
+
+```brew: brew install wasmer```
+
+```nix: nix profile install nixpkgs#wasmer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wasmtime](/man/wasmtime)(1), [wasm-pack](/man/wasm-pack)(1), [node](/man/node)(1)

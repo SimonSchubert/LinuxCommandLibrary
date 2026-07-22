@@ -69,6 +69,14 @@ OpenRC-specific; not applicable to systemd-based distributions. Runlevel names v
 
 **rc-update** is part of **OpenRC**, the dependency-based init system primarily used on Gentoo and Alpine Linux as an alternative to systemd.
 
+# INSTALL
+
+```apt: sudo apt install openrc```
+
+```apk: sudo apk add openrc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rc-service](/man/rc-service)(8), [rc-status](/man/rc-status)(8), [openrc](/man/openrc)(8)

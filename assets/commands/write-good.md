@@ -92,6 +92,14 @@ The linter is intentionally "naive" and may flag false positives. Passive voice 
 
 **write-good** was created by **Brian Ford** (btford) and first released around **2014**. It has become a popular tool in the JavaScript community for improving documentation quality and is used in CI pipelines for open-source projects.
 
+# INSTALL
+
+```brew: brew install write-good```
+
+```nix: nix profile install nixpkgs#write-good```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vale](/man/vale)(1), [proselint](/man/proselint)(1), [grammarly](/man/grammarly)(1), [aspell](/man/aspell)(1)

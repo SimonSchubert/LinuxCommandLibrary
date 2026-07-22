@@ -44,6 +44,14 @@ Requires GTK+-2.0 libraries. Some GTK themes have difficulty displaying large nu
 
 **sview** is part of **Slurm**, developed at **Lawrence Livermore National Laboratory** starting in **2002**. The GUI tool provides a user-friendly alternative to command-line utilities for monitoring cluster state. Slurm is now maintained by **SchedMD**.
 
+# INSTALL
+
+```apt: sudo apt install sview```
+
+```nix: nix profile install nixpkgs#sview```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [squeue](/man/squeue)(1), [sinfo](/man/sinfo)(1), [scontrol](/man/scontrol)(1), [sacct](/man/sacct)(1), [sbatch](/man/sbatch)(1)

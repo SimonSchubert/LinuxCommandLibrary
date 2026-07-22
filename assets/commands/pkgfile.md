@@ -89,6 +89,12 @@ Database must be synchronized before use. Only searches official repositories, n
 
 **pkgfile** was created for Arch Linux to provide fast file-to-package lookups. It offers similar functionality to `pacman -F` but with a dedicated database optimized for this purpose.
 
+# INSTALL
+
+```pacman: sudo pacman -S pkgfile```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pactree](/man/pactree)(1), [makepkg](/man/makepkg)(8)

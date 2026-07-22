@@ -63,6 +63,24 @@ manage container networking and connectivity
 
 **docker network** manages Docker networks. Networks enable communication between containers. Supports bridge, host, overlay, and macvlan drivers. Containers on the same user-defined network can communicate using container names as hostnames, providing service discovery. Custom networks isolate containers and provide better security than the default bridge network.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-run](/man/docker-run)(1), [docker-compose](/man/docker-compose)(1)

@@ -45,6 +45,18 @@ Requires running Plasma session. Some applications may need restart to display n
 
 **plasma-apply-cursortheme** is part of **KDE Plasma Workspace**, providing command-line control over cursor appearance for scripting and automation purposes.
 
+# INSTALL
+
+```apt: sudo apt install plasma-workspace```
+
+```dnf: sudo dnf install plasma-workspace```
+
+```pacman: sudo pacman -S plasma-workspace```
+
+```apk: sudo apk add plasma-workspace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [plasma-apply-colorscheme](/man/plasma-apply-colorscheme)(1), [plasma-apply-desktoptheme](/man/plasma-apply-desktoptheme)(1)

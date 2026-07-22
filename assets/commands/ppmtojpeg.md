@@ -58,6 +58,24 @@ The default quality of 75 provides a good balance between file size and visual q
 
 Output is written to stdout and must be redirected to a file. JPEG is a lossy format; converting from PPM to JPEG and back will lose quality. The **-optimize** flag increases encoding time but typically reduces file size by 5-10%.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmtojpeg](/man/pnmtojpeg)(1), [jpegtopnm](/man/jpegtopnm)(1), [cjpeg](/man/cjpeg)(1), [netpbm](/man/netpbm)(1)

@@ -38,6 +38,12 @@ View documentation for the original command
 
 **qm rescan** is an alias for **qm disk rescan** that rescans all storages and updates disk sizes and unused disk images for virtual machines. When run without **--vmid**, it rescans storage for all VMs on the node.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-disk](/man/qm-disk)(1), [pvesm](/man/pvesm)(1)

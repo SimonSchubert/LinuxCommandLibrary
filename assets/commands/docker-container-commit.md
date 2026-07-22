@@ -20,6 +20,24 @@ create image from container state
 
 **docker container commit** creates a new image from a container's changes. This is an alias for **docker commit**.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-commit](/man/docker-commit)(1), [docker-container](/man/docker-container)(1)

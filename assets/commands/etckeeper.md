@@ -68,6 +68,18 @@ etckeeper is valuable for system administrators managing multiple servers, troub
 
 Requires root privileges. Must run from /etc directory for init. Integrates with apt, yum, and pacman. Sensitive files may need gitignore entries.
 
+# INSTALL
+
+```dnf: sudo dnf install etckeeper```
+
+```pacman: sudo pacman -S etckeeper```
+
+```apk: sudo apk add etckeeper```
+
+```zypper: sudo zypper install etckeeper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [cron](/man/cron)(8)

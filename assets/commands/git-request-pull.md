@@ -40,6 +40,24 @@ _end_
 
 This command is commonly used in email-based patch workflows to ask maintainers to pull changes from your repository.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-format-patch](/man/git-format-patch)(1), [git-send-email](/man/git-send-email)(1), [git-pull](/man/git-pull)(1)

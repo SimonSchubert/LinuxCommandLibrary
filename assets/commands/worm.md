@@ -46,6 +46,18 @@ Requires the **bsdgames** package to be installed. Terminal must support cursor 
 
 Worm is part of the **BSD games** collection, a set of classic text-based games originally distributed with BSD Unix systems in the 1970s and 1980s. These games were created during the early days of Unix when terminals were text-only, and they became a staple of Unix culture. The snake/worm game concept later became famous through Nokia's implementation on mobile phones in the late 1990s.
 
+# INSTALL
+
+```dnf: sudo dnf install bsd-games```
+
+```pacman: sudo pacman -S bsd-games```
+
+```apk: sudo apk add bsd-games```
+
+```zypper: sudo zypper install bsd-games```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rogue](/man/rogue)(6), [nethack](/man/nethack)(6), [tetris-bsd](/man/tetris-bsd)(6)

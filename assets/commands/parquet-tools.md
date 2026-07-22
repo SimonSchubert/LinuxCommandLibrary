@@ -89,6 +89,12 @@ Large files may be slow to fully read. Some complex types display differently. R
 
 **Parquet** format was developed by **Twitter** and **Cloudera** around **2013**. parquet-tools provides command-line inspection for the widely-adopted columnar format.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#parquet-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [parquet](/man/parquet)(1), [avro-tools](/man/avro-tools)(1), [orc-tools](/man/orc-tools)(1)

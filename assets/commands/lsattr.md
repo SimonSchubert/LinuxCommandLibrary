@@ -71,6 +71,24 @@ Only shows attributes on filesystems that support extended attributes (ext2/ext3
 
 **lsattr** is part of **e2fsprogs**, providing attribute listing for Linux filesystems.
 
+# INSTALL
+
+```apt: sudo apt install e2fsprogs```
+
+```dnf: sudo dnf install e2fsprogs```
+
+```pacman: sudo pacman -S e2fsprogs```
+
+```apk: sudo apk add e2fsprogs-extra```
+
+```zypper: sudo zypper install e2fsprogs```
+
+```brew: brew install e2fsprogs```
+
+```nix: nix profile install nixpkgs#e2fsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chattr](/man/chattr)(1), [ls](/man/ls)(1)

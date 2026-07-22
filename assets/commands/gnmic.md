@@ -114,6 +114,14 @@ Target must support gNMI. Authentication may be required. YANG model knowledge h
 
 gnmic was created by **Nokia** to provide a flexible gNMI client for network automation and telemetry collection.
 
+# INSTALL
+
+```brew: brew install gnmic```
+
+```nix: nix profile install nixpkgs#gnmic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnmic-get](/man/gnmic-get)(1), [gnmic-set](/man/gnmic-set)(1), [gnmic-subscribe](/man/gnmic-subscribe)(1)

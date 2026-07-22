@@ -80,6 +80,12 @@ Requires proper configuration. Database credentials must be secured. Storage ser
 
 **gobackup** was created as a flexible backup solution supporting multiple databases and storage backends.
 
+# INSTALL
+
+```brew: brew install gobackup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [restic](https://restic.net/), [borg](https://borgbackup.readthedocs.io/), [duplicity](http://duplicity.nongnu.org/)

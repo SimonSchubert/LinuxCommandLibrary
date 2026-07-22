@@ -24,6 +24,24 @@ _height_
 
 **pnmtile** creates an image by tiling (repeating) the input image to fill the specified dimensions. Useful for creating backgrounds. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmcat](/man/pnmcat)(1), [pnmmontage](/man/pnmmontage)(1)

@@ -65,6 +65,22 @@ Btrfs is under active development. Some features like RAID5/6 may have stability
 
 **btrfs** is the management tool for the **B-tree file system**, a modern Linux filesystem featuring advanced storage capabilities.
 
+# INSTALL
+
+```apt: sudo apt install btrfs-progs```
+
+```dnf: sudo dnf install btrfs-progs```
+
+```pacman: sudo pacman -S btrfs-progs```
+
+```apk: sudo apk add btrfs-progs```
+
+```brew: brew install btrfs-progs```
+
+```nix: nix profile install nixpkgs#btrfs-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btrfs-subvolume](/man/btrfs-subvolume)(8), [btrfs-filesystem](/man/btrfs-filesystem)(8), [mkfs.btrfs](/man/mkfs.btrfs)(8)

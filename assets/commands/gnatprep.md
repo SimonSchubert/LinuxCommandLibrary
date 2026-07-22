@@ -66,6 +66,16 @@ Ada source file preprocessor
 
 Neither -b nor -c preserves original line numbers. If both are absent, preprocessor and deleted lines are removed entirely unless -r is specified.
 
+# INSTALL
+
+```apt: sudo apt install gnat-12```
+
+```dnf: sudo dnf install gcc-gnat```
+
+```apk: sudo apk add gcc-gnat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnatmake](/man/gnatmake)(1), [gcc](/man/gcc)(1), [gprbuild](/man/gprbuild)(1), [m4](/man/m4)(1)

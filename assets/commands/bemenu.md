@@ -110,6 +110,21 @@ Requires appropriate backend library for the display server (wayland, x11, or cu
 
 **bemenu** was created as a cross-platform replacement for **dmenu** that could work on Wayland compositors. It was developed as part of the effort to bring traditional X11 utilities to the Wayland ecosystem. The project provides library bindings allowing integration into other applications, following a more modular design than the original dmenu.
 
+# INSTALL
+
+```apt: sudo apt install bemenu```
+
+```dnf: sudo dnf install bemenu```
+
+```pacman: sudo pacman -S bemenu```
+
+```apk: sudo apk add bemenu```
+
+```zypper: sudo zypper install bemenu```
+
+```nix: nix profile install nixpkgs#bemenu```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [dmenu](/man/dmenu)(1), [rofi](/man/rofi)(1), [fzf](/man/fzf)(1), [wofi](/man/wofi)(1)

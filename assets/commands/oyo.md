@@ -35,6 +35,12 @@ Best used with Git integration. Standalone diff viewing requires properly format
 
 **oyo** was created by **ahkohd** and is written in **Rust**.
 
+# INSTALL
+
+```aur: yay -S oyo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [delta](/man/delta)(1), [difftastic](/man/difftastic)(1)

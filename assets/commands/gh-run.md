@@ -74,6 +74,24 @@ Requires Actions enabled on repository. Log access may be limited. Artifacts hav
 
 gh run was added to the **GitHub CLI** alongside broader GitHub Actions integration, enabling workflow management from the command line.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-workflow](/man/gh-workflow)(1), [gh-pr-checks](/man/gh-pr-checks)(1)

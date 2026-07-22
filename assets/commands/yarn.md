@@ -109,6 +109,20 @@ Two major versions exist: Yarn Classic (1.x) and Yarn Modern (2+/Berry) with dif
 
 Yarn was developed by **Facebook** (now Meta) in collaboration with Exponent, Google, and Tilde, and released in **October 2016** as an alternative to npm. It addressed npm's performance and security issues at the time. Yarn 2 (Berry), a complete rewrite, was released in **January 2020** with features like Plug'n'Play and improved workspaces. Yarn is now a community-driven project.
 
+# INSTALL
+
+```pacman: sudo pacman -S yarn```
+
+```apk: sudo apk add yarn```
+
+```zypper: sudo zypper install yarn```
+
+```brew: brew install yarn```
+
+```nix: nix profile install nixpkgs#yarn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [pnpm](/man/pnpm)(1), [node](/man/node)(1), [npx](/man/npx)(1)

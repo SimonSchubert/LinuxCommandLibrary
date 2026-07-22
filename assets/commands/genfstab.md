@@ -67,6 +67,12 @@ Must be run with appropriate permissions to read mount information. The target f
 
 genfstab is part of the **arch-install-scripts** package, developed for Arch Linux installation. It simplifies fstab creation, which was traditionally done manually or with less reliable methods. The tool has been adopted by other Arch-based distributions.
 
+# INSTALL
+
+```apk: sudo apk add alpine-conf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(8), [fstab](/man/fstab)(5), [blkid](/man/blkid)(8), [lsblk](/man/lsblk)(8)

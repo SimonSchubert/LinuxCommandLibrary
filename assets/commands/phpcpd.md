@@ -82,6 +82,12 @@ Similar but intentionally different code may be flagged. Very large codebases ma
 
 **phpcpd** was created by **Sebastian Bergmann** as part of the PHP QA toolset. It helps maintain code quality by detecting copy-pasted code blocks.
 
+# INSTALL
+
+```dnf: sudo dnf install phpcpd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [phpcs](/man/phpcs)(1), [phpcbf](/man/phpcbf)(1), [phpmd](/man/phpmd)(1), [phpstan](/man/phpstan)(1)

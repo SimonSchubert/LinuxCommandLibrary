@@ -37,6 +37,12 @@ All piped Terraform commands must include the **-json** flag. Only works with Te
 
 **pipeform** was created by **magodo** and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pipeform```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1)

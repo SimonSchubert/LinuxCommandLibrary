@@ -89,6 +89,19 @@ The default configuration file is stored at ~/.azure/config.
 
 This command group is marked **experimental** and under development (not deprecated); behavior and options may change. It has been available since Azure CLI 2.10.0. Local configurations are stored in the current working directory and take precedence over the global config.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-appconfig](/man/az-appconfig)(1)

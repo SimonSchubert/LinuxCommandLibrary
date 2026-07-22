@@ -71,6 +71,12 @@ Install with **pip install drift-spark**. Optional extras: **[qdrant]**, **[pgve
 
 **drift-spark** was created by aayush4vedi, with the **drift-adapter** migration strategy based on the Drift-Adapter paper (arXiv:2509.23471, EMNLP 2025). Version 0.5.0 shipped **embed**, **watch**, **migrate**, and the SQLite lineage ledger.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#drift```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 

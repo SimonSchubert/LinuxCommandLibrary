@@ -82,6 +82,20 @@ Part of passwdqc package. Different from pwquality/pam_pwquality. Check return c
 
 pwqcheck is part of **passwdqc** by **Solar Designer**, providing proactive password quality checking.
 
+# INSTALL
+
+```apt: sudo apt install passwdqc```
+
+```dnf: sudo dnf install passwdqc```
+
+```zypper: sudo zypper install passwdqc```
+
+```brew: brew install passwdqc```
+
+```nix: nix profile install nixpkgs#passwdqc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pwqgen](/man/pwqgen)(1), [passwd](/man/passwd)(1)

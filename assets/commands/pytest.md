@@ -133,6 +133,14 @@ Large test suites need pytest-xdist for reasonable runtime. Fixture complexity c
 
 **pytest** was created by **Holger Krekel** around **2004** as py.test, evolving from the py library. It grew as an alternative to unittest, emphasizing simplicity and minimal boilerplate. The project became pytest around **2016** with the 3.0 release. It's now the de facto standard for Python testing.
 
+# INSTALL
+
+```apk: sudo apk add py3-pytest```
+
+```brew: brew install pytest```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [coverage](/man/coverage)(1), [tox](/man/tox)(1), [mypy](/man/mypy)(1)

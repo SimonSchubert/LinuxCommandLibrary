@@ -83,6 +83,16 @@ CGO may complicate cross-compile. Large number of targets is slow. Consider gore
 
 gox was created by **Mitchell Hashimoto** (HashiCorp) to simplify building Go binaries for multiple platforms.
 
+# INSTALL
+
+```apt: sudo apt install gox```
+
+```pacman: sudo pacman -S gox```
+
+```nix: nix profile install nixpkgs#gox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go-build](/man/go-build)(1), [goreload](/man/goreload)(1)

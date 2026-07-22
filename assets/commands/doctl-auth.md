@@ -70,6 +70,20 @@ Tokens are stored locally. Token scopes determine available actions. Expired or 
 
 doctl auth is part of the **doctl** CLI developed by **DigitalOcean**. Multi-context support enables users and organizations to manage multiple accounts efficiently.
 
+# INSTALL
+
+```dnf: sudo dnf install doctl```
+
+```pacman: sudo pacman -S doctl```
+
+```apk: sudo apk add doctl```
+
+```brew: brew install doctl```
+
+```nix: nix profile install nixpkgs#doctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doctl](/man/doctl)(1), [doctl-compute-droplet](/man/doctl-compute-droplet)(1)

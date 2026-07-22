@@ -69,6 +69,24 @@ Requires LLVM IR input. Target support varies. Part of LLVM toolchain.
 
 llc is part of the **LLVM** compiler infrastructure project, providing the backend compilation step.
 
+# INSTALL
+
+```apt: sudo apt install llvm```
+
+```dnf: sudo dnf install llvm```
+
+```pacman: sudo pacman -S llvm```
+
+```apk: sudo apk add llvm```
+
+```zypper: sudo zypper install llvm```
+
+```brew: brew install llvm```
+
+```nix: nix profile install nixpkgs#llvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clang](/man/clang)(1), [opt](/man/opt)(1), [lli](/man/lli)(1), [llvm-as](/man/llvm-as)(1)

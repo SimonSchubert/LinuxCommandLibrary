@@ -101,6 +101,22 @@ Requires root privileges. Kernel must have eBPF and BTF support enabled. Some pr
 
 **bpftrace** was created by Alastair Robertson and first released in **2018**. It was inspired by DTrace and aimed to bring similar high-level tracing capabilities to Linux using eBPF.
 
+# INSTALL
+
+```apt: sudo apt install bpftrace```
+
+```dnf: sudo dnf install bpftrace```
+
+```pacman: sudo pacman -S bpftrace```
+
+```apk: sudo apk add bpftrace```
+
+```zypper: sudo zypper install bpftrace```
+
+```nix: nix profile install nixpkgs#bpftrace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bpftool](/man/bpftool)(8), [perf](/man/perf)(1), [strace](/man/strace)(1)

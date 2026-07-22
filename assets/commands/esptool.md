@@ -86,6 +86,18 @@ Since **esptool v5** all commands and options use hyphens instead of underscores
 
 esptool began as **esptool.py**, developed by **Espressif Systems** as the official flashing utility for their ESP8266 and ESP32 series of WiFi/Bluetooth microcontrollers. It is open source and actively maintained alongside the ESP-IDF framework.
 
+# INSTALL
+
+```dnf: sudo dnf install esptool```
+
+```pacman: sudo pacman -S esptool```
+
+```brew: brew install esptool```
+
+```nix: nix profile install nixpkgs#esptool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [platformio](/man/platformio)(1), [arduino-cli](/man/arduino-cli)(1)

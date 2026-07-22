@@ -85,6 +85,14 @@ UUIDs are 128-bit identifiers commonly used for unique identification in databas
 
 Time-based UUIDs expose the MAC address of the generating machine. For privacy, prefer random UUIDs. Part of the util-linux package.
 
+# INSTALL
+
+```apt: sudo apt install uuid-runtime```
+
+```apk: sudo apk add uuidgen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uuid](/man/uuid)(1)

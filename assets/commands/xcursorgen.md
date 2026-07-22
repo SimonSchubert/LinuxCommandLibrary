@@ -35,5 +35,21 @@ The config file format defines each cursor frame with size, hotspot coordinates,
 
 Images must be PNG format. Configuration file format is specific. Without --prefix, images must be in current directory.
 
+# INSTALL
+
+```apt: sudo apt install x11-apps```
+
+```dnf: sudo dnf install xcursorgen```
+
+```apk: sudo apk add xcursorgen```
+
+```zypper: sudo zypper install xcursorgen```
+
+```brew: brew install xcursorgen```
+
+```nix: nix profile install nixpkgs#xcursorgen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

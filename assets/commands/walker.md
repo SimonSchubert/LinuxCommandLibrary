@@ -60,6 +60,12 @@ Default settings ship in the upstream **resources/config.toml**. User overrides 
 
 Wayland only. **elephant** and at least one provider (for example **elephant-desktopapplications**) must be running before Walker shows results. Socket-only activation cannot pass command-line options.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#walker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fuzzel](/man/fuzzel)(1), [wofi](/man/wofi)(1), [rofi](/man/rofi)(1), [dmenu](/man/dmenu)(1)

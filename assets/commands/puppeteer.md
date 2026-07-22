@@ -79,6 +79,12 @@ Downloads Chromium by default (~150MB). Use puppeteer-core with own browser. Mem
 
 Puppeteer was developed by the **Google Chrome DevTools** team, released in 2017 as the official Node.js library for Chrome automation.
 
+# INSTALL
+
+```aur: yay -S puppeteer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [playwright](/man/playwright)(1)

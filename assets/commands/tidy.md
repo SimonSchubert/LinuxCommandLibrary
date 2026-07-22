@@ -83,6 +83,20 @@ May change whitespace. Some fixes alter rendering. Complex pages need care.
 
 **HTML Tidy** was originally developed by **Dave Raggett** at **W3C**. It's maintained by HTACG (HTML Tidy Advocacy Community Group).
 
+# INSTALL
+
+```apt: sudo apt install tidy```
+
+```dnf: sudo dnf install tidy```
+
+```pacman: sudo pacman -S tidy```
+
+```apk: sudo apk add tidyhtml```
+
+```zypper: sudo zypper install tidy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xmllint](/man/xmllint)(1), [prettier](/man/prettier)(1)

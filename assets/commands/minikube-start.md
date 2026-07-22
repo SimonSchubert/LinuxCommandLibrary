@@ -52,6 +52,18 @@ starts a local Kubernetes cluster
 
 **minikube start** starts a local Kubernetes cluster. Creates a VM or container running Kubernetes. Default driver depends on platform. Supports multiple profiles for different clusters.
 
+# INSTALL
+
+```pacman: sudo pacman -S minikube```
+
+```zypper: sudo zypper install minikube```
+
+```brew: brew install minikube```
+
+```nix: nix profile install nixpkgs#minikube```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [minikube](/man/minikube)(1), [kubectl](/man/kubectl)(1)

@@ -60,6 +60,24 @@ Standard ZIP encryption (PKZIP/ZipCrypto) is considered weak by modern standards
 
 **zipcloak** is part of the **Info-ZIP** suite of utilities, originally developed in the early 1990s as free, portable implementations of the ZIP archive format tools. It provides a convenient way to add or remove password protection from existing ZIP archives without needing to recreate them.
 
+# INSTALL
+
+```apt: sudo apt install zip```
+
+```dnf: sudo dnf install zip```
+
+```pacman: sudo pacman -S zip```
+
+```apk: sudo apk add zip```
+
+```zypper: sudo zypper install zip```
+
+```brew: brew install zip```
+
+```nix: nix profile install nixpkgs#zip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zip](/man/zip)(1), [unzip](/man/unzip)(1), [7z](/man/7z)(1), [zipinfo](/man/zipinfo)(1), [zipnote](/man/zipnote)(1)

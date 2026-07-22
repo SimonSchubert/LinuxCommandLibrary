@@ -109,6 +109,12 @@ The upstream **rocky** project is **deprecated** and no longer actively maintain
 
 **rocky** was created by **Tomás Aparicio** (h2non) and released as an open-source Node.js HTTP proxy framework. The companion **rocky-cli** package shipped shortly afterwards to expose the same functionality without writing code. Both projects have been archived as deprecated, with users typically migrating to dedicated proxies such as **nginx**, **HAProxy**, or **Envoy**.
 
+# INSTALL
+
+```aur: yay -S rocky```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nginx](/man/nginx)(8), [haproxy](/man/haproxy)(1), [caddy](/man/caddy)(1), [mitmproxy](/man/mitmproxy)(1), [socat](/man/socat)(1)

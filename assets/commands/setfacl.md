@@ -101,6 +101,24 @@ The effective rights mask limits permissions granted to named users/groups. Some
 
 **setfacl** is part of the **acl** package implementing POSIX Access Control Lists (POSIX 1003.1e draft 17). ACLs extend the standard Unix permission model.
 
+# INSTALL
+
+```apt: sudo apt install acl```
+
+```dnf: sudo dnf install acl```
+
+```pacman: sudo pacman -S acl```
+
+```apk: sudo apk add acl```
+
+```zypper: sudo zypper install acl```
+
+```brew: brew install acl```
+
+```nix: nix profile install nixpkgs#acl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [getfacl](/man/getfacl)(1), [chmod](/man/chmod)(1), [umask](/man/umask)(1), [acl](/man/acl)(5)

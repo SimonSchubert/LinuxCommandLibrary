@@ -60,6 +60,16 @@ Play audio files through PipeWire
 
 All options available to **pw-cat** in playback mode also apply to **pw-play**. See **pw-cat** for full documentation.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-tools```
+
+```zypper: sudo zypper install pipewire-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pw-cat](/man/pw-cat)(1), [pw-record](/man/pw-record)(1), [pw-cli](/man/pw-cli)(1), [pipewire](/man/pipewire)(1)

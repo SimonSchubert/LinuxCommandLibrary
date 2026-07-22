@@ -63,6 +63,24 @@ Perl-specific format. Standard Perl utility.
 
 pod2man was created for **generating man pages** from Perl documentation.
 
+# INSTALL
+
+```apt: sudo apt install perl```
+
+```dnf: sudo dnf install perl```
+
+```pacman: sudo pacman -S perl```
+
+```apk: sudo apk add perl```
+
+```zypper: sudo zypper install perl```
+
+```brew: brew install perl```
+
+```nix: nix profile install nixpkgs#perl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pod2html](/man/pod2html)(1), [pod2text](/man/pod2text)(1), [man](/man/man)(1), [nroff](/man/nroff)(1)

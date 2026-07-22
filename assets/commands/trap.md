@@ -63,6 +63,16 @@ Trap is a shell builtin, not an external command. Behavior varies slightly betwe
 
 Originated in the **Bourne shell** in Unix V7 (1979). The concept of trapping signals comes from the Unix signal handling mechanism. Bash and other modern shells have extended the original functionality with pseudo-signals like ERR and DEBUG.
 
+# INSTALL
+
+```apk: sudo apk add execline```
+
+```brew: brew install execline```
+
+```nix: nix profile install nixpkgs#execline```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kill](/man/kill)(1), [bash](/man/bash)(1)

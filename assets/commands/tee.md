@@ -74,6 +74,24 @@ In pipelines with **set -o pipefail**, tee failures can go unnoticed. Use **--ou
 
 When combined with commands that buffer output, you may not see immediate results. Use **stdbuf** or command-specific unbuffering options if needed.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cat](/man/cat)(1), [script](/man/script)(1), [pv](/man/pv)(1), [sponge](/man/sponge)(1)

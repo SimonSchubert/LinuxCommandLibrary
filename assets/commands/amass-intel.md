@@ -75,6 +75,15 @@ Organization name matching is fuzzy; review results for accuracy. WHOIS data may
 
 **amass intel** was added to provide organizational-level reconnaissance capabilities, complementing the domain-focused enum command.
 
+# INSTALL
+
+```aur: yay -S amass```
+
+```brew: brew install amass```
+
+```nix: nix profile install nixpkgs#amass```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [amass](/man/amass)(1), [amass-enum](/man/amass-enum)(1), [amass-track](/man/amass-track)(1), [whois](/man/whois)(1)

@@ -79,6 +79,12 @@ Node.js tool. Team must agree on convention. Some tools may not render emojis.
 
 gitmoji was created by **Carlos Cuesta** to standardize emoji use in commit messages, making repository history more expressive.
 
+# INSTALL
+
+```brew: brew install gitmoji```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-commit](/man/git-commit)(1), [gitlint](/man/gitlint)(1)

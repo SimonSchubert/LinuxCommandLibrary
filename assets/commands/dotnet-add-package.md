@@ -61,6 +61,18 @@ Add or update a NuGet package reference in a project
 
 If the package is already referenced, it updates the reference to the latest compatible version. The command runs an implicit **dotnet restore** after adding the reference unless **--no-restore** is specified. Projects using Central Package Management (CPM) will have the PackageVersion element updated in the Directory.Packages.props file.
 
+# INSTALL
+
+```dnf: sudo dnf install dotnet-host```
+
+```pacman: sudo pacman -S dotnet-host```
+
+```apk: sudo apk add dotnet-host```
+
+```brew: brew install dotnet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dotnet-restore](/man/dotnet-restore)(1), [dotnet-build](/man/dotnet-build)(1), [dotnet](/man/dotnet)(1)

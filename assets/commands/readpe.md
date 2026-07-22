@@ -63,6 +63,20 @@ Only works with valid PE format files. Malformed or corrupted PE files may not p
 
 Part of **pev**, the PE file analysis toolkit for Unix-like systems.
 
+# INSTALL
+
+```apt: sudo apt install readpe```
+
+```apk: sudo apk add pev```
+
+```zypper: sudo zypper install readpe```
+
+```brew: brew install readpe```
+
+```nix: nix profile install nixpkgs#pev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [objdump](/man/objdump)(1), [readelf](/man/readelf)(1), [file](/man/file)(1)

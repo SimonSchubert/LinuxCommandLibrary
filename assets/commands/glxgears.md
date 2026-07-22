@@ -70,6 +70,16 @@ Despite common use as a "benchmark," glxgears tests very little of modern GPU ca
 
 **glxgears** was written by Brian Paul around **1999** as part of Mesa, the open-source OpenGL implementation. It was created as a simple demo to test GLX (OpenGL Extension to X11) functionality. Despite disclaimers, it became widely misused as a benchmark due to its readily visible FPS counter. The "iacknowledgethatthistoolisnotabenchmark" flag was added as a humorous commentary on this misuse.
 
+# INSTALL
+
+```apt: sudo apt install mesa-utils```
+
+```pacman: sudo pacman -S mesa-utils```
+
+```apk: sudo apk add mesa-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glxinfo](/man/glxinfo)(1), [vulkaninfo](/man/vulkaninfo)(1), [xdpyinfo](/man/xdpyinfo)(1), [vkcube](/man/vkcube)(1)

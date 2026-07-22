@@ -110,6 +110,20 @@ Requires Rust toolchain with wasm32-unknown-unknown target. First build may down
 
 **wasm-pack** was created by the Rust and WebAssembly Working Group to simplify publishing Rust-generated WebAssembly to npm. It streamlines the workflow of compiling, binding generation, and package publishing into a single tool.
 
+# INSTALL
+
+```pacman: sudo pacman -S wasm-pack```
+
+```apk: sudo apk add wasm-pack```
+
+```zypper: sudo zypper install wasm-pack```
+
+```brew: brew install wasm-pack```
+
+```nix: nix profile install nixpkgs#wasm-pack```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [wasmtime](/man/wasmtime)(1), [npm](/man/npm)(1)

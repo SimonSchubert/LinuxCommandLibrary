@@ -116,6 +116,14 @@ Anything printed by **get --plain** or **download --no-file** is plaintext on yo
 
 **doppler secrets** is the core of the Doppler CLI and dates from the product's first release. The design that stuck, keeping secrets out of `.env` files on disk and injecting them at process start instead, is what the rest of the CLI is built around; the encrypted fallback file was added so that this remained safe when the network or the API is unavailable.
 
+# INSTALL
+
+```brew: brew install doppler```
+
+```nix: nix profile install nixpkgs#doppler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doppler](/man/doppler)(1), [doppler-projects](/man/doppler-projects)(1), [vault](/man/vault)(1), [sops](/man/sops)(1)

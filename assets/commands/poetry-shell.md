@@ -40,6 +40,18 @@ Creates a new subshell as a child process; nested **poetry shell** invocations s
 
 poetry shell provides **interactive shell** in Poetry virtual environment.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [poetry-run](/man/poetry-run)(1)

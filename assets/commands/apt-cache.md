@@ -114,6 +114,21 @@ This tool operates on the local cache; run **apt update** first to ensure the ca
 
 Part of the **APT** (Advanced Package Tool) suite developed for Debian-based systems in the late 1990s.
 
+# INSTALL
+
+```apt: sudo apt install apt```
+
+```dnf: sudo dnf install apt```
+
+```pacman: sudo pacman -S apt```
+
+```apk: sudo apk add apt```
+
+```brew: brew install apt```
+
+```nix: nix profile install nixpkgs#apt```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [aptitude](/man/aptitude)(8), [dpkg](/man/dpkg)(1)

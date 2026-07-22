@@ -61,6 +61,14 @@ Use arrow keys to navigate, Enter to select:
 
 Changes are only written when explicitly choosing "Write". Incorrectly modifying partitions can cause data loss. Unmount partitions before modifying. Requires root privileges.
 
+# INSTALL
+
+```apt: sudo apt install fdisk```
+
+```apk: sudo apk add cfdisk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fdisk](/man/fdisk)(8), [parted](/man/parted)(8), [gdisk](/man/gdisk)(8)

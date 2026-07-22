@@ -52,6 +52,20 @@ This allows remote access to the actual screen being displayed on the monitor.
 
 Requires X11 display. Password must be set using vncpasswd. Security depends on network configuration. Consider SSH tunneling for secure access.
 
+# INSTALL
+
+```dnf: sudo dnf install tigervnc```
+
+```pacman: sudo pacman -S tigervnc```
+
+```apk: sudo apk add tigervnc```
+
+```zypper: sudo zypper install tigervnc```
+
+```nix: nix profile install nixpkgs#tigervnc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vncserver](/man/vncserver)(1), [vncpasswd](/man/vncpasswd)(1), [x11vnc](/man/x11vnc)(1)

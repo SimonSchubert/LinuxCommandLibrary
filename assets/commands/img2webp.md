@@ -49,6 +49,20 @@ Part of the libwebp package. Input format support depends on linked libraries. V
 
 WebP was developed by Google and announced in **2010** as an open standard for compressed web images. The format is based on the VP8 video codec and offers significant size reductions compared to traditional formats.
 
+# INSTALL
+
+```apt: sudo apt install webp```
+
+```dnf: sudo dnf install libwebp-tools```
+
+```apk: sudo apk add libwebp-tools```
+
+```zypper: sudo zypper install libwebp-tools```
+
+```brew: brew install webp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cwebp](/man/cwebp)(1), [dwebp](/man/dwebp)(1), [gif2webp](/man/gif2webp)(1)

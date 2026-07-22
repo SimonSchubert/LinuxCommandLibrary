@@ -31,6 +31,12 @@ Output installed package metadata as JSON
 
 **pip inspect** outputs JSON describing installed packages and their metadata. Provides detailed information about installed distributions including versions, requires, and provides metadata. Useful for programmatic environment analysis.
 
+# INSTALL
+
+```apk: sudo apk add py3-pip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [pip-list](/man/pip-list)(1), [pip-show](/man/pip-show)(1)

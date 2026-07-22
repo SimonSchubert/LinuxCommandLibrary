@@ -45,6 +45,12 @@ The tool is part of the NCBI EDirect (Entrez Direct) utilities suite, designed f
 
 Part of the edirect package from NCBI. Requires internet connection. Output is typically piped to elink or efetch for further processing.
 
+# INSTALL
+
+```apt: sudo apt install ncbi-entrez-direct```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [elink](/man/elink)(1), [einfo](/man/einfo)(1)

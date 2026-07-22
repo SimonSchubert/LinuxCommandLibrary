@@ -83,6 +83,20 @@ Replace a resource by filename or stdin
 
 **kubectl replace** replaces a resource by filename or stdin. JSON and YAML formats are accepted. The resource must already exist. Unlike apply, replace requires the complete resource specification, which can be obtained with `kubectl get TYPE NAME -o yaml`. Use --force to delete and recreate the resource.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-apply](/man/kubectl-apply)(1), [kubectl-create](/man/kubectl-create)(1), [kubectl-delete](/man/kubectl-delete)(1), [kubectl-edit](/man/kubectl-edit)(1), [kubectl-patch](/man/kubectl-patch)(1)

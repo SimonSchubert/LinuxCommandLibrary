@@ -78,6 +78,12 @@ Either -rate or -parallel must be specified, not both. Either -fetches or -secon
 
 **http_load** was written by **Jef Poskanzer** and distributed through **ACME Labs** as a simple, single-process HTTP load testing tool for benchmarking web server throughput.
 
+# INSTALL
+
+```brew: brew install http_load```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ab](/man/ab)(1), [wrk](/man/wrk)(1), [siege](/man/siege)(1), [hey](/man/hey)(1)

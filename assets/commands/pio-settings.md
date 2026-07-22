@@ -39,6 +39,12 @@ manages PlatformIO configuration settings
 
 **pio settings** manages PlatformIO configuration settings. Controls default directories, auto-updates, telemetry, and other global preferences.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-system](/man/pio-system)(1), [pio-account](/man/pio-account)(1)

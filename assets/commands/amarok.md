@@ -89,6 +89,19 @@ Heavy on system resources compared to simpler players. Some features require KDE
 
 **Amarok** was first released in **2003** as a KDE music player. Version 2.0 in 2008 brought a major rewrite. It was one of the most feature-rich Linux music players, though development has slowed in recent years.
 
+# INSTALL
+
+```apt: sudo apt install amarok```
+
+```dnf: sudo dnf install amarok```
+
+```pacman: sudo pacman -S amarok```
+
+```zypper: sudo zypper install amarok```
+
+```nix: nix profile install nixpkgs#amarok```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [vlc](/man/vlc)(1), [clementine](/man/clementine)(1)

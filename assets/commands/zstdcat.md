@@ -44,6 +44,24 @@ Decompress zstd files to stdout
 
 When given multiple input files, zstdcat decompresses them in sequence and concatenates the output to stdout. It is part of the zstd suite of compression utilities.
 
+# INSTALL
+
+```apt: sudo apt install zstd```
+
+```dnf: sudo dnf install zstd```
+
+```pacman: sudo pacman -S zstd```
+
+```apk: sudo apk add zstd```
+
+```zypper: sudo zypper install zstd```
+
+```brew: brew install zstd```
+
+```nix: nix profile install nixpkgs#zstd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zstd](/man/zstd)(1), [unzstd](/man/unzstd)(1), [zstdless](/man/zstdless)(1)

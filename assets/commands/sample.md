@@ -74,5 +74,21 @@ Sampling only captures functions executing at sample points, so very fast functi
 
 **sample** is part of Apple's developer tools suite for macOS, providing command-line access to the same sampling technology used by Instruments and Activity Monitor. It enables performance profiling without requiring the full Xcode IDE.
 
+# INSTALL
+
+```apt: sudo apt install barcode```
+
+```dnf: sudo dnf install barcode```
+
+```pacman: sudo pacman -S barcode```
+
+```apk: sudo apk add barcode```
+
+```zypper: sudo zypper install barcode```
+
+```nix: nix profile install nixpkgs#barcode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

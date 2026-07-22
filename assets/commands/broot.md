@@ -91,6 +91,22 @@ The br shell function is recommended over direct broot invocation for changing d
 
 **broot** was created as a modern alternative to tree and cd, providing fuzzy search, visual navigation, and efficient handling of large directory trees.
 
+# INSTALL
+
+```apt: sudo apt install broot```
+
+```pacman: sudo pacman -S broot```
+
+```apk: sudo apk add broot```
+
+```zypper: sudo zypper install broot```
+
+```brew: brew install broot```
+
+```nix: nix profile install nixpkgs#broot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tree](/man/tree)(1), [ranger](/man/ranger)(1), [lf](/man/lf)(1), [nnn](/man/nnn)(1)

@@ -94,6 +94,12 @@ Requires Python. reStructuredText learning curve. Large projects slow to build.
 
 **Sphinx** was created by **Georg Brandl** for Python documentation. Released in 2008, it became the standard for Python project documentation.
 
+# INSTALL
+
+```apk: sudo apk add py3-sphinx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [make](/man/make)(1), [rst2html](/man/rst2html)(1), [doxygen](/man/doxygen)(1)

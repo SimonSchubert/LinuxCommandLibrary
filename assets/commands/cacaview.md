@@ -41,6 +41,18 @@ The viewer supports navigation and zooming within the displayed image.
 **q** or **Esc**
 > Quit.
 
+# INSTALL
+
+```apt: sudo apt install caca-utils```
+
+```dnf: sudo dnf install caca-utils```
+
+```apk: sudo apk add libcaca-apps```
+
+```zypper: sudo zypper install caca-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cacaclock](/man/cacaclock)(1), [cacademo](/man/cacademo)(1), [cacafire](/man/cacafire)(1), [img2txt](/man/img2txt)(1)

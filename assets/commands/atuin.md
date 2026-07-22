@@ -112,6 +112,23 @@ Requires shell initialization code. Sync feature is optional (can be used fully 
 
 **atuin** was created by Ellie Huxtable and released in **2021**, offering modern shell history with end-to-end encrypted sync, statistics, and improved search.
 
+# INSTALL
+
+```apt: sudo apt install atuin```
+
+```dnf: sudo dnf install atuin```
+
+```pacman: sudo pacman -S atuin```
+
+```apk: sudo apk add atuin```
+
+```zypper: sudo zypper install atuin```
+
+```brew: brew install atuin```
+
+```nix: nix profile install nixpkgs#atuin```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [history](/man/history)(1), [mcfly](/man/mcfly)(1), [hstr](/man/hstr)(1), [fzf](/man/fzf)(1), [bash](/man/bash)(1), [zsh](/man/zsh)(1)

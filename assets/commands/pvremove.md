@@ -56,6 +56,22 @@ Requires root privileges. Device must not be in a volume group. Data on the phys
 
 **pvremove** is part of **LVM2** (Logical Volume Manager). It complements pvcreate by providing a way to decommission physical volumes from LVM management.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pvcreate](/man/pvcreate)(8), [vgreduce](/man/vgreduce)(8), [pvdisplay](/man/pvdisplay)(8)

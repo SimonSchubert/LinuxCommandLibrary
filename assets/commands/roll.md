@@ -71,6 +71,12 @@ Random source varies. Not cryptographically secure. Fun utility only.
 
 **roll** is a simple command-line dice roller implementing standard RPG dice notation for tabletop gaming.
 
+# INSTALL
+
+```brew: brew install roll```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rolldice](/man/rolldice)(6), [shuf](/man/shuf)(1)

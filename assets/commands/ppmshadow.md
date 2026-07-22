@@ -57,6 +57,24 @@ Requires the image to have a transparent (black) background around the subject f
 
 ppmshadow was created by **John Walker** as part of the **Netpbm** toolkit for image shadow effect generation.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm-extras```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppm](/man/ppm)(5), [pnmcomp](/man/pnmcomp)(1), [netpbm](/man/netpbm)(1), [pnmconvol](/man/pnmconvol)(1)

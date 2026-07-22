@@ -120,6 +120,12 @@ Skipfish is resource-intensive on both the scanner and target server. Always obt
 
 Skipfish was developed by **Michal Zalewski** (lcamtuf) at **Google** and released in **2010**. Zalewski is renowned for security research including the AFL fuzzer. Skipfish was designed for speed and accuracy, using optimized HTTP handling and intelligent crawling algorithms. While development has slowed, it remains a useful tool for web application reconnaissance and automated security testing.
 
+# INSTALL
+
+```aur: yay -S skipfish```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nikto](/man/nikto)(1), [wpscan](/man/wpscan)(1), [sqlmap](/man/sqlmap)(1), [burpsuite](/man/burpsuite)(1)

@@ -59,6 +59,12 @@ extracts credentials from Windows systems via SAM, LSA secrets, cached
 
 Highly sensitive operation. Requires administrator/domain admin access. For authorized security testing only.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [impacket-psexec](/man/impacket-psexec)(1)

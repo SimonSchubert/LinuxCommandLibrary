@@ -110,6 +110,24 @@ Modern Perl scripts should use `use strict;` and `use warnings;` for safer code.
 
 Perl was created by **Larry Wall** in **1987** as a practical language for text manipulation and report generation. Perl 5, released in 1994, introduced major features including references, objects, and modules.
 
+# INSTALL
+
+```apt: sudo apt install perl-base```
+
+```dnf: sudo dnf install perl-base```
+
+```pacman: sudo pacman -S perl```
+
+```apk: sudo apk add perl```
+
+```zypper: sudo zypper install perl-base```
+
+```brew: brew install perl```
+
+```nix: nix profile install nixpkgs#perl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [ruby](/man/ruby)(1), [awk](/man/awk)(1), [sed](/man/sed)(1), [grep](/man/grep)(1), [cpan](/man/cpan)(1), [perldoc](/man/perldoc)(1)

@@ -62,6 +62,24 @@ Output format designed for old terminals. May need post-processing for modern us
 
 **ptx** is a traditional Unix text processing tool, part of GNU coreutils. Permuted indexes were important for printed documentation before full-text search became common.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sort](/man/sort)(1), [grep](/man/grep)(1), [awk](/man/awk)(1)

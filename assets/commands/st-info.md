@@ -62,6 +62,24 @@ ST-Link required. Device must be connected. STM32 only.
 
 **st-info** is part of **stlink**, providing device information for STM32 microcontrollers connected via ST-Link.
 
+# INSTALL
+
+```apt: sudo apt install stlink-tools```
+
+```dnf: sudo dnf install stlink```
+
+```pacman: sudo pacman -S stlink```
+
+```apk: sudo apk add stlink```
+
+```zypper: sudo zypper install stlink```
+
+```brew: brew install stlink```
+
+```nix: nix profile install nixpkgs#stlink```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [st-flash](/man/st-flash)(1), [st-util](/man/st-util)(1), [openocd](/man/openocd)(1)

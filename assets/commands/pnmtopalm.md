@@ -67,6 +67,24 @@ Convert PNM images to Palm image format
 
 **pnmtopalm** converts a PNM image to the Palm Pilot bitmap format. It is part of the Netpbm toolkit. The inverse conversion is performed by **palmtopnm**.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [palmtopnm](/man/palmtopnm)(1), [pnmtopng](/man/pnmtopng)(1)

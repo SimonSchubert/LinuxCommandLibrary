@@ -76,6 +76,23 @@ The tool requires a wireless interface in monitor mode. Captured WPA handshakes 
 
 Requires wireless interface in monitor mode. Only use on networks you own or have explicit authorization to test. WPA cracking requires dictionary attack after handshake capture. Some access points may detect and block flooding attacks.
 
+# INSTALL
+
+```apt: sudo apt install aircrack-ng```
+
+```dnf: sudo dnf install aircrack-ng```
+
+```pacman: sudo pacman -S aircrack-ng```
+
+```apk: sudo apk add aircrack-ng```
+
+```zypper: sudo zypper install aircrack-ng```
+
+```brew: brew install aircrack-ng```
+
+```nix: nix profile install nixpkgs#aircrack-ng```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1), [aireplay-ng](/man/aireplay-ng)(1), [airmon-ng](/man/airmon-ng)(1)

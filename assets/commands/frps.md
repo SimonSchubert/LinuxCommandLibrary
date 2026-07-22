@@ -68,6 +68,16 @@ Requires public server with open ports. Security depends on authentication setup
 
 frps is part of **frp**, providing server-side functionality for the reverse proxy system. It enables hosting your own tunnel infrastructure as an alternative to commercial services.
 
+# INSTALL
+
+```apk: sudo apk add frp```
+
+```brew: brew install frps```
+
+```nix: nix profile install nixpkgs#frp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [frpc](/man/frpc)(1), [frp](/man/frp)(1), [nginx](/man/nginx)(1)

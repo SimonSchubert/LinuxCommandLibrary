@@ -98,6 +98,18 @@ Requires V4L2 compatible webcam. Initial frames may be dark (use -S to skip). Re
 
 fswebcam was written by **Philip Heron** as a simple command-line tool for capturing webcam images on Linux. It's designed for scripting and automation rather than interactive use.
 
+# INSTALL
+
+```apt: sudo apt install fswebcam```
+
+```dnf: sudo dnf install fswebcam```
+
+```zypper: sudo zypper install fswebcam```
+
+```nix: nix profile install nixpkgs#fswebcam```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [v4l2-ctl](/man/v4l2-ctl)(1), [ffmpeg](/man/ffmpeg)(1), [motion](/man/motion)(1)

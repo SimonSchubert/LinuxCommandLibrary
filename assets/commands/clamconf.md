@@ -69,6 +69,14 @@ clamconf reads configuration files but does not validate whether clamd or freshc
 
 clamconf was introduced as part of the **ClamAV** suite to simplify configuration management. ClamAV originated in **2001** and clamconf was added later to help administrators manage the increasingly complex configuration options as the antivirus engine evolved.
 
+# INSTALL
+
+```apt: sudo apt install clamav-daemon```
+
+```apk: sudo apk add clamav-daemon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clamscan](/man/clamscan)(1), [clamd](/man/clamd)(8), [freshclam](/man/freshclam)(1), [clamav](/man/clamav)(1)

@@ -49,6 +49,12 @@ The tool identifies which headers can be safely removed, reducing compilation de
 
 May report false positives for conditionally compiled code (e.g., `#ifdef` blocks). Results should be verified before removing includes. Detection of unnecessary includes in source files (not headers) is limited.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#cppclean```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clang-tidy](/man/clang-tidy)(1), [cppcheck](/man/cppcheck)(1), [cpplint](/man/cpplint)(1), [gcc](/man/gcc)(1), [cmake](/man/cmake)(1)

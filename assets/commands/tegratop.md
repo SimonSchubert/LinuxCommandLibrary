@@ -24,6 +24,12 @@ Requires an NVIDIA Jetson board. May need elevated privileges for full sensor ac
 
 **tegratop** was created by **Badr** (pythops) and is written in **Rust**.
 
+# INSTALL
+
+```aur: yay -S tegratop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nvtop](/man/nvtop)(1), [htop](/man/htop)(1)

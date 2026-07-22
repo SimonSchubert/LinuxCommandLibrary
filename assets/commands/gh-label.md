@@ -95,6 +95,24 @@ manage issue and PR labels
 
 Common label patterns include bug/feature categorization, priority levels, status indicators, and area tags. The **clone** command copies an entire label scheme from another repository, useful for maintaining consistency across projects or setting up new repositories.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-issue](/man/gh-issue)(1), [gh-pr](/man/gh-pr)(1)

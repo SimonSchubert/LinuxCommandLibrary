@@ -36,6 +36,16 @@ _NAMES_
 
 Third-party tool; install with **npm install -g npm-name-cli**. Requires network access to query the npm registry. Does not check for trademark conflicts or similar names.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-publish](/man/npm-publish)(1)

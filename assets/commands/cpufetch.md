@@ -84,6 +84,22 @@ The peak performance calculation uses the maximum CPU frequency but does not acc
 
 **cpufetch** was created by **Dr-Noob** with the first commit in **March 2018**. Written in C under the GPL-2.0 license. The latest version is v1.07 (November 2025). The same author also created **gpufetch** for GPU information and **peakperf** for accurate CPU performance measurement.
 
+# INSTALL
+
+```apt: sudo apt install cpufetch```
+
+```dnf: sudo dnf install cpufetch```
+
+```pacman: sudo pacman -S cpufetch```
+
+```zypper: sudo zypper install cpufetch```
+
+```brew: brew install cpufetch```
+
+```nix: nix profile install nixpkgs#cpufetch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neofetch](/man/neofetch)(1), [fastfetch](/man/fastfetch)(1), [lscpu](/man/lscpu)(1), [screenfetch](/man/screenfetch)(1)

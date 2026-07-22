@@ -49,6 +49,20 @@ Part of **hub**, which is deprecated in favor of the official GitHub CLI (**gh**
 
 hub fork is part of **hub**, GitHub's original command-line wrapper around git for repository operations, created in 2012.
 
+# INSTALL
+
+```apt: sudo apt install hub```
+
+```pacman: sudo pacman -S hub```
+
+```zypper: sudo zypper install hub```
+
+```brew: brew install hub```
+
+```nix: nix profile install nixpkgs#hub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hub](/man/hub)(1), [gh](/man/gh)(1), [hub-clone](/man/hub-clone)(1)

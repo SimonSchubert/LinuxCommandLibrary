@@ -72,6 +72,20 @@ Complex recipe syntax. Security requires careful configuration. Largely supersed
 
 **procmail** was written by **Stephen van den Berg** starting in **1990**. It became the standard Unix mail filtering tool, though its usage has declined with webmail and server-side filtering. It's still used for advanced local mail processing.
 
+# INSTALL
+
+```apt: sudo apt install procmail```
+
+```dnf: sudo dnf install procmail```
+
+```zypper: sudo zypper install procmail```
+
+```brew: brew install procmail```
+
+```nix: nix profile install nixpkgs#procmail```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fetchmail](/man/fetchmail)(1), [formail](/man/formail)(1), [maildir](/man/maildir)(5), [sieve](/man/sieve)(5)

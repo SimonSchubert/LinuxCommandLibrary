@@ -48,6 +48,12 @@ _expression_
 
 **tcpterm** was created by **Takumasa Sakao** (sachaos) and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S tcpterm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [tshark](/man/tshark)(1)

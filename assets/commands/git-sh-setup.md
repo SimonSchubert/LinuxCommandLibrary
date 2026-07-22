@@ -26,6 +26,24 @@ Internal library, not a command. Must be sourced, not executed. Used by git shel
 
 git-sh-setup is part of **Git's** internal infrastructure, providing shared functionality for shell-based git commands and hooks.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-sh-i18n](/man/git-sh-i18n)(1)

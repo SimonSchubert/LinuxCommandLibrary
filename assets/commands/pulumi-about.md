@@ -45,6 +45,18 @@ When run inside a Pulumi project, it also reports the project name, runtime, and
 
 The output includes paths and stack identifiers; redact sensitive values before sharing publicly. Some fields are only populated inside a Pulumi project directory.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-version](/man/pulumi-version)(1), [pulumi-stack](/man/pulumi-stack)(1)

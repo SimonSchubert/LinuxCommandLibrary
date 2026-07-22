@@ -66,6 +66,24 @@ Requires root privileges. Changes are only written when using **w** command. Con
 
 gdisk (GPT fdisk) was created by Roderick W. Smith and first released around **2009**. It was developed to provide a text-mode GPT partitioning tool similar in interface to the classic fdisk, as UEFI and GPT became the standard for modern systems.
 
+# INSTALL
+
+```apt: sudo apt install gdisk```
+
+```dnf: sudo dnf install gdisk```
+
+```pacman: sudo pacman -S gptfdisk```
+
+```apk: sudo apk add gptfdisk```
+
+```zypper: sudo zypper install gptfdisk```
+
+```brew: brew install gptfdisk```
+
+```nix: nix profile install nixpkgs#gptfdisk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fdisk](/man/fdisk)(8), [parted](/man/parted)(8), [cfdisk](/man/cfdisk)(8), [sgdisk](/man/sgdisk)(8)

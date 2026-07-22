@@ -48,6 +48,24 @@ gifdiff is part of the **gifsicle** toolkit and is primarily useful for regressi
 
 gifdiff does **not** produce a visual diff image. For pixel-level visualization of differences use a tool like **compare(1)** from ImageMagick.
 
+# INSTALL
+
+```apt: sudo apt install gifsicle```
+
+```dnf: sudo dnf install gifsicle```
+
+```pacman: sudo pacman -S gifsicle```
+
+```apk: sudo apk add gifsicle```
+
+```zypper: sudo zypper install gifsicle```
+
+```brew: brew install gifsicle```
+
+```nix: nix profile install nixpkgs#gifsicle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gifsicle](/man/gifsicle)(1), [gifview](/man/gifview)(1), [compare](/man/compare)(1)

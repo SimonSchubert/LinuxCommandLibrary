@@ -38,6 +38,12 @@ Requires root privileges to access input devices. Using -g flag captures input e
 
 intercept is part of the Interception Tools project, designed as a composable set of utilities for intercepting and manipulating input events on Linux using the evdev and uinput interfaces.
 
+# INSTALL
+
+```brew: brew install intercept```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [evtest](/man/evtest)(1), [uinput](/man/uinput)(4), [libinput](/man/libinput)(1)

@@ -47,6 +47,12 @@ Unsafe transforms rely on heuristics and should be applied one at a time with ca
 
 No transform runs by default: at least one must be selected with **--transform**. The recommended workflow is to apply a single transform at a time and inspect the diff, since combining many transforms in one pass can produce broken code.
 
+# INSTALL
+
+```aur: yay -S lebab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [babel](/man/babel)(1), [eslint](/man/eslint)(1)

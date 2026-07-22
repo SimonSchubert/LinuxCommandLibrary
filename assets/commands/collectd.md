@@ -70,6 +70,22 @@ Common use cases include monitoring system resources, network statistics, and ap
 
 Configuration requires careful setup of input and output plugins. Some plugins may require additional libraries. Running without proper output plugins will collect data but not store it.
 
+# INSTALL
+
+```apt: sudo apt install collectd-core```
+
+```dnf: sudo dnf install collectd```
+
+```apk: sudo apk add collectd```
+
+```zypper: sudo zypper install collectd```
+
+```brew: brew install collectd```
+
+```nix: nix profile install nixpkgs#collectd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [collectdmon](/man/collectdmon)(1)

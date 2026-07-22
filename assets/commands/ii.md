@@ -102,6 +102,20 @@ No built-in interface; requires scripts or tools. No SSL support without wrapper
 
 ii was created as part of the **suckless** project, following their philosophy of minimal, filesystem-based tools. It demonstrates IRC can work with standard Unix file operations.
 
+# INSTALL
+
+```apt: sudo apt install ii```
+
+```dnf: sudo dnf install ii```
+
+```apk: sudo apk add ii```
+
+```brew: brew install ii```
+
+```nix: nix profile install nixpkgs#ii```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [irssi](/man/irssi)(1), [weechat](/man/weechat)(1), [sic](/man/sic)(1)

@@ -57,6 +57,24 @@ Display **version** information
 
 Uses /dev/urandom as its primary entropy source. Part of the util-linux package. The output is not cryptographically audited; for cryptographic key generation, prefer openssl or gpg.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add mcookie```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xauth](/man/xauth)(1), [uuidgen](/man/uuidgen)(1), [openssl](/man/openssl)(1)

@@ -81,6 +81,24 @@ The command is useful for running 32-bit applications on 64-bit systems, compati
 
 Does not enable actual architecture emulation; the underlying CPU must support the requested mode. Disabling ASLR (**-R**) reduces security and should only be used for debugging. Part of the util-linux package.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add setarch```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [linux32](/man/linux32)(8), [linux64](/man/linux64)(8), [uname](/man/uname)(1), [personality](/man/personality)(2)

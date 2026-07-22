@@ -62,6 +62,16 @@ Requires xorriso to be installed for ISO creation. The generated images are hybr
 
 grub-mkrescue is part of GRUB 2 (GRand Unified Bootloader), the successor to GNU GRUB Legacy. GRUB 2 development began around **2002** and became the default bootloader in most Linux distributions by 2009.
 
+# INSTALL
+
+```apt: sudo apt install grub-common```
+
+```pacman: sudo pacman -S grub```
+
+```apk: sudo apk add grub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub-install](/man/grub-install)(8), [grub-mkconfig](/man/grub-mkconfig)(8), [mkisofs](/man/mkisofs)(8)

@@ -38,6 +38,14 @@ Only supports standard JWT formats. Encrypted JWTs (JWE) are not supported. Secr
 
 **jwt-ui** was created by the **jwt-rs** organization and is written in **Rust**. It was designed to bring the convenience of web-based JWT tools like jwt.io to the terminal.
 
+# INSTALL
+
+```pacman: sudo pacman -S jwt-ui```
+
+```brew: brew install jwt-ui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1)

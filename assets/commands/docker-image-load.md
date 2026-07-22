@@ -51,6 +51,24 @@ The tar archive must have been created with **docker image save** or a compatibl
 
 **docker image load** is the modern syntax for the **docker load** command, introduced as part of Docker's CLI restructuring to group commands under management categories.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-load](/man/docker-load)(1), [docker-image-save](/man/docker-image-save)(1), [docker-image](/man/docker-image)(1), [docker](/man/docker)(1)

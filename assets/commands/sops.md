@@ -92,6 +92,20 @@ Requires key access for decryption. Multiple keys recommended for redundancy. Ke
 
 **sops** was created by **Mozilla** for managing secrets in configuration files. It emerged from needs at Mozilla and has been adopted widely for secrets management in GitOps workflows.
 
+# INSTALL
+
+```pacman: sudo pacman -S sops```
+
+```apk: sudo apk add sops```
+
+```zypper: sudo zypper install sops```
+
+```brew: brew install sops```
+
+```nix: nix profile install nixpkgs#sops```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [age](/man/age)(1), [gpg](/man/gpg)(1), [vault](/man/vault)(1)

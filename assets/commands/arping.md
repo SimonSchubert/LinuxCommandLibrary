@@ -80,6 +80,17 @@ Requires root/sudo for raw socket access. Only works on local network segment. C
 
 **arping** has existed in various forms since the early **2000s**. The most common implementation is in the **iputils** package maintained as part of Linux networking tools. A separate implementation by Thomas Habets provides additional features.
 
+# INSTALL
+
+```apt: sudo apt install arping```
+
+```apk: sudo apk add iputils-arping```
+
+```brew: brew install arping```
+
+```nix: nix profile install nixpkgs#arping```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ping](/man/ping)(8), [arp](/man/arp)(8), [arp-scan](/man/arp-scan)(1), [ip](/man/ip)(8)

@@ -18,6 +18,24 @@ Extract commit ID from tar archive
 
 This command reads from stdin and outputs the 40-character SHA-1 hash if found. It is particularly useful for build systems that distribute archives and need to verify source versions. The command only works with archives created by git archive, as standard tar archives do not contain git metadata.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-archive](/man/git-archive)(1)

@@ -88,6 +88,17 @@ Policy changes can take several seconds to propagate. The root account should ne
 
 AWS IAM launched in **May 2010** as the access control system for AWS. Roles were introduced in **2012** for cross-account and service access. Policy conditions expanded significantly over the years, and IAM Identity Center (formerly SSO) was added in **2017** for centralized access management.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-sts](/man/aws-sts)(1), [aws-organizations](/man/aws-organizations)(1)

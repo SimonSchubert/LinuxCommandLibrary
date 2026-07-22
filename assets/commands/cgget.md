@@ -79,6 +79,14 @@ The **CGROUP_LOGLEVEL** environment variable controls verbosity (DEBUG, INFO, WA
 
 Requires appropriate permissions to read cgroup parameters. Some parameters may only be available with root access.
 
+# INSTALL
+
+```apt: sudo apt install cgroup-tools```
+
+```apk: sudo apk add cgroup-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cgset](/man/cgset)(1), [cgcreate](/man/cgcreate)(1), [cgdelete](/man/cgdelete)(1), [cgexec](/man/cgexec)(1), [cgclassify](/man/cgclassify)(1), [lscgroup](/man/lscgroup)(1), [cgroups](/man/cgroups)(7)

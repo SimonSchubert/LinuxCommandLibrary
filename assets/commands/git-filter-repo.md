@@ -89,6 +89,22 @@ The tool can remove files, rename paths, strip sensitive data, change authors, a
 
 git filter-repo was created by **Elijah Newren** as the official replacement for git filter-branch, recommended by the git project itself since Git 2.24's release notes.
 
+# INSTALL
+
+```dnf: sudo dnf install git-filter-repo```
+
+```pacman: sudo pacman -S git-filter-repo```
+
+```apk: sudo apk add git-filter-repo```
+
+```zypper: sudo zypper install git-filter-repo```
+
+```brew: brew install git-filter-repo```
+
+```nix: nix profile install nixpkgs#git-filter-repo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-rebase](/man/git-rebase)(1), [git-filter-branch](/man/git-filter-branch)(1)

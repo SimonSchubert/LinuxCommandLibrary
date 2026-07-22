@@ -78,6 +78,21 @@ Some operations require system or root privileges. Disabling system packages may
 
 The package manager command has been part of Android since its initial release in **2008**, providing command-line access to the PackageManager system service.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb](/man/adb)(1), [adb-shell](/man/adb-shell)(1), [adb-shell-pm-list-packages](/man/adb-shell-pm-list-packages)(1), [adb-install](/man/adb-install)(1), [adb-uninstall](/man/adb-uninstall)(1)

@@ -63,6 +63,22 @@ Requires lcov trace files. Large codebases produce large reports. Browser needed
 
 genhtml is part of **lcov**, the Linux Test Project coverage tool. It provides HTML visualization for coverage data collected by lcov from gcov.
 
+# INSTALL
+
+```dnf: sudo dnf install lcov```
+
+```pacman: sudo pacman -S lcov```
+
+```apk: sudo apk add lcov```
+
+```zypper: sudo zypper install lcov```
+
+```brew: brew install lcov```
+
+```nix: nix profile install nixpkgs#lcov```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lcov](/man/lcov)(1), [gcov](/man/gcov)(1)

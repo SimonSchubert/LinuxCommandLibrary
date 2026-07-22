@@ -129,6 +129,14 @@ Fork of Redis. Redis-cli compatible. Server must be running.
 
 **valkey-cli** is the CLI for **Valkey**, a Redis fork maintained by the Linux Foundation.
 
+# INSTALL
+
+```apt: sudo apt install valkey-tools```
+
+```apk: sudo apk add valkey-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [redis-cli](/man/redis-cli)(1), [valkey-server](/man/valkey-server)(1)

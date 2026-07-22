@@ -64,6 +64,16 @@ This tool is deprecated in favor of **gpgtar**, which provides the same function
 
 **gpg-zip** is deprecated. Use **gpgtar** instead.
 
+# INSTALL
+
+```apt: sudo apt install gpg```
+
+```apk: sudo apk add gpg```
+
+```brew: brew install gpg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [tar](/man/tar)(1)

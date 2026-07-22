@@ -64,6 +64,24 @@ The **-u** option only unlocks revisions locked by the current user. It cannot u
 
 Use **-n** (dry run) first to preview which files will be removed, especially when running on an entire directory.
 
+# INSTALL
+
+```apt: sudo apt install rcs```
+
+```dnf: sudo dnf install rcs```
+
+```pacman: sudo pacman -S rcs```
+
+```apk: sudo apk add rcs```
+
+```zypper: sudo zypper install rcs```
+
+```brew: brew install rcs```
+
+```nix: nix profile install nixpkgs#rcs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rcs](/man/rcs)(1), [ci](/man/ci)(1), [co](/man/co)(1), [rcsdiff](/man/rcsdiff)(1)

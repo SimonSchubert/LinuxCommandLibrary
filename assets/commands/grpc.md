@@ -62,6 +62,18 @@ Requires protocol buffer definitions. HTTP/2 needed; some proxies don't support 
 
 gRPC was developed by **Google** and open-sourced in **2015**. It's based on Google's internal Stubby RPC framework and is now a CNCF project used extensively in cloud-native applications.
 
+# INSTALL
+
+```dnf: sudo dnf install grpc```
+
+```pacman: sudo pacman -S grpc```
+
+```brew: brew install grpc```
+
+```nix: nix profile install nixpkgs#grpc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [protoc](/man/protoc)(1), [grpcurl](/man/grpcurl)(1), [curl](/man/curl)(1)

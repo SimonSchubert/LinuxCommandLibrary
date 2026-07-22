@@ -109,6 +109,20 @@ The interfaces have separate dependencies, and distributions often split them ac
 
 duc was written by **Ico Doornekamp** as a successor to his earlier `philesight`, and its whole premise is the separation of scanning from viewing. That distinction matters once a filesystem is large enough that walking it is measured in hours rather than seconds, at which point the interactive scanners everyone uses on a laptop stop being an option and an indexed database becomes the only workable approach.
 
+# INSTALL
+
+```apt: sudo apt install duc```
+
+```dnf: sudo dnf install duc```
+
+```zypper: sudo zypper install duc```
+
+```brew: brew install duc```
+
+```nix: nix profile install nixpkgs#duc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [du](/man/du)(1), [ncdu](/man/ncdu)(1), [dua](/man/dua)(1), [dust](/man/dust)(1), [baobab](/man/baobab)(1)

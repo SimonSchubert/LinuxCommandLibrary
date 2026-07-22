@@ -103,6 +103,12 @@ Rankings depend on third-party benchmarks; new models appear before their scores
 
 **whichllm** was published in **2025** by **Andyyyy64** as a Python utility distributed via **uv**, **pip**, and **Homebrew**. It emerged as the local-LLM ecosystem fragmented across HuggingFace, Ollama, and dozens of quantization formats, where simply checking VRAM size was no longer enough to pick a usable model. The project has continued to track new releases and benchmark updates through **v0.5.x** (2026).
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#whichllm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ollama](/man/ollama)(1), [llm](/man/llm)(1), [huggingface-cli](/man/huggingface-cli)(1)

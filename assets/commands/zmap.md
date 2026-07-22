@@ -88,6 +88,22 @@ High scan rates can overwhelm networks or trigger security alerts. Use rate limi
 
 Always use a blacklist to exclude sensitive addresses (RFC 1918, military, critical infrastructure).
 
+# INSTALL
+
+```apt: sudo apt install zmap```
+
+```dnf: sudo dnf install zmap```
+
+```pacman: sudo pacman -S zmap```
+
+```apk: sudo apk add zmap```
+
+```brew: brew install zmap```
+
+```nix: nix profile install nixpkgs#zmap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [masscan](/man/masscan)(1), [unicornscan](/man/unicornscan)(1)

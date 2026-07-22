@@ -42,6 +42,16 @@ Requires browser. Falls back to npm registry. Uses package.json homepage.
 
 npm home provides **quick access** to package homepages from the command line.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-docs](/man/npm-docs)(1), [npm-repo](/man/npm-repo)(1)

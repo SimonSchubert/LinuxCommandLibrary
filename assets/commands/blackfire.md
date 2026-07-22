@@ -98,6 +98,12 @@ Requires a Blackfire account and properly configured credentials (BLACKFIRE_CLIE
 
 Blackfire was created by **SensioLabs** (the company behind Symfony) and launched in **2014** as a commercial profiling solution. It evolved from the open-source xhprof profiler and provides continuous performance monitoring for PHP applications.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#blackfire```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [php](/man/php)(1), [curl](/man/curl)(1)

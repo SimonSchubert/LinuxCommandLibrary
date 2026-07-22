@@ -82,6 +82,20 @@ Root privileges are required except when using **-l** to list your own informati
 
 **chage** is part of the **shadow-utils** package. It manages password aging as defined in the /etc/shadow file.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [passwd](/man/passwd)(1), [usermod](/man/usermod)(8), [chpasswd](/man/chpasswd)(8)

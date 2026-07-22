@@ -27,6 +27,24 @@ Convert HP ThinkJet to PBM format
 
 The program handles only a small subset of ThinkJet command sequences, but enough to convert screen images from older HP test equipment. It is part of the **Netpbm** toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtolj](/man/pbmtolj)(1), [ppmtolj](/man/ppmtolj)(1), [ppmtopj](/man/ppmtopj)(1), [pjtoppm](/man/pjtoppm)(1), [pnmtopclxl](/man/pnmtopclxl)(1), [netpbm](/man/netpbm)(1)

@@ -52,6 +52,22 @@ Example program. Not for production use. Demonstrates GNU standards.
 
 GNU Hello was created as part of the **GNU Project** to serve as an example program demonstrating GNU packaging standards.
 
+# INSTALL
+
+```apt: sudo apt install hello```
+
+```dnf: sudo dnf install hello```
+
+```apk: sudo apk add mbedtls2-utils```
+
+```zypper: sudo zypper install hello```
+
+```brew: brew install hello```
+
+```nix: nix profile install nixpkgs#hello```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [echo](/man/echo)(1), [printf](/man/printf)(1), [cowsay](/man/cowsay)(6)

@@ -44,6 +44,24 @@ The terminal must support VT100-style size queries. Output must be evaluated by 
 
 Part of **xterm** utilities, originally written for X Window System terminal emulators. Less commonly needed on modern systems where terminal resizing is handled automatically, but still useful for remote sessions and serial consoles.
 
+# INSTALL
+
+```apt: sudo apt install xterm```
+
+```dnf: sudo dnf install xterm```
+
+```pacman: sudo pacman -S xterm```
+
+```apk: sudo apk add xterm```
+
+```zypper: sudo zypper install xterm```
+
+```brew: brew install xterm```
+
+```nix: nix profile install nixpkgs#xterm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stty](/man/stty)(1), [tput](/man/tput)(1), [xterm](/man/xterm)(1)

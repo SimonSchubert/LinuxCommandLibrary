@@ -66,6 +66,24 @@ RCS is legacy system. Consider Git instead. File-level versioning only.
 
 **rcsdiff** is part of **RCS** (Revision Control System), created by **Walter Tichy** in 1982 at Purdue University.
 
+# INSTALL
+
+```apt: sudo apt install rcs```
+
+```dnf: sudo dnf install rcs```
+
+```pacman: sudo pacman -S rcs```
+
+```apk: sudo apk add rcs```
+
+```zypper: sudo zypper install rcs```
+
+```brew: brew install rcs```
+
+```nix: nix profile install nixpkgs#rcs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rcs](/man/rcs)(1), [ci](/man/ci)(1), [co](/man/co)(1), [diff](/man/diff)(1)

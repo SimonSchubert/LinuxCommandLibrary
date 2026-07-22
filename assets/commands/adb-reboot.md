@@ -54,6 +54,21 @@ Bootloader and recovery modes may require unlocked bootloader or specific device
 
 **adb reboot** has been available since the initial Android SDK release in **2008**. Boot mode options were added to facilitate ROM development and device recovery operations.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb](/man/adb)(1), [adb-shell](/man/adb-shell)(1), [fastboot](/man/fastboot)(1)

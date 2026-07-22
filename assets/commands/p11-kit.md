@@ -87,6 +87,24 @@ Module configuration is system-wide in /etc/pkcs11/modules/. Root privileges req
 
 p11-kit was created to **unify PKCS#11 module** management across applications.
 
+# INSTALL
+
+```apt: sudo apt install p11-kit```
+
+```dnf: sudo dnf install p11-kit```
+
+```pacman: sudo pacman -S p11-kit```
+
+```apk: sudo apk add p11-kit```
+
+```zypper: sudo zypper install p11-kit```
+
+```brew: brew install p11-kit```
+
+```nix: nix profile install nixpkgs#p11-kit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [trust](/man/trust)(1), [pkcs11-tool](/man/pkcs11-tool)(1), [openssl](/man/openssl)(1)

@@ -111,6 +111,12 @@ Fewer features than neofetch. Some obscure systems may not be detected. ASCII ar
 
 **pfetch** was created by **Dylan Araps** around **2019** as a minimal system info tool. The same author created neofetch, with pfetch being a stripped-down alternative for those preferring simplicity.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pfetch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neofetch](/man/neofetch)(1), [screenfetch](/man/screenfetch)(1), [fastfetch](/man/fastfetch)(1), [macchina](/man/macchina)(1)

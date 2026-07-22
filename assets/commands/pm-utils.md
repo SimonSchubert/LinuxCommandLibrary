@@ -77,6 +77,12 @@ Deprecated in favor of systemd (use `systemctl suspend` or `systemctl hibernate`
 
 **pm-utils** was developed by **Peter Jones** for **Fedora** and adopted by other Linux distributions as a standard power management interface. It provided a hook-based framework to handle hardware quirks during suspend/resume. With the widespread adoption of systemd, pm-utils has been largely superseded by systemd's built-in power management.
 
+# INSTALL
+
+```aur: yay -S pm-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [rtcwake](/man/rtcwake)(8), [acpid](/man/acpid)(8)

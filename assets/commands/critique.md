@@ -92,3 +92,9 @@ Requires Bun. Web uploads send rendered diff HTML and the raw patch to critique.
 ```[Homepage](https://critique.work)```
 
 <!-- verified: 2026-07-14 -->
+
+# INSTALL
+
+```aur: yay -S critique```
+
+<!-- packages: 2026-07-22 -->

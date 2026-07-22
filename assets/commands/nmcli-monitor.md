@@ -24,6 +24,14 @@ The command runs continuously until interrupted with **Ctrl+C**, making it usefu
 
 Runs in the foreground and blocks the terminal. Only shows events occurring after the monitor starts; historical events are not displayed. For parsing in scripts, consider using nmcli's **-t** (terse) option for machine-readable output.
 
+# INSTALL
+
+```apt: sudo apt install network-manager```
+
+```apk: sudo apk add networkmanager-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmcli](/man/nmcli)(1), [nmcli-general](/man/nmcli-general)(1), [nmcli-connection](/man/nmcli-connection)(1), [nmcli-device](/man/nmcli-device)(1)

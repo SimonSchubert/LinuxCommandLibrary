@@ -91,6 +91,14 @@ Requires Node.js. The standalone **next export** command was removed in Next.js 
 
 Next.js was created by **Vercel** (then ZEIT) and released in **2016** as a React framework for production applications. Later versions introduced App Router, React Server Components, and Turbopack.
 
+# INSTALL
+
+```apk: sudo apk add mmh```
+
+```nix: nix profile install nixpkgs#mmh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [vercel](/man/vercel)(1), [node](/man/node)(1)

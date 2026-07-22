@@ -106,6 +106,24 @@ RCS files (ending in **,v**) are stored in the same directory or in an **RCS/** 
 
 RCS was developed by **Walter F. Tichy** at Purdue University, first released in **1982**. It was one of the earliest version control systems and influenced later tools like CVS (which added network support) and eventually Git. RCS is part of the GNU project and continues to be available on most Unix-like systems.
 
+# INSTALL
+
+```apt: sudo apt install rcs```
+
+```dnf: sudo dnf install rcs```
+
+```pacman: sudo pacman -S rcs```
+
+```apk: sudo apk add rcs```
+
+```zypper: sudo zypper install rcs```
+
+```brew: brew install rcs```
+
+```nix: nix profile install nixpkgs#rcs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cvs](/man/cvs)(1), [git](/man/git)(1), [svn](/man/svn)(1), [diff](/man/diff)(1)

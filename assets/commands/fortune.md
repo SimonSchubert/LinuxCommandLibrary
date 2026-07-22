@@ -73,6 +73,18 @@ Offensive fortunes disabled by default. Database availability varies by installa
 
 fortune originated in **Unix Version 7** (1979), inspired by fortune cookies. It became a standard part of Unix systems, providing entertainment and occasionally wisdom at the command line.
 
+# INSTALL
+
+```apk: sudo apk add fortune```
+
+```zypper: sudo zypper install fortune```
+
+```brew: brew install fortune```
+
+```nix: nix profile install nixpkgs#fortune```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cowsay](/man/cowsay)(1), [figlet](/man/figlet)(1)

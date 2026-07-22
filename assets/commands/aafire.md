@@ -72,6 +72,12 @@ The default driver may attempt to open an X11 window rather than display in the 
 
 **aafire** is part of the aalib (ASCII Art Library) created by **Jan Hubicka** in the late **1990s**. The library was developed to enable ASCII art rendering for various applications and became popular for its creative approach to displaying graphics in text-only environments. It gained wider recognition through projects like MPlayer which used aalib to play video as ASCII art.
 
+# INSTALL
+
+```apt: sudo apt install libaa-bin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bb](/man/bb)(1), [cmatrix](/man/cmatrix)(1), [sl](/man/sl)(1)

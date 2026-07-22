@@ -35,6 +35,12 @@ Explore files in container image layers interactively
 
 **sou** was created by **knqyf263** and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#sou```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dive](/man/dive)(1), [docker](/man/docker)(1), [skopeo](/man/skopeo)(1), [crane](/man/crane)(1)

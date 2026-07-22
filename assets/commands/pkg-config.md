@@ -104,6 +104,24 @@ Requires .pc files. PKG_CONFIG_PATH for custom locations.
 
 pkg-config was created by **James Henstridge** around **2001** as part of the freedesktop.org project to simplify library compilation and linking. It is widely used in autotools, CMake, and Meson build systems.
 
+# INSTALL
+
+```apt: sudo apt install pkgconf```
+
+```dnf: sudo dnf install pkgconf```
+
+```pacman: sudo pacman -S pkgconf```
+
+```apk: sudo apk add pkgconf```
+
+```zypper: sudo zypper install pkgconf```
+
+```brew: brew install pkgconf```
+
+```nix: nix profile install nixpkgs#pkgconf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [make](/man/make)(1), [gcc](/man/gcc)(1), [pkgconf](/man/pkgconf)(1)

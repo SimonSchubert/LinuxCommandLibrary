@@ -58,6 +58,18 @@ Update project dependencies
 
 **poetry update** resolves dependencies to their latest versions allowed by the constraints in pyproject.toml, updates the poetry.lock file, and installs the new versions. When specific packages are given, only those packages and their dependencies are updated. Without arguments, all dependencies are updated.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [poetry-install](/man/poetry-install)(1), [poetry-lock](/man/poetry-lock)(1), [poetry-add](/man/poetry-add)(1), [poetry-show](/man/poetry-show)(1)

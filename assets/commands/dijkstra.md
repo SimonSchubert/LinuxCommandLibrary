@@ -43,6 +43,24 @@ The tool can calculate distance matrices showing the shortest path length betwee
 
 This utility is part of the Graphviz suite and is primarily used for network analysis, routing problems, and graph algorithm research. It processes graphs with weighted edges and can output results in various formats compatible with other Graphviz tools.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [neato](/man/neato)(1), [sfdp](/man/sfdp)(1)

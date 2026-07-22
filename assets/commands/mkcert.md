@@ -92,6 +92,22 @@ Development only. Keep root CA secure. Don't share CA key.
 
 mkcert was created by **Filippo Valsorda** to simplify local HTTPS development with trusted certificates.
 
+# INSTALL
+
+```apt: sudo apt install mkcert```
+
+```dnf: sudo dnf install mkcert```
+
+```pacman: sudo pacman -S mkcert```
+
+```zypper: sudo zypper install mkcert```
+
+```brew: brew install mkcert```
+
+```nix: nix profile install nixpkgs#mkcert```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [certbot](/man/certbot)(1)

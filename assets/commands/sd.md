@@ -68,6 +68,22 @@ sd modifies files in place by default when file arguments are provided. Always u
 
 **sd** was created by **chmln** and first released around **2019**. Written in **Rust**, it was designed to address the complexity and unintuitive syntax of sed for everyday find-and-replace tasks. The project gained popularity as part of the wave of modern Rust-based CLI tools reimagining traditional Unix utilities.
 
+# INSTALL
+
+```apt: sudo apt install sd```
+
+```pacman: sudo pacman -S sd```
+
+```apk: sudo apk add sd```
+
+```zypper: sudo zypper install sd```
+
+```brew: brew install sd```
+
+```nix: nix profile install nixpkgs#sd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sed](/man/sed)(1), [awk](/man/awk)(1), [rg](/man/rg)(1), [fd](/man/fd)(1), [perl](/man/perl)(1)

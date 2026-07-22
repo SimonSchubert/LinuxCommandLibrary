@@ -52,6 +52,18 @@ Part of PulseAudio. X11 specific. Session startup utility.
 
 pax11publish enables **PulseAudio X11 session** integration.
 
+# INSTALL
+
+```apt: sudo apt install pulseaudio-utils```
+
+```dnf: sudo dnf install pulseaudio-utils```
+
+```apk: sudo apk add pulseaudio-utils```
+
+```zypper: sudo zypper install pulseaudio-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulseaudio](/man/pulseaudio)(1), [pactl](/man/pactl)(1)

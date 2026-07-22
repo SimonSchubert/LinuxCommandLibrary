@@ -55,6 +55,14 @@ TDF files needed. Retro format. Limited font availability.
 
 **tdf** displays text using **TheDraw** ANSI font files, a popular format from the BBS era.
 
+# INSTALL
+
+```brew: brew install tdf```
+
+```nix: nix profile install nixpkgs#tdf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [figlet](/man/figlet)(1), [toilet](/man/toilet)(1), [banner](/man/banner)(1)

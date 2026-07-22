@@ -40,6 +40,22 @@ When run without options, it opens a graphical dialog showing MATE version detai
 
 MATE was started in **2011** as a continuation of the GNOME 2 desktop after GNOME 3 shifted to a new interface paradigm. The name comes from yerba mate, a South American plant.
 
+# INSTALL
+
+```apt: sudo apt install mate-desktop```
+
+```dnf: sudo dnf install mate-desktop```
+
+```pacman: sudo pacman -S mate-desktop```
+
+```apk: sudo apk add mate-desktop```
+
+```zypper: sudo zypper install mate-desktop```
+
+```nix: nix profile install nixpkgs#mate-desktop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mate-about](/man/mate-about)(1)

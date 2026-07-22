@@ -46,6 +46,12 @@ Other subcommands and flags (**--model**, session resume, planning modes, etc.) 
 
 Requires API keys or local model endpoints depending on configuration. Agent tools can modify files and run shell commands—use in trusted directories. Unrelated tools also use the letters "omp" (e.g. some prompt themes); ensure the binary on PATH is oh-my-pi's **omp**.
 
+# INSTALL
+
+```aur: yay -S omp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gemini](/man/gemini)(1), [claude](/man/claude)(1), [aider](/man/aider)(1)

@@ -84,6 +84,12 @@ Camelot only works with text-based PDFs; scanned documents require OCR first. Co
 
 Camelot was created by **Vinayak Mehta** and released in **2019** as an open-source alternative to commercial PDF table extraction tools. Named after the legendary castle, it was designed to be "excalibur for PDF table extraction." The project gained popularity for making table extraction accessible and programmable, filling a gap in the Python data science ecosystem.
 
+# INSTALL
+
+```aur: yay -S camelot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tabula](/man/tabula)(1), [pdftotext](/man/pdftotext)(1)

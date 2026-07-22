@@ -63,6 +63,12 @@ Requires root privileges. On Linux, depends on eBPF for TCP RST suppression. On 
 
 **packemon** was created by **ddddddO** and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S packemon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [nmap](/man/nmap)(1)

@@ -106,6 +106,22 @@ Root privileges are required for most operations. The **format** and **sanitize*
 
 **nvme-cli** is developed as an open-source project under the Linux NVMe project at https://github.com/linux-nvme/nvme-cli. It relies on Linux kernel NVMe IOCTLs and is Linux-specific.
 
+# INSTALL
+
+```apt: sudo apt install nvme-cli```
+
+```dnf: sudo dnf install nvme-cli```
+
+```pacman: sudo pacman -S nvme-cli```
+
+```apk: sudo apk add nvme-cli```
+
+```zypper: sudo zypper install nvme-cli```
+
+```nix: nix profile install nixpkgs#nvme-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smartctl](/man/smartctl)(1), [hdparm](/man/hdparm)(8), [lsblk](/man/lsblk)(1)

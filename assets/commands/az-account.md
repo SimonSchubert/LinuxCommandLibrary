@@ -93,6 +93,19 @@ This command group is essential for working with multiple Azure subscriptions an
 
 Access tokens are valid for a minimum of 5 minutes up to a maximum of 60 minutes. The **expires_on** field in token output is a POSIX timestamp (UTC), while **expiresOn** is local datetime. Starting in September 2025, Microsoft requires MFA for user identities; scripts should migrate to service principals or managed identities.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-login](/man/az-login)(1), [az-logout](/man/az-logout)(1)

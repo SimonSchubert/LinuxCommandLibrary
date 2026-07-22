@@ -80,6 +80,24 @@ Requires working Vulkan drivers and runtime. Default output can be thousands of 
 
 **vulkaninfo** is developed by the **Khronos Group** as part of the Vulkan SDK tools, maintained by **LunarG**. Vulkan was announced in **2015** and released in **February 2016** as the successor to OpenGL for high-performance graphics. vulkaninfo has been part of the Vulkan SDK since its initial release, serving as the primary diagnostic tool for Vulkan installations.
 
+# INSTALL
+
+```apt: sudo apt install vulkan-tools```
+
+```dnf: sudo dnf install vulkan-tools```
+
+```pacman: sudo pacman -S vulkan-tools```
+
+```apk: sudo apk add vulkan-tools```
+
+```zypper: sudo zypper install vulkan-tools```
+
+```brew: brew install vulkan-tools```
+
+```nix: nix profile install nixpkgs#vulkan-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glxinfo](/man/glxinfo)(1), [nvidia-smi](/man/nvidia-smi)(1), [lspci](/man/lspci)(8), [clinfo](/man/clinfo)(1)

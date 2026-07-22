@@ -70,6 +70,24 @@ Reads from stdin or revision range. Uses mailmap for identity consolidation. Dif
 
 git shortlog is a core **Git** command for generating contributor summaries, commonly used for release notes and acknowledgments.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-authors](/man/git-authors)(1)

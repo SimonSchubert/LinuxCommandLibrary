@@ -64,6 +64,18 @@ Gradle unit test runner
 
 **gradle test** runs the unit test suite for a Gradle project. It compiles test sources, runs tests, and generates reports. Use **--tests** to run specific tests by class name, method name, or wildcard pattern. Multiple **--tests** options can be combined. By default, Gradle skips tests that passed previously unless sources changed.
 
+# INSTALL
+
+```pacman: sudo pacman -S gradle```
+
+```apk: sudo apk add gradle```
+
+```brew: brew install gradle```
+
+```nix: nix profile install nixpkgs#gradle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [gradle-build](/man/gradle-build)(1)

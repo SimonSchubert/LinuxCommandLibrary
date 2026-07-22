@@ -101,6 +101,16 @@ Best for pure Python packages without complex build requirements. No support for
 
 flit was created by **Thomas Kluyver** as a simpler alternative to setuptools for pure Python packages. It helped drive the adoption of pyproject.toml and was an early implementation of PEP 517/518 build standards.
 
+# INSTALL
+
+```dnf: sudo dnf install flit```
+
+```apk: sudo apk add py3-flit```
+
+```brew: brew install flit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [poetry](/man/poetry)(1), [hatch](/man/hatch)(1), [twine](/man/twine)(1)

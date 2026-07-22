@@ -66,6 +66,18 @@ Display **help**
 
 Requires an active KDE Plasma session with KScreen enabled. Communicates via DBus with the running KScreen service.
 
+# INSTALL
+
+```apt: sudo apt install kscreen```
+
+```dnf: sudo dnf install kscreen```
+
+```pacman: sudo pacman -S kscreen```
+
+```apk: sudo apk add kscreen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kscreen-doctor](/man/kscreen-doctor)(1), [xrandr](/man/xrandr)(1)

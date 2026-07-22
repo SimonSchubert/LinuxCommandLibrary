@@ -34,6 +34,22 @@ _arguments_
 
 Only works from inside a Distrobox container. The command must exist on the host system. Environment variables may differ between container and host.
 
+# INSTALL
+
+```dnf: sudo dnf install distrobox```
+
+```pacman: sudo pacman -S distrobox```
+
+```apk: sudo apk add distrobox```
+
+```zypper: sudo zypper install distrobox```
+
+```brew: brew install distrobox```
+
+```nix: nix profile install nixpkgs#distrobox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [distrobox](/man/distrobox)(1), [distrobox-enter](/man/distrobox-enter)(1)

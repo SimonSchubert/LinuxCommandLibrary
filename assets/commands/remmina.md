@@ -119,6 +119,22 @@ Requires protocol plugins. FreeRDP for RDP support. Some features require additi
 
 Remmina was forked from **grdc** in 2009 by **Vic Lee** to create a more feature-rich remote desktop client.
 
+# INSTALL
+
+```apt: sudo apt install remmina```
+
+```dnf: sudo dnf install remmina```
+
+```pacman: sudo pacman -S remmina```
+
+```apk: sudo apk add remmina```
+
+```zypper: sudo zypper install remmina```
+
+```nix: nix profile install nixpkgs#remmina```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xfreerdp](/man/xfreerdp)(1), [vncviewer](/man/vncviewer)(1), [ssh](/man/ssh)(1)

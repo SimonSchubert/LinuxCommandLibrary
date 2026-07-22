@@ -78,6 +78,16 @@ Scapy requires root privileges for most operations involving raw sockets. It may
 
 **Scapy** was created by **Philippe Biondi** in **2003** as a flexible alternative to rigid network tools. It gained popularity in the security community for penetration testing and network research. The project transitioned to Python 3 support and continues to be actively maintained by the security community on GitHub.
 
+# INSTALL
+
+```pacman: sudo pacman -S scapy```
+
+```apk: sudo apk add scapy```
+
+```zypper: sudo zypper install scapy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [nmap](/man/nmap)(1), [hping3](/man/hping3)(1), [tshark](/man/tshark)(1)

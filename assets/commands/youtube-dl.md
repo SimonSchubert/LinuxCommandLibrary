@@ -121,6 +121,16 @@ youtube-dl development has slowed significantly. Consider using **yt-dlp**, an a
 
 youtube-dl was created in **2006** by Ricardo Garcia and has since become one of the most popular command-line video downloaders. The project moved to GitHub and gained widespread adoption. Due to a DMCA takedown in **October 2020** (later reversed), and slow development pace, the community fork **yt-dlp** emerged in **2021** and has become the recommended alternative.
 
+# INSTALL
+
+```dnf: sudo dnf install youtube-dl```
+
+```apk: sudo apk add yt-dlp-core```
+
+```nix: nix profile install nixpkgs#youtube-dl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yt-dlp](/man/yt-dlp)(1), [ffmpeg](/man/ffmpeg)(1), [streamlink](/man/streamlink)(1)

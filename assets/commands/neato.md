@@ -82,6 +82,24 @@ Better for undirected graphs. Large graphs may be slow. Overlap removal may need
 
 neato was developed by **Stephen North** at AT&T Labs as part of the Graphviz suite, implementing the Kamada-Kawai spring algorithm.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [circo](/man/circo)(1), [fdp](/man/fdp)(1), [graphviz](/man/graphviz)(1)

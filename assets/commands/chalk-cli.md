@@ -94,6 +94,12 @@ Templates allow inline nested styling:
 
 Requires Node.js. Color support depends on terminal capabilities. Use --color to force colors in pipes.
 
+# INSTALL
+
+```brew: brew install chalk-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tput](/man/tput)(1), [printf](/man/printf)(1)

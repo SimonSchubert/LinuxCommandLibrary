@@ -37,6 +37,22 @@ Running on active sockets may disrupt D-Bus connections. Requires appropriate pe
 
 dbus-cleanup-sockets is part of the **D-Bus** message bus system, originally developed by **Red Hat** and the freedesktop.org project starting in **2003**. The cleanup utility helps maintain system hygiene in long-running systems.
 
+# INSTALL
+
+```apt: sudo apt install dbus-bin```
+
+```dnf: sudo dnf install dbus```
+
+```pacman: sudo pacman -S dbus```
+
+```apk: sudo apk add dbus```
+
+```brew: brew install dbus```
+
+```nix: nix profile install nixpkgs#dbus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dbus-daemon](/man/dbus-daemon)(1), [dbus-launch](/man/dbus-launch)(1), [dbus-send](/man/dbus-send)(1), [dbus-monitor](/man/dbus-monitor)(1)

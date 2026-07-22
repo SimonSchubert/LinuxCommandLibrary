@@ -54,6 +54,16 @@ May break consumers that depend on the version being removed. Use **npm deprecat
 
 npm unpublish provides **package removal** with restrictions to prevent ecosystem breakage.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-publish](/man/npm-publish)(1), [npm-deprecate](/man/npm-deprecate)(1)

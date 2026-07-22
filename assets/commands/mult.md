@@ -45,6 +45,12 @@ Commands with side effects will execute those effects on every run. Use with cau
 
 **mult** was created by **dhth** and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S mult```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [watch](/man/watch)(1)

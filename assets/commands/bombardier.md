@@ -35,6 +35,16 @@ Requires a terminal with ncurses support. Simple but addictive gameplay.
 
 **bombardier** is inspired by classic bomber games dating back to the **1970s**, particularly Blitz and Bomber on early home computers.
 
+# INSTALL
+
+```dnf: sudo dnf install bombardier```
+
+```brew: brew install bombardier```
+
+```nix: nix profile install nixpkgs#bombardier```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [moon-buggy](/man/moon-buggy)(6), [ninvaders](/man/ninvaders)(6)

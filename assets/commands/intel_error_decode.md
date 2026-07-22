@@ -45,6 +45,18 @@ Intel graphics only. Requires error state from dmesg. Part of intel-gpu-tools.
 
 intel_error_decode is part of **intel-gpu-tools**, created for debugging GPU hangs on Intel graphics hardware.
 
+# INSTALL
+
+```apt: sudo apt install intel-gpu-tools```
+
+```pacman: sudo pacman -S intel-gpu-tools```
+
+```zypper: sudo zypper install intel-gpu-tools```
+
+```nix: nix profile install nixpkgs#intel-gpu-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [intel_bios_reader](/man/intel_bios_reader)(1), [dmesg](/man/dmesg)(1)

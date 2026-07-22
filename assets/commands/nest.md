@@ -103,6 +103,16 @@ Requires Node.js 16+. Generated code uses TypeScript. Some features need additio
 
 **NestJS** was created by **Kamil Myśliwiec** in **2017**, inspired by Angular's architecture. It brought Angular-style dependency injection and decorators to Node.js backend development. The CLI provides Rails-like code generation.
 
+# INSTALL
+
+```dnf: sudo dnf install nest```
+
+```brew: brew install nest```
+
+```nix: nix profile install nixpkgs#nest```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [npm](/man/npm)(1), [express](/man/express)(1)

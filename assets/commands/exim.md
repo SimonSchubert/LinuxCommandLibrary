@@ -97,6 +97,24 @@ Complex configuration syntax. Requires careful security setup. Port 25 often blo
 
 **Exim** was originally written by **Philip Hazel** at the **University of Cambridge** starting in **1995**. The name stands for "EXperimental Internet Mailer." It became the default MTA for Debian and is widely used on Unix servers.
 
+# INSTALL
+
+```apt: sudo apt install exim4-daemon-heavy```
+
+```dnf: sudo dnf install exim```
+
+```pacman: sudo pacman -S exim```
+
+```apk: sudo apk add exim```
+
+```zypper: sudo zypper install exim```
+
+```brew: brew install exim```
+
+```nix: nix profile install nixpkgs#exim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sendmail](/man/sendmail)(1), [postfix](/man/postfix)(1), [mailq](/man/mailq)(1), [mutt](/man/mutt)(1)

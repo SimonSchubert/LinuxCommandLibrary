@@ -77,6 +77,12 @@ System clock must be accurate for valid codes. Secrets are only as secure as the
 
 **gotp** was created for users preferring terminal-based 2FA management or needing MFA access on headless servers.
 
+# INSTALL
+
+```aur: yay -S gotp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [oathtool](/man/oathtool)(1), [pass](/man/pass)(1), [op](/man/op)(1)

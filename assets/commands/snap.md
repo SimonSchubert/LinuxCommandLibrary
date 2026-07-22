@@ -102,6 +102,16 @@ Snaps run in a sandbox with limited access to system resources. Interface connec
 
 **snap** is part of **snapd**, developed by Canonical for universal Linux packaging. It provides automatic updates, rollback capabilities, and runs on most Linux distributions.
 
+# INSTALL
+
+```apt: sudo apt install snapd```
+
+```dnf: sudo dnf install snapd```
+
+```brew: brew install snap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snapd](/man/snapd)(8), [apt](/man/apt)(8), [flatpak](/man/flatpak)(1)

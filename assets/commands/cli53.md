@@ -119,6 +119,14 @@ Requires AWS credentials with Route 53 permissions configured via environment va
 
 cli53 was created as an open-source tool to simplify Route 53 management from the command line. Named after Route 53's port association (DNS uses port 53), it provides a more user-friendly alternative to AWS CLI's Route 53 commands, particularly for bulk operations using BIND zone file format.
 
+# INSTALL
+
+```brew: brew install cli53```
+
+```nix: nix profile install nixpkgs#cli53```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws](/man/aws)(1), [dig](/man/dig)(1), [host](/man/host)(1), [nslookup](/man/nslookup)(1)

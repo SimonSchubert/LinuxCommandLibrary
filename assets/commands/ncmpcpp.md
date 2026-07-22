@@ -83,6 +83,24 @@ Requires running MPD instance. Configuration can be complex. Some features need 
 
 **ncmpcpp** stands for "NCurses Music Player Client (Plus Plus)", created as an enhanced version of ncmpc. Written in C++ by **Andrzej Rybczak**, it adds features like lyrics fetching and visualization.
 
+# INSTALL
+
+```apt: sudo apt install ncmpcpp```
+
+```dnf: sudo dnf install ncmpcpp```
+
+```pacman: sudo pacman -S ncmpcpp```
+
+```apk: sudo apk add ncmpcpp```
+
+```zypper: sudo zypper install ncmpcpp```
+
+```brew: brew install ncmpcpp```
+
+```nix: nix profile install nixpkgs#ncmpcpp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpd](/man/mpd)(1), [mpc](/man/mpc)(1), [ncmpc](/man/ncmpc)(1), [cmus](/man/cmus)(1)

@@ -65,6 +65,18 @@ Dynamic analysis requires executing the target binary and is only available on L
 
 **binsider** was created by **Orhun Parmaksiz** and first released in **September 2024**. It is written in Rust and dual-licensed under the Apache License 2.0 and MIT License. The project is hosted on GitHub and continues active development, with its website and documentation at https://binsider.dev.
 
+# INSTALL
+
+```pacman: sudo pacman -S binsider```
+
+```zypper: sudo zypper install binsider```
+
+```brew: brew install binsider```
+
+```nix: nix profile install nixpkgs#binsider```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [readelf](/man/readelf)(1), [strace](/man/strace)(1), [ltrace](/man/ltrace)(1), [strings](/man/strings)(1), [ldd](/man/ldd)(1), [objdump](/man/objdump)(1), [hexdump](/man/hexdump)(1), [stat](/man/stat)(1), [nm](/man/nm)(1), [file](/man/file)(1)

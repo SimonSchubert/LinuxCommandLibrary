@@ -46,6 +46,16 @@ First launch requires internet connection to download Tor Browser. Downloads may
 
 **torbrowser-launcher** was created by Micah Lee to simplify Tor Browser installation on Linux. It addresses security concerns of manual installation by automating signature verification. The launcher is widely packaged in Linux distributions including Debian, Ubuntu, and Fedora.
 
+# INSTALL
+
+```dnf: sudo dnf install torbrowser-launcher```
+
+```pacman: sudo pacman -S torbrowser-launcher```
+
+```zypper: sudo zypper install torbrowser-launcher```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tor](/man/tor)(1), [firefox](/man/firefox)(1), [gpg](/man/gpg)(1)

@@ -61,6 +61,16 @@ Same as npm uninstall. Use -g for globally linked packages. May need to reinstal
 
 npm unlink was added as a semantic alias for npm uninstall, specifically for undoing npm link operations.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-link](/man/npm-link)(1), [npm-uninstall](/man/npm-uninstall)(1)

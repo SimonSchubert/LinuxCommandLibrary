@@ -111,6 +111,24 @@ Not intended for general file copying. The default permission mode is 755 (rwxr-
 
 **install** is a traditional Unix utility, part of **GNU coreutils** on Linux. It has been used in Makefiles since early Unix for standardized software installation procedures.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cp](/man/cp)(1), [chmod](/man/chmod)(1), [chown](/man/chown)(1), [mkdir](/man/mkdir)(1), [make](/man/make)(1)

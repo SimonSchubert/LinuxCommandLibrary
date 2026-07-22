@@ -32,6 +32,16 @@ Returns "Disabled" if SELinux is not compiled into the kernel or if it was disab
 
 getenforce is part of the SELinux project, which was developed by the NSA (National Security Agency) and released as open source in **2000**. It was integrated into the Linux kernel in version 2.6 in **2003** and became the default security module for Red Hat Enterprise Linux and Fedora.
 
+# INSTALL
+
+```apt: sudo apt install selinux-utils```
+
+```dnf: sudo dnf install libselinux-utils```
+
+```apk: sudo apk add libselinux-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [setenforce](/man/setenforce)(1), [sestatus](/man/sestatus)(8)

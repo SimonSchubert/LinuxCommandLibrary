@@ -79,6 +79,22 @@ chat is part of the ppp package and is typically invoked by pppd rather than run
 
 Primarily used for legacy modem/PPP connections. Timing is critical; adjust timeouts for slow devices. Escape sequences may need proper quoting.
 
+# INSTALL
+
+```apt: sudo apt install ppp```
+
+```dnf: sudo dnf install ppp```
+
+```pacman: sudo pacman -S ppp```
+
+```apk: sudo apk add ppp-chat```
+
+```zypper: sudo zypper install ppp```
+
+```nix: nix profile install nixpkgs#ppp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pppd](/man/pppd)(8), [expect](/man/expect)(1)

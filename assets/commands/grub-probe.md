@@ -73,6 +73,16 @@ Requires root privileges for most operations. Device mapping can change between 
 
 grub-probe is part of GRUB 2's toolset, providing the device detection logic used by grub-install and grub-mkconfig. It replaced simpler detection methods used in GRUB Legacy.
 
+# INSTALL
+
+```apt: sudo apt install grub-common```
+
+```pacman: sudo pacman -S grub```
+
+```apk: sudo apk add grub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub-install](/man/grub-install)(8), [grub-mkconfig](/man/grub-mkconfig)(8), [grub-mkdevicemap](/man/grub-mkdevicemap)(8), [blkid](/man/blkid)(8)

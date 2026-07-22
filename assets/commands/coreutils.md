@@ -65,6 +65,24 @@ Behavior may differ between GNU coreutils and BSD/macOS implementations. Some op
 
 GNU Coreutils was formed in **2002** by merging three GNU packages: fileutils, shellutils, and textutils. These utilities were created as part of the GNU Project, started by Richard Stallman in **1983**, to provide free replacements for proprietary Unix tools.
 
+# INSTALL
+
+```apt: sudo apt install rust-coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [cp](/man/cp)(1), [mv](/man/mv)(1), [cat](/man/cat)(1), [busybox](/man/busybox)(1)

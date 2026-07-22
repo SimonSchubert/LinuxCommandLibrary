@@ -100,6 +100,22 @@ Some fields require verbose mode to display. Default output is designed for huma
 
 **lvs** is part of **LVM2**, the Linux Logical Volume Manager, providing quick volume listing functionality.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvm](/man/lvm)(8), [lvdisplay](/man/lvdisplay)(8), [lvcreate](/man/lvcreate)(8), [lvrename](/man/lvrename)(8), [pvs](/man/pvs)(8), [vgs](/man/vgs)(8)

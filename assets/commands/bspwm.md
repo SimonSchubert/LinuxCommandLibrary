@@ -47,6 +47,22 @@ Must not be started when another window manager is running. Requires a separate 
 
 **bspwm** was created by Bastien Dejean and follows the Unix philosophy of doing one thing well. It delegates hotkey handling and bar display to separate programs.
 
+# INSTALL
+
+```apt: sudo apt install bspwm```
+
+```dnf: sudo dnf install bspwm```
+
+```pacman: sudo pacman -S bspwm```
+
+```apk: sudo apk add bspwm```
+
+```zypper: sudo zypper install bspwm```
+
+```nix: nix profile install nixpkgs#bspwm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bspc](/man/bspc)(1), [sxhkd](/man/sxhkd)(1), [polybar](/man/polybar)(1), [i3](/man/i3)(1)

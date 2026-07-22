@@ -45,6 +45,14 @@ Command-line file transfer between computers with end-to-end encryption
 
 **portal** was created by **Arvid Gotthard** (mellonnen) and **Zino Kader** (ZinoKader) and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install portal```
+
+```nix: nix profile install nixpkgs#portal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [croc](/man/croc)(1), [scp](/man/scp)(1)

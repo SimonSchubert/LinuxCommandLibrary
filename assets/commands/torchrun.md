@@ -88,6 +88,14 @@ Training scripts must be written to handle distributed setup using torch.distrib
 
 **torchrun** was introduced in **PyTorch 1.10** (October 2021) as part of the TorchElastic project, replacing the older torch.distributed.launch module. It was designed to provide elastic and fault-tolerant distributed training capabilities. From **PyTorch 2.0** (March 2023), the command-line argument style changed from underscores to dashes (--local-rank instead of --local_rank).
 
+# INSTALL
+
+```apt: sudo apt install python3-torch```
+
+```dnf: sudo dnf install python3-torch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [nvidia-smi](/man/nvidia-smi)(1)

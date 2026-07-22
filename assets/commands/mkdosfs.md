@@ -82,6 +82,24 @@ Destroys existing data. Choose correct FAT type. Root required.
 
 mkdosfs is part of **dosfstools**, providing FAT filesystem creation on Linux.
 
+# INSTALL
+
+```apt: sudo apt install dosfstools```
+
+```dnf: sudo dnf install dosfstools```
+
+```pacman: sudo pacman -S dosfstools```
+
+```apk: sudo apk add dosfstools```
+
+```zypper: sudo zypper install dosfstools```
+
+```brew: brew install dosfstools```
+
+```nix: nix profile install nixpkgs#dosfstools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkfs.fat](/man/mkfs.fat)(8), [mkfs](/man/mkfs)(8), [dosfslabel](/man/dosfslabel)(8), [fatlabel](/man/fatlabel)(8)

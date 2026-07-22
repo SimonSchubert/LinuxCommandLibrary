@@ -45,6 +45,16 @@ Exit microcom by pressing **Ctrl+\\** followed by **q** (or the configured escap
 
 Serial port access typically requires appropriate permissions (membership in the **dialout** group on most Linux systems). The device must be configured for the correct baud rate, parity, and stop bits to match the remote device. No built-in file transfer protocols like XMODEM or ZMODEM.
 
+# INSTALL
+
+```apt: sudo apt install microcom```
+
+```zypper: sudo zypper install microcom```
+
+```nix: nix profile install nixpkgs#microcom```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [minicom](/man/minicom)(1), [screen](/man/screen)(1), [picocom](/man/picocom)(1), [cu](/man/cu)(1)

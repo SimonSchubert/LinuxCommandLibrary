@@ -69,6 +69,20 @@ Python-based. Requires mkdocs.yml config. Material theme popular.
 
 MkDocs was created to provide simple, fast **documentation** generation from Markdown files.
 
+# INSTALL
+
+```dnf: sudo dnf install mkdocs```
+
+```pacman: sudo pacman -S mkdocs```
+
+```apk: sudo apk add mkdocs```
+
+```brew: brew install mkdocs```
+
+```nix: nix profile install nixpkgs#mkdocs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sphinx-build](/man/sphinx-build)(1), [jekyll](/man/jekyll)(1), [hugo](/man/hugo)(1)

@@ -80,6 +80,13 @@ Depends on third-party streaming sites that may become unavailable. Download spe
 
 **animdl** was developed as a Python-based alternative to other anime CLI tools, focusing on speed, multiple provider support, and batch downloading capabilities.
 
+# INSTALL
+
+```brew: brew install animdl```
+
+```nix: nix profile install nixpkgs#animdl```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ani-cli](/man/ani-cli)(1), [youtube-dl](/man/youtube-dl)(1), [mpv](/man/mpv)(1)

@@ -54,6 +54,24 @@ sync guarantees data reaches the device driver but does not guarantee physical w
 
 sync has been part of Unix since the early days, ensuring filesystem consistency before shutdown or media removal. Written by Jim Meyering for GNU coreutils. The underlying sync(2) system call has existed since the original Unix.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [umount](/man/umount)(8), [shutdown](/man/shutdown)(8)

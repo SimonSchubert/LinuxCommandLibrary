@@ -72,6 +72,24 @@ Requires root privileges or membership in the i2c group. Scanning can interfere 
 
 i2cdetect is part of i2c-tools, a set of utilities for I2C bus access on Linux. I2C (Inter-Integrated Circuit) was developed by Philips in **1982** and became widely used in embedded systems.
 
+# INSTALL
+
+```apt: sudo apt install i2c-tools```
+
+```dnf: sudo dnf install i2c-tools```
+
+```pacman: sudo pacman -S i2c-tools```
+
+```apk: sudo apk add i2c-tools```
+
+```zypper: sudo zypper install i2c-tools```
+
+```brew: brew install i2c-tools```
+
+```nix: nix profile install nixpkgs#i2c-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [i2cget](/man/i2cget)(8), [i2cset](/man/i2cset)(8), [i2cdump](/man/i2cdump)(8), [modprobe](/man/modprobe)(8), [dmesg](/man/dmesg)(1)

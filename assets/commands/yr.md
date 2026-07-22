@@ -56,6 +56,12 @@ Requires network access to reach yr.no and Nominatim. Data coverage is global bu
 
 **yr** was created by **clux** and is written in **Rust**.
 
+# INSTALL
+
+```aur: yay -S yr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1)

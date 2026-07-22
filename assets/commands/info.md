@@ -78,6 +78,24 @@ Not all software has info pages. Navigation keys differ from man. Uses Emacs-sty
 
 info was created as part of the **GNU project** to provide richer documentation than man pages, supporting hypertext features.
 
+# INSTALL
+
+```apt: sudo apt install info```
+
+```dnf: sudo dnf install info```
+
+```pacman: sudo pacman -S texinfo```
+
+```apk: sudo apk add texinfo```
+
+```zypper: sudo zypper install info```
+
+```brew: brew install texinfo```
+
+```nix: nix profile install nixpkgs#texinfo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [man](/man/man)(1)

@@ -84,6 +84,20 @@ Format detection relies on file extensions; use **-i** and **-o** flags explicit
 
 Open Babel originated from the **OELib/OBabel** project started in **1998**. The **obabel** command replaced the older **babel** command around version 2.3 (2011), offering improved option handling following Unix conventions. Open Babel 3.0 was released in **2019** with enhanced stereochemistry support.
 
+# INSTALL
+
+```apt: sudo apt install openbabel```
+
+```dnf: sudo dnf install openbabel```
+
+```pacman: sudo pacman -S openbabel```
+
+```zypper: sudo zypper install openbabel```
+
+```nix: nix profile install nixpkgs#openbabel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rdkit](/man/rdkit)(1), [pymol](/man/pymol)(1)

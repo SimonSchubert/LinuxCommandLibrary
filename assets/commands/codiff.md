@@ -71,6 +71,18 @@ Input files must contain compatible debug information; stripped binaries produce
 
 **codiff** was written by **Arnaldo Carvalho de Melo** as part of the **dwarves** project, first released in **2007** to help kernel developers analyse the binary impact of struct-layout changes. The toolset evolved together with **pahole** and is now widely used in the **Linux kernel** workflow, including by **BTF** generation for **eBPF**.
 
+# INSTALL
+
+```apt: sudo apt install pahole```
+
+```pacman: sudo pacman -S pahole```
+
+```apk: sudo apk add pahole```
+
+```nix: nix profile install nixpkgs#pahole```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [readelf](/man/readelf)(1), [objdump](/man/objdump)(1)

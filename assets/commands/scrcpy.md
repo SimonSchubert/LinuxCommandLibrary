@@ -121,6 +121,20 @@ Requires ADB and USB debugging enabled. Audio forwarding needs Android 11+. Some
 
 **scrcpy** was created by **Romain Vimont** (rom1v) at **Genymobile** around **2018**. It provides a lightweight alternative to Android emulators and vendor-specific mirroring tools. Written in C with SDL, it prioritizes performance and simplicity. The project is open source and actively maintained.
 
+# INSTALL
+
+```pacman: sudo pacman -S scrcpy```
+
+```apk: sudo apk add scrcpy```
+
+```zypper: sudo zypper install scrcpy```
+
+```brew: brew install scrcpy```
+
+```nix: nix profile install nixpkgs#scrcpy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [adb](/man/adb)(1), [sndcpy](/man/sndcpy)(1), [ffmpeg](/man/ffmpeg)(1)

@@ -108,6 +108,18 @@ Running directly bypasses service management. Data directory must be secure. Con
 
 **PostgreSQL** development began at **UC Berkeley** in **1986** as POSTGRES (Post-Ingres). The open-source PostgreSQL project started in **1996**. It's now one of the most advanced open-source databases.
 
+# INSTALL
+
+```dnf: sudo dnf install postgresql17```
+
+```apk: sudo apk add postgresql17```
+
+```zypper: sudo zypper install postgresql17```
+
+```brew: brew install postgres```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_ctl](/man/pg_ctl)(1), [initdb](/man/initdb)(1), [psql](/man/psql)(1), [pg_dump](/man/pg_dump)(1), [pg_upgrade](/man/pg_upgrade)(1), [pg_isready](/man/pg_isready)(1)

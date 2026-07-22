@@ -111,6 +111,24 @@ Requires root/administrator for TUN/TAP creation. Firewalls must allow VPN traff
 
 **OpenVPN** was created by **James Yonan** and first released in **2001**. It was designed as an open-source alternative to IPsec, using standard TLS for the control channel. The project has become one of the most widely deployed VPN solutions, used by both commercial providers and enterprises. OpenVPN 3 introduced a new core library in C++.
 
+# INSTALL
+
+```apt: sudo apt install openvpn```
+
+```dnf: sudo dnf install openvpn```
+
+```pacman: sudo pacman -S openvpn```
+
+```apk: sudo apk add openvpn```
+
+```zypper: sudo zypper install openvpn```
+
+```brew: brew install openvpn```
+
+```nix: nix profile install nixpkgs#openvpn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ipsec](/man/ipsec)(8), [stunnel](/man/stunnel)(8), [ssh](/man/ssh)(1)

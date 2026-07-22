@@ -67,6 +67,20 @@ Subcommand of kubectl. Service type affects accessibility. Consider using manife
 
 kubectl expose provides quick service creation for **Kubernetes** workload networking.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-create](/man/kubectl-create)(1), [kubectl-run](/man/kubectl-run)(1)

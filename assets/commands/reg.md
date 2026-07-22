@@ -104,6 +104,14 @@ It targets Open Source Distribution-style registries. **reg ls** does not work a
 
 Deleting images requires registry configuration to enable deletes. Hub.docker.com listing is unsupported. Treat credentials carefully; prefer Docker credential helpers when possible.
 
+# INSTALL
+
+```brew: brew install reg```
+
+```nix: nix profile install nixpkgs#reg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [skopeo](/man/skopeo)(1), [crane](/man/crane)(1)

@@ -124,6 +124,22 @@ Output file named 'tags' by default. Use with Vim :tag command or Ctrl-]. Univer
 
 **ctags** was originally developed as part of the BSD Unix project in the late 1970s. **Exuberant Ctags** by Darren Hiebert became the dominant implementation in 1996, adding support for many languages. **Universal Ctags** forked in 2014 and is now the actively maintained version with modern language support.
 
+# INSTALL
+
+```dnf: sudo dnf install ctags```
+
+```pacman: sudo pacman -S ctags```
+
+```apk: sudo apk add ctags```
+
+```zypper: sudo zypper install ctags```
+
+```brew: brew install ctags```
+
+```nix: nix profile install nixpkgs#ctags```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [etags](/man/etags)(1), [vim](/man/vim)(1), [cscope](/man/cscope)(1)

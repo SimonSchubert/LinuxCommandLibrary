@@ -72,6 +72,16 @@ Network dependent. Feed format matters. May miss items between checks.
 
 **rsstail** was created to provide a tail-like interface for monitoring RSS feed updates from the command line.
 
+# INSTALL
+
+```apt: sudo apt install rsstail```
+
+```zypper: sudo zypper install rsstail```
+
+```nix: nix profile install nixpkgs#rsstail```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [tail](/man/tail)(1), [newsboat](/man/newsboat)(1)

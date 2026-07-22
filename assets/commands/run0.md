@@ -60,6 +60,22 @@ Requires systemd 256+. Authentication through polkit. Environment handling diffe
 
 **run0** was introduced in **systemd 256** by Lennart Poettering as a secure alternative to sudo. It addresses SUID-related security concerns by using polkit for authentication and service-based command execution.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sudo](/man/sudo)(8), [pkexec](/man/pkexec)(1), [doas](/man/doas)(1), [systemd-run](/man/systemd-run)(1)

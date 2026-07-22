@@ -100,6 +100,20 @@ Package names are permanent on PyPI. Version numbers can't be reused. Credential
 
 **Twine** was created by the Python Packaging Authority around **2013** to replace the insecure upload mechanism in setuptools. It ensures all uploads use HTTPS.
 
+# INSTALL
+
+```dnf: sudo dnf install twine```
+
+```pacman: sudo pacman -S twine```
+
+```apk: sudo apk add twine```
+
+```brew: brew install twine```
+
+```nix: nix profile install nixpkgs#twine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [build](/man/build)(1), [flit](/man/flit)(1)

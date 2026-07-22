@@ -71,6 +71,24 @@ Use pnmquant for new work. Dithering can increase file size. Part of Netpbm.
 
 ppmquant is part of **Netpbm** by **Jef Poskanzer**, implementing the median-cut color quantization algorithm by **Paul Heckbert**.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm-extras```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmquant](/man/pnmquant)(1), [pnmcolormap](/man/pnmcolormap)(1), [ppmtogif](/man/ppmtogif)(1), [netpbm](/man/netpbm)(1)

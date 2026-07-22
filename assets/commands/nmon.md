@@ -66,6 +66,22 @@ In interactive mode, press "h" for help on available keyboard shortcuts. The def
 
 **nmon** was created by Nigel Griffiths at IBM and has become a popular performance monitoring tool for Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install nmon```
+
+```dnf: sudo dnf install nmon```
+
+```pacman: sudo pacman -S nmon```
+
+```apk: sudo apk add nmon```
+
+```zypper: sudo zypper install nmon```
+
+```nix: nix profile install nixpkgs#nmon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [top](/man/top)(1), [vmstat](/man/vmstat)(8), [iostat](/man/iostat)(1), [sar](/man/sar)(1)

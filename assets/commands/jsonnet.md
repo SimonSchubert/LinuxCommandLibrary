@@ -88,6 +88,20 @@ Output is always JSON (use for YAML via conversion). No side effects; pure funct
 
 Jsonnet was developed at **Google** by **Dave Cunningham** around **2014**. It addressed the need for DRY configuration in cloud infrastructure, gaining adoption in the Kubernetes ecosystem.
 
+# INSTALL
+
+```apt: sudo apt install jsonnet```
+
+```dnf: sudo dnf install jsonnet```
+
+```apk: sudo apk add jsonnet```
+
+```brew: brew install jsonnet```
+
+```nix: nix profile install nixpkgs#jsonnet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [yq](/man/yq)(1), [dhall](/man/dhall)(1)

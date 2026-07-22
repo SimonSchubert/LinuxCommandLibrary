@@ -64,6 +64,20 @@ Part of the HPLIP package. Cleaning consumes ink and should only be run when pri
 
 **hp-clean** is one of the device-maintenance utilities in **HPLIP** (HP Linux Imaging and Printing), HP's open-source printer/scanner driver suite for Linux, alongside **hp-align** and **hp-linefeedcal**.
 
+# INSTALL
+
+```apt: sudo apt install hplip```
+
+```dnf: sudo dnf install hplip```
+
+```pacman: sudo pacman -S hplip```
+
+```zypper: sudo zypper install hplip```
+
+```nix: nix profile install nixpkgs#hplip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hp-align](/man/hp-align)(1), [hp-check](/man/hp-check)(1), [hp-levels](/man/hp-levels)(1), [hp-info](/man/hp-info)(1)

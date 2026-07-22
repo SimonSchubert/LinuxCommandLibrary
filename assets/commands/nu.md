@@ -94,6 +94,22 @@ Not POSIX-compatible — scripts written for **bash**/**zsh** will not run unmod
 
 **Nushell** was created in **2019** by **Jonathan Turner**, **Yehuda Katz**, and **Andrés Robalino** to bring PowerShell-style structured pipelines to a Unix-friendly, Rust-implemented shell. It is currently maintained by the **Nushell Project** under the **MIT license**.
 
+# INSTALL
+
+```dnf: sudo dnf install nushell```
+
+```pacman: sudo pacman -S nushell```
+
+```apk: sudo apk add nushell```
+
+```zypper: sudo zypper install nushell```
+
+```brew: brew install nushell```
+
+```nix: nix profile install nixpkgs#nushell```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [zsh](/man/zsh)(1), [fish](/man/fish)(1), [pwsh](/man/pwsh)(1)

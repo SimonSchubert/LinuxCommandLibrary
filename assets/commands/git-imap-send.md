@@ -49,6 +49,24 @@ Requires IMAP server configuration. SSL configuration may be complex. Alternativ
 
 git imap-send was created for projects using **email-based patch submission**, allowing integration with standard email clients.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-send-email](/man/git-send-email)(1), [git-format-patch](/man/git-format-patch)(1)

@@ -106,6 +106,24 @@ Maximum data capacity depends on QR version and error correction level. Higher e
 
 qrencode was written by **Kentaro Fukuchi** and is built on the **libqrencode** library. It provides command-line QR code generation in various output formats.
 
+# INSTALL
+
+```apt: sudo apt install qrencode```
+
+```dnf: sudo dnf install qrencode```
+
+```pacman: sudo pacman -S qrencode```
+
+```apk: sudo apk add libqrencode-tools```
+
+```zypper: sudo zypper install qrencode```
+
+```brew: brew install qrencode```
+
+```nix: nix profile install nixpkgs#qrencode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zbarimg](/man/zbarimg)(1), [zbarcam](/man/zbarcam)(1), [qr](/man/qr)(1)

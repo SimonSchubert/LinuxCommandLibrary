@@ -56,3 +56,9 @@ computes astronomical ephemerides including moon phases and planet visibility
 
 Requires an internet connection on first run to download ephemeris data files. Location coordinates must be provided for rise/set time calculations. PDF output requires a LaTeX installation.
 
+
+# INSTALL
+
+```aur: yay -S kosmorro```
+
+<!-- packages: 2026-07-22 -->

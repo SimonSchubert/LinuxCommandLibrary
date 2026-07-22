@@ -41,6 +41,14 @@ Display remote network status via SNMP
 
 **snmpnetstat** displays network status from remote hosts via SNMP. Similar to netstat but retrieves data over network using SNMP protocol. Part of Net-SNMP suite.
 
+# INSTALL
+
+```apt: sudo apt install snmp```
+
+```apk: sudo apk add net-snmp-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snmpget](/man/snmpget)(1), [netstat](/man/netstat)(1)

@@ -45,6 +45,24 @@ _REPLACEMENT_
 
 **git sed** runs `git grep` to find matching files, then pipes them through `sed -i` to replace `search` with `replacement`, limiting changes to files tracked by Git so untracked or ignored files are never touched. Part of git-extras, it saves the separate `grep | xargs sed` pipeline for repository-wide renames.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sed](/man/sed)(1), [git-grep](/man/git-grep)(1), [git-extras](/man/git-extras)(1)

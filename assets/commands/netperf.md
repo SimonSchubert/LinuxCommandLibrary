@@ -96,6 +96,18 @@ Requires netserver on remote host. Firewall may block connections. Results affec
 
 **netperf** was developed by **Hewlett-Packard** starting in the **1990s** as a network benchmarking tool. It became a standard for measuring network performance, used in countless benchmarks and academic papers.
 
+# INSTALL
+
+```apt: sudo apt install netperf```
+
+```dnf: sudo dnf install netperf```
+
+```pacman: sudo pacman -S netperf```
+
+```nix: nix profile install nixpkgs#netperf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iperf3](/man/iperf3)(1), [nuttcp](/man/nuttcp)(1), [ping](/man/ping)(1), [netcat](/man/netcat)(1)

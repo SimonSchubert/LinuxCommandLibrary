@@ -35,6 +35,24 @@ Convert PPM images to PCX format
 
 **ppmtopcx** converts PPM images to PCX format. PCX is an older bitmap format commonly used in DOS applications. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pcxtoppm](/man/pcxtoppm)(1), [ppmtobmp](/man/ppmtobmp)(1)

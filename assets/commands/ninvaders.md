@@ -55,6 +55,16 @@ Terminal game. ncurses-based. Simple controls.
 
 ninvaders implements **Space Invaders**, the classic 1978 arcade game, for the terminal.
 
+# INSTALL
+
+```zypper: sudo zypper install ninvaders```
+
+```brew: brew install ninvaders```
+
+```nix: nix profile install nixpkgs#ninvaders```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [moon-buggy](/man/moon-buggy)(1), [bastet](/man/bastet)(1), [netris](/man/netris)(1)

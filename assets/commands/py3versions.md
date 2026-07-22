@@ -55,6 +55,12 @@ Debian/Ubuntu specific. Part of python3-minimal.
 
 py3versions is a **Debian utility** for Python 3 version management.
 
+# INSTALL
+
+```apt: sudo apt install python3-minimal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python3](/man/python3)(1), [pyversions](/man/pyversions)(1), [update-alternatives](/man/update-alternatives)(1)

@@ -61,6 +61,20 @@ Without --target, fetches all target dependencies. Git dependencies are cloned w
 
 Subsequent cargo commands can run offline after fetch unless lock file changes. Network access required unless using --offline with cached dependencies.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-build](/man/cargo-build)(1), [cargo-update](/man/cargo-update)(1)

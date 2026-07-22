@@ -73,6 +73,24 @@ Plumbing command. Modifies first file in place. Exit code indicates conflicts.
 
 git merge-file is a core **Git** plumbing command implementing the three-way merge algorithm used internally by git merge.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [diff3](/man/diff3)(1)

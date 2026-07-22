@@ -117,6 +117,16 @@ Requires running winbindd daemon. Authentication via -a is for testing only; use
 
 **wbinfo** is part of the Samba suite, which provides Windows interoperability for Unix systems. Winbind enables Unix systems to appear as members of Windows domains, allowing domain users to authenticate on Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install winbind```
+
+```dnf: sudo dnf install samba-winbind-clients```
+
+```apk: sudo apk add samba-winbind-clients```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [samba](/man/samba)(7), [net](/man/net)(8)

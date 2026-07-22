@@ -123,6 +123,12 @@ Requires authentication with a Slack workspace that has app development permissi
 
 The **Slack CLI** was released by Slack (now part of Salesforce) to enable developers to build next-generation Slack apps using their platform. It was introduced alongside the Deno Slack SDK as part of Slack's effort to simplify app development. The CLI replaced older deployment methods and integrated with Slack's workflow automation features. Development continues with regular updates adding new capabilities.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#slack```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [slack-term](/man/slack-term)(1), [slackcat](/man/slackcat)(1)

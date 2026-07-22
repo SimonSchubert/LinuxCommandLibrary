@@ -50,6 +50,16 @@ shows differences between package versions or between local package and registry
 
 **npm diff** shows differences between package versions or between local package and registry. Useful for reviewing changes before updating.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-outdated](/man/npm-outdated)(1)

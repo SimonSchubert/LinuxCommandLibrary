@@ -137,6 +137,24 @@ Supports remote caching via HTTP, Redis, or NFS for sharing across build machine
 
 Only caches single-file compilations. Multi-file compilation and linking fall back to the real compiler. Produces identical output to direct compilation. Precompiled headers require special configuration.
 
+# INSTALL
+
+```apt: sudo apt install ccache```
+
+```dnf: sudo dnf install ccache```
+
+```pacman: sudo pacman -S ccache```
+
+```apk: sudo apk add ccache```
+
+```zypper: sudo zypper install ccache```
+
+```brew: brew install ccache```
+
+```nix: nix profile install nixpkgs#ccache```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [clang](/man/clang)(1), [make](/man/make)(1), [distcc](/man/distcc)(1), [sccache](/man/sccache)(1), [cmake](/man/cmake)(1)

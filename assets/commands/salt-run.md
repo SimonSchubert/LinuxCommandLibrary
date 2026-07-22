@@ -58,6 +58,12 @@ Execute Salt runner modules on the master
 
 **salt-run** executes runner modules on the Salt master. Runners handle master-side operations like orchestration, job management, and cluster-wide tasks. Part of SaltStack configuration management.
 
+# INSTALL
+
+```apk: sudo apk add salt-lts-master```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [salt](/man/salt)(1), [salt-call](/man/salt-call)(1)

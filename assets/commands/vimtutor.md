@@ -93,6 +93,12 @@ Only covers basics. Full vim proficiency requires significant practice. Some les
 
 **vimtutor** has been included with **vim** since early versions, created by **Bram Moolenaar** (vim's author). It's based on the original vi tutorial by Michael C. Pierce and Robert K. Ware.
 
+# INSTALL
+
+```apk: sudo apk add vim-tutor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [vi](/man/vi)(1), [nvim](/man/nvim)(1), [vimdiff](/man/vimdiff)(1)

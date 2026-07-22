@@ -59,6 +59,20 @@ Very minimal. No modern features. Legacy X11.
 
 **twm** (Tab Window Manager) was the default window manager for X11, created by Tom LaStrange in 1987.
 
+# INSTALL
+
+```apt: sudo apt install twm```
+
+```apk: sudo apk add twm```
+
+```zypper: sudo zypper install twm```
+
+```brew: brew install twm```
+
+```nix: nix profile install nixpkgs#twm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fvwm](/man/fvwm)(1), [i3](/man/i3)(1), [openbox](/man/openbox)(1)

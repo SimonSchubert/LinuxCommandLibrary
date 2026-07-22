@@ -61,6 +61,12 @@ Python required. Development use only. Not for production.
 
 **updog** was created as a modern Python replacement for SimpleHTTPServer with file upload support.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#updog```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [serve](/man/serve)(1), [http-server](/man/http-server)(1)

@@ -48,6 +48,12 @@ Use **--help** on the installed binary for any CLI flags for the current version
 
 Requires a working **gh auth login** session and network access to GitHub. API rate limits apply. Feature set tracks GitHub permissions for the authenticated user/token.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#gh-dash```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [git](/man/git)(1), [delta](/man/delta)(1), [lazygit](/man/lazygit)(1)

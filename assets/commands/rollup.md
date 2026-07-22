@@ -86,6 +86,14 @@ Configuration needed for complex projects. Plugin ecosystem essential. CommonJS 
 
 **Rollup** was created by **Rich Harris** in **2015**. It pioneered ES module bundling with tree-shaking, influencing later bundlers. Harris also created Svelte.
 
+# INSTALL
+
+```zypper: sudo zypper install rollup```
+
+```brew: brew install rollup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [webpack](/man/webpack)(1), [esbuild](/man/esbuild)(1), [vite](/man/vite)(1), [parcel](/man/parcel)(1)

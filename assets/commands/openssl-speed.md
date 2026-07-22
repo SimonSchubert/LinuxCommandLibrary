@@ -115,6 +115,24 @@ Only a pre-compiled subset of algorithms can be tested by name directly; use **-
 
 The **speed** subcommand has been part of OpenSSL since its earliest releases, inherited from **SSLeay** (Eric Young's SSL library) in the **late 1990s**. It has been extended over time to support EVP, AEAD, multi-prime RSA, asynchronous jobs, and the provider architecture introduced in **OpenSSL 3.0** (September 2021).
 
+# INSTALL
+
+```apt: sudo apt install openssl```
+
+```dnf: sudo dnf install openssl```
+
+```pacman: sudo pacman -S openssl```
+
+```apk: sudo apk add openssl```
+
+```zypper: sudo zypper install openssl```
+
+```brew: brew install openssl```
+
+```nix: nix profile install nixpkgs#openssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [openssl-dgst](/man/openssl-dgst)(1), [openssl-rand](/man/openssl-rand)(1)

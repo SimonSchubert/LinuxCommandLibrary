@@ -67,6 +67,18 @@ The tool is useful for automated testing, CI/CD pipelines, and headless server e
 
 Xvfb must be installed. Some applications may behave differently in virtual X. Performance may vary for GPU-intensive applications.
 
+# INSTALL
+
+```apt: sudo apt install xvfb```
+
+```apk: sudo apk add xvfb-run```
+
+```zypper: sudo zypper install xvfb-run```
+
+```nix: nix profile install nixpkgs#xvfb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xinit](/man/xinit)(1), [xauth](/man/xauth)(1)

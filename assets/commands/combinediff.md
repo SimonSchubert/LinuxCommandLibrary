@@ -78,6 +78,24 @@ Input patches must be in strict incremental order. Requires at least 3 lines of 
 
 Needs clean GNU diff output. Part of patchutils package (not pre-installed). Use recountdiff to fix hand-edited patches first.
 
+# INSTALL
+
+```apt: sudo apt install patchutils```
+
+```dnf: sudo dnf install patchutils```
+
+```pacman: sudo pacman -S patchutils```
+
+```apk: sudo apk add patchutils```
+
+```zypper: sudo zypper install patchutils```
+
+```brew: brew install patchutils```
+
+```nix: nix profile install nixpkgs#patchutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [patch](/man/patch)(1), [interdiff](/man/interdiff)(1)

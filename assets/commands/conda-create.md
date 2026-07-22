@@ -60,6 +60,14 @@ The --clone option provides a way to duplicate existing environments, which is u
 
 Environment names cannot contain spaces. Use **--prefix** for environments outside the default envs directory.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-activate](/man/conda-activate)(1), [conda-remove](/man/conda-remove)(1)

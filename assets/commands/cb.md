@@ -58,6 +58,14 @@ On modern Linux distributions, **cb** is often not installed by default and is c
 
 The **cb** command originated in early Unix systems at Bell Labs as a simple tool for standardizing C code formatting. It has since been superseded by more sophisticated formatters like **indent**, **astyle**, and **clang-format** that provide fuller syntactic understanding and greater configurability.
 
+# INSTALL
+
+```apk: sudo apk add clipboard```
+
+```brew: brew install clipboard```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [indent](/man/indent)(1), [clang-format](/man/clang-format)(1), [astyle](/man/astyle)(1)

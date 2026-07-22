@@ -18,6 +18,14 @@ Start the **caffeine indicator** applet
 
 Unlike the automatic caffeine daemon, this provides manual toggle control.
 
+# INSTALL
+
+```zypper: sudo zypper install caffeine```
+
+```nix: nix profile install nixpkgs#caffeine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [caffeine](/man/caffeine)(1), [caffeinate](/man/caffeinate)(1)

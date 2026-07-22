@@ -109,6 +109,24 @@ Device permissions may need configuration. Hardware flow control needs proper wi
 
 **picocom** was created by **Nick Patavalis** as a minimal alternative to minicom. It aims to be simple and reliable for basic serial communication without the complexity of full terminal emulators.
 
+# INSTALL
+
+```apt: sudo apt install picocom```
+
+```dnf: sudo dnf install picocom```
+
+```pacman: sudo pacman -S picocom```
+
+```apk: sudo apk add picocom```
+
+```zypper: sudo zypper install picocom```
+
+```brew: brew install picocom```
+
+```nix: nix profile install nixpkgs#picocom```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [minicom](/man/minicom)(1), [screen](/man/screen)(1), [cu](/man/cu)(1), [microcom](/man/microcom)(1)

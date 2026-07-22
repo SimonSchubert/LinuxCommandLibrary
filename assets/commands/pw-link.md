@@ -62,6 +62,16 @@ Port names can be long and complex. Links may be recreated by session manager. U
 
 **pw-link** is part of **PipeWire**, providing port connection management similar to jack_connect for JACK. It enables manual control over the audio routing graph.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-tools```
+
+```zypper: sudo zypper install pipewire-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pw-cli](/man/pw-cli)(1), [wpctl](/man/wpctl)(1), [jack_connect](/man/jack_connect)(1)

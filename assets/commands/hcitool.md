@@ -99,6 +99,24 @@ Deprecated in favor of bluetoothctl in modern BlueZ versions. May require root p
 
 hcitool is part of the BlueZ Bluetooth protocol stack for Linux. While functional, it's considered legacy and bluetoothctl from BlueZ 5 is recommended for most operations on modern systems.
 
+# INSTALL
+
+```apt: sudo apt install bluez```
+
+```dnf: sudo dnf install bluez```
+
+```pacman: sudo pacman -S bluez```
+
+```apk: sudo apk add bluez-deprecated```
+
+```zypper: sudo zypper install bluez```
+
+```brew: brew install bluez```
+
+```nix: nix profile install nixpkgs#bluez```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bluetoothctl](/man/bluetoothctl)(1), [hciconfig](/man/hciconfig)(1), [rfkill](/man/rfkill)(8)

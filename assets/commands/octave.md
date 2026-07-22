@@ -84,6 +84,24 @@ MATLAB compatibility is extensive but not complete; some MATLAB toolbox function
 
 GNU Octave was created by **John W. Eaton** beginning in **1988** as a companion to a chemical reactor design textbook. It was first released as a standalone application in **1993** and is developed as a GNU project.
 
+# INSTALL
+
+```apt: sudo apt install octave```
+
+```dnf: sudo dnf install octave```
+
+```pacman: sudo pacman -S octave```
+
+```apk: sudo apk add octave```
+
+```zypper: sudo zypper install octave```
+
+```brew: brew install octave```
+
+```nix: nix profile install nixpkgs#octave```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [matlab](/man/matlab)(1), [gnuplot](/man/gnuplot)(1), [python](/man/python)(1)

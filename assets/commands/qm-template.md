@@ -26,6 +26,12 @@ Template conversion is permanent. The original VM becomes read-only and cannot b
 
 Part of **Proxmox VE** QEMU/KVM management tools. Templates enable efficient VM deployment workflows.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-clone](/man/qm-clone)(1)

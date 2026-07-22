@@ -47,6 +47,16 @@ creates and restores backups of iOS devices
 
 Deprecated for newer iOS versions. Use idevicebackup2 for iOS 4+.
 
+# INSTALL
+
+```apt: sudo apt install libimobiledevice-utils```
+
+```dnf: sudo dnf install libimobiledevice-utils```
+
+```apk: sudo apk add libimobiledevice-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [idevicebackup2](/man/idevicebackup2)(1), [ideviceinfo](/man/ideviceinfo)(1)

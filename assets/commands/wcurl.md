@@ -51,6 +51,24 @@ Wrapper around curl. Less flexible. Download-focused.
 
 **wcurl** provides a simpler interface to curl for the common case of downloading files.
 
+# INSTALL
+
+```apt: sudo apt install curl```
+
+```dnf: sudo dnf install curl```
+
+```pacman: sudo pacman -S curl```
+
+```apk: sudo apk add curl```
+
+```zypper: sudo zypper install curl```
+
+```brew: brew install curl```
+
+```nix: nix profile install nixpkgs#curl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [wget](/man/wget)(1), [aria2c](/man/aria2c)(1)

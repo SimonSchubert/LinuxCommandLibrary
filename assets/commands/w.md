@@ -77,6 +77,24 @@ CPU time columns (JCPU, PCPU) may not accurately reflect all activity, especiall
 
 Some processes may not appear in WHAT if they detach from the terminal.
 
+# INSTALL
+
+```apt: sudo apt install procps```
+
+```dnf: sudo dnf install procps-ng```
+
+```pacman: sudo pacman -S procps-ng```
+
+```apk: sudo apk add procps-ng```
+
+```zypper: sudo zypper install procps```
+
+```brew: brew install procps```
+
+```nix: nix profile install nixpkgs#procps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [who](/man/who)(1), [uptime](/man/uptime)(1), [users](/man/users)(1), [last](/man/last)(1), [finger](/man/finger)(1)

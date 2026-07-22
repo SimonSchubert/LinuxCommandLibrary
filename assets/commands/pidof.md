@@ -66,6 +66,20 @@ Exit status 0 means at least one matching program was found; exit status 1 means
 
 **pidof** is part of the **sysvinit** package and provides a way to find process IDs by name, complementing commands like pgrep.
 
+# INSTALL
+
+```apt: sudo apt install sysvinit-utils```
+
+```dnf: sudo dnf install procps-ng```
+
+```pacman: sudo pacman -S procps-ng```
+
+```apk: sudo apk add procps-ng```
+
+```brew: brew install pidof```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pgrep](/man/pgrep)(1), [pkill](/man/pkill)(1), [killall](/man/killall)(1), [ps](/man/ps)(1)

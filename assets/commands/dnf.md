@@ -101,6 +101,12 @@ DNF5 (used in Fedora 41+) has some differences from earlier DNF versions. Check 
 
 DNF was introduced in **Fedora 18** as an experimental package manager and became the default in **Fedora 22**. DNF5 is a complete rewrite released with Fedora 41.
 
+# INSTALL
+
+```pacman: sudo pacman -S dnf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yum](/man/yum)(8), [rpm](/man/rpm)(8), [apt](/man/apt)(8), [pacman](/man/pacman)(8)

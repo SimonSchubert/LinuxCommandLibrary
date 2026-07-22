@@ -49,6 +49,16 @@ _FILE_
 
 Developed by the **PipeWire** project as part of the SPA plugin framework. PipeWire was created by **Wim Taymans** at **Red Hat** starting in **2015** as a unified server for audio and video on Linux, intended to eventually replace both **PulseAudio** and **JACK** for media handling.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-spa-tools```
+
+```zypper: sudo zypper install pipewire-spa-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [pw-cli](/man/pw-cli)(1), [pw-dump](/man/pw-dump)(1), [wpctl](/man/wpctl)(1)

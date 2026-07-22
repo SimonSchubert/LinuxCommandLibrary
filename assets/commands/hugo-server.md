@@ -91,6 +91,24 @@ Intended for development only, not production use. The **--bind 0.0.0.0** option
 
 hugo server is the built-in development server for **Hugo**, the open-source static site generator written in Go.
 
+# INSTALL
+
+```apt: sudo apt install hugo```
+
+```dnf: sudo dnf install hugo```
+
+```pacman: sudo pacman -S hugo```
+
+```apk: sudo apk add hugo```
+
+```zypper: sudo zypper install hugo```
+
+```brew: brew install hugo```
+
+```nix: nix profile install nixpkgs#hugo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hugo](/man/hugo)(1), [live-server](/man/live-server)(1)

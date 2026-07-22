@@ -102,6 +102,14 @@ Requires AWS credentials with appropriate ECS permissions. Some operations requi
 
 **e1s** was created as the ECS equivalent of k9s, bringing the powerful terminal-based management experience to AWS ECS users. It fills the gap for users managing containerized applications on ECS.
 
+# INSTALL
+
+```brew: brew install e1s```
+
+```nix: nix profile install nixpkgs#e1s```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws](/man/aws)(1), [k9s](/man/k9s)(1), [docker](/man/docker)(1)

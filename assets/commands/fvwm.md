@@ -81,6 +81,16 @@ Configuration has learning curve. Documentation can be sparse. FVWM3 is the curr
 
 FVWM was derived from TWM by **Robert Nation** in **1993**. The name originally meant "Feeble Virtual Window Manager" but the meaning has been changed multiple times. FVWM2 was a major rewrite in 1996, and FVWM3 was released in 2020.
 
+# INSTALL
+
+```dnf: sudo dnf install fvwm```
+
+```apk: sudo apk add fvwm```
+
+```nix: nix profile install nixpkgs#fvwm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openbox](/man/openbox)(1), [i3](/man/i3)(1), [twm](/man/twm)(1)

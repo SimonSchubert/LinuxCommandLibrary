@@ -116,6 +116,18 @@ TiMidity++ requires SoundFont or patch files to produce sound. Without properly 
 
 TiMidity was originally written by **Tuukka Toivonen** in **1995**. The enhanced version **TiMidity++** was developed by **Masanao Izumo** starting in **1999**, adding significant features including multiple output modes, real-time MIDI synthesis, and various user interfaces. It became a popular solution for MIDI playback on Linux systems without hardware synthesizers.
 
+# INSTALL
+
+```apt: sudo apt install timidity```
+
+```zypper: sudo zypper install timidity```
+
+```brew: brew install timidity```
+
+```nix: nix profile install nixpkgs#timidity```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fluidsynth](/man/fluidsynth)(1), [aplaymidi](/man/aplaymidi)(1), [aplay](/man/aplay)(1), [pmidi](/man/pmidi)(1)

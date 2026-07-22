@@ -92,6 +92,24 @@ Verilator is cycle-based and only supports the synthesizable subset of Verilog/S
 
 **Verilator** was created by **Wilson Snyder** as the fastest Verilog simulator through C++ compilation.
 
+# INSTALL
+
+```apt: sudo apt install verilator```
+
+```dnf: sudo dnf install verilator```
+
+```pacman: sudo pacman -S verilator```
+
+```apk: sudo apk add verilator```
+
+```zypper: sudo zypper install verilator```
+
+```brew: brew install verilator```
+
+```nix: nix profile install nixpkgs#verilator```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iverilog](/man/iverilog)(1), [gtkwave](/man/gtkwave)(1), [yosys](/man/yosys)(1)

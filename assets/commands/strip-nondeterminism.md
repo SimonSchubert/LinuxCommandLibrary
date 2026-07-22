@@ -61,6 +61,20 @@ Format-specific. May need type hint. Part of Debian reproducible builds.
 
 **strip-nondeterminism** was created for the **Reproducible Builds** project to make build outputs deterministic.
 
+# INSTALL
+
+```pacman: sudo pacman -S strip-nondeterminism```
+
+```apk: sudo apk add strip-nondeterminism```
+
+```zypper: sudo zypper install strip-nondeterminism```
+
+```brew: brew install strip-nondeterminism```
+
+```nix: nix profile install nixpkgs#strip-nondeterminism```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [touch](/man/touch)(1), [zip](/man/zip)(1), [ar](/man/ar)(1), [diffoscope](/man/diffoscope)(1)

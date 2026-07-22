@@ -35,6 +35,24 @@ Part of Netpbm. Output 3x original size. Artistic effect.
 
 pampop9 is part of **Netpbm** for creating Pop Art style color variations.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmquant](/man/ppmquant)(1), [netpbm](/man/netpbm)(1)

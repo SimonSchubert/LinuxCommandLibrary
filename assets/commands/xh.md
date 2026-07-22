@@ -115,6 +115,22 @@ Some HTTPie features not yet implemented. Output formatting adds overhead for la
 
 **xh** was created by **ducaale** around **2020** as a Rust reimplementation of HTTPie. The name "xh" is HTTPie's h reversed. Written for performance and portability, it provides near-identical syntax while being significantly faster and shipping as a single binary.
 
+# INSTALL
+
+```apt: sudo apt install xh```
+
+```pacman: sudo pacman -S xh```
+
+```apk: sudo apk add xh```
+
+```zypper: sudo zypper install xh```
+
+```brew: brew install xh```
+
+```nix: nix profile install nixpkgs#xh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [httpie](/man/httpie)(1), [wget](/man/wget)(1)

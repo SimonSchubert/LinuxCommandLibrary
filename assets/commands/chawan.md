@@ -88,6 +88,18 @@ JavaScript and inline images are disabled by default and must be explicitly enab
 
 **Chawan** was developed by **bptato** and is written in Nim. Inspired by **w3m**, it shares no code with it but has a similar UI and feature set. The current version is v0.3.3, licensed under the public domain (UNLICENSE). Available in Alpine Linux, Arch Linux (AUR), FreeBSD, Homebrew, NixOS, and Void Linux.
 
+# INSTALL
+
+```pacman: sudo pacman -S chawan```
+
+```zypper: sudo zypper install chawan```
+
+```brew: brew install chawan```
+
+```nix: nix profile install nixpkgs#chawan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [w3m](/man/w3m)(1), [lynx](/man/lynx)(1), [links](/man/links)(1), [elinks](/man/elinks)(1)

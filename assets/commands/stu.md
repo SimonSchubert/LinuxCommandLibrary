@@ -45,6 +45,16 @@ Interactive TUI explorer for Amazon S3 buckets
 
 **stu** was created by **lusingander** and is written in **Rust**.
 
+# INSTALL
+
+```apk: sudo apk add stu```
+
+```brew: brew install stu```
+
+```nix: nix profile install nixpkgs#stu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stree](/man/stree)(1), [aws](/man/aws)(1), [s3cmd](/man/s3cmd)(1)

@@ -77,6 +77,24 @@ Full history downloaded by default. Large repos take time. Network required for 
 
 Clone is a core **Mercurial** command since version 1.0, providing distributed repository copying.
 
+# INSTALL
+
+```apt: sudo apt install mercurial```
+
+```dnf: sudo dnf install mercurial```
+
+```pacman: sudo pacman -S mercurial```
+
+```apk: sudo apk add mercurial```
+
+```zypper: sudo zypper install mercurial```
+
+```brew: brew install mercurial```
+
+```nix: nix profile install nixpkgs#mercurial```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hg](/man/hg)(1), [hg-pull](/man/hg-pull)(1), [hg-push](/man/hg-push)(1), [hg-init](/man/hg-init)(1)

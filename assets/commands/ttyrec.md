@@ -58,6 +58,14 @@ Recordings may contain sensitive information like passwords if not careful. The 
 
 **ttyrec** was originally developed by **Satoru Takabayashi** in the early **2000s** in Japan. It became popular in the Unix community for creating terminal demonstrations and tutorials. An enhanced version (ovh-ttyrec) was later developed by OVH with additional features like locking and real-time streaming support.
 
+# INSTALL
+
+```apt: sudo apt install ttyrec```
+
+```brew: brew install ttyrec```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ttyplay](/man/ttyplay)(1), [ttytime](/man/ttytime)(1), [script](/man/script)(1), [asciinema](/man/asciinema)(1)

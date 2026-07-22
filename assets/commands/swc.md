@@ -69,6 +69,16 @@ Less plugins than Babel. Rust ecosystem. Config differs from Babel.
 
 **SWC** (Speedy Web Compiler) was created by **Donny** as a fast JavaScript/TypeScript compiler written in Rust.
 
+# INSTALL
+
+```apk: sudo apk add swc```
+
+```brew: brew install swc```
+
+```nix: nix profile install nixpkgs#swc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [babel](/man/babel)(1), [tsc](/man/tsc)(1), [esbuild](/man/esbuild)(1)

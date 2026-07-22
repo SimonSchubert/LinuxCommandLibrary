@@ -66,6 +66,20 @@ Input files must use UTF-8 encoding. The `fontspec` package is recommended for f
 
 **XeTeX** was created by **Jonathan Kew** in **2004** to add native Unicode and modern font support to TeX. It was originally developed for macOS using Apple's AAT font technology, later extending support to OpenType via ICU and HarfBuzz on all platforms.
 
+# INSTALL
+
+```apt: sudo apt install texlive-binaries```
+
+```dnf: sudo dnf install texlive-xetex```
+
+```pacman: sudo pacman -S texlive-xetex```
+
+```apk: sudo apk add texlive-xetex```
+
+```zypper: sudo zypper install texlive-xetex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xelatex](/man/xelatex)(1), [pdflatex](/man/pdflatex)(1), [luatex](/man/luatex)(1), [pdftex](/man/pdftex)(1), [latex](/man/latex)(1)

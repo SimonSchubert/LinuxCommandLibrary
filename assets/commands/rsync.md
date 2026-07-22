@@ -114,6 +114,24 @@ For large transfers over unreliable connections, use **-P** (--partial --progres
 
 Rsync was created by **Andrew Tridgell** and **Paul Mackerras** in **1996**. The name comes from "remote sync." The delta-transfer algorithm was based on Tridgell's PhD thesis. Rsync became a fundamental tool for Unix system administration, backups, and mirroring.
 
+# INSTALL
+
+```apt: sudo apt install rsync```
+
+```dnf: sudo dnf install rsync```
+
+```pacman: sudo pacman -S rsync```
+
+```apk: sudo apk add rsync```
+
+```zypper: sudo zypper install rsync```
+
+```brew: brew install rsync```
+
+```nix: nix profile install nixpkgs#rsync```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scp](/man/scp)(1), [cp](/man/cp)(1), [rclone](/man/rclone)(1), [tar](/man/tar)(1)

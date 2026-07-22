@@ -89,6 +89,18 @@ Common workflows: **helmfile diff** to preview changes, **helmfile apply** to in
 
 Helmfile v1.x introduced breaking changes from v0.x; review the v1 migration guide before upgrading legacy projects. **helm** and **helm-diff** must be installed separately and kept compatible with the Helmfile version in use. The **diff** subcommand requires a working **helm-diff** plugin.
 
+# INSTALL
+
+```pacman: sudo pacman -S helmfile```
+
+```zypper: sudo zypper install helmfile```
+
+```brew: brew install helmfile```
+
+```nix: nix profile install nixpkgs#helmfile```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [helm](/man/helm)(1), [helm-install](/man/helm-install)(1), [kubectl](/man/kubectl)(1)

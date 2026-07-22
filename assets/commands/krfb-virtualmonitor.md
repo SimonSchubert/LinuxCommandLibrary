@@ -38,6 +38,20 @@ Create a **lower resolution** virtual monitor on a custom port
 
 Requires KDE Plasma desktop environment. The VNC password is passed on the command line which may be visible in process listings.
 
+# INSTALL
+
+```apt: sudo apt install krfb```
+
+```dnf: sudo dnf install krfb```
+
+```pacman: sudo pacman -S krfb```
+
+```apk: sudo apk add krfb```
+
+```zypper: sudo zypper install krfb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [x11vnc](/man/x11vnc)(1), [vncviewer](/man/vncviewer)(1)

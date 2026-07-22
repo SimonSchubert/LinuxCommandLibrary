@@ -72,6 +72,14 @@ For persistent completions, install the output to the appropriate location for y
 
 Installation paths vary by system configuration. Zsh requires the completion directory to be in fpath before compinit is called. Some systems may require logging out and back in for changes to take effect.
 
+# INSTALL
+
+```zypper: sudo zypper install gcrane```
+
+```nix: nix profile install nixpkgs#gcrane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcrane](/man/gcrane)(1), [gcrane-gc](/man/gcrane-gc)(1), [gcrane-ls](/man/gcrane-ls)(1), [crane](/man/crane)(1), [docker](/man/docker)(1), [podman](/man/podman)(1)

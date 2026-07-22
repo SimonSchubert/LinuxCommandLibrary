@@ -87,6 +87,20 @@ KDE-based, pulls in KDE dependencies. Some format support requires optional back
 
 **Okular** was created for **KDE 4** in **2007**, merging several KDE document viewers (KPDF, KGhostView, KFax) into a unified application. It became KDE's standard document viewer, continuously expanding format support.
 
+# INSTALL
+
+```apt: sudo apt install okular```
+
+```dnf: sudo dnf install okular```
+
+```pacman: sudo pacman -S okular```
+
+```apk: sudo apk add okular```
+
+```zypper: sudo zypper install okular```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [evince](/man/evince)(1), [zathura](/man/zathura)(1), [mupdf](/man/mupdf)(1), [xpdf](/man/xpdf)(1)

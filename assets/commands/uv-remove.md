@@ -50,6 +50,20 @@ Remove dependencies from a uv project
 
 **uv remove** removes dependencies from a Python project. Updates pyproject.toml and uv.lock. Automatically syncs the virtual environment.
 
+# INSTALL
+
+```dnf: sudo dnf install uv```
+
+```pacman: sudo pacman -S uv```
+
+```apk: sudo apk add uv```
+
+```brew: brew install uv```
+
+```nix: nix profile install nixpkgs#uv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uv](/man/uv)(1), [uv-add](/man/uv-add)(1), [uv-sync](/man/uv-sync)(1)

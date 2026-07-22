@@ -52,6 +52,20 @@ Requires root. Specific file format. Passwords in plaintext during input.
 
 newusers is part of **shadow-utils**, providing batch user creation on Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [useradd](/man/useradd)(1), [passwd](/man/passwd)(1), [chpasswd](/man/chpasswd)(1)

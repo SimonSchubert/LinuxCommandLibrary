@@ -45,6 +45,14 @@ Only works on Apple Silicon Macs (M1 and later). Uses undocumented APIs that may
 
 **macmon** was created by **vladkens** and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install macmon```
+
+```nix: nix profile install nixpkgs#macmon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [htop](/man/htop)(1), [btop](/man/btop)(1)

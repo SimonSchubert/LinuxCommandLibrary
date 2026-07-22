@@ -51,6 +51,24 @@ The stub is typically concatenated with a ZIP archive using cat, then made execu
 
 Self-extracting binaries are platform-specific. The stub adds size overhead to the archive. Some systems may block execution of self-extracting archives.
 
+# INSTALL
+
+```apt: sudo apt install unzip```
+
+```dnf: sudo dnf install unzip```
+
+```pacman: sudo pacman -S unzip```
+
+```apk: sudo apk add unzip```
+
+```zypper: sudo zypper install unzip```
+
+```brew: brew install unzip```
+
+```nix: nix profile install nixpkgs#unzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zip](/man/zip)(1), [unzip](/man/unzip)(1)

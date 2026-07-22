@@ -85,6 +85,24 @@ X11 only (no Wayland native). Large images may load slowly. Wallpaper setting re
 
 feh was created by **Tom Gilbert** in 1999 as a fast, simple X11 image viewer. It remains widely used in lightweight Linux setups, especially for its wallpaper-setting capabilities.
 
+# INSTALL
+
+```apt: sudo apt install feh```
+
+```dnf: sudo dnf install feh```
+
+```pacman: sudo pacman -S feh```
+
+```apk: sudo apk add feh```
+
+```zypper: sudo zypper install feh```
+
+```brew: brew install feh```
+
+```nix: nix profile install nixpkgs#feh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sxiv](/man/sxiv)(1), [nsxiv](/man/nsxiv)(1), [imv](/man/imv)(1)

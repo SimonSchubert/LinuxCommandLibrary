@@ -99,6 +99,16 @@ Unlike xargs, xe has sane defaults: it is equivalent to `xargs -d'\n' -I{} -n1 -
 
 **xe** was written by **Leah Neukirchen** as a modernized replacement for **xargs**(1) and **apply**(1) with saner defaults and a cleaner interface. It is distributed as a small, portable C program.
 
+# INSTALL
+
+```apt: sudo apt install xe```
+
+```brew: brew install xe```
+
+```nix: nix profile install nixpkgs#xe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xargs](/man/xargs)(1), [parallel](/man/parallel)(1), [find](/man/find)(1)

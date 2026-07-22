@@ -76,6 +76,20 @@ Requires root privileges unless using -N flag. The target directory must be moun
 
 **pacstrap** is part of the **arch-install-scripts** package developed by the Arch Linux team. It replaces manual chroot-based installation methods with a streamlined tool that handles the complexities of bootstrapping an Arch system.
 
+# INSTALL
+
+```dnf: sudo dnf install arch-install-scripts```
+
+```pacman: sudo pacman -S arch-install-scripts```
+
+```apk: sudo apk add arch-install-scripts```
+
+```zypper: sudo zypper install arch-install-scripts```
+
+```nix: nix profile install nixpkgs#arch-install-scripts```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [arch-chroot](/man/arch-chroot)(1), [genfstab](/man/genfstab)(8)

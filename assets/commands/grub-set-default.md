@@ -43,6 +43,20 @@ Requires GRUB_DEFAULT=saved in /etc/default/grub and regenerating the configurat
 
 grub-set-default is part of GRUB 2's saved default functionality. It provides a way to change the boot default without editing configuration files, storing the selection in the grubenv file.
 
+# INSTALL
+
+```apt: sudo apt install grub2-common```
+
+```dnf: sudo dnf install grub2-common```
+
+```pacman: sudo pacman -S grub```
+
+```apk: sudo apk add grub```
+
+```zypper: sudo zypper install grub2-common```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub-reboot](/man/grub-reboot)(8), [grub-mkconfig](/man/grub-mkconfig)(8), [grub-editenv](/man/grub-editenv)(1)

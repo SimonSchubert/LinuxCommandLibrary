@@ -41,6 +41,24 @@ Kernel keyring integration. DNSSEC infrastructure required. Linux-specific.
 
 key.dns_resolver is part of the **Linux kernel** keyring utilities, supporting DNS-based key resolution for DNSSEC.
 
+# INSTALL
+
+```apt: sudo apt install keyutils```
+
+```dnf: sudo dnf install keyutils```
+
+```pacman: sudo pacman -S keyutils```
+
+```apk: sudo apk add keyutils```
+
+```zypper: sudo zypper install keyutils```
+
+```brew: brew install keyutils```
+
+```nix: nix profile install nixpkgs#keyutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [keyctl](/man/keyctl)(1), [dig](/man/dig)(1)

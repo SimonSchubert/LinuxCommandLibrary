@@ -47,6 +47,18 @@ The original PDF file is not modified; a new output file is created with the att
 
 **pdfattach** is part of **poppler-utils**, a set of command-line utilities based on the Poppler PDF rendering library for working with PDF files.
 
+# INSTALL
+
+```apt: sudo apt install poppler-utils```
+
+```dnf: sudo dnf install poppler-utils```
+
+```apk: sudo apk add poppler-utils```
+
+```nix: nix profile install nixpkgs#poppler-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdfdetach](/man/pdfdetach)(1), [pdfinfo](/man/pdfinfo)(1), [pdfunite](/man/pdfunite)(1)

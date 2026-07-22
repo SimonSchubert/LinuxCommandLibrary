@@ -49,6 +49,24 @@ Although true ignores all arguments, it still parses them. Some implementations 
 
 true has been part of Unix since Version 7 Unix in **1979**. It was originally implemented as an empty shell script or a program that simply called exit(0). The companion command **false** returns exit status 1. Both are specified by POSIX and exist as both shell builtins and standalone binaries.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [false](/man/false)(1), [test](/man/test)(1), [bash](/man/bash)(1)

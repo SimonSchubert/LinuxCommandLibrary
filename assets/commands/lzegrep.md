@@ -50,6 +50,22 @@ searches for extended regular expression patterns in lzip-compressed files
 
 **lzegrep** searches for extended regular expression patterns in lzip-compressed files. It is equivalent to **lzgrep -E** and internally pipes decompressed data through **grep -E** (or **egrep**). Uncompressed files are searched directly.
 
+# INSTALL
+
+```dnf: sudo dnf install xz```
+
+```pacman: sudo pacman -S xz```
+
+```apk: sudo apk add xz```
+
+```zypper: sudo zypper install xz```
+
+```brew: brew install xz```
+
+```nix: nix profile install nixpkgs#xz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lzgrep](/man/lzgrep)(1), [egrep](/man/egrep)(1)

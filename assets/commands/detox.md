@@ -82,6 +82,20 @@ May create duplicate filenames requiring manual resolution. Irreversible without
 
 detox was written by **Doug Harple** to address the common problem of managing files with problematic names in Unix environments. It provides a systematic approach to filename sanitization.
 
+# INSTALL
+
+```apt: sudo apt install detox```
+
+```dnf: sudo dnf install detox```
+
+```pacman: sudo pacman -S detox```
+
+```brew: brew install detox```
+
+```nix: nix profile install nixpkgs#detox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rename](/man/rename)(1), [mv](/man/mv)(1), [convmv](/man/convmv)(1)

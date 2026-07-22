@@ -139,6 +139,16 @@ Key management is critical; losing your private key or forgetting the passphrase
 
 GPG was first released in **1997** by **Werner Koch** (version 0.0.0), with the first stable release (1.0.0) in **1999**, as a free software replacement for PGP (Pretty Good Privacy). It was developed as part of the GNU Project and has since become the de facto standard for email encryption on Unix-like systems. GPG 2.0 introduced a modular architecture in **2006**, and version 2.2 brought improved default algorithms and keyserver handling. The project continues to be actively maintained and is widely used by journalists, activists, and security-conscious users worldwide.
 
+# INSTALL
+
+```apt: sudo apt install gpg```
+
+```apk: sudo apk add gpg```
+
+```brew: brew install gpg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [openssl](/man/openssl)(1), [age](/man/age)(1), [sha256sum](/man/sha256sum)(1)

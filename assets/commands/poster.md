@@ -82,6 +82,18 @@ Input must be PostScript. Use tools like pdf2ps for PDF. Output may need assembl
 
 poster was written by **Jos van Eijndhoven** for creating large format prints from standard printers.
 
+# INSTALL
+
+```apt: sudo apt install poster```
+
+```dnf: sudo dnf install poster```
+
+```zypper: sudo zypper install poster```
+
+```brew: brew install poster```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ps2pdf](/man/ps2pdf)(1)

@@ -109,6 +109,18 @@ Modifies pyproject.toml and poetry.lock. Use --dry-run to preview changes.
 
 poetry add is part of **Poetry**, the Python dependency manager created by **Sébastien Eustace**.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry-remove](/man/poetry-remove)(1), [poetry-install](/man/poetry-install)(1), [poetry](/man/poetry)(1)

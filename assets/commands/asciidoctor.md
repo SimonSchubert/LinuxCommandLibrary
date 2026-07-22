@@ -77,6 +77,17 @@ PDF output requires asciidoctor-pdf gem. Some features require additional gems. 
 
 **Asciidoctor** was created by Dan Allen and Ryan Waldron, first released in **2012** as a faster, Ruby-based alternative to the original Python AsciiDoc implementation.
 
+# INSTALL
+
+```pacman: sudo pacman -S asciidoctor```
+
+```apk: sudo apk add asciidoctor```
+
+```brew: brew install asciidoctor```
+
+```nix: nix profile install nixpkgs#asciidoctor```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [asciidoc](/man/asciidoc)(1), [pandoc](/man/pandoc)(1), [markdown](/man/markdown)(1)

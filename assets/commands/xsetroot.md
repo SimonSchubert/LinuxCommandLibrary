@@ -101,6 +101,20 @@ Bitmap files must be in XBM format. Colors use X color names or hex values (#RRG
 
 **xsetroot** has been part of the X Window System since early releases. It provides basic root window customization following the Unix philosophy of simple, focused tools. Many users now prefer more feature-rich tools like feh for wallpapers.
 
+# INSTALL
+
+```apt: sudo apt install x11-xserver-utils```
+
+```dnf: sudo dnf install xsetroot```
+
+```apk: sudo apk add xsetroot```
+
+```zypper: sudo zypper install xsetroot```
+
+```nix: nix profile install nixpkgs#xsetroot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [feh](/man/feh)(1), [nitrogen](/man/nitrogen)(1), [xwallpaper](/man/xwallpaper)(1), [hsetroot](/man/hsetroot)(1)

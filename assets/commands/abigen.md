@@ -70,6 +70,12 @@ When using **--sol**, the Solidity compiler (solc) must be installed and accessi
 
 **abigen** was developed by the Ethereum Foundation as part of **go-ethereum** (geth), first appearing around **2015**. It was created to provide idiomatic Go bindings for smart contracts, supporting the growing ecosystem of Go-based Ethereum tools and applications.
 
+# INSTALL
+
+```apk: sudo apk add geth-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [solc](/man/solc)(1), [geth](/man/geth)(1), [cast](/man/cast)(1)

@@ -93,6 +93,20 @@ generic non-JVM producer and consumer for Apache Kafka
 
 Originally named **kafkacat**, the tool was renamed to **kcat** in 2021 to align with upstream branding. Both names may still be present depending on the distribution's packaging.
 
+# INSTALL
+
+```apt: sudo apt install kcat```
+
+```dnf: sudo dnf install kcat```
+
+```apk: sudo apk add kcat```
+
+```brew: brew install kcat```
+
+```nix: nix profile install nixpkgs#kcat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kafka](/man/kafka)(1), [kafkacat](/man/kafkacat)(1), [kafka-topics](/man/kafka-topics)(1)

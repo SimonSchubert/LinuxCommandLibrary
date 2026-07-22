@@ -65,6 +65,18 @@ Old file must match exactly. Large files need memory. Version compatibility matt
 
 **xdelta** was created for efficient binary differencing. Version 1 evolved into xdelta3 with VCDIFF standard support.
 
+# INSTALL
+
+```apt: sudo apt install xdelta```
+
+```dnf: sudo dnf install xdelta```
+
+```brew: brew install xdelta```
+
+```nix: nix profile install nixpkgs#xdelta```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdelta3](/man/xdelta3)(1), [bsdiff](/man/bsdiff)(1), [rdiff](/man/rdiff)(1)

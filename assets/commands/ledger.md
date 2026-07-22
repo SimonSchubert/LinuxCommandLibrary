@@ -69,6 +69,24 @@ Text file format specific. Learning curve. Powerful query language.
 
 Ledger was created by **John Wiegley** as a powerful plain text accounting system for command-line users.
 
+# INSTALL
+
+```apt: sudo apt install ledger```
+
+```dnf: sudo dnf install ledger```
+
+```pacman: sudo pacman -S ledger```
+
+```apk: sudo apk add ledger```
+
+```zypper: sudo zypper install ledger```
+
+```brew: brew install ledger```
+
+```nix: nix profile install nixpkgs#ledger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hledger](/man/hledger)(1)

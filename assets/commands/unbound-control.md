@@ -108,6 +108,24 @@ Requires unbound-control-setup for initial certificate generation. Server must h
 
 **unbound-control** is part of the Unbound DNS resolver developed by NLnet Labs. Unbound is a validating, recursive, caching DNS resolver designed for high performance and security with DNSSEC support.
 
+# INSTALL
+
+```apt: sudo apt install unbound```
+
+```dnf: sudo dnf install unbound```
+
+```pacman: sudo pacman -S unbound```
+
+```apk: sudo apk add unbound```
+
+```zypper: sudo zypper install unbound```
+
+```brew: brew install unbound```
+
+```nix: nix profile install nixpkgs#unbound```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unbound](/man/unbound)(8), [unbound-checkconf](/man/unbound-checkconf)(8), [unbound-host](/man/unbound-host)(1)

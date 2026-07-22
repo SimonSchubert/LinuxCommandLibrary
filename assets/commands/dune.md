@@ -115,6 +115,24 @@ Requires OCaml or Reason compiler. Build artifacts go in the _build directory. D
 
 Dune was originally called **jbuilder**, created by **Jane Street** in **2016**. It was renamed to Dune in **2018** and became the de facto standard build system for the OCaml ecosystem. The project aims to provide a modern, fast, and user-friendly build experience.
 
+# INSTALL
+
+```apt: sudo apt install ocaml-dune```
+
+```dnf: sudo dnf install ocaml-dune```
+
+```pacman: sudo pacman -S dune```
+
+```apk: sudo apk add dune```
+
+```zypper: sudo zypper install ocaml-dune```
+
+```brew: brew install dune```
+
+```nix: nix profile install nixpkgs#dune```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ocaml](/man/ocaml)(1), [opam](/man/opam)(1), [ocamlfind](/man/ocamlfind)(1), [make](/man/make)(1)

@@ -60,6 +60,24 @@ Verbose output (**-v**) and some device details require root privileges. Device 
 
 **lsusb** is part of the **usbutils** package, providing command-line USB device information since the early days of USB support in Linux.
 
+# INSTALL
+
+```apt: sudo apt install usbutils```
+
+```dnf: sudo dnf install usbutils```
+
+```pacman: sudo pacman -S usbutils```
+
+```apk: sudo apk add usbutils```
+
+```zypper: sudo zypper install usbutils```
+
+```brew: brew install usbutils```
+
+```nix: nix profile install nixpkgs#usbutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lspci](/man/lspci)(8), [udevadm](/man/udevadm)(8)

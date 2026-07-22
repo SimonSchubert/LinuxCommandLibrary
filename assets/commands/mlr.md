@@ -72,6 +72,24 @@ Many verbs to learn. Format-aware. Go-based rewrite.
 
 Miller was created by **John Kerl** as "like awk/sed/cut for name-indexed data."
 
+# INSTALL
+
+```apt: sudo apt install miller```
+
+```dnf: sudo dnf install miller```
+
+```pacman: sudo pacman -S miller```
+
+```apk: sudo apk add miller```
+
+```zypper: sudo zypper install miller```
+
+```brew: brew install miller```
+
+```nix: nix profile install nixpkgs#miller```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [awk](/man/awk)(1), [csvtool](/man/csvtool)(1)

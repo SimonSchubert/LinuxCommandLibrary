@@ -109,6 +109,20 @@ laravel framework's command line interface
 
 **php artisan** is the Laravel framework's command line interface. Provides commands for common development tasks like code generation, database migrations, caching, and server management.
 
+# INSTALL
+
+```dnf: sudo dnf install php```
+
+```pacman: sudo pacman -S php```
+
+```apk: sudo apk add php85```
+
+```brew: brew install php```
+
+```nix: nix profile install nixpkgs#php85```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [php](/man/php)(1), [composer](/man/composer)(1), [laravel](/man/laravel)(1)

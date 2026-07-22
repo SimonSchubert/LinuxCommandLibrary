@@ -79,6 +79,18 @@ Restart a stream with a **preferred leader** node
 
 **rabbitmq-streams** is a command line tool for managing RabbitMQ streams. Streams are persistent, replicated, append-only log data structures designed for high-throughput messaging workloads. This tool manages stream replicas, monitors stream status, and lists stream connections and consumers. Part of the RabbitMQ CLI tools suite.
 
+# INSTALL
+
+```dnf: sudo dnf install rabbitmq-server```
+
+```apk: sudo apk add rabbitmq-server```
+
+```zypper: sudo zypper install rabbitmq-server```
+
+```nix: nix profile install nixpkgs#rabbitmq-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rabbitmqctl](/man/rabbitmqctl)(1), [rabbitmq-queues](/man/rabbitmq-queues)(1), [rabbitmq-diagnostics](/man/rabbitmq-diagnostics)(1)

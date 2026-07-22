@@ -72,6 +72,12 @@ Text-to-speech quality depends on the system's TTS engine. PDF rendering in the 
 
 **lue** was created by **superstarryeyes** and is written in **Python**. It can be installed via pip with `pip install lue-reader`.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#lue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bat](/man/bat)(1), [less](/man/less)(1)

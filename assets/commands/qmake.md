@@ -117,6 +117,16 @@ Being replaced by CMake for new Qt6 projects. Shadow builds recommended for clea
 
 **qmake** has been Qt's build system since the late **1990s**, developed by Trolltech (now The Qt Company). While CMake became the primary build system for Qt 6, qmake remains supported and widely used for existing projects.
 
+# INSTALL
+
+```apt: sudo apt install qtchooser```
+
+```dnf: sudo dnf install qtchooser```
+
+```apk: sudo apk add qt5-qtbase-dev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmake](/man/cmake)(1), [make](/man/make)(1), [qt](/man/qt)(1), [moc](/man/moc)(1)

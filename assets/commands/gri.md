@@ -38,6 +38,14 @@ Requires Python 3 and appropriate authentication credentials configured for each
 
 **gri** was developed as part of the **pycontribs** project to simplify the workflow of developers who review code across multiple Gerrit and GitHub instances. It is written in **Python** and released as open source software.
 
+# INSTALL
+
+```apt: sudo apt install gri```
+
+```zypper: sudo zypper install gri```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [gh](/man/gh)(1)

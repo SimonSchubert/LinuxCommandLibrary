@@ -65,6 +65,22 @@ Part of gettext-tools. Different duplicates merged. May need manual review.
 
 msguniq is part of **GNU gettext**, helping maintain clean translation files.
 
+# INSTALL
+
+```apt: sudo apt install gettext```
+
+```dnf: sudo dnf install gettext```
+
+```pacman: sudo pacman -S gettext```
+
+```apk: sudo apk add gettext```
+
+```brew: brew install gettext```
+
+```nix: nix profile install nixpkgs#gettext```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [msgcat](/man/msgcat)(1), [msgmerge](/man/msgmerge)(1), [msgfilter](/man/msgfilter)(1)

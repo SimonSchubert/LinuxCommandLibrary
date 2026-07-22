@@ -50,6 +50,12 @@ Start a debugging session for PlatformIO embedded projects
 
 The binary shortcut **piodebuggdb** is equivalent to `pio debug --interface=gdb`. Debug builds use the `debug_build_flags` from platformio.ini (typically `-O0 -g3 -ggdb3` for full symbol information).
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-run](/man/pio-run)(1), [pio-test](/man/pio-test)(1), [gdb](/man/gdb)(1)

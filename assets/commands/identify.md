@@ -68,6 +68,18 @@ Part of ImageMagick. Memory for large images. Some formats need delegates.
 
 identify is part of **ImageMagick**, the comprehensive image manipulation suite.
 
+# INSTALL
+
+```pacman: sudo pacman -S imagemagick```
+
+```apk: sudo apk add imagemagick```
+
+```brew: brew install imagemagick```
+
+```nix: nix profile install nixpkgs#imagemagick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [convert](/man/convert)(1), [mogrify](/man/mogrify)(1), [magick](/man/magick)(1), [file](/man/file)(1)

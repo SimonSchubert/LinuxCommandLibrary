@@ -82,6 +82,24 @@ No persistence (RAM only). No authentication by default. LRU eviction when full.
 
 memcached was developed by **Brad Fitzpatrick** at **LiveJournal** in **2003** to reduce database load. It became foundational for web scaling.
 
+# INSTALL
+
+```apt: sudo apt install memcached```
+
+```dnf: sudo dnf install memcached```
+
+```pacman: sudo pacman -S memcached```
+
+```apk: sudo apk add memcached```
+
+```zypper: sudo zypper install memcached```
+
+```brew: brew install memcached```
+
+```nix: nix profile install nixpkgs#memcached```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [redis-cli](/man/redis-cli)(1)

@@ -76,6 +76,16 @@ Restoring a table discards its uncommitted changes with no way back: there is no
 
 dolt checkout mirrors **git checkout** for Dolt's versioned database, giving Git users a familiar way to move between branches of data. Dolt has since also grown Git's newer split of the command into `dolt branch` for branch management and `dolt reset`/`dolt revert` for undoing work, but `checkout` remains the everyday entry point.
 
+# INSTALL
+
+```pacman: sudo pacman -S dolt```
+
+```brew: brew install dolt```
+
+```nix: nix profile install nixpkgs#dolt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dolt](/man/dolt)(1), [dolt-branch](/man/dolt-branch)(1), [dolt-merge](/man/dolt-merge)(1), [git-checkout](/man/git-checkout)(1)

@@ -56,6 +56,12 @@ _filename_
 
 Debian/Ubuntu specific. The editor used depends on mailcap configuration and MIME type detection.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#edit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [run-mailcap](/man/run-mailcap)(1), [sensible-editor](/man/sensible-editor)(1), [view](/man/view)(1), [compose](/man/compose)(1), [file](/man/file)(1)

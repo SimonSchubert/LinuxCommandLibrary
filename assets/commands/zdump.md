@@ -36,6 +36,14 @@ With -v flag, it shows all timezone transitions (daylight saving time changes).
 
 Timezone names must match system database entries. Output format varies by system version.
 
+# INSTALL
+
+```apt: sudo apt install libc-bin```
+
+```apk: sudo apk add tzdata-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zic](/man/zic)(8), [tzselect](/man/tzselect)(8), [date](/man/date)(1)

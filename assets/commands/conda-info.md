@@ -87,6 +87,14 @@ The legacy form **conda info** _package_ for inspecting a package was deprecated
 
 **conda info** _package_ no longer prints package metadata; use **conda search** _package_ **--info**. The **--unsafe-channels** option exposes channel auth tokens in plain text, so avoid using it in shared logs.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-config](/man/conda-config)(1), [conda-list](/man/conda-list)(1)

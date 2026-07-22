@@ -67,6 +67,24 @@ Portability mode is conservative. Modern systems accept longer names. Some check
 
 **pathchk** is part of **GNU coreutils** and specified by **POSIX**. It provides a standard way to validate pathnames for cross-platform scripts and utilities.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [basename](/man/basename)(1), [dirname](/man/dirname)(1), [realpath](/man/realpath)(1)

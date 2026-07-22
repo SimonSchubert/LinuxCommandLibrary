@@ -91,6 +91,12 @@ Authentication tokens enable automated deployments in CI/CD pipelines. The list 
 
 Static sites only; no server-side code. Free tier has limitations. Custom domains require a DNS CNAME record pointing to na-east1.surge.sh.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#surge```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [netlify](/man/netlify)(1), [vercel](/man/vercel)(1), [firebase](/man/firebase)(1)

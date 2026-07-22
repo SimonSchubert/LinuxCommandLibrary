@@ -67,6 +67,16 @@ Shell builtin. Spaces inside **[ ]** and **[[ ]]** are required (e.g., **[ "$a" 
 
 **if** is a standard **Unix shell** construct, present in all POSIX-compliant shells since the original Bourne shell.
 
+# INSTALL
+
+```apk: sudo apk add execline```
+
+```brew: brew install execline```
+
+```nix: nix profile install nixpkgs#execline```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [test](/man/test)(1), [bash](/man/bash)(1), [while](/man/while)(1), [for](/man/for)(1)

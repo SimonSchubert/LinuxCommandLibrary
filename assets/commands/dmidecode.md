@@ -105,6 +105,22 @@ Requires root privileges. Information accuracy depends on the BIOS/firmware impl
 
 **dmidecode** was written by **Alan Cox** and is currently maintained by **Jean Delvare**. It provides a standardized way to access system hardware information through the SMBIOS standard on x86 and x86_64 systems.
 
+# INSTALL
+
+```apt: sudo apt install dmidecode```
+
+```dnf: sudo dnf install dmidecode```
+
+```pacman: sudo pacman -S dmidecode```
+
+```apk: sudo apk add dmidecode```
+
+```zypper: sudo zypper install dmidecode```
+
+```nix: nix profile install nixpkgs#dmidecode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lshw](/man/lshw)(1), [lscpu](/man/lscpu)(1), [hwinfo](/man/hwinfo)(8), [biosdecode](/man/biosdecode)(8), [lspci](/man/lspci)(8)

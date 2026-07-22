@@ -54,6 +54,20 @@ A value is described by its name (**/v**), its type (**/t**), and its data (**/d
 **/f**
 > Force the operation, overwriting an existing value without a confirmation prompt.
 
+# INSTALL
+
+```dnf: sudo dnf install wine```
+
+```pacman: sudo pacman -S wine```
+
+```apk: sudo apk add wine```
+
+```zypper: sudo zypper install wine```
+
+```nix: nix profile install nixpkgs#wine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wine](/man/wine)(1), [wine-reg](/man/wine-reg)(1), [wine-reg-delete](/man/wine-reg-delete)(1), [wine-reg-query](/man/wine-reg-query)(1), [wine-reg-copy](/man/wine-reg-copy)(1)

@@ -88,6 +88,24 @@ When you fetch, Git downloads all new commits and objects from the remote and up
 
 The prune option (-p) removes references to remote branches that no longer exist on the server. Shallow fetches with --depth limit history download, useful for CI/CD environments. The --unshallow option converts a shallow clone to a complete repository.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-pull](/man/git-pull)(1), [git-push](/man/git-push)(1)

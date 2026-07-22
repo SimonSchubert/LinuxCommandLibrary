@@ -67,6 +67,16 @@ For BIOS systems only; UEFI systems use different methods. Incorrect use can mak
 
 grub-bios-setup is part of GRUB 2, providing the low-level MBR installation that was previously handled by a single grub-install command. The separation allows more flexibility in complex installation scenarios.
 
+# INSTALL
+
+```apt: sudo apt install grub-pc```
+
+```pacman: sudo pacman -S grub```
+
+```apk: sudo apk add grub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub-install](/man/grub-install)(8), [grub-mkconfig](/man/grub-mkconfig)(8)

@@ -76,6 +76,24 @@ Learning curve for complex queries. Streaming mode for large files. Null handlin
 
 jq was created by **Stephen Dolan** as a sed/awk equivalent for JSON, becoming the standard CLI JSON tool.
 
+# INSTALL
+
+```apt: sudo apt install jq```
+
+```dnf: sudo dnf install jq```
+
+```pacman: sudo pacman -S jq```
+
+```apk: sudo apk add jq```
+
+```zypper: sudo zypper install jq```
+
+```brew: brew install jq```
+
+```nix: nix profile install nixpkgs#jq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jo](/man/jo)(1), [jc](/man/jc)(1), [yq](/man/yq)(1), [gron](/man/gron)(1)

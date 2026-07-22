@@ -110,6 +110,20 @@ Requires sufficient storage space. BTRFS snapshots are more space-efficient than
 
 **Timeshift** was created by **Tony George** as a GUI and CLI tool for system backup on Linux, originally released in **2014**.
 
+# INSTALL
+
+```apt: sudo apt install timeshift```
+
+```dnf: sudo dnf install timeshift```
+
+```pacman: sudo pacman -S timeshift```
+
+```zypper: sudo zypper install timeshift```
+
+```nix: nix profile install nixpkgs#timeshift```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rsync](/man/rsync)(1), [btrfs](/man/btrfs)(8), [snapper](/man/snapper)(1), [btrbk](/man/btrbk)(1), [restic](/man/restic)(1)

@@ -66,6 +66,24 @@ Requires mosh-server on remote. Uses UDP port range. SSH for initial connection.
 
 mosh was developed at **MIT** to provide a better mobile shell experience, released in 2012.
 
+# INSTALL
+
+```apt: sudo apt install mosh```
+
+```dnf: sudo dnf install mosh```
+
+```pacman: sudo pacman -S mosh```
+
+```apk: sudo apk add mosh```
+
+```zypper: sudo zypper install mosh```
+
+```brew: brew install mosh```
+
+```nix: nix profile install nixpkgs#mosh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [screen](/man/screen)(1), [tmux](/man/tmux)(1)

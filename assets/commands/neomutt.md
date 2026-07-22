@@ -112,6 +112,24 @@ Initial configuration requires setting up accounts, folders, and key bindings in
 
 **NeoMutt** was forked from **Mutt** in 2016 by Richard Russon to integrate community patches and add new features independently of the Mutt development pace.
 
+# INSTALL
+
+```apt: sudo apt install neomutt```
+
+```dnf: sudo dnf install neomutt```
+
+```pacman: sudo pacman -S neomutt```
+
+```apk: sudo apk add neomutt```
+
+```zypper: sudo zypper install neomutt```
+
+```brew: brew install neomutt```
+
+```nix: nix profile install nixpkgs#neomutt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mutt](/man/mutt)(1), [alpine](/man/alpine)(1), [mailx](/man/mailx)(1), [mail](/man/mail)(1), [mbsync](/man/mbsync)(1)

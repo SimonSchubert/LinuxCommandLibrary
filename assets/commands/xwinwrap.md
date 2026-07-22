@@ -63,6 +63,12 @@ Commonly used with mpv to play videos as desktop backgrounds.
 
 X11 only. May not work with all window managers or compositors. Child process must support window ID parameter.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#xwinwrap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpv](/man/mpv)(1), [feh](/man/feh)(1), [xdotool](/man/xdotool)(1), [xsetroot](/man/xsetroot)(1)

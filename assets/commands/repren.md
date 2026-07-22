@@ -74,6 +74,14 @@ Python required. Complex patterns need care. Backup important files.
 
 **repren** was created as a versatile renaming and replacement tool supporting complex batch operations with pattern files.
 
+# INSTALL
+
+```brew: brew install repren```
+
+```nix: nix profile install nixpkgs#repren```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rename](/man/rename)(1), [sed](/man/sed)(1), [perl](/man/perl)(1)

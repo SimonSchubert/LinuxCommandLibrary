@@ -108,6 +108,16 @@ Less detailed than dig. Caching may affect results. Some record types need expli
 
 **host** is part of **BIND** (Berkeley Internet Name Domain), developed originally at **UC Berkeley** in the **1980s**. It provides a simplified interface compared to dig and nslookup, targeting users who need quick DNS lookups.
 
+# INSTALL
+
+```apt: sudo apt install bind9-host```
+
+```apk: sudo apk add bind-tools```
+
+```nix: nix profile install nixpkgs#host```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [drill](/man/drill)(1), [getent](/man/getent)(1)

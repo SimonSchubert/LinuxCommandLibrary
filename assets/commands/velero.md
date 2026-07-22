@@ -80,6 +80,18 @@ Requires object storage. Volume snapshots depend on provider. Some resources exc
 
 **Velero** (formerly Heptio Ark) was created for Kubernetes backup. Now maintained by VMware as part of the Tanzu portfolio.
 
+# INSTALL
+
+```pacman: sudo pacman -S velero```
+
+```zypper: sudo zypper install velero```
+
+```brew: brew install velero```
+
+```nix: nix profile install nixpkgs#velero```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [restic](/man/restic)(1)

@@ -90,6 +90,22 @@ Cores must be downloaded separately. Game ROMs not included (legal backup requir
 
 **RetroArch** is the reference implementation of the **libretro** API, developed by the libretro team. It evolved from SSNES and has become the most popular multi-system emulator frontend.
 
+# INSTALL
+
+```apt: sudo apt install retroarch```
+
+```dnf: sudo dnf install retroarch```
+
+```pacman: sudo pacman -S retroarch```
+
+```apk: sudo apk add retroarch```
+
+```zypper: sudo zypper install retroarch```
+
+```nix: nix profile install nixpkgs#retroarch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [emulationstation](/man/emulationstation)(1), [mame](/man/mame)(1)

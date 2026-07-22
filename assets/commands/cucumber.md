@@ -84,6 +84,12 @@ Step definitions must match scenario steps exactly. Shared state between steps c
 
 **Cucumber** was created by **Aslak Hellesoy** in **2008**, inspired by RSpec and JBehave. It popularized BDD by enabling executable specifications in plain language. Originally Ruby-based, implementations now exist for Java, JavaScript, and many other languages.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#cucumber```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rspec](/man/rspec)(1), [jest](/man/jest)(1), [pytest](/man/pytest)(1)

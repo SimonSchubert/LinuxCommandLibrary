@@ -85,6 +85,20 @@ Requires root privileges for most operations. Key initialization needs sufficien
 
 Introduced with pacman 4.0 in 2011 to support package signing, enhancing security by cryptographically verifying package integrity and authenticity.
 
+# INSTALL
+
+```apt: sudo apt install pacman-package-manager```
+
+```dnf: sudo dnf install pacman```
+
+```pacman: sudo pacman -S pacman```
+
+```apk: sudo apk add pacman```
+
+```nix: nix profile install nixpkgs#pacman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [gpg](/man/gpg)(1), [makepkg](/man/makepkg)(8)

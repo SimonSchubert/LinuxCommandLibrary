@@ -80,6 +80,24 @@ The command operates on object hashes (SHA-1 or SHA-256) and can display object 
 
 Common use cases include examining specific versions of files without checking them out, inspecting tree structures to understand directory layouts at specific commits, and validating object integrity. The -p flag pretty-prints objects in human-readable format, while -t and -s provide metadata without full content extraction.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-show](/man/git-show)(1), [git-hash-object](/man/git-hash-object)(1), [git-ls-tree](/man/git-ls-tree)(1), [git-rev-parse](/man/git-rev-parse)(1), [git-verify-pack](/man/git-verify-pack)(1)

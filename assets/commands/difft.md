@@ -102,6 +102,22 @@ Large files or very different structures may hit performance limits. Parse error
 
 **Difftastic** was created by Wilfred Hughes starting in **2020**. It was developed to address the limitations of line-based diffs, which often produce noisy output for refactoring or reformatting changes. The tool uses tree-sitter parsers for language-aware structural comparison and has gained popularity as a git diff replacement.
 
+# INSTALL
+
+```dnf: sudo dnf install difftastic```
+
+```pacman: sudo pacman -S difftastic```
+
+```apk: sudo apk add difftastic```
+
+```zypper: sudo zypper install difftastic```
+
+```brew: brew install difftastic```
+
+```nix: nix profile install nixpkgs#difftastic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [git-diff](/man/git-diff)(1), [delta](/man/delta)(1), [colordiff](/man/colordiff)(1)

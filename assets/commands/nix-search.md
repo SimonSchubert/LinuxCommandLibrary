@@ -62,6 +62,12 @@ _query_
 
 Requires the **nix-command** and **flakes** experimental features to be enabled. The first search against a flake may be slow as it evaluates and caches the package set. Results depend on the flake's lock file version.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nix-search```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix](/man/nix)(1), [nix-env](/man/nix-env)(1), [nix-profile](/man/nix-profile)(1), [nix-shell](/man/nix-shell)(1)

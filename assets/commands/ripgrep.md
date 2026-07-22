@@ -135,6 +135,20 @@ Regex syntax defaults to Rust's regex crate, which differs from POSIX or PCRE in
 
 **ripgrep** was created by **Andrew Gallant** in **2016**. It combines speed with smart defaults, becoming one of the most popular grep alternatives in modern development workflows.
 
+# INSTALL
+
+```dnf: sudo dnf install ripgrep```
+
+```pacman: sudo pacman -S ripgrep```
+
+```zypper: sudo zypper install ripgrep```
+
+```brew: brew install ripgrep```
+
+```nix: nix profile install nixpkgs#ripgrep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [ag](/man/ag)(1), [ack](/man/ack)(1), [fd](/man/fd)(1)

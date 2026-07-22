@@ -22,6 +22,20 @@ export flattened image filesystem
 
 Use **-** as output to write to stdout.
 
+# INSTALL
+
+```pacman: sudo pacman -S crane```
+
+```apk: sudo apk add crane```
+
+```zypper: sudo zypper install crane```
+
+```brew: brew install crane```
+
+```nix: nix profile install nixpkgs#crane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-pull](/man/crane-pull)(1)

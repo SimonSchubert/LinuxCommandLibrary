@@ -91,6 +91,16 @@ Some findings may be intentional configurations. Cluster audit requires permissi
 
 kubeaudit was created by **Shopify** to identify security risks in Kubernetes deployments before they reach production.
 
+# INSTALL
+
+```zypper: sudo zypper install kubeaudit```
+
+```brew: brew install kubeaudit```
+
+```nix: nix profile install nixpkgs#kubeaudit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kube-linter](/man/kube-linter)(1), [trivy](/man/trivy)(1)

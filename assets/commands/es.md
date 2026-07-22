@@ -66,6 +66,14 @@ Not POSIX-compatible; scripts need rewriting. Smaller community and fewer resour
 
 es was created by **Paul Haahr** and **Byron Rakitzis** in the early **1990s** as an enhanced version of rc, the Plan 9 shell. It added functional programming concepts like first-class functions and lexical scoping to shell scripting.
 
+# INSTALL
+
+```apk: sudo apk add es-shell```
+
+```nix: nix profile install nixpkgs#es```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rc](/man/rc)(1), [bash](/man/bash)(1), [zsh](/man/zsh)(1), [fish](/man/fish)(1)

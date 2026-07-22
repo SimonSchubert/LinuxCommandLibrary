@@ -60,6 +60,24 @@ Combine with **&** to run in the background. Output is appended (not overwritten
 
 nohup is a classic **Unix** command for running processes that survive terminal disconnection.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [screen](/man/screen)(1), [tmux](/man/tmux)(1), [disown](/man/disown)(1), [setsid](/man/setsid)(1)

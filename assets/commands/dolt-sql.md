@@ -99,6 +99,16 @@ Compatibility with MySQL is high but not total: some functions, storage engines,
 
 Dolt's SQL engine is **go-mysql-server**, a MySQL-compatible engine that DoltHub took over and heavily extended. Making SQL the interface, rather than a bespoke query language, is what allowed Dolt to slot into existing tooling, and the version-control surface was subsequently pushed into SQL as system tables and stored procedures so that applications could branch, diff, and merge data without shelling out.
 
+# INSTALL
+
+```pacman: sudo pacman -S dolt```
+
+```brew: brew install dolt```
+
+```nix: nix profile install nixpkgs#dolt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dolt](/man/dolt)(1), [dolt-commit](/man/dolt-commit)(1), [dolt-merge](/man/dolt-merge)(1), [mysql](/man/mysql)(1), [sqlite3](/man/sqlite3)(1)

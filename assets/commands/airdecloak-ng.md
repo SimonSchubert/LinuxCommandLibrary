@@ -70,6 +70,23 @@ Only useful for captures from access points using WEP cloaking. Modern networks 
 
 **airdecloak-ng** was added to the aircrack-ng suite to counter specific WEP protection mechanisms that some access point vendors implemented in the late **2000s**.
 
+# INSTALL
+
+```apt: sudo apt install aircrack-ng```
+
+```dnf: sudo dnf install aircrack-ng```
+
+```pacman: sudo pacman -S aircrack-ng```
+
+```apk: sudo apk add aircrack-ng```
+
+```zypper: sudo zypper install aircrack-ng```
+
+```brew: brew install aircrack-ng```
+
+```nix: nix profile install nixpkgs#aircrack-ng```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1)

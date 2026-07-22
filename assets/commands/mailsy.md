@@ -72,6 +72,14 @@ Depends on external service. Emails expire. Not for production use.
 
 mailsy provides CLI access to **temporary email** services for disposable addresses.
 
+# INSTALL
+
+```brew: brew install mailsy```
+
+```nix: nix profile install nixpkgs#mailsy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmpmail](/man/tmpmail)(1), [mail](/man/mail)(1)

@@ -80,6 +80,24 @@ Obsoleted by pamscale; use pamscale for new work. Pixel mixing can blur. Integer
 
 pnmscale is part of **Netpbm** by **Jef Poskanzer**, later superseded by pamscale with additional features.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamscale](/man/pamscale)(1), [pnmenlarge](/man/pnmenlarge)(1), [pnmcut](/man/pnmcut)(1), [netpbm](/man/netpbm)(1)

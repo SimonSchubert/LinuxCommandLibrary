@@ -47,6 +47,16 @@ Notable commands include git-summary for repository statistics, git-changelog fo
 
 Installation methods vary by platform, with packages available through Homebrew, apt, yum, and manual installation from source. The tools are implemented primarily as shell scripts, making them portable and easy to customize.
 
+# INSTALL
+
+```dnf: sudo dnf install git-extras```
+
+```brew: brew install git-extras```
+
+```nix: nix profile install nixpkgs#git-extras```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-summary](/man/git-summary)(1), [git-changelog](/man/git-changelog)(1), [git-effort](/man/git-effort)(1), [git-ignore](/man/git-ignore)(1), [git-undo](/man/git-undo)(1)

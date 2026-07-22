@@ -38,6 +38,20 @@ Multiple containers can be removed by specifying their names as arguments. The -
 
 Running containers cannot be removed without --force. Data stored only inside the container will be lost. The home directory (mounted from host) is preserved.
 
+# INSTALL
+
+```apt: sudo apt install podman-toolbox```
+
+```dnf: sudo dnf install toolbox```
+
+```pacman: sudo pacman -S toolbox```
+
+```zypper: sudo zypper install toolbox```
+
+```nix: nix profile install nixpkgs#toolbox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [toolbox](/man/toolbox)(1), [toolbox-rmi](/man/toolbox-rmi)(1), [toolbox-list](/man/toolbox-list)(1)

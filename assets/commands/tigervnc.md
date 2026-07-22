@@ -121,6 +121,18 @@ Display numbers start at 0 (port 5900). Double-colon specifies raw port number. 
 
 **TigerVNC** is a fork of TightVNC, focused on performance and security improvements. It originated from the VNC (Virtual Network Computing) technology developed at Olivetti Research Laboratory in the late 1990s. TigerVNC is widely used in enterprise environments and Linux distributions.
 
+# INSTALL
+
+```dnf: sudo dnf install tigervnc```
+
+```pacman: sudo pacman -S tigervnc```
+
+```zypper: sudo zypper install tigervnc```
+
+```nix: nix profile install nixpkgs#tigervnc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vncserver](/man/vncserver)(1), [x11vnc](/man/x11vnc)(1), [ssh](/man/ssh)(1)

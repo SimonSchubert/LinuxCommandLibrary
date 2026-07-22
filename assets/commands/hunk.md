@@ -28,6 +28,14 @@ Default UI reviews the working tree / staged changes. Flags for path, staging, a
 
 Relatively new; UX may change quickly. Requires a git repository for typical use.
 
+# INSTALL
+
+```brew: brew install hunk```
+
+```nix: nix profile install nixpkgs#hunk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-diff](/man/git-diff)(1), [delta](/man/delta)(1), [difft](/man/difft)(1)

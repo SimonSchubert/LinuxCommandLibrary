@@ -73,6 +73,24 @@ FUSE required. File sizes visible. Password recovery impossible without master k
 
 gocryptfs was created as a modern, audited alternative to EncFS, using authenticated encryption and written in Go.
 
+# INSTALL
+
+```apt: sudo apt install gocryptfs```
+
+```dnf: sudo dnf install gocryptfs```
+
+```pacman: sudo pacman -S gocryptfs```
+
+```apk: sudo apk add gocryptfs```
+
+```zypper: sudo zypper install gocryptfs```
+
+```brew: brew install gocryptfs```
+
+```nix: nix profile install nixpkgs#gocryptfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [encfs](/man/encfs)(1), [cryptsetup](/man/cryptsetup)(1), [veracrypt](/man/veracrypt)(1)

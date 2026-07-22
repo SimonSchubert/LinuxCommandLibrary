@@ -28,6 +28,14 @@ LAN device discovery tool with interactive TUI
 
 **whosthere** was created by **Ramon Vermeulen** (ramonvermeulen) and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install whosthere```
+
+```nix: nix profile install nixpkgs#whosthere```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [arp-scan](/man/arp-scan)(1), [nmap](/man/nmap)(1), [avahi-browse](/man/avahi-browse)(1)

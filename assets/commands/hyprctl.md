@@ -119,6 +119,18 @@ Only works when Hyprland is running, and talks only to the local Hyprland instan
 
 hyprctl is part of the Hyprland project, a Wayland compositor created by **Vaxry**, first released in **2022** and known for its animations, dynamic tiling, and extensive customization. In **2026**, Hyprland 0.55 added an optional Lua configuration system, extending hyprctl with the **eval** and **repl** commands for scripting alongside its existing keyword/dispatch interface.
 
+# INSTALL
+
+```pacman: sudo pacman -S hyprland```
+
+```apk: sudo apk add hyprland```
+
+```zypper: sudo zypper install hyprland```
+
+```nix: nix profile install nixpkgs#hyprland```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hyprpaper](/man/hyprpaper)(1), [hyprshot](/man/hyprshot)(1), [swaymsg](/man/swaymsg)(1)

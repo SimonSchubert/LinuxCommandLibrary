@@ -76,6 +76,24 @@ Requires debug symbols for best results. Part of binutils. Platform variations.
 
 nm is a classic **Unix** utility from early Unix systems for examining object file symbols.
 
+# INSTALL
+
+```apt: sudo apt install binutils```
+
+```dnf: sudo dnf install binutils```
+
+```pacman: sudo pacman -S binutils```
+
+```apk: sudo apk add binutils```
+
+```zypper: sudo zypper install binutils```
+
+```brew: brew install binutils```
+
+```nix: nix profile install nixpkgs#binutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [objdump](/man/objdump)(1), [readelf](/man/readelf)(1), [strings](/man/strings)(1)

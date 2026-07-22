@@ -51,6 +51,24 @@ Part of Netpbm. Values clamped to valid range.
 
 pamfunc is part of **Netpbm** for mathematical image transformations.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamarith](/man/pamarith)(1), [pnmgamma](/man/pnmgamma)(1), [netpbm](/man/netpbm)(1)

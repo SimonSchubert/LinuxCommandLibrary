@@ -81,6 +81,22 @@ Don't manually modify /nix/store. Garbage collection only removes unreferenced p
 
 nix-store is a core **Nix** tool, providing low-level access to the Nix store since the project's inception.
 
+# INSTALL
+
+```apt: sudo apt install nix-bin```
+
+```dnf: sudo dnf install nix```
+
+```pacman: sudo pacman -S nix```
+
+```apk: sudo apk add nix```
+
+```zypper: sudo zypper install nix```
+
+```nix: nix profile install nixpkgs#nix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix-env](/man/nix-env)(1), [nix-build](/man/nix-build)(1), [nix-collect-garbage](/man/nix-collect-garbage)(1)

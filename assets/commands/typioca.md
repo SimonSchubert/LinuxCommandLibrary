@@ -24,6 +24,16 @@ Cozy typing speed tester in the terminal
 
 **typioca** was created by **Lukas Bloznelis** (bloznelis) and is written in **Go**.
 
+# INSTALL
+
+```zypper: sudo zypper install typioca```
+
+```brew: brew install typioca```
+
+```nix: nix profile install nixpkgs#typioca```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ttyper](/man/ttyper)(1), [typtea](/man/typtea)(1), [tukai](/man/tukai)(1), [smassh](/man/smassh)(1)

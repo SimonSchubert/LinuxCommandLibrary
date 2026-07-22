@@ -96,6 +96,14 @@ Rate limits may apply. Large downloads may fail. Some files require permission. 
 
 gdown was created to simplify Google Drive downloads, particularly for machine learning datasets. It provides wget/curl-like functionality for Drive URLs.
 
+# INSTALL
+
+```brew: brew install gdown```
+
+```nix: nix profile install nixpkgs#gdown```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wget](/man/wget)(1), [curl](/man/curl)(1), [gdrive](/man/gdrive)(1)

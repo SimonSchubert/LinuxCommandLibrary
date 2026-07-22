@@ -146,6 +146,24 @@ Learning curve for non-vim users. Some operations differ from vim. Configuration
 
 **vifm** was created around **2001** as a curses-based file manager with vim-style keybindings. It continues active development with modern features, including plugin support added in recent versions.
 
+# INSTALL
+
+```apt: sudo apt install vifm```
+
+```dnf: sudo dnf install vifm```
+
+```pacman: sudo pacman -S vifm```
+
+```apk: sudo apk add vifm```
+
+```zypper: sudo zypper install vifm```
+
+```brew: brew install vifm```
+
+```nix: nix profile install nixpkgs#vifm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ranger](/man/ranger)(1), [nnn](/man/nnn)(1), [mc](/man/mc)(1), [lf](/man/lf)(1), [vim](/man/vim)(1)

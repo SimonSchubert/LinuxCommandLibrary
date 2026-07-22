@@ -56,6 +56,24 @@ fetch container logs from STDOUT and STDERR
 
 **docker logs** fetches the logs of a container. Shows STDOUT and STDERR output from the container's main process. Logs are captured by Docker's logging driver and can be filtered by time range or number of lines. Essential for debugging containerized applications and monitoring runtime behavior.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-container-logs](/man/docker-container-logs)(1)

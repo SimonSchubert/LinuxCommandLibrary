@@ -94,6 +94,14 @@ Encryption method for a profile cannot be changed after creation. Keep passphras
 
 **edit** writes secrets to a temporary file (mode 0600 on Unix) while the editor is open. Symmetric keys are shown once at creation—store them offline. Prefer GPG or strong passphrases for production secrets.
 
+# INSTALL
+
+```brew: brew install envio```
+
+```nix: nix profile install nixpkgs#envio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [direnv](/man/direnv)(1), [env](/man/env)(1), [gpg](/man/gpg)(1)

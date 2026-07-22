@@ -68,6 +68,24 @@ Different from grep. More features. C++ implementation.
 
 **ugrep** was created as a fast, feature-rich grep replacement with interactive and fuzzy search capabilities.
 
+# INSTALL
+
+```apt: sudo apt install ugrep```
+
+```dnf: sudo dnf install ugrep```
+
+```pacman: sudo pacman -S ugrep```
+
+```apk: sudo apk add ugrep```
+
+```zypper: sudo zypper install ugrep```
+
+```brew: brew install ugrep```
+
+```nix: nix profile install nixpkgs#ugrep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [rg](/man/rg)(1), [ag](/man/ag)(1)

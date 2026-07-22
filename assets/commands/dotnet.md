@@ -96,6 +96,18 @@ Requires .NET SDK installed. Multiple SDK versions can coexist. Large projects m
 
 The dotnet CLI was introduced with **.NET Core** in **2016** as Microsoft's cross-platform .NET implementation. It unified the fragmented .NET tooling under a single CLI, becoming the standard for .NET development.
 
+# INSTALL
+
+```dnf: sudo dnf install dotnet-host```
+
+```pacman: sudo pacman -S dotnet-host```
+
+```apk: sudo apk add dotnet-host```
+
+```brew: brew install dotnet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [msbuild](/man/msbuild)(1)

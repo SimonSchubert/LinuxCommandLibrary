@@ -127,6 +127,17 @@ Certificates must be activated before use. Deleting a thing does not delete its 
 
 **AWS IoT** was announced at **AWS re:Invent 2015** and launched in general availability in **January 2016**. The platform has expanded to include IoT Greengrass for edge computing, IoT Analytics for data analysis, IoT Device Management for fleet operations, and IoT SiteWise for industrial data. The core service continues to evolve with features like fleet provisioning and configurable endpoints.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [mosquitto](/man/mosquitto)(1), [aws-s3](/man/aws-s3)(1), [aws-lambda](/man/aws-lambda)(1)

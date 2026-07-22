@@ -106,6 +106,16 @@ The preview server is not designed for production use; deploy the built files wi
 
 Vite was created by **Evan You** (creator of Vue.js) and first released in **April 2020**. The name means "fast" in French. Vite 2.0, released in **February 2021**, was a major rewrite that made it framework-agnostic. It has rapidly gained adoption as an alternative to webpack, influencing the broader JavaScript tooling ecosystem.
 
+# INSTALL
+
+```apt: sudo apt install vite```
+
+```brew: brew install vite```
+
+```nix: nix profile install nixpkgs#vite```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [webpack](/man/webpack)(1), [rollup](/man/rollup)(1), [esbuild](/man/esbuild)(1)

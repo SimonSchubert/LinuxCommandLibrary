@@ -109,6 +109,20 @@ Attempting to convert between dimensionally incompatible units (e.g., meters to 
 
 The original Unix units program was included in early versions of Unix. **GNU Units** was written by **Adrian Mariano** as a free implementation with an expanded unit database. It was first released in **1996** and is maintained as part of the GNU Project. The program includes units from ancient civilizations, historical measurements, and modern scientific standards.
 
+# INSTALL
+
+```apt: sudo apt install units```
+
+```dnf: sudo dnf install units```
+
+```apk: sudo apk add units```
+
+```zypper: sudo zypper install units```
+
+```nix: nix profile install nixpkgs#units```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bc](/man/bc)(1), [dc](/man/dc)(1), [calc](/man/calc)(1)

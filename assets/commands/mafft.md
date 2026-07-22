@@ -85,6 +85,16 @@ Memory scales with sequence count. Very long sequences may need adjustments. Aut
 
 MAFFT was developed by **Kazutaka Katoh** and colleagues, first published in **2002**. It's one of the most cited alignment tools in bioinformatics.
 
+# INSTALL
+
+```apt: sudo apt install mafft```
+
+```brew: brew install mafft```
+
+```nix: nix profile install nixpkgs#mafft```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [samtools](/man/samtools)(1), [bedtools](/man/bedtools)(1)

@@ -31,6 +31,12 @@ Press **/** or **Ctrl+f** to enter fuzzy search mode. Use **h**/**k** or arrow k
 
 **xbps-tui** was created by **lukeflo** and is written in **Rust**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#xbps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xbps-install](/man/xbps-install)(1), [xbps-query](/man/xbps-query)(1), [xbps-remove](/man/xbps-remove)(1)

@@ -78,6 +78,16 @@ Filenames may be sanitized. Nested MIME may need multiple passes. Some legacy en
 
 munpack was written by **John G. Myers** at Carnegie Mellon University as part of the MIME utilities for handling email attachments.
 
+# INSTALL
+
+```apt: sudo apt install mpack```
+
+```brew: brew install mpack```
+
+```nix: nix profile install nixpkgs#mpack```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpack](/man/mpack)(1), [uudecode](/man/uudecode)(1), [base64](/man/base64)(1), [ripmime](/man/ripmime)(1)

@@ -62,6 +62,18 @@ Requires Sealed Secrets controller. Cluster-specific encryption. Backup keys car
 
 kubeseal is part of **Sealed Secrets** by Bitnami for secure secret management in GitOps workflows.
 
+# INSTALL
+
+```pacman: sudo pacman -S kubeseal```
+
+```zypper: sudo zypper install kubeseal```
+
+```brew: brew install kubeseal```
+
+```nix: nix profile install nixpkgs#kubeseal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [sops](/man/sops)(1), [vault](/man/vault)(1)

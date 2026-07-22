@@ -95,6 +95,16 @@ When called without arguments, iwconfig displays the wireless parameters for all
 
 **iwconfig** was part of the **wireless-tools** package created by Jean Tourrilhes at Hewlett-Packard. It has been largely superseded by **iw** and **wpa_supplicant** for modern wireless configuration.
 
+# INSTALL
+
+```apt: sudo apt install wireless-tools```
+
+```apk: sudo apk add wireless-tools```
+
+```zypper: sudo zypper install wireless-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iw](/man/iw)(8), [iwlist](/man/iwlist)(8), [ifconfig](/man/ifconfig)(8), [wpa_supplicant](/man/wpa_supplicant)(8)

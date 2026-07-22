@@ -73,6 +73,13 @@ Gemini requires TLS; unencrypted connections are not supported. The default Gemi
 
 **agate** was created as part of the growing Gemini ecosystem after the Gemini protocol was designed by Solderpunk in **2019**. It provides a simple, Rust-based server implementation following the protocol's minimalist philosophy.
 
+# INSTALL
+
+```aur: yay -S agate```
+
+```nix: nix profile install nixpkgs#agate```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [nginx](/man/nginx)(8)

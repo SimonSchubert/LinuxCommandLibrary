@@ -56,6 +56,20 @@ Requires a git repository and, for live agent sessions, **tmux** plus the chosen
 
 **fractal** is an Apache-2.0 project from Plasma AI for recursive multi-agent worktrees with local observability.
 
+# INSTALL
+
+```dnf: sudo dnf install fractal```
+
+```pacman: sudo pacman -S fractal```
+
+```apk: sudo apk add fractal```
+
+```zypper: sudo zypper install fractal```
+
+```nix: nix profile install nixpkgs#fractal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [git](/man/git)(1), [git-worktree](/man/git-worktree)(1)

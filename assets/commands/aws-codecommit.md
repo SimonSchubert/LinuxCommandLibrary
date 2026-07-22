@@ -85,6 +85,17 @@ AWS CodeCommit is no longer available to new customers as of mid-**2024**; exist
 
 AWS CodeCommit launched in **July 2015** as part of the AWS developer tools suite. It provided a Git-compatible managed repository as an alternative to GitHub Enterprise or self-hosted GitLab. Pull request support was added in **2017**, and approval templates for compliance workflows in **2019**.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [git](/man/git)(1), [aws-codebuild](/man/aws-codebuild)(1), [aws-codepipeline](/man/aws-codepipeline)(1)

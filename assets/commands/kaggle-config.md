@@ -49,6 +49,12 @@ manages Kaggle CLI configuration settings
 
 **kaggle config** manages Kaggle CLI configuration settings. Available configuration parameters are **competition** (default competition URL suffix), **path** (default download folder, defaults to current working directory), and **proxy** (HTTP request proxy). Configuration is stored in **~/.kaggle/kaggle.json**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kaggle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kaggle](/man/kaggle)(1)

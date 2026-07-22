@@ -48,6 +48,12 @@ Different implementations exist. Some systems use pgrep.
 
 psgrep was created as a **convenience wrapper** for process searching.
 
+# INSTALL
+
+```brew: brew install psgrep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pgrep](/man/pgrep)(1), [ps](/man/ps)(1), [grep](/man/grep)(1)

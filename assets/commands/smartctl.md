@@ -115,6 +115,24 @@ Requires root privileges for most operations. SMART must be supported and enable
 
 **smartmontools** was created by **Bruce Allen** in **2002** as a fork of the smartsuite package. It provides cross-platform SMART monitoring on Linux, BSD, macOS, and Windows. The project continues active development and is the standard SMART monitoring tool on Unix-like systems.
 
+# INSTALL
+
+```apt: sudo apt install smartmontools```
+
+```dnf: sudo dnf install smartmontools```
+
+```pacman: sudo pacman -S smartmontools```
+
+```apk: sudo apk add smartmontools```
+
+```zypper: sudo zypper install smartmontools```
+
+```brew: brew install smartmontools```
+
+```nix: nix profile install nixpkgs#smartmontools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smartd](/man/smartd)(8), [hdparm](/man/hdparm)(1), [nvme](/man/nvme)(1), [lsblk](/man/lsblk)(1)

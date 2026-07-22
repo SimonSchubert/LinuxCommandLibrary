@@ -69,6 +69,24 @@ Configuration required. Learning curve for keybindings. Text-based interface.
 
 Mutt was created by **Michael Elstrøm** in 1995 as a fork of EstrøM, becoming a popular terminal mail client.
 
+# INSTALL
+
+```apt: sudo apt install mutt```
+
+```dnf: sudo dnf install mutt```
+
+```pacman: sudo pacman -S mutt```
+
+```apk: sudo apk add mutt```
+
+```zypper: sudo zypper install mutt```
+
+```brew: brew install mutt```
+
+```nix: nix profile install nixpkgs#mutt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neomutt](/man/neomutt)(1), [alpine](/man/alpine)(1), [mailx](/man/mailx)(1)

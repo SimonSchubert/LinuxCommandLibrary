@@ -126,6 +126,24 @@ Requires UDP port (default 4242) accessible on lighthouses. Clock sync important
 
 Nebula was created at **Slack** and open-sourced in **November 2019**. It was developed to connect Slack's global infrastructure securely. The project was designed for simplicity and scale, using modern cryptography and mesh networking principles. Nebula is used by organizations needing software-defined networks across cloud providers and on-premise infrastructure.
 
+# INSTALL
+
+```apt: sudo apt install nebula```
+
+```dnf: sudo dnf install nebula```
+
+```pacman: sudo pacman -S nebula```
+
+```apk: sudo apk add nebula```
+
+```zypper: sudo zypper install nebula```
+
+```brew: brew install nebula```
+
+```nix: nix profile install nixpkgs#nebula```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [headscale](/man/headscale)(1), [tailscale](/man/tailscale)(1), [zerotier-one](/man/zerotier-one)(1)

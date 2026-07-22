@@ -54,6 +54,20 @@ Python required. Different from bash. Learning curve.
 
 **xonsh** was created to combine the power of Python with the familiarity of shell scripting.
 
+# INSTALL
+
+```dnf: sudo dnf install xonsh```
+
+```pacman: sudo pacman -S xonsh```
+
+```zypper: sudo zypper install xonsh```
+
+```brew: brew install xonsh```
+
+```nix: nix profile install nixpkgs#xonsh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [zsh](/man/zsh)(1), [python](/man/python)(1), [fish](/man/fish)(1)

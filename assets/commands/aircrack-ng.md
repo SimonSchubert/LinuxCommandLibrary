@@ -89,6 +89,23 @@ For authorized security testing only. WPA/WPA2 cracking requires a captured 4-wa
 
 **aircrack-ng** evolved from the original aircrack tool, with the "-ng" (next generation) version first released in **2006**. It became the standard open-source WiFi security assessment toolkit.
 
+# INSTALL
+
+```apt: sudo apt install aircrack-ng```
+
+```dnf: sudo dnf install aircrack-ng```
+
+```pacman: sudo pacman -S aircrack-ng```
+
+```apk: sudo apk add aircrack-ng```
+
+```zypper: sudo zypper install aircrack-ng```
+
+```brew: brew install aircrack-ng```
+
+```nix: nix profile install nixpkgs#aircrack-ng```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [airodump-ng](/man/airodump-ng)(1), [aireplay-ng](/man/aireplay-ng)(1), [hashcat](/man/hashcat)(1)

@@ -98,6 +98,22 @@ The **-k** option kills processes with SIGKILL by default, which cannot be caugh
 
 **fuser** is part of the **psmisc** package, providing tools for managing processes by file access.
 
+# INSTALL
+
+```apt: sudo apt install psmisc```
+
+```dnf: sudo dnf install psmisc```
+
+```pacman: sudo pacman -S psmisc```
+
+```apk: sudo apk add psmisc```
+
+```zypper: sudo zypper install psmisc```
+
+```nix: nix profile install nixpkgs#psmisc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsof](/man/lsof)(8), [kill](/man/kill)(1), [killall](/man/killall)(1), [ps](/man/ps)(1)

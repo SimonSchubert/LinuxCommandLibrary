@@ -90,6 +90,16 @@ Scala 3 differs significantly from Scala 2. JVM startup adds latency. Memory usa
 
 **Scala** was designed by **Martin Odersky** at **EPFL** in Switzerland, with version 1.0 released in **2004**. Scala 3 (Dotty), released in **2021**, brought significant language improvements.
 
+# INSTALL
+
+```zypper: sudo zypper install scala```
+
+```brew: brew install scala```
+
+```nix: nix profile install nixpkgs#scala```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scalac](/man/scalac)(1), [sbt](/man/sbt)(1), [java](/man/java)(1), [kotlin](/man/kotlin)(1)

@@ -69,6 +69,14 @@ Requires controller setup. Cloud credentials needed. Canonical product.
 
 Juju was created by **Canonical** for service orchestration, evolving from a configuration management approach to application modeling.
 
+# INSTALL
+
+```brew: brew install juju```
+
+```nix: nix profile install nixpkgs#juju```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lxc](/man/lxc)(1), [snap](/man/snap)(8)

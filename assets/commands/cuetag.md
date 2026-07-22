@@ -46,6 +46,20 @@ Requires format-specific tagging tools installed (metaflac, vorbiscomment, id3v2
 
 cuetag is part of **cuetools**, a collection of utilities for working with CUE sheet files. The tools were created by **Svend Sorensen** to facilitate working with CD images and their metadata. They remain essential for processing single-file album rips into tagged individual tracks.
 
+# INSTALL
+
+```apt: sudo apt install cuetools```
+
+```dnf: sudo dnf install cuetools```
+
+```pacman: sudo pacman -S cuetools```
+
+```brew: brew install cuetools```
+
+```nix: nix profile install nixpkgs#cuetools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cuebreakpoints](/man/cuebreakpoints)(1), [shnsplit](/man/shnsplit)(1), [metaflac](/man/metaflac)(1), [id3v2](/man/id3v2)(1)

@@ -45,6 +45,24 @@ The command uses tar internally for efficient transfer, streaming data between t
 
 Unlike volume mounts which are configured at container creation, **docker cp** enables ad-hoc file transfer at any time during a container's lifecycle.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-container-cp](/man/docker-container-cp)(1), [docker](/man/docker)(1)

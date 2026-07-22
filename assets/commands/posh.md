@@ -79,6 +79,14 @@ Posh deliberately omits many common bash extensions: arrays, process substitutio
 
 **posh** was created by Clint Adams for the **Debian** project to provide a shell strictly conforming to POSIX and the Debian Policy Manual requirements. It is derived from **pdksh** (Public Domain Korn Shell), originally written by Eric Gisin in the 1980s as a free Korn shell implementation.
 
+# INSTALL
+
+```apt: sudo apt install posh```
+
+```brew: brew install posh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sh](/man/sh)(1), [bash](/man/bash)(1), [dash](/man/dash)(1), [ksh](/man/ksh)(1)

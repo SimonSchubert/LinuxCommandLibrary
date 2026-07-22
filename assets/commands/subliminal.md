@@ -79,6 +79,12 @@ Some providers need accounts. Rate limits apply. Not all videos have subtitles.
 
 **Subliminal** is a Python library and CLI for subtitle downloading. It simplifies finding and downloading subtitles for video files.
 
+# INSTALL
+
+```brew: brew install subliminal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [vlc](/man/vlc)(1)

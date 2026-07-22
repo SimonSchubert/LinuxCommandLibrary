@@ -63,6 +63,18 @@ libcamera provides a modern camera stack for Linux, replacing older V4L2-only ap
 
 Requires libcamera support, which may not be available for all cameras. Some cameras work better with direct V4L2 access.
 
+# INSTALL
+
+```apt: sudo apt install libcamera-tools```
+
+```dnf: sudo dnf install libcamera-tools```
+
+```pacman: sudo pacman -S libcamera-tools```
+
+```apk: sudo apk add libcamera-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [v4l2-ctl](/man/v4l2-ctl)(1), [rpicam-still](/man/rpicam-still)(1), [rpicam-vid](/man/rpicam-vid)(1)

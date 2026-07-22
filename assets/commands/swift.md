@@ -94,6 +94,14 @@ Full functionality on macOS. Linux support is good but some Apple frameworks una
 
 **Swift** was announced by **Apple** at WWDC **2014**, developed by **Chris Lattner** and others. It was open-sourced in **2015**. Swift has evolved significantly, with Swift 6 introducing strict concurrency.
 
+# INSTALL
+
+```brew: brew install swift```
+
+```nix: nix profile install nixpkgs#swift```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [swiftc](/man/swiftc)(1), [xcodebuild](/man/xcodebuild)(1), [vapor](/man/vapor)(1)

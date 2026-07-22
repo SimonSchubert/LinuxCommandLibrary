@@ -88,6 +88,14 @@ Version must match server. Targets need periodic re-authentication. Pipeline YAM
 
 fly is the CLI for **Concourse CI**, created by Pivotal (now VMware). Concourse pioneered treating CI pipelines as code with a focus on containers and reproducibility.
 
+# INSTALL
+
+```zypper: sudo zypper install fly```
+
+```nix: nix profile install nixpkgs#fly```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [concourse](/man/concourse)(1), [jenkins](/man/jenkins)(1), [flyctl](/man/flyctl)(1)

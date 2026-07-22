@@ -62,6 +62,23 @@ For WPA decryption, you need the passphrase AND the SSID. The capture file must 
 
 **airdecap-ng** is part of the aircrack-ng suite, developed in the mid-**2000s**. It provides the complementary function to aircrack-ng: once a key is recovered, airdecap-ng can decrypt the traffic for analysis.
 
+# INSTALL
+
+```apt: sudo apt install aircrack-ng```
+
+```dnf: sudo dnf install aircrack-ng```
+
+```pacman: sudo pacman -S aircrack-ng```
+
+```apk: sudo apk add aircrack-ng```
+
+```zypper: sudo zypper install aircrack-ng```
+
+```brew: brew install aircrack-ng```
+
+```nix: nix profile install nixpkgs#aircrack-ng```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1), [wireshark](/man/wireshark)(1), [tcpdump](/man/tcpdump)(1)

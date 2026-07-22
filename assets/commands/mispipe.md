@@ -28,6 +28,24 @@ _command2_
 
 **mispipe** pipes two commands but returns the exit status of the first command instead of the last. Unlike regular shell pipes that return the final command's exit status. Part of moreutils collection.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add moreutils```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pee](/man/pee)(1), [sponge](/man/sponge)(1)

@@ -46,6 +46,20 @@ X11 specific. Output for xmodmap. Not all console key actions have a direct xmod
 
 mk_modmap ships with **xkeycaps**, originally written by Jamie Zawinski. It dates to early X11/Linux days when keyboard layouts were configured separately for the console and X server.
 
+# INSTALL
+
+```apt: sudo apt install kbd```
+
+```dnf: sudo dnf install kbd```
+
+```pacman: sudo pacman -S kbd```
+
+```zypper: sudo zypper install kbd```
+
+```nix: nix profile install nixpkgs#kbd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xmodmap](/man/xmodmap)(1), [xev](/man/xev)(1), [setxkbmap](/man/setxkbmap)(1)

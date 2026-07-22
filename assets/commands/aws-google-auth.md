@@ -80,6 +80,11 @@ Requires SAML SSO configuration between Google Workspace and AWS IAM. U2F securi
 
 Created by **Cevo Australia** as an open-source tool to bridge Google Workspace authentication with AWS. First released around **2017** to address the need for Google-based SSO to AWS accounts. Available via PyPI and Docker Hub.
 
+# INSTALL
+
+```brew: brew install aws-google-auth```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-sts](/man/aws-sts)(1)

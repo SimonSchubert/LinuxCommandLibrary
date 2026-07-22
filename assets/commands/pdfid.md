@@ -119,6 +119,12 @@ Keyword presence doesn't confirm malicious intent. Further analysis with pdf-par
 
 pdfid was created by **Didier Stevens** as part of his PDF analysis tools for security research.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pdfid```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdf-parser](/man/pdf-parser)(1), [pdfinfo](/man/pdfinfo)(1)

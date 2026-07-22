@@ -57,6 +57,20 @@ manages named references to revisions in Jujutsu
 
 **jj bookmark** manages named references to revisions in Jujutsu. Similar to Git branches, bookmarks point to specific commits and can be pushed to/pulled from remotes. Bookmarks follow commits when they are rewritten.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-git-push](/man/jj-git-push)(1)

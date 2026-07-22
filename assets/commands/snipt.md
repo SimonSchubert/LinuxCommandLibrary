@@ -28,6 +28,12 @@ Text snippet expansion tool for your terminal
 
 **snipt** was created by the **snipt** organization and is written in **Rust**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#snipt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [espanso](/man/espanso)(1), [pet](/man/pet)(1), [nap](/man/nap)(1)

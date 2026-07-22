@@ -95,6 +95,20 @@ Including passwords on the command line is a security risk. Use interactive pass
 
 **smbget** is part of the **Samba** suite, providing a wget-like interface for downloading files from Windows/SMB file shares.
 
+# INSTALL
+
+```apt: sudo apt install smbclient```
+
+```dnf: sudo dnf install samba-client```
+
+```pacman: sudo pacman -S smbclient```
+
+```apk: sudo apk add samba-client```
+
+```zypper: sudo zypper install samba-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smbclient](/man/smbclient)(1), [wget](/man/wget)(1), [curl](/man/curl)(1)

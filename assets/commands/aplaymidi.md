@@ -51,6 +51,21 @@ Requires a connected MIDI synthesizer (hardware or software) to produce sound. P
 
 **aplaymidi** is part of the ALSA utilities, providing basic MIDI file playback since ALSA became the standard Linux audio architecture in the early **2000s**.
 
+# INSTALL
+
+```apt: sudo apt install alsa-utils```
+
+```dnf: sudo dnf install alsa-utils```
+
+```pacman: sudo pacman -S alsa-utils```
+
+```apk: sudo apk add alsa-utils```
+
+```zypper: sudo zypper install alsa-utils```
+
+```nix: nix profile install nixpkgs#alsa-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [arecordmidi](/man/arecordmidi)(1), [aconnect](/man/aconnect)(1), [timidity](/man/timidity)(1), [fluidsynth](/man/fluidsynth)(1)

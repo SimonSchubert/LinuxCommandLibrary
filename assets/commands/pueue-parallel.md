@@ -46,6 +46,20 @@ Setting 0 disables the concurrency limit entirely. Use **pueue group** to list g
 
 pueue parallel is part of **pueue** by **Arne Beer**, providing task queue management with parallelism control.
 
+# INSTALL
+
+```pacman: sudo pacman -S pueue```
+
+```apk: sudo apk add pueue```
+
+```zypper: sudo zypper install pueue```
+
+```brew: brew install pueue```
+
+```nix: nix profile install nixpkgs#pueue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pueue](/man/pueue)(1), [pueue-add](/man/pueue-add)(1), [pueue-group](/man/pueue-group)(1), [pueue-status](/man/pueue-status)(1)

@@ -80,6 +80,20 @@ Requires fzf for fuzzy finding interface. Shell widget installation requires add
 
 **navi** was created by **Denis Isidoro** as a modern alternative to traditional cheatsheet tools. It emphasizes interactivity, fuzzy search, and community-contributed cheatsheets. Written in Rust for performance.
 
+# INSTALL
+
+```dnf: sudo dnf install navi```
+
+```pacman: sudo pacman -S navi```
+
+```apk: sudo apk add navi```
+
+```brew: brew install navi```
+
+```nix: nix profile install nixpkgs#navi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tldr](/man/tldr)(1), [cheat](/man/cheat)(1), [fzf](/man/fzf)(1)

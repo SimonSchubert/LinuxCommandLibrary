@@ -97,6 +97,12 @@ Requires agent on remote systems (auto-installed via SSH). High file counts may 
 
 **Mutagen** was created by **Jacob Howard** around **2018** to solve file synchronization issues in containerized development environments. It addresses performance problems with Docker Desktop's file sharing on macOS and Windows.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#mutagen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rsync](/man/rsync)(1), [unison](/man/unison)(1), [syncthing](/man/syncthing)(1), [docker](/man/docker)(1)

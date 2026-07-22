@@ -97,6 +97,24 @@ Settings affect current terminal. Some require appropriate privileges. Raw mode 
 
 **stty** (set tty) is a traditional Unix utility dating back to early Unix versions. It remains essential for serial communication and terminal configuration.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tty](/man/tty)(1), [setserial](/man/setserial)(8), [getty](/man/getty)(8), [reset](/man/reset)(1)

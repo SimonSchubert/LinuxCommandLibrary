@@ -79,6 +79,16 @@ creates and restores backups of iOS devices running iOS 4 and later
 
 **idevicebackup2** creates and restores backups of iOS devices running iOS 4 and later. Part of the libimobiledevice suite. Supports encrypted backups, incremental backups, and restoring backups from different devices.
 
+# INSTALL
+
+```apt: sudo apt install libimobiledevice-utils```
+
+```dnf: sudo dnf install libimobiledevice-utils```
+
+```apk: sudo apk add libimobiledevice-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ideviceinfo](/man/ideviceinfo)(1), [idevicebackup](/man/idevicebackup)(1)

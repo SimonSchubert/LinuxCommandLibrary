@@ -75,6 +75,24 @@ Encoding only by default. Quality vs size tradeoff. VBR recommended.
 
 LAME (Lame Ain't an MP3 Encoder) was started in 1998 and became the leading open-source MP3 encoder.
 
+# INSTALL
+
+```apt: sudo apt install lame```
+
+```dnf: sudo dnf install lame```
+
+```pacman: sudo pacman -S lame```
+
+```apk: sudo apk add lame```
+
+```zypper: sudo zypper install lame```
+
+```brew: brew install lame```
+
+```nix: nix profile install nixpkgs#lame```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [sox](/man/sox)(1)

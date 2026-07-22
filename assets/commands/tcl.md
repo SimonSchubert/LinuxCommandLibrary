@@ -68,6 +68,18 @@ Tcl uses different syntax than most Unix shells. Braces **{}** are used for grou
 
 Tcl was created by **John Ousterhout** at UC Berkeley in **1988** as an embeddable scripting language. The name stands for "Tool Command Language". Tcl gained popularity with the Tk GUI toolkit. Development continued at Sun Microsystems in the 1990s and is now maintained by the Tcl Core Team. The current major version is Tcl 8.6, with Tcl 9.0 in development.
 
+# INSTALL
+
+```dnf: sudo dnf install tcl```
+
+```pacman: sudo pacman -S tcl```
+
+```zypper: sudo zypper install tcl```
+
+```nix: nix profile install nixpkgs#tcl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wish](/man/wish)(1), [expect](/man/expect)(1), [bash](/man/bash)(1), [python](/man/python)(1)

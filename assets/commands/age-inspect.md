@@ -52,6 +52,23 @@ If _INPUT_ is omitted or set to `-`, the file is read from standard input.
 
 **age-inspect** ships with the reference **age** implementation by **Filippo Valsorda**. It was introduced in **age 1.3.0** in **2025**, alongside support for the post-quantum `mlkem768x25519` recipient type, to make it possible to reason about archived age files (recipient mix, armor, size) without unsealing them.
 
+# INSTALL
+
+```apt: sudo apt install age```
+
+```dnf: sudo dnf install age```
+
+```pacman: sudo pacman -S age```
+
+```apk: sudo apk add age```
+
+```zypper: sudo zypper install age```
+
+```brew: brew install age```
+
+```nix: nix profile install nixpkgs#age```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [age](/man/age)(1), [age-keygen](/man/age-keygen)(1), [gpg](/man/gpg)(1), [openssl](/man/openssl)(1)

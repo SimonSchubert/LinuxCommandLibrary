@@ -79,6 +79,12 @@ The **trash** command name may conflict with trash-cli if both are installed. Us
 
 Written in **Rust** by oberblastmeister as a modern alternative to trash-cli. Designed for speed and ease of use with a simplified command interface compared to trash-cli's separate commands.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#trashy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [trash](/man/trash)(1), [rm](/man/rm)(1), [gio-trash](/man/gio-trash)(1)

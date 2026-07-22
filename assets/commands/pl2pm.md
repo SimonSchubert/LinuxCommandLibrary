@@ -37,6 +37,24 @@ Part of Perl. Basic conversion. Manual review needed.
 
 pl2pm was created for **migrating Perl4 code** to Perl5 modules.
 
+# INSTALL
+
+```apt: sudo apt install perl```
+
+```dnf: sudo dnf install perl```
+
+```pacman: sudo pacman -S perl```
+
+```apk: sudo apk add perl-utils```
+
+```zypper: sudo zypper install perl```
+
+```brew: brew install perl```
+
+```nix: nix profile install nixpkgs#perl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [perl](/man/perl)(1), [h2xs](/man/h2xs)(1)

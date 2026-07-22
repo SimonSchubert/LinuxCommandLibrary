@@ -78,6 +78,16 @@ Events stored in RAM; lost on reboot or module unload. Log size limited by zfs_e
 
 The ZFS event system provides visibility into pool operations and errors that traditional filesystems lack. It enables proactive monitoring and automated responses through the zed daemon, making ZFS self-healing capabilities more accessible.
 
+# INSTALL
+
+```apt: sudo apt install zfs-fuse```
+
+```apk: sudo apk add zfs```
+
+```nix: nix profile install nixpkgs#zfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zpool-status](/man/zpool-status)(8), [zpool](/man/zpool)(8), [zed](/man/zed)(8), [zfs](/man/zfs)(8)

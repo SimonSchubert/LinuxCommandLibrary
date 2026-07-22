@@ -64,6 +64,14 @@ Results can vary significantly based on system load, CPU frequency scaling, and 
 
 mbw was written by Andras Horvath as a simple tool to test memory bandwidth, particularly useful for comparing RAM performance across different systems or configurations.
 
+# INSTALL
+
+```apt: sudo apt install mbw```
+
+```brew: brew install mbw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [memtester](/man/memtester)(1), [stress-ng](/man/stress-ng)(1), [sysbench](/man/sysbench)(1)

@@ -44,6 +44,17 @@ Requires avahi-daemon running. This operation is usually privileged. Does not ch
 
 **avahi-set-host-name** is part of the Avahi suite, a free Zeroconf/Bonjour implementation started by Lennart Poettering around **2005**.
 
+# INSTALL
+
+```apt: sudo apt install avahi-utils```
+
+```dnf: sudo dnf install avahi-tools```
+
+```apk: sudo apk add avahi-tools```
+
+```zypper: sudo zypper install avahi-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [avahi-daemon](/man/avahi-daemon)(8), [avahi-resolve](/man/avahi-resolve)(1), [hostname](/man/hostname)(1), [hostnamectl](/man/hostnamectl)(1)

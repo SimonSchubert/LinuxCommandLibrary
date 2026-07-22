@@ -104,6 +104,22 @@ Some applications may not properly support the system tray protocol, requiring *
 
 **stalonetray** was created as a minimal, dependency-free system tray implementation for X11. It fills the need for a system tray in window managers that don't provide one natively, such as i3, bspwm, or dwm. The project follows the freedesktop.org specifications for system tray interoperability.
 
+# INSTALL
+
+```apt: sudo apt install stalonetray```
+
+```dnf: sudo dnf install stalonetray```
+
+```pacman: sudo pacman -S stalonetray```
+
+```apk: sudo apk add stalonetray```
+
+```zypper: sudo zypper install stalonetray```
+
+```nix: nix profile install nixpkgs#stalonetray```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [trayer](/man/trayer)(1), [polybar](/man/polybar)(1), [tint](/man/tint)(1)

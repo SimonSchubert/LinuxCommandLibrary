@@ -20,6 +20,13 @@ View documentation for the original command
 
 On Debian and Ubuntu, **alternatives** is simply another name for **update-alternatives**, which ships as part of dpkg. On Fedora, RHEL, and related distributions it is a separate implementation provided by the chkconfig package, with similar but not identical behavior. See **update-alternatives** for the full Debian documentation.
 
+# INSTALL
+
+```dnf: sudo dnf install alternatives```
+
+```aur: yay -S alternatives```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [update-alternatives](/man/update-alternatives)(1)

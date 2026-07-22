@@ -56,6 +56,20 @@ Build a kustomization target from a directory or URL
 
 **kubectl kustomize** builds a set of KRM (Kubernetes Resource Model) resources from a directory containing a kustomization.yaml file, or from a git repository URL with a path suffix. If the directory argument is omitted, the current directory is assumed. Processes patches, overlays, and resource modifications without templates. Output can be piped to kubectl apply.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-apply](/man/kubectl-apply)(1)

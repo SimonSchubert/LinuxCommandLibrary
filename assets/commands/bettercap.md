@@ -134,6 +134,19 @@ Requires root privileges. Illegal without authorization. Can disrupt network tra
 
 **bettercap** was created by Simone Margaritelli (evilsocket) in **2016** as a modern replacement for ettercap, rewritten in Go for better performance.
 
+# INSTALL
+
+```apt: sudo apt install bettercap```
+
+```pacman: sudo pacman -S bettercap```
+
+```zypper: sudo zypper install bettercap```
+
+```brew: brew install bettercap```
+
+```nix: nix profile install nixpkgs#bettercap```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ettercap](/man/ettercap)(8), [arpspoof](/man/arpspoof)(8), [nmap](/man/nmap)(1), [aircrack-ng](/man/aircrack-ng)(1), [wireshark](/man/wireshark)(1)

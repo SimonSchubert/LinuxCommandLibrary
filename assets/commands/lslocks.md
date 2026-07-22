@@ -60,6 +60,24 @@ Output as **JSON**
 **SIZE**: Size of locked region
 **PATH**: Locked file path
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flock](/man/flock)(1), [lsof](/man/lsof)(8)

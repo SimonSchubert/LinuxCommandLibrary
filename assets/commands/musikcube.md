@@ -34,6 +34,14 @@ Requires audio output support on the system. Library indexing may take time for 
 
 **musikcube** was created by **clangen** as an open-source, cross-platform terminal music player.
 
+# INSTALL
+
+```brew: brew install musikcube```
+
+```nix: nix profile install nixpkgs#musikcube```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmus](/man/cmus)(1), [mpd](/man/mpd)(1), [ncmpcpp](/man/ncmpcpp)(1), [mocp](/man/mocp)(1), [termusic](/man/termusic)(1)

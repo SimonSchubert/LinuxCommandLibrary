@@ -37,6 +37,12 @@ Requires a Nerd Font for icon rendering. Not intended for scripting — use **ls
 
 **pls** is maintained by the **pls-rs** organization and is written in **Rust**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pls```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [eza](/man/eza)(1), [lsd](/man/lsd)(1), [lla](/man/lla)(1)

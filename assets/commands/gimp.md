@@ -85,6 +85,22 @@ GTK application requires graphical environment. Large images can be memory-inten
 
 GIMP was started by **Spencer Kimball** and **Peter Mattis** in **1995** at UC Berkeley. It became a GNU project and remains one of the most popular open-source graphics applications. **GIMP 3.0** was released in **2025** with GTK3 support and non-destructive editing.
 
+# INSTALL
+
+```apt: sudo apt install gimp```
+
+```dnf: sudo dnf install gimp```
+
+```pacman: sudo pacman -S gimp```
+
+```apk: sudo apk add gimp```
+
+```zypper: sudo zypper install gimp```
+
+```nix: nix profile install nixpkgs#gimp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [imagemagick](/man/imagemagick)(1), [inkscape](/man/inkscape)(1), [krita](/man/krita)(1)

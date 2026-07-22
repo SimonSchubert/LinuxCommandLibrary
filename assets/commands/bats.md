@@ -122,6 +122,21 @@ Tests run in subshells (limited side effects). No built-in assertion library (us
 
 **bats** was created by Sam Stephenson in **2011** to provide a simple testing framework for bash scripts, inspired by similar tools in other languages. The project was later forked and maintained as **bats-core** by the community.
 
+# INSTALL
+
+```dnf: sudo dnf install bats```
+
+```pacman: sudo pacman -S bats```
+
+```apk: sudo apk add bats-core```
+
+```zypper: sudo zypper install bats```
+
+```brew: brew install bats-core```
+
+```nix: nix profile install nixpkgs#bats```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [bash](/man/bash)(1), [shellcheck](/man/shellcheck)(1)

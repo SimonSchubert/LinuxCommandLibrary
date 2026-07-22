@@ -105,6 +105,12 @@ Always verify minion identity before accepting keys by comparing fingerprints. D
 
 salt-key is part of **SaltStack** (now Salt Project), an open-source configuration management and remote execution tool created by Thomas Hatch in **2011**. The key management system provides the security foundation for Salt's master-minion architecture.
 
+# INSTALL
+
+```apk: sudo apk add salt-lts-master```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [salt](/man/salt)(1), [salt-master](/man/salt-master)(8), [salt-minion](/man/salt-minion)(8), [salt-call](/man/salt-call)(1)

@@ -103,6 +103,22 @@ The tool is useful for running commands with specific resource limits (CPU, memo
 
 Timer syntax follows systemd.time format. Resource properties require appropriate cgroup controllers. Some options require root privileges. Part of the systemd suite.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemd-analyze](/man/systemd-analyze)(1), [systemd-cgls](/man/systemd-cgls)(1), [systemd-inhibit](/man/systemd-inhibit)(1)

@@ -81,6 +81,17 @@ By default, sync compares file size and last modified time to determine which fi
 
 The **--delete** option removes files from the destination that don't exist in the source; use with caution. Pattern matching with **--include** and **--exclude** is order-dependent. When syncing to local, directories are not created unless they contain files. Sync does not preserve symbolic links.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3-cp](/man/aws-s3-cp)(1), [rsync](/man/rsync)(1)

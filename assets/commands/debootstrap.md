@@ -55,6 +55,20 @@ The resulting system is minimal but functional, suitable for further customizati
 
 Requires root privileges. The target directory must exist. For cross-architecture bootstrapping, qemu-user-static may be needed. After debootstrap, additional configuration (networking, fstab, etc.) is usually needed.
 
+# INSTALL
+
+```dnf: sudo dnf install debootstrap```
+
+```pacman: sudo pacman -S debootstrap```
+
+```apk: sudo apk add debootstrap```
+
+```zypper: sudo zypper install debootstrap```
+
+```nix: nix profile install nixpkgs#debootstrap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chroot](/man/chroot)(8), [schroot](/man/schroot)(1), [systemd-nspawn](/man/systemd-nspawn)(1)

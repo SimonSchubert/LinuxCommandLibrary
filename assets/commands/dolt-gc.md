@@ -54,6 +54,16 @@ Collection is destructive: once chunks are swept there is no way to recover data
 
 dolt gc plays the same role as **git gc**, but works on Dolt's Noms-derived, content-addressed chunk store rather than on Git objects and packfiles. The generational split and the archive format were added later to keep collections affordable on multi-gigabyte databases, and automatic background collection followed so that long-running SQL servers no longer need a maintenance window.
 
+# INSTALL
+
+```pacman: sudo pacman -S dolt```
+
+```brew: brew install dolt```
+
+```nix: nix profile install nixpkgs#dolt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dolt](/man/dolt)(1), [dolt-sql](/man/dolt-sql)(1), [git-gc](/man/git-gc)(1)

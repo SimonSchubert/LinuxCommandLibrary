@@ -35,6 +35,12 @@ Hard reset may cause data loss in the guest if filesystems are not properly sync
 
 Part of **Proxmox VE** QEMU/KVM management tools for virtual machine administration.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-reboot](/man/qm-reboot)(1), [qm-shutdown](/man/qm-shutdown)(1)

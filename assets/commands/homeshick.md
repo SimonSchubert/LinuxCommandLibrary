@@ -94,6 +94,14 @@ Requires Bash 3+ and Git 1.5+. Symlinks may not work correctly on some filesyste
 
 homeshick was created by **Anders Ingemann**, with the repository dating to **2012**, as a pure Bash alternative to homesick (a Ruby gem). The name combines "home" (dotfiles) with "shell" (Bash implementation).
 
+# INSTALL
+
+```zypper: sudo zypper install homeshick```
+
+```brew: brew install homeshick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chezmoi](/man/chezmoi)(1), [stow](/man/stow)(8), [git](/man/git)(1)

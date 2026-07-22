@@ -132,6 +132,18 @@ Large files require significant memory. Some operations need sorted input. Extra
 
 **osmium** and the libosmium library were developed by **Jochen Topf** starting around **2013**. It became the standard command-line tool for OSM data processing, replacing older tools with better performance and reliability.
 
+# INSTALL
+
+```apt: sudo apt install osmium-tool```
+
+```dnf: sudo dnf install osmium-tool```
+
+```brew: brew install osmium-tool```
+
+```nix: nix profile install nixpkgs#osmium-tool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [osm2pgsql](/man/osm2pgsql)(1), [osmconvert](/man/osmconvert)(1), [ogr2ogr](/man/ogr2ogr)(1)

@@ -62,6 +62,14 @@ The tool can parse UUIDs from command-line arguments or standard input.
 
 Only parses standard UUID formats. Time extraction only works for time-based (v1) UUIDs. Part of util-linux package.
 
+# INSTALL
+
+```apt: sudo apt install uuid-runtime```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uuidgen](/man/uuidgen)(1), [uuid](/man/uuid)(1), [uuidd](/man/uuidd)(8)

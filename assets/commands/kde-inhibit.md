@@ -45,6 +45,18 @@ Only works in KDE Plasma desktop environment. Requires the command to keep runni
 
 kde-inhibit is part of KDE's command-line tools, providing a way to control desktop behavior from scripts and applications without requiring direct DBus interaction.
 
+# INSTALL
+
+```apt: sudo apt install kde-cli-tools```
+
+```dnf: sudo dnf install kde-cli-tools```
+
+```pacman: sudo pacman -S kde-cli-tools```
+
+```apk: sudo apk add kde-cli-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-inhibit](/man/systemd-inhibit)(1), [caffeine](/man/caffeine)(1)

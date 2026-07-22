@@ -99,6 +99,22 @@ The tool allows closing notifications programmatically, managing notification hi
 
 Key features include history navigation (pop the most recent notification from history), pause state management for temporarily suppressing notifications, and live configuration reloading. The close commands can target specific notifications or clear all visible ones at once. Pause levels (0-100) can be combined with per-notification override_pause_level for selective display during do-not-disturb mode.
 
+# INSTALL
+
+```apt: sudo apt install dunst```
+
+```dnf: sudo dnf install dunst```
+
+```pacman: sudo pacman -S dunst```
+
+```apk: sudo apk add dunst```
+
+```zypper: sudo zypper install dunst```
+
+```nix: nix profile install nixpkgs#dunst```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dunst](/man/dunst)(1), [dunstify](/man/dunstify)(1), [notify-send](/man/notify-send)(1)

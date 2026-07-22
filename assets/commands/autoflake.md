@@ -83,6 +83,11 @@ May incorrectly identify imports used only in type hints. Does not handle all ed
 
 **autoflake** was created to automate cleanup of unused Python imports, complementing code formatters and linters.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#autoflake```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [black](/man/black)(1), [isort](/man/isort)(1), [flake8](/man/flake8)(1)

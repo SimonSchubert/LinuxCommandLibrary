@@ -49,6 +49,14 @@ When used without the -g option, processes are classified according to rules in 
 
 Requires cgroups v1 tools (libcgroup). For cgroups v2, use different tools. Moving processes between cgroups may affect their resource access immediately.
 
+# INSTALL
+
+```apt: sudo apt install cgroup-tools```
+
+```apk: sudo apk add cgroup-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cgcreate](/man/cgcreate)(1), [cgexec](/man/cgexec)(1), [cgroups](/man/cgroups)(7)

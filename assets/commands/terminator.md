@@ -64,6 +64,22 @@ Key bindings allow quick navigation and manipulation of the terminal grid. Layou
 
 Requires a graphical environment. Configuration is stored in **~/.config/terminator/**. Some key bindings may conflict with applications running in the terminal.
 
+# INSTALL
+
+```dnf: sudo dnf install terminator```
+
+```pacman: sudo pacman -S terminator```
+
+```apk: sudo apk add terminator```
+
+```zypper: sudo zypper install terminator```
+
+```brew: brew install terminator```
+
+```nix: nix profile install nixpkgs#terminator```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnome-terminal](/man/gnome-terminal)(1), [tmux](/man/tmux)(1), [screen](/man/screen)(1), [konsole](/man/konsole)(1)

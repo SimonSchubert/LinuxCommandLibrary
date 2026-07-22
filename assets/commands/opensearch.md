@@ -79,6 +79,16 @@ Requires Java. Memory-intensive; configure heap size. Security plugin enabled by
 
 OpenSearch was created by **Amazon Web Services** in **2021** as an open-source fork of Elasticsearch after Elastic changed its license.
 
+# INSTALL
+
+```pacman: sudo pacman -S opensearch```
+
+```brew: brew install opensearch```
+
+```nix: nix profile install nixpkgs#opensearch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [elasticsearch](/man/elasticsearch)(1), [logstash](/man/logstash)(1), [curl](/man/curl)(1)

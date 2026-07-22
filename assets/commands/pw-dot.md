@@ -83,6 +83,16 @@ Requires Graphviz to render the DOT file to images. Complex graphs with many obj
 
 Part of **PipeWire**, providing visualization of the multimedia graph. Useful for developers, system integrators, and users troubleshooting audio routing.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-tools```
+
+```zypper: sudo zypper install pipewire-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pw-dump](/man/pw-dump)(1), [pw-cli](/man/pw-cli)(1), [pw-top](/man/pw-top)(1), [pw-mon](/man/pw-mon)(1), [pipewire](/man/pipewire)(1), [dot](/man/dot)(1)

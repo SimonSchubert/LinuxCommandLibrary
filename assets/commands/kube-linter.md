@@ -89,6 +89,18 @@ May produce false positives. Not all checks apply to all workloads. Custom check
 
 kube-linter was developed by **StackRox** (acquired by Red Hat) to improve Kubernetes security posture through static analysis.
 
+# INSTALL
+
+```pacman: sudo pacman -S kube-linter```
+
+```zypper: sudo zypper install kube-linter```
+
+```brew: brew install kube-linter```
+
+```nix: nix profile install nixpkgs#kube-linter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubeaudit](/man/kubeaudit)(1), [helm](/man/helm)(1)

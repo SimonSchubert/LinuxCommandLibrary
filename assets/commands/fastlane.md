@@ -80,6 +80,14 @@ The tool provides a Ruby-based DSL for defining workflows (called "lanes") that 
 
 fastlane integrates with tools like xcodebuild, Gradle, gym, match, and deliver to provide end-to-end automation for mobile development and release processes.
 
+# INSTALL
+
+```brew: brew install fastlane```
+
+```nix: nix profile install nixpkgs#fastlane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xcodebuild](/man/xcodebuild)(1), [gradle](/man/gradle)(1)

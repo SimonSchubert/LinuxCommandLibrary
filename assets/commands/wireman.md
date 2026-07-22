@@ -49,6 +49,12 @@ Requires a configuration file pointing to local .proto files or a server with re
 
 **wireman** was created by **preiter93** and is written in Rust. It targets developers who prefer a keyboard-driven terminal workflow over GUI tools like Postman or BloomRPC.
 
+# INSTALL
+
+```pacman: sudo pacman -S wireman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grpcurl](/man/grpcurl)(1), [curl](/man/curl)(1), [protoc](/man/protoc)(1)

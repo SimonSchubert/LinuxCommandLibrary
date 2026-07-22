@@ -52,6 +52,24 @@ Values >1 brighten, <1 darken. Part of Netpbm suite.
 
 pnmgamma was created as part of **Netpbm** for gamma correction operations.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamgamma](/man/pamgamma)(1), [pnmnorm](/man/pnmnorm)(1), [ppmchange](/man/ppmchange)(1)

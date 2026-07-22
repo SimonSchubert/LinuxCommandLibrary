@@ -85,6 +85,22 @@ Requires rpcbind to be running on the target host. The **-d** option requires ro
 
 Part of standard Unix network utilities for RPC service management. Essential for NFS troubleshooting and configuration.
 
+# INSTALL
+
+```apt: sudo apt install rpcbind```
+
+```dnf: sudo dnf install rpcbind```
+
+```pacman: sudo pacman -S rpcbind```
+
+```apk: sudo apk add rpcbind```
+
+```zypper: sudo zypper install rpcbind```
+
+```nix: nix profile install nixpkgs#rpcbind```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rpcbind](/man/rpcbind)(8), [nfsstat](/man/nfsstat)(8), [showmount](/man/showmount)(8)

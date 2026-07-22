@@ -79,6 +79,18 @@ Modifying server settings typically requires administrator (root) privileges or 
 
 **cupsctl** was added to **CUPS** by Apple around the **CUPS 1.3** release (2007) as a convenience wrapper over direct **cupsd.conf** editing. CUPS itself was created by Michael Sweet in 1999 and is now developed by the OpenPrinting project.
 
+# INSTALL
+
+```apt: sudo apt install cups-client```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cupsd](/man/cupsd)(8), [cups-config](/man/cups-config)(1), [lpadmin](/man/lpadmin)(8), [lpinfo](/man/lpinfo)(8), [lpstat](/man/lpstat)(1), [lp](/man/lp)(1)

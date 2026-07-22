@@ -88,6 +88,12 @@ Arch Linux specific. One profile per interface. Don't use with NetworkManager si
 
 netctl was developed for **Arch Linux** as a replacement for netcfg, using systemd integration for network management.
 
+# INSTALL
+
+```pacman: sudo pacman -S netctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [networkctl](/man/networkctl)(1), [ip](/man/ip)(8), [NetworkManager](/man/NetworkManager)(8)

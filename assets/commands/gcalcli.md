@@ -124,6 +124,16 @@ The tool supports both viewing operations like agenda and calendar displays, and
 
 gcalcli is particularly useful for terminal-centric workflows, automation scripts, and integration with other command-line tools. It can display calendar data in various formats and supports working with multiple calendars simultaneously.
 
+# INSTALL
+
+```zypper: sudo zypper install gcalcli```
+
+```brew: brew install gcalcli```
+
+```nix: nix profile install nixpkgs#gcalcli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcal](/man/gcal)(1), [calcurse](/man/calcurse)(1)

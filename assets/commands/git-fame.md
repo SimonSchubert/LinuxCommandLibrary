@@ -96,6 +96,14 @@ Blame-based counting can be slow on large histories. Binary files are skipped by
 
 git fame is a Python rewrite by **Casper da Costa-Luis**, distinct from the earlier **git-fame-rb** Ruby gem by Linus Oleander that inspired the name.
 
+# INSTALL
+
+```dnf: sudo dnf install git-fame```
+
+```nix: nix profile install nixpkgs#git-fame```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-effort](/man/git-effort)(1), [git-authors](/man/git-authors)(1), [git-shortlog](/man/git-shortlog)(1), [git-blame](/man/git-blame)(1)

@@ -45,6 +45,24 @@ Fails if the destination already exists as a non-empty, non-repository directory
 
 Init is a core **Mercurial** command, present since the project's first release in 2005.
 
+# INSTALL
+
+```apt: sudo apt install mercurial```
+
+```dnf: sudo dnf install mercurial```
+
+```pacman: sudo pacman -S mercurial```
+
+```apk: sudo apk add mercurial```
+
+```zypper: sudo zypper install mercurial```
+
+```brew: brew install mercurial```
+
+```nix: nix profile install nixpkgs#mercurial```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hg](/man/hg)(1), [hg-add](/man/hg-add)(1), [hg-commit](/man/hg-commit)(1), [hg-clone](/man/hg-clone)(1)

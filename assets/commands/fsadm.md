@@ -68,6 +68,22 @@ If no size is specified with resize, the filesystem will be grown to fill the en
 
 **fsadm** is part of **LVM2**, providing a unified interface for filesystem operations on logical volumes regardless of the underlying filesystem type.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2-extra```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvresize](/man/lvresize)(8), [resize2fs](/man/resize2fs)(8), [fsck](/man/fsck)(8)

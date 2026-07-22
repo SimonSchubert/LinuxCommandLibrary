@@ -93,6 +93,22 @@ Requires root privileges for complete hardware information. Without root, some d
 
 **lshw** was developed by Lyonel Vincent as a comprehensive hardware information tool for Linux, providing more detail than basic tools.
 
+# INSTALL
+
+```apt: sudo apt install lshw```
+
+```dnf: sudo dnf install lshw```
+
+```pacman: sudo pacman -S lshw```
+
+```apk: sudo apk add lshw```
+
+```zypper: sudo zypper install lshw```
+
+```nix: nix profile install nixpkgs#lshw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmidecode](/man/dmidecode)(8), [hwinfo](/man/hwinfo)(8), [inxi](/man/inxi)(1), [lscpu](/man/lscpu)(1)

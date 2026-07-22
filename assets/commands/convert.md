@@ -153,6 +153,18 @@ Large images consume memory. Complex operations can be slow. Default quality set
 
 **convert** is part of ImageMagick, created by John Cristy in **1987**, becoming one of the most versatile image manipulation tools.
 
+# INSTALL
+
+```pacman: sudo pacman -S imagemagick```
+
+```apk: sudo apk add imagemagick```
+
+```brew: brew install imagemagick```
+
+```nix: nix profile install nixpkgs#imagemagick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mogrify](/man/mogrify)(1), [identify](/man/identify)(1), [ffmpeg](/man/ffmpeg)(1)

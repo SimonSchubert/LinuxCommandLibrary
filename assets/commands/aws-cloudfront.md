@@ -121,6 +121,17 @@ Distribution deletion requires disabling first, then waiting for the status to c
 
 **Amazon CloudFront** launched in **November 2008** as AWS's content delivery network service. It has grown from basic static content delivery to support dynamic content, streaming, WebSocket, and serverless compute at the edge via Lambda@Edge (2016) and CloudFront Functions (2021).
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-s3](/man/aws-s3)(1), [aws-acm](/man/aws-acm)(1), [aws-route53](/man/aws-route53)(1)

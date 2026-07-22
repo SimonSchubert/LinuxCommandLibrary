@@ -100,6 +100,18 @@ BitKeeper was proprietary until **2016** when it was released under the Apache 2
 
 BitKeeper was created by **Larry McVoy** in **1998** and became famous as the version control system used for Linux kernel development from **2002 to 2005**. When licensing disputes led to restrictions on free use, Linus Torvalds created **Git** as a replacement. BitKeeper was open-sourced in **2016**.
 
+# INSTALL
+
+```apk: sudo apk add bitkeeper```
+
+```zypper: sudo zypper install bk```
+
+```brew: brew install bk```
+
+```nix: nix profile install nixpkgs#bk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [hg](/man/hg)(1), [svn](/man/svn)(1)

@@ -66,6 +66,22 @@ The paths are configured in **~/.config/user-dirs.dirs** and can be customized p
 
 Returns home directory if the requested directory is not configured or if an unknown directory name is given. Directory paths may not exist on the filesystem.
 
+# INSTALL
+
+```apt: sudo apt install xdg-user-dirs```
+
+```dnf: sudo dnf install xdg-user-dirs```
+
+```pacman: sudo pacman -S xdg-user-dirs```
+
+```apk: sudo apk add xdg-user-dirs```
+
+```zypper: sudo zypper install xdg-user-dirs```
+
+```nix: nix profile install nixpkgs#xdg-user-dirs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdg-user-dirs-update](/man/xdg-user-dirs-update)(1), [xdg-open](/man/xdg-open)(1), [xdg-mime](/man/xdg-mime)(1)

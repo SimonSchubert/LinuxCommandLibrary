@@ -39,6 +39,24 @@ _device_
 
 Filesystem should be unmounted or mounted read-only for accurate results. Part of e2fsprogs package.
 
+# INSTALL
+
+```apt: sudo apt install e2fsprogs```
+
+```dnf: sudo dnf install e2fsprogs```
+
+```pacman: sudo pacman -S e2fsprogs```
+
+```apk: sudo apk add e2fsprogs-extra```
+
+```zypper: sudo zypper install e2fsprogs```
+
+```brew: brew install e2fsprogs```
+
+```nix: nix profile install nixpkgs#e2fsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [e4defrag](/man/e4defrag)(8), [dumpe2fs](/man/dumpe2fs)(8), [e2fsck](/man/e2fsck)(8), [debugfs](/man/debugfs)(8), [tune2fs](/man/tune2fs)(8)

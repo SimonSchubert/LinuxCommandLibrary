@@ -59,6 +59,12 @@ Proprietary software. Chromium-based. Built-in VPN limited.
 
 Opera was created in **1995** as one of the early alternative web browsers.
 
+# INSTALL
+
+```aur: yay -S opera```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [firefox](/man/firefox)(1), [chromium](/man/chromium)(1), [vivaldi](/man/vivaldi)(1)

@@ -43,6 +43,14 @@ Each node in the graph represents a pipeline stage (data processing, training, e
 
 The default output is ASCII art suitable for terminal viewing. The --dot option exports to Graphviz DOT format, which can be rendered to images using tools like Graphviz or online viewers. This is useful for documentation and sharing pipeline architecture with team members.
 
+# INSTALL
+
+```brew: brew install dvc```
+
+```nix: nix profile install nixpkgs#dvc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 

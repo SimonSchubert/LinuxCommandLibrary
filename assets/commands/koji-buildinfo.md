@@ -45,6 +45,16 @@ Requires network access to the Koji hub. Some builds may have restricted visibil
 
 koji buildinfo is part of the Koji build system used by Fedora, CentOS, and other RPM-based distributions for package building and management.
 
+# INSTALL
+
+```dnf: sudo dnf install koji```
+
+```brew: brew install koji```
+
+```nix: nix profile install nixpkgs#koji```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [koji](/man/koji)(1), [koji-download-build](/man/koji-download-build)(1), [koji-tag-build](/man/koji-tag-build)(1)

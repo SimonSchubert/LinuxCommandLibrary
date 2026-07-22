@@ -75,6 +75,14 @@ Requires lefthook.yml in project root. Hooks must be installed after cloning. Pa
 
 lefthook was created by **Evil Martians** as a fast, polyglot alternative to husky and pre-commit, first released in **2019**.
 
+# INSTALL
+
+```brew: brew install lefthook```
+
+```nix: nix profile install nixpkgs#lefthook```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [husky](/man/husky)(1), [pre-commit](/man/pre-commit)(1)

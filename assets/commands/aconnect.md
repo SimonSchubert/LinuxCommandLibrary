@@ -74,6 +74,21 @@ Connections made with aconnect are not persistent; they're lost when the MIDI de
 
 **aconnect** was developed as part of the ALSA project in the late **1990s**. It provided a command-line interface for the ALSA sequencer system, which replaced the older OSS (Open Sound System) MIDI handling in Linux.
 
+# INSTALL
+
+```apt: sudo apt install alsa-utils```
+
+```dnf: sudo dnf install alsa-utils```
+
+```pacman: sudo pacman -S alsa-utils```
+
+```apk: sudo apk add alsa-utils```
+
+```zypper: sudo zypper install alsa-utils```
+
+```nix: nix profile install nixpkgs#alsa-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [amidi](/man/amidi)(1), [aplaymidi](/man/aplaymidi)(1), [arecordmidi](/man/arecordmidi)(1), [aseqdump](/man/aseqdump)(1)

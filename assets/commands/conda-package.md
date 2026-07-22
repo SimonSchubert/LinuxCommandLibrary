@@ -70,6 +70,14 @@ low-level conda package utility (experimental)
 
 This command is marked as experimental and may change or be removed. For standard package building, use **conda-build** instead. For environment sharing, consider using **conda env export** to create environment.yml files.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-env](/man/conda-env)(1)

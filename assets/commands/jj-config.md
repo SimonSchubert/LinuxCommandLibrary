@@ -48,6 +48,20 @@ manages Jujutsu configuration
 
 **jj config** manages Jujutsu configuration. Supports user-level config (global) and repo-level config (per-repository). Configuration uses TOML format and controls settings like user identity, aliases, and UI preferences.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-config-list](/man/jj-config-list)(1), [jj-config-set](/man/jj-config-set)(1)

@@ -65,6 +65,16 @@ Other provider-specific options exist (see `flux bootstrap --help`).
 
 Bootstrap requires a working `kubectl` context with cluster admin permissions and appropriate Git credentials. The repository must already exist (or be created by the command when using supported providers).
 
+# INSTALL
+
+```apk: sudo apk add flux```
+
+```brew: brew install flux```
+
+```nix: nix profile install nixpkgs#flux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flux](/man/flux)(1), [flux-check](/man/flux-check)(1), [flux-create](/man/flux-create)(1)

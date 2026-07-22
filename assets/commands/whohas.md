@@ -61,6 +61,12 @@ _pkgname_
 
 **whohas** was written by **Philipp L. Wesche** as a Perl script to ease cross-distribution package discovery. It is packaged for many distributions and is commonly used by maintainers checking which distros already ship a piece of software before submitting a new package.
 
+# INSTALL
+
+```zypper: sudo zypper install whohas```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apt-cache](/man/apt-cache)(8), [dpkg-query](/man/dpkg-query)(1), [pacman](/man/pacman)(8), [dnf](/man/dnf)(8)

@@ -20,6 +20,20 @@ Manage yadm repository git configuration
 
 **yadm gitconfig** manages yadm repository's git configuration. Separate from system git config. Sets user, remote, and other git settings specifically for the yadm repo.
 
+# INSTALL
+
+```pacman: sudo pacman -S yadm```
+
+```apk: sudo apk add yadm```
+
+```zypper: sudo zypper install yadm```
+
+```brew: brew install yadm```
+
+```nix: nix profile install nixpkgs#yadm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yadm](/man/yadm)(1), [yadm-config](/man/yadm-config)(1), [git-config](/man/git-config)(1)

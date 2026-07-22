@@ -92,6 +92,24 @@ Manage GitLab merge requests from the command line
 
 **glab mr** manages GitLab merge requests from the command line. It provides subcommands for creating, viewing, reviewing, approving, and merging MRs without leaving the terminal. Run `glab mr <subcommand> --help` for the flags of each subcommand.
 
+# INSTALL
+
+```apt: sudo apt install glab```
+
+```dnf: sudo dnf install glab```
+
+```pacman: sudo pacman -S glab```
+
+```apk: sudo apk add glab```
+
+```zypper: sudo zypper install glab```
+
+```brew: brew install glab```
+
+```nix: nix profile install nixpkgs#glab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glab](/man/glab)(1), [glab-mr-create](/man/glab-mr-create)(1)

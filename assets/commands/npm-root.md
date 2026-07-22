@@ -38,6 +38,16 @@ Local shows project node_modules. Global shows system path.
 
 npm root helps locate **node_modules directories** for package management.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-prefix](/man/npm-prefix)(1), [npm-bin](/man/npm-bin)(1)

@@ -65,6 +65,22 @@ Requires root privileges. The configuration file contains plaintext passwords an
 
 **wpa_supplicant** was created by **Jouni Malinen** for wireless network authentication on Linux.
 
+# INSTALL
+
+```apt: sudo apt install wpasupplicant```
+
+```dnf: sudo dnf install wpa_supplicant```
+
+```pacman: sudo pacman -S wpa_supplicant```
+
+```apk: sudo apk add wpa_supplicant```
+
+```zypper: sudo zypper install wpa_supplicant```
+
+```nix: nix profile install nixpkgs#wpa_supplicant```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wpa_cli](/man/wpa_cli)(1), [iwconfig](/man/iwconfig)(8), [NetworkManager](/man/NetworkManager)(8)

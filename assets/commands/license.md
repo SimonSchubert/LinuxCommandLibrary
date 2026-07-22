@@ -70,6 +70,12 @@ Multiple implementations of license generators exist (nishanths/license, azu/lic
 
 **license** (nishanths/license) was created by **Nishanth Shanmugham** and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S license```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [licensor](/man/licensor)(1), [git](/man/git)(1)

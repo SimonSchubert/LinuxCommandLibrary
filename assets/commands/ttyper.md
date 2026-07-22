@@ -68,6 +68,16 @@ Requires a terminal with Unicode support. Configuration stored in ~/.config/ttyp
 
 **ttyper** was created as a terminal-native alternative to web-based typing tests like Monkeytype. The developer wanted typing practice without leaving the terminal environment. Built with Rust, it showcases modern terminal UI capabilities using the Ratatui framework.
 
+# INSTALL
+
+```pacman: sudo pacman -S ttyper```
+
+```zypper: sudo zypper install ttyper```
+
+```nix: nix profile install nixpkgs#ttyper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [typespeed](/man/typespeed)(6), [wpm](/man/wpm)(1), [gtypist](/man/gtypist)(1)

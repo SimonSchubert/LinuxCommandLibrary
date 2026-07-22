@@ -123,6 +123,24 @@ Colors require a terminal with color support. Very long mount point names may be
 
 **dfc** was created by Robin Hahling as a colorful, user-friendly replacement for the traditional df command. The project focuses on making disk space monitoring more visual and accessible. It's written in C and available in repositories of most major Linux distributions.
 
+# INSTALL
+
+```apt: sudo apt install dfc```
+
+```dnf: sudo dnf install dfc```
+
+```pacman: sudo pacman -S dfc```
+
+```apk: sudo apk add dfc```
+
+```zypper: sudo zypper install dfc```
+
+```brew: brew install dfc```
+
+```nix: nix profile install nixpkgs#dfc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [df](/man/df)(1), [du](/man/du)(1), [ncdu](/man/ncdu)(1), [dust](/man/dust)(1), [duf](/man/duf)(1)

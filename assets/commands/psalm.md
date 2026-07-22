@@ -128,6 +128,14 @@ Strict levels may be impractical for legacy code. Some PHP patterns are difficul
 
 **Psalm** was created by **Matthew Brown** at **Vimeo** around **2016**. It brought advanced static analysis to PHP, supporting features like generics before PHP had native support.
 
+# INSTALL
+
+```pacman: sudo pacman -S psalm```
+
+```brew: brew install psalm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [phpstan](/man/phpstan)(1), [php](/man/php)(1), [composer](/man/composer)(1), [phpcs](/man/phpcs)(1)

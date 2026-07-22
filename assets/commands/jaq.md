@@ -83,6 +83,18 @@ While highly compatible with jq, some edge-case behaviors differ intentionally f
 
 **jaq** was created by **Michael Färber** (01mf02) and is written in **Rust**. It was motivated by concerns about jq's start-up time and edge-case correctness, and has been benchmarked to be faster than jq on most operations.
 
+# INSTALL
+
+```pacman: sudo pacman -S jaq```
+
+```zypper: sudo zypper install jaq```
+
+```brew: brew install jaq```
+
+```nix: nix profile install nixpkgs#jaq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [yq](/man/yq)(1)

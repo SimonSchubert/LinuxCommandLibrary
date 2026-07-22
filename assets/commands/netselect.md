@@ -57,6 +57,14 @@ Commonly used to select the fastest Debian mirror or DNS server. The companion t
 
 Requires root privileges to send raw packets. Results may vary based on network conditions at test time. ICMP packets may be blocked by some firewalls, affecting results. The scoring algorithm favors fewer hops, which isn't always optimal.
 
+# INSTALL
+
+```apt: sudo apt install netselect```
+
+```nix: nix profile install nixpkgs#netselect```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [netselect-apt](/man/netselect-apt)(1), [ping](/man/ping)(8), [traceroute](/man/traceroute)(8)

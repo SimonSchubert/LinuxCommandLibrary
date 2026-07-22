@@ -73,6 +73,20 @@ Cannot resize in place; needs separate output disk. VM must be shut down. Shrink
 
 **virt-resize** is part of libguestfs, a library and tools for accessing and modifying virtual machine disk images. Libguestfs was created by Red Hat to provide powerful offline VM disk manipulation without requiring the VM to be running.
 
+# INSTALL
+
+```apt: sudo apt install guestfs-tools```
+
+```dnf: sudo dnf install guestfs-tools```
+
+```pacman: sudo pacman -S guestfs-tools```
+
+```zypper: sudo zypper install guestfs-tools```
+
+```nix: nix profile install nixpkgs#guestfs-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qemu-img](/man/qemu-img)(1), [virt-sparsify](/man/virt-sparsify)(1), [virt-customize](/man/virt-customize)(1)

@@ -146,3 +146,9 @@ Airdrops are only available on devnet and testnet, not mainnet. Transactions req
 
 **Solana** was founded by Anatoly Yakovenko in **2017** and launched its mainnet beta in **2020**. The CLI has been the primary tool for interacting with Solana since its inception. Development transitioned from Solana Labs to **Anza** (the Agave client) in **2024**, with the CLI continuing as the first place new functionality is deployed. Solana is known for high throughput and low transaction costs.
 
+
+# INSTALL
+
+```brew: brew install solana```
+
+<!-- packages: 2026-07-22 -->

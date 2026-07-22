@@ -37,6 +37,14 @@ Requires PAM for authentication. Session scripts must be executable. Some deskto
 
 **lemurs** was created by **coastalwhite** and is written in **Rust**. It is available in the Arch Linux extra repository.
 
+# INSTALL
+
+```pacman: sudo pacman -S lemurs```
+
+```nix: nix profile install nixpkgs#lemurs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ly](/man/ly)(1), [gdm](/man/gdm)(1), [startx](/man/startx)(1)

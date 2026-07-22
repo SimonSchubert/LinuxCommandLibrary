@@ -37,6 +37,16 @@ Written in Go, it aims to be a replacement for most Bluetooth managers like blue
 
 Currently in the alpha stage. Requires platform-specific Bluetooth support (BlueZ on Linux, native stack on macOS/Windows). Functionality depends on the capabilities of the Bluetooth adapter hardware.
 
+# INSTALL
+
+```apk: sudo apk add bluetuith```
+
+```zypper: sudo zypper install bluetuith```
+
+```nix: nix profile install nixpkgs#bluetuith```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bluetoothctl](/man/bluetoothctl)(1), [hcitool](/man/hcitool)(1)

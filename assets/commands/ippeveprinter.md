@@ -71,6 +71,18 @@ Not intended for production use as a print server. The printer only exists while
 
 **ippeveprinter** is part of the **CUPS** (Common Unix Printing System) project, originally developed by Michael Sweet at Easy Software Products and later maintained by Apple. IPP Everywhere support was added to facilitate driverless printing standards compliance testing.
 
+# INSTALL
+
+```apt: sudo apt install cups-ipp-utils```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ippfind](/man/ippfind)(1), [ipptool](/man/ipptool)(1), [cupsd](/man/cupsd)(8), [lp](/man/lp)(1)

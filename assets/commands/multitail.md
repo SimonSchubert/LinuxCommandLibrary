@@ -78,6 +78,22 @@ Complex layouts take practice. Color schemes need configuration. Many files may 
 
 **multitail** was created by **Folkert van Heusden** to extend tail's functionality to multiple files. It addresses the common need to monitor several log files simultaneously.
 
+# INSTALL
+
+```apt: sudo apt install multitail```
+
+```dnf: sudo dnf install multitail```
+
+```apk: sudo apk add multitail```
+
+```zypper: sudo zypper install multitail```
+
+```brew: brew install multitail```
+
+```nix: nix profile install nixpkgs#multitail```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tail](/man/tail)(1), [less](/man/less)(1), [lnav](/man/lnav)(1), [watch](/man/watch)(1)

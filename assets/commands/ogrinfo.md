@@ -110,6 +110,14 @@ Part of the GDAL suite. Format support depends on which OGR drivers were compile
 
 **ogrinfo** is distributed with **GDAL/OGR**, the open-source geospatial data library maintained by the **OSGeo** foundation. OGR originated as a separate library for vector data and was unified into GDAL in version 2.0.
 
+# INSTALL
+
+```apt: sudo apt install gdal-bin```
+
+```apk: sudo apk add gdal-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ogr2ogr](/man/ogr2ogr)(1), [gdalinfo](/man/gdalinfo)(1)

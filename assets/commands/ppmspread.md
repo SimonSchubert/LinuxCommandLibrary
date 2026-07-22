@@ -38,6 +38,24 @@ Unlike Gaussian blur which averages pixels, spread preserves individual pixel co
 
 Only accepts PPM format input. Use **pnmtoppm** to convert from other formats first. The amount parameter specifies the maximum displacement in any direction; actual displacement for each pixel is random within that range.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmshift](/man/ppmshift)(1), [pnmnoise](/man/pnmnoise)(1), [netpbm](/man/netpbm)(1)

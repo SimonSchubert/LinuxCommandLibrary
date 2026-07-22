@@ -78,6 +78,14 @@ Text extraction quality varies by PDF structure. Some PDFs are image-only. Insta
 
 Poppler was forked from **Xpdf** by **Derek Noonburg** and is maintained by the freedesktop.org project.
 
+# INSTALL
+
+```dnf: sudo dnf install poppler-utils```
+
+```nix: nix profile install nixpkgs#poppler-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdftotext](/man/pdftotext)(1), [pdftoppm](/man/pdftoppm)(1), [pdfinfo](/man/pdfinfo)(1), [pdftk](/man/pdftk)(1), [gs](/man/gs)(1), [qpdf](/man/qpdf)(1)

@@ -106,6 +106,14 @@ Large framework. Licensing: GPL, LGPL, or commercial. Qt5 and Qt6 APIs differ.
 
 Qt was created by **Trolltech** in 1991, later acquired by **Nokia**, then **Digia**, now **The Qt Company**.
 
+# INSTALL
+
+```dnf: sudo dnf install qt```
+
+```brew: brew install qt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qmake](/man/qmake)(1), [cmake](/man/cmake)(1)

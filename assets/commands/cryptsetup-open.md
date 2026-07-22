@@ -55,6 +55,22 @@ After opening, the mapped device can be mounted or used with LVM, filesystem cre
 
 With TRIM enabled, minimal data leakage about freed blocks may occur, potentially revealing the filesystem type. However, TRIM is generally recommended for SSD longevity, and the actual data remains encrypted.
 
+# INSTALL
+
+```apt: sudo apt install cryptsetup-bin```
+
+```dnf: sudo dnf install cryptsetup```
+
+```pacman: sudo pacman -S cryptsetup```
+
+```apk: sudo apk add cryptsetup```
+
+```zypper: sudo zypper install cryptsetup```
+
+```nix: nix profile install nixpkgs#cryptsetup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cryptsetup](/man/cryptsetup)(8), [cryptsetup-luksformat](/man/cryptsetup-luksformat)(8)

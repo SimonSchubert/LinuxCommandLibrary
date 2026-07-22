@@ -101,6 +101,24 @@ Concurrent writes are limited—SQLite locks the entire database during writes. 
 
 Dot commands are sqlite3-specific, not SQL. They don't work in SQL statements or from application code.
 
+# INSTALL
+
+```apt: sudo apt install sqlite3```
+
+```dnf: sudo dnf install sqlite```
+
+```pacman: sudo pacman -S sqlite```
+
+```apk: sudo apk add sqlite```
+
+```zypper: sudo zypper install sqlite3```
+
+```brew: brew install sqlite3```
+
+```nix: nix profile install nixpkgs#sqlite```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mysql](/man/mysql)(1), [psql](/man/psql)(1), [sqlite-utils](/man/sqlite-utils)(1)

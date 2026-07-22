@@ -135,6 +135,18 @@ Python-based; requires a running MySQL/MariaDB/Percona server to connect to. Con
 
 mycli was created by **Amjith Ramanujam** as a user-friendly MySQL CLI with autocompletion, inspired by **pgcli**.
 
+# INSTALL
+
+```dnf: sudo dnf install mycli```
+
+```apk: sudo apk add mycli```
+
+```brew: brew install mycli```
+
+```nix: nix profile install nixpkgs#mycli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mysql](/man/mysql)(1), [mariadb](/man/mariadb)(1), [mysqldump](/man/mysqldump)(1), [pgcli](/man/pgcli)(1), [litecli](/man/litecli)(1)

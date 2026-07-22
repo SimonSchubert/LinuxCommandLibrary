@@ -65,6 +65,11 @@ Group names must follow naming rules defined in adduser.conf. System groups typi
 
 **addgroup** was created as part of the adduser package for Debian, providing a user-friendly interface for group management that follows distribution policies. It has been part of Debian since the mid-**1990s**.
 
+# INSTALL
+
+```apt: sudo apt install adduser```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [groupadd](/man/groupadd)(8), [adduser](/man/adduser)(8), [delgroup](/man/delgroup)(8), [groups](/man/groups)(1)

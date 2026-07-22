@@ -53,6 +53,20 @@ forwards local ports to a pod, service, or deployment
 
 This is particularly useful for debugging, accessing dashboards, connecting to databases, or testing services that are not publicly exposed. By default it listens on localhost, but you can use the --address flag to bind to additional interfaces such as 0.0.0.0 for sharing access across a local network. The port mapping is specified as LOCAL_PORT:REMOTE_PORT. If LOCAL_PORT is omitted, a random free port is allocated. The tunnel remains active until the command is terminated.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-proxy](/man/kubectl-proxy)(1), [kubectl-expose](/man/kubectl-expose)(1), [kubectl-exec](/man/kubectl-exec)(1)

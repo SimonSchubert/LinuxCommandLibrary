@@ -95,6 +95,24 @@ Operation is similar to ftp(1) and smbclient(1).
 
 URL must be absolute with http: or https: scheme. Some servers may have WebDAV compliance issues; use -t flag for tolerance.
 
+# INSTALL
+
+```apt: sudo apt install cadaver```
+
+```dnf: sudo dnf install cadaver```
+
+```pacman: sudo pacman -S cadaver```
+
+```apk: sudo apk add cadaver```
+
+```zypper: sudo zypper install cadaver```
+
+```brew: brew install cadaver```
+
+```nix: nix profile install nixpkgs#cadaver```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [ftp](/man/ftp)(1), [smbclient](/man/smbclient)(1)

@@ -62,6 +62,16 @@ Terminal-based only; requires a terminal that supports raw mode. Performance rep
 
 **toipe** was created as a terminal-based typing test application written in Rust.
 
+# INSTALL
+
+```zypper: sudo zypper install toipe```
+
+```brew: brew install toipe```
+
+```nix: nix profile install nixpkgs#toipe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tt](/man/tt)(1), [typespeed](/man/typespeed)(1), [wpm](/man/wpm)(1)

@@ -42,6 +42,24 @@ This is the preferred way to stop containers cleanly. The alias `docker stop` is
 
 If the main process ignores SIGTERM, the container may not stop until the timeout triggers SIGKILL. Stopped containers remain on disk and can be restarted with `docker start` / `docker container start`, or removed with `docker rm`.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-stop](/man/docker-stop)(1), [docker-start](/man/docker-start)(1), [docker-container-start](/man/docker-container-start)(1), [docker-rm](/man/docker-rm)(1), [docker-ps](/man/docker-ps)(1)

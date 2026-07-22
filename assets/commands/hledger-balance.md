@@ -75,6 +75,24 @@ Zero balances hidden by default. Requires valid journal. Part of hledger suite.
 
 Balance is a core command in **hledger** for displaying account summaries in plain text accounting.
 
+# INSTALL
+
+```apt: sudo apt install hledger```
+
+```dnf: sudo dnf install hledger```
+
+```pacman: sudo pacman -S hledger```
+
+```apk: sudo apk add hledger```
+
+```zypper: sudo zypper install hledger```
+
+```brew: brew install hledger```
+
+```nix: nix profile install nixpkgs#hledger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hledger](/man/hledger)(1), [hledger-incomestatement](/man/hledger-incomestatement)(1)

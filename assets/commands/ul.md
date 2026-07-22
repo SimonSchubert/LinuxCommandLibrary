@@ -38,6 +38,14 @@ Input must contain traditional overstrike underline sequences. Output depends on
 
 **ul** is part of **util-linux** and dates from early Unix when terminals used overstrike sequences for formatting effects.
 
+# INSTALL
+
+```apt: sudo apt install bsdextrautils```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [col](/man/col)(1), [colcrt](/man/colcrt)(1)

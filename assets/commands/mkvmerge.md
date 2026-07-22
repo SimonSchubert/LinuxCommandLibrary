@@ -98,6 +98,22 @@ Does not transcode (remux only). Part of MKVToolNix. Option order matters: per-f
 
 mkvmerge is part of **MKVToolNix**, providing Matroska container manipulation tools.
 
+# INSTALL
+
+```apt: sudo apt install mkvtoolnix```
+
+```dnf: sudo dnf install mkvtoolnix```
+
+```apk: sudo apk add mkvtoolnix```
+
+```zypper: sudo zypper install mkvtoolnix```
+
+```brew: brew install mkvtoolnix```
+
+```nix: nix profile install nixpkgs#mkvtoolnix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [mkvpropedit](/man/mkvpropedit)(1)

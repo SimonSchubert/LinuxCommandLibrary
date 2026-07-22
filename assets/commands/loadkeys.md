@@ -78,6 +78,22 @@ Create **binary** keymap
 
 Only affects Linux virtual consoles, not X11 or Wayland. Changes apply to all virtual consoles simultaneously and persist until reboot. Anyone with read access to /dev/console can run loadkeys.
 
+# INSTALL
+
+```apt: sudo apt install kbd```
+
+```dnf: sudo dnf install kbd```
+
+```pacman: sudo pacman -S kbd```
+
+```apk: sudo apk add kbd```
+
+```zypper: sudo zypper install kbd```
+
+```nix: nix profile install nixpkgs#kbd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dumpkeys](/man/dumpkeys)(1), [showkey](/man/showkey)(1), [setxkbmap](/man/setxkbmap)(1), [localectl](/man/localectl)(1)

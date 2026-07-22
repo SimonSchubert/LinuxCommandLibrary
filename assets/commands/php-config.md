@@ -91,6 +91,12 @@ Typical usage in extension development involves passing **--includes** and **--l
 
 Output varies by PHP installation and version. When multiple PHP versions are installed, each has its own php-config (e.g., php-config7.4, php-config8.2). Always use the path corresponding to the target PHP version when building extensions.
 
+# INSTALL
+
+```apk: sudo apk add php85-dev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [phpize](/man/phpize)(1), [php](/man/php)(1), [pecl](/man/pecl)(1)

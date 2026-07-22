@@ -72,6 +72,14 @@ Java-based. Resource intensive for large tests. GUI for design, CLI for executio
 
 Apache JMeter was created by **Stefano Mazzocchi** as a load testing tool, becoming a standard for web performance testing.
 
+# INSTALL
+
+```brew: brew install jmeter```
+
+```nix: nix profile install nixpkgs#jmeter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ab](/man/ab)(1), [siege](/man/siege)(1), [wrk](/man/wrk)(1), [k6](/man/k6)(1)

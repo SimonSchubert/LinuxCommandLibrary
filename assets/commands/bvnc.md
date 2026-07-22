@@ -70,6 +70,16 @@ To advertise your VNC server, create a service file in /etc/avahi/services/ with
 
 Only discovers services advertised via mDNS on local network. Requires GUI environment and vncviewer installed.
 
+# INSTALL
+
+```apt: sudo apt install avahi-ui-utils```
+
+```dnf: sudo dnf install avahi-ui-tools```
+
+```apk: sudo apk add avahi-ui-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [avahi-browse](/man/avahi-browse)(1), [bssh](/man/bssh)(1), [vncviewer](/man/vncviewer)(1), [avahi-daemon](/man/avahi-daemon)(8)

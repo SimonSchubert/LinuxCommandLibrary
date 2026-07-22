@@ -108,6 +108,12 @@ The CLI automates database setup, SSL certificate installation, systemd service 
 **config.development.json**
 > Development environment configuration.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#ghost```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [npm](/man/npm)(1), [nginx](/man/nginx)(1), [systemctl](/man/systemctl)(1)

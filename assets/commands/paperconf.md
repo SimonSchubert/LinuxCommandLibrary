@@ -80,6 +80,24 @@ Part of libpaper. System paper configuration. Regional defaults.
 
 paperconf is part of **libpaper** for querying paper size configuration.
 
+# INSTALL
+
+```apt: sudo apt install libpaper-utils```
+
+```dnf: sudo dnf install libpaper```
+
+```pacman: sudo pacman -S libpaper```
+
+```apk: sudo apk add libpaper```
+
+```zypper: sudo zypper install libpaper```
+
+```brew: brew install libpaper```
+
+```nix: nix profile install nixpkgs#libpaper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [paperconfig](/man/paperconfig)(8), [lp](/man/lp)(1)

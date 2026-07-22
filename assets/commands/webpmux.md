@@ -84,6 +84,20 @@ WebP format only. Part of libwebp-tools. Only one -strip/-get/-set operation per
 
 **webpmux** is part of **libwebp** by Google, providing tools to manipulate WebP images.
 
+# INSTALL
+
+```apt: sudo apt install webp```
+
+```dnf: sudo dnf install libwebp-tools```
+
+```apk: sudo apk add libwebp-tools```
+
+```zypper: sudo zypper install libwebp-tools```
+
+```brew: brew install webp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cwebp](/man/cwebp)(1), [dwebp](/man/dwebp)(1), [img2webp](/man/img2webp)(1)

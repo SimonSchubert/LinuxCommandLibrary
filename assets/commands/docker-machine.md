@@ -76,6 +76,14 @@ provision and manage Docker hosts on virtual machines
 
 Docker Machine is deprecated. Docker Desktop or cloud-native solutions are now preferred for managing Docker environments.
 
+# INSTALL
+
+```pacman: sudo pacman -S docker-machine```
+
+```brew: brew install docker-machine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-context](/man/docker-context)(1)

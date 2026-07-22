@@ -87,6 +87,13 @@ Converted packages may not work perfectly as distribution-specific dependencies 
 
 Created to help users install software from other Linux distributions when native packages are not available.
 
+# INSTALL
+
+```dnf: sudo dnf install alien```
+
+```apk: sudo apk add alien```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [dpkg](/man/dpkg)(1), [rpm](/man/rpm)(8), [debtap](/man/debtap)(1)

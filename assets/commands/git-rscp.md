@@ -26,6 +26,24 @@ The destination path is derived from the named remote's configured URL, so the r
 
 Part of git-extras package; requires `rsync` and, for SSH remotes, `ssh` to be installed. Unlike `git scp`, files copied this way are not automatically staged.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-scp](/man/git-scp)(1), [rsync](/man/rsync)(1), [git-extras](/man/git-extras)(1)

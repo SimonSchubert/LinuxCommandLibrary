@@ -45,6 +45,16 @@ X11 only. Just for fun. Nostalgia.
 
 **xteddy** is a classic X11 desktop toy displaying a teddy bear that can be dragged around the screen.
 
+# INSTALL
+
+```dnf: sudo dnf install xteddy```
+
+```zypper: sudo zypper install xteddy```
+
+```nix: nix profile install nixpkgs#xteddy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xeyes](/man/xeyes)(1), [oneko](/man/oneko)(1), [xcowsay](/man/xcowsay)(1)

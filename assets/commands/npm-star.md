@@ -42,6 +42,16 @@ Starred packages can be listed later with **npm stars**. To remove a star, use *
 
 Requires being logged in to npm (**npm login**). Stars are public and associated with your npm account.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-unstar](/man/npm-unstar)(1), [npm-stars](/man/npm-stars)(1), [npm-login](/man/npm-login)(1)

@@ -79,6 +79,24 @@ On macOS, readlink behaves differently and may lack GNU options. Use **greadlink
 
 For scripts needing portability, consider **realpath** which is POSIX-specified, though not universally available.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ln](/man/ln)(1), [realpath](/man/realpath)(1), [stat](/man/stat)(1), [ls](/man/ls)(1)

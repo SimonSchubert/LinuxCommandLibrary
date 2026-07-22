@@ -61,6 +61,14 @@ By default, it uses the trustedkeys.kbx or trustedkeys.gpg keyring in the GnuPG 
 
 Returns 0 if verification succeeds, 1 if any signature is bad, and other codes for fatal errors. Unlike gpg, gpgv does not validate key trust.
 
+# INSTALL
+
+```apt: sudo apt install gpgv```
+
+```apk: sudo apk add gpgv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [gpg2](/man/gpg2)(1)

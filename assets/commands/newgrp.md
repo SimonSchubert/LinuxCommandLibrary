@@ -46,6 +46,14 @@ This starts a new shell with the changed group. The original shell's group remai
 
 **newgrp** is a standard POSIX command that has been part of Unix systems since early versions. It provides a way to temporarily switch group context without logging out and back in.
 
+# INSTALL
+
+```apt: sudo apt install login```
+
+```apk: sudo apk add util-linux-login```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groups](/man/groups)(1), [id](/man/id)(1), [sg](/man/sg)(1), [gpasswd](/man/gpasswd)(1), [chgrp](/man/chgrp)(1)

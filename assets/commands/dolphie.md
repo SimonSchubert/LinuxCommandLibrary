@@ -127,6 +127,12 @@ Requires the **PROCESS**, **REPLICATION CLIENT** and (for **KILL**) **SUPER** pr
 
 **dolphie** was created by **Charles Thompson** as a modern, Python-based replacement for **mytop** and **innotop**, with first-class support for MySQL 8, MariaDB, and ProxySQL, and features such as recording, daemon mode, and SSL/TLS connections.
 
+# INSTALL
+
+```brew: brew install dolphie```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mysql](/man/mysql)(1), [mytop](/man/mytop)(1), [htop](/man/htop)(1)

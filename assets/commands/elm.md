@@ -83,6 +83,14 @@ Breaks with major versions (0.19 not compatible with 0.18). Limited JavaScript i
 
 Elm was created by **Evan Czaplicki** as his thesis project in **2012**. It pioneered the "Elm Architecture" pattern that influenced React/Redux and other frontend frameworks.
 
+# INSTALL
+
+```apt: sudo apt install elm-compiler```
+
+```brew: brew install elm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [npm](/man/npm)(1)

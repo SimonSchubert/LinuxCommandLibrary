@@ -55,6 +55,22 @@ The filesystem must be unmounted before modifying parameters.
 
 Changing UUID may affect fstab and boot configurations. Requires root privileges. XFS filesystems only.
 
+# INSTALL
+
+```apt: sudo apt install xfsprogs```
+
+```dnf: sudo dnf install xfsprogs```
+
+```pacman: sudo pacman -S xfsprogs```
+
+```apk: sudo apk add xfsprogs-extra```
+
+```zypper: sudo zypper install xfsprogs```
+
+```nix: nix profile install nixpkgs#xfsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xfs_repair](/man/xfs_repair)(8), [mkfs.xfs](/man/mkfs.xfs)(8), [tune2fs](/man/tune2fs)(8)

@@ -61,6 +61,20 @@ Common profiles include: **balanced**, **throughput-performance**, **latency-per
 
 Requires the tuned service to be running. Profile changes take effect immediately. Some settings may require a reboot to fully apply. Available profiles vary by distribution.
 
+# INSTALL
+
+```dnf: sudo dnf install tuned```
+
+```pacman: sudo pacman -S tuned```
+
+```apk: sudo apk add tuned```
+
+```zypper: sudo zypper install tuned```
+
+```nix: nix profile install nixpkgs#tuned```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tuned](/man/tuned)(8), [cpupower](/man/cpupower)(1)

@@ -108,6 +108,14 @@ Shell key binding (default Ctrl+F) can be enabled by sourcing widget files from 
 
 Initial source sync requires network access and may download significant data depending on which sources are enabled. Requires fzf or another fuzzy finder for interactive selection.
 
+# INSTALL
+
+```pacman: sudo pacman -S wikiman```
+
+```nix: nix profile install nixpkgs#wikiman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [man](/man/man)(1), [tldr](/man/tldr)(1), [apropos](/man/apropos)(1), [fzf](/man/fzf)(1), [w3m](/man/w3m)(1)

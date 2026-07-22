@@ -43,6 +43,24 @@ load Docker images from tar archives
 
 **docker load** loads an image from a tar archive or STDIN. Restores both images and tags saved by **docker save**. This command is the counterpart to docker save, enabling image transfer between systems without using a registry. Useful for air-gapped environments or offline distribution.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-image-load](/man/docker-image-load)(1), [docker-save](/man/docker-save)(1), [docker-images](/man/docker-images)(1), [docker-pull](/man/docker-pull)(1), [docker](/man/docker)(1)

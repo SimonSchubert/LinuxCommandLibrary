@@ -94,6 +94,18 @@ Preview before cleaning to avoid deleting important data. Shredding files is slo
 
 **bleachbit** was created by **Andrew Ziem** and first released in **2008**. It is an open-source disk cleanup tool, often compared to CCleaner on Windows. Written in Python, it runs on Linux and Windows.
 
+# INSTALL
+
+```dnf: sudo dnf install bleachbit```
+
+```pacman: sudo pacman -S bleachbit```
+
+```zypper: sudo zypper install bleachbit```
+
+```nix: nix profile install nixpkgs#bleachbit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rm](/man/rm)(1), [shred](/man/shred)(1)

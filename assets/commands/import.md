@@ -72,6 +72,18 @@ X11 only. Requires ImageMagick. Click-to-select default behavior.
 
 import is part of the **ImageMagick** suite, created by **John Cristy** in 1987 for X Window screen capture.
 
+# INSTALL
+
+```pacman: sudo pacman -S imagemagick```
+
+```apk: sudo apk add imagemagick```
+
+```brew: brew install imagemagick```
+
+```nix: nix profile install nixpkgs#imagemagick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [convert](/man/convert)(1), [display](/man/display)(1), [scrot](/man/scrot)(1)

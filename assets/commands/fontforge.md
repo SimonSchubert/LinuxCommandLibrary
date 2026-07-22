@@ -64,6 +64,24 @@ Steep learning curve for font design. GUI can be complex. Some formats have limi
 
 FontForge (originally PfaEdit) was created by **George Williams** starting in 2000. It's the most capable open source font editor, used by type designers and font developers worldwide.
 
+# INSTALL
+
+```apt: sudo apt install fontforge```
+
+```dnf: sudo dnf install fontforge```
+
+```pacman: sudo pacman -S fontforge```
+
+```apk: sudo apk add fontforge```
+
+```zypper: sudo zypper install fontforge```
+
+```brew: brew install fontforge```
+
+```nix: nix profile install nixpkgs#fontforge```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fc-query](/man/fc-query)(1)

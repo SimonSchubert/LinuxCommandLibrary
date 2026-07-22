@@ -62,6 +62,12 @@ Output installed packages in requirements format
 
 **pip freeze** outputs installed packages in requirements format. Each package is shown with its exact version (package==version). This is the standard method for capturing Python environment dependencies for reproducibility. By default, pip, setuptools, wheel, and distribute are excluded from the output; use **--all** to include them. Packages are listed in case-insensitive sorted order.
 
+# INSTALL
+
+```apk: sudo apk add py3-pip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [pip-list](/man/pip-list)(1), [pip-install](/man/pip-install)(1), [pip-show](/man/pip-show)(1)

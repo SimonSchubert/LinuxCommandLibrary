@@ -72,6 +72,22 @@ Manage YubiKey FIDO2 credentials
 
 Reset permanently removes all FIDO credentials, the PIN, and fingerprints from the device. Fingerprint commands require a YubiKey with a fingerprint sensor and a FIDO PIN must be set first.
 
+# INSTALL
+
+```dnf: sudo dnf install yubikey-manager```
+
+```pacman: sudo pacman -S yubikey-manager```
+
+```apk: sudo apk add yubikey-manager```
+
+```zypper: sudo zypper install yubikey-manager```
+
+```brew: brew install ykman```
+
+```nix: nix profile install nixpkgs#yubikey-manager```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ykman](/man/ykman)(1), [ykman-oath](/man/ykman-oath)(1)

@@ -116,6 +116,24 @@ Manage GitHub releases and distribution assets
 
 The command supports creating releases from existing tags or creating tags automatically. Release notes can be written manually, loaded from files, or auto-generated from commit messages and merged pull requests using the --generate-notes flag. Assets like compiled binaries, packages, and archives can be uploaded during creation or added later.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-repo](/man/gh-repo)(1)

@@ -98,6 +98,14 @@ Requires Fly.io account. Usage incurs costs. Some features region-dependent.
 
 flyctl is the CLI for **Fly.io**, a platform launched in 2017 focusing on edge deployment. It positions applications close to users worldwide using lightweight VMs.
 
+# INSTALL
+
+```brew: brew install flyctl```
+
+```nix: nix profile install nixpkgs#flyctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [heroku](/man/heroku)(1), [railway](/man/railway)(1)

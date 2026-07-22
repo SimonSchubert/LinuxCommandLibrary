@@ -45,6 +45,22 @@ Renamed to metadata in newer versions. Flakes must be enabled. Network for remot
 
 nix flake info was part of early **flakes** implementation, now superseded by metadata.
 
+# INSTALL
+
+```apt: sudo apt install nix-bin```
+
+```dnf: sudo dnf install nix```
+
+```pacman: sudo pacman -S nix```
+
+```apk: sudo apk add nix```
+
+```zypper: sudo zypper install nix```
+
+```nix: nix profile install nixpkgs#nix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix-flake](/man/nix-flake)(1), [nix-flake-show](/man/nix-flake-show)(1), [nix](/man/nix)(1)

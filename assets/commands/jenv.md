@@ -73,6 +73,14 @@ manages multiple Java JDK installations and sets JAVA_HOME automatically
 
 **jenv** manages multiple Java JDK installations and sets JAVA_HOME automatically. It does not install JDKs itself. Version priority: shell > local > global. Use the **export** plugin for JAVA_HOME support. Creates **.java-version** files for local versions.
 
+# INSTALL
+
+```pacman: sudo pacman -S jenv```
+
+```brew: brew install jenv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [java](/man/java)(1)

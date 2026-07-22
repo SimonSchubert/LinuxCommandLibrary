@@ -69,6 +69,24 @@ Protect generated private keys. Use strong encryption for storage. ED25519 recom
 
 genpkey was introduced as a unified key generation command, replacing older algorithm-specific commands in OpenSSL.
 
+# INSTALL
+
+```apt: sudo apt install openssl```
+
+```dnf: sudo dnf install openssl```
+
+```pacman: sudo pacman -S openssl```
+
+```apk: sudo apk add openssl```
+
+```zypper: sudo zypper install openssl```
+
+```brew: brew install openssl```
+
+```nix: nix profile install nixpkgs#openssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl-pkey](/man/openssl-pkey)(1), [openssl-req](/man/openssl-req)(1), [openssl-rsa](/man/openssl-rsa)(1)

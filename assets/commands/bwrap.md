@@ -108,6 +108,24 @@ The tool is commonly used by Flatpak and other sandboxing systems to isolate app
 
 Requires user namespaces to be enabled in the kernel. Not a complete security boundary; some attack vectors may still exist. Complex sandboxing requires careful bind mount configuration.
 
+# INSTALL
+
+```apt: sudo apt install bubblewrap```
+
+```dnf: sudo dnf install bubblewrap```
+
+```pacman: sudo pacman -S bubblewrap```
+
+```apk: sudo apk add bubblewrap```
+
+```zypper: sudo zypper install bubblewrap```
+
+```brew: brew install bubblewrap```
+
+```nix: nix profile install nixpkgs#bubblewrap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [firejail](/man/firejail)(1), [flatpak](/man/flatpak)(1), [unshare](/man/unshare)(1)

@@ -90,6 +90,20 @@ Ceph organizes data into pools, which contain placement groups that map to OSDs 
 
 Requires proper Ceph configuration and authentication. Cluster operations may take time to complete. Some commands require specific permissions.
 
+# INSTALL
+
+```apt: sudo apt install ceph-common```
+
+```dnf: sudo dnf install ceph-common```
+
+```apk: sudo apk add ceph18-common```
+
+```zypper: sudo zypper install ceph-common```
+
+```nix: nix profile install nixpkgs#ceph```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cephadm](/man/cephadm)(8)

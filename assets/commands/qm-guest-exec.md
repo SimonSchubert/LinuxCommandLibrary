@@ -49,6 +49,12 @@ Requires QEMU guest agent to be installed and running in the VM. Some commands m
 
 Part of **Proxmox VE** QEMU/KVM management tools. Guest agent communication provides out-of-band management capabilities.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-agent](/man/qm-agent)(1)

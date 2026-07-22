@@ -119,6 +119,14 @@ Autogenerate cannot detect all changes (table renames, column type changes on so
 
 **Alembic** was created by Mike Bayer, the author of SQLAlchemy, with the first release in **2011**. It was designed to provide a migration solution that integrates naturally with SQLAlchemy's metadata and model system. The name comes from the alchemical vessel used for distillation, fitting the SQLAlchemy naming theme.
 
+# INSTALL
+
+```apk: sudo apk add py3-alembic```
+
+```nix: nix profile install nixpkgs#python3Packages.alembic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [django-admin](/man/django-admin)(1), [psql](/man/psql)(1), [sqlite3](/man/sqlite3)(1)

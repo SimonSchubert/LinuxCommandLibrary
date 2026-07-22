@@ -71,6 +71,20 @@ On Linux, the executable name varies between **edit** (from GitHub binary) and *
 
 Microsoft Edit was announced at **Build 2025** in May 2025 and simultaneously open-sourced under the **MIT license**. It was created because 64-bit versions of Windows lacked a default CLI text editor. The project has gained significant community interest with over 13,000 GitHub stars. It will ship pre-installed with future Windows 11 builds.
 
+# INSTALL
+
+```dnf: sudo dnf install msedit```
+
+```pacman: sudo pacman -S msedit```
+
+```zypper: sudo zypper install msedit```
+
+```brew: brew install msedit```
+
+```nix: nix profile install nixpkgs#msedit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nano](/man/nano)(1), [vim](/man/vim)(1), [emacs](/man/emacs)(1), [micro](/man/micro)(1)

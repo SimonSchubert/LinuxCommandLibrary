@@ -54,6 +54,24 @@ The pull operation downloads image layers in parallel for efficiency. If some la
 
 Images can be pulled by tag for version-specific deployments or by SHA256 digest for immutable, verifiable image references. The **--platform** flag enables pulling multi-architecture images for cross-platform development and deployment scenarios.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-pull](/man/docker-pull)(1), [docker-image](/man/docker-image)(1), [docker-image-ls](/man/docker-image-ls)(1)

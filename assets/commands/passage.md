@@ -95,6 +95,14 @@ The `init` command is **not available**. Create `~/.passage/identities` with `ag
 
 The age identity (private key) must be available when decrypting. Unlike GPG, age keys are not usually on keyservers; you are responsible for backups. Clipboard support depends on platform tools (xclip, pbcopy, wl-copy, etc.).
 
+# INSTALL
+
+```apk: sudo apk add passage```
+
+```nix: nix profile install nixpkgs#passage```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pass](/man/pass)(1), [age](/man/age)(1), [age-keygen](/man/age-keygen)(1)

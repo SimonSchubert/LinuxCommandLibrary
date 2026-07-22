@@ -46,6 +46,16 @@ Enabling enforce mode on a profile that hasn't been properly tested may cause ap
 
 Part of the **AppArmor** utilities package for managing application security profiles on Linux systems.
 
+# INSTALL
+
+```apk: sudo apk add apparmor-utils```
+
+```zypper: sudo zypper install apparmor-utils```
+
+```nix: nix profile install nixpkgs#apparmor-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aa-complain](/man/aa-complain)(8), [aa-disable](/man/aa-disable)(8), [aa-logprof](/man/aa-logprof)(8), [aa-status](/man/aa-status)(8), [apparmor](/man/apparmor)(7)

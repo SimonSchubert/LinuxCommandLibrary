@@ -55,6 +55,22 @@ Each subcommand addresses specific failure modes like corrupted metadata, superb
 
 These are emergency recovery tools. Always backup any recoverable data first. chunk-recover can take extremely long on large filesystems. Some operations may cause data loss. The filesystem must be unmounted.
 
+# INSTALL
+
+```apt: sudo apt install btrfs-progs```
+
+```dnf: sudo dnf install btrfs-progs```
+
+```pacman: sudo pacman -S btrfs-progs```
+
+```apk: sudo apk add btrfs-progs```
+
+```brew: brew install btrfs-progs```
+
+```nix: nix profile install nixpkgs#btrfs-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [btrfs-check](/man/btrfs-check)(8), [btrfs-restore](/man/btrfs-restore)(8)

@@ -39,6 +39,12 @@ Creative coding environment for the terminal
 
 **runal** was created by **Xavier Godart** (emprcl) and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S runal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [figlet](/man/figlet)(1), [terminaltexteffects](/man/terminaltexteffects)(1), [t-rec](/man/t-rec)(1)

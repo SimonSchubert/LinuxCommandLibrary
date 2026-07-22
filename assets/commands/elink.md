@@ -40,6 +40,12 @@ Part of the NCBI EDirect utilities for programmatic access to biological databas
 
 Part of the edirect package from NCBI. Works with piped input from esearch. Requires internet connection.
 
+# INSTALL
+
+```apt: sudo apt install ncbi-entrez-direct```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [esearch](/man/esearch)(1), [einfo](/man/einfo)(1)

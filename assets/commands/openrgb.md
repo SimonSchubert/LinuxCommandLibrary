@@ -95,6 +95,18 @@ Hardware support varies. May need kernel modules. Root for some devices.
 
 OpenRGB was created for **unified RGB lighting control** across different brands.
 
+# INSTALL
+
+```dnf: sudo dnf install openrgb```
+
+```pacman: sudo pacman -S openrgb```
+
+```apk: sudo apk add openrgb```
+
+```nix: nix profile install nixpkgs#openrgb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [i2cdetect](/man/i2cdetect)(1)

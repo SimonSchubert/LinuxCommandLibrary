@@ -104,6 +104,24 @@ This command is fundamental to email-based development workflows used by project
 
 Cover letters (--cover-letter) provide a way to introduce patch series with context. Version numbering with -v supports iterative review cycles. The signoff option adds Signed-off-by trailers for Developer Certificate of Origin compliance.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-am](/man/git-am)(1), [git-send-email](/man/git-send-email)(1), [git-apply](/man/git-apply)(1), [git-diff](/man/git-diff)(1)

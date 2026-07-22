@@ -101,6 +101,20 @@ Requires either -b or -f option. VCL changes require reload through management i
 
 **Varnish** was created by Poul-Henning Kamp and released in 2006. It was designed from scratch for modern hardware and operating systems, using techniques like memory-mapped files and kernel-level optimizations. It has become one of the most widely deployed HTTP accelerators.
 
+# INSTALL
+
+```apt: sudo apt install varnish```
+
+```dnf: sudo dnf install varnish```
+
+```apk: sudo apk add varnish```
+
+```brew: brew install varnish```
+
+```nix: nix profile install nixpkgs#varnish```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [varnishlog](/man/varnishlog)(1), [varnishstat](/man/varnishstat)(1), [nginx](/man/nginx)(8)

@@ -109,6 +109,16 @@ Keeping every historical version is not free: a Dolt database is larger and gene
 
 Dolt was created by **Liquidata**, now DoltHub, and released in **2019**. Its storage engine descends from **Noms**, an earlier content-addressed, versioned database from Attic Labs, which is what makes cheap branching and structural diffing possible. Early versions had their own query dialect; the pivot to MySQL compatibility, built on the **go-mysql-server** engine that DoltHub adopted and now maintains, is what turned Dolt from an interesting data-sharing tool into a database you can point an existing application at.
 
+# INSTALL
+
+```pacman: sudo pacman -S dolt```
+
+```brew: brew install dolt```
+
+```nix: nix profile install nixpkgs#dolt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [mysql](/man/mysql)(1), [sqlite3](/man/sqlite3)(1), [dolt-sql](/man/dolt-sql)(1), [dolt-merge](/man/dolt-merge)(1), [dolt-clone](/man/dolt-clone)(1)

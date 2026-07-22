@@ -60,6 +60,18 @@ Password authentication must be enabled on the remote host for the initial copy.
 
 ssh-copy-id is a convenience script included with **OpenSSH** to simplify the public key installation process. It automates what would otherwise require manually copying keys and setting permissions correctly.
 
+# INSTALL
+
+```apt: sudo apt install openssh-client```
+
+```apk: sudo apk add openssh-client-common```
+
+```brew: brew install ssh-copy-id```
+
+```nix: nix profile install nixpkgs#ssh-copy-id```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [ssh-keygen](/man/ssh-keygen)(1), [ssh-add](/man/ssh-add)(1), [sshd](/man/sshd)(8)

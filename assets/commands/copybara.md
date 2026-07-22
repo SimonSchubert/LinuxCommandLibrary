@@ -63,6 +63,12 @@ Copybara requires **Java 21+** when using official release JARs. Config errors o
 
 Developed internally at **Google** to manage synchronized public and private codebases, then open-sourced. It replaced ad-hoc mirroring scripts with a declarative, reviewable Starlark configuration model used widely inside Google and by external projects mirroring code to GitHub.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#copybara```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-filter-repo](/man/git-filter-repo)(1)

@@ -44,6 +44,20 @@ Tasks must be in a paused or queued state. Use **pueue status** to check task st
 
 **pueue start** is part of **pueue** by **Arne Beer**, a command-line task manager for sequential and parallel execution.
 
+# INSTALL
+
+```pacman: sudo pacman -S pueue```
+
+```apk: sudo apk add pueue```
+
+```zypper: sudo zypper install pueue```
+
+```brew: brew install pueue```
+
+```nix: nix profile install nixpkgs#pueue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pueue](/man/pueue)(1), [pueue-pause](/man/pueue-pause)(1), [pueue-add](/man/pueue-add)(1), [pueue-status](/man/pueue-status)(1)

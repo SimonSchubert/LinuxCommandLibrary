@@ -82,6 +82,18 @@ Key secrets shown only at creation. Deleted keys are unrecoverable. Roles affect
 
 exo iam is part of the **Exoscale CLI**, providing security and access management for Exoscale cloud accounts.
 
+# INSTALL
+
+```dnf: sudo dnf install exo```
+
+```pacman: sudo pacman -S exo```
+
+```apk: sudo apk add exoscale```
+
+```nix: nix profile install nixpkgs#exo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [exo](/man/exo)(1), [exo-compute](/man/exo-compute)(1)

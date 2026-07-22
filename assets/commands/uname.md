@@ -85,6 +85,24 @@ For detailed OS distribution information on Linux, check **/etc/os-release** or 
 
 **uname** originated in **PWB/UNIX** in the late 1970s. It is part of POSIX and GNU coreutils on Linux.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hostname](/man/hostname)(1), [arch](/man/arch)(1), [hostnamectl](/man/hostnamectl)(1), [lsb_release](/man/lsb_release)(1)

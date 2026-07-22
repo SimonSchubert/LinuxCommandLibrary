@@ -34,6 +34,24 @@ This command is part of the **mtools** package, a collection of utilities for ac
 
 The first argument must be a file accessible via mtools (e.g., on a DOS-formatted disk or disk image). On modern systems, using mcopy followed by cmp provides the same functionality and is more commonly used.
 
+# INSTALL
+
+```apt: sudo apt install mtools```
+
+```dnf: sudo dnf install mtools```
+
+```pacman: sudo pacman -S mtools```
+
+```apk: sudo apk add mtools```
+
+```zypper: sudo zypper install mtools```
+
+```brew: brew install mtools```
+
+```nix: nix profile install nixpkgs#mtools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmp](/man/cmp)(1), [mcopy](/man/mcopy)(1), [diff](/man/diff)(1)

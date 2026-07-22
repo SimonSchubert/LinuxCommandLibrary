@@ -72,6 +72,22 @@ The tool integrates with systemd's device and mount management, supporting featu
 
 Mount points created are transient and don't persist across reboots. For persistent mounts, use fstab or create proper systemd mount units. Part of the systemd suite.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(8), [udisksctl](/man/udisksctl)(1)

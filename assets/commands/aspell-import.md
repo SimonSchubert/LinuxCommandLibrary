@@ -34,6 +34,23 @@ The script must be able to find a working Perl interpreter at `/usr/bin/perl`. I
 
 **aspell-import** ships with **GNU Aspell** and was added so users could migrate accumulated personal word lists when moving from Ispell to Aspell.
 
+# INSTALL
+
+```apt: sudo apt install aspell```
+
+```dnf: sudo dnf install aspell```
+
+```pacman: sudo pacman -S aspell```
+
+```apk: sudo apk add aspell-utils```
+
+```zypper: sudo zypper install aspell```
+
+```brew: brew install aspell```
+
+```nix: nix profile install nixpkgs#aspell```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aspell](/man/aspell)(1), [ispell](/man/ispell)(1)

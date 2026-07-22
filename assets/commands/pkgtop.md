@@ -39,6 +39,12 @@ Linux only. Supports Arch, Debian, Ubuntu, Fedora, CentOS, openSUSE, Void, Gento
 
 **pkgtop** was created by **Orhun Parmaksiz** (orhun) and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pkgtop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apt](/man/apt)(8), [pacman](/man/pacman)(8), [dnf](/man/dnf)(8), [htop](/man/htop)(1)

@@ -96,6 +96,12 @@ SUSE-specific; not available on other distributions. Some modules require root p
 
 **YaST** was first released in April 1995 with SuSE Linux. YaST2 appeared in SuSE 6.3 (1999) as an installer, becoming the full system tool in 6.4. It was released under GPL in 2004. On openSUSE Leap 16 and SLES 16, YaST is being replaced by web-based tools.
 
+# INSTALL
+
+```zypper: sudo zypper install yast2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zypper](/man/zypper)(8), [systemctl](/man/systemctl)(1)

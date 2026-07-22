@@ -70,6 +70,16 @@ Alias: npm list. Tree can be large. Use depth to limit.
 
 npm ls provides **dependency visualization** for understanding package relationships.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-explain](/man/npm-explain)(1), [npm-outdated](/man/npm-outdated)(1)

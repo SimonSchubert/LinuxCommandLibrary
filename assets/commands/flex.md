@@ -96,6 +96,24 @@ The generated scanner depends on the flex runtime library (**-lfl**) unless **%o
 
 Flex was written by Vern Paxson around **1987** as a free, open-source replacement for the original **lex** utility from AT&T Unix (created by Mike Lesk and Eric Schmidt in the mid-1970s). The name stands for "fast lexical analyzer generator." Flex became the standard lex implementation on most Unix-like systems and continues to be maintained on GitHub.
 
+# INSTALL
+
+```apt: sudo apt install flex```
+
+```dnf: sudo dnf install flex```
+
+```pacman: sudo pacman -S flex```
+
+```apk: sudo apk add flex```
+
+```zypper: sudo zypper install flex```
+
+```brew: brew install flex```
+
+```nix: nix profile install nixpkgs#flex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lex](/man/lex)(1), [bison](/man/bison)(1), [yacc](/man/yacc)(1), [gcc](/man/gcc)(1), [cc](/man/cc)(1)

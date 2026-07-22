@@ -124,6 +124,12 @@ obscura is intended for **local development only**: it has no team-sharing, audi
 
 **obscura** is developed by the **obscura-os** project and published at **github.com/obscura-os/obscura-cli**. The repository is named **obscura-cli** but the installed binary is simply **obscura**.
 
+# INSTALL
+
+```aur: yay -S obscura```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [pass](/man/pass)(1), [age](/man/age)(1), [vault](/man/vault)(1), [op](/man/op)(1)

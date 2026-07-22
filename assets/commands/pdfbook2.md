@@ -70,6 +70,14 @@ Print in **landscape mode** with **long-edge flip** for correct results. Signatu
 
 Written as a Python wrapper around pdfpages and pdflatex to simplify booklet creation. Replaces manual LaTeX workflows for creating print-ready booklets from existing PDF documents. Common in the self-publishing and zine-making communities.
 
+# INSTALL
+
+```pacman: sudo pacman -S texlive-binextra```
+
+```apk: sudo apk add texlive-binextra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdfjam](/man/pdfjam)(1), [pdfcrop](/man/pdfcrop)(1), [pdflatex](/man/pdflatex)(1)

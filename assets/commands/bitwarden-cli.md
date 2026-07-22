@@ -137,6 +137,16 @@ The session key provides full access to your vault; protect it accordingly. Comm
 
 Bitwarden was founded by **Kyle Spearrin** and launched in **2016** as an open-source alternative to proprietary password managers. The CLI was introduced to complement the web, desktop, and mobile applications. Bitwarden has grown to become one of the most popular password managers, valued for its transparent open-source model and affordable pricing.
 
+# INSTALL
+
+```pacman: sudo pacman -S bitwarden-cli```
+
+```brew: brew install bitwarden-cli```
+
+```nix: nix profile install nixpkgs#bitwarden-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
-[pass](/man/pass)(1), [gopass](/man/gopass)(1), [keepassxc-cli](/man/keepassxc-cli)(1), [1password](/man/1password)(1)
+[pass](/man/pass)(1), [gopass](/man/gopass)(1), [keepassxc-cli](/man/keepassxc-cli)(1), [op](/man/op)(1)

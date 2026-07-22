@@ -110,6 +110,22 @@ Avoid using sendmail for bulk mail or automation without proper authentication, 
 
 Sendmail was written by **Eric Allman** at UC Berkeley, with the first version released in **1983**. It became the dominant Unix MTA and established the standard command-line interface that alternatives like Postfix and Exim maintain for compatibility.
 
+# INSTALL
+
+```apt: sudo apt install dma```
+
+```dnf: sudo dnf install postfix```
+
+```pacman: sudo pacman -S postfix```
+
+```apk: sudo apk add postfix```
+
+```zypper: sudo zypper install postfix```
+
+```nix: nix profile install nixpkgs#dma```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mail](/man/mail)(1), [postfix](/man/postfix)(1), [mailq](/man/mailq)(1), [newaliases](/man/newaliases)(1)

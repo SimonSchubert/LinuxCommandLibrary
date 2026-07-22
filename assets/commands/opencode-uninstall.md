@@ -64,6 +64,16 @@ Use `--dry-run` first to audit exactly which paths will be deleted before runnin
 
 Without `--keep-config` or `--keep-data`, this operation is **irreversible**: local session data, configuration, and cached credentials are permanently deleted. If opencode was installed via a package manager (e.g. Homebrew), uninstall it through that manager instead.
 
+# INSTALL
+
+```pacman: sudo pacman -S opencode```
+
+```brew: brew install opencode```
+
+```nix: nix profile install nixpkgs#opencode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [opencode](/man/opencode)(1), [opencode-upgrade](/man/opencode-upgrade)(1), [opencode-models](/man/opencode-models)(1)

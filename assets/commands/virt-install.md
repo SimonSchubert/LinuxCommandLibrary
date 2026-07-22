@@ -107,6 +107,18 @@ The tool supports advanced configurations including UEFI boot, CPU pinning, NUMA
 
 Requires libvirt daemon running and appropriate virtualization backend. KVM requires hardware virtualization support. UEFI boot requires OVMF firmware package. Network installations require connectivity to installation sources.
 
+# INSTALL
+
+```dnf: sudo dnf install virt-install```
+
+```pacman: sudo pacman -S virt-install```
+
+```apk: sudo apk add virt-install```
+
+```zypper: sudo zypper install virt-install```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virt-clone](/man/virt-clone)(1), [virsh](/man/virsh)(1), [virt-manager](/man/virt-manager)(1), [qemu-img](/man/qemu-img)(1)

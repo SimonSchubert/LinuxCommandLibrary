@@ -43,6 +43,20 @@ This command sends an HTTP DELETE request to the registry's manifest endpoint. I
 
 Some registries do not support deletion or require special permissions. Deleting a tag does not necessarily free storage until garbage collection runs. Deleting a manifest by digest may affect other tags pointing to the same manifest. Docker Hub and some hosted registries may have rate limits or restrictions on deletion.
 
+# INSTALL
+
+```pacman: sudo pacman -S crane```
+
+```apk: sudo apk add crane```
+
+```zypper: sudo zypper install crane```
+
+```brew: brew install crane```
+
+```nix: nix profile install nixpkgs#crane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-tag](/man/crane-tag)(1), [crane-digest](/man/crane-digest)(1), [crane-ls](/man/crane-ls)(1), [crane-manifest](/man/crane-manifest)(1)

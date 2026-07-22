@@ -131,6 +131,12 @@ Note also that the project is closed to outside contributions by policy: bug rep
 
 The naming has been circular. The product was renamed **diagrams.net** in **2020**, partly because the `.io` top-level domain's association with the British Indian Ocean Territory had become awkward, and it has since drifted back to **drawio.com**, with the app still called draw.io by nearly everyone who uses it.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#drawio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [inkscape](/man/inkscape)(1), [plantuml](/man/plantuml)(1), [dot](/man/dot)(1), [dia](/man/dia)(1), [mermaid](/man/mermaid)(1)

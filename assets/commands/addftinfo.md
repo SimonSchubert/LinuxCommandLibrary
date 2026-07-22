@@ -44,6 +44,23 @@ The input must be a valid troff font description file. Output metrics are comput
 
 **addftinfo** is part of GNU groff, which was developed starting in **1989** as a free replacement for the Unix troff typesetting system. The utility was created to simplify font installation.
 
+# INSTALL
+
+```apt: sudo apt install groff```
+
+```dnf: sudo dnf install groff```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [groff](/man/groff)(1), [troff](/man/troff)(1), [afmtodit](/man/afmtodit)(1), [tfmtodit](/man/tfmtodit)(1)

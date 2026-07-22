@@ -39,6 +39,12 @@ Uses binary prefixes. Node.js package.
 
 pretty-bytes was created as a **Node.js utility** for byte formatting.
 
+# INSTALL
+
+```dnf: sudo dnf install pretty-bytes```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [numfmt](/man/numfmt)(1)

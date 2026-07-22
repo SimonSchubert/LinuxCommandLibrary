@@ -103,6 +103,12 @@ Linux and systemd only. Requires a GPU with Vulkan video encoding. AV1 encoding 
 
 **Moonshine** is a Rust reimplementation of a Moonlight-compatible host focused on isolated headless sessions on Linux. It builds on ideas from Sunshine (GameStream host API), Inputtino (input devices), and magic-mirror (Vulkan/Wayland compositor streaming).
 
+# INSTALL
+
+```aur: yay -S moonshine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [loginctl](/man/loginctl)(1), [steam](/man/steam)(1), [tailscale](/man/tailscale)(1), [wg](/man/wg)(8), [yay](/man/yay)(8)

@@ -79,6 +79,14 @@ docker run --rm lwthiker/curl-impersonate:0.6-chrome \
 
 Some curl flags alter TLS signature and may cause detection. Wrapper scripts set necessary headers. Custom options may break impersonation.
 
+# INSTALL
+
+```pacman: sudo pacman -S curl-impersonate```
+
+```nix: nix profile install nixpkgs#curl-impersonate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [httpie](/man/httpie)(1), [wget](/man/wget)(1)

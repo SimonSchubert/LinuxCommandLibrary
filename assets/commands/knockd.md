@@ -54,6 +54,24 @@ Sequences can potentially be sniffed if not using encrypted protocols. Single-pa
 
 Port knocking was introduced as a security-through-obscurity technique in the early **2000s**. knockd remains one of the most popular implementations, though more advanced techniques like SPA have emerged.
 
+# INSTALL
+
+```apt: sudo apt install knockd```
+
+```dnf: sudo dnf install knock```
+
+```pacman: sudo pacman -S knockd```
+
+```apk: sudo apk add knock```
+
+```zypper: sudo zypper install knockd```
+
+```brew: brew install knock```
+
+```nix: nix profile install nixpkgs#knock```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [knock](/man/knock)(1), [iptables](/man/iptables)(8)

@@ -59,6 +59,20 @@ The name is a recursive acronym: "Zile Is Lossy Emacs". It deliberately omits co
 
 Missing many Emacs features like Elisp scripting, major/minor modes, and package management. Not a full Emacs replacement.
 
+# INSTALL
+
+```apt: sudo apt install zile```
+
+```dnf: sudo dnf install zile```
+
+```zypper: sudo zypper install zile```
+
+```brew: brew install zile```
+
+```nix: nix profile install nixpkgs#zile```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [emacs](/man/emacs)(1), [nano](/man/nano)(1), [mg](/man/mg)(1), [vi](/man/vi)(1), [ed](/man/ed)(1)

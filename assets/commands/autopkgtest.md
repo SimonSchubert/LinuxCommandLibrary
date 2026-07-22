@@ -81,6 +81,11 @@ The tool separates the test specification from the execution environment using a
 
 The **null** backend modifies the system directly and may leave changes behind. Chroot and other backends provide better isolation. Test definitions must follow the DEP-8 specification in **debian/tests/control**.
 
+# INSTALL
+
+```aur: yay -S autopkgtest```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [dpkg-buildpackage](/man/dpkg-buildpackage)(1), [lxc](/man/lxc)(1), [schroot](/man/schroot)(1)

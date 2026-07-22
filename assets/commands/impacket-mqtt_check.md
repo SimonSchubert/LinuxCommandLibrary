@@ -45,6 +45,12 @@ Only tests connection capability, does not enumerate topics or messages. MQTT ov
 
 Part of the **Impacket** library by SecureAuth. Added to address the growing security concerns around IoT protocols, particularly MQTT brokers exposed to the internet without proper authentication.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mosquitto_sub](/man/mosquitto_sub)(1), [mosquitto_pub](/man/mosquitto_pub)(1), [nmap](/man/nmap)(1)

@@ -37,6 +37,12 @@ _vmid_
 
 This is useful for safely detaching disks before moving them between VMs or when cleaning up a VM configuration without losing data.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-disk](/man/qm-disk)(1)

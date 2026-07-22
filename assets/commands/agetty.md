@@ -86,6 +86,23 @@ The baud rate is the speed of data transfer between a terminal and a device over
 
 Part of **util-linux** package. Alternative to the traditional **getty** command with additional features for modern Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add agetty```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [login](/man/login)(1), [init](/man/init)(8), [getty](/man/getty)(8)

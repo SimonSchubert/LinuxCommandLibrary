@@ -97,6 +97,20 @@ Documentation generated in target/doc/<crate_name>/index.html
 
 Skips binaries with same name as library. Skips binaries with missing required features.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [rustdoc](/man/rustdoc)(1)

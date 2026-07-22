@@ -96,6 +96,16 @@ Memory-intensive for large images. The default security policy (policy.xml) may 
 
 ImageMagick was created by **John Cristy** in **1987** at DuPont. It's been continuously developed and remains the most widely used command-line image processing toolkit.
 
+# INSTALL
+
+```pacman: sudo pacman -S imagemagick```
+
+```brew: brew install imagemagick```
+
+```nix: nix profile install nixpkgs#imagemagick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [magick](/man/magick)(1), [convert](/man/convert)(1), [identify](/man/identify)(1), [mogrify](/man/mogrify)(1), [composite](/man/composite)(1), [montage](/man/montage)(1), [ffmpeg](/man/ffmpeg)(1)

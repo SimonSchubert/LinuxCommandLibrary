@@ -99,6 +99,22 @@ Limited voice naturalness compared to neural TTS. Few voice options. Output qual
 
 flite was developed at **Carnegie Mellon University** as a lightweight version of the Festival speech synthesis system. It's used in accessibility applications, embedded systems, and offline TTS scenarios.
 
+# INSTALL
+
+```apt: sudo apt install flite```
+
+```dnf: sudo dnf install flite```
+
+```pacman: sudo pacman -S flite```
+
+```apk: sudo apk add flite```
+
+```zypper: sudo zypper install flite```
+
+```nix: nix profile install nixpkgs#flite```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [espeak](/man/espeak)(1), [espeak-ng](/man/espeak-ng)(1), [festival](/man/festival)(1), [say](/man/say)(1), [spd-say](/man/spd-say)(1)

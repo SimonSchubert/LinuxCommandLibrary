@@ -130,6 +130,22 @@ Unauthorized scanning may be illegal. Many scan types (SYN, OS detection) requir
 
 Nmap was created by **Gordon Lyon (Fyodor)** and first released in **1997**. It has since become the de facto standard for network scanning and is used by security professionals worldwide.
 
+# INSTALL
+
+```apt: sudo apt install nmap```
+
+```dnf: sudo dnf install nmap```
+
+```pacman: sudo pacman -S nmap```
+
+```apk: sudo apk add nmap```
+
+```brew: brew install nmap```
+
+```nix: nix profile install nixpkgs#nmap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [masscan](/man/masscan)(1), [netcat](/man/netcat)(1), [zenmap](/man/zenmap)(1), [ss](/man/ss)(8), [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1)

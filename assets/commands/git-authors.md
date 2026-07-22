@@ -61,6 +61,24 @@ Authors come from each commit's author field, so contributors who used different
 
 **git authors** is part of **git-extras**, created by **TJ Holowaychuk** in **2010** to bundle common git helper scripts. The project is now community-maintained.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-shortlog](/man/git-shortlog)(1), [git-log](/man/git-log)(1), [git-extras](/man/git-extras)(1), [git-blame](/man/git-blame)(1)

@@ -73,6 +73,12 @@ Compatible with Nagios plugins and configs. Requires plugin setup. Web interface
 
 Naemon was forked from Nagios Core in **2013** by op5 and Consol to create a faster, more community-driven monitoring solution.
 
+# INSTALL
+
+```aur: yay -S naemon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nagios](/man/nagios)(8), [icinga2](/man/icinga2)(8), [check_mk](/man/check_mk)(1)

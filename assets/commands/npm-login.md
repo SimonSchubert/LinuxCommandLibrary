@@ -76,6 +76,16 @@ Tokens stored in plaintext in .npmrc. Use npm token for token management. 2FA ma
 
 npm login has been part of npm since its early versions, evolving to support 2FA and multiple registries.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-publish](/man/npm-publish)(1), [npm-whoami](/man/npm-whoami)(1), [npm-token](/man/npm-token)(1), [npm-logout](/man/npm-logout)(1)

@@ -113,6 +113,12 @@ Node.js required. Development use only. Not for production.
 
 live-server was created to simplify front-end development with automatic browser refresh on file changes.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#live-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [http-server](/man/http-server)(1), [serve](/man/serve)(1), [browser-sync](/man/browser-sync)(1), [nodemon](/man/nodemon)(1), [python](/man/python)(1)

@@ -34,6 +34,16 @@ Aliases: **cit**, **clean-install-test**, **sit**.
 
 Like **npm ci**, this command requires an existing **package-lock.json** or **npm-shrinkwrap.json** and will remove any existing **node_modules** directory before installing.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-ci](/man/npm-ci)(1), [npm-test](/man/npm-test)(1)

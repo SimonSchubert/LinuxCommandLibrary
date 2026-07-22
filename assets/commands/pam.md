@@ -54,6 +54,18 @@ Critical system component. Misconfiguration can lock out users. Test carefully.
 
 PAM was developed by **Sun Microsystems** as a pluggable authentication framework.
 
+# INSTALL
+
+```dnf: sudo dnf install pam```
+
+```pacman: sudo pacman -S pam```
+
+```zypper: sudo zypper install pam```
+
+```nix: nix profile install nixpkgs#pam```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pam.conf](/man/pam.conf)(5), [pam.d](/man/pam.d)(5), [login](/man/login)(1)

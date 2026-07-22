@@ -128,6 +128,24 @@ Not all DOS software is compatible; very old or very demanding programs may not 
 
 **DOSBox** was started by Peter Veenstra and Sjoerd van der Berg in **2002** to run old DOS games on modern systems. It became one of the most popular DOS emulators, supporting Windows, Linux, macOS, and other platforms. Active development continued through various versions, with DOSBox Staging and DOSBox-X emerging as enhanced forks with additional features.
 
+# INSTALL
+
+```apt: sudo apt install dosbox```
+
+```dnf: sudo dnf install dosbox-staging```
+
+```pacman: sudo pacman -S dosbox```
+
+```apk: sudo apk add dosbox-staging```
+
+```zypper: sudo zypper install dosbox```
+
+```brew: brew install dosbox-staging```
+
+```nix: nix profile install nixpkgs#dosbox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qemu](/man/qemu)(1), [wine](/man/wine)(1)

@@ -72,6 +72,24 @@ The tool is useful for automation, testing, and scripting on Wayland systems.
 
 Wayland only. Requires appropriate permissions for input simulation. Some applications may not receive simulated input due to security restrictions.
 
+# INSTALL
+
+```apt: sudo apt install wtype```
+
+```dnf: sudo dnf install wtype```
+
+```pacman: sudo pacman -S wtype```
+
+```apk: sudo apk add wtype```
+
+```zypper: sudo zypper install wtype```
+
+```brew: brew install wtype```
+
+```nix: nix profile install nixpkgs#wtype```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ydotool](/man/ydotool)(1), [xdotool](/man/xdotool)(1)

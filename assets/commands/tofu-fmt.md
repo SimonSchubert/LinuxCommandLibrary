@@ -59,6 +59,22 @@ The command modifies files in place unless **-check**, **-write=false**, or stdi
 
 **OpenTofu** was forked from **Terraform** in **2023** after HashiCorp changed Terraform's license to the Business Source License. The **fmt** subcommand was inherited from Terraform and remains largely compatible with **terraform fmt**.
 
+# INSTALL
+
+```dnf: sudo dnf install opentofu```
+
+```pacman: sudo pacman -S opentofu```
+
+```apk: sudo apk add opentofu```
+
+```zypper: sudo zypper install opentofu```
+
+```brew: brew install opentofu```
+
+```nix: nix profile install nixpkgs#opentofu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tofu](/man/tofu)(1), [terraform-fmt](/man/terraform-fmt)(1)

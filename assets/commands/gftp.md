@@ -51,6 +51,14 @@ GTK application requires X/Wayland. FTP credentials sent in cleartext. Some feat
 
 gFTP was created by **Brian Masney** in 1998 as a GTK-based FTP client for Linux, later adding support for SFTP and other protocols.
 
+# INSTALL
+
+```dnf: sudo dnf install gftp```
+
+```nix: nix profile install nixpkgs#gftp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ftp](/man/ftp)(1), [sftp](/man/sftp)(1), [filezilla](/man/filezilla)(1)

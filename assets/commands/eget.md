@@ -91,6 +91,14 @@ Requires GitHub API access. Rate limits may apply. Trust the source of binaries 
 
 eget was created to simplify the common task of downloading and installing tools from GitHub releases, providing a single command to replace manual download, extraction, and installation.
 
+# INSTALL
+
+```brew: brew install eget```
+
+```nix: nix profile install nixpkgs#eget```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [curl](/man/curl)(1), [wget](/man/wget)(1)

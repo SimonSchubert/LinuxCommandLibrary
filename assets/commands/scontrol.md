@@ -64,6 +64,12 @@ Common uses include checking job status, suspending/resuming jobs, holding jobs 
 
 Some operations require administrative privileges. Suspending jobs may cause issues with time-sensitive applications. Changes to running jobs may affect other scheduled jobs.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sbatch](/man/sbatch)(1), [squeue](/man/squeue)(1), [scancel](/man/scancel)(1), [sacctmgr](/man/sacctmgr)(1)

@@ -80,6 +80,12 @@ Requires root privileges for chroot operations. The base.cow directory must be o
 
 cowbuilder was created as an enhancement to **pbuilder** (Personal Builder) by using COW filesystem techniques. Pbuilder itself was created by **Junichi Uekawa** in the early **2000s** for building Debian packages in clean environments. Cowbuilder addressed pbuilder's main performance bottleneck: extracting the base tarball for each build.
 
+# INSTALL
+
+```apt: sudo apt install cowbuilder```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbuilder](/man/pbuilder)(8), [sbuild](/man/sbuild)(1), [debuild](/man/debuild)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1)

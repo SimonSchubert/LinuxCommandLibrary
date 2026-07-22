@@ -75,6 +75,24 @@ compresses files using the LZO library
 
 **lzop** compresses files using the LZO library. Emphasizes speed over compression ratio. Very fast compression and decompression, suitable for real-time applications. Files have .lzo extension.
 
+# INSTALL
+
+```apt: sudo apt install lzop```
+
+```dnf: sudo dnf install lzop```
+
+```pacman: sudo pacman -S lzop```
+
+```apk: sudo apk add lzop```
+
+```zypper: sudo zypper install lzop```
+
+```brew: brew install lzop```
+
+```nix: nix profile install nixpkgs#lzop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1), [lzip](/man/lzip)(1), [xz](/man/xz)(1), [zstd](/man/zstd)(1)

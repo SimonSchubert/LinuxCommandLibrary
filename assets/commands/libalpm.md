@@ -58,6 +58,12 @@ Library API, not directly executable. Used by pacman, yay, paru. API may change 
 
 libalpm was developed as part of **pacman** by the Arch Linux team, with the library interface introduced to allow third-party frontends.
 
+# INSTALL
+
+```dnf: sudo dnf install libalpm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [makepkg](/man/makepkg)(8), [yay](/man/yay)(8), [paru](/man/paru)(1)

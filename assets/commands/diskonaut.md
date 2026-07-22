@@ -57,6 +57,16 @@ Requires terminal with sufficient size for meaningful visualization. Very deep d
 
 diskonaut was created as a modern, terminal-based alternative to graphical disk usage analyzers. Written in Rust, it combines the accessibility of TUI applications with visual treemap representations popular in GUI tools.
 
+# INSTALL
+
+```dnf: sudo dnf install diskonaut```
+
+```pacman: sudo pacman -S diskonaut```
+
+```brew: brew install diskonaut```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ncdu](/man/ncdu)(1), [du](/man/du)(1), [duf](/man/duf)(1), [dust](/man/dust)(1)

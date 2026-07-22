@@ -82,6 +82,20 @@ Publish a fixed version (e.g., 1.5.1) before yanking the broken version (1.5.0).
 
 crates.io is a permanent archive; yanking marks version unavailable but doesn't delete. For security issues, RustSec advisories are less disruptive.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-publish](/man/cargo-publish)(1), [cargo-owner](/man/cargo-owner)(1)

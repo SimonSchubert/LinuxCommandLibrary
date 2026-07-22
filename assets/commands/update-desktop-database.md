@@ -57,6 +57,24 @@ Invalid MIME types in desktop files are silently ignored. The cache only determi
 
 **update-desktop-database** is part of the **desktop-file-utils** package from the **freedesktop.org** project. It was developed to support the Desktop Entry Specification, which standardizes how applications are described and launched in Linux desktop environments. The tool has been a standard component of Linux desktop systems since the early **2000s**.
 
+# INSTALL
+
+```apt: sudo apt install desktop-file-utils```
+
+```dnf: sudo dnf install desktop-file-utils```
+
+```pacman: sudo pacman -S desktop-file-utils```
+
+```apk: sudo apk add desktop-file-utils```
+
+```zypper: sudo zypper install desktop-file-utils```
+
+```brew: brew install desktop-file-utils```
+
+```nix: nix profile install nixpkgs#desktop-file-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [update-mime-database](/man/update-mime-database)(1), [desktop-file-validate](/man/desktop-file-validate)(1), [xdg-mime](/man/xdg-mime)(1), [xdg-open](/man/xdg-open)(1)

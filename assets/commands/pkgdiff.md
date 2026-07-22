@@ -42,6 +42,20 @@ Slackware-specific tool. Requires txz/tgz package format. Temporary disk space n
 
 **pkgdiff** is part of Slackware's **pkgtools** package management suite. Slackware uses a simple tar-based package format, and pkgdiff helps maintainers and users understand what changes between package versions.
 
+# INSTALL
+
+```dnf: sudo dnf install pkgdiff```
+
+```pacman: sudo pacman -S pkgdiff```
+
+```zypper: sudo zypper install pkgdiff```
+
+```brew: brew install pkgdiff```
+
+```nix: nix profile install nixpkgs#pkgdiff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [installpkg](/man/installpkg)(8), [removepkg](/man/removepkg)(8), [upgradepkg](/man/upgradepkg)(8)

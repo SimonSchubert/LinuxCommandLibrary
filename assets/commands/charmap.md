@@ -48,6 +48,22 @@ Requires a graphical environment. Character availability depends on installed fo
 
 **charmap** is part of the **GNOME** desktop environment. Character map utilities have existed since early GUI systems, helping users access characters not on their keyboard. The GNOME version, known as **gucharmap**, was created in the early 2000s.
 
+# INSTALL
+
+```apt: sudo apt install gucharmap```
+
+```dnf: sudo dnf install gucharmap```
+
+```pacman: sudo pacman -S gucharmap```
+
+```zypper: sudo zypper install gucharmap```
+
+```brew: brew install gucharmap```
+
+```nix: nix profile install nixpkgs#gucharmap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdotool](/man/xdotool)(1), [xclip](/man/xclip)(1)

@@ -76,6 +76,24 @@ Nftables syntax differs significantly from iptables. Tables must exist before ch
 
 **nft** is part of the **nftables** project, the successor to iptables, providing unified packet classification framework in the Linux kernel.
 
+# INSTALL
+
+```apt: sudo apt install nftables```
+
+```dnf: sudo dnf install nftables```
+
+```pacman: sudo pacman -S nftables```
+
+```apk: sudo apk add nftables```
+
+```zypper: sudo zypper install nftables```
+
+```brew: brew install nftables```
+
+```nix: nix profile install nixpkgs#nftables```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iptables](/man/iptables)(8), [firewall-cmd](/man/firewall-cmd)(1)

@@ -29,6 +29,24 @@ If the working tree has untracked changes, the command prompts for confirmation 
 
 Part of git-extras package. Destroys untracked files and the index without a real backup; commit or stash anything you want to keep before running it. Equivalent in effect to **git checkout --orphan** _name_ followed by clearing the index and working tree.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-clean](/man/git-clean)(1), [git-extras](/man/git-extras)(1)

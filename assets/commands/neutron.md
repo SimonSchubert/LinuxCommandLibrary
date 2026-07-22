@@ -80,6 +80,12 @@ Requires OpenStack credentials. Plugin determines capabilities. Complex multi-te
 
 Neutron was originally called Quantum, renamed in **2013**. It's part of OpenStack's core services for software-defined networking.
 
+# INSTALL
+
+```aur: yay -S neutron```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openstack](/man/openstack)(1), [nova](/man/nova)(1)

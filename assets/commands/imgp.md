@@ -57,6 +57,18 @@ Only supports JPEG and PNG formats. By default creates new files rather than ove
 
 imgp was created by Arun Prakash Jana and is part of a collection of efficient command-line utilities. It was designed to provide fast, scriptable image manipulation without the complexity of larger tools like ImageMagick.
 
+# INSTALL
+
+```dnf: sudo dnf install imgp```
+
+```zypper: sudo zypper install imgp```
+
+```brew: brew install imgp```
+
+```nix: nix profile install nixpkgs#imgp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [convert](/man/convert)(1), [mogrify](/man/mogrify)(1), [jpegtran](/man/jpegtran)(1)

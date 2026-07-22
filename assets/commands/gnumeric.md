@@ -61,6 +61,24 @@ GTK application requiring a display server. Fewer features than LibreOffice Calc
 
 Gnumeric was started by **Miguel de Icaza** as part of the **GNOME** project, focusing on accuracy and standards compliance.
 
+# INSTALL
+
+```apt: sudo apt install gnumeric```
+
+```dnf: sudo dnf install gnumeric```
+
+```pacman: sudo pacman -S gnumeric```
+
+```apk: sudo apk add gnumeric```
+
+```zypper: sudo zypper install gnumeric```
+
+```brew: brew install gnumeric```
+
+```nix: nix profile install nixpkgs#gnumeric```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [libreoffice](/man/libreoffice)(1)

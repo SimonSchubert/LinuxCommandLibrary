@@ -100,6 +100,24 @@ The three operating modes are mutually exclusive:
 
 Requires that the TSA certificate chains to a CA in the supplied trust store. Using **-no_nonce** makes the response replayable — avoid unless the protocol you are integrating with mandates it. In the OpenSSL 3 series this command is also exposed as `openssl-ts(1ssl)` in the manual.
 
+# INSTALL
+
+```apt: sudo apt install openssl```
+
+```dnf: sudo dnf install openssl```
+
+```pacman: sudo pacman -S openssl```
+
+```apk: sudo apk add openssl```
+
+```zypper: sudo zypper install openssl```
+
+```brew: brew install openssl```
+
+```nix: nix profile install nixpkgs#openssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [gpg](/man/gpg)(1)

@@ -70,6 +70,22 @@ Shows devices through the Linux SCSI subsystem, which includes SATA, SAS, USB ma
 
 **lsscsi** provides a human-readable view of the kernel's SCSI device information from sysfs.
 
+# INSTALL
+
+```apt: sudo apt install lsscsi```
+
+```dnf: sudo dnf install lsscsi```
+
+```pacman: sudo pacman -S lsscsi```
+
+```apk: sudo apk add lsscsi```
+
+```zypper: sudo zypper install lsscsi```
+
+```nix: nix profile install nixpkgs#lsscsi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsblk](/man/lsblk)(8), [lspci](/man/lspci)(8), [lsusb](/man/lsusb)(8)

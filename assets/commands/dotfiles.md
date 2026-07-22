@@ -63,6 +63,12 @@ Hidden dotfiles are a famous accident. Early Unix directories contained the entr
 
 Treating dotfiles as a version-controlled, portable artifact came much later, alongside the spread of Git and of engineers working across many machines. The **bare repository** trick, where `~` itself is the work tree, and symlink managers such as **GNU Stow**, **dotbot**, **chezmoi**, and **yadm** are all responses to the same problem: configuration that took years to accumulate and takes minutes to lose.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#dotfiles```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stow](/man/stow)(1), [dotbot](/man/dotbot)(1), [chezmoi](/man/chezmoi)(1), [yadm](/man/yadm)(1), [ls](/man/ls)(1), [git](/man/git)(1)

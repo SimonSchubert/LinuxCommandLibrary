@@ -86,6 +86,22 @@ Requires the chosen remote shell (typically SSH with key-based auth) to work non
 
 **pdsh** originated at **Lawrence Livermore National Laboratory** in the late 1990s as a successor to IBM's DSH for managing large Linux clusters. It is maintained on GitHub and remains widely used in HPC administration.
 
+# INSTALL
+
+```apt: sudo apt install pdsh```
+
+```dnf: sudo dnf install pdsh```
+
+```apk: sudo apk add pdsh```
+
+```zypper: sudo zypper install pdsh```
+
+```brew: brew install pdsh```
+
+```nix: nix profile install nixpkgs#pdsh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [pssh](/man/pssh)(1), [ansible](/man/ansible)(1), [rsync](/man/rsync)(1)

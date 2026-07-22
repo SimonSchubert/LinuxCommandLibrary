@@ -114,6 +114,22 @@ Some proprietary formats may have playback issues due to licensing. VLC uses ope
 
 VLC was created as a student project at **École Centrale Paris** in **1996** under the name VideoLAN Client. It became open source in **2001** and grew into one of the most popular media players, known for playing "anything" without codec packs.
 
+# INSTALL
+
+```apt: sudo apt install vlc-bin```
+
+```dnf: sudo dnf install vlc```
+
+```pacman: sudo pacman -S vlc```
+
+```apk: sudo apk add vlc```
+
+```zypper: sudo zypper install vlc```
+
+```nix: nix profile install nixpkgs#vlc-bin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpv](/man/mpv)(1), [ffmpeg](/man/ffmpeg)(1), [mplayer](/man/mplayer)(1), [ffplay](/man/ffplay)(1)

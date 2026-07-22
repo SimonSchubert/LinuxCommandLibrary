@@ -51,6 +51,14 @@ The **MANPATH** environment variable controls the search path for manual pages.
 
 X11 only. Interface is dated compared to modern alternatives. Limited search capabilities.
 
+# INSTALL
+
+```apt: sudo apt install x11-apps```
+
+```zypper: sudo zypper install xman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [man](/man/man)(1), [info](/man/info)(1), [yelp](/man/yelp)(1)

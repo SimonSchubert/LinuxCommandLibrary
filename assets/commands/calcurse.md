@@ -89,6 +89,24 @@ The interactive interface shows a monthly calendar, appointments list, and todo 
 
 CalDAV synchronization requires configuration in ~/.calcurse/caldav/config. First sync should specify initialization mode to resolve conflicts.
 
+# INSTALL
+
+```apt: sudo apt install calcurse```
+
+```dnf: sudo dnf install calcurse```
+
+```pacman: sudo pacman -S calcurse```
+
+```apk: sudo apk add calcurse```
+
+```zypper: sudo zypper install calcurse```
+
+```brew: brew install calcurse```
+
+```nix: nix profile install nixpkgs#calcurse```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cal](/man/cal)(1), [task](/man/task)(1), [remind](/man/remind)(1)

@@ -114,6 +114,12 @@ mirrord needs access to a Kubernetes cluster and permission to create the tempor
 
 mirrord is developed by **MetalBear** and released under the **MIT** license. It is written largely in **Rust** and grew from the idea of removing the slow build-push-deploy loop from cloud-native development, letting developers debug against a live cluster from their local machine. Adopters cited by the project include monday.com, SurveyMonkey, and Cadence.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#mirrord```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [docker](/man/docker)(1), [skaffold](/man/skaffold)(1), [helm](/man/helm)(1)

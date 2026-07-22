@@ -37,6 +37,14 @@ Configuration is done via a YAML file specifying paths, authentication, encrypti
 
 Requires appropriate network ports to be available. Defaults: 8554 (RTSP/TCP), 8000/8001 (RTSP UDP RTP/RTCP), 1935 (RTMP), 8888 (HLS), 8889 (WebRTC HTTP), 8189 (WebRTC ICE/UDP), 8890 (SRT/UDP), 9997 (HTTP API). Firewall rules may need adjustment for external access. Performance depends on available CPU for transcoding operations.
 
+# INSTALL
+
+```brew: brew install mediamtx```
+
+```nix: nix profile install nixpkgs#mediamtx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [vlc](/man/vlc)(1)

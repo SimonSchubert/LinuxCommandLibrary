@@ -70,6 +70,22 @@ Configuration sections include global settings, device filters, activation optio
 
 Configuration changes made with lvmconfig are not persistent; edit **/etc/lvm/lvm.conf** directly for permanent changes. The **--validate** option may not catch all configuration issues, particularly those that depend on runtime conditions.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvm](/man/lvm)(8), [pvcreate](/man/pvcreate)(8), [vgcreate](/man/vgcreate)(8), [lvcreate](/man/lvcreate)(8)

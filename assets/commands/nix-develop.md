@@ -63,6 +63,22 @@ Requires flakes enabled. Or shell.nix compatibility. Environment isolation.
 
 nix develop is part of **Nix 2.4+** flakes, providing reproducible development environments.
 
+# INSTALL
+
+```apt: sudo apt install nix-bin```
+
+```dnf: sudo dnf install nix```
+
+```pacman: sudo pacman -S nix```
+
+```apk: sudo apk add nix```
+
+```zypper: sudo zypper install nix```
+
+```nix: nix profile install nixpkgs#nix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix](/man/nix)(1), [nix-shell](/man/nix-shell)(1), [direnv](/man/direnv)(1)

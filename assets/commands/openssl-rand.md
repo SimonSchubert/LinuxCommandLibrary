@@ -73,6 +73,24 @@ The command fails with a nonzero exit code if the CSPRNG cannot be properly seed
 
 **openssl rand** has been part of OpenSSL since at least **version 0.9.x** (circa **2000**). The **-engine** option was deprecated in **OpenSSL 3.0** (released **2021**), which introduced the provider-based architecture as a replacement. OpenSSL itself was started in **1998** as a fork of SSLeay.
 
+# INSTALL
+
+```apt: sudo apt install openssl```
+
+```dnf: sudo dnf install openssl```
+
+```pacman: sudo pacman -S openssl```
+
+```apk: sudo apk add openssl```
+
+```zypper: sudo zypper install openssl```
+
+```brew: brew install openssl```
+
+```nix: nix profile install nixpkgs#openssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [openssl-dgst](/man/openssl-dgst)(1)

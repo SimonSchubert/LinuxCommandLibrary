@@ -129,6 +129,24 @@ Significant learning curve — the input language is rich and unlike WYSIWYG too
 
 **LilyPond** was started in **1996** by **Han-Wen Nienhuys** and **Jan Nieuwenhuizen**, inspired by TeX's typographic quality and MusiXTeX's music input language. It is now a GNU project distributed under the GPL and written in C++ and Scheme (GNU Guile).
 
+# INSTALL
+
+```apt: sudo apt install lilypond```
+
+```dnf: sudo dnf install lilypond```
+
+```pacman: sudo pacman -S lilypond```
+
+```apk: sudo apk add lilypond```
+
+```zypper: sudo zypper install lilypond```
+
+```brew: brew install lilypond```
+
+```nix: nix profile install nixpkgs#lilypond```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [abc2ly](/man/abc2ly)(1), [musescore](/man/musescore)(1)

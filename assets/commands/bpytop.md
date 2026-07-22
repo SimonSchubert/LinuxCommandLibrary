@@ -92,6 +92,14 @@ Requires Python 3.6+. Higher CPU usage than native tools. Superseded by btop++ (
 
 **bpytop** was created by Jakob P. Liljenberg (aristocratos) in **2020** as a Python rewrite of bashtop. The same author later began btop++ (a C++ rewrite, btop) in **2021**, which is now the actively developed successor; bpytop receives little ongoing development.
 
+# INSTALL
+
+```pacman: sudo pacman -S bpytop```
+
+```brew: brew install bpytop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btop](/man/btop)(1), [htop](/man/htop)(1), [bashtop](/man/bashtop)(1), [glances](/man/glances)(1), [top](/man/top)(1)

@@ -112,6 +112,20 @@ Requires basic Git knowledge. Bare repositories can be confusing -- use `vcsh en
 
 **vcsh** (version control system for $HOME) was created by **Richard Hartmann** for managing multiple Git repositories overlaid on $HOME.
 
+# INSTALL
+
+```dnf: sudo dnf install vcsh```
+
+```pacman: sudo pacman -S vcsh```
+
+```zypper: sudo zypper install vcsh```
+
+```brew: brew install vcsh```
+
+```nix: nix profile install nixpkgs#vcsh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [mr](/man/mr)(1), [stow](/man/stow)(1), [yadm](/man/yadm)(1), [chezmoi](/man/chezmoi)(1)

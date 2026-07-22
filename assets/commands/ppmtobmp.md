@@ -42,6 +42,24 @@ Convert PPM images to BMP format
 
 **ppmtobmp** converts PPM images to BMP (Windows/OS2 bitmap) format. Part of Netpbm toolkit for image format conversion.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bmptopnm](/man/bmptopnm)(1), [pnmtopng](/man/pnmtopng)(1)

@@ -104,6 +104,24 @@ Hierarchical layout scales poorly: past a few thousand nodes, dot becomes slow a
 
 dot grew out of graph-drawing research at **AT&T Bell Labs**, and later AT&T Labs Research, beginning around **1991**; the layered algorithm it implements descends from the work of Sugiyama and, in this lineage, from Gansner, Koutsofios, North, and Vo. Graphviz was released as open source in **2000**, and its DOT language has since become a lingua franca for graph description, emitted by profilers, compilers, documentation generators, and countless ad-hoc scripts.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neato](/man/neato)(1), [circo](/man/circo)(1), [fdp](/man/fdp)(1), [twopi](/man/twopi)(1), [graphviz](/man/graphviz)(7)

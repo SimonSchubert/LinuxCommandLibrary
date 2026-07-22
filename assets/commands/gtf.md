@@ -58,6 +58,20 @@ Modern systems auto-detect modes. May damage older monitors. Use cvt for newer s
 
 gtf was developed for **XFree86/X.Org** to generate VESA GTF compliant modelines for monitor configuration.
 
+# INSTALL
+
+```apt: sudo apt install xserver-xorg-core```
+
+```pacman: sudo pacman -S xorg-server```
+
+```apk: sudo apk add xorg-server```
+
+```brew: brew install xorg-server```
+
+```nix: nix profile install nixpkgs#xorg-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cvt](/man/cvt)(1), [xrandr](/man/xrandr)(1)

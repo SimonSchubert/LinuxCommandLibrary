@@ -100,6 +100,22 @@ Requires careful cluster planning for production use. Network partitions affect 
 
 etcd was created by **CoreOS** in **2013** and became a Cloud Native Computing Foundation (CNCF) project. It has become the de facto standard for Kubernetes configuration storage and is widely deployed in production cloud environments.
 
+# INSTALL
+
+```apt: sudo apt install etcd-server```
+
+```pacman: sudo pacman -S etcd```
+
+```apk: sudo apk add etcd```
+
+```zypper: sudo zypper install etcd```
+
+```brew: brew install etcd```
+
+```nix: nix profile install nixpkgs#etcd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [etcdctl](/man/etcdctl)(1), [kubectl](/man/kubectl)(1), [consul](/man/consul)(1)

@@ -122,6 +122,18 @@ Default address: 127.0.0.1:8888
 
 Requires Go 1.20+ to build from source. Private keys should be protected. Use configuration files for complex signing policies.
 
+# INSTALL
+
+```apt: sudo apt install golang-cfssl```
+
+```pacman: sudo pacman -S cfssl```
+
+```brew: brew install cfssl```
+
+```nix: nix profile install nixpkgs#cfssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [certbot](/man/certbot)(1)

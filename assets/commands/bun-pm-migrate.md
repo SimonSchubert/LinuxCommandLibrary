@@ -31,6 +31,16 @@ Note that `bun install` also performs automatic lockfile migration when no bun.l
 
 Review the generated bun.lock to ensure dependency resolution matches expectations. Some edge cases with complex dependency trees may require manual adjustment. The original lockfile is preserved and can be removed manually after verification.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-pm](/man/bun-pm)(1), [bun-install](/man/bun-install)(1), [npm](/man/npm)(1), [yarn](/man/yarn)(1), [pnpm](/man/pnpm)(1)

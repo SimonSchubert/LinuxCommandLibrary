@@ -28,6 +28,14 @@ Interactive grep for streaming data
 
 **sig** was created by **ynqa** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S sig```
+
+```nix: nix profile install nixpkgs#sig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [ripgrep](/man/ripgrep)(1), [fzf](/man/fzf)(1)

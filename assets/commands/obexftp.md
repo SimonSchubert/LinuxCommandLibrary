@@ -65,6 +65,16 @@ Requires Bluetooth or USB OBEX support. Device must be paired.
 
 obexftp was created for **file transfer** using the OBEX protocol over Bluetooth.
 
+# INSTALL
+
+```apt: sudo apt install obexftp```
+
+```zypper: sudo zypper install obexftp```
+
+```nix: nix profile install nixpkgs#obexftp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bluetooth](/man/bluetooth)(1), [hcitool](/man/hcitool)(1)

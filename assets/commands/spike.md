@@ -83,6 +83,14 @@ Instruction-level simulation only; no cycle accuracy. Intended as a development 
 
 **spike** is the official RISC-V ISA simulator, developed as the reference implementation for the RISC-V architecture.
 
+# INSTALL
+
+```pacman: sudo pacman -S spike```
+
+```nix: nix profile install nixpkgs#spike```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qemu](/man/qemu)(1), [riscv64-unknown-elf-gcc](/man/riscv64-unknown-elf-gcc)(1)

@@ -105,6 +105,18 @@ Requires configuration for production. Database setup needed. Reverse proxy reco
 
 Gitea was forked from **Gogs** in **2016**, becoming a community-driven project with active development and broader feature set.
 
+# INSTALL
+
+```pacman: sudo pacman -S gitea```
+
+```apk: sudo apk add gitea```
+
+```brew: brew install gitea```
+
+```nix: nix profile install nixpkgs#gitea```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [gitlab-runner](/man/gitlab-runner)(1), [gitlab](/man/gitlab)(1)

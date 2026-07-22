@@ -124,6 +124,20 @@ Requires GPG key for encryption. Filenames (password paths) are not encrypted. C
 
 **pass** was created by **Jason Donenfeld** (zx2c4) in **2012** as a minimalist password manager following Unix philosophy. It gained popularity for its simplicity and use of standard tools. The project spawned many compatible clients and extensions for browsers and mobile devices.
 
+# INSTALL
+
+```dnf: sudo dnf install pass```
+
+```pacman: sudo pacman -S pass```
+
+```apk: sudo apk add pass```
+
+```brew: brew install pass```
+
+```nix: nix profile install nixpkgs#pass```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [git](/man/git)(1), [pwgen](/man/pwgen)(1), [gopass](/man/gopass)(1)

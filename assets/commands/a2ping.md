@@ -54,6 +54,14 @@ Requires Ghostscript to be installed for most conversions. Some complex PostScri
 
 **a2ping** was written by Peter Szabo and first released in **2003**. It was developed to address common difficulties in converting EPS files to PDF with correct bounding boxes, particularly for users preparing scientific documents with LaTeX. The tool became part of TeX Live distributions.
 
+# INSTALL
+
+```pacman: sudo pacman -S texlive-binextra```
+
+```apk: sudo apk add texlive-binextra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gs](/man/gs)(1), [ps2pdf](/man/ps2pdf)(1), [epstopdf](/man/epstopdf)(1), [convert](/man/convert)(1)

@@ -88,6 +88,22 @@ Web UI ships with default credentials (admin/adminadmin); change the password im
 
 qBittorrent was started by **Christophe Dumez** in 2006 as a Qt-based alternative to uTorrent.
 
+# INSTALL
+
+```apt: sudo apt install qbittorrent```
+
+```dnf: sudo dnf install qbittorrent```
+
+```pacman: sudo pacman -S qbittorrent```
+
+```apk: sudo apk add qbittorrent```
+
+```zypper: sudo zypper install qbittorrent```
+
+```nix: nix profile install nixpkgs#qbittorrent```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [transmission](/man/transmission)(1), [deluge](/man/deluge)(1), [aria2c](/man/aria2c)(1), [rtorrent](/man/rtorrent)(1)

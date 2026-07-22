@@ -106,6 +106,12 @@ LURE is written in pure Go with zero runtime dependencies beyond a privilege ele
 
 LURE was created to solve the problem of packaging software for multiple Linux distributions. Inspired by the **Arch User Repository** (AUR), it was designed to bring the same community-driven package building model to all major Linux distros. Written in **Go**, it was first released in **2022** and is actively maintained at **lure.sh**.
 
+# INSTALL
+
+```aur: yay -S lure```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yay](/man/yay)(1), [pacman](/man/pacman)(8), [apt](/man/apt)(8), [dnf](/man/dnf)(8), [zypper](/man/zypper)(8)

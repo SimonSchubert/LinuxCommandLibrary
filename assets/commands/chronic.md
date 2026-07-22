@@ -65,6 +65,24 @@ Silences command output unless it fails
 
 Part of moreutils package. Better than redirecting to /dev/null because you still see errors.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add moreutils```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [moreutils](/man/moreutils)(1), [cron](/man/cron)(8), [crontab](/man/crontab)(1), [sponge](/man/sponge)(1), [ts](/man/ts)(1)

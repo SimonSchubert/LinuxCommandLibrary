@@ -70,6 +70,12 @@ Version-specific binary. Legacy tool. Use latest ndiswrapper if possible.
 
 ndiswrapper-1.9 is a specific version of **ndiswrapper** maintained for compatibility with certain drivers.
 
+# INSTALL
+
+```pacman: sudo pacman -S ndiswrapper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ndiswrapper](/man/ndiswrapper)(1), [iwconfig](/man/iwconfig)(1), [modprobe](/man/modprobe)(1)

@@ -132,6 +132,12 @@ Clef requires careful backup of the master seed created during initialization. L
 
 Clef was introduced by the **go-ethereum** (Geth) team in **2018** as part of an effort to improve Ethereum account security. It was designed to replace the integrated account management in Geth with a more secure, standalone signing solution that reduces attack surface.
 
+# INSTALL
+
+```apk: sudo apk add geth-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [geth](/man/geth)(1)

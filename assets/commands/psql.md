@@ -85,6 +85,12 @@ PostgreSQL specific. Requires server connection.
 
 psql is the **official PostgreSQL** command-line client.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_dump](/man/pg_dump)(1), [createdb](/man/createdb)(1), [mysql](/man/mysql)(1)

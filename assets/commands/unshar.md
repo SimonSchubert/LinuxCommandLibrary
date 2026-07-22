@@ -71,6 +71,22 @@ Executes shell code from the archive, posing security risks with untrusted files
 
 **unshar** and shell archives date back to early Unix when email was the primary method of sharing software. The shar format allowed binary and text files to be encoded in a form that could survive email transmission. While largely superseded by tar and zip, shar archives still appear in legacy code distributions and mailing list archives.
 
+# INSTALL
+
+```apt: sudo apt install sharutils```
+
+```dnf: sudo dnf install sharutils```
+
+```pacman: sudo pacman -S sharutils```
+
+```apk: sudo apk add sharutils```
+
+```zypper: sudo zypper install sharutils```
+
+```nix: nix profile install nixpkgs#sharutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [shar](/man/shar)(1), [tar](/man/tar)(1), [unzip](/man/unzip)(1), [uudecode](/man/uudecode)(1)

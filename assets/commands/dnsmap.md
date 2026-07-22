@@ -51,6 +51,18 @@ The tool comes with a built-in wordlist of common subdomain names (www, mail, ft
 
 Use only against authorized domains. May trigger security alerts. DNS wildcards can cause false positives; use -i to filter.
 
+# INSTALL
+
+```apt: sudo apt install dnsmap```
+
+```dnf: sudo dnf install dnsmap```
+
+```brew: brew install dnsmap```
+
+```nix: nix profile install nixpkgs#dnsmap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dnsrecon](/man/dnsrecon)(1), [fierce](/man/fierce)(1), [nslookup](/man/nslookup)(1)

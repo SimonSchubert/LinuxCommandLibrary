@@ -110,6 +110,12 @@ Requires **PHP 7.4+** and **Composer**. The CLI only manages PHP-side dependenci
 
 The Leaf PHP framework was created by **Michael Darko** ("mychi.netlify.app") and the **leafsphp** organization, with the **leaf** CLI introduced to streamline project creation and module management. The CLI is published as **leafs/cli** on Packagist and is distributed under the **MIT** license.
 
+# INSTALL
+
+```brew: brew install leaf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [composer](/man/composer)(1), [php](/man/php)(1), [artisan](/man/artisan)(1)

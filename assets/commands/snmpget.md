@@ -106,6 +106,14 @@ Scalar OIDs require a **.0** index suffix; omitting it is a common error. SNMPv1
 
 **snmpget** is part of the **Net-SNMP** project, an open-source suite of SNMP tools and libraries. Net-SNMP evolved from the CMU SNMP implementation in the 1990s and later the UCD-SNMP project. The project provides comprehensive SNMP v1, v2c, and v3 support and is widely used for network monitoring and management on Unix-like systems.
 
+# INSTALL
+
+```apt: sudo apt install snmp```
+
+```apk: sudo apk add net-snmp-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snmpwalk](/man/snmpwalk)(1), [snmpset](/man/snmpset)(1), [snmptranslate](/man/snmptranslate)(1)

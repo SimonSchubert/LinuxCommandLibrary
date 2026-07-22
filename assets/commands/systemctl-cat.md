@@ -61,6 +61,22 @@ Shows the raw file contents, not the effective configuration after parsing. Use 
 
 The **cat** subcommand is part of **systemctl** in the **systemd** project. It provides a convenient way to inspect unit configuration without manually locating files across multiple directories.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-edit](/man/systemctl-edit)(1), [systemctl-show](/man/systemctl-show)(1)

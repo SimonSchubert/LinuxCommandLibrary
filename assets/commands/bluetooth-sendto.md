@@ -45,6 +45,20 @@ When run without arguments, it displays a file chooser and device selection dial
 
 Requires Bluetooth to be enabled and the target device to be paired and within range. The receiving device must accept the incoming file transfer request. Part of the GNOME Bluetooth stack, so a GTK environment is required.
 
+# INSTALL
+
+```apt: sudo apt install gnome-bluetooth-sendto```
+
+```dnf: sudo dnf install gnome-bluetooth```
+
+```apk: sudo apk add gnome-bluetooth```
+
+```zypper: sudo zypper install gnome-bluetooth```
+
+```nix: nix profile install nixpkgs#gnome-bluetooth```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bluetoothctl](/man/bluetoothctl)(1)

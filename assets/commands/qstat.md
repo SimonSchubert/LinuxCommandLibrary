@@ -104,6 +104,16 @@ Syntax varies between PBS, SGE, SLURM. Use squeue for SLURM systems.
 
 qstat is part of **PBS** (Portable Batch System), developed at NASA for HPC job scheduling.
 
+# INSTALL
+
+```apt: sudo apt install gridengine-client```
+
+```dnf: sudo dnf install qstat```
+
+```brew: brew install qstat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qsub](/man/qsub)(1), [qdel](/man/qdel)(1), [squeue](/man/squeue)(1), [bjobs](/man/bjobs)(1)

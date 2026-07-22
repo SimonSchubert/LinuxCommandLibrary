@@ -83,6 +83,12 @@ Requires Python 3. Session must be created first. Encryption requires verificati
 
 matrix-commander was created to provide a simple command-line interface for Matrix, enabling shell scripting and automation with the Matrix protocol.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#matrix-commander```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gomuks](/man/gomuks)(1), [weechat](/man/weechat)(1)

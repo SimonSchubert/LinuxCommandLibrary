@@ -112,6 +112,20 @@ Many networks filter ICMP or UDP traceroute packets. Asymmetric routing means th
 
 traceroute was written by **Van Jacobson** in **1987** at Lawrence Berkeley Laboratory. It became an essential network diagnostic tool, included in virtually all Unix-like systems. The concept exploits the TTL field's original purpose of preventing routing loops. Variants include **tracepath** (doesn't require root), **mtr** (combines ping and traceroute), and Windows **tracert**.
 
+# INSTALL
+
+```dnf: sudo dnf install traceroute```
+
+```pacman: sudo pacman -S traceroute```
+
+```apk: sudo apk add traceroute```
+
+```zypper: sudo zypper install traceroute```
+
+```nix: nix profile install nixpkgs#traceroute```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ping](/man/ping)(8), [mtr](/man/mtr)(8), [tracepath](/man/tracepath)(8), [netstat](/man/netstat)(8)

@@ -87,6 +87,20 @@ Different syntax from iptables. Replaces iptables, ip6tables, arptables, ebtable
 
 nftables was developed by the **Netfilter** project, authored primarily by **Patrick McHardy** and **Pablo Neira Ayuso**, released in Linux kernel **3.13** (2014).
 
+# INSTALL
+
+```dnf: sudo dnf install nftables```
+
+```pacman: sudo pacman -S nftables```
+
+```zypper: sudo zypper install nftables```
+
+```brew: brew install nftables```
+
+```nix: nix profile install nixpkgs#nftables```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iptables](/man/iptables)(8), [firewalld](/man/firewalld)(1), [ufw](/man/ufw)(8)

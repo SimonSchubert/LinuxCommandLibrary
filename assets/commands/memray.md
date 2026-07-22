@@ -100,6 +100,20 @@ Tracking overhead slows execution. Large profiles consume disk space. Native tra
 
 **memray** was developed by **Bloomberg** and released as open source in **2022**. It was designed for debugging memory issues in large-scale Python applications used in financial services.
 
+# INSTALL
+
+```apt: sudo apt install python3-memray```
+
+```dnf: sudo dnf install python3-memray```
+
+```pacman: sudo pacman -S memray```
+
+```brew: brew install memray```
+
+```nix: nix profile install nixpkgs#memray```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [py-spy](/man/py-spy)(1), [valgrind](/man/valgrind)(1)

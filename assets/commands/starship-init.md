@@ -45,6 +45,22 @@ Initialize Starship prompt for shells
 
 **starship init** generates shell initialization for Starship prompt. Outputs script to be evaluated by shell. Add to shell config for persistent prompt customization.
 
+# INSTALL
+
+```apt: sudo apt install starship```
+
+```pacman: sudo pacman -S starship```
+
+```apk: sudo apk add starship```
+
+```zypper: sudo zypper install starship```
+
+```brew: brew install starship```
+
+```nix: nix profile install nixpkgs#starship```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [starship](/man/starship)(1)

@@ -62,6 +62,22 @@ _device_
 
 Part of exfatprogs package. Read-only operation. Absence of doubly-allocated clusters does not guarantee they are not doubly-allocated unless scanning starts from the root directory recursively.
 
+# INSTALL
+
+```apt: sudo apt install exfatprogs```
+
+```dnf: sudo dnf install exfatprogs```
+
+```pacman: sudo pacman -S exfatprogs```
+
+```apk: sudo apk add exfatprogs```
+
+```zypper: sudo zypper install exfatprogs```
+
+```nix: nix profile install nixpkgs#exfatprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fsck.exfat](/man/fsck.exfat)(8), [mkfs.exfat](/man/mkfs.exfat)(8), [tune.exfat](/man/tune.exfat)(8), [exfatlabel](/man/exfatlabel)(8)

@@ -58,6 +58,20 @@ OpenBSD specific. Works with OpenNTPD. Read-only queries.
 
 ntpctl was developed as the **control interface** for OpenNTPD on OpenBSD systems.
 
+# INSTALL
+
+```apt: sudo apt install ntpd-rs```
+
+```dnf: sudo dnf install ntpd-rs```
+
+```pacman: sudo pacman -S ntpd-rs```
+
+```zypper: sudo zypper install ntpd-rs```
+
+```nix: nix profile install nixpkgs#ntpd-rs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ntpd](/man/ntpd)(1), [ntpq](/man/ntpq)(1), [chronyc](/man/chronyc)(1)

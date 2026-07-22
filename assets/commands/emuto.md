@@ -50,6 +50,12 @@ Expression syntax differs from jq. May not handle all JSON edge cases. Performan
 
 emuto was developed as a JSON transformation tool, providing jq-like functionality with its own expression syntax for data manipulation.
 
+# INSTALL
+
+```aur: yay -S emuto```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [gron](/man/gron)(1), [fx](/man/fx)(1)

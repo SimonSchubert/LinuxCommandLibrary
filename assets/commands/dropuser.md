@@ -90,6 +90,12 @@ Dropping a role does not terminate its open sessions, and it does not touch obje
 
 dropuser is one of PostgreSQL's original client wrapper scripts, dating from a time when they really were shell scripts around `psql`; they are C programs now, but the interface is unchanged. The name predates the unification of users and groups into roles in **PostgreSQL 8.1** (2005), which is why the tool is called `dropuser` while the SQL it emits says `DROP ROLE`.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [createuser](/man/createuser)(1), [psql](/man/psql)(1), [dropdb](/man/dropdb)(1), [createdb](/man/createdb)(1)

@@ -34,6 +34,14 @@ Retrieve SNMP agent status summary
 
 **snmpstatus** retrieves status information from an SNMP agent. Shows system description, uptime, and interface summary. Quick health check for network devices. Part of Net-SNMP suite.
 
+# INSTALL
+
+```apt: sudo apt install snmp```
+
+```apk: sudo apk add net-snmp-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snmpget](/man/snmpget)(1), [snmpwalk](/man/snmpwalk)(1)

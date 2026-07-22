@@ -81,6 +81,24 @@ The server captures the display content and transmits it to VNC clients. By defa
 
 Requires an existing X display to be running. May have performance issues with compositing window managers. Security concerns when used without encryption; consider using **-ssl** or tunneling over SSH.
 
+# INSTALL
+
+```apt: sudo apt install x11vnc```
+
+```dnf: sudo dnf install x11vnc```
+
+```pacman: sudo pacman -S x11vnc```
+
+```apk: sudo apk add x11vnc```
+
+```zypper: sudo zypper install x11vnc```
+
+```brew: brew install x11vnc```
+
+```nix: nix profile install nixpkgs#x11vnc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vncviewer](/man/vncviewer)(1), [xvnc](/man/xvnc)(1), [ssh](/man/ssh)(1)

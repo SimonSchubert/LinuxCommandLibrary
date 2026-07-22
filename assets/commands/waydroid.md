@@ -79,6 +79,18 @@ Waydroid provides near-native Android performance by sharing the Linux kernel wi
 
 Requires a Wayland compositor (not X11). Needs kernel modules for binder and ashmem. Some Android apps may not work due to hardware or architecture differences. ARM translation layer needed for x86 hosts to run ARM-only apps.
 
+# INSTALL
+
+```dnf: sudo dnf install waydroid```
+
+```pacman: sudo pacman -S waydroid```
+
+```apk: sudo apk add waydroid```
+
+```nix: nix profile install nixpkgs#waydroid```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [anbox](/man/anbox)(1), [lxc](/man/lxc)(1)

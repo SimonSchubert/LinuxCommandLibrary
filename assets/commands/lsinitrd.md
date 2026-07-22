@@ -53,6 +53,14 @@ List **included modules**
 
 Part of dracut tools. Initramfs location varies by distribution (/boot or /boot/efi). May require root for some operations.
 
+# INSTALL
+
+```apt: sudo apt install dracut-core```
+
+```apk: sudo apk add dracut-core```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dracut](/man/dracut)(8), [mkinitcpio](/man/mkinitcpio)(8), [update-initramfs](/man/update-initramfs)(8)

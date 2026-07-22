@@ -102,5 +102,17 @@ Complex configuration. Requires careful security setup. Debug mode outputs secre
 
 FreeRADIUS is the most widely deployed RADIUS server, started in 1999 by **Alan DeKok** and **Miquel van Smoorenburg**.
 
+# INSTALL
+
+```dnf: sudo dnf install freeradius```
+
+```pacman: sudo pacman -S freeradius```
+
+```apk: sudo apk add freeradius```
+
+```nix: nix profile install nixpkgs#freeradius```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

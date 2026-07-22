@@ -45,6 +45,24 @@ Part of mtools. FAT filesystem only. Recursively deletes all contents.
 
 mdeltree is part of **mtools**, providing MS-DOS deltree functionality on Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install mtools```
+
+```dnf: sudo dnf install mtools```
+
+```pacman: sudo pacman -S mtools```
+
+```apk: sudo apk add mtools```
+
+```zypper: sudo zypper install mtools```
+
+```brew: brew install mtools```
+
+```nix: nix profile install nixpkgs#mtools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mdel](/man/mdel)(1), [mmd](/man/mmd)(1), [mcopy](/man/mcopy)(1)

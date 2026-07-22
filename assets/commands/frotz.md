@@ -145,6 +145,18 @@ Some games require specific Z-machine versions. Color support depends on termina
 
 **Frotz** was written by **Stefan Jokisch** in the mid-**1990s** as a portable Z-machine interpreter. It became one of the most popular interpreters for Infocom games and modern interactive fiction. The name references the spell from Zork.
 
+# INSTALL
+
+```dnf: sudo dnf install frotz```
+
+```apk: sudo apk add frotz```
+
+```brew: brew install frotz```
+
+```nix: nix profile install nixpkgs#frotz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nethack](/man/nethack)(6)

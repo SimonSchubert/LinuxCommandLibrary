@@ -65,6 +65,18 @@ Requires switcheroo-control.service to be running. Only works on systems with hy
 
 **switcheroo-control** was developed for the GNOME desktop to provide a user-friendly interface for hybrid graphics management on Linux. It abstracts the kernel's vga_switcheroo mechanism, allowing desktop environments to offer "Launch using Discrete Graphics" options in application menus.
 
+# INSTALL
+
+```dnf: sudo dnf install switcheroo-control```
+
+```pacman: sudo pacman -S switcheroo-control```
+
+```zypper: sudo zypper install switcheroo-control```
+
+```nix: nix profile install nixpkgs#switcheroo-control```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [prime-run](/man/prime-run)(1), [nvidia-settings](/man/nvidia-settings)(1), [glxinfo](/man/glxinfo)(1)

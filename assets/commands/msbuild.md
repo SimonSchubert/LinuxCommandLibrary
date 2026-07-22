@@ -73,6 +73,12 @@ Requires .NET SDK. Windows-centric but cross-platform. XML-based project files.
 
 MSBuild was created by **Microsoft** as the build platform for .NET, first released with Visual Studio 2005.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#msbuild```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dotnet](/man/dotnet)(1), [make](/man/make)(1)

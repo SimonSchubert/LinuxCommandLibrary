@@ -87,6 +87,17 @@ Requires the Rust toolchain to be installed. Continuous checking may cause high 
 
 **bacon** was created by Denys Séguret (Canop) around **2021** to provide a better development experience for Rust projects with continuous feedback.
 
+# INSTALL
+
+```apt: sudo apt install bacon```
+
+```pacman: sudo pacman -S bacon```
+
+```brew: brew install bacon```
+
+```nix: nix profile install nixpkgs#bacon```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-watch](/man/cargo-watch)(1), [clippy](/man/clippy)(1), [rustc](/man/rustc)(1)

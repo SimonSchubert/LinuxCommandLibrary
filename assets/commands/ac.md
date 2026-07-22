@@ -78,6 +78,19 @@ Connect time calculations depend on accurate wtmp records. System crashes or imp
 
 Part of **GNU Accounting Utilities**, based on traditional UNIX accounting tools. The GNU version offers enhanced functionality compared to traditional implementations.
 
+# INSTALL
+
+```apt: sudo apt install acct```
+
+```aur: yay -S acct```
+
+```apk: sudo apk add acct```
+
+```zypper: sudo zypper install acct```
+
+```nix: nix profile install nixpkgs#acct```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [last](/man/last)(1), [lastlog](/man/lastlog)(8), [login](/man/login)(1), [sa](/man/sa)(8), [accton](/man/accton)(8), [lastcomm](/man/lastcomm)(1)

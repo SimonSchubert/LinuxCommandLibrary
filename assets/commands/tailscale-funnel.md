@@ -62,6 +62,22 @@ Tailscale automatically provisions and manages TLS certificates for the endpoint
 
 Exposes services to the public internet -- use with caution. Funnel must be enabled in the Tailscale admin console ACL policy. Only ports 443, 8443, and 10000 are supported for public-facing endpoints.
 
+# INSTALL
+
+```dnf: sudo dnf install tailscale```
+
+```pacman: sudo pacman -S tailscale```
+
+```apk: sudo apk add tailscale```
+
+```zypper: sudo zypper install tailscale```
+
+```brew: brew install tailscale```
+
+```nix: nix profile install nixpkgs#tailscale```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tailscale](/man/tailscale)(1), [tailscale-up](/man/tailscale-up)(1), [ngrok](/man/ngrok)(1)

@@ -54,6 +54,14 @@ The **connectivity check** actively probes connectivity by accessing a known URL
 
 Disabling networking affects all NetworkManager-managed connections but not interfaces managed by other tools. The connectivity check depends on network accessibility to connectivity check servers (configurable in NetworkManager.conf). Some networks block these probes.
 
+# INSTALL
+
+```apt: sudo apt install network-manager```
+
+```apk: sudo apk add networkmanager-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmcli](/man/nmcli)(1), [nmcli-general](/man/nmcli-general)(1), [nmcli-radio](/man/nmcli-radio)(1), [NetworkManager](/man/NetworkManager)(8)

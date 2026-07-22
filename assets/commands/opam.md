@@ -69,6 +69,24 @@ Requires initialization. Switches isolate environments. Shell configuration need
 
 opam was created for **OCaml package management** with compiler version switching.
 
+# INSTALL
+
+```apt: sudo apt install opam```
+
+```dnf: sudo dnf install opam```
+
+```pacman: sudo pacman -S opam```
+
+```apk: sudo apk add opam```
+
+```zypper: sudo zypper install opam```
+
+```brew: brew install opam```
+
+```nix: nix profile install nixpkgs#opam```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ocaml](/man/ocaml)(1), [dune](/man/dune)(1)

@@ -78,6 +78,16 @@ Requires a system tray (most desktop environments provide one). Only works with 
 
 KDocker was originally a KDE-specific tool but evolved to work with any X11 desktop environment. It provides universal system tray functionality regardless of toolkit.
 
+# INSTALL
+
+```apt: sudo apt install kdocker```
+
+```zypper: sudo zypper install kdocker```
+
+```nix: nix profile install nixpkgs#kdocker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [alltray](/man/alltray)(1), [trayer](/man/trayer)(1)

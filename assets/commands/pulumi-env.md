@@ -73,6 +73,18 @@ Manage Pulumi ESC environments and secrets
 
 **pulumi env** manages Pulumi ESC (Environments, Secrets, and Configuration). ESC provides centralized management of configuration and secrets across stacks and applications. Environments can compose other environments and integrate with secret providers like AWS Secrets Manager, HashiCorp Vault, and others.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-config](/man/pulumi-config)(1), [pulumi-stack](/man/pulumi-stack)(1)

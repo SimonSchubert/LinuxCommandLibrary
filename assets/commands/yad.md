@@ -129,6 +129,20 @@ Requires GTK+ 3 libraries. Some features like HTML rendering require WebKit. Dia
 
 **YAD** was created by Victor Ananjevsky as an enhanced fork of Zenity. Development began around **2008** to address limitations in Zenity and add features needed for more sophisticated shell script GUIs. The project has been actively maintained with regular releases adding new dialog types and options.
 
+# INSTALL
+
+```apt: sudo apt install yad```
+
+```dnf: sudo dnf install yad```
+
+```pacman: sudo pacman -S yad```
+
+```apk: sudo apk add yad```
+
+```nix: nix profile install nixpkgs#yad```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zenity](/man/zenity)(1), [dialog](/man/dialog)(1), [kdialog](/man/kdialog)(1), [whiptail](/man/whiptail)(1)

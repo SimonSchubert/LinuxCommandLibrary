@@ -80,6 +80,22 @@ Requires root privileges for most operations. Configuration changes require a re
 
 keyd was developed as a modern, simple key remapping solution that works universally across display servers. It provides functionality similar to tools like xmodmap but operates at the kernel input level.
 
+# INSTALL
+
+```apt: sudo apt install onak```
+
+```pacman: sudo pacman -S keyd```
+
+```apk: sudo apk add keyd```
+
+```zypper: sudo zypper install keyd```
+
+```brew: brew install keyd```
+
+```nix: nix profile install nixpkgs#keyd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xmodmap](/man/xmodmap)(1), [setxkbmap](/man/setxkbmap)(1), [evtest](/man/evtest)(1), [systemctl](/man/systemctl)(1)

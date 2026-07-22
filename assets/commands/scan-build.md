@@ -76,6 +76,18 @@ Increases build time significantly. False positives require tuning. C/C++ and Ob
 
 **scan-build** is part of the **Clang** project. It provides an accessible interface to Clang's static analysis capabilities.
 
+# INSTALL
+
+```apt: sudo apt install clang-tools```
+
+```apk: sudo apk add clang22-analyzer```
+
+```zypper: sudo zypper install clang-tools```
+
+```nix: nix profile install nixpkgs#clang-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clang](/man/clang)(1), [cppcheck](/man/cppcheck)(1), [make](/man/make)(1)

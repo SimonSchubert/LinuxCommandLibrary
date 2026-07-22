@@ -66,6 +66,20 @@ Configuration file required. Transcoding limited. Database in /var/cache.
 
 MiniDLNA (ReadyMedia) was created as a lightweight **DLNA** server for embedded systems.
 
+# INSTALL
+
+```dnf: sudo dnf install minidlna```
+
+```pacman: sudo pacman -S minidlna```
+
+```zypper: sudo zypper install minidlna```
+
+```brew: brew install minidlna```
+
+```nix: nix profile install nixpkgs#minidlna```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 

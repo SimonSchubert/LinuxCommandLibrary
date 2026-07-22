@@ -92,6 +92,21 @@ Log buffers have limited size; old messages are overwritten. Some system logs ma
 
 Logcat has been part of the Android SDK since the initial release in **2008**, based on the Linux kernel's printk logging system but adapted for Android's needs with tag-based filtering.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb](/man/adb)(1), [dmesg](/man/dmesg)(1), [journalctl](/man/journalctl)(1)

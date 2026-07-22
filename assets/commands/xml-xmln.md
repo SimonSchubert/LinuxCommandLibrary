@@ -25,6 +25,22 @@ _file_
 
 Operates only on well-formed XML. Default namespaces (without a prefix) are reported without a prefix; use an alias when building XPath queries.
 
+# INSTALL
+
+```dnf: sudo dnf install xmlstarlet```
+
+```pacman: sudo pacman -S xmlstarlet```
+
+```apk: sudo apk add xmlstarlet```
+
+```zypper: sudo zypper install xmlstarlet```
+
+```brew: brew install xmlstarlet```
+
+```nix: nix profile install nixpkgs#xmlstarlet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xml-elements](/man/xml-elements)(1), [xml-select](/man/xml-select)(1)

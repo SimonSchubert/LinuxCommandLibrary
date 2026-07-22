@@ -20,6 +20,14 @@ re-enable frozen pipeline stages
 
 **dvc unfreeze** unfreezes previously frozen pipeline stages, allowing them to be executed again during dvc repro.
 
+# INSTALL
+
+```brew: brew install dvc```
+
+```nix: nix profile install nixpkgs#dvc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dvc-freeze](/man/dvc-freeze)(1)

@@ -89,6 +89,20 @@ Requires appropriate permissions on the share to modify ACLs. ACL format follows
 
 **smbcacls** is part of the **Samba** suite, originally developed by **Andrew Tridgell** starting in **1992**. Samba provides Windows interoperability for Unix/Linux systems. The smbcacls utility enables Unix administrators to manage Windows-style permissions without requiring a Windows workstation.
 
+# INSTALL
+
+```apt: sudo apt install smbclient```
+
+```dnf: sudo dnf install samba-client```
+
+```pacman: sudo pacman -S smbclient```
+
+```apk: sudo apk add samba-client```
+
+```zypper: sudo zypper install samba-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smbclient](/man/smbclient)(1), [mount.cifs](/man/mount.cifs)(8), [getfacl](/man/getfacl)(1), [setfacl](/man/setfacl)(1)

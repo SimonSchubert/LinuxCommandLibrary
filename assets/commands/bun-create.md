@@ -71,6 +71,16 @@ _destination_
 
 Template availability depends on the source. GitHub templates require network access. Some templates may have additional setup steps documented in their README.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-init](/man/bun-init)(1), [npm-init](/man/npm-init)(1)

@@ -70,6 +70,12 @@ Deprecated in favor of client-side font rendering (fontconfig/FreeType). Most mo
 
 **xfs** was developed for the X Window System to centralize font management. With the transition to client-side rendering using fontconfig and FreeType, xfs became largely obsolete. It remains available for legacy X applications requiring server-side fonts.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#xfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fc-cache](/man/fc-cache)(1), [xlsfonts](/man/xlsfonts)(1), [xset](/man/xset)(1)

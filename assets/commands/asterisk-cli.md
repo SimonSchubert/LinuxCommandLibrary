@@ -131,6 +131,17 @@ The Asterisk daemon must be running before connecting with **-r**. Some commands
 
 **Asterisk** was created by **Mark Spencer** at Digium (now Sangoma) and first released in **1999**. It pioneered software-based PBX systems and VoIP telephony. The CLI has evolved alongside Asterisk, with the introduction of PJSIP in Asterisk 12 (2013) providing a modern SIP stack alongside the legacy chan_sip module.
 
+# INSTALL
+
+```dnf: sudo dnf install asterisk```
+
+```aur: yay -S asterisk```
+
+```apk: sudo apk add asterisk```
+
+```nix: nix profile install nixpkgs#asterisk```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [asterisk](/man/asterisk)(8)

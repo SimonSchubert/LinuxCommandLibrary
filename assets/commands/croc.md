@@ -104,6 +104,18 @@ Features include resumable transfers (if interrupted, transfers can continue fro
 
 Default relay is public (croc.schollz.com). For sensitive transfers, run your own relay. Code phrases should be shared securely.
 
+# INSTALL
+
+```pacman: sudo pacman -S croc```
+
+```apk: sudo apk add croc```
+
+```brew: brew install croc```
+
+```nix: nix profile install nixpkgs#croc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rsync](/man/rsync)(1), [scp](/man/scp)(1)

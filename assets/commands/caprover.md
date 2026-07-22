@@ -114,6 +114,12 @@ Requires prior login to the machine.
 
 Requires Node.js and npm. Uncommitted and git-ignored files are not included when deploying branches. Install via npm install -g caprover.
 
+# INSTALL
+
+```aur: yay -S caprover```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [kubectl](/man/kubectl)(1), [heroku](/man/heroku)(1)

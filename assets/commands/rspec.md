@@ -88,6 +88,14 @@ Requires rspec gem. Rails apps use rspec-rails. Large suites may be slow.
 
 **RSpec** was created by **Steven Baker** and **David Chelimsky** around **2005**. It pioneered BDD-style testing in Ruby and influenced testing frameworks in other languages.
 
+# INSTALL
+
+```pacman: sudo pacman -S ruby-rspec-core```
+
+```apk: sudo apk add ruby-rspec-core```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ruby](/man/ruby)(1), [rake](/man/rake)(1), [minitest](/man/minitest)(1), [cucumber](/man/cucumber)(1)

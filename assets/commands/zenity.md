@@ -76,6 +76,24 @@ Return values indicate user action: 0 for OK/Yes, 1 for Cancel/No, 5 for timeout
 
 Requires a graphical environment (X11 or Wayland with XWayland). Dialog appearance depends on GTK theme. For KDE environments, consider **kdialog** as an alternative.
 
+# INSTALL
+
+```apt: sudo apt install zenity```
+
+```dnf: sudo dnf install zenity```
+
+```pacman: sudo pacman -S zenity```
+
+```apk: sudo apk add zenity```
+
+```zypper: sudo zypper install zenity```
+
+```brew: brew install zenity```
+
+```nix: nix profile install nixpkgs#zenity```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kdialog](/man/kdialog)(1), [dialog](/man/dialog)(1), [whiptail](/man/whiptail)(1)

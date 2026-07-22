@@ -89,6 +89,18 @@ Often needs multiple runs for references. Shell escape has security implications
 
 **pdfTeX** was developed by **Han The Thanh** starting in **1996**, extending TeX to output PDF directly. pdflatex combines this with the LaTeX format. It became the standard LaTeX workflow, largely replacing DVI output.
 
+# INSTALL
+
+```dnf: sudo dnf install texlive```
+
+```apk: sudo apk add texlive```
+
+```zypper: sudo zypper install texlive```
+
+```brew: brew install texlive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [latex](/man/latex)(1), [xelatex](/man/xelatex)(1), [lualatex](/man/lualatex)(1), [bibtex](/man/bibtex)(1)

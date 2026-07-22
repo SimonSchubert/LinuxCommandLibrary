@@ -75,6 +75,22 @@ Requires tshark (Wireshark CLI) to be installed. Root privileges needed for live
 
 **termshark** was created by **Graham Clark** to bring Wireshark's interface paradigm to the terminal, enabling packet analysis over SSH or in environments without a GUI.
 
+# INSTALL
+
+```apt: sudo apt install termshark```
+
+```pacman: sudo pacman -S termshark```
+
+```apk: sudo apk add termshark```
+
+```zypper: sudo zypper install termshark```
+
+```brew: brew install termshark```
+
+```nix: nix profile install nixpkgs#termshark```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tshark](/man/tshark)(1), [wireshark](/man/wireshark)(1), [tcpdump](/man/tcpdump)(8)

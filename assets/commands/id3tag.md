@@ -81,6 +81,22 @@ command-line tool for writing ID3 tags to MP3 files
 
 **id3tag** is a command-line tool for writing ID3 tags to MP3 files. Part of the id3lib/libid3-tools package. Renders both ID3v1 and ID3v2 tags by default; use **-1** or **-2** to render only one type. Can set title, artist, album, year, track number, genre, and comments. Useful for batch tagging with shell scripts. Use **id3info** to view existing tags.
 
+# INSTALL
+
+```apt: sudo apt install libid3-tools```
+
+```dnf: sudo dnf install id3lib```
+
+```pacman: sudo pacman -S id3lib```
+
+```apk: sudo apk add id3lib```
+
+```brew: brew install id3lib```
+
+```nix: nix profile install nixpkgs#id3lib```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [id3v2](/man/id3v2)(1), [mp3info](/man/mp3info)(1)

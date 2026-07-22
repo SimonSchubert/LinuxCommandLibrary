@@ -94,6 +94,24 @@ Output format varies by option. Running without arguments shows all block device
 
 Part of **util-linux** package. Developed to provide a unified interface for identifying block device attributes.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add blkid```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsblk](/man/lsblk)(8), [findfs](/man/findfs)(8), [mount](/man/mount)(8), [fdisk](/man/fdisk)(8)

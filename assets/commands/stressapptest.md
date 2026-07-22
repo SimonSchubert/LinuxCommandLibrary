@@ -90,6 +90,18 @@ Generates heat. May trigger failures. Use carefully on production.
 
 **stressapptest** was developed by **Google** to stress test memory subsystems and find hardware errors.
 
+# INSTALL
+
+```apt: sudo apt install stressapptest```
+
+```dnf: sudo dnf install stressapptest```
+
+```zypper: sudo zypper install stressapptest```
+
+```nix: nix profile install nixpkgs#stressapptest```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stress](/man/stress)(1), [memtester](/man/memtester)(1), [mprime](/man/mprime)(1)

@@ -59,6 +59,12 @@ Debian-specific. For dial-up networking.
 
 pppconfig was created for **Debian** PPP connection configuration.
 
+# INSTALL
+
+```aur: yay -S pppconfig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pppd](/man/pppd)(8), [pon](/man/pon)(1), [poff](/man/poff)(1), [pppoeconf](/man/pppoeconf)(8)

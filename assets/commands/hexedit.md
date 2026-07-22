@@ -105,6 +105,22 @@ Editing block devices or system files requires root. No undo history - only reve
 
 **hexedit** was written by Pixel (Pascal Rigaux) and released in the 1990s. It filled the need for a simple, fast hex editor for Unix terminals. Despite its age, it remains popular due to its simplicity, low resource usage, and availability in virtually all Linux distribution repositories.
 
+# INSTALL
+
+```apt: sudo apt install hexedit```
+
+```dnf: sudo dnf install hexedit```
+
+```pacman: sudo pacman -S hexedit```
+
+```zypper: sudo zypper install hexedit```
+
+```brew: brew install hexedit```
+
+```nix: nix profile install nixpkgs#hexedit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xxd](/man/xxd)(1), [hexdump](/man/hexdump)(1), [od](/man/od)(1), [dd](/man/dd)(1)

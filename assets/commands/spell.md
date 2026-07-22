@@ -86,6 +86,14 @@ spell provides no spelling suggestions and no interactive correction. It may fla
 
 **spell** was developed by **Stephen C. Johnson** at Bell Labs and first appeared in **Version 6 Unix** in **1975**. It was one of the earliest text-processing utilities and helped establish Unix as a document preparation system. The command has remained largely unchanged, preserving its simple, filter-based design philosophy.
 
+# INSTALL
+
+```apt: sudo apt install spell```
+
+```apk: sudo apk add aspell-compat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aspell](/man/aspell)(1), [ispell](/man/ispell)(1), [hunspell](/man/hunspell)(1), [look](/man/look)(1)

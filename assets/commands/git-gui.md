@@ -69,6 +69,16 @@ Requires Tcl/Tk installed. Interface is dated compared to modern GUI tools. May 
 
 git gui was created by **Shawn O. Pearce** as the official Tcl/Tk GUI for Git, providing graphical operations since Git's early days.
 
+# INSTALL
+
+```dnf: sudo dnf install git-gui```
+
+```zypper: sudo zypper install git-gui```
+
+```brew: brew install git-gui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-commit](/man/git-commit)(1), [git-blame](/man/git-blame)(1), [gitk](/man/gitk)(1), [tig](/man/tig)(1)

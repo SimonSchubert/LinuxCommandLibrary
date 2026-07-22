@@ -87,6 +87,18 @@ Serve ebook libraries over the network
 
 Enable authentication before exposing to internet. On macOS, binary is inside calibre.app bundle. Use --enable-local-write for calibredb remote access.
 
+# INSTALL
+
+```dnf: sudo dnf install calibre```
+
+```pacman: sudo pacman -S calibre```
+
+```zypper: sudo zypper install calibre```
+
+```nix: nix profile install nixpkgs#calibre```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [calibredb](/man/calibredb)(1), [calibre](/man/calibre)(1), [ebook-convert](/man/ebook-convert)(1)

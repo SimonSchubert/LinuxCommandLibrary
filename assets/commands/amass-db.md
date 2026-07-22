@@ -113,6 +113,15 @@ The database can grow large over time; periodic pruning or rotating the **-dir**
 
 **amass** is an **OWASP** project originally created by **Jeff Foley** (caffix) for in-depth attack surface mapping. The graph database and **db** subcommand were added in the v3 series to support persistent storage of enumeration results and change tracking. In **v4** the database tooling was split out into **oam-tools** (`oam_subs`, etc.).
 
+# INSTALL
+
+```aur: yay -S amass```
+
+```brew: brew install amass```
+
+```nix: nix profile install nixpkgs#amass```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [amass](/man/amass)(1), [amass-enum](/man/amass-enum)(1), [amass-track](/man/amass-track)(1)

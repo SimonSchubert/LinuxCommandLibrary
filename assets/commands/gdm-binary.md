@@ -35,6 +35,20 @@ On modern systems, gdm-binary is typically started and managed by systemd rather
 
 Users rarely need to interact with gdm-binary directly, as system management commands like systemctl or the gdm wrapper script are the preferred interfaces for controlling the display manager.
 
+# INSTALL
+
+```dnf: sudo dnf install gdm```
+
+```pacman: sudo pacman -S gdm```
+
+```apk: sudo apk add gdm```
+
+```zypper: sudo zypper install gdm```
+
+```nix: nix profile install nixpkgs#gdm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdm](/man/gdm)(8), [gdm-restart](/man/gdm-restart)(1)

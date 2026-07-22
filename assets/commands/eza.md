@@ -82,6 +82,24 @@ Requires terminal with color support. Icons need compatible font (Nerd Font). Gi
 
 eza is a maintained fork of **exa**, which was unmaintained since 2023. It continues development with new features and bug fixes, preserving exa's modern approach to file listing while actively maintaining the codebase.
 
+# INSTALL
+
+```apt: sudo apt install eza```
+
+```dnf: sudo dnf install eza```
+
+```pacman: sudo pacman -S eza```
+
+```apk: sudo apk add eza```
+
+```zypper: sudo zypper install eza```
+
+```brew: brew install eza```
+
+```nix: nix profile install nixpkgs#eza```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [tree](/man/tree)(1), [lsd](/man/lsd)(1), [exa](/man/exa)(1)

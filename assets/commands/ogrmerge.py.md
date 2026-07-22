@@ -75,6 +75,14 @@ Part of GDAL. Python script. Requires compatible schemas for single layer merge.
 
 ogrmerge.py was added to **GDAL** for convenient vector data merging.
 
+# INSTALL
+
+```apt: sudo apt install gdal-bin```
+
+```apk: sudo apk add gdal-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ogr2ogr](/man/ogr2ogr)(1), [ogrinfo](/man/ogrinfo)(1), [gdalinfo](/man/gdalinfo)(1)

@@ -70,6 +70,24 @@ May misidentify corrupted or unusual files. Custom formats may not be recognized
 
 file dates back to **Unix Version 6** (1975). The magic file database approach was developed to identify the many file formats accumulating on Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install file```
+
+```dnf: sudo dnf install file```
+
+```pacman: sudo pacman -S file```
+
+```apk: sudo apk add file```
+
+```zypper: sudo zypper install file```
+
+```brew: brew install file```
+
+```nix: nix profile install nixpkgs#file```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stat](/man/stat)(1), [hexdump](/man/hexdump)(1), [identify](/man/identify)(1)

@@ -101,6 +101,17 @@ Instance modifications may cause brief downtime unless Multi-AZ is enabled. Stor
 
 Amazon RDS launched in **October 2009** with MySQL support. PostgreSQL was added in **2013**, Aurora in **2014**. Multi-AZ deployments, read replicas, and encryption options have expanded over time. Blue/Green deployments for zero-downtime upgrades launched in **2022**.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-aurora](/man/aws-aurora)(1), [mysql](/man/mysql)(1), [psql](/man/psql)(1)

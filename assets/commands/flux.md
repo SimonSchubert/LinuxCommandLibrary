@@ -127,6 +127,16 @@ Requires kubectl configured with cluster access. Bootstrap creates resources in 
 
 Flux was originally created by Weaveworks in **2016** as one of the first GitOps tools for Kubernetes. **Flux v2** was released in **2020** as a complete rewrite using the GitOps Toolkit, providing a more modular and extensible architecture. Flux became a **CNCF Graduated project** in **2022**, reflecting its maturity and wide adoption in the cloud-native ecosystem.
 
+# INSTALL
+
+```apk: sudo apk add flux```
+
+```brew: brew install flux```
+
+```nix: nix profile install nixpkgs#flux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [helm](/man/helm)(1), [kustomize](/man/kustomize)(1), [argocd](/man/argocd)(1)

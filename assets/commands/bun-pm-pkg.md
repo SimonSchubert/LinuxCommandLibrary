@@ -35,6 +35,16 @@ Read and modify package.json fields
 
 **bun pm pkg** provides commands to read and modify package.json fields programmatically. This is useful for scripting and automation.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-pm](/man/bun-pm)(1)

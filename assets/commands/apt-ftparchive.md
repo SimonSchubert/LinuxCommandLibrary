@@ -67,6 +67,21 @@ Release files should be signed with gpg for secure repositories. Large repositor
 
 **apt-ftparchive** is part of APT, designed for repository maintainers to create the index files that APT clients use to find and download packages.
 
+# INSTALL
+
+```apt: sudo apt install apt-utils```
+
+```dnf: sudo dnf install apt-utils```
+
+```pacman: sudo pacman -S apt```
+
+```apk: sudo apk add apt```
+
+```brew: brew install apt```
+
+```nix: nix profile install nixpkgs#apt```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apt](/man/apt)(8)

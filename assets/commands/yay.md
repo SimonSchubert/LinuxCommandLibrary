@@ -436,6 +436,12 @@ Like other AUR helpers, yay facilitates installing **user-submitted packages** f
 
 The yay command, short for "**Yet Another Yogurt**," is an AUR (Arch User Repository) helper tool written in **Go**, designed to simplify installing and managing packages on **Arch Linux** and its derivatives. It was created by developer Jguer and first initiated in **September 2016**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#yay```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [makepkg](/man/makepkg)(8), [pacman](/man/pacman)(8)

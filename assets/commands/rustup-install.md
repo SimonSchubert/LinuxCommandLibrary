@@ -76,6 +76,22 @@ By default, rustup checks for and applies its own self-updates whenever a toolch
 
 **rustup** is the official Rust toolchain installer, created by **Brian Anderson** and now maintained by the **Rust project**. **rustup install** has been the canonical way to add new toolchains since rustup's initial release.
 
+# INSTALL
+
+```apt: sudo apt install rustup```
+
+```dnf: sudo dnf install rustup```
+
+```pacman: sudo pacman -S rustup```
+
+```zypper: sudo zypper install rustup```
+
+```brew: brew install rustup```
+
+```nix: nix profile install nixpkgs#rustup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rustup](/man/rustup)(1), [rustup-toolchain](/man/rustup-toolchain)(1), [rustup-uninstall](/man/rustup-uninstall)(1)

@@ -62,6 +62,21 @@ See **bat** for the full set of options and configuration. Common flags include 
 **~/.config/bat/config**
 > Default command-line options applied automatically. Shared with bat. Run `batcat --config-file` to print the active path.
 
+# INSTALL
+
+```apt: sudo apt install bat```
+
+```dnf: sudo dnf install bat```
+
+```pacman: sudo pacman -S bat```
+
+```zypper: sudo zypper install bat```
+
+```brew: brew install bat```
+
+```nix: nix profile install nixpkgs#bat```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [bat](/man/bat)(1), [cat](/man/cat)(1), [less](/man/less)(1), [highlight](/man/highlight)(1)

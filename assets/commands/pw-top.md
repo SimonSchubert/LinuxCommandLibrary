@@ -55,6 +55,16 @@ Requires running PipeWire daemon. Statistics refresh rate depends on system load
 
 **pw-top** is part of **PipeWire**, providing performance monitoring similar to top but specifically for the audio subsystem. It helps diagnose latency and performance issues.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-tools```
+
+```zypper: sudo zypper install pipewire-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pw-cli](/man/pw-cli)(1), [pw-dump](/man/pw-dump)(1), [pw-profiler](/man/pw-profiler)(1), [pipewire](/man/pipewire)(1)

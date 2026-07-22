@@ -28,6 +28,16 @@ Blazingly fast general-purpose fuzzy finder TUI
 
 **television** was created by **Alex Pasmantier** (alexpasmantier) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S television```
+
+```brew: brew install television```
+
+```nix: nix profile install nixpkgs#television```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fzf](/man/fzf)(1)

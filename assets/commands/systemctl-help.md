@@ -50,6 +50,22 @@ Not all units have associated documentation. The Documentation= directive must b
 
 The **help** subcommand provides integrated documentation access directly from the unit management interface, linking units to their relevant manual pages.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-cat](/man/systemctl-cat)(1), [man](/man/man)(1)

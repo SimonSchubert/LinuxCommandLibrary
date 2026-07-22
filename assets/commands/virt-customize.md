@@ -111,6 +111,20 @@ VM must be shut down. Don't run as root unless necessary. Snapshot disk before m
 
 **virt-customize** is part of libguestfs, created by Red Hat for virtual machine image manipulation. The toolset provides safe, scriptable access to VM disk images without requiring the guest to be running.
 
+# INSTALL
+
+```apt: sudo apt install guestfs-tools```
+
+```dnf: sudo dnf install guestfs-tools```
+
+```pacman: sudo pacman -S guestfs-tools```
+
+```zypper: sudo zypper install guestfs-tools```
+
+```nix: nix profile install nixpkgs#guestfs-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virt-sysprep](/man/virt-sysprep)(1)

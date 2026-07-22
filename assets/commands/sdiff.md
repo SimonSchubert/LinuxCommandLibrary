@@ -103,6 +103,24 @@ Binary files display poorly. Very long lines may be truncated. Interactive mode 
 
 **sdiff** is part of GNU diffutils, developed by the Free Software Foundation. Side-by-side diff originated in Unix research, providing visual comparison before graphical diff tools existed. The GNU version added interactive merge mode and various comparison options.
 
+# INSTALL
+
+```apt: sudo apt install diffutils```
+
+```dnf: sudo dnf install diffutils```
+
+```pacman: sudo pacman -S diffutils```
+
+```apk: sudo apk add diffutils```
+
+```zypper: sudo zypper install diffutils```
+
+```brew: brew install diffutils```
+
+```nix: nix profile install nixpkgs#diffutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [diff3](/man/diff3)(1), [cmp](/man/cmp)(1), [vimdiff](/man/vimdiff)(1)

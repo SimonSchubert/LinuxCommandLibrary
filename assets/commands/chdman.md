@@ -91,6 +91,20 @@ Hunk size must be between 16 bytes and 1 MiB. CHD format is supported by emulato
 
 CHD was developed as part of the **MAME** (Multiple Arcade Machine Emulator) project to provide efficient, lossless compression for disk images while preserving exact data for accurate emulation.
 
+# INSTALL
+
+```apt: sudo apt install mame-tools```
+
+```dnf: sudo dnf install mame-tools```
+
+```pacman: sudo pacman -S mame-tools```
+
+```zypper: sudo zypper install mame-tools```
+
+```nix: nix profile install nixpkgs#mame-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mame](/man/mame)(6)

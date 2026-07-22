@@ -78,6 +78,20 @@ yamllint validates YAML syntax and style but does not validate against schemas. 
 
 yamllint was created by **Adrien Vergé** and first released in **2016**. It was developed to address the need for a comprehensive YAML linter that checks both syntax and style issues. Written in Python, it has become a standard tool in CI/CD pipelines for validating configuration files, Ansible playbooks, Kubernetes manifests, and other YAML-based infrastructure code.
 
+# INSTALL
+
+```dnf: sudo dnf install yamllint```
+
+```pacman: sudo pacman -S yamllint```
+
+```apk: sudo apk add yamllint```
+
+```brew: brew install yamllint```
+
+```nix: nix profile install nixpkgs#yamllint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yq](/man/yq)(1), [jsonlint](/man/jsonlint)(1), [ansible-lint](/man/ansible-lint)(1)

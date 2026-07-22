@@ -92,6 +92,12 @@ The node can operate as a full node (syncing and verifying the chain), a validat
 
 Validator nodes require staking DOT tokens. Running a full node requires significant disk space and bandwidth. The `--pruning` flag still works as an alias for `--state-pruning`. HTTP and WebSocket are served on a single unified port (default 9944).
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#polkadot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cardano-node](/man/cardano-node)(1), [geth](/man/geth)(1)

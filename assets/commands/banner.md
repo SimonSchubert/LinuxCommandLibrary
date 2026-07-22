@@ -39,6 +39,17 @@ Output width can be very large at the default setting. Not all systems have bann
 
 **banner** has been part of Unix systems since the early days, originally used for printing large banners on line printers in the **1970s**.
 
+# INSTALL
+
+```apt: sudo apt install sysvbanner```
+
+```dnf: sudo dnf install banner```
+
+```aur: yay -S sysvbanner```
+
+```nix: nix profile install nixpkgs#banner```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [figlet](/man/figlet)(6), [toilet](/man/toilet)(1), [cowsay](/man/cowsay)(1)

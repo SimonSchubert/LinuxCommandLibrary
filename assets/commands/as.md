@@ -73,6 +73,23 @@ Assembly syntax varies between architectures. GNU as uses AT&T syntax by default
 
 The GNU assembler was developed as part of the GNU project starting in the 1980s. It became part of GNU Binutils and supports virtually all architectures that GCC targets.
 
+# INSTALL
+
+```apt: sudo apt install binutils```
+
+```dnf: sudo dnf install binutils```
+
+```pacman: sudo pacman -S binutils```
+
+```apk: sudo apk add binutils```
+
+```zypper: sudo zypper install binutils```
+
+```brew: brew install binutils```
+
+```nix: nix profile install nixpkgs#binutils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [ld](/man/ld)(1), [objdump](/man/objdump)(1), [readelf](/man/readelf)(1)

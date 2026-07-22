@@ -96,6 +96,24 @@ Doxygen only documents what it can parse. Heavy preprocessor use, template metap
 
 Doxygen was written by **Dimitri van Heesch** and first released in **1997**, originally as a tool for generating Qt-style documentation for his own C++ code. It filled an obvious gap, since Java had Javadoc but C++ had nothing comparable, and it became the de facto standard for C and C++ documentation almost by default. It is still maintained by van Heesch, now on GitHub, close to three decades on.
 
+# INSTALL
+
+```apt: sudo apt install doxygen```
+
+```dnf: sudo dnf install doxygen```
+
+```pacman: sudo pacman -S doxygen```
+
+```apk: sudo apk add doxygen```
+
+```zypper: sudo zypper install doxygen```
+
+```brew: brew install doxygen```
+
+```nix: nix profile install nixpkgs#doxygen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [cppcheck](/man/cppcheck)(1), [javadoc](/man/javadoc)(1), [sphinx-build](/man/sphinx-build)(1)

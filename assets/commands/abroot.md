@@ -82,6 +82,12 @@ Package changes require running **pkg apply** followed by a system **reboot** be
 
 Developed for **Vanilla OS**, a Linux distribution focused on providing an immutable and atomic desktop experience using A/B partition scheme.
 
+# INSTALL
+
+```aur: yay -S abroot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apt](/man/apt)(8), [dnf](/man/dnf)(8), [ostree](/man/ostree)(1)

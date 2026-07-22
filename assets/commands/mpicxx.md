@@ -81,6 +81,12 @@ The wrapper transparently adds **-I**, **-L**, and **-l** flags required to comp
 
 Environment variables such as **OMPI_CXX** (Open MPI) or **MPICH_CXX** (MPICH) can override the underlying C++ compiler used by the wrapper.
 
+# INSTALL
+
+```apk: sudo apk add openmpi-dev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpirun](/man/mpirun)(1), [mpiexec](/man/mpiexec)(1), [mpic++](/man/mpic++)(1), [mpicc](/man/mpicc)(1), [g++](/man/g++)(1)

@@ -54,6 +54,20 @@ Subcommand of kubectl. Use with drain for maintenance. Uncordon to restore.
 
 kubectl cordon provides node scheduling control for **Kubernetes** cluster maintenance.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-drain](/man/kubectl-drain)(1), [kubectl-uncordon](/man/kubectl-uncordon)(1)

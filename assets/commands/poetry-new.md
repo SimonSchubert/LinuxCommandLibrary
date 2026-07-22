@@ -48,6 +48,18 @@ Creates new directory. Use poetry init for existing projects.
 
 poetry new provides **project scaffolding** for new Python packages.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [poetry-init](/man/poetry-init)(1)

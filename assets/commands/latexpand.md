@@ -93,6 +93,14 @@ Flatten LaTeX source by expanding \input and \include directives
 
 **latexpand** expands **\input** and **\include** commands in LaTeX documents, producing a single flattened file. Useful for journal submissions that require single-file documents (e.g., arXiv) or for processing with tools that don't handle includes. It is a Perl script distributed via CTAN and TeX Live.
 
+# INSTALL
+
+```pacman: sudo pacman -S texlive-binextra```
+
+```apk: sudo apk add texlive-binextra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdflatex](/man/pdflatex)(1), [latexmk](/man/latexmk)(1)

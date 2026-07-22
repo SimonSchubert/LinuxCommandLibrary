@@ -84,6 +84,14 @@ Uses Rust's regex syntax, which may differ from PCRE or POSIX regex in some edge
 
 **fastmod** was developed at **Facebook** (Meta) as a tool for large-scale code modifications. It addresses the need for interactive, safe refactoring across massive codebases. Released as open source, it is written in Rust for performance.
 
+# INSTALL
+
+```brew: brew install fastmod```
+
+```nix: nix profile install nixpkgs#fastmod```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sed](/man/sed)(1), [codemod](/man/codemod)(1), [comby](/man/comby)(1), [rg](/man/rg)(1)

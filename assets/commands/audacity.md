@@ -82,6 +82,21 @@ Audacity has limited command line functionality and is not designed for batch pr
 
 Audacity was started in **1999** by Dominic Mazzoni and Roger Dannenberg at Carnegie Mellon University. It became one of the most popular open-source audio editors, available across Linux, macOS, and Windows. In **2021**, the project was acquired by Muse Group, which led to community concerns about telemetry and privacy. The project continues development with regular releases.
 
+# INSTALL
+
+```apt: sudo apt install audacity```
+
+```dnf: sudo dnf install audacity```
+
+```pacman: sudo pacman -S audacity```
+
+```apk: sudo apk add audacity```
+
+```zypper: sudo zypper install audacity```
+
+```nix: nix profile install nixpkgs#audacity```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [sox](/man/sox)(1), [ardour](/man/ardour)(1), [lame](/man/lame)(1)

@@ -84,6 +84,16 @@ ELF only: gold cannot produce PE/COFF (Windows) or Mach-O (macOS) outputs. It su
 
 Gold was developed at **Google** by **Ian Lance Taylor** to speed up large C++ links and was contributed to GNU binutils in **2008**. It was the default ELF linker on many distributions throughout the 2010s before LLVM's **lld** matured. In **2022** the binutils maintainers placed gold into maintenance mode, recommending lld or new ld features for new work.
 
+# INSTALL
+
+```apt: sudo apt install binutils-gold```
+
+```dnf: sudo dnf install binutils-gold```
+
+```apk: sudo apk add binutils-gold```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ld](/man/ld)(1), [gcc](/man/gcc)(1)

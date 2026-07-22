@@ -72,6 +72,14 @@ Configuration files define record layouts with field names, widths, and types. T
 
 Requires a configuration file. Complex record structures need careful definition. The `-p` flag selects a named print format from the config, not a generic format name.
 
+# INSTALL
+
+```apt: sudo apt install ffe```
+
+```brew: brew install ffe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [awk](/man/awk)(1), [cut](/man/cut)(1), [csvtool](/man/csvtool)(1)

@@ -39,6 +39,20 @@ The interface emphasizes the Git staging workflow with a three-pane view showing
 
 Git Cola is cross-platform, running on Linux, macOS, and Windows. It integrates with system editors and diff tools, supports keyboard shortcuts for efficient workflows, and provides both beginner-friendly and power-user features. The tool is open source and actively maintained, offering an alternative to command-line Git and other GUI clients.
 
+# INSTALL
+
+```dnf: sudo dnf install git-cola```
+
+```apk: sudo apk add git-cola```
+
+```zypper: sudo zypper install git-cola```
+
+```brew: brew install git-cola```
+
+```nix: nix profile install nixpkgs#git-cola```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-cola](/man/git-cola)(1), [gitk](/man/gitk)(1), [tig](/man/tig)(1)

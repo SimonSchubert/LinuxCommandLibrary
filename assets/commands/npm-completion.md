@@ -43,6 +43,16 @@ Only **bash** and **zsh** are supported. The script will do nothing under other 
 
 npm completion provides **shell integration** for command-line tab completion.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [bash-completion](/man/bash-completion)(1)

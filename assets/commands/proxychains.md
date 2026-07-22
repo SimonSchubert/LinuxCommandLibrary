@@ -77,6 +77,22 @@ Only TCP connections are supported. UDP and ICMP traffic is not proxied. Statica
 
 proxychains was originally written by **haad** and later forked as **proxychains-ng** (proxychains4) by **rofl0r** with improvements including better stability and additional features.
 
+# INSTALL
+
+```dnf: sudo dnf install proxychains-ng```
+
+```pacman: sudo pacman -S proxychains-ng```
+
+```apk: sudo apk add proxychains-ng```
+
+```zypper: sudo zypper install proxychains-ng```
+
+```brew: brew install proxychains-ng```
+
+```nix: nix profile install nixpkgs#proxychains-ng```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tor](/man/tor)(1), [torsocks](/man/torsocks)(1), [socat](/man/socat)(1), [ssh](/man/ssh)(1), [curl](/man/curl)(1)

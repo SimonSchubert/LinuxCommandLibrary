@@ -74,6 +74,16 @@ export LESSOPEN='| chroma --fail "$1" || cat "$1"; "%s"'
 
 Autodetects language from filename and content. Use --fail for fallback pipelines.
 
+# INSTALL
+
+```apt: sudo apt install golang-chroma```
+
+```brew: brew install chroma```
+
+```nix: nix profile install nixpkgs#chroma```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [highlight](/man/highlight)(1), [pygmentize](/man/pygmentize)(1), [bat](/man/bat)(1)

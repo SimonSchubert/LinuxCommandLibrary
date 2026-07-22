@@ -64,6 +64,22 @@ The tool is useful for monitoring resource consumption by services and understan
 
 I/O accounting requires appropriate cgroup controllers to be enabled. Some resource statistics may not be available depending on kernel configuration. Part of the systemd suite.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-cgls](/man/systemd-cgls)(1), [top](/man/top)(1), [systemctl](/man/systemctl)(1), [cgroups](/man/cgroups)(7)

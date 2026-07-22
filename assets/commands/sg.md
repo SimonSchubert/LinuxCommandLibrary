@@ -47,6 +47,14 @@ The user must be a member of the target group, or the group must have a password
 
 The **sg** command is part of the shadow-utils package. If the user is not a member of the specified group and no group password is set, access will be denied. Environment variables may be reset depending on how the shell is invoked. On some systems, the **sg** name may conflict with the ast-grep tool alias; use the full path /usr/bin/sg if needed.
 
+# INSTALL
+
+```apt: sudo apt install login```
+
+```apk: sudo apk add shadow-login```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [newgrp](/man/newgrp)(1), [groups](/man/groups)(1), [id](/man/id)(1), [gpasswd](/man/gpasswd)(1), [su](/man/su)(1), [chgrp](/man/chgrp)(1)

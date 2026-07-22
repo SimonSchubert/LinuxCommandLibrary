@@ -79,3 +79,9 @@ pg_dumpall is part of **PostgreSQL**, providing cluster-wide backup since early 
 # SEE ALSO
 
 [pg_dump](/man/pg_dump)(1), [pg_restore](/man/pg_restore)(1), [psql](/man/psql)(1), [postgres](/man/postgres)(1)
+
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->

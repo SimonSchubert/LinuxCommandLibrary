@@ -80,6 +80,24 @@ SHA-1 is cryptographically broken and vulnerable to collision attacks. It should
 
 sha1sum is part of **GNU coreutils**, written by Ulrich Drepper, Scott Miller, and David Madore. SHA-1 was designed by the NSA and published by NIST in **1995**. Collision vulnerabilities were demonstrated in **2017**, leading to deprecation for cryptographic purposes.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sha256sum](/man/sha256sum)(1), [sha512sum](/man/sha512sum)(1), [md5sum](/man/md5sum)(1), [cksum](/man/cksum)(1)

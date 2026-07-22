@@ -52,6 +52,24 @@ It tries to provide useful defaults, using the most similar (by description) and
 
 This is one of the only hledger commands that writes to the journal file (see also **import**); existing transactions are never changed. It works only with journal-format files, not timeclock or timedot files. **add** won't let you record a posting dated earlier than an existing balance assignment in that account; run with **-I** to work around this.
 
+# INSTALL
+
+```apt: sudo apt install hledger```
+
+```dnf: sudo dnf install hledger```
+
+```pacman: sudo pacman -S hledger```
+
+```apk: sudo apk add hledger```
+
+```zypper: sudo zypper install hledger```
+
+```brew: brew install hledger```
+
+```nix: nix profile install nixpkgs#hledger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hledger](/man/hledger)(1), [hledger-import](/man/hledger-import)(1), [hledger-accounts](/man/hledger-accounts)(1)

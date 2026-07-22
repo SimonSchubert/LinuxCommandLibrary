@@ -86,6 +86,17 @@ bcachefs was merged into the mainline Linux kernel in version **6.7** (released 
 
 bcachefs was developed by Kent Overstreet, who also created bcache. Development began around **2015** as an evolution of bcache into a full-fledged filesystem, and it was merged into mainline Linux in kernel **6.7** in early **2024**.
 
+# INSTALL
+
+```dnf: sudo dnf install bcachefs-tools```
+
+```pacman: sudo pacman -S bcachefs-tools```
+
+```apk: sudo apk add bcachefs-tools```
+
+```nix: nix profile install nixpkgs#bcachefs-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [bcachefs-device](/man/bcachefs-device)(8), [mkfs](/man/mkfs)(8), [fsck](/man/fsck)(8), [mount](/man/mount)(8), [btrfs](/man/btrfs)(8)

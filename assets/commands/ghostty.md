@@ -125,6 +125,16 @@ Requires GPU with OpenGL 3.3+ or Vulkan (Linux) or Metal (macOS). Configuration 
 
 **Ghostty** was created by Mitchell Hashimoto (founder of HashiCorp) and publicly released in **December 2024** after several years of development. The project is open source and written in Zig.
 
+# INSTALL
+
+```pacman: sudo pacman -S ghostty```
+
+```zypper: sudo zypper install ghostty```
+
+```nix: nix profile install nixpkgs#ghostty```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kitty](/man/kitty)(1), [alacritty](/man/alacritty)(1), [wezterm](/man/wezterm)(1), [foot](/man/foot)(1), [tmux](/man/tmux)(1)

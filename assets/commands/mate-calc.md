@@ -35,6 +35,22 @@ Features include trigonometric functions, logarithms, factorials, unit conversio
 
 With **--solve**, expressions can be evaluated directly from the command line without opening the GUI, useful for scripts and quick calculations.
 
+# INSTALL
+
+```apt: sudo apt install mate-calc```
+
+```dnf: sudo dnf install mate-calc```
+
+```pacman: sudo pacman -S mate-calc```
+
+```apk: sudo apk add mate-calc```
+
+```zypper: sudo zypper install mate-calc```
+
+```nix: nix profile install nixpkgs#mate-calc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mate-calc-cmd](/man/mate-calc-cmd)(1), [bc](/man/bc)(1), [gnome-calculator](/man/gnome-calculator)(1)

@@ -69,6 +69,12 @@ Fedora/RHEL focused. Requires mock group membership. Needs chroot configs.
 
 Mock was created by the **Fedora** project for building RPM packages in isolated environments.
 
+# INSTALL
+
+```dnf: sudo dnf install mock```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rpmbuild](/man/rpmbuild)(8), [dnf](/man/dnf)(8), [koji](/man/koji)(1)

@@ -102,6 +102,20 @@ When changing UID, files owned by the user need to be manually updated. Use **-a
 
 **usermod** is part of the **shadow-utils** package for managing user accounts on Unix-like systems.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [useradd](/man/useradd)(8), [userdel](/man/userdel)(8), [passwd](/man/passwd)(1), [groupmod](/man/groupmod)(8)

@@ -110,6 +110,24 @@ Configuration complexity is high; start with generated defaults and adjust gradu
 
 uncrustify was created by **Ben Gardner** and first released in **2005**. It was designed to be a highly flexible code formatter supporting multiple languages. The project has grown to support over 700 configuration options, making it one of the most configurable code formatters available.
 
+# INSTALL
+
+```apt: sudo apt install uncrustify```
+
+```dnf: sudo dnf install uncrustify```
+
+```pacman: sudo pacman -S uncrustify```
+
+```apk: sudo apk add uncrustify```
+
+```zypper: sudo zypper install uncrustify```
+
+```brew: brew install uncrustify```
+
+```nix: nix profile install nixpkgs#uncrustify```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clang-format](/man/clang-format)(1), [astyle](/man/astyle)(1), [indent](/man/indent)(1)

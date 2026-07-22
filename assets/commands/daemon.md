@@ -94,6 +94,16 @@ Different from systemd services. For production services, consider using systemd
 **~/.daemonrc**, **~/.daemonrc.d/***
 > Per-user default options, read after the system configuration.
 
+# INSTALL
+
+```apt: sudo apt install daemon```
+
+```brew: brew install daemon```
+
+```nix: nix profile install nixpkgs#daemon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [daemonize](/man/daemonize)(1), [nohup](/man/nohup)(1), [systemctl](/man/systemctl)(1)

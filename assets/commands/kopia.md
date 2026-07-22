@@ -103,6 +103,16 @@ Repository password cannot be recovered if lost - keep secure backups of credent
 
 **Kopia** was created by Jarek Kowalski starting around **2019** as a modern backup solution. The design emphasized security (mandatory encryption), performance (Go implementation, parallelism), and flexibility (multiple backends). It gained popularity as an alternative to Restic and Borg, offering a web UI and cross-platform support.
 
+# INSTALL
+
+```zypper: sudo zypper install kopia```
+
+```brew: brew install kopia```
+
+```nix: nix profile install nixpkgs#kopia```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [restic](/man/restic)(1), [borg](/man/borg)(1), [duplicacy](/man/duplicacy)(1), [rclone](/man/rclone)(1)

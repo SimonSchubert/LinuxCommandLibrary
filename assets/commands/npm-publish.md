@@ -87,6 +87,16 @@ Publishing requires an authenticated npm account (`npm login` or a token via `NP
 
 **npm publish** has been the primary mechanism for sharing JavaScript packages since npm's early releases. Supply-chain provenance via Sigstore was added in **npm 9.5.0 (2023)**, and trusted publishing (OIDC-based, tokenless) was introduced for npm in subsequent releases.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-version](/man/npm-version)(1), [npm-unpublish](/man/npm-unpublish)(1)

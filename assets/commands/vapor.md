@@ -67,6 +67,12 @@ Requires Swift toolchain and Xcode Command Line Tools on macOS. Linux requires S
 
 **Vapor** was created by Tanner Nelson in 2016 as one of the first major server-side Swift frameworks. It quickly became the most popular Swift web framework. Vapor 4, released in 2020, brought full async/await support and improved performance. The framework is maintained by the Vapor community and used in production by companies worldwide.
 
+# INSTALL
+
+```brew: brew install vapor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [swift](/man/swift)(1), [swiftc](/man/swiftc)(1), [docker](/man/docker)(1)

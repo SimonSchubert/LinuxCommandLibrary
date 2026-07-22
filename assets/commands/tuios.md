@@ -28,6 +28,14 @@ Terminal UI OS and window manager multiplexer
 
 **tuios** was created by **Gaurav Gosain** (Gaurav-Gosain) and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install tuios```
+
+```nix: nix profile install nixpkgs#tuios```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [screen](/man/screen)(1), [zellij](/man/zellij)(1)

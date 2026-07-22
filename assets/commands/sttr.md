@@ -28,6 +28,14 @@ Cross-platform CLI for 50+ string transformations
 
 **sttr** was created by **abhimanyu003** and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install sttr```
+
+```nix: nix profile install nixpkgs#sttr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [base64](/man/base64)(1), [openssl](/man/openssl)(1)

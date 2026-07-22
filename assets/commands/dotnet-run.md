@@ -85,6 +85,18 @@ Includes build time in execution. Use --no-build for faster iteration. Launch pr
 
 dotnet run is part of the **.NET CLI** providing streamlined development iteration. It combines build and execution, improving developer experience over separate compile-then-run workflows.
 
+# INSTALL
+
+```dnf: sudo dnf install dotnet-host```
+
+```pacman: sudo pacman -S dotnet-host```
+
+```apk: sudo apk add dotnet-host```
+
+```brew: brew install dotnet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dotnet](/man/dotnet)(1), [dotnet-build](/man/dotnet-build)(1), [dotnet-test](/man/dotnet-test)(1)

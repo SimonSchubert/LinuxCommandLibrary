@@ -42,6 +42,18 @@ Does not install packages. Run poetry install after.
 
 poetry lock provides **dependency locking** for reproducible environments.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [poetry-install](/man/poetry-install)(1)

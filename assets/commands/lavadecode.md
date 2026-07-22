@@ -52,6 +52,12 @@ It is part of the **foo2zjs** suite of printer drivers and is used to inspect st
 
 Only handles LAVAFLOW printer streams. Input is read from stdin via redirection.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2lava](/man/foo2lava)(1), [foo2lava-wrapper](/man/foo2lava-wrapper)(1)

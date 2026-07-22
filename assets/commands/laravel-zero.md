@@ -32,6 +32,12 @@ micro-framework for console applications built on Laravel components
 
 **laravel-zero** is a micro-framework for console applications built on Laravel components. It creates standalone command-line applications that can be compiled into single PHAR files. Ideal for building CLI tools with Laravel's elegant syntax.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#laravel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [laravel](/man/laravel)(1), [composer](/man/composer)(1)

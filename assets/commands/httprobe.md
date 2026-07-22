@@ -61,6 +61,14 @@ Written in Go with minimal ongoing maintenance; **httpx** from ProjectDiscovery 
 
 **httprobe** was written by **Tom Hudson** ("tomnomnom"), a security researcher known for a suite of small, composable Go tools (including **anew**, **waybackurls**, and **gf**) widely used in bug bounty and recon pipelines.
 
+# INSTALL
+
+```dnf: sudo dnf install httprobe```
+
+```nix: nix profile install nixpkgs#httprobe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [httpx](/man/httpx)(1), [curl](/man/curl)(1), [subfinder](/man/subfinder)(1)

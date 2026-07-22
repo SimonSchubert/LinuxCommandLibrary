@@ -63,6 +63,12 @@ Requires internet. Wikipedia API limits. Not all languages complete.
 
 **wikit** was created for quick Wikipedia lookups from the terminal. It provides instant access to encyclopedia knowledge.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#wikit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [w3m](/man/w3m)(1)

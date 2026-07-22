@@ -93,6 +93,24 @@ Recovery requires enough PAR2 data for damage level. Cannot repair if damage exc
 
 **PAR2** was developed around **2003** as an improvement over the original PAR format. It uses Reed-Solomon error correction for block-level recovery. The format became standard for data recovery in file sharing and archival.
 
+# INSTALL
+
+```apt: sudo apt install par2```
+
+```dnf: sudo dnf install par2cmdline```
+
+```pacman: sudo pacman -S par2cmdline```
+
+```apk: sudo apk add par2cmdline```
+
+```zypper: sudo zypper install par2cmdline```
+
+```brew: brew install par2```
+
+```nix: nix profile install nixpkgs#par2cmdline```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rzip](/man/rzip)(1), [gzip](/man/gzip)(1), [rar](/man/rar)(1)

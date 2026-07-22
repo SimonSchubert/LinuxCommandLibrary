@@ -69,6 +69,16 @@ Part of Samba. Windows networking. Requires proper configuration.
 
 net is part of **Samba**, providing Windows-compatible network operations on Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install samba-common-bin```
+
+```dnf: sudo dnf install samba-common-tools```
+
+```apk: sudo apk add samba-common-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smbclient](/man/smbclient)(1), [samba](/man/samba)(1), [wbinfo](/man/wbinfo)(1)

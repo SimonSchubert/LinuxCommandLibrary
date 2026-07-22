@@ -70,6 +70,18 @@ The `wezterm cli` subcommands control a running wezterm instance, allowing scrip
 
 The `cli` subcommands require a running wezterm instance with the mux server enabled. Lua configuration errors prevent the terminal from starting; use `wezterm --config-file` to test alternate configs.
 
+# INSTALL
+
+```pacman: sudo pacman -S wezterm```
+
+```apk: sudo apk add wezterm-common```
+
+```zypper: sudo zypper install wezterm```
+
+```nix: nix profile install nixpkgs#wezterm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [alacritty](/man/alacritty)(1), [kitty](/man/kitty)(1), [tmux](/man/tmux)(1)

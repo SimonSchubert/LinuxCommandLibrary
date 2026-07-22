@@ -98,6 +98,24 @@ Graphical output requires Cairo/X11 libraries. Some virtual environments may sho
 
 **lstopo** is part of **hwloc** (Hardware Locality), developed by the **Open MPI** project starting around **2009**. hwloc provides a portable abstraction for hardware topology across different operating systems. lstopo evolved from earlier tools in the project.
 
+# INSTALL
+
+```apt: sudo apt install hwloc```
+
+```dnf: sudo dnf install hwloc```
+
+```pacman: sudo pacman -S hwloc```
+
+```apk: sudo apk add hwloc-tools```
+
+```zypper: sudo zypper install hwloc```
+
+```brew: brew install hwloc```
+
+```nix: nix profile install nixpkgs#hwloc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lscpu](/man/lscpu)(1), [numactl](/man/numactl)(8)

@@ -113,6 +113,24 @@ Default output is octal, which is less intuitive than hex for most modern use ca
 
 od (octal dump) originated in **early Unix** (Version 1, 1971) for viewing file contents in octal representation.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hexdump](/man/hexdump)(1), [xxd](/man/xxd)(1), [hd](/man/hd)(1)

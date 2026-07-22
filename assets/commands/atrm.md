@@ -35,6 +35,21 @@ Cannot remove already-running jobs. Job numbers can be found with atq. Removal i
 
 **atrm** is part of the **at** command suite for one-time job scheduling, available in Unix systems since the early 1980s.
 
+# INSTALL
+
+```apt: sudo apt install at```
+
+```dnf: sudo dnf install at```
+
+```pacman: sudo pacman -S at```
+
+```apk: sudo apk add at```
+
+```zypper: sudo zypper install at```
+
+```nix: nix profile install nixpkgs#at```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [at](/man/at)(1), [atq](/man/atq)(1), [batch](/man/batch)(1)

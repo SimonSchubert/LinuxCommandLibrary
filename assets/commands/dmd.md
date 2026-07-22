@@ -89,6 +89,20 @@ Reference implementation may have performance differences from alternative compi
 
 dmd was created by **Walter Bright**, who began developing D in **1999** as a successor to C and C++. The first public release was in **2001**. D draws on experience from compiler development and aims to fix perceived issues in C++.
 
+# INSTALL
+
+```pacman: sudo pacman -S dmd```
+
+```apk: sudo apk add dmd```
+
+```zypper: sudo zypper install dmd```
+
+```brew: brew install dmd```
+
+```nix: nix profile install nixpkgs#dmd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ldc](/man/ldc)(1), [gdc](/man/gdc)(1)

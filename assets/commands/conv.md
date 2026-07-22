@@ -63,6 +63,12 @@ The value and unit abbreviation must be written as a single argument with no spa
 
 **conv** was written by Ben Garrett and implemented in Go. Precompiled binaries were provided for Linux, macOS, Windows, and ARM. The repository at github.com/bengarrett/conv was archived in September 2019.
 
+# INSTALL
+
+```apt: sudo apt install gmtsar-core```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [units](/man/units)(1), [bc](/man/bc)(1), [qalc](/man/qalc)(1)

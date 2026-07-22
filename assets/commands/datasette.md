@@ -93,6 +93,14 @@ Designed for read-only access by default; write operations require plugins and c
 
 Datasette was created by **Simon Willison** (co-creator of Django) and first released in **2017**. It emerged from his interest in data journalism and making databases accessible. The project pioneered the concept of "small data" publishing and has been used for journalism, government transparency, and data exploration. Datasette won a Mozilla Open Source Award in **2021**.
 
+# INSTALL
+
+```brew: brew install datasette```
+
+```nix: nix profile install nixpkgs#datasette```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sqlite3](/man/sqlite3)(1), [sqlite-utils](/man/sqlite-utils)(1)

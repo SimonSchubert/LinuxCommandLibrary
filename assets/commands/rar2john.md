@@ -64,6 +64,22 @@ Part of John the Ripper jumbo. Strong passwords may take very long. Use legally 
 
 rar2john is part of **John the Ripper** by **Solar Designer** and the Openwall community, providing RAR hash extraction.
 
+# INSTALL
+
+```dnf: sudo dnf install john```
+
+```pacman: sudo pacman -S john```
+
+```apk: sudo apk add john```
+
+```zypper: sudo zypper install john```
+
+```brew: brew install john```
+
+```nix: nix profile install nixpkgs#john```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [john](/man/john)(1), [zip2john](/man/zip2john)(1), [pdf2john](/man/pdf2john)(1), [hashcat](/man/hashcat)(1)

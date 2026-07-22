@@ -76,6 +76,14 @@ subscribe to gNMI streaming telemetry (full form)
 
 Results are printed to stdout by default, or routed to a configured output (file, Kafka, NATS, Prometheus, InfluxDB, etc.) via **--output**.
 
+# INSTALL
+
+```brew: brew install gnmic```
+
+```nix: nix profile install nixpkgs#gnmic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnmic](/man/gnmic)(1), [gnmic-get](/man/gnmic-get)(1), [gnmic-set](/man/gnmic-set)(1)

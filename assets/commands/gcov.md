@@ -77,6 +77,24 @@ Requires programs to be compiled with special GCC flags. Only works with GCC-com
 
 gcov has been part of the GNU Compiler Collection (GCC) since the early 1990s. It evolved alongside GCC's profiling capabilities and remains a fundamental tool for C/C++ code coverage analysis in the open-source ecosystem.
 
+# INSTALL
+
+```apt: sudo apt install gcc```
+
+```dnf: sudo dnf install gcc```
+
+```pacman: sudo pacman -S gcc```
+
+```apk: sudo apk add gcc```
+
+```zypper: sudo zypper install gcc```
+
+```brew: brew install gcc```
+
+```nix: nix profile install nixpkgs#gcc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [lcov](/man/lcov)(1), [gprof](/man/gprof)(1)

@@ -90,6 +90,12 @@ Queries follow mq's own filter syntax similar to jq. Complex transformations may
 
 **mq** was created by **harehare** and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install mq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [glow](/man/glow)(1)

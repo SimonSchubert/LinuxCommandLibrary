@@ -92,6 +92,18 @@ Other boards model real hardware such as the **sifive_u** (SiFive HiFive Unleash
 
 KVM acceleration on RISC-V requires a host CPU with the H extension; otherwise emulation is TCG-only and considerably slower than native. Some guest OSes expect a specific **-bios** firmware; mixing versions of OpenSBI and Linux can result in boot failures. When using **-nographic**, pressing **Ctrl-A X** exits the emulator.
 
+# INSTALL
+
+```apt: sudo apt install qemu-system-riscv```
+
+```dnf: sudo dnf install qemu-system-riscv```
+
+```pacman: sudo pacman -S qemu-system-riscv```
+
+```apk: sudo apk add qemu-system-riscv64```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qemu-system-x86_64](/man/qemu-system-x86_64)(1), [qemu-img](/man/qemu-img)(1)

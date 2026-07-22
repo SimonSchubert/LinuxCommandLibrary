@@ -83,6 +83,16 @@ Requires type annotations for full benefit. Some dynamic patterns hard to type. 
 
 **Pyright** was developed by **Microsoft** and released in **2019**. It powers Python language support in VS Code through Pylance. Written in TypeScript, it focuses on performance and standards compliance.
 
+# INSTALL
+
+```pacman: sudo pacman -S pyright```
+
+```brew: brew install pyright```
+
+```nix: nix profile install nixpkgs#pyright```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mypy](/man/mypy)(1), [python](/man/python)(1), [pylint](/man/pylint)(1), [flake8](/man/flake8)(1)

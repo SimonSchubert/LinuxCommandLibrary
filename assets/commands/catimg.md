@@ -74,6 +74,24 @@ sudo make install
 
 Uses Unicode block characters for rendering. Quality depends on terminal font and color support. Works best in terminals with 24-bit color support.
 
+# INSTALL
+
+```apt: sudo apt install catimg```
+
+```dnf: sudo dnf install catimg```
+
+```pacman: sudo pacman -S catimg```
+
+```apk: sudo apk add catimg```
+
+```zypper: sudo zypper install catimg```
+
+```brew: brew install catimg```
+
+```nix: nix profile install nixpkgs#catimg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chafa](/man/chafa)(1), [timg](/man/timg)(1), [tiv](/man/tiv)(1)

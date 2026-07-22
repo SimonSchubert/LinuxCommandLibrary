@@ -93,6 +93,20 @@ Not installed by default. Some formats have limited metadata support. Very old f
 
 **unar** is part of **The Unarchiver**, created by **Dag Ågren** starting around **2006**. Originally a macOS GUI application, command-line tools were added later for scripting.
 
+# INSTALL
+
+```apt: sudo apt install unar```
+
+```dnf: sudo dnf install unar```
+
+```zypper: sudo zypper install unar```
+
+```brew: brew install unar```
+
+```nix: nix profile install nixpkgs#unar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsar](/man/lsar)(1), [unzip](/man/unzip)(1), [unrar](/man/unrar)(1), [7z](/man/7z)(1), [tar](/man/tar)(1)

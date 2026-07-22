@@ -64,6 +64,22 @@ The .lzma format is a legacy format without integrity checks. Use xz for new fil
 
 **unlzma** is part of **xz-utils**, providing decompression for the legacy LZMA format.
 
+# INSTALL
+
+```dnf: sudo dnf install xz```
+
+```pacman: sudo pacman -S xz```
+
+```apk: sudo apk add xz```
+
+```zypper: sudo zypper install xz```
+
+```brew: brew install xz```
+
+```nix: nix profile install nixpkgs#xz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xz](/man/xz)(1), [lzma](/man/lzma)(1), [unxz](/man/unxz)(1)

@@ -62,6 +62,19 @@ Recommendations are categorized into: Cost, Security, HighAvailability (Reliabil
 
 Requires Azure CLI to be installed and authenticated with **az login**. Appropriate Azure RBAC permissions are needed to view and manage Advisor recommendations.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-config](/man/az-config)(1), [az-feedback](/man/az-feedback)(1)

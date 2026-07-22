@@ -99,6 +99,14 @@ xtrace traces only the X11 protocol; it does not see GLX, DRI3, shared-memory (*
 
 **xtrace** was written by **Bernhard R. Link** and is packaged in Debian and Ubuntu as the **xtrace** package. It is commonly used by X11 developers and package maintainers to debug protocol-level issues in clients and toolkits.
 
+# INSTALL
+
+```apt: sudo apt install xtrace```
+
+```nix: nix profile install nixpkgs#xtrace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xauth](/man/xauth)(1), [Xorg](/man/Xorg)(1), [xdpyinfo](/man/xdpyinfo)(1), [xev](/man/xev)(1), [strace](/man/strace)(1)

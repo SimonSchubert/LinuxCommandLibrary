@@ -81,6 +81,17 @@ Cost Explorer API has usage charges beyond the free tier. Data is typically dela
 
 AWS Cost Explorer launched in **2017** as a visualization tool in the AWS Console. The Cost Explorer API was introduced in **2018** to enable programmatic access. Anomaly detection was added in **2020**, and commitment purchase analysis features expanded through **2023-2024**.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-budgets](/man/aws-budgets)(1), [aws-pricing](/man/aws-pricing)(1), [aws-cur](/man/aws-cur)(1)

@@ -102,6 +102,22 @@ By default, wf-recorder only requests new frames when the screen updates, produc
 
 Wayland only; requires a wlroots-based compositor with wlr-screencopy support. Audio recording requires PipeWire or PulseAudio. Some compositors may require specific configuration for screen capture. The output format is determined by the file extension given to **-f**; unrecognized extensions will cause the command to fail.
 
+# INSTALL
+
+```apt: sudo apt install wf-recorder```
+
+```dnf: sudo dnf install wf-recorder```
+
+```pacman: sudo pacman -S wf-recorder```
+
+```apk: sudo apk add wf-recorder```
+
+```zypper: sudo zypper install wf-recorder```
+
+```nix: nix profile install nixpkgs#wf-recorder```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [slurp](/man/slurp)(1), [grim](/man/grim)(1), [ffmpeg](/man/ffmpeg)(1)

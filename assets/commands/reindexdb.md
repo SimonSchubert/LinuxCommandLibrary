@@ -85,6 +85,12 @@ Locks tables during non-concurrent reindex. Large indexes take time. Disk space 
 
 **reindexdb** is part of **PostgreSQL**, providing command-line access to the REINDEX SQL command. It simplifies database maintenance operations.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vacuumdb](/man/vacuumdb)(1), [psql](/man/psql)(1), [pg_dump](/man/pg_dump)(1)

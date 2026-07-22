@@ -46,6 +46,16 @@ Creates symlinks. Can cause issues with bundlers. Use carefully.
 
 npm link enables **local package development** by creating symlinks between packages.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-install](/man/npm-install)(1), [npm-unlink](/man/npm-unlink)(1)

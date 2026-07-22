@@ -68,6 +68,14 @@ Unlike simple extension-based detection, mimetype examines actual file contents,
 
 Requires the shared-mime-info database to be installed. Detection accuracy depends on the quality and completeness of magic patterns in the database. Some proprietary formats may not be recognized.
 
+# INSTALL
+
+```pacman: sudo pacman -S perl-file-mimeinfo```
+
+```apk: sudo apk add perl-file-mimeinfo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [file](/man/file)(1), [xdg-mime](/man/xdg-mime)(1)

@@ -107,6 +107,16 @@ Separate implementation from restic. Repository format compatible. Some features
 
 **Rustic** was created as a Rust rewrite of **restic** for improved performance. It maintains compatibility with restic repositories.
 
+# INSTALL
+
+```pacman: sudo pacman -S rustic```
+
+```brew: brew install rustic```
+
+```nix: nix profile install nixpkgs#rustic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [restic](/man/restic)(1), [borgbackup](/man/borgbackup)(1), [duplicacy](/man/duplicacy)(1)

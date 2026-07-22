@@ -41,6 +41,21 @@ Primarily used for repository maintenance and comparison. Not needed for normal 
 
 **apt-sortpkgs** is part of the APT suite, useful for repository maintainers who need deterministic index file ordering.
 
+# INSTALL
+
+```apt: sudo apt install apt-utils```
+
+```dnf: sudo dnf install apt-utils```
+
+```pacman: sudo pacman -S apt```
+
+```apk: sudo apk add apt```
+
+```brew: brew install apt```
+
+```nix: nix profile install nixpkgs#apt```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apt-ftparchive](/man/apt-ftparchive)(1)

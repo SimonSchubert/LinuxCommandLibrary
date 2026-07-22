@@ -60,6 +60,18 @@ Multiple operations can be combined per invocation; see **crudini --help**.
 
 INI dialects differ (duplicate keys, multiline, nested sections). Always test on copies of production configs. Not a general TOML/YAML editor.
 
+# INSTALL
+
+```apt: sudo apt install crudini```
+
+```dnf: sudo dnf install crudini```
+
+```zypper: sudo zypper install crudini```
+
+```nix: nix profile install nixpkgs#crudini```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [augtool](/man/augtool)(1), [sed](/man/sed)(1), [git-config](/man/git-config)(1)

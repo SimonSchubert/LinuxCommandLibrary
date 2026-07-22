@@ -110,6 +110,22 @@ NetHack has a steep learning curve with hundreds of commands and interactions. T
 
 NetHack evolved from **Hack** (1982), which itself descended from **Rogue** (1980), the original roguelike game. Development began in **1987** by the NetHack DevTeam, with the name reflecting its origins as a collaborative project over the early internet. It became one of the most influential games in computer gaming history, inspiring countless roguelikes and the "roguelike" genre. The game continues active development, with version 3.6 released in **2015** after a 12-year hiatus.
 
+# INSTALL
+
+```dnf: sudo dnf install nethack```
+
+```pacman: sudo pacman -S nethack```
+
+```apk: sudo apk add nethack```
+
+```zypper: sudo zypper install nethack```
+
+```brew: brew install nethack```
+
+```nix: nix profile install nixpkgs#nethack```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rogue](/man/rogue)(6), [angband](/man/angband)(6), [crawl](/man/crawl)(6)

@@ -89,6 +89,24 @@ Users require CAP_SYS_NICE capability to modify scheduling attributes. SCHED_BAT
 
 **chrt** is part of the **util-linux** package, providing real-time process scheduling control since Linux 2.6.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nice](/man/nice)(1), [renice](/man/renice)(1), [taskset](/man/taskset)(1)

@@ -68,6 +68,22 @@ Only handles lzip format. For other formats use zcat, xzcat, bzcat. Cannot compr
 
 lzcat is part of the **lzip** package created by **Antonio Diaz Diaz** as a cleaner implementation of LZMA compression.
 
+# INSTALL
+
+```dnf: sudo dnf install xz```
+
+```pacman: sudo pacman -S xz```
+
+```apk: sudo apk add xz```
+
+```zypper: sudo zypper install xz```
+
+```brew: brew install xz```
+
+```nix: nix profile install nixpkgs#xz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lzip](/man/lzip)(1), [zcat](/man/zcat)(1), [xzcat](/man/xzcat)(1), [bzcat](/man/bzcat)(1)

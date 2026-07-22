@@ -82,6 +82,20 @@ Configuration syntax differs from sudo; migration requires rewriting rules. Fewe
 
 **doas** was created by Ted Unangst and introduced in **OpenBSD 5.8** in **2015** as a replacement for sudo in the base system. The design goal was to provide necessary functionality with minimal code (around 1000 lines versus sudo's 100,000+). It has been ported to Linux and other systems, gaining popularity among security-conscious users.
 
+# INSTALL
+
+```apt: sudo apt install opendoas```
+
+```dnf: sudo dnf install opendoas```
+
+```pacman: sudo pacman -S opendoas```
+
+```apk: sudo apk add doas```
+
+```nix: nix profile install nixpkgs#doas```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sudo](/man/sudo)(8), [su](/man/su)(1)

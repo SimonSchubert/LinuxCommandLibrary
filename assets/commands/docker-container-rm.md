@@ -51,6 +51,24 @@ The shorthand **docker rm** is equivalent to **docker container rm**.
 
 Forcing removal of a running container with **-f** sends SIGKILL without giving the process a chance to clean up. To prune all stopped containers in one step use **docker container prune**.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-rm](/man/docker-rm)(1), [docker-container](/man/docker-container)(1)

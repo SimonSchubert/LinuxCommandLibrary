@@ -90,6 +90,16 @@ Incremental stream requires base snapshot at destination. Force (-F) destroys in
 
 **zfs receive** has been integral to ZFS since Solaris 10, enabling ZFS replication workflows. OpenZFS enhanced it with resumable receives, property overrides, and better handling of encrypted datasets.
 
+# INSTALL
+
+```apt: sudo apt install zfs-fuse```
+
+```apk: sudo apk add zfs```
+
+```nix: nix profile install nixpkgs#zfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zfs-send](/man/zfs-send)(8), [zfs](/man/zfs)(8), [zpool](/man/zpool)(8)

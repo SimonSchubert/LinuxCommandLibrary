@@ -110,6 +110,12 @@ Dokku targets a single host; there is no built-in clustering or zero-downtime fa
 
 Dokku was created by **Jeff Lindsay** in **2013** as a "docker-powered mini-Heroku" written in a few hundred lines of shell. It quickly outgrew that, and maintenance passed to **Jose Diaz-Gonzalez**, who still leads the project. It remains one of the most widely used self-hosted PaaS options, and its git-push workflow is deliberately close to Heroku's so that apps can move between the two.
 
+# INSTALL
+
+```aur: yay -S dokku```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [git](/man/git)(1), [heroku](/man/heroku)(1), [caprover](/man/caprover)(1)

@@ -68,6 +68,22 @@ GNOME-centric; other desktops may have different help systems. Some documentatio
 
 **yelp** was created as the standard help browser for GNOME. The name was suggested by Daniel Lundin. It has evolved alongside GNOME, supporting the transition from DocBook to Mallard as the primary documentation format.
 
+# INSTALL
+
+```apt: sudo apt install yelp```
+
+```dnf: sudo dnf install yelp```
+
+```pacman: sudo pacman -S yelp```
+
+```apk: sudo apk add yelp```
+
+```zypper: sudo zypper install yelp```
+
+```nix: nix profile install nixpkgs#yelp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [man](/man/man)(1), [info](/man/info)(1)

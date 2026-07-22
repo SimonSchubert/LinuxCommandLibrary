@@ -34,6 +34,24 @@ Without this tool, renaming a remote branch requires multiple steps: `git branch
 
 Requires git-extras to be installed. Other collaborators must update their local references after the rename. Pull requests or merge requests targeting the old branch name may need manual updates.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-extras](/man/git-extras)(1)

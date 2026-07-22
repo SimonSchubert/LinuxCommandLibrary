@@ -112,6 +112,22 @@ This tool manages interfaces through systemd-networkd, not NetworkManager. Confi
 
 Part of **systemd**, networkctl was introduced to provide command-line management of systemd-networkd network configuration, offering an alternative to NetworkManager for server and embedded systems.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip](/man/ip)(8)

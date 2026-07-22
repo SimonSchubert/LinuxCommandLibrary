@@ -111,6 +111,24 @@ Requires PC/SC daemon (pcscd). Card must be inserted. Some commands require PIN.
 
 OpenSC was started to provide open-source smart card support on Unix systems, supporting PKCS#11 and cryptographic operations.
 
+# INSTALL
+
+```apt: sudo apt install opensc```
+
+```dnf: sudo dnf install opensc```
+
+```pacman: sudo pacman -S opensc```
+
+```apk: sudo apk add opensc```
+
+```zypper: sudo zypper install opensc```
+
+```brew: brew install opensc```
+
+```nix: nix profile install nixpkgs#opensc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pkcs11-tool](/man/pkcs11-tool)(1)

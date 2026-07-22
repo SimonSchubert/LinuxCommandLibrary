@@ -91,6 +91,12 @@ Shelly also ships a separate GUI; the CLI binary is the scriptable entry point d
 
 Arch Linux (and derivatives with ALPM) only; not a general multi-distro package manager. AUR builds execute PKGBUILD scripts and need a working build toolchain. Privileged operations typically require root or a configured privilege helper. The GUI and CLI share branding with other unrelated "Shelly" projects (smart-home devices, SSH clients); this page documents the Arch package manager CLI from Seafoam Labs.
 
+# INSTALL
+
+```aur: yay -S shelly```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [yay](/man/yay)(8), [paru](/man/paru)(8), [flatpak](/man/flatpak)(1)

@@ -79,6 +79,20 @@ ROMs must be legally obtained. ROM sets change between versions. Some games need
 
 MAME was started by **Nicola Salmoria** in **1997**. It merged with MESS in 2015 to become a universal emulation project preserving both arcade and home systems.
 
+# INSTALL
+
+```dnf: sudo dnf install mame```
+
+```pacman: sudo pacman -S mame```
+
+```zypper: sudo zypper install mame```
+
+```brew: brew install mame```
+
+```nix: nix profile install nixpkgs#mame```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [retroarch](/man/retroarch)(1), [dosbox](/man/dosbox)(1)

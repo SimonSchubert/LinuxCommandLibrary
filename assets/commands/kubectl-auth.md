@@ -69,6 +69,20 @@ Subcommand of kubectl. Shows RBAC results. May not reflect all policies.
 
 kubectl auth provides authorization checking for **Kubernetes** RBAC policies and access debugging.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-config](/man/kubectl-config)(1)

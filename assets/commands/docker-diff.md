@@ -43,6 +43,24 @@ The diff operation examines the entire container filesystem, so it may take time
 
 **docker diff** has been available since the early versions of Docker. It is an alias for **docker container diff**, which is the preferred form in newer Docker CLI versions.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-container-diff](/man/docker-container-diff)(1), [docker-commit](/man/docker-commit)(1), [docker-inspect](/man/docker-inspect)(1), [docker-cp](/man/docker-cp)(1)

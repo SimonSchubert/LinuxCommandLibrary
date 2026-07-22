@@ -65,6 +65,12 @@ Security tool. Legal use only with authorization. Requires monitor mode.
 
 mdk3 was created for **wireless security** testing and penetration testing of 802.11 networks.
 
+# INSTALL
+
+```apt: sudo apt install mdk3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mdk4](/man/mdk4)(1), [aircrack-ng](/man/aircrack-ng)(1), [aireplay-ng](/man/aireplay-ng)(1)

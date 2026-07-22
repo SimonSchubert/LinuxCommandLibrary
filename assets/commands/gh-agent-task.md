@@ -98,6 +98,24 @@ Tasks consume Copilot premium requests, and the agent pushes commits to a draft 
 
 The **agent-task** command set was added to the GitHub CLI in **v2.80.0** and announced in **September 2025**, bringing Copilot coding agent sessions to the terminal.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-copilot](/man/gh-copilot)(1), [gh-pr](/man/gh-pr)(1), [copilot](/man/copilot)(1)

@@ -101,6 +101,14 @@ Requires background service. Needs accessibility permissions on macOS. Some appl
 
 Espanso was created by **Federico Terzi** as an open-source, cross-platform alternative to commercial text expanders. Written in Rust, it emphasizes privacy and performance.
 
+# INSTALL
+
+```zypper: sudo zypper install espanso```
+
+```nix: nix profile install nixpkgs#espanso```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdotool](/man/xdotool)(1), [autokey](/man/autokey)(1)

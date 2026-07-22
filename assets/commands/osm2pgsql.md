@@ -82,5 +82,19 @@ Requires PostGIS. Planet imports need substantial resources. Use slim mode for u
 
 osm2pgsql was developed for the **OpenStreetMap** project to enable map rendering from OSM data using PostgreSQL.
 
+# INSTALL
+
+```apt: sudo apt install osm2pgsql```
+
+```dnf: sudo dnf install osm2pgsql```
+
+```pacman: sudo pacman -S osm2pgsql```
+
+```brew: brew install osm2pgsql```
+
+```nix: nix profile install nixpkgs#osm2pgsql```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

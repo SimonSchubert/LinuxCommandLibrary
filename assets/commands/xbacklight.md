@@ -64,6 +64,20 @@ The **-time** and **-steps** parameters enable smooth fade transitions, spreadin
 
 X11 only; does not work with Wayland. Requires the RandR backlight property to be exposed by the display driver. Many modern laptops and proprietary drivers (e.g., NVIDIA) do not expose this property. Use **brightnessctl** or **light** as more reliable alternatives that work via sysfs.
 
+# INSTALL
+
+```apt: sudo apt install xbacklight```
+
+```dnf: sudo dnf install xbacklight```
+
+```apk: sudo apk add xbacklight```
+
+```zypper: sudo zypper install xbacklight```
+
+```nix: nix profile install nixpkgs#xbacklight```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [brightnessctl](/man/brightnessctl)(1), [light](/man/light)(1), [xrandr](/man/xrandr)(1)

@@ -74,6 +74,22 @@ Some poorly-encoded files may have corrupted tags. ID3v2 tags can be at the begi
 
 ID3v2 was developed as an extension to the original ID3v1 tag format, which was limited to 30 characters per field. ID3v2 was introduced in **1998** and supports Unicode, embedded images, and virtually unlimited field lengths.
 
+# INSTALL
+
+```apt: sudo apt install id3v2```
+
+```dnf: sudo dnf install id3v2```
+
+```pacman: sudo pacman -S id3v2```
+
+```zypper: sudo zypper install id3v2```
+
+```brew: brew install id3v2```
+
+```nix: nix profile install nixpkgs#id3v2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mid3v2](/man/mid3v2)(1), [ffmpeg](/man/ffmpeg)(1)

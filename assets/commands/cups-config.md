@@ -51,6 +51,16 @@ CUPS build configuration helper
 
 **cups-config** provides configuration information for CUPS (Common Unix Printing System). It's primarily used by build systems to determine compiler and linker flags when building software that uses CUPS libraries.
 
+# INSTALL
+
+```apt: sudo apt install libcups2-dev```
+
+```apk: sudo apk add cups-dev```
+
+```zypper: sudo zypper install cups-config```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cupsd](/man/cupsd)(8), [lp](/man/lp)(1), [lpr](/man/lpr)(1)

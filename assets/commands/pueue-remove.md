@@ -33,6 +33,20 @@ _TASK_IDS_
 
 Running tasks cannot be removed directly; use **pueue kill** first. Removing a task deletes its log output permanently.
 
+# INSTALL
+
+```pacman: sudo pacman -S pueue```
+
+```apk: sudo apk add pueue```
+
+```zypper: sudo zypper install pueue```
+
+```brew: brew install pueue```
+
+```nix: nix profile install nixpkgs#pueue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pueue](/man/pueue)(1), [pueue-clean](/man/pueue-clean)(1), [pueue-kill](/man/pueue-kill)(1)

@@ -60,6 +60,24 @@ Requires split-DWARF compilation (**-gsplit-dwarf**). The debugger must support 
 
 **dwp** is part of GNU **binutils** and parallels **llvm-dwp** in the LLVM project. The split-DWARF format and packaging tool were introduced to address compile/link time and binary size in large C++ projects.
 
+# INSTALL
+
+```apt: sudo apt install binutils-gold```
+
+```dnf: sudo dnf install binutils-gold```
+
+```pacman: sudo pacman -S binutils```
+
+```apk: sudo apk add binutils```
+
+```zypper: sudo zypper install binutils```
+
+```brew: brew install binutils```
+
+```nix: nix profile install nixpkgs#binutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdb](/man/gdb)(1), [objcopy](/man/objcopy)(1), [readelf](/man/readelf)(1)

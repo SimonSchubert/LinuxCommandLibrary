@@ -89,6 +89,16 @@ The tool relies on the system's **xkeyboard-config** data files (typically under
 
 **libxkbcommon** was forked from **libxkbfile**/**xkbcomp** in **2012** by **Daniel Stone** and **Ran Benita** to provide a modern, X-server-independent XKB implementation usable by Wayland compositors. The **xkbcli** umbrella tool was added later as a single entry point for the family of debugging utilities (replacing the per-tool **xkbcompose**, **xkbgetkeymap**, etc.). It is now distributed by every major Linux distribution as part of the **libxkbcommon-tools** / **libxkbcommon-utils** package.
 
+# INSTALL
+
+```apt: sudo apt install libxkbcommon-tools```
+
+```apk: sudo apk add xkbcli```
+
+```zypper: sudo zypper install libxkbcommon-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xkbcomp](/man/xkbcomp)(1), [setxkbmap](/man/setxkbmap)(1), [xev](/man/xev)(1), [localectl](/man/localectl)(1)

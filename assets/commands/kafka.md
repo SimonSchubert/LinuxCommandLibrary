@@ -78,6 +78,14 @@ ZooKeeper support was removed in Kafka 4.0; KRaft mode is now required for new d
 
 Kafka was developed at **LinkedIn** and open-sourced in **2011**. Named after author Franz Kafka, it became an Apache project and is now fundamental infrastructure for event-driven architectures.
 
+# INSTALL
+
+```pacman: sudo pacman -S kafka```
+
+```brew: brew install kafka```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kafka-topics](/man/kafka-topics)(1), [kafkacat](/man/kafkacat)(1)

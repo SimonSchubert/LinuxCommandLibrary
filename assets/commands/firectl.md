@@ -90,6 +90,14 @@ See **firectl --help** for log FIFOs, metrics, metadata JSON, and partition opti
 
 Requires hardware virtualization (KVM) and a working Firecracker install. Kernel and rootfs must be Firecracker-compatible. Root/network setup often needs elevated privileges. Not a full orchestration stack (see Firecracker docs and tools like flintlock for production fleets).
 
+# INSTALL
+
+```zypper: sudo zypper install firectl```
+
+```nix: nix profile install nixpkgs#firectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [firecracker](/man/firecracker)(1), [qemu](/man/qemu)(1), [cloud-hypervisor](/man/cloud-hypervisor)(1)

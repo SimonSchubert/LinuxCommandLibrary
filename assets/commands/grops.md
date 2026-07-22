@@ -64,6 +64,24 @@ Part of groff package. PostScript output can be large. Requires PostScript viewe
 
 grops was developed as part of **GNU groff** by **James Clark** as the primary output driver for printed documents.
 
+# INSTALL
+
+```apt: sudo apt install groff-base```
+
+```dnf: sudo dnf install groff-base```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [ps2pdf](/man/ps2pdf)(1)

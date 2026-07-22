@@ -56,6 +56,18 @@ Delete all resources in a Pulumi stack
 
 This permanently destroys cloud resources. Use --preview-only first in production.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-up](/man/pulumi-up)(1), [pulumi-preview](/man/pulumi-preview)(1)

@@ -85,6 +85,12 @@ Superseded by Go modules (go mod) in Go 1.11+. New projects should use Go module
 
 dep was developed by the Go community and released in **2016** as the official experiment in dependency management. It served as a bridge solution until Go modules were introduced in Go 1.11 (**2018**), after which dep was placed in maintenance mode.
 
+# INSTALL
+
+```aur: yay -S dep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1)

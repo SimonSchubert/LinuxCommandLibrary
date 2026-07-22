@@ -75,6 +75,12 @@ The tool updates the version in package.json, generates or updates a CHANGELOG.m
 
 **standard-version** was created for automated semantic versioning based on Conventional Commits specification.
 
+# INSTALL
+
+```brew: brew install standard```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm-version](/man/npm-version)(1), [semantic-release](/man/semantic-release)(1), [git](/man/git)(1)

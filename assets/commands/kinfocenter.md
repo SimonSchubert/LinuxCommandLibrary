@@ -45,6 +45,18 @@ Only available on KDE Plasma desktop. Some information modules may require addit
 
 kinfocenter has been part of KDE since the early KDE 3 era, evolving with each major KDE release to provide comprehensive system information in a user-friendly interface.
 
+# INSTALL
+
+```apt: sudo apt install kinfocenter```
+
+```dnf: sudo dnf install kinfocenter```
+
+```pacman: sudo pacman -S kinfocenter```
+
+```apk: sudo apk add kinfocenter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [inxi](/man/inxi)(1), [lshw](/man/lshw)(1), [systemctl](/man/systemctl)(1)

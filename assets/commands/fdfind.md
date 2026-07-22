@@ -79,6 +79,14 @@ The command provides colorful output, sensible defaults that ignore hidden and g
 
 Uses regex patterns by default, not glob syntax. Ignores hidden and .gitignore files unless explicitly enabled. May not cover all find use cases.
 
+# INSTALL
+
+```apt: sudo apt install fd-find```
+
+```dnf: sudo dnf install fd-find```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fd](/man/fd)(1), [find](/man/find)(1), [ripgrep](/man/ripgrep)(1)

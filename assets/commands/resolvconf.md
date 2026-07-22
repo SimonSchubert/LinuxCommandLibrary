@@ -87,6 +87,22 @@ May conflict with systemd-resolved. Distribution implementations vary. Some use 
 
 **resolvconf** was created to handle dynamic DNS configuration from multiple network sources. Various implementations exist including openresolv and the Debian resolvconf package.
 
+# INSTALL
+
+```apt: sudo apt install systemd-resolved```
+
+```dnf: sudo dnf install systemd-resolved```
+
+```pacman: sudo pacman -S openresolv```
+
+```apk: sudo apk add openresolv```
+
+```zypper: sudo zypper install systemd-resolved```
+
+```nix: nix profile install nixpkgs#openresolv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-resolve](/man/systemd-resolve)(1), [resolvectl](/man/resolvectl)(1), [dhclient](/man/dhclient)(1), [nmcli](/man/nmcli)(1)

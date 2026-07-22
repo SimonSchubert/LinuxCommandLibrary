@@ -78,6 +78,18 @@ Limited voice selection compared to cloud TTS. Quality varies by voice. May need
 
 Mimic was developed by **Mycroft AI** as a fork of CMU Flite, first released in **2016** to provide offline TTS for the Mycroft voice assistant.
 
+# INSTALL
+
+```apt: sudo apt install mimic```
+
+```apk: sudo apk add mimic1```
+
+```brew: brew install mimic```
+
+```nix: nix profile install nixpkgs#mimic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [espeak](/man/espeak)(1), [festival](/man/festival)(1), [pico2wave](/man/pico2wave)(1), [flite](/man/flite)(1)

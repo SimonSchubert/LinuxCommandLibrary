@@ -69,6 +69,24 @@ Different from Vim paradigm. Learning curve. Client-server architecture.
 
 Kakoune was created by **Maxime Coste** as a Vim-inspired editor with a focus on interactivity and orthogonality.
 
+# INSTALL
+
+```apt: sudo apt install kakoune```
+
+```dnf: sudo dnf install kakoune```
+
+```pacman: sudo pacman -S kakoune```
+
+```apk: sudo apk add kakoune```
+
+```zypper: sudo zypper install kakoune```
+
+```brew: brew install kakoune```
+
+```nix: nix profile install nixpkgs#kakoune```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [nvim](/man/nvim)(1), [helix](/man/helix)(1)

@@ -56,6 +56,24 @@ Typically started automatically by systemd or init scripts.
 
 Normally managed by the system service manager. Direct invocation is usually only needed for debugging.
 
+# INSTALL
+
+```apt: sudo apt install cups-daemon```
+
+```dnf: sudo dnf install cups```
+
+```pacman: sudo pacman -S cups```
+
+```apk: sudo apk add cups```
+
+```zypper: sudo zypper install cups```
+
+```brew: brew install cups```
+
+```nix: nix profile install nixpkgs#cups```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cupsctl](/man/cupsctl)(1), [lp](/man/lp)(1), [lpstat](/man/lpstat)(1)

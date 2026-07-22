@@ -91,6 +91,15 @@ User-created stack configurations are stored in **~/.local/share/apx/stacks**. S
 **-o, --output** _path_
 > Path for the exported stack file (defaults to current directory)
 
+# INSTALL
+
+```dnf: sudo dnf install apx```
+
+```aur: yay -S apx```
+
+```nix: nix profile install nixpkgs#apx```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apx](/man/apx)(1), [apx-pkgmanagers](/man/apx-pkgmanagers)(1), [apx-subsystems](/man/apx-subsystems)(1)

@@ -68,6 +68,12 @@ Electron-based (resource usage). Free version has limitations. Notes stored loca
 
 Notable was created by **Fabio Spampinato** in **2018** as a markdown-native note-taking app inspired by Sublime Text.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#notable```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [joplin](/man/joplin)(1), [obsidian](/man/obsidian)(1)

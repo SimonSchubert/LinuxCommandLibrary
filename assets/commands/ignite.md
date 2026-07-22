@@ -76,6 +76,12 @@ React Native and Node.js are required. The generated boilerplate is opinionated 
 
 Ignite was created by **Infinite Red** as a React Native boilerplate and CLI tool. It has evolved through multiple major versions, shifting from multiple boilerplate options to a single, maintained boilerplate (Ignite Bowser, then Ignite v9+) that focuses on Expo.
 
+# INSTALL
+
+```brew: brew install ignite```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npx](/man/npx)(1), [react-native](/man/react-native)(1), [expo](/man/expo)(1), [npm](/man/npm)(1)

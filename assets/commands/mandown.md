@@ -31,6 +31,20 @@ Requires libncurses(w), libxml2, and libconfig as compile-time dependencies.
 
 **mandown** was created by **Titor8115** and is written in **C**.
 
+# INSTALL
+
+```pacman: sudo pacman -S mandown```
+
+```apk: sudo apk add mandown```
+
+```zypper: sudo zypper install mandown```
+
+```brew: brew install mandown```
+
+```nix: nix profile install nixpkgs#mandown```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [man](/man/man)(1), [glow](/man/glow)(1), [mdcat](/man/mdcat)(1), [bat](/man/bat)(1)

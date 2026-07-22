@@ -94,6 +94,19 @@ Registry names must be globally unique and 5-50 characters. The **Premium** SKU 
 
 Azure Container Registry launched in **2017** as a managed Docker registry service. It has expanded to support Helm charts, OCI artifacts, and integrated security scanning with Microsoft Defender for Cloud.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-aks](/man/az-aks)(1), [docker](/man/docker)(1)

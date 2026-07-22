@@ -137,6 +137,22 @@ Requires Python 3 and ninja backend by default. Build directories cannot be reus
 
 Meson was created by **Jussi Pakkanen** in 2013 as a fast, user-friendly build system.
 
+# INSTALL
+
+```dnf: sudo dnf install meson```
+
+```pacman: sudo pacman -S meson```
+
+```apk: sudo apk add meson```
+
+```zypper: sudo zypper install meson```
+
+```brew: brew install meson```
+
+```nix: nix profile install nixpkgs#meson```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ninja](/man/ninja)(1), [cmake](/man/cmake)(1), [make](/man/make)(1)

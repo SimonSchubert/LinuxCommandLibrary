@@ -64,6 +64,24 @@ Border color must be uniform. Part of Netpbm suite.
 
 pnmcrop was created as part of **Netpbm** for automatic image border removal.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmcut](/man/pnmcut)(1), [pnmpad](/man/pnmpad)(1), [pamcut](/man/pamcut)(1)

@@ -65,6 +65,24 @@ Output varies by object type. Large diffs may need paging. Binary files show as 
 
 git show is a core **Git** command for displaying objects, providing a unified interface to inspect various git object types.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-diff](/man/git-diff)(1), [git-cat-file](/man/git-cat-file)(1)

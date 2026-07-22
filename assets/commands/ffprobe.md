@@ -113,6 +113,20 @@ Frame counting (-count_frames) requires decoding and is slow. Some formats may n
 
 **ffprobe** is part of the **FFmpeg** project, which began in **2000**. The project provides a complete suite for multimedia handling. ffprobe emerged as the dedicated analysis tool, separating inspection functionality from ffmpeg's conversion capabilities. FFmpeg is one of the most widely used open-source multimedia frameworks.
 
+# INSTALL
+
+```apt: sudo apt install ffmpeg```
+
+```pacman: sudo pacman -S ffmpeg```
+
+```apk: sudo apk add ffmpeg```
+
+```brew: brew install ffmpeg```
+
+```nix: nix profile install nixpkgs#ffmpeg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [ffplay](/man/ffplay)(1), [mediainfo](/man/mediainfo)(1), [exiftool](/man/exiftool)(1)

@@ -54,6 +54,24 @@ The command describes four areas of accessibility support:
 
 Accessibility features were introduced as a **public preview** in GitHub CLI v2.72.0. Individual features must be enabled explicitly via `gh config set` or environment variables; running `gh accessibility` alone only displays the guidance text.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-config](/man/gh-config)(1), [gh-environment](/man/gh-environment)(1)

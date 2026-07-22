@@ -45,6 +45,22 @@ Rename with **auto-confirm**
 
 Update /etc/fstab and any scripts referencing the old LV name. Active filesystems may need remounting after rename.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvcreate](/man/lvcreate)(8), [lvremove](/man/lvremove)(8), [lvm](/man/lvm)(8)

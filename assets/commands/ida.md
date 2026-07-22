@@ -85,6 +85,14 @@ Commercial software (free version has limitations). Large binaries require signi
 
 IDA was created by **Ilfak Guilfanov** and first released in **1991**. It's developed by Hex-Rays and has become the de facto standard for binary analysis in security research.
 
+# INSTALL
+
+```dnf: sudo dnf install fbida-ida```
+
+```apk: sudo apk add fbida-ida```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [radare2](/man/radare2)(1), [objdump](/man/objdump)(1)

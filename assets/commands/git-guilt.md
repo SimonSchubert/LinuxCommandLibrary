@@ -64,6 +64,24 @@ Part of git-extras package. Blame-based analysis can be slow on large histories.
 
 git guilt is part of **git-extras**, providing blame-based change tracking named for the act of assigning "guilt" for code; the technique was originally popularized by Tim Pettersen at Atlassian.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-blame](/man/git-blame)(1), [git-effort](/man/git-effort)(1)

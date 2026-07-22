@@ -51,6 +51,24 @@ Convert GIF images to PNM format
 
 The tool automatically selects the appropriate output format based on the input GIF's color characteristics. For animated GIFs, it can extract individual frames or output all frames sequentially. PNM formats are uncompressed, making them ideal intermediate formats for image processing pipelines.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmtogif](/man/ppmtogif)(1), [pamtogif](/man/pamtogif)(1), [pnmtopng](/man/pnmtopng)(1), [pnmtojpeg](/man/pnmtojpeg)(1), [gifsicle](/man/gifsicle)(1), [convert](/man/convert)(1)

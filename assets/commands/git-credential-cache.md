@@ -46,6 +46,24 @@ When configured as a credential helper, it automatically captures credentials du
 
 The daemon stores credentials in a Unix domain socket, accessible only to the current user. Credentials automatically expire after the timeout and are never written to disk, making this more secure than git-credential-store. The cache can be manually cleared with git credential-cache exit.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-credential-store](/man/git-credential-store)(1), [git-credential](/man/git-credential)(1)

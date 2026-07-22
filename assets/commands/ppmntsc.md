@@ -61,6 +61,24 @@ For video production. Part of the Netpbm suite. The program processes multi-imag
 
 ppmntsc was created by Wes Barris at the Minnesota Supercomputer Center as part of the **Netpbm** toolkit for NTSC color compliance.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppm](/man/ppm)(5), [ppmdim](/man/ppmdim)(1), [pambrighten](/man/pambrighten)(1), [pamdepth](/man/pamdepth)(1)

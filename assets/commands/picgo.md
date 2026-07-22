@@ -101,6 +101,12 @@ Requires API keys or tokens for most hosting services. Some services have upload
 
 **PicGo** was created as an image upload tool for Chinese developers. It simplifies adding images to documentation and blog posts by handling upload and URL generation.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#picgo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [imgur-upload](/man/imgur-upload)(1), [curl](/man/curl)(1)

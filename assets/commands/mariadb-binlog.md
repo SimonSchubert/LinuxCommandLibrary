@@ -87,6 +87,24 @@ When using **--database**, filtering behavior differs between statement-based an
 
 Remote log reading requires a running server and appropriate privileges.
 
+# INSTALL
+
+```apt: sudo apt install mariadb-client```
+
+```dnf: sudo dnf install mariadb```
+
+```pacman: sudo pacman -S mariadb```
+
+```apk: sudo apk add mariadb```
+
+```zypper: sudo zypper install mariadb-client```
+
+```brew: brew install mariadb```
+
+```nix: nix profile install nixpkgs#mariadb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mysqlbinlog](/man/mysqlbinlog)(1), [mariadb](/man/mariadb)(1)

@@ -81,6 +81,12 @@ Daemon must be restarted after configuration changes. Memory usage increases wit
 
 dmypy was introduced as part of **mypy**, originally created by **Jukka Lehtosalo** at Dropbox. The daemon mode was added to address performance concerns with large codebases requiring frequent type checks during development.
 
+# INSTALL
+
+```apk: sudo apk add py3-mypy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mypy](/man/mypy)(1), [python](/man/python)(1), [pyright](/man/pyright)(1)

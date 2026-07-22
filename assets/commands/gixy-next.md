@@ -62,6 +62,14 @@ Fork of original gixy with additional checks and performance features. Defaults 
 
 gixy-next continues development of **gixy** after the original project became less actively maintained.
 
+# INSTALL
+
+```brew: brew install gixy```
+
+```nix: nix profile install nixpkgs#gixy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gixy](/man/gixy)(1), [nginx](/man/nginx)(1)

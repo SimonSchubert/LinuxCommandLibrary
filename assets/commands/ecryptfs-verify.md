@@ -47,6 +47,20 @@ Must be run as the user whose encryption is being verified. Cannot verify unmoun
 
 ecryptfs-verify is part of the **eCryptfs** utilities, providing validation for encrypted filesystem configurations on Ubuntu and other distributions using eCryptfs.
 
+# INSTALL
+
+```apt: sudo apt install ecryptfs-utils```
+
+```dnf: sudo dnf install ecryptfs-utils```
+
+```pacman: sudo pacman -S ecryptfs-utils```
+
+```apk: sudo apk add ecryptfs-utils```
+
+```zypper: sudo zypper install ecryptfs-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ecryptfs](/man/ecryptfs)(7), [ecryptfs-setup-private](/man/ecryptfs-setup-private)(1), [ecryptfs-find](/man/ecryptfs-find)(1)

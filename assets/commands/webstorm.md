@@ -61,6 +61,12 @@ WebStorm installation required. Commercial software. Launcher location varies.
 
 **WebStorm** is developed by **JetBrains** as a professional IDE for JavaScript and web development.
 
+# INSTALL
+
+```aur: yay -S webstorm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [phpstorm](/man/phpstorm)(1), [idea](/man/idea)(1), [code](/man/code)(1)

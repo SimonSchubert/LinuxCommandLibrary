@@ -70,6 +70,21 @@ Requires root privileges. Heavy auditing can impact performance, and log files g
 
 **auditd** was developed as part of the Linux Audit project to meet Common Criteria security requirements, becoming part of the mainline kernel in **2.6.6** (2004).
 
+# INSTALL
+
+```apt: sudo apt install auditd```
+
+```dnf: sudo dnf install audit```
+
+```pacman: sudo pacman -S audit```
+
+```apk: sudo apk add audit```
+
+```zypper: sudo zypper install audit```
+
+```nix: nix profile install nixpkgs#audit```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [auditctl](/man/auditctl)(8), [ausearch](/man/ausearch)(8), [aureport](/man/aureport)(8)

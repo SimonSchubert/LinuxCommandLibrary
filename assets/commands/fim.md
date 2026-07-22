@@ -121,6 +121,14 @@ Framebuffer access typically requires appropriate permissions (video group membe
 
 FIM was developed by Michele Martone as an improved version of **fbi** (Linux framebuffer imageviewer), originally created by Gerd Hoffmann. FIM extends fbi with multiple output backends, an internal scripting language, and enhanced features while maintaining keyboard-driven operation suitable for console use.
 
+# INSTALL
+
+```apt: sudo apt install fim```
+
+```nix: nix profile install nixpkgs#fim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fbi](/man/fbi)(1), [feh](/man/feh)(1), [display](/man/display)(1)

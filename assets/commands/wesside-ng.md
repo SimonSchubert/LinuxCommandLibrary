@@ -79,6 +79,24 @@ WEP is obsolete and should not be used for wireless security. This tool is for a
 
 **wesside-ng** was originally written by **Andrea Bittau** as a proof-of-concept for research papers "The Fragmentation Attack in Practice" and "The Final Nail in WEP's Coffin" (co-authored with Mark Handley and Joshua Lockey). It was incorporated into the **Aircrack-ng** suite to demonstrate practical WEP vulnerabilities. The tool's relevance has diminished as networks migrated to WPA/WPA2/WPA3.
 
+# INSTALL
+
+```apt: sudo apt install aircrack-ng```
+
+```dnf: sudo dnf install aircrack-ng```
+
+```pacman: sudo pacman -S aircrack-ng```
+
+```apk: sudo apk add aircrack-ng```
+
+```zypper: sudo zypper install aircrack-ng```
+
+```brew: brew install aircrack-ng```
+
+```nix: nix profile install nixpkgs#aircrack-ng```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [airmon-ng](/man/airmon-ng)(8), [aireplay-ng](/man/aireplay-ng)(8), [airodump-ng](/man/airodump-ng)(8), [easside-ng](/man/easside-ng)(8)

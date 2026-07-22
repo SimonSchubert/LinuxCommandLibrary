@@ -75,6 +75,22 @@ Capture as **JPEG** with quality setting
 
 X11 only, does not work with Wayland. Region selection requires slop. Window capture often used with xdotool.
 
+# INSTALL
+
+```apt: sudo apt install maim```
+
+```dnf: sudo dnf install maim```
+
+```pacman: sudo pacman -S maim```
+
+```apk: sudo apk add maim```
+
+```zypper: sudo zypper install maim```
+
+```nix: nix profile install nixpkgs#maim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scrot](/man/scrot)(1), [import](/man/import)(1), [grim](/man/grim)(1), [flameshot](/man/flameshot)(1), [slop](/man/slop)(1), [xdotool](/man/xdotool)(1), [xclip](/man/xclip)(1)

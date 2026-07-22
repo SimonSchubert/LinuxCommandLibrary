@@ -52,6 +52,20 @@ The **vigr** command should always be used instead of directly editing `/etc/gro
 
 **vigr** is part of the **shadow-utils** package, providing safe editing of group files similar to how vipw edits password files.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vipw](/man/vipw)(8), [group](/man/group)(5), [gshadow](/man/gshadow)(5), [groupadd](/man/groupadd)(8), [groupmod](/man/groupmod)(8), [groupdel](/man/groupdel)(8)

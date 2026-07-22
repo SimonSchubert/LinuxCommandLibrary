@@ -116,6 +116,20 @@ The repository format is Borg-specific; archives cannot be read with other tools
 
 BorgBackup was forked from **Attic** in **2015** after Attic development stalled. The name "Borg" references Star Trek's Borg, known for assimilating and efficiently organizing. Development accelerated after the fork, adding features like authenticated encryption, improved compression, and macOS/Windows support. Borg has become one of the most popular open-source backup solutions.
 
+# INSTALL
+
+```apt: sudo apt install borgbackup```
+
+```dnf: sudo dnf install borgbackup```
+
+```zypper: sudo zypper install borgbackup```
+
+```brew: brew install borgbackup```
+
+```nix: nix profile install nixpkgs#borgbackup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [restic](/man/restic)(1), [duplicity](/man/duplicity)(1), [rsync](/man/rsync)(1), [rclone](/man/rclone)(1), [rdiff-backup](/man/rdiff-backup)(1), [tar](/man/tar)(1)

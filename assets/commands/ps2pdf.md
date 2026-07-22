@@ -59,6 +59,24 @@ Output quality depends on input. Font embedding may increase size. Some PS featu
 
 **ps2pdf** is part of **Ghostscript**, originally created by **L. Peter Deutsch** in **1988**. Ghostscript provides PostScript and PDF interpretation, making ps2pdf a standard conversion tool.
 
+# INSTALL
+
+```apt: sudo apt install ghostscript```
+
+```dnf: sudo dnf install ghostscript```
+
+```pacman: sudo pacman -S ghostscript```
+
+```apk: sudo apk add ghostscript```
+
+```zypper: sudo zypper install ghostscript```
+
+```brew: brew install ghostscript```
+
+```nix: nix profile install nixpkgs#ghostscript```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gs](/man/gs)(1), [pdf2ps](/man/pdf2ps)(1), [epstopdf](/man/epstopdf)(1), [pdflatex](/man/pdflatex)(1)

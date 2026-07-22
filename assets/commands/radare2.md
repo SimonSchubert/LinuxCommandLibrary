@@ -219,6 +219,22 @@ Steep learning curve - command syntax takes time to master. Documentation can be
 
 **radare2** was created by **pancake** (Sergi Alvarez) around **2006**, evolving from the original radare. It grew from a hex editor to a full reverse engineering platform. The project emphasizes freedom, portability, and Unix philosophy. Despite its complexity, it has a dedicated community and is used in CTF competitions and security research.
 
+# INSTALL
+
+```dnf: sudo dnf install radare2```
+
+```pacman: sudo pacman -S radare2```
+
+```apk: sudo apk add radare2```
+
+```zypper: sudo zypper install radare2```
+
+```brew: brew install radare2```
+
+```nix: nix profile install nixpkgs#radare2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [objdump](/man/objdump)(1), [gdb](/man/gdb)(1), [ltrace](/man/ltrace)(1), [strace](/man/strace)(1), [readelf](/man/readelf)(1), [strings](/man/strings)(1), [xxd](/man/xxd)(1)

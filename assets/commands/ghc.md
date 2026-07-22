@@ -115,6 +115,24 @@ Compilation can be memory-intensive. Large projects benefit from incremental bui
 
 GHC was started at the **University of Glasgow** in **1989**. It has become the de facto standard Haskell compiler, actively developed by the Haskell community and industrial users.
 
+# INSTALL
+
+```apt: sudo apt install ghc```
+
+```dnf: sudo dnf install ghc```
+
+```pacman: sudo pacman -S ghc```
+
+```apk: sudo apk add ghc```
+
+```zypper: sudo zypper install ghc```
+
+```brew: brew install ghc```
+
+```nix: nix profile install nixpkgs#ghc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ghci](/man/ghci)(1), [runghc](/man/runghc)(1), [cabal](/man/cabal)(1), [stack](/man/stack)(1)

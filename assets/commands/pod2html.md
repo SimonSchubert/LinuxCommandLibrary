@@ -96,6 +96,24 @@ The cache is created in the current directory by default and can surprise users 
 
 **pod2html** ships with the standard Perl distribution as part of the Pod::Html module and has been included since early Perl 5 releases.
 
+# INSTALL
+
+```apt: sudo apt install perl```
+
+```dnf: sudo dnf install perl```
+
+```pacman: sudo pacman -S perl```
+
+```apk: sudo apk add perl```
+
+```zypper: sudo zypper install perl```
+
+```brew: brew install perl```
+
+```nix: nix profile install nixpkgs#perl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pod2man](/man/pod2man)(1), [pod2text](/man/pod2text)(1), [perldoc](/man/perldoc)(1), [perl](/man/perl)(1)

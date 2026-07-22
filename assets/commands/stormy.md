@@ -28,6 +28,12 @@ Minimal neofetch-style weather CLI
 
 **stormy** was created by **Ashish Kumar** (ashish0kumar) and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install stormy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rustormy](/man/rustormy)(1), [starlit](/man/starlit)(1), [curl](/man/curl)(1)

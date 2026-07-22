@@ -88,6 +88,22 @@ Limited environment variables. No output unless redirected or mailed. Time is in
 
 **cron** was included in **Version 7 Unix** (1979). The **crontab** interface was added to allow user-level scheduling without requiring direct file editing.
 
+# INSTALL
+
+```apt: sudo apt install cron```
+
+```dnf: sudo dnf install cronie```
+
+```pacman: sudo pacman -S cronie```
+
+```apk: sudo apk add cronie```
+
+```zypper: sudo zypper install cron```
+
+```nix: nix profile install nixpkgs#cron```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cron](/man/cron)(8), [at](/man/at)(1)

@@ -57,6 +57,18 @@ The tool never modifies existing home directories, preventing accidental overwri
 
 **mkhomedir_helper** is part of the **Linux-PAM** (Pluggable Authentication Modules) project. It was designed as a security-conscious helper binary for the pam_mkhomedir module, enabling automatic home directory creation during user login for centrally-managed authentication systems like LDAP.
 
+# INSTALL
+
+```apt: sudo apt install libpam-modules-bin```
+
+```apk: sudo apk add linux-pam```
+
+```brew: brew install linux-pam```
+
+```nix: nix profile install nixpkgs#linux-pam```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [useradd](/man/useradd)(1), [adduser](/man/adduser)(1)

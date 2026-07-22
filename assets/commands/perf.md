@@ -108,6 +108,22 @@ Requires root or kernel.perf_event_paranoid sysctl adjustment for many operation
 
 **perf** was developed as part of the Linux kernel, primarily by **Ingo Molnar** and **Thomas Gleixner**. It replaced the older OProfile tool and became the standard Linux profiling interface, integrated directly into the kernel source tree.
 
+# INSTALL
+
+```apt: sudo apt install linux-perf```
+
+```dnf: sudo dnf install perf```
+
+```pacman: sudo pacman -S perf```
+
+```apk: sudo apk add perf```
+
+```zypper: sudo zypper install perf```
+
+```nix: nix profile install nixpkgs#perf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [strace](/man/strace)(1), [ltrace](/man/ltrace)(1), [valgrind](/man/valgrind)(1), [gprof](/man/gprof)(1)

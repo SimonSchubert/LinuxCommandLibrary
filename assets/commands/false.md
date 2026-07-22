@@ -48,6 +48,24 @@ As a builtin, behavior may vary slightly between shells. Exit status is always 1
 
 false has been part of Unix since **Version 7** (1979). It's one of the simplest Unix commands, existing solely to return a failure status. It's specified by POSIX and implemented as both a standalone utility and shell builtin.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [true](/man/true)(1), [test](/man/test)(1), [bash](/man/bash)(1)

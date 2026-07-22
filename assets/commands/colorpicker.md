@@ -34,5 +34,11 @@ screen color sampling tool
 
 Useful for designers and developers who need to quickly sample colors from existing interfaces or images.
 
+# INSTALL
+
+```zypper: sudo zypper install colorpicker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

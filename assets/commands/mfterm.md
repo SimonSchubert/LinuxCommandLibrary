@@ -59,6 +59,12 @@ Security research tool. Requires NFC reader. Legal use only.
 
 mfterm provides interactive **MIFARE Classic** card manipulation for security research purposes.
 
+# INSTALL
+
+```brew: brew install mfterm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mfoc](/man/mfoc)(1)

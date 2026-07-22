@@ -72,6 +72,24 @@ monitors disk I/O latency in real time, similar to how ping shows network
 
 **ioping** monitors disk I/O latency in real time, similar to how ping shows network latency. Generates I/O patterns and measures response time. SSDs should show sub-millisecond latency; HDDs typically show a few milliseconds. High latency spikes may indicate problems.
 
+# INSTALL
+
+```apt: sudo apt install ioping```
+
+```dnf: sudo dnf install ioping```
+
+```pacman: sudo pacman -S ioping```
+
+```apk: sudo apk add ioping```
+
+```zypper: sudo zypper install ioping```
+
+```brew: brew install ioping```
+
+```nix: nix profile install nixpkgs#ioping```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fio](/man/fio)(1), [iostat](/man/iostat)(1), [ping](/man/ping)(1)

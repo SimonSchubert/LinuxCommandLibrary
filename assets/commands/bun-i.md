@@ -55,6 +55,16 @@ Install packages (alias for bun install)
 
 Bun's package manager is significantly faster than npm or yarn due to its native implementation and efficient caching.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-install](/man/bun-install)(1), [bun-remove](/man/bun-remove)(1)

@@ -77,6 +77,16 @@ Minimal feature set. No detach/reattach capability. Limited terminal emulation. 
 
 **mtm** was written by **Rob King** as a minimalist alternative to larger terminal multiplexers. It demonstrates that useful terminal multiplexing can be achieved with very little code.
 
+# INSTALL
+
+```apk: sudo apk add mtm```
+
+```brew: brew install mtm```
+
+```nix: nix profile install nixpkgs#mtm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [screen](/man/screen)(1), [dvtm](/man/dvtm)(1), [abduco](/man/abduco)(1)

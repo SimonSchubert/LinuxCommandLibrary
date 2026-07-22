@@ -120,6 +120,18 @@ Initial sync takes days/weeks. Large disk space required (unless pruned). High b
 
 **bitcoind** was created by Satoshi Nakamoto as part of the original Bitcoin software in **2009**, serving as the reference implementation of the Bitcoin protocol.
 
+# INSTALL
+
+```apk: sudo apk add bitcoin```
+
+```zypper: sudo zypper install bitcoind```
+
+```brew: brew install bitcoin```
+
+```nix: nix profile install nixpkgs#bitcoin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bitcoin-cli](/man/bitcoin-cli)(1), [bitcoin-qt](/man/bitcoin-qt)(1)

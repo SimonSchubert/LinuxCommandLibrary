@@ -102,6 +102,21 @@ Requires Java Runtime Environment. XML build files can become verbose for comple
 
 **Apache Ant** was created by James Duncan Davidson as part of the Tomcat project, with the first standalone release in **2000**. It was the dominant Java build tool until Maven gained popularity in the mid-2000s.
 
+# INSTALL
+
+```dnf: sudo dnf install ant```
+
+```pacman: sudo pacman -S ant```
+
+```apk: sudo apk add apache-ant```
+
+```zypper: sudo zypper install ant```
+
+```brew: brew install ant```
+
+```nix: nix profile install nixpkgs#ant```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [mvn](/man/mvn)(1), [gradle](/man/gradle)(1), [make](/man/make)(1)

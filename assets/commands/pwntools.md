@@ -83,6 +83,14 @@ Python library (pip install pwntools). Requires understanding of exploitation. F
 
 pwntools was created by **Gallopsled** CTF team, becoming the standard Python library for CTF exploit development.
 
+# INSTALL
+
+```brew: brew install pwntools```
+
+```nix: nix profile install nixpkgs#pwntools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pwn](/man/pwn)(1), [checksec](/man/checksec)(1), [gdb](/man/gdb)(1), [radare2](/man/radare2)(1), [ropper](/man/ropper)(1)

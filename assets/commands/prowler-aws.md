@@ -81,6 +81,14 @@ AWS cloud security assessment
 
 **prowler aws** performs security assessment of AWS accounts. It checks configuration against best practices and compliance frameworks such as CIS, NIST 800, PCI-DSS, GDPR, HIPAA, and others. Identifies misconfigurations, vulnerabilities, and compliance gaps. Results can be output in multiple formats and optionally sent to AWS Security Hub.
 
+# INSTALL
+
+```brew: brew install prowler```
+
+```nix: nix profile install nixpkgs#prowler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [prowler](/man/prowler)(1), [aws](/man/aws)(1)

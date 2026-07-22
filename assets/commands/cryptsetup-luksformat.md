@@ -74,6 +74,22 @@ LUKS provides standardized on-disk encryption with multiple key slots, secure ke
 
 Destroys all data on the partition. Cannot be undone. Always backup data first. LUKS1 is more compatible; LUKS2 supports newer features. Requires root privileges.
 
+# INSTALL
+
+```apt: sudo apt install cryptsetup-bin```
+
+```dnf: sudo dnf install cryptsetup```
+
+```pacman: sudo pacman -S cryptsetup```
+
+```apk: sudo apk add cryptsetup```
+
+```zypper: sudo zypper install cryptsetup```
+
+```nix: nix profile install nixpkgs#cryptsetup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cryptsetup](/man/cryptsetup)(8), [cryptsetup-open](/man/cryptsetup-open)(8), [lsblk](/man/lsblk)(8)

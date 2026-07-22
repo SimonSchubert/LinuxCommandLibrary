@@ -97,6 +97,22 @@ F2FS requires a minimum device size and may not work on very small partitions. T
 
 F2FS was developed by **Samsung Electronics** and introduced in the **Linux kernel 3.8** in **2012**. It was designed from scratch to address the unique characteristics of flash-based storage devices, focusing on performance optimization and wear leveling to extend device lifespan.
 
+# INSTALL
+
+```apt: sudo apt install f2fs-tools```
+
+```dnf: sudo dnf install f2fs-tools```
+
+```pacman: sudo pacman -S f2fs-tools```
+
+```apk: sudo apk add f2fs-tools```
+
+```zypper: sudo zypper install f2fs-tools```
+
+```nix: nix profile install nixpkgs#f2fs-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkfs](/man/mkfs)(8), [mkfs.ext4](/man/mkfs.ext4)(8), [mkfs.btrfs](/man/mkfs.btrfs)(8)

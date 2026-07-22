@@ -90,6 +90,24 @@ Manage GitLab repositories from the command line
 
 **glab repo** manages GitLab repositories from the command line. It provides subcommands for cloning, creating, forking, searching, and viewing repositories without leaving the terminal.
 
+# INSTALL
+
+```apt: sudo apt install glab```
+
+```dnf: sudo dnf install glab```
+
+```pacman: sudo pacman -S glab```
+
+```apk: sudo apk add glab```
+
+```zypper: sudo zypper install glab```
+
+```brew: brew install glab```
+
+```nix: nix profile install nixpkgs#glab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glab](/man/glab)(1), [glab-mr](/man/glab-mr)(1), [glab-issue](/man/glab-issue)(1), [git-clone](/man/git-clone)(1)

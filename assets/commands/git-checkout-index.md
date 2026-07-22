@@ -62,6 +62,24 @@ Unlike the higher-level git checkout, this command operates purely on the index 
 
 The --prefix option enables extracting the index to an alternate location, useful for creating clean checkouts or exporting specific versions. This command is essential for understanding Git's three-tree architecture (working directory, index, and HEAD) and how file state moves between them.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-read-tree](/man/git-read-tree)(1)

@@ -44,6 +44,11 @@ This is a novelty program, not a data tool. Only the first line of input is enco
 
 **bcd** first appeared in Version 6 AT&T UNIX and emulates the punched cards used by the GE 635 and GE 645 computers at Bell Labs in the late 1960s and early 1970s. It is distributed today as part of the **bsdgames** package.
 
+# INSTALL
+
+```dnf: sudo dnf install bcd```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ppt](/man/ppt)(6), [morse](/man/morse)(6), [number](/man/number)(6), [bsdgames](/man/bsdgames)(6)

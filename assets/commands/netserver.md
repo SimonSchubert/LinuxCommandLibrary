@@ -78,6 +78,18 @@ Requires netperf client. Opens network port. Performance testing tool.
 
 netserver is part of **netperf**, created by HP for network performance measurement.
 
+# INSTALL
+
+```apt: sudo apt install netperf```
+
+```dnf: sudo dnf install netperf```
+
+```pacman: sudo pacman -S netperf```
+
+```nix: nix profile install nixpkgs#netperf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [netperf](/man/netperf)(1), [iperf](/man/iperf)(1), [iperf3](/man/iperf3)(1), [nuttcp](/man/nuttcp)(1)

@@ -44,6 +44,14 @@ Freezing is useful to avoid re-running expensive upstream stages while iterating
 
 Frozen stages will not be reproduced even when dependencies change. Use **dvc unfreeze** to restore normal behavior. The freeze state is stored in the **dvc.yaml** file as a `frozen: true` field on the stage. In DVC 2.0+, you can also set this field manually in **dvc.yaml** instead of using the command.
 
+# INSTALL
+
+```brew: brew install dvc```
+
+```nix: nix profile install nixpkgs#dvc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dvc-unfreeze](/man/dvc-unfreeze)(1), [dvc](/man/dvc)(1)

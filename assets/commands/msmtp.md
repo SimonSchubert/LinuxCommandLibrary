@@ -105,6 +105,24 @@ Requires SMTP server access. Password storage needs consideration. Some provider
 
 **msmtp** was written by **Martin Lambers** starting around **2000** as a simple sendmail replacement. It focused on being lightweight and configurable, supporting modern SMTP with authentication and TLS. The project remains actively maintained.
 
+# INSTALL
+
+```apt: sudo apt install msmtp```
+
+```dnf: sudo dnf install msmtp```
+
+```pacman: sudo pacman -S msmtp```
+
+```apk: sudo apk add msmtp```
+
+```zypper: sudo zypper install msmtp```
+
+```brew: brew install msmtp```
+
+```nix: nix profile install nixpkgs#msmtp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sendmail](/man/sendmail)(1), [mutt](/man/mutt)(1), [mailx](/man/mailx)(1)

@@ -134,6 +134,24 @@ The configuration file is saved to ~/.config/procps/toprc. Running in batch mode
 
 **top** was originally written by Roger Binns and has been part of the **procps** (now **procps-ng**) package. It has been a standard system monitoring tool on Unix-like systems since the 1980s.
 
+# INSTALL
+
+```apt: sudo apt install procps```
+
+```dnf: sudo dnf install procps-ng```
+
+```pacman: sudo pacman -S procps-ng```
+
+```apk: sudo apk add procps-ng```
+
+```zypper: sudo zypper install procps```
+
+```brew: brew install procps```
+
+```nix: nix profile install nixpkgs#procps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [htop](/man/htop)(1), [atop](/man/atop)(1), [ps](/man/ps)(1), [free](/man/free)(1), [uptime](/man/uptime)(1), [vmstat](/man/vmstat)(1), [kill](/man/kill)(1)

@@ -97,6 +97,24 @@ Requires X11 by default; for Wayland, use the **rofi-wayland** fork. Themes use 
 
 **rofi** was created by **Dave Davenport** as a more feature-rich alternative to dmenu. It has become a standard component in many Linux desktop configurations.
 
+# INSTALL
+
+```apt: sudo apt install rofi```
+
+```dnf: sudo dnf install rofi```
+
+```pacman: sudo pacman -S rofi```
+
+```apk: sudo apk add rofi-wayland```
+
+```zypper: sudo zypper install rofi```
+
+```brew: brew install rofi```
+
+```nix: nix profile install nixpkgs#rofi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmenu](/man/dmenu)(1), [wofi](/man/wofi)(1), [fuzzel](/man/fuzzel)(1)

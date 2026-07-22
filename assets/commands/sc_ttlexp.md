@@ -16,6 +16,16 @@ Analyze TTL-expired responses from scamper
 
 **sc_ttlexp** analyzes TTL-expired ICMP responses from scamper measurements. Used for studying router behavior and path characteristics. Part of scamper toolkit.
 
+# INSTALL
+
+```apt: sudo apt install scamper```
+
+```zypper: sudo zypper install scamper```
+
+```brew: brew install scamper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scamper](/man/scamper)(1), [sc_analysis_dump](/man/sc_analysis_dump)(1)

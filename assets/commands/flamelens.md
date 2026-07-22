@@ -74,6 +74,14 @@ Requires folded stack format input. Very large profiles may impact performance. 
 
 **flamelens** was created as a terminal-based alternative to web-based flamegraph viewers, enabling profile analysis in server environments without browser access.
 
+# INSTALL
+
+```pacman: sudo pacman -S flamelens```
+
+```nix: nix profile install nixpkgs#flamelens```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [inferno](https://github.com/jonhoo/inferno), [flamegraph](https://github.com/brendangregg/FlameGraph), [cargo-flamegraph](https://github.com/flamegraph-rs/flamegraph)

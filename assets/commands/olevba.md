@@ -62,6 +62,12 @@ Security analysis tool. Part of oletools. Python required.
 
 olevba was created as part of **oletools** for Office document security analysis.
 
+# INSTALL
+
+```apk: sudo apk add py3-oletools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [oletools](/man/oletools)(1), [mraptor](/man/mraptor)(1), [oleid](/man/oleid)(1)

@@ -115,6 +115,16 @@ Some advanced VHDL features may have limitations. Synthesis support is experimen
 
 GHDL was started by **Tristan Gingold** and is written in Ada. It provides a free software alternative to commercial VHDL simulators.
 
+# INSTALL
+
+```apt: sudo apt install ghdl-common```
+
+```dnf: sudo dnf install ghdl```
+
+```nix: nix profile install nixpkgs#ghdl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gtkwave](/man/gtkwave)(1), [iverilog](/man/iverilog)(1), [verilator](/man/verilator)(1)

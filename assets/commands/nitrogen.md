@@ -75,6 +75,18 @@ Only works with X Window System, not Wayland. Settings are stored in ~/.config/n
 
 **nitrogen** was developed as a lightweight wallpaper setter for window managers that don't include built-in wallpaper functionality. It is commonly used with tiling window managers like i3, bspwm, and openbox.
 
+# INSTALL
+
+```apt: sudo apt install nitrogen```
+
+```dnf: sudo dnf install nitrogen```
+
+```zypper: sudo zypper install nitrogen```
+
+```nix: nix profile install nixpkgs#nitrogen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [feh](/man/feh)(1), [xwallpaper](/man/xwallpaper)(1), [hsetroot](/man/hsetroot)(1)

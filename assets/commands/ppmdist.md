@@ -32,6 +32,24 @@ Sort by **frequency** and map to grayscale
 
 Only helpful for images with a very small number of colors. Reads from stdin if no file is specified.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmcolormask](/man/ppmcolormask)(1)

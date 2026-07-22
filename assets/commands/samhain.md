@@ -82,6 +82,12 @@ The baseline database should be created from a known-clean system state and stor
 
 Samhain was developed by **Rainer Wichmann** and first released in **1999**. Named after the Celtic festival marking the end of harvest, it evolved from a simple file integrity checker into a comprehensive HIDS supporting centralized monitoring across heterogeneous environments.
 
+# INSTALL
+
+```apt: sudo apt install samhain```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aide](/man/aide)(1), [tripwire](/man/tripwire)(8), [rkhunter](/man/rkhunter)(1), [chkrootkit](/man/chkrootkit)(1)

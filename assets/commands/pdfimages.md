@@ -98,6 +98,18 @@ Some images may extract with unexpected sizes or colors due to PDF transformatio
 
 **pdfimages** is part of **poppler-utils**, derived from the **Xpdf** project by **Derek Noonburg**. The tools provide command-line access to PDF content manipulation.
 
+# INSTALL
+
+```apt: sudo apt install poppler-utils```
+
+```dnf: sudo dnf install poppler-utils```
+
+```apk: sudo apk add poppler-utils```
+
+```nix: nix profile install nixpkgs#poppler-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdftotext](/man/pdftotext)(1), [pdfinfo](/man/pdfinfo)(1), [pdftoppm](/man/pdftoppm)(1), [convert](/man/convert)(1)

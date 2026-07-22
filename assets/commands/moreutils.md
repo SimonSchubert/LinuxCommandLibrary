@@ -80,6 +80,20 @@ Tool availability varies by package version. Some tools conflict with other pack
 
 moreutils was created by **Joey Hess** starting in **2006** as a collection of small, useful tools missing from standard Unix.
 
+# INSTALL
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [coreutils](/man/coreutils)(1), [parallel](/man/parallel)(1), [ts](/man/ts)(1), [sponge](/man/sponge)(1)

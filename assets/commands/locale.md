@@ -65,6 +65,16 @@ Show **date format**
 **LC_TIME**
 > Date and time formatting
 
+# INSTALL
+
+```apt: sudo apt install libc-bin```
+
+```apk: sudo apk add musl-locales```
+
+```nix: nix profile install nixpkgs#locale```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [localectl](/man/localectl)(1), [locale-gen](/man/locale-gen)(8), [localedef](/man/localedef)(1)

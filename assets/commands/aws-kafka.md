@@ -95,6 +95,17 @@ Broker count can only be increased, not decreased. Storage can only be increased
 
 Amazon MSK launched in **December 2018** as a managed Kafka service. MSK Connect for managed connectors was added in **2021**, and MSK Serverless launched in **2022** for automatic scaling without capacity planning. Tiered storage for cost optimization came in **2023**.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-kinesis](/man/aws-kinesis)(1), [kafka-topics](/man/kafka-topics)(1)

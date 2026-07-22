@@ -51,6 +51,24 @@ Raw zlib format only, no gzip or other wrapper headers. Part of the qpdf package
 
 **zlib-flate** is included with **QPDF**, providing raw zlib deflate compression and decompression.
 
+# INSTALL
+
+```apt: sudo apt install qpdf```
+
+```dnf: sudo dnf install qpdf```
+
+```pacman: sudo pacman -S qpdf```
+
+```apk: sudo apk add qpdf```
+
+```zypper: sudo zypper install qpdf```
+
+```brew: brew install qpdf```
+
+```nix: nix profile install nixpkgs#qpdf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qpdf](/man/qpdf)(1), [gzip](/man/gzip)(1), [zcat](/man/zcat)(1), [pigz](/man/pigz)(1)

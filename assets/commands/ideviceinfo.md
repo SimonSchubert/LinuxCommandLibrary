@@ -79,6 +79,16 @@ Part of **libimobiledevice**. The device must be **trusted** on the host — i.e
 
 **ideviceinfo** ships with the **libimobiledevice** project — a cross-platform reimplementation of Apple's iTunes/Finder device protocols. Created around **2008** by **Jonathan Beck**, it is now maintained by **Nikias Bassen** and contributors.
 
+# INSTALL
+
+```apt: sudo apt install libimobiledevice-utils```
+
+```dnf: sudo dnf install libimobiledevice-utils```
+
+```apk: sudo apk add libimobiledevice-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [idevice_id](/man/idevice_id)(1), [idevicebackup2](/man/idevicebackup2)(1), [idevicepair](/man/idevicepair)(1), [idevicesyslog](/man/idevicesyslog)(1)

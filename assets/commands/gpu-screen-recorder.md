@@ -112,6 +112,16 @@ Requires compatible GPU with hardware encoding support (NVIDIA with NVENC, AMD w
 
 gpu-screen-recorder was created to provide an efficient, GPU-accelerated alternative to software-based screen recorders. It's particularly popular among Linux gamers for its low overhead and instant replay capabilities.
 
+# INSTALL
+
+```pacman: sudo pacman -S gpu-screen-recorder```
+
+```zypper: sudo zypper install gpu-screen-recorder```
+
+```nix: nix profile install nixpkgs#gpu-screen-recorder```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [obs](/man/obs)(1), [ffmpeg](/man/ffmpeg)(1), [wf-recorder](/man/wf-recorder)(1)

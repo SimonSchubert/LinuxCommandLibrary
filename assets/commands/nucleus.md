@@ -86,6 +86,12 @@ It runs in distinct modes. The default agent mode creates ephemeral sandboxes wi
 
 nucleus relies on modern Linux kernel features such as cgroups v2, seccomp, and Landlock; strict agent mode fails closed when any of them are unavailable, so older kernels may only support the degraded agent mode. It is Linux-specific and not a drop-in replacement for the full Docker or OCI tooling ecosystem.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nucleus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [docker](/man/docker)(1), [runc](/man/runc)(8), [bwrap](/man/bwrap)(1), [systemd-nspawn](/man/systemd-nspawn)(1)

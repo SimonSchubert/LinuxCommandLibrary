@@ -81,6 +81,17 @@ Requires the Avahi daemon to be running. Services must be advertised via mDNS to
 
 **avahi-browse** is part of the **Avahi** package, providing mDNS/DNS-SD service discovery on Linux, compatible with Apple's Bonjour.
 
+# INSTALL
+
+```apt: sudo apt install avahi-utils```
+
+```dnf: sudo dnf install avahi-tools```
+
+```apk: sudo apk add avahi-tools```
+
+```zypper: sudo zypper install avahi-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [avahi-resolve](/man/avahi-resolve)(1), [avahi-publish](/man/avahi-publish)(1), [avahi-daemon](/man/avahi-daemon)(8)

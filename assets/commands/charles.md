@@ -67,6 +67,12 @@ Charles is commercial software requiring a license after the trial period. HTTPS
 
 Charles Proxy was created by **Karl von Randow** and first released in **2002**. Originally developed for macOS, it expanded to Windows and Linux. The tool became widely adopted by mobile and web developers for debugging network traffic, particularly as mobile development grew and tools like browser developer tools were insufficient for native app debugging.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#charles```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mitmproxy](/man/mitmproxy)(1), [burpsuite](/man/burpsuite)(1), [wireshark](/man/wireshark)(1)

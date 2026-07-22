@@ -68,6 +68,22 @@ Useful for updating large files like ISO images when only small parts have chang
 
 Requires a .zsync control file generated on the server side. The server must support HTTP range requests. HTTPS support depends on the build.
 
+# INSTALL
+
+```apt: sudo apt install zsync```
+
+```dnf: sudo dnf install zsync```
+
+```pacman: sudo pacman -S zsync```
+
+```zypper: sudo zypper install zsync```
+
+```brew: brew install zsync```
+
+```nix: nix profile install nixpkgs#zsync```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rsync](/man/rsync)(1), [wget](/man/wget)(1), [curl](/man/curl)(1)

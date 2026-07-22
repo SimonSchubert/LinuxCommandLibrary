@@ -85,6 +85,22 @@ tmp-waldi-foobar.mount
 
 Forward slashes in paths become dashes when escaped, and leading slashes are stripped by **--path**. Some option combinations are mutually exclusive (see above). Part of the systemd suite and available wherever systemd is installed.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1)

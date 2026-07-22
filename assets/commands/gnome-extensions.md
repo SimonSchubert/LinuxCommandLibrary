@@ -79,6 +79,22 @@ Extensions can cause GNOME Shell instability or crashes. Extensions must be upda
 
 gnome-extensions was introduced in GNOME 3.34 (**2019**) as a modern replacement for the older gnome-shell-extension-tool. GNOME Shell extensions themselves have been available since GNOME 3.0 in **2011**.
 
+# INSTALL
+
+```apt: sudo apt install gnome-shell```
+
+```dnf: sudo dnf install gnome-shell```
+
+```pacman: sudo pacman -S gnome-shell```
+
+```apk: sudo apk add gnome-shell```
+
+```zypper: sudo zypper install gnome-shell```
+
+```nix: nix profile install nixpkgs#gnome-shell```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dconf](/man/dconf)(1)

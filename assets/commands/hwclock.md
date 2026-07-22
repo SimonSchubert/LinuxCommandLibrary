@@ -80,6 +80,14 @@ Requires root privileges. Windows and Linux have different expectations for RTC 
 
 hwclock has been the standard Linux utility for hardware clock management since the early days of Linux. It's part of the util-linux package and replaces older tools like clock.
 
+# INSTALL
+
+```apt: sudo apt install util-linux-extra```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [timedatectl](/man/timedatectl)(1), [date](/man/date)(1), [ntpd](/man/ntpd)(1), [chrony](/man/chrony)(1)

@@ -90,6 +90,20 @@ The **-c** option may require root privileges or the CAP_SYS_TTY_CONFIG capabili
 
 **fbgrab** was written by Gunnar Monell as a rewrite of fbshot by Stephan Beyer. The tool has been maintained since 2002 and is licensed under GPL version 2.
 
+# INSTALL
+
+```apt: sudo apt install fbcat```
+
+```pacman: sudo pacman -S fbgrab```
+
+```apk: sudo apk add fbgrab```
+
+```zypper: sudo zypper install fbcat```
+
+```nix: nix profile install nixpkgs#fbcat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scrot](/man/scrot)(1), [import](/man/import)(1), [fbi](/man/fbi)(1), [fbset](/man/fbset)(8)

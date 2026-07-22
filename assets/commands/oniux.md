@@ -44,6 +44,12 @@ This is **experimental software** from the Tor Project and may have bugs or secu
 
 Developed by the **Tor Project** as part of their efforts to improve application-level Tor integration on Linux. Uses Linux namespace technology (similar to containers) to provide stronger isolation guarantees than traditional LD_PRELOAD-based torification approaches like torsocks.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#oniux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tor](/man/tor)(1), [torsocks](/man/torsocks)(1), [torify](/man/torify)(1)

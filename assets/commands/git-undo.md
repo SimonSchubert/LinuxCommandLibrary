@@ -48,6 +48,24 @@ Without arguments, it undoes the most recent commit. Pass a number to undo multi
 
 Part of the **git-extras** package and must be installed separately. Only affects local commits that have not been pushed. **--hard** discards changes permanently and cannot be easily recovered.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-reset](/man/git-reset)(1), [git-revert](/man/git-revert)(1), [git-extras](/man/git-extras)(1)

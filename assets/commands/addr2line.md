@@ -74,6 +74,23 @@ Requires the executable to be compiled with debugging information (e.g., **-g** 
 
 Part of **GNU Binutils**, a collection of binary tools for working with object files and executables.
 
+# INSTALL
+
+```apt: sudo apt install binutils```
+
+```dnf: sudo dnf install binutils```
+
+```pacman: sudo pacman -S binutils```
+
+```apk: sudo apk add binutils```
+
+```zypper: sudo zypper install binutils```
+
+```brew: brew install binutils```
+
+```nix: nix profile install nixpkgs#binutils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [objdump](/man/objdump)(1), [nm](/man/nm)(1), [readelf](/man/readelf)(1)

@@ -52,6 +52,12 @@ Download packages without installing them
 
 **pip download** downloads packages without installing them. Downloads wheels or source distributions to a specified directory. Useful for offline installation or creating local package mirrors.
 
+# INSTALL
+
+```apk: sudo apk add py3-pip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [pip-install](/man/pip-install)(1), [pip-wheel](/man/pip-wheel)(1)

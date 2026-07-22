@@ -90,6 +90,14 @@ Some queries may be rate-limited. Port scanning should only be performed with au
 
 dmitry was developed for security professionals as a reconnaissance tool. It consolidates multiple information gathering techniques into a single utility, streamlining the initial phases of penetration testing engagements.
 
+# INSTALL
+
+```apt: sudo apt install dmitry```
+
+```nix: nix profile install nixpkgs#dmitry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [whois](/man/whois)(1), [dig](/man/dig)(1), [theHarvester](/man/theHarvester)(1)

@@ -79,6 +79,17 @@ Use s3api when you need direct API access for operations not available in the hi
 
 The s3api commands require more verbose syntax than the high-level **aws s3** commands but provide complete API coverage. When creating buckets outside us-east-1, you must specify **--create-bucket-configuration**. Object keys are case-sensitive. For large file uploads, consider using multipart upload operations.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3-cp](/man/aws-s3-cp)(1), [aws](/man/aws)(1)

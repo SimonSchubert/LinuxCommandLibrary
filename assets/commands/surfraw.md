@@ -79,6 +79,20 @@ Some elvi may be outdated. Sites change their URLs. Browser must be configured.
 
 **Surfraw** was created by **Julian Assange** and others in **2000**. It embodies Unix philosophy for web searching.
 
+# INSTALL
+
+```dnf: sudo dnf install surfraw```
+
+```pacman: sudo pacman -S surfraw```
+
+```zypper: sudo zypper install surfraw```
+
+```brew: brew install surfraw```
+
+```nix: nix profile install nixpkgs#surfraw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [w3m](/man/w3m)(1), [lynx](/man/lynx)(1), [firefox](/man/firefox)(1)

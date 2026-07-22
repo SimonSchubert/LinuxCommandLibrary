@@ -57,6 +57,18 @@ The tool is valuable for understanding CPU behavior under load, identifying ther
 
 Requires root privileges and access to MSR (Model Specific Registers). Works best on Intel processors; AMD support varies. Some features require specific CPU models. Part of the Linux kernel tools.
 
+# INSTALL
+
+```apt: sudo apt install linux-cpupower```
+
+```pacman: sudo pacman -S cpupower```
+
+```apk: sudo apk add cpupower```
+
+```zypper: sudo zypper install cpupower```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cpupower](/man/cpupower)(1), [lscpu](/man/lscpu)(1), [sensors](/man/sensors)(1), [powertop](/man/powertop)(8)

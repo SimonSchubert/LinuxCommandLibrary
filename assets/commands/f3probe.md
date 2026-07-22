@@ -67,6 +67,22 @@ If a fake drive is detected, f3probe reports the fake type and real memory size.
 
 F3 (Fight Flash Fraud) was created by Michel Machado to combat the widespread problem of counterfeit flash storage devices being sold online. These fake drives use modified firmware to report false capacities, leading to data corruption when users attempt to store more data than the actual capacity. The tool has become essential for verifying flash storage before trusting it with important data.
 
+# INSTALL
+
+```apt: sudo apt install f3```
+
+```dnf: sudo dnf install f3```
+
+```apk: sudo apk add f3-extra```
+
+```zypper: sudo zypper install f3```
+
+```brew: brew install f3```
+
+```nix: nix profile install nixpkgs#f3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [f3write](/man/f3write)(1), [f3read](/man/f3read)(1), [f3fix](/man/f3fix)(1), [lsblk](/man/lsblk)(8), [badblocks](/man/badblocks)(8)

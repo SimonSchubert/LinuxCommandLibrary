@@ -80,6 +80,12 @@ Models must be converted to GGUF format. Memory requirements depend on model siz
 
 llama.cpp was created by **Georgi Gerganov** in March **2023** after Meta released LLaMA weights, enabling local LLM inference.
 
+# INSTALL
+
+```brew: brew install llama.cpp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [llamafile](/man/llamafile)(1), [ollama](/man/ollama)(1)

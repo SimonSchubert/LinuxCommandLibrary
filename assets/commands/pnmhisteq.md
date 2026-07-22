@@ -59,6 +59,24 @@ May increase noise in uniform areas. Results depend on image content. Better for
 
 pnmhisteq is part of **Netpbm** by **Jef Poskanzer** and contributors, implementing classic histogram equalization.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pgmhist](/man/pgmhist)(1), [pnmnorm](/man/pnmnorm)(1), [pgmenhance](/man/pgmenhance)(1), [netpbm](/man/netpbm)(1)

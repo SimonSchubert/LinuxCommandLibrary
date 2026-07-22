@@ -35,6 +35,24 @@ converts PBM bitmaps to Encapsulated PostScript Interchange format
 
 **pbmtoepsi** converts PBM bitmaps to Encapsulated PostScript Interchange (EPSI) format. EPSI includes a low-resolution preview bitmap that non-PostScript applications can display while keeping a full-resolution PostScript representation for printing. Part of the Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmtops](/man/pnmtops)(1), [pbmtoepson](/man/pbmtoepson)(1)

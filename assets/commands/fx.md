@@ -61,6 +61,20 @@ Large files may be slow in interactive mode. JavaScript expressions have learnin
 
 fx was created as a modern JSON tool combining interactive exploration with JavaScript-based processing, providing an alternative to jq for developers familiar with JavaScript.
 
+# INSTALL
+
+```pacman: sudo pacman -S fx```
+
+```apk: sudo apk add fx```
+
+```zypper: sudo zypper install fx```
+
+```brew: brew install fx```
+
+```nix: nix profile install nixpkgs#fx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [gron](/man/gron)(1), [jless](/man/jless)(1)

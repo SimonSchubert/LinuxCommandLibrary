@@ -107,6 +107,24 @@ Some information requires root privileges. The **-xxx** option shows full config
 
 **lspci** is part of **pciutils**, providing PCI device information and configuration utilities for Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install pciutils```
+
+```dnf: sudo dnf install pciutils```
+
+```pacman: sudo pacman -S pciutils```
+
+```apk: sudo apk add pciutils```
+
+```zypper: sudo zypper install pciutils```
+
+```brew: brew install pciutils```
+
+```nix: nix profile install nixpkgs#pciutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsusb](/man/lsusb)(8)

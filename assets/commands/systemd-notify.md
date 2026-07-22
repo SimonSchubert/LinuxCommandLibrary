@@ -53,6 +53,22 @@ The status text provided with **--status** is displayed by **systemctl status**.
 
 Only useful within systemd service contexts. The service must be configured with **Type=notify** or **Type=notify-reload** in its unit file. Has no effect when run outside of systemd services. Part of the systemd suite.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1)

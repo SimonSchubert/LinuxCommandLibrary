@@ -55,6 +55,14 @@ Print **release and codename**
 
 Not available on all distributions. Some distributions provide this via /etc/os-release file instead.
 
+# INSTALL
+
+```dnf: sudo dnf install lsb_release```
+
+```apk: sudo apk add lsb-release-minimal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hostnamectl](/man/hostnamectl)(1), [uname](/man/uname)(1)

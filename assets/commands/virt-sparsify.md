@@ -92,6 +92,20 @@ In **--in-place** mode, the image is modified directly without needing extra dis
 
 The virtual machine must be shut down before running **virt-sparsify** to avoid data corruption. In copying mode, sufficient free disk space must be available for both the temporary overlay and the output image. Back up the original image before using **--in-place**. The tool does not support live or running guests.
 
+# INSTALL
+
+```apt: sudo apt install guestfs-tools```
+
+```dnf: sudo dnf install guestfs-tools```
+
+```pacman: sudo pacman -S guestfs-tools```
+
+```zypper: sudo zypper install guestfs-tools```
+
+```nix: nix profile install nixpkgs#guestfs-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virt-resize](/man/virt-resize)(1), [qemu-img](/man/qemu-img)(1), [truncate](/man/truncate)(1)

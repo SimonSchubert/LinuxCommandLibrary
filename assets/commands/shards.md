@@ -117,6 +117,18 @@ Crystal ecosystem is smaller than Ruby or JavaScript. Some dependencies may be u
 
 **shards** is the official dependency manager for **Crystal**, the Ruby-like compiled language. It follows conventions familiar to Ruby developers.
 
+# INSTALL
+
+```apt: sudo apt install shards```
+
+```pacman: sudo pacman -S shards```
+
+```apk: sudo apk add shards```
+
+```nix: nix profile install nixpkgs#shards```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crystal](/man/crystal)(1), [bundler](/man/bundler)(1), [cargo](/man/cargo)(1), [npm](/man/npm)(1)

@@ -46,6 +46,22 @@ Requires power-profiles-daemon running. Available profiles depend on hardware su
 
 **power-profiles-daemon** was developed by **Bastien Nocera** for freedesktop.org. It provides a simple, standardized interface for power management that desktop environments can use.
 
+# INSTALL
+
+```apt: sudo apt install power-profiles-daemon```
+
+```dnf: sudo dnf install power-profiles-daemon```
+
+```pacman: sudo pacman -S power-profiles-daemon```
+
+```apk: sudo apk add power-profiles-daemon```
+
+```zypper: sudo zypper install power-profiles-daemon```
+
+```nix: nix profile install nixpkgs#power-profiles-daemon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tlp](/man/tlp)(1), [cpupower](/man/cpupower)(1), [tuned-adm](/man/tuned-adm)(8)

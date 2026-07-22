@@ -34,6 +34,20 @@ A Vim plugin (**pick.vim**) and packages for many Linux distributions and BSDs a
 
 Requires a TTY for interactive use; pure non-interactive pipelines without a terminal will not work. Output is a single selected line (behavior if cancelled depends on version—check exit status in scripts).
 
+# INSTALL
+
+```apt: sudo apt install pick```
+
+```dnf: sudo dnf install pick```
+
+```apk: sudo apk add mmh```
+
+```brew: brew install pick```
+
+```nix: nix profile install nixpkgs#pick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fzf](/man/fzf)(1), [fzy](/man/fzy)(1), [peco](/man/peco)(1), [selecta](/man/selecta)(1)

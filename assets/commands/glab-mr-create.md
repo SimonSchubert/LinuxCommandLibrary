@@ -105,6 +105,24 @@ Create a new GitLab merge request
 
 When run without flags, it launches an interactive prompt for composing the merge request.
 
+# INSTALL
+
+```apt: sudo apt install glab```
+
+```dnf: sudo dnf install glab```
+
+```pacman: sudo pacman -S glab```
+
+```apk: sudo apk add glab```
+
+```zypper: sudo zypper install glab```
+
+```brew: brew install glab```
+
+```nix: nix profile install nixpkgs#glab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glab-mr](/man/glab-mr)(1), [glab](/man/glab)(1)

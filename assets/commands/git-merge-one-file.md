@@ -46,6 +46,24 @@ Plumbing command. Called by git merge internals. Not typically used directly.
 
 git merge-one-file is part of **Git's** merge infrastructure, implementing per-file merge as a component of the overall merge process.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [git-merge-file](/man/git-merge-file)(1), [git-merge-index](/man/git-merge-index)(1)

@@ -98,6 +98,20 @@ Requires powerline-compatible font. Configuration in ~/.config/powerline/. Daemo
 
 Powerline was created by **Kim Silkebækken** originally as a vim plugin, later expanded to shells and tmux.
 
+# INSTALL
+
+```apt: sudo apt install powerline```
+
+```dnf: sudo dnf install powerline```
+
+```pacman: sudo pacman -S powerline```
+
+```zypper: sudo zypper install powerline```
+
+```nix: nix profile install nixpkgs#powerline```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [starship](/man/starship)(1), [oh-my-zsh](/man/oh-my-zsh)(1), [tmux](/man/tmux)(1)

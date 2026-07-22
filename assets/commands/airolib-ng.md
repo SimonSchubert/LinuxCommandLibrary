@@ -78,6 +78,23 @@ Pre-computation only helps for known ESSIDs. Database files can become very larg
 
 **airolib-ng** was added to the aircrack-ng suite to enable practical attacks against WPA/WPA2 networks by pre-computing the expensive PBKDF2 operations.
 
+# INSTALL
+
+```apt: sudo apt install aircrack-ng```
+
+```dnf: sudo dnf install aircrack-ng```
+
+```pacman: sudo pacman -S aircrack-ng```
+
+```apk: sudo apk add aircrack-ng```
+
+```zypper: sudo zypper install aircrack-ng```
+
+```brew: brew install aircrack-ng```
+
+```nix: nix profile install nixpkgs#aircrack-ng```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1), [genpmk](/man/genpmk)(1), [cowpatty](/man/cowpatty)(1)

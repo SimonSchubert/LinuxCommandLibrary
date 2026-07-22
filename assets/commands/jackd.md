@@ -82,6 +82,18 @@ Requires realtime privileges for low latency. Buffer size affects latency vs. st
 
 JACK was created primarily by **Paul Davis** starting in **2002**. It became the standard for professional audio on Linux, enabling pro audio workflows comparable to commercial systems.
 
+# INSTALL
+
+```apt: sudo apt install jackd1```
+
+```apk: sudo apk add jack```
+
+```zypper: sudo zypper install jack```
+
+```brew: brew install jack```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jack_connect](/man/jack_connect)(1), [pulseaudio](/man/pulseaudio)(1)

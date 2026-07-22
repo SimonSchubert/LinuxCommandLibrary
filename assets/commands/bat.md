@@ -94,6 +94,24 @@ Not a drop-in cat replacement for scripts (use cat for pipelines). Slower than c
 
 **bat** was created by David Peter (sharkdp) in **2018** as a modern replacement for cat with syntax highlighting and Git awareness.
 
+# INSTALL
+
+```apt: sudo apt install bat```
+
+```dnf: sudo dnf install bat```
+
+```pacman: sudo pacman -S bat```
+
+```apk: sudo apk add bat```
+
+```zypper: sudo zypper install bat```
+
+```brew: brew install bat```
+
+```nix: nix profile install nixpkgs#bat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cat](/man/cat)(1), [less](/man/less)(1), [highlight](/man/highlight)(1)

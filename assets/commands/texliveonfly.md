@@ -55,6 +55,14 @@ TeX Live required. Network access needed. Admin for global install.
 
 **texliveonfly** was created to automatically install missing LaTeX packages during compilation.
 
+# INSTALL
+
+```pacman: sudo pacman -S texlive-binextra```
+
+```apk: sudo apk add texlive-binextra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdflatex](/man/pdflatex)(1), [tlmgr](/man/tlmgr)(1), [latexmk](/man/latexmk)(1)

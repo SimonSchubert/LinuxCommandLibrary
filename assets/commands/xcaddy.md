@@ -76,6 +76,14 @@ Requires a working Go toolchain. The Caddy core version can also be set with the
 
 **xcaddy** was created by the **Caddy** project for building custom Caddy binaries with plugins.
 
+# INSTALL
+
+```apk: sudo apk add xcaddy```
+
+```nix: nix profile install nixpkgs#xcaddy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [caddy](/man/caddy)(1), [go](/man/go)(1)

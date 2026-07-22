@@ -116,6 +116,19 @@ Requires Azure CLI to be installed and authenticated with **az login**. Disks ca
 
 **az disk** is part of the **Azure CLI** (`az`), developed by **Microsoft** for managing Azure resources from the command line. Managed disks were introduced in Azure to simplify disk management by eliminating the need to manage storage accounts separately.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-vm](/man/az-vm)(1), [az-image](/man/az-image)(1)

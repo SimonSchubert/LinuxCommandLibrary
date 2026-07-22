@@ -63,6 +63,12 @@ GPU acceleration requires appropriate drivers (CUDA toolkit for NVIDIA, Metal fo
 
 Tabby was created by TabbyML and released as open-source in **2023**, positioning itself as a self-hosted alternative to GitHub Copilot. The project gained traction among enterprises and developers seeking data privacy and cost control. Version 0.24 in **February 2025** added LDAP authentication, and version 0.30 in **July 2025** introduced GitLab merge request context indexing.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#tabby```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ollama](/man/ollama)(1), [copilot](/man/copilot)(1), [docker](/man/docker)(1)

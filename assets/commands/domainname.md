@@ -55,6 +55,24 @@ Do not confuse this with the DNS domain name; use **dnsdomainname** for that. Se
 
 **domainname** dates back to the early days of **NIS** (originally Yellow Pages, YP), developed at **Sun Microsystems** in the **1980s**. NIS provided centralized authentication and configuration for Unix networks. While largely replaced by LDAP and Kerberos, the command remains for compatibility.
 
+# INSTALL
+
+```apt: sudo apt install hostname```
+
+```dnf: sudo dnf install hostname```
+
+```pacman: sudo pacman -S net-tools```
+
+```apk: sudo apk add net-tools```
+
+```zypper: sudo zypper install hostname```
+
+```brew: brew install net-tools```
+
+```nix: nix profile install nixpkgs#hostname```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hostname](/man/hostname)(1), [dnsdomainname](/man/dnsdomainname)(1)

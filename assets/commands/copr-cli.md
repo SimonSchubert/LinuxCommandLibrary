@@ -141,6 +141,14 @@ Requires a Fedora Account System (FAS) account and API token configured in **~/.
 
 copr-cli was developed alongside the COPR build service by the Fedora Project. It provides programmatic access to the same functionality available through the COPR web interface at **copr.fedorainfracloud.org**, enabling automation and integration with development workflows.
 
+# INSTALL
+
+```dnf: sudo dnf install copr-cli```
+
+```pacman: sudo pacman -S copr-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [copr](/man/copr)(1), [rpmbuild](/man/rpmbuild)(1), [mock](/man/mock)(1), [dnf](/man/dnf)(1)

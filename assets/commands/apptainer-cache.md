@@ -71,6 +71,21 @@ The cache is stored at **$HOME/.apptainer/cache** by default, or at the path spe
 
 Large builds and frequent pulls can consume significant disk space in the cache directory. The cache is per-user and does not affect other users on the system. Cleaning the cache forces re-download of images on next use.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-build](/man/apptainer-build)(1), [apptainer-pull](/man/apptainer-pull)(1)

@@ -66,6 +66,12 @@ The command launches a web server (lighttpd by default, or apache2, mongoose, pl
 
 This is particularly useful for demonstrating repository history to others or when you prefer a graphical view but don't want to use a full GUI application. The web interface is read-only and doesn't require network access.
 
+# INSTALL
+
+```dnf: sudo dnf install git-instaweb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gitweb](/man/gitweb)(1), [git-daemon](/man/git-daemon)(1)

@@ -70,6 +70,14 @@ Statistics computation reads entire file. Some formats have limited metadata. La
 
 gdalinfo is part of **GDAL** (Geospatial Data Abstraction Library), providing raster inspection capabilities across hundreds of formats.
 
+# INSTALL
+
+```apt: sudo apt install gdal-bin```
+
+```apk: sudo apk add gdal-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdalwarp](/man/gdalwarp)(1), [gdal_translate](/man/gdal_translate)(1), [ogrinfo](/man/ogrinfo)(1)

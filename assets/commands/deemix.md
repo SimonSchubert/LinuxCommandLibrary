@@ -77,6 +77,12 @@ Requires valid Deezer ARL token from active subscription. FLAC quality requires 
 
 deemix was developed by **RemixDev** as a continuation of earlier Deezer download tools like deezloader. The original author stopped development in **2022**; community forks continue to maintain the codebase.
 
+# INSTALL
+
+```aur: yay -S deemix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [spotdl](/man/spotdl)(1), [youtube-dl](/man/youtube-dl)(1), [yt-dlp](/man/yt-dlp)(1)

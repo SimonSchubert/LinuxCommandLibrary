@@ -93,6 +93,12 @@ Requires database (SQLite default). Large archives use storage. Some pages don't
 
 **Shiori** was created by **RadhiFadlillah** as a simple bookmark manager. Named after Japanese for bookmark, it focuses on offline reading.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#shiori```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [buku](/man/buku)(1), [pocket](/man/pocket)(1)

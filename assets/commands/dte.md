@@ -101,6 +101,14 @@ Different key bindings than vi/vim may require adjustment period. Some advanced 
 
 **dte** was created by Craig Barnes as a lightweight alternative to larger editors. It aims to provide essential editing features in a small footprint while remaining easy to configure and extend.
 
+# INSTALL
+
+```apt: sudo apt install dte```
+
+```nix: nix profile install nixpkgs#dte```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [nano](/man/nano)(1), [micro](/man/micro)(1), [kakoune](/man/kakoune)(1)

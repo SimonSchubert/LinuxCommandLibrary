@@ -107,6 +107,12 @@ Requires Mullvad subscription. Daemon must be running (mullvad-daemon service). 
 
 **Mullvad** was founded in **2009** in Sweden by Amagicom AB, focusing on privacy from the start. The CLI tool evolved alongside their desktop clients. Mullvad gained attention for pioneering WireGuard VPN support and their anonymous account system. In **2022**, the Swedish police attempted to seize their servers but found no user data due to their no-logging policy. The service has been independently audited multiple times.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#mullvad```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wg](/man/wg)(1), [openvpn](/man/openvpn)(1), [nordvpn](/man/nordvpn)(1)

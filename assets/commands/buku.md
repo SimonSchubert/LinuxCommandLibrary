@@ -118,6 +118,18 @@ Requires internet for title fetching. Browser integration needs configuration. D
 
 **buku** was created by Arun Prakash Jana around **2015** to provide a fast, privacy-focused bookmark manager for the terminal.
 
+# INSTALL
+
+```dnf: sudo dnf install buku```
+
+```apk: sudo apk add buku```
+
+```brew: brew install buku```
+
+```nix: nix profile install nixpkgs#buku```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [urlview](/man/urlview)(1), [qutebrowser](/man/qutebrowser)(1)

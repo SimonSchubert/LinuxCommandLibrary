@@ -83,6 +83,12 @@ Generator provides minimal setup. Production needs additional configuration (sec
 
 Express was created by **TJ Holowaychuk** in **2010** and became the most popular Node.js web framework. The express-generator was separated from the main package to allow the core framework to remain minimal.
 
+# INSTALL
+
+```aur: yay -S express```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [npm](/man/npm)(1), [nodemon](/man/nodemon)(1)

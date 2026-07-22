@@ -96,6 +96,18 @@ Separate from GitHub/GitLab issues. Requires setup on collaborators' machines. W
 
 git-bug was created by **Michael Muré** to provide truly distributed bug tracking that lives alongside code in git repositories.
 
+# INSTALL
+
+```pacman: sudo pacman -S git-bug```
+
+```zypper: sudo zypper install git-bug```
+
+```brew: brew install git-bug```
+
+```nix: nix profile install nixpkgs#git-bug```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [gh](/man/gh)(1)

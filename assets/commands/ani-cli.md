@@ -114,6 +114,13 @@ Depends on external streaming sources that may change or become unavailable. Qua
 
 **ani-cli** was created as a community project for anime fans who prefer command-line tools. It has been actively maintained with updates to support changing streaming sources.
 
+# INSTALL
+
+```aur: yay -S ani-cli```
+
+```nix: nix profile install nixpkgs#ani-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [mpv](/man/mpv)(1), [vlc](/man/vlc)(1), [yt-dlp](/man/yt-dlp)(1), [fzf](/man/fzf)(1)

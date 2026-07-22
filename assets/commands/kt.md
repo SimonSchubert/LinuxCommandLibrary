@@ -50,6 +50,12 @@ Kafka topic tool for produce, consume, and admin basics
 
 Authentication modes (SASL/SSL) require matching flags/config. Large clusters need careful filters. Confirm module version when installing with Go.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kcat](/man/kcat)(1), [kafkacat](/man/kafkacat)(1), [kafka-console-consumer](/man/kafka-console-consumer)(1)

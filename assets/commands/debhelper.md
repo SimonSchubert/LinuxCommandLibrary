@@ -103,6 +103,14 @@ Debhelper is Debian-specific; other distributions have different packaging syste
 
 Debhelper was created by **Joey Hess** in **1997** to simplify Debian packaging. Before debhelper, each package reimplemented common tasks in shell scripts, leading to inconsistency and bugs. The dh sequencer was added in debhelper 7 (2008), dramatically simplifying debian/rules files. Debhelper has become the standard way to build Debian packages.
 
+# INSTALL
+
+```dnf: sudo dnf install debhelper```
+
+```zypper: sudo zypper install debhelper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dh](/man/dh)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1), [debuild](/man/debuild)(1)

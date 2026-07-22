@@ -93,6 +93,24 @@ Reference matching uses keywords, which may produce false matches. Use unique id
 
 Refer was written by **Mike Lesk** at Bell Labs in the 1970s as part of the Unix document preparation system. It predates BibTeX and established many conventions for bibliography management. The current implementation is part of groff.
 
+# INSTALL
+
+```apt: sudo apt install groff```
+
+```dnf: sudo dnf install groff```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [troff](/man/troff)(1), [lookbib](/man/lookbib)(1)

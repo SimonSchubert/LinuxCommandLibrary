@@ -125,6 +125,13 @@ Authelia runs as a service behind a reverse proxy; the CLI is for configuration 
 
 Authelia was created by **Clement Michaud** in **2016** as a simple authentication portal. The project evolved to support multiple second-factor methods (TOTP, WebAuthn, Duo) and advanced access control. Version 4 brought major architectural improvements and became widely adopted for self-hosted authentication. The project emphasizes security, privacy, and ease of deployment with container-first design.
 
+# INSTALL
+
+```aur: yay -S authelia```
+
+```nix: nix profile install nixpkgs#authelia```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [keycloak](/man/keycloak)(1), [nginx](/man/nginx)(1), [traefik](/man/traefik)(1)

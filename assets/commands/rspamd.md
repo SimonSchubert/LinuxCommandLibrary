@@ -99,6 +99,20 @@ Configure milter integration with MTA. Train Bayes for best results. Web UI pass
 
 Rspamd was created by **Vsevolod Stakhov** starting in 2008 as a fast, extensible spam filtering system.
 
+# INSTALL
+
+```apt: sudo apt install rspamd```
+
+```pacman: sudo pacman -S rspamd```
+
+```apk: sudo apk add rspamd```
+
+```zypper: sudo zypper install rspamd```
+
+```nix: nix profile install nixpkgs#rspamd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rspamadm](/man/rspamadm)(1), [rspamc](/man/rspamc)(1)

@@ -41,6 +41,18 @@ Output goes only to stdout — there is no `-o` flag; redirect with `> output.ht
 
 ppdhtml is part of **CUPS** for PPD documentation generation.
 
+# INSTALL
+
+```apt: sudo apt install cups-ppdc```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppdc](/man/ppdc)(1), [ppdi](/man/ppdi)(1), [cups](/man/cups)(1)

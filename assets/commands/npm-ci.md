@@ -55,6 +55,16 @@ Requires package-lock.json. Deletes node_modules. Fails on lockfile mismatch.
 
 npm ci was added to **npm 5.7** for deterministic builds in continuous integration pipelines.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-install](/man/npm-install)(1), [package-lock.json](/man/package-lock.json)(5)

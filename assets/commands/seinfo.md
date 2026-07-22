@@ -106,6 +106,16 @@ Policy files must be readable by the user running seinfo. When analyzing modular
 
 **seinfo** is part of the SETools project, a collection of SELinux policy analysis tools originally developed by Tresys Technology. SETools was created to help administrators and security professionals understand and manage SELinux policies. The project has been maintained and updated alongside SELinux development, with versions evolving to support new policy features and formats.
 
+# INSTALL
+
+```apt: sudo apt install setools```
+
+```dnf: sudo dnf install setools```
+
+```nix: nix profile install nixpkgs#setools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sesearch](/man/sesearch)(1), [semanage](/man/semanage)(8), [getenforce](/man/getenforce)(1)

@@ -68,6 +68,24 @@ Configuration via ~/.rtorrent.rc file. Requires proper port forwarding for optim
 
 Written in C++ as a high-performance console BitTorrent client. Popular for headless servers and scripted environments.
 
+# INSTALL
+
+```apt: sudo apt install rtorrent```
+
+```dnf: sudo dnf install rtorrent```
+
+```pacman: sudo pacman -S rtorrent```
+
+```apk: sudo apk add rtorrent```
+
+```zypper: sudo zypper install rtorrent```
+
+```brew: brew install rtorrent```
+
+```nix: nix profile install nixpkgs#rtorrent```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [transmission-cli](/man/transmission-cli)(1), [aria2c](/man/aria2c)(1), [deluge](/man/deluge)(1)

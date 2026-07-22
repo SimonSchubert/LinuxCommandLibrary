@@ -47,6 +47,12 @@ Stdin/stdout only. Binary STL not supported. Part of gts-bin.
 
 **stl2gts** is part of the **GTS Library** (GNU Triangulated Surface Library) for mesh manipulation and analysis.
 
+# INSTALL
+
+```apt: sudo apt install libgts-bin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gts2stl](/man/gts2stl)(1), [meshlab](/man/meshlab)(1), [admesh](/man/admesh)(1)

@@ -74,6 +74,24 @@ Time precision depends on system capabilities; very small fractions may not be h
 
 Sleep has been part of Unix since **Version 4 Unix (1973)**. The original implementation only accepted integer seconds. GNU coreutils extended it with floating-point support, time suffixes, and multiple arguments. The infinity feature was added to simplify scripts that need indefinite waits.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wait](/man/wait)(1), [timeout](/man/timeout)(1), [watch](/man/watch)(1)

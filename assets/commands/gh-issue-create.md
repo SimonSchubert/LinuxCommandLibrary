@@ -84,6 +84,24 @@ create new GitHub issues with metadata
 
 Issue templates configured on the repository can be selected with **-T/--template** by name; the template body is used as the starting text. **-F/--body-file** is convenient for piping the output of another tool (for example a generated bug report) directly into a new issue. The alias `gh issue new` is equivalent.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh-issue](/man/gh-issue)(1)

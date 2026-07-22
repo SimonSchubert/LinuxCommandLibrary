@@ -96,6 +96,22 @@ The static hostname should be a single valid DNS label (no spaces, only alphanum
 
 **hostnamectl** is part of **systemd**, providing unified hostname management through systemd-hostnamed.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hostname](/man/hostname)(1), [systemctl](/man/systemctl)(1)

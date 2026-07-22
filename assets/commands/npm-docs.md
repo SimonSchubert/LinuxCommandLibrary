@@ -42,6 +42,16 @@ Requires browser. Uses package.json homepage. Falls back to npm page.
 
 npm docs provides quick access to **package documentation** via the command line.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-home](/man/npm-home)(1), [npm-repo](/man/npm-repo)(1)

@@ -86,6 +86,18 @@ Requires Python 3.x. Needs C++ build tools. Different requirements per OS. May n
 
 node-gyp was created by **Nathan Rajlich** (TooTallNate) to simplify building native Node.js addons across platforms.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+```nix: nix profile install nixpkgs#node-gyp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [node](/man/node)(1)

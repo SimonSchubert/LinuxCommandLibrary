@@ -59,6 +59,16 @@ LaTeX specific. May break manual formatting. Test before use.
 
 **tex-fmt** is a fast LaTeX formatter written in Rust for consistent document formatting.
 
+# INSTALL
+
+```apt: sudo apt install tex-fmt```
+
+```brew: brew install tex-fmt```
+
+```nix: nix profile install nixpkgs#tex-fmt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [latexindent](/man/latexindent)(1), [latex](/man/latex)(1), [pdflatex](/man/pdflatex)(1)

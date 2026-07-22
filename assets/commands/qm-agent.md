@@ -42,6 +42,12 @@ The QEMU guest agent must be installed inside the guest OS and enabled in the VM
 
 **qm agent** is part of **Proxmox VE**, the open-source virtualization platform. The QEMU guest agent protocol allows fine-grained control of VMs beyond what ACPI power management provides.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-guest](/man/qm-guest)(1), [qm-guest-exec](/man/qm-guest-exec)(1)

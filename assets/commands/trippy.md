@@ -69,6 +69,18 @@ Requires elevated privileges (root or CAP_NET_RAW capability) for ICMP tracing. 
 
 **trippy** was created by **fujiapple852** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S trippy```
+
+```zypper: sudo zypper install trippy```
+
+```brew: brew install trippy```
+
+```nix: nix profile install nixpkgs#trippy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mtr](/man/mtr)(1), [traceroute](/man/traceroute)(1), [tracepath](/man/tracepath)(1), [ping](/man/ping)(1)

@@ -50,6 +50,18 @@ Requires KDE Plasma desktop environment. Security depends on strong password sel
 
 krdpserver is part of the KRDP project developed by KDE for native RDP server support in Plasma. It provides an alternative to VNC for remote desktop access on Linux.
 
+# INSTALL
+
+```apt: sudo apt install krdp```
+
+```dnf: sudo dnf install krdp```
+
+```pacman: sudo pacman -S krdp```
+
+```apk: sudo apk add krdp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vncserver](/man/vncserver)(1)

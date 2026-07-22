@@ -157,6 +157,14 @@ Large disk space usage. Environment activation requires shell integration. Chann
 
 **Conda** was created by Travis Oliphant and Peter Wang at Continuum Analytics (now Anaconda, Inc.) around **2012** for the Anaconda distribution.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [virtualenv](/man/virtualenv)(1), [mamba](/man/mamba)(1)

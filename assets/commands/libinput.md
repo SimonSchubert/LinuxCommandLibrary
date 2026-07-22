@@ -72,6 +72,22 @@ The CLI uses a verb-based interface, with subcommands such as **list-devices** t
 
 Most commands require root privileges (or membership in the **input** group) to access input devices. The **debug-gui** subcommand requires a graphical environment.
 
+# INSTALL
+
+```apt: sudo apt install libinput-tools```
+
+```dnf: sudo dnf install libinput```
+
+```pacman: sudo pacman -S libinput-tools```
+
+```apk: sudo apk add libinput```
+
+```zypper: sudo zypper install libinput-tools```
+
+```nix: nix profile install nixpkgs#libinput```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xinput](/man/xinput)(1), [evtest](/man/evtest)(1)

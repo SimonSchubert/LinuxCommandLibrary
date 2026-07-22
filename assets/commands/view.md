@@ -65,6 +65,16 @@ While view prevents accidental saves, it doesn't prevent editing the buffer enti
 
 view has been part of **vi** and **vim** since the early days. The original vi was written by **Bill Joy** at UC Berkeley in **1976**. vim (Vi IMproved), created by **Bram Moolenaar**, was first released in **1991** and included view as a standard way to invoke read-only mode. The naming follows Unix convention where different names for the same binary trigger different behaviors.
 
+# INSTALL
+
+```pacman: sudo pacman -S gvim```
+
+```apk: sudo apk add gvim```
+
+```zypper: sudo zypper install gvim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [less](/man/less)(1), [cat](/man/cat)(1), [more](/man/more)(1)

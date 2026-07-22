@@ -66,6 +66,24 @@ The new root must contain essential files: **/bin/sh** or the specified command,
 
 The **chroot** system call originated in **Version 7 Unix** (1979) at Bell Labs. It was initially used for building and testing new system versions. The GNU coreutils version provides the standard command-line interface on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [arch-chroot](/man/arch-chroot)(1), [pivot_root](/man/pivot_root)(8), [unshare](/man/unshare)(1)

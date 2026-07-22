@@ -66,6 +66,20 @@ Subcommand of jj. Revset syntax differs from Git. Shows working copy by default.
 
 jj log is part of **Jujutsu**, providing revision history viewing with its unique change-based model.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-show](/man/jj-show)(1), [jj-evolog](/man/jj-evolog)(1)

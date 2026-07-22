@@ -130,6 +130,22 @@ Requires LXD daemon running (lxd init to configure). Container names can be pref
 
 **lxc** is the command-line client for LXD, originally developed by **Canonical** starting in **2014** as a next-generation container manager. LXD provides system containers (similar to lightweight VMs) and virtual machines, managed through a REST API that the lxc client communicates with.
 
+# INSTALL
+
+```apt: sudo apt install lxd-client```
+
+```dnf: sudo dnf install lxc```
+
+```pacman: sudo pacman -S lxc```
+
+```zypper: sudo zypper install lxc```
+
+```brew: brew install lxc```
+
+```nix: nix profile install nixpkgs#lxc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lxc-attach](/man/lxc-attach)(1), [lxc-start](/man/lxc-start)(1), [docker](/man/docker)(1), [podman](/man/podman)(1)

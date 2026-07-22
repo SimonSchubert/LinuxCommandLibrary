@@ -28,6 +28,24 @@ converts PBM bitmap images to ASCII art
 
 **pbmtoascii** converts PBM bitmap images to ASCII art. Renders images using text characters. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmtoascii](/man/ppmtoascii)(1), [asciitopgm](/man/asciitopgm)(1)

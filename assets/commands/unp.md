@@ -77,6 +77,16 @@ Requires the underlying extraction tools to be installed for each format. The **
 
 **unp** was created as a universal unpacking script that automatically detects and extracts various archive formats.
 
+# INSTALL
+
+```pacman: sudo pacman -S unp```
+
+```brew: brew install unp```
+
+```nix: nix profile install nixpkgs#unp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unar](/man/unar)(1), [atool](/man/atool)(1), [tar](/man/tar)(1), [unzip](/man/unzip)(1)

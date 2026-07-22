@@ -117,6 +117,20 @@ Only use against authorized targets. High thread counts may overwhelm servers. R
 
 ffuf was created by **joohoi** as a fast, flexible web fuzzer. Written in Go for performance, it has become a standard tool in web application security testing.
 
+# INSTALL
+
+```apt: sudo apt install ffuf```
+
+```dnf: sudo dnf install ffuf```
+
+```apk: sudo apk add ffuf```
+
+```brew: brew install ffuf```
+
+```nix: nix profile install nixpkgs#ffuf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gobuster](/man/gobuster)(1), [dirb](/man/dirb)(1), [wfuzz](/man/wfuzz)(1)

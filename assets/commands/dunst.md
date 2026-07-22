@@ -91,6 +91,22 @@ Configuration is reloaded on SIGUSR2 in recent versions, but many settings are s
 
 **dunst** was created by **Sascha Kruse** around **2012**, for people running a tiling window manager who found that the notification daemons on offer were either tied to a full desktop environment or drew popups they could not restyle. Its configuration file, which lets any notification be matched on app name, summary, body, or urgency and then restyled or acted upon, is what set it apart and is still the reason people choose it. Wayland support arrived later, and **mako** now fills much the same role for those who want a Wayland-native daemon.
 
+# INSTALL
+
+```apt: sudo apt install dunst```
+
+```dnf: sudo dnf install dunst```
+
+```pacman: sudo pacman -S dunst```
+
+```apk: sudo apk add dunst```
+
+```zypper: sudo zypper install dunst```
+
+```nix: nix profile install nixpkgs#dunst```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dunstctl](/man/dunstctl)(1), [dunstify](/man/dunstify)(1), [notify-send](/man/notify-send)(1), [mako](/man/mako)(1)

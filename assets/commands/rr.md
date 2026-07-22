@@ -71,6 +71,18 @@ Linux x86-64 only. Requires perf_event access. Some syscalls unsupported.
 
 **rr** was developed by **Mozilla** for debugging Firefox. It provides record-and-replay debugging for Linux.
 
+# INSTALL
+
+```apt: sudo apt install rr```
+
+```dnf: sudo dnf install rr```
+
+```zypper: sudo zypper install rr```
+
+```nix: nix profile install nixpkgs#rr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdb](/man/gdb)(1), [strace](/man/strace)(1), [perf](/man/perf)(1)

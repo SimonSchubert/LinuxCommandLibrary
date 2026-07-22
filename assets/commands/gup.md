@@ -114,6 +114,14 @@ Requires the **go** toolchain to be installed and available in **$PATH**. Only b
 
 **gup** was created by **nao1215** and first released in **2022**. Written in Go, it was designed to make managing Go-installed CLI tools easier by updating them concurrently. Version **1.0.0** introduced the JSON configuration format and per-binary update channel selection.
 
+# INSTALL
+
+```brew: brew install gup```
+
+```nix: nix profile install nixpkgs#gup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [asdf](/man/asdf)(1)

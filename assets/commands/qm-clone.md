@@ -63,6 +63,12 @@ Linked clones depend on the original VM's disks. Full clones require more storag
 
 Part of **Proxmox VE** QEMU/KVM management tools for virtual machine administration.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-create](/man/qm-create)(1), [qm-destroy](/man/qm-destroy)(1)

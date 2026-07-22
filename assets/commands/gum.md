@@ -101,6 +101,24 @@ Requires a terminal with color support (true color recommended for full styling)
 
 **gum** was created by **Charm** and first released in **2022** as part of their TUI toolkit for building delightful command-line tools. It is written in Go and released under the MIT license.
 
+# INSTALL
+
+```apt: sudo apt install gum```
+
+```dnf: sudo dnf install gum```
+
+```pacman: sudo pacman -S gum```
+
+```apk: sudo apk add gum```
+
+```zypper: sudo zypper install gum```
+
+```brew: brew install gum```
+
+```nix: nix profile install nixpkgs#gum```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fzf](/man/fzf)(1), [dialog](/man/dialog)(1), [whiptail](/man/whiptail)(1)

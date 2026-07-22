@@ -74,6 +74,18 @@ Requires API key from weather service. Some backends no longer offer free keys. 
 
 **wego** was created as a fun terminal weather application. It inspired wttr.in, a web service that wraps wego and serves weather via curl, making terminal weather checks as simple as `curl wttr.in`.
 
+# INSTALL
+
+```apt: sudo apt install wego```
+
+```apk: sudo apk add wego```
+
+```brew: brew install wego```
+
+```nix: nix profile install nixpkgs#wego```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [finger](/man/finger)(1)

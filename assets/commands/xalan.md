@@ -80,6 +80,12 @@ Requires Java runtime and proper classpath setup. XSLT 1.0 only; for XSLT 2.0+ u
 
 **Xalan** was developed by the Apache Software Foundation as part of the Apache XML project. Named after a type of musical instrument, it became one of the most widely used open-source XSLT processors, particularly in Java environments.
 
+# INSTALL
+
+```apt: sudo apt install xalan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xsltproc](/man/xsltproc)(1), [saxon](/man/saxon)(1), [xmllint](/man/xmllint)(1)

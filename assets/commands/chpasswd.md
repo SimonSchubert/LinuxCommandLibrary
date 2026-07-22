@@ -57,6 +57,20 @@ Requires root privileges. Passwords passed via command line may be visible in pr
 
 **chpasswd** is part of the **shadow-utils** package for batch password management.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [passwd](/man/passwd)(1), [usermod](/man/usermod)(8), [useradd](/man/useradd)(8)

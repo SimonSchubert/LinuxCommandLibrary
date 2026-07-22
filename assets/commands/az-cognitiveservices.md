@@ -83,6 +83,19 @@ Manage Azure AI and Cognitive Services accounts
 
 Requires Azure CLI to be installed and authenticated with **az login**. Different service kinds have different SKU availability and pricing. Some services require accepting responsible AI terms before creation.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-config](/man/az-config)(1), [az-account](/man/az-account)(1), [az-group](/man/az-group)(1)

@@ -96,6 +96,24 @@ Slower than searching uncompressed files. Must decompress entire file to search.
 
 **bzgrep** has been part of the bzip2 utilities since the suite's creation in **1996**.
 
+# INSTALL
+
+```apt: sudo apt install bzip2```
+
+```dnf: sudo dnf install bzip2```
+
+```pacman: sudo pacman -S bzip2```
+
+```apk: sudo apk add bzip2```
+
+```zypper: sudo zypper install bzip2```
+
+```brew: brew install bzip2```
+
+```nix: nix profile install nixpkgs#bzip2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [egrep](/man/egrep)(1), [fgrep](/man/fgrep)(1), [bzdiff](/man/bzdiff)(1), [bzmore](/man/bzmore)(1), [bzless](/man/bzless)(1), [bzip2](/man/bzip2)(1), [zgrep](/man/zgrep)(1)

@@ -33,6 +33,14 @@ This command is irreversible and should be used with caution. Before destroying,
 
 This operation is irreversible. Make sure to backup any data or push to remote storage before destroying.
 
+# INSTALL
+
+```brew: brew install dvc```
+
+```nix: nix profile install nixpkgs#dvc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dvc-init](/man/dvc-init)(1), [dvc](/man/dvc)(1)

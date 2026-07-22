@@ -71,6 +71,14 @@ Void Linux specific (XBPS package manager). Some packages may overwrite manual c
 
 **xbps-reconfigure** is part of XBPS (X Binary Package System), the package manager developed specifically for Void Linux. XBPS was designed from scratch to be fast, portable, and bug-free, providing a modern alternative to traditional package managers.
 
+# INSTALL
+
+```apk: sudo apk add xbps```
+
+```nix: nix profile install nixpkgs#xbps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xbps-install](/man/xbps-install)(1), [xbps-remove](/man/xbps-remove)(1), [xbps-query](/man/xbps-query)(1)

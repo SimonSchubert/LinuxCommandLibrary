@@ -52,6 +52,14 @@ The command blocks until all specified processes have terminated or the timeout 
 
 Part of util-linux. Can only monitor processes visible to the current user. Requires appropriate permissions to monitor processes.
 
+# INSTALL
+
+```apt: sudo apt install util-linux-extra```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wait](/man/wait)(1), [kill](/man/kill)(1)

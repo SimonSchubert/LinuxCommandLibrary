@@ -77,6 +77,18 @@ Voice quality varies. Large texts may be slow. Some voices require additional do
 
 **Festival** was developed at the **Centre for Speech Technology Research** at the **University of Edinburgh** by **Alan Black** and **Paul Taylor** starting in the **1990s**. It became a widely-used open source TTS system.
 
+# INSTALL
+
+```apt: sudo apt install festival```
+
+```dnf: sudo dnf install festival```
+
+```pacman: sudo pacman -S festival```
+
+```zypper: sudo zypper install festival```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [espeak](/man/espeak)(1), [pico2wave](/man/pico2wave)(1), [say](/man/say)(1), [flite](/man/flite)(1)

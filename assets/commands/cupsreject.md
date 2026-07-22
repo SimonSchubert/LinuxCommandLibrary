@@ -30,6 +30,24 @@ prevent printer from accepting new jobs
 
 Use **cupsaccept** to accept jobs again. Requires administrator privileges.
 
+# INSTALL
+
+```apt: sudo apt install cups-client```
+
+```dnf: sudo dnf install cups-client```
+
+```pacman: sudo pacman -S cups```
+
+```apk: sudo apk add cups```
+
+```zypper: sudo zypper install cups-client```
+
+```brew: brew install cups```
+
+```nix: nix profile install nixpkgs#cups```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cupsaccept](/man/cupsaccept)(1), [cupsdisable](/man/cupsdisable)(1)

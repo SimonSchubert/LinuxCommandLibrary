@@ -104,6 +104,14 @@ Fast terminal Excel viewer with interactive TUI
 
 **xleak** was created by **Brandon Greenwell** (bgreenwell) and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install xleak```
+
+```nix: nix profile install nixpkgs#xleak```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sc-im](/man/sc-im)(1), [csvlens](/man/csvlens)(1)

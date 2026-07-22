@@ -64,6 +64,22 @@ Domain can be specified by name, UUID, or ID for existing VMs. Adding =? to any 
 
 Changes to running VMs may require restart. Not all options can be changed on running VMs. Requires proper libvirt permissions.
 
+# INSTALL
+
+```dnf: sudo dnf install virt-manager```
+
+```pacman: sudo pacman -S virt-manager```
+
+```apk: sudo apk add virt-manager```
+
+```zypper: sudo zypper install virt-manager```
+
+```brew: brew install virt-manager```
+
+```nix: nix profile install nixpkgs#virt-manager```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virsh](/man/virsh)(1), [virt-manager](/man/virt-manager)(1), [virt-xml-validate](/man/virt-xml-validate)(1)

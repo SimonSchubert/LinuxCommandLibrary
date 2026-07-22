@@ -55,6 +55,24 @@ Must be run as root or with sudo. Only works on the Linux console, not in termin
 
 **showkey** is part of the **kbd** (keyboard tools) package for Linux console utilities.
 
+# INSTALL
+
+```apt: sudo apt install kbd```
+
+```dnf: sudo dnf install kbd```
+
+```pacman: sudo pacman -S kbd```
+
+```apk: sudo apk add kbd```
+
+```zypper: sudo zypper install kbd```
+
+```brew: brew install showkey```
+
+```nix: nix profile install nixpkgs#kbd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [loadkeys](/man/loadkeys)(1), [dumpkeys](/man/dumpkeys)(1), [getkeycodes](/man/getkeycodes)(1), [xmodmap](/man/xmodmap)(1)

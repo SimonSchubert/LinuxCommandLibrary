@@ -71,6 +71,12 @@ PNG and BMP only. False positives possible. Requires Ruby.
 
 **zsteg** was created for CTF competitions and steganography analysis. It provides quick detection of hidden image data.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#zsteg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [steghide](/man/steghide)(1), [binwalk](/man/binwalk)(1), [exiftool](/man/exiftool)(1)

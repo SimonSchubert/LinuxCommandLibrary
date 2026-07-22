@@ -105,6 +105,24 @@ The verify option checks for configuration errors but does not mount anything. O
 
 **findmnt** is part of the **util-linux** package, providing mount information querying on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add findmnt```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(8), [umount](/man/umount)(8), [df](/man/df)(1), [lsblk](/man/lsblk)(8), [blkid](/man/blkid)(8), [mountpoint](/man/mountpoint)(1)

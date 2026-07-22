@@ -26,6 +26,24 @@ Since Netpbm 10.27, **pnmtopnm** is simply an alternate name for **pamtopnm**. P
 
 **pnmtopnm** was introduced in Netpbm 10.23 (July 2004), obsoleting **pnmtoplainpnm**. In Netpbm 10.27 (March 2005) it became an alias for **pamtopnm**.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamtopnm](/man/pamtopnm)(1), [pnmtoplainpnm](/man/pnmtoplainpnm)(1), [netpbm](/man/netpbm)(1)

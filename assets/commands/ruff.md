@@ -114,6 +114,20 @@ Rust-based - requires separate installation from Python. Not all Flake8 plugins 
 
 **Ruff** was created by **Charlie Marsh** in **2022**. It achieved immediate popularity due to its speed, replacing multiple Python tools with a single fast alternative.
 
+# INSTALL
+
+```dnf: sudo dnf install ruff```
+
+```pacman: sudo pacman -S ruff```
+
+```apk: sudo apk add ruff```
+
+```brew: brew install ruff```
+
+```nix: nix profile install nixpkgs#ruff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flake8](/man/flake8)(1), [black](/man/black)(1), [pylint](/man/pylint)(1), [isort](/man/isort)(1)

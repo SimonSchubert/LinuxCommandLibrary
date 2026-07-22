@@ -35,6 +35,24 @@ Part of the **git-extras** package and must be installed separately. Commits all
 
 git setup is part of **git-extras**, a collection of useful Git utilities created by **TJ Holowaychuk**. It combines common initialization steps for new repositories.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-init](/man/git-init)(1), [git-add](/man/git-add)(1), [git-commit](/man/git-commit)(1), [git-extras](/man/git-extras)(1), [git-ignore](/man/git-ignore)(1)

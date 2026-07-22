@@ -38,6 +38,22 @@ The tool features fuzzy sensor name matching with suggestions, configurable refr
 
 **hwinfo-tui** was created by **Juanjo Fuchs** and is written in **Python**. It was inspired by the visual style of gping and designed to bring hardware monitoring to the terminal.
 
+# INSTALL
+
+```apt: sudo apt install hwinfo```
+
+```dnf: sudo dnf install hwinfo```
+
+```pacman: sudo pacman -S hwinfo```
+
+```apk: sudo apk add hwinfo```
+
+```zypper: sudo zypper install hwinfo```
+
+```nix: nix profile install nixpkgs#hwinfo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sensors](/man/sensors)(1), [htop](/man/htop)(1)

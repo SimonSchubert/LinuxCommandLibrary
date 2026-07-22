@@ -93,6 +93,14 @@ When changing backends, you must choose between **-reconfigure** (discard old st
 
 **Terraform** was created by **Mitchell Hashimoto** and released by **HashiCorp** in **2014**. The init command was introduced to manage the growing complexity of provider plugins and module dependencies. Provider plugin management was significantly reworked in **Terraform 0.13** (2020) with the introduction of the dependency lock file and the public Terraform Registry as the default plugin source.
 
+# INSTALL
+
+```pacman: sudo pacman -S terraform```
+
+```nix: nix profile install nixpkgs#terraform```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [terraform-plan](/man/terraform-plan)(1), [terraform-apply](/man/terraform-apply)(1)

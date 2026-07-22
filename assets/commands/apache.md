@@ -107,6 +107,11 @@ Configuration changes require a restart or reload. Syntax errors in configuratio
 
 The Apache HTTP Server originated from the **NCSA HTTPd** server at the University of Illinois. In **1995**, a group of developers began collaborating on patches, leading to the "patchy server" name that became Apache. The **Apache Software Foundation** was formed in **1999** to support its development. Apache dominated web server market share for over two decades, though nginx has gained significant ground since **2010**.
 
+# INSTALL
+
+```pacman: sudo pacman -S apache```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [nginx](/man/nginx)(8), [httpd](/man/httpd)(8), [htpasswd](/man/htpasswd)(1), [ab](/man/ab)(1)

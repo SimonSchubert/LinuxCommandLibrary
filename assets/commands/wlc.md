@@ -62,6 +62,12 @@ Weblate server needed. API key required. Python-based.
 
 **wlc** is the command-line client for **Weblate**, an open-source translation management system.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#wlc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [weblate](/man/weblate)(1), [poedit](/man/poedit)(1)

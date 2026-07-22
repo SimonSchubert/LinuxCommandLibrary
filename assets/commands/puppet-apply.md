@@ -93,6 +93,14 @@ Requires Puppet installed. Operates without a Puppet server (masterless mode). M
 
 puppet apply provides **local Puppet** manifest execution.
 
+# INSTALL
+
+```dnf: sudo dnf install puppet```
+
+```pacman: sudo pacman -S puppet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [puppet](/man/puppet)(1), [puppet-agent](/man/puppet-agent)(1)

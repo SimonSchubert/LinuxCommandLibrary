@@ -80,6 +80,16 @@ Requires network connectivity to DICT servers. Available dictionaries depend on 
 
 The dict client implements the **DICT protocol** (RFC 2229), developed in **1997** as a standard for dictionary server access. The protocol was designed to provide a universal interface for dictionary lookups over the Internet.
 
+# INSTALL
+
+```apt: sudo apt install dict```
+
+```brew: brew install dict```
+
+```nix: nix profile install nixpkgs#dict```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dictd](/man/dictd)(8), [curl](/man/curl)(1), [aspell](/man/aspell)(1)

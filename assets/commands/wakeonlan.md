@@ -65,6 +65,18 @@ Only works on local network (unless forwarded). BIOS settings required. Some NIC
 
 **Wake-on-LAN** was developed by AMD and HP in **1996**. wakeonlan provides command-line access to this power management feature.
 
+# INSTALL
+
+```pacman: sudo pacman -S wakeonlan```
+
+```apk: sudo apk add wakeonlan```
+
+```brew: brew install wakeonlan```
+
+```nix: nix profile install nixpkgs#wakeonlan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [etherwake](/man/etherwake)(1), [ethtool](/man/ethtool)(8)

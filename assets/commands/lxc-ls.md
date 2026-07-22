@@ -77,6 +77,24 @@ NAME, STATE, AUTOSTART, GROUPS, IPV4, IPV6, UNPRIVILEGED
 
 Requires root or appropriate LXC permissions for system containers. Unprivileged containers can be listed without root if configured for the current user.
 
+# INSTALL
+
+```apt: sudo apt install lxc```
+
+```dnf: sudo dnf install lxc```
+
+```pacman: sudo pacman -S lxc```
+
+```apk: sudo apk add lxc```
+
+```zypper: sudo zypper install lxc```
+
+```brew: brew install lxc```
+
+```nix: nix profile install nixpkgs#lxc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lxc-info](/man/lxc-info)(1), [lxc-start](/man/lxc-start)(1), [lxc-stop](/man/lxc-stop)(1), [lxc-create](/man/lxc-create)(1), [lxc-destroy](/man/lxc-destroy)(1)

@@ -135,6 +135,14 @@ Changes made outside Terraform (manual console changes) cause state drift. Use *
 
 Terraform was created by **HashiCorp** and first released in **2014** by Mitchell Hashimoto. It pioneered the "infrastructure as code" approach for multi-cloud provisioning and became the de facto standard for declarative infrastructure management.
 
+# INSTALL
+
+```pacman: sudo pacman -S terraform```
+
+```nix: nix profile install nixpkgs#terraform```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws](/man/aws)(1), [ansible](/man/ansible)(1), [pulumi](/man/pulumi)(1), [tofu](/man/tofu)(1)

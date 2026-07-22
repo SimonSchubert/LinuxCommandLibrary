@@ -46,6 +46,17 @@ The game uses a simple two-word parser that may not recognize complex sentences.
 
 **adventure** was created by Will Crowther in **1976** based on his experiences caving in Mammoth Cave, Kentucky. Don Woods expanded it in **1977**, adding fantasy elements. It is considered the first text adventure game and influenced the entire adventure game genre including Zork and countless others.
 
+# INSTALL
+
+```dnf: sudo dnf install bsd-games```
+
+```pacman: sudo pacman -S bsd-games```
+
+```apk: sudo apk add bsd-games```
+
+```zypper: sudo zypper install bsd-games```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [frotz](/man/frotz)(1), [nethack](/man/nethack)(6)

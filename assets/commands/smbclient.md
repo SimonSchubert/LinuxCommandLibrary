@@ -117,6 +117,20 @@ Password on command line is visible in process listings; use **-A** for credenti
 
 **smbclient** is part of **Samba**, created by **Andrew Tridgell** in **1992** after reverse-engineering the SMB protocol. Samba has evolved to support modern SMB2 and SMB3 protocols. The tool remains essential for cross-platform file sharing and accessing Windows shares from Linux.
 
+# INSTALL
+
+```apt: sudo apt install smbclient```
+
+```dnf: sudo dnf install samba-client```
+
+```pacman: sudo pacman -S smbclient```
+
+```apk: sudo apk add samba-client```
+
+```zypper: sudo zypper install samba-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount.cifs](/man/mount.cifs)(8), [smbcacls](/man/smbcacls)(1), [smbget](/man/smbget)(1), [nmblookup](/man/nmblookup)(1)

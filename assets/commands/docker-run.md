@@ -100,6 +100,24 @@ Containers run as root by default; use **-u** for non-root execution. Ports belo
 
 docker run has been the fundamental Docker command since the initial release in **2013** by **Solomon Hykes** and dotCloud (later Docker, Inc.). The command's design draws from Unix philosophy and LXC container concepts. Options have expanded significantly to support enterprise features, orchestration, and security requirements.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-build](/man/docker-build)(1), [docker-ps](/man/docker-ps)(1), [docker-exec](/man/docker-exec)(1)

@@ -54,6 +54,18 @@ Part of the bsdgames package. Text-based input with room numbers. Running out of
 
 **Hunt the Wumpus** was created by **Gregory Yob** in **1973** as a reaction against grid-based games. It is one of the earliest examples of a non-grid-based computer game and has been widely ported and reimagined.
 
+# INSTALL
+
+```dnf: sudo dnf install bsd-games```
+
+```pacman: sudo pacman -S bsd-games```
+
+```apk: sudo apk add bsd-games```
+
+```zypper: sudo zypper install bsd-games```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [adventure](/man/adventure)(6), [rogue](/man/rogue)(6), [battlestar](/man/battlestar)(6)

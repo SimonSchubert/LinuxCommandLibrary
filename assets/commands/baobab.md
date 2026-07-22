@@ -47,6 +47,23 @@ Scanning large filesystems can be slow. Remote filesystems require network acces
 
 **Baobab** was created by Fabio Marzocca around **2005** and became GNOME's standard disk usage analyzer, named after the baobab tree.
 
+# INSTALL
+
+```apt: sudo apt install baobab```
+
+```dnf: sudo dnf install baobab```
+
+```pacman: sudo pacman -S baobab```
+
+```apk: sudo apk add baobab```
+
+```zypper: sudo zypper install baobab```
+
+```brew: brew install baobab```
+
+```nix: nix profile install nixpkgs#baobab```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [du](/man/du)(1), [ncdu](/man/ncdu)(1)

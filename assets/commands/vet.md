@@ -66,6 +66,12 @@ Go-specific. Not all bugs found. Use with tests.
 
 **go vet** is part of the Go toolchain, providing static analysis to find common programming mistakes.
 
+# INSTALL
+
+```brew: brew install vet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [go-vet](/man/go-vet)(1), [go-build](/man/go-build)(1), [golint](/man/golint)(1), [staticcheck](/man/staticcheck)(1)

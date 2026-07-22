@@ -98,6 +98,16 @@ Large wordlists can consume significant disk space and generation time. Use resp
 
 crunch was developed for the security community as a flexible wordlist generator. It became a standard tool in penetration testing distributions like Kali Linux. The tool enables security professionals to test password policies and authentication systems.
 
+# INSTALL
+
+```apt: sudo apt install crunch```
+
+```brew: brew install crunch```
+
+```nix: nix profile install nixpkgs#crunch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [john](/man/john)(1), [hashcat](/man/hashcat)(1), [hydra](/man/hydra)(1)

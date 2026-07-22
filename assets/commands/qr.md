@@ -45,6 +45,12 @@ Various implementations. Check installed version.
 
 qr provides **quick QR code** generation from command line.
 
+# INSTALL
+
+```apk: sudo apk add py3-qrcode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qrencode](/man/qrencode)(1), [zbarimg](/man/zbarimg)(1)

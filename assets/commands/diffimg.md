@@ -47,6 +47,24 @@ Different tools also named `diffimg` exist — check `diffimg --version` or the 
 
 Multiple tools named **diffimg** have circulated since the early 2000s. The most widely packaged is a Python CLI/GUI by **Jonathan Zurflueh (thebulb)**. Other implementations include Qt-based desktop GUIs and Go/Rust rewrites.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [compare](/man/compare)(1), [diff](/man/diff)(1), [convert](/man/convert)(1)

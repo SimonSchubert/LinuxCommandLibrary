@@ -68,6 +68,12 @@ Sui blockchain specific. Move language. Account required.
 
 **sui** is the CLI for the **Sui** blockchain, a Layer 1 blockchain using Move language for smart contracts.
 
+# INSTALL
+
+```brew: brew install sui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [solana](/man/solana)(1), [aptos](/man/aptos)(1)

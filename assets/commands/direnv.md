@@ -109,6 +109,24 @@ Shell hook must be added to config for automatic operation. .envrc files must be
 
 **direnv** was created by Jonas Pfenniger (zimbatm) around **2013** to solve the problem of managing per-project environment configurations. It was inspired by the need to switch between different development environments without manually sourcing files. The tool has become popular in the DevOps and development communities, especially with nix integration.
 
+# INSTALL
+
+```apt: sudo apt install direnv```
+
+```dnf: sudo dnf install direnv```
+
+```pacman: sudo pacman -S direnv```
+
+```apk: sudo apk add direnv```
+
+```zypper: sudo zypper install direnv```
+
+```brew: brew install direnv```
+
+```nix: nix profile install nixpkgs#direnv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [env](/man/env)(1), [export](/man/export)(1), [nix-shell](/man/nix-shell)(1), [virtualenv](/man/virtualenv)(1)

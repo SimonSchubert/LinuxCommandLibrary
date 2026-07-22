@@ -38,6 +38,17 @@ Use the **--force** option to automatically delete all non-versioned objects in 
 
 The **--force** option only deletes non-versioned objects. If the bucket contains versioned objects or delete markers, the bucket deletion will fail even with **--force**. For buckets with versioning enabled, use **aws s3api delete-object** with **--version-id** to remove all object versions first, or configure a lifecycle policy to expire versions. Bucket deletion is permanent and the bucket name becomes available for others to use.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3-mb](/man/aws-s3-mb)(1), [aws-s3-rm](/man/aws-s3-rm)(1), [aws-s3-ls](/man/aws-s3-ls)(1)

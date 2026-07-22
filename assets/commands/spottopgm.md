@@ -32,6 +32,24 @@ _firstcol_ _firstline_ _lastcol_ _lastline_
 
 **spottopgm** converts images in the SPOT satellite format to PGM (Portable Graymap) format. The SPOT format is used by imagery from the SPOT (Satellite Pour l'Observation de la Terre) Earth-observation satellite system, which captures high-resolution imagery for cartography, agriculture, and environmental monitoring. This tool is part of the Netpbm image-processing toolkit, which provides converters between many image formats.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fitstopnm](/man/fitstopnm)(1), [pgmnorm](/man/pgmnorm)(1)

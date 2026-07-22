@@ -93,6 +93,24 @@ Requires API token. Hetzner Cloud specific. Some operations incur costs.
 
 hcloud was developed by **Hetzner** as the official CLI for their cloud platform.
 
+# INSTALL
+
+```apt: sudo apt install hcloud-cli```
+
+```dnf: sudo dnf install hcloud```
+
+```pacman: sudo pacman -S hcloud```
+
+```apk: sudo apk add hcloud```
+
+```zypper: sudo zypper install hcloud-cli```
+
+```brew: brew install hcloud```
+
+```nix: nix profile install nixpkgs#hcloud```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doctl](/man/doctl)(1), [aws](/man/aws)(1), [gcloud](/man/gcloud)(1)

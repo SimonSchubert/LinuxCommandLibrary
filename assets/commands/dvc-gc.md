@@ -95,6 +95,14 @@ Irreversible operation - removed cache files must be re-downloaded or re-compute
 
 dvc gc implements garbage collection for **DVC** caches, similar to git gc but for versioned data files, enabling storage management in ML projects.
 
+# INSTALL
+
+```brew: brew install dvc```
+
+```nix: nix profile install nixpkgs#dvc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dvc](/man/dvc)(1), [dvc-init](/man/dvc-init)(1), [dvc-add](/man/dvc-add)(1), [git-gc](/man/git-gc)(1)

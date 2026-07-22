@@ -80,5 +80,11 @@ Modifying the hosts file requires **root/administrator** privileges. Incorrect e
 
 **hostctl** was created by **guumaster** and is written in **Go**. It was designed to replace manual editing of the hosts file with a structured, profile-based approach that integrates with modern development workflows.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#hostctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

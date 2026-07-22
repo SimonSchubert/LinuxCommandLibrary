@@ -121,6 +121,19 @@ Some resources cannot be moved between resource groups or subscriptions. Deletin
 
 The generic resource commands have been part of the Azure CLI since **Azure CLI 2.0** launched in **2017**. They provide ARM (Azure Resource Manager) API access for any resource type. As Azure has grown, dedicated command groups for services have expanded, but the generic resource commands remain valuable for automation, bulk operations, and accessing new resource types before dedicated commands exist.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-group](/man/az-group)(1), [az-deployment](/man/az-deployment)(1), [az-provider](/man/az-provider)(1), [az-tag](/man/az-tag)(1)

@@ -52,6 +52,24 @@ Requires groff and grap. Image quality depends on resolution settings. Part of g
 
 grap2graph was developed as part of the **GNU groff** project to facilitate graph image creation from grap source.
 
+# INSTALL
+
+```apt: sudo apt install groff```
+
+```dnf: sudo dnf install groff```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grap](/man/grap)(1), [groff](/man/groff)(1)

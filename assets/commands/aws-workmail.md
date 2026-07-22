@@ -76,6 +76,17 @@ Organization IDs are required for most operations and follow the format **m-** f
 
 Amazon WorkMail launched in **January 2015** as a managed email and calendaring service for businesses. It was designed as an alternative to Microsoft Exchange and Google Workspace, with enterprise features like encryption, compliance, and directory integration.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ses](/man/aws-ses)(1)

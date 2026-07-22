@@ -42,6 +42,22 @@ PPP-specific. Paired with poff command. Legacy dial-up.
 
 pon was created for **PPP connection** initiation on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install ppp```
+
+```dnf: sudo dnf install ppp```
+
+```pacman: sudo pacman -S ppp```
+
+```apk: sudo apk add ppp-daemon```
+
+```zypper: sudo zypper install ppp```
+
+```nix: nix profile install nixpkgs#ppp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poff](/man/poff)(1), [pppd](/man/pppd)(8), [pppconfig](/man/pppconfig)(8)

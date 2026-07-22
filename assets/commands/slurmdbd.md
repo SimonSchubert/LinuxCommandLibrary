@@ -88,6 +88,12 @@ Requires proper configuration in **slurmdbd.conf** before starting. Database mus
 
 **slurmdbd** is part of **Slurm** (Simple Linux Utility for Resource Management), developed at **Lawrence Livermore National Laboratory** starting in **2002**. The database daemon was added to support enterprise-level accounting and fair-share scheduling. Slurm is now maintained by **SchedMD** and is used on many of the world's largest supercomputers.
 
+# INSTALL
+
+```apt: sudo apt install slurmdbd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [slurmctld](/man/slurmctld)(8), [slurmd](/man/slurmd)(8), [sacct](/man/sacct)(1), [sacctmgr](/man/sacctmgr)(1)

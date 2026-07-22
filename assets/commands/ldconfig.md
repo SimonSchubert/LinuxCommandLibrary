@@ -71,6 +71,14 @@ Requires root privileges to modify the system cache. Must be run after installin
 
 ldconfig is part of the GNU C Library (glibc) and has been essential for dynamic linking on Linux systems since the adoption of shared libraries.
 
+# INSTALL
+
+```apt: sudo apt install libc-bin```
+
+```apk: sudo apk add musl-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ldd](/man/ldd)(1), [ld.so](/man/ld.so)(8)

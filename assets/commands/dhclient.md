@@ -88,6 +88,14 @@ Requires root privileges. May conflict with network managers like NetworkManager
 
 dhclient is part of the **ISC DHCP** package, originally developed by **Ted Lemon** at the Internet Systems Consortium. ISC DHCP has been the reference implementation of DHCP since the late 1990s, though it entered maintenance mode as newer implementations emerged.
 
+# INSTALL
+
+```apt: sudo apt install isc-dhcp-client```
+
+```pacman: sudo pacman -S dhclient```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dhcpcd](/man/dhcpcd)(8), [ip](/man/ip)(8), [ifconfig](/man/ifconfig)(8), [networkctl](/man/networkctl)(1)

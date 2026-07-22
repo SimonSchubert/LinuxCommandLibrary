@@ -41,6 +41,17 @@ This command only configures website hosting; you must separately configure buck
 
 S3 static website hosting was introduced in **February 2011**, enabling buckets to serve static content directly. The **aws s3 website** CLI command simplifies configuration that previously required multiple API calls through **s3api put-bucket-website**.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3api](/man/aws-s3api)(1)

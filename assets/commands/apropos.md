@@ -62,6 +62,21 @@ Results depend on the whatis database being up to date. Run **mandb** to update 
 
 **apropos** has been part of Unix systems since early versions, helping users discover relevant commands. It's equivalent to **man -k**.
 
+# INSTALL
+
+```apt: sudo apt install man-db```
+
+```dnf: sudo dnf install man-db```
+
+```pacman: sudo pacman -S man-db```
+
+```apk: sudo apk add mandoc-apropos```
+
+```brew: brew install man-db```
+
+```nix: nix profile install nixpkgs#man-db```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [man](/man/man)(1), [whatis](/man/whatis)(1), [mandb](/man/mandb)(8)

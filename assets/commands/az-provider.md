@@ -85,6 +85,19 @@ Common providers include Microsoft.Compute (VMs), Microsoft.Storage (storage acc
 
 Requires Azure CLI to be installed and authenticated. Some providers auto-register when creating resources. Unregistering a provider does not delete existing resources but prevents creating new ones.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-resource](/man/az-resource)(1), [az-lock](/man/az-lock)(1), [az-tag](/man/az-tag)(1)

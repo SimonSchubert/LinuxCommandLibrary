@@ -49,6 +49,20 @@ If the destination revision cannot be determined unambiguously for a change, tha
 
 The modifications made by absorb can be reviewed with `jj op show -p`.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-squash](/man/jj-squash)(1), [git-absorb](/man/git-absorb)(1)

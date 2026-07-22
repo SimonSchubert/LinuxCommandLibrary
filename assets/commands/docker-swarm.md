@@ -66,6 +66,24 @@ native Docker clustering and orchestration
 
 **docker swarm** manages a Docker Swarm cluster. Swarm mode enables native clustering, service orchestration, load balancing, and secure communication between nodes.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-node](/man/docker-node)(1), [docker-service](/man/docker-service)(1)

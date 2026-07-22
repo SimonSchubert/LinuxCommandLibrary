@@ -87,6 +87,14 @@ All repositories must be accessible from the machine running mani. Clone operati
 
 **mani** was created by **alajmo** and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install mani```
+
+```nix: nix profile install nixpkgs#mani```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [mr](/man/mr)(1)

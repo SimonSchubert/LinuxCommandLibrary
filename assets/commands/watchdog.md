@@ -70,6 +70,18 @@ Requires appropriate kernel watchdog driver. Improper configuration can cause un
 
 **watchdog** was developed for Linux systems requiring high availability without human intervention. The concept dates to embedded systems where hardware watchdog timers ensure recovery from system hangs. The Linux implementation combines hardware timer support with software monitoring.
 
+# INSTALL
+
+```apt: sudo apt install watchdog```
+
+```dnf: sudo dnf install watchdog```
+
+```zypper: sudo zypper install watchdog```
+
+```nix: nix profile install nixpkgs#watchdog```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmesg](/man/dmesg)(1)

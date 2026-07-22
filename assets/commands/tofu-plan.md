@@ -63,6 +63,22 @@ Preview OpenTofu infrastructure changes
 
 **tofu plan** creates an execution plan for OpenTofu. OpenTofu is the open-source fork of Terraform. Shows proposed changes before applying to infrastructure.
 
+# INSTALL
+
+```dnf: sudo dnf install opentofu```
+
+```pacman: sudo pacman -S opentofu```
+
+```apk: sudo apk add opentofu```
+
+```zypper: sudo zypper install opentofu```
+
+```brew: brew install opentofu```
+
+```nix: nix profile install nixpkgs#opentofu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tofu](/man/tofu)(1), [terraform-plan](/man/terraform-plan)(1)

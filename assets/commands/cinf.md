@@ -60,6 +60,12 @@ Typically run as root (**sudo**) so all namespaces are visible. Install from Git
 
 Linux-only. Without sufficient privileges many namespaces are hidden. Kernel cgroup v1 vs v2 layout affects **--cgroup** paths; confirm against your host. Companion walkthrough is in the upstream repo.
 
+# INSTALL
+
+```aur: yay -S cinf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsns](/man/lsns)(1), [nsenter](/man/nsenter)(1), [unshare](/man/unshare)(1), [systemd-cgls](/man/systemd-cgls)(1)

@@ -115,6 +115,16 @@ Not suitable for very large databases - consider physical backups. Memory usage 
 
 **mysqldump** has been part of MySQL since early versions, developed at MySQL AB and later Oracle. It remains the standard logical backup tool for MySQL and MariaDB. While physical backup tools are preferred for large databases, mysqldump remains popular for its simplicity and portability.
 
+# INSTALL
+
+```apt: sudo apt install mariadb-client```
+
+```apk: sudo apk add mariadb-client```
+
+```zypper: sudo zypper install mariadb-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mysql](/man/mysql)(1), [pg_dump](/man/pg_dump)(1)

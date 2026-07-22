@@ -123,6 +123,12 @@ Projects are organized with a standard directory structure including contracts, 
 
 **Truffle** was originally created by **Tim Coulter** and later maintained by **ConsenSys** as part of the Truffle Suite. It was the dominant Ethereum development framework for several years. ConsenSys announced the **sunsetting of Truffle** in **September 2023**, recommending migration to Hardhat or other actively maintained frameworks.
 
+# INSTALL
+
+```brew: brew install truffle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hardhat](/man/hardhat)(1), [ganache](/man/ganache)(1), [solc](/man/solc)(1), [npm](/man/npm)(1)

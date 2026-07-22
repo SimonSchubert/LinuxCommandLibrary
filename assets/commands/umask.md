@@ -62,6 +62,16 @@ Shell builtin. Not persistent across sessions. Inverted logic.
 
 **umask** is a standard Unix command for setting the file mode creation mask, present since early Unix.
 
+# INSTALL
+
+```apk: sudo apk add execline```
+
+```brew: brew install execline```
+
+```nix: nix profile install nixpkgs#execline```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chmod](/man/chmod)(1), [chown](/man/chown)(1), [stat](/man/stat)(1)

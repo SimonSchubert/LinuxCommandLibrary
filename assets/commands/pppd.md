@@ -75,6 +75,22 @@ Requires root privileges. Complex configuration.
 
 pppd is the **standard PPP daemon** for Linux networking.
 
+# INSTALL
+
+```apt: sudo apt install ppp```
+
+```dnf: sudo dnf install ppp```
+
+```pacman: sudo pacman -S ppp```
+
+```apk: sudo apk add ppp-daemon```
+
+```zypper: sudo zypper install ppp```
+
+```nix: nix profile install nixpkgs#ppp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pon](/man/pon)(1), [poff](/man/poff)(1), [pppconfig](/man/pppconfig)(8)

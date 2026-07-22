@@ -75,6 +75,24 @@ Select specific **output columns**
 
 Only available on Linux. Requires sysfs to be mounted. Shows kernel's view of memory, not physical DIMM information.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [free](/man/free)(1), [chmem](/man/chmem)(8), [dmidecode](/man/dmidecode)(8)

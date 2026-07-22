@@ -45,6 +45,14 @@ Only displays output; does not execute commands. Requires both timing and typesc
 
 Part of **util-linux** package, complementing script for terminal session recording and playback.
 
+# INSTALL
+
+```apt: sudo apt install bsdutils```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [script](/man/script)(1), [scriptlive](/man/scriptlive)(1)

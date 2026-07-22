@@ -35,6 +35,12 @@ The application is intended as a user-friendly alternative to command-line packa
 
 Designed primarily for elementary OS but may work on other GTK-based distributions. Requires PackageKit for its backend. Not a full package manager replacement; intended for installing individual package files.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#eddy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dpkg](/man/dpkg)(1), [apt](/man/apt)(1), [gdebi](/man/gdebi)(1)

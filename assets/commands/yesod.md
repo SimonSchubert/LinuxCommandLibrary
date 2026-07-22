@@ -66,6 +66,12 @@ Haskell knowledge required. Stack/Cabal needed. Learning curve.
 
 **Yesod** was created by **Michael Snoyman** as a type-safe Haskell web framework.
 
+# INSTALL
+
+```apt: sudo apt install yesod```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stack](/man/stack)(1), [cabal](/man/cabal)(1), [ghc](/man/ghc)(1)

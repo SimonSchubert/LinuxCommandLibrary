@@ -46,6 +46,12 @@ Completely offline — no built-in sync across devices. The database file must b
 
 **kure** was created by **GGP1** and is written in **Go**. It supports Linux, macOS, BSD, Windows, and mobile platforms.
 
+# INSTALL
+
+```aur: yay -S kure```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pass](/man/pass)(1), [gopass](/man/gopass)(1)

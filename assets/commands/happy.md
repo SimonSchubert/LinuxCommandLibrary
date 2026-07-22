@@ -81,6 +81,22 @@ Haskell specific. Learning curve for grammar syntax. Debugging shift/reduce conf
 
 Happy was created for **Haskell** as an equivalent to yacc/bison, widely used in Haskell compilers and tools like GHC.
 
+# INSTALL
+
+```apt: sudo apt install happy```
+
+```dnf: sudo dnf install happy```
+
+```pacman: sudo pacman -S happy```
+
+```apk: sudo apk add happy```
+
+```zypper: sudo zypper install happy```
+
+```nix: nix profile install nixpkgs#happy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [alex](/man/alex)(1), [ghc](/man/ghc)(1), [yacc](/man/yacc)(1), [bison](/man/bison)(1)

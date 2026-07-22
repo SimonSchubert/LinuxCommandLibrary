@@ -116,6 +116,12 @@ Requires an nx.json configuration file. The `@nrwl/*` plugin scope was renamed t
 
 Nx was created by **Nrwl** (now Nx) to provide smart, extensible build tooling for monorepos. Originally focused on Angular, it expanded to support React, Node, and other frameworks, and later became a general-purpose build system.
 
+# INSTALL
+
+```brew: brew install nx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [lerna](/man/lerna)(1), [turbo](/man/turbo)(1)

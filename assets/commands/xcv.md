@@ -56,6 +56,12 @@ Files stored in ~/.xcv. Bash required. Install via npm.
 
 **xcv** was created as a simple bash tool to provide cut, copy, and paste functionality for files in the terminal.
 
+# INSTALL
+
+```brew: brew install xcv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cp](/man/cp)(1), [mv](/man/mv)(1), [xclip](/man/xclip)(1)

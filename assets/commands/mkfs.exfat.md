@@ -77,6 +77,22 @@ Create in **quiet mode** (errors only)
 
 All data on device will be lost. exFAT is ideal for USB drives and SD cards requiring files larger than 4GB.
 
+# INSTALL
+
+```apt: sudo apt install exfatprogs```
+
+```dnf: sudo dnf install exfatprogs```
+
+```pacman: sudo pacman -S exfatprogs```
+
+```apk: sudo apk add exfatprogs```
+
+```zypper: sudo zypper install exfatprogs```
+
+```nix: nix profile install nixpkgs#exfatprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkfs](/man/mkfs)(8), [fsck.exfat](/man/fsck.exfat)(8), [mkfs.vfat](/man/mkfs.vfat)(8), [exfatlabel](/man/exfatlabel)(8)

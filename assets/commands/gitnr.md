@@ -69,6 +69,14 @@ Requires internet connection to fetch templates. GitHub API rate limits may appl
 
 **gitnr** was created as a convenient way to generate .gitignore files without browsing the GitHub repository manually.
 
+# INSTALL
+
+```brew: brew install gitnr```
+
+```nix: nix profile install nixpkgs#gitnr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gitignore](https://git-scm.com/docs/gitignore), [gitignore.io](https://www.toptal.com/developers/gitignore)

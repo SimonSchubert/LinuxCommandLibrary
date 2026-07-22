@@ -95,6 +95,15 @@ BeakerLib is primarily designed for RHEL/Fedora ecosystem; availability varies o
 
 BeakerLib was developed at **Red Hat** as part of the **Beaker** integration testing infrastructure, originally designed for testing RHEL packages and system components. It grew from internal tools in the **mid-2000s** and was open-sourced along with Beaker. The library continues to be maintained as part of Red Hat's quality engineering toolchain.
 
+# INSTALL
+
+```dnf: sudo dnf install beakerlib```
+
+```aur: yay -S beakerlib```
+
+```brew: brew install beakerlib```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [bats](/man/bats)(1)

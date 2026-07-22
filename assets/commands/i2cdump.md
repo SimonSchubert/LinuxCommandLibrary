@@ -61,6 +61,24 @@ Accessing I2C devices can cause hardware issues on some systems. Always use the 
 
 i2cdump is part of the i2c-tools package, providing userspace access to I2C buses. The I2C bus protocol was developed by Philips Semiconductor (now NXP) in **1982** for inter-chip communication.
 
+# INSTALL
+
+```apt: sudo apt install i2c-tools```
+
+```dnf: sudo dnf install i2c-tools```
+
+```pacman: sudo pacman -S i2c-tools```
+
+```apk: sudo apk add i2c-tools```
+
+```zypper: sudo zypper install i2c-tools```
+
+```brew: brew install i2c-tools```
+
+```nix: nix profile install nixpkgs#i2c-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [i2cdetect](/man/i2cdetect)(8), [i2cget](/man/i2cget)(8), [i2cset](/man/i2cset)(8)

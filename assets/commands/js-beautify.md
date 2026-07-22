@@ -91,6 +91,14 @@ May alter code semantics in edge cases. Large files may be slow. Doesn't validat
 
 js-beautify was created by **Einar Lielmanis** as an online tool, later expanded to a command-line tool and library. It's widely used for code formatting and reversing minification.
 
+# INSTALL
+
+```brew: brew install js-beautify```
+
+```nix: nix profile install nixpkgs#js-beautify```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [prettier](/man/prettier)(1), [eslint](/man/eslint)(1)

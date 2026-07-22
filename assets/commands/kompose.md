@@ -91,6 +91,18 @@ Not all Compose features translate. May need manual adjustment. CNCF project.
 
 kompose was created to help users migrate from Docker Compose to Kubernetes, becoming a CNCF sandbox project.
 
+# INSTALL
+
+```pacman: sudo pacman -S kompose```
+
+```zypper: sudo zypper install kompose```
+
+```brew: brew install kompose```
+
+```nix: nix profile install nixpkgs#kompose```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [docker-compose](/man/docker-compose)(1), [helm](/man/helm)(1)

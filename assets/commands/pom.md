@@ -39,6 +39,12 @@ BSD utility. Date format is YYYYMMDD.
 
 pom was created as a **BSD utility** for displaying lunar phases.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pom```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cal](/man/cal)(1), [date](/man/date)(1)

@@ -75,6 +75,23 @@ Requires valid AFM files from the font vendor. The text map file must correctly 
 
 **afmtodit** is part of GNU groff, developed since **1989**. It enables the use of PostScript fonts in groff documents, extending the typesetting system beyond its original font set.
 
+# INSTALL
+
+```apt: sudo apt install groff```
+
+```dnf: sudo dnf install groff```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [groff](/man/groff)(1), [addftinfo](/man/addftinfo)(1)

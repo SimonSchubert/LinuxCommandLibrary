@@ -74,6 +74,24 @@ Large histories can be slow. Some options don't combine. Graph may need wide ter
 
 git log is a core **Git** command from initial release, providing the essential capability to view commit history.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-show](/man/git-show)(1), [git-blame](/man/git-blame)(1), [tig](/man/tig)(1)

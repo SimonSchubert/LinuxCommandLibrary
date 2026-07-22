@@ -55,6 +55,12 @@ Installing a group installs all its mandatory and default packages.
 
 Groups can be referenced by name or ID. Optional packages in groups aren't installed by default. Removing a group may leave some packages installed.
 
+# INSTALL
+
+```pacman: sudo pacman -S dnf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dnf](/man/dnf)(8), [dnf-install](/man/dnf-install)(8)

@@ -45,6 +45,12 @@ connects to Microsoft SQL Server databases for executing queries and database
 
 **impacket-mssqlclient** connects to Microsoft SQL Server databases for executing queries and database operations. Part of the Impacket toolkit. Supports SQL and Windows authentication. Interactive mode provides a SQL shell for commands like xp_cmdshell.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sqlcmd](/man/sqlcmd)(1), [impacket-psexec](/man/impacket-psexec)(1)

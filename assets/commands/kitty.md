@@ -90,6 +90,22 @@ Requires GPU with OpenGL 3.3+ support. Uses its own terminfo entry (xterm-kitty)
 
 kitty was created by **Kovid Goyal** as a fast, feature-rich terminal emulator leveraging modern GPU capabilities.
 
+# INSTALL
+
+```apt: sudo apt install kitty```
+
+```dnf: sudo dnf install kitty```
+
+```pacman: sudo pacman -S kitty```
+
+```apk: sudo apk add kitty```
+
+```zypper: sudo zypper install kitty```
+
+```nix: nix profile install nixpkgs#kitty```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [alacritty](/man/alacritty)(1), [wezterm](/man/wezterm)(1), [tmux](/man/tmux)(1)

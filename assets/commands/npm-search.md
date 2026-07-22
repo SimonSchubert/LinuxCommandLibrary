@@ -80,6 +80,16 @@ Registry search can be slow. Results may differ from website. Consider web inter
 
 npm search has been part of npm since early versions, providing command-line access to the npm registry search functionality.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-view](/man/npm-view)(1)

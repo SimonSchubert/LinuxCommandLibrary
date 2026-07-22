@@ -72,6 +72,22 @@ Requires root privileges and the nf_conntrack kernel module. Deleting connection
 
 **conntrack** is part of the **conntrack-tools** package for managing the Linux connection tracking system.
 
+# INSTALL
+
+```apt: sudo apt install conntrack```
+
+```dnf: sudo dnf install conntrack-tools```
+
+```pacman: sudo pacman -S conntrack-tools```
+
+```apk: sudo apk add conntrack-tools```
+
+```zypper: sudo zypper install conntrack-tools```
+
+```nix: nix profile install nixpkgs#conntrack-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iptables](/man/iptables)(8), [nft](/man/nft)(8), [ss](/man/ss)(8)

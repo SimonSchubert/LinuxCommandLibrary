@@ -26,6 +26,24 @@ There are no command-line options specific to neotoppm.
 
 Copyright (C) 2001 by Teemu Hukkanen, based on **pi1toppm** by Steve Belczyk and Jef Poskanzer.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmtoneo](/man/ppmtoneo)(1), [pi1toppm](/man/pi1toppm)(1)

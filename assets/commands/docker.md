@@ -198,6 +198,24 @@ Requires Docker daemon running. Root or docker group membership needed. Networki
 
 **Docker** was created by Solomon Hykes at dotCloud in **2013**, becoming open-source and revolutionizing application containerization.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-compose](/man/docker-compose)(1), [podman](/man/podman)(1), [kubectl](/man/kubectl)(1)

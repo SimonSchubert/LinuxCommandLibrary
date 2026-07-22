@@ -116,6 +116,18 @@ Requires internet for initial sync. Local cache is encrypted but exists on disk.
 
 **lpass** was developed by **LastPass** and released as open source around **2014**. It provides command-line access to the LastPass service, which was founded in **2008**. LastPass was acquired by LogMeIn in **2015** and later sold to private equity. The CLI tool remains popular for automation and terminal-based workflows despite competition from tools like Bitwarden and 1Password.
 
+# INSTALL
+
+```dnf: sudo dnf install lastpass-cli```
+
+```apk: sudo apk add lastpass-cli```
+
+```brew: brew install lastpass-cli```
+
+```nix: nix profile install nixpkgs#lastpass-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pass](/man/pass)(1), [rbw](/man/rbw)(1), [bw](/man/bw)(1), [gopass](/man/gopass)(1), [keepassxc-cli](/man/keepassxc-cli)(1)

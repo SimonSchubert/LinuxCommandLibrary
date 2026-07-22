@@ -114,6 +114,24 @@ Background jobs require a working system scheduler. The `gc` task is expensive a
 
 git maintenance was added in **Git 2.29** to provide automated repository optimization, replacing manual gc invocation.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-gc](/man/git-gc)(1), [git-commit-graph](/man/git-commit-graph)(1), [git-fetch](/man/git-fetch)(1)

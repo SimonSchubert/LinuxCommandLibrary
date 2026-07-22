@@ -43,6 +43,14 @@ As a **polkit agent**, nmcli handles authorization prompts for privileged Networ
 
 The agent runs in the foreground and must remain running to handle requests. Only one secret agent or polkit agent of each type can be registered at a time. Primarily useful for headless systems or terminal-only environments.
 
+# INSTALL
+
+```apt: sudo apt install network-manager```
+
+```apk: sudo apk add networkmanager-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmcli](/man/nmcli)(1), [nmcli-general](/man/nmcli-general)(1), [NetworkManager](/man/NetworkManager)(8), [polkit](/man/polkit)(8)

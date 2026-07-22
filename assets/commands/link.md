@@ -38,6 +38,24 @@ Cannot create symbolic links. Cannot link directories. Target must exist. Same f
 
 link is a **POSIX** utility providing a simple interface to the link() system call for creating hard links.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ln](/man/ln)(1), [unlink](/man/unlink)(1), [readlink](/man/readlink)(1)

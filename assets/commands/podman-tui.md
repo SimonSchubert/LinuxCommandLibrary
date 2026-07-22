@@ -62,6 +62,18 @@ Interactive application; primary control is via key bindings rather than CLI sub
 
 Requires **podman.socket** (or **podman system service**) for the API. SSH key passphrases need **CONTAINER_PASSPHRASE**. Uses 256-color mode on Unix-like systems. Match **podman-tui** major version to your Podman major version.
 
+# INSTALL
+
+```dnf: sudo dnf install podman-tui```
+
+```apk: sudo apk add podman-tui```
+
+```brew: brew install podman-tui```
+
+```nix: nix profile install nixpkgs#podman-tui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [docker](/man/docker)(1), [lazydocker](/man/lazydocker)(1), [ctop](/man/ctop)(1)

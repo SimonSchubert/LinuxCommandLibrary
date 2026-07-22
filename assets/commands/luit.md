@@ -62,6 +62,22 @@ X11 tool. May not handle all encodings. Complex legacy encoding support.
 
 luit was created for **XFree86/X.Org** to handle encoding conversion for terminals running UTF-8.
 
+# INSTALL
+
+```apt: sudo apt install luit```
+
+```dnf: sudo dnf install luit```
+
+```pacman: sudo pacman -S luit```
+
+```zypper: sudo zypper install luit```
+
+```brew: brew install luit```
+
+```nix: nix profile install nixpkgs#luit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xterm](/man/xterm)(1), [iconv](/man/iconv)(1), [locale](/man/locale)(1)

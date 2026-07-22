@@ -60,6 +60,12 @@ The command is usually run daily by cron to keep the database current. Manual ex
 
 Requires root privileges for full filesystem access. Initial scan can take several minutes on large filesystems. Network filesystems are typically excluded by default.
 
+# INSTALL
+
+```apk: sudo apk add findutils-locate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [locate](/man/locate)(1), [mlocate](/man/mlocate)(1), [plocate](/man/plocate)(1)

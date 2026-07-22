@@ -50,6 +50,24 @@ _DIRECTORY_
 
 **git force-clone** is part of **git-extras**, the long-running collection of git helpers by **TJ Holowaychuk** and contributors.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-clone](/man/git-clone)(1), [git-reset](/man/git-reset)(1), [git-fetch](/man/git-fetch)(1), [git-extras](/man/git-extras)(1)

@@ -54,6 +54,24 @@ Only generates UPC-A format barcodes. The check digit is not validated or comput
 
 **pbmupc** is part of the **Netpbm** package, which originated from Jef Poskanzer's PBMplus toolkit in the late 1980s.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbm](/man/pbm)(5), [netpbm](/man/netpbm)(1)

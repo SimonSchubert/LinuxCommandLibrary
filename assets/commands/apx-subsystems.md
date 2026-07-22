@@ -80,6 +80,15 @@ Subsystems require container runtime support. Removing or resetting a subsystem 
 
 **apx** is the package manager for **Vanilla OS**, providing subsystem-based package management with support for multiple package managers.
 
+# INSTALL
+
+```dnf: sudo dnf install apx```
+
+```aur: yay -S apx```
+
+```nix: nix profile install nixpkgs#apx```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apx](/man/apx)(1), [apx-stacks](/man/apx-stacks)(1), [distrobox](/man/distrobox)(1)

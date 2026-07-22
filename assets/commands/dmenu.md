@@ -67,6 +67,24 @@ Commonly used as an application launcher, file picker, or general selection inte
 
 X11 only (see bemenu for Wayland). Items must be newline-separated. Part of suckless tools. Highly customizable through patches.
 
+# INSTALL
+
+```apt: sudo apt install suckless-tools```
+
+```dnf: sudo dnf install dmenu```
+
+```pacman: sudo pacman -S dmenu```
+
+```apk: sudo apk add dmenu```
+
+```zypper: sudo zypper install dmenu```
+
+```brew: brew install dmenu```
+
+```nix: nix profile install nixpkgs#dmenu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rofi](/man/rofi)(1), [bemenu](/man/bemenu)(1), [fzf](/man/fzf)(1)

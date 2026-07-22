@@ -70,6 +70,20 @@ Only shows X11 core fonts (XLFD), not modern fontconfig/FreeType fonts. Limited 
 
 **xfontsel** was created by Ralph R. Swick at Digital Equipment Corporation/MIT Project Athena. It was essential when XLFD fonts were the primary font system on X11. Modern systems primarily use fontconfig and Xft, making xfontsel mainly useful for legacy applications.
 
+# INSTALL
+
+```apt: sudo apt install x11-utils```
+
+```dnf: sudo dnf install xfontsel```
+
+```apk: sudo apk add xfontsel```
+
+```zypper: sudo zypper install xfontsel```
+
+```nix: nix profile install nixpkgs#xfontsel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xlsfonts](/man/xlsfonts)(1), [fc-list](/man/fc-list)(1), [xterm](/man/xterm)(1)

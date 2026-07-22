@@ -133,6 +133,14 @@ Based on old QtWebKit - some modern CSS/JS may not work. Project is no longer ma
 
 **wkhtmltopdf** was created by **Jakob Truelsen** around **2008**. It provided command-line HTML to PDF conversion before headless browsers existed. Despite being based on an older WebKit version, it became widely used. Development slowed as headless Chrome/Firefox emerged as alternatives.
 
+# INSTALL
+
+```dnf: sudo dnf install wkhtmltopdf```
+
+```nix: nix profile install nixpkgs#wkhtmltopdf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wkhtmltoimage](/man/wkhtmltoimage)(1), [weasyprint](/man/weasyprint)(1), [chromium](/man/chromium)(1), [pandoc](/man/pandoc)(1), [htmldoc](/man/htmldoc)(1)

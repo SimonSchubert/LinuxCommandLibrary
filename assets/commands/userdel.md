@@ -59,6 +59,20 @@ The **-f** option is dangerous and may leave the system in an inconsistent state
 
 **userdel** is part of the **shadow-utils** package. On Debian systems, **deluser** provides additional features like backup creation.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [deluser](/man/deluser)(8), [useradd](/man/useradd)(8), [usermod](/man/usermod)(8), [groupdel](/man/groupdel)(8)

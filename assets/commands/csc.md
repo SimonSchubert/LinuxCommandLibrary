@@ -87,6 +87,22 @@ Modern .NET development prefers **dotnet build** over direct csc invocation. Ass
 
 csc has been the C# compiler since **C# 1.0 in 2002**. Originally part of .NET Framework, it was reimplemented in C# itself as the Roslyn compiler starting in **2014**. The modern csc is part of the .NET SDK and tracks the latest language version (C# 14 with .NET 10, and beyond).
 
+# INSTALL
+
+```apt: sudo apt install chicken-bin```
+
+```dnf: sudo dnf install chicken```
+
+```pacman: sudo pacman -S chicken```
+
+```apk: sudo apk add chicken```
+
+```brew: brew install chicken```
+
+```nix: nix profile install nixpkgs#chicken```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dotnet](/man/dotnet)(1), [msbuild](/man/msbuild)(1), [mono](/man/mono)(1), [mcs](/man/mcs)(1)

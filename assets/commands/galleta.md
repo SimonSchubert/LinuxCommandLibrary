@@ -47,6 +47,14 @@ Only for IE index.dat format. Modern browsers use different formats. File must b
 
 galleta (Spanish for "cookie") is part of forensic toolkit collections for analyzing Internet Explorer artifacts. It parses the proprietary index.dat format used by IE for cookie storage.
 
+# INSTALL
+
+```apt: sudo apt install galleta```
+
+```nix: nix profile install nixpkgs#galleta```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [strings](/man/strings)(1)

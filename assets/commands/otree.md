@@ -49,6 +49,16 @@ Only supports structured data formats (JSON, YAML, TOML, XML). Plain text files 
 
 **otree** was created by **fioncat** and is written in **Rust**.
 
+# INSTALL
+
+```apk: sudo apk add otree```
+
+```brew: brew install otree```
+
+```nix: nix profile install nixpkgs#otree```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [yq](/man/yq)(1), [jnv](/man/jnv)(1), [fx](/man/fx)(1)

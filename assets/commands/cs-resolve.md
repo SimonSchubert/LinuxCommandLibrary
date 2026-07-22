@@ -77,6 +77,20 @@ Resolution accuracy depends on POM/ivy.xml completeness. Some artifacts have opt
 
 cs resolve is part of Coursier's dependency management capabilities. Resolution is the core operation that powers both launching applications and fetching artifacts, extracted as a standalone command for analysis and debugging.
 
+# INSTALL
+
+```apt: sudo apt install csound```
+
+```pacman: sudo pacman -S csound```
+
+```zypper: sudo zypper install csound```
+
+```brew: brew install csound```
+
+```nix: nix profile install nixpkgs#csound```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cs](/man/cs)(1), [mvn](/man/mvn)(1), [gradle](/man/gradle)(1)

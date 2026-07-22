@@ -38,6 +38,18 @@ Deprecated. PPD files and ppdmerge will be removed in a future release of CUPS.
 
 ppdmerge is part of **CUPS** for PPD file merging.
 
+# INSTALL
+
+```apt: sudo apt install cups-ppdc```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppdc](/man/ppdc)(1), [ppdi](/man/ppdi)(1), [ppdhtml](/man/ppdhtml)(1), [ppdpo](/man/ppdpo)(1), [cups](/man/cups)(1)

@@ -85,6 +85,16 @@ Single-user tool. No sync built-in. SQLite backend.
 
 **Watson** was created for simple CLI time tracking. Named after Sherlock Holmes' companion, it helps track where time goes.
 
+# INSTALL
+
+```zypper: sudo zypper install watson```
+
+```brew: brew install watson```
+
+```nix: nix profile install nixpkgs#watson```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [timew](/man/timew)(1), [clockify](/man/clockify)(1)

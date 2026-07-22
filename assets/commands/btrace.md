@@ -78,6 +78,18 @@ Target JVM must have similar or compatible Java version. Some operations are res
 
 **BTrace** was created by **A. Sundararajan** at Sun Microsystems around **2007-2008** as a DTrace-inspired tool for Java. After Oracle's acquisition of Sun, the project became open source and community-maintained. It has been used extensively for production debugging and performance analysis of Java applications, filling a gap for dynamic instrumentation in the JVM ecosystem.
 
+# INSTALL
+
+```apt: sudo apt install blktrace```
+
+```dnf: sudo dnf install blktrace```
+
+```zypper: sudo zypper install blktrace```
+
+```nix: nix profile install nixpkgs#blktrace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jstack](/man/jstack)(1), [jmap](/man/jmap)(1), [java](/man/java)(1)

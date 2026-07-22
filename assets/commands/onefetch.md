@@ -107,6 +107,22 @@ Requires a Git repository. ASCII art needs sufficient terminal width. Image disp
 
 **onefetch** was created by **Ossama Hjaji** (o2sh) starting around **2019**, inspired by neofetch and screenfetch. Written in Rust, it gained popularity for providing a visually appealing way to showcase repository information. The project has grown to support many languages and terminals.
 
+# INSTALL
+
+```dnf: sudo dnf install onefetch```
+
+```pacman: sudo pacman -S onefetch```
+
+```apk: sudo apk add onefetch```
+
+```zypper: sudo zypper install onefetch```
+
+```brew: brew install onefetch```
+
+```nix: nix profile install nixpkgs#onefetch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neofetch](/man/neofetch)(1), [tokei](/man/tokei)(1), [git](/man/git)(1), [cloc](/man/cloc)(1)

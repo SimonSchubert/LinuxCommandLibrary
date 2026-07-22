@@ -52,6 +52,12 @@ Uses system random number generator. Results are pseudorandom, not cryptographic
 
 Created as a utility for tabletop gaming and random number generation using standard dice notation.
 
+# INSTALL
+
+```brew: brew install rolldice```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [shuf](/man/shuf)(1), [random](/man/random)(4)

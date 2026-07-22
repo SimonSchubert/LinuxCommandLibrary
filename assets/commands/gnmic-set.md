@@ -87,6 +87,14 @@ Changes may require commit on some devices. Invalid config may be rejected. Test
 
 gnmic set is a subcommand of **gnmic**, the gNMI client created by Nokia.
 
+# INSTALL
+
+```brew: brew install gnmic```
+
+```nix: nix profile install nixpkgs#gnmic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnmic](/man/gnmic)(1), [gnmic-get](/man/gnmic-get)(1), [gnmic-subscribe](/man/gnmic-subscribe)(1)

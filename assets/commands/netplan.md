@@ -106,6 +106,18 @@ YAML syntax errors prevent configuration from applying. The try command defaults
 
 **netplan** was developed by **Canonical** for Ubuntu, first appearing in Ubuntu 17.10. It was designed to provide a unified network configuration system that works across different network backends while being human-readable.
 
+# INSTALL
+
+```apt: sudo apt install netplan.io```
+
+```dnf: sudo dnf install netplan```
+
+```pacman: sudo pacman -S netplan```
+
+```nix: nix profile install nixpkgs#netplan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [networkctl](/man/networkctl)(1), [nmcli](/man/nmcli)(1), [ip](/man/ip)(8)

@@ -85,6 +85,22 @@ Sway must be running. Socket permissions required. JSON output needs parsing.
 
 **swaymsg** is the IPC client for **Sway** compositor. It mirrors i3-msg functionality for Wayland.
 
+# INSTALL
+
+```apt: sudo apt install sway```
+
+```dnf: sudo dnf install sway```
+
+```pacman: sudo pacman -S sway```
+
+```apk: sudo apk add sway```
+
+```zypper: sudo zypper install sway```
+
+```nix: nix profile install nixpkgs#sway```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sway](/man/sway)(1), [jq](/man/jq)(1), [i3-msg](/man/i3-msg)(1)

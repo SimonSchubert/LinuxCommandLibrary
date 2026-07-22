@@ -87,6 +87,18 @@ Overwrites originals. Part of ImageMagick. Backup before use.
 
 mogrify is part of **ImageMagick**, providing in-place image transformation since 1990.
 
+# INSTALL
+
+```pacman: sudo pacman -S imagemagick```
+
+```apk: sudo apk add imagemagick```
+
+```brew: brew install imagemagick```
+
+```nix: nix profile install nixpkgs#imagemagick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [convert](/man/convert)(1), [identify](/man/identify)(1), [magick](/man/magick)(1)

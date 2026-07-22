@@ -52,6 +52,12 @@ Data files are typically whitespace-separated columns. Options control axis scal
 
 **Grace** originated as a continuation of ACE/gr for scientific plotting. **QtGrace** ports the Grace interface to the Qt toolkit for native Windows, macOS, and Linux builds while keeping compatible CLI options.
 
+# INSTALL
+
+```aur: yay -S qtgrace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnuplot](/man/gnuplot)(1), [matplotlib](/man/matplotlib)(1)

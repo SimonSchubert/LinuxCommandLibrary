@@ -31,6 +31,23 @@ ATK format is obsolete. Primarily for converting legacy files. Few modern applic
 
 Part of Netpbm, supporting the Andrew Toolkit format which was developed at Carnegie Mellon in the **1980s**.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [pbmtoatk](/man/pbmtoatk)(1), [pnmtopng](/man/pnmtopng)(1)

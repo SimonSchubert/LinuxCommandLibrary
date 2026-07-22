@@ -28,6 +28,24 @@ Extract colormap from PPM image
 
 **ppmtomap** extracts the unique colors from a PPM image as a one-row colormap image. Useful for analyzing or transferring palettes. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmhist](/man/ppmhist)(1), [pnmcolormap](/man/pnmcolormap)(1)

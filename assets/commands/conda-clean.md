@@ -53,6 +53,14 @@ The cache system exists to speed up package installation by reusing previously d
 
 Using --all is the most aggressive option, clearing all cache types and freeing the maximum amount of disk space. The --dry-run flag allows previewing what would be removed without actually deleting anything, which is useful for understanding how much space can be reclaimed. This command is safe to run as it never touches installed packages in actual environments, only the centralized package cache.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-remove](/man/conda-remove)(1)

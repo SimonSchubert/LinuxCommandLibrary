@@ -120,6 +120,24 @@ Non-deterministic builds reduce hit rates. Some compiler options prevent caching
 
 **sccache** was developed by **Mozilla** starting around **2016** for Firefox builds. It provides an alternative to ccache with cloud storage and Rust support.
 
+# INSTALL
+
+```apt: sudo apt install sccache```
+
+```dnf: sudo dnf install sccache```
+
+```pacman: sudo pacman -S sccache```
+
+```apk: sudo apk add sccache```
+
+```zypper: sudo zypper install sccache```
+
+```brew: brew install sccache```
+
+```nix: nix profile install nixpkgs#sccache```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ccache](/man/ccache)(1), [cargo](/man/cargo)(1), [rustc](/man/rustc)(1), [cmake](/man/cmake)(1), [make](/man/make)(1)

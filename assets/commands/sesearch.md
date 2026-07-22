@@ -87,6 +87,16 @@ Policy files must be accessible; default location is **/sys/fs/selinux/policy** 
 
 **sesearch** is part of the **SETools** (SELinux Policy Tools) project, originally developed at **Tresys Technology** starting in **2001** to provide analysis capabilities for SELinux policies. The setools package has evolved alongside SELinux, which was integrated into the Linux kernel mainline in **2003**. Current maintenance continues under the setools project on GitHub.
 
+# INSTALL
+
+```apt: sudo apt install setools```
+
+```dnf: sudo dnf install setools```
+
+```nix: nix profile install nixpkgs#setools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [seinfo](/man/seinfo)(1), [semodule](/man/semodule)(8), [sestatus](/man/sestatus)(8), [getsebool](/man/getsebool)(8)

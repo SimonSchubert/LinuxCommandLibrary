@@ -103,6 +103,24 @@ Without root, **lsof** only sees files opened by your own processes. Output can 
 
 lsof was created by **Vic Abell** in 1988 and has become a standard Unix diagnostic tool.
 
+# INSTALL
+
+```apt: sudo apt install lsof```
+
+```dnf: sudo dnf install lsof```
+
+```pacman: sudo pacman -S lsof```
+
+```apk: sudo apk add lsof```
+
+```zypper: sudo zypper install lsof```
+
+```brew: brew install lsof```
+
+```nix: nix profile install nixpkgs#lsof```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fuser](/man/fuser)(1), [netstat](/man/netstat)(8), [ss](/man/ss)(8), [ps](/man/ps)(1)

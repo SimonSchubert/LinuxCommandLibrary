@@ -86,6 +86,22 @@ Requires root privileges. The filesystem must have quota support enabled and quo
 
 **setquota** is part of the Linux Diskquota Tools project. Disk quotas have been part of Unix systems since the 1980s, originally introduced in BSD Unix. The Linux quota system evolved from these early implementations, with the modern tools supporting multiple quota formats including XFS native quotas and NFS remote quotas.
 
+# INSTALL
+
+```apt: sudo apt install quota```
+
+```dnf: sudo dnf install quota```
+
+```pacman: sudo pacman -S quota-tools```
+
+```apk: sudo apk add quota-tools```
+
+```zypper: sudo zypper install quota```
+
+```nix: nix profile install nixpkgs#quota```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [quota](/man/quota)(1), [edquota](/man/edquota)(8), [repquota](/man/repquota)(8), [quotacheck](/man/quotacheck)(8), [quotaon](/man/quotaon)(8)

@@ -43,6 +43,12 @@ Some formats require **pandoc** to be installed for conversion. Complex document
 
 **hygg** was created by **kruseio** and is written in **Rust**. The name evokes the Danish/Norwegian concept of "hygge" (coziness), reflecting its focus on a comfortable reading experience in the terminal.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#hygg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [bat](/man/bat)(1), [glow](/man/glow)(1)

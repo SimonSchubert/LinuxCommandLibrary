@@ -50,6 +50,12 @@ Interactive keys include **r** refresh, **p** pause, **s** sort, **f** filter, a
 
 The target must expose pprof; binding pprof to a public interface is a security risk. Stack collection has runtime cost. **go get** install paths may differ by Go module mode—prefer current module install instructions from the repository.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#grmon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [pprof](/man/pprof)(1), [top](/man/top)(1)

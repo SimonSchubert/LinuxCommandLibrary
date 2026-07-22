@@ -167,6 +167,14 @@ Default DNS port: 8600
 
 ACL system requires token for most operations when enabled. Development mode stores everything in memory. Production requires proper clustering configuration.
 
+# INSTALL
+
+```pacman: sudo pacman -S consul```
+
+```nix: nix profile install nixpkgs#consul```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vault](/man/vault)(1), [nomad](/man/nomad)(1), [terraform](/man/terraform)(1)

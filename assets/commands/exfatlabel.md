@@ -40,6 +40,22 @@ get or set an exFAT filesystem label or serial number
 
 The filesystem must be unmounted before changing the label or serial number. Zero is returned on success, non-zero on failure.
 
+# INSTALL
+
+```apt: sudo apt install exfatprogs```
+
+```dnf: sudo dnf install exfatprogs```
+
+```pacman: sudo pacman -S exfatprogs```
+
+```apk: sudo apk add exfatprogs```
+
+```zypper: sudo zypper install exfatprogs```
+
+```nix: nix profile install nixpkgs#exfatprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkfs.exfat](/man/mkfs.exfat)(8), [fsck.exfat](/man/fsck.exfat)(8), [e2label](/man/e2label)(8)

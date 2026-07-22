@@ -124,6 +124,18 @@ Only for command-line applications, not libraries. Each app uses disk space for 
 
 **pipx** was created by **Chad Smith** around **2018** to address the problem of installing Python CLI tools cleanly. It was inspired by npx from the Node.js ecosystem. The project became a PyPA recommended tool for installing applications, while pip remains recommended for libraries.
 
+# INSTALL
+
+```dnf: sudo dnf install pipx```
+
+```apk: sudo apk add pipx```
+
+```brew: brew install pipx```
+
+```nix: nix profile install nixpkgs#pipx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [pipenv](/man/pipenv)(1), [poetry](/man/poetry)(1), [virtualenv](/man/virtualenv)(1)

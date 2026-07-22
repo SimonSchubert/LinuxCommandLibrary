@@ -100,6 +100,22 @@ Replaced by opam for package installation in modern projects. Manual META file c
 
 **ocamlfind** (findlib) was created by **Gerd Stolpmann** starting in the early **2000s** to standardize OCaml library management. It became the foundation for OCaml's package ecosystem, later complemented by opam for downloading and installing packages.
 
+# INSTALL
+
+```apt: sudo apt install ocaml-findlib```
+
+```dnf: sudo dnf install ocaml-findlib```
+
+```pacman: sudo pacman -S ocaml-findlib```
+
+```apk: sudo apk add ocamlfind```
+
+```zypper: sudo zypper install ocaml-findlib```
+
+```brew: brew install ocaml-findlib```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ocaml](/man/ocaml)(1), [ocamlc](/man/ocamlc)(1), [ocamlopt](/man/ocamlopt)(1), [opam](/man/opam)(1), [dune](/man/dune)(1)

@@ -60,6 +60,20 @@ Containers have access to the user's home directory, networking, and graphical e
 
 Requires Podman as the container runtime. Best suited for immutable Linux distributions. Container images are distribution-specific. Integration with the host may vary.
 
+# INSTALL
+
+```apt: sudo apt install podman-toolbox```
+
+```dnf: sudo dnf install toolbox```
+
+```pacman: sudo pacman -S toolbox```
+
+```zypper: sudo zypper install toolbox```
+
+```nix: nix profile install nixpkgs#toolbox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [distrobox](/man/distrobox)(1)

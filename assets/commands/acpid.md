@@ -72,6 +72,21 @@ Requires root privileges or appropriate permissions to access ACPI events. Event
 
 **acpid** was developed in the early **2000s** as Linux transitioned from APM (Advanced Power Management) to ACPI. Tim Hockin was an early maintainer. The daemon became a standard component for laptop power management on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install acpid```
+
+```dnf: sudo dnf install acpid```
+
+```pacman: sudo pacman -S acpid```
+
+```apk: sudo apk add acpid```
+
+```zypper: sudo zypper install acpid```
+
+```nix: nix profile install nixpkgs#acpid```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [acpi](/man/acpi)(1), [acpi_listen](/man/acpi_listen)(8), [systemctl](/man/systemctl)(1), [loginctl](/man/loginctl)(1)

@@ -113,6 +113,19 @@ Creating VMs incurs costs. **az vm stop** does not deallocate -- use **az vm dea
 
 **az vm** has been part of Azure CLI since version 2.0 in **2017**, providing comprehensive VM management capabilities.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-group](/man/az-group)(1), [az-network](/man/az-network)(1)

@@ -127,6 +127,22 @@ Basic vs extended regex syntax differences. Binary files may produce unexpected 
 
 grep was created by **Ken Thompson** at **Bell Labs** in **1973**. It was inspired by the g/re/p command in ed. GNU grep is the most widely used implementation today.
 
+# INSTALL
+
+```apt: sudo apt install grep```
+
+```dnf: sudo dnf install grep```
+
+```pacman: sudo pacman -S grep```
+
+```apk: sudo apk add grep```
+
+```zypper: sudo zypper install grep```
+
+```brew: brew install grep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [egrep](/man/egrep)(1), [fgrep](/man/fgrep)(1), [rg](/man/rg)(1), [ack](/man/ack)(1), [sed](/man/sed)(1)

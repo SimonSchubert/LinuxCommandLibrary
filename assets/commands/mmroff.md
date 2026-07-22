@@ -60,6 +60,24 @@ Part of GNU **groff**. Output format is selected with **-T**_device_ exactly as 
 
 **mmroff** was written by **Jörgen Hägg** of Lund, Sweden, as part of the GNU **mm** macro package contributed to **groff**.
 
+# INSTALL
+
+```apt: sudo apt install groff```
+
+```dnf: sudo dnf install groff```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [nroff](/man/nroff)(1), [troff](/man/troff)(1)

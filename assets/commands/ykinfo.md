@@ -83,6 +83,24 @@ Requires a YubiKey connected via USB. Part of the **yubikey-personalization** pa
 
 **ykinfo** is part of **yubikey-personalization**, providing information about connected YubiKey devices.
 
+# INSTALL
+
+```apt: sudo apt install yubikey-personalization```
+
+```dnf: sudo dnf install ykpers```
+
+```pacman: sudo pacman -S yubikey-personalization```
+
+```apk: sudo apk add ykpers```
+
+```zypper: sudo zypper install ykpers```
+
+```brew: brew install yubikey-personalization```
+
+```nix: nix profile install nixpkgs#yubikey-personalization```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ykman](/man/ykman)(1), [ykpersonalize](/man/ykpersonalize)(1), [gpg](/man/gpg)(1)

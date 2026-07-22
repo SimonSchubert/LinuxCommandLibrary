@@ -103,6 +103,20 @@ Requires the **deluged** daemon to be running. Interactive mode needs a terminal
 
 **deluge-console** was developed as part of the Deluge project to provide terminal access to the BitTorrent client. It addresses the need for headless server management and scripted torrent operations.
 
+# INSTALL
+
+```dnf: sudo dnf install deluge```
+
+```pacman: sudo pacman -S deluge```
+
+```apk: sudo apk add deluge```
+
+```zypper: sudo zypper install deluge```
+
+```nix: nix profile install nixpkgs#deluge```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [deluge](/man/deluge)(1), [deluged](/man/deluged)(1), [transmission-remote](/man/transmission-remote)(1)

@@ -85,6 +85,19 @@ Completions are Bash-specific and won't work in other shells (Zsh has its own sy
 
 Bash programmable completion was added to Bash in version **2.04** (2000). The bash-completion project, which provides a collection of completions for common commands, was started by **Ian Macdonald** around **2000** and has been maintained by various contributors since. It is now included by default in most Linux distributions and macOS Homebrew.
 
+# INSTALL
+
+```dnf: sudo dnf install bash-completion```
+
+```pacman: sudo pacman -S bash-completion```
+
+```zypper: sudo zypper install bash-completion```
+
+```brew: brew install bash-completion```
+
+```nix: nix profile install nixpkgs#bash-completion```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [bash](/man/bash)(1)

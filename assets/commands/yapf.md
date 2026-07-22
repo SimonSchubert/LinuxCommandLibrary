@@ -87,6 +87,18 @@ yapf may produce different output than other formatters like black. The **-i** o
 
 **yapf** was developed at **Google** and first released in **2015** as an open-source project. It was inspired by **clang-format** (for C/C++), applying similar algorithmic formatting to Python. The name follows the Unix tradition of "Yet Another" tools, acknowledging the existence of other Python formatters.
 
+# INSTALL
+
+```pacman: sudo pacman -S yapf```
+
+```apk: sudo apk add py3-yapf```
+
+```brew: brew install yapf```
+
+```nix: nix profile install nixpkgs#yapf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [black](/man/black)(1), [autopep8](/man/autopep8)(1), [isort](/man/isort)(1), [flake8](/man/flake8)(1)

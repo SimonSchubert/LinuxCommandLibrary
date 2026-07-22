@@ -34,6 +34,12 @@ Tasks are stored locally. No built-in sync or collaboration features.
 
 **omm** was created by **dhth** and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S omm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [taskwarrior](/man/taskwarrior)(1)

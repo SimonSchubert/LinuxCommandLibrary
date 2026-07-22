@@ -62,6 +62,12 @@ Displays:
 
 Without version specification, selects version based on Minimum Supported Rust Version (MSRV). For more detailed crate queries, consider cargo-crate or cargo-information.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#cargo-info```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-search](/man/cargo-search)(1)

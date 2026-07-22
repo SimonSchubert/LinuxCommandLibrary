@@ -110,6 +110,20 @@ Duration and time values are specified in **nanoseconds**, which can be unintuit
 
 GES was developed as part of the **GStreamer** project to provide a high-level editing API on top of GStreamer's media framework. The **ges-launch-1.0** tool was introduced alongside the GES library to allow command-line timeline construction and rendering. It is closely tied to the **Pitivi** video editor, which uses GES as its backend engine. The tool follows the GStreamer 1.x versioning scheme.
 
+# INSTALL
+
+```apt: sudo apt install ges1.0-tools```
+
+```dnf: sudo dnf install gst-editing-services```
+
+```pacman: sudo pacman -S gst-editing-services```
+
+```apk: sudo apk add gst-editing-services```
+
+```brew: brew install gst-editing-services```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gst-launch-1.0](/man/gst-launch-1.0)(1), [gst-inspect-1.0](/man/gst-inspect-1.0)(1), [ffmpeg](/man/ffmpeg)(1)

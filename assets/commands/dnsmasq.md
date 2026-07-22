@@ -120,6 +120,24 @@ Only one DNS/DHCP server should run on each interface. Conflicts with systemd-re
 
 **dnsmasq** was created by **Simon Kelley** in **2000** as a simple DNS forwarder for dial-up connections. It evolved to include DHCP and became popular in embedded Linux systems, routers (OpenWrt, DD-WRT), and development environments. The project remains actively maintained and is included in most Linux distributions.
 
+# INSTALL
+
+```apt: sudo apt install dnsmasq-base```
+
+```dnf: sudo dnf install dnsmasq```
+
+```pacman: sudo pacman -S dnsmasq```
+
+```apk: sudo apk add dnsmasq```
+
+```zypper: sudo zypper install dnsmasq```
+
+```brew: brew install dnsmasq```
+
+```nix: nix profile install nixpkgs#dnsmasq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [named](/man/named)(8), [dhcpd](/man/dhcpd)(8)

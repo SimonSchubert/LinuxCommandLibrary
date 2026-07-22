@@ -81,6 +81,16 @@ my-project/
 
 Automatically runs **bun install** to install @types/bun. Entry point defaults to index.ts unless other index files exist. TypeScript is preferred by default.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-create](/man/bun-create)(1), [npm-init](/man/npm-init)(1)

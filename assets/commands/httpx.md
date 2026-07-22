@@ -108,6 +108,16 @@ Intended for reconnaissance and security testing against systems you're authoriz
 
 httpx was created by **ProjectDiscovery** as part of its open-source security reconnaissance toolkit, alongside tools like **nuclei** and **subfinder**.
 
+# INSTALL
+
+```apk: sudo apk add py3-httpx```
+
+```brew: brew install httpx```
+
+```nix: nix profile install nixpkgs#httpx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nuclei](/man/nuclei)(1), [nmap](/man/nmap)(1), [httprobe](/man/httprobe)(1)

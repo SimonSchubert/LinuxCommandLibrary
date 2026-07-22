@@ -107,6 +107,16 @@ Authorized testing only -- scanning servers without permission may be illegal. N
 
 Nikto was created by **Chris Sullo** and **David Lodge** as an open source web server scanner for security testing. It is maintained under the CIRT.net project.
 
+# INSTALL
+
+```pacman: sudo pacman -S nikto```
+
+```brew: brew install nikto```
+
+```nix: nix profile install nixpkgs#nikto```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [dirb](/man/dirb)(1), [gobuster](/man/gobuster)(1), [curl](/man/curl)(1)

@@ -83,6 +83,14 @@ PicoClaw executes commands on your machine with your user permissions. In newer 
 
 PicoClaw was developed by **Sipeed**, a company known for RISC-V hardware, as an AI assistant optimized for their low-cost development boards. First released in **2025**, it was written in Go through a self-bootstrapping process where the AI agent itself drove the architectural design and code optimization. The project gained attention for running full agent capabilities on hardware costing as little as $10.
 
+# INSTALL
+
+```brew: brew install picoclaw```
+
+```nix: nix profile install nixpkgs#picoclaw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nanobot](/man/nanobot)(1), [claude](/man/claude)(1)

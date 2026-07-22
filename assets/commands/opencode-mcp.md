@@ -28,6 +28,16 @@ Manage OpenCode MCP servers
 
 **opencode mcp** manages Model Context Protocol (MCP) servers for OpenCode. MCP servers extend OpenCode's capabilities by providing additional tools, resources, and context to the AI agent. You can add, list, authenticate, remove, and debug MCP server connections.
 
+# INSTALL
+
+```pacman: sudo pacman -S opencode```
+
+```brew: brew install opencode```
+
+```nix: nix profile install nixpkgs#opencode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [opencode](/man/opencode)(1), [opencode-debug](/man/opencode-debug)(1)

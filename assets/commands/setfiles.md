@@ -93,6 +93,18 @@ Requires SELinux to be enabled; on non-SELinux systems, the command has no effec
 
 **setfiles** is part of the SELinux **policycoreutils** package, developed alongside SELinux at the **NSA** (National Security Agency) starting in **2000**. SELinux was merged into the Linux kernel mainline in **2003** with version **2.6**. The tool has evolved to support multi-threading and digest-based optimization.
 
+# INSTALL
+
+```apt: sudo apt install policycoreutils```
+
+```dnf: sudo dnf install policycoreutils```
+
+```zypper: sudo zypper install policycoreutils```
+
+```nix: nix profile install nixpkgs#policycoreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [restorecon](/man/restorecon)(8), [fixfiles](/man/fixfiles)(8), [semanage](/man/semanage)(8), [semanage-fcontext](/man/semanage-fcontext)(8), [chcon](/man/chcon)(1), [getenforce](/man/getenforce)(8), [sestatus](/man/sestatus)(8)

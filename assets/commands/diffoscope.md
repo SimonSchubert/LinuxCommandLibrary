@@ -87,6 +87,22 @@ Full functionality requires many external tools (binutils, unzip, etc.). Large f
 
 diffoscope was created by the **Reproducible Builds** project, specifically by **Lunar** and others, starting in **2014**. Originally named "debbindiff" for Debian package comparison, it was renamed and generalized. The tool is central to the reproducible builds effort, helping developers understand why builds differ and fix the sources of non-determinism.
 
+# INSTALL
+
+```dnf: sudo dnf install diffoscope```
+
+```pacman: sudo pacman -S diffoscope```
+
+```apk: sudo apk add diffoscope```
+
+```zypper: sudo zypper install diffoscope```
+
+```brew: brew install diffoscope```
+
+```nix: nix profile install nixpkgs#diffoscope```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [cmp](/man/cmp)(1)

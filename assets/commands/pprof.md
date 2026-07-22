@@ -99,6 +99,14 @@ Requires graphviz for graph generation. CPU profiles need sufficient sample time
 
 **pprof** was developed at **Google** for profiling production systems. The Go version is maintained as part of the Go project. It originated from Google's internal profiling tools and gperftools.
 
+# INSTALL
+
+```zypper: sudo zypper install pprof```
+
+```nix: nix profile install nixpkgs#pprof```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [perf](/man/perf)(1), [flamegraph](/man/flamegraph)(1)

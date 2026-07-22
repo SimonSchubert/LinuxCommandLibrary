@@ -87,6 +87,16 @@ Requires OpenGL-capable graphics driver. Some effects are resource-intensive and
 
 Compiz was created by **David Reveman** at Novell and first released in **2006**. It brought advanced 3D desktop effects to Linux, previously only seen on macOS. The desktop cube and wobbly windows became iconic Linux desktop features. Development fragmented between Compiz and Compiz Fusion before reuniting. Interest waned as GNOME Shell and KWin incorporated native compositing, though Compiz remains available.
 
+# INSTALL
+
+```apt: sudo apt install compiz-core```
+
+```dnf: sudo dnf install compiz```
+
+```zypper: sudo zypper install compiz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mutter](/man/mutter)(1), [kwin](/man/kwin)(1), [openbox](/man/openbox)(1), [picom](/man/picom)(1)

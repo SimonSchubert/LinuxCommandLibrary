@@ -69,6 +69,12 @@ Node.js required. Requires assertion library. Configuration via .mocharc.
 
 Mocha was created by **TJ Holowaychuk** as a feature-rich JavaScript test framework.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#mocha```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jest](/man/jest)(1), [npm](/man/npm)(1)

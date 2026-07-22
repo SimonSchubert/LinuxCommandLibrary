@@ -83,6 +83,22 @@ Only considers staged changes (git index). Cannot absorb changes that span multi
 
 Git-absorb was created by **Stephen Jung** (tummychow) as a Rust port of Facebook's **hg absorb** command for Mercurial. It became popular in stacked diff workflows where maintaining clean commit history is essential.
 
+# INSTALL
+
+```dnf: sudo dnf install git-absorb```
+
+```pacman: sudo pacman -S git-absorb```
+
+```apk: sudo apk add git-absorb```
+
+```zypper: sudo zypper install git-absorb```
+
+```brew: brew install git-absorb```
+
+```nix: nix profile install nixpkgs#git-absorb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-rebase](/man/git-rebase)(1), [git-commit](/man/git-commit)(1), [git-branchless](/man/git-branchless)(1)

@@ -112,6 +112,24 @@ No JavaScript support. Some modern web pages won't render correctly. Image suppo
 
 **w3m** was created by **Akinori Ito** in **1995** at Tohoku University in Japan. The name originally stood for "WWW-wo-Miru" (meaning "see WWW" in Japanese). It gained features like table rendering and image support, becoming more capable than earlier text browsers. The project has been maintained by various developers over the years.
 
+# INSTALL
+
+```apt: sudo apt install w3m```
+
+```dnf: sudo dnf install w3m```
+
+```pacman: sudo pacman -S w3m```
+
+```apk: sudo apk add w3m```
+
+```zypper: sudo zypper install w3m```
+
+```brew: brew install w3m```
+
+```nix: nix profile install nixpkgs#w3m```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lynx](/man/lynx)(1), [links](/man/links)(1), [elinks](/man/elinks)(1), [curl](/man/curl)(1)

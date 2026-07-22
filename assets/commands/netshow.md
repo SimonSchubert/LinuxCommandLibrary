@@ -34,6 +34,12 @@ Full process information requires root privileges. Falls back to limited informa
 
 **netshow** was created by **Taylor Wilsdon** and is written in **Python**. It can be installed via **uvx**, **pip**, or from source with **uv**.
 
+# INSTALL
+
+```brew: brew install netshow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ss](/man/ss)(8), [netstat](/man/netstat)(8), [lsof](/man/lsof)(8), [iftop](/man/iftop)(8), [nethogs](/man/nethogs)(8)

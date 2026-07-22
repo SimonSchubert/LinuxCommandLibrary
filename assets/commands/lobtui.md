@@ -26,6 +26,12 @@ Requires an internet connection to fetch the lobste.rs feed. Opening articles la
 
 **lobtui** was created by **pythops** and is written in **Rust**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#lobtui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hackernews-tui](/man/hackernews-tui)(1)

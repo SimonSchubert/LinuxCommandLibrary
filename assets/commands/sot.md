@@ -28,6 +28,12 @@ System observation tool with live graphs
 
 **sot** was created by **Kumar Anirudha** (anistark) and is written in **Python**.
 
+# INSTALL
+
+```aur: yay -S sot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [top](/man/top)(1), [htop](/man/htop)(1), [glances](/man/glances)(1)

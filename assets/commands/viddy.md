@@ -48,6 +48,18 @@ Modern watch command with time machine feature
 
 **viddy** was created by **sachaos**. Originally written in Go, it was rewritten in **Rust** starting with version 1.0.0.
 
+# INSTALL
+
+```apk: sudo apk add viddy```
+
+```zypper: sudo zypper install viddy```
+
+```brew: brew install viddy```
+
+```nix: nix profile install nixpkgs#viddy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [watch](/man/watch)(1), [hwatch](/man/hwatch)(1), [entr](/man/entr)(1)

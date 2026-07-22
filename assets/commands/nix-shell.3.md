@@ -79,6 +79,22 @@ nix-shell can also be used as a script interpreter via shebang lines (`#!/usr/bi
 
 Without **--pure**, the host environment leaks into the shell, which may cause builds to succeed locally but fail in a clean Nix build. The **--packages** flag uses Nixpkgs attribute names, not package names.
 
+# INSTALL
+
+```apt: sudo apt install nix-bin```
+
+```dnf: sudo dnf install nix```
+
+```pacman: sudo pacman -S nix```
+
+```apk: sudo apk add nix```
+
+```zypper: sudo zypper install nix```
+
+```nix: nix profile install nixpkgs#nix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix](/man/nix)(1), [nix-build](/man/nix-build)(1), [nix-shell](/man/nix-shell)(1), [nix-develop](/man/nix-develop)(1), [nix-store](/man/nix-store)(1)

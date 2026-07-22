@@ -66,6 +66,20 @@ moves changes from a revision into its parent or a specified destination in Juju
 
 **jj squash** moves changes from a revision into its parent or a specified destination in Jujutsu. Without options, it moves all changes from the working-copy commit (@) into its parent. The source commit becomes empty and is abandoned by default. Use **--from** and **--into** to move changes between arbitrary revisions. You can restrict the operation to specific file paths by passing filesets as arguments.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-abandon](/man/jj-abandon)(1), [jj-split](/man/jj-split)(1), [jj-diffedit](/man/jj-diffedit)(1)

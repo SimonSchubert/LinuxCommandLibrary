@@ -104,6 +104,19 @@ Not as fast as **ripgrep** on very large codebases. Some regex features may diff
 
 **ag** was created by Geoff Greer and first released in **2011**. It was designed as a faster alternative to ack, achieving significant speed improvements through parallelization and smarter file filtering. It inspired later tools like ripgrep.
 
+# INSTALL
+
+```apt: sudo apt install silversearcher-ag```
+
+```dnf: sudo dnf install the_silver_searcher```
+
+```pacman: sudo pacman -S the_silver_searcher```
+
+```apk: sudo apk add the_silver_searcher```
+
+```brew: brew install the_silver_searcher```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [rg](/man/rg)(1), [ack](/man/ack)(1), [grep](/man/grep)(1), [git-grep](/man/git-grep)(1)

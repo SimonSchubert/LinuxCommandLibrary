@@ -116,6 +116,12 @@ Requires an EFI system partition. The default ESP paths checked are /efi/, /boot
 
 **bootctl** is part of **systemd**, managing the systemd-boot EFI boot loader as an alternative to GRUB.
 
+# INSTALL
+
+```apt: sudo apt install systemd-boot-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kernel-install](/man/kernel-install)(8)

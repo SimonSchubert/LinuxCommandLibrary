@@ -40,6 +40,22 @@ Requires that the system was booted via MEMDISK. Must typically run as root to r
 
 **memdiskfind** is part of the **SYSLINUX** project's utilities, created by H. Peter Anvin and contributors to aid booting of ISO/floppy images loaded into memory by MEMDISK.
 
+# INSTALL
+
+```apt: sudo apt install syslinux-utils```
+
+```dnf: sudo dnf install syslinux```
+
+```pacman: sudo pacman -S syslinux```
+
+```apk: sudo apk add syslinux```
+
+```zypper: sudo zypper install syslinux```
+
+```nix: nix profile install nixpkgs#syslinux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [syslinux](/man/syslinux)(1), [modprobe](/man/modprobe)(8), [losetup](/man/losetup)(8)

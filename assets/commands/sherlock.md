@@ -100,6 +100,14 @@ Rate limiting by target sites may cause false negatives. Some sites require auth
 
 **Sherlock** was created by **Siddharth Dushantha** and first released in **2019**. The project quickly gained popularity in the security and OSINT community for its ease of use and extensive site coverage. Named after the famous detective, it is maintained as an open-source project on GitHub with active community contributions adding new site support.
 
+# INSTALL
+
+```brew: brew install sherlock```
+
+```nix: nix profile install nixpkgs#sherlock```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tor](/man/tor)(1), [curl](/man/curl)(1), [wget](/man/wget)(1)

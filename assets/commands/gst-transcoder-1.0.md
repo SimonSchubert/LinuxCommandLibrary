@@ -77,6 +77,18 @@ Input and output paths must be specified as URIs with the **file:///** prefix, n
 
 **gst-transcoder-1.0** was originally developed as part of the **Pitivi** video editor project to provide transcoding functionality. It was later integrated into **gst-plugins-bad**, becoming a standard GStreamer utility. The tool builds on the GstTranscoder library, which provides a simplified high-level API for media transcoding on top of GStreamer's pipeline framework.
 
+# INSTALL
+
+```apt: sudo apt install gstreamer1.0-plugins-bad-apps```
+
+```pacman: sudo pacman -S gst-plugins-bad```
+
+```apk: sudo apk add gst-plugins-bad```
+
+```brew: brew install gst-plugins-bad```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gst-launch-1.0](/man/gst-launch-1.0)(1), [gst-inspect-1.0](/man/gst-inspect-1.0)(1), [ges-launch-1.0](/man/ges-launch-1.0)(1), [ffmpeg](/man/ffmpeg)(1)

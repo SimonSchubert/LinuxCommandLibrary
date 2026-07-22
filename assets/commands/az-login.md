@@ -111,6 +111,19 @@ Tokens stored in ~/.azure directory. Interactive login requires browser. Service
 
 **az login** has been part of Azure CLI since version 2.0 in **2017**, supporting various authentication methods as Azure's identity platform evolved.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-logout](/man/az-logout)(1), [az-account](/man/az-account)(1)

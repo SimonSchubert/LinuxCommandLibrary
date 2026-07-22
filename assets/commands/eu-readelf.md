@@ -58,6 +58,24 @@ Alternative to GNU readelf with additional features for debugging and analysis.
 
 Part of elfutils package. Output format differs slightly from GNU readelf. Used for analyzing compiled binaries and shared libraries.
 
+# INSTALL
+
+```apt: sudo apt install elfutils```
+
+```dnf: sudo dnf install elfutils```
+
+```pacman: sudo pacman -S elfutils```
+
+```apk: sudo apk add elfutils```
+
+```zypper: sudo zypper install elfutils```
+
+```brew: brew install elfutils```
+
+```nix: nix profile install nixpkgs#elfutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [readelf](/man/readelf)(1), [objdump](/man/objdump)(1), [nm](/man/nm)(1)

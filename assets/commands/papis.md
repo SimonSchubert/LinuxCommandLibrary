@@ -109,6 +109,14 @@ Python required. Multiple library support. Integrates with Vim, Emacs, and offer
 
 papis was created by **Alejandro Gallo** as a command-line alternative to GUI reference managers like Zotero.
 
+# INSTALL
+
+```brew: brew install papis```
+
+```nix: nix profile install nixpkgs#papis```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zotero](/man/zotero)(1), [jabref](/man/jabref)(1), [mendeley](/man/mendeley)(1)

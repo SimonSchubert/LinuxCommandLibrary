@@ -63,6 +63,24 @@ Doesn't work with all programs. Statically linked programs unaffected. Some use 
 
 **stdbuf** is part of GNU coreutils. It uses LD_PRELOAD to intercept buffering calls.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unbuffer](/man/unbuffer)(1), [script](/man/script)(1), [tee](/man/tee)(1)

@@ -82,6 +82,12 @@ Requires Node.js and npm. Plugin ecosystem fragmented. Gulp 4 API differs from 3
 
 **gulp** was created by **Eric Schoffstall** and released in **2013** as an alternative to Grunt. Its streaming approach and code-based configuration appealed to developers. While newer bundlers have emerged, gulp remains popular for task automation.
 
+# INSTALL
+
+```pacman: sudo pacman -S gulp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [webpack](/man/webpack)(1), [grunt](/man/grunt)(1), [make](/man/make)(1)

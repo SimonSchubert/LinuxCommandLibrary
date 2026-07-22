@@ -79,6 +79,14 @@ Requires notification service. Cross-platform. Configuration for external servic
 
 noti was created to provide **command completion notifications** across multiple platforms and services.
 
+# INSTALL
+
+```brew: brew install noti```
+
+```nix: nix profile install nixpkgs#noti```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [notify-send](/man/notify-send)(1), [terminal-notifier](/man/terminal-notifier)(1)

@@ -44,6 +44,24 @@ Add comments to pull requests
 
 When called without the --body flag, the command opens your default editor for composing the comment. Comments support full GitHub-flavored Markdown including code blocks, tables, task lists, and @ mentions. The --edit-last option allows modifying your most recent comment on a pull request.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh-pr](/man/gh-pr)(1)

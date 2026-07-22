@@ -166,6 +166,16 @@ Requires network connectivity. Default uses system DNS. Complex output for begin
 
 **dig** was developed by **Steve Hotz** at USC's Information Sciences Institute in **1989**, becoming part of BIND and the standard DNS debugging tool.
 
+# INSTALL
+
+```apt: sudo apt install bind9-dnsutils```
+
+```apk: sudo apk add bind-tools```
+
+```nix: nix profile install nixpkgs#dig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [host](/man/host)(1), [nslookup](/man/nslookup)(1), [drill](/man/drill)(1)

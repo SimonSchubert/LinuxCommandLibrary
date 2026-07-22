@@ -30,6 +30,12 @@ Deletion of build artifacts requires rebuilding those projects. Use dry run mode
 
 **mcdu** was created by **mikalv** and is written in **Rust**.
 
+# INSTALL
+
+```aur: yay -S mcdu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ncdu](/man/ncdu)(1), [du](/man/du)(1), [kondo](/man/kondo)(1)

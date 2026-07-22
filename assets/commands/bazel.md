@@ -147,6 +147,17 @@ Steep learning curve. Requires BUILD files throughout project. Initial setup com
 
 **Bazel** was released by Google in **2015** as an open-source version of their internal Blaze build system, designed to handle massive multi-language monorepos.
 
+# INSTALL
+
+```apt: sudo apt install bazel-bootstrap```
+
+```pacman: sudo pacman -S bazel```
+
+```brew: brew install bazel```
+
+```nix: nix profile install nixpkgs#bazel```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [make](/man/make)(1), [cmake](/man/cmake)(1), [ninja](/man/ninja)(1), [gradle](/man/gradle)(1), [buck](/man/buck)(1)

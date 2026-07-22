@@ -80,6 +80,12 @@ Requires Node.js and Python installed on the host system. Voice interaction depe
 
 Leon was created by **Louis Grenard** and first released in **2019**. The project is hosted at **getleon.ai** and has accumulated over 15,000 GitHub stars. It was designed as a privacy-focused alternative to cloud-based assistants like Alexa and Google Assistant, emphasizing self-hosting and open-source extensibility. Development continues with an active community contributing skills and improvements.
 
+# INSTALL
+
+```apt: sudo apt install gatb-core```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [node](/man/node)(1)

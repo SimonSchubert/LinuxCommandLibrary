@@ -54,6 +54,12 @@ Modularity is used in RHEL 8+ and Fedora for software like Python, Node.js, and 
 
 Only one stream of a module can be active at a time. Enabling a stream doesn't install packages; use install for that. Available on RHEL 8+ and recent Fedora.
 
+# INSTALL
+
+```pacman: sudo pacman -S dnf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dnf](/man/dnf)(8), [dnf-install](/man/dnf-install)(8)

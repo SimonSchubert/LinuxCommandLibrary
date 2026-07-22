@@ -20,6 +20,16 @@ Export OpenCode session data
 
 **opencode export** exports session data from OpenCode as JSON. Sessions contain the full conversation history, tool calls, and context from an AI coding session. If no session ID is specified, the current or most recent session is exported. The output can be redirected to a file for archival or sharing.
 
+# INSTALL
+
+```pacman: sudo pacman -S opencode```
+
+```brew: brew install opencode```
+
+```nix: nix profile install nixpkgs#opencode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [opencode](/man/opencode)(1), [opencode-import](/man/opencode-import)(1), [opencode-session](/man/opencode-session)(1)

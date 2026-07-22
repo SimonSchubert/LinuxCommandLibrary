@@ -108,6 +108,18 @@ Part of the Mono framework. The Mono project has been largely superseded by .NET
 
 **mcs** is the **Mono** project's C# compiler, originally written by **Miguel de Icaza** and the Mono team. It was one of the first open-source implementations of the C# compiler, enabling .NET development on Linux and macOS before Microsoft open-sourced .NET.
 
+# INSTALL
+
+```pacman: sudo pacman -S mono```
+
+```apk: sudo apk add mono```
+
+```brew: brew install mono```
+
+```nix: nix profile install nixpkgs#mono```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mono](/man/mono)(1), [csc](/man/csc)(1), [dotnet](/man/dotnet)(1)

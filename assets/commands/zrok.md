@@ -94,6 +94,14 @@ Reserved names persist but shares don't - you must re-run share commands after r
 
 zrok account required. Run **zrok invite** to get started.
 
+# INSTALL
+
+```brew: brew install zrok```
+
+```nix: nix profile install nixpkgs#zrok```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ngrok](/man/ngrok)(1), [cloudflared](/man/cloudflared)(1), [tailscale](/man/tailscale)(8)

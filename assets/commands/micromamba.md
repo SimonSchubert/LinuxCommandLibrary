@@ -115,6 +115,14 @@ Some conda features not implemented. No graphical interface. Some older packages
 
 **micromamba** was developed by the **mamba team** at QuantStack, released around **2020**. It was designed for scenarios where conda's size and startup time were problematic. The project shares its solver with mamba, bringing conda-like capabilities to constrained environments.
 
+# INSTALL
+
+```brew: brew install micromamba```
+
+```nix: nix profile install nixpkgs#micromamba```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [mamba](/man/mamba)(1), [pip](/man/pip)(1), [pixi](/man/pixi)(1)

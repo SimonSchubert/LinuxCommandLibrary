@@ -105,6 +105,16 @@ Requires network access to mirrors. Download frequency limits apply. Large datab
 
 freshclam is part of **ClamAV**, the open source antivirus engine. ClamAV was created in 2001 and acquired by Sourcefire (later Cisco), providing free virus scanning for Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install clamav-freshclam```
+
+```dnf: sudo dnf install clamav-freshclam```
+
+```apk: sudo apk add freshclam```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clamscan](/man/clamscan)(1), [clamd](/man/clamd)(8), [clamdscan](/man/clamdscan)(1)

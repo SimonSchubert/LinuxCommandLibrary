@@ -86,6 +86,16 @@ Output goes to stdout by default, requiring redirection or **-outfile** to save.
 
 cjpeg originated as part of the Independent JPEG Group's free JPEG software, first released in **1991** by Tom Lane. It became a standard Unix utility for JPEG compression. The libjpeg-turbo project, started in **2009**, provides an optimized version using SIMD instructions for significantly faster encoding and decoding.
 
+# INSTALL
+
+```apt: sudo apt install libjpeg-turbo-progs```
+
+```dnf: sudo dnf install libjpeg-turbo-utils```
+
+```apk: sudo apk add libjpeg-turbo-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [djpeg](/man/djpeg)(1), [jpegtran](/man/jpegtran)(1), [convert](/man/convert)(1), [ffmpeg](/man/ffmpeg)(1)

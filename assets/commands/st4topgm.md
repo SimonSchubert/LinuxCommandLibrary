@@ -26,6 +26,24 @@ It is part of the Netpbm toolkit. If no input file is specified, it reads from s
 
 ST-4 files are a legacy astronomical imaging format. Use **pgmtost4** to perform the reverse conversion.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pgmtost4](/man/pgmtost4)(1), [sbigtopgm](/man/sbigtopgm)(1)

@@ -58,6 +58,12 @@ KDE Plasma desktop required. Development of Latte Dock has officially ended. The
 
 Latte Dock was created as a more polished dock alternative for KDE Plasma, offering smooth animations and flexible customization. It became popular in the KDE community as a macOS-style dock replacement. The project was officially discontinued by its maintainer.
 
+# INSTALL
+
+```aur: yay -S latte-dock```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [plasmashell](/man/plasmashell)(1)

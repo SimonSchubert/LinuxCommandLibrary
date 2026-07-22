@@ -43,6 +43,16 @@ Both steps must succeed; if the install fails, tests are not run. If tests fail,
 
 npm it is a **shorthand alias** combining install and test operations.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-install](/man/npm-install)(1), [npm-test](/man/npm-test)(1)

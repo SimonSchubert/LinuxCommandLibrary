@@ -85,6 +85,20 @@ Large graphs may be slow to render. Layout quality varies by algorithm choice. C
 
 Graphviz was developed at **AT&T Labs Research**, with initial work by **Stephen North**, **Emden Gansner**, and others in the **1990s**. It was open-sourced and became the standard for programmatic graph visualization.
 
+# INSTALL
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [neato](/man/neato)(1), [mermaid](/man/mermaid)(1)

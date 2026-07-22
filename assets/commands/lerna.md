@@ -76,6 +76,14 @@ Consider npm/yarn workspaces. Nx for advanced features. Node.js required.
 
 Lerna was created by **Sebastian McKenzie** (Babel author) for managing monorepos, now maintained by Nx.
 
+# INSTALL
+
+```brew: brew install lerna```
+
+```nix: nix profile install nixpkgs#lerna```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [yarn](/man/yarn)(1), [nx](/man/nx)(1)

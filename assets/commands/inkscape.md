@@ -105,6 +105,22 @@ Large files may be slow. Some SVG features are unsupported. The command-line int
 
 Inkscape was forked from **Sodipodi** in 2003. It became the leading open-source alternative to Adobe Illustrator.
 
+# INSTALL
+
+```apt: sudo apt install inkscape```
+
+```dnf: sudo dnf install inkscape```
+
+```pacman: sudo pacman -S inkscape```
+
+```apk: sudo apk add inkscape```
+
+```zypper: sudo zypper install inkscape```
+
+```nix: nix profile install nixpkgs#inkscape```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [inkview](/man/inkview)(1), [convert](/man/convert)(1), [rsvg-convert](/man/rsvg-convert)(1), [svgo](/man/svgo)(1), [gimp](/man/gimp)(1)

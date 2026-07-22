@@ -94,6 +94,15 @@ Link-local addresses (**169.254.0.0/16**) only enable communication within the s
 
 Part of the **Avahi** project, developed as a free software implementation of Apple's Bonjour/Zeroconf protocols. IPv4LL support was standardized in **RFC3927** in **2005**, with **avahi-autoipd** emerging as a lightweight standalone implementation for Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install avahi-autoipd```
+
+```dnf: sudo dnf install avahi-autoipd```
+
+```zypper: sudo zypper install avahi-autoipd```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [avahi-daemon](/man/avahi-daemon)(8), [dhclient](/man/dhclient)(8), [ip](/man/ip)(8), [ifconfig](/man/ifconfig)(8)

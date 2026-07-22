@@ -115,6 +115,15 @@ DNS validation requires API credentials for your DNS provider. Webroot mode requ
 
 **acme.sh** was created by Neil Pang (Neilpang) and first released in **2015** shortly after Let's Encrypt announced their service. It was designed as a lightweight, dependency-free alternative to Certbot, becoming one of the most popular ACME clients for shell environments.
 
+# INSTALL
+
+```pacman: sudo pacman -S acme.sh```
+
+```apk: sudo apk add acme.sh```
+
+```brew: brew install acme.sh```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [certbot](/man/certbot)(1), [openssl](/man/openssl)(1), [nginx](/man/nginx)(8), [apache2](/man/apache2)(8)

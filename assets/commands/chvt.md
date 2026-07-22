@@ -27,6 +27,22 @@ _N_
 
 Requires root privileges. The target VT must exist. On systems with graphical desktop, VT7 or VT1 is typically the X/Wayland session. Available VTs depend on system configuration.
 
+# INSTALL
+
+```apt: sudo apt install kbd```
+
+```dnf: sudo dnf install kbd```
+
+```pacman: sudo pacman -S kbd```
+
+```apk: sudo apk add kbd```
+
+```zypper: sudo zypper install kbd```
+
+```nix: nix profile install nixpkgs#kbd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fgconsole](/man/fgconsole)(1), [deallocvt](/man/deallocvt)(1)

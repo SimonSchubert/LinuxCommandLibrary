@@ -75,6 +75,16 @@ The shadow database requires root privileges. Some databases may not support enu
 
 getent has been part of the GNU C Library (glibc) since the implementation of the Name Service Switch in the early 1990s, providing a standard way to query system databases that may come from multiple sources.
 
+# INSTALL
+
+```apt: sudo apt install libc-bin```
+
+```apk: sudo apk add musl-utils```
+
+```nix: nix profile install nixpkgs#getent```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [id](/man/id)(1), [groups](/man/groups)(1), [host](/man/host)(1)

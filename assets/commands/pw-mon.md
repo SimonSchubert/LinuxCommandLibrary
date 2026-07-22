@@ -49,6 +49,16 @@ Output can be verbose on systems with many audio devices and applications. Consi
 
 Part of **PipeWire**, the modern multimedia framework for Linux. Provides real-time visibility into the PipeWire graph for debugging and monitoring purposes.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-tools```
+
+```zypper: sudo zypper install pipewire-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [pw-metadata](/man/pw-metadata)(1), [pw-cli](/man/pw-cli)(1), [pw-top](/man/pw-top)(1)

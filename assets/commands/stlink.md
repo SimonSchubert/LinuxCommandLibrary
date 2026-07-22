@@ -107,6 +107,20 @@ Requires appropriate udev rules on Linux for non-root access. Some ST-LINK clone
 
 The **stlink** project was created as an open source alternative to STMicroelectronics' proprietary ST-LINK Utility. It originated from the texane/stlink repository and is now maintained by the stlink-org community on GitHub. The project enables STM32 development on Linux and macOS where official tools had limited support.
 
+# INSTALL
+
+```dnf: sudo dnf install stlink```
+
+```pacman: sudo pacman -S stlink```
+
+```zypper: sudo zypper install stlink```
+
+```brew: brew install stlink```
+
+```nix: nix profile install nixpkgs#stlink```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [st-flash](/man/st-flash)(1), [st-info](/man/st-info)(1), [openocd](/man/openocd)(1), [avrdude](/man/avrdude)(1)

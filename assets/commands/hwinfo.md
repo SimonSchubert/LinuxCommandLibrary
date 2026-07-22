@@ -81,6 +81,22 @@ Some hardware detection requires root privileges. Full probing (--all) can take 
 
 **hwinfo** was developed by SUSE for hardware detection in Linux. It provides one of the most comprehensive hardware probing utilities available.
 
+# INSTALL
+
+```apt: sudo apt install hwinfo```
+
+```dnf: sudo dnf install hwinfo```
+
+```pacman: sudo pacman -S hwinfo```
+
+```apk: sudo apk add hwinfo```
+
+```zypper: sudo zypper install hwinfo```
+
+```nix: nix profile install nixpkgs#hwinfo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lshw](/man/lshw)(1), [lspci](/man/lspci)(8), [lsusb](/man/lsusb)(8), [dmidecode](/man/dmidecode)(8)

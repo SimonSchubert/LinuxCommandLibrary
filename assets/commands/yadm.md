@@ -124,6 +124,20 @@ yadm requires Git; encryption features require GPG or another supported tool. Th
 
 **yadm** was created by **Tim Byrne** as a simple dotfiles manager that leverages Git directly without complex abstractions. First released around **2015**, it gained popularity for its philosophy that managing dotfiles should be as simple as using Git, while adding features like encryption and system-specific alternates.
 
+# INSTALL
+
+```pacman: sudo pacman -S yadm```
+
+```apk: sudo apk add yadm```
+
+```zypper: sudo zypper install yadm```
+
+```brew: brew install yadm```
+
+```nix: nix profile install nixpkgs#yadm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [stow](/man/stow)(1), [chezmoi](/man/chezmoi)(1), [dotbot](/man/dotbot)(1), [gpg](/man/gpg)(1)

@@ -73,6 +73,14 @@ Large repos may exceed limits. Binary files skipped. Needs Node.js.
 
 **repomix** was created to package codebases into a single file optimized for AI language model context windows.
 
+# INSTALL
+
+```brew: brew install repomix```
+
+```nix: nix profile install nixpkgs#repomix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [tree](/man/tree)(1), [cat](/man/cat)(1)

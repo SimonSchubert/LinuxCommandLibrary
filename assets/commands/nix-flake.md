@@ -73,6 +73,22 @@ Requires experimental features. flake.nix required. Lock file generated.
 
 Nix flakes were introduced in **Nix 2.4** to provide reproducible and composable package definitions.
 
+# INSTALL
+
+```apt: sudo apt install nix-bin```
+
+```dnf: sudo dnf install nix```
+
+```pacman: sudo pacman -S nix```
+
+```apk: sudo apk add nix```
+
+```zypper: sudo zypper install nix```
+
+```nix: nix profile install nixpkgs#nix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix](/man/nix)(1), [nix-build](/man/nix-build)(1), [nix-develop](/man/nix-develop)(1)

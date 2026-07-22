@@ -105,6 +105,20 @@ The command-line interface is not intended for scripts; syntax may change withou
 
 **udisksctl** is part of **udisks2**, the successor to DeviceKit-disks, providing modern disk management facilities for Linux desktop environments.
 
+# INSTALL
+
+```apt: sudo apt install udisks2```
+
+```dnf: sudo dnf install udisks2```
+
+```pacman: sudo pacman -S udisks2```
+
+```apk: sudo apk add udisks2```
+
+```zypper: sudo zypper install udisks2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [udisksd](/man/udisksd)(8), [mount](/man/mount)(8), [umount](/man/umount)(8), [polkit](/man/polkit)(8)

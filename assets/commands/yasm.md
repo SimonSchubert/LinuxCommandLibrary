@@ -117,6 +117,24 @@ Some NASM syntax extensions may not be fully compatible. GAS syntax support is n
 
 **yasm** was created by Peter Johnson and Michael Urman as a rewrite of NASM with a modular architecture. It aimed to support multiple architectures and syntaxes while maintaining NASM compatibility. Development began in 2001 with the project remaining actively used in various build systems.
 
+# INSTALL
+
+```apt: sudo apt install yasm```
+
+```dnf: sudo dnf install yasm```
+
+```pacman: sudo pacman -S yasm```
+
+```apk: sudo apk add yasm```
+
+```zypper: sudo zypper install yasm```
+
+```brew: brew install yasm```
+
+```nix: nix profile install nixpkgs#yasm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nasm](/man/nasm)(1), [as](/man/as)(1), [ld](/man/ld)(1), [objdump](/man/objdump)(1)

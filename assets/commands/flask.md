@@ -103,6 +103,12 @@ The development server is not suitable for production use. Debug mode exposes se
 
 **Flask** was created by Armin Ronacher in **2010** as part of an April Fools' joke that became popular. The CLI was added in Flask 0.11 (**2016**), replacing the older flask-script extension and server startup method. Flask has become one of the most widely used Python web frameworks.
 
+# INSTALL
+
+```apk: sudo apk add py3-flask```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gunicorn](/man/gunicorn)(1), [uvicorn](/man/uvicorn)(1), [python](/man/python)(1), [pip](/man/pip)(1), [django-admin](/man/django-admin)(1)

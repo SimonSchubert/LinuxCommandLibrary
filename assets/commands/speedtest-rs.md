@@ -66,6 +66,12 @@ Network dependent. Server selection matters. Uses Speedtest.net.
 
 **speedtest-rs** is a Rust implementation of the Speedtest.net CLI, providing internet speed measurements.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#speedtest-rs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [speedtest-cli](/man/speedtest-cli)(1), [iperf](/man/iperf)(1), [curl](/man/curl)(1)

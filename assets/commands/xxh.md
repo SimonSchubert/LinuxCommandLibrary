@@ -87,6 +87,14 @@ xxh requires Python 3.6+ on the local machine. The first connection to a new hos
 
 **xxh** was created to solve the problem of losing custom shell environments when connecting to remote servers. Written in Python, it provides a way to maintain consistent command-line experience across multiple machines. The project supports multiple shells through community-contributed portable shell packages.
 
+# INSTALL
+
+```brew: brew install xxh```
+
+```nix: nix profile install nixpkgs#xxh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [zsh](/man/zsh)(1), [fish](/man/fish)(1), [bash](/man/bash)(1)

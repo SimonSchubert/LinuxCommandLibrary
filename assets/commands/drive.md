@@ -94,6 +94,12 @@ There is no conflict resolution to speak of. When a file has changed on both sid
 
 drive was written by **Emmanuel Odeke** in **2015**, at a time when Google shipped no official Drive client for Linux at all and the alternatives were FUSE mounts that tended to hang. Its Git-like explicit push/pull model was a direct reaction to the automatic sync clients on other platforms, and it earned a large following on that basis. It has since been overtaken by rclone, which covers the same ground and much more.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#drive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rclone](/man/rclone)(1), [gdrive](/man/gdrive)(1), [rsync](/man/rsync)(1), [git](/man/git)(1)

@@ -64,6 +64,22 @@ The daemon communicates via a Unix socket, typically at /run/lvm/lvmpolld.socket
 
 Usually started automatically by LVM commands; manual invocation is rarely needed. If the daemon dies during an active operation, restarting the original command will resume polling. The **--dump** option is useful for debugging active operations.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2-lockd```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvm](/man/lvm)(1), [pvmove](/man/pvmove)(1), [lvconvert](/man/lvconvert)(1), [lvmconfig](/man/lvmconfig)(1)

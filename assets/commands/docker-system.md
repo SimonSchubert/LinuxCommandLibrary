@@ -50,6 +50,24 @@ manage Docker system resources and disk usage
 
 **docker system** manages Docker system resources. Useful for monitoring disk usage and cleaning up unused containers, images, networks, and volumes.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 

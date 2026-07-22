@@ -139,6 +139,24 @@ Minimal UI - no toolbar or menus. Form filling is basic. JavaScript support limi
 
 **MuPDF** was developed by **Artifex Software**, the maintainers of Ghostscript, starting around **2006**. It was designed as a lightweight, high-quality renderer. The viewer (mupdf) is the reference application for the MuPDF library, which is used in many other projects including Sumatra PDF.
 
+# INSTALL
+
+```apt: sudo apt install mupdf```
+
+```dnf: sudo dnf install mupdf```
+
+```pacman: sudo pacman -S mupdf```
+
+```apk: sudo apk add mupdf```
+
+```zypper: sudo zypper install mupdf```
+
+```brew: brew install mupdf```
+
+```nix: nix profile install nixpkgs#mupdf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zathura](/man/zathura)(1), [evince](/man/evince)(1), [okular](/man/okular)(1), [xpdf](/man/xpdf)(1), [mutool](/man/mutool)(1)

@@ -86,6 +86,20 @@ Configuration is stored in **minetest.conf** in the user data directory.
 
 The **--go** flag requires **--address** to be set. Running as server with **--server** requires a world directory (defaults to the first world found). The client requires OpenGL support.
 
+# INSTALL
+
+```dnf: sudo dnf install minetest```
+
+```pacman: sudo pacman -S luanti```
+
+```apk: sudo apk add luanti```
+
+```zypper: sudo zypper install luanti```
+
+```nix: nix profile install nixpkgs#luanti```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [minetestserver](/man/minetestserver)(1)

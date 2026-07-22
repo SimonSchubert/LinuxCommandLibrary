@@ -55,6 +55,16 @@ Part of libimobiledevice. Requires USB access. May need pairing.
 
 idevice_id is part of **libimobiledevice**, the open-source iOS device communication library.
 
+# INSTALL
+
+```apt: sudo apt install libimobiledevice-utils```
+
+```dnf: sudo dnf install libimobiledevice-utils```
+
+```apk: sudo apk add libimobiledevice-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [idevicepair](/man/idevicepair)(1), [ideviceinfo](/man/ideviceinfo)(1), [idevicename](/man/idevicename)(1)

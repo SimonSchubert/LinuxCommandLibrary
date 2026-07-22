@@ -99,6 +99,24 @@ Requires color terminal. Large files may be slow. Written in Rust.
 
 hexyl was created as a modern, colorful alternative to traditional hex dump tools like xxd and hexdump.
 
+# INSTALL
+
+```apt: sudo apt install hexyl```
+
+```dnf: sudo dnf install hexyl```
+
+```pacman: sudo pacman -S hexyl```
+
+```apk: sudo apk add hexyl```
+
+```zypper: sudo zypper install hexyl```
+
+```brew: brew install hexyl```
+
+```nix: nix profile install nixpkgs#hexyl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xxd](/man/xxd)(1), [hexdump](/man/hexdump)(1), [hd](/man/hd)(1)

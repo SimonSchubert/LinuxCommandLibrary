@@ -76,6 +76,14 @@ Designed for structured log formats (JSON, logfmt); plain text logs are passed t
 
 **hl** was created by **pamburus** and is written in **Rust**. It was designed as a blazing-fast alternative to tools like **jq** for log analysis, with built-in understanding of common log formats and levels.
 
+# INSTALL
+
+```pacman: sudo pacman -S hl```
+
+```brew: brew install hl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [less](/man/less)(1), [tailspin](/man/tailspin)(1)

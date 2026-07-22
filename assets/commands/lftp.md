@@ -84,6 +84,24 @@ sophisticated file transfer program supporting FTP, HTTP, SFTP, FISH
 
 Interactive commands like mget/mput are used within an lftp session, not from the shell. Supports parallel transfers for improved performance.
 
+# INSTALL
+
+```apt: sudo apt install lftp```
+
+```dnf: sudo dnf install lftp```
+
+```pacman: sudo pacman -S lftp```
+
+```apk: sudo apk add lftp```
+
+```zypper: sudo zypper install lftp```
+
+```brew: brew install lftp```
+
+```nix: nix profile install nixpkgs#lftp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ftp](/man/ftp)(1), [sftp](/man/sftp)(1), [wget](/man/wget)(1), [curl](/man/curl)(1)

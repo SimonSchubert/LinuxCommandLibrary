@@ -84,6 +84,22 @@ Part of Redland RDF libraries. SPARQL 1.0 support. Use rapper for parsing only.
 
 roqet is part of **Rasqal** RDF query library by **Dave Beckett** within the Redland framework.
 
+# INSTALL
+
+```apt: sudo apt install rasqal-utils```
+
+```dnf: sudo dnf install rasqal```
+
+```pacman: sudo pacman -S rasqal```
+
+```apk: sudo apk add rasqal```
+
+```zypper: sudo zypper install rasqal```
+
+```brew: brew install rasqal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rapper](/man/rapper)(1), [rdfproc](/man/rdfproc)(1), [redland](/man/redland)(3)

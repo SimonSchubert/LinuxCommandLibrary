@@ -38,6 +38,23 @@ Depends on having the correct format-specific converter installed. Some formats 
 
 **anytopnm** is part of the Netpbm package, which evolved from the original PBMPLUS toolkit created by Jef Poskanzer in the late **1980s**.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [pnmtopng](/man/pnmtopng)(1), [pnmtojpeg](/man/pnmtojpeg)(1), [netpbm](/man/netpbm)(1), [convert](/man/convert)(1)

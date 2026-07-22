@@ -69,6 +69,24 @@ Shell quoting important. Use := for non-strings. Nested structures via subshell.
 
 jo was created by **Jan-Piet Mens** to simplify JSON creation in shell scripts without complex quoting.
 
+# INSTALL
+
+```apt: sudo apt install jo```
+
+```dnf: sudo dnf install jo```
+
+```pacman: sudo pacman -S jo```
+
+```apk: sudo apk add jo```
+
+```zypper: sudo zypper install jo```
+
+```brew: brew install jo```
+
+```nix: nix profile install nixpkgs#jo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [jc](/man/jc)(1), [gron](/man/gron)(1)

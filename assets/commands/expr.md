@@ -87,6 +87,24 @@ Operators need escaping (\* for multiply, \> for comparison). Only integer arith
 
 expr originated in **Version 7 Unix** (1979) as a general-purpose expression evaluator. It remains part of POSIX and GNU coreutils, though many of its functions are now handled by shell builtins.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bc](/man/bc)(1), [test](/man/test)(1), [bash](/man/bash)(1)

@@ -108,6 +108,22 @@ Steep learning curve. The Nix expression language is functional and unique. Many
 
 Nix was created by **Eelco Dolstra** as his PhD thesis project at Utrecht University, first released in **2003**. The unified nix CLI was introduced in Nix 2.0.
 
+# INSTALL
+
+```apt: sudo apt install nix-bin```
+
+```dnf: sudo dnf install nix```
+
+```pacman: sudo pacman -S nix```
+
+```apk: sudo apk add nix```
+
+```zypper: sudo zypper install nix```
+
+```nix: nix profile install nixpkgs#nix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix-shell](/man/nix-shell)(1), [nix-env](/man/nix-env)(1), [nix-build](/man/nix-build)(1), [nix-store](/man/nix-store)(1), [nixos-rebuild](/man/nixos-rebuild)(1), [home-manager](/man/home-manager)(1)

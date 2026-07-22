@@ -92,6 +92,14 @@ Requires knowledge of IPP protocol for creating custom test files. Some tests ma
 
 **ipptool** is part of **CUPS**, developed by Michael Sweet. It evolved from earlier IPP testing tools to become the reference implementation for IPP conformance testing, used by printer manufacturers to validate IPP Everywhere compliance.
 
+# INSTALL
+
+```apt: sudo apt install cups-ipp-utils```
+
+```apk: sudo apk add ipptool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ippfind](/man/ippfind)(1), [ippeveprinter](/man/ippeveprinter)(1), [lpstat](/man/lpstat)(1), [lp](/man/lp)(1)

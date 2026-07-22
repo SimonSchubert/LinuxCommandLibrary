@@ -86,6 +86,12 @@ GPU version requires CUDA. Large library (~2GB). Install from pytorch.org for CU
 
 PyTorch was developed by **Facebook AI Research** (FAIR), released in 2016 as a successor to Torch (Lua).
 
+# INSTALL
+
+```brew: brew install pytorch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [nvidia-smi](/man/nvidia-smi)(1)

@@ -43,6 +43,24 @@ Simple output. Use who for details. Current logins only.
 
 **users** is a standard Unix command that outputs a compact list of users currently logged into the system.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [who](/man/who)(1), [w](/man/w)(1), [last](/man/last)(1), [whoami](/man/whoami)(1)

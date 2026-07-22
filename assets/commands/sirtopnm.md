@@ -29,6 +29,24 @@ This tool is part of the **Netpbm** toolkit, a collection of image manipulation 
 _sirfile_
 > Path to the Solitaire Image Recorder file to convert. Reads from standard input if omitted.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmtosir](/man/pnmtosir)(1), [sgitopnm](/man/sgitopnm)(1), [anytopnm](/man/anytopnm)(1), [pnmtopng](/man/pnmtopng)(1), [pnmtojpeg](/man/pnmtojpeg)(1)

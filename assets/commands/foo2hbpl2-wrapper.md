@@ -63,6 +63,12 @@ Requires Ghostscript installed. Color output depends on printer support. Some op
 
 foo2hbpl2-wrapper is part of the **foo2zjs** driver collection, providing easy command-line printing for HBPL2 protocol printers supported by the foo2hbpl2 converter.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2hbpl2](/man/foo2hbpl2)(1), [gs](/man/gs)(1), [lpr](/man/lpr)(1)

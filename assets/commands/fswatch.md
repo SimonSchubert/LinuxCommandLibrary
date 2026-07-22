@@ -94,6 +94,20 @@ System limits on inotify watches may affect large directory monitoring (adjustab
 
 **fswatch** was created by **Enrico M. Crisostomo** in **2014** to provide a unified, cross-platform file monitoring solution. It was designed to replace platform-specific tools with a single utility that uses native APIs. The project continues to be maintained and supports Linux, macOS, Windows, and BSD systems.
 
+# INSTALL
+
+```apt: sudo apt install fswatch```
+
+```dnf: sudo dnf install fswatch```
+
+```zypper: sudo zypper install fswatch```
+
+```brew: brew install fswatch```
+
+```nix: nix profile install nixpkgs#fswatch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [inotifywait](/man/inotifywait)(1), [entr](/man/entr)(1), [watchexec](/man/watchexec)(1), [watchman](/man/watchman)(1)

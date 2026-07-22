@@ -44,6 +44,24 @@ Compute and verify SHA-224 checksums
 
 SHA-224 is less commonly used than SHA-256 but provides adequate security for applications where a shorter hash is preferred, such as certain certificate signature schemes. With no FILE argument or when FILE is **-**, input is read from standard input. In check mode (**-c**), previously generated checksums are verified against current file contents.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sha256sum](/man/sha256sum)(1), [sha384sum](/man/sha384sum)(1), [sha512sum](/man/sha512sum)(1)

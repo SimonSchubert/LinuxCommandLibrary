@@ -28,6 +28,14 @@ Historical and statistical system uptime/downtime reporter
 
 **tuptime** was created by **Ricardo Fraile** (rfmoz) and is written in **Python**.
 
+# INSTALL
+
+```dnf: sudo dnf install tuptime```
+
+```nix: nix profile install nixpkgs#tuptime```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uptime](/man/uptime)(1), [last](/man/last)(1), [systemd-analyze](/man/systemd-analyze)(1)

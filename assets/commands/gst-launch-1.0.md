@@ -75,6 +75,14 @@ Caps filters constrain formats between elements (e.g., **video/x-raw,width=640,h
 
 Intended for testing and prototyping pipelines, not as a robust playback application. Press Ctrl+C to stop; without **-e** the pipeline stops immediately rather than draining buffered data.
 
+# INSTALL
+
+```apt: sudo apt install gstreamer1.0-tools```
+
+```apk: sudo apk add gstreamer-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gst-inspect-1.0](/man/gst-inspect-1.0)(1), [gst-discoverer-1.0](/man/gst-discoverer-1.0)(1), [ffmpeg](/man/ffmpeg)(1)

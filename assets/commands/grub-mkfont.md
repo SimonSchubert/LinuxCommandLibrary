@@ -67,6 +67,14 @@ Part of GRUB package. Larger fonts increase boot time. Limited to bitmap convers
 
 grub-mkfont was developed as part of **GNU GRUB 2** to support graphical boot menus with custom fonts.
 
+# INSTALL
+
+```apt: sudo apt install grub-common```
+
+```apk: sudo apk add grub-mkfont```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub](/man/grub)(8), [grub-mkconfig](/man/grub-mkconfig)(8), [fc-list](/man/fc-list)(1)

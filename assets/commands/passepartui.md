@@ -24,6 +24,12 @@ Requires **pass** (password-store) to be installed and configured. Does not supp
 
 **passepartui** was created by **kardwen** and is written in **Rust**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#passepartui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pass](/man/pass)(1), [pass-cli](/man/pass-cli)(1), [gopass](/man/gopass)(1)

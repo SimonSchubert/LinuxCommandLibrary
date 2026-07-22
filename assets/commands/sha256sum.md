@@ -86,6 +86,24 @@ SHA-256 is not designed for password hashing; use **bcrypt** or **argon2** for t
 
 SHA-256 was designed by the **NSA** and published by **NIST** in **2001** as part of the SHA-2 family of hash functions. The **sha256sum** command was added to **GNU Coreutils** to provide a standard Unix utility for computing these hashes. It has become essential for software distribution verification, replacing MD5 and SHA-1 which have known weaknesses. SHA-256 is widely used in security applications, including Bitcoin's proof-of-work system.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [md5sum](/man/md5sum)(1), [sha1sum](/man/sha1sum)(1), [sha512sum](/man/sha512sum)(1), [b2sum](/man/b2sum)(1), [cksum](/man/cksum)(1)

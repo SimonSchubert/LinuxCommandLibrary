@@ -95,3 +95,17 @@ Terminal-based interface (requires ncurses). Lessons are English-centric by defa
 # HISTORY
 
 GNU Typist was originally written by **Simon Baldwin** and is maintained as part of the **GNU** project. It follows the tradition of typing tutors dating back to early computer education.
+
+# INSTALL
+
+```apt: sudo apt install gtypist```
+
+```dnf: sudo dnf install gtypist```
+
+```zypper: sudo zypper install gtypist```
+
+```brew: brew install gtypist```
+
+```nix: nix profile install nixpkgs#gtypist```
+
+<!-- packages: 2026-07-22 -->

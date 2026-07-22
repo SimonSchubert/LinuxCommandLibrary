@@ -46,6 +46,16 @@ Only grows partitions into immediately following free space. Cannot grow partiti
 
 growpart is part of the cloud-utils package, developed by Canonical for Ubuntu and widely used in cloud environments. It was created to simplify the common task of expanding partitions when virtual disks are resized.
 
+# INSTALL
+
+```dnf: sudo dnf install cloud-utils-growpart```
+
+```apk: sudo apk add cloud-utils-growpart```
+
+```zypper: sudo zypper install growpart```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fdisk](/man/fdisk)(8), [parted](/man/parted)(8), [resize2fs](/man/resize2fs)(8)

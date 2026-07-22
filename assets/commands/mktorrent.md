@@ -104,6 +104,24 @@ Changing any content after creation invalidates the torrent. Private tracker tor
 
 **mktorrent** was written as a lightweight, fast torrent creator. It provides command-line access to torrent creation without requiring a full BitTorrent client.
 
+# INSTALL
+
+```apt: sudo apt install mktorrent```
+
+```dnf: sudo dnf install mktorrent```
+
+```pacman: sudo pacman -S mktorrent```
+
+```apk: sudo apk add mktorrent```
+
+```zypper: sudo zypper install mktorrent```
+
+```brew: brew install mktorrent```
+
+```nix: nix profile install nixpkgs#mktorrent```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [transmission-create](/man/transmission-create)(1), [rtorrent](/man/rtorrent)(1), [aria2c](/man/aria2c)(1)

@@ -52,6 +52,16 @@ Learning curve. Own syntax. Not as full as Mathematica.
 
 **Yacas** (Yet Another Computer Algebra System) was created as a free computer algebra system.
 
+# INSTALL
+
+```apt: sudo apt install yacas```
+
+```brew: brew install yacas```
+
+```nix: nix profile install nixpkgs#yacas```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [maxima](/man/maxima)(1), [octave](/man/octave)(1), [bc](/man/bc)(1)

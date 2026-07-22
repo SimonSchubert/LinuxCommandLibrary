@@ -74,6 +74,16 @@ Memory-intensive for large files. Polygon files in .poly format. PBF format most
 
 osmconvert was developed by **Markus Weber** as a fast alternative to osmosis for common OSM data manipulation tasks.
 
+# INSTALL
+
+```apt: sudo apt install osmctools```
+
+```dnf: sudo dnf install osmctools```
+
+```nix: nix profile install nixpkgs#osmctools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [osm2pgsql](/man/osm2pgsql)(1)

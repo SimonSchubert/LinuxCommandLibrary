@@ -77,6 +77,24 @@ Create new pull requests on GitHub
 
 When run without arguments, the command prompts interactively for title, body, and metadata. The --fill flag auto-populates the title from the first commit message and the body from all commit messages since branching. Draft PRs (--draft) allow pushing work-in-progress changes for early feedback without formal review requests.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh-pr](/man/gh-pr)(1), [gh](/man/gh)(1)

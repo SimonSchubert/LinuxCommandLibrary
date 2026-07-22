@@ -119,6 +119,12 @@ Requires Drupal installation. Must run from site root or use aliases. Version mu
 
 Drush was created by **Moshe Weitzman** and others in **2007** for Drupal 5. It has evolved alongside Drupal, becoming the standard CLI tool for Drupal administration and development.
 
+# INSTALL
+
+```zypper: sudo zypper install drush```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [drupal](/man/drupal)(1), [composer](/man/composer)(1), [php](/man/php)(1)

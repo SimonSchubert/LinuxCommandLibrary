@@ -114,6 +114,24 @@ Learning curve for grammar syntax. Shift/reduce and reduce/reduce conflicts poss
 
 **Bison** was written by Robert Corbett in **1985** as a free replacement for Unix yacc. Richard Stallman made it yacc-compatible, and it became part of the GNU Project. It is now maintained by Akim Demaille and others.
 
+# INSTALL
+
+```apt: sudo apt install bison```
+
+```dnf: sudo dnf install bison```
+
+```pacman: sudo pacman -S bison```
+
+```apk: sudo apk add bison```
+
+```zypper: sudo zypper install bison```
+
+```brew: brew install bison```
+
+```nix: nix profile install nixpkgs#bison```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flex](/man/flex)(1), [yacc](/man/yacc)(1), [antlr](/man/antlr)(1)

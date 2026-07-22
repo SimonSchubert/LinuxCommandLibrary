@@ -86,6 +86,24 @@ Limited compared to modern diagramming tools. Troff output only. Steep learning 
 
 **pic** was created by **Brian Kernighan** at **Bell Labs** in the **1980s**. It was part of the troff/groff document preparation system and influenced later diagramming languages.
 
+# INSTALL
+
+```apt: sudo apt install groff-base```
+
+```dnf: sudo dnf install groff-base```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [troff](/man/troff)(1), [tbl](/man/tbl)(1), [eqn](/man/eqn)(1)

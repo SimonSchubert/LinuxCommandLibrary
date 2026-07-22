@@ -159,6 +159,24 @@ Variables in test expressions should be quoted to handle empty values and spaces
 
 test is one of the original Unix utilities, dating back to Version 7 Unix in **1979**. The bracket notation **[** was added as an alias for improved readability in shell scripts. Both forms are specified by POSIX and available as shell builtins and standalone commands.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [sh](/man/sh)(1), [expr](/man/expr)(1)

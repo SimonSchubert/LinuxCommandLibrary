@@ -58,6 +58,12 @@ Configurable rules. Can produce false positives.
 
 PHPMD was created for **detecting PHP code issues** and maintainability problems.
 
+# INSTALL
+
+```brew: brew install phpmd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [phpcs](/man/phpcs)(1), [phan](/man/phan)(1), [phpstan](/man/phpstan)(1)

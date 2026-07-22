@@ -89,6 +89,12 @@ The tool supports filtering operations including resizing, cropping, deinterlaci
 
 Legacy tool no longer actively developed. FFmpeg is generally preferred for new projects. The modular architecture means available codecs depend on which modules are installed. The only mandatory option is **-i**; all others are discretionary.
 
+# INSTALL
+
+```aur: yay -S transcode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [mencoder](/man/mencoder)(1), [mplayer](/man/mplayer)(1)

@@ -53,6 +53,12 @@ Destruction is permanent and cannot be undone. Ensure backups exist before destr
 
 Part of **Proxmox VE** QEMU/KVM management tools for virtual machine administration.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-create](/man/qm-create)(1), [qm-clone](/man/qm-clone)(1), [qm-stop](/man/qm-stop)(1), [qm-shutdown](/man/qm-shutdown)(1)

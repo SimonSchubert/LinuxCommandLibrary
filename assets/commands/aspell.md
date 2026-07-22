@@ -95,6 +95,23 @@ Language dictionaries must be installed separately. Personal dictionary format d
 
 **aspell** was created by Kevin Atkinson and first released in **2001** as an improvement over ispell, featuring better suggestion algorithms and Unicode support.
 
+# INSTALL
+
+```apt: sudo apt install aspell```
+
+```dnf: sudo dnf install aspell```
+
+```pacman: sudo pacman -S aspell```
+
+```apk: sudo apk add aspell```
+
+```zypper: sudo zypper install aspell```
+
+```brew: brew install aspell```
+
+```nix: nix profile install nixpkgs#aspell```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ispell](/man/ispell)(1), [hunspell](/man/hunspell)(1), [spell](/man/spell)(1)

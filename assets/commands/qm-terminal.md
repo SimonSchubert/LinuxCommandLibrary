@@ -39,6 +39,12 @@ Requires the VM to have a serial console configured (serial device type "socket"
 
 Part of **Proxmox VE** QEMU/KVM management tools for virtual machine administration.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-monitor](/man/qm-monitor)(1), [qm-vncproxy](/man/qm-vncproxy)(1)

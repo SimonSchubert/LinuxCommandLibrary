@@ -76,6 +76,16 @@ Add to ~/.bashrc for permanent use.
 
 Written in Go (owenthereal version) or Python (welbornprod version). Requires terminal with color support.
 
+# INSTALL
+
+```apt: sudo apt install ccrypt```
+
+```brew: brew install ccrypt```
+
+```nix: nix profile install nixpkgs#ccrypt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cat](/man/cat)(1), [bat](/man/bat)(1), [highlight](/man/highlight)(1)

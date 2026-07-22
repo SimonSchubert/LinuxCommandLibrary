@@ -107,6 +107,20 @@ Requires server on remote end. Firewall must allow ports. UDP tests may show pac
 
 nuttcp was developed by **Bill Fink** at NLANR/DAST as a network testing tool, building on the earlier ttcp.
 
+# INSTALL
+
+```apt: sudo apt install nuttcp```
+
+```dnf: sudo dnf install nuttcp```
+
+```apk: sudo apk add nuttcp```
+
+```brew: brew install nuttcp```
+
+```nix: nix profile install nixpkgs#nuttcp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iperf3](/man/iperf3)(1), [iperf](/man/iperf)(1), [netperf](/man/netperf)(1), [tc](/man/tc)(8)

@@ -20,6 +20,14 @@ The deactivation process removes the current environment's bin directory from PA
 
 Unlike some environment management systems that require explicit cleanup, conda deactivate is safe to call at any time and handles the state management internally. If no environment is currently active beyond the base environment, deactivating simply returns to a non-conda shell state. Conda supports nested environments, so multiple activate calls can be unwound with corresponding deactivate calls, though this is an advanced usage pattern.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-activate](/man/conda-activate)(1), [conda-create](/man/conda-create)(1), [conda-env](/man/conda-env)(1)

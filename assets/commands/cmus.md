@@ -102,6 +102,22 @@ cmus features gapless playback, ReplayGain support, and can be controlled remote
 
 Terminal-based, requires a capable terminal emulator. Audio output depends on available backends (ALSA, PulseAudio, etc.). Some formats may require additional codec libraries.
 
+# INSTALL
+
+```apt: sudo apt install cmus```
+
+```pacman: sudo pacman -S cmus```
+
+```apk: sudo apk add cmus```
+
+```zypper: sudo zypper install cmus```
+
+```brew: brew install cmus```
+
+```nix: nix profile install nixpkgs#cmus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmus-remote](/man/cmus-remote)(1), [ncmpcpp](/man/ncmpcpp)(1), [mpd](/man/mpd)(1)

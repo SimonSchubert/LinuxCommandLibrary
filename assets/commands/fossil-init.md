@@ -45,6 +45,24 @@ After initialization, use **fossil open** to create a working directory. The rep
 
 Repository settings include project name, description, and admin credentials. The **--template** option allows creating repositories based on existing ones, inheriting their configuration.
 
+# INSTALL
+
+```apt: sudo apt install fossil```
+
+```dnf: sudo dnf install fossil```
+
+```pacman: sudo pacman -S fossil```
+
+```apk: sudo apk add fossil```
+
+```zypper: sudo zypper install fossil```
+
+```brew: brew install fossil```
+
+```nix: nix profile install nixpkgs#fossil```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fossil](/man/fossil)(1)

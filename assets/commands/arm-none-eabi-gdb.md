@@ -104,6 +104,13 @@ Requires a debug probe (J-Link, ST-Link, CMSIS-DAP) and debug server (OpenOCD, p
 
 The GNU Debugger (GDB) originated in **1986** as part of the GNU Project. ARM cross-compilation toolchains have included GDB builds targeting bare-metal ARM since the early **2000s**, supporting the growing embedded systems market. The **arm-none-eabi** prefix denotes the ARM architecture with no operating system (bare metal) using the Embedded ABI.
 
+# INSTALL
+
+```pacman: sudo pacman -S arm-none-eabi-gdb```
+
+```brew: brew install arm-none-eabi-gdb```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [openocd](/man/openocd)(1), [gdb](/man/gdb)(1)

@@ -22,6 +22,24 @@ Part of the **git-extras** package.
 
 Uses the `skip-worktree` bit, not `assume-unchanged`; the two are similar but intended for different purposes, and tools that check one won't necessarily see the other.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-lock](/man/git-lock)(1), [git-update-index](/man/git-update-index)(1), [git-extras](/man/git-extras)(1)

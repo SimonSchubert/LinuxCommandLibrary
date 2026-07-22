@@ -45,6 +45,16 @@ Part of GRUB package. Requires ckbcomp for console layouts. Limited layout optio
 
 grub-mklayout was developed as part of **GNU GRUB 2** to support international keyboard layouts in the boot menu.
 
+# INSTALL
+
+```apt: sudo apt install grub-common```
+
+```pacman: sudo pacman -S grub```
+
+```apk: sudo apk add grub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub](/man/grub)(8), [loadkeys](/man/loadkeys)(1)

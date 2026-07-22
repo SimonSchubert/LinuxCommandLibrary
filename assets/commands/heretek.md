@@ -65,6 +65,12 @@ Requires at minimum **gdb**, **nc**, and **mkfifo** on the target system. Some a
 
 **heretek** was created by **wcampbell0x2a** and is written in **Rust**. It was built to address the pain points of debugging on embedded systems where traditional GDB frontends fail due to missing Python or broken gdbserver installations.
 
+# INSTALL
+
+```pacman: sudo pacman -S heretek```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdb](/man/gdb)(1), [nc](/man/nc)(1)

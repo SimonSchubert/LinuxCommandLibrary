@@ -83,6 +83,17 @@ Temporary credentials have a maximum duration of 12 hours for role assumption (1
 
 AWS STS has been available since the launch of IAM in **May 2011**, enabling temporary security credentials for AWS services. It has expanded to support web identity federation, SAML 2.0, and various assume-role scenarios.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-iam](/man/aws-iam)(1), [aws-sso](/man/aws-sso)(1)

@@ -69,6 +69,12 @@ Requires root or CAP_NET_RAW capability. Works on local network only; WoL over i
 
 Wake-on-LAN was developed in **1996** by AMD and HP as part of the Advanced Manageability Alliance. etherwake is one of several Linux implementations of WoL sending tools.
 
+# INSTALL
+
+```apt: sudo apt install etherwake```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wol](/man/wol)(1), [wakeonlan](/man/wakeonlan)(1), [ethtool](/man/ethtool)(8)

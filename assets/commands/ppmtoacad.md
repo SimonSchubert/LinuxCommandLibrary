@@ -28,6 +28,24 @@ Convert PPM images to AutoCAD format
 
 **ppmtoacad** converts PPM images to AutoCAD DXF (Drawing Exchange Format) slide files for CAD applications. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmtoilbm](/man/ppmtoilbm)(1), [pnmtops](/man/pnmtops)(1)

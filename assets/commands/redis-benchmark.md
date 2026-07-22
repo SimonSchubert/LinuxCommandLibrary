@@ -86,6 +86,14 @@ Results vary by hardware and network. Local testing eliminates network overhead.
 
 **redis-benchmark** is included with **Redis**, originally created by **Salvatore Sanfilippo** in **2009**. It provides standardized performance testing for Redis deployments.
 
+# INSTALL
+
+```apt: sudo apt install redis-tools```
+
+```apk: sudo apk add redict-compat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [redis-cli](/man/redis-cli)(1), [redis-server](/man/redis-server)(1), [memtier_benchmark](/man/memtier_benchmark)(1)

@@ -109,6 +109,12 @@ Requires **Python 3.6+**. Batch operations run asynchronously across repos, but 
 
 **gita** was created by **nosarthur** and first released in **January 2018**. Written in **Python**, it is distributed via PyPI and installable with pip, pipx, or uv. The name is a play on "git" with an added "a" suggesting management of multiple repos. The project is MIT-licensed and actively maintained.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#gita```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [mr](/man/mr)(1), [ghq](/man/ghq)(1)

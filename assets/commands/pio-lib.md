@@ -74,6 +74,12 @@ manages PlatformIO libraries (deprecated, use pio pkg)
 
 **pio lib** manages PlatformIO libraries. Search, install, and update libraries from the PlatformIO registry. Handles dependencies automatically for embedded projects. This command is deprecated since PlatformIO 6.0; use **pio pkg** instead.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-pkg](/man/pio-pkg)(1), [pio-init](/man/pio-init)(1), [pio-run](/man/pio-run)(1), [pio](/man/pio)(1)

@@ -38,6 +38,16 @@ Generate Tarsnap encryption keys
 
 Keep the key file secure and backed up. Losing the key means losing access to backups.
 
+# INSTALL
+
+```pacman: sudo pacman -S tarsnap```
+
+```brew: brew install tarsnap```
+
+```nix: nix profile install nixpkgs#tarsnap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tarsnap](/man/tarsnap)(1)

@@ -128,6 +128,12 @@ Primarily Ubuntu images, though other images may be available via URL. Requires 
 
 **Multipass** was developed by **Canonical** and released around **2017** to provide a streamlined Ubuntu VM experience across platforms. It grew from the need for quick, consistent Ubuntu environments for development and testing. The project emphasizes simplicity over full virtualization features, targeting developers who need Ubuntu instances without complex VM management.
 
+# INSTALL
+
+```aur: yay -S multipass```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lxc](/man/lxc)(1), [vagrant](/man/vagrant)(1), [docker](/man/docker)(1), [qemu](/man/qemu)(1)

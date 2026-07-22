@@ -20,6 +20,24 @@ converts a HIPS image file to PGM format
 
 **hipstopgm** converts a HIPS (Human Information Processing Laboratory, NYU) image file to PGM (Portable Graymap) format. Part of the Netpbm package of graphics manipulation tools. If the HIPS file contains multiple frames, they are concatenated vertically in the output. The tool has no command-specific options beyond standard Netpbm options.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pgm](/man/pgm)(1), [pgmtoppm](/man/pgmtoppm)(1), [ppmtogif](/man/ppmtogif)(1), [netpbm](/man/netpbm)(1)

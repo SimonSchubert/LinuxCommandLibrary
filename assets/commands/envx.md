@@ -70,6 +70,12 @@ Variable expansion may have security implications with untrusted input. .env fil
 
 **envx** was created to provide a consistent way to manage environment variables across projects and environments.
 
+# INSTALL
+
+```aur: yay -S envx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [env](/man/env)(1), [direnv](/man/direnv)(1)

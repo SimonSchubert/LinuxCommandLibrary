@@ -68,6 +68,20 @@ Part of the HPLIP package. The printer must be reachable (powered on and connect
 
 **hp-info** is one of the device-query utilities in **HPLIP** (HP Linux Imaging and Printing), HP's open-source printer/scanner driver suite for Linux.
 
+# INSTALL
+
+```apt: sudo apt install hplip```
+
+```dnf: sudo dnf install hplip```
+
+```pacman: sudo pacman -S hplip```
+
+```zypper: sudo zypper install hplip```
+
+```nix: nix profile install nixpkgs#hplip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hp-check](/man/hp-check)(1), [hp-levels](/man/hp-levels)(1), [hp-query](/man/hp-query)(1), [lpstat](/man/lpstat)(1)

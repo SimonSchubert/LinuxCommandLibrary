@@ -77,6 +77,12 @@ Not all warnings require action; some are informational for experienced packager
 
 **namcap** was developed by the **Arch Linux** community as a quality assurance tool for package maintainers. It is maintained as part of the Arch Linux development tools and helps ensure consistent packaging standards.
 
+# INSTALL
+
+```pacman: sudo pacman -S namcap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [makepkg](/man/makepkg)(8), [pacman](/man/pacman)(8), [PKGBUILD](/man/PKGBUILD)(5)

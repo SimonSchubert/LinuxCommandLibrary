@@ -103,6 +103,18 @@ Requires working mail setup (SMTP or local). Stores state in ~/.local/share/rss2
 
 rss2email was created by **Aaron Swartz** in 2004, now maintained by the community.
 
+# INSTALL
+
+```dnf: sudo dnf install rss2email```
+
+```pacman: sudo pacman -S rss2email```
+
+```zypper: sudo zypper install rss2email```
+
+```nix: nix profile install nixpkgs#rss2email```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fetchmail](/man/fetchmail)(1), [procmail](/man/procmail)(1), [mutt](/man/mutt)(1)

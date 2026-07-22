@@ -53,6 +53,18 @@ Requires SELinux to be enabled. File context may differ from actual access conte
 
 Part of **libselinux-utils**, providing SELinux context inspection tools.
 
+# INSTALL
+
+```apt: sudo apt install policycoreutils```
+
+```dnf: sudo dnf install policycoreutils```
+
+```zypper: sudo zypper install policycoreutils```
+
+```nix: nix profile install nixpkgs#policycoreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [runcon](/man/runcon)(1), [chcon](/man/chcon)(1), [semanage](/man/semanage)(8)

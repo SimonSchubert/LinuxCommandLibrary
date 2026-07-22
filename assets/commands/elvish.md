@@ -77,6 +77,22 @@ Not POSIX-compatible. Scripts not portable to bash/zsh. Smaller community than m
 
 Elvish was created by **Qi Xiao** starting around **2014** as a shell designed from scratch with modern language features rather than POSIX compatibility as the primary goal.
 
+# INSTALL
+
+```apt: sudo apt install elvish```
+
+```dnf: sudo dnf install elvish```
+
+```pacman: sudo pacman -S elvish```
+
+```apk: sudo apk add elvish```
+
+```brew: brew install elvish```
+
+```nix: nix profile install nixpkgs#elvish```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [zsh](/man/zsh)(1), [fish](/man/fish)(1), [nushell](/man/nushell)(1)

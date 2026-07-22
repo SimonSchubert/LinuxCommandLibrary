@@ -55,6 +55,20 @@ creates Kubernetes resources from files or command-line input
 
 **kubectl create** creates Kubernetes resources from files or command-line input. Unlike apply, create fails if the resource already exists. Supports creating various resource types including deployments, services, secrets, and configmaps.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-apply](/man/kubectl-apply)(1)

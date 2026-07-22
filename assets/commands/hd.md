@@ -65,6 +65,12 @@ Non-printable bytes are shown as dots in the ASCII column. Large files produce e
 
 **hd** originated as a BSD convenience alias for **hexdump**. On current Linux systems it's provided by the **util-linux** package (which absorbed hexdump from the older bsdmainutils package around 2017), so both **hexdump** and **hd** invoke the same binary.
 
+# INSTALL
+
+```apt: sudo apt install bsdextrautils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hexdump](/man/hexdump)(1), [xxd](/man/xxd)(1), [od](/man/od)(1)

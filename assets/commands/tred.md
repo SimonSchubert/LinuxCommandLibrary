@@ -50,6 +50,24 @@ If a graph contains cycles, its transitive reduction is not uniquely defined. In
 
 **tred** is part of the **Graphviz** project, originally developed at **AT&T Labs Research** in the **1990s**. It was created by **Stephen C. North** and **Emden R. Gansner** as part of the graph visualization toolkit. Graphviz was open-sourced in **2000** and has since become the standard tool for graph layout and visualization.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [acyclic](/man/acyclic)(1), [gc](/man/gc)(1), [gvpr](/man/gvpr)(1), [ccomps](/man/ccomps)(1), [sccmap](/man/sccmap)(1)

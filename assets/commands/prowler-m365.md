@@ -41,6 +41,14 @@ Microsoft 365 tenant security assessment
 
 **prowler m365** performs security assessment of Microsoft 365 tenants. Checks Entra ID, Exchange, SharePoint, and Teams configurations against security best practices.
 
+# INSTALL
+
+```brew: brew install prowler```
+
+```nix: nix profile install nixpkgs#prowler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [prowler](/man/prowler)(1)

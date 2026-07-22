@@ -86,6 +86,22 @@ Extensions must match the host OS version. The base /usr must be immutable or re
 
 **systemd-sysext** enables modular system composition, supporting immutable base images with layered extensions for additional software.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-confext](/man/systemd-confext)(8), [systemctl](/man/systemctl)(1), [portablectl](/man/portablectl)(1), [machinectl](/man/machinectl)(1)

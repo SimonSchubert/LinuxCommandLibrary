@@ -77,6 +77,14 @@ OpenPGP and PIV smartcard management
 
 Introduced in GnuPG 2.3 as a replacement for the older **gpg --card-edit** workflow, it offers a more streamlined command-line experience for smartcard operations.
 
+# INSTALL
+
+```apt: sudo apt install scdaemon```
+
+```apk: sudo apk add gnupg-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1)

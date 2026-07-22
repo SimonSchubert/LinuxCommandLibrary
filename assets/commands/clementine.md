@@ -100,6 +100,18 @@ Remote control commands require a Clementine instance already running with D-Bus
 
 Clementine was created in **2010** as a fork of Amarok 1.4, preserving its Qt4-based interface when Amarok moved to KDE4. Named after the fruit in the Portal game, it quickly became popular for its simplicity and cross-platform support. The project spawned Strawberry as a modern continuation in **2018**.
 
+# INSTALL
+
+```apt: sudo apt install clementine```
+
+```dnf: sudo dnf install clementine```
+
+```zypper: sudo zypper install clementine```
+
+```nix: nix profile install nixpkgs#clementine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpc](/man/mpc)(1), [mpv](/man/mpv)(1), [cmus](/man/cmus)(1), [vlc](/man/vlc)(1)

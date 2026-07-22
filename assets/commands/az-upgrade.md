@@ -62,6 +62,19 @@ Requires sufficient permissions to modify the installation directory. May requir
 
 **az upgrade** was added to Azure CLI **2.11** in **August 2020** to provide a built-in update mechanism, replacing manual update procedures. It remains a preview command.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-version](/man/az-version)(1), [az-extension](/man/az-extension)(1)

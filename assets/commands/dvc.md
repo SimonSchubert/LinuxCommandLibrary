@@ -126,6 +126,14 @@ Requires Git repository. Large data transfers depend on network speed. Remote st
 
 DVC was created by **iterative.ai** and released in **2017**. It addresses the challenge of versioning large datasets and ML models that don't fit well in Git, enabling reproducible machine learning workflows. In **2025**, DVC was acquired by **lakeFS**.
 
+# INSTALL
+
+```brew: brew install dvc```
+
+```nix: nix profile install nixpkgs#dvc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [dvc-init](/man/dvc-init)(1), [dvc-add](/man/dvc-add)(1), [dvc-diff](/man/dvc-diff)(1), [dvc-fetch](/man/dvc-fetch)(1), [dvc-dag](/man/dvc-dag)(1), [dvc-gc](/man/dvc-gc)(1), [mlflow](/man/mlflow)(1)

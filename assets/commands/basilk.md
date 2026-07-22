@@ -46,6 +46,13 @@ The project is in beta and may contain bugs. The CLI accepts only the **--versio
 
 **basilk** was created by **GabAlpha** as an open-source Rust project, dual-licensed under MIT and Apache 2.0. Version 0.2.1 was released in March 2025. It is available via cargo, Homebrew, AUR, and x-cmd.
 
+# INSTALL
+
+```aur: yay -S basilk```
+
+```nix: nix profile install nixpkgs#basilk```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [taskwarrior](/man/taskwarrior)(1), [todo.sh](/man/todo.sh)(1), [jira](/man/jira)(1), [task](/man/task)(1)

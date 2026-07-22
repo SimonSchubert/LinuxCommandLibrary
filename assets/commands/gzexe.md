@@ -37,6 +37,24 @@ Compressed executables have slower startup due to decompression. The shell scrip
 
 gzexe is part of the gzip package and has been available since the early 1990s. It was created to save disk space on Unix systems when storage was expensive, providing a simple way to compress binaries without changing how they're invoked.
 
+# INSTALL
+
+```apt: sudo apt install gzip```
+
+```dnf: sudo dnf install gzip```
+
+```pacman: sudo pacman -S gzip```
+
+```apk: sudo apk add gzip```
+
+```zypper: sudo zypper install gzip```
+
+```brew: brew install gzip```
+
+```nix: nix profile install nixpkgs#gzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gzip](/man/gzip)(1), [upx](/man/upx)(1), [strip](/man/strip)(1)

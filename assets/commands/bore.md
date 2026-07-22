@@ -66,6 +66,14 @@ The tool consists of a client that connects local ports to a remote bore server,
 
 Requires a bore server to be running and accessible. Traffic is tunneled through the remote server, adding latency. The shared secret only authenticates the tunnel control channel: forwarded traffic is not encrypted by bore, so use HTTPS or another layer for sensitive data. Not designed for high-bandwidth applications.
 
+# INSTALL
+
+```pacman: sudo pacman -S bore```
+
+```nix: nix profile install nixpkgs#bore```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bore-local](/man/bore-local)(1), [ngrok](/man/ngrok)(1), [ssh](/man/ssh)(1)

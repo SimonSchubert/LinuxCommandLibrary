@@ -50,6 +50,12 @@ leave originated in **BSD Unix** as a simple reminder utility for terminal users
 
 leave originated in **BSD Unix** as a simple reminder utility for terminal users.
 
+# INSTALL
+
+```apt: sudo apt install leave```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [at](/man/at)(1), [calendar](/man/calendar)(1), [sleep](/man/sleep)(1)

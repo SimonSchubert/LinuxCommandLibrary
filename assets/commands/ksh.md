@@ -97,6 +97,22 @@ Multiple implementations exist (ksh88, ksh93, mksh, pdksh). Behavior may differ 
 
 The Korn shell was created by **David Korn** at **Bell Labs** in the early **1980s**, influencing many modern shells including bash and zsh.
 
+# INSTALL
+
+```dnf: sudo dnf install ksh```
+
+```pacman: sudo pacman -S ksh```
+
+```apk: sudo apk add loksh```
+
+```zypper: sudo zypper install ksh```
+
+```brew: brew install ksh```
+
+```nix: nix profile install nixpkgs#loksh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [sh](/man/sh)(1), [zsh](/man/zsh)(1), [tcsh](/man/tcsh)(1)

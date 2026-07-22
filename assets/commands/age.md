@@ -72,6 +72,23 @@ age does not sign files; use age + signify or minisign for authenticated encrypt
 
 **age** was designed by Ben Cartwright-Cox and Filippo Valsorda and first released in **2019**. It was created to address the complexity and usability issues of GPG while providing a secure, simple encryption tool suitable for modern use cases.
 
+# INSTALL
+
+```apt: sudo apt install age```
+
+```dnf: sudo dnf install age```
+
+```pacman: sudo pacman -S age```
+
+```apk: sudo apk add age```
+
+```zypper: sudo zypper install age```
+
+```brew: brew install age```
+
+```nix: nix profile install nixpkgs#age```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [age-keygen](/man/age-keygen)(1), [gpg](/man/gpg)(1), [ssh-keygen](/man/ssh-keygen)(1)

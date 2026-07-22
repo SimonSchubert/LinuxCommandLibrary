@@ -122,6 +122,12 @@ Requires **Zig 0.15.2** (exact version) to build from source. The binary has no 
 
 **NullClaw** is a successor in the claw-family of AI agent frameworks, following **OpenClaw** and **ZeroClaw**. Written entirely in **Zig**, it was designed for extreme minimalism and portability, targeting edge computing and resource-constrained environments where traditional runtimes are impractical. The project maintains a test suite of 3,230+ tests.
 
+# INSTALL
+
+```brew: brew install nullclaw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ollama](/man/ollama)(1)

@@ -90,6 +90,14 @@ Requires authenticated doppler CLI. Network latency affects startup time. Secret
 
 doppler run is the primary command for secrets injection in the **Doppler** CLI, implementing the zero-configuration secrets access that Doppler was designed to provide.
 
+# INSTALL
+
+```brew: brew install doppler```
+
+```nix: nix profile install nixpkgs#doppler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doppler](/man/doppler)(1), [doppler-secrets](/man/doppler-secrets)(1), [env](/man/env)(1)

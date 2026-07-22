@@ -65,6 +65,24 @@ The filesystem should be unmounted before changing the label to avoid inconsiste
 
 dosfslabel is part of the **dosfstools** package, which provides utilities for MS-DOS FAT filesystems on Linux. The package includes mkfs.fat for creating filesystems, fsck.fat for checking and repairing, and fatlabel for managing labels. The tools have been maintained since the early days of Linux to ensure compatibility with DOS/Windows filesystems.
 
+# INSTALL
+
+```apt: sudo apt install dosfstools```
+
+```dnf: sudo dnf install dosfstools```
+
+```pacman: sudo pacman -S dosfstools```
+
+```apk: sudo apk add dosfstools```
+
+```zypper: sudo zypper install dosfstools```
+
+```brew: brew install dosfstools```
+
+```nix: nix profile install nixpkgs#dosfstools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fatlabel](/man/fatlabel)(8), [mkfs.fat](/man/mkfs.fat)(8), [e2label](/man/e2label)(8)

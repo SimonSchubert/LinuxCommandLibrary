@@ -121,6 +121,18 @@ Free tier has resource limitations. Check Railway's pricing documentation for de
 
 Railway was founded in **2020** as a modern alternative to traditional Platform-as-a-Service providers. The CLI was developed alongside the platform to provide a developer-friendly deployment experience with minimal configuration. The tool is open source and actively maintained on GitHub.
 
+# INSTALL
+
+```pacman: sudo pacman -S railway```
+
+```apk: sudo apk add railway```
+
+```brew: brew install railway```
+
+```nix: nix profile install nixpkgs#railway```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [heroku](/man/heroku)(1), [fly](/man/fly)(1), [vercel](/man/vercel)(1)

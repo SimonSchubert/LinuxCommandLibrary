@@ -55,6 +55,14 @@ java OpenStreetMap Editor, a feature-rich desktop application for editing
 
 **josm** is the Java OpenStreetMap Editor, a feature-rich desktop application for editing OpenStreetMap data. It supports loading and saving OSM data files, GPS tracks, imagery layers, and provides advanced editing tools for mapping.
 
+# INSTALL
+
+```pacman: sudo pacman -S josm```
+
+```nix: nix profile install nixpkgs#josm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [osmium](/man/osmium)(1), [osm2pgsql](/man/osm2pgsql)(1)

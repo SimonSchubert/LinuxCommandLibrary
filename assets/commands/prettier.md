@@ -101,6 +101,18 @@ Requires Node.js. Opinionated with deliberately limited configuration options to
 
 Prettier was created by **James Long** in **2017** for consistent code formatting across projects.
 
+# INSTALL
+
+```pacman: sudo pacman -S prettier```
+
+```apk: sudo apk add prettier```
+
+```brew: brew install prettier```
+
+```nix: nix profile install nixpkgs#prettier```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [eslint](/man/eslint)(1), [biome](/man/biome)(1)

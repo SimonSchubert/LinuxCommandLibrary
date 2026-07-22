@@ -59,6 +59,12 @@ Testing takes time as each mirror is contacted. Network conditions may vary. Par
 
 **rankmirrors** has been part of Arch Linux tooling to help users optimize their mirror selection. While still functional, many users now prefer reflector for automated mirror management.
 
+# INSTALL
+
+```aur: yay -S rankmirrors```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [reflector](/man/reflector)(1), [pacman-mirrors](/man/pacman-mirrors)(1)

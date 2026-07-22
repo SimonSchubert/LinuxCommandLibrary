@@ -102,6 +102,18 @@ Lists enabled (+) and disabled (-) features of added dependencies.
 
 Updates existing entries with specified flags. For Cargo versions before 1.62, install cargo-edit for this functionality.
 
+# INSTALL
+
+```pacman: sudo pacman -S cargo-edit```
+
+```apk: sudo apk add cargo-edit```
+
+```brew: brew install cargo-edit```
+
+```nix: nix profile install nixpkgs#cargo-edit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-remove](/man/cargo-remove)(1), [cargo-update](/man/cargo-update)(1)

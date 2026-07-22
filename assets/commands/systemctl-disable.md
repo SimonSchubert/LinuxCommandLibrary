@@ -58,6 +58,22 @@ The command reverses the effect of **systemctl enable** by removing symlinks fro
 
 Requires root privileges for system units. Disabling does not stop currently running units; use **--now** or **systemctl stop**. Some units are started by other means (socket activation, path triggers) and may need additional steps to fully disable.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-enable](/man/systemctl-enable)(1), [systemctl-stop](/man/systemctl-stop)(1), [systemctl-mask](/man/systemctl-mask)(1), [systemctl-is-enabled](/man/systemctl-is-enabled)(1)

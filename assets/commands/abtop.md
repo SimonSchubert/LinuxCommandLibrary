@@ -28,6 +28,13 @@ Interactive TUI after launch. Optional flags select refresh intervals and filter
 
 Depends on how agents expose metrics; not all tools report tokens the same way. Process introspection may need permissions on locked-down systems.
 
+# INSTALL
+
+```aur: yay -S abtop```
+
+```nix: nix profile install nixpkgs#abtop```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [htop](/man/htop)(1), [btop](/man/btop)(1), [ps](/man/ps)(1)

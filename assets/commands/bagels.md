@@ -167,6 +167,15 @@ All data is stored locally with no cloud synchronization. Backup the database fi
 
 **Bagels** was created by **Jax (EnhancedJax)** and first released in **2024** as an open-source terminal expense tracker. The project is built on the **Textual** TUI framework and was inspired by the **Posting** terminal application. It gained popularity in the terminal tooling community, accumulating over 2,700 GitHub stars. The project is licensed under **GPL-3.0**.
 
+# INSTALL
+
+```aur: yay -S bagels```
+
+```brew: brew install bagels```
+
+```nix: nix profile install nixpkgs#bagels```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ledger](/man/ledger)(1), [hledger](/man/hledger)(1), [awk](/man/awk)(1)

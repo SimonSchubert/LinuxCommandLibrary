@@ -94,6 +94,16 @@ Requires appropriate permissions. LDIF syntax must be correct. Parent entries mu
 
 ldapadd is part of **OpenLDAP**, a free implementation of LDAP. OpenLDAP was started by Kurt Zeilenga in **1998** as a continuation of the University of Michigan LDAP project.
 
+# INSTALL
+
+```apt: sudo apt install ldap-utils```
+
+```dnf: sudo dnf install openldap-clients```
+
+```apk: sudo apk add openldap-clients```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ldapmodify](/man/ldapmodify)(1), [ldapsearch](/man/ldapsearch)(1)

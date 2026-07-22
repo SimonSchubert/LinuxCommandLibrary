@@ -39,6 +39,24 @@ The **--hard** option deletes files from both the repository and the filesystem.
 
 Unlike **fossil forget**, which only works on files not yet committed, **fossil rm** handles files already tracked in the repository.
 
+# INSTALL
+
+```apt: sudo apt install fossil```
+
+```dnf: sudo dnf install fossil```
+
+```pacman: sudo pacman -S fossil```
+
+```apk: sudo apk add fossil```
+
+```zypper: sudo zypper install fossil```
+
+```brew: brew install fossil```
+
+```nix: nix profile install nixpkgs#fossil```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fossil-add](/man/fossil-add)(1), [fossil-forget](/man/fossil-forget)(1)

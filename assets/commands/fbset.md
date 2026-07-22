@@ -49,6 +49,16 @@ Used for configuring console display on systems using framebuffer.
 
 Requires framebuffer support in kernel. May require root privileges. Incorrect settings can cause display issues.
 
+# INSTALL
+
+```apt: sudo apt install fbset```
+
+```pacman: sudo pacman -S fbset```
+
+```nix: nix profile install nixpkgs#fbset```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fbi](/man/fbi)(1)

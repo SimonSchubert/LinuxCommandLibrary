@@ -45,6 +45,24 @@ Reference names must not contain spaces, tildes, carets, colons, question marks,
 
 The command is used programmatically by scripts creating branches or tags to validate user input before attempting operations. Normalization removes redundant slashes and ensures consistent formatting. The --branch option interprets the name as a branch shorthand, expanding it to refs/heads/ format.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-tag](/man/git-tag)(1)

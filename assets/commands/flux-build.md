@@ -78,6 +78,16 @@ Build Flux manifests locally for inspection or piping to kubectl
 **--resolve-symlinks**
 > Resolve symlinks by copying their targets into the artifact.
 
+# INSTALL
+
+```apk: sudo apk add flux```
+
+```brew: brew install flux```
+
+```nix: nix profile install nixpkgs#flux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flux](/man/flux)(1), [flux-create](/man/flux-create)(1), [kustomize](/man/kustomize)(1)

@@ -91,6 +91,12 @@ InfluxDB must be running. Authentication may be required. InfluxQL syntax differ
 
 influx is part of **InfluxDB**, created by **InfluxData** as an open-source time-series database platform.
 
+# INSTALL
+
+```apt: sudo apt install influxdb-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grafana-cli](/man/grafana-cli)(1), [mysql](/man/mysql)(1), [psql](/man/psql)(1)

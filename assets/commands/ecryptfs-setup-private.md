@@ -77,5 +77,19 @@ Requires eCryptfs kernel module. Swap should be encrypted for security. Login pa
 
 This utility was developed for Ubuntu's encrypted home directory feature. It was widely used for per-user encryption from **Ubuntu 8.10** through **18.04**, after which fscrypt became the recommended solution.
 
+# INSTALL
+
+```apt: sudo apt install ecryptfs-utils```
+
+```dnf: sudo dnf install ecryptfs-utils```
+
+```pacman: sudo pacman -S ecryptfs-utils```
+
+```apk: sudo apk add ecryptfs-utils```
+
+```zypper: sudo zypper install ecryptfs-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

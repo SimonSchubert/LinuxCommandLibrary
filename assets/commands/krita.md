@@ -62,6 +62,22 @@ Resource intensive. Large brush packs. KDE-based.
 
 Krita began as part of **KOffice** in 1999 and evolved into a leading open-source digital painting application.
 
+# INSTALL
+
+```apt: sudo apt install krita```
+
+```dnf: sudo dnf install krita```
+
+```pacman: sudo pacman -S krita```
+
+```apk: sudo apk add krita```
+
+```zypper: sudo zypper install krita```
+
+```nix: nix profile install nixpkgs#krita```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gimp](/man/gimp)(1), [inkscape](/man/inkscape)(1), [blender](/man/blender)(1)

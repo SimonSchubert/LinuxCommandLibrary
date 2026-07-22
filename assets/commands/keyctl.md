@@ -99,6 +99,24 @@ Special keyring identifiers: @t (thread), @p (process), @s (session), @u (user),
 
 **keyctl** is part of the **keyutils** package, providing user-space access to the Linux kernel key management facility introduced in kernel 2.6.
 
+# INSTALL
+
+```apt: sudo apt install keyutils```
+
+```dnf: sudo dnf install keyutils```
+
+```pacman: sudo pacman -S keyutils```
+
+```apk: sudo apk add keyutils```
+
+```zypper: sudo zypper install keyutils```
+
+```brew: brew install keyutils```
+
+```nix: nix profile install nixpkgs#keyutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh-add](/man/ssh-add)(1), [gpg](/man/gpg)(1)

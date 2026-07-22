@@ -53,6 +53,24 @@ Any option accepted in the configuration file can also be provided on the comman
 
 Wayland only; requires a compositor that supports the **wlr-layer-shell** protocol. Configuration file location is **$XDG_CONFIG_HOME/mako/config** (usually **~/.config/mako/config**). Control a running instance with **makoctl**. For the full list of configuration keys and criteria, see **mako(5)**.
 
+# INSTALL
+
+```apt: sudo apt install mako-notifier```
+
+```dnf: sudo dnf install mako```
+
+```pacman: sudo pacman -S mako```
+
+```apk: sudo apk add mako```
+
+```zypper: sudo zypper install mako```
+
+```brew: brew install mako```
+
+```nix: nix profile install nixpkgs#mako```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [makoctl](/man/makoctl)(1), [dunst](/man/dunst)(1)

@@ -45,6 +45,24 @@ Part of mtools. Directory must be empty. MS-DOS/FAT filesystems only.
 
 mrd is part of **mtools**, providing MS-DOS filesystem access on Unix systems since 1992.
 
+# INSTALL
+
+```apt: sudo apt install mtools```
+
+```dnf: sudo dnf install mtools```
+
+```pacman: sudo pacman -S mtools```
+
+```apk: sudo apk add mtools```
+
+```zypper: sudo zypper install mtools```
+
+```brew: brew install mtools```
+
+```nix: nix profile install nixpkgs#mtools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mmd](/man/mmd)(1), [mcopy](/man/mcopy)(1), [mdel](/man/mdel)(1)

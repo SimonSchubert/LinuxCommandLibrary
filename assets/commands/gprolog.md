@@ -82,6 +82,14 @@ Syntax differs slightly from SWI-Prolog. Native compilation adds startup complex
 
 GNU Prolog was created by **Daniel Diaz** at INRIA, first released in **1996**. It emphasizes native code compilation and constraint solving, distinguishing it from interpreted Prolog systems.
 
+# INSTALL
+
+```dnf: sudo dnf install gprolog```
+
+```nix: nix profile install nixpkgs#gprolog```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [swipl](/man/swipl)(1), [sicstus](/man/sicstus)(1)

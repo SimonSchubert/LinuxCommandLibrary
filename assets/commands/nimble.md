@@ -80,6 +80,14 @@ Requires Nim. Package registry based. nimble.directory for packages.
 
 Nimble was created as the **official package manager** for the Nim programming language.
 
+# INSTALL
+
+```apk: sudo apk add nimble```
+
+```nix: nix profile install nixpkgs#nimble```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nim](/man/nim)(1), [npm](/man/npm)(1), [cargo](/man/cargo)(1)

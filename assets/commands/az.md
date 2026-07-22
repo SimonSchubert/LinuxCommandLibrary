@@ -98,6 +98,20 @@ Requires an active Azure subscription and prior `az login`. Some operations are 
 
 The **Azure CLI 2.0** was released by Microsoft in **2017** as a complete rewrite of the original Azure CLI, built in Python with focus on usability and cross-platform support.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [az-login](/man/az-login)(1), [az-account](/man/az-account)(1), [terraform](/man/terraform)(1)

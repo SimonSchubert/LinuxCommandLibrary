@@ -55,6 +55,16 @@ Some features require optional dependencies like **brotli** for WOFF2 compressio
 
 fonttools originated in the late 1990s, created by Just van Rossum. It became one of the earliest tools for programmatic font manipulation in Python. The project has evolved significantly and is now maintained by the open-source community on GitHub, becoming a foundational tool in the font development ecosystem.
 
+# INSTALL
+
+```dnf: sudo dnf install fonttools```
+
+```apk: sudo apk add py3-fonttools```
+
+```brew: brew install fonttools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fc-cache](/man/fc-cache)(1), [fc-list](/man/fc-list)(1)

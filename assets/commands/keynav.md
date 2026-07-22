@@ -72,6 +72,16 @@ X11 only (no Wayland support). Requires practice to use efficiently. May conflic
 
 keynav was created by **Jordan Sissel** to enable mouseless computing. It follows the Unix philosophy of doing one thing well—allowing precise cursor positioning via keyboard.
 
+# INSTALL
+
+```apt: sudo apt install keynav```
+
+```apk: sudo apk add keynav```
+
+```nix: nix profile install nixpkgs#keynav```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdotool](/man/xdotool)(1), [xbindkeys](/man/xbindkeys)(1), [warpd](/man/warpd)(1)

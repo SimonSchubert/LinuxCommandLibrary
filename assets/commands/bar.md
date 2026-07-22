@@ -98,6 +98,17 @@ The **bar** command name conflicts with various system utilities on different di
 
 Various "bar" utilities have existed in Unix ecosystems for displaying transfer progress. The concept predates graphical interfaces, providing feedback for operations that would otherwise run silently. **pv** (pipe viewer) by Andrew Wood became the de facto standard for this purpose, first released in **2002**, though simpler implementations under various names continue to exist.
 
+# INSTALL
+
+```apt: sudo apt install bar```
+
+```aur: yay -S bar```
+
+```brew: brew install bar```
+
+```nix: nix profile install nixpkgs#bar```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [pv](/man/pv)(1), [dd](/man/dd)(1), [rsync](/man/rsync)(1), [progress](/man/progress)(1)

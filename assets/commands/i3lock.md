@@ -90,6 +90,22 @@ X11 only; for Wayland, use **swaylock** instead. Only PNG images are supported (
 
 **i3lock** was created by Michael Stapelberg as the screen locker for the **i3** window manager, focusing on simplicity and security. It is a significantly improved version of **slock** with features like an unlock indicator and PAM support.
 
+# INSTALL
+
+```apt: sudo apt install i3lock```
+
+```dnf: sudo dnf install i3lock```
+
+```pacman: sudo pacman -S i3lock```
+
+```apk: sudo apk add i3lock```
+
+```zypper: sudo zypper install i3lock```
+
+```nix: nix profile install nixpkgs#i3lock```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [i3](/man/i3)(1), [swaylock](/man/swaylock)(1), [xlock](/man/xlock)(1), [xdotool](/man/xdotool)(1)

@@ -56,6 +56,22 @@ Can be escaped via scripts. Not security boundary. Use with other controls.
 
 **rbash** is bash started as restricted shell. It provides a limited environment for untrusted users.
 
+# INSTALL
+
+```apt: sudo apt install bash```
+
+```dnf: sudo dnf install bash```
+
+```pacman: sudo pacman -S bash```
+
+```zypper: sudo zypper install bash```
+
+```brew: brew install bash```
+
+```nix: nix profile install nixpkgs#bash```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [chroot](/man/chroot)(1), [sudo](/man/sudo)(1)

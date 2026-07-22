@@ -41,6 +41,16 @@ disableManifest = false
 
 There is no selective cache clearing; **bun pm cache rm** is all-or-nothing and removes the entire global cache. To remove a specific package, manually delete its directory under **~/.bun/install/cache/\<package\>@\<version\>**. The command historically required being run inside a directory containing a **package.json**, even though it operates on the global cache.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-pm-trust](/man/bun-pm-trust)(1), [npm-cache](/man/npm-cache)(1)

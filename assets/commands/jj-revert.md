@@ -25,6 +25,20 @@ creates a new commit that undoes the changes from specified revisions
 
 **jj revert** creates a new commit that undoes the changes from specified revisions. The original commits remain in history. Unlike restore, revert creates new commits to reverse changes.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-restore](/man/jj-restore)(1), [jj-undo](/man/jj-undo)(1)

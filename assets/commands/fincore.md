@@ -62,6 +62,14 @@ Useful for understanding memory usage and cache behavior.
 
 Part of util-linux. Shows point-in-time snapshot of cache state. Cache contents change dynamically based on system activity.
 
+# INSTALL
+
+```apt: sudo apt install util-linux-extra```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fadvise](/man/fadvise)(1), [vmtouch](/man/vmtouch)(1), [free](/man/free)(1)

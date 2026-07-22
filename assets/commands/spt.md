@@ -68,6 +68,12 @@ Requires Spotify API credentials (client id/secret) configured on first run; con
 
 Spotify has repeatedly restricted third-party API access; features may break without upstream updates. A Premium account is required for many playback controls. Official maintenance status has varied—check the GitHub repo before relying on it.
 
+# INSTALL
+
+```aur: yay -S spt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [spotify](/man/spotify)(1), [ncspot](/man/ncspot)(1), [playerctl](/man/playerctl)(1)

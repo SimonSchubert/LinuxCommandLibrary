@@ -59,6 +59,20 @@ GNOME specific. Part of GNOME accessibility suite. Requires X11 or Wayland.
 
 mousetweaks was developed as part of **GNOME's accessibility** initiative to assist users with limited mobility.
 
+# INSTALL
+
+```apt: sudo apt install mousetweaks```
+
+```dnf: sudo dnf install mousetweaks```
+
+```pacman: sudo pacman -S mousetweaks```
+
+```zypper: sudo zypper install mousetweaks```
+
+```nix: nix profile install nixpkgs#mousetweaks```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 

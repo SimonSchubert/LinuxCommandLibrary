@@ -18,6 +18,24 @@ remove one or more containers
 
 Removing containers is important for maintaining system cleanliness and freeing disk space, as stopped containers continue to consume storage until explicitly deleted.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-container-rm](/man/docker-container-rm)(1), [docker-rm](/man/docker-rm)(1)

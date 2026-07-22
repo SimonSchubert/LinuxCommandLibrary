@@ -40,6 +40,12 @@ Requires systemd with full unified cgroup hierarchy (cgroups-v2) and memory acco
 
 Introduced in **systemd version 247** (2020) as part of the systemd-oomd userspace OOM killer implementation. Provides a more intelligent alternative to the kernel OOM killer by using PSI metrics to proactively manage memory pressure before the system becomes unresponsive.
 
+# INSTALL
+
+```apt: sudo apt install systemd-oomd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [journalctl](/man/journalctl)(1)

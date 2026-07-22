@@ -42,6 +42,12 @@ Directory tree visualization for AWS S3 buckets
 
 **stree** was created by **orangekame3** and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S stree```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stu](/man/stu)(1), [aws](/man/aws)(1), [tree](/man/tree)(1)

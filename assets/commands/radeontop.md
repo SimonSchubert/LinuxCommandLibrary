@@ -74,6 +74,22 @@ May require root privileges on some systems. Only works with AMD Radeon GPUs usi
 
 **radeontop** was created by **Chris Blaas** to provide GPU monitoring for AMD graphics cards on Linux, similar to nvidia-smi for NVIDIA cards.
 
+# INSTALL
+
+```apt: sudo apt install radeontop```
+
+```dnf: sudo dnf install radeontop```
+
+```pacman: sudo pacman -S radeontop```
+
+```apk: sudo apk add radeontop```
+
+```zypper: sudo zypper install radeontop```
+
+```nix: nix profile install nixpkgs#radeontop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [amdgpu_top](/man/amdgpu_top)(1), [nvidia-smi](/man/nvidia-smi)(1), [glxinfo](/man/glxinfo)(1), [lspci](/man/lspci)(8)

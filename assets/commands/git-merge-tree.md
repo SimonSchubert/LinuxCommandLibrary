@@ -73,6 +73,24 @@ The deprecated trivial-merge mode requires specifying the base commit explicitly
 
 Plumbing command primarily intended for scripting. Output format differs between modern and deprecated modes. Modern mode requires Git 2.38 or later.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [git-merge-file](/man/git-merge-file)(1)

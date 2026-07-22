@@ -92,6 +92,18 @@ COCOMO estimates are rough approximations. Language detection may miss some. Lar
 
 **SLOCCount** was created by **David A. Wheeler** to accurately count source lines. It applies software economics models to estimate development effort, helping with project planning and comparisons.
 
+# INSTALL
+
+```apt: sudo apt install sloccount```
+
+```dnf: sudo dnf install sloccount```
+
+```pacman: sudo pacman -S sloccount```
+
+```brew: brew install sloccount```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cloc](/man/cloc)(1), [tokei](/man/tokei)(1), [wc](/man/wc)(1), [find](/man/find)(1)

@@ -86,6 +86,18 @@ Images must be same dimensions unless using subimage search. Large images can be
 
 **compare** is part of **ImageMagick**, created by **John Cristy** in **1987**. ImageMagick has been continuously developed for image manipulation and conversion. The compare tool became essential for automated visual testing in software development.
 
+# INSTALL
+
+```pacman: sudo pacman -S imagemagick```
+
+```apk: sudo apk add imagemagick```
+
+```brew: brew install imagemagick```
+
+```nix: nix profile install nixpkgs#imagemagick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [magick](/man/magick)(1), [convert](/man/convert)(1), [identify](/man/identify)(1), [diff](/man/diff)(1)

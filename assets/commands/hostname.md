@@ -101,6 +101,24 @@ Setting the hostname with this command is temporary and does not persist across 
 
 The hostname command has been part of Unix systems since the early BSD releases in the 1980s. It evolved from simple hostname display to include domain name handling as TCP/IP networking became standard. On modern Linux systems, **hostnamectl** from systemd provides additional functionality for persistent hostname configuration including static, transient, and pretty hostnames.
 
+# INSTALL
+
+```apt: sudo apt install hostname```
+
+```dnf: sudo dnf install hostname```
+
+```pacman: sudo pacman -S net-tools```
+
+```apk: sudo apk add net-tools```
+
+```zypper: sudo zypper install hostname```
+
+```brew: brew install net-tools```
+
+```nix: nix profile install nixpkgs#hostname```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hostnamectl](/man/hostnamectl)(1), [domainname](/man/domainname)(1)

@@ -60,6 +60,18 @@ OpenNTPD specific - not compatible with ISC ntpd. Control socket must be enabled
 
 **ntpctl** is part of **OpenNTPD**, developed by the **OpenBSD** project starting around **2004**. OpenNTPD was created as a simpler, more secure alternative to the reference NTP implementation.
 
+# INSTALL
+
+```apt: sudo apt install openntpd```
+
+```pacman: sudo pacman -S openntpd```
+
+```apk: sudo apk add openntpd```
+
+```nix: nix profile install nixpkgs#openntpd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ntpd](/man/ntpd)(8), [ntpq](/man/ntpq)(1), [chronyc](/man/chronyc)(1), [timedatectl](/man/timedatectl)(1)

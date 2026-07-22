@@ -51,6 +51,18 @@ Works best when run immediately after deletion before journal wraps.
 
 Only works with ext3/ext4 filesystems. Unmount partition before recovery for best results. Paths are relative to filesystem root (no leading /). Recovery success depends on journal state.
 
+# INSTALL
+
+```apt: sudo apt install extundelete```
+
+```dnf: sudo dnf install extundelete```
+
+```zypper: sudo zypper install extundelete```
+
+```nix: nix profile install nixpkgs#extundelete```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [testdisk](/man/testdisk)(8), [photorec](/man/photorec)(8), [debugfs](/man/debugfs)(8)

@@ -40,6 +40,24 @@ This program is part of Netpbm.
 
 Only format-agnostic libnetpbm options are accepted (notably **-quiet**). For conversion to common formats like PNG or JPEG, pipe through another Netpbm tool such as **pamtopng**.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamtoqoi](/man/pamtoqoi)(1), [pngtopam](/man/pngtopam)(1)

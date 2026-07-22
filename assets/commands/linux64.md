@@ -49,6 +49,24 @@ This command is typically used for compatibility purposes when running programs 
 
 **linux64** is part of the **util-linux** package, providing architecture personality modification utilities. The companion command **linux32** sets 32-bit personality.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [setarch](/man/setarch)(8), [linux32](/man/linux32)(8), [uname](/man/uname)(1)

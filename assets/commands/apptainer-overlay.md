@@ -52,6 +52,21 @@ Overlays can be embedded directly into a SIF file or created as standalone image
 
 Overlays require filesystem support for loop devices and EXT3. Sparse overlays save disk space but may cause performance issues with some workloads. Overlay size cannot be easily changed after creation.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-build](/man/apptainer-build)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-shell](/man/apptainer-shell)(1), [apptainer-exec](/man/apptainer-exec)(1)

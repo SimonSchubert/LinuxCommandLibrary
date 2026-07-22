@@ -35,6 +35,18 @@ Manage Poetry's package download cache
 
 **poetry cache** manages Poetry's package cache. Poetry caches downloaded packages to speed up subsequent installations. Use this to view cache contents or clear space.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [poetry-install](/man/poetry-install)(1)

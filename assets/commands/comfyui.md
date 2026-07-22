@@ -90,6 +90,12 @@ Web UI requires a modern browser. GPU strongly recommended. Custom nodes may con
 
 **ComfyUI** was created by **comfyanonymous** in **2023** as a modular alternative to the Automatic1111 web UI. Its node-based design attracted power users who needed flexible, reproducible generation pipelines. It became one of the most popular Stable Diffusion interfaces, with a large community building custom nodes.
 
+# INSTALL
+
+```aur: yay -S comfyui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sd-cli](/man/sd-cli)(1), [mflux](/man/mflux)(1), [convert](/man/convert)(1)

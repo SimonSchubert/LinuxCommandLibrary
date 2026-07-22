@@ -63,6 +63,24 @@ Multiple **-json_opt** values must be comma-separated in a single option, not as
 
 json_pp is part of **Perl's JSON::PP module**, providing a simple command-line JSON formatter.
 
+# INSTALL
+
+```apt: sudo apt install perl```
+
+```dnf: sudo dnf install perl```
+
+```pacman: sudo pacman -S perl```
+
+```apk: sudo apk add perl-utils```
+
+```zypper: sudo zypper install perl```
+
+```brew: brew install perl```
+
+```nix: nix profile install nixpkgs#perl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [python](/man/python)(1), [jsonlint](/man/jsonlint)(1)

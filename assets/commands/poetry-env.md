@@ -99,6 +99,18 @@ Python version must be installed separately. Poetry manages environments, not Py
 
 poetry env is part of **Poetry** by **Sébastien Eustace**, providing virtual environment management for Python projects.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [poetry-install](/man/poetry-install)(1), [pyenv](/man/pyenv)(1)

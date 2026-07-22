@@ -79,6 +79,24 @@ Interactive by default; use <<< or EOF for scripting. Certificate verification m
 
 s_client has been part of OpenSSL since early versions, essential for SSL/TLS testing and debugging.
 
+# INSTALL
+
+```apt: sudo apt install openssl```
+
+```dnf: sudo dnf install openssl```
+
+```pacman: sudo pacman -S openssl```
+
+```apk: sudo apk add openssl```
+
+```zypper: sudo zypper install openssl```
+
+```brew: brew install openssl```
+
+```nix: nix profile install nixpkgs#openssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl-verify](/man/openssl-verify)(1), [curl](/man/curl)(1)

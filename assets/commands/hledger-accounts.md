@@ -74,6 +74,24 @@ lists account names from the journal
 
 **hledger accounts** lists account names from the journal. Part of the hledger plain text accounting tool. It shows accounts that are declared (with account directives), posted to, or both (the default). Accounts can be filtered by query pattern, limited by depth, and displayed as a flat list or tree.
 
+# INSTALL
+
+```apt: sudo apt install hledger```
+
+```dnf: sudo dnf install hledger```
+
+```pacman: sudo pacman -S hledger```
+
+```apk: sudo apk add hledger```
+
+```zypper: sudo zypper install hledger```
+
+```brew: brew install hledger```
+
+```nix: nix profile install nixpkgs#hledger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hledger](/man/hledger)(1), [hledger-balance](/man/hledger-balance)(1), [hledger-print](/man/hledger-print)(1), [ledger](/man/ledger)(1)

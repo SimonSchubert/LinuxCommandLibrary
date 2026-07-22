@@ -63,6 +63,14 @@ Hardware kill switches cannot be overridden by software. Blocking may affect mul
 
 **rfkill** is part of **util-linux**, providing control over the kernel's rfkill subsystem for wireless devices.
 
+# INSTALL
+
+```apt: sudo apt install rfkill```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iw](/man/iw)(8), [bluetoothctl](/man/bluetoothctl)(1)

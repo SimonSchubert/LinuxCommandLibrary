@@ -42,6 +42,20 @@ Part of passwdqc. May not be installed by default.
 
 pwqgen is part of **passwdqc** password quality checking suite.
 
+# INSTALL
+
+```apt: sudo apt install passwdqc```
+
+```dnf: sudo dnf install passwdqc```
+
+```zypper: sudo zypper install passwdqc```
+
+```brew: brew install passwdqc```
+
+```nix: nix profile install nixpkgs#passwdqc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pwgen](/man/pwgen)(1), [apg](/man/apg)(1), [pwqcheck](/man/pwqcheck)(1)

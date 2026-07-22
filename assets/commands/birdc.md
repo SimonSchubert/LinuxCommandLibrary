@@ -117,6 +117,22 @@ Requires BIRD daemon running. Socket permissions may restrict access. Some comma
 
 **birdc** has been part of the BIRD suite since its creation in **1998** as the control interface for the routing daemon. BIRD was developed by Ondrej Filip, Pavel Machek, and Martin Mares, and is now maintained by CZ.NIC Labs. Up to BIRD 1.x a separate **birdc6** client controlled the IPv6 daemon; BIRD 2.x merged IPv4 and IPv6 into a single daemon, so **birdc** alone now manages both.
 
+# INSTALL
+
+```apt: sudo apt install bird2```
+
+```dnf: sudo dnf install bird```
+
+```pacman: sudo pacman -S bird```
+
+```apk: sudo apk add bird```
+
+```zypper: sudo zypper install bird```
+
+```nix: nix profile install nixpkgs#bird2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bird](/man/bird)(8), [bgpctl](/man/bgpctl)(8), [vtysh](/man/vtysh)(1)

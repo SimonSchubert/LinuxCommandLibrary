@@ -53,6 +53,24 @@ Does not read from stdin by default; use -p for pipeline mode. In pipeline mode 
 
 **unbuffer** was created as part of the Expect package by Don Libes at NIST. Expect is documented in "Exploring Expect: A Tcl-Based Toolkit for Automating Interactive Programs" (O'Reilly, 1995). The tool addresses a common Unix problem of output buffering in pipelines.
 
+# INSTALL
+
+```apt: sudo apt install expect```
+
+```dnf: sudo dnf install expect```
+
+```pacman: sudo pacman -S expect```
+
+```apk: sudo apk add expect```
+
+```zypper: sudo zypper install expect```
+
+```brew: brew install expect```
+
+```nix: nix profile install nixpkgs#expect```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [expect](/man/expect)(1), [stdbuf](/man/stdbuf)(1), [script](/man/script)(1), [tee](/man/tee)(1)

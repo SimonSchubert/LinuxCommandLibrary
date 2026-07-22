@@ -71,6 +71,18 @@ Kubernetes clusters incur costs. Control plane is managed but workers are billab
 
 SKS is Exoscale's managed Kubernetes offering, providing CNCF-certified Kubernetes clusters on Exoscale's European cloud infrastructure.
 
+# INSTALL
+
+```dnf: sudo dnf install exo```
+
+```pacman: sudo pacman -S exo```
+
+```apk: sudo apk add exoscale```
+
+```nix: nix profile install nixpkgs#exo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [exo](/man/exo)(1), [exo-compute](/man/exo-compute)(1), [kubectl](/man/kubectl)(1)

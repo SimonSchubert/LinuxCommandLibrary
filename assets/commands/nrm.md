@@ -69,6 +69,14 @@ Node.js tool. Install with npm install -g. Modifies .npmrc.
 
 nrm was created to **easily switch** between different npm registries.
 
+# INSTALL
+
+```brew: brew install nrm```
+
+```nix: nix profile install nixpkgs#nrm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-config](/man/npm-config)(1), [yarn](/man/yarn)(1)

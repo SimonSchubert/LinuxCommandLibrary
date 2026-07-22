@@ -73,6 +73,24 @@ The compressed output is fully compatible with standard zstd files and can be de
 
 The number of threads can be set with the **ZSTD_NBTHREADS** environment variable. When **-T0** is used, the number of detected physical CPU cores is used, capped at 256 on 64-bit systems.
 
+# INSTALL
+
+```apt: sudo apt install zstd```
+
+```dnf: sudo dnf install zstd```
+
+```pacman: sudo pacman -S zstd```
+
+```apk: sudo apk add zstd```
+
+```zypper: sudo zypper install zstd```
+
+```brew: brew install zstd```
+
+```nix: nix profile install nixpkgs#zstd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zstd](/man/zstd)(1), [zstdcat](/man/zstdcat)(1), [unzstd](/man/unzstd)(1)

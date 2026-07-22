@@ -85,6 +85,23 @@ Plugin availability varies by distribution. Some formats require additional code
 
 **Audacious** was forked from Beep Media Player (itself a fork of XMMS) in **2005**. It continues the Winamp-like interface tradition on Linux.
 
+# INSTALL
+
+```apt: sudo apt install audacious```
+
+```dnf: sudo dnf install audacious```
+
+```pacman: sudo pacman -S audacious```
+
+```apk: sudo apk add audacious```
+
+```zypper: sudo zypper install audacious```
+
+```brew: brew install audacious```
+
+```nix: nix profile install nixpkgs#audacious```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [mpv](/man/mpv)(1), [vlc](/man/vlc)(1)

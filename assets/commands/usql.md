@@ -89,6 +89,12 @@ Not all features available on all databases. Some drivers need installation. Com
 
 **usql** was created by **Kenneth Shaw** around **2017** to provide a universal SQL client. It addresses the fragmentation of database CLIs with a single, consistent tool.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#usql```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [psql](/man/psql)(1), [mysql](/man/mysql)(1), [sqlite3](/man/sqlite3)(1), [sqlcmd](/man/sqlcmd)(1)

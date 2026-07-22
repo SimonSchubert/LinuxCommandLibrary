@@ -78,6 +78,22 @@ Single static binary; no external dependencies. Plugin system uses Lua and may n
 
 Micro was created by **Zachary Yedidia** as a modern, intuitive alternative to nano and vim.
 
+# INSTALL
+
+```apt: sudo apt install micro```
+
+```dnf: sudo dnf install micro```
+
+```pacman: sudo pacman -S micro```
+
+```apk: sudo apk add micro```
+
+```brew: brew install micro```
+
+```nix: nix profile install nixpkgs#micro```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nano](/man/nano)(1), [vim](/man/vim)(1), [emacs](/man/emacs)(1)

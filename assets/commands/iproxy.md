@@ -59,6 +59,16 @@ Requires **usbmuxd** to be running for USB connections. SSH access requires a ja
 
 **iproxy** is part of the **libusbmuxd** project, which is part of the **libimobiledevice** suite. Libimobiledevice was created around **2009** as a cross-platform library to communicate with iOS devices, providing open-source alternatives to Apple's proprietary protocols.
 
+# INSTALL
+
+```apt: sudo apt install libusbmuxd-tools```
+
+```apk: sudo apk add libusbmuxd-progs```
+
+```zypper: sudo zypper install libusbmuxd-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [idevice_id](/man/idevice_id)(1), [ideviceinfo](/man/ideviceinfo)(1), [ssh](/man/ssh)(1)

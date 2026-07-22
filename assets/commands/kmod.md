@@ -44,6 +44,24 @@ Direct kmod usage is rare; symlinked commands are more common. Requires appropri
 
 kmod replaced the older module-init-tools package starting around **2011**. It was developed by Lucas De Marchi to provide a more maintainable and efficient kernel module management system.
 
+# INSTALL
+
+```apt: sudo apt install kmod```
+
+```dnf: sudo dnf install kmod```
+
+```pacman: sudo pacman -S kmod```
+
+```apk: sudo apk add kmod```
+
+```zypper: sudo zypper install kmod```
+
+```brew: brew install kmod```
+
+```nix: nix profile install nixpkgs#kmod```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsmod](/man/lsmod)(8), [modprobe](/man/modprobe)(8), [insmod](/man/insmod)(8), [rmmod](/man/rmmod)(8), [modinfo](/man/modinfo)(8)

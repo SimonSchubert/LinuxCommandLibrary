@@ -133,6 +133,12 @@ Rich output (images, plots) requires a terminal that implements sixel, iTerm2, o
 
 **euporie** is developed by **Josiah Outram Halstead** (joouha) and written in **Python** on top of **prompt_toolkit**. It is distributed on PyPI as `euporie` (install with `pip install euporie`).
 
+# INSTALL
+
+```aur: yay -S euporie```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jupyter](/man/jupyter)(1), [ipython](/man/ipython)(1)

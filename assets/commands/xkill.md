@@ -63,6 +63,20 @@ X11 only - doesn't work on Wayland. May lose unsaved data. Doesn't gracefully cl
 
 **xkill** has been part of the **X.Org** utilities since the early days of X11. It provides a simple way to deal with misbehaving X applications.
 
+# INSTALL
+
+```apt: sudo apt install x11-utils```
+
+```dnf: sudo dnf install xkill```
+
+```apk: sudo apk add xkill```
+
+```zypper: sudo zypper install xkill```
+
+```nix: nix profile install nixpkgs#xkill```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kill](/man/kill)(1), [killall](/man/killall)(1), [xwininfo](/man/xwininfo)(1), [xdotool](/man/xdotool)(1)

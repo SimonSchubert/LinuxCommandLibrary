@@ -33,6 +33,18 @@ allow printer queues to accept jobs
 
 This command is an alias for **accept** and requires administrator privileges.
 
+# INSTALL
+
+```apt: sudo apt install cups-client```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cupsreject](/man/cupsreject)(1), [cupsenable](/man/cupsenable)(1), [cupsdisable](/man/cupsdisable)(1)

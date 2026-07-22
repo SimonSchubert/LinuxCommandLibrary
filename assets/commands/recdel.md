@@ -84,6 +84,18 @@ Modifies file in place. Make backups before bulk deletes. Part of GNU recutils.
 
 recdel is part of **GNU recutils** by **Jose E. Marchesi** for text-based database management.
 
+# INSTALL
+
+```dnf: sudo dnf install recutils```
+
+```apk: sudo apk add recutils```
+
+```brew: brew install recutils```
+
+```nix: nix profile install nixpkgs#recutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [recsel](/man/recsel)(1), [recins](/man/recins)(1), [recset](/man/recset)(1), [rec2csv](/man/rec2csv)(1)

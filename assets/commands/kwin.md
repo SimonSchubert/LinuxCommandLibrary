@@ -71,6 +71,16 @@ Wayland session has different capabilities than X11. Some effects require OpenGL
 
 KWin was originally written by **Matthias Ettrich** as part of KDE 1 in **1997**. It has evolved significantly, adding compositing support in KDE 4 and Wayland support in Plasma 5.
 
+# INSTALL
+
+```apt: sudo apt install kwin-x11```
+
+```dnf: sudo dnf install kwin-x11```
+
+```pacman: sudo pacman -S kwin-x11```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [plasmashell](/man/plasmashell)(1), [systemsettings](/man/systemsettings)(1), [qdbus](/man/qdbus)(1)

@@ -121,6 +121,18 @@ Requires root privileges. Kernel must have IO accounting enabled (CONFIG_TASK_IO
 
 **iotop** was written by Guillaume Chazarain and first released around **2007**. It was created to fill the gap in Linux monitoring tools -- while CPU and memory monitoring had top, disk I/O monitoring lacked an equivalent. The tool relies on kernel features (taskstats) added in Linux 2.6.20. An alternative Rust-based reimplementation called **iotop-c** exists with a similar interface.
 
+# INSTALL
+
+```pacman: sudo pacman -S iotop```
+
+```apk: sudo apk add iotop```
+
+```zypper: sudo zypper install iotop```
+
+```nix: nix profile install nixpkgs#iotop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [htop](/man/htop)(1), [top](/man/top)(1), [iostat](/man/iostat)(1), [vmstat](/man/vmstat)(8), [dstat](/man/dstat)(1)

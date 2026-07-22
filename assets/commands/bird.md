@@ -108,6 +108,22 @@ Complex configuration for advanced setups. Requires root or network admin privil
 
 **BIRD** was developed at Charles University in Prague starting in **1998**, becoming a popular open-source routing daemon for Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install bird2```
+
+```dnf: sudo dnf install bird```
+
+```pacman: sudo pacman -S bird```
+
+```apk: sudo apk add bird```
+
+```zypper: sudo zypper install bird```
+
+```nix: nix profile install nixpkgs#bird2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [birdc](/man/birdc)(8), [bgpd](/man/bgpd)(8), [ip](/man/ip)(8), [route](/man/route)(8)

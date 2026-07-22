@@ -53,6 +53,24 @@ Security sensitive: commands run from URLs. Internal helper, not typically used 
 
 git-remote-ext is a **Git** remote helper enabling custom transport mechanisms through arbitrary command execution.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-remote](/man/git-remote)(1), [git-remote-fd](/man/git-remote-fd)(1)

@@ -63,6 +63,17 @@ Requires avahi-daemon running. Service persists only while command is running. F
 
 **avahi-publish-service** is part of the Avahi project, created by Lennart Poettering as a free implementation of Apple's Bonjour/Zeroconf protocol, first released around **2005**.
 
+# INSTALL
+
+```apt: sudo apt install avahi-utils```
+
+```dnf: sudo dnf install avahi-tools```
+
+```apk: sudo apk add avahi-tools```
+
+```zypper: sudo zypper install avahi-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [avahi-publish](/man/avahi-publish)(1), [avahi-browse](/man/avahi-browse)(1), [avahi-daemon](/man/avahi-daemon)(8)

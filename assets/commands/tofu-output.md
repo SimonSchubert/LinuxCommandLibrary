@@ -42,6 +42,22 @@ Display OpenTofu state output values
 
 **tofu output** displays output values from OpenTofu state. OpenTofu is the open-source fork of Terraform. Shows values defined in output blocks. When called without a name argument, it displays all outputs. The default human-readable format may change between versions; use -json for stable machine-readable output in scripts. When using -json or -raw, sensitive values are displayed in plain text.
 
+# INSTALL
+
+```dnf: sudo dnf install opentofu```
+
+```pacman: sudo pacman -S opentofu```
+
+```apk: sudo apk add opentofu```
+
+```zypper: sudo zypper install opentofu```
+
+```brew: brew install opentofu```
+
+```nix: nix profile install nixpkgs#opentofu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tofu](/man/tofu)(1), [tofu-plan](/man/tofu-plan)(1), [terraform-output](/man/terraform-output)(1)

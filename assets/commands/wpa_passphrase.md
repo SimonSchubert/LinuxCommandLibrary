@@ -38,6 +38,22 @@ The tool pre-computes the PSK using PBKDF2, which is faster than having wpa_supp
 
 Providing the passphrase on the command line exposes it in process listings and shell history. For security, prefer reading from stdin. The passphrase must be between 8 and 63 characters. The SSID is case-sensitive and must match exactly. Part of the wpa_supplicant package.
 
+# INSTALL
+
+```apt: sudo apt install wpasupplicant```
+
+```dnf: sudo dnf install wpa_supplicant```
+
+```pacman: sudo pacman -S wpa_supplicant```
+
+```apk: sudo apk add wpa_supplicant```
+
+```zypper: sudo zypper install wpa_supplicant```
+
+```nix: nix profile install nixpkgs#wpa_supplicant```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wpa_supplicant](/man/wpa_supplicant)(8), [wpa_cli](/man/wpa_cli)(8)

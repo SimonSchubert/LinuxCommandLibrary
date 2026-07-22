@@ -34,6 +34,14 @@ Unlike manual inhibition, caffeine works automatically based on window state.
 **-V, --version**
 > Display version information
 
+# INSTALL
+
+```zypper: sudo zypper install caffeine```
+
+```nix: nix profile install nixpkgs#caffeine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [caffeinate](/man/caffeinate)(1), [caffeine-indicator](/man/caffeine-indicator)(1), [xset](/man/xset)(1)

@@ -38,6 +38,20 @@ When using --force on an image that has containers, those containers will also b
 
 Images in use by containers cannot be removed without --force. Force removal will delete associated containers. Removing base images requires re-downloading them later.
 
+# INSTALL
+
+```apt: sudo apt install podman-toolbox```
+
+```dnf: sudo dnf install toolbox```
+
+```pacman: sudo pacman -S toolbox```
+
+```zypper: sudo zypper install toolbox```
+
+```nix: nix profile install nixpkgs#toolbox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [toolbox](/man/toolbox)(1), [toolbox-rm](/man/toolbox-rm)(1), [toolbox-list](/man/toolbox-list)(1)

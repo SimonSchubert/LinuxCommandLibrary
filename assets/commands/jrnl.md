@@ -110,6 +110,20 @@ Plain text storage means entries are readable without jrnl. Encryption adds pass
 
 **jrnl** was created by Manuel Ebert around **2012** as a simple journaling tool for the command line. It was inspired by the Day One journaling app but designed for terminal users who prefer plain text. The project has been maintained by the open-source community and remains popular for its simplicity and Unix philosophy adherence.
 
+# INSTALL
+
+```dnf: sudo dnf install jrnl```
+
+```pacman: sudo pacman -S jrnl```
+
+```zypper: sudo zypper install jrnl```
+
+```brew: brew install jrnl```
+
+```nix: nix profile install nixpkgs#jrnl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [taskwarrior](/man/taskwarrior)(1), [vim](/man/vim)(1), [nano](/man/nano)(1)

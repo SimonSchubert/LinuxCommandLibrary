@@ -71,6 +71,18 @@ High retry counts (default 128) can result in extremely long processing times fo
 
 The output is a raw ISO image. Audio CDs require different tools (like **cdparanoia**) for proper extraction.
 
+# INSTALL
+
+```apt: sudo apt install wodim```
+
+```dnf: sudo dnf install wodim```
+
+```apk: sudo apk add cdrkit```
+
+```nix: nix profile install nixpkgs#cdrkit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wodim](/man/wodim)(1), [cdrecord](/man/cdrecord)(1), [dd](/man/dd)(1), [ddrescue](/man/ddrescue)(1), [cdparanoia](/man/cdparanoia)(1)

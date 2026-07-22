@@ -34,6 +34,22 @@ All diff options are supported.
 
 **lzdiff** compares two lzip-compressed files and shows differences. Automatically decompresses before comparing. Equivalent to running diff on decompressed contents. Passes options through to diff.
 
+# INSTALL
+
+```dnf: sudo dnf install xz```
+
+```pacman: sudo pacman -S xz```
+
+```apk: sudo apk add xz```
+
+```zypper: sudo zypper install xz```
+
+```brew: brew install xz```
+
+```nix: nix profile install nixpkgs#xz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lzip](/man/lzip)(1), [lzcmp](/man/lzcmp)(1), [diff](/man/diff)(1)

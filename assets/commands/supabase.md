@@ -85,6 +85,12 @@ Docker required for local dev. Project must exist on Supabase. Free tier limits 
 
 **Supabase** is an open-source Firebase alternative launched in **2020**. The CLI enables local development and self-hosting.
 
+# INSTALL
+
+```brew: brew install supabase```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [psql](/man/psql)(1), [firebase](/man/firebase)(1)

@@ -72,6 +72,18 @@ Python-based. Requires pip install. For SQLite databases only.
 
 litecli was inspired by **pgcli** and **mycli**, bringing similar enhanced CLI features to SQLite.
 
+# INSTALL
+
+```dnf: sudo dnf install litecli```
+
+```apk: sudo apk add litecli```
+
+```brew: brew install litecli```
+
+```nix: nix profile install nixpkgs#litecli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sqlite3](/man/sqlite3)(1), [mycli](/man/mycli)(1), [pgcli](/man/pgcli)(1)

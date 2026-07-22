@@ -88,6 +88,18 @@ Some metadata cannot be removed without re-encoding (video). Very thorough clean
 
 **mat2** succeeded the original MAT (Metadata Anonymisation Toolkit) created by the **Tails** project. The rewrite in **2018** by **Julien Voisin** improved format support and reliability. It's used by journalists, activists, and privacy-conscious users.
 
+# INSTALL
+
+```dnf: sudo dnf install mat2```
+
+```pacman: sudo pacman -S mat2```
+
+```brew: brew install mat2```
+
+```nix: nix profile install nixpkgs#mat2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [exiftool](/man/exiftool)(1), [exiv2](/man/exiv2)(1), [pdfinfo](/man/pdfinfo)(1), [ffprobe](/man/ffprobe)(1)

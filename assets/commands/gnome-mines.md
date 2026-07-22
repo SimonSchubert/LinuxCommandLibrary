@@ -41,6 +41,20 @@ Requires GNOME libraries. Game state not saved between sessions. Custom sizes li
 
 Minesweeper originated in the **1960s** and became famous through Microsoft Windows. GNOME Mines is part of the gnome-games collection, providing a native Linux version following GNOME design guidelines.
 
+# INSTALL
+
+```dnf: sudo dnf install gnome-mines```
+
+```pacman: sudo pacman -S gnome-mines```
+
+```apk: sudo apk add gnome-mines```
+
+```zypper: sudo zypper install gnome-mines```
+
+```nix: nix profile install nixpkgs#gnome-mines```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnome-sudoku](/man/gnome-sudoku)(1)

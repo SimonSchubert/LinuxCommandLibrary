@@ -62,6 +62,12 @@ ReiserFS is legacy. Use ext4 or btrfs instead. Destroys existing data.
 
 mkreiserfs was part of **ReiserFS** tools, a journaling filesystem created by Hans Reiser.
 
+# INSTALL
+
+```apt: sudo apt install reiserfsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkfs](/man/mkfs)(8)

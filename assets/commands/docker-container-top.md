@@ -22,6 +22,24 @@ display running processes inside a container
 
 The command accepts standard **ps** options to customize the output format and control which process attributes are displayed. This is particularly useful for debugging containers, verifying that expected processes are running, and investigating resource usage at the process level.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-top](/man/docker-top)(1), [docker-container-stats](/man/docker-container-stats)(1)

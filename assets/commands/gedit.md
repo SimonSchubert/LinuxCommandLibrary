@@ -71,6 +71,24 @@ As a GTK application, gedit may have slow startup times without the GNOME enviro
 
 gedit was created in **1998** as part of the GNOME project. It was designed to be a simple yet capable text editor following GNOME's human interface guidelines. The editor has evolved through multiple GNOME versions while maintaining its focus on simplicity and usability.
 
+# INSTALL
+
+```apt: sudo apt install gedit```
+
+```dnf: sudo dnf install gedit```
+
+```pacman: sudo pacman -S gedit```
+
+```apk: sudo apk add gedit```
+
+```zypper: sudo zypper install gedit```
+
+```brew: brew install gedit```
+
+```nix: nix profile install nixpkgs#gedit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nano](/man/nano)(1), [vim](/man/vim)(1), [kate](/man/kate)(1)

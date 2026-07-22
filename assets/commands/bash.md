@@ -139,6 +139,23 @@ Bash-specific features not portable to POSIX sh. Scripts should use `#!/bin/bash
 
 **Bash** was created by Brian Fox for the GNU Project in **1989** as a free replacement for the Bourne shell, first released as version 0.99. Version 5.0 was released in **2019**.
 
+# INSTALL
+
+```apt: sudo apt install bash```
+
+```dnf: sudo dnf install bash```
+
+```pacman: sudo pacman -S bash```
+
+```apk: sudo apk add bash```
+
+```zypper: sudo zypper install bash```
+
+```brew: brew install bash```
+
+```nix: nix profile install nixpkgs#bash```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [sh](/man/sh)(1), [zsh](/man/zsh)(1), [shellcheck](/man/shellcheck)(1)

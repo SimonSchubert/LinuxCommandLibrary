@@ -39,6 +39,20 @@ local in-memory container registry
 
 In-memory storage is lost when the server stops. The **--disk** option provides persistence but this is still not intended for production use. No authentication or TLS is provided.
 
+# INSTALL
+
+```pacman: sudo pacman -S crane```
+
+```apk: sudo apk add crane```
+
+```zypper: sudo zypper install crane```
+
+```brew: brew install crane```
+
+```nix: nix profile install nixpkgs#crane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-push](/man/crane-push)(1), [crane-pull](/man/crane-pull)(1)

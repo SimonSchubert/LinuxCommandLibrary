@@ -49,6 +49,18 @@ Does not support HTTP/HTTPS natively — it is specifically designed for alterna
 
 **Bombadillo** was created by **sloum** (on tildegit) and first released around **2019**. Written in **Go**, it was developed as part of the growing interest in the Gemini protocol and the small-internet movement. The name references the character Tom Bombadil from Tolkien's works.
 
+# INSTALL
+
+```apt: sudo apt install bombadillo```
+
+```apk: sudo apk add bombadillo```
+
+```brew: brew install bombadillo```
+
+```nix: nix profile install nixpkgs#bombadillo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lynx](/man/lynx)(1), [w3m](/man/w3m)(1)

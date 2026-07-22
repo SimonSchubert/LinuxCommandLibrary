@@ -83,6 +83,24 @@ When splitting binary files, use **-b** (bytes) not **-l** (lines) to avoid corr
 
 To reassemble, use **cat prefix\*** > **original_file**. Ensure files are concatenated in correct alphabetical/numerical order.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [csplit](/man/csplit)(1), [cat](/man/cat)(1), [head](/man/head)(1), [tail](/man/tail)(1)

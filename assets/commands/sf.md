@@ -134,6 +134,12 @@ The older **sfdx** command is deprecated; migrate to **sf** commands. Some opera
 
 Salesforce CLI was introduced as **sfdx** (Salesforce DX CLI) in **2017** alongside the Salesforce DX development model. The **sf** command was introduced in **2022** as a unified, redesigned CLI with improved command structure. The sfdx-style commands were deprecated in **2024** with full transition to sf.
 
+# INSTALL
+
+```brew: brew install sf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [git](/man/git)(1), [jq](/man/jq)(1)

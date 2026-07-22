@@ -28,6 +28,14 @@ TUI SSH connection manager for quick access
 
 **ssh-list** was created by **akinoiro** and is written in **Rust**.
 
+# INSTALL
+
+```apt: sudo apt install openssh-client```
+
+```apk: sudo apk add dropbear-ssh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sshs](/man/sshs)(1), [ssh](/man/ssh)(1), [sshclick](/man/sshclick)(1)

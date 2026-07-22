@@ -141,6 +141,22 @@ Requires a JDK installation and a pom.xml file. First builds download many depen
 
 Maven was created by **Jason van Zyl** at the Apache Software Foundation. Maven 1.0 was released in **2004**, and Maven 2.0 followed in **2005** with a complete rewrite. Maven 3.0 was released in **2010** with improved performance and backward compatibility. It remains one of the most widely used Java build tools alongside Gradle.
 
+# INSTALL
+
+```dnf: sudo dnf install maven```
+
+```pacman: sudo pacman -S maven```
+
+```apk: sudo apk add maven```
+
+```zypper: sudo zypper install maven```
+
+```brew: brew install maven```
+
+```nix: nix profile install nixpkgs#maven```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [ant](/man/ant)(1), [java](/man/java)(1), [javac](/man/javac)(1)

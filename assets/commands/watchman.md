@@ -106,6 +106,14 @@ Daemon must be running for watches. System limits on watched files may need incr
 
 **watchman** was developed at **Facebook** (Meta) and released in **2012**. It was designed to handle Facebook's massive codebase where inotify alone wasn't sufficient. The project became a foundation for various developer tools needing efficient file change detection.
 
+# INSTALL
+
+```brew: brew install watchman```
+
+```nix: nix profile install nixpkgs#watchman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [inotifywait](/man/inotifywait)(1), [entr](/man/entr)(1), [fswatch](/man/fswatch)(1)

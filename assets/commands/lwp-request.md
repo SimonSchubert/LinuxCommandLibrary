@@ -104,6 +104,14 @@ Requires libwww-perl package. Less feature-rich than curl or httpie. Error handl
 
 **lwp-request** is part of **libwww-perl**, created by **Gisle Aas** starting in the **1990s**. LWP became the standard HTTP library for Perl, and lwp-request provided command-line access to its functionality.
 
+# INSTALL
+
+```pacman: sudo pacman -S perl-libwww```
+
+```apk: sudo apk add perl-libwww```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [wget](/man/wget)(1), [http](/man/http)(1), [httpie](/man/httpie)(1), [perl](/man/perl)(1)

@@ -95,6 +95,23 @@ For authorized penetration testing only. Requires interface with injection suppo
 
 **aireplay-ng** is a core component of the aircrack-ng suite, first released in **2006**. It consolidated various wireless attack techniques into a single tool.
 
+# INSTALL
+
+```apt: sudo apt install aircrack-ng```
+
+```dnf: sudo dnf install aircrack-ng```
+
+```pacman: sudo pacman -S aircrack-ng```
+
+```apk: sudo apk add aircrack-ng```
+
+```zypper: sudo zypper install aircrack-ng```
+
+```brew: brew install aircrack-ng```
+
+```nix: nix profile install nixpkgs#aircrack-ng```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1), [airmon-ng](/man/airmon-ng)(1), [airbase-ng](/man/airbase-ng)(1)

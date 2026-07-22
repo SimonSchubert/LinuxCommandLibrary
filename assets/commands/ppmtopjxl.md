@@ -28,6 +28,24 @@ Convert PPM to HP PaintJet XL format
 
 **ppmtopjxl** converts PPM images to HP PaintJet XL/XL300 PCL format for direct printing. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmtopj](/man/ppmtopj)(1), [ppmtolj](/man/ppmtolj)(1)

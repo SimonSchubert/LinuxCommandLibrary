@@ -79,6 +79,22 @@ Color-coded output indicates security status: green for enabled protections, red
 
 Originally written by **Tobias Klein** at trapkit.de. The tool has been actively maintained and expanded, moving from Bash to Golang, with the current version maintained at github.com/slimm609/checksec.
 
+# INSTALL
+
+```dnf: sudo dnf install checksec```
+
+```pacman: sudo pacman -S checksec```
+
+```apk: sudo apk add checksec-rs```
+
+```zypper: sudo zypper install checksec```
+
+```brew: brew install checksec```
+
+```nix: nix profile install nixpkgs#checksec```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [readelf](/man/readelf)(1), [objdump](/man/objdump)(1), [file](/man/file)(1)

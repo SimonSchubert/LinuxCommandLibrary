@@ -97,6 +97,14 @@ Requires shell setup. Limited to Node.js ecosystem. Some edge cases with global 
 
 **Volta** was created by **LinkedIn** around **2019**. Written in Rust, it emphasizes speed and reliability for managing JavaScript toolchains.
 
+# INSTALL
+
+```brew: brew install volta```
+
+```nix: nix profile install nixpkgs#volta```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [npm](/man/npm)(1), [nvm](/man/nvm)(1), [fnm](/man/fnm)(1)

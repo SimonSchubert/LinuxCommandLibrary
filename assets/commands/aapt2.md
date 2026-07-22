@@ -86,6 +86,14 @@ aapt2 has stricter validation than the original aapt and will fail on malformed 
 
 **aapt2** was introduced by Google in **2017** as part of Android Studio 3.0 and the Android Gradle Plugin 3.0. It was developed to address performance limitations of the original aapt tool, particularly for large projects with many resources. The incremental compilation model significantly reduces build times by avoiding reprocessing unchanged resources.
 
+# INSTALL
+
+```apt: sudo apt install aapt```
+
+```nix: nix profile install nixpkgs#aapt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aapt](/man/aapt)(1), [apksigner](/man/apksigner)(1), [zipalign](/man/zipalign)(1), [adb](/man/adb)(1), [bundletool](/man/bundletool)(1)

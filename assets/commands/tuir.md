@@ -68,6 +68,12 @@ Reddit API limits. OAuth authentication. Fork of rtv.
 
 **tuir** (Terminal UI for Reddit) is a maintained fork of **rtv** (Reddit Terminal Viewer) after it was abandoned.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#tuir```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rtv](/man/rtv)(1), [newsboat](/man/newsboat)(1)

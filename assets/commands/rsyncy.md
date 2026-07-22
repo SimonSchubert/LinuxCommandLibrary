@@ -36,6 +36,14 @@ All standard **rsync** options are supported and passed through to rsync. rsyncy
 
 **rsyncy** was created by **Christian Zangl** (laktak) and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install rsyncy```
+
+```nix: nix profile install nixpkgs#rsyncy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rsync](/man/rsync)(1), [progress](/man/progress)(1), [pv](/man/pv)(1)

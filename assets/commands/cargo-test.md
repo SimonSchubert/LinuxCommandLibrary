@@ -108,6 +108,20 @@ Arguments after `--` are passed directly to the test harness rather than to Carg
 
 Tests run in parallel by default. Use --test-threads=1 for sequential execution.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-bench](/man/cargo-bench)(1)

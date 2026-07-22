@@ -63,6 +63,24 @@ The graph attributes **pack** and **packmode** control the layout at each level.
 
 Edges are ignored during the packing phase and only routed afterward. Best suited for graphs where the cluster structure is more important than edge routing.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [neato](/man/neato)(1), [patchwork](/man/patchwork)(1), [fdp](/man/fdp)(1)

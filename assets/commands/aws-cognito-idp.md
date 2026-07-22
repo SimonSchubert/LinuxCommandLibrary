@@ -96,6 +96,17 @@ User pool configuration cannot be changed after creation for some settings like 
 
 Amazon Cognito User Pools launched in **July 2016** as a managed user directory. It built upon Cognito Identity (federated identities) which launched in **2014**. Advanced security features including adaptive authentication were added in **2017**, and WebAuthn/passkey support was introduced in **2023**.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-cognito-identity](/man/aws-cognito-identity)(1), [aws-iam](/man/aws-iam)(1)

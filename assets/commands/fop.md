@@ -83,6 +83,18 @@ Requires Java. Complex layouts may need tuning. Memory usage high for large docu
 
 **FOP** began as an **Apache XML** project in **1999**, becoming one of the first open source XSL-FO processors. It matured through various versions, with FOP 2.x bringing significant improvements in standards compliance and performance.
 
+# INSTALL
+
+```dnf: sudo dnf install fop```
+
+```pacman: sudo pacman -S fop```
+
+```brew: brew install fop```
+
+```nix: nix profile install nixpkgs#fop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xsltproc](/man/xsltproc)(1), [pdflatex](/man/pdflatex)(1), [wkhtmltopdf](/man/wkhtmltopdf)(1), [pandoc](/man/pandoc)(1)

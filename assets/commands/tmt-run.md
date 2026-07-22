@@ -85,6 +85,14 @@ The command supports different provisioning methods including containers, virtua
 
 Running all steps requires appropriate provisioning backend. Container-based execution needs Podman or Docker. Some steps require root privileges. Large test suites may require significant resources.
 
+# INSTALL
+
+```dnf: sudo dnf install tmt```
+
+```brew: brew install tmt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmt](/man/tmt)(1), [tmt-try](/man/tmt-try)(1), [podman](/man/podman)(1)

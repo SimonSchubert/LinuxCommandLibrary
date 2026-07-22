@@ -107,6 +107,24 @@ For use only against systems you're authorized to test - unauthorized use is ill
 
 Hydra was created in **2000** by **van Hauser** of **THC** (The Hacker's Choice), billed as the first parallelized network login cracker. Development continues on GitHub with contributions from David Maciejak and others.
 
+# INSTALL
+
+```apt: sudo apt install hydra```
+
+```dnf: sudo dnf install hydra```
+
+```pacman: sudo pacman -S hydra```
+
+```apk: sudo apk add hydra```
+
+```zypper: sudo zypper install hydra```
+
+```brew: brew install hydra```
+
+```nix: nix profile install nixpkgs#hydra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ncrack](/man/ncrack)(1), [medusa](/man/medusa)(1), [john](/man/john)(1)

@@ -102,6 +102,16 @@ ZFS can consume significant memory for caching (ARC). Tune **zfs_arc_max** on me
 
 Snapshots are cheap but not free. Many snapshots with high data churn can consume significant space.
 
+# INSTALL
+
+```apt: sudo apt install zfs-fuse```
+
+```apk: sudo apk add zfs```
+
+```nix: nix profile install nixpkgs#zfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zpool](/man/zpool)(8), [zdb](/man/zdb)(8), [zfs-send](/man/zfs-send)(8), [zfs-receive](/man/zfs-receive)(8)

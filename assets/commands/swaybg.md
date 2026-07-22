@@ -70,6 +70,22 @@ Wayland only. Sway/wlroots compositors. One instance per wallpaper.
 
 **swaybg** is part of the **Sway** project, a Wayland compositor. It provides simple background management for wlroots-based compositors.
 
+# INSTALL
+
+```apt: sudo apt install swaybg```
+
+```dnf: sudo dnf install swaybg```
+
+```pacman: sudo pacman -S swaybg```
+
+```apk: sudo apk add swaybg```
+
+```zypper: sudo zypper install swaybg```
+
+```nix: nix profile install nixpkgs#swaybg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sway](/man/sway)(1), [swaylock](/man/swaylock)(1), [feh](/man/feh)(1)

@@ -71,6 +71,12 @@ Python required. stderr output. May slow pipelines slightly.
 
 **tqdm** (from Arabic for "progress") was created as a fast, extensible progress bar for Python and CLI.
 
+# INSTALL
+
+```apk: sudo apk add py3-tqdm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pv](/man/pv)(1), [progress](/man/progress)(1), [bar](/man/bar)(1)

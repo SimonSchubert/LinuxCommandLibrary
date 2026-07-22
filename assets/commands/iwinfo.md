@@ -66,6 +66,12 @@ Specific to OpenWrt/LEDE systems. Output format may vary depending on the wirele
 
 iwinfo was developed for OpenWrt to provide a consistent interface for wireless information across different hardware and drivers used in router firmware.
 
+# INSTALL
+
+```aur: yay -S iwinfo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iw](/man/iw)(8), [uci](/man/uci)(1)

@@ -100,6 +100,24 @@ Requires an RTL-SDR-compatible DVB-T dongle and the `rtl-sdr` tools. Wider range
 
 **rtl_power** ships with the **rtl-sdr** tools, originally written by **Kyle Keen** and maintained by Osmocom. The project was born from the discovery (circa 2012) that Realtek RTL2832U DVB-T demod chips could be switched into I/Q SDR mode.
 
+# INSTALL
+
+```apt: sudo apt install rtl-sdr```
+
+```dnf: sudo dnf install rtl-sdr```
+
+```pacman: sudo pacman -S rtl-sdr```
+
+```apk: sudo apk add rtl-sdr```
+
+```zypper: sudo zypper install rtl-sdr```
+
+```brew: brew install rtl-sdr```
+
+```nix: nix profile install nixpkgs#rtl-sdr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rtl_fm](/man/rtl_fm)(1), [rtl_sdr](/man/rtl_sdr)(1)

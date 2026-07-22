@@ -86,6 +86,15 @@ Alertmanager requires a properly configured YAML file; invalid configuration pre
 
 **Alertmanager** was developed by **SoundCloud** as part of the Prometheus ecosystem, first released in **2013**. It became a graduated project of the **Cloud Native Computing Foundation (CNCF)** alongside Prometheus in **2018**. The tool has evolved to support numerous notification integrations and high-availability deployments in modern cloud-native infrastructure.
 
+# INSTALL
+
+```dnf: sudo dnf install alertmanager```
+
+```pacman: sudo pacman -S alertmanager```
+
+```apk: sudo apk add alertmanager```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [prometheus](/man/prometheus)(1), [amtool](/man/amtool)(1), [grafana](/man/grafana)(1)

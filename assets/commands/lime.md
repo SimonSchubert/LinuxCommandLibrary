@@ -60,6 +60,12 @@ Development has slowed significantly. Not feature-complete compared to Sublime T
 
 Lime was started by **Fredrik Ehnbom** in **2013** as an attempt to create an open-source clone of Sublime Text with a Go backend.
 
+# INSTALL
+
+```aur: yay -S lime```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [nano](/man/nano)(1), [code](/man/code)(1)

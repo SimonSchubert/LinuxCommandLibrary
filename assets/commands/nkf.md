@@ -69,6 +69,20 @@ Japanese text focused. Auto-detection may fail. Backup before overwrite.
 
 nkf was created for **Japanese computing**, handling various encodings used in Japan.
 
+# INSTALL
+
+```apt: sudo apt install nkf```
+
+```dnf: sudo dnf install nkf```
+
+```zypper: sudo zypper install nkf```
+
+```brew: brew install nkf```
+
+```nix: nix profile install nixpkgs#nkf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iconv](/man/iconv)(1), [uconv](/man/uconv)(1), [recode](/man/recode)(1)

@@ -99,6 +99,17 @@ The **-mmcu** option must match the target hardware exactly. Optimization level 
 
 **AVR-GCC** emerged from the GCC project's support for the AVR architecture, initially developed by **Denis Chertykov** in the late **1990s**. Combined with **AVR-LibC**, it became the standard open-source toolchain for AVR development. The toolchain gained widespread adoption through the Arduino project starting in **2005**, making AVR programming accessible to hobbyists and educators.
 
+# INSTALL
+
+```apt: sudo apt install gcc-avr```
+
+```dnf: sudo dnf install avr-gcc```
+
+```pacman: sudo pacman -S avr-gcc```
+
+```apk: sudo apk add gcc-avr```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [avrdude](/man/avrdude)(1), [arduino-cli](/man/arduino-cli)(1)

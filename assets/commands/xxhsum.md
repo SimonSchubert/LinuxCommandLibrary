@@ -83,6 +83,24 @@ Equivalent shortcut commands: **xxh32sum** (same as xxhsum -H0), **xxh64sum** (s
 
 Not cryptographically secure. Should not be used for security-sensitive applications. For security, use SHA-256 or similar.
 
+# INSTALL
+
+```apt: sudo apt install xxhash```
+
+```dnf: sudo dnf install xxhash```
+
+```pacman: sudo pacman -S xxhash```
+
+```apk: sudo apk add xxhash```
+
+```zypper: sudo zypper install xxhash```
+
+```brew: brew install xxhash```
+
+```nix: nix profile install nixpkgs#xxhash```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1), [b2sum](/man/b2sum)(1), [cksum](/man/cksum)(1)

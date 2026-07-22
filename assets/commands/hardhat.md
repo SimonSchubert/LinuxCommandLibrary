@@ -106,6 +106,12 @@ Requires Node.js. Network configuration needs RPC URLs. Private keys should use 
 
 Hardhat was created by **Nomic Foundation** (formerly Nomic Labs) as a successor to Buidler. It became the leading Ethereum development framework, known for its developer experience and debugging capabilities.
 
+# INSTALL
+
+```aur: yay -S hardhat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [truffle](/man/truffle)(1), [ganache](/man/ganache)(1), [forge](/man/forge)(1), [npx](/man/npx)(1)

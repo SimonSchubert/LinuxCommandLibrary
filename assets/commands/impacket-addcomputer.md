@@ -102,6 +102,12 @@ Requires valid domain credentials with permissions to create computer accounts. 
 
 Impacket was created by **SecureAuth** (formerly Core Security) as a collection of Python classes for working with network protocols. The addcomputer script was added to support Active Directory penetration testing workflows, particularly after research into resource-based constrained delegation attacks became prominent around **2018-2019**.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [impacket-getadusers](/man/impacket-getadusers)(1), [impacket-secretsdump](/man/impacket-secretsdump)(1), [impacket-psexec](/man/impacket-psexec)(1), [ldapsearch](/man/ldapsearch)(1), [net](/man/net)(1)

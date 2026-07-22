@@ -112,6 +112,12 @@ Searching against translated databases is computationally intensive since each s
 
 BLAST (Basic Local Alignment Search Tool) was developed at **NCBI** by **Stephen Altschul** and colleagues, with the original algorithm published in **1990**. tblastn was part of the original BLAST suite for protein-to-translated-nucleotide searches. The BLAST+ command-line applications, a complete rewrite in C++, were released in **2009** and continue to be actively maintained by NCBI.
 
+# INSTALL
+
+```apt: sudo apt install ncbi-blast+```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blastn](/man/blastn)(1), [blastp](/man/blastp)(1), [blastx](/man/blastx)(1), [makeblastdb](/man/makeblastdb)(1), [tblastx](/man/tblastx)(1)

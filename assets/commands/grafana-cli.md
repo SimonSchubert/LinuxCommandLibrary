@@ -108,5 +108,21 @@ Requires appropriate permissions. May need Grafana restart. Plugin compatibility
 
 grafana-cli was developed alongside **Grafana** to provide command-line management of the visualization platform.
 
+# INSTALL
+
+```dnf: sudo dnf install grafana```
+
+```pacman: sudo pacman -S grafana```
+
+```apk: sudo apk add grafana```
+
+```zypper: sudo zypper install grafana```
+
+```brew: brew install grafana```
+
+```nix: nix profile install nixpkgs#grafana```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

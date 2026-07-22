@@ -42,6 +42,20 @@ Display project dependency tree
 
 **uv tree** displays the dependency tree for a project. Shows packages and their dependencies in hierarchical format. Useful for understanding and debugging dependency relationships.
 
+# INSTALL
+
+```dnf: sudo dnf install uv```
+
+```pacman: sudo pacman -S uv```
+
+```apk: sudo apk add uv```
+
+```brew: brew install uv```
+
+```nix: nix profile install nixpkgs#uv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uv](/man/uv)(1)

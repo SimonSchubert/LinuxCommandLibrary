@@ -71,6 +71,22 @@ Part of gettext. Keywords must match code. Complex strings need care.
 
 **xgettext** is part of GNU **gettext**, the standard internationalization system. It enables software translation workflow.
 
+# INSTALL
+
+```apt: sudo apt install gettext```
+
+```dnf: sudo dnf install gettext```
+
+```pacman: sudo pacman -S gettext```
+
+```apk: sudo apk add gettext```
+
+```brew: brew install gettext```
+
+```nix: nix profile install nixpkgs#gettext```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [msgfmt](/man/msgfmt)(1), [msginit](/man/msginit)(1), [msgmerge](/man/msgmerge)(1)

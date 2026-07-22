@@ -74,6 +74,18 @@ Poetry 2.0 (2025) writes pyproject.toml using the standard **[project]** table p
 
 **poetry** was created by **Sébastien Eustace** in **2018** as a dependency manager and packaging tool for Python projects. The **init** subcommand has been part of Poetry since the early releases.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry-install](/man/poetry-install)(1), [poetry-new](/man/poetry-new)(1), [poetry](/man/poetry)(1), [pip](/man/pip)(1)

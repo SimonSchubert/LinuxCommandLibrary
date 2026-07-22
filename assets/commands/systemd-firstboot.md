@@ -85,6 +85,22 @@ The tool can set hostname, locale, timezone, keyboard layout, and root password.
 
 Some settings require the **--force** flag to overwrite existing configuration. The **--root** option is essential when preparing disk images. Passwords should be provided securely. Part of the systemd suite.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [localectl](/man/localectl)(1), [timedatectl](/man/timedatectl)(1), [hostnamectl](/man/hostnamectl)(1)

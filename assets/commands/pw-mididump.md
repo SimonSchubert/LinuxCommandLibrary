@@ -53,6 +53,16 @@ Real-time MIDI monitoring requires appropriate device permissions. Output format
 
 Part of **PipeWire**, the modern multimedia framework for Linux. Provides MIDI debugging capabilities within the PipeWire ecosystem.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-tools```
+
+```zypper: sudo zypper install pipewire-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [pw-cli](/man/pw-cli)(1), [pw-cat](/man/pw-cat)(1), [aconnect](/man/aconnect)(1), [aplaymidi](/man/aplaymidi)(1), [amidi](/man/amidi)(1)

@@ -97,6 +97,16 @@ The tool reports statistics including requests per second, time per request, tra
 
 **ab** was created as part of the Apache HTTP Server project in the late **1990s**. It was designed as a simple benchmarking tool for testing Apache configurations during development. The tool has remained largely unchanged and is bundled with Apache HTTPD installations worldwide.
 
+# INSTALL
+
+```apt: sudo apt install apache2-utils```
+
+```apk: sudo apk add apache2-utils```
+
+```zypper: sudo zypper install apache2-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [wrk](/man/wrk)(1), [siege](/man/siege)(1)

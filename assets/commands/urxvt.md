@@ -60,6 +60,24 @@ Configuration is typically done through ~/.Xresources or command-line options.
 
 Requires X11 display. Configuration through X resources may seem complex initially. Some features require Perl extensions to be enabled.
 
+# INSTALL
+
+```apt: sudo apt install rxvt-unicode```
+
+```dnf: sudo dnf install rxvt-unicode```
+
+```pacman: sudo pacman -S rxvt-unicode```
+
+```apk: sudo apk add rxvt-unicode```
+
+```zypper: sudo zypper install rxvt-unicode```
+
+```brew: brew install rxvt-unicode```
+
+```nix: nix profile install nixpkgs#rxvt-unicode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xterm](/man/xterm)(1), [st](/man/st)(1)

@@ -69,6 +69,22 @@ Requires appropriate client libraries for the connection protocol (SPICE, VNC). 
 
 Part of **virt-viewer**, providing remote display tools for virtual machine management, commonly used with libvirt and QEMU/KVM.
 
+# INSTALL
+
+```apt: sudo apt install virt-viewer```
+
+```dnf: sudo dnf install virt-viewer```
+
+```pacman: sudo pacman -S virt-viewer```
+
+```apk: sudo apk add virt-viewer```
+
+```zypper: sudo zypper install virt-viewer```
+
+```nix: nix profile install nixpkgs#virt-viewer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virt-viewer](/man/virt-viewer)(1), [virt-manager](/man/virt-manager)(1)

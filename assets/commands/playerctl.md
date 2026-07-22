@@ -96,6 +96,22 @@ Requires MPRIS-compatible player. Some players have limited MPRIS support. Playe
 
 **playerctl** was created by **Tony Crisci** to provide a simple, reliable way to control media players from scripts and keybindings. It's widely adopted in tiling window manager setups.
 
+# INSTALL
+
+```apt: sudo apt install playerctl```
+
+```dnf: sudo dnf install playerctl```
+
+```pacman: sudo pacman -S playerctl```
+
+```apk: sudo apk add playerctl```
+
+```zypper: sudo zypper install playerctl```
+
+```nix: nix profile install nixpkgs#playerctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pactl](/man/pactl)(1), [mpc](/man/mpc)(1)

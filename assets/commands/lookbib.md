@@ -64,6 +64,24 @@ Requires indxbib to create indexes first. Part of groff refer system. Interactiv
 
 lookbib originated in the **troff** document preparation system at Bell Labs and was part of the **refer** bibliography system developed in the 1970s.
 
+# INSTALL
+
+```apt: sudo apt install groff```
+
+```dnf: sudo dnf install groff```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [refer](/man/refer)(1), [indxbib](/man/indxbib)(1), [lkbib](/man/lkbib)(1), [groff](/man/groff)(1)

@@ -44,6 +44,14 @@ Terminal must support Unicode. Limited resolution (8 levels). No axes or labels.
 
 **spark** was created by **Zach Holman** as a simple bash script for command-line data visualization. The concept inspired many alternative implementations in Ruby, Python, Haskell, Java, and other languages.
 
+# INSTALL
+
+```brew: brew install spark```
+
+```nix: nix profile install nixpkgs#spark```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnuplot](/man/gnuplot)(1), [termgraph](/man/termgraph)(1)

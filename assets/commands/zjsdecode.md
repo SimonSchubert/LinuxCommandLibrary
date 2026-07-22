@@ -44,6 +44,12 @@ Decoded JavaScript may still be obfuscated and require further analysis or deobf
 
 Use caution when analyzing potentially malicious scripts. Run in isolated environments.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdf-parser](/man/pdf-parser)(1), [pdfid](/man/pdfid)(1), [js-beautify](/man/js-beautify)(1), [zlib-flate](/man/zlib-flate)(1)

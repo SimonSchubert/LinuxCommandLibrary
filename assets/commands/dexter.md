@@ -69,6 +69,14 @@ The underlying slicer library is also used for bytecode instrumentation in Andro
 
 dexter operates on .dex files, not APKs; extract classes.dex from an APK first (e.g. with unzip). It is built from the AOSP source tree and is not typically packaged by Linux distributions.
 
+# INSTALL
+
+```brew: brew install dexter```
+
+```nix: nix profile install nixpkgs#dexter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dexdump](/man/dexdump)(1), [apktool](/man/apktool)(1)

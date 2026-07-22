@@ -70,6 +70,21 @@ It can build the recipient list automatically from MAINTAINERS files and commit 
 **--cleanup** _[BRANCH]_
 > Archive and remove a completed prep-tracked branch.
 
+# INSTALL
+
+```dnf: sudo dnf install b4```
+
+```pacman: sudo pacman -S b4```
+
+```apk: sudo apk add b4```
+
+```zypper: sudo zypper install b4```
+
+```brew: brew install b4```
+
+```nix: nix profile install nixpkgs#b4```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [b4](/man/b4)(1), [b4-send](/man/b4-send)(1), [git-rebase](/man/git-rebase)(1)

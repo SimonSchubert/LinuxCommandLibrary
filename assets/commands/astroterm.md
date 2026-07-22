@@ -93,6 +93,21 @@ display real-time celestial maps in the terminal
 
 Color output requires **--color** flag and a terminal with 256-color or truecolor support. Display quality depends on terminal size and font. Without **--latitude**/**--longitude** or **--city**, the observer defaults to 0,0 (Gulf of Guinea).
 
+# INSTALL
+
+```dnf: sudo dnf install astroterm```
+
+```pacman: sudo pacman -S astroterm```
+
+```apk: sudo apk add astroterm```
+
+```zypper: sudo zypper install astroterm```
+
+```brew: brew install astroterm```
+
+```nix: nix profile install nixpkgs#astroterm```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [cal](/man/cal)(1), [date](/man/date)(1)

@@ -76,6 +76,16 @@ Time and memory complexity are O(m·n) in the lengths of the two sequences, so *
 
 **needle** was written by **Alan Bleasby** as part of **EMBOSS**, a project started in **1996** at the **Sanger Centre / MRC** to provide an open, integrated suite of bioinformatics tools. The Needleman-Wunsch algorithm itself was published in **1970** by **Saul B. Needleman** and **Christian D. Wunsch**.
 
+# INSTALL
+
+```apt: sudo apt install emboss```
+
+```brew: brew install needle```
+
+```nix: nix profile install nixpkgs#emboss```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blastp](/man/blastp)(1)

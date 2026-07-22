@@ -97,6 +97,16 @@ The --exec option can be dangerous and should be used carefully. SSL connections
 
 **ncat** was developed as part of the **Nmap** project by Fyodor and contributors. It was designed as a modern replacement for the traditional netcat utility with enhanced features and better security options.
 
+# INSTALL
+
+```apt: sudo apt install ncat```
+
+```dnf: sudo dnf install nmap-ncat```
+
+```apk: sudo apk add nmap-ncat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nc](/man/nc)(1), [netcat](/man/netcat)(1), [nmap](/man/nmap)(1), [socat](/man/socat)(1)

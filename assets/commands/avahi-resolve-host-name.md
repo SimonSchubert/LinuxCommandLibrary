@@ -26,6 +26,17 @@ This command is an alias of **avahi-resolve --name**.
 
 **avahi-resolve-host-name** resolves hostnames to IP addresses using mDNS/DNS-SD via the Avahi daemon. It is equivalent to running **avahi-resolve** with the **--name** flag.
 
+# INSTALL
+
+```apt: sudo apt install avahi-utils```
+
+```dnf: sudo dnf install avahi-tools```
+
+```apk: sudo apk add avahi-tools```
+
+```zypper: sudo zypper install avahi-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [avahi-resolve](/man/avahi-resolve)(1), [avahi-resolve-address](/man/avahi-resolve-address)(1), [avahi-browse](/man/avahi-browse)(1), [avahi-daemon](/man/avahi-daemon)(8)

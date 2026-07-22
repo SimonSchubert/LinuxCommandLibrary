@@ -70,6 +70,12 @@ On Linux, users may need appropriate permissions to access serial ports (typical
 
 **comchan** was created by **Vaishnav Sabari Girish** and is written in Rust under the MIT license. It is available via cargo, AUR, and Homebrew, and follows the Unix philosophy of doing one thing well.
 
+# INSTALL
+
+```aur: yay -S comchan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [minicom](/man/minicom)(1), [picocom](/man/picocom)(1), [screen](/man/screen)(1), [tio](/man/tio)(1), [cu](/man/cu)(1)

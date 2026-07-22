@@ -108,6 +108,22 @@ Sandbox permissions are controlled by the application's manifest and can be over
 
 Part of the **Flatpak** project developed by Alexander Larsson at Red Hat. Flatpak evolved from the xdg-app project around **2015**, providing sandboxed application execution on Linux with strong isolation guarantees.
 
+# INSTALL
+
+```apt: sudo apt install flatpak```
+
+```dnf: sudo dnf install flatpak```
+
+```pacman: sudo pacman -S flatpak```
+
+```apk: sudo apk add flatpak```
+
+```zypper: sudo zypper install flatpak```
+
+```nix: nix profile install nixpkgs#flatpak```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flatpak](/man/flatpak)(1), [flatpak-install](/man/flatpak-install)(1)

@@ -75,6 +75,12 @@ Timezone names must follow IANA database. Fuzzy matching may return unexpected r
 
 **gotz** was created to simplify timezone conversions for distributed teams, providing a quick CLI alternative to online tools.
 
+# INSTALL
+
+```brew: brew install gotz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [date](/man/date)(1), [tzselect](/man/tzselect)(1), [timedatectl](/man/timedatectl)(1)

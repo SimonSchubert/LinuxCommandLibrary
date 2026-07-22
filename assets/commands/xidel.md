@@ -75,6 +75,14 @@ Complex syntax learning curve. Large documents may be slow. Encoding issues poss
 
 **xidel** was created as a powerful command-line data extraction tool. It combines multiple query languages in one utility.
 
+# INSTALL
+
+```brew: brew install xidel```
+
+```nix: nix profile install nixpkgs#xidel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xmllint](/man/xmllint)(1), [jq](/man/jq)(1), [pup](/man/pup)(1)

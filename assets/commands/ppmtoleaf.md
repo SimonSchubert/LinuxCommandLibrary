@@ -30,6 +30,24 @@ The Interleaf format is obsolete; this utility exists for compatibility with leg
 
 Part of the **Netpbm** package, originally from Jef Poskanzer's PBMplus toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [leaftoppm](/man/leaftoppm)(1), [ppmtopict](/man/ppmtopict)(1), [ppm](/man/ppm)(5)

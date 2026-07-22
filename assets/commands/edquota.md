@@ -79,6 +79,22 @@ Each line covers one filesystem and holds four editable numbers: soft and hard l
 
 Quotas must be enabled on the filesystem (see quotacheck and quotaon) before edquota does anything useful. Root privileges are needed to edit anyone else's quota. The editor is chosen from $EDITOR, then $VISUAL, falling back to vi. Saving a file that no longer parses leaves the quotas unchanged.
 
+# INSTALL
+
+```apt: sudo apt install quota```
+
+```dnf: sudo dnf install quota```
+
+```pacman: sudo pacman -S quota-tools```
+
+```apk: sudo apk add quota-tools```
+
+```zypper: sudo zypper install quota```
+
+```nix: nix profile install nixpkgs#quota```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [quota](/man/quota)(1), [repquota](/man/repquota)(8), [quotaon](/man/quotaon)(8), [quotacheck](/man/quotacheck)(8), [setquota](/man/setquota)(8)

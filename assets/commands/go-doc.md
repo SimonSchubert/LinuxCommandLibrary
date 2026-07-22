@@ -74,6 +74,12 @@ Reads from source, not installed docs. Standard library always available. Custom
 
 go doc is part of the **Go** toolchain, providing documentation access following Go's convention of documentation in source code.
 
+# INSTALL
+
+```zypper: sudo zypper install go-doc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [godoc](/man/godoc)(1)

@@ -111,6 +111,15 @@ Should only be used on applications you have permission to test. High thread cou
 
 **Arjun** was created by Somdev Sangwan (s0md3v) and released as an open-source security tool. It gained popularity in the bug bounty and penetration testing community for its effectiveness at finding hidden parameters. The tool is written in Python and actively maintained with updates for new detection techniques.
 
+# INSTALL
+
+```aur: yay -S arjun```
+
+```brew: brew install arjun```
+
+```nix: nix profile install nixpkgs#arjun```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ffuf](/man/ffuf)(1), [wfuzz](/man/wfuzz)(1), [burpsuite](/man/burpsuite)(1), [httpx](/man/httpx)(1), [paramspider](/man/paramspider)(1)

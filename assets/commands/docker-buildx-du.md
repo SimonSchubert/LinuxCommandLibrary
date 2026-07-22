@@ -49,6 +49,24 @@ This command is useful for understanding how much disk space the build cache con
 
 Asterisks in the output indicate mutable records (size may change) or shared storage that overlaps with other resources. The reported sizes may not reflect actual reclaimable space when records are shared between builds.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-buildx-prune](/man/docker-buildx-prune)(1), [docker-buildx-ls](/man/docker-buildx-ls)(1), [docker-build](/man/docker-build)(1), [docker](/man/docker)(1)

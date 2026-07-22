@@ -112,6 +112,19 @@ Messages can be up to 64 KB in size and have a default time-to-live of 7 days. I
 
 The **az storage queue** and **az storage message** groups are in preview. Requires Azure CLI and valid storage credentials (account key, connection string, SAS token, or `--auth-mode login`). Queue names must be 3-63 characters, lowercase letters, numbers, and hyphens. After a **get**, a message is hidden for the visibility timeout; if not deleted before it elapses the message reappears, so consumers must delete with the returned message id and pop receipt.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [azure-cli](/man/azure-cli)(1), [az-storage](/man/az-storage)(1), [az-storage-table](/man/az-storage-table)(1), [az-storage-account](/man/az-storage-account)(1)

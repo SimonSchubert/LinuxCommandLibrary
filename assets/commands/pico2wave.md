@@ -59,6 +59,14 @@ Only six languages are supported. Output format is WAV only; use ffmpeg or sox t
 
 Pico TTS was developed by **SVOX** and released as open source for Android, later packaged for Linux.
 
+# INSTALL
+
+```apk: sudo apk add picotts```
+
+```nix: nix profile install nixpkgs#picotts```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [espeak](/man/espeak)(1), [espeak-ng](/man/espeak-ng)(1), [flite](/man/flite)(1), [festival](/man/festival)(1), [aplay](/man/aplay)(1), [sox](/man/sox)(1)

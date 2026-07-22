@@ -74,6 +74,20 @@ Some sites may not work (WebEngine limitations). Extension support limited. Lear
 
 **qutebrowser** was created by **Florian Bruhin** starting in **2013**. It fills the niche for keyboard-driven browsers like uzbl and vimperator, but with modern web engine support.
 
+# INSTALL
+
+```dnf: sudo dnf install qutebrowser```
+
+```pacman: sudo pacman -S qutebrowser```
+
+```apk: sudo apk add qutebrowser```
+
+```zypper: sudo zypper install qutebrowser```
+
+```nix: nix profile install nixpkgs#qutebrowser```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [firefox](/man/firefox)(1), [chromium](/man/chromium)(1), [surf](/man/surf)(1), [w3m](/man/w3m)(1)

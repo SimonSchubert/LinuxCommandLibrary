@@ -118,6 +118,17 @@ Creating a cluster does not automatically create instances; you must add them se
 
 **Amazon Aurora** was announced at **AWS re:Invent 2014** and became generally available in **July 2015**. It was designed to provide MySQL compatibility with significantly improved performance and availability. Aurora PostgreSQL followed in **2017**, and Aurora Serverless launched in **2018** for variable workloads.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-rds](/man/aws-rds)(1), [mysql](/man/mysql)(1), [psql](/man/psql)(1)

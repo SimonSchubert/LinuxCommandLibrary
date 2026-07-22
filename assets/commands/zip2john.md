@@ -50,6 +50,22 @@ For authorized recovery only. Strong passwords take time. Part of John the Rippe
 
 **zip2john** is part of **John the Ripper** password cracker. It enables ZIP password recovery.
 
+# INSTALL
+
+```dnf: sudo dnf install john```
+
+```pacman: sudo pacman -S john```
+
+```apk: sudo apk add john```
+
+```zypper: sudo zypper install john```
+
+```brew: brew install john```
+
+```nix: nix profile install nixpkgs#john```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [john](/man/john)(1), [rar2john](/man/rar2john)(1), [pdf2john](/man/pdf2john)(1)

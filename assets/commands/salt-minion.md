@@ -87,6 +87,16 @@ The minion key must be accepted on the master before commands can be executed. B
 
 salt-minion is part of **SaltStack**, created by Thomas Hatch in **2011**. The minion agent enables Salt's remote execution and configuration management capabilities across infrastructure at scale.
 
+# INSTALL
+
+```dnf: sudo dnf install salt-minion```
+
+```apk: sudo apk add salt-lts-minion```
+
+```zypper: sudo zypper install salt-minion```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [salt](/man/salt)(1), [salt-master](/man/salt-master)(8), [salt-key](/man/salt-key)(1), [salt-call](/man/salt-call)(1)

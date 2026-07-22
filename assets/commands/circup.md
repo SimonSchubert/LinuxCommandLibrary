@@ -67,6 +67,12 @@ circup is written in Python and installed via pip. It supports boards like Adafr
 
 Requires a CircuitPython device to be connected and mounted. The device must be running CircuitPython (not MicroPython).
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#circup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [mpremote](/man/mpremote)(1)

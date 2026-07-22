@@ -64,6 +64,24 @@ Labels are limited to 11 characters and must be valid MS-DOS format. Invalid cha
 
 **mlabel** is part of **mtools**, originally developed by Emmet P. Gray in the late 1980s. Mtools provides MS-DOS file system utilities for Unix systems, allowing access to FAT filesystems without mounting.
 
+# INSTALL
+
+```apt: sudo apt install mtools```
+
+```dnf: sudo dnf install mtools```
+
+```pacman: sudo pacman -S mtools```
+
+```apk: sudo apk add mtools```
+
+```zypper: sudo zypper install mtools```
+
+```brew: brew install mtools```
+
+```nix: nix profile install nixpkgs#mtools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fatlabel](/man/fatlabel)(8)

@@ -24,6 +24,12 @@ QR code generator for text terminals
 
 **qrc** was created by **SATOH Fumiyasu** (fumiyas) and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S qrc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qrtool](/man/qrtool)(1), [qrencode](/man/qrencode)(1)

@@ -57,6 +57,18 @@ Gradle project scaffolding generator
 
 Running in a non-empty directory may fail or skip generation if existing build files are detected. The **--incubating** APIs used for scaffolding new project types can change between Gradle versions.
 
+# INSTALL
+
+```pacman: sudo pacman -S gradle```
+
+```apk: sudo apk add gradle```
+
+```brew: brew install gradle```
+
+```nix: nix profile install nixpkgs#gradle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [gradle-build](/man/gradle-build)(1)

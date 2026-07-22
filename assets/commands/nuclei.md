@@ -91,6 +91,16 @@ Only use on authorized targets. Templates require regular updates to include new
 
 Nuclei was created by **ProjectDiscovery** as a template-based vulnerability scanner.
 
+# INSTALL
+
+```dnf: sudo dnf install nuclei```
+
+```brew: brew install nuclei```
+
+```nix: nix profile install nixpkgs#nuclei```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [nikto](/man/nikto)(1), [httpx](/man/httpx)(1)

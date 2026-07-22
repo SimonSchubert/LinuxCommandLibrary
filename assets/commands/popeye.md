@@ -59,6 +59,18 @@ Requires cluster access. Read-only operations.
 
 Popeye was created as a **Kubernetes cluster sanitizer** and linter.
 
+# INSTALL
+
+```pacman: sudo pacman -S popeye```
+
+```zypper: sudo zypper install popeye```
+
+```brew: brew install popeye```
+
+```nix: nix profile install nixpkgs#popeye```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kube-linter](/man/kube-linter)(1)

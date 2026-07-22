@@ -83,6 +83,11 @@ AllTray depends on the X Window System and standard system tray protocols. It ma
 
 AllTray was created by Jochen Baier in **2005** to provide a universal solution for docking applications to the system tray on Linux desktops. It became popular as a way to keep applications running in the background without cluttering the taskbar, especially before many applications added native tray support.
 
+# INSTALL
+
+```aur: yay -S alltray```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [kdocker](/man/kdocker)(1), [trayer](/man/trayer)(1), [stalonetray](/man/stalonetray)(1)

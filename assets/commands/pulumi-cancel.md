@@ -36,6 +36,18 @@ Cancel an ongoing Pulumi stack update
 
 Canceling an update may leave resources in an inconsistent state requiring manual intervention.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-up](/man/pulumi-up)(1)

@@ -48,6 +48,12 @@ Part of the **Impacket** toolkit. The tool only converts between ccache and kirb
 
 **Impacket** was originally developed by **SecureAuth** and is now maintained by **Fortra's Core Security**. It is a collection of Python classes for working with network protocols, designed to assist security professionals with penetration testing and security research.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [impacket](/man/impacket)(1), [kinit](/man/kinit)(1)

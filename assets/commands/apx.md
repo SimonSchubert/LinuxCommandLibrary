@@ -96,6 +96,15 @@ Requires Podman for container management. First-time subsystem creation download
 
 **apx** was developed as part of Vanilla OS, an immutable Linux distribution first released in **2022**. It provides a novel approach to package management that preserves system immutability while allowing users to install software from multiple Linux ecosystems.
 
+# INSTALL
+
+```dnf: sudo dnf install apx```
+
+```aur: yay -S apx```
+
+```nix: nix profile install nixpkgs#apx```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apx-pkgmanagers](/man/apx-pkgmanagers)(1), [apx-stacks](/man/apx-stacks)(1), [apx-subsystems](/man/apx-subsystems)(1), [podman](/man/podman)(1)

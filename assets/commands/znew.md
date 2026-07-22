@@ -70,6 +70,24 @@ The **-P** option uses more CPU but less temporary disk space.
 
 Modern systems rarely encounter .Z files, making this tool primarily useful for archival work.
 
+# INSTALL
+
+```apt: sudo apt install gzip```
+
+```dnf: sudo dnf install gzip```
+
+```pacman: sudo pacman -S gzip```
+
+```apk: sudo apk add gzip```
+
+```zypper: sudo zypper install gzip```
+
+```brew: brew install gzip```
+
+```nix: nix profile install nixpkgs#gzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gzip](/man/gzip)(1), [gunzip](/man/gunzip)(1), [zcat](/man/zcat)(1), [compress](/man/compress)(1)

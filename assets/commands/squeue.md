@@ -63,6 +63,12 @@ Common job states include: **PD** (pending), **R** (running), **CG** (completing
 
 Shows only jobs visible to the querying user based on Slurm's access controls. Very large job queues may benefit from filtering options. The **--start** estimated times are approximations.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sbatch](/man/sbatch)(1), [sinfo](/man/sinfo)(1), [scancel](/man/scancel)(1), [scontrol](/man/scontrol)(1)

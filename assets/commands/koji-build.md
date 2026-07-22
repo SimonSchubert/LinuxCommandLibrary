@@ -70,6 +70,16 @@ Scratch builds are temporary and not imported into Koji's package database. SCM 
 
 **koji** is Fedora's build system, used for building and tracking packages across multiple architectures and releases.
 
+# INSTALL
+
+```dnf: sudo dnf install koji```
+
+```brew: brew install koji```
+
+```nix: nix profile install nixpkgs#koji```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [koji](/man/koji)(1), [rpmbuild](/man/rpmbuild)(8), [mock](/man/mock)(1)

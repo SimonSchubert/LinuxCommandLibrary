@@ -96,6 +96,12 @@ Target disk/partition must be equal or larger than source for differential imagi
 
 Clonezilla was created by **Steven Shiau** and the DRBL (Diskless Remote Boot in Linux) project at the **National Center for High-Performance Computing** in Taiwan, first released in **2004**. Built on Partclone, Partimage, and other open-source tools, it became a popular free alternative to commercial disk imaging solutions. Both Live and Server editions remain actively developed.
 
+# INSTALL
+
+```pacman: sudo pacman -S clonezilla```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dd](/man/dd)(1), [partclone](/man/partclone)(8), [rsync](/man/rsync)(1), [ddrescue](/man/ddrescue)(1)

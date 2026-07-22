@@ -104,6 +104,14 @@ Capture files grow startlingly fast on a busy link. A ring buffer, a snaplen, or
 
 dumpcap is part of the **Wireshark** project, which **Gerald Combs** started in **1998** under the name **Ethereal**. It was split out of the main application after a long run of security advisories in the dissectors made the risk of a privileged monolith untenable: with the split, only the few hundred lines that actually touch the network run with elevated rights, while the millions of lines of protocol parsing do not.
 
+# INSTALL
+
+```apt: sudo apt install wireshark-common```
+
+```apk: sudo apk add wireshark-common```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wireshark](/man/wireshark)(1), [tshark](/man/tshark)(1), [tcpdump](/man/tcpdump)(1), [editcap](/man/editcap)(1)

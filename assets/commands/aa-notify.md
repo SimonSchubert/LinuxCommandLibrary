@@ -77,6 +77,16 @@ Desktop notifications require a running display server and proper DISPLAY enviro
 
 **aa-notify** is part of the AppArmor utilities suite. AppArmor originated at Immunix in the late **1990s** and was acquired by Novell in **2005**. It became part of the mainline Linux kernel in version **2.6.36** released in **2010**. The notification daemon was added to help administrators monitor security events in desktop environments.
 
+# INSTALL
+
+```apk: sudo apk add apparmor-utils```
+
+```zypper: sudo zypper install apparmor-utils```
+
+```nix: nix profile install nixpkgs#apparmor-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aa-logprof](/man/aa-logprof)(8), [aa-decode](/man/aa-decode)(8), [aa-status](/man/aa-status)(8), [aa-complain](/man/aa-complain)(8), [journalctl](/man/journalctl)(1), [apparmor](/man/apparmor)(7)

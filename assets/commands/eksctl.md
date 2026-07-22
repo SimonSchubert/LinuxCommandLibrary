@@ -92,6 +92,18 @@ AWS credentials required. Cluster creation takes time. Incurs AWS charges. Some 
 
 eksctl was created by **Weaveworks** in partnership with AWS, released in **2018** to simplify EKS cluster management. It became the official CLI tool for EKS. After Weaveworks wound down in 2024, the project moved to the community-run **eksctl-io** organization, where it continues to be maintained.
 
+# INSTALL
+
+```pacman: sudo pacman -S eksctl```
+
+```zypper: sudo zypper install eksctl```
+
+```brew: brew install eksctl```
+
+```nix: nix profile install nixpkgs#eksctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [aws](/man/aws)(1), [helm](/man/helm)(1)

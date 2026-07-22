@@ -76,6 +76,12 @@ Some apps require game ownership. Downloads can be large. SteamGuard may require
 
 **SteamCMD** was released by **Valve** for headless server management. It enables automated game server deployment without the full Steam client.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#steamcmd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [steam](/man/steam)(1), [screen](/man/screen)(1), [tmux](/man/tmux)(1)

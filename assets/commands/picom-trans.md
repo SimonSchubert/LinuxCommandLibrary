@@ -75,6 +75,22 @@ Requires picom compositor running. Some windows may not support transparency. GP
 
 **picom-trans** is part of **picom**, a compositor forked from compton. It provides command-line control over window transparency for X11 desktops.
 
+# INSTALL
+
+```apt: sudo apt install picom```
+
+```dnf: sudo dnf install picom```
+
+```pacman: sudo pacman -S picom```
+
+```apk: sudo apk add picom```
+
+```zypper: sudo zypper install picom```
+
+```nix: nix profile install nixpkgs#picom```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [picom](/man/picom)(1), [xdotool](/man/xdotool)(1), [xwininfo](/man/xwininfo)(1)

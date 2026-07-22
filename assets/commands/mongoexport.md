@@ -51,6 +51,14 @@ exports data from MongoDB collections to JSON or CSV files
 
 **mongoexport** exports data from MongoDB collections to JSON or CSV files. Part of MongoDB Database Tools. Useful for backups, data migration, and reporting.
 
+# INSTALL
+
+```apk: sudo apk add mongodb-tools```
+
+```nix: nix profile install nixpkgs#mongodb-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mongoimport](/man/mongoimport)(1), [mongodump](/man/mongodump)(1)

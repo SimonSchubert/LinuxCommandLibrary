@@ -66,6 +66,18 @@ Manage infrastructure policy packs
 
 **pulumi policy** manages Policy as Code (CrossGuard). Policies enforce compliance rules on infrastructure. Create, publish, and enable policy packs to validate deployments.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-up](/man/pulumi-up)(1), [pulumi-preview](/man/pulumi-preview)(1), [pulumi-stack](/man/pulumi-stack)(1)

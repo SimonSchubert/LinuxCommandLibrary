@@ -38,6 +38,12 @@ launches the PlatformIO Home web interface
 
 **pio home** launches the PlatformIO Home web interface. Provides graphical project management, library browser, board explorer, and platform updates. Runs local web server.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-init](/man/pio-init)(1), [pio-boards](/man/pio-boards)(1)

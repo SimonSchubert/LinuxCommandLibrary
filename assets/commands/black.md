@@ -76,6 +76,20 @@ Opinionated (limited configuration). May conflict with other formatters. 88 char
 
 **Black** was created by Łukasz Langa in **2018** to provide deterministic Python formatting, eliminating formatting debates and reducing diff noise.
 
+# INSTALL
+
+```apt: sudo apt install black```
+
+```dnf: sudo dnf install black```
+
+```apk: sudo apk add black```
+
+```brew: brew install black```
+
+```nix: nix profile install nixpkgs#black```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [autopep8](/man/autopep8)(1), [isort](/man/isort)(1), [flake8](/man/flake8)(1)

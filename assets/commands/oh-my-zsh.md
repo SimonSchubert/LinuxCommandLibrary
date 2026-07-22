@@ -101,6 +101,12 @@ Can slow shell startup with many plugins. Requires Zsh as default shell. Custom 
 
 Oh My Zsh was created by **Robby Russell** in **2009** and has become the most popular Zsh framework with thousands of contributors.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#oh-my-zsh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zsh](/man/zsh)(1), [bash](/man/bash)(1), [p10k](/man/p10k)(1), [starship](/man/starship)(1), [antigen](/man/antigen)(1), [zinit](/man/zinit)(1), [fish](/man/fish)(1)

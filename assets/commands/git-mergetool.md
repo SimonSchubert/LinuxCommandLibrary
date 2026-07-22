@@ -78,6 +78,24 @@ Requires configured merge tool. Creates .orig backup files. Some tools need inst
 
 git mergetool is a core **Git** command providing integration with external merge tools, essential for complex conflict resolution.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [git-difftool](/man/git-difftool)(1), [vimdiff](/man/vimdiff)(1)

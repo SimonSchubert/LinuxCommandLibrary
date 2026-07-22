@@ -80,6 +80,24 @@ Data format varies significantly between registries. Parsing WHOIS output progra
 
 RDAP (Registration Data Access Protocol) is gradually replacing WHOIS with a structured, standardized format.
 
+# INSTALL
+
+```apt: sudo apt install whois```
+
+```dnf: sudo dnf install whois```
+
+```pacman: sudo pacman -S whois```
+
+```apk: sudo apk add whois```
+
+```zypper: sudo zypper install whois```
+
+```brew: brew install whois```
+
+```nix: nix profile install nixpkgs#whois```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [host](/man/host)(1), [nslookup](/man/nslookup)(1), [rdap](/man/rdap)(1)

@@ -98,6 +98,18 @@ Data capacity depends on symbol size and encoding; larger symbols hold more data
 
 dmtxwrite is part of **libdmtx**, created by **Mike Laughton** in **2006**. The library provides open-source tools for Data Matrix barcode generation and reading. Data Matrix is an ISO/IEC 16022 standard, originally developed for industrial marking applications.
 
+# INSTALL
+
+```apt: sudo apt install dmtx-utils```
+
+```dnf: sudo dnf install dmtx-utils```
+
+```brew: brew install dmtx-utils```
+
+```nix: nix profile install nixpkgs#dmtx-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmtxread](/man/dmtxread)(1), [qrencode](/man/qrencode)(1), [zint](/man/zint)(1)

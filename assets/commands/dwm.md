@@ -56,6 +56,16 @@ Configuration requires recompilation. Learning curve for keyboard shortcuts. No 
 
 dwm was created by the **suckless.org** community, led by **Anselm R. Garbe**, released around **2006**. It established the template for many other tiling window managers and the suckless software philosophy.
 
+# INSTALL
+
+```apk: sudo apk add dwm```
+
+```brew: brew install dwm```
+
+```nix: nix profile install nixpkgs#dwm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmenu](/man/dmenu)(1), [st](/man/st)(1), [i3](/man/i3)(1), [awesome](/man/awesome)(1)

@@ -105,6 +105,24 @@ Valgrind doesn't work well with JIT compilers or custom memory allocators withou
 
 **Valgrind** was created by **Julian Seward** and first released in **2002**. The name comes from the entrance to Valhalla in Norse mythology. It has become the standard memory debugging tool for C/C++ on Linux.
 
+# INSTALL
+
+```apt: sudo apt install valgrind```
+
+```dnf: sudo dnf install valgrind```
+
+```pacman: sudo pacman -S valgrind```
+
+```apk: sudo apk add valgrind```
+
+```zypper: sudo zypper install valgrind```
+
+```brew: brew install valgrind```
+
+```nix: nix profile install nixpkgs#valgrind```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdb](/man/gdb)(1), [strace](/man/strace)(1), [ltrace](/man/ltrace)(1), [asan](/man/asan)(7)

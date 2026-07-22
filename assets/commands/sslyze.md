@@ -106,6 +106,12 @@ Scanning servers you don't own may be considered unauthorized testing. Some scan
 
 **SSLyze** was created by Alban Diquet (nabla-c0d3) and released as open source. It has become a standard tool for TLS security assessment, used to scan hundreds of thousands of servers. The project is actively maintained with support for new TLS features and vulnerabilities. It's distributed under the GNU Affero General Public License (AGPL).
 
+# INSTALL
+
+```aur: yay -S sslyze```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [testssl](/man/testssl)(1), [nmap](/man/nmap)(1), [openssl](/man/openssl)(1), [sslscan](/man/sslscan)(1)

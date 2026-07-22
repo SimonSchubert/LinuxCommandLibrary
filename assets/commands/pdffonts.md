@@ -89,6 +89,18 @@ Part of poppler-utils package. May not show all font details. Password needed fo
 
 **pdffonts** is part of **poppler-utils**, derived from the **Xpdf** project created by **Derek Noonburg**. Poppler became the standard PDF rendering library for many open-source applications.
 
+# INSTALL
+
+```apt: sudo apt install poppler-utils```
+
+```dnf: sudo dnf install poppler-utils```
+
+```apk: sudo apk add poppler-utils```
+
+```nix: nix profile install nixpkgs#poppler-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdfinfo](/man/pdfinfo)(1), [pdftotext](/man/pdftotext)(1), [pdftops](/man/pdftops)(1), [pdftocairo](/man/pdftocairo)(1)

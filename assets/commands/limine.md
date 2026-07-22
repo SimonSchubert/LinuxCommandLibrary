@@ -44,6 +44,20 @@ For UEFI systems, copy the appropriate BOOT*.EFI file to the EFI System Partitio
 
 For GPT BIOS installations, a dedicated partition of at least 32 KiB is needed for stage 2. UEFI Secure Boot requires enrolling the config hash with **limine enroll-config**. Always back up existing bootloaders before installation.
 
+# INSTALL
+
+```pacman: sudo pacman -S limine```
+
+```apk: sudo apk add limine-tool```
+
+```zypper: sudo zypper install limine```
+
+```brew: brew install limine```
+
+```nix: nix profile install nixpkgs#limine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [limine-enroll-config](/man/limine-enroll-config)(1), [limine-entry-tool](/man/limine-entry-tool)(1), [grub-install](/man/grub-install)(8)

@@ -82,6 +82,12 @@ Sui blockchain wallet and transaction client
 
 **sui client** is the Sui blockchain CLI client. Manages wallets, transfers tokens, and interacts with Move smart contracts. Part of Sui blockchain development toolkit.
 
+# INSTALL
+
+```brew: brew install sui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sui-move](/man/sui-move)(1)

@@ -77,6 +77,18 @@ Template syntax differs from other templating systems. Part of GNU recutils.
 
 recfmt is part of **GNU recutils** by **Jose E. Marchesi** for flexible record formatting.
 
+# INSTALL
+
+```dnf: sudo dnf install recutils```
+
+```apk: sudo apk add recutils```
+
+```brew: brew install recutils```
+
+```nix: nix profile install nixpkgs#recutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [recsel](/man/recsel)(1), [rec2csv](/man/rec2csv)(1), [recins](/man/recins)(1), [recdel](/man/recdel)(1), [recset](/man/recset)(1)

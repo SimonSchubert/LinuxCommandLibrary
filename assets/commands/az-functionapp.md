@@ -129,6 +129,19 @@ Function app names must be globally unique. Consumption plan has cold start late
 
 **Azure Functions** launched in **March 2016** as Microsoft's serverless compute platform, inspired by AWS Lambda. **Durable Functions** for stateful workflows was added in **2017**. **Premium plan** was introduced in **2019** for enterprise scenarios. **Functions 4.0** with .NET 6 support released in **November 2021**. The service has expanded to support containers, Kubernetes via KEDA, and Azure Arc for hybrid deployments.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-appservice](/man/az-appservice)(1), [az-storage](/man/az-storage)(1), [func](/man/func)(1)

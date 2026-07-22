@@ -117,6 +117,22 @@ Requires GPG key. Passphrase needed (or gpg-agent). Signature added to header.
 
 rpmsign is part of **RPM** package manager, originally developed at **Red Hat** for package authentication.
 
+# INSTALL
+
+```apt: sudo apt install rpm```
+
+```dnf: sudo dnf install rpm```
+
+```apk: sudo apk add rpm```
+
+```zypper: sudo zypper install rpm```
+
+```brew: brew install rpm```
+
+```nix: nix profile install nixpkgs#rpm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rpm](/man/rpm)(8), [rpmbuild](/man/rpmbuild)(8), [rpmkeys](/man/rpmkeys)(8), [gpg](/man/gpg)(1)

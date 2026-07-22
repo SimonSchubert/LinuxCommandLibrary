@@ -106,6 +106,14 @@ The tool supports various scan types: standard enumeration, zone transfers to ex
 
 Use only against authorized targets. Zone transfers are often blocked by nameservers. Brute-force can be slow depending on dictionary size. Google enumeration may be rate-limited.
 
+# INSTALL
+
+```apk: sudo apk add dnsrecon```
+
+```nix: nix profile install nixpkgs#dnsrecon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [host](/man/host)(1), [dnsmap](/man/dnsmap)(1), [dnsenum](/man/dnsenum)(1), [fierce](/man/fierce)(1)

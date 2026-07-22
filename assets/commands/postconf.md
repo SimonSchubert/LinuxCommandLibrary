@@ -69,6 +69,22 @@ Changes via -e require postfix reload to take effect. Some parameters require re
 
 **postconf** is part of **Postfix**, the mail transfer agent created by **Wietse Venema** as a secure alternative to Sendmail. It provides safe configuration management for the complex mail system.
 
+# INSTALL
+
+```apt: sudo apt install postfix```
+
+```dnf: sudo dnf install postfix```
+
+```pacman: sudo pacman -S postfix```
+
+```apk: sudo apk add postfix```
+
+```zypper: sudo zypper install postfix```
+
+```nix: nix profile install nixpkgs#postfix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [postfix](/man/postfix)(1), [postqueue](/man/postqueue)(1), [postmap](/man/postmap)(1)

@@ -88,6 +88,23 @@ Always backup code before formatting entire projects. May conflict with version 
 
 **Artistic Style** was created by Tal Davidson and Jim Pattee, with the first release in **1998**. It has become a standard code formatting tool for C-family languages.
 
+# INSTALL
+
+```apt: sudo apt install astyle```
+
+```dnf: sudo dnf install astyle```
+
+```pacman: sudo pacman -S astyle```
+
+```apk: sudo apk add astyle```
+
+```zypper: sudo zypper install astyle```
+
+```brew: brew install astyle```
+
+```nix: nix profile install nixpkgs#astyle```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [clang-format](/man/clang-format)(1), [indent](/man/indent)(1), [uncrustify](/man/uncrustify)(1)

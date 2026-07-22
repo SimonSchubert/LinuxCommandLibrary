@@ -89,6 +89,18 @@ Large directories may take time to process. Git status checking adds overhead. S
 
 **erdtree** was created by Benji Nguyen as a modern replacement for the traditional tree command, addressing performance and feature limitations while maintaining compatibility.
 
+# INSTALL
+
+```pacman: sudo pacman -S erdtree```
+
+```zypper: sudo zypper install erdtree```
+
+```brew: brew install erdtree```
+
+```nix: nix profile install nixpkgs#erdtree```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tree](/man/tree)(1), [du](/man/du)(1), [ls](/man/ls)(1), [exa](/man/exa)(1), [lsd](/man/lsd)(1)

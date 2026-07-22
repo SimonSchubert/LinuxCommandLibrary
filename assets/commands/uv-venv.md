@@ -42,6 +42,20 @@ Create Python virtual environments
 
 **uv venv** creates Python virtual environments. Creates isolated environments for package installation. Much faster than python -m venv or virtualenv.
 
+# INSTALL
+
+```dnf: sudo dnf install uv```
+
+```pacman: sudo pacman -S uv```
+
+```apk: sudo apk add uv```
+
+```brew: brew install uv```
+
+```nix: nix profile install nixpkgs#uv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uv](/man/uv)(1), [virtualenv](/man/virtualenv)(1)

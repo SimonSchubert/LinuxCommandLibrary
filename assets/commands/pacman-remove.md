@@ -76,6 +76,20 @@ Using **-c** (cascade) can remove many packages if removing a core dependency. A
 
 **pacman** is the package manager for **Arch Linux** and its derivatives.
 
+# INSTALL
+
+```apt: sudo apt install pacman-package-manager```
+
+```dnf: sudo dnf install pacman```
+
+```pacman: sudo pacman -S pacman```
+
+```apk: sudo apk add pacman```
+
+```nix: nix profile install nixpkgs#pacman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pacman-query](/man/pacman-query)(8), [pacman-sync](/man/pacman-sync)(8), [pacman-database](/man/pacman-database)(8), [pacman-upgrade](/man/pacman-upgrade)(8)

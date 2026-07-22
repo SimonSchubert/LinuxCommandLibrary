@@ -18,6 +18,12 @@ View documentation for the original command
 
 **qm importdisk** is an alias for **qm disk import** that imports external disk images into Proxmox VE virtual machines. It supports various formats including VMDK, qcow2, and raw.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-disk](/man/qm-disk)(1)

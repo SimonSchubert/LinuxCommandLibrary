@@ -41,6 +41,24 @@ Only validates FIGlet font format, not FIGlet control files or other font format
 
 **chkfont** is part of the FIGlet project, which was originally written by Glenn Chappell and Ian Chai in 1991. FIGlet creates large text banners from ordinary text using special fonts. The current version is maintained by Claudio Matsuoka.
 
+# INSTALL
+
+```apt: sudo apt install figlet```
+
+```dnf: sudo dnf install figlet```
+
+```pacman: sudo pacman -S figlet```
+
+```apk: sudo apk add figlet```
+
+```zypper: sudo zypper install figlet```
+
+```brew: brew install figlet```
+
+```nix: nix profile install nixpkgs#figlet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [figlet](/man/figlet)(6), [figlist](/man/figlist)(6), [showfigfonts](/man/showfigfonts)(6), [toilet](/man/toilet)(1)

@@ -43,6 +43,22 @@ Requires root privileges for reliable detection. Some detection methods read DMI
 
 **virt-what** was created by **Richard W.M. Jones** at Red Hat. It is distributed as part of the virt-what package and is commonly used in provisioning scripts to detect the runtime environment.
 
+# INSTALL
+
+```apt: sudo apt install virt-what```
+
+```dnf: sudo dnf install virt-what```
+
+```pacman: sudo pacman -S virt-what```
+
+```apk: sudo apk add virt-what```
+
+```zypper: sudo zypper install virt-what```
+
+```nix: nix profile install nixpkgs#virt-what```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-detect-virt](/man/systemd-detect-virt)(1), [lscpu](/man/lscpu)(1)

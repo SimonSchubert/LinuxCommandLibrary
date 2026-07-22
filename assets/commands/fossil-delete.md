@@ -46,6 +46,24 @@ remove files from version control
 
 This command is provided for convenience and compatibility. All options and behaviors are identical to **fossil rm**. By default, files remain on disk and are only removed from version control.
 
+# INSTALL
+
+```apt: sudo apt install fossil```
+
+```dnf: sudo dnf install fossil```
+
+```pacman: sudo pacman -S fossil```
+
+```apk: sudo apk add fossil```
+
+```zypper: sudo zypper install fossil```
+
+```brew: brew install fossil```
+
+```nix: nix profile install nixpkgs#fossil```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fossil-rm](/man/fossil-rm)(1), [fossil-add](/man/fossil-add)(1), [fossil-forget](/man/fossil-forget)(1), [fossil-commit](/man/fossil-commit)(1)

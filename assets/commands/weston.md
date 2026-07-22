@@ -111,6 +111,22 @@ Requires Linux kernel mode setting (KMS) for native operation. Running directly 
 
 **Weston** was developed alongside the **Wayland** protocol at **freedesktop.org**, with initial development led by **Kristian Høgsberg** starting around **2010**. It served as the proving ground for Wayland concepts and remains the reference implementation. While production desktops typically use compositors like GNOME's Mutter or KDE's KWin, Weston continues development for testing, embedded systems, and automotive applications.
 
+# INSTALL
+
+```apt: sudo apt install weston```
+
+```dnf: sudo dnf install weston```
+
+```pacman: sudo pacman -S weston```
+
+```apk: sudo apk add weston```
+
+```zypper: sudo zypper install weston```
+
+```nix: nix profile install nixpkgs#weston```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sway](/man/sway)(1), [Xwayland](/man/Xwayland)(1), [xrandr](/man/xrandr)(1)

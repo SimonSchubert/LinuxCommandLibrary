@@ -96,6 +96,22 @@ A full balance rewrites all data and is very slow. Use filters to target only ne
 
 **btrfs balance** is part of the **btrfs-progs** package for managing btrfs filesystems on Linux.
 
+# INSTALL
+
+```apt: sudo apt install btrfs-progs```
+
+```dnf: sudo dnf install btrfs-progs```
+
+```pacman: sudo pacman -S btrfs-progs```
+
+```apk: sudo apk add btrfs-progs```
+
+```brew: brew install btrfs-progs```
+
+```nix: nix profile install nixpkgs#btrfs-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [btrfs-device](/man/btrfs-device)(8), [btrfs-filesystem](/man/btrfs-filesystem)(8), [btrfs-scrub](/man/btrfs-scrub)(8), [mkfs.btrfs](/man/mkfs.btrfs)(8)

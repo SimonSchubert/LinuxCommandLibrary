@@ -38,6 +38,24 @@ Convert TIFF images to PNM format
 
 **tifftopnm** converts TIFF images to PNM format. Part of Netpbm toolkit. Supports multi-page TIFF files and alpha channel extraction.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmtotiff](/man/pnmtotiff)(1), [pngtopnm](/man/pngtopnm)(1)

@@ -65,6 +65,18 @@ Battery mode requires battery-powered system. RAPL requires Intel CPU with RAPL 
 
 **powerstat** was written by **Colin Ian King** as part of his power management testing tools. It's commonly used in Ubuntu's power testing and optimization efforts.
 
+# INSTALL
+
+```apt: sudo apt install powerstat```
+
+```dnf: sudo dnf install powerstat```
+
+```zypper: sudo zypper install powerstat```
+
+```nix: nix profile install nixpkgs#powerstat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [powertop](/man/powertop)(8), [turbostat](/man/turbostat)(8), [cpupower](/man/cpupower)(1)

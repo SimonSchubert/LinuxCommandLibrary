@@ -67,6 +67,14 @@ Large images need significant disk space. Processing time scales with zoom level
 
 gdal2tiles.py is part of **GDAL** (Geospatial Data Abstraction Library), providing tile generation for web mapping from geospatial raster data.
 
+# INSTALL
+
+```apt: sudo apt install gdal-bin```
+
+```apk: sudo apk add gdal-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdalinfo](/man/gdalinfo)(1), [gdal_translate](/man/gdal_translate)(1)

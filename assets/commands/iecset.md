@@ -91,6 +91,22 @@ Part of alsa-utils. Device must support IEC958. Settings may reset.
 
 iecset is part of **ALSA** utilities for Linux digital audio configuration.
 
+# INSTALL
+
+```apt: sudo apt install alsa-utils```
+
+```dnf: sudo dnf install alsa-utils```
+
+```pacman: sudo pacman -S alsa-utils```
+
+```apk: sudo apk add alsa-utils```
+
+```zypper: sudo zypper install alsa-utils```
+
+```nix: nix profile install nixpkgs#alsa-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aplay](/man/aplay)(1), [amixer](/man/amixer)(1), [alsactl](/man/alsactl)(1)

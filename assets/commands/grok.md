@@ -85,6 +85,12 @@ Requires an **xAI API key** which must be obtained from the xAI API Console. The
 
 Grok CLI emerged as an open-source project in **2024** following xAI's public release of their Grok API. Built by the Superagent AI community, it provides terminal access to xAI's Grok models. The tool gained significant traction in **2025** as a challenger to proprietary coding assistants, with xAI announcing their official **Grok Build** coding agent in **January 2026** to provide first-party CLI support.
 
+# INSTALL
+
+```brew: brew install grok```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grok-build](/man/grok-build)(1), [claude](/man/claude)(1), [copilot](/man/copilot)(1), [gh](/man/gh)(1)

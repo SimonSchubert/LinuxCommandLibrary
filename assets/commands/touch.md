@@ -94,6 +94,24 @@ Some filesystems mount with **noatime** or **relatime**, which affects how acces
 
 Touch cannot change ctime (inode change time); it's always set to current time by the kernel when metadata changes.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stat](/man/stat)(1), [date](/man/date)(1), [ls](/man/ls)(1), [mkdir](/man/mkdir)(1), [chmod](/man/chmod)(1)

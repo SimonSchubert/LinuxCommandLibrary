@@ -59,6 +59,11 @@ Language packages must be installed via **argospm** before translation works. Tr
 
 **Argos Translate** was created by Argos Open Tech as an open-source, privacy-respecting alternative to cloud translation services, using CTranslate2 and OpenNMT models. It also powers the self-hosted LibreTranslate web API.
 
+# INSTALL
+
+```aur: yay -S argos-translate```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [trans](/man/trans)(1)

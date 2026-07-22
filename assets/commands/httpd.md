@@ -92,6 +92,22 @@ Configuration can be complex for beginners due to the large number of directives
 
 **Apache HTTP Server** was started in **1995** based on NCSA HTTPd, becoming the most popular web server for decades. The **Apache Software Foundation** grew around it. The name comes from "a patchy server" due to its patch-based origins.
 
+# INSTALL
+
+```apt: sudo apt install merecat```
+
+```dnf: sudo dnf install httpd```
+
+```apk: sudo apk add apache2```
+
+```zypper: sudo zypper install apache2```
+
+```brew: brew install apache2```
+
+```nix: nix profile install nixpkgs#merecat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nginx](/man/nginx)(1), [apache2](/man/apache2)(1), [apachectl](/man/apachectl)(1), [a2enmod](/man/a2enmod)(1), [htpasswd](/man/htpasswd)(1), [caddy](/man/caddy)(1)

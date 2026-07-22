@@ -119,6 +119,16 @@ Intercepting HTTPS requires clients to trust the mitmproxy CA certificate, which
 
 mitmproxy was created by **Aldo Cortesi** and first released in **2010**. Written in **Python**, it became a standard tool for web application security testing and debugging. The project introduced innovative features like the web interface (mitmweb) and a powerful scripting API. It gained widespread adoption among security researchers, developers, and QA engineers for analyzing HTTP traffic.
 
+# INSTALL
+
+```pacman: sudo pacman -S mitmproxy```
+
+```apk: sudo apk add mitmproxy```
+
+```nix: nix profile install nixpkgs#mitmproxy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [burpsuite](/man/burpsuite)(1), [wireshark](/man/wireshark)(1), [tcpdump](/man/tcpdump)(1), [charles](/man/charles)(1)

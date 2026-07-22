@@ -65,6 +65,16 @@ Output can be very large on systems with many devices. Use object ID to filter t
 
 Part of **PipeWire**, providing introspection capabilities for the multimedia framework. Complements pw-cli for automated and scripted queries.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-tools```
+
+```zypper: sudo zypper install pipewire-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pw-cli](/man/pw-cli)(1), [pw-dot](/man/pw-dot)(1), [pw-mon](/man/pw-mon)(1), [pw-top](/man/pw-top)(1)

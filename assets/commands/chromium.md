@@ -98,6 +98,22 @@ Visit **about:version** in the browser to see which flags are currently active.
 
 **Chromium** was first released by Google in **September 2008** as the open-source foundation for Google Chrome. The project uses the Blink rendering engine (forked from WebKit in 2013) and the V8 JavaScript engine.
 
+# INSTALL
+
+```apt: sudo apt install chromium```
+
+```dnf: sudo dnf install chromium```
+
+```pacman: sudo pacman -S chromium```
+
+```apk: sudo apk add chromium```
+
+```zypper: sudo zypper install chromium```
+
+```nix: nix profile install nixpkgs#chromium```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [google-chrome](/man/google-chrome)(1), [firefox](/man/firefox)(1)

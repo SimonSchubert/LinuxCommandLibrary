@@ -52,6 +52,20 @@ This tool integrates with tiling window managers that use dmenu or rofi as their
 
 Requires udiskie and either dmenu or rofi installed. Available devices depend on connected hardware and udiskie configuration.
 
+# INSTALL
+
+```dnf: sudo dnf install udiskie```
+
+```pacman: sudo pacman -S udiskie```
+
+```apk: sudo apk add udiskie```
+
+```zypper: sudo zypper install udiskie```
+
+```nix: nix profile install nixpkgs#udiskie```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [udiskie](/man/udiskie)(1), [udisksctl](/man/udisksctl)(1), [dmenu](/man/dmenu)(1), [rofi](/man/rofi)(1)

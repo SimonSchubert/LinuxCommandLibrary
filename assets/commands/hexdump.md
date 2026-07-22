@@ -72,6 +72,16 @@ Large files produce enormous output; use **-n** to limit. The default format isn
 
 hexdump originated in BSD Unix and is part of the util-linux package on Linux systems. It provides functionality similar to the older od (octal dump) command but with more flexible formatting options.
 
+# INSTALL
+
+```apt: sudo apt install bsdextrautils```
+
+```apk: sudo apk add hexdump```
+
+```nix: nix profile install nixpkgs#hexdump```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xxd](/man/xxd)(1), [od](/man/od)(1), [hexyl](/man/hexyl)(1), [strings](/man/strings)(1)

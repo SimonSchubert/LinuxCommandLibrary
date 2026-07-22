@@ -56,6 +56,14 @@ Monochrome only. Limited to XQX-compatible printers. Model support varies.
 
 foo2xqx is part of **foo2zjs**, adding support for HP printers using the XQX protocol, reverse-engineered to provide Linux compatibility.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+```dnf: sudo dnf install foo2xqx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2xqx-wrapper](/man/foo2xqx-wrapper)(1), [foo2zjs](/man/foo2zjs)(1)

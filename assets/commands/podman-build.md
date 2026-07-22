@@ -101,6 +101,24 @@ Under the hood, it uses Buildah for the actual image building process. The outpu
 
 Uses Buildah under the hood. Largely compatible with Docker build, but some Docker-specific features may behave differently. The default image format is OCI, unlike Docker which defaults to the Docker format. Use **--format docker** for Docker compatibility.
 
+# INSTALL
+
+```apt: sudo apt install podman```
+
+```dnf: sudo dnf install podman```
+
+```pacman: sudo pacman -S podman```
+
+```apk: sudo apk add podman```
+
+```zypper: sudo zypper install podman```
+
+```brew: brew install podman```
+
+```nix: nix profile install nixpkgs#podman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [buildah](/man/buildah)(1), [docker-build](/man/docker-build)(1), [podman-run](/man/podman-run)(1)

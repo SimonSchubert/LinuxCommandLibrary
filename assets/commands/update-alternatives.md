@@ -64,6 +64,24 @@ Common uses include managing multiple Java versions, editors, or compilers. High
 
 Requires root privileges to modify. Priority numbers determine automatic selection. Manual mode persists until explicitly changed. Debian/Ubuntu specific; Red Hat uses **alternatives** command.
 
+# INSTALL
+
+```apt: sudo apt install dpkg```
+
+```dnf: sudo dnf install dpkg```
+
+```pacman: sudo pacman -S dpkg```
+
+```apk: sudo apk add dpkg```
+
+```zypper: sudo zypper install dpkg```
+
+```brew: brew install dpkg```
+
+```nix: nix profile install nixpkgs#dpkg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [alternatives](/man/alternatives)(8), [ln](/man/ln)(1)

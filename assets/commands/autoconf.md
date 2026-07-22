@@ -68,6 +68,21 @@ Requires M4 macro processor. Complex syntax based on M4. Generated configure scr
 
 **Autoconf** was created by David MacKenzie in **1991** to address the portability problems of Unix software. It became the standard build system for GNU and many other projects.
 
+# INSTALL
+
+```dnf: sudo dnf install autoconf```
+
+```pacman: sudo pacman -S autoconf```
+
+```apk: sudo apk add autoconf```
+
+```zypper: sudo zypper install autoconf```
+
+```brew: brew install autoconf```
+
+```nix: nix profile install nixpkgs#autoconf```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [automake](/man/automake)(1), [autoreconf](/man/autoreconf)(1), [configure](/man/configure)(1), [m4](/man/m4)(1), [libtool](/man/libtool)(1)

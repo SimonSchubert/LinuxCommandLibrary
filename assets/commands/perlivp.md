@@ -49,6 +49,24 @@ Part of Perl. Basic tests only. Run after installation.
 
 perlivp is part of **Perl core** for installation verification.
 
+# INSTALL
+
+```apt: sudo apt install perl```
+
+```dnf: sudo dnf install perl```
+
+```pacman: sudo pacman -S perl```
+
+```apk: sudo apk add perl-dev```
+
+```zypper: sudo zypper install perl```
+
+```brew: brew install perl```
+
+```nix: nix profile install nixpkgs#perl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [perl](/man/perl)(1), [perldiag](/man/perldiag)(1)

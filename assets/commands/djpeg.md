@@ -77,6 +77,16 @@ Output goes to stdout by default (redirect to file). Color quantization for GIF 
 
 djpeg is part of the **libjpeg** project created by the **Independent JPEG Group (IJG)** starting in **1991**. libjpeg-turbo, a high-performance fork, provides compatible djpeg with SIMD optimizations.
 
+# INSTALL
+
+```apt: sudo apt install libjpeg-turbo-progs```
+
+```dnf: sudo dnf install libjpeg-turbo-utils```
+
+```apk: sudo apk add libjpeg-turbo-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cjpeg](/man/cjpeg)(1), [jpegtran](/man/jpegtran)(1), [convert](/man/convert)(1)

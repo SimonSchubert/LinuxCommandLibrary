@@ -84,6 +84,18 @@ Requires proper permissions on log directories. Configuration is done via files 
 
 **svlogd** was created by Gerrit Pape as part of the runit init system. It was designed as a reliable replacement for syslog-style logging, providing automatic log rotation and timestamp handling. Runit was inspired by daemontools and provides similar functionality with some enhancements.
 
+# INSTALL
+
+```apt: sudo apt install runit```
+
+```apk: sudo apk add runit```
+
+```brew: brew install runit```
+
+```nix: nix profile install nixpkgs#runit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sv](/man/sv)(8), [runsv](/man/runsv)(8), [chpst](/man/chpst)(8)

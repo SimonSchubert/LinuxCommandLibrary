@@ -99,6 +99,24 @@ Output quality depends heavily on the format of the program's `--help` output. W
 
 help2man was created by **Brendan O'Dea** as part of the **GNU** project to automate man page generation for GNU utilities during the build process.
 
+# INSTALL
+
+```apt: sudo apt install help2man```
+
+```dnf: sudo dnf install help2man```
+
+```pacman: sudo pacman -S help2man```
+
+```apk: sudo apk add help2man```
+
+```zypper: sudo zypper install help2man```
+
+```brew: brew install help2man```
+
+```nix: nix profile install nixpkgs#help2man```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [man](/man/man)(1), [pod2man](/man/pod2man)(1), [ronn](/man/ronn)(1)

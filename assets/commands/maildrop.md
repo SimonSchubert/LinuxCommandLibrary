@@ -62,6 +62,16 @@ Requires filter configuration. Part of courier-maildrop. Maildir preferred forma
 
 maildrop is part of the **Courier Mail Server** project, providing flexible mail filtering and delivery.
 
+# INSTALL
+
+```apt: sudo apt install maildrop```
+
+```dnf: sudo dnf install maildrop```
+
+```nix: nix profile install nixpkgs#maildrop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [procmail](/man/procmail)(1), [dovecot](/man/dovecot)(1), [postfix](/man/postfix)(1)

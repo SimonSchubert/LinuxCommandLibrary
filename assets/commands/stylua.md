@@ -116,6 +116,18 @@ Some style preferences can't be configured. Complex expressions may format unexp
 
 **StyLua** was created by **JohnnyMorganz** around **2020**. Written in Rust, it provides fast, opinionated Lua formatting similar to Prettier for JavaScript.
 
+# INSTALL
+
+```pacman: sudo pacman -S stylua```
+
+```apk: sudo apk add stylua```
+
+```brew: brew install stylua```
+
+```nix: nix profile install nixpkgs#stylua```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lua](/man/lua)(1), [luacheck](/man/luacheck)(1), [selene](/man/selene)(1)

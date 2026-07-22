@@ -79,6 +79,11 @@ Both devices must be on the same local network. Large files are processed in chu
 
 **airshare** was developed as a Python-based alternative to AirDrop for cross-platform local file sharing, leveraging mDNS for zero-configuration networking.
 
+# INSTALL
+
+```brew: brew install airshare```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [croc](/man/croc)(1), [wormhole](/man/wormhole)(1), [scp](/man/scp)(1)

@@ -69,6 +69,14 @@ Requires MTA configured. Various implementations. May need mailutils package.
 
 mail dates back to early **Unix** systems, providing basic email functionality for users and scripts.
 
+# INSTALL
+
+```apk: sudo apk add mailx```
+
+```zypper: sudo zypper install mailx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mailx](/man/mailx)(1), [sendmail](/man/sendmail)(8), [mutt](/man/mutt)(1)

@@ -114,6 +114,12 @@ Requires Node.js and npm for installation. The flexible syntax can be confusing 
 
 **Stylus** was created by TJ Holowaychuk (creator of Express.js) and released in 2010. It was designed to be more expressive and flexible than existing CSS preprocessors. While it gained significant adoption, Sass/SCSS eventually became more dominant in the CSS preprocessor ecosystem.
 
+# INSTALL
+
+```pacman: sudo pacman -S stylus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sass](/man/sass)(1), [less](/man/less)(1), [postcss](/man/postcss)(1), [npm](/man/npm)(1)

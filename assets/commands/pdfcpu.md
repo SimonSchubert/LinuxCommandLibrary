@@ -88,6 +88,16 @@ Each verb (**validate**, **merge**, **split**, **optimize**, **encrypt**, **wate
 
 Not all PDF features (especially exotic encryption, signed forms, or proprietary constructs) are fully supported. Always keep originals before bulk transforms. Some operations rewrite structure and may affect advanced interactive features.
 
+# INSTALL
+
+```apk: sudo apk add pdfcpu```
+
+```brew: brew install pdfcpu```
+
+```nix: nix profile install nixpkgs#pdfcpu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qpdf](/man/qpdf)(1), [pdftk](/man/pdftk)(1), [gs](/man/gs)(1), [mutool](/man/mutool)(1)

@@ -85,6 +85,16 @@ Only checks file type signatures; doesn't verify if the image is actually bootab
 
 grub-file is part of GRUB 2, providing a utility for image type detection. This is useful during installation and configuration to ensure the correct bootloader setup for the target architecture.
 
+# INSTALL
+
+```apt: sudo apt install grub-common```
+
+```pacman: sudo pacman -S grub```
+
+```apk: sudo apk add grub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub-install](/man/grub-install)(8), [grub-probe](/man/grub-probe)(8), [file](/man/file)(1)

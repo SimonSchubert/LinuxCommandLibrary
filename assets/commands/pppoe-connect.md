@@ -35,6 +35,22 @@ Requires configured pppoe.conf and pppd. Normally invoked via pppoe-start rather
 
 pppoe-connect is part of the **Roaring Penguin PPPoE** client package.
 
+# INSTALL
+
+```apt: sudo apt install pppoe```
+
+```dnf: sudo dnf install rp-pppoe```
+
+```pacman: sudo pacman -S rp-pppoe```
+
+```apk: sudo apk add rp-pppoe```
+
+```zypper: sudo zypper install rp-pppoe```
+
+```nix: nix profile install nixpkgs#rp-pppoe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pppoe](/man/pppoe)(8), [pppoe-setup](/man/pppoe-setup)(8), [pppoe-stop](/man/pppoe-stop)(8), [pppd](/man/pppd)(8), [pppoe-discovery](/man/pppoe-discovery)(8)

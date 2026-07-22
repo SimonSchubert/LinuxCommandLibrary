@@ -143,6 +143,16 @@ Newer tool, ecosystem still growing. Some conda packages may not work perfectly.
 
 **pixi** was created by **prefix.dev** (makers of mamba) and released in **2023**. Written in Rust, it aims to combine the best of conda, pip, and cargo into a unified tool. It leverages the fast dependency resolver from rattler-build and integrates with the conda ecosystem while adding modern project management features.
 
+# INSTALL
+
+```pacman: sudo pacman -S pixi```
+
+```brew: brew install pixi```
+
+```nix: nix profile install nixpkgs#pixi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [mamba](/man/mamba)(1), [poetry](/man/poetry)(1), [cargo](/man/cargo)(1), [pip](/man/pip)(1)

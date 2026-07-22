@@ -76,6 +76,15 @@ These command-line flags belong to the **legacy Arduino IDE 1.x**, which is no l
 
 The **Arduino** project was started at the Ivrea Interaction Design Institute in **2005**. The classic IDE (and its `arduino` command-line interface) served as the primary development environment until it was superseded by **Arduino IDE 2.x** and **arduino-cli**.
 
+# INSTALL
+
+```apt: sudo apt install arduino```
+
+```aur: yay -S arduino```
+
+```nix: nix profile install nixpkgs#arduino```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [arduino-cli](/man/arduino-cli)(1), [avrdude](/man/avrdude)(1), [platformio](/man/platformio)(1)

@@ -52,6 +52,24 @@ Source and target must be on the same MS-DOS filesystem. Cross-device moves are 
 
 Only works on FAT filesystems. Cannot move files between different drives. Drive mappings are configured in **/etc/mtools.conf** or **~/.mtoolsrc**.
 
+# INSTALL
+
+```apt: sudo apt install mtools```
+
+```dnf: sudo dnf install mtools```
+
+```pacman: sudo pacman -S mtools```
+
+```apk: sudo apk add mtools```
+
+```zypper: sudo zypper install mtools```
+
+```brew: brew install mtools```
+
+```nix: nix profile install nixpkgs#mtools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mcopy](/man/mcopy)(1), [mdel](/man/mdel)(1), [mren](/man/mren)(1), [mmd](/man/mmd)(1)

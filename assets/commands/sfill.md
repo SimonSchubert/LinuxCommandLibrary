@@ -63,6 +63,12 @@ This operation is time-consuming, especially with the default 38 passes. SSDs ma
 
 **sfill** is part of the **secure-delete** package, providing tools for securely erasing data to prevent forensic recovery.
 
+# INSTALL
+
+```apt: sudo apt install secure-delete```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [srm](/man/srm)(1), [shred](/man/shred)(1), [wipe](/man/wipe)(1)

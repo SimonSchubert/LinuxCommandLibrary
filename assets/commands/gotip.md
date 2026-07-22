@@ -53,6 +53,12 @@ Development versions may be unstable. Not recommended for production use. Requir
 
 **gotip** was created by the Go team to make testing development versions easier, replacing earlier workarounds for accessing pre-release Go versions.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#gotip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1)

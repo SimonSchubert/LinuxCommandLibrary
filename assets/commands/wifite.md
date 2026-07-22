@@ -121,6 +121,12 @@ Requires a wireless adapter supporting monitor mode and packet injection. Root p
 
 Wifite was originally created by **derv82** to automate common Wi-Fi auditing tasks that previously required manual use of multiple tools. Wifite2, a complete rewrite, added Python 3 support, improved attack methods, and better handling of modern wireless security. The tool became popular in the security community for penetration testing and is included by default in Kali Linux.
 
+# INSTALL
+
+```pacman: sudo pacman -S wifite```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [reaver](/man/reaver)(1), [bully](/man/bully)(1), [kismet](/man/kismet)(1)

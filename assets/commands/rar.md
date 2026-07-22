@@ -109,6 +109,12 @@ Proprietary format - requires rar or unrar. Free version is command-line only. L
 
 **RAR** was created by **Eugene Roshal** (Roshal ARchive) in **1993**. It became popular for distributing large files, especially before broadband. The format continues development with improved compression and encryption.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#rar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unrar](/man/unrar)(1), [7z](/man/7z)(1), [zip](/man/zip)(1), [tar](/man/tar)(1)

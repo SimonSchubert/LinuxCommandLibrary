@@ -76,6 +76,14 @@ On Fedora 41+, dnf defaults to version 5. Use dnf4 explicitly for the older vers
 
 Legacy version, newer systems use dnf5. Command abbreviations supported (in, rm, se, etc.).
 
+# INSTALL
+
+```zypper: sudo zypper install dnf4```
+
+```nix: nix profile install nixpkgs#dnf4```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dnf](/man/dnf)(8), [dnf5](/man/dnf5)(8), [rpm](/man/rpm)(8)

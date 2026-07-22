@@ -78,6 +78,12 @@ For Linux, the equivalent is `systemd-inhibit` or `caffeine` (GNOME applet). For
 
 **caffeinate** was introduced in **Mac OS X 10.8 (Mountain Lion, 2012)** by Apple as the supported CLI replacement for ad-hoc scripts that poked mouse events to keep the Mac awake. It wraps the IOKit `IOPMAssertion` API.
 
+# INSTALL
+
+```aur: yay -S caffeinate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [caffeine](/man/caffeine)(1), [xset](/man/xset)(1), [systemd-inhibit](/man/systemd-inhibit)(1)

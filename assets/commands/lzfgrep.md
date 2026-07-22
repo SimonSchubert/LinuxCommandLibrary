@@ -67,6 +67,22 @@ lzfgrep is provided as part of xz-utils for backward compatibility with LZMA Uti
 
 When reading from standard input, gzip and bzip2 compressed files are not supported. All options are passed directly to grep.
 
+# INSTALL
+
+```dnf: sudo dnf install xz```
+
+```pacman: sudo pacman -S xz```
+
+```apk: sudo apk add xz```
+
+```zypper: sudo zypper install xz```
+
+```brew: brew install xz```
+
+```nix: nix profile install nixpkgs#xz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lzgrep](/man/lzgrep)(1), [fgrep](/man/fgrep)(1), [lzegrep](/man/lzegrep)(1), [xzgrep](/man/xzgrep)(1), [zgrep](/man/zgrep)(1), [grep](/man/grep)(1)

@@ -61,6 +61,24 @@ dtc supports device tree overlays, which allow runtime modification of the base 
 
 The tool includes validation and warning systems to catch common errors in device tree syntax and structure. It can also generate assembly output for inclusion in firmware builds.
 
+# INSTALL
+
+```apt: sudo apt install device-tree-compiler```
+
+```dnf: sudo dnf install dtc```
+
+```pacman: sudo pacman -S dtc```
+
+```apk: sudo apk add dtc```
+
+```zypper: sudo zypper install dtc```
+
+```brew: brew install dtc```
+
+```nix: nix profile install nixpkgs#dtc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 

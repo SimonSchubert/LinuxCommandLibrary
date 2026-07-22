@@ -87,6 +87,19 @@ Not all filesystems support ACLs; ext4, XFS, and Btrfs do when mounted with ACL 
 
 POSIX ACLs were developed in the **1990s** as part of the POSIX 1003.1e draft standard, which was ultimately withdrawn but widely implemented. Linux ACL support was added to the kernel in version **2.6** (2003). The specification aimed to provide a portable ACL interface across Unix systems, though implementation details vary between operating systems.
 
+# INSTALL
+
+```dnf: sudo dnf install acl```
+
+```pacman: sudo pacman -S acl```
+
+```zypper: sudo zypper install acl```
+
+```brew: brew install acl```
+
+```nix: nix profile install nixpkgs#acl```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [chmod](/man/chmod)(1), [chown](/man/chown)(1), [getfacl](/man/getfacl)(1), [setfacl](/man/setfacl)(1), [ls](/man/ls)(1)

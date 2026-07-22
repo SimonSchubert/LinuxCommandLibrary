@@ -107,6 +107,14 @@ Part of HashiCorp Consul, the KV store is commonly used for dynamic configuratio
 
 The KV store is not designed for bulk data storage; there is a 512 KB limit per value. Recursive deletes (`consul kv delete -recurse`) are irreversible. Export/import uses JSON format and includes metadata. ACL tokens may be required depending on Consul configuration.
 
+# INSTALL
+
+```pacman: sudo pacman -S consul```
+
+```nix: nix profile install nixpkgs#consul```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [consul](/man/consul)(1), [etcdctl](/man/etcdctl)(1)

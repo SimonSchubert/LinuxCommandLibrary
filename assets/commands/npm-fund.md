@@ -62,6 +62,16 @@ Requires funding metadata in package.json. Opens browser for URLs by default. Fu
 
 **npm fund** was introduced in **npm 8** to help open source maintainers receive financial support from their users.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-install](/man/npm-install)(1), [npm-docs](/man/npm-docs)(1), [npm-ls](/man/npm-ls)(1), [npm-config](/man/npm-config)(1)

@@ -109,6 +109,18 @@ Regex support increases binary size; build with **--no-default-features** for a 
 
 **tuc** was created by **Riccardo Attilio Galli** (riquito) as a Rust-based enhancement to the traditional cut utility. The name is a playful reversal of "cut." The project was motivated by cut's limitations with regex delimiters, field reordering, and negative indexing.
 
+# INSTALL
+
+```apk: sudo apk add tuc```
+
+```zypper: sudo zypper install tuc```
+
+```brew: brew install tuc```
+
+```nix: nix profile install nixpkgs#tuc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cut](/man/cut)(1), [awk](/man/awk)(1), [choose](/man/choose)(1), [sed](/man/sed)(1)

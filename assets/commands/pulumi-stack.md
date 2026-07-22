@@ -68,6 +68,18 @@ Manage isolated infrastructure environments
 
 **pulumi stack** manages stacks. Stacks are isolated instances of infrastructure (dev, staging, prod). Each stack has its own state, configuration, and resources.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-up](/man/pulumi-up)(1), [pulumi-config](/man/pulumi-config)(1)

@@ -105,6 +105,22 @@ Complex subnetting may need verification. IPv6 output is verbose. Interface mode
 
 **sipcalc** was written by **Simon Ekstrand** for IP address calculations. It supports both protocol versions with consistent output.
 
+# INSTALL
+
+```apt: sudo apt install sipcalc```
+
+```dnf: sudo dnf install sipcalc```
+
+```apk: sudo apk add sipcalc```
+
+```zypper: sudo zypper install sipcalc```
+
+```brew: brew install sipcalc```
+
+```nix: nix profile install nixpkgs#sipcalc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ipcalc](/man/ipcalc)(1), [ip](/man/ip)(8), [ifconfig](/man/ifconfig)(8)

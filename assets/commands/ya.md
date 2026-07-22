@@ -86,6 +86,12 @@ ya requires an active internet connection for package operations. The **ya** ver
 
 **ya** (yazi-cli) was developed as part of the **Yazi** project by **sxyazi**. Yazi was first released around **2023** as a modern, async terminal file manager written in Rust. The CLI tool was added to provide package management and inter-process communication capabilities for the file manager ecosystem.
 
+# INSTALL
+
+```apk: sudo apk add yazi-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yazi](/man/yazi)(1), [ranger](/man/ranger)(1), [lf](/man/lf)(1), [nnn](/man/nnn)(1)

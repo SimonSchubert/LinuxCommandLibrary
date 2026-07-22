@@ -52,6 +52,12 @@ For authorized security testing only. Requires proper authorization before use. 
 
 Gophish was created by **Jordan Wright** in **2015** as an open-source alternative to commercial phishing simulation platforms. It's widely used in security awareness training and penetration testing.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#gophish```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [setoolkit](/man/setoolkit)(1)

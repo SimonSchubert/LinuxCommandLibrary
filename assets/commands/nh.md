@@ -69,6 +69,12 @@ Requires Nix/NixOS. Rust-based. Wrapper around nixos-rebuild.
 
 nh was created to provide a **better interface** for common NixOS and home-manager operations.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix](/man/nix)(1), [nixos-rebuild](/man/nixos-rebuild)(1), [home-manager](/man/home-manager)(1)

@@ -41,6 +41,20 @@ This allows running distribution-specific tools, testing software, or developmen
 
 Container must exist; use **toolbox create** first. Changes to home directory persist between sessions. System directories are container-specific and reset if the container is recreated.
 
+# INSTALL
+
+```apt: sudo apt install podman-toolbox```
+
+```dnf: sudo dnf install toolbox```
+
+```pacman: sudo pacman -S toolbox```
+
+```zypper: sudo zypper install toolbox```
+
+```nix: nix profile install nixpkgs#toolbox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [toolbox](/man/toolbox)(1), [toolbox-create](/man/toolbox-create)(1), [toolbox-run](/man/toolbox-run)(1)

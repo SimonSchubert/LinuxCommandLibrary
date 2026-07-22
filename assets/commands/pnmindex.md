@@ -80,6 +80,24 @@ Large numbers of images can produce huge output. Consider pamundice for splittin
 
 pnmindex is part of **Netpbm**, providing contact sheet generation since early Pbmplus versions.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmcat](/man/pnmcat)(1), [pnmscale](/man/pnmscale)(1), [pnmtile](/man/pnmtile)(1), [pnmmontage](/man/pnmmontage)(1), [pnmtojpeg](/man/pnmtojpeg)(1), [pamundice](/man/pamundice)(1), [netpbm](/man/netpbm)(1)

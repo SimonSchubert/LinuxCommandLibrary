@@ -79,6 +79,24 @@ Results include any character sequences, not necessarily meaningful text. False 
 
 **strings** has been part of Unix since early versions, originating in **Version 6 Unix** at **Bell Labs** in the **1970s**. The GNU version is part of **binutils**. The tool remains essential for binary analysis and is commonly used in security research and reverse engineering.
 
+# INSTALL
+
+```apt: sudo apt install binutils```
+
+```dnf: sudo dnf install binutils```
+
+```pacman: sudo pacman -S binutils```
+
+```apk: sudo apk add binutils```
+
+```zypper: sudo zypper install binutils```
+
+```brew: brew install binutils```
+
+```nix: nix profile install nixpkgs#binutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [file](/man/file)(1), [hexdump](/man/hexdump)(1), [od](/man/od)(1), [xxd](/man/xxd)(1)

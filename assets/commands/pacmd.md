@@ -108,6 +108,18 @@ PulseAudio specific. Use pactl for simpler operations. Changes may not persist a
 
 pacmd is part of **PulseAudio**, developed by **Lennart Poettering** starting in **2004** as a next-generation sound server.
 
+# INSTALL
+
+```apt: sudo apt install pulseaudio-utils```
+
+```dnf: sudo dnf install pulseaudio-utils```
+
+```apk: sudo apk add pulseaudio-utils```
+
+```zypper: sudo zypper install pulseaudio-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pactl](/man/pactl)(1), [pulseaudio](/man/pulseaudio)(1), [pavucontrol](/man/pavucontrol)(1)

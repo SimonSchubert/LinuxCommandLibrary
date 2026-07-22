@@ -52,6 +52,22 @@ Third-party tool. Modifies kubeconfig. Works with kubectx.
 
 kubens was created by **Ahmet Alp Balkan** alongside kubectx for simplified Kubernetes namespace switching.
 
+# INSTALL
+
+```apt: sudo apt install kubectx```
+
+```pacman: sudo pacman -S kubectx```
+
+```apk: sudo apk add kubectx```
+
+```zypper: sudo zypper install kubectx```
+
+```brew: brew install kubectx```
+
+```nix: nix profile install nixpkgs#kubectx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectx](/man/kubectx)(1), [kubectl-config](/man/kubectl-config)(1)

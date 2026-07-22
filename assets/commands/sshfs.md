@@ -107,6 +107,22 @@ Performance is slower than native filesystems or NFS due to SSH encryption overh
 
 **sshfs** was created by **Miklos Szeredi** and first released in **2004** as one of the first FUSE-based filesystems. It demonstrated the power of userspace filesystems and became a model for many other FUSE implementations. The project has been actively maintained and widely adopted across Unix-like systems. On Linux, it became part of the standard FUSE toolkit, while macOS users rely on macFUSE (formerly OSXFUSE) for compatibility.
 
+# INSTALL
+
+```apt: sudo apt install sshfs```
+
+```pacman: sudo pacman -S sshfs```
+
+```apk: sudo apk add sshfs```
+
+```zypper: sudo zypper install sshfs```
+
+```brew: brew install sshfs```
+
+```nix: nix profile install nixpkgs#sshfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [fusermount](/man/fusermount)(1), [mount](/man/mount)(8), [scp](/man/scp)(1), [rsync](/man/rsync)(1)

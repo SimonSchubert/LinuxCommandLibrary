@@ -28,6 +28,12 @@ Package manager for compiled binaries from GitHub
 
 **stew** was created by **Marwan Hawari** and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S stew```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [eget](/man/eget)(1), [cargo-binstall](/man/cargo-binstall)(1), [brew](/man/brew)(1)

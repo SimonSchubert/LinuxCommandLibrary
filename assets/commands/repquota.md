@@ -68,6 +68,22 @@ The output includes columns for used space, soft/hard limits, used files (inodes
 
 Requires filesystem quota support and quota utilities to be installed. Must typically be run as root to view all users' quotas. Quotas must be enabled on the filesystem for meaningful output.
 
+# INSTALL
+
+```apt: sudo apt install quota```
+
+```dnf: sudo dnf install quota```
+
+```pacman: sudo pacman -S quota-tools```
+
+```apk: sudo apk add quota-tools```
+
+```zypper: sudo zypper install quota```
+
+```nix: nix profile install nixpkgs#quota```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [quota](/man/quota)(1), [quotacheck](/man/quotacheck)(8), [quotaon](/man/quotaon)(8), [edquota](/man/edquota)(8), [setquota](/man/setquota)(8)

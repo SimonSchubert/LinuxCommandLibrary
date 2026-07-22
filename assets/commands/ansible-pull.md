@@ -91,6 +91,17 @@ Requires git (or the chosen SCM) and ansible on the target node. Credentials for
 
 **ansible-pull** was introduced to support pull-based configuration management, addressing scalability concerns with the traditional push model.
 
+# INSTALL
+
+```dnf: sudo dnf install ansible-core```
+
+```pacman: sudo pacman -S ansible-core```
+
+```apk: sudo apk add ansible-core```
+
+```zypper: sudo zypper install ansible-core```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ansible-playbook](/man/ansible-playbook)(1), [ansible](/man/ansible)(1), [git](/man/git)(1)

@@ -101,6 +101,24 @@ Part of PuTTY. Uses PPK key format. Windows/Unix versions.
 
 Plink is part of **PuTTY** for command-line SSH operations.
 
+# INSTALL
+
+```apt: sudo apt install putty-tools```
+
+```dnf: sudo dnf install putty```
+
+```pacman: sudo pacman -S putty```
+
+```apk: sudo apk add putty```
+
+```zypper: sudo zypper install putty```
+
+```brew: brew install putty```
+
+```nix: nix profile install nixpkgs#putty```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [putty](/man/putty)(1), [pscp](/man/pscp)(1)

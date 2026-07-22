@@ -75,6 +75,16 @@ Site support may break with updates. Respect site terms of service. Large downlo
 
 gallery-dl was created as a counterpart to youtube-dl for images. It provides comprehensive image downloading with support for hundreds of sites through Python-based extractors.
 
+# INSTALL
+
+```apk: sudo apk add gallery-dl```
+
+```brew: brew install gallery-dl```
+
+```nix: nix profile install nixpkgs#gallery-dl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [youtube-dl](/man/youtube-dl)(1), [wget](/man/wget)(1), [curl](/man/curl)(1)

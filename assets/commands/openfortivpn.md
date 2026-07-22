@@ -109,6 +109,22 @@ Requires root privileges to create network interfaces and modify routing tables.
 
 Created as an open-source alternative to the proprietary FortiClient for Linux. Developed to provide command-line VPN connectivity for FortiGate SSL VPN servers, which are widely used in enterprise environments. The project emerged from the need for a lightweight, scriptable VPN client compatible with Fortinet infrastructure.
 
+# INSTALL
+
+```apt: sudo apt install openfortivpn```
+
+```dnf: sudo dnf install openfortivpn```
+
+```pacman: sudo pacman -S openfortivpn```
+
+```zypper: sudo zypper install openfortivpn```
+
+```brew: brew install openfortivpn```
+
+```nix: nix profile install nixpkgs#openfortivpn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openvpn](/man/openvpn)(8), [pppd](/man/pppd)(8), [ip](/man/ip)(8)

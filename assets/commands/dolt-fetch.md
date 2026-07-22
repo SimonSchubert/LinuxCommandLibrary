@@ -40,6 +40,16 @@ This command updates remote-tracking branches (e.g., origin/main) to reflect the
 
 The --prune option removes remote-tracking branches that no longer exist on the remote, keeping the local repository clean. Fetching from all remotes simultaneously is useful in multi-remote workflows.
 
+# INSTALL
+
+```pacman: sudo pacman -S dolt```
+
+```brew: brew install dolt```
+
+```nix: nix profile install nixpkgs#dolt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 

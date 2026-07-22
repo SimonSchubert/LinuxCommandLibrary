@@ -72,6 +72,22 @@ Requires pnpm. Network access needed. May show unwanted major updates.
 
 **pnpm outdated** is part of **pnpm**, the fast and disk-efficient package manager created as an alternative to npm.
 
+# INSTALL
+
+```dnf: sudo dnf install pnpm```
+
+```pacman: sudo pacman -S pnpm```
+
+```apk: sudo apk add pnpm```
+
+```zypper: sudo zypper install pnpm```
+
+```brew: brew install pnpm```
+
+```nix: nix profile install nixpkgs#pnpm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnpm](/man/pnpm)(1), [npm-outdated](/man/npm-outdated)(1), [yarn](/man/yarn)(1)

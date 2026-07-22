@@ -104,6 +104,23 @@ Requires network multicast support to function properly. IPv4 link-local address
 
 **Avahi** was developed as a free software implementation of Apple's **Bonjour** (originally Rendezvous) protocol suite. The project began in **2004** and has become the de facto standard mDNS/DNS-SD implementation on Linux systems, integrated into major distributions.
 
+# INSTALL
+
+```apt: sudo apt install avahi-daemon```
+
+```dnf: sudo dnf install avahi```
+
+```pacman: sudo pacman -S avahi```
+
+```apk: sudo apk add avahi```
+
+```zypper: sudo zypper install avahi```
+
+```brew: brew install avahi```
+
+```nix: nix profile install nixpkgs#avahi```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [avahi-browse](/man/avahi-browse)(1), [avahi-publish](/man/avahi-publish)(1), [avahi-dnsconfd](/man/avahi-dnsconfd)(8)

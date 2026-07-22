@@ -79,6 +79,15 @@ Requires running Argo CD server. Server must have access to Git repositories and
 
 **Argo CD** was created by Intuit and open-sourced in **2018**. It became a CNCF incubating project, establishing itself as a leading GitOps solution for Kubernetes.
 
+# INSTALL
+
+```pacman: sudo pacman -S argocd```
+
+```brew: brew install argocd```
+
+```nix: nix profile install nixpkgs#argocd```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [helm](/man/helm)(1), [flux](/man/flux)(1)

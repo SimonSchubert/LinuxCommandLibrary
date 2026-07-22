@@ -34,6 +34,12 @@ Only works on the local network. Both sender and receiver must be running a Loca
 
 **jocalsend** was created by **nebkor** and is written in **Rust** using the **Ratatui** TUI library. It was designed for users who want LocalSend functionality in a terminal environment.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#jocalsend```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scp](/man/scp)(1), [rsync](/man/rsync)(1)

@@ -90,6 +90,16 @@ The target cluster must be cleanly shut down. The source must be on the same maj
 
 Introduced in PostgreSQL **9.5** (2016) by Heikki Linnakangas, and moved into the core distribution from a contrib module. In PostgreSQL **13** pg_rewind gained the ability to write recovery configuration (`-R`) and restore missing WAL from the archive (`-c`).
 
+# INSTALL
+
+```dnf: sudo dnf install postgresql17```
+
+```apk: sudo apk add postgresql17```
+
+```zypper: sudo zypper install postgresql17```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_basebackup](/man/pg_basebackup)(1), [pg_resetwal](/man/pg_resetwal)(1)

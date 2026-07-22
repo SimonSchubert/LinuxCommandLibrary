@@ -57,6 +57,16 @@ This command must be run as root. The generated configuration depends on scripts
 
 **grub-mkconfig** is part of **GRUB 2** (GRand Unified Bootloader), which replaced the original GRUB Legacy. It provides automatic detection of installed kernels and operating systems.
 
+# INSTALL
+
+```apt: sudo apt install grub-common```
+
+```pacman: sudo pacman -S grub```
+
+```apk: sudo apk add grub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub-install](/man/grub-install)(8), [update-grub](/man/update-grub)(8), [grub-set-default](/man/grub-set-default)(8)

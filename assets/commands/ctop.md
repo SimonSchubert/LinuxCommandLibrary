@@ -71,6 +71,18 @@ Requires access to the container runtime socket (usually /var/run/docker.sock). 
 
 **ctop** was created by **bcicen** and released as an open-source project in **2016**. It quickly gained popularity in the container community as a user-friendly alternative to docker stats, providing a more intuitive interface for container monitoring.
 
+# INSTALL
+
+```pacman: sudo pacman -S ctop```
+
+```apk: sudo apk add ctop```
+
+```brew: brew install ctop```
+
+```nix: nix profile install nixpkgs#ctop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [top](/man/top)(1), [htop](/man/htop)(1)

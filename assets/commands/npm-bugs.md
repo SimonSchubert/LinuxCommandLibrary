@@ -39,6 +39,16 @@ opens the package's bug tracker URL in a web browser
 
 **npm bugs** guesses the package's bug tracker URL (or support email `mailto:`) from package metadata and opens it in a web browser. If no package is specified, it uses the `package.json` in the current directory. The alias **npm issues** does the same thing.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-docs](/man/npm-docs)(1), [npm-repo](/man/npm-repo)(1)

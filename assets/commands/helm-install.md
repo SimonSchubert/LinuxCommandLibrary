@@ -63,6 +63,22 @@ deploys a Helm chart to a Kubernetes cluster, creating a new release
 
 **helm install** deploys a Helm chart to a Kubernetes cluster, creating a new release. A chart contains all resource definitions needed to run an application. Helm tracks releases for easy upgrades with **helm upgrade** and rollbacks with **helm rollback**. Use **--wait** to wait for all pods to be ready before completing.
 
+# INSTALL
+
+```dnf: sudo dnf install helm```
+
+```pacman: sudo pacman -S helm```
+
+```apk: sudo apk add helm```
+
+```zypper: sudo zypper install helm```
+
+```brew: brew install helm```
+
+```nix: nix profile install nixpkgs#helm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [helm](/man/helm)(1), [kubectl](/man/kubectl)(1)

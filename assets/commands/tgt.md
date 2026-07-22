@@ -20,6 +20,18 @@ TUI client for Telegram
 
 **tgt** was created by **Federico Bruzzone** and is written in **Rust**.
 
+# INSTALL
+
+```apt: sudo apt install tcm```
+
+```pacman: sudo pacman -S tgt```
+
+```zypper: sudo zypper install tgt```
+
+```nix: nix profile install nixpkgs#tgt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scli](/man/scli)(1)

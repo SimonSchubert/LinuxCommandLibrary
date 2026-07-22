@@ -75,6 +75,18 @@ Image quality significantly affects detection success. Very small, blurry, or da
 
 **libdmtx** and its tools were created by **Mike Laughton** and first released in **2006**. The library provides open-source Data Matrix barcode support, filling a gap when most implementations were proprietary. Data Matrix itself was invented by **RVSI Acuity CiMatrix** in **1987** and became an ISO standard.
 
+# INSTALL
+
+```apt: sudo apt install dmtx-utils```
+
+```dnf: sudo dnf install dmtx-utils```
+
+```brew: brew install dmtx-utils```
+
+```nix: nix profile install nixpkgs#dmtx-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmtxwrite](/man/dmtxwrite)(1), [zbarimg](/man/zbarimg)(1), [qrencode](/man/qrencode)(1)

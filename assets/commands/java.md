@@ -89,6 +89,14 @@ Requires JRE/JDK. Version compatibility matters. Memory settings may need tuning
 
 Java was created by **James Gosling** at **Sun Microsystems** in 1995. It's now maintained by **Oracle** and the OpenJDK community.
 
+# INSTALL
+
+```apk: sudo apk add java-common```
+
+```brew: brew install java```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [javac](/man/javac)(1), [jar](/man/jar)(1), [jps](/man/jps)(1), [jstack](/man/jstack)(1)

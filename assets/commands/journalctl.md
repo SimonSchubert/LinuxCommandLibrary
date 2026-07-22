@@ -108,6 +108,22 @@ Journal files are stored in /var/log/journal/ (persistent) or /run/log/journal/ 
 
 Part of **systemd**, introduced in **2011** by Lennart Poettering. Replaces traditional syslog for systems using systemd.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmesg](/man/dmesg)(1), [systemctl](/man/systemctl)(1)

@@ -108,6 +108,21 @@ Not all GitHub Actions features are supported; some hosted runner features like 
 
 **act** was created by Casey Lee (nektos) and first released in **2019**. It was developed to address the slow feedback loop of GitHub Actions by enabling local execution. The project quickly gained popularity in the CI/CD community.
 
+# INSTALL
+
+```dnf: sudo dnf install act```
+
+```pacman: sudo pacman -S act```
+
+```apk: sudo apk add act```
+
+```zypper: sudo zypper install act```
+
+```brew: brew install act```
+
+```nix: nix profile install nixpkgs#act```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [docker](/man/docker)(1), [gh](/man/gh)(1), [make](/man/make)(1)

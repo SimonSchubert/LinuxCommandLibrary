@@ -97,6 +97,22 @@ Requires graphics hardware. Resource intensive. Plugin ecosystem available.
 
 OBS Studio was created by **Hugh Bailey** as free, open-source streaming software.
 
+# INSTALL
+
+```apt: sudo apt install obs-studio```
+
+```dnf: sudo dnf install obs-studio```
+
+```pacman: sudo pacman -S obs-studio```
+
+```apk: sudo apk add obs-studio```
+
+```zypper: sudo zypper install obs-studio```
+
+```nix: nix profile install nixpkgs#obs-studio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [vlc](/man/vlc)(1)

@@ -31,6 +31,12 @@ Stopping the NBD server during active transfers may cause data corruption or inc
 
 Part of **Proxmox VE** QEMU/KVM management tools for virtual machine administration. The NBD stop command was added to support advanced storage management and live migration workflows.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-migrate](/man/qm-migrate)(1), [qm-start](/man/qm-start)(1), [qm-stop](/man/qm-stop)(1), [qm-monitor](/man/qm-monitor)(1)

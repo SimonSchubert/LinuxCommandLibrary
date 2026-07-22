@@ -79,6 +79,14 @@ Without arguments, it lists all available plugins and their elements with summar
 
 This is an essential tool for GStreamer pipeline development, allowing developers to discover available elements, understand their capabilities, and check property types before constructing pipelines with **gst-launch-1.0**.
 
+# INSTALL
+
+```apt: sudo apt install gstreamer1.0-tools```
+
+```apk: sudo apk add gstreamer-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gst-launch-1.0](/man/gst-launch-1.0)(1), [gst-discoverer-1.0](/man/gst-discoverer-1.0)(1), [gst-play-1.0](/man/gst-play-1.0)(1), [gst-typefind-1.0](/man/gst-typefind-1.0)(1)

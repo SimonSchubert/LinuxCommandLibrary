@@ -91,6 +91,22 @@ Desktop integration needed. Engine selection required. X11/Wayland support varie
 
 IBus was created by **Peng Huang** as the next-generation input framework for Linux, replacing SCIM.
 
+# INSTALL
+
+```apt: sudo apt install ibus```
+
+```dnf: sudo dnf install ibus```
+
+```pacman: sudo pacman -S ibus```
+
+```apk: sudo apk add ibus```
+
+```zypper: sudo zypper install ibus```
+
+```nix: nix profile install nixpkgs#ibus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fcitx](/man/fcitx)(1), [fcitx5](/man/fcitx5)(1)

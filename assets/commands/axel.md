@@ -104,6 +104,23 @@ Some servers block multiple connections. May be considered aggressive by some si
 
 **axel** was created by Wilmer van der Gaast around **2001** as a lightweight alternative to download managers, focusing on speed through parallel connections.
 
+# INSTALL
+
+```apt: sudo apt install axel```
+
+```dnf: sudo dnf install axel```
+
+```pacman: sudo pacman -S axel```
+
+```apk: sudo apk add axel```
+
+```zypper: sudo zypper install axel```
+
+```brew: brew install axel```
+
+```nix: nix profile install nixpkgs#axel```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [wget](/man/wget)(1), [curl](/man/curl)(1), [aria2](/man/aria2)(1)

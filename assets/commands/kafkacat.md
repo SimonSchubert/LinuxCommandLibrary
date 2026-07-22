@@ -104,6 +104,12 @@ Renamed to kcat in newer versions. Requires librdkafka. Not included with Kafka 
 
 kafkacat was created by **Magnus Edenhill**, who also created librdkafka. It's been renamed to **kcat** but kafkacat remains widely used.
 
+# INSTALL
+
+```brew: brew install kafkacat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kcat](/man/kcat)(1), [kafka](/man/kafka)(1), [kafka-topics](/man/kafka-topics)(1)

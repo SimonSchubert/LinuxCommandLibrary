@@ -112,6 +112,14 @@ displays PostgreSQL installation configuration
 
 When invoked with no arguments, **pg_config** prints all known settings. Specifying one or more options restricts output to just those values.
 
+# INSTALL
+
+```apt: sudo apt install libpq-dev```
+
+```apk: sudo apk add libpq-dev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [postgres](/man/postgres)(1), [psql](/man/psql)(1)

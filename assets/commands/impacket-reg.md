@@ -117,6 +117,12 @@ Requires administrative credentials on the target. Valid root keys are **HKLM**,
 
 Part of the **Impacket** library by **SecureAuth** (now **Fortra**). The tool implements the MS-RRP (Windows Remote Registry Protocol) specification over MSRPC, enabling remote registry operations commonly used in penetration testing for persistence, lateral movement, and credential extraction.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [impacket-secretsdump](/man/impacket-secretsdump)(1), [impacket-psexec](/man/impacket-psexec)(1), [impacket-smbclient](/man/impacket-smbclient)(1)

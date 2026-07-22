@@ -58,6 +58,18 @@ Common Lisp configuration. Learning curve for customization. WebKitGTK backend.
 
 Nyxt was created as a **keyboard-driven browser** for power users, inspired by Emacs.
 
+# INSTALL
+
+```pacman: sudo pacman -S nyxt```
+
+```apk: sudo apk add nyxt```
+
+```zypper: sudo zypper install nyxt```
+
+```nix: nix profile install nixpkgs#nyxt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [firefox](/man/firefox)(1), [qutebrowser](/man/qutebrowser)(1), [surf](/man/surf)(1)

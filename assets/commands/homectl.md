@@ -95,6 +95,14 @@ Requires systemd-homed service. Not compatible with traditional /etc/passwd mana
 
 homectl and systemd-homed were introduced in systemd 245 (**2020**) by Lennart Poettering. They represent a modern approach to Linux user management with built-in encryption and portability features.
 
+# INSTALL
+
+```apt: sudo apt install systemd-homed```
+
+```zypper: sudo zypper install systemd-homed```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [useradd](/man/useradd)(8), [usermod](/man/usermod)(8), [loginctl](/man/loginctl)(1)

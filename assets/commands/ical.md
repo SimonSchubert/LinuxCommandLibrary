@@ -39,6 +39,14 @@ command-line tool for working with iCalendar files
 
 **ical** is a command-line tool for working with iCalendar (.ics) files. It can display, parse, and manipulate calendar data in the standard iCalendar format used by most calendar applications.
 
+# INSTALL
+
+```apt: sudo apt install itools```
+
+```nix: nix profile install nixpkgs#itools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [calcurse](/man/calcurse)(1), [khal](/man/khal)(1), [remind](/man/remind)(1)

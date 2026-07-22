@@ -49,6 +49,18 @@ Killing plasmashell removes desktop and panels. Use --replace for graceful resta
 
 **plasmashell** is the successor to plasma-desktop from KDE 4. It was rewritten for KDE Plasma 5 using Qt 5 and the KDE Frameworks 5, providing improved performance and modern features.
 
+# INSTALL
+
+```apt: sudo apt install plasma-workspace```
+
+```dnf: sudo dnf install plasma-workspace```
+
+```pacman: sudo pacman -S plasma-workspace```
+
+```apk: sudo apk add plasma-workspace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kwin](/man/kwin)(1), [startplasma-wayland](/man/startplasma-wayland)(1), [startplasma-x11](/man/startplasma-x11)(1)

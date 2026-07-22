@@ -75,6 +75,18 @@ No built-in channel separation; all messages appear in one stream. No scrollback
 
 **sic** is developed by the **suckless.org** community, known for minimalist software including **dwm** and **st**. The suckless philosophy emphasizes simplicity, clarity, and frugality, creating tools that do one thing well and integrate via Unix pipelines. The project has been active since the mid-**2000s**.
 
+# INSTALL
+
+```apt: sudo apt install sic```
+
+```apk: sudo apk add sic```
+
+```brew: brew install sic```
+
+```nix: nix profile install nixpkgs#sic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [irssi](/man/irssi)(1), [weechat](/man/weechat)(1), [ii](/man/ii)(1)

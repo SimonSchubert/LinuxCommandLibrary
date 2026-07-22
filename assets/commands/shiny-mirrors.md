@@ -65,6 +65,12 @@ Requires root privileges for refresh operations that modify system files. Mirror
 
 **shiny-mirrors** is a Manjaro-specific tool developed as a modern replacement for **pacman-mirrors**. It is designed to provide faster and more reliable mirror management for Manjaro Linux users. The tool is actively maintained as part of the Manjaro ecosystem.
 
+# INSTALL
+
+```aur: yay -S shiny-mirrors```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pacman-mirrors](/man/pacman-mirrors)(1), [reflector](/man/reflector)(1)

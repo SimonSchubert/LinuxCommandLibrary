@@ -74,6 +74,22 @@ Only handles connection to open networks; for WPA/WPA2 use wpa_supplicant. Some 
 
 **iw** is the successor to **iwconfig**, providing a modern interface to the Linux cfg80211 wireless subsystem.
 
+# INSTALL
+
+```apt: sudo apt install iw```
+
+```dnf: sudo dnf install iw```
+
+```pacman: sudo pacman -S iw```
+
+```apk: sudo apk add iw```
+
+```zypper: sudo zypper install iw```
+
+```nix: nix profile install nixpkgs#iw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iwconfig](/man/iwconfig)(8), [wpa_supplicant](/man/wpa_supplicant)(8), [nmcli](/man/nmcli)(1)

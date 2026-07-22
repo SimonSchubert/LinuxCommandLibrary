@@ -77,6 +77,24 @@ Integer factors only. No interpolation. Large factors create big files quickly. 
 
 **pamenlarge** was added to Netpbm in version **10.25** (October 2004) as a replacement for the older **pnmenlarge**.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamscale](/man/pamscale)(1), [pnmenlarge](/man/pnmenlarge)(1), [pamstretch](/man/pamstretch)(1)

@@ -121,6 +121,14 @@ Keep private keys secure with permissions 600. Protect keys with passphrases and
 
 Firewall rules may block SSH. Port 22 is commonly filtered; consider running SSH on alternate ports for such networks.
 
+# INSTALL
+
+```apt: sudo apt install openssh-client```
+
+```apk: sudo apk add dropbear-ssh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scp](/man/scp)(1), [sftp](/man/sftp)(1), [ssh-keygen](/man/ssh-keygen)(1), [ssh-copy-id](/man/ssh-copy-id)(1), [ssh-agent](/man/ssh-agent)(1)

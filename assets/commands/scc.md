@@ -100,6 +100,20 @@ Complexity estimates are heuristic. Language detection may misidentify some file
 
 **scc** was created by **Ben Boyter** around **2018** as a faster alternative to cloc and other line counters. Written in Go, it emphasizes speed through parallelism and efficient algorithms.
 
+# INSTALL
+
+```pacman: sudo pacman -S sc-controller```
+
+```apk: sudo apk add sc-controller```
+
+```zypper: sudo zypper install sc-controller```
+
+```brew: brew install scc```
+
+```nix: nix profile install nixpkgs#sc-controller```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cloc](/man/cloc)(1), [tokei](/man/tokei)(1), [loc](/man/loc)(1), [wc](/man/wc)(1)

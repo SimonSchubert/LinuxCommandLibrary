@@ -38,6 +38,16 @@ Bittensor is a protocol that creates a decentralized marketplace for machine int
 
 Requires a Bittensor wallet to be created before most operations. Blockchain operations involve real cryptocurrency and transaction fees. Network registration may require proof-of-work or recycled TAO. Always verify transaction details before confirming.
 
+# INSTALL
+
+```apt: sudo apt install bootterm```
+
+```brew: brew install bootterm```
+
+```nix: nix profile install nixpkgs#bootterm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1)

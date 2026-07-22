@@ -64,6 +64,24 @@ Requires Rust code blocks to be syntactically valid if **mdbook test** is used. 
 
 mdbook was created by the Rust community as the tool for writing Rust documentation and "The Rust Programming Language" book. It has since become popular for technical documentation beyond Rust projects.
 
+# INSTALL
+
+```apt: sudo apt install mdbook```
+
+```dnf: sudo dnf install mdbook```
+
+```pacman: sudo pacman -S mdbook```
+
+```apk: sudo apk add mdbook```
+
+```zypper: sudo zypper install mdbook```
+
+```brew: brew install mdbook```
+
+```nix: nix profile install nixpkgs#mdbook```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pandoc](/man/pandoc)(1), [hugo](/man/hugo)(1), [mkdocs](/man/mkdocs)(1)

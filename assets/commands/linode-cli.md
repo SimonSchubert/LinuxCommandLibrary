@@ -66,6 +66,14 @@ Requires API token. Operations may incur charges. Token stored in ~/.config/lino
 
 linode-cli is the official **Linode** command-line interface for managing their cloud infrastructure services.
 
+# INSTALL
+
+```brew: brew install linode-cli```
+
+```nix: nix profile install nixpkgs#linode-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [linode-cli-linodes](/man/linode-cli-linodes)(1), [linode-cli-volumes](/man/linode-cli-volumes)(1), [aws](/man/aws)(1)

@@ -48,6 +48,16 @@ It asks for confirmation before running unless `-f`/`--force` is passed.
 
 This is destructive: local commits not on the remote, uncommitted changes, and (without `-s`) untracked/ignored files are all discarded. It is not a fetch-and-rebase or fetch-and-merge; unlike `git pull`, divergent local work is thrown away rather than integrated.
 
+# INSTALL
+
+```zypper: sudo zypper install git-sync```
+
+```brew: brew install git-sync```
+
+```nix: nix profile install nixpkgs#git-sync```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-fetch](/man/git-fetch)(1), [git-reset](/man/git-reset)(1), [git-clean](/man/git-clean)(1), [git-extras](/man/git-extras)(1)

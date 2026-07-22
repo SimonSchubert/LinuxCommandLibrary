@@ -102,6 +102,20 @@ Command-line tool for quick EXIF inspection and modification. It can list tags, 
 
 Only works with JPEG files. Some tags are read-only. Use --no-fixup when modifying to preserve original data structure. The --machine-readable and --xml-output options are mutually exclusive.
 
+# INSTALL
+
+```apt: sudo apt install exif```
+
+```dnf: sudo dnf install exif```
+
+```zypper: sudo zypper install exif```
+
+```brew: brew install exif```
+
+```nix: nix profile install nixpkgs#exif```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [exiftool](/man/exiftool)(1), [jhead](/man/jhead)(1), [identify](/man/identify)(1)

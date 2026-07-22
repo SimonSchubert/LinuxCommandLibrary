@@ -34,6 +34,14 @@ Interactive SNMP request testing tool
 
 **snmptest** provides an interactive SNMP session for testing and debugging. Send arbitrary SNMP requests interactively. Part of Net-SNMP suite for development and troubleshooting.
 
+# INSTALL
+
+```apt: sudo apt install snmp```
+
+```apk: sudo apk add net-snmp-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snmpget](/man/snmpget)(1), [snmpwalk](/man/snmpwalk)(1)

@@ -51,6 +51,14 @@ At least three Sentinel instances are recommended for robust quorum. The default
 
 Redis Sentinel was introduced in **Redis 2.4** (stable in **2.8**) by **Salvatore Sanfilippo** to provide high availability without manual intervention.
 
+# INSTALL
+
+```apt: sudo apt install redis-sentinel```
+
+```apk: sudo apk add valkey-compat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [redis-server](/man/redis-server)(1), [redis-cli](/man/redis-cli)(1)

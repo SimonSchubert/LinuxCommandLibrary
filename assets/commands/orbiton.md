@@ -30,6 +30,16 @@ Not intended to replace full IDEs. Advanced LSP features are limited compared to
 
 **orbiton** was created by **Alexander F. Rodseth** (xyproto) and is written in **Go**.
 
+# INSTALL
+
+```pacman: sudo pacman -S orbiton```
+
+```brew: brew install orbiton```
+
+```nix: nix profile install nixpkgs#orbiton```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [micro](/man/micro)(1), [nano](/man/nano)(1), [ox](/man/ox)(1)

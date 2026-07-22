@@ -90,6 +90,12 @@ High compression levels are very slow (level 9 may take minutes per image). File
 
 ECT was developed as a high-performance lossless image optimizer, combining techniques from multiple compression tools (zopfli, optipng, etc.) into an efficient single tool.
 
+# INSTALL
+
+```aur: yay -S ect```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [optipng](/man/optipng)(1), [pngcrush](/man/pngcrush)(1), [jpegoptim](/man/jpegoptim)(1)

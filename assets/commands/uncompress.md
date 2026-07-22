@@ -49,6 +49,24 @@ LZW compression format is largely obsolete. Most systems now use gzip or newer c
 
 **uncompress** is part of the traditional Unix compress utilities using LZW compression, predating the more common gzip format.
 
+# INSTALL
+
+```apt: sudo apt install gzip```
+
+```dnf: sudo dnf install gzip```
+
+```pacman: sudo pacman -S gzip```
+
+```apk: sudo apk add gzip```
+
+```zypper: sudo zypper install gzip```
+
+```brew: brew install gzip```
+
+```nix: nix profile install nixpkgs#gzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [compress](/man/compress)(1), [gzip](/man/gzip)(1), [gunzip](/man/gunzip)(1)

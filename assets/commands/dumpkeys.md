@@ -96,6 +96,22 @@ Only works on Linux console, not X11 or Wayland. Requires access to console devi
 
 dumpkeys is part of the **kbd** package for Linux console keyboard utilities. It has been included in Linux distributions since the early **1990s** as a companion to loadkeys, providing a way to export and backup keyboard configurations.
 
+# INSTALL
+
+```apt: sudo apt install kbd```
+
+```dnf: sudo dnf install kbd```
+
+```pacman: sudo pacman -S kbd```
+
+```apk: sudo apk add kbd```
+
+```zypper: sudo zypper install kbd```
+
+```nix: nix profile install nixpkgs#kbd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [loadkeys](/man/loadkeys)(1), [showkey](/man/showkey)(1), [setxkbmap](/man/setxkbmap)(1)

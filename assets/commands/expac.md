@@ -70,6 +70,12 @@ Common format specifiers: %n (name), %v (version), %d (description), %D (depends
 
 Arch Linux and derivatives only. Format strings use % specifiers. Part of the pacman ecosystem. Use -H to format sizes in human-readable units (K, M, G, T).
 
+# INSTALL
+
+```pacman: sudo pacman -S expac```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pactree](/man/pactree)(8)

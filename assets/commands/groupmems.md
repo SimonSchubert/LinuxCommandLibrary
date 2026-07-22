@@ -61,6 +61,18 @@ Requires root or primary group ownership. Part of the shadow-utils package. Chan
 
 groupmems was developed as part of the **shadow** password suite for secure group management.
 
+# INSTALL
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groups](/man/groups)(1), [gpasswd](/man/gpasswd)(1), [usermod](/man/usermod)(8), [groupadd](/man/groupadd)(8), [groupmod](/man/groupmod)(8)

@@ -38,6 +38,16 @@ Requires root privileges. Cannot enable/disable SELinux entirely; only toggles b
 
 **setenforce** is part of the SELinux userspace tools developed by the NSA and Red Hat. It has been available since the introduction of SELinux in the Linux 2.6 kernel.
 
+# INSTALL
+
+```apt: sudo apt install selinux-utils```
+
+```dnf: sudo dnf install libselinux-utils```
+
+```apk: sudo apk add libselinux-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [getenforce](/man/getenforce)(8), [semanage-permissive](/man/semanage-permissive)(8), [sestatus](/man/sestatus)(8)

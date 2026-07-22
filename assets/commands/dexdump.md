@@ -65,6 +65,12 @@ The tool is part of the Android SDK build tools and provides insight into the st
 
 DEX files contain compiled Java bytecode for the Dalvik VM or Android Runtime (ART). dexdump helps developers and security researchers understand app internals, debug compilation issues, and perform reverse engineering analysis.
 
+# INSTALL
+
+```apt: sudo apt install dexdump```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apktool](/man/apktool)(1), [jadx](/man/jadx)(1), [dex2jar](/man/dex2jar)(1)

@@ -98,6 +98,18 @@ Numeric comparisons require fields to contain valid numbers. Non-numeric values 
 
 Large recfiles may be slow to process compared to proper databases, but the simplicity and portability often outweigh performance concerns for moderate data sizes.
 
+# INSTALL
+
+```dnf: sudo dnf install recutils```
+
+```apk: sudo apk add recutils```
+
+```brew: brew install recutils```
+
+```nix: nix profile install nixpkgs#recutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [recins](/man/recins)(1), [recdel](/man/recdel)(1), [recset](/man/recset)(1), [recfmt](/man/recfmt)(1), [rec2csv](/man/rec2csv)(1)

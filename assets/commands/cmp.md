@@ -84,6 +84,24 @@ kB (1000), MB (1000000), GB (1000000000)
 
 Cannot compare directories, only files. For text file differences, use diff instead. Reading from stdin use - as filename.
 
+# INSTALL
+
+```apt: sudo apt install diffutils```
+
+```dnf: sudo dnf install diffutils```
+
+```pacman: sudo pacman -S diffutils```
+
+```apk: sudo apk add diffutils```
+
+```zypper: sudo zypper install diffutils```
+
+```brew: brew install diffutils```
+
+```nix: nix profile install nixpkgs#diffutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [comm](/man/comm)(1), [md5sum](/man/md5sum)(1)

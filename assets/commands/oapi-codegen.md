@@ -74,6 +74,12 @@ OpenAPI 3.0+ only. Generated code may need modification. Large specs produce lar
 
 oapi-codegen was created by **DeepMap, Inc.** to provide high-quality Go code generation from OpenAPI specifications.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#oapi-codegen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openapi-generator](/man/openapi-generator)(1)

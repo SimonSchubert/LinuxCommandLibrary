@@ -87,6 +87,24 @@ The **+** syntax for -n and -c counts from the beginning (1-indexed for lines, 0
 
 **tail** originated in **AT&T Unix** Version 1 (1971). It is part of POSIX and GNU coreutils on Linux.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [head](/man/head)(1), [less](/man/less)(1), [cat](/man/cat)(1), [multitail](/man/multitail)(1)

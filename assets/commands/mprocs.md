@@ -42,6 +42,16 @@ Processes are terminated when mprocs exits. Not intended as a replacement for tm
 
 **mprocs** was created by **pvolok** and is written in **Rust**.
 
+# INSTALL
+
+```apk: sudo apk add mprocs```
+
+```brew: brew install mprocs```
+
+```nix: nix profile install nixpkgs#mprocs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [screen](/man/screen)(1), [foreman](/man/foreman)(1)

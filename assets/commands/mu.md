@@ -113,6 +113,22 @@ Maildir format only. Requires Xapian library. The database must be re-indexed af
 
 **mu** was created by **Dirk-Jan C. Binnema** as a fast mail search tool, forming the backend for the **mu4e** Emacs mail client. It was designed as a lightweight alternative to notmuch with a focus on simplicity and speed.
 
+# INSTALL
+
+```apt: sudo apt install maildir-utils```
+
+```dnf: sudo dnf install maildir-utils```
+
+```apk: sudo apk add mu```
+
+```zypper: sudo zypper install maildir-utils```
+
+```brew: brew install mu```
+
+```nix: nix profile install nixpkgs#mu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [notmuch](/man/notmuch)(1), [mairix](/man/mairix)(1), [mutt](/man/mutt)(1), [neomutt](/man/neomutt)(1)

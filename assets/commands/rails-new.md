@@ -120,6 +120,12 @@ The default database is SQLite, which is suitable for development but not recomm
 
 Bundle install runs automatically unless **--skip-bundle** is specified. This can take time on first run as gems are downloaded and compiled.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#rails-new```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rails](/man/rails)(1), [bundle](/man/bundle)(1), [gem](/man/gem)(1), [ruby](/man/ruby)(1)

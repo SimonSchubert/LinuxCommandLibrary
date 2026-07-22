@@ -64,6 +64,24 @@ This command is considered a legacy convenience wrapper. The more general **open
 
 Key sizes below 2048 bits are considered insecure. Some applications require the traditional PKCS#1 format; use **-traditional** if needed. In OpenSSL 3.x the default output format changed from PKCS#1 to PKCS#8, which may affect older tools.
 
+# INSTALL
+
+```apt: sudo apt install openssl```
+
+```dnf: sudo dnf install openssl```
+
+```pacman: sudo pacman -S openssl```
+
+```apk: sudo apk add openssl```
+
+```zypper: sudo zypper install openssl```
+
+```brew: brew install openssl```
+
+```nix: nix profile install nixpkgs#openssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [openssl-rsa](/man/openssl-rsa)(1), [openssl-genpkey](/man/openssl-genpkey)(1)

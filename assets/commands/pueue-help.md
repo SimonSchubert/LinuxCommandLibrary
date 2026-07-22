@@ -37,6 +37,20 @@ Also available via --help flag.
 
 pueue help provides **built-in documentation** for pueue commands.
 
+# INSTALL
+
+```pacman: sudo pacman -S pueue```
+
+```apk: sudo apk add pueue```
+
+```zypper: sudo zypper install pueue```
+
+```brew: brew install pueue```
+
+```nix: nix profile install nixpkgs#pueue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pueue](/man/pueue)(1)

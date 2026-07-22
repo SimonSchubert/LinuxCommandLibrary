@@ -90,6 +90,24 @@ Search GitHub for repositories, code, issues, and more
 
 Repository search enables finding projects by language, stars, topics, and other metadata. Code search indexes file contents across public repositories, useful for finding implementation examples. Issue and PR search support filtering by state, author, labels, and mentions.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-repo](/man/gh-repo)(1)

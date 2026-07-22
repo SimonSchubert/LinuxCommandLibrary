@@ -111,6 +111,16 @@ clusterctl also supports moving Cluster API resources between management cluster
 
 Set GITHUB_TOKEN to avoid API rate limiting. Requires kubectl configured for target cluster. Uses go proxy for version detection.
 
+# INSTALL
+
+```zypper: sudo zypper install clusterctl```
+
+```brew: brew install clusterctl```
+
+```nix: nix profile install nixpkgs#clusterctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kind](/man/kind)(1), [kubeadm](/man/kubeadm)(1)

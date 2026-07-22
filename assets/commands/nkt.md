@@ -38,6 +38,12 @@ Notes are stored locally. The project has moved from GitHub to sourcehut.
 
 **nkt** was created by **fjebaker** and is written in **Zig**.
 
+# INSTALL
+
+```brew: brew install nkt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nb](/man/nb)(1), [jrnl](/man/jrnl)(1)

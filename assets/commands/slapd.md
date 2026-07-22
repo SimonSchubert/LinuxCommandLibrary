@@ -101,6 +101,22 @@ Running with **-d** flag prevents daemonization and is intended for debugging on
 
 **slapd** is part of the OpenLDAP project, an open-source implementation of the Lightweight Directory Access Protocol. OpenLDAP development began at the University of Michigan in **1998** as a continuation of the original U-M LDAP project. The software has evolved to become one of the most widely deployed LDAP servers, used for user authentication, address books, and directory services. The project continues active development with regular releases.
 
+# INSTALL
+
+```apt: sudo apt install slapd```
+
+```dnf: sudo dnf install openldap```
+
+```pacman: sudo pacman -S openldap```
+
+```apk: sudo apk add openldap```
+
+```brew: brew install openldap```
+
+```nix: nix profile install nixpkgs#openldap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ldapsearch](/man/ldapsearch)(1), [ldapadd](/man/ldapadd)(1), [ldapmodify](/man/ldapmodify)(1)

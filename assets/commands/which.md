@@ -41,6 +41,20 @@ Some systems have different which implementations with varying options. The **-a
 
 If a command isn't found, which typically exits with status 1 and produces no output (or an error message depending on implementation).
 
+# INSTALL
+
+```dnf: sudo dnf install which```
+
+```pacman: sudo pacman -S which```
+
+```apk: sudo apk add which```
+
+```zypper: sudo zypper install which```
+
+```nix: nix profile install nixpkgs#which```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [type](/man/type)(1), [whereis](/man/whereis)(1), [command](/man/command)(1), [hash](/man/hash)(1)

@@ -52,6 +52,16 @@ This provides physical security for text-mode console sessions, similar to scree
 
 Locking all consoles prevents access to any console without the password. Root can still unlock. Works only on virtual consoles, not pseudo-terminals.
 
+# INSTALL
+
+```apt: sudo apt install vlock```
+
+```apk: sudo apk add kbd-vlock```
+
+```nix: nix profile install nixpkgs#vlock```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [physlock](/man/physlock)(1)

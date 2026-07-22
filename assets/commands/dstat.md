@@ -86,6 +86,20 @@ Note also that the first line of output is an average since boot rather than a m
 
 dstat was written by **Dag Wieers** in **2004**, and its pitch was straightforward: `vmstat`, `iostat`, `netstat`, and `ifstat` each showed you one part of the picture, in a different format, on a different schedule, and correlating them by eye across four terminals was miserable. dstat put them in one aligned, colour-coded, plugin-extensible table with a shared timeline, which turned out to be exactly what people wanted when hunting a bottleneck. Its dependence on Python 2 eventually outlived Python 2 itself, and the project was retired in favour of the **dool** fork.
 
+# INSTALL
+
+```apt: sudo apt install pcp```
+
+```dnf: sudo dnf install pcp```
+
+```pacman: sudo pacman -S pcp```
+
+```zypper: sudo zypper install pcp```
+
+```brew: brew install pcp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vmstat](/man/vmstat)(8), [iostat](/man/iostat)(1), [sar](/man/sar)(1), [pidstat](/man/pidstat)(1), [htop](/man/htop)(1)

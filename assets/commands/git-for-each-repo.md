@@ -39,6 +39,24 @@ The primary use case is git-maintenance, which uses for-each-repo to run mainten
 **~/.gitconfig**
 > Contains multi-valued configuration keys listing repository paths for batch operations.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-maintenance](/man/git-maintenance)(1), [git-config](/man/git-config)(1)

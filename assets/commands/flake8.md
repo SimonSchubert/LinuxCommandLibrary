@@ -81,6 +81,14 @@ Strict defaults may require customization. Some checks overlap with other tools.
 
 flake8 was created by **Tarek Ziadé** to unify Python linting tools. It wraps multiple checkers under a single interface with consistent configuration and output.
 
+# INSTALL
+
+```apk: sudo apk add py3-flake8```
+
+```brew: brew install flake8```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pylint](/man/pylint)(1), [black](/man/black)(1), [ruff](/man/ruff)(1)

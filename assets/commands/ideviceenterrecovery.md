@@ -48,6 +48,16 @@ Device must be paired. Recovery mode needs manual exit. Part of libimobiledevice
 
 ideviceenterrecovery is part of **libimobiledevice** for iOS device management on Linux.
 
+# INSTALL
+
+```apt: sudo apt install libimobiledevice-utils```
+
+```dnf: sudo dnf install libimobiledevice-utils```
+
+```apk: sudo apk add libimobiledevice-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [idevice_id](/man/idevice_id)(1), [idevicepair](/man/idevicepair)(1)

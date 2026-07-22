@@ -87,6 +87,20 @@ Works best with conventional commits. Requires configuration for custom formats.
 
 git cliff was created by **Orhun Parmaksiz** as a highly customizable changelog generator, written in Rust for performance.
 
+# INSTALL
+
+```pacman: sudo pacman -S git-cliff```
+
+```apk: sudo apk add git-cliff```
+
+```zypper: sudo zypper install git-cliff```
+
+```brew: brew install git-cliff```
+
+```nix: nix profile install nixpkgs#git-cliff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-changelog](/man/git-changelog)(1), [git-log](/man/git-log)(1)

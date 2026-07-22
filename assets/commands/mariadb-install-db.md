@@ -48,6 +48,24 @@ initializes the MariaDB data directory and system tables
 
 **mariadb-install-db** initializes the MariaDB data directory and system tables. Required before first server start. Creates privilege tables and default databases. Replaces mysql_install_db in MariaDB.
 
+# INSTALL
+
+```apt: sudo apt install mariadb-server-core```
+
+```dnf: sudo dnf install mariadb```
+
+```pacman: sudo pacman -S mariadb```
+
+```apk: sudo apk add mariadb```
+
+```zypper: sudo zypper install mariadb```
+
+```brew: brew install mariadb```
+
+```nix: nix profile install nixpkgs#mariadb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mariadb](/man/mariadb)(1)

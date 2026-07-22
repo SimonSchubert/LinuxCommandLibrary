@@ -66,6 +66,24 @@ Server-side only. Requires client to control. Configuration needed for audio out
 
 MPD was created as a **flexible music server** allowing multiple client interfaces and remote control.
 
+# INSTALL
+
+```apt: sudo apt install mpd```
+
+```dnf: sudo dnf install mpd```
+
+```pacman: sudo pacman -S mpd```
+
+```apk: sudo apk add mpd```
+
+```zypper: sudo zypper install mpd```
+
+```brew: brew install mpd```
+
+```nix: nix profile install nixpkgs#mpd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpc](/man/mpc)(1), [ncmpcpp](/man/ncmpcpp)(1), [pulseaudio](/man/pulseaudio)(1)

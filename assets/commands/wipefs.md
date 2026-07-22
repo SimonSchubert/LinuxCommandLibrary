@@ -80,6 +80,24 @@ This command removes filesystem identification signatures but does not erase the
 
 **wipefs** is part of the **util-linux** package, providing signature management for block devices.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add wipefs```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blkid](/man/blkid)(8), [lsblk](/man/lsblk)(8), [blkdiscard](/man/blkdiscard)(8), [dd](/man/dd)(1), [fdisk](/man/fdisk)(8)

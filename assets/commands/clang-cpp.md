@@ -47,6 +47,14 @@ Clang C/C++ preprocessor
 
 This is the LLVM/Clang equivalent of **cpp** from GCC.
 
+# INSTALL
+
+```apk: sudo apk add clang22```
+
+```zypper: sudo zypper install clang22```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clang](/man/clang)(1), [clang++](/man/clang++)(1)

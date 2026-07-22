@@ -109,6 +109,12 @@ Slower startup than precompiled JavaScript. Type checking adds overhead. Some ad
 
 **ts-node** was created around **2015** to enable direct TypeScript execution. It became essential for TypeScript development, enabling scripts, REPL, and development servers.
 
+# INSTALL
+
+```pacman: sudo pacman -S ts-node```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tsc](/man/tsc)(1), [node](/man/node)(1), [npx](/man/npx)(1), [tsx](/man/tsx)(1)

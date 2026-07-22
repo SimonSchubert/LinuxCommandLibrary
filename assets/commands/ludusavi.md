@@ -104,6 +104,14 @@ Not all games are in the manifest. Cloud saves may conflict. Some games use regi
 
 **ludusavi** was created around **2020** as an open-source alternative to GameSave Manager. It uses the PCGamingWiki manifest for save locations, benefiting from community-maintained data about thousands of games.
 
+# INSTALL
+
+```brew: brew install ludusavi```
+
+```nix: nix profile install nixpkgs#ludusavi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [restic](/man/restic)(1), [rsync](/man/rsync)(1), [rclone](/man/rclone)(1)

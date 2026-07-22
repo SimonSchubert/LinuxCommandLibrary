@@ -68,6 +68,20 @@ Subcommand of jj. Descriptions can be changed anytime. Empty description allowed
 
 jj describe is part of **Jujutsu**, enabling flexible change descriptions that can be modified throughout development.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-new](/man/jj-new)(1), [jj-log](/man/jj-log)(1)

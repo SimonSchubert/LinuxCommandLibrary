@@ -145,6 +145,20 @@ Brute-force attacks generate significant network traffic and log entries on targ
 
 Medusa was developed by **Joe Mondloch** (JoMo-Kun) and first released around **2005**. The name references the mythological creature with multiple snake heads, symbolizing the tool's ability to attack multiple targets simultaneously. It was designed as an alternative to Hydra, focusing on modularity and parallel testing capabilities. The project remains popular for network security assessments and penetration testing.
 
+# INSTALL
+
+```apt: sudo apt install medusa```
+
+```dnf: sudo dnf install medusa```
+
+```pacman: sudo pacman -S medusa```
+
+```brew: brew install medusa```
+
+```nix: nix profile install nixpkgs#medusa```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hydra](/man/hydra)(1), [ncrack](/man/ncrack)(1), [john](/man/john)(1), [hashcat](/man/hashcat)(1)

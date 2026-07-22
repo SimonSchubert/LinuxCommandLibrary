@@ -66,6 +66,12 @@ Requires PHP development tools. May need root. Compiler required.
 
 PECL was created for **distributing PHP extensions** separately from core.
 
+# INSTALL
+
+```apk: sudo apk add php85-pear```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pear](/man/pear)(1), [php](/man/php)(1), [phpize](/man/phpize)(1)

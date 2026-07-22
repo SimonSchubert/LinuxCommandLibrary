@@ -64,6 +64,22 @@ This is commonly used for building packages (particularly Debian .deb packages) 
 
 Does not provide real root privileges. Only fakes ownership information. Used extensively in package building systems like dpkg-buildpackage.
 
+# INSTALL
+
+```dnf: sudo dnf install fakeroot```
+
+```pacman: sudo pacman -S fakeroot```
+
+```apk: sudo apk add fakeroot```
+
+```zypper: sudo zypper install fakeroot```
+
+```brew: brew install fakeroot```
+
+```nix: nix profile install nixpkgs#fakeroot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sudo](/man/sudo)(8), [dpkg-buildpackage](/man/dpkg-buildpackage)(1)

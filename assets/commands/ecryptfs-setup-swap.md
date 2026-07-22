@@ -40,6 +40,20 @@ Disables hibernation (swap content unrecoverable). Requires root privileges. Exi
 
 ecryptfs-setup-swap is part of the **eCryptfs** utilities, addressing the security gap where encrypted filesystem data could leak to unencrypted swap space.
 
+# INSTALL
+
+```apt: sudo apt install ecryptfs-utils```
+
+```dnf: sudo dnf install ecryptfs-utils```
+
+```pacman: sudo pacman -S ecryptfs-utils```
+
+```apk: sudo apk add ecryptfs-utils```
+
+```zypper: sudo zypper install ecryptfs-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ecryptfs-setup-private](/man/ecryptfs-setup-private)(1), [ecryptfs](/man/ecryptfs)(7), [cryptsetup](/man/cryptsetup)(8), [swapon](/man/swapon)(8)

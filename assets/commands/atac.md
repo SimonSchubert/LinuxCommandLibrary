@@ -121,6 +121,17 @@ Requires Rust 1.82 or later to build from source. On macOS, binaries downloaded 
 
 **atac** was created by **Julien Caposiena** (Julien-cpsn) and first published to crates.io in **April 2024**. The project is open source under the MIT license and hosted on GitHub. It was built to provide a free, account-less, offline-first alternative to graphical API clients like Postman and Insomnia.
 
+# INSTALL
+
+```apt: sudo apt install atac```
+
+```pacman: sudo pacman -S atac```
+
+```brew: brew install atac```
+
+```nix: nix profile install nixpkgs#atac```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [curl](/man/curl)(1), [httpie](/man/httpie)(1), [wget](/man/wget)(1), [websocat](/man/websocat)(1), [posting](/man/posting)(1)

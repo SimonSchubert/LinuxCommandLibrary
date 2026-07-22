@@ -102,6 +102,16 @@ Without arguments, the command lists all local branches with an asterisk marking
 
 Branches can be used for testing schema changes, experimenting with data transformations, or maintaining multiple versions of a dataset.
 
+# INSTALL
+
+```pacman: sudo pacman -S dolt```
+
+```brew: brew install dolt```
+
+```nix: nix profile install nixpkgs#dolt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dolt-checkout](/man/dolt-checkout)(1), [dolt-merge](/man/dolt-merge)(1), [dolt-commit](/man/dolt-commit)(1), [dolt-status](/man/dolt-status)(1), [dolt](/man/dolt)(1)

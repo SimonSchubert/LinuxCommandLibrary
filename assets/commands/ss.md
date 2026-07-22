@@ -114,6 +114,22 @@ State filtering supports TCP states (established, syn-sent, syn-recv, fin-wait-1
 
 **ss** is part of the **iproute2** package and was developed as a modern replacement for **netstat**. It provides faster performance by reading directly from kernel netlink sockets rather than parsing /proc files.
 
+# INSTALL
+
+```apt: sudo apt install iproute2```
+
+```pacman: sudo pacman -S iproute2```
+
+```apk: sudo apk add iproute2-ss```
+
+```zypper: sudo zypper install iproute2```
+
+```brew: brew install iproute2```
+
+```nix: nix profile install nixpkgs#iproute2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip](/man/ip)(8), [netstat](/man/netstat)(8), [lsof](/man/lsof)(8)

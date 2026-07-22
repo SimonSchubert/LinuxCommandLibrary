@@ -100,6 +100,16 @@ Loop devices require root privileges to create and detach. The kernel has a limi
 
 **losetup** is part of the **util-linux** package, providing loop device management on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install mount```
+
+```apk: sudo apk add losetup```
+
+```nix: nix profile install nixpkgs#mount```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(8), [cryptsetup](/man/cryptsetup)(8), [dd](/man/dd)(1)

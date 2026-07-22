@@ -62,6 +62,12 @@ OSINT tool requiring authorization. Rate limits may apply. Results may have fals
 
 holehe was created as an OSINT tool for checking email registrations across many platforms.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#holehe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sherlock](/man/sherlock)(1), [theHarvester](/man/theHarvester)(1)

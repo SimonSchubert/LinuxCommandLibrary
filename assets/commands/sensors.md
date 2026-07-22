@@ -59,6 +59,18 @@ The output is organized by chip, showing adapter type and individual sensor read
 
 Requires the lm-sensors package. Run **sensors-detect** first to detect and configure available sensors. Some sensors may require kernel modules to be loaded. Part of the lm-sensors package.
 
+# INSTALL
+
+```apt: sudo apt install lm-sensors```
+
+```apk: sudo apk add lm-sensors```
+
+```zypper: sudo zypper install sensors```
+
+```brew: brew install lm-sensors```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sensors-detect](/man/sensors-detect)(8)

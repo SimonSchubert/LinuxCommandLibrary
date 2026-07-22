@@ -108,6 +108,14 @@ Targets can be process names (substring match by default), PIDs, ports, open fil
 
 Some details (especially containers and remote runtimes) require appropriate privileges and installed client tools. Substring name matching can return multiple hits; re-run with **--pid** or **--exact**. Output quality depends on what the local process tree and supervisors expose.
 
+# INSTALL
+
+```brew: brew install witr```
+
+```nix: nix profile install nixpkgs#witr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ps](/man/ps)(1), [lsof](/man/lsof)(1), [ss](/man/ss)(8), [systemctl](/man/systemctl)(1), [docker](/man/docker)(1)

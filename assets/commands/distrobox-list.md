@@ -31,6 +31,22 @@ The output shows container name, status, and image used.
 
 Only shows containers created by Distrobox, not regular Docker/Podman containers.
 
+# INSTALL
+
+```dnf: sudo dnf install distrobox```
+
+```pacman: sudo pacman -S distrobox```
+
+```apk: sudo apk add distrobox```
+
+```zypper: sudo zypper install distrobox```
+
+```brew: brew install distrobox```
+
+```nix: nix profile install nixpkgs#distrobox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [distrobox](/man/distrobox)(1), [distrobox-create](/man/distrobox-create)(1), [podman](/man/podman)(1)

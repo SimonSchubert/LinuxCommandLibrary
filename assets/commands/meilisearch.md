@@ -74,6 +74,16 @@ Single-node only (no clustering). Index size limited by RAM. Master key required
 
 Meilisearch was created by **Clément Renault** in **2018** as an open-source, easy-to-use search engine written in Rust.
 
+# INSTALL
+
+```pacman: sudo pacman -S meilisearch```
+
+```brew: brew install meilisearch```
+
+```nix: nix profile install nixpkgs#meilisearch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [elasticsearch](/man/elasticsearch)(1)

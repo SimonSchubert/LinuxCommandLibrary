@@ -56,6 +56,22 @@ Set **working directory**
 
 Part of LXDE desktop. Lightweight alternative to gnome-terminal or konsole.
 
+# INSTALL
+
+```apt: sudo apt install lxterminal```
+
+```dnf: sudo dnf install lxterminal```
+
+```pacman: sudo pacman -S lxterminal```
+
+```apk: sudo apk add lxterminal```
+
+```zypper: sudo zypper install lxterminal```
+
+```nix: nix profile install nixpkgs#lxterminal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xterm](/man/xterm)(1), [gnome-terminal](/man/gnome-terminal)(1), [konsole](/man/konsole)(1)

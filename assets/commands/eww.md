@@ -105,6 +105,14 @@ Popular for creating status bars, sidebars, and other desktop elements.
 
 Requires configuration files in eww format. Daemon must be running for widgets to display. Works with X11 and Wayland.
 
+# INSTALL
+
+```zypper: sudo zypper install eww```
+
+```nix: nix profile install nixpkgs#eww```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [polybar](/man/polybar)(1), [conky](/man/conky)(1), [waybar](/man/waybar)(1)

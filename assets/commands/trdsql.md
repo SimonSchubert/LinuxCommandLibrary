@@ -85,6 +85,14 @@ Go-based tool. Large files are loaded into memory. SQL knowledge required. Defau
 
 **trdsql** was created to execute SQL queries against various structured data formats like CSV and JSON.
 
+# INSTALL
+
+```brew: brew install trdsql```
+
+```nix: nix profile install nixpkgs#trdsql```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [textql](/man/textql)(1), [q](/man/q)(1), [miller](/man/miller)(1)

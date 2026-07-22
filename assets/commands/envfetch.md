@@ -58,6 +58,12 @@ Cross-platform compatibility may have slight variations. Sensitive variables are
 
 **envfetch** was developed as a portable alternative to platform-specific environment inspection tools.
 
+# INSTALL
+
+```aur: yay -S envfetch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [env](/man/env)(1), [printenv](/man/printenv)(1), [set](/man/set)(1)

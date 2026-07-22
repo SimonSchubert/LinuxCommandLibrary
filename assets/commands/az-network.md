@@ -70,6 +70,19 @@ Many network resources have dependencies; for example, deleting a virtual networ
 
 Azure Virtual Network was one of the earliest Azure services, launching with Azure's general availability in **2010**. The networking capabilities have expanded significantly to include Azure DNS (2015), Application Gateway, ExpressRoute, and advanced security features.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-vm](/man/az-vm)(1), [az-aks](/man/az-aks)(1)

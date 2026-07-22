@@ -44,6 +44,20 @@ updates fields of a resource using strategic merge patch, JSON merge
 
 The command supports three patch strategies: strategic merge patch (the default), which intelligently merges lists and maps according to Kubernetes schema knowledge; JSON merge patch, which performs a straightforward recursive merge; and JSON patch (RFC 6902), which uses explicit operations like add, remove, and replace on specific JSON paths. Patch content can be provided inline via the -p flag or read from a file with --patch-file.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-edit](/man/kubectl-edit)(1)

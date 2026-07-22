@@ -61,6 +61,18 @@ Deploy infrastructure changes
 
 **pulumi up** creates or updates infrastructure. Compares desired state with current infrastructure and applies necessary changes. The primary command for deploying Pulumi programs.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-preview](/man/pulumi-preview)(1), [pulumi-destroy](/man/pulumi-destroy)(1)

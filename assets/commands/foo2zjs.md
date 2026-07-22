@@ -70,6 +70,16 @@ Only for ZjStream-compatible printers. Model support varies. Check compatibility
 
 foo2zjs was created by **Rick Richardson** to provide Linux drivers for "Windows-only" GDI printers. The project reverse-engineered proprietary protocols, enabling Linux support for many consumer laser printers.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+```dnf: sudo dnf install foo2zjs```
+
+```nix: nix profile install nixpkgs#foo2zjs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2zjs-wrapper](/man/foo2zjs-wrapper)(1), [foo2hp](/man/foo2hp)(1), [foo2lava](/man/foo2lava)(1)

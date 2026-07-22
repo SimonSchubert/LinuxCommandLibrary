@@ -86,6 +86,18 @@ Requires ntfy.sh or a self-hosted server. Topics are public by default unless ac
 
 ntfy was created by **Philipp C. Heckel** as a simple HTTP-based pub-sub notification service.
 
+# INSTALL
+
+```apt: sudo apt install ntfy```
+
+```apk: sudo apk add ntfy```
+
+```brew: brew install ntfy```
+
+```nix: nix profile install nixpkgs#ntfy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [notify-send](/man/notify-send)(1)

@@ -101,6 +101,19 @@ Related command groups include **az pipelines** for CI/CD pipelines, **az boards
 
 Requires the Azure DevOps CLI extension to be installed with **az extension add --name azure-devops**. Only available for Azure DevOps Services (cloud), not Azure DevOps Server (on-premises). Requires Azure CLI v2.0.69 or later.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-pipelines](/man/az-pipelines)(1), [az-repos](/man/az-repos)(1)

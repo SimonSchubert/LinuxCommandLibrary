@@ -64,6 +64,24 @@ Creating directories requires write permission in the parent directory. On files
 
 The **mkdir** command has been part of Unix since the **First Edition in 1971**, making it one of the original Unix commands. It was created by **Ken Thompson** at Bell Labs. The command has remained remarkably stable over the decades, with the **-p** option added in later versions to simplify directory tree creation. It is defined by the POSIX standard and is available on all Unix-like operating systems.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rmdir](/man/rmdir)(1), [rm](/man/rm)(1), [ls](/man/ls)(1), [chmod](/man/chmod)(1), [install](/man/install)(1)

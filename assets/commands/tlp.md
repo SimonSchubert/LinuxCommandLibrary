@@ -67,6 +67,20 @@ May conflict with other power management tools. Some settings require specific h
 
 **TLP** was created by **Thomas Koch** (linrunner) to provide comprehensive power management for Linux laptops without requiring manual configuration.
 
+# INSTALL
+
+```dnf: sudo dnf install tlp```
+
+```pacman: sudo pacman -S tlp```
+
+```apk: sudo apk add tlp```
+
+```zypper: sudo zypper install tlp```
+
+```nix: nix profile install nixpkgs#tlp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tlp-stat](/man/tlp-stat)(8), [powertop](/man/powertop)(8)

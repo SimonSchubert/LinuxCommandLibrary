@@ -38,6 +38,16 @@ stdin may also supply text. Interactive keys are shown in the UI.
 
 Name collision with Python's Typer package—ensure the Go binary is first on PATH if both are installed.
 
+# INSTALL
+
+```apk: sudo apk add erlang27```
+
+```zypper: sudo zypper install erlang27```
+
+```nix: nix profile install nixpkgs#typer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tt](/man/tt)(1), [toipe](/man/toipe)(1)

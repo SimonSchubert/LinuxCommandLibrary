@@ -65,6 +65,22 @@ Different object types support different properties. The list command shows what
 
 Setting compression on a directory only affects new files; existing files need explicit recompression. Not all properties are writable. Some operations require root privileges.
 
+# INSTALL
+
+```apt: sudo apt install btrfs-progs```
+
+```dnf: sudo dnf install btrfs-progs```
+
+```pacman: sudo pacman -S btrfs-progs```
+
+```apk: sudo apk add btrfs-progs```
+
+```brew: brew install btrfs-progs```
+
+```nix: nix profile install nixpkgs#btrfs-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [btrfs-subvolume](/man/btrfs-subvolume)(8), [chattr](/man/chattr)(1)

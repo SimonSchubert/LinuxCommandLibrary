@@ -104,6 +104,16 @@ Parallel task execution (**-m**, **-j**) requires tasks to be thread-safe. Share
 
 Rake was created by **Jim Weirich** in **2003** as a Ruby alternative to Make. The name stands for "Ruby Make." It was included in Ruby's standard library starting with version 1.9 in 2007. After Weirich's passing in 2014, the project continues to be maintained by the Ruby community.
 
+# INSTALL
+
+```pacman: sudo pacman -S ruby-rake```
+
+```apk: sudo apk add ruby-rake```
+
+```nix: nix profile install nixpkgs#rake```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [make](/man/make)(1), [ruby](/man/ruby)(1), [bundle](/man/bundle)(1), [rails](/man/rails)(1)

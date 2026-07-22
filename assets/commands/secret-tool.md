@@ -73,6 +73,24 @@ Requires a running Secret Service provider (gnome-keyring-daemon or kwalletd). S
 
 Part of **libsecret**, the GNOME library implementing the Freedesktop Secret Service specification. **secret-tool** was added as a convenience CLI so the keyring could be scripted without writing D-Bus code.
 
+# INSTALL
+
+```apt: sudo apt install libsecret-tools```
+
+```dnf: sudo dnf install libsecret```
+
+```pacman: sudo pacman -S libsecret```
+
+```apk: sudo apk add libsecret```
+
+```zypper: sudo zypper install secret-tool```
+
+```brew: brew install libsecret```
+
+```nix: nix profile install nixpkgs#libsecret```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnome-keyring](/man/gnome-keyring)(1), [pass](/man/pass)(1)

@@ -147,6 +147,12 @@ Full vacuum locks tables exclusively and requires extra disk space for the rewri
 
 **vacuumdb** has been part of **PostgreSQL** since early versions. It provides command-line access to vacuum operations essential for database maintenance.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [psql](/man/psql)(1), [pg_dump](/man/pg_dump)(1), [reindexdb](/man/reindexdb)(1), [clusterdb](/man/clusterdb)(1), [createdb](/man/createdb)(1)

@@ -86,6 +86,18 @@ API keys improve results. Rate limits apply. Only for authorized testing. Result
 
 **subfinder** was created by **projectdiscovery** as a fast subdomain enumeration tool. It's part of their security toolkit and is widely used in the bug bounty community.
 
+# INSTALL
+
+```dnf: sudo dnf install subfinder```
+
+```zypper: sudo zypper install subfinder```
+
+```brew: brew install subfinder```
+
+```nix: nix profile install nixpkgs#subfinder```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [amass](/man/amass)(1), [findomain](/man/findomain)(1), [assetfinder](/man/assetfinder)(1), [dnsx](/man/dnsx)(1)

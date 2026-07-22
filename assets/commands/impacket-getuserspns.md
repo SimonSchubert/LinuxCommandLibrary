@@ -45,6 +45,12 @@ finds and requests Kerberos service tickets for user accounts with SPNs
 
 **impacket-GetUserSPNs** finds and requests Kerberos service tickets for user accounts with SPNs (Service Principal Names). Part of the Impacket toolkit. Used for Kerberoasting attacks where TGS tickets can be cracked offline. For authorized security testing only.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [impacket-gettgt](/man/impacket-gettgt)(1), [hashcat](/man/hashcat)(1)

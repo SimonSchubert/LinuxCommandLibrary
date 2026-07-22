@@ -84,6 +84,14 @@ Templates must follow cookiecutter conventions. Git required for remote template
 
 **cookiecutter** was created by **Audrey Roy Greenfeld** in **2013**. It popularized the concept of project templating in the Python community and inspired similar tools in other languages. The tool has enabled thousands of community templates for various frameworks and project types.
 
+# INSTALL
+
+```brew: brew install cookiecutter```
+
+```nix: nix profile install nixpkgs#cookiecutter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [copier](/man/copier)(1), [git](/man/git)(1)

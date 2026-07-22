@@ -123,6 +123,12 @@ Channel passwords are encrypted at rest using AES-256-GCM with keys derived from
 
 The application accepts no command-line flags or options; all configuration is done interactively through TUI commands after launch. Requires a Bluetooth LE capable adapter. On Linux, the **dbus** system is required for Bluetooth access. Building from source on Windows requires Microsoft Visual C++ Build Tools with the "Desktop development with C++" workload. Communication range is limited by Bluetooth LE signal reach, typically around 10-100 meters depending on hardware.
 
+# INSTALL
+
+```aur: yay -S bitchat-tui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bluetuith](/man/bluetuith)(1), [bluetoothctl](/man/bluetoothctl)(1), [hcitool](/man/hcitool)(1)

@@ -115,6 +115,22 @@ X11 only; won't work under Wayland. Some keys may be grabbed by other applicatio
 
 **xbindkeys** was created to provide a window-manager-independent way to bind keys to commands. It fills the gap for desktop environments and window managers that lack built-in hotkey configuration.
 
+# INSTALL
+
+```apt: sudo apt install xbindkeys```
+
+```dnf: sudo dnf install xbindkeys```
+
+```pacman: sudo pacman -S xbindkeys```
+
+```apk: sudo apk add xbindkeys```
+
+```zypper: sudo zypper install xbindkeys```
+
+```nix: nix profile install nixpkgs#xbindkeys```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xev](/man/xev)(1), [xmodmap](/man/xmodmap)(1), [sxhkd](/man/sxhkd)(1), [xdotool](/man/xdotool)(1)

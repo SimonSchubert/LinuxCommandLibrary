@@ -102,6 +102,14 @@ Rule quality varies across registries; false positives require tuning with `--ex
 
 **semgrep** was developed by **r2c** (now Semgrep Inc.) and released around **2019**. It built on academic research to create a practical, language-aware grep for code analysis.
 
+# INSTALL
+
+```brew: brew install semgrep```
+
+```nix: nix profile install nixpkgs#semgrep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [ast-grep](/man/ast-grep)(1), [eslint](/man/eslint)(1), [pylint](/man/pylint)(1)

@@ -30,6 +30,21 @@ The server typically starts on port 5037. Only one adb server can run at a time 
 
 The adb server architecture has been part of the Android SDK since its initial release in **2008**. The client-server model allows multiple adb clients to share device connections efficiently.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb](/man/adb)(1), [adb-kill-server](/man/adb-kill-server)(1), [adb-devices](/man/adb-devices)(1), [adb-connect](/man/adb-connect)(1)

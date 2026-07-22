@@ -113,6 +113,12 @@ Core dumps may contain sensitive data. Ensure proper permissions on extracted fi
 
 **coredumpctl** is part of **systemd**, providing centralized core dump management through systemd-coredump and the journal.
 
+# INSTALL
+
+```apt: sudo apt install systemd-coredump```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdb](/man/gdb)(1), [journalctl](/man/journalctl)(1)

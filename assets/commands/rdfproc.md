@@ -87,6 +87,24 @@ Part of Redland RDF libraries. Stores are persistent by default. Use - for stdin
 
 rdfproc is part of **Redland** RDF Libraries by **Dave Beckett**, providing RDF processing since 2000.
 
+# INSTALL
+
+```apt: sudo apt install redland-utils```
+
+```dnf: sudo dnf install redland```
+
+```pacman: sudo pacman -S redland```
+
+```apk: sudo apk add redland```
+
+```zypper: sudo zypper install redland```
+
+```brew: brew install redland```
+
+```nix: nix profile install nixpkgs#redland```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rapper](/man/rapper)(1), [roqet](/man/roqet)(1), [redland](/man/redland)(3)

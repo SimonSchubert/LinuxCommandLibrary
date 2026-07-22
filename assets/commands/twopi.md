@@ -79,6 +79,24 @@ For large graphs, radial layouts can become cluttered as outer rings contain exp
 
 **twopi** was developed as part of **Graphviz** at **AT&T Labs Research** in the **1990s**. The radial layout algorithm is based on work by Graham Wills presented at the Graph Drawing Symposium in **1997**. Graphviz was open-sourced in **2000** and continues to be actively maintained.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [neato](/man/neato)(1), [circo](/man/circo)(1), [fdp](/man/fdp)(1), [sfdp](/man/sfdp)(1)

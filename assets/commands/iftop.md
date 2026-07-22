@@ -108,6 +108,24 @@ Requires **root** or `CAP_NET_RAW` + `CAP_NET_ADMIN` for packet capture. On busy
 
 **iftop** was written by **Paul Warren** at the University of Oxford and first released in **2002**, explicitly modelled on **top**. It has since been adopted as a standard diagnostic tool in most Linux distributions and is commonly installed on network appliances and routers.
 
+# INSTALL
+
+```apt: sudo apt install iftop```
+
+```dnf: sudo dnf install iftop```
+
+```pacman: sudo pacman -S iftop```
+
+```apk: sudo apk add iftop```
+
+```zypper: sudo zypper install iftop```
+
+```brew: brew install iftop```
+
+```nix: nix profile install nixpkgs#iftop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nethogs](/man/nethogs)(8), [tcpdump](/man/tcpdump)(8), [ifstat](/man/ifstat)(1), [bmon](/man/bmon)(1), [vnstat](/man/vnstat)(1), [ss](/man/ss)(8)

@@ -28,6 +28,12 @@ Comma requires a working Nix installation and an up-to-date nix-index database.
 
 Requires Nix package manager. The nix-index database must be updated for accurate results. First run of a command may be slow due to package download. Cached paths are invalidated by garbage collection.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#comma```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix](/man/nix)(1), [nix-shell](/man/nix-shell)(1)

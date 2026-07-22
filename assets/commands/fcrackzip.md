@@ -68,6 +68,18 @@ Security research and recovery tool for forgotten passwords.
 
 Use only on archives you own or have permission to access. Brute-force is slow for long passwords. Dictionary attacks are faster for common passwords.
 
+# INSTALL
+
+```apt: sudo apt install fcrackzip```
+
+```pacman: sudo pacman -S fcrackzip```
+
+```brew: brew install fcrackzip```
+
+```nix: nix profile install nixpkgs#fcrackzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zip](/man/zip)(1), [unzip](/man/unzip)(1), [john](/man/john)(1)

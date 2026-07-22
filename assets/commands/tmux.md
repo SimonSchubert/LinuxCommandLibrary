@@ -161,6 +161,24 @@ The default prefix **Ctrl-b** shadows the readline/emacs "back one character" bi
 
 **tmux** was written by **Nicholas Marriott** and first released in **2007** as a BSD-licensed alternative to GNU Screen with a cleaner codebase and a client-server design. It became part of the OpenBSD base system in **2009** (OpenBSD 4.6), and a portable version is packaged for Linux, macOS, and other platforms. The project remains under active development.
 
+# INSTALL
+
+```apt: sudo apt install tmux```
+
+```dnf: sudo dnf install tmux```
+
+```pacman: sudo pacman -S tmux```
+
+```apk: sudo apk add tmux```
+
+```zypper: sudo zypper install tmux```
+
+```brew: brew install tmux```
+
+```nix: nix profile install nixpkgs#tmux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [screen](/man/screen)(1), [zellij](/man/zellij)(1), [byobu](/man/byobu)(1), [dtach](/man/dtach)(1), [abduco](/man/abduco)(1), [tmuxinator](/man/tmuxinator)(1)

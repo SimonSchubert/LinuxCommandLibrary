@@ -75,6 +75,20 @@ Library-based (librdf). Multiple tools for different tasks. SPARQL 1.0 support.
 
 Redland was created by **Dave Beckett** starting in 2000 as a comprehensive RDF library suite.
 
+# INSTALL
+
+```dnf: sudo dnf install redland```
+
+```pacman: sudo pacman -S redland```
+
+```zypper: sudo zypper install redland```
+
+```brew: brew install redland```
+
+```nix: nix profile install nixpkgs#redland```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rapper](/man/rapper)(1), [roqet](/man/roqet)(1), [rdfproc](/man/rdfproc)(1)

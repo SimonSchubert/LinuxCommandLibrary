@@ -62,6 +62,24 @@ Requires root/sudo for tun device. Multiple protocol support.
 
 openconnect was created as an **open-source alternative** to Cisco AnyConnect client.
 
+# INSTALL
+
+```apt: sudo apt install openconnect```
+
+```dnf: sudo dnf install openconnect```
+
+```pacman: sudo pacman -S openconnect```
+
+```apk: sudo apk add openconnect```
+
+```zypper: sudo zypper install openconnect```
+
+```brew: brew install openconnect```
+
+```nix: nix profile install nixpkgs#openconnect```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openvpn](/man/openvpn)(1), [vpnc](/man/vpnc)(1)

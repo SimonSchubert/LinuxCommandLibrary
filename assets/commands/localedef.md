@@ -51,6 +51,12 @@ Display **help**
 
 Low-level tool; most users should use locale-gen instead. Incorrect locale definitions can cause application errors.
 
+# INSTALL
+
+```apt: sudo apt install libc-bin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [locale](/man/locale)(1), [locale-gen](/man/locale-gen)(8)

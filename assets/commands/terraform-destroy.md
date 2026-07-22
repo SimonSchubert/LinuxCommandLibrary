@@ -84,6 +84,14 @@ This command is **irreversible**. Once resources are destroyed, the cloud provid
 
 **Terraform** was created by **Mitchell Hashimoto** and **Armon Dadgar** at **HashiCorp**, with **v0.1.0** released in **July 2014**. The destroy subcommand has been part of Terraform's core workflow since the earliest releases. In **v0.15.2** (April 2021), **terraform apply -destroy** was added as the explicit form, making **terraform destroy** an official convenience alias. Terraform reached general availability with **v1.0.0** in **June 2021**.
 
+# INSTALL
+
+```pacman: sudo pacman -S terraform```
+
+```nix: nix profile install nixpkgs#terraform```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [terraform-plan](/man/terraform-plan)(1), [terraform-apply](/man/terraform-apply)(1)

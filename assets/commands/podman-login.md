@@ -70,6 +70,24 @@ Authenticate with container registries
 
 Supports Docker Hub, Quay.io, GitHub Container Registry, and private registries.
 
+# INSTALL
+
+```apt: sudo apt install podman```
+
+```dnf: sudo dnf install podman```
+
+```pacman: sudo pacman -S podman```
+
+```apk: sudo apk add podman```
+
+```zypper: sudo zypper install podman```
+
+```brew: brew install podman```
+
+```nix: nix profile install nixpkgs#podman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [podman-pull](/man/podman-pull)(1), [docker-login](/man/docker-login)(1)

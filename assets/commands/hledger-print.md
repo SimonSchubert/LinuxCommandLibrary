@@ -65,6 +65,24 @@ Outputs in journal format by default. Filtering reduces output. Part of hledger 
 
 Print is a core **hledger** command for displaying and extracting transactions from journals.
 
+# INSTALL
+
+```apt: sudo apt install hledger```
+
+```dnf: sudo dnf install hledger```
+
+```pacman: sudo pacman -S hledger```
+
+```apk: sudo apk add hledger```
+
+```zypper: sudo zypper install hledger```
+
+```brew: brew install hledger```
+
+```nix: nix profile install nixpkgs#hledger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hledger](/man/hledger)(1), [hledger-import](/man/hledger-import)(1)

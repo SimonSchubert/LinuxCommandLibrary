@@ -89,6 +89,20 @@ Flags differ subtly between MPI implementations (especially Hydra vs. Open MPI);
 
 **mpiexec** was introduced in the **MPI-2** standard (1997) as a portable, recommended way to launch MPI programs, replacing implementation-specific launchers. Modern MPI distributions still ship both **mpiexec** and **mpirun**.
 
+# INSTALL
+
+```dnf: sudo dnf install openmpi```
+
+```pacman: sudo pacman -S openmpi```
+
+```apk: sudo apk add openmpi```
+
+```brew: brew install openmpi```
+
+```nix: nix profile install nixpkgs#openmpi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpirun](/man/mpirun)(1), [mpicc](/man/mpicc)(1)

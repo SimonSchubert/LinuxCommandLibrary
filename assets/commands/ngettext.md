@@ -58,6 +58,22 @@ Part of gettext. Shell utility. Locale-dependent output.
 
 ngettext is part of **GNU gettext**, providing plural form support for internationalized programs.
 
+# INSTALL
+
+```apt: sudo apt install gettext-base```
+
+```dnf: sudo dnf install gettext```
+
+```pacman: sudo pacman -S gettext```
+
+```apk: sudo apk add gettext```
+
+```brew: brew install gettext```
+
+```nix: nix profile install nixpkgs#gettext```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gettext](/man/gettext)(1), [envsubst](/man/envsubst)(1), [msgfmt](/man/msgfmt)(1)

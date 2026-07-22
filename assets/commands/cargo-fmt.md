@@ -71,6 +71,24 @@ Format Rust source code with rustfmt
 
 Edition automatically read from Cargo.toml. Direct rustfmt defaults to 2015 edition. Set style_edition in config for consistency.
 
+# INSTALL
+
+```apt: sudo apt install rustup```
+
+```dnf: sudo dnf install rustup```
+
+```pacman: sudo pacman -S rustup```
+
+```apk: sudo apk add rustfmt```
+
+```zypper: sudo zypper install rustup```
+
+```brew: brew install rustup```
+
+```nix: nix profile install nixpkgs#rustup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [rustfmt](/man/rustfmt)(1), [cargo-clippy](/man/cargo-clippy)(1)

@@ -71,6 +71,23 @@ Monitoring ports must be free on both sides. ServerAliveInterval in SSH config c
 
 **autossh** was created by Carson Harding to address the problem of SSH connections dying without notification, first released around **2002**.
 
+# INSTALL
+
+```apt: sudo apt install autossh```
+
+```dnf: sudo dnf install autossh```
+
+```pacman: sudo pacman -S autossh```
+
+```apk: sudo apk add autossh```
+
+```zypper: sudo zypper install autossh```
+
+```brew: brew install autossh```
+
+```nix: nix profile install nixpkgs#autossh```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [tmux](/man/tmux)(1)

@@ -22,6 +22,20 @@ When executed, all logged-in users will be forcibly logged out, and any unsaved 
 
 Restarting GDM will terminate all user sessions. Save your work before running this command.
 
+# INSTALL
+
+```dnf: sudo dnf install gdm```
+
+```pacman: sudo pacman -S gdm```
+
+```apk: sudo apk add gdm```
+
+```zypper: sudo zypper install gdm```
+
+```nix: nix profile install nixpkgs#gdm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdm](/man/gdm)(8), [gdm-stop](/man/gdm-stop)(1)

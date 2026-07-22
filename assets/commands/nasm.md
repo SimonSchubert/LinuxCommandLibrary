@@ -125,6 +125,24 @@ Intel syntax differs from GNU as (AT&T syntax). Object files must be linked (ld,
 
 **NASM** was written by **Simon Tatham** and **Julian Hall** starting in **1996**, aiming to create a free, portable assembler with clean Intel syntax. It became the assembler of choice for many open-source projects needing low-level code. The project has seen contributions from many developers and remains actively maintained for modern processor extensions including AVX-512.
 
+# INSTALL
+
+```apt: sudo apt install nasm```
+
+```dnf: sudo dnf install nasm```
+
+```pacman: sudo pacman -S nasm```
+
+```apk: sudo apk add nasm```
+
+```zypper: sudo zypper install nasm```
+
+```brew: brew install nasm```
+
+```nix: nix profile install nixpkgs#nasm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [as](/man/as)(1), [yasm](/man/yasm)(1), [ld](/man/ld)(1), [objdump](/man/objdump)(1), [gdb](/man/gdb)(1)

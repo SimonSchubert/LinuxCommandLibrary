@@ -61,6 +61,12 @@ Best suited for text-based log formats. Does not have a dedicated file input fla
 
 **logria** was created by **ReagentX** and is written in **Rust** (with an earlier Python proof of concept).
 
+# INSTALL
+
+```aur: yay -S logria```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lnav](/man/lnav)(1), [tail](/man/tail)(1), [grep](/man/grep)(1), [multitail](/man/multitail)(1)

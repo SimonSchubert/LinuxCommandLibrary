@@ -69,6 +69,20 @@ Requires server access. Password prompt recommended. Beware SQL injection in scr
 
 mysql was created as the standard CLI for **MySQL** database, maintained by Oracle and the community.
 
+# INSTALL
+
+```apt: sudo apt install mariadb-client-core```
+
+```dnf: sudo dnf install mysql```
+
+```apk: sudo apk add mariadb-client```
+
+```zypper: sudo zypper install mariadb-client```
+
+```brew: brew install mysql```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mysqladmin](/man/mysqladmin)(1), [mysqldump](/man/mysqldump)(1), [mycli](/man/mycli)(1), [mariadb](/man/mariadb)(1), [psql](/man/psql)(1), [sqlite3](/man/sqlite3)(1)

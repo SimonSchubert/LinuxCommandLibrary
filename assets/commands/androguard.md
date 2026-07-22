@@ -83,6 +83,13 @@ Decompilation is not always perfect; obfuscated code may be difficult to read. S
 
 **androguard** was developed by Anthony Desnos starting around **2012**. It became one of the primary open-source tools for Android application security analysis.
 
+# INSTALL
+
+```aur: yay -S androguard```
+
+```nix: nix profile install nixpkgs#androguard```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apktool](/man/apktool)(1), [jadx](/man/jadx)(1), [dex2jar](/man/dex2jar)(1)

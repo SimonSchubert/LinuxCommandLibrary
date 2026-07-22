@@ -89,6 +89,14 @@ Relies on GCR-specific implementation details and may break with registry change
 
 gcrane is part of the **go-containerregistry** project developed by Google. It was created to provide enhanced tooling for Google Container Registry and Artifact Registry users, extending the general-purpose crane tool with Google-specific features for container image management at scale.
 
+# INSTALL
+
+```zypper: sudo zypper install gcrane```
+
+```nix: nix profile install nixpkgs#gcrane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crane](/man/crane)(1), [docker](/man/docker)(1), [skopeo](/man/skopeo)(1), [gcloud](/man/gcloud)(1)

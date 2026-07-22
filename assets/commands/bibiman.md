@@ -116,3 +116,9 @@ Citekeys cannot contain the special characters **/ | # * \ " ' ; !** as these in
 # SEE ALSO
 
 [biber](/man/biber)(1), [bibtex](/man/bibtex)(1), [papis](/man/papis)(1), [latex](/man/latex)(1)
+
+# INSTALL
+
+```nix: nix profile install nixpkgs#bibiman```
+
+<!-- packages: 2026-07-22 -->

@@ -70,6 +70,16 @@ Requires build tools (Python, C++ compiler). May take significant time. Some mod
 
 npm rebuild has been part of npm since early versions, essential for maintaining native addon compatibility across Node.js versions.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-install](/man/npm-install)(1), [node-gyp](/man/node-gyp)(1)

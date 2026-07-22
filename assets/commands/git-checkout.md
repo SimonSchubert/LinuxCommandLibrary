@@ -76,6 +76,24 @@ Uncommitted changes may be lost with -f. Detached HEAD requires care. Consider g
 
 git checkout is an original **Git** command that combines several operations. **Git 2.23** introduced git switch and git restore as clearer alternatives.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-switch](/man/git-switch)(1), [git-restore](/man/git-restore)(1), [git-branch](/man/git-branch)(1)

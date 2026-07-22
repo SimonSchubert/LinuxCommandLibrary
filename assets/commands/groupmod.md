@@ -61,6 +61,20 @@ Changing GID does not update file ownership automatically. Users must log out an
 
 groupmod is part of the shadow-utils package, which has been the standard for Unix group management across Linux distributions. It provides safe modification of the /etc/group and /etc/gshadow files.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groupadd](/man/groupadd)(8), [groupdel](/man/groupdel)(8), [gpasswd](/man/gpasswd)(1), [usermod](/man/usermod)(8)

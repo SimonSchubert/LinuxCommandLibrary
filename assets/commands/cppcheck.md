@@ -113,6 +113,24 @@ Unlike compiler warnings, cppcheck performs deeper analysis including flow-sensi
 
 Cannot analyze included headers without proper include paths. Use with clang-tidy for comprehensive analysis.
 
+# INSTALL
+
+```apt: sudo apt install cppcheck```
+
+```dnf: sudo dnf install cppcheck```
+
+```pacman: sudo pacman -S cppcheck```
+
+```apk: sudo apk add cppcheck```
+
+```zypper: sudo zypper install cppcheck```
+
+```brew: brew install cppcheck```
+
+```nix: nix profile install nixpkgs#cppcheck```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clang-tidy](/man/clang-tidy)(1), [cpplint](/man/cpplint)(1), [gcc](/man/gcc)(1)

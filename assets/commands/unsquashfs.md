@@ -82,6 +82,18 @@ By default, files are extracted to a squashfs-root directory in the current work
 
 Extraction may require significant disk space. Some filesystems contain device nodes requiring root. Original permissions and ownership are preserved when run as root.
 
+# INSTALL
+
+```apt: sudo apt install squashfs-tools```
+
+```dnf: sudo dnf install squashfs-tools```
+
+```pacman: sudo pacman -S squashfs-tools```
+
+```apk: sudo apk add squashfs-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mksquashfs](/man/mksquashfs)(1), [sqfscat](/man/sqfscat)(1)

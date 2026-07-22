@@ -66,6 +66,24 @@ Actually a convenience wrapper. Git detects renames anyway. History follows cont
 
 git mv is a core **Git** command providing explicit rename/move tracking, though git can detect renames automatically through content analysis.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-rm](/man/git-rm)(1), [git-add](/man/git-add)(1), [mv](/man/mv)(1)

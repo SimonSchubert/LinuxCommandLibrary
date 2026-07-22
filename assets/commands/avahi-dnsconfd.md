@@ -80,6 +80,23 @@ Requires avahi-daemon to be running first. The action script must be properly co
 
 **Avahi** was created by **Lennart Poettering** and **Trent Lloyd** starting in **2005** as a free implementation of Zeroconf/mDNS/DNS-SD for Linux. The avahi-dnsconfd component was designed to integrate zero-configuration DNS server discovery with traditional unicast DNS resolution, allowing networks to operate without manual DNS configuration.
 
+# INSTALL
+
+```apt: sudo apt install avahi-dnsconfd```
+
+```dnf: sudo dnf install avahi-dnsconfd```
+
+```pacman: sudo pacman -S avahi```
+
+```apk: sudo apk add avahi```
+
+```zypper: sudo zypper install avahi```
+
+```brew: brew install avahi```
+
+```nix: nix profile install nixpkgs#avahi```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [avahi-daemon](/man/avahi-daemon)(8), [avahi-browse](/man/avahi-browse)(1)

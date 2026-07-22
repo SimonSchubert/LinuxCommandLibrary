@@ -92,6 +92,24 @@ Complex syntax for advanced features. Learning curve steep. Generated files can 
 
 **CMake** was created by Bill Hoffman and Ken Martin at Kitware in **2000** to address the complexity of cross-platform builds, becoming widely adopted by **2010**.
 
+# INSTALL
+
+```apt: sudo apt install cmake```
+
+```dnf: sudo dnf install cmake```
+
+```pacman: sudo pacman -S cmake```
+
+```apk: sudo apk add cmake```
+
+```zypper: sudo zypper install cmake```
+
+```brew: brew install cmake```
+
+```nix: nix profile install nixpkgs#cmake```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [make](/man/make)(1), [ninja](/man/ninja)(1), [meson](/man/meson)(1)

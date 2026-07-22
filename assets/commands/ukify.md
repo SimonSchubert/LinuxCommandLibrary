@@ -86,6 +86,12 @@ A UKI bundles the command line into the signed image, so changing boot parameter
 
 **ukify** was introduced in **systemd v253** as an experimental helper for assembling Unified Kernel Images, and was expanded in later releases (v254 and onward) with additional verbs and signing options. It complements **kernel-install** and **systemd-boot** in systemd's UEFI boot toolchain.
 
+# INSTALL
+
+```apk: sudo apk add ukify```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bootctl](/man/bootctl)(1), [kernel-install](/man/kernel-install)(8), [dracut](/man/dracut)(8), [objcopy](/man/objcopy)(1), [efibootmgr](/man/efibootmgr)(8)

@@ -39,6 +39,11 @@ Requires a running **aria2c** daemon with RPC enabled. Changing download options
 
 **aria2tui** was created by **Grim** (grimandgreedy) and is written in Python using the curses library. It is available on PyPI and installable via **pip**. The project is licensed under the MIT license.
 
+# INSTALL
+
+```aur: yay -S aria2tui```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aria2c](/man/aria2c)(1), [wget](/man/wget)(1), [curl](/man/curl)(1)

@@ -113,6 +113,24 @@ Different workflow from Git requires adjustment. Single repository file can grow
 
 **Fossil** was created by **D. Richard Hipp** in **2006** to manage the SQLite project. Frustrated with existing version control systems, Hipp designed Fossil to integrate all project management needs into one tool. It has been the primary version control for SQLite and other projects since its inception.
 
+# INSTALL
+
+```apt: sudo apt install fossil```
+
+```dnf: sudo dnf install fossil```
+
+```pacman: sudo pacman -S fossil```
+
+```apk: sudo apk add fossil```
+
+```zypper: sudo zypper install fossil```
+
+```brew: brew install fossil```
+
+```nix: nix profile install nixpkgs#fossil```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [hg](/man/hg)(1)

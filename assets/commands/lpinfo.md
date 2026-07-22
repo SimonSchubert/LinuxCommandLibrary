@@ -85,6 +85,18 @@ Requires CUPS to be running. Network discovery can be slow. Some printers need p
 
 **lpinfo** is part of the **CUPS** (Common UNIX Printing System) suite, originally developed by **Michael Sweet** at Easy Software Products. CUPS was released in **1999** and acquired by **Apple** in **2007**. lpinfo provides the discovery mechanism used by print configuration tools.
 
+# INSTALL
+
+```apt: sudo apt install cups-client```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lpadmin](/man/lpadmin)(1), [lpstat](/man/lpstat)(1), [lp](/man/lp)(1), [lpr](/man/lpr)(1), [cupsd](/man/cupsd)(8)

@@ -40,6 +40,22 @@ All options are passed directly to **cmp**(1).
 
 The name lzcmp is provided for backward compatibility with LZMA Utils. It is deprecated in favor of **xzcmp** and will be removed in a future version of XZ Utils.
 
+# INSTALL
+
+```dnf: sudo dnf install xz```
+
+```pacman: sudo pacman -S xz```
+
+```apk: sudo apk add xz```
+
+```zypper: sudo zypper install xz```
+
+```brew: brew install xz```
+
+```nix: nix profile install nixpkgs#xz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmp](/man/cmp)(1), [lzdiff](/man/lzdiff)(1), [xzcmp](/man/xzcmp)(1), [xzdiff](/man/xzdiff)(1), [zcmp](/man/zcmp)(1), [xz](/man/xz)(1)

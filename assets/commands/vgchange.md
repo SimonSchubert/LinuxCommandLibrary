@@ -82,6 +82,22 @@ Volume group activation makes the logical volumes available to the system. Deact
 
 Requires root privileges. Deactivating a volume group with mounted or active filesystems will fail. Activating with missing physical volumes requires the **--activationmode partial** or **-P** flag. Use **vgscan** to discover volume groups. Part of the LVM2 package.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvm](/man/lvm)(8), [vgcreate](/man/vgcreate)(8), [vgdisplay](/man/vgdisplay)(8), [vgscan](/man/vgscan)(8), [vgremove](/man/vgremove)(8), [lvchange](/man/lvchange)(8), [pvchange](/man/pvchange)(8)

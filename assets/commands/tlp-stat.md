@@ -115,6 +115,20 @@ Some information requires root privileges. Battery statistics may not be availab
 
 **tlp-stat** is the companion diagnostic tool for **TLP**, created by **Thomas Koch** for monitoring and troubleshooting Linux laptop power management.
 
+# INSTALL
+
+```dnf: sudo dnf install tlp```
+
+```pacman: sudo pacman -S tlp```
+
+```apk: sudo apk add tlp```
+
+```zypper: sudo zypper install tlp```
+
+```nix: nix profile install nixpkgs#tlp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tlp](/man/tlp)(8), [powertop](/man/powertop)(8), [rfkill](/man/rfkill)(8)

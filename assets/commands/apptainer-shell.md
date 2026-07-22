@@ -108,6 +108,21 @@ Shell availability depends on what's installed in the container. Some minimal co
 
 The shell command has been a core Singularity/Apptainer feature since the project's creation at Lawrence Berkeley National Laboratory in **2015**. It was designed to give users familiar interactive access to containers, supporting the HPC use case where users need to test and debug within container environments. Apptainer maintained full compatibility with this command when forking from Singularity in **2021**.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-exec](/man/apptainer-exec)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-build](/man/apptainer-build)(1)

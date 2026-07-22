@@ -83,6 +83,20 @@ Events expire after **--event-ttl** (default **1 hour**); historical incidents n
 
 **kubectl events** landed as an alpha command in **Kubernetes 1.23** (December 2021), became beta in **1.25**, and reached general availability in **1.27** (April 2023). It was contributed to consolidate the various flags previously needed on **kubectl get events** to make ad-hoc cluster debugging more ergonomic.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-describe](/man/kubectl-describe)(1), [kubectl-logs](/man/kubectl-logs)(1)

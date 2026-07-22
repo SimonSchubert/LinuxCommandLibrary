@@ -58,6 +58,16 @@ Start OpenCode with web interface
 
 **opencode web** starts a headless OpenCode server that exposes a web-based interface instead of the terminal TUI. This allows interacting with OpenCode through a browser, which can be useful for remote access, sharing sessions, or when a graphical interface is preferred over the terminal. When **--mdns** is enabled the service is discoverable on the local network without needing to know its IP.
 
+# INSTALL
+
+```pacman: sudo pacman -S opencode```
+
+```brew: brew install opencode```
+
+```nix: nix profile install nixpkgs#opencode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [opencode](/man/opencode)(1), [opencode-session](/man/opencode-session)(1)

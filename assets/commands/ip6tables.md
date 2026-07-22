@@ -109,6 +109,20 @@ IPv6 and IPv4 rules are managed separately. Rules are not persistent by default 
 
 **ip6tables** is the IPv6 counterpart to **iptables**, part of the netfilter framework. It is being superseded by nftables.
 
+# INSTALL
+
+```pacman: sudo pacman -S iptables```
+
+```apk: sudo apk add iptables```
+
+```zypper: sudo zypper install iptables```
+
+```brew: brew install iptables```
+
+```nix: nix profile install nixpkgs#iptables```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iptables](/man/iptables)(8), [ip6tables-save](/man/ip6tables-save)(8), [nft](/man/nft)(8)

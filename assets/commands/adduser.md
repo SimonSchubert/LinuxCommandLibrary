@@ -104,6 +104,13 @@ This is a **Debian/Ubuntu specific** frontend; other distributions may use **use
 
 Developed as a **Debian-specific** tool to provide a friendlier interface to user management with policy-compliant defaults.
 
+# INSTALL
+
+```apt: sudo apt install adduser```
+
+```aur: yay -S adduser```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [useradd](/man/useradd)(8), [deluser](/man/deluser)(8), [usermod](/man/usermod)(8), [passwd](/man/passwd)(1), [addgroup](/man/addgroup)(8)

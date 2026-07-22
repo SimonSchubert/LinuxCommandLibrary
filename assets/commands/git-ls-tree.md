@@ -71,6 +71,24 @@ Shows tree at specific commit. Plumbing command for scripts. Output format is ma
 
 git ls-tree is a core **Git** plumbing command for examining tree objects, part of git's low-level interface.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-ls-files](/man/git-ls-files)(1), [git-ls-remote](/man/git-ls-remote)(1), [git-show](/man/git-show)(1)

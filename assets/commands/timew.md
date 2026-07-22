@@ -83,6 +83,22 @@ Learning curve for ranges. Data in ~/.timewarrior. Taskwarrior optional.
 
 **Timewarrior** was created by the **Taskwarrior** team as a companion time tracking tool.
 
+# INSTALL
+
+```apt: sudo apt install timewarrior```
+
+```dnf: sudo dnf install timew```
+
+```pacman: sudo pacman -S timew```
+
+```zypper: sudo zypper install timewarrior```
+
+```brew: brew install timewarrior```
+
+```nix: nix profile install nixpkgs#timewarrior```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [task](/man/task)(1), [timetrap](/man/timetrap)(1), [watson](/man/watson)(1)

@@ -38,6 +38,24 @@ git-lazy-mount is **Linux only**; macOS and Windows are studied but not supporte
 
 git-lazy-mount was created by **Mohsen Azimi** (mohsen1) and is dual-licensed under **MIT** and **Apache 2.0**. In the author's benchmarks across twenty repositories it used about 1.3 GB versus 23 GB for full clones, roughly eighteen times less, while preserving complete history.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [sshfs](/man/sshfs)(1), [mount](/man/mount)(8), [fusermount](/man/fusermount)(1)

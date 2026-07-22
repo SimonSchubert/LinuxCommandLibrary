@@ -92,6 +92,24 @@ Part of SoX suite. Not all formats supported. Metadata limited to audio properti
 
 **soxi** is the info utility from **SoX** (Sound eXchange), the Swiss Army knife of audio processing. Created by Chris Bagwell and others.
 
+# INSTALL
+
+```apt: sudo apt install sox```
+
+```dnf: sudo dnf install sox```
+
+```pacman: sudo pacman -S sox```
+
+```apk: sudo apk add sox```
+
+```zypper: sudo zypper install sox```
+
+```brew: brew install sox```
+
+```nix: nix profile install nixpkgs#sox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sox](/man/sox)(1), [ffprobe](/man/ffprobe)(1), [mediainfo](/man/mediainfo)(1)

@@ -123,6 +123,22 @@ Requires a terminal that supports at least basic colors for a good experience. S
 
 hledger-ui was developed as the terminal interface complement to hledger's command-line and web (**hledger-web**) interfaces, built with the **brick** TUI library.
 
+# INSTALL
+
+```apt: sudo apt install hledger-ui```
+
+```dnf: sudo dnf install hledger-ui```
+
+```pacman: sudo pacman -S hledger-ui```
+
+```apk: sudo apk add hledger-ui```
+
+```zypper: sudo zypper install hledger-ui```
+
+```nix: nix profile install nixpkgs#hledger-ui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hledger](/man/hledger)(1), [hledger-web](/man/hledger-web)(1), [ledger](/man/ledger)(1)

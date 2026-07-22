@@ -34,6 +34,24 @@ Create a tree object from the current index
 
 The index must be in a fully merged state before running this command; typically `git update-index` is used first to sync the index with the working directory.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-commit-tree](/man/git-commit-tree)(1), [git-read-tree](/man/git-read-tree)(1), [git-update-index](/man/git-update-index)(1)

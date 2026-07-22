@@ -158,6 +158,24 @@ Setting date requires root. System clock vs hardware clock different. Timezone a
 
 **date** has been part of Unix since Version 1 in **1971**, one of the original Unix commands.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [timedatectl](/man/timedatectl)(1), [hwclock](/man/hwclock)(8), [cal](/man/cal)(1)

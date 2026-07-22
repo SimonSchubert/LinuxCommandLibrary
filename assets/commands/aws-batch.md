@@ -89,6 +89,17 @@ AWS Batch requires proper IAM permissions for compute environments, job queues, 
 
 AWS Batch was launched in **December 2016** as a managed batch processing service. It was designed to simplify running batch jobs at scale without managing infrastructure. The service has evolved to support Fargate compute, multi-node parallel jobs, and integration with AWS Step Functions for workflow orchestration.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ec2](/man/aws-ec2)(1), [aws-ecs](/man/aws-ecs)(1), [aws-lambda](/man/aws-lambda)(1)

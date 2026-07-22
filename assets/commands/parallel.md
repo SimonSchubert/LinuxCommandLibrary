@@ -119,6 +119,24 @@ Shell quoting can be tricky with complex commands. Different from moreutils para
 
 **GNU Parallel** was written by **Ole Tange** starting around **2007**. It was designed to be a general parallelization tool, more flexible than xargs. The tool has grown to include distributed computing features and sophisticated job control. It's released under GPL and requests citation in academic work.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add parallel```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xargs](/man/xargs)(1), [make](/man/make)(1), [sem](/man/sem)(1), [nohup](/man/nohup)(1)

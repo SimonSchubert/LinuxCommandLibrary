@@ -153,6 +153,17 @@ Classic Load Balancers are a previous generation service. AWS recommends using A
 
 Elastic Load Balancing launched in **2009** as one of AWS's earliest services. The Classic Load Balancer was the only load balancer type until **August 2016** when Application Load Balancer was introduced. Network Load Balancer followed in **2017**. Classic Load Balancers remain supported but are considered legacy, with AWS encouraging migration to newer types.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-elbv2](/man/aws-elbv2)(1), [aws-ec2](/man/aws-ec2)(1), [aws-autoscaling](/man/aws-autoscaling)(1)

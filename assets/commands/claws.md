@@ -71,6 +71,12 @@ Requires valid AWS credentials configured via **~/.aws/credentials**, environmen
 
 **claws** was first released in **December 2024** with rapid iteration through early 2025. Written in Go using the Bubbletea and Lipgloss TUI frameworks with the AWS SDK for Go v2. Licensed under Apache License 2.0.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#claws```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws](/man/aws)(1), [k9s](/man/k9s)(1), [lazydocker](/man/lazydocker)(1)

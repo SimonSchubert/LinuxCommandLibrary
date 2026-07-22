@@ -74,6 +74,24 @@ Default page length is 66 lines (for 11-inch paper). Headers include filename an
 
 pr has been part of Unix since the early **1970s** at Bell Labs, originally used to prepare text files for line printers. It is specified in **POSIX** and included in GNU coreutils.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fmt](/man/fmt)(1), [fold](/man/fold)(1), [column](/man/column)(1)

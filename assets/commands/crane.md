@@ -113,6 +113,20 @@ interact with container registries without Docker
 
 Does not require Docker daemon. Uses OCI registry API directly. Credentials read from Docker config by default.
 
+# INSTALL
+
+```pacman: sudo pacman -S crane```
+
+```apk: sudo apk add crane```
+
+```zypper: sudo zypper install crane```
+
+```brew: brew install crane```
+
+```nix: nix profile install nixpkgs#crane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [skopeo](/man/skopeo)(1), [cosign](/man/cosign)(1)

@@ -105,6 +105,22 @@ Configuration via .golangci.yml enables project-specific rules and linter select
 
 First run may be slow while building the cache. The set of default-enabled linters changes between versions. Pin your version in CI for reproducible results. Some linters may conflict with each other.
 
+# INSTALL
+
+```dnf: sudo dnf install golangci-lint```
+
+```pacman: sudo pacman -S golangci-lint```
+
+```apk: sudo apk add golangci-lint```
+
+```zypper: sudo zypper install golangci-lint```
+
+```brew: brew install golangci-lint```
+
+```nix: nix profile install nixpkgs#golangci-lint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go-vet](/man/go-vet)(1), [staticcheck](/man/staticcheck)(1), [gofmt](/man/gofmt)(1), [go](/man/go)(1)

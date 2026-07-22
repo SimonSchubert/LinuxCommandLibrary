@@ -56,6 +56,14 @@ installed packages viewer
 
 Use regex patterns to filter the list.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-search](/man/conda-search)(1), [conda-info](/man/conda-info)(1)

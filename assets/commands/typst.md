@@ -109,6 +109,20 @@ Newer ecosystem with fewer packages than LaTeX. Some advanced features still dev
 
 **Typst** was created by **Martin Haug** and **Laurenz Mädje** around **2019** as a master's thesis project. The goal was creating a typesetting system that's as powerful as LaTeX but more approachable. After development at Typst GmbH, it was open-sourced in **2023** and rapidly gained adoption.
 
+# INSTALL
+
+```pacman: sudo pacman -S typst```
+
+```apk: sudo apk add typst```
+
+```zypper: sudo zypper install typst```
+
+```brew: brew install typst```
+
+```nix: nix profile install nixpkgs#typst```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdflatex](/man/pdflatex)(1), [pandoc](/man/pandoc)(1), [groff](/man/groff)(1), [asciidoctor](/man/asciidoctor)(1)

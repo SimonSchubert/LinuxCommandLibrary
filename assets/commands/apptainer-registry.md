@@ -57,6 +57,21 @@ This command handles credentials separately from Apptainer's remote endpoints, a
 
 Registry credentials are stored in the Apptainer configuration file at **~/.apptainer/remote.yaml** by default. This file should be kept secure as it contains authentication tokens. Credentials configured via **apptainer registry** are separate from those managed by **apptainer remote**, which handles Sylabs Cloud and library endpoints.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-pull](/man/apptainer-pull)(1), [apptainer-push](/man/apptainer-push)(1), [apptainer-search](/man/apptainer-search)(1)

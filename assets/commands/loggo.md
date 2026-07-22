@@ -34,6 +34,12 @@ Designed for JSON-formatted logs. Non-JSON log formats may not be parsed correct
 
 **loggo** was created by **aurc** and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S loggo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [lnav](/man/lnav)(1)

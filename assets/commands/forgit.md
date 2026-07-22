@@ -87,6 +87,12 @@ Requires fzf to be installed. Terminal must support interactive TUIs. Large repo
 
 **forgit** was created to combine the power of fzf with common git operations, making it easier to navigate large git repositories interactively.
 
+# INSTALL
+
+```brew: brew install forgit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fzf](https://github.com/junegunn/fzf), [git](https://git-scm.com/), [lazygit](https://github.com/jesseduffield/lazygit)

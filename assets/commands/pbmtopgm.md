@@ -24,6 +24,24 @@ _height_
 
 **pbmtopgm** converts PBM bitmap to PGM grayscale by averaging pixel regions. Anti-aliases bitmap edges. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pgmtopbm](/man/pgmtopbm)(1), [ppmtopgm](/man/ppmtopgm)(1)

@@ -28,6 +28,14 @@ Draw plots on the terminal from command-line data
 
 **YouPlot** was created by **kojix2** (Red Data Tools) and is written in **Ruby**.
 
+# INSTALL
+
+```brew: brew install youplot```
+
+```nix: nix profile install nixpkgs#youplot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnuplot](/man/gnuplot)(1), [termgraph](/man/termgraph)(1)

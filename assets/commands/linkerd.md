@@ -151,6 +151,14 @@ Some commands require the viz extension to be installed separately. The CLI vers
 
 Linkerd was originally created at **Buoyant** in **2016** as one of the first service meshes. Version 2 was a complete rewrite in Rust and Go, released in **2018**, focusing on simplicity and low resource overhead. Linkerd joined the CNCF and graduated in **2021**. It remains popular for its lightweight footprint and operational simplicity compared to alternatives.
 
+# INSTALL
+
+```brew: brew install linkerd```
+
+```nix: nix profile install nixpkgs#linkerd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [istioctl](/man/istioctl)(1), [helm](/man/helm)(1)

@@ -66,6 +66,12 @@ This tool is intended for authorized security testing only. Unauthorized use aga
 
 **sslstrip** was created by Moxie Marlinspike and demonstrated at Black Hat DC 2009 to illustrate vulnerabilities in SSL/TLS implementation in web applications.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#sslstrip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [arpspoof](/man/arpspoof)(8), [ettercap](/man/ettercap)(8), [mitmproxy](/man/mitmproxy)(1), [dsniff](/man/dsniff)(8), [bettercap](/man/bettercap)(1)

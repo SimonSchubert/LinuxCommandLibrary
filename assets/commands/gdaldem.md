@@ -80,6 +80,14 @@ Requires properly scaled DEM. Edge effects at boundaries. Large files need more 
 
 gdaldem is part of **GDAL** (Geospatial Data Abstraction Library), providing DEM analysis tools for terrain visualization and analysis.
 
+# INSTALL
+
+```apt: sudo apt install gdal-bin```
+
+```apk: sudo apk add gdal-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdal_contour](/man/gdal_contour)(1), [gdalinfo](/man/gdalinfo)(1), [ogr2ogr](/man/ogr2ogr)(1)

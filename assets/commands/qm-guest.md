@@ -72,6 +72,12 @@ Requires the QEMU Guest Agent (qemu-guest-agent) to be installed and running ins
 
 **qm guest** is part of the **Proxmox VE** virtualization platform for managing QEMU/KVM virtual machines through the guest agent.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-start](/man/qm-start)(1), [qm-stop](/man/qm-stop)(1)

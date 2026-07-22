@@ -56,6 +56,16 @@ Part of the elfutils package, it enables on-demand downloading of debug symbols 
 
 Requires network access and configured debuginfod servers. Build IDs can be found with `readelf -n` or `eu-readelf -n`.
 
+# INSTALL
+
+```apt: sudo apt install debuginfod```
+
+```pacman: sudo pacman -S debuginfod```
+
+```apk: sudo apk add libdebuginfod```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [debuginfod](/man/debuginfod)(8), [gdb](/man/gdb)(1), [readelf](/man/readelf)(1)

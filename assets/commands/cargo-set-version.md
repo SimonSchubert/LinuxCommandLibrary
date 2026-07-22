@@ -86,6 +86,18 @@ See **cargo set-version --help** for the complete flag set.
 
 Does not publish crates; it only edits manifests. Coordinate version bumps with tags and changelog process separately. Workspace bumps can touch many crates at once; use **--dry-run** first.
 
+# INSTALL
+
+```pacman: sudo pacman -S cargo-edit```
+
+```apk: sudo apk add cargo-edit```
+
+```brew: brew install cargo-edit```
+
+```nix: nix profile install nixpkgs#cargo-edit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo-upgrade](/man/cargo-upgrade)(1), [cargo-add](/man/cargo-add)(1), [cargo](/man/cargo)(1)

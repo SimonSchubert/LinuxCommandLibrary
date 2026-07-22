@@ -82,6 +82,16 @@ Shell checking requires bash syntax. Some rules may not apply to all use cases. 
 
 Hadolint was created to improve Dockerfile quality by combining Docker best practices with ShellCheck's shell analysis.
 
+# INSTALL
+
+```dnf: sudo dnf install hadolint```
+
+```brew: brew install hadolint```
+
+```nix: nix profile install nixpkgs#hadolint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [shellcheck](/man/shellcheck)(1)

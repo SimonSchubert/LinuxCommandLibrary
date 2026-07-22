@@ -28,6 +28,12 @@ _command_ | **tte** _effect_ [_options_]
 
 **terminaltexteffects** was created by **ChrisBuilds** and is written in **Python**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#terminaltexteffects```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lolcat](/man/lolcat)(1), [figlet](/man/figlet)(1), [toilet](/man/toilet)(1)

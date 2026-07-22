@@ -67,6 +67,22 @@ Used for managing jail status, banning/unbanning IPs, and server control.
 
 Requires fail2ban-server to be running. Jail names are defined in configuration files. May require root privileges for most operations.
 
+# INSTALL
+
+```dnf: sudo dnf install fail2ban```
+
+```pacman: sudo pacman -S fail2ban```
+
+```apk: sudo apk add fail2ban```
+
+```zypper: sudo zypper install fail2ban```
+
+```brew: brew install fail2ban```
+
+```nix: nix profile install nixpkgs#fail2ban```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iptables](/man/iptables)(8)

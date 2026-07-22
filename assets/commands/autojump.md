@@ -75,6 +75,19 @@ Requires shell integration (add to .bashrc/.zshrc). Database builds over time; n
 
 **autojump** was created by Joël Schaerer around **2009** as one of the first "frecency" (frequency + recency) directory jumpers for shells.
 
+# INSTALL
+
+```dnf: sudo dnf install autojump```
+
+```aur: yay -S autojump```
+
+```zypper: sudo zypper install autojump```
+
+```brew: brew install autojump```
+
+```nix: nix profile install nixpkgs#autojump```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [z](/man/z)(1), [zoxide](/man/zoxide)(1), [cd](/man/cd)(1)

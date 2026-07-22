@@ -72,6 +72,24 @@ Hard links cannot cross filesystems. Symbolic links can break if target moves. D
 
 ln is a traditional **Unix** command dating back to the original Unix system for creating links between files.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [link](/man/link)(1), [unlink](/man/unlink)(1), [readlink](/man/readlink)(1)

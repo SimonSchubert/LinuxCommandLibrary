@@ -55,6 +55,18 @@ Part of the bsdgames package. Terminal-based. The number of robots increases wit
 
 **robots** is based on the classic **1984** game **Chase**, which was inspired by the Daleks from Doctor Who. It has been part of BSD games collections since the **1980s**.
 
+# INSTALL
+
+```dnf: sudo dnf install bsd-games```
+
+```pacman: sudo pacman -S bsd-games```
+
+```apk: sudo apk add bsd-games```
+
+```zypper: sudo zypper install bsd-games```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [worm](/man/worm)(6), [greed](/man/greed)(6), [rogue](/man/rogue)(6)

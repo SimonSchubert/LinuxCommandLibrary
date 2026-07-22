@@ -30,6 +30,14 @@ Modifying executable binaries can break them or introduce security vulnerabiliti
 
 **hexpatch** was created by **Etto48** and is written in **Rust**. It was designed to provide an all-in-one terminal tool for binary analysis and patching, combining hex editing with disassembly capabilities.
 
+# INSTALL
+
+```pacman: sudo pacman -S hexpatch```
+
+```nix: nix profile install nixpkgs#hexpatch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hexyl](/man/hexyl)(1), [xxd](/man/xxd)(1), [objdump](/man/objdump)(1), [radare2](/man/radare2)(1)

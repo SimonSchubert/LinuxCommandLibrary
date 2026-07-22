@@ -42,6 +42,12 @@ Transmits credentials and data in plain text. Not recommended for use over untru
 
 Part of **GNU inetutils**, providing classic Unix networking utilities. Superseded by SSH for security reasons.
 
+# INSTALL
+
+```dnf: sudo dnf install rsh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [rlogin](/man/rlogin)(1), [rcp](/man/rcp)(1)

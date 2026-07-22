@@ -109,6 +109,24 @@ Results may differ from du due to block size vs apparent size differences. Very 
 
 **dust** was created by **Andy Boot** in **2018** as a Rust-based alternative to du with better visualization. It was designed to address common complaints about du's output format and difficulty in interpreting results. The project gained popularity as part of the wave of Rust-based CLI tool replacements for traditional Unix utilities.
 
+# INSTALL
+
+```apt: sudo apt install du-dust```
+
+```dnf: sudo dnf install du-dust```
+
+```pacman: sudo pacman -S dust```
+
+```apk: sudo apk add dust```
+
+```zypper: sudo zypper install dust```
+
+```brew: brew install dust```
+
+```nix: nix profile install nixpkgs#dust```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [du](/man/du)(1), [ncdu](/man/ncdu)(1), [duf](/man/duf)(1), [df](/man/df)(1), [tree](/man/tree)(1)

@@ -85,6 +85,24 @@ Loads entire input into memory. Very large files may cause memory issues. Defaul
 
 **shuf** is part of **GNU coreutils**, providing command-line random shuffling. While Unix systems had various random line selection tools, shuf provides comprehensive shuffling with range generation and sampling options.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sort](/man/sort)(1), [head](/man/head)(1), [tail](/man/tail)(1), [sample](/man/sample)(1)

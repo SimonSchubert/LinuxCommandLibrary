@@ -27,6 +27,24 @@ The command is particularly useful in pull request workflows where feature branc
 
 Requires **git-extras** to be installed. Remote deletion requires push access to the remote. Local deletion uses **-D** (force), so unmerged work can be lost.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-extras](/man/git-extras)(1), [git-push](/man/git-push)(1)

@@ -26,6 +26,11 @@ All options are the same as **aptitude**.
 
 This is the same as running **aptitude** without arguments. The separate command exists for explicit invocation of the TUI mode.
 
+# INSTALL
+
+```apt: sudo apt install aptitude```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aptitude](/man/aptitude)(8), [apt](/man/apt)(8), [dpkg](/man/dpkg)(1)

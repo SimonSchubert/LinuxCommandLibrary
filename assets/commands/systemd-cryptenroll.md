@@ -126,6 +126,12 @@ Works only with LUKS2 volumes, not LUKS1. Requires an existing unlock method to 
 
 **systemd-cryptenroll** was added to **systemd** to provide a unified interface for modern hardware-based disk encryption unlocking. It complements **cryptsetup** and integrates with systemd's boot process for seamless encrypted root filesystem support.
 
+# INSTALL
+
+```apt: sudo apt install systemd-cryptsetup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cryptsetup](/man/cryptsetup)(8), [systemd-cryptsetup](/man/systemd-cryptsetup)(8)

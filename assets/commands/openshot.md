@@ -58,6 +58,12 @@ GUI application. Requires display. Resource intensive for complex projects.
 
 OpenShot was created as a **free, open-source video editor** for Linux, macOS, and Windows.
 
+# INSTALL
+
+```dnf: sudo dnf install openshot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kdenlive](/man/kdenlive)(1), [shotcut](/man/shotcut)(1), [ffmpeg](/man/ffmpeg)(1)

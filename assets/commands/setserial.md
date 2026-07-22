@@ -125,6 +125,20 @@ Incorrect settings can cause serial ports to malfunction or conflict with other 
 
 **setserial** was written by **Theodore Ts'o** and has been part of Linux since the early **1990s**, originally to help configure the diverse serial hardware of that era. The tool became essential for setting up modems, terminals, and serial mice. While less critical on modern hardware with automatic detection, it remains in the **setserial** package for legacy support.
 
+# INSTALL
+
+```apt: sudo apt install setserial```
+
+```dnf: sudo dnf install setserial```
+
+```apk: sudo apk add setserial```
+
+```zypper: sudo zypper install setserial```
+
+```nix: nix profile install nixpkgs#setserial```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stty](/man/stty)(1), [getty](/man/getty)(8), [minicom](/man/minicom)(1), [cu](/man/cu)(1)

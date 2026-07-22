@@ -91,6 +91,24 @@ Different from **cat -n**, which numbers all lines including blank ones. The log
 
 nl originated in System V Unix and is specified by POSIX. It has been part of the GNU coreutils since the project's inception.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cat](/man/cat)(1), [pr](/man/pr)(1), [head](/man/head)(1), [tail](/man/tail)(1)

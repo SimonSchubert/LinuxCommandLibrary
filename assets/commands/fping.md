@@ -113,6 +113,24 @@ Requires root/sudo for raw socket access on some systems (or setuid installation
 
 **fping** was written by Roland Schemers around **1992** at Stanford University to address limitations in the standard ping for network monitoring. It has become a standard tool for network administrators and is included in most Linux distribution repositories.
 
+# INSTALL
+
+```apt: sudo apt install fping```
+
+```dnf: sudo dnf install fping```
+
+```pacman: sudo pacman -S fping```
+
+```apk: sudo apk add fping```
+
+```zypper: sudo zypper install fping```
+
+```brew: brew install fping```
+
+```nix: nix profile install nixpkgs#fping```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ping](/man/ping)(8), [nmap](/man/nmap)(1), [hping3](/man/hping3)(8), [mtr](/man/mtr)(8)

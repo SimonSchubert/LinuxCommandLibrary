@@ -52,6 +52,22 @@ The monitor mode (`-m`) is particularly useful for debugging CEC communication i
 
 Requires kernel CEC support (CONFIG_CEC). Monitor mode requires root privileges. Not all HDMI ports support CEC.
 
+# INSTALL
+
+```apt: sudo apt install v4l-utils```
+
+```dnf: sudo dnf install v4l-utils```
+
+```pacman: sudo pacman -S v4l-utils```
+
+```apk: sudo apk add v4l-utils```
+
+```zypper: sudo zypper install v4l-utils```
+
+```nix: nix profile install nixpkgs#v4l-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cec-client](/man/cec-client)(1)

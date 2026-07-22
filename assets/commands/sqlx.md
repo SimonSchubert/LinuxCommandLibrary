@@ -76,6 +76,12 @@ Rust development tool. DATABASE_URL required. Compile-time checks.
 
 **sqlx** is a Rust SQL toolkit providing compile-time checked queries and database migrations.
 
+# INSTALL
+
+```apk: sudo apk add sqlx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diesel](/man/diesel)(1), [psql](/man/psql)(1), [sqlite3](/man/sqlite3)(1)

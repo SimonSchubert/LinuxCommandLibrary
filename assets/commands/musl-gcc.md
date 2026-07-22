@@ -38,6 +38,14 @@ GCC wrapper that compiles programs against musl libc instead of glibc
 
 **musl-gcc** is a GCC wrapper that compiles programs against musl libc instead of glibc. Musl is a lightweight C standard library designed for static linking and embedded systems. Creates smaller, portable binaries suitable for containers and minimal environments.
 
+# INSTALL
+
+```apt: sudo apt install musl-tools```
+
+```dnf: sudo dnf install musl-gcc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [clang](/man/clang)(1)

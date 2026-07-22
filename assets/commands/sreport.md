@@ -112,6 +112,12 @@ Requires slurmdbd to be configured and running. Report accuracy depends on prope
 
 **sreport** is part of **Slurm**, developed at **Lawrence Livermore National Laboratory** starting in **2002**. The accounting and reporting features help HPC centers track usage for billing, capacity planning, and fair-share scheduling. Slurm is now maintained by **SchedMD**.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sacct](/man/sacct)(1), [sshare](/man/sshare)(1), [sacctmgr](/man/sacctmgr)(1), [slurmdbd](/man/slurmdbd)(8)

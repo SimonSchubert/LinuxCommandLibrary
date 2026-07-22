@@ -43,6 +43,24 @@ Custom agents can be defined at user level (~/.copilot/agents/), repository leve
 
 The `/delegate` slash command commits unstaged changes to a new branch and delegates the task to the Copilot coding agent, which opens a draft pull request and works in the background.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh-copilot](/man/gh-copilot)(1), [gh](/man/gh)(1)

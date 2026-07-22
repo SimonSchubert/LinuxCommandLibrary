@@ -102,6 +102,20 @@ The fuzzy matching algorithm differs from fzf, so results may vary. Key bindings
 
 **skim** was created by **Jinzhou Zhang** (lotabout) and first released around **2016**. Written in **Rust**, it was developed as a faster, memory-safe alternative to fzf while maintaining compatibility with most fzf features. The project is actively maintained by the skim-rs community.
 
+# INSTALL
+
+```pacman: sudo pacman -S skim```
+
+```apk: sudo apk add skim```
+
+```zypper: sudo zypper install skim```
+
+```brew: brew install sk```
+
+```nix: nix profile install nixpkgs#skim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fzf](/man/fzf)(1), [grep](/man/grep)(1), [find](/man/find)(1), [rg](/man/rg)(1), [fd](/man/fd)(1)

@@ -18,6 +18,18 @@ View a random **ASCII art animation**
 
 The demo cycles through different animations including metaballs, matrix effects, and other visual displays.
 
+# INSTALL
+
+```apt: sudo apt install caca-utils```
+
+```dnf: sudo dnf install caca-utils```
+
+```apk: sudo apk add libcaca-apps```
+
+```zypper: sudo zypper install caca-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cacaclock](/man/cacaclock)(1), [cacafire](/man/cacafire)(1), [cacaview](/man/cacaview)(1)

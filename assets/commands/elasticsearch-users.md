@@ -74,6 +74,12 @@ Users are stored in **config/users** and roles in **config/users_roles**. Change
 
 **elasticsearch-users** ships with Elasticsearch's security features (originally part of the commercial **X-Pack** plugin, made free under the Basic license in Elasticsearch **6.8/7.1**). It provides lightweight authentication without requiring LDAP, Active Directory, or other external realms.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#elasticsearch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [elasticsearch](/man/elasticsearch)(1), [elasticsearch-reset-password](/man/elasticsearch-reset-password)(1)

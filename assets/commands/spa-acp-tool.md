@@ -124,6 +124,16 @@ Designed for debugging only; changes may not persist. Requires appropriate permi
 
 **spa-acp-tool** is part of **PipeWire**, the modern multimedia framework developed by **Wim Taymans** at Red Hat starting around **2017**. PipeWire was designed to unify audio and video handling on Linux, replacing PulseAudio and JACK. The SPA (Simple Plugin API) tools help debug the low-level plugin infrastructure.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-spa-tools```
+
+```zypper: sudo zypper install pipewire-spa-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [pw-cli](/man/pw-cli)(1), [pactl](/man/pactl)(1), [alsamixer](/man/alsamixer)(1)

@@ -91,6 +91,12 @@ Authorized testing only. Requires Metasploit. Detection likely without encoding.
 
 msfpc was created to simplify **msfvenom payload** generation for penetration testers.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#msfpc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [msfvenom](/man/msfvenom)(1), [msfconsole](/man/msfconsole)(1), [nmap](/man/nmap)(1)

@@ -68,6 +68,22 @@ Desktop management may conflict with other file managers. Some features require 
 
 **Nemo** was forked from **Nautilus 3.4** by the **Linux Mint** team in 2012 after Nautilus removed features in version 3.6. It is named after Captain Nemo from Jules Verne's novels, continuing the nautical naming theme.
 
+# INSTALL
+
+```apt: sudo apt install nemo```
+
+```dnf: sudo dnf install nemo```
+
+```pacman: sudo pacman -S nemo```
+
+```apk: sudo apk add nemo```
+
+```zypper: sudo zypper install nemo```
+
+```nix: nix profile install nixpkgs#nemo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nautilus](/man/nautilus)(1), [thunar](/man/thunar)(1), [dolphin](/man/dolphin)(1), [caja](/man/caja)(1)

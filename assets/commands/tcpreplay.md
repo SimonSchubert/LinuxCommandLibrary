@@ -64,6 +64,24 @@ Requires root for raw socket access. Replaying traffic on a production network c
 
 **tcpreplay** was created for replaying captured network traffic for testing network devices and applications.
 
+# INSTALL
+
+```apt: sudo apt install tcpreplay```
+
+```dnf: sudo dnf install tcpreplay```
+
+```pacman: sudo pacman -S tcpreplay```
+
+```apk: sudo apk add tcpreplay```
+
+```zypper: sudo zypper install tcpreplay```
+
+```brew: brew install tcpreplay```
+
+```nix: nix profile install nixpkgs#tcpreplay```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [tcprewrite](/man/tcprewrite)(1)

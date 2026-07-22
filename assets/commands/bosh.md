@@ -120,6 +120,14 @@ Steep learning curve. Complex configuration. Requires dedicated infrastructure. 
 
 **BOSH** was created by VMware around **2010** for Cloud Foundry deployment, becoming an open-source project for managing complex distributed systems.
 
+# INSTALL
+
+```apt: sudo apt install bosh```
+
+```zypper: sudo zypper install bosh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cf](/man/cf)(1), [terraform](/man/terraform)(1), [kubectl](/man/kubectl)(1)

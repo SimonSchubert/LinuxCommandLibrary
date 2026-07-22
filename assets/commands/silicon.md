@@ -121,6 +121,16 @@ Very long lines may produce wide images. Not all terminal themes available. Font
 
 **silicon** was created by **Aloxaf** around **2019** as a Rust alternative to carbon-now-cli. Written in Rust, it provides offline code image generation. The name references silicon wafers and chips, alluding to code becoming "hardware." It's popular in developer communities for sharing code snippets.
 
+# INSTALL
+
+```pacman: sudo pacman -S silicon```
+
+```brew: brew install silicon```
+
+```nix: nix profile install nixpkgs#silicon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [carbon-now-cli](/man/carbon-now-cli)(1), [pygmentize](/man/pygmentize)(1), [bat](/man/bat)(1)

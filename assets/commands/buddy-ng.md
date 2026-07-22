@@ -58,6 +58,24 @@ Also requires the libpcap development package.
 
 Only useful with easside-ng for WEP network attacks. Requires a publicly accessible server to run buddy-ng. Only use on networks you own or have explicit authorization to test. WEP is deprecated and should not be used for security.
 
+# INSTALL
+
+```apt: sudo apt install aircrack-ng```
+
+```dnf: sudo dnf install aircrack-ng```
+
+```pacman: sudo pacman -S aircrack-ng```
+
+```apk: sudo apk add aircrack-ng```
+
+```zypper: sudo zypper install aircrack-ng```
+
+```brew: brew install aircrack-ng```
+
+```nix: nix profile install nixpkgs#aircrack-ng```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [easside-ng](/man/easside-ng)(1), [aircrack-ng](/man/aircrack-ng)(1), [wesside-ng](/man/wesside-ng)(1)

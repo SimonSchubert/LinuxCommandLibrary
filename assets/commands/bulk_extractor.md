@@ -102,6 +102,16 @@ Output directory must not exist or use -Z to wipe. Processing large images requi
 
 **bulk_extractor** was created by **Simson Garfinkel** at the Naval Postgraduate School, first released around **2011**. It is widely used in law enforcement and incident response for forensic data extraction.
 
+# INSTALL
+
+```zypper: sudo zypper install bulk_extractor```
+
+```brew: brew install bulk_extractor```
+
+```nix: nix profile install nixpkgs#bulk_extractor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foremost](/man/foremost)(1), [scalpel](/man/scalpel)(1), [strings](/man/strings)(1), [photorec](/man/photorec)(1)

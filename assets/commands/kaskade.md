@@ -30,5 +30,11 @@ Requires a running Kafka cluster. Schema Registry integration requires a running
 
 **kaskade** was created by **Saul Jabin** (sauljabin) and is written in **Python** using the **Textual** framework. It was designed to bring a modern, interactive Kafka browsing experience to the terminal.
 
+# INSTALL
+
+```brew: brew install kaskade```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

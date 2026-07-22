@@ -98,6 +98,24 @@ Secrets are write-only; values cannot be retrieved. Admin access required for or
 
 gh secret was added to the **GitHub CLI** to support GitHub Actions secret management, critical for secure CI/CD workflows.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-secret-set](/man/gh-secret-set)(1), [gh-variable](/man/gh-variable)(1), [gh-run](/man/gh-run)(1)

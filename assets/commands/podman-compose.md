@@ -110,6 +110,20 @@ Modern Podman (4.0+) also ships native `podman compose` (with a space), which de
 
 Coverage of the Compose spec is good but not 100% — some advanced features (for example `extends`, healthcheck-driven `depends_on.condition`, certain `deploy.*` keys) behave differently or are silently ignored. Compose-managed networks use podman's CNI/Netavark backends, so DNS-based service discovery requires the **dnsname** plugin (CNI) or Aardvark-DNS (Netavark, the default since Podman 4.0).
 
+# INSTALL
+
+```dnf: sudo dnf install podman-compose```
+
+```pacman: sudo pacman -S podman-compose```
+
+```apk: sudo apk add podman-compose```
+
+```brew: brew install podman-compose```
+
+```nix: nix profile install nixpkgs#podman-compose```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [docker-compose](/man/docker-compose)(1)

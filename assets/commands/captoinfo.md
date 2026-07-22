@@ -65,6 +65,22 @@ Some termcap capabilities may not have direct terminfo equivalents. Complex or n
 
 The termcap database was the original mechanism for terminal descriptions in Unix, widely used in the 1970s and early 1980s. Its limitations (fixed-size buffer, lack of strong typing) led to terminfo development in the mid-1980s. **captoinfo** was created as part of the ncurses project to facilitate migration from termcap to terminfo, allowing administrators to convert existing terminal definitions rather than rewriting them from scratch.
 
+# INSTALL
+
+```apt: sudo apt install ncurses-bin```
+
+```dnf: sudo dnf install ncurses```
+
+```pacman: sudo pacman -S ncurses```
+
+```apk: sudo apk add ncurses```
+
+```brew: brew install ncurses```
+
+```nix: nix profile install nixpkgs#ncurses```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tic](/man/tic)(1), [infocmp](/man/infocmp)(1), [infotocap](/man/infotocap)(1), [tput](/man/tput)(1)

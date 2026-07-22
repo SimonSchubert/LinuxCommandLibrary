@@ -50,6 +50,18 @@ Typical output includes SELinux status, loaded policy, current mode, policy vers
 
 Only works on systems with SELinux installed. Requires read access to SELinux filesystem and configuration files.
 
+# INSTALL
+
+```apt: sudo apt install policycoreutils```
+
+```dnf: sudo dnf install policycoreutils```
+
+```zypper: sudo zypper install policycoreutils```
+
+```nix: nix profile install nixpkgs#policycoreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [getenforce](/man/getenforce)(8), [setenforce](/man/setenforce)(8), [semanage](/man/semanage)(8)

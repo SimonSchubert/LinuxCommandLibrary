@@ -69,6 +69,12 @@ echo "Users: $(who | wc -l)"
 
 Dynamic MOTD requires update-motd package on Ubuntu/Debian. Scripts must be executable. SSH may have a separate banner configured via the Banner directive in sshd_config. PAM configuration affects display. Each message file is limited to 64KB.
 
+# INSTALL
+
+```aur: yay -S motd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [login](/man/login)(1), [sshd](/man/sshd)(8), [pam_motd](/man/pam_motd)(8), [wall](/man/wall)(1)

@@ -51,6 +51,21 @@ BIN files must match the layout described in the CUE sheet exactly. Multi-sessio
 
 **bchunk** (BIN/CUE CHunK) was developed as a tool to convert proprietary CD image formats to standard formats usable by CD burning software and emulators.
 
+# INSTALL
+
+```apt: sudo apt install bchunk```
+
+```dnf: sudo dnf install bchunk```
+
+```pacman: sudo pacman -S bchunk```
+
+```zypper: sudo zypper install bchunk```
+
+```brew: brew install bchunk```
+
+```nix: nix profile install nixpkgs#bchunk```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [cdrdao](/man/cdrdao)(1), [wodim](/man/wodim)(1)

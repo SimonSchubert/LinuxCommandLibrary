@@ -38,6 +38,16 @@ Published with package. Overrides package-lock.json. Use for libraries.
 
 npm shrinkwrap provides **version locking** that travels with published packages.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-install](/man/npm-install)(1), [package-lock.json](/man/package-lock.json)(5)

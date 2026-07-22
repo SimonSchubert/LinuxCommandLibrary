@@ -108,6 +108,18 @@ Large pages with many assets produce large files. Base64 encoding increases size
 
 **monolith** was created by **Sunshine** (nicholaides) around **2019**. Written in Rust, it provides a modern alternative to wget/curl for webpage archiving. The single-file output format simplifies storage and sharing compared to traditional archival methods.
 
+# INSTALL
+
+```pacman: sudo pacman -S monolith```
+
+```apk: sudo apk add monolith```
+
+```brew: brew install monolith```
+
+```nix: nix profile install nixpkgs#monolith```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wget](/man/wget)(1), [curl](/man/curl)(1), [httrack](/man/httrack)(1)

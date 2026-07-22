@@ -130,6 +130,18 @@ Requires a running PulseAudio daemon. On systems using PipeWire with PulseAudio 
 
 pactl is part of **PulseAudio**, a sound server for Linux and other Unix-like systems created by **Lennart Poettering**. PulseAudio was first released in **2004** and became the default sound system in most Linux distributions by 2009. The pactl utility provides command-line access to PulseAudio's D-Bus interface. In recent years, **PipeWire** has begun replacing PulseAudio while maintaining compatibility with pactl commands.
 
+# INSTALL
+
+```apt: sudo apt install pulseaudio-utils```
+
+```dnf: sudo dnf install pulseaudio-utils```
+
+```apk: sudo apk add pulseaudio-utils```
+
+```zypper: sudo zypper install pulseaudio-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulseaudio](/man/pulseaudio)(1), [pacmd](/man/pacmd)(1), [pavucontrol](/man/pavucontrol)(1), [amixer](/man/amixer)(1)

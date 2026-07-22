@@ -49,6 +49,18 @@ Display available Gradle project tasks
 
 Tasks are organized into groups such as build, verification, documentation, and help. Custom task groups defined in build scripts also appear in the output.
 
+# INSTALL
+
+```pacman: sudo pacman -S gradle```
+
+```apk: sudo apk add gradle```
+
+```brew: brew install gradle```
+
+```nix: nix profile install nixpkgs#gradle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [gradle-projects](/man/gradle-projects)(1), [ant](/man/ant)(1), [mvn](/man/mvn)(1)

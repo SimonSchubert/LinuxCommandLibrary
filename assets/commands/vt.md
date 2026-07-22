@@ -68,6 +68,12 @@ API key required. Rate limits apply. Premium for more.
 
 **vt** is the official CLI for **VirusTotal**, the online malware scanning service by Google.
 
+# INSTALL
+
+```apt: sudo apt install vt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [clamav](/man/clamav)(1)

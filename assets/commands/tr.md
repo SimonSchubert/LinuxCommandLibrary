@@ -81,6 +81,24 @@ Character classes in brackets must use the [:class:] syntax. Don't confuse with 
 
 Tr reads only from stdin; it cannot process files directly. Use redirection or pipes.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sed](/man/sed)(1), [awk](/man/awk)(1), [cut](/man/cut)(1), [iconv](/man/iconv)(1)

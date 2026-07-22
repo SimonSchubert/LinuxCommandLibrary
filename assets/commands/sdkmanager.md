@@ -98,6 +98,12 @@ License acceptance is required before installing packages. Running **--licenses*
 
 Part of Android SDK Command-Line Tools, which must be downloaded separately. Requires ANDROID_HOME or --sdk_root to be set. Package downloads can be large. If Android Studio is installed, the IDE's built-in SDK Manager can be used instead.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#sdkmanager```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [adb](/man/adb)(1), [avdmanager](/man/avdmanager)(1), [emulator](/man/emulator)(1), [gradle](/man/gradle)(1)

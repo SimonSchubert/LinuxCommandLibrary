@@ -42,6 +42,20 @@ squash container layers into one
 
 Flattening removes layer history and may affect build-cache reuse. The resulting image cannot benefit from shared base layers in the registry. Without **-t**, **crane flatten** does not overwrite the source tag; it only creates a new manifest referenced by digest.
 
+# INSTALL
+
+```pacman: sudo pacman -S crane```
+
+```apk: sudo apk add crane```
+
+```zypper: sudo zypper install crane```
+
+```brew: brew install crane```
+
+```nix: nix profile install nixpkgs#crane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-append](/man/crane-append)(1), [crane-mutate](/man/crane-mutate)(1), [crane-push](/man/crane-push)(1)

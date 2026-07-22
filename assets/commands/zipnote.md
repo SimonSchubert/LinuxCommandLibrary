@@ -59,6 +59,24 @@ Part of Info-ZIP. Specific format required. Edit carefully.
 
 **zipnote** is part of **Info-ZIP** utilities. It enables comment management in ZIP files.
 
+# INSTALL
+
+```apt: sudo apt install zip```
+
+```dnf: sudo dnf install zip```
+
+```pacman: sudo pacman -S zip```
+
+```apk: sudo apk add zip```
+
+```zypper: sudo zypper install zip```
+
+```brew: brew install zip```
+
+```nix: nix profile install nixpkgs#zip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zip](/man/zip)(1), [unzip](/man/unzip)(1), [zipinfo](/man/zipinfo)(1)

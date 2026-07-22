@@ -85,6 +85,20 @@ Subcommand of **jj**. The symbol `@` refers to the working-copy commit. Template
 
 **jj show** is part of **Jujutsu** (jj), a Git-compatible DVCS, providing detailed inspection of individual changes.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-log](/man/jj-log)(1), [jj-diff](/man/jj-diff)(1)

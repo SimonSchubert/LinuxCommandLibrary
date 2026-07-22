@@ -34,6 +34,20 @@ List only **images**
 
 The output distinguishes between containers (runnable environments) and images (base templates from which containers are created).
 
+# INSTALL
+
+```apt: sudo apt install podman-toolbox```
+
+```dnf: sudo dnf install toolbox```
+
+```pacman: sudo pacman -S toolbox```
+
+```zypper: sudo zypper install toolbox```
+
+```nix: nix profile install nixpkgs#toolbox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [toolbox](/man/toolbox)(1), [toolbox-create](/man/toolbox-create)(1), [toolbox-rm](/man/toolbox-rm)(1)

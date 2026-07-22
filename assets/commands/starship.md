@@ -106,6 +106,22 @@ Requires Nerd Font for icons. Configuration syntax may differ from shell prompts
 
 **Starship** was created by **Matan Kushner** around **2019**. It gained popularity as a fast, configurable alternative to framework-specific prompts like Oh My Zsh themes.
 
+# INSTALL
+
+```apt: sudo apt install starship```
+
+```pacman: sudo pacman -S starship```
+
+```apk: sudo apk add starship```
+
+```zypper: sudo zypper install starship```
+
+```brew: brew install starship```
+
+```nix: nix profile install nixpkgs#starship```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [zsh](/man/zsh)(1), [fish](/man/fish)(1), [powerline](/man/powerline)(1)

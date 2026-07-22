@@ -75,6 +75,18 @@ Requires C compiler installed. Platform-specific extensions not portable. Annota
 
 **Cython** evolved from **Pyrex**, created by **Greg Ewing** in **2002**. The Cython fork by **Robert Bradshaw** and **Stefan Behnel** added Python compatibility and features. The cythonize command provides a convenient wrapper over the compilation process.
 
+# INSTALL
+
+```apt: sudo apt install cython3```
+
+```pacman: sudo pacman -S cython```
+
+```apk: sudo apk add cython```
+
+```brew: brew install cython```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [gcc](/man/gcc)(1), [pip](/man/pip)(1)

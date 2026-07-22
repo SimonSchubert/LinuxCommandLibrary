@@ -48,6 +48,24 @@ Part of Samba tools. Schema format specific.
 
 oLschema2ldif was created for **schema migration** in LDAP environments.
 
+# INSTALL
+
+```apt: sudo apt install samba```
+
+```dnf: sudo dnf install samba```
+
+```pacman: sudo pacman -S samba```
+
+```apk: sudo apk add samba-client```
+
+```zypper: sudo zypper install samba```
+
+```brew: brew install samba```
+
+```nix: nix profile install nixpkgs#samba```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ldapadd](/man/ldapadd)(1), [slapd](/man/slapd)(1), [ldapmodify](/man/ldapmodify)(1)

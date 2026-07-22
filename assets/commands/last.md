@@ -93,6 +93,18 @@ The pseudo-user "reboot" logs entries each time the system is restarted, allowin
 
 **last** has been a standard Unix utility since the early BSD systems, providing user login accounting functionality.
 
+# INSTALL
+
+```apt: sudo apt install wtmpdb```
+
+```apk: sudo apk add util-linux-login```
+
+```zypper: sudo zypper install wtmpdb```
+
+```nix: nix profile install nixpkgs#last```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lastb](/man/lastb)(1), [who](/man/who)(1), [w](/man/w)(1)

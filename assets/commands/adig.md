@@ -74,6 +74,13 @@ Part of the c-ares library tools. May have different features compared to the mo
 
 Part of the **c-ares** asynchronous DNS resolver library, originally forked from the ares library and actively maintained. In release 1.34.0 the **adig** command-line arguments were reworked to mimic **dig** from BIND, and the tool gained support for reading default arguments from an **~/.adigrc** file.
 
+# INSTALL
+
+```apk: sudo apk add c-ares-utils```
+
+```zypper: sudo zypper install c-ares-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ahost](/man/ahost)(1), [acountry](/man/acountry)(1), [dig](/man/dig)(1), [host](/man/host)(1), [nslookup](/man/nslookup)(1)

@@ -56,6 +56,17 @@ Significantly harder than normal Tetris. Requires terminal with color support. P
 
 **bastet** was created by Federico Poloni around **2005** as a deliberately difficult variant of Tetris using an algorithm to select worst-case pieces.
 
+# INSTALL
+
+```dnf: sudo dnf install bastet```
+
+```aur: yay -S bastet```
+
+```brew: brew install bastet```
+
+```nix: nix profile install nixpkgs#bastet```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [vitetris](/man/vitetris)(6), [tetris](/man/tetris)(6), [nethack](/man/nethack)(6)

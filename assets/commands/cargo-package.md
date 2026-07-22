@@ -78,6 +78,20 @@ Use include/exclude fields in Cargo.toml to control packaged files.
 
 crates.io has 10MB size limit. Path dependencies without version keys are not allowed. Equivalent to cargo publish --dry-run.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-publish](/man/cargo-publish)(1)

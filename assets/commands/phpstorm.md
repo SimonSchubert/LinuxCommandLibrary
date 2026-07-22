@@ -73,6 +73,12 @@ Requires PhpStorm installation. Commercial software. Launcher script location va
 
 **PhpStorm** is developed by **JetBrains**. It provides professional PHP development tools with intelligent coding assistance.
 
+# INSTALL
+
+```aur: yay -S phpstorm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [idea](/man/idea)(1), [webstorm](/man/webstorm)(1), [code](/man/code)(1)

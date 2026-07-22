@@ -59,6 +59,19 @@ Output format may vary between Azure CLI versions. Extension versions are listed
 
 **az version** has been available since Azure CLI 2.0 in **2017** as a diagnostic command for version information.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-upgrade](/man/az-upgrade)(1), [az-extension](/man/az-extension)(1), [az-login](/man/az-login)(1)

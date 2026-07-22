@@ -88,6 +88,16 @@ Secrets must be kept secure - anyone with the secret can generate codes. System 
 
 **oathtool** is part of the **OATH Toolkit** project, implementing the Initiative for Open Authentication (OATH) standards. It was developed to provide open-source HOTP and TOTP implementations. The toolkit also includes PAM modules for system authentication and a library for developers.
 
+# INSTALL
+
+```apt: sudo apt install oathtool```
+
+```dnf: sudo dnf install oathtool```
+
+```apk: sudo apk add oath-toolkit-oathtool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pass-otp](/man/pass-otp)(1), [2fa](/man/2fa)(1), [gpg](/man/gpg)(1), [openssl](/man/openssl)(1)

@@ -94,6 +94,24 @@ Requires GOPATH or modules. Cross-compilation built-in. CGO may need additional 
 
 Go was created at **Google** by **Robert Griesemer, Rob Pike, and Ken Thompson** in **2007**, released publicly in **2009**.
 
+# INSTALL
+
+```apt: sudo apt install gccgo-go```
+
+```dnf: sudo dnf install gcc-go```
+
+```pacman: sudo pacman -S gcc-go```
+
+```apk: sudo apk add gcc-go```
+
+```zypper: sudo zypper install gcc-go```
+
+```brew: brew install go```
+
+```nix: nix profile install nixpkgs#go```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go-build](/man/go-build)(1), [go-run](/man/go-run)(1), [go-mod](/man/go-mod)(1)

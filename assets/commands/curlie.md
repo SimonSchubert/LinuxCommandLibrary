@@ -70,6 +70,20 @@ All curl options are supported and passed through directly.
 
 Requires curl to be installed. All curl options are available but passed through as-is. Curlie formats JSON output automatically.
 
+# INSTALL
+
+```pacman: sudo pacman -S curlie```
+
+```apk: sudo apk add curlie```
+
+```zypper: sudo zypper install curlie```
+
+```brew: brew install curlie```
+
+```nix: nix profile install nixpkgs#curlie```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [httpie](/man/httpie)(1), [wget](/man/wget)(1)

@@ -58,6 +58,16 @@ Manage Vagrant base box images
 
 **vagrant box** manages Vagrant boxes. Boxes are base images used to create virtual machines. Download from Vagrant Cloud or import from local files.
 
+# INSTALL
+
+```apt: sudo apt install vagrant```
+
+```dnf: sudo dnf install vagrant```
+
+```nix: nix profile install nixpkgs#vagrant```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vagrant](/man/vagrant)(1), [vagrant-init](/man/vagrant-init)(1)

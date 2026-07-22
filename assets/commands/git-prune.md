@@ -68,6 +68,24 @@ Aggressive expiry (`--expire=now`) can delete objects that are still useful for 
 
 **git prune** is one of the original plumbing commands shipped with Git. Its day-to-day role has shifted toward being an internal step of **git gc**, but it remains useful for explicit cleanup after large rewrite operations.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-gc](/man/git-gc)(1), [git-fsck](/man/git-fsck)(1), [git-reflog](/man/git-reflog)(1)

@@ -100,6 +100,16 @@ Requires X11/Wayland or Windows GUI. Larger memory footprint than vim. GUI featu
 
 gvim was developed as part of **Vim** by **Bram Moolenaar** to provide a graphical interface for the editor.
 
+# INSTALL
+
+```pacman: sudo pacman -S gvim```
+
+```apk: sudo apk add gvim```
+
+```zypper: sudo zypper install gvim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [vi](/man/vi)(1), [nvim](/man/nvim)(1), [vimdiff](/man/vimdiff)(1)

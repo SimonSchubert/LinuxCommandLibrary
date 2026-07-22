@@ -89,6 +89,12 @@ Requires OpenConnect with GlobalProtect support. Some authentication methods (li
 
 **gpclient** is part of the **GlobalProtect-openconnect** project, created as an open-source solution for Linux users needing to connect to GlobalProtect VPNs. It leverages OpenConnect's GlobalProtect protocol support (added in OpenConnect 8.0). The project was rewritten from Python/Qt to **Rust** and **Tauri** in its 2.x series.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#gpclient```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openconnect](/man/openconnect)(8), [openvpn](/man/openvpn)(8), [nmcli](/man/nmcli)(1)

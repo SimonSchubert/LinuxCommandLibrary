@@ -60,6 +60,24 @@ Load averages include processes waiting for I/O, not just CPU-bound processes, w
 
 The uptime command originated in early Unix systems, providing a quick way to check system health. It became part of standard Unix utilities and is included in all Unix-like systems. The load average concept was introduced in BSD Unix. On Linux, uptime is part of the **procps** (later **procps-ng**) package that provides utilities for examining the **/proc** filesystem.
 
+# INSTALL
+
+```apt: sudo apt install procps```
+
+```dnf: sudo dnf install procps-ng```
+
+```pacman: sudo pacman -S procps-ng```
+
+```apk: sudo apk add procps-ng```
+
+```zypper: sudo zypper install procps```
+
+```brew: brew install procps```
+
+```nix: nix profile install nixpkgs#procps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [w](/man/w)(1), [top](/man/top)(1), [who](/man/who)(1), [last](/man/last)(1)

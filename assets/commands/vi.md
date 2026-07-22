@@ -86,6 +86,12 @@ On minimal systems, only basic vi may be available without vim's enhancements. K
 
 Vi was created by **Bill Joy** at UC Berkeley in **1976** as the visual mode for the ex line editor. It became the standard Unix editor and influenced countless text editors. The name stands for "visual" as it was the visual interface to ex.
 
+# INSTALL
+
+```apk: sudo apk add neatvi-vi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [nvim](/man/nvim)(1), [nano](/man/nano)(1), [emacs](/man/emacs)(1), [ed](/man/ed)(1)

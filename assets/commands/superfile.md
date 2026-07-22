@@ -77,6 +77,16 @@ Panels can be split and navigated with Tab. Press **>** to open the built-in com
 
 **superfile** was created by **yorukot** and is written in **Go** using the Bubble Tea framework.
 
+# INSTALL
+
+```pacman: sudo pacman -S superfile```
+
+```brew: brew install superfile```
+
+```nix: nix profile install nixpkgs#superfile```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ranger](/man/ranger)(1), [lf](/man/lf)(1), [nnn](/man/nnn)(1), [yazi](/man/yazi)(1), [vifm](/man/vifm)(1)

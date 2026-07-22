@@ -99,6 +99,24 @@ Wayland support depends on compositor support. Some Wayland compositors implemen
 
 Running multiple instances may cause conflicts. Use a single instance or integrate with your desktop environment's night light settings.
 
+# INSTALL
+
+```apt: sudo apt install redshift```
+
+```dnf: sudo dnf install redshift```
+
+```pacman: sudo pacman -S redshift```
+
+```apk: sudo apk add redshift```
+
+```zypper: sudo zypper install redshift```
+
+```brew: brew install redshift```
+
+```nix: nix profile install nixpkgs#redshift```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xrandr](/man/xrandr)(1), [xgamma](/man/xgamma)(1), [gammastep](/man/gammastep)(1)

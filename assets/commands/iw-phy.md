@@ -65,6 +65,22 @@ Targeting a named PHY (for example **phy0**) lets you query it with **info** or 
 
 Most **set** operations require root privileges, and some can only be applied while the interface is down or unused. The exact set of supported channels, powers, and interface types depends on the driver and the active regulatory domain.
 
+# INSTALL
+
+```apt: sudo apt install iw```
+
+```dnf: sudo dnf install iw```
+
+```pacman: sudo pacman -S iw```
+
+```apk: sudo apk add iw```
+
+```zypper: sudo zypper install iw```
+
+```nix: nix profile install nixpkgs#iw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iw](/man/iw)(8), [iwconfig](/man/iwconfig)(8), [nmcli](/man/nmcli)(1)

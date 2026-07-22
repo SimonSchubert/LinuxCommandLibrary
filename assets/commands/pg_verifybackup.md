@@ -64,6 +64,12 @@ verify the integrity of a base backup of a PostgreSQL cluster
 
 By default, it also parses any WAL files required to restore from the backup to verify they are present and uncorrupted.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_basebackup](/man/pg_basebackup)(1), [pg_dump](/man/pg_dump)(1)

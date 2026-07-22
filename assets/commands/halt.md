@@ -70,6 +70,12 @@ Using **-f** bypasses the normal shutdown sequence, which may cause data loss. O
 
 halt is a traditional Unix command dating back to early Unix systems. On modern Linux distributions using systemd, halt, poweroff, and reboot are symlinks to systemctl, providing backwards compatibility while using systemd's shutdown mechanisms.
 
+# INSTALL
+
+```apt: sudo apt install runit-init```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poweroff](/man/poweroff)(8), [reboot](/man/reboot)(8), [shutdown](/man/shutdown)(8), [systemctl](/man/systemctl)(1)

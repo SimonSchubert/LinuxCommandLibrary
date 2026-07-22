@@ -38,6 +38,12 @@ Requires **Node.js** and npm for installation. Test scenarios must be defined in
 
 **judo** was created by **Intuit** and is written in **JavaScript/Node.js**. It was designed to simplify integration testing of command-line tools in automated environments.
 
+# INSTALL
+
+```apk: sudo apk add judo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bats](/man/bats)(1), [expect](/man/expect)(1)

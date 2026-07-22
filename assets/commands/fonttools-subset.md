@@ -62,6 +62,16 @@ Common use cases include creating language-specific subsets, web-optimized fonts
 
 WOFF2 output requires the **brotli** Python package. Some complex OpenType features may not subset correctly if dependent glyphs are excluded. Always test subsetted fonts thoroughly.
 
+# INSTALL
+
+```dnf: sudo dnf install fonttools```
+
+```apk: sudo apk add py3-fonttools```
+
+```brew: brew install fonttools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fonttools](/man/fonttools)(1)

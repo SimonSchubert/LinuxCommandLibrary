@@ -49,6 +49,12 @@ Without arguments shows:
 
 Affects the current terminal only. Setting is not persistent across sessions. Some terminals may default to denying messages.
 
+# INSTALL
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [write](/man/write)(1), [talk](/man/talk)(1), [wall](/man/wall)(1)

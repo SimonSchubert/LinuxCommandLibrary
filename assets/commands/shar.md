@@ -93,6 +93,22 @@ Shell archives execute shell commands during extraction, posing security risks w
 
 The **shar** format originated in the early **1980s** Unix community as a way to distribute source code via Usenet and email before binary attachments were common. GNU sharutils, containing **shar** and **unshar**, was developed as part of the GNU project. While largely superseded by modern archive formats, shar remains useful for distributing small text-based packages.
 
+# INSTALL
+
+```apt: sudo apt install sharutils```
+
+```dnf: sudo dnf install sharutils```
+
+```pacman: sudo pacman -S sharutils```
+
+```apk: sudo apk add sharutils```
+
+```zypper: sudo zypper install sharutils```
+
+```nix: nix profile install nixpkgs#sharutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unshar](/man/unshar)(1), [tar](/man/tar)(1), [uuencode](/man/uuencode)(1), [uudecode](/man/uudecode)(1)

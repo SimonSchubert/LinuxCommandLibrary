@@ -97,6 +97,14 @@ tfsec is being deprecated and merged into **Trivy**. For new projects, consider 
 
 tfsec was created by **Liam Galvin** and released in **2019** as an open-source Terraform security scanner. It was later acquired by **Aqua Security** in **2021** and became part of their open-source security tooling portfolio. In **2023**, Aqua announced that tfsec would be merged into their comprehensive security scanner **Trivy**, with tfsec entering maintenance mode.
 
+# INSTALL
+
+```brew: brew install tfsec```
+
+```nix: nix profile install nixpkgs#tfsec```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [trivy](/man/trivy)(1), [terraform](/man/terraform)(1), [checkov](/man/checkov)(1), [terrascan](/man/terrascan)(1)

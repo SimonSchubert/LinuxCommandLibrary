@@ -114,6 +114,18 @@ Command-line options affecting server behavior (like --sound-driver) are silentl
 
 **MOC** was originally developed by **Damian Pietras**. The project provides a lightweight, terminal-based alternative to graphical music players, following the Unix philosophy of doing one thing well.
 
+# INSTALL
+
+```apt: sudo apt install moc```
+
+```zypper: sudo zypper install moc```
+
+```brew: brew install moc```
+
+```nix: nix profile install nixpkgs#moc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmus](/man/cmus)(1), [mpd](/man/mpd)(1), [ncmpcpp](/man/ncmpcpp)(1)

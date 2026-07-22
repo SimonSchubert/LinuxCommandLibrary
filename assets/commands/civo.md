@@ -116,6 +116,12 @@ cloud platform CLI for Kubernetes and infrastructure
 
 Requires Civo API key configured. Kubeconfig merged to ~/.kube/config when saved. Open-source CLI available on GitHub.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#civo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [terraform](/man/terraform)(1)

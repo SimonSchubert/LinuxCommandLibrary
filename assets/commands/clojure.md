@@ -99,6 +99,22 @@ Requires Java Runtime Environment (JRE) version 8 or higher. Initial dependency 
 
 Clojure was created by Rich Hickey and released in **2007** as a modern Lisp for the JVM. The **clojure** CLI and deps.edn tooling were introduced in **2018** as an official alternative to Leiningen and Boot, providing a simpler, more composable approach to dependency management.
 
+# INSTALL
+
+```dnf: sudo dnf install clojure```
+
+```pacman: sudo pacman -S clojure```
+
+```apk: sudo apk add clojure```
+
+```zypper: sudo zypper install clojure```
+
+```brew: brew install clojure```
+
+```nix: nix profile install nixpkgs#clojure```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lein](/man/lein)(1), [java](/man/java)(1), [clj](/man/clj)(1)

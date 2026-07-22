@@ -65,6 +65,24 @@ Different versions have different options. whois package version differs from ex
 
 **mkpasswd** exists in multiple implementations. The whois package version is common on Debian/Ubuntu, while others may have the expect package version. Both provide password hashing but with different options.
 
+# INSTALL
+
+```apt: sudo apt install whois```
+
+```dnf: sudo dnf install whois```
+
+```pacman: sudo pacman -S whois```
+
+```apk: sudo apk add expect```
+
+```zypper: sudo zypper install whois```
+
+```brew: brew install whois```
+
+```nix: nix profile install nixpkgs#whois```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [passwd](/man/passwd)(1), [openssl](/man/openssl)(1), [chpasswd](/man/chpasswd)(1)

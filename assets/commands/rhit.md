@@ -36,6 +36,14 @@ Nginx log explorer for the terminal
 
 **rhit** was created by **Canop** (Denys Seguret) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S rhit```
+
+```brew: brew install rhit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [goaccess](/man/goaccess)(1), [broot](/man/broot)(1)

@@ -85,6 +85,19 @@ Available SKUs are Free, Developer, Standard, and Premium (default is Standard),
 
 Requires Azure CLI to be installed and authenticated with **az login**. Some features like replicas are only available in Premium tier.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-config](/man/az-config)(1), [az-advisor](/man/az-advisor)(1)

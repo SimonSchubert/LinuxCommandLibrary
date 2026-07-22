@@ -20,6 +20,12 @@ Terminal tool to visualize and inspect Parquet files
 
 **parqeye** was created by **Kaushik Srini** (kaushiksrini) and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install parqeye```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [parqv](/man/parqv)(1), [csvlens](/man/csvlens)(1)

@@ -68,6 +68,24 @@ Changes file content permanently if redirected. Tab interpretation is contextual
 
 expand is a classic Unix utility from the early BSD distribution, providing tab-to-space conversion for text processing pipelines.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unexpand](/man/unexpand)(1), [col](/man/col)(1), [pr](/man/pr)(1)

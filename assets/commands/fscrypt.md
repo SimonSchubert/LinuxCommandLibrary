@@ -75,6 +75,20 @@ Only encrypts file contents and names, not metadata like file sizes or timestamp
 
 fscrypt was developed by Google and first released in **2017** as a userspace tool for managing the Linux kernel's native filesystem encryption (fscrypt), which was introduced in kernel 4.1 for ext4 and later extended to other filesystems.
 
+# INSTALL
+
+```apt: sudo apt install fscrypt```
+
+```dnf: sudo dnf install fscrypt```
+
+```pacman: sudo pacman -S fscrypt```
+
+```apk: sudo apk add fscrypt```
+
+```zypper: sudo zypper install fscrypt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cryptsetup](/man/cryptsetup)(8), [ecryptfs](/man/ecryptfs)(7), [gpg](/man/gpg)(1)

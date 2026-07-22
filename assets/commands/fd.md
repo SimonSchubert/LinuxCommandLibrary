@@ -88,6 +88,24 @@ Regex by default (not glob). Ignores hidden and gitignored files by default. Not
 
 fd was created by **David Peter** as a simpler, faster alternative to find. Written in Rust, it emphasizes user experience with sensible defaults and modern terminal output.
 
+# INSTALL
+
+```apt: sudo apt install fd-find```
+
+```dnf: sudo dnf install fd-find```
+
+```pacman: sudo pacman -S fd```
+
+```apk: sudo apk add fd```
+
+```zypper: sudo zypper install fd```
+
+```brew: brew install fd```
+
+```nix: nix profile install nixpkgs#fd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [find](/man/find)(1), [rg](/man/rg)(1), [locate](/man/locate)(1)

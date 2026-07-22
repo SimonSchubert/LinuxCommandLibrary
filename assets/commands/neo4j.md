@@ -92,6 +92,16 @@ Memory-intensive for large graphs. Community edition is single-node only. Requir
 
 Neo4j was developed by **Neo4j, Inc.** (originally Neo Technology), with version 1.0 released in **2010**. It pioneered the property graph model.
 
+# INSTALL
+
+```apk: sudo apk add neo4j```
+
+```brew: brew install neo4j```
+
+```nix: nix profile install nixpkgs#neo4j```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cypher-shell](/man/cypher-shell)(1), [redis-cli](/man/redis-cli)(1), [mongosh](/man/mongosh)(1)

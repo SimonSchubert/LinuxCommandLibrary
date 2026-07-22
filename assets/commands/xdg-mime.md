@@ -51,6 +51,20 @@ The tool integrates with the desktop environment's MIME type handling, storing u
 
 Application associations use .desktop file names. Changes may require restarting applications to take effect. Works with XDG-compliant desktop environments.
 
+# INSTALL
+
+```dnf: sudo dnf install xdg-utils```
+
+```pacman: sudo pacman -S xdg-utils```
+
+```apk: sudo apk add xdg-utils```
+
+```zypper: sudo zypper install xdg-utils```
+
+```nix: nix profile install nixpkgs#xdg-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdg-open](/man/xdg-open)(1), [xdg-settings](/man/xdg-settings)(1), [update-mime-database](/man/update-mime-database)(1)

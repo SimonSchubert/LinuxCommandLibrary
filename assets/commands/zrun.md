@@ -38,6 +38,24 @@ Large compressed files require temporary disk space for decompression.
 
 The command sees different (temporary) filenames than the originals, which may matter for some tools.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add moreutils```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zcat](/man/zcat)(1), [zless](/man/zless)(1), [zgrep](/man/zgrep)(1), [gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1), [xz](/man/xz)(1)

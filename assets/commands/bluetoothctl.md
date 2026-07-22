@@ -122,6 +122,24 @@ Requires the bluetooth service to be running. Some operations require devices to
 
 **bluetoothctl** is part of **BlueZ**, the official Linux Bluetooth protocol stack.
 
+# INSTALL
+
+```apt: sudo apt install bluez```
+
+```dnf: sudo dnf install bluez```
+
+```pacman: sudo pacman -S bluez```
+
+```apk: sudo apk add bluez```
+
+```zypper: sudo zypper install bluez```
+
+```brew: brew install bluez```
+
+```nix: nix profile install nixpkgs#bluez```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hcitool](/man/hcitool)(1), [rfkill](/man/rfkill)(8)

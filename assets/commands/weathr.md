@@ -114,6 +114,12 @@ Location auto-detection relies on **ipinfo.io** for IP geolocation, which may be
 
 **weathr** was created by **Veirt** and written in **Rust**. The project is hosted on GitHub and licensed under **GPL-3.0-or-later**. Weather data is sourced from **Open-Meteo.com** (CC BY 4.0 licensed). The latest release is **v1.3.0** from February 2026.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#weathr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ansiweather](/man/ansiweather)(1), [wego](/man/wego)(1), [curl](/man/curl)(1)

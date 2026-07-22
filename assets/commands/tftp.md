@@ -97,6 +97,22 @@ No authentication or encryption. UDP-based, may have issues with firewalls. Limi
 
 TFTP was defined in **RFC 1350** (1992) and is one of the oldest file transfer protocols. It's designed for simplicity, making it suitable for embedded systems and network boot environments.
 
+# INSTALL
+
+```apt: sudo apt install tftp-hpa```
+
+```dnf: sudo dnf install tftp```
+
+```pacman: sudo pacman -S tftp-hpa```
+
+```apk: sudo apk add tftp-hpa```
+
+```zypper: sudo zypper install tftp```
+
+```nix: nix profile install nixpkgs#tftp-hpa```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ftp](/man/ftp)(1), [curl](/man/curl)(1), [wget](/man/wget)(1)

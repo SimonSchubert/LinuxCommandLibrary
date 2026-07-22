@@ -122,6 +122,14 @@ Connection names with spaces require quoting. Use UUIDs when multiple connection
 
 Part of the **nmcli** command-line interface for **NetworkManager**. Provides scriptable network configuration management.
 
+# INSTALL
+
+```apt: sudo apt install network-manager```
+
+```apk: sudo apk add networkmanager-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmcli](/man/nmcli)(1), [nmcli-device](/man/nmcli)(1), [nmtui](/man/nmtui)(1)

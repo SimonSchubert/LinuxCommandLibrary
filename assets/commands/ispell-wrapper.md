@@ -55,6 +55,22 @@ Debian/Ubuntu specific. Depends on installed checkers. Not all options pass thro
 
 ispell-wrapper was created for **Debian** to provide compatibility between different spell checking programs.
 
+# INSTALL
+
+```apt: sudo apt install ispell```
+
+```pacman: sudo pacman -S ispell```
+
+```apk: sudo apk add aspell-compat```
+
+```zypper: sudo zypper install ispell```
+
+```brew: brew install ispell```
+
+```nix: nix profile install nixpkgs#ispell```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ispell](/man/ispell)(1), [aspell](/man/aspell)(1), [hunspell](/man/hunspell)(1)

@@ -78,6 +78,12 @@ Bytecode not portable between Lua versions. Stripping debug info prevents meanin
 
 **luac** has been part of **Lua** since early versions, developed at **PUC-Rio** (Pontifical Catholic University of Rio de Janeiro) in Brazil. Lua was created by **Roberto Ierusalimschy**, **Waldemar Celes**, and **Luiz Henrique de Figueiredo** starting in **1993**. The compiler remains the standard tool for pre-compiling Lua code.
 
+# INSTALL
+
+```apk: sudo apk add lua5.1```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lua](/man/lua)(1), [luajit](/man/luajit)(1)

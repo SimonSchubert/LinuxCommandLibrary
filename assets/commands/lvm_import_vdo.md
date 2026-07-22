@@ -64,6 +64,12 @@ VDO provides inline deduplication and compression for block storage, reducing st
 
 This operation is **irreversible**; the original VDO volume format cannot be restored. The **--no-snapshot** option skips safety mechanisms and should only be used when snapshot creation fails. Back up important data before importing. Requires root privileges.
 
+# INSTALL
+
+```apk: sudo apk add lvm2-extra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvm](/man/lvm)(8), [lvcreate](/man/lvcreate)(8)

@@ -45,6 +45,18 @@ Values can be specified as 1, true, or on for enabled, or 0, false, or off for d
 
 Requires root privileges. Without -P flag, changes are lost on reboot. Use **getsebool** to view current boolean values. SELinux must be enabled for this command to work.
 
+# INSTALL
+
+```apt: sudo apt install policycoreutils```
+
+```dnf: sudo dnf install policycoreutils```
+
+```zypper: sudo zypper install policycoreutils```
+
+```nix: nix profile install nixpkgs#policycoreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [getsebool](/man/getsebool)(8), [semanage-boolean](/man/semanage-boolean)(8), [setenforce](/man/setenforce)(8)

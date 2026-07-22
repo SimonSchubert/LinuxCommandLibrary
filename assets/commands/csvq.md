@@ -102,6 +102,16 @@ Large CSV files are loaded into memory. Complex queries on big files may be slow
 
 csvq was created by **Mithrandie** and released as an open-source project written in Go. It was designed to bring the familiarity of SQL to ad-hoc CSV data analysis, filling a gap between simple command-line tools like awk and full database imports. The project continues to be maintained with regular updates adding SQL features.
 
+# INSTALL
+
+```apk: sudo apk add csvq```
+
+```brew: brew install csvq```
+
+```nix: nix profile install nixpkgs#csvq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [q](/man/q)(1), [textql](/man/textql)(1), [sqlite3](/man/sqlite3)(1), [miller](/man/miller)(1)

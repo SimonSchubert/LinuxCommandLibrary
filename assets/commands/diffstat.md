@@ -81,6 +81,22 @@ Histograms are scaled — the width (controlled by `-w`) only sets the maximum b
 
 **diffstat** was written by **Thomas E. Dickey** in 1992 as a companion tool to GNU diff. It ships in most Linux distributions in the `diffstat` package.
 
+# INSTALL
+
+```apt: sudo apt install diffstat```
+
+```dnf: sudo dnf install diffstat```
+
+```pacman: sudo pacman -S diffstat```
+
+```zypper: sudo zypper install diffstat```
+
+```brew: brew install diffstat```
+
+```nix: nix profile install nixpkgs#diffstat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [patch](/man/patch)(1), [git-diff](/man/git-diff)(1), [colordiff](/man/colordiff)(1)

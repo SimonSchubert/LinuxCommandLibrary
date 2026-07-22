@@ -57,6 +57,18 @@ PPTP has known cryptographic weaknesses (MS-CHAPv2 and MPPE vulnerabilities). It
 
 PPTP was developed by **Microsoft** and several other companies for VPN connections in the 1990s. The Linux client implementation is part of the pptp-linux project.
 
+# INSTALL
+
+```apt: sudo apt install pptp-linux```
+
+```dnf: sudo dnf install pptp```
+
+```zypper: sudo zypper install pptp```
+
+```nix: nix profile install nixpkgs#pptp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pptpsetup](/man/pptpsetup)(8), [pppd](/man/pppd)(8), [openvpn](/man/openvpn)(8), [ip](/man/ip)(8)

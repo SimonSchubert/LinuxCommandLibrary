@@ -76,6 +76,24 @@ Being replaced by PipeWire on modern systems. May conflict with JACK for pro aud
 
 **PulseAudio** was created by **Lennart Poettering** at Red Hat to provide a modern sound server for Linux desktops. It became the default audio system for most distributions before PipeWire emerged as its successor.
 
+# INSTALL
+
+```apt: sudo apt install pulseaudio```
+
+```dnf: sudo dnf install pulseaudio```
+
+```pacman: sudo pacman -S pulseaudio```
+
+```apk: sudo apk add pulseaudio```
+
+```zypper: sudo zypper install pulseaudio```
+
+```brew: brew install pulseaudio```
+
+```nix: nix profile install nixpkgs#pulseaudio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pactl](/man/pactl)(1), [pavucontrol](/man/pavucontrol)(1), [pipewire](/man/pipewire)(1)

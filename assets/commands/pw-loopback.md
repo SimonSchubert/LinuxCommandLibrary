@@ -56,6 +56,16 @@ Channel mapping and media class properties must be specified correctly for prope
 
 Part of **PipeWire**, the modern multimedia framework for Linux. Provides flexible audio routing capabilities similar to PulseAudio's module-loopback but with PipeWire's graph-based architecture.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-tools```
+
+```zypper: sudo zypper install pipewire-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [pw-cli](/man/pw-cli)(1), [pw-link](/man/pw-link)(1)

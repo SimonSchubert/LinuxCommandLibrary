@@ -42,6 +42,12 @@ Debug information only; the actual command may vary at runtime. Configuration ch
 
 Part of **Proxmox VE** QEMU/KVM management tools for debugging VM configuration.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-config](/man/qm-config)(1)

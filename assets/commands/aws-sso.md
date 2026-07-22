@@ -68,6 +68,17 @@ SSO login requires browser access for the authorization flow. The access token i
 
 AWS Single Sign-On launched in **December 2017** to simplify access management across AWS accounts. It was renamed to **AWS IAM Identity Center** in **July 2022** to better reflect its integration with IAM and its expanded capabilities.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-sts](/man/aws-sts)(1), [aws-iam](/man/aws-iam)(1)

@@ -36,6 +36,14 @@ Conda environments can be activated by name (if stored in the default envs direc
 
 Requires conda init to have been run for shell integration. Some shells may need sourcing the activation script manually.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-deactivate](/man/conda-deactivate)(1), [conda-create](/man/conda-create)(1), [conda-env](/man/conda-env)(1), [conda-init](/man/conda-init)(1)

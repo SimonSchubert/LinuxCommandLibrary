@@ -96,6 +96,12 @@ Requires emulators to be configured separately. First-time setup needs es_system
 
 EmulationStation was created by **Alec Lofquist** (Aloshi) in **2012**. It became the default front-end for RetroPie, the popular Raspberry Pi retro gaming distribution. The project has spawned forks like EmulationStation-DE for continued development.
 
+# INSTALL
+
+```aur: yay -S emulationstation```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [retroarch](/man/retroarch)(1), [mame](/man/mame)(1)

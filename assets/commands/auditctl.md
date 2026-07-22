@@ -109,6 +109,21 @@ Requires root privileges. Rules added with auditctl are not persistent across re
 
 **auditctl** is part of the **audit** package, providing the Linux Audit Framework for security monitoring and compliance.
 
+# INSTALL
+
+```apt: sudo apt install auditd```
+
+```dnf: sudo dnf install audit```
+
+```pacman: sudo pacman -S audit```
+
+```apk: sudo apk add audit```
+
+```zypper: sudo zypper install audit```
+
+```nix: nix profile install nixpkgs#audit```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ausearch](/man/ausearch)(8), [aureport](/man/aureport)(8), [auditd](/man/auditd)(8)

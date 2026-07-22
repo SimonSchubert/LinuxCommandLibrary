@@ -94,6 +94,14 @@ For authorized security research only. Understanding assembly required. Results 
 
 **ROPgadget** was created by **Jonathan Salwan** for ROP exploit development. It's widely used in CTF competitions and security research.
 
+# INSTALL
+
+```pacman: sudo pacman -S ropgadget```
+
+```nix: nix profile install nixpkgs#ropgadget```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ropper](/man/ropper)(1), [objdump](/man/objdump)(1), [pwntools](/man/pwntools)(1), [radare2](/man/radare2)(1)

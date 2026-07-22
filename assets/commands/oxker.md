@@ -56,6 +56,14 @@ Requires access to the Docker socket. Running inside Docker itself requires moun
 
 **oxker** was created by **mrjackwills** and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install oxker```
+
+```nix: nix profile install nixpkgs#oxker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [lazydocker](/man/lazydocker)(1), [ctop](/man/ctop)(1)

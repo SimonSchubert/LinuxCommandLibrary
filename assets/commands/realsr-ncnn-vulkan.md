@@ -87,6 +87,12 @@ Requires Vulkan-capable GPU. Memory-intensive for large images. Processing can b
 
 realsr-ncnn-vulkan is based on **Real-ESRGAN** research, ported to ncnn by **nihui** for efficient cross-platform inference.
 
+# INSTALL
+
+```aur: yay -S realsr-ncnn-vulkan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [waifu2x-ncnn-vulkan](/man/waifu2x-ncnn-vulkan)(1), [imagemagick](/man/imagemagick)(1)

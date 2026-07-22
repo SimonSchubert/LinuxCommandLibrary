@@ -67,6 +67,14 @@ Electron-based with higher resource usage. Screen sharing on Wayland may have li
 
 Discord was founded by **Jason Citron** and released in **2015**. Originally targeting gamers, it expanded to general communities. The Linux client was added in **2017**, providing cross-platform support alongside Windows, macOS, iOS, and Android.
 
+# INSTALL
+
+```pacman: sudo pacman -S discord```
+
+```nix: nix profile install nixpkgs#discord```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [slack](/man/slack)(1), [mumble](/man/mumble)(1)

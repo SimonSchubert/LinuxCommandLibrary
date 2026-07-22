@@ -20,6 +20,12 @@ Dead simple TUI task timer
 
 **tasktimer** was created by **Carlos Alexandro Becker** (caarlos0) and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#tasktimer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [watson](/man/watson)(1), [pomo](/man/pomo)(1)

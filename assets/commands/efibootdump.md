@@ -34,6 +34,22 @@ _variable_|_file_
 
 Only works on UEFI systems, and reading live variables requires efivarfs to be mounted at /sys/firmware/efi/efivars. Part of the **efivar** package, not efibootmgr, so it may need to be installed separately. Root privileges are usually needed to read the raw variable files.
 
+# INSTALL
+
+```apt: sudo apt install efibootmgr```
+
+```dnf: sudo dnf install efibootmgr```
+
+```pacman: sudo pacman -S efibootmgr```
+
+```apk: sudo apk add efibootmgr```
+
+```zypper: sudo zypper install efibootmgr```
+
+```nix: nix profile install nixpkgs#efibootmgr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [efibootmgr](/man/efibootmgr)(8), [efivar](/man/efivar)(1)

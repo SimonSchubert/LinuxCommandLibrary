@@ -93,6 +93,24 @@ Requires proper configuration before use. TLS certificate setup needed for secur
 
 Dovecot was created by **Timo Sirainen** and first released in **2002**. It was designed as a secure, fast alternative to existing IMAP servers, emphasizing correctness and standards compliance.
 
+# INSTALL
+
+```apt: sudo apt install dovecot-core```
+
+```dnf: sudo dnf install dovecot```
+
+```pacman: sudo pacman -S dovecot```
+
+```apk: sudo apk add dovecot```
+
+```zypper: sudo zypper install dovecot```
+
+```brew: brew install dovecot```
+
+```nix: nix profile install nixpkgs#dovecot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [postfix](/man/postfix)(1), [doveadm](/man/doveadm)(1)

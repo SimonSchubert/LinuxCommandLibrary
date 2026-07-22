@@ -90,6 +90,20 @@ Plugin development requires Rust and WebAssembly knowledge.
 
 Sessions persist until explicitly killed, potentially consuming resources if forgotten.
 
+# INSTALL
+
+```pacman: sudo pacman -S zellij```
+
+```apk: sudo apk add zellij```
+
+```zypper: sudo zypper install zellij```
+
+```brew: brew install zellij```
+
+```nix: nix profile install nixpkgs#zellij```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [screen](/man/screen)(1), [byobu](/man/byobu)(1)

@@ -85,6 +85,14 @@ Requires libqalculate. Supports currency exchange rates.
 
 Qalculate was created as a **multi-purpose** calculator with unit support.
 
+# INSTALL
+
+```apt: sudo apt install qalc```
+
+```apk: sudo apk add qalc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bc](/man/bc)(1), [calc](/man/calc)(1), [units](/man/units)(1)

@@ -68,6 +68,16 @@ Requires a Wayland session with a wlroots-based compositor. For autocopy functio
 
 hyprpicker is part of the Hyprland ecosystem, created by Vaxry alongside the Hyprland compositor. Hyprland gained popularity starting in **2022** as a highly customizable dynamic tiling Wayland compositor.
 
+# INSTALL
+
+```pacman: sudo pacman -S hyprpicker```
+
+```zypper: sudo zypper install hyprpicker```
+
+```nix: nix profile install nixpkgs#hyprpicker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hyprctl](/man/hyprctl)(1), [hyprshot](/man/hyprshot)(1), [wl-copy](/man/wl-copy)(1)

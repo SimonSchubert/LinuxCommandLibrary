@@ -101,6 +101,14 @@ Only works with MP3 (ID3). For other formats use different tools. Large pictures
 
 **mid3v2** is part of the **Mutagen** Python audio tagging library, created by **Michael Urman** and **Joe Wreschnig** around **2005**. It was designed to properly handle ID3v2.4 and Unicode, which older tools handled poorly.
 
+# INSTALL
+
+```apk: sudo apk add mutagen```
+
+```nix: nix profile install nixpkgs#mutagen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [id3v2](/man/id3v2)(1), [ffmpeg](/man/ffmpeg)(1)

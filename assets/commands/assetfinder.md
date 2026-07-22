@@ -51,6 +51,15 @@ Passive reconnaissance only; generates no traffic to target. Results depend on p
 
 **assetfinder** was created by Tom Hudson (tomnomnom) as a fast, simple subdomain discovery tool for security reconnaissance.
 
+# INSTALL
+
+```apt: sudo apt install assetfinder```
+
+```aur: yay -S assetfinder```
+
+```nix: nix profile install nixpkgs#assetfinder```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [amass](/man/amass)(1), [subfinder](/man/subfinder)(1), [findomain](/man/findomain)(1)

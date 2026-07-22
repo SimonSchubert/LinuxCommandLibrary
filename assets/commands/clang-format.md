@@ -99,6 +99,16 @@ Integrations available for VS Code, CLion, Vim, Emacs, Sublime Text, and most ma
 
 Style "file" uses nearest .clang-format in parent directories. Some formatting choices are opinionated and may require configuration adjustments.
 
+# INSTALL
+
+```apt: sudo apt install clang-format```
+
+```apk: sudo apk add clang22-extra-tools```
+
+```brew: brew install clang-format```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clang](/man/clang)(1), [clang-tidy](/man/clang-tidy)(1)

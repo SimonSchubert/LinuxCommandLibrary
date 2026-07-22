@@ -77,6 +77,24 @@ Keyboard controlled. Config in ~/.config/mpv/. GPU acceleration varies by platfo
 
 mpv forked from **MPlayer2** in 2012 to provide a cleaner, more modern media player with active development.
 
+# INSTALL
+
+```apt: sudo apt install mpv```
+
+```dnf: sudo dnf install mpv```
+
+```pacman: sudo pacman -S mpv```
+
+```apk: sudo apk add mpv```
+
+```zypper: sudo zypper install mpv```
+
+```brew: brew install mpv```
+
+```nix: nix profile install nixpkgs#mpv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mplayer](/man/mplayer)(1), [vlc](/man/vlc)(1), [ffplay](/man/ffplay)(1)

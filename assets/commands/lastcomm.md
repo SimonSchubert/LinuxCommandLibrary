@@ -84,6 +84,18 @@ Requires process accounting enabled. Accounting adds system overhead. File grows
 
 lastcomm is part of the Unix process accounting system, dating back to early Unix. It provides historical tracking of executed commands, useful for auditing and troubleshooting.
 
+# INSTALL
+
+```apt: sudo apt install acct```
+
+```apk: sudo apk add acct```
+
+```zypper: sudo zypper install acct```
+
+```nix: nix profile install nixpkgs#acct```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sa](/man/sa)(8), [accton](/man/accton)(8), [last](/man/last)(1), [ac](/man/ac)(1)

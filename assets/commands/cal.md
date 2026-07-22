@@ -65,6 +65,14 @@ By default, Sunday is shown as the first day of the week. Use **-m** to start we
 **-n** _num_
 > Display _num_ months starting from current
 
+# INSTALL
+
+```apt: sudo apt install ncal```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ncal](/man/ncal)(1), [date](/man/date)(1), [calcurse](/man/calcurse)(1)

@@ -71,6 +71,24 @@ dynamically update container resource limits
 
 While most resource limit changes take effect immediately, some settings may require a container restart to fully apply. The restart policy update is particularly useful for changing whether containers should automatically restart on failure or system boot.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-update](/man/docker-update)(1), [docker-container](/man/docker-container)(1)

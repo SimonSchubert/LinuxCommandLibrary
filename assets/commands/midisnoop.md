@@ -59,6 +59,12 @@ Requires MIDI ports. ALSA or JACK backend. Real-time monitoring.
 
 midisnoop provides **MIDI** debugging by displaying messages from connected MIDI devices.
 
+# INSTALL
+
+```apt: sudo apt install midisnoop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aconnect](/man/aconnect)(1), [pmidi](/man/pmidi)(1), [amidi](/man/amidi)(1)

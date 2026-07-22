@@ -61,6 +61,12 @@ Python required. Large model downloads. GPU recommended.
 
 **TTS** (Coqui TTS) is an open-source deep learning text-to-speech toolkit with multiple models.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#tts```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [espeak](/man/espeak)(1), [festival](/man/festival)(1), [piper](/man/piper)(1)

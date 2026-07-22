@@ -43,6 +43,20 @@ By default, managed database clusters deny all incoming connections for security
 
 Rules can be added, listed, and removed to adapt to changing infrastructure requirements. Each rule is identified by a UUID for management operations.
 
+# INSTALL
+
+```dnf: sudo dnf install doctl```
+
+```pacman: sudo pacman -S doctl```
+
+```apk: sudo apk add doctl```
+
+```brew: brew install doctl```
+
+```nix: nix profile install nixpkgs#doctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doctl-databases](/man/doctl-databases)(1)

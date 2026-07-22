@@ -56,6 +56,14 @@ Cgroups v1 tool. May differ for cgroups v2. Part of libcgroup-tools.
 
 lscgroup is part of **libcgroup** tools for managing Linux control groups for resource management.
 
+# INSTALL
+
+```apt: sudo apt install cgroup-tools```
+
+```apk: sudo apk add cgroup-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cgcreate](/man/cgcreate)(1), [cgexec](/man/cgexec)(1), [cgset](/man/cgset)(1)

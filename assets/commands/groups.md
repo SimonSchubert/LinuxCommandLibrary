@@ -45,6 +45,24 @@ Shows cached groups at login. New group memberships require re-login. Primary gr
 
 groups is a standard Unix command, part of **GNU coreutils** on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add uutils-coreutils-groups```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [id](/man/id)(1), [groupmems](/man/groupmems)(8), [newgrp](/man/newgrp)(1)

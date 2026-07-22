@@ -107,6 +107,22 @@ command-line interface for KeePassXC password manager
 
 Avoid using --password on shared systems. Close the GUI before making CLI edits to prevent database corruption.
 
+# INSTALL
+
+```apt: sudo apt install keepassxc-full```
+
+```dnf: sudo dnf install keepassxc```
+
+```pacman: sudo pacman -S keepassxc```
+
+```apk: sudo apk add keepassxc```
+
+```zypper: sudo zypper install keepassxc```
+
+```nix: nix profile install nixpkgs#keepassxc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pass](/man/pass)(1)

@@ -54,6 +54,24 @@ Multiple modes can be active simultaneously, and their effects are combined acco
 
 Mode names must be defined in mako's configuration file before they can be used. Without configuration, modes have no effect. Changes are immediate and persist until explicitly removed or mako restarts.
 
+# INSTALL
+
+```apt: sudo apt install mako-notifier```
+
+```dnf: sudo dnf install mako```
+
+```pacman: sudo pacman -S mako```
+
+```apk: sudo apk add mako```
+
+```zypper: sudo zypper install mako```
+
+```brew: brew install mako```
+
+```nix: nix profile install nixpkgs#mako```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [makoctl](/man/makoctl)(1), [makoctl-invoke](/man/makoctl-invoke)(1), [mako](/man/mako)(5)

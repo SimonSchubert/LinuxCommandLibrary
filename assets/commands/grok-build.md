@@ -77,6 +77,14 @@ Grok Build is in **early beta** and is available to **SuperGrok Heavy** subscrib
 
 xAI launched **Grok Build** as an early beta in **May 2026**, entering the agentic-CLI space alongside Claude Code and Codex CLI. It is installed with a single curl-pipe-bash script from _x.ai/cli/install.sh_, ships with plan mode, parallel subagents with worktree integration, MCP support, and Anthropic-Skills compatibility, and is positioned as xAI's terminal-native counterpart to its web-based Grok coding tools.
 
+# INSTALL
+
+```zypper: sudo zypper install grok-build```
+
+```nix: nix profile install nixpkgs#grok-build```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grok](/man/grok)(1), [claude](/man/claude)(1), [copilot](/man/copilot)(1), [gh](/man/gh)(1)

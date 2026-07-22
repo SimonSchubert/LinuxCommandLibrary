@@ -42,6 +42,14 @@ Perl-specific format. Standard Perl utility.
 
 podselect was created for **selective POD** section extraction.
 
+# INSTALL
+
+```pacman: sudo pacman -S perl-pod-parser```
+
+```apk: sudo apk add perl-pod-parser```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pod2text](/man/pod2text)(1), [podchecker](/man/podchecker)(1), [perldoc](/man/perldoc)(1)

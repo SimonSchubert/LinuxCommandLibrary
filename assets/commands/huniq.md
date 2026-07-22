@@ -52,6 +52,12 @@ It is intended as a faster alternative to **sort | uniq** or **sort -u** when so
 
 Memory grows with the number of unique keys (hash table). For sorted unique output, keep using **sort -u**. Count mode does not preserve input order.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#huniq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uniq](/man/uniq)(1), [sort](/man/sort)(1), [awk](/man/awk)(1)

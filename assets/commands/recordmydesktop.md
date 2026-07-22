@@ -90,6 +90,18 @@ X11 only (no Wayland). Output is Ogg format. Convert with ffmpeg for other forma
 
 recordmydesktop was created by **John Googalidis** as a simple, efficient screen recorder for Linux.
 
+# INSTALL
+
+```apt: sudo apt install recordmydesktop```
+
+```pacman: sudo pacman -S recordmydesktop```
+
+```apk: sudo apk add recordmydesktop```
+
+```zypper: sudo zypper install recordmydesktop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [peek](/man/peek)(1), [obs](/man/obs)(1)

@@ -91,6 +91,24 @@ Pulling into a dirty working tree can cause conflicts. Use `--autostash` to auto
 
 **git pull** has been part of Git since its initial release by Linus Torvalds in **2005**. The `--ff-only` option was added in Git 1.6.6. The `--autostash` option was added in Git 2.9.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-fetch](/man/git-fetch)(1), [git-merge](/man/git-merge)(1), [git-rebase](/man/git-rebase)(1), [git-stash](/man/git-stash)(1)

@@ -94,6 +94,18 @@ Lua config has learning curve. Some features are cross-platform only. GPU accele
 
 **WezTerm** was created by **Wez Furlong** (wez) around **2018**. It combines modern rendering with powerful multiplexing, positioning itself between simple terminals and full terminal multiplexers.
 
+# INSTALL
+
+```pacman: sudo pacman -S wezterm```
+
+```apk: sudo apk add wezterm-common```
+
+```zypper: sudo zypper install wezterm```
+
+```nix: nix profile install nixpkgs#wezterm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [alacritty](/man/alacritty)(1), [kitty](/man/kitty)(1), [tmux](/man/tmux)(1), [foot](/man/foot)(1)

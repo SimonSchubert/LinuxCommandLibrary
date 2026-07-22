@@ -110,6 +110,24 @@ Decompression is not fully parallel - limited by gzip format design. Memory usag
 
 **pigz** was written by **Mark Adler** (co-creator of gzip and zlib) around **2007** to address the need for parallel compression. The name is a play on "pig" (parallel implementation of gzip) and the sound pigs make. It became essential for fast compression of large files on modern multi-core systems.
 
+# INSTALL
+
+```apt: sudo apt install pigz```
+
+```dnf: sudo dnf install pigz```
+
+```pacman: sudo pacman -S pigz```
+
+```apk: sudo apk add pigz```
+
+```zypper: sudo zypper install pigz```
+
+```brew: brew install pigz```
+
+```nix: nix profile install nixpkgs#pigz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gzip](/man/gzip)(1), [zstd](/man/zstd)(1), [lz4](/man/lz4)(1), [pbzip2](/man/pbzip2)(1)

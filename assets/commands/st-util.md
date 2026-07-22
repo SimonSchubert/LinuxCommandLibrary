@@ -66,6 +66,24 @@ Requires an ST-Link programmer/debugger connected via USB. Only one ST-Link devi
 
 **st-util** is part of the **stlink** open-source toolset, originally created by **texane** and now maintained by the stlink-org community.
 
+# INSTALL
+
+```apt: sudo apt install stlink-tools```
+
+```dnf: sudo dnf install stlink```
+
+```pacman: sudo pacman -S stlink```
+
+```apk: sudo apk add stlink```
+
+```zypper: sudo zypper install stlink```
+
+```brew: brew install stlink```
+
+```nix: nix profile install nixpkgs#stlink```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [st-flash](/man/st-flash)(1), [st-info](/man/st-info)(1), [gdb](/man/gdb)(1), [openocd](/man/openocd)(1)

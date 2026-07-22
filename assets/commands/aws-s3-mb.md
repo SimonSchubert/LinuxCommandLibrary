@@ -37,6 +37,17 @@ By default, the bucket is created in the region specified in your AWS configurat
 
 Bucket names must be globally unique across all AWS accounts and regions. Names must be 3-63 characters, contain only lowercase letters, numbers, and hyphens, and cannot be formatted as IP addresses. Bucket creation may fail if the name is already taken by another AWS account.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3-rb](/man/aws-s3-rb)(1), [aws-s3-ls](/man/aws-s3-ls)(1)

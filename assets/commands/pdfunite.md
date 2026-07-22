@@ -50,6 +50,18 @@ No page selection (all pages included). No reordering. Encrypted PDFs need passw
 
 **pdfunite** is part of **poppler-utils**, derived from the **Xpdf** project. It provides simple PDF merging without requiring the heavier pdftk or commercial tools.
 
+# INSTALL
+
+```apt: sudo apt install poppler-utils```
+
+```dnf: sudo dnf install poppler-utils```
+
+```apk: sudo apk add poppler-utils```
+
+```nix: nix profile install nixpkgs#poppler-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdfseparate](/man/pdfseparate)(1), [pdftk](/man/pdftk)(1), [qpdf](/man/qpdf)(1), [pdfinfo](/man/pdfinfo)(1)

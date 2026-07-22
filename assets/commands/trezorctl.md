@@ -109,6 +109,12 @@ Requires Python 3.8 or higher and libusb. On Linux, udev rules must be installed
 
 **trezorctl** was developed by **SatoshiLabs** as part of the Python tools for Trezor, the first hardware cryptocurrency wallet released in **2014**. The command-line interface evolved alongside the device firmware, adding support for new cryptocurrencies and security features. The tool is maintained in the official trezor-firmware repository.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#trezorctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [openssl](/man/openssl)(1)

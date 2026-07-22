@@ -93,6 +93,20 @@ Initial configuration requires manual setup of mail accounts. OAuth 2.0 setup ma
 
 **himalaya** was created by **Clément DOUIN** as part of the **Pimalaya** project and is written in **Rust**. It was designed as a Unix-philosophy approach to email, providing simple composable commands rather than a monolithic TUI application.
 
+# INSTALL
+
+```pacman: sudo pacman -S himalaya```
+
+```apk: sudo apk add himalaya```
+
+```zypper: sudo zypper install himalaya```
+
+```brew: brew install himalaya```
+
+```nix: nix profile install nixpkgs#himalaya```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mutt](/man/mutt)(1), [aerc](/man/aerc)(1), [neomutt](/man/neomutt)(1), [mail](/man/mail)(1)

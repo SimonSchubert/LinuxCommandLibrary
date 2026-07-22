@@ -48,6 +48,24 @@ stop and remove compose resources
 
 By default, only containers and networks are removed. Volumes and images are preserved unless **-v** or **--rmi** is specified. Networks and volumes defined as **external** are never removed.
 
+# INSTALL
+
+```apt: sudo apt install docker-compose```
+
+```dnf: sudo dnf install docker-compose```
+
+```pacman: sudo pacman -S docker-compose```
+
+```apk: sudo apk add docker-cli-compose```
+
+```zypper: sudo zypper install docker-compose```
+
+```brew: brew install docker-compose```
+
+```nix: nix profile install nixpkgs#docker-compose```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-compose](/man/docker-compose)(1), [docker-compose-up](/man/docker-compose-up)(1)

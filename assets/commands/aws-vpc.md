@@ -112,6 +112,17 @@ VPC CIDR blocks cannot overlap with peered VPCs. Each subnet exists in one avail
 
 **Amazon VPC** launched in **August 2009** as one of AWS's foundational networking services, allowing customers to define isolated networks. Initially, EC2 ran in a shared network (EC2-Classic), but VPC became the default for new accounts in **2013**. **VPC Peering** added in **2014**. **NAT Gateway** as a managed service launched in **2015**. **Transit Gateway** introduced at **re:Invent 2018** for hub-and-spoke architectures. EC2-Classic was fully retired in **2022**.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ec2](/man/aws-ec2)(1), [ip](/man/ip)(1)

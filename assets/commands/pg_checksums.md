@@ -48,6 +48,18 @@ enables, disables, or verifies data checksums
 
 Server must be stopped before enabling or disabling checksums.
 
+# INSTALL
+
+```dnf: sudo dnf install postgresql17```
+
+```apk: sudo apk add postgresql17```
+
+```zypper: sudo zypper install postgresql17```
+
+```nix: nix profile install nixpkgs#pg_checksums```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_amcheck](/man/pg_amcheck)(1), [initdb](/man/initdb)(1)

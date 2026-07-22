@@ -58,6 +58,20 @@ The tool provides a standardized way to configure these settings across differen
 
 Application values are .desktop file names without the path. Some desktop environments may have additional configuration tools. Part of the xdg-utils package.
 
+# INSTALL
+
+```dnf: sudo dnf install xdg-utils```
+
+```pacman: sudo pacman -S xdg-utils```
+
+```apk: sudo apk add xdg-utils```
+
+```zypper: sudo zypper install xdg-utils```
+
+```nix: nix profile install nixpkgs#xdg-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdg-mime](/man/xdg-mime)(1), [xdg-open](/man/xdg-open)(1)

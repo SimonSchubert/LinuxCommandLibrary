@@ -81,6 +81,16 @@ Profiles are written to **/etc/tuned/**_profile_name_**/tuned.conf** along with 
 
 **powertop2tuned** ships as part of the Red Hat **TuneD** project, originally introduced to give Fedora and RHEL users a single-step way to commit PowerTOP findings into the TuneD framework. It is distributed via the **tuned-utils** package on Fedora, RHEL, CentOS, openSUSE and Arch.
 
+# INSTALL
+
+```dnf: sudo dnf install tuned-utils```
+
+```apk: sudo apk add tuned-utils```
+
+```zypper: sudo zypper install tuned-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [powertop](/man/powertop)(8), [tuned](/man/tuned)(8), [tuned-adm](/man/tuned-adm)(8)

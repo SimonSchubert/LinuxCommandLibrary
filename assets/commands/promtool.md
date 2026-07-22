@@ -112,6 +112,22 @@ Requires Prometheus knowledge to use effectively. Query commands need running Pr
 
 **promtool** is part of **Prometheus**, created at **SoundCloud** around **2012** by Matt T. Proud and Julius Volz. Prometheus was open-sourced in **2015** and joined CNCF in **2016**. The promtool utility evolved alongside Prometheus to provide operational tooling for configuration management and troubleshooting.
 
+# INSTALL
+
+```apt: sudo apt install promtool```
+
+```dnf: sudo dnf install prometheus```
+
+```pacman: sudo pacman -S prometheus```
+
+```apk: sudo apk add prometheus```
+
+```brew: brew install prometheus```
+
+```nix: nix profile install nixpkgs#prometheus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [prometheus](/man/prometheus)(1), [alertmanager](/man/alertmanager)(1), [grafana](/man/grafana)(1)

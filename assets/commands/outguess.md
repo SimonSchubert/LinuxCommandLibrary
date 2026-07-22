@@ -72,6 +72,14 @@ JPEG only. Repeated embedding degrades image. Capacity depends on image complexi
 
 OutGuess was developed by **Niels Provos** as a steganographic tool resistant to statistical steganalysis techniques.
 
+# INSTALL
+
+```apt: sudo apt install outguess```
+
+```nix: nix profile install nixpkgs#outguess```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [steghide](/man/steghide)(1), [openstego](/man/openstego)(1)

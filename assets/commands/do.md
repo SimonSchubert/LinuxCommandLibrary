@@ -63,6 +63,12 @@ Name may conflict with shell builtins or other utilities. Different implementati
 
 Multiple utilities named 'do' exist across different systems and package repositories. The concept of command repetition is fundamental to shell scripting, with various tools providing convenient interfaces.
 
+# INSTALL
+
+```aur: yay -S do```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [watch](/man/watch)(1), [while](/man/while)(1)

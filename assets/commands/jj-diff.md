@@ -45,6 +45,20 @@ shows differences between revisions in Jujutsu
 
 **jj diff** shows differences between revisions in Jujutsu. By default, shows changes in the working copy. Use **-r** for specific revision or **--from/--to** for range comparisons.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-status](/man/jj-status)(1)

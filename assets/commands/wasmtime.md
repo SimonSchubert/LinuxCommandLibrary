@@ -101,6 +101,18 @@ WASI is not fully POSIX-compatible. Some system calls may not be available. Ahea
 
 **Wasmtime** was developed by the Bytecode Alliance, a nonprofit organization including Mozilla, Fastly, Intel, and Red Hat. It serves as a reference implementation for WebAssembly outside the browser and drives development of WASI and the Component Model standards.
 
+# INSTALL
+
+```pacman: sudo pacman -S wasmtime```
+
+```apk: sudo apk add wasmtime```
+
+```brew: brew install wasmtime```
+
+```nix: nix profile install nixpkgs#wasmtime```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wasmer](/man/wasmer)(1), [wasm-pack](/man/wasm-pack)(1), [wasm-opt](/man/wasm-opt)(1), [wasm-validate](/man/wasm-validate)(1)

@@ -79,3 +79,15 @@ pdftops is part of **Poppler**, the PDF rendering library forked from **Xpdf** b
 # SEE ALSO
 
 [pdf2ps](/man/pdf2ps)(1), [pdftotext](/man/pdftotext)(1), [ps2pdf](/man/ps2pdf)(1), [poppler-utils](/man/poppler-utils)(1)
+
+# INSTALL
+
+```apt: sudo apt install poppler-utils```
+
+```dnf: sudo dnf install poppler-utils```
+
+```apk: sudo apk add poppler-utils```
+
+```nix: nix profile install nixpkgs#poppler-utils```
+
+<!-- packages: 2026-07-22 -->

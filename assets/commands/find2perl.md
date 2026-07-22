@@ -67,6 +67,12 @@ Not all find predicates are supported. The generated code may need manual cleanu
 
 find2perl was included with **Perl** as a utility for translating find commands. It was removed from the Perl core distribution in **Perl 5.22.0** and must now be installed separately from CPAN.
 
+# INSTALL
+
+```apk: sudo apk add perl-app-find2perl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [find](/man/find)(1), [perl](/man/perl)(1)

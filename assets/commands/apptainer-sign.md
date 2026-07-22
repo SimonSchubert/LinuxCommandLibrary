@@ -52,6 +52,21 @@ Signing containers is essential for establishing trust in shared container image
 
 A PGP key pair or X.509 certificate must be configured before signing. The private key must be kept secure; compromised keys should be revoked immediately.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-verify](/man/apptainer-verify)(1), [apptainer-pull](/man/apptainer-pull)(1), [gpg](/man/gpg)(1)

@@ -67,6 +67,12 @@ Only supports the PagePro 12xxW/13xxW/14xxW series. The printer must be reachabl
 
 **min12xxw** was originally written by **Manuel Tobias Schiller** and packaged in Debian and other distributions as the Linux driver for Minolta's host-based PagePro laser printers, which lack a built-in PostScript or PCL interpreter.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-min12xxw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lp](/man/lp)(1), [lpr](/man/lpr)(1), [cups](/man/cups)(1), [cupsd](/man/cupsd)(8)

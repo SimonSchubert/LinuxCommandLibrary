@@ -128,6 +128,14 @@ Use comments: NOLINT, NOLINTNEXTLINE, NOLINTBEGIN/NOLINTEND
 
 Requires compilation database for complex projects. Use run-clang-tidy.py for parallel execution.
 
+# INSTALL
+
+```apt: sudo apt install clang-tidy```
+
+```apk: sudo apk add clang22-extra-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clang](/man/clang)(1), [clang-format](/man/clang-format)(1)

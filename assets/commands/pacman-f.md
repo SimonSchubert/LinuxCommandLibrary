@@ -51,6 +51,20 @@ short form of **pacman --files**, which queries the files database
 
 The files database must be downloaded first with **pacman -Fy**. A bare **pacman -F** _pattern_ implicitly performs a filename search, so an explicit **-s** is not required.
 
+# INSTALL
+
+```apt: sudo apt install pacman-package-manager```
+
+```dnf: sudo dnf install pacman```
+
+```pacman: sudo pacman -S pacman```
+
+```apk: sudo apk add pacman```
+
+```nix: nix profile install nixpkgs#pacman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8)

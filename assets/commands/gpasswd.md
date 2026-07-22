@@ -62,6 +62,20 @@ The **-M** option replaces all group members, not appends. Use **-a** and **-d**
 
 gpasswd is part of the shadow-utils package, which provides the shadow password suite for Unix systems. The shadow system was developed in the 1980s to improve password security by moving password hashes from the world-readable /etc/passwd to the restricted /etc/shadow file.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groupadd](/man/groupadd)(8), [groupmod](/man/groupmod)(8), [usermod](/man/usermod)(8), [newgrp](/man/newgrp)(1)

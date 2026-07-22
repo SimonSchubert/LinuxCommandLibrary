@@ -125,6 +125,22 @@ For Chromium and Chromium-derived projects, **gn** is shipped via **depot_tools*
 
 **GN** ("Generate Ninja") was created by **Brett Wilson** at **Google** as a faster replacement for **GYP** in the **Chromium** build. It first appeared in the Chromium tree around **2014** and progressively replaced GYP through **2017**. GN is now a standalone project hosted at **gn.googlesource.com/gn** and is used as the primary build system for Chromium, Fuchsia, V8, and several other large open-source codebases.
 
+# INSTALL
+
+```apt: sudo apt install generate-ninja```
+
+```dnf: sudo dnf install gn```
+
+```pacman: sudo pacman -S gn```
+
+```apk: sudo apk add gn```
+
+```zypper: sudo zypper install gn```
+
+```nix: nix profile install nixpkgs#gn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ninja](/man/ninja)(1), [cmake](/man/cmake)(1), [bazel](/man/bazel)(1), [meson](/man/meson)(1)

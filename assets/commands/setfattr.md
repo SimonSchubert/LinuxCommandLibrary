@@ -72,6 +72,24 @@ Not all filesystems support extended attributes; common supported filesystems in
 
 Extended attributes support was added to Linux kernel **2.4** and became fully integrated in **2.6**. The **setfattr** command is part of the **attr** package, developed as part of the XFS project at SGI and later adopted for general Linux filesystem use.
 
+# INSTALL
+
+```apt: sudo apt install attr```
+
+```dnf: sudo dnf install attr```
+
+```pacman: sudo pacman -S attr```
+
+```apk: sudo apk add attr```
+
+```zypper: sudo zypper install attr```
+
+```brew: brew install attr```
+
+```nix: nix profile install nixpkgs#attr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [getfattr](/man/getfattr)(1), [attr](/man/attr)(1), [setfacl](/man/setfacl)(1), [getfacl](/man/getfacl)(1)

@@ -129,6 +129,18 @@ Requires GTK+ and WebKit libraries. No built-in tab support; use tabbed for tabs
 
 **surf** was created as part of the suckless project, which produces software that emphasizes minimalism and clarity. It embodies the Unix philosophy of doing one thing well: displaying web pages. The browser provides a lightweight alternative for users who prefer keyboard-driven interfaces and minimal resource usage.
 
+# INSTALL
+
+```apt: sudo apt install surf```
+
+```dnf: sudo dnf install surf```
+
+```apk: sudo apk add sxmo-surf```
+
+```nix: nix profile install nixpkgs#surf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmenu](/man/dmenu)(1), [st](/man/st)(1), [dwm](/man/dwm)(1), [firefox](/man/firefox)(1), [chromium](/man/chromium)(1), [xprop](/man/xprop)(1)

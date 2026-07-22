@@ -75,6 +75,16 @@ To advertise your SSH server:
 
 Only discovers services advertised via mDNS on local network. Requires GUI environment. The "B" stands for "Browse", not Bluetooth.
 
+# INSTALL
+
+```apt: sudo apt install avahi-ui-utils```
+
+```dnf: sudo dnf install avahi-ui-tools```
+
+```apk: sudo apk add avahi-ui-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [avahi-browse](/man/avahi-browse)(1), [avahi-daemon](/man/avahi-daemon)(8), [ssh](/man/ssh)(1), [bvnc](/man/bvnc)(1)

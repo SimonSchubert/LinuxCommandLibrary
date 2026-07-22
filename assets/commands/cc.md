@@ -16,6 +16,22 @@ This command is an alias of **gcc**.
 
 Using **cc** in build scripts provides portability across systems where different compilers may be the default.
 
+# INSTALL
+
+```dnf: sudo dnf install gcc```
+
+```pacman: sudo pacman -S gcc```
+
+```apk: sudo apk add gcc```
+
+```zypper: sudo zypper install gcc```
+
+```brew: brew install gcc```
+
+```nix: nix profile install nixpkgs#gcc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [clang](/man/clang)(1), [make](/man/make)(1)

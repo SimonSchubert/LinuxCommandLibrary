@@ -135,6 +135,22 @@ Requires Perl. Parallel mode interleaves output; use `-j1` (the default) when yo
 
 **mr** / **myrepos** was created by **Joey Hess** and is now maintained by **Richard Hartmann** (RichiH). It has been packaged in Debian since the late 2000s and is the spiritual ancestor of tools like `vcsh` and `gita`.
 
+# INSTALL
+
+```dnf: sudo dnf install myrepos```
+
+```pacman: sudo pacman -S myrepos```
+
+```apk: sudo apk add myrepos```
+
+```zypper: sudo zypper install mr```
+
+```brew: brew install myrepos```
+
+```nix: nix profile install nixpkgs#mr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [vcsh](/man/vcsh)(1), [gita](/man/gita)(1)

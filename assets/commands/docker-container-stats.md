@@ -48,6 +48,24 @@ By default, the display continuously updates with current metrics for all runnin
 
 On Linux, memory usage includes cache by default. Network I/O shows cumulative totals since container start, not per-second rates. Stats are not available for containers using the **host** network mode on some platforms.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-stats](/man/docker-stats)(1), [docker-container-top](/man/docker-container-top)(1)

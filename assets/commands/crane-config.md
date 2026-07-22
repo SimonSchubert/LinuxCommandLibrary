@@ -34,6 +34,20 @@ Output is in JSON format, making it easy to pipe to **jq** for field extraction.
 
 Requires network access to the container registry. Private registries require authentication via `crane auth login`. Multi-arch images return the config for the host platform unless `--platform` is specified.
 
+# INSTALL
+
+```pacman: sudo pacman -S crane```
+
+```apk: sudo apk add crane```
+
+```zypper: sudo zypper install crane```
+
+```brew: brew install crane```
+
+```nix: nix profile install nixpkgs#crane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-manifest](/man/crane-manifest)(1)

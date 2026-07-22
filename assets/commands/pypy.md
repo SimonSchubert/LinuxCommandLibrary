@@ -83,6 +83,18 @@ Not all C extension packages are compatible; cffi-based extensions work well but
 
 PyPy was created as a **high-performance** Python interpreter with JIT.
 
+# INSTALL
+
+```dnf: sudo dnf install pypy```
+
+```pacman: sudo pacman -S pypy```
+
+```brew: brew install pypy```
+
+```nix: nix profile install nixpkgs#pypy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [python3](/man/python3)(1), [pip](/man/pip)(1)

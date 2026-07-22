@@ -83,6 +83,22 @@ Creating an array destroys existing data on component devices. RAID is not a bac
 
 **mdadm** is the modern Linux software RAID management tool, replacing older raidtools.
 
+# INSTALL
+
+```apt: sudo apt install mdadm```
+
+```dnf: sudo dnf install mdadm```
+
+```pacman: sudo pacman -S mdadm```
+
+```apk: sudo apk add mdadm```
+
+```zypper: sudo zypper install mdadm```
+
+```nix: nix profile install nixpkgs#mdadm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsblk](/man/lsblk)(8), [blkid](/man/blkid)(8)

@@ -73,6 +73,16 @@ GUI application, though some features available via command line. Requires signi
 
 ImHex was created by WerWolv and first released in **2020**. It was designed as a modern replacement for older hex editors, incorporating features specifically useful for reverse engineering and binary analysis.
 
+# INSTALL
+
+```dnf: sudo dnf install imhex```
+
+```apk: sudo apk add imhex```
+
+```nix: nix profile install nixpkgs#imhex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xxd](/man/xxd)(1), [hexdump](/man/hexdump)(1), [hexedit](/man/hexedit)(1), [od](/man/od)(1), [radare2](/man/radare2)(1)

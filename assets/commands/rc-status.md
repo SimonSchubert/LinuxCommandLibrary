@@ -72,6 +72,14 @@ The command is useful for system administration to quickly check which services 
 
 Only available on systems using OpenRC as the init system (Gentoo, Alpine, Artix, etc.). Service status reflects the state according to OpenRC, which may differ from actual process state if services crash unexpectedly.
 
+# INSTALL
+
+```apt: sudo apt install openrc```
+
+```apk: sudo apk add openrc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rc-service](/man/rc-service)(8), [rc-update](/man/rc-update)(8), [openrc](/man/openrc)(8)

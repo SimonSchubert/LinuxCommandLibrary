@@ -100,6 +100,17 @@ Operations have API rate limits; exceeding them returns **ThrottlingException** 
 
 **AWS Certificate Manager Private Certificate Authority** was launched in **April 2018** to provide managed private CA services on AWS. It eliminated the need for organizations to operate their own certificate authority infrastructure, offering a scalable and secure alternative for private PKI management.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-acm](/man/aws-acm)(1), [aws-iot](/man/aws-iot)(1), [aws-cloudtrail](/man/aws-cloudtrail)(1), [aws](/man/aws)(1)

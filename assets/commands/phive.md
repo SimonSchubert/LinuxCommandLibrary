@@ -106,6 +106,12 @@ Requires PHP with the **phar** extension. GPG is used to verify PHAR signatures;
 
 Phive was created for **secure phar distribution** with signature verification.
 
+# INSTALL
+
+```brew: brew install phive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [composer](/man/composer)(1), [php](/man/php)(1)

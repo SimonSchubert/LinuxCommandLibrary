@@ -119,6 +119,22 @@ X11 only - no native Wayland support (use Waybar). Requires icon fonts for symbo
 
 **Polybar** was created by **Michael Carlberg** around **2016** as a rewrite of lemonbar with easier configuration. It aimed to provide a powerful status bar without requiring shell scripting knowledge. Written in C++, it became popular in the r/unixporn community for desktop customization.
 
+# INSTALL
+
+```apt: sudo apt install polybar```
+
+```dnf: sudo dnf install polybar```
+
+```pacman: sudo pacman -S polybar```
+
+```apk: sudo apk add polybar```
+
+```zypper: sudo zypper install polybar```
+
+```nix: nix profile install nixpkgs#polybar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [polybar-msg](/man/polybar-msg)(1), [waybar](/man/waybar)(1), [i3status](/man/i3status)(1), [lemonbar](/man/lemonbar)(1), [dunst](/man/dunst)(1)

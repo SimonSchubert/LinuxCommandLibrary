@@ -68,6 +68,24 @@ CPUs are specified by their logical IDs using a comma-separated cpu-list that ca
 
 Cannot disable CPU 0 on most systems. Disabling CPUs migrates processes to remaining CPUs. Requires root privileges. Not all hardware supports CPU hotplug. The `--dispatch` and `--configure`/`--deconfigure` options require hypervisor support.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lscpu](/man/lscpu)(1), [taskset](/man/taskset)(1), [numactl](/man/numactl)(8), [nproc](/man/nproc)(1)

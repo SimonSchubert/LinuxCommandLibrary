@@ -139,6 +139,22 @@ The spec file defines how to build a package. Macros are defined in /usr/lib/rpm
 
 **rpmbuild** is part of the **RPM** (RPM Package Manager) system, originally developed by Red Hat for managing software packages on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install rpm```
+
+```dnf: sudo dnf install rpm```
+
+```apk: sudo apk add rpm```
+
+```zypper: sudo zypper install rpm```
+
+```brew: brew install rpm```
+
+```nix: nix profile install nixpkgs#rpm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rpm](/man/rpm)(8), [rpmspec](/man/rpmspec)(8), [rpmsign](/man/rpmsign)(8), [mock](/man/mock)(1)

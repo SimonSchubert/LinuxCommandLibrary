@@ -104,6 +104,16 @@ Requires GPG. Recipients need GPG keys. This is a separate tool from **gh secret
 
 git secret was created to solve the problem of storing secrets in git repositories, using GPG encryption to protect sensitive configuration.
 
+# INSTALL
+
+```dnf: sudo dnf install git-secret```
+
+```brew: brew install git-secret```
+
+```nix: nix profile install nixpkgs#git-secret```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [gh-secret](/man/gh-secret)(1), [git](/man/git)(1)

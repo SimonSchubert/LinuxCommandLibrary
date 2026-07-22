@@ -108,6 +108,16 @@ The baseline database must be created after a known-clean system state. Running 
 
 **Tripwire** was originally developed by **Gene Kim** and **Gene Spafford** at **Purdue University** in **1992** as an academic research project. It became one of the first file integrity monitoring tools widely adopted for Unix security. The open-source version was later maintained by Tripwire Inc., with a commercial enterprise version also available. It remains a foundational tool in host-based intrusion detection.
 
+# INSTALL
+
+```apt: sudo apt install tripwire```
+
+```dnf: sudo dnf install tripwire```
+
+```zypper: sudo zypper install tripwire```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aide](/man/aide)(1), [samhain](/man/samhain)(8), [md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1)

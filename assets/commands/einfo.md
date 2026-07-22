@@ -54,6 +54,22 @@ Part of the NCBI EDirect utilities for programmatic access to biological databas
 
 Part of the edirect package from NCBI. Requires internet connection. Output is in XML format by default.
 
+# INSTALL
+
+```apt: sudo apt install epub-utils```
+
+```dnf: sudo dnf install ebook-tools```
+
+```pacman: sudo pacman -S ebook-tools```
+
+```apk: sudo apk add ebook-tools```
+
+```zypper: sudo zypper install ebook-tools```
+
+```brew: brew install ebook-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [esearch](/man/esearch)(1), [elink](/man/elink)(1)

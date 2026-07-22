@@ -35,6 +35,24 @@ Because it delegates to `pastebinit`, the destination pastebin service (and any 
 
 Requires **pastebinit** to be installed separately; the command aborts with an error if it is missing. Pasted content is sent to a third-party service, so avoid pasting patches containing secrets.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-format-patch](/man/git-format-patch)(1), [git-extras](/man/git-extras)(1)

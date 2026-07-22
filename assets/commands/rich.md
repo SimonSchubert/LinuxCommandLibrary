@@ -79,6 +79,12 @@ Requires the `rich` Python package (`pip install rich`). Terminal must support A
 
 **Rich** was created by **Will McGugan** in **2019** for beautiful terminal output in Python. Its CLI modules provide quick utilities.
 
+# INSTALL
+
+```brew: brew install rich```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bat](/man/bat)(1), [glow](/man/glow)(1), [jq](/man/jq)(1), [pygmentize](/man/pygmentize)(1)

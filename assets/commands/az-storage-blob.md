@@ -102,6 +102,19 @@ The command group supports uploading, downloading, copying, and managing blob pr
 
 Authentication is required via **--account-key**, **--sas-token**, **--connection-string**, or **--auth-mode login**. Archive tier blobs must be rehydrated before access. Batch operations respect patterns but do not recursively traverse virtual directories by default. Delete operations mark blobs for deletion; soft-delete policies may allow recovery.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az-storage](/man/az-storage)(1), [az-storage-container](/man/az-storage-container)(1), [az-storage-account](/man/az-storage-account)(1)

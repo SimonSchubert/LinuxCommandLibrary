@@ -72,6 +72,22 @@ Creating a filesystem destroys all existing data on the device. The device shoul
 
 **mkfs.xfs** is part of **xfsprogs**, the XFS filesystem utilities. XFS was originally developed by Silicon Graphics for IRIX and was ported to Linux in 2001.
 
+# INSTALL
+
+```apt: sudo apt install xfsprogs```
+
+```dnf: sudo dnf install xfsprogs```
+
+```pacman: sudo pacman -S xfsprogs```
+
+```apk: sudo apk add xfsprogs```
+
+```zypper: sudo zypper install xfsprogs```
+
+```nix: nix profile install nixpkgs#xfsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xfs](/man/xfs)(5), [xfs_admin](/man/xfs_admin)(8), [xfs_repair](/man/xfs_repair)(8), [mkfs](/man/mkfs)(8)

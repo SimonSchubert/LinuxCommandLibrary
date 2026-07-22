@@ -138,6 +138,22 @@ Behavior differs between Linux (psmisc) and BSD/macOS versions. On macOS, syntax
 
 **killall** originated in BSD Unix. The Linux version is part of the **psmisc** package, maintained separately and with different features than the BSD version. The command has been a standard Unix utility for decades, though the implementation differences between systems require attention for portable scripts.
 
+# INSTALL
+
+```apt: sudo apt install psmisc```
+
+```dnf: sudo dnf install psmisc```
+
+```pacman: sudo pacman -S psmisc```
+
+```apk: sudo apk add psmisc```
+
+```zypper: sudo zypper install psmisc```
+
+```nix: nix profile install nixpkgs#psmisc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kill](/man/kill)(1), [pkill](/man/pkill)(1), [pgrep](/man/pgrep)(1), [ps](/man/ps)(1), [pidof](/man/pidof)(1)

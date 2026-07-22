@@ -73,6 +73,18 @@ GUI requires display (use --headless for servers). Conversion quality depends on
 
 LibreOffice Writer evolved from OpenOffice.org Writer, which originated from StarWriter by **Star Division** (acquired by Sun Microsystems in 1999). LibreOffice forked in **2010**.
 
+# INSTALL
+
+```apt: sudo apt install libreoffice-writer```
+
+```dnf: sudo dnf install libreoffice-writer```
+
+```apk: sudo apk add libreoffice-writer```
+
+```zypper: sudo zypper install libreoffice-writer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [libreoffice](/man/libreoffice)(1), [unoconv](/man/unoconv)(1)

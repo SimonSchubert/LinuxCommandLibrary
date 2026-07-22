@@ -51,6 +51,16 @@ manages PKCS#11 security modules in NSS databases
 
 **modutil** manages PKCS#11 security modules in NSS databases. Add, remove, and configure hardware tokens and software modules. Part of Mozilla NSS tools.
 
+# INSTALL
+
+```apt: sudo apt install libnss3-tools```
+
+```dnf: sudo dnf install nss-tools```
+
+```apk: sudo apk add nss-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [certutil](/man/certutil)(1)

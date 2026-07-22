@@ -82,6 +82,22 @@ The tool connects to libvirt and can manage both local and remote hypervisors.
 
 Requires libvirt and a hypervisor (KVM, Xen, etc.). Remote management requires proper libvirt configuration. Hardware virtualization support recommended.
 
+# INSTALL
+
+```dnf: sudo dnf install virt-manager```
+
+```pacman: sudo pacman -S virt-manager```
+
+```apk: sudo apk add virt-manager```
+
+```zypper: sudo zypper install virt-manager```
+
+```brew: brew install virt-manager```
+
+```nix: nix profile install nixpkgs#virt-manager```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virsh](/man/virsh)(1), [virt-install](/man/virt-install)(1), [virt-clone](/man/virt-clone)(1), [virt-viewer](/man/virt-viewer)(1), [qemu](/man/qemu)(1), [kvm](/man/kvm)(1)

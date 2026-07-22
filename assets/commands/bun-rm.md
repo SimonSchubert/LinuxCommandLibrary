@@ -29,6 +29,16 @@ Alias for removing packages from a project
 
 **bun rm** is an alias for **bun remove**. It uninstalls packages from the project and removes them from package.json.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-remove](/man/bun-remove)(1), [bun-install](/man/bun-install)(1)

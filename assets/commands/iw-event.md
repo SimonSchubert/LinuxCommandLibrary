@@ -41,6 +41,22 @@ It runs until interrupted, making it useful for watching what happens during con
 **-f**
 > Include frequency information in the event output.
 
+# INSTALL
+
+```apt: sudo apt install iw```
+
+```dnf: sudo dnf install iw```
+
+```pacman: sudo pacman -S iw```
+
+```apk: sudo apk add iw```
+
+```zypper: sudo zypper install iw```
+
+```nix: nix profile install nixpkgs#iw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iw](/man/iw)(8), [iwconfig](/man/iwconfig)(8), [wpa_supplicant](/man/wpa_supplicant)(8)

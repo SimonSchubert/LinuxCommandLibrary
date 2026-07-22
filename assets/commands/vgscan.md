@@ -64,6 +64,22 @@ vgscan is typically run automatically during system boot. Manually running vgsca
 
 **vgscan** is part of **LVM2** (Logical Volume Manager), which evolved from the original LVM implementation. LVM2 was developed by **Red Hat** and uses the device-mapper kernel framework for dynamic disk management on Linux.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vgdisplay](/man/vgdisplay)(8), [vgchange](/man/vgchange)(8), [vgcreate](/man/vgcreate)(8), [pvscan](/man/pvscan)(8), [lvscan](/man/lvscan)(8), [lvm](/man/lvm)(8)

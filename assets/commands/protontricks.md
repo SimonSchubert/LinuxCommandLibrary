@@ -66,6 +66,18 @@ Requires Steam and Proton. Game must have been run at least once to create prefi
 
 **protontricks** was created by **Matoking** to bridge Winetricks and Proton, addressing the common need to install Windows dependencies in Proton game prefixes.
 
+# INSTALL
+
+```dnf: sudo dnf install protontricks```
+
+```pacman: sudo pacman -S protontricks```
+
+```zypper: sudo zypper install protontricks```
+
+```nix: nix profile install nixpkgs#protontricks```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [winetricks](/man/winetricks)(1), [wine](/man/wine)(1), [steam](/man/steam)(1)

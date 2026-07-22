@@ -37,6 +37,14 @@ Retrieve next SNMP OID value sequentially
 
 **snmpgetnext** retrieves the lexicographically next OID value from an SNMP agent. Used for walking MIB trees and discovering available OIDs. Part of Net-SNMP suite.
 
+# INSTALL
+
+```apt: sudo apt install snmp```
+
+```apk: sudo apk add net-snmp-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snmpget](/man/snmpget)(1), [snmpwalk](/man/snmpwalk)(1), [snmpbulkget](/man/snmpbulkget)(1)

@@ -100,6 +100,19 @@ This command group manages Standard tier Logic Apps. For Consumption tier Logic 
 
 Requires Azure CLI to be installed and authenticated. Standard tier Logic Apps require a storage account. Some features require specific Azure regions.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-functionapp](/man/az-functionapp)(1)

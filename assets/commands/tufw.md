@@ -24,6 +24,12 @@ Must be run as root.
 
 **tufw** was created by **Thomas Pellegatta** (peltho) and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S tufw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ufw](/man/ufw)(8), [iptables](/man/iptables)(8), [firewalld](/man/firewalld)(1)

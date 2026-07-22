@@ -117,6 +117,24 @@ Core files are large (50MB+). Compilation can be memory-intensive. Some POSIX si
 
 **SBCL** was forked from **CMUCL** (Carnegie Mellon University Common Lisp) in **1999** by a group of developers seeking more active maintenance. The name "Steel Bank" plays on "Carnegie" (Andrew Carnegie was a steel baron). It has become one of the most popular free Common Lisp implementations, known for its performance and active development.
 
+# INSTALL
+
+```apt: sudo apt install sbcl```
+
+```dnf: sudo dnf install sbcl```
+
+```pacman: sudo pacman -S sbcl```
+
+```apk: sudo apk add sbcl```
+
+```zypper: sudo zypper install sbcl```
+
+```brew: brew install sbcl```
+
+```nix: nix profile install nixpkgs#sbcl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clisp](/man/clisp)(1), [ecl](/man/ecl)(1), [quicklisp](/man/quicklisp)(1), [roswell](/man/roswell)(1)

@@ -60,6 +60,14 @@ Never run ldd on untrusted executables as it may execute arbitrary code. For unt
 
 **ldd** is part of the GNU C Library (glibc). It works by setting the **LD_TRACE_LOADED_OBJECTS** environment variable and invoking the dynamic linker.
 
+# INSTALL
+
+```apt: sudo apt install libc-bin```
+
+```apk: sudo apk add musl-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ld.so](/man/ld.so)(8), [ldconfig](/man/ldconfig)(8), [objdump](/man/objdump)(1)

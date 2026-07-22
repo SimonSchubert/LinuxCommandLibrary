@@ -91,6 +91,16 @@ Output format may change between ZFS versions as internal structures evolve.
 
 For routine pool diagnostics, use **zpool status** instead.
 
+# INSTALL
+
+```apt: sudo apt install zfs-fuse```
+
+```apk: sudo apk add zfs```
+
+```nix: nix profile install nixpkgs#zfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zfs](/man/zfs)(8), [zpool](/man/zpool)(8), [zpool-status](/man/zpool-status)(8)

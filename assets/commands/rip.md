@@ -79,6 +79,12 @@ The graveyard location defaults to /tmp/graveyard-$USER but can be customized wi
 
 The graveyard uses disk space. Large deletes may fill /tmp storage. This is not a secure delete tool; files in the graveyard can be read by anyone with access.
 
+# INSTALL
+
+```aur: yay -S rip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rm](/man/rm)(1), [trash-cli](/man/trash-cli)(1), [safe-rm](/man/safe-rm)(1)

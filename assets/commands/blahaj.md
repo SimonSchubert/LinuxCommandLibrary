@@ -90,6 +90,12 @@ Output requires a terminal that supports ANSI color codes. Some color schemes ma
 
 BLAHAJ was created by **GeopJr** as a fun terminal tool inspired by lolcat and the viral popularity of the IKEA BLAHAJ shark plushie, particularly within LGBTQ+ communities. Multiple implementations exist in Crystal, Node.js, and Rust.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#blahaj```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lolcat](/man/lolcat)(1), [figlet](/man/figlet)(1), [cowsay](/man/cowsay)(1)

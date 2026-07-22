@@ -51,6 +51,12 @@ Requires appropriate permissions to access the named pipe. Some pipes require ad
 
 Part of the **Impacket** library by SecureAuth. Named pipe access is fundamental to many Windows protocols and services, making this tool useful for various testing scenarios.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [impacket-smbclient](/man/impacket-smbclient)(1), [smbclient](/man/smbclient)(1), [rpcclient](/man/rpcclient)(1)

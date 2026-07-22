@@ -134,6 +134,13 @@ SAS tokens must have appropriate permissions (read, write, list, delete). URL mu
 
 **AzCopy v10** was released in **2018** as a complete rewrite from earlier versions, moving from .NET to Go for cross-platform support. It replaced the Windows-only AzCopy v8. The tool has gained features including Azure AD authentication, S3-to-Azure migration, benchmark command, and integration with Azure Storage lifecycle. It remains the recommended tool for bulk Azure storage operations.
 
+# INSTALL
+
+```pacman: sudo pacman -S azcopy```
+
+```brew: brew install azcopy```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-storage](/man/az-storage)(1), [rsync](/man/rsync)(1), [rclone](/man/rclone)(1)

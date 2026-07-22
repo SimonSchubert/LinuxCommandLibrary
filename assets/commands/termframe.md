@@ -60,6 +60,12 @@ Terminal output SVG screenshot tool
 
 **termframe** was created by **Pavel Ivanov** (pamburus) and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install termframe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [silicon](/man/silicon)(1), [t-rec](/man/t-rec)(1)

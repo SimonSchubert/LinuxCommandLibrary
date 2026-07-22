@@ -67,6 +67,13 @@ Shell features like pipes, redirects, and command substitution are not supported
 
 **basalt** was created by **Erik Juhani Nylund** with the repository established in **September 2023**. The first public release (v0.3.7) was published in **May 2025**. The project is written in Rust and licensed under the MIT license. As of early 2026, it has over 30 releases and around 1000 GitHub stars.
 
+# INSTALL
+
+```aur: yay -S basalt```
+
+```nix: nix profile install nixpkgs#basalt```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [obsidian](/man/obsidian)(1), [glow](/man/glow)(1), [vim](/man/vim)(1), [nvim](/man/nvim)(1)

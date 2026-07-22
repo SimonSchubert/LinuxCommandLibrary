@@ -30,6 +30,24 @@ Requires root privileges to read shadow file. Should only be used for authorized
 
 **unshadow** was developed as part of the **John the Ripper** password cracker project to handle modern Unix systems that separate password hashes into the shadow file.
 
+# INSTALL
+
+```apt: sudo apt install john```
+
+```dnf: sudo dnf install john```
+
+```pacman: sudo pacman -S john```
+
+```apk: sudo apk add john```
+
+```zypper: sudo zypper install john```
+
+```brew: brew install john```
+
+```nix: nix profile install nixpkgs#john```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [john](/man/john)(8), [passwd](/man/passwd)(5)

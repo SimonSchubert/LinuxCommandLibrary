@@ -52,6 +52,24 @@ ACLs must be supported by the filesystem (mount with acl option). The default AC
 
 **getfacl** is part of the **acl** package, providing POSIX ACL support on Linux.
 
+# INSTALL
+
+```apt: sudo apt install acl```
+
+```dnf: sudo dnf install acl```
+
+```pacman: sudo pacman -S acl```
+
+```apk: sudo apk add acl```
+
+```zypper: sudo zypper install acl```
+
+```brew: brew install acl```
+
+```nix: nix profile install nixpkgs#acl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [setfacl](/man/setfacl)(1), [chmod](/man/chmod)(1)

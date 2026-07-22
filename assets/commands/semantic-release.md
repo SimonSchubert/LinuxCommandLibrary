@@ -100,6 +100,12 @@ semantic-release must run in a CI environment with push access to the repository
 
 **semantic-release** was created by Stephan Boennemann and first released in **2015** to solve the problem of manual, error-prone software releases. It pioneered the concept of fully automated releases based on commit message conventions. The project gained significant adoption in the JavaScript/Node.js ecosystem and influenced similar tools in other languages. It continues active development under the semantic-release organization on GitHub.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#semantic-release```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [git](/man/git)(1)

@@ -74,6 +74,24 @@ Man pages may need separate installation. Web format requires browser. Some guid
 
 git help is a core **Git** command providing documentation access, replacing direct man page invocation for git commands.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [man](/man/man)(1)

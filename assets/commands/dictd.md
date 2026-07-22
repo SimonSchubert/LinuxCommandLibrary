@@ -100,6 +100,18 @@ Requires dictionary database files. Port 2628 may need firewall rules. Large dic
 
 **dictd** was developed as part of the **DICT** project in the late **1990s**. The DICT protocol was designed to replace older dictionary protocols and enable internet dictionary services. The project provides both server and client implementations.
 
+# INSTALL
+
+```apt: sudo apt install dictd```
+
+```dnf: sudo dnf install dictd```
+
+```pacman: sudo pacman -S dictd```
+
+```zypper: sudo zypper install dictd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dict](/man/dict)(1)

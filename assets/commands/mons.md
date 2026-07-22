@@ -94,6 +94,12 @@ Requires X Window System and xrandr. Does not work with Wayland compositors. Lim
 
 **mons** was developed by **Thomas� Venturini** (Ventto) as a lightweight alternative to graphical display configuration tools. It provides a minimal, scriptable interface for common multi-monitor operations.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#mons```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xrandr](/man/xrandr)(1), [autorandr](/man/autorandr)(1), [arandr](/man/arandr)(1)

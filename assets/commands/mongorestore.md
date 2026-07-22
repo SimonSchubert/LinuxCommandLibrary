@@ -52,6 +52,14 @@ restores MongoDB data from mongodump output
 
 **mongorestore** restores MongoDB data from mongodump output. Part of MongoDB Database Tools. Restores BSON files to MongoDB collections. Supports full and selective restoration.
 
+# INSTALL
+
+```apk: sudo apk add mongodb-tools```
+
+```nix: nix profile install nixpkgs#mongodb-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mongodump](/man/mongodump)(1), [mongoexport](/man/mongoexport)(1)

@@ -103,6 +103,12 @@ Native compilation takes time and memory. Some Java libraries don't work in nati
 
 **Quarkus** was released by **Red Hat** in **2019** as a "supersonic, subatomic Java" framework. It was designed from the ground up for container and Kubernetes deployments, addressing Java's traditional weaknesses in startup time and memory.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#quarkus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mvn](/man/mvn)(1), [gradle](/man/gradle)(1), [java](/man/java)(1), [docker](/man/docker)(1)

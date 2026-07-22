@@ -96,6 +96,20 @@ Requires Python. Some psql features not implemented. Large result sets may be sl
 
 **pgcli** was created by **Amjith Ramanujam** around **2014**, inspired by mycli for MySQL. It brought modern CLI features to PostgreSQL, emphasizing usability improvements over the basic psql client.
 
+# INSTALL
+
+```dnf: sudo dnf install pgcli```
+
+```pacman: sudo pacman -S pgcli```
+
+```apk: sudo apk add pgcli```
+
+```brew: brew install pgcli```
+
+```nix: nix profile install nixpkgs#pgcli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [psql](/man/psql)(1), [mycli](/man/mycli)(1), [litecli](/man/litecli)(1), [pg_dump](/man/pg_dump)(1)

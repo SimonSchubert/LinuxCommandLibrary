@@ -69,6 +69,14 @@ Requires Docker. Development focused. Not for production.
 
 k3d was created by **Rancher** to simplify running K3s in Docker containers for local Kubernetes development.
 
+# INSTALL
+
+```brew: brew install k3d```
+
+```nix: nix profile install nixpkgs#k3d```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [k3s](/man/k3s)(1), [kubectl](/man/kubectl)(1), [kind](/man/kind)(1), [docker](/man/docker)(1)

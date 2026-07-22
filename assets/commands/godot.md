@@ -65,6 +65,18 @@ Resource-intensive for 3D. GDScript has learning curve. Export templates needed 
 
 Godot was created by **Juan Linietsky** and **Ariel Manzur**, open-sourced in **2014**, becoming a popular free game engine.
 
+# INSTALL
+
+```dnf: sudo dnf install godot```
+
+```pacman: sudo pacman -S godot```
+
+```zypper: sudo zypper install godot```
+
+```nix: nix profile install nixpkgs#godot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blender](/man/blender)(1)

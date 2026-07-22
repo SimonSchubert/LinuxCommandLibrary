@@ -38,6 +38,24 @@ graphviz layout program for squarified treemaps
 
 **patchwork** is a Graphviz layout program for squarified treemaps. Displays hierarchical data as nested rectangles with areas proportional to values. Part of the Graphviz visualization suite.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [osage](/man/osage)(1), [neato](/man/neato)(1)

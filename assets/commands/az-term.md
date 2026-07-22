@@ -71,6 +71,19 @@ This command group is marked **experimental** by Microsoft and may change.
 
 Requires Azure CLI to be installed and authenticated. Terms must be accepted per subscription. Some images require terms acceptance before the first deployment.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-vm](/man/az-vm)(1), [az-image](/man/az-image)(1)

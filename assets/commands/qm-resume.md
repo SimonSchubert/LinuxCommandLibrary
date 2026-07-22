@@ -41,6 +41,12 @@ Requires the VM to be in suspended (paused) state. The **--skiplock** option req
 
 Part of **Proxmox VE** QEMU/KVM management tools for virtual machine administration.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-suspend](/man/qm-suspend)(1), [qm-start](/man/qm-start)(1), [qm-stop](/man/qm-stop)(1), [qm-shutdown](/man/qm-shutdown)(1)

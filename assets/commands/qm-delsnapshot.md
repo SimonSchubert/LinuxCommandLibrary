@@ -35,6 +35,12 @@ Deleting snapshots is irreversible. Ensure the snapshot is no longer needed befo
 
 Part of **Proxmox VE** QEMU/KVM management tools for virtual machine administration.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-snapshot](/man/qm-snapshot)(1), [qm-listsnapshot](/man/qm-listsnapshot)(1), [qm-rollback](/man/qm-rollback)(1)

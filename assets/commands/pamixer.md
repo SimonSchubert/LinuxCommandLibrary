@@ -106,6 +106,22 @@ Requires PulseAudio or PipeWire. Volume above 100% may distort. Sink IDs may cha
 
 **pamixer** was created as a command-line alternative to graphical PulseAudio mixers. It enables volume control through scripts, keybindings, and status bars common in minimal window managers.
 
+# INSTALL
+
+```apt: sudo apt install pamixer```
+
+```dnf: sudo dnf install pamixer```
+
+```pacman: sudo pacman -S pamixer```
+
+```apk: sudo apk add pamixer```
+
+```zypper: sudo zypper install pamixer```
+
+```nix: nix profile install nixpkgs#pamixer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pactl](/man/pactl)(1), [pulsemixer](/man/pulsemixer)(1), [amixer](/man/amixer)(1), [wpctl](/man/wpctl)(1)

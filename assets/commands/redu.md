@@ -56,6 +56,14 @@ Requires a readable restic repository. Initial scan can be slow on large reposit
 
 **redu** was created by **drdo** and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install redu```
+
+```nix: nix profile install nixpkgs#redu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [restic](/man/restic)(1), [ncdu](/man/ncdu)(1), [du](/man/du)(1)

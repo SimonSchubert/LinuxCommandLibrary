@@ -24,6 +24,12 @@ OTP secrets must be manually configured. Time synchronization is required for ac
 
 **otti** was created by **dnaka91** and is written in **Rust**. It supports macOS, Linux, BSD, and Windows.
 
+# INSTALL
+
+```aur: yay -S otti```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pass-otp](/man/pass-otp)(1), [oathtool](/man/oathtool)(1)

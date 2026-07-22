@@ -91,6 +91,24 @@ Different from openssl req which creates certificates. Use -noout with info comm
 
 X.509 is the ITU-T standard for PKI, with OpenSSL providing comprehensive tooling since its early versions.
 
+# INSTALL
+
+```apt: sudo apt install openssl```
+
+```dnf: sudo dnf install openssl```
+
+```pacman: sudo pacman -S openssl```
+
+```apk: sudo apk add openssl```
+
+```zypper: sudo zypper install openssl```
+
+```brew: brew install openssl```
+
+```nix: nix profile install nixpkgs#openssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl-req](/man/openssl-req)(1), [openssl-ca](/man/openssl-ca)(1), [openssl-verify](/man/openssl-verify)(1)

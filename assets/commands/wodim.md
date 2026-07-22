@@ -69,6 +69,18 @@ The tool supports burning ISO images, audio CDs, and multi-session discs. It can
 
 Burning at high speeds may produce errors on some media. Some operations like blanking can cause data loss. Requires appropriate permissions for device access. Originally forked due to licensing issues with cdrecord.
 
+# INSTALL
+
+```apt: sudo apt install wodim```
+
+```dnf: sudo dnf install wodim```
+
+```apk: sudo apk add cdrkit```
+
+```nix: nix profile install nixpkgs#cdrkit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [genisoimage](/man/genisoimage)(1), [cdrdao](/man/cdrdao)(1), [growisofs](/man/growisofs)(1)

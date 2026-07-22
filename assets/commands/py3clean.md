@@ -76,6 +76,12 @@ Debian/Ubuntu specific tool. Alternative: find . -name '*.pyc' -delete. Bytecode
 
 py3clean is part of Debian's **dh-python** package for Python 3 packaging and cleanup.
 
+# INSTALL
+
+```apt: sudo apt install python3-minimal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pyclean](/man/pyclean)(1), [python3](/man/python3)(1)

@@ -39,6 +39,12 @@ Only validates credentials; does not establish a full RDP session. Network Level
 
 Part of the **Impacket** library by SecureAuth. Useful for validating credentials against RDP services without the overhead of full graphical session establishment.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xfreerdp](/man/xfreerdp)(1), [rdesktop](/man/rdesktop)(1), [nmap](/man/nmap)(1)

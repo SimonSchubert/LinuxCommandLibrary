@@ -32,6 +32,18 @@ Show current Pulumi user and backend
 
 **pulumi whoami** displays the currently logged-in user and backend. Shows username, organization, and backend URL. Useful for verifying authentication status.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-login](/man/pulumi-login)(1), [pulumi-logout](/man/pulumi-logout)(1)

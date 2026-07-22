@@ -79,6 +79,24 @@ Create commits that undo previous changes
 
 This makes it safe for shared branches where rewriting history would cause problems. Use `-m` to specify the mainline parent when reverting merge commits.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-reset](/man/git-reset)(1), [git-cherry-pick](/man/git-cherry-pick)(1)

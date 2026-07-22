@@ -116,6 +116,22 @@ Some security tools flag UPX-compressed files. Code signing may be invalidated. 
 
 **UPX** was created by **Markus Oberhumer**, **László Molnár**, and **John Reiser** in **1996**. It became the standard tool for executable compression, widely used for software distribution.
 
+# INSTALL
+
+```dnf: sudo dnf install upx```
+
+```pacman: sudo pacman -S upx```
+
+```apk: sudo apk add upx```
+
+```zypper: sudo zypper install upx```
+
+```brew: brew install upx```
+
+```nix: nix profile install nixpkgs#upx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [strip](/man/strip)(1), [gzip](/man/gzip)(1), [objcopy](/man/objcopy)(1)

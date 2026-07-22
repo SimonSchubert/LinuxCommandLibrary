@@ -65,6 +65,16 @@ Requires running PipeWire instance. Limited format support compared to full audi
 
 **pw-cat** is part of the **PipeWire** multimedia framework. It provides similar functionality to PulseAudio's pacat tool for the PipeWire ecosystem.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-tools```
+
+```zypper: sudo zypper install pipewire-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pw-play](/man/pw-play)(1), [pw-record](/man/pw-record)(1), [pw-cli](/man/pw-cli)(1), [wpctl](/man/wpctl)(1)

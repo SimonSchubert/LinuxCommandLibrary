@@ -70,6 +70,13 @@ May produce false positives requiring manual verification. Only detects string-b
 
 **apkleaks** was created for Android security assessments, automating the process of identifying leaked secrets that manual code review might miss.
 
+# INSTALL
+
+```brew: brew install apkleaks```
+
+```nix: nix profile install nixpkgs#apkleaks```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apktool](/man/apktool)(1), [jadx](/man/jadx)(1), [androguard](/man/androguard)(1)

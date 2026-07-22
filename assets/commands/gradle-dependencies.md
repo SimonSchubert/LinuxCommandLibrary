@@ -46,6 +46,18 @@ Large trees can be overwhelming. Use --configuration to filter. Check for versio
 
 The dependencies task is a standard **Gradle** diagnostic task for understanding project dependencies.
 
+# INSTALL
+
+```pacman: sudo pacman -S gradle```
+
+```apk: sudo apk add gradle```
+
+```brew: brew install gradle```
+
+```nix: nix profile install nixpkgs#gradle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [gradle-dependencyinsight](/man/gradle-dependencyinsight)(1)

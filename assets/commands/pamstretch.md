@@ -66,6 +66,24 @@ Only integer scale factors are supported; for non-integer scaling use **pamstret
 
 **pamstretch** is part of the **Netpbm** toolkit, a set of graphics file manipulation utilities originating from Jef Poskanzer's **pbmplus** package (1988). It was introduced as an interpolating alternative to **pnmenlarge**, which only replicates pixels.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamstretch-gen](/man/pamstretch-gen)(1), [pamscale](/man/pamscale)(1), [pnmenlarge](/man/pnmenlarge)(1), [pnmscale](/man/pnmscale)(1), [pam](/man/pam)(5), [pnm](/man/pnm)(5)

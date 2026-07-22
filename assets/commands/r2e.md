@@ -59,6 +59,20 @@ Requires email setup. Python package.
 
 rss2email was created for **RSS to email** delivery.
 
+# INSTALL
+
+```dnf: sudo dnf install rss2email```
+
+```pacman: sudo pacman -S rss2email```
+
+```apk: sudo apk add rss2email```
+
+```zypper: sudo zypper install rss2email```
+
+```nix: nix profile install nixpkgs#rss2email```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [feed2exec](/man/feed2exec)(1), [newsboat](/man/newsboat)(1)

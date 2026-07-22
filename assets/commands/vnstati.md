@@ -79,6 +79,24 @@ Requires vnstat daemon to be running and collecting data. Output is PNG format o
 
 Part of the **vnStat** project by Teemu Toivola. vnstati was added to provide graphical output capabilities, commonly used for generating bandwidth graphs for web-based monitoring dashboards and reports.
 
+# INSTALL
+
+```apt: sudo apt install vnstati```
+
+```dnf: sudo dnf install vnstat```
+
+```pacman: sudo pacman -S vnstat```
+
+```apk: sudo apk add vnstat```
+
+```zypper: sudo zypper install vnstat```
+
+```brew: brew install vnstat```
+
+```nix: nix profile install nixpkgs#vnstat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vnstat](/man/vnstat)(1), [nethogs](/man/nethogs)(8), [iftop](/man/iftop)(8)

@@ -108,6 +108,15 @@ Profiles must be syntactically correct or loading will fail. Use **-p** to prepr
 
 Part of the **AppArmor** application security framework developed by Immunix and later acquired by Novell. Now maintained by Canonical.
 
+# INSTALL
+
+```apt: sudo apt install apparmor```
+
+```pacman: sudo pacman -S apparmor```
+
+```apk: sudo apk add apparmor```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aa-status](/man/aa-status)(8), [aa-enforce](/man/aa-enforce)(8), [aa-complain](/man/aa-complain)(8), [apparmor](/man/apparmor)(7)

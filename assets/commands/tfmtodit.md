@@ -58,6 +58,24 @@ The tool is specifically designed for the DVI output device and may not work cor
 
 **tfmtodit** is part of the **groff** (GNU troff) project, which began in **1990** as a free software replacement for the Unix troff typesetting system. The tool bridges the gap between TeX font metrics and groff's font description format, enabling use of TeX fonts with groff's DVI output.
 
+# INSTALL
+
+```apt: sudo apt install groff```
+
+```dnf: sudo dnf install groff```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [grodvi](/man/grodvi)(1), [groff_font](/man/groff_font)(5), [troff](/man/troff)(1)

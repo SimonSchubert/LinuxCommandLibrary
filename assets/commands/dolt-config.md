@@ -85,6 +85,16 @@ An identity (`user.name` and `user.email`) must be set before the first commit; 
 
 dolt config follows the **git config** conventions closely, deliberately so: Dolt's whole interface is designed to be guessable by anyone who already knows Git, and configuration was one of the first commands ported when Dolt was released in 2019.
 
+# INSTALL
+
+```pacman: sudo pacman -S dolt```
+
+```brew: brew install dolt```
+
+```nix: nix profile install nixpkgs#dolt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dolt](/man/dolt)(1), [dolt-commit](/man/dolt-commit)(1), [git-config](/man/git-config)(1)

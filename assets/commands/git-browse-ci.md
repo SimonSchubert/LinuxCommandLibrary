@@ -47,6 +47,24 @@ SSH remotes are rewritten to **http://** rather than **https://**, relying on th
 
 **git browse-ci** is part of **git-extras**, the collection of git helper scripts started by **TJ Holowaychuk** in **2010** and now community-maintained.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-browse](/man/git-browse)(1), [git-extras](/man/git-extras)(1), [git-remote](/man/git-remote)(1), [gh-run](/man/gh-run)(1), [xdg-open](/man/xdg-open)(1)

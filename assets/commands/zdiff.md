@@ -64,6 +64,24 @@ The command is part of the gzip package. For byte-by-byte comparison, use **zcmp
 
 Only handles gzip-compressed files. Both files are fully decompressed in memory before comparison. For xz/lzma files, use xzdiff; for bzip2 files, use bzdiff.
 
+# INSTALL
+
+```apt: sudo apt install gzip```
+
+```dnf: sudo dnf install gzip```
+
+```pacman: sudo pacman -S gzip```
+
+```apk: sudo apk add gzip```
+
+```zypper: sudo zypper install gzip```
+
+```brew: brew install gzip```
+
+```nix: nix profile install nixpkgs#gzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [zcmp](/man/zcmp)(1), [zcat](/man/zcat)(1), [gzip](/man/gzip)(1), [zmore](/man/zmore)(1)

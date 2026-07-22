@@ -92,6 +92,14 @@ Must be run as root for most useful operations. The resulting package may not be
 
 **checkinstall** was created to solve the problem of managing software installed from source code. It provides a bridge between traditional source compilation and modern package management systems.
 
+# INSTALL
+
+```apt: sudo apt install checkinstall```
+
+```nix: nix profile install nixpkgs#checkinstall```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [make](/man/make)(1), [dpkg](/man/dpkg)(1), [rpm](/man/rpm)(8), [apt](/man/apt)(8), [fakeroot](/man/fakeroot)(1)

@@ -82,6 +82,24 @@ containerd is typically managed as a system service rather than run directly. Di
 
 containerd was originally developed as part of Docker and was spun out as an independent project in **December 2016**. It was donated to the Cloud Native Computing Foundation (CNCF) in **2017** and graduated as a CNCF project in **2019**, becoming the standard container runtime for Kubernetes.
 
+# INSTALL
+
+```apt: sudo apt install containerd```
+
+```dnf: sudo dnf install containerd```
+
+```pacman: sudo pacman -S containerd```
+
+```apk: sudo apk add containerd```
+
+```zypper: sudo zypper install containerd```
+
+```brew: brew install containerd```
+
+```nix: nix profile install nixpkgs#containerd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ctr](/man/ctr)(1), [nerdctl](/man/nerdctl)(1), [docker](/man/docker)(1), [runc](/man/runc)(1)

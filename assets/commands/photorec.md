@@ -45,6 +45,24 @@ Write recovered files to a different drive than the one being recovered from. Or
 
 **photorec** was created by **Christophe Grenier** as a companion to **TestDisk**. Originally focused on photo recovery (hence the name), it has expanded to recover many file types. It's part of the TestDisk package and is widely used for data recovery.
 
+# INSTALL
+
+```apt: sudo apt install testdisk```
+
+```dnf: sudo dnf install testdisk```
+
+```pacman: sudo pacman -S testdisk```
+
+```apk: sudo apk add testdisk```
+
+```zypper: sudo zypper install testdisk```
+
+```brew: brew install testdisk```
+
+```nix: nix profile install nixpkgs#testdisk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [testdisk](/man/testdisk)(8), [foremost](/man/foremost)(1), [scalpel](/man/scalpel)(1)

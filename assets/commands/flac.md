@@ -97,6 +97,24 @@ Higher compression levels slower but not much smaller. Decoding speed consistent
 
 **FLAC** was created by **Josh Coalson** starting in **2000**. It became the leading open source lossless audio format, gaining support in most media players and devices. The project became part of the Xiph.Org Foundation alongside Ogg Vorbis.
 
+# INSTALL
+
+```apt: sudo apt install flac```
+
+```dnf: sudo dnf install flac```
+
+```pacman: sudo pacman -S flac```
+
+```apk: sudo apk add flac```
+
+```zypper: sudo zypper install flac```
+
+```brew: brew install flac```
+
+```nix: nix profile install nixpkgs#flac```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sox](/man/sox)(1), [lame](/man/lame)(1), [ffmpeg](/man/ffmpeg)(1), [metaflac](/man/metaflac)(1)

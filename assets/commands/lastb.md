@@ -92,6 +92,12 @@ Requires root privileges to read /var/log/btmp. The btmp file can grow large und
 
 lastb provides security auditing for failed logins, complementing the last command. The btmp file format mirrors wtmp but records failures instead of successful logins.
 
+# INSTALL
+
+```apk: sudo apk add util-linux-login```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [last](/man/last)(1), [lastlog](/man/lastlog)(8), [faillog](/man/faillog)(8), [utmpdump](/man/utmpdump)(1), [login](/man/login)(1)

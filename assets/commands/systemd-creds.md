@@ -70,6 +70,22 @@ Host-encrypted credentials are tied to the specific machine. TPM2-encrypted cred
 
 **systemd-creds** was added to provide secure secret management for services, replacing environment variables and world-readable files for storing sensitive configuration.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1)

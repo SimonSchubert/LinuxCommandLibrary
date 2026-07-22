@@ -61,6 +61,12 @@ Commonly used in penetration testing to find administrative interfaces, backup f
 
 Use only against authorized targets. Java-based, requires Java runtime. Consider dirb or gobuster for faster scanning. Part of Kali Linux security tools.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#dirbuster```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dirb](/man/dirb)(1), [gobuster](/man/gobuster)(1), [nikto](/man/nikto)(1)

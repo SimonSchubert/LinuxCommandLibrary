@@ -109,6 +109,14 @@ Packages must have a valid **bpkg.json** or **package.json** file. Global instal
 
 bpkg was created as a simple package manager specifically for bash scripts, inspired by package managers like npm. It provides a standardized way to share and reuse shell script utilities across projects.
 
+# INSTALL
+
+```dnf: sudo dnf install bpkg```
+
+```nix: nix profile install nixpkgs#bpkg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [npm](/man/npm)(1), [basher](/man/basher)(1)

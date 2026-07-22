@@ -58,6 +58,20 @@ Requires root access. Downloads from HP servers. Some countries may have restric
 
 hp-plugin is part of **HPLIP** for installing proprietary components needed by certain HP devices.
 
+# INSTALL
+
+```apt: sudo apt install hplip```
+
+```dnf: sudo dnf install hplip```
+
+```pacman: sudo pacman -S hplip```
+
+```zypper: sudo zypper install hplip```
+
+```nix: nix profile install nixpkgs#hplip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hp-setup](/man/hp-setup)(1), [hp-check](/man/hp-check)(1)

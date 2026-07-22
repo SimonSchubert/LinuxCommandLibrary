@@ -111,6 +111,17 @@ Target groups are bound to a specific load balancer type and cannot be shared be
 
 **Application Load Balancer** launched in **August 2016** as AWS's Layer 7 load balancer with content-based routing. **Network Load Balancer** followed in **September 2017** for high-performance Layer 4 workloads. **Gateway Load Balancer** was added in **November 2020** for third-party virtual appliances. Features like weighted target groups, Lambda targets, and gRPC support have been added over time.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-elb](/man/aws-elb)(1), [aws-ec2](/man/aws-ec2)(1)

@@ -95,6 +95,20 @@ Publishes are permanent and cannot be deleted or overwritten. Once a version is 
 
 Publishes are permanent. Use cargo yank to mark versions as deprecated but not delete them. Follow semver for version changes.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-login](/man/cargo-login)(1), [cargo-package](/man/cargo-package)(1), [cargo-yank](/man/cargo-yank)(1)

@@ -96,6 +96,22 @@ Requires quota support in kernel and filesystem. Must run quotacheck first. Requ
 
 Disk quotas originated in **BSD Unix** and were adopted by Linux for managing disk space allocation.
 
+# INSTALL
+
+```apt: sudo apt install quota```
+
+```dnf: sudo dnf install quota```
+
+```pacman: sudo pacman -S quota-tools```
+
+```apk: sudo apk add quota-tools```
+
+```zypper: sudo zypper install quota```
+
+```nix: nix profile install nixpkgs#quota```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [quotacheck](/man/quotacheck)(8), [edquota](/man/edquota)(8), [repquota](/man/repquota)(8)

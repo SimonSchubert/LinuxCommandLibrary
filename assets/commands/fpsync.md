@@ -97,6 +97,18 @@ Requires rsync installed. Parallel transfers may overwhelm network or disk. Smal
 
 fpsync is part of **fpart**, a file partitioning tool for parallel operations. It addresses rsync's single-threaded limitation for large-scale file synchronization.
 
+# INSTALL
+
+```apt: sudo apt install fpart```
+
+```dnf: sudo dnf install fpart```
+
+```brew: brew install fpart```
+
+```nix: nix profile install nixpkgs#fpart```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rsync](/man/rsync)(1), [parallel](/man/parallel)(1), [cpio](/man/cpio)(1), [tar](/man/tar)(1)

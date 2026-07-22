@@ -62,6 +62,24 @@ Only shows podman containers. Docker-compatible output.
 
 podman ps provides **container listing** functionality.
 
+# INSTALL
+
+```apt: sudo apt install podman```
+
+```dnf: sudo dnf install podman```
+
+```pacman: sudo pacman -S podman```
+
+```apk: sudo apk add podman```
+
+```zypper: sudo zypper install podman```
+
+```brew: brew install podman```
+
+```nix: nix profile install nixpkgs#podman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [podman-run](/man/podman-run)(1), [docker-ps](/man/docker-ps)(1)

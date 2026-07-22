@@ -58,6 +58,24 @@ Some errors (like missing auto-generated files) only appear at runtime. Does not
 
 **unbound-checkconf** is part of the Unbound DNS resolver developed by NLnet Labs. Unbound was designed as a modern, secure, validating recursive DNS resolver with DNSSEC support, intended as an alternative to BIND for resolver-only deployments.
 
+# INSTALL
+
+```apt: sudo apt install unbound```
+
+```dnf: sudo dnf install unbound```
+
+```pacman: sudo pacman -S unbound```
+
+```apk: sudo apk add unbound```
+
+```zypper: sudo zypper install unbound```
+
+```brew: brew install unbound```
+
+```nix: nix profile install nixpkgs#unbound```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unbound](/man/unbound)(8), [unbound-control](/man/unbound-control)(8), [unbound-host](/man/unbound-host)(1)

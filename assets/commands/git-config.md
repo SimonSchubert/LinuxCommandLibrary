@@ -105,6 +105,24 @@ Local settings override global, and global overrides system. When a key is set a
 
 git config is a core **Git** command from initial release, providing the configuration system that controls all git behavior.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-credential](/man/git-credential)(1), [git-init](/man/git-init)(1), [git-commit](/man/git-commit)(1)

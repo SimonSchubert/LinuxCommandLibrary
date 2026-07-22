@@ -84,6 +84,16 @@ Python-specific. May conflict with other formatters. Use profiles for compatibil
 
 isort was created by **Timothy Crosley** to automatically sort and organize Python imports following best practices.
 
+# INSTALL
+
+```apk: sudo apk add py3-isort```
+
+```brew: brew install isort```
+
+```nix: nix profile install nixpkgs#isort```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [black](/man/black)(1), [ruff](/man/ruff)(1), [flake8](/man/flake8)(1), [autopep8](/man/autopep8)(1), [yapf](/man/yapf)(1), [pylint](/man/pylint)(1), [mypy](/man/mypy)(1)

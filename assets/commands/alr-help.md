@@ -31,6 +31,15 @@ Display help for Alire package manager commands.
 
 Alire is a source package manager for Ada/SPARK, similar to Rust's cargo or OCaml's opam. The **alr** command-line tool manages dependencies, builds projects, and incorporates libraries from the Alire catalog.
 
+# INSTALL
+
+```apt: sudo apt install alire```
+
+```aur: yay -S alire```
+
+```nix: nix profile install nixpkgs#alire```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [alr](/man/alr)(1), [alr-version](/man/alr-version)(1)

@@ -84,6 +84,22 @@ Older tool, consider xfreerdp for newer RDP versions. Password on command line i
 
 **rdesktop** was one of the first open-source RDP clients, created to allow Linux users to connect to Windows Terminal Services. It reverse-engineered the RDP protocol before Microsoft published specifications.
 
+# INSTALL
+
+```apt: sudo apt install rdesktop```
+
+```dnf: sudo dnf install rdesktop```
+
+```pacman: sudo pacman -S rdesktop```
+
+```apk: sudo apk add rdesktop```
+
+```zypper: sudo zypper install rdesktop```
+
+```nix: nix profile install nixpkgs#rdesktop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xfreerdp](/man/xfreerdp)(1), [vinagre](/man/vinagre)(1), [remmina](/man/remmina)(1)

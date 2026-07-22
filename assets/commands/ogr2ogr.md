@@ -115,6 +115,14 @@ Beyond simple format conversion, ogr2ogr can reproject coordinates between spati
 
 Part of the GDAL suite and must be installed separately. Format support depends on how GDAL was compiled. Coordinate system reprojection requires correct SRS definitions. The **-skipfailures** option forces transaction grouping to 1, which can severely slow database inserts.
 
+# INSTALL
+
+```apt: sudo apt install gdal-bin```
+
+```apk: sudo apk add gdal-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ogrinfo](/man/ogrinfo)(1), [gdal_translate](/man/gdal_translate)(1), [gdalwarp](/man/gdalwarp)(1), [gdalinfo](/man/gdalinfo)(1)

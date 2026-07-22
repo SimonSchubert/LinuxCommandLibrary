@@ -68,6 +68,12 @@ Wasmer recommended. WASM ecosystem. wapm.io account for publish.
 
 **wapm** is the package manager for **Wasmer**, providing WebAssembly package management.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#wapm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wasmer](/man/wasmer)(1), [wasm-pack](/man/wasm-pack)(1)

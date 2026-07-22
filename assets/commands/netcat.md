@@ -124,6 +124,16 @@ Different netcat implementations have different options and capabilities. OpenBS
 
 Netcat was originally written by a hacker known as **Hobbit** and released in **1995**. It quickly became an essential tool for network administrators and security professionals. The original version included powerful but potentially dangerous features like **-e** for command execution. OpenBSD rewrote netcat from scratch in **2001** with a focus on security, removing risky features. The Nmap project created **ncat** as a modern reimplementation with SSL support and additional features.
 
+# INSTALL
+
+```dnf: sudo dnf install netcat```
+
+```brew: brew install netcat```
+
+```nix: nix profile install nixpkgs#netcat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ncat](/man/ncat)(1), [socat](/man/socat)(1), [telnet](/man/telnet)(1), [ss](/man/ss)(8)

@@ -58,6 +58,24 @@ Deprecated in favor of flock. Part of moreutils. Lock file must be writable.
 
 lckdo was part of **moreutils** for running commands under file locks, now replaced by flock.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add moreutils```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flock](/man/flock)(1), [chronic](/man/chronic)(1)

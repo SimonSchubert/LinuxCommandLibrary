@@ -30,6 +30,14 @@ Display help information for gcrane commands
 
 The help system documents gcrane's GCR-specific extensions beyond standard crane functionality, including recursive copy operations and garbage collection commands.
 
+# INSTALL
+
+```zypper: sudo zypper install gcrane```
+
+```nix: nix profile install nixpkgs#gcrane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcrane](/man/gcrane)(1), [gcrane-copy](/man/gcrane-copy)(1), [gcrane-gc](/man/gcrane-gc)(1), [crane](/man/crane)(1)

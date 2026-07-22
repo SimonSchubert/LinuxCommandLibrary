@@ -65,6 +65,24 @@ Detection is heuristic, not deterministic. Short files may be ambiguous. Works b
 
 enca was developed for handling the encoding diversity in Central/Eastern European computing, where many incompatible character sets were historically used for the same languages.
 
+# INSTALL
+
+```apt: sudo apt install enca```
+
+```dnf: sudo dnf install enca```
+
+```pacman: sudo pacman -S enca```
+
+```apk: sudo apk add enca```
+
+```zypper: sudo zypper install enca```
+
+```brew: brew install enca```
+
+```nix: nix profile install nixpkgs#enca```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [file](/man/file)(1), [iconv](/man/iconv)(1), [chardet](/man/chardet)(1)

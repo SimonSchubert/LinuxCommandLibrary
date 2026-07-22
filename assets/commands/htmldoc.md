@@ -94,6 +94,22 @@ Limited CSS support. Complex layouts may not render correctly. JavaScript is not
 
 HTMLDOC was created by **Michael Sweet** and was originally released by Easy Software Products. It has been used for documentation generation and is now an open-source project.
 
+# INSTALL
+
+```apt: sudo apt install htmldoc```
+
+```pacman: sudo pacman -S htmldoc```
+
+```apk: sudo apk add htmldoc```
+
+```zypper: sudo zypper install htmldoc```
+
+```brew: brew install htmldoc```
+
+```nix: nix profile install nixpkgs#htmldoc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wkhtmltopdf](/man/wkhtmltopdf)(1), [weasyprint](/man/weasyprint)(1), [pandoc](/man/pandoc)(1)

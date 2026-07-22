@@ -75,6 +75,24 @@ Creating and editing rulesets is not supported directly from the CLI; use the Gi
 
 Requires authentication via **gh auth login**. Viewing organization rulesets requires organization permissions. Rules defined at the enterprise or organization level may not appear unless **--parents** is used.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-api](/man/gh-api)(1), [gh-repo](/man/gh-repo)(1), [gh-auth](/man/gh-auth)(1)

@@ -33,6 +33,12 @@ Requires root privileges for packet capture. BPF support must be available on th
 
 **netop** was created by **ZingerLittleBee** and is written in **Rust**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#netop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(8), [iftop](/man/iftop)(8), [nethogs](/man/nethogs)(8)

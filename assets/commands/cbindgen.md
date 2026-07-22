@@ -80,6 +80,20 @@ Add to build.rs for automatic generation on build.
 
 Only generates headers for pub extern "C" functions and #[repr(C)] types. Requires proper FFI annotations in Rust code. Configuration file customizes output format.
 
+# INSTALL
+
+```apt: sudo apt install cbindgen```
+
+```dnf: sudo dnf install cbindgen```
+
+```pacman: sudo pacman -S cbindgen```
+
+```apk: sudo apk add cbindgen```
+
+```brew: brew install cbindgen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [bindgen](/man/bindgen)(1), [rustc](/man/rustc)(1)

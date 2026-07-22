@@ -33,6 +33,24 @@ Run merge program for unmerged files
 
 The command passes file information (including base, ours, and theirs versions with their object IDs) to the specified merge program. Most users never need to call this directly, as `git merge` handles it automatically. It is exposed for custom merge workflows and understanding Git internals.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [git-mergetool](/man/git-mergetool)(1)

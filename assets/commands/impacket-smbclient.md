@@ -38,6 +38,12 @@ generic SMB client for listing shares and files, uploading
 
 **impacket-smbclient** is a generic SMB client for listing shares and files, uploading, downloading, renaming, and managing directories on Windows systems. Part of the Impacket toolkit. Supports password, NTLM hash, and Kerberos authentication.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smbclient](/man/smbclient)(1), [impacket-psexec](/man/impacket-psexec)(1)

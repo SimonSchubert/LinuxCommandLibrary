@@ -102,6 +102,20 @@ The -autorot option uses jpegtran for lossless rotation. Renaming with -n uses s
 
 **jhead** was created by Matthias Wandel for manipulating EXIF data in JPEG files from digital cameras.
 
+# INSTALL
+
+```apt: sudo apt install jhead```
+
+```dnf: sudo dnf install jhead```
+
+```pacman: sudo pacman -S jhead```
+
+```brew: brew install jhead```
+
+```nix: nix profile install nixpkgs#jhead```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [exiftool](/man/exiftool)(1), [exiv2](/man/exiv2)(1), [jpegtran](/man/jpegtran)(1)

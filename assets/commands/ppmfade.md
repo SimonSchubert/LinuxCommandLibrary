@@ -51,6 +51,24 @@ Creates numbered output files. Part of Netpbm suite.
 
 ppmfade was created as part of **Netpbm** for video fade effects.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm-extras```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmmix](/man/ppmmix)(1), [ppmmorph](/man/ppmmorph)(1), [ppm](/man/ppm)(5)

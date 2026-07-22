@@ -155,6 +155,24 @@ The specified gateway must be reachable before adding a route through it; set up
 
 Modifying routes requires root privileges. Incorrect routing configuration can cause complete loss of network connectivity.
 
+# INSTALL
+
+```apt: sudo apt install net-tools```
+
+```dnf: sudo dnf install net-tools```
+
+```pacman: sudo pacman -S net-tools```
+
+```apk: sudo apk add net-tools```
+
+```zypper: sudo zypper install net-tools```
+
+```brew: brew install net-tools```
+
+```nix: nix profile install nixpkgs#net-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip](/man/ip)(8), [ip-route](/man/ip-route)(8), [ifconfig](/man/ifconfig)(8), [netstat](/man/netstat)(8), [traceroute](/man/traceroute)(8)

@@ -52,6 +52,19 @@ Part of the **arch-install-scripts** package. Automatically mounts /proc, /sys, 
 
 Part of the **arch-install-scripts** package developed for **Arch Linux** to simplify the installation process and system recovery tasks.
 
+# INSTALL
+
+```dnf: sudo dnf install arch-install-scripts```
+
+```pacman: sudo pacman -S arch-install-scripts```
+
+```apk: sudo apk add arch-install-scripts```
+
+```zypper: sudo zypper install arch-install-scripts```
+
+```nix: nix profile install nixpkgs#arch-install-scripts```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [chroot](/man/chroot)(1), [systemd-nspawn](/man/systemd-nspawn)(1), [pacstrap](/man/pacstrap)(8)

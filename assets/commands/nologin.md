@@ -43,6 +43,14 @@ Note: per-account **nologin** (this tool) is distinct from the **pam_nologin** P
 
 Users with nologin as their shell can still run commands via **su -s /bin/bash username** if the caller has sufficient privileges. For complete account lockout, also lock the password with **passwd -l**. The path to nologin varies: **/usr/sbin/nologin** or **/sbin/nologin**.
 
+# INSTALL
+
+```apt: sudo apt install login```
+
+```apk: sudo apk add util-linux-login```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chsh](/man/chsh)(1), [passwd](/man/passwd)(1), [usermod](/man/usermod)(8), [login](/man/login)(1)

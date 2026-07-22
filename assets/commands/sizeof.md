@@ -28,6 +28,12 @@ Get the byte size of strings, URLs, and files
 
 **sizeof** was created by **Zachary Proser** (zackproser) and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S sizeof```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wc](/man/wc)(1), [du](/man/du)(1), [stat](/man/stat)(1)

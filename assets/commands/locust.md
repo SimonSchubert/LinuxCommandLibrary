@@ -125,6 +125,12 @@ Python-based tests require Python knowledge. Greenlets aren't true threads - CPU
 
 **Locust** was created by **Jonatan Heyman** starting around **2011** as an alternative to Java-based load testing tools like JMeter. The philosophy was "load testing as code" - using a real programming language rather than XML configuration. Named after the locust swarm metaphor, it gained popularity for its simplicity and the ability to define complex user scenarios in Python. The project is actively maintained with regular releases.
 
+# INSTALL
+
+```brew: brew install locust```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ab](/man/ab)(1), [wrk](/man/wrk)(1), [hey](/man/hey)(1), [siege](/man/siege)(1), [vegeta](/man/vegeta)(1)

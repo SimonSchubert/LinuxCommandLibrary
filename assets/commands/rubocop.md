@@ -114,6 +114,14 @@ Style is subjective - many teams customize heavily. Auto-correct can make mistak
 
 **RuboCop** was created by **Bozhidar Batsov** around **2012**. It became the standard Ruby linter, closely following the community Ruby Style Guide that Batsov also authored.
 
+# INSTALL
+
+```pacman: sudo pacman -S rubocop```
+
+```nix: nix profile install nixpkgs#rubocop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ruby](/man/ruby)(1), [bundle](/man/bundle)(1), [standardrb](/man/standardrb)(1), [reek](/man/reek)(1)

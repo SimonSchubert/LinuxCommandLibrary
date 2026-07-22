@@ -41,6 +41,12 @@ manages home-manager configurations
 
 **nh home** manages home-manager configurations. Friendly wrapper around home-manager with better output and flake support. Part of nh (nix helper) toolkit.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nh](/man/nh)(1), [home-manager](/man/home-manager)(1)

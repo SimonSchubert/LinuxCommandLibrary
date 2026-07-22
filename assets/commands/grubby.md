@@ -78,6 +78,12 @@ Behavior varies between GRUB Legacy, GRUB2, and BLS configurations. Some options
 
 grubby was developed by Red Hat to simplify bootloader management across different configurations. It became essential for automated system management and kernel updates on Red Hat-based distributions. The original **rhboot/grubby** project was retired in 2022; with the adoption of BLS, its functionality now lives on as a compatible shell script maintained in Fedora's dist-git.
 
+# INSTALL
+
+```dnf: sudo dnf install grubby```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub-mkconfig](/man/grub-mkconfig)(8), [grub-set-default](/man/grub-set-default)(8), [kernel-install](/man/kernel-install)(8)

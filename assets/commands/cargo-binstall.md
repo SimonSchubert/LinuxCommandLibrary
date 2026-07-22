@@ -82,6 +82,16 @@ Maintainers can specify signing keys in Cargo.toml. Binstall downloads and verif
 
 Package must have prebuilt binaries or binstall metadata. Falls back to cargo install when no binary found.
 
+# INSTALL
+
+```pacman: sudo pacman -S cargo-binstall```
+
+```brew: brew install cargo-binstall```
+
+```nix: nix profile install nixpkgs#cargo-binstall```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-install](/man/cargo-install)(1)

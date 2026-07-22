@@ -131,6 +131,22 @@ Running commands as root is dangerous—mistakes can damage the system. The **-E
 
 sudo was originally written by **Bob Coggeshall** and **Cliff Spencer** at SUNY Buffalo around **1980**. **Todd Miller** took over maintenance in **1994** and continues to lead development. The name is commonly understood as "superuser do" though it originally stood for "substitute user do" since it can run commands as any user. sudo has become the standard method for privilege escalation on Unix-like systems, replacing direct root login in most distributions.
 
+# INSTALL
+
+```apt: sudo apt install sudo```
+
+```dnf: sudo dnf install sudo```
+
+```pacman: sudo pacman -S sudo```
+
+```apk: sudo apk add doas-sudo-shim```
+
+```zypper: sudo zypper install sudo```
+
+```nix: nix profile install nixpkgs#sudo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [su](/man/su)(1), [visudo](/man/visudo)(8), [doas](/man/doas)(1)

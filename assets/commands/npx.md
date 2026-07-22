@@ -73,6 +73,16 @@ Downloads on first run. Caches packages. Part of npm 5.2+.
 
 npx was introduced with **npm 5.2** to simplify running npm packages without installation.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-exec](/man/npm-exec)(1), [yarn](/man/yarn)(1)

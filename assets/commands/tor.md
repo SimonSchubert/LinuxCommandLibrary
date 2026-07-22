@@ -74,6 +74,24 @@ By default, Tor runs as a client-only service. The SOCKS protocol is unencrypted
 
 **tor** is "The Onion Router," a second-generation anonymity network originally developed by the U.S. Naval Research Laboratory and now maintained by The Tor Project.
 
+# INSTALL
+
+```apt: sudo apt install tor```
+
+```dnf: sudo dnf install tor```
+
+```pacman: sudo pacman -S tor```
+
+```apk: sudo apk add tor```
+
+```zypper: sudo zypper install tor```
+
+```brew: brew install tor```
+
+```nix: nix profile install nixpkgs#tor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [torsocks](/man/torsocks)(1), [torify](/man/torify)(1), [privoxy](/man/privoxy)(8)

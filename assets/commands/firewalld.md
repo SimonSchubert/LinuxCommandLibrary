@@ -82,6 +82,20 @@ firewalld should not be used simultaneously with other firewall management tools
 
 firewalld was developed by Red Hat and introduced in **Fedora 15** (2011) as a replacement for the static system-config-firewall tool. It provides dynamic management without requiring service restarts. In **2018**, firewalld switched from iptables to nftables as its default backend, though iptables support remains for compatibility.
 
+# INSTALL
+
+```dnf: sudo dnf install firewalld```
+
+```pacman: sudo pacman -S firewalld```
+
+```apk: sudo apk add firewalld```
+
+```zypper: sudo zypper install firewalld```
+
+```nix: nix profile install nixpkgs#firewalld```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [firewall-cmd](/man/firewall-cmd)(1), [nft](/man/nft)(8), [iptables](/man/iptables)(8)

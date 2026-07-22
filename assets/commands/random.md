@@ -52,6 +52,12 @@ Virtual machines may have limited entropy sources at boot time. Consider using *
 
 The /dev/random interface was introduced in **Linux 1.3.30** in 1995 by Theodore Ts'o. The design was influenced by PGP's random number generation and provides cryptographic-quality randomness from kernel-gathered entropy. The distinction between /dev/random and /dev/urandom has evolved over kernel versions, with modern kernels treating them nearly identically after initial seeding.
 
+# INSTALL
+
+```aur: yay -S random```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dd](/man/dd)(1), [head](/man/head)(1), [openssl](/man/openssl)(1), [haveged](/man/haveged)(8), [getrandom](/man/getrandom)(2)

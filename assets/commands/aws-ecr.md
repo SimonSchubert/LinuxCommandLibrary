@@ -82,6 +82,17 @@ Authentication tokens expire after 12 hours. Image tags are mutable by default; 
 
 Amazon ECR launched in **December 2015** alongside Amazon ECS. Cross-region replication was added in **2020**, and enhanced scanning powered by Amazon Inspector launched in **2021**. ECR Public for public container images became available in **2020**.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [docker](/man/docker)(1), [aws-ecs](/man/aws-ecs)(1), [aws-eks](/man/aws-eks)(1)

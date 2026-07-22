@@ -45,6 +45,16 @@ Define and manage Pixi project tasks
 
 **pixi task** manages project tasks. Tasks are defined commands that can be run within the project environment. Similar to npm scripts or Makefile targets. Supports dependencies between tasks.
 
+# INSTALL
+
+```pacman: sudo pacman -S pixi```
+
+```brew: brew install pixi```
+
+```nix: nix profile install nixpkgs#pixi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pixi](/man/pixi)(1)

@@ -91,6 +91,24 @@ Default pronounceable passwords are less secure than random ones. Generated pass
 
 **pwgen** was originally written by **Theodore Ts'o** in **2001**. It was designed to create passwords that users could actually remember, reducing the tendency to write them down. The tool has remained popular for both personal and administrative password generation.
 
+# INSTALL
+
+```apt: sudo apt install pwgen```
+
+```dnf: sudo dnf install pwgen```
+
+```pacman: sudo pacman -S pwgen```
+
+```apk: sudo apk add pwgen```
+
+```zypper: sudo zypper install pwgen```
+
+```brew: brew install pwgen```
+
+```nix: nix profile install nixpkgs#pwgen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [mkpasswd](/man/mkpasswd)(1), [apg](/man/apg)(1), [pass](/man/pass)(1)

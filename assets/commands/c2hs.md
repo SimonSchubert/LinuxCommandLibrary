@@ -74,6 +74,18 @@ Cabal automatically processes .chs files and runs c2hs with appropriate flags.
 
 Generated code is BSD licensed. Requires C header files to be accessible. Complex C constructs may need manual binding.
 
+# INSTALL
+
+```apt: sudo apt install c2hs```
+
+```dnf: sudo dnf install c2hs```
+
+```pacman: sudo pacman -S c2hs```
+
+```zypper: sudo zypper install c2hs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ghc](/man/ghc)(1), [cabal](/man/cabal)(1)

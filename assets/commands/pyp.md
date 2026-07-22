@@ -48,6 +48,14 @@ Install via **pip install pypyp** (package name **pypyp** on PyPI; command is **
 
 Python startup cost makes it slower than **awk** for huge streams. Automatic imports can surprise; prefer explicit imports for production scripts. Not a replacement for complex multi-file programs.
 
+# INSTALL
+
+```brew: brew install pyp```
+
+```nix: nix profile install nixpkgs#pyp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [awk](/man/awk)(1), [jq](/man/jq)(1), [perl](/man/perl)(1)

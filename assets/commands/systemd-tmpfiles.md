@@ -90,6 +90,22 @@ The tool is automatically invoked during system boot by systemd services. Manual
 
 Running manually is usually not needed as systemd handles this automatically. It is possible to combine --create, --clean, and --remove in one invocation. Configuration syntax errors may prevent proper cleanup. Age-based cleanup requires properly configured time values. Part of the systemd suite.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1)

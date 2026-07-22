@@ -75,6 +75,16 @@ Shell integration requires sourcing the hook script provided by **intelli-shell 
 
 **intelli-shell** is maintained by **lasantosr** and is written in **Rust**. It was created to bring IDE-like autocomplete and command management to the terminal.
 
+# INSTALL
+
+```pacman: sudo pacman -S intelli-shell```
+
+```brew: brew install intelli-shell```
+
+```nix: nix profile install nixpkgs#intelli-shell```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fzf](/man/fzf)(1), [navi](/man/navi)(1), [atuin](/man/atuin)(1), [mcfly](/man/mcfly)(1)

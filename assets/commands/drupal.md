@@ -86,6 +86,14 @@ Requires Drupal 8+ installation. Must be run from the Drupal root directory. Som
 
 Drupal Console was created as a code generation and developer tool for **Drupal 8**, released around **2015**. It was inspired by Symfony Console and brought modern CLI development practices to Drupal.
 
+# INSTALL
+
+```pacman: sudo pacman -S drupal```
+
+```nix: nix profile install nixpkgs#drupal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [drush](/man/drush)(1), [composer](/man/composer)(1), [php](/man/php)(1)

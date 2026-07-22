@@ -84,6 +84,18 @@ Common workflows use **tinygo flash** to compile and write firmware to a board, 
 
 Not every Go program or standard-library package is supported; see TinyGo language support docs. Toolchain setup (compiler, libraries, board toolchains) varies by platform—follow https://tinygo.org/getting-started/. Binary size and performance trade-offs differ from the standard Go compiler.
 
+# INSTALL
+
+```dnf: sudo dnf install tinygo```
+
+```pacman: sudo pacman -S tinygo```
+
+```zypper: sudo zypper install tinygo```
+
+```nix: nix profile install nixpkgs#tinygo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [wasm-ld](/man/wasm-ld)(1)

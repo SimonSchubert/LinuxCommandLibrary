@@ -48,6 +48,12 @@ manages connected development boards
 
 **pio device** manages connected development boards. Lists serial devices and provides serial monitor for debugging embedded applications. Supports filtering and custom baud rates.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-run](/man/pio-run)(1), [pio-debug](/man/pio-debug)(1)

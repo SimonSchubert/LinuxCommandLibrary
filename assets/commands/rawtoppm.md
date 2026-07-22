@@ -39,6 +39,24 @@ _height_
 
 Since raw data contains no metadata, both width and height must be specified as arguments. The **-headerskip** option skips non-image data at the beginning of the file. It is part of the Netpbm image processing toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rawtopgm](/man/rawtopgm)(1), [ppmtorgb3](/man/ppmtorgb3)(1)

@@ -82,6 +82,20 @@ Requires access to Varnish shared memory (typically needs appropriate group memb
 
 **varnishhist** was developed by Poul-Henning Kamp as part of the Varnish Cache project. Varnish was created for Verdens Gang (VG.no) in 2006 and has become one of the most popular HTTP accelerators, with varnishhist providing essential visual performance monitoring.
 
+# INSTALL
+
+```apt: sudo apt install varnish```
+
+```dnf: sudo dnf install varnish```
+
+```apk: sudo apk add varnish```
+
+```brew: brew install varnish```
+
+```nix: nix profile install nixpkgs#varnish```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [varnishd](/man/varnishd)(1), [varnishstat](/man/varnishstat)(1), [varnishlog](/man/varnishlog)(1)

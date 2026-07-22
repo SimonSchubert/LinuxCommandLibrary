@@ -35,6 +35,20 @@ manages tags in a Jujutsu repository
 
 **jj tag** manages tags in a Jujutsu repository. Tags are lightweight references pointing to specific commits, useful for marking releases or important points in history. Unlike bookmarks, tags don't move.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-bookmark](/man/jj-bookmark)(1)

@@ -83,6 +83,24 @@ Requires debug symbols (-g). Optimized code may behave unexpectedly. Learning cu
 
 gdb was written by **Richard Stallman** in 1986 as part of the GNU Project. It became the standard Unix debugger, supporting numerous architectures and languages.
 
+# INSTALL
+
+```apt: sudo apt install gdb```
+
+```dnf: sudo dnf install gdb```
+
+```pacman: sudo pacman -S gdb```
+
+```apk: sudo apk add gdb```
+
+```zypper: sudo zypper install gdb```
+
+```brew: brew install gdb```
+
+```nix: nix profile install nixpkgs#gdb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcore](/man/gcore)(1), [gdbserver](/man/gdbserver)(1), [lldb](/man/lldb)(1)

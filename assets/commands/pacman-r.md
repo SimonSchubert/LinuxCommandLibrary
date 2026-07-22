@@ -60,6 +60,20 @@ View documentation for the original command
 
 Using **-Rdd** bypasses all dependency checks and can break the system. The **-Rns** combination is the cleanest removal, also removing backup configuration files and orphaned dependencies.
 
+# INSTALL
+
+```apt: sudo apt install pacman-package-manager```
+
+```dnf: sudo dnf install pacman```
+
+```pacman: sudo pacman -S pacman```
+
+```apk: sudo apk add pacman```
+
+```nix: nix profile install nixpkgs#pacman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pacman-remove](/man/pacman-remove)(8)

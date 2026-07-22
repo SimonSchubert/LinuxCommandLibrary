@@ -41,6 +41,14 @@ Create with **volume name**
 
 Read-only filesystem. Maximum file size of 16MB. Maximum filesystem size of 256MB. Designed for embedded use.
 
+# INSTALL
+
+```apt: sudo apt install util-linux-extra```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkfs](/man/mkfs)(8), [mount](/man/mount)(8)

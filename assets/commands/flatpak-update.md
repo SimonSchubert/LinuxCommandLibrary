@@ -89,6 +89,22 @@ Updates may require significant download bandwidth and disk space. Using **--com
 
 Part of the **Flatpak** project developed by Alexander Larsson at Red Hat. Flatpak evolved from the xdg-app project around **2015** and provides a sandboxed, distribution-agnostic application delivery system for Linux.
 
+# INSTALL
+
+```apt: sudo apt install flatpak```
+
+```dnf: sudo dnf install flatpak```
+
+```pacman: sudo pacman -S flatpak```
+
+```apk: sudo apk add flatpak```
+
+```zypper: sudo zypper install flatpak```
+
+```nix: nix profile install nixpkgs#flatpak```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flatpak](/man/flatpak)(1), [flatpak-install](/man/flatpak-install)(1), [flatpak-mask](/man/flatpak-mask)(1), [flatpak-remote-info](/man/flatpak-remote-info)(1)

@@ -70,6 +70,22 @@ Run this command from inside the container. Use either **--app** or **--bin**, n
 
 Must be run from inside the container. Exported apps depend on the container existing (it is started automatically on launch). Deleting the container breaks exported applications and binaries.
 
+# INSTALL
+
+```dnf: sudo dnf install distrobox```
+
+```pacman: sudo pacman -S distrobox```
+
+```apk: sudo apk add distrobox```
+
+```zypper: sudo zypper install distrobox```
+
+```brew: brew install distrobox```
+
+```nix: nix profile install nixpkgs#distrobox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [distrobox](/man/distrobox)(1), [distrobox-enter](/man/distrobox-enter)(1)

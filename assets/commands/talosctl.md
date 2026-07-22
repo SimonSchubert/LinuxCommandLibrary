@@ -87,6 +87,18 @@ Talos-specific tool. Nodes must be Talos. API access required.
 
 **Talos** was created by **Sidero Labs** as a minimal, immutable Kubernetes OS. talosctl provides complete lifecycle management.
 
+# INSTALL
+
+```pacman: sudo pacman -S talosctl```
+
+```zypper: sudo zypper install talosctl```
+
+```brew: brew install talosctl```
+
+```nix: nix profile install nixpkgs#talosctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [docker](/man/docker)(1)

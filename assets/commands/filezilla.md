@@ -75,6 +75,22 @@ GUI application requires display. Stored passwords may be security risk. Very la
 
 FileZilla was created by **Tim Kosse** in 2001, initially as a school project. It became one of the most popular open source FTP clients, later adding SFTP and FTPS support.
 
+# INSTALL
+
+```apt: sudo apt install filezilla```
+
+```dnf: sudo dnf install filezilla```
+
+```pacman: sudo pacman -S filezilla```
+
+```apk: sudo apk add filezilla```
+
+```zypper: sudo zypper install filezilla```
+
+```nix: nix profile install nixpkgs#filezilla```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sftp](/man/sftp)(1), [ftp](/man/ftp)(1), [lftp](/man/lftp)(1)

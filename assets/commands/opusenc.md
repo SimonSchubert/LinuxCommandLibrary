@@ -83,6 +83,24 @@ Shipped as part of **opus-tools**. Input must be WAV, AIFF, FLAC, or raw PCM; MP
 
 opusenc was created for encoding audio to the **Opus codec** format.
 
+# INSTALL
+
+```apt: sudo apt install opus-tools```
+
+```dnf: sudo dnf install opus-tools```
+
+```pacman: sudo pacman -S opus-tools```
+
+```apk: sudo apk add opus-tools```
+
+```zypper: sudo zypper install opus-tools```
+
+```brew: brew install opus-tools```
+
+```nix: nix profile install nixpkgs#opus-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [opusdec](/man/opusdec)(1), [ffmpeg](/man/ffmpeg)(1), [lame](/man/lame)(1)

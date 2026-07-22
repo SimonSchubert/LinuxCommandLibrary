@@ -116,6 +116,16 @@ Requires **systemd-resolved** to be running and `/etc/resolv.conf` to point at i
 
 **resolvectl** is part of **systemd**, providing DNS resolution through systemd-resolved. It replaces the older systemd-resolve command.
 
+# INSTALL
+
+```apt: sudo apt install systemd-resolved```
+
+```dnf: sudo dnf install systemd-resolved```
+
+```zypper: sudo zypper install systemd-resolved```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [resolved.conf](/man/resolved.conf)(5)

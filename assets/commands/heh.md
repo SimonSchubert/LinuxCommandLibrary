@@ -36,6 +36,14 @@ Large files may consume significant memory as the entire file is loaded. The edi
 
 **heh** was created by **ndd7xv** and is written in **Rust**. It was designed to provide a lightweight, terminal-native hex editing experience with a familiar visual layout.
 
+# INSTALL
+
+```pacman: sudo pacman -S heh```
+
+```nix: nix profile install nixpkgs#heh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hexyl](/man/hexyl)(1), [xxd](/man/xxd)(1), [hexdump](/man/hexdump)(1)

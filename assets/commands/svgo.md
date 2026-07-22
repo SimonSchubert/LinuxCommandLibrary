@@ -87,6 +87,16 @@ Some optimizations may affect rendering. Test output visually. Complex SVGs need
 
 **SVGO** (SVG Optimizer) is a Node.js tool for SVG optimization. It's widely used in build processes and icon libraries.
 
+# INSTALL
+
+```pacman: sudo pacman -S svgo```
+
+```brew: brew install svgo```
+
+```nix: nix profile install nixpkgs#svgo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [imagemin](/man/imagemin)(1), [inkscape](/man/inkscape)(1)

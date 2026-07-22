@@ -103,6 +103,21 @@ Requires GPU with OpenGL 3.3+ support. No tabs or splits (use tmux/screen). Conf
 
 **alacritty** was created by Joe Wilm and first released in **2017**. It was the first major GPU-accelerated terminal emulator, inspiring similar projects and becoming popular for its performance and minimal design.
 
+# INSTALL
+
+```apt: sudo apt install alacritty```
+
+```dnf: sudo dnf install alacritty```
+
+```pacman: sudo pacman -S alacritty```
+
+```apk: sudo apk add alacritty```
+
+```zypper: sudo zypper install alacritty```
+
+```nix: nix profile install nixpkgs#alacritty```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [screen](/man/screen)(1), [kitty](/man/kitty)(1)

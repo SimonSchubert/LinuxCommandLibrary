@@ -88,6 +88,21 @@ Requires running full build. May not capture all compilation units if cached. So
 
 **bear** was created by László Nagy (rizsotto) around **2012** to generate compilation databases for C/C++ projects using any build system. Version 3 introduced the `--` separator syntax, and version 4 rewrote the tool in Rust.
 
+# INSTALL
+
+```apt: sudo apt install bear```
+
+```dnf: sudo dnf install bear```
+
+```pacman: sudo pacman -S bear```
+
+```apk: sudo apk add bear```
+
+```brew: brew install bear```
+
+```nix: nix profile install nixpkgs#bear```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [compiledb](/man/compiledb)(1), [cmake](/man/cmake)(1), [clangd](/man/clangd)(1), [make](/man/make)(1), [ninja](/man/ninja)(1), [clang](/man/clang)(1)

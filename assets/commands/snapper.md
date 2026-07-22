@@ -115,6 +115,20 @@ Rollback is only supported on Btrfs with proper system configuration. Snapshots 
 
 **snapper** was created by **Arvin Schnell** at **openSUSE/SUSE** and first released around **2011**. It was designed to leverage Btrfs snapshot capabilities for system recovery and became a key component of openSUSE and SUSE Linux Enterprise. Support for thin-provisioned LVM was added later.
 
+# INSTALL
+
+```apt: sudo apt install snapper```
+
+```dnf: sudo dnf install snapper```
+
+```pacman: sudo pacman -S snapper```
+
+```zypper: sudo zypper install snapper```
+
+```nix: nix profile install nixpkgs#snapper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [btrfs-subvolume](/man/btrfs-subvolume)(8), [timeshift](/man/timeshift)(1), [lvcreate](/man/lvcreate)(8)

@@ -70,6 +70,22 @@ Configure persistent Tailscale options
 
 **tailscale set** changes per-node Tailscale options without disrupting the existing connection. Unlike **tailscale up**, which resets every unspecified flag back to its default, **set** modifies only the flags you pass — making it the safer choice for incremental changes.
 
+# INSTALL
+
+```dnf: sudo dnf install tailscale```
+
+```pacman: sudo pacman -S tailscale```
+
+```apk: sudo apk add tailscale```
+
+```zypper: sudo zypper install tailscale```
+
+```brew: brew install tailscale```
+
+```nix: nix profile install nixpkgs#tailscale```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tailscale](/man/tailscale)(1), [tailscale-up](/man/tailscale-up)(1)

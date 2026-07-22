@@ -99,6 +99,24 @@ Output goes to stderr by default; redirect with 2>file. Exit status: 0=OK/Yes, 1
 
 **dialog** was originally written by **Savio Lam** in **1994** and has been maintained by **Thomas E. Dickey** since **1999**. It is based on the ncurses library and has become the standard tool for creating text-mode user interfaces in shell scripts, widely used in Linux distribution installers and configuration tools.
 
+# INSTALL
+
+```apt: sudo apt install dialog```
+
+```dnf: sudo dnf install dialog```
+
+```pacman: sudo pacman -S dialog```
+
+```apk: sudo apk add dialog```
+
+```zypper: sudo zypper install dialog```
+
+```brew: brew install dialog```
+
+```nix: nix profile install nixpkgs#dialog```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [whiptail](/man/whiptail)(1), [zenity](/man/zenity)(1), [kdialog](/man/kdialog)(1), [gum](/man/gum)(1)

@@ -64,6 +64,20 @@ Produces DVI output only; use pdftex or pdflatex for direct PDF output. Uses pla
 
 **TeX** was created by **Donald Knuth** starting in 1977 for typesetting his books, especially mathematical content.
 
+# INSTALL
+
+```apt: sudo apt install texlive-binaries```
+
+```dnf: sudo dnf install texlive```
+
+```apk: sudo apk add texlive```
+
+```zypper: sudo zypper install texlive```
+
+```brew: brew install texlive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [latex](/man/latex)(1), [pdftex](/man/pdftex)(1), [xetex](/man/xetex)(1), [dvips](/man/dvips)(1)

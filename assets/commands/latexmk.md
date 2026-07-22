@@ -131,6 +131,18 @@ Requires Perl. Some packages may need special latexmkrc rules. Preview mode view
 
 **latexmk** was written by John Collins, building on earlier work by Evan McLean and others. The script has been continuously maintained and updated since the **1990s**, becoming the standard automation tool for LaTeX compilation. It's included in TeX Live and MiKTeX distributions.
 
+# INSTALL
+
+```dnf: sudo dnf install texlive```
+
+```apk: sudo apk add texlive```
+
+```zypper: sudo zypper install texlive```
+
+```brew: brew install texlive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdflatex](/man/pdflatex)(1), [xelatex](/man/xelatex)(1), [lualatex](/man/lualatex)(1), [bibtex](/man/bibtex)(1), [biber](/man/biber)(1)

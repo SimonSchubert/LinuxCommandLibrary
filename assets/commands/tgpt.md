@@ -66,6 +66,16 @@ API key may be needed. Network required. Provider-specific features.
 
 **tgpt** was created as a terminal-based interface to various AI language models without requiring API keys for some providers.
 
+# INSTALL
+
+```pacman: sudo pacman -S tgpt```
+
+```brew: brew install tgpt```
+
+```nix: nix profile install nixpkgs#tgpt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chatgpt-cli](/man/chatgpt-cli)(1), [sgpt](/man/sgpt)(1)

@@ -68,6 +68,20 @@ Cannot resolve all conflicts — semantic conflicts that require understanding p
 
 **mergiraf** was created by **Antonin Delpeuch** and is written in **Rust**. The source is hosted on Codeberg.
 
+# INSTALL
+
+```pacman: sudo pacman -S mergiraf```
+
+```apk: sudo apk add mergiraf```
+
+```zypper: sudo zypper install mergiraf```
+
+```brew: brew install mergiraf```
+
+```nix: nix profile install nixpkgs#mergiraf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [git-mergetool](/man/git-mergetool)(1)

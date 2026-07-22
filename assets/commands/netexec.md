@@ -145,6 +145,12 @@ Only use with authorization. May trigger security alerts. Some features require 
 
 **NetExec** is the successor to **CrackMapExec** (CME), created by **byt3bl33d3r** around **2015**. After CrackMapExec's development slowed, NetExec forked the project in **2023** to continue maintenance and development.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#netexec```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smbclient](/man/smbclient)(1), [rpcclient](/man/rpcclient)(1), [ldapsearch](/man/ldapsearch)(1), [nmap](/man/nmap)(1)

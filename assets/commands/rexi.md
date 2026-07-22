@@ -41,6 +41,12 @@ It supports two evaluation modes:
 
 **rexi** was created by **Roy Reznik** (royreznik) and is written in **Python** using the Textual TUI framework.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#rexi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [ripgrep](/man/ripgrep)(1)

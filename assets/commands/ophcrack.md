@@ -121,6 +121,18 @@ Rainbow tables require significant disk space (hundreds of MB to tens of GB). LM
 
 Ophcrack was developed by **Philippe Oechslin** at EPFL (Swiss Federal Institute of Technology) and first released in **2004**. Oechslin invented the rainbow table technique as an improvement over earlier time-memory trade-off methods. The tool demonstrated the weakness of LM hash storage, contributing to Microsoft's decision to deprecate LM hashes in Windows Vista and later versions.
 
+# INSTALL
+
+```apt: sudo apt install ophcrack```
+
+```dnf: sudo dnf install ophcrack```
+
+```brew: brew install ophcrack```
+
+```nix: nix profile install nixpkgs#ophcrack```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hashcat](/man/hashcat)(1), [john](/man/john)(1), [pwdump](/man/pwdump)(1), [rcrack](/man/rcrack)(1)

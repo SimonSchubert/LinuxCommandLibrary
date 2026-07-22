@@ -55,6 +55,12 @@ Requires notification daemon. System dependent. May need configuration.
 
 ntfyme provides **command completion notifications** for terminal workflows.
 
+# INSTALL
+
+```aur: yay -S ntfyme```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [notify-send](/man/notify-send)(1), [nohup](/man/nohup)(1), [time](/man/time)(1)

@@ -82,6 +82,18 @@ Requires kubectl access. Many pods may overwhelm. Network latency affects stream
 
 **stern** was created by **Wercker** (now Oracle) for Kubernetes log tailing. It simplifies viewing logs from multiple pods simultaneously.
 
+# INSTALL
+
+```pacman: sudo pacman -S stern```
+
+```zypper: sudo zypper install stern```
+
+```brew: brew install stern```
+
+```nix: nix profile install nixpkgs#stern```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubetail](/man/kubetail)(1), [k9s](/man/k9s)(1)

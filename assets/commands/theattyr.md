@@ -28,6 +28,12 @@ Terminal theater for playing VT100 art and animations
 
 **theattyr** was created by **Orhun Parmaksiz** and is written in **Rust**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#theattyr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [asciinema](/man/asciinema)(1), [terminaltexteffects](/man/terminaltexteffects)(1), [vhs](/man/vhs)(1)

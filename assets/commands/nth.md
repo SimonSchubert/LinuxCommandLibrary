@@ -52,6 +52,12 @@ Field numbering starts at 1. Simpler than awk but less powerful.
 
 nth provides **simple field extraction** as an alternative to awk and cut.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nth```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cut](/man/cut)(1), [awk](/man/awk)(1), [paste](/man/paste)(1)

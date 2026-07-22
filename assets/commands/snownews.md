@@ -106,6 +106,14 @@ Snownews is text-mode only and does not display images or complex formatting fro
 
 **Snownews** was developed as a lightweight RSS reader for the command line. It was designed to integrate well with Unix tools and philosophy, supporting piping and filtering. The project is released under the GNU General Public License version 3 and supports multiple platforms including Linux, BSD, macOS, and Windows (via Cygwin).
 
+# INSTALL
+
+```dnf: sudo dnf install snownews```
+
+```brew: brew install snownews```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [newsboat](/man/newsboat)(1), [lynx](/man/lynx)(1), [rss2email](/man/rss2email)(1)

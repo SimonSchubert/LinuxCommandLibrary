@@ -39,6 +39,12 @@ Requires Cloud-Init to be installed and configured in the VM image. Configuratio
 
 Part of **Proxmox VE** QEMU/KVM management tools. Cloud-Init integration allows automated VM provisioning similar to cloud environments.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-create](/man/qm-create)(1), [cloud-init](/man/cloud-init)(1)

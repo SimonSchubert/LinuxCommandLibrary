@@ -97,6 +97,12 @@ AUR packages are user-contributed and not officially supported by Arch Linux. Al
 
 **paru** was created by Morganamilo as a successor to yay, written in Rust for better performance. It aims to be feature-rich while maintaining simplicity and pacman compatibility.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#paru```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [yay](/man/yay)(8), [makepkg](/man/makepkg)(8)

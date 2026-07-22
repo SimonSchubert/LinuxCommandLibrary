@@ -61,6 +61,14 @@ Web rendering is text-based and may not display complex pages accurately. Requir
 
 **offpunk** was created by **Ploum** (Lionel Dricot) as a fork of the **AV-98** Gemini browser, written in **Python**. It emphasizes offline-first browsing and digital minimalism.
 
+# INSTALL
+
+```apk: sudo apk add offpunk```
+
+```nix: nix profile install nixpkgs#offpunk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lynx](/man/lynx)(1), [w3m](/man/w3m)(1), [bombadillo](/man/bombadillo)(1)

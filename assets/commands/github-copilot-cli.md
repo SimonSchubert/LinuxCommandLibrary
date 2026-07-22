@@ -72,6 +72,12 @@ Requires GitHub Copilot subscription. Needs internet connection. Suggestions may
 
 GitHub Copilot CLI was released as a GitHub CLI extension after the success of GitHub Copilot for code. It extends AI assistance from code editors to the command line.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#github-copilot-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [tldr](/man/tldr)(1), [man](/man/man)(1)

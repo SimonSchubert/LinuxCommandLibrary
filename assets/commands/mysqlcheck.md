@@ -76,6 +76,14 @@ May lock tables. Backup before repair. Some engines don't support all operations
 
 mysqlcheck is part of the **MySQL** distribution for table maintenance and repair operations.
 
+# INSTALL
+
+```apk: sudo apk add mariadb-client```
+
+```zypper: sudo zypper install mariadb-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mysql](/man/mysql)(1), [mysqladmin](/man/mysqladmin)(1), [mysqldump](/man/mysqldump)(1)

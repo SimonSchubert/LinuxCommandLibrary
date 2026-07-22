@@ -123,6 +123,12 @@ Requires Vercel account. Some features need paid plan. Serverless function limit
 
 **Vercel** (formerly ZEIT) was founded by **Guillermo Rauch** in **2015**. The CLI was originally `now`, renamed to `vercel` in **2020**. The platform pioneered serverless frontend hosting and is the company behind Next.js. It emphasizes developer experience and zero-configuration deployment.
 
+# INSTALL
+
+```brew: brew install vercel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [netlify](/man/netlify)(1), [firebase](/man/firebase)(1), [surge](/man/surge)(1), [next](/man/next)(1)

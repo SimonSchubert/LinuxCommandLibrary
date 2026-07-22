@@ -65,6 +65,14 @@ Only captures commands from make output. May miss compiler calls not going throu
 
 **compiledb** was created to bridge the gap between make-based builds and modern C/C++ tooling that requires compilation databases. It emerged as the clangd and clang-tidy ecosystem grew in popularity in the late **2010s**, providing a simpler alternative to cmake or bear for generating compile_commands.json.
 
+# INSTALL
+
+```brew: brew install compiledb```
+
+```nix: nix profile install nixpkgs#compiledb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [make](/man/make)(1), [bear](/man/bear)(1), [cmake](/man/cmake)(1), [clangd](/man/clangd)(1)

@@ -72,6 +72,24 @@ Learning curve from Vim differences. Lua config preferred. Plugin ecosystem diff
 
 Neovim was forked from **Vim in 2014** to modernize the codebase with better architecture.
 
+# INSTALL
+
+```apt: sudo apt install neovim```
+
+```dnf: sudo dnf install neovim```
+
+```pacman: sudo pacman -S neovim```
+
+```apk: sudo apk add neovim```
+
+```zypper: sudo zypper install neovim```
+
+```brew: brew install neovim```
+
+```nix: nix profile install nixpkgs#neovim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [vi](/man/vi)(1), [emacs](/man/emacs)(1)

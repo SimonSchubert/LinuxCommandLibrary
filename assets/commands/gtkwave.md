@@ -87,6 +87,20 @@ Large VCD files may be slow; use FST format. Complex hierarchies need navigation
 
 GTKWave was written by **Tony Bybell** as an open-source waveform viewer for digital design verification. It has become the standard viewer for open-source HDL simulators.
 
+# INSTALL
+
+```apt: sudo apt install gtkwave```
+
+```dnf: sudo dnf install gtkwave```
+
+```pacman: sudo pacman -S gtkwave```
+
+```zypper: sudo zypper install gtkwave```
+
+```nix: nix profile install nixpkgs#gtkwave```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iverilog](/man/iverilog)(1), [verilator](/man/verilator)(1), [ghdl](/man/ghdl)(1)

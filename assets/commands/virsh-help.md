@@ -61,6 +61,18 @@ _command_
 
 **virsh help** displays help for virsh commands and command groups. When called without arguments, it lists all commands grouped by category with a keyword for each group. When given a command name, it shows detailed usage, options, and description for that command. When given a group keyword, it lists only the commands in that group.
 
+# INSTALL
+
+```apt: sudo apt install libvirt-clients```
+
+```dnf: sudo dnf install libvirt-client```
+
+```apk: sudo apk add libvirt-client```
+
+```zypper: sudo zypper install libvirt-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virsh](/man/virsh)(1)

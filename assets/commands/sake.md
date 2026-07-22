@@ -79,6 +79,12 @@ Task runner for local and remote hosts via SSH
 
 **sake** was created by **Samir Alajmovic** (alajmo) and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S sake```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ansible](/man/ansible)(1), [ssh](/man/ssh)(1), [fabric](/man/fabric)(1)

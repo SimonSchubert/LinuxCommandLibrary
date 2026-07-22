@@ -86,6 +86,18 @@ Can be CPU intensive depending on camera resolution and detection settings. Requ
 
 motion was created as an **open source** motion detection system for Linux security and surveillance applications. It uses the Video4Linux interface and has been widely adopted for home security and wildlife monitoring.
 
+# INSTALL
+
+```apt: sudo apt install motion```
+
+```pacman: sudo pacman -S motion```
+
+```zypper: sudo zypper install motion```
+
+```nix: nix profile install nixpkgs#motion```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [v4l2-ctl](/man/v4l2-ctl)(1), [vlc](/man/vlc)(1), [fswebcam](/man/fswebcam)(1), [streamer](/man/streamer)(1)

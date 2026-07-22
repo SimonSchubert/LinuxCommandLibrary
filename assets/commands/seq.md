@@ -80,6 +80,24 @@ Floating-point increments may accumulate rounding errors. For precise decimal se
 
 Bash brace expansion **{1..10}** is often faster for simple integer sequences when the shell supports it.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jot](/man/jot)(1), [yes](/man/yes)(1), [printf](/man/printf)(1), [bash](/man/bash)(1)

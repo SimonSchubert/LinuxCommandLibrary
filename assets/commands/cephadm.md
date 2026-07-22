@@ -123,6 +123,18 @@ The `bootstrap` command creates an initial single-node cluster with a monitor an
 
 Requires container runtime (Podman preferred, Docker supported). Bootstrap creates initial admin credentials. Services are managed through the orchestrator, not directly.
 
+# INSTALL
+
+```apt: sudo apt install cephadm```
+
+```dnf: sudo dnf install cephadm```
+
+```apk: sudo apk add ceph18-cephadm```
+
+```zypper: sudo zypper install cephadm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ceph](/man/ceph)(8), [podman](/man/podman)(1)

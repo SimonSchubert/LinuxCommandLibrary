@@ -27,6 +27,16 @@ This tool is part of the Interception Tools suite, enabling advanced keyboard an
 
 Requires root privileges. Configuration files must be valid YAML. Part of the Interception Tools project. Running incorrectly can disrupt input devices.
 
+# INSTALL
+
+```apt: sudo apt install interception-tools```
+
+```pacman: sudo pacman -S interception-tools```
+
+```nix: nix profile install nixpkgs#interception-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uinput](/man/uinput)(1)

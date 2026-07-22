@@ -56,6 +56,13 @@ Deprecated in favor of arduino-cli. Requires specifying multiple paths. Board pa
 
 **arduino-builder** was developed as a standalone build tool extracted from the Arduino IDE. It has been superseded by **arduino-cli** for most use cases.
 
+# INSTALL
+
+```apt: sudo apt install arduino-builder```
+
+```aur: yay -S arduino-builder```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [arduino](/man/arduino)(1), [arduino-cli](/man/arduino-cli)(1), [avr-gcc](/man/avr-gcc)(1)

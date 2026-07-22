@@ -81,6 +81,24 @@ Metadata modifications are permanent. Some formats have limited metadata support
 
 exiv2 is an open-source project providing a library and command-line tool for Exif and other metadata handling, used by many image applications.
 
+# INSTALL
+
+```apt: sudo apt install exiv2```
+
+```dnf: sudo dnf install exiv2```
+
+```pacman: sudo pacman -S exiv2```
+
+```apk: sudo apk add exiv2```
+
+```zypper: sudo zypper install exiv2```
+
+```brew: brew install exiv2```
+
+```nix: nix profile install nixpkgs#exiv2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [exiftool](/man/exiftool)(1), [identify](/man/identify)(1), [jhead](/man/jhead)(1)

@@ -89,6 +89,22 @@ Requires root privileges. Sets must be created before they can be referenced in 
 
 ipset was developed by Jozsef Kadlecsik to provide efficient set-based matching for the Linux firewall. It became part of the standard Linux networking toolkit and is widely used for implementing blocklists and allowlists.
 
+# INSTALL
+
+```apt: sudo apt install ipset```
+
+```dnf: sudo dnf install ipset```
+
+```pacman: sudo pacman -S ipset```
+
+```apk: sudo apk add ipset```
+
+```zypper: sudo zypper install ipset```
+
+```nix: nix profile install nixpkgs#ipset```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iptables](/man/iptables)(8), [nft](/man/nft)(8), [firewall-cmd](/man/firewall-cmd)(1)

@@ -78,6 +78,12 @@ Phploc has been **archived** by its author and is no longer actively maintained.
 
 PHPLOC was created by **Sebastian Bergmann**, also known for PHPUnit, as part of the PHP quality assurance toolkit.
 
+# INSTALL
+
+```aur: yay -S phploc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cloc](/man/cloc)(1), [phpmd](/man/phpmd)(1), [phpcs](/man/phpcs)(1), [sloccount](/man/sloccount)(1)

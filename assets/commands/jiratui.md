@@ -30,6 +30,14 @@ Requires a Jira Cloud account and API token. Jira Server/Data Center support may
 
 **jiratui** was created by **whyisdifficult** and is written in **Python** using the Textual framework. It was designed to provide a keyboard-driven Jira experience for developers who prefer to work in the terminal.
 
+# INSTALL
+
+```brew: brew install jiratui```
+
+```nix: nix profile install nixpkgs#jiratui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jira-cli](/man/jira-cli)(1)

@@ -56,6 +56,12 @@ Requires flakes enabled. Downloads on first run. Network dependent.
 
 nix run is part of the **new Nix CLI** for running packages without installation.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nix-run```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix](/man/nix)(1), [nix-shell](/man/nix-shell)(1), [nix-build](/man/nix-build)(1)

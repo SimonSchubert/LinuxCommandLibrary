@@ -44,6 +44,22 @@ In query mode, it performs a one-shot query of the state of a specific key, swit
 
 Requires root privileges to read from /dev/input/ devices. Grabbing a device prevents other applications from receiving events until evtest quits.
 
+# INSTALL
+
+```apt: sudo apt install evtest```
+
+```dnf: sudo dnf install evtest```
+
+```pacman: sudo pacman -S evtest```
+
+```apk: sudo apk add evtest```
+
+```zypper: sudo zypper install evtest```
+
+```nix: nix profile install nixpkgs#evtest```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xinput](/man/xinput)(1), [libinput](/man/libinput)(1)

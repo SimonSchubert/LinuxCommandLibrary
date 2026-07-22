@@ -86,6 +86,24 @@ Input must be in **DOT** format. For directed graphs only weakly connected compo
 
 **ccomps** is part of the **Graphviz** suite, originally developed at **AT&T Labs Research** starting in the **early 1990s** by **Stephen North**, **Eleftherios Koutsofios**, **Emden Gansner** and others. Graphviz was open-sourced in **2004** and continues to be actively maintained.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [neato](/man/neato)(1), [gc](/man/gc)(1), [gvpr](/man/gvpr)(1)

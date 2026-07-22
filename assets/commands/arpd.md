@@ -70,6 +70,19 @@ Rarely needed on modern networks. May cause issues if the ARP cache becomes stal
 
 **arpd** is part of the **iproute2** package, providing userspace ARP table management for specialized networking scenarios.
 
+# INSTALL
+
+```apt: sudo apt install iproute2```
+
+```pacman: sudo pacman -S iproute2```
+
+```zypper: sudo zypper install iproute2```
+
+```brew: brew install iproute2```
+
+```nix: nix profile install nixpkgs#iproute2```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [arp](/man/arp)(8), [ip-neighbour](/man/ip-neighbour)(8)

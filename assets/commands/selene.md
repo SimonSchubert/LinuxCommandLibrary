@@ -117,6 +117,16 @@ selene requires a **selene.toml** configuration file for customization. Without 
 
 **selene** was created by Kampfkarren (Lucas) and first released as an open-source project on GitHub. It was written in Rust for performance and safety, gaining popularity particularly within the Roblox development community where fast, reliable Lua linting is essential. The project continues active development with regular releases adding support for new Luau features and additional lint rules.
 
+# INSTALL
+
+```pacman: sudo pacman -S selene```
+
+```brew: brew install selene```
+
+```nix: nix profile install nixpkgs#selene```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [luacheck](/man/luacheck)(1), [stylua](/man/stylua)(1), [lua](/man/lua)(1)

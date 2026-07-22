@@ -69,6 +69,16 @@ The TUI displays adapter information, available devices, paired devices, and con
 
 Requires the Bluetooth daemon (bluetoothd) to be running. May require appropriate permissions to access the Bluetooth adapter. Written in Rust using the Ratatui framework.
 
+# INSTALL
+
+```pacman: sudo pacman -S bluetui```
+
+```zypper: sudo zypper install bluetui```
+
+```nix: nix profile install nixpkgs#bluetui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bluetoothctl](/man/bluetoothctl)(1)

@@ -88,6 +88,24 @@ Slower than gzip at maximum compression. Not as widely supported on older system
 
 **Brotli** was developed by Jyrki Alakuijala and Zoltán Szabadka at Google, released in **2013** and standardized as RFC 7932 in **2016**.
 
+# INSTALL
+
+```apt: sudo apt install brotli```
+
+```dnf: sudo dnf install brotli```
+
+```pacman: sudo pacman -S brotli```
+
+```apk: sudo apk add brotli```
+
+```zypper: sudo zypper install brotli```
+
+```brew: brew install brotli```
+
+```nix: nix profile install nixpkgs#brotli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gzip](/man/gzip)(1), [zstd](/man/zstd)(1), [xz](/man/xz)(1)

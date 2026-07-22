@@ -94,6 +94,18 @@ Running multiple instances can cause conflicts. Some Wayland compositors have li
 
 CopyQ was created as an open-source clipboard manager, first released around **2009**. It has evolved to include advanced features like scripting, synchronization, and tab organization, becoming one of the most feature-rich clipboard managers available for Linux, Windows, and macOS.
 
+# INSTALL
+
+```apt: sudo apt install copyq```
+
+```dnf: sudo dnf install copyq```
+
+```pacman: sudo pacman -S copyq```
+
+```nix: nix profile install nixpkgs#copyq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xclip](/man/xclip)(1), [xsel](/man/xsel)(1), [wl-copy](/man/wl-copy)(1), [pbcopy](/man/pbcopy)(1)

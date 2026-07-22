@@ -36,6 +36,20 @@ _TASK_IDS_
 
 Tasks must be in the stashed state before they can be enqueued. Use **pueue stash** to stash running or queued tasks, or add tasks with **pueue add --stashed** to create them in the stashed state.
 
+# INSTALL
+
+```pacman: sudo pacman -S pueue```
+
+```apk: sudo apk add pueue```
+
+```zypper: sudo zypper install pueue```
+
+```brew: brew install pueue```
+
+```nix: nix profile install nixpkgs#pueue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pueue](/man/pueue)(1), [pueue-stash](/man/pueue-stash)(1), [pueue-add](/man/pueue-add)(1), [pueue-status](/man/pueue-status)(1)

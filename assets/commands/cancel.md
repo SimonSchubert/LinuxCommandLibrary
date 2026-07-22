@@ -72,6 +72,18 @@ The **-a** and **-u** options require administrative privileges. These restricti
 
 CUPS printer names can contain any printable character except SPACE, TAB, "/", or "#", and are case-insensitive.
 
+# INSTALL
+
+```apt: sudo apt install lprng```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lp](/man/lp)(1), [lpq](/man/lpq)(1), [lpr](/man/lpr)(1), [lprm](/man/lprm)(1), [lpstat](/man/lpstat)(1)

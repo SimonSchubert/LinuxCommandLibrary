@@ -41,6 +41,24 @@ While convenient for eliminating password prompts permanently, this approach has
 
 Credentials are stored in plain text. Consider using a credential manager or git-credential-cache for better security.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-credential-cache](/man/git-credential-cache)(1), [git-credential](/man/git-credential)(1)

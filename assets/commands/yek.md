@@ -106,6 +106,14 @@ Token counting is approximate and may vary from actual LLM tokenization. Very la
 
 **yek** was created by **Mohsen Azimi** as a high-performance tool for preparing code for LLM analysis. Written in **Rust**, it achieved significant speed improvements over similar tools—benchmarks show it running 230× faster than alternatives like Repomix. The name means "one" in Farsi (یک), reflecting its purpose of combining files into one output.
 
+# INSTALL
+
+```brew: brew install yek```
+
+```nix: nix profile install nixpkgs#yek```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tree](/man/tree)(1), [find](/man/find)(1), [cat](/man/cat)(1), [rg](/man/rg)(1)

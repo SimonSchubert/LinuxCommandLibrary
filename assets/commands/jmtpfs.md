@@ -68,6 +68,14 @@ Only one process may talk to an MTP device at a time, so unlock the phone and di
 
 MTP is session-based: file metadata such as size and modification time may update slowly, and random-access writes to existing files are not supported by the protocol (files are typically rewritten in full). Always unmount with **fusermount -u** before disconnecting the device, and re-plug the cable if the device becomes unresponsive.
 
+# INSTALL
+
+```apt: sudo apt install jmtpfs```
+
+```dnf: sudo dnf install jmtpfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fusermount](/man/fusermount)(1), [fuser](/man/fuser)(1)

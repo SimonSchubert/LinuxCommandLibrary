@@ -75,6 +75,12 @@ Emacs-only application. Requires Emacs 24.3+. Large numbers of feeds may slow in
 
 Elfeed was created by **Christopher Wellons** (skeeto) around **2013**. It was designed as a lightweight, Emacs-native feed reader that leverages Emacs's strengths in text processing and extensibility.
 
+# INSTALL
+
+```aur: yay -S elfeed```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [emacs](/man/emacs)(1), [newsboat](/man/newsboat)(1)

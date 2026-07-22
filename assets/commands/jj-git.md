@@ -78,6 +78,20 @@ Jujutsu uses Git as its storage backend, so all explicit Git interop commands li
 
 Subcommand of jj. Requires Git backend. Some Git workflows (e.g., staging area) are handled differently by jj.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-git-push](/man/jj-git-push)(1), [jj-git-clone](/man/jj-git-clone)(1), [git](/man/git)(1)

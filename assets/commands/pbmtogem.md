@@ -32,6 +32,24 @@ Does not support compression of repeated lines in the output. The GEM IMG format
 
 pbmtogem was created by **David Beckemeyer** and **Jef Poskanzer** as part of the Netpbm suite.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gemtopbm](/man/gemtopbm)(1), [gemtopnm](/man/gemtopnm)(1), [pbmtomacp](/man/pbmtomacp)(1)

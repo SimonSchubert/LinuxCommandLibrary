@@ -121,6 +121,14 @@ JavaScript-rendered content requires Splash or Selenium integration. Some sites 
 
 **Scrapy** was created by **Pablo Hoffman** and **Shane Evans** at Insophia around **2008**. It grew from internal tools to a general-purpose framework. The project became one of the most popular Python scraping tools, with commercial company Scrapinghub (now Zyte) providing support and services.
 
+# INSTALL
+
+```pacman: sudo pacman -S scrapy```
+
+```brew: brew install scrapy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [wget](/man/wget)(1), [beautifulsoup](/man/beautifulsoup)(1), [playwright](/man/playwright)(1)

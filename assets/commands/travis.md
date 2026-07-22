@@ -121,6 +121,14 @@ Requires a Travis CI account linked to GitHub. The travis-ci.org endpoint has be
 
 **Travis CI** was founded in **2011** as a hosted CI service for GitHub. The CLI provides command-line access to CI operations.
 
+# INSTALL
+
+```apt: sudo apt install travis```
+
+```brew: brew install travis```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [circleci](/man/circleci)(1)

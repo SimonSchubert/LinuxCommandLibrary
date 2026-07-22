@@ -136,6 +136,14 @@ The dev server stores data in memory and is not for production use. Unsealing re
 
 Vault was created by **HashiCorp** and first released in **April 2015**. It was designed to address the challenge of managing secrets in modern infrastructure. Key features like dynamic secrets, leasing, and renewal were core from the beginning. Vault has grown to support numerous authentication methods and secrets engines, becoming a standard tool for secrets management in DevOps and cloud-native environments.
 
+# INSTALL
+
+```pacman: sudo pacman -S vault```
+
+```nix: nix profile install nixpkgs#vault```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [consul](/man/consul)(1), [terraform](/man/terraform)(1), [gpg](/man/gpg)(1), [pass](/man/pass)(1)

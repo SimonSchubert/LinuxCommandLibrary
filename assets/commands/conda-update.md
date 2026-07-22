@@ -61,6 +61,14 @@ package updater
 
 **--all** may fail if there are conflicting package requirements. In such cases, update packages individually.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-install](/man/conda-install)(1), [conda-list](/man/conda-list)(1)

@@ -70,6 +70,14 @@ Requires Ruby and the **nokogiri** gem (`gem install nokogiri`). The **-i** inte
 
 **Nokogiri** (Japanese for "saw") was created by **Aaron Patterson** and **Mike Dalessio** in **2008** as a faster, libxml2-backed alternative to Hpricot. It is one of the most-installed Ruby gems and ships a small CLI for ad-hoc parsing and validation.
 
+# INSTALL
+
+```apt: sudo apt install ruby-nokogiri```
+
+```pacman: sudo pacman -S ruby-nokogiri```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xmllint](/man/xmllint)(1), [pup](/man/pup)(1), [xidel](/man/xidel)(1)

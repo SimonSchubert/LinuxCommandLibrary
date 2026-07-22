@@ -44,3 +44,9 @@ _break_duration_
 # HISTORY
 
 **pomo** was created by **Bahaaio** and is written in **Go**.
+
+# INSTALL
+
+```aur: yay -S pomo```
+
+<!-- packages: 2026-07-22 -->

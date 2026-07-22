@@ -105,6 +105,12 @@ Requires significant disk space. Initial sync takes time. Use snapshots for fast
 
 Tezos was created by **Arthur Breitman** and **Kathleen Breitman**, launching mainnet in **2018**. The node software was rebranded to Octez.
 
+# INSTALL
+
+```aur: yay -S octez-node```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [octez-client](/man/octez-client)(1), [octez-baker](/man/octez-baker)(1)

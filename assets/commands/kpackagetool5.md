@@ -69,6 +69,16 @@ KDE 5 specific; KDE 6 uses kpackagetool6. Some packages may require Plasma resta
 
 kpackagetool5 is part of KDE Frameworks 5, providing package management for Plasma's modular component system. It enables users to extend Plasma with community-created content.
 
+# INSTALL
+
+```apt: sudo apt install kpackagetool5```
+
+```pacman: sudo pacman -S kpackage5```
+
+```apk: sudo apk add kpackage5```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kpackagetool6](/man/kpackagetool6)(1)

@@ -78,6 +78,16 @@ Requires Erlang/OTP installed. Native compilation deprecated in OTP 24+. Include
 
 **erlc** has been part of **Erlang/OTP** since its early releases. Erlang was developed at **Ericsson** by **Joe Armstrong** and others starting in **1986**, released as open source in **1998**. The compiler generates BEAM bytecode for the Erlang virtual machine.
 
+# INSTALL
+
+```apt: sudo apt install erlang-base```
+
+```apk: sudo apk add erlang27```
+
+```zypper: sudo zypper install erlang27```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [erl](/man/erl)(1)

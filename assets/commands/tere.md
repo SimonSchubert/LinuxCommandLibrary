@@ -89,6 +89,16 @@ Terminal file explorer for fast directory navigation
 
 **tere** was created by **Marton Gunyho** (mgunyho) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S tere```
+
+```brew: brew install tere```
+
+```nix: nix profile install nixpkgs#tere```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [broot](/man/broot)(1), [zoxide](/man/zoxide)(1), [ranger](/man/ranger)(1), [fzf](/man/fzf)(1), [nnn](/man/nnn)(1)

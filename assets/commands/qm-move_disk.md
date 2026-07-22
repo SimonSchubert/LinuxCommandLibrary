@@ -18,6 +18,12 @@ View documentation for the original command
 
 **qm move_disk** is an alternative form of **qm disk move** that moves virtual machine disks between storage backends. The underscore variant is provided for compatibility.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-disk](/man/qm-disk)(1)

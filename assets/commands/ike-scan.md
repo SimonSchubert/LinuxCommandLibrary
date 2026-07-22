@@ -65,6 +65,16 @@ Security testing tool. Authorization required. UDP port 500.
 
 ike-scan was created by **Roy Hills** for IPsec VPN discovery and fingerprinting.
 
+# INSTALL
+
+```apt: sudo apt install ike-scan```
+
+```brew: brew install ike-scan```
+
+```nix: nix profile install nixpkgs#ike-scan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [ipsec](/man/ipsec)(8)

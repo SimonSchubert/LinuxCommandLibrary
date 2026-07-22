@@ -38,6 +38,12 @@ Only works with NVIDIA GPUs. Requires NVIDIA drivers with NVML support.
 
 **nvitop** was created by **XuehaiPan** and is written in **Python**. It works on both Linux and Windows.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nvitop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nvidia-smi](/man/nvidia-smi)(1), [nvtop](/man/nvtop)(1), [htop](/man/htop)(1)

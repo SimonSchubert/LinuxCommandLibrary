@@ -100,6 +100,21 @@ The original Python-based **asciidoc** is considered legacy. **Asciidoctor** (wr
 
 AsciiDoc was created by **Stuart Rackham** in **2002** as a more readable alternative to DocBook XML. The format was designed to be human-readable while still capable of producing professional documentation. **Asciidoctor**, a modern reimplementation, was started in **2012** by **Dan Allen** and has become the primary implementation, used by projects like GitHub, GitLab, and the Eclipse Foundation.
 
+# INSTALL
+
+```dnf: sudo dnf install asciidoc```
+
+```pacman: sudo pacman -S asciidoc```
+
+```apk: sudo apk add asciidoc```
+
+```zypper: sudo zypper install asciidoc```
+
+```brew: brew install asciidoc```
+
+```nix: nix profile install nixpkgs#asciidoc```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [asciidoctor](/man/asciidoctor)(1), [pandoc](/man/pandoc)(1), [markdown](/man/markdown)(1), [rst2html](/man/rst2html)(1)

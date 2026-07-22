@@ -51,6 +51,12 @@ The database must be updated before first use to fetch dependency mappings.
 
 Arch Linux specific. Converted packages may have dependency issues as package names differ between distributions. Review and test converted packages before production use. Database update requires internet access.
 
+# INSTALL
+
+```aur: yay -S debtap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [makepkg](/man/makepkg)(8), [dpkg](/man/dpkg)(1)

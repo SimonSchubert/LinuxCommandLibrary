@@ -62,6 +62,22 @@ Simple, fast fuzzy text selector for the terminal
 
 Needs a TTY for interactive mode. Ranking differs from **fzf**; scripts may need adjustment when switching tools.
 
+# INSTALL
+
+```apt: sudo apt install fzy```
+
+```pacman: sudo pacman -S fzy```
+
+```apk: sudo apk add fzy```
+
+```zypper: sudo zypper install fzy```
+
+```brew: brew install fzy```
+
+```nix: nix profile install nixpkgs#fzy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fzf](/man/fzf)(1), [pick](/man/pick)(1), [sk](/man/sk)(1)

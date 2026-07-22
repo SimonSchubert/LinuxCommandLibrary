@@ -32,6 +32,24 @@ If no file is specified, the program reads from standard input. Output is writte
 
 This tool handles a specific legacy format. The brush file format is rarely used in modern systems. Output is monochrome PBM; convert using other Netpbm tools if color output is needed.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtogo](/man/pbmtogo)(1), [pnmtopng](/man/pnmtopng)(1), [netpbm](/man/netpbm)(1)

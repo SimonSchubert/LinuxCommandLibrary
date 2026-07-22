@@ -53,6 +53,18 @@ For domains using UEFI/NVRAM, the NVRAM file is removed by default; pass **--kee
 
 Removing storage with **--remove-all-storage** is irreversible. Domains with snapshots cannot be undefined unless **--snapshots-metadata** is supplied. Storage volumes managed outside of libvirt pools must be cleaned up manually.
 
+# INSTALL
+
+```apt: sudo apt install libvirt-clients```
+
+```dnf: sudo dnf install libvirt-client```
+
+```apk: sudo apk add libvirt-client```
+
+```zypper: sudo zypper install libvirt-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virsh](/man/virsh)(1), [virsh-list](/man/virsh-list)(1), [virsh-pool-undefine](/man/virsh-pool-undefine)(1)

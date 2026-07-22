@@ -88,6 +88,22 @@ Part of the **renameutils** package. Editor must be text-based. Do not edit the 
 
 **qmv** is part of the **renameutils** package created by **Oskar Liljeblad** and released under the GPL. The companion tool **qcp** performs the same workflow for copying files.
 
+# INSTALL
+
+```apt: sudo apt install renameutils```
+
+```dnf: sudo dnf install renameutils```
+
+```pacman: sudo pacman -S renameutils```
+
+```zypper: sudo zypper install renameutils```
+
+```brew: brew install renameutils```
+
+```nix: nix profile install nixpkgs#renameutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qcp](/man/qcp)(1), [rename](/man/rename)(1), [mmv](/man/mmv)(1), [vidir](/man/vidir)(1), [mv](/man/mv)(1)

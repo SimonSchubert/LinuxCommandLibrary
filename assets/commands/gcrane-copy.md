@@ -49,6 +49,14 @@ The command can copy individual tagged images or use the **-r** flag to recursiv
 
 **gcrane** extends **crane** with Google Container Registry and Artifact Registry specific features such as recursive repository copy.
 
+# INSTALL
+
+```zypper: sudo zypper install gcrane```
+
+```nix: nix profile install nixpkgs#gcrane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcrane](/man/gcrane)(1), [crane-copy](/man/crane-copy)(1)

@@ -79,6 +79,24 @@ Requires OpenCL runtime and ICD (Installable Client Driver) loader installed. Ou
 
 clinfo was developed as a diagnostic tool for the OpenCL ecosystem. OpenCL (Open Computing Language) was released by **Apple** and standardized by **Khronos Group** in **2009** as a framework for parallel programming across heterogeneous platforms. clinfo became an essential utility for developers and users to verify OpenCL setup and understand available compute capabilities.
 
+# INSTALL
+
+```apt: sudo apt install clinfo```
+
+```dnf: sudo dnf install clinfo```
+
+```pacman: sudo pacman -S clinfo```
+
+```apk: sudo apk add opencl```
+
+```zypper: sudo zypper install clinfo```
+
+```brew: brew install clinfo```
+
+```nix: nix profile install nixpkgs#clinfo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nvidia-smi](/man/nvidia-smi)(1), [glxinfo](/man/glxinfo)(1), [vulkaninfo](/man/vulkaninfo)(1)

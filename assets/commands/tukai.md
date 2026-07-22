@@ -43,6 +43,14 @@ Terminal-based touch typing practice application
 
 **tukai** was created by **hlsxx** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S tukai```
+
+```nix: nix profile install nixpkgs#tukai```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ttyper](/man/ttyper)(1), [toipe](/man/toipe)(1), [typioca](/man/typioca)(1), [typtea](/man/typtea)(1), [smassh](/man/smassh)(1)

@@ -45,6 +45,24 @@ Depends on system DNS configuration (/etc/resolv.conf). May return different res
 
 Included with **MariaDB** and **MySQL** as a simple utility for resolving hostnames in database administration contexts. While basic compared to tools like dig, it provides straightforward output suitable for scripts.
 
+# INSTALL
+
+```apt: sudo apt install mariadb-server-core```
+
+```dnf: sudo dnf install mariadb```
+
+```pacman: sudo pacman -S mariadb```
+
+```apk: sudo apk add mariadb```
+
+```zypper: sudo zypper install mariadb```
+
+```brew: brew install mariadb```
+
+```nix: nix profile install nixpkgs#mariadb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [host](/man/host)(1), [dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [getent](/man/getent)(1)

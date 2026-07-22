@@ -49,6 +49,12 @@ The tool aggregates information from all services registered with systemd-userdb
 
 Systemd-based systems only. Output format differs from traditional getent. Some sources may require additional services running.
 
+# INSTALL
+
+```apt: sudo apt install systemd-userdbd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [getent](/man/getent)(1), [id](/man/id)(1), [homectl](/man/homectl)(1)

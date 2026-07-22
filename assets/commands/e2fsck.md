@@ -104,6 +104,24 @@ Never run e2fsck on a mounted filesystem unless it's read-only. The **-y** optio
 
 **e2fsck** is part of **e2fsprogs**, providing filesystem checking for ext2/3/4 filesystems since the early 1990s.
 
+# INSTALL
+
+```apt: sudo apt install e2fsprogs```
+
+```dnf: sudo dnf install e2fsprogs```
+
+```pacman: sudo pacman -S e2fsprogs```
+
+```apk: sudo apk add e2fsprogs```
+
+```zypper: sudo zypper install e2fsprogs```
+
+```brew: brew install e2fsprogs```
+
+```nix: nix profile install nixpkgs#e2fsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fsck](/man/fsck)(8), [tune2fs](/man/tune2fs)(8), [dumpe2fs](/man/dumpe2fs)(8), [mke2fs](/man/mke2fs)(8), [badblocks](/man/badblocks)(8), [debugfs](/man/debugfs)(8)

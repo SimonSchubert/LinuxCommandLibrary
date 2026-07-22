@@ -74,6 +74,12 @@ Tor Browser should not be used with other browsers simultaneously for activities
 
 **Tor Browser** was first released by **The Tor Project** in **2008**, initially as a bundle combining Firefox with Tor. It evolved from earlier tools like Torbutton and became the officially recommended way to browse anonymously using Tor. The project continues active development with regular security updates and Firefox ESR rebases.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#tor-browser```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tor](/man/tor)(1), [torbrowser-launcher](/man/torbrowser-launcher)(1), [torify](/man/torify)(1), [firefox](/man/firefox)(1)

@@ -49,6 +49,12 @@ rcp transmits data unencrypted and is considered insecure. Use scp or rsync over
 
 Part of **GNU inetutils**, providing classic Unix networking utilities. Largely replaced by secure alternatives like scp and rsync.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#rcp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scp](/man/scp)(1), [rsync](/man/rsync)(1), [cp](/man/cp)(1), [rsh](/man/rsh)(1)

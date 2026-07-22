@@ -69,6 +69,20 @@ The selection-first paradigm differs from Vim's muscle memory and requires adjus
 
 **Kakoune** was created by **Maxime Coste** (mawww) and is written in **C++**. Development began around **2011** as an experiment to improve upon Vim's editing model. The multiple-selections approach inspired later editors including **Helix**.
 
+# INSTALL
+
+```dnf: sudo dnf install kakoune```
+
+```pacman: sudo pacman -S kakoune```
+
+```zypper: sudo zypper install kakoune```
+
+```brew: brew install kakoune```
+
+```nix: nix profile install nixpkgs#kakoune```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [helix](/man/helix)(1), [neovim](/man/neovim)(1)

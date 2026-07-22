@@ -64,6 +64,24 @@ Only handles simple **#define** constants and macros. Complex C macros, function
 
 h2ph has been part of the **Perl** distribution since early versions, providing a quick way to access system constants from Perl programs before XS and h2xs became the preferred approach.
 
+# INSTALL
+
+```apt: sudo apt install perl```
+
+```dnf: sudo dnf install perl```
+
+```pacman: sudo pacman -S perl```
+
+```apk: sudo apk add perl-utils```
+
+```zypper: sudo zypper install perl```
+
+```brew: brew install perl```
+
+```nix: nix profile install nixpkgs#perl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [h2xs](/man/h2xs)(1), [perl](/man/perl)(1)

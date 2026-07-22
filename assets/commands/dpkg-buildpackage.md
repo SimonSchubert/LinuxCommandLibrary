@@ -88,6 +88,14 @@ Requires build dependencies installed. Signing needs GPG key. Must run in packag
 
 **dpkg-buildpackage** is part of the **dpkg** suite, the core of Debian package management since **1994**. It has evolved with Debian's packaging practices, adding features for source formats, signing, and cross-compilation over the years.
 
+# INSTALL
+
+```dnf: sudo dnf install dpkg-dev```
+
+```apk: sudo apk add dpkg-dev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dpkg](/man/dpkg)(1), [dpkg-deb](/man/dpkg-deb)(1), [debuild](/man/debuild)(1), [pbuilder](/man/pbuilder)(1)

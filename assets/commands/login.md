@@ -47,6 +47,14 @@ Direct invocation is restricted to root or when called from specific programs. T
 
 The login command dates back to the original Unix systems at Bell Labs in the **1970s**, providing the fundamental user authentication mechanism.
 
+# INSTALL
+
+```apt: sudo apt install login```
+
+```apk: sudo apk add util-linux-login```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [su](/man/su)(1), [sudo](/man/sudo)(8), [passwd](/man/passwd)(1), [getty](/man/getty)(8)

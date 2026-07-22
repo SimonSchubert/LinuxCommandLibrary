@@ -71,6 +71,18 @@ creates composite images from multiple images arranged in a grid
 
 **magick montage** creates composite images from multiple images arranged in a grid. Part of ImageMagick. Useful for creating contact sheets, galleries, and image previews. Supports labels and frames.
 
+# INSTALL
+
+```pacman: sudo pacman -S imagemagick```
+
+```apk: sudo apk add imagemagick```
+
+```brew: brew install imagemagick```
+
+```nix: nix profile install nixpkgs#imagemagick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [magick](/man/magick)(1), [magick-convert](/man/magick-convert)(1)

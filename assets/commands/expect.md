@@ -58,6 +58,24 @@ Commonly used for automating SSH logins, FTP sessions, database setup scripts, a
 
 Uses Tcl scripting language. Sending passwords in scripts has security implications. Consider SSH keys or other authentication methods when possible.
 
+# INSTALL
+
+```apt: sudo apt install expect```
+
+```dnf: sudo dnf install expect```
+
+```pacman: sudo pacman -S expect```
+
+```apk: sudo apk add expect```
+
+```zypper: sudo zypper install expect```
+
+```brew: brew install expect```
+
+```nix: nix profile install nixpkgs#expect```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [autoexpect](/man/autoexpect)(1), [tcl](/man/tcl)(1), [ssh](/man/ssh)(1)

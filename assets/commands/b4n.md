@@ -91,6 +91,11 @@ Key configuration options in **config.yaml** include **logs.lines** (number of r
 
 Requires a valid kubeconfig file and network access to a Kubernetes cluster. A terminal font with Nerd Font symbols (such as Cascadia Code) is recommended for proper UI rendering. Building from source requires Rust 1.88 or newer. The project is under active development and was created primarily as a Rust learning exercise.
 
+# INSTALL
+
+```zypper: sudo zypper install b4n```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [k9s](/man/k9s)(1), [kubectl](/man/kubectl)(1), [helm](/man/helm)(1)

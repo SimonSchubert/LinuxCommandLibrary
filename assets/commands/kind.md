@@ -107,6 +107,24 @@ Requires Docker. Development focused. Not for production.
 
 kind (Kubernetes IN Docker) was created by the **Kubernetes** SIG Testing as a tool for testing Kubernetes itself.
 
+# INSTALL
+
+```apt: sudo apt install kind```
+
+```dnf: sudo dnf install kind```
+
+```pacman: sudo pacman -S kind```
+
+```apk: sudo apk add kind```
+
+```zypper: sudo zypper install kind```
+
+```brew: brew install kind```
+
+```nix: nix profile install nixpkgs#kind```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [k3d](/man/k3d)(1), [minikube](/man/minikube)(1), [docker](/man/docker)(1)

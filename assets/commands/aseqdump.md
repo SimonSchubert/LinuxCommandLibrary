@@ -71,6 +71,21 @@ Only displays ALSA sequencer events, not raw MIDI. Subscribe to specific ports t
 
 **aseqdump** is part of the **alsa-utils** package, providing MIDI debugging capabilities since ALSA's introduction.
 
+# INSTALL
+
+```apt: sudo apt install alsa-utils```
+
+```dnf: sudo dnf install alsa-utils```
+
+```pacman: sudo pacman -S alsa-utils```
+
+```apk: sudo apk add alsa-utils```
+
+```zypper: sudo zypper install alsa-utils```
+
+```nix: nix profile install nixpkgs#alsa-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aconnect](/man/aconnect)(1), [amidi](/man/amidi)(1), [arecordmidi](/man/arecordmidi)(1), [aseqnet](/man/aseqnet)(1), [aplaymidi](/man/aplaymidi)(1)

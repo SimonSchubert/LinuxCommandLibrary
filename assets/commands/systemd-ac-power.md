@@ -44,6 +44,22 @@ Requires proper power supply detection by the kernel. Some desktop systems witho
 
 **systemd-ac-power** provides a simple, scriptable interface to power supply status, enabling power-aware behavior in systemd units and shell scripts.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [upower](/man/upower)(1)

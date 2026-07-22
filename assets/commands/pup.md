@@ -107,6 +107,18 @@ pup reads the whole input into memory — not suitable for multi-gigabyte HTML. 
 
 **pup** was written by **Eric Chiang** in **Go**. Its syntax is explicitly modelled after **jq**: the same "query string + optional display function" mental model, applied to HTML.
 
+# INSTALL
+
+```apt: sudo apt install pup```
+
+```apk: sudo apk add pup```
+
+```brew: brew install pup```
+
+```nix: nix profile install nixpkgs#pup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [htmlq](/man/htmlq)(1), [xidel](/man/xidel)(1), [curl](/man/curl)(1)

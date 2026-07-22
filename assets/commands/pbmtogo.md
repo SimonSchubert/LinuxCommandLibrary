@@ -27,6 +27,24 @@ _file_
 
 The output is sent to standard output and can be redirected to a file.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbm](/man/pbm)(1), [netpbm](/man/netpbm)(1), [pbmtoascii](/man/pbmtoascii)(1), [pbmtoplot](/man/pbmtoplot)(1)

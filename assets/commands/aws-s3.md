@@ -119,6 +119,17 @@ The **sync** command only copies new or modified files by default; use **--delet
 
 Amazon S3 (Simple Storage Service) launched in **March 2006** as one of AWS's first services. The **aws s3** high-level CLI commands were introduced with AWS CLI version 1 in **2013** to simplify common operations that previously required multiple API calls through **s3api**. The sync command and multipart upload support have been enhanced over subsequent releases.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-s3api](/man/aws-s3api)(1), [aws-s3-cp](/man/aws-s3-cp)(1), [aws-s3-sync](/man/aws-s3-sync)(1)

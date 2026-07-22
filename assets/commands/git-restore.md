@@ -75,6 +75,24 @@ Restore working tree files or unstage changes
 
 Use `--staged` to unstage files, `--worktree` (the default) to discard working tree changes, or both together to restore a file completely to a previous state.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-reset](/man/git-reset)(1)

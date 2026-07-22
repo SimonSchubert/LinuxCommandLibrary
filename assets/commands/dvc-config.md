@@ -85,6 +85,14 @@ Some options need repository context. Invalid keys may be accepted. Requires app
 
 dvc config follows conventions from **Git config**, providing familiar configuration management for DVC settings.
 
+# INSTALL
+
+```brew: brew install dvc```
+
+```nix: nix profile install nixpkgs#dvc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dvc](/man/dvc)(1), [dvc-init](/man/dvc-init)(1), [git-config](/man/git-config)(1)

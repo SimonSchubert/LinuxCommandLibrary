@@ -92,6 +92,18 @@ Requires Intel hardware with LED support (AHCI, ISCI, VMD enclosures). Needs roo
 
 ledctl is part of the ledmon package, developed by Intel for managing storage enclosure LEDs on their RAID and storage hardware platforms.
 
+# INSTALL
+
+```apt: sudo apt install ledmon```
+
+```dnf: sudo dnf install ledmon```
+
+```zypper: sudo zypper install ledmon```
+
+```nix: nix profile install nixpkgs#ledmon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mdadm](/man/mdadm)(8), [smartctl](/man/smartctl)(8)

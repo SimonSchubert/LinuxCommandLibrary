@@ -94,6 +94,19 @@ Resource group names must be unique within a subscription and can contain only a
 
 Resource groups have been fundamental to Azure Resource Manager (ARM) since its introduction in **2014**, replacing the classic deployment model. They provide the organizational foundation for Azure's role-based access control and policy management.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-resource](/man/az-resource)(1), [az-deployment](/man/az-deployment)(1)

@@ -81,6 +81,24 @@ If multiple sources are given, the last argument must be a directory and all sou
 
 **mv** is one of the original Unix commands, present since Version 1 AT&T Unix in 1971.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cp](/man/cp)(1), [rm](/man/rm)(1), [rename](/man/rename)(1), [rsync](/man/rsync)(1), [install](/man/install)(1)

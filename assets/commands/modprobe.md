@@ -89,6 +89,24 @@ Module names treat underscores and dashes interchangeably. Some modules require 
 
 **modprobe** is part of **kmod**, replacing the older module-init-tools. It provides intelligent module management with automatic dependency resolution.
 
+# INSTALL
+
+```apt: sudo apt install kmod```
+
+```dnf: sudo dnf install kmod```
+
+```pacman: sudo pacman -S kmod```
+
+```apk: sudo apk add kmod```
+
+```zypper: sudo zypper install kmod```
+
+```brew: brew install kmod```
+
+```nix: nix profile install nixpkgs#kmod```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsmod](/man/lsmod)(8), [rmmod](/man/rmmod)(8), [insmod](/man/insmod)(8), [modinfo](/man/modinfo)(8), [depmod](/man/depmod)(8)

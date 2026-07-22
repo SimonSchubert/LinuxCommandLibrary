@@ -64,6 +64,12 @@ executes commands on remote Windows systems via SMB
 
 Requires administrator access on target. Leaves artifacts on target system. For authorized security testing only.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [impacket-smbclient](/man/impacket-smbclient)(1)

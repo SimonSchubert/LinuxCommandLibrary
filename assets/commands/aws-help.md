@@ -76,6 +76,17 @@ Opens in pager by default (use --no-cli-pager to disable). Requires internet con
 
 The **help** command has been part of the AWS CLI since its initial release in **2013**, providing inline documentation for all services and commands.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [man](/man/man)(1), [less](/man/less)(1)

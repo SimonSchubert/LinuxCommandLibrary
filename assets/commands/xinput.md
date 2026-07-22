@@ -99,6 +99,22 @@ On Xwayland, xinput only affects X11 clients connected to that Xwayland instance
 
 **xinput** is part of the X.Org input utilities, providing command-line management of XInput extension devices.
 
+# INSTALL
+
+```apt: sudo apt install xinput```
+
+```dnf: sudo dnf install xinput```
+
+```apk: sudo apk add xinput```
+
+```zypper: sudo zypper install xinput```
+
+```brew: brew install xinput```
+
+```nix: nix profile install nixpkgs#xinput```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xrandr](/man/xrandr)(1), [xset](/man/xset)(1), [xmodmap](/man/xmodmap)(1), [setxkbmap](/man/setxkbmap)(1)

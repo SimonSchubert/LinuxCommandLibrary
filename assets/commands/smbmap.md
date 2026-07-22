@@ -65,6 +65,12 @@ Enumerate SMB share permissions and access
 
 For authorized security assessments only. Requires proper authorization before use.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#smbmap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smbclient](/man/smbclient)(1), [enum4linux](/man/enum4linux)(1)

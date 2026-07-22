@@ -60,6 +60,24 @@ Pack loose objects into pack files
 
 Repacking is useful after many small commits or after importing objects. The `-a -d` combination is common for aggressive repacking that removes redundant packs.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-gc](/man/git-gc)(1)

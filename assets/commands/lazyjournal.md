@@ -61,6 +61,14 @@ Log source availability depends on the host system. Docker and Kubernetes log so
 
 **lazyjournal** was created by **Lifailon** and is written in **Go**. It is inspired by lazydocker and lazygit, and supports Linux, macOS, BSD, and Windows.
 
+# INSTALL
+
+```brew: brew install lazyjournal```
+
+```nix: nix profile install nixpkgs#lazyjournal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [journalctl](/man/journalctl)(1), [lazydocker](/man/lazydocker)(1), [lazygit](/man/lazygit)(1), [tail](/man/tail)(1)

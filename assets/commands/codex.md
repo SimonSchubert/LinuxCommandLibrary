@@ -122,6 +122,12 @@ Requires authentication with a ChatGPT account or OpenAI API key. The **--yolo**
 
 OpenAI originally launched Codex as a code autocompletion API in **August 2021**, which powered GitHub Copilot. The **Codex CLI** terminal agent was released on **April 16, 2025** under the Apache 2.0 license, with version 1.0.0 shipping in **May 2025**. Codex Cloud launched in **June 2025** for ChatGPT Plus users. The GPT-5.2-Codex model was released in **December 2025** with enhanced agentic coding capabilities.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#codex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1), [gemini](/man/gemini)(1), [opencode](/man/opencode)(1), [copilot](/man/copilot)(1)

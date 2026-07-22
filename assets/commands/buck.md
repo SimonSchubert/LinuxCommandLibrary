@@ -116,6 +116,12 @@ Requires Java runtime (Buck1) or standalone binary (Buck2). Build files must be 
 
 **Buck** was developed at **Facebook** starting around **2013** to handle the company's large codebase. It was open-sourced and used by companies like Uber and Airbnb. **Buck2** was announced in **2022** as a complete rewrite in Rust, offering significant performance improvements. Buck2 was open-sourced in **April 2023** and is now the recommended version.
 
+# INSTALL
+
+```aur: yay -S buck```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bazel](/man/bazel)(1), [make](/man/make)(1), [ninja](/man/ninja)(1), [gradle](/man/gradle)(1)

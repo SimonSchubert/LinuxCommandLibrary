@@ -116,6 +116,24 @@ Requires dictionary files to be installed. Quality varies by dictionary. Some di
 
 **sdcv** is the console version of **StarDict**, an open-source dictionary project started in **2003** by **Hu Zheng**. StarDict became popular for its cross-platform GUI, and sdcv extended it to command-line users. The current maintained version is by **Evgeniy Dushistov** on GitHub.
 
+# INSTALL
+
+```apt: sudo apt install sdcv```
+
+```dnf: sudo dnf install sdcv```
+
+```pacman: sudo pacman -S sdcv```
+
+```apk: sudo apk add sdcv```
+
+```zypper: sudo zypper install sdcv```
+
+```brew: brew install sdcv```
+
+```nix: nix profile install nixpkgs#sdcv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dict](/man/dict)(1), [dictd](/man/dictd)(8), [espeak](/man/espeak)(1)

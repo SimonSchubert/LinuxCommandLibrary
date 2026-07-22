@@ -64,6 +64,12 @@ Requires valid domain credentials in some form (password, NTLM hash, or AES key)
 
 Part of the **Impacket** library by SecureAuth, implementing the Kerberos protocol for penetration testing. TGT retrieval is a fundamental operation in Kerberos-based attacks and authentication workflows.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [impacket-getst](/man/impacket-getst)(1), [kinit](/man/kinit)(1), [impacket-secretsdump](/man/impacket-secretsdump)(1)

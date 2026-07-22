@@ -108,6 +108,16 @@ scp uses an older protocol (SCP/RCP) that has security limitations. The OpenSSH 
 
 scp originated as part of the **SSH** protocol suite developed by **Tatu Ylönen** in **1995** at Helsinki University of Technology. It was designed as a secure replacement for the insecure **rcp** (remote copy) command. The OpenSSH project, started in **1999**, provides the most widely used implementation. While still functional, scp's underlying protocol has known issues, leading to recommendations to use sftp for new deployments.
 
+# INSTALL
+
+```apt: sudo apt install openssh-client```
+
+```pacman: sudo pacman -S dropbear-scp```
+
+```apk: sudo apk add dropbear-scp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sftp](/man/sftp)(1), [rsync](/man/rsync)(1), [ssh](/man/ssh)(1), [ssh-keygen](/man/ssh-keygen)(1)

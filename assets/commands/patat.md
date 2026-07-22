@@ -46,6 +46,16 @@ Requires Pandoc-flavored Markdown. Some features like image display depend on te
 
 **patat** was created by **Jasper Van der Jeugt** (jaspervdj) and is written in **Haskell**.
 
+# INSTALL
+
+```apt: sudo apt install patat```
+
+```dnf: sudo dnf install patat```
+
+```brew: brew install patat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [slides](/man/slides)(1), [presenterm](/man/presenterm)(1), [mdp](/man/mdp)(1)

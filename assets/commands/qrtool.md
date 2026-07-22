@@ -87,6 +87,18 @@ Command-line utility for encoding and decoding QR codes
 
 **qrtool** was created by **sorairolake** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S qrtool```
+
+```zypper: sudo zypper install qrtool```
+
+```brew: brew install qrtool```
+
+```nix: nix profile install nixpkgs#qrtool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qrc](/man/qrc)(1), [qrencode](/man/qrencode)(1), [zbarimg](/man/zbarimg)(1)

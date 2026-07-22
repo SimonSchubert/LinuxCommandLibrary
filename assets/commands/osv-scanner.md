@@ -88,6 +88,20 @@ Requires network access to query the OSV.dev database. Vulnerability coverage de
 
 osv-scanner was released by **Google** in **December 2022** as a frontend for the OSV.dev vulnerability database. It was designed to provide a free, open-source alternative for dependency scanning. The **fix** subcommand for guided remediation was added in 2024.
 
+# INSTALL
+
+```pacman: sudo pacman -S osv-scanner```
+
+```apk: sudo apk add osv-scanner```
+
+```zypper: sudo zypper install osv-scanner```
+
+```brew: brew install osv-scanner```
+
+```nix: nix profile install nixpkgs#osv-scanner```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm-audit](/man/npm-audit)(1), [trivy](/man/trivy)(1), [grype](/man/grype)(1), [snyk](/man/snyk)(1)

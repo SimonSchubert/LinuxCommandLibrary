@@ -42,6 +42,22 @@ Manage Rust toolchain components
 
 **rustup component** manages Rust toolchain components. Components include rust-src, rustfmt, clippy, and others. Add components for additional development tools.
 
+# INSTALL
+
+```apt: sudo apt install rustup```
+
+```dnf: sudo dnf install rustup```
+
+```pacman: sudo pacman -S rustup```
+
+```zypper: sudo zypper install rustup```
+
+```brew: brew install rustup```
+
+```nix: nix profile install nixpkgs#rustup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rustup](/man/rustup)(1), [rustup-toolchain](/man/rustup-toolchain)(1)

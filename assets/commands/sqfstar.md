@@ -99,6 +99,18 @@ Input must be tar format; compressed tars need external decompression. Squashfs 
 
 **sqfstar** is part of **squashfs-tools**, created by **Phillip Lougher**. The sqfstar utility was added to provide direct tar-to-squashfs conversion without intermediate files. Squashfs is widely used in Linux distributions for live systems, snap packages, and container images.
 
+# INSTALL
+
+```apt: sudo apt install squashfs-tools```
+
+```dnf: sudo dnf install squashfs-tools```
+
+```pacman: sudo pacman -S squashfs-tools```
+
+```apk: sudo apk add squashfs-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mksquashfs](/man/mksquashfs)(1), [unsquashfs](/man/unsquashfs)(1), [sqfscat](/man/sqfscat)(1), [tar](/man/tar)(1)

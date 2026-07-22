@@ -30,6 +30,24 @@ Convert PNM to CMYK TIFF for printing
 
 The **-ucr** (Under Color Removal) and **-gcr** (Gray Component Replacement) options control how the black channel is generated from the CMY components, affecting ink usage and print quality. Part of the Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamtotiff](/man/pamtotiff)(1), [pnmtotiff](/man/pnmtotiff)(1)

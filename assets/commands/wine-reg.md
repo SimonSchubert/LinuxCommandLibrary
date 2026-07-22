@@ -66,6 +66,20 @@ The tool operates on the registry of the prefix named by the **WINEPREFIX** envi
 
 Backslashes in key paths may need quoting or escaping depending on your shell. Editing the registry of the wrong prefix is a common mistake; set **WINEPREFIX** explicitly when you maintain more than one. As with the native Windows tool, careless changes can break applications, so back up keys with **export** before modifying them.
 
+# INSTALL
+
+```dnf: sudo dnf install wine```
+
+```pacman: sudo pacman -S wine```
+
+```apk: sudo apk add wine```
+
+```zypper: sudo zypper install wine```
+
+```nix: nix profile install nixpkgs#wine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wine](/man/wine)(1), [reg](/man/reg)(1), [wine-reg-add](/man/wine-reg-add)(1), [wine-reg-delete](/man/wine-reg-delete)(1), [wine-reg-query](/man/wine-reg-query)(1), [wine-reg-copy](/man/wine-reg-copy)(1)

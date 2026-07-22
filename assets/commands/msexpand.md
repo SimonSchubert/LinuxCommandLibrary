@@ -57,6 +57,14 @@ Handles only the legacy SZDD/KWAJ single-file compression format. It does not un
 
 Part of the **mscompress** package, developed as a free re-implementation of the Microsoft COMPRESS/EXPAND file format so that legacy Windows installation files can be unpacked on Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install mscompress```
+
+```nix: nix profile install nixpkgs#mscompress```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cabextract](/man/cabextract)(1), [unzip](/man/unzip)(1), [7z](/man/7z)(1)

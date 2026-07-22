@@ -103,6 +103,18 @@ cloudflared also provides Cloudflare Access integration for authenticating users
 
 Tunnel credentials are per-tunnel. Quick tunnels are temporary. Free tier available. Previously called Argo Tunnel.
 
+# INSTALL
+
+```pacman: sudo pacman -S cloudflared```
+
+```zypper: sudo zypper install cloudflared```
+
+```brew: brew install cloudflared```
+
+```nix: nix profile install nixpkgs#cloudflared```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ngrok](/man/ngrok)(1), [ssh](/man/ssh)(1)

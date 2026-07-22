@@ -84,6 +84,16 @@ Quality depends on terminal capabilities and font. True color terminal support g
 
 **tiv** is the C++ TerminalImageViewer by Stefan Haustein, a lightweight way to preview images without leaving the terminal. It renders with RGB ANSI codes and Unicode block characters and is popular among developers who work primarily in terminals. Several unrelated tools also ship a `tiv` binary, so behavior can differ between installations.
 
+# INSTALL
+
+```apt: sudo apt install tiv```
+
+```brew: brew install tiv```
+
+```nix: nix profile install nixpkgs#tiv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chafa](/man/chafa)(1), [viu](/man/viu)(1), [timg](/man/timg)(1), [catimg](/man/catimg)(1), [img2txt](/man/img2txt)(1), [jp2a](/man/jp2a)(1)

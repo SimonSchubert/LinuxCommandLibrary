@@ -47,6 +47,18 @@ The task is essential for debugging dependency issues and understanding why spec
 
 The **--dependency** flag is required. Without **--configuration**, the task defaults to compileClasspath in Java projects. The dependency value uses partial matching, which may return unexpected results for common names.
 
+# INSTALL
+
+```pacman: sudo pacman -S gradle```
+
+```apk: sudo apk add gradle```
+
+```brew: brew install gradle```
+
+```nix: nix profile install nixpkgs#gradle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [gradle-dependencies](/man/gradle-dependencies)(1)

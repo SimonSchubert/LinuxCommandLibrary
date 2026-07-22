@@ -81,6 +81,11 @@ source ~/.bashrc
 
 Requires Ruby runtime. Limited to predefined command patterns. Not suitable for complex or unusual commands.
 
+# INSTALL
+
+```brew: brew install betty```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [man](/man/man)(1), [tldr](/man/tldr)(1), [cheat](/man/cheat)(1)

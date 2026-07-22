@@ -97,6 +97,16 @@ Programs on iPlayer are typically available for 30 days after broadcast, though 
 
 Only works with BBC content and typically requires a UK IP address. Programs expire after 30 days on iPlayer (some content has different availability windows). Requires ffmpeg for downloading and converting streams.
 
+# INSTALL
+
+```dnf: sudo dnf install get_iplayer```
+
+```brew: brew install get_iplayer```
+
+```nix: nix profile install nixpkgs#get_iplayer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [youtube-dl](/man/youtube-dl)(1), [yt-dlp](/man/yt-dlp)(1), [ffmpeg](/man/ffmpeg)(1)

@@ -55,6 +55,22 @@ This command only works on the Linux console (virtual terminals), not in termina
 
 **showconsolefont** is part of the **kbd** project, a collection of tools for managing Linux keyboard and console fonts. The kbd project provides utilities that have been essential for Linux console configuration since the early days of Linux. These tools evolved from earlier console utilities and continue to be maintained for use on virtual terminals.
 
+# INSTALL
+
+```apt: sudo apt install kbd```
+
+```dnf: sudo dnf install kbd```
+
+```pacman: sudo pacman -S kbd```
+
+```apk: sudo apk add kbd```
+
+```zypper: sudo zypper install kbd```
+
+```nix: nix profile install nixpkgs#kbd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [setfont](/man/setfont)(8), [consolechars](/man/consolechars)(8), [loadkeys](/man/loadkeys)(1), [dumpkeys](/man/dumpkeys)(1)

@@ -93,6 +93,21 @@ Different awk implementations (gawk, mawk, nawk) have varying feature sets. Regu
 
 **awk** was created by **Alfred Aho**, **Peter Weinberger**, and **Brian Kernighan** at Bell Labs in **1977**, with the name derived from their initials. It was redesigned and expanded in **1985** as "new awk" (nawk). **GNU awk** (gawk) added many extensions including networking and internationalization. Awk is a standard POSIX utility available on virtually all Unix-like systems.
 
+# INSTALL
+
+```dnf: sudo dnf install gawk```
+
+```pacman: sudo pacman -S gawk```
+
+```apk: sudo apk add gawk```
+
+```zypper: sudo zypper install gawk```
+
+```brew: brew install gawk```
+
+```nix: nix profile install nixpkgs#gawk```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [sed](/man/sed)(1), [grep](/man/grep)(1), [cut](/man/cut)(1), [perl](/man/perl)(1), [gawk](/man/gawk)(1)

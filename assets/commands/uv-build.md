@@ -76,6 +76,12 @@ By default, uv build builds the project in the current directory and places arti
 
 Build isolation is enabled by default, installing build dependencies in an isolated environment. Use **--no-build-isolation** to build using the existing environment instead.
 
+# INSTALL
+
+```apk: sudo apk add py3-uv-build```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uv](/man/uv)(1), [uv-publish](/man/uv-publish)(1), [pip](/man/pip)(1), [build](/man/build)(1)

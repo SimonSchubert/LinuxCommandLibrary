@@ -20,6 +20,24 @@ The command takes no arguments or options. It always archives the current HEAD a
 
 As of git-extras 6.4, the assumed default branch name changed from master to main.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-archive](/man/git-archive)(1), [git-extras](/man/git-extras)(1)

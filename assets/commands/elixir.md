@@ -86,6 +86,22 @@ Requires Erlang/OTP installed. Startup time includes BEAM VM boot. Scripts have 
 
 Elixir was created by **José Valim** and released in **2011**, running on the Erlang BEAM VM. It brought modern syntax and tooling to the Erlang ecosystem while maintaining compatibility.
 
+# INSTALL
+
+```apt: sudo apt install elixir```
+
+```dnf: sudo dnf install elixir```
+
+```pacman: sudo pacman -S elixir```
+
+```apk: sudo apk add elixir```
+
+```zypper: sudo zypper install elixir```
+
+```brew: brew install elixir```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iex](/man/iex)(1), [mix](/man/mix)(1), [erl](/man/erl)(1)

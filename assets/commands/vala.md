@@ -52,6 +52,24 @@ GNOME ecosystem. Generates C. Requires GLib.
 
 **Vala** was created by **Jürg Billeter** for GNOME development, compiling to C with GObject support.
 
+# INSTALL
+
+```apt: sudo apt install valac-bin```
+
+```dnf: sudo dnf install vala```
+
+```pacman: sudo pacman -S vala```
+
+```apk: sudo apk add vala```
+
+```zypper: sudo zypper install vala```
+
+```brew: brew install vala```
+
+```nix: nix profile install nixpkgs#vala```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [valac](/man/valac)(1), [gcc](/man/gcc)(1), [pkg-config](/man/pkg-config)(1), [meson](/man/meson)(1)

@@ -134,6 +134,16 @@ Key management requires understanding of web of trust. Private keys must be prot
 
 GnuPG was created by **Werner Koch** in **1997** as a free replacement for PGP. GPG 2.0 was released in **2006** with a modular architecture. It's a fundamental tool for secure email and software signing.
 
+# INSTALL
+
+```apk: sudo apk add gpg```
+
+```zypper: sudo zypper install gpg2```
+
+```brew: brew install gpg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [gpgconf](/man/gpgconf)(1)

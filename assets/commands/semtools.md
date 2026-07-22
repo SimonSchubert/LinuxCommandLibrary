@@ -56,6 +56,12 @@ Install via **npm i -g @llamaindex/semtools** or **cargo install semtools**. Des
 
 **parse** needs a LlamaIndex Cloud API key by default. **ask** needs an LLM provider key. **search**/**workspace** are local but use embedding models (download/runtime cost). Do not send confidential documents to third-party parse/LLM APIs without review.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#semtools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rg](/man/rg)(1), [pdftotext](/man/pdftotext)(1), [jq](/man/jq)(1)

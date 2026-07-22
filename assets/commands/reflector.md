@@ -76,6 +76,12 @@ Arch Linux specific. Speed tests take time. Network conditions vary. Consider ru
 
 **reflector** was created for Arch Linux to automate mirror selection. It replaces manual editing of the mirrorlist with intelligent, automated selection based on speed and sync status.
 
+# INSTALL
+
+```pacman: sudo pacman -S reflector```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [rankmirrors](/man/rankmirrors)(1), [pacman-mirrors](/man/pacman-mirrors)(1)

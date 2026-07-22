@@ -56,6 +56,22 @@ A plugin (or symlink) must exist at **/etc/cifs-utils/idmap-plugin** for the uti
 
 Support for upcalls to cifs.idmap was introduced in **Linux kernel 3.0**. The program was written by Shirish Pargaonkar as part of the **cifs-utils** suite.
 
+# INSTALL
+
+```apt: sudo apt install cifs-utils```
+
+```dnf: sudo dnf install cifs-utils```
+
+```pacman: sudo pacman -S cifs-utils```
+
+```apk: sudo apk add cifs-utils```
+
+```zypper: sudo zypper install cifs-utils```
+
+```nix: nix profile install nixpkgs#cifs-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount.cifs](/man/mount.cifs)(8), [cifscreds](/man/cifscreds)(1)

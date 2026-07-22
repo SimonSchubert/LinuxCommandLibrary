@@ -69,6 +69,18 @@ The tool looks up the correct context in **/etc/selinux/*/contexts/files/** and 
 
 Only available on SELinux-enabled systems. Requires appropriate permissions to change file contexts. Large directory trees can take significant time; use **-T** for parallel processing.
 
+# INSTALL
+
+```apt: sudo apt install policycoreutils```
+
+```dnf: sudo dnf install policycoreutils```
+
+```zypper: sudo zypper install policycoreutils```
+
+```nix: nix profile install nixpkgs#policycoreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [semanage-fcontext](/man/semanage-fcontext)(8), [chcon](/man/chcon)(1), [matchpathcon](/man/matchpathcon)(8), [setfiles](/man/setfiles)(8), [fixfiles](/man/fixfiles)(8), [getenforce](/man/getenforce)(8)

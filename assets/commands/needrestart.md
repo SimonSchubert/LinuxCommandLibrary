@@ -86,6 +86,12 @@ Restarting services may cause brief outages. Kernel and microcode updates requir
 
 **needrestart** was developed by **Thomas Liske** for Debian-based systems to help administrators identify services needing restart after package updates. It integrates with apt to run automatically after upgrades.
 
+# INSTALL
+
+```dnf: sudo dnf install needrestart```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [apt](/man/apt)(8), [checkrestart](/man/checkrestart)(1)

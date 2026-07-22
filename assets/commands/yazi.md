@@ -123,6 +123,20 @@ Terminal graphics require compatible terminal. Some features need external tools
 
 **yazi** was created by **sxyazi** around **2023**. The name means "duck" in Chinese. Written in Rust with async architecture, it emerged as a faster alternative to ranger and lf. The project gained rapid adoption for its performance and modern features.
 
+# INSTALL
+
+```pacman: sudo pacman -S yazi```
+
+```apk: sudo apk add yazi```
+
+```zypper: sudo zypper install yazi```
+
+```brew: brew install yazi```
+
+```nix: nix profile install nixpkgs#yazi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ranger](/man/ranger)(1), [lf](/man/lf)(1), [nnn](/man/nnn)(1), [vifm](/man/vifm)(1), [ya](/man/ya)(1)

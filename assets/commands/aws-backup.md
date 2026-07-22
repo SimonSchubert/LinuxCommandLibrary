@@ -133,6 +133,17 @@ IAM roles with appropriate permissions are required for backup and restore opera
 
 **AWS Backup** was announced at **AWS re:Invent 2018** and launched in **January 2019** as a centralized backup service. Over time, it expanded support to include more AWS services and added features like cross-account backup, audit frameworks, and legal hold capabilities.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-rds](/man/aws-rds)(1), [aws-dynamodb](/man/aws-dynamodb)(1), [aws-efs](/man/aws-efs)(1), [aws](/man/aws)(1)

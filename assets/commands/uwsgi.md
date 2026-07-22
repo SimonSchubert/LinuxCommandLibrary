@@ -86,6 +86,22 @@ uWSGI has been in maintenance mode since **October 2022**. Consider alternatives
 
 uWSGI was developed as a full-stack application server supporting multiple languages and protocols. Despite its name coming from WSGI, it expanded to support Ruby (Rack), Perl (PSGI), and other languages. The project became widely adopted for Python deployments.
 
+# INSTALL
+
+```dnf: sudo dnf install uwsgi```
+
+```pacman: sudo pacman -S uwsgi```
+
+```apk: sudo apk add uwsgi```
+
+```zypper: sudo zypper install uwsgi```
+
+```brew: brew install uwsgi```
+
+```nix: nix profile install nixpkgs#uwsgi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gunicorn](/man/gunicorn)(1), [nginx](/man/nginx)(8), [python](/man/python)(1), [pip](/man/pip)(1)

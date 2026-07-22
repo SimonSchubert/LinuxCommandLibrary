@@ -133,6 +133,22 @@ Learning curve for templates. Git repo public by default (use private for secret
 
 **chezmoi** was created by Tom Payne in **2018** to provide a modern, flexible dotfile manager with templating and cross-platform support.
 
+# INSTALL
+
+```dnf: sudo dnf install chezmoi```
+
+```pacman: sudo pacman -S chezmoi```
+
+```apk: sudo apk add chezmoi```
+
+```zypper: sudo zypper install chezmoi```
+
+```brew: brew install chezmoi```
+
+```nix: nix profile install nixpkgs#chezmoi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dotfiles](/man/dotfiles)(1), [git](/man/git)(1), [stow](/man/stow)(1)

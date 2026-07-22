@@ -38,6 +38,24 @@ Part of Netpbm. Larger sizes slower. Artistic effect.
 
 pamoil is part of **Netpbm** for applying oil painting effects.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmrelief](/man/ppmrelief)(1), [pgmedge](/man/pgmedge)(1), [netpbm](/man/netpbm)(1)

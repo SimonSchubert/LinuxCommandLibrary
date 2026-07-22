@@ -81,6 +81,14 @@ HTTPS requires certificate installation. Large traffic volumes consume disk. Som
 
 **Proxify** was created by **ProjectDiscovery** for security testing. It provides simple traffic interception for web application analysis.
 
+# INSTALL
+
+```brew: brew install proxify```
+
+```nix: nix profile install nixpkgs#proxify```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mitmproxy](/man/mitmproxy)(1), [burpsuite](/man/burpsuite)(1), [charles](/man/charles)(1)

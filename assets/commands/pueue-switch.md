@@ -16,6 +16,20 @@ Swap queue positions of two pueue tasks
 
 **pueue switch** swaps the queue positions of two tasks. Both tasks must be in queued or stashed state (not running or completed). Useful for reordering task execution priority without removing and re-adding tasks.
 
+# INSTALL
+
+```pacman: sudo pacman -S pueue```
+
+```apk: sudo apk add pueue```
+
+```zypper: sudo zypper install pueue```
+
+```brew: brew install pueue```
+
+```nix: nix profile install nixpkgs#pueue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pueue](/man/pueue)(1), [pueue-status](/man/pueue-status)(1), [pueue-enqueue](/man/pueue-enqueue)(1), [pueue-stash](/man/pueue-stash)(1)

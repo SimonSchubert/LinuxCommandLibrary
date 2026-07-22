@@ -34,6 +34,14 @@ Note: This program does not actually set the system timezone. It only helps iden
 
 Does not modify system configuration. Output must be used with other tools to set timezone. Interactive mode requires terminal input.
 
+# INSTALL
+
+```apt: sudo apt install libc-bin```
+
+```zypper: sudo zypper install tzselect```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [timedatectl](/man/timedatectl)(1), [date](/man/date)(1)

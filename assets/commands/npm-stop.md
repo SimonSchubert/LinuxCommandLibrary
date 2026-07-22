@@ -35,6 +35,16 @@ runs the stop script defined in package
 **--ignore-scripts**
 > Skip pre/post lifecycle scripts.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-start](/man/npm-start)(1), [npm-restart](/man/npm-restart)(1)

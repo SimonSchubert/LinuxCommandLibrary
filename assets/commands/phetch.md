@@ -97,6 +97,12 @@ Quick terminal client for browsing the Gopher protocol
 
 **phetch** was created by **xvxx** and is written in **Rust**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#phetch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lynx](/man/lynx)(1), [curl](/man/curl)(1), [w3m](/man/w3m)(1)

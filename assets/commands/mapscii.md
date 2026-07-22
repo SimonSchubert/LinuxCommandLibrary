@@ -30,6 +30,14 @@ Braille rendering requires a Unicode-capable terminal and font. Detail level dep
 
 **mapscii** was created by **rastapasta** and is written in **JavaScript** (Node.js). It can be accessed remotely via `telnet mapscii.me` without installation.
 
+# INSTALL
+
+```brew: brew install mapscii```
+
+```nix: nix profile install nixpkgs#mapscii```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [telnet](/man/telnet)(1)

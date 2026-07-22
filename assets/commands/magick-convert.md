@@ -96,6 +96,18 @@ In ImageMagick 7, the standalone `convert` command is deprecated in favor of `ma
 
 **ImageMagick** was created by **John Cristy** in **1987** at DuPont. The convert command has been the primary image conversion tool throughout its history.
 
+# INSTALL
+
+```pacman: sudo pacman -S imagemagick```
+
+```apk: sudo apk add imagemagick```
+
+```brew: brew install imagemagick```
+
+```nix: nix profile install nixpkgs#imagemagick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [magick](/man/magick)(1), [magick-mogrify](/man/magick-mogrify)(1)

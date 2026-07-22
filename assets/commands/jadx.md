@@ -69,6 +69,16 @@ Decompilation not perfect. Obfuscated code harder. Legal considerations apply.
 
 jadx was created as an improvement over older Android decompilers, focusing on producing cleaner, more readable Java output.
 
+# INSTALL
+
+```pacman: sudo pacman -S jadx```
+
+```brew: brew install jadx```
+
+```nix: nix profile install nixpkgs#jadx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apktool](/man/apktool)(1), [dex2jar](/man/dex2jar)(1)

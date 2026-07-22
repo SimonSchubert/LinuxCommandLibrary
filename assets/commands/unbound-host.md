@@ -107,6 +107,24 @@ Direct root queries may be slow or blocked by firewalls. Using **-r** with non-D
 
 **unbound-host** is part of the Unbound project by NLnet Labs, providing command-line access to Unbound's validating resolver capabilities. It was designed as a DNSSEC-aware alternative to traditional host and dig commands.
 
+# INSTALL
+
+```apt: sudo apt install unbound-host```
+
+```dnf: sudo dnf install unbound```
+
+```pacman: sudo pacman -S unbound```
+
+```apk: sudo apk add unbound```
+
+```zypper: sudo zypper install unbound```
+
+```brew: brew install unbound```
+
+```nix: nix profile install nixpkgs#unbound```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unbound](/man/unbound)(8), [unbound-control](/man/unbound-control)(8), [dig](/man/dig)(1), [host](/man/host)(1), [drill](/man/drill)(1), [nslookup](/man/nslookup)(1)

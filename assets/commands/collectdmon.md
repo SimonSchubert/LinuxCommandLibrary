@@ -57,6 +57,22 @@ Requires collectd to be installed. Configuration issues in collectd will cause r
 
 **collectdmon** is part of the **collectd** project, a system statistics collection daemon created by **Florian Forster** in **2005**. The monitoring wrapper ensures reliability for production deployments where continuous metric collection is critical.
 
+# INSTALL
+
+```apt: sudo apt install collectd-core```
+
+```dnf: sudo dnf install collectd```
+
+```apk: sudo apk add collectd```
+
+```zypper: sudo zypper install collectd```
+
+```brew: brew install collectd```
+
+```nix: nix profile install nixpkgs#collectd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [collectd](/man/collectd)(1)

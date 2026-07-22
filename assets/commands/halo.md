@@ -92,6 +92,12 @@ The CLI sends a user prompt plus the trace file to a root agent that can spawn s
 
 HALO was developed by **Context Labs** (inference.net) in 2026 as a methodology and engine for improving agent harnesses from production traces. The **halo** CLI ships with the open-source **halo-engine** package on PyPI.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#halo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1), [codex](/man/codex)(1), [jq](/man/jq)(1)

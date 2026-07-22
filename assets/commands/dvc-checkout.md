@@ -57,6 +57,14 @@ Requires data in local cache or remote. Large files may take time. Force overwri
 
 dvc checkout is part of **DVC**, providing Git-like checkout semantics for versioned data files in machine learning projects.
 
+# INSTALL
+
+```brew: brew install dvc```
+
+```nix: nix profile install nixpkgs#dvc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dvc](/man/dvc)(1), [git-checkout](/man/git-checkout)(1)

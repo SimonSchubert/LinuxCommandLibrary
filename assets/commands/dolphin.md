@@ -65,6 +65,20 @@ Part of the KDE Plasma desktop environment but can be used in other desktop envi
 
 KDE application, requires Qt/KDE libraries. Full functionality requires KDE desktop environment. For GNOME, see Nautilus; for XFCE, see Thunar. The --daemon flag keeps Dolphin running in the background which uses memory even when no windows are open.
 
+# INSTALL
+
+```apt: sudo apt install dolphin```
+
+```dnf: sudo dnf install dolphin```
+
+```pacman: sudo pacman -S dolphin```
+
+```apk: sudo apk add dolphin```
+
+```zypper: sudo zypper install dolphin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nautilus](/man/nautilus)(1), [thunar](/man/thunar)(1), [ranger](/man/ranger)(1), [nemo](/man/nemo)(1), [mc](/man/mc)(1)

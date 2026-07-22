@@ -99,6 +99,24 @@ Never run fsck on a mounted filesystem (except in read-only mode). Automatic rep
 
 **fsck** is part of **util-linux**, providing a unified interface for filesystem checking across different filesystem types.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [e2fsck](/man/e2fsck)(8), [xfs_repair](/man/xfs_repair)(8), [mount](/man/mount)(8), [fstab](/man/fstab)(5)

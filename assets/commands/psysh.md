@@ -101,6 +101,14 @@ Requires PHP. Installed via Composer or as a standalone PHAR.
 
 PsySH was created by **Justin Hileman** (bobthecow) as a **modern PHP REPL** with advanced features including inline documentation and runtime debugging.
 
+# INSTALL
+
+```brew: brew install psysh```
+
+```nix: nix profile install nixpkgs#psysh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [php](/man/php)(1), [composer](/man/composer)(1), [artisan](/man/artisan)(1)

@@ -52,6 +52,22 @@ Part of Nix toolset. Legacy interface. Use nix build for flakes.
 
 nix-build is a core **Nix** command for building derivations from expressions.
 
+# INSTALL
+
+```apt: sudo apt install nix-bin```
+
+```dnf: sudo dnf install nix```
+
+```pacman: sudo pacman -S nix```
+
+```apk: sudo apk add nix```
+
+```zypper: sudo zypper install nix```
+
+```nix: nix profile install nixpkgs#nix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix-build](/man/nix-build)(1), [nix](/man/nix)(1), [nix-shell](/man/nix-shell)(1)

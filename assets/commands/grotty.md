@@ -79,6 +79,24 @@ Part of groff package. Output quality depends on terminal capabilities. Some for
 
 grotty was developed as part of **GNU groff** to enable terminal viewing of formatted documents.
 
+# INSTALL
+
+```apt: sudo apt install groff-base```
+
+```dnf: sudo dnf install groff-base```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [nroff](/man/nroff)(1), [man](/man/man)(1)

@@ -107,6 +107,22 @@ Passwords containing commas fail to parse on command line; use credentials files
 
 The Linux CIFS filesystem was developed as a replacement for the older smbfs. It provides native kernel support for Microsoft's SMB/CIFS protocol, enabling seamless integration with Windows networks and Samba servers.
 
+# INSTALL
+
+```apt: sudo apt install cifs-utils```
+
+```dnf: sudo dnf install cifs-utils```
+
+```pacman: sudo pacman -S cifs-utils```
+
+```apk: sudo apk add cifs-utils```
+
+```zypper: sudo zypper install cifs-utils```
+
+```nix: nix profile install nixpkgs#cifs-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(8), [smbclient](/man/smbclient)(1), [umount](/man/umount)(8), [fstab](/man/fstab)(5)

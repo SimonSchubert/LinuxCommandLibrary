@@ -43,6 +43,12 @@ Mostly relevant for legacy SysV init systems. On systemd-based systems, the conc
 
 **runlevel** originated with **System V init**. On systemd systems it reads from utmp for backward compatibility. The equivalent systemd command is **systemctl get-default**.
 
+# INSTALL
+
+```apt: sudo apt install runit-init```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [init](/man/init)(8), [systemctl](/man/systemctl)(1)

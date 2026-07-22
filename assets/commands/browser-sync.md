@@ -95,6 +95,12 @@ The tool works by injecting an asynchronous script tag after the body tag during
 
 Requires the body tag to be present in HTML files. HTTPS is automatically inferred when proxying HTTPS targets. CSS and image changes are injected without full reload; other changes trigger full reload.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#browser-sync```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [live-server](/man/live-server)(1), [webpack](/man/webpack)(1), [gulp](/man/gulp)(1)

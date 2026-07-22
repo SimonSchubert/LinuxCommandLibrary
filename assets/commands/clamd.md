@@ -69,6 +69,16 @@ Requires regular virus database updates via **freshclam**. Memory usage depends 
 
 **ClamAV** was created by **Tomasz Kojm** in **2001** as an open-source antivirus engine, originally designed for email gateway scanning on Unix systems. It was acquired by **Sourcefire** in **2007** and later became part of **Cisco** when Sourcefire was acquired in **2013**. ClamAV remains one of the most widely deployed open-source antivirus solutions, particularly in mail and web gateway environments.
 
+# INSTALL
+
+```apt: sudo apt install clamav-daemon```
+
+```dnf: sudo dnf install clamd```
+
+```apk: sudo apk add clamav-daemon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clamscan](/man/clamscan)(1), [clamdscan](/man/clamdscan)(1), [freshclam](/man/freshclam)(1)

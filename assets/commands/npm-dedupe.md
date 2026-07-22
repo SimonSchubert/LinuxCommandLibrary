@@ -72,6 +72,16 @@ May not reduce size if version ranges differ. Run after npm install. Restructure
 
 npm dedupe was introduced to help manage the duplicate dependency problem common in npm's nested node_modules structure.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-prune](/man/npm-prune)(1), [npm-install](/man/npm-install)(1)

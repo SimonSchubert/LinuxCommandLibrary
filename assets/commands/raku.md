@@ -121,6 +121,22 @@ Startup time can be noticeably slower than Perl 5 or Python due to compilation o
 
 Raku began as **Perl 6**, announced by **Larry Wall** in **2000** as a complete redesign of the Perl language. After nearly two decades of development, the first stable release (**Rakudo Star 2015.12**) shipped in **December 2015**. In **October 2019**, the language was officially renamed from Perl 6 to **Raku** to establish its own identity separate from Perl 5. The primary implementation is **Rakudo**, running on the **MoarVM** virtual machine.
 
+# INSTALL
+
+```apt: sudo apt install rakudo```
+
+```dnf: sudo dnf install rakudo```
+
+```apk: sudo apk add rakudo```
+
+```zypper: sudo zypper install rakudo```
+
+```brew: brew install rakudo```
+
+```nix: nix profile install nixpkgs#rakudo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [perl](/man/perl)(1), [python](/man/python)(1), [ruby](/man/ruby)(1)

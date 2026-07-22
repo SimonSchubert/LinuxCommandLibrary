@@ -86,6 +86,14 @@ Requires proper tmt file structure. Tests run in containers by default. Complex 
 
 **tmt** was developed by **Red Hat** for managing tests across Fedora and RHEL, providing a unified test metadata format and execution framework.
 
+# INSTALL
+
+```dnf: sudo dnf install tmt```
+
+```brew: brew install tmt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [beakerlib](/man/beakerlib)(1), [podman](/man/podman)(1)

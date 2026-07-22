@@ -34,6 +34,22 @@ Stopped containers retain their state and can be restarted.
 
 Stopping a container terminates any running processes inside. Exported applications will stop working until the container is restarted.
 
+# INSTALL
+
+```dnf: sudo dnf install distrobox```
+
+```pacman: sudo pacman -S distrobox```
+
+```apk: sudo apk add distrobox```
+
+```zypper: sudo zypper install distrobox```
+
+```brew: brew install distrobox```
+
+```nix: nix profile install nixpkgs#distrobox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [distrobox](/man/distrobox)(1), [distrobox-enter](/man/distrobox-enter)(1), [distrobox-rm](/man/distrobox-rm)(1)

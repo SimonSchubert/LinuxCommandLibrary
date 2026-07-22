@@ -68,6 +68,24 @@ Adds small overhead. Insert between commands.
 
 pv was created for **monitoring data** progress through pipelines.
 
+# INSTALL
+
+```apt: sudo apt install pv```
+
+```dnf: sudo dnf install pv```
+
+```pacman: sudo pacman -S pv```
+
+```apk: sudo apk add pv```
+
+```zypper: sudo zypper install pv```
+
+```brew: brew install pv```
+
+```nix: nix profile install nixpkgs#pv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dd](/man/dd)(1), [rsync](/man/rsync)(1), [progress](/man/progress)(1)

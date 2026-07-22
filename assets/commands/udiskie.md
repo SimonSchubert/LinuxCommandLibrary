@@ -107,6 +107,20 @@ The daemon can show a system tray icon for easy device management and send deskt
 
 Requires udisks2 daemon running. Desktop notifications need a notification daemon. Tray icon requires system tray support. Some encrypted devices need password configuration.
 
+# INSTALL
+
+```dnf: sudo dnf install udiskie```
+
+```pacman: sudo pacman -S udiskie```
+
+```apk: sudo apk add udiskie```
+
+```zypper: sudo zypper install udiskie```
+
+```nix: nix profile install nixpkgs#udiskie```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [udiskie-mount](/man/udiskie-mount)(1), [udiskie-umount](/man/udiskie-umount)(1), [udisksctl](/man/udisksctl)(1)

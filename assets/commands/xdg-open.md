@@ -58,6 +58,20 @@ The file or URL is opened asynchronously; xdg-open returns immediately. The appl
 
 **xdg-open** is part of **xdg-utils**, a set of scripts for desktop integration developed by the freedesktop.org project to provide consistent behavior across different Linux desktop environments.
 
+# INSTALL
+
+```dnf: sudo dnf install xdg-utils```
+
+```pacman: sudo pacman -S xdg-utils```
+
+```apk: sudo apk add xdg-utils```
+
+```zypper: sudo zypper install xdg-utils```
+
+```nix: nix profile install nixpkgs#xdg-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdg-mime](/man/xdg-mime)(1), [xdg-settings](/man/xdg-settings)(1), [gio](/man/gio)(1)

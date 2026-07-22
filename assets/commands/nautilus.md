@@ -86,6 +86,22 @@ Running as root with admin:// requires polkit authentication. Remote filesystem 
 
 **Nautilus** was originally developed by **Eazel** in 1999-2001 and named after the submarine in Jules Verne's "Twenty Thousand Leagues Under the Sea." After Eazel's closure, it became the standard GNOME file manager, now officially called GNOME Files.
 
+# INSTALL
+
+```apt: sudo apt install nautilus```
+
+```dnf: sudo dnf install nautilus```
+
+```pacman: sudo pacman -S nautilus```
+
+```apk: sudo apk add nautilus```
+
+```zypper: sudo zypper install nautilus```
+
+```nix: nix profile install nixpkgs#nautilus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dolphin](/man/dolphin)(1), [thunar](/man/thunar)(1), [caja](/man/caja)(1), [nemo](/man/nemo)(1)

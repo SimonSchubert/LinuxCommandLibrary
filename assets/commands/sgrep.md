@@ -86,6 +86,12 @@ The binary is a self-contained Rust program with rustls TLS and no system librar
 
 **sgrep** was added to the **git-lazy-mount** project by **Mohsen Azimi** as a companion tool for microVM and agent environments where repositories are mounted lazily and full-tree search would be prohibitively slow.
 
+# INSTALL
+
+```apt: sudo apt install sgrep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-lazy-mount](/man/git-lazy-mount)(1), [git](/man/git)(1), [rg](/man/rg)(1), [grep](/man/grep)(1)

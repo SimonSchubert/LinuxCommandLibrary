@@ -89,6 +89,20 @@ Requires ruby-build plugin for install. Shims need rehashing after gem installs.
 
 **rbenv** was created by **Sam Stephenson** in **2011** as a simpler alternative to RVM. It focuses on doing one thing well - version switching - without modifying shells or managing gemsets.
 
+# INSTALL
+
+```dnf: sudo dnf install rbenv```
+
+```pacman: sudo pacman -S rbenv```
+
+```zypper: sudo zypper install rbenv```
+
+```brew: brew install rbenv```
+
+```nix: nix profile install nixpkgs#rbenv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ruby](/man/ruby)(1), [gem](/man/gem)(1), [bundle](/man/bundle)(1), [rvm](/man/rvm)(1), [asdf](/man/asdf)(1)

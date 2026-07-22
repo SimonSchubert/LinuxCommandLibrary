@@ -45,6 +45,16 @@ Operates on a single registry at a time; pass **--registry** or **--scope** to l
 
 npm logout provides **authentication management** for npm registry access.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-login](/man/npm-login)(1), [npm-whoami](/man/npm-whoami)(1)

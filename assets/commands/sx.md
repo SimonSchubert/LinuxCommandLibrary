@@ -59,6 +59,22 @@ The Xorg command line is **hardcoded**: server flags cannot be customized throug
 
 **sx** was written by **Earnest Wieczorek** (Earnestly) as a proof-of-concept response to the comment in **xinit(1)** urging "site administrators" to write nicer wrappers. First published on GitHub around **2015**, it has remained a tiny shell script (around 70 lines) and is packaged in several distributions, notably **Arch Linux**, as a lightweight way to launch an X session without **startx**.
 
+# INSTALL
+
+```apt: sudo apt install lrzsz```
+
+```dnf: sudo dnf install lrzsz```
+
+```pacman: sudo pacman -S lrzsz```
+
+```apk: sudo apk add sx```
+
+```brew: brew install lrzsz```
+
+```nix: nix profile install nixpkgs#lrzsz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xinit](/man/xinit)(1), [startx](/man/startx)(1), [Xorg](/man/Xorg)(1), [xauth](/man/xauth)(1)

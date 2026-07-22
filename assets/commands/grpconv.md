@@ -38,6 +38,14 @@ Requires root access. Run grpck first to verify integrity. Irreversible without 
 
 grpconv was developed as part of the **shadow** password suite to improve group password security.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```apk: sudo apk add shadow-conv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grpunconv](/man/grpunconv)(8), [grpck](/man/grpck)(8), [pwconv](/man/pwconv)(8)

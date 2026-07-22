@@ -102,6 +102,24 @@ Less popular than Git. Different workflow. Extension system for features.
 
 Mercurial was created by **Matt Mackall** in **2005**, shortly after Git, as another solution for Linux kernel development.
 
+# INSTALL
+
+```apt: sudo apt install mercurial```
+
+```dnf: sudo dnf install mercurial```
+
+```pacman: sudo pacman -S mercurial```
+
+```apk: sudo apk add mercurial```
+
+```zypper: sudo zypper install mercurial```
+
+```brew: brew install mercurial```
+
+```nix: nix profile install nixpkgs#mercurial```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [svn](/man/svn)(1), [hg-clone](/man/hg-clone)(1), [hg-commit](/man/hg-commit)(1), [hg-init](/man/hg-init)(1)

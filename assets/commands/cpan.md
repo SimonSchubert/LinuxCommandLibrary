@@ -107,6 +107,24 @@ May require root/sudo for system-wide installation. Some modules require a C com
 
 **CPAN.pm** was created by Andreas König in **1995**, shortly after CPAN itself was established. It became the standard way to install Perl modules, integrated into core Perl distributions. While newer tools like cpanm offer simpler interfaces, CPAN.pm remains the most feature-complete client with extensive configuration options.
 
+# INSTALL
+
+```apt: sudo apt install perl```
+
+```dnf: sudo dnf install perl```
+
+```pacman: sudo pacman -S perl```
+
+```apk: sudo apk add perl-utils```
+
+```zypper: sudo zypper install perl```
+
+```brew: brew install perl```
+
+```nix: nix profile install nixpkgs#perl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cpanm](/man/cpanm)(1), [perl](/man/perl)(1), [perlbrew](/man/perlbrew)(1), [carton](/man/carton)(1)

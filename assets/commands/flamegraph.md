@@ -111,6 +111,20 @@ Requires Perl. Input must be in collapsed stack format (use stackcollapse-*.pl s
 
 Flame graphs were invented by **Brendan Gregg** in **2011** while at Joyent for analyzing performance issues. The visualization technique has become standard for performance profiling across languages and platforms.
 
+# INSTALL
+
+```dnf: sudo dnf install flamegraph```
+
+```pacman: sudo pacman -S cargo-flamegraph```
+
+```apk: sudo apk add cargo-flamegraph```
+
+```brew: brew install cargo-flamegraph```
+
+```nix: nix profile install nixpkgs#cargo-flamegraph```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [perf](/man/perf)(1), [bpftrace](/man/bpftrace)(8), [strace](/man/strace)(1), [gprof](/man/gprof)(1), [valgrind](/man/valgrind)(1)

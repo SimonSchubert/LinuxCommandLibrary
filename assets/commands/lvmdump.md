@@ -53,6 +53,22 @@ This tool is primarily used when reporting LVM issues to developers or support t
 
 The dump may contain sensitive information about storage configuration. Review contents before sharing externally. The **-m** option creates a larger dump that includes volume group metadata. Requires root privileges.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2-extra```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvm](/man/lvm)(8), [pvs](/man/pvs)(8), [vgs](/man/vgs)(8), [lvs](/man/lvs)(8), [dmsetup](/man/dmsetup)(8)

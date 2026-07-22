@@ -57,6 +57,20 @@ The files database must be updated separately from the sync database using **-Fy
 
 **pacman** is the package manager for **Arch Linux** and its derivatives. The files database feature allows searching for files across all available packages.
 
+# INSTALL
+
+```apt: sudo apt install pacman-package-manager```
+
+```dnf: sudo dnf install pacman```
+
+```pacman: sudo pacman -S pacman```
+
+```apk: sudo apk add pacman```
+
+```nix: nix profile install nixpkgs#pacman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pacman-query](/man/pacman-query)(8), [pkgfile](/man/pkgfile)(1)

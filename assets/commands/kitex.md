@@ -81,6 +81,14 @@ Part of CloudWeGo. Go-specific. Thrift or Protobuf IDL required.
 
 kitex is the code generator for **Kitex**, a high-performance RPC framework created by **ByteDance**.
 
+# INSTALL
+
+```brew: brew install kitex```
+
+```nix: nix profile install nixpkgs#kitex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [thrift](/man/thrift)(1), [protoc](/man/protoc)(1), [go](/man/go)(1)

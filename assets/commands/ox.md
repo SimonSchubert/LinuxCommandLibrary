@@ -34,6 +34,14 @@ Not modal like vim -- uses traditional editing keybindings. Plugin ecosystem is 
 
 **ox** was created by **curlpipe** and is written in **Rust**. It can be installed via `cargo install --git https://github.com/curlpipe/ox`.
 
+# INSTALL
+
+```brew: brew install ox```
+
+```nix: nix profile install nixpkgs#ox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nano](/man/nano)(1), [micro](/man/micro)(1), [vim](/man/vim)(1)

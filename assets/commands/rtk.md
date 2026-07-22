@@ -62,6 +62,14 @@ Additional wrappers cover language toolchains and cloud CLIs—run **rtk --help*
 
 Name collision: crates.io may ship an unrelated **rtk** package; if **rtk gain** fails, reinstall from the GitHub install script or **cargo install --git**. Hooks only rewrite shell/Bash tool paths—some IDE-native tools bypass them. Over-aggressive filtering can hide details the model needs; use direct commands when debugging.
 
+# INSTALL
+
+```brew: brew install rtk```
+
+```nix: nix profile install nixpkgs#rtk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [rg](/man/rg)(1), [gemini](/man/gemini)(1)

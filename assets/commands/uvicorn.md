@@ -115,6 +115,16 @@ Workers share nothing - state must use external storage. Reload mode shouldn't b
 
 **uvicorn** was created by **Tom Christie** (creator of Django REST framework and Starlette) around **2017**. It implements the ASGI spec that enables async Python web frameworks. The name references UV (high-energy light) and the suffix -corn common in Python web servers.
 
+# INSTALL
+
+```pacman: sudo pacman -S uvicorn```
+
+```apk: sudo apk add uvicorn```
+
+```brew: brew install uvicorn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gunicorn](/man/gunicorn)(1), [hypercorn](/man/hypercorn)(1), [daphne](/man/daphne)(1)

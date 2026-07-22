@@ -56,6 +56,18 @@ Generated data is random and fictional. Data files determine available names and
 
 Created as a utility for generating random test data with realistic-looking personal information.
 
+# INSTALL
+
+```apt: sudo apt install rig```
+
+```dnf: sudo dnf install rig```
+
+```brew: brew install rig```
+
+```nix: nix profile install nixpkgs#rig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pwgen](/man/pwgen)(1)

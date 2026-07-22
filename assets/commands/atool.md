@@ -136,6 +136,19 @@ Requires the appropriate backend tools to be installed (tar, unzip, unrar, 7z, z
 
 **atool** is written in Perl by **Oskar Liljeblad** and is distributed by the GNU project (nongnu.org/atool). It was created to provide a unified front end for the large number of archive formats found on Unix systems.
 
+# INSTALL
+
+```dnf: sudo dnf install atool```
+
+```pacman: sudo pacman -S atool```
+
+```zypper: sudo zypper install atool```
+
+```brew: brew install atool```
+
+```nix: nix profile install nixpkgs#atool```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [tar](/man/tar)(1), [unzip](/man/unzip)(1), [7z](/man/7z)(1), [unrar](/man/unrar)(1), [unar](/man/unar)(1), [zip](/man/zip)(1), [gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1), [xz](/man/xz)(1), [zstd](/man/zstd)(1)

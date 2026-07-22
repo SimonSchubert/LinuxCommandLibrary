@@ -78,6 +78,15 @@ Set **BARTIB_FILE** to choose the log path (default is under the home directory)
 
 All state lives in a local file—back it up if you depend on the history. Concurrent writers from multiple machines need external sync. Precision is wall-clock based; it is not a sampling profiler.
 
+# INSTALL
+
+```aur: yay -S bartib```
+
+```brew: brew install bartib```
+
+```nix: nix profile install nixpkgs#bartib```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [timew](/man/timew)(1), [watson](/man/watson)(1), [timetrap](/man/timetrap)(1)

@@ -129,6 +129,24 @@ Requires authentication via **gh auth login**. Some features need appropriate re
 
 gh was released by **GitHub** in **2020** as the successor to hub. It's written in Go and designed to be the official CLI companion to GitHub, supporting both github.com and GitHub Enterprise.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [hub](/man/hub)(1), [gh-auth](/man/gh-auth)(1), [gh-pr](/man/gh-pr)(1), [gh-issue](/man/gh-issue)(1), [gh-repo](/man/gh-repo)(1), [gh-run](/man/gh-run)(1), [gh-release](/man/gh-release)(1), [gh-copilot](/man/gh-copilot)(1)

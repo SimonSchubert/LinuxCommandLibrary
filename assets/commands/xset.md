@@ -111,6 +111,20 @@ Settings are temporary and reset when X restarts. For persistent settings, add x
 
 **xset** is part of the core X.Org utilities, providing command-line access to X server preferences that were historically set through X resources or window manager configurations.
 
+# INSTALL
+
+```apt: sudo apt install x11-xserver-utils```
+
+```dnf: sudo dnf install xset```
+
+```apk: sudo apk add xset```
+
+```zypper: sudo zypper install xset```
+
+```nix: nix profile install nixpkgs#xset```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xrandr](/man/xrandr)(1), [setxkbmap](/man/setxkbmap)(1), [xmodmap](/man/xmodmap)(1)

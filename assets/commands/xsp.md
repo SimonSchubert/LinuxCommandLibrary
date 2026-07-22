@@ -69,6 +69,14 @@ Development server. Mono required. Use with mod_mono for production.
 
 **xsp** is part of the **Mono** project, providing a standalone ASP.NET web server for testing and development on Linux.
 
+# INSTALL
+
+```dnf: sudo dnf install xsp```
+
+```zypper: sudo zypper install xsp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mono](/man/mono)(1), [mcs](/man/mcs)(1), [apache2](/man/apache2)(1)

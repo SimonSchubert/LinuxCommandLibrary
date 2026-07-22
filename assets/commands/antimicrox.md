@@ -94,6 +94,19 @@ Wayland support is limited; some features require XWayland. The user must have a
 
 AntiMicroX is a fork of **AntiMicro**, which was itself inspired by **QJoyPad**. The original AntiMicro was created by **Travis Nickles** around **2013**. When development stalled, the AntiMicroX fork was created in **2019** to continue maintenance and add new features. It is now the actively maintained successor, supporting modern Linux distributions and additional controller types.
 
+# INSTALL
+
+```apt: sudo apt install antimicro```
+
+```dnf: sudo dnf install antimicrox```
+
+```pacman: sudo pacman -S antimicrox```
+
+```zypper: sudo zypper install antimicrox```
+
+```nix: nix profile install nixpkgs#antimicrox```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [jstest](/man/jstest)(1), [xdotool](/man/xdotool)(1), [qjoypad](/man/qjoypad)(1), [evtest](/man/evtest)(1)

@@ -99,6 +99,22 @@ On Wayland, requires --dbus flag and desktop environment hotkey configuration. T
 
 **Tilda** was inspired by the drop-down console found in first-person shooter games like Quake. It was created to provide quick terminal access without managing separate windows. The project continues to be maintained with support for modern features like Wayland compatibility.
 
+# INSTALL
+
+```apt: sudo apt install tilda```
+
+```dnf: sudo dnf install tilda```
+
+```pacman: sudo pacman -S tilda```
+
+```apk: sudo apk add tilda```
+
+```zypper: sudo zypper install tilda```
+
+```nix: nix profile install nixpkgs#tilda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [guake](/man/guake)(1), [yakuake](/man/yakuake)(1), [gnome-terminal](/man/gnome-terminal)(1), [xterm](/man/xterm)(1)

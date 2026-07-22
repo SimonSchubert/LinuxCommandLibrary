@@ -102,6 +102,16 @@ Some git features don't map to SVN. History rewriting (rebase/amend) before dcom
 
 git svn enables gradual migration from **Subversion** to Git, allowing teams to use git locally while maintaining SVN compatibility.
 
+# INSTALL
+
+```dnf: sudo dnf install git-svn```
+
+```zypper: sudo zypper install git-svn```
+
+```brew: brew install git-svn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [svn](/man/svn)(1)

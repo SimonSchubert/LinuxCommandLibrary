@@ -83,6 +83,12 @@ Deprecated and unmaintained. Running graphical applications as root can cause pe
 
 gksu was created in the early 2000s for GNOME to provide a graphical password prompt for privileged operations. It was deprecated around **2012** in favor of PolicyKit (pkexec), which provides finer-grained authorization controls.
 
+# INSTALL
+
+```aur: yay -S gksu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pkexec](/man/pkexec)(1), [sudo](/man/sudo)(8), [su](/man/su)(1), [gksudo](/man/gksudo)(1)

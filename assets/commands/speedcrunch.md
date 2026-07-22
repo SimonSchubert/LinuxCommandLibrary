@@ -51,6 +51,18 @@ GUI application. Qt required. Desktop environment needed.
 
 **SpeedCrunch** was created as a fast, high-precision scientific calculator with a focus on keyboard-driven operation.
 
+# INSTALL
+
+```dnf: sudo dnf install speedcrunch```
+
+```pacman: sudo pacman -S speedcrunch```
+
+```zypper: sudo zypper install speedcrunch```
+
+```nix: nix profile install nixpkgs#speedcrunch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bc](/man/bc)(1), [calc](/man/calc)(1), [qalc](/man/qalc)(1)

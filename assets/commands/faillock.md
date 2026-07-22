@@ -54,6 +54,18 @@ Used for security monitoring and account lockout management.
 
 Part of the Linux-PAM package. Records stored in /var/run/faillock/ by default. Requires root to view other users' records.
 
+# INSTALL
+
+```apt: sudo apt install libpam-modules-bin```
+
+```apk: sudo apk add linux-pam```
+
+```brew: brew install linux-pam```
+
+```nix: nix profile install nixpkgs#linux-pam```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pam_faillock](/man/pam_faillock)(8), [pam](/man/pam)(8)

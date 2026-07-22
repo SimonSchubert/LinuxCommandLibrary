@@ -77,6 +77,12 @@ Only includes King James Version text. Book names can use various abbreviations.
 
 kjv was created as a simple, terminal-based Bible reader following Unix philosophy. It provides quick access to Biblical text without requiring a graphical interface or web browser.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kjv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [grep](/man/grep)(1)

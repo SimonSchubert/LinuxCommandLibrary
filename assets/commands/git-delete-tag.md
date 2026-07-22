@@ -22,6 +22,24 @@ Delete both local and remote tags
 
 Tags typically mark release points or significant commits, but occasionally need removal due to mistakes, versioning changes, or release rollbacks. This command ensures synchronization between local and remote repositories, preventing scenarios where a deleted local tag still appears when fetching from the remote.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-tag](/man/git-tag)(1), [git-extras](/man/git-extras)(1), [git-push](/man/git-push)(1), [git-delete-branch](/man/git-delete-branch)(1)

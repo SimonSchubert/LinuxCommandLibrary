@@ -28,6 +28,20 @@ _diff-command_ | **riff** [_options_]
 
 **riff** was created by **Johan Walles** (walles) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S riff```
+
+```apk: sudo apk add riff```
+
+```zypper: sudo zypper install riff```
+
+```brew: brew install riff```
+
+```nix: nix profile install nixpkgs#riff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [delta](/man/delta)(1), [diff-so-fancy](/man/diff-so-fancy)(1), [colordiff](/man/colordiff)(1)

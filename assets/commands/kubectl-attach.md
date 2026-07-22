@@ -64,6 +64,20 @@ Use **-i -t** together to get a full interactive shell experience when the conta
 
 The target container must have been started with stdin open (**stdin: true** in the pod spec or **-i** on `kubectl run`) for input to be delivered. Attaching does not restart the process; closing the connection improperly with Ctrl-C may signal the process. Only one attach session per container stream is reliable.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-exec](/man/kubectl-exec)(1), [kubectl-logs](/man/kubectl-logs)(1), [kubectl-run](/man/kubectl-run)(1)

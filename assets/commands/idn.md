@@ -95,6 +95,22 @@ This tool implements **IDNA 2003** (RFC 3490). For the newer **IDNA 2008** stand
 
 **idn** is part of **GNU Libidn**, written by **Simon Josefsson**. The IDNA standard was published as RFC 3490 in **2003** to enable internationalized domain names in the DNS.
 
+# INSTALL
+
+```apt: sudo apt install idn```
+
+```dnf: sudo dnf install libidn```
+
+```pacman: sudo pacman -S libidn```
+
+```apk: sudo apk add libidn```
+
+```brew: brew install libidn```
+
+```nix: nix profile install nixpkgs#libidn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [host](/man/host)(1), [dig](/man/dig)(1)

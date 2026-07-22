@@ -130,6 +130,24 @@ Requires OCI bundle. Low-level tool - usually not used directly. Needs root for 
 
 **runc** was developed as part of the **Open Container Initiative** (OCI) by Docker and others in **2015**. It standardized container runtime behavior, enabling interoperability between container platforms.
 
+# INSTALL
+
+```apt: sudo apt install runc```
+
+```dnf: sudo dnf install runc```
+
+```pacman: sudo pacman -S runc```
+
+```apk: sudo apk add runc```
+
+```zypper: sudo zypper install runc```
+
+```brew: brew install runc```
+
+```nix: nix profile install nixpkgs#runc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [containerd](/man/containerd)(8), [podman](/man/podman)(1), [crun](/man/crun)(1)

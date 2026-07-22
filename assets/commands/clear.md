@@ -51,6 +51,22 @@ Not all terminals support clearing the scrollback buffer; in such cases only the
 
 The **clear** command has been part of Unix systems since the early days, originating from the **termcap** library system for terminal-independent screen handling. The modern implementation is part of the **ncurses** package, which provides terminal handling capabilities for Unix-like systems. The command has remained essentially unchanged in functionality over the decades, though the underlying terminal handling mechanisms have evolved from termcap to terminfo.
 
+# INSTALL
+
+```apt: sudo apt install ncurses-bin```
+
+```dnf: sudo dnf install ncurses```
+
+```pacman: sudo pacman -S ncurses```
+
+```apk: sudo apk add ncurses```
+
+```brew: brew install ncurses```
+
+```nix: nix profile install nixpkgs#ncurses```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [reset](/man/reset)(1), [tput](/man/tput)(1), [stty](/man/stty)(1), [tty](/man/tty)(1)

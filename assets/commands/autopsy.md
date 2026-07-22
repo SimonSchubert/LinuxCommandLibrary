@@ -67,6 +67,13 @@ For authorized forensic investigation only. Web interface requires browser. Lega
 
 **Autopsy** was created by **Brian Carrier** as a web-based front-end for The Sleuth Kit, first released in **2001**. Version 4 (2015) moved to a Java desktop application.
 
+# INSTALL
+
+```aur: yay -S autopsy```
+
+```nix: nix profile install nixpkgs#autopsy```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [foremost](/man/foremost)(1), [bulk_extractor](/man/bulk_extractor)(1)

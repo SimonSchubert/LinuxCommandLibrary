@@ -71,6 +71,20 @@ The **--setup** option modifies shell configuration files. Some distributions ma
 
 cs java was added to Coursier to provide comprehensive JDK management, complementing its Scala tooling capabilities. It follows the pattern of version managers like sdkman and jabba, integrated into the Coursier ecosystem.
 
+# INSTALL
+
+```apt: sudo apt install csound```
+
+```pacman: sudo pacman -S csound```
+
+```zypper: sudo zypper install csound```
+
+```brew: brew install csound```
+
+```nix: nix profile install nixpkgs#csound```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cs](/man/cs)(1), [java](/man/java)(1), [sdk](/man/sdk)(1), [update-java-alternatives](/man/update-java-alternatives)(1)

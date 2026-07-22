@@ -91,6 +91,16 @@ await Bun.build({
 
 Standalone executables include a copy of the Bun runtime, increasing file size. Tree-shaking is always enabled. Some npm packages may not bundle correctly due to dynamic imports.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-run](/man/bun-run)(1), [esbuild](/man/esbuild)(1), [webpack](/man/webpack)(1)

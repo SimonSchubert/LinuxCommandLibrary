@@ -113,6 +113,20 @@ Requires base graphics set. NewGRF mods available. Multiplayer networking.
 
 OpenTTD was created as an **open-source remake** of Transport Tycoon Deluxe.
 
+# INSTALL
+
+```dnf: sudo dnf install openttd```
+
+```pacman: sudo pacman -S openttd```
+
+```apk: sudo apk add openttd```
+
+```zypper: sudo zypper install openttd```
+
+```nix: nix profile install nixpkgs#openttd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [simutrans](/man/simutrans)(1)

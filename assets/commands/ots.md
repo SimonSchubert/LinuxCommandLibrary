@@ -75,6 +75,18 @@ OTS performs extractive summarization only and does not generate new prose. It w
 
 OTS was developed by **Nadav Rotem** starting in **April 2003**, with version 0.1.0 released in May 2003. Language support expanded to **24 languages** by July 2003 and eventually to over 37. It gained academic recognition, being cited in at least four publications. The library was integrated as a plugin into **AbiWord** and **gedit**. The latest release is version **0.5.0** from April 2007. It remains packaged in Debian, Ubuntu, Fedora, and other distributions.
 
+# INSTALL
+
+```apt: sudo apt install ots```
+
+```dnf: sudo dnf install ots```
+
+```brew: brew install ots```
+
+```nix: nix profile install nixpkgs#ots```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wc](/man/wc)(1), [less](/man/less)(1), [fmt](/man/fmt)(1)

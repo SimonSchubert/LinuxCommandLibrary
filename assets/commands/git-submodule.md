@@ -119,6 +119,24 @@ Submodules allow projects to include and track dependencies or shared components
 **.gitmodules**
 > Configuration file mapping submodule names to their repository URLs and local paths.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-clone](/man/git-clone)(1), [git-remote](/man/git-remote)(1), [git-fetch](/man/git-fetch)(1)

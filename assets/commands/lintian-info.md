@@ -62,6 +62,12 @@ Part of lintian package. Tag database may differ between versions. Debian focuse
 
 lintian-info is part of the **lintian** package, providing documentation for its extensive tag collection.
 
+# INSTALL
+
+```aur: yay -S lintian```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lintian](/man/lintian)(1), [debuild](/man/debuild)(1)

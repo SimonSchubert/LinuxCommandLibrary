@@ -86,6 +86,18 @@ Check categories are disabled by default in some contexts. ST checks (style) inc
 
 **Staticcheck** was created by Dominik Honnef, starting development while at Google. It evolved from earlier tools like **go vet** and **golint** to provide more comprehensive static analysis. The tool gained widespread adoption in the Go community and became the default linter for VS Code's Go extension. It is now sponsored by both Google and the Go team.
 
+# INSTALL
+
+```dnf: sudo dnf install staticcheck```
+
+```pacman: sudo pacman -S staticcheck```
+
+```apk: sudo apk add staticcheck```
+
+```brew: brew install staticcheck```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [golangci-lint](/man/golangci-lint)(1), [gofmt](/man/gofmt)(1)

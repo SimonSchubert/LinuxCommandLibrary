@@ -71,6 +71,12 @@ Requires an internet connection to fetch model data. Pricing and availability ma
 
 **models** was created by **arimxyer** and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install models```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1), [ollama](/man/ollama)(1)

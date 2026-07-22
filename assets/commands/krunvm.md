@@ -72,6 +72,18 @@ Linux with KVM required. Container images as base. Lightweight isolation.
 
 krunvm was created by **Red Hat** as a simple tool for managing microVMs using libkrun virtualization.
 
+# INSTALL
+
+```dnf: sudo dnf install krunvm```
+
+```pacman: sudo pacman -S krunvm```
+
+```zypper: sudo zypper install krunvm```
+
+```nix: nix profile install nixpkgs#krunvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [docker](/man/docker)(1)

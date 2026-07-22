@@ -154,6 +154,24 @@ Large files take time to hash. Some algorithms (MD5, SHA1) are cryptographically
 
 **rhash** was created by **Aleksey Kravchenko** around **2005** as a fast, comprehensive hash calculation tool. Written in C, it emphasizes performance and supports more algorithms than most similar tools. The project continues development with regular updates for new hash functions.
 
+# INSTALL
+
+```apt: sudo apt install rhash```
+
+```dnf: sudo dnf install rhash```
+
+```pacman: sudo pacman -S rhash```
+
+```apk: sudo apk add rhash```
+
+```zypper: sudo zypper install rhash```
+
+```brew: brew install rhash```
+
+```nix: nix profile install nixpkgs#rhash```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sha256sum](/man/sha256sum)(1), [sha512sum](/man/sha512sum)(1), [sha1sum](/man/sha1sum)(1), [md5sum](/man/md5sum)(1), [shasum](/man/shasum)(1), [cksum](/man/cksum)(1), [b3sum](/man/b3sum)(1)

@@ -60,6 +60,24 @@ Output is always to stdout. No options for compression level. For viewing only, 
 
 **bzcat** has been part of the bzip2 suite since its creation in **1996**.
 
+# INSTALL
+
+```apt: sudo apt install bzip2```
+
+```dnf: sudo dnf install bzip2```
+
+```pacman: sudo pacman -S bzip2```
+
+```apk: sudo apk add bzip2```
+
+```zypper: sudo zypper install bzip2```
+
+```brew: brew install bzip2```
+
+```nix: nix profile install nixpkgs#bzip2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bzip2](/man/bzip2)(1), [bzless](/man/bzless)(1), [bzgrep](/man/bzgrep)(1), [zcat](/man/zcat)(1)

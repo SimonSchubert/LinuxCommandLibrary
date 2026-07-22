@@ -103,6 +103,18 @@ Large library can be slow. DRM removal not included (requires plugins). Qt-based
 
 **Calibre** was created by Kovid Goyal in **2006** to manage ebooks and became the de facto standard for ebook management and conversion.
 
+# INSTALL
+
+```dnf: sudo dnf install calibre```
+
+```pacman: sudo pacman -S calibre```
+
+```zypper: sudo zypper install calibre```
+
+```nix: nix profile install nixpkgs#calibre```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ebook-convert](/man/ebook-convert)(1), [calibredb](/man/calibredb)(1), [pandoc](/man/pandoc)(1)

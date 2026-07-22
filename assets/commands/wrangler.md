@@ -106,6 +106,14 @@ Requires Node.js 18 or higher. Local development environment may have subtle dif
 
 **Wrangler** was originally developed by **Cloudflare** in **2019** to support the Workers serverless platform. Version 1 was written in Rust, while **Wrangler 2** (released **2022**) was rewritten in TypeScript for better integration with the JavaScript ecosystem. The tool is part of the open-source workers-sdk repository and continues active development with frequent releases.
 
+# INSTALL
+
+```pacman: sudo pacman -S wrangler```
+
+```nix: nix profile install nixpkgs#wrangler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npx](/man/npx)(1), [node](/man/node)(1), [miniflare](/man/miniflare)(1)

@@ -102,6 +102,22 @@ Supports AWS KMS, GCP KMS, Azure Key Vault, HashiCorp Vault via URI format.
 
 Always sign by digest (@sha256:...) not tag. Multiple signatures can be attached to one image. Keyless requires internet for OIDC flow.
 
+# INSTALL
+
+```apt: sudo apt install cosign```
+
+```pacman: sudo pacman -S cosign```
+
+```apk: sudo apk add cosign```
+
+```zypper: sudo zypper install cosign```
+
+```brew: brew install cosign```
+
+```nix: nix profile install nixpkgs#cosign```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [podman](/man/podman)(1)

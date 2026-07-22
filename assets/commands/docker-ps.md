@@ -109,6 +109,24 @@ Stopped containers are hidden by default; use **-a** to see them. Size calculati
 
 docker ps has been part of Docker since its initial release in **2013**, modeled after the Unix **ps** command for processes. The filtering and formatting options were added over time to support container management at scale. The command remains the primary way to inspect running containers.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-inspect](/man/docker-inspect)(1), [docker-logs](/man/docker-logs)(1), [docker-stats](/man/docker-stats)(1), [docker-rm](/man/docker-rm)(1), [docker-run](/man/docker-run)(1)

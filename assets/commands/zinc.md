@@ -89,6 +89,12 @@ Memory usage scales with index size. Monitor resources for large deployments.
 
 First admin credentials must be set via environment variables before first run.
 
+# INSTALL
+
+```aur: yay -S zinc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [elasticsearch](/man/elasticsearch)(1), [opensearch](/man/opensearch)(1), [meilisearch](/man/meilisearch)(1)

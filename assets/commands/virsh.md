@@ -83,6 +83,18 @@ Requires libvirt daemon. Root for system VMs. XML syntax complex.
 
 **virsh** is the command-line interface for **libvirt**, the virtualization API. It provides unified management for multiple hypervisors.
 
+# INSTALL
+
+```apt: sudo apt install libvirt-clients```
+
+```dnf: sudo dnf install libvirt-client```
+
+```apk: sudo apk add libvirt-client```
+
+```zypper: sudo zypper install libvirt-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virt-manager](/man/virt-manager)(1), [qemu](/man/qemu)(1), [kvm](/man/kvm)(1)

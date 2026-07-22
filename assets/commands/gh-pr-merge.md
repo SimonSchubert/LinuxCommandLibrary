@@ -71,6 +71,24 @@ Branch protection rules may prevent merging. Auto-merge requires repository feat
 
 gh pr merge is part of the **GitHub CLI**, implementing all merge strategies available through GitHub's web interface.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh-pr](/man/gh-pr)(1), [gh-pr-checks](/man/gh-pr-checks)(1), [git-merge](/man/git-merge)(1)

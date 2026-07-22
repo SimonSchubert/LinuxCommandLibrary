@@ -77,6 +77,12 @@ Used for dedicated Factorio servers and automated testing.
 
 Requires Factorio game installation. Server settings configured via JSON files. Headless mode requires no X server. Commercial game with separate license. Default port is 34197/UDP.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#factorio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [screen](/man/screen)(1), [tmux](/man/tmux)(1)

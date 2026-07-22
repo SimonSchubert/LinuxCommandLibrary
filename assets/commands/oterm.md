@@ -26,6 +26,14 @@ Requires a running Ollama server with at least one model downloaded.
 
 **oterm** was created by **ggozad** and is written in **Python**.
 
+# INSTALL
+
+```brew: brew install oterm```
+
+```nix: nix profile install nixpkgs#oterm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ollama](/man/ollama)(1), [oatmeal](/man/oatmeal)(1)

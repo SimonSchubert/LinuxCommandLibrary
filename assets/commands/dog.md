@@ -114,6 +114,18 @@ Upstream development has been dormant since **2021** and the project's homepage 
 
 dog was created by **Benjamin Sago** (ogham), also known for the `exa` file lister, and first released in **2020**. Written in Rust, it was designed as a friendlier alternative to dig, with colourised output, order-independent arguments, and built-in support for encrypted DNS transports. It inspired **doggo**, a Go reimplementation of the same idea that is more actively maintained.
 
+# INSTALL
+
+```pacman: sudo pacman -S dog```
+
+```apk: sudo apk add dog```
+
+```zypper: sudo zypper install dog```
+
+```nix: nix profile install nixpkgs#dog```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [doggo](/man/doggo)(1), [drill](/man/drill)(1), [nslookup](/man/nslookup)(1)

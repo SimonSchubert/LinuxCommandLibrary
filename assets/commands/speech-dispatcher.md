@@ -93,6 +93,20 @@ The daemon must be running for clients like **spd-say** to work. At least one sp
 
 **Speech Dispatcher** was created to provide a unified text-to-speech interface for Linux accessibility and desktop applications. It was designed to work with screen readers and other assistive technologies. The project is developed as part of the Free(b)soft project for accessibility on free operating systems. Development continues with support for new synthesizers and audio systems.
 
+# INSTALL
+
+```apt: sudo apt install speech-dispatcher```
+
+```dnf: sudo dnf install speech-dispatcher```
+
+```pacman: sudo pacman -S speech-dispatcher```
+
+```apk: sudo apk add speech-dispatcher```
+
+```zypper: sudo zypper install speech-dispatcher```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [spd-say](/man/spd-say)(1), [espeak-ng](/man/espeak-ng)(1), [festival](/man/festival)(1)

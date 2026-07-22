@@ -92,6 +92,12 @@ Python required. Terminal support varies. X11/Wayland differences.
 
 **pywal** was created to generate and apply color schemes from images to terminals and applications.
 
+# INSTALL
+
+```apk: sudo apk add py3-pywal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [feh](/man/feh)(1), [wpgtk](/man/wpgtk)(1), [flavours](/man/flavours)(1)

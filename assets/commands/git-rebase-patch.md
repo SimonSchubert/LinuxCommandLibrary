@@ -22,6 +22,24 @@ This is useful for reviving an old, bit-rotted patch without manually figuring o
 
 Part of git-extras package. Only searches back along the first-parent chain from HEAD; if the patch was based on a commit outside that chain, it will not be found.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-rebase](/man/git-rebase)(1), [git-am](/man/git-am)(1), [git-cherry-pick](/man/git-cherry-pick)(1), [git-extras](/man/git-extras)(1)

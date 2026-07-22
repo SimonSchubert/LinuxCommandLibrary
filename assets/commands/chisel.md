@@ -112,6 +112,14 @@ Defaults: local-host = **0.0.0.0**, remote-host = **0.0.0.0**, protocol = **tcp*
 
 Useful for bypassing firewalls. WebSocket support varies by PaaS provider. Install: curl https://i.jpillora.com/chisel! | bash
 
+# INSTALL
+
+```brew: brew install chisel```
+
+```nix: nix profile install nixpkgs#chisel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [socat](/man/socat)(1), [ngrok](/man/ngrok)(1)

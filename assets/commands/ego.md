@@ -80,6 +80,12 @@ Funtoo Linux specific. Not available on stock Gentoo or other distributions. Req
 
 **ego** was introduced by the **Funtoo Linux** project, a Gentoo-derived distribution led by Daniel Robbins (the original Gentoo founder). It consolidates previously separate utilities (profile selection, Portage tree sync, bootloader generation) into a single modular command and replaces portions of eselect on Funtoo systems.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#ego```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [emerge](/man/emerge)(1), [eselect](/man/eselect)(1)

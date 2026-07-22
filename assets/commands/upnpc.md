@@ -52,6 +52,24 @@ Router must support and have UPnP enabled. Some ISP routers disable UPnP for sec
 
 **upnpc** is part of the **miniupnpc** library, providing command-line access to UPnP Internet Gateway Device functionality.
 
+# INSTALL
+
+```apt: sudo apt install miniupnpc```
+
+```dnf: sudo dnf install miniupnpc```
+
+```pacman: sudo pacman -S miniupnpc```
+
+```apk: sudo apk add miniupnpc```
+
+```zypper: sudo zypper install miniupnpc```
+
+```brew: brew install miniupnpc```
+
+```nix: nix profile install nixpkgs#miniupnpc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iptables](/man/iptables)(8)

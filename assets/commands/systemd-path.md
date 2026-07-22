@@ -44,6 +44,22 @@ Common path names include: **temporary**, **temporary-large**, **system-binaries
 
 Path values may vary based on system configuration and user context. The tool reflects the file hierarchy as understood by systemd. Part of the systemd suite.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [file-hierarchy](/man/file-hierarchy)(7), [systemctl](/man/systemctl)(1), [systemd-analyze](/man/systemd-analyze)(1)

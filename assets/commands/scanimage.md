@@ -91,6 +91,14 @@ Scanner-specific options vary by device. Use **-A** to see available options for
 
 **scanimage** is part of the **SANE** (Scanner Access Now Easy) project, providing a standardized interface for image scanners on Unix-like systems since 1996.
 
+# INSTALL
+
+```apt: sudo apt install sane-utils```
+
+```apk: sudo apk add sane-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scanadf](/man/scanadf)(1), [sane-find-scanner](/man/sane-find-scanner)(1), [saned](/man/saned)(8)

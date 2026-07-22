@@ -78,6 +78,16 @@ Requires Hyprland to be running. Preloaded wallpapers consume memory. Large imag
 
 hyprpaper was created as part of the Hyprland ecosystem by Vaxry. It provides wallpaper functionality specifically designed for Hyprland's Wayland implementation, with IPC integration for dynamic control.
 
+# INSTALL
+
+```pacman: sudo pacman -S hyprpaper```
+
+```zypper: sudo zypper install hyprpaper```
+
+```nix: nix profile install nixpkgs#hyprpaper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hyprctl](/man/hyprctl)(1), [swaybg](/man/swaybg)(1), [feh](/man/feh)(1)

@@ -83,6 +83,20 @@ Remove build artifacts from a Rust project
 
 Without package selection, cleans all packages and dependencies in the workspace. The target directory can grow very large; regular cleaning frees significant disk space but requires a full rebuild afterward.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-build](/man/cargo-build)(1), [cargo-test](/man/cargo-test)(1)

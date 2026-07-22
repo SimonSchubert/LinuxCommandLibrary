@@ -119,6 +119,24 @@ tcsh uses C shell syntax which differs from POSIX sh/bash. Scripts written for t
 
 The C shell (csh) was created by **Bill Joy** at UC Berkeley in the late 1970s for BSD Unix. tcsh was developed as an enhanced version with additional features like command-line editing and completion. The name "tcsh" comes from the TENEX operating system which inspired some features. tcsh became the default shell on FreeBSD and was widely used on Unix systems before bash became dominant.
 
+# INSTALL
+
+```apt: sudo apt install tcsh```
+
+```dnf: sudo dnf install tcsh```
+
+```pacman: sudo pacman -S tcsh```
+
+```apk: sudo apk add tcsh```
+
+```zypper: sudo zypper install tcsh```
+
+```brew: brew install tcsh```
+
+```nix: nix profile install nixpkgs#tcsh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [csh](/man/csh)(1), [bash](/man/bash)(1), [zsh](/man/zsh)(1), [sh](/man/sh)(1), [ksh](/man/ksh)(1), [fish](/man/fish)(1)

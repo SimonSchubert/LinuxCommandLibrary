@@ -45,6 +45,16 @@ Only audio devices are supported currently. Device names follow the audioN namin
 
 Part of **PipeWire**, the modern multimedia framework for Linux. Implements the org.freedesktop.ReserveDevice specification for audio device sharing.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-tools```
+
+```zypper: sudo zypper install pipewire-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [pw-cli](/man/pw-cli)(1)

@@ -42,6 +42,20 @@ Add dependencies to a uv Python project
 
 **uv add** adds dependencies to a Python project. Updates pyproject.toml and uv.lock. Automatically syncs the virtual environment with new dependencies. Part of uv, an extremely fast Python package manager.
 
+# INSTALL
+
+```dnf: sudo dnf install uv```
+
+```pacman: sudo pacman -S uv```
+
+```apk: sudo apk add uv```
+
+```brew: brew install uv```
+
+```nix: nix profile install nixpkgs#uv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uv](/man/uv)(1), [uv-remove](/man/uv-remove)(1), [uv-sync](/man/uv-sync)(1)

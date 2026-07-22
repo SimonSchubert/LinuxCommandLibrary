@@ -117,6 +117,12 @@ Cloud provider credentials required. Deployment creates many resources. Cold sta
 
 **Serverless Framework** was created by **Austen Collins** in **2015**, originally named JAWS. It pioneered serverless deployment tooling and became the most popular framework for Lambda development.
 
+# INSTALL
+
+```brew: brew install serverless```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws](/man/aws)(1), [sam](/man/sam)(1), [terraform](/man/terraform)(1), [pulumi](/man/pulumi)(1)

@@ -72,6 +72,20 @@ JPEG input required. Terminal width affects output. Aspect ratio considerations.
 
 jp2a was created to convert JPEG images to ASCII art for terminal display and text-based image representation.
 
+# INSTALL
+
+```apt: sudo apt install jp2a```
+
+```pacman: sudo pacman -S jp2a```
+
+```zypper: sudo zypper install jp2a```
+
+```brew: brew install jp2a```
+
+```nix: nix profile install nixpkgs#jp2a```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [img2txt](/man/img2txt)(1), [cacaview](/man/cacaview)(1)

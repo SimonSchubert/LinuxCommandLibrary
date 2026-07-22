@@ -110,6 +110,20 @@ Compilation can be slow and memory-intensive for large projects. Cross-compilati
 
 **Crystal** was created by Ary Borenszweig and Juan Wajnerman, with development starting in **2011** and the first public release in **2014**. The language was designed to combine Ruby's expressiveness with static typing and native performance. Version 1.0 was released in **March 2021**, marking the language's production readiness.
 
+# INSTALL
+
+```apt: sudo apt install crystal```
+
+```pacman: sudo pacman -S crystal```
+
+```apk: sudo apk add crystal```
+
+```brew: brew install crystal```
+
+```nix: nix profile install nixpkgs#crystal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [shards](/man/shards)(1), [ruby](/man/ruby)(1), [rustc](/man/rustc)(1)

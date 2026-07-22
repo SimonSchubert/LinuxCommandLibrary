@@ -140,6 +140,18 @@ Encryption method and password must exactly match the remote ss-server. Only pro
 
 **Shadowsocks** was created by **clowwindy** in **2012** for circumventing internet censorship. It uses encrypted proxy connections to bypass filtering.
 
+# INSTALL
+
+```apt: sudo apt install shadowsocks-libev```
+
+```zypper: sudo zypper install shadowsocks-libev```
+
+```brew: brew install shadowsocks-libev```
+
+```nix: nix profile install nixpkgs#shadowsocks-libev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ss-server](/man/ss-server)(1), [proxychains](/man/proxychains)(1)

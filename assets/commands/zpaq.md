@@ -95,6 +95,20 @@ Journaling archives can grow large over time. Use **zpaq add -method 0** to cons
 
 Encryption is optional and must be specified during archive creation.
 
+# INSTALL
+
+```apt: sudo apt install zpaq```
+
+```dnf: sudo dnf install zpaq```
+
+```zypper: sudo zypper install zpaq```
+
+```brew: brew install zpaq```
+
+```nix: nix profile install nixpkgs#zpaq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tar](/man/tar)(1), [7z](/man/7z)(1), [gzip](/man/gzip)(1), [zstd](/man/zstd)(1)

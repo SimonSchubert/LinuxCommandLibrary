@@ -62,6 +62,16 @@ Requires Java. Resource intensive. Security configuration important.
 
 Jenkins was forked from **Hudson** in 2011 by **Kohsuke Kawaguchi**. It became the leading open-source CI/CD server.
 
+# INSTALL
+
+```pacman: sudo pacman -S jenkins```
+
+```brew: brew install jenkins```
+
+```nix: nix profile install nixpkgs#jenkins```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [java](/man/java)(1), [docker](/man/docker)(1), [gitlab-runner](/man/gitlab-runner)(1)

@@ -84,6 +84,18 @@ Does not validate HTML; malformed input may produce unexpected results. CSS sele
 
 htmlq was created as a command-line HTML querying tool inspired by jq for JSON processing.
 
+# INSTALL
+
+```pacman: sudo pacman -S htmlq```
+
+```apk: sudo apk add htmlq```
+
+```brew: brew install htmlq```
+
+```nix: nix profile install nixpkgs#htmlq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pup](/man/pup)(1), [jq](/man/jq)(1), [xmllint](/man/xmllint)(1), [curl](/man/curl)(1)

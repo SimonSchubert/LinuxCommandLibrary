@@ -90,6 +90,16 @@ Rust implementation. Specific directory structure. Symlink-based.
 
 **Tuckr** was created as a simple dotfile manager using symlinks with group-based organization.
 
+# INSTALL
+
+```apk: sudo apk add tuckr```
+
+```brew: brew install tuckr```
+
+```nix: nix profile install nixpkgs#tuckr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stow](/man/stow)(1), [chezmoi](/man/chezmoi)(1), [yadm](/man/yadm)(1)

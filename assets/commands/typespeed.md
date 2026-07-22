@@ -79,6 +79,16 @@ Requires terminal size of at least 80x24. Network mode requires port access betw
 
 **typespeed** was inspired by ztspeed, a DOS typing game by Zorlim. It was created to provide a fun way to improve typing speed on Unix systems. The game became popular in the Linux community as a terminal-based alternative to GUI typing tutors.
 
+# INSTALL
+
+```dnf: sudo dnf install typespeed```
+
+```brew: brew install typespeed```
+
+```nix: nix profile install nixpkgs#typespeed```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ttyper](/man/ttyper)(1), [gtypist](/man/gtypist)(1), [wpm](/man/wpm)(1)

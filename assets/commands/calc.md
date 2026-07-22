@@ -109,6 +109,22 @@ Different syntax than bc. Less commonly installed. Some functions require unders
 
 **calc** was originally developed around **1984** and has been maintained as a feature-rich alternative to bc.
 
+# INSTALL
+
+```apt: sudo apt install calc```
+
+```dnf: sudo dnf install calc```
+
+```pacman: sudo pacman -S calc```
+
+```zypper: sudo zypper install calc```
+
+```brew: brew install calc```
+
+```nix: nix profile install nixpkgs#calc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bc](/man/bc)(1), [dc](/man/dc)(1), [qalc](/man/qalc)(1)

@@ -90,6 +90,24 @@ Deprecated for ip command. Part of net-tools. Root needed for changes.
 
 **ifconfig** has been part of Unix networking since **4.2BSD** (1983). On Linux it is part of the **net-tools** package, now largely superseded by **iproute2**.
 
+# INSTALL
+
+```apt: sudo apt install net-tools```
+
+```dnf: sudo dnf install net-tools```
+
+```pacman: sudo pacman -S net-tools```
+
+```apk: sudo apk add net-tools```
+
+```zypper: sudo zypper install net-tools```
+
+```brew: brew install net-tools```
+
+```nix: nix profile install nixpkgs#net-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip](/man/ip)(8), [route](/man/route)(8), [netstat](/man/netstat)(8)

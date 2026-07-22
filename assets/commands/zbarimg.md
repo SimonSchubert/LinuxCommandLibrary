@@ -120,6 +120,24 @@ Detection depends on image quality. Blurry or low-contrast images may fail. Some
 
 **zbar** and **zbarimg** were created by **Jeff Brown** around **2007**. The library provides barcode scanning for both images and video, with bindings for many languages.
 
+# INSTALL
+
+```apt: sudo apt install zbar-tools```
+
+```dnf: sudo dnf install zbar```
+
+```pacman: sudo pacman -S zbar```
+
+```apk: sudo apk add zbar```
+
+```zypper: sudo zypper install zbar```
+
+```brew: brew install zbar```
+
+```nix: nix profile install nixpkgs#zbar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zbarcam](/man/zbarcam)(1), [qrencode](/man/qrencode)(1), [dmtxread](/man/dmtxread)(1)

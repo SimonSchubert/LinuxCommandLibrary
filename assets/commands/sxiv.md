@@ -94,6 +94,20 @@ Requires an EWMH/NetWM compliant window manager for fullscreen functionality. Th
 
 **sxiv** (Simple X Image Viewer) was created as a lightweight alternative to heavier image viewers, focusing on speed and keyboard-driven operation.
 
+# INSTALL
+
+```apt: sudo apt install sxiv```
+
+```dnf: sudo dnf install sxiv```
+
+```pacman: sudo pacman -S sxiv```
+
+```zypper: sudo zypper install sxiv```
+
+```nix: nix profile install nixpkgs#sxiv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [feh](/man/feh)(1), [imv](/man/imv)(1), [nsxiv](/man/nsxiv)(1)

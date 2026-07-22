@@ -104,6 +104,14 @@ Requires shell initialization in profile (`eval "$(nodenv init -)"` in .bashrc/.
 
 **nodenv** was created by **Will Farrington** and **Jason Karns** around **2014**, modeled after rbenv for Ruby. It brought rbenv's proven version management model to Node.js. The plugin architecture enables customization while keeping the core simple.
 
+# INSTALL
+
+```brew: brew install nodenv```
+
+```nix: nix profile install nixpkgs#nodenv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nvm](/man/nvm)(1), [fnm](/man/fnm)(1), [volta](/man/volta)(1), [asdf](/man/asdf)(1), [rbenv](/man/rbenv)(1)

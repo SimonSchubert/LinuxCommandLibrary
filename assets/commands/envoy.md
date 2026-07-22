@@ -135,6 +135,14 @@ Configuration complexity can be high for advanced use cases. Hot restart require
 
 Envoy was created at **Lyft** by Matt Klein and open-sourced in **September 2016**. It was designed to handle Lyft's microservices traffic with focus on observability and debuggability. Envoy joined the CNCF in **2017** and graduated in **2018**. It became the foundation for service meshes like Istio and is widely used as a data plane proxy.
 
+# INSTALL
+
+```brew: brew install envoy```
+
+```nix: nix profile install nixpkgs#envoy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nginx](/man/nginx)(1), [haproxy](/man/haproxy)(1), [istioctl](/man/istioctl)(1), [traefik](/man/traefik)(1), [kubectl](/man/kubectl)(1)

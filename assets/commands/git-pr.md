@@ -57,6 +57,12 @@ For GitLab repositories, the equivalent command is `git mr`.
 
 Part of git-extras package. GitHub-specific ref layout (`refs/pull/N/head`); won't work against a host that doesn't publish these refs. `git pr clean` removes **all** `pr/*` branches at once, not just one.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#git-pr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-mr](/man/git-mr)(1), [gh-pr](/man/gh-pr)(1), [git-checkout](/man/git-checkout)(1), [git-extras](/man/git-extras)(1)

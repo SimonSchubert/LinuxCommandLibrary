@@ -82,6 +82,16 @@ The tool works by comparing system binaries against known signatures of rootkit 
 
 Not foolproof - advanced rootkits can hide. Use with rkhunter for comprehensive scanning. Set up cron jobs for regular scans. If infection found, isolate system and investigate.
 
+# INSTALL
+
+```apt: sudo apt install chkrootkit```
+
+```dnf: sudo dnf install chkrootkit```
+
+```brew: brew install chkrootkit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rkhunter](/man/rkhunter)(1), [lynis](/man/lynis)(1), [clamav](/man/clamav)(1)

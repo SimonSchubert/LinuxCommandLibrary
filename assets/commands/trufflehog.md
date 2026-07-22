@@ -121,6 +121,16 @@ Verification makes network requests to third-party services. Scanning history of
 
 **trufflehog** was created by **Dylan Ayrey** at **Truffle Security** around **2016**. Originally a Python tool, version 3 was rewritten in Go for performance. The project addresses the serious problem of secrets committed to version control, providing automated detection before breaches occur.
 
+# INSTALL
+
+```zypper: sudo zypper install trufflehog```
+
+```brew: brew install trufflehog```
+
+```nix: nix profile install nixpkgs#trufflehog```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gitleaks](/man/gitleaks)(1), [git-secrets](/man/git-secrets)(1), [detect-secrets](/man/detect-secrets)(1)

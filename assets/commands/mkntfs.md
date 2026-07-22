@@ -69,6 +69,22 @@ Destroys existing data. Part of ntfs-3g. Windows compatibility.
 
 mkntfs is part of **ntfs-3g** project, providing NTFS filesystem creation on Linux.
 
+# INSTALL
+
+```apt: sudo apt install ntfs-3g```
+
+```dnf: sudo dnf install ntfs-3g```
+
+```pacman: sudo pacman -S ntfs-3g```
+
+```apk: sudo apk add ntfs-3g-progs```
+
+```zypper: sudo zypper install ntfs-3g```
+
+```brew: brew install ntfs-3g```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkfs.ntfs](/man/mkfs.ntfs)(8), [ntfs-3g](/man/ntfs-3g)(8), [ntfsfix](/man/ntfsfix)(8)

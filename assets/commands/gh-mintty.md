@@ -30,6 +30,24 @@ Three workarounds exist:
 
 Windows-specific topic. The `winpty` workaround may cause UI bugs. The experimental pseudo-console option in Git for Windows is the most complete fix.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-help](/man/gh-help)(1), [gh-config](/man/gh-config)(1)

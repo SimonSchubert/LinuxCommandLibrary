@@ -88,6 +88,24 @@ Some commands require setup first. Large packages may take time. Platform-specif
 
 **raco** is the standard tool distributed with **Racket** (formerly PLT Scheme). It consolidates package management, building, and development tasks.
 
+# INSTALL
+
+```apt: sudo apt install racket```
+
+```dnf: sudo dnf install racket```
+
+```pacman: sudo pacman -S racket```
+
+```apk: sudo apk add racket```
+
+```zypper: sudo zypper install racket```
+
+```brew: brew install racket```
+
+```nix: nix profile install nixpkgs#racket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [racket](/man/racket)(1), [drracket](/man/drracket)(1)

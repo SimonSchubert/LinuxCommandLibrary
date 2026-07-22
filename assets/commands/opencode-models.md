@@ -18,6 +18,16 @@ List available OpenCode AI models
 
 This subcommand is useful for verifying which models are accessible before starting a coding session.
 
+# INSTALL
+
+```pacman: sudo pacman -S opencode```
+
+```brew: brew install opencode```
+
+```nix: nix profile install nixpkgs#opencode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [opencode](/man/opencode)(1), [opencode-auth](/man/opencode-auth)(1)

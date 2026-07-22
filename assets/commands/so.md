@@ -36,5 +36,13 @@ Terminal interface for Stack Overflow
 
 **so** was created by **Sam Tay** and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install so```
+
+```nix: nix profile install nixpkgs#so```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

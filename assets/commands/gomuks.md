@@ -97,6 +97,20 @@ End-to-end encryption requires device verification. Some Matrix features may not
 
 **gomuks** was created as a terminal Matrix client for users preferring CLI-based communication tools.
 
+# INSTALL
+
+```apt: sudo apt install gomuks```
+
+```pacman: sudo pacman -S gomuks```
+
+```apk: sudo apk add gomuks```
+
+```zypper: sudo zypper install gomuks```
+
+```nix: nix profile install nixpkgs#gomuks```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [element](https://element.io/), [fractal](https://gitlab.gnome.org/GNOME/fractal), [matrix-spec](https://spec.matrix.org/)

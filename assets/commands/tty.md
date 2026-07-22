@@ -79,6 +79,24 @@ The tty command only checks standard input. If stdin is redirected but stdout/st
 
 The **tty** command dates back to the earliest versions of Unix at Bell Labs in the **1970s**. The name comes from "teletypewriter," the original terminal devices. The GNU coreutils version was written by **David MacKenzie**. The command is specified in POSIX.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stty](/man/stty)(1), [who](/man/who)(1), [mesg](/man/mesg)(1), [write](/man/write)(1)

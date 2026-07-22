@@ -88,6 +88,16 @@ Prolog syntax unique. Logic programming paradigm. Learning curve.
 
 **SWI-Prolog** was started by **Jan Wielemaker** in 1987. It's one of the most widely used Prolog implementations.
 
+# INSTALL
+
+```apt: sudo apt install swi-prolog-core```
+
+```dnf: sudo dnf install swi-prolog-core```
+
+```zypper: sudo zypper install swipl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gprolog](/man/gprolog)(1), [sicstus](/man/sicstus)(1), [yap](/man/yap)(1)

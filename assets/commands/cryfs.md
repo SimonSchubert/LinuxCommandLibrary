@@ -79,6 +79,20 @@ Performance is lower than unencrypted filesystems due to encryption overhead and
 
 CryFS was created by Sebastian Messmer as his master's thesis project, with the first release in **2015**. It was designed to address privacy concerns with cloud storage, providing stronger confidentiality guarantees than traditional encrypted filesystems like EncFS.
 
+# INSTALL
+
+```apt: sudo apt install cryfs```
+
+```dnf: sudo dnf install cryfs```
+
+```pacman: sudo pacman -S cryfs```
+
+```zypper: sudo zypper install cryfs```
+
+```brew: brew install cryfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [encfs](/man/encfs)(1), [gocryptfs](/man/gocryptfs)(1), [veracrypt](/man/veracrypt)(1), [fusermount](/man/fusermount)(1)

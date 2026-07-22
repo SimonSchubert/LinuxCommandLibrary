@@ -53,6 +53,22 @@ Always use a mapfile to enable resumption. The -f flag is required when writing 
 
 **GNU ddrescue** was written by Antonio Diaz Diaz, with the first release in **2004**. It was created to address dd's inability to continue past read errors and has become the standard free tool for rescuing data from failing drives.
 
+# INSTALL
+
+```apt: sudo apt install gddrescue```
+
+```dnf: sudo dnf install ddrescue```
+
+```pacman: sudo pacman -S ddrescue```
+
+```apk: sudo apk add ddrescue```
+
+```brew: brew install ddrescue```
+
+```nix: nix profile install nixpkgs#ddrescue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dd](/man/dd)(1), [testdisk](/man/testdisk)(8), [photorec](/man/photorec)(1)

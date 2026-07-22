@@ -87,6 +87,22 @@ Connect device to Tailscale network
 
 To change settings on an already-connected device, prefer **tailscale set** which only updates specified flags, whereas **tailscale up** applies OS defaults for all unspecified flags.
 
+# INSTALL
+
+```dnf: sudo dnf install tailscale```
+
+```pacman: sudo pacman -S tailscale```
+
+```apk: sudo apk add tailscale```
+
+```zypper: sudo zypper install tailscale```
+
+```brew: brew install tailscale```
+
+```nix: nix profile install nixpkgs#tailscale```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tailscale](/man/tailscale)(1), [tailscale-set](/man/tailscale-set)(1)

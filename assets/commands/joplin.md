@@ -128,6 +128,12 @@ Terminal version lacks some GUI features. Sync requires configuration. First syn
 
 Joplin was created by **Laurent Cozic** in **2017** as an open-source Evernote alternative. It emphasizes privacy with end-to-end encryption and local-first storage.
 
+# INSTALL
+
+```aur: yay -S joplin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [notable](/man/notable)(1)

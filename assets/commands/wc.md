@@ -81,6 +81,24 @@ For counting files, **ls | wc -l** fails if filenames contain newlines. Use **fi
 
 Empty files have 0 lines, 0 words, and 0 bytes. A file with just "hello" (no newline) has 0 lines but 1 word.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sort](/man/sort)(1), [uniq](/man/uniq)(1), [cut](/man/cut)(1), [awk](/man/awk)(1)

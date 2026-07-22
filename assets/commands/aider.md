@@ -85,6 +85,11 @@ Requires API keys for cloud models (OPENAI_API_KEY, ANTHROPIC_API_KEY, etc.). To
 
 **aider** was created by Paul Gauthier and released in **2023**. It was designed to leverage large language models for practical code editing, evolving rapidly with new AI model releases.
 
+# INSTALL
+
+```brew: brew install aider```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [git](/man/git)(1), [gh](/man/gh)(1), [copilot](/man/copilot)(1)

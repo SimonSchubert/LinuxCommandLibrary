@@ -92,6 +92,12 @@ Chinese national cryptographic algorithms toolkit
 
 GmSSL was developed to support China's cryptographic standards, which are mandated for use in Chinese government and financial systems. The project is maintained by Peking University and the open-source community.
 
+# INSTALL
+
+```brew: brew install gmssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [gpg](/man/gpg)(1)

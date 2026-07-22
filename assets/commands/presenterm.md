@@ -55,6 +55,18 @@ Terminal-based only. Markdown format required.
 
 presenterm was created for **terminal-based** Markdown presentations.
 
+# INSTALL
+
+```pacman: sudo pacman -S presenterm```
+
+```zypper: sudo zypper install presenterm```
+
+```brew: brew install presenterm```
+
+```nix: nix profile install nixpkgs#presenterm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mdp](/man/mdp)(1), [slides](/man/slides)(1)

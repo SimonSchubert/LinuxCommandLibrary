@@ -71,6 +71,12 @@ Requires root privileges for writing to block devices. The bmap file must match 
 
 bmaptool was originally developed by **Intel** for efficient embedded Linux image deployment, addressing the slow and unsafe nature of using **dd** for flashing large disk images, particularly those with significant empty space. The project moved to the **Yocto Project** in **2024**; the original Intel repository is now archived.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#bmaptool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dd](/man/dd)(1), [pv](/man/pv)(1), [xzcat](/man/xzcat)(1)

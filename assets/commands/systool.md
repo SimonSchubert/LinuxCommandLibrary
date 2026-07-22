@@ -81,6 +81,22 @@ Requires the sysfsutils package. Information comes from the kernel's sysfs inter
 
 **systool** is part of the **sysfsutils** package, providing user-friendly access to the Linux sysfs virtual filesystem that exports kernel device information.
 
+# INSTALL
+
+```apt: sudo apt install sysfsutils```
+
+```dnf: sudo dnf install sysfsutils```
+
+```pacman: sudo pacman -S sysfsutils```
+
+```apk: sudo apk add sysfsutils```
+
+```zypper: sudo zypper install sysfsutils```
+
+```nix: nix profile install nixpkgs#sysfsutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lspci](/man/lspci)(8), [lsusb](/man/lsusb)(8), [lsmod](/man/lsmod)(8), [udevadm](/man/udevadm)(8)

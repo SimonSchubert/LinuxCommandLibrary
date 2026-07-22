@@ -51,6 +51,16 @@ Output format is not stable across versions of libjxl and should not be parsed b
 
 **jxlinfo** ships with **libjxl**, the reference implementation of the JPEG XL image coding system developed by the **JPEG XL Project** and contributors from Google, Cloudinary, and others. JPEG XL was standardized as **ISO/IEC 18181** starting in **2021**. The tool is packaged in **libjxl-tools** on Debian, Ubuntu, Fedora, and other distributions.
 
+# INSTALL
+
+```apt: sudo apt install libjxl-tools```
+
+```apk: sudo apk add libjxl-tools```
+
+```zypper: sudo zypper install libjxl-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [djxl](/man/djxl)(1), [cjxl](/man/cjxl)(1), [identify](/man/identify)(1), [exiftool](/man/exiftool)(1)

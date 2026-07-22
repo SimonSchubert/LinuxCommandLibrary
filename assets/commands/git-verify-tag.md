@@ -45,6 +45,24 @@ This is commonly used to verify the integrity of release tags in security-sensit
 
 The signer's public key must already be available in the local GPG keyring (or configured SSH/X.509 verifier); an unknown key causes verification to fail even for a well-formed signature. Exits non-zero if any given tag lacks a valid signature.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-tag](/man/git-tag)(1), [git-verify-commit](/man/git-verify-commit)(1)

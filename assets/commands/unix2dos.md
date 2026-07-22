@@ -57,6 +57,24 @@ The tool is commonly used when preparing files for Windows systems or when worki
 
 Binary files should not be processed. Large files are processed efficiently. The tool can handle UTF-8 and other encodings. Part of the dos2unix package.
 
+# INSTALL
+
+```apt: sudo apt install dos2unix```
+
+```dnf: sudo dnf install dos2unix```
+
+```pacman: sudo pacman -S dos2unix```
+
+```apk: sudo apk add dos2unix```
+
+```zypper: sudo zypper install dos2unix```
+
+```brew: brew install dos2unix```
+
+```nix: nix profile install nixpkgs#dos2unix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dos2unix](/man/dos2unix)(1), [unix2mac](/man/unix2mac)(1), [mac2unix](/man/mac2unix)(1)

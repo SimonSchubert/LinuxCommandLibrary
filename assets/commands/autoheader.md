@@ -61,6 +61,21 @@ Part of autotools; typically called by autoreconf. Output is template; actual co
 
 **autoheader** is part of GNU Autoconf, developed to manage configuration header files in portable software since the early **1990s**.
 
+# INSTALL
+
+```dnf: sudo dnf install autoconf```
+
+```pacman: sudo pacman -S autoconf```
+
+```apk: sudo apk add autoconf```
+
+```zypper: sudo zypper install autoconf```
+
+```brew: brew install autoconf```
+
+```nix: nix profile install nixpkgs#autoconf```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [autoconf](/man/autoconf)(1), [autoreconf](/man/autoreconf)(1), [automake](/man/automake)(1)

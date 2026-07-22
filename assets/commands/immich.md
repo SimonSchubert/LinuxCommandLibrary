@@ -51,6 +51,12 @@ Runs via Docker. Resource intensive. Mobile apps available.
 
 Immich was created by **Alex Tran** as an open-source alternative to Google Photos.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#immich```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [immich-cli](/man/immich-cli)(1), [docker](/man/docker)(1)

@@ -81,3 +81,11 @@ RCON is not encrypted; passwords travel in cleartext on the network. Use only on
 ```[Source code](https://github.com/n0la/rcon)```
 
 <!-- verified: 2026-07-19 -->
+
+# INSTALL
+
+```apk: sudo apk add rcon```
+
+```nix: nix profile install nixpkgs#rcon```
+
+<!-- packages: 2026-07-22 -->

@@ -66,6 +66,24 @@ Very large numbers take longer to factor. Some implementations have limits on nu
 
 **factor** is a classic Unix utility included in Version 1 Unix at Bell Labs in **1971**. It has remained part of Unix and Unix-like systems, now included in GNU coreutils. The command is one of the simpler mathematical utilities from Unix's early days, alongside **primes** which lists prime numbers.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [primes](/man/primes)(6), [bc](/man/bc)(1), [dc](/man/dc)(1), [expr](/man/expr)(1)

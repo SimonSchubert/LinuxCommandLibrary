@@ -41,6 +41,16 @@ If you modify the package while exploring, the package is **not** rebuilt automa
 
 Opens an interactive subshell — type **exit** to return to the parent shell. Edits made under **node_modules** are wiped on the next **npm install**, so persist changes upstream when possible. Using **--** before the command is recommended so npm does not interpret the trailing arguments as its own flags.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-ls](/man/npm-ls)(1), [npm-edit](/man/npm-edit)(1)

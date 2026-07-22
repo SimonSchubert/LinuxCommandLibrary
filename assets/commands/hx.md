@@ -87,6 +87,24 @@ Different model than Vim. Learning curve for new users. Rust-based.
 
 Helix was created as a modern terminal editor, taking inspiration from **Kakoune** and **Neovim**.
 
+# INSTALL
+
+```apt: sudo apt install hx```
+
+```dnf: sudo dnf install helix```
+
+```pacman: sudo pacman -S helix```
+
+```apk: sudo apk add helix```
+
+```zypper: sudo zypper install helix```
+
+```brew: brew install hx```
+
+```nix: nix profile install nixpkgs#helix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [helix](/man/helix)(1), [vim](/man/vim)(1), [nvim](/man/nvim)(1)

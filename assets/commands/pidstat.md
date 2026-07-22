@@ -119,6 +119,24 @@ The `/proc` filesystem must be mounted for pidstat to work. Specifying an interv
 
 **pidstat** is part of the **sysstat** package, developed by Sebastien Godard. It provides per-process statistics that complement system-wide tools like mpstat and iostat.
 
+# INSTALL
+
+```apt: sudo apt install sysstat```
+
+```dnf: sudo dnf install sysstat```
+
+```pacman: sudo pacman -S sysstat```
+
+```apk: sudo apk add sysstat```
+
+```zypper: sudo zypper install sysstat```
+
+```brew: brew install sysstat```
+
+```nix: nix profile install nixpkgs#sysstat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sar](/man/sar)(1), [top](/man/top)(1), [ps](/man/ps)(1), [mpstat](/man/mpstat)(1), [iostat](/man/iostat)(1), [vmstat](/man/vmstat)(1)

@@ -53,6 +53,24 @@ A module cannot be removed if it is in use by another module or process. Use **m
 
 **rmmod** is part of **kmod**. It provides direct module removal without the intelligence of modprobe -r.
 
+# INSTALL
+
+```apt: sudo apt install kmod```
+
+```dnf: sudo dnf install kmod```
+
+```pacman: sudo pacman -S kmod```
+
+```apk: sudo apk add kmod```
+
+```zypper: sudo zypper install kmod```
+
+```brew: brew install kmod```
+
+```nix: nix profile install nixpkgs#kmod```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [modprobe](/man/modprobe)(8), [insmod](/man/insmod)(8), [lsmod](/man/lsmod)(8)

@@ -128,6 +128,24 @@ Learning curve for keyboard navigation. Default keybindings may conflict with te
 
 **irssi** was created by Timo Sirainen around **1999** as a modular, scriptable IRC client. The name comes from IRC written with the Finnish "ii" ending. It became one of the most popular terminal IRC clients, praised for its stability and extensibility. Development continues with regular maintenance releases.
 
+# INSTALL
+
+```apt: sudo apt install irssi```
+
+```dnf: sudo dnf install irssi```
+
+```pacman: sudo pacman -S irssi```
+
+```apk: sudo apk add irssi```
+
+```zypper: sudo zypper install irssi```
+
+```brew: brew install irssi```
+
+```nix: nix profile install nixpkgs#irssi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [weechat](/man/weechat)(1), [screen](/man/screen)(1), [tmux](/man/tmux)(1), [hexchat](/man/hexchat)(1)

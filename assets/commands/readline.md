@@ -84,6 +84,18 @@ Configuration varies by application. Some programs use libedit instead. Reload: 
 
 GNU Readline was written by **Brian Fox** for the GNU Project, becoming the standard line editing library.
 
+# INSTALL
+
+```dnf: sudo dnf install readline```
+
+```pacman: sudo pacman -S readline```
+
+```brew: brew install readline```
+
+```nix: nix profile install nixpkgs#readline```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [bind](/man/bind)(1)

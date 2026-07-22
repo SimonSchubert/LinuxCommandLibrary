@@ -84,6 +84,22 @@ The machine ID is persistent across reboots and stored in **/etc/machine-id**. T
 
 The invocation-id subcommand only works within systemd service contexts. Machine IDs should not be changed after initial setup. UUIDs are compatible with RFC 4122. Part of the systemd suite.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-machine-id-setup](/man/systemd-machine-id-setup)(1), [machine-id](/man/machine-id)(5), [systemctl](/man/systemctl)(1), [uuidgen](/man/uuidgen)(1)

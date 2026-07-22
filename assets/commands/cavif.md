@@ -76,6 +76,12 @@ Requires Rust 1.67 or later if building from source.
 
 **cavif** was created by Kornel Lesinski as a pure Rust implementation of an AVIF encoder. AVIF itself was standardized in **2019** by the Alliance for Open Media, leveraging the AV1 video codec for still image compression.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#cavif```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cwebp](/man/cwebp)(1), [convert](/man/convert)(1)

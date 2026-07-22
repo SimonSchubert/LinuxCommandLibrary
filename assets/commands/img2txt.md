@@ -77,6 +77,18 @@ Output quality depends on terminal capabilities and font characteristics. Wide c
 
 img2txt is part of libcaca, a graphics library for text terminals created by Sam Hocevar. The library was first released in **2003** and has been used in various projects including VLC media player for ASCII video rendering.
 
+# INSTALL
+
+```apt: sudo apt install caca-utils```
+
+```dnf: sudo dnf install caca-utils```
+
+```apk: sudo apk add libcaca-apps```
+
+```zypper: sudo zypper install caca-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cacaview](/man/cacaview)(1), [jp2a](/man/jp2a)(1)

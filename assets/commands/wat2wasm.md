@@ -61,6 +61,20 @@ WAT syntax required. Part of WABT. Strict validation.
 
 **wat2wasm** is part of **WABT** (WebAssembly Binary Toolkit), compiling WAT text format to binary WASM.
 
+# INSTALL
+
+```apt: sudo apt install wabt```
+
+```dnf: sudo dnf install wabt```
+
+```pacman: sudo pacman -S wabt```
+
+```brew: brew install wabt```
+
+```nix: nix profile install nixpkgs#wabt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wasm2wat](/man/wasm2wat)(1), [wasm-opt](/man/wasm-opt)(1), [wasm-validate](/man/wasm-validate)(1)

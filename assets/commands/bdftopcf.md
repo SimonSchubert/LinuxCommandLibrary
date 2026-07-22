@@ -65,6 +65,21 @@ Convert BDF bitmap fonts to PCF format
 
 Part of the X.Org font utilities. Output fonts are portable but read faster on matching architectures. Terminal fonts (-t) render faster but require uniform glyph sizing.
 
+# INSTALL
+
+```apt: sudo apt install xfonts-utils```
+
+```dnf: sudo dnf install bdftopcf```
+
+```apk: sudo apk add bdftopcf```
+
+```zypper: sudo zypper install bdftopcf```
+
+```brew: brew install bdftopcf```
+
+```nix: nix profile install nixpkgs#bdftopcf```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [xfontsel](/man/xfontsel)(1), [xlsfonts](/man/xlsfonts)(1), [fc-cache](/man/fc-cache)(1)

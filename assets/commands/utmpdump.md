@@ -57,6 +57,12 @@ This tool is designed for debugging purposes. The -r option should be used with 
 
 **utmpdump** is part of the **util-linux** package, providing utilities for examining and repairing corrupted utmp and wtmp entries.
 
+# INSTALL
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [last](/man/last)(1), [lastb](/man/lastb)(1), [who](/man/who)(1), [w](/man/w)(1)

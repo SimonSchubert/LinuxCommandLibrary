@@ -40,6 +40,22 @@ Initialize project for **libtool** with copy and force
 
 Should be run before autoreconf or aclocal when setting up autotools projects. Creates or modifies m4 macro files.
 
+# INSTALL
+
+```dnf: sudo dnf install libtool```
+
+```pacman: sudo pacman -S libtool```
+
+```apk: sudo apk add libtool```
+
+```zypper: sudo zypper install libtool```
+
+```brew: brew install libtool```
+
+```nix: nix profile install nixpkgs#libtool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [libtool](/man/libtool)(1), [autoreconf](/man/autoreconf)(1), [automake](/man/automake)(1)

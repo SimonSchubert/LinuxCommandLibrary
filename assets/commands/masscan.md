@@ -81,6 +81,22 @@ Requires root/raw sockets. High rates may overwhelm networks. Only for authorize
 
 **masscan** was created by **Robert David Graham** and released in **2013**. It was designed to demonstrate that Internet-wide scanning was feasible and to provide a tool for legitimate security research at scale.
 
+# INSTALL
+
+```apt: sudo apt install masscan```
+
+```dnf: sudo dnf install masscan```
+
+```pacman: sudo pacman -S masscan```
+
+```apk: sudo apk add masscan```
+
+```brew: brew install masscan```
+
+```nix: nix profile install nixpkgs#masscan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [zmap](/man/zmap)(1), [rustscan](/man/rustscan)(1), [unicornscan](/man/unicornscan)(1)

@@ -74,6 +74,12 @@ Requires appropriate permissions to access Slurm controller data. The reset opti
 
 Part of **Slurm** workload manager, providing diagnostic tools for cluster administrators.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scontrol](/man/scontrol)(1), [sinfo](/man/sinfo)(1), [squeue](/man/squeue)(1), [sacct](/man/sacct)(1)

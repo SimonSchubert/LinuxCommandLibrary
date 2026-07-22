@@ -84,6 +84,18 @@ Less widely installed than dig. Some output format differences from dig. DNSSEC 
 
 drill was developed as part of the **ldns** library by **NLnet Labs**, creators of Unbound DNS. It was designed as a dig replacement with better DNSSEC support and cleaner output.
 
+# INSTALL
+
+```apt: sudo apt install ldnsutils```
+
+```apk: sudo apk add drill```
+
+```brew: brew install drill```
+
+```nix: nix profile install nixpkgs#drill```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [dog](/man/dog)(1), [unbound](/man/unbound)(8)

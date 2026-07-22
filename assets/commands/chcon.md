@@ -95,6 +95,22 @@ Changes made with chcon are temporary and may be reset by restorecon or system r
 
 **chcon** is part of GNU **coreutils**, providing SELinux security context management for files on systems with SELinux enabled.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [restorecon](/man/restorecon)(8), [semanage](/man/semanage)(8), [ls](/man/ls)(1), [secon](/man/secon)(1)

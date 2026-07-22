@@ -53,6 +53,12 @@ Identity files in the home directory (identity.secret, identity.public) should b
 
 Firewall rules must allow UDP traffic for peer connections. Blocked UDP can force traffic through relays, reducing performance.
 
+# INSTALL
+
+```pacman: sudo pacman -S zerotier-one```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zerotier-cli](/man/zerotier-cli)(1), [zerotier-idtool](/man/zerotier-idtool)(1), [systemctl](/man/systemctl)(1)

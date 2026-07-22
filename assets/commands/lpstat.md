@@ -82,6 +82,18 @@ Information depends on CUPS configuration. Some details need appropriate access.
 
 **lpstat** follows the POSIX printing interface, with implementations in various Unix systems. The CUPS implementation by **Apple** and **Michael Sweet** became standard on macOS and Linux.
 
+# INSTALL
+
+```apt: sudo apt install lprng```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lp](/man/lp)(1), [lpr](/man/lpr)(1), [lpq](/man/lpq)(1), [cancel](/man/cancel)(1), [cupsd](/man/cupsd)(8)

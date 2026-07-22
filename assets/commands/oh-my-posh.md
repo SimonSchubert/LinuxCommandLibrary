@@ -75,6 +75,16 @@ Requires Nerd Font for icons. Cross-platform. Config in JSON/YAML/TOML.
 
 oh-my-posh was created for **customizable shell prompts** across different shells.
 
+# INSTALL
+
+```dnf: sudo dnf install oh-my-posh```
+
+```brew: brew install oh-my-posh```
+
+```nix: nix profile install nixpkgs#oh-my-posh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [starship](/man/starship)(1), [powerline](/man/powerline)(1), [p10k](/man/p10k)(1)

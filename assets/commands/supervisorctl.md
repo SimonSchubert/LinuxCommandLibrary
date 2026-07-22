@@ -97,6 +97,20 @@ Requires supervisord running. Socket permissions may be needed. Config changes n
 
 **Supervisor** was created by **Chris McDonough** for process management. It's widely used for running application servers and background workers.
 
+# INSTALL
+
+```dnf: sudo dnf install supervisor```
+
+```pacman: sudo pacman -S supervisor```
+
+```apk: sudo apk add supervisor```
+
+```zypper: sudo zypper install supervisor```
+
+```brew: brew install supervisor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [supervisord](/man/supervisord)(8), [systemctl](/man/systemctl)(1)

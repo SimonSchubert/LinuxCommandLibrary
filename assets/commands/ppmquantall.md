@@ -37,6 +37,24 @@ Part of the Netpbm toolkit. Superseded by **pnmquantall** (Netpbm 10.58, March 2
 
 Modifies input files in place unless **-ext** is specified. Use **-ext** to preserve originals.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm-extras```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmquantall](/man/pnmquantall)(1), [ppmquant](/man/ppmquant)(1)

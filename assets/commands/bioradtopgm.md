@@ -55,6 +55,24 @@ If the output image appears upside down, pipe it through **pamflip -tb** to corr
 
 Part of the Netpbm toolkit, **bioradtopgm** was developed to enable conversion of proprietary Bio-Rad confocal microscope data into open, interchangeable formats for scientific and medical research workflows.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamflip](/man/pamflip)(1), [pnmtojpeg](/man/pnmtojpeg)(1), [pnmtopng](/man/pnmtopng)(1), [netpbm](/man/netpbm)(1)

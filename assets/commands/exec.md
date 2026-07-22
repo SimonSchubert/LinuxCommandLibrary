@@ -63,6 +63,16 @@ If the command cannot be executed, a non-interactive shell exits unless the **ex
 
 Shell built-in command. The shell terminates after exec completes, so any commands after exec in a script will not run. File descriptor redirections without a command persist in the current shell. Behavior may vary slightly between bash, zsh, and other POSIX shells.
 
+# INSTALL
+
+```apk: sudo apk add execline```
+
+```brew: brew install execline```
+
+```nix: nix profile install nixpkgs#execline```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [sh](/man/sh)(1), [env](/man/env)(1), [zsh](/man/zsh)(1)

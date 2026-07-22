@@ -73,6 +73,23 @@ HTML email rendering requires **w3m** to be installed. Homebrew builds on macOS 
 
 **aerc** was originally created by **Drew DeVault** (sircmpwn) with the first commit in **January 2018** and the 0.1.0 pre-release announced in **June 2019**. After the original project became unmaintained, **Robin Jarry** forked and took over active maintenance. The project is hosted on SourceHut and licensed under the MIT license.
 
+# INSTALL
+
+```apt: sudo apt install aerc```
+
+```dnf: sudo dnf install aerc```
+
+```pacman: sudo pacman -S aerc```
+
+```apk: sudo apk add aerc```
+
+```zypper: sudo zypper install aerc```
+
+```brew: brew install aerc```
+
+```nix: nix profile install nixpkgs#aerc```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [mutt](/man/mutt)(1), [alpine](/man/alpine)(1), [neomutt](/man/neomutt)(1), [notmuch](/man/notmuch)(1)

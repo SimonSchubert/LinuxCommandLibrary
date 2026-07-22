@@ -109,6 +109,22 @@ Only records uptimes after installation. Requires daemon to be running to track 
 
 **uptimed** was created by Rob Kaper and is now maintained by Radek Podgorny. It was inspired by the 'ud' utility but uses a different design based on boot times rather than PID files to track sessions.
 
+# INSTALL
+
+```apt: sudo apt install uptimed```
+
+```dnf: sudo dnf install uptimed```
+
+```pacman: sudo pacman -S uptimed```
+
+```apk: sudo apk add uptimed```
+
+```brew: brew install uptimed```
+
+```nix: nix profile install nixpkgs#uptimed```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uprecords](/man/uprecords)(1), [uptime](/man/uptime)(1), [last](/man/last)(1), [who](/man/who)(1)

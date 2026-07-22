@@ -75,6 +75,12 @@ Requires Azure account for deployment. Local emulator has limitations. Language 
 
 func is part of **Azure Functions Core Tools** from Microsoft, enabling local development of serverless functions for the Azure platform.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#func```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [az](/man/az)(1), [dotnet](/man/dotnet)(1)

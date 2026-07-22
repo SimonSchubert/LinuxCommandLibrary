@@ -74,6 +74,18 @@ Configuration stored in ~/.config/hexchat. IRC connections may need SSL. Some ne
 
 HexChat was forked from **XChat** in **2009** when XChat's Windows builds became shareware. It's maintained by a community of developers and is the most popular graphical IRC client on Linux.
 
+# INSTALL
+
+```apt: sudo apt install hexchat```
+
+```dnf: sudo dnf install hexchat```
+
+```zypper: sudo zypper install hexchat```
+
+```nix: nix profile install nixpkgs#hexchat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [irssi](/man/irssi)(1), [weechat](/man/weechat)(1)

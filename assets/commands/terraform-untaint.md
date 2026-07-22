@@ -44,6 +44,14 @@ Like `terraform taint`, this command is deprecated in favor of more explicit mec
 
 Deprecated. Prefer `terraform apply -replace=...` when you need to force replacement. Untaint only removes the state marker; it does not repair remote objects.
 
+# INSTALL
+
+```pacman: sudo pacman -S terraform```
+
+```nix: nix profile install nixpkgs#terraform```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [terraform-apply](/man/terraform-apply)(1), [terraform-taint](/man/terraform-taint)(1)

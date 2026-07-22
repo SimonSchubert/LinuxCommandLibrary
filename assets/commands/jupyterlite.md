@@ -109,6 +109,12 @@ Not all Python packages work in Pyodide (no native extensions without WASM build
 
 JupyterLite was released in **2021** by the **Project Jupyter** team, leveraging Pyodide for browser-based Python. It enables sharing interactive notebooks without server infrastructure. The project grew from experiments with WebAssembly Python interpreters. JupyterLite enables educational content, documentation, and lightweight demos. Development continues alongside JupyterLab improvements.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#jupyterlite```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jupyter-lab](/man/jupyter-lab)(1), [jupyter](/man/jupyter)(1)

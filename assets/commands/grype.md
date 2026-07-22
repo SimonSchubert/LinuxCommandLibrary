@@ -102,6 +102,20 @@ Database updates needed regularly. False positives possible. Coverage depends on
 
 **grype** was created by **Anchore** as part of their open source security tooling alongside Syft. It emerged around **2020** to address container security scanning needs with a focus on accuracy and integration.
 
+# INSTALL
+
+```dnf: sudo dnf install grype```
+
+```apk: sudo apk add grype```
+
+```zypper: sudo zypper install grype```
+
+```brew: brew install grype```
+
+```nix: nix profile install nixpkgs#grype```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [syft](/man/syft)(1), [trivy](/man/trivy)(1), [snyk](/man/snyk)(1)

@@ -106,6 +106,16 @@ Thorough scans take time. Some checks may trigger IDS. Depends on OpenSSL versio
 
 **testssl.sh** was created by **Dirk Wetter** starting around **2012**. It provides comprehensive TLS testing without requiring complex setup, becoming a standard tool for security assessments.
 
+# INSTALL
+
+```dnf: sudo dnf install testssl```
+
+```brew: brew install testssl```
+
+```nix: nix profile install nixpkgs#testssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sslscan](/man/sslscan)(1), [nmap](/man/nmap)(1), [openssl](/man/openssl)(1), [sslyze](/man/sslyze)(1)

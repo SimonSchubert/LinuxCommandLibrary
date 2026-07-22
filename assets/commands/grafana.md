@@ -84,6 +84,22 @@ Runs as service; requires systemd or init setup. Data sources need separate inst
 
 Grafana was created by **Torkel Odegaard** in **2014**, initially as a fork of Kibana for Graphite visualization. It grew into a leading visualization platform, with Grafana Labs founded in **2015** to support commercial development.
 
+# INSTALL
+
+```dnf: sudo dnf install grafana```
+
+```pacman: sudo pacman -S grafana```
+
+```apk: sudo apk add grafana```
+
+```zypper: sudo zypper install grafana```
+
+```brew: brew install grafana```
+
+```nix: nix profile install nixpkgs#grafana```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [prometheus](/man/prometheus)(1)

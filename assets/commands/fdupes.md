@@ -97,6 +97,24 @@ Byte-by-byte comparison can be slow for large files. Delete operations are irrev
 
 **fdupes** was created by **Adrian Lopez** in **1999** as a utility for finding duplicate files. It has been maintained and enhanced over the years, becoming a standard tool for duplicate detection on Unix-like systems. The tool influenced many similar utilities and remains actively used for disk cleanup operations.
 
+# INSTALL
+
+```apt: sudo apt install fdupes```
+
+```dnf: sudo dnf install fdupes```
+
+```pacman: sudo pacman -S fdupes```
+
+```apk: sudo apk add fdupes```
+
+```zypper: sudo zypper install fdupes```
+
+```brew: brew install fdupes```
+
+```nix: nix profile install nixpkgs#fdupes```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rmlint](/man/rmlint)(1), [find](/man/find)(1), [md5sum](/man/md5sum)(1), [diff](/man/diff)(1)

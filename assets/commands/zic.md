@@ -74,6 +74,14 @@ Input files use a specific format with Rule, Zone, and Link lines that define ti
 
 Requires properly formatted timezone source files. Typically run as root when writing to system directories. Incorrect data can break time handling system-wide. The **-y** option for year type commands is obsolete and no longer supported in modern versions.
 
+# INSTALL
+
+```apt: sudo apt install libc-bin```
+
+```apk: sudo apk add tzdata-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zdump](/man/zdump)(8), [tzselect](/man/tzselect)(8)

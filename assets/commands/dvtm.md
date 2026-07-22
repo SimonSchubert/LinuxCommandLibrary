@@ -99,6 +99,20 @@ Limited compared to tmux/screen. No built-in session persistence; pair with **ab
 
 **dvtm** was created by **Marc Andre Tanner** as a terminal multiplexer following **dwm** principles. It emerged from the suckless community around **2007**, providing dynamic tiling for terminal environments without the complexity of screen or tmux.
 
+# INSTALL
+
+```apt: sudo apt install dvtm```
+
+```dnf: sudo dnf install dvtm```
+
+```pacman: sudo pacman -S dvtm```
+
+```apk: sudo apk add dvtm```
+
+```nix: nix profile install nixpkgs#dvtm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [screen](/man/screen)(1), [dtach](/man/dtach)(1), [abduco](/man/abduco)(1)

@@ -121,6 +121,18 @@ Requires poppler-utils package. Some metadata may be inaccurate if PDF was poorl
 
 **pdfinfo** is part of **poppler-utils**, derived from the **Xpdf** project created by **Derek Noonburg**. These utilities became standard tools for PDF manipulation on Unix-like systems.
 
+# INSTALL
+
+```apt: sudo apt install poppler-utils```
+
+```dnf: sudo dnf install poppler-utils```
+
+```apk: sudo apk add poppler-utils```
+
+```nix: nix profile install nixpkgs#poppler-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdffonts](/man/pdffonts)(1), [pdfimages](/man/pdfimages)(1), [pdftotext](/man/pdftotext)(1), [exiftool](/man/exiftool)(1)

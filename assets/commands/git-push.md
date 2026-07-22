@@ -99,6 +99,24 @@ Force push overwrites remote history. Use --force-with-lease for safety. Branch 
 
 git push is a core **Git** command from initial release, implementing the distributed workflow by enabling commit sharing.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-pull](/man/git-pull)(1), [git-fetch](/man/git-fetch)(1), [git-remote](/man/git-remote)(1)

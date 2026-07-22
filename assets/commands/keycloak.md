@@ -123,6 +123,14 @@ Production mode requires explicit hostname configuration and TLS setup. The buil
 
 Keycloak was created by **Red Hat** and first released in **September 2014**. It originated from PicketLink and became Red Hat's strategic identity solution. The project joined CNCF as an incubating project in **2023**. Version 17 (2022) introduced Quarkus-based architecture replacing WildFly. Keycloak is widely deployed for enterprise SSO, API security, and user management.
 
+# INSTALL
+
+```pacman: sudo pacman -S keycloak```
+
+```nix: nix profile install nixpkgs#keycloak```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [authelia](/man/authelia)(1), [vault](/man/vault)(1)

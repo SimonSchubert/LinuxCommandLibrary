@@ -42,6 +42,14 @@ Services are managed through scripts in **/etc/init.d/** and configured using **
 
 Runlevel changes may stop services in the current runlevel that aren't in the target. Use **-n** to preserve running services. OpenRC is not compatible with systemd; distributions use one or the other.
 
+# INSTALL
+
+```apt: sudo apt install openrc```
+
+```apk: sudo apk add openrc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rc-status](/man/rc-status)(8), [rc-update](/man/rc-update)(8), [rc-service](/man/rc-service)(8)

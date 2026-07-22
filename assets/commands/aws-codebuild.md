@@ -121,6 +121,17 @@ Build timeouts default to 60 minutes; configure appropriately for long builds. I
 
 **AWS CodeBuild** launched in **December 2016** at AWS re:Invent as part of the AWS developer tools suite. It was designed to eliminate the need for managing Jenkins or other CI servers. Build batches for parallel builds were added in **2020**, improving performance for complex build matrices.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-codepipeline](/man/aws-codepipeline)(1), [aws-codecommit](/man/aws-codecommit)(1), [aws-s3](/man/aws-s3)(1)

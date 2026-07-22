@@ -189,6 +189,18 @@ Default policies are deny incoming, allow outgoing, deny forwarding. Enabling uf
 
 **ufw** was developed by Canonical for Ubuntu to simplify iptables firewall management. It was first released in Ubuntu 8.04 (2008) and has become a popular firewall tool across many Linux distributions.
 
+# INSTALL
+
+```dnf: sudo dnf install ufw```
+
+```pacman: sudo pacman -S ufw```
+
+```apk: sudo apk add ufw```
+
+```zypper: sudo zypper install ufw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iptables](/man/iptables)(8), [ip6tables](/man/ip6tables)(8), [nft](/man/nft)(8), [firewall-cmd](/man/firewall-cmd)(1)

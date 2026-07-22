@@ -112,6 +112,22 @@ Raw sockets require root privileges. Some modes may trigger IDS alerts. Use only
 
 **nping** was developed as part of the **Nmap** project by **Gordon Lyon** (Fyodor) and contributors. It complements Nmap's port scanning with active probing capabilities.
 
+# INSTALL
+
+```apt: sudo apt install nmap```
+
+```dnf: sudo dnf install nmap```
+
+```pacman: sudo pacman -S nmap```
+
+```apk: sudo apk add nmap-nping```
+
+```brew: brew install nmap```
+
+```nix: nix profile install nixpkgs#nmap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [hping3](/man/hping3)(8), [ping](/man/ping)(1), [traceroute](/man/traceroute)(1)

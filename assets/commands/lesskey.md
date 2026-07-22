@@ -80,6 +80,24 @@ In **less version 583** and later, less reads the **~/.lesskey** source file dir
 
 **lesskey** was created by **Mark Nudelman** as a companion utility to the **less** pager, which he developed starting in **1983** as a replacement for **more**. Historically, less required a compiled binary key binding file because parsing a text file at startup was considered too slow. Starting with less version **583** (circa 2021), less gained the ability to read the lesskey source file directly, making the lesskey compilation step optional.
 
+# INSTALL
+
+```apt: sudo apt install less```
+
+```dnf: sudo dnf install less```
+
+```pacman: sudo pacman -S less```
+
+```apk: sudo apk add less```
+
+```zypper: sudo zypper install less```
+
+```brew: brew install less```
+
+```nix: nix profile install nixpkgs#less```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [more](/man/more)(1)

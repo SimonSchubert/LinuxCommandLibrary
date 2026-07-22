@@ -34,6 +34,14 @@ Requires Spotify API credentials for music data. Image display depends on termin
 
 **mufetch** was created by **Ashish Kumar** (ashish0kumar) and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install mufetch```
+
+```nix: nix profile install nixpkgs#mufetch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neofetch](/man/neofetch)(1)

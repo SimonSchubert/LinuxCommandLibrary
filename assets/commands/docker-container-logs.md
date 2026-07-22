@@ -62,6 +62,24 @@ view logs from a container
 
 Logs are collected from the container's configured logging driver, which by default captures stdout and stderr from the container's PID 1 process. Time-based filtering and tail options make it efficient to work with large log volumes. The `--since` and `--until` options accept Unix timestamps, RFC 3339 date/time strings, or Go duration strings relative to the client machine's time.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-logs](/man/docker-logs)(1), [docker-container](/man/docker-container)(1)

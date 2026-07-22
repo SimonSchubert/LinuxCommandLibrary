@@ -83,6 +83,24 @@ Only relevant on NUMA systems. Statistics cumulative since boot. Requires /sys/d
 
 numastat is part of **numactl**, providing NUMA statistics similar to the original SGI IRIX numastat command.
 
+# INSTALL
+
+```apt: sudo apt install numactl```
+
+```dnf: sudo dnf install numactl```
+
+```pacman: sudo pacman -S numactl```
+
+```apk: sudo apk add numactl-tools```
+
+```zypper: sudo zypper install numactl```
+
+```brew: brew install numactl```
+
+```nix: nix profile install nixpkgs#numactl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [numactl](/man/numactl)(8), [migratepages](/man/migratepages)(8)

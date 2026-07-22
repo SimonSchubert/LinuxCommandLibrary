@@ -113,6 +113,18 @@ Read the output before running that. Empty files are all identical to one anothe
 
 duff was written by **Camilla Löwy** as a small, fast duplicate finder for Unix. Its approach is the classic one: group by size first, then by digest, and only fall back to comparing bytes when explicitly asked, which means the vast majority of candidate files are never fully read. Development has long been quiet, and **jdupes**, a maintained and considerably faster descendant of fdupes, is what most people reach for now.
 
+# INSTALL
+
+```apt: sudo apt install duff```
+
+```dnf: sudo dnf install duff```
+
+```brew: brew install duff```
+
+```nix: nix profile install nixpkgs#duff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fdupes](/man/fdupes)(1), [rdfind](/man/rdfind)(1), [jdupes](/man/jdupes)(1), [rmlint](/man/rmlint)(1), [find](/man/find)(1)

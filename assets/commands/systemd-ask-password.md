@@ -69,6 +69,22 @@ The tool is commonly used for disk encryption passphrases, but can be used in an
 
 Cached passwords in the kernel keyring are cleared on reboot. The **--no-tty** option requires a password agent to be running. Part of the systemd suite.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-tty-ask-password-agent](/man/systemd-tty-ask-password-agent)(1), [cryptsetup](/man/cryptsetup)(8)

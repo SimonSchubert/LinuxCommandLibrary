@@ -77,6 +77,24 @@ Log format must match the actual log format; mismatches cause parsing failures. 
 
 goaccess was created by Gerardo Orellana and first released in **2009**. It gained popularity as a lightweight, privacy-respecting alternative to cloud-based analytics services, particularly useful for quick server log analysis.
 
+# INSTALL
+
+```apt: sudo apt install goaccess```
+
+```dnf: sudo dnf install goaccess```
+
+```pacman: sudo pacman -S goaccess```
+
+```apk: sudo apk add goaccess```
+
+```zypper: sudo zypper install goaccess```
+
+```brew: brew install goaccess```
+
+```nix: nix profile install nixpkgs#goaccess```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [awstats](/man/awstats)(1), [nginx](/man/nginx)(8), [apache2](/man/apache2)(8)

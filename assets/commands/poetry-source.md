@@ -52,6 +52,18 @@ Modifies pyproject.toml. Priority affects resolution order.
 
 poetry source provides **repository management** for package sources.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [poetry-config](/man/poetry-config)(1)

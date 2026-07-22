@@ -70,6 +70,12 @@ Command-line options follow Chromium conventions. Some Chrome flags may not work
 
 Opera was originally developed in **1995** by Telenor in Norway, making it one of the oldest web browsers still in active development. In **2013**, Opera switched from its proprietary Presto engine to Chromium/Blink. The browser was acquired by a Chinese consortium in **2016** and continues development as Opera Software.
 
+# INSTALL
+
+```aur: yay -S opera```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chromium](/man/chromium)(1), [google-chrome](/man/google-chrome)(1), [firefox](/man/firefox)(1), [vivaldi-stable](/man/vivaldi-stable)(1)

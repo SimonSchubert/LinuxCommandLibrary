@@ -105,6 +105,22 @@ The daemon enforces security policies defined in its configuration files, contro
 
 Usually started automatically by systemd or session managers. Direct invocation is rarely needed. System bus requires root privileges. Configuration affects security and available services.
 
+# INSTALL
+
+```apt: sudo apt install dbus-daemon```
+
+```dnf: sudo dnf install dbus-daemon```
+
+```pacman: sudo pacman -S dbus```
+
+```apk: sudo apk add dbus```
+
+```brew: brew install dbus```
+
+```nix: nix profile install nixpkgs#dbus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dbus-send](/man/dbus-send)(1), [dbus-monitor](/man/dbus-monitor)(1), [dbus-launch](/man/dbus-launch)(1), [busctl](/man/busctl)(1)

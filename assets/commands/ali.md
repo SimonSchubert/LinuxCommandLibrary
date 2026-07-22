@@ -94,6 +94,17 @@ The terminal UI requires a terminal that supports standard escape sequences. Run
 
 **ali** was created by **Ryo Nakao** (nakabonne), a Go developer based in Tokyo, Japan. The tool was inspired by **vegeta** (HTTP load testing) and **jplot** (terminal plotting), combining both into a single real-time tool. It is open-source under the MIT license.
 
+# INSTALL
+
+```pacman: sudo pacman -S ali```
+
+```apk: sudo apk add ali```
+
+```brew: brew install ali```
+
+```nix: nix profile install nixpkgs#ali```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ab](/man/ab)(1), [wrk](/man/wrk)(1), [curl](/man/curl)(1), [hey](/man/hey)(1), [siege](/man/siege)(1), [vegeta](/man/vegeta)(1), [k6](/man/k6)(1)

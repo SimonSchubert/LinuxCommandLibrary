@@ -79,6 +79,21 @@ Requires ALSA drivers to be installed and configured. Raw files require explicit
 
 Part of **ALSA** (Advanced Linux Sound Architecture) utilities package, which replaced OSS as the standard Linux sound system.
 
+# INSTALL
+
+```apt: sudo apt install alsa-utils```
+
+```dnf: sudo dnf install alsa-utils```
+
+```pacman: sudo pacman -S alsa-utils```
+
+```apk: sudo apk add alsa-utils```
+
+```zypper: sudo zypper install alsa-utils```
+
+```nix: nix profile install nixpkgs#alsa-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [arecord](/man/arecord)(1), [alsamixer](/man/alsamixer)(1), [amixer](/man/amixer)(1)

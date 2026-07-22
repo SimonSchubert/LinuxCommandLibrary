@@ -67,6 +67,12 @@ Data directory: **~/.local/share/deja/** (**deja.db**, **sock**, generated **ini
 
 zsh only. Requires a reachable daemon (**deja ping** → **pong**). After a crash, remove a stale **~/.local/share/deja/sock** and open a new shell. Do not run alongside **zsh-autosuggestions**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#deja```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zsh](/man/zsh)(1), [history](/man/history)(1)

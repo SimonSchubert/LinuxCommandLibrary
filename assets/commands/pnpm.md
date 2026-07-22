@@ -83,6 +83,22 @@ Node.js required. Uses hard links for efficiency.
 
 pnpm was created as a **fast alternative** to npm with better disk usage.
 
+# INSTALL
+
+```dnf: sudo dnf install pnpm```
+
+```pacman: sudo pacman -S pnpm```
+
+```apk: sudo apk add pnpm```
+
+```zypper: sudo zypper install pnpm```
+
+```brew: brew install pnpm```
+
+```nix: nix profile install nixpkgs#pnpm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [yarn](/man/yarn)(1), [node](/man/node)(1)

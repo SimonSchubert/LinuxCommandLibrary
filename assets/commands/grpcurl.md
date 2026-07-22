@@ -105,6 +105,16 @@ Server must have reflection enabled for discovery, or proto files must be provid
 
 **grpcurl** was created by FullStory Inc. and released as open-source. It emerged from the need for a curl-equivalent for the gRPC ecosystem, which was gaining adoption for microservices communication. The tool is written in Go and uses the official gRPC-Go libraries.
 
+# INSTALL
+
+```dnf: sudo dnf install grpcurl```
+
+```brew: brew install grpcurl```
+
+```nix: nix profile install nixpkgs#grpcurl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [protoc](/man/protoc)(1)

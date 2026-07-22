@@ -80,6 +80,19 @@ Requires access to the PC speaker device (**/dev/input/by-path/platform-pcspkr-e
 
 **beep** was created by Johnathan Nightingale and has been a staple of Linux audio notifications since the early 2000s. It provides a lightweight way to produce sounds without requiring audio subsystems.
 
+# INSTALL
+
+```apt: sudo apt install beep```
+
+```dnf: sudo dnf install beep```
+
+```pacman: sudo pacman -S beep```
+
+```apk: sudo apk add beep```
+
+```nix: nix profile install nixpkgs#beep```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [speaker-test](/man/speaker-test)(1), [aplay](/man/aplay)(1), [play](/man/play)(1)

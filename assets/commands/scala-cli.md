@@ -90,6 +90,14 @@ Scala-CLI supports using directives (comments like `//> using dep`) within sourc
 
 For large multi-module projects, a dedicated build tool like sbt or Mill is more appropriate. Using directives in source files are a Scala-CLI feature and not standard Scala.
 
+# INSTALL
+
+```brew: brew install scala-cli```
+
+```nix: nix profile install nixpkgs#scala-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sbt](/man/sbt)(1), [scala](/man/scala)(1), [gradle](/man/gradle)(1)

@@ -60,6 +60,12 @@ Behavior depends on mailcap configuration. Some MIME types may not have configur
 
 Part of **mime-support** package, providing MIME type handling utilities based on RFC 1524 mailcap specification.
 
+# INSTALL
+
+```aur: yay -S run-mailcap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [see](/man/see)(1), [edit](/man/edit)(1), [compose](/man/compose)(1), [print](/man/print)(1), [xdg-open](/man/xdg-open)(1), [file](/man/file)(1)

@@ -113,6 +113,24 @@ System load affects results - close other applications for accurate measurements
 
 **hyperfine** was created by David Peter (sharkdp) and released around **2018**. Written in Rust, it was designed as a more user-friendly and statistically rigorous alternative to shell-based benchmarking with **time**. It's part of a collection of modern CLI tools (including fd, bat, etc.) that improve on traditional Unix utilities.
 
+# INSTALL
+
+```apt: sudo apt install hyperfine```
+
+```dnf: sudo dnf install hyperfine```
+
+```pacman: sudo pacman -S hyperfine```
+
+```apk: sudo apk add hyperfine```
+
+```zypper: sudo zypper install hyperfine```
+
+```brew: brew install hyperfine```
+
+```nix: nix profile install nixpkgs#hyperfine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [time](/man/time)(1), [perf](/man/perf)(1), [pv](/man/pv)(1)

@@ -44,6 +44,24 @@ Labels and UUIDs are useful for identifying swap areas in **/etc/fstab** instead
 
 The swap area must be inactive (not in use) when changing label or UUID. Requires root privileges. After changing UUID, update **/etc/fstab** if it references the old UUID. Part of the util-linux package.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkswap](/man/mkswap)(8), [swapon](/man/swapon)(8), [swapoff](/man/swapoff)(8), [uuidgen](/man/uuidgen)(1)

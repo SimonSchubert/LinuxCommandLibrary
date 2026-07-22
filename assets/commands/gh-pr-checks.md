@@ -78,6 +78,24 @@ The watch mode enables waiting for checks to complete, useful in scripts that ne
 
 Only shows checks reported to GitHub. Some CI systems may have delays in reporting. The **--fail-fast** flag only works in combination with **--watch**. Watch mode is subject to API rate limits.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh-pr](/man/gh-pr)(1), [gh-pr-merge](/man/gh-pr-merge)(1), [gh-run](/man/gh-run)(1), [gh-pr-view](/man/gh-pr-view)(1)

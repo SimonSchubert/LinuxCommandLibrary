@@ -103,6 +103,24 @@ The default output format is not stable enough to parse; use **--porcelain** or 
 
 **git annotate** was added early in git's life, in **2005**, as a Perl script providing a CVS-style name and output format for what **git blame** already did. It was later reimplemented in C and is now a thin front-end over the same code as **git blame**.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-blame](/man/git-blame)(1), [git-log](/man/git-log)(1), [git-diff](/man/git-diff)(1), [git-bisect](/man/git-bisect)(1)

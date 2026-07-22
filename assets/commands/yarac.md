@@ -47,6 +47,24 @@ YARA required. Rule syntax must be valid. Binary not portable across versions.
 
 **yarac** is part of **YARA**, a pattern matching tool for malware researchers.
 
+# INSTALL
+
+```apt: sudo apt install yara```
+
+```dnf: sudo dnf install yara```
+
+```pacman: sudo pacman -S yara```
+
+```apk: sudo apk add yara```
+
+```zypper: sudo zypper install yara```
+
+```brew: brew install yara```
+
+```nix: nix profile install nixpkgs#yara```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yara](/man/yara)(1), [clamav](/man/clamav)(1)

@@ -28,6 +28,20 @@ Requires PulseAudio with module-gconf loaded in the sound server. Can only confi
 
 paprefs was created for **PulseAudio** network and module configuration.
 
+# INSTALL
+
+```apt: sudo apt install paprefs```
+
+```dnf: sudo dnf install paprefs```
+
+```pacman: sudo pacman -S paprefs```
+
+```zypper: sudo zypper install paprefs```
+
+```nix: nix profile install nixpkgs#paprefs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pavucontrol](/man/pavucontrol)(1), [pulseaudio](/man/pulseaudio)(1), [pactl](/man/pactl)(1)

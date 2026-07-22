@@ -133,6 +133,14 @@ Requires Java 11 or later. Workflow scripts use a Groovy-based DSL (DSL2 is the 
 
 Nextflow was created by **Paolo Di Tommaso** at the **Centre for Genomic Regulation (CRG)** in Barcelona, with initial public release in **2013**. It was designed for reproducible, scalable scientific workflows, initially in bioinformatics. The project is now maintained by **Seqera Labs** and underpins the **nf-core** community of curated pipelines.
 
+# INSTALL
+
+```brew: brew install nextflow```
+
+```nix: nix profile install nixpkgs#nextflow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snakemake](/man/snakemake)(1), [cwl-runner](/man/cwl-runner)(1), [luigi](/man/luigi)(1)

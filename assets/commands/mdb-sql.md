@@ -81,6 +81,22 @@ Limited SQL support compared to full Access SQL. Part of mdbtools. May not suppo
 
 mdb-sql is part of **mdbtools** for accessing Microsoft Access databases on Linux/Unix.
 
+# INSTALL
+
+```apt: sudo apt install mdbtools```
+
+```dnf: sudo dnf install mdbtools```
+
+```apk: sudo apk add mdbtools-utils```
+
+```zypper: sudo zypper install mdbtools```
+
+```brew: brew install mdbtools```
+
+```nix: nix profile install nixpkgs#mdbtools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mdbtools](/man/mdbtools)(1)

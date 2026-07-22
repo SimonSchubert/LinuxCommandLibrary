@@ -76,6 +76,12 @@ Requires Docker. Memory intensive. Recipe-based configuration.
 
 Lando was created by **Tandem** to simplify Docker-based development environments for various tech stacks.
 
+# INSTALL
+
+```aur: yay -S lando```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-compose](/man/docker-compose)(1), [ddev](/man/ddev)(1), [docker](/man/docker)(1)

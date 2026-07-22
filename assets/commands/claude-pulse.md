@@ -87,6 +87,12 @@ Requires Node.js 18 or newer. The dashboard binds to localhost only; remote tool
 
 claude-pulse is a community tool published on npm as **pulse-for-claude-code**, created to give Claude Code users visibility into token usage, context, and session history without external dependencies. It is distributed under the MIT license.
 
+# INSTALL
+
+```aur: yay -S claude```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1), [npx](/man/npx)(1), [node](/man/node)(1)

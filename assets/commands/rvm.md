@@ -79,6 +79,12 @@ Modifies shell initialization. Can conflict with system Ruby. Gemsets add comple
 
 **RVM** was created by **Wayne E. Seguin** in **2009** to simplify Ruby version management. It became the dominant Ruby version manager before rbenv offered a simpler alternative. Now maintained by **Michal Papis**.
 
+# INSTALL
+
+```dnf: sudo dnf install rvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ruby](/man/ruby)(1), [gem](/man/gem)(1), [rbenv](/man/rbenv)(1), [bundler](/man/bundler)(1)

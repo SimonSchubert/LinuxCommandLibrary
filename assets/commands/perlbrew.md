@@ -127,6 +127,14 @@ Building Perl takes time. Disk usage accumulates with versions. Some modules nee
 
 **perlbrew** was created by **Kang-min Liu** (gugod) around **2010**, inspired by Ruby's rvm and rbenv. It addressed the need for multiple Perl versions in development, especially for testing CPAN module compatibility.
 
+# INSTALL
+
+```dnf: sudo dnf install perlbrew```
+
+```pacman: sudo pacman -S perlbrew```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [plenv](/man/plenv)(1), [cpanm](/man/cpanm)(1), [carton](/man/carton)(1), [perl](/man/perl)(1)

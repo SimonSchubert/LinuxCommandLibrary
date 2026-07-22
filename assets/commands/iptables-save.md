@@ -43,6 +43,20 @@ This saves only IPv4 rules. Use ip6tables-save for IPv6. Rules are output in a f
 
 **iptables-save** is part of the **iptables** package for managing the Linux kernel firewall.
 
+# INSTALL
+
+```pacman: sudo pacman -S iptables```
+
+```apk: sudo apk add iptables```
+
+```zypper: sudo zypper install iptables```
+
+```brew: brew install iptables```
+
+```nix: nix profile install nixpkgs#iptables```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iptables](/man/iptables)(8), [iptables-restore](/man/iptables-restore)(8), [ip6tables-save](/man/ip6tables-save)(8)

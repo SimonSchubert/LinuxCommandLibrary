@@ -72,6 +72,12 @@ Packages can be specified by name, version constraints (**==**, **>=**, **~=**),
 
 By default, pip resolves and installs all dependencies. Use **--no-deps** to skip dependency installation for tighter control. The **--pre** flag includes pre-release and development versions in the resolution process. Custom package indexes can be specified with **-i** for private registries.
 
+# INSTALL
+
+```apk: sudo apk add py3-pip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [pip-uninstall](/man/pip-uninstall)(1), [pip-download](/man/pip-download)(1)

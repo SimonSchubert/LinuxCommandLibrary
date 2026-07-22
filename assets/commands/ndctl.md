@@ -105,6 +105,20 @@ Operations on active namespaces may require unmounting filesystems first. Destro
 
 **ndctl** was developed by Intel and the Linux community as part of the **pmem** (persistent memory) project. It provides userspace tools for managing NVDIMMs as standardized by ACPI NFIT and the NVDIMM driver subsystem.
 
+# INSTALL
+
+```apt: sudo apt install ndctl```
+
+```dnf: sudo dnf install ndctl```
+
+```pacman: sudo pacman -S ndctl```
+
+```apk: sudo apk add ndctl```
+
+```zypper: sudo zypper install ndctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [daxctl](/man/daxctl)(1), [cxl](/man/cxl)(1)

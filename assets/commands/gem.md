@@ -82,6 +82,22 @@ System gems may require sudo. Conflicts possible without bundler. Version resolu
 
 RubyGems was created in 2004 to standardize Ruby library distribution. It became part of Ruby's standard library in Ruby 1.9, making gem the official Ruby package manager.
 
+# INSTALL
+
+```dnf: sudo dnf install ruby```
+
+```pacman: sudo pacman -S ruby```
+
+```apk: sudo apk add ruby```
+
+```zypper: sudo zypper install ruby```
+
+```brew: brew install ruby```
+
+```nix: nix profile install nixpkgs#ruby```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bundle](/man/bundle)(1), [ruby](/man/ruby)(1), [rvm](/man/rvm)(1)

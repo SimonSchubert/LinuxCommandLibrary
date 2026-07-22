@@ -53,6 +53,16 @@ By default, Bun respects **#!/usr/bin/env node** shebangs in executables and run
 **--verbose**
 > Enable verbose output during installation.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-x](/man/bun-x)(1), [bun-run](/man/bun-run)(1), [npx](/man/npx)(1)

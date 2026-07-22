@@ -129,6 +129,17 @@ Session Manager requires the SSM Agent and proper IAM instance profile. Paramete
 
 **AWS Systems Manager** evolved from **EC2 Run Command** which launched in **October 2015**. It was unified under the Systems Manager brand in **2017**. **Session Manager** was introduced at **re:Invent 2018** as a secure alternative to SSH. **Parameter Store** expanded to include advanced parameters and higher throughput tiers. The service has grown to include Patch Manager, State Manager, OpsCenter, and Change Manager for comprehensive operations.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ec2](/man/aws-ec2)(1), [ssh](/man/ssh)(1), [aws-secretsmanager](/man/aws-secretsmanager)(1)

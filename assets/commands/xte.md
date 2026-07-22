@@ -84,6 +84,20 @@ X11 only; no Wayland support. The str command has limited Unicode support. Some 
 
 **xte** is part of xautomation, a suite of tools for X11 automation created by Steve Slaven. It provides a simple command-line interface to the XTest extension, which was designed for automated testing of X applications.
 
+# INSTALL
+
+```apt: sudo apt install xautomation```
+
+```dnf: sudo dnf install xautomation```
+
+```pacman: sudo pacman -S xautomation```
+
+```zypper: sudo zypper install xautomation```
+
+```nix: nix profile install nixpkgs#xautomation```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdotool](/man/xdotool)(1), [xbindkeys](/man/xbindkeys)(1), [xinput](/man/xinput)(1)

@@ -55,6 +55,14 @@ Useful for viewing images on headless servers or minimal systems.
 
 Requires framebuffer support. Usually needs root or console access. Part of fbida package. Not for use in X11/Wayland sessions.
 
+# INSTALL
+
+```apt: sudo apt install fbi```
+
+```apk: sudo apk add fbida-fbi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fim](/man/fim)(1), [feh](/man/feh)(1), [fbset](/man/fbset)(1)

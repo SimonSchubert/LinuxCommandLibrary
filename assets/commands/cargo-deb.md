@@ -99,6 +99,14 @@ Requires Rust 1.76+. Optional: dpkg, dpkg-dev, liblzma-dev.
 
 Automatically uses Cargo fields for name, version, license, description. The $auto depends value auto-detects library dependencies on Debian systems.
 
+# INSTALL
+
+```pacman: sudo pacman -S cargo-deb```
+
+```nix: nix profile install nixpkgs#cargo-deb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [dpkg](/man/dpkg)(1), [dpkg-deb](/man/dpkg-deb)(1)

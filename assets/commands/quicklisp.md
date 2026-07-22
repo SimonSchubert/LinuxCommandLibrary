@@ -81,6 +81,12 @@ Requires Common Lisp implementation (SBCL, CCL, etc.). Libraries installed to ~/
 
 Quicklisp was created by **Zach Beane** in 2010 to simplify Common Lisp library management.
 
+# INSTALL
+
+```pacman: sudo pacman -S quicklisp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sbcl](/man/sbcl)(1), [clisp](/man/clisp)(1), [asdf](/man/asdf)(1)

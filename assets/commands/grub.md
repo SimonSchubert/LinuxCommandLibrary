@@ -77,6 +77,12 @@ Misconfiguration can prevent booting. Keep rescue media available. GRUB 2 differ
 
 GRUB was created as part of the **GNU Project**. GRUB 2 was released in **2002** as a complete rewrite with enhanced features.
 
+# INSTALL
+
+```pacman: sudo pacman -S grub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub-mkconfig](/man/grub-mkconfig)(8), [update-grub](/man/update-grub)(8), [grub-install](/man/grub-install)(8)

@@ -60,6 +60,21 @@ Reverse forwarding is available on Android 5.0+ only. The feature requires the a
 
 **adb reverse** was added in Android 5.0 Lollipop (**2014**) to support development workflows where device apps need to connect to services on the development machine.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb](/man/adb)(1), [adb-forward](/man/adb-forward)(1), [adb-shell](/man/adb-shell)(1), [scrcpy](/man/scrcpy)(1)

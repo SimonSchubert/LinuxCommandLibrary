@@ -135,6 +135,18 @@ Only works with raster images (no vector formats). Some viewers may struggle wit
 
 **img2pdf** was created by Johannes Schauer Marin Rodrigues to address the common problem of converting images to PDF without quality loss. Existing tools like ImageMagick would re-encode images, causing quality degradation or size bloat. The tool is written in Python and published as a pip package.
 
+# INSTALL
+
+```pacman: sudo pacman -S img2pdf```
+
+```apk: sudo apk add py3-img2pdf```
+
+```brew: brew install img2pdf```
+
+```nix: nix profile install nixpkgs#img2pdf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [convert](/man/convert)(1), [pdftk](/man/pdftk)(1), [pdfunite](/man/pdfunite)(1), [tesseract](/man/tesseract)(1)

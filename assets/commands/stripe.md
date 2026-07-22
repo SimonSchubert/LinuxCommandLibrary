@@ -106,6 +106,12 @@ Requires a Stripe account and authentication via **stripe login** before use. AP
 
 The **Stripe CLI** was released by **Stripe** in **2019** as an open-source tool to improve the developer experience for building payment integrations. It was built in Go and published on GitHub. The CLI addressed the common pain point of testing webhooks locally, which previously required tools like ngrok. It has since expanded to include API resource management, log tailing, sample project scaffolding, and Stripe Apps development support.
 
+# INSTALL
+
+```brew: brew install stripe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [jq](/man/jq)(1)

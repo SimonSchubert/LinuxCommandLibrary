@@ -73,6 +73,24 @@ yes runs at maximum speed, which can generate significant CPU load when not pipe
 
 **yes** is part of **GNU coreutils**, written by **David MacKenzie**. It originates from Unix System V and has been part of coreutils since the early days of the project.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [true](/man/true)(1), [false](/man/false)(1), [head](/man/head)(1), [seq](/man/seq)(1), [timeout](/man/timeout)(1)

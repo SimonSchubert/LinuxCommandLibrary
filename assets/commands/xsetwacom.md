@@ -105,6 +105,20 @@ Device names can be found using `xsetwacom list devices` or `xinput list`. Not a
 
 X11 only; does not work with Wayland. Settings do not persist across reboots or device reconnection. For persistent configuration, use xorg.conf.d snippets. Device names may change when devices are reconnected.
 
+# INSTALL
+
+```apt: sudo apt install xserver-xorg-input-wacom```
+
+```pacman: sudo pacman -S xf86-input-wacom```
+
+```apk: sudo apk add xf86-input-wacom```
+
+```zypper: sudo zypper install xf86-input-wacom```
+
+```nix: nix profile install nixpkgs#xf86-input-wacom```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xinput](/man/xinput)(1), [xrandr](/man/xrandr)(1), [xdotool](/man/xdotool)(1)

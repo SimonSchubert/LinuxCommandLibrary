@@ -64,6 +64,14 @@ Go import line management and formatting
 
 Imports are grouped with standard library first, then third-party packages, and sorted alphabetically within each group. The **-local** flag allows separating project-specific imports into their own group.
 
+# INSTALL
+
+```apt: sudo apt install golang-golang-x-tools```
+
+```brew: brew install goimports```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gofmt](/man/gofmt)(1), [go-fmt](/man/go-fmt)(1), [gofumpt](/man/gofumpt)(1)

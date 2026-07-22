@@ -114,6 +114,22 @@ Cryptocurrency mining consumes significant electricity and generates heat. Profi
 
 XMRig was created as an open-source Monero miner, originally focusing on CPU mining with the CryptoNight algorithm. When Monero switched to the RandomX algorithm in **2019**, XMRig was updated to support it. The project expanded to include GPU support via CUDA and OpenCL backends. XMRig became one of the most widely used miners due to its performance, cross-platform support, and active development.
 
+# INSTALL
+
+```apt: sudo apt install xmrig```
+
+```pacman: sudo pacman -S xmrig```
+
+```apk: sudo apk add xmrig```
+
+```zypper: sudo zypper install xmrig```
+
+```brew: brew install xmrig```
+
+```nix: nix profile install nixpkgs#xmrig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cgminer](/man/cgminer)(1), [bfgminer](/man/bfgminer)(1)

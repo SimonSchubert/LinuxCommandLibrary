@@ -42,6 +42,18 @@ This is commonly used in systemd service files or init scripts that depend on ne
 
 Depends on NetworkManager being the network management daemon. Returns success when NetworkManager reports connectivity, which may not mean full internet access (e.g., captive portals). The default 30-second timeout may be too long or short depending on the use case.
 
+# INSTALL
+
+```apt: sudo apt install network-manager```
+
+```pacman: sudo pacman -S networkmanager```
+
+```apk: sudo apk add networkmanager```
+
+```nix: nix profile install nixpkgs#networkmanager```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmcli](/man/nmcli)(1), [nmtui](/man/nmtui)(1), [NetworkManager](/man/NetworkManager)(8)

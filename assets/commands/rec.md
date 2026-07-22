@@ -107,6 +107,24 @@ Recording requires appropriate permissions for audio device access. Users may ne
 
 Use Ctrl+C to stop recording manually if no duration or silence detection is specified.
 
+# INSTALL
+
+```apt: sudo apt install sox```
+
+```dnf: sudo dnf install sox```
+
+```pacman: sudo pacman -S sox```
+
+```apk: sudo apk add sox```
+
+```zypper: sudo zypper install sox```
+
+```brew: brew install sox```
+
+```nix: nix profile install nixpkgs#sox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sox](/man/sox)(1), [play](/man/play)(1), [soxi](/man/soxi)(1), [arecord](/man/arecord)(1), [ffmpeg](/man/ffmpeg)(1)

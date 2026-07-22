@@ -81,6 +81,12 @@ encrypted environment variable manager
 
 The tool supports multiple environment files (.env.production, .env.staging), automatic decryption at runtime, and key management for team-based secret sharing. It provides a modern approach to managing application secrets without external secret management services.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#dotenvx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [env](/man/env)(1), [direnv](/man/direnv)(1), [sops](/man/sops)(1)

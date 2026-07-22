@@ -52,6 +52,24 @@ Requires root privileges. Configuration files must exist in **/etc/wireguard/**.
 
 **wg-quick** is part of the WireGuard tools, created by **Jason A. Donenfeld**. WireGuard was initially developed as a Linux kernel module and merged into the mainline Linux kernel in version **5.6** (March 2020). The wg-quick script simplifies the setup that would otherwise require multiple **wg** and **ip** commands.
 
+# INSTALL
+
+```apt: sudo apt install wireguard-tools```
+
+```dnf: sudo dnf install wireguard-tools```
+
+```pacman: sudo pacman -S wireguard-tools```
+
+```apk: sudo apk add wireguard-tools-wg-quick```
+
+```zypper: sudo zypper install wireguard-tools```
+
+```brew: brew install wireguard-tools```
+
+```nix: nix profile install nixpkgs#wireguard-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wg](/man/wg)(8), [ip](/man/ip)(8)

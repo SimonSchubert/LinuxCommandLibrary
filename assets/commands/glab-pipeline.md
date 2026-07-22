@@ -64,6 +64,24 @@ Manage GitLab CI/CD pipelines
 
 **glab pipeline** manages GitLab CI/CD pipelines from the command line. It provides subcommands for viewing, triggering, and monitoring pipelines, as well as inspecting individual job details and logs.
 
+# INSTALL
+
+```apt: sudo apt install glab```
+
+```dnf: sudo dnf install glab```
+
+```pacman: sudo pacman -S glab```
+
+```apk: sudo apk add glab```
+
+```zypper: sudo zypper install glab```
+
+```brew: brew install glab```
+
+```nix: nix profile install nixpkgs#glab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glab](/man/glab)(1)

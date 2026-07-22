@@ -44,6 +44,24 @@ Display **help**
 
 Requires root privileges. Graceful shutdown may take time. Use --kill for immediate termination.
 
+# INSTALL
+
+```apt: sudo apt install lxc```
+
+```dnf: sudo dnf install lxc```
+
+```pacman: sudo pacman -S lxc```
+
+```apk: sudo apk add lxc```
+
+```zypper: sudo zypper install lxc```
+
+```brew: brew install lxc```
+
+```nix: nix profile install nixpkgs#lxc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lxc-start](/man/lxc-start)(1), [lxc-destroy](/man/lxc-destroy)(1), [lxc-info](/man/lxc-info)(1)

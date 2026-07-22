@@ -83,6 +83,12 @@ Operations may be slower than native package managers. Not all backend features 
 
 **PackageKit** was created by **Richard Hughes** to provide a unified interface for Linux package management. It was designed to allow desktop applications to manage packages without knowing which package manager the distribution uses.
 
+# INSTALL
+
+```apt: sudo apt install packagekit-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apt](/man/apt)(8), [dnf](/man/dnf)(8), [flatpak](/man/flatpak)(1)

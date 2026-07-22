@@ -82,6 +82,14 @@ List with **specific columns**
 
 Part of util-linux package. Requires Linux 5.12+ for full functionality. Filter syntax differs from lsof. Using **-p** is more efficient than **-Q** for filtering by PID. Column names may change in future releases.
 
+# INSTALL
+
+```apt: sudo apt install util-linux-extra```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsof](/man/lsof)(8), [fuser](/man/fuser)(1), [ss](/man/ss)(8)

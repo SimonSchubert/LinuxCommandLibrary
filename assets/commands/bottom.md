@@ -97,6 +97,18 @@ The binary name is **btm**, not **bottom**. Some features like temperature senso
 
 **bottom** was created by **Clement Tsang** and first released in **2019**. Written in **Rust**, it was designed to provide a visually appealing and highly customizable alternative to traditional system monitors, inspired by tools like gtop and gotop.
 
+# INSTALL
+
+```pacman: sudo pacman -S bottom```
+
+```zypper: sudo zypper install bottom```
+
+```brew: brew install bottom```
+
+```nix: nix profile install nixpkgs#bottom```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [htop](/man/htop)(1), [top](/man/top)(1), [btop](/man/btop)(1), [glances](/man/glances)(1)

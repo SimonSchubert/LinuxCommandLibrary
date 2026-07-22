@@ -81,6 +81,14 @@ Requires OIDC provider integration. Certificates are short-lived by design. Prod
 
 Fulcio is part of **Sigstore**, initiated by **Google**, **Red Hat**, and **Purdue University** in **2021** to make code signing accessible. Named after a Roman consul, it provides the CA component of the keyless signing infrastructure.
 
+# INSTALL
+
+```pacman: sudo pacman -S fulcio```
+
+```nix: nix profile install nixpkgs#fulcio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cosign](/man/cosign)(1), [rekor-cli](/man/rekor-cli)(1)

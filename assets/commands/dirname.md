@@ -93,6 +93,24 @@ Doesn't resolve symbolic links (use readlink). Doesn't check if path exists. Tra
 
 **dirname** has been part of Unix since the early days, included in POSIX standards alongside basename.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [basename](/man/basename)(1), [realpath](/man/realpath)(1), [readlink](/man/readlink)(1)

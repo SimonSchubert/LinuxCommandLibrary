@@ -100,6 +100,24 @@ Not all suggestions are appropriate for every codebase. Some hints may conflict 
 
 hlint was created by Neil Mitchell and first released around **2006**. It has become a standard tool in the Haskell ecosystem for maintaining code quality and is commonly integrated into CI pipelines and editor plugins.
 
+# INSTALL
+
+```apt: sudo apt install hlint```
+
+```dnf: sudo dnf install hlint```
+
+```pacman: sudo pacman -S hlint```
+
+```apk: sudo apk add hlint```
+
+```zypper: sudo zypper install hlint```
+
+```brew: brew install hlint```
+
+```nix: nix profile install nixpkgs#hlint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ghc](/man/ghc)(1), [cabal](/man/cabal)(1), [stack](/man/stack)(1)

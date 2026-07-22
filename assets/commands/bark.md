@@ -63,6 +63,11 @@ Slow on CPU (GPU strongly recommended). Large model downloads (~5GB). Output qua
 
 **Bark** was released by **Suno AI** in **April 2023** as an open-source text-to-audio model. Its ability to generate expressive speech with emotions and non-verbal sounds set it apart from conventional TTS systems. The model quickly gained popularity for creative audio generation.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#bark```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [piper](/man/piper)(1), [tts](/man/tts)(1), [espeak](/man/espeak)(1)

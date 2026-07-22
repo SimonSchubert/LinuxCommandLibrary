@@ -70,6 +70,22 @@ The **--commit** option is used to convert a transient machine ID (mounted into 
 
 Requires root privileges. Should only be run once during system installation or when **/etc/machine-id** is missing or empty. Changing the machine ID can break services that depend on it for stable identification. Part of the systemd suite.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-id128](/man/systemd-id128)(1), [machine-id](/man/machine-id)(5), [systemd-firstboot](/man/systemd-firstboot)(1)

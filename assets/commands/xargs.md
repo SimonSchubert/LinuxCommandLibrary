@@ -103,6 +103,24 @@ Special characters in filenames cause issues without -0. Shell features (pipes, 
 
 **xargs** originated in **PWB/UNIX** in the **1970s**. It addressed the limitation of shell command line length - programs couldn't accept unlimited arguments. The tool became essential for chaining Unix commands, enabling "do something to many files" patterns that define Unix philosophy.
 
+# INSTALL
+
+```apt: sudo apt install findutils```
+
+```dnf: sudo dnf install findutils```
+
+```pacman: sudo pacman -S findutils```
+
+```apk: sudo apk add findutils```
+
+```zypper: sudo zypper install findutils```
+
+```brew: brew install findutils```
+
+```nix: nix profile install nixpkgs#findutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [find](/man/find)(1), [parallel](/man/parallel)(1), [apply](/man/apply)(1)

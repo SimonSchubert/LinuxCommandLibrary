@@ -84,6 +84,24 @@ RSA-specific; use pkey for other algorithms. Protect private keys. Consider Ed25
 
 RSA key handling has been core OpenSSL functionality since the library's creation, though genpkey/pkey are now preferred.
 
+# INSTALL
+
+```apt: sudo apt install openssl```
+
+```dnf: sudo dnf install openssl```
+
+```pacman: sudo pacman -S openssl```
+
+```apk: sudo apk add openssl```
+
+```zypper: sudo zypper install openssl```
+
+```brew: brew install openssl```
+
+```nix: nix profile install nixpkgs#openssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl-pkey](/man/openssl-pkey)(1), [openssl-genpkey](/man/openssl-genpkey)(1), [openssl-genrsa](/man/openssl-genrsa)(1)

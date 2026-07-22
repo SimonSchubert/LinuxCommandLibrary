@@ -50,6 +50,16 @@ Common options (see **genact --help** for the authoritative list of your build):
 
 Purely cosmetic; does not perform real builds or network work (beyond what a scene might simulate). Intended as humor and demos, not production tooling.
 
+# INSTALL
+
+```pacman: sudo pacman -S genact```
+
+```brew: brew install genact```
+
+```nix: nix profile install nixpkgs#genact```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmatrix](/man/cmatrix)(1), [sl](/man/sl)(1)

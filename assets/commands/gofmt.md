@@ -70,6 +70,20 @@ gofmt enforces Go's official style with no configuration options for style prefe
 
 gofmt was created as part of the Go programming language, first released by Google in **2009**. The decision to include an official formatter with no style options was intentional, eliminating debates about code style in Go projects. This "one true style" approach has been widely adopted and influenced other languages to create similar tools (rustfmt, prettier, black).
 
+# INSTALL
+
+```apt: sudo apt install gccgo-go```
+
+```dnf: sudo dnf install gcc-go```
+
+```pacman: sudo pacman -S gcc-go```
+
+```apk: sudo apk add gcc-go```
+
+```zypper: sudo zypper install gcc-go```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [goimports](/man/goimports)(1), [go](/man/go)(1), [golint](/man/golint)(1), [staticcheck](/man/staticcheck)(1)

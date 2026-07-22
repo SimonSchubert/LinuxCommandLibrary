@@ -109,6 +109,20 @@ Requires write access to the optical device (usually root or cdrom group members
 
 **cdrecord** was developed by **J\u00f6rg Schilling** starting in **1995**. It became the standard Unix CD burning tool. In **2006**, licensing disputes led to the creation of **cdrkit**, a fork that includes **wodim** as a cdrecord replacement. Most Linux distributions switched to cdrkit/wodim, though some still include original cdrecord. The tools remain largely command-compatible.
 
+# INSTALL
+
+```apt: sudo apt install wodim```
+
+```dnf: sudo dnf install wodim```
+
+```apk: sudo apk add cdrkit```
+
+```zypper: sudo zypper install cdrecord```
+
+```nix: nix profile install nixpkgs#cdrkit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wodim](/man/wodim)(1), [genisoimage](/man/genisoimage)(1), [mkisofs](/man/mkisofs)(1), [growisofs](/man/growisofs)(1)

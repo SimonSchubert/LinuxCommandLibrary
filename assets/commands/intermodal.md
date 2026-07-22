@@ -38,6 +38,14 @@ Only handles torrent metainfo files; does not download or seed torrents. Creatin
 
 **intermodal** was created by **Casey Rodarmor** (creator of **just** and **ord**) and is written in **Rust**. It is released under the **Creative Commons Zero** public domain dedication.
 
+# INSTALL
+
+```brew: brew install intermodal```
+
+```nix: nix profile install nixpkgs#intermodal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [transmission-cli](/man/transmission-cli)(1), [aria2c](/man/aria2c)(1)

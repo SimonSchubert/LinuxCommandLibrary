@@ -50,6 +50,20 @@ Within a single database cluster, you can create multiple isolated databases. Th
 
 The command handles database creation, listing, and deletion within the cluster. This is distinct from managing the cluster itself, which is handled by the parent doctl databases command.
 
+# INSTALL
+
+```dnf: sudo dnf install doctl```
+
+```pacman: sudo pacman -S doctl```
+
+```apk: sudo apk add doctl```
+
+```brew: brew install doctl```
+
+```nix: nix profile install nixpkgs#doctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doctl-databases](/man/doctl-databases)(1), [doctl-databases-user](/man/doctl-databases-user)(1), [doctl-databases-pool](/man/doctl-databases-pool)(1), [doctl](/man/doctl)(1)

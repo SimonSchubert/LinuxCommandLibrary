@@ -56,6 +56,24 @@ The command opens an editor for the commit message if **-m** is not provided. Un
 
 Commits can create new branches, add tags, and include metadata like timestamps and user information. The **--private** option creates commits that won't be pushed to public repositories.
 
+# INSTALL
+
+```apt: sudo apt install fossil```
+
+```dnf: sudo dnf install fossil```
+
+```pacman: sudo pacman -S fossil```
+
+```apk: sudo apk add fossil```
+
+```zypper: sudo zypper install fossil```
+
+```brew: brew install fossil```
+
+```nix: nix profile install nixpkgs#fossil```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fossil-add](/man/fossil-add)(1)

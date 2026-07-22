@@ -48,6 +48,18 @@ This tool helps verify that XML configuration files are valid before using them 
 
 Valid XML doesn't guarantee the configuration will work. Some schema errors may not be detected. Requires libvirt schemas to be installed.
 
+# INSTALL
+
+```apt: sudo apt install libvirt-clients```
+
+```dnf: sudo dnf install libvirt-client```
+
+```apk: sudo apk add libvirt-client```
+
+```zypper: sudo zypper install libvirt-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virt-xml](/man/virt-xml)(1), [virsh](/man/virsh)(1)

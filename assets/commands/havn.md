@@ -63,6 +63,18 @@ Scanning ports on systems you do not own or have authorization to test may be il
 
 **havn** was created by **Jack Wills** (mrjackwills) and is written in **Rust**. The name is Danish for "port" (as in harbor). It was designed as a minimal, fast alternative to more complex scanning tools.
 
+# INSTALL
+
+```pacman: sudo pacman -S havn```
+
+```apk: sudo apk add havn```
+
+```brew: brew install havn```
+
+```nix: nix profile install nixpkgs#havn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [ss](/man/ss)(8), [netcat](/man/netcat)(1), [rustscan](/man/rustscan)(1), [masscan](/man/masscan)(1)

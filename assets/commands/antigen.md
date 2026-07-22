@@ -110,6 +110,15 @@ Requires zsh version 4.3.11 or higher. Themes from oh-my-zsh may depend on frame
 
 Antigen was created by **Shrikant Sharat Kandula** around **2012** to bring Vundle-style plugin management to zsh. It became one of the first popular zsh plugin managers and helped popularize modular shell configuration. The project continues to be maintained by the zsh-users community on GitHub.
 
+# INSTALL
+
+```aur: yay -S antigen```
+
+```brew: brew install antigen```
+
+```nix: nix profile install nixpkgs#antigen```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [oh-my-zsh](/man/oh-my-zsh)(1), [zsh](/man/zsh)(1), [zinit](/man/zinit)(1), [zplug](/man/zplug)(1)

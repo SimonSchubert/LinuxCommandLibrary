@@ -90,6 +90,20 @@ Running Xorg requires appropriate permissions (typically root or membership in v
 
 X.Org Server is the successor to XFree86 and the reference implementation of the X Window System. The X.Org Foundation was formed in **2004** after a licensing dispute with XFree86. Xorg has been the standard X server on Linux and BSD systems, though Wayland is increasingly replacing it for desktop use.
 
+# INSTALL
+
+```apt: sudo apt install xserver-xorg-core```
+
+```pacman: sudo pacman -S xorg-server```
+
+```apk: sudo apk add xorg-server```
+
+```brew: brew install xorg-server```
+
+```nix: nix profile install nixpkgs#xorg-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [startx](/man/startx)(1), [xinit](/man/xinit)(1), [xrandr](/man/xrandr)(1)

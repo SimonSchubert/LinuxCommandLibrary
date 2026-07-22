@@ -91,6 +91,12 @@ For authorized penetration testing only. Aggressive testing may trigger lockouts
 
 **patator** was created by **Sebastien Macke** (lanjelot) as an alternative to Hydra and Medusa. It emphasizes flexibility and scriptability for security testing.
 
+# INSTALL
+
+```aur: yay -S patator```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hydra](/man/hydra)(1), [medusa](/man/medusa)(1), [ncrack](/man/ncrack)(1)

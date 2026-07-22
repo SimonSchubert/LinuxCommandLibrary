@@ -177,6 +177,12 @@ Requires a working Podman or Docker installation, a usable KVM accelerator, and 
 
 **winpodx** is a Python 3.9+ project that pairs the **dockur/windows** container image with **FreeRDP** RemoteApp and a custom PowerShell HTTP guest agent. It targets the same use case as **WinApps** but ships container, agent, and GUI as a single tool rather than relying on a manually configured VM. Active development continues on the **kernalix7/winpodx** repository.
 
+# INSTALL
+
+```aur: yay -S winpodx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [docker](/man/docker)(1), [xfreerdp](/man/xfreerdp)(1), [virsh](/man/virsh)(1), [wine](/man/wine)(1)

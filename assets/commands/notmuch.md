@@ -73,6 +73,24 @@ Maildir format only. Xapian backend. Frontend clients available.
 
 notmuch was created by **Carl Worth** for fast email search, inspired by Gmail's search.
 
+# INSTALL
+
+```apt: sudo apt install notmuch```
+
+```dnf: sudo dnf install notmuch```
+
+```pacman: sudo pacman -S notmuch```
+
+```apk: sudo apk add notmuch```
+
+```zypper: sudo zypper install notmuch```
+
+```brew: brew install notmuch```
+
+```nix: nix profile install nixpkgs#notmuch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mu](/man/mu)(1), [mairix](/man/mairix)(1), [mutt](/man/mutt)(1)

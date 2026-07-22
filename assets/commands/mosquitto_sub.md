@@ -107,6 +107,16 @@ Subscribing to # on busy brokers produces high volume. QoS 2 has significant ove
 
 **mosquitto_sub** is part of the **Eclipse Mosquitto** project, an MQTT broker and client suite. Mosquitto was created by **Roger Light** starting around **2009** and joined the **Eclipse Foundation** in **2014**.
 
+# INSTALL
+
+```apt: sudo apt install mosquitto-clients```
+
+```apk: sudo apk add mosquitto-clients```
+
+```zypper: sudo zypper install mosquitto-clients```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mosquitto_pub](/man/mosquitto_pub)(1), [mosquitto](/man/mosquitto)(8), [mosquitto_passwd](/man/mosquitto_passwd)(1)

@@ -120,6 +120,12 @@ Requires bitcoind running. RPC credentials needed. Transactions are irreversible
 
 **bitcoin-cli** has been part of Bitcoin Core since the project's creation by Satoshi Nakamoto in **2009**, providing command-line access to the node.
 
+# INSTALL
+
+```apk: sudo apk add bitcoin-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bitcoind](/man/bitcoind)(1), [bitcoin-qt](/man/bitcoin-qt)(1)

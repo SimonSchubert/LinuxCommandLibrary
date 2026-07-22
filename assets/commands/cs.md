@@ -87,6 +87,20 @@ Requires Java Runtime Environment. First runs download dependencies which takes 
 
 Coursier was created by Alexandre Archambault and first released around **2015**. It became the official installation method for Scala tools in **2020**. The tool addresses Java/Scala's dependency management complexity with fast, reliable artifact resolution.
 
+# INSTALL
+
+```apt: sudo apt install csound```
+
+```pacman: sudo pacman -S csound```
+
+```zypper: sudo zypper install csound```
+
+```brew: brew install csound```
+
+```nix: nix profile install nixpkgs#csound```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scala](/man/scala)(1), [sbt](/man/sbt)(1), [java](/man/java)(1), [mvn](/man/mvn)(1)

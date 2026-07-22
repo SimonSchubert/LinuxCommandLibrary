@@ -76,6 +76,21 @@ Runs as root by default; user-level jobs require additional configuration. Job d
 
 **anacron** was created by Christian Schwarz and first released in **1998** to address cron's unsuitability for machines that aren't always on. Most modern Linux distributions include it alongside traditional cron.
 
+# INSTALL
+
+```apt: sudo apt install anacron```
+
+```dnf: sudo dnf install cronie```
+
+```pacman: sudo pacman -S cronie```
+
+```apk: sudo apk add cronie```
+
+```zypper: sudo zypper install cronie```
+
+```nix: nix profile install nixpkgs#cronie```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [cron](/man/cron)(8), [crontab](/man/crontab)(1)

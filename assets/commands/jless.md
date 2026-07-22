@@ -126,6 +126,20 @@ Requires terminal with 256-color support for best display. Some terminals may no
 
 jless was created by **Paul Julius Martinez** and first released in **2022**. Written in Rust, it was designed to fill the gap for a dedicated JSON browsing tool with vim-style navigation. The project gained popularity as a complement to jq for interactive JSON exploration. It continues development with YAML support and other improvements.
 
+# INSTALL
+
+```pacman: sudo pacman -S jless```
+
+```apk: sudo apk add jless```
+
+```zypper: sudo zypper install jless```
+
+```brew: brew install jless```
+
+```nix: nix profile install nixpkgs#jless```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [gojq](/man/gojq)(1), [fx](/man/fx)(1), [less](/man/less)(1)

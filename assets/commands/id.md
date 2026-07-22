@@ -69,6 +69,24 @@ Part of coreutils. Shows cached info at login. Real vs effective ID support.
 
 id is a standard **Unix** command, part of **GNU coreutils** on Linux.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [whoami](/man/whoami)(1), [groups](/man/groups)(1), [users](/man/users)(1)

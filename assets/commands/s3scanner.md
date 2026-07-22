@@ -56,6 +56,14 @@ Object enumeration is limited to 5,000 pages per bucket. Non-AWS providers suppo
 
 **s3scanner** was created by **Dan Salmon** (sa7mon) and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install s3scanner```
+
+```nix: nix profile install nixpkgs#s3scanner```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws](/man/aws)(1), [rclone](/man/rclone)(1), [trivy](/man/trivy)(1)

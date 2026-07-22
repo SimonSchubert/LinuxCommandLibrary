@@ -85,6 +85,16 @@ Requires root privileges unless the **user** option was specified in fstab. Busy
 
 **umount** has been a standard Unix command since the earliest versions, part of the **util-linux** package on Linux. The lazy unmount option (**-l**) was added in Linux 2.4.11.
 
+# INSTALL
+
+```apt: sudo apt install mount```
+
+```apk: sudo apk add umount```
+
+```nix: nix profile install nixpkgs#mount```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(8), [fuser](/man/fuser)(1), [lsof](/man/lsof)(8), [findmnt](/man/findmnt)(8)

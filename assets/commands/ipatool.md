@@ -76,6 +76,14 @@ Global options control output format and interactivity. Subcommands cover **auth
 
 Requires a valid Apple ID and compliance with Apple's terms. Some apps are region-locked, paid, or refuse bulk download. IPAs obtained this way are not sideloadable onto stock iOS without additional signing tooling. Do not use for piracy.
 
+# INSTALL
+
+```brew: brew install ipatool```
+
+```nix: nix profile install nixpkgs#ipatool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ideviceinstaller](/man/ideviceinstaller)(1), [ios-deploy](/man/ios-deploy)(1)

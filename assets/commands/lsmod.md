@@ -59,6 +59,24 @@ A reference count greater than zero means the module is in use and cannot simply
 
 **lsmod** originally shipped with the older **modutils**/**module-init-tools** suites. It is now part of **kmod**, the current kernel module userspace tools written by **Lucas De Marchi** and others, which replaced module-init-tools around Linux 3.2.
 
+# INSTALL
+
+```apt: sudo apt install kmod```
+
+```dnf: sudo dnf install kmod```
+
+```pacman: sudo pacman -S kmod```
+
+```apk: sudo apk add kmod```
+
+```zypper: sudo zypper install kmod```
+
+```brew: brew install kmod```
+
+```nix: nix profile install nixpkgs#kmod```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [modprobe](/man/modprobe)(8), [rmmod](/man/rmmod)(8), [insmod](/man/insmod)(8), [modinfo](/man/modinfo)(8), [depmod](/man/depmod)(8), [kmod](/man/kmod)(8)

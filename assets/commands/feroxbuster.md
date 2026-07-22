@@ -113,6 +113,16 @@ Only use on systems you have permission to test. High thread counts may trigger 
 
 **feroxbuster** was created by Ben "epi" Risher, with the first release around **2020**. The name combines "ferox" (Latin for fierce/wild) with "buster." Written in Rust for performance, it quickly gained popularity as a modern alternative to tools like dirb, gobuster, and dirsearch.
 
+# INSTALL
+
+```zypper: sudo zypper install feroxbuster```
+
+```brew: brew install feroxbuster```
+
+```nix: nix profile install nixpkgs#feroxbuster```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gobuster](/man/gobuster)(1), [dirsearch](/man/dirsearch)(1), [ffuf](/man/ffuf)(1), [dirb](/man/dirb)(1)

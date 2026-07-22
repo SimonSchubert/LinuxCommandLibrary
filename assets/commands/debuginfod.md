@@ -103,6 +103,16 @@ Initial indexing can be slow for large repositories. The SQLite database grows w
 
 **debuginfod** was developed as part of the **elfutils** project by **Red Hat** engineers around **2019**. It addresses the challenge of distributing debug symbols for Linux distributions, enabling on-demand fetching rather than installing large debug packages.
 
+# INSTALL
+
+```apt: sudo apt install debuginfod```
+
+```pacman: sudo pacman -S debuginfod```
+
+```apk: sudo apk add debuginfod```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [debuginfod-find](/man/debuginfod-find)(1), [gdb](/man/gdb)(1), [objdump](/man/objdump)(1), [readelf](/man/readelf)(1)

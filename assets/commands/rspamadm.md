@@ -88,6 +88,20 @@ Requires Rspamd installation. Some commands need root. Training improves accurac
 
 rspamadm is part of **Rspamd** by **Vsevolod Stakhov**, an advanced spam filtering system.
 
+# INSTALL
+
+```apt: sudo apt install rspamd```
+
+```pacman: sudo pacman -S rspamd```
+
+```apk: sudo apk add rspamd```
+
+```zypper: sudo zypper install rspamd```
+
+```nix: nix profile install nixpkgs#rspamd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rspamd](/man/rspamd)(8), [rspamc](/man/rspamc)(1)

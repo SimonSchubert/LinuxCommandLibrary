@@ -86,6 +86,21 @@ Requires X11; does not support Wayland. Configuration errors in rc.lua will caus
 
 **awesome** was created by **Julien Danjou** and first released in **2007**. It was designed as a successor to dwm with greater extensibility through Lua scripting. The name is a playful reference to being "awesome" rather than just "good." The project continues active development with a focus on stability and customization.
 
+# INSTALL
+
+```apt: sudo apt install awesome```
+
+```dnf: sudo dnf install awesome```
+
+```pacman: sudo pacman -S awesome```
+
+```apk: sudo apk add awesome```
+
+```zypper: sudo zypper install awesome```
+
+```nix: nix profile install nixpkgs#awesome```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [i3](/man/i3)(1), [dwm](/man/dwm)(1), [bspwm](/man/bspwm)(1), [lua](/man/lua)(1)

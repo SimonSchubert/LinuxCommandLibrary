@@ -64,6 +64,14 @@ Generated data may accidentally match real information. Quality varies by locale
 
 Faker originated as a **PHP library** inspired by Perl's Data::Faker. The Python version by **joke2k** became widely popular, providing the faker CLI and extensive provider ecosystem for test data generation.
 
+# INSTALL
+
+```apk: sudo apk add py3-faker```
+
+```brew: brew install faker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [pip](/man/pip)(1)

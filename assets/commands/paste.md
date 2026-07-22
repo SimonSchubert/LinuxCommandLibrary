@@ -59,6 +59,24 @@ Files should have same number of lines for alignment. Delimiter cycles through l
 
 **paste** is a traditional Unix utility, part of **POSIX** and **GNU coreutils**. It has been standard in Unix systems since the early days, providing simple tabular data assembly.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cut](/man/cut)(1), [join](/man/join)(1), [column](/man/column)(1), [pr](/man/pr)(1)

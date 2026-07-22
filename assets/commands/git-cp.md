@@ -24,6 +24,24 @@ Unlike a simple filesystem copy followed by git add (which creates a new file wi
 
 This is particularly useful when creating new files based on templates or when splitting functionality from one file into multiple files while maintaining attribution and history.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-mv](/man/git-mv)(1), [git-extras](/man/git-extras)(1)

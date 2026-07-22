@@ -96,6 +96,20 @@ The default opening book may not be installed on all systems. Engine strength de
 
 GNU Chess was first written by **Stuart Cracraft** in **1984**, making it one of the earliest programs in the GNU Project. It has been maintained by numerous contributors over the decades and remains one of the most well-known free software chess engines.
 
+# INSTALL
+
+```dnf: sudo dnf install gnuchess```
+
+```pacman: sudo pacman -S gnuchess```
+
+```apk: sudo apk add gnuchess```
+
+```zypper: sudo zypper install gnuchess```
+
+```nix: nix profile install nixpkgs#gnuchess```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nbcheckers](/man/nbcheckers)(1), [gnugo](/man/gnugo)(1)

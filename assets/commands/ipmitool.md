@@ -78,6 +78,24 @@ IPMI access requires proper BMC configuration. Network access uses UDP ports 623
 
 IPMI was developed by Intel, HP, NEC, and Dell starting in **1998**. ipmitool became the standard open-source tool for IPMI management on Linux systems, supporting both local and remote operations.
 
+# INSTALL
+
+```apt: sudo apt install ipmitool```
+
+```dnf: sudo dnf install ipmitool```
+
+```pacman: sudo pacman -S ipmitool```
+
+```apk: sudo apk add ipmitool```
+
+```zypper: sudo zypper install ipmitool```
+
+```brew: brew install ipmitool```
+
+```nix: nix profile install nixpkgs#ipmitool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [dmidecode](/man/dmidecode)(8)

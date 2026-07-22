@@ -58,6 +58,22 @@ Calibration requires uninterrupted run and may take several minutes. Auto-tune c
 
 **powertop** was developed by **Intel** to help Linux users optimize battery life. It became a standard tool for laptop power management and is included in most distributions.
 
+# INSTALL
+
+```apt: sudo apt install powertop```
+
+```dnf: sudo dnf install powertop```
+
+```pacman: sudo pacman -S powertop```
+
+```apk: sudo apk add powertop```
+
+```zypper: sudo zypper install powertop```
+
+```nix: nix profile install nixpkgs#powertop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [powerstat](/man/powerstat)(8), [tlp](/man/tlp)(1), [tuned](/man/tuned)(8)

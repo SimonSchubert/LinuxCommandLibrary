@@ -64,6 +64,21 @@ Recording starts immediately; no countdown by default. **arecordmidi** reads fro
 
 **arecordmidi** is part of the ALSA utilities, providing basic MIDI recording capability since ALSA's introduction in the early **2000s**.
 
+# INSTALL
+
+```apt: sudo apt install alsa-utils```
+
+```dnf: sudo dnf install alsa-utils```
+
+```pacman: sudo pacman -S alsa-utils```
+
+```apk: sudo apk add alsa-utils```
+
+```zypper: sudo zypper install alsa-utils```
+
+```nix: nix profile install nixpkgs#alsa-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aplaymidi](/man/aplaymidi)(1), [aconnect](/man/aconnect)(1), [amidi](/man/amidi)(1)

@@ -50,6 +50,12 @@ The command appeared in **4.0BSD** (released 1980), written by **John Foderaro**
 
 On modern systems the notification daemon is part of **GNU inetutils** (as in.comsat), and the biff client typically ships in a dedicated **biff** package on Debian and Ubuntu.
 
+# INSTALL
+
+```apt: sudo apt install biff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mail](/man/mail)(1), [sh](/man/sh)(1), [csh](/man/csh)(1)

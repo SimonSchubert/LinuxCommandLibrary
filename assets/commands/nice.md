@@ -56,6 +56,24 @@ Negative values require root. Default adjustment is 10. Affects CPU scheduling o
 
 nice is a classic **Unix** command for controlling process scheduling priority since early Unix.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [renice](/man/renice)(1), [ionice](/man/ionice)(1), [chrt](/man/chrt)(1)

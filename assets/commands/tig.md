@@ -130,6 +130,24 @@ tig accepts most git-log and git-diff options, but some complex git commands may
 
 **tig** was created by **Jonas Fonseca** and first released in **2006**. The name is "git" spelled backwards. Written in C using ncurses, it was designed to provide a visual interface for Git without leaving the terminal, inspired by tools like gitk but for text-mode environments.
 
+# INSTALL
+
+```apt: sudo apt install tig```
+
+```dnf: sudo dnf install tig```
+
+```pacman: sudo pacman -S tig```
+
+```apk: sudo apk add tig```
+
+```zypper: sudo zypper install tig```
+
+```brew: brew install tig```
+
+```nix: nix profile install nixpkgs#tig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-log](/man/git-log)(1), [git-diff](/man/git-diff)(1), [gitk](/man/gitk)(1), [lazygit](/man/lazygit)(1)

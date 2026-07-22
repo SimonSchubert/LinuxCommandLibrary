@@ -88,6 +88,19 @@ Locks can be applied at subscription, resource group, or individual resource lev
 
 Requires Azure CLI and appropriate RBAC permissions (Owner or User Access Administrator). Locks do not restrict actions performed by the Azure platform itself. A ReadOnly lock on a resource group affects all resources within it.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-tag](/man/az-tag)(1), [az-provider](/man/az-provider)(1)

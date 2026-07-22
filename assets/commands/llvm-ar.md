@@ -55,6 +55,24 @@ archiver for creating and manipulating static library archives
 
 **llvm-ar** is the LLVM archiver for creating and manipulating static library archives. Drop-in replacement for GNU ar. Creates archives compatible with the system linker for static linking.
 
+# INSTALL
+
+```apt: sudo apt install llvm```
+
+```dnf: sudo dnf install llvm```
+
+```pacman: sudo pacman -S llvm```
+
+```apk: sudo apk add llvm```
+
+```zypper: sudo zypper install llvm```
+
+```brew: brew install llvm```
+
+```nix: nix profile install nixpkgs#llvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ar](/man/ar)(1)

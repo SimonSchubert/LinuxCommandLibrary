@@ -91,6 +91,24 @@ Output varies by implementation. Colors need terminal support. Hidden files star
 
 ls dates back to the original **Unix** system at AT&T Bell Labs in 1971, remaining a fundamental command.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dir](/man/dir)(1), [exa](/man/exa)(1), [lsd](/man/lsd)(1), [tree](/man/tree)(1)

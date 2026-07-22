@@ -81,6 +81,22 @@ POT file must exist first (typically created by xgettext). Locale must be a vali
 
 msginit is part of **GNU gettext**, the internationalization framework used by most open-source software for translation management.
 
+# INSTALL
+
+```apt: sudo apt install gettext```
+
+```dnf: sudo dnf install gettext```
+
+```pacman: sudo pacman -S gettext```
+
+```apk: sudo apk add gettext```
+
+```brew: brew install gettext```
+
+```nix: nix profile install nixpkgs#gettext```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xgettext](/man/xgettext)(1), [msgfmt](/man/msgfmt)(1), [msgmerge](/man/msgmerge)(1), [gettext](/man/gettext)(3)

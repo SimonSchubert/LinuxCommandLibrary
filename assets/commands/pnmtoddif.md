@@ -42,6 +42,24 @@ DDIF is a legacy format; viewers and converters outside of the historical DEC/Co
 
 **pnmtoddif** was contributed to **Netpbm** to support interoperability with **DEC** Compound Document Architecture tooling. It remains in the distribution mostly for archival and legacy purposes.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmtops](/man/pnmtops)(1), [pnmtopng](/man/pnmtopng)(1), [pamtopnm](/man/pamtopnm)(1)

@@ -34,6 +34,22 @@ Interactive only. Creates /etc/ppp/pppoe.conf.
 
 pppoe-setup provides **interactive PPPoE** configuration for DSL connections.
 
+# INSTALL
+
+```apt: sudo apt install pppoe```
+
+```dnf: sudo dnf install rp-pppoe```
+
+```pacman: sudo pacman -S rp-pppoe```
+
+```apk: sudo apk add rp-pppoe```
+
+```zypper: sudo zypper install rp-pppoe```
+
+```nix: nix profile install nixpkgs#rp-pppoe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pppoe](/man/pppoe)(8), [pppoe-connect](/man/pppoe-connect)(8), [pppoeconf](/man/pppoeconf)(8)

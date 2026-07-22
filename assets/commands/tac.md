@@ -65,6 +65,24 @@ Reads entire input into memory (inefficient for very large files). Binary files 
 
 **tac** is part of **GNU coreutils**, following the Unix tradition of tools that reverse operations (like rev which reverses characters). The name playfully reverses "cat". It provides functionality not available in standard Unix, though some BSD systems have alternatives.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cat](/man/cat)(1), [rev](/man/rev)(1), [tail](/man/tail)(1), [head](/man/head)(1)

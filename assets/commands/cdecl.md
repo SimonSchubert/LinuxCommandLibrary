@@ -89,6 +89,20 @@ Some very complex or non-standard declarations may not be parsed correctly. The 
 
 **cdecl** was originally written by Graham Ross and later enhanced by several contributors including David Wolverton. It emerged in the 1980s when C's declaration syntax was a frequent source of confusion and bugs. The phrase "declare x as..." became a teaching tool for understanding C's inside-out declaration reading. The tool remains useful today for complex declarations.
 
+# INSTALL
+
+```apt: sudo apt install cdecl```
+
+```dnf: sudo dnf install cdecl```
+
+```zypper: sudo zypper install cdecl```
+
+```brew: brew install cdecl```
+
+```nix: nix profile install nixpkgs#cdecl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [clang](/man/clang)(1), [make](/man/make)(1), [ctags](/man/ctags)(1)

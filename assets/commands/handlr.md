@@ -68,6 +68,14 @@ Requires .desktop files to be properly installed in standard locations. May not 
 
 handlr was created as a Rust-based alternative to the xdg-utils suite, focusing on simplicity and reliability. It addresses common frustrations with xdg-open's unpredictable behavior and complex fallback mechanisms.
 
+# INSTALL
+
+```apk: sudo apk add handlr```
+
+```nix: nix profile install nixpkgs#handlr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdg-open](/man/xdg-open)(1), [xdg-mime](/man/xdg-mime)(1)

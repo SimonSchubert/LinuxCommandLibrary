@@ -87,6 +87,24 @@ Show differences between commits and files
 
 By default, it shows unstaged changes (working directory vs index). With --staged, it shows what will be committed. When given two commits or branches, it shows all changes between them.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-log](/man/git-log)(1), [diff](/man/diff)(1), [vimdiff](/man/vimdiff)(1)

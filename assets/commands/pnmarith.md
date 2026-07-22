@@ -77,6 +77,24 @@ Images must be same dimensions. Results clamped to valid range. Use pamarith for
 
 pnmarith is part of **Netpbm** by **Jef Poskanzer**, providing basic image arithmetic operations.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamarith](/man/pamarith)(1), [pnmcat](/man/pnmcat)(1), [pnmcomp](/man/pnmcomp)(1), [netpbm](/man/netpbm)(1)

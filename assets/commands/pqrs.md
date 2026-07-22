@@ -84,6 +84,12 @@ Install from GitHub releases, **cargo install pqrs**, or Homebrew (**manojkarthi
 
 CSV output is not supported for files with Struct or Byte fields. Nested data is better viewed as default or **--json**. Very large files may need sampling rather than full **cat**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pqrs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [parquet-tools](/man/parquet-tools)(1), [duckdb](/man/duckdb)(1), [arrow-tools](/man/arrow-tools)(1)

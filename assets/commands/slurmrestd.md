@@ -97,6 +97,12 @@ Requires proper Slurm configuration and authentication setup. JWT authentication
 
 **slurmrestd** was added to Slurm in version **20.02** (released **2020**) to provide modern REST API access for programmatic cluster interaction. It enables integration with web interfaces, monitoring systems, and automation tools. Maintained by **SchedMD** as part of the core Slurm distribution. The section number is 8 (system administration).
 
+# INSTALL
+
+```apt: sudo apt install slurmrestd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [slurmctld](/man/slurmctld)(8), [sbatch](/man/sbatch)(1), [squeue](/man/squeue)(1), [sacct](/man/sacct)(1)

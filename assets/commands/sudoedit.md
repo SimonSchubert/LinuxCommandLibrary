@@ -64,6 +64,22 @@ Editor plugins run as user. Some editors may not work. Temp files briefly exist.
 
 **sudoedit** is part of **sudo**, providing secure file editing. It prevents running arbitrary code with root privileges through editor extensions.
 
+# INSTALL
+
+```apt: sudo apt install sudo```
+
+```dnf: sudo dnf install sudo```
+
+```pacman: sudo pacman -S sudo```
+
+```apk: sudo apk add sudo```
+
+```zypper: sudo zypper install sudo```
+
+```nix: nix profile install nixpkgs#sudo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sudo](/man/sudo)(8), [visudo](/man/visudo)(8), [vi](/man/vi)(1)

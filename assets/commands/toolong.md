@@ -46,6 +46,12 @@ View, tail, merge, and search log files
 
 **toolong** was created by **Will McGugan** (Textualize) and is written in **Python** using the Textual framework.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#toolong```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lnav](/man/lnav)(1), [less](/man/less)(1), [multitail](/man/multitail)(1)

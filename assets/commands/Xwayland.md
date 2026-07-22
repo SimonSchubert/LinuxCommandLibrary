@@ -97,6 +97,18 @@ Some X11-specific features may not work (screen capture, global hotkeys). Perfor
 
 **Xwayland** was developed as part of the X.Org server project to enable X11 compatibility during the transition to Wayland. It became essential for running applications that haven't been ported to Wayland natively.
 
+# INSTALL
+
+```apt: sudo apt install xwayland```
+
+```apk: sudo apk add xwayland```
+
+```zypper: sudo zypper install xwayland```
+
+```nix: nix profile install nixpkgs#xwayland```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [Xorg](/man/Xorg)(1), [sway](/man/sway)(1)

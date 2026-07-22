@@ -77,6 +77,16 @@ Date formats vary between BSD and other implementations. The -a flag (mail to al
 
 The **calendar** command originated in early Unix systems at Bell Labs in the 1970s. It was one of the original time-based utilities, predating cron for simple reminder functionality. The program has been included in BSD systems since the early days and remains part of many Unix-like operating systems, though its usage has declined with modern calendar applications.
 
+# INSTALL
+
+```apt: sudo apt install calendar```
+
+```dnf: sudo dnf install calendar```
+
+```apk: sudo apk add outils-calendar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cal](/man/cal)(1), [date](/man/date)(1), [at](/man/at)(1), [cron](/man/cron)(8), [remind](/man/remind)(1)

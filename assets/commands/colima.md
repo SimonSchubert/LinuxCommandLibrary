@@ -112,6 +112,14 @@ docker run hello-world
 
 Requires macOS 10.15+ or Linux. vz (Apple virtualization) faster on Apple Silicon. Completely free and open source.
 
+# INSTALL
+
+```brew: brew install colima```
+
+```nix: nix profile install nixpkgs#colima```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [nerdctl](/man/nerdctl)(1), [lima](/man/lima)(1)

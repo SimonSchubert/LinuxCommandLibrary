@@ -104,6 +104,12 @@ Cell outputs (images, tables, rich output) are not stored in text formats and ar
 
 Jupytext was created by **Marc Wouts** to solve version control challenges with Jupyter notebooks. It began as a JupyterLab extension and later added a full command-line interface.
 
+# INSTALL
+
+```brew: brew install jupytext```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jupyter](/man/jupyter)(1), [jupyter-lab](/man/jupyter-lab)(1), [black](/man/black)(1), [isort](/man/isort)(1)

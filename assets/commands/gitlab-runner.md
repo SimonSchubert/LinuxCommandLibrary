@@ -121,6 +121,18 @@ Shell executor provides no isolation between jobs. Docker executor requires Dock
 
 **GitLab Runner** was developed by GitLab Inc. as part of their CI/CD platform, which became part of GitLab around **2015** when GitLab CI was integrated into the main product. The runner has evolved from simple shell execution to supporting multiple sophisticated executors, making it one of the most versatile CI job runners available.
 
+# INSTALL
+
+```pacman: sudo pacman -S gitlab-runner```
+
+```apk: sudo apk add gitlab-runner```
+
+```brew: brew install gitlab-runner```
+
+```nix: nix profile install nixpkgs#gitlab-runner```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [gitlab-ctl](/man/gitlab-ctl)(8), [jenkins](/man/jenkins)(1), [kubectl](/man/kubectl)(1)

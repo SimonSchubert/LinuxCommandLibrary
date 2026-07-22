@@ -71,6 +71,24 @@ Memory usage scales with decompressed file size as the file must be processed th
 
 On some systems, zegrep is a script wrapper around zcat and egrep.
 
+# INSTALL
+
+```apt: sudo apt install gzip```
+
+```dnf: sudo dnf install gzip```
+
+```pacman: sudo pacman -S gzip```
+
+```apk: sudo apk add gzip```
+
+```zypper: sudo zypper install gzip```
+
+```brew: brew install gzip```
+
+```nix: nix profile install nixpkgs#gzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zgrep](/man/zgrep)(1), [zfgrep](/man/zfgrep)(1), [zcat](/man/zcat)(1), [grep](/man/grep)(1), [egrep](/man/egrep)(1), [gzip](/man/gzip)(1), [bzgrep](/man/bzgrep)(1), [xzgrep](/man/xzgrep)(1)

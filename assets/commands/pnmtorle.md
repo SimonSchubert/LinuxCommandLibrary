@@ -28,6 +28,24 @@ Convert PNM to Utah RLE format
 
 **pnmtorle** converts PNM images to Utah RLE (Run Length Encoded) format used by the Utah Raster Toolkit. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rletopnm](/man/rletopnm)(1), [pnmtosgi](/man/pnmtosgi)(1)

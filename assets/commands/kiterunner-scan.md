@@ -65,6 +65,12 @@ Subcommand of kiterunner. Authorized testing only. Can generate high traffic.
 
 kr scan is the main scanning command in **kiterunner**, developed by Assetnote for API security testing.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kiterunner```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kiterunner](/man/kiterunner)(1), [kiterunner-kb](/man/kiterunner-kb)(1)

@@ -67,3 +67,13 @@ npm deprecate was added to provide a softer alternative to unpublishing, allowin
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-publish](/man/npm-publish)(1), [npm-unpublish](/man/npm-unpublish)(1)
+
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->

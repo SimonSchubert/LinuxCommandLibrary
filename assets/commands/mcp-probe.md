@@ -61,6 +61,12 @@ Requires a running MCP server to connect to. Transport support depends on the se
 
 **mcp-probe** was created by **conikeec** and is written in **Rust** using the Ratatui library.
 
+# INSTALL
+
+```aur: yay -S mcp-probe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1)

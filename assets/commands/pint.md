@@ -82,6 +82,14 @@ Live checks require network access to a Prometheus server. Some checks may produ
 
 **pint** was created by **Cloudflare** for validating their Prometheus rules at scale. It provides deeper analysis than Prometheus's built-in rule checking.
 
+# INSTALL
+
+```pacman: sudo pacman -S pint```
+
+```brew: brew install pint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [promtool](/man/promtool)(1), [prometheus](/man/prometheus)(1), [amtool](/man/amtool)(1)

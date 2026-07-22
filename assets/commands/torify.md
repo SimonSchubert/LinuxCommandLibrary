@@ -63,6 +63,24 @@ Deprecated in favor of torsocks. Requires running Tor daemon. DNS leaks possible
 
 **torify** was the original tool for routing application traffic through Tor. It has been superseded by **torsocks** which provides better functionality and security.
 
+# INSTALL
+
+```apt: sudo apt install tor```
+
+```dnf: sudo dnf install tor```
+
+```pacman: sudo pacman -S tor```
+
+```apk: sudo apk add tor```
+
+```zypper: sudo zypper install tor```
+
+```brew: brew install tor```
+
+```nix: nix profile install nixpkgs#tor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [torsocks](/man/torsocks)(1), [tor](/man/tor)(1)

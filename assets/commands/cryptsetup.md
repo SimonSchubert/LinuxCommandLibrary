@@ -92,6 +92,22 @@ Losing all passphrases means permanent data loss. Always backup LUKS headers. Fo
 
 **cryptsetup** was created by **Jana Saout** (dm-crypt) and **Clemens Fruhwirth** (LUKS). LUKS was introduced in **2004** to provide a standard on-disk format for encrypted volumes. LUKS2 was added in 2017 with improved header flexibility and Argon2 key derivation.
 
+# INSTALL
+
+```apt: sudo apt install cryptsetup-bin```
+
+```dnf: sudo dnf install cryptsetup```
+
+```pacman: sudo pacman -S cryptsetup```
+
+```apk: sudo apk add cryptsetup```
+
+```zypper: sudo zypper install cryptsetup```
+
+```nix: nix profile install nixpkgs#cryptsetup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmsetup](/man/dmsetup)(8), [losetup](/man/losetup)(8), [mkfs](/man/mkfs)(8)

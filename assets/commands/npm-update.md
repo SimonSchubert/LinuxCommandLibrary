@@ -43,6 +43,16 @@ updates packages to latest versions within semver range specified in package
 
 **npm update** updates packages to latest versions within semver range specified in package.json. Updates package-lock.json. Use npm outdated first to see available updates.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-outdated](/man/npm-outdated)(1)

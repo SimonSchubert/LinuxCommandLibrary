@@ -81,6 +81,18 @@ Requires Kodi EventClient enabled. Network access needed. Part of kodi-eventclie
 
 kodi-send is part of **Kodi** (formerly XBMC) event client tools for remote media center control.
 
+# INSTALL
+
+```apt: sudo apt install kodi-eventclients-kodi-send```
+
+```pacman: sudo pacman -S kodi```
+
+```apk: sudo apk add kodi```
+
+```nix: nix profile install nixpkgs#kodi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1)

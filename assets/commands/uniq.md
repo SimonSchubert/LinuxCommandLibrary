@@ -83,6 +83,24 @@ Uniq only removes **adjacent** duplicates. Without sorting first, non-adjacent d
 
 The count option (**-c**) prefixes with spaces and count, which may need processing for further use.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sort](/man/sort)(1), [comm](/man/comm)(1), [cut](/man/cut)(1), [wc](/man/wc)(1)

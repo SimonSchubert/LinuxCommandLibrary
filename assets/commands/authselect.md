@@ -138,6 +138,15 @@ Using **--force** is required when switching from manually configured systems. D
 
 **authselect** was developed by Red Hat and introduced in **Fedora 28** (2018) as a replacement for authconfig. It was designed to provide a simpler, more maintainable approach to authentication configuration using predefined profiles rather than individual option flags. By **Fedora 35**, authconfig was fully removed, making authselect the standard tool.
 
+# INSTALL
+
+```apt: sudo apt install authselect```
+
+```dnf: sudo dnf install authselect```
+
+```aur: yay -S authselect```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [pam](/man/pam)(8)

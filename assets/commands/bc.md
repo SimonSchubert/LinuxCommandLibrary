@@ -122,6 +122,23 @@ Unusual syntax for programmers. Default integer division (set scale). Variables 
 
 **bc** was developed at Bell Labs for Unix in **1975** by Robert Morris and Lorinda Cherry, based on the earlier **dc** calculator. The GNU version, which is the most widely used today, was written by Philip A. Nelson.
 
+# INSTALL
+
+```apt: sudo apt install bc```
+
+```dnf: sudo dnf install bc```
+
+```pacman: sudo pacman -S bc```
+
+```apk: sudo apk add bc```
+
+```zypper: sudo zypper install bc```
+
+```brew: brew install bc```
+
+```nix: nix profile install nixpkgs#bc```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [dc](/man/dc)(1), [calc](/man/calc)(1), [awk](/man/awk)(1)

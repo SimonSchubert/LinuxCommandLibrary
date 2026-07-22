@@ -108,6 +108,12 @@ Tilde only expands when unquoted and at word start. **"~"** is literal, not home
 
 **~-** is empty if no previous directory (new shell).
 
+# INSTALL
+
+```zypper: sudo zypper install tilde```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cd](/man/cd)(1), [bash](/man/bash)(1), [pwd](/man/pwd)(1), [pushd](/man/pushd)(1)

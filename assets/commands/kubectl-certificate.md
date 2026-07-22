@@ -52,6 +52,20 @@ Manage certificate signing requests in Kubernetes
 
 **kubectl certificate** manages certificate signing requests (CSRs) in Kubernetes. Used to approve or deny CSRs for kubelet client certificates and other TLS certificates. Part of the cluster's PKI management. When a new node joins a cluster, it generates a CSR that must be approved before the node can communicate with the API server.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-get](/man/kubectl-get)(1), [kubectl-auth](/man/kubectl-auth)(1), [kubectl-config](/man/kubectl-config)(1)

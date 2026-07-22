@@ -99,6 +99,20 @@ Statistics reset on reboot. Requires NFS kernel modules. May need root for some 
 
 nfsstat has been part of NFS tools since the early implementations at **Sun Microsystems** in the 1980s.
 
+# INSTALL
+
+```apt: sudo apt install nfs-common```
+
+```dnf: sudo dnf install nfs-utils```
+
+```pacman: sudo pacman -S nfs-utils```
+
+```apk: sudo apk add nfs-utils```
+
+```nix: nix profile install nixpkgs#nfs-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nfsd](/man/nfsd)(8), [showmount](/man/showmount)(8), [rpcinfo](/man/rpcinfo)(8)

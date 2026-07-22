@@ -74,6 +74,20 @@ Large files take time to hash. At least one tracker is required for most use cas
 
 **transmission-create** is part of the Transmission project, an open-source BitTorrent client started in 2005. The CLI tools were developed to allow automation and server-side torrent management without requiring a graphical interface.
 
+# INSTALL
+
+```apt: sudo apt install transmission-cli```
+
+```dnf: sudo dnf install transmission-cli```
+
+```pacman: sudo pacman -S transmission-cli```
+
+```apk: sudo apk add transmission-extra```
+
+```brew: brew install transmission-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [transmission-show](/man/transmission-show)(1), [transmission-daemon](/man/transmission-daemon)(1), [transmission-remote](/man/transmission-remote)(1), [mktorrent](/man/mktorrent)(1)

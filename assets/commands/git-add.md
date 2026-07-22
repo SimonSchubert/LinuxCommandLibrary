@@ -106,6 +106,24 @@ Staging a file captures its state at that moment. If you modify a staged file fu
 
 git add has been part of Git since its initial release by Linus Torvalds in **2005**. The staging area concept (also called the index) is a distinctive feature of Git, allowing more flexible commit preparation compared to version control systems that commit working directory changes directly.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-commit](/man/git-commit)(1), [git-status](/man/git-status)(1), [git-restore](/man/git-restore)(1), [git-reset](/man/git-reset)(1), [git-diff](/man/git-diff)(1), [git-rm](/man/git-rm)(1)

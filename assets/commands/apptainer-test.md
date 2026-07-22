@@ -84,6 +84,21 @@ Only runs tests if a %test section was defined during container build. Returns s
 
 The test subcommand has been part of Singularity/Apptainer since early versions, providing container authors a standardized way to validate their builds. It supports the reproducibility goals of scientific computing by ensuring containers meet expected functionality. Apptainer preserved this feature when the project forked from Singularity in **2021**.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-build](/man/apptainer-build)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-exec](/man/apptainer-exec)(1), [apptainer-inspect](/man/apptainer-inspect)(1)

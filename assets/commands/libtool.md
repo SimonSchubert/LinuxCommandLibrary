@@ -71,6 +71,24 @@ Libtool objects (.lo) and archives (.la) are wrappers containing metadata. Actua
 
 Created by Gordon Matzigkeit in **1996** as part of the GNU project to simplify portable library creation across Unix-like systems.
 
+# INSTALL
+
+```apt: sudo apt install libtool-bin```
+
+```dnf: sudo dnf install libtool```
+
+```pacman: sudo pacman -S libtool```
+
+```apk: sudo apk add libtool```
+
+```zypper: sudo zypper install libtool```
+
+```brew: brew install libtool```
+
+```nix: nix profile install nixpkgs#libtool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [libtoolize](/man/libtoolize)(1), [automake](/man/automake)(1), [autoconf](/man/autoconf)(1)

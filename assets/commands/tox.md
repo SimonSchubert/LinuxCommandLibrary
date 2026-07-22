@@ -106,6 +106,16 @@ Python versions must be installed for their environments. Initial environment cr
 
 **tox** was created by **Holger Krekel** (creator of pytest) around **2010** to solve multi-Python testing. It became the standard tool for Python package testing, used by major projects. Version 4 (2022) brought significant improvements and pyproject.toml support.
 
+# INSTALL
+
+```dnf: sudo dnf install tox```
+
+```apk: sudo apk add py3-tox```
+
+```brew: brew install tox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pytest](/man/pytest)(1), [nox](/man/nox)(1), [virtualenv](/man/virtualenv)(1), [hatch](/man/hatch)(1)

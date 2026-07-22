@@ -91,6 +91,20 @@ The command supports several analysis modes: `--invert` traces which packages de
 
 Use --invert to trace where a dependency comes from. Combine with --edges features to understand feature propagation.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-metadata](/man/cargo-metadata)(1)

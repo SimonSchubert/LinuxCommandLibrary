@@ -34,6 +34,14 @@ See **nsh --help** for the flags supported by your build (script execution, inte
 
 Alpha software; do not replace a production login shell without testing. Bash completion bridging requires **bash** installed. Feature completeness lags Bash/zsh for complex interactive setups.
 
+# INSTALL
+
+```brew: brew install nsh```
+
+```nix: nix profile install nixpkgs#nsh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [zsh](/man/zsh)(1), [fish](/man/fish)(1), [oil](/man/oil)(1)

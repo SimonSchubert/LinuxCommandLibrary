@@ -163,6 +163,11 @@ Aptitude uses its own search syntax with special terms like **?installed**, **?a
 
 Created as an alternative to apt-get with more advanced features. First released for Debian in **2001** by Daniel Burrows.
 
+# INSTALL
+
+```apt: sudo apt install aptitude```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [dpkg](/man/dpkg)(1), [nala](/man/nala)(8)

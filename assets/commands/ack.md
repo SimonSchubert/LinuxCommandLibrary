@@ -97,6 +97,21 @@ The tool provides built-in file type filtering, allowing searches limited to spe
 
 **ack** was created by Andy Lester and first released in **2005**. It was designed to be a better grep for programmers, addressing common frustrations with searching through codebases. The tool influenced later search tools like **ag** and **ripgrep**.
 
+# INSTALL
+
+```dnf: sudo dnf install ack```
+
+```aur: yay -S ack```
+
+```apk: sudo apk add ack```
+
+```zypper: sudo zypper install ack```
+
+```brew: brew install ack```
+
+```nix: nix profile install nixpkgs#ack```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [grep](/man/grep)(1), [ag](/man/ag)(1), [rg](/man/rg)(1), [git-grep](/man/git-grep)(1)

@@ -20,6 +20,12 @@ TUI manager for MongoDB databases
 
 **vi-mongo** was created by **kopecmaciej** and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#vi-mongo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mongosh](/man/mongosh)(1), [mongo](/man/mongo)(1)

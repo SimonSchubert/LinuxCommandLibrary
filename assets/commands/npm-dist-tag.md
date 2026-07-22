@@ -35,6 +35,16 @@ manages distribution tags for packages
 
 **npm dist-tag** manages distribution tags for packages. Tags like latest, next, or beta point to specific versions. Used to control what version npm install gets by default.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-publish](/man/npm-publish)(1)

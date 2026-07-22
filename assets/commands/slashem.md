@@ -58,6 +58,12 @@ Requires knowledge of NetHack-style roguelike controls. Permadeath applies. More
 
 **SLASH'EM** development began in **1997** as a merge of two NetHack variants: SLASH and Strstrng's Hack. It became one of the most popular NetHack variants.
 
+# INSTALL
+
+```brew: brew install slashem```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nethack-console](/man/nethack-console)(6), [rogue](/man/rogue)(6), [angband](/man/angband)(6)

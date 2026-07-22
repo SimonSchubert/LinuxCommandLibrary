@@ -74,6 +74,24 @@ Commands that spawn child processes may leave orphaned children. Timeout only si
 
 Very short timeouts (sub-second) may not be reliable due to scheduling overhead.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [time](/man/time)(1), [watch](/man/watch)(1), [kill](/man/kill)(1), [sleep](/man/sleep)(1)

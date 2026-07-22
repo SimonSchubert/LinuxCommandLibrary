@@ -130,6 +130,14 @@ As of **March 2026** the upstream project is archived; Charm recommends **Crush*
 
 **mods** was created by **Charm** as part of their suite of terminal tools (alongside gum, glow, and charm). It was archived in March 2026 in favour of Charm's newer Crush CLI.
 
+# INSTALL
+
+```brew: brew install mods```
+
+```nix: nix profile install nixpkgs#mods```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [llm](/man/llm)(1), [ollama](/man/ollama)(1), [glow](/man/glow)(1), [gum](/man/gum)(1), [charm](/man/charm)(1)

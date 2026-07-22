@@ -87,6 +87,16 @@ Always preview changes with **-t** (test mode) before executing. File extensions
 
 **nomino** was created by **yaa110** and is written in **Rust**.
 
+# INSTALL
+
+```zypper: sudo zypper install nomino```
+
+```brew: brew install nomino```
+
+```nix: nix profile install nixpkgs#nomino```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rename](/man/rename)(1), [mv](/man/mv)(1), [mmv](/man/mmv)(1)

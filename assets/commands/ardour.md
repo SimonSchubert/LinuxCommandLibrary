@@ -110,6 +110,17 @@ Ardour requires JACK or PipeWire for audio I/O. Real-time audio performance depe
 
 Ardour was created by Paul Davis, who is also responsible for the JACK Audio Connection Kit. Development began in **1999** and the first public release occurred in **2005**. It has become one of the most capable open-source DAWs available, used by professional studios and musicians worldwide. The project is funded through subscriptions and donations.
 
+# INSTALL
+
+```apt: sudo apt install ardour```
+
+```pacman: sudo pacman -S ardour```
+
+```zypper: sudo zypper install ardour```
+
+```nix: nix profile install nixpkgs#ardour```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [jackd](/man/jackd)(1), [audacity](/man/audacity)(1), [lmms](/man/lmms)(1)

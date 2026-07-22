@@ -100,6 +100,22 @@ Quilt creates a **patches/** directory and a **series** file in the working dire
 
 Quilt was inspired by **Andrew Morton's** patch scripts for kernel development.
 
+# INSTALL
+
+```dnf: sudo dnf install quilt```
+
+```pacman: sudo pacman -S quilt```
+
+```apk: sudo apk add quilt```
+
+```zypper: sudo zypper install quilt```
+
+```brew: brew install quilt```
+
+```nix: nix profile install nixpkgs#quilt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [patch](/man/patch)(1), [diff](/man/diff)(1), [git](/man/git)(1)

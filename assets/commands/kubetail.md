@@ -121,6 +121,14 @@ Third-party Bash script (not part of kubectl). Requires `kubectl` configured wit
 
 kubetail was created by Johan Haleby to simplify tailing logs from multiple Kubernetes pods with a single command.
 
+# INSTALL
+
+```brew: brew install kubetail```
+
+```nix: nix profile install nixpkgs#kubetail```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [stern](/man/stern)(1), [k9s](/man/k9s)(1)

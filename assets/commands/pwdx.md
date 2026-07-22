@@ -36,6 +36,24 @@ The process must be accessible to the user running pwdx. For processes owned by 
 
 **pwdx** was created by Nicholas Miell in 2004 and is part of the **procps-ng** package. It resembles a SunOS command of the same name.
 
+# INSTALL
+
+```apt: sudo apt install procps```
+
+```dnf: sudo dnf install procps-ng```
+
+```pacman: sudo pacman -S procps-ng```
+
+```apk: sudo apk add procps-ng```
+
+```zypper: sudo zypper install procps```
+
+```brew: brew install procps```
+
+```nix: nix profile install nixpkgs#procps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ps](/man/ps)(1), [pgrep](/man/pgrep)(1), [lsof](/man/lsof)(8), [readlink](/man/readlink)(1), [proc](/man/proc)(5)

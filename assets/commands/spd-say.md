@@ -112,6 +112,20 @@ Requires the speech-dispatcher daemon to be running. Available voices and langua
 
 Speech Dispatcher was developed as part of the **Free(b)Soft** project to provide a unified text-to-speech interface for Linux accessibility. Development began around **2001**, led by **Hynek Hanke** and **Tomas Cerha**. The project aims to provide speech output for visually impaired users and general text-to-speech functionality. It integrates with screen readers like Orca and provides the **spd-say** command for script and command-line access.
 
+# INSTALL
+
+```apt: sudo apt install speech-dispatcher```
+
+```dnf: sudo dnf install speech-dispatcher```
+
+```pacman: sudo pacman -S speech-dispatcher```
+
+```apk: sudo apk add speech-dispatcher```
+
+```zypper: sudo zypper install speech-dispatcher```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [espeak-ng](/man/espeak-ng)(1), [festival](/man/festival)(1), [speech-dispatcher](/man/speech-dispatcher)(1), [say](/man/say)(1)

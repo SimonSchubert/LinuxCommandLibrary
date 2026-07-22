@@ -55,6 +55,12 @@ Requires network access to the target's SMB port (typically 445). Results depend
 
 Part of the **Impacket** library, originally by SecureAuth and now maintained by Fortra.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [impacket-psexec](/man/impacket-psexec)(1), [impacket-smbclient](/man/impacket-smbclient)(1), [nmap](/man/nmap)(1), [smbclient](/man/smbclient)(1)

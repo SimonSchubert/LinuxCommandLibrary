@@ -69,6 +69,12 @@ All indexing and search runs locally. No prompts, transcripts, or history are se
 
 Transcript text is preserved as stored locally; review output before sharing outside the machine. Source builds and package-manager installs do not self-upgrade — only installer-managed binaries support **ctx upgrade**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#ctx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rg](/man/rg)(1), [jq](/man/jq)(1)

@@ -122,6 +122,12 @@ Requires a **256-color terminal**, and most themes assume a **dark background** 
 
 Written by **axiros** and first released in **2015** as _terminal_markdown_viewer_. The project is published under the BSD license and continues to receive sporadic updates; version _1.7.5_ was released in **September 2023**. A lighter-weight sibling, **mdvl**, was later created by the same author for minimal environments.
 
+# INSTALL
+
+```brew: brew install mdv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glow](/man/glow)(1), [bat](/man/bat)(1), [pygmentize](/man/pygmentize)(1), [pandoc](/man/pandoc)(1)

@@ -58,6 +58,18 @@ Manage Pulumi stack configuration values
 
 **pulumi config** manages stack configuration values. Configuration includes parameters like cloud regions, instance sizes, and secrets. Secrets are encrypted in state files.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-stack](/man/pulumi-stack)(1)

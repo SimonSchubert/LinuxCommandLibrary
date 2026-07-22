@@ -61,6 +61,18 @@ validate PostScript Printer Description files
 
 Exit code 0 indicates a valid PPD file.
 
+# INSTALL
+
+```apt: sudo apt install cups-client```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cupsd](/man/cupsd)(8), [lpadmin](/man/lpadmin)(8)

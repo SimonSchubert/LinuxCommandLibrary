@@ -74,6 +74,21 @@ Installation may fail if the APK is signed with a different key than the existin
 
 **adb install** has been available since the initial Android SDK release in **2008**. Options have expanded over time to support split APKs, instant apps, and Android App Bundles.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb](/man/adb)(1), [adb-uninstall](/man/adb-uninstall)(1), [adb-shell-pm](/man/adb-shell-pm)(1), [aapt](/man/aapt)(1), [apksigner](/man/apksigner)(1)

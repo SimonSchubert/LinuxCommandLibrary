@@ -86,6 +86,16 @@ iwlist is deprecated in favor of iw. Scanning may briefly disrupt connectivity. 
 
 **iwlist** was part of the **wireless-tools** package, providing wireless network information on Linux.
 
+# INSTALL
+
+```apt: sudo apt install wireless-tools```
+
+```apk: sudo apk add wireless-tools```
+
+```zypper: sudo zypper install wireless-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iw](/man/iw)(8), [iwconfig](/man/iwconfig)(8), [nmcli](/man/nmcli)(1)

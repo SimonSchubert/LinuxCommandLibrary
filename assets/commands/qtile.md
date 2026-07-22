@@ -85,6 +85,14 @@ Configuration is done in Python at ~/.config/qtile/config.py. Always run qtile c
 
 **qtile** was created as a highly configurable tiling window manager that uses Python for configuration, allowing complex customizations and scripting capabilities.
 
+# INSTALL
+
+```dnf: sudo dnf install qtile```
+
+```pacman: sudo pacman -S qtile```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [i3](/man/i3)(1), [bspwm](/man/bspwm)(1), [awesome](/man/awesome)(1)

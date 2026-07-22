@@ -62,6 +62,20 @@ macOS oriented. Less common on Linux. XML overhead.
 
 **xar** (eXtensible ARchive) was developed by **Apple** for macOS installer packages.
 
+# INSTALL
+
+```apt: sudo apt install xar```
+
+```dnf: sudo dnf install xar```
+
+```apk: sudo apk add xar```
+
+```zypper: sudo zypper install xar```
+
+```nix: nix profile install nixpkgs#xar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tar](/man/tar)(1), [pkgutil](/man/pkgutil)(1), [ar](/man/ar)(1)

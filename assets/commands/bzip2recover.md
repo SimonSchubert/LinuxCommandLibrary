@@ -55,6 +55,24 @@ Cannot recover data inside a corrupted block — only whole blocks bounded by in
 
 **bzip2recover** has been included with bzip2 since version 1.0 in **2000** to help recover from corruption.
 
+# INSTALL
+
+```apt: sudo apt install bzip2```
+
+```dnf: sudo dnf install bzip2```
+
+```pacman: sudo pacman -S bzip2```
+
+```apk: sudo apk add bzip2```
+
+```zypper: sudo zypper install bzip2```
+
+```brew: brew install bzip2```
+
+```nix: nix profile install nixpkgs#bzip2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bzip2](/man/bzip2)(1), [bunzip2](/man/bunzip2)(1), [ddrescue](/man/ddrescue)(1)

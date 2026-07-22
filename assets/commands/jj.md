@@ -124,6 +124,20 @@ The CLI is still pre-1.0 and changing — the **bookmark** subcommand was rename
 
 **Jujutsu** was created in **2019** at **Google** by **Martin von Zweigbergk** as a personal experiment, open-sourced in **2022**, and is now developed at **github.com/jj-vcs/jj** with a growing community of contributors.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj-git](/man/jj-git)(1), [jj-log](/man/jj-log)(1), [git](/man/git)(1), [hg](/man/hg)(1)

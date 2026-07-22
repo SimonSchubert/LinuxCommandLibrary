@@ -103,6 +103,12 @@ The VM provider is selected automatically based on the platform: Apple Hyperviso
 
 All machine commands are rootless only. The `set` subcommand requires the machine to be stopped. Disk size can only be expanded, not shrunk. Some `set` options (--cpus, --memory, --disk-size) are QEMU-only.
 
+# INSTALL
+
+```dnf: sudo dnf install podman-machine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [docker-machine](/man/docker-machine)(1)

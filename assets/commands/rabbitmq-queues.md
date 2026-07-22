@@ -48,6 +48,18 @@ Inspect and manage RabbitMQ queues
 
 **rabbitmq-queues** manages RabbitMQ queues. Inspect queue status, rebalance load, and manage quorum queue membership. Part of RabbitMQ CLI tools.
 
+# INSTALL
+
+```dnf: sudo dnf install rabbitmq-server```
+
+```apk: sudo apk add rabbitmq-server```
+
+```zypper: sudo zypper install rabbitmq-server```
+
+```nix: nix profile install nixpkgs#rabbitmq-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rabbitmqctl](/man/rabbitmqctl)(1), [rabbitmq-streams](/man/rabbitmq-streams)(1)

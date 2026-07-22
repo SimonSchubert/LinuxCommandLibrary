@@ -45,6 +45,22 @@ Manage installed Rust toolchains
 
 **rustup toolchain** manages Rust toolchains. Install, remove, and list toolchains. Supports stable, beta, nightly, and specific versions. Can link custom-built toolchains.
 
+# INSTALL
+
+```apt: sudo apt install rustup```
+
+```dnf: sudo dnf install rustup```
+
+```pacman: sudo pacman -S rustup```
+
+```zypper: sudo zypper install rustup```
+
+```brew: brew install rustup```
+
+```nix: nix profile install nixpkgs#rustup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rustup](/man/rustup)(1), [rustup-default](/man/rustup-default)(1)

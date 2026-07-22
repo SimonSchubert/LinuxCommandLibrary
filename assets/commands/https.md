@@ -98,6 +98,22 @@ Not a shell alias but a separate entry point shipped by the **httpie** Python pa
 
 **https** has been bundled with **HTTPie** since its early releases, created by **Jakub Roztocil** as a more user-friendly alternative to curl for command-line HTTP/API testing.
 
+# INSTALL
+
+```dnf: sudo dnf install httpie```
+
+```pacman: sudo pacman -S httpie```
+
+```apk: sudo apk add httpie```
+
+```zypper: sudo zypper install httpie```
+
+```brew: brew install httpie```
+
+```nix: nix profile install nixpkgs#httpie```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [http](/man/http)(1), [curl](/man/curl)(1), [wget](/man/wget)(1)

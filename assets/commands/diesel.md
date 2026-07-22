@@ -102,6 +102,12 @@ Requires database driver libraries (libpq for PostgreSQL, libmysqlclient for MyS
 
 Diesel was created by **Sean Griffin** (also a Ruby on Rails contributor) and first released in **2015**. It was designed to leverage Rust's type system for database safety. The CLI tool provides migration management similar to ActiveRecord or Knex. Diesel has become one of the most popular Rust database libraries.
 
+# INSTALL
+
+```brew: brew install diesel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sqlx](/man/sqlx)(1), [cargo](/man/cargo)(1)

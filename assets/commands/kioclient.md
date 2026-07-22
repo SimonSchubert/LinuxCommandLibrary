@@ -118,6 +118,18 @@ The set of usable URL schemes depends on installed KIO worker packages. A scheme
 
 **kioclient** has shipped with KDE since the **KDE 3** era as a way for shell scripts and other applications to drive the **KIO** framework that Konqueror introduced. It was rewritten for **KDE 4** alongside KIO itself and renamed to **kioclient4** to coexist with the KDE 3 version. The Qt5-based **kioclient5** appeared with **KDE Frameworks 5** in **2014**, and **kioclient6** followed the **KDE Frameworks 6** release in **2024**.
 
+# INSTALL
+
+```apt: sudo apt install kde-cli-tools```
+
+```dnf: sudo dnf install kde-cli-tools```
+
+```pacman: sudo pacman -S kde-cli-tools```
+
+```apk: sudo apk add kde-cli-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dolphin](/man/dolphin)(1), [kdialog](/man/kdialog)(1), [xdg-open](/man/xdg-open)(1), [gio](/man/gio)(1)

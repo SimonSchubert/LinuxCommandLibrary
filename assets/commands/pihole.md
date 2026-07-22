@@ -100,6 +100,12 @@ Most commands require root privileges or use of sudo. Pi-hole acts as a DNS serv
 
 **Pi-hole** was created as a network-wide ad blocker that runs on a Raspberry Pi (or other Linux system) to block advertisements and tracking at the DNS level.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pihole```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dnsmasq](/man/dnsmasq)(8), [unbound](/man/unbound)(8)

@@ -74,6 +74,14 @@ Requires ncurses library. High scores are stored locally and not shared. No next
 
 **tint** was created as a faithful terminal-based recreation of the original Tetris game by Alexey Pajitnov. The recursive acronym name (TINT Is Not Tetris) is a nod to GNU naming conventions while acknowledging trademark considerations. It became a popular choice for Tetris on minimal Linux systems and servers.
 
+# INSTALL
+
+```zypper: sudo zypper install tint```
+
+```nix: nix profile install nixpkgs#tint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tetrinet](/man/tetrinet)(1), [bastet](/man/bastet)(1), [vitetris](/man/vitetris)(1), [moon-buggy](/man/moon-buggy)(1)

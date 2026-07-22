@@ -50,6 +50,24 @@ Show repository summary with contribution statistics
 
 **git summary** outputs a repository overview including project age, number of active days, total commits, and per-author contribution statistics. Part of git-extras, it provides a quick snapshot of project activity.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-shortlog](/man/git-shortlog)(1), [git-extras](/man/git-extras)(1)

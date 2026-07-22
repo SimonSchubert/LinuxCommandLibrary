@@ -68,6 +68,12 @@ Requires PHP. RoboFile.php needed. Composer recommended.
 
 **Robo** was created as a modern PHP task runner, providing a clean API for automation tasks in PHP projects.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#robo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [composer](/man/composer)(1), [make](/man/make)(1), [rake](/man/rake)(1)

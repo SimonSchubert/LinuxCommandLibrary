@@ -104,6 +104,16 @@ Use **-i** to inspect available qualities and stream ids, then **-f** to pick on
 
 FFmpeg is required for merging separate audio/video streams into a final file; downloads still work without it. Site support and stream ids change as upstream sites change their APIs. Prefer official packages or release binaries over outdated distro builds when a site stops working.
 
+# INSTALL
+
+```zypper: sudo zypper install lux```
+
+```brew: brew install lux```
+
+```nix: nix profile install nixpkgs#lux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yt-dlp](/man/yt-dlp)(1), [youtube-dl](/man/youtube-dl)(1), [ffmpeg](/man/ffmpeg)(1), [aria2c](/man/aria2c)(1)

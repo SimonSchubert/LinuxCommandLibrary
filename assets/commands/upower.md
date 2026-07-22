@@ -58,6 +58,22 @@ The tool is commonly used to monitor laptop battery status and power management 
 
 Requires UPower daemon running. Available information depends on hardware support. Some features require DBus.
 
+# INSTALL
+
+```apt: sudo apt install upower```
+
+```dnf: sudo dnf install upower```
+
+```pacman: sudo pacman -S upower```
+
+```apk: sudo apk add upower```
+
+```zypper: sudo zypper install upower```
+
+```nix: nix profile install nixpkgs#upower```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [acpi](/man/acpi)(1), [tlp-stat](/man/tlp-stat)(1)

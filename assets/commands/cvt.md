@@ -66,6 +66,24 @@ Generated modelines may not be supported by all displays or graphics hardware. R
 
 The CVT standard was developed by **VESA** (Video Electronics Standards Association) to provide a standardized method for calculating display timings. The cvt tool is part of the xorg-server utilities, implementing the CVT 1.1 and CVT-RB specifications.
 
+# INSTALL
+
+```apt: sudo apt install xcvt```
+
+```dnf: sudo dnf install libxcvt```
+
+```pacman: sudo pacman -S libxcvt```
+
+```apk: sudo apk add libxcvt```
+
+```zypper: sudo zypper install libxcvt```
+
+```brew: brew install libxcvt```
+
+```nix: nix profile install nixpkgs#libxcvt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gtf](/man/gtf)(1), [xrandr](/man/xrandr)(1)

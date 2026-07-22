@@ -69,6 +69,18 @@ Requires CUPS. Printer must be configured. Options vary by printer.
 
 lp is the **System V** print command, now implemented by CUPS as the standard Linux/macOS print interface.
 
+# INSTALL
+
+```apt: sudo apt install lprng```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lpr](/man/lpr)(1), [lpq](/man/lpq)(1), [lprm](/man/lprm)(1), [lpoptions](/man/lpoptions)(1)

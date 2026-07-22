@@ -79,6 +79,12 @@ Resource limits vary by queue and cluster configuration. Jobs may wait in queue 
 
 **qsub** originated with PBS (Portable Batch System) developed at NASA. TORQUE is an open-source derivative. Similar commands exist in Slurm (sbatch) and other job schedulers.
 
+# INSTALL
+
+```apt: sudo apt install gridengine-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qstat](/man/qstat)(1), [qdel](/man/qdel)(1), [pbsnodes](/man/pbsnodes)(1), [sbatch](/man/sbatch)(1)

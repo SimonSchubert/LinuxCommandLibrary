@@ -92,6 +92,20 @@ gosec performs static analysis and can produce false positives; use **#nosec** c
 
 gosec started life as **gas** (Go AST Scanner) and was later renamed. It is maintained by the **securego** community project and is widely integrated into Go CI tooling, including golangci-lint.
 
+# INSTALL
+
+```dnf: sudo dnf install gosec```
+
+```apk: sudo apk add gosec```
+
+```zypper: sudo zypper install gosec```
+
+```brew: brew install gosec```
+
+```nix: nix profile install nixpkgs#gosec```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [golangci-lint](/man/golangci-lint)(1), [staticcheck](/man/staticcheck)(1), [semgrep](/man/semgrep)(1), [go](/man/go)(1)

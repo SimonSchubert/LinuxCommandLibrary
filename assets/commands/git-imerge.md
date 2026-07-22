@@ -109,6 +109,16 @@ Separate installation required. More complex than simple merge. Best for difficu
 
 git imerge was created by **Michael Haggerty** to address the pain of large, conflict-heavy merges by breaking them into smaller pieces.
 
+# INSTALL
+
+```dnf: sudo dnf install git-imerge```
+
+```brew: brew install git-imerge```
+
+```nix: nix profile install nixpkgs#git-imerge```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [git-rebase](/man/git-rebase)(1)

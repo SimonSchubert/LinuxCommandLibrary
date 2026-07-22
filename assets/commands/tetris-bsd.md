@@ -71,6 +71,14 @@ The game must be played on a CRT-compatible terminal. The vi-style default contr
 
 The original Tetris was created by **Alexey Pajitnov** in **1984** in the Soviet Union. This BSD implementation was adapted from a **1989** International Obfuscated C Code Contest winner by **Chris Torek** and **Darren F. Provine**. Preview mode was added by **Hubert Feyrer** in **1999**. The game is part of the **bsdgames** package included in many Unix-like distributions.
 
+# INSTALL
+
+```apk: sudo apk add micro-tetris```
+
+```nix: nix profile install nixpkgs#tetris```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tetris](/man/tetris)(6), [bcd](/man/bcd)(6), [worm](/man/worm)(6)

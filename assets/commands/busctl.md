@@ -126,6 +126,16 @@ The tool can list services, monitor message traffic, inspect object hierarchies,
 **--no-legend**
 > Do not print column headers and footers.
 
+# INSTALL
+
+```apt: sudo apt install elogind```
+
+```apk: sudo apk add busctl```
+
+```nix: nix profile install nixpkgs#elogind```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dbus-send](/man/dbus-send)(1), [dbus-monitor](/man/dbus-monitor)(1), [gdbus](/man/gdbus)(1), [systemctl](/man/systemctl)(1)

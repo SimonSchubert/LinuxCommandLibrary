@@ -94,6 +94,22 @@ Does not resolve dependencies automatically (use dnf/yum). Package signatures sh
 
 **RPM** was originally developed at Red Hat by Marc Ewing and Erik Troan. It became the standard package format for many Linux distributions including Fedora, RHEL, CentOS, and SUSE.
 
+# INSTALL
+
+```apt: sudo apt install rpm```
+
+```dnf: sudo dnf install rpm```
+
+```apk: sudo apk add rpm```
+
+```zypper: sudo zypper install rpm```
+
+```brew: brew install rpm```
+
+```nix: nix profile install nixpkgs#rpm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dnf](/man/dnf)(8), [yum](/man/yum)(8), [rpm2cpio](/man/rpm2cpio)(8), [rpmbuild](/man/rpmbuild)(8)

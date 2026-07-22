@@ -79,6 +79,12 @@ Configuration files are stored in **/var/lib/container/<name>/etc/nixos/** and c
 
 Requires root privileges. NixOS-specific; not available on other distributions. Containers share the host kernel, so kernel modules and versions are inherited. Network configuration requires explicit setup for external connectivity.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nixos-container```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nixos-rebuild](/man/nixos-rebuild)(8), [systemd-nspawn](/man/systemd-nspawn)(1), [machinectl](/man/machinectl)(1)

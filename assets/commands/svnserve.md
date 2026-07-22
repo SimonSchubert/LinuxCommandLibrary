@@ -107,6 +107,24 @@ Uses plain text authentication by default unless tunneled through SSH or configu
 
 **svnserve** was included in Subversion from early versions as a lightweight alternative to Apache-based repository serving. It provides faster setup and lower overhead for smaller deployments. The svn:// protocol was designed for simplicity while svn+ssh:// leverages SSH for authentication and encryption.
 
+# INSTALL
+
+```apt: sudo apt install subversion```
+
+```dnf: sudo dnf install subversion```
+
+```pacman: sudo pacman -S subversion```
+
+```apk: sudo apk add subversion```
+
+```zypper: sudo zypper install subversion```
+
+```brew: brew install subversion```
+
+```nix: nix profile install nixpkgs#subversion```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [svnadmin](/man/svnadmin)(1), [svn](/man/svn)(1), [sshd](/man/sshd)(8)

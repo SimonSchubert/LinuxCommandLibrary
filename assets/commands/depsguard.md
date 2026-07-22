@@ -60,6 +60,12 @@ Backups are written to `~/.depsguard/backups/` before each apply operation.
 
 Some hardening options require recent package manager versions (for example npm 11.10 or newer for certain flags). A VT-capable terminal is recommended for proper TUI rendering. Building from source requires Rust 1.74 or newer.
 
+# INSTALL
+
+```brew: brew install depsguard```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [pnpm](/man/pnpm)(1), [yarn](/man/yarn)(1), [bun](/man/bun)(1), [uv](/man/uv)(1)

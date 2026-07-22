@@ -96,6 +96,20 @@ The "a" in 7za stands for "alone" (standalone), not "alpha" or "advanced".
 
 Performance is identical to 7z for supported formats.
 
+# INSTALL
+
+```apt: sudo apt install 7zip```
+
+```dnf: sudo dnf install 7zip```
+
+```pacman: sudo pacman -S 7zip```
+
+```zypper: sudo zypper install 7zip```
+
+```brew: brew install 7zip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [7z](/man/7z)(1), [7zr](/man/7zr)(1), [tar](/man/tar)(1), [gzip](/man/gzip)(1)

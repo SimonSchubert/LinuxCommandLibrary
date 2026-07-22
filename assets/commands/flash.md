@@ -58,6 +58,14 @@ Requires **fzf** as a mandatory dependency for deck selection. On macOS, GNU cor
 
 Flash was created by **Bryan Jenks** (tallguyjenks) as a lightweight terminal alternative to graphical flashcard applications. Written entirely in **Bash**, it draws inspiration from spaced repetition systems like Anki while maintaining Unix philosophy simplicity.
 
+# INSTALL
+
+```apt: sudo apt install flash```
+
+```brew: brew install flash```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fzf](/man/fzf)(1), [bat](/man/bat)(1), [cat](/man/cat)(1)

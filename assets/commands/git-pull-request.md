@@ -50,6 +50,12 @@ The command can extract PR title and body from commit messages or prompt for the
 
 Note: The **hub** tool is now in maintenance mode. The official replacement is **gh pr create** from the GitHub CLI, which provides more comprehensive GitHub integration.
 
+# INSTALL
+
+```dnf: sudo dnf install git-pull-request```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh-pr-create](/man/gh-pr-create)(1), [gh](/man/gh)(1), [hub](/man/hub)(1), [git-extras](/man/git-extras)(1), [git-request-pull](/man/git-request-pull)(1), [git-push](/man/git-push)(1)

@@ -41,6 +41,24 @@ Part of the Netpbm toolkit.
 
 Generates only uncompressed MDA data; a Microdesign file header must be added separately when producing a standalone file.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mdatopbm](/man/mdatopbm)(1), [pbmtolj](/man/pbmtolj)(1), [pbm](/man/pbm)(5)

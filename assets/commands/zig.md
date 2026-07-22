@@ -112,6 +112,22 @@ Debug builds include runtime safety checks that catch bugs but have performance 
 
 Cross-compilation is powerful but target-specific system libraries may still be needed for some features.
 
+# INSTALL
+
+```dnf: sudo dnf install zig```
+
+```pacman: sudo pacman -S zig```
+
+```apk: sudo apk add zig```
+
+```zypper: sudo zypper install zig```
+
+```brew: brew install zig```
+
+```nix: nix profile install nixpkgs#zig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [clang](/man/clang)(1), [rustc](/man/rustc)(1), [make](/man/make)(1)

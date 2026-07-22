@@ -28,6 +28,18 @@ Terminal spreadsheet multitool for exploring data
 
 **VisiData** was created by **Saul Pwanson** and is written in **Python**.
 
+# INSTALL
+
+```dnf: sudo dnf install visidata```
+
+```pacman: sudo pacman -S visidata```
+
+```brew: brew install visidata```
+
+```nix: nix profile install nixpkgs#visidata```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [csvkit](/man/csvkit)(1), [xsv](/man/xsv)(1), [miller](/man/miller)(1)

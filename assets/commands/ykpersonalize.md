@@ -84,6 +84,24 @@ Programming overwrites existing slot configuration. Access codes prevent reconfi
 
 **ykpersonalize** was developed by Yubico as part of the yubikey-personalization package for configuring YubiKey tokens. While still functional, Yubico now recommends ykman (YubiKey Manager) for newer YubiKey models and features.
 
+# INSTALL
+
+```apt: sudo apt install yubikey-personalization```
+
+```dnf: sudo dnf install ykpers```
+
+```pacman: sudo pacman -S yubikey-personalization```
+
+```apk: sudo apk add ykpers```
+
+```zypper: sudo zypper install ykpers```
+
+```brew: brew install yubikey-personalization```
+
+```nix: nix profile install nixpkgs#yubikey-personalization```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ykman](/man/ykman)(1), [ykinfo](/man/ykinfo)(1)

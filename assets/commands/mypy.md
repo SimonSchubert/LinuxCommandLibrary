@@ -88,6 +88,18 @@ Requires type annotations. Third-party stubs may be needed. Optional strict mode
 
 mypy was created by **Jukka Lehtosalo** and is developed at Dropbox as the premier Python type checker.
 
+# INSTALL
+
+```pacman: sudo pacman -S mypy```
+
+```apk: sudo apk add py3-mypy```
+
+```brew: brew install mypy```
+
+```nix: nix profile install nixpkgs#mypy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [pyright](/man/pyright)(1), [pylint](/man/pylint)(1), [ruff](/man/ruff)(1), [black](/man/black)(1), [flake8](/man/flake8)(1)

@@ -62,5 +62,13 @@ The daemon listens on port 9418 by default and serves repositories from a specif
 
 Security is intentionally limited: repositories must be explicitly exported (via --export-all or git-daemon-export-ok file), and write access should only be enabled in trusted environments. For production systems requiring authentication and encryption, HTTPS or SSH protocols are recommended instead.
 
+# INSTALL
+
+```dnf: sudo dnf install git-daemon```
+
+```zypper: sudo zypper install git-daemon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

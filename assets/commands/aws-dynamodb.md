@@ -91,6 +91,17 @@ Item size is limited to 400KB. Scan operations read the entire table and can be 
 
 Amazon DynamoDB launched in **January 2012** as a successor to SimpleDB. Global Tables for multi-region replication came in **2017**, on-demand capacity mode in **2018**, and PartiQL query language support in **2020**. It remains one of AWS's most widely used database services.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-dynamodbstreams](/man/aws-dynamodbstreams)(1), [aws-rds](/man/aws-rds)(1)

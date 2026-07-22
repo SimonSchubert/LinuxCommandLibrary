@@ -41,6 +41,20 @@ Note that many registries limit or disable the catalog endpoint for security rea
 
 Not all registries support the catalog API. Results may be paginated for large registries. Major cloud registries (Docker Hub, GCR, ECR) often restrict or disable the catalog endpoint entirely.
 
+# INSTALL
+
+```pacman: sudo pacman -S crane```
+
+```apk: sudo apk add crane```
+
+```zypper: sudo zypper install crane```
+
+```brew: brew install crane```
+
+```nix: nix profile install nixpkgs#crane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-ls](/man/crane-ls)(1), [crane-copy](/man/crane-copy)(1)

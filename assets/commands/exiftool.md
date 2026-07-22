@@ -122,6 +122,18 @@ Writing metadata may not be supported for all formats. Some proprietary formats 
 
 **ExifTool** was created by **Phil Harvey** in **2003** as a Perl library and command-line tool for metadata manipulation. It has grown to support over 23,000 tags across hundreds of file formats. The project is continuously updated to support new cameras and formats, making it the most comprehensive metadata tool available.
 
+# INSTALL
+
+```apk: sudo apk add exiftool```
+
+```zypper: sudo zypper install exiftool```
+
+```brew: brew install exiftool```
+
+```nix: nix profile install nixpkgs#exiftool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [identify](/man/identify)(1), [jhead](/man/jhead)(1), [file](/man/file)(1), [mediainfo](/man/mediainfo)(1)

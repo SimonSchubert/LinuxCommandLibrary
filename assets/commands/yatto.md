@@ -28,6 +28,12 @@ Interactive Git-backed todo list for the terminal
 
 **yatto** was created by **handlebargh** and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#yatto```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [taskwarrior](/man/taskwarrior)(1), [todoman](/man/todoman)(1)

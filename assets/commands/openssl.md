@@ -125,6 +125,24 @@ Old versions have known vulnerabilities (update regularly). Encryption commands 
 
 **OpenSSL** originated from **SSLeay**, created by **Eric Young** and **Tim Hudson** in **1995**. It was forked as OpenSSL in **1998** when development of SSLeay ended. The project gained critical importance for internet security, though the **Heartbleed** vulnerability in **2014** highlighted maintenance challenges. This led to increased funding and the **LibreSSL** fork by OpenBSD.
 
+# INSTALL
+
+```apt: sudo apt install openssl```
+
+```dnf: sudo dnf install openssl```
+
+```pacman: sudo pacman -S openssl```
+
+```apk: sudo apk add openssl```
+
+```zypper: sudo zypper install openssl```
+
+```brew: brew install openssl```
+
+```nix: nix profile install nixpkgs#openssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh-keygen](/man/ssh-keygen)(1), [certbot](/man/certbot)(1), [gpg](/man/gpg)(1), [stunnel](/man/stunnel)(1)

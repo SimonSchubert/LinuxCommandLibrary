@@ -123,6 +123,17 @@ Identity pool IDs include the region prefix (e.g., us-east-1:xxxxxxxx). Credenti
 
 Amazon Cognito Identity was announced at **AWS re:Invent 2014** and launched in **July 2014** as part of the mobile services suite. It was designed to simplify secure access to AWS resources from mobile applications. The service evolved to support additional identity providers, SAML federation, and enhanced flow for developer-authenticated identities.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-cognito-idp](/man/aws-cognito-idp)(1), [aws-sts](/man/aws-sts)(1), [aws-iam](/man/aws-iam)(1)

@@ -61,6 +61,12 @@ Make it snow in your terminal
 
 **snowmachine** was created by **John Anderson** (sontek) and is written in **Python**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#snowmachine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmatrix](/man/cmatrix)(1), [asciiquarium](/man/asciiquarium)(1), [terminaltexteffects](/man/terminaltexteffects)(1)

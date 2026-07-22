@@ -44,6 +44,18 @@ Part of the **git-extras** suite. Not to be confused with the separate **delta**
 
 Requires the **git-extras** package to be installed. Only shows file names, not content differences. The default comparison branch is **master**, not **main** -- this may need adjustment for repositories using **main** as their default branch.
 
+# INSTALL
+
+```dnf: sudo dnf install git-delta```
+
+```pacman: sudo pacman -S git-delta```
+
+```zypper: sudo zypper install git-delta```
+
+```brew: brew install git-delta```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-diff](/man/git-diff)(1), [git-log](/man/git-log)(1), [git-branch](/man/git-branch)(1), [git-extras](/man/git-extras)(1), [delta](/man/delta)(1)

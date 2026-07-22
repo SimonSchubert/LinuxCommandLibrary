@@ -60,6 +60,18 @@ Requires a configured database backend (MySQL/MariaDB, PostgreSQL, or TimescaleD
 
 **zabbix_server** is the core of **Zabbix**, an open-source enterprise monitoring platform.
 
+# INSTALL
+
+```apt: sudo apt install zabbix-server-mysql```
+
+```dnf: sudo dnf install zabbix-server-mysql```
+
+```apk: sudo apk add zabbix-mysql```
+
+```zypper: sudo zypper install zabbix-server-mysql```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zabbix_agentd](/man/zabbix_agentd)(1), [zabbix_proxy](/man/zabbix_proxy)(1)

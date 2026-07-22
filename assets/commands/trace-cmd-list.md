@@ -66,6 +66,20 @@ The output depends on kernel configuration and loaded modules. Function listing 
 
 Requires root privileges. Available items depend on kernel build configuration. Function list can be extremely large.
 
+# INSTALL
+
+```apt: sudo apt install trace-cmd```
+
+```dnf: sudo dnf install trace-cmd```
+
+```pacman: sudo pacman -S trace-cmd```
+
+```zypper: sudo zypper install trace-cmd```
+
+```nix: nix profile install nixpkgs#trace-cmd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [trace-cmd](/man/trace-cmd)(1), [trace-cmd-record](/man/trace-cmd-record)(1), [trace-cmd-report](/man/trace-cmd-report)(1), [perf](/man/perf)(1)

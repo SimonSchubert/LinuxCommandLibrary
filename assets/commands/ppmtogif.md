@@ -85,6 +85,24 @@ GIF is limited to 256 colors. Use ppmquant to reduce colors before conversion. T
 
 ppmtogif is part of **Netpbm** by **Jef Poskanzer**, with LZW compression code by various contributors.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamtogif](/man/pamtogif)(1), [giftopnm](/man/giftopnm)(1), [ppmquant](/man/ppmquant)(1), [netpbm](/man/netpbm)(1)

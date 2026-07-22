@@ -65,6 +65,22 @@ CUE sheet must match the audio file exactly (sample-accurate). Incorrect CUE fil
 
 cuebreakpoints is part of **cuetools**, a set of utilities for working with CUE sheets created by **Svend Sorensen**. The tools were developed in the **mid-2000s** to help process CD images, particularly for converting single-file rips (common with Exact Audio Copy) into individual tracks while preserving accurate metadata.
 
+# INSTALL
+
+```apt: sudo apt install cuetools```
+
+```dnf: sudo dnf install cuetools```
+
+```pacman: sudo pacman -S cuetools```
+
+```apk: sudo apk add cuetools```
+
+```brew: brew install cuetools```
+
+```nix: nix profile install nixpkgs#cuetools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cuetag](/man/cuetag)(1), [shnsplit](/man/shnsplit)(1), [flac](/man/flac)(1)

@@ -80,6 +80,16 @@ Output is PAF by default; use -a for SAM. Index size depends on reference. Prese
 
 minimap2 was developed by **Heng Li** (author of BWA) and published in **2018** as a fast, accurate aligner for long reads.
 
+# INSTALL
+
+```apt: sudo apt install minimap2```
+
+```brew: brew install minimap2```
+
+```nix: nix profile install nixpkgs#minimap2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bwa](/man/bwa)(1), [samtools](/man/samtools)(1)

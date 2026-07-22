@@ -41,6 +41,12 @@ _filename_
 
 Depends on mailcap configuration. The actual editor used depends on the file's MIME type and system configuration. Debian/Ubuntu specific.
 
+# INSTALL
+
+```aur: yay -S compose```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [run-mailcap](/man/run-mailcap)(1), [edit](/man/edit)(1), [view](/man/view)(1)

@@ -65,6 +65,14 @@ Requires root privileges (or write access to `/sys/devices/system/cpu/cpu*/cpufr
 
 **cpufreq-set** ships with **cpufrequtils**, originally written by **Dominik Brodowski**. The newer **cpupower** suite (from the kernel tree) largely supersedes cpufrequtils on recent distributions.
 
+# INSTALL
+
+```apk: sudo apk add cpufrequtils```
+
+```nix: nix profile install nixpkgs#cpufrequtils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cpufreq-info](/man/cpufreq-info)(1), [cpupower](/man/cpupower)(1)

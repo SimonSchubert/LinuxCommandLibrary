@@ -74,6 +74,24 @@ Create new GitHub repositories
 
 When run interactively without arguments, the command guides you through repository creation with prompts for visibility, description, and initialization options. The --source flag publishes an existing local git repository to GitHub. Template repositories (--template) provide starter configurations for common project types.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh-repo](/man/gh-repo)(1)

@@ -35,6 +35,12 @@ Requires root/administrator privileges for raw socket access. For production pac
 
 Part of the **Impacket** library by SecureAuth. Included as a demonstration of Impacket's packet capture and parsing capabilities using Python.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [impacket-sniffer](/man/impacket-sniffer)(1), [tshark](/man/tshark)(1)

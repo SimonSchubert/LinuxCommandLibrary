@@ -63,6 +63,16 @@ The tool is useful for testing, building packages, and running isolated services
 
 Requires root privileges. The container filesystem must contain a complete OS or at least the required binaries. Network isolation requires additional configuration. Part of the systemd suite.
 
+# INSTALL
+
+```apt: sudo apt install systemd-container```
+
+```dnf: sudo dnf install systemd-container```
+
+```zypper: sudo zypper install systemd-container```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [machinectl](/man/machinectl)(1), [systemd-detect-virt](/man/systemd-detect-virt)(1), [systemd-dissect](/man/systemd-dissect)(1), [chroot](/man/chroot)(1)

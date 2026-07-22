@@ -76,6 +76,21 @@ Requires autoconf, automake, and related tools installed. Can be slow on large p
 
 **autoreconf** was added to autoconf to simplify the complex process of regenerating autotools files in the correct order.
 
+# INSTALL
+
+```dnf: sudo dnf install autoconf```
+
+```pacman: sudo pacman -S autoconf```
+
+```apk: sudo apk add autoconf```
+
+```zypper: sudo zypper install autoconf```
+
+```brew: brew install autoconf```
+
+```nix: nix profile install nixpkgs#autoconf```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [autoconf](/man/autoconf)(1), [automake](/man/automake)(1), [libtoolize](/man/libtoolize)(1)

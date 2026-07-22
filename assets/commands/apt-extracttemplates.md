@@ -45,6 +45,13 @@ This is primarily an internal APT tool. Most users interact with debconf through
 
 **apt-extracttemplates** is part of the APT package management infrastructure, supporting the debconf configuration system.
 
+# INSTALL
+
+```apt: sudo apt install apt-utils```
+
+```dnf: sudo dnf install apt-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [dpkg](/man/dpkg)(1), [dpkg-deb](/man/dpkg-deb)(1)

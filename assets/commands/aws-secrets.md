@@ -106,6 +106,17 @@ Retrieving secrets incurs per-request charges. Deleted secrets have a recovery w
 
 AWS Secrets Manager was launched in **April 2018** to address the challenge of managing application secrets securely. It was built on lessons learned from AWS Systems Manager Parameter Store, adding features like automatic rotation, cross-region replication, and native integration with RDS, Redshift, and DocumentDB for credential management.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [vault](/man/vault)(1), [aws-vault](/man/aws-vault)(1)

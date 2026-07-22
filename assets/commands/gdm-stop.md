@@ -22,6 +22,20 @@ All logged-in users will be forcibly logged out when GDM stops. On systemd-based
 
 Stopping GDM will terminate all graphical sessions. Save your work before running this command.
 
+# INSTALL
+
+```dnf: sudo dnf install gdm```
+
+```pacman: sudo pacman -S gdm```
+
+```apk: sudo apk add gdm```
+
+```zypper: sudo zypper install gdm```
+
+```nix: nix profile install nixpkgs#gdm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdm-restart](/man/gdm-restart)(1), [gdm](/man/gdm)(8), [systemctl](/man/systemctl)(1)

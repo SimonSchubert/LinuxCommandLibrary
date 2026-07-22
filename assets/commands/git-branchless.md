@@ -129,6 +129,18 @@ Requires initialization with **git branchless init** in each repository. Some fe
 
 Git-branchless was created by **Waleed Khan** inspired by Meta's internal Git tooling and Mercurial's evolve extension. Development began around **2021** with the goal of bringing stacked diff workflows and better undo functionality to Git. The project brings concepts like commit evolution and commit visibility to standard Git repositories.
 
+# INSTALL
+
+```pacman: sudo pacman -S git-branchless```
+
+```apk: sudo apk add git-branchless```
+
+```brew: brew install git-branchless```
+
+```nix: nix profile install nixpkgs#git-branchless```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-absorb](/man/git-absorb)(1), [lazygit](/man/lazygit)(1), [tig](/man/tig)(1)

@@ -122,6 +122,22 @@ Output formats include WAV (default), AIFF, AIFF-C, and raw 16-bit PCM. Batch mo
 
 Requires CDDA-capable drive. Works best with Accurate Stream drives that don't cache audio. Scratched discs may cause long read times.
 
+# INSTALL
+
+```apt: sudo apt install cdparanoia```
+
+```dnf: sudo dnf install cdparanoia```
+
+```pacman: sudo pacman -S cdparanoia```
+
+```apk: sudo apk add cdparanoia```
+
+```zypper: sudo zypper install cdparanoia```
+
+```nix: nix profile install nixpkgs#cdparanoia```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [abcde](/man/abcde)(1), [lame](/man/lame)(1), [flac](/man/flac)(1), [sox](/man/sox)(1)

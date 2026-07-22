@@ -87,6 +87,22 @@ Automatic write mode may incorrectly "fix" intentional non-standard spellings or
 
 codespell was created by Lucas De Marchi and is maintained as an open-source project. It emerged from the need to catch common misspellings in large codebases, particularly in open-source projects with many contributors. The tool has been adopted by numerous projects including the Linux kernel.
 
+# INSTALL
+
+```dnf: sudo dnf install codespell```
+
+```pacman: sudo pacman -S codespell```
+
+```apk: sudo apk add py3-codespell```
+
+```zypper: sudo zypper install codespell```
+
+```brew: brew install codespell```
+
+```nix: nix profile install nixpkgs#codespell```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aspell](/man/aspell)(1), [hunspell](/man/hunspell)(1), [spell](/man/spell)(1)

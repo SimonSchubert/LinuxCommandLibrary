@@ -59,6 +59,20 @@ Terminal user interface for GnuPG key management
 
 The tool reads from the standard GnuPG keyring and supports multiple visual styles for display customization.
 
+# INSTALL
+
+```pacman: sudo pacman -S gpg-tui```
+
+```apk: sudo apk add gpg-tui```
+
+```zypper: sudo zypper install gpg-tui```
+
+```brew: brew install gpg-tui```
+
+```nix: nix profile install nixpkgs#gpg-tui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [gpg2](/man/gpg2)(1)

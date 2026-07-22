@@ -63,6 +63,24 @@ Part of the Perl distribution (Archive::Tar module). Large archives may be slow 
 
 **ptargrep** is distributed with Perl's **Archive::Tar** module. It provides grep-like functionality for archived content.
 
+# INSTALL
+
+```apt: sudo apt install perl```
+
+```dnf: sudo dnf install perl```
+
+```pacman: sudo pacman -S perl```
+
+```apk: sudo apk add perl-utils```
+
+```zypper: sudo zypper install perl```
+
+```brew: brew install perl```
+
+```nix: nix profile install nixpkgs#perl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zgrep](/man/zgrep)(1), [tar](/man/tar)(1), [grep](/man/grep)(1), [perl](/man/perl)(1), [zipgrep](/man/zipgrep)(1)

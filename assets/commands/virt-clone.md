@@ -89,6 +89,18 @@ The tool handles creating new UUIDs, MAC addresses, and storage paths to avoid c
 
 Requires libvirt and an appropriate virtualization backend (KVM, QEMU, etc.). The original VM must be shut off for a consistent clone. Cloning large disk images can take significant time and requires sufficient storage space. Use **--nonsparse** for full allocation if the filesystem does not support sparse files well.
 
+# INSTALL
+
+```dnf: sudo dnf install virt-install```
+
+```pacman: sudo pacman -S virt-install```
+
+```apk: sudo apk add virt-install```
+
+```zypper: sudo zypper install virt-install```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virt-install](/man/virt-install)(1), [virsh](/man/virsh)(1), [virt-manager](/man/virt-manager)(1)

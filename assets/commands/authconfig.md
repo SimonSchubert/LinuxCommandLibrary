@@ -129,6 +129,11 @@ This tool is specific to Red Hat-based distributions (RHEL, CentOS, Fedora). It 
 
 **authconfig** was the standard authentication configuration tool for Red Hat Enterprise Linux and related distributions for many years. It was superseded by **authselect**, which uses predefined profiles to manage the PAM stack and nsswitch.conf. See the authselect-migration(7) man page for equivalent commands.
 
+# INSTALL
+
+```aur: yay -S authconfig```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [authselect](/man/authselect)(8), [pam](/man/pam)(8)

@@ -83,6 +83,15 @@ Large or long recordings produce large GIF files. Consider adjusting speed or id
 
 **agg** was created as a Rust-based alternative to other asciinema-to-GIF tools, providing better performance and rendering quality. It's maintained as part of the asciinema ecosystem.
 
+# INSTALL
+
+```aur: yay -S agg```
+
+```brew: brew install agg```
+
+```nix: nix profile install nixpkgs#agg```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [asciinema](/man/asciinema)(1), [ffmpeg](/man/ffmpeg)(1)

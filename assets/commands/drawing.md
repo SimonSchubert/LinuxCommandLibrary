@@ -46,6 +46,22 @@ It is a GTK application built for GNOME. It runs on other desktops, but it is di
 
 Drawing was created by **Romain Vigier** (maoschanz) around **2018**, as a deliberately simple raster editor for GNOME. Its stated inspiration was the old Microsoft Paint: something that opens instantly, lets you scribble an arrow onto a screenshot, and gets out of the way. The niche was real, since GNOME had no equivalent, and GIMP is a heavy answer to a light question. It was later adapted to run on phones, and ships as the default image editor in some mobile Linux distributions.
 
+# INSTALL
+
+```apt: sudo apt install drawing```
+
+```dnf: sudo dnf install drawing```
+
+```pacman: sudo pacman -S drawing```
+
+```apk: sudo apk add drawing```
+
+```zypper: sudo zypper install drawing```
+
+```nix: nix profile install nixpkgs#drawing```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gimp](/man/gimp)(1), [inkscape](/man/inkscape)(1), [krita](/man/krita)(1), [pinta](/man/pinta)(1)

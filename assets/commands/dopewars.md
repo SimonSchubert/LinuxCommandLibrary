@@ -57,6 +57,16 @@ Use **-t** flag for terminal mode. Multiplayer requires a running server. The ga
 
 **dopewars** is based on **Drug Wars**, a game originally written by **John E. Dell** in **1984** for the TI-83 calculator. The Unix version was created by **Ben Webb** and has been actively maintained since the late **1990s**.
 
+# INSTALL
+
+```pacman: sudo pacman -S dopewars```
+
+```brew: brew install dopewars```
+
+```nix: nix profile install nixpkgs#dopewars```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [trek](/man/trek)(6), [adventure](/man/adventure)(6)

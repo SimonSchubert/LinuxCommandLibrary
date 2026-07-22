@@ -76,6 +76,16 @@ Global flags typically include **--auth-token**, **--log-level**, and **--url** 
 
 Requires a Sentry auth token with appropriate scopes. Self-hosted Sentry versions older than 24.11.1 may need **sentry-cli** &lt; 3.x. Some features are SaaS-only. Never commit auth tokens.
 
+# INSTALL
+
+```pacman: sudo pacman -S sentry-cli```
+
+```brew: brew install sentry-cli```
+
+```nix: nix profile install nixpkgs#sentry-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [npm](/man/npm)(1)

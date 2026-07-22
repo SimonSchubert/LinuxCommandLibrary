@@ -26,6 +26,16 @@ Requires QEMU to be installed. Some features like VM preview require a terminal 
 
 **nemu** is developed by the **nemuTUI** project and is written in **C**.
 
+# INSTALL
+
+```apk: sudo apk add nemu```
+
+```brew: brew install nemu```
+
+```nix: nix profile install nixpkgs#nemu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qemu](/man/qemu)(1), [virsh](/man/virsh)(1), [virt-manager](/man/virt-manager)(1)

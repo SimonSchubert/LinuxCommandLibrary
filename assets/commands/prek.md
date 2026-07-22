@@ -126,6 +126,16 @@ prek aims for behavioural parity with pre-commit but is not byte-identical: Pyth
 
 **prek** is authored by **Jian Zeng (j178)** and published as a Rust crate as well as a Python wheel on PyPI for installation via **pip**, **uv**, or **pipx**. It positions itself as a "**pre-commit, reimagined**", reusing the existing hook ecosystem while replacing the runtime. Early adopters include large Python projects such as **CPython**, **Apache Airflow**, and **FastAPI**.
 
+# INSTALL
+
+```zypper: sudo zypper install prek```
+
+```brew: brew install prek```
+
+```nix: nix profile install nixpkgs#prek```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pre-commit](/man/pre-commit)(1), [husky](/man/husky)(1), [lefthook](/man/lefthook)(1), [uv](/man/uv)(1)

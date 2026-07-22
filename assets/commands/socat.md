@@ -125,6 +125,24 @@ Complex address specifications require careful syntax. Fork option needed for mu
 
 **socat** was created by **Gerhard Rieger** in **1999** as an extended version of netcat with support for many more address types. It filled the need for a universal relay tool that could bridge different communication mechanisms. The project continues active maintenance and is widely used for network administration.
 
+# INSTALL
+
+```apt: sudo apt install socat```
+
+```dnf: sudo dnf install socat```
+
+```pacman: sudo pacman -S socat```
+
+```apk: sudo apk add socat```
+
+```zypper: sudo zypper install socat```
+
+```brew: brew install socat```
+
+```nix: nix profile install nixpkgs#socat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nc](/man/nc)(1), [netcat](/man/netcat)(1), [stunnel](/man/stunnel)(1), [ssh](/man/ssh)(1)

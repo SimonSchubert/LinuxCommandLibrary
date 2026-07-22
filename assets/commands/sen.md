@@ -28,6 +28,12 @@ The project is in maintenance mode. The author provides bug fixes only; new feat
 
 **sen** was created by **Tomas Tomecek** (TomasTomecek) and is written in **Python**.
 
+# INSTALL
+
+```dnf: sudo dnf install sen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lazydocker](/man/lazydocker)(1), [ctop](/man/ctop)(1), [oxker](/man/oxker)(1)

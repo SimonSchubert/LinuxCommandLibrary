@@ -48,6 +48,12 @@ When snapshots are created or deleted via Snapper, running sync updates the Limi
 
 Requires a Btrfs filesystem with Snapper configured for snapshot management. The Limine bootloader must be properly installed and configured. Restoring from a snapshot will revert system files to the snapshot state, potentially losing recent changes.
 
+# INSTALL
+
+```aur: yay -S limine-snapper-sync```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [limine](/man/limine)(1), [limine-entry-tool](/man/limine-entry-tool)(1), [snapper](/man/snapper)(8), [btrfs](/man/btrfs)(8)

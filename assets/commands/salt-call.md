@@ -71,6 +71,12 @@ Run Salt modules locally on a minion
 
 When used with **--local**, it operates completely independently of a master, making it ideal for standalone configuration management or testing states before deploying them across infrastructure.
 
+# INSTALL
+
+```apk: sudo apk add salt-lts-minion```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [salt](/man/salt)(1), [salt-run](/man/salt-run)(1), [salt-master](/man/salt-master)(1), [salt-minion](/man/salt-minion)(1), [salt-key](/man/salt-key)(1)

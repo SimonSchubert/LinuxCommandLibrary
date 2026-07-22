@@ -72,6 +72,17 @@ AWS Cloud9 is no longer available to new customers as of **2024**; AWS recommend
 
 AWS Cloud9 was acquired by Amazon in **2016** after being founded as an independent company in **2010**. It was integrated into AWS as a managed service, providing browser-based IDE capabilities. In **2024**, AWS announced Cloud9 would no longer accept new customers.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ec2](/man/aws-ec2)(1), [aws-codecommit](/man/aws-codecommit)(1)

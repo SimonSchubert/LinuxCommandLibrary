@@ -65,6 +65,12 @@ Results depend on Wayback Machine's archive coverage. May return many duplicate 
 
 **waybackurls** was created by Tom Hudson (tomnomnom) as part of his bug bounty toolkit. It simplifies access to historical URL data that would otherwise require manual CDX API queries. The tool is widely used in security reconnaissance.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#waybackurls```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gau](/man/gau)(1), [hakrawler](/man/hakrawler)(1), [subfinder](/man/subfinder)(1), [httpx](/man/httpx)(1)

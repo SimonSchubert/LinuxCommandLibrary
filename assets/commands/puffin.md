@@ -30,6 +30,12 @@ Requires **hledger** to be installed and configured with journal files. All filt
 
 **puffin** was created by **siddhantac** and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#puffin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hledger](/man/hledger)(1), [ledger](/man/ledger)(1)

@@ -49,6 +49,12 @@ Terminal only. Various implementations. Practice tool.
 
 **wpm** (words per minute) tools measure typing speed in the terminal for practice and benchmarking.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#wpm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [toipe](/man/toipe)(1), [tt](/man/tt)(1), [typespeed](/man/typespeed)(1)

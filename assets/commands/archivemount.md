@@ -48,6 +48,21 @@ Write support is experimental and may not work reliably with all archive formats
 
 **archivemount** was created as part of the FUSE ecosystem to provide transparent access to archive contents. It leverages **libarchive** for format support and has been available since the mid-2000s.
 
+# INSTALL
+
+```apt: sudo apt install archivemount```
+
+```dnf: sudo dnf install archivemount```
+
+```aur: yay -S archivemount```
+
+```apk: sudo apk add archivemount```
+
+```brew: brew install archivemount```
+
+```nix: nix profile install nixpkgs#archivemount```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [fusermount](/man/fusermount)(1), [tar](/man/tar)(1), [mount](/man/mount)(8)

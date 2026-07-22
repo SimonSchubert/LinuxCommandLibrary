@@ -47,6 +47,24 @@ Convert Windows icons to PAM format
 
 Part of the **Netpbm** toolkit. Read from stdin when no file is given.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamtowinicon](/man/pamtowinicon)(1), [winicontoppm](/man/winicontoppm)(1)

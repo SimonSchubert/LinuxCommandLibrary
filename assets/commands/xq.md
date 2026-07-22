@@ -86,6 +86,20 @@ XML attribute ordering may not be preserved. Some XML features have limited JSON
 
 **xq** was created as part of the yq project by Andrey Kislyuk to provide jq-like functionality for YAML and XML. It fills the gap for command-line XML processing using the familiar jq syntax.
 
+# INSTALL
+
+```apt: sudo apt install xq```
+
+```dnf: sudo dnf install xq```
+
+```apk: sudo apk add xq```
+
+```brew: brew install xq```
+
+```nix: nix profile install nixpkgs#xq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [yq](/man/yq)(1), [xmllint](/man/xmllint)(1), [xmlstarlet](/man/xmlstarlet)(1)

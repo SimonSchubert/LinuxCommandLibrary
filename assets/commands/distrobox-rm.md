@@ -67,6 +67,22 @@ Removing a container deletes all data inside it that was not mapped to the host.
 
 **distrobox-rm** is part of **Distrobox**, a tool to create and manage containers that are tightly integrated with the host system.
 
+# INSTALL
+
+```dnf: sudo dnf install distrobox```
+
+```pacman: sudo pacman -S distrobox```
+
+```apk: sudo apk add distrobox```
+
+```zypper: sudo zypper install distrobox```
+
+```brew: brew install distrobox```
+
+```nix: nix profile install nixpkgs#distrobox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [distrobox](/man/distrobox)(1), [distrobox-create](/man/distrobox-create)(1), [distrobox-stop](/man/distrobox-stop)(1), [distrobox-list](/man/distrobox-list)(1), [distrobox-enter](/man/distrobox-enter)(1)

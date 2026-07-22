@@ -77,6 +77,12 @@ Unity-specific. Large downloads. License required.
 
 **u3d** was created for managing Unity Editor installations, especially useful in CI/CD environments.
 
+# INSTALL
+
+```aur: yay -S u3d```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [brew](/man/brew)(1)

@@ -64,5 +64,21 @@ Learning curve for advanced features. Script syntax unique to gnuplot. Many term
 
 gnuplot was created in **1986** by Thomas Williams and Colin Kelley, becoming a standard tool for scientific and technical plotting.
 
+# INSTALL
+
+```dnf: sudo dnf install gnuplot```
+
+```pacman: sudo pacman -S gnuplot```
+
+```apk: sudo apk add gnuplot```
+
+```zypper: sudo zypper install gnuplot```
+
+```brew: brew install gnuplot```
+
+```nix: nix profile install nixpkgs#gnuplot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

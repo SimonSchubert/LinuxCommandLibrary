@@ -98,6 +98,17 @@ Galaxy content is community-maintained; review before use in production. Collect
 
 **ansible-galaxy** was introduced with Ansible Galaxy in **2013** to share and distribute roles. Collections support was added in Ansible 2.9 (**2019**) as a new content distribution format.
 
+# INSTALL
+
+```dnf: sudo dnf install ansible-core```
+
+```pacman: sudo pacman -S ansible-core```
+
+```apk: sudo apk add ansible-core```
+
+```zypper: sudo zypper install ansible-core```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ansible](/man/ansible)(1), [ansible-playbook](/man/ansible-playbook)(1), [ansible-doc](/man/ansible-doc)(1)

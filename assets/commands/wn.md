@@ -104,6 +104,20 @@ WordNet's last official Princeton release was in **2011**, so coverage of newer 
 
 **WordNet** was created in **1985** at **Princeton University's** Cognitive Science Laboratory under the direction of psychologist **George Armitage Miller**. Later directed by **Christiane Fellbaum**, the project received the **2006 Antonio Zampolli Prize**. Initially funded by the U.S. Office of Naval Research and later by DARPA and NSF.
 
+# INSTALL
+
+```apt: sudo apt install wordnet```
+
+```dnf: sudo dnf install wordnet```
+
+```zypper: sudo zypper install wordnet```
+
+```brew: brew install wordnet```
+
+```nix: nix profile install nixpkgs#wordnet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dict](/man/dict)(1), [aspell](/man/aspell)(1), [grep](/man/grep)(1)

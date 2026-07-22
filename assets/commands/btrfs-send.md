@@ -78,6 +78,22 @@ Source subvolume must be read-only. Parent snapshot must exist on receive side f
 
 **btrfs send/receive** was introduced in Linux kernel **3.6** (released **September 2012**) as part of btrfs development. It was designed to enable efficient snapshot-based backup and replication, similar to ZFS send/receive. The feature has been enhanced over time with compressed transfers (protocol v2) and improved performance for large filesystems.
 
+# INSTALL
+
+```apt: sudo apt install btrfs-progs```
+
+```dnf: sudo dnf install btrfs-progs```
+
+```pacman: sudo pacman -S btrfs-progs```
+
+```apk: sudo apk add btrfs-progs```
+
+```brew: brew install btrfs-progs```
+
+```nix: nix profile install nixpkgs#btrfs-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btrfs-subvolume](/man/btrfs-subvolume)(8), [btrfs](/man/btrfs)(8), [rsync](/man/rsync)(1)

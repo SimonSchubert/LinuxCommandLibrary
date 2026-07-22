@@ -98,6 +98,12 @@ Some websites may not work with aggressive blocking. BAT rewards availability va
 
 **Brave** was created by Brendan Eich (JavaScript creator, Mozilla co-founder) and launched in **2016** to provide privacy-focused browsing with an alternative ad model.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#brave```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [firefox](/man/firefox)(1), [chromium](/man/chromium)(1), [google-chrome](/man/google-chrome)(1), [tor-browser](/man/tor-browser)(1)

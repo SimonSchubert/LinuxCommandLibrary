@@ -105,6 +105,18 @@ Changing user requires root privileges. Resource limits are per-process; child p
 
 **chpst** was created by **Gerrit Pape** as part of **runit**, a Unix init scheme with service supervision, released in the early **2000s**. It was inspired by similar tools from **daemontools** (setuidgid, softlimit, envdir) but combines their functionality into a single command. The tool remains popular for its simplicity and is used beyond runit in various service management contexts.
 
+# INSTALL
+
+```apt: sudo apt install runit```
+
+```apk: sudo apk add runit```
+
+```brew: brew install runit```
+
+```nix: nix profile install nixpkgs#runit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [runsv](/man/runsv)(8), [runsvdir](/man/runsvdir)(8), [sv](/man/sv)(8)

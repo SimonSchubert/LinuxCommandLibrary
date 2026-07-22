@@ -67,6 +67,16 @@ Requires a graphical display (X11 or Wayland with XWayland). Some complex DOT at
 
 **xdot** was created by Jose Fonseca as a Python application using PyGTK (later PyGObject/GTK3). It was developed to address the need for interactive graph exploration that static image exports could not provide. The tool has been maintained as an open-source project and is packaged in most Linux distributions.
 
+# INSTALL
+
+```pacman: sudo pacman -S xdot```
+
+```brew: brew install xdot```
+
+```nix: nix profile install nixpkgs#xdot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [neato](/man/neato)(1), [twopi](/man/twopi)(1), [circo](/man/circo)(1), [fdp](/man/fdp)(1), [graphviz](/man/graphviz)(1)

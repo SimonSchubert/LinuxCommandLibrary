@@ -93,6 +93,12 @@ Requires NVIDIA GPU and drivers. Uses nvidia-smi internally. Not suitable for no
 
 **gpustat** was created by **Jongwook Choi** as a simple GPU monitoring tool for machine learning practitioners. It provides a cleaner alternative to nvidia-smi's verbose output, focusing on essential metrics.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#gpustat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nvidia-smi](/man/nvidia-smi)(1), [nvtop](/man/nvtop)(1), [htop](/man/htop)(1), [watch](/man/watch)(1)

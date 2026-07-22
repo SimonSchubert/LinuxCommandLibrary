@@ -84,6 +84,22 @@ The tool is part of the **po4a** (PO for anything) suite, which helps maintain t
 
 The PO file must be the translation of the POT file produced by **po4a-gettextize** from the same master document. By default, translation must be at least 80% complete to produce output; use **-k** to adjust this threshold. Formatting may differ slightly from the original depending on the document format.
 
+# INSTALL
+
+```dnf: sudo dnf install po4a```
+
+```pacman: sudo pacman -S po4a```
+
+```apk: sudo apk add po4a```
+
+```zypper: sudo zypper install po4a```
+
+```brew: brew install po4a```
+
+```nix: nix profile install nixpkgs#po4a```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [po4a](/man/po4a)(1), [po4a-gettextize](/man/po4a-gettextize)(1), [po4a-updatepo](/man/po4a-updatepo)(1), [msgfmt](/man/msgfmt)(1), [xgettext](/man/xgettext)(1), [gettext](/man/gettext)(1)

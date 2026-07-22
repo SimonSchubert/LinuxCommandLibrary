@@ -146,6 +146,12 @@ Requires Teleport cluster access configured by administrator. Some resources req
 
 Teleport was created by **Gravitational** (now Teleport) in **2016** to provide secure access to infrastructure with audit logging and identity-based access controls. The project implements certificate-based authentication following BeyondCorp/zero-trust principles. Teleport open-sourced the core product and has since expanded to cover Kubernetes, databases, and applications.
 
+# INSTALL
+
+```aur: yay -S tsh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [kubectl](/man/kubectl)(1)

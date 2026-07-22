@@ -95,6 +95,22 @@ Configuration is complex. ACL order matters. HTTPS interception needs certificat
 
 **Squid** originated from the **Harvest** project at the **University of Colorado** in **1996**. It became the most widely deployed caching proxy.
 
+# INSTALL
+
+```dnf: sudo dnf install squid```
+
+```pacman: sudo pacman -S squid```
+
+```apk: sudo apk add squid```
+
+```zypper: sudo zypper install squid```
+
+```brew: brew install squid```
+
+```nix: nix profile install nixpkgs#squid```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nginx](/man/nginx)(1), [apache](/man/apache)(1), [privoxy](/man/privoxy)(1)

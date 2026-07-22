@@ -83,6 +83,18 @@ Requires binary trace data from blkparse -d, not raw blktrace files. Large trace
 
 **btt** was developed alongside **blktrace** by **Alan D. Brunelle** as part of the Linux block layer tracing infrastructure, included in the blktrace package since its introduction in Linux kernel **2.6.17** (**2006**). It provides the analytical companion to blktrace's data collection capabilities, enabling detailed performance analysis of the block I/O subsystem.
 
+# INSTALL
+
+```apt: sudo apt install blktrace```
+
+```dnf: sudo dnf install blktrace```
+
+```zypper: sudo zypper install blktrace```
+
+```nix: nix profile install nixpkgs#blktrace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blktrace](/man/blktrace)(8), [blkparse](/man/blkparse)(1), [iostat](/man/iostat)(1)

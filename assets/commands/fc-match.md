@@ -56,6 +56,24 @@ When applications request a font, fontconfig uses a sophisticated matching algor
 
 Pattern syntax can be complex. Font matching rules depend on fontconfig configuration. Results may differ across systems with different font installations.
 
+# INSTALL
+
+```apt: sudo apt install fontconfig```
+
+```dnf: sudo dnf install fontconfig```
+
+```pacman: sudo pacman -S fontconfig```
+
+```apk: sudo apk add fontconfig```
+
+```zypper: sudo zypper install fontconfig```
+
+```brew: brew install fontconfig```
+
+```nix: nix profile install nixpkgs#fontconfig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fc-list](/man/fc-list)(1), [fc-cache](/man/fc-cache)(1), [fc-pattern](/man/fc-pattern)(1), [fc-query](/man/fc-query)(1)

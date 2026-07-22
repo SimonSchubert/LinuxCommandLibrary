@@ -144,6 +144,16 @@ Version compatibility between istioctl and the control plane is important; use m
 
 Istio was announced in **May 2017** as a collaboration between Google, IBM, and Lyft. It quickly became the leading service mesh for Kubernetes. The project joined the CNCF as an incubating project in **2022** and graduated in **2023**. istioctl has evolved to simplify installation and provide comprehensive diagnostic capabilities.
 
+# INSTALL
+
+```zypper: sudo zypper install istioctl```
+
+```brew: brew install istioctl```
+
+```nix: nix profile install nixpkgs#istioctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [linkerd](/man/linkerd)(1), [helm](/man/helm)(1)

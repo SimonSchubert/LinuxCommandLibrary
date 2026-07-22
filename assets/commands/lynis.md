@@ -96,6 +96,20 @@ Requires root privileges for complete audit. Reports are stored in /var/log/lyni
 
 Developed by CISOfy as an open-source security auditing tool, evolved from rkhunter concepts with broader security coverage.
 
+# INSTALL
+
+```dnf: sudo dnf install lynis```
+
+```pacman: sudo pacman -S lynis```
+
+```zypper: sudo zypper install lynis```
+
+```brew: brew install lynis```
+
+```nix: nix profile install nixpkgs#lynis```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rkhunter](/man/rkhunter)(8), [chkrootkit](/man/chkrootkit)(8)

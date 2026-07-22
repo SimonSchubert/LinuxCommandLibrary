@@ -67,6 +67,14 @@ Contains proprietary UI components on top of open-source Chromium. Supports most
 
 **Vivaldi** was created by **Jon von Tetzchner**, co-founder of Opera, for power users wanting customization.
 
+# INSTALL
+
+```pacman: sudo pacman -S vivaldi```
+
+```nix: nix profile install nixpkgs#vivaldi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vivaldi-stable](/man/vivaldi-stable)(1), [firefox](/man/firefox)(1), [chromium](/man/chromium)(1), [google-chrome](/man/google-chrome)(1)

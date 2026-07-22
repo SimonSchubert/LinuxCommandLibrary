@@ -32,6 +32,24 @@ It accepts natural language date expressions like "yesterday", "last week", "2 h
 
 This is particularly useful for stand-ups, weekly reviews, generating changelogs, or checking what changed since deploying a release.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-extras](/man/git-extras)(1)

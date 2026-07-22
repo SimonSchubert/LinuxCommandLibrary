@@ -55,6 +55,20 @@ Subcommand of jj. Uses Git remote format. Standard Git hosting works.
 
 jj git remote is part of **Jujutsu**, providing remote management compatible with Git infrastructure.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-git](/man/jj-git)(1), [git-remote](/man/git-remote)(1)

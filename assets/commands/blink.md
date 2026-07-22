@@ -93,6 +93,14 @@ Requires a physical blink(1) USB device to be connected. On Linux, udev rules ma
 
 The **blink(1)** was created by **Tod Kurt** of **ThingM** and successfully funded on **Kickstarter in 2012**. The blink1-tool command-line utility is part of the open-source blink1 software suite hosted on GitHub, supporting Linux, macOS, and Windows.
 
+# INSTALL
+
+```brew: brew install blink```
+
+```nix: nix profile install nixpkgs#blink```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsusb](/man/lsusb)(8)

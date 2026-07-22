@@ -75,6 +75,22 @@ Filesystems must be unmounted for reliable backup. Different filesystem types ca
 
 fsarchiver was created by **Francois Dupoux** as a more flexible alternative to partition imaging tools like partimage. It was designed to overcome limitations of block-level backup by working at the filesystem level.
 
+# INSTALL
+
+```apt: sudo apt install fsarchiver```
+
+```dnf: sudo dnf install fsarchiver```
+
+```pacman: sudo pacman -S fsarchiver```
+
+```apk: sudo apk add fsarchiver```
+
+```zypper: sudo zypper install fsarchiver```
+
+```nix: nix profile install nixpkgs#fsarchiver```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [partclone](/man/partclone)(8), [tar](/man/tar)(1), [dd](/man/dd)(1), [rsync](/man/rsync)(1)

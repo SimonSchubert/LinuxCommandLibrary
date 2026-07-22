@@ -73,6 +73,12 @@ Experimental software; recommended to run alongside Homebrew rather than as a fu
 
 **zerobrew** was created by **Lucas Gelfond** (lucasgelfond) and is written in **Rust**.
 
+# INSTALL
+
+```aur: yay -S zerobrew```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [brew](/man/brew)(1), [nix](/man/nix)(1)

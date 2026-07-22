@@ -84,6 +84,14 @@ Does not modify original file. Some operations load entire file into memory. Pac
 
 editcap is part of the **Wireshark** project, originally **Ethereal**, created by **Gerald Combs** in **1998**. It provides command-line capture file manipulation complementing the graphical Wireshark analyzer.
 
+# INSTALL
+
+```apt: sudo apt install wireshark-common```
+
+```apk: sudo apk add wireshark-common```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wireshark](/man/wireshark)(1), [tshark](/man/tshark)(1)

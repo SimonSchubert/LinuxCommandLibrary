@@ -106,6 +106,24 @@ Patch format must be correct mbox/maildir format. Conflicts require manual resol
 
 git am was designed for the **Linux kernel** development workflow where patches are submitted and reviewed via email on mailing lists.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-apply](/man/git-apply)(1), [git-format-patch](/man/git-format-patch)(1), [git-send-email](/man/git-send-email)(1)

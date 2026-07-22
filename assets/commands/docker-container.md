@@ -100,6 +100,24 @@ Docker container management commands
 
 This is the modern syntax; most subcommands also work as direct docker commands (e.g., **docker ps** = **docker container ls**).
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-run](/man/docker-run)(1), [docker-image](/man/docker-image)(1)

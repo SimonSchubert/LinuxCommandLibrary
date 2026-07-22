@@ -93,6 +93,14 @@ Large rasters may require significant memory; use **-wm** to limit memory usage.
 
 gdalwarp is part of **GDAL** (Geospatial Data Abstraction Library), originally developed by Frank Warmerdam starting in **1998**. GDAL became an OSGeo project and has grown into the fundamental library for geospatial raster operations, used by virtually all GIS software including QGIS, ArcGIS, and countless specialized tools.
 
+# INSTALL
+
+```apt: sudo apt install gdal-bin```
+
+```apk: sudo apk add gdal-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdal_translate](/man/gdal_translate)(1), [gdalinfo](/man/gdalinfo)(1), [ogr2ogr](/man/ogr2ogr)(1), [gdalbuildvrt](/man/gdalbuildvrt)(1)

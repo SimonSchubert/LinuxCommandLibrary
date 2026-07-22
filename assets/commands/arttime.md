@@ -36,6 +36,11 @@ Interactive keybindings change art, toggle views, and control timers once runnin
 
 Needs a UTF-8 capable terminal with adequate size for art. Not a scheduling daemon—process must keep running.
 
+# INSTALL
+
+```brew: brew install arttime```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [pomodoro](/man/pomodoro)(1), [tty-clock](/man/tty-clock)(1), [peaclock](/man/peaclock)(1)

@@ -50,6 +50,18 @@ Requires CUPS administrator privileges (member of the **lpadmin** group or root)
 
 In CUPS 1.5+ the same binary is also installed as **cupsdisable** for backwards compatibility with the historical Berkeley **disable** command — in fact the canonical name is **cupsdisable**. Some distributions ship it only under that name.
 
+# INSTALL
+
+```apt: sudo apt install cups-client```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cupsenable](/man/cupsenable)(1), [cupsaccept](/man/cupsaccept)(1), [cupsreject](/man/cupsreject)(1)

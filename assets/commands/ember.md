@@ -82,6 +82,12 @@ Requires Node.js and npm. Large initial project size. Convention-heavy approach 
 
 Ember CLI was created to provide a standard toolchain for Ember.js development. Ember.js itself was created by **Yehuda Katz** (also known for jQuery and Rust's Cargo) and **Tom Dale**, released in **2011**.
 
+# INSTALL
+
+```aur: yay -S ember```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [node](/man/node)(1), [angular](/man/angular)(1)

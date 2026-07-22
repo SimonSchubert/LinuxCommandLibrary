@@ -87,6 +87,24 @@ Requires SMTP configuration. Some firewalls block SMTP. Cover letters need manua
 
 git send-email supports the **email-based patch workflow** used by the Linux kernel and other projects, sending properly formatted patch emails.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-format-patch](/man/git-format-patch)(1), [git-am](/man/git-am)(1), [git-imap-send](/man/git-imap-send)(1)

@@ -109,6 +109,18 @@ Configuration is defined in **/etc/btrbk/btrbk.conf**, specifying source subvolu
 
 Only works with btrfs filesystems. Remote backups require SSH access and btrfs on the remote host. Retention policies should be tested with dryrun first.
 
+# INSTALL
+
+```dnf: sudo dnf install btrbk```
+
+```pacman: sudo pacman -S btrbk```
+
+```apk: sudo apk add btrbk```
+
+```nix: nix profile install nixpkgs#btrbk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [btrfs-send](/man/btrfs-send)(8), [snapper](/man/snapper)(8)

@@ -37,6 +37,24 @@ _angle_
 
 Anti-aliasing is applied by default for smooth edges; use **-noantialias** to disable it for faster processing or when working with binary images. For rotations that are multiples of 90 degrees, use **pamflip** instead. Part of the Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamflip](/man/pamflip)(1), [pnmflip](/man/pnmflip)(1), [pnmshear](/man/pnmshear)(1)

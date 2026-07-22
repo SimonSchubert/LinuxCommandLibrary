@@ -66,6 +66,16 @@ Bun package manager utilities
 
 **bun pm** provides package manager utilities for managing dependencies and package configuration. It offers commands for inspecting installations, migrating projects from npm/yarn, and working with the lockfile and cache.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-install](/man/bun-install)(1), [bun-pm-ls](/man/bun-pm-ls)(1), [npm](/man/npm)(1)

@@ -76,6 +76,14 @@ chruby ruby-3.2.0
 
 Only switches versions - use ruby-install to install rubies. Does not override cd command (uses pre-prompt hook).
 
+# INSTALL
+
+```brew: brew install chruby```
+
+```nix: nix profile install nixpkgs#chruby```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rbenv](/man/rbenv)(1), [rvm](/man/rvm)(1)

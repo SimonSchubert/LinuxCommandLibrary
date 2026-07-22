@@ -84,6 +84,18 @@ Unlike **cut**, which requires exact delimiter specification and uses 1-based in
 
 Zero-indexed (first field is 0). Faster than cut for long inputs, much faster than awk. Install via cargo or brew install choose-rust.
 
+# INSTALL
+
+```pacman: sudo pacman -S choose```
+
+```apk: sudo apk add choose```
+
+```zypper: sudo zypper install choose```
+
+```nix: nix profile install nixpkgs#choose```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cut](/man/cut)(1), [awk](/man/awk)(1), [sed](/man/sed)(1)

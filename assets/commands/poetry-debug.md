@@ -42,6 +42,18 @@ Must be run from a directory containing a **pyproject.toml** file. The **resolve
 
 The **debug** subcommand was added as part of Poetry's built-in diagnostic tooling to help users and maintainers troubleshoot environment and resolution issues.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [poetry-check](/man/poetry-check)(1), [poetry-env](/man/poetry-env)(1), [poetry-show](/man/poetry-show)(1)

@@ -46,6 +46,20 @@ Rebasing should only be done at a point in the layer stack between "base" layers
 
 Requires that the old base layers exactly match layers in the image. May not work if the image was built with modifications to base layers. It is recommended to tag rebased images to a different tag first, perform confidence checks, then retag.
 
+# INSTALL
+
+```pacman: sudo pacman -S crane```
+
+```apk: sudo apk add crane```
+
+```zypper: sudo zypper install crane```
+
+```brew: brew install crane```
+
+```nix: nix profile install nixpkgs#crane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-mutate](/man/crane-mutate)(1), [crane-cp](/man/crane-cp)(1)

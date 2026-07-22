@@ -108,6 +108,22 @@ The tool uses the **wlr-layer-shell** protocol, so it is specific to Wayland com
 
 **swaynag** is part of the **Sway** compositor, a tiling Wayland compositor compatible with i3. Sway was started by **Drew DeVault** in **2015**; **swaynag** was added as the replacement for the i3 nagbar that Sway historically launched for configuration errors.
 
+# INSTALL
+
+```apt: sudo apt install sway```
+
+```dnf: sudo dnf install sway```
+
+```pacman: sudo pacman -S sway```
+
+```apk: sudo apk add swaynag```
+
+```zypper: sudo zypper install sway```
+
+```nix: nix profile install nixpkgs#sway```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sway](/man/sway)(1), [swaymsg](/man/swaymsg)(1), [swaybar](/man/swaybar)(5), [swaynag](/man/swaynag)(5)

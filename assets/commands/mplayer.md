@@ -85,6 +85,20 @@ MPlayer is considered legacy software; **mpv** is its actively maintained succes
 
 **MPlayer** was started by **Árpád Gereöffy** in **2000**. It became one of the most popular open-source media players on Linux and influenced several successors including **mpv** (forked in 2013) and **MPlayer2**.
 
+# INSTALL
+
+```apt: sudo apt install mplayer```
+
+```pacman: sudo pacman -S mplayer```
+
+```apk: sudo apk add mplayer```
+
+```brew: brew install mplayer```
+
+```nix: nix profile install nixpkgs#mplayer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpv](/man/mpv)(1), [vlc](/man/vlc)(1), [ffplay](/man/ffplay)(1)

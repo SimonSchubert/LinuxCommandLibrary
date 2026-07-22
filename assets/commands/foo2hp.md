@@ -63,6 +63,14 @@ Only for specific HP printer models. Quality depends on input resolution. May no
 
 foo2hp is part of **foo2zjs**, Rick Richardson's open source driver collection. It reverse-engineered HP's ZjStream protocol to provide Linux support for GDI-based HP printers.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+```dnf: sudo dnf install foo2hp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2hp2600-wrapper](/man/foo2hp2600-wrapper)(1), [foo2zjs](/man/foo2zjs)(1)

@@ -63,6 +63,22 @@ Process **user databases** only
 
 Usually run automatically by package managers. May require root for system-wide databases.
 
+# INSTALL
+
+```apt: sudo apt install man-db```
+
+```dnf: sudo dnf install man-db```
+
+```pacman: sudo pacman -S man-db```
+
+```apk: sudo apk add man-db```
+
+```brew: brew install man-db```
+
+```nix: nix profile install nixpkgs#man-db```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [man](/man/man)(1), [apropos](/man/apropos)(1), [whatis](/man/whatis)(1), [manpath](/man/manpath)(1)

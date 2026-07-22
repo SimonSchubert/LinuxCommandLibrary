@@ -54,6 +54,14 @@ The new image is staged and becomes active on the next reboot. The previous depl
 
 Switching to incompatible images may result in a non-bootable system. Ensure the target image is compatible with the system's architecture and configuration. Requires root privileges.
 
+# INSTALL
+
+```dnf: sudo dnf install bootc```
+
+```nix: nix profile install nixpkgs#bootc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bootc](/man/bootc)(1), [podman](/man/podman)(1), [skopeo](/man/skopeo)(1), [rpm-ostree](/man/rpm-ostree)(1), [ostree](/man/ostree)(1)

@@ -94,6 +94,14 @@ Requires root privileges to craft raw packets. **hping** is unmaintained; new de
 
 **hping** was created by **Salvatore Sanfilippo** ("antirez", also the creator of Redis) in the late 1990s as a packet generator and analyzer for TCP/IP protocols. Sanfilippo used it to develop the idle scan technique later adopted by Nmap. **hping3**, released in 2005, replaced it as the actively developed version by adding a Tcl scripting engine on top of the same core packet-crafting code.
 
+# INSTALL
+
+```pacman: sudo pacman -S hping```
+
+```nix: nix profile install nixpkgs#hping```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hping3](/man/hping3)(8), [nmap](/man/nmap)(1), [ping](/man/ping)(1), [traceroute](/man/traceroute)(1)

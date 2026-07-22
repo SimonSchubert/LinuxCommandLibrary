@@ -45,6 +45,20 @@ manages Jujutsu's operation log
 
 **jj operation** manages Jujutsu's operation log. Every change to the repository is recorded as an operation, enabling undo and time travel. Operations track what commands were run and their effects.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-undo](/man/jj-undo)(1)

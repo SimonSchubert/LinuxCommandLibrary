@@ -126,6 +126,22 @@ Requires Python. Syntax differs from curl. Large responses may be slow to colori
 
 HTTPie was created by **Jakub Roztočil** in **2012** as a more user-friendly alternative to curl for interacting with HTTP APIs.
 
+# INSTALL
+
+```dnf: sudo dnf install httpie```
+
+```pacman: sudo pacman -S httpie```
+
+```apk: sudo apk add httpie```
+
+```zypper: sudo zypper install httpie```
+
+```brew: brew install httpie```
+
+```nix: nix profile install nixpkgs#httpie```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [wget](/man/wget)(1), [xh](/man/xh)(1)

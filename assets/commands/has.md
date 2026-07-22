@@ -34,6 +34,14 @@ For each command passed as an argument, **has** checks if it exists on the PATH 
 
 **has** was created by **Kunal Dabir** (kdabir) as a lightweight utility for verifying development environment prerequisites. It is implemented as a single **bash** script, making it trivially installable on any Unix-like system.
 
+# INSTALL
+
+```brew: brew install has```
+
+```nix: nix profile install nixpkgs#has```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [which](/man/which)(1), [command](/man/command)(1), [type](/man/type)(1)

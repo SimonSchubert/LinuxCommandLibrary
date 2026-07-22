@@ -93,6 +93,12 @@ tpp requires a terminal with ncurses support. The **--huge** feature requires FI
 
 **tpp** was written by **Andreas Krennmair** and **Nico Golde**. It was designed to enable presentations directly in the terminal, appealing to users who prefer text-based tools and want to avoid graphical presentation software. The tool gained popularity in the Linux community for technical talks and demonstrations.
 
+# INSTALL
+
+```aur: yay -S tpp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [figlet](/man/figlet)(6), [cowsay](/man/cowsay)(1), [slides](/man/slides)(1), [mdp](/man/mdp)(1)

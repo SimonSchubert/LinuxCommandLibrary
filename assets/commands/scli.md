@@ -49,6 +49,12 @@ Requires **signal-cli** to be installed and registered. Cannot quote messages or
 
 **scli** was created by **isamert** and is written in **Python**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#scli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [toot](/man/toot)(1)

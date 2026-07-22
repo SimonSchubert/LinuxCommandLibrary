@@ -57,6 +57,14 @@ The **-o** option is useful for removing packages that were installed as depende
 
 Requires root privileges. Be careful with **-R** as it may remove packages you want to keep. Running **-o** regularly helps keep the system clean. Part of the XBPS package management system for Void Linux.
 
+# INSTALL
+
+```apk: sudo apk add xbps```
+
+```nix: nix profile install nixpkgs#xbps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xbps-install](/man/xbps-install)(1), [xbps-query](/man/xbps-query)(1)

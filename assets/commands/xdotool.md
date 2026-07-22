@@ -122,6 +122,24 @@ Only works with X11, not Wayland. Some applications may not respond to synthetic
 
 **xdotool** was written by Jordan Sissel as an automation tool for X11. It provides scriptable access to the XTEST extension for simulating input events.
 
+# INSTALL
+
+```apt: sudo apt install xdotool```
+
+```dnf: sudo dnf install xdotool```
+
+```pacman: sudo pacman -S xdotool```
+
+```apk: sudo apk add xdotool```
+
+```zypper: sudo zypper install xdotool```
+
+```brew: brew install xdotool```
+
+```nix: nix profile install nixpkgs#xdotool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xte](/man/xte)(1), [xprop](/man/xprop)(1), [wmctrl](/man/wmctrl)(1)

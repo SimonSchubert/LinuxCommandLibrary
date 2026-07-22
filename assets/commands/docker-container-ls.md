@@ -68,6 +68,24 @@ list containers on the system
 
 This command is equivalent to the legacy **docker ps** command and serves as the primary interface for viewing container inventory. Filtering and formatting options make it suitable for scripting and automation workflows.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-ps](/man/docker-ps)(1), [docker-container](/man/docker-container)(1), [docker-container-run](/man/docker-container-run)(1), [docker-container-rm](/man/docker-container-rm)(1)

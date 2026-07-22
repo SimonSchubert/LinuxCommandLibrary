@@ -74,6 +74,20 @@ Complex or non-standard LaTeX may not process correctly. Some packages define co
 
 detex was originally written by **Daniel Trinkle** of the Computer Science Department at Purdue University. It has been a standard tool in TeX distributions since the **1980s** and is maintained today as **OpenDetex**. Despite its age, it remains useful for basic LaTeX-to-text conversion.
 
+# INSTALL
+
+```apt: sudo apt install texlive-binaries```
+
+```dnf: sudo dnf install texlive```
+
+```apk: sudo apk add texlive```
+
+```zypper: sudo zypper install texlive```
+
+```brew: brew install texlive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [latex](/man/latex)(1), [aspell](/man/aspell)(1), [pandoc](/man/pandoc)(1), [tex](/man/tex)(1)

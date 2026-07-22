@@ -108,6 +108,20 @@ Unlike `pip`, `uv pip` does not automatically create or activate a virtual envir
 
 `uv pip` is intended for ad-hoc package management. For project-based workflows with a lockfile, prefer `uv add`/`uv sync`/`uv lock` which manage `pyproject.toml` and `uv.lock` directly.
 
+# INSTALL
+
+```dnf: sudo dnf install uv```
+
+```pacman: sudo pacman -S uv```
+
+```apk: sudo apk add uv```
+
+```brew: brew install uv```
+
+```nix: nix profile install nixpkgs#uv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uv](/man/uv)(1), [pip](/man/pip)(1), [pipx](/man/pipx)(1), [poetry](/man/poetry)(1)

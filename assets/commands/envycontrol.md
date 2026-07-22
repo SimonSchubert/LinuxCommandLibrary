@@ -62,6 +62,12 @@ The tool simplifies power management and performance tuning on dual-GPU systems 
 
 Requires Nvidia Optimus laptop. Changes require reboot to take effect. Display manager must be correctly specified. May conflict with other GPU switching solutions.
 
+# INSTALL
+
+```aur: yay -S envycontrol```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nvidia-smi](/man/nvidia-smi)(1)

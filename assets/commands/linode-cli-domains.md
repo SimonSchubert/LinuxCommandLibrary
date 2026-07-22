@@ -58,6 +58,14 @@ manages DNS domains on Linode
 
 **linode-cli domains** manages DNS domains on Linode. Create, update, and delete domains and DNS records. Part of Linode CLI for cloud infrastructure management.
 
+# INSTALL
+
+```brew: brew install linode-cli```
+
+```nix: nix profile install nixpkgs#linode-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [linode-cli](/man/linode-cli)(1)

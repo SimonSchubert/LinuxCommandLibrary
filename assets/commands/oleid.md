@@ -67,6 +67,12 @@ Heuristic analysis; may produce false positives. Requires the **oletools** Pytho
 
 oleid was developed by **Philippe Lagadec** as part of **oletools**, a Python toolkit for analyzing Microsoft OLE2 files (Structured Storage / Compound File Binary Format) and MS Office documents.
 
+# INSTALL
+
+```apk: sudo apk add py3-oletools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [olevba](/man/olevba)(1), [mraptor](/man/mraptor)(1), [oletools](/man/oletools)(1), [clamscan](/man/clamscan)(1)

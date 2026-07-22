@@ -61,6 +61,12 @@ Configuration is stored in **~/.config/tran/tran.yml**.
 
 **tran** was created by **abdfnx** and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#tran```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [croc](/man/croc)(1), [portal](/man/portal)(1)

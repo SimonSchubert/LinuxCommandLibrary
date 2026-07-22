@@ -107,6 +107,20 @@ Not fully compatible with Node.js modules. Some npm packages require compatibili
 
 Deno was created by **Ryan Dahl**, the original creator of Node.js, and announced in **2018**. It was designed to address perceived shortcomings in Node.js, particularly around security, TypeScript support, and module systems. Version 1.0 was released in **2020**.
 
+# INSTALL
+
+```pacman: sudo pacman -S deno```
+
+```apk: sudo apk add deno```
+
+```zypper: sudo zypper install deno```
+
+```brew: brew install deno```
+
+```nix: nix profile install nixpkgs#deno```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [bun](/man/bun)(1), [tsc](/man/tsc)(1)

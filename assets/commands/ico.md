@@ -73,6 +73,16 @@ Requires X11 display server. Primarily a demonstration program with no practical
 
 ico is one of the classic X11 demonstration programs, originating from the early days of the X Window System at MIT in the mid-**1980s**. It has been included in X.Org releases as part of the standard distribution.
 
+# INSTALL
+
+```apt: sudo apt install x11-apps```
+
+```zypper: sudo zypper install ico```
+
+```nix: nix profile install nixpkgs#ico```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xeyes](/man/xeyes)(1), [xlogo](/man/xlogo)(1)

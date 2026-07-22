@@ -91,6 +91,12 @@ svg, pdf, ps, png, jpeg, tiff, gif, bmp, mng, ppm, xbm, xpm
 
 Requires X server. Use xvfb-run for headless environments. Based on older Qt WebKit (not Chromium).
 
+# INSTALL
+
+```apt: sudo apt install cutycapt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wkhtmltoimage](/man/wkhtmltoimage)(1), [chromium](/man/chromium)(1), [firefox](/man/firefox)(1)

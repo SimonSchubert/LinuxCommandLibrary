@@ -99,6 +99,18 @@ Large VCF files can consume significant memory. Some operations require the inpu
 
 **VCFtools** was developed by **Adam Auton** and **Anthony Marcketta** at Cornell University, with the first release around **2011**. It was created to address the need for efficient VCF manipulation as next-generation sequencing became widespread. The tool has become a standard in bioinformatics pipelines for variant analysis and quality control.
 
+# INSTALL
+
+```apt: sudo apt install vcftools```
+
+```dnf: sudo dnf install vcftools```
+
+```brew: brew install vcftools```
+
+```nix: nix profile install nixpkgs#vcftools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bcftools](/man/bcftools)(1), [tabix](/man/tabix)(1), [bgzip](/man/bgzip)(1), [samtools](/man/samtools)(1)

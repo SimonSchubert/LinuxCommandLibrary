@@ -37,6 +37,22 @@ Extract whole tarballs from .tar.lrz files
 **-h**
 > Display help.
 
+# INSTALL
+
+```apt: sudo apt install lrzip```
+
+```pacman: sudo pacman -S lrzip```
+
+```apk: sudo apk add lrzip-extra-scripts```
+
+```zypper: sudo zypper install lrzip```
+
+```brew: brew install lrzip```
+
+```nix: nix profile install nixpkgs#lrzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lrztar](/man/lrztar)(1), [lrzip](/man/lrzip)(1), [lrunzip](/man/lrunzip)(1), [tar](/man/tar)(1)

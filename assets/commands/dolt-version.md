@@ -41,6 +41,16 @@ Version numbers follow semantic versioning. Repository format versions may diffe
 
 dolt version follows standard version reporting conventions, providing essential information for support and compatibility verification in the **Dolt** ecosystem.
 
+# INSTALL
+
+```pacman: sudo pacman -S dolt```
+
+```brew: brew install dolt```
+
+```nix: nix profile install nixpkgs#dolt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dolt](/man/dolt)(1)

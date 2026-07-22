@@ -51,6 +51,24 @@ Convert PostScript and PDF to PNM format
 
 **pstopnm** converts PostScript and PDF files to PNM format. Uses Ghostscript for rendering. Part of Netpbm toolkit for document conversion.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gs](/man/gs)(1), [pnmtops](/man/pnmtops)(1)

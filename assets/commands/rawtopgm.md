@@ -51,6 +51,24 @@ _height_
 
 The **-headerskip** option allows skipping file headers that precede the actual pixel data, and **-bpp** handles 16-bit samples for higher dynamic range images. It is part of the Netpbm image processing toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rawtoppm](/man/rawtoppm)(1), [pgmtopbm](/man/pgmtopbm)(1)

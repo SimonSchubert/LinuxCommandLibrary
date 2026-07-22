@@ -105,6 +105,22 @@ False positives are common — refine rules or add an allowlist. History scannin
 
 gitleaks was created by **Zachary Rice** to address the security risk of secrets accidentally committed to git repositories. Version 8.19.0 reorganized the CLI around **git**, **dir** and **stdin**, deprecating the earlier `detect`/`protect` commands.
 
+# INSTALL
+
+```apt: sudo apt install gitleaks```
+
+```dnf: sudo dnf install gitleaks```
+
+```pacman: sudo pacman -S gitleaks```
+
+```zypper: sudo zypper install gitleaks```
+
+```brew: brew install gitleaks```
+
+```nix: nix profile install nixpkgs#gitleaks```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [trufflehog](/man/trufflehog)(1), [git-secret](/man/git-secret)(1), [detect-secrets](/man/detect-secrets)(1)

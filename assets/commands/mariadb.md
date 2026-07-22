@@ -109,6 +109,24 @@ Password on command line visible in process list - use -p without argument. Larg
 
 **MariaDB** was created by **Michael Widenius** (Monty) after **MySQL** was acquired by **Oracle** in **2010**. MariaDB is a community-developed fork designed to remain free and open-source. The mariadb client replaced mysql as the default client name in recent versions.
 
+# INSTALL
+
+```apt: sudo apt install mariadb-client-core```
+
+```dnf: sudo dnf install mariadb```
+
+```pacman: sudo pacman -S mariadb```
+
+```apk: sudo apk add mariadb-client```
+
+```zypper: sudo zypper install mariadb-client```
+
+```brew: brew install mariadb```
+
+```nix: nix profile install nixpkgs#mariadb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mysql](/man/mysql)(1), [mysqldump](/man/mysqldump)(1), [mysqladmin](/man/mysqladmin)(1)

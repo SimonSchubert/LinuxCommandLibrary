@@ -89,6 +89,24 @@ The default completion system needs initialization with **compinit**. Most frame
 
 Zsh was created by **Paul Falstad** at Princeton University in **1990**, named after Yale professor Zhong Shao (zsh = Zhong SHell). It has grown into one of the most feature-rich shells available and became the default shell in macOS Catalina (2019).
 
+# INSTALL
+
+```apt: sudo apt install zsh```
+
+```dnf: sudo dnf install zsh```
+
+```pacman: sudo pacman -S zsh```
+
+```apk: sudo apk add zsh```
+
+```zypper: sudo zypper install zsh```
+
+```brew: brew install zsh```
+
+```nix: nix profile install nixpkgs#zsh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [sh](/man/sh)(1), [fish](/man/fish)(1), [ksh](/man/ksh)(1)

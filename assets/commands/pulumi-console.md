@@ -38,6 +38,18 @@ Open Pulumi web console in browser
 
 **pulumi console** opens the Pulumi Cloud web console in the default browser. It provides a web-based management interface for viewing and managing stacks, resources, deployment history, and activity logs. If a stack is specified with **-s**, the console opens directly to that stack's page.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-stack](/man/pulumi-stack)(1), [pulumi-login](/man/pulumi-login)(1)

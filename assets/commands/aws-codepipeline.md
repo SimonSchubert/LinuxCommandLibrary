@@ -116,6 +116,17 @@ Pipelines have concurrent execution limits. Disabling transitions blocks all fol
 
 **AWS CodePipeline** launched in **July 2015** as AWS's continuous delivery service. V2 pipelines with enhanced features including pipeline variables and triggers were introduced in **2023**. The service integrates with CodeCommit, CodeBuild, CodeDeploy, and third-party tools like GitHub and Jenkins.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-codebuild](/man/aws-codebuild)(1), [aws-codecommit](/man/aws-codecommit)(1)

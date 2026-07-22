@@ -62,6 +62,24 @@ Unlike split which divides by size, csplit divides by content structure, making 
 
 Part of GNU coreutils. Without -k, output files are deleted if an error occurs. Pattern repetition with {*} will fail if the pattern doesn't divide the file evenly (use -k to keep partial output).
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [split](/man/split)(1), [cut](/man/cut)(1), [head](/man/head)(1)

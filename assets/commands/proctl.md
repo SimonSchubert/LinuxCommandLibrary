@@ -100,6 +100,12 @@ Optionally requires fzf for interactive pick menus (**-pl**, **-pL**). License t
 
 **proctl** was created by **HeCodes2Much** (CreativeCodeCat) to streamline project license management, particularly useful for developers who work on multiple projects with different licensing requirements.
 
+# INSTALL
+
+```aur: yay -S proctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [licensor](/man/licensor)(1), [fzf](/man/fzf)(1)

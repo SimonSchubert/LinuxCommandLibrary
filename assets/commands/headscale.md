@@ -117,6 +117,20 @@ Requires TLS certificate for production. DERP servers needed for NAT traversal. 
 
 Headscale was created by **Juan Font** and first released in **2020**. It provides self-hosted alternative to Tailscale's coordination service while using the same WireGuard-based clients. The project grew from desire for self-hosted mesh VPN without vendor control. Headscale is popular for organizations wanting Tailscale compatibility with full infrastructure ownership.
 
+# INSTALL
+
+```dnf: sudo dnf install headscale```
+
+```pacman: sudo pacman -S headscale```
+
+```apk: sudo apk add headscale```
+
+```zypper: sudo zypper install headscale```
+
+```nix: nix profile install nixpkgs#headscale```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tailscale](/man/tailscale)(1), [nebula](/man/nebula)(1)

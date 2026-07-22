@@ -121,6 +121,16 @@ Enable-linger allows user services to persist after logout. Terminating sessions
 
 **loginctl** is part of **systemd**, managing multi-seat configurations, user sessions, and user lingering through systemd-logind.
 
+# INSTALL
+
+```apt: sudo apt install elogind```
+
+```apk: sudo apk add elogind```
+
+```nix: nix profile install nixpkgs#elogind```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [lslogins](/man/lslogins)(1)

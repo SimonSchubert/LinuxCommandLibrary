@@ -62,6 +62,11 @@ Etcher is primarily a GUI application and has limited command-line functionality
 
 **Etcher** was created by **Balena** (formerly Resin.io) and released in **2016** as an open-source tool to simplify the process of flashing OS images for IoT devices and single-board computers like Raspberry Pi. The name changed from "Etcher" to "Balena Etcher" when the company rebranded. It has become one of the most popular image flashing tools, known for its user-friendly interface and cross-platform support.
 
+# INSTALL
+
+```aur: yay -S balena-etcher```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [dd](/man/dd)(1), [dcfldd](/man/dcfldd)(1), [ventoy](/man/ventoy)(1), [lsblk](/man/lsblk)(1)

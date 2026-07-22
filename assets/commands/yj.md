@@ -116,6 +116,16 @@ Only **HCL v1** is supported. Modern Terraform files using HCL2 syntax may not p
 
 **yj** was created by **Stephen Levine** and first released in **March 2017**. It is written in **Go** and is available on GitHub at sclevine/yj. The tool is installable via Homebrew and as pre-built binaries for Linux, macOS, and Windows. It is licensed under the Apache License 2.0.
 
+# INSTALL
+
+```apk: sudo apk add yj```
+
+```brew: brew install yj```
+
+```nix: nix profile install nixpkgs#yj```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [yq](/man/yq)(1), [python](/man/python)(1)

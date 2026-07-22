@@ -58,6 +58,18 @@ Part of the bsdgames package. Knowledge of cribbage rules is helpful. Use **-e**
 
 Cribbage was invented by **Sir John Suckling** in the early **17th century**. The BSD implementation was written by **Bill Joy** and has been part of BSD games since the **1980s**.
 
+# INSTALL
+
+```dnf: sudo dnf install bsd-games```
+
+```pacman: sudo pacman -S bsd-games```
+
+```apk: sudo apk add bsd-games```
+
+```zypper: sudo zypper install bsd-games```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [canfield](/man/canfield)(6), [mille](/man/mille)(6), [backgammon](/man/backgammon)(6)

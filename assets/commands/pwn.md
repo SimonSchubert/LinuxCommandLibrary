@@ -80,6 +80,16 @@ Intended for authorized security testing and educational purposes only. Generate
 
 Part of **Pwntools**, a Python library developed for CTF players and security researchers. Provides convenient command-line access to common exploit development tasks.
 
+# INSTALL
+
+```apk: sudo apk add pwntools```
+
+```brew: brew install pwntools```
+
+```nix: nix profile install nixpkgs#pwntools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdb](/man/gdb)(1), [objdump](/man/objdump)(1), [readelf](/man/readelf)(1)

@@ -77,6 +77,22 @@ Not all options are supported by all drivers. Changing settings may temporarily 
 
 **ethtool** is the standard Linux utility for examining and tuning Ethernet-based network interfaces.
 
+# INSTALL
+
+```apt: sudo apt install ethtool```
+
+```dnf: sudo dnf install ethtool```
+
+```pacman: sudo pacman -S ethtool```
+
+```apk: sudo apk add ethtool```
+
+```zypper: sudo zypper install ethtool```
+
+```nix: nix profile install nixpkgs#ethtool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip](/man/ip)(8), [mii-tool](/man/mii-tool)(8), [tc](/man/tc)(8)

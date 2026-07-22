@@ -95,6 +95,22 @@ Compress and specify **output file**
 
 Most effective on large files (100MB+) with long-range redundant data. ZPAQ compression is extremely slow but achieves best ratios. The default LZMA backend provides a good balance of speed and compression. Files are not compatible with standard zip/gzip tools; use **lrunzip** or **lrzip -d** to decompress. By default, the original file is removed after compression.
 
+# INSTALL
+
+```apt: sudo apt install lrzip```
+
+```pacman: sudo pacman -S lrzip```
+
+```apk: sudo apk add lrzip```
+
+```zypper: sudo zypper install lrzip```
+
+```brew: brew install lrzip```
+
+```nix: nix profile install nixpkgs#lrzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lrunzip](/man/lrunzip)(1), [lrztar](/man/lrztar)(1), [gzip](/man/gzip)(1), [xz](/man/xz)(1), [bzip2](/man/bzip2)(1), [zstd](/man/zstd)(1)

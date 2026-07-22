@@ -26,6 +26,15 @@ Requires **arduino-cli** and **gum** to be installed. Initial setup requires ins
 
 **arduino-cli-interactive** was created by **Vaishnav-Sabari-Girish**, an ECE student in India, out of frustration with the Arduino IDE on Linux. Licensed under Apache 2.0 and first released in December 2024.
 
+# INSTALL
+
+```pacman: sudo pacman -S arduino-cli```
+
+```brew: brew install arduino-cli```
+
+```nix: nix profile install nixpkgs#arduino-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [arduino-cli](/man/arduino-cli)(1), [screen](/man/screen)(1), [minicom](/man/minicom)(1)

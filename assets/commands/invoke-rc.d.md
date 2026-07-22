@@ -75,6 +75,12 @@ Debian/Ubuntu specific. On systemd systems, invoke-rc.d redirects to systemctl. 
 
 invoke-rc.d was created for **Debian** to provide policy-compliant init script invocation, especially in package maintainer scripts.
 
+# INSTALL
+
+```apt: sudo apt install runit-init```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [service](/man/service)(8), [systemctl](/man/systemctl)(1), [update-rc.d](/man/update-rc.d)(8)

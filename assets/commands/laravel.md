@@ -48,6 +48,12 @@ installer CLI for creating new Laravel PHP framework applications
 
 **laravel** is the Laravel installer CLI for creating new Laravel PHP framework applications. Provides scaffolding options for starter kits like Jetstream and Breeze. Alternative to using Composer create-project.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#laravel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [composer](/man/composer)(1), [php-artisan](/man/php-artisan)(1)

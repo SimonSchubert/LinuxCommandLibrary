@@ -76,6 +76,16 @@ Multiple .npmrc locations exist with a precedence order: project > user > global
 
 npm config is the **configuration management** system for npm behavior customization.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npmrc](/man/npmrc)(5)

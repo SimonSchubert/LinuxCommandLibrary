@@ -61,6 +61,12 @@ Requires **PipeWire** as the audio server. Only affects Electron-based applicati
 
 **pipetron** (a portmanteau of PipeWire and Electron) was created to address the widespread issue of Electron applications being unable to set proper audio stream names under PipeWire. The project is available on **Codeberg** and mirrored on GitHub, and is packaged in the **Arch Linux AUR**.
 
+# INSTALL
+
+```aur: yay -S pipetron```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [pavucontrol](/man/pavucontrol)(1), [wireplumber](/man/wireplumber)(1)

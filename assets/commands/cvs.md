@@ -87,6 +87,24 @@ CVS is considered legacy; Git and other distributed VCS are preferred for new pr
 
 CVS was developed by Dick Grune in **1986** and later enhanced by Brian Berliner. It was the dominant version control system throughout the 1990s, used by major open-source projects. It was largely superseded by Subversion and later Git in the 2000s.
 
+# INSTALL
+
+```apt: sudo apt install cvs```
+
+```dnf: sudo dnf install cvs```
+
+```pacman: sudo pacman -S cvs```
+
+```apk: sudo apk add cvs```
+
+```zypper: sudo zypper install cvs```
+
+```brew: brew install cvs```
+
+```nix: nix profile install nixpkgs#cvs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [svn](/man/svn)(1), [git](/man/git)(1), [rcs](/man/rcs)(1)

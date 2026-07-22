@@ -80,6 +80,14 @@ Market data from Yahoo Finance may have a slight lag (up to 30 seconds) due to i
 
 **ticker** was created by **Ani Channarasappa** and first released in **2020**. It was developed to provide a lightweight, terminal-based alternative to web-based stock tracking tools, appealing to developers and terminal enthusiasts who prefer command-line workflows.
 
+# INSTALL
+
+```apt: sudo apt install ticker```
+
+```nix: nix profile install nixpkgs#ticker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [jq](/man/jq)(1)

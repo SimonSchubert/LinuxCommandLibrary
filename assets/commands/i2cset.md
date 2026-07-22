@@ -54,6 +54,24 @@ Writing to I2C registers can cause hardware damage or unexpected behavior. Alway
 
 i2cset is part of the i2c-tools package, providing userspace write access to I2C devices. The I2C protocol was developed by Philips (now NXP) in **1982** for low-speed peripheral communication.
 
+# INSTALL
+
+```apt: sudo apt install i2c-tools```
+
+```dnf: sudo dnf install i2c-tools```
+
+```pacman: sudo pacman -S i2c-tools```
+
+```apk: sudo apk add i2c-tools```
+
+```zypper: sudo zypper install i2c-tools```
+
+```brew: brew install i2c-tools```
+
+```nix: nix profile install nixpkgs#i2c-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [i2cdetect](/man/i2cdetect)(8), [i2cdump](/man/i2cdump)(8), [i2cget](/man/i2cget)(8)

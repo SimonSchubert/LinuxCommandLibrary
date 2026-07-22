@@ -66,6 +66,12 @@ Python library required. Many output formats.
 
 Pygments was created as a **syntax highlighting** library for Python.
 
+# INSTALL
+
+```apk: sudo apk add py3-pygments```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [highlight](/man/highlight)(1), [source-highlight](/man/source-highlight)(1)

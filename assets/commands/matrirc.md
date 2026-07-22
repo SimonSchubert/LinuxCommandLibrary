@@ -57,6 +57,12 @@ State (sessions, encryption keys, room cache) is persisted under matrirc's data 
 
 **matrirc** was created by **Dominique Martinet** (**martinetd**) and is hosted at **github.com/martinetd/matrirc**. It was developed to give long-time IRC users a lightweight, locally-run bridge into Matrix without operating a homeserver-level appservice.
 
+# INSTALL
+
+```aur: yay -S matrirc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [weechat](/man/weechat)(1), [irssi](/man/irssi)(1)

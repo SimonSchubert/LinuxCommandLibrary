@@ -59,6 +59,14 @@ Effectiveness varies by individual; speed reading is a skill that requires pract
 
 **speedread** was created by **Petr Baudis** (pasky) and released as open-source software. The tool is inspired by **Spritz**, a commercial speed reading technology. RSVP techniques for speed reading have been studied since the **1970s**, with digital implementations becoming popular in the **2010s**.
 
+# INSTALL
+
+```brew: brew install speedread```
+
+```nix: nix profile install nixpkgs#speedread```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [more](/man/more)(1), [cat](/man/cat)(1), [curl](/man/curl)(1)

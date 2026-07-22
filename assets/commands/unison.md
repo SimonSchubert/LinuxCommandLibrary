@@ -64,6 +64,22 @@ Both sides must run the same version of unison; version mismatches cause failure
 
 **Unison** was developed by **Benjamin Pierce** at the University of Pennsylvania, first released around **2001**. It is written in OCaml and based on research in file synchronization theory.
 
+# INSTALL
+
+```dnf: sudo dnf install unison```
+
+```pacman: sudo pacman -S unison```
+
+```apk: sudo apk add unison```
+
+```zypper: sudo zypper install unison```
+
+```brew: brew install unison```
+
+```nix: nix profile install nixpkgs#unison```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rsync](/man/rsync)(1), [syncthing](/man/syncthing)(1), [rclone](/man/rclone)(1)

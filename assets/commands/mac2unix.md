@@ -55,6 +55,24 @@ Handle **BOM** (Byte Order Mark)
 
 Classic Mac OS (pre-OS X) used CR line endings. Modern macOS uses Unix LF endings. Only needed for legacy files.
 
+# INSTALL
+
+```apt: sudo apt install dos2unix```
+
+```dnf: sudo dnf install dos2unix```
+
+```pacman: sudo pacman -S dos2unix```
+
+```apk: sudo apk add dos2unix```
+
+```zypper: sudo zypper install dos2unix```
+
+```brew: brew install dos2unix```
+
+```nix: nix profile install nixpkgs#dos2unix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dos2unix](/man/dos2unix)(1), [unix2dos](/man/unix2dos)(1), [unix2mac](/man/unix2mac)(1)

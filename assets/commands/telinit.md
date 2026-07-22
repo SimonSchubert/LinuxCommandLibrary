@@ -69,6 +69,12 @@ The SysV runlevel concept is obsolete on systemd systems. Use `systemctl` comman
 
 **telinit** originates from SysV init, predating systemd. On systemd systems, it's a compatibility wrapper that translates runlevels to systemd targets.
 
+# INSTALL
+
+```apt: sudo apt install systemd-sysv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [init](/man/init)(1), [runlevel](/man/runlevel)(8)

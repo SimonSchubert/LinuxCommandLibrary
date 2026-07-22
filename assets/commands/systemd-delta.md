@@ -66,6 +66,22 @@ Only shows differences for systemd-managed configuration types (unit files, tmpf
 
 **systemd-delta** is part of the **systemd** project. It addresses the common administrative challenge of understanding which configuration files are in effect when multiple sources provide overlapping configuration.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemd-analyze](/man/systemd-analyze)(1)

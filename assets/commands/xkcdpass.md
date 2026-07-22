@@ -93,6 +93,16 @@ Security depends on wordlist size. Short wordlists reduce entropy. Random select
 
 **xkcdpass** was created inspired by **XKCD comic 936** by **Randall Munroe**. The comic demonstrated that random word passphrases are more secure and memorable than complex but short passwords.
 
+# INSTALL
+
+```pacman: sudo pacman -S xkcdpass```
+
+```apk: sudo apk add xkcdpass```
+
+```nix: nix profile install nixpkgs#xkcdpass```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pwgen](/man/pwgen)(1), [makepasswd](/man/makepasswd)(1), [apg](/man/apg)(1), [openssl](/man/openssl)(1)

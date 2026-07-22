@@ -132,6 +132,20 @@ Extraction may not work for custom formats. Encrypted sections appear as high en
 
 **binwalk** was created by Craig Heffner around **2010** for reverse engineering and analyzing firmware images from embedded devices. It is now maintained by ReFirmLabs. Version 3, a full rewrite in Rust, debuted in 2024.
 
+# INSTALL
+
+```dnf: sudo dnf install binwalk```
+
+```pacman: sudo pacman -S binwalk```
+
+```zypper: sudo zypper install binwalk```
+
+```brew: brew install binwalk```
+
+```nix: nix profile install nixpkgs#binwalk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foremost](/man/foremost)(1), [strings](/man/strings)(1), [file](/man/file)(1), [dd](/man/dd)(1), [hexdump](/man/hexdump)(1)

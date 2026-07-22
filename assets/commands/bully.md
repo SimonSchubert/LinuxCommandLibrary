@@ -40,6 +40,16 @@ Before using bully, network information must be gathered using tools like **airm
 
 Only use on networks you own or have explicit authorization to test. WPS attacks are detectable and may trigger lockouts. Many modern routers have WPS protections that limit attack effectiveness. Unauthorized use is illegal.
 
+# INSTALL
+
+```apt: sudo apt install bully```
+
+```pacman: sudo pacman -S bully```
+
+```nix: nix profile install nixpkgs#bully```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [reaver](/man/reaver)(1), [airmon-ng](/man/airmon-ng)(8), [airodump-ng](/man/airodump-ng)(8)

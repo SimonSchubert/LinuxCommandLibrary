@@ -104,6 +104,12 @@ Only ungapped alignments are supported. Very computationally intensive due to si
 
 **tblastx** is part of BLAST (Basic Local Alignment Search Tool), originally developed at NCBI in 1990 by Stephen Altschul and colleagues. The BLAST+ suite, rewritten in C++, replaced the original C implementation. It remains a fundamental tool in bioinformatics for sequence similarity searching.
 
+# INSTALL
+
+```apt: sudo apt install ncbi-blast+```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blastn](/man/blastn)(1), [blastp](/man/blastp)(1), [blastx](/man/blastx)(1), [makeblastdb](/man/makeblastdb)(1)

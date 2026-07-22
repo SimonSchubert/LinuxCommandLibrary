@@ -32,6 +32,20 @@ initializes a Jujutsu repository with Git backend
 
 **jj git init** initializes a Jujutsu repository with a Git backend. By default it creates a colocated repo where both `.jj` and `.git` directories exist, allowing both jj and git commands to work on the same repo. IDE Git integration works as-is in colocated mode.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-git-clone](/man/jj-git-clone)(1), [jj-git-fetch](/man/jj-git-fetch)(1), [git](/man/git)(1)

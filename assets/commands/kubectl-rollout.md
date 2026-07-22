@@ -106,6 +106,20 @@ Only works with deployments, daemonsets, and statefulsets. Revision history dept
 
 kubectl rollout has been part of **kubectl** since early versions of **Kubernetes**, providing declarative lifecycle management for workload rollouts.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-apply](/man/kubectl-apply)(1), [kubectl-set](/man/kubectl-set)(1), [kubectl-get](/man/kubectl-get)(1), [kubectl-scale](/man/kubectl-scale)(1)

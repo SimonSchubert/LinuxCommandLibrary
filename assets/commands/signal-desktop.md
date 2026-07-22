@@ -67,6 +67,14 @@ Signal Desktop requires linking to an existing Signal account on a mobile device
 
 **Signal Desktop** was originally released in **2015** as a Chrome app before transitioning to a standalone Electron application in **2017**. Signal itself evolved from TextSecure, developed by Open Whisper Systems (founded by Moxie Marlinspike in **2013**). The Signal Protocol for end-to-end encryption has been adopted by numerous other messaging platforms. In **2018**, the Signal Foundation was established as a non-profit to support Signal's development. The desktop client continues active development with regular security updates.
 
+# INSTALL
+
+```pacman: sudo pacman -S signal-desktop```
+
+```nix: nix profile install nixpkgs#signal-desktop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [telegram-desktop](/man/telegram-desktop)(1), [gpg](/man/gpg)(1)

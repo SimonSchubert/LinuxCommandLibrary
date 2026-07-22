@@ -28,6 +28,14 @@ Friendlier alternative to ss and netstat
 
 **snitch** was created by **Karol Broda** and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install snitch```
+
+```nix: nix profile install nixpkgs#snitch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ss](/man/ss)(1), [netstat](/man/netstat)(1), [nethogs](/man/nethogs)(1)

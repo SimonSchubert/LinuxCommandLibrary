@@ -108,6 +108,14 @@ Serving HTTP/2 to browsers requires TLS (**--certfile**/**--keyfile**); cleartex
 
 Hypercorn was created by **Philip Jones** (pgjones), who also created the **Quart** framework; Hypercorn began as Quart's built-in server before being split out as a standalone, framework-agnostic ASGI server.
 
+# INSTALL
+
+```pacman: sudo pacman -S hypercorn```
+
+```apk: sudo apk add py3-hypercorn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uvicorn](/man/uvicorn)(1), [gunicorn](/man/gunicorn)(1), [daphne](/man/daphne)(1)

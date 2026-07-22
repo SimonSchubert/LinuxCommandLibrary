@@ -55,6 +55,24 @@ This is commonly used to detach programs from the terminal, run daemons, or ensu
 
 If the calling process is already a session leader, setsid will fail unless **-f** is used. The new session has no controlling terminal unless **-c** is specified. Part of the util-linux package.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nohup](/man/nohup)(1), [disown](/man/disown)(1), [screen](/man/screen)(1), [tmux](/man/tmux)(1), [setsid](/man/setsid)(2)

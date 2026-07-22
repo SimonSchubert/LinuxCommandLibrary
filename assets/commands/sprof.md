@@ -64,6 +64,12 @@ Only one shared library can be profiled at a time via **LD_PROFILE**. Do not com
 
 **sprof** was written by **Ulrich Drepper** as part of the **GNU C Library (glibc)**, first appearing around **glibc 2.0** in **1997**. It was created to fill the gap left by **gprof**, which cannot profile shared libraries. The profiling data collection is handled by the glibc dynamic linker itself, making sprof unique in its ability to profile shared objects without recompilation.
 
+# INSTALL
+
+```apt: sudo apt install libc-devtools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gprof](/man/gprof)(1), [ldd](/man/ldd)(1), [ld](/man/ld)(1), [perf](/man/perf)(1)

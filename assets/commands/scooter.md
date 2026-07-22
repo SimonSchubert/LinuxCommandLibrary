@@ -72,6 +72,16 @@ Interactive find-and-replace in the terminal
 
 **scooter** was created by **Thomas Schafer** (thomasschafer) and is written in **Rust**.
 
+# INSTALL
+
+```apk: sudo apk add scooter```
+
+```brew: brew install scooter```
+
+```nix: nix profile install nixpkgs#scooter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sed](/man/sed)(1), [serpl](/man/serpl)(1), [ripgrep](/man/ripgrep)(1)

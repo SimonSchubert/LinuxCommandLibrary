@@ -71,6 +71,18 @@ Minimal functionality by design. Requires running X server and correct DISPLAY s
 
 **xlogo** has been part of the X Window System since its early days, providing a simple visual test of X server functionality. Despite its simplicity, it remains useful for basic X11 connectivity testing and demonstrating X11 concepts.
 
+# INSTALL
+
+```apt: sudo apt install x11-apps```
+
+```dnf: sudo dnf install xlogo```
+
+```zypper: sudo zypper install xlogo```
+
+```nix: nix profile install nixpkgs#xlogo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xeyes](/man/xeyes)(1), [xclock](/man/xclock)(1), [xterm](/man/xterm)(1), [xdpyinfo](/man/xdpyinfo)(1)

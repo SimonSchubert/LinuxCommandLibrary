@@ -93,6 +93,14 @@ Requires SonarQube/Cloud instance. Token needed for upload. Large projects take 
 
 **SonarQube** was created by **SonarSource** for continuous code quality. The scanner is the analysis client that sends data to the server.
 
+# INSTALL
+
+```apk: sudo apk add sonar-scanner```
+
+```brew: brew install sonar-scanner```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [eslint](/man/eslint)(1), [phpstan](/man/phpstan)(1)

@@ -58,6 +58,20 @@ More detailed than /proc/cpuinfo, it shows low-level processor capabilities.
 
 x86/x86_64 only. Some information may be virtualized when running in VMs. Output interpretation requires understanding of CPU architecture.
 
+# INSTALL
+
+```apt: sudo apt install cpuid```
+
+```dnf: sudo dnf install cpuid```
+
+```zypper: sudo zypper install cpuid```
+
+```brew: brew install cpuid```
+
+```nix: nix profile install nixpkgs#cpuid```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lscpu](/man/lscpu)(1), [x86info](/man/x86info)(1)

@@ -60,6 +60,24 @@ Output detail depends on the kernel's exposure of hardware information. Some vir
 
 The hwloc project was developed at Inria Bordeaux and the University of Tennessee, first released around 2009. It provides portable abstraction of hierarchical topology information across various operating systems and architectures.
 
+# INSTALL
+
+```apt: sudo apt install hwloc```
+
+```dnf: sudo dnf install hwloc```
+
+```pacman: sudo pacman -S hwloc```
+
+```apk: sudo apk add hwloc-tools```
+
+```zypper: sudo zypper install hwloc```
+
+```brew: brew install hwloc```
+
+```nix: nix profile install nixpkgs#hwloc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lstopo](/man/lstopo)(1), [hwloc-ls](/man/hwloc-ls)(1), [lscpu](/man/lscpu)(1), [numactl](/man/numactl)(8)

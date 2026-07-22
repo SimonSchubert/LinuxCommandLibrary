@@ -48,6 +48,22 @@ Requires multiple interfaces. Specialized use case.
 
 pppoe-relay provides **PPPoE packet relaying** between network segments.
 
+# INSTALL
+
+```apt: sudo apt install pppoe```
+
+```dnf: sudo dnf install rp-pppoe```
+
+```pacman: sudo pacman -S rp-pppoe```
+
+```apk: sudo apk add rp-pppoe```
+
+```zypper: sudo zypper install rp-pppoe```
+
+```nix: nix profile install nixpkgs#rp-pppoe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pppoe](/man/pppoe)(8), [pppoe-server](/man/pppoe-server)(8)

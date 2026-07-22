@@ -79,6 +79,24 @@ The tool is primarily useful for compatibility with legacy Mac software or when 
 
 Classic Mac line endings (CR only) are rarely needed today as modern macOS uses LF. Binary files should not be processed. Part of the dos2unix package.
 
+# INSTALL
+
+```apt: sudo apt install dos2unix```
+
+```dnf: sudo dnf install dos2unix```
+
+```pacman: sudo pacman -S dos2unix```
+
+```apk: sudo apk add dos2unix```
+
+```zypper: sudo zypper install dos2unix```
+
+```brew: brew install dos2unix```
+
+```nix: nix profile install nixpkgs#dos2unix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dos2unix](/man/dos2unix)(1), [unix2dos](/man/unix2dos)(1), [mac2unix](/man/mac2unix)(1), [iconv](/man/iconv)(1), [file](/man/file)(1)

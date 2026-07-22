@@ -41,6 +41,24 @@ Other recognized variables include `GIT_SEQUENCE_EDITOR` (editor for `git rebase
 
 The command is useful in scripts that need to query Git's resolved settings without parsing config files directly.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-config](/man/git-config)(1), [git-commit](/man/git-commit)(1)

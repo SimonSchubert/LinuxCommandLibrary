@@ -45,6 +45,18 @@ Requires running Plasma session. Desktop themes are separate from color schemes 
 
 **plasma-apply-desktoptheme** is part of **KDE Plasma Workspace**, enabling command-line theming control as part of KDE's comprehensive appearance customization tools.
 
+# INSTALL
+
+```apt: sudo apt install plasma-workspace```
+
+```dnf: sudo dnf install plasma-workspace```
+
+```pacman: sudo pacman -S plasma-workspace```
+
+```apk: sudo apk add plasma-workspace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [plasma-apply-colorscheme](/man/plasma-apply-colorscheme)(1), [plasma-apply-lookandfeel](/man/plasma-apply-lookandfeel)(1)

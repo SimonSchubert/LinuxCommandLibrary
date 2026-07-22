@@ -43,6 +43,12 @@ The command is intended for diagnosing wheel selection problems (e.g. "no matchi
 
 Marked as unstable: pip explicitly warns "This command is only meant for debugging" and may change format. Combine with **--verbose** to see full tag enumeration.
 
+# INSTALL
+
+```apk: sudo apk add py3-pip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [pip-config](/man/pip-config)(1), [pip-list](/man/pip-list)(1)

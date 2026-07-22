@@ -93,6 +93,18 @@ Requires root privileges. Must have debugfs mounted (usually at /sys/kernel/debu
 
 **blktrace** was developed by **Jens Axboe** and merged into the Linux kernel in version **2.6.17** (released **2006**). It was created to provide detailed insight into the Linux block I/O layer, replacing older and less detailed tracing methods. The tool has become standard for storage performance analysis on Linux and is part of the blktrace package alongside blkparse and btt.
 
+# INSTALL
+
+```apt: sudo apt install blktrace```
+
+```dnf: sudo dnf install blktrace```
+
+```zypper: sudo zypper install blktrace```
+
+```nix: nix profile install nixpkgs#blktrace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blkparse](/man/blkparse)(1), [btrace](/man/btrace)(8), [btt](/man/btt)(1), [iostat](/man/iostat)(1), [iotop](/man/iotop)(1)

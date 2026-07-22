@@ -84,6 +84,24 @@ Passing more than two arguments is an error, so a multi-word command must be quo
 
 **git alias** is part of **git-extras**, created by **TJ Holowaychuk** in **2010** and now community-maintained. Git's own alias mechanism, which this wraps, has existed in **git config** since the early days of git.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-config](/man/git-config)(1), [git-extras](/man/git-extras)(1), [git](/man/git)(1)

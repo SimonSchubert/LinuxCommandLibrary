@@ -34,6 +34,24 @@ converts PBM bitmaps to Epson printer control codes for direct printing
 
 **pbmtoepson** reads a PBM image as input and produces a stream of Epson printer graphics as output. Supports ESC/P and ESC/P 9-pin protocols. For the newer ESC/P2 protocol, use **pbmtoescp2** instead. Part of the Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtoescp2](/man/pbmtoescp2)(1), [pbmtolj](/man/pbmtolj)(1)

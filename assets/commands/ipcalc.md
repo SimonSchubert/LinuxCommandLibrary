@@ -83,6 +83,22 @@ Two distinct implementations exist: the Red Hat version (ipcalc from initscripts
 
 **ipcalc** has multiple implementations. The original was part of the Red Hat **initscripts** package. A newer, more feature-rich version was written by **Nikos Mavrogiannopoulos** with IPv6 support and additional calculation features.
 
+# INSTALL
+
+```dnf: sudo dnf install ipcalc```
+
+```pacman: sudo pacman -S ipcalc```
+
+```apk: sudo apk add ipcalc```
+
+```zypper: sudo zypper install ipcalc```
+
+```brew: brew install ipcalc```
+
+```nix: nix profile install nixpkgs#ipcalc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sipcalc](/man/sipcalc)(1), [ip](/man/ip)(8), [ifconfig](/man/ifconfig)(8)

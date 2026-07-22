@@ -61,6 +61,12 @@ The vertical format is useful for terminals with limited width or when comparing
 
 Available on BSD-derived systems. Some Linux distributions may not include ncal or may alias it to cal. The **-b** flag switches to the traditional horizontal cal layout.
 
+# INSTALL
+
+```apt: sudo apt install ncal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cal](/man/cal)(1)

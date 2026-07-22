@@ -75,6 +75,24 @@ Tinyproxy does not support caching, authentication schemes beyond basic, or SOCK
 
 **Tinyproxy** was originally written by **Steven Young** in **1999** as a lightweight alternative to heavier proxy servers. The project has been maintained by various contributors and continues development on GitHub. Its small footprint and simplicity have made it popular for embedded Linux systems, Docker containers, and privacy-focused setups.
 
+# INSTALL
+
+```apt: sudo apt install tinyproxy-bin```
+
+```dnf: sudo dnf install tinyproxy```
+
+```pacman: sudo pacman -S tinyproxy```
+
+```apk: sudo apk add tinyproxy```
+
+```zypper: sudo zypper install tinyproxy```
+
+```brew: brew install tinyproxy```
+
+```nix: nix profile install nixpkgs#tinyproxy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [squid](/man/squid)(8), [privoxy](/man/privoxy)(1), [nginx](/man/nginx)(8), [curl](/man/curl)(1), [wget](/man/wget)(1)

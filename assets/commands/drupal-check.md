@@ -82,6 +82,14 @@ Requires PHP and Composer. May have false positives. Complex dynamic code may no
 
 drupal-check was created by **Matt Glaman** to help the Drupal community prepare for Drupal 9 migration. It addresses the challenge of identifying deprecated code across large Drupal codebases.
 
+# INSTALL
+
+```pacman: sudo pacman -S drupal```
+
+```nix: nix profile install nixpkgs#drupal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [drupal](/man/drupal)(1), [drush](/man/drush)(1), [phpstan](/man/phpstan)(1)

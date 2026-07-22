@@ -55,6 +55,12 @@ This is useful for exploring available NixOS options, debugging configuration is
 
 Evaluates the Nix configuration, which can take time on complex systems. Only shows options from the NixOS module system; arbitrary Nix expressions are not inspectable. Some dynamic options may not be fully discoverable.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nixos-option```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nixos-rebuild](/man/nixos-rebuild)(8), [nix-env](/man/nix-env)(1), [configuration.nix](/man/configuration.nix)(5)

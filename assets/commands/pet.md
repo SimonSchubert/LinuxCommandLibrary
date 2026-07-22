@@ -87,6 +87,14 @@ Requires **fzf** or **peco** for interactive selection.
 
 **pet** was created by **Teppei Fukuda** (knqyf263) and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install pet```
+
+```nix: nix profile install nixpkgs#pet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nap](/man/nap)(1), [tldr](/man/tldr)(1), [fzf](/man/fzf)(1), [peco](/man/peco)(1)

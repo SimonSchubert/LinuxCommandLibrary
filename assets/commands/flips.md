@@ -49,6 +49,14 @@ The IPS format has been the standard for ROM patches since the 1990s but has lim
 
 Flips can create patches by comparing original and modified files, then apply those patches to reproduce the modifications. The BPS format includes metadata and verification to ensure patches apply correctly, preventing corruption from applying patches to incorrect source files.
 
+# INSTALL
+
+```pacman: sudo pacman -S flips```
+
+```nix: nix profile install nixpkgs#flips```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bsdiff](/man/bsdiff)(1), [xdelta](/man/xdelta)(1)

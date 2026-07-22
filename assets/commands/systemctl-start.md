@@ -37,6 +37,22 @@ For services, this starts the service process. For sockets, it begins listening.
 
 Requires root privileges for system units. Starting a unit does not enable it for boot; use **systemctl enable** for persistence. Some units may have dependencies that must be satisfied first.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-stop](/man/systemctl-stop)(1), [systemctl-enable](/man/systemctl-enable)(1)

@@ -98,6 +98,16 @@ Data is encrypted, but requires trusting Charm Cloud infrastructure. The free ti
 
 Charm was created by **Charmbracelet**, a company focused on making the command line more delightful, founded in **2020**. Known for TUI libraries like Bubble Tea and Lip Gloss, they developed Charm Cloud as infrastructure for CLI tools needing cloud sync. The service launched to provide developers with easy, encrypted cloud storage without complex setup.
 
+# INSTALL
+
+```pacman: sudo pacman -S charm```
+
+```brew: brew install charm```
+
+```nix: nix profile install nixpkgs#charm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pass](/man/pass)(1), [age](/man/age)(1), [glow](/man/glow)(1), [gpg](/man/gpg)(1)

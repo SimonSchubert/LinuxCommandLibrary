@@ -85,6 +85,22 @@ Run postmap after editing text files. Postfix reads .db file, not text. Use post
 
 postmap is part of **Postfix**, the mail transfer agent created by **Wietse Venema** as a secure alternative to Sendmail.
 
+# INSTALL
+
+```apt: sudo apt install postfix```
+
+```dnf: sudo dnf install postfix```
+
+```pacman: sudo pacman -S postfix```
+
+```apk: sudo apk add postfix```
+
+```zypper: sudo zypper install postfix```
+
+```nix: nix profile install nixpkgs#postfix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [postconf](/man/postconf)(1), [postfix](/man/postfix)(1), [postqueue](/man/postqueue)(1), [newaliases](/man/newaliases)(1)

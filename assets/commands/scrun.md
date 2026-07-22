@@ -70,6 +70,12 @@ Requires Slurm's container support to be configured. Container images must be ac
 
 Part of **Slurm** workload manager, enabling container integration with HPC cluster environments.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [srun](/man/srun)(1), [sbatch](/man/sbatch)(1), [podman](/man/podman)(1)

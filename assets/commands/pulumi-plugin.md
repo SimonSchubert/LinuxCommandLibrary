@@ -45,6 +45,18 @@ Manage Pulumi provider plugins
 
 **pulumi plugin** manages Pulumi plugins. Plugins provide resource providers for cloud platforms. Install, update, and remove plugins for different cloud providers and services.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-install](/man/pulumi-install)(1)

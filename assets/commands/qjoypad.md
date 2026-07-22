@@ -63,6 +63,14 @@ Requires evdev or joystick input devices. Some games may conflict with remapping
 
 **qjoypad** was created to enable gamepad use in Linux applications lacking native support. It's particularly useful for emulators and games that only support keyboard input.
 
+# INSTALL
+
+```apt: sudo apt install qjoypad```
+
+```nix: nix profile install nixpkgs#qjoypad```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [antimicrox](/man/antimicrox)(1), [xboxdrv](/man/xboxdrv)(1), [jstest](/man/jstest)(1)

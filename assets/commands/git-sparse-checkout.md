@@ -104,6 +104,24 @@ This command is experimental. Its behavior may change in the future.
 **.git/info/sparse-checkout**
 > File containing the sparse-checkout patterns that control which paths are checked out.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-read-tree](/man/git-read-tree)(1), [git-checkout](/man/git-checkout)(1), [git-clone](/man/git-clone)(1), [git-worktree](/man/git-worktree)(1)

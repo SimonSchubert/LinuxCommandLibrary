@@ -40,6 +40,11 @@ This command only informs the kernel about partitions; it does not create or mod
 
 Part of the **util-linux** package, which provides essential system utilities for Linux.
 
+# INSTALL
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [delpart](/man/delpart)(8), [partx](/man/partx)(8), [fdisk](/man/fdisk)(8), [parted](/man/parted)(8)

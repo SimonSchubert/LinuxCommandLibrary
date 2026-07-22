@@ -73,6 +73,24 @@ Requires proper configuration. Resource intensive. Security setup critical.
 
 mysqld is the **MySQL** database server, originally developed by MySQL AB and now maintained by Oracle.
 
+# INSTALL
+
+```apt: sudo apt install mariadb-server-core```
+
+```dnf: sudo dnf install mariadb```
+
+```pacman: sudo pacman -S mariadb```
+
+```apk: sudo apk add mariadb```
+
+```zypper: sudo zypper install mariadb```
+
+```brew: brew install mariadb```
+
+```nix: nix profile install nixpkgs#mariadb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mysql](/man/mysql)(1), [mysqladmin](/man/mysqladmin)(1)

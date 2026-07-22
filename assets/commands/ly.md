@@ -40,6 +40,18 @@ Runs in the framebuffer console -- does not launch a graphical environment for t
 
 **ly** is developed by the **fairyglade** project and is written in **Zig**. It was designed as a minimal alternative to graphical display managers like GDM and SDDM.
 
+# INSTALL
+
+```dnf: sudo dnf install ly```
+
+```pacman: sudo pacman -S ly```
+
+```brew: brew install ly```
+
+```nix: nix profile install nixpkgs#ly```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lemurs](/man/lemurs)(1), [gdm](/man/gdm)(1), [startx](/man/startx)(1), [xinit](/man/xinit)(1)

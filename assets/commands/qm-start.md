@@ -49,6 +49,12 @@ The VM must be in a stopped state to start. If the VM has pending configuration 
 
 **qm start** is part of the **Proxmox VE** virtualization platform for managing QEMU/KVM virtual machines.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-stop](/man/qm-stop)(1), [qm-shutdown](/man/qm-shutdown)(1)

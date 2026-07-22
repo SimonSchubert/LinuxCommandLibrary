@@ -81,6 +81,24 @@ Module information is embedded at compile time. Not all modules include all fiel
 
 **modinfo** is part of **kmod**, the kernel module tools replacing older module-init-tools.
 
+# INSTALL
+
+```apt: sudo apt install kmod```
+
+```dnf: sudo dnf install kmod```
+
+```pacman: sudo pacman -S kmod```
+
+```apk: sudo apk add kmod```
+
+```zypper: sudo zypper install kmod```
+
+```brew: brew install kmod```
+
+```nix: nix profile install nixpkgs#kmod```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [modprobe](/man/modprobe)(8), [lsmod](/man/lsmod)(8), [insmod](/man/insmod)(8)

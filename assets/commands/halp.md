@@ -66,6 +66,16 @@ Some commands may produce side effects when invoked with certain flags, even hel
 
 **halp** was created by **Orhun Parmaksiz** and is written in **Rust**. It was designed to eliminate the frustration of guessing which flag a command uses for its help output.
 
+# INSTALL
+
+```pacman: sudo pacman -S halp```
+
+```brew: brew install halp```
+
+```nix: nix profile install nixpkgs#halp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [man](/man/man)(1), [tldr](/man/tldr)(1), [cheat](/man/cheat)(1)

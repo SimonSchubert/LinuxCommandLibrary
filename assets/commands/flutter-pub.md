@@ -90,6 +90,12 @@ Version conflicts may require manual resolution. Some packages are platform-spec
 
 flutter pub wraps the **Dart pub** tool for Flutter development. The pub.dev repository serves both Dart and Flutter packages, managed through the shared package specification format.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#flutter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flutter](/man/flutter)(1), [dart](/man/dart)(1)

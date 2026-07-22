@@ -89,6 +89,16 @@ Never overwrite original files; Scour changes document structure and semantics. 
 
 Scour was originally created by **Jeff Schiller** and **Louis Simard** as an open-source tool for SVG optimization. It became popular in the Inkscape community and is now maintained by Tobias Oberstein and Patrick Storz. Licensed under Apache-2.0.
 
+# INSTALL
+
+```pacman: sudo pacman -S scour```
+
+```brew: brew install scour```
+
+```nix: nix profile install nixpkgs#scour```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [svgo](/man/svgo)(1), [inkscape](/man/inkscape)(1), [convert](/man/convert)(1), [xmllint](/man/xmllint)(1)

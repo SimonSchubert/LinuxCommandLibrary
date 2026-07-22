@@ -130,6 +130,20 @@ Large BAM files require significant memory for some operations. Threading helps 
 
 **samtools** was developed by **Heng Li** at the Wellcome Sanger Institute, released around **2009**. It defined the SAM/BAM formats that became standards for sequence alignment. The project is maintained by the samtools/htslib team, part of the broader bioinformatics ecosystem built on these formats.
 
+# INSTALL
+
+```apt: sudo apt install samtools```
+
+```dnf: sudo dnf install samtools```
+
+```zypper: sudo zypper install samtools```
+
+```brew: brew install samtools```
+
+```nix: nix profile install nixpkgs#samtools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bcftools](/man/bcftools)(1), [bwa](/man/bwa)(1), [bedtools](/man/bedtools)(1), [tabix](/man/tabix)(1)

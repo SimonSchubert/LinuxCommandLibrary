@@ -35,6 +35,24 @@ Part of the Netpbm package of graphics manipulation tools.
 
 Only reads Sun icon format files. The format is largely obsolete, but conversion may be needed for legacy file archives.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtoicon](/man/pbmtoicon)(1), [xbmtopbm](/man/xbmtopbm)(1), [netpbm](/man/netpbm)(1)

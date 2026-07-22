@@ -127,6 +127,12 @@ Requires Nix package manager. Learning curve for Nix language. Some program conf
 
 **Home Manager** was created by Robert Helgesson (rycee) around **2017** to bring NixOS's declarative configuration approach to user home directories. It filled a gap for users who wanted Nix's reproducibility for their personal environment without running NixOS. The project has grown to include modules for hundreds of programs.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#home-manager```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix](/man/nix)(1), [nix-env](/man/nix-env)(1), [nix-build](/man/nix-build)(1), [nix-shell](/man/nix-shell)(1), [nixos-rebuild](/man/nixos-rebuild)(8), [chezmoi](/man/chezmoi)(1), [stow](/man/stow)(8)

@@ -80,6 +80,14 @@ Deprecated in favor of GNOME Connections. Some protocols require optional depend
 
 **vinagre** was introduced in GNOME 2.22 as the official remote desktop client. The name is Portuguese for "vinegar". It unified VNC, RDP, and other protocols under one interface. Development slowed after GNOME 3, with GNOME Connections eventually becoming its successor.
 
+# INSTALL
+
+```dnf: sudo dnf install vinagre```
+
+```zypper: sudo zypper install vinagre```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [remmina](/man/remmina)(1), [vncviewer](/man/vncviewer)(1), [xfreerdp](/man/xfreerdp)(1)

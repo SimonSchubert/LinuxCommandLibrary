@@ -76,6 +76,22 @@ Creating a filesystem destroys existing data. Default profile is raid1 for metad
 
 **mkfs.btrfs** is part of **btrfs-progs**, the Btrfs filesystem utilities. Btrfs was developed as a modern copy-on-write filesystem for Linux.
 
+# INSTALL
+
+```apt: sudo apt install btrfs-progs```
+
+```dnf: sudo dnf install btrfs-progs```
+
+```pacman: sudo pacman -S btrfs-progs```
+
+```apk: sudo apk add btrfs-progs```
+
+```brew: brew install btrfs-progs```
+
+```nix: nix profile install nixpkgs#btrfs-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [btrfs-filesystem](/man/btrfs-filesystem)(8), [mkfs](/man/mkfs)(8)

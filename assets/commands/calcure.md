@@ -52,6 +52,12 @@ Does not provide built-in calendar sync — external tools are needed for CalDAV
 
 **calcure** was created as a modern, visually appealing alternative to terminal calendar tools like **calcurse**. Written in **Python**, it focuses on a clean user interface with minimal dependencies.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#calcure```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [calcurse](/man/calcurse)(1), [cal](/man/cal)(1), [taskwarrior](/man/taskwarrior)(1)

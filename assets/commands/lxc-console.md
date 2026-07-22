@@ -53,6 +53,24 @@ The escape sequence to exit the console is Ctrl+a followed by q (unless changed 
 
 **lxc-console** is part of **LXC** (Linux Containers), providing OS-level virtualization for running multiple isolated Linux systems on a single host.
 
+# INSTALL
+
+```apt: sudo apt install lxc```
+
+```dnf: sudo dnf install lxc```
+
+```pacman: sudo pacman -S lxc```
+
+```apk: sudo apk add lxc```
+
+```zypper: sudo zypper install lxc```
+
+```brew: brew install lxc```
+
+```nix: nix profile install nixpkgs#lxc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lxc-start](/man/lxc-start)(1), [lxc-attach](/man/lxc-attach)(1), [lxc-stop](/man/lxc-stop)(1)

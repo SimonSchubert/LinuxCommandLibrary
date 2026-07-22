@@ -75,6 +75,24 @@ smartd monitors disk health but is not a backup solution. Some USB enclosures do
 
 smartd is part of **smartmontools**, originally developed by Bruce Allen starting in **2002**. The package provides open-source tools for monitoring SMART data across various drive types and operating systems.
 
+# INSTALL
+
+```apt: sudo apt install smartmontools```
+
+```dnf: sudo dnf install smartmontools```
+
+```pacman: sudo pacman -S smartmontools```
+
+```apk: sudo apk add smartmontools```
+
+```zypper: sudo zypper install smartmontools```
+
+```brew: brew install smartmontools```
+
+```nix: nix profile install nixpkgs#smartmontools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smartctl](/man/smartctl)(8), [hddtemp](/man/hddtemp)(8)

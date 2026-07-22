@@ -30,6 +30,12 @@ Does not store, log, or transmit any password information — evaluation is full
 
 **pwdsafety** was created by **edoardottt** and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pwdsafety```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pass](/man/pass)(1), [pwgen](/man/pwgen)(1)

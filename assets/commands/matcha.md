@@ -28,6 +28,16 @@ See **matcha --help** for the installed version’s flags and subcommands.
 
 Confirm the project still matches your use case—small TUI tools change scope quickly. Prefer official release binaries.
 
+# INSTALL
+
+```zypper: sudo zypper install matcha```
+
+```brew: brew install matcha```
+
+```nix: nix profile install nixpkgs#matcha```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fzf](/man/fzf)(1)

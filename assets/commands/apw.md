@@ -72,6 +72,11 @@ Requires **macOS 14 (Sonoma) or later**. The daemon must be running and authenti
 
 **apw** was created by **Ben Dews** (bendews), written in TypeScript with Deno and compiled to a static binary. It is licensed under GPL-3.0 and first released in March 2024.
 
+# INSTALL
+
+```aur: yay -S apw```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [pass](/man/pass)(1), [keychain](/man/keychain)(1)

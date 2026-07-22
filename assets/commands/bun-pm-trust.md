@@ -45,6 +45,16 @@ Trusting a package only permits lifecycle scripts for that specific package, not
 
 The trusted dependencies workflow was introduced in **Bun v1.0.31** (March 2024) with the **bun add --trust** flag and the **bun pm trust** command. Early versions had bugs on Windows where **bun pm trust** could panic, which were fixed in **v1.1.18** (July 2024).
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-pm-cache](/man/bun-pm-cache)(1), [npm](/man/npm)(1)

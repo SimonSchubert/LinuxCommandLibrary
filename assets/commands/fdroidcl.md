@@ -85,6 +85,16 @@ Requires ADB and connected device. Device must allow installation from unknown s
 
 fdroidcl was created as a command-line alternative to the F-Droid graphical client, enabling scriptable management of open source Android applications from F-Droid repositories.
 
+# INSTALL
+
+```apt: sudo apt install fdroidcl```
+
+```brew: brew install fdroidcl```
+
+```nix: nix profile install nixpkgs#fdroidcl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fdroid](/man/fdroid)(1), [adb](/man/adb)(1)

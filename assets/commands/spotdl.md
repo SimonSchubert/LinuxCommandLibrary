@@ -75,6 +75,12 @@ Depends on YouTube Music availability. Quality varies. Rate limiting may occur. 
 
 **spotdl** was created to bridge Spotify's catalog with downloadable audio. It evolved from earlier tools and uses yt-dlp for downloading, adding Spotify integration for metadata.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#spotdl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yt-dlp](/man/yt-dlp)(1), [youtube-dl](/man/youtube-dl)(1), [ffmpeg](/man/ffmpeg)(1)

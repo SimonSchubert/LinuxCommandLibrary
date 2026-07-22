@@ -89,6 +89,12 @@ Lightpanda is in **beta** and does not yet implement the full web platform. Comp
 
 Lightpanda was created by **Francis** and **Pierre**, who previously worked on large-scale web scraping using headless Chrome and found it too resource-heavy for high-volume workloads. They spent over **two years** building a headless browser from scratch in **Zig**, choosing the language for its low-level control and performance characteristics. The project was publicly announced on **Hacker News in early 2025** and released as open source under the **AGPL-3.0** license.
 
+# INSTALL
+
+```aur: yay -S lightpanda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chromium](/man/chromium)(1), [curl](/man/curl)(1), [wget](/man/wget)(1), [puppeteer](/man/puppeteer)(1)

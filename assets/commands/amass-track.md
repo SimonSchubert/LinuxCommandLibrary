@@ -65,6 +65,15 @@ Requires multiple enumeration runs stored in the database. Detection quality dep
 
 **amass track** was introduced to support continuous monitoring use cases, allowing security teams to detect attack surface changes over time. With the Amass v4 redesign the subcommand was split out into the oam-tools package as **oam_track**, and the tracking workflow was further reworked in Amass v5.
 
+# INSTALL
+
+```aur: yay -S amass```
+
+```brew: brew install amass```
+
+```nix: nix profile install nixpkgs#amass```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [amass](/man/amass)(1), [amass-enum](/man/amass-enum)(1), [amass-intel](/man/amass-intel)(1), [amass-db](/man/amass-db)(1)

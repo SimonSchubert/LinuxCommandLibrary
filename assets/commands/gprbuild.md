@@ -61,6 +61,16 @@ Ada/GNAT specific. Requires GPR project file. Part of GNAT toolchain.
 
 gprbuild is part of the **GNAT** Ada toolchain, developed by AdaCore for Ada project building.
 
+# INSTALL
+
+```apt: sudo apt install gprbuild```
+
+```dnf: sudo dnf install gprbuild```
+
+```nix: nix profile install nixpkgs#gprbuild```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnat](/man/gnat)(1), [gnatmake](/man/gnatmake)(1)

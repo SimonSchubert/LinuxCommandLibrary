@@ -56,6 +56,17 @@ History is stored locally and is not synced across machines. Enabling history ma
 
 The **aws history** command was introduced in **AWS CLI version 2** to provide better debugging and audit capabilities. It replaced the need for manual logging of CLI operations and integrates with the CLI's structured output system.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-configure](/man/aws-configure)(1)

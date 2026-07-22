@@ -91,6 +91,24 @@ Entering a PID namespace causes nsenter to fork by default. Use **--no-fork** to
 
 **nsenter** is part of the **util-linux** package. It uses the setns(2) system call introduced in Linux 3.0 to enter existing namespaces.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unshare](/man/unshare)(1), [clone](/man/clone)(2), [namespaces](/man/namespaces)(7)

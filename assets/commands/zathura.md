@@ -93,6 +93,22 @@ The viewer features keyboard-driven navigation, bookmarks, and an integrated com
 
 Requires backend plugins (poppler or mupdf for PDF, etc.). Configuration via ~/.config/zathura/zathurarc. Vim-style keybindings may have a learning curve.
 
+# INSTALL
+
+```apt: sudo apt install zathura```
+
+```dnf: sudo dnf install zathura```
+
+```pacman: sudo pacman -S zathura```
+
+```apk: sudo apk add zathura```
+
+```zypper: sudo zypper install zathura```
+
+```nix: nix profile install nixpkgs#zathura```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [evince](/man/evince)(1), [okular](/man/okular)(1), [mupdf](/man/mupdf)(1)

@@ -87,6 +87,14 @@ manages Kafka topics
 
 Partitions can only be increased, not decreased. Replication factor limited by broker count. Deletion may need to be enabled in config. ZooKeeper connection deprecated.
 
+# INSTALL
+
+```pacman: sudo pacman -S kafka```
+
+```brew: brew install kafka```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kafka](/man/kafka)(1), [kafkacat](/man/kafkacat)(1)

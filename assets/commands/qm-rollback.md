@@ -32,6 +32,12 @@ The VM must be stopped before rollback. All data and configuration changes made 
 
 **qm rollback** is part of the **Proxmox VE** virtualization platform for managing QEMU/KVM virtual machine snapshots.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-snapshot](/man/qm-snapshot)(1), [qm-delsnapshot](/man/qm-delsnapshot)(1)

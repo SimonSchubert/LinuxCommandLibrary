@@ -38,6 +38,14 @@ Review changes carefully before applying. Incorrect choices may overwrite import
 
 Part of **rpmconf** package for Fedora/RHEL systems. Simplifies post-upgrade configuration management.
 
+# INSTALL
+
+```dnf: sudo dnf install rpmconf```
+
+```zypper: sudo zypper install rpmconf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rpm](/man/rpm)(8), [dnf](/man/dnf)(8), [yum](/man/yum)(8)

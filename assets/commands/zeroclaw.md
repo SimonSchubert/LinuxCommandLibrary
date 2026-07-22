@@ -151,6 +151,14 @@ ZeroClaw executes shell commands and file operations with your user permissions.
 
 ZeroClaw was created by **ZeroClaw Labs** and first released in **2025** as a Rust-based alternative to existing AI agent runtimes. It was designed around the principle of zero overhead and zero lock-in, targeting deployment on resource-constrained hardware while maintaining production-grade extensibility. The project introduced a trait-driven architecture allowing providers, channels, and tools to be swapped without code changes, and gained attention for achieving sub-10ms cold start times with a single-binary deployment model.
 
+# INSTALL
+
+```brew: brew install zeroclaw```
+
+```nix: nix profile install nixpkgs#zeroclaw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nanobot](/man/nanobot)(1), [picoclaw](/man/picoclaw)(1), [claude](/man/claude)(1), [openclaw](/man/openclaw)(1)

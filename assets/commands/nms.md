@@ -63,6 +63,12 @@ Purely a visual effect -- it does not alter the piped data, just the way it is d
 
 **No More Secrets** was created by **Brian Barto** and first released on GitHub in **2016**. It became a popular novelty tool in the Linux community and is packaged by most major distributions.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nms```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmatrix](/man/cmatrix)(1), [figlet](/man/figlet)(1), [cowsay](/man/cowsay)(1)

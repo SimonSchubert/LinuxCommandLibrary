@@ -27,6 +27,24 @@ The output is written to stdout.
 
 WBMP only supports monochrome (1-bit) images, so the output PBM is always black and white.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtowbmp](/man/pbmtowbmp)(1), [netpbm](/man/netpbm)(1)

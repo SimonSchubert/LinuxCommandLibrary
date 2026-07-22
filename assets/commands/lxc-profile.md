@@ -88,6 +88,22 @@ Profile configuration uses YAML format, specifying options like CPU/memory limit
 
 Profile changes don't automatically apply to running containers; restart the container or reassign profiles to apply changes. Deleting a profile that's in use by containers will fail. The default profile cannot be deleted.
 
+# INSTALL
+
+```apt: sudo apt install lxd-client```
+
+```dnf: sudo dnf install lxc```
+
+```pacman: sudo pacman -S lxc```
+
+```zypper: sudo zypper install lxc```
+
+```brew: brew install lxc```
+
+```nix: nix profile install nixpkgs#lxc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lxc](/man/lxc)(1), [lxc-create](/man/lxc-create)(1), [lxc-start](/man/lxc-start)(1), [lxc-ls](/man/lxc-ls)(1)

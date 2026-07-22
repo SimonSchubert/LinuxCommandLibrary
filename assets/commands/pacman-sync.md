@@ -81,6 +81,20 @@ Always run **-Syu** together to ensure database and packages are in sync. Runnin
 
 **pacman** is the package manager for **Arch Linux** and its derivatives, designed with simplicity and speed as primary goals.
 
+# INSTALL
+
+```apt: sudo apt install pacman-package-manager```
+
+```dnf: sudo dnf install pacman```
+
+```pacman: sudo pacman -S pacman```
+
+```apk: sudo apk add pacman```
+
+```nix: nix profile install nixpkgs#pacman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pacman-query](/man/pacman-query)(8), [pacman-remove](/man/pacman-remove)(8)

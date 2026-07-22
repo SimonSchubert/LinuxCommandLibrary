@@ -51,6 +51,16 @@ Requires authentication. Owner can add/remove others. Affects publishing rights.
 
 npm owner provides **maintainer management** for controlling package publishing access.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-publish](/man/npm-publish)(1), [npm-access](/man/npm-access)(1)

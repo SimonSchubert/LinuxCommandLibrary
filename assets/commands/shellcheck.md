@@ -107,6 +107,20 @@ The **--external-sources** option requires caution as it can execute arbitrary c
 
 **ShellCheck** was created by **Vidar Holen** and first released around **2012**. It is written in **Haskell** and has become the de facto standard linter for shell scripts, widely integrated into CI pipelines and editor plugins.
 
+# INSTALL
+
+```apt: sudo apt install shellcheck```
+
+```pacman: sudo pacman -S shellcheck```
+
+```apk: sudo apk add shellcheck```
+
+```brew: brew install shellcheck```
+
+```nix: nix profile install nixpkgs#shellcheck```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [sh](/man/sh)(1), [lint](/man/lint)(1), [ksh](/man/ksh)(1)

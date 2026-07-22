@@ -62,6 +62,20 @@ Part of HPLIP package. Uses paper and ink. May require manual selection.
 
 hp-align is part of **HPLIP** (HP Linux Imaging and Printing), HP's official printer driver project for Linux.
 
+# INSTALL
+
+```apt: sudo apt install hplip```
+
+```dnf: sudo dnf install hplip```
+
+```pacman: sudo pacman -S hplip```
+
+```zypper: sudo zypper install hplip```
+
+```nix: nix profile install nixpkgs#hplip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hp-check](/man/hp-check)(1), [hp-clean](/man/hp-clean)(1), [hp-setup](/man/hp-setup)(1)

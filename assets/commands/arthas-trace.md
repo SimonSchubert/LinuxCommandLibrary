@@ -78,6 +78,11 @@ Deep traces may produce verbose output. Performance overhead increases with trac
 
 **trace** is a core diagnostic command in Arthas, essential for performance troubleshooting in production Java applications.
 
+# INSTALL
+
+```aur: yay -S arthas```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [arthas](/man/arthas)(1), [arthas-watch](/man/arthas-watch)(1)

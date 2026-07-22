@@ -59,6 +59,12 @@ Requires fzf installed. Shell functions. kubectl must work.
 
 kube-fzf combines **fzf** fuzzy finder with kubectl for interactive Kubernetes resource selection.
 
+# INSTALL
+
+```aur: yay -S kube-fzf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [fzf](/man/fzf)(1), [k9s](/man/k9s)(1)

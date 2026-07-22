@@ -95,6 +95,16 @@ Since ESLint v9 the flat config (eslint.config.js) is the default and the legacy
 
 ESLint was created by **Nicholas C. Zakas** in **2013** as a more pluggable and configurable alternative to JSHint. It became the dominant JavaScript linter due to its extensibility.
 
+# INSTALL
+
+```pacman: sudo pacman -S eslint```
+
+```brew: brew install eslint```
+
+```nix: nix profile install nixpkgs#eslint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [prettier](/man/prettier)(1), [tsc](/man/tsc)(1), [jshint](/man/jshint)(1)

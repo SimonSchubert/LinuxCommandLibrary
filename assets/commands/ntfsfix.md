@@ -35,6 +35,22 @@ For comprehensive NTFS repair, Windows' built-in **chkdsk** should be used, as n
 
 **Not a full repair tool**; use Windows chkdsk for comprehensive repairs. The partition must be unmounted. Does not fix all NTFS corruption—serious issues still require Windows. Part of the ntfs-3g package.
 
+# INSTALL
+
+```apt: sudo apt install ntfs-3g```
+
+```dnf: sudo dnf install ntfs-3g```
+
+```pacman: sudo pacman -S ntfs-3g```
+
+```apk: sudo apk add ntfs-3g-progs```
+
+```zypper: sudo zypper install ntfs-3g```
+
+```brew: brew install ntfs-3g```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ntfs-3g](/man/ntfs-3g)(8), [mount](/man/mount)(8), [fsck](/man/fsck)(8)

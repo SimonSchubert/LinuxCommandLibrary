@@ -66,6 +66,18 @@ NetBIOS over TCP/IP must be enabled on the target hosts; modern Windows networks
 
 **nbtscan** was written by **Alla Bezroutchko** (Steve Friedl maintained early releases) as a fast, Unix-side replacement for Windows **nbtstat -A**. It has been distributed by virtually every penetration-testing and forensics Linux distribution since the early 2000s.
 
+# INSTALL
+
+```apt: sudo apt install nbtscan```
+
+```pacman: sudo pacman -S nbtscan```
+
+```apk: sudo apk add nbtscan```
+
+```nix: nix profile install nixpkgs#nbtscan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmblookup](/man/nmblookup)(1), [nmap](/man/nmap)(1), [smbclient](/man/smbclient)(1)

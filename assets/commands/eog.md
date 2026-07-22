@@ -76,6 +76,22 @@ The application integrates with GNOME desktop services and file managers, suppor
 
 Designed for GNOME desktop; some features may not work outside GNOME. Large images may consume significant memory. As of GNOME 43, eog has been superseded in many distributions by **Loupe** (the new default GNOME image viewer written in Rust).
 
+# INSTALL
+
+```apt: sudo apt install eog```
+
+```dnf: sudo dnf install eog```
+
+```pacman: sudo pacman -S eog```
+
+```apk: sudo apk add eog```
+
+```zypper: sudo zypper install eog```
+
+```nix: nix profile install nixpkgs#eog```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [feh](/man/feh)(1), [gpicview](/man/gpicview)(1), [gimp](/man/gimp)(1)

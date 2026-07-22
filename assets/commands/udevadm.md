@@ -78,5 +78,17 @@ The tool is essential for debugging udev rules, understanding device properties,
 
 Requires root privileges for most operations. The **test** command simulates events without actually running them. Rule changes require **control --reload** to take effect. Part of the systemd/udev suite.
 
+# INSTALL
+
+```apt: sudo apt install udev```
+
+```apk: sudo apk add eudev```
+
+```zypper: sudo zypper install udev```
+
+```nix: nix profile install nixpkgs#udev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

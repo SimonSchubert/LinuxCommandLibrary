@@ -116,6 +116,20 @@ Webroot validation requires web server to be running. Rate limits apply on Let's
 
 **certbot** was developed by the Electronic Frontier Foundation (EFF) and originally known as the Let's Encrypt client. Let's Encrypt launched in **2016** to provide free, automated TLS certificates.
 
+# INSTALL
+
+```dnf: sudo dnf install certbot```
+
+```pacman: sudo pacman -S certbot```
+
+```apk: sudo apk add certbot```
+
+```brew: brew install certbot```
+
+```nix: nix profile install nixpkgs#certbot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [nginx](/man/nginx)(8), [apache2](/man/apache2)(8)

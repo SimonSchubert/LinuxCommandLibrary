@@ -75,6 +75,16 @@ Manage globally installed Pixi packages
 
 **pixi global** manages globally installed packages. Installs command-line tools accessible from anywhere, similar to pipx for Python. Packages are isolated in their own environments.
 
+# INSTALL
+
+```pacman: sudo pacman -S pixi```
+
+```brew: brew install pixi```
+
+```nix: nix profile install nixpkgs#pixi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pixi](/man/pixi)(1), [pipx](/man/pipx)(1), [conda](/man/conda)(1)

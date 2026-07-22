@@ -57,6 +57,16 @@ Useful for debugging graphics issues and verifying GPU driver configuration.
 
 Requires a working EGL implementation. Output depends on graphics drivers installed. May not work in headless environments without display.
 
+# INSTALL
+
+```apt: sudo apt install mesa-utils```
+
+```pacman: sudo pacman -S mesa-utils```
+
+```apk: sudo apk add mesa-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glxinfo](/man/glxinfo)(1), [vulkaninfo](/man/vulkaninfo)(1)

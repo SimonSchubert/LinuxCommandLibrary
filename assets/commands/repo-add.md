@@ -53,6 +53,20 @@ The database file must have a .db.tar.gz extension. Packages must be valid pacma
 
 Part of **pacman** package management tools for Arch Linux. Enables creation of custom local repositories.
 
+# INSTALL
+
+```apt: sudo apt install pacman-package-manager```
+
+```dnf: sudo dnf install pacman```
+
+```pacman: sudo pacman -S pacman```
+
+```apk: sudo apk add pacman```
+
+```nix: nix profile install nixpkgs#pacman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [repo-remove](/man/repo-remove)(1), [pacman](/man/pacman)(8)

@@ -78,6 +78,24 @@ Only checks patterns, not actual files. Nested gitignore files have priority. Ne
 
 git check-ignore was added to **Git** to help debug gitignore rules, addressing common frustration with ignore pattern behavior.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-status](/man/git-status)(1)

@@ -20,6 +20,12 @@ Terminal-based port viewer
 
 **pvw** was created by **allyring** and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S pvw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ss](/man/ss)(8), [netstat](/man/netstat)(8), [lsof](/man/lsof)(8)

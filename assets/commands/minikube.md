@@ -120,6 +120,18 @@ Single-node by default; multi-node clusters (**--nodes=N**) exist but are intend
 
 **minikube** was created by the Kubernetes community to provide a reliable on-laptop development experience. It graduated from the **kubernetes-incubator** to the main **kubernetes** GitHub organization and has tracked upstream Kubernetes releases closely since version **0.1** (2016).
 
+# INSTALL
+
+```pacman: sudo pacman -S minikube```
+
+```zypper: sudo zypper install minikube```
+
+```brew: brew install minikube```
+
+```nix: nix profile install nixpkgs#minikube```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kind](/man/kind)(1), [k3s](/man/k3s)(1), [k3d](/man/k3d)(1)

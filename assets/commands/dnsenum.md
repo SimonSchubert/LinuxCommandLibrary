@@ -89,6 +89,16 @@ Only perform on domains you have authorization to test. Zone transfers typically
 
 dnsenum is a Perl-based tool developed for the security community. It became a standard reconnaissance tool in penetration testing distributions like Kali Linux, providing comprehensive DNS enumeration capabilities.
 
+# INSTALL
+
+```dnf: sudo dnf install dnsenum```
+
+```apk: sudo apk add dnsenum```
+
+```nix: nix profile install nixpkgs#dnsenum```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [fierce](/man/fierce)(1), [dnsrecon](/man/dnsrecon)(1)

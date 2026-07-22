@@ -102,6 +102,19 @@ Commands support multiple authentication methods: account key, SAS token, Azure 
 
 **az storage** is part of the **Azure CLI**, Microsoft's cross-platform command-line tool first released in **2014** (originally as **xplat-cli**). The modern `az` interface rewritten in Python launched in **2017**. The **az storage copy** and **az storage remove** commands integrate **AzCopy v10**, replacing older upload/download flows with a faster, resumable transfer engine.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-storage-account](/man/az-storage-account)(1), [az-storage-blob](/man/az-storage-blob)(1), [azcopy](/man/azcopy)(1)

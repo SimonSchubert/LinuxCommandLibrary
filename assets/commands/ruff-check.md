@@ -54,6 +54,20 @@ Run Ruff linter on Python code
 
 The **--fix** flag automatically corrects fixable violations in place, while **--select** and **--ignore** control which rule categories are active. Watch mode re-checks files on every save, providing real-time feedback during development. Output formats include plain text, JSON, and GitHub Actions annotations for CI integration.
 
+# INSTALL
+
+```dnf: sudo dnf install ruff```
+
+```pacman: sudo pacman -S ruff```
+
+```apk: sudo apk add ruff```
+
+```brew: brew install ruff```
+
+```nix: nix profile install nixpkgs#ruff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ruff](/man/ruff)(1), [ruff-format](/man/ruff-format)(1), [flake8](/man/flake8)(1)

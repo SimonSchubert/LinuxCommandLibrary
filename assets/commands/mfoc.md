@@ -59,6 +59,20 @@ Requires a libnfc-compatible NFC reader (e.g. ACR122U, PN532). Does not work aga
 
 mfoc (MIFARE Classic Offline Cracker) was released through the nfc-tools project and implements the 2009 nested attack by Nethemba against Crypto1. It is commonly distributed alongside **libnfc** and **mfcuk**.
 
+# INSTALL
+
+```apt: sudo apt install mfoc```
+
+```pacman: sudo pacman -S mfoc```
+
+```zypper: sudo zypper install mfoc```
+
+```brew: brew install mfoc```
+
+```nix: nix profile install nixpkgs#mfoc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mfterm](/man/mfterm)(1)

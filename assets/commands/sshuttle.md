@@ -96,6 +96,20 @@ Requires root locally. Not a full VPN (no UDP by default). Latency added by SSH.
 
 **sshuttle** was created by **Avery Pennarun** around **2010**. It was described as a "poor man's VPN" that works wherever SSH works.
 
+# INSTALL
+
+```dnf: sudo dnf install sshuttle```
+
+```pacman: sudo pacman -S sshuttle```
+
+```zypper: sudo zypper install sshuttle```
+
+```brew: brew install sshuttle```
+
+```nix: nix profile install nixpkgs#sshuttle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [openvpn](/man/openvpn)(8), [wg](/man/wg)(8), [proxychains](/man/proxychains)(1)

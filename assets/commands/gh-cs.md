@@ -100,6 +100,24 @@ Requires GitHub account with Codespaces access. Usage may incur charges. Codespa
 
 gh cs was added to the **GitHub CLI** to support Codespaces, GitHub's cloud development environment launched in **2020**.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-codespace](/man/gh-codespace)(1), [gh-repo](/man/gh-repo)(1), [code](/man/code)(1)

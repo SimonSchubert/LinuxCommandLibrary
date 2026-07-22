@@ -35,6 +35,20 @@ copy container images between registries
 
 **crane copy** copies container images between registries without pulling to local storage. This is more efficient than docker pull/push as it transfers directly between registries.
 
+# INSTALL
+
+```pacman: sudo pacman -S crane```
+
+```apk: sudo apk add crane```
+
+```zypper: sudo zypper install crane```
+
+```brew: brew install crane```
+
+```nix: nix profile install nixpkgs#crane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-cp](/man/crane-cp)(1), [skopeo](/man/skopeo)(1)

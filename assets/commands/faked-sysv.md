@@ -50,6 +50,22 @@ Only fakes metadata, not actual permissions. Requires corresponding fakeroot wra
 
 faked-sysv is part of the **fakeroot** package created for Debian package building. It enables creating .deb packages with proper file ownership without requiring root privileges during the build process.
 
+# INSTALL
+
+```apt: sudo apt install fakeroot```
+
+```dnf: sudo dnf install fakeroot```
+
+```pacman: sudo pacman -S fakeroot```
+
+```zypper: sudo zypper install fakeroot```
+
+```brew: brew install fakeroot```
+
+```nix: nix profile install nixpkgs#fakeroot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fakeroot](/man/fakeroot)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1)

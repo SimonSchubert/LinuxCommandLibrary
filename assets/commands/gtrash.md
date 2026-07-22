@@ -69,6 +69,14 @@ Files moved to trash still consume disk space until pruned or permanently delete
 
 **gtrash** was created by **umlx5h** as a modern, feature-rich alternative to both **rm** and existing trash managers. It is written in **Go** and distributed as a single static binary.
 
+# INSTALL
+
+```brew: brew install gtrash```
+
+```nix: nix profile install nixpkgs#gtrash```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rm](/man/rm)(1), [trash-cli](/man/trash-cli)(1)

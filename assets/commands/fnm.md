@@ -113,6 +113,18 @@ Shell integration via `eval "$(fnm env --use-on-cd)"` is required for `fnm use`,
 
 fnm was created as a fast alternative to **nvm**, the original Node Version Manager. Written in Rust, it dramatically improves installation and switching speed over shell-based alternatives.
 
+# INSTALL
+
+```pacman: sudo pacman -S fnm```
+
+```zypper: sudo zypper install fnm```
+
+```brew: brew install fnm```
+
+```nix: nix profile install nixpkgs#fnm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nvm](/man/nvm)(1), [node](/man/node)(1), [volta](/man/volta)(1)

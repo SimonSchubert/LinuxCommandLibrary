@@ -157,6 +157,16 @@ Machines are typically started using systemd-nspawn. The shell command requires 
 
 **machinectl** is part of **systemd**, providing container and VM management through systemd-machined and systemd-nspawn.
 
+# INSTALL
+
+```apt: sudo apt install systemd-container```
+
+```dnf: sudo dnf install systemd-container```
+
+```zypper: sudo zypper install systemd-container```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-nspawn](/man/systemd-nspawn)(1), [systemctl](/man/systemctl)(1)

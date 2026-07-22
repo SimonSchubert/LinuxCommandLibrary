@@ -18,6 +18,18 @@ Display an **ASCII fire animation**
 
 Press **Space** to pause/resume, **Esc** to exit, or interrupt with Ctrl+C.
 
+# INSTALL
+
+```apt: sudo apt install caca-utils```
+
+```dnf: sudo dnf install caca-utils```
+
+```apk: sudo apk add libcaca-apps```
+
+```zypper: sudo zypper install caca-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cacaclock](/man/cacaclock)(1), [cacademo](/man/cacademo)(1), [cacaview](/man/cacaview)(1), [aafire](/man/aafire)(1)

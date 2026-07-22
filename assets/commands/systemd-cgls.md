@@ -67,6 +67,22 @@ Requires cgroups (v1 or v2) to be mounted. Empty control groups are hidden by de
 
 systemd-cgls was introduced as part of the **systemd** project by Lennart Poettering, providing a user-friendly view of the cgroup hierarchy managed by systemd.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-cgtop](/man/systemd-cgtop)(1), [systemctl](/man/systemctl)(1), [ps](/man/ps)(1), [cgroups](/man/cgroups)(7)

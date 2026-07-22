@@ -73,6 +73,14 @@ Header-only (no linking needed). Requires C++11+. Performance overhead minimal c
 
 pybind11 was created by **Wenzel Jakob** as a lightweight alternative to Boost.Python, focusing on C++11 features.
 
+# INSTALL
+
+```pacman: sudo pacman -S pybind11```
+
+```brew: brew install pybind11```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cython](/man/cython)(1), [swig](/man/swig)(1), [python](/man/python)(1)

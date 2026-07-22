@@ -73,6 +73,13 @@ The terminal remains locked until the user authenticates. The away message is vi
 
 The lock mechanism relies on system authentication. Mail checking requires properly configured mail spool directories. The away message is visible to anyone with physical access to the terminal.
 
+# INSTALL
+
+```apt: sudo apt install away```
+
+```aur: yay -S away```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [vlock](/man/vlock)(1), [screen](/man/screen)(1)

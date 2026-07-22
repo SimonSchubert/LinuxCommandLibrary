@@ -37,6 +37,24 @@ Concatenate LLVM bitcode files into a single bitcode file
 
 It is part of the LLVM toolchain and is typically used in build systems that need to aggregate bitcode prior to linking, optimization, or analysis with **llvm-link**, **opt**, or **llc**.
 
+# INSTALL
+
+```apt: sudo apt install llvm```
+
+```dnf: sudo dnf install llvm```
+
+```pacman: sudo pacman -S llvm```
+
+```apk: sudo apk add llvm```
+
+```zypper: sudo zypper install llvm```
+
+```brew: brew install llvm```
+
+```nix: nix profile install nixpkgs#llvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [llvm-dis](/man/llvm-dis)(1), [llvm-as](/man/llvm-as)(1), [llvm-bcanalyzer](/man/llvm-bcanalyzer)(1)

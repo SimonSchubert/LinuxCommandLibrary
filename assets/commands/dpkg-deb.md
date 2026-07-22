@@ -77,6 +77,24 @@ Common use cases include examining unfamiliar packages for security auditing, ex
 
 Lower-level than dpkg; use dpkg for installation. Building packages requires proper debian/ directory structure. Part of dpkg package.
 
+# INSTALL
+
+```apt: sudo apt install dpkg```
+
+```dnf: sudo dnf install dpkg```
+
+```pacman: sudo pacman -S dpkg```
+
+```apk: sudo apk add dpkg```
+
+```zypper: sudo zypper install dpkg```
+
+```brew: brew install dpkg```
+
+```nix: nix profile install nixpkgs#dpkg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dpkg](/man/dpkg)(1), [dpkg-query](/man/dpkg-query)(1), [apt](/man/apt)(1), [ar](/man/ar)(1)

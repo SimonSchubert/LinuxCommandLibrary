@@ -41,6 +41,24 @@ With `--replace`, any prior paragraph in the message starting with the same id i
 
 Amends HEAD, so it rewrites the commit hash; don't use it on a commit that has already been pushed and shared.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-commit](/man/git-commit)(1), [git-extras](/man/git-extras)(1)

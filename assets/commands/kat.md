@@ -30,6 +30,12 @@ Requires Helm and/or Kustomize to be installed for rendering. Validation tools (
 
 **kat** was designed for Kubernetes engineers and DevOps teams to eliminate context-switching during manifest development by providing persistent, navigable views of rendered resources with instant feedback.
 
+# INSTALL
+
+```aur: yay -S kat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [helm](/man/helm)(1), [kustomize](/man/kustomize)(1)

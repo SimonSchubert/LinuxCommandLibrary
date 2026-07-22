@@ -52,6 +52,15 @@ First startup may be slow while building database. Deck imports can be large. Sy
 
 **Anki** was created by Damien Elmes and first released in **2006**. It's based on the SM2 spaced repetition algorithm developed by Piotr Wozniak. The name comes from the Japanese word for "memorization."
 
+# INSTALL
+
+```pacman: sudo pacman -S anki```
+
+```apk: sudo apk add anki```
+
+```nix: nix profile install nixpkgs#anki```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [man](/man/man)(1)

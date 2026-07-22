@@ -64,6 +64,22 @@ DrRacket began as **DrScheme**, built by the **PLT** group under Matthias Fellei
 
 It was renamed DrRacket in **2010** when PLT Scheme became Racket, the project having long outgrown any reasonable claim to being a Scheme.
 
+# INSTALL
+
+```apt: sudo apt install racket```
+
+```dnf: sudo dnf install racket```
+
+```pacman: sudo pacman -S racket```
+
+```zypper: sudo zypper install racket```
+
+```brew: brew install racket```
+
+```nix: nix profile install nixpkgs#racket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [racket](/man/racket)(1), [raco](/man/raco)(1), [guile](/man/guile)(1), [sbcl](/man/sbcl)(1)

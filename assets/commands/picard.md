@@ -76,6 +76,22 @@ Requires internet for lookups. Matching accuracy depends on MusicBrainz coverage
 
 **MusicBrainz Picard** has been developed by the MusicBrainz community since **2003**. Named after the Star Trek character, it succeeded earlier tagging tools to become the official MusicBrainz tagger.
 
+# INSTALL
+
+```apt: sudo apt install picard```
+
+```dnf: sudo dnf install picard```
+
+```pacman: sudo pacman -S picard```
+
+```apk: sudo apk add picard```
+
+```zypper: sudo zypper install picard```
+
+```nix: nix profile install nixpkgs#picard```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [beets](/man/beets)(1), [kid3](/man/kid3)(1), [easytag](/man/easytag)(1), [mid3v2](/man/mid3v2)(1)

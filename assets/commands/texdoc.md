@@ -96,6 +96,14 @@ Requires a TeX Live (or MiKTeX) installation with documentation packages install
 
 **texdoc** is part of TeX Live, written in Lua and bundled with **luatex**. Earlier shell-script versions were superseded by the Lua implementation in **TeX Live 2009**.
 
+# INSTALL
+
+```pacman: sudo pacman -S texlive-binextra```
+
+```apk: sudo apk add texlive-binextra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tlmgr](/man/tlmgr)(1), [latex](/man/latex)(1), [pdflatex](/man/pdflatex)(1)

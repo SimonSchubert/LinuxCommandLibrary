@@ -76,6 +76,12 @@ Find by **exact filename** (basename only)
 
 Database is updated periodically, so recently created files may not be found. Run `updatedb` to refresh the database manually.
 
+# INSTALL
+
+```apk: sudo apk add findutils-locate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [find](/man/find)(1), [updatedb](/man/updatedb)(1), [mlocate](/man/mlocate)(1), [plocate](/man/plocate)(1)

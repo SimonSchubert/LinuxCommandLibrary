@@ -101,6 +101,14 @@ Direct MP3 output is not supported; use **--file-format** for AIFF, WAVE, caff, 
 
 **say** has been included in macOS since the early days of Mac OS X, building on Apple's text-to-speech technology that dates back to the **1980s** with MacinTalk. The command provides terminal access to the same speech synthesis used throughout the operating system.
 
+# INSTALL
+
+```apt: sudo apt install gnustep-gui-runtime```
+
+```apk: sudo apk add shelli-opinionated```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [espeak](/man/espeak)(1), [spd-say](/man/spd-say)(1), [pico2wave](/man/pico2wave)(1)

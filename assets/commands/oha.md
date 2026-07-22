@@ -116,6 +116,16 @@ High concurrency settings may exhaust file descriptors or network resources. Use
 
 oha was created by **Haruki Shimada** (hatoo) and first released around **2020**. The name means "good morning" in Japanese. Written in Rust using tokio for async I/O, it provides modern load testing with real-time visualization. The project gained popularity as a fast, user-friendly alternative to older tools like ab and wrk.
 
+# INSTALL
+
+```pacman: sudo pacman -S oha```
+
+```brew: brew install oha```
+
+```nix: nix profile install nixpkgs#oha```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hey](/man/hey)(1), [wrk](/man/wrk)(1), [ab](/man/ab)(1), [curl](/man/curl)(1), [siege](/man/siege)(1)

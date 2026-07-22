@@ -74,6 +74,22 @@ For accurate benchmarking, run multiple iterations and consider system load. Use
 
 Resource measurements (memory, I/O) are only available with GNU time, not the shell builtin.
 
+# INSTALL
+
+```apt: sudo apt install time```
+
+```dnf: sudo dnf install time```
+
+```pacman: sudo pacman -S time```
+
+```apk: sudo apk add time```
+
+```zypper: sudo zypper install time```
+
+```nix: nix profile install nixpkgs#time```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [timeout](/man/timeout)(1), [watch](/man/watch)(1), [hyperfine](/man/hyperfine)(1), [perf](/man/perf)(1)

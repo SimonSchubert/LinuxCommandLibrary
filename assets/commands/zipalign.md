@@ -78,6 +78,12 @@ The order relative to signing depends on the tool: run zipalign **before** apksi
 
 **zipalign** was introduced by Google as part of the Android SDK tools. It became part of the standard Android build process to ensure optimal runtime performance. Starting November **2025**, Google Play requires all apps targeting Android 15+ on 64-bit devices to support 16 KiB page sizes, making the **-P 16** flag essential for apps with native libraries.
 
+# INSTALL
+
+```apt: sudo apt install zipalign```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apksigner](/man/apksigner)(1), [aapt](/man/aapt)(1), [aapt2](/man/aapt2)(1), [adb](/man/adb)(1), [bundletool](/man/bundletool)(1)

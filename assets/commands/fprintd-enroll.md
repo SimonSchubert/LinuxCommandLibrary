@@ -48,6 +48,22 @@ Enrolled fingerprints can be used for PAM authentication, allowing fingerprint l
 
 Enrollment quality depends on the fingerprint reader and skin condition. Dry or damaged skin may result in poor enrollment. Multiple scans are required for reliable templates. Root privileges may be needed to enroll fingerprints for other users.
 
+# INSTALL
+
+```apt: sudo apt install fprintd```
+
+```dnf: sudo dnf install fprintd```
+
+```pacman: sudo pacman -S fprintd```
+
+```apk: sudo apk add fprintd```
+
+```zypper: sudo zypper install fprintd```
+
+```nix: nix profile install nixpkgs#fprintd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fprintd](/man/fprintd)(1), [fprintd-delete](/man/fprintd-delete)(1), [fprintd-list](/man/fprintd-list)(1), [fprintd-verify](/man/fprintd-verify)(1)

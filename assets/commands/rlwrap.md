@@ -96,6 +96,24 @@ May interfere with programs that handle terminals specially. Prompt detection is
 
 **rlwrap** was written by **Hans Lub** to add readline support to arbitrary programs. It fills the gap for programs without built-in line editing.
 
+# INSTALL
+
+```apt: sudo apt install rlwrap```
+
+```dnf: sudo dnf install rlwrap```
+
+```pacman: sudo pacman -S rlwrap```
+
+```apk: sudo apk add rlwrap```
+
+```zypper: sudo zypper install rlwrap```
+
+```brew: brew install rlwrap```
+
+```nix: nix profile install nixpkgs#rlwrap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [readline](/man/readline)(3), [bash](/man/bash)(1), [ledit](/man/ledit)(1)

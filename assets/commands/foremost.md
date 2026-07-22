@@ -84,6 +84,20 @@ Fragmented files may not recover correctly. Output directory must be empty. Larg
 
 **foremost** was developed by the **US Air Force Office of Special Investigations** and **The Center for Information Systems Security Studies and Research** around **2001**. It was designed for forensic file recovery and released as open source.
 
+# INSTALL
+
+```apt: sudo apt install foremost```
+
+```dnf: sudo dnf install foremost```
+
+```pacman: sudo pacman -S foremost```
+
+```brew: brew install foremost```
+
+```nix: nix profile install nixpkgs#foremost```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scalpel](/man/scalpel)(1), [photorec](/man/photorec)(1), [testdisk](/man/testdisk)(1), [dd](/man/dd)(1)

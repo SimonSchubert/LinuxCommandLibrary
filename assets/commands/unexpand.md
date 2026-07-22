@@ -68,6 +68,24 @@ By default, unexpand only converts leading spaces, unlike **expand** which conve
 
 unexpand is part of **GNU coreutils**, written by **David MacKenzie**. The command originated in early Unix systems as a companion to the expand utility. Both commands address the historical need to convert between tabs and spaces for different terminal and printer requirements.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [expand](/man/expand)(1), [cat](/man/cat)(1), [pr](/man/pr)(1), [col](/man/col)(1)

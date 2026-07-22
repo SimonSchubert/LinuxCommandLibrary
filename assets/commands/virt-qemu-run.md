@@ -48,6 +48,18 @@ This is useful for testing, embedded use cases, or running isolated VMs without 
 
 Experimental tool; behavior may change between releases. Guest XML must be valid libvirt format. Some features dependent on libvirtd (such as the full device management API) may not work. Not recommended for production use.
 
+# INSTALL
+
+```apt: sudo apt install libvirt-daemon-driver-qemu```
+
+```dnf: sudo dnf install libvirt-daemon-driver-qemu```
+
+```apk: sudo apk add libvirt-client```
+
+```zypper: sudo zypper install libvirt-daemon-driver-qemu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virt-manager](/man/virt-manager)(1), [virsh](/man/virsh)(1), [qemu](/man/qemu)(1)

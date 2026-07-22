@@ -122,6 +122,14 @@ Features include OAuth 2.0 authentication, SSH tunnels, Kubernetes port-forwardi
 
 **resterm** was created by **unkn0wn-root** and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install resterm```
+
+```nix: nix profile install nixpkgs#resterm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [posting](/man/posting)(1), [httpie](/man/httpie)(1)

@@ -93,6 +93,16 @@ Node.js package. Strict mode may reject valid-looking versions. Range syntax can
 
 **semver** is the Node.js implementation of semantic versioning. It's used by npm for package version resolution.
 
+# INSTALL
+
+```pacman: sudo pacman -S semver```
+
+```brew: brew install semver```
+
+```nix: nix profile install nixpkgs#semver```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [node](/man/node)(1)

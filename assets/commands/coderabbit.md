@@ -103,6 +103,12 @@ Requires an initialized Git repository in the working directory. Authentication 
 
 **CodeRabbit** was founded in **2023** by **Harjot Gill**. The company initially launched as a GitHub/GitLab bot for reviewing pull requests. The **CLI tool was launched on September 16, 2025**, extending the platform to support pre-commit reviews directly in the terminal. CodeRabbit is headquartered in El Dorado Hills, California.
 
+# INSTALL
+
+```aur: yay -S coderabbit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [git](/man/git)(1), [semgrep](/man/semgrep)(1)

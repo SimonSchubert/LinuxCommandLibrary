@@ -59,6 +59,22 @@ Requires GTK and GLib libraries. Some advanced features may require additional l
 
 gnome-calculator evolved from the original gcalctool, which was part of GNOME since its early versions. The modern gnome-calculator was rewritten in Vala and introduced with GNOME 3.0 in **2011**, providing a cleaner interface and improved functionality.
 
+# INSTALL
+
+```apt: sudo apt install gnome-calculator```
+
+```dnf: sudo dnf install gnome-calculator```
+
+```pacman: sudo pacman -S gnome-calculator```
+
+```apk: sudo apk add gnome-calculator```
+
+```zypper: sudo zypper install gnome-calculator```
+
+```nix: nix profile install nixpkgs#gnome-calculator```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bc](/man/bc)(1), [dc](/man/dc)(1), [qalc](/man/qalc)(1), [expr](/man/expr)(1)

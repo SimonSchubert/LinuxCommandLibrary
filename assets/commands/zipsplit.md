@@ -66,6 +66,24 @@ Output files are named with numeric suffixes based on the original filename.
 
 Individual files that exceed the size limit cannot be split across archives. All parts are needed to extract the complete archive contents.
 
+# INSTALL
+
+```apt: sudo apt install zip```
+
+```dnf: sudo dnf install zip```
+
+```pacman: sudo pacman -S zip```
+
+```apk: sudo apk add zip```
+
+```zypper: sudo zypper install zip```
+
+```brew: brew install zip```
+
+```nix: nix profile install nixpkgs#zip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zip](/man/zip)(1), [unzip](/man/unzip)(1), [split](/man/split)(1), [zipcloak](/man/zipcloak)(1), [zipnote](/man/zipnote)(1)

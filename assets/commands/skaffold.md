@@ -120,6 +120,18 @@ Requires Kubernetes cluster. Docker or alternative builder needed. Learning curv
 
 **Skaffold** was created by **Google** for Kubernetes development. It simplifies the inner development loop for containerized applications.
 
+# INSTALL
+
+```pacman: sudo pacman -S skaffold```
+
+```zypper: sudo zypper install skaffold```
+
+```brew: brew install skaffold```
+
+```nix: nix profile install nixpkgs#skaffold```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [docker](/man/docker)(1), [helm](/man/helm)(1), [devspace](/man/devspace)(1)

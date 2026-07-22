@@ -26,6 +26,16 @@ Key detection depends on the terminal emulator's ability to pass through key eve
 
 **kbt** was created by **bloznelis** and is written in **Rust**. It was created out of frustration with unreliable online keyboard testers.
 
+# INSTALL
+
+```pacman: sudo pacman -S kbt```
+
+```brew: brew install kbt```
+
+```nix: nix profile install nixpkgs#kbt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [showkey](/man/showkey)(1)

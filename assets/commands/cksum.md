@@ -92,6 +92,24 @@ CRC32 is not cryptographically secure. Use SHA256 or stronger for security-criti
 
 **cksum** was standardized in **POSIX.2** (1992). It is part of GNU coreutils. The **--algorithm** option for SHA/MD5 was added in GNU coreutils **9.0** (2021).
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1), [sum](/man/sum)(1)

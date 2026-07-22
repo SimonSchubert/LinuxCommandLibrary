@@ -66,6 +66,16 @@ Requires access to remote repository. Fetch may be needed for accurate data. Per
 
 **git-who** was created to help teams manage their Git branches by providing visibility into branch ownership and activity.
 
+# INSTALL
+
+```zypper: sudo zypper install git-who```
+
+```brew: brew install git-who```
+
+```nix: nix profile install nixpkgs#git-who```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-for-each-ref](/man/git-for-each-ref)(1), [git](/man/git)(1)

@@ -51,6 +51,17 @@ Pre-signed URLs are useful for sharing private S3 objects temporarily, embedding
 
 The maximum expiration time is 604800 seconds (7 days). The region must be configured explicitly since all pre-signed URLs use SigV4 authentication. Pre-signed URLs produced by **aws s3 presign** grant read-only (GET) access; uploads require **aws s3api** with SigV4 query parameters or SDK helpers. The URL expires based on the credentials used to sign it; if using temporary credentials (STS), the URL cannot outlive those credentials.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3-cp](/man/aws-s3-cp)(1), [aws-s3api](/man/aws-s3api)(1)

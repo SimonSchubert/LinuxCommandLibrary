@@ -111,6 +111,14 @@ On Windows **PowerShell**, the built-in _ni_ alias for New-Item collides with th
 
 Created by **Anthony Fu** (antfu) and first published to npm in **2021** under **@antfu/ni**. It was moved to the **antfu-collective** organization on GitHub and is distributed through npm (_@antfu/ni_) and **Homebrew** (_brew install ni_). The project is written in TypeScript.
 
+# INSTALL
+
+```brew: brew install ni```
+
+```nix: nix profile install nixpkgs#ni```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [yarn](/man/yarn)(1), [pnpm](/man/pnpm)(1), [bun](/man/bun)(1), [deno](/man/deno)(1)

@@ -77,6 +77,20 @@ Processes plain TeX by default; use pdflatex for LaTeX documents. Large document
 
 **pdfTeX** was developed by **Han The Thanh** as his PhD thesis project at Masaryk University in the Czech Republic, first released in **1996**. It extended TeX to output PDF directly and introduced microtypographic features. pdfTeX became the default engine in most TeX distributions.
 
+# INSTALL
+
+```apt: sudo apt install texlive-binaries```
+
+```dnf: sudo dnf install texlive```
+
+```apk: sudo apk add texlive```
+
+```zypper: sudo zypper install texlive```
+
+```brew: brew install texlive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdflatex](/man/pdflatex)(1), [tex](/man/tex)(1), [xetex](/man/xetex)(1), [luatex](/man/luatex)(1)

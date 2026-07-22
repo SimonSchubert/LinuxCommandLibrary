@@ -113,6 +113,15 @@ Requires system keychain access (macOS Keychain, GNOME Keyring, etc.). MFA devic
 
 **aws-vault** was created by 99designs in **2015** to provide secure credential management for AWS, addressing the security risks of storing credentials in plain text.
 
+# INSTALL
+
+```pacman: sudo pacman -S aws-vault```
+
+```brew: brew install aws-vault```
+
+```nix: nix profile install nixpkgs#aws-vault```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-configure](/man/aws-configure)(1), [pass](/man/pass)(1)

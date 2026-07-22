@@ -38,6 +38,12 @@ compiles MPI Java programs
 
 **mpijavac** compiles MPI Java programs. Wrapper around javac with MPI Java bindings. Used with OpenMPI's Java interface for parallel computing in Java.
 
+# INSTALL
+
+```apt: sudo apt install openmpi-bin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpirun](/man/mpirun)(1), [javac](/man/javac)(1), [mpicc](/man/mpicc)(1)

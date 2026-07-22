@@ -94,6 +94,20 @@ When using **-x** to bind shell commands, the shell sets **READLINE_LINE** and *
 
 Key binding syntax must be passed as a single argument, matching the format used in **~/.inputrc**.
 
+# INSTALL
+
+```dnf: sudo dnf install bind```
+
+```pacman: sudo pacman -S bind```
+
+```zypper: sudo zypper install bind```
+
+```brew: brew install bind```
+
+```nix: nix profile install nixpkgs#bind```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [readline](/man/readline)(3)

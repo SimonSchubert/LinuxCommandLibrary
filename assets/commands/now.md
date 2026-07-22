@@ -69,6 +69,12 @@ Deprecated name. Use vercel instead. Requires Vercel account.
 
 now was the original name of the **Vercel CLI** before the company rebranded from ZEIT.
 
+# INSTALL
+
+```aur: yay -S now```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vercel](/man/vercel)(1), [netlify](/man/netlify)(1), [firebase](/man/firebase)(1)

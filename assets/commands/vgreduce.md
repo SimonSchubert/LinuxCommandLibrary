@@ -67,6 +67,22 @@ Cannot remove PV with active data without pvmove. Force removal destroys data on
 
 **vgreduce** is part of LVM2 (Logical Volume Manager), which evolved from the original LVM in Linux 2.4. LVM2 provides flexible disk management allowing dynamic resizing of storage. The vgreduce command enables non-destructive removal of storage from volume groups.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vgextend](/man/vgextend)(8), [vgdisplay](/man/vgdisplay)(8), [pvmove](/man/pvmove)(8), [pvremove](/man/pvremove)(8), [lvm](/man/lvm)(8)

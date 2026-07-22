@@ -63,6 +63,14 @@ The dump format is human-readable and can be edited before restoring. This makes
 
 Requires root privileges. Modifying partition tables can cause data loss; always backup important data first. The partition layout must be compatible with the target disk's geometry. Part of the util-linux package.
 
+# INSTALL
+
+```apt: sudo apt install fdisk```
+
+```apk: sudo apk add sfdisk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fdisk](/man/fdisk)(8), [parted](/man/parted)(8), [gdisk](/man/gdisk)(8), [partprobe](/man/partprobe)(8)

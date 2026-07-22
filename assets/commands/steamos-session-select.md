@@ -59,6 +59,12 @@ Session changes take effect after the current session ends. Persistent sessions 
 
 **steamos-session-select** is part of the **SteamOS** utilities developed by **Valve**. The dual-session design allows the Steam Deck to function as both a gaming console and a full Linux desktop.
 
+# INSTALL
+
+```aur: yay -S steamos-session-select```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [steamos-devmode](/man/steamos-devmode)(1)

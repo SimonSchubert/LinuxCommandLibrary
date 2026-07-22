@@ -92,6 +92,20 @@ Primarily useful in cloud/virtual environments with metadata services. Running c
 
 **cloud-init** was originally developed for Ubuntu by Canonical and has become the de facto standard for cloud instance initialization across most Linux distributions and cloud providers.
 
+# INSTALL
+
+```dnf: sudo dnf install cloud-init```
+
+```pacman: sudo pacman -S cloud-init```
+
+```apk: sudo apk add cloud-init```
+
+```zypper: sudo zypper install cloud-init```
+
+```nix: nix profile install nixpkgs#cloud-init```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1)

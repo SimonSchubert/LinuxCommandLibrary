@@ -99,6 +99,14 @@ Slightly larger files than maximum gzip compression. Requires .gzi index for ran
 
 **bgzip** was developed as part of SAMtools/htslib around **2009** to enable efficient random access to compressed genomics data files.
 
+# INSTALL
+
+```apt: sudo apt install tabix```
+
+```zypper: sudo zypper install tabix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gzip](/man/gzip)(1), [tabix](/man/tabix)(1)

@@ -24,6 +24,12 @@ Real-time swap usage monitor for the terminal
 
 **swaptop** was created by **luis-ota** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S swaptop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btop](/man/btop)(1), [htop](/man/htop)(1), [free](/man/free)(1)

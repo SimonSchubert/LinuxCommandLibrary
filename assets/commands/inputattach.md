@@ -81,6 +81,18 @@ Usually requires root or write access to the serial node. The mode flag must mat
 
 inputattach is maintained as part of **linuxconsoletools** (formerly joyutils). The Wacom variants are also distributed by the **linuxwacom** project for use with serial Wacom tablets.
 
+# INSTALL
+
+```apt: sudo apt install inputattach```
+
+```dnf: sudo dnf install linuxconsoletools```
+
+```apk: sudo apk add linuxconsoletools```
+
+```zypper: sudo zypper install linuxconsoletools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [evtest](/man/evtest)(1), [libinput](/man/libinput)(1)

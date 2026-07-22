@@ -82,6 +82,11 @@ GUI can be unintuitive. Some codecs require additional libraries. Complex edits 
 
 **Avidemux** was created by Mean (pseudonym) and first released in **2001** as a simple tool for basic video editing tasks without the complexity of professional editors.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#avidemux```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [handbrake](/man/handbrake)(1), [kdenlive](/man/kdenlive)(1)

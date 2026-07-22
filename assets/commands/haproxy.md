@@ -111,6 +111,24 @@ Configuration changes require reload. Complex ACLs need careful testing. Statist
 
 HAProxy was created by **Willy Tarreau** in **2000** and has become one of the most widely deployed load balancers. It powers high-traffic sites including GitHub, Reddit, and Stack Overflow.
 
+# INSTALL
+
+```apt: sudo apt install haproxy```
+
+```dnf: sudo dnf install haproxy```
+
+```pacman: sudo pacman -S haproxy```
+
+```apk: sudo apk add haproxy```
+
+```zypper: sudo zypper install haproxy```
+
+```brew: brew install haproxy```
+
+```nix: nix profile install nixpkgs#haproxy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nginx](/man/nginx)(1), [envoy](/man/envoy)(1), [traefik](/man/traefik)(1)

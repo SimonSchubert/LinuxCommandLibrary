@@ -43,6 +43,22 @@ File attributes may not be perfectly preserved. You may need to manually fix per
 
 The backup file (with ~ suffix) can be removed once the compressed executable is verified to work correctly.
 
+# INSTALL
+
+```apt: sudo apt install bzip2```
+
+```dnf: sudo dnf install bzip2```
+
+```pacman: sudo pacman -S bzip2```
+
+```zypper: sudo zypper install bzip2```
+
+```brew: brew install bzip2```
+
+```nix: nix profile install nixpkgs#bzip2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bzip2](/man/bzip2)(1), [bunzip2](/man/bunzip2)(1), [gzexe](/man/gzexe)(1)

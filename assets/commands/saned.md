@@ -72,6 +72,16 @@ saned is not designed for exposure to untrusted networks. Always restrict access
 
 saned is part of the **SANE** (Scanner Access Now Easy) project, which began in **1996** to provide standardized scanner access on Unix systems. The network daemon enables scanner sharing across local networks without proprietary protocols.
 
+# INSTALL
+
+```apt: sudo apt install sane-utils```
+
+```apk: sudo apk add sane-saned```
+
+```zypper: sudo zypper install sane-saned```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scanimage](/man/scanimage)(1), [sane-find-scanner](/man/sane-find-scanner)(1)

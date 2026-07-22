@@ -98,6 +98,20 @@ Changes are session-only and do not persist across X restarts. For permanent cha
 
 **setxkbmap** is part of the X Keyboard Extension (XKB), which was developed in the mid-**1990s** to replace the older core X keyboard protocol. XKB was integrated into XFree86 and later X.Org, becoming the standard keyboard configuration mechanism for X11. The tool is maintained as part of the **xorg-x11-xkb-utils** package.
 
+# INSTALL
+
+```apt: sudo apt install x11-xkb-utils```
+
+```dnf: sudo dnf install setxkbmap```
+
+```apk: sudo apk add setxkbmap```
+
+```zypper: sudo zypper install setxkbmap```
+
+```nix: nix profile install nixpkgs#setxkbmap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xkbcomp](/man/xkbcomp)(1), [localectl](/man/localectl)(1), [loadkeys](/man/loadkeys)(1), [xmodmap](/man/xmodmap)(1)

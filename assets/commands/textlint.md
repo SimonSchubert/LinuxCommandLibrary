@@ -122,6 +122,12 @@ Requires Node.js and npm. Rules must be installed separately. Configuration comp
 
 **textlint** was created by azu as an ESLint-inspired linter for prose. It applies the pluggable architecture pattern to natural language checking, allowing the community to develop specialized rules for different writing styles and languages.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#textlint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [eslint](/man/eslint)(1), [vale](/man/vale)(1), [markdownlint](/man/markdownlint)(1), [proselint](/man/proselint)(1)

@@ -44,6 +44,12 @@ Requires Python and HTTPie. Sessions are stored locally and persist between invo
 
 http-prompt was created by Chang-Hung Liang and released in **2016**. It was inspired by the interactive nature of database clients and aims to provide similar convenience for HTTP API exploration.
 
+# INSTALL
+
+```brew: brew install http-prompt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [http](/man/http)(1), [curl](/man/curl)(1), [httpie](/man/httpie)(1)

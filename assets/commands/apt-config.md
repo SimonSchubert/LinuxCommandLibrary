@@ -56,6 +56,21 @@ Configuration is hierarchical; lower-level options override higher ones. Command
 
 **apt-config** has been part of APT since early versions, providing programmatic access to APT's configuration system.
 
+# INSTALL
+
+```apt: sudo apt install apt```
+
+```dnf: sudo dnf install apt```
+
+```pacman: sudo pacman -S apt```
+
+```apk: sudo apk add apt```
+
+```brew: brew install apt```
+
+```nix: nix profile install nixpkgs#apt```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-get](/man/apt-get)(8)

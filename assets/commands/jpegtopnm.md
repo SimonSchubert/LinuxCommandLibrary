@@ -45,6 +45,24 @@ converts JFIF/JPEG images to Netpbm PNM format
 
 **jpegtopnm** converts JFIF/JPEG images to Netpbm PNM format. Outputs PPM for color images or PGM for grayscale. Part of the Netpbm toolkit, it uses the Independent JPEG Group's library for decoding.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmtojpeg](/man/pnmtojpeg)(1), [djpeg](/man/djpeg)(1), [pamscale](/man/pamscale)(1)

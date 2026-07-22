@@ -48,6 +48,11 @@ Requires a terminal with ncurses support. Custom hills can be created and placed
 
 **asciijump** was created by **Fabian Breitkreutz** as a terminal recreation of ski jumping competitions.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#asciijump```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [moon-buggy](/man/moon-buggy)(6), [ninvaders](/man/ninvaders)(6)

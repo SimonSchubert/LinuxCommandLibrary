@@ -116,6 +116,18 @@ Requires a running RabbitMQ node and an Erlang cookie that matches the node's. S
 
 Introduced in **RabbitMQ 3.8** (2019) as a dedicated diagnostics CLI, taking over health-check responsibilities that previously lived in **rabbitmqctl**.
 
+# INSTALL
+
+```dnf: sudo dnf install rabbitmq-server```
+
+```apk: sudo apk add rabbitmq-server```
+
+```zypper: sudo zypper install rabbitmq-server```
+
+```nix: nix profile install nixpkgs#rabbitmq-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rabbitmqctl](/man/rabbitmqctl)(8), [rabbitmq-plugins](/man/rabbitmq-plugins)(8), [rabbitmq-server](/man/rabbitmq-server)(8)

@@ -89,6 +89,12 @@ Requires plugins for functionality. Node.js environment. Config complexity can g
 
 **PostCSS** was created by **Andrey Sitnik** in **2013**. It pioneered CSS-as-AST transformation and hosts a rich plugin ecosystem.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#postcss```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sass](/man/sass)(1), [less](/man/less)(1), [autoprefixer](/man/autoprefixer)(1), [cssnano](/man/cssnano)(1)

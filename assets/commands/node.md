@@ -124,6 +124,20 @@ The default event loop is single-threaded — CPU-heavy work blocks all I/O unle
 
 Node.js was created by **Ryan Dahl** in **2009**. It is now stewarded by the **OpenJS Foundation** and follows a release schedule of even-numbered LTS lines (e.g. 18, 20, 22) supported for ~30 months and odd-numbered current releases that bring newer V8 features.
 
+# INSTALL
+
+```apt: sudo apt install nodejs```
+
+```pacman: sudo pacman -S nodejs```
+
+```apk: sudo apk add nodejs```
+
+```brew: brew install nodejs```
+
+```nix: nix profile install nixpkgs#nodejs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npx](/man/npx)(1), [deno](/man/deno)(1), [bun](/man/bun)(1)

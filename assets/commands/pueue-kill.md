@@ -81,6 +81,20 @@ SIGKILL cannot be caught. Use SIGTERM for graceful shutdown. Part of pueue task 
 
 pueue kill is part of **pueue**, a command-line task manager by **Arne Beer** for managing long-running tasks.
 
+# INSTALL
+
+```pacman: sudo pacman -S pueue```
+
+```apk: sudo apk add pueue```
+
+```zypper: sudo zypper install pueue```
+
+```brew: brew install pueue```
+
+```nix: nix profile install nixpkgs#pueue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pueue](/man/pueue)(1), [pueue-start](/man/pueue-start)(1), [pueue-pause](/man/pueue-pause)(1), [kill](/man/kill)(1)

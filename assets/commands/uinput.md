@@ -44,6 +44,16 @@ Typical usage chains it after **udevmon** and per-device transformation tools (s
 
 Requires CAP_MKNOD and write access to **/dev/uinput** — usually run as root or via a udev rule that grants the executing user access. Loading the `uinput` kernel module is required (`modprobe uinput`). Misconfigured pipelines can leave the system without keyboard input; have a fallback session ready.
 
+# INSTALL
+
+```apt: sudo apt install interception-tools```
+
+```pacman: sudo pacman -S interception-tools```
+
+```nix: nix profile install nixpkgs#interception-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [udevmon](/man/udevmon)(1)

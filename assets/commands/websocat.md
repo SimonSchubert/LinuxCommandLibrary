@@ -133,6 +133,18 @@ Large messages may require increased buffer sizes. Some features require specifi
 
 websocat was created by **Vitaly Shukela** (vi) and first released around **2017**. Written in Rust, it was designed as a Swiss Army knife for WebSocket operations. The tool has become popular for debugging WebSocket services, creating tunnels, and testing real-time applications. It continues active development with features for various networking scenarios.
 
+# INSTALL
+
+```pacman: sudo pacman -S websocat```
+
+```apk: sudo apk add websocat```
+
+```brew: brew install websocat```
+
+```nix: nix profile install nixpkgs#websocat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nc](/man/nc)(1), [curl](/man/curl)(1), [socat](/man/socat)(1)

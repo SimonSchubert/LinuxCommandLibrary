@@ -95,6 +95,18 @@ Requires Java Runtime Environment. Complex diagrams may not render as expected. 
 
 ditaa was created by **Stathis Sideris** in **2004** as an open-source Java application. The concept was inspired by the desire to keep diagrams as plain text in source code repositories while having nice rendered versions for documentation. The tool has been integrated into various documentation systems including Asciidoctor and Org-mode.
 
+# INSTALL
+
+```dnf: sudo dnf install ditaa```
+
+```pacman: sudo pacman -S ditaa```
+
+```brew: brew install ditaa```
+
+```nix: nix profile install nixpkgs#ditaa```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [graphviz](/man/graphviz)(1), [plantuml](/man/plantuml)(1), [mermaid](/man/mermaid)(1)

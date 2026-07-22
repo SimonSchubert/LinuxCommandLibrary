@@ -47,6 +47,16 @@ Pass `reset` instead of coordinates to clear the simulated location and resume r
 
 Requires the Developer Disk Image (or, on iOS 17+, a Developer Mode tunnel) to be mounted on the target device — typically via **ideviceimagemounter**. The simulated location persists until the device is rebooted or reset is invoked.
 
+# INSTALL
+
+```apt: sudo apt install libimobiledevice-utils```
+
+```dnf: sudo dnf install libimobiledevice-utils```
+
+```apk: sudo apk add libimobiledevice-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ideviceimagemounter](/man/ideviceimagemounter)(1), [ideviceinfo](/man/ideviceinfo)(1)

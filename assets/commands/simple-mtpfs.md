@@ -67,6 +67,16 @@ Move operations are disabled by default because they can be very slow on MTP dev
 
 **simple-mtpfs** was written by **Peter Hatina** and first released around **2013** as a lightweight alternative to heavier MTP browser tools. Version **0.2** shipped with a manual page in **January 2015**. The project reached **0.4.0** but has seen little upstream activity since; Homebrew and several Linux distributions still distribute it while marking it deprecated.
 
+# INSTALL
+
+```zypper: sudo zypper install simple-mtpfs```
+
+```brew: brew install simple-mtpfs```
+
+```nix: nix profile install nixpkgs#simple-mtpfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fusermount](/man/fusermount)(1), [mount](/man/mount)(8), [sshfs](/man/sshfs)(1), [mtp-detect](/man/mtp-detect)(1)

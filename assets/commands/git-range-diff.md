@@ -41,6 +41,24 @@ Compare two commit ranges
 
 Common use cases include comparing a feature branch before and after rebasing, reviewing how patches evolved during iterative development, or verifying that a rebase preserved intended changes. The output uses dual coloring to distinguish between the two levels of diff.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-diff](/man/git-diff)(1), [git-log](/man/git-log)(1), [git-rebase](/man/git-rebase)(1)

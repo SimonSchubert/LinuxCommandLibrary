@@ -77,6 +77,18 @@ Requires separate database from server. Cannot share database with server. Confi
 
 **zabbix_proxy** was added to Zabbix to enable distributed monitoring architectures. It allows organizations to monitor remote sites without direct server connectivity and reduces WAN bandwidth usage by compressing and batching data transfers.
 
+# INSTALL
+
+```apt: sudo apt install zabbix-proxy-mysql```
+
+```dnf: sudo dnf install zabbix-proxy-mysql```
+
+```apk: sudo apk add zabbix-mysql```
+
+```zypper: sudo zypper install zabbix-proxy-mysql```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zabbix_server](/man/zabbix_server)(8), [zabbix_agentd](/man/zabbix_agentd)(8), [zabbix_get](/man/zabbix_get)(1)

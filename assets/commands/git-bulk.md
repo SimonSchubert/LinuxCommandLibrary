@@ -66,6 +66,24 @@ The tool eliminates the need to manually navigate to each repository and run the
 
 Workspaces are stored in configuration, allowing you to define repository groups once and reuse them. This is invaluable for developers managing microservices, monorepo-adjacent architectures, or multiple client projects where synchronized operations are common.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-extras](/man/git-extras)(1)

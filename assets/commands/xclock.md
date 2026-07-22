@@ -55,6 +55,20 @@ The analog display shows a traditional clock face. Digital mode supports strftim
 
 X11 only. Requires X server running. Part of X.Org utilities.
 
+# INSTALL
+
+```apt: sudo apt install x11-apps```
+
+```dnf: sudo dnf install xclock```
+
+```apk: sudo apk add xclock```
+
+```zypper: sudo zypper install xclock```
+
+```nix: nix profile install nixpkgs#xclock```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [date](/man/date)(1)

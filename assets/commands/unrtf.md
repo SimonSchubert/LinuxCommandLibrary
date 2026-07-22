@@ -91,6 +91,22 @@ Multiple security vulnerabilities (CVEs) have been found in older versions, incl
 
 Originally written by **Zachary T. Smith** around **2000** as a program called **rtf2htm**, it was later renamed to **UnRTF** and adopted as an official **GNU project** under the Free Software Foundation. Other contributors include David F. Davey and Jean-Francois Dockes. The latest release version is **0.21.11**. Licensed under the **GNU General Public License**.
 
+# INSTALL
+
+```apt: sudo apt install unrtf```
+
+```dnf: sudo dnf install unrtf```
+
+```pacman: sudo pacman -S unrtf```
+
+```apk: sudo apk add unrtf```
+
+```brew: brew install unrtf```
+
+```nix: nix profile install nixpkgs#unrtf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pandoc](/man/pandoc)(1), [iconv](/man/iconv)(1), [enscript](/man/enscript)(1)

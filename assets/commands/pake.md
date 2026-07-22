@@ -61,6 +61,12 @@ Written in Rust. System webview used. Size smaller than Electron.
 
 Pake was created as a **lightweight alternative** to Electron for packaging web apps.
 
+# INSTALL
+
+```brew: brew install pake```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [electron](/man/electron)(1), [tauri](/man/tauri)(1), [nativefier](/man/nativefier)(1)

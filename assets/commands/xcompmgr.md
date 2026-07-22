@@ -98,6 +98,20 @@ Requires the Composite, Damage, Fixes, and Render X extensions to be enabled. Ma
 
 **xcompmgr** was written by Keith Packard and released as a sample compositing manager following the introduction of the X Composite extension around **2004**. It served as a proof-of-concept and reference implementation demonstrating compositing capabilities in X.Org. While functional, it was superseded by more feature-rich compositors like **compton** and later **picom**, which offer additional effects and better performance.
 
+# INSTALL
+
+```apt: sudo apt install xcompmgr```
+
+```dnf: sudo dnf install xcompmgr```
+
+```pacman: sudo pacman -S xcompmgr```
+
+```zypper: sudo zypper install xcompmgr```
+
+```nix: nix profile install nixpkgs#xcompmgr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [picom](/man/picom)(1), [compton](/man/compton)(1), [transset](/man/transset)(1), [xwininfo](/man/xwininfo)(1)

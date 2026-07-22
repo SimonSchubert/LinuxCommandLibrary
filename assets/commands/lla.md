@@ -59,6 +59,14 @@ Some features like Git integration require a Git repository. Plugin ecosystem ex
 
 **lla** was created by **chaqchase** and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install lla```
+
+```nix: nix profile install nixpkgs#lla```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [eza](/man/eza)(1), [lsd](/man/lsd)(1)

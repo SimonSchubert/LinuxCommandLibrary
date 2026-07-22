@@ -66,6 +66,18 @@ Next-generation Zabbix monitoring agent
 
 **zabbix_agent2** is the next-generation Zabbix monitoring agent written in Go. Collects system metrics and sends them to Zabbix server. Supports plugins and concurrent checks.
 
+# INSTALL
+
+```apt: sudo apt install zabbix-agent2```
+
+```pacman: sudo pacman -S zabbix-agent2```
+
+```apk: sudo apk add zabbix-agent2```
+
+```zypper: sudo zypper install zabbix-agent2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zabbix_agentd](/man/zabbix_agentd)(1), [zabbix_get](/man/zabbix_get)(1), [zabbix_proxy](/man/zabbix_proxy)(1), [zabbix_server](/man/zabbix_server)(1)

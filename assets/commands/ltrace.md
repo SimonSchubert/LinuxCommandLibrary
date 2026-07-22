@@ -131,6 +131,22 @@ Intercepts and records dynamic library calls made by a process
 
 May significantly slow down traced programs. Not all library calls may be intercepted on all architectures. The **-w** option requires elfutils or libunwind support at compile time.
 
+# INSTALL
+
+```apt: sudo apt install ltrace```
+
+```dnf: sudo dnf install ltrace```
+
+```pacman: sudo pacman -S ltrace```
+
+```apk: sudo apk add ltrace```
+
+```zypper: sudo zypper install ltrace```
+
+```nix: nix profile install nixpkgs#ltrace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [strace](/man/strace)(1), [ldd](/man/ldd)(1), [gdb](/man/gdb)(1), [nm](/man/nm)(1), [objdump](/man/objdump)(1)

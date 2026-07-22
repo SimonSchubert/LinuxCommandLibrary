@@ -101,6 +101,20 @@ A daemon must be running for most subcommands; **ipfs init** must be called once
 
 **IPFS** was proposed by **Juan Benet** at **Protocol Labs** in a **2014** whitepaper. The first reference implementation in Go (later renamed **Kubo**) reached **0.4.0** in **2016** and **1.0.0** in **2023**. A Rust implementation (**iroh**) and a JavaScript implementation (**js-ipfs**, later **Helia**) followed.
 
+# INSTALL
+
+```pacman: sudo pacman -S kubo```
+
+```apk: sudo apk add kubo```
+
+```zypper: sudo zypper install kubo```
+
+```brew: brew install kubo```
+
+```nix: nix profile install nixpkgs#kubo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [wget](/man/wget)(1), [rsync](/man/rsync)(1)

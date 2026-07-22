@@ -42,6 +42,24 @@ Only reads PNM format files (PBM, PGM, PPM). For PAM files, use **pamfile** inst
 
 **pnmfile** was created as part of the **Netpbm** toolkit for image inspection. It has been largely superseded by **pamfile**.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamfile](/man/pamfile)(1), [file](/man/file)(1), [identify](/man/identify)(1), [pnmtopng](/man/pnmtopng)(1), [pnmtojpeg](/man/pnmtojpeg)(1)

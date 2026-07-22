@@ -95,6 +95,14 @@ curl -fsSL https://code-server.dev/install.sh | sh
 
 Default password in config file. Use TLS in production. Some extensions may not work in browser.
 
+# INSTALL
+
+```brew: brew install code-server```
+
+```nix: nix profile install nixpkgs#code-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [code](/man/code)(1), [vim](/man/vim)(1)

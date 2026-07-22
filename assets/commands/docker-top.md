@@ -42,6 +42,24 @@ The container must be running; stopped containers cannot be inspected with this 
 
 Process IDs shown are the host's PIDs, not the PIDs as seen from inside the container. The available **ps** options depend on the host's ps implementation (procps on Linux). Does not work on Windows containers in the same way.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-container-top](/man/docker-container-top)(1), [docker-ps](/man/docker-ps)(1), [docker-stats](/man/docker-stats)(1), [ps](/man/ps)(1), [top](/man/top)(1)

@@ -57,6 +57,14 @@ Detection accuracy depends entirely on which GStreamer plugins are installed. If
 
 **gst-typefind-1.0** is part of the **GStreamer** multimedia framework, originally created for the GNOME project. The **1.0** suffix was introduced with the GStreamer 1.0 release in **September 2012**, allowing parallel installation with the older 0.10 series. The typefind subsystem is a core part of GStreamer's architecture, enabling automatic media format detection across the framework.
 
+# INSTALL
+
+```apt: sudo apt install gstreamer1.0-tools```
+
+```apk: sudo apk add gstreamer-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gst-inspect-1.0](/man/gst-inspect-1.0)(1), [gst-launch-1.0](/man/gst-launch-1.0)(1), [file](/man/file)(1)

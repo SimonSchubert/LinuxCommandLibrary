@@ -70,6 +70,12 @@ Requires zone transfer access (often restricted). Domain name must end with trai
 
 dnswalk was written by **David Barr** in the early 1990s as a DNS debugging and maintenance tool. It remains useful for validating zone configurations and has been included in DNS administrator toolkits for decades.
 
+# INSTALL
+
+```aur: yay -S dnswalk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [nslookup](/man/nslookup)(1)

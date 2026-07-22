@@ -82,6 +82,24 @@ Only works under Wayland; use **xclip** or **xsel** for X11. The process must st
 
 Part of **wl-clipboard**, written by Sergey Bugaev for Wayland-native clipboard access. Provides equivalent functionality to X11 tools like xclip and xsel but uses the Wayland clipboard protocol.
 
+# INSTALL
+
+```apt: sudo apt install wl-clipboard```
+
+```dnf: sudo dnf install wl-clipboard```
+
+```pacman: sudo pacman -S wl-clipboard```
+
+```apk: sudo apk add wl-clipboard```
+
+```zypper: sudo zypper install wl-clipboard```
+
+```brew: brew install wl-clipboard```
+
+```nix: nix profile install nixpkgs#wl-clipboard```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wl-paste](/man/wl-paste)(1), [xclip](/man/xclip)(1), [xsel](/man/xsel)(1)

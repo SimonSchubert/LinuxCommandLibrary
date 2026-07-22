@@ -65,6 +65,11 @@ Requires installation and an alias in your shell config (the alias sources the s
 
 **bd** was created by Vigneshwaran Raveendran (vigneshwaranr) to simplify navigating up directory trees by name.
 
+# INSTALL
+
+```aur: yay -S bd```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [cd](/man/cd)(1), [pushd](/man/pushd)(1), [z](/man/z)(1)

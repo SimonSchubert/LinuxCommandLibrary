@@ -73,6 +73,24 @@ LLVM machine code playground
 
 Input for assembly mode is an assembly source file. Input for disassembly mode (**--disassemble**) is hex-encoded bytes, which can be piped from stdin. When no input file is given, stdin is read.
 
+# INSTALL
+
+```apt: sudo apt install llvm```
+
+```dnf: sudo dnf install llvm```
+
+```pacman: sudo pacman -S llvm```
+
+```apk: sudo apk add llvm```
+
+```zypper: sudo zypper install llvm```
+
+```brew: brew install llvm```
+
+```nix: nix profile install nixpkgs#llvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [llvm-as](/man/llvm-as)(1), [llvm-objdump](/man/llvm-objdump)(1), [as](/man/as)(1), [nasm](/man/nasm)(1), [objdump](/man/objdump)(1)

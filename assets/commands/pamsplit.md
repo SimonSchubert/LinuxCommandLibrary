@@ -49,6 +49,24 @@ The output pattern must contain exactly one **%d** specifier. Existing files at 
 
 **pamsplit** is part of the **Netpbm** package by Bryan Henderson and others, and supersedes the older **pnmsplit** utility from PBMplus.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamundice](/man/pamundice)(1), [pnmcat](/man/pnmcat)(1), [netpbm](/man/netpbm)(1)

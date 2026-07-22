@@ -28,6 +28,12 @@ MS Paint in your terminal
 
 **textual-paint** was created by **Isaiah Odhner** (1j01) and is written in **Python** using the Textual framework.
 
+# INSTALL
+
+```aur: yay -S textual-paint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chafa](/man/chafa)(1), [figlet](/man/figlet)(1)

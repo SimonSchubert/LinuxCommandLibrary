@@ -53,6 +53,24 @@ updates the working directory to a specific revision
 
 **hg update** (alias: **up**, **checkout**, **co**) updates the working directory to a specific revision. Without arguments, updates to the tip of the current branch. Can update to revisions, branches, tags, or bookmarks. Use **-C** to discard local changes or **-c** to abort if changes exist.
 
+# INSTALL
+
+```apt: sudo apt install mercurial```
+
+```dnf: sudo dnf install mercurial```
+
+```pacman: sudo pacman -S mercurial```
+
+```apk: sudo apk add mercurial```
+
+```zypper: sudo zypper install mercurial```
+
+```brew: brew install mercurial```
+
+```nix: nix profile install nixpkgs#mercurial```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hg](/man/hg)(1), [hg-pull](/man/hg-pull)(1), [hg-commit](/man/hg-commit)(1), [hg-status](/man/hg-status)(1)

@@ -79,6 +79,16 @@ Higher priority swap areas are used first. When areas have equal priority, they 
 
 **swapon** is part of the **util-linux** package. Swap space management has been a core part of Unix-like systems for managing virtual memory.
 
+# INSTALL
+
+```apt: sudo apt install mount```
+
+```apk: sudo apk add util-linux-misc```
+
+```nix: nix profile install nixpkgs#mount```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [swapoff](/man/swapoff)(8), [mkswap](/man/mkswap)(8), [fstab](/man/fstab)(5), [free](/man/free)(1)

@@ -97,6 +97,16 @@ Must be configured as Git's sequence editor via `git config --global sequence.ed
 
 **interactive-rebase-tool** was created to improve the git interactive rebase experience by providing a visual editor instead of editing todo files manually.
 
+# INSTALL
+
+```dnf: sudo dnf install git-interactive-rebase-tool```
+
+```brew: brew install git-interactive-rebase-tool```
+
+```nix: nix profile install nixpkgs#git-interactive-rebase-tool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-rebase](/man/git-rebase)(1), [git](/man/git)(1), [vim](/man/vim)(1)

@@ -52,6 +52,24 @@ The tool validates against the freedesktop.org specification, which may differ f
 
 desktop-file-validate is part of the **desktop-file-utils** package maintained by freedesktop.org. The Desktop Entry Specification was created to provide a standard format for application metadata across Linux desktop environments. The specification has evolved through multiple versions, with desktop-file-validate tracking these changes and providing deprecation warnings for outdated keys.
 
+# INSTALL
+
+```apt: sudo apt install desktop-file-utils```
+
+```dnf: sudo dnf install desktop-file-utils```
+
+```pacman: sudo pacman -S desktop-file-utils```
+
+```apk: sudo apk add desktop-file-utils```
+
+```zypper: sudo zypper install desktop-file-utils```
+
+```brew: brew install desktop-file-utils```
+
+```nix: nix profile install nixpkgs#desktop-file-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [update-desktop-database](/man/update-desktop-database)(1), [xdg-desktop-menu](/man/xdg-desktop-menu)(1)

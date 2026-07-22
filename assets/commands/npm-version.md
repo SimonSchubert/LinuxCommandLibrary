@@ -66,6 +66,16 @@ Creates git commit/tag by default. Working directory must be clean.
 
 npm version provides **semver version management** with git integration.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-publish](/man/npm-publish)(1), [semver](/man/semver)(1)

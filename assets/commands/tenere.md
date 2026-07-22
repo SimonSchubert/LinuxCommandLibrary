@@ -24,6 +24,14 @@ TUI interface for large language models
 
 **tenere** was created by **Badr** (pythops) and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install tenere```
+
+```nix: nix profile install nixpkgs#tenere```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aichat](/man/aichat)(1), [ollama](/man/ollama)(1), [oterm](/man/oterm)(1)

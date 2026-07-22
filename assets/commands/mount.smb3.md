@@ -93,6 +93,22 @@ For older SMB versions, use mount.cifs with the **vers=** option instead.
 
 Requires the cifs-utils package. Passwords on the command line are visible in process listings; use a credentials file instead. Kerberos authentication requires a valid keytab or ticket.
 
+# INSTALL
+
+```apt: sudo apt install cifs-utils```
+
+```dnf: sudo dnf install cifs-utils```
+
+```pacman: sudo pacman -S cifs-utils```
+
+```apk: sudo apk add cifs-utils```
+
+```zypper: sudo zypper install cifs-utils```
+
+```nix: nix profile install nixpkgs#cifs-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount.cifs](/man/mount.cifs)(8), [mount](/man/mount)(8), [umount](/man/umount)(8), [smbclient](/man/smbclient)(1), [fstab](/man/fstab)(5)

@@ -103,6 +103,18 @@ Slower than dd due to hashing overhead. Hash verification requires reading data 
 
 **dcfldd** was developed by **Nick Harbour** at the **Department of Defense Computer Forensics Laboratory** (DCFL) in the **early 2000s**. It was created to address the needs of forensic investigators who required verifiable, documented disk imaging capabilities. The tool became a standard in digital forensics training and practice.
 
+# INSTALL
+
+```apt: sudo apt install dcfldd```
+
+```dnf: sudo dnf install dcfldd```
+
+```brew: brew install dcfldd```
+
+```nix: nix profile install nixpkgs#dcfldd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dd](/man/dd)(1), [ddrescue](/man/ddrescue)(1), [md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1)

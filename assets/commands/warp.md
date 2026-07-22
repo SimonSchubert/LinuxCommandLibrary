@@ -28,6 +28,20 @@ Secure and simple terminal sharing
 
 **warp** was created by **spolu** and is written in **Go**.
 
+# INSTALL
+
+```apt: sudo apt install libghc-wai-app-static-dev```
+
+```pacman: sudo pacman -S warp```
+
+```apk: sudo apk add warp```
+
+```zypper: sudo zypper install warp```
+
+```nix: nix profile install nixpkgs#warp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [screen](/man/screen)(1)

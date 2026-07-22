@@ -81,6 +81,24 @@ Requires Go binaries with debug info (default). Some optimizations may affect de
 
 Delve was created by **Derek Parker** and released in **2014**. It was developed to provide Go developers with a debugger that understands Go's concurrency model and runtime, replacing GDB for most Go debugging tasks.
 
+# INSTALL
+
+```apt: sudo apt install delve```
+
+```dnf: sudo dnf install delve```
+
+```pacman: sudo pacman -S delve```
+
+```apk: sudo apk add delve```
+
+```zypper: sudo zypper install delve```
+
+```brew: brew install delve```
+
+```nix: nix profile install nixpkgs#delve```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [gdb](/man/gdb)(1)

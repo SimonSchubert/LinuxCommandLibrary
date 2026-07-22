@@ -37,6 +37,16 @@ measures timing overhead on the system
 
 Systems that are slow to collect timing data can give less accurate **EXPLAIN ANALYZE** results. Good results show most (>90%) individual timing calls taking less than one microsecond, with average per-loop overhead below 100 nanoseconds. Low overhead enables **track_io_timing** without significant performance impact.
 
+# INSTALL
+
+```dnf: sudo dnf install postgresql17```
+
+```apk: sudo apk add postgresql17```
+
+```zypper: sudo zypper install postgresql17```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_test_fsync](/man/pg_test_fsync)(1), [postgres](/man/postgres)(1)

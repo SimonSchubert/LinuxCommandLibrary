@@ -89,6 +89,24 @@ Linux-only (uses inotify kernel subsystem). There are limits on the number of wa
 
 inotifywait is part of inotify-tools, created to provide user-space access to Linux's inotify API, which was introduced in kernel 2.6.13 (**2005**). It replaced the older dnotify mechanism.
 
+# INSTALL
+
+```apt: sudo apt install inotify-tools```
+
+```dnf: sudo dnf install inotify-tools```
+
+```pacman: sudo pacman -S inotify-tools```
+
+```apk: sudo apk add inotify-tools```
+
+```zypper: sudo zypper install inotify-tools```
+
+```brew: brew install inotify-tools```
+
+```nix: nix profile install nixpkgs#inotify-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [entr](/man/entr)(1), [fswatch](/man/fswatch)(1), [fatrace](/man/fatrace)(1)

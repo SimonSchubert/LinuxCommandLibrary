@@ -26,6 +26,12 @@ The main commands are xbps-install for installing/updating, xbps-remove for remo
 
 Void Linux specific. Commands have different syntax from other package managers.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#xbps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xbps-install](/man/xbps-install)(1), [xbps-remove](/man/xbps-remove)(1), [xbps-query](/man/xbps-query)(1)

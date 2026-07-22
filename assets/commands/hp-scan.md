@@ -65,6 +65,20 @@ Part of HPLIP package. Some models need plugin. Requires scanner-capable device.
 
 hp-scan is part of **HPLIP** (HP Linux Imaging and Printing) for scanning on HP multifunction devices.
 
+# INSTALL
+
+```apt: sudo apt install hplip```
+
+```dnf: sudo dnf install hplip```
+
+```pacman: sudo pacman -S hplip```
+
+```zypper: sudo zypper install hplip```
+
+```nix: nix profile install nixpkgs#hplip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hp-setup](/man/hp-setup)(1), [scanimage](/man/scanimage)(1)

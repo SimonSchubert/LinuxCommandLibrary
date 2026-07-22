@@ -82,6 +82,22 @@ Some security researchers debate HAVEGE's entropy quality on virtualized or mode
 
 haveged was developed by Gary Wuertz based on the HAVEGE algorithm created by André Seznec and Nicolas Sendrier. It became popular for addressing entropy starvation on Linux servers and VMs.
 
+# INSTALL
+
+```apt: sudo apt install haveged```
+
+```dnf: sudo dnf install haveged```
+
+```pacman: sudo pacman -S haveged```
+
+```apk: sudo apk add haveged```
+
+```zypper: sudo zypper install haveged```
+
+```nix: nix profile install nixpkgs#haveged```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [random](/man/random)(4), [getrandom](/man/getrandom)(2)

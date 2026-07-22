@@ -74,6 +74,12 @@ The internal table is always named **tmp**. Results are sent to standard output 
 
 **qo** was created by **kiki-ki** and is written in **Go**. The project is hosted as **go-qo** on GitHub.
 
+# INSTALL
+
+```brew: brew install qo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [q](/man/q)(1), [miller](/man/miller)(1), [trdsql](/man/trdsql)(1), [sqlite3](/man/sqlite3)(1)

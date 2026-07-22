@@ -88,6 +88,14 @@ By default, Prowler scans every project accessible to the authenticated principa
 
 Requires valid GCP credentials with at least the _Viewer_ and _Security Reviewer_ roles on target projects. Some checks need additional APIs (Cloud Asset, Cloud Resource Manager, IAM) enabled. Rate limiting on large organizations may slow scans significantly.
 
+# INSTALL
+
+```brew: brew install prowler```
+
+```nix: nix profile install nixpkgs#prowler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [prowler](/man/prowler)(1), [prowler-aws](/man/prowler-aws)(1), [prowler-azure](/man/prowler-azure)(1), [prowler-kubernetes](/man/prowler-kubernetes)(1), [gcloud](/man/gcloud)(1)

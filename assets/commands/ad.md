@@ -68,6 +68,15 @@ Still in active development with breaking changes between versions. Limited docu
 
 **ad** was created by **Innes Anderson-Morrison** (sminez) as an experimental editor combining ideas from vim, kakoune, emacs, and Plan 9's acme. Written in Rust and released under the MIT license, it reached version 0.4.0 in December 2025.
 
+# INSTALL
+
+```aur: yay -S ad```
+
+```brew: brew install ad```
+
+```nix: nix profile install nixpkgs#ad```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [vim](/man/vim)(1), [kakoune](/man/kakoune)(1), [emacs](/man/emacs)(1)

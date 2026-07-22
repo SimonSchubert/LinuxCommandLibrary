@@ -64,6 +64,18 @@ Requires valid captured handshake. Only for authorized security testing. SSID-sp
 
 **cowpatty** was created by **Joshua Wright** around **2004** for WPA security research. It was one of the first public tools for WPA PSK auditing, demonstrating the importance of strong passphrases. The tool influenced subsequent wireless security tools like aircrack-ng.
 
+# INSTALL
+
+```apt: sudo apt install cowpatty```
+
+```dnf: sudo dnf install cowpatty```
+
+```pacman: sudo pacman -S cowpatty```
+
+```nix: nix profile install nixpkgs#cowpatty```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [genpmk](/man/genpmk)(1), [hashcat](/man/hashcat)(1), [wifite](/man/wifite)(1)

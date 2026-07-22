@@ -62,6 +62,20 @@ By default, all existing rules are flushed before restore. Use -n to add rules w
 
 **iptables-restore** is part of the **iptables** package for managing the Linux kernel firewall.
 
+# INSTALL
+
+```pacman: sudo pacman -S iptables```
+
+```apk: sudo apk add iptables```
+
+```zypper: sudo zypper install iptables```
+
+```brew: brew install iptables```
+
+```nix: nix profile install nixpkgs#iptables```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iptables](/man/iptables)(8), [iptables-save](/man/iptables-save)(8), [ip6tables-restore](/man/ip6tables-restore)(8)

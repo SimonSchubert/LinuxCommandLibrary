@@ -59,6 +59,24 @@ Hard links are directory entries pointing to the same inode. Deleting one name d
 - Running hardlink on active build or database directories can cause surprising results if files are being modified during the scan.
 - Some backup tools and version control systems do not expect hard links and may behave unexpectedly.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cp](/man/cp)(1), [ln](/man/ln)(1), [find](/man/find)(1), [fdupes](/man/fdupes)(1), [rdfind](/man/rdfind)(1)

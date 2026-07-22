@@ -96,6 +96,14 @@ Requires Docker or compatible container runtime. Configuration must follow Dev C
 
 The Dev Container CLI was released by **Microsoft** as part of the Dev Containers specification (**2022**). It extends the VS Code Dev Containers functionality to command-line workflows and other tools.
 
+# INSTALL
+
+```brew: brew install devcontainer```
+
+```nix: nix profile install nixpkgs#devcontainer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-compose](/man/docker-compose)(1), [code](/man/code)(1)

@@ -124,6 +124,16 @@ Best suited for prose, not code. Large files may be slow to process. Word bounda
 
 dwdiff was written by **G.P. Halkes** as an improved alternative to the older wdiff utility. It provides better handling of Unicode, color output, and more flexible word delimiting options.
 
+# INSTALL
+
+```apt: sudo apt install dwdiff```
+
+```brew: brew install dwdiff```
+
+```nix: nix profile install nixpkgs#dwdiff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wdiff](/man/wdiff)(1), [diff](/man/diff)(1), [colordiff](/man/colordiff)(1), [vimdiff](/man/vimdiff)(1)

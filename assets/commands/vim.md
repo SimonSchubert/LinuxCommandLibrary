@@ -131,6 +131,20 @@ If stuck with a frozen terminal after Ctrl+S (XOFF), press **Ctrl+Q** to resume.
 
 Vim was created by **Bram Moolenaar** and first released in **1991** as an improved clone of vi. Vi itself was created by Bill Joy in **1976**. Vim added features while maintaining vi compatibility, becoming one of the most popular text editors among developers.
 
+# INSTALL
+
+```pacman: sudo pacman -S gvim```
+
+```apk: sudo apk add gvim```
+
+```zypper: sudo zypper install gvim```
+
+```brew: brew install vim```
+
+```nix: nix profile install nixpkgs#vim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vi](/man/vi)(1), [nvim](/man/nvim)(1), [nano](/man/nano)(1), [emacs](/man/emacs)(1), [vimtutor](/man/vimtutor)(1)

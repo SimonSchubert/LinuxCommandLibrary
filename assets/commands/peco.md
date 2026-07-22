@@ -70,6 +70,18 @@ Requires a terminal for interactive use. Written in Go. Configuration can be cus
 
 peco was created as an **interactive grep** tool inspired by percol.
 
+# INSTALL
+
+```apt: sudo apt install peco```
+
+```pacman: sudo pacman -S peco```
+
+```brew: brew install peco```
+
+```nix: nix profile install nixpkgs#peco```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fzf](/man/fzf)(1), [percol](/man/percol)(1), [grep](/man/grep)(1)

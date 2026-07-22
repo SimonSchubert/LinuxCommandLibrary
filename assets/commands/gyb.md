@@ -78,6 +78,14 @@ Requires OAuth authorization. Rate limited by Gmail API. Large mailboxes take ti
 
 GYB was created by **Jay Lee** as an open-source Gmail backup tool, widely used for Google Workspace migrations.
 
+# INSTALL
+
+```brew: brew install gyb```
+
+```nix: nix profile install nixpkgs#gyb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [offlineimap](/man/offlineimap)(1), [mbsync](/man/mbsync)(1), [mutt](/man/mutt)(1)

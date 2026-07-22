@@ -48,6 +48,14 @@ MFA/2FA prompts appear interactively when required. See **icloudpd --help** for 
 
 Apple authentication and MFA flows change; keep the tool updated. Respect account security—prefer app-specific handling where documented. Large libraries need disk space and time.
 
+# INSTALL
+
+```brew: brew install icloudpd```
+
+```nix: nix profile install nixpkgs#icloudpd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rclone](/man/rclone)(1), [gphotos-uploader-cli](/man/gphotos-uploader-cli)(1)

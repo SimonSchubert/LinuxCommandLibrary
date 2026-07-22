@@ -120,6 +120,20 @@ Large sites with many pages may have noticeable build times, though Zola is gene
 
 **Zola** was created by **Vincent Prouillet** and originally named **Gutenberg**. It was renamed to Zola in **2018** (after Emile Zola). Written in Rust, it was designed as a single-binary alternative to static site generators like Hugo and Jekyll, emphasizing simplicity and build speed.
 
+# INSTALL
+
+```pacman: sudo pacman -S zola```
+
+```apk: sudo apk add zola```
+
+```zypper: sudo zypper install zola```
+
+```brew: brew install zola```
+
+```nix: nix profile install nixpkgs#zola```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hugo](/man/hugo)(1), [jekyll](/man/jekyll)(1), [mdbook](/man/mdbook)(1)

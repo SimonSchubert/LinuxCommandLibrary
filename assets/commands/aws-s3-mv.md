@@ -98,6 +98,17 @@ The source and destination can be a LocalPath or an S3Uri (s3://bucket-name/key)
 
 When using access point ARNs or aliases, ensure source and destination resolve to different buckets to prevent accidental self-deletion. Use **--validate-same-s3-paths** for safety. The source is only deleted after successful copy; if the copy fails, the source remains intact.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3-cp](/man/aws-s3-cp)(1), [aws-s3-rm](/man/aws-s3-rm)(1), [mv](/man/mv)(1)

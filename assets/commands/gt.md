@@ -111,6 +111,20 @@ _COMMAND_
 
 Requires root and a kernel built with USB gadget/configfs support (`CONFIGFS_FS`, `USB_CONFIGFS`, and the relevant function drivers); which function types are available depends on the running kernel. Mainly used on embedded boards and devices with a USB device-mode controller, not on typical desktop hardware.
 
+# INSTALL
+
+```apt: sudo apt install genometools```
+
+```dnf: sudo dnf install gt```
+
+```apk: sudo apk add gadget-tool```
+
+```brew: brew install genometools```
+
+```nix: nix profile install nixpkgs#gt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(8), [lsusb](/man/lsusb)(8), [modprobe](/man/modprobe)(8)

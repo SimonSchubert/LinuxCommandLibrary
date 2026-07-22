@@ -108,6 +108,17 @@ Vault password must be available during playbook runs. Encrypted files should be
 
 **ansible-vault** was introduced in Ansible 1.5 (**2014**) to address the need for secure handling of sensitive data in automation. Multiple vault passwords support was added in Ansible 2.4.
 
+# INSTALL
+
+```dnf: sudo dnf install ansible-core```
+
+```pacman: sudo pacman -S ansible-core```
+
+```apk: sudo apk add ansible-core```
+
+```zypper: sudo zypper install ansible-core```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ansible-playbook](/man/ansible-playbook)(1), [ansible](/man/ansible)(1), [gpg](/man/gpg)(1)

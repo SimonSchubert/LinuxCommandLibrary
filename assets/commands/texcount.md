@@ -66,6 +66,14 @@ LaTeX specific. Custom macros may confuse. Perl required.
 
 **TeXcount** was created to provide accurate word counts for LaTeX documents by properly parsing TeX syntax.
 
+# INSTALL
+
+```pacman: sudo pacman -S texlive-binextra```
+
+```apk: sudo apk add texlive-binextra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wc](/man/wc)(1), [latex](/man/latex)(1), [detex](/man/detex)(1)

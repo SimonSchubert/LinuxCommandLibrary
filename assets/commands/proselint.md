@@ -87,6 +87,16 @@ Style suggestions subjective. May flag intentional usage. English only. Some che
 
 **proselint** was created by **Amperser Labs** to bring code linting concepts to prose. It aggregates wisdom from editorial style guides into an automated checking tool, useful for writers, documentation, and content review.
 
+# INSTALL
+
+```dnf: sudo dnf install proselint```
+
+```brew: brew install proselint```
+
+```nix: nix profile install nixpkgs#proselint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vale](/man/vale)(1), [write-good](/man/write-good)(1), [aspell](/man/aspell)(1), [textlint](/man/textlint)(1), [hunspell](/man/hunspell)(1)

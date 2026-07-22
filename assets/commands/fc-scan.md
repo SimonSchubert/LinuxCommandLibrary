@@ -50,6 +50,24 @@ Does not update system font cache. Large directories may take time. Format strin
 
 fc-scan is part of **fontconfig**, providing batch font scanning capabilities. It complements fc-query for examining fonts without affecting the system font configuration.
 
+# INSTALL
+
+```apt: sudo apt install fontconfig```
+
+```dnf: sudo dnf install fontconfig```
+
+```pacman: sudo pacman -S fontconfig```
+
+```apk: sudo apk add fontconfig```
+
+```zypper: sudo zypper install fontconfig```
+
+```brew: brew install fontconfig```
+
+```nix: nix profile install nixpkgs#fontconfig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fc-query](/man/fc-query)(1), [fc-list](/man/fc-list)(1), [fc-cache](/man/fc-cache)(1)

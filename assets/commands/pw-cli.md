@@ -73,6 +73,16 @@ Requires running PipeWire daemon. Object IDs may change between sessions. For si
 
 **pw-cli** is part of **PipeWire**, the modern multimedia framework for Linux. It provides administrative capabilities similar to pactl for PulseAudio.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-tools```
+
+```zypper: sudo zypper install pipewire-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pw-top](/man/pw-top)(1), [pw-dump](/man/pw-dump)(1), [wpctl](/man/wpctl)(1), [pipewire](/man/pipewire)(1)

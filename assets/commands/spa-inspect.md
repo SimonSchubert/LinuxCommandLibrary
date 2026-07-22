@@ -39,6 +39,16 @@ Plugin paths vary by distribution and architecture (lib vs lib64). Some plugins 
 
 **spa-inspect** is part of **PipeWire**, developed by **Wim Taymans** at Red Hat. PipeWire was created starting around **2017** as a unified multimedia framework for Linux, combining the capabilities of PulseAudio and JACK. The SPA layer provides the plugin architecture that makes PipeWire modular and extensible.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-spa-tools```
+
+```zypper: sudo zypper install pipewire-spa-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [spa-acp-tool](/man/spa-acp-tool)(1), [pw-cli](/man/pw-cli)(1)

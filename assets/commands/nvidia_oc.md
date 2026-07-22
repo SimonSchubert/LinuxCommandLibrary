@@ -54,6 +54,12 @@ See **nvidia_oc --help** and **nvidia_oc set --help** for the full flag set of y
 
 Requires NVIDIA drivers and permissions to change device clocks (often root). Incorrect settings can crash the GPU/driver or reduce stability; raise values carefully. Manufacturer and OEM power limits may clamp your settings. Overclocking can void warranties and increase heat/power draw. Wayland/X11 session details still depend on driver support.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nvidia_oc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nvidia-smi](/man/nvidia-smi)(1), [nvidia-settings](/man/nvidia-settings)(1)

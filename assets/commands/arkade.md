@@ -62,6 +62,15 @@ Marketplace CLI to install developer tools and Kubernetes apps
 
 Downloading binaries from the internet requires trust in upstream release artifacts. Kubernetes installs need a working kubeconfig. Keep **$HOME/.arkade/bin** on your PATH.
 
+# INSTALL
+
+```zypper: sudo zypper install arkade```
+
+```brew: brew install arkade```
+
+```nix: nix profile install nixpkgs#arkade```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [helm](/man/helm)(1), [kind](/man/kind)(1)

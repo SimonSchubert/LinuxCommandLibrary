@@ -114,6 +114,15 @@ Direct invocation is rarely needed; use apache2ctl or systemctl. Configuration t
 
 Apache HTTP Server originated from NCSA HTTPd patches in **1995**, with "Apache" reportedly meaning "A Patchy Server." It has dominated the web server market for decades.
 
+# INSTALL
+
+```apt: sudo apt install apache2-bin```
+
+```zypper: sudo zypper install apache2```
+
+```brew: brew install apache2```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apache2ctl](/man/apache2ctl)(8), [apachectl](/man/apachectl)(8), [nginx](/man/nginx)(8)

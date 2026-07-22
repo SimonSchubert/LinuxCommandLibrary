@@ -70,6 +70,11 @@ Requires X11; Wayland is not currently supported. Needs a system tray or appindi
 
 **AutoKey** was originally created by **Chris Olsen** around **2008** as a Linux equivalent to text expansion tools available on other platforms. The project has been community-maintained since 2018 under the autokey GitHub organization. It provides TextExpander-like functionality for Linux users who need text expansion and keyboard automation.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#autokey```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [xdotool](/man/xdotool)(1), [xclip](/man/xclip)(1), [espanso](/man/espanso)(1)

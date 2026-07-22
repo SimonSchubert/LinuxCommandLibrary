@@ -89,6 +89,14 @@ subscribe to gNMI streaming telemetry
 
 **gnmic sub** (or **subscribe**) sends a gNMI Subscribe RPC to network devices for streaming telemetry. It supports multiple subscription modes: **once** (immediate single response), **poll** (on-demand), and **stream** (continuous updates). Stream mode supports **sample** (periodic), **on_change** (event-driven), and **target_defined** delivery.
 
+# INSTALL
+
+```brew: brew install gnmic```
+
+```nix: nix profile install nixpkgs#gnmic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnmic](/man/gnmic)(1), [gnmic-get](/man/gnmic-get)(1), [gnmic-set](/man/gnmic-set)(1)

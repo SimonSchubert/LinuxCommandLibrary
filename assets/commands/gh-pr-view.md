@@ -65,6 +65,24 @@ Markdown rendering is simplified for terminal. Large PRs may be truncated. JSON 
 
 gh pr view is part of **GitHub CLI's** pull request commands, providing terminal-based PR inspection as an alternative to the web interface.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh-pr](/man/gh-pr)(1), [gh-pr-checks](/man/gh-pr-checks)(1), [gh-issue](/man/gh-issue)(1)

@@ -73,6 +73,16 @@ Some keybindings differ from less. May require adjustment for users accustomed t
 
 **ov** was created by **Noboru Saito** (noborus) and is written in **Go**.
 
+# INSTALL
+
+```dnf: sudo dnf install ov```
+
+```brew: brew install ov```
+
+```nix: nix profile install nixpkgs#ov```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [more](/man/more)(1), [bat](/man/bat)(1)

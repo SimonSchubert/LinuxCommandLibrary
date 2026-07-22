@@ -122,6 +122,20 @@ Hard linking only works on the same filesystem. Automatic deletion (-dN) with mu
 
 **jdupes** was created by Jody Bruchon starting around **2015** as an enhanced fork of fdupes. The primary goals were improved performance and additional features while maintaining compatibility. The name combines "Jody's" with "dupes." It has become a popular choice for duplicate management, available in most Linux distribution repositories.
 
+# INSTALL
+
+```apt: sudo apt install jdupes```
+
+```dnf: sudo dnf install jdupes```
+
+```zypper: sudo zypper install jdupes```
+
+```brew: brew install jdupes```
+
+```nix: nix profile install nixpkgs#jdupes```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fdupes](/man/fdupes)(1), [rdfind](/man/rdfind)(1), [duperemove](/man/duperemove)(8), [rmlint](/man/rmlint)(1)

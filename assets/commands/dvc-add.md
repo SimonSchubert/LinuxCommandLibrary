@@ -42,6 +42,14 @@ The .dvc file contains the hash and path information needed to retrieve the orig
 
 This two-file approach allows Git to track data versions (via .dvc file) without storing the actual large files in the repository. The cached data can then be pushed to remote storage for team sharing. Directories are tracked recursively with a single .dvc file tracking all contents.
 
+# INSTALL
+
+```brew: brew install dvc```
+
+```nix: nix profile install nixpkgs#dvc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 

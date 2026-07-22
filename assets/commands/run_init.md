@@ -46,6 +46,12 @@ Requires SELinux to be enabled. User must have permission to transition to the i
 
 Part of **policycoreutils**, providing SELinux management tools for proper context handling.
 
+# INSTALL
+
+```apt: sudo apt install newrole```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [runcon](/man/runcon)(1), [semanage](/man/semanage)(8), [systemctl](/man/systemctl)(1)

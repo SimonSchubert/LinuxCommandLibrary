@@ -86,6 +86,14 @@ Every key must be present or the file is ignored. Run **tidy-viewer --help** for
 
 Multiple unrelated tools share the short name **tv**. This entry documents the Rust **tidy-viewer** binary. Partial config files are silently ignored.
 
+# INSTALL
+
+```brew: brew install tidy-viewer```
+
+```nix: nix profile install nixpkgs#tidy-viewer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tv](/man/tv)(1), [column](/man/column)(1), [csvlook](/man/csvlook)(1), [miller](/man/miller)(1)

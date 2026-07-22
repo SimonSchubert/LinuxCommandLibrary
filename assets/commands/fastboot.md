@@ -92,6 +92,14 @@ Device must be in fastboot mode. Wrong images can brick device. Unlocking bootlo
 
 **fastboot** is part of Android SDK platform tools, developed by **Google**. It emerged with Android's development in the late **2000s** as a standard way to flash devices. The protocol allows manufacturers to customize behavior while maintaining compatibility.
 
+# INSTALL
+
+```apt: sudo apt install fastboot```
+
+```apk: sudo apk add android-tools-fastboot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [adb](/man/adb)(1)

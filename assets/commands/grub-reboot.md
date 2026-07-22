@@ -58,6 +58,20 @@ Requires **GRUB_DEFAULT=saved** in /etc/default/grub and a subsequent **grub-mkc
 
 grub-reboot is part of GRUB 2, providing the "boot once" functionality that was present in GRUB Legacy. It enables safe testing of alternative boot configurations with automatic fallback.
 
+# INSTALL
+
+```apt: sudo apt install grub2-common```
+
+```dnf: sudo dnf install grub2-common```
+
+```pacman: sudo pacman -S grub```
+
+```apk: sudo apk add grub```
+
+```zypper: sudo zypper install grub2-common```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub-set-default](/man/grub-set-default)(8), [grub-mkconfig](/man/grub-mkconfig)(8), [grub-editenv](/man/grub-editenv)(1)

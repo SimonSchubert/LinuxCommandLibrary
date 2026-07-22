@@ -20,6 +20,24 @@ The output includes both .flf font files and .flc control files, showing the com
 
 figlist is particularly useful when exploring different text banner styles or writing scripts that need to verify font availability before rendering.
 
+# INSTALL
+
+```apt: sudo apt install figlet```
+
+```dnf: sudo dnf install figlet```
+
+```pacman: sudo pacman -S figlet```
+
+```apk: sudo apk add figlet```
+
+```zypper: sudo zypper install figlet```
+
+```brew: brew install figlet```
+
+```nix: nix profile install nixpkgs#figlet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [figlet](/man/figlet)(6), [showfigfonts](/man/showfigfonts)(6)

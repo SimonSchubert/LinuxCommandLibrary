@@ -85,6 +85,24 @@ MD5 is cryptographically broken and vulnerable to collision attacks. Not suitabl
 
 **md5sum** is part of **GNU coreutils**, implementing the MD5 algorithm designed by **Ronald Rivest** in **1991**. MD5 was widely used for file verification until cryptographic weaknesses were demonstrated in **2004-2005**. While still commonly used for non-security checksums, SHA-2 family hashes are recommended for security applications.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sha256sum](/man/sha256sum)(1), [sha1sum](/man/sha1sum)(1), [cksum](/man/cksum)(1), [b2sum](/man/b2sum)(1)

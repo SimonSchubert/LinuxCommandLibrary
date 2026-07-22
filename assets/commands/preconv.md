@@ -48,6 +48,24 @@ Groff preprocessor. Usually called automatically.
 
 preconv was created as a **groff preprocessor** for encoding conversion.
 
+# INSTALL
+
+```apt: sudo apt install groff-base```
+
+```dnf: sudo dnf install groff-base```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [troff](/man/troff)(1), [iconv](/man/iconv)(1)

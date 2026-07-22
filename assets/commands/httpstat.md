@@ -38,6 +38,14 @@ Relies on curl being installed on the system. Some curl options (-w, -D, -o, -s,
 
 **httpstat** was created by **Reorx** and is written in **Python** as a single-file script with no dependencies. It quickly became popular and inspired implementations in **Go**, **Rust**, and **Nim**. The Go version by **Dave Cheney** is a standalone binary that does not require curl.
 
+# INSTALL
+
+```brew: brew install httpstat```
+
+```nix: nix profile install nixpkgs#httpstat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [wget](/man/wget)(1)

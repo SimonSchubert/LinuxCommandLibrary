@@ -80,6 +80,22 @@ Affects outgoing traffic only. For bidirectional control, configure on both ends
 
 **tc** is part of **iproute2**, the Linux networking toolkit, providing advanced traffic shaping and network emulation.
 
+# INSTALL
+
+```apt: sudo apt install iproute2```
+
+```pacman: sudo pacman -S iproute2```
+
+```apk: sudo apk add iproute2-tc```
+
+```zypper: sudo zypper install iproute2```
+
+```brew: brew install iproute2```
+
+```nix: nix profile install nixpkgs#iproute2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip](/man/ip)(8), [ethtool](/man/ethtool)(8)

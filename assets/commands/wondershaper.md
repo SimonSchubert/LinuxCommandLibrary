@@ -52,6 +52,14 @@ Root required. Script around tc. Values in kbps.
 
 **wondershaper** was created as a simple script to limit network bandwidth using Linux traffic control.
 
+# INSTALL
+
+```dnf: sudo dnf install wondershaper```
+
+```zypper: sudo zypper install wondershaper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tc](/man/tc)(8), [iptables](/man/iptables)(8), [trickle](/man/trickle)(1)

@@ -94,6 +94,24 @@ Plumbing command. Usually invoked by other commands. Can overwrite index state.
 
 git read-tree is a core **Git** plumbing command implementing index manipulation, used internally by checkout, merge, and other commands.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-write-tree](/man/git-write-tree)(1), [git-ls-tree](/man/git-ls-tree)(1), [git-checkout](/man/git-checkout)(1), [git-merge](/man/git-merge)(1)

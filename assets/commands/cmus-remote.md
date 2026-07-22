@@ -102,6 +102,22 @@ Requires running cmus instance. Socket permissions must allow connection. Some c
 
 **cmus-remote** is part of the **cmus** project, created by **Timo Hirvonen** in **2005**. It provides scriptable control for the terminal-based music player, enabling integration with window managers, status bars, and multimedia keyboards.
 
+# INSTALL
+
+```apt: sudo apt install cmus```
+
+```pacman: sudo pacman -S cmus```
+
+```apk: sudo apk add cmus```
+
+```zypper: sudo zypper install cmus```
+
+```brew: brew install cmus```
+
+```nix: nix profile install nixpkgs#cmus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmus](/man/cmus)(1), [mpd](/man/mpd)(1), [mpc](/man/mpc)(1), [playerctl](/man/playerctl)(1)

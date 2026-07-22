@@ -79,6 +79,14 @@ The CLI requires Node.js. For production builds, always use **--minify** to redu
 
 Tailwind CSS was created by **Adam Wathan** and first released in **November 2017**. Version 4 (2024) introduced significant performance improvements with the @tailwindcss/cli package. The framework popularized the utility-first approach to CSS.
 
+# INSTALL
+
+```brew: brew install tailwindcss```
+
+```nix: nix profile install nixpkgs#tailwindcss```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [postcss](/man/postcss)(1), [sass](/man/sass)(1), [npm](/man/npm)(1)

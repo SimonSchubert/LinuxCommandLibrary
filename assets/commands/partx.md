@@ -74,6 +74,24 @@ Requires root privileges. Modifying kernel partition state for mounted filesyste
 
 Part of **util-linux**, the standard Linux utility collection. Provides lower-level control over kernel partition awareness compared to **partprobe**, which is typically sufficient for most use cases.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add partx```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [partprobe](/man/partprobe)(8), [fdisk](/man/fdisk)(8), [parted](/man/parted)(8), [blkid](/man/blkid)(8), [lsblk](/man/lsblk)(8)

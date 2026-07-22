@@ -100,6 +100,12 @@ Requires Vault access. Authentication needed. Permissions vary.
 
 **safe** was created by Stark & Wayne as a user-friendly CLI for HashiCorp Vault, simplifying secret management operations.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#safe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vault](/man/vault)(1), [pass](/man/pass)(1), [aws](/man/aws)(1)

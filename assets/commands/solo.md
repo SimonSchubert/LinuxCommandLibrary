@@ -81,6 +81,12 @@ Solo key required. USB connection needed. Python based.
 
 **solo** is the CLI tool for **Solo** FIDO2 security keys, providing open-source hardware authentication.
 
+# INSTALL
+
+```apk: sudo apk add py3-solo1```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fido2-token](/man/fido2-token)(1), [ykman](/man/ykman)(1), [gpg](/man/gpg)(1)

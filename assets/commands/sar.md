@@ -109,6 +109,22 @@ Without interval, sar reads from system activity data files. Data is collected b
 
 **sar** is part of the **sysstat** package, originally from System V Unix. It provides comprehensive system activity reporting and historical data analysis.
 
+# INSTALL
+
+```dnf: sudo dnf install sysstat```
+
+```pacman: sudo pacman -S sysstat```
+
+```apk: sudo apk add sysstat```
+
+```zypper: sudo zypper install sysstat```
+
+```brew: brew install sysstat```
+
+```nix: nix profile install nixpkgs#sysstat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iostat](/man/iostat)(1), [mpstat](/man/mpstat)(1), [pidstat](/man/pidstat)(1), [sadc](/man/sadc)(8)

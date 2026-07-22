@@ -119,6 +119,12 @@ Requires Java to run. Large messages need sufficiently large cover images. JPEG 
 
 OpenStego was created by **Samir Vaidya** as an open-source steganography application supporting multiple algorithms.
 
+# INSTALL
+
+```aur: yay -S openstego```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [steghide](/man/steghide)(1), [outguess](/man/outguess)(1), [stegsnow](/man/stegsnow)(1)

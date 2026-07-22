@@ -96,6 +96,15 @@ Active enumeration generates significant DNS traffic and may be detected. Many d
 
 **amass** was created by Jeff Foley and became an official OWASP project. It gained widespread adoption in the security community for reconnaissance and bug bounty hunting.
 
+# INSTALL
+
+```aur: yay -S amass```
+
+```brew: brew install amass```
+
+```nix: nix profile install nixpkgs#amass```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [subfinder](/man/subfinder)(1), [dnsenum](/man/dnsenum)(1), [nmap](/man/nmap)(1)

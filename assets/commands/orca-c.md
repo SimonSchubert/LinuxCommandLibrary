@@ -52,6 +52,12 @@ Terminal-based interface. Requires MIDI setup. Unique programming paradigm.
 
 Orca was created by **Hundred Rabbits** as an esoteric livecoding environment.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#orca-c```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [supercollider](/man/supercollider)(1)

@@ -47,6 +47,22 @@ The symlinks are created based on the [Install] section of the unit file, typica
 
 Requires root privileges for system units. Enabling does not start the unit; combine with **--now** or use **systemctl start** separately. Masked units cannot be enabled without **--force**.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-disable](/man/systemctl-disable)(1), [systemctl-start](/man/systemctl-start)(1)

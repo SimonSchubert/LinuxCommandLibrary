@@ -88,6 +88,19 @@ Requires appropriate permissions in AD to create computer accounts. Firewall rul
 
 **adcli** was developed by Stef Walter at Red Hat, first released around **2012**. It was created to provide a lightweight alternative to Samba for AD domain joining, suitable for modern Linux enterprise deployments.
 
+# INSTALL
+
+```apt: sudo apt install adcli```
+
+```dnf: sudo dnf install adcli```
+
+```aur: yay -S adcli```
+
+```zypper: sudo zypper install adcli```
+
+```nix: nix profile install nixpkgs#adcli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [kinit](/man/kinit)(1), [net](/man/net)(8)

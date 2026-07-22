@@ -45,6 +45,20 @@ Destructive and irreversible. Requires authentication and the **delete_repo** sc
 
 hub delete is part of **hub**, GitHub's original CLI for repository management.
 
+# INSTALL
+
+```apt: sudo apt install hub```
+
+```pacman: sudo pacman -S hub```
+
+```zypper: sudo zypper install hub```
+
+```brew: brew install hub```
+
+```nix: nix profile install nixpkgs#hub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hub](/man/hub)(1), [gh](/man/gh)(1), [hub-create](/man/hub-create)(1)

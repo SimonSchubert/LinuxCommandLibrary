@@ -22,6 +22,15 @@ Display Alire version and build information.
 
 Alire is a source package manager for Ada/SPARK projects, providing dependency management and build process automation.
 
+# INSTALL
+
+```apt: sudo apt install alire```
+
+```aur: yay -S alire```
+
+```nix: nix profile install nixpkgs#alire```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [alr](/man/alr)(1), [alr-help](/man/alr-help)(1)

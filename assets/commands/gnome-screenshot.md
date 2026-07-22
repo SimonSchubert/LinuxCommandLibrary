@@ -83,6 +83,22 @@ Border effect functionality is deprecated and defaults to "none". **gnome-screen
 
 **gnome-screenshot** is part of the GNOME desktop environment, providing a simple screenshot utility for capturing screen content.
 
+# INSTALL
+
+```apt: sudo apt install gnome-screenshot```
+
+```dnf: sudo dnf install gnome-screenshot```
+
+```pacman: sudo pacman -S gnome-screenshot```
+
+```apk: sudo apk add gnome-screenshot```
+
+```zypper: sudo zypper install gnome-screenshot```
+
+```nix: nix profile install nixpkgs#gnome-screenshot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scrot](/man/scrot)(1), [import](/man/import)(1)

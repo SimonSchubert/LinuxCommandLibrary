@@ -42,6 +42,14 @@ Since Vivaldi is Chromium-based, it accepts most Chromium command-line switches.
 
 Not fully open source: the UI layer is proprietary while the Chromium base is open source. Some Chromium features may behave differently due to Vivaldi modifications.
 
+# INSTALL
+
+```pacman: sudo pacman -S vivaldi```
+
+```nix: nix profile install nixpkgs#vivaldi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chromium](/man/chromium)(1), [google-chrome](/man/google-chrome)(1), [firefox](/man/firefox)(1), [brave](/man/brave)(1)

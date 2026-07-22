@@ -56,6 +56,16 @@ Disabling swap requires enough RAM to hold all swapped-out pages. If there is in
 
 **swapoff** is part of the **util-linux** package. It is the counterpart to swapon for disabling swap space.
 
+# INSTALL
+
+```apt: sudo apt install mount```
+
+```apk: sudo apk add util-linux-misc```
+
+```nix: nix profile install nixpkgs#mount```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [swapon](/man/swapon)(8), [mkswap](/man/mkswap)(8), [free](/man/free)(1)

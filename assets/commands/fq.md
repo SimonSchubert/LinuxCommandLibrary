@@ -79,6 +79,20 @@ Large files may consume significant memory. Some formats have incomplete support
 
 **fq** was created by **Mattias Wadman** and first released in **2021**, bringing the power of jq to binary data and making it easier to inspect and understand binary file formats without specialized tools.
 
+# INSTALL
+
+```apt: sudo apt install fq```
+
+```pacman: sudo pacman -S fq```
+
+```zypper: sudo zypper install fq```
+
+```brew: brew install fq```
+
+```nix: nix profile install nixpkgs#fq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [xxd](/man/xxd)(1), [hexdump](/man/hexdump)(1), [binwalk](/man/binwalk)(1)

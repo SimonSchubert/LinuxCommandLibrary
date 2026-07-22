@@ -77,3 +77,9 @@ A missing **fi** is usually reported at the end of the file rather than at the r
 ```[Documentation](https://www.gnu.org/software/bash/manual/bash.html#Conditional-Constructs)```
 
 <!-- verified: 2026-07-16 -->
+
+# INSTALL
+
+```aur: yay -S fi```
+
+<!-- packages: 2026-07-22 -->

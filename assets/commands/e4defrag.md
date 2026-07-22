@@ -49,6 +49,24 @@ _target_
 
 ext4 only: the kernel's EXT4_IOC_MOVE_EXT ioctl is what does the work, so ext2/ext3 filesystems are rejected. The target filesystem must be mounted, since e4defrag operates online. Defragmentation needs free contiguous space, so it is largely ineffective on nearly full filesystems. Files with a fragmentation score under 30 are already considered fine and are left alone.
 
+# INSTALL
+
+```apt: sudo apt install e2fsprogs```
+
+```dnf: sudo dnf install e2fsprogs```
+
+```pacman: sudo pacman -S e2fsprogs```
+
+```apk: sudo apk add e2fsprogs-extra```
+
+```zypper: sudo zypper install e2fsprogs```
+
+```brew: brew install e2fsprogs```
+
+```nix: nix profile install nixpkgs#e2fsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [e2freefrag](/man/e2freefrag)(8), [e2fsck](/man/e2fsck)(8), [filefrag](/man/filefrag)(8)

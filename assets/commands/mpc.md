@@ -138,6 +138,22 @@ Requires a running MPD instance. The client does not play audio itself. Connecti
 
 mpc was created as the reference **command-line client** for the Music Player Daemon project.
 
+# INSTALL
+
+```apt: sudo apt install mpc```
+
+```dnf: sudo dnf install mpc```
+
+```pacman: sudo pacman -S mpc```
+
+```apk: sudo apk add mpc```
+
+```brew: brew install mpc```
+
+```nix: nix profile install nixpkgs#mpc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpd](/man/mpd)(1), [ncmpcpp](/man/ncmpcpp)(1), [mpv](/man/mpv)(1)

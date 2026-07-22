@@ -55,6 +55,24 @@ Not all filesystems support all operations. The collapse operation requires file
 
 **fallocate** is a Linux-specific utility that uses the fallocate() system call introduced in kernel 2.6.23.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [truncate](/man/truncate)(1), [dd](/man/dd)(1), [fstrim](/man/fstrim)(8)

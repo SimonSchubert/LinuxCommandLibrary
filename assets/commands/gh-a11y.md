@@ -56,6 +56,24 @@ Accessibility features were introduced as a **public preview** in GitHub CLI v2.
 
 GitHub CLI accessibility features were announced in **May 2025** as a public preview, with **gh accessibility** (and its **gh a11y** alias) added to surface the available settings.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh-accessibility](/man/gh-accessibility)(1), [gh](/man/gh)(1), [gh-config](/man/gh-config)(1)

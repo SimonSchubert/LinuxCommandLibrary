@@ -137,6 +137,22 @@ Password cracking is CPU/GPU intensive and generates significant heat. Only use 
 
 Hashcat was created by **Jens Steube** (atom) with the first version released in **2009**. Originally closed-source, it became open-source in **December 2015**. The project evolved from CPU-only (hashcat-legacy) to GPU-accelerated (oclHashcat) and eventually unified as hashcat supporting multiple platforms. It became the world's fastest password recovery tool, pioneering techniques like rule-based attacks and optimized GPU kernels.
 
+# INSTALL
+
+```apt: sudo apt install hashcat```
+
+```dnf: sudo dnf install hashcat```
+
+```pacman: sudo pacman -S hashcat```
+
+```zypper: sudo zypper install hashcat```
+
+```brew: brew install hashcat```
+
+```nix: nix profile install nixpkgs#hashcat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [john](/man/john)(1), [hydra](/man/hydra)(1), [ophcrack](/man/ophcrack)(1), [aircrack-ng](/man/aircrack-ng)(1)

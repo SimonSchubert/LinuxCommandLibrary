@@ -50,6 +50,22 @@ Cannot update partitions that are in use or mounted. The kernel may refuse to up
 
 **partprobe** is part of the **parted** package, providing partition table synchronization with the kernel.
 
+# INSTALL
+
+```apt: sudo apt install parted```
+
+```dnf: sudo dnf install parted```
+
+```pacman: sudo pacman -S parted```
+
+```apk: sudo apk add parted```
+
+```zypper: sudo zypper install parted```
+
+```nix: nix profile install nixpkgs#parted```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [parted](/man/parted)(8), [fdisk](/man/fdisk)(8), [lsblk](/man/lsblk)(8)

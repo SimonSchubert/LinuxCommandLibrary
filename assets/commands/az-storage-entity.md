@@ -120,6 +120,19 @@ This command works with both Azure Storage accounts and Azure Cosmos DB Table AP
 
 Requires Azure CLI and valid storage credentials. Property types are limited to the Edm type system. Queries return up to 1000 entities per request; use `--marker` for pagination. The PartitionKey and RowKey may be up to 64KB each.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az-storage-table](/man/az-storage-table)(1), [az-storage-queue](/man/az-storage-queue)(1), [az](/man/az)(1)

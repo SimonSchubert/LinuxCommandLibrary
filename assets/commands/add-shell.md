@@ -35,6 +35,19 @@ Requires root privileges. The shell executable must exist and be valid. Not avai
 
 **add-shell** is part of the Debian packaging utilities, created to provide safe manipulation of /etc/shells during package installation scripts.
 
+# INSTALL
+
+```apt: sudo apt install debianutils```
+
+```aur: yay -S debianutils```
+
+```zypper: sudo zypper install debianutils```
+
+```brew: brew install debianutils```
+
+```nix: nix profile install nixpkgs#debianutils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [chsh](/man/chsh)(1)

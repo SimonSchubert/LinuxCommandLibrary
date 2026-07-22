@@ -78,6 +78,14 @@ Requires Type 1 or bitmap fonts to be installed. Some modern TeX workflows use p
 
 dvips was written by **Tomas Rokicki** in the late **1980s** and has been a standard part of TeX distributions since. It remains widely used despite direct PDF generation becoming more common. The program is maintained as part of TeX Live.
 
+# INSTALL
+
+```apt: sudo apt install texlive-binaries```
+
+```apk: sudo apk add texlive-dvi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [latex](/man/latex)(1), [ps2pdf](/man/ps2pdf)(1), [pdflatex](/man/pdflatex)(1), [tex](/man/tex)(1)

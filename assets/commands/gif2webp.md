@@ -58,6 +58,20 @@ Lossy compression may introduce artifacts, especially in images with sharp edges
 
 gif2webp is part of the WebP project developed by Google. WebP was announced in **2010** as a new image format for the web, offering both lossy and lossless compression. The animated WebP format was added later to provide an alternative to animated GIFs.
 
+# INSTALL
+
+```apt: sudo apt install webp```
+
+```dnf: sudo dnf install libwebp-tools```
+
+```apk: sudo apk add libwebp-tools```
+
+```zypper: sudo zypper install libwebp-tools```
+
+```brew: brew install webp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cwebp](/man/cwebp)(1), [dwebp](/man/dwebp)(1), [convert](/man/convert)(1)

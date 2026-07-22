@@ -137,6 +137,22 @@ dracut was started around **2008** by Harald Hoyer and others at Red Hat to repl
 
 In **March 2024** development moved to **dracut-ng**, a coordinated fork involving the previous maintainer along with several distributions, after the original repository stalled. dracut-ng is where releases now come from, and distributions have followed it.
 
+# INSTALL
+
+```apt: sudo apt install dracut-core```
+
+```dnf: sudo dnf install dracut```
+
+```pacman: sudo pacman -S dracut```
+
+```apk: sudo apk add dracut-core```
+
+```zypper: sudo zypper install dracut```
+
+```nix: nix profile install nixpkgs#dracut```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkinitramfs](/man/mkinitramfs)(8), [lsinitrd](/man/lsinitrd)(1), [update-initramfs](/man/update-initramfs)(8), [mkinitcpio](/man/mkinitcpio)(8)

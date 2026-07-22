@@ -99,6 +99,22 @@ Setting the console keymap with set-keymap automatically updates the X11 keymap 
 
 **localectl** is part of **systemd**, providing unified locale and keymap management through systemd-localed.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [locale](/man/locale)(1), [loadkeys](/man/loadkeys)(1)

@@ -67,6 +67,14 @@ Terminal size should match original recording for proper display. Playback assum
 
 **ttyplay** was developed alongside ttyrec as a derivative of the BSD script command with enhanced timing precision. It became popular in the NetHack and roguelike gaming communities for sharing gameplay sessions, where precise timing adds to the viewing experience.
 
+# INSTALL
+
+```apt: sudo apt install ttyrec```
+
+```brew: brew install ttyrec```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ttyrec](/man/ttyrec)(1), [ttytime](/man/ttytime)(1), [script](/man/script)(1), [asciinema](/man/asciinema)(1)

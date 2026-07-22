@@ -110,6 +110,18 @@ The source file must be available for decoding unless the delta was created with
 
 **xdelta3** is the third version of xdelta, implementing RFC 3284 VCDIFF. It provides efficient binary delta compression.
 
+# INSTALL
+
+```apt: sudo apt install xdelta3```
+
+```pacman: sudo pacman -S xdelta3```
+
+```apk: sudo apk add xdelta3```
+
+```zypper: sudo zypper install xdelta3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdelta](/man/xdelta)(1), [bsdiff](/man/bsdiff)(1), [diff](/man/diff)(1), [patch](/man/patch)(1), [gzip](/man/gzip)(1)

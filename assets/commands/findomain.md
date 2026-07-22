@@ -80,6 +80,16 @@ API keys needed for some sources. Results depend on available data. Does not per
 
 **findomain** was created by **Eduard Tolosa** as a fast subdomain enumeration tool. Written in Rust for performance, it emerged as an alternative to tools like Sublist3r and Amass. The project focuses on speed and reliability in passive reconnaissance.
 
+# INSTALL
+
+```pacman: sudo pacman -S findomain```
+
+```brew: brew install findomain```
+
+```nix: nix profile install nixpkgs#findomain```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [amass](/man/amass)(1), [subfinder](/man/subfinder)(1), [sublist3r](/man/sublist3r)(1), [dnsx](/man/dnsx)(1)

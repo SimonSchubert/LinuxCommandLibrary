@@ -44,6 +44,18 @@ Only works with PulseAudio (not PipeWire without compatibility layer). The comma
 
 **pasuspender** is part of the **PulseAudio** sound system developed by **Lennart Poettering** and the freedesktop.org community. It addresses the common need to temporarily bypass the sound server for applications requiring direct hardware access.
 
+# INSTALL
+
+```apt: sudo apt install pulseaudio-utils```
+
+```dnf: sudo dnf install pulseaudio-utils```
+
+```apk: sudo apk add pulseaudio-utils```
+
+```zypper: sudo zypper install pulseaudio-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulseaudio](/man/pulseaudio)(1), [pactl](/man/pactl)(1), [jackd](/man/jackd)(1)

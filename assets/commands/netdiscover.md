@@ -66,6 +66,16 @@ Requires root. Local network only. May trigger IDS alerts.
 
 netdiscover was created for **network reconnaissance** and discovering hosts on local networks.
 
+# INSTALL
+
+```apt: sudo apt install netdiscover```
+
+```zypper: sudo zypper install netdiscover```
+
+```nix: nix profile install nixpkgs#netdiscover```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [arp-scan](/man/arp-scan)(1), [nmap](/man/nmap)(1), [arping](/man/arping)(1)

@@ -125,6 +125,22 @@ High concurrency levels can overwhelm target servers and may constitute a denial
 
 **siege** was created by **Jeffrey Fulmer** (JoeDog) and first released around **2000**. It was designed to help web developers measure their code's performance under load. The tool has been actively maintained and updated to support modern HTTP features including HTTPS and HTTP/1.1.
 
+# INSTALL
+
+```apt: sudo apt install siege```
+
+```dnf: sudo dnf install siege```
+
+```pacman: sudo pacman -S siege```
+
+```zypper: sudo zypper install siege```
+
+```brew: brew install siege```
+
+```nix: nix profile install nixpkgs#siege```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ab](/man/ab)(1), [wrk](/man/wrk)(1), [curl](/man/curl)(1), [hey](/man/hey)(1), [vegeta](/man/vegeta)(1)

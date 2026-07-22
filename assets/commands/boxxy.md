@@ -77,6 +77,14 @@ Rules in boxxy.yaml include:
 
 Requires Linux namespaces support (Linux kernel). Rules must specify mode when the target is a file, especially if the target doesn't exist yet. Project-local boxxy.yaml files and .env files can be loaded automatically.
 
+# INSTALL
+
+```pacman: sudo pacman -S boxxy```
+
+```nix: nix profile install nixpkgs#boxxy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [firejail](/man/firejail)(1), [bwrap](/man/bwrap)(1), [unshare](/man/unshare)(1)

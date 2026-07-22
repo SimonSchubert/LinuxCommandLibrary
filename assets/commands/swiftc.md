@@ -112,6 +112,12 @@ swiftc requires the Swift toolchain to be installed. On macOS, it is included wi
 
 Swift was announced by **Apple** at WWDC **2014** and open-sourced in **December 2015**. The compiler was initially written in C++, with ongoing efforts to rewrite components in Swift itself. Swift 6 added major concurrency and safety improvements.
 
+# INSTALL
+
+```apt: sudo apt install swiftlang```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [swift](/man/swift)(1), [clang](/man/clang)(1), [xcodebuild](/man/xcodebuild)(1), [lldb](/man/lldb)(1)

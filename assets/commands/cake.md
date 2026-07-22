@@ -80,6 +80,12 @@ dotnet tool install Cake.Tool
 
 Requires .NET SDK installed. By convention, executes build.cake in current directory. Supports MSBuild, .NET CLI, NuGet, and many other tools through addins.
 
+# INSTALL
+
+```brew: brew install cake```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dotnet](/man/dotnet)(1), [msbuild](/man/msbuild)(1), [make](/man/make)(1)

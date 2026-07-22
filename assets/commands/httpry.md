@@ -83,6 +83,18 @@ Live capture requires root (or appropriate capabilities) to open the network int
 
 httpry was created by **Jason Bittel** around **2005** as a lightweight, purpose-built alternative to general packet sniffers for logging HTTP traffic. It later moved to GitHub under jbittel/httpry.
 
+# INSTALL
+
+```apt: sudo apt install httpry```
+
+```dnf: sudo dnf install httpry```
+
+```apk: sudo apk add httpry```
+
+```brew: brew install httpry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [httpflow](/man/httpflow)(1), [ngrep](/man/ngrep)(1)

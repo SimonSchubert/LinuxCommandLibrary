@@ -96,6 +96,16 @@ Keys are prompted interactively by default and must be entered twice for encrypt
 
 Using -K on command line exposes key in process list. Use -k with keyfile or stdin for security. Based on AES/Rijndael cipher.
 
+# INSTALL
+
+```apt: sudo apt install ccrypt```
+
+```brew: brew install ccrypt```
+
+```nix: nix profile install nixpkgs#ccrypt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [openssl](/man/openssl)(1), [age](/man/age)(1)

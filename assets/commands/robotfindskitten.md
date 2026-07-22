@@ -39,6 +39,18 @@ The point of the game is the journey, not the destination. There is no score, no
 
 **robotfindskitten** was created by **Leonard Richardson** in **1997**. It has become a beloved classic in hacker culture, with ports to over 100 platforms.
 
+# INSTALL
+
+```dnf: sudo dnf install robotfindskitten```
+
+```pacman: sudo pacman -S robotfindskitten```
+
+```brew: brew install robotfindskitten```
+
+```nix: nix profile install nixpkgs#robotfindskitten```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [adventure](/man/adventure)(6), [wump](/man/wump)(6)

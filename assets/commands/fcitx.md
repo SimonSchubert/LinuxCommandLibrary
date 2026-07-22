@@ -72,6 +72,14 @@ Requires environment variables set correctly. May conflict with other input fram
 
 fcitx was created by **Yuking** in 2002 as a Chinese input method for Linux. It evolved into a general-purpose input method framework, with **fcitx5** being the modern rewrite with improved architecture.
 
+# INSTALL
+
+```apt: sudo apt install fcitx-bin```
+
+```dnf: sudo dnf install fcitx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fcitx5](/man/fcitx5)(1), [ibus](/man/ibus)(1)

@@ -45,6 +45,19 @@ Does not revoke tokens on Azure side, only removes local cache. Service principa
 
 **az logout** has been available since Azure CLI 2.0 in **2017** as the companion to az login for credential management.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az-login](/man/az-login)(1), [az-account](/man/az-account)(1), [az](/man/az)(1)

@@ -101,6 +101,21 @@ SIF files require significant disk space and are immutable once built. Modificat
 
 Apptainer originated as **Singularity**, created in **2015** by Gregory Kurtzer at Lawrence Berkeley National Laboratory. In **2021**, the Linux Foundation adopted the project and rebranded it as Apptainer to ensure vendor-neutral governance. The project has become the de facto standard for container computing in HPC environments.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [singularity](/man/singularity)(1), [docker](/man/docker)(1), [podman](/man/podman)(1), [buildah](/man/buildah)(1)

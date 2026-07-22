@@ -121,6 +121,22 @@ Being small means being selective: the cipher and key-exchange lists are shorter
 
 **dropbear** was written by **Matt Johnston** and first released in **2003**, when the alternative on a small device was either no SSH at all or a painfully stripped OpenSSH. It quickly became standard in embedded Linux, and OpenWrt's adoption made it, by installed count, one of the most widely deployed SSH servers in existence, running on millions of routers whose owners have never heard of it.
 
+# INSTALL
+
+```apt: sudo apt install dropbear-bin```
+
+```dnf: sudo dnf install dropbear```
+
+```pacman: sudo pacman -S dropbear```
+
+```apk: sudo apk add dropbear```
+
+```brew: brew install dropbear```
+
+```nix: nix profile install nixpkgs#dropbear```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dbclient](/man/dbclient)(1), [dropbearkey](/man/dropbearkey)(1), [dropbearconvert](/man/dropbearconvert)(1), [sshd](/man/sshd)(8), [ssh](/man/ssh)(1), [scp](/man/scp)(1)

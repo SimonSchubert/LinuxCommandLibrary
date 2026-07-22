@@ -62,6 +62,18 @@ Requires root privileges for loading and unloading kernel modules. Only works on
 
 **kmon** was created by **Orhun Parmaksız** (orhun) and is written in **Rust**. It aims to be a standard tool for Linux kernel management while supporting most Linux distributions.
 
+# INSTALL
+
+```apt: sudo apt install kmon```
+
+```pacman: sudo pacman -S kmon```
+
+```apk: sudo apk add kmon```
+
+```nix: nix profile install nixpkgs#kmon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsmod](/man/lsmod)(8), [modprobe](/man/modprobe)(8), [modinfo](/man/modinfo)(8)

@@ -66,6 +66,20 @@ Does not support shell parameter expansion features like **${VAR:-default}** or 
 
 **envsubst** is part of GNU **gettext**, the internationalization toolkit. While gettext is primarily for software translation, envsubst became widely adopted as a general-purpose template tool, particularly in the DevOps community for configuration management. It's available on virtually all Unix-like systems as part of the gettext-base package.
 
+# INSTALL
+
+```apt: sudo apt install gettext-base```
+
+```dnf: sudo dnf install gettext-envsubst```
+
+```apk: sudo apk add gettext-envsubst```
+
+```zypper: sudo zypper install envsubst```
+
+```nix: nix profile install nixpkgs#envsubst```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gettext](/man/gettext)(1), [sed](/man/sed)(1), [awk](/man/awk)(1), [env](/man/env)(1), [export](/man/export)(1)

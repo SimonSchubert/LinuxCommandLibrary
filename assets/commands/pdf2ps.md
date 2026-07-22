@@ -78,6 +78,24 @@ Output files can be large. Level affects compatibility. Consider pdftops from Po
 
 pdf2ps is part of **Ghostscript**, the PostScript/PDF interpreter originally developed by **Artifex Software**.
 
+# INSTALL
+
+```apt: sudo apt install ghostscript```
+
+```dnf: sudo dnf install ghostscript```
+
+```pacman: sudo pacman -S ghostscript```
+
+```apk: sudo apk add ghostscript```
+
+```zypper: sudo zypper install ghostscript```
+
+```brew: brew install ghostscript```
+
+```nix: nix profile install nixpkgs#ghostscript```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdftops](/man/pdftops)(1), [ps2pdf](/man/ps2pdf)(1), [gs](/man/gs)(1), [lpr](/man/lpr)(1), [pdftotext](/man/pdftotext)(1), [enscript](/man/enscript)(1)

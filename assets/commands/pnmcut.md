@@ -77,6 +77,24 @@ Superseded by pamcut with more features. Negative coordinates cut from opposite 
 
 pnmcut is part of **Netpbm** by **Jef Poskanzer**, providing basic cropping functionality.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamcut](/man/pamcut)(1), [pnmpaste](/man/pnmpaste)(1), [pnmcrop](/man/pnmcrop)(1), [netpbm](/man/netpbm)(1)

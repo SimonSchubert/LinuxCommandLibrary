@@ -110,6 +110,12 @@ Worktrees created with **--worktree** persist on disk after the agent exits. Cle
 
 **paseo** is a recent project (first public releases in 2026) from the **getpaseo** team, released under the **AGPL-3.0** license. It emerged alongside the broader trend of multi-agent coding workflows, aiming to provide one interface, one history, and one daemon for users who run Claude Code, Codex, Copilot, OpenCode, and Pi side by side.
 
+# INSTALL
+
+```aur: yay -S paseo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1), [codex](/man/codex)(1), [copilot](/man/copilot)(1), [git-worktree](/man/git-worktree)(1)

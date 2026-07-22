@@ -93,6 +93,18 @@ This is an experimental feature introduced in Poetry 2.1.0 and behavior may chan
 
 Requires Poetry 2.1.0 or later. This is an experimental feature. The install subcommand downloads from the Python Standalone Builds project and only manages versions installed by Poetry itself.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [poetry-env](/man/poetry-env)(1), [python](/man/python)(1), [python3](/man/python3)(1), [pip](/man/pip)(1)

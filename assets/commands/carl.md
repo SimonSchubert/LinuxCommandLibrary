@@ -81,6 +81,14 @@ Carl can display single months, multiple months, full years, and highlight the c
 
 iCal support covers basic events but may not handle all recurrence rules or complex calendar features. Color output requires a terminal with ANSI color support.
 
+# INSTALL
+
+```brew: brew install carl```
+
+```nix: nix profile install nixpkgs#carl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cal](/man/cal)(1), [calcurse](/man/calcurse)(1), [calcure](/man/calcure)(1)

@@ -93,6 +93,24 @@ Requires root or appropriate capabilities for live capture. Only matches against
 
 ngrep was created to provide **grep-like** functionality for network packet inspection.
 
+# INSTALL
+
+```apt: sudo apt install ngrep```
+
+```dnf: sudo dnf install ngrep```
+
+```pacman: sudo pacman -S ngrep```
+
+```apk: sudo apk add ngrep```
+
+```zypper: sudo zypper install ngrep```
+
+```brew: brew install ngrep```
+
+```nix: nix profile install nixpkgs#ngrep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [grep](/man/grep)(1), [wireshark](/man/wireshark)(1)

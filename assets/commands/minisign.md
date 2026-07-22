@@ -101,6 +101,24 @@ Not compatible with GPG. Signing only (no encryption). Simple by design.
 
 Minisign was created by **Frank Denis** as a dead-simple tool for signing files.
 
+# INSTALL
+
+```apt: sudo apt install minisign```
+
+```dnf: sudo dnf install minisign```
+
+```pacman: sudo pacman -S minisign```
+
+```apk: sudo apk add minisign```
+
+```zypper: sudo zypper install minisign```
+
+```brew: brew install minisign```
+
+```nix: nix profile install nixpkgs#minisign```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [age](/man/age)(1), [ssh-keygen](/man/ssh-keygen)(1)

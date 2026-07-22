@@ -65,6 +65,24 @@ Without --cached, deletes file from disk. Removal needs to be committed. Use --c
 
 git rm is a core **Git** command for removing files from version control, complementing git add.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-add](/man/git-add)(1), [git-mv](/man/git-mv)(1), [rm](/man/rm)(1)

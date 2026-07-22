@@ -10,6 +10,12 @@ View documentation for the original command
 
 ```tldr setarch```
 
+# INSTALL
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [setarch](/man/setarch)(8)

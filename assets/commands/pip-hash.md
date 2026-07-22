@@ -29,6 +29,12 @@ Compute hash digests of package archives
 
 **pip hash** computes hash digests of package archives. Outputs hashes in a format suitable for requirements files with hash-checking mode. Supports SHA256, SHA384, and SHA512 algorithms.
 
+# INSTALL
+
+```apk: sudo apk add py3-pip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [pip-download](/man/pip-download)(1)

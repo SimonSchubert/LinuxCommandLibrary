@@ -108,6 +108,18 @@ Hurl files use a custom format that is not compatible with curl command syntax d
 
 **hurl** was created by **Orange-OpenSource** (the French telecommunications company) and first released on GitHub in **August 2020**. Written in Rust with libcurl as its HTTP engine, it has grown to over 18,000 GitHub stars and is actively maintained.
 
+# INSTALL
+
+```pacman: sudo pacman -S hurl```
+
+```zypper: sudo zypper install hurl```
+
+```brew: brew install hurl```
+
+```nix: nix profile install nixpkgs#hurl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [wget](/man/wget)(1), [httpie](/man/httpie)(1)

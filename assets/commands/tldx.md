@@ -48,6 +48,14 @@ Fast domain name availability research tool
 
 **tldx** was created by **Brandon Young** (brandonyoungdev) and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install tldx```
+
+```nix: nix profile install nixpkgs#tldx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [whois](/man/whois)(1), [dog](/man/dog)(1), [dig](/man/dig)(1)

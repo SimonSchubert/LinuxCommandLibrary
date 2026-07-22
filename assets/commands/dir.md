@@ -93,6 +93,24 @@ Equivalent to **ls -C -b**. GNU coreutils specific; not available on all Unix sy
 
 **dir** is part of **GNU coreutils**, written by Richard M. Stallman and David MacKenzie. It provides consistent columnar output with escaped special characters regardless of output destination.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [vdir](/man/vdir)(1), [tree](/man/tree)(1), [find](/man/find)(1)

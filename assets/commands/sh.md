@@ -112,6 +112,24 @@ The **-e** option can cause unexpected exits. Commands in conditions (if, while)
 
 Different systems link /bin/sh to different implementations (dash, bash, ksh). Test scripts on target systems or use explicit interpreters.
 
+# INSTALL
+
+```apt: sudo apt install dash```
+
+```dnf: sudo dnf install dash```
+
+```pacman: sudo pacman -S dash```
+
+```apk: sudo apk add busybox-binsh```
+
+```zypper: sudo zypper install dash```
+
+```brew: brew install dash```
+
+```nix: nix profile install nixpkgs#dash```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [dash](/man/dash)(1), [zsh](/man/zsh)(1), [ksh](/man/ksh)(1), [csh](/man/csh)(1)

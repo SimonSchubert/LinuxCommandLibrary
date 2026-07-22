@@ -58,6 +58,24 @@ Not all ABC features may translate perfectly to LilyPond. Complex ABC constructs
 
 **abc2ly** was developed as part of the LilyPond project by Han-Wen Nienhuys, Laura Conrad, and Roy Rankin. It has been included with LilyPond distributions since the early days of the project, providing a bridge between the simpler ABC notation popular in folk music communities and LilyPond's professional engraving system.
 
+# INSTALL
+
+```apt: sudo apt install lilypond```
+
+```dnf: sudo dnf install lilypond```
+
+```pacman: sudo pacman -S lilypond```
+
+```apk: sudo apk add lilypond```
+
+```zypper: sudo zypper install lilypond```
+
+```brew: brew install lilypond```
+
+```nix: nix profile install nixpkgs#lilypond```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lilypond](/man/lilypond)(1)

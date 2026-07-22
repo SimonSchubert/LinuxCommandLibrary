@@ -51,6 +51,22 @@ Requires a RADIUS server and the radiusclient library. The plugin (radius.so) mu
 
 pppd-radius was created for **RADIUS authentication** integration with PPP.
 
+# INSTALL
+
+```apt: sudo apt install ppp```
+
+```dnf: sudo dnf install ppp```
+
+```pacman: sudo pacman -S ppp```
+
+```apk: sudo apk add ppp-daemon```
+
+```zypper: sudo zypper install ppp```
+
+```nix: nix profile install nixpkgs#ppp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pppd](/man/pppd)(8), [radiusd](/man/radiusd)(8)

@@ -65,6 +65,16 @@ Terminal UI only. Configuration file uses TOML format (default: $XDG_CONFIG_HOME
 
 **wuzz** was created by **asciimoo** as an interactive command-line HTTP inspection tool, written in Go. Available at https://github.com/asciimoo/wuzz.
 
+# INSTALL
+
+```apt: sudo apt install wuzz```
+
+```apk: sudo apk add wuzz```
+
+```nix: nix profile install nixpkgs#wuzz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [httpie](/man/httpie)(1), [postman](/man/postman)(1)

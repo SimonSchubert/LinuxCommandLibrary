@@ -59,6 +59,16 @@ Under active development with expected breaking changes. Not recommended for wri
 
 **rainfrog** was created by **achristmascarl** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S rainfrog```
+
+```brew: brew install rainfrog```
+
+```nix: nix profile install nixpkgs#rainfrog```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [psql](/man/psql)(1), [lazysql](/man/lazysql)(1), [mycli](/man/mycli)(1)

@@ -59,6 +59,24 @@ Find common ancestor commits for a merge
 
 The `--fork-point` option finds where a branch diverged from an upstream branch, taking the reflog into account to handle history rewrites (e.g., after upstream rebase). The `--is-ancestor` option checks if one commit is an ancestor of another, which is useful in scripts for determining commit relationships. The `--independent` option filters a set of commits to only those not reachable from others. For octopus merges (merging more than two branches), the `--octopus` option computes a common base for multiple commits simultaneously.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [git-rebase](/man/git-rebase)(1), [git-log](/man/git-log)(1), [git-branch](/man/git-branch)(1), [git-show-branch](/man/git-show-branch)(1)

@@ -55,6 +55,12 @@ The --device mode formats the entire USB drive. The --partition mode preserves e
 
 Device mode erases all data on the USB drive. Requires sufficient USB drive size. UEFI boot may require FAT32 filesystem. Some Windows ISOs may not work correctly.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#woeusb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dd](/man/dd)(1), [ventoy](/man/ventoy)(8)

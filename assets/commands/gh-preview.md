@@ -62,6 +62,24 @@ Install with: **gh extension install yusukebe/gh-markdown-preview**.
 
 Requires the GitHub CLI (**gh**) and an internet connection for the GitHub Markdown API. The rendered output depends on GitHub's API availability. This is a community extension, not a built-in gh command.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [glow](/man/glow)(1)

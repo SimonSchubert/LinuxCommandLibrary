@@ -66,6 +66,22 @@ The visualizer supports multiple audio backends including ALSA, PulseAudio, Pipe
 
 Requires audio capture permissions. Different audio backends need corresponding dev libraries. Works best with music playback.
 
+# INSTALL
+
+```apt: sudo apt install cava```
+
+```dnf: sudo dnf install cava```
+
+```pacman: sudo pacman -S cava```
+
+```zypper: sudo zypper install cava```
+
+```brew: brew install cava```
+
+```nix: nix profile install nixpkgs#cava```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [alsamixer](/man/alsamixer)(1), [pavucontrol](/man/pavucontrol)(1)

@@ -83,6 +83,23 @@ Not encryption (easily reversible). Increases size by ~33%. Line wrapping can ca
 
 **base64** has been part of GNU coreutils since version **6.0** (2006), implementing the base64 encoding standardized in RFC 4648 (2006).
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add base64```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [base32](/man/base32)(1), [basenc](/man/basenc)(1), [b2sum](/man/b2sum)(1), [openssl](/man/openssl)(1)

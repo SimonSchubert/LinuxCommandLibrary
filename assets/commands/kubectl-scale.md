@@ -44,6 +44,20 @@ sets a new size for a deployment, replica set, or replication controller
 
 The command supports a precondition flag (--current-replicas) that causes the scaling operation to fail if the current number of replicas does not match the expected value, which is useful for preventing race conditions in automated workflows. You can also scale resources defined in manifest files and apply the operation to multiple resources in a single invocation.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-autoscale](/man/kubectl-autoscale)(1)

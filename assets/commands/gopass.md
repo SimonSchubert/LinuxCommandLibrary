@@ -97,9 +97,25 @@ Requires GPG key setup. Git configuration needed for sync. Clipboard cleared aft
 
 **gopass** was created as a pass-compatible password manager written in Go, adding features for team use and better secrets management. It emerged around **2017** as organizations needed shared password management with GPG encryption.
 
+# INSTALL
+
+```dnf: sudo dnf install gopass```
+
+```pacman: sudo pacman -S gopass```
+
+```apk: sudo apk add gopass```
+
+```zypper: sudo zypper install gopass```
+
+```brew: brew install gopass```
+
+```nix: nix profile install nixpkgs#gopass```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
-[pass](/man/pass)(1), [gpg](/man/gpg)(1), [git](/man/git)(1), [1password](/man/1password)(1)
+[pass](/man/pass)(1), [gpg](/man/gpg)(1), [git](/man/git)(1), [op](/man/op)(1)
 
 # RESOURCES
 

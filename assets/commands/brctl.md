@@ -72,6 +72,20 @@ brctl is deprecated in favor of the ip and bridge commands from iproute2. Interf
 
 **brctl** is part of the **bridge-utils** package, being replaced by the iproute2 bridge command.
 
+# INSTALL
+
+```apt: sudo apt install bridge-utils```
+
+```dnf: sudo dnf install bridge-utils```
+
+```apk: sudo apk add bridge-utils```
+
+```zypper: sudo zypper install bridge-utils```
+
+```nix: nix profile install nixpkgs#bridge-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bridge](/man/bridge)(8), [ip](/man/ip)(8), [ifconfig](/man/ifconfig)(8), [iptables](/man/iptables)(8)

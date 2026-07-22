@@ -69,6 +69,14 @@ Requires FFmpeg and LaTeX. Rendering can be slow. Python knowledge needed.
 
 Manim was created by **Grant Sanderson** (3Blue1Brown) for his mathematical explanation videos on YouTube.
 
+# INSTALL
+
+```brew: brew install manim```
+
+```nix: nix profile install nixpkgs#manim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [pdflatex](/man/pdflatex)(1), [python](/man/python)(1)

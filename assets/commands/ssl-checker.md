@@ -63,6 +63,12 @@ Collect and analyze SSL/TLS certificate information
 
 **ssl-checker** was created by **narbehaj** and is written in **Python**.
 
+# INSTALL
+
+```aur: yay -S ssl-checker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [testssl](/man/testssl)(1)

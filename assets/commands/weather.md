@@ -44,6 +44,22 @@ Many builds require an API key from a weather data provider (originally Dark Sky
 
 Upstream weather APIs change frequently; keys, quotas, and endpoints may break older binaries. Prefer a maintained package for your distribution. Not related to GNOME Weather GUI.
 
+# INSTALL
+
+```dnf: sudo dnf install expect```
+
+```pacman: sudo pacman -S expect```
+
+```apk: sudo apk add expect```
+
+```zypper: sudo zypper install expect```
+
+```brew: brew install expect```
+
+```nix: nix profile install nixpkgs#expect```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [ansiweather](/man/ansiweather)(1), [wttr](/man/wttr)(1)

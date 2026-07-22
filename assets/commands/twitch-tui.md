@@ -60,6 +60,14 @@ Configuration is managed through a TOML config file generated on first run. The 
 
 **twitch-tui** was created by **Xithrius** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S twitch-tui```
+
+```nix: nix profile install nixpkgs#twitch-tui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [streamlink](/man/streamlink)(1), [irssi](/man/irssi)(1), [weechat](/man/weechat)(1)

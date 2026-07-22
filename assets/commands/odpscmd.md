@@ -58,6 +58,12 @@ Requires Java. Legacy tool name. Use odps for newer CLI.
 
 odpscmd was the original **MaxCompute CLI** for Alibaba Cloud data processing.
 
+# INSTALL
+
+```aur: yay -S odpscmd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [odps](/man/odps)(1), [odpscmd-tunnel](/man/odpscmd-tunnel)(1)

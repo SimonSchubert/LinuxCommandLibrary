@@ -88,6 +88,12 @@ Requires a publicly reachable server. Each exposed service needs its own proxy e
 
 **frp** was created by **fatedier** as an open source alternative to commercial reverse proxy services. Written in Go, it provides self-hosted tunneling for developers and system administrators.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#frp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [frpc](/man/frpc)(1), [frps](/man/frps)(1), [ngrok](/man/ngrok)(1)

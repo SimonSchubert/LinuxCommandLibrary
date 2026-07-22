@@ -43,6 +43,14 @@ This is analogous to git commit but for DVC-tracked data: it records that you in
 
 Use dvc commit after editing data files, adding content to tracked directories, or replacing tracked files. The updated .dvc file can then be committed to Git, creating a new data version in your project history.
 
+# INSTALL
+
+```brew: brew install dvc```
+
+```nix: nix profile install nixpkgs#dvc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dvc-add](/man/dvc-add)(1)

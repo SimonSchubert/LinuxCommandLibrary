@@ -60,6 +60,14 @@ Modifying capabilities requires root privileges. Capabilities are cleared when a
 
 **setcap** is part of **libcap**, implementing POSIX 1003.1e capabilities on Linux.
 
+# INSTALL
+
+```apt: sudo apt install libcap2-bin```
+
+```apk: sudo apk add libcap-setcap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [getcap](/man/getcap)(8), [capabilities](/man/capabilities)(7)

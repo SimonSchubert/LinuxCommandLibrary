@@ -34,6 +34,24 @@ _label_
 
 FAT labels limited to 11 characters. Requires unmounted filesystem for writing. Part of dosfstools package.
 
+# INSTALL
+
+```apt: sudo apt install dosfstools```
+
+```dnf: sudo dnf install dosfstools```
+
+```pacman: sudo pacman -S dosfstools```
+
+```apk: sudo apk add dosfstools```
+
+```zypper: sudo zypper install dosfstools```
+
+```brew: brew install dosfstools```
+
+```nix: nix profile install nixpkgs#dosfstools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dosfslabel](/man/dosfslabel)(8), [e2label](/man/e2label)(8), [mlabel](/man/mlabel)(1)

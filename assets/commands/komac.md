@@ -59,6 +59,14 @@ community Manifest Creator for WinGet
 
 Requires a classic GitHub token with public_repo scope to submit pull requests. Fine-grained tokens may not work for PR creation.
 
+# INSTALL
+
+```brew: brew install komac```
+
+```nix: nix profile install nixpkgs#komac```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [brew](/man/brew)(1)

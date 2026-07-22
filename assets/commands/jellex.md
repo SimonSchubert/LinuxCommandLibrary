@@ -41,6 +41,12 @@ Requires Python and the jello library. Uses Python syntax rather than jq syntax,
 
 **jellex** was created by **Kelly Brazil** (kellyjonbrazil) and is written in **Python**. It builds on the author's **jello** CLI tool, adding an interactive TUI layer for exploration.
 
+# INSTALL
+
+```aur: yay -S jellex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [jello](/man/jello)(1), [fx](/man/fx)(1), [jaq](/man/jaq)(1)

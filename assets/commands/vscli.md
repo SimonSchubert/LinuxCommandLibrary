@@ -74,6 +74,12 @@ CLI/TUI for launching VS Code dev containers
 
 **vscli** was created by **michidk** and is written in **Rust**. It can be installed via Cargo, Homebrew, Chocolatey, or winget.
 
+# INSTALL
+
+```brew: brew install vscli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [code](/man/code)(1)

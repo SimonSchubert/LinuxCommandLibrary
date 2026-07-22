@@ -55,6 +55,22 @@ Requires root privileges. Results depend on device availability. Cache updates m
 
 **pvscan** is part of **LVM2** (Logical Volume Manager). It provides physical volume discovery functionality essential for dynamic LVM management.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pvs](/man/pvs)(8), [pvdisplay](/man/pvdisplay)(8), [vgscan](/man/vgscan)(8), [lvscan](/man/lvscan)(8)

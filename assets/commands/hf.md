@@ -154,6 +154,12 @@ Some features require a Hugging Face Pro subscription or organization membership
 
 The Hugging Face Hub CLI was introduced as part of the **huggingface_hub** Python package to provide programmatic access to the model repository. In **July 2025**, the CLI was renamed from **huggingface-cli** to **hf** for brevity, with commands reorganized into a clearer **resource action** structure. The legacy command remains functional with deprecation warnings.
 
+# INSTALL
+
+```brew: brew install hf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ollama](/man/ollama)(1), [git-lfs](/man/git-lfs)(1), [docker](/man/docker)(1)

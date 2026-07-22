@@ -79,6 +79,16 @@ Defaults to "node server.js" if no script defined. Use -- to pass arguments. Exi
 
 npm start was established as the conventional entry point for Node.js applications, becoming a de facto standard.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-run-script](/man/npm-run-script)(1), [npm-test](/man/npm-test)(1)

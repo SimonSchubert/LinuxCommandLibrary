@@ -87,6 +87,18 @@ Requires Python 3.8+. Uses its own virtual environments.
 
 Poetry was created as a **modern Python** dependency management solution.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [pipenv](/man/pipenv)(1), [python](/man/python)(1)

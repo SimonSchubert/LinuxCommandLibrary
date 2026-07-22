@@ -52,6 +52,12 @@ manages PlatformIO development platforms
 
 **pio platform** manages PlatformIO development platforms. Platforms provide toolchains, frameworks, and board definitions for specific microcontroller families like ESP32, STM32, or AVR.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-boards](/man/pio-boards)(1), [pio-init](/man/pio-init)(1)

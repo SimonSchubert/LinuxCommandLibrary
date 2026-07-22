@@ -37,6 +37,16 @@ Warts is scamper's native binary format for storing measurement results such as 
 
 Multiple input files may be specified; they are processed in order. Input can also be read from stdin via a pipe, which is useful for decompressing files on the fly.
 
+# INSTALL
+
+```apt: sudo apt install scamper```
+
+```zypper: sudo zypper install scamper```
+
+```brew: brew install scamper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scamper](/man/scamper)(1), [sc_wartsdump](/man/sc_wartsdump)(1), [sc_warts2json](/man/sc_warts2json)(1)

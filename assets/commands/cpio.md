@@ -130,6 +130,24 @@ Less intuitive than tar. Requires file list from stdin. No built-in compression.
 
 **cpio** was included in Unix PWB/UNIX in **1977** and became part of POSIX, predating tar and offering more flexible file selection.
 
+# INSTALL
+
+```apt: sudo apt install cpio```
+
+```dnf: sudo dnf install cpio```
+
+```pacman: sudo pacman -S cpio```
+
+```apk: sudo apk add cpio```
+
+```zypper: sudo zypper install cpio```
+
+```brew: brew install cpio```
+
+```nix: nix profile install nixpkgs#cpio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tar](/man/tar)(1), [find](/man/find)(1), [pax](/man/pax)(1)

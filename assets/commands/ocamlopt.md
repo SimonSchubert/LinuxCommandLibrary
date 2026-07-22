@@ -125,6 +125,24 @@ Native-code compilation is slower than bytecode compilation. The resulting execu
 
 The OCaml native-code compiler was developed at **INRIA** alongside the bytecode compiler as part of the Caml/OCaml project to provide high-performance compilation while retaining the language's type safety guarantees.
 
+# INSTALL
+
+```apt: sudo apt install ocaml```
+
+```dnf: sudo dnf install ocaml```
+
+```pacman: sudo pacman -S ocaml```
+
+```apk: sudo apk add ocaml5```
+
+```zypper: sudo zypper install ocaml```
+
+```brew: brew install ocaml```
+
+```nix: nix profile install nixpkgs#ocaml```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ocamlc](/man/ocamlc)(1), [ocamlfind](/man/ocamlfind)(1), [opam](/man/opam)(1), [dune](/man/dune)(1)

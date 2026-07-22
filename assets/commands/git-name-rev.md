@@ -66,6 +66,24 @@ Find symbolic names for commits
 
 The `--annotate-stdin` option allows processing commit hashes from pipelines, enabling annotation of `git log` output or other commands that produce commit IDs. Filter options like `--tags` or `--refs` restrict which references are used for naming.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-describe](/man/git-describe)(1), [git-rev-parse](/man/git-rev-parse)(1), [git-log](/man/git-log)(1)

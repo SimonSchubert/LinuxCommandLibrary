@@ -43,6 +43,14 @@ Capabilities are an alternative to setuid programs, providing more granular priv
 
 **getcap** is part of **libcap**, implementing POSIX 1003.1e capabilities on Linux.
 
+# INSTALL
+
+```apt: sudo apt install libcap2-bin```
+
+```apk: sudo apk add libcap-getcap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [setcap](/man/setcap)(8), [capabilities](/man/capabilities)(7)

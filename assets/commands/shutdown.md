@@ -68,6 +68,12 @@ Requires root privileges. Scheduled shutdowns can be cancelled with **-c**. On s
 
 The **shutdown** command originated in early Unix systems. It evolved from a simple system halt to a comprehensive tool for graceful system shutdowns with user notification.
 
+# INSTALL
+
+```apt: sudo apt install runit-init```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [reboot](/man/reboot)(8), [halt](/man/halt)(8), [poweroff](/man/poweroff)(8), [systemctl](/man/systemctl)(1)

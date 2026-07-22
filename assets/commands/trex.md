@@ -24,6 +24,12 @@ Terminal app for regex visualization and testing
 
 **trex** was created by **Samyak Bardiya** (samyakbardiya) and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#trex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grex](/man/grex)(1), [rexi](/man/rexi)(1), [ripgrep](/man/ripgrep)(1)

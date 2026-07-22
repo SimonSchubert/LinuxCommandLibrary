@@ -96,6 +96,22 @@ Image quality depends on terminal capabilities. Basic Unicode block rendering pr
 
 **timg** was created by **Henner Zeller** and development began around **2016**. It was designed to bring image and video viewing capabilities to the terminal, leveraging modern terminal features like 24-bit color support and graphics protocols. The project continues active development with regular additions of new features and format support.
 
+# INSTALL
+
+```apt: sudo apt install timg```
+
+```dnf: sudo dnf install timg```
+
+```apk: sudo apk add timg```
+
+```zypper: sudo zypper install timg```
+
+```brew: brew install timg```
+
+```nix: nix profile install nixpkgs#timg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [imgcat](/man/imgcat)(1), [viu](/man/viu)(1), [chafa](/man/chafa)(1), [feh](/man/feh)(1)

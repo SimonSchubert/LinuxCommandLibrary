@@ -51,6 +51,16 @@ Free for individuals and open-source evaluation; commercial production use requi
 
 Behavioral detection may produce false positives on legitimate packages with unusual install scripts. Complement **npm audit** rather than replacing it — together they cover CVE databases and behavioral threats.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm-audit](/man/npm-audit)(1), [socket](/man/socket)(1), [snyk](/man/snyk)(1)

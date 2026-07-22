@@ -81,6 +81,20 @@ App Platform incurs usage charges. Build times vary with app complexity. Some fe
 
 doctl apps was added to the DigitalOcean CLI when App Platform launched in **2020**. It provides CLI access to DigitalOcean's managed application hosting platform.
 
+# INSTALL
+
+```dnf: sudo dnf install doctl```
+
+```pacman: sudo pacman -S doctl```
+
+```apk: sudo apk add doctl```
+
+```brew: brew install doctl```
+
+```nix: nix profile install nixpkgs#doctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doctl](/man/doctl)(1), [heroku](/man/heroku)(1)

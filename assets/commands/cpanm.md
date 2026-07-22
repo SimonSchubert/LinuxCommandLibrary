@@ -94,6 +94,14 @@ Installing globally requires root privileges unless using local::lib. Some modul
 
 cpanminus was created by **Tatsuhiko Miyagawa** in **2010** as a zero-configuration CPAN installer. Frustrated with the complexity of CPAN.pm and CPANPLUS, he designed cpanm to "just work" with sensible defaults. It became the de facto standard for installing Perl modules, valued for its simplicity and speed.
 
+# INSTALL
+
+```apk: sudo apk add perl-app-cpanminus```
+
+```brew: brew install cpanm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cpan](/man/cpan)(1), [carton](/man/carton)(1), [perl](/man/perl)(1)

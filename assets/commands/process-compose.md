@@ -28,6 +28,12 @@ Scheduler and orchestrator for non-containerized applications
 
 **process-compose** was created by **F1bonacc1** and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#process-compose```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-compose](/man/docker-compose)(1), [supervisord](/man/supervisord)(1), [mprocs](/man/mprocs)(1)

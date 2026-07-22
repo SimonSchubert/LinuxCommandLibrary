@@ -69,6 +69,18 @@ Requires CUPS. Use lp for System V style. Options are printer-specific.
 
 lpr originated in **BSD Unix** as the line printer spooler, now implemented by CUPS.
 
+# INSTALL
+
+```apt: sudo apt install lpr```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lp](/man/lp)(1), [lpq](/man/lpq)(1), [lprm](/man/lprm)(1)

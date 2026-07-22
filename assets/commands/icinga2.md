@@ -78,6 +78,18 @@ Configuration syntax differs from Icinga 1/Nagios. Cluster setup requires PKI. L
 
 Icinga was forked from **Nagios** in **2009** due to disagreements about project governance. Icinga 2, released in **2014**, was a complete rewrite with modern architecture and new configuration language.
 
+# INSTALL
+
+```apt: sudo apt install icinga2-bin```
+
+```apk: sudo apk add icinga2```
+
+```zypper: sudo zypper install icinga2-bin```
+
+```nix: nix profile install nixpkgs#icinga2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nagios](/man/nagios)(8), [prometheus](/man/prometheus)(1)

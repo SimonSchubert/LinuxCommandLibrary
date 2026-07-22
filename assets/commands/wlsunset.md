@@ -58,6 +58,22 @@ Wayland only. wlroots required. Location needed for auto.
 
 **wlsunset** was created as a Wayland-native alternative to redshift for adjusting screen color temperature.
 
+# INSTALL
+
+```apt: sudo apt install wlsunset```
+
+```dnf: sudo dnf install wlsunset```
+
+```pacman: sudo pacman -S wlsunset```
+
+```apk: sudo apk add wlsunset```
+
+```zypper: sudo zypper install wlsunset```
+
+```nix: nix profile install nixpkgs#wlsunset```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [redshift](/man/redshift)(1), [gammastep](/man/gammastep)(1)

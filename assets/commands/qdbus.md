@@ -58,6 +58,16 @@ Qt dependency. For D-Bus interaction.
 
 qdbus is part of **Qt** for D-Bus interaction.
 
+# INSTALL
+
+```apt: sudo apt install qtchooser```
+
+```dnf: sudo dnf install qtchooser```
+
+```apk: sudo apk add qt5-qttools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dbus-send](/man/dbus-send)(1), [gdbus](/man/gdbus)(1)

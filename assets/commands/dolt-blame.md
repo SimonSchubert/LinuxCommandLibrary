@@ -43,6 +43,16 @@ Only reports the **most recent** modification per row — no full history. Schem
 
 **dolt blame** is part of **Dolt**, the versioned SQL database ("Git for data") by **DoltHub**. It brings Git-style per-row provenance to relational tables.
 
+# INSTALL
+
+```pacman: sudo pacman -S dolt```
+
+```brew: brew install dolt```
+
+```nix: nix profile install nixpkgs#dolt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dolt](/man/dolt)(1), [dolt-sql](/man/dolt-sql)(1), [git-blame](/man/git-blame)(1)

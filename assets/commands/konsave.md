@@ -73,6 +73,12 @@ Designed primarily for KDE Plasma. Some configurations may not transfer perfectl
 
 konsave was created to simplify the process of backing up, sharing, and switching between KDE Plasma desktop configurations, addressing a common need in the customization-focused Linux community.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#konsave```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [plasma-apply-colorscheme](/man/plasma-apply-colorscheme)(1), [lookandfeeltool](/man/lookandfeeltool)(1)

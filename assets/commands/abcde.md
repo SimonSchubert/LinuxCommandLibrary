@@ -134,6 +134,22 @@ Requires backend programs for ripping (cdparanoia or cdda2wav) and encoding (lam
 
 **abcde** was created by **Robert Woodcock** in **1998** as a simple way to automate CD ripping on Linux systems. The name stands for "A Better CD Encoder," reflecting its goal of simplifying what was previously a multi-step manual process. It has been actively maintained and expanded to support modern formats like Opus and AAC while remaining a pure shell script.
 
+# INSTALL
+
+```dnf: sudo dnf install abcde```
+
+```aur: yay -S abcde```
+
+```apk: sudo apk add abcde```
+
+```zypper: sudo zypper install abcde```
+
+```brew: brew install abcde```
+
+```nix: nix profile install nixpkgs#abcde```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cdparanoia](/man/cdparanoia)(1), [lame](/man/lame)(1), [flac](/man/flac)(1), [opusenc](/man/opusenc)(1)

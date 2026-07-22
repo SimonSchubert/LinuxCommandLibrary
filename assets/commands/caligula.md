@@ -36,6 +36,16 @@ The tool verifies image integrity through hash checking and confirms target devi
 
 Requires root privileges for writing to devices. Always verify the target device before writing. All data on the target device will be destroyed.
 
+# INSTALL
+
+```pacman: sudo pacman -S caligula```
+
+```zypper: sudo zypper install caligula```
+
+```nix: nix profile install nixpkgs#caligula```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dd](/man/dd)(1), [pv](/man/pv)(1), [balena-etcher](/man/balena-etcher)(1)

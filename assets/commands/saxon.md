@@ -77,6 +77,14 @@ Memory for complex transformations is controlled via Java's **-Xmx** option. Sch
 
 Saxon was created by **Michael Kay**, former editor of the XSLT specification at W3C. Development began in **1998**, with Kay founding **Saxonica** to maintain and commercialize the processor. Since **2023**, Saxon is hosted exclusively on the Saxonica website rather than SourceForge.
 
+# INSTALL
+
+```brew: brew install saxon```
+
+```nix: nix profile install nixpkgs#saxon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xsltproc](/man/xsltproc)(1), [xmllint](/man/xmllint)(1), [xq](/man/xq)(1), [java](/man/java)(1)

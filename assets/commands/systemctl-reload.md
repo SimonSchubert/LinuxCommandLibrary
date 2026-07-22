@@ -38,6 +38,22 @@ The service must support reload operations (typically via SIGHUP signal). If the
 
 Not all services support reload; check the service documentation. This reloads the **service's** configuration, not the systemd unit file. To reload unit files, use **systemctl daemon-reload**. If reload fails, the service continues running with old configuration.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-restart](/man/systemctl-restart)(1), [systemctl-daemon-reload](/man/systemctl-daemon-reload)(1)

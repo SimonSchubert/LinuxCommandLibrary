@@ -60,6 +60,22 @@ Changes only affect newly started applications. Use **-merge** to preserve exist
 
 **xrdb** has been part of the X Window System since the early releases in the mid-**1980s**, providing a way to configure application appearance and behavior before modern desktop environments existed.
 
+# INSTALL
+
+```apt: sudo apt install x11-xserver-utils```
+
+```dnf: sudo dnf install xrdb```
+
+```apk: sudo apk add xrdb```
+
+```zypper: sudo zypper install xrdb```
+
+```brew: brew install xrdb```
+
+```nix: nix profile install nixpkgs#xrdb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xset](/man/xset)(1)

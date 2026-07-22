@@ -69,6 +69,24 @@ The **mcheck()** function must be called before any memory allocation; otherwise
 
 The **mcheck** functions are part of the **GNU C Library** (glibc) and originate from early Unix malloc debugging facilities. They are documented in the glibc manual under "Heap Consistency Checking".
 
+# INSTALL
+
+```apt: sudo apt install mtools```
+
+```dnf: sudo dnf install mtools```
+
+```pacman: sudo pacman -S mtools```
+
+```apk: sudo apk add mtools```
+
+```zypper: sudo zypper install mtools```
+
+```brew: brew install mtools```
+
+```nix: nix profile install nixpkgs#mtools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [valgrind](/man/valgrind)(1)

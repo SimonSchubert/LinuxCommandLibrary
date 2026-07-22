@@ -68,6 +68,12 @@ Common node states include: **idle** (available), **allocated** (in use), **down
 
 Information reflects the current Slurm scheduler state, which may have brief delays from actual node status. Complex clusters may require filtering to view relevant information.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [squeue](/man/squeue)(1), [sbatch](/man/sbatch)(1), [scontrol](/man/scontrol)(1), [srun](/man/srun)(1)

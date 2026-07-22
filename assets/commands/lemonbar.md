@@ -80,6 +80,18 @@ X11 only. Requires scripting for dynamic content. No built-in system monitoring.
 
 lemonbar was created as **bar** by **LemonBoy** around **2012**, renamed to lemonbar to avoid confusion with other projects.
 
+# INSTALL
+
+```apt: sudo apt install lemonbar```
+
+```apk: sudo apk add lemonbar```
+
+```zypper: sudo zypper install lemonbar```
+
+```nix: nix profile install nixpkgs#lemonbar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [polybar](/man/polybar)(1), [i3status](/man/i3status)(1)

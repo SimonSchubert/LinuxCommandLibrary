@@ -62,6 +62,21 @@ No encryption; use SSH tunneling for security. Network latency affects MIDI timi
 
 **aseqnet** is part of the ALSA utilities, enabling network MIDI functionality for distributed audio setups.
 
+# INSTALL
+
+```apt: sudo apt install alsa-utils```
+
+```dnf: sudo dnf install alsa-utils```
+
+```pacman: sudo pacman -S alsa-utils```
+
+```apk: sudo apk add alsa-utils```
+
+```zypper: sudo zypper install alsa-utils```
+
+```nix: nix profile install nixpkgs#alsa-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aconnect](/man/aconnect)(1), [aseqdump](/man/aseqdump)(1), [aplaymidi](/man/aplaymidi)(1)

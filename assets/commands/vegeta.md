@@ -75,6 +75,18 @@ High rates need tuning. System limits may apply. Target server must handle load.
 
 **Vegeta** was created by **Tomás Senart** for HTTP load testing. Named after the Dragon Ball character, it emphasizes power and speed.
 
+# INSTALL
+
+```pacman: sudo pacman -S vegeta```
+
+```zypper: sudo zypper install vegeta```
+
+```brew: brew install vegeta```
+
+```nix: nix profile install nixpkgs#vegeta```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ab](/man/ab)(1), [wrk](/man/wrk)(1), [hey](/man/hey)(1)

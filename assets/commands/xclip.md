@@ -86,6 +86,24 @@ Data is only available while xclip is running (unless using -loops or -silent). 
 
 **xclip** was written by Kim Saunders as a command-line interface to X11 selections. It provides scriptable clipboard access without GUI dependencies.
 
+# INSTALL
+
+```apt: sudo apt install xclip```
+
+```dnf: sudo dnf install xclip```
+
+```pacman: sudo pacman -S xclip```
+
+```apk: sudo apk add xclip```
+
+```zypper: sudo zypper install xclip```
+
+```brew: brew install xclip```
+
+```nix: nix profile install nixpkgs#xclip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xsel](/man/xsel)(1), [wl-copy](/man/wl-copy)(1), [wl-paste](/man/wl-paste)(1)

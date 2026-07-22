@@ -87,6 +87,16 @@ Firewall rules must allow ports 4505 and 4506 for master-minion communication. L
 
 salt-master is part of **SaltStack**, created by Thomas Hatch in **2011**. Originally developed at a startup, SaltStack grew into a major configuration management platform. VMware acquired SaltStack in **2020**, and the project continues as the open-source Salt Project.
 
+# INSTALL
+
+```dnf: sudo dnf install salt-master```
+
+```apk: sudo apk add salt-lts-master```
+
+```zypper: sudo zypper install salt-master```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [salt](/man/salt)(1), [salt-minion](/man/salt-minion)(8), [salt-key](/man/salt-key)(1), [salt-call](/man/salt-call)(1)

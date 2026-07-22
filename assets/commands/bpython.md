@@ -79,6 +79,14 @@ Not a drop-in replacement for complex scripts. Some extensions may not work. Slo
 
 **bpython** was created by Bob Farrell and others around **2008** to provide a more user-friendly Python REPL experience.
 
+# INSTALL
+
+```pacman: sudo pacman -S bpython```
+
+```brew: brew install bpython```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [ipython](/man/ipython)(1), [ptpython](/man/ptpython)(1)

@@ -26,6 +26,12 @@ Requires npm and Node.js to be installed. Must be run inside a directory contain
 
 **lazynpm** was created by **Jesse Duffield** (jesseduffield) and is written in **Go** using the gocui library.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#lazynpm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [lazygit](/man/lazygit)(1), [lazydocker](/man/lazydocker)(1)

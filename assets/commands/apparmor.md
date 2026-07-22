@@ -111,6 +111,11 @@ Most AppArmor commands require root privileges. Profiles in enforce mode can bre
 
 AppArmor was developed by **Immunix Inc.** in the late **1990s** and acquired by **Novell** in **2005**. It became part of the mainline Linux kernel in version **2.6.36** (2010). Ubuntu has included AppArmor by default since version **7.10** (2007), and it is also available on Debian, SUSE, and other distributions as an alternative to SELinux.
 
+# INSTALL
+
+```pacman: sudo pacman -S apparmor```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aa-status](/man/aa-status)(8), [aa-enforce](/man/aa-enforce)(8), [aa-complain](/man/aa-complain)(8), [aa-notify](/man/aa-notify)(8)

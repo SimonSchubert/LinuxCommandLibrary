@@ -54,6 +54,24 @@ May clip extreme values. Part of Netpbm suite.
 
 pnmnorm was created as part of **Netpbm** for automatic contrast enhancement.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmhisteq](/man/pnmhisteq)(1), [pnmgamma](/man/pnmgamma)(1), [ppmnorm](/man/ppmnorm)(1)

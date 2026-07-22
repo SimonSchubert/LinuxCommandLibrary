@@ -100,6 +100,24 @@ Rules require expertise to write well. False positives need tuning. Memory-resid
 
 **YARA** was created by **Victor M. Alvarez** at **VirusTotal** around **2007**. It became the standard for malware classification, used by antivirus vendors, incident responders, and researchers.
 
+# INSTALL
+
+```apt: sudo apt install yara```
+
+```dnf: sudo dnf install yara```
+
+```pacman: sudo pacman -S yara```
+
+```apk: sudo apk add yara```
+
+```zypper: sudo zypper install yara```
+
+```brew: brew install yara```
+
+```nix: nix profile install nixpkgs#yara```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clamav](/man/clamav)(1), [strings](/man/strings)(1), [file](/man/file)(1), [ssdeep](/man/ssdeep)(1)

@@ -87,6 +87,18 @@ Polling fallback on some filesystems. Rapid changes may batch. Initial run may n
 
 **Reflex** was created as a simple, flexible file watcher. It focuses on development workflow automation with minimal configuration.
 
+# INSTALL
+
+```apt: sudo apt install reflex```
+
+```apk: sudo apk add reflex```
+
+```brew: brew install reflex```
+
+```nix: nix profile install nixpkgs#reflex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [entr](/man/entr)(1), [watchman](/man/watchman)(1), [fswatch](/man/fswatch)(1), [inotifywait](/man/inotifywait)(1)

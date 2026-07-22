@@ -55,6 +55,24 @@ Loads entire input into memory. Very large files may exhaust memory. Part of mor
 
 **sponge** is part of **moreutils**, a collection of Unix tools created by **Joey Hess**. It addresses a common shell scripting pitfall where redirection to the input file truncates it before reading.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add moreutils```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tee](/man/tee)(1), [cat](/man/cat)(1), [moreutils](/man/moreutils)(7)

@@ -77,6 +77,20 @@ Requires careful review before removal. Hard linking changes all copies. Large d
 
 fclones was created as a modern alternative to tools like fdupes, emphasizing performance through Rust's speed and memory safety. It achieves significant speedups through parallelism and optimized hashing.
 
+# INSTALL
+
+```pacman: sudo pacman -S fclones```
+
+```apk: sudo apk add fclones```
+
+```zypper: sudo zypper install fclones```
+
+```brew: brew install fclones```
+
+```nix: nix profile install nixpkgs#fclones```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fdupes](/man/fdupes)(1), [rmlint](/man/rmlint)(1), [jdupes](/man/jdupes)(1)

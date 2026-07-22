@@ -129,6 +129,15 @@ May conflict with other formatters like **black**. Aggressive mode can change co
 
 **autopep8** was created by Hideo Hattori to provide automatic PEP 8 compliance, released around **2010**.
 
+# INSTALL
+
+```pacman: sudo pacman -S autopep8```
+
+```apk: sudo apk add py3-autopep8```
+
+```brew: brew install autopep8```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [black](/man/black)(1), [isort](/man/isort)(1), [flake8](/man/flake8)(1), [yapf](/man/yapf)(1), [pycodestyle](/man/pycodestyle)(1), [pylint](/man/pylint)(1)

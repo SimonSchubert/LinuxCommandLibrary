@@ -44,6 +44,24 @@ shorthand for fossil commit
 
 This command is provided for convenience and compatibility with users familiar with other version control systems that use similar abbreviations. All options and behaviors are identical to **fossil commit**.
 
+# INSTALL
+
+```apt: sudo apt install fossil```
+
+```dnf: sudo dnf install fossil```
+
+```pacman: sudo pacman -S fossil```
+
+```apk: sudo apk add fossil```
+
+```zypper: sudo zypper install fossil```
+
+```brew: brew install fossil```
+
+```nix: nix profile install nixpkgs#fossil```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fossil-commit](/man/fossil-commit)(1), [fossil-add](/man/fossil-add)(1)

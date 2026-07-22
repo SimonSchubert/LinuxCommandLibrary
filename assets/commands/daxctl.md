@@ -126,6 +126,20 @@ Mode changes may require the device to be unmapped first. System-ram mode memory
 
 daxctl is part of the **ndctl** project led by **Dan Williams** at Intel. It was developed alongside Linux kernel support for persistent memory (NVDIMM) starting around **2016**. As persistent memory technology (Intel Optane, CXL memory) evolved, daxctl became essential for managing how this memory integrates with the operating system.
 
+# INSTALL
+
+```apt: sudo apt install daxctl```
+
+```dnf: sudo dnf install daxctl```
+
+```pacman: sudo pacman -S ndctl```
+
+```apk: sudo apk add ndctl```
+
+```zypper: sudo zypper install ndctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ndctl](/man/ndctl)(1), [cxl](/man/cxl)(1), [numactl](/man/numactl)(8)

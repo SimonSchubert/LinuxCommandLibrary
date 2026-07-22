@@ -62,6 +62,16 @@ Separate from Rscript. Interactive by default.
 
 R was created by **Ross Ihaka and Robert Gentleman** at University of Auckland.
 
+# INSTALL
+
+```apt: sudo apt install r-cran-littler```
+
+```pacman: sudo pacman -S r```
+
+```brew: brew install r```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1)

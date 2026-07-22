@@ -102,6 +102,16 @@ Requires initial setup. Downloads implementations. Scripts are portable across i
 
 Roswell was created by **Masatoshi Sano** to simplify Common Lisp development environment management.
 
+# INSTALL
+
+```pacman: sudo pacman -S roswell```
+
+```brew: brew install roswell```
+
+```nix: nix profile install nixpkgs#roswell```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sbcl](/man/sbcl)(1), [quicklisp](/man/quicklisp)(1), [clisp](/man/clisp)(1)

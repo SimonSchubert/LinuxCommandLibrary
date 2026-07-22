@@ -46,6 +46,24 @@ Manage SSH keys for GitHub authentication
 
 The command supports adding new SSH keys from public key files, typically generated with **ssh-keygen**. Keys can be labeled with titles for identification when managing multiple keys across different machines. Deletion removes keys from your GitHub account, immediately revoking access.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-gpg-key](/man/gh-gpg-key)(1)

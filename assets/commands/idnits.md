@@ -58,6 +58,12 @@ IETF-specific tool. Formatting rules change. Text format required.
 
 idnits was developed by the **IETF** to help authors validate Internet-Draft formatting.
 
+# INSTALL
+
+```brew: brew install idnits```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aspell](/man/aspell)(1)

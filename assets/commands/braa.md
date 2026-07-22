@@ -67,6 +67,14 @@ For SET operations, append **=type'value'** where type is:
 
 SNMP v1/v2c community strings are transmitted in plain text. Mass scanning may trigger security alerts or rate limiting. Ensure you have authorization before scanning networks. Not suitable for SNMPv3.
 
+# INSTALL
+
+```apt: sudo apt install braa```
+
+```nix: nix profile install nixpkgs#braa```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snmpwalk](/man/snmpwalk)(1), [snmpget](/man/snmpget)(1), [snmpset](/man/snmpset)(1)

@@ -61,6 +61,16 @@ Manage Pixi project settings and platforms
 
 Use **pixi init** to create a new project; **pixi project** operates on an existing manifest within the current working directory.
 
+# INSTALL
+
+```pacman: sudo pacman -S pixi```
+
+```brew: brew install pixi```
+
+```nix: nix profile install nixpkgs#pixi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pixi](/man/pixi)(1), [pixi-config](/man/pixi-config)(1)

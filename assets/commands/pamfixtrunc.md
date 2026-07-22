@@ -38,6 +38,24 @@ Part of Netpbm. Fills missing data. Original data lost.
 
 pamfixtrunc is part of **Netpbm** for fixing truncated image files.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm-extras```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamfix](/man/pamfix)(1), [netpbm](/man/netpbm)(1)

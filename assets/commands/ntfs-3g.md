@@ -62,6 +62,22 @@ FUSE-based. May need unmount before Windows. Requires permissions.
 
 ntfs-3g was created to provide **full NTFS read-write** support on Linux via FUSE.
 
+# INSTALL
+
+```apt: sudo apt install ntfs-3g```
+
+```dnf: sudo dnf install ntfs-3g```
+
+```pacman: sudo pacman -S ntfs-3g```
+
+```apk: sudo apk add ntfs-3g```
+
+```zypper: sudo zypper install ntfs-3g```
+
+```brew: brew install ntfs-3g```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(1), [ntfsfix](/man/ntfsfix)(1), [fusermount](/man/fusermount)(1)

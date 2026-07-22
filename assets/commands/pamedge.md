@@ -41,6 +41,24 @@ Has no command-line options beyond standard libnetpbm options. For better result
 
 **pamedge** was added to Netpbm in **2003** as a replacement for **pgmedge**, extending support to all PAM and PNM image formats.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pgmedge](/man/pgmedge)(1), [pgmenhance](/man/pgmenhance)(1), [pamditherbw](/man/pamditherbw)(1), [pamdepth](/man/pamdepth)(1), [pnmconvol](/man/pnmconvol)(1), [netpbm](/man/netpbm)(1)

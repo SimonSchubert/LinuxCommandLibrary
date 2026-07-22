@@ -128,6 +128,16 @@ Some complex PDFs may not process correctly. Java version (pdftk-java) differs f
 
 **pdftk** was originally written by **Sid Steward** in **2003** using iText library. It became the standard command-line PDF tool on Linux. After the original became unmaintained, **pdftk-java** emerged as a port to Java, maintaining compatibility while enabling continued development.
 
+# INSTALL
+
+```pacman: sudo pacman -S pdftk```
+
+```zypper: sudo zypper install pdftk```
+
+```nix: nix profile install nixpkgs#pdftk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qpdf](/man/qpdf)(1), [poppler-utils](/man/poppler-utils)(1), [ghostscript](/man/ghostscript)(1), [pdfunite](/man/pdfunite)(1)

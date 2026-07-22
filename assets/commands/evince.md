@@ -55,6 +55,24 @@ Integrates with GNOME desktop services for printing and file management.
 
 GNOME desktop application. Some features require poppler library. Large documents may consume significant memory.
 
+# INSTALL
+
+```apt: sudo apt install evince```
+
+```dnf: sudo dnf install evince```
+
+```pacman: sudo pacman -S evince```
+
+```apk: sudo apk add evince```
+
+```zypper: sudo zypper install evince```
+
+```brew: brew install evince```
+
+```nix: nix profile install nixpkgs#evince```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [okular](/man/okular)(1), [zathura](/man/zathura)(1), [xdg-open](/man/xdg-open)(1)

@@ -50,6 +50,24 @@ Requires ptrace permissions. Large processes create large dumps. May briefly pau
 
 gcore is part of **GDB** (GNU Debugger), providing non-destructive core dump generation for debugging running processes without interrupting service.
 
+# INSTALL
+
+```apt: sudo apt install gdb```
+
+```dnf: sudo dnf install gdb```
+
+```pacman: sudo pacman -S gdb```
+
+```apk: sudo apk add gdb```
+
+```zypper: sudo zypper install gdb```
+
+```brew: brew install gdb```
+
+```nix: nix profile install nixpkgs#gdb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdb](/man/gdb)(1), [kill](/man/kill)(1)

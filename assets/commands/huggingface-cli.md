@@ -102,6 +102,12 @@ command-line interface for Hugging Face Hub
 
 **huggingface-cli** is the command-line interface for Hugging Face Hub, also available as the **hf** command. Download models and datasets, manage repositories, and authenticate your machine. Part of the huggingface_hub Python package. The newer **hf** CLI uses a resource-action pattern (e.g. `hf auth login`, `hf download`). Default cache location is ~/.cache/huggingface or HF_HOME environment variable.
 
+# INSTALL
+
+```brew: brew install huggingface-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1)

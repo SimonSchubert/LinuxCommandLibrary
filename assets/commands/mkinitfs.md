@@ -97,6 +97,12 @@ Alpine Linux specific tool; not compatible with other distributions. Missing fea
 
 **mkinitfs** was developed as part of **Alpine Linux** to create minimal, efficient initramfs images suitable for the distribution's focus on security and simplicity. It integrates with Alpine's apk package manager and uses a feature-based modular system.
 
+# INSTALL
+
+```apk: sudo apk add mkinitfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkinitcpio](/man/mkinitcpio)(8), [dracut](/man/dracut)(8), [update-initramfs](/man/update-initramfs)(8)

@@ -73,6 +73,16 @@ Aliases: **npm run**, **npm rum**, **npm urn**.
 
 Any executable installed into **node_modules/.bin** is added to **$PATH** for the duration of the script, so dependency-provided binaries can be invoked by bare name. Arguments after **--** are appended to the script command but are not forwarded to **pre**/**post** lifecycle scripts.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-start](/man/npm-start)(1)

@@ -28,6 +28,12 @@ Wake-on-LAN must be enabled on target devices. Requires network access to send m
 
 **wakey** was created by **Jonathan Ruiz** (jonathanruiz) and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S wakey```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wakeonlan](/man/wakeonlan)(1), [etherwake](/man/etherwake)(1), [wol](/man/wol)(1)

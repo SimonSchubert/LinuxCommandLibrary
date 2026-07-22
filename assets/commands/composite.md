@@ -87,6 +87,18 @@ Image order matters: overlay comes before background in the command. The output 
 
 composite is part of **ImageMagick**, originally created by John Cristy in **1990**. It has evolved to support dozens of compositing operators, matching capabilities found in professional image editing software. The tool remains essential for scriptable image manipulation.
 
+# INSTALL
+
+```pacman: sudo pacman -S imagemagick```
+
+```apk: sudo apk add imagemagick```
+
+```brew: brew install imagemagick```
+
+```nix: nix profile install nixpkgs#imagemagick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [convert](/man/convert)(1), [montage](/man/montage)(1), [mogrify](/man/mogrify)(1), [magick](/man/magick)(1)

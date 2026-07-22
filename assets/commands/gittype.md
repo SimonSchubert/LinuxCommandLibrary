@@ -61,6 +61,14 @@ Requires internet connection to fetch code snippets. Code snippets may vary in c
 
 **gittype** was created as a fun way for developers to practice typing code with real-world examples instead of generic text.
 
+# INSTALL
+
+```brew: brew install gittype```
+
+```nix: nix profile install nixpkgs#gittype```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [typespeed](/man/typespeed)(1), [ttyper](/man/ttyper)(1)

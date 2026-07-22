@@ -88,6 +88,24 @@ For inspecting the **environment variables** that control the `gh` CLI itself, r
 
 This is a third-party extension, not a core `gh` subcommand. Protection rules (required reviewers, wait timer, branch restrictions) are not fully manageable via this extension — use the web UI or the REST API for advanced configuration.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-secret](/man/gh-secret)(1)

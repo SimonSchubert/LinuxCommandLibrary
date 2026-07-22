@@ -93,6 +93,18 @@ sc uses a unique file format (.sc) that stores spreadsheets as command sequences
 
 Development of sc began in **1981** by James Gosling and Mark Weiser, making it one of the oldest open-source spreadsheet applications. Chuck Martin later added modifications. In **2015**, development resumed under the name **sc-im** with significant enhancements.
 
+# INSTALL
+
+```apt: sudo apt install sc```
+
+```dnf: sudo dnf install sc```
+
+```apk: sudo apk add sc```
+
+```nix: nix profile install nixpkgs#sc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sc-im](/man/sc-im)(1), [gnumeric](/man/gnumeric)(1), [bc](/man/bc)(1), [vi](/man/vi)(1)

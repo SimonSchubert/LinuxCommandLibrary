@@ -81,6 +81,12 @@ Large database searches require significant memory and time. Remote searches are
 
 BLAST was developed at NCBI (National Center for Biotechnology Information), with the original algorithm published in **1990** by Altschul et al. The BLAST+ rewrite of the command line applications was released in **2009** and is the current implementation that provides **blastp**.
 
+# INSTALL
+
+```apt: sudo apt install ncbi-blast+```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blastn](/man/blastn)(1), [blastx](/man/blastx)(1), [tblastn](/man/tblastn)(1), [makeblastdb](/man/makeblastdb)(1)

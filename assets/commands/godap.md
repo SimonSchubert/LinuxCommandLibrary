@@ -83,6 +83,14 @@ Requires LDAP server access. Bind credentials must have appropriate permissions.
 
 **godap** was created to provide an interactive way to browse LDAP directories from the terminal, similar to GUI LDAP browsers.
 
+# INSTALL
+
+```apk: sudo apk add godap```
+
+```brew: brew install godap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ldapsearch](/man/ldapsearch)(1)

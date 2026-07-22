@@ -132,6 +132,24 @@ For modern alternatives with more features, consider **tmux**.
 
 Screen was originally written by **Oliver Laumann** in **1987** and has been maintained by the GNU project. It was one of the first terminal multiplexers and established the paradigm that tmux and others follow.
 
+# INSTALL
+
+```apt: sudo apt install screen```
+
+```dnf: sudo dnf install screen```
+
+```pacman: sudo pacman -S screen```
+
+```apk: sudo apk add screen```
+
+```zypper: sudo zypper install screen```
+
+```brew: brew install screen```
+
+```nix: nix profile install nixpkgs#screen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [byobu](/man/byobu)(1), [dtach](/man/dtach)(1), [nohup](/man/nohup)(1)

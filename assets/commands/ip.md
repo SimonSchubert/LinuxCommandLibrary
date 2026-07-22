@@ -95,6 +95,22 @@ Changes made with **ip** are not persistent across reboots. Use network configur
 
 Part of the **iproute2** package, introduced in **Linux 2.2** as a replacement for the older net-tools package (ifconfig, route, arp).
 
+# INSTALL
+
+```apt: sudo apt install iproute2```
+
+```pacman: sudo pacman -S iproute2```
+
+```apk: sudo apk add iproute2-minimal```
+
+```zypper: sudo zypper install iproute2```
+
+```brew: brew install iproute2```
+
+```nix: nix profile install nixpkgs#iproute2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ifconfig](/man/ifconfig)(8), [route](/man/route)(8), [arp](/man/arp)(8), [ss](/man/ss)(8), [ip-address](/man/ip-address)(8), [ip-route](/man/ip-route)(8)

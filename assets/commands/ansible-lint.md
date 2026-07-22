@@ -89,6 +89,19 @@ Not all rules apply to all use cases; configure skip-list appropriately. The --f
 
 **ansible-lint** was created to help enforce best practices in Ansible projects. It became an official Ansible project and has been actively maintained with evolving rule sets.
 
+# INSTALL
+
+```pacman: sudo pacman -S ansible-lint```
+
+```apk: sudo apk add ansible-lint```
+
+```zypper: sudo zypper install ansible-lint```
+
+```brew: brew install ansible-lint```
+
+```nix: nix profile install nixpkgs#ansible-lint```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ansible](/man/ansible)(1), [ansible-playbook](/man/ansible-playbook)(1), [yamllint](/man/yamllint)(1)

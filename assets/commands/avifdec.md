@@ -85,6 +85,13 @@ Output format support depends on compile-time options. Large images may consume 
 
 **avifdec** was developed as part of libavif by Joe Drago and the Alliance for Open Media, released around **2019** to support the new AVIF format standardized by AOM.
 
+# INSTALL
+
+```apt: sudo apt install libavif-bin```
+
+```apk: sudo apk add libavif-apps```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [avifenc](/man/avifenc)(1), [imagemagick](/man/imagemagick)(1), [convert](/man/convert)(1)

@@ -68,6 +68,24 @@ Multiple labels can be placed on a single image by specifying multiple **-text**
 
 Uses a built-in bitmap font; does not support TrueType or external fonts. For more advanced text rendering, consider **pbmtext** piped through **pnmcomp**. Input and output are PPM format only.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtext](/man/pbmtext)(1), [pnmcomp](/man/pnmcomp)(1), [ppmdraw](/man/ppmdraw)(1), [ppmchange](/man/ppmchange)(1)

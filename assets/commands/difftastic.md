@@ -84,6 +84,20 @@ May be slower than traditional diff tools for very large files. Requires languag
 
 **difftastic** was created by Wilfred Hughes to address the limitations of line-based diffing when working with code. It uses tree-sitter parsers to build syntax trees and compare them structurally. The project has gained significant popularity for providing clearer, more meaningful diffs.
 
+# INSTALL
+
+```dnf: sudo dnf install difftastic```
+
+```pacman: sudo pacman -S difftastic```
+
+```zypper: sudo zypper install difftastic```
+
+```brew: brew install difftastic```
+
+```nix: nix profile install nixpkgs#difftastic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [git](/man/git)(1), [delta](/man/delta)(1), [diffnav](/man/diffnav)(1)

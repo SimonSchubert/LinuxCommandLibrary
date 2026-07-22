@@ -48,6 +48,12 @@ The display number (after single colon) is added to port 5900. Use double colon 
 
 VNC traffic is unencrypted by default. Use SSH tunneling for secure connections. Performance depends on network bandwidth and latency.
 
+# INSTALL
+
+```apk: sudo apk add tigervnc-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vncserver](/man/vncserver)(1), [x11vnc](/man/x11vnc)(1)

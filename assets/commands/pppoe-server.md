@@ -99,6 +99,22 @@ The Ethernet interface used by **pppoe-server** typically must be brought up wit
 
 **pppoe-server** is part of **rp-pppoe** by **Roaring Penguin Software** (originally written by **Dianne Skoll**), the canonical user-space PPPoE implementation on Linux and \*BSD.
 
+# INSTALL
+
+```apt: sudo apt install pppoe```
+
+```dnf: sudo dnf install rp-pppoe```
+
+```pacman: sudo pacman -S rp-pppoe```
+
+```apk: sudo apk add rp-pppoe```
+
+```zypper: sudo zypper install rp-pppoe```
+
+```nix: nix profile install nixpkgs#rp-pppoe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pppoe](/man/pppoe)(8), [pppoe-relay](/man/pppoe-relay)(8), [pppd](/man/pppd)(8)

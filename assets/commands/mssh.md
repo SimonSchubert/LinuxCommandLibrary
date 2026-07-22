@@ -72,6 +72,12 @@ Requires a graphical display (X11 or Wayland with XWayland). Commands are sent t
 
 **mssh** was originally created by **Bradley Smith** in 2009 and is currently maintained by **Héctor García**. It provides a graphical alternative to text-based multi-SSH tools like cssh and pdsh.
 
+# INSTALL
+
+```apt: sudo apt install mssh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [tmux](/man/tmux)(1)

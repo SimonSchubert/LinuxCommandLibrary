@@ -97,6 +97,24 @@ Same branch can't be checked out in two worktrees at once. Worktrees share most 
 
 git worktree was added in **Git 2.5** (2015) to enable multiple working directories from a single repository clone. The **move**, **lock**, and **repair** subcommands were added in later releases to improve support for worktrees on removable or network storage.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-branch](/man/git-branch)(1)

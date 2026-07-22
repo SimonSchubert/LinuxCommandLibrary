@@ -97,6 +97,14 @@ Designed for bug bounty hunting and authorized penetration testing, cariddi outp
 
 For authorized security testing only. Integrates well with subdomain discovery tools. GPL-3.0 licensed.
 
+# INSTALL
+
+```brew: brew install cariddi```
+
+```nix: nix profile install nixpkgs#cariddi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [subfinder](/man/subfinder)(1), [httpx](/man/httpx)(1), [nuclei](/man/nuclei)(1)

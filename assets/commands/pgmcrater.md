@@ -39,6 +39,24 @@ generates synthetic terrain with impact craters as grayscale heightmap
 
 As of Netpbm 10.27 **pgmcrater** is obsolete; it is now a thin wrapper that pipes **pamcrater** into **pamshadedrelief** and **pamtopnm**. Prefer those primitives for new workflows.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm-extras```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamcrater](/man/pamcrater)(1), [pgmnoise](/man/pgmnoise)(1)

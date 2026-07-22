@@ -87,6 +87,12 @@ Requires Java. IDE-focused workflow. Sketches are in ~/sketchbook by default.
 
 Processing was created by **Casey Reas** and **Ben Fry** at MIT Media Lab in 2001 for teaching programming in visual context.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#processing```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [p5](/man/p5)(1), [java](/man/java)(1)

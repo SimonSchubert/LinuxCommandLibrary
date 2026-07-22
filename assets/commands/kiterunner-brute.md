@@ -41,6 +41,12 @@ performs traditional wordlist-based bruteforce against API endpoints
 
 **kr brute** performs traditional wordlist-based bruteforce against API endpoints. Part of Kiterunner, an API endpoint discovery tool by Assetnote. Tests various HTTP methods and paths to discover hidden endpoints.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kiterunner```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kiterunner-wordlist](/man/kiterunner-wordlist)(1), [gobuster](/man/gobuster)(1)

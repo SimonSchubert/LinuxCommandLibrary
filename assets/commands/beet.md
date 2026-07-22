@@ -84,6 +84,21 @@ Initial library import of large collections can be time-consuming. MusicBrainz q
 
 **beets** was created by Adrian Sampson and first released in **2010**. It has grown into a comprehensive music library manager with an active plugin ecosystem.
 
+# INSTALL
+
+```dnf: sudo dnf install beets```
+
+```pacman: sudo pacman -S beets```
+
+```apk: sudo apk add beets```
+
+```zypper: sudo zypper install beets```
+
+```brew: brew install beets```
+
+```nix: nix profile install nixpkgs#beets```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [id3v2](/man/id3v2)(1), [mp3info](/man/mp3info)(1)

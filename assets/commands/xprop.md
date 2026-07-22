@@ -94,6 +94,22 @@ xprop only works with X11 windows; Wayland applications may not expose propertie
 
 xprop is part of the standard X.Org utility collection and has been included with X Window System distributions since the early X11 releases in the **1980s**. It remains an essential debugging and scripting tool for X11 environments.
 
+# INSTALL
+
+```apt: sudo apt install x11-utils```
+
+```dnf: sudo dnf install xprop```
+
+```apk: sudo apk add xprop```
+
+```zypper: sudo zypper install xprop```
+
+```brew: brew install xprop```
+
+```nix: nix profile install nixpkgs#xprop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xwininfo](/man/xwininfo)(1), [xdotool](/man/xdotool)(1), [wmctrl](/man/wmctrl)(1), [xdpyinfo](/man/xdpyinfo)(1)

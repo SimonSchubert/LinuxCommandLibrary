@@ -130,6 +130,12 @@ vtcode is **pre-1.0** — flags, configuration keys, and slash commands change b
 
 **vtcode** is developed by **Vinh Nguyen** (**vinhnx**) and published at **github.com/vinhnx/vtcode**. It is distributed via **Cargo** (**cargo install vtcode**), **Homebrew** (**brew install vtcode**), and an install script. Releases are published under an open-source license on GitHub.
 
+# INSTALL
+
+```brew: brew install vtcode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1), [aider](/man/aider)(1), [gh](/man/gh)(1), [cargo](/man/cargo)(1)

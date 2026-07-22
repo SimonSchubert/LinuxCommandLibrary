@@ -97,6 +97,12 @@ Requires Twitter API access. API changes may break functionality. Rate limits ap
 
 **Rainbowstream** was created for terminal-based Twitter access. It brings social media to the command line with colorful, readable output.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#rainbowstream```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [twurl](/man/twurl)(1)

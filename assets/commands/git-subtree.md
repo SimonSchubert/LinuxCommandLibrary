@@ -66,6 +66,12 @@ The `split` command extracts the history of a subdirectory into a separate branc
 
 Shipped as a `contrib` script, not part of the core `git` binary, so it isn't installed everywhere by default (e.g. some Linux distros package it separately, such as Debian/Ubuntu's `git-subtree` package). Merging a large upstream history in still adds all of its commits to your repository.
 
+# INSTALL
+
+```dnf: sudo dnf install git-subtree```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-submodule](/man/git-submodule)(1), [git-merge](/man/git-merge)(1)

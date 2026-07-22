@@ -127,6 +127,16 @@ Templated SQL must parse after rendering; unresolved variables raise template er
 
 **SQLFluff** was started by **Alan Cruickshank** in **2019** as an open-source dialect-aware alternative to text-based SQL linters. Version **1.0** shipped in **2022**, and **2.0** in **2023** brought a redesigned rule taxonomy with mnemonic codes and a templating-aware fix engine. The project is maintained on **github.com/sqlfluff/sqlfluff** under the MIT license.
 
+# INSTALL
+
+```pacman: sudo pacman -S sqlfluff```
+
+```brew: brew install sqlfluff```
+
+```nix: nix profile install nixpkgs#sqlfluff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dbt](/man/dbt)(1), [psql](/man/psql)(1)

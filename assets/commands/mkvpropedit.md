@@ -81,6 +81,22 @@ Changes modify the original file in place. Property names must match exactly; us
 
 **mkvpropedit** is part of **MKVToolNix**, developed by **Moritz Bunkus**. MKVToolNix provides a complete suite of tools for creating, inspecting, and modifying Matroska multimedia container files.
 
+# INSTALL
+
+```apt: sudo apt install mkvtoolnix```
+
+```dnf: sudo dnf install mkvtoolnix```
+
+```apk: sudo apk add mkvtoolnix```
+
+```zypper: sudo zypper install mkvtoolnix```
+
+```brew: brew install mkvtoolnix```
+
+```nix: nix profile install nixpkgs#mkvtoolnix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkvmerge](/man/mkvmerge)(1), [ffmpeg](/man/ffmpeg)(1)

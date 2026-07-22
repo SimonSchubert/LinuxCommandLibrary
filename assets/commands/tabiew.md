@@ -28,6 +28,16 @@ Lightweight TUI for viewing and querying tabular data
 
 **tabiew** was created by **shshemi** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S tabiew```
+
+```brew: brew install tabiew```
+
+```nix: nix profile install nixpkgs#tabiew```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [csvlens](/man/csvlens)(1), [xsv](/man/xsv)(1), [visidata](/man/visidata)(1)

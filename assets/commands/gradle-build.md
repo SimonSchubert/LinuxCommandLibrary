@@ -84,6 +84,18 @@ Runs tests by default. Use **-x test** to skip. The first build may download dep
 
 The build task is a standard **Gradle** lifecycle task inherited from Java plugin conventions.
 
+# INSTALL
+
+```pacman: sudo pacman -S gradle```
+
+```apk: sudo apk add gradle```
+
+```brew: brew install gradle```
+
+```nix: nix profile install nixpkgs#gradle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [gradle-clean](/man/gradle-clean)(1)

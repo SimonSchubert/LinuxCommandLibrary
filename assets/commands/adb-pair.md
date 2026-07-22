@@ -37,6 +37,21 @@ Only available on Android 11 (API 30) and later. The pairing port is different f
 
 Wireless debugging with pairing was introduced in Android 11, released in **2020**. This feature was designed to improve the developer experience by removing the requirement for initial USB connection.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb](/man/adb)(1), [adb-connect](/man/adb-connect)(1), [adb-disconnect](/man/adb-disconnect)(1)

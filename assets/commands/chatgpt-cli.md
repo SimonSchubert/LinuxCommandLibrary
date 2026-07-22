@@ -89,6 +89,12 @@ Requires an OpenAI API key with available credits. API usage is billed per token
 
 Various **chatgpt-cli** implementations emerged after OpenAI released the ChatGPT API in **March 2023**. These community tools filled the gap for users wanting terminal access to ChatGPT without using the web interface. Multiple implementations exist in different languages (Python, Go, Rust), each with similar goals but varying features.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#chatgpt-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [llm](/man/llm)(1), [ollama](/man/ollama)(1), [sgpt](/man/sgpt)(1), [aichat](/man/aichat)(1)

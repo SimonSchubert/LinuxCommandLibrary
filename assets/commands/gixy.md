@@ -74,6 +74,14 @@ Python tool. The original yandex/gixy project is unmaintained; gixy-next is a ma
 
 gixy was created by **Yandex** to automate nginx security configuration review.
 
+# INSTALL
+
+```brew: brew install gixy```
+
+```nix: nix profile install nixpkgs#gixy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nginx](/man/nginx)(1)

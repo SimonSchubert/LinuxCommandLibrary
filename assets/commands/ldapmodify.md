@@ -89,6 +89,16 @@ delete: telephoneNumber
 
 Schema must allow modifications. Use correct changetype. Hyphen (-) separates multiple operations.
 
+# INSTALL
+
+```apt: sudo apt install ldap-utils```
+
+```dnf: sudo dnf install openldap-clients```
+
+```apk: sudo apk add openldap-clients```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ldapadd](/man/ldapadd)(1), [ldapsearch](/man/ldapsearch)(1)

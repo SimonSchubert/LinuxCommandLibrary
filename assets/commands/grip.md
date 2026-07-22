@@ -87,6 +87,16 @@ Use **--offline** to avoid API rate limits for basic rendering.
 
 Without authentication, GitHub API rate limits may apply. Use **--user** and **--pass** with a personal access token for higher limits.
 
+# INSTALL
+
+```dnf: sudo dnf install grip```
+
+```brew: brew install grip```
+
+```nix: nix profile install nixpkgs#grip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [markdown](/man/markdown)(1), [pandoc](/man/pandoc)(1), [glow](/man/glow)(1)

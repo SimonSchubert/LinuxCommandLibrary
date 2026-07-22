@@ -52,6 +52,12 @@ provides a simple view of Kubernetes resource requests, limits, and utilization
 
 **kube-capacity** provides a simple view of Kubernetes resource requests, limits, and utilization. Displays CPU and memory allocation across nodes, pods, and containers. Helps identify over-provisioned or under-utilized resources.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kube-capacity```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-top](/man/kubectl-top)(1)

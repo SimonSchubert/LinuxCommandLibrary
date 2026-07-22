@@ -78,6 +78,17 @@ Authorization tokens expire after 12 hours by default. The **login** command mus
 
 AWS CodeArtifact was launched in **June 2020** as a managed artifact repository service. It was designed to replace self-hosted solutions like Nexus or Artifactory. Support for additional package formats including Swift, Ruby, and Cargo was added in subsequent releases through **2022-2023**.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [npm](/man/npm)(1), [pip](/man/pip)(1), [maven](/man/maven)(1)

@@ -56,6 +56,18 @@ Requires running JACK server. Port names include client name. Connections don't 
 
 JACK was created by **Paul Davis** and others, starting in **2002**. It provides professional-grade audio routing on Linux and macOS, used extensively in audio production.
 
+# INSTALL
+
+```apt: sudo apt install jack-example-tools```
+
+```pacman: sudo pacman -S jack-example-tools```
+
+```zypper: sudo zypper install jack-example-tools```
+
+```nix: nix profile install nixpkgs#jack-example-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jackd](/man/jackd)(1), [pulseaudio](/man/pulseaudio)(1), [pipewire](/man/pipewire)(1)

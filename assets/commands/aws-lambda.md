@@ -92,6 +92,17 @@ Functions have a 15-minute maximum timeout. Deployment package size is limited t
 
 AWS Lambda launched in **November 2014** as the first major serverless compute service. It initially supported only Node.js. Python support came in **2015**, and custom runtimes in **2018**. Lambda@Edge for CloudFront, container image support, and Lambda URLs have expanded its use cases significantly.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-apigateway](/man/aws-apigateway)(1), [aws-events](/man/aws-events)(1)

@@ -81,6 +81,16 @@ Bun does not run dependency lifecycle scripts by default for security. Allow-lis
 
 Compatible with existing package.json files. Supports workspaces, git/http/tarball dependencies, and custom registries. Some npm-specific features may behave differently.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-add](/man/bun-add)(1), [bun-remove](/man/bun-remove)(1), [npm](/man/npm)(1), [yarn](/man/yarn)(1)

@@ -87,6 +87,18 @@ Filesystem-specific; works with ext2/3/4 but not XFS or Btrfs. Cannot back up mo
 
 dump dates back to early Unix at **Bell Labs** in the **1970s**. It was one of the original backup utilities, designed for tape backups. The Linux version (dump/restore) was adapted from 4.4BSD and continues the traditional interface while supporting modern ext filesystems.
 
+# INSTALL
+
+```apt: sudo apt install dump```
+
+```dnf: sudo dnf install dump```
+
+```zypper: sudo zypper install dump```
+
+```nix: nix profile install nixpkgs#dump```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tar](/man/tar)(1), [rsync](/man/rsync)(1), [dd](/man/dd)(1)

@@ -88,6 +88,18 @@ Works best with compositing enabled. May have issues on some window managers. Co
 
 guake was created by **Gabriel Falcão** in **2007**, originally hosted on SourceForge, and inspired by the drop-down console in id Software's Quake game and similar terminals like Yakuake (KDE) and Tilda. It has since moved to GitHub and is maintained by a community of contributors.
 
+# INSTALL
+
+```dnf: sudo dnf install guake```
+
+```pacman: sudo pacman -S guake```
+
+```zypper: sudo zypper install guake```
+
+```nix: nix profile install nixpkgs#guake```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yakuake](/man/yakuake)(1), [tilda](/man/tilda)(1), [gnome-terminal](/man/gnome-terminal)(1)

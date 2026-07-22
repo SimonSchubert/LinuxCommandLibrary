@@ -52,6 +52,12 @@ Subcommand of kiterunner. Requires network for download. Disk space for KBs.
 
 kr kb is part of **kiterunner** by Assetnote, providing curated API endpoint wordlists for security testing.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kiterunner```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kiterunner](/man/kiterunner)(1), [kiterunner-scan](/man/kiterunner-scan)(1)

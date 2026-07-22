@@ -96,6 +96,23 @@ Exactly one encoding option is required. With **--z85**, encoding input length m
 
 **basenc** was added to GNU coreutils in version **8.31** (2019) to provide a unified interface for multiple encoding schemes.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [base64](/man/base64)(1), [base32](/man/base32)(1), [b2sum](/man/b2sum)(1), [xxd](/man/xxd)(1)

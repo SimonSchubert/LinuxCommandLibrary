@@ -54,6 +54,16 @@ When a package name is provided, only that package is pruned if it is extraneous
 
 Use **--dry-run** first to verify what will be removed. The **--production** flag is deprecated in favor of **--omit=dev**.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-install](/man/npm-install)(1), [npm-ls](/man/npm-ls)(1), [npm-dedupe](/man/npm-dedupe)(1)

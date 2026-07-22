@@ -93,6 +93,24 @@ Pattern matching can accidentally kill unintended processes. Use **pgrep** with 
 
 **pkill** was introduced in **Solaris 7** in **1998** as part of a set of process utilities alongside **pgrep**. It was subsequently ported to other Unix-like systems, with the Linux implementation provided by the **procps** (or **procps-ng**) package. The command has become a standard tool on modern Unix-like systems, valued for its convenience over the traditional **ps | grep | kill** pipeline approach.
 
+# INSTALL
+
+```apt: sudo apt install procps```
+
+```dnf: sudo dnf install procps-ng```
+
+```pacman: sudo pacman -S procps-ng```
+
+```apk: sudo apk add procps-ng```
+
+```zypper: sudo zypper install procps```
+
+```brew: brew install procps```
+
+```nix: nix profile install nixpkgs#procps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pgrep](/man/pgrep)(1), [kill](/man/kill)(1), [killall](/man/killall)(1), [ps](/man/ps)(1), [top](/man/top)(1)

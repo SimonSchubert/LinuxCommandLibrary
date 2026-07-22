@@ -86,6 +86,12 @@ The tool follows links to a configurable depth and extracts unique words meeting
 
 Only use on websites you have authorization to spider. Aggressive spidering may trigger rate limiting or blocking. Large sites may produce very large wordlists.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#cewl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [john](/man/john)(1), [hashcat](/man/hashcat)(1), [crunch](/man/crunch)(1)

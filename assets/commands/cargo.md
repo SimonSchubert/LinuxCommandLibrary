@@ -152,6 +152,20 @@ First build downloads dependencies (slow). Release builds significantly slower t
 
 **Cargo** was developed alongside Rust starting around **2013**, becoming the standard build tool and package manager for the Rust ecosystem.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rustc](/man/rustc)(1), [rustup](/man/rustup)(1), [cargo-fmt](/man/cargo-fmt)(1), [cargo-clippy](/man/cargo-clippy)(1), [cargo-bench](/man/cargo-bench)(1)

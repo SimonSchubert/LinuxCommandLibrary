@@ -79,6 +79,20 @@ Requires a running rspamd server. Training effectiveness improves with more samp
 
 **rspamc** is part of **rspamd**, a fast, free, and open-source spam filtering system designed for high-volume mail servers.
 
+# INSTALL
+
+```apt: sudo apt install rspamd```
+
+```pacman: sudo pacman -S rspamd```
+
+```apk: sudo apk add rspamd-client```
+
+```zypper: sudo zypper install rspamd```
+
+```nix: nix profile install nixpkgs#rspamd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rspamd](/man/rspamd)(8), [rspamadm](/man/rspamadm)(1)

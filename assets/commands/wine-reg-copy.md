@@ -38,6 +38,20 @@ When a value already exists in the destination, the command prompts before overw
 **/f**
 > Force the copy, overwriting existing destination values without a confirmation prompt.
 
+# INSTALL
+
+```dnf: sudo dnf install wine```
+
+```pacman: sudo pacman -S wine```
+
+```apk: sudo apk add wine```
+
+```zypper: sudo zypper install wine```
+
+```nix: nix profile install nixpkgs#wine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wine](/man/wine)(1), [wine-reg](/man/wine-reg)(1), [wine-reg-add](/man/wine-reg-add)(1), [wine-reg-delete](/man/wine-reg-delete)(1), [wine-reg-query](/man/wine-reg-query)(1)

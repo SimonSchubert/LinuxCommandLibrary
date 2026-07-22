@@ -54,6 +54,22 @@ The command is useful for recovering from metadata corruption or recreating volu
 
 Only restores metadata, not data. Requires root privileges. Physical volumes must exist for restore to succeed. Data may be lost if metadata is inconsistent with disk contents.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vgcfgbackup](/man/vgcfgbackup)(8), [vgdisplay](/man/vgdisplay)(8), [lvm](/man/lvm)(8)

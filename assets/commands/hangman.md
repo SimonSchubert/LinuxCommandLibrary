@@ -59,6 +59,18 @@ Part of BSD games. Requires /usr/share/dict/words or custom list. Terminal-based
 
 hangman has been part of **BSD games** collection since early Unix systems, providing terminal entertainment.
 
+# INSTALL
+
+```dnf: sudo dnf install bsd-games```
+
+```pacman: sudo pacman -S bsd-games```
+
+```apk: sudo apk add bsd-games```
+
+```zypper: sudo zypper install bsd-games```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bsdgames](/man/bsdgames)(6), [fortune](/man/fortune)(6)

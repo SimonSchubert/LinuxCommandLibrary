@@ -64,6 +64,24 @@ WireGuard uses state-of-the-art cryptography and is designed to be simpler, fast
 
 Requires root privileges for most operations. Private keys should be kept secure with restricted file permissions. Interface must be created (e.g., with **ip link add**) before configuration. For easier setup, consider using **wg-quick**.
 
+# INSTALL
+
+```apt: sudo apt install wireguard-tools```
+
+```dnf: sudo dnf install wireguard-tools```
+
+```pacman: sudo pacman -S wireguard-tools```
+
+```apk: sudo apk add wireguard-tools-wg```
+
+```zypper: sudo zypper install wireguard-tools```
+
+```brew: brew install wireguard-tools```
+
+```nix: nix profile install nixpkgs#wireguard-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wg-quick](/man/wg-quick)(8), [ip](/man/ip)(8)

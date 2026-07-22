@@ -29,6 +29,22 @@ _None._
 
 Requires an EuroBraille Clio terminal connected to the system. Returns 1 on error. Special characters in file names should be quoted to prevent shell or terminal expansion.
 
+# INSTALL
+
+```apt: sudo apt install brltty```
+
+```dnf: sudo dnf install brltty```
+
+```pacman: sudo pacman -S brltty```
+
+```apk: sudo apk add brltty```
+
+```zypper: sudo zypper install brltty```
+
+```nix: nix profile install nixpkgs#brltty```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [brltty](/man/brltty)(1)

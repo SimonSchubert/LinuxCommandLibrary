@@ -58,6 +58,16 @@ Configuration controls default channels, authentication tokens, cache directorie
 **pixi.toml**
 > Project-level configuration in the project root directory.
 
+# INSTALL
+
+```pacman: sudo pacman -S pixi```
+
+```brew: brew install pixi```
+
+```nix: nix profile install nixpkgs#pixi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pixi](/man/pixi)(1), [conda](/man/conda)(1)

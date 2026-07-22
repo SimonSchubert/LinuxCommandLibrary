@@ -102,6 +102,24 @@ Passwords in config file need protection. SSL verification recommended. Large ma
 
 **fetchmail** was originally written by **Carl Harris** as popclient in **1993**. **Eric S. Raymond** took over development in **1996**, renaming it fetchmail and adding IMAP support. It became a standard tool for pulling mail from remote servers.
 
+# INSTALL
+
+```apt: sudo apt install fetchmail```
+
+```dnf: sudo dnf install fetchmail```
+
+```pacman: sudo pacman -S fetchmail```
+
+```apk: sudo apk add fetchmail```
+
+```zypper: sudo zypper install fetchmail```
+
+```brew: brew install fetchmail```
+
+```nix: nix profile install nixpkgs#fetchmail```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [procmail](/man/procmail)(1), [mutt](/man/mutt)(1), [sendmail](/man/sendmail)(1), [mail](/man/mail)(1)

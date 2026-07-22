@@ -102,6 +102,14 @@ Requires GTK-2. May not support all modern tray icon features. Transparency requ
 
 **trayer** was developed as a standalone system tray for use with tiling and minimal window managers that lack built-in system tray support.
 
+# INSTALL
+
+```apt: sudo apt install trayer```
+
+```nix: nix profile install nixpkgs#trayer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stalonetray](/man/stalonetray)(1)

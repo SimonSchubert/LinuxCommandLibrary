@@ -59,6 +59,24 @@ Running git init in an existing repository is safe and won't overwrite existing 
 
 The `--bare` option creates a repository optimized for sharing without a working directory. The `--initial-branch` option sets the name of the first branch, useful for starting with "main" instead of "master". Template directories allow customization of the initial repository structure, including hooks and configuration.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-clone](/man/git-clone)(1), [git-config](/man/git-config)(1)

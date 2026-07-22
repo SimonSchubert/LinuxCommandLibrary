@@ -59,6 +59,24 @@ The command checks /proc/self/mountinfo, so results depend on the mount namespac
 
 **mountpoint** was originally part of **sysvinit** and is now maintained as part of **util-linux** by Karel Zak. It provides a reliable method for scripts to check mount status without parsing mount output.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(8), [umount](/man/umount)(8), [findmnt](/man/findmnt)(8)

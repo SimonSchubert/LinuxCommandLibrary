@@ -79,6 +79,14 @@ Large libraries with many attachments can consume significant disk space.
 
 Offline access requires library data to be synced locally.
 
+# INSTALL
+
+```apk: sudo apk add zotero```
+
+```nix: nix profile install nixpkgs#zotero```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jabref](/man/jabref)(1), [mendeley](/man/mendeley)(1), [papis](/man/papis)(1)

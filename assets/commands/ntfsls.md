@@ -56,6 +56,22 @@ Part of ntfs-3g. Read-only operation. Device must be NTFS formatted.
 
 ntfsls was created as part of **ntfs-3g** tools for NTFS filesystem inspection.
 
+# INSTALL
+
+```apt: sudo apt install ntfs-3g```
+
+```dnf: sudo dnf install ntfs-3g```
+
+```pacman: sudo pacman -S ntfs-3g```
+
+```apk: sudo apk add ntfs-3g-progs```
+
+```zypper: sudo zypper install ntfs-3g```
+
+```brew: brew install ntfs-3g```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ntfs-3g](/man/ntfs-3g)(1), [ls](/man/ls)(1), [ntfscat](/man/ntfscat)(1)

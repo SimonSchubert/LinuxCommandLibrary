@@ -119,6 +119,13 @@ Requires running amrecover from the appropriate directory for in-place restores.
 
 Amanda (Advanced Maryland Automatic Network Disk Archiver) was developed at the **University of Maryland** starting in **1991**. The amrecover tool provides the primary user interface for file-level recovery, designed to make restores accessible without requiring direct tape manipulation. It has evolved to support various storage backends beyond traditional tape.
 
+# INSTALL
+
+```apt: sudo apt install amanda-client```
+
+```dnf: sudo dnf install amanda-client```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [amcheck](/man/amcheck)(8), [amdump](/man/amdump)(8)

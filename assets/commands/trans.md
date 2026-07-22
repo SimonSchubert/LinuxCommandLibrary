@@ -100,6 +100,22 @@ Requires internet connection and depends on external translation services. Heavy
 
 Translate Shell was originally named "Google Translate CLI" and was created by **Mort Yao** (soimort). It was first released around **2012** to provide command-line access to Google Translate. The project was later renamed and expanded to support multiple translation engines including Bing, Yandex, and Apertium.
 
+# INSTALL
+
+```dnf: sudo dnf install translate-shell```
+
+```pacman: sudo pacman -S translate-shell```
+
+```apk: sudo apk add translate-shell```
+
+```zypper: sudo zypper install translate-shell```
+
+```brew: brew install translate-shell```
+
+```nix: nix profile install nixpkgs#translate-shell```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dict](/man/dict)(1), [espeak](/man/espeak)(1), [aspell](/man/aspell)(1)

@@ -76,6 +76,20 @@ Print the path to a project's Cargo.toml
 
 Useful for scripts and tooling that need to find the project root. Returns exit code 101 if no Cargo.toml is found in the current or any parent directory.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-metadata](/man/cargo-metadata)(1), [cargo-pkgid](/man/cargo-pkgid)(1)

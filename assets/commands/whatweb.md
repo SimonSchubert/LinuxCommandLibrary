@@ -87,6 +87,14 @@ Only use on systems you are authorized to scan. Aggressive modes (`-a 3` and `-a
 
 **whatweb** was created by **Andrew Horton** (urbanadventurer) and **Brendan Coles** as an open-source web fingerprinting framework. Source: github.com/urbanadventurer/WhatWeb.
 
+# INSTALL
+
+```dnf: sudo dnf install whatweb```
+
+```nix: nix profile install nixpkgs#whatweb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wappalyzer](/man/wappalyzer)(1), [nmap](/man/nmap)(1), [nikto](/man/nikto)(1), [curl](/man/curl)(1), [httpx](/man/httpx)(1)

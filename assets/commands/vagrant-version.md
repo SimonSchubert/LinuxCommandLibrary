@@ -26,6 +26,16 @@ The short form **vagrant --version** or **vagrant -v** prints only the installed
 
 Checking for the latest version requires network access. The update check may fail in air-gapped environments.
 
+# INSTALL
+
+```apt: sudo apt install vagrant```
+
+```dnf: sudo dnf install vagrant```
+
+```nix: nix profile install nixpkgs#vagrant```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vagrant](/man/vagrant)(1)

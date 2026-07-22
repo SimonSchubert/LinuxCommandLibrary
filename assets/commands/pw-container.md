@@ -55,6 +55,16 @@ Security contexts must be supported by the PipeWire configuration. Properties mu
 
 Part of **PipeWire**, the modern multimedia framework for Linux. Provides application isolation capabilities for audio and video access control.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-tools```
+
+```zypper: sudo zypper install pipewire-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [pw-cli](/man/pw-cli)(1), [pw-cat](/man/pw-cat)(1), [wpctl](/man/wpctl)(1)

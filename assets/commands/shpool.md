@@ -91,6 +91,12 @@ Single-client-per-session model means only one terminal can be attached to a giv
 
 **shpool** was created as a simpler alternative to **tmux** and **GNU screen**, focusing exclusively on session persistence without terminal multiplexing. Written in **Rust**, it is developed by the shell-pool community on GitHub. The project emphasizes preserving native terminal feel while providing reliable reconnection for remote work.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#shpool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [screen](/man/screen)(1), [dtach](/man/dtach)(1), [abduco](/man/abduco)(1), [mosh](/man/mosh)(1)

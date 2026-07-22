@@ -38,6 +38,16 @@ Part of the **scamper** network measurement toolkit.
 
 Only warts files containing embedded packet data can be meaningfully converted. Not all scamper measurement types embed raw packets in their output.
 
+# INSTALL
+
+```apt: sudo apt install scamper```
+
+```zypper: sudo zypper install scamper```
+
+```brew: brew install scamper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sc_warts2json](/man/sc_warts2json)(1), [sc_wartsdump](/man/sc_wartsdump)(1), [scamper](/man/scamper)(1), [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1)

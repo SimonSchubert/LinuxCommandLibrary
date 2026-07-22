@@ -54,6 +54,12 @@ It is not universal across shells: **fish** and **csh** close their loops with *
 
 The `do ... done` bracketing comes from the **Bourne shell** in Unix Version 7 (**1979**). Stephen Bourne took the style from ALGOL 68, where compound statements are closed by reversing the opening keyword, the same instinct that gives the shell `if ... fi` and `case ... esac`. Loops never acquired a reversed `od`, so they were given the plain word `done` instead. POSIX standardised the syntax, and it behaves identically in every Bourne-family shell today.
 
+# INSTALL
+
+```aur: yay -S done```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [for](/man/for)(1), [while](/man/while)(1), [until](/man/until)(1), [break](/man/break)(1), [continue](/man/continue)(1), [bash](/man/bash)(1)

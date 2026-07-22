@@ -68,6 +68,18 @@ Requires X11/Wayland display. Alternative: nmcli for CLI. Changes saved to syste
 
 nm-connection-editor is part of the **NetworkManager** project developed by **Red Hat**, providing a GTK-based interface for network configuration.
 
+# INSTALL
+
+```apt: sudo apt install nm-connection-editor```
+
+```dnf: sudo dnf install nm-connection-editor```
+
+```pacman: sudo pacman -S nm-connection-editor```
+
+```apk: sudo apk add network-manager-applet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmcli](/man/nmcli)(1), [nmtui](/man/nmtui)(1), [NetworkManager](/man/NetworkManager)(1)

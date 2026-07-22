@@ -56,6 +56,18 @@ modifies images in place
 
 Modifies files in place by default. Use -path to preserve originals.
 
+# INSTALL
+
+```pacman: sudo pacman -S imagemagick```
+
+```apk: sudo apk add imagemagick```
+
+```brew: brew install imagemagick```
+
+```nix: nix profile install nixpkgs#imagemagick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [magick](/man/magick)(1), [magick-convert](/man/magick-convert)(1)

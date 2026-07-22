@@ -84,6 +84,14 @@ The tool is useful for automatic version control of notes, configuration files, 
 
 Requires **inotify-tools** on Linux or **fswatch** on macOS/BSD to be installed. Only tracks changes gitwatch itself observes while running; it does not replay changes made while it was stopped.
 
+# INSTALL
+
+```brew: brew install gitwatch```
+
+```nix: nix profile install nixpkgs#gitwatch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [inotifywait](/man/inotifywait)(1), [git](/man/git)(1)

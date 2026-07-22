@@ -100,6 +100,22 @@ The two yq implementations have different syntax and capabilities. The Go versio
 
 The Python yq wrapper was created by **Andrey Kislyuk** and released in **2017** as a thin jq wrapper for YAML. The Go-based yq was created by **Mike Farah** around the same time as a standalone tool. The Go version has become more popular due to being a single binary with no dependencies and supporting multiple formats beyond YAML.
 
+# INSTALL
+
+```dnf: sudo dnf install yq```
+
+```pacman: sudo pacman -S yq```
+
+```apk: sudo apk add yq-go```
+
+```zypper: sudo zypper install yq```
+
+```brew: brew install yq```
+
+```nix: nix profile install nixpkgs#yq-go```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [xmlstarlet](/man/xmlstarlet)(1), [dasel](/man/dasel)(1), [fx](/man/fx)(1)

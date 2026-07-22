@@ -79,6 +79,20 @@ The terminal supports tabs, horizontal and vertical split views, configurable wi
 
 Designed for KDE Plasma but works under other desktops provided the required KDE Frameworks libraries are installed. The F12 global shortcut may conflict with other applications; it can be rebound in the configuration dialog.
 
+# INSTALL
+
+```apt: sudo apt install yakuake```
+
+```dnf: sudo dnf install yakuake```
+
+```pacman: sudo pacman -S yakuake```
+
+```apk: sudo apk add yakuake```
+
+```zypper: sudo zypper install yakuake```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [guake](/man/guake)(1), [konsole](/man/konsole)(1), [tilda](/man/tilda)(1)

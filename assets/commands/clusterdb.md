@@ -101,6 +101,12 @@ Requires exclusive lock on the table during operation, blocking all other access
 
 **clusterdb** has been part of the PostgreSQL distribution since early versions, providing command-line access to the CLUSTER functionality. The CLUSTER command itself dates back to PostgreSQL's origins as a research database at UC Berkeley. The utility follows PostgreSQL's pattern of providing command-line wrappers for common administrative tasks.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [psql](/man/psql)(1), [vacuumdb](/man/vacuumdb)(1), [reindexdb](/man/reindexdb)(1)

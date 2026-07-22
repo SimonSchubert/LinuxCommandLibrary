@@ -89,6 +89,12 @@ CLI (markdownlint-cli) separate from library. Rules may conflict with some Markd
 
 markdownlint was created by **David Anson** as a Node.js library, with the CLI wrapper (markdownlint-cli) developed separately.
 
+# INSTALL
+
+```pacman: sudo pacman -S markdownlint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [prettier](/man/prettier)(1), [markdown](/man/markdown)(1), [vale](/man/vale)(1)

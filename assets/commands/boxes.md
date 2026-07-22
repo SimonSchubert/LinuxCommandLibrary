@@ -115,6 +115,18 @@ Wide text may not fit terminal. Some designs require monospace font. Configurati
 
 **boxes** was created by Thomas Jensen in **1999** to provide decorative ASCII boxes for text, inspired by similar DOS utilities.
 
+# INSTALL
+
+```apt: sudo apt install boxes```
+
+```dnf: sudo dnf install boxes```
+
+```brew: brew install boxes```
+
+```nix: nix profile install nixpkgs#boxes```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [figlet](/man/figlet)(6), [cowsay](/man/cowsay)(1), [banner](/man/banner)(6)

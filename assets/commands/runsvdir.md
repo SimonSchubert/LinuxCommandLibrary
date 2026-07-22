@@ -53,6 +53,18 @@ Usually started by runit init at system boot. The filesystem should not be unmou
 
 **runsvdir** is the service directory supervisor in **runit**, created by Gerrit Pape. It watches for service directories and manages runsv processes for each.
 
+# INSTALL
+
+```apt: sudo apt install runit```
+
+```apk: sudo apk add runit```
+
+```brew: brew install runit```
+
+```nix: nix profile install nixpkgs#runit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [runit](/man/runit)(8), [runsv](/man/runsv)(8), [sv](/man/sv)(8), [runsvchdir](/man/runsvchdir)(8), [chpst](/man/chpst)(8), [svlogd](/man/svlogd)(8)

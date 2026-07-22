@@ -83,6 +83,14 @@ Requires PolicyKit. Actions defined in /usr/share/polkit-1/actions/. Changing po
 
 pkaction is part of **PolicyKit** (polkit), the authorization framework developed by **Red Hat** for fine-grained access control.
 
+# INSTALL
+
+```apt: sudo apt install polkitd```
+
+```apk: sudo apk add polkit-common```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pkexec](/man/pkexec)(1), [pkcheck](/man/pkcheck)(1), [polkit](/man/polkit)(8)

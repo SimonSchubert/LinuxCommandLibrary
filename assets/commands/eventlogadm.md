@@ -61,6 +61,24 @@ Requires Samba configured. Event log format specific to Windows compatibility. S
 
 eventlogadm is part of **Samba**, providing Windows event log compatibility for the Unix implementation of Windows networking protocols.
 
+# INSTALL
+
+```apt: sudo apt install samba```
+
+```dnf: sudo dnf install samba```
+
+```pacman: sudo pacman -S samba```
+
+```apk: sudo apk add samba-server```
+
+```zypper: sudo zypper install samba```
+
+```brew: brew install samba```
+
+```nix: nix profile install nixpkgs#samba```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [samba](/man/samba)(7)

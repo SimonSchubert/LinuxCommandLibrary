@@ -70,6 +70,14 @@ Only captures unencrypted traffic (HTTP). Requires root/promiscuous access. HTTP
 
 driftnet was created by **Chris Lightfoot** as a demonstration of network traffic visibility. It highlights the privacy implications of unencrypted communications and is used in security awareness training.
 
+# INSTALL
+
+```apt: sudo apt install driftnet```
+
+```nix: nix profile install nixpkgs#driftnet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(8), [wireshark](/man/wireshark)(1), [ettercap](/man/ettercap)(8)

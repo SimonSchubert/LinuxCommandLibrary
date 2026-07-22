@@ -102,6 +102,14 @@ Opinionated workflow. May not suit all projects. Requires initialization per rep
 
 git flow was created by **Vincent Driessen** in **2010** based on his successful git branching model blog post.
 
+# INSTALL
+
+```apk: sudo apk add git-flow```
+
+```brew: brew install git-flow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-merge](/man/git-merge)(1), [git-checkout](/man/git-checkout)(1), [git-tag](/man/git-tag)(1)

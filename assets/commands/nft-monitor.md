@@ -53,6 +53,24 @@ Without a filter argument, all nftables events are shown. Specifying an object t
 
 Requires root privileges to access netlink notifications. The monitor runs continuously until interrupted with **Ctrl+C**. High-frequency changes (like connection tracking updates) may produce substantial output. Only shows changes made while monitoring is active.
 
+# INSTALL
+
+```apt: sudo apt install nftables```
+
+```dnf: sudo dnf install nftables```
+
+```pacman: sudo pacman -S nftables```
+
+```apk: sudo apk add nftables```
+
+```zypper: sudo zypper install nftables```
+
+```brew: brew install nftables```
+
+```nix: nix profile install nixpkgs#nftables```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nft](/man/nft)(8), [iptables](/man/iptables)(8), [conntrack](/man/conntrack)(8)

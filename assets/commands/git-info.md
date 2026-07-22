@@ -45,6 +45,24 @@ Requires the **git-extras** package to be installed. Must be run inside a git re
 
 git info is part of **git-extras**, created by **TJ Holowaychuk** to provide a single command for repository overview.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-status](/man/git-status)(1), [git-remote](/man/git-remote)(1), [git-log](/man/git-log)(1)

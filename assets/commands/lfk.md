@@ -113,6 +113,12 @@ Requires **kubectl** to be installed and reachable on **PATH**. **helm** and **t
 
 **lfk** was created by **Janos Miko** and first released in **2024** on GitHub. Inspired by the resource-list/preview ergonomics of **yazi** and the keyboard speed of **k9s**, it aims to give SREs a faster path between *"where is the problem"* and *"what does the log say"*.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#lfk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [k9s](/man/k9s)(1), [helm](/man/helm)(1), [yazi](/man/yazi)(1)

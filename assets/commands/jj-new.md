@@ -62,6 +62,20 @@ Subcommand of jj. Current change auto-commits. Different from Git branch.
 
 jj new is part of **Jujutsu**, central to its workflow of treating all changes as first-class revisions.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-describe](/man/jj-describe)(1), [jj-next](/man/jj-next)(1)

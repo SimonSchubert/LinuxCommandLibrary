@@ -88,6 +88,24 @@ No visual feedback by default. Errors reported with "?" unless verbose. Learning
 
 ed was written by **Ken Thompson** at Bell Labs in **1969**, making it one of the earliest Unix programs. Its design influenced sed, ex, vi, and ultimately modern text editors.
 
+# INSTALL
+
+```apt: sudo apt install ed```
+
+```dnf: sudo dnf install ed```
+
+```pacman: sudo pacman -S ed```
+
+```apk: sudo apk add ed```
+
+```zypper: sudo zypper install ed```
+
+```brew: brew install ed```
+
+```nix: nix profile install nixpkgs#ed```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sed](/man/sed)(1), [vi](/man/vi)(1), [ex](/man/ex)(1)

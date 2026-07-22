@@ -38,6 +38,16 @@ Limited feature set by design — no plugin system or advanced editing features.
 
 **kibi** was created by **Ilaï Deutel** (ilai-deutel) and is written in **Rust**. It is compatible with Linux, macOS, Windows 10, and WASI. The name "kibi" means 1024 (as in kibibyte), referencing the line count constraint.
 
+# INSTALL
+
+```apk: sudo apk add kibi```
+
+```brew: brew install kibi```
+
+```nix: nix profile install nixpkgs#kibi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nano](/man/nano)(1), [micro](/man/micro)(1), [vim](/man/vim)(1)

@@ -110,6 +110,24 @@ Interactive deletion is permanent (no trash). Some terminals may not render the 
 
 **gdu** was created by Daniel Milde around **2020** as a faster alternative to ncdu. Written in Go for performance and easy cross-platform compilation, it quickly gained popularity among system administrators. The tool is available in package managers for most Linux distributions and Homebrew for macOS.
 
+# INSTALL
+
+```apt: sudo apt install gdu```
+
+```dnf: sudo dnf install gdu```
+
+```pacman: sudo pacman -S gdu```
+
+```apk: sudo apk add gdu```
+
+```zypper: sudo zypper install gdu```
+
+```brew: brew install gdu```
+
+```nix: nix profile install nixpkgs#gdu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [du](/man/du)(1), [ncdu](/man/ncdu)(1), [dust](/man/dust)(1), [df](/man/df)(1), [duf](/man/duf)(1)

@@ -40,6 +40,14 @@ Windows support is experimental. Linux requires **libasound2-dev** for audio ale
 
 **sampler** was created by **Alexander Lukyanchikov** (sqshq) and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install sampler```
+
+```nix: nix profile install nixpkgs#sampler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glances](/man/glances)(1), [htop](/man/htop)(1)

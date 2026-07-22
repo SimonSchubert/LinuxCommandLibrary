@@ -95,6 +95,21 @@ Recordings capture exactly what appears in terminal, including sensitive data. R
 
 **asciinema** was created by Marcin Kulik, with the first version released around **2011**. It has become the standard tool for terminal recording and sharing.
 
+# INSTALL
+
+```dnf: sudo dnf install asciinema```
+
+```pacman: sudo pacman -S asciinema```
+
+```apk: sudo apk add asciinema```
+
+```zypper: sudo zypper install asciinema```
+
+```brew: brew install asciinema```
+
+```nix: nix profile install nixpkgs#asciinema```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [script](/man/script)(1), [ttyrec](/man/ttyrec)(1), [agg](/man/agg)(1)

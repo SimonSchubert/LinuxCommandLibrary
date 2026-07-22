@@ -31,6 +31,24 @@ untrack files without deleting them
 
 Unlike **fossil rm** or **fossil delete**, forgotten files remain on disk untouched. The command only affects the staging area, removing the scheduled addition of files that haven't been committed yet.
 
+# INSTALL
+
+```apt: sudo apt install fossil```
+
+```dnf: sudo dnf install fossil```
+
+```pacman: sudo pacman -S fossil```
+
+```apk: sudo apk add fossil```
+
+```zypper: sudo zypper install fossil```
+
+```brew: brew install fossil```
+
+```nix: nix profile install nixpkgs#fossil```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fossil-rm](/man/fossil-rm)(1), [fossil-add](/man/fossil-add)(1)

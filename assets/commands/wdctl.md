@@ -53,6 +53,24 @@ The output includes information about the watchdog device, timeout values, and s
 
 Requires read access to the watchdog device (typically **/dev/watchdog**). Available flags are driver-specific. Not all systems have hardware watchdog support. Part of the util-linux package.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [watchdog](/man/watchdog)(8)

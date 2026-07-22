@@ -94,6 +94,12 @@ Requires a Clockify account and API key from account settings. Some features may
 
 Clockify was founded in **2017** by COING as a free time tracking solution. The service gained popularity for offering unlimited users and tracking on the free tier. Various community-developed CLI tools emerged to provide command-line access, with **clockify-cli** being one of the more feature-complete options for developers who prefer terminal-based workflows.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#clockify```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [watson](/man/watson)(1), [timew](/man/timew)(1)

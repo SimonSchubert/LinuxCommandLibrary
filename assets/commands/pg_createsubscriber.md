@@ -68,6 +68,16 @@ The target standby must be stopped before running the tool. Internally it uses *
 
 The target server must be a running-then-stopped physical standby, not in use during conversion. The number of `--publication`, `--subscription`, and `--replication-slot` values, when specified, must match the number of `--database` values. Always test with `--dry-run` first.
 
+# INSTALL
+
+```dnf: sudo dnf install postgresql17```
+
+```apk: sudo apk add postgresql17```
+
+```zypper: sudo zypper install postgresql17```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_basebackup](/man/pg_basebackup)(1)

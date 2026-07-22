@@ -43,6 +43,24 @@ remove stopped containers from the system
 
 **docker rm** removes one or more containers. Containers must be stopped unless -f is used. Does not remove images; use docker rmi for that. Container removal frees up disk space and cleans up container metadata from the Docker daemon. Named volumes are preserved unless explicitly removed with -v.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-container-rm](/man/docker-container-rm)(1), [docker-rmi](/man/docker-rmi)(1)

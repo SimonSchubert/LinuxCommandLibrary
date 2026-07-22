@@ -121,6 +121,18 @@ xsv is optimized for well-formed CSV files. Malformed input may produce unexpect
 
 xsv was created by **Andrew Gallant** (BurntSushi) and first released in **2014**. It was developed as a demonstration of Rust's performance capabilities for command-line tools and CSV processing. The project has influenced the design of other Rust CSV tools and established patterns for high-performance CSV processing.
 
+# INSTALL
+
+```pacman: sudo pacman -S xsv```
+
+```apk: sudo apk add xsv```
+
+```zypper: sudo zypper install xsv```
+
+```brew: brew install xsv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [csvkit](/man/csvkit)(1), [miller](/man/miller)(1), [awk](/man/awk)(1), [cut](/man/cut)(1)

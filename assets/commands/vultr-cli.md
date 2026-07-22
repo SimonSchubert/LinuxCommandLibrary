@@ -66,6 +66,18 @@ Requires a Vultr API token with appropriate permissions. Prefer environment or c
 
 Destructive instance and storage commands are irreversible. API rate limits apply. Keep the CLI updated when Vultr adds API resources.
 
+# INSTALL
+
+```dnf: sudo dnf install vultr-cli```
+
+```pacman: sudo pacman -S vultr-cli```
+
+```brew: brew install vultr-cli```
+
+```nix: nix profile install nixpkgs#vultr-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doctl](/man/doctl)(1), [linode-cli](/man/linode-cli)(1), [hcloud](/man/hcloud)(1), [aws](/man/aws)(1)

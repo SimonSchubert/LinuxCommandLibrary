@@ -81,6 +81,24 @@ Not POSIX-compatible. Scripts need fish-specific syntax. Some commands differ fr
 
 fish was created by **Axel Liljencrantz** in 2005 to address shell usability issues. It prioritizes interactive use and discoverability, embracing incompatibility with POSIX to improve user experience.
 
+# INSTALL
+
+```apt: sudo apt install fish```
+
+```dnf: sudo dnf install fish```
+
+```pacman: sudo pacman -S fish```
+
+```apk: sudo apk add fish```
+
+```zypper: sudo zypper install fish```
+
+```brew: brew install fish```
+
+```nix: nix profile install nixpkgs#fish```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [zsh](/man/zsh)(1), [fisher](/man/fisher)(1)

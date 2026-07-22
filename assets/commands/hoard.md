@@ -46,6 +46,12 @@ Shell plugin installation is required for full autocomplete and inline execution
 
 **hoard** was created by **Hyde46** and is written in **Rust**. It was designed to solve the problem of remembering complex CLI commands by providing a quick-access organized collection with parameter substitution.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#hoard```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pet](/man/pet)(1), [navi](/man/navi)(1), [tldr](/man/tldr)(1)

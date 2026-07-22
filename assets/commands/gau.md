@@ -67,6 +67,14 @@ Results include historical dead URLs. May produce large output. Subject to sourc
 
 gau was created for security research and bug bounty hunting, providing easy access to archived URL databases for reconnaissance purposes.
 
+# INSTALL
+
+```brew: brew install gau```
+
+```nix: nix profile install nixpkgs#gau```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [waybackurls](/man/waybackurls)(1), [hakrawler](/man/hakrawler)(1)

@@ -58,6 +58,22 @@ JFS filesystems only. Unmount before use. Linux utility.
 
 jfs_tune is part of **jfsutils**, providing administration tools for the JFS filesystem ported from IBM's AIX.
 
+# INSTALL
+
+```apt: sudo apt install jfsutils```
+
+```dnf: sudo dnf install jfsutils```
+
+```pacman: sudo pacman -S jfsutils```
+
+```apk: sudo apk add jfsutils```
+
+```zypper: sudo zypper install jfsutils```
+
+```nix: nix profile install nixpkgs#jfsutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tune2fs](/man/tune2fs)(8)

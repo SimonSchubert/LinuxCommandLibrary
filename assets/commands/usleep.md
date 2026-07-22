@@ -41,6 +41,12 @@ Deprecated on many systems. Use sleep instead. Not in all distros.
 
 **usleep** was provided by initscripts package for microsecond sleep. Modern sleep accepts fractional seconds.
 
+# INSTALL
+
+```pacman: sudo pacman -S usleep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sleep](/man/sleep)(1), [nanosleep](/man/nanosleep)(2)

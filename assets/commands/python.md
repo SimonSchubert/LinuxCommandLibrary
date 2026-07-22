@@ -72,6 +72,20 @@ Python 2 vs 3 differences. Use python3 for Python 3.
 
 Python was created by **Guido van Rossum** in 1991.
 
+# INSTALL
+
+```dnf: sudo dnf install python3```
+
+```pacman: sudo pacman -S python```
+
+```apk: sudo apk add python3```
+
+```brew: brew install python3```
+
+```nix: nix profile install nixpkgs#python3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python3](/man/python3)(1), [pip](/man/pip)(1), [pydoc](/man/pydoc)(1)

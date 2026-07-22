@@ -78,6 +78,24 @@ Requires root privileges to bind to port 53. Should run as unprivileged user (-u
 
 **BIND** (Berkeley Internet Name Domain) was originally developed at UC Berkeley in the early 1980s. It is the most widely used DNS server software on the Internet. The Internet Systems Consortium (ISC) currently maintains BIND.
 
+# INSTALL
+
+```apt: sudo apt install bind9```
+
+```dnf: sudo dnf install bind```
+
+```pacman: sudo pacman -S bind```
+
+```apk: sudo apk add bind```
+
+```zypper: sudo zypper install bind```
+
+```brew: brew install bind```
+
+```nix: nix profile install nixpkgs#bind```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rndc](/man/rndc)(8), [dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [named.conf](/man/named.conf)(5)

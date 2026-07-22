@@ -59,6 +59,20 @@ Creates new Cargo.lock if none exists. Rebuilds existing lockfile with newest co
 
 Ensures reproducible builds by locking dependency versions. Useful in CI pipelines for deterministic builds. Consider committing Cargo.lock for applications, not libraries.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-update](/man/cargo-update)(1), [cargo-fetch](/man/cargo-fetch)(1)

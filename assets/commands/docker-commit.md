@@ -52,6 +52,24 @@ Does not include data in volumes mounted into the container. The resulting image
 
 **docker commit** has been in the Docker CLI since the project's first public release in **2013**. It predates Dockerfiles and was the original way to build images; modern workflows prefer **docker build** for reproducibility and **docker commit** for ad-hoc debug snapshots only.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-build](/man/docker-build)(1), [docker-save](/man/docker-save)(1), [docker-diff](/man/docker-diff)(1)

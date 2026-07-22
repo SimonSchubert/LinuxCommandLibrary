@@ -98,6 +98,18 @@ Import existing cloud resources into Pulumi
 
 The command requires the resource type (in the format `provider:module/resource:Resource`), a logical name for the resource in Pulumi, and the cloud provider's resource ID. After import, the resource appears in the stack state and future `pulumi up` operations will manage it.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-up](/man/pulumi-up)(1), [pulumi-state](/man/pulumi-state)(1), [pulumi-preview](/man/pulumi-preview)(1), [pulumi-refresh](/man/pulumi-refresh)(1)

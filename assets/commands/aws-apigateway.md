@@ -124,6 +124,17 @@ Requires AWS credentials configured via **aws configure** or environment variabl
 
 **Amazon API Gateway** was launched in **July 2015** as a fully managed service for creating, publishing, and managing APIs. The AWS CLI commands provide programmatic access to API Gateway features. REST APIs were the original offering, with HTTP APIs (simpler, lower cost) and WebSocket APIs added later.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-lambda](/man/aws-lambda)(1), [aws-iam](/man/aws-iam)(1)

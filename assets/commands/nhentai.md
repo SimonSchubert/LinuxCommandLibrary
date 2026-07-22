@@ -62,6 +62,12 @@ Adult content site. Respect terms of service. Network dependent.
 
 nhentai CLI was created to **download galleries** from the nhentai website.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nhentai```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gallery-dl](/man/gallery-dl)(1), [wget](/man/wget)(1), [curl](/man/curl)(1)

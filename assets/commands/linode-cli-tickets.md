@@ -48,6 +48,14 @@ manages Linode support tickets
 
 **linode-cli tickets** manages Linode support tickets. Create, view, and reply to support requests. Part of Linode CLI for cloud infrastructure management.
 
+# INSTALL
+
+```brew: brew install linode-cli```
+
+```nix: nix profile install nixpkgs#linode-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [linode-cli](/man/linode-cli)(1)

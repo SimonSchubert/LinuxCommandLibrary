@@ -52,6 +52,22 @@ Changes saved to ~/.xscreensaver file. GUI not available under Wayland (edit fil
 
 **xscreensaver-settings** (formerly xscreensaver-demo) is the configuration GUI for xscreensaver, created by Jamie Zawinski in 1992. Xscreensaver became the most popular X11 screensaver, with hundreds of display modules developed over the years.
 
+# INSTALL
+
+```apt: sudo apt install xscreensaver```
+
+```dnf: sudo dnf install xscreensaver```
+
+```pacman: sudo pacman -S xscreensaver```
+
+```apk: sudo apk add xscreensaver```
+
+```zypper: sudo zypper install xscreensaver```
+
+```nix: nix profile install nixpkgs#xscreensaver```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xscreensaver](/man/xscreensaver)(1), [xscreensaver-command](/man/xscreensaver-command)(1)

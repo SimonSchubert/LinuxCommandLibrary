@@ -68,6 +68,18 @@ Can be slow for large mailboxes. Memory usage scales with size. Commercial versi
 
 imapsync was created by **Gilles Lamiral** for IMAP mailbox migration and synchronization.
 
+# INSTALL
+
+```dnf: sudo dnf install imapsync```
+
+```pacman: sudo pacman -S imapsync```
+
+```brew: brew install imapsync```
+
+```nix: nix profile install nixpkgs#imapsync```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [offlineimap](/man/offlineimap)(1), [mbsync](/man/mbsync)(1), [fetchmail](/man/fetchmail)(1)

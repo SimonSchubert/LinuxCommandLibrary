@@ -57,6 +57,14 @@ Requires byobu, tmux, and various other tools to be installed. Recommends packag
 
 hollywood was created by Dustin Kirkland at Canonical as a fun side project. It became popular as a way to recreate the unrealistic "hacking" scenes from Hollywood movies, where computers display endless streams of incomprehensible data.
 
+# INSTALL
+
+```zypper: sudo zypper install hollywood```
+
+```nix: nix profile install nixpkgs#hollywood```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [byobu](/man/byobu)(1), [cmatrix](/man/cmatrix)(1)

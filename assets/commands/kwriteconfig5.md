@@ -59,6 +59,16 @@ KDE 5 specific; KDE 6 uses kwriteconfig6. Some changes require restarting Plasma
 
 kwriteconfig5 is part of KDE Frameworks 5, complementing kreadconfig5 for reading settings. It enables automation of KDE configuration in scripts and dotfile management.
 
+# INSTALL
+
+```apt: sudo apt install libkf5config-bin```
+
+```pacman: sudo pacman -S kconfig5```
+
+```apk: sudo apk add kconfig5```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kreadconfig5](/man/kreadconfig5)(1), [dconf](/man/dconf)(1)

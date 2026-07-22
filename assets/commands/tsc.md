@@ -129,6 +129,22 @@ tsc requires Node.js and is typically installed via npm (**npm install -g typesc
 
 **TypeScript** was developed by **Microsoft** under the lead of **Anders Hejlsberg** (creator of C# and Turbo Pascal). It was first publicly released in **October 2012**. The language was designed to address the challenges of large-scale JavaScript development by adding optional static types while maintaining full compatibility with existing JavaScript.
 
+# INSTALL
+
+```dnf: sudo dnf install typescript```
+
+```pacman: sudo pacman -S typescript```
+
+```apk: sudo apk add typescript```
+
+```zypper: sudo zypper install typescript```
+
+```brew: brew install typescript```
+
+```nix: nix profile install nixpkgs#typescript```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [npm](/man/npm)(1), [ts-node](/man/ts-node)(1), [esbuild](/man/esbuild)(1), [swc](/man/swc)(1), [webpack](/man/webpack)(1), [babel](/man/babel)(1)

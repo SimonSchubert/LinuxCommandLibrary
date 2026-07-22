@@ -59,6 +59,12 @@ By default the wallpaper used in the chat background is the current image set wi
 
 Requires **pywal** to have been run at least once so that `colors.json` exists. Wallpaper auto-detection only works with **feh**; other wallpaper setters need an explicit `--background` argument. The generated theme has to be re-applied in Telegram's settings each time it is regenerated unless `--restart` is used.
 
+# INSTALL
+
+```apk: sudo apk add py3-pywal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wal](/man/wal)(1)

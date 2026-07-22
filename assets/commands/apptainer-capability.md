@@ -64,6 +64,21 @@ Capabilities are stored in a **capability.json** file maintained by Apptainer. G
 
 Granting Linux capabilities to users is usually equivalent to granting root-level access on the host system. Most capabilities allow users to break out of containers and escalate privileges. This feature is intended for trusted environments, not multi-tenant HPC clusters. Both **add** and **drop** accept the case-insensitive keyword **all** to operate on every available capability at once.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-exec](/man/apptainer-exec)(1), [apptainer-run](/man/apptainer-run)(1), [capabilities](/man/capabilities)(7)

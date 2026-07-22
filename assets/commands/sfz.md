@@ -40,6 +40,12 @@ Additional flags control address, CORS, and cache headers—**sfz --help**.
 
 Not hardened for public Internet exposure. Project maintenance status is limited. Prefer **caddy**/**nginx** for production.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#sfz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [caddy](/man/caddy)(1), [miniserve](/man/miniserve)(1)

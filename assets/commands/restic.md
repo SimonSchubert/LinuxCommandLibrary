@@ -104,6 +104,24 @@ Repository password cannot be recovered if lost. Initial backup is slow (subsequ
 
 **restic** was created by **Alexander Neumann** in **2014** as a modern backup solution addressing shortcomings of existing tools. Written in Go, it was designed with security, deduplication, and cloud storage support as primary goals. The project gained popularity for its simplicity and reliability, becoming a recommended alternative to tools like duplicity.
 
+# INSTALL
+
+```apt: sudo apt install restic```
+
+```dnf: sudo dnf install restic```
+
+```pacman: sudo pacman -S restic```
+
+```apk: sudo apk add restic```
+
+```zypper: sudo zypper install restic```
+
+```brew: brew install restic```
+
+```nix: nix profile install nixpkgs#restic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [duplicity](/man/duplicity)(1), [borg](/man/borg)(1), [rsync](/man/rsync)(1), [rclone](/man/rclone)(1)

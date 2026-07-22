@@ -63,6 +63,24 @@ Convert PNM images to PCL-XL printer format
 
 **pnmtopclxl** converts PNM images into **PCL-XL** (also known as PCL 6) printer language, the native format of modern HP LaserJet printers. Part of the **Netpbm** toolkit. Options accept either a single or double hyphen and use **=** or whitespace to separate the value.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtolj](/man/pbmtolj)(1), [pnmtops](/man/pnmtops)(1)

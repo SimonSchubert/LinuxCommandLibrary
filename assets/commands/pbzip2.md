@@ -100,6 +100,22 @@ Memory usage higher than bzip2. Best speedup on multi-core systems. Decompressio
 
 **pbzip2** was created by **Jeff Gilchrist** around **2005** to leverage multi-core processors for bzip2 compression. As multi-core CPUs became common, parallel compression tools like pbzip2 became essential for handling large data.
 
+# INSTALL
+
+```apt: sudo apt install pbzip2```
+
+```dnf: sudo dnf install pbzip2```
+
+```pacman: sudo pacman -S pbzip2```
+
+```zypper: sudo zypper install pbzip2```
+
+```brew: brew install pbzip2```
+
+```nix: nix profile install nixpkgs#pbzip2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bzip2](/man/bzip2)(1), [pigz](/man/pigz)(1), [lbzip2](/man/lbzip2)(1), [xz](/man/xz)(1)

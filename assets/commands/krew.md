@@ -107,6 +107,16 @@ Requires kubectl v1.12 or later. The ~/.krew/bin directory must be added to PATH
 
 Krew was created by the **Kubernetes SIG CLI** team to address the need for a standardized kubectl plugin distribution mechanism. It was inspired by package managers like Homebrew and apt. The project has grown to host hundreds of community-contributed plugins, becoming the de facto standard for kubectl plugin management.
 
+# INSTALL
+
+```pacman: sudo pacman -S krew```
+
+```brew: brew install krew```
+
+```nix: nix profile install nixpkgs#krew```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [k9s](/man/k9s)(1), [helm](/man/helm)(1)

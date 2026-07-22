@@ -62,6 +62,24 @@ WordStar bindings by default. Configuration via joerc. Multiple personalities (j
 
 joe was created by **Joseph H. Allen** in 1991 as a modeless text editor with familiar WordStar key bindings.
 
+# INSTALL
+
+```apt: sudo apt install joe```
+
+```dnf: sudo dnf install joe```
+
+```pacman: sudo pacman -S joe```
+
+```apk: sudo apk add joe```
+
+```zypper: sudo zypper install joe```
+
+```brew: brew install joe```
+
+```nix: nix profile install nixpkgs#joe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nano](/man/nano)(1), [vim](/man/vim)(1), [emacs](/man/emacs)(1)

@@ -67,6 +67,22 @@ Bootstrap installer script for rustup
 
 Options can also be set via environment variables prefixed with RUSTUP_INIT_ (e.g., RUSTUP_INIT_DEFAULT_TOOLCHAIN=nightly).
 
+# INSTALL
+
+```apt: sudo apt install rustup```
+
+```dnf: sudo dnf install rustup```
+
+```pacman: sudo pacman -S rustup```
+
+```zypper: sudo zypper install rustup```
+
+```brew: brew install rustup```
+
+```nix: nix profile install nixpkgs#rustup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rustup](/man/rustup)(1), [cargo](/man/cargo)(1), [rustc](/man/rustc)(1)

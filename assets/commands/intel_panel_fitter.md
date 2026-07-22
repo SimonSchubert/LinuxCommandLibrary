@@ -52,6 +52,18 @@ Intel graphics only. May affect display. Part of intel-gpu-tools. Requires root.
 
 intel_panel_fitter is part of **intel-gpu-tools**, developed for testing Intel display hardware scaling functionality.
 
+# INSTALL
+
+```apt: sudo apt install intel-gpu-tools```
+
+```pacman: sudo pacman -S intel-gpu-tools```
+
+```zypper: sudo zypper install intel-gpu-tools```
+
+```nix: nix profile install nixpkgs#intel-gpu-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [intel_infoframes](/man/intel_infoframes)(1), [xrandr](/man/xrandr)(1), [intel_reg_read](/man/intel_reg_read)(1)

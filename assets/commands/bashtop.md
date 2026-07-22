@@ -64,6 +64,11 @@ Written in pure bash, with the performance limitations that implies. Requires ba
 
 **bashtop** was created by aristocratos (Jakob Palme) in **2020** as a system monitor written entirely in bash, later rewritten as **bpytop** and then **btop**.
 
+# INSTALL
+
+```pacman: sudo pacman -S bashtop```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [btop](/man/btop)(1), [bpytop](/man/bpytop)(1), [htop](/man/htop)(1), [top](/man/top)(1), [glances](/man/glances)(1)

@@ -67,6 +67,24 @@ distccd can limit the number of concurrent compilation jobs to prevent system ov
 
 Ensure firewall allows connections on port 3632. Use --allow to restrict access to trusted networks only.
 
+# INSTALL
+
+```apt: sudo apt install distcc```
+
+```dnf: sudo dnf install distcc```
+
+```pacman: sudo pacman -S distcc```
+
+```apk: sudo apk add distcc```
+
+```zypper: sudo zypper install distcc```
+
+```brew: brew install distcc```
+
+```nix: nix profile install nixpkgs#distcc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [distcc](/man/distcc)(1), [ccache](/man/ccache)(1)

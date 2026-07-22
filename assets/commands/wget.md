@@ -114,6 +114,22 @@ Some sites block wget by User-Agent. Use **-U** to set a browser-like User-Agent
 
 For complex downloads with multiple retries and bandwidth control, consider creating a **.wgetrc** configuration file.
 
+# INSTALL
+
+```apt: sudo apt install wget```
+
+```pacman: sudo pacman -S wget```
+
+```apk: sudo apk add wget```
+
+```zypper: sudo zypper install wget```
+
+```brew: brew install wget```
+
+```nix: nix profile install nixpkgs#wget```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [aria2c](/man/aria2c)(1), [httrack](/man/httrack)(1), [lftp](/man/lftp)(1)

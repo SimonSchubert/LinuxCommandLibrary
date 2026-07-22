@@ -130,6 +130,12 @@ Requires account for full functionality. Some features need paid plans. Internet
 
 **Snyk** was founded in **2015** by Guy Podjarny. The name is "kyns" (open source security) reversed. Starting with JavaScript dependency scanning, it expanded to containers, IaC, and code analysis. The company raised significant funding and became a leader in developer security tools.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#snyk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm-audit](/man/npm-audit)(1), [safety](/man/safety)(1), [trivy](/man/trivy)(1), [checkov](/man/checkov)(1), [docker](/man/docker)(1)

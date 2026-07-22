@@ -71,6 +71,12 @@ Each target platform requires its native SDK on the host: Android SDK plus a JDK
 
 **Flutter** was announced by **Google** at I/O **2017** and reached **1.0** in **December 2018**. The framework uses its own GPU-accelerated rendering engine (originally Skia, now also Impeller) instead of native widget toolkits, which is what gives it identical appearance across platforms. Dart **3** brought sound null safety and patterns to the toolchain.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#flutter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dart](/man/dart)(1), [flutter-pub](/man/flutter-pub)(1), [adb](/man/adb)(1), [xcrun](/man/xcrun)(1)

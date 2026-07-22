@@ -140,6 +140,18 @@ All persistent filesystem-wide options can be set at format time and many can al
 
 Bcachefs was developed by Kent Overstreet, evolving from the bcache block caching layer. After years of out-of-tree development, it was merged into the Linux kernel mainline in version 6.7 (released December 2023).
 
+# INSTALL
+
+```dnf: sudo dnf install bcachefs-tools```
+
+```pacman: sudo pacman -S bcachefs-tools```
+
+```apk: sudo apk add bcachefs-tools```
+
+```nix: nix profile install nixpkgs#bcachefs-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bcachefs](/man/bcachefs)(8), [bcachefs-device](/man/bcachefs-device)(8), [mkfs](/man/mkfs)(8), [mount](/man/mount)(8), [blkid](/man/blkid)(8), [cryptsetup](/man/cryptsetup)(8)

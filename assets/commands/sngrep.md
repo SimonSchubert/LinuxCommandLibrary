@@ -104,6 +104,22 @@ Requires root for capture. TLS traffic needs decryption. High-volume may miss pa
 
 **sngrep** was created by **Irontec** for VoIP troubleshooting. It provides visual SIP analysis in the terminal.
 
+# INSTALL
+
+```apt: sudo apt install sngrep```
+
+```dnf: sudo dnf install sngrep```
+
+```apk: sudo apk add sngrep```
+
+```zypper: sudo zypper install sngrep```
+
+```brew: brew install sngrep```
+
+```nix: nix profile install nixpkgs#sngrep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [tshark](/man/tshark)(1), [wireshark](/man/wireshark)(1)

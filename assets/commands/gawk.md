@@ -104,6 +104,24 @@ Complex programs may be better suited for Python or Perl. Floating-point precisi
 
 AWK was created by Alfred Aho, Peter Weinberger, and Brian Kernighan at Bell Labs in **1977** (the name is their initials). **gawk** (GNU AWK) was developed by the GNU Project starting in **1986**, adding significant extensions while maintaining compatibility. It remains the most feature-rich AWK implementation.
 
+# INSTALL
+
+```apt: sudo apt install gawk```
+
+```dnf: sudo dnf install gawk```
+
+```pacman: sudo pacman -S gawk```
+
+```apk: sudo apk add gawk```
+
+```zypper: sudo zypper install gawk```
+
+```brew: brew install gawk```
+
+```nix: nix profile install nixpkgs#gawk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [awk](/man/awk)(1), [sed](/man/sed)(1), [perl](/man/perl)(1), [cut](/man/cut)(1), [grep](/man/grep)(1)

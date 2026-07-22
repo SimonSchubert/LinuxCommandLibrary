@@ -75,6 +75,17 @@ DNS changes made via **change-resource-record-sets** are not instantaneous; prop
 
 Amazon Route 53 was launched in **December 2010** as part of AWS's infrastructure services. The name is a reference to TCP/UDP port 53, where DNS server requests are addressed. The AWS CLI support for Route 53 was introduced with the AWS CLI tool and has been continuously expanded to support features like DNSSEC (2020), CIDR collections, and traffic policies.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-s3](/man/aws-s3)(1), [dig](/man/dig)(1), [nslookup](/man/nslookup)(1)

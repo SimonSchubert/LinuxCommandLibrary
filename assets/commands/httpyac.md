@@ -42,6 +42,14 @@ Requires Node.js runtime. Request file format follows the IntelliJ HTTP client s
 
 **httpyac** was created by **Andreas Weber** (AnWeber) and is written in **TypeScript/JavaScript**. It is also available as a **VS Code extension** for integrated HTTP request execution within the editor.
 
+# INSTALL
+
+```brew: brew install httpyac```
+
+```nix: nix profile install nixpkgs#httpyac```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [hurl](/man/hurl)(1), [httpie](/man/httpie)(1)

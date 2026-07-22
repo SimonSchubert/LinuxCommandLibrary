@@ -26,6 +26,24 @@ Destructive and irreversible for untracked, non-ignored files: they are deleted,
 
 git clear-soft was added to **git-extras**, the community-maintained collection of Git utility scripts, as a less destructive alternative to **git-clear** that spares ignored files.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-clear](/man/git-clear)(1), [git-reset](/man/git-reset)(1), [git-clean](/man/git-clean)(1), [git-extras](/man/git-extras)(1)

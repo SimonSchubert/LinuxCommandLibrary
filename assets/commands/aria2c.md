@@ -95,6 +95,23 @@ aria2c is the same as aria2; the c stands for command-line. Server may limit con
 
 **aria2** was created by **Tatsuhiro Tsujikawa** and first released around **2006**. It is written in C++ and supports HTTP/HTTPS, FTP, SFTP, BitTorrent, and Metalink.
 
+# INSTALL
+
+```apt: sudo apt install aria2```
+
+```dnf: sudo dnf install aria2```
+
+```pacman: sudo pacman -S aria2```
+
+```apk: sudo apk add aria2```
+
+```zypper: sudo zypper install aria2```
+
+```brew: brew install aria2```
+
+```nix: nix profile install nixpkgs#aria2```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aria2](/man/aria2)(1), [wget](/man/wget)(1), [curl](/man/curl)(1)

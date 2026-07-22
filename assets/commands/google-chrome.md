@@ -115,6 +115,12 @@ Chrome is resource-intensive; a typical session uses multiple processes and sign
 
 **Google Chrome** was first released in **September 2008** on Windows and expanded to Linux and macOS in 2010. Built on the open-source Chromium project, it introduced a sandboxed, per-tab process model and the V8 JavaScript engine, and has grown into the world's most-used web browser.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#google-chrome```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chromium](/man/chromium)(1), [firefox](/man/firefox)(1)

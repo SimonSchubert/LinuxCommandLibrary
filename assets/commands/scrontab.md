@@ -57,6 +57,12 @@ Requires Slurm's cron functionality to be enabled by the cluster administrator. 
 
 Part of **Slurm** workload manager, providing periodic job scheduling for HPC environments.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sbatch](/man/sbatch)(1), [crontab](/man/crontab)(1), [scontrol](/man/scontrol)(1), [squeue](/man/squeue)(1)

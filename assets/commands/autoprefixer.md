@@ -88,6 +88,11 @@ Browser support data depends on Can I Use database updates. Very new CSS feature
 
 Autoprefixer was created by **Andrey Sitnik** in **2013** as a solution to the tedious manual process of adding vendor prefixes. It became one of the most widely used PostCSS plugins and is integrated into most modern build tools including webpack, Vite, and Parcel. The tool revolutionized CSS workflow by eliminating manual prefix management using real browser usage data from **caniuse.com**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#autoprefixer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [postcss](/man/postcss)(1), [cssnano](/man/cssnano)(1)

@@ -91,6 +91,24 @@ Requires OpenGL. Large repositories with many files or commits may be slow to re
 
 gource was created by **Andrew Caudwell** to visualize software development history as engaging animations.
 
+# INSTALL
+
+```apt: sudo apt install gource```
+
+```dnf: sudo dnf install gource```
+
+```pacman: sudo pacman -S gource```
+
+```apk: sudo apk add gource```
+
+```zypper: sudo zypper install gource```
+
+```brew: brew install gource```
+
+```nix: nix profile install nixpkgs#gource```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [ffmpeg](/man/ffmpeg)(1)

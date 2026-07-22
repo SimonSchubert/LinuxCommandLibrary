@@ -70,6 +70,20 @@ niri reads a KDL configuration file from **$XDG_CONFIG_HOME/niri/config.kdl** (f
 
 **niri** was created by **Ivan Molodetskikh** (YaLTeR) and first released in **2023**. It is written in **Rust** on top of the Smithay compositor toolkit and is distributed under the **GPL-3.0** license. Its column-based "scrollable tiling" model is inspired by the PaperWM extension for GNOME.
 
+# INSTALL
+
+```dnf: sudo dnf install niri```
+
+```pacman: sudo pacman -S niri```
+
+```apk: sudo apk add niri```
+
+```zypper: sudo zypper install niri```
+
+```nix: nix profile install nixpkgs#niri```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sway](/man/sway)(1), [hyprland](/man/hyprland)(1), [swaymsg](/man/swaymsg)(1), [weston](/man/weston)(1)

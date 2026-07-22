@@ -56,6 +56,20 @@ displays resource usage for nodes or pods
 
 Requires metrics-server installed in the cluster. Metrics may have a delay of up to one minute.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kube-capacity](/man/kube-capacity)(1)

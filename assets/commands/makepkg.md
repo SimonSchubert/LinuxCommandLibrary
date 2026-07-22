@@ -95,6 +95,22 @@ Download source and **deps only**
 
 Must be run from directory containing PKGBUILD. Never run as root. Dependencies require pacman access.
 
+# INSTALL
+
+```apt: sudo apt install makepkg```
+
+```dnf: sudo dnf install pacman```
+
+```pacman: sudo pacman -S pacman```
+
+```apk: sudo apk add pacman```
+
+```brew: brew install makepkg```
+
+```nix: nix profile install nixpkgs#pacman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [yay](/man/yay)(1), [paru](/man/paru)(1)

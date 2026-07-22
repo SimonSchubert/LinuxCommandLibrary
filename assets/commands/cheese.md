@@ -55,6 +55,16 @@ Requires a working webcam with Video4Linux (V4L2) support. Effects availability 
 
 **Cheese** was created as part of **Google Summer of Code 2007** by Daniel G. Siegel, mentored by Raphaël Slinckx. It has since become part of the GNOME desktop suite, using GStreamer for video processing and effects.
 
+# INSTALL
+
+```apt: sudo apt install cheese```
+
+```zypper: sudo zypper install cheese```
+
+```nix: nix profile install nixpkgs#cheese```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [guvcview](/man/guvcview)(1), [v4l2-ctl](/man/v4l2-ctl)(1)

@@ -79,6 +79,23 @@ For authorized security testing only. Requires interface in monitor mode. Creati
 
 **airbase-ng** is part of the aircrack-ng suite, which evolved from aircrack in the mid-**2000s**. It was developed to test wireless security by simulating various access point scenarios.
 
+# INSTALL
+
+```apt: sudo apt install aircrack-ng```
+
+```dnf: sudo dnf install aircrack-ng```
+
+```pacman: sudo pacman -S aircrack-ng```
+
+```apk: sudo apk add aircrack-ng```
+
+```zypper: sudo zypper install aircrack-ng```
+
+```brew: brew install aircrack-ng```
+
+```nix: nix profile install nixpkgs#aircrack-ng```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [airmon-ng](/man/airmon-ng)(1), [aireplay-ng](/man/aireplay-ng)(1), [airodump-ng](/man/airodump-ng)(1), [airtun-ng](/man/airtun-ng)(1), [airdecap-ng](/man/airdecap-ng)(1)

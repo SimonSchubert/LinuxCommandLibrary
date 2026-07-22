@@ -146,6 +146,22 @@ Initial builds download GHC and many dependencies. Different from cabal workflow
 
 **stack** was created by **FP Complete** in **2015** to solve Haskell's dependency management challenges. It built on work from Stackage (stable package sets). The tool became widely adopted for its reproducibility guarantees and simplified workflow. Development continues with community involvement.
 
+# INSTALL
+
+```apt: sudo apt install haskell-stack```
+
+```dnf: sudo dnf install stack```
+
+```pacman: sudo pacman -S stack```
+
+```apk: sudo apk add stack```
+
+```brew: brew install haskell-stack```
+
+```nix: nix profile install nixpkgs#stack```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ghc](/man/ghc)(1), [ghci](/man/ghci)(1), [cabal](/man/cabal)(1), [runghc](/man/runghc)(1)

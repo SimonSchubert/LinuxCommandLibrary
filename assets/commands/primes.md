@@ -42,6 +42,12 @@ BSD/macOS utility. Part of bsdgames on Linux.
 
 primes is a classic **BSD utility** for prime number generation.
 
+# INSTALL
+
+```apt: sudo apt install libmath-prime-util-perl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [factor](/man/factor)(1), [bc](/man/bc)(1)

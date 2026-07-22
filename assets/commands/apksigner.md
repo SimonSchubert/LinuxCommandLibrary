@@ -111,6 +111,11 @@ APK must be zipaligned before signing with v2+. v1-only signing is deprecated fo
 
 **apksigner** was introduced in Android SDK Build Tools 24.0.3 (**2016**) alongside APK Signature Scheme v2, replacing jarsigner as the recommended signing tool.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#apksigner```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [zipalign](/man/zipalign)(1), [keytool](/man/keytool)(1), [jarsigner](/man/jarsigner)(1), [aapt](/man/aapt)(1)

@@ -69,6 +69,14 @@ Todoist account required. API token needed. Internet dependent.
 
 Various **todoist** CLI clients exist for the **Todoist** task management service, providing terminal access.
 
+# INSTALL
+
+```brew: brew install todoist```
+
+```nix: nix profile install nixpkgs#todoist```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [task](/man/task)(1), [todo.sh](/man/todo.sh)(1), [todoman](/man/todoman)(1)

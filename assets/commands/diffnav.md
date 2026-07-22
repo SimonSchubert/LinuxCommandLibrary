@@ -75,6 +75,16 @@ Requires git to be installed and accessible in PATH. Large repositories may expe
 
 **diffnav** was developed to improve the git diff browsing experience by adding a visual file tree component to the traditional pager interface, making it easier to understand the scope of changes across multiple files.
 
+# INSTALL
+
+```pacman: sudo pacman -S diffnav```
+
+```brew: brew install diffnav```
+
+```nix: nix profile install nixpkgs#diffnav```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [diff](/man/diff)(1), [less](/man/less)(1), [difftastic](/man/difftastic)(1)

@@ -55,6 +55,20 @@ Some systems restrict which fields users can modify. The GECOS field has a maxim
 
 The GECOS field originated from the General Electric Comprehensive Operating System, where it stored accounting information. Its use for user information became a Unix convention.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [finger](/man/finger)(1), [passwd](/man/passwd)(1), [usermod](/man/usermod)(8)

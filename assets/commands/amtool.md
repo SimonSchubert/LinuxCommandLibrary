@@ -119,6 +119,19 @@ Requires network access to the Alertmanager API endpoint. Silences require a com
 
 **amtool** was developed alongside Alertmanager as part of the Prometheus ecosystem. It was created to provide operators with a scriptable interface for alert management, complementing the web UI for automation and CI/CD integration. The tool is maintained by the Prometheus project and distributed as part of the Alertmanager release.
 
+# INSTALL
+
+```apt: sudo apt install prometheus-alertmanager```
+
+```dnf: sudo dnf install alertmanager```
+
+```pacman: sudo pacman -S alertmanager```
+
+```apk: sudo apk add alertmanager```
+
+```nix: nix profile install nixpkgs#prometheus-alertmanager```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [alertmanager](/man/alertmanager)(1), [prometheus](/man/prometheus)(1), [promtool](/man/promtool)(1)

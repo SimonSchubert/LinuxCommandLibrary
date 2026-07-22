@@ -80,6 +80,24 @@ Generated code structure and options vary significantly between language generat
 
 Apache Thrift was originally developed at **Facebook** in **2007** and was open-sourced in April **2008**. It became an Apache Incubator project in May 2008 and graduated to a top-level Apache project in **October 2010**. The framework was designed to enable efficient and reliable communication across programming languages at scale.
 
+# INSTALL
+
+```apt: sudo apt install thrift-compiler```
+
+```dnf: sudo dnf install thrift```
+
+```pacman: sudo pacman -S thrift```
+
+```apk: sudo apk add thrift```
+
+```zypper: sudo zypper install thrift```
+
+```brew: brew install thrift```
+
+```nix: nix profile install nixpkgs#thrift```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [protoc](/man/protoc)(1), [grpc](/man/grpc)(1)

@@ -137,6 +137,12 @@ Requires **Node.js 20+** and that you have actually used one of the supported to
 
 **codeburn** was created by **AgentSeal** and released under the MIT license, inspired by the earlier **ccusage** tool. Pricing data is sourced from LiteLLM; exchange rates from Frankfurter.
 
+# INSTALL
+
+```brew: brew install codeburn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1), [codex](/man/codex)(1)

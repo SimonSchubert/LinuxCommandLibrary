@@ -83,6 +83,12 @@ FUSE needed for mount. Database per directory. Go-based tool.
 
 **TMSU** (Tag My Stuff Unix) was created for file organization using tags with optional FUSE filesystem support.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#tmsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [find](/man/find)(1), [locate](/man/locate)(1)

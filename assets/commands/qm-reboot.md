@@ -35,6 +35,12 @@ Requires ACPI support in the guest OS for a graceful shutdown. Without ACPI, the
 
 Part of the **Proxmox VE** QEMU/KVM management toolset for virtual machine administration on the Proxmox hypervisor platform.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-reset](/man/qm-reset)(1), [qm-shutdown](/man/qm-shutdown)(1), [qm-start](/man/qm-start)(1), [qm-stop](/man/qm-stop)(1)

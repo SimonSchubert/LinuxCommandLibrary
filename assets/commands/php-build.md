@@ -63,6 +63,20 @@ Compilation takes time. Requires build dependencies. Used with phpenv for versio
 
 php-build is part of the **phpenv** ecosystem, inspired by ruby-build, for managing multiple PHP versions.
 
+# INSTALL
+
+```dnf: sudo dnf install php```
+
+```pacman: sudo pacman -S php```
+
+```apk: sudo apk add php85```
+
+```brew: brew install php```
+
+```nix: nix profile install nixpkgs#php85```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [phpenv](/man/phpenv)(1), [php](/man/php)(1), [pecl](/man/pecl)(1)

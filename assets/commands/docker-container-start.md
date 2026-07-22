@@ -38,6 +38,24 @@ start one or more stopped containers
 
 The container resumes with its original configuration, including environment variables, volumes, network settings, and the command that was initially specified. This makes it useful for restarting services or resuming work in development containers.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-start](/man/docker-start)(1)

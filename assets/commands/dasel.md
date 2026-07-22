@@ -99,6 +99,18 @@ Comments in YAML and TOML files are discarded when writing due to parser limitat
 
 Dasel was created by **Tom Wright** and first released in **2020**. Written in **Go**, it was designed as a universal alternative to format-specific tools like **jq** (JSON), **yq** (YAML), and **xmlstarlet** (XML). The name is a portmanteau of "data" and "select". It gained popularity for its ability to use identical selector syntax across multiple data formats and its single-binary distribution with no dependencies.
 
+# INSTALL
+
+```apt: sudo apt install dasel```
+
+```apk: sudo apk add dasel```
+
+```brew: brew install dasel```
+
+```nix: nix profile install nixpkgs#dasel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [yq](/man/yq)(1), [xmlstarlet](/man/xmlstarlet)(1), [mlr](/man/mlr)(1)

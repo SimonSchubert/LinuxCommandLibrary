@@ -96,6 +96,12 @@ OpenWrt specific. Changes require commit to apply. Some services need restart af
 
 **UCI** was developed for **OpenWrt** to provide a consistent configuration interface across all system services, simplifying administration of embedded routers and devices.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#uci```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ubus](/man/ubus)(1), [opkg](/man/opkg)(1)

@@ -91,6 +91,20 @@ Requires root to change other users' passwords. PAM modules may enforce addition
 
 **passwd** has been part of Unix since the earliest versions, dating back to **Version 1 Unix** at **Bell Labs** in **1971**. The password file originally contained hashed passwords directly, but modern systems use shadow passwords (/etc/shadow) for security, introduced in **SunOS** in the **1980s**.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chage](/man/chage)(1), [usermod](/man/usermod)(8), [login.defs](/man/login.defs)(5)

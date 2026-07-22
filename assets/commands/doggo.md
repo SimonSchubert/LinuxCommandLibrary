@@ -157,6 +157,20 @@ Encrypted transports only work against resolvers that support them. **--short** 
 
 doggo was created by **Karan Sharma** and first released in **2020**. It was inspired by **dog**, the Rust DNS client, but written in Go so that it ships as a single static binary. It has since grown well past its inspiration with DNSCrypt, DNS over QUIC, Globalping integration, and a web frontend, and unlike dog it remains actively maintained.
 
+# INSTALL
+
+```pacman: sudo pacman -S doggo```
+
+```apk: sudo apk add doggo```
+
+```zypper: sudo zypper install doggo```
+
+```brew: brew install doggo```
+
+```nix: nix profile install nixpkgs#doggo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [dog](/man/dog)(1), [drill](/man/drill)(1), [nslookup](/man/nslookup)(1), [host](/man/host)(1)

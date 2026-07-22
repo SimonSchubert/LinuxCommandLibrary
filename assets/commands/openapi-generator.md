@@ -80,6 +80,14 @@ Generated code may need customization. Large specs produce many files. Some gene
 
 OpenAPI Generator was forked from Swagger Codegen in **2018** by **William Cheng** and others to create a more community-driven project.
 
+# INSTALL
+
+```pacman: sudo pacman -S openapi-generator```
+
+```brew: brew install openapi-generator```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [oapi-codegen](/man/oapi-codegen)(1)

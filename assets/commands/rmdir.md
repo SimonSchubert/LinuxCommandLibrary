@@ -65,6 +65,24 @@ rmdir only removes empty directories. For directories with content, use **rm -r*
 
 rmdir is part of GNU coreutils and has been a standard Unix command since the earliest versions of Unix. It follows the POSIX specification for directory removal. The separation between rmdir (empty directories only) and rm -r (recursive removal) is a deliberate safety feature in Unix design.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rm](/man/rm)(1), [mkdir](/man/mkdir)(1), [find](/man/find)(1)

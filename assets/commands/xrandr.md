@@ -111,6 +111,20 @@ Changes are temporary and reset on X restart. For persistent settings, add xrand
 
 **xrandr** is part of the X.Org project, implementing the RandR (Resize and Rotate) extension for dynamic display configuration without X server restart.
 
+# INSTALL
+
+```apt: sudo apt install x11-xserver-utils```
+
+```dnf: sudo dnf install xrandr```
+
+```apk: sudo apk add xrandr```
+
+```zypper: sudo zypper install xrandr```
+
+```nix: nix profile install nixpkgs#xrandr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xset](/man/xset)(1), [xdpyinfo](/man/xdpyinfo)(1), [arandr](/man/arandr)(1)

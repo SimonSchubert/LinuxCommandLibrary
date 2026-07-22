@@ -78,5 +78,17 @@ Requires KDC access. Tickets expire and need renewal. Keytabs need protection. C
 
 **kinit** is part of **MIT Kerberos** and **Heimdal** implementations. Kerberos was developed at **MIT** in the **1980s** as part of Project Athena, named after the three-headed dog guarding Hades in Greek mythology.
 
+# INSTALL
+
+```apk: sudo apk add heimdal```
+
+```zypper: sudo zypper install kinit```
+
+```brew: brew install heimdal```
+
+```nix: nix profile install nixpkgs#heimdal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

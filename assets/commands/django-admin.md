@@ -92,6 +92,12 @@ Requires Django installed. Some commands require configured settings and databas
 
 django-admin is part of **Django**, created by **Adrian Holovaty** and **Simon Willison** at the Lawrence Journal-World newspaper. Django was released as open source in **2005** and has become one of the most popular Python web frameworks.
 
+# INSTALL
+
+```apk: sudo apk add py3-django```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [pip](/man/pip)(1)

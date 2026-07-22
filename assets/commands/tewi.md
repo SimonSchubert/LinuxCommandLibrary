@@ -68,6 +68,12 @@ Text-based interface for BitTorrent clients
 
 **tewi** was created by **Anton Larionov** (anlar) and is written in **Python** (requires Python 3.10+). Install via `pipx install tewi-torrent`. Version 2.0 added Deluge support, configuration profiles, and search provider integration.
 
+# INSTALL
+
+```aur: yay -S tewi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [transmission-cli](/man/transmission-cli)(1), [superseedr](/man/superseedr)(1), [rtorrent](/man/rtorrent)(1)

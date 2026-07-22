@@ -62,6 +62,22 @@ The device must be unmounted before modifying parameters. This tool is useful fo
 
 Filesystem must be unmounted for modifications. Requires root privileges. Incorrect GUID or serial changes may affect system recognition of the volume.
 
+# INSTALL
+
+```apt: sudo apt install exfatprogs```
+
+```dnf: sudo dnf install exfatprogs```
+
+```pacman: sudo pacman -S exfatprogs```
+
+```apk: sudo apk add exfatprogs```
+
+```zypper: sudo zypper install exfatprogs```
+
+```nix: nix profile install nixpkgs#exfatprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkfs.exfat](/man/mkfs.exfat)(8), [fsck.exfat](/man/fsck.exfat)(8), [dump.exfat](/man/dump.exfat)(8)

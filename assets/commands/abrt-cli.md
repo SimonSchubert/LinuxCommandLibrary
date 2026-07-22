@@ -79,6 +79,11 @@ The reporting workflow opens a text editor. Editor selection uses environment va
 
 Part of **ABRT** (Automatic Bug Reporting Tool), developed by **Red Hat** for Fedora-based systems starting around **2009** as a replacement for bug-buddy.
 
+# INSTALL
+
+```dnf: sudo dnf install abrt-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [abrt](/man/abrt)(1), [abrt-action-analyze-backtrace](/man/abrt-action-analyze-backtrace)(1), [abrt-action-analyze-c](/man/abrt-action-analyze-c)(1), [coredumpctl](/man/coredumpctl)(1), [journalctl](/man/journalctl)(1)

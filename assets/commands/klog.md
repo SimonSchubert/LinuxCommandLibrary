@@ -84,6 +84,20 @@ See **klog** *command* **--help** and https://klog.jotaen.net for the full flag 
 
 Learn the record syntax (date headers, ranges, tags) from the official docs before bulk edits. Filtering and multi-file behaviour depend on your version; check **--help**.
 
+# INSTALL
+
+```apt: sudo apt install klog```
+
+```dnf: sudo dnf install klog```
+
+```zypper: sudo zypper install klog```
+
+```brew: brew install klog```
+
+```nix: nix profile install nixpkgs#klog```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [timew](/man/timew)(1), [watson](/man/watson)(1), [ledger](/man/ledger)(1)

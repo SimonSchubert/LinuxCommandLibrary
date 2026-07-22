@@ -64,6 +64,18 @@ Running a BGP daemon on the public Internet requires coordination with upstream 
 
 **OpenBGPD** was developed starting in **2003** by Henning Brauer and Claudio Jeker for **OpenBSD** as part of the OpenBSD networking stack. It was created to provide a secure, clean BGP implementation after vulnerabilities and complexity issues with other routing daemons. The portable version for Linux and FreeBSD has been maintained since **2016**. OpenBGPD is used by ISPs and network operators valuing its simplicity and security.
 
+# INSTALL
+
+```apt: sudo apt install openbgpd```
+
+```dnf: sudo dnf install openbgpd```
+
+```apk: sudo apk add quagga```
+
+```nix: nix profile install nixpkgs#openbgpd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bgpctl](/man/bgpctl)(8), [ospfd](/man/ospfd)(8), [bird](/man/bird)(8)

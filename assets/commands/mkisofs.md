@@ -96,6 +96,22 @@ Basic ISO9660 limits filenames to 8.3 format; use -R or -J for longer names. The
 
 **mkisofs** was originally written by Eric Youngdale and later maintained as part of the **cdrtools** package by Joerg Schilling. The **genisoimage** fork was created as part of **cdrkit** for Debian and derivatives. The ISO9660 standard dates to 1988.
 
+# INSTALL
+
+```apt: sudo apt install genisoimage```
+
+```dnf: sudo dnf install genisoimage```
+
+```apk: sudo apk add xorriso```
+
+```zypper: sudo zypper install xorriso```
+
+```brew: brew install xorriso```
+
+```nix: nix profile install nixpkgs#xorriso```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [genisoimage](/man/genisoimage)(1), [wodim](/man/wodim)(1), [cdrecord](/man/cdrecord)(1), [isoinfo](/man/isoinfo)(8)

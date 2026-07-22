@@ -81,3 +81,17 @@ peek was created by **Philipp Wolfer** as a simple screen-to-GIF recorder for Li
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [byzanz-record](/man/byzanz-record)(1), [recordmydesktop](/man/recordmydesktop)(1)
+
+# INSTALL
+
+```apt: sudo apt install peek```
+
+```pacman: sudo pacman -S peek```
+
+```apk: sudo apk add peek```
+
+```zypper: sudo zypper install peek```
+
+```nix: nix profile install nixpkgs#peek```
+
+<!-- packages: 2026-07-22 -->

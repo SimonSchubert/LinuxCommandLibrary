@@ -74,6 +74,14 @@ Install via Homebrew, release binaries, or **make install** from source.
 
 HCL2 only (not HCL1). Schemaless parsing can be looser than application validation; always review diffs and run **terraform validate** (or equivalent) after bulk edits. Quote string values carefully when setting attributes from the shell.
 
+# INSTALL
+
+```brew: brew install hcledit```
+
+```nix: nix profile install nixpkgs#hcledit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [hclfmt](/man/hclfmt)(1), [jq](/man/jq)(1)

@@ -93,6 +93,16 @@ Heavier than standard Python. Magic commands are not valid Python syntax. Profil
 
 **IPython** was created by **Fernando Perez** in **2001** to improve Python's interactive experience. It evolved into the Jupyter project, with IPython remaining as the Python kernel. It became essential infrastructure for scientific Python.
 
+# INSTALL
+
+```pacman: sudo pacman -S ipython```
+
+```apk: sudo apk add ipython```
+
+```brew: brew install ipython```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [jupyter](/man/jupyter)(1), [bpython](/man/bpython)(1), [ptpython](/man/ptpython)(1)

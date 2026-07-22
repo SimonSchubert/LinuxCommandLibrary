@@ -60,6 +60,22 @@ You should ensure that any filesystem on the volume is resized before running **
 
 **Data loss risk**: Always back up before reducing. The filesystem must be reduced first unless using **--resizefs**. Shrinking is not supported on XFS or GFS2 filesystems. Only ext2/ext3/ext4 can be reduced with **--resizefs**.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvextend](/man/lvextend)(8), [lvresize](/man/lvresize)(8), [lvcreate](/man/lvcreate)(8), [lvm](/man/lvm)(8), [resize2fs](/man/resize2fs)(8)

@@ -42,6 +42,24 @@ Use with podman save archives. OCI format compatible.
 
 podman load provides **image archive** loading functionality.
 
+# INSTALL
+
+```apt: sudo apt install podman```
+
+```dnf: sudo dnf install podman```
+
+```pacman: sudo pacman -S podman```
+
+```apk: sudo apk add podman```
+
+```zypper: sudo zypper install podman```
+
+```brew: brew install podman```
+
+```nix: nix profile install nixpkgs#podman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [podman-save](/man/podman-save)(1), [podman-import](/man/podman-import)(1)

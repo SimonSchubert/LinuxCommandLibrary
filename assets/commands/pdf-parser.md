@@ -90,6 +90,12 @@ Malicious PDFs may crash parsers. Output can be very large. Not all PDF features
 
 **pdf-parser** was created by **Didier Stevens** for PDF malware analysis. It's part of his toolkit for analyzing suspicious documents and is widely used in incident response.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pdf-parser```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdfinfo](/man/pdfinfo)(1), [pdftotext](/man/pdftotext)(1), [pdfid](/man/pdfid)(1), [strings](/man/strings)(1)

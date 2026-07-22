@@ -104,6 +104,15 @@ Debian requires environment variables **APACHE_RUN_USER**, **APACHE_RUN_GROUP**,
 
 Part of the **Apache HTTP Server** project, one of the oldest and most widely used web servers, developed by the Apache Software Foundation.
 
+# INSTALL
+
+```apt: sudo apt install apache2```
+
+```zypper: sudo zypper install apache2```
+
+```brew: brew install apache2```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apachectl](/man/apachectl)(8), [a2enmod](/man/a2enmod)(8), [a2dismod](/man/a2dismod)(8), [a2ensite](/man/a2ensite)(8), [httpd](/man/httpd)(8)

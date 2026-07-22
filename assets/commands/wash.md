@@ -99,6 +99,18 @@ Requires language-specific toolchains (Rust, Go, TinyGo) for building components
 
 **wash** was created by the wasmCloud project as the primary interface for WebAssembly component development. The wasmCloud platform emerged from the Wasm community's effort to build distributed systems using the Component Model. wash consolidated multiple tools into a single CLI, becoming the standard interface for the wasmCloud ecosystem.
 
+# INSTALL
+
+```apt: sudo apt install reaver```
+
+```dnf: sudo dnf install reaver```
+
+```pacman: sudo pacman -S reaver```
+
+```brew: brew install reaver```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wasmtime](/man/wasmtime)(1), [docker](/man/docker)(1), [podman](/man/podman)(1)

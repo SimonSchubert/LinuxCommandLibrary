@@ -77,6 +77,12 @@ Requires an active CodeCrafters account. Some challenges require a paid subscrip
 
 CodeCrafters was founded to provide hands-on learning experiences for experienced developers. The platform launched with challenges recreating popular software tools, allowing developers to deeply understand their internals. The CLI was developed to provide a seamless local development experience integrated with the platform.
 
+# INSTALL
+
+```aur: yay -S codecrafters```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [exercism](/man/exercism)(1)

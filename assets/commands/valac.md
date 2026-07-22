@@ -62,6 +62,24 @@ C compiler needed. GLib required. GNOME-centric.
 
 **valac** is the official **Vala** compiler, generating C code that compiles with any C compiler.
 
+# INSTALL
+
+```apt: sudo apt install valac-bin```
+
+```dnf: sudo dnf install vala```
+
+```pacman: sudo pacman -S vala```
+
+```apk: sudo apk add vala```
+
+```zypper: sudo zypper install vala```
+
+```brew: brew install vala```
+
+```nix: nix profile install nixpkgs#vala```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vala](/man/vala)(1), [gcc](/man/gcc)(1), [pkg-config](/man/pkg-config)(1)

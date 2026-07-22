@@ -26,6 +26,12 @@ Keybindings are defined in YAML files, making it easy to maintain and share chea
 
 Keybinding definitions must be manually maintained. Does not auto-detect keybindings from running applications.
 
+# INSTALL
+
+```aur: yay -S keyb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cheat](/man/cheat)(1), [tldr](/man/tldr)(1)

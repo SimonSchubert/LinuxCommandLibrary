@@ -41,6 +41,20 @@ creates a Horizontal Pod Autoscaler for a deployment, replica set
 
 **kubectl autoscale** creates a Horizontal Pod Autoscaler (HPA) for a deployment, replica set, or replication controller. Automatically scales the number of pods based on CPU utilization or custom metrics.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-scale](/man/kubectl-scale)(1)

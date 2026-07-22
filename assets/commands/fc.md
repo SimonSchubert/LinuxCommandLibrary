@@ -67,6 +67,18 @@ Only works with interactive shell history. Editing spawns external editor. Subst
 
 fc (fix command) is a **POSIX-specified** shell builtin present in Korn shell, Bash, and Zsh. It originated in the Korn shell as a way to edit and re-execute command history entries.
 
+# INSTALL
+
+```apt: sudo apt install f2c```
+
+```dnf: sudo dnf install f2c```
+
+```zypper: sudo zypper install f2c```
+
+```nix: nix profile install nixpkgs#f2c```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [history](/man/history)(1), [bash](/man/bash)(1), [zsh](/man/zsh)(1)

@@ -50,6 +50,16 @@ Only works with pmount-mounted devices. Doesn't handle fstab mounts. May need --
 
 pumount is part of **pmount** by **Martin Pitt**, providing non-root unmounting for removable media.
 
+# INSTALL
+
+```apt: sudo apt install pmount```
+
+```dnf: sudo dnf install pmount```
+
+```nix: nix profile install nixpkgs#pmount```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pmount](/man/pmount)(1), [umount](/man/umount)(8), [udisksctl](/man/udisksctl)(1)

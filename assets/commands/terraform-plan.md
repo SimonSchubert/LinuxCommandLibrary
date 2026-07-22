@@ -55,6 +55,14 @@ Preview Terraform infrastructure changes
 
 **terraform plan** creates an execution plan showing proposed changes. Compares current state with configuration. Review before applying to understand infrastructure changes.
 
+# INSTALL
+
+```pacman: sudo pacman -S terraform```
+
+```nix: nix profile install nixpkgs#terraform```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [terraform-apply](/man/terraform-apply)(1)

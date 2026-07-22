@@ -81,6 +81,22 @@ Always use latest version from git for driver development. Some test failures ma
 
 **v4l2-compliance** was developed as part of the v4l-utils package to ensure V4L2 driver quality. It evolved alongside the V4L2 API and now covers approximately 90% of the specification. It's become mandatory for new driver submissions to the Linux kernel.
 
+# INSTALL
+
+```apt: sudo apt install v4l-utils```
+
+```dnf: sudo dnf install v4l-utils```
+
+```pacman: sudo pacman -S v4l-utils```
+
+```apk: sudo apk add v4l-utils```
+
+```zypper: sudo zypper install v4l-utils```
+
+```nix: nix profile install nixpkgs#v4l-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [v4l2-ctl](/man/v4l2-ctl)(1)

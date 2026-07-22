@@ -68,6 +68,23 @@ Keep the private key secret; anyone with it can decrypt files meant for you. The
 
 **age-keygen** was released alongside age in **2019** by **Filippo Valsorda**. It provides a minimal key generation tool that follows the same design philosophy as age itself: simple, secure, and with no unnecessary options. Version **1.3.0** added hybrid post-quantum key generation with the **-pq** flag.
 
+# INSTALL
+
+```apt: sudo apt install age```
+
+```dnf: sudo dnf install age```
+
+```pacman: sudo pacman -S age```
+
+```apk: sudo apk add age```
+
+```zypper: sudo zypper install age```
+
+```brew: brew install age```
+
+```nix: nix profile install nixpkgs#age```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [age](/man/age)(1), [ssh-keygen](/man/ssh-keygen)(1), [gpg](/man/gpg)(1)

@@ -43,6 +43,20 @@ Requires GNOME libraries. Generated puzzles may vary in difficulty even within t
 
 Sudoku became a worldwide puzzle phenomenon in the **2000s** after being popularized in Japan. GNOME Sudoku is part of the GNOME Games collection, providing a clean, modern implementation.
 
+# INSTALL
+
+```dnf: sudo dnf install gnome-sudoku```
+
+```pacman: sudo pacman -S gnome-sudoku```
+
+```apk: sudo apk add gnome-sudoku```
+
+```zypper: sudo zypper install gnome-sudoku```
+
+```nix: nix profile install nixpkgs#gnome-sudoku```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnome-mines](/man/gnome-mines)(1)

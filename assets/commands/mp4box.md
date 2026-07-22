@@ -116,6 +116,12 @@ Does not transcode - only repackages streams. Some operations modify files in pl
 
 **MP4Box** is part of **GPAC**, an open-source multimedia framework started by **Jean Le Feuvre** at **ENST Paris** around **2000**. Originally focused on MPEG-4 research, GPAC expanded to support modern streaming formats. MP4Box became widely used for DASH content preparation and is relied upon by streaming services and content creators for media packaging.
 
+# INSTALL
+
+```brew: brew install mp4box```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [mkvmerge](/man/mkvmerge)(1), [mediainfo](/man/mediainfo)(1), [handbrake](/man/handbrake)(1)

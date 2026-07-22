@@ -83,6 +83,12 @@ The documentation process has two phases: the **collector** parses source code i
 
 Requires an XML configuration file. PHPDoc comment blocks in source code are recommended for useful output. The project is no longer actively maintained.
 
+# INSTALL
+
+```aur: yay -S phpdox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [phpdoc](/man/phpdoc)(1), [doxygen](/man/doxygen)(1), [php](/man/php)(1)

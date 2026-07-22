@@ -59,6 +59,16 @@ Requires a working kubectl configuration and metrics-server deployed in the clus
 
 **ktop** was created by **Vladimir Vivien** (vladimirvivien) and is written in **Go**. It was inspired by classic Unix monitoring tools like **top** and **htop**, adapted for Kubernetes cluster monitoring.
 
+# INSTALL
+
+```zypper: sudo zypper install ktop```
+
+```brew: brew install ktop```
+
+```nix: nix profile install nixpkgs#ktop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [k9s](/man/k9s)(1), [htop](/man/htop)(1)

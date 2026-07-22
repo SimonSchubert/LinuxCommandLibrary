@@ -64,6 +64,14 @@ Start the **interactive** partition manipulator
 
 Part of **util-linux** package. Based on the original fdisk from **Minix** and early Linux. One of the oldest Linux disk partitioning tools.
 
+# INSTALL
+
+```apt: sudo apt install fdisk```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [parted](/man/parted)(8), [cfdisk](/man/cfdisk)(8), [gdisk](/man/gdisk)(8), [sfdisk](/man/sfdisk)(8), [partprobe](/man/partprobe)(8)

@@ -69,6 +69,20 @@ Requires Bumblebee daemon. Alternative: NVIDIA PRIME. May have compatibility iss
 
 Bumblebee was created as a Linux solution for NVIDIA Optimus laptops, which lacked official Linux support when introduced in **2011**.
 
+# INSTALL
+
+```apt: sudo apt install bumblebee```
+
+```pacman: sudo pacman -S bumblebee```
+
+```zypper: sudo zypper install bumblebee```
+
+```brew: brew install bumblebee```
+
+```nix: nix profile install nixpkgs#bumblebee```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nvidia-settings](/man/nvidia-settings)(1)

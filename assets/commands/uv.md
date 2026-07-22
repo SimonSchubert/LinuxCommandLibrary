@@ -106,6 +106,20 @@ For CI/CD, use **uv sync --frozen** to fail if lock file is outdated rather than
 
 UV was created by **Astral** (makers of Ruff) and released in **2024**. It achieved 10-100x faster performance than pip by leveraging Rust and parallel downloads. The tool quickly gained adoption as a modern Python toolchain replacement.
 
+# INSTALL
+
+```dnf: sudo dnf install uv```
+
+```pacman: sudo pacman -S uv```
+
+```apk: sudo apk add uv```
+
+```brew: brew install uv```
+
+```nix: nix profile install nixpkgs#uv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [poetry](/man/poetry)(1), [pipx](/man/pipx)(1), [python](/man/python)(1)

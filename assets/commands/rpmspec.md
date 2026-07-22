@@ -79,6 +79,22 @@ Some spec file features may require additional macros or definitions to parse co
 
 Part of the **RPM** package manager toolchain. Provides spec file introspection capabilities separate from the full build process.
 
+# INSTALL
+
+```apt: sudo apt install rpm```
+
+```dnf: sudo dnf install rpm```
+
+```apk: sudo apk add rpm```
+
+```zypper: sudo zypper install rpm```
+
+```brew: brew install rpm```
+
+```nix: nix profile install nixpkgs#rpm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rpm](/man/rpm)(8), [rpmbuild](/man/rpmbuild)(8), [dnf](/man/dnf)(8)

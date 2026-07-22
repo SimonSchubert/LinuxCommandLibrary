@@ -64,6 +64,12 @@ GPU recommended. Best for anime/illustrations. Large VRAM for big images.
 
 **waifu2x-ncnn-vulkan** is a Vulkan implementation of **waifu2x**, an AI image upscaler originally by nagadomi.
 
+# INSTALL
+
+```pacman: sudo pacman -S waifu2x-ncnn-vulkan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [imagemagick](/man/imagemagick)(1), [realsr-ncnn-vulkan](/man/realsr-ncnn-vulkan)(1)

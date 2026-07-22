@@ -76,6 +76,18 @@ Options are printer-specific and may vary between devices. System-wide options i
 
 lpoptions is part of **CUPS** for configuring default printer options and destinations.
 
+# INSTALL
+
+```apt: sudo apt install cups-client```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lp](/man/lp)(1), [lpadmin](/man/lpadmin)(8), [lpstat](/man/lpstat)(1), [lpr](/man/lpr)(1), [lpq](/man/lpq)(1), [cups](/man/cups)(1)

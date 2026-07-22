@@ -85,6 +85,20 @@ Not all Windows software works; check the Wine Application Database (AppDB) for 
 
 Development began in **1993** by Bob Amstadt and Eric Youngdale, making Wine one of the oldest continuous free software projects. The recursive backronym "Wine Is Not an Emulator" emphasizes that Wine reimplements Windows APIs rather than emulating hardware. Major milestones include Wine 1.0 in **2008** and version 9.0 in **2024**.
 
+# INSTALL
+
+```dnf: sudo dnf install wine```
+
+```pacman: sudo pacman -S wine```
+
+```apk: sudo apk add wine```
+
+```zypper: sudo zypper install wine```
+
+```nix: nix profile install nixpkgs#wine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [winetricks](/man/winetricks)(1), [winecfg](/man/winecfg)(1)

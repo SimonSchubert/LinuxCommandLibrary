@@ -146,6 +146,12 @@ Model files can be very large (several GB to over 100 GB) and require significan
 
 KoboldCpp was created by a developer known as **LostRuins** (alias **Concedo**) and first released on **March 16, 2023** as a fork of **llama.cpp** combined with the KoboldAI interface. It was designed to provide a simple, self-contained way to run large language models locally without complex setup. The project grew rapidly alongside the open-source LLM movement, continuously adding features like multi-modal support, GPU backends, and image generation capabilities. It is licensed under **AGPL-3.0**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#koboldcpp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ollama](/man/ollama)(1)

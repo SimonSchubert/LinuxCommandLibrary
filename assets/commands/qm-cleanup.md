@@ -35,6 +35,12 @@ This command is typically called automatically by Proxmox VE after VM shutdown e
 
 **qm cleanup** is part of the **Proxmox VE** virtualization platform, managing QEMU/KVM virtual machines and their associated resources.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-start](/man/qm-start)(1), [qm-stop](/man/qm-stop)(1)

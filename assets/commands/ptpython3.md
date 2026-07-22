@@ -71,6 +71,12 @@ Python 3 variant of ptpython; on modern systems where Python 3 is the default th
 
 ptpython3 is the **Python 3 variant** of ptpython.
 
+# INSTALL
+
+```dnf: sudo dnf install ptpython3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ptpython](/man/ptpython)(1), [python3](/man/python3)(1), [ipython3](/man/ipython3)(1)

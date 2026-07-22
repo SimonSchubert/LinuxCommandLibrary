@@ -28,6 +28,12 @@ TUI for WireGuard and OpenVPN with telemetry
 
 **vortix** was created by **Harry-kp** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S vortix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wg](/man/wg)(1), [openvpn](/man/openvpn)(1), [wg-cmd](/man/wg-cmd)(1)

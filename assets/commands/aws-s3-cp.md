@@ -100,6 +100,17 @@ The command supports single file transfers, recursive directory copies, and stre
 
 When copying directories recursively, use trailing slashes consistently to control prefix behavior. Pattern matching with **--include** and **--exclude** is order-dependent. Copying to/from Glacier storage class requires special flags (**--force-glacier-transfer**). Streaming operations from stdin require **--expected-size** for files larger than 50GB.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3-sync](/man/aws-s3-sync)(1), [aws-s3-mv](/man/aws-s3-mv)(1), [aws-s3api](/man/aws-s3api)(1)

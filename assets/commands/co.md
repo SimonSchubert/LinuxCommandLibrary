@@ -93,6 +93,24 @@ RCS operates on individual files rather than repositories. Locks are advisory an
 
 RCS was created by Walter Tichy at Purdue University and first released in **1982**. It pioneered the concept of delta storage for version control. While CVS and later systems built upon RCS concepts, the standalone co/ci workflow remains available on most Unix-like systems.
 
+# INSTALL
+
+```apt: sudo apt install rcs```
+
+```dnf: sudo dnf install rcs```
+
+```pacman: sudo pacman -S rcs```
+
+```apk: sudo apk add rcs```
+
+```zypper: sudo zypper install rcs```
+
+```brew: brew install rcs```
+
+```nix: nix profile install nixpkgs#rcs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ci](/man/ci)(1), [rcs](/man/rcs)(1), [rlog](/man/rlog)(1), [rcsdiff](/man/rcsdiff)(1), [git](/man/git)(1)

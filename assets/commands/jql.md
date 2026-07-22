@@ -59,6 +59,18 @@ Syntax is different from jq and not interchangeable. Key selectors must always b
 
 jql was created as a simpler alternative to jq with a more intuitive query syntax for common JSON operations.
 
+# INSTALL
+
+```dnf: sudo dnf install jql```
+
+```apk: sudo apk add jql```
+
+```brew: brew install jql```
+
+```nix: nix profile install nixpkgs#jql```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [gron](/man/gron)(1), [fx](/man/fx)(1)

@@ -124,6 +124,18 @@ Conan uses a decentralized repository model similar to Git, where teams can host
 
 Conan 2.x is current; Conan 1.x is legacy. Binary compatibility configurable. Integrates with CMake, MSBuild, Meson, and custom build systems.
 
+# INSTALL
+
+```dnf: sudo dnf install conan```
+
+```zypper: sudo zypper install conan```
+
+```brew: brew install conan```
+
+```nix: nix profile install nixpkgs#conan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmake](/man/cmake)(1), [vcpkg](/man/vcpkg)(1)

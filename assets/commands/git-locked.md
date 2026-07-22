@@ -26,6 +26,24 @@ Part of git-extras package, not core Git. Only shows the local, per-clone skip-w
 
 git locked is part of **git-extras**, complementing git lock and git unlock.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-lock](/man/git-lock)(1), [git-unlock](/man/git-unlock)(1), [git-ls-files](/man/git-ls-files)(1)

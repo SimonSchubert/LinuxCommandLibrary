@@ -62,6 +62,20 @@ Various options allow filtering by function, process, or executable, and limitin
 
 Requires root privileges. Large traces consume significant disk space. High-frequency tracing impacts system performance. Output file can grow quickly.
 
+# INSTALL
+
+```apt: sudo apt install trace-cmd```
+
+```dnf: sudo dnf install trace-cmd```
+
+```pacman: sudo pacman -S trace-cmd```
+
+```zypper: sudo zypper install trace-cmd```
+
+```nix: nix profile install nixpkgs#trace-cmd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [trace-cmd](/man/trace-cmd)(1), [trace-cmd-list](/man/trace-cmd-list)(1), [trace-cmd-report](/man/trace-cmd-report)(1)

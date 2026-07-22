@@ -109,6 +109,19 @@ Container groups with public IPs are charged even when stopped; delete to avoid 
 
 Azure Container Instances launched in **July 2017** as the first serverless container service on any public cloud. It enabled running containers without managing infrastructure, bridging the gap between VMs and full orchestration platforms.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-aks](/man/az-aks)(1), [docker](/man/docker)(1)

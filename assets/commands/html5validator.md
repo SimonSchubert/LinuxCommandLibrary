@@ -73,6 +73,12 @@ command-line HTML5 validation tool using the Nu Html Checker
 
 Requires a working **Java** runtime (OpenJDK 8+) on the **PATH**, since it shells out to the bundled **vnu.jar** to perform the actual validation.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#html5validator```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tidy](/man/tidy)(1)

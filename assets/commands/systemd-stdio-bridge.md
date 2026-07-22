@@ -52,6 +52,22 @@ Expects a properly formatted D-Bus connection on stdin. Used primarily for remot
 
 **systemd-stdio-bridge** enables remote D-Bus access patterns, supporting tools like `busctl` and `systemctl` when operating on remote systems via SSH.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [busctl](/man/busctl)(1), [dbus-daemon](/man/dbus-daemon)(1)

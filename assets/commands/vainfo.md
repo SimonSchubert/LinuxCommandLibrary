@@ -52,6 +52,22 @@ Requires VA-API drivers installed (e.g., intel-media-driver, mesa-va-drivers). O
 
 **vainfo** is part of **libva-utils**, providing information about VA-API (Video Acceleration API) support.
 
+# INSTALL
+
+```apt: sudo apt install vainfo```
+
+```dnf: sudo dnf install libva-utils```
+
+```pacman: sudo pacman -S libva-utils```
+
+```apk: sudo apk add libva-utils```
+
+```zypper: sudo zypper install libva-utils```
+
+```nix: nix profile install nixpkgs#libva-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vdpauinfo](/man/vdpauinfo)(1), [glxinfo](/man/glxinfo)(1), [vulkaninfo](/man/vulkaninfo)(1), [ffmpeg](/man/ffmpeg)(1)

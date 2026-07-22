@@ -58,6 +58,14 @@ The escape sequence to disconnect is: press Enter, then ~ (tilde), then . (perio
 
 Usually requires root or membership in the dialout/uucp groups. The escape character (~) must be at the start of a line. cu is part of the UUCP package (commonly GNU/Taylor UUCP), not coreutils.
 
+# INSTALL
+
+```apt: sudo apt install cu```
+
+```dnf: sudo dnf install cu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [screen](/man/screen)(1), [minicom](/man/minicom)(1), [picocom](/man/picocom)(1)

@@ -113,6 +113,12 @@ Requires Xcode installation (not just Command Line Tools). Use `xcode-select -s`
 
 **xcodebuild** has been part of **Xcode** since its early versions, evolving alongside Apple's development tools. The tool has grown significantly more powerful, adding workspace support, destination specifiers for simulators and devices, and xcpretty-compatible output. It remains the foundation for iOS and macOS continuous integration systems.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#xcodebuild```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xcrun](/man/xcrun)(1), [xcode-select](/man/xcode-select)(1), [codesign](/man/codesign)(1), [swift](/man/swift)(1)

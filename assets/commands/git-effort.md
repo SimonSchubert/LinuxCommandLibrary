@@ -49,6 +49,24 @@ Part of git-extras package. Can be slow on large repos. Measures commits, not li
 
 git effort is part of **git-extras**, created by **TJ Holowaychuk** to visualize development effort distribution.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-fame](/man/git-fame)(1), [git-summary](/man/git-summary)(1), [git-extras](/man/git-extras)(1), [git-shortlog](/man/git-shortlog)(1)

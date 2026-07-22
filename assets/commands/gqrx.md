@@ -75,6 +75,22 @@ Requires SDR hardware. CPU usage increases with bandwidth. Some modes need speci
 
 Gqrx was created by **Alexandru Csete** (OZ9AEC) around **2011** as a user-friendly SDR application built on GNU Radio. It became the go-to GUI application for Linux SDR users.
 
+# INSTALL
+
+```apt: sudo apt install gqrx-sdr```
+
+```dnf: sudo dnf install gqrx```
+
+```pacman: sudo pacman -S gqrx```
+
+```apk: sudo apk add gqrx```
+
+```zypper: sudo zypper install gqrx```
+
+```nix: nix profile install nixpkgs#gqrx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rtl_sdr](/man/rtl_sdr)(1), [gnuradio](/man/gnuradio)(1)

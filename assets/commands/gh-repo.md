@@ -77,6 +77,24 @@ Delete requires confirmation. Fork operations need network access. Some operatio
 
 gh repo is a core command in the **GitHub CLI**, handling repository operations that were previously only available through the web interface or API.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-pr](/man/gh-pr)(1), [git-clone](/man/git-clone)(1)

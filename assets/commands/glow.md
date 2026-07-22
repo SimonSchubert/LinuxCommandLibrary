@@ -87,6 +87,22 @@ Terminal must support colors. Some features need true color support. Images not 
 
 glow was created by **Charm** as part of their suite of terminal tools, bringing beautiful markdown rendering to the command line.
 
+# INSTALL
+
+```apt: sudo apt install glow```
+
+```dnf: sudo dnf install glow```
+
+```pacman: sudo pacman -S glow```
+
+```zypper: sudo zypper install glow```
+
+```brew: brew install glow```
+
+```nix: nix profile install nixpkgs#glow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mdcat](/man/mdcat)(1), [bat](/man/bat)(1)

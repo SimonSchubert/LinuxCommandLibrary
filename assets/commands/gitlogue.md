@@ -36,6 +36,16 @@ Other flags control speed and theme—**gitlogue --help**.
 
 Large histories can take a long time to animate. Needs a git repository and a capable terminal.
 
+# INSTALL
+
+```pacman: sudo pacman -S gitlogue```
+
+```brew: brew install gitlogue```
+
+```nix: nix profile install nixpkgs#gitlogue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [gource](/man/gource)(1), [git-blame](/man/git-blame)(1)

@@ -64,6 +64,12 @@ Supported types include AGPL, Apache, CC-BY, CC-BY-NC, CC-BY-NC-SA, CC-BY-SA, CC
 
 Generated text is a starting point; confirm the license matches your project's intent and any dual-licensing needs. Default author detection depends on git config.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#license-generator```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo-license](/man/cargo-license)(1), [licensecheck](/man/licensecheck)(1)

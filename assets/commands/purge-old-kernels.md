@@ -48,6 +48,20 @@ Ubuntu/Debian specific. Requires root. The currently running kernel is never rem
 
 purge-old-kernels was created for **Ubuntu** kernel package cleanup.
 
+# INSTALL
+
+```dnf: sudo dnf install byobu```
+
+```apk: sudo apk add byobu```
+
+```zypper: sudo zypper install byobu```
+
+```brew: brew install byobu```
+
+```nix: nix profile install nixpkgs#byobu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apt](/man/apt)(8), [dpkg](/man/dpkg)(1), [uname](/man/uname)(1)

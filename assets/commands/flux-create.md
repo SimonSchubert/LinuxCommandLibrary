@@ -67,6 +67,16 @@ It supports the major Flux resource kinds and many common configuration options.
 **-n**, **--namespace** _ns_
 > Namespace scope (default `flux-system`).
 
+# INSTALL
+
+```apk: sudo apk add flux```
+
+```brew: brew install flux```
+
+```nix: nix profile install nixpkgs#flux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flux](/man/flux)(1), [flux-bootstrap](/man/flux-bootstrap)(1), [flux-build](/man/flux-build)(1), [flux-check](/man/flux-check)(1)

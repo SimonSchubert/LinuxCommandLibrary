@@ -113,6 +113,12 @@ No GUI by default - CLI only (optional GUI available). Some Dropbox features not
 
 **Maestral** was created by **Sam Schott** around **2018** as a lightweight alternative to the official Dropbox client for Linux. The name comes from the Mistral wind. It gained popularity among Linux users wanting Dropbox sync without Electron or heavy dependencies.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#maestral```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rclone](/man/rclone)(1), [syncthing](/man/syncthing)(1)

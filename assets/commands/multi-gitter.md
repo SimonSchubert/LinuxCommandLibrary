@@ -56,6 +56,12 @@ Auth via **GITHUB_TOKEN** or provider flags—see **multi-gitter --help**.
 
 Scripts run with your credentials; audit them carefully. Rate limits and branch protection can block merges. Clone disk usage grows with org size.
 
+# INSTALL
+
+```brew: brew install multi-gitter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [gh](/man/gh)(1), [git-xargs](/man/git-xargs)(1)

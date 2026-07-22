@@ -107,6 +107,14 @@ Doppler is a commercial SaaS product: it needs an account, and secrets are fetch
 
 Doppler was founded in **2018**, part of a wave of tools reacting to the ubiquity of `.env` files, which are easy to use, easy to commit by accident, and impossible to rotate centrally. The CLI is open source and written in Go, even though the backend service is proprietary, so the injection mechanism can be audited independently of the platform.
 
+# INSTALL
+
+```brew: brew install doppler```
+
+```nix: nix profile install nixpkgs#doppler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doppler-secrets](/man/doppler-secrets)(1), [doppler-projects](/man/doppler-projects)(1), [vault](/man/vault)(1), [aws-vault](/man/aws-vault)(1), [sops](/man/sops)(1), [env](/man/env)(1)

@@ -108,6 +108,12 @@ Large download for platform support. First build downloads toolchains. Some obsc
 
 **PlatformIO** was created by **Ivan Kravets** starting around **2014**. It unified fragmented embedded development tooling, providing cross-platform, vendor-independent infrastructure for IoT development.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [arduino-cli](/man/arduino-cli)(1), [esptool](/man/esptool)(1), [avrdude](/man/avrdude)(1), [openocd](/man/openocd)(1)

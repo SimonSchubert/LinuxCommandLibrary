@@ -47,6 +47,12 @@ Text-based interface. Requires terminal with cursor support. Game state not save
 
 greed was originally created by **Matt Day** and is maintained by **Eric S. Raymond**. It is a standalone terminal game, not part of the BSD games collection.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#greed```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [worm](/man/worm)(1), [bsdgames](/man/bsdgames)(6)

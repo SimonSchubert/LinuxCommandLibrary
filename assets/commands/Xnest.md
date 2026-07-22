@@ -73,6 +73,16 @@ Lacks modern X extensions (XRender, Composite, RandR). No hardware acceleration.
 
 **Xnest** was developed as a debugging and testing tool for X11. It enabled developers to test applications and window managers without risking their primary desktop. While still functional, the more capable Xephyr server has largely superseded it for modern use.
 
+# INSTALL
+
+```apt: sudo apt install xnest```
+
+```pacman: sudo pacman -S xorg-server-xnest```
+
+```apk: sudo apk add xorg-server-xnest```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [Xvfb](/man/Xvfb)(1), [Xorg](/man/Xorg)(1), [startx](/man/startx)(1)

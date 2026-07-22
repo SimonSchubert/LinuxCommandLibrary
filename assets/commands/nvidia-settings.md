@@ -82,6 +82,14 @@ Requires NVIDIA proprietary driver. Some settings need X running. Fan control ma
 
 nvidia-settings is developed by **NVIDIA Corporation** as the official configuration tool for their Linux graphics drivers.
 
+# INSTALL
+
+```pacman: sudo pacman -S nvidia-settings```
+
+```zypper: sudo zypper install nvidia-settings```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nvidia-smi](/man/nvidia-smi)(1), [xrandr](/man/xrandr)(1)

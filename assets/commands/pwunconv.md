@@ -35,6 +35,14 @@ Security risk. Rarely used. Requires root.
 
 pwunconv is part of **shadow-utils** for reverting shadow passwords.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```apk: sudo apk add shadow-conv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pwconv](/man/pwconv)(1), [grpunconv](/man/grpunconv)(1), [passwd](/man/passwd)(1)

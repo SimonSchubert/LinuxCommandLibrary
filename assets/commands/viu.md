@@ -75,6 +75,20 @@ Quality depends on terminal. True color support improves output. Large images sl
 
 **viu** is a Rust-based terminal image viewer. It provides fast, high-quality image display in modern terminals.
 
+# INSTALL
+
+```pacman: sudo pacman -S viu```
+
+```apk: sudo apk add viu```
+
+```zypper: sudo zypper install viu```
+
+```brew: brew install viu```
+
+```nix: nix profile install nixpkgs#viu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chafa](/man/chafa)(1), [catimg](/man/catimg)(1), [tiv](/man/tiv)(1)

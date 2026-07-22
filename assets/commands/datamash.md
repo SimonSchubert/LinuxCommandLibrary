@@ -76,6 +76,24 @@ datamash is part of the GNU project and excels at one-liners for data exploratio
 
 The decimal separator follows the current locale (period in the C locale, comma in e.g. German locales). Grouping (-g) expects sorted input unless -s is given. Column numbering starts at 1.
 
+# INSTALL
+
+```apt: sudo apt install datamash```
+
+```dnf: sudo dnf install datamash```
+
+```pacman: sudo pacman -S datamash```
+
+```apk: sudo apk add datamash```
+
+```zypper: sudo zypper install datamash```
+
+```brew: brew install datamash```
+
+```nix: nix profile install nixpkgs#datamash```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [awk](/man/awk)(1), [cut](/man/cut)(1), [sort](/man/sort)(1)

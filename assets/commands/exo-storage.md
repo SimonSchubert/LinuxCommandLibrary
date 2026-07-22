@@ -84,6 +84,18 @@ SOS provides scalable object storage for backups, static assets, media files, an
 
 The tool supports bucket management, file uploads/downloads, presigned URLs for temporary access, and CORS configuration for web applications.
 
+# INSTALL
+
+```dnf: sudo dnf install exo```
+
+```pacman: sudo pacman -S exo```
+
+```apk: sudo apk add exoscale```
+
+```nix: nix profile install nixpkgs#exo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [exo](/man/exo)(1), [aws-s3](/man/aws-s3)(1)

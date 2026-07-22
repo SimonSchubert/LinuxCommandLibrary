@@ -84,6 +84,20 @@ This command is similar to `cargo doc` but provides fine-grained control over ru
 
 Only one target can be documented when passing extra arguments. Use target filters to select.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-doc](/man/cargo-doc)(1), [rustdoc](/man/rustdoc)(1)

@@ -85,6 +85,12 @@ For authorized security research only. Complex tool requiring exploit knowledge.
 
 **Ropper** was created by **Sascha Schirra** as a comprehensive gadget finder. It provides both CLI and interactive interfaces for ROP chain development.
 
+# INSTALL
+
+```pacman: sudo pacman -S ropper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pwntools](/man/pwntools)(1), [radare2](/man/radare2)(1)

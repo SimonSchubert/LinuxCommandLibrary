@@ -67,6 +67,18 @@ captures screenshots from X11 displays
 
 **magick import** captures screenshots from X11 displays. Part of ImageMagick. Can capture the entire screen, specific windows, or selected regions. Outputs to any supported image format.
 
+# INSTALL
+
+```pacman: sudo pacman -S imagemagick```
+
+```apk: sudo apk add imagemagick```
+
+```brew: brew install imagemagick```
+
+```nix: nix profile install nixpkgs#imagemagick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [magick](/man/magick)(1), [scrot](/man/scrot)(1)

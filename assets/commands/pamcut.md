@@ -69,6 +69,24 @@ Coordinates are 0-indexed. Without -pad, region must be within image bounds.
 
 pamcut is part of **Netpbm**, evolving from the original PBMplus toolkit created by **Jef Poskanzer**.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmcut](/man/pnmcut)(1), [pamcomp](/man/pamcomp)(1), [pamscale](/man/pamscale)(1)

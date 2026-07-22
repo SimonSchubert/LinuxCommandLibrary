@@ -50,6 +50,16 @@ Kill processes listening on specified TCP/UDP ports
 
 Requires permission to signal the target processes (often root for privileged ports or other users' PIDs). Killing the wrong process can disrupt services—prefer dry-run when unsure.
 
+# INSTALL
+
+```zypper: sudo zypper install killport```
+
+```brew: brew install killport```
+
+```nix: nix profile install nixpkgs#killport```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsof](/man/lsof)(1), [fuser](/man/fuser)(1), [ss](/man/ss)(8), [kill](/man/kill)(1)

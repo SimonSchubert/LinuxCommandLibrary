@@ -75,6 +75,24 @@ Aggressive gc is very slow on large repositories. Running gc removes dangling ob
 
 git gc is a core **Git** command for repository maintenance, automating cleanup tasks that were originally separate commands like git-prune and git-repack.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-prune](/man/git-prune)(1), [git-repack](/man/git-repack)(1), [git-reflog](/man/git-reflog)(1), [git-fsck](/man/git-fsck)(1), [git-count-objects](/man/git-count-objects)(1)

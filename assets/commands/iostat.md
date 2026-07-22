@@ -119,6 +119,24 @@ The first report shows statistics since boot. For current activity, use the **-y
 
 **iostat** is part of the **sysstat** package, providing system performance monitoring tools for Linux.
 
+# INSTALL
+
+```apt: sudo apt install sysstat```
+
+```dnf: sudo dnf install sysstat```
+
+```pacman: sudo pacman -S sysstat```
+
+```apk: sudo apk add sysstat```
+
+```zypper: sudo zypper install sysstat```
+
+```brew: brew install sysstat```
+
+```nix: nix profile install nixpkgs#sysstat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sar](/man/sar)(1), [vmstat](/man/vmstat)(8), [mpstat](/man/mpstat)(1), [pidstat](/man/pidstat)(1)

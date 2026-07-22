@@ -71,6 +71,22 @@ SPDX identifiers required. Some licenses complex. Learning curve for setup.
 
 **reuse** implements the **FSFE REUSE** specification, providing tools to make software licensing clear and machine-readable.
 
+# INSTALL
+
+```dnf: sudo dnf install reuse```
+
+```pacman: sudo pacman -S reuse```
+
+```apk: sudo apk add reuse```
+
+```zypper: sudo zypper install reuse```
+
+```brew: brew install reuse```
+
+```nix: nix profile install nixpkgs#reuse```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [licensecheck](/man/licensecheck)(1)

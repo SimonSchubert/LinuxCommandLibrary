@@ -101,6 +101,20 @@ X11 only; won't work under pure Wayland. Daemon mode requires RandR support. Ima
 
 **xwallpaper** was created by Tobias Stoeckmann as a lightweight, dependency-minimal wallpaper setter for X11. It focuses on correctness and minimal resource usage compared to larger tools like feh.
 
+# INSTALL
+
+```apt: sudo apt install xwallpaper```
+
+```pacman: sudo pacman -S xwallpaper```
+
+```apk: sudo apk add xwallpaper```
+
+```zypper: sudo zypper install xwallpaper```
+
+```nix: nix profile install nixpkgs#xwallpaper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [feh](/man/feh)(1), [nitrogen](/man/nitrogen)(1), [hsetroot](/man/hsetroot)(1), [xrandr](/man/xrandr)(1)

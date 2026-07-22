@@ -49,6 +49,12 @@ The primary use case is repository migration and transformation. Export streams 
 
 The export format is line-oriented and human-readable. Combined with git fast-import, this command pair provides significantly faster repository operations than git filter-branch for large-scale history rewrites. The --anonymize option supports sharing repository structure for debugging while protecting sensitive content.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#git-fast-export```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-filter-branch](/man/git-filter-branch)(1)

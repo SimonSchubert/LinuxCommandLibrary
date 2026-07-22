@@ -68,6 +68,14 @@ Python library installed via conda or pip (`pip install rdkit`). Requires numpy.
 
 RDKit was started by **Greg Landrum** at Rational Discovery and released as open source in 2006.
 
+# INSTALL
+
+```pacman: sudo pacman -S rdkit```
+
+```brew: brew install rdkit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [obabel](/man/obabel)(1), [pymol](/man/pymol)(1), [python](/man/python)(1), [conda](/man/conda)(1)

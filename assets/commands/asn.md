@@ -155,6 +155,15 @@ Requires Bash v4.2 or later. Path tracing with mtr requires root privileges or C
 
 **asn** was created by **nitefood** as a quick OSINT command-line utility for investigating network data during incident response. It was featured in the Security Trails blog as a notable ASN lookup technique. The project is open source, licensed under MIT, and actively maintained with contributions from the community. It has grown from a simple lookup script into a comprehensive network reconnaissance platform with server mode, JSON API, and integration with major threat intelligence feeds.
 
+# INSTALL
+
+```apk: sudo apk add asn```
+
+```brew: brew install asn```
+
+```nix: nix profile install nixpkgs#asn```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [mtr](/man/mtr)(8), [whois](/man/whois)(1), [nmap](/man/nmap)(1), [dig](/man/dig)(1), [traceroute](/man/traceroute)(1), [jq](/man/jq)(1), [curl](/man/curl)(1)

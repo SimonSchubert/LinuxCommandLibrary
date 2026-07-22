@@ -77,6 +77,20 @@ Root required. Device must be in maskrom. Wrong images can brick.
 
 **rkdeveloptool** is developed by **Rockchip** for flashing firmware to their ARM SoC devices via USB.
 
+# INSTALL
+
+```apt: sudo apt install rkdeveloptool```
+
+```dnf: sudo dnf install rkdeveloptool```
+
+```apk: sudo apk add rkdeveloptool```
+
+```zypper: sudo zypper install rkdeveloptool```
+
+```nix: nix profile install nixpkgs#rkdeveloptool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dd](/man/dd)(1), [fastboot](/man/fastboot)(1)

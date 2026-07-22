@@ -53,6 +53,12 @@ Node.js package, installed as a dev dependency (**npm install --save-dev husky**
 
 Husky was created by **Typicode** to simplify Git hook management in JavaScript projects, becoming a standard dev dependency. Version 9 (2024) rewrote the tool to be dependency-free and reduced its API to a single **init** command, favoring plain shell scripts over a custom DSL.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#husky```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lint-staged](/man/lint-staged)(1), [git](/man/git)(1), [npm](/man/npm)(1)

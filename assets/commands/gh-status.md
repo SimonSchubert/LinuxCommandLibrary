@@ -46,6 +46,24 @@ Building the report makes several API calls, and on accounts with many subscript
 
 **gh status** was added as a core command in **GitHub CLI 2.7.0** (**March 2022**), contributed by **vilmibm**, who had previously explored the same idea as a **gh** extension.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-issue](/man/gh-issue)(1), [gh-pr](/man/gh-pr)(1), [gh-search](/man/gh-search)(1)

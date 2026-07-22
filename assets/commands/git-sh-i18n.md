@@ -26,6 +26,24 @@ Internal library, not a standalone command. Sourced by Git shell scripts via **.
 
 git-sh-i18n is part of **Git's** internationalization system, enabling translated messages in shell-based git commands.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-sh-setup](/man/git-sh-setup)(1), [gettext](/man/gettext)(1)

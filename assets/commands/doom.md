@@ -85,6 +85,12 @@ Requires Emacs 27.1+. Sync may take time with many packages. Some operations req
 
 Doom Emacs was created by **Henrik Lissner** starting around **2016**. The doom CLI provides management capabilities for this popular Emacs configuration that emphasizes speed and a curated set of packages.
 
+# INSTALL
+
+```aur: yay -S doom```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [emacs](/man/emacs)(1)

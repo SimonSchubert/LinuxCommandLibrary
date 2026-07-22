@@ -72,6 +72,12 @@ Fixed style rules. No customization. Semicolon-free style.
 
 **standard** was created by **Feross Aboukhadijeh** as a zero-configuration JavaScript linter enforcing a single style.
 
+# INSTALL
+
+```brew: brew install standard```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [eslint](/man/eslint)(1), [prettier](/man/prettier)(1), [jshint](/man/jshint)(1)

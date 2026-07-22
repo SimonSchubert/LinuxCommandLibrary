@@ -91,6 +91,14 @@ Requires internet connectivity to reach ipinfo.io. Anonymous requests are heavil
 
 Developed by **IPinfo.io**, a geolocation data provider founded in **2013**. The CLI is written in Go and wraps the same public API used by the web service.
 
+# INSTALL
+
+```brew: brew install ipinfo```
+
+```nix: nix profile install nixpkgs#ipinfo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [whois](/man/whois)(1), [dig](/man/dig)(1), [jq](/man/jq)(1)

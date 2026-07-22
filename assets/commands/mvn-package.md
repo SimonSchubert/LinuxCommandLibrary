@@ -45,6 +45,22 @@ builds the project and creates a distributable package
 
 **mvn package** builds the project and creates a distributable package (JAR, WAR, etc.). Executes compile, test, and package phases. Output goes to target/ directory.
 
+# INSTALL
+
+```dnf: sudo dnf install maven```
+
+```pacman: sudo pacman -S maven```
+
+```apk: sudo apk add maven```
+
+```zypper: sudo zypper install maven```
+
+```brew: brew install maven```
+
+```nix: nix profile install nixpkgs#maven```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mvn](/man/mvn)(1), [mvn-install](/man/mvn-install)(1), [mvn-compile](/man/mvn-compile)(1)

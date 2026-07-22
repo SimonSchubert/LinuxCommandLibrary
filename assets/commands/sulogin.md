@@ -55,6 +55,24 @@ The command is typically called automatically during boot when entering single-u
 
 Requires physical console access. The **-e** option should only be used when root has no password set (common in initramfs environments). Part of the util-linux package.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-login```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [init](/man/init)(1), [login](/man/login)(1), [su](/man/su)(1), [agetty](/man/agetty)(1)

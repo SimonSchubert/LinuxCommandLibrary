@@ -24,6 +24,16 @@ Manage OpenCode sessions
 
 **opencode session** manages OpenCode coding sessions. Sessions persist conversation history, tool calls, and context in a local **SQLite** database. You can list past sessions, resume a specific session by ID, or continue the most recent one. This allows picking up where you left off across terminal restarts.
 
+# INSTALL
+
+```pacman: sudo pacman -S opencode```
+
+```brew: brew install opencode```
+
+```nix: nix profile install nixpkgs#opencode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [opencode](/man/opencode)(1), [opencode-export](/man/opencode-export)(1), [opencode-import](/man/opencode-import)(1)

@@ -49,6 +49,22 @@ Bypasses the unit's configured ExecStop commands. Killing main process may leave
 
 The **kill** subcommand provides direct signal delivery to unit processes, useful when the normal stop procedure is insufficient or when specific signals are needed (like SIGHUP for config reload).
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-stop](/man/systemctl-stop)(1), [systemctl-restart](/man/systemctl-restart)(1), [kill](/man/kill)(1)

@@ -87,6 +87,22 @@ System-wide data is stored in $prefix/var/lib/flatpak/, while per-user data is i
 
 **flatpak** was originally developed as xdg-app by Alexander Larsson at Red Hat and was renamed to Flatpak in 2016. It provides a distribution-agnostic packaging format for Linux desktop applications.
 
+# INSTALL
+
+```apt: sudo apt install flatpak```
+
+```dnf: sudo dnf install flatpak```
+
+```pacman: sudo pacman -S flatpak```
+
+```apk: sudo apk add flatpak```
+
+```zypper: sudo zypper install flatpak```
+
+```nix: nix profile install nixpkgs#flatpak```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flatpak-install](/man/flatpak-install)(1), [flatpak-run](/man/flatpak-run)(1), [ostree](/man/ostree)(1)

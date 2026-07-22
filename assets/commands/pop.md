@@ -34,6 +34,16 @@ Context-dependent. Part of stack-based languages.
 
 pop is a fundamental **stack operation** in computer science.
 
+# INSTALL
+
+```zypper: sudo zypper install pop```
+
+```brew: brew install pop```
+
+```nix: nix profile install nixpkgs#pop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dc](/man/dc)(1), [forth](/man/forth)(1), [pushd](/man/pushd)(1)

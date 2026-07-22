@@ -44,6 +44,14 @@ Common UX: prefix **ctrl+b** then **q** to detach; run **herdr** again to reatta
 
 Agent integrations depend on which tools you install. Socket API and plugins expand the attack surface—treat untrusted plugins carefully. Not a drop-in replacement for every **tmux** workflow; learn herdr's own keybindings.
 
+# INSTALL
+
+```brew: brew install herdr```
+
+```nix: nix profile install nixpkgs#herdr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [zellij](/man/zellij)(1), [gemini](/man/gemini)(1)

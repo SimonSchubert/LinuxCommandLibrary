@@ -86,6 +86,22 @@ The local repository acts as a cache for both locally built artifacts and depend
 
 The install phase runs all tests by default; use -DskipTests to skip. The local repository (~/.m2/repository) can grow large over time. Snapshot versions are not automatically updated unless -U is used. Multi-module projects install all modules by default.
 
+# INSTALL
+
+```dnf: sudo dnf install maven```
+
+```pacman: sudo pacman -S maven```
+
+```apk: sudo apk add maven```
+
+```zypper: sudo zypper install maven```
+
+```brew: brew install maven```
+
+```nix: nix profile install nixpkgs#maven```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mvn](/man/mvn)(1), [mvn-package](/man/mvn-package)(1), [mvn-deploy](/man/mvn-deploy)(1), [gradle](/man/gradle)(1)

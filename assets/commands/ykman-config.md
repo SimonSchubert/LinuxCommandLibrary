@@ -60,6 +60,22 @@ Configure YubiKey device settings
 
 **ykman config** manages YubiKey device configuration. Enable or disable applications and interfaces. Set lock codes for configuration protection.
 
+# INSTALL
+
+```dnf: sudo dnf install yubikey-manager```
+
+```pacman: sudo pacman -S yubikey-manager```
+
+```apk: sudo apk add yubikey-manager```
+
+```zypper: sudo zypper install yubikey-manager```
+
+```brew: brew install ykman```
+
+```nix: nix profile install nixpkgs#yubikey-manager```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ykman](/man/ykman)(1), [ykman-fido](/man/ykman-fido)(1)

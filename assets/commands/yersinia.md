@@ -125,6 +125,14 @@ Layer 2 attacks can severely disrupt network operations. Some attacks are denial
 
 Yersinia was developed by **David Barroso** and **Alfredo Andres** as a research tool to demonstrate Layer 2 vulnerabilities. The name refers to *Yersinia pestis*, the bacterium causing plague, reflecting how these attacks can spread through a network. The tool highlighted that network security must address all OSI layers, not just application-layer threats. It became a standard tool for network penetration testing.
 
+# INSTALL
+
+```apk: sudo apk add yersinia```
+
+```nix: nix profile install nixpkgs#yersinia```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ettercap](/man/ettercap)(8), [arpspoof](/man/arpspoof)(8), [macchanger](/man/macchanger)(1), [tcpdump](/man/tcpdump)(8)

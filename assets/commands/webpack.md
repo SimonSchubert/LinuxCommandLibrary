@@ -106,6 +106,12 @@ webpack-cli must be installed separately from webpack core (**npm install webpac
 
 webpack was created by **Tobias Koppers** and first released in **March 2012**. It revolutionized JavaScript build tooling by introducing concepts like code splitting and hot module replacement. webpack 4 (2018) focused on zero-config defaults, and webpack 5 (2020) improved build performance and module federation. The CLI was separated into webpack-cli starting with webpack 4.
 
+# INSTALL
+
+```brew: brew install webpack```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [vite](/man/vite)(1), [rollup](/man/rollup)(1), [esbuild](/man/esbuild)(1), [parcel](/man/parcel)(1)

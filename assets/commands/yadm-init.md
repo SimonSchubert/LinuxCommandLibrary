@@ -34,6 +34,20 @@ Initialize new yadm dotfiles repository
 
 If a repository already exists, the **-f** flag is required to force reinitialization.
 
+# INSTALL
+
+```pacman: sudo pacman -S yadm```
+
+```apk: sudo apk add yadm```
+
+```zypper: sudo zypper install yadm```
+
+```brew: brew install yadm```
+
+```nix: nix profile install nixpkgs#yadm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yadm](/man/yadm)(1), [yadm-clone](/man/yadm-clone)(1), [yadm-config](/man/yadm-config)(1), [yadm-encrypt](/man/yadm-encrypt)(1)

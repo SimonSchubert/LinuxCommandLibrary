@@ -54,6 +54,18 @@ Rust implementation. Config for custom formats. Terminal colors needed.
 
 **tspin** was created as a log file highlighter to make logs more readable with automatic format detection.
 
+# INSTALL
+
+```apt: sudo apt install tailspin```
+
+```pacman: sudo pacman -S tailspin```
+
+```brew: brew install tailspin```
+
+```nix: nix profile install nixpkgs#tailspin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [lnav](/man/lnav)(1), [tail](/man/tail)(1)

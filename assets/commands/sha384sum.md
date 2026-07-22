@@ -64,6 +64,24 @@ Compute and verify SHA-384 checksums
 
 SHA-384 is commonly used in TLS/SSL certificates and digital signatures where stronger security than SHA-256 is desired without the full 128-character output of SHA-512. With no FILE argument or when FILE is **-**, input is read from standard input. In check mode (**-c**), previously generated checksums are verified against current file contents.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sha256sum](/man/sha256sum)(1), [sha512sum](/man/sha512sum)(1), [sha224sum](/man/sha224sum)(1), [sha1sum](/man/sha1sum)(1), [md5sum](/man/md5sum)(1), [b2sum](/man/b2sum)(1)

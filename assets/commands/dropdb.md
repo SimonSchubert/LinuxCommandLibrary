@@ -89,6 +89,12 @@ Irreversible operation. Cannot drop database with active connections without --f
 
 dropdb is part of the **PostgreSQL** client utilities, providing command-line database administration since PostgreSQL's early releases. It simplifies common administrative tasks without requiring direct SQL.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [createdb](/man/createdb)(1), [psql](/man/psql)(1), [dropuser](/man/dropuser)(1), [pg_dump](/man/pg_dump)(1)

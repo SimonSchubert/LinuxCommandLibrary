@@ -143,6 +143,24 @@ Dependency resolution can be slow. "Cabal hell" (dependency conflicts) historica
 **~/.cabal/config**
 > Global configuration for package repositories, install directories, and build settings
 
+# INSTALL
+
+```apt: sudo apt install cabal-install```
+
+```dnf: sudo dnf install cabal-install```
+
+```pacman: sudo pacman -S cabal-install```
+
+```apk: sudo apk add cabal```
+
+```zypper: sudo zypper install cabal-install```
+
+```brew: brew install cabal-install```
+
+```nix: nix profile install nixpkgs#cabal-install```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stack](/man/stack)(1), [ghc](/man/ghc)(1), [ghci](/man/ghci)(1)

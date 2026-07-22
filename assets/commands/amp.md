@@ -38,6 +38,17 @@ Uses a custom license rather than a standard open-source license. Building from 
 
 **amp** was created by **Jordan MacDonald** (jmacdonald), who started the project around 2015 after growing frustrated with Vim. Written in Rust, it reached version 0.7.1 in 2024. MacDonald has been using amp as his daily editor since its creation.
 
+# INSTALL
+
+```aur: yay -S amp```
+
+```zypper: sudo zypper install amp```
+
+```brew: brew install amp```
+
+```nix: nix profile install nixpkgs#amp```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [vim](/man/vim)(1), [kakoune](/man/kakoune)(1), [helix](/man/helix)(1), [nano](/man/nano)(1)

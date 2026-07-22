@@ -42,6 +42,14 @@ Requires root privileges to change the setting. Part of util-linux. On modern sy
 
 This control exists from early Unix days when physical console access was common. The three-key combination was chosen to be difficult to press accidentally.
 
+# INSTALL
+
+```apt: sudo apt install util-linux-extra```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [reboot](/man/reboot)(8), [shutdown](/man/shutdown)(8), [systemctl](/man/systemctl)(1)

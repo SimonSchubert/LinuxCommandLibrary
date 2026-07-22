@@ -74,6 +74,22 @@ Must be run under Sway compositor. Limited system tray support compared to stand
 
 **swaybar** was developed as part of the Sway project, providing a native Wayland status bar. Sway, created by Drew DeVault, aims for i3 compatibility on Wayland. The bar follows i3bar conventions while operating in a pure Wayland environment without X11 dependencies.
 
+# INSTALL
+
+```apt: sudo apt install sway```
+
+```dnf: sudo dnf install sway```
+
+```pacman: sudo pacman -S sway```
+
+```apk: sudo apk add swaybar```
+
+```zypper: sudo zypper install sway```
+
+```nix: nix profile install nixpkgs#sway```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sway](/man/sway)(1), [i3status](/man/i3status)(1), [waybar](/man/waybar)(1)

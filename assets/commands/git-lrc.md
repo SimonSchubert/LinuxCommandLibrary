@@ -76,6 +76,24 @@ git-lrc is written in Go by HexmosTech and is distributed under a source-availab
 
 The staged diff is sent to the configured cloud AI provider, so it is unsuitable for code that may not leave your machine. Installation goes through the vendor's **ipm** package manager rather than a system package repository. A free tier covers 30k lines of code per month, beyond which a paid plan is required.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-commit](/man/git-commit)(1), [claude](/man/claude)(1), [copilot](/man/copilot)(1), [git](/man/git)(1)

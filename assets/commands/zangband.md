@@ -65,6 +65,12 @@ The game uses permadeath. Save frequently, but savefile manipulation (save-scumm
 
 Development of ZAngband has been largely superseded by other Angband variants like ToME, Sil, and FAangband.
 
+# INSTALL
+
+```apk: sudo apk add zangband```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [angband](/man/angband)(6), [nethack](/man/nethack)(6), [crawl](/man/crawl)(6), [tome](/man/tome)(6)

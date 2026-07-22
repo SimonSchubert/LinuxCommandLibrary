@@ -74,6 +74,12 @@ Note: FeedReader is no longer being maintained. Users are encouraged to migrate 
 
 Project is no longer maintained. Consider alternatives like NewsFlash. Supports various feed services like Feedly and Inoreader.
 
+# INSTALL
+
+```aur: yay -S feedreader```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [newsboat](/man/newsboat)(1)

@@ -59,6 +59,24 @@ The primary use case is sharing repository data without network access, such as 
 
 Unlike archives, bundles preserve Git history and can be incrementally fetched from. They're verified cryptographically to ensure data integrity. Common workflows include creating bundles on one machine, physically transferring them, and cloning or fetching on another machine.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-archive](/man/git-archive)(1), [git-clone](/man/git-clone)(1), [git-fetch](/man/git-fetch)(1), [git-pull](/man/git-pull)(1)

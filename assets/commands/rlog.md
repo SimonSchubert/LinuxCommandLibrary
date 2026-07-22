@@ -91,6 +91,24 @@ RCS is largely superseded by Git. File-level versioning only. Less common in mod
 
 **rlog** is part of **RCS** (Revision Control System), created by **Walter Tichy** at Purdue in the **1980s**. RCS was one of the first version control systems.
 
+# INSTALL
+
+```apt: sudo apt install rcs```
+
+```dnf: sudo dnf install rcs```
+
+```pacman: sudo pacman -S rcs```
+
+```apk: sudo apk add rcs```
+
+```zypper: sudo zypper install rcs```
+
+```brew: brew install rcs```
+
+```nix: nix profile install nixpkgs#rcs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rcs](/man/rcs)(1), [ci](/man/ci)(1), [co](/man/co)(1), [rcsdiff](/man/rcsdiff)(1), [git](/man/git)(1)

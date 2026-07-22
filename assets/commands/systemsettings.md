@@ -42,6 +42,16 @@ Requires KDE Plasma desktop environment. Some modules require root privileges fo
 
 **systemsettings** has been the primary configuration tool for KDE since KDE 4, replacing the earlier KControl application. It continues as the settings interface in KDE Plasma 5 and 6.
 
+# INSTALL
+
+```apt: sudo apt install systemsettings```
+
+```pacman: sudo pacman -S systemsettings```
+
+```apk: sudo apk add systemsettings```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kwriteconfig5](/man/kwriteconfig5)(1)

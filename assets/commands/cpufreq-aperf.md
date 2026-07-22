@@ -45,6 +45,14 @@ Useful for verifying CPU frequency scaling and turbo boost behavior.
 
 Requires root privileges. Only works on CPUs that support APERF/MPERF counters (Intel and AMD processors). Part of cpufrequtils.
 
+# INSTALL
+
+```apk: sudo apk add cpufrequtils```
+
+```nix: nix profile install nixpkgs#cpufrequtils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cpufreq-info](/man/cpufreq-info)(1), [cpufreq-set](/man/cpufreq-set)(1), [cpupower](/man/cpupower)(1)

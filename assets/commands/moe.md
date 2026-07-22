@@ -52,6 +52,18 @@ Less powerful than vim/emacs. Simpler learning curve. ncurses interface.
 
 moe was created as a simple, **modeless** text editor for those who prefer no mode switching.
 
+# INSTALL
+
+```dnf: sudo dnf install moe```
+
+```zypper: sudo zypper install moe```
+
+```brew: brew install moe```
+
+```nix: nix profile install nixpkgs#moe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nano](/man/nano)(1), [micro](/man/micro)(1), [joe](/man/joe)(1)

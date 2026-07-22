@@ -42,6 +42,24 @@ Only works with valid ISO 9660 images. Reports the size recorded in the volume d
 
 isosize is part of the util-linux package, providing a simple utility for querying ISO image sizes. It reads the ISO 9660 Primary Volume Descriptor to determine size.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [isoinfo](/man/isoinfo)(1), [genisoimage](/man/genisoimage)(1), [du](/man/du)(1)

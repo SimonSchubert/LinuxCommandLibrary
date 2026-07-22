@@ -80,6 +80,12 @@ The NordVPN daemon must be running for the CLI to function; it's typically manag
 
 Requires an active NordVPN subscription. The nordvpnd daemon must be running (usually started via systemd). Initial login opens a browser for authentication. The kill switch, when enabled, blocks internet access if the VPN disconnects.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nordvpn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openvpn](/man/openvpn)(8), [wg](/man/wg)(8), [nmcli](/man/nmcli)(1)

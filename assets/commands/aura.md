@@ -97,6 +97,11 @@ AUR packages are user-submitted and not officially supported. Review PKGBUILDs b
 
 **aura** was created as a Haskell-based alternative to other AUR helpers, emphasizing security and multilingual support.
 
+# INSTALL
+
+```aur: yay -S aura```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [yay](/man/yay)(1), [paru](/man/paru)(1)

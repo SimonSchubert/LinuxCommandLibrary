@@ -83,6 +83,21 @@ If the specified package is already installed, the command will upgrade it to th
 
 Requires root privileges. The command may remove conflicting packages to satisfy dependencies. Use **apt-get install** in scripts for more stable output formatting.
 
+# INSTALL
+
+```apt: sudo apt install apt```
+
+```dnf: sudo dnf install apt```
+
+```pacman: sudo pacman -S apt```
+
+```apk: sudo apk add apt```
+
+```brew: brew install apt```
+
+```nix: nix profile install nixpkgs#apt```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [apt-cache](/man/apt-cache)(8), [dpkg](/man/dpkg)(1)

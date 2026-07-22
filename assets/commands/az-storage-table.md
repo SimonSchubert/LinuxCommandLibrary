@@ -85,6 +85,19 @@ Use **az storage entity** commands to manage the data within tables.
 
 Requires Azure CLI and valid storage credentials. Table names must follow Azure naming conventions. Tables cannot be renamed; must delete and recreate.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [azure-cli](/man/azure-cli)(1), [az-storage](/man/az-storage)(1), [az-storage-entity](/man/az-storage-entity)(1), [az-storage-queue](/man/az-storage-queue)(1), [az-storage-account](/man/az-storage-account)(1)

@@ -66,6 +66,22 @@ Requires root privileges. Part of rp-pppoe package. NetworkManager may manage PP
 
 pppoe-stop is part of **rp-pppoe** (Roaring Penguin PPPoE) by **David F. Skoll** for Linux PPPoE connections.
 
+# INSTALL
+
+```apt: sudo apt install pppoe```
+
+```dnf: sudo dnf install rp-pppoe```
+
+```pacman: sudo pacman -S rp-pppoe```
+
+```apk: sudo apk add rp-pppoe```
+
+```zypper: sudo zypper install rp-pppoe```
+
+```nix: nix profile install nixpkgs#rp-pppoe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pppd](/man/pppd)(8), [pppoe](/man/pppoe)(8)

@@ -87,6 +87,24 @@ foot is Wayland-only and does not support X11. Some applications expecting xterm
 
 foot was created by Daniel Eklof and first released in **2020**. It was designed from the ground up for Wayland, avoiding the legacy baggage of X11 terminal emulators while achieving exceptional performance.
 
+# INSTALL
+
+```apt: sudo apt install foot```
+
+```dnf: sudo dnf install foot```
+
+```pacman: sudo pacman -S foot```
+
+```apk: sudo apk add foot```
+
+```zypper: sudo zypper install foot```
+
+```brew: brew install foot```
+
+```nix: nix profile install nixpkgs#foot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [footclient](/man/footclient)(1), [alacritty](/man/alacritty)(1), [kitty](/man/kitty)(1), [wezterm](/man/wezterm)(1)

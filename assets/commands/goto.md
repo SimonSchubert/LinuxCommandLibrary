@@ -87,6 +87,14 @@ Requires shell integration. Aliases are stored in user's home directory. Tab com
 
 **goto** was inspired by similar tools like z.lua and autojump, focusing on simplicity and alias-based navigation.
 
+# INSTALL
+
+```brew: brew install goto```
+
+```nix: nix profile install nixpkgs#goto```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [z.lua](https://github.com/skywind3000/z.lua), [autojump](https://github.com/wting/autojump), [zoxide](https://github.com/ajeetdsouza/zoxide)

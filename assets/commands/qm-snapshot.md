@@ -54,6 +54,12 @@ Snapshot names must start with a letter. Including vmstate allows restoring the 
 
 **qm snapshot** is part of the **Proxmox VE** virtualization platform for managing QEMU/KVM virtual machine snapshots.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-rollback](/man/qm-rollback)(1), [qm-delsnapshot](/man/qm-delsnapshot)(1)

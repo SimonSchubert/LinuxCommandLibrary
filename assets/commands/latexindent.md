@@ -92,6 +92,16 @@ Perl-based; requires Perl and YAML::Tiny. May change semantics in edge cases. Ba
 
 latexindent was written by **Chris Hughes** as a Perl script for formatting LaTeX code. It's included in TeX Live and is commonly used for maintaining consistent LaTeX codestyle.
 
+# INSTALL
+
+```pacman: sudo pacman -S texlive-binextra```
+
+```apk: sudo apk add texlive-binextra```
+
+```brew: brew install latexindent```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [latex](/man/latex)(1), [latexmk](/man/latexmk)(1), [prettier](/man/prettier)(1)

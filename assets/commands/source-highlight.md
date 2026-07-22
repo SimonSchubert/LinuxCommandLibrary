@@ -106,6 +106,22 @@ Requires the Boost regex library. Language detection depends on file extensions;
 
 **GNU Source-highlight** was created by Lorenzo Bettini and first released in **1999**. It was developed as a flexible, extensible syntax highlighting tool that could support new languages without recompilation. The project is part of the GNU Project and is distributed under the GNU General Public License. Development has continued with support for new languages and output formats.
 
+# INSTALL
+
+```apt: sudo apt install source-highlight```
+
+```dnf: sudo dnf install source-highlight```
+
+```pacman: sudo pacman -S source-highlight```
+
+```apk: sudo apk add source-highlight```
+
+```zypper: sudo zypper install source-highlight```
+
+```brew: brew install source-highlight```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [highlight](/man/highlight)(1), [pygmentize](/man/pygmentize)(1), [bat](/man/bat)(1)

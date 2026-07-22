@@ -72,6 +72,14 @@ Cloud provider credentials needed. DNS configuration required. Production-focuse
 
 kops (Kubernetes Operations) was created to help manage production-grade Kubernetes clusters on cloud infrastructure.
 
+# INSTALL
+
+```brew: brew install kops```
+
+```nix: nix profile install nixpkgs#kops```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [eksctl](/man/eksctl)(1), [kubeadm](/man/kubeadm)(1)

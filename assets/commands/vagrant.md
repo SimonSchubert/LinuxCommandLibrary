@@ -130,6 +130,16 @@ Requires virtualization software. Large boxes need download time and disk space.
 
 **Vagrant** was created by **Mitchell Hashimoto** in **2010** and later developed by **HashiCorp**. It revolutionized development environment management, enabling reproducible setups.
 
+# INSTALL
+
+```apt: sudo apt install vagrant```
+
+```dnf: sudo dnf install vagrant```
+
+```nix: nix profile install nixpkgs#vagrant```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vboxmanage](/man/vboxmanage)(1), [docker](/man/docker)(1), [ansible](/man/ansible)(1), [packer](/man/packer)(1), [ssh](/man/ssh)(1)

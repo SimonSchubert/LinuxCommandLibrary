@@ -78,6 +78,14 @@ Snakemake-specific and not suitable for general Python files. Uses the same defa
 
 **snakefmt** was created for the **Snakemake** workflow management system. It brings consistent formatting to bioinformatics pipelines.
 
+# INSTALL
+
+```brew: brew install snakefmt```
+
+```nix: nix profile install nixpkgs#snakefmt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snakemake](/man/snakemake)(1), [black](/man/black)(1), [python](/man/python)(1), [ruff](/man/ruff)(1), [yapf](/man/yapf)(1)

@@ -81,6 +81,14 @@ Sticky notifications (alerts) require manual configuration in System Settings > 
 
 terminal-notifier was created by **Eloy Durán** (julienXX) as an open-source tool to bring macOS notifications to command-line workflows. It became popular for integrating native notifications into development toolchains.
 
+# INSTALL
+
+```brew: brew install terminal-notifier```
+
+```nix: nix profile install nixpkgs#terminal-notifier```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [notify-send](/man/notify-send)(1)

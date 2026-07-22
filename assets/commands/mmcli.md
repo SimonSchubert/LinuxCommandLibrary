@@ -97,6 +97,18 @@ Some operations require root privileges, particularly SMS and connection managem
 
 **mmcli** is part of **ModemManager**, developed by the freedesktop.org community. ModemManager provides a unified high-level API for mobile broadband modems, abstracting differences between vendor implementations. It is commonly used with NetworkManager for mobile connectivity.
 
+# INSTALL
+
+```apt: sudo apt install modemmanager```
+
+```pacman: sudo pacman -S modemmanager```
+
+```apk: sudo apk add modemmanager```
+
+```nix: nix profile install nixpkgs#modemmanager```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [NetworkManager](/man/NetworkManager)(8), [nmcli](/man/nmcli)(1)

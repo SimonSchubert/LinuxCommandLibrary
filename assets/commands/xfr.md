@@ -28,6 +28,14 @@ Modern iperf3 alternative with live TUI and QUIC
 
 **xfr** was created by **lance0** and is written in **Rust**.
 
+# INSTALL
+
+```zypper: sudo zypper install xfr```
+
+```nix: nix profile install nixpkgs#xfr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iperf3](/man/iperf3)(1), [nuttcp](/man/nuttcp)(1)

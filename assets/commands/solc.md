@@ -115,6 +115,12 @@ Different Solidity versions may have incompatible syntax; use **solc-select** to
 
 **Solidity** was proposed by Gavin Wood in **2014** and developed by the Ethereum Foundation's Solidity team. The first release was in **2015** alongside Ethereum's launch. The language and compiler have evolved significantly, with major versions introducing features like ABIEncoderV2, custom errors, and user-defined value types. Development continues actively to improve safety, efficiency, and developer experience.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#solc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [forge](/man/forge)(1), [hardhat](/man/hardhat)(1)

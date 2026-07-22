@@ -90,6 +90,18 @@ Only for authorized security testing. Encrypted protocols (SSH, HTTPS) not captu
 
 **dsniff** was created by **Dug Song** around **2000** as part of a suite of network auditing tools. It demonstrated the dangers of cleartext authentication, contributing to the push for encrypted protocols. The dsniff suite includes related tools like arpspoof and macof.
 
+# INSTALL
+
+```apt: sudo apt install dsniff```
+
+```dnf: sudo dnf install dsniff```
+
+```pacman: sudo pacman -S dsniff```
+
+```nix: nix profile install nixpkgs#dsniff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [arpspoof](/man/arpspoof)(1), [ettercap](/man/ettercap)(8), [tcpreplay](/man/tcpreplay)(1)

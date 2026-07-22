@@ -52,6 +52,12 @@ This is particularly important for library maintainers who need to ensure their 
 
 Requires static analysis of PHP code. May report false positives for dynamically loaded classes.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#composer-require-checker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [composer](/man/composer)(1), [composer-audit](/man/composer-audit)(1), [php](/man/php)(1), [phpstan](/man/phpstan)(1)

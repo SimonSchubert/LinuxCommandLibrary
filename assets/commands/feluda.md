@@ -58,6 +58,12 @@ Relies on accurate license metadata in crates. License detection may miss custom
 
 **feluda** was created to help Rust developers perform license audits on their projects, ensuring compliance with open source licensing requirements.
 
+# INSTALL
+
+```brew: brew install feluda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo-license](https://github.com/onur/cargo-license), [cargo-deny](https://github.com/EmbarkStudios/cargo-deny), [cargo-tree](https://doc.rust-lang.org/cargo/commands/cargo-tree.html)

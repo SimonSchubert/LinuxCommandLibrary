@@ -136,6 +136,24 @@ Without -r, cannot copy directories. Overwrites by default (use -i for safety). 
 
 **cp** has been a core Unix command since the early **1970s**, part of the original Unix toolset.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mv](/man/mv)(1), [rm](/man/rm)(1), [ln](/man/ln)(1), [rsync](/man/rsync)(1), [install](/man/install)(1), [dd](/man/dd)(1)

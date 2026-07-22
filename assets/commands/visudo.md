@@ -76,6 +76,22 @@ Requires root privileges. Editor must be trusted. Syntax errors are caught but l
 
 **visudo** has been part of **sudo** since its early development by **Todd Miller**. It provides essential safety for editing the security-critical sudoers file.
 
+# INSTALL
+
+```apt: sudo apt install sudo```
+
+```dnf: sudo dnf install sudo```
+
+```pacman: sudo pacman -S sudo```
+
+```apk: sudo apk add sudo```
+
+```zypper: sudo zypper install sudo```
+
+```nix: nix profile install nixpkgs#sudo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sudo](/man/sudo)(8), [su](/man/su)(1), [vi](/man/vi)(1)

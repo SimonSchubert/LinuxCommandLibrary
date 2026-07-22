@@ -116,6 +116,20 @@ Site support depends on plugins and may break with site changes. Some sites bloc
 
 **streamlink** is a fork of **livestreamer**, which was created around **2012**. After livestreamer's development stalled, streamlink forked in **2016** with active maintenance. The project supports an extensive list of streaming sites and continues community-driven development.
 
+# INSTALL
+
+```pacman: sudo pacman -S streamlink```
+
+```apk: sudo apk add streamlink```
+
+```zypper: sudo zypper install streamlink```
+
+```brew: brew install streamlink```
+
+```nix: nix profile install nixpkgs#streamlink```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [youtube-dl](/man/youtube-dl)(1), [yt-dlp](/man/yt-dlp)(1), [mpv](/man/mpv)(1), [vlc](/man/vlc)(1)

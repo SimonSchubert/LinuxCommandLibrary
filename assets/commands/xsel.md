@@ -65,6 +65,24 @@ Similar to xclip but with different syntax and additional features.
 
 X11 only. Content may be lost when X server restarts. Use wl-copy/wl-paste for Wayland.
 
+# INSTALL
+
+```apt: sudo apt install xsel```
+
+```dnf: sudo dnf install xsel```
+
+```pacman: sudo pacman -S xsel```
+
+```apk: sudo apk add xsel```
+
+```zypper: sudo zypper install xsel```
+
+```brew: brew install xsel```
+
+```nix: nix profile install nixpkgs#xsel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xclip](/man/xclip)(1), [wl-copy](/man/wl-copy)(1), [wl-paste](/man/wl-paste)(1)

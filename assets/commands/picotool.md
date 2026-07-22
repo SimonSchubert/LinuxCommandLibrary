@@ -85,6 +85,18 @@ Device must be in BOOTSEL mode for many operations. USB connection required. Som
 
 **picotool** was created by **Raspberry Pi** for their RP2040 microcontroller. Released with the Pico in **2021**, it provides official tooling for device management.
 
+# INSTALL
+
+```apt: sudo apt install picotool```
+
+```zypper: sudo zypper install picotool```
+
+```brew: brew install picotool```
+
+```nix: nix profile install nixpkgs#picotool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openocd](/man/openocd)(1), [gdb](/man/gdb)(1), [stlink](/man/stlink)(1)

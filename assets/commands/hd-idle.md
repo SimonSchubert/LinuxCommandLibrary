@@ -55,6 +55,18 @@ Works best with external drives that don't support native APM. Some drives may n
 
 hd-idle was created as a solution for external drives that lack proper power management support. It fills a gap where hdparm's spin-down feature doesn't work, common with USB enclosures that don't pass through ATA commands.
 
+# INSTALL
+
+```apt: sudo apt install hd-idle```
+
+```dnf: sudo dnf install hd-idle```
+
+```apk: sudo apk add hd-idle```
+
+```nix: nix profile install nixpkgs#hd-idle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hdparm](/man/hdparm)(8), [smartctl](/man/smartctl)(8)

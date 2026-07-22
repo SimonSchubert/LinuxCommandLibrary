@@ -79,6 +79,14 @@ Specify the guest with an image name, for example `tmt try fedora`. Append `@HOW
 
 If no tests are found in the current directory, **tmt try** simply logs into the guest. Image availability depends on the provisioning backend. Interactive mode requires terminal access, and some images may require authentication or special configuration.
 
+# INSTALL
+
+```dnf: sudo dnf install tmt```
+
+```brew: brew install tmt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmt](/man/tmt)(1), [tmt-run](/man/tmt-run)(1), [podman](/man/podman)(1)

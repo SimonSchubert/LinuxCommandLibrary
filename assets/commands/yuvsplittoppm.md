@@ -36,6 +36,24 @@ _height_
 
 It is the inverse of [ppmtoyuvsplit](/man/ppmtoyuvsplit)(1) and is part of the Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmtoyuvsplit](/man/ppmtoyuvsplit)(1), [yuvtoppm](/man/yuvtoppm)(1), [rgb3toppm](/man/rgb3toppm)(1)

@@ -65,6 +65,24 @@ Only works with the CFQ (Completely Fair Queuing) I/O scheduler. Realtime class 
 
 ionice was introduced as part of util-linux to provide user control over the CFQ I/O scheduler's prioritization features, which were added to the Linux kernel in version 2.6.13 (**2005**).
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nice](/man/nice)(1), [renice](/man/renice)(1)

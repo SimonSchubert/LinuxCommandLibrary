@@ -56,6 +56,20 @@ Very slow: encoding a single megapixel can take a minute or more. Memory usage i
 
 **Guetzli** was developed by **Google Research** and released as open source in **March 2017** alongside the Butteraugli perceptual distance metric.
 
+# INSTALL
+
+```apt: sudo apt install guetzli```
+
+```pacman: sudo pacman -S guetzli```
+
+```apk: sudo apk add guetzli```
+
+```brew: brew install guetzli```
+
+```nix: nix profile install nixpkgs#guetzli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cjpeg](/man/cjpeg)(1), [jpegoptim](/man/jpegoptim)(1)

@@ -78,6 +78,14 @@ Multiple tools share the name "tv". This refers to the Rust-based tidy-viewer/tv
 
 **tv** (tidy-viewer) is a Rust-based CLI tool for rendering tabular data in the terminal.
 
+# INSTALL
+
+```apt: sudo apt install treeviewx```
+
+```nix: nix profile install nixpkgs#tv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [column](/man/column)(1), [csvlook](/man/csvlook)(1), [miller](/man/miller)(1)

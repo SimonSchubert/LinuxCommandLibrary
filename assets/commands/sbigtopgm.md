@@ -38,6 +38,24 @@ There is no **pgmtosbig** going the other way in upstream Netpbm. The output is 
 
 **sbigtopgm** was contributed to **Netpbm** to support amateur and professional astronomy workflows on Unix systems where SBIG's own CCDOPS software was not available. It has remained largely unchanged since its addition.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fitstopnm](/man/fitstopnm)(1), [pnmtopng](/man/pnmtopng)(1), [pamtopnm](/man/pamtopnm)(1), [pnmnorm](/man/pnmnorm)(1)

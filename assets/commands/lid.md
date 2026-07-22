@@ -36,6 +36,16 @@ List groups for the **current** user
 
 Requires root privileges to access all group membership information. Part of the **libuser** library tools for user and group account management.
 
+# INSTALL
+
+```dnf: sudo dnf install libuser```
+
+```apk: sudo apk add libuser```
+
+```zypper: sudo zypper install libuser```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groups](/man/groups)(1), [id](/man/id)(1), [getent](/man/getent)(1), [gpasswd](/man/gpasswd)(1), [groupmems](/man/groupmems)(1)

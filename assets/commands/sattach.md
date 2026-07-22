@@ -68,6 +68,12 @@ Only the job owner can attach to a job step. The job must be in a running state.
 
 **sattach** is part of the **Slurm** workload manager, providing job scheduling and resource management for HPC clusters.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [srun](/man/srun)(1), [sbatch](/man/sbatch)(1), [squeue](/man/squeue)(1), [scontrol](/man/scontrol)(1), [scancel](/man/scancel)(1)

@@ -91,6 +91,22 @@ Doesn't handle conflicts automatically. Target directory must exist. Symlinks po
 
 **GNU Stow** was written by **Bob Glickstein** in **1993** to manage software compiled into separate directories. It was initially designed for /usr/local/stow organization. The tool was later adopted by the dotfiles management community for organizing configuration files under version control.
 
+# INSTALL
+
+```dnf: sudo dnf install stow```
+
+```pacman: sudo pacman -S stow```
+
+```apk: sudo apk add stow```
+
+```zypper: sudo zypper install stow```
+
+```brew: brew install stow```
+
+```nix: nix profile install nixpkgs#stow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ln](/man/ln)(1), [dotfiles](/man/dotfiles)(1), [chezmoi](/man/chezmoi)(1), [yadm](/man/yadm)(1)

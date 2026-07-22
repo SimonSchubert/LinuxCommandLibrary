@@ -70,6 +70,18 @@ Requires initial setup. Community cheatsheets need downloading. Not as comprehen
 
 **cheat** was created by Chris Lane around **2013** to provide quick-access command examples, inspired by projects like tldr.
 
+# INSTALL
+
+```dnf: sudo dnf install cheat```
+
+```zypper: sudo zypper install cheat```
+
+```brew: brew install cheat```
+
+```nix: nix profile install nixpkgs#cheat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tldr](/man/tldr)(1), [man](/man/man)(1), [info](/man/info)(1)

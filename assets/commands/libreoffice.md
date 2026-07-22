@@ -175,6 +175,18 @@ Headless conversion requires the full LibreOffice installation. Some complex doc
 
 **LibreOffice** was created in **2010** as a fork of OpenOffice.org after Oracle acquired Sun Microsystems. The Document Foundation was established to guide development. It has become the leading open-source office suite, included by default in most Linux distributions and available for Windows and macOS.
 
+# INSTALL
+
+```dnf: sudo dnf install libreoffice```
+
+```apk: sudo apk add libreoffice-common```
+
+```zypper: sudo zypper install libreoffice```
+
+```nix: nix profile install nixpkgs#libreoffice```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pandoc](/man/pandoc)(1), [wkhtmltopdf](/man/wkhtmltopdf)(1), [unoconv](/man/unoconv)(1)

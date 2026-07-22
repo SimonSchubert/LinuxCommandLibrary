@@ -71,6 +71,22 @@ Lockfiles on network filesystems may not be reliable. Must manually remove locks
 
 dotlockfile implements the traditional Unix lockfile convention, widely used for mailbox locking. It's part of the **liblockfile** package providing standardized file locking utilities.
 
+# INSTALL
+
+```apt: sudo apt install liblockfile-bin```
+
+```dnf: sudo dnf install liblockfile```
+
+```pacman: sudo pacman -S liblockfile```
+
+```apk: sudo apk add liblockfile```
+
+```brew: brew install liblockfile```
+
+```nix: nix profile install nixpkgs#liblockfile```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flock](/man/flock)(1)

@@ -98,6 +98,12 @@ Requires BTRFS filesystem. Configuration file must be properly set up before use
 
 Written in **Rust** by **Eduard Tolosa** (Edu4rdSHL) as a simple alternative to traditional BTRFS snapshot management tools.
 
+# INSTALL
+
+```aur: yay -S rusnapshot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [snapper](/man/snapper)(8)

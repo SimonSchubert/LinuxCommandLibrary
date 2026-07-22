@@ -67,6 +67,22 @@ Root required. Can damage devices. Know what you're doing.
 
 **sg_raw** is part of **sg3_utils**, a collection of utilities for SCSI devices on Linux.
 
+# INSTALL
+
+```apt: sudo apt install sg3-utils```
+
+```dnf: sudo dnf install sg3_utils```
+
+```pacman: sudo pacman -S sg3_utils```
+
+```apk: sudo apk add sg3_utils```
+
+```zypper: sudo zypper install sg3_utils```
+
+```nix: nix profile install nixpkgs#sg3_utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sg_inq](/man/sg_inq)(1), [sginfo](/man/sginfo)(1), [lsscsi](/man/lsscsi)(1)

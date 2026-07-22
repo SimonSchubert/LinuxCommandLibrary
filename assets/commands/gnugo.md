@@ -95,6 +95,20 @@ Requires no special terminal support in ASCII mode. The AI is moderately strong 
 
 **GNU Go** has been developed by the **Free Software Foundation** since **1989**. It was one of the strongest open-source Go programs before the advent of neural network-based engines.
 
+# INSTALL
+
+```apt: sudo apt install gnugo```
+
+```dnf: sudo dnf install gnugo```
+
+```pacman: sudo pacman -S gnugo```
+
+```zypper: sudo zypper install gnugo```
+
+```nix: nix profile install nixpkgs#gnugo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gomoku](/man/gomoku)(6), [gnuchess](/man/gnuchess)(6)

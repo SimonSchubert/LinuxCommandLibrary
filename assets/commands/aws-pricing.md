@@ -79,6 +79,17 @@ The Price List Query API is only reachable through a small set of regional endpo
 
 The AWS Price List API was launched in **2015** to expose pricing data previously only available through the AWS console or static bulk JSON files. The Query API (**aws pricing**) was added later to allow filtered, on-demand queries and has become a standard building block for cost-aware automation.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ce](/man/aws-ce)(1), [aws-cur](/man/aws-cur)(1), [aws-budgets](/man/aws-budgets)(1)

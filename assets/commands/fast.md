@@ -66,6 +66,12 @@ Requires internet connection to Netflix's servers. Results may vary by location 
 
 fast-cli was created as a command-line interface to Netflix's Fast.com, which Netflix launched in **2016** as a simple, ad-free speed test. The service uses Netflix's content delivery network.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#fast```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [speedtest-cli](/man/speedtest-cli)(1), [iperf](/man/iperf)(1), [curl](/man/curl)(1)

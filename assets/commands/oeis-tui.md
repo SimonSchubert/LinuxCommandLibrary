@@ -34,6 +34,12 @@ Requires an internet connection to query the OEIS database.
 
 **oeis-tui** was created by **hako** and is written in **Go**.
 
+# INSTALL
+
+```zypper: sudo zypper install oeis-tui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bc](/man/bc)(1), [numbat](/man/numbat)(1)

@@ -22,6 +22,24 @@ The command creates the orphan branch, removes all tracked files, and makes an i
 
 Requires the **git-extras** package to be installed. The command switches the working directory to the new gh-pages branch. Modern GitHub Pages can also deploy from a subdirectory (e.g., /docs) on the main branch or via GitHub Actions, making the orphan branch approach less common than it once was.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-fresh-branch](/man/git-fresh-branch)(1), [git-extras](/man/git-extras)(1), [git-checkout](/man/git-checkout)(1), [git-branch](/man/git-branch)(1)

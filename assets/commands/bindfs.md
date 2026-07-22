@@ -76,6 +76,20 @@ Changes to ownership mapping are bidirectional - newly created files are mapped 
 
 **bindfs** is a FUSE filesystem for mounting directories with altered permissions.
 
+# INSTALL
+
+```apt: sudo apt install bindfs```
+
+```dnf: sudo dnf install bindfs```
+
+```zypper: sudo zypper install bindfs```
+
+```brew: brew install bindfs```
+
+```nix: nix profile install nixpkgs#bindfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(8), [fusermount](/man/fusermount)(1)

@@ -41,6 +41,14 @@ Display SNMP MIB data in table format
 
 **snmptable** displays SNMP table data in tabular format. Retrieves and formats MIB tables for easy reading. Part of Net-SNMP suite for network management.
 
+# INSTALL
+
+```apt: sudo apt install snmp```
+
+```apk: sudo apk add net-snmp-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snmpwalk](/man/snmpwalk)(1), [snmpget](/man/snmpget)(1)

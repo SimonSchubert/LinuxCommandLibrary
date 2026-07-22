@@ -101,6 +101,22 @@ The tool communicates with the FileZilla process via stdin/stdout. It supports P
 
 Not intended to be used directly; it is called internally by FileZilla. Password on command line is insecure and visible in process listings. PPK keys need conversion for use with other SSH clients.
 
+# INSTALL
+
+```apt: sudo apt install filezilla```
+
+```dnf: sudo dnf install filezilla```
+
+```pacman: sudo pacman -S filezilla```
+
+```apk: sudo apk add filezilla```
+
+```zypper: sudo zypper install filezilla```
+
+```nix: nix profile install nixpkgs#filezilla```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sftp](/man/sftp)(1), [filezilla](/man/filezilla)(1), [scp](/man/scp)(1), [ssh](/man/ssh)(1)

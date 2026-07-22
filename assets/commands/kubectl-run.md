@@ -92,6 +92,20 @@ Subcommand of kubectl. Creates only pods now. Use deployments for production.
 
 kubectl run provides quick pod creation for **Kubernetes** testing and debugging.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-create](/man/kubectl-create)(1), [kubectl-exec](/man/kubectl-exec)(1)

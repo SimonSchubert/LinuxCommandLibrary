@@ -72,6 +72,24 @@ Deprecated, use ethtool. Not for all adapters. Requires root.
 
 mii-tool was a **net-tools** utility for checking Ethernet link status, now superseded by ethtool.
 
+# INSTALL
+
+```apt: sudo apt install net-tools```
+
+```dnf: sudo dnf install net-tools```
+
+```pacman: sudo pacman -S net-tools```
+
+```apk: sudo apk add mii-tool```
+
+```zypper: sudo zypper install net-tools```
+
+```brew: brew install net-tools```
+
+```nix: nix profile install nixpkgs#net-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ethtool](/man/ethtool)(8), [ifconfig](/man/ifconfig)(8), [ip](/man/ip)(8)

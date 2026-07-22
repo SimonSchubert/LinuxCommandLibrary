@@ -133,6 +133,20 @@ Unofficial client. Some Bitwarden features not supported. Requires rbw-agent dae
 
 **rbw** was created by **Jesse Luehrs** as a command-line Bitwarden client optimized for Unix workflows. It uses a background agent (similar to ssh-agent or gpg-agent) to hold decryption keys in memory, emphasizing scriptability and speed over feature completeness.
 
+# INSTALL
+
+```dnf: sudo dnf install rbw```
+
+```pacman: sudo pacman -S rbw```
+
+```apk: sudo apk add rbw```
+
+```brew: brew install rbw```
+
+```nix: nix profile install nixpkgs#rbw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pass](/man/pass)(1), [bw](/man/bw)(1), [gopass](/man/gopass)(1)

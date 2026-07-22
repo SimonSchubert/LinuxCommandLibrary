@@ -83,6 +83,12 @@ Data is sourced from cryptocurrency APIs (CoinGecko by default) and cached local
 
 Requires internet connection for price data. API rate limits may apply. Market data depends on the configured data source (CoinGecko or CoinMarketCap).
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#cointop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ticker](/man/ticker)(1)

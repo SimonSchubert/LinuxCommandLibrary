@@ -74,6 +74,18 @@ Incremental builds may miss some changes; use **dotnet clean** before rebuilding
 
 dotnet build is part of the **.NET CLI** introduced with .NET Core. It provides a cross-platform build experience replacing platform-specific build tools.
 
+# INSTALL
+
+```dnf: sudo dnf install dotnet-host```
+
+```pacman: sudo pacman -S dotnet-host```
+
+```apk: sudo apk add dotnet-host```
+
+```brew: brew install dotnet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dotnet](/man/dotnet)(1), [dotnet-publish](/man/dotnet-publish)(1)

@@ -62,6 +62,22 @@ Useful for debugging DNS issues and understanding DNS delegation.
 
 Requires network access to DNS servers. Tracing may take time for complex delegations. Some DNS servers may block tracing queries.
 
+# INSTALL
+
+```apt: sudo apt install dnstracer```
+
+```dnf: sudo dnf install dnstracer```
+
+```apk: sudo apk add dnstracer```
+
+```zypper: sudo zypper install dnstracer```
+
+```brew: brew install dnstracer```
+
+```nix: nix profile install nixpkgs#dnstracer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [host](/man/host)(1)

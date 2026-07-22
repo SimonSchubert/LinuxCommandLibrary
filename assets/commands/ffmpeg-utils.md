@@ -89,6 +89,20 @@ Full frame analysis can be slow. Some formats have incomplete metadata. Output f
 
 ffprobe was added to ffmpeg to provide dedicated media analysis functionality, separating inspection from processing. It's become the standard tool for programmatic media file analysis.
 
+# INSTALL
+
+```apt: sudo apt install ffmpeg```
+
+```pacman: sudo pacman -S ffmpeg```
+
+```apk: sudo apk add ffmpeg```
+
+```brew: brew install ffmpeg```
+
+```nix: nix profile install nixpkgs#ffmpeg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [ffplay](/man/ffplay)(1), [mediainfo](/man/mediainfo)(1), [exiftool](/man/exiftool)(1)

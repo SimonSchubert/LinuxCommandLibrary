@@ -100,6 +100,12 @@ Nanobot executes commands on your local machine with your user permissions. Alwa
 
 Nanobot was developed by **HKUDS** (Hong Kong University Data Science Lab) as an ultra-lightweight alternative to larger AI coding assistants. First released in **2025**, it aimed to provide core agent functionality with a minimal codebase, emphasizing research-readiness and a clean, modifiable architecture. The project gained traction as an accessible entry point for developers exploring agentic AI workflows.
 
+# INSTALL
+
+```brew: brew install nanobot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [picoclaw](/man/picoclaw)(1), [claude](/man/claude)(1)

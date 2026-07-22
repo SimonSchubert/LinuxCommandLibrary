@@ -74,6 +74,12 @@ The tool is primarily used in web application security assessments to test Flask
 
 Flask-unsign supports multithreaded brute-forcing, custom wordlists, and both encoding and decoding operations. It can work with sessions even when the signature verification fails, allowing inspection of tampered or expired cookies.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#flask-unsign```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flask](/man/flask)(1), [hashcat](/man/hashcat)(1), [john](/man/john)(1)

@@ -113,6 +113,24 @@ Silent failures by default (use -f to change). Large downloads show progress by 
 
 **curl** originated in **1996** as httpget (by Rafael Sagula, with Daniel Stenberg contributing), was renamed to urlget in 1997 when FTP support was added, and became **curl** with version 4.0 in **March 1998**. It is one of the most widely used command-line tools for data transfer.
 
+# INSTALL
+
+```apt: sudo apt install curl```
+
+```dnf: sudo dnf install curl```
+
+```pacman: sudo pacman -S curl```
+
+```apk: sudo apk add curl```
+
+```zypper: sudo zypper install curl```
+
+```brew: brew install curl```
+
+```nix: nix profile install nixpkgs#curl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wget](/man/wget)(1), [http](/man/http)(1)

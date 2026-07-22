@@ -72,6 +72,12 @@ Secrets are stored unencrypted in a plain text file. Ensure proper file permissi
 
 The **2fa** command was created by Russ Cox and released as an open-source Go utility. It provides a minimal Unix-philosophy approach to TOTP generation, designed for users who prefer command-line tools over mobile authenticator apps.
 
+# INSTALL
+
+```aur: yay -S 2fa```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [oathtool](/man/oathtool)(1), [pass-otp](/man/pass-otp)(1), [gpg](/man/gpg)(1)

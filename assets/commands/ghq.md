@@ -109,6 +109,16 @@ Requires git. Default root is ~/ghq or configurable via ghq.root in gitconfig or
 
 ghq was created by **motemen** as a tool for organizing Git repositories, inspired by go get's directory structure conventions.
 
+# INSTALL
+
+```pacman: sudo pacman -S ghq```
+
+```brew: brew install ghq```
+
+```nix: nix profile install nixpkgs#ghq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [fzf](/man/fzf)(1), [gh](/man/gh)(1)

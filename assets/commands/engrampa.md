@@ -57,6 +57,22 @@ A fork of file-roller adapted for the MATE desktop environment.
 
 MATE desktop application. Requires appropriate libraries for different archive formats. Command-line options are limited compared to dedicated tools like tar or zip.
 
+# INSTALL
+
+```apt: sudo apt install engrampa```
+
+```dnf: sudo dnf install engrampa```
+
+```pacman: sudo pacman -S engrampa```
+
+```apk: sudo apk add engrampa```
+
+```zypper: sudo zypper install engrampa```
+
+```nix: nix profile install nixpkgs#engrampa```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [file-roller](/man/file-roller)(1), [tar](/man/tar)(1), [zip](/man/zip)(1), [unzip](/man/unzip)(1), [7z](/man/7z)(1)

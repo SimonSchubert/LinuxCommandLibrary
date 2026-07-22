@@ -87,6 +87,14 @@ Requires Ghostscript and pdfTeX to be installed. Automatic detection may not wor
 
 Originally developed as part of **texlive** by Heiko Oberdiek. Widely used in academic and publishing workflows for preparing documents. Now maintained as part of the ho-tex bundle of TeX utilities.
 
+# INSTALL
+
+```pacman: sudo pacman -S texlive-binextra```
+
+```apk: sudo apk add texlive-binextra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdfjam](/man/pdfjam)(1), [pdfbook2](/man/pdfbook2)(1), [gs](/man/gs)(1), [pdflatex](/man/pdflatex)(1)

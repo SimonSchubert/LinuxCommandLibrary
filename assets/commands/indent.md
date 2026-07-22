@@ -91,6 +91,22 @@ C-specific; does not handle C++ or other languages well. May alter semantics whe
 
 indent originated in **BSD Unix**. The GNU version was developed as part of the GNU project with extended options.
 
+# INSTALL
+
+```apt: sudo apt install indent```
+
+```dnf: sudo dnf install indent```
+
+```pacman: sudo pacman -S indent```
+
+```apk: sudo apk add indent```
+
+```zypper: sudo zypper install indent```
+
+```nix: nix profile install nixpkgs#indent```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clang-format](/man/clang-format)(1), [astyle](/man/astyle)(1), [cb](/man/cb)(1)

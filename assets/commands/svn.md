@@ -127,6 +127,24 @@ Unlike Git, Subversion requires network access for most operations since history
 
 Subversion was created by **CollabNet** in **2000** as a replacement for CVS, addressing its limitations like atomic commits and versioned directories. The project was led by Karl Fogel, Ben Collins-Sussman, and Jim Blandy. Version 1.0 was released in **February 2004**. Subversion became an **Apache Software Foundation** project in **2010**. While Git has largely supplanted it for open-source development, Subversion remains popular in enterprise environments.
 
+# INSTALL
+
+```apt: sudo apt install subversion```
+
+```dnf: sudo dnf install subversion```
+
+```pacman: sudo pacman -S subversion```
+
+```apk: sudo apk add subversion```
+
+```zypper: sudo zypper install subversion```
+
+```brew: brew install subversion```
+
+```nix: nix profile install nixpkgs#subversion```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [cvs](/man/cvs)(1), [svnadmin](/man/svnadmin)(8), [svnserve](/man/svnserve)(8)

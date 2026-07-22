@@ -65,6 +65,12 @@ Requires Hadoop cluster. Query latency higher than RDBMS. Schema on read.
 
 Apache Hive was developed at **Facebook** and contributed to the **Apache** project for SQL-based big data analytics.
 
+# INSTALL
+
+```brew: brew install hive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [beeline](/man/beeline)(1), [yarn](/man/yarn)(1), [impala](/man/impala)(1)

@@ -68,6 +68,20 @@ Requires Perl. Modified output not suitable for patch application. Some themes m
 
 **diff-so-fancy** was created by **Seth Vargo** and is maintained by **so-fancy**. It emerged from the desire for better diff visualization in terminals, building on git's diff-highlight script with additional formatting improvements.
 
+# INSTALL
+
+```dnf: sudo dnf install diff-so-fancy```
+
+```pacman: sudo pacman -S diff-so-fancy```
+
+```zypper: sudo zypper install diff-so-fancy```
+
+```brew: brew install diff-so-fancy```
+
+```nix: nix profile install nixpkgs#diff-so-fancy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-diff](/man/git-diff)(1), [delta](/man/delta)(1), [colordiff](/man/colordiff)(1), [diff](/man/diff)(1)

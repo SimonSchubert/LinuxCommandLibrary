@@ -88,6 +88,20 @@ Not installed by default on most systems - requires The Unarchiver package. Some
 
 **lsar** is part of **The Unarchiver**, created by **Dag Ågren** starting around **2006**. Originally a macOS application, command-line tools were added later. The project focuses on compatibility with many archive formats and proper handling of international filenames.
 
+# INSTALL
+
+```apt: sudo apt install unar```
+
+```dnf: sudo dnf install unar```
+
+```zypper: sudo zypper install unar```
+
+```brew: brew install unar```
+
+```nix: nix profile install nixpkgs#unar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unar](/man/unar)(1), [unzip](/man/unzip)(1), [tar](/man/tar)(1), [7z](/man/7z)(1), [unrar](/man/unrar)(1)

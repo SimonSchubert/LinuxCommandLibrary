@@ -98,6 +98,17 @@ Shard iterators expire after 5 minutes. Each shard has throughput limits; exceed
 
 Amazon Kinesis launched in **November 2013** as a real-time data streaming service. Enhanced fan-out was added in **2018** for dedicated consumer throughput. On-demand capacity mode launched in **2021**, eliminating the need to manage shard counts manually.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-firehose](/man/aws-firehose)(1), [aws-kafka](/man/aws-kafka)(1)

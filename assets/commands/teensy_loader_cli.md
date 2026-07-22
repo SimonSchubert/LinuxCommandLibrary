@@ -74,6 +74,18 @@ On Linux, non-root access usually needs the Teensy udev rules from https://www.p
 
 Programming a HEX built for the wrong chip can hang USB PLL init and confuse the host USB port; recovery may need holding the reset button before connecting USB. Use matching udev rules. Graphical loader is easier for one-off flashing.
 
+# INSTALL
+
+```apt: sudo apt install teensy-loader-cli```
+
+```pacman: sudo pacman -S teensy_loader_cli```
+
+```brew: brew install teensy_loader_cli```
+
+```nix: nix profile install nixpkgs#teensy-loader-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [avrdude](/man/avrdude)(1), [dfu-util](/man/dfu-util)(1), [openocd](/man/openocd)(1)

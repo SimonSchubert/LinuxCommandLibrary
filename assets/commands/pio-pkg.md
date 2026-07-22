@@ -58,6 +58,12 @@ unified package manager for PlatformIO
 
 **pio pkg** is the unified package manager for PlatformIO. Manages libraries, platforms, and tools through a single interface. Replaces legacy pio lib and pio platform commands.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-lib](/man/pio-lib)(1), [pio-platform](/man/pio-platform)(1)

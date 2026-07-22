@@ -62,6 +62,14 @@ package repository searcher
 
 Package specifications can include version constraints like **>=**, **<=**, **==**.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-install](/man/conda-install)(1), [conda-repoquery](/man/conda-repoquery)(1)

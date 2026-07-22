@@ -66,6 +66,16 @@ Configuration defines supported types. Fragmented files may not recover. Require
 
 **scalpel** was developed by **Golden G. Richard III** as a rewrite of foremost focused on performance. It's used in digital forensics for recovering deleted files from disk images.
 
+# INSTALL
+
+```apt: sudo apt install scalpel```
+
+```zypper: sudo zypper install scalpel```
+
+```nix: nix profile install nixpkgs#scalpel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foremost](/man/foremost)(1), [photorec](/man/photorec)(1), [testdisk](/man/testdisk)(1), [dd](/man/dd)(1)

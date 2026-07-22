@@ -76,6 +76,24 @@ Less powerful than vim/emacs. Ctrl-based shortcuts. Config in ~/.nanorc.
 
 nano was created as a **free replacement** for the Pico editor, part of the GNU project since 2001.
 
+# INSTALL
+
+```apt: sudo apt install nano```
+
+```dnf: sudo dnf install nano```
+
+```pacman: sudo pacman -S nano```
+
+```apk: sudo apk add nano```
+
+```zypper: sudo zypper install nano```
+
+```brew: brew install nano```
+
+```nix: nix profile install nixpkgs#nano```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [emacs](/man/emacs)(1), [pico](/man/pico)(1)

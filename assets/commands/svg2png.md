@@ -55,6 +55,16 @@ Various implementations exist. Rendering may vary. librsvg or Node based.
 
 **svg2png** tools exist in various implementations for converting SVG vector graphics to PNG raster format.
 
+# INSTALL
+
+```apt: sudo apt install mapnik-utils```
+
+```dnf: sudo dnf install mapnik-utils```
+
+```brew: brew install svg2png```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [inkscape](/man/inkscape)(1), [convert](/man/convert)(1), [rsvg-convert](/man/rsvg-convert)(1)

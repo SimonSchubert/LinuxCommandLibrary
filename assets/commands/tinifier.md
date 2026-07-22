@@ -79,6 +79,12 @@ Requires a TinyPNG API key (free tier: 500 compressions/month). Files are upload
 
 **tinifier** was created by **tarampampam** and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S tinifier```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [optipng](/man/optipng)(1), [jpegoptim](/man/jpegoptim)(1), [pngquant](/man/pngquant)(1), [imagemagick](/man/imagemagick)(1)

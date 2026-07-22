@@ -58,6 +58,14 @@ OSINT tool for collecting information about usernames across social
 
 For authorized security research and OSINT investigations only. Respect privacy and applicable laws.
 
+# INSTALL
+
+```brew: brew install maigret```
+
+```nix: nix profile install nixpkgs#maigret```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sherlock](/man/sherlock)(1)

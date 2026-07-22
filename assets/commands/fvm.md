@@ -78,6 +78,16 @@ Requires significant disk space per version. IDE configuration needed for integr
 
 fvm was created to solve Flutter version management challenges faced by developers working on multiple projects or teams with different SDK requirements.
 
+# INSTALL
+
+```pacman: sudo pacman -S fvm```
+
+```brew: brew install fvm```
+
+```nix: nix profile install nixpkgs#fvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flutter](/man/flutter)(1), [dart](/man/dart)(1)

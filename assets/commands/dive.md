@@ -70,6 +70,20 @@ Large images may take time to analyze. Some layer details depend on image build 
 
 dive was created by **Alex Goodman** and released in **2018**. It was developed to address the common problem of Docker image bloat by making layer contents visible and quantifying efficiency.
 
+# INSTALL
+
+```pacman: sudo pacman -S dive```
+
+```apk: sudo apk add dive```
+
+```zypper: sudo zypper install dive```
+
+```brew: brew install dive```
+
+```nix: nix profile install nixpkgs#dive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [podman](/man/podman)(1), [skopeo](/man/skopeo)(1)

@@ -34,6 +34,12 @@ Requires **jq** to be installed separately. Only reads from stdin; cannot open f
 
 **jiq** was created by **fiatjaf** and is written in **Go**. It was inspired by **jid** (JSON incremental digger) but uses jq's query syntax instead of a custom one.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#jiq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [fx](/man/fx)(1), [jaq](/man/jaq)(1)

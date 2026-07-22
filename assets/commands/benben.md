@@ -245,6 +245,11 @@ The configuration file format is considered unstable and may change until versio
 
 **benben** was created by **Remilia Scarlet** as a personal project, originally written in the **Crystal** programming language. Development began around **2023**, with the v0.4.0 release announced on **March 7, 2024** at VGMRips. The VGM chip emulation was built on the author's **YunoSynth** library, an OOP rewrite of VGMPlay's sound emulator code. In **January 2025**, work began on porting benben from Crystal to **Common Lisp**, with the Lisp-based **v0.7.0** becoming the author's daily music player by **April 2025**. The VGM library was rewritten as **SatouSynth** for the Lisp version. Version **0.7.1** was released on **November 6, 2025**. The project is licensed under the **GNU Affero General Public License v3** and hosted in a Fossil repository.
 
+# INSTALL
+
+```aur: yay -S benben```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [mpv](/man/mpv)(1), [ffmpeg](/man/ffmpeg)(1), [sox](/man/sox)(1), [aplay](/man/aplay)(1), [cmus](/man/cmus)(1), [moc](/man/moc)(1)

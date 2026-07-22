@@ -68,6 +68,16 @@ Cannot run simultaneously with actual PulseAudio daemon. Usually started automat
 
 **pipewire-pulse** was developed as part of **PipeWire** to ensure smooth migration from PulseAudio. It allows distributions to switch to PipeWire while maintaining compatibility with the large ecosystem of PulseAudio-enabled applications.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-pulse```
+
+```pacman: sudo pacman -S pipewire-pulse```
+
+```apk: sudo apk add pipewire-pulse```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [pulseaudio](/man/pulseaudio)(1), [pactl](/man/pactl)(1), [pacmd](/man/pacmd)(1), [wpctl](/man/wpctl)(1), [pw-top](/man/pw-top)(1)

@@ -39,6 +39,22 @@ The filesystem must be unmounted before repair. A log replay may be needed first
 
 Requires unmounted filesystem. Using -L can cause data loss. Backup important data before repair. May require running multiple times.
 
+# INSTALL
+
+```apt: sudo apt install xfsprogs```
+
+```dnf: sudo dnf install xfsprogs```
+
+```pacman: sudo pacman -S xfsprogs```
+
+```apk: sudo apk add xfsprogs```
+
+```zypper: sudo zypper install xfsprogs```
+
+```nix: nix profile install nixpkgs#xfsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xfs_admin](/man/xfs_admin)(8), [fsck](/man/fsck)(8), [mkfs.xfs](/man/mkfs.xfs)(8)

@@ -68,6 +68,20 @@ Manage PostgreSQL connection pools on DigitalOcean
 
 Pools act as intermediaries between applications and the database, maintaining a set number of reusable database connections. This reduces overhead from repeatedly opening and closing connections. Pool modes determine connection behavior: **transaction** mode releases connections after each transaction (fastest for stateless queries), **session** mode holds connections for the entire client session, and **statement** mode releases after each individual statement.
 
+# INSTALL
+
+```dnf: sudo dnf install doctl```
+
+```pacman: sudo pacman -S doctl```
+
+```apk: sudo apk add doctl```
+
+```brew: brew install doctl```
+
+```nix: nix profile install nixpkgs#doctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doctl-databases](/man/doctl-databases)(1), [doctl-databases-db](/man/doctl-databases-db)(1), [doctl-databases-user](/man/doctl-databases-user)(1)

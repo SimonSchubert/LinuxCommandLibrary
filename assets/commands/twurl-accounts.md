@@ -25,6 +25,12 @@ Manage twurl Twitter API accounts
 
 **twurl accounts** manages Twitter/X API accounts in twurl. Lists authorized accounts and switches between them. Part of twurl OAuth-enabled curl for Twitter API.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#twurl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [twurl](/man/twurl)(1), [curl](/man/curl)(1)

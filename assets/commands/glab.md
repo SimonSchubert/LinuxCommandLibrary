@@ -97,6 +97,24 @@ Requires GitLab access token. Some features may require specific permissions. Se
 
 glab was created by **Clement Sam** and later became the official GitLab CLI. It was inspired by GitHub's gh CLI and provides similar functionality for GitLab users.
 
+# INSTALL
+
+```apt: sudo apt install glab```
+
+```dnf: sudo dnf install glab```
+
+```pacman: sudo pacman -S glab```
+
+```apk: sudo apk add glab```
+
+```zypper: sudo zypper install glab```
+
+```brew: brew install glab```
+
+```nix: nix profile install nixpkgs#glab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [git](/man/git)(1), [gitlab-runner](/man/gitlab-runner)(1)

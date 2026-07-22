@@ -57,6 +57,12 @@ Requires PHP and Composer. Subset of Laravel features. Uses artisan for commands
 
 Lumen was created by **Taylor Otwell** in 2015 as a lightweight version of Laravel for microservices.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#lumen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [php](/man/php)(1), [composer](/man/composer)(1), [artisan](/man/artisan)(1)

@@ -113,6 +113,24 @@ The default is to modify files in place, so keep a copy or use **-n** if the ori
 
 dos2unix has existed in one form or another since the late 1980s, when moving text between DOS and Unix was routine. The version shipped by every current Linux distribution is **Erwin Waterlander's** rewrite, begun in **2009**, which added Unicode and UTF-16 support, BOM handling, and the mac conversion mode to what had been a very small utility. It is distributed with a companion **unix2dos** that performs the reverse conversion, and the two are usually the same binary invoked under different names.
 
+# INSTALL
+
+```apt: sudo apt install dos2unix```
+
+```dnf: sudo dnf install dos2unix```
+
+```pacman: sudo pacman -S dos2unix```
+
+```apk: sudo apk add dos2unix```
+
+```zypper: sudo zypper install dos2unix```
+
+```brew: brew install dos2unix```
+
+```nix: nix profile install nixpkgs#dos2unix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unix2dos](/man/unix2dos)(1), [unix2mac](/man/unix2mac)(1), [file](/man/file)(1), [iconv](/man/iconv)(1), [tr](/man/tr)(1)

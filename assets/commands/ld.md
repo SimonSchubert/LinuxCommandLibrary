@@ -72,6 +72,24 @@ Usually called via gcc. Complex options. Platform-specific.
 
 ld is the GNU project linker, part of **binutils**, providing linking for the GNU toolchain.
 
+# INSTALL
+
+```apt: sudo apt install binutils```
+
+```dnf: sudo dnf install binutils```
+
+```pacman: sudo pacman -S binutils```
+
+```apk: sudo apk add binutils```
+
+```zypper: sudo zypper install binutils```
+
+```brew: brew install binutils```
+
+```nix: nix profile install nixpkgs#binutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [ld.gold](/man/ld.gold)(1), [ldd](/man/ldd)(1), [nm](/man/nm)(1)

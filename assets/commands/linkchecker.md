@@ -69,6 +69,16 @@ Can be slow on large sites. May trigger rate limiting. Respects robots.txt by de
 
 LinkChecker was created by **Bastian Kleineidam** as a comprehensive link validation tool for web content.
 
+# INSTALL
+
+```apt: sudo apt install linkchecker```
+
+```dnf: sudo dnf install linkchecker```
+
+```nix: nix profile install nixpkgs#linkchecker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wget](/man/wget)(1), [curl](/man/curl)(1), [lychee](/man/lychee)(1)

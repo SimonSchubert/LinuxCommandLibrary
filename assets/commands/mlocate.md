@@ -79,6 +79,12 @@ Database may be outdated. New files won't appear until updatedb runs. Some paths
 
 mlocate was created by **Miloslav Trmač** as an improvement over GNU locate, using a more efficient database format that tracks file changes.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#mlocate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [updatedb](/man/updatedb)(8), [find](/man/find)(1), [fd](/man/fd)(1), [plocate](/man/plocate)(1)

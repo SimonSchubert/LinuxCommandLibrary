@@ -28,6 +28,24 @@ converts PAM/PNM images to QOI format
 
 Input must be a PAM (Portable Arbitrary Map) or PNM image. QOI supports RGB and RGBA only; grayscale inputs may be rejected or converted.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qoitopam](/man/qoitopam)(1), [pnmtopng](/man/pnmtopng)(1), [pamtopnm](/man/pamtopnm)(1), [pam](/man/pam)(5), [pnm](/man/pnm)(5)

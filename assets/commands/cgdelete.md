@@ -51,6 +51,14 @@ Cannot delete cgroups that contain running processes. Requires appropriate permi
 
 **cgdelete** is part of **libcgroup**, a library and tools for managing Linux cgroups. The project was started by **Red Hat** around **2008** to provide user-space utilities for cgroups v1. As Linux moved toward cgroups v2, systemd became the primary cgroup manager on most systems, though libcgroup tools remain useful for cgroups v1 systems.
 
+# INSTALL
+
+```apt: sudo apt install cgroup-tools```
+
+```apk: sudo apk add cgroup-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cgcreate](/man/cgcreate)(1), [cgset](/man/cgset)(1), [cgget](/man/cgget)(1), [lscgroup](/man/lscgroup)(1)

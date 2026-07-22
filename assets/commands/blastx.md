@@ -91,6 +91,12 @@ Requires pre-formatted BLAST databases; use **makeblastdb** to create them. Larg
 
 BLAST (Basic Local Alignment Search Tool) was originally developed at NCBI by **Stephen Altschul** and colleagues in **1990**. The BLAST+ suite, including blastx, was released in **2009** with improved performance and new features.
 
+# INSTALL
+
+```apt: sudo apt install ncbi-blast+```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blastn](/man/blastn)(1), [blastp](/man/blastp)(1), [tblastn](/man/tblastn)(1), [tblastx](/man/tblastx)(1), [makeblastdb](/man/makeblastdb)(1), [blastdbcmd](/man/blastdbcmd)(1)

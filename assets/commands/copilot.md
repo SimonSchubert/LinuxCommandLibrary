@@ -113,6 +113,12 @@ Requires an active **GitHub Copilot subscription**. Organization or enterprise a
 
 GitHub Copilot CLI was released by **GitHub** in **2024** as an extension of their Copilot AI assistant. Originally launched as a shell command suggestion tool, it evolved into a full agentic coding assistant in **2025**. By **January 2026**, it added enhanced agents, context management, MCP server integration, and expanded model selection including GPT-5 and Claude Sonnet 4.5.
 
+# INSTALL
+
+```brew: brew install copilot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [claude](/man/claude)(1), [git](/man/git)(1)

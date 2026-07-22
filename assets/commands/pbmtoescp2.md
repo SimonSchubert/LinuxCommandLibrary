@@ -28,6 +28,24 @@ converts PBM bitmaps to Epson ESC/P2 printer format
 
 **pbmtoescp2** converts PBM bitmaps to Epson ESC/P2 printer format. ESC/P2 is used by modern inkjet printers. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtoepson](/man/pbmtoepson)(1), [pbmtolj](/man/pbmtolj)(1)

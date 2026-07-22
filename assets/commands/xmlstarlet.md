@@ -100,6 +100,24 @@ XMLStarlet requires well-formed XML input; malformed documents will cause errors
 
 XMLStarlet was created by **Mikhail Grushinskiy** and first released in **2002**. It was developed to fill the need for command-line XML processing tools that could integrate with Unix shell workflows. The project is hosted on SourceForge and continues to be maintained as a standard utility for XML manipulation in scripting environments.
 
+# INSTALL
+
+```apt: sudo apt install xmlstarlet```
+
+```dnf: sudo dnf install xmlstarlet```
+
+```pacman: sudo pacman -S xmlstarlet```
+
+```apk: sudo apk add xmlstarlet```
+
+```zypper: sudo zypper install xmlstarlet```
+
+```brew: brew install xmlstarlet```
+
+```nix: nix profile install nixpkgs#xmlstarlet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xsltproc](/man/xsltproc)(1), [xmllint](/man/xmllint)(1), [jq](/man/jq)(1), [yq](/man/yq)(1)

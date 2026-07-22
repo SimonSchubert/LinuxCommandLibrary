@@ -80,6 +80,24 @@ Both input patches must be in unified diff format. Context diffs are not support
 
 **interdiff** is part of the **patchutils** package, written by Tim Waugh and first released around **2001**. The patchutils suite provides tools for manipulating patch files, addressing common needs in software development and distribution workflows.
 
+# INSTALL
+
+```apt: sudo apt install patchutils```
+
+```dnf: sudo dnf install patchutils```
+
+```pacman: sudo pacman -S patchutils```
+
+```apk: sudo apk add patchutils```
+
+```zypper: sudo zypper install patchutils```
+
+```brew: brew install patchutils```
+
+```nix: nix profile install nixpkgs#patchutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [combinediff](/man/combinediff)(1), [diff](/man/diff)(1), [patch](/man/patch)(1)

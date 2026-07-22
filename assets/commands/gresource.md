@@ -55,6 +55,14 @@ Specific to GNOME/GLib applications. Resource paths are case-sensitive. Part of 
 
 gresource was developed as part of **GLib** by the **GNOME** project to provide resource inspection and extraction capabilities.
 
+# INSTALL
+
+```apt: sudo apt install libglib2.0-bin```
+
+```apk: sudo apk add glib-dev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glib-compile-resources](/man/glib-compile-resources)(1)

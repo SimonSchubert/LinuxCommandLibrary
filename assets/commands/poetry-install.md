@@ -91,6 +91,18 @@ Requires pyproject.toml. Creates virtual environment by default. Use --sync to m
 
 poetry install is part of **Poetry** by **Sébastien Eustace**, providing deterministic Python dependency installation.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry-add](/man/poetry-add)(1), [poetry-update](/man/poetry-update)(1), [poetry-lock](/man/poetry-lock)(1)

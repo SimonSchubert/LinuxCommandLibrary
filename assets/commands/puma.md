@@ -96,6 +96,12 @@ Ruby/Rack required. Workers require copy-on-write. Use with reverse proxy in pro
 
 Puma was created by **Evan Phoenix** in 2011 as a replacement for Mongrel, focusing on concurrent request handling.
 
+# INSTALL
+
+```apt: sudo apt install puma```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rails](/man/rails)(1)

@@ -108,6 +108,17 @@ The **status** and **fullstatus** commands require the lynx text browser and mod
 
 Part of the **Apache HTTP Server** project, developed by the Apache Software Foundation since **1995**.
 
+# INSTALL
+
+```apt: sudo apt install apache2```
+
+```apk: sudo apk add apache2-ctl```
+
+```zypper: sudo zypper install apache2```
+
+```brew: brew install apache2```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apache2ctl](/man/apache2ctl)(8), [httpd](/man/httpd)(8)

@@ -49,6 +49,12 @@ creates an SMB server to share files
 
 **impacket-smbserver** creates an SMB server to share files. Part of the Impacket toolkit. Useful for transferring files to/from Windows systems during penetration testing. Supports SMB1 and SMB2 protocols and optional authentication.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [samba](/man/samba)(1), [impacket-smbclient](/man/impacket-smbclient)(1)

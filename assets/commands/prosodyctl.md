@@ -109,6 +109,22 @@ Requires root or appropriate permissions for most operations. Commands like stat
 
 **Prosody** was started by **Matthew Wild** in **2008** as a lightweight XMPP server. It's known for being modular, standards-compliant, and memory-efficient.
 
+# INSTALL
+
+```apt: sudo apt install prosody```
+
+```dnf: sudo dnf install prosody```
+
+```pacman: sudo pacman -S prosody```
+
+```apk: sudo apk add prosody```
+
+```zypper: sudo zypper install prosody```
+
+```nix: nix profile install nixpkgs#prosody```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ejabberdctl](/man/ejabberdctl)(1), [prosody](/man/prosody)(8)

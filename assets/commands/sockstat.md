@@ -88,6 +88,14 @@ Requires appropriate permissions to see all sockets; root can see everything. On
 
 **sockstat** originated on **FreeBSD** and other BSD systems as a user-friendly alternative to parsing /proc or using netstat. Linux versions provide similar functionality. The tool has been part of BSD since the late **1990s** and was ported to Linux as part of various utility packages.
 
+# INSTALL
+
+```apt: sudo apt install sockstat```
+
+```nix: nix profile install nixpkgs#sockstat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ss](/man/ss)(8), [netstat](/man/netstat)(8), [lsof](/man/lsof)(8), [fuser](/man/fuser)(1)

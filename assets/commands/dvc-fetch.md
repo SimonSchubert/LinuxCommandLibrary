@@ -65,6 +65,14 @@ The two-stage process (fetch then checkout) provides control over disk space and
 
 This separation is particularly valuable in CI/CD pipelines or when switching between branches: you can fetch all necessary data upfront, then quickly checkout different versions as needed without repeated downloads. The --all-commits, --all-branches, and --all-tags options help prefetch data for multiple revisions in bulk.
 
+# INSTALL
+
+```brew: brew install dvc```
+
+```nix: nix profile install nixpkgs#dvc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dvc](/man/dvc)(1), [dvc-checkout](/man/dvc-checkout)(1), [dvc-gc](/man/dvc-gc)(1), [dvc-add](/man/dvc-add)(1)

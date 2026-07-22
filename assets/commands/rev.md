@@ -49,6 +49,24 @@ Only reverses characters within individual lines; does not reverse the order of 
 
 The **rev** command first appeared in Version 7 Unix and has been a standard utility since. It was originally created as a simple text transformation tool.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tac](/man/tac)(1), [cat](/man/cat)(1), [cut](/man/cut)(1), [tr](/man/tr)(1)

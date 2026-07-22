@@ -115,6 +115,24 @@ Command-line interface for the chrony NTP daemon
 
 Requires chronyd running. Runtime changes lost on restart. Sub-microsecond accuracy possible with hardware timestamping.
 
+# INSTALL
+
+```apt: sudo apt install chrony```
+
+```dnf: sudo dnf install chrony```
+
+```pacman: sudo pacman -S chrony```
+
+```apk: sudo apk add chrony```
+
+```zypper: sudo zypper install chrony```
+
+```brew: brew install chrony```
+
+```nix: nix profile install nixpkgs#chrony```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chronyd](/man/chronyd)(8), [timedatectl](/man/timedatectl)(1), [ntpq](/man/ntpq)(1), [ntpd](/man/ntpd)(8), [hwclock](/man/hwclock)(8), [date](/man/date)(1)

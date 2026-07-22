@@ -131,6 +131,14 @@ Style checking only - no logical errors. Some rules are debatable (W503 vs W504)
 
 **pycodestyle** was originally named **pep8**, created by **Johann C. Rocholl** around **2006**. It was renamed in **2016** per PEP 8's own advice that Guido's naming conventions are guidelines, not rules.
 
+# INSTALL
+
+```apk: sudo apk add py3-pycodestyle```
+
+```brew: brew install pycodestyle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flake8](/man/flake8)(1), [pylint](/man/pylint)(1), [black](/man/black)(1), [autopep8](/man/autopep8)(1)

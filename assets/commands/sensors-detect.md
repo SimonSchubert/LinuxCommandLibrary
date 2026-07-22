@@ -49,6 +49,16 @@ sensors-detect must access hardware directly during detection, which could poten
 
 **sensors-detect** is part of the **lm_sensors** (Linux monitoring sensors) project, which was started in **1998** to provide tools and kernel drivers for hardware monitoring on Linux. The project was originally hosted on lm-sensors.org and later moved to GitHub. It has become the standard tool for detecting and configuring hardware sensors on Linux systems, supporting a wide range of motherboard chipsets, CPU thermal sensors, and dedicated monitoring chips.
 
+# INSTALL
+
+```apt: sudo apt install lm-sensors```
+
+```apk: sudo apk add lm-sensors-detect```
+
+```brew: brew install lm-sensors```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sensors](/man/sensors)(1), [fancontrol](/man/fancontrol)(8), [modprobe](/man/modprobe)(8), [lshw](/man/lshw)(1)

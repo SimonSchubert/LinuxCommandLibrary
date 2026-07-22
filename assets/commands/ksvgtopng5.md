@@ -34,6 +34,18 @@ Convert **SVG to PNG**
 
 The SVG input path should be an absolute path for reliable operation. Complex SVG features may not render identically to web browsers.
 
+# INSTALL
+
+```apt: sudo apt install kde-cli-tools```
+
+```dnf: sudo dnf install kde-cli-tools```
+
+```pacman: sudo pacman -S kde-cli-tools```
+
+```apk: sudo apk add kde-cli-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rsvg-convert](/man/rsvg-convert)(1), [inkscape](/man/inkscape)(1), [convert](/man/convert)(1)

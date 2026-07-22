@@ -97,6 +97,20 @@ Requires kubeconfig. Context determines cluster. RBAC affects access.
 
 kubectl is the official CLI for **Kubernetes**, developed as the primary cluster management interface.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubeadm](/man/kubeadm)(1), [k9s](/man/k9s)(1), [helm](/man/helm)(1), [kubectx](/man/kubectx)(1)

@@ -62,6 +62,24 @@ Part of LLVM. Works with bitcode only. Pass names version-specific.
 
 opt was developed as part of the **LLVM compiler infrastructure** project.
 
+# INSTALL
+
+```apt: sudo apt install llvm```
+
+```dnf: sudo dnf install llvm```
+
+```pacman: sudo pacman -S llvm```
+
+```apk: sudo apk add llvm```
+
+```zypper: sudo zypper install llvm```
+
+```brew: brew install llvm```
+
+```nix: nix profile install nixpkgs#llvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [llvm-as](/man/llvm-as)(1), [llc](/man/llc)(1), [clang](/man/clang)(1)

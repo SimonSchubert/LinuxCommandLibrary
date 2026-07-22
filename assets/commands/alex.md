@@ -85,6 +85,12 @@ May produce false positives; review suggestions in context. Technical terms or p
 
 **alex** was created by Titus Wormer and released in **2015** as part of the unified.js ecosystem. It was designed to bring automated checking for inclusive language to the development workflow.
 
+# INSTALL
+
+```brew: brew install alexjs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [write-good](/man/write-good)(1), [proselint](/man/proselint)(1), [vale](/man/vale)(1)

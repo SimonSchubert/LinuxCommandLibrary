@@ -62,6 +62,22 @@ POSIX standard. Less common than tar. Portable format.
 
 pax was created as a **POSIX standard** replacement for tar and cpio.
 
+# INSTALL
+
+```apt: sudo apt install pax```
+
+```dnf: sudo dnf install pax```
+
+```pacman: sudo pacman -S pax```
+
+```apk: sudo apk add pax```
+
+```brew: brew install pax```
+
+```nix: nix profile install nixpkgs#pax```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tar](/man/tar)(1), [cpio](/man/cpio)(1), [gzip](/man/gzip)(1)

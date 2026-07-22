@@ -61,6 +61,20 @@ This prepares VM images for use as templates by removing identity information th
 
 VM must be shut down. Root privileges typically required. Some operations may break the VM if used incorrectly. Always backup images before processing.
 
+# INSTALL
+
+```apt: sudo apt install guestfs-tools```
+
+```dnf: sudo dnf install guestfs-tools```
+
+```pacman: sudo pacman -S guestfs-tools```
+
+```zypper: sudo zypper install guestfs-tools```
+
+```nix: nix profile install nixpkgs#guestfs-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virt-clone](/man/virt-clone)(1), [virt-customize](/man/virt-customize)(1)

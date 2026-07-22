@@ -48,6 +48,24 @@ Output shows each path with its attribute values, using "set", "unset", or "unsp
 **.gitattributes**
 > File attribute patterns controlling line endings, diff behavior, merge strategies, and other file-specific Git operations.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-check-ignore](/man/git-check-ignore)(1)

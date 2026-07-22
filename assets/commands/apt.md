@@ -129,6 +129,21 @@ Intended for interactive use; for scripts, **apt-get** is recommended for more s
 
 **apt** was introduced in **Debian 8 (Jessie)** and **Ubuntu 14.04** as a unified frontend combining features from apt-get, apt-cache, and apt-config.
 
+# INSTALL
+
+```apt: sudo apt install apt```
+
+```dnf: sudo dnf install apt```
+
+```pacman: sudo pacman -S apt```
+
+```apk: sudo apk add apt```
+
+```brew: brew install apt```
+
+```nix: nix profile install nixpkgs#apt```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apt-get](/man/apt-get)(8), [apt-cache](/man/apt-cache)(8), [dpkg](/man/dpkg)(1), [aptitude](/man/aptitude)(8)

@@ -65,6 +65,12 @@ Terminal must support an inline image protocol (iTerm2, Kitty, Sixel). Functiona
 
 The original **imgcat** was created by George Nachman for iTerm2 around **2014**, introducing inline image display to terminal emulators. The concept inspired implementations for other terminals, leading to multiple tools named "imgcat" with different feature sets. The Kitty terminal later introduced its own graphics protocol, and various tools emerged to support it.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#imgcat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [timg](/man/timg)(1), [viu](/man/viu)(1), [chafa](/man/chafa)(1), [catimg](/man/catimg)(1), [pixterm](/man/pixterm)(1)

@@ -50,6 +50,20 @@ Supports common image formats through GDK-Pixbuf (JPEG, PNG, GIF, BMP, SVG, etc.
 
 **viewnior** was created by Siyan Panayotov as a fast, simple alternative to heavier image viewers, focusing on a minimal interface for desktop Linux users.
 
+# INSTALL
+
+```apt: sudo apt install viewnior```
+
+```dnf: sudo dnf install viewnior```
+
+```pacman: sudo pacman -S viewnior```
+
+```zypper: sudo zypper install viewnior```
+
+```nix: nix profile install nixpkgs#viewnior```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [feh](/man/feh)(1), [sxiv](/man/sxiv)(1), [eog](/man/eog)(1), [gpicview](/man/gpicview)(1)

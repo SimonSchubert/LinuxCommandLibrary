@@ -114,6 +114,24 @@ Lines of code is an imperfect metric. Generated code may skew results. Multi-lan
 
 **tokei** was created by **Erin Power** (XAMPPRocky) around **2016**. The Japanese name (時計) means "clock." Written in Rust for performance, it became a popular alternative to cloc and other line counting tools.
 
+# INSTALL
+
+```apt: sudo apt install tokei```
+
+```dnf: sudo dnf install tokei```
+
+```pacman: sudo pacman -S tokei```
+
+```apk: sudo apk add tokei```
+
+```zypper: sudo zypper install tokei```
+
+```brew: brew install tokei```
+
+```nix: nix profile install nixpkgs#tokei```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cloc](/man/cloc)(1), [scc](/man/scc)(1), [wc](/man/wc)(1), [loc](/man/loc)(1)

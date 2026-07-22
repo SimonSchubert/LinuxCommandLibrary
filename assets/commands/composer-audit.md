@@ -53,6 +53,18 @@ This functionality mirrors npm audit for JavaScript and bundle audit for Ruby, p
 
 Requires Composer 2.4 or later. Only detects known, published vulnerabilities.
 
+# INSTALL
+
+```dnf: sudo dnf install composer```
+
+```pacman: sudo pacman -S composer```
+
+```apk: sudo apk add composer```
+
+```brew: brew install composer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [composer](/man/composer)(1), [composer-require-checker](/man/composer-require-checker)(1)

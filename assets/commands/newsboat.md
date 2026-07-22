@@ -128,6 +128,24 @@ Text-only interface may not render all HTML content well. Images not displayed (
 
 **Newsboat** was forked from **Newsbeuter** in **2017** after Newsbeuter was abandoned. Newsbeuter (German for "news pirate") was created by **Andreas Krennmair** around **2007**. The fork maintains active development, adding features while preserving the minimalist, keyboard-driven philosophy. It's become the de facto terminal feed reader for Linux users.
 
+# INSTALL
+
+```apt: sudo apt install newsboat```
+
+```dnf: sudo dnf install newsboat```
+
+```pacman: sudo pacman -S newsboat```
+
+```apk: sudo apk add newsboat```
+
+```zypper: sudo zypper install newsboat```
+
+```brew: brew install newsboat```
+
+```nix: nix profile install nixpkgs#newsboat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rss2email](/man/rss2email)(1), [elfeed](/man/elfeed)(1), [snownews](/man/snownews)(1), [rsstail](/man/rsstail)(1)

@@ -59,6 +59,24 @@ Part of SoX. Format support varies. Effects available.
 
 play is part of **SoX** (Sound eXchange) audio processing toolkit.
 
+# INSTALL
+
+```apt: sudo apt install sox```
+
+```dnf: sudo dnf install sox```
+
+```pacman: sudo pacman -S sox```
+
+```apk: sudo apk add sox```
+
+```zypper: sudo zypper install sox```
+
+```brew: brew install sox```
+
+```nix: nix profile install nixpkgs#sox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sox](/man/sox)(1), [rec](/man/rec)(1), [soxi](/man/soxi)(1)

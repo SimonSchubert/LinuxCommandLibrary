@@ -99,6 +99,12 @@ Requires a compatible printer model. Input data must come from Ghostscript in th
 
 foo2hbpl2 is part of **foo2zjs**, a collection of open source printer drivers created by Rick Richardson that reverse-engineered proprietary protocols to support GDI printers on Linux.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2hbpl2-wrapper](/man/foo2hbpl2-wrapper)(1), [foo2zjs](/man/foo2zjs)(1), [hbpldecode](/man/hbpldecode)(1)

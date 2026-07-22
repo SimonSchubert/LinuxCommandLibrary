@@ -108,6 +108,22 @@ This utility is in legacy mode and only receives critical bug fixes. The **-l** 
 
 **sginfo** is a port of the Linux **scsiinfo** program originally written by Eric Youngdale. It was rewritten by Douglas Gilbert with contributions from Kurt Garloff as part of the **sg3_utils** package. The utility has been available since the Linux 2.4 kernel series and continues to be distributed under the GPL version 2, though it is now considered legacy software.
 
+# INSTALL
+
+```apt: sudo apt install sg3-utils```
+
+```dnf: sudo dnf install sg3_utils```
+
+```pacman: sudo pacman -S sg3_utils```
+
+```apk: sudo apk add sg3_utils```
+
+```zypper: sudo zypper install sg3_utils```
+
+```nix: nix profile install nixpkgs#sg3_utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sg_inq](/man/sg_inq)(8), [lsscsi](/man/lsscsi)(1)

@@ -101,6 +101,24 @@ Must be run from a CMake build directory containing CTestTestfile.cmake. Tests m
 
 ctest was introduced as part of **CMake** by **Kitware** and has been part of the CMake suite since the early 2000s. It evolved alongside CMake to provide comprehensive testing infrastructure for cross-platform builds.
 
+# INSTALL
+
+```apt: sudo apt install cmake```
+
+```dnf: sudo dnf install cmake```
+
+```pacman: sudo pacman -S cmake```
+
+```apk: sudo apk add cmake```
+
+```zypper: sudo zypper install cmake```
+
+```brew: brew install cmake```
+
+```nix: nix profile install nixpkgs#cmake```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmake](/man/cmake)(1), [make](/man/make)(1)

@@ -97,6 +97,18 @@ Generated regex may be overly specific or general. Manual refinement often neede
 
 grex was created by **Peter M. Stahl** as a command-line tool to simplify regex creation through example-based learning.
 
+# INSTALL
+
+```pacman: sudo pacman -S grex```
+
+```zypper: sudo zypper install grex```
+
+```brew: brew install grex```
+
+```nix: nix profile install nixpkgs#grex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [sed](/man/sed)(1), [regex](/man/regex)(7)

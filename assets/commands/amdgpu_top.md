@@ -146,6 +146,15 @@ Reading performance counters (GRBM, GRBM2) may prevent the GPU from entering pow
 
 **amdgpu_top** was created by Umio-Yasuno as a modern alternative to radeontop, written in **Rust**. It provides features that radeontop lacks, such as temperature monitoring, GPU metrics, and a graphical interface. The project is actively maintained and available on GitHub.
 
+# INSTALL
+
+```pacman: sudo pacman -S amdgpu_top```
+
+```zypper: sudo zypper install amdgpu_top```
+
+```nix: nix profile install nixpkgs#amdgpu_top```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [radeontop](/man/radeontop)(1), [nvtop](/man/nvtop)(1), [nvidia-smi](/man/nvidia-smi)(1), [htop](/man/htop)(1)

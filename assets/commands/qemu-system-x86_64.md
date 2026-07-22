@@ -80,6 +80,18 @@ KVM requires hardware virtualization support (Intel VT-x/AMD-V) and the kvm kern
 
 **QEMU** was created by **Fabrice Bellard** and first released in **2003**. KVM hardware acceleration was merged into the Linux kernel in **2007**, making QEMU the standard userspace component of Linux virtualization.
 
+# INSTALL
+
+```apt: sudo apt install qemu-system-x86```
+
+```dnf: sudo dnf install qemu-system-x86```
+
+```pacman: sudo pacman -S qemu-system-x86```
+
+```apk: sudo apk add qemu-system-x86_64```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qemu-img](/man/qemu-img)(1), [qemu-system-i386](/man/qemu-system-i386)(1)

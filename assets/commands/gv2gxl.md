@@ -50,6 +50,24 @@ The conversion can only handle one graph per GXL file. Applying gxl2gv followed 
 
 gv2gxl is part of the **Graphviz** project, created at **AT&T Labs** for XML-based graph interchange.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gxl2gv](/man/gxl2gv)(1), [gv2gml](/man/gv2gml)(1), [dot](/man/dot)(1)

@@ -111,6 +111,14 @@ Private keys must be kept secure—anyone with access can authenticate as you. U
 
 ssh-keygen is part of **OpenSSH**, which originated from the OpenBSD project in **1999** as a free implementation of SSH. The original SSH protocol was developed by **Tatu Ylönen** in **1995**. OpenSSH added support for newer key types over time: ECDSA in 2011 and Ed25519 in 2014. Ed25519 became the default key type in OpenSSH 8.0 (2019) due to its security and efficiency.
 
+# INSTALL
+
+```apt: sudo apt install openssh-client```
+
+```apk: sudo apk add openssh-keygen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [ssh-copy-id](/man/ssh-copy-id)(1), [ssh-agent](/man/ssh-agent)(1), [sshd](/man/sshd)(8)

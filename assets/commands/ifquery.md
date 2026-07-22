@@ -72,6 +72,16 @@ On systems using **ifupdown2** (common on newer Debian/Ubuntu), additional featu
 
 Debian/Ubuntu specific; part of the **ifupdown** (or **ifupdown2**) package. Only reads configuration and state files; never changes anything. The **--check** flag is only available in ifupdown2. Systems using NetworkManager or systemd-networkd may not use **/etc/network/interfaces** at all.
 
+# INSTALL
+
+```apt: sudo apt install ifupdown```
+
+```apk: sudo apk add ifupdown-ng```
+
+```nix: nix profile install nixpkgs#ifupdown-ng```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ifup](/man/ifup)(8), [ifdown](/man/ifdown)(8)

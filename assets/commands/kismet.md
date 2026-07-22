@@ -117,6 +117,18 @@ Requires a wireless card that supports monitor mode. Often requires root privile
 
 Kismet was created by **Mike Kershaw** (dragorn) with the first version released in **2001**. It became one of the first widely used open-source wireless network detectors. The name comes from the Turkish word for "fate" or "destiny". The architecture was significantly rewritten between 2016 and 2018, merging the server/client/drone components into a single process with a web UI and REST API.
 
+# INSTALL
+
+```dnf: sudo dnf install kismet```
+
+```pacman: sudo pacman -S kismet```
+
+```zypper: sudo zypper install kismet```
+
+```nix: nix profile install nixpkgs#kismet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [wireshark](/man/wireshark)(1), [tcpdump](/man/tcpdump)(1)

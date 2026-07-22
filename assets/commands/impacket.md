@@ -67,6 +67,12 @@ For authorized testing only. May trigger security alerts. Requires Python. Some 
 
 Impacket was created by **SecureAuth** (now part of Delinea). It's widely used in penetration testing and red team operations for Windows network exploitation.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crackmapexec](/man/crackmapexec)(1)

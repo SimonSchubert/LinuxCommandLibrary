@@ -93,6 +93,12 @@ Builds can take significant time and resources. Requires nix with flakes or nix-
 
 **nixpkgs-review** was developed by **Jörg Thalheim** (Mic92) to improve the nixpkgs review process. It automates what was previously a manual process of checking out PRs and building packages, significantly improving review efficiency.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nixpkgs-review```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix-build](/man/nix-build)(1), [nix-shell](/man/nix-shell)(1), [nixos-rebuild](/man/nixos-rebuild)(1)

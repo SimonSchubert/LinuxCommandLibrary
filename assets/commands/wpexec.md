@@ -45,6 +45,24 @@ Requires both **WirePlumber** and **PipeWire** to be running. Scripts must be wr
 
 **wpexec** ships with **WirePlumber**, the session and policy manager for PipeWire developed under the FreeDesktop.org umbrella. It exists alongside the **wpctl** control utility to give power users and packagers a way to drive PipeWire from Lua without modifying the daemon's own configuration.
 
+# INSTALL
+
+```apt: sudo apt install wireplumber```
+
+```dnf: sudo dnf install wireplumber```
+
+```pacman: sudo pacman -S wireplumber```
+
+```apk: sudo apk add wireplumber```
+
+```zypper: sudo zypper install wireplumber```
+
+```brew: brew install wireplumber```
+
+```nix: nix profile install nixpkgs#wireplumber```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wpctl](/man/wpctl)(1), [wireplumber](/man/wireplumber)(1), [pw-cli](/man/pw-cli)(1), [pw-dump](/man/pw-dump)(1)

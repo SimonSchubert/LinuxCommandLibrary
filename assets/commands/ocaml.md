@@ -116,6 +116,24 @@ Expressions must end with ;;. Some libraries need explicit loading. Error messag
 
 **OCaml** evolved from Caml Light, developed at **INRIA** in France since the **1980s**. OCaml (Objective Caml) added objects and native compilation in **1996**. The language influenced Rust, F#, and others. The ocaml toplevel has been the standard REPL throughout its history.
 
+# INSTALL
+
+```apt: sudo apt install ocaml-interp```
+
+```dnf: sudo dnf install ocaml```
+
+```pacman: sudo pacman -S ocaml```
+
+```apk: sudo apk add ocaml5```
+
+```zypper: sudo zypper install ocaml```
+
+```brew: brew install ocaml```
+
+```nix: nix profile install nixpkgs#ocaml```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ocamlopt](/man/ocamlopt)(1), [ocamlc](/man/ocamlc)(1), [dune](/man/dune)(1), [opam](/man/opam)(1), [utop](/man/utop)(1)

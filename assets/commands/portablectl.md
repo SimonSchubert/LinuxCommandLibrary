@@ -78,6 +78,16 @@ Requires systemd 239+. Images must follow portable service format. Attachment re
 
 **portablectl** was introduced with **systemd portable services** as a lightweight containerization solution. It provides isolation benefits while maintaining tight integration with the systemd service manager.
 
+# INSTALL
+
+```apt: sudo apt install systemd-container```
+
+```dnf: sudo dnf install systemd-container```
+
+```zypper: sudo zypper install systemd-container```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [machinectl](/man/machinectl)(1), [systemd-nspawn](/man/systemd-nspawn)(1)

@@ -46,6 +46,24 @@ Part of **Netpbm**. The input must be a single-plane (grayscale) PAM image; PGM 
 
 **pamshadedrelief** was added to **Netpbm** to support cartographic and terrain visualization tasks. Netpbm provides a long-lived family of small, composable image utilities operating on the PNM/PAM family of formats.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamtopnm](/man/pamtopnm)(1), [pnmtopng](/man/pnmtopng)(1), [pamflip](/man/pamflip)(1)

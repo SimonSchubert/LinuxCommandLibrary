@@ -62,6 +62,14 @@ next-generation web crawling and spidering framework by ProjectDiscovery
 
 **katana** is a next-generation web crawling and spidering framework by ProjectDiscovery. It supports both standard and headless browser crawling modes, making it effective for JavaScript-heavy applications. Designed for security research and reconnaissance.
 
+# INSTALL
+
+```brew: brew install katana```
+
+```nix: nix profile install nixpkgs#katana```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [httpx](/man/httpx)(1), [nuclei](/man/nuclei)(1), [subfinder](/man/subfinder)(1)

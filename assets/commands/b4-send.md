@@ -65,6 +65,21 @@ By default b4 adds a cryptographic attestation so reviewers can verify the patch
 
 Sending requires a working SMTP or **git send-email** configuration. Always rehearse with **-d** or **--reflect** before posting to a public mailing list, since patches cannot be unsent.
 
+# INSTALL
+
+```dnf: sudo dnf install b4```
+
+```pacman: sudo pacman -S b4```
+
+```apk: sudo apk add b4```
+
+```zypper: sudo zypper install b4```
+
+```brew: brew install b4```
+
+```nix: nix profile install nixpkgs#b4```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [b4](/man/b4)(1), [b4-prep](/man/b4-prep)(1), [git-send-email](/man/git-send-email)(1)

@@ -35,6 +35,18 @@ Only checks syntax and structure. Does not verify dependencies exist.
 
 poetry check provides **configuration validation** for Poetry projects.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [poetry-lock](/man/poetry-lock)(1)

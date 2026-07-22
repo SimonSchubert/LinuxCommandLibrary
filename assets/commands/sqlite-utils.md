@@ -138,6 +138,14 @@ Large inserts may need --batch-size adjustment. FTS increases database size. Typ
 
 **sqlite-utils** was created by **Simon Willison** around **2019** as part of the Datasette ecosystem. It provides command-line access to SQLite manipulation that previously required Python scripting or separate tools. The library is also usable from Python for programmatic database work.
 
+# INSTALL
+
+```brew: brew install sqlite-utils```
+
+```nix: nix profile install nixpkgs#sqlite-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sqlite3](/man/sqlite3)(1), [jq](/man/jq)(1), [datasette](/man/datasette)(1), [csvkit](/man/csvkit)(1)

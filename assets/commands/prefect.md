@@ -112,6 +112,12 @@ Prefect 2.x is significantly different from Prefect 1.x. Workers replace agents 
 
 Prefect was founded by **Jeremiah Lowin** in **2018** as a modern alternative to Airflow. Prefect 1.0 (2019) introduced the Hybrid model with local execution. Prefect 2.0 (2022) was a complete rewrite emphasizing simplicity with native Python code as workflows. The company offers Prefect Cloud for managed orchestration. Prefect has grown popular for data engineering and ML pipelines.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#prefect```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dagster](/man/dagster)(1), [airflow](/man/airflow)(1), [luigi](/man/luigi)(1)

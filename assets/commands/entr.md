@@ -76,6 +76,24 @@ The file list is read from stdin once at startup and never grows: **-d** makes e
 
 entr was created by **Eric Radman** as a simple, Unix-philosophy tool for file watching. It focuses on doing one thing well: running commands when files change.
 
+# INSTALL
+
+```apt: sudo apt install entr```
+
+```dnf: sudo dnf install entr```
+
+```pacman: sudo pacman -S entr```
+
+```apk: sudo apk add entr```
+
+```zypper: sudo zypper install entr```
+
+```brew: brew install entr```
+
+```nix: nix profile install nixpkgs#entr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [inotifywait](/man/inotifywait)(1), [watchexec](/man/watchexec)(1), [fswatch](/man/fswatch)(1)

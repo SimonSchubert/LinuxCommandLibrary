@@ -31,6 +31,24 @@ _n_
 
 **pbmreduce** reduces PBM bitmap size by an integer factor. Can use threshold or dithering for the reduction. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmpscale](/man/pbmpscale)(1), [pamscale](/man/pamscale)(1)

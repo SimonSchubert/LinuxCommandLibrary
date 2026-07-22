@@ -56,6 +56,20 @@ Subcommand of kubectl. Documentation from API server. Varies by Kubernetes versi
 
 kubectl explain provides built-in API documentation for **Kubernetes** resource authoring.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-api-resources](/man/kubectl-api-resources)(1)

@@ -66,6 +66,20 @@ Determined by (in order):
 
 Only removes binaries, not cached build artifacts. Package spec can be name or name@version.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-install](/man/cargo-install)(1)

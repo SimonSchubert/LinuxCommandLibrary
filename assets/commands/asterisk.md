@@ -91,6 +91,17 @@ Requires proper configuration of SIP/PJSIP, dialplans, and extensions. Telephony
 
 **Asterisk** is an open-source PBX and telephony toolkit created by Digium (now Sangoma). It powers communication solutions from small offices to large call centers.
 
+# INSTALL
+
+```dnf: sudo dnf install asterisk```
+
+```aur: yay -S asterisk```
+
+```apk: sudo apk add asterisk```
+
+```nix: nix profile install nixpkgs#asterisk```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [asterisk-cli](/man/asterisk-cli)(8)

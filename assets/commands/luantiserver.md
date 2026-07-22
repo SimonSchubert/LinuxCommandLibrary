@@ -93,6 +93,12 @@ Luanti only uses UDP protocol; all other traffic can be safely dropped by a fire
 
 Luanti was originally known as **Minetest** and was renamed in **2024**. It is an open source voxel game engine and platform with an active modding community.
 
+# INSTALL
+
+```zypper: sudo zypper install luantiserver```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [luanti](/man/luanti)(1), [minetestserver](/man/minetestserver)(1), [minetest](/man/minetest)(1)

@@ -32,6 +32,24 @@ Part of the Netpbm toolkit. The more general **paminvert** supersedes this tool 
 
 **pnminvert** was created as part of the **Netpbm** package for portable bitmap image manipulation.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [paminvert](/man/paminvert)(1), [pnmarith](/man/pnmarith)(1), [pnmgamma](/man/pnmgamma)(1)

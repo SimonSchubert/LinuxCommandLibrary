@@ -100,6 +100,18 @@ Site support may break with website changes. Some sites require login. Download 
 
 **you-get** was created by **Mort Yao** around **2012**. Written in Python, it focuses on supporting Chinese video sites alongside international platforms.
 
+# INSTALL
+
+```apk: sudo apk add you-get```
+
+```zypper: sudo zypper install you-get```
+
+```brew: brew install you-get```
+
+```nix: nix profile install nixpkgs#you-get```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [youtube-dl](/man/youtube-dl)(1), [yt-dlp](/man/yt-dlp)(1), [streamlink](/man/streamlink)(1), [ffmpeg](/man/ffmpeg)(1)

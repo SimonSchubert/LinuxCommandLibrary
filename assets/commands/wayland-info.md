@@ -48,6 +48,22 @@ It is the Wayland equivalent of tools like **xrandr** or **glxinfo** for X11, an
 
 The tool must be run inside a Wayland session (or with **WAYLAND_DISPLAY**/**-d** pointing at a reachable compositor socket); it cannot report on an X11 session. The exact set of decoded interfaces depends on the installed version of wayland-utils.
 
+# INSTALL
+
+```apt: sudo apt install wayland-utils```
+
+```dnf: sudo dnf install wayland-utils```
+
+```pacman: sudo pacman -S wayland-utils```
+
+```apk: sudo apk add wayland-utils```
+
+```zypper: sudo zypper install wayland-utils```
+
+```nix: nix profile install nixpkgs#wayland-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [swaymsg](/man/swaymsg)(1), [weston](/man/weston)(1), [drm_info](/man/drm_info)(1), [glxinfo](/man/glxinfo)(1), [xrandr](/man/xrandr)(1)

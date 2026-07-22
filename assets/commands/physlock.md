@@ -59,6 +59,18 @@ Does not lock graphical displays; use alongside a screen locker (e.g., i3lock, s
 
 **physlock** was created by **Bert Muennich** as a lightweight alternative to vlock. It focuses on securing physical console access with minimal dependencies, making it suitable for embedded and minimal systems.
 
+# INSTALL
+
+```apt: sudo apt install physlock```
+
+```apk: sudo apk add physlock```
+
+```zypper: sudo zypper install physlock```
+
+```nix: nix profile install nixpkgs#physlock```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vlock](/man/vlock)(1), [xlock](/man/xlock)(1), [loginctl](/man/loginctl)(1)

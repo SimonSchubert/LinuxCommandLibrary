@@ -20,6 +20,14 @@ Browse Wikipedia from your terminal
 
 **wiki-tui** was created by **Builditluc** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S wiki-tui```
+
+```nix: nix profile install nixpkgs#wiki-tui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ddgr](/man/ddgr)(1), [googler](/man/googler)(1)

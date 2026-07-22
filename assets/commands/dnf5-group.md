@@ -79,6 +79,18 @@ manage package groups in DNF5
 
 Note: From Fedora 37 to 40 (inclusive), `dnf` runs DNF v4 while `dnf5` runs DNF v5. Starting with Fedora 41, `dnf` is an alias for `dnf5`.
 
+# INSTALL
+
+```dnf: sudo dnf install dnf5```
+
+```pacman: sudo pacman -S dnf5```
+
+```zypper: sudo zypper install dnf5```
+
+```nix: nix profile install nixpkgs#dnf5```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dnf-group](/man/dnf-group)(8), [dnf5](/man/dnf5)(8)

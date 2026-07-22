@@ -69,6 +69,12 @@ Debian/Ubuntu focused. Large tag database. Some checks need installed packages.
 
 Lintian was created by **Christian Schwarz** in 1998 to help Debian maintainers produce quality packages.
 
+# INSTALL
+
+```aur: yay -S lintian```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lintian-info](/man/lintian-info)(1), [dpkg](/man/dpkg)(1), [debuild](/man/debuild)(1)

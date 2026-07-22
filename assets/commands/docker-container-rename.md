@@ -22,6 +22,24 @@ Container names must be unique on the Docker host. Renaming does not modify the 
 
 Other containers that referenced the old name via Docker DNS or the legacy `--link` flag will continue to use the old name until reconnected or restarted. Compose-managed containers should be renamed through Compose configuration to keep state consistent.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-rename](/man/docker-rename)(1), [docker-container](/man/docker-container)(1)

@@ -100,6 +100,14 @@ DES crypt limited to 8 characters - use MD5. Random passwords hard to remember. 
 
 **makepasswd** was written by **Rob Browning** for **Debian** in the **1990s**. It provided a simple tool for system administrators to generate passwords during account creation. The package remains in Debian and derived distributions.
 
+# INSTALL
+
+```dnf: sudo dnf install makepasswd```
+
+```apk: sudo apk add makepasswd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pwgen](/man/pwgen)(1), [apg](/man/apg)(1), [openssl](/man/openssl)(1), [passwd](/man/passwd)(1)

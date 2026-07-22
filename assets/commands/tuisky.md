@@ -46,6 +46,14 @@ TUI client for the Bluesky social network
 
 **tuisky** was created by **sugyan** and is written in **Rust** using the ratatui TUI framework.
 
+# INSTALL
+
+```brew: brew install tuisky```
+
+```nix: nix profile install nixpkgs#tuisky```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [toot](/man/toot)(1), [servitor](/man/servitor)(1)

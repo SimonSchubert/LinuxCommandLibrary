@@ -33,6 +33,12 @@ Presentation files must follow pysentation's slide definition format. Requires P
 
 **pysentation** was created by **mimseyedi** and is written in **Python**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pysentation```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [patat](/man/patat)(1), [slides](/man/slides)(1), [presenterm](/man/presenterm)(1)

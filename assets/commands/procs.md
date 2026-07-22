@@ -111,6 +111,22 @@ Some ps options don't have direct equivalents. Filter syntax differs from ps. Co
 
 **procs** was created by **dalance** around **2019** as part of the wave of Rust-based Unix tool rewrites. It aimed to improve on ps's dated output format while maintaining familiarity. The tool emphasizes visual clarity and modern terminal features.
 
+# INSTALL
+
+```apt: sudo apt install procs```
+
+```pacman: sudo pacman -S procs```
+
+```apk: sudo apk add procs```
+
+```zypper: sudo zypper install procs```
+
+```brew: brew install procs```
+
+```nix: nix profile install nixpkgs#procs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ps](/man/ps)(1), [top](/man/top)(1), [htop](/man/htop)(1), [pgrep](/man/pgrep)(1)

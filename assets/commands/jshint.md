@@ -95,6 +95,12 @@ Requires Node.js. JSHint development has slowed; **ESLint** is generally preferr
 
 JSHint was forked from **JSLint** by **Anton Kovalyov** in 2011 to provide a more configurable JavaScript linter.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#jshint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [eslint](/man/eslint)(1), [prettier](/man/prettier)(1), [tslint](/man/tslint)(1), [node](/man/node)(1)

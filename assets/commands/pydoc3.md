@@ -89,6 +89,20 @@ Shows docstrings, not source. For source, use inspect module. Part of Python sta
 
 pydoc is part of the **Python** standard library, providing documentation access since Python 2.1.
 
+# INSTALL
+
+```apt: sudo apt install python3```
+
+```dnf: sudo dnf install python3```
+
+```apk: sudo apk add python3```
+
+```brew: brew install python3```
+
+```nix: nix profile install nixpkgs#python3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python3](/man/python3)(1), [pydoc](/man/pydoc)(1), [pip](/man/pip)(1)

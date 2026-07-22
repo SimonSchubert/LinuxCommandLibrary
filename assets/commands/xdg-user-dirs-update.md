@@ -50,6 +50,22 @@ This command is normally run automatically at the start of a user session. Direc
 
 Changing directories doesn't move existing content. Applications may need to be restarted to recognize changes. The specified paths must be absolute. Part of the xdg-user-dirs package.
 
+# INSTALL
+
+```apt: sudo apt install xdg-user-dirs```
+
+```dnf: sudo dnf install xdg-user-dirs```
+
+```pacman: sudo pacman -S xdg-user-dirs```
+
+```apk: sudo apk add xdg-user-dirs```
+
+```zypper: sudo zypper install xdg-user-dirs```
+
+```nix: nix profile install nixpkgs#xdg-user-dirs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdg-user-dir](/man/xdg-user-dir)(1), [xdg-open](/man/xdg-open)(1), [xdg-mime](/man/xdg-mime)(1), [xdg-settings](/man/xdg-settings)(1)

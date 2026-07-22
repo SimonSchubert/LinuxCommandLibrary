@@ -111,6 +111,14 @@ Requires Puppet installation. Master-agent or standalone. The **--test** flag co
 
 Puppet was created by **Puppet Labs** (now Perforce) for IT automation.
 
+# INSTALL
+
+```dnf: sudo dnf install puppet```
+
+```pacman: sudo pacman -S puppet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [puppet-apply](/man/puppet-apply)(1), [puppet-agent](/man/puppet-agent)(1), [ansible](/man/ansible)(1), [chef](/man/chef)(1)

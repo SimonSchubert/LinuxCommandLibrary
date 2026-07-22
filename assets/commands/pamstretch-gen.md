@@ -34,6 +34,24 @@ There are no command-line options specific to pamstretch-gen; it recognizes the 
 
 Requires both **pamstretch** and **pamscale** to be available. Works only with Netpbm (PNM/PAM) images.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamstretch](/man/pamstretch)(1), [pamscale](/man/pamscale)(1)

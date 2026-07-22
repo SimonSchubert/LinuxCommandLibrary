@@ -69,6 +69,12 @@ finds Active Directory users with "Do not require Kerberos preauthentication"
 
 Without **-usersfile**, the script queries LDAP to automatically enumerate vulnerable accounts (requires valid credentials). With **-usersfile**, it tests each username without needing domain credentials. Part of the Impacket toolkit. For authorized security testing only.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [impacket-getuserspns](/man/impacket-getuserspns)(1), [hashcat](/man/hashcat)(1)

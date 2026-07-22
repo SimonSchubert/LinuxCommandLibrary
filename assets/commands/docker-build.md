@@ -90,6 +90,24 @@ Large build contexts slow builds; use .dockerignore to exclude unnecessary files
 
 Docker build has been a core Docker feature since the initial release in **2013**. BuildKit, a next-generation builder with improved performance and features, was introduced in **2017** and became the default in Docker **23.0** (2023). The buildx plugin extends build capabilities for multi-platform images and advanced build scenarios.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-run](/man/docker-run)(1), [docker-compose](/man/docker-compose)(1)

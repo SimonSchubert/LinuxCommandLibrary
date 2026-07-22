@@ -93,6 +93,18 @@ Requires Pulumi account or self-hosted backend. State management important. Prov
 
 **Pulumi** was founded by **Joe Duffy** and **Eric Rudder** in **2017**. It brought general-purpose programming languages to infrastructure management, differentiating from domain-specific languages like Terraform's HCL.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [aws](/man/aws)(1), [kubectl](/man/kubectl)(1), [cdktf](/man/cdktf)(1)

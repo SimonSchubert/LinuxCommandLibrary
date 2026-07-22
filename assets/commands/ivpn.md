@@ -86,6 +86,12 @@ Requires IVPN subscription. Daemon must be running. Privacy-focused provider.
 
 ivpn CLI is the official client for **IVPN**, a privacy-focused VPN service based in Gibraltar.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#ivpn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wg](/man/wg)(1), [openvpn](/man/openvpn)(8)

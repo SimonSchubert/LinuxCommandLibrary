@@ -88,6 +88,18 @@ xlsfonts shows X11 core fonts only, not modern fontconfig/Xft fonts used by most
 
 xlsfonts has been part of the X Window System utilities since the early X11 releases in the late 1980s. While modern applications typically use fontconfig and Xft for antialiased font rendering, xlsfonts remains useful for diagnosing X11 core font availability and for legacy applications.
 
+# INSTALL
+
+```apt: sudo apt install x11-utils```
+
+```dnf: sudo dnf install xlsfonts```
+
+```zypper: sudo zypper install xlsfonts```
+
+```nix: nix profile install nixpkgs#xlsfonts```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xfontsel](/man/xfontsel)(1), [fc-list](/man/fc-list)(1), [xset](/man/xset)(1)

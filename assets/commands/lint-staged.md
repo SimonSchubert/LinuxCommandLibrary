@@ -102,6 +102,12 @@ Requires git repository. Stashes unstaged changes during run. May conflict with 
 
 lint-staged was created by **Andrey Okonetchnikov** in **2016** to solve the problem of slow pre-commit hooks by targeting only staged files.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#lint-staged```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [husky](/man/husky)(1), [eslint](/man/eslint)(1), [prettier](/man/prettier)(1), [lefthook](/man/lefthook)(1)

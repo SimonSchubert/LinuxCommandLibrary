@@ -31,6 +31,12 @@ Internal helper — invoked by Git LFS over an SSH connection, not by users dire
 
 git lfs transfer is part of **Git LFS**, implementing the transfer protocol for large file synchronization.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#git-lfs-transfer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-lfs](/man/git-lfs)(1), [git](/man/git)(1)

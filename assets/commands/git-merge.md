@@ -110,6 +110,24 @@ Conflicts require manual resolution before the merge can complete. Fast-forward 
 
 **git merge** has been a core **Git** command since its earliest releases. The default strategy was renamed from **recursive** to **ort** in Git 2.33 (August 2021) for correctness and performance improvements. `--autostash` was added in Git 2.27, and `--quit` in Git 2.11.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-rebase](/man/git-rebase)(1), [git-cherry-pick](/man/git-cherry-pick)(1), [git-mergetool](/man/git-mergetool)(1), [git-pull](/man/git-pull)(1), [git-branch](/man/git-branch)(1)

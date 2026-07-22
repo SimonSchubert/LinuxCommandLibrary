@@ -78,6 +78,18 @@ DBaaS provides fully managed database instances with automated backups, monitori
 
 The tool handles provisioning, configuration updates, and access credential management without manual database server administration.
 
+# INSTALL
+
+```dnf: sudo dnf install exo```
+
+```pacman: sudo pacman -S exo```
+
+```apk: sudo apk add exoscale```
+
+```nix: nix profile install nixpkgs#exo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [exo](/man/exo)(1), [exo-compute](/man/exo-compute)(1), [exo-storage](/man/exo-storage)(1)

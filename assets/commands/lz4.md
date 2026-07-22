@@ -107,6 +107,24 @@ Lower compression ratio than gzip/zstd. Not suitable when size is critical. Larg
 
 **LZ4** was developed by **Yann Collet** starting around **2011**. It was designed to be the fastest compression algorithm available while maintaining reasonable compression ratios. The algorithm and implementation are BSD-licensed, enabling widespread adoption in various projects.
 
+# INSTALL
+
+```apt: sudo apt install lz4```
+
+```dnf: sudo dnf install lz4```
+
+```pacman: sudo pacman -S lz4```
+
+```apk: sudo apk add lz4```
+
+```zypper: sudo zypper install lz4```
+
+```brew: brew install lz4```
+
+```nix: nix profile install nixpkgs#lz4```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zstd](/man/zstd)(1), [gzip](/man/gzip)(1), [pigz](/man/pigz)(1), [lzop](/man/lzop)(1)

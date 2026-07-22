@@ -28,6 +28,16 @@ The **util-linux rename** uses simple string substitution. It replaces the first
 
 Check which version is installed with **rename --version** or **file $(which rename)**.
 
+# INSTALL
+
+```apk: sudo apk add util-linux-misc```
+
+```brew: brew install rename```
+
+```nix: nix profile install nixpkgs#rename```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [perl-rename](/man/perl-rename)(1), [rename.util](/man/rename.util)(1), [mv](/man/mv)(1), [mmv](/man/mmv)(1)

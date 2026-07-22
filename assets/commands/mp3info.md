@@ -76,6 +76,14 @@ ID3v1 focused. Limited ID3v2 support. Consider id3v2 for advanced editing.
 
 mp3info was created as a simple **ID3 tag** viewer and editor for command-line MP3 management.
 
+# INSTALL
+
+```apt: sudo apt install mp3info```
+
+```brew: brew install mp3info```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [id3v2](/man/id3v2)(1), [ffprobe](/man/ffprobe)(1)

@@ -74,6 +74,14 @@ By default, recording lasts 10 seconds. The tool supports recording specific win
 
 GIF output can produce large files for long recordings. Works only with X11, not Wayland. Recording high-resolution screens may be resource-intensive.
 
+# INSTALL
+
+```apt: sudo apt install byzanz```
+
+```nix: nix profile install nixpkgs#byzanz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [peek](/man/peek)(1), [ffmpeg](/man/ffmpeg)(1), [recordmydesktop](/man/recordmydesktop)(1)

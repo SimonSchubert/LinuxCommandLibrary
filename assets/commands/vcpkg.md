@@ -96,6 +96,18 @@ Building packages from source can be time-consuming, especially for large librar
 
 **vcpkg** was developed by **Microsoft** and first released in **September 2016** to help C++ developers manage dependencies on Windows. It was initially focused on Visual Studio integration but expanded to become a cross-platform tool supporting Linux and macOS. The project is open source under the MIT license and maintained on GitHub with active community contributions.
 
+# INSTALL
+
+```dnf: sudo dnf install vcpkg```
+
+```pacman: sudo pacman -S vcpkg```
+
+```brew: brew install vcpkg```
+
+```nix: nix profile install nixpkgs#vcpkg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmake](/man/cmake)(1), [conan](/man/conan)(1), [apt](/man/apt)(8), [brew](/man/brew)(1)

@@ -80,6 +80,18 @@ Exit codes: 0 (success), 1 (PDF opening error), 2 (output file error), 3 (permis
 
 **pdfdetach** is part of **poppler-utils**, a set of command-line utilities based on the Poppler PDF rendering library.
 
+# INSTALL
+
+```apt: sudo apt install poppler-utils```
+
+```dnf: sudo dnf install poppler-utils```
+
+```apk: sudo apk add poppler-utils```
+
+```nix: nix profile install nixpkgs#poppler-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdfattach](/man/pdfattach)(1), [pdfinfo](/man/pdfinfo)(1), [pdfimages](/man/pdfimages)(1)

@@ -55,6 +55,14 @@ Part of the Cockpit suite. Running without TLS is insecure and should only be us
 
 **Cockpit** was developed by Red Hat as a web-based server administration interface. It provides a modern alternative to traditional command-line administration.
 
+# INSTALL
+
+```dnf: sudo dnf install cockpit-ws```
+
+```zypper: sudo zypper install cockpit-ws```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cockpit-bridge](/man/cockpit-bridge)(1), [cockpit-tls](/man/cockpit-tls)(8)

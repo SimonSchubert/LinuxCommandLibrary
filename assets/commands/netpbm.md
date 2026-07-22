@@ -77,6 +77,20 @@ Not an interactive tool. Requires converting to/from PNM/PAM intermediate format
 
 Netpbm evolved from **PBMPLUS**, a pioneering image manipulation package created by Jef Poskanzer in 1988.
 
+# INSTALL
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [imagemagick](/man/imagemagick)(1), [convert](/man/convert)(1), [gimp](/man/gimp)(1)

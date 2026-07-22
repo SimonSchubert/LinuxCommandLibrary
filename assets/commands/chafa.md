@@ -87,6 +87,24 @@ JPEG, PNG, GIF, AVIF, SVG, TIFF, WebP, JPEG XL, QOI, XWD
 
 Output quality depends on terminal capabilities. Sixels require compatible terminal. Best results with Truecolor support.
 
+# INSTALL
+
+```apt: sudo apt install chafa```
+
+```dnf: sudo dnf install chafa```
+
+```pacman: sudo pacman -S chafa```
+
+```apk: sudo apk add chafa```
+
+```zypper: sudo zypper install chafa```
+
+```brew: brew install chafa```
+
+```nix: nix profile install nixpkgs#chafa```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [catimg](/man/catimg)(1), [timg](/man/timg)(1), [img2txt](/man/img2txt)(1)

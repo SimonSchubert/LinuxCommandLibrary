@@ -28,6 +28,12 @@ Workspace manager for temporary experiments with TUI
 
 **try-rs** was created by **Tassio Virginio** (tassiovirginio) and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install try-rs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [direnv](/man/direnv)(1), [git](/man/git)(1)

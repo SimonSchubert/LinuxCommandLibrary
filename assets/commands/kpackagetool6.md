@@ -82,6 +82,18 @@ KDE 6 specific; for KDE 5 use kpackagetool5. Some packages may require Plasma re
 
 kpackagetool6 is part of KDE Frameworks 6, the successor to KDE Frameworks 5. It continues the modular package management system for Plasma components.
 
+# INSTALL
+
+```apt: sudo apt install kpackagetool6```
+
+```pacman: sudo pacman -S kpackage```
+
+```apk: sudo apk add kpackage```
+
+```zypper: sudo zypper install kpackage```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kpackagetool5](/man/kpackagetool5)(1)

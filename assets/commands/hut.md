@@ -96,6 +96,24 @@ Requires a SourceHut account and an OAuth2 access token, configured via **hut in
 
 hut is the official CLI for **SourceHut** (sr.ht), a lightweight, privacy-focused software development platform created by **Drew DeVault**. It is written in Go and replaced earlier ad-hoc scripts for scripting SourceHut services from the command line.
 
+# INSTALL
+
+```apt: sudo apt install hut```
+
+```dnf: sudo dnf install hut```
+
+```pacman: sudo pacman -S hut```
+
+```apk: sudo apk add hut```
+
+```zypper: sudo zypper install hut```
+
+```brew: brew install hut```
+
+```nix: nix profile install nixpkgs#hut```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [gh](/man/gh)(1), [hub](/man/hub)(1)

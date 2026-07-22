@@ -66,6 +66,18 @@ advanced DNS lookup utility from the Knot DNS project
 
 **kdig** is an advanced DNS lookup utility from the Knot DNS project. It supports modern DNS protocols including DNS over TLS (DoT) and DNS over HTTPS (DoH). Provides more features than traditional dig for DNS troubleshooting and testing.
 
+# INSTALL
+
+```apt: sudo apt install knot-dnsutils```
+
+```dnf: sudo dnf install knot-utils```
+
+```apk: sudo apk add knot-utils```
+
+```zypper: sudo zypper install knot-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [host](/man/host)(1), [nslookup](/man/nslookup)(1)

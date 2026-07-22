@@ -115,6 +115,12 @@ DDEV simplifies common development workflows through commands that proxy to tool
 
 Requires Docker to be installed and running. First-time startup may take time to download Docker images.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#ddev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-compose](/man/docker-compose)(1), [lando](/man/lando)(1)

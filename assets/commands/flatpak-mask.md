@@ -68,6 +68,22 @@ Masking prevents all updates including security patches. Use sparingly and remem
 
 The mask feature was added to **Flatpak** to give users control over automatic updates, particularly useful for pinning specific versions or avoiding problematic releases. Flatpak itself was developed by Alexander Larsson at Red Hat, evolving from the xdg-app project around **2015**.
 
+# INSTALL
+
+```apt: sudo apt install flatpak```
+
+```dnf: sudo dnf install flatpak```
+
+```pacman: sudo pacman -S flatpak```
+
+```apk: sudo apk add flatpak```
+
+```zypper: sudo zypper install flatpak```
+
+```nix: nix profile install nixpkgs#flatpak```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flatpak](/man/flatpak)(1), [flatpak-update](/man/flatpak-update)(1), [flatpak-install](/man/flatpak-install)(1)

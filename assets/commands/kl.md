@@ -34,6 +34,12 @@ Requires a working kubectl configuration. Log availability depends on Kubernetes
 
 **kl** was created by **robinovitch61** and is written in **Go**. It was designed as a focused alternative to more general-purpose Kubernetes management tools, specifically optimized for log viewing workflows.
 
+# INSTALL
+
+```zypper: sudo zypper install kl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [k9s](/man/k9s)(1), [stern](/man/stern)(1)

@@ -67,6 +67,20 @@ Requires the polkitd daemon to be running. Desktop environments typically provid
 
 PolicyKit was created by **David Zeuthen** at **Red Hat** for fine-grained authorization control on Linux desktop systems.
 
+# INSTALL
+
+```dnf: sudo dnf install polkit```
+
+```pacman: sudo pacman -S polkit```
+
+```zypper: sudo zypper install polkit```
+
+```brew: brew install polkit```
+
+```nix: nix profile install nixpkgs#polkit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pkexec](/man/pkexec)(1), [pkaction](/man/pkaction)(1), [polkitd](/man/polkitd)(8)

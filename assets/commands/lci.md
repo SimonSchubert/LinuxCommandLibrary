@@ -47,6 +47,14 @@ LOLCODE is a joke language not intended for serious development. The specificati
 
 LOLCODE was created by Adam Lindsay in **2007** at Lancaster University as a humorous programming language. The lci interpreter was developed by Justin Meza to provide a C-based implementation.
 
+# INSTALL
+
+```brew: brew install lci```
+
+```nix: nix profile install nixpkgs#lci```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [perl](/man/perl)(1), [ruby](/man/ruby)(1)

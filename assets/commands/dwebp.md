@@ -111,6 +111,20 @@ The output file extension does not select the format; use the format flags. Anim
 
 dwebp is part of **libwebp**, Google's reference implementation of the WebP image format. WebP was introduced by Google in **2010** as an efficient image format for web use.
 
+# INSTALL
+
+```apt: sudo apt install webp```
+
+```dnf: sudo dnf install libwebp-tools```
+
+```apk: sudo apk add libwebp-tools```
+
+```zypper: sudo zypper install libwebp-tools```
+
+```brew: brew install webp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cwebp](/man/cwebp)(1), [gif2webp](/man/gif2webp)(1), [convert](/man/convert)(1)

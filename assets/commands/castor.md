@@ -107,6 +107,12 @@ whisper:
 
 Device discovery and casting require the host to be on the same LAN as the TV. Docker only works with `--network host` on a real Linux host; Docker Desktop on macOS/Windows cannot reach the LAN for SSDP. Chromecast support is experimental. Castor is a proof of concept for stream extraction and casting engineering—it hosts no content; only cast material you are authorized to access.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#castor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [ffprobe](/man/ffprobe)(1), [chromium](/man/chromium)(1), [curl](/man/curl)(1)

@@ -81,6 +81,22 @@ Steep learning curve. Permadeath means careful play needed. ASCII interface take
 
 **NetHack** evolved from **Hack** (1985), itself derived from **Rogue** (1980). The NetHack DevTeam has maintained it since **1987**, making it one of the longest-developed games. Its open development model pioneered collaborative game development.
 
+# INSTALL
+
+```dnf: sudo dnf install nethack```
+
+```pacman: sudo pacman -S nethack```
+
+```apk: sudo apk add nethack```
+
+```zypper: sudo zypper install nethack```
+
+```brew: brew install nethack```
+
+```nix: nix profile install nixpkgs#nethack```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rogue](/man/rogue)(6), [angband](/man/angband)(6), [crawl](/man/crawl)(6), [frotz](/man/frotz)(1)

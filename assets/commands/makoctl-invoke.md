@@ -36,6 +36,24 @@ This is useful for keyboard-driven workflows where mouse interaction with notifi
 
 The notification must still be visible for its actions to be invokable. Notification IDs can be obtained from **makoctl list**. Actions depend on what the sending application defined; not all notifications have actions beyond dismissal.
 
+# INSTALL
+
+```apt: sudo apt install mako-notifier```
+
+```dnf: sudo dnf install mako```
+
+```pacman: sudo pacman -S mako```
+
+```apk: sudo apk add mako```
+
+```zypper: sudo zypper install mako```
+
+```brew: brew install mako```
+
+```nix: nix profile install nixpkgs#mako```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [makoctl](/man/makoctl)(1), [makoctl-mode](/man/makoctl-mode)(1), [mako](/man/mako)(1)

@@ -71,6 +71,18 @@ Native file format differs from other diagramming tools. Some export formats may
 
 Dia was created by **Alexander Larsson** and first released in **1998**. It was developed as a free software alternative to commercial diagramming tools, becoming part of the GNOME project's application suite.
 
+# INSTALL
+
+```apt: sudo apt install dia```
+
+```dnf: sudo dnf install dia```
+
+```zypper: sudo zypper install dia```
+
+```nix: nix profile install nixpkgs#dia```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [inkscape](/man/inkscape)(1), [graphviz](/man/graphviz)(1), [drawio](/man/drawio)(1)

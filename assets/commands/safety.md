@@ -71,6 +71,12 @@ The free version uses a vulnerability database updated monthly. The full databas
 
 Safety was developed by **PyUp.io** as an open-source tool to improve Python supply chain security. The project maintains Safety DB, one of the most comprehensive Python vulnerability databases. Version 3.0 introduced expanded scanning capabilities and SBOM support.
 
+# INSTALL
+
+```brew: brew install safety```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [pipenv](/man/pipenv)(1)

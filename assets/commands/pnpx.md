@@ -42,6 +42,22 @@ Use **--package** to specify a package name when the executable name differs fro
 
 **pnpx** is deprecated in favor of **pnpm dlx**. Requires pnpm installed. The command runs inside a shell (/bin/sh on Unix, cmd.exe on Windows).
 
+# INSTALL
+
+```dnf: sudo dnf install pnpm```
+
+```pacman: sudo pacman -S pnpm```
+
+```apk: sudo apk add pnpm```
+
+```zypper: sudo zypper install pnpm```
+
+```brew: brew install pnpm```
+
+```nix: nix profile install nixpkgs#pnpm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnpm](/man/pnpm)(1), [npx](/man/npx)(1), [yarn-dlx](/man/yarn-dlx)(1)

@@ -99,6 +99,24 @@ Only works with FLAC files. Changes are immediate (no undo). Case-insensitive ta
 
 metaflac is part of the **FLAC** project created by **Josh Coalson** in **2000** as a free lossless audio codec.
 
+# INSTALL
+
+```apt: sudo apt install flac```
+
+```dnf: sudo dnf install flac```
+
+```pacman: sudo pacman -S flac```
+
+```apk: sudo apk add flac```
+
+```zypper: sudo zypper install flac```
+
+```brew: brew install flac```
+
+```nix: nix profile install nixpkgs#flac```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flac](/man/flac)(1), [ffmpeg](/man/ffmpeg)(1), [mid3v2](/man/mid3v2)(1)

@@ -50,6 +50,18 @@ Requires kubectl to be installed and configured. Only colorizes output from read
 
 **kubecolor** was originally created by **Hidetatsu Yaginuma** (hidetatz) and is written in **Go**. The project is now maintained by the **kubecolor** organization on GitHub.
 
+# INSTALL
+
+```apt: sudo apt install kubecolor```
+
+```zypper: sudo zypper install kubecolor```
+
+```brew: brew install kubecolor```
+
+```nix: nix profile install nixpkgs#kubecolor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [k9s](/man/k9s)(1)

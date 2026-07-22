@@ -62,6 +62,22 @@ Requires quota system enabled. Filesystem support needed.
 
 quota is part of **Unix quota** system for disk usage limits.
 
+# INSTALL
+
+```apt: sudo apt install quota```
+
+```dnf: sudo dnf install quota```
+
+```pacman: sudo pacman -S quota-tools```
+
+```apk: sudo apk add quota-tools```
+
+```zypper: sudo zypper install quota```
+
+```nix: nix profile install nixpkgs#quota```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [edquota](/man/edquota)(8), [repquota](/man/repquota)(8), [quotacheck](/man/quotacheck)(8)

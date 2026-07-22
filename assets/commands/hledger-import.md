@@ -71,6 +71,24 @@ Correct field mapping usually needs a matching CSV rules file; without one, hled
 
 **import** was added to **hledger** to automate recording of bank/CSV statement downloads into a plain text journal without manual copy-pasting or duplicate entries.
 
+# INSTALL
+
+```apt: sudo apt install hledger```
+
+```dnf: sudo dnf install hledger```
+
+```pacman: sudo pacman -S hledger```
+
+```apk: sudo apk add hledger```
+
+```zypper: sudo zypper install hledger```
+
+```brew: brew install hledger```
+
+```nix: nix profile install nixpkgs#hledger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hledger](/man/hledger)(1), [hledger-add](/man/hledger-add)(1), [hledger-print](/man/hledger-print)(1)

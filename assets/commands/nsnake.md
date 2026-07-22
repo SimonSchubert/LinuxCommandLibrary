@@ -57,6 +57,18 @@ The game features configurable settings for speed, borders, and display options 
 
 Requires a terminal with ncurses support. Terminal size affects playable area. Game state is not saved between sessions.
 
+# INSTALL
+
+```dnf: sudo dnf install nsnake```
+
+```zypper: sudo zypper install nsnake```
+
+```brew: brew install nsnake```
+
+```nix: nix profile install nixpkgs#nsnake```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sl](/man/sl)(1), [cmatrix](/man/cmatrix)(1), [bastet](/man/bastet)(6)

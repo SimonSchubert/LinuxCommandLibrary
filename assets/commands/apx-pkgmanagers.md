@@ -62,6 +62,15 @@ User-created package manager configurations are stored in **~/.local/share/apx/p
 **--update** _string_
 > The update command for the package manager.
 
+# INSTALL
+
+```dnf: sudo dnf install apx```
+
+```aur: yay -S apx```
+
+```nix: nix profile install nixpkgs#apx```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apx](/man/apx)(1), [apx-stacks](/man/apx-stacks)(1), [apx-subsystems](/man/apx-subsystems)(1)

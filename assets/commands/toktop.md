@@ -20,6 +20,12 @@ LLM token usage monitor in the terminal
 
 **toktop** was created by **htin1** and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install toktop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [htop](/man/htop)(1), [tenere](/man/tenere)(1), [aichat](/man/aichat)(1)

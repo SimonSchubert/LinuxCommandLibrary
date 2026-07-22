@@ -60,6 +60,18 @@ Use **-r** to specify an alternative repository configured via **poetry config**
 
 Requires authentication via username/password, API token, or system keyring. The package must be built first, or use **--build** to build and publish in one step.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [poetry-build](/man/poetry-build)(1), [poetry-config](/man/poetry-config)(1), [twine](/man/twine)(1)

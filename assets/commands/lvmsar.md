@@ -30,6 +30,22 @@ This command is **not supported under LVM2**. Modern systems should use **dmstat
 
 **Deprecated**: This command only works on legacy LVM1 systems. For LVM2, use **dmstats report** to view I/O statistics on device-mapper devices.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvmsadc](/man/lvmsadc)(8), [sar](/man/sar)(1), [lvm](/man/lvm)(8)

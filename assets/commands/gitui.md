@@ -88,6 +88,22 @@ Terminal UI needs appropriate terminal. Some features limited compared to full G
 
 gitui was created by **Stephan Dilly** as a fast, keyboard-centric terminal UI for git written in Rust.
 
+# INSTALL
+
+```dnf: sudo dnf install gitui```
+
+```pacman: sudo pacman -S gitui```
+
+```apk: sudo apk add gitui```
+
+```zypper: sudo zypper install gitui```
+
+```brew: brew install gitui```
+
+```nix: nix profile install nixpkgs#gitui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tig](/man/tig)(1), [lazygit](/man/lazygit)(1), [git-gui](/man/git-gui)(1)

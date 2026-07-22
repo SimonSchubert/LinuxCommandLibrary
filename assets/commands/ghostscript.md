@@ -85,6 +85,22 @@ Complex command-line syntax. Some operations require specific device drivers. Fo
 
 Ghostscript was started by **L. Peter Deutsch** in **1988** as a free PostScript interpreter. It's now developed by Artifex Software and remains fundamental to Unix/Linux printing and PDF processing.
 
+# INSTALL
+
+```apt: sudo apt install ghostscript```
+
+```dnf: sudo dnf install ghostscript```
+
+```pacman: sudo pacman -S ghostscript```
+
+```zypper: sudo zypper install ghostscript```
+
+```brew: brew install ghostscript```
+
+```nix: nix profile install nixpkgs#ghostscript```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdf2ps](/man/pdf2ps)(1), [ps2pdf](/man/ps2pdf)(1), [pdftk](/man/pdftk)(1), [convert](/man/convert)(1)

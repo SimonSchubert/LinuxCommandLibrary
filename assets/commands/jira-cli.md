@@ -83,6 +83,14 @@ Requires a Jira API token for authentication. Some features may not be available
 
 **jira-cli** was created by **Ankit Pokhrel** and is written in **Go**. It was designed as the missing command-line tool for Atlassian Jira, providing a fast and interactive terminal workflow.
 
+# INSTALL
+
+```zypper: sudo zypper install jira-cli```
+
+```brew: brew install jira-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1)

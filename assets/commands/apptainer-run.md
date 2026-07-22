@@ -113,6 +113,21 @@ The container must have a runscript defined for predictable behavior. Arguments 
 
 The run command has been central to Singularity/Apptainer since the project began at Lawrence Berkeley National Laboratory in **2015**. It was designed to make containers behave like executables, simplifying integration into HPC workflows. Apptainer inherited this functionality when the project transitioned from Singularity under the Linux Foundation in **2021**.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-exec](/man/apptainer-exec)(1), [apptainer-shell](/man/apptainer-shell)(1), [apptainer-run-help](/man/apptainer-run-help)(1), [apptainer-build](/man/apptainer-build)(1)

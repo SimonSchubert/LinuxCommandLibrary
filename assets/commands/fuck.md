@@ -53,6 +53,12 @@ Alias setup required. May not catch all errors. Some corrections may not be appr
 
 fuck is part of **The Fuck** project created by Vladimir Iakovlev. The application provides an amusing yet practical way to correct command-line mistakes through Python-based rule matching.
 
+# INSTALL
+
+```aur: yay -S fuck```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1)

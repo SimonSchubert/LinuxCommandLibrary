@@ -69,6 +69,12 @@ The tool configures hostapd to create the access point, sets up dnsmasq for DHCP
 
 Requires hostapd and dnsmasq. WiFi adapter must support AP mode. Some adapters may not work due to driver limitations. Requires root privileges. The original create_ap project (by oblique) is archived and no longer maintained; the actively developed successor is **linux-router** (the lnxrouter command), which keeps a compatible command-line interface.
 
+# INSTALL
+
+```aur: yay -S create_ap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hostapd](/man/hostapd)(8), [dnsmasq](/man/dnsmasq)(8), [iw](/man/iw)(8)

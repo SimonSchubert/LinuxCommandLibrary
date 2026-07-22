@@ -113,6 +113,22 @@ The 7z format does not store Unix permissions, ownership, or symlinks by default
 
 **7-Zip** was created by **Igor Pavlov** in **1999** for Windows. **p7zip** is the POSIX port begun by Myspace in **2004**. Since 2021, Pavlov publishes official Linux/macOS binaries (`7zz`), making p7zip largely obsolete.
 
+# INSTALL
+
+```apt: sudo apt install 7zip```
+
+```dnf: sudo dnf install 7zip```
+
+```pacman: sudo pacman -S 7zip```
+
+```zypper: sudo zypper install 7zip```
+
+```brew: brew install 7zip```
+
+```nix: nix profile install nixpkgs#p7zip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zip](/man/zip)(1), [unzip](/man/unzip)(1), [gzip](/man/gzip)(1), [xz](/man/xz)(1), [tar](/man/tar)(1)

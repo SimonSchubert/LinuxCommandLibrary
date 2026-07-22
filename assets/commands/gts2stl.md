@@ -53,6 +53,12 @@ Reads from stdin, writes to stdout. Large meshes may take time. GTS format is le
 
 gts2stl is part of the **GTS Library** (GNU Triangulated Surface), developed for computational geometry operations. The library provides tools for surface mesh manipulation, boolean operations, and format conversion.
 
+# INSTALL
+
+```apt: sudo apt install libgts-bin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stl2gts](/man/stl2gts)(1), [meshlab](/man/meshlab)(1), [openscad](/man/openscad)(1)

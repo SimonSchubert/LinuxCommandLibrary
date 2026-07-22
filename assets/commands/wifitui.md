@@ -56,6 +56,14 @@ Requires either **NetworkManager** or **iwd** to be running as the wireless back
 
 **wifitui** was created by **shazow** and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install wifitui```
+
+```nix: nix profile install nixpkgs#wifitui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmtui](/man/nmtui)(1), [nmcli](/man/nmcli)(1), [iwctl](/man/iwctl)(1)

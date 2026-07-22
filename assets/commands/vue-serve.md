@@ -44,6 +44,12 @@ Development server for Vue components
 
 In Vue CLI v5, the instant prototyping feature was removed and **vue serve** became an alias for **npm run serve**. For standalone component prototyping, Vue now recommends using **Vite** instead.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#vue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vue](/man/vue)(1), [vue-build](/man/vue-build)(1), [vite](/man/vite)(1)

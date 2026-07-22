@@ -56,6 +56,24 @@ Simple syntax, limited features. No tables. Less powerful than full roff.
 
 **scdoc** was created by **Drew DeVault** for the sway project. It provides a simpler alternative to writing raw roff for man pages.
 
+# INSTALL
+
+```apt: sudo apt install scdoc```
+
+```dnf: sudo dnf install scdoc```
+
+```pacman: sudo pacman -S scdoc```
+
+```apk: sudo apk add scdoc```
+
+```zypper: sudo zypper install scdoc```
+
+```brew: brew install scdoc```
+
+```nix: nix profile install nixpkgs#scdoc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [man](/man/man)(1), [groff](/man/groff)(1), [pandoc](/man/pandoc)(1), [ronn](/man/ronn)(1)

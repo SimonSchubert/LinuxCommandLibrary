@@ -103,6 +103,23 @@ Incorrect fuse settings can brick the device. Requires proper permissions for se
 
 **avrdude** was created by Brian Dean in **2003** as an open-source alternative to Atmel's proprietary programming tools. It has become the standard tool for AVR programming.
 
+# INSTALL
+
+```apt: sudo apt install avrdude```
+
+```dnf: sudo dnf install avrdude```
+
+```pacman: sudo pacman -S avrdude```
+
+```apk: sudo apk add avrdude```
+
+```zypper: sudo zypper install avrdude```
+
+```brew: brew install avrdude```
+
+```nix: nix profile install nixpkgs#avrdude```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [arduino-cli](/man/arduino-cli)(1), [avr-gcc](/man/avr-gcc)(1), [platformio](/man/platformio)(1), [minicom](/man/minicom)(1)

@@ -82,6 +82,12 @@ OpenBSD/NetBSD specific. Set PKG_PATH for remote installs. Use pkg_info to list 
 
 pkg_add is part of the **OpenBSD** and **NetBSD** package tools, providing simple package management since the 1990s.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pkg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pkg](/man/pkg)(1)

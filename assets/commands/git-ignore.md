@@ -70,6 +70,14 @@ Part of git-extras package. Creates .gitignore if missing. Already tracked files
 
 git ignore is part of **git-extras**, providing a command-line interface for the common task of editing gitignore files.
 
+# INSTALL
+
+```brew: brew install git-ignore```
+
+```nix: nix profile install nixpkgs#git-ignore```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-check-ignore](/man/git-check-ignore)(1), [git-extras](/man/git-extras)(1), [gibo](/man/gibo)(1)

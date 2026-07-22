@@ -97,6 +97,16 @@ No GPU acceleration. Some applications may behave differently without real displ
 
 **Xvfb** has been part of the X.Org server distribution since the X11R5 release. It was developed to enable X applications to run on systems without display hardware, supporting server-side rendering and automated testing long before headless browser technologies.
 
+# INSTALL
+
+```apt: sudo apt install xvfb```
+
+```apk: sudo apk add xvfb```
+
+```nix: nix profile install nixpkgs#xvfb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xvfb-run](/man/xvfb-run)(1), [xdpyinfo](/man/xdpyinfo)(1)

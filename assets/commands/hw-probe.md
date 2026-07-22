@@ -140,6 +140,16 @@ Local probes are written to `/root/HW_PROBE/LATEST/` (or `~/HW_PROBE/LATEST/` fo
 
 **hw-probe** was created by **Andrey Ponomarenko** as the front-end client for the Linux Hardware Database project, first released in **2018**. It is written in Perl and ships in the AUR, Debian/Ubuntu, Fedora, openSUSE and FreeBSD ports. The companion site, linux-hardware.org, has since collected millions of public probes used by kernel developers and distribution maintainers to track Linux hardware support over time.
 
+# INSTALL
+
+```dnf: sudo dnf install hw-probe```
+
+```zypper: sudo zypper install hw-probe```
+
+```nix: nix profile install nixpkgs#hw-probe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lshw](/man/lshw)(1), [lspci](/man/lspci)(8), [lsusb](/man/lsusb)(8), [dmidecode](/man/dmidecode)(8), [hwinfo](/man/hwinfo)(8), [smartctl](/man/smartctl)(8), [inxi](/man/inxi)(1)

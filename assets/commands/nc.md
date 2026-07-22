@@ -115,6 +115,16 @@ Flag set differs across implementations — scripts portable to one **nc** may b
 
 Original netcat was written by **"Hobbit"** and posted to `alt.security` in **1995–1996**. The OpenBSD project later rewrote it from scratch and that variant became the de-facto standard on BSD, macOS and most modern Linux distributions. **Ncat** was developed as part of the **Nmap** project to add modern features (TLS, IPv6, proxying, brokered relays).
 
+# INSTALL
+
+```apk: sudo apk add netcat-openbsd```
+
+```zypper: sudo zypper install netcat-openbsd```
+
+```nix: nix profile install nixpkgs#netcat-openbsd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ncat](/man/ncat)(1), [socat](/man/socat)(1), [telnet](/man/telnet)(1), [curl](/man/curl)(1), [ssh](/man/ssh)(1)

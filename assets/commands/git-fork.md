@@ -47,6 +47,12 @@ Part of git-extras package. Requires a GitHub personal access token with the app
 
 git fork is part of **git-extras**, created to automate the common GitHub fork workflow for contributing to projects.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#git-fork```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-clone](/man/git-clone)(1), [gh-repo](/man/gh-repo)(1), [git-remote](/man/git-remote)(1)

@@ -106,6 +106,19 @@ Stopping a cluster deallocates compute resources but retains cluster configurati
 
 Azure Kubernetes Service (AKS) reached general availability in **June 2018**. It evolved from Azure Container Service (ACS) which supported multiple orchestrators. AKS focuses exclusively on Kubernetes with deep Azure integration.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-acr](/man/az-acr)(1), [kubectl](/man/kubectl)(1), [helm](/man/helm)(1)

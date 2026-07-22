@@ -86,6 +86,16 @@ Requires network access to query the registry. When viewing scoped packages, the
 
 **npm view** has been available since early versions of npm, providing command-line access to the package registry metadata that powers npm's dependency resolution.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-search](/man/npm-search)(1), [npm-pack](/man/npm-pack)(1), [npm-install](/man/npm-install)(1), [npm-publish](/man/npm-publish)(1), [npm-ls](/man/npm-ls)(1), [npm-outdated](/man/npm-outdated)(1)

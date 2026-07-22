@@ -70,6 +70,20 @@ X11 only; no effect on Wayland. Settings don't persist across reboots without sc
 
 **xgamma** is part of the X.Org utility collection and was originally authored by **Kaleb Keithley** and **David Dawes**. It relies on the XFree86-VidModeExtension, which is considered obsolete; modern setups should prefer **xrandr** with the RandR 1.2+ gamma properties.
 
+# INSTALL
+
+```apt: sudo apt install x11-xserver-utils```
+
+```dnf: sudo dnf install xgamma```
+
+```apk: sudo apk add xgamma```
+
+```zypper: sudo zypper install xgamma```
+
+```nix: nix profile install nixpkgs#xgamma```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xrandr](/man/xrandr)(1), [redshift](/man/redshift)(1)

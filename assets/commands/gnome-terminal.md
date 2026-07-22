@@ -75,6 +75,22 @@ On Wayland, some X11-specific features like geometry positioning may not work. T
 
 gnome-terminal has been part of GNOME since version 1.0 in **1999**. It uses the VTE (Virtual Terminal Emulator) widget library, which is also used by other terminals like Terminator and Tilix. The application has evolved significantly through GNOME's various iterations.
 
+# INSTALL
+
+```apt: sudo apt install gnome-terminal```
+
+```dnf: sudo dnf install gnome-terminal```
+
+```pacman: sudo pacman -S gnome-terminal```
+
+```apk: sudo apk add gnome-terminal```
+
+```zypper: sudo zypper install gnome-terminal```
+
+```nix: nix profile install nixpkgs#gnome-terminal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [xterm](/man/xterm)(1), [alacritty](/man/alacritty)(1)

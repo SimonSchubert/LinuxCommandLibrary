@@ -84,6 +84,12 @@ Only works on running jobs; use **sacct** for completed jobs. Requires the jobac
 
 **sstat** is part of **Slurm**, developed at **Lawrence Livermore National Laboratory** starting in **2002**. Job accounting features help users and administrators monitor resource consumption in real-time. Slurm is now maintained by **SchedMD**.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sacct](/man/sacct)(1), [squeue](/man/squeue)(1), [scontrol](/man/scontrol)(1), [srun](/man/srun)(1)

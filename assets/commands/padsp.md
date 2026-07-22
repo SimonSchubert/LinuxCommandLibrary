@@ -69,6 +69,18 @@ Relies on **LD_PRELOAD**, so it only works with dynamically linked ELF binaries.
 
 **padsp** was developed as part of the **PulseAudio** project to support legacy OSS applications after PulseAudio replaced OSS as the default sound system on most Linux distributions.
 
+# INSTALL
+
+```apt: sudo apt install pulseaudio-utils```
+
+```dnf: sudo dnf install pulseaudio-utils```
+
+```apk: sudo apk add pulseaudio-utils```
+
+```zypper: sudo zypper install pulseaudio-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulseaudio](/man/pulseaudio)(1), [aoss](/man/aoss)(1), [pactl](/man/pactl)(1)

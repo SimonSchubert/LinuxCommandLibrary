@@ -52,6 +52,20 @@ The container is configured for seamless integration with the host, including ho
 
 Requires podman to be installed. The default image is pulled from the distribution's registry if not cached locally. Container names must be unique within toolbox.
 
+# INSTALL
+
+```apt: sudo apt install podman-toolbox```
+
+```dnf: sudo dnf install toolbox```
+
+```pacman: sudo pacman -S toolbox```
+
+```zypper: sudo zypper install toolbox```
+
+```nix: nix profile install nixpkgs#toolbox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [toolbox](/man/toolbox)(1), [toolbox-enter](/man/toolbox-enter)(1), [toolbox-list](/man/toolbox-list)(1)

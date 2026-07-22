@@ -59,6 +59,22 @@ Multiple operations can be specified by separating them with colons. The **--lis
 
 Inhibitor locks should be used sparingly to avoid blocking normal system operation. "Delay" mode only holds off the operation briefly. Requires appropriate privileges for some operations. Part of the systemd suite.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [loginctl](/man/loginctl)(1)

@@ -34,6 +34,18 @@ Requires root privileges. Part of the dsniff package. Only works on unencrypted 
 
 **tcpkill** is part of the **dsniff** suite created by **Dug Song** for network auditing. It's used for security testing and emergency connection termination.
 
+# INSTALL
+
+```apt: sudo apt install dsniff```
+
+```dnf: sudo dnf install dsniff```
+
+```pacman: sudo pacman -S dsniff```
+
+```nix: nix profile install nixpkgs#dsniff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(8), [dsniff](/man/dsniff)(8)

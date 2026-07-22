@@ -73,6 +73,16 @@ Album cover display requires a compatible terminal. Some audio formats may need 
 
 **termusic** is a modern terminal music player developed by **tramhao**, inspired by vim's modal editing philosophy and designed for keyboard-driven music playback.
 
+# INSTALL
+
+```pacman: sudo pacman -S termusic```
+
+```brew: brew install termusic```
+
+```nix: nix profile install nixpkgs#termusic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmus](/man/cmus)(1), [ncmpcpp](/man/ncmpcpp)(1), [mpv](/man/mpv)(1)

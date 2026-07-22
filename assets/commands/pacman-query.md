@@ -87,6 +87,20 @@ The query operates on the local database only. Use **pacman -S** for sync databa
 
 **pacman** is the package manager for **Arch Linux** and its derivatives, designed for simplicity and speed.
 
+# INSTALL
+
+```apt: sudo apt install pacman-package-manager```
+
+```dnf: sudo dnf install pacman```
+
+```pacman: sudo pacman -S pacman```
+
+```apk: sudo apk add pacman```
+
+```nix: nix profile install nixpkgs#pacman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pacman-sync](/man/pacman-sync)(8), [paru](/man/paru)(1), [yay](/man/yay)(1)

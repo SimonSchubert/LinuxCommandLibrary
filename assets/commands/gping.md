@@ -96,6 +96,22 @@ Requires ICMP permissions (may need root/sudo on Linux). Terminal must support 2
 
 gping was created by **orf** and first released around **2020**. Written in Rust, it was designed as a modern alternative to traditional ping with visual feedback. The project gained popularity for its intuitive display and multi-host comparison capability.
 
+# INSTALL
+
+```apt: sudo apt install gping```
+
+```pacman: sudo pacman -S gping```
+
+```apk: sudo apk add gping```
+
+```zypper: sudo zypper install gping```
+
+```brew: brew install gping```
+
+```nix: nix profile install nixpkgs#gping```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ping](/man/ping)(1), [mtr](/man/mtr)(1), [trippy](/man/trippy)(1), [fping](/man/fping)(1)

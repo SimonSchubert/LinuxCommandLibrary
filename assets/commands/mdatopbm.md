@@ -45,6 +45,24 @@ Output is written to standard output. The tool is part of the **Netpbm** toolkit
 
 Only the MicroDesign Area (.mda) variant is supported; documents from MicroDesign Plus may need to be exported to .mda first. The format is monochrome (1 bpp).
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtomda](/man/pbmtomda)(1), [pbmtolj](/man/pbmtolj)(1), [pbm](/man/pbm)(5)

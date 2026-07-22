@@ -52,6 +52,11 @@ Authentication uses Azure speech keys/region via env vars or config—see upstre
 
 Requires Azure Speech credentials and network access; usage is billable. Voice availability varies by region.
 
+# INSTALL
+
+```aur: yay -S aspeak```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [espeak](/man/espeak)(1), [festival](/man/festival)(1), [say](/man/say)(1)

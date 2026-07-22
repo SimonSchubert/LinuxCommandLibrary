@@ -55,6 +55,24 @@ LLVM bitcode disassembler
 
 **llvm-dis** is the LLVM disassembler. It converts LLVM bitcode (.bc) files to human-readable LLVM assembly language (.ll) format. If no filename is given or the filename is -, it reads from stdin. Useful for inspecting compiled code and debugging LLVM optimization passes.
 
+# INSTALL
+
+```apt: sudo apt install llvm```
+
+```dnf: sudo dnf install llvm```
+
+```pacman: sudo pacman -S llvm```
+
+```apk: sudo apk add llvm```
+
+```zypper: sudo zypper install llvm```
+
+```brew: brew install llvm```
+
+```nix: nix profile install nixpkgs#llvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [llvm-as](/man/llvm-as)(1), [llc](/man/llc)(1), [opt](/man/opt)(1), [llvm-bcanalyzer](/man/llvm-bcanalyzer)(1), [llvm-objdump](/man/llvm-objdump)(1), [clang](/man/clang)(1)

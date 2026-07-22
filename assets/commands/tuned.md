@@ -97,6 +97,20 @@ Dynamic tuning is disabled by default on RHEL. Profile changes take effect immed
 
 **tuned** was developed by Red Hat for enterprise Linux systems to simplify performance optimization. It evolved from manual kernel tuning practices into an automated system that applies best practices based on workload type, reducing the expertise required for system optimization.
 
+# INSTALL
+
+```dnf: sudo dnf install tuned```
+
+```pacman: sudo pacman -S tuned```
+
+```apk: sudo apk add tuned```
+
+```zypper: sudo zypper install tuned```
+
+```nix: nix profile install nixpkgs#tuned```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tuned-adm](/man/tuned-adm)(8), [cpupower](/man/cpupower)(1), [sysctl](/man/sysctl)(8), [ionice](/man/ionice)(1)

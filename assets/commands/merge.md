@@ -74,6 +74,24 @@ Part of RCS. Conflicts need manual resolution. Exit code indicates conflicts.
 
 merge is part of **RCS** (Revision Control System), providing three-way file merging capability.
 
+# INSTALL
+
+```apt: sudo apt install rcs```
+
+```dnf: sudo dnf install rcs```
+
+```pacman: sudo pacman -S rcs```
+
+```apk: sudo apk add rcs```
+
+```zypper: sudo zypper install rcs```
+
+```brew: brew install rcs```
+
+```nix: nix profile install nixpkgs#rcs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff3](/man/diff3)(1), [diff](/man/diff)(1), [patch](/man/patch)(1), [rcs](/man/rcs)(1), [sdiff](/man/sdiff)(1), [git-merge](/man/git-merge)(1)

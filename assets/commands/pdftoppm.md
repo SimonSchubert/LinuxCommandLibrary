@@ -78,6 +78,18 @@ The tool is commonly used for creating thumbnails, preparing PDFs for OCR, or co
 
 High DPI settings produce large files and require more memory. Processing many pages can be slow. Vector graphics are rasterized, losing scalability. Part of poppler-utils package.
 
+# INSTALL
+
+```apt: sudo apt install poppler-utils```
+
+```dnf: sudo dnf install poppler-utils```
+
+```apk: sudo apk add poppler-utils```
+
+```nix: nix profile install nixpkgs#poppler-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdftohtml](/man/pdftohtml)(1), [pdftotext](/man/pdftotext)(1), [pdfinfo](/man/pdfinfo)(1), [convert](/man/convert)(1)

@@ -29,6 +29,18 @@ _device_
 
 Requires appropriate permissions on input device. Device must support force-feedback. Use evtest to identify the correct event device.
 
+# INSTALL
+
+```apt: sudo apt install joystick```
+
+```dnf: sudo dnf install linuxconsoletools```
+
+```apk: sudo apk add linuxconsoletools```
+
+```zypper: sudo zypper install linuxconsoletools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [evtest](/man/evtest)(1), [jstest](/man/jstest)(1)

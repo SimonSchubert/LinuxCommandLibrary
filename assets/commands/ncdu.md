@@ -101,6 +101,24 @@ Deletion is permanent and bypasses trash. Scanning large filesystems takes time.
 
 **ncdu** was created by **Yoran Heling** in **2007** as an ncurses-based alternative to du for interactive disk usage analysis. It was designed to address the difficulty of identifying large files using traditional tools. ncdu became a staple system administration tool, and version 2.0 (rewritten in Zig) was released in **2022**.
 
+# INSTALL
+
+```apt: sudo apt install ncdu```
+
+```dnf: sudo dnf install ncdu```
+
+```pacman: sudo pacman -S ncdu```
+
+```apk: sudo apk add ncdu```
+
+```zypper: sudo zypper install ncdu```
+
+```brew: brew install ncdu```
+
+```nix: nix profile install nixpkgs#ncdu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [du](/man/du)(1), [df](/man/df)(1), [dust](/man/dust)(1), [duf](/man/duf)(1)

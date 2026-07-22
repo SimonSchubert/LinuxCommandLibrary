@@ -108,6 +108,16 @@ Requires Ruby. Complex layouts need careful configuration. Some tmux versions ma
 
 **Tmuxinator** was created around **2010** to automate tmux session creation. It became the standard tool for managing development environment configurations.
 
+# INSTALL
+
+```apk: sudo apk add tmuxinator```
+
+```brew: brew install tmuxinator```
+
+```nix: nix profile install nixpkgs#tmuxinator```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [screen](/man/screen)(1), [byobu](/man/byobu)(1)

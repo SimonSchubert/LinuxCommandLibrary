@@ -75,6 +75,14 @@ This is particularly useful when setting up new Debian systems or when experienc
 
 Requires root privileges for ICMP network testing. Network conditions vary over time; run periodically to find the currently optimal mirror. The generated sources.list should be reviewed before replacing the system file. Mirror latency may not reflect actual download speed for large files.
 
+# INSTALL
+
+```apt: sudo apt install netselect```
+
+```nix: nix profile install nixpkgs#netselect```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [netselect](/man/netselect)(1), [apt](/man/apt)(8), [apt-get](/man/apt-get)(8)

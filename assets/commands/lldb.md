@@ -87,6 +87,22 @@ Requires debug symbols (-g flag at compile time). Commands differ from gdb; see 
 
 LLDB was developed by **Apple** as part of LLVM, providing a modern debugger with modular architecture.
 
+# INSTALL
+
+```apt: sudo apt install lldb```
+
+```dnf: sudo dnf install lldb```
+
+```pacman: sudo pacman -S lldb```
+
+```apk: sudo apk add lldb```
+
+```zypper: sudo zypper install lldb```
+
+```nix: nix profile install nixpkgs#lldb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdb](/man/gdb)(1), [clang](/man/clang)(1)

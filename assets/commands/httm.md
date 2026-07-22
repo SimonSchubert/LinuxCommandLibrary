@@ -46,6 +46,16 @@ Requires a filesystem with snapshot support (ZFS, btrfs, or nilfs2) or compatibl
 
 **httm** was created by **kimono-koans** and is written in **Rust**. It was designed to bring the intuitive file-level browsing experience of macOS Time Machine to Linux snapshot-capable filesystems.
 
+# INSTALL
+
+```apk: sudo apk add httm```
+
+```brew: brew install httm```
+
+```nix: nix profile install nixpkgs#httm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zfs](/man/zfs)(8), [btrfs](/man/btrfs)(8), [restic](/man/restic)(1)

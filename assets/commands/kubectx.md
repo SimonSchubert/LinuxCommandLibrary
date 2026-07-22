@@ -63,6 +63,22 @@ Third-party tool. Install separately. Works with kubeconfig.
 
 kubectx was created by **Ahmet Alp Balkan** to simplify Kubernetes context management.
 
+# INSTALL
+
+```apt: sudo apt install kubectx```
+
+```pacman: sudo pacman -S kubectx```
+
+```apk: sudo apk add kubectx```
+
+```zypper: sudo zypper install kubectx```
+
+```brew: brew install kubectx```
+
+```nix: nix profile install nixpkgs#kubectx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubens](/man/kubens)(1), [kubectl-config](/man/kubectl-config)(1)

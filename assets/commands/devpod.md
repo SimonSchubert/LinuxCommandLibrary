@@ -89,6 +89,12 @@ Requires configured providers for target infrastructure. Cloud providers incur c
 
 DevPod was created by **Loft Labs** and released in **2023**. It was designed to provide a vendor-neutral, open-source alternative to cloud development environments, with support for the devcontainer specification.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#devpod```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [devcontainer](/man/devcontainer)(1), [docker](/man/docker)(1), [code](/man/code)(1)

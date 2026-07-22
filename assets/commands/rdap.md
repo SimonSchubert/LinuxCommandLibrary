@@ -112,6 +112,18 @@ Not all TLDs support RDAP. Some data may require authentication. Successor to WH
 
 RDAP was developed by the **IETF** starting in 2012 as a structured, secure replacement for the WHOIS protocol.
 
+# INSTALL
+
+```apt: sudo apt install rdap```
+
+```zypper: sudo zypper install rdap```
+
+```brew: brew install rdap```
+
+```nix: nix profile install nixpkgs#rdap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [whois](/man/whois)(1), [dig](/man/dig)(1), [host](/man/host)(1)

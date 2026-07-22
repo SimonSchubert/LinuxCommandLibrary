@@ -56,6 +56,22 @@ For scripts, applications, or services, use --no-tty to disable TTY and interact
 
 Container must exist (create with distrobox-create). First entry initializes the container which takes longer. Commands after -- are passed to the container.
 
+# INSTALL
+
+```dnf: sudo dnf install distrobox```
+
+```pacman: sudo pacman -S distrobox```
+
+```apk: sudo apk add distrobox```
+
+```zypper: sudo zypper install distrobox```
+
+```brew: brew install distrobox```
+
+```nix: nix profile install nixpkgs#distrobox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [distrobox](/man/distrobox)(1), [distrobox-create](/man/distrobox-create)(1), [distrobox-export](/man/distrobox-export)(1)

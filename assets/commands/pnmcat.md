@@ -74,6 +74,24 @@ All images must be same type (PBM, PGM, or PPM). Different depths are handled. P
 
 pnmcat is part of **Netpbm** by **Jef Poskanzer**, providing image concatenation since early Pbmplus.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamstack](/man/pamstack)(1), [pnmtile](/man/pnmtile)(1), [pnmpaste](/man/pnmpaste)(1), [netpbm](/man/netpbm)(1)

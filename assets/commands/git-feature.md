@@ -58,6 +58,24 @@ Create and manage feature branches with standardized workflow
 
 When creating a feature branch, the command automatically applies a "feature/" prefix to maintain consistent naming across the repository. The finish subcommand handles merging the feature back into the main development branch and cleaning up afterward, encapsulating multiple manual git operations into a single command.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-create-branch](/man/git-create-branch)(1), [git-extras](/man/git-extras)(1), [git-branch](/man/git-branch)(1), [git-flow](/man/git-flow)(1)

@@ -98,6 +98,24 @@ Service commands are only available on a Docker host participating in a swarm; i
 
 Requires swarm mode (**docker swarm init** / **join**). For single-host workloads use **docker run** or **docker compose** instead. Rolling updates with **--update-parallelism 0** will replace all tasks at once and can cause downtime.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-swarm](/man/docker-swarm)(1), [docker-node](/man/docker-node)(1), [docker](/man/docker)(1), [docker-compose](/man/docker-compose)(1)

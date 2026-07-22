@@ -81,6 +81,14 @@ Requires authentication. Creates billable resources. Deletion is permanent.
 
 linode-cli linodes is part of the **Linode CLI** for managing virtual machine instances on Linode cloud.
 
+# INSTALL
+
+```brew: brew install linode-cli```
+
+```nix: nix profile install nixpkgs#linode-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [linode-cli](/man/linode-cli)(1), [linode-cli-volumes](/man/linode-cli-volumes)(1)

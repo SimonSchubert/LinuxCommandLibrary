@@ -75,6 +75,14 @@ Pattern syntax uses a subset of regular expressions with LLVM-specific extension
 
 FileCheck was developed as part of **LLVM's testing infrastructure**. It provides a flexible pattern-matching system for validating compiler output in regression tests.
 
+# INSTALL
+
+```apk: sudo apk add filecheck```
+
+```nix: nix profile install nixpkgs#filecheck```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [diff](/man/diff)(1)

@@ -75,6 +75,12 @@ Requires a developer account and app credentials from the X Developer Portal. Th
 
 **twurl** was created by Twitter (now X) as a development helper for its HTTP API. The **authorize** subcommand has always been the entry point for storing OAuth credentials in **~/.twurlrc**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#twurl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [twurl](/man/twurl)(1), [twurl-accounts](/man/twurl-accounts)(1), [curl](/man/curl)(1), [httpie](/man/httpie)(1)

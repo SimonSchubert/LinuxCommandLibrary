@@ -67,6 +67,16 @@ safe-rm cannot protect against all deletion patterns. While **rm -rf /usr/lib** 
 
 safe-rm was created to prevent accidental deletion of critical system files. Version 1.0.0 released in **November 2020** was a complete rewrite in **Rust**, replacing the original implementation. The project is licensed under GPLv3.
 
+# INSTALL
+
+```apt: sudo apt install safe-rm```
+
+```brew: brew install safe-rm```
+
+```nix: nix profile install nixpkgs#safe-rm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rm](/man/rm)(1), [trash-cli](/man/trash-cli)(1), [shred](/man/shred)(1)

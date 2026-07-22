@@ -79,6 +79,24 @@ Use `fossil addremove` to stage both new and missing files in one call, or `foss
 
 `fossil add` only stages — nothing is visible to other clones until `fossil commit` runs. File names are case-sensitive by default on Unix and insensitive on Windows; mix platforms by setting `case-sensitive on` globally or per-repo. Symbolic links are added as symlinks only if `allow-symlinks on` is set.
 
+# INSTALL
+
+```apt: sudo apt install fossil```
+
+```dnf: sudo dnf install fossil```
+
+```pacman: sudo pacman -S fossil```
+
+```apk: sudo apk add fossil```
+
+```zypper: sudo zypper install fossil```
+
+```brew: brew install fossil```
+
+```nix: nix profile install nixpkgs#fossil```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fossil-commit](/man/fossil-commit)(1), [fossil-rm](/man/fossil-rm)(1)

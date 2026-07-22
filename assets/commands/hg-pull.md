@@ -56,6 +56,24 @@ fetches changesets from a remote repository into the local repository
 
 **hg pull** fetches changesets from a remote repository into the local repository. Unlike Git's pull, it does not automatically update the working directory. Use **-u** to update, or run **hg update** separately after pulling. The source defaults to the repository from which this repository was cloned.
 
+# INSTALL
+
+```apt: sudo apt install mercurial```
+
+```dnf: sudo dnf install mercurial```
+
+```pacman: sudo pacman -S mercurial```
+
+```apk: sudo apk add mercurial```
+
+```zypper: sudo zypper install mercurial```
+
+```brew: brew install mercurial```
+
+```nix: nix profile install nixpkgs#mercurial```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hg](/man/hg)(1), [hg-update](/man/hg-update)(1), [hg-push](/man/hg-push)(1), [hg-clone](/man/hg-clone)(1), [hg-log](/man/hg-log)(1)

@@ -79,6 +79,22 @@ Syntax differs from other CAS. Output formatting can be complex. GUI (wxMaxima) 
 
 Maxima descends from **Macsyma** developed at **MIT** starting in **1968**. The DOE version was released as open source in **1998** and became Maxima.
 
+# INSTALL
+
+```apt: sudo apt install maxima```
+
+```dnf: sudo dnf install maxima```
+
+```pacman: sudo pacman -S maxima```
+
+```zypper: sudo zypper install maxima```
+
+```brew: brew install maxima```
+
+```nix: nix profile install nixpkgs#maxima```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [octave](/man/octave)(1)

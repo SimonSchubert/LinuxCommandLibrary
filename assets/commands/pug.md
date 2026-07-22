@@ -94,6 +94,12 @@ Requires Node.js. Whitespace-sensitive (use consistent indentation). Was renamed
 
 Pug was created by **TJ Holowaychuk** as Jade in 2010, renamed to Pug in 2016 due to trademark issues.
 
+# INSTALL
+
+```brew: brew install pug```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1)

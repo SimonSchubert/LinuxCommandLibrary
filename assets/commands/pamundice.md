@@ -47,6 +47,24 @@ Part of Netpbm. Tiles must match. Overlap handling.
 
 pamundice is part of **Netpbm** for reassembling tiled images.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamdice](/man/pamdice)(1), [pnmcat](/man/pnmcat)(1), [netpbm](/man/netpbm)(1)

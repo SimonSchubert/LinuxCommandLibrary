@@ -46,6 +46,12 @@ See **man rdrview** after install for the full option set of your build.
 
 Extraction quality varies by site layout and heavy client-side rendering. The tool is relatively young C code—prefer the sandboxed build. macOS may lack a sandbox implementation. Always be careful feeding untrusted URLs into local tools.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#rdrview```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lynx](/man/lynx)(1), [w3m](/man/w3m)(1), [curl](/man/curl)(1), [readable](/man/readable)(1)

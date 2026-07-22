@@ -118,6 +118,14 @@ Not designed for Windows. Sync workers block on slow clients without buffering p
 
 **Gunicorn** was created by Benoît Chesneau, with the first release around **2010**. The name is a portmanteau of "Green Unicorn." It was designed as a Python port of Ruby's Unicorn server, bringing its pre-fork architecture to Python. Gunicorn has become one of the most popular WSGI servers for Python web applications.
 
+# INSTALL
+
+```pacman: sudo pacman -S gunicorn```
+
+```apk: sudo apk add py3-gunicorn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uvicorn](/man/uvicorn)(1), [uwsgi](/man/uwsgi)(1), [nginx](/man/nginx)(8), [flask](/man/flask)(1), [django-admin](/man/django-admin)(1)

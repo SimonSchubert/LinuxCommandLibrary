@@ -42,6 +42,16 @@ Numerical integration and differentiation are approximations and may have precis
 
 **kalker** was created by **Oliver Waldemar** (PaddiM8) and is written in **Rust**. It was designed to provide a natural math syntax calculator that feels like writing expressions on paper rather than programming.
 
+# INSTALL
+
+```apk: sudo apk add kalker```
+
+```brew: brew install kalker```
+
+```nix: nix profile install nixpkgs#kalker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bc](/man/bc)(1), [dc](/man/dc)(1), [python3](/man/python3)(1)

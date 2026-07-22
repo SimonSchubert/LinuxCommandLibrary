@@ -93,6 +93,22 @@ Development has slowed (last major update 2018); some newer cameras may not be s
 
 dcraw was written by **Dave Coffin** starting in **1997**, initially to decode his own camera's RAW files. It grew through reverse-engineering efforts to support nearly every camera manufacturer's format. The software became foundational in open-source photography, enabling Linux RAW processing years before manufacturers provided support. Dave Coffin maintained it as a personal project for over 20 years.
 
+# INSTALL
+
+```apt: sudo apt install dcraw```
+
+```dnf: sudo dnf install dcraw```
+
+```pacman: sudo pacman -S dcraw```
+
+```zypper: sudo zypper install dcraw```
+
+```brew: brew install dcraw```
+
+```nix: nix profile install nixpkgs#dcraw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [exiftool](/man/exiftool)(1)

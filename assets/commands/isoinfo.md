@@ -57,6 +57,18 @@ File paths inside ISO images are often uppercase. Rock Ridge or Joliet extension
 
 isoinfo is part of the cdrtools/cdrkit package, originally developed by Joerg Schilling. ISO 9660 is the standard filesystem for CD-ROM media, defined in **1988**.
 
+# INSTALL
+
+```apt: sudo apt install genisoimage```
+
+```dnf: sudo dnf install genisoimage```
+
+```apk: sudo apk add cdrkit```
+
+```nix: nix profile install nixpkgs#cdrkit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [genisoimage](/man/genisoimage)(1), [mount](/man/mount)(8)

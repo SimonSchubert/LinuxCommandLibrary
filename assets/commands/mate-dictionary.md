@@ -49,6 +49,22 @@ graphical dictionary application for the MATE desktop
 
 **mate-dictionary** is a graphical dictionary application for the MATE desktop environment. It looks up words using DICT protocol servers and supports multiple dictionaries and search strategies. Results can be saved to file or printed.
 
+# INSTALL
+
+```apt: sudo apt install mate-utils```
+
+```dnf: sudo dnf install mate-utils```
+
+```pacman: sudo pacman -S mate-utils```
+
+```apk: sudo apk add mate-dictionary```
+
+```zypper: sudo zypper install mate-dictionary```
+
+```nix: nix profile install nixpkgs#mate-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dict](/man/dict)(1)

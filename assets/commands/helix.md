@@ -90,6 +90,20 @@ Different keybindings than Vim. Learning curve for selection model. Rust-based, 
 
 **Helix** was started by **Blaž Hrastnik** in 2020 and first announced publicly in 2021. Unlike Vim/Neovim, it ships with sane defaults, tree-sitter-based syntax analysis, and LSP support built in rather than added via plugins, and it adopts Kakoune's selection-first ("selection, then action") editing model.
 
+# INSTALL
+
+```dnf: sudo dnf install helix```
+
+```pacman: sudo pacman -S helix```
+
+```zypper: sudo zypper install helix```
+
+```brew: brew install helix```
+
+```nix: nix profile install nixpkgs#helix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hx](/man/hx)(1), [vim](/man/vim)(1), [nvim](/man/nvim)(1), [kakoune](/man/kakoune)(1)

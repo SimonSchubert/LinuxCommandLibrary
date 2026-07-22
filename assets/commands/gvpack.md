@@ -73,6 +73,24 @@ Merge and pack disjoint graphs
 
 All input graphs must be either all directed or all undirected. Nodes with the same names across graphs are automatically renamed to avoid conflicts.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [neato](/man/neato)(1), [ccomps](/man/ccomps)(1), [fdp](/man/fdp)(1), [twopi](/man/twopi)(1)

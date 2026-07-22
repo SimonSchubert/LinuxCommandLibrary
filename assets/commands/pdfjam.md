@@ -90,6 +90,14 @@ Requires TeX Live or similar LaTeX distribution. Complex PDFs may not process co
 
 **pdfjam** was created by **David Firth** as a shell wrapper around the LaTeX pdfpages package. It provides convenient command-line access to PDF manipulation.
 
+# INSTALL
+
+```pacman: sudo pacman -S texlive-binextra```
+
+```apk: sudo apk add texlive-binextra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdfunite](/man/pdfunite)(1), [pdftk](/man/pdftk)(1), [pdfpages](/man/pdfpages)(1)

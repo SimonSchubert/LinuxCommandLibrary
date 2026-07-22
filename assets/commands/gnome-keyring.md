@@ -82,6 +82,22 @@ Usually started by desktop session. SSH component may conflict with ssh-agent. K
 
 GNOME Keyring was created for the GNOME desktop to provide secure credential storage. It implements the freedesktop.org Secret Service specification for cross-desktop compatibility.
 
+# INSTALL
+
+```apt: sudo apt install gnome-keyring```
+
+```dnf: sudo dnf install gnome-keyring```
+
+```pacman: sudo pacman -S gnome-keyring```
+
+```apk: sudo apk add gnome-keyring```
+
+```zypper: sudo zypper install gnome-keyring```
+
+```nix: nix profile install nixpkgs#gnome-keyring```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [secret-tool](/man/secret-tool)(1), [ssh-agent](/man/ssh-agent)(1), [gpg](/man/gpg)(1)

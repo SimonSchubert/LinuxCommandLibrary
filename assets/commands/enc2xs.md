@@ -56,6 +56,24 @@ Requires Perl development environment. UCM format must be correct. XS compilatio
 
 enc2xs is part of the **Encode** module in Perl core, supporting the creation of custom character encoding support. It enables Perl to handle encodings not built into the standard distribution.
 
+# INSTALL
+
+```apt: sudo apt install perl```
+
+```dnf: sudo dnf install perl```
+
+```pacman: sudo pacman -S perl```
+
+```apk: sudo apk add perl-dev```
+
+```zypper: sudo zypper install perl```
+
+```brew: brew install perl```
+
+```nix: nix profile install nixpkgs#perl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [perl](/man/perl)(1)

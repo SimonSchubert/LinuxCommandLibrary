@@ -60,6 +60,16 @@ Log with **priority**
 Facilities: auth, cron, daemon, kern, local0-7, mail, news, syslog, user, uucp
 Levels: emerg, alert, crit, err, warning, notice, info, debug
 
+# INSTALL
+
+```apt: sudo apt install bsdutils```
+
+```apk: sudo apk add logger```
+
+```nix: nix profile install nixpkgs#logger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [journalctl](/man/journalctl)(1)

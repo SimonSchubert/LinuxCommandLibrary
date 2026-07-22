@@ -136,6 +136,15 @@ Upload requires appropriate permissions for serial ports; on Linux, users typica
 
 **arduino-cli** was developed by **Arduino** and released in **2018** as a modern replacement for the older Arduino command-line tools. It was created to enable headless Arduino development, support CI/CD pipelines, and provide a foundation for third-party IDE integrations. The tool shares its core with the Arduino IDE 2.0 and is actively maintained.
 
+# INSTALL
+
+```pacman: sudo pacman -S arduino-cli```
+
+```brew: brew install arduino-cli```
+
+```nix: nix profile install nixpkgs#arduino-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [avrdude](/man/avrdude)(1), [platformio](/man/platformio)(1), [screen](/man/screen)(1), [minicom](/man/minicom)(1)

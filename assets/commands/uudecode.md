@@ -48,6 +48,22 @@ Setuid and execute bits from the original file are stripped for security. The ou
 
 uudecode was developed at Bell Labs and first appeared in **BSD 4.0** in the early 1980s as the counterpart to uuencode. Together they enabled binary file transfer over text-only UUCP networks. While largely superseded by MIME for email attachments, the commands remain available on Unix-like systems for backward compatibility and simple encoding tasks.
 
+# INSTALL
+
+```apt: sudo apt install sharutils```
+
+```dnf: sudo dnf install sharutils```
+
+```pacman: sudo pacman -S sharutils```
+
+```apk: sudo apk add sharutils```
+
+```zypper: sudo zypper install sharutils```
+
+```nix: nix profile install nixpkgs#sharutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uuencode](/man/uuencode)(1), [base64](/man/base64)(1), [mail](/man/mail)(1)

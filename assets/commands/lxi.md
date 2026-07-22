@@ -64,5 +64,17 @@ Requires network connectivity to LXI instruments. Discovery may not find instrum
 
 The lxi-tools project was created to provide open-source tools for communicating with LXI-compatible test equipment, supporting the LXI 1.4+ specification for network-based instrumentation.
 
+# INSTALL
+
+```apt: sudo apt install lxi-tools```
+
+```dnf: sudo dnf install lxi-tools```
+
+```brew: brew install lxi-tools```
+
+```nix: nix profile install nixpkgs#lxi-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

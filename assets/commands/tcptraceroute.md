@@ -86,6 +86,16 @@ Requires root privileges or appropriate capabilities to send raw packets. The de
 
 **tcptraceroute** was created as an alternative to traditional traceroute that could bypass firewalls blocking ICMP and UDP packets by using TCP SYN packets.
 
+# INSTALL
+
+```apk: sudo apk add tcptraceroute```
+
+```brew: brew install tcptraceroute```
+
+```nix: nix profile install nixpkgs#tcptraceroute```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [traceroute](/man/traceroute)(8), [mtr](/man/mtr)(8), [tracepath](/man/tracepath)(8)

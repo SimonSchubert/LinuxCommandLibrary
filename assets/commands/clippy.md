@@ -89,6 +89,16 @@ Some lints may produce false positives. The **pedantic** category is intentional
 
 **clippy** was created by **Manish Goregaokar** and others starting in **2014** as a third-party tool. The name references Microsoft's Office assistant. It became an official Rust component in **2018**, distributed via rustup. Clippy has grown to include over 600 lints and is widely used in the Rust ecosystem.
 
+# INSTALL
+
+```dnf: sudo dnf install clippy```
+
+```brew: brew install clippy```
+
+```nix: nix profile install nixpkgs#clippy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [rustc](/man/rustc)(1), [rustfmt](/man/rustfmt)(1), [rustup](/man/rustup)(1)

@@ -77,6 +77,22 @@ f3write can operate on a mounted filesystem (writing to a directory) or directly
 
 f3write was created by Michel Machado as part of the F3 (Fight Flash Fraud) suite. The tool addresses the widespread problem of counterfeit flash storage that uses modified firmware to report inflated capacities. When users attempt to store more data than the actual capacity, the drive silently corrupts data by overwriting existing content or simply discarding writes.
 
+# INSTALL
+
+```apt: sudo apt install f3```
+
+```dnf: sudo dnf install f3```
+
+```apk: sudo apk add f3```
+
+```zypper: sudo zypper install f3```
+
+```brew: brew install f3```
+
+```nix: nix profile install nixpkgs#f3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [f3read](/man/f3read)(1), [f3probe](/man/f3probe)(1), [f3fix](/man/f3fix)(1), [dd](/man/dd)(1)

@@ -74,6 +74,16 @@ Only works with removable devices. Mount point created automatically under /medi
 
 **pmount** was created to provide secure user mounting before udisks and modern desktop automounters. It remains useful for minimal systems or when automatic mounting is undesired.
 
+# INSTALL
+
+```apt: sudo apt install pmount```
+
+```dnf: sudo dnf install pmount```
+
+```nix: nix profile install nixpkgs#pmount```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pumount](/man/pumount)(1), [mount](/man/mount)(8), [udisksctl](/man/udisksctl)(1)

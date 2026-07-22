@@ -64,6 +64,17 @@ The command supports pattern matching with **--include** and **--exclude** optio
 
 This command deletes non-versioned objects. For versioned buckets, deletion creates delete markers but does not permanently remove previous versions. To permanently delete versioned objects, use **aws s3api delete-object** with **--version-id**. Deletion is permanent for non-versioned buckets and cannot be undone.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3-rb](/man/aws-s3-rb)(1), [rm](/man/rm)(1)

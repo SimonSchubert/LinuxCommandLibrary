@@ -63,6 +63,16 @@ idempotent command-line tool for managing /etc/hosts
 
 Modifying /etc/hosts requires elevated privileges. Set HOSTESS_PATH to override default hosts file location. Set HOSTESS_FMT to 'windows' or 'unix' to override format detection.
 
+# INSTALL
+
+```pacman: sudo pacman -S hostess```
+
+```brew: brew install hostess```
+
+```nix: nix profile install nixpkgs#hostess```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 

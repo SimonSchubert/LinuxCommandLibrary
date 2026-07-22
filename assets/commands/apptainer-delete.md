@@ -52,6 +52,21 @@ The command requires authentication with the target library and appropriate perm
 
 This operation is irreversible. Deleted images cannot be recovered. Ensure you have backups of important container images before deletion. Only the image owner or library administrators can delete images.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-push](/man/apptainer-push)(1), [apptainer-pull](/man/apptainer-pull)(1), [apptainer-search](/man/apptainer-search)(1)

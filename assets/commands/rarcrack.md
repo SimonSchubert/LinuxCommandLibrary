@@ -60,6 +60,16 @@ Brute-force is slow for long passwords. For authorized recovery only. Strong pas
 
 **rarcrack** was created for password recovery from encrypted archives. It provides a simple brute-force tool for RAR, ZIP, and 7Z files.
 
+# INSTALL
+
+```apt: sudo apt install rarcrack```
+
+```pacman: sudo pacman -S rarcrack```
+
+```nix: nix profile install nixpkgs#rarcrack```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [john](/man/john)(1), [hashcat](/man/hashcat)(1), [zip2john](/man/zip2john)(1), [rar2john](/man/rar2john)(1)

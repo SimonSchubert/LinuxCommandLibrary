@@ -68,6 +68,16 @@ Requires good resolver list. High rates may trigger rate limiting. Resolver reli
 
 **massdns** was created by **B. Blechschmidt** for high-speed DNS resolution needs in security research. It fills the gap between single-query tools and the need to resolve millions of domains efficiently.
 
+# INSTALL
+
+```dnf: sudo dnf install massdns```
+
+```brew: brew install massdns```
+
+```nix: nix profile install nixpkgs#massdns```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [host](/man/host)(1), [subfinder](/man/subfinder)(1), [dnsx](/man/dnsx)(1)

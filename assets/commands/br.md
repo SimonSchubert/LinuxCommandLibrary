@@ -58,6 +58,12 @@ The br function must be installed using "broot --install" for proper shell integ
 
 **br** is the shell function component of **broot**, installed to enable directory navigation and shell integration features.
 
+# INSTALL
+
+```apt: sudo apt install bottlerocket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [broot](/man/broot)(1), [tree](/man/tree)(1), [ranger](/man/ranger)(1), [nnn](/man/nnn)(1), [yazi](/man/yazi)(1)

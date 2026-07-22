@@ -72,6 +72,16 @@ May lag behind reference DMD compiler. Some D features may differ. GCC version d
 
 gdc was developed to bring the D programming language to GCC, providing an alternative to the reference DMD compiler with broader platform support.
 
+# INSTALL
+
+```apt: sudo apt install gdc```
+
+```dnf: sudo dnf install gcc-gdc```
+
+```apk: sudo apk add gcc-gdc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [dmd](/man/dmd)(1), [ldc](/man/ldc)(1), [dub](/man/dub)(1)

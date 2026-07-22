@@ -59,6 +59,16 @@ Only works with Hyprland compositor. Requires Hyprland to be running. Changes af
 
 hyprsunset is part of the Hyprland ecosystem, created by Vaxry. It provides functionality similar to redshift or gammastep but specifically designed for the Hyprland Wayland compositor.
 
+# INSTALL
+
+```pacman: sudo pacman -S hyprsunset```
+
+```zypper: sudo zypper install hyprsunset```
+
+```nix: nix profile install nixpkgs#hyprsunset```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hyprctl](/man/hyprctl)(1), [redshift](/man/redshift)(1), [gammastep](/man/gammastep)(1)

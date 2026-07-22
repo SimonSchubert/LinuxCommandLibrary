@@ -98,6 +98,18 @@ Requires trace data from **blktrace** to function. Trace files can become very l
 
 blkparse was written by **Jens Axboe**, **Alan D. Brunelle**, and **Nathan Scott** as part of the blktrace toolkit. It was developed to provide detailed I/O tracing capabilities for Linux storage subsystem analysis and debugging.
 
+# INSTALL
+
+```apt: sudo apt install blktrace```
+
+```dnf: sudo dnf install blktrace```
+
+```zypper: sudo zypper install blktrace```
+
+```nix: nix profile install nixpkgs#blktrace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blktrace](/man/blktrace)(8), [btrace](/man/btrace)(8), [btt](/man/btt)(1), [iostat](/man/iostat)(1)

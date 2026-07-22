@@ -63,6 +63,14 @@ Only for SLX-compatible Lexmark printers. Limited model support. Some features m
 
 foo2slx is part of **foo2zjs**, providing Linux support for Lexmark printers using the SLX protocol through reverse-engineered drivers.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+```dnf: sudo dnf install foo2slx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2slx-wrapper](/man/foo2slx-wrapper)(1), [foo2zjs](/man/foo2zjs)(1)

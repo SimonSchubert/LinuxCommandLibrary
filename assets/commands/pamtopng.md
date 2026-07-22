@@ -56,6 +56,24 @@ Convert PAM images to PNG format
 
 Input is read from the specified file or standard input. Output is written to standard output.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pngtopam](/man/pngtopam)(1), [pnmtopng](/man/pnmtopng)(1)

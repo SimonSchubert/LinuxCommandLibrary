@@ -56,6 +56,12 @@ The wrapped compiler can be overridden via the `OMPI_CXX` (Open MPI) or `MPICH_C
 
 The flags injected by the wrapper depend on the MPI implementation; do not rely on `--showme` semantics being identical between Open MPI and MPICH. Mixing object files compiled with different MPI wrappers is unsafe.
 
+# INSTALL
+
+```apk: sudo apk add openmpi-dev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpirun](/man/mpirun)(1), [mpicxx](/man/mpicxx)(1), [mpicc](/man/mpicc)(1)

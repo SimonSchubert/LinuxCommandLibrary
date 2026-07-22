@@ -61,6 +61,20 @@ X11 specific. Used by session managers. Low-level utility.
 
 iceauth is part of **X.Org** for managing ICE protocol authentication, used in X session management.
 
+# INSTALL
+
+```apt: sudo apt install x11-xserver-utils```
+
+```dnf: sudo dnf install iceauth```
+
+```apk: sudo apk add iceauth```
+
+```zypper: sudo zypper install iceauth```
+
+```nix: nix profile install nixpkgs#iceauth```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xauth](/man/xauth)(1), [Xorg](/man/Xorg)(1)

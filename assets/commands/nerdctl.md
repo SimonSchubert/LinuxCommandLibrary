@@ -131,6 +131,20 @@ Some Docker features may not have exact equivalents. Rootless mode requires user
 
 **nerdctl** was developed by **containerd** maintainers as part of the containerd project. It provides a user-friendly CLI for containerd, which is used by Kubernetes and other container orchestrators as the underlying runtime.
 
+# INSTALL
+
+```pacman: sudo pacman -S nerdctl```
+
+```apk: sudo apk add nerdctl```
+
+```zypper: sudo zypper install nerdctl```
+
+```brew: brew install nerdctl```
+
+```nix: nix profile install nixpkgs#nerdctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [containerd](/man/containerd)(8), [ctr](/man/ctr)(1), [podman](/man/podman)(1)

@@ -77,6 +77,12 @@ Requires X11; does not work under Wayland. The upstream `Fushko/gummy` repositor
 
 **gummy** was created by **Francesco Fusco** as a lightweight, daemon-based alternative to Redshift-style tools for managing screen brightness and color temperature on Linux/X11.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#gummy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [redshift](/man/redshift)(1), [xrandr](/man/xrandr)(1), [brightnessctl](/man/brightnessctl)(1)

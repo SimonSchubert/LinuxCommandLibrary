@@ -49,6 +49,12 @@ Only checks for logical errors, not code style or formatting. Does not support c
 
 Pyflakes was created by Divmod for **fast static** analysis of Python code. It is now maintained by the PyCQA (Python Code Quality Authority) organization.
 
+# INSTALL
+
+```apk: sudo apk add py3-pyflakes```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pylint](/man/pylint)(1), [flake8](/man/flake8)(1), [mypy](/man/mypy)(1), [ruff](/man/ruff)(1)

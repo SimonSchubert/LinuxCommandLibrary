@@ -107,6 +107,16 @@ Requires the **v4l2loopback** kernel module to be loaded. Creating and deleting 
 
 The **v4l2loopback** project was created by **IOhannes m zmölnig** to provide virtual video devices on Linux using the Video4Linux2 (V4L2) framework. It gained widespread adoption as a way to create virtual webcams, particularly popular during the rise of video conferencing. The **v4l2loopback-ctl** utility was added to provide a user-friendly interface for managing these devices without directly manipulating kernel module parameters.
 
+# INSTALL
+
+```apt: sudo apt install v4l2loopback-utils```
+
+```pacman: sudo pacman -S v4l2loopback-utils```
+
+```zypper: sudo zypper install v4l2loopback-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [v4l2-ctl](/man/v4l2-ctl)(1), [ffmpeg](/man/ffmpeg)(1), [modprobe](/man/modprobe)(8)

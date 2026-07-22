@@ -71,6 +71,12 @@ Quality depends on terminal capabilities. Large images may be slow. Font affects
 
 **pixterm** is a Go-based terminal image viewer. It provides high-quality image rendering using modern terminal capabilities.
 
+# INSTALL
+
+```aur: yay -S pixterm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [catimg](/man/catimg)(1), [chafa](/man/chafa)(1), [tiv](/man/tiv)(1), [viu](/man/viu)(1)

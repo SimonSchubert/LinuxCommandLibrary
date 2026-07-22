@@ -75,6 +75,16 @@ Requires QEMU and related packages. Some features need KVM support. Guest additi
 
 **quickemu** was created by **Martin Wimpress** to simplify QEMU VM management. It grew from scripts used to test Linux distributions and evolved into a comprehensive VM tool.
 
+# INSTALL
+
+```apt: sudo apt install quickemu```
+
+```dnf: sudo dnf install quickemu```
+
+```nix: nix profile install nixpkgs#quickemu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [quickget](/man/quickget)(1), [qemu](/man/qemu)(1), [virt-manager](/man/virt-manager)(1)

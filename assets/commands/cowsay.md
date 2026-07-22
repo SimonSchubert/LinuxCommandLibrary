@@ -142,6 +142,20 @@ Pure entertainment value. Large messages may format oddly. Custom cow files need
 
 **cowsay** was written by Tony Monroe in **1999**, becoming a beloved Unix novelty program and inspiring numerous derivatives.
 
+# INSTALL
+
+```dnf: sudo dnf install cowsay```
+
+```pacman: sudo pacman -S cowsay```
+
+```zypper: sudo zypper install cowsay```
+
+```brew: brew install cowsay```
+
+```nix: nix profile install nixpkgs#cowsay```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fortune](/man/fortune)(6), [figlet](/man/figlet)(6), [lolcat](/man/lolcat)(1)

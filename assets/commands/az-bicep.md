@@ -91,6 +91,19 @@ Decompilation from ARM templates produces functionally equivalent Bicep but may 
 
 Bicep was announced in **August 2020** as a new language for Azure deployments, reaching version 1.0 in **May 2021**. It was designed to simplify the ARM template authoring experience while maintaining full compatibility with the Azure Resource Manager.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-deployment](/man/az-deployment)(1), [az-group](/man/az-group)(1)

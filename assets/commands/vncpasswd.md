@@ -52,6 +52,20 @@ Only first 8 characters matter. Password obfuscation is not secure encryption. F
 
 **vncpasswd** originated with the original AT&T VNC (Virtual Network Computing) implementation. Various VNC implementations (TightVNC, TigerVNC, RealVNC) include their own versions with minor variations but compatible password file formats.
 
+# INSTALL
+
+```dnf: sudo dnf install tigervnc```
+
+```pacman: sudo pacman -S tigervnc```
+
+```apk: sudo apk add tigervnc```
+
+```zypper: sudo zypper install tigervnc```
+
+```nix: nix profile install nixpkgs#tigervnc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vncserver](/man/vncserver)(1), [vncviewer](/man/vncviewer)(1), [x11vnc](/man/x11vnc)(1), [xvnc](/man/xvnc)(1)

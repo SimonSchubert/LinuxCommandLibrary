@@ -41,6 +41,20 @@ The command reads the image layers from the tarball and pushes them to the targe
 
 The registry must be reachable and the user must have push access. For multi-platform images, use **--index**. Large tarballs stream from disk, so sufficient bandwidth is required.
 
+# INSTALL
+
+```pacman: sudo pacman -S crane```
+
+```apk: sudo apk add crane```
+
+```zypper: sudo zypper install crane```
+
+```brew: brew install crane```
+
+```nix: nix profile install nixpkgs#crane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-pull](/man/crane-pull)(1), [docker](/man/docker)(1), [skopeo](/man/skopeo)(1)

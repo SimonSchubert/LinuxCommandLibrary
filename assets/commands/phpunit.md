@@ -71,6 +71,16 @@ Configuration via phpunit.xml. Code coverage requires Xdebug or PCOV to be insta
 
 PHPUnit was created by **Sebastian Bergmann** as the standard **PHP testing framework**.
 
+# INSTALL
+
+```apk: sudo apk add phpunit```
+
+```brew: brew install phpunit```
+
+```nix: nix profile install nixpkgs#phpunit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [phpspec](/man/phpspec)(1), [pest](/man/pest)(1), [php](/man/php)(1)

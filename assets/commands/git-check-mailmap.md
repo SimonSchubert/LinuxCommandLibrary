@@ -58,6 +58,24 @@ Requires .mailmap file in repository. Input must be proper "Name <email>" format
 
 git check-mailmap was added to **Git** to support debugging mailmap configurations, complementing git shortlog -e functionality.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-shortlog](/man/git-shortlog)(1), [git-log](/man/git-log)(1)

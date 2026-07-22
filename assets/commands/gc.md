@@ -85,6 +85,24 @@ This command is unrelated to garbage collection. In PowerShell, **gc** is an ali
 
 **gc** is part of the **Graphviz** suite, developed at **AT&T Labs Research** starting in the early **1990s** by **Stephen North**, **Eleftherios Koutsofios**, **Emden Gansner** and others. Graphviz was open-sourced in **2004** and remains actively maintained.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wc](/man/wc)(1), [acyclic](/man/acyclic)(1), [ccomps](/man/ccomps)(1), [sccmap](/man/sccmap)(1), [tred](/man/tred)(1), [gvpr](/man/gvpr)(1), [dot](/man/dot)(1)

@@ -117,6 +117,12 @@ Only use on systems you have permission to test. High thread counts may trigger 
 
 **dirsearch** was created by Mauro Soria as a Python-based alternative to tools like DirBuster and gobuster. It has been actively maintained since **2014** and is widely used in the security community. The tool's ease of use and comprehensive features made it popular for web application security testing.
 
+# INSTALL
+
+```aur: yay -S dirsearch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gobuster](/man/gobuster)(1), [ffuf](/man/ffuf)(1), [wfuzz](/man/wfuzz)(1), [nikto](/man/nikto)(1), [dirb](/man/dirb)(1)

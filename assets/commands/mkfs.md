@@ -67,6 +67,24 @@ This command is deprecated in favor of filesystem-specific mkfs utilities (mkfs.
 
 **mkfs** is part of **util-linux**. It serves as a wrapper that delegates to the appropriate filesystem-specific mkfs.* utility based on the specified type.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkfs.ext4](/man/mkfs.ext4)(8), [mkfs.xfs](/man/mkfs.xfs)(8), [mkfs.btrfs](/man/mkfs.btrfs)(8), [fsck](/man/fsck)(8), [mount](/man/mount)(8)

@@ -45,6 +45,22 @@ Requires root privileges. Behavior depends on installed plugins. Works best with
 
 kernel-install is part of systemd, providing a standardized way to manage kernel installation. It implements the Boot Loader Specification for portable boot configurations.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bootctl](/man/bootctl)(1), [dracut](/man/dracut)(8)

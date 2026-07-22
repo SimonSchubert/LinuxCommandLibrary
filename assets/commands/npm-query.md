@@ -68,6 +68,16 @@ CSS selector syntax. Added in npm 8.16. Complex queries possible.
 
 npm query was added to provide **CSS-like querying** of the dependency tree.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-ls](/man/npm-ls)(1), [npm-explain](/man/npm-explain)(1)

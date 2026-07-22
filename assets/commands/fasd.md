@@ -97,6 +97,16 @@ Requires shell integration. Database builds over time. Patterns are substrings. 
 
 **fasd** was created by **Wei Dai** (clvv) inspired by autojump and z. It combined features of both, adding file tracking and extensibility. The project became popular for its speed and flexibility in shell navigation.
 
+# INSTALL
+
+```pacman: sudo pacman -S fasd```
+
+```zypper: sudo zypper install fasd```
+
+```nix: nix profile install nixpkgs#fasd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [z](/man/z)(1), [autojump](/man/autojump)(1), [zoxide](/man/zoxide)(1), [fzf](/man/fzf)(1)

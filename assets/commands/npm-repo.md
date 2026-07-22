@@ -52,6 +52,16 @@ If the package's `package.json` does not include a `repository` field, npm falls
 
 **npm repo** has been part of the npm CLI since early versions, providing quick access to package source code repositories.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-home](/man/npm-home)(1), [npm-docs](/man/npm-docs)(1)

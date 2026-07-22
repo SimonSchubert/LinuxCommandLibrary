@@ -65,6 +65,17 @@ Reports can take up to 24 hours to appear in S3 after creation. The API endpoint
 
 AWS Cost and Usage Reports launched in **2015** as an evolution of the Detailed Billing Reports. The CUR API was added in **2017** to enable programmatic management. Parquet format support was introduced in **2018** for better integration with analytics tools, and resource-level data became available for more services over time.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ce](/man/aws-ce)(1), [aws-budgets](/man/aws-budgets)(1)

@@ -69,6 +69,22 @@ Requires root or udev rules. Device support varies. Some features hardware-speci
 
 liquidctl was created to provide open source control for AIO liquid coolers and RGB peripherals on Linux.
 
+# INSTALL
+
+```apt: sudo apt install liquidctl```
+
+```dnf: sudo dnf install liquidctl```
+
+```pacman: sudo pacman -S liquidctl```
+
+```apk: sudo apk add liquidctl```
+
+```brew: brew install liquidctl```
+
+```nix: nix profile install nixpkgs#liquidctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sensors](/man/sensors)(1), [fancontrol](/man/fancontrol)(1)

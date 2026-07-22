@@ -68,6 +68,12 @@ Requires valid domain credentials. Output may be verbose; consider redirecting s
 
 Part of the **Impacket** library developed by SecureAuth. The tool leverages LDAP queries against Active Directory, implementing Microsoft's directory service protocols in Python for cross-platform compatibility.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [impacket-addcomputer](/man/impacket-addcomputer)(1), [impacket-secretsdump](/man/impacket-secretsdump)(1), [ldapsearch](/man/ldapsearch)(1), [net](/man/net)(1)

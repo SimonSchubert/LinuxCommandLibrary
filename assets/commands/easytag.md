@@ -55,6 +55,22 @@ GUI application; no command-line tag editing. Some tag formats may have limited 
 
 EasyTAG was started by **Jérôme Couderc** in **2000** and has been maintained by the GNOME community. It evolved from earlier command-line tag editors to provide a user-friendly graphical interface for music metadata management.
 
+# INSTALL
+
+```apt: sudo apt install easytag```
+
+```dnf: sudo dnf install easytag```
+
+```pacman: sudo pacman -S easytag```
+
+```apk: sudo apk add easytag```
+
+```zypper: sudo zypper install easytag```
+
+```nix: nix profile install nixpkgs#easytag```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [id3v2](/man/id3v2)(1), [kid3](/man/kid3)(1), [picard](/man/picard)(1)

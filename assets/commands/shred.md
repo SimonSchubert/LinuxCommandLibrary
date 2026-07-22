@@ -84,6 +84,24 @@ The **-u** option removes the file after shredding, including attempting to rena
 
 **For maximum security**, use full-disk encryption from the start; then destroying the key makes all data unrecoverable regardless of filesystem or storage type.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rm](/man/rm)(1), [wipe](/man/wipe)(1), [srm](/man/srm)(1), [dd](/man/dd)(1)

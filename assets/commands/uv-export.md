@@ -63,6 +63,20 @@ Export dependencies to requirements format
 
 **uv export** exports project dependencies to various formats. The default format is requirements.txt, compatible with pip. It also supports pylock.toml (PEP 751) and CycloneDX SBOM for security auditing and compliance. Useful for deployment environments that don't use uv.
 
+# INSTALL
+
+```dnf: sudo dnf install uv```
+
+```pacman: sudo pacman -S uv```
+
+```apk: sudo apk add uv```
+
+```brew: brew install uv```
+
+```nix: nix profile install nixpkgs#uv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uv](/man/uv)(1), [uv-lock](/man/uv-lock)(1), [uv-run](/man/uv-run)(1), [pip](/man/pip)(1)

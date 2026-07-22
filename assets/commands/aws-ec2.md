@@ -98,6 +98,17 @@ Instances continue incurring charges until terminated (not just stopped) for EBS
 
 Amazon EC2 launched in **August 2006** as one of AWS's first services, revolutionizing cloud computing. VPC became mandatory in **2013**. The service has continuously expanded instance types, from the original m1.small to hundreds of specialized types for compute, memory, GPU, and storage optimization.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-autoscaling](/man/aws-autoscaling)(1), [aws-elb](/man/aws-elb)(1), [aws-vpc](/man/aws-vpc)(1)

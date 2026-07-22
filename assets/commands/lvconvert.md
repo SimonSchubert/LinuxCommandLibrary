@@ -56,6 +56,22 @@ Convert to **thin pool**
 
 Requires root privileges. Data migration may take time. Snapshot merge applies on next activation.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvcreate](/man/lvcreate)(8), [lvchange](/man/lvchange)(8), [lvextend](/man/lvextend)(8), [lvm](/man/lvm)(8)

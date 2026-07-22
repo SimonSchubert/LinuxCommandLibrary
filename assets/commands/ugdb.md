@@ -90,6 +90,12 @@ Supports vim-like keybindings and remote control via IPC. The **--rr** flag enab
 
 **ugdb** was created by **ftilde** and is written in **Rust**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#ugdb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdb](/man/gdb)(1), [lldb](/man/lldb)(1)

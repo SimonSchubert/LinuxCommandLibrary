@@ -75,6 +75,24 @@ Extensions run with user permissions. Review extension code before installing. E
 
 The extension system was added to **GitHub CLI** in **2021**, enabling community-driven expansion of gh functionality through a plugin architecture.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-a11y](/man/gh-a11y)(1)

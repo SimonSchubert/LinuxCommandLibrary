@@ -61,6 +61,14 @@ The cgroup must exist before using cgexec (create with cgcreate). Multiple contr
 
 **cgexec** is part of **libcgroup**, providing cgroup management utilities for resource control on Linux.
 
+# INSTALL
+
+```apt: sudo apt install cgroup-tools```
+
+```apk: sudo apk add cgroup-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cgcreate](/man/cgcreate)(1), [cgclassify](/man/cgclassify)(1), [cgdelete](/man/cgdelete)(1), [systemd-run](/man/systemd-run)(1)

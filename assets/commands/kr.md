@@ -62,6 +62,12 @@ Requires Krypton app. Phone needed for auth. Project deprecated.
 
 kr was the CLI for **Krypton** (now deprecated), which stored SSH and GPG keys on smartphones for 2FA.
 
+# INSTALL
+
+```aur: yay -S kr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [ssh-keygen](/man/ssh-keygen)(1), [gpg](/man/gpg)(1)

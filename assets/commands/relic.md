@@ -118,6 +118,12 @@ The interactive TUI is not available in standalone binary installations; use CLI
 
 Relic was created by **Can Vardar** at **Cupola** as an open-source, CLI-first alternative to cloud secret managers. It is written in **TypeScript** (CLI) with a **Rust** runtime component for secure secret injection. The project is licensed under the **BSL 1.1** (Business Source License) and hosted on GitHub.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#relic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doppler](/man/doppler)(1), [vault](/man/vault)(1), [sops](/man/sops)(1), [age](/man/age)(1), [gpg](/man/gpg)(1)

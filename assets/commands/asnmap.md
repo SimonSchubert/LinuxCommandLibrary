@@ -81,6 +81,17 @@ Data comes from public sources and may not be current. Some organizations have m
 
 **asnmap** was developed by ProjectDiscovery as part of their security reconnaissance toolkit.
 
+# INSTALL
+
+```dnf: sudo dnf install asnmap```
+
+```aur: yay -S asnmap```
+
+```brew: brew install asnmap```
+
+```nix: nix profile install nixpkgs#asnmap```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [whois](/man/whois)(1), [dig](/man/dig)(1), [nmap](/man/nmap)(1), [subfinder](/man/subfinder)(1)

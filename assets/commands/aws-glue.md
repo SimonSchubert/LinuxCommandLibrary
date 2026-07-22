@@ -92,6 +92,17 @@ Crawlers can take significant time on large datasets. Job cold start adds latenc
 
 AWS Glue launched in **August 2017** as a serverless ETL service. Glue Studio for visual ETL authoring came in **2020**. Data Quality features were added in **2022**, and Glue for Ray (distributed Python) launched in **2023** for data science workloads.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-athena](/man/aws-athena)(1), [aws-s3](/man/aws-s3)(1), [aws-redshift](/man/aws-redshift)(1)

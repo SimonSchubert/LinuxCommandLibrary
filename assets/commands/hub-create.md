@@ -60,6 +60,20 @@ creates a new GitHub repository and adds it as a remote
 
 Hub is deprecated. Consider using **gh repo create** instead.
 
+# INSTALL
+
+```apt: sudo apt install hub```
+
+```pacman: sudo pacman -S hub```
+
+```zypper: sudo zypper install hub```
+
+```brew: brew install hub```
+
+```nix: nix profile install nixpkgs#hub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hub](/man/hub)(1), [gh-repo-create](/man/gh-repo-create)(1)

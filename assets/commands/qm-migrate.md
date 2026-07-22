@@ -56,6 +56,12 @@ Online migration requires shared storage or --with-local-disks option. Network b
 
 Part of **Proxmox VE** QEMU/KVM management tools. VM migration is essential for cluster maintenance and load balancing.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [pvecm](/man/pvecm)(1)

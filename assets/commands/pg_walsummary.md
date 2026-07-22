@@ -35,6 +35,16 @@ displays WAL summary file contents
 
 **pg_walsummary** prints the contents of WAL summary files. These binary files are found in the pg_wal/summaries subdirectory of the data directory and track which blocks were modified, supporting the incremental backup feature introduced in PostgreSQL 17.
 
+# INSTALL
+
+```dnf: sudo dnf install postgresql17```
+
+```apk: sudo apk add postgresql17```
+
+```zypper: sudo zypper install postgresql17```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_waldump](/man/pg_waldump)(1), [pg_combinebackup](/man/pg_combinebackup)(1), [pg_basebackup](/man/pg_basebackup)(1)

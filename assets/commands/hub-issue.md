@@ -112,6 +112,20 @@ With no arguments, it lists open issues for the current repository, sorted by cr
 
 Part of **hub**, which is deprecated in favor of the official GitHub CLI (**gh**); consider using **gh issue** instead. Requires GitHub authentication.
 
+# INSTALL
+
+```apt: sudo apt install hub```
+
+```pacman: sudo pacman -S hub```
+
+```zypper: sudo zypper install hub```
+
+```brew: brew install hub```
+
+```nix: nix profile install nixpkgs#hub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hub](/man/hub)(1), [gh-issue](/man/gh-issue)(1)

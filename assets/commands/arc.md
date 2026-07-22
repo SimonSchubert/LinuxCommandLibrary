@@ -64,6 +64,17 @@ The ARC format is obsolete; use modern formats like zip or tar.gz for new archiv
 
 The ARC format was created by System Enhancement Associates in **1985** and was one of the first popular file compression formats for personal computers.
 
+# INSTALL
+
+```apt: sudo apt install arc```
+
+```dnf: sudo dnf install arc```
+
+```aur: yay -S arc```
+
+```zypper: sudo zypper install arc```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [unzip](/man/unzip)(1), [tar](/man/tar)(1), [gzip](/man/gzip)(1)

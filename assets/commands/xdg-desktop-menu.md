@@ -51,6 +51,20 @@ The tool is part of the xdg-utils package that provides standardized desktop int
 
 Requires valid .desktop files. Menu system must be XDG compliant. Changes may require logout or menu refresh to appear.
 
+# INSTALL
+
+```dnf: sudo dnf install xdg-utils```
+
+```pacman: sudo pacman -S xdg-utils```
+
+```apk: sudo apk add xdg-utils```
+
+```zypper: sudo zypper install xdg-utils```
+
+```nix: nix profile install nixpkgs#xdg-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdg-open](/man/xdg-open)(1), [xdg-mime](/man/xdg-mime)(1), [desktop-file-validate](/man/desktop-file-validate)(1)

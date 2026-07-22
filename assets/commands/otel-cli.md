@@ -48,6 +48,14 @@ See **otel-cli --help** for vendor-specific exporters and W3C traceparent propag
 
 Requires a reachable OpenTelemetry collector or backend. Incorrect endpoints silently drop telemetry. Clock skew affects span timing.
 
+# INSTALL
+
+```brew: brew install otel-cli```
+
+```nix: nix profile install nixpkgs#otel-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [time](/man/time)(1)

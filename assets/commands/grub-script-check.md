@@ -49,6 +49,16 @@ Only checks syntax, not semantic correctness. Valid syntax doesn't guarantee the
 
 grub-script-check is part of GRUB 2, providing validation for GRUB's configuration scripting language. The scripting capability was introduced in GRUB 2 to replace the simpler configuration format of GRUB Legacy.
 
+# INSTALL
+
+```apt: sudo apt install grub-common```
+
+```pacman: sudo pacman -S grub```
+
+```apk: sudo apk add grub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub-mkconfig](/man/grub-mkconfig)(8), [grub-install](/man/grub-install)(8), [update-grub](/man/update-grub)(8)

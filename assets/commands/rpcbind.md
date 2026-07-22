@@ -90,6 +90,22 @@ Required for NFS. Security concerns - limit access with firewall. Port 111 TCP/U
 
 rpcbind replaces the older **portmap** from Sun RPC, providing improved security and IPv6 support.
 
+# INSTALL
+
+```apt: sudo apt install rpcbind```
+
+```dnf: sudo dnf install rpcbind```
+
+```pacman: sudo pacman -S rpcbind```
+
+```apk: sudo apk add rpcbind```
+
+```zypper: sudo zypper install rpcbind```
+
+```nix: nix profile install nixpkgs#rpcbind```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rpcinfo](/man/rpcinfo)(8)

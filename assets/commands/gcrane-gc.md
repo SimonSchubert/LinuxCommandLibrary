@@ -34,6 +34,14 @@ garbage collects untagged images
 
 The command lists image digests that have no associated tags. It does not delete images directly; output should be piped to gcrane delete for actual removal. The grace period option protects recently created images from accidental deletion. Dry run mode shows what would be deleted without making changes, allowing safe preview before cleanup operations.
 
+# INSTALL
+
+```zypper: sudo zypper install gcrane```
+
+```nix: nix profile install nixpkgs#gcrane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcrane](/man/gcrane)(1), [gcrane-ls](/man/gcrane-ls)(1)

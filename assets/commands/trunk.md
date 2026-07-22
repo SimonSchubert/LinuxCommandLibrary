@@ -89,6 +89,20 @@ Rust/WASM specific. wasm-bindgen based. Trunk.toml config.
 
 **Trunk** was created for building and bundling Rust WebAssembly applications.
 
+# INSTALL
+
+```dnf: sudo dnf install trunk```
+
+```pacman: sudo pacman -S trunk```
+
+```apk: sudo apk add trunk```
+
+```brew: brew install trunk```
+
+```nix: nix profile install nixpkgs#trunk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wasm-pack](/man/wasm-pack)(1), [cargo](/man/cargo)(1)

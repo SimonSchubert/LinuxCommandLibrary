@@ -92,6 +92,24 @@ Workflow must have workflow_dispatch trigger for manual runs. Enable/disable req
 
 gh workflow was added to the **GitHub CLI** as part of comprehensive GitHub Actions integration, enabling complete workflow management from the terminal.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-run](/man/gh-run)(1)

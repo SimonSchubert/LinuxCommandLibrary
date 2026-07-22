@@ -50,6 +50,24 @@ download container images from registries
 
 **docker pull** downloads an image from a registry. Pulls from Docker Hub by default. If no tag is specified, pulls the latest tag. Images are downloaded in layers, and Docker caches these layers to optimize subsequent pulls. Supports multi-platform images with automatic platform detection.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-image-pull](/man/docker-image-pull)(1), [docker-run](/man/docker-run)(1), [docker-images](/man/docker-images)(1)

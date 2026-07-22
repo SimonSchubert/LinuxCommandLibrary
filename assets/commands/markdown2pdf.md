@@ -84,6 +84,12 @@ Multiple unrelated tools share the **markdown2pdf** name (Rust, Node.js, and Pyt
 
 The Rust **markdown2pdf** crate was created by **theiskaa** and is distributed on crates.io. It can be installed with `cargo install markdown2pdf` or via a Homebrew tap.
 
+# INSTALL
+
+```aur: yay -S markdown2pdf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pandoc](/man/pandoc)(1), [wkhtmltopdf](/man/wkhtmltopdf)(1)

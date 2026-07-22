@@ -88,6 +88,23 @@ Requires Audacious to be running. Commands fail if player is not active. Some fe
 
 **audtool** was developed alongside Audacious to provide scriptable control, continuing the tradition of beep-media-player-control and xmmsctrl.
 
+# INSTALL
+
+```apt: sudo apt install audacious```
+
+```dnf: sudo dnf install audacious```
+
+```pacman: sudo pacman -S audacious```
+
+```apk: sudo apk add audacious```
+
+```zypper: sudo zypper install audacious```
+
+```brew: brew install audacious```
+
+```nix: nix profile install nixpkgs#audacious```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [audacious](/man/audacious)(1), [playerctl](/man/playerctl)(1)

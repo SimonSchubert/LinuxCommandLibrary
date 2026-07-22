@@ -82,6 +82,24 @@ Note: Two different tools share the name ifstat. The standalone version (section
 
 Statistics depend on kernel interface counters. Very high traffic rates may overflow 32-bit counters on older systems. The iproute2 ifstat(8) has different flags than the standalone ifstat(1).
 
+# INSTALL
+
+```apt: sudo apt install ifstat```
+
+```dnf: sudo dnf install ifstat```
+
+```pacman: sudo pacman -S iproute2```
+
+```apk: sudo apk add iproute2```
+
+```zypper: sudo zypper install iproute2```
+
+```brew: brew install ifstat```
+
+```nix: nix profile install nixpkgs#iproute2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip](/man/ip)(8), [netstat](/man/netstat)(8), [iftop](/man/iftop)(8), [vmstat](/man/vmstat)(8)

@@ -43,6 +43,24 @@ This enables integration with connection brokers, process supervisors, or custom
 
 This is an advanced, low-level feature. File descriptors must be pre-opened by the calling process. Not suitable for everyday Git workflows; primarily useful for embedding Git in applications that manage their own connections.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-remote](/man/git-remote)(1), [git-remote-ext](/man/git-remote-ext)(1)

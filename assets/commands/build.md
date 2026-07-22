@@ -74,6 +74,12 @@ Requires a **pyproject.toml** file with build system configuration. The isolated
 
 The **build** package was created by the Python Packaging Authority (PyPA) as part of modernizing Python packaging. It was first released in **2020** to provide a simple, standardized way to build packages according to PEP 517 and PEP 518 specifications. It replaced the older practice of running **python setup.py** commands directly, supporting any PEP 517 compliant build backend.
 
+# INSTALL
+
+```zypper: sudo zypper install build```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [twine](/man/twine)(1), [flit](/man/flit)(1), [hatch](/man/hatch)(1)

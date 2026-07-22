@@ -76,6 +76,24 @@ The subdirectory-filter is particularly useful for extracting a subdirectory int
 
 **Officially deprecated** in favor of git-filter-repo. Slow on large repositories. Changes history, invalidating commit hashes and requiring force pushes. Collaborators must reclone. Creates backup refs that must be manually cleaned.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-filter-repo](/man/git-filter-repo)(1), [git-rebase](/man/git-rebase)(1), [git-rm](/man/git-rm)(1)

@@ -41,6 +41,20 @@ Devices are mounted to standard locations managed by udisks2, typically under /r
 
 Requires udisks2 daemon. Device must be recognized by udisks2. Some encrypted devices require additional configuration for password prompts.
 
+# INSTALL
+
+```dnf: sudo dnf install udiskie```
+
+```pacman: sudo pacman -S udiskie```
+
+```apk: sudo apk add udiskie```
+
+```zypper: sudo zypper install udiskie```
+
+```nix: nix profile install nixpkgs#udiskie```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [udiskie](/man/udiskie)(1), [udiskie-umount](/man/udiskie-umount)(1), [udisksctl](/man/udisksctl)(1)

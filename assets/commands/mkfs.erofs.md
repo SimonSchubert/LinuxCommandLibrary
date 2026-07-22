@@ -63,6 +63,24 @@ EROFS is read-only; the source directory is not modified. Large directories may 
 
 EROFS was developed by Huawei and merged into the Linux kernel in version 4.19 (2018). It has since been adopted by Android for system partitions and various embedded Linux distributions.
 
+# INSTALL
+
+```apt: sudo apt install erofs-utils```
+
+```dnf: sudo dnf install erofs-utils```
+
+```pacman: sudo pacman -S erofs-utils```
+
+```apk: sudo apk add erofs-utils```
+
+```zypper: sudo zypper install erofs-utils```
+
+```brew: brew install erofs-utils```
+
+```nix: nix profile install nixpkgs#erofs-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mksquashfs](/man/mksquashfs)(1), [mount](/man/mount)(8), [losetup](/man/losetup)(8)

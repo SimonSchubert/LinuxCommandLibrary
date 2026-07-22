@@ -64,6 +64,20 @@ Unlike **screen** or **tmux**, abduco focuses solely on session management witho
 
 **abduco** was written by Marc Andre Tanner and first released in **2014**. It was designed as a minimal alternative to GNU Screen and tmux, following the Unix philosophy of doing one thing well. The tool is often paired with **dvtm** (dynamic virtual terminal manager) by the same author.
 
+# INSTALL
+
+```dnf: sudo dnf install abduco```
+
+```pacman: sudo pacman -S abduco```
+
+```apk: sudo apk add abduco```
+
+```brew: brew install abduco```
+
+```nix: nix profile install nixpkgs#abduco```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [screen](/man/screen)(1), [dvtm](/man/dvtm)(1), [dtach](/man/dtach)(1)

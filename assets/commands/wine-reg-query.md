@@ -41,6 +41,20 @@ For each value, the output shows its name, type, and data. Use **/s** to walk th
 **/s**
 > Query all subkeys and their values recursively.
 
+# INSTALL
+
+```dnf: sudo dnf install wine```
+
+```pacman: sudo pacman -S wine```
+
+```apk: sudo apk add wine```
+
+```zypper: sudo zypper install wine```
+
+```nix: nix profile install nixpkgs#wine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wine](/man/wine)(1), [wine-reg](/man/wine-reg)(1), [wine-reg-add](/man/wine-reg-add)(1), [wine-reg-delete](/man/wine-reg-delete)(1), [wine-reg-copy](/man/wine-reg-copy)(1)

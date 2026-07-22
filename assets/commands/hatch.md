@@ -96,6 +96,16 @@ Relatively new; ecosystem still growing. Different workflow from pip/setuptools.
 
 Hatch was created by **Ofek Lev** as a modern replacement for traditional Python packaging tools. It follows current PEP standards and aims to simplify the Python project lifecycle.
 
+# INSTALL
+
+```dnf: sudo dnf install hatch```
+
+```brew: brew install hatch```
+
+```nix: nix profile install nixpkgs#hatch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [poetry](/man/poetry)(1), [flit](/man/flit)(1), [pdm](/man/pdm)(1)

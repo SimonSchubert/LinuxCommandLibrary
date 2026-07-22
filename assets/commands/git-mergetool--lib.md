@@ -26,6 +26,24 @@ Internal library, not a command. Sourced by other git scripts. Not intended for 
 
 git-mergetool--lib is part of **Git's** internal infrastructure, providing shared code for merge and diff tool integration.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-mergetool](/man/git-mergetool)(1), [git-difftool](/man/git-difftool)(1)

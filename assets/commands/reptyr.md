@@ -47,6 +47,22 @@ Requires ptrace capability (may need root or sysctl adjustment). Some processes 
 
 **reptyr** was created by **Nelson Elhage** to solve the common problem of wanting to move a running process to a different terminal or screen session without restarting it.
 
+# INSTALL
+
+```apt: sudo apt install reptyr```
+
+```dnf: sudo dnf install reptyr```
+
+```pacman: sudo pacman -S reptyr```
+
+```apk: sudo apk add reptyr```
+
+```zypper: sudo zypper install reptyr```
+
+```nix: nix profile install nixpkgs#reptyr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [screen](/man/screen)(1), [tmux](/man/tmux)(1), [nohup](/man/nohup)(1), [disown](/man/disown)(1)

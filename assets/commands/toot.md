@@ -28,6 +28,20 @@ Mastodon CLI and TUI client
 
 **toot** was created by **Ivan Habunek** (ihabunek) and is written in **Python**.
 
+# INSTALL
+
+```dnf: sudo dnf install toot```
+
+```pacman: sudo pacman -S toot```
+
+```apk: sudo apk add toot```
+
+```brew: brew install toot```
+
+```nix: nix profile install nixpkgs#toot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tuisky](/man/tuisky)(1), [servitor](/man/servitor)(1)

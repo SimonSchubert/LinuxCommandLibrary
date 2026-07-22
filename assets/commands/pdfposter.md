@@ -70,6 +70,16 @@ Python-based tool built on pypdf/PyPDF2. Only the first page of the input is til
 
 **pdfposter** was written by **Hartmut Goebel** as a Python alternative to `poster`(1), which operates on PostScript. It has been packaged by major Linux distributions since the mid-2000s.
 
+# INSTALL
+
+```apk: sudo apk add pdfposter```
+
+```zypper: sudo zypper install pdfposter```
+
+```nix: nix profile install nixpkgs#pdfposter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdfjam](/man/pdfjam)(1), [poster](/man/poster)(1), [pdfnup](/man/pdfnup)(1), [pdftk](/man/pdftk)(1)

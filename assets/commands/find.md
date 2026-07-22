@@ -83,6 +83,24 @@ Glob patterns need quoting. -delete acts immediately without confirmation. Compl
 
 find appeared in **Unix Version 5** (1974). It remains the standard file-finding utility, though modern alternatives like fd offer simpler syntax for common cases.
 
+# INSTALL
+
+```apt: sudo apt install findutils```
+
+```dnf: sudo dnf install findutils```
+
+```pacman: sudo pacman -S findutils```
+
+```apk: sudo apk add findutils```
+
+```zypper: sudo zypper install findutils```
+
+```brew: brew install findutils```
+
+```nix: nix profile install nixpkgs#findutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fd](/man/fd)(1), [locate](/man/locate)(1), [xargs](/man/xargs)(1)

@@ -52,6 +52,16 @@ Without `--pre` it connects to the cluster and reports on the installed Flux com
 **-n**, **--namespace** _ns_
 > Namespace scope for the CLI request (default `flux-system`).
 
+# INSTALL
+
+```apk: sudo apk add flux```
+
+```brew: brew install flux```
+
+```nix: nix profile install nixpkgs#flux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flux](/man/flux)(1), [flux-bootstrap](/man/flux-bootstrap)(1)

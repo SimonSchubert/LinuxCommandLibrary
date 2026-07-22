@@ -111,6 +111,20 @@ The makestep command can cause time jumps that affect running applications. Fire
 
 chrony was originally written by **Richard Curnow** starting in **1997** to provide better accuracy for systems with intermittent network connectivity. **Miroslav Lichvar** took over maintenance and development in **2007**. chrony has become the default NTP client in many Linux distributions including Fedora and RHEL, chosen over ntpd for its faster sync and better handling of modern computing environments.
 
+# INSTALL
+
+```dnf: sudo dnf install chrony```
+
+```pacman: sudo pacman -S chrony```
+
+```zypper: sudo zypper install chrony```
+
+```brew: brew install chrony```
+
+```nix: nix profile install nixpkgs#chrony```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ntpd](/man/ntpd)(8), [timedatectl](/man/timedatectl)(1), [hwclock](/man/hwclock)(8)

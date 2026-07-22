@@ -62,6 +62,24 @@ provides configuration information for building against LLVM
 
 **llvm-config** provides configuration information for building against LLVM. Outputs compiler flags, linker flags, and library names needed to compile and link programs using LLVM libraries.
 
+# INSTALL
+
+```apt: sudo apt install llvm```
+
+```dnf: sudo dnf install llvm```
+
+```pacman: sudo pacman -S llvm```
+
+```apk: sudo apk add llvm-dev```
+
+```zypper: sudo zypper install llvm```
+
+```brew: brew install llvm```
+
+```nix: nix profile install nixpkgs#llvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clang](/man/clang)(1), [llc](/man/llc)(1)

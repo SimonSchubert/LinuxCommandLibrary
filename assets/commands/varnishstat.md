@@ -93,6 +93,20 @@ Requires access to Varnish shared memory. Statistics reset on Varnish restart. F
 
 **varnishstat** was developed by Poul-Henning Kamp as part of the Varnish Cache project. Varnish was created for the Norwegian newspaper VG in 2006 and has become one of the most widely deployed HTTP accelerators.
 
+# INSTALL
+
+```apt: sudo apt install varnish```
+
+```dnf: sudo dnf install varnish```
+
+```apk: sudo apk add varnish```
+
+```brew: brew install varnish```
+
+```nix: nix profile install nixpkgs#varnish```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [varnishd](/man/varnishd)(1), [varnishhist](/man/varnishhist)(1), [varnishlog](/man/varnishlog)(1)

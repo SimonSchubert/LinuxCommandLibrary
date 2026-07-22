@@ -69,6 +69,22 @@ By default, Ctrl+C is ignored, and you must wait for the animation to complete. 
 
 **sl** was created by **Toyoda Masashi** in **1993** at the University of Tokyo. It was designed as a joke program to discourage the common typo of typing sl instead of ls. The program has become a beloved piece of Unix humor and is available in most Linux distribution repositories.
 
+# INSTALL
+
+```dnf: sudo dnf install sl```
+
+```pacman: sudo pacman -S sl```
+
+```apk: sudo apk add sl```
+
+```zypper: sudo zypper install sl```
+
+```brew: brew install sl```
+
+```nix: nix profile install nixpkgs#sl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [cowsay](/man/cowsay)(1), [fortune](/man/fortune)(1), [figlet](/man/figlet)(1)

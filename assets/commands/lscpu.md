@@ -73,6 +73,24 @@ Information varies by architecture and kernel version. Some fields may not be av
 
 Part of **util-linux** package. Provides a convenient way to view CPU information that would otherwise require parsing /proc/cpuinfo.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add lscpu```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmidecode](/man/dmidecode)(8), [nproc](/man/nproc)(1)

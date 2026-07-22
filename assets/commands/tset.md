@@ -96,6 +96,22 @@ When the terminal is garbled, you may need to type **\<LF\>reset\<LF\>** (Ctrl+J
 
 **tset** was written by **Eric Allman** and first appeared in **1BSD** in **1977**, using the termcap database. The ncurses version uses terminfo. The **reset** functionality was historically a separate command but is now typically a link to tset. The command predates POSIX and is not standardized.
 
+# INSTALL
+
+```apt: sudo apt install ncurses-bin```
+
+```dnf: sudo dnf install ncurses```
+
+```pacman: sudo pacman -S ncurses```
+
+```apk: sudo apk add ncurses```
+
+```brew: brew install ncurses```
+
+```nix: nix profile install nixpkgs#ncurses```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [reset](/man/reset)(1), [stty](/man/stty)(1), [clear](/man/clear)(1), [tput](/man/tput)(1), [infocmp](/man/infocmp)(1)

@@ -28,6 +28,24 @@ TUI for managing WireGuard configurations
 
 **wg-cmd** was created by **Andrian Budantsov** (AndrianBdn) and is written in **Go**.
 
+# INSTALL
+
+```apt: sudo apt install wireguard-tools```
+
+```dnf: sudo dnf install wireguard-tools```
+
+```pacman: sudo pacman -S wireguard-tools```
+
+```apk: sudo apk add wireguard-tools-wg```
+
+```zypper: sudo zypper install wireguard-tools```
+
+```brew: brew install wireguard-tools```
+
+```nix: nix profile install nixpkgs#wireguard-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wg](/man/wg)(1), [vortix](/man/vortix)(1)

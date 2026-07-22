@@ -142,6 +142,12 @@ The tool version and the EF Core runtime version should match; a `dotnet-ef` old
 
 **Entity Framework Core** was released with .NET Core in **2016** as a ground-up rewrite of Entity Framework, cross-platform and considerably leaner. The CLI tooling has been reworked more than once: EF Core 1.x drove it through a `dotnet-ef` package referenced by each project, which proved awkward, and it was later reshaped into the global tool used today. `migrations bundle` and `has-pending-model-changes` are recent additions aimed squarely at CI/CD pipelines, where applying migrations from a developer's machine was never a good idea.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#dotnet-ef```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dotnet](/man/dotnet)(1), [dotnet-build](/man/dotnet-build)(1), [dotnet-publish](/man/dotnet-publish)(1), [sqlcmd](/man/sqlcmd)(1)

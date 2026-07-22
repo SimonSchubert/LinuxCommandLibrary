@@ -99,6 +99,11 @@ Native Windows is **not supported** — use **WSL2** instead. **tmux** is requir
 
 **Agent of Empires** was created by **Nate Brake** at **Mozilla.ai** and released in **late 2025** to scratch the practical itch of running several coding agents at once across long-lived sessions on a laptop or remote server. It is written in **Rust**, distributed via **Homebrew**, **Nix**, **Cargo**, and an install script, and is licensed under **MIT**.
 
+# INSTALL
+
+```brew: brew install aoe```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [claude](/man/claude)(1), [gemini](/man/gemini)(1), [git-worktree](/man/git-worktree)(1)

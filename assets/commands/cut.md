@@ -116,6 +116,24 @@ Cannot handle varying amounts of whitespace (use awk instead). Delimiter must be
 
 **cut** has been part of Unix since the early **1980s**, part of System III and later POSIX standards.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [paste](/man/paste)(1), [awk](/man/awk)(1), [tr](/man/tr)(1), [column](/man/column)(1)

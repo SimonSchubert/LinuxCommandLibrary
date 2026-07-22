@@ -95,6 +95,14 @@ clamdscan requires a running clamd daemon and inherits most scan settings from t
 
 Requires running clamd daemon. Most clamscan options are ignored as settings come from clamd.conf. Use --fdpass if clamd runs as different user.
 
+# INSTALL
+
+```apt: sudo apt install clamdscan```
+
+```apk: sudo apk add clamav-clamdscan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clamscan](/man/clamscan)(1), [clamd](/man/clamd)(8), [freshclam](/man/freshclam)(1)

@@ -71,6 +71,18 @@ Zypper supports dependency resolution, patch management, and can handle distribu
 
 Requires root privileges for package operations. Repository refresh (**zypper ref**) should be run before updates. Distribution upgrades (**zypper dup**) should be done carefully.
 
+# INSTALL
+
+```apt: sudo apt install zypper```
+
+```dnf: sudo dnf install zypper```
+
+```pacman: sudo pacman -S zypper```
+
+```zypper: sudo zypper install zypper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rpm](/man/rpm)(8), [yast2](/man/yast2)(8)

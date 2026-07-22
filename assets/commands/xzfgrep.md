@@ -38,6 +38,24 @@ All options are passed directly to grep(1). The options **-r**, **-R**, **-d**, 
 
 When no file is specified, standard input is read. From standard input, only xz-compressed data is supported.
 
+# INSTALL
+
+```apt: sudo apt install xz-utils```
+
+```dnf: sudo dnf install xz```
+
+```pacman: sudo pacman -S xz```
+
+```apk: sudo apk add xz```
+
+```zypper: sudo zypper install xz```
+
+```brew: brew install xz```
+
+```nix: nix profile install nixpkgs#xz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xzgrep](/man/xzgrep)(1), [xzegrep](/man/xzegrep)(1), [xz](/man/xz)(1), [fgrep](/man/fgrep)(1), [grep](/man/grep)(1), [zgrep](/man/zgrep)(1), [zfgrep](/man/zfgrep)(1)

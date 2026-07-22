@@ -75,6 +75,18 @@ Not recommended for public internet exposure without a reverse proxy and proper 
 
 hledger-web was developed as the web interface for **hledger** to provide browser-based plain text accounting.
 
+# INSTALL
+
+```dnf: sudo dnf install hledger-web```
+
+```pacman: sudo pacman -S hledger-web```
+
+```apk: sudo apk add hledger-web```
+
+```nix: nix profile install nixpkgs#hledger-web```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hledger](/man/hledger)(1), [hledger-ui](/man/hledger-ui)(1), [ledger](/man/ledger)(1)

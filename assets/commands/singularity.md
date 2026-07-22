@@ -71,6 +71,22 @@ Not Docker-compatible at runtime (no Docker socket, no daemon). Building SIF ima
 
 **Singularity** was created at **Lawrence Berkeley Lab** for running containers in HPC environments without privileged access.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [podman](/man/podman)(1), [apptainer](/man/apptainer)(1)

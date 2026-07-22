@@ -85,6 +85,21 @@ Mixer control names vary between sound cards. Use **scontrols** to list availabl
 
 Part of **ALSA** (Advanced Linux Sound Architecture) utilities package.
 
+# INSTALL
+
+```apt: sudo apt install alsa-utils```
+
+```dnf: sudo dnf install alsa-utils```
+
+```pacman: sudo pacman -S alsa-utils```
+
+```apk: sudo apk add alsa-utils```
+
+```zypper: sudo zypper install alsa-utils```
+
+```nix: nix profile install nixpkgs#alsa-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [alsamixer](/man/alsamixer)(1), [aplay](/man/aplay)(1), [arecord](/man/arecord)(1)

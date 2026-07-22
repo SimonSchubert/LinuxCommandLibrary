@@ -70,6 +70,12 @@ Available commands include: **sync**, **list**, **dump**, **create**, **edit**, 
 
 **sncli** was created by **insanum** and is written in **Python**.
 
+# INSTALL
+
+```aur: yay -S sncli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nb](/man/nb)(1), [joplin](/man/joplin)(1), [rucola](/man/rucola)(1)

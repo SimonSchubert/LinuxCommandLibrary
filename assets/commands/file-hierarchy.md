@@ -47,6 +47,24 @@ This is not an executable command but a reference document explaining where file
 
 This is a documentation page, not an executable command. The hierarchy described is specific to systemd-based distributions and may differ on other Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install file```
+
+```dnf: sudo dnf install file```
+
+```pacman: sudo pacman -S file```
+
+```apk: sudo apk add file```
+
+```zypper: sudo zypper install file```
+
+```brew: brew install file```
+
+```nix: nix profile install nixpkgs#file```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(8), [umount](/man/umount)(8)

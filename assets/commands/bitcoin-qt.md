@@ -111,6 +111,14 @@ Initial blockchain sync takes hours to days depending on hardware and network. F
 
 **Bitcoin Core** was originally written by **Satoshi Nakamoto** and released in **January 2009** as the first Bitcoin implementation. The graphical interface (bitcoin-qt) was added later using the Qt framework. After Satoshi's departure, development continued under lead maintainers including Gavin Andresen, Wladimir van der Laan, and others. It remains the reference implementation that defines Bitcoin protocol rules.
 
+# INSTALL
+
+```pacman: sudo pacman -S bitcoin-qt```
+
+```apk: sudo apk add bitcoin-qt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bitcoind](/man/bitcoind)(1), [bitcoin-cli](/man/bitcoin-cli)(1)

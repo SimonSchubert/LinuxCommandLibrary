@@ -41,6 +41,12 @@ Each file can be specified as its mime-type, its encoding (e.g. compression), an
 
 Behavior depends on mailcap configuration. Some MIME types may not have configured viewers. Part of the **mailcap** (or **mime-support**) package.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#see```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [run-mailcap](/man/run-mailcap)(1), [edit](/man/edit)(1), [compose](/man/compose)(1), [print](/man/print)(1), [xdg-open](/man/xdg-open)(1)

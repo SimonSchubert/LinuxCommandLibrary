@@ -28,6 +28,14 @@ Passive hostname, domain and IP lookup tool
 
 **wtfis** was created by **pirxthepilot** (Joon) and is written in **Python**.
 
+# INSTALL
+
+```brew: brew install wtfis```
+
+```nix: nix profile install nixpkgs#wtfis```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [whois](/man/whois)(1), [nslookup](/man/nslookup)(1), [dig](/man/dig)(1)

@@ -68,6 +68,16 @@ Requires license acceptance. Network dependent. Ookla servers only.
 
 **speedtest** is the official CLI from **Ookla**, the company behind Speedtest.net internet speed testing.
 
+# INSTALL
+
+```dnf: sudo dnf install speedtest```
+
+```apk: sudo apk add perl-app-speedtest```
+
+```nix: nix profile install nixpkgs#speedtest```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [speedtest-cli](/man/speedtest-cli)(1), [iperf3](/man/iperf3)(1), [ping](/man/ping)(1)

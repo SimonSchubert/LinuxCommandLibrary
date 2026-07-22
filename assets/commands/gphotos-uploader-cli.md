@@ -78,6 +78,12 @@ Default directory: **~/.gphotos-uploader-cli**, file **config.hjson**. You must 
 
 Requires Google API credentials and interactive browser OAuth (headless setups need SSH port forwarding to the local callback port). The project has sought new maintainers; check GitHub for current status. Google Photos API quotas and policy limits apply. Not a full replacement for Google Takeout or the official backup clients.
 
+# INSTALL
+
+```brew: brew install gphotos-uploader-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rclone](/man/rclone)(1), [gdrive](/man/gdrive)(1), [curl](/man/curl)(1)

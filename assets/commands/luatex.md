@@ -94,6 +94,20 @@ Slower than pdfLaTeX for simple documents. Some packages need adaptation for the
 
 LuaTeX development started in **2007** by **Taco Hoekwater**, **Hartmut Henkel**, and **Hans Hagen** as a successor to pdfTeX with scripting capabilities.
 
+# INSTALL
+
+```apt: sudo apt install texlive-binaries```
+
+```dnf: sudo dnf install texlive-luatex```
+
+```pacman: sudo pacman -S texlive-luatex```
+
+```apk: sudo apk add texlive-luatex```
+
+```zypper: sudo zypper install texlive-luatex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lualatex](/man/lualatex)(1), [pdftex](/man/pdftex)(1), [pdflatex](/man/pdflatex)(1), [xelatex](/man/xelatex)(1), [tex](/man/tex)(1)

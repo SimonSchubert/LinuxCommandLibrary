@@ -113,6 +113,18 @@ Requires a noxfile.py in the working directory. Creates separate virtualenvs per
 
 Nox was created by **Thea Flowers** at Google as a more flexible alternative to tox, using Python functions for configuration instead of INI files.
 
+# INSTALL
+
+```dnf: sudo dnf install nox```
+
+```apk: sudo apk add py3-nox```
+
+```brew: brew install nox```
+
+```nix: nix profile install nixpkgs#nox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tox](/man/tox)(1), [pytest](/man/pytest)(1), [virtualenv](/man/virtualenv)(1)

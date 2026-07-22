@@ -63,6 +63,14 @@ Requires Ghostscript. Only for SLX-compatible Lexmark models. Feature support va
 
 foo2slx-wrapper is part of the **foo2zjs** driver collection, providing easy printing for Lexmark printers using the SLX protocol.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+```dnf: sudo dnf install foo2slx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2slx](/man/foo2slx)(1), [gs](/man/gs)(1), [lpr](/man/lpr)(1)

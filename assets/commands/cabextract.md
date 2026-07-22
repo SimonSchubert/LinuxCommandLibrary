@@ -80,6 +80,24 @@ For multi-part cabinet archives, only specify the first file. cabextract automat
 
 Can only extract archives, not create them. Use **gcab** to create cabinet files. Preserves internal directory structure, permissions, and dates.
 
+# INSTALL
+
+```apt: sudo apt install cabextract```
+
+```dnf: sudo dnf install cabextract```
+
+```pacman: sudo pacman -S cabextract```
+
+```apk: sudo apk add cabextract```
+
+```zypper: sudo zypper install cabextract```
+
+```brew: brew install cabextract```
+
+```nix: nix profile install nixpkgs#cabextract```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unzip](/man/unzip)(1), [7z](/man/7z)(1)

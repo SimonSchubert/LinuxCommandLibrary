@@ -53,6 +53,12 @@ Force stop a Proxmox virtual machine
 
 This is a forceful stop that does not cleanly shut down the guest operating system. Use **qm shutdown** for a graceful shutdown via ACPI. Data loss may occur if unsaved data exists in the guest.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-start](/man/qm-start)(1), [qm-shutdown](/man/qm-shutdown)(1)

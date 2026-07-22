@@ -76,6 +76,22 @@ Requires running MPD server. Connect via ~/.ncmpc/config for defaults. Limited t
 
 ncmpc was created by **Kalle Wallin** as one of the first curses clients for MPD, providing a vim-like interface for music control.
 
+# INSTALL
+
+```apt: sudo apt install ncmpc```
+
+```dnf: sudo dnf install ncmpc```
+
+```pacman: sudo pacman -S ncmpc```
+
+```apk: sudo apk add ncmpc```
+
+```brew: brew install ncmpc```
+
+```nix: nix profile install nixpkgs#ncmpc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpd](/man/mpd)(1), [mpc](/man/mpc)(1), [ncmpcpp](/man/ncmpcpp)(1)

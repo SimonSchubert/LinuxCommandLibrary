@@ -79,6 +79,17 @@ Device labels organize storage into groups (like ssd or hdd) and individual devi
 
 Removing devices may take considerable time depending on data volume. Ensure sufficient free space on remaining devices before evacuating. Device operations require the filesystem to be mounted.
 
+# INSTALL
+
+```dnf: sudo dnf install bcachefs-tools```
+
+```pacman: sudo pacman -S bcachefs-tools```
+
+```apk: sudo apk add bcachefs-tools```
+
+```nix: nix profile install nixpkgs#bcachefs-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [bcachefs](/man/bcachefs)(8), [mkfs](/man/mkfs)(8), [fsck](/man/fsck)(8), [mount](/man/mount)(8)

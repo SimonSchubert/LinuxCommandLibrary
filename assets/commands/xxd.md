@@ -94,6 +94,20 @@ When using **-r**, xxd is tolerant of missing or out-of-order lines if the outpu
 
 **xxd** was written by **Juergen Weigert** and is distributed with **vim**. It was created as a more versatile alternative to traditional hex dump utilities like **od**. The tool has been part of the vim distribution since the mid-1990s and is commonly available on Unix-like systems.
 
+# INSTALL
+
+```apt: sudo apt install xxd```
+
+```dnf: sudo dnf install xxd```
+
+```apk: sudo apk add xxd```
+
+```zypper: sudo zypper install xxd```
+
+```nix: nix profile install nixpkgs#xxd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [od](/man/od)(1), [hexdump](/man/hexdump)(1), [hd](/man/hd)(1), [vim](/man/vim)(1)

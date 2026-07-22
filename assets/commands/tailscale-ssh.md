@@ -49,6 +49,22 @@ The connection is encrypted end-to-end over the WireGuard tunnel that Tailscale 
 
 Tailscale SSH must be enabled on the target device (via **tailscale up --ssh** or the admin console). Both machines must be on the same Tailnet or share access via Tailscale sharing. SSH ACLs must be configured in the Tailscale admin console to permit the connection. The target machine must have a Tailscale SSH server running (built into the Tailscale client).
 
+# INSTALL
+
+```dnf: sudo dnf install tailscale```
+
+```pacman: sudo pacman -S tailscale```
+
+```apk: sudo apk add tailscale```
+
+```zypper: sudo zypper install tailscale```
+
+```brew: brew install tailscale```
+
+```nix: nix profile install nixpkgs#tailscale```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tailscale](/man/tailscale)(1), [tailscale-up](/man/tailscale-up)(1), [ssh](/man/ssh)(1)

@@ -114,6 +114,14 @@ Use only against authorized targets. Unauthorized scanning may be illegal. Use `
 
 **dirb** was written by The Dark Raver and has been part of the Kali Linux security distribution. It is one of the original web content brute-forcing tools, predating modern alternatives like gobuster and feroxbuster.
 
+# INSTALL
+
+```apt: sudo apt install dirb```
+
+```nix: nix profile install nixpkgs#dirb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gobuster](/man/gobuster)(1), [nikto](/man/nikto)(1), [dirbuster](/man/dirbuster)(1), [nmap](/man/nmap)(1), [curl](/man/curl)(1)

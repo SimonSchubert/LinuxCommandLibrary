@@ -80,6 +80,18 @@ Requires X11 display. Resource-intensive for large images. Feature-rich interfac
 
 display is part of **ImageMagick**, created by **John Cristy** in **1987**. ImageMagick has been the premier open-source image manipulation suite for decades, with display providing interactive visualization capabilities.
 
+# INSTALL
+
+```pacman: sudo pacman -S imagemagick```
+
+```apk: sudo apk add imagemagick```
+
+```brew: brew install imagemagick```
+
+```nix: nix profile install nixpkgs#imagemagick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [feh](/man/feh)(1), [eog](/man/eog)(1), [convert](/man/convert)(1), [identify](/man/identify)(1), [magick](/man/magick)(1), [mogrify](/man/mogrify)(1)

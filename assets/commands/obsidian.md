@@ -76,6 +76,14 @@ Obsidian is **proprietary software** with a free tier for personal use; commerci
 
 Obsidian was created by **Shida Li** and **Erica Xu**, who previously worked on Dynalist (an outliner app). The first public release came in **March 2020**. The application quickly gained a large community due to its local-first approach and extensible plugin system. Obsidian **1.0** was released in **October 2022**, adding significant features including the Canvas view. A mobile version for iOS and Android was released in **July 2021**.
 
+# INSTALL
+
+```pacman: sudo pacman -S obsidian```
+
+```nix: nix profile install nixpkgs#obsidian```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [joplin](/man/joplin)(1)

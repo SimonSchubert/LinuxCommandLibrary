@@ -69,6 +69,18 @@ Requires joystick driver support. Device paths may change on hotplug. Calibratio
 
 jstest is part of the **joystick** package for Linux, providing basic input device testing. It works with the kernel's joystick API (/dev/input/js*).
 
+# INSTALL
+
+```apt: sudo apt install joystick```
+
+```dnf: sudo dnf install linuxconsoletools```
+
+```apk: sudo apk add linuxconsoletools```
+
+```zypper: sudo zypper install linuxconsoletools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [evtest](/man/evtest)(1), [inputattach](/man/inputattach)(1)

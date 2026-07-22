@@ -41,6 +41,12 @@ Requires captured BLE packets including the pairing exchange. Works with BLE Leg
 
 Only effective against BLE Legacy Pairing (Bluetooth 4.0/4.1). LE Secure Connections (4.2+) are not vulnerable. Use only for authorized security testing.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#crackle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wireshark](/man/wireshark)(1)

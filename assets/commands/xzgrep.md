@@ -65,6 +65,24 @@ Search xz compressed files with grep
 
 **xzgrep** searches xz, lzma, and lzip compressed files for lines matching a pattern. It decompresses the data on the fly and passes it to grep, without creating temporary files on disk. All standard grep options are supported. Also available as **xzegrep** and **xzfgrep** variants.
 
+# INSTALL
+
+```apt: sudo apt install xz-utils```
+
+```dnf: sudo dnf install xz```
+
+```pacman: sudo pacman -S xz```
+
+```apk: sudo apk add xz```
+
+```zypper: sudo zypper install xz```
+
+```brew: brew install xz```
+
+```nix: nix profile install nixpkgs#xz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xz](/man/xz)(1), [grep](/man/grep)(1), [zgrep](/man/zgrep)(1), [lzgrep](/man/lzgrep)(1)

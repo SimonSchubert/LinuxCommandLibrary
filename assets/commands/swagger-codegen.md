@@ -67,6 +67,14 @@ Java required. Large dependency. Consider openapi-generator.
 
 **swagger-codegen** was created for generating API client libraries from OpenAPI/Swagger specifications.
 
+# INSTALL
+
+```brew: brew install swagger-codegen```
+
+```nix: nix profile install nixpkgs#swagger-codegen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openapi-generator](/man/openapi-generator)(1), [oapi-codegen](/man/oapi-codegen)(1)

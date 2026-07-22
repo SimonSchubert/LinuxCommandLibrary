@@ -68,6 +68,24 @@ The space management flags (**--max-used-space**, **--min-free-space**, **--rese
 
 Without **--all**, internal images and frontend cache are preserved. Space flags accept human-readable values (e.g., 128mb, 2gb). When multiple space flags are specified, all constraints are honored simultaneously.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-buildx-du](/man/docker-buildx-du)(1), [docker-buildx-rm](/man/docker-buildx-rm)(1), [docker-build](/man/docker-build)(1), [docker](/man/docker)(1)

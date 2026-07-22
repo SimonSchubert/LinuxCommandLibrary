@@ -38,6 +38,16 @@ manages the npm package cache
 
 **npm cache** manages the npm package cache. The cache stores downloaded packages to speed up installations. Verify checks integrity and removes corrupt entries. Clean requires --force flag.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-install](/man/npm-install)(1)

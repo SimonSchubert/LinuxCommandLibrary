@@ -102,6 +102,20 @@ chromium-browser --headless --print-to-pdf=page.pdf https://example.com
 
 Command-line switches may change between versions. Check about:version for active switches. Use chrome://flags for experimental features.
 
+# INSTALL
+
+```dnf: sudo dnf install chromium```
+
+```pacman: sudo pacman -S chromium```
+
+```apk: sudo apk add chromium```
+
+```zypper: sudo zypper install chromium```
+
+```nix: nix profile install nixpkgs#chromium```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [google-chrome](/man/google-chrome)(1), [firefox](/man/firefox)(1), [chromium](/man/chromium)(1)

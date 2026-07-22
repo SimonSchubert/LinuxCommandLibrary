@@ -81,6 +81,15 @@ Google Play downloads require a valid account email and AAS token; see the proje
 
 **apkeep** was developed by the EFF Threat Lab and first released in **2021**, written in Rust, providing command-line access to multiple Android app sources for archival and security research.
 
+# INSTALL
+
+```aur: yay -S apkeep```
+
+```brew: brew install apkeep```
+
+```nix: nix profile install nixpkgs#apkeep```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb](/man/adb)(1), [apktool](/man/apktool)(1), [aapt](/man/aapt)(1)

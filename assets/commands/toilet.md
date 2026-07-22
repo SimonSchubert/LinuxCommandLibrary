@@ -55,6 +55,22 @@ Font availability depends on installation. Some filters require terminal color s
 
 **toilet** was created by **Sam Hocevar** as part of the libcaca project, providing an alternative to FIGlet with additional features like color support and more rendering options.
 
+# INSTALL
+
+```apt: sudo apt install toilet```
+
+```dnf: sudo dnf install toilet```
+
+```pacman: sudo pacman -S toilet```
+
+```zypper: sudo zypper install toilet```
+
+```brew: brew install toilet```
+
+```nix: nix profile install nixpkgs#toilet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [figlet](/man/figlet)(1), [banner](/man/banner)(1)

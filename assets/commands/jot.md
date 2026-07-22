@@ -75,6 +75,18 @@ BSD utility. Not in GNU coreutils. Use seq for portability.
 
 jot originated in **BSD Unix** as a data generator utility. It provides more flexibility than seq.
 
+# INSTALL
+
+```apt: sudo apt install athena-jot```
+
+```apk: sudo apk add outils-jot```
+
+```brew: brew install jot```
+
+```nix: nix profile install nixpkgs#jot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [seq](/man/seq)(1), [yes](/man/yes)(1), [printf](/man/printf)(1)

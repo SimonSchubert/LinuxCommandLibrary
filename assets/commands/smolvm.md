@@ -103,6 +103,12 @@ Network is opt-in only with support for TCP/UDP; ICMP is not supported. Volume m
 
 smolvm was created by **Smol Machines** and written in **Rust**. It was developed to provide developers with fast, isolated virtual machine environments that prioritize security by default, enabling safe execution of untrusted code and reproducible build environments without the overhead of traditional virtualization.
 
+# INSTALL
+
+```pacman: sudo pacman -S smolvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qemu](/man/qemu)(1), [docker](/man/docker)(1), [podman](/man/podman)(1)

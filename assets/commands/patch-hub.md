@@ -36,6 +36,22 @@ Requires **b4** and **git send-email** to be installed for applying and replying
 
 **patch-hub** was created by the **kworkflow** organization and is written in **Rust**.
 
+# INSTALL
+
+```apt: sudo apt install patch```
+
+```dnf: sudo dnf install patch```
+
+```pacman: sudo pacman -S patch```
+
+```apk: sudo apk add patch```
+
+```zypper: sudo zypper install patch```
+
+```nix: nix profile install nixpkgs#patch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-send-email](/man/git-send-email)(1), [mutt](/man/mutt)(1), [patch](/man/patch)(1)

@@ -58,6 +58,18 @@ Format detected by extension. Written in Rust. Supports many formats.
 
 ouch was created as a **user-friendly compression** tool with smart format detection.
 
+# INSTALL
+
+```pacman: sudo pacman -S ouch```
+
+```zypper: sudo zypper install ouch```
+
+```brew: brew install ouch```
+
+```nix: nix profile install nixpkgs#ouch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tar](/man/tar)(1), [zip](/man/zip)(1), [7z](/man/7z)(1)

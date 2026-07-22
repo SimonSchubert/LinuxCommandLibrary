@@ -128,6 +128,12 @@ The quickstart command is intended for development and testing, not production. 
 
 Concourse was created at Pivotal (now VMware Tanzu) and first released in **2014**. It was designed as a "pipeline-based" CI/CD system where everything is configured as code. Unlike traditional CI systems, Concourse has no plugins—all functionality comes from resources (versioned artifacts) and tasks (scripts in containers). The project was open-sourced and continues active development on GitHub.
 
+# INSTALL
+
+```aur: yay -S concourse```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fly](/man/fly)(1), [docker](/man/docker)(1), [podman](/man/podman)(1), [jenkins](/man/jenkins)(1)

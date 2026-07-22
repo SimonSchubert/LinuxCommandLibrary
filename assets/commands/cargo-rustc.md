@@ -92,6 +92,20 @@ Common rustc flags:
 
 Only one target can be compiled when passing extra arguments. Use filters (--lib, --bin) to select target.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [rustc](/man/rustc)(1), [cargo-build](/man/cargo-build)(1)

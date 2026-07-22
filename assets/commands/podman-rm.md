@@ -98,6 +98,24 @@ Cannot remove running containers without --force. Anonymous volumes not removed 
 
 podman rm is part of **Podman**, the daemonless container engine by **Red Hat** providing Docker-compatible container management.
 
+# INSTALL
+
+```apt: sudo apt install podman```
+
+```dnf: sudo dnf install podman```
+
+```pacman: sudo pacman -S podman```
+
+```apk: sudo apk add podman```
+
+```zypper: sudo zypper install podman```
+
+```brew: brew install podman```
+
+```nix: nix profile install nixpkgs#podman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [podman-rmi](/man/podman-rmi)(1), [podman-ps](/man/podman-ps)(1), [docker-rm](/man/docker-rm)(1)

@@ -32,6 +32,16 @@ The tool has no options beyond the optional file argument. If the input is not v
 
 **spa-json-dump** was introduced as part of the **PipeWire** project, the modern audio and video server for Linux that replaced PulseAudio and JACK in many distributions. PipeWire uses its own SPA (Simple Plugin API) JSON format for configuration, and this tool was created to make those config files interoperable with standard JSON tooling.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-spa-tools```
+
+```zypper: sudo zypper install pipewire-spa-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [jq](/man/jq)(1), [pw-dump](/man/pw-dump)(1)

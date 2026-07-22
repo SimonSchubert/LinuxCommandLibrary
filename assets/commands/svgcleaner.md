@@ -61,6 +61,16 @@ May break complex SVGs. Test output. Rust written.
 
 **svgcleaner** was created as a lossless SVG optimizer, reducing file size without affecting visual appearance.
 
+# INSTALL
+
+```pacman: sudo pacman -S svgcleaner```
+
+```zypper: sudo zypper install svgcleaner```
+
+```nix: nix profile install nixpkgs#svgcleaner```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [svgo](/man/svgo)(1), [inkscape](/man/inkscape)(1), [scour](/man/scour)(1)

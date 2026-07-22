@@ -59,6 +59,22 @@ GTK-based. Lightweight alternative. LXDE component.
 
 PCManFM was created as a **lightweight file manager** for LXDE desktop.
 
+# INSTALL
+
+```apt: sudo apt install pcmanfm```
+
+```dnf: sudo dnf install pcmanfm```
+
+```pacman: sudo pacman -S pcmanfm```
+
+```apk: sudo apk add pcmanfm```
+
+```zypper: sudo zypper install pcmanfm```
+
+```nix: nix profile install nixpkgs#pcmanfm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [thunar](/man/thunar)(1), [nautilus](/man/nautilus)(1), [dolphin](/man/dolphin)(1)

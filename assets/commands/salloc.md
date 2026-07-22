@@ -39,6 +39,12 @@ Resources are held until the shell exits or command completes. Allocation time d
 
 Part of **Slurm** workload manager, providing interactive resource allocation for HPC clusters.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [srun](/man/srun)(1), [sbatch](/man/sbatch)(1), [squeue](/man/squeue)(1)

@@ -83,6 +83,22 @@ Needs raw socket / **CAP_NET_RAW** access (or root). Detection quality depends o
 
 p0f was created by **Michal Zalewski** for passive TCP/IP stack fingerprinting.
 
+# INSTALL
+
+```apt: sudo apt install p0f```
+
+```dnf: sudo dnf install p0f```
+
+```pacman: sudo pacman -S p0f```
+
+```zypper: sudo zypper install p0f```
+
+```brew: brew install p0f```
+
+```nix: nix profile install nixpkgs#p0f```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1)

@@ -26,6 +26,14 @@ Running this command removes **all AppArmor security protections** from the syst
 
 Part of the **AppArmor** utilities package for managing application security profiles on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install apparmor```
+
+```pacman: sudo pacman -S apparmor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aa-status](/man/aa-status)(8), [aa-enforce](/man/aa-enforce)(8), [aa-complain](/man/aa-complain)(8), [apparmor](/man/apparmor)(7)

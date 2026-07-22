@@ -99,6 +99,20 @@ Or download from GitHub releases.
 
 Requires cert-manager installed in cluster. Tab completion available. Preferred over kubectl plugin for better experience.
 
+# INSTALL
+
+```pacman: sudo pacman -S cmctl```
+
+```apk: sudo apk add cmctl```
+
+```zypper: sudo zypper install cmctl```
+
+```brew: brew install cmctl```
+
+```nix: nix profile install nixpkgs#cmctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [openssl](/man/openssl)(1)

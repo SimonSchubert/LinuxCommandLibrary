@@ -76,6 +76,12 @@ By default reads from stdin; a log source must be piped in or specified with `-C
 
 **logss** was created by **todoesverso** and is written in **Rust**.
 
+# INSTALL
+
+```aur: yay -S logss```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [tail](/man/tail)(1), [multitail](/man/multitail)(1)

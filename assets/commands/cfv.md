@@ -125,6 +125,14 @@ PAR and PAR2 formats are supported for verification only, not creation. BitTorre
 
 **cfv** was originally written in **Python** as an open-source checksum verification tool. It gained popularity in the file-sharing community for its broad format support, particularly SFV and MD5. The project was later forked as **cfv2** to maintain Python 3 compatibility after the original project became unmaintained.
 
+# INSTALL
+
+```brew: brew install cfv```
+
+```nix: nix profile install nixpkgs#cfv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [md5sum](/man/md5sum)(1), [sha1sum](/man/sha1sum)(1), [sha256sum](/man/sha256sum)(1), [sha512sum](/man/sha512sum)(1), [cksum](/man/cksum)(1), [par2](/man/par2)(1)

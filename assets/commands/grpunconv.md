@@ -38,6 +38,14 @@ Requires root access. Reduces security. Rarely needed on modern systems.
 
 grpunconv was developed as part of the **shadow** password suite to allow reverting shadow group changes.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```apk: sudo apk add shadow-conv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grpconv](/man/grpconv)(8), [grpck](/man/grpck)(8), [pwunconv](/man/pwunconv)(8)

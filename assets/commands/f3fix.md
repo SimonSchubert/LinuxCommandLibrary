@@ -47,6 +47,22 @@ Requires root privileges. Destroys existing partition table. Use only after f3pr
 
 f3fix is part of the **F3** (Fight Flash Fraud) project created to combat counterfeit flash storage. The toolkit helps identify and safely use fake capacity drives that are common in online marketplaces.
 
+# INSTALL
+
+```apt: sudo apt install f3```
+
+```dnf: sudo dnf install f3```
+
+```apk: sudo apk add f3-extra```
+
+```zypper: sudo zypper install f3```
+
+```brew: brew install f3```
+
+```nix: nix profile install nixpkgs#f3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [f3probe](/man/f3probe)(1), [f3read](/man/f3read)(1), [f3write](/man/f3write)(1), [fdisk](/man/fdisk)(1)

@@ -52,6 +52,20 @@ Be cautious when extracting attachments from untrusted emails as they may contai
 
 Developed for automated email processing and attachment extraction. Commonly used in email filtering and archiving systems.
 
+# INSTALL
+
+```apt: sudo apt install ripmime```
+
+```dnf: sudo dnf install ripmime```
+
+```apk: sudo apk add ripmime```
+
+```brew: brew install ripmime```
+
+```nix: nix profile install nixpkgs#ripmime```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [munpack](/man/munpack)(1), [mpack](/man/mpack)(1)

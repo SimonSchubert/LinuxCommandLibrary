@@ -126,6 +126,21 @@ USB debugging must be enabled on the device. First connection requires authorizi
 
 **adb** was developed by Google as part of the Android SDK, first released with Android 1.0 in **2008**. It has evolved to support features like wireless debugging, scoped storage access, and improved security through RSA key authentication.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [fastboot](/man/fastboot)(1), [aapt](/man/aapt)(1), [logcat](/man/logcat)(1), [scrcpy](/man/scrcpy)(1)

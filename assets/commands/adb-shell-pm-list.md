@@ -91,6 +91,21 @@ Output format may vary slightly between Android versions. System packages includ
 
 The package listing functionality has been available since Android 1.0 in **2008**, with filtering options added in subsequent versions to accommodate the growing number of installed applications.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb-shell-pm](/man/adb-shell-pm)(1), [adb](/man/adb)(1)

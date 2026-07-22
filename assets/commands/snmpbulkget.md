@@ -45,6 +45,14 @@ The **-Cn** (non-repeaters) parameter specifies how many of the initial OIDs sho
 
 The tool is part of the **Net-SNMP** suite and requires SNMPv2c or SNMPv3, as the GETBULK operation is not available in SNMPv1.
 
+# INSTALL
+
+```apt: sudo apt install snmp```
+
+```apk: sudo apk add net-snmp-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snmpget](/man/snmpget)(1), [snmpgetnext](/man/snmpgetnext)(1), [snmpwalk](/man/snmpwalk)(1)

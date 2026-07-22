@@ -55,6 +55,14 @@ May not recover all data. Backup originals. Supports pcap and pcapng.
 
 pcapfix was created for **recovering corrupted** packet capture files.
 
+# INSTALL
+
+```apt: sudo apt install pcapfix```
+
+```nix: nix profile install nixpkgs#pcapfix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [editcap](/man/editcap)(1)

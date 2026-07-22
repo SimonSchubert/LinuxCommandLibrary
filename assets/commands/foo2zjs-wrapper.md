@@ -92,6 +92,16 @@ Requires Ghostscript. Limited to supported printer models. Color support varies 
 
 foo2zjs-wrapper is part of the **foo2zjs** project, providing user-friendly document printing for ZjStream protocol printers on Linux.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+```dnf: sudo dnf install foo2zjs```
+
+```nix: nix profile install nixpkgs#foo2zjs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2zjs](/man/foo2zjs)(1), [gs](/man/gs)(1), [lpr](/man/lpr)(1)

@@ -74,6 +74,18 @@ X11 only; does not work in Wayland without XWayland. Supports common image forma
 
 nsxiv is a community fork of sxiv (simple X image viewer) created after the original project became unmaintained. It continues active development with new features while maintaining the minimalist philosophy.
 
+# INSTALL
+
+```apt: sudo apt install nsxiv```
+
+```pacman: sudo pacman -S nsxiv```
+
+```apk: sudo apk add nsxiv```
+
+```nix: nix profile install nixpkgs#nsxiv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sxiv](/man/sxiv)(1), [feh](/man/feh)(1), [imv](/man/imv)(1), [viewnior](/man/viewnior)(1)

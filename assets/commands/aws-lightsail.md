@@ -101,6 +101,17 @@ Lightsail instances cannot be converted to EC2 instances directly. Resource limi
 
 Amazon Lightsail launched in **November 2016** as a simplified entry point to AWS. Container services were added in **2020**. The service has expanded to include managed databases, object storage, CDN distributions, and domain management while maintaining its simple pricing model.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ec2](/man/aws-ec2)(1)

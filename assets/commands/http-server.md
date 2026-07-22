@@ -84,6 +84,14 @@ Requires Node.js and npm. Not suitable for production use — provides no authen
 
 http-server is a popular **npm** package for quickly serving static files during development.
 
+# INSTALL
+
+```brew: brew install http-server```
+
+```nix: nix profile install nixpkgs#http-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [serve](/man/serve)(1), [python](/man/python)(1), [live-server](/man/live-server)(1)

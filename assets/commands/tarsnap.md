@@ -102,6 +102,16 @@ Requires paid account. Key loss means data loss - no recovery possible. Initial 
 
 **Tarsnap** was created by **Colin Percival** around **2008**. A former FreeBSD security officer, Percival designed Tarsnap with security as the primary goal. The service emphasizes cryptographic correctness.
 
+# INSTALL
+
+```pacman: sudo pacman -S tarsnap```
+
+```brew: brew install tarsnap```
+
+```nix: nix profile install nixpkgs#tarsnap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tar](/man/tar)(1), [restic](/man/restic)(1), [borg](/man/borg)(1), [duplicity](/man/duplicity)(1)

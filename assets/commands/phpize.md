@@ -63,6 +63,12 @@ Requires PHP development headers. Extension must be compatible with PHP version.
 
 **phpize** is part of PHP's build system, originating from PHP 4. It enables PECL extensions and custom modules to be built separately from the main PHP installation.
 
+# INSTALL
+
+```apk: sudo apk add php85-dev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [php](/man/php)(1), [php-config](/man/php-config)(1), [pecl](/man/pecl)(1), [make](/man/make)(1)

@@ -78,6 +78,14 @@ The Minix filesystem has significant limitations: maximum filesystem size of 64M
 
 The Minix filesystem was created by **Andrew S. Tanenbaum** for the **Minix operating system** in **1987**. It served as a teaching tool and directly influenced the development of the Linux kernel. Linus Torvalds initially developed Linux using Minix, and the early Linux filesystem was based on Minix. The mkfs.minix utility is part of **util-linux**.
 
+# INSTALL
+
+```apt: sudo apt install util-linux-extra```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkfs](/man/mkfs)(8), [fsck](/man/fsck)(8)

@@ -111,6 +111,14 @@ Requires Go or pre-built binary. Policy updates require running init. Some polic
 
 **Terrascan** was originally developed by Accurics and is now maintained by Tenable. It provides pre-deployment security scanning for cloud-native infrastructure, helping organizations implement security as code practices.
 
+# INSTALL
+
+```brew: brew install terrascan```
+
+```nix: nix profile install nixpkgs#terrascan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tfsec](/man/tfsec)(1), [checkov](/man/checkov)(1)

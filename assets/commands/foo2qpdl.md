@@ -85,6 +85,14 @@ Only for QPDL-compatible printers. Model support varies. Some features may not b
 
 foo2qpdl is part of **foo2zjs**, providing support for Samsung printers using the QPDL protocol through reverse-engineered drivers.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+```dnf: sudo dnf install foo2qpdl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2qpdl-wrapper](/man/foo2qpdl-wrapper)(1), [foo2zjs](/man/foo2zjs)(1)

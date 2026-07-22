@@ -60,6 +60,24 @@ Output is always PBM, so a mask cannot encode partial transparency; convert with
 
 **ppmcolormask** is part of the **Netpbm** toolkit originally written by **Jef Poskanzer**. The `-color` form (accepting a color list and Berlin-Kay matching) superseded the positional-color form in Netpbm 10.32.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamcomp](/man/pamcomp)(1), [ppmchange](/man/ppmchange)(1), [pambackground](/man/pambackground)(1), [pbmmask](/man/pbmmask)(1), [pnmtopng](/man/pnmtopng)(1), [pnmcomp](/man/pnmcomp)(1), [netpbm](/man/netpbm)(1)

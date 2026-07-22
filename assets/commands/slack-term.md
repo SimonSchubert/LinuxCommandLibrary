@@ -48,6 +48,12 @@ Slack client for the terminal
 
 **slack-term** was created by **J.P. Bruins Slot** (erroneousboat) and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#slack-term```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [weechat](/man/weechat)(1), [irssi](/man/irssi)(1), [scli](/man/scli)(1), [screen](/man/screen)(1)

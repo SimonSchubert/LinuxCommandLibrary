@@ -90,6 +90,14 @@ Requires root privileges or membership in the render/video groups to access DRM 
 
 **modetest** is part of the **libdrm** project, which provides the userspace library for interacting with the Linux kernel's Direct Rendering Manager. KMS was introduced in Linux kernel 2.6.29 (2009) to move display mode setting from userspace X servers into the kernel.
 
+# INSTALL
+
+```apt: sudo apt install libdrm-tests```
+
+```apk: sudo apk add libdrm-tests```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xrandr](/man/xrandr)(1)

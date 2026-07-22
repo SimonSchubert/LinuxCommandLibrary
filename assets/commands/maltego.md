@@ -62,6 +62,12 @@ Requires Java. CE edition has limitations. Transform servers may have rate limit
 
 Maltego was developed by **Paterva** in South Africa, first released in **2008**. It became a standard tool in penetration testing and intelligence gathering.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#maltego```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [recon-ng](/man/recon-ng)(1)

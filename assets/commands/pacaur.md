@@ -101,6 +101,12 @@ The tool automates the process of downloading PKGBUILDs from the AUR, resolving 
 
 Developed as a minimalist AUR helper following the philosophy of keeping close to pacman's interface. Was popular among Arch users who preferred its non-interactive approach and tight pacman integration. Development ceased around **2018**, with the maintainer recommending users migrate to actively maintained alternatives.
 
+# INSTALL
+
+```aur: yay -S pacaur```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [yay](/man/yay)(8), [paru](/man/paru)(1), [makepkg](/man/makepkg)(8)

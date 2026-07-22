@@ -59,6 +59,16 @@ Messages can be provided as arguments or piped from other commands.
 
 X11 only. Display time depends on message length unless specified. Custom images must be PNG format.
 
+# INSTALL
+
+```dnf: sudo dnf install xcowsay```
+
+```zypper: sudo zypper install xcowsay```
+
+```nix: nix profile install nixpkgs#xcowsay```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cowsay](/man/cowsay)(1), [notify-send](/man/notify-send)(1)

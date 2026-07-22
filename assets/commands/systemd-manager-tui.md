@@ -26,6 +26,12 @@ Requires a running systemd system and D-Bus. Written in Rust.
 
 **systemd-manager-tui** was created by **matheus-git** and is written in **Rust**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#systemd-manager-tui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-tui](/man/systemctl-tui)(1), [journalctl](/man/journalctl)(1)

@@ -93,6 +93,14 @@ Instagram may rate-limit or block accounts making many requests. Login credentia
 
 instaloader was created as a Python tool for archiving Instagram content. It provides a legal means to download your own content or public profiles for personal use.
 
+# INSTALL
+
+```brew: brew install instaloader```
+
+```nix: nix profile install nixpkgs#instaloader```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [youtube-dl](/man/youtube-dl)(1), [gallery-dl](/man/gallery-dl)(1)

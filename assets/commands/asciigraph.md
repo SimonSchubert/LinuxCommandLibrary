@@ -110,6 +110,15 @@ Run **asciigraph --help** for the complete option list of your build.
 
 Requires a terminal that displays monospace ASCII/Unicode box-drawing characters well. Color options need a color-capable terminal. Realtime mode is for continuous streams; finite piped input is usually plotted once.
 
+# INSTALL
+
+```dnf: sudo dnf install asciigraph```
+
+```aur: yay -S asciigraph```
+
+```nix: nix profile install nixpkgs#asciigraph```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [gnuplot](/man/gnuplot)(1), [termgraph](/man/termgraph)(1), [youplot](/man/youplot)(1)

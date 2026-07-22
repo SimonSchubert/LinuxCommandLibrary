@@ -24,6 +24,14 @@ Terminal-based markdown note manager
 
 **rucola** was created by **Linus Mussmaecher** and is written in **Rust** using the ratatui framework.
 
+# INSTALL
+
+```pacman: sudo pacman -S rucola```
+
+```nix: nix profile install nixpkgs#rucola```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nb](/man/nb)(1), [wiki-tui](/man/wiki-tui)(1)

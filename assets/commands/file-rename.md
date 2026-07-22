@@ -68,6 +68,12 @@ file-rename's dry-run mode (-n) allows preview of changes before execution, prev
 
 Multiple implementations of rename exist. This documents the Perl version (prename), not the util-linux version.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#file-rename```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rename](/man/rename)(1), [mv](/man/mv)(1), [mmv](/man/mmv)(1), [find](/man/find)(1), [perl](/man/perl)(1), [sed](/man/sed)(1)

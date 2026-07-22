@@ -31,6 +31,20 @@ shows the difference between the changes introduced by two revisions
 
 **jj interdiff** shows the difference between the changes introduced by two revisions. Unlike regular diff which compares file contents, interdiff compares what each revision changed relative to its parent. Useful for comparing different implementations of the same change.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-diff](/man/jj-diff)(1)

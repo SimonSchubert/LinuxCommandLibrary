@@ -93,6 +93,24 @@ Requires LFS server support. Storage limits may apply. Some hosting has LFS quot
 
 Git LFS was created by **GitHub** in **2015** with Atlassian, addressing the long-standing problem of large files in git repositories.
 
+# INSTALL
+
+```apt: sudo apt install git-lfs```
+
+```dnf: sudo dnf install git-lfs```
+
+```pacman: sudo pacman -S git-lfs```
+
+```apk: sudo apk add git-lfs```
+
+```zypper: sudo zypper install git-lfs```
+
+```brew: brew install git-lfs```
+
+```nix: nix profile install nixpkgs#git-lfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-annex](/man/git-annex)(1)

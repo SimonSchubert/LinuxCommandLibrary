@@ -95,6 +95,24 @@ Modify index entries for tracked files
 
 The most common use is the `--assume-unchanged` flag, which tells Git to temporarily ignore changes to a tracked file. The `--skip-worktree` flag serves a similar purpose but is intended for files managed by sparse checkout.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-add](/man/git-add)(1), [git-rm](/man/git-rm)(1), [git-ls-files](/man/git-ls-files)(1)

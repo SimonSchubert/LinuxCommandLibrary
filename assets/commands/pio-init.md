@@ -45,6 +45,12 @@ initializes a new PlatformIO project
 
 **pio init** initializes a new PlatformIO project. Creates project structure with platformio.ini configuration file. Supports multiple boards and IDE integrations for embedded development.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-run](/man/pio-run)(1), [pio-boards](/man/pio-boards)(1), [pio-lib](/man/pio-lib)(1)

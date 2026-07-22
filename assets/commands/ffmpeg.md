@@ -120,6 +120,20 @@ Complex syntax requires learning. Quality vs size tradeoffs vary by content. Som
 
 ffmpeg was started by **Fabrice Bellard** in 2000 and has become the most widely-used multimedia framework. It powers countless applications from VLC to YouTube's video processing pipeline.
 
+# INSTALL
+
+```apt: sudo apt install ffmpeg```
+
+```pacman: sudo pacman -S ffmpeg```
+
+```apk: sudo apk add ffmpeg```
+
+```brew: brew install ffmpeg```
+
+```nix: nix profile install nixpkgs#ffmpeg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffprobe](/man/ffprobe)(1), [ffplay](/man/ffplay)(1), [sox](/man/sox)(1), [handbrake](/man/handbrake)(1), [mencoder](/man/mencoder)(1)

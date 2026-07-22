@@ -72,6 +72,12 @@ The daemon manages payment channels, routes payments across the network, and mai
 
 Requires a Bitcoin full node backend (bitcoind, btcd, or neutrino). Channel management involves real funds on mainnet. Written in Go.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#lnd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [electrum](/man/electrum)(1), [geth](/man/geth)(1)

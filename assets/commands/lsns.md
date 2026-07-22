@@ -90,6 +90,24 @@ Non-root users may see incomplete results as some namespace information requires
 
 **lsns** is part of **util-linux**, providing visibility into the Linux namespace subsystem used for containerization and process isolation.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nsenter](/man/nsenter)(1), [unshare](/man/unshare)(1), [namespaces](/man/namespaces)(7)

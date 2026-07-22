@@ -112,6 +112,14 @@ Initial setup downloads many dependencies. Some boards need drivers. The `pio li
 
 **PlatformIO** was created by **Ivan Kravets** in **2014** to unify embedded development tooling. It addressed the fragmentation of vendor-specific IDEs and build systems, becoming popular with IoT and maker communities.
 
+# INSTALL
+
+```brew: brew install platformio```
+
+```nix: nix profile install nixpkgs#platformio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio](/man/pio)(1), [arduino-cli](/man/arduino-cli)(1), [make](/man/make)(1), [cmake](/man/cmake)(1), [gdb](/man/gdb)(1)

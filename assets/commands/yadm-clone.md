@@ -38,6 +38,20 @@ Clone dotfiles repository with yadm
 
 **yadm clone** clones a dotfiles repository to manage with yadm. Downloads repo and checks out files to home directory. First step in setting up dotfiles on a new system.
 
+# INSTALL
+
+```pacman: sudo pacman -S yadm```
+
+```apk: sudo apk add yadm```
+
+```zypper: sudo zypper install yadm```
+
+```brew: brew install yadm```
+
+```nix: nix profile install nixpkgs#yadm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yadm](/man/yadm)(1), [yadm-bootstrap](/man/yadm-bootstrap)(1)

@@ -38,6 +38,16 @@ The command does not touch project-level packages installed under **node_modules
 
 Canary builds may contain bugs or breaking changes; production environments should pin to stable releases. The Bun binary must be writable by the current user; system-wide installs typically require **sudo** or the use of the original installer. **bun upgrade** does not migrate the **bun.lockb** lockfile format if a release introduces a new on-disk format.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-info](/man/bun-info)(1), [npm](/man/npm)(1), [node](/man/node)(1)

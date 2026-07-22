@@ -53,6 +53,12 @@ Detection is heuristic and not 100% accurate, especially for short texts or ambi
 
 **chardet** is a Python implementation of the character encoding detection algorithm used in **Mozilla Firefox**. The original algorithm was developed by **Netscape/Mozilla** to handle the diversity of character encodings on the web. The Python port was created by **Mark Pilgrim** in **2006** and is now maintained by **Dan Blanchard** and the community.
 
+# INSTALL
+
+```brew: brew install chardet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [file](/man/file)(1), [iconv](/man/iconv)(1), [enca](/man/enca)(1)

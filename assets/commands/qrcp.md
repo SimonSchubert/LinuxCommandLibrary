@@ -89,6 +89,14 @@ Devices must be on the same network. Transfer speed depends on network condition
 
 **qrcp** was created by **Claudio d'Angelis** to simplify file transfers between devices. It eliminates the need for cables, email attachments, or cloud services for quick local transfers.
 
+# INSTALL
+
+```brew: brew install qrcp```
+
+```nix: nix profile install nixpkgs#qrcp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wormhole](/man/wormhole)(1), [croc](/man/croc)(1), [rsync](/man/rsync)(1)

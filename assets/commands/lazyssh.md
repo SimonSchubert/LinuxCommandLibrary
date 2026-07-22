@@ -72,6 +72,14 @@ Requires an existing **~/.ssh/config** file. Relies on the system's OpenSSH bina
 
 **lazyssh** was created by **Adembc** and is written in **Go** using tview and tcell. It was inspired by lazydocker and k9s.
 
+# INSTALL
+
+```brew: brew install lazyssh```
+
+```nix: nix profile install nixpkgs#lazyssh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [ssh-keygen](/man/ssh-keygen)(1)

@@ -37,6 +37,14 @@ lists container registry tags
 
 The command can display results in human-readable format or as JSON for scripting. Recursive mode (-r) traverses sub-repositories. gcrane ls is essential for discovering available images, auditing registry contents, and building automation scripts.
 
+# INSTALL
+
+```zypper: sudo zypper install gcrane```
+
+```nix: nix profile install nixpkgs#gcrane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcrane](/man/gcrane)(1), [crane-ls](/man/crane-ls)(1)

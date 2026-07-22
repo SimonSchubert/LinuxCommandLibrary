@@ -88,6 +88,18 @@ Module changes require policy reload. Installing incompatible modules may cause 
 
 Part of **policycoreutils**, providing modular SELinux policy management.
 
+# INSTALL
+
+```apt: sudo apt install policycoreutils```
+
+```dnf: sudo dnf install policycoreutils```
+
+```zypper: sudo zypper install policycoreutils```
+
+```nix: nix profile install nixpkgs#policycoreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [audit2allow](/man/audit2allow)(1), [semanage](/man/semanage)(8)

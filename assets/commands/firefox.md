@@ -87,6 +87,22 @@ Profile options require no running instance. Headless mode has limited functiona
 
 Firefox emerged from the **Mozilla** project in 2002 as Phoenix, renamed Firefox in 2004. It became a major browser challenging Internet Explorer's dominance, pioneering features like tabbed browsing and extensions.
 
+# INSTALL
+
+```apt: sudo apt install firefox-esr```
+
+```dnf: sudo dnf install firefox```
+
+```pacman: sudo pacman -S firefox```
+
+```apk: sudo apk add firefox```
+
+```zypper: sudo zypper install firefox-esr```
+
+```nix: nix profile install nixpkgs#firefox-esr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chromium](/man/chromium)(1), [google-chrome](/man/google-chrome)(1)

@@ -153,6 +153,22 @@ Large file uploads automatically use multipart upload. For very large files, inc
 
 Bucket names must be globally unique across all AWS accounts and follow DNS naming conventions.
 
+# INSTALL
+
+```dnf: sudo dnf install s3cmd```
+
+```pacman: sudo pacman -S s3cmd```
+
+```apk: sudo apk add s3cmd```
+
+```zypper: sudo zypper install s3cmd```
+
+```brew: brew install s3cmd```
+
+```nix: nix profile install nixpkgs#s3cmd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws](/man/aws)(1), [rclone](/man/rclone)(1), [gsutil](/man/gsutil)(1), [mc](/man/mc)(1)

@@ -60,6 +60,14 @@ Some commands may have fewer features than full GNU implementations. Command ava
 
 **toybox** was created by **Rob Landley** as a BSD-licensed alternative to BusyBox. It became the standard command-line toolbox in Android, replacing the older Toolbox implementation.
 
+# INSTALL
+
+```apt: sudo apt install toybox```
+
+```nix: nix profile install nixpkgs#toybox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [busybox](/man/busybox)(1)

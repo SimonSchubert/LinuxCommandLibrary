@@ -40,6 +40,22 @@ Configuration files typically contain gateway address, group ID, group secret, a
 
 Requires root privileges. Configuration files may contain sensitive credentials. Some features may not work with all Cisco VPN devices.
 
+# INSTALL
+
+```apt: sudo apt install vpnc```
+
+```dnf: sudo dnf install vpnc```
+
+```pacman: sudo pacman -S vpnc```
+
+```apk: sudo apk add vpnc```
+
+```zypper: sudo zypper install vpnc```
+
+```nix: nix profile install nixpkgs#vpnc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openconnect](/man/openconnect)(8), [openvpn](/man/openvpn)(8)

@@ -92,6 +92,21 @@ Verification can use PGP public keys, X.509 certificates, or keys fetched from a
 
 Verification requires the public key or certificate corresponding to the signing key. Unsigned containers will fail verification. Keys from untrusted sources should not be used for verification.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-sign](/man/apptainer-sign)(1), [gpg](/man/gpg)(1)

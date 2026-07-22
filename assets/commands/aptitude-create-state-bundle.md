@@ -44,6 +44,11 @@ Bundle may contain system-specific information. Used primarily for debugging apt
 
 **aptitude-create-state-bundle** was added to help developers reproduce and debug aptitude dependency resolution issues.
 
+# INSTALL
+
+```apt: sudo apt install aptitude```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aptitude](/man/aptitude)(8), [aptitude-run-state-bundle](/man/aptitude-run-state-bundle)(1)

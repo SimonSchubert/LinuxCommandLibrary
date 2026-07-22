@@ -65,6 +65,14 @@ The output shows each hop with its RTT and MTU information.
 
 May not work through firewalls that block UDP packets. Results can vary based on network conditions and firewall rules. Part of the iputils package.
 
+# INSTALL
+
+```apt: sudo apt install iputils-tracepath```
+
+```apk: sudo apk add iputils-tracepath```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [traceroute](/man/traceroute)(8), [ping](/man/ping)(8), [mtr](/man/mtr)(8)

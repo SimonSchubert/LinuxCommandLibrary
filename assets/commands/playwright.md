@@ -125,6 +125,12 @@ Requires Node.js. Browser binaries are large. CI may need special setup.
 
 Playwright was developed by **Microsoft**, created by the team behind Puppeteer, released in 2020.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#playwright```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [puppeteer](/man/puppeteer)(1), [node](/man/node)(1), [npx](/man/npx)(1)

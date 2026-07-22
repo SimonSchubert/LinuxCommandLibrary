@@ -32,6 +32,24 @@ _eyuvfile_
 
 The tool is part of the Netpbm suite of image processing utilities. It requires explicit **--width** and **--height** options since EYUV files don't contain image dimension metadata. The output PPM format is a simple, uncompressed format widely supported for image manipulation and conversion.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmtoeyuv](/man/ppmtoeyuv)(1), [yuvtoppm](/man/yuvtoppm)(1)

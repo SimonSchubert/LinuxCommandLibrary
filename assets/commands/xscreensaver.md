@@ -106,6 +106,22 @@ Requires the daemon to be running for any commands to work. Some desktop environ
 
 **XScreenSaver** was created by Jamie Zawinski (jwz) with the first release in **1992**. It became the de facto standard screensaver for Unix systems, replacing earlier fragmented solutions. The project has been continuously maintained for over 30 years, with new screensavers and security fixes added regularly. Zawinski has been vocal about the importance of XScreenSaver's security model, particularly regarding screen locking.
 
+# INSTALL
+
+```apt: sudo apt install xscreensaver```
+
+```dnf: sudo dnf install xscreensaver```
+
+```pacman: sudo pacman -S xscreensaver```
+
+```apk: sudo apk add xscreensaver```
+
+```zypper: sudo zypper install xscreensaver```
+
+```nix: nix profile install nixpkgs#xscreensaver```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xscreensaver-command](/man/xscreensaver-command)(1), [xscreensaver-settings](/man/xscreensaver-settings)(1), [xlock](/man/xlock)(1), [xset](/man/xset)(1)

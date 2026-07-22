@@ -64,6 +64,14 @@ Database may not include newest hardware. Some devices require manufacturer-spec
 
 discover was developed for the **Progeny** and **Debian** distributions as part of automatic hardware detection and configuration systems. It emerged in the early 2000s when automatic hardware detection became important for user-friendly Linux installations.
 
+# INSTALL
+
+```apt: sudo apt install discover```
+
+```pacman: sudo pacman -S discover```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lspci](/man/lspci)(8), [lsusb](/man/lsusb)(8), [hwinfo](/man/hwinfo)(8), [udevadm](/man/udevadm)(8)

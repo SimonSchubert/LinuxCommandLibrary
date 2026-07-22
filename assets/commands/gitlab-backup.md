@@ -73,6 +73,16 @@ Run as root (typically via **sudo**). Restore requires the same GitLab major.min
 
 **gitlab-backup** is a wrapper around the **gitlab:backup:create** and **gitlab:backup:restore** Rake tasks, introduced in **GitLab 12.2** (August 2019) as the recommended interface for Omnibus installations.
 
+# INSTALL
+
+```pacman: sudo pacman -S gitlab```
+
+```apk: sudo apk add py3-gitlab```
+
+```nix: nix profile install nixpkgs#gitlab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gitlab-ctl](/man/gitlab-ctl)(8), [gitlab](/man/gitlab)(1)

@@ -83,6 +83,22 @@ Modifying rules requires root privileges. Rule changes are not persistent across
 
 Policy routing was introduced in Linux 2.2 as part of the advanced routing capabilities. The ip rule command in iproute2 provides management of these features.
 
+# INSTALL
+
+```apt: sudo apt install iproute2```
+
+```pacman: sudo pacman -S iproute2```
+
+```apk: sudo apk add iproute2-minimal```
+
+```zypper: sudo zypper install iproute2```
+
+```brew: brew install iproute2```
+
+```nix: nix profile install nixpkgs#iproute2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip](/man/ip)(8), [ip-route](/man/ip-route)(8), [ip-route-add](/man/ip-route-add)(8)

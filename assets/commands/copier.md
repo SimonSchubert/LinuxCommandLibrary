@@ -89,6 +89,14 @@ template/
 
 Requires Python 3.10+ and Git 2.27+. Templates versioned by Git tags. Use --trust for templates with tasks.
 
+# INSTALL
+
+```brew: brew install copier```
+
+```nix: nix profile install nixpkgs#copier```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cookiecutter](/man/cookiecutter)(1)

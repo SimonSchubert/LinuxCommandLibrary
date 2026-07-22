@@ -93,6 +93,14 @@ Requires Emacs server to be running (or use -a to start daemon). Terminal mode (
 
 **emacsclient** has been part of **GNU Emacs** since the early versions, with the server/client architecture designed by **Richard Stallman** and contributors. The Emacs server mode was introduced to allow external programs to request editing and to reduce the overhead of starting Emacs repeatedly. The feature has evolved to support both Unix sockets and TCP connections.
 
+# INSTALL
+
+```dnf: sudo dnf install emacsclient```
+
+```apk: sudo apk add emacs-gtk3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [emacs](/man/emacs)(1), [vim](/man/vim)(1), [nano](/man/nano)(1)

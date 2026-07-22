@@ -102,6 +102,22 @@ The default device is /dev/video0 if not specified. Format settings must match d
 
 **v4l2-ctl** is part of the **v4l-utils** package, providing user-space utilities for Video4Linux2 API devices on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install v4l-utils```
+
+```dnf: sudo dnf install v4l-utils```
+
+```pacman: sudo pacman -S v4l-utils```
+
+```apk: sudo apk add v4l-utils```
+
+```zypper: sudo zypper install v4l-utils```
+
+```nix: nix profile install nixpkgs#v4l-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [v4l2-compliance](/man/v4l2-compliance)(1), [ffmpeg](/man/ffmpeg)(1), [cheese](/man/cheese)(1)

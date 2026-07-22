@@ -78,6 +78,24 @@ Manage GitLab CLI authentication
 
 For self-hosted GitLab instances, use the `--hostname` flag to specify the server address. Credentials are stored in the glab configuration file (`~/.config/glab-cli/config.yml` by default), or in the OS keyring with `--use-keyring`.
 
+# INSTALL
+
+```apt: sudo apt install glab```
+
+```dnf: sudo dnf install glab```
+
+```pacman: sudo pacman -S glab```
+
+```apk: sudo apk add glab```
+
+```zypper: sudo zypper install glab```
+
+```brew: brew install glab```
+
+```nix: nix profile install nixpkgs#glab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glab](/man/glab)(1)

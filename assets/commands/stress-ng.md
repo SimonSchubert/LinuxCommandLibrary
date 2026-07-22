@@ -106,6 +106,24 @@ Can damage unstable hardware. High temperatures possible. May trigger OOM killer
 
 **stress-ng** was written by **Colin Ian King** at **Canonical** as an enhanced version of stress. It provides many more stressor types and is used for kernel and hardware testing.
 
+# INSTALL
+
+```apt: sudo apt install stress-ng```
+
+```dnf: sudo dnf install stress-ng```
+
+```pacman: sudo pacman -S stress-ng```
+
+```apk: sudo apk add stress-ng```
+
+```zypper: sudo zypper install stress-ng```
+
+```brew: brew install stress-ng```
+
+```nix: nix profile install nixpkgs#stress-ng```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stress](/man/stress)(1), [sysbench](/man/sysbench)(1), [memtester](/man/memtester)(8), [fio](/man/fio)(1)

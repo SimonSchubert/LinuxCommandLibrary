@@ -75,6 +75,24 @@ May not find binaries in non-standard locations (use **which** for PATH-based lo
 
 Originated in **3BSD Unix** (1979) at UC Berkeley. One of the early Berkeley additions to Unix for locating program components. Part of **util-linux** on modern Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [which](/man/which)(1), [whatis](/man/whatis)(1), [type](/man/type)(1), [locate](/man/locate)(1)

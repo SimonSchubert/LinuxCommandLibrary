@@ -70,6 +70,14 @@ Example database may not cover all command variations. Examples prioritize commo
 
 **eg** was created by **Sam Sudar** to provide a more practical alternative to man pages, focusing on real-world usage examples that developers actually need in their daily work. The source is available on GitHub at **github.com/srsudar/eg**.
 
+# INSTALL
+
+```dnf: sudo dnf install eg```
+
+```brew: brew install eg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [man](/man/man)(1), [tldr](/man/tldr)(1), [cheat](/man/cheat)(1)

@@ -66,6 +66,22 @@ GUI application. Large dependency footprint. Soundfont needed for audio.
 
 MuseScore was created as **open-source notation** software, first released in 2002.
 
+# INSTALL
+
+```apt: sudo apt install musescore```
+
+```dnf: sudo dnf install musescore```
+
+```pacman: sudo pacman -S musescore```
+
+```apk: sudo apk add musescore```
+
+```zypper: sudo zypper install musescore```
+
+```nix: nix profile install nixpkgs#musescore```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [musescore](/man/musescore)(1), [lilypond](/man/lilypond)(1), [timidity](/man/timidity)(1)

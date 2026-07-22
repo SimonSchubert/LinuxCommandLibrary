@@ -28,6 +28,16 @@ CSV magician for terminal data manipulation
 
 **xan** was created by **Guillaume Plique** and **medialab Sciences Po** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S xan```
+
+```brew: brew install xan```
+
+```nix: nix profile install nixpkgs#xan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xsv](/man/xsv)(1), [csvkit](/man/csvkit)(1), [miller](/man/miller)(1)

@@ -70,6 +70,14 @@ Requires PulseAudio to be running. May not work with PipeWire unless PulseAudio 
 
 Developed as a lightweight shell script for easy PulseAudio volume control, commonly used with window managers and keyboard shortcut daemons.
 
+# INSTALL
+
+```apk: sudo apk add pulseaudio-ctl```
+
+```nix: nix profile install nixpkgs#pulseaudio-ctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pactl](/man/pactl)(1), [pamixer](/man/pamixer)(1), [amixer](/man/amixer)(1)

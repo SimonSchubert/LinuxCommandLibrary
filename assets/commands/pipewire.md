@@ -66,6 +66,24 @@ Usually started via systemd, not manually. Requires pipewire-pulse for PulseAudi
 
 **PipeWire** was developed by **Wim Taymans** at Red Hat. It emerged from PulseVideo experiments and became a unified solution for Linux multimedia, officially adopted by Fedora 34 in 2021 and subsequently by other distributions.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```dnf: sudo dnf install pipewire```
+
+```pacman: sudo pacman -S pipewire```
+
+```apk: sudo apk add pipewire```
+
+```zypper: sudo zypper install pipewire```
+
+```brew: brew install pipewire```
+
+```nix: nix profile install nixpkgs#pipewire```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire-pulse](/man/pipewire-pulse)(1), [pw-cli](/man/pw-cli)(1), [pw-top](/man/pw-top)(1), [wireplumber](/man/wireplumber)(1)

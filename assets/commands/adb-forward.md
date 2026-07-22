@@ -80,6 +80,21 @@ Port forwards persist until removed, the device disconnects, or the adb server r
 
 Port forwarding has been a core adb feature since Android's initial release in **2008**, essential for remote debugging of Android applications through JDWP and other protocols.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb](/man/adb)(1), [adb-reverse](/man/adb-reverse)(1)

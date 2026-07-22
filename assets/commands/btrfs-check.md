@@ -69,6 +69,22 @@ The check mode is non-destructive and reports issues. The repair mode attempts f
 
 The filesystem must be unmounted. Repair operations are dangerous and can cause data loss; always backup first. Running check on a mounted filesystem may report false errors. Tree rebuild operations are last-resort options.
 
+# INSTALL
+
+```apt: sudo apt install btrfs-progs```
+
+```dnf: sudo dnf install btrfs-progs```
+
+```pacman: sudo pacman -S btrfs-progs```
+
+```apk: sudo apk add btrfs-progs```
+
+```brew: brew install btrfs-progs```
+
+```nix: nix profile install nixpkgs#btrfs-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [btrfs-rescue](/man/btrfs-rescue)(8), [btrfs-restore](/man/btrfs-restore)(8)

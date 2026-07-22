@@ -44,6 +44,12 @@ Build Vue.js applications for production
 
 **vue build** compiles Vue.js applications for production. Creates optimized bundles with minification and tree-shaking. Part of Vue CLI's instant prototyping feature (requires `@vue/cli-service-global`). For standard project builds, use `vue-cli-service build`.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#vue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vue](/man/vue)(1), [vue-serve](/man/vue-serve)(1)

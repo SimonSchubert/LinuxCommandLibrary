@@ -47,6 +47,18 @@ Requires root. Services must exist in target level. Switch may take time for ser
 
 **runsvchdir** is part of **runit**, providing runlevel-like switching. It allows dynamic reconfiguration of which services are supervised.
 
+# INSTALL
+
+```apt: sudo apt install runit```
+
+```apk: sudo apk add runit```
+
+```brew: brew install runit```
+
+```nix: nix profile install nixpkgs#runit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [runsvdir](/man/runsvdir)(8), [runit](/man/runit)(8), [sv](/man/sv)(8)

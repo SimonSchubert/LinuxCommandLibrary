@@ -80,6 +80,20 @@ The server runs the usbipd daemon and binds devices for sharing. Clients load th
 
 Requires kernel modules on both server and client. Network latency affects device performance. Not suitable for high-bandwidth devices. Security depends on network configuration.
 
+# INSTALL
+
+```apt: sudo apt install usbip```
+
+```dnf: sudo dnf install usbip```
+
+```pacman: sudo pacman -S usbip```
+
+```apk: sudo apk add linux-tools-usbip```
+
+```zypper: sudo zypper install usbip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsusb](/man/lsusb)(8), [modprobe](/man/modprobe)(8)

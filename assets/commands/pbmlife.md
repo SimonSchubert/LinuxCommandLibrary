@@ -35,6 +35,24 @@ Part of Netpbm. One generation per call. Chain for animation.
 
 pbmlife is part of **Netpbm** implementing Conway's Game of Life.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbm](/man/pbm)(5), [pbmmake](/man/pbmmake)(1), [netpbm](/man/netpbm)(1)

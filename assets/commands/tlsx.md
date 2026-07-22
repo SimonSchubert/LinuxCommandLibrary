@@ -66,6 +66,14 @@ Network access required. Some hosts may block. Go-based tool.
 
 **tlsx** was created by **ProjectDiscovery** for fast TLS probing and certificate analysis.
 
+# INSTALL
+
+```brew: brew install tlsx```
+
+```nix: nix profile install nixpkgs#tlsx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [testssl](/man/testssl)(1), [sslyze](/man/sslyze)(1)

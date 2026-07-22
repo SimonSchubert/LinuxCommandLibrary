@@ -38,6 +38,14 @@ environment health checker
 
 This command is particularly useful when environments behave unexpectedly, packages fail to import, or after manual modifications to environment directories. It can identify problems that may not be obvious from package listings alone.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-info](/man/conda-info)(1)

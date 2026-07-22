@@ -24,6 +24,12 @@ Post-modern terminal file manager with plugin support
 
 **rovr** was created by **NSPC911** and is written in **Python** using the Textual library.
 
+# INSTALL
+
+```aur: yay -S rovr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ranger](/man/ranger)(1), [nnn](/man/nnn)(1), [superfile](/man/superfile)(1)

@@ -97,6 +97,12 @@ Requires Node.js. Configuration can be verbose. Newer alternatives exist (Gulp, 
 
 Grunt was created by **Ben Alman** in **2012** as one of the first JavaScript task runners.
 
+# INSTALL
+
+```brew: brew install grunt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gulp](/man/gulp)(1), [npm](/man/npm)(1), [webpack](/man/webpack)(1)

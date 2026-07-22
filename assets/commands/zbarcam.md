@@ -51,6 +51,12 @@ Part of the ZBar barcode reader package.
 
 Requires webcam or video capture device. Barcode must be clearly visible and properly lit. May need v4l2 permissions.
 
+# INSTALL
+
+```apt: sudo apt install zbar-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zbarimg](/man/zbarimg)(1), [qrencode](/man/qrencode)(1)

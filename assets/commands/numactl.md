@@ -94,6 +94,24 @@ NUMA policies only make sense on multi-node systems. Node numbering starts at 0.
 
 **numactl** is part of the **numactl** package for Linux NUMA systems. It provides user-space control over NUMA memory and CPU policies that complement kernel automatic NUMA balancing.
 
+# INSTALL
+
+```apt: sudo apt install numactl```
+
+```dnf: sudo dnf install numactl```
+
+```pacman: sudo pacman -S numactl```
+
+```apk: sudo apk add numactl-tools```
+
+```zypper: sudo zypper install numactl```
+
+```brew: brew install numactl```
+
+```nix: nix profile install nixpkgs#numactl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [migratepages](/man/migratepages)(8), [numastat](/man/numastat)(8), [mbind](/man/mbind)(2)

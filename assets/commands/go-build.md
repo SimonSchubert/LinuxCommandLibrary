@@ -97,6 +97,24 @@ Main package produces an executable; library packages only check compilation. CG
 
 go build is a core command of the **Go** toolchain, providing fast incremental compilation since Go's release.
 
+# INSTALL
+
+```apt: sudo apt install gccgo-go```
+
+```dnf: sudo dnf install gcc-go```
+
+```pacman: sudo pacman -S gcc-go```
+
+```apk: sudo apk add gcc-go```
+
+```zypper: sudo zypper install gcc-go```
+
+```brew: brew install go```
+
+```nix: nix profile install nixpkgs#go```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [go-run](/man/go-run)(1), [go-install](/man/go-install)(1)

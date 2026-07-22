@@ -50,6 +50,16 @@ Semiempirical methods are faster but less accurate than ab initio methods. Resul
 
 **MOPAC** was originally developed by **James J.P. Stewart** starting in the 1980s. The program has been continuously updated with new methods, with PM7 being one of the most recent parameterizations. **OpenMOPAC** provides the open-source version of the software.
 
+# INSTALL
+
+```apt: sudo apt install mopac```
+
+```dnf: sudo dnf install mopac```
+
+```nix: nix profile install nixpkgs#mopac```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pymol](/man/pymol)(1)

@@ -69,6 +69,20 @@ Using **xhost +** is a security risk as it allows any host to connect. For secur
 
 **xhost** is one of the original X Window System utilities, providing basic access control since the early days of X11.
 
+# INSTALL
+
+```apt: sudo apt install x11-xserver-utils```
+
+```dnf: sudo dnf install xhost```
+
+```apk: sudo apk add xhost```
+
+```zypper: sudo zypper install xhost```
+
+```nix: nix profile install nixpkgs#xhost```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xauth](/man/xauth)(1), [ssh](/man/ssh)(1)

@@ -88,6 +88,12 @@ godoc requires separate installation since Go 1.12 via `go install golang.org/x/
 
 godoc was the original **Go** documentation tool, bundled with Go until version 1.12. It is now available separately from `golang.org/x/tools/cmd/godoc` and has been largely superseded by `pkgsite` for local use and `pkg.go.dev` for online documentation.
 
+# INSTALL
+
+```apt: sudo apt install golang-golang-x-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go-doc](/man/go-doc)(1), [go](/man/go)(1), [gofmt](/man/gofmt)(1)

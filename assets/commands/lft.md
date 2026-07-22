@@ -72,6 +72,14 @@ May need root. Firewall-friendly. Network diagnostic tool.
 
 LFT was created by **Victor Oppleman** as a firewall-friendly alternative to traditional traceroute.
 
+# INSTALL
+
+```apt: sudo apt install lft```
+
+```brew: brew install lft```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [traceroute](/man/traceroute)(1), [mtr](/man/mtr)(1), [tcptraceroute](/man/tcptraceroute)(1)

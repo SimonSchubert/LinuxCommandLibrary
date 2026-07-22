@@ -28,6 +28,14 @@ Tracer for execve syscalls and pre-exec behavior
 
 **tracexec** was created by **Levi Zim** (kxxt) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S tracexec```
+
+```nix: nix profile install nixpkgs#tracexec```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [strace](/man/strace)(1), [ltrace](/man/ltrace)(1)

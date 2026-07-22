@@ -76,5 +76,13 @@ Resource paths in the XML must match actual file locations relative to sourcedir
 
 glib-compile-resources was introduced with GLib 2.32 in **March 2012** as part of the GResource API. It replaced ad-hoc methods for embedding resources in GTK applications, providing a standardized approach that integrates with the GNOME build system.
 
+# INSTALL
+
+```apt: sudo apt install libgio-2.0-dev-bin```
+
+```apk: sudo apk add glib-dev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

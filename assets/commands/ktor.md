@@ -131,6 +131,12 @@ Requires Kotlin knowledge. Plugin compatibility may vary across Ktor versions. C
 
 Ktor was created by **JetBrains** and first released in **2017**. It was designed as a native Kotlin framework leveraging coroutines for asynchronous programming. Unlike Spring, Ktor is lightweight with explicit configuration. Version 2.0 (2022) brought significant API changes. Ktor is popular for microservices and API development in Kotlin projects.
 
+# INSTALL
+
+```brew: brew install ktor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [kotlin](/man/kotlin)(1)

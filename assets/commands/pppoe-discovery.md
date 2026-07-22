@@ -48,6 +48,22 @@ Discovery only, no connection. Requires interface up.
 
 pppoe-discovery provides **PPPoE server discovery** functionality.
 
+# INSTALL
+
+```apt: sudo apt install ppp```
+
+```dnf: sudo dnf install ppp```
+
+```pacman: sudo pacman -S ppp```
+
+```apk: sudo apk add ppp-pppoe```
+
+```zypper: sudo zypper install ppp```
+
+```nix: nix profile install nixpkgs#ppp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pppoe](/man/pppoe)(8), [pppoe-connect](/man/pppoe-connect)(8)

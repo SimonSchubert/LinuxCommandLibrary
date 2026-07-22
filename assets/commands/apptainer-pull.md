@@ -74,6 +74,21 @@ Downloaded images are cached locally to speed up subsequent operations. The resu
 
 Large images may take significant time and bandwidth to download. Docker images are converted on-the-fly which can add overhead. Some Docker images may not convert perfectly due to differences in runtime expectations.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-push](/man/apptainer-push)(1), [apptainer-build](/man/apptainer-build)(1)

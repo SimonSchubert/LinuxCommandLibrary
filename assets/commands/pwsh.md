@@ -118,6 +118,16 @@ Requires separate installation on Linux/macOS. Different from Windows PowerShell
 
 PowerShell Core was released by **Microsoft** as cross-platform shell.
 
+# INSTALL
+
+```apk: sudo apk add powershell```
+
+```brew: brew install powershell```
+
+```nix: nix profile install nixpkgs#powershell```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [zsh](/man/zsh)(1), [sh](/man/sh)(1), [fish](/man/fish)(1)

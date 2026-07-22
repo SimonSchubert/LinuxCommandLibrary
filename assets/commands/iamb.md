@@ -30,6 +30,18 @@ Requires a Matrix homeserver account. End-to-end encryption key management can b
 
 **iamb** was created by **Ulyssa** and is written in **Rust** using the **matrix-rust-sdk**. It was designed for users who prefer modal editing and want a keyboard-driven Matrix client without leaving the terminal.
 
+# INSTALL
+
+```apk: sudo apk add iamb```
+
+```zypper: sudo zypper install iamb```
+
+```brew: brew install iamb```
+
+```nix: nix profile install nixpkgs#iamb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [weechat](/man/weechat)(1), [gurk](/man/gurk)(1)

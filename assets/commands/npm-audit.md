@@ -79,6 +79,16 @@ Requires network access to check the npm advisory database. The --force flag may
 
 npm audit was introduced in **npm 6** (2018) to provide automated security vulnerability scanning. It replaced the third-party `nsp` (Node Security Platform) tool that npm acquired.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-fund](/man/npm-fund)(1), [snyk](/man/snyk)(1)

@@ -73,6 +73,12 @@ dbx has been retired by Databricks; Databricks Asset Bundles (the `databricks bu
 
 dbx was developed by Databricks Labs as a shortcut for "Databricks CLI eXtensions", filling the CI/CD gap before Databricks Asset Bundles became generally available. It was subsequently deprecated in favor of that first-party tooling.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#dbx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [python](/man/python)(1)

@@ -76,6 +76,16 @@ Requires Fortran compiler and NumPy installation. Complex Fortran constructs may
 
 f2py was created by **Pearu Peterson** in the late 1990s and became part of NumPy. It bridges Python's scientific computing ecosystem with decades of Fortran numerical libraries, enabling their continued use in modern Python workflows.
 
+# INSTALL
+
+```apt: sudo apt install python3-numpy```
+
+```dnf: sudo dnf install python3-numpy```
+
+```apk: sudo apk add py3-numpy-f2py```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [gfortran](/man/gfortran)(1), [cython](/man/cython)(1)

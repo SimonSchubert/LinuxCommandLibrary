@@ -87,6 +87,24 @@ Requires recompilation with -pg. Adds overhead to execution. Sampling-based; sho
 
 gprof was developed at **UC Berkeley** in the early **1980s** by Susan Graham, Peter Kessler, and Marshall McKusick. It became the standard Unix profiler and remains part of GNU binutils.
 
+# INSTALL
+
+```apt: sudo apt install binutils```
+
+```dnf: sudo dnf install binutils```
+
+```pacman: sudo pacman -S binutils```
+
+```apk: sudo apk add binutils```
+
+```zypper: sudo zypper install binutils```
+
+```brew: brew install binutils```
+
+```nix: nix profile install nixpkgs#binutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [perf](/man/perf)(1), [valgrind](/man/valgrind)(1), [gcov](/man/gcov)(1), [gcc](/man/gcc)(1)

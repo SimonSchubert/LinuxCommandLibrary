@@ -46,6 +46,24 @@ Set update **interval**
 **MemLim**: Memory limit
 **BLKIO**: Block I/O statistics
 
+# INSTALL
+
+```apt: sudo apt install lxc```
+
+```dnf: sudo dnf install lxc```
+
+```pacman: sudo pacman -S lxc```
+
+```apk: sudo apk add lxc```
+
+```zypper: sudo zypper install lxc```
+
+```brew: brew install lxc```
+
+```nix: nix profile install nixpkgs#lxc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lxc-info](/man/lxc-info)(1), [lxc-ls](/man/lxc-ls)(1), [top](/man/top)(1)

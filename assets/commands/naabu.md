@@ -109,6 +109,14 @@ SYN scanning requires root/admin privileges. Aggressive scanning may trigger IDS
 
 **naabu** was developed by **ProjectDiscovery** as part of their security tooling suite. It complements their other tools like nuclei, httpx, and subfinder for comprehensive security testing workflows.
 
+# INSTALL
+
+```brew: brew install naabu```
+
+```nix: nix profile install nixpkgs#naabu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [masscan](/man/masscan)(1), [rustscan](/man/rustscan)(1), [zmap](/man/zmap)(1)

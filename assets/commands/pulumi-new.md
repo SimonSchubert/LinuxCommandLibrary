@@ -55,6 +55,18 @@ Create a new Pulumi project from template
 
 **pulumi new** creates a new Pulumi project from a template. Templates include language runtimes (typescript, python, go, csharp) and cloud providers (aws, azure, gcp). Initializes project structure and dependencies.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-up](/man/pulumi-up)(1), [pulumi-stack](/man/pulumi-stack)(1)

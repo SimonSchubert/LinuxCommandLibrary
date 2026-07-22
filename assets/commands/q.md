@@ -113,6 +113,16 @@ Requires AWS authentication and an Amazon Q Developer subscription (Free or Pro 
 
 Amazon Q Developer CLI was released by **AWS** as part of the Amazon Q Developer suite. The enhanced CLI agent with agentic coding capabilities was announced in **March 2025**, powered by Anthropic's Claude 3.7 Sonnet. In 2025, users can upgrade to the Kiro CLI for additional features while retaining Q Developer functionality.
 
+# INSTALL
+
+```apk: sudo apk add dnsq```
+
+```brew: brew install q```
+
+```nix: nix profile install nixpkgs#q```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws](/man/aws)(1), [claude](/man/claude)(1), [codex](/man/codex)(1), [gemini](/man/gemini)(1), [aichat](/man/aichat)(1)

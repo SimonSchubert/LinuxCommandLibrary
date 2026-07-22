@@ -109,6 +109,18 @@ Symbols are resolved on demand by the local web server **samply** starts; if you
 
 **samply** was created in **2021** by **Markus Stange** at **Mozilla** to give external developers access to the same profile format that the **Gecko Profiler** had been producing for Firefox since **2011**. The project lives at _github.com/mstange/samply_ and is released under MIT or Apache-2.0.
 
+# INSTALL
+
+```pacman: sudo pacman -S samply```
+
+```zypper: sudo zypper install samply```
+
+```brew: brew install samply```
+
+```nix: nix profile install nixpkgs#samply```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [perf](/man/perf)(1), [strace](/man/strace)(1), [gprof](/man/gprof)(1), [valgrind](/man/valgrind)(1), [hyperfine](/man/hyperfine)(1)

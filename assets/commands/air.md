@@ -87,6 +87,14 @@ Air is a development tool and should not be used for production deployments. The
 
 Air was created as an open-source project to address the need for live reloading in Go development, similar to tools available in other ecosystems like nodemon for Node.js. The project is maintained on GitHub under the air-verse organization and has become one of the most popular live reload solutions in the Go community.
 
+# INSTALL
+
+```aur: yay -S air```
+
+```nix: nix profile install nixpkgs#air```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [make](/man/make)(1), [nodemon](/man/nodemon)(1)

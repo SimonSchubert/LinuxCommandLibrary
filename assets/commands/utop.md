@@ -89,6 +89,16 @@ Requires OCaml installation. Some features need findlib. Emacs integration requi
 
 **utop** was created as a modern replacement for the standard OCaml toplevel, providing a significantly improved user experience with completion, history, and editor integration. It's maintained by the OCaml community and has become the recommended REPL for OCaml development.
 
+# INSTALL
+
+```apt: sudo apt install utop```
+
+```dnf: sudo dnf install utop```
+
+```apk: sudo apk add utop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ocaml](/man/ocaml)(1), [ocamlfind](/man/ocamlfind)(1), [opam](/man/opam)(1)

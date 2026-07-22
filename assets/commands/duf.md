@@ -108,6 +108,22 @@ By default it omits pseudo-filesystems, so a mount you expect to see may need **
 
 **duf** was written by **Christian Muehlhaeuser** in **2020** in Go, one of a wave of tools that took a venerable Unix utility and asked what it would look like if the terminal had colour, Unicode, and a wide screen, which it had not when `df` was written. It caught on quickly, since reading `df` output is a small daily irritation for a great many people and duf's grouped, colour-coded table removes it.
 
+# INSTALL
+
+```apt: sudo apt install duf```
+
+```dnf: sudo dnf install duf```
+
+```pacman: sudo pacman -S duf```
+
+```zypper: sudo zypper install duf```
+
+```brew: brew install duf```
+
+```nix: nix profile install nixpkgs#duf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [df](/man/df)(1), [du](/man/du)(1), [ncdu](/man/ncdu)(1), [dust](/man/dust)(1), [dua](/man/dua)(1)

@@ -72,6 +72,18 @@ Instances incur costs while running. Zone resources may be limited. Some templat
 
 exo compute is part of the **Exoscale CLI**, providing programmatic access to Exoscale's compute infrastructure for automated cloud management.
 
+# INSTALL
+
+```dnf: sudo dnf install exo```
+
+```pacman: sudo pacman -S exo```
+
+```apk: sudo apk add exoscale```
+
+```nix: nix profile install nixpkgs#exo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [exo](/man/exo)(1), [exo-compute-sks](/man/exo-compute-sks)(1)

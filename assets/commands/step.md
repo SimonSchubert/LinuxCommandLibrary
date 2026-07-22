@@ -95,6 +95,22 @@ CA setup requires planning. Certificate lifetimes matter. Key security essential
 
 **step** and **step-ca** were created by **Smallstep** for modern PKI. They simplify certificate management for developers and DevOps.
 
+# INSTALL
+
+```apt: sudo apt install step```
+
+```dnf: sudo dnf install step```
+
+```pacman: sudo pacman -S step```
+
+```apk: sudo apk add step```
+
+```zypper: sudo zypper install step```
+
+```brew: brew install step```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [step-ca](/man/step-ca)(1), [openssl](/man/openssl)(1), [cfssl](/man/cfssl)(1), [certbot](/man/certbot)(1)

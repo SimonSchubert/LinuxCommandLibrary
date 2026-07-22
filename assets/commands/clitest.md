@@ -50,6 +50,16 @@ $ pwd
 
 Output must match exactly (whitespace and locale matter). Commands run for real with your shell environment; avoid destructive examples. Interactive programs and TUI apps are a poor fit. Portable sh, but individual tests may assume Linux utilities.
 
+# INSTALL
+
+```dnf: sudo dnf install clitest```
+
+```pacman: sudo pacman -S clitest```
+
+```brew: brew install clitest```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bats](/man/bats)(1), [shunit2](/man/shunit2)(1), [expect](/man/expect)(1)

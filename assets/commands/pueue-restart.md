@@ -45,6 +45,20 @@ Re-queue failed or completed pueue tasks
 
 **pueue restart** re-queues failed or completed tasks for execution. Can modify the command before restarting. Useful for retrying failed operations with modifications.
 
+# INSTALL
+
+```pacman: sudo pacman -S pueue```
+
+```apk: sudo apk add pueue```
+
+```zypper: sudo zypper install pueue```
+
+```brew: brew install pueue```
+
+```nix: nix profile install nixpkgs#pueue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pueue](/man/pueue)(1), [pueue-start](/man/pueue-start)(1)

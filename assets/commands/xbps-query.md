@@ -102,6 +102,14 @@ The tool is essential for exploring available packages and understanding the cur
 
 Repository queries require network access and an up-to-date repository index (run **xbps-install -S** to sync). Only one query mode can be used at a time. Part of the XBPS package management system for Void Linux.
 
+# INSTALL
+
+```apk: sudo apk add xbps```
+
+```nix: nix profile install nixpkgs#xbps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xbps-install](/man/xbps-install)(1), [xbps-remove](/man/xbps-remove)(1)

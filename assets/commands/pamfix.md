@@ -49,6 +49,24 @@ _FILE_
 
 You cannot specify both **-clip** and **-changemaxval**. May not fix all types of corruption. Some data loss is possible with truncation.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamfixtrunc](/man/pamfixtrunc)(1), [pamfile](/man/pamfile)(1), [pamvalidate](/man/pamvalidate)(1), [pamcut](/man/pamcut)(1), [netpbm](/man/netpbm)(1)

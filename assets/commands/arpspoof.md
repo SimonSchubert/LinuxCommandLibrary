@@ -49,6 +49,17 @@ This is a penetration testing tool that can disrupt network traffic. Only use on
 
 **arpspoof** is part of the **dsniff** package, a collection of network auditing tools for penetration testing and security analysis.
 
+# INSTALL
+
+```apt: sudo apt install dsniff```
+
+```dnf: sudo dnf install dsniff```
+
+```pacman: sudo pacman -S dsniff```
+
+```nix: nix profile install nixpkgs#dsniff```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [dsniff](/man/dsniff)(8), [tcpdump](/man/tcpdump)(8), [ettercap](/man/ettercap)(8)

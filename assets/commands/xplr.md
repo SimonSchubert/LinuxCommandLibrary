@@ -112,6 +112,20 @@ Steep learning curve for configuration. Fewer built-in features than ranger. Lua
 
 **xplr** was created by **Arijit Basu** around **2021** as an extensible file explorer. It emphasizes hackability and composition over built-in features.
 
+# INSTALL
+
+```pacman: sudo pacman -S xplr```
+
+```apk: sudo apk add xplr```
+
+```zypper: sudo zypper install xplr```
+
+```brew: brew install xplr```
+
+```nix: nix profile install nixpkgs#xplr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ranger](/man/ranger)(1), [vifm](/man/vifm)(1), [nnn](/man/nnn)(1), [lf](/man/lf)(1)

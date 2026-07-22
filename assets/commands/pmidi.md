@@ -51,6 +51,16 @@ ALSA only. Requires MIDI port. Linux specific.
 
 pmidi is part of **ALSA utilities** for MIDI playback.
 
+# INSTALL
+
+```apt: sudo apt install pmidi```
+
+```zypper: sudo zypper install pmidi```
+
+```nix: nix profile install nixpkgs#pmidi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aplaymidi](/man/aplaymidi)(1), [timidity](/man/timidity)(1), [fluidsynth](/man/fluidsynth)(1)

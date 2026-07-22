@@ -81,6 +81,20 @@ NVIDIA needs driver 410+. AMD needs ROCm. Intel needs i915 driver. Feature suppo
 
 **nvtop** was created by **Maxime Schmitt** to provide an htop-like experience for GPU monitoring. It started with NVIDIA support and later added AMD and Intel GPU support.
 
+# INSTALL
+
+```apt: sudo apt install nvtop```
+
+```dnf: sudo dnf install nvtop```
+
+```pacman: sudo pacman -S nvtop```
+
+```zypper: sudo zypper install nvtop```
+
+```brew: brew install nvtop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nvidia-smi](/man/nvidia-smi)(1), [gpustat](/man/gpustat)(1), [htop](/man/htop)(1), [radeontop](/man/radeontop)(1), [amdgpu_top](/man/amdgpu_top)(1)

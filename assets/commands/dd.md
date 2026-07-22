@@ -90,6 +90,24 @@ Common use cases include forensic disk imaging, data backup and restoration, dis
 
 Part of **GNU Coreutils**. The command name comes from IBM JCL (Job Control Language) where DD stands for "Data Definition". Available since Version 5 AT&T Unix (1974).
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cp](/man/cp)(1), [dcfldd](/man/dcfldd)(1), [pv](/man/pv)(1)

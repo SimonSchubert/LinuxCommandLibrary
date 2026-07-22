@@ -52,6 +52,24 @@ System V IPC has kernel limits on the number and size of resources. Resources ar
 
 System V IPC was introduced in AT&T UNIX System V in the early **1980s**. While older than POSIX alternatives, it remains widely used and supported across Unix-like systems.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ipcs](/man/ipcs)(1), [ipcrm](/man/ipcrm)(1), [lsipc](/man/lsipc)(1)

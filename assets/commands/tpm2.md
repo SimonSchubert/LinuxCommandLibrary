@@ -130,5 +130,19 @@ Not every TPM exposes every hierarchy or PCR to userspace: only PCR 16 and 23 ar
 
 The **tpm2-tools** project is maintained by the **tpm2-software** community and implements the user-space side of the **TCG TPM 2.0** specification on top of the **tpm2-tss** stack. The unified **tpm2** dispatcher was introduced to simplify packaging in constrained environments; the original per-tool invocation (**tpm2_**_tool_) is still supported and, on most distributions, remains the primary interface.
 
+# INSTALL
+
+```apt: sudo apt install tpm2-tools```
+
+```dnf: sudo dnf install tpm2-tools```
+
+```pacman: sudo pacman -S tpm2-tools```
+
+```apk: sudo apk add tpm2-tools```
+
+```nix: nix profile install nixpkgs#tpm2-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

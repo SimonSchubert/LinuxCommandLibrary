@@ -91,6 +91,11 @@ The command follows pacman's option syntax, making it familiar to Arch Linux use
 
 **aurman** was a popular AUR helper known for its advanced dependency solver and interactive package selection. Development stopped and the package was eventually dropped from the AUR, leaving **yay** and **paru** as the commonly recommended replacements.
 
+# INSTALL
+
+```aur: yay -S aurman```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [yay](/man/yay)(1), [paru](/man/paru)(1), [makepkg](/man/makepkg)(8)

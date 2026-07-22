@@ -69,6 +69,13 @@ BeEF is intended **exclusively for authorized penetration testing**. Using it wi
 
 BeEF was originally created by **Wade Alcorn** in **2006** as a research project to demonstrate browser security weaknesses. It became an open-source project and gained popularity in the security community. The tool is now maintained by a community of contributors and is included in security-focused Linux distributions like **Kali Linux**.
 
+# INSTALL
+
+```apt: sudo apt install beef```
+
+```aur: yay -S beef```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [bettercap](/man/bettercap)(1), [mitmproxy](/man/mitmproxy)(1), [nikto](/man/nikto)(1), [burpsuite](/man/burpsuite)(1)

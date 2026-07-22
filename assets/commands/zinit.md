@@ -128,6 +128,14 @@ Requires Zsh 5.1 or later. Turbo mode may cause race conditions with plugins tha
 
 Zinit was created by Sebastian Gniazdowski, originally released as **Zplugin** in **2016**. It was renamed to Zinit in 2019 to avoid confusion with other tools. The project pioneered Turbo mode for asynchronous plugin loading in Zsh. The original repository was archived in 2021, and community forks continue maintenance under **zdharma-continuum/zinit**.
 
+# INSTALL
+
+```brew: brew install zinit```
+
+```nix: nix profile install nixpkgs#zinit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zsh](/man/zsh)(1), [oh-my-zsh](/man/oh-my-zsh)(1), [antibody](/man/antibody)(1), [zplug](/man/zplug)(1), [antigen](/man/antigen)(1)

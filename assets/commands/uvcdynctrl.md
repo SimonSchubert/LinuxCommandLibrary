@@ -94,6 +94,18 @@ The tool works with USB Video Class (UVC) compatible webcams and cameras. It can
 
 Only works with UVC-compatible cameras. Available controls depend on the hardware. For negative values, use **--** before the value to prevent interpretation as an option flag.
 
+# INSTALL
+
+```apt: sudo apt install uvcdynctrl```
+
+```dnf: sudo dnf install uvcdynctrl```
+
+```zypper: sudo zypper install uvcdynctrl```
+
+```nix: nix profile install nixpkgs#uvcdynctrl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [v4l2-ctl](/man/v4l2-ctl)(1), [v4l2loopback-ctl](/man/v4l2loopback-ctl)(1)

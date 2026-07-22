@@ -89,6 +89,24 @@ Embedded Ruby executes with full permissions. Input should be trusted. Complex l
 
 ERB was created by **Masatoshi Seki** and included in Ruby's standard library. It became popular with Ruby on Rails as the default view template engine, though Rails now often uses alternatives like Slim or Haml.
 
+# INSTALL
+
+```apt: sudo apt install ruby```
+
+```dnf: sudo dnf install ruby```
+
+```pacman: sudo pacman -S ruby```
+
+```apk: sudo apk add ruby```
+
+```zypper: sudo zypper install ruby```
+
+```brew: brew install ruby```
+
+```nix: nix profile install nixpkgs#ruby```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ruby](/man/ruby)(1), [irb](/man/irb)(1), [haml](/man/haml)(1)

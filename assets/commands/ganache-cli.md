@@ -78,6 +78,12 @@ ganache-cli is deprecated in favor of the **ganache** command. Not for productio
 
 Originally released as **TestRPC**, it was renamed to **ganache-cli** when incorporated into the Truffle Suite around **2017**. The tool has since been replaced by the unified **ganache** command starting with Ganache 7.
 
+# INSTALL
+
+```aur: yay -S ganache-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [geth](/man/geth)(1), [truffle](/man/truffle)(1)

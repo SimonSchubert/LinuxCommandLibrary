@@ -30,6 +30,12 @@ Requires configuration of package sources. API rate limits may apply for some so
 
 **nvrs** is written in **Rust**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nvrs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix](/man/nix)(1)

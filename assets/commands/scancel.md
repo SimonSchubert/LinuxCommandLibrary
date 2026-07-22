@@ -75,6 +75,12 @@ Users can only cancel their own jobs unless they have administrator privileges. 
 
 Part of **Slurm** workload manager, providing job control for HPC clusters.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [squeue](/man/squeue)(1), [sbatch](/man/sbatch)(1), [scontrol](/man/scontrol)(1)

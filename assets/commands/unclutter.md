@@ -61,6 +61,16 @@ X11 only. Multiple versions exist. May conflict with apps.
 
 **unclutter** was created to hide the mouse cursor when it's not being used, cleaning up the X11 display.
 
+# INSTALL
+
+```pacman: sudo pacman -S unclutter```
+
+```zypper: sudo zypper install unclutter```
+
+```nix: nix profile install nixpkgs#unclutter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdotool](/man/xdotool)(1), [xsetroot](/man/xsetroot)(1)

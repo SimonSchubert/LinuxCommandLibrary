@@ -75,6 +75,12 @@ Part of Docutils package (python-docutils). Multiple variants: rst2html, rst2htm
 
 rst2html is part of **Docutils** by **David Goodger** and contributors, implementing reStructuredText processing.
 
+# INSTALL
+
+```apk: sudo apk add py3-docutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sphinx-build](/man/sphinx-build)(1), [pandoc](/man/pandoc)(1)

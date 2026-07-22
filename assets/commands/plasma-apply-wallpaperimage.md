@@ -45,6 +45,18 @@ Requires running Plasma session. Image must be in supported format (PNG, JPG, et
 
 **plasma-apply-wallpaperimage** is part of **KDE Plasma Workspace**, providing scriptable wallpaper control alongside other plasma-apply tools.
 
+# INSTALL
+
+```apt: sudo apt install plasma-workspace```
+
+```dnf: sudo dnf install plasma-workspace```
+
+```pacman: sudo pacman -S plasma-workspace```
+
+```apk: sudo apk add plasma-workspace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [plasma-apply-colorscheme](/man/plasma-apply-colorscheme)(1), [feh](/man/feh)(1), [nitrogen](/man/nitrogen)(1)

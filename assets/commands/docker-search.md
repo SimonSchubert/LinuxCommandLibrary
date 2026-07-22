@@ -46,6 +46,24 @@ search Docker Hub for container images
 
 **docker search** searches Docker Hub for images. Returns image name, description, stars, and official/automated status. This command queries the public Docker Hub registry to help discover available images. Results can be filtered by official status, automation, or popularity to find trusted images.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-pull](/man/docker-pull)(1), [docker-images](/man/docker-images)(1)

@@ -53,6 +53,14 @@ Requires appropriate permissions (typically root). Parameter names and values ar
 
 **cgset** is part of **libcgroup**, developed by **Red Hat** starting around **2008** to provide user-space cgroup management. The tool provided a way to configure resource limits without direct filesystem manipulation. As cgroups v2 and systemd became prevalent, direct management through these tools became less common.
 
+# INSTALL
+
+```apt: sudo apt install cgroup-tools```
+
+```apk: sudo apk add cgroup-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cgcreate](/man/cgcreate)(1), [cgdelete](/man/cgdelete)(1), [cgget](/man/cgget)(1), [cgexec](/man/cgexec)(1)

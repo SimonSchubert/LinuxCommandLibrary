@@ -38,6 +38,12 @@ manages wordlists for Kiterunner API endpoint discovery
 
 **kr wordlist** manages wordlists for Kiterunner API endpoint discovery. Provides access to curated API-specific wordlists and tools to convert custom wordlists to the optimized kite format.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kiterunner```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kiterunner-brute](/man/kiterunner-brute)(1)

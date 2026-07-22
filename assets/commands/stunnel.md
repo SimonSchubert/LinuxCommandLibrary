@@ -218,6 +218,24 @@ SSLv2 and SSLv3 are disabled by default due to known security vulnerabilities. C
 
 stunnel was created by **Michał Trojnara** in **1998** as a universal TLS wrapper for TCP services. It remains in active development and supports modern TLS 1.3 and current OpenSSL APIs.
 
+# INSTALL
+
+```apt: sudo apt install stunnel4```
+
+```dnf: sudo dnf install stunnel```
+
+```pacman: sudo pacman -S stunnel```
+
+```apk: sudo apk add stunnel```
+
+```zypper: sudo zypper install stunnel```
+
+```brew: brew install stunnel```
+
+```nix: nix profile install nixpkgs#stunnel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [openssl-s_client](/man/openssl-s_client)(1), [certbot](/man/certbot)(1), [socat](/man/socat)(1), [haproxy](/man/haproxy)(1)

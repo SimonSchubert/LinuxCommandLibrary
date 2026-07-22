@@ -83,6 +83,18 @@ Only works with squashfs filesystems. File paths within the squashfs are relativ
 
 **sqfscat** is part of **squashfs-tools**, created by **Phillip Lougher** starting in **2002**. Squashfs was merged into the Linux kernel mainline in version **2.6.29** (2009). The tools have evolved to support multiple compression algorithms and are widely used in live CDs, container images, and embedded systems.
 
+# INSTALL
+
+```apt: sudo apt install squashfs-tools```
+
+```dnf: sudo dnf install squashfs-tools```
+
+```pacman: sudo pacman -S squashfs-tools```
+
+```apk: sudo apk add squashfs-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unsquashfs](/man/unsquashfs)(1), [mksquashfs](/man/mksquashfs)(1), [sqfstar](/man/sqfstar)(1)

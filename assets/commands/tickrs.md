@@ -68,6 +68,14 @@ Realtime stock ticker data in your terminal
 
 **tickrs** was created by **tarkah** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S tickrs```
+
+```nix: nix profile install nixpkgs#tickrs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ticker](/man/ticker)(1), [cointop](/man/cointop)(1)

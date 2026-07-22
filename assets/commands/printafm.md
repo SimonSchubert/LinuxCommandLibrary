@@ -35,6 +35,24 @@ Requires AFM files. Part of Ghostscript suite.
 
 printafm is part of **Ghostscript** for font metrics display.
 
+# INSTALL
+
+```apt: sudo apt install ghostscript```
+
+```dnf: sudo dnf install ghostscript```
+
+```pacman: sudo pacman -S ghostscript```
+
+```apk: sudo apk add ghostscript```
+
+```zypper: sudo zypper install ghostscript```
+
+```brew: brew install ghostscript```
+
+```nix: nix profile install nixpkgs#ghostscript```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gs](/man/gs)(1), [fc-list](/man/fc-list)(1)

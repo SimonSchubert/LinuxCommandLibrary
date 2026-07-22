@@ -168,6 +168,14 @@ Environment variables **GRAFANA_SERVER**, **GRAFANA_TOKEN**, and **GRAFANA_CLOUD
 
 **gcx** is published by **Grafana Labs** and is explicitly positioned as "optimized for agentic usage", closing the gap between AI coding tools that see only source code and production systems where the code actually runs.
 
+# INSTALL
+
+```brew: brew install gcx```
+
+```nix: nix profile install nixpkgs#gcx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grafana-cli](/man/grafana-cli)(1), [promtool](/man/promtool)(1), [k6](/man/k6)(1)

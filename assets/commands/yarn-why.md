@@ -45,6 +45,20 @@ _package_
 
 Output format and accepted flags differ between **Yarn Classic (1.x)** and **Yarn Berry (2+)**. The recursive and JSON options are Berry extensions not present in 1.x. The command needs an installed project (it reads **node_modules** / **.pnp.cjs**), not just **package.json**.
 
+# INSTALL
+
+```pacman: sudo pacman -S yarn```
+
+```apk: sudo apk add yarn```
+
+```zypper: sudo zypper install yarn```
+
+```brew: brew install yarn```
+
+```nix: nix profile install nixpkgs#yarn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yarn](/man/yarn)(1), [npm-explain](/man/npm-explain)(1)

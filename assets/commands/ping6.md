@@ -86,6 +86,14 @@ Firewalls may block ICMPv6. Link-local requires interface. Flood ping requires r
 
 **ping6** appeared with IPv6 implementations in the **1990s**. On many modern systems, the **ping** command handles both protocols, making ping6 a compatibility alias.
 
+# INSTALL
+
+```apt: sudo apt install iputils-ping```
+
+```apk: sudo apk add iputils-ping```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ping](/man/ping)(1), [traceroute6](/man/traceroute6)(1), [ip](/man/ip)(8)

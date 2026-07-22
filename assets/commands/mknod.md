@@ -70,6 +70,24 @@ Modern Linux systems use udev and devtmpfs for dynamic device node creation, mak
 
 **mknod** is a standard Unix command dating back to early Unix systems. It is part of **GNU coreutils** on Linux. The command provides direct access to the mknod(2) system call for creating special files.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkfifo](/man/mkfifo)(1), [stat](/man/stat)(2), [mknod](/man/mknod)(2)

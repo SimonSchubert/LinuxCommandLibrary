@@ -98,6 +98,24 @@ If the revision is unchanged from the previous one, ci reverts to that revision 
 
 **RCS** (Revision Control System) was developed by Walter Tichy at Purdue University and first released in **1982**. It was one of the earliest version control systems and influenced later systems like CVS. While largely superseded by Git and other distributed systems, RCS remains useful for simple single-file versioning.
 
+# INSTALL
+
+```apt: sudo apt install rcs```
+
+```dnf: sudo dnf install rcs```
+
+```pacman: sudo pacman -S rcs```
+
+```apk: sudo apk add rcs```
+
+```zypper: sudo zypper install rcs```
+
+```brew: brew install rcs```
+
+```nix: nix profile install nixpkgs#rcs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [co](/man/co)(1), [rcs](/man/rcs)(1), [rcsdiff](/man/rcsdiff)(1), [rlog](/man/rlog)(1)

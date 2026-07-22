@@ -63,6 +63,16 @@ Less powerful than GIMP. No CMYK support. Some advanced features missing.
 
 **Pinta** started in **2010** as a C#/GTK port of Paint.NET concepts. It aims to be a simple alternative to GIMP for basic image editing on Linux.
 
+# INSTALL
+
+```apk: sudo apk add pinta```
+
+```zypper: sudo zypper install pinta```
+
+```nix: nix profile install nixpkgs#pinta```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gimp](/man/gimp)(1), [krita](/man/krita)(1), [inkscape](/man/inkscape)(1), [imagemagick](/man/imagemagick)(1)

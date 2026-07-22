@@ -99,6 +99,22 @@ Requires libclang to be installed. C++ support is more limited than C. Some C co
 
 **bindgen** was originally created by **Jyun-Yan You** in **2013** and has been maintained by the Rust project community. It became an official rust-lang project and is now maintained under the **rust-lang/rust-bindgen** repository. The tool has evolved significantly to handle more complex C/C++ patterns and improve the quality of generated Rust code, becoming essential for Rust's interoperability story.
 
+# INSTALL
+
+```apt: sudo apt install bindgen```
+
+```pacman: sudo pacman -S rust-bindgen```
+
+```apk: sudo apk add rust-bindgen```
+
+```zypper: sudo zypper install rust-bindgen```
+
+```brew: brew install bindgen```
+
+```nix: nix profile install nixpkgs#rust-bindgen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [rustc](/man/rustc)(1), [cbindgen](/man/cbindgen)(1), [clang](/man/clang)(1)

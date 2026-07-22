@@ -34,6 +34,18 @@ The display format can be customized using strftime format specifiers.
 **-d, --dateformat** _format_
 > Time format using strftime specifiers (e.g., %H:%M:%S)
 
+# INSTALL
+
+```apt: sudo apt install caca-utils```
+
+```dnf: sudo dnf install caca-utils```
+
+```apk: sudo apk add libcaca-apps```
+
+```zypper: sudo zypper install caca-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cacademo](/man/cacademo)(1), [cacafire](/man/cacafire)(1), [cacaview](/man/cacaview)(1)

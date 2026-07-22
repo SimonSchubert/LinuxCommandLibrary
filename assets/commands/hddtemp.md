@@ -80,6 +80,16 @@ Requires root privileges to access drive S.M.A.R.T. data. The drive type prefix 
 
 **hddtemp** was developed to provide simple temperature monitoring for hard drives using S.M.A.R.T. data, commonly used for system health monitoring.
 
+# INSTALL
+
+```dnf: sudo dnf install hddtemp```
+
+```pacman: sudo pacman -S hddtemp```
+
+```nix: nix profile install nixpkgs#hddtemp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smartctl](/man/smartctl)(8), [sensors](/man/sensors)(1)

@@ -85,6 +85,20 @@ Output workspace and dependency metadata as JSON
 
 Output format may change between Cargo versions. Always use --format-version for scripts. The cargo_metadata crate provides Rust parsing.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-locate-project](/man/cargo-locate-project)(1)

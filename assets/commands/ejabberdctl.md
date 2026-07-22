@@ -93,6 +93,20 @@ Requires ejabberd to be installed and configured. Some commands need root privil
 
 ejabberd was developed by **Alexey Shchepin** starting in **2002**, written in Erlang for scalability and fault tolerance. It became one of the most widely deployed XMPP servers, used by WhatsApp and other messaging platforms at scale.
 
+# INSTALL
+
+```apt: sudo apt install ejabberd```
+
+```pacman: sudo pacman -S ejabberd```
+
+```apk: sudo apk add ejabberd```
+
+```brew: brew install ejabberd```
+
+```nix: nix profile install nixpkgs#ejabberd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [prosodyctl](/man/prosodyctl)(1)

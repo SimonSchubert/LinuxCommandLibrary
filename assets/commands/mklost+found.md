@@ -30,6 +30,24 @@ The lost+found directory typically already exists at the root of each ext filesy
 
 **mklost+found** was created by **Remy Card** and is currently maintained by **Theodore Ts'o**. It is part of the **e2fsprogs** package, the standard utilities for managing ext filesystems on Linux.
 
+# INSTALL
+
+```apt: sudo apt install e2fsprogs```
+
+```dnf: sudo dnf install e2fsprogs```
+
+```pacman: sudo pacman -S e2fsprogs```
+
+```apk: sudo apk add e2fsprogs-extra```
+
+```zypper: sudo zypper install e2fsprogs```
+
+```brew: brew install e2fsprogs```
+
+```nix: nix profile install nixpkgs#e2fsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [e2fsck](/man/e2fsck)(8), [mke2fs](/man/mke2fs)(8), [fsck](/man/fsck)(8)

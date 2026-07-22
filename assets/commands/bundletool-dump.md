@@ -76,6 +76,14 @@ Use cases include build verification, security analysis of signing certificates,
 
 Requires Java Runtime Environment (JRE) version 11 or higher. Not typically pre-installed on Linux systems.
 
+# INSTALL
+
+```brew: brew install bundletool```
+
+```nix: nix profile install nixpkgs#bundletool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bundletool](/man/bundletool)(1), [bundletool-validate](/man/bundletool-validate)(1), [apktool](/man/apktool)(1)

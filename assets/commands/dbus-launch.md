@@ -83,6 +83,16 @@ Multiple invocations without proper session management can start multiple daemon
 
 dbus-launch is part of the **D-Bus** reference implementation, created by **Red Hat** and the freedesktop.org project around **2003**. It became essential infrastructure for Linux desktop environments requiring inter-process communication.
 
+# INSTALL
+
+```apt: sudo apt install dbus-x11```
+
+```dnf: sudo dnf install dbus-x11```
+
+```apk: sudo apk add dbus-x11```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dbus-daemon](/man/dbus-daemon)(1), [dbus-send](/man/dbus-send)(1), [dbus-monitor](/man/dbus-monitor)(1), [dbus-cleanup-sockets](/man/dbus-cleanup-sockets)(1)

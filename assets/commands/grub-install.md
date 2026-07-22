@@ -74,6 +74,20 @@ Requires root privileges. Incorrect installation can make system unbootable - ha
 
 GRUB 2 grub-install replaced the older GRUB Legacy installation method around **2009**. It supports modern features like GPT partition tables, UEFI, and modular design.
 
+# INSTALL
+
+```apt: sudo apt install grub2-common```
+
+```dnf: sudo dnf install grub2-common```
+
+```pacman: sudo pacman -S grub```
+
+```apk: sudo apk add grub```
+
+```zypper: sudo zypper install grub2-common```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub-mkconfig](/man/grub-mkconfig)(8), [grub-set-default](/man/grub-set-default)(8), [efibootmgr](/man/efibootmgr)(8)

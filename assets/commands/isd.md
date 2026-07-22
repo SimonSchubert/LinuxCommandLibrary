@@ -30,6 +30,14 @@ Requires **Python 3.11** or newer. Only works on Linux systems with systemd. Som
 
 **isd** was created by **kainctl** and is written in **Python**. It was designed as a more user-friendly alternative to the systemctl command for daily systemd management tasks.
 
+# INSTALL
+
+```pacman: sudo pacman -S isd```
+
+```nix: nix profile install nixpkgs#isd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [journalctl](/man/journalctl)(1)

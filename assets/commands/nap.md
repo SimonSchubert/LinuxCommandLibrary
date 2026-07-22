@@ -43,6 +43,14 @@ Snippets are stored locally. No built-in sync across devices.
 
 **nap** was created by **maaslalani** and is written in **Go** using the Charm framework.
 
+# INSTALL
+
+```brew: brew install nap```
+
+```nix: nix profile install nixpkgs#nap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pet](/man/pet)(1)

@@ -26,6 +26,24 @@ Multi-plane Lisp Machine bitmaps are inherently color, but because the file form
 
 The Lisp Machine format normally pads image width up to the next multiple of 32 pixels, but not always. Files with non-32-aligned widths may be up to 7 bits too short and are not handled gracefully. No tool-specific options exist; only standard libnetpbm options apply.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pgmtolispm](/man/pgmtolispm)(1), [pbmtolj](/man/pbmtolj)(1)

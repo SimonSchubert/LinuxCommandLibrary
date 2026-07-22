@@ -44,6 +44,16 @@ removes old WAL archive files no longer needed by standby servers
 
 **pg_archivecleanup** removes old WAL archive files no longer needed by standby servers. It is typically used as **archive_cleanup_command** in **postgresql.conf** (or recovery.conf in older versions). It removes all WAL files older than the specified _oldestkeptwalfile_.
 
+# INSTALL
+
+```dnf: sudo dnf install postgresql17```
+
+```apk: sudo apk add postgresql17```
+
+```zypper: sudo zypper install postgresql17```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_basebackup](/man/pg_basebackup)(1), [pg_receivewal](/man/pg_receivewal)(1)

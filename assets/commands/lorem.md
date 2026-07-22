@@ -62,6 +62,16 @@ Various implementations exist. Output format varies. Development/design use.
 
 Lorem Ipsum text originates from **Cicero's "De finibus bonorum et malorum"** (45 BC), used as placeholder text since the 1500s.
 
+# INSTALL
+
+```pacman: sudo pacman -S lorem```
+
+```brew: brew install lorem```
+
+```nix: nix profile install nixpkgs#lorem```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [shuf](/man/shuf)(1), [fortune](/man/fortune)(1)

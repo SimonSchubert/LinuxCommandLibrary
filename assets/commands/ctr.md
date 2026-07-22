@@ -98,6 +98,24 @@ Low-level tool primarily for debugging. For Kubernetes environments, use crictl.
 
 **ctr** is part of **containerd**, which was originally developed by Docker Inc. and donated to the **Cloud Native Computing Foundation (CNCF)** in **2017**. containerd became a graduated CNCF project and is now the standard container runtime for Kubernetes and many other platforms.
 
+# INSTALL
+
+```apt: sudo apt install containerd```
+
+```dnf: sudo dnf install containerd```
+
+```pacman: sudo pacman -S containerd```
+
+```apk: sudo apk add containerd-ctr```
+
+```zypper: sudo zypper install containerd```
+
+```brew: brew install containerd```
+
+```nix: nix profile install nixpkgs#containerd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [containerd](/man/containerd)(8), [crictl](/man/crictl)(1), [nerdctl](/man/nerdctl)(1)

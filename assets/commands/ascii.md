@@ -70,6 +70,21 @@ Without arguments, shows an options summary and the complete ASCII table. The ba
 
 **ascii** was written by Eric S. Raymond as a handy ASCII reference utility.
 
+# INSTALL
+
+```apt: sudo apt install ascii```
+
+```dnf: sudo dnf install ascii```
+
+```pacman: sudo pacman -S ascii```
+
+```zypper: sudo zypper install ascii```
+
+```brew: brew install ascii```
+
+```nix: nix profile install nixpkgs#ascii```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [man](/man/man)(1), [charmap](/man/charmap)(1)

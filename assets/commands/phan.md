@@ -62,6 +62,12 @@ Requires PHP with AST extension. Configuration recommended.
 
 Phan was created for **advanced PHP static analysis** with type inference.
 
+# INSTALL
+
+```aur: yay -S phan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [phpstan](/man/phpstan)(1), [psalm](/man/psalm)(1), [php](/man/php)(1)

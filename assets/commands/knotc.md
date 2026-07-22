@@ -65,6 +65,22 @@ control utility for Knot DNS server
 
 **knotc** is the control utility for Knot DNS server. It communicates with the running knotd daemon through a control socket to manage zones, check status, and trigger operations. Supports interactive mode with command completion.
 
+# INSTALL
+
+```apt: sudo apt install knot```
+
+```dnf: sudo dnf install knot```
+
+```pacman: sudo pacman -S knot```
+
+```apk: sudo apk add knot```
+
+```zypper: sudo zypper install knot```
+
+```brew: brew install knot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kdig](/man/kdig)(1)

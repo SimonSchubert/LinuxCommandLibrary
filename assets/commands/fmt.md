@@ -89,6 +89,24 @@ Does not preserve exact spacing or formatting. May break intentionally formatted
 
 **fmt** originated in BSD Unix around **1979**, based on an earlier tool. It was designed as a simple text formatter for preparing documents and emails. The command has been included in GNU coreutils and remains part of standard Unix-like systems.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils-fmt```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fold](/man/fold)(1), [pr](/man/pr)(1), [nroff](/man/nroff)(1), [groff](/man/groff)(1)

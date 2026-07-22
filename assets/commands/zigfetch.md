@@ -29,6 +29,12 @@ Minimal neofetch-like system info tool in Zig
 
 **zigfetch** was created by **utox39** and is written in **Zig**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#zigfetch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neofetch](/man/neofetch)(1), [fastfetch](/man/fastfetch)(1), [screenfetch](/man/screenfetch)(1)

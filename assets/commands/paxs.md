@@ -63,6 +63,12 @@ Requires yay, flatpak, and/or snap to be installed. Only manages packages throug
 
 **paxs** was created by **zamhedonia** to address the complexity of managing multiple package managers on modern Linux systems. It provides a unified interface without replacing the underlying package managers.
 
+# INSTALL
+
+```aur: yay -S paxs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yay](/man/yay)(1), [flatpak](/man/flatpak)(1), [snap](/man/snap)(1), [pacman](/man/pacman)(8)

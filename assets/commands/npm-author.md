@@ -57,6 +57,16 @@ npm config subcommand. Affects npm init only. Global or per-project.
 
 Author configuration is part of **npm's** init defaults system for package.json creation.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-config](/man/npm-config)(1), [npm-init](/man/npm-init)(1)

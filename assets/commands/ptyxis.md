@@ -59,6 +59,22 @@ Requires GNOME environment. Container features need Flatpak/Toolbox/Distrobox in
 
 **ptyxis** was created by **Christian Hergert** (GNOME Builder developer) as a modern terminal that embraces containerized workflows. The name comes from Greek, meaning "folded tablet."
 
+# INSTALL
+
+```apt: sudo apt install ptyxis```
+
+```dnf: sudo dnf install ptyxis```
+
+```pacman: sudo pacman -S ptyxis```
+
+```apk: sudo apk add ptyxis```
+
+```zypper: sudo zypper install ptyxis```
+
+```nix: nix profile install nixpkgs#ptyxis```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnome-terminal](/man/gnome-terminal)(1), [toolbox](/man/toolbox)(1), [distrobox](/man/distrobox)(1)

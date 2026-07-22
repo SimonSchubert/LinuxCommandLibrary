@@ -85,6 +85,18 @@ Requires Salt master/minion setup. Large infrastructure needs tuning. State comp
 
 **Salt** was created by **Thomas Hatch** and released in **2011**. It became **SaltStack**, later acquired by **VMware** in 2020.
 
+# INSTALL
+
+```dnf: sudo dnf install salt```
+
+```apk: sudo apk add salt-lts-master```
+
+```zypper: sudo zypper install salt```
+
+```nix: nix profile install nixpkgs#salt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [salt-master](/man/salt-master)(1), [salt-minion](/man/salt-minion)(1), [salt-key](/man/salt-key)(1)

@@ -78,6 +78,12 @@ Chromium-based. Microsoft account for sync. Proprietary software.
 
 Microsoft Edge for Linux was released in **2020**, bringing the Chromium-based browser to Linux.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#microsoft-edge```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [google-chrome](/man/google-chrome)(1), [firefox](/man/firefox)(1), [chromium](/man/chromium)(1)

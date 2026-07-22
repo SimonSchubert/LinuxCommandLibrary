@@ -100,6 +100,22 @@ Recipe lines in a Makefile must be indented with a real tab character, not space
 
 make was created by **Stuart Feldman** at Bell Labs in **1976**, making it one of the oldest and most widely used build tools in software development.
 
+# INSTALL
+
+```apt: sudo apt install make```
+
+```dnf: sudo dnf install make```
+
+```pacman: sudo pacman -S make```
+
+```apk: sudo apk add make```
+
+```zypper: sudo zypper install make```
+
+```brew: brew install make```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmake](/man/cmake)(1), [ninja](/man/ninja)(1), [autoconf](/man/autoconf)(1)

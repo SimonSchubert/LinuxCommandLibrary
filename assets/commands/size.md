@@ -81,6 +81,24 @@ Only works on object files and executables in supported formats (ELF, COFF, etc.
 
 **size** is part of GNU **binutils**, the collection of binary tools maintained by the Free Software Foundation. The command originated in early Unix systems at Bell Labs in the **1970s** and has been a standard development tool ever since. GNU binutils provides compatible implementations for various platforms.
 
+# INSTALL
+
+```apt: sudo apt install binutils```
+
+```dnf: sudo dnf install binutils```
+
+```pacman: sudo pacman -S binutils```
+
+```apk: sudo apk add binutils```
+
+```zypper: sudo zypper install binutils```
+
+```brew: brew install binutils```
+
+```nix: nix profile install nixpkgs#binutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [objdump](/man/objdump)(1), [readelf](/man/readelf)(1), [nm](/man/nm)(1), [strip](/man/strip)(1)

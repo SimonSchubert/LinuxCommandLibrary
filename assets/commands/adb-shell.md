@@ -55,6 +55,21 @@ Shell commands run as the "shell" user with limited permissions. Root access req
 
 **adb shell** has been part of the Android SDK since its initial release in **2008**. The shell has evolved from a basic Toolbox implementation to the more capable Toybox on modern Android versions.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb](/man/adb)(1), [adb-shell-pm](/man/adb-shell-pm)(1), [adb-shell-pm-list-packages](/man/adb-shell-pm-list-packages)(1), [adb-install](/man/adb-install)(1), [toybox](/man/toybox)(1)

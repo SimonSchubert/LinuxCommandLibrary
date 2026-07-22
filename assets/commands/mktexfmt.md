@@ -47,6 +47,18 @@ Unlike **fmtutil**, only one format can be built per invocation. Failed builds t
 
 Part of the TeX Live / kpathsea tooling around **fmtutil**, used as the on-demand format builder when formats are not pre-generated.
 
+# INSTALL
+
+```dnf: sudo dnf install texlive```
+
+```apk: sudo apk add texlive```
+
+```zypper: sudo zypper install texlive```
+
+```brew: brew install texlive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fmtutil](/man/fmtutil)(1), [fmtutil-sys](/man/fmtutil-sys)(1), [fmtutil-user](/man/fmtutil-user)(1), [kpsewhich](/man/kpsewhich)(1), [pdflatex](/man/pdflatex)(1)

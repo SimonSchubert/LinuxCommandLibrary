@@ -64,6 +64,24 @@ Help content matches installed gh version. Online documentation may be more curr
 
 gh help follows Unix man page conventions, providing comprehensive command documentation as part of the **GitHub CLI**.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [man](/man/man)(1)

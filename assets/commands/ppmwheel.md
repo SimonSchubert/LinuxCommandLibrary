@@ -35,6 +35,24 @@ Output is always a square PPM image. Pipe through other Netpbm tools or ImageMag
 
 ppmwheel was created as part of **Netpbm** for color wheel generation.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppm](/man/ppm)(5), [ppmrainbow](/man/ppmrainbow)(1)

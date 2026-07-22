@@ -92,6 +92,12 @@ Running tests may be illegal in some countries. Tests reveal your network to OON
 
 **OONI** (Open Observatory of Network Interference) was founded in **2012** as part of the Tor Project. **ooniprobe** provides the client-side testing tool used by volunteers worldwide to measure internet censorship.
 
+# INSTALL
+
+```brew: brew install ooniprobe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tor](/man/tor)(1), [nmap](/man/nmap)(1), [traceroute](/man/traceroute)(1)

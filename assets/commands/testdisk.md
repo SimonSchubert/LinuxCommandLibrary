@@ -75,6 +75,24 @@ Root privileges are required when working with physical disk devices. When recov
 
 TestDisk was created by **Christophe Grenier** and initially developed as a partition repair tool for DOS, which explains its **/flag** command-line syntax. The project became part of **CGSecurity** and was open-sourced under the GPL. It is bundled with **PhotoRec**, a file carving tool for recovering files regardless of file system.
 
+# INSTALL
+
+```apt: sudo apt install testdisk```
+
+```dnf: sudo dnf install testdisk```
+
+```pacman: sudo pacman -S testdisk```
+
+```apk: sudo apk add testdisk```
+
+```zypper: sudo zypper install testdisk```
+
+```brew: brew install testdisk```
+
+```nix: nix profile install nixpkgs#testdisk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [photorec](/man/photorec)(1), [fdisk](/man/fdisk)(8), [gdisk](/man/gdisk)(8), [fsck](/man/fsck)(8), [ddrescue](/man/ddrescue)(1)

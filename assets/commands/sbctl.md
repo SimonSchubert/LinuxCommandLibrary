@@ -90,6 +90,18 @@ Not enrolling Microsoft certificates (the **-m** flag) can brick some systems wi
 
 Developed as a user-friendly alternative to manual secure boot key management tools.
 
+# INSTALL
+
+```pacman: sudo pacman -S sbctl```
+
+```apk: sudo apk add sbctl```
+
+```zypper: sudo zypper install sbctl```
+
+```nix: nix profile install nixpkgs#sbctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mokutil](/man/mokutil)(1), [efibootmgr](/man/efibootmgr)(8)

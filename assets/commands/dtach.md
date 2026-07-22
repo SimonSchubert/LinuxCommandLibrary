@@ -72,6 +72,22 @@ No window management. No scrollback buffer. Socket files persist after session e
 
 **dtach** was created by **Ned T. Crigler** in **2001** as a minimal alternative to GNU Screen. It emerged from the desire for session detachment without screen's complexity. The tool is useful when combining with other terminal multiplexers or for simple session persistence.
 
+# INSTALL
+
+```apt: sudo apt install dtach```
+
+```dnf: sudo dnf install dtach```
+
+```apk: sudo apk add dtach```
+
+```zypper: sudo zypper install dtach```
+
+```brew: brew install dtach```
+
+```nix: nix profile install nixpkgs#dtach```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [screen](/man/screen)(1), [tmux](/man/tmux)(1), [abduco](/man/abduco)(1), [nohup](/man/nohup)(1)

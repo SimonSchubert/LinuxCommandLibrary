@@ -70,6 +70,22 @@ Despite being a graphical application, it supports useful command-line options f
 
 This is a GUI application that requires a display server. The command-line options configure how the graphical window launches. Not a replacement for the **sqlite3** command-line shell.
 
+# INSTALL
+
+```apt: sudo apt install sqlitebrowser```
+
+```dnf: sudo dnf install sqlitebrowser```
+
+```pacman: sudo pacman -S sqlitebrowser```
+
+```apk: sudo apk add sqlitebrowser```
+
+```zypper: sudo zypper install sqlitebrowser```
+
+```nix: nix profile install nixpkgs#sqlitebrowser```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sqlite3](/man/sqlite3)(1), [mdb-sql](/man/mdb-sql)(1)

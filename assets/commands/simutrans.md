@@ -120,6 +120,18 @@ Some command-line options like **-async** and **-net** are only available on Lin
 
 **Simutrans** was created by Hansjörg Malthaner and first released in **1999**. The name is a portmanteau of "simulation" and "transport." After Malthaner ceased active development, the project continued as open source with an international community of developers. The game has been compared to Transport Tycoon but evolved with unique features and extensive modding support. Development continues actively with regular releases.
 
+# INSTALL
+
+```pacman: sudo pacman -S simutrans```
+
+```zypper: sudo zypper install simutrans```
+
+```brew: brew install simutrans```
+
+```nix: nix profile install nixpkgs#simutrans```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openttd](/man/openttd)(6)

@@ -85,6 +85,14 @@ Read-only viewer; cannot edit files. Format parsing is limited to supported file
 
 **hevi** was created by **Arnau478** and is written in **Zig**. It was designed to improve upon traditional hex viewers by adding structural awareness of common binary formats.
 
+# INSTALL
+
+```brew: brew install hevi```
+
+```nix: nix profile install nixpkgs#hevi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hexyl](/man/hexyl)(1), [xxd](/man/xxd)(1), [hexdump](/man/hexdump)(1), [readelf](/man/readelf)(1)

@@ -93,6 +93,22 @@ Requires X11; does not work on Wayland without XWayland. OpenGL acceleration req
 
 **slop** was created by **naelstrof** as a successor to the selection functionality in **scrot**. The tool is designed to be modular and integrate with other utilities via shell pipelines. It is commonly used alongside **maim** for screenshots and various screen recording tools.
 
+# INSTALL
+
+```apt: sudo apt install slop```
+
+```dnf: sudo dnf install slop```
+
+```pacman: sudo pacman -S slop```
+
+```apk: sudo apk add slop```
+
+```zypper: sudo zypper install slop```
+
+```nix: nix profile install nixpkgs#slop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [maim](/man/maim)(1), [scrot](/man/scrot)(1), [xdotool](/man/xdotool)(1), [xwininfo](/man/xwininfo)(1)

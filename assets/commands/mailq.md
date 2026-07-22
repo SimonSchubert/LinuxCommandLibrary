@@ -45,6 +45,22 @@ MTA dependent output. May need root for full details. Part of MTA package.
 
 mailq provides a standard interface to view mail queues across different **Mail Transfer Agents** (MTAs).
 
+# INSTALL
+
+```apt: sudo apt install dma```
+
+```dnf: sudo dnf install postfix```
+
+```pacman: sudo pacman -S postfix```
+
+```apk: sudo apk add postfix```
+
+```zypper: sudo zypper install postfix```
+
+```nix: nix profile install nixpkgs#dma```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sendmail](/man/sendmail)(8), [postqueue](/man/postqueue)(1), [postfix](/man/postfix)(1)

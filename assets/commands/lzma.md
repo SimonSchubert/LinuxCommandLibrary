@@ -97,6 +97,22 @@ Slower compression than gzip. High memory usage at extreme levels. Legacy format
 
 LZMA was developed by **Igor Pavlov** for the 7-Zip archiver in **1998**. The algorithm was later standardized and the xz format created as a modern container.
 
+# INSTALL
+
+```dnf: sudo dnf install xz```
+
+```pacman: sudo pacman -S xz```
+
+```apk: sudo apk add xz```
+
+```zypper: sudo zypper install xz```
+
+```brew: brew install xz```
+
+```nix: nix profile install nixpkgs#xz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xz](/man/xz)(1), [unlzma](/man/unlzma)(1), [gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1), [zstd](/man/zstd)(1), [7z](/man/7z)(1)

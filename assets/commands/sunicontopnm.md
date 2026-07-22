@@ -30,6 +30,24 @@ Sun icon files are an obsolete format. The tool is mainly useful for archival co
 
 Part of the **Netpbm** package. The Sun icon format dates from the SunView/NeWS era of SunOS in the 1980s; the converter has been part of pbmplus / Netpbm since the early 1990s.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtosunicon](/man/pbmtosunicon)(1), [xbmtopbm](/man/xbmtopbm)(1), [pnm](/man/pnm)(5)

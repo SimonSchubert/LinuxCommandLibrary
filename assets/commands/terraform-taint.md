@@ -49,6 +49,14 @@ This was historically used to force replacement of resources that became inconsi
 
 Tainting is deprecated in modern Terraform versions. Using `-replace` during planning/applying is preferred because it is more explicit and works in a single step. Taint/untaint only affect state and require a separate apply.
 
+# INSTALL
+
+```pacman: sudo pacman -S terraform```
+
+```nix: nix profile install nixpkgs#terraform```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [terraform-apply](/man/terraform-apply)(1), [terraform-untaint](/man/terraform-untaint)(1)

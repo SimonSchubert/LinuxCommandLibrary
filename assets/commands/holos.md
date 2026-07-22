@@ -80,6 +80,14 @@ Holos is pre-1.0 and the API is versioned per directory (**v1alpha3**, **v1alpha
 
 Started by **Jeff McCune** and the **holos-run** collective in **2023** to address drawbacks of pure templating in large multi-cluster Kubernetes platforms. Written in **Go** and **CUE** and released under **Apache 2.0**. Distributed via **Homebrew** (_brew install holos-run/tap/holos_) and as static binaries from GitHub releases.
 
+# INSTALL
+
+```zypper: sudo zypper install holos```
+
+```nix: nix profile install nixpkgs#holos```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [helm](/man/helm)(1), [kustomize](/man/kustomize)(1), [kubectl](/man/kubectl)(1), [argocd](/man/argocd)(1)

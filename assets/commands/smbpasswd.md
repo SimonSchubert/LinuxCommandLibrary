@@ -68,6 +68,16 @@ Samba users must have an existing local Unix account before being added. The Sam
 
 Users must exist in the Unix system before being added to Samba. If a Unix account is deleted before the Samba account, use **pdbedit** instead to remove the Samba entry.
 
+# INSTALL
+
+```apt: sudo apt install samba-common-bin```
+
+```dnf: sudo dnf install samba-common-tools```
+
+```apk: sudo apk add samba-common-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdbedit](/man/pdbedit)(8), [samba](/man/samba)(7)

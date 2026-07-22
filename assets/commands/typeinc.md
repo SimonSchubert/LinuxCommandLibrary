@@ -52,6 +52,12 @@ Terminal only. Limited customization. Practice tool.
 
 **typeinc** is a terminal typing practice application for improving typing speed and accuracy.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#typeinc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [toipe](/man/toipe)(1), [tt](/man/tt)(1), [typespeed](/man/typespeed)(1)

@@ -154,6 +154,22 @@ Mirroring websites may violate terms of service or copyright laws. Always check 
 
 HTTrack was created by **Xavier Roche** and first released in **1998**. Written in C, it became one of the most popular open-source website mirroring tools. The project provides both command-line and GUI interfaces across Windows, Linux, and other Unix-like systems. Development continues with regular updates to handle modern web technologies.
 
+# INSTALL
+
+```apt: sudo apt install httrack```
+
+```dnf: sudo dnf install httrack```
+
+```pacman: sudo pacman -S httrack```
+
+```zypper: sudo zypper install httrack```
+
+```brew: brew install httrack```
+
+```nix: nix profile install nixpkgs#httrack```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wget](/man/wget)(1), [curl](/man/curl)(1), [wget2](/man/wget2)(1)

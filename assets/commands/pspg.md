@@ -163,6 +163,22 @@ Key features include freezable columns with **-c**, multiple color styles select
 
 **pspg** was created by **Pavel Stehule** (okbob) and is written in **C**.
 
+# INSTALL
+
+```apt: sudo apt install pspg```
+
+```dnf: sudo dnf install pspg```
+
+```apk: sudo apk add pspg```
+
+```zypper: sudo zypper install pspg```
+
+```brew: brew install pspg```
+
+```nix: nix profile install nixpkgs#pspg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [psql](/man/psql)(1), [mysql](/man/mysql)(1), [ov](/man/ov)(1)

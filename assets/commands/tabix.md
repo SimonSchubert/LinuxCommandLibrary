@@ -117,6 +117,14 @@ Input must be bgzip-compressed, not gzip. TBI index format supports chromosomes 
 
 **tabix** was developed by Heng Li and published in Bioinformatics journal in 2011. It is now part of the HTSlib project maintained by the samtools/htslib team. The tool has become a standard component in genomics workflows for efficient data access.
 
+# INSTALL
+
+```apt: sudo apt install tabix```
+
+```zypper: sudo zypper install tabix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bgzip](/man/bgzip)(1), [bcftools](/man/bcftools)(1), [samtools](/man/samtools)(1), [vcftools](/man/vcftools)(1)

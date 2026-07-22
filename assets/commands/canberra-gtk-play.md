@@ -65,6 +65,20 @@ Requires a running sound server (PulseAudio or PipeWire) with libcanberra suppor
 
 The **libcanberra** project, which includes canberra-gtk-play, was initiated around **2007-2008** to implement the FreeDesktop.org Sound Theme Specification on Linux desktops. It provides an abstract interface for playing event sounds across different sound servers.
 
+# INSTALL
+
+```apt: sudo apt install gnome-session-canberra```
+
+```dnf: sudo dnf install libcanberra-gtk3```
+
+```apk: sudo apk add libcanberra-gtk3```
+
+```zypper: sudo zypper install canberra-gtk-play```
+
+```nix: nix profile install nixpkgs#libcanberra-gtk3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aplay](/man/aplay)(1)

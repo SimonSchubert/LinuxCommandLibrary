@@ -45,6 +45,24 @@ start stopped containers
 
 **docker start** starts one or more stopped containers. Containers retain their configuration from when they were created or last run.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-container-start](/man/docker-container-start)(1), [docker-run](/man/docker-run)(1)

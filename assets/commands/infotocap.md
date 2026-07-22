@@ -55,6 +55,22 @@ Some terminfo capabilities have no termcap equivalents and cannot be converted. 
 
 infotocap is part of **ncurses**, providing conversion between terminal description formats.
 
+# INSTALL
+
+```apt: sudo apt install ncurses-bin```
+
+```dnf: sudo dnf install ncurses```
+
+```pacman: sudo pacman -S ncurses```
+
+```apk: sudo apk add ncurses```
+
+```brew: brew install ncurses```
+
+```nix: nix profile install nixpkgs#ncurses```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [captoinfo](/man/captoinfo)(1), [tic](/man/tic)(1), [infocmp](/man/infocmp)(1)

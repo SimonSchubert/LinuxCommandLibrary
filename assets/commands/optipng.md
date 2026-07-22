@@ -121,6 +121,24 @@ Higher optimization levels much slower. Lossless only - can't reduce beyond PNG 
 
 **OptiPNG** was created by **Cosmin Truta** to provide optimal PNG compression. It builds on the zlib and libpng libraries, implementing various optimization strategies to minimize file size.
 
+# INSTALL
+
+```apt: sudo apt install optipng```
+
+```dnf: sudo dnf install optipng```
+
+```pacman: sudo pacman -S optipng```
+
+```apk: sudo apk add optipng```
+
+```zypper: sudo zypper install optipng```
+
+```brew: brew install optipng```
+
+```nix: nix profile install nixpkgs#optipng```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pngcrush](/man/pngcrush)(1), [pngquant](/man/pngquant)(1), [jpegoptim](/man/jpegoptim)(1), [convert](/man/convert)(1)

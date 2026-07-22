@@ -69,6 +69,24 @@ Pull container images from registries
 
 The pull policy defaults to **always**. Other policies are: **missing** (pull only if not local), **never** (use local only), and **newer** (pull if registry image is newer).
 
+# INSTALL
+
+```apt: sudo apt install podman```
+
+```dnf: sudo dnf install podman```
+
+```pacman: sudo pacman -S podman```
+
+```apk: sudo apk add podman```
+
+```zypper: sudo zypper install podman```
+
+```brew: brew install podman```
+
+```nix: nix profile install nixpkgs#podman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [podman-image](/man/podman-image)(1), [podman-images](/man/podman-images)(1), [podman-run](/man/podman-run)(1)

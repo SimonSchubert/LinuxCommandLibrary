@@ -53,6 +53,24 @@ Gzip format. For .gz files. Part of gzip package.
 
 **zcmp** is part of the gzip package, providing cmp-like functionality for compressed files.
 
+# INSTALL
+
+```apt: sudo apt install gzip```
+
+```dnf: sudo dnf install gzip```
+
+```pacman: sudo pacman -S gzip```
+
+```apk: sudo apk add gzip```
+
+```zypper: sudo zypper install gzip```
+
+```brew: brew install gzip```
+
+```nix: nix profile install nixpkgs#gzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmp](/man/cmp)(1), [zdiff](/man/zdiff)(1), [zcat](/man/zcat)(1)

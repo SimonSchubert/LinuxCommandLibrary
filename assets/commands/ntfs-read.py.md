@@ -57,6 +57,12 @@ Requires raw device access, so typically needs root privileges. As an Impacket P
 
 ntfs-read.py is part of **Impacket**, a collection of Python classes for working with network protocols originally developed by **SecureAuth** (now **Fortra**). It provides low-level NTFS access for security research and digital forensics.
 
+# INSTALL
+
+```apk: sudo apk add py3-impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ntfs-3g](/man/ntfs-3g)(1), [ntfsfix](/man/ntfsfix)(1), [ntfsclone](/man/ntfsclone)(1), [impacket](/man/impacket)(1)

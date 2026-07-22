@@ -70,6 +70,12 @@ Using **--force** bypasses the init system and may result in data loss if filesy
 
 **reboot** has been available since early Unix systems. On modern systemd-based systems, it is typically a symlink to **systemctl**.
 
+# INSTALL
+
+```apt: sudo apt install runit-init```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poweroff](/man/poweroff)(8), [halt](/man/halt)(8), [systemctl](/man/systemctl)(1), [shutdown](/man/shutdown)(8)

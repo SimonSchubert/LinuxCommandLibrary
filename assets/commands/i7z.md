@@ -26,6 +26,14 @@ Only works with Intel Core i3, i5, and i7 processors (Sandy Bridge and later). R
 
 i7z was developed to provide detailed Intel processor monitoring when existing tools lacked support for newer Intel processor features like Turbo Boost. Development started around **2009** with the introduction of the Intel Core i7 processor family.
 
+# INSTALL
+
+```apt: sudo apt install i7z```
+
+```nix: nix profile install nixpkgs#i7z```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [turbostat](/man/turbostat)(8), [cpupower](/man/cpupower)(1), [sensors](/man/sensors)(1)

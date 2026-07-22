@@ -98,6 +98,20 @@ ClamAV is primarily designed for server-side scanning of incoming files rather t
 
 ClamAV was created by Tomasz Kojm in **2001** as a GPL-licensed antivirus toolkit for Unix. It gained widespread adoption for mail server scanning. Sourcefire acquired the project in **2007**, and after Cisco acquired Sourcefire in **2013**, the project continues under Cisco Talos security intelligence.
 
+# INSTALL
+
+```dnf: sudo dnf install clamav```
+
+```pacman: sudo pacman -S clamav```
+
+```zypper: sudo zypper install clamav```
+
+```brew: brew install clamav```
+
+```nix: nix profile install nixpkgs#clamav```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [freshclam](/man/freshclam)(1), [clamd](/man/clamd)(8), [clamdscan](/man/clamdscan)(1)

@@ -57,6 +57,24 @@ Part of moreutils package. Breaks non-interactive pipelines. Editor must be term
 
 **vipe** is part of **moreutils** by **Joey Hess**. It enables interactive editing within Unix pipelines.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add moreutils```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vidir](/man/vidir)(1), [sponge](/man/sponge)(1), [tee](/man/tee)(1)

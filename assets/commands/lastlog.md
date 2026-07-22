@@ -61,6 +61,12 @@ The lastlog file is indexed by UID; very high UIDs can make the file appear larg
 
 lastlog has been part of Unix-like systems for decades, providing a quick way to audit which users have logged in recently and identify dormant accounts.
 
+# INSTALL
+
+```apk: sudo apk add shadow-login```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [last](/man/last)(1), [lastb](/man/lastb)(1), [faillog](/man/faillog)(8), [who](/man/who)(1), [login](/man/login)(1)

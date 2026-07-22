@@ -54,6 +54,24 @@ Reading I2C registers can cause unexpected behavior on some hardware. Some regis
 
 i2cget is part of the i2c-tools package for Linux, providing userspace access to I2C devices. It allows inspection and debugging of I2C peripherals like sensors, EEPROMs, and other embedded devices.
 
+# INSTALL
+
+```apt: sudo apt install i2c-tools```
+
+```dnf: sudo dnf install i2c-tools```
+
+```pacman: sudo pacman -S i2c-tools```
+
+```apk: sudo apk add i2c-tools```
+
+```zypper: sudo zypper install i2c-tools```
+
+```brew: brew install i2c-tools```
+
+```nix: nix profile install nixpkgs#i2c-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [i2cdetect](/man/i2cdetect)(8), [i2cdump](/man/i2cdump)(8), [i2cset](/man/i2cset)(8)

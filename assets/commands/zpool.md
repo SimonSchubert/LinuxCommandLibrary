@@ -113,6 +113,16 @@ RAID-Z cannot be expanded by adding disks to an existing vdev (as of OpenZFS 2.2
 
 Regular scrubs are critical. ZFS detects but cannot repair single-disk pool errors.
 
+# INSTALL
+
+```apt: sudo apt install zfs-fuse```
+
+```apk: sudo apk add zfs```
+
+```nix: nix profile install nixpkgs#zfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zfs](/man/zfs)(8), [zdb](/man/zdb)(8), [zpool-status](/man/zpool-status)(8)

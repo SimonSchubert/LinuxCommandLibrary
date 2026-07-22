@@ -90,6 +90,18 @@ Optimization is minimal - generated code is slower. Some C features may differ f
 
 **TCC** was created by **Fabrice Bellard** around **2001**. Bellard is known for QEMU, FFmpeg, and other influential projects. TCC demonstrates that a full C compiler can be very small and fast.
 
+# INSTALL
+
+```apt: sudo apt install tcc```
+
+```pacman: sudo pacman -S tcc```
+
+```apk: sudo apk add tcc```
+
+```brew: brew install tcc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [clang](/man/clang)(1), [make](/man/make)(1)

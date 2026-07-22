@@ -65,6 +65,12 @@ Python package required. Heuristic detection may have false positives. Cannot de
 
 oletools was created by **Philippe Lagadec** for analyzing potentially malicious Office documents, widely used in malware analysis and incident response.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#oletools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [oleid](/man/oleid)(1), [olevba](/man/olevba)(1), [mraptor](/man/mraptor)(1), [yara](/man/yara)(1)

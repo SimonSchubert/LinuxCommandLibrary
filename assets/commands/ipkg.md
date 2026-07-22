@@ -75,6 +75,12 @@ Deprecated in favor of opkg. Limited to embedded systems. Package availability d
 
 ipkg was developed for the NSLU2 Linux community and used by OpenWrt before version 8.09. It was succeeded by **opkg**, which is a fork with improved features and active maintenance.
 
+# INSTALL
+
+```aur: yay -S ipkg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [opkg](/man/opkg)(1), [apt](/man/apt)(8), [dpkg](/man/dpkg)(1)

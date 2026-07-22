@@ -87,6 +87,21 @@ Some options may not work on all systems depending on ACPI support and kernel co
 
 Created to provide a simple command-line interface to ACPI information on Linux laptops and desktops.
 
+# INSTALL
+
+```apt: sudo apt install acpi```
+
+```dnf: sudo dnf install acpi```
+
+```pacman: sudo pacman -S acpi```
+
+```apk: sudo apk add acpi```
+
+```zypper: sudo zypper install acpi```
+
+```nix: nix profile install nixpkgs#acpi```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [acpi_listen](/man/acpi_listen)(8), [acpid](/man/acpid)(8), [acpi_available](/man/acpi_available)(1)

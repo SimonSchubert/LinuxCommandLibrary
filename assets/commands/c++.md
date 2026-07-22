@@ -105,6 +105,12 @@ Actual compiler depends on system (g++, clang++, etc.). Behavior may vary betwee
 
 The **c++** command name has been a standard convention since C++ compilers became common in the **1980s**, typically symlinking to the system's C++ compiler.
 
+# INSTALL
+
+```apk: sudo apk add g++```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [g++](/man/g++)(1), [clang++](/man/clang++)(1), [gcc](/man/gcc)(1)

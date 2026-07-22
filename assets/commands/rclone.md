@@ -125,6 +125,24 @@ Encrypted remotes add a layer of client-side encryption but increase complexity.
 
 Rclone was created by **Nick Craig-Wood** with the first release in **2012**. The project started as a way to sync files with Google Drive and expanded to support dozens of cloud providers. It is written in Go and distributed as a single binary. The name combines "rsync" and "cloud."
 
+# INSTALL
+
+```apt: sudo apt install rclone```
+
+```dnf: sudo dnf install rclone```
+
+```pacman: sudo pacman -S rclone```
+
+```apk: sudo apk add rclone```
+
+```zypper: sudo zypper install rclone```
+
+```brew: brew install rclone```
+
+```nix: nix profile install nixpkgs#rclone```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rsync](/man/rsync)(1), [aws](/man/aws)(1), [gsutil](/man/gsutil)(1), [s3cmd](/man/s3cmd)(1)

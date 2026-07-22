@@ -54,6 +54,14 @@ Requires LaTeX and pdfpages package. Complex PDFs with forms or annotations may 
 
 **pdfxup** is part of the **TeX Live** distribution and uses LaTeX with the pdfpages package internally. It provides a convenient command-line interface for PDF page imposition tasks commonly needed in print preparation.
 
+# INSTALL
+
+```pacman: sudo pacman -S texlive-binextra```
+
+```apk: sudo apk add texlive-binextra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdfjam](/man/pdfjam)(1), [pdfnup](/man/pdfnup)(1), [pdfbook](/man/pdfbook)(1)

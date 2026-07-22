@@ -62,6 +62,12 @@ Packages installed by the system package manager (e.g., `apt`, `dnf`) or those i
 
 Running `pip uninstall` as root on system Python can break the operating system; prefer a virtual environment or `--user` installs. Dependencies are never auto-removed, so orphan packages may remain after uninstalling a top-level package. Use `pip list` or `pip-autoremove` to find orphans.
 
+# INSTALL
+
+```apk: sudo apk add py3-pip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [pip-install](/man/pip-install)(1), [pip3](/man/pip3)(1), [pipx](/man/pipx)(1)

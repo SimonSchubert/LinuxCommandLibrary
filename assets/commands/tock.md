@@ -78,6 +78,12 @@ UNIX only due to termios usage.
 
 **tock** was created by **nwtnni** and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install tock```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [date](/man/date)(1), [tty-clock](/man/tty-clock)(1), [figlet](/man/figlet)(1)

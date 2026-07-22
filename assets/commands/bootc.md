@@ -91,6 +91,14 @@ Only works on systems designed for bootc (image-based Linux distributions). Chan
 
 **bootc** is part of the growing ecosystem of image-based Linux systems, building on technologies like OSTree and container images. It represents a modern approach to system updates pioneered by projects like CoreOS. Developed under the **containers** GitHub organization, it became a key component of RHEL image mode.
 
+# INSTALL
+
+```dnf: sudo dnf install bootc```
+
+```nix: nix profile install nixpkgs#bootc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bootc-switch](/man/bootc-switch)(1), [rpm-ostree](/man/rpm-ostree)(1), [podman](/man/podman)(1), [skopeo](/man/skopeo)(1), [ostree](/man/ostree)(1)

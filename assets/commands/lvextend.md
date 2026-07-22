@@ -53,6 +53,22 @@ Ensure sufficient free space in the volume group. The filesystem resize with -r 
 
 **lvextend** is part of **LVM2**, the Linux Logical Volume Manager, providing dynamic storage management.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvm](/man/lvm)(8), [lvresize](/man/lvresize)(8), [lvreduce](/man/lvreduce)(8), [lvcreate](/man/lvcreate)(8)

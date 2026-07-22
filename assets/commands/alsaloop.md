@@ -73,6 +73,21 @@ Latency depends on buffer sizes and hardware capabilities. Different sample rate
 
 **alsaloop** is part of the alsa-utils package, providing a simple tool for audio routing that complements the more complex ALSA loopback kernel module.
 
+# INSTALL
+
+```apt: sudo apt install alsa-utils```
+
+```dnf: sudo dnf install alsa-utils```
+
+```pacman: sudo pacman -S alsa-utils```
+
+```apk: sudo apk add alsa-utils```
+
+```zypper: sudo zypper install alsa-utils```
+
+```nix: nix profile install nixpkgs#alsa-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [arecord](/man/arecord)(1), [aplay](/man/aplay)(1), [alsactl](/man/alsactl)(1)

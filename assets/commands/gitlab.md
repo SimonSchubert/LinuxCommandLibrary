@@ -98,6 +98,16 @@ The tool follows an object-action pattern, where you specify the GitLab object t
 **/etc/python-gitlab.cfg**
 > System-wide configuration file, searched before the user config.
 
+# INSTALL
+
+```pacman: sudo pacman -S gitlab```
+
+```apk: sudo apk add py3-gitlab```
+
+```nix: nix profile install nixpkgs#gitlab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glab](/man/glab)(1), [git](/man/git)(1)

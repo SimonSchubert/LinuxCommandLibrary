@@ -77,6 +77,21 @@ Salt must be provided as a positional argument and should be at least 8 random b
 
 **Argon2** was designed by Alex Biryukov, Daniel Dinu, and Dmitry Khovratovich, winning the Password Hashing Competition in **2015**. It's recommended by OWASP for password hashing.
 
+# INSTALL
+
+```apt: sudo apt install argon2```
+
+```dnf: sudo dnf install argon2```
+
+```pacman: sudo pacman -S argon2```
+
+```apk: sudo apk add argon2```
+
+```zypper: sudo zypper install argon2```
+
+```brew: brew install argon2```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [bcrypt](/man/bcrypt)(1), [mkpasswd](/man/mkpasswd)(1)

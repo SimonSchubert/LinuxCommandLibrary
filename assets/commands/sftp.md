@@ -113,6 +113,14 @@ For automated transfers, use batch mode (**-b**) or consider **rsync** over SSH 
 
 Symbolic links are followed by default. Use **get -P** or **put -P** to preserve symlinks as symlinks.
 
+# INSTALL
+
+```apt: sudo apt install openssh-client```
+
+```apk: sudo apk add openssh-client-common```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scp](/man/scp)(1), [ssh](/man/ssh)(1), [rsync](/man/rsync)(1), [ftp](/man/ftp)(1)

@@ -113,6 +113,14 @@ First run may be slow while plugins install. Subsequent loads are fast.
 
 Complex configurations with many deferred plugins can make debugging difficult.
 
+# INSTALL
+
+```brew: brew install zplug```
+
+```nix: nix profile install nixpkgs#zplug```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zsh](/man/zsh)(1), [zgen](/man/zgen)(1), [antigen](/man/antigen)(1), [zinit](/man/zinit)(1)

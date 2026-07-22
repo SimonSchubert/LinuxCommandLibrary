@@ -42,6 +42,21 @@ Both computer and device must be on the same network. The device reverts to USB 
 
 Wireless ADB debugging has been available since early Android versions but required initial USB setup. Android 11 (released **2020**) introduced wireless debugging with pairing codes, eliminating the USB requirement.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb](/man/adb)(1), [adb-disconnect](/man/adb-disconnect)(1), [adb-pair](/man/adb-pair)(1), [adb-devices](/man/adb-devices)(1)

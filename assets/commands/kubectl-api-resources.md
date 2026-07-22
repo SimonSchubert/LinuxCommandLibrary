@@ -46,6 +46,20 @@ lists all resource types available in the Kubernetes cluster
 
 **kubectl api-resources** lists all resource types available in the Kubernetes cluster. Shows resource names, short names, API group, and whether they are namespaced. Useful for discovering available resource types.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-api-versions](/man/kubectl-api-versions)(1)

@@ -100,6 +100,24 @@ Interactive mode requires fzf to be installed.
 
 Different from the **z** shell plugin but can import its database.
 
+# INSTALL
+
+```apt: sudo apt install zoxide```
+
+```dnf: sudo dnf install zoxide```
+
+```pacman: sudo pacman -S zoxide```
+
+```apk: sudo apk add zoxide```
+
+```zypper: sudo zypper install zoxide```
+
+```brew: brew install zoxide```
+
+```nix: nix profile install nixpkgs#zoxide```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cd](/man/cd)(1), [z](/man/z)(1), [autojump](/man/autojump)(1), [fzf](/man/fzf)(1)

@@ -79,6 +79,22 @@ Complex method calls with nested types can be difficult to construct. System bus
 
 dbus-send is part of the **D-Bus** reference implementation, developed by **Red Hat** and freedesktop.org starting in **2003**. It provides command-line access to the D-Bus IPC system used extensively in Linux desktop environments.
 
+# INSTALL
+
+```apt: sudo apt install dbus-bin```
+
+```dnf: sudo dnf install dbus```
+
+```pacman: sudo pacman -S dbus```
+
+```apk: sudo apk add dbus```
+
+```brew: brew install dbus```
+
+```nix: nix profile install nixpkgs#dbus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dbus-daemon](/man/dbus-daemon)(1), [dbus-launch](/man/dbus-launch)(1), [dbus-monitor](/man/dbus-monitor)(1), [busctl](/man/busctl)(1), [gdbus](/man/gdbus)(1), [qdbus](/man/qdbus)(1)

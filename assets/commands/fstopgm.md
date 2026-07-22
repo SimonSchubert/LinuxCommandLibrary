@@ -22,6 +22,24 @@ The conversion reads from standard input and writes to standard output, making i
 
 The Usenix FaceSaver format is obsolete and rarely encountered today. This tool is part of the Netpbm suite and may not be included in all Netpbm distributions. Input must be in valid FaceSaver format or the conversion will fail.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pgmtofs](/man/pgmtofs)(1), [netpbm](/man/netpbm)(1)

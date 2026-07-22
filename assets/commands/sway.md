@@ -85,6 +85,22 @@ Proprietary NVIDIA drivers are not officially supported. For NVIDIA driver versi
 
 Sway was created by **Drew DeVault** (SirCmpwn) and first released in **2016** as part of an effort to bring i3's workflow to Wayland. The name stands for "SirCmpwn's Wayland compositor". Sway reached version 1.0 stable in **March 2019**, marking feature parity with i3. It is built on the **wlroots** library, which Drew DeVault also created to provide a modular Wayland compositor library.
 
+# INSTALL
+
+```apt: sudo apt install sway```
+
+```dnf: sudo dnf install sway```
+
+```pacman: sudo pacman -S sway```
+
+```apk: sudo apk add sway```
+
+```zypper: sudo zypper install sway```
+
+```nix: nix profile install nixpkgs#sway```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [swaymsg](/man/swaymsg)(1), [swaybar](/man/swaybar)(5), [i3](/man/i3)(1), [waybar](/man/waybar)(5)

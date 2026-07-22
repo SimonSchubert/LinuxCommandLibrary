@@ -104,6 +104,24 @@ Some values shown (like command arguments) are read from /proc and may be modifi
 
 **pstree** is part of the **psmisc** package. It provides a hierarchical view of processes that complements the flat list provided by ps.
 
+# INSTALL
+
+```apt: sudo apt install psmisc```
+
+```dnf: sudo dnf install psmisc```
+
+```pacman: sudo pacman -S psmisc```
+
+```apk: sudo apk add psmisc```
+
+```zypper: sudo zypper install psmisc```
+
+```brew: brew install pstree```
+
+```nix: nix profile install nixpkgs#psmisc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ps](/man/ps)(1), [top](/man/top)(1), [htop](/man/htop)(1), [proc](/man/proc)(5)

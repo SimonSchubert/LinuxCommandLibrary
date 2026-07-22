@@ -50,6 +50,22 @@ converts compiled gettext MO files back to human-readable PO format
 
 **msgunfmt** converts compiled gettext MO (machine object) files back to human-readable PO (portable object) format. Also extracts translations from Java ResourceBundle classes. Part of GNU gettext.
 
+# INSTALL
+
+```apt: sudo apt install gettext```
+
+```dnf: sudo dnf install gettext```
+
+```pacman: sudo pacman -S gettext```
+
+```apk: sudo apk add gettext```
+
+```brew: brew install gettext```
+
+```nix: nix profile install nixpkgs#gettext```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [msgfmt](/man/msgfmt)(1), [msgcat](/man/msgcat)(1), [msgattrib](/man/msgattrib)(1)

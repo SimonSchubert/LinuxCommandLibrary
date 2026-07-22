@@ -52,6 +52,18 @@ Modifies Poetry installation. Not project dependencies.
 
 poetry self provides **self-management** capabilities for Poetry.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1)

@@ -18,6 +18,22 @@ Check for Rust toolchain updates
 
 The command requires an internet connection to check for the latest versions.
 
+# INSTALL
+
+```apt: sudo apt install rustup```
+
+```dnf: sudo dnf install rustup```
+
+```pacman: sudo pacman -S rustup```
+
+```zypper: sudo zypper install rustup```
+
+```brew: brew install rustup```
+
+```nix: nix profile install nixpkgs#rustup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rustup](/man/rustup)(1), [rustup-update](/man/rustup-update)(1), [rustup-show](/man/rustup-show)(1), [rustup-toolchain](/man/rustup-toolchain)(1), [rustc](/man/rustc)(1), [cargo](/man/cargo)(1)

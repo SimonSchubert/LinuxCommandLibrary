@@ -62,6 +62,24 @@ This operation destroys data and is irreversible. All data in the discarded regi
 
 **blkdiscard** is part of the **util-linux** package, providing SSD optimization and secure erase functionality.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fstrim](/man/fstrim)(8), [hdparm](/man/hdparm)(8), [wipefs](/man/wipefs)(8), [blkid](/man/blkid)(8)

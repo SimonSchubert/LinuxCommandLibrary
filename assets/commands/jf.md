@@ -83,6 +83,12 @@ Alias for jfrog CLI. Requires server configuration. Enterprise features may need
 
 jf is the short alias for the **JFrog CLI**, introduced to simplify command-line usage of JFrog platform services.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#jf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jfrog](/man/jfrog)(1), [docker](/man/docker)(1), [npm](/man/npm)(1), [mvn](/man/mvn)(1)

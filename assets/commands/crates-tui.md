@@ -52,6 +52,14 @@ Requires a stable internet connection to fetch data from crates.io. Clipboard fu
 
 **crates-tui** was developed as a Rust community tool to provide a fast, terminal-based alternative to browsing crates.io through a web browser. It leverages Rust's ecosystem and modern TUI libraries to create an efficient package discovery tool.
 
+# INSTALL
+
+```brew: brew install crates-tui```
+
+```nix: nix profile install nixpkgs#crates-tui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-search](/man/cargo-search)(1), [rustc](/man/rustc)(1)

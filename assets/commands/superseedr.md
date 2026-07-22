@@ -62,6 +62,12 @@ Run without arguments, **superseedr** opens the interactive terminal UI. While i
 
 **superseedr** was created by **Jagalite** and is written in **Rust**. It is distributed via `cargo install superseedr`, Homebrew, the AUR, and platform installers.
 
+# INSTALL
+
+```brew: brew install superseedr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [transmission-cli](/man/transmission-cli)(1), [transmission-remote](/man/transmission-remote)(1), [rtorrent](/man/rtorrent)(1), [aria2](/man/aria2)(1), [deluge](/man/deluge)(1)

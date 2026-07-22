@@ -93,6 +93,20 @@ Uses the age format; not compatible with GPG. Key management is manual with no k
 
 **rage** is a Rust implementation of **age** (Actually Good Encryption), designed by Filippo Valsorda. Age aims to be a simpler alternative to GPG.
 
+# INSTALL
+
+```pacman: sudo pacman -S rage```
+
+```apk: sudo apk add rage```
+
+```zypper: sudo zypper install rage```
+
+```brew: brew install rage```
+
+```nix: nix profile install nixpkgs#rage```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [age](/man/age)(1), [age-keygen](/man/age-keygen)(1), [gpg](/man/gpg)(1), [ssh-keygen](/man/ssh-keygen)(1), [openssl](/man/openssl)(1)

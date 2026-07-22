@@ -99,6 +99,17 @@ Record data must be base64-encoded when using the CLI. Maximum record size is 1 
 
 **Amazon Kinesis Firehose** launched in **October 2015** as the easiest way to load streaming data into AWS. It was renamed to **Amazon Data Firehose** in **February 2024** to reflect its broader scope beyond Kinesis integration. Over time, destinations expanded from S3 and Redshift to include OpenSearch, Splunk, and custom HTTP endpoints. Dynamic partitioning was added in **2021** to enable efficient data lake patterns.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-kinesis](/man/aws-kinesis)(1), [aws-s3](/man/aws-s3)(1), [aws-redshift](/man/aws-redshift)(1)

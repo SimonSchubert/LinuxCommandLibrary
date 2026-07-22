@@ -74,6 +74,18 @@ Terminal-based only. Limited formatting compared to graphical presentation tools
 
 mdp was created by **Michael Göhler** as a terminal-based presentation tool using markdown for slide content.
 
+# INSTALL
+
+```apt: sudo apt install mdp```
+
+```pacman: sudo pacman -S mdp```
+
+```brew: brew install mdp```
+
+```nix: nix profile install nixpkgs#mdp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [presenterm](/man/presenterm)(1), [slides](/man/slides)(1)

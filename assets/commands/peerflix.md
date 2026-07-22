@@ -84,6 +84,12 @@ Requires Node.js. Install via `npm install -g peerflix`. A media player (VLC, mp
 
 peerflix was created for **streaming torrent content** without full download.
 
+# INSTALL
+
+```aur: yay -S peerflix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [webtorrent](/man/webtorrent)(1), [vlc](/man/vlc)(1), [mpv](/man/mpv)(1), [mplayer](/man/mplayer)(1)

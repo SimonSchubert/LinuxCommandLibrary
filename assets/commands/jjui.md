@@ -26,6 +26,14 @@ Requires **jj** version 0.36 or newer to be installed. Only works in repositorie
 
 **jjui** was created by **Ibrahim Dursun** (idursun) and is written in **Go**. It was designed to provide a visual, interactive interface for Jujutsu's revision-based version control model.
 
+# INSTALL
+
+```brew: brew install jjui```
+
+```nix: nix profile install nixpkgs#jjui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [lazyjj](/man/lazyjj)(1), [lazygit](/man/lazygit)(1)

@@ -85,6 +85,24 @@ Useful for identifying files that may benefit from defragmentation.
 
 Part of e2fsprogs. Works best on ext2/ext3/ext4 but supports other filesystems via FIEMAP ioctl. The -E and -P options are ext4-specific and not supported on all kernels.
 
+# INSTALL
+
+```apt: sudo apt install e2fsprogs```
+
+```dnf: sudo dnf install e2fsprogs```
+
+```pacman: sudo pacman -S e2fsprogs```
+
+```apk: sudo apk add e2fsprogs-extra```
+
+```zypper: sudo zypper install e2fsprogs```
+
+```brew: brew install e2fsprogs```
+
+```nix: nix profile install nixpkgs#e2fsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [e4defrag](/man/e4defrag)(8), [debugfs](/man/debugfs)(8), [fsck](/man/fsck)(8)

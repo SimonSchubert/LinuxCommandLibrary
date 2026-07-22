@@ -42,6 +42,20 @@ runs a proxy to the Kubernetes API server
 
 **kubectl proxy** runs a proxy to the Kubernetes API server. Handles authentication and allows accessing the API and services without exposing them directly. Default port is 8001.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-port-forward](/man/kubectl-port-forward)(1)

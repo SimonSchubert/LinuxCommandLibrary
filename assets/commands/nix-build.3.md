@@ -82,6 +82,22 @@ This manpage variant documents the same binary as **nix-build(1)**, shipped unde
 
 The **result** symlink is a garbage-collection root, preventing the build output from being garbage collected. Delete the symlink (or pass **--no-out-link**) when you no longer need the output. For flake-based workflows prefer the newer **nix build** command.
 
+# INSTALL
+
+```apt: sudo apt install nix-bin```
+
+```dnf: sudo dnf install nix```
+
+```pacman: sudo pacman -S nix```
+
+```apk: sudo apk add nix```
+
+```zypper: sudo zypper install nix```
+
+```nix: nix profile install nixpkgs#nix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix-build](/man/nix-build)(1), [nix](/man/nix)(1), [nix-env](/man/nix-env)(1), [nix-store](/man/nix-store)(1)

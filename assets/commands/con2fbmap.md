@@ -44,6 +44,16 @@ Requires root privileges to change mappings. Only works on systems using the Lin
 
 **con2fbmap** is part of the **fbset** package, a collection of framebuffer utilities for Linux. The framebuffer subsystem was introduced in **Linux 2.1.107** in **1998**, originally ported from the Amiga and Atari Linux kernels. The fbset package was maintained by **Geert Uytterhoeven** as part of the early Linux framebuffer infrastructure.
 
+# INSTALL
+
+```apt: sudo apt install fbset```
+
+```pacman: sudo pacman -S fbset```
+
+```nix: nix profile install nixpkgs#fbset```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fbset](/man/fbset)(1)

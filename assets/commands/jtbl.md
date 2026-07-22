@@ -78,6 +78,14 @@ Expects array of objects. Python-based. Works with jc output.
 
 jtbl was created by **Kelly Brazil** as a companion to jc for displaying JSON data as formatted tables.
 
+# INSTALL
+
+```brew: brew install jtbl```
+
+```nix: nix profile install nixpkgs#jtbl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jc](/man/jc)(1), [jq](/man/jq)(1), [column](/man/column)(1)

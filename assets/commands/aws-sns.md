@@ -74,6 +74,17 @@ Email subscriptions require confirmation by the recipient before they receive me
 
 Amazon SNS launched in **April 2010** as a push notification service. It has evolved from simple pub/sub messaging to support mobile push notifications, SMS, and advanced features like message filtering, dead-letter queues, and FIFO topics.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-sqs](/man/aws-sqs)(1), [aws-ses](/man/aws-ses)(1)

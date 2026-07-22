@@ -76,6 +76,18 @@ Can be slow on large codebases. Highly configurable.
 
 Pylint was created as a **comprehensive Python** code analysis tool.
 
+# INSTALL
+
+```dnf: sudo dnf install pylint```
+
+```apk: sudo apk add py3-pylint```
+
+```brew: brew install pylint```
+
+```nix: nix profile install nixpkgs#pylint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pyflakes](/man/pyflakes)(1), [flake8](/man/flake8)(1), [mypy](/man/mypy)(1), [ruff](/man/ruff)(1)

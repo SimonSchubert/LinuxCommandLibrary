@@ -88,6 +88,18 @@ Writing requires root/admin privileges on the target device; selecting the wrong
 
 **rpi-imager** was released by **Raspberry Pi Ltd** in **March 2020** to replace third-party imaging tools. The **--cli** mode, SHA-256 verification, and telemetry controls were added in subsequent releases.
 
+# INSTALL
+
+```dnf: sudo dnf install rpi-imager```
+
+```pacman: sudo pacman -S rpi-imager```
+
+```zypper: sudo zypper install rpi-imager```
+
+```nix: nix profile install nixpkgs#rpi-imager```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dd](/man/dd)(1), [balena-etcher](/man/balena-etcher)(1), [gnome-disks](/man/gnome-disks)(1)

@@ -79,6 +79,18 @@ Requires the Erlang/OTP runtime. The default **guest** user can only connect fro
 
 RabbitMQ was originally developed by **Rabbit Technologies Ltd** using Erlang and first released in **2007**. The company was acquired by **SpringSource** (later VMware) in 2010. It is now maintained by **Broadcom** (via VMware) and remains one of the most widely deployed message brokers.
 
+# INSTALL
+
+```dnf: sudo dnf install rabbitmq-server```
+
+```apk: sudo apk add rabbitmq-server```
+
+```zypper: sudo zypper install rabbitmq-server```
+
+```nix: nix profile install nixpkgs#rabbitmq-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rabbitmqctl](/man/rabbitmqctl)(8), [rabbitmq-plugins](/man/rabbitmq-plugins)(8), [rabbitmq-diagnostics](/man/rabbitmq-diagnostics)(8)

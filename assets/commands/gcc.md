@@ -110,6 +110,24 @@ Default behavior varies by system and gcc version. Order of libraries matters fo
 
 **GCC** was started by **Richard Stallman** in **1987** as part of the GNU Project. Originally named GNU C Compiler, it was later renamed GNU Compiler Collection as support for other languages was added. GCC has become the most widely used compiler suite for open-source software and is the default compiler on most Linux distributions and BSD systems.
 
+# INSTALL
+
+```apt: sudo apt install gcc```
+
+```dnf: sudo dnf install gcc```
+
+```pacman: sudo pacman -S gcc```
+
+```apk: sudo apk add gcc```
+
+```zypper: sudo zypper install gcc```
+
+```brew: brew install gcc```
+
+```nix: nix profile install nixpkgs#gcc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [g++](/man/g++)(1), [clang](/man/clang)(1), [make](/man/make)(1), [gdb](/man/gdb)(1)

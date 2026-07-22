@@ -88,6 +88,16 @@ Requires FUSE support in the kernel. Performance may be slower than direct mount
 
 **smbnetfs** was created as an open-source project to provide easy network browsing similar to Windows. It is built on FUSE (Filesystem in Userspace) and libsmbclient from Samba. The project has been actively developed since the mid-**2000s** and is released under GPL-2.0.
 
+# INSTALL
+
+```apt: sudo apt install smbnetfs```
+
+```pacman: sudo pacman -S smbnetfs```
+
+```nix: nix profile install nixpkgs#smbnetfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smbclient](/man/smbclient)(1), [mount.cifs](/man/mount.cifs)(8), [fusermount](/man/fusermount)(1), [samba](/man/samba)(7)

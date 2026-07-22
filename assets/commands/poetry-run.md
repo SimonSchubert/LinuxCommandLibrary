@@ -46,6 +46,18 @@ Creates venv if not exists. Alternative to poetry shell.
 
 poetry run provides **virtual environment** command execution.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [poetry-shell](/man/poetry-shell)(1)

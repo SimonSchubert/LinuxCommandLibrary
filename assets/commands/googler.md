@@ -79,6 +79,14 @@ Relies on web scraping. May break with Google changes. No API key needed.
 
 googler was created by **Arun Prakash Jana** to provide comprehensive Google search functionality from the command line.
 
+# INSTALL
+
+```dnf: sudo dnf install googler```
+
+```zypper: sudo zypper install googler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ddgr](/man/ddgr)(1), [w3m](/man/w3m)(1)

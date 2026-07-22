@@ -63,6 +63,12 @@ Requires Slurm accounting to be configured. Historical data retention depends on
 
 Part of **Slurm** workload manager, the leading HPC cluster resource management system.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [squeue](/man/squeue)(1), [sinfo](/man/sinfo)(1), [scontrol](/man/scontrol)(1)

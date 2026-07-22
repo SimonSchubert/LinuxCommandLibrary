@@ -65,6 +65,12 @@ Deprecated in favor of ESLint. TypeScript-specific. Node.js required.
 
 **TSLint** was the standard TypeScript linter until 2019 when the team deprecated it in favor of **ESLint** with TypeScript support.
 
+# INSTALL
+
+```aur: yay -S tslint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [eslint](/man/eslint)(1), [tsc](/man/tsc)(1), [prettier](/man/prettier)(1)

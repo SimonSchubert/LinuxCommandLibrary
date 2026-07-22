@@ -30,6 +30,22 @@ The output is useful when reporting bugs, comparing features against the documen
 
 Reports the userspace tools version only, not the running kernel's btrfs implementation. Mismatched userspace and kernel versions are supported but some on-disk features may be unavailable.
 
+# INSTALL
+
+```apt: sudo apt install btrfs-progs```
+
+```dnf: sudo dnf install btrfs-progs```
+
+```pacman: sudo pacman -S btrfs-progs```
+
+```apk: sudo apk add btrfs-progs```
+
+```brew: brew install btrfs-progs```
+
+```nix: nix profile install nixpkgs#btrfs-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8)

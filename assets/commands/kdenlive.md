@@ -70,6 +70,20 @@ Requires KDE libraries. Resource-intensive for 4K editing. Proxy clips recommend
 
 Kdenlive was started by **Jason Wood** in **2002** and has been continuously developed by the KDE community. It became one of the most capable open-source video editors on Linux.
 
+# INSTALL
+
+```apt: sudo apt install kdenlive```
+
+```dnf: sudo dnf install kdenlive```
+
+```pacman: sudo pacman -S kdenlive```
+
+```apk: sudo apk add kdenlive```
+
+```zypper: sudo zypper install kdenlive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [melt](/man/melt)(1), [openshot](/man/openshot)(1)

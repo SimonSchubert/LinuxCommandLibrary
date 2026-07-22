@@ -26,6 +26,12 @@ The tool takes no arguments and no options: it is only meant to help developers 
 
 esc-m is a diagnostic aid, not a print command; it does not talk to a printer. It only understands the data format produced by the min12xxw driver, so feeding it arbitrary files produces meaningless output. It is packaged together with min12xxw (Debian's printer-driver-min12xxw) rather than as a standalone tool.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-min12xxw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [min12xxw](/man/min12xxw)(1)

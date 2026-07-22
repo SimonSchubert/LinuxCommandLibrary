@@ -85,6 +85,22 @@ Uses SIGSTOP and SIGCONT signals, which may cause misleading job control message
 
 **cpulimit** was created to provide CPU usage limiting functionality for Linux processes, useful for preventing runaway processes from consuming all CPU resources.
 
+# INSTALL
+
+```apt: sudo apt install cpulimit```
+
+```dnf: sudo dnf install cpulimit```
+
+```apk: sudo apk add cpulimit```
+
+```zypper: sudo zypper install cpulimit```
+
+```brew: brew install cpulimit```
+
+```nix: nix profile install nixpkgs#cpulimit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nice](/man/nice)(1), [renice](/man/renice)(1), [cgroups](/man/cgroups)(7), [kill](/man/kill)(1)

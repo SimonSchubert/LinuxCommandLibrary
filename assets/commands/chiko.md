@@ -77,6 +77,12 @@ The **-plaintext** flag defaults to true, meaning connections are unencrypted by
 
 **chiko** was created by **Felix Angga** and is written in Go under the MIT license. It was built to provide a developer-friendly visual alternative to the raw **grpcurl** command-line tool. Available via Homebrew and Go install.
 
+# INSTALL
+
+```brew: brew install chiko```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grpcurl](/man/grpcurl)(1), [curl](/man/curl)(1), [protoc](/man/protoc)(1)

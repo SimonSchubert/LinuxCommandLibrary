@@ -94,6 +94,18 @@ Slower than pdflatex due to Lua overhead. Some packages incompatible with LuaTeX
 
 **LuaTeX** development began around **2007**, led by **Hans Hagen**, **Hartmut Henkel**, and **Taco Hoekwater**. It combined the pdfTeX engine with an embedded Lua interpreter. lualatex provides the LaTeX format for LuaTeX, becoming the recommended engine for modern LaTeX development.
 
+# INSTALL
+
+```dnf: sudo dnf install texlive-luatex```
+
+```pacman: sudo pacman -S texlive-luatex```
+
+```apk: sudo apk add texlive-luatex```
+
+```zypper: sudo zypper install texlive-luatex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdflatex](/man/pdflatex)(1), [xelatex](/man/xelatex)(1), [latexmk](/man/latexmk)(1), [luatex](/man/luatex)(1), [texdoc](/man/texdoc)(1)

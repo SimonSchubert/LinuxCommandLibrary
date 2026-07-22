@@ -69,6 +69,24 @@ Requires Ruby installed. No persistent state. Consider pry for advanced features
 
 irb has been part of **Ruby** since early versions, created by **Keiju Ishitsuka** as the standard Ruby REPL.
 
+# INSTALL
+
+```apt: sudo apt install ruby```
+
+```dnf: sudo dnf install ruby```
+
+```pacman: sudo pacman -S ruby```
+
+```apk: sudo apk add ruby```
+
+```zypper: sudo zypper install ruby```
+
+```brew: brew install ruby```
+
+```nix: nix profile install nixpkgs#ruby```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ruby](/man/ruby)(1), [gem](/man/gem)(1), [bundle](/man/bundle)(1)

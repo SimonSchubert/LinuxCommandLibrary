@@ -59,6 +59,18 @@ Magic packets are broadcast on the local network by default. For remote networks
 
 Target machine must support and have WoL enabled. May not work across routers without special configuration. MAC address must be known.
 
+# INSTALL
+
+```dnf: sudo dnf install wol```
+
+```pacman: sudo pacman -S wol```
+
+```zypper: sudo zypper install wol```
+
+```nix: nix profile install nixpkgs#wol```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [etherwake](/man/etherwake)(8), [wakeonlan](/man/wakeonlan)(1)

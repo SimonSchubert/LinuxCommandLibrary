@@ -58,6 +58,16 @@ Various implementations. Output format varies. Check version.
 
 **treemd** tools generate directory structure as markdown, useful for documentation and README files.
 
+# INSTALL
+
+```pacman: sudo pacman -S treemd```
+
+```brew: brew install treemd```
+
+```nix: nix profile install nixpkgs#treemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tree](/man/tree)(1), [tre](/man/tre)(1), [find](/man/find)(1)

@@ -53,6 +53,24 @@ Convert PNM images to PostScript
 
 The **-dpi** and **-scale** options control the output size, while **-width** and **-height** set maximum dimensions. Use **-nocenter**, **-noturn**, and **-nosetpage** together to create minimal EPS suitable for inclusion in other documents. Part of the Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pstopnm](/man/pstopnm)(1), [pnmtopng](/man/pnmtopng)(1)

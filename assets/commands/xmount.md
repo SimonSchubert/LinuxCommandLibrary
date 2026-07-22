@@ -47,6 +47,16 @@ Write cache support enables modifications without altering the original image.
 
 Requires FUSE support. Some format conversions may not support all features. Used primarily for forensic and virtualization purposes.
 
+# INSTALL
+
+```apt: sudo apt install xmount```
+
+```dnf: sudo dnf install xmount```
+
+```brew: brew install xmount```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(8), [losetup](/man/losetup)(8), [qemu-img](/man/qemu-img)(1)

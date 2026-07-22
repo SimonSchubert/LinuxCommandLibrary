@@ -93,6 +93,12 @@ The chrootless mode can modify the host system if used with unsupported packages
 
 **mmdebstrap** was developed by **Johannes Schauer Marin Rodrigues** as a faster, more flexible alternative to debootstrap. It supports reproducible builds when SOURCE_DATE_EPOCH is set and can be approximately twice as fast as debootstrap.
 
+# INSTALL
+
+```aur: yay -S mmdebstrap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [debootstrap](/man/debootstrap)(8), [apt](/man/apt)(8), [dpkg](/man/dpkg)(1)

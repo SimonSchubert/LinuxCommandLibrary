@@ -83,6 +83,14 @@ structural code search and replace tool
 
 Better than regex for nested structures. Does not support indentation-sensitive languages (Python, Haskell).
 
+# INSTALL
+
+```brew: brew install comby```
+
+```nix: nix profile install nixpkgs#comby```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sed](/man/sed)(1), [ast-grep](/man/ast-grep)(1), [semgrep](/man/semgrep)(1)

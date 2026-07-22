@@ -46,6 +46,20 @@ Poedit is a GUI application with minimal command-line interface. For command-lin
 
 Poedit was created by **Václav Slavík** as an open-source tool for translators working with gettext.
 
+# INSTALL
+
+```dnf: sudo dnf install poedit```
+
+```pacman: sudo pacman -S poedit```
+
+```apk: sudo apk add poedit```
+
+```zypper: sudo zypper install poedit```
+
+```nix: nix profile install nixpkgs#poedit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [msgfmt](/man/msgfmt)(1), [xgettext](/man/xgettext)(1), [msginit](/man/msginit)(1), [msgmerge](/man/msgmerge)(1), [gettext](/man/gettext)(1)

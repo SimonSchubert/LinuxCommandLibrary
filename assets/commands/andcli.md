@@ -59,6 +59,13 @@ Only TOTP entries are supported; HOTP and other OTP types are not. Requires a pa
 
 **andcli** was created by **tjblackheart** as an open-source Go project under the MIT license. The name derives from andOTP, one of the originally supported vault formats.
 
+# INSTALL
+
+```aur: yay -S andcli```
+
+```nix: nix profile install nixpkgs#andcli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [oathtool](/man/oathtool)(1), [pass](/man/pass)(1)

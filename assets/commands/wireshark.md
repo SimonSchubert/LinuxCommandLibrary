@@ -113,6 +113,22 @@ Requires privileges for live capture (root or cap_net_raw capability). Large cap
 
 **Wireshark** began as **Ethereal**, created by **Gerald Combs** in **1998**. After trademark issues, it was renamed to Wireshark in **2006**. It has become the most widely used network protocol analyzer, supported by an active community and the Wireshark Foundation. The project continues adding support for new protocols.
 
+# INSTALL
+
+```apt: sudo apt install wireshark```
+
+```dnf: sudo dnf install wireshark```
+
+```apk: sudo apk add wireshark```
+
+```zypper: sudo zypper install wireshark```
+
+```brew: brew install wireshark```
+
+```nix: nix profile install nixpkgs#wireshark```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tshark](/man/tshark)(1), [tcpdump](/man/tcpdump)(1), [dumpcap](/man/dumpcap)(1), [editcap](/man/editcap)(1), [ngrep](/man/ngrep)(1)

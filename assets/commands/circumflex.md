@@ -104,6 +104,14 @@ Requires a modern version of **less** as its pager. Depends on Algolia's Hacker 
 
 **circumflex** was created by **bensadeh** and publicly announced on Hacker News in **October 2022**. Written in Go using the Bubble Tea TUI framework, licensed under AGPL-3.0.
 
+# INSTALL
+
+```brew: brew install circumflex```
+
+```nix: nix profile install nixpkgs#circumflex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [newsboat](/man/newsboat)(1), [w3m](/man/w3m)(1), [lynx](/man/lynx)(1)

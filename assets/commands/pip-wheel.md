@@ -45,6 +45,12 @@ Build wheel archives from Python packages
 
 **pip wheel** builds wheel archives for packages and dependencies. Wheels are pre-built binary distributions that install faster than source distributions. Useful for creating local wheels for offline installation or deployment.
 
+# INSTALL
+
+```apk: sudo apk add py3-pip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [pip-download](/man/pip-download)(1), [pip-install](/man/pip-install)(1)

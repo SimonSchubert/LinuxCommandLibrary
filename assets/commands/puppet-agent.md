@@ -83,6 +83,14 @@ Requires Puppet installation. Needs server or local manifests. Root privileges r
 
 **Puppet** was created by **Luke Kanies** in 2005. The agent component manages system configuration across infrastructure.
 
+# INSTALL
+
+```dnf: sudo dnf install puppet```
+
+```pacman: sudo pacman -S puppet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [puppet](/man/puppet)(1), [facter](/man/facter)(1), [ansible](/man/ansible)(1)

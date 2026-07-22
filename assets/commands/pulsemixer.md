@@ -134,6 +134,16 @@ Requires PulseAudio. Also works with PipeWire's PulseAudio compatibility.
 
 pulsemixer was created by **GeorgeFilipkin** as a convenient CLI/TUI for PulseAudio control.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulsemixer```
+
+```apk: sudo apk add pulsemixer```
+
+```nix: nix profile install nixpkgs#pulsemixer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pactl](/man/pactl)(1), [pavucontrol](/man/pavucontrol)(1), [amixer](/man/amixer)(1)

@@ -74,6 +74,22 @@ By default it listens on a stream (TCP) socket. Use **--datagram** for UDP or **
 
 Primarily intended for testing, not production use. For production, configure proper systemd socket and service units. The service must support socket activation protocol. Part of the systemd suite.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemd-run](/man/systemd-run)(1), [systemd-analyze](/man/systemd-analyze)(1)

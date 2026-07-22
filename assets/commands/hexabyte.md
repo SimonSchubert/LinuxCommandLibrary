@@ -49,6 +49,12 @@ Requires Python 3.10+. Very large files may impact performance. The diff mode hi
 
 **hexabyte** was created by **thetacom** and is written in **Python**. It was designed to provide a modern, extensible alternative to traditional terminal hex editors.
 
+# INSTALL
+
+```aur: yay -S hexabyte```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hexyl](/man/hexyl)(1), [xxd](/man/xxd)(1), [heh](/man/heh)(1)

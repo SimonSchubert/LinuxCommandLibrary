@@ -66,6 +66,12 @@ High score file is shared system-wide, with one entry per user. Merging high sco
 
 **snake4** is part of the BSD games collection, providing classic Unix entertainment software. The snake game genre dates back to the **1970s** arcade games and gained widespread popularity through mobile phone implementations. snake4 brings this classic gameplay to the Unix terminal environment.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#snake4```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nsnake](/man/nsnake)(6), [bsdgames](/man/bsdgames)(6), [nethack](/man/nethack)(6)

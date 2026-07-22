@@ -134,6 +134,12 @@ Requires **git** or **hg** for generating diffs unless using **--only** or **--s
 
 revdiff was created by **Umputun** and written in **Go**. It was developed as a TUI code review tool designed to integrate with AI coding agents like Claude Code, Codex, and OpenCode, outputting structured annotations that agents can process programmatically.
 
+# INSTALL
+
+```aur: yay -S revdiff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [git](/man/git)(1), [tig](/man/tig)(1), [delta](/man/delta)(1)

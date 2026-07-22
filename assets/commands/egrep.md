@@ -84,6 +84,22 @@ Deprecated - use grep -E. Behavior may vary between implementations. Large files
 
 egrep was originally a separate program with extended regex support. Modern grep includes this functionality with the -E flag, making standalone egrep redundant but preserved for compatibility.
 
+# INSTALL
+
+```apt: sudo apt install grep```
+
+```dnf: sudo dnf install grep```
+
+```pacman: sudo pacman -S grep```
+
+```apk: sudo apk add grep```
+
+```zypper: sudo zypper install grep```
+
+```brew: brew install grep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [fgrep](/man/fgrep)(1), [sed](/man/sed)(1), [awk](/man/awk)(1)

@@ -102,6 +102,21 @@ Most config operations require root privileges. The fakeroot subcommand manages 
 
 Apptainer originated as **Singularity**, created by **Gregory Kurtzer** at **Lawrence Berkeley National Laboratory** in **2015** to bring container technology to high-performance computing (HPC). In **November 2021**, the project joined the **Linux Foundation** and was renamed to **Apptainer**. The config subcommand provides administrative tooling that evolved alongside the platform's growing adoption in scientific computing and HPC environments worldwide.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [singularity](/man/singularity)(1), [docker](/man/docker)(1), [podman](/man/podman)(1)

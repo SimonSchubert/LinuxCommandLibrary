@@ -55,6 +55,22 @@ Drop-in files only add or override specific settings; they cannot remove existin
 
 The **edit** subcommand was added to **systemctl** to simplify unit customization. Systemd was created by **Lennart Poettering** and **Kay Sievers** at Red Hat and has been the default init system for most major Linux distributions since **2015**. The drop-in override pattern allows safe customization that persists across package updates.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-revert](/man/systemctl-revert)(1)

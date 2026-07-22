@@ -110,6 +110,24 @@ PID namespaces require **--fork** or the first process becomes PID 1 and may hav
 
 **unshare** is part of **util-linux**. It uses the unshare(2) system call to create new namespaces, which are the foundation of container technologies like Docker.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nsenter](/man/nsenter)(1), [lsns](/man/lsns)(1), [chroot](/man/chroot)(1), [clone](/man/clone)(2), [namespaces](/man/namespaces)(7), [systemd-nspawn](/man/systemd-nspawn)(1)

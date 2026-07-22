@@ -106,6 +106,24 @@ Part of OpenSC. Token/reader dependent. PIN required for operations.
 
 pkcs11-tool is part of **OpenSC** for PKCS#11 token management.
 
+# INSTALL
+
+```apt: sudo apt install opensc```
+
+```dnf: sudo dnf install opensc```
+
+```pacman: sudo pacman -S opensc```
+
+```apk: sudo apk add opensc```
+
+```zypper: sudo zypper install opensc```
+
+```brew: brew install opensc```
+
+```nix: nix profile install nixpkgs#opensc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [p11-kit](/man/p11-kit)(1), [opensc-tool](/man/opensc-tool)(1), [openssl](/man/openssl)(1), [ssh-keygen](/man/ssh-keygen)(1)

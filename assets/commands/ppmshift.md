@@ -41,6 +41,24 @@ Random per-row shift. Part of Netpbm suite.
 
 ppmshift was created as part of **Netpbm** for image distortion effects.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppm](/man/ppm)(5), [ppmspread](/man/ppmspread)(1)

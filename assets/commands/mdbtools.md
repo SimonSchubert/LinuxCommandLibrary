@@ -78,6 +78,18 @@ Typical workflows are migration (export every table to CSV or to another RDBMS u
 
 **mdbtools** was started by **Brian Bruns** in **2000** and stalled until **Evan Miller** revived the project in **2014**. The **1.0** release in **2021** brought up-to-date .accdb support, a packaged libmdb API, and an actively maintained ODBC driver.
 
+# INSTALL
+
+```dnf: sudo dnf install mdbtools```
+
+```zypper: sudo zypper install mdbtools```
+
+```brew: brew install mdbtools```
+
+```nix: nix profile install nixpkgs#mdbtools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mdb-sql](/man/mdb-sql)(1), [sqlite3](/man/sqlite3)(1), [csvtool](/man/csvtool)(1)

@@ -41,6 +41,22 @@ Unlike **systemctl reload**, restart fully stops the service process and starts 
 
 Requires root privileges for system units. Causes service interruption during restart. For configuration reloads without interruption, use **systemctl reload** if the service supports it.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-start](/man/systemctl-start)(1), [systemctl-reload](/man/systemctl-reload)(1)

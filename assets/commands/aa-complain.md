@@ -44,6 +44,16 @@ Set a profile to complain mode **without reloading**
 
 Part of the **AppArmor** utilities package for managing application security profiles on Linux systems.
 
+# INSTALL
+
+```apk: sudo apk add apparmor-utils```
+
+```zypper: sudo zypper install apparmor-utils```
+
+```nix: nix profile install nixpkgs#apparmor-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aa-enforce](/man/aa-enforce)(8), [aa-disable](/man/aa-disable)(8), [aa-logprof](/man/aa-logprof)(8), [aa-status](/man/aa-status)(8), [aa-audit](/man/aa-audit)(8), [apparmor](/man/apparmor)(7)

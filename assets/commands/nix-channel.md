@@ -76,6 +76,22 @@ Channels are a legacy approach; Nix flakes are recommended for new projects. Cha
 
 nix-channel has been part of the **Nix** package manager since its early releases by Eelco Dolstra. It is the traditional mechanism for subscribing to package repositories, predating the flakes system introduced experimentally in Nix 2.4.
 
+# INSTALL
+
+```apt: sudo apt install nix-bin```
+
+```dnf: sudo dnf install nix```
+
+```pacman: sudo pacman -S nix```
+
+```apk: sudo apk add nix```
+
+```zypper: sudo zypper install nix```
+
+```nix: nix profile install nixpkgs#nix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix](/man/nix)(1), [nix-env](/man/nix-env)(1), [nix-build](/man/nix-build)(1), [nix-shell](/man/nix-shell)(1), [nixos-rebuild](/man/nixos-rebuild)(1)

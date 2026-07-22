@@ -41,6 +41,24 @@ Part of moreutils. Each command gets full input. Parallel execution.
 
 pee is part of **moreutils** for piping to multiple processes.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add moreutils```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tee](/man/tee)(1), [moreutils](/man/moreutils)(7)

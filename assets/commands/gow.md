@@ -59,6 +59,12 @@ Development tool only; not intended for production process supervision. Watches 
 
 gow was created by **Nelo Mitranim** as a lightweight replacement for his earlier **gorun** tool, adding a better file watcher and hotkey support for Go development workflows.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#gow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [air](/man/air)(1), [goreload](/man/goreload)(1)

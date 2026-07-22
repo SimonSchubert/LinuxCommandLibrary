@@ -24,6 +24,24 @@ Reset a single file to a specific revision
 
 The file argument comes first, followed by the optional commit; passing them in the wrong order silently fails since the second argument is treated as a commit-ish. The file must currently exist in the working tree.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-reset](/man/git-reset)(1), [git-checkout](/man/git-checkout)(1), [git-extras](/man/git-extras)(1)

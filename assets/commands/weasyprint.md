@@ -102,6 +102,16 @@ Large documents may use significant memory. Some complex CSS may not render iden
 
 **WeasyPrint** was created by **Kozea** (Simon Sapin and others) around **2011**. It was designed as an alternative to wkhtmltopdf, using native Python libraries instead of a headless browser. The focus on CSS Paged Media makes it particularly suitable for document generation.
 
+# INSTALL
+
+```dnf: sudo dnf install weasyprint```
+
+```apk: sudo apk add weasyprint```
+
+```brew: brew install weasyprint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wkhtmltopdf](/man/wkhtmltopdf)(1), [pandoc](/man/pandoc)(1), [prince](/man/prince)(1), [puppeteer](/man/puppeteer)(1)

@@ -63,6 +63,14 @@ Only for printers with Oak Technology chipsets. Printer model support varies. No
 
 foo2oak is part of **foo2zjs**, supporting printers using Oak Technology's OAKT protocol through reverse-engineered drivers.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+```dnf: sudo dnf install foo2oak```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2oak-wrapper](/man/foo2oak-wrapper)(1), [foo2zjs](/man/foo2zjs)(1)

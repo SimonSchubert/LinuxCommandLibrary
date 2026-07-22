@@ -52,6 +52,20 @@ Common use cases include switching between bash, zsh, fish, or other shells. Par
 
 The shell must exist as a binary and be listed in /etc/shells. Setting an invalid or non-existent shell can lock users out of their accounts (use **usermod -s /bin/bash** as root to fix). Changes take effect on next login. On some systems (e.g., macOS), chsh uses a different implementation with slightly different flags.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [usermod](/man/usermod)(8), [passwd](/man/passwd)(1), [login](/man/login)(1), [bash](/man/bash)(1), [zsh](/man/zsh)(1), [fish](/man/fish)(1)

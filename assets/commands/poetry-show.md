@@ -76,6 +76,18 @@ Requires valid lock file. Shows installed state.
 
 poetry show provides **dependency inspection** for Poetry projects.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [poetry-lock](/man/poetry-lock)(1)

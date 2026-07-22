@@ -32,6 +32,14 @@ Commands cover parse/format/add/duration-style operations—the surface is inten
 
 Locale support may need explicit configuration for some environments. Previously named **biff**; update scripts after the rename.
 
+# INSTALL
+
+```brew: brew install bttf```
+
+```nix: nix profile install nixpkgs#bttf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [date](/man/date)(1), [timedatectl](/man/timedatectl)(1)

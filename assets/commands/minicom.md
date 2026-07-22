@@ -80,6 +80,24 @@ Display **help**
 
 Requires root or dialout group membership. Configuration stored in /etc/minicom/ or ~/.minirc.*.
 
+# INSTALL
+
+```apt: sudo apt install minicom```
+
+```dnf: sudo dnf install minicom```
+
+```pacman: sudo pacman -S minicom```
+
+```apk: sudo apk add minicom```
+
+```zypper: sudo zypper install minicom```
+
+```brew: brew install minicom```
+
+```nix: nix profile install nixpkgs#minicom```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [screen](/man/screen)(1), [picocom](/man/picocom)(1), [cu](/man/cu)(1)

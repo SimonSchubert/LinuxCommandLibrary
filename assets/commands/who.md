@@ -98,6 +98,24 @@ Remote connections may show as pseudo-terminals (pts/N) rather than physical ter
 
 The utmp file format varies between Unix systems. Some information may not be available on all platforms.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [w](/man/w)(1), [whoami](/man/whoami)(1), [users](/man/users)(1), [last](/man/last)(1), [finger](/man/finger)(1)

@@ -93,6 +93,20 @@ Slim requires Ruby to be installed. Template syntax is whitespace-sensitive; mix
 
 **Slim** was created by **Andrew Stone**, **Fred Wu**, and **Daniel Mendler** around **2010** as a cleaner alternative to ERB and Haml. The project aimed to provide minimal syntax while maintaining full Ruby integration. It uses the Temple framework for parsing and compilation.
 
+# INSTALL
+
+```apt: sudo apt install slim```
+
+```dnf: sudo dnf install slim```
+
+```pacman: sudo pacman -S slim```
+
+```apk: sudo apk add slim```
+
+```zypper: sudo zypper install slim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [erb](/man/erb)(1), [haml](/man/haml)(1), [pug](/man/pug)(1), [ruby](/man/ruby)(1)

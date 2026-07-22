@@ -68,6 +68,14 @@ Learning curve unique. HTML-centric approach. OCaml written.
 
 **soupault** was created as a site generator and HTML processor that works with real HTML rather than template languages.
 
+# INSTALL
+
+```apk: sudo apk add soupault```
+
+```nix: nix profile install nixpkgs#soupault```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hugo](/man/hugo)(1), [jekyll](/man/jekyll)(1), [pandoc](/man/pandoc)(1)

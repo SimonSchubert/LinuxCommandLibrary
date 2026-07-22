@@ -49,6 +49,22 @@ Requires appropriate permissions to access DRM device files under /dev/dri/. May
 
 **drm_info** was created by Simon Ser (emersion) and is hosted on freedesktop.org GitLab. It serves as the data collection tool for drmdb, a community database tracking GPU and DRM driver feature support across different hardware.
 
+# INSTALL
+
+```apt: sudo apt install drm-info```
+
+```dnf: sudo dnf install drm_info```
+
+```pacman: sudo pacman -S drm-info```
+
+```apk: sudo apk add drm_info```
+
+```zypper: sudo zypper install drm_info```
+
+```nix: nix profile install nixpkgs#drm_info```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [amdgpu_top](/man/amdgpu_top)(1), [nvidia-smi](/man/nvidia-smi)(1), [lspci](/man/lspci)(8), [xrandr](/man/xrandr)(1), [modetest](/man/modetest)(1)

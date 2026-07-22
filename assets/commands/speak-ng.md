@@ -71,6 +71,24 @@ Voice quality varies. Robotic sound. Resource usage moderate.
 
 **speak-ng** is part of **eSpeak NG**, a fork of eSpeak providing speech synthesis in many languages.
 
+# INSTALL
+
+```apt: sudo apt install espeak-ng```
+
+```dnf: sudo dnf install espeak-ng```
+
+```pacman: sudo pacman -S espeak-ng```
+
+```apk: sudo apk add espeak-ng```
+
+```zypper: sudo zypper install espeak-ng```
+
+```brew: brew install espeak-ng```
+
+```nix: nix profile install nixpkgs#espeak-ng```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [espeak](/man/espeak)(1), [festival](/man/festival)(1), [pico2wave](/man/pico2wave)(1)

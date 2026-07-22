@@ -54,6 +54,21 @@ The **atd** daemon must be running for batch to work. Results are sent to the us
 
 **batch** is part of the **at** package, providing job scheduling utilities for Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install at```
+
+```dnf: sudo dnf install at```
+
+```pacman: sudo pacman -S at```
+
+```apk: sudo apk add at```
+
+```zypper: sudo zypper install at```
+
+```nix: nix profile install nixpkgs#at```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [at](/man/at)(1), [atq](/man/atq)(1), [atrm](/man/atrm)(1), [cron](/man/cron)(1), [crontab](/man/crontab)(1)

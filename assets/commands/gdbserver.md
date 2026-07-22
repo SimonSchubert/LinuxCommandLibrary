@@ -65,6 +65,24 @@ Requires network access to target. Security of debug connection. Target needs gd
 
 gdbserver is part of **GDB** (GNU Debugger), enabling remote debugging scenarios since GDB 4.x. It's essential for embedded development and cross-platform debugging.
 
+# INSTALL
+
+```apt: sudo apt install gdbserver```
+
+```dnf: sudo dnf install gdb```
+
+```pacman: sudo pacman -S gdb```
+
+```apk: sudo apk add gdb```
+
+```zypper: sudo zypper install gdbserver```
+
+```brew: brew install gdb```
+
+```nix: nix profile install nixpkgs#gdb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdb](/man/gdb)(1)

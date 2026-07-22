@@ -78,6 +78,14 @@ Path must be valid YANG path. Device must support requested encoding. Large data
 
 gnmic get is a subcommand of **gnmic**, the gNMI client created by Nokia.
 
+# INSTALL
+
+```brew: brew install gnmic```
+
+```nix: nix profile install nixpkgs#gnmic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnmic](/man/gnmic)(1), [gnmic-set](/man/gnmic-set)(1), [gnmic-subscribe](/man/gnmic-subscribe)(1)

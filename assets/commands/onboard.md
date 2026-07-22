@@ -61,6 +61,20 @@ Most commands accept `--target`, `--radius`, `--port`, and framework/protocol se
 - Rule evaluation uses regex on import paths; tune architecture.yml carefully.
 - Primarily for developer workflow and CI gatekeeping.
 
+# INSTALL
+
+```apt: sudo apt install onboard```
+
+```pacman: sudo pacman -S onboard```
+
+```apk: sudo apk add onboard```
+
+```zypper: sudo zypper install onboard```
+
+```nix: nix profile install nixpkgs#onboard```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ast-grep](/man/ast-grep)(1), [rg](/man/rg)(1)

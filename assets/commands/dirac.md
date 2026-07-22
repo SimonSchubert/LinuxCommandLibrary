@@ -79,6 +79,14 @@ Approval prompts can be skipped with **-y**, but doing so allows file writes and
 
 Dirac is distributed via npm as **dirac-cli**. It positions itself as a more cost-efficient alternative to other terminal coding agents by combining hash-anchored edits, AST-aware operations, and aggressive context curation.
 
+# INSTALL
+
+```zypper: sudo zypper install dirac```
+
+```brew: brew install dirac```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1), [vtcode](/man/vtcode)(1), [aider](/man/aider)(1)

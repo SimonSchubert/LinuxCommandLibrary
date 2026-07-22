@@ -74,6 +74,12 @@ Security testing tool. Authorized use only. Go-based.
 
 kiterunner was created by **Assetnote** for API endpoint discovery during security assessments.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kiterunner```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffuf](/man/ffuf)(1), [gobuster](/man/gobuster)(1), [dirsearch](/man/dirsearch)(1)

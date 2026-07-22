@@ -65,6 +65,20 @@ Requires root or appropriate capabilities for raw socket access (ICMP/UDP probin
 
 **trip** was created as a modern network diagnostic tool with a text-based user interface for traceroute.
 
+# INSTALL
+
+```apt: sudo apt install trippy```
+
+```pacman: sudo pacman -S trippy```
+
+```zypper: sudo zypper install trippy```
+
+```brew: brew install trippy```
+
+```nix: nix profile install nixpkgs#trippy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [traceroute](/man/traceroute)(1), [mtr](/man/mtr)(1), [ping](/man/ping)(1)

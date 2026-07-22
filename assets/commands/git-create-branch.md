@@ -31,6 +31,24 @@ Create and optionally switch to new branch
 
 Without the -r flag, the command creates a local branch and switches to it, equivalent to **git checkout -b**. You can optionally specify a starting point (commit hash or branch name); otherwise, the branch starts from HEAD.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-checkout](/man/git-checkout)(1), [git-switch](/man/git-switch)(1), [git-delete-branch](/man/git-delete-branch)(1), [git-extras](/man/git-extras)(1)

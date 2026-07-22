@@ -136,6 +136,24 @@ git-annex and **git-lfs** solve overlapping problems differently. LFS is simpler
 
 **git-annex** was written by **Joey Hess** and first released in **2010**. Development of its assistant and web application was funded by a successful **Kickstarter** campaign in **2012**. It is written in **Haskell**, and remains widely used for research data management, notably as the foundation of the **DataLad** project, as well as for personal media archives.
 
+# INSTALL
+
+```apt: sudo apt install git-annex```
+
+```dnf: sudo dnf install git-annex```
+
+```pacman: sudo pacman -S git-annex```
+
+```apk: sudo apk add git-annex```
+
+```zypper: sudo zypper install git-annex```
+
+```brew: brew install git-annex```
+
+```nix: nix profile install nixpkgs#git-annex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-lfs](/man/git-lfs)(1), [git-clone](/man/git-clone)(1), [rsync](/man/rsync)(1)

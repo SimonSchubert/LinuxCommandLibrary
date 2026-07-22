@@ -54,6 +54,12 @@ creates a base backup of a PostgreSQL cluster
 
 **pg_basebackup** creates a base backup of a PostgreSQL cluster. Foundation for point-in-time recovery and streaming replication setup. Includes all database files.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_dump](/man/pg_dump)(1), [pg_restore](/man/pg_restore)(1)

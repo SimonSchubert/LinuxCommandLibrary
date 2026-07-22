@@ -45,6 +45,24 @@ tests numbers for primality or generates prime numbers
 
 **openssl prime** tests numbers for primality or generates prime numbers. Uses Miller-Rabin primality testing. Useful for cryptographic applications requiring prime numbers.
 
+# INSTALL
+
+```apt: sudo apt install openssl```
+
+```dnf: sudo dnf install openssl```
+
+```pacman: sudo pacman -S openssl```
+
+```apk: sudo apk add openssl```
+
+```zypper: sudo zypper install openssl```
+
+```brew: brew install openssl```
+
+```nix: nix profile install nixpkgs#openssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1)

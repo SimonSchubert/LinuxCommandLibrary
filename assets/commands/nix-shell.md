@@ -81,6 +81,22 @@ Legacy command. Consider nix develop. Per-invocation environment.
 
 nix-shell is a core **Nix** command for creating temporary development shells.
 
+# INSTALL
+
+```apt: sudo apt install nix-bin```
+
+```dnf: sudo dnf install nix```
+
+```pacman: sudo pacman -S nix```
+
+```apk: sudo apk add nix```
+
+```zypper: sudo zypper install nix```
+
+```nix: nix profile install nixpkgs#nix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix-develop](/man/nix-develop)(1), [nix](/man/nix)(1), [direnv](/man/direnv)(1)

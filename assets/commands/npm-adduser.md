@@ -35,6 +35,16 @@ creates or verifies a user account in the npm registry
 
 **npm adduser** creates or verifies a user account in the npm registry. Prompts for username, password, and email. Stores credentials in ~/.npmrc. Alias for npm login.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-logout](/man/npm-logout)(1)

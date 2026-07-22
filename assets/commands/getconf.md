@@ -80,6 +80,16 @@ Some values may be indeterminate (shown as "undefined"). Pathname-specific varia
 
 getconf is part of the POSIX standard and has been available on Unix-like systems since the early 1990s. It provides a standardized way to query the same configuration values that the C functions sysconf(), pathconf(), and confstr() return.
 
+# INSTALL
+
+```apt: sudo apt install libc-bin```
+
+```apk: sudo apk add musl-utils```
+
+```nix: nix profile install nixpkgs#getconf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sysctl](/man/sysctl)(8), [ulimit](/man/ulimit)(1), [nproc](/man/nproc)(1)

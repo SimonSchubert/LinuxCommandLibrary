@@ -85,6 +85,18 @@ Requires a graphical display (X11 or Wayland). Text size adjusts automatically; 
 
 **sm** (screen-message) was created by **Joachim Breitner** (nomeata) as a simple display utility. It has been used at Debian conferences and other events for photo displays and signage. The tool is available for Linux, Windows, and as a web application. Released under GPL-2.0 license.
 
+# INSTALL
+
+```apt: sudo apt install sm```
+
+```apk: sudo apk add screen-message```
+
+```zypper: sudo zypper install screen-message```
+
+```nix: nix profile install nixpkgs#screen-message```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [figlet](/man/figlet)(6), [toilet](/man/toilet)(1), [banner](/man/banner)(1)

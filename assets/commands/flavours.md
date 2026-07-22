@@ -82,5 +82,13 @@ Requires templates for each application. Not all applications support Base16. Ap
 
 flavours was created as a Rust alternative to existing Base16 managers. Base16 itself was created by **Chris Kempson** to provide a consistent theming architecture across different applications.
 
+# INSTALL
+
+```brew: brew install flavours```
+
+```nix: nix profile install nixpkgs#flavours```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

@@ -68,6 +68,14 @@ Audible output (**-p**) requires a console or PC speaker; on most modern Linux s
 
 **morse** is one of the classic **BSD games**, present since early 4BSD distributions as a teaching aid for amateur radio operators.
 
+# INSTALL
+
+```apt: sudo apt install morse```
+
+```brew: brew install morse```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [beep](/man/beep)(1), [espeak](/man/espeak)(1)

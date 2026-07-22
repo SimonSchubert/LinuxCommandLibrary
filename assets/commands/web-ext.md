@@ -81,6 +81,14 @@ Firefox-specific tool. Signing needs AMO account. Some features need Nightly.
 
 **web-ext** was created by **Mozilla** for WebExtension development. It simplifies the extension development workflow.
 
+# INSTALL
+
+```brew: brew install web-ext```
+
+```nix: nix profile install nixpkgs#web-ext```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [firefox](/man/firefox)(1), [npm](/man/npm)(1)

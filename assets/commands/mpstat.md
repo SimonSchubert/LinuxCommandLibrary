@@ -76,6 +76,24 @@ The first report shows statistics since boot. Processor numbering starts at 0. O
 
 **mpstat** is part of the **sysstat** package, providing multiprocessor statistics for SMP systems.
 
+# INSTALL
+
+```apt: sudo apt install sysstat```
+
+```dnf: sudo dnf install sysstat```
+
+```pacman: sudo pacman -S sysstat```
+
+```apk: sudo apk add sysstat```
+
+```zypper: sudo zypper install sysstat```
+
+```brew: brew install sysstat```
+
+```nix: nix profile install nixpkgs#sysstat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sar](/man/sar)(1), [iostat](/man/iostat)(1), [vmstat](/man/vmstat)(8), [top](/man/top)(1)

@@ -84,6 +84,12 @@ Node.js required. Learning curve for themes. Plugin compatibility varies.
 
 Hexo was created by **Tommy Chen** as a fast static site generator for blogs, gaining popularity in the developer community.
 
+# INSTALL
+
+```brew: brew install hexo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hugo](/man/hugo)(1), [jekyll](/man/jekyll)(1), [gatsby](/man/gatsby)(1)

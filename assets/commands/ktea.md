@@ -30,6 +30,12 @@ Requires access to a running Kafka cluster. Schema registry integration requires
 
 **ktea** was created by **Jonas Geiregat** (jonas-grgt) and is written in **Go**. It was designed for quick remote access to Kafka clusters from the terminal.
 
+# INSTALL
+
+```brew: brew install ktea```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kplay](/man/kplay)(1), [kaskade](/man/kaskade)(1)

@@ -126,6 +126,24 @@ Ruby's global interpreter lock (GIL/GVL) limits true parallelism in threads. Use
 
 Ruby was created by **Yukihiro "Matz" Matsumoto** in Japan, with the first public release in **1995**. Matz designed Ruby to be more powerful than Perl and more object-oriented than Python. Ruby gained worldwide popularity with the Ruby on Rails web framework released in **2004**.
 
+# INSTALL
+
+```apt: sudo apt install ruby```
+
+```dnf: sudo dnf install ruby```
+
+```pacman: sudo pacman -S ruby```
+
+```apk: sudo apk add ruby```
+
+```zypper: sudo zypper install ruby```
+
+```brew: brew install ruby```
+
+```nix: nix profile install nixpkgs#ruby```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [irb](/man/irb)(1), [gem](/man/gem)(1), [bundle](/man/bundle)(1), [rake](/man/rake)(1), [rails](/man/rails)(1)

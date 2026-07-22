@@ -82,6 +82,16 @@ Requires Hyprland, grim, slurp, and wl-clipboard. The freeze option may not work
 
 hyprshot was created by Gustash as a convenient wrapper around screenshot tools for Hyprland users. It provides a streamlined interface compared to manually combining grim and slurp.
 
+# INSTALL
+
+```pacman: sudo pacman -S hyprshot```
+
+```zypper: sudo zypper install hyprshot```
+
+```nix: nix profile install nixpkgs#hyprshot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hyprctl](/man/hyprctl)(1), [grim](/man/grim)(1), [slurp](/man/slurp)(1), [wl-copy](/man/wl-copy)(1)

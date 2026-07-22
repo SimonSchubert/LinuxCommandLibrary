@@ -115,6 +115,22 @@ Database needs rebuilding after code changes (unless `-q` incremental mode is us
 
 **cscope** was developed at **Bell Labs** in the late 1970s by **Joe Steffen** and was distributed as part of AT&T's Programmer's Workbench. It was released as open source by SCO in 2000 and is now maintained on SourceForge. It remains popular for its speed and tight vim integration.
 
+# INSTALL
+
+```apt: sudo apt install cscope```
+
+```dnf: sudo dnf install cscope```
+
+```pacman: sudo pacman -S cscope```
+
+```zypper: sudo zypper install cscope```
+
+```brew: brew install cscope```
+
+```nix: nix profile install nixpkgs#cscope```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ctags](/man/ctags)(1), [vim](/man/vim)(1), [grep](/man/grep)(1)

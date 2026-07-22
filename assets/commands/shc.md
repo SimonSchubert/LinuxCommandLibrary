@@ -93,6 +93,16 @@ Not true compilation - script is recoverable. Security is obfuscation, not encry
 
 **shc** (Shell Compiler) was created by **Francisco Javier Rosales Garcia**. It's used for basic shell script protection and distribution.
 
+# INSTALL
+
+```dnf: sudo dnf install shc```
+
+```brew: brew install shc```
+
+```nix: nix profile install nixpkgs#shc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [gcc](/man/gcc)(1)

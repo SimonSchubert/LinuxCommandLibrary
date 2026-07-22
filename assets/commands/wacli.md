@@ -99,6 +99,12 @@ wacli is a **third-party tool** that uses the WhatsApp Web protocol via whatsmeo
 
 wacli was created by **Peter Steinberger** (steipete) and written in **Go**. The project was first released in **2025** with a focus on providing a native terminal experience for WhatsApp, enabling local message synchronization and offline search capabilities that the official WhatsApp clients do not offer.
 
+# INSTALL
+
+```aur: yay -S wacli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neomutt](/man/neomutt)(1)

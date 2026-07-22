@@ -39,6 +39,16 @@ Display **help** for this command
 
 Use `koji [subcommand] --help` for detailed help on specific commands rather than this general overview.
 
+# INSTALL
+
+```dnf: sudo dnf install koji```
+
+```brew: brew install koji```
+
+```nix: nix profile install nixpkgs#koji```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [koji](/man/koji)(1)

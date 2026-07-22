@@ -68,6 +68,15 @@ ASAR archives are not encrypted; contents can be easily extracted. Some Electron
 
 **ASAR** was developed for the Atom text editor (later Electron framework) as a way to package Node.js applications efficiently.
 
+# INSTALL
+
+```pacman: sudo pacman -S asar```
+
+```zypper: sudo zypper install asar```
+
+```nix: nix profile install nixpkgs#asar```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [tar](/man/tar)(1), [npm](/man/npm)(1), [electron](/man/electron)(1)

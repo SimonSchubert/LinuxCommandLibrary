@@ -126,6 +126,12 @@ Services such as databases, message queues, and caches are provisioned from a ma
 
 Use cf v8 (current supported version). Run `cf help -a` for all commands. Interactive password prompts have issues in Cygwin/Git Bash.
 
+# INSTALL
+
+```brew: brew install cf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [heroku](/man/heroku)(1), [docker](/man/docker)(1)

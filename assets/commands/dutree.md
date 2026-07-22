@@ -75,6 +75,14 @@ Written in Rust for performance, dutree handles large directory trees efficientl
 
 Requires terminal with color support for best visualization. Large directories may take time to scan.
 
+# INSTALL
+
+```brew: brew install dutree```
+
+```nix: nix profile install nixpkgs#dutree```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [du](/man/du)(1), [dust](/man/dust)(1), [ncdu](/man/ncdu)(1), [tree](/man/tree)(1)

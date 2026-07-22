@@ -39,6 +39,14 @@ The command is **interactive** and launches a web browser, so it cannot be used 
 
 Introduced in **Terraform v0.12.21** in early **2020** alongside **terraform logout** to simplify connecting the CLI to Terraform Cloud and Enterprise, replacing the previous manual process of generating and configuring API tokens.
 
+# INSTALL
+
+```pacman: sudo pacman -S terraform```
+
+```nix: nix profile install nixpkgs#terraform```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [terraform-logout](/man/terraform-logout)(1), [terraform-console](/man/terraform-console)(1)

@@ -89,6 +89,18 @@ Avoid deprecated stream ciphers (rc4-md5, aes-cfb, etc.) as they lack authentica
 
 **Shadowsocks** was created by clowwindy in **2012** as a secure proxy protocol. The original Python implementation was followed by ports to various languages. The libev-based implementation (shadowsocks-libev) provides **ss-server** as a high-performance C implementation. The project has been widely adopted and continues development with community contributions despite the original repository's removal.
 
+# INSTALL
+
+```apt: sudo apt install shadowsocks-libev```
+
+```zypper: sudo zypper install shadowsocks-libev```
+
+```brew: brew install shadowsocks-libev```
+
+```nix: nix profile install nixpkgs#shadowsocks-libev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ss-local](/man/ss-local)(1)

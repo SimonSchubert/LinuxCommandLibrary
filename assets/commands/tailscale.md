@@ -109,6 +109,22 @@ Requires Tailscale account. Control plane is cloud-based. Some features need pai
 
 **Tailscale** was founded by **Brad Fitzpatrick** and others in **2019**. It builds on WireGuard to provide easy-to-use mesh VPN, focusing on zero-configuration connectivity.
 
+# INSTALL
+
+```dnf: sudo dnf install tailscale```
+
+```pacman: sudo pacman -S tailscale```
+
+```apk: sudo apk add tailscale```
+
+```zypper: sudo zypper install tailscale```
+
+```brew: brew install tailscale```
+
+```nix: nix profile install nixpkgs#tailscale```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wg](/man/wg)(8), [ssh](/man/ssh)(1), [openvpn](/man/openvpn)(8)

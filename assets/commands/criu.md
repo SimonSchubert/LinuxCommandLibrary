@@ -83,6 +83,20 @@ CRIU is Linux-only and typically requires **CAP_SYS_ADMIN** (root). Not every ke
 
 CRIU was started in **2011** by **Pavel Emelyanov** of the OpenVZ / Virtuozzo team, with the first public release in **July 2012**. By Linux kernel **3.11** (September 2013) the required syscalls and interfaces had been merged upstream, allowing CRIU to run on stock kernels. It is now maintained by the **checkpoint-restore** community on GitHub and continues to receive regular releases.
 
+# INSTALL
+
+```apt: sudo apt install criu```
+
+```dnf: sudo dnf install criu```
+
+```pacman: sudo pacman -S criu```
+
+```zypper: sudo zypper install criu```
+
+```nix: nix profile install nixpkgs#criu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [runc](/man/runc)(8), [ptrace](/man/ptrace)(2)

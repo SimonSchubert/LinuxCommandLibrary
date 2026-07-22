@@ -44,6 +44,12 @@ The tool provides an interactive shell similar to Metasploit, with modules for r
 
 Requires physical access to the smart meter via an optical probe and serial adapter. Available in Kali Linux repositories and via pip.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#termineter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [msfconsole](/man/msfconsole)(1), [setoolkit](/man/setoolkit)(1)

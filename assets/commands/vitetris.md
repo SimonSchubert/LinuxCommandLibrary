@@ -89,6 +89,16 @@ Terminal size should be at least 80x24 for proper display. Network play requires
 
 **vitetris** was created by **Victor Geraldsson** and first released in the early **2000s**. It was designed to be a lightweight, terminal-based Tetris implementation with network play capabilities. The project continues to be maintained and is available in package repositories for major Linux distributions.
 
+# INSTALL
+
+```zypper: sudo zypper install vitetris```
+
+```brew: brew install vitetris```
+
+```nix: nix profile install nixpkgs#vitetris```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bastet](/man/bastet)(6), [tint](/man/tint)(6), [ninvaders](/man/ninvaders)(6)

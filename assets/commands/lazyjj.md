@@ -30,6 +30,16 @@ Requires **jj** version 0.33.0 or higher for compatibility with the template lan
 
 **lazyjj** was created by **Cretezy** and is written in **Rust** using the ratatui library.
 
+# INSTALL
+
+```pacman: sudo pacman -S lazyjj```
+
+```brew: brew install lazyjj```
+
+```nix: nix profile install nixpkgs#lazyjj```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [lazygit](/man/lazygit)(1)

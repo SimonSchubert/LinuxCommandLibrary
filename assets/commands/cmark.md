@@ -78,6 +78,24 @@ cmark reads from files or standard input and writes to standard output, making i
 
 **cmark** is the reference C implementation of the **CommonMark** specification, developed by John MacFarlane and contributors starting in **2014**. CommonMark was created to provide a formal, unambiguous specification for Markdown.
 
+# INSTALL
+
+```apt: sudo apt install cmark```
+
+```dnf: sudo dnf install cmark```
+
+```pacman: sudo pacman -S cmark```
+
+```apk: sudo apk add cmark```
+
+```zypper: sudo zypper install cmark```
+
+```brew: brew install cmark```
+
+```nix: nix profile install nixpkgs#cmark```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pandoc](/man/pandoc)(1), [markdown](/man/markdown)(1), [grip](/man/grip)(1)

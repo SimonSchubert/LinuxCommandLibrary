@@ -77,6 +77,20 @@ Scrape queries require network access and functional trackers. Some trackers may
 
 **transmission-show** is part of the Transmission BitTorrent client suite, providing command-line inspection of torrent files. Transmission was created in 2005 and the CLI tools enable automation and headless server operation.
 
+# INSTALL
+
+```apt: sudo apt install transmission-cli```
+
+```dnf: sudo dnf install transmission-cli```
+
+```pacman: sudo pacman -S transmission-cli```
+
+```apk: sudo apk add transmission-extra```
+
+```brew: brew install transmission-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [transmission-create](/man/transmission-create)(1), [transmission-daemon](/man/transmission-daemon)(1), [transmission-remote](/man/transmission-remote)(1)

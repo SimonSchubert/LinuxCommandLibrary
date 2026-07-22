@@ -58,6 +58,20 @@ Stashed tasks do not maintain their original queue position when re-enqueued. On
 
 pueue stash is part of **pueue** by **Arne Beer** for managing task queue states.
 
+# INSTALL
+
+```pacman: sudo pacman -S pueue```
+
+```apk: sudo apk add pueue```
+
+```zypper: sudo zypper install pueue```
+
+```brew: brew install pueue```
+
+```nix: nix profile install nixpkgs#pueue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pueue](/man/pueue)(1), [pueue-enqueue](/man/pueue-enqueue)(1), [pueue-add](/man/pueue-add)(1), [pueue-status](/man/pueue-status)(1)

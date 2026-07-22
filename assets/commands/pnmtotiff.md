@@ -53,6 +53,24 @@ Convert PNM images to TIFF format
 
 The **-append** option allows building multi-page TIFF files by appending images to an existing file. The **-resolution** option embeds DPI metadata for print sizing. Part of the Netpbm toolkit; superseded by **pamtotiff**.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tifftopnm](/man/tifftopnm)(1), [pnmtojpeg](/man/pnmtojpeg)(1)

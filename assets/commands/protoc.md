@@ -84,6 +84,16 @@ Finicky path resolution: it demands precise --proto_path (-I) flags for all .pro
 
 Initially developed internally at **Google in 2001** as a way to handle structured data serialization more efficiently than XML, with the first public release occurring in **2008** under an open-source license. The protoc compiler itself evolved alongside, starting as a C++-based tool and expanding to support multiple languages like Java, Python, and Go through generated code stubs. Over the years, it has seen continuous updates, with version 3 introducing significant syntax changes in **2016** and recent iterations focusing on performance optimizations and better integration with gRPC.
 
+# INSTALL
+
+```apt: sudo apt install protobuf-compiler```
+
+```dnf: sudo dnf install protobuf-compiler```
+
+```apk: sudo apk add protoc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [buff](/man/buff)(1), [grpc](/man/grpc)(1)

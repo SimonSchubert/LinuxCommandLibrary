@@ -88,6 +88,14 @@ apt install ipcalc sipcalc
 
 Use for network planning and troubleshooting. Online tools available at cidr.xyz for visualization.
 
+# INSTALL
+
+```apt: sudo apt install cidr```
+
+```brew: brew install cidr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip](/man/ip)(8), [ifconfig](/man/ifconfig)(8)

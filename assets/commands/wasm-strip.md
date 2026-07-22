@@ -43,6 +43,20 @@ Stripping removes debug information, making debugging harder. Only affects custo
 
 **wasm-strip** is part of WABT (WebAssembly Binary Toolkit), developed by the WebAssembly Community Group. Like the traditional strip command for native binaries, it helps reduce binary size for distribution while removing non-essential metadata.
 
+# INSTALL
+
+```apt: sudo apt install wabt```
+
+```dnf: sudo dnf install wabt```
+
+```pacman: sudo pacman -S wabt```
+
+```brew: brew install wabt```
+
+```nix: nix profile install nixpkgs#wabt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wasm-objdump](/man/wasm-objdump)(1), [wasm-validate](/man/wasm-validate)(1), [wasm2wat](/man/wasm2wat)(1), [strip](/man/strip)(1)

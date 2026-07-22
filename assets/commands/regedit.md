@@ -63,6 +63,20 @@ Requires Wine to be installed on Linux. The graphical interface requires a displ
 
 **regedit** is Microsoft's registry editor, included in Windows since Windows 3.1. Wine provides a compatible implementation that operates on Wine's own registry files, enabling configuration of Windows applications running on Linux and macOS.
 
+# INSTALL
+
+```dnf: sudo dnf install wine```
+
+```pacman: sudo pacman -S wine```
+
+```apk: sudo apk add wine```
+
+```zypper: sudo zypper install wine```
+
+```nix: nix profile install nixpkgs#wine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wine](/man/wine)(1), [winecfg](/man/winecfg)(1), [winetricks](/man/winetricks)(1)

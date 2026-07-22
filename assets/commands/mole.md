@@ -77,6 +77,14 @@ Requires SSH access to the tunnel server. Authentication uses the system's SSH c
 
 **mole** was created by **davrodpin** and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install mole```
+
+```nix: nix profile install nixpkgs#mole```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [autossh](/man/autossh)(1)

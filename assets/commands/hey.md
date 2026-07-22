@@ -117,6 +117,20 @@ Can overload target servers; use responsibly. May be blocked by rate limiters. N
 
 hey was created by **Jaana B. Dogan** (rakyll) at Google as a successor to the tool "boom". It's written in Go and designed for simplicity and ease of use.
 
+# INSTALL
+
+```apt: sudo apt install hey```
+
+```apk: sudo apk add hey```
+
+```zypper: sudo zypper install hey```
+
+```brew: brew install hey```
+
+```nix: nix profile install nixpkgs#hey```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ab](/man/ab)(1), [wrk](/man/wrk)(1), [siege](/man/siege)(1), [k6](/man/k6)(1)

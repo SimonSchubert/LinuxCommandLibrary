@@ -43,6 +43,16 @@ Delete Vagrant virtual machines
 
 This permanently destroys VM data. Shared folders and host files are not affected. The destroy command does not remove the box that was downloaded during `vagrant up`. Use `vagrant box remove` to reclaim that disk space.
 
+# INSTALL
+
+```apt: sudo apt install vagrant```
+
+```dnf: sudo dnf install vagrant```
+
+```nix: nix profile install nixpkgs#vagrant```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vagrant](/man/vagrant)(1), [vagrant-halt](/man/vagrant-halt)(1), [vagrant-box](/man/vagrant-box)(1), [vagrant-status](/man/vagrant-status)(1)

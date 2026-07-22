@@ -72,6 +72,12 @@ Dependent on external DNS resolvers being available. Network latency affects que
 
 **dug** was developed to help system administrators and developers verify DNS changes have propagated globally before completing migrations or updates. It provides visibility into the distributed nature of DNS.
 
+# INSTALL
+
+```brew: brew install dug```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [host](/man/host)(1), [dog](/man/dog)(1)

@@ -62,6 +62,24 @@ Output as **JSON**
 **--notruncate**
 > Don't truncate output
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ipcs](/man/ipcs)(1), [ipcrm](/man/ipcrm)(1), [ipcmk](/man/ipcmk)(1)

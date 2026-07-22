@@ -58,6 +58,22 @@ Requires PackageKit, Flatpak, or Snap backends to be configured. Initial startup
 
 gnome-software was introduced in GNOME 3.10 (**2013**) as a redesigned software center, replacing the older Ubuntu Software Center on GNOME-based distributions. It has evolved to support multiple package formats and provide a modern app store experience.
 
+# INSTALL
+
+```apt: sudo apt install gnome-software```
+
+```dnf: sudo dnf install gnome-software```
+
+```pacman: sudo pacman -S gnome-software```
+
+```apk: sudo apk add gnome-software```
+
+```zypper: sudo zypper install gnome-software```
+
+```nix: nix profile install nixpkgs#gnome-software```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flatpak](/man/flatpak)(1), [snap](/man/snap)(1), [dnf](/man/dnf)(8), [apt](/man/apt)(8)

@@ -103,6 +103,24 @@ Requires root privileges to write dependency files. Should be run after adding o
 
 depmod is part of the **kmod** utilities (formerly module-init-tools), used for Linux kernel module management since the early days of loadable kernel modules in the 1990s.
 
+# INSTALL
+
+```apt: sudo apt install kmod```
+
+```dnf: sudo dnf install kmod```
+
+```pacman: sudo pacman -S kmod```
+
+```apk: sudo apk add kmod```
+
+```zypper: sudo zypper install kmod```
+
+```brew: brew install kmod```
+
+```nix: nix profile install nixpkgs#kmod```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [modprobe](/man/modprobe)(8), [lsmod](/man/lsmod)(8), [insmod](/man/insmod)(8), [rmmod](/man/rmmod)(8), [kmod](/man/kmod)(8)

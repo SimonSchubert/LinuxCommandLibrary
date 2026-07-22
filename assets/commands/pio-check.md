@@ -101,6 +101,12 @@ The check integrates the project's build flags, include paths, and target platfo
 
 Requires PlatformIO Core 4.0+. The chosen analyzer (e.g. `cppcheck`) must be installable via PlatformIO's package manager or already on PATH. PVS-Studio requires a license key. Analyzers only see what the preprocessor sees — code guarded by unset `#ifdef`s is skipped.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-run](/man/pio-run)(1), [pio-test](/man/pio-test)(1), [pio-debug](/man/pio-debug)(1), [cppcheck](/man/cppcheck)(1), [clang-tidy](/man/clang-tidy)(1)

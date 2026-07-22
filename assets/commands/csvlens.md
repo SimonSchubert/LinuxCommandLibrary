@@ -87,6 +87,16 @@ Very large CSV files may still experience performance limitations depending on a
 
 **csvlens** was developed to address the need for a fast, lightweight CSV viewer in the terminal. It draws inspiration from traditional Unix tools like less and grep while adding CSV-specific formatting and navigation features.
 
+# INSTALL
+
+```pacman: sudo pacman -S csvlens```
+
+```brew: brew install csvlens```
+
+```nix: nix profile install nixpkgs#csvlens```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cat](/man/cat)(1), [less](/man/less)(1), [grep](/man/grep)(1), [awk](/man/awk)(1)

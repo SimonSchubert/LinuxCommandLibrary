@@ -54,6 +54,20 @@ Useful for programs that don't daemonize themselves but need to run as backgroun
 
 The command must be specified with an absolute path. For modern systems, systemd services are often preferred. Lock files prevent multiple instances but require cleanup on crashes.
 
+# INSTALL
+
+```apt: sudo apt install daemonize```
+
+```dnf: sudo dnf install daemonize```
+
+```zypper: sudo zypper install daemonize```
+
+```brew: brew install daemonize```
+
+```nix: nix profile install nixpkgs#daemonize```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [daemon](/man/daemon)(1), [nohup](/man/nohup)(1)

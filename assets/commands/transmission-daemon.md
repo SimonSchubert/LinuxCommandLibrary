@@ -116,6 +116,18 @@ Settings file is overwritten when daemon exits. Web interface requires authentic
 
 **Transmission** was created in 2005 and is one of the oldest actively maintained BitTorrent clients. The daemon mode enables headless operation for servers and NAS devices. It is known for its lightweight resource usage and cross-platform support.
 
+# INSTALL
+
+```apt: sudo apt install transmission-daemon```
+
+```dnf: sudo dnf install transmission-daemon```
+
+```apk: sudo apk add transmission-daemon```
+
+```zypper: sudo zypper install transmission-daemon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [transmission-remote](/man/transmission-remote)(1), [transmission-cli](/man/transmission-cli)(1), [rtorrent](/man/rtorrent)(1)

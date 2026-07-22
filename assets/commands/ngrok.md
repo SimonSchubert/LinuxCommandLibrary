@@ -103,6 +103,12 @@ Free tier has connection limits and randomized URLs that change on restart. An a
 
 ngrok was created by **Alan Shreve** to provide secure tunnels for local development.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#ngrok```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [localtunnel](/man/localtunnel)(1), [ssh](/man/ssh)(1), [cloudflared](/man/cloudflared)(1)

@@ -54,6 +54,14 @@ The console **locks the state file** while running, so you cannot run **terrafor
 
 Introduced in **Terraform v0.8** in **November 2016** by Mitchell Hashimoto, co-founder of HashiCorp. Originally described as an interactive console for experimenting with interpolations. Support for **-var** and **-var-file** was added later via a fix in **September 2019**. The **type()** function was added in **Terraform v1.1** as a console-only feature.
 
+# INSTALL
+
+```pacman: sudo pacman -S terraform```
+
+```nix: nix profile install nixpkgs#terraform```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [terraform-plan](/man/terraform-plan)(1), [terraform-apply](/man/terraform-apply)(1), [terraform-output](/man/terraform-output)(1), [terraform-login](/man/terraform-login)(1)

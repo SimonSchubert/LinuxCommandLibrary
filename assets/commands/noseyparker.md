@@ -101,6 +101,14 @@ Scan results may include false positives that require manual review. The datasto
 
 Nosey Parker was created by **Praetorian** and released as open source in **2023**. It was designed as a modern alternative to tools like truffleHog and git-secrets, emphasizing performance and accuracy. The Rust implementation provides significant speed improvements over Python-based alternatives. Development continues actively with regular rule updates and feature additions.
 
+# INSTALL
+
+```brew: brew install noseyparker```
+
+```nix: nix profile install nixpkgs#noseyparker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-secrets](/man/git-secrets)(1), [trufflehog](/man/trufflehog)(1), [gitleaks](/man/gitleaks)(1), [detect-secrets](/man/detect-secrets)(1)

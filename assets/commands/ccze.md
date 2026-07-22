@@ -109,6 +109,18 @@ Located in /usr/lib/ccze and ~/.ccze. Support for:
 
 Use **-o nolookups** for faster processing of long logs. When enabled (the default), lookups resolve usernames and service names but slow down colorization significantly.
 
+# INSTALL
+
+```apt: sudo apt install ccze```
+
+```dnf: sudo dnf install ccze```
+
+```zypper: sudo zypper install ccze```
+
+```nix: nix profile install nixpkgs#ccze```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tail](/man/tail)(1), [less](/man/less)(1), [multitail](/man/multitail)(1), [journalctl](/man/journalctl)(1)

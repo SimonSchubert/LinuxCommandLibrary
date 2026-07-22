@@ -107,6 +107,19 @@ Requires Java Runtime Environment to execute. The **antlr4** command is typicall
 
 ANTLR was created by **Terence Parr** at the University of San Francisco starting in **1989**. ANTLR4, released in **2013**, introduced the ALL(*) parsing algorithm that handles more grammar constructs than previous LL(k) versions. The tool is widely used for building languages, data formats, and domain-specific languages in both academic and commercial settings.
 
+# INSTALL
+
+```apt: sudo apt install pccts```
+
+```aur: yay -S pccts```
+
+```zypper: sudo zypper install antlr```
+
+```brew: brew install antlr```
+
+```nix: nix profile install nixpkgs#antlr```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [bison](/man/bison)(1), [flex](/man/flex)(1), [yacc](/man/yacc)(1), [lex](/man/lex)(1)

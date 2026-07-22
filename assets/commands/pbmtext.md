@@ -41,6 +41,24 @@ renders text as a PBM bitmap image
 
 **pbmtext** renders text as a PBM bitmap image. Part of Netpbm toolkit for creating text graphics. Supports BDF fonts and built-in fonts.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtextps](/man/pbmtextps)(1), [ppmlabel](/man/ppmlabel)(1)

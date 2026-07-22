@@ -70,6 +70,18 @@ Standard compliance varies by feature. Array bounds checking optional. Legacy co
 
 gfortran replaced g77 as GCC's Fortran compiler starting with GCC 4.0. It supports modern Fortran standards while maintaining compatibility with older code.
 
+# INSTALL
+
+```apt: sudo apt install gfortran```
+
+```apk: sudo apk add gfortran```
+
+```brew: brew install gfortran```
+
+```nix: nix profile install nixpkgs#gfortran```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [f2py](/man/f2py)(1)

@@ -26,6 +26,12 @@ Only discovers devices that respond to mDNS queries. Devices without an mDNS res
 
 **mdns-scanner** was created by **CramBL** and is written in **Rust**. It is published on **crates.io** and distributed through **cargo install mdns-scanner**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#mdns-scanner```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [avahi-browse](/man/avahi-browse)(1), [nmap](/man/nmap)(1), [arp-scan](/man/arp-scan)(1)

@@ -68,6 +68,14 @@ environment specification exporter
 
 Use **--from-history** for more portable exports that omit transitive dependencies and platform-specific build strings.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-env](/man/conda-env)(1), [conda-list](/man/conda-list)(1)

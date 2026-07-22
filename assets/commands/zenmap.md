@@ -60,6 +60,14 @@ The GTK-based interface may not be available on all systems. nmap command-line w
 
 Zenmap development is less active than Nmap itself. Some newer Nmap features may not have GUI support.
 
+# INSTALL
+
+```pacman: sudo pacman -S zenmap```
+
+```nix: nix profile install nixpkgs#zenmap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [masscan](/man/masscan)(1), [netstat](/man/netstat)(8)

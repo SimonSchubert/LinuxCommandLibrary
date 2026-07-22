@@ -86,6 +86,24 @@ Part of the git-extras package. Quality depends on commit messages. Tag-based gr
 
 git changelog is part of **git-extras**, created by **TJ Holowaychuk** to automate changelog generation from repository history.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-tag](/man/git-tag)(1)

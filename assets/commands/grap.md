@@ -55,6 +55,16 @@ Part of the groff ecosystem. Outputs pic format that must be further processed b
 
 grap was developed at **Bell Labs** as part of the Unix document preparation tools, described by Kernighan and Bentley.
 
+# INSTALL
+
+```apt: sudo apt install grap```
+
+```brew: brew install grap```
+
+```nix: nix profile install nixpkgs#grap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [pic](/man/pic)(1), [troff](/man/troff)(1), [tbl](/man/tbl)(1), [eqn](/man/eqn)(1), [gnuplot](/man/gnuplot)(1)

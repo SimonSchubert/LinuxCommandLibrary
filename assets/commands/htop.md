@@ -93,6 +93,24 @@ Some features require root privileges (changing priorities, killing other users'
 
 **htop** was created by **Hisham Muhammad** in **2004** as a more user-friendly process viewer for Linux. It addressed common complaints about top's interface and lack of interactivity. The project was later forked as **htop-dev** by a community group after maintenance lapsed. htop has become the de facto interactive process viewer on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install htop```
+
+```dnf: sudo dnf install htop```
+
+```pacman: sudo pacman -S htop```
+
+```apk: sudo apk add htop```
+
+```zypper: sudo zypper install htop```
+
+```brew: brew install htop```
+
+```nix: nix profile install nixpkgs#htop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [top](/man/top)(1), [ps](/man/ps)(1), [pstree](/man/pstree)(1), [atop](/man/atop)(1), [btop](/man/btop)(1)

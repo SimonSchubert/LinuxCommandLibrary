@@ -76,6 +76,22 @@ Server runs separately. ncurses interface. Plugin-based format support.
 
 MOC was created to provide a console-based **music player** with background playback support.
 
+# INSTALL
+
+```apt: sudo apt install qtchooser```
+
+```dnf: sudo dnf install qtchooser```
+
+```apk: sudo apk add qt5-qtbase-dev```
+
+```zypper: sudo zypper install moc```
+
+```brew: brew install moc```
+
+```nix: nix profile install nixpkgs#moc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpd](/man/mpd)(1), [cmus](/man/cmus)(1), [mpv](/man/mpv)(1)

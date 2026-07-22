@@ -24,6 +24,14 @@ Textual UI for managing Terraform state
 
 **terraform-tui** was created by **Ido Avraham** (idoavrah) and is written in **Python**.
 
+# INSTALL
+
+```pacman: sudo pacman -S terraform```
+
+```nix: nix profile install nixpkgs#terraform```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [terragrunt](/man/terragrunt)(1), [tofuref](/man/tofuref)(1)

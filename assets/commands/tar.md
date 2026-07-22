@@ -131,6 +131,20 @@ GNU tar differs from BSD tar in some options. For portability, stick to common o
 
 Tar originated in Version 7 Unix in **1979**, designed for tape backups (hence "tape archive"). It became the standard Unix archiving tool and is specified by POSIX. GNU tar added many extensions including compression integration.
 
+# INSTALL
+
+```apt: sudo apt install tar```
+
+```dnf: sudo dnf install tar```
+
+```pacman: sudo pacman -S tar```
+
+```apk: sudo apk add tar```
+
+```zypper: sudo zypper install tar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1), [xz](/man/xz)(1), [zstd](/man/zstd)(1), [zip](/man/zip)(1), [cpio](/man/cpio)(1), [ar](/man/ar)(1)

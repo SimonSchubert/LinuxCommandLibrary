@@ -80,6 +80,23 @@ Requires root/sudo for raw socket access. Only works on local network segment (c
 
 **arp-scan** was written by Roy Hills and has been maintained since the early **2000s** as a reliable network discovery tool.
 
+# INSTALL
+
+```apt: sudo apt install arp-scan```
+
+```dnf: sudo dnf install arp-scan```
+
+```pacman: sudo pacman -S arp-scan```
+
+```apk: sudo apk add arp-scan```
+
+```zypper: sudo zypper install arp-scan```
+
+```brew: brew install arp-scan```
+
+```nix: nix profile install nixpkgs#arp-scan```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [arp](/man/arp)(8), [arping](/man/arping)(8), [nmap](/man/nmap)(1)

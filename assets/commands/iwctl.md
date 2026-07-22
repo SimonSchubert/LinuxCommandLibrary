@@ -69,6 +69,22 @@ Requires iwd daemon to be running. Network credentials are stored in /var/lib/iw
 
 iwd was developed by Intel and first released in **2017** as a modern replacement for wpa_supplicant. It aims to provide simpler configuration and faster connection times while supporting modern wireless security protocols.
 
+# INSTALL
+
+```apt: sudo apt install iwd```
+
+```dnf: sudo dnf install iwd```
+
+```pacman: sudo pacman -S iwd```
+
+```apk: sudo apk add iwd```
+
+```zypper: sudo zypper install iwd```
+
+```nix: nix profile install nixpkgs#iwd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iw](/man/iw)(8), [nmcli](/man/nmcli)(1), [wpa_supplicant](/man/wpa_supplicant)(8)

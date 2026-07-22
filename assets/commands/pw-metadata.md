@@ -69,6 +69,16 @@ Modifying metadata in the "settings" namespace can affect PipeWire behavior imme
 
 Part of **PipeWire**, the modern multimedia framework for Linux. Provides runtime inspection and modification of PipeWire's metadata system.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-tools```
+
+```zypper: sudo zypper install pipewire-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [pw-mon](/man/pw-mon)(1), [pw-cli](/man/pw-cli)(1)

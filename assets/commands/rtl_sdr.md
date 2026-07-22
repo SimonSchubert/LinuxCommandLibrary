@@ -78,6 +78,24 @@ Requires RTL-SDR compatible device. USB bandwidth limits sample rate. Heat affec
 
 **rtl_sdr** is part of **librtlsdr**, enabling RTL2832U-based DVB-T dongles for SDR. Created by **Steve Markgraf** and others, it revolutionized accessible software-defined radio.
 
+# INSTALL
+
+```apt: sudo apt install rtl-sdr```
+
+```dnf: sudo dnf install rtl-sdr```
+
+```pacman: sudo pacman -S rtl-sdr```
+
+```apk: sudo apk add rtl-sdr```
+
+```zypper: sudo zypper install rtl-sdr```
+
+```brew: brew install rtl-sdr```
+
+```nix: nix profile install nixpkgs#rtl-sdr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rtl_fm](/man/rtl_fm)(1), [rtl_power](/man/rtl_power)(1), [gqrx](/man/gqrx)(1), [gnuradio](/man/gnuradio)(1)

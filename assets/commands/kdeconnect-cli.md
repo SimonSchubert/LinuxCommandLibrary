@@ -72,6 +72,16 @@ Requires KDE Connect daemon. Devices must be on same network. Phone app needed.
 
 kdeconnect-cli is part of **KDE Connect**, enabling seamless integration between Linux desktops and Android devices.
 
+# INSTALL
+
+```apt: sudo apt install kdeconnect```
+
+```pacman: sudo pacman -S kdeconnect```
+
+```apk: sudo apk add kdeconnect```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [adb-connect](/man/adb-connect)(1), [nmcli-connection](/man/nmcli-connection)(1)

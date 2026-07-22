@@ -56,6 +56,22 @@ Large time jumps (>1000 seconds) are refused by default; use **--panicgate** for
 
 NTP was developed by David L. Mills at the University of Delaware, first appearing in 1985. The reference implementation ntpd has been the standard NTP daemon for decades.
 
+# INSTALL
+
+```apt: sudo apt install ntpsec```
+
+```dnf: sudo dnf install ntpsec```
+
+```pacman: sudo pacman -S openntpd```
+
+```apk: sudo apk add openntpd```
+
+```zypper: sudo zypper install ntpsec```
+
+```nix: nix profile install nixpkgs#openntpd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ntpq](/man/ntpq)(8), [ntpdate](/man/ntpdate)(8), [chrony](/man/chrony)(8), [timedatectl](/man/timedatectl)(1)

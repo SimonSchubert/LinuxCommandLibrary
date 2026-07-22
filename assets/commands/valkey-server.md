@@ -125,6 +125,24 @@ Memory-bound by default; configure maxmemory for production. Protected mode rest
 
 **Valkey** was forked from Redis in 2024 after Redis Labs changed the license to source-available. The Linux Foundation hosts Valkey as a community-driven continuation of open-source Redis. Major contributors include AWS, Google, Oracle, and Ericsson.
 
+# INSTALL
+
+```apt: sudo apt install valkey-server```
+
+```dnf: sudo dnf install valkey```
+
+```pacman: sudo pacman -S valkey```
+
+```apk: sudo apk add valkey```
+
+```zypper: sudo zypper install valkey```
+
+```brew: brew install valkey```
+
+```nix: nix profile install nixpkgs#valkey```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [valkey-cli](/man/valkey-cli)(1), [redis-server](/man/redis-server)(1), [memcached](/man/memcached)(1)

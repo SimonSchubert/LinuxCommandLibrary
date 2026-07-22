@@ -44,6 +44,18 @@ Database may not include all acronyms. Some acronyms have multiple meanings. Pri
 
 **wtf** stands for "What The F..." and is part of the bsdgames package, originating from BSD Unix culture.
 
+# INSTALL
+
+```apk: sudo apk add wmutils```
+
+```zypper: sudo zypper install wmutils```
+
+```brew: brew install wtf```
+
+```nix: nix profile install nixpkgs#wtf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [whatis](/man/whatis)(1), [apropos](/man/apropos)(1)

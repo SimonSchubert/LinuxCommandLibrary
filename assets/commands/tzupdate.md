@@ -36,6 +36,12 @@ Set system timezone automatically via IP geolocation
 
 **tzupdate** was created by **cdown** and is written in **Rust** (formerly Python).
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#tzupdate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [timedatectl](/man/timedatectl)(1), [date](/man/date)(1), [tz](/man/tz)(1)

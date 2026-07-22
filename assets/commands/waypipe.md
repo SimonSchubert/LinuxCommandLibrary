@@ -42,6 +42,22 @@ The tool creates a transparent tunnel that makes remote applications appear as n
 
 Requires Wayland on both local and remote systems. Performance depends on network latency. Some applications may not work correctly with remote rendering.
 
+# INSTALL
+
+```apt: sudo apt install waypipe```
+
+```dnf: sudo dnf install waypipe```
+
+```pacman: sudo pacman -S waypipe```
+
+```apk: sudo apk add waypipe```
+
+```zypper: sudo zypper install waypipe```
+
+```nix: nix profile install nixpkgs#waypipe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1)

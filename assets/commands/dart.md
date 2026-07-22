@@ -107,6 +107,14 @@ Dart applications require the Dart SDK for development. Native compiled executab
 
 Dart was developed by Google and first announced in **2011**. It was initially designed as an alternative to JavaScript for web development. With Dart 2.0 in **2018**, the language became strongly typed. The Flutter framework, also using Dart, drove significant adoption starting in **2017**. The unified **dart** command-line tool replaced separate tools like pub, dartanalyzer, and dartfmt in Dart 2.10 (2020).
 
+# INSTALL
+
+```pacman: sudo pacman -S dart```
+
+```nix: nix profile install nixpkgs#dart```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flutter](/man/flutter)(1), [node](/man/node)(1), [go](/man/go)(1)

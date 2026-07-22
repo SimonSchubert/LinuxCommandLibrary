@@ -53,6 +53,16 @@ Requires sixel-capable terminal. ImageMagick needed. Not all terminals supported
 
 lsix was created to display images directly in terminals that support **sixel graphics** format.
 
+# INSTALL
+
+```pacman: sudo pacman -S lsix```
+
+```brew: brew install lsix```
+
+```nix: nix profile install nixpkgs#lsix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [img2sixel](/man/img2sixel)(1), [viu](/man/viu)(1), [chafa](/man/chafa)(1)

@@ -88,6 +88,24 @@ The command checks for corrupted objects, broken links, invalid object types, an
 
 Regular fsck runs are recommended after suspected repository corruption, disk errors, or hardware failures. The --full option (now default) extends checking to objects inside pack files. Use --connectivity-only for faster checks that skip blob content validation.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-gc](/man/git-gc)(1), [git-prune](/man/git-prune)(1), [git-reflog](/man/git-reflog)(1)

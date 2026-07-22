@@ -108,6 +108,20 @@ Requires root privileges. Tracing can impact system performance. Large traces co
 
 **trace-cmd** was created by **Steven Rostedt** as a front-end for the Linux kernel's Ftrace framework, simplifying the process of kernel tracing and analysis.
 
+# INSTALL
+
+```apt: sudo apt install trace-cmd```
+
+```dnf: sudo dnf install trace-cmd```
+
+```pacman: sudo pacman -S trace-cmd```
+
+```zypper: sudo zypper install trace-cmd```
+
+```nix: nix profile install nixpkgs#trace-cmd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [trace-cmd-list](/man/trace-cmd-list)(1), [trace-cmd-record](/man/trace-cmd-record)(1), [trace-cmd-report](/man/trace-cmd-report)(1), [perf](/man/perf)(1), [strace](/man/strace)(1)

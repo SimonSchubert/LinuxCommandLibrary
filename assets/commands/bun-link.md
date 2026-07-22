@@ -29,6 +29,16 @@ This is useful for developing and testing local packages without publishing them
 
 Linked packages must be built before linking if they require a build step. Changes to the linked package are immediately reflected in projects using it. Links are specific to the Bun package manager and are not shared with npm or yarn link registrations.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-unlink](/man/bun-unlink)(1), [bun-install](/man/bun-install)(1), [npm-link](/man/npm-link)(1)

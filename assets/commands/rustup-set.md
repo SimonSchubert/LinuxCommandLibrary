@@ -43,6 +43,22 @@ Configure rustup settings and defaults
 
 **rustup set** configures rustup settings that affect default behavior for new toolchain installations and updates. The profile setting controls which components are installed by default, and the auto-self-update setting controls whether rustup updates itself when running `rustup update`.
 
+# INSTALL
+
+```apt: sudo apt install rustup```
+
+```dnf: sudo dnf install rustup```
+
+```pacman: sudo pacman -S rustup```
+
+```zypper: sudo zypper install rustup```
+
+```brew: brew install rustup```
+
+```nix: nix profile install nixpkgs#rustup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rustup](/man/rustup)(1), [rustup-show](/man/rustup-show)(1)

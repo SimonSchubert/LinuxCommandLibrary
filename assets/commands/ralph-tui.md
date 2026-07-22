@@ -32,6 +32,12 @@ Requires an AI coding agent (such as Claude Code) to be installed and configured
 
 **ralph-tui** was created by **subsy** and is written in **TypeScript**.
 
+# INSTALL
+
+```aur: yay -S ralph-tui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1)

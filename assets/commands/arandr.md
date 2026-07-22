@@ -45,6 +45,19 @@ Requires a running X server with XRandR 1.2 or later support. Does not work with
 
 **ARandR** was created by **Christian Aichinger** as an alternative to GNOME and KDE display configuration tools for users of lightweight window managers. The project aims to provide a simple, desktop-environment-independent way to configure displays visually while remaining portable and minimal.
 
+# INSTALL
+
+```dnf: sudo dnf install arandr```
+
+```pacman: sudo pacman -S arandr```
+
+```apk: sudo apk add arandr```
+
+```zypper: sudo zypper install arandr```
+
+```nix: nix profile install nixpkgs#arandr```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [xrandr](/man/xrandr)(1)

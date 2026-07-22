@@ -28,6 +28,24 @@ There are no options specific to **ppmtorgb3**, but it accepts the common option
 
 Written by **Jef Poskanzer** in 1991 as part of **Netpbm** (originally **Pbmplus**), a classic toolkit of image-processing utilities that uses simple PBM/PGM/PPM formats as intermediate pipelines.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rgb3toppm](/man/rgb3toppm)(1), [ppmtopgm](/man/ppmtopgm)(1), [pgmtoppm](/man/pgmtoppm)(1), [ppmtoyuvsplit](/man/ppmtoyuvsplit)(1), [ppm](/man/ppm)(5), [pgm](/man/pgm)(5)

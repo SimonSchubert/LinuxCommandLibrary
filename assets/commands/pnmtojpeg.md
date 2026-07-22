@@ -47,6 +47,24 @@ Convert PNM images to JPEG format
 
 The **-progressive** option creates progressive JPEGs that render in increasing detail during loading. The **-optimize** flag reduces file size by computing optimal Huffman coding tables. The **-grayscale** option forces single-channel output even for color inputs. Part of the Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jpegtopnm](/man/jpegtopnm)(1), [pnmtopng](/man/pnmtopng)(1)

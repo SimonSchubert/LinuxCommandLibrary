@@ -51,6 +51,24 @@ Multiple -p options create merge commits with multiple parents. The commit messa
 
 This command outputs the SHA-1 hash of the newly created commit object. To make the commit visible, you typically need to update a branch reference using git update-ref or git reset. Most users never need this command directly, but it's essential for understanding Git's internal architecture and for advanced repository manipulation.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-commit](/man/git-commit)(1), [git-write-tree](/man/git-write-tree)(1), [git-update-ref](/man/git-update-ref)(1)

@@ -66,6 +66,22 @@ GUI-based primarily. Plugin support varies by platform. Resource intensive.
 
 LMMS (Linux MultiMedia Studio) was created to provide a free, cross-platform alternative to commercial DAWs like FL Studio.
 
+# INSTALL
+
+```apt: sudo apt install lmms```
+
+```dnf: sudo dnf install lmms```
+
+```pacman: sudo pacman -S lmms```
+
+```apk: sudo apk add lmms```
+
+```zypper: sudo zypper install lmms```
+
+```nix: nix profile install nixpkgs#lmms```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ardour](/man/ardour)(1), [audacity](/man/audacity)(1)

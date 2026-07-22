@@ -65,6 +65,23 @@ Generated scripts may need manual editing for robustness. Passwords and sensitiv
 
 **autoexpect** is part of the Expect package, created by Don Libes at NIST. Expect was first released in **1990** and has been widely used for automating interactive applications.
 
+# INSTALL
+
+```apt: sudo apt install expect```
+
+```dnf: sudo dnf install expect```
+
+```pacman: sudo pacman -S expect```
+
+```apk: sudo apk add expect```
+
+```zypper: sudo zypper install expect```
+
+```brew: brew install expect```
+
+```nix: nix profile install nixpkgs#expect```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [expect](/man/expect)(1), [ssh](/man/ssh)(1)

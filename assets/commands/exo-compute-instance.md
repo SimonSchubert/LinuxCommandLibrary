@@ -73,6 +73,18 @@ Instances run in specified availability zones with configurable templates, insta
 
 Commands support all instance operations including resizing, rebooting, and attaching to networks and storage.
 
+# INSTALL
+
+```dnf: sudo dnf install exo```
+
+```pacman: sudo pacman -S exo```
+
+```apk: sudo apk add exoscale```
+
+```nix: nix profile install nixpkgs#exo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [exo](/man/exo)(1), [exo-compute](/man/exo-compute)(1), [exo-compute-block-storage](/man/exo-compute-block-storage)(1)

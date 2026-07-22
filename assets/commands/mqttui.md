@@ -46,6 +46,18 @@ Requires access to an MQTT broker. Subscribing to broad topics on busy brokers m
 
 **mqttui** was created by **EdJoPaTo** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S mqttui```
+
+```apk: sudo apk add mqttui```
+
+```brew: brew install mqttui```
+
+```nix: nix profile install nixpkgs#mqttui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mosquitto_sub](/man/mosquitto_sub)(1), [mosquitto_pub](/man/mosquitto_pub)(1)

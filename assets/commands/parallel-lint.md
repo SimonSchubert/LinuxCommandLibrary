@@ -79,6 +79,24 @@ checks PHP files for syntax errors in parallel
 
 **parallel-lint** checks PHP files for syntax errors in parallel. It provides fast syntax checking across multiple files and directories. It does not check code style, only syntax validity. By default it runs 10 parallel jobs and checks common PHP file extensions.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add parallel```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [php](/man/php)(1), [phpcs](/man/phpcs)(1)

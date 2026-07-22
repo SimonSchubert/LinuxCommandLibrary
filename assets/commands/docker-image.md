@@ -82,6 +82,24 @@ Docker images are built in layers, with each instruction in a Dockerfile creatin
 
 The **docker image** command group provides comprehensive image lifecycle management, from pulling images from registries, building custom images via Dockerfile, tagging for organization, to cleaning up unused images that consume disk space.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-image-ls](/man/docker-image-ls)(1), [docker-image-rm](/man/docker-image-rm)(1), [docker-image-pull](/man/docker-image-pull)(1)

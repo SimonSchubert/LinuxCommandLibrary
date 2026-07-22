@@ -114,6 +114,24 @@ Accuracy varies with image quality. Complex layouts may not segment correctly. H
 
 **Tesseract** was developed at HP Labs from **1985** to **1994**, then released as open source in **2005**. Google took over development, adding LSTM neural network support in **2016** (version 4.0). It remains the most widely used open-source OCR engine, integrated into many applications and workflows.
 
+# INSTALL
+
+```apt: sudo apt install tesseract-ocr```
+
+```dnf: sudo dnf install tesseract```
+
+```pacman: sudo pacman -S tesseract```
+
+```apk: sudo apk add tesseract-ocr```
+
+```zypper: sudo zypper install tesseract-ocr```
+
+```brew: brew install tesseract```
+
+```nix: nix profile install nixpkgs#tesseract```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ocrmypdf](/man/ocrmypdf)(1), [imagemagick](/man/imagemagick)(1), [pdftoppm](/man/pdftoppm)(1)

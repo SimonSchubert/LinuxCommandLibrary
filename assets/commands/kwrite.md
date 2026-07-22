@@ -55,6 +55,18 @@ Requires KDE Frameworks libraries. Single-document editor only; for multiple doc
 
 KWrite has been part of KDE since the early versions, providing a simple but capable text editor for the KDE desktop environment.
 
+# INSTALL
+
+```apt: sudo apt install kwrite```
+
+```dnf: sudo dnf install kwrite```
+
+```apk: sudo apk add kwrite```
+
+```zypper: sudo zypper install kwrite```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kate](/man/kate)(1), [gedit](/man/gedit)(1), [nano](/man/nano)(1)

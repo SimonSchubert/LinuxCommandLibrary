@@ -64,6 +64,18 @@ Strong naming is part of the .NET Framework and Mono runtime. While still suppor
 
 **sn** (Strong Name tool) is part of the **.NET SDK** for creating and managing cryptographic keys for assembly signing.
 
+# INSTALL
+
+```pacman: sudo pacman -S mono```
+
+```apk: sudo apk add mono```
+
+```brew: brew install mono```
+
+```nix: nix profile install nixpkgs#mono```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mono](/man/mono)(1), [gacutil](/man/gacutil)(1), [mcs](/man/mcs)(1)

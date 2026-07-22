@@ -48,6 +48,24 @@ Part of groff. ASCII output only. Use eqn for typeset output.
 
 neqn is part of **troff/nroff** system, derived from the original Unix equation formatter.
 
+# INSTALL
+
+```apt: sudo apt install groff-base```
+
+```dnf: sudo dnf install groff-base```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [eqn](/man/eqn)(1), [nroff](/man/nroff)(1), [groff](/man/groff)(1)

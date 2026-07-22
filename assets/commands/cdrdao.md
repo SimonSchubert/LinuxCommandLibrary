@@ -99,6 +99,24 @@ A typical workflow involves reading a disc with `read-cd` to create a TOC file a
 
 Requires a CD/DVD writer for write operations. Raw read mode may not work with all drives. Copy protection may prevent reading some discs.
 
+# INSTALL
+
+```apt: sudo apt install cdrdao```
+
+```dnf: sudo dnf install cdrdao```
+
+```pacman: sudo pacman -S cdrdao```
+
+```apk: sudo apk add cdrdao```
+
+```zypper: sudo zypper install cdrdao```
+
+```brew: brew install cdrdao```
+
+```nix: nix profile install nixpkgs#cdrdao```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wodim](/man/wodim)(1), [cdrecord](/man/cdrecord)(1), [genisoimage](/man/genisoimage)(1)

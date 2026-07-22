@@ -95,6 +95,14 @@ Requires X11 display; cannot run in headless environments. Screen real estate li
 
 ClusterSSH was written by **Duncan Ferguson** and first released in the early **2000s**. It addressed the common need to manage multiple similar servers before configuration management tools like Ansible became widespread. The tool remains popular for ad-hoc tasks and interactive troubleshooting where simultaneous access to multiple hosts is beneficial.
 
+# INSTALL
+
+```dnf: sudo dnf install clusterssh```
+
+```zypper: sudo zypper install clusterssh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [pssh](/man/pssh)(1), [ansible](/man/ansible)(1), [ssh](/man/ssh)(1)

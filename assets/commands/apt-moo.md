@@ -22,6 +22,21 @@ The "Super Cow Powers" reference is a separate joke: the line "This APT has Supe
 
 The moo easter egg has been part of APT since the early 2000s. It is an in-joke from the Debian culture of hiding playful features in software. The same cow is shown whether invoked via **apt moo** or **apt-get moo**.
 
+# INSTALL
+
+```apt: sudo apt install apt```
+
+```dnf: sudo dnf install apt```
+
+```pacman: sudo pacman -S apt```
+
+```apk: sudo apk add apt```
+
+```brew: brew install apt```
+
+```nix: nix profile install nixpkgs#apt```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [cowsay](/man/cowsay)(1)

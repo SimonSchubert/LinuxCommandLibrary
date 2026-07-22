@@ -65,6 +65,20 @@ Unlike `-S`, which resolves names against the sync databases, `-U` operates dire
 
 Requires root privileges (use `sudo`). The package must target the same architecture and be signed by a trusted key, or pass `--nosigcheck` (dangerous). Downgrading may break packages that depend on the newer version.
 
+# INSTALL
+
+```apt: sudo apt install pacman-package-manager```
+
+```dnf: sudo dnf install pacman```
+
+```pacman: sudo pacman -S pacman```
+
+```apk: sudo apk add pacman```
+
+```nix: nix profile install nixpkgs#pacman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pacman-upgrade](/man/pacman-upgrade)(8), [pacman-key](/man/pacman-key)(8), [makepkg](/man/makepkg)(8)

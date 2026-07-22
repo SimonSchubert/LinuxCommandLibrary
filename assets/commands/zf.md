@@ -24,6 +24,14 @@ Fuzzy finder optimized for filtering file paths
 
 **zf** was created by **Nate Craddock** (natecraddock) and is written in **Zig**.
 
+# INSTALL
+
+```brew: brew install zf```
+
+```nix: nix profile install nixpkgs#zf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fzf](/man/fzf)(1)

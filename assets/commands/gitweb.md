@@ -42,6 +42,14 @@ CGI script, requires a web server for production use. No authentication built-in
 
 gitweb is part of the **Git** distribution, providing web repository browsing since Git's early versions. It is the predecessor to modern git hosting interfaces like Gitea and GitLab.
 
+# INSTALL
+
+```dnf: sudo dnf install gitweb```
+
+```nix: nix profile install nixpkgs#gitweb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-instaweb](/man/git-instaweb)(1), [gitea](/man/gitea)(1)

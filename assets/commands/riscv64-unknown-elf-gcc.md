@@ -94,6 +94,12 @@ Cross-compiler for embedded. Requires RISC-V toolchain installation. Different f
 
 RISC-V GCC toolchain was developed as part of the **RISC-V** open ISA project from UC Berkeley.
 
+# INSTALL
+
+```apt: sudo apt install gcc-riscv64-unknown-elf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [objdump](/man/objdump)(1), [qemu-system-riscv64](/man/qemu-system-riscv64)(1)

@@ -66,6 +66,18 @@ Development use recommended. Not for production. Rust-based.
 
 miniserve was created as a fast, minimal **Rust-based** HTTP file server for quick sharing.
 
+# INSTALL
+
+```pacman: sudo pacman -S miniserve```
+
+```apk: sudo apk add miniserve```
+
+```brew: brew install miniserve```
+
+```nix: nix profile install nixpkgs#miniserve```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [http-server](/man/http-server)(1), [serve](/man/serve)(1)

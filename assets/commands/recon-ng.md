@@ -127,6 +127,16 @@ Module results vary in accuracy. Cross-reference findings from multiple sources 
 
 Recon-ng was developed by **Tim Tomes** while working at Black Hills Information Security. First released around **2012**, it was designed to bring the modular, database-driven approach of Metasploit to the reconnaissance phase. The framework is written in Python and continues active development with community-contributed modules.
 
+# INSTALL
+
+```apk: sudo apk add recon-ng```
+
+```brew: brew install recon-ng```
+
+```nix: nix profile install nixpkgs#recon-ng```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [maltego](/man/maltego)(1), [amass](/man/amass)(1), [nmap](/man/nmap)(1)

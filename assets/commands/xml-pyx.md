@@ -37,6 +37,22 @@ The companion command **xml depyx** (or **xml p2x**) converts PYX back into XML.
 
 PYX is a simplified representation and may not preserve all XML features such as comments or CDATA sections.
 
+# INSTALL
+
+```dnf: sudo dnf install xmlstarlet```
+
+```pacman: sudo pacman -S xmlstarlet```
+
+```apk: sudo apk add xmlstarlet```
+
+```zypper: sudo zypper install xmlstarlet```
+
+```brew: brew install xmlstarlet```
+
+```nix: nix profile install nixpkgs#xmlstarlet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xml-depyx](/man/xml-depyx)(1), [xml-p2x](/man/xml-p2x)(1), [xmlstarlet](/man/xmlstarlet)(1), [xml](/man/xml)(1)

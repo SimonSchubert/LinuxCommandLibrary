@@ -88,6 +88,14 @@ foreman is primarily designed for development environments. For production, expo
 
 foreman was created by David Dollar at Heroku in **2011** as a way to manage Procfile-based applications locally. The Procfile format became a standard for defining process types in twelve-factor applications and is used by many PaaS providers.
 
+# INSTALL
+
+```brew: brew install foreman```
+
+```nix: nix profile install nixpkgs#foreman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pm2](/man/pm2)(1)

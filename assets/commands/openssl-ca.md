@@ -122,6 +122,24 @@ Use proper CA software for production. Database format is proprietary. Configura
 
 The openssl ca command has been part of OpenSSL since early versions, providing basic CA functionality.
 
+# INSTALL
+
+```apt: sudo apt install openssl```
+
+```dnf: sudo dnf install openssl```
+
+```pacman: sudo pacman -S openssl```
+
+```apk: sudo apk add openssl```
+
+```zypper: sudo zypper install openssl```
+
+```brew: brew install openssl```
+
+```nix: nix profile install nixpkgs#openssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl-req](/man/openssl-req)(1), [openssl-x509](/man/openssl-x509)(1), [openssl-crl](/man/openssl-crl)(1)

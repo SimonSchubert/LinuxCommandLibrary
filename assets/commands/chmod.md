@@ -130,6 +130,24 @@ Requires ownership or root privileges. 777 permissions are security risk. Recurs
 
 **chmod** has been part of Unix since the early **1970s**, implementing the Unix permission model designed by Dennis Ritchie and Ken Thompson.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chown](/man/chown)(1), [chgrp](/man/chgrp)(1), [umask](/man/umask)(1), [ls](/man/ls)(1)

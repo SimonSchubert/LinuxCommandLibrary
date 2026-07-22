@@ -44,6 +44,19 @@ Process accounting files grow continuously and must be rotated or truncated peri
 
 Process accounting originated in early Unix systems at Bell Labs in the **1970s**, designed for tracking resource usage in multi-user timesharing environments. The feature was used for billing purposes in commercial Unix installations. The **accton** command and associated tools have been standard components of Unix and Linux systems ever since, now primarily used for security auditing rather than billing.
 
+# INSTALL
+
+```apt: sudo apt install acct```
+
+```aur: yay -S acct```
+
+```apk: sudo apk add acct```
+
+```zypper: sudo zypper install acct```
+
+```nix: nix profile install nixpkgs#acct```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [sa](/man/sa)(8), [lastcomm](/man/lastcomm)(1), [ac](/man/ac)(1)

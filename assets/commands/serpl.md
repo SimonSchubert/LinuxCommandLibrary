@@ -40,6 +40,16 @@ Requires **ripgrep** to be installed. The optional AST Grep mode requires instal
 
 **serpl** was created by **Yassine Bridi** (yassinebridi) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S serpl```
+
+```brew: brew install serpl```
+
+```nix: nix profile install nixpkgs#serpl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scooter](/man/scooter)(1), [sed](/man/sed)(1), [rg](/man/rg)(1), [ast-grep](/man/ast-grep)(1)

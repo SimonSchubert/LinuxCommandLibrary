@@ -30,6 +30,12 @@ Only edits Markdown tables. Other Markdown content in the file is preserved but 
 
 **mdtt** was created by **szktkfm** and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S mdtt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1)

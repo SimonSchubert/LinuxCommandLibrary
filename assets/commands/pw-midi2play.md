@@ -70,6 +70,14 @@ Requires the destination synthesiser, plugin, or hardware to understand MIDI 2 /
 
 MIDI 2 support arrived in **PipeWire** alongside the broader pw-cat MIDI 2 (UMP) work, complementing the older **pw-midiplay**/**pw-midirecord** pair. PipeWire was created by **Wim Taymans** at Red Hat and first released in **2017** and is now the default audio server in major Linux distributions. The MIDI 2.0 specification was ratified by the MMA in **2020**.
 
+# INSTALL
+
+```apk: sudo apk add pipewire-tools```
+
+```zypper: sudo zypper install pipewire-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pw-cat](/man/pw-cat)(1), [pw-midi2record](/man/pw-midi2record)(1), [pw-midiplay](/man/pw-midiplay)(1), [pw-midirecord](/man/pw-midirecord)(1), [pw-mididump](/man/pw-mididump)(1), [pipewire](/man/pipewire)(1)

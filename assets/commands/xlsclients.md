@@ -52,6 +52,20 @@ X11 only. No Wayland. Limited info shown.
 
 **xlsclients** is a standard X11 utility for listing client applications connected to an X server.
 
+# INSTALL
+
+```apt: sudo apt install x11-utils```
+
+```dnf: sudo dnf install xlsclients```
+
+```zypper: sudo zypper install xlsclients```
+
+```brew: brew install xlsclients```
+
+```nix: nix profile install nixpkgs#xlsclients```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xwininfo](/man/xwininfo)(1), [xprop](/man/xprop)(1), [xdotool](/man/xdotool)(1)

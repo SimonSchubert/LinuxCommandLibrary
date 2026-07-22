@@ -55,6 +55,12 @@ Requires a full **Firefox** installation (version 57+) as a backend, making it r
 
 **browsh** was created by **Thomas Sherwood** and released in **2018**. It gained significant attention for its novel approach of using a real browser engine to power a terminal interface, enabling full web compatibility that traditional text browsers like Lynx cannot achieve.
 
+# INSTALL
+
+```aur: yay -S brows```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [browsh](/man/browsh)(1), [lynx](/man/lynx)(1), [w3m](/man/w3m)(1), [links](/man/links)(1), [elinks](/man/elinks)(1)

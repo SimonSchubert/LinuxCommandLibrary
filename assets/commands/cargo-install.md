@@ -110,6 +110,20 @@ Determined by (in order): --root, CARGO_INSTALL_ROOT, install.root config, CARGO
 
 Compiles from source (slow). For prebuilt binaries, use cargo-binstall. Updates require reinstalling with --force.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-uninstall](/man/cargo-uninstall)(1), [cargo-binstall](/man/cargo-binstall)(1)

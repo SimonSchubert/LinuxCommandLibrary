@@ -80,6 +80,24 @@ Requires appropriate capabilities or root privileges. Immutable files cannot be 
 
 **chattr** is part of **e2fsprogs**, providing extended attribute management for ext2/ext3/ext4 and other Linux filesystems.
 
+# INSTALL
+
+```apt: sudo apt install e2fsprogs```
+
+```dnf: sudo dnf install e2fsprogs```
+
+```pacman: sudo pacman -S e2fsprogs```
+
+```apk: sudo apk add e2fsprogs-extra```
+
+```zypper: sudo zypper install e2fsprogs```
+
+```brew: brew install e2fsprogs```
+
+```nix: nix profile install nixpkgs#e2fsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsattr](/man/lsattr)(1), [chmod](/man/chmod)(1)

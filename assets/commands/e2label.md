@@ -38,6 +38,24 @@ _new-label_
 
 Labels are limited to 16 characters and are silently truncated if longer. e2label is a thin wrapper around **tune2fs -L**, so the two are interchangeable. The filesystem may be mounted while the label is changed, but the new label is only picked up by udev and /dev/disk/by-label after the next scan. Part of the **e2fsprogs** package.
 
+# INSTALL
+
+```apt: sudo apt install e2fsprogs```
+
+```dnf: sudo dnf install e2fsprogs```
+
+```pacman: sudo pacman -S e2fsprogs```
+
+```apk: sudo apk add e2fsprogs-extra```
+
+```zypper: sudo zypper install e2fsprogs```
+
+```brew: brew install e2fsprogs```
+
+```nix: nix profile install nixpkgs#e2fsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tune2fs](/man/tune2fs)(8), [blkid](/man/blkid)(8), [mount](/man/mount)(8), [e2undo](/man/e2undo)(8)

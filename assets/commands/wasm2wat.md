@@ -57,6 +57,20 @@ One-way mostly. Part of WABT. Large output for big modules.
 
 **wasm2wat** is part of **WABT** (WebAssembly Binary Toolkit), converting binary WASM to readable WAT text format.
 
+# INSTALL
+
+```apt: sudo apt install wabt```
+
+```dnf: sudo dnf install wabt```
+
+```pacman: sudo pacman -S wabt```
+
+```brew: brew install wabt```
+
+```nix: nix profile install nixpkgs#wabt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wat2wasm](/man/wat2wasm)(1), [wasm2c](/man/wasm2c)(1), [wasm-objdump](/man/wasm-objdump)(1)

@@ -20,6 +20,12 @@ Search PyPI for packages (deprecated)
 
 This command no longer works. PyPI disabled the XML-RPC search endpoint. Search for packages directly at pypi.org instead.
 
+# INSTALL
+
+```apk: sudo apk add py3-pip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [pip-index](/man/pip-index)(1)

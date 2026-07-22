@@ -54,6 +54,14 @@ See **ytt --help** for strict mode, warnings, and library paths.
 
 Learning curve differs from Helm/Go templates. Invalid YAML inputs fail closed. Combine with **kapp** for deploy workflows.
 
+# INSTALL
+
+```brew: brew install ytt```
+
+```nix: nix profile install nixpkgs#ytt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kapp](/man/kapp)(1), [helm](/man/helm)(1), [gomplate](/man/gomplate)(1), [kustomize](/man/kustomize)(1)

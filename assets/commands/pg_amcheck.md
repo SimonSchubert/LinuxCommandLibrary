@@ -79,6 +79,12 @@ checks PostgreSQL database corruption using Access Method verification
 
 **pg_amcheck** checks for corruption in one or more PostgreSQL databases by running amcheck's verification functions against all relations in the target databases. It detects physical corruption in tables and B-tree indexes, such as pages with invalid headers, missing or duplicate tuples, and broken internal links. Available since PostgreSQL 14.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_checksums](/man/pg_checksums)(1)

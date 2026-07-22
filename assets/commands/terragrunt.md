@@ -111,6 +111,18 @@ Adds complexity over plain Terraform. Learning curve for configuration syntax. S
 
 **Terragrunt** was created by **Gruntwork** around **2016** to address pain points in managing Terraform at scale. It's widely used for multi-environment, multi-account infrastructure management.
 
+# INSTALL
+
+```pacman: sudo pacman -S terragrunt```
+
+```zypper: sudo zypper install terragrunt```
+
+```brew: brew install terragrunt```
+
+```nix: nix profile install nixpkgs#terragrunt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [pulumi](/man/pulumi)(1), [aws](/man/aws)(1)

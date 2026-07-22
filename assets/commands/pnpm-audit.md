@@ -67,6 +67,22 @@ Requires network access. Uses npm advisory database.
 
 pnpm audit was added for **security vulnerability** scanning in dependencies.
 
+# INSTALL
+
+```dnf: sudo dnf install pnpm```
+
+```pacman: sudo pacman -S pnpm```
+
+```apk: sudo apk add pnpm```
+
+```zypper: sudo zypper install pnpm```
+
+```brew: brew install pnpm```
+
+```nix: nix profile install nixpkgs#pnpm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnpm](/man/pnpm)(1), [npm-audit](/man/npm-audit)(1)

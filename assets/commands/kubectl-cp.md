@@ -54,6 +54,20 @@ copies files and directories between local filesystem and containers in pods
 
 Requires tar to be installed in the container. If tar is missing, the copy will fail. Large file transfers may be slow as data is streamed through the API server. Symlinks in copied directories are not followed. The namespace/pod format uses `/` as separator (e.g., `mynamespace/mypod:/path`).
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-exec](/man/kubectl-exec)(1)

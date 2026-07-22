@@ -92,6 +92,24 @@ Fuzzy hashing is not a replacement for cryptographic hashes when verifying exact
 
 **ssdeep** was created by Jesse Kornblum based on the spamsum algorithm developed by Dr. Andrew Tridgell for spam detection. The project provides both a command-line tool and the **libfuzzy** library for programmatic access. It's widely used in digital forensics, malware analysis, and security research. The tool is distributed under the GNU General Public License.
 
+# INSTALL
+
+```apt: sudo apt install ssdeep```
+
+```dnf: sudo dnf install ssdeep```
+
+```pacman: sudo pacman -S ssdeep```
+
+```apk: sudo apk add ssdeep```
+
+```zypper: sudo zypper install ssdeep```
+
+```brew: brew install ssdeep```
+
+```nix: nix profile install nixpkgs#ssdeep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1), [hashdeep](/man/hashdeep)(1)

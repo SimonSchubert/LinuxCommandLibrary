@@ -90,6 +90,12 @@ Requires chroot setup via sbuild-createchroot. Root privileges or appropriate gr
 
 **sbuild** was originally developed for the **Debian** buildd network. It provides clean and reproducible package builds.
 
+# INSTALL
+
+```brew: brew install sbuild```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dpkg-buildpackage](/man/dpkg-buildpackage)(1), [pbuilder](/man/pbuilder)(1), [schroot](/man/schroot)(1), [debootstrap](/man/debootstrap)(1), [lintian](/man/lintian)(1)

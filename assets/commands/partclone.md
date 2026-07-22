@@ -101,6 +101,18 @@ Source partition should be unmounted during cloning. Filesystem-specific binary 
 
 **partclone** was developed as an efficient alternative to **dd** for partition backup. By understanding filesystem metadata, it achieves compression without needing external tools, making it popular for system backup and deployment scenarios.
 
+# INSTALL
+
+```dnf: sudo dnf install partclone```
+
+```pacman: sudo pacman -S partclone```
+
+```zypper: sudo zypper install partclone```
+
+```nix: nix profile install nixpkgs#partclone```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dd](/man/dd)(1), [clonezilla](/man/clonezilla)(1), [fsarchiver](/man/fsarchiver)(1)

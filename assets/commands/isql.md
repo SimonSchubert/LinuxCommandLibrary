@@ -106,6 +106,20 @@ Requires ODBC drivers and a DSN configured in /etc/odbc.ini or ~/.odbc.ini. Part
 
 isql is part of **unixODBC**, providing command-line database access through the Open Database Connectivity standard.
 
+# INSTALL
+
+```apt: sudo apt install unixodbc```
+
+```pacman: sudo pacman -S unixodbc```
+
+```apk: sudo apk add unixodbc```
+
+```brew: brew install unixodbc```
+
+```nix: nix profile install nixpkgs#unixodbc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [psql](/man/psql)(1), [mysql](/man/mysql)(1), [sqlcmd](/man/sqlcmd)(1)

@@ -53,6 +53,16 @@ The _man_ viewer requires a working **man** installation. The default viewer can
 
 npm help provides access to **npm's documentation** system from the command line.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-docs](/man/npm-docs)(1)

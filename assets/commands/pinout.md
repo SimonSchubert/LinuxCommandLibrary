@@ -44,6 +44,14 @@ Only works on Raspberry Pi hardware. Requires gpiozero package. May not recogniz
 
 **pinout** is part of **gpiozero**, a Python library for GPIO programming created by **Ben Nuttall** and the Raspberry Pi Foundation. It provides a friendly interface for understanding Pi GPIO layouts without external documentation.
 
+# INSTALL
+
+```apt: sudo apt install python3-gpiozero```
+
+```dnf: sudo dnf install python3-gpiozero```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpio](/man/gpio)(1), [raspi-config](/man/raspi-config)(1), [raspi-gpio](/man/raspi-gpio)(1)

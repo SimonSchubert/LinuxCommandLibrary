@@ -41,6 +41,20 @@ Part of GNOME Flashback. Modern GNOME (3.x and later) uses **gnome-shell** inste
 
 gnome-panel was the main **GNOME 2** panel, now maintained as part of GNOME Flashback for users preferring the classic desktop paradigm.
 
+# INSTALL
+
+```apt: sudo apt install gnome-panel```
+
+```dnf: sudo dnf install gnome-panel```
+
+```pacman: sudo pacman -S gnome-panel```
+
+```apk: sudo apk add gnome-panel```
+
+```nix: nix profile install nixpkgs#gnome-panel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnome-calculator](/man/gnome-calculator)(1), [gnome-screenshot](/man/gnome-screenshot)(1), [gsettings](/man/gsettings)(1)

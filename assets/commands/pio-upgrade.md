@@ -31,6 +31,12 @@ Unlike **pio update**, which updates project platform packages and libraries, **
 
 Requires an internet connection to download the update. May require elevated permissions depending on the installation method (e.g., system-wide pip install). After upgrading, restart any running PlatformIO processes or IDE integrations.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-update](/man/pio-update)(1), [pio](/man/pio)(1), [pip](/man/pip)(1)

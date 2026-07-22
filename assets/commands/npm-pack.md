@@ -81,6 +81,16 @@ Different from npm publish. Respects .npmignore and files field. Useful for pre-
 
 npm pack was added to allow developers to test package contents before publishing to the registry.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-publish](/man/npm-publish)(1), [npm-install](/man/npm-install)(1)

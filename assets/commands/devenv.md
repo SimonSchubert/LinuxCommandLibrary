@@ -104,6 +104,12 @@ The tool supports running services in the background, automatic environment acti
 
 Requires Nix to be installed. First-time setup may take time to download dependencies. Nix store can consume significant disk space. Some proprietary software may not be available in Nix packages.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#devenv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix](/man/nix)(1), [nix-shell](/man/nix-shell)(1), [direnv](/man/direnv)(1)

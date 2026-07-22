@@ -111,6 +111,12 @@ Entity types that can be managed include: accounts, users, clusters, association
 
 Requires Slurm database (slurmdbd) to be configured and running. Administrative privileges typically required for modifications. Changes may affect running job scheduling. Coordinators can only modify entities within their delegated accounts.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sacct](/man/sacct)(1), [scontrol](/man/scontrol)(1), [squeue](/man/squeue)(1), [sbatch](/man/sbatch)(1), [sinfo](/man/sinfo)(1), [srun](/man/srun)(1)

@@ -60,6 +60,14 @@ Always run a dry-run first and review the planned operations. Exact flags for fo
 
 Regex renames can destroy names if the pattern is too broad. Cross-filesystem moves and colliding targets need care. Keep backups or use version control.
 
+# INSTALL
+
+```brew: brew install rnr```
+
+```nix: nix profile install nixpkgs#rnr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rename](/man/rename)(1), [mmv](/man/mmv)(1), [mv](/man/mv)(1)

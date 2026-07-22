@@ -72,6 +72,18 @@ Requires CUPS. Output format varies. Legacy BSD interface.
 
 lpq originated in **BSD Unix** for viewing print queues, now implemented by CUPS.
 
+# INSTALL
+
+```apt: sudo apt install lpr```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lp](/man/lp)(1), [lpr](/man/lpr)(1), [lprm](/man/lprm)(1), [lpstat](/man/lpstat)(1), [cancel](/man/cancel)(1)

@@ -67,6 +67,22 @@ Usually managed by systemd; manual invocation rarely needed. Requires root privi
 
 **bluetoothd** is part of **BlueZ**, the official Linux Bluetooth protocol stack maintained since the early **2000s**. It replaced the older per-profile daemons of BlueZ 4 with a single plugin-based daemon in BlueZ 5 (**2012**), exposing its functionality over D-Bus.
 
+# INSTALL
+
+```apt: sudo apt install bluez```
+
+```dnf: sudo dnf install bluez```
+
+```pacman: sudo pacman -S bluez```
+
+```zypper: sudo zypper install bluez```
+
+```brew: brew install bluez```
+
+```nix: nix profile install nixpkgs#bluez```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bluetoothctl](/man/bluetoothctl)(1), [hciconfig](/man/hciconfig)(1), [hcitool](/man/hcitool)(1)

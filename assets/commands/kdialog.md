@@ -96,6 +96,20 @@ kdialog requires a running KDE/Qt environment. Exit codes vary by dialog type; c
 
 **kdialog** is part of the KDE base applications, providing script access to KDE's native dialog system. It is the KDE equivalent of zenity for GTK environments.
 
+# INSTALL
+
+```apt: sudo apt install kdialog```
+
+```dnf: sudo dnf install kdialog```
+
+```pacman: sudo pacman -S kdialog```
+
+```apk: sudo apk add kdialog```
+
+```zypper: sudo zypper install kdialog```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zenity](/man/zenity)(1), [dialog](/man/dialog)(1), [whiptail](/man/whiptail)(1)

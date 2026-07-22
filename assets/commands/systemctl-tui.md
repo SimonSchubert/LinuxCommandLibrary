@@ -35,6 +35,14 @@ Linux only. WSL requires systemd to be enabled. Service management operations (s
 
 **systemctl-tui** was created by **Reilly Wood** (rgwood) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S systemctl-tui```
+
+```nix: nix profile install nixpkgs#systemctl-tui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemd-manager-tui](/man/systemd-manager-tui)(1), [journalctl](/man/journalctl)(1)

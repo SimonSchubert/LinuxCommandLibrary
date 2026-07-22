@@ -89,6 +89,24 @@ Requires root privileges or appropriate capabilities. Uses libpcap filter expres
 
 **tcpflow** was created by **Jeremy Elson** and is designed for forensic analysis and debugging of network applications by reconstructing TCP sessions.
 
+# INSTALL
+
+```apt: sudo apt install tcpflow```
+
+```dnf: sudo dnf install tcpflow```
+
+```pacman: sudo pacman -S tcpflow```
+
+```apk: sudo apk add tcpflow```
+
+```zypper: sudo zypper install tcpflow```
+
+```brew: brew install tcpflow```
+
+```nix: nix profile install nixpkgs#tcpflow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(8), [wireshark](/man/wireshark)(1), [tcpick](/man/tcpick)(8), [nmap](/man/nmap)(1)

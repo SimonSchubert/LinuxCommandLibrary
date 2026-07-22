@@ -39,6 +39,20 @@ opens a resource's configuration in your default editor
 
 **kubectl edit** opens a resource's configuration in your default editor. Changes are applied when you save and exit. The resource is validated before applying. Set EDITOR or KUBE_EDITOR environment variable to change the editor.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-patch](/man/kubectl-patch)(1)

@@ -116,6 +116,14 @@ llama-cli only reads **GGUF** files; older GGML model files must be converted or
 
 **llama.cpp** was created by **Georgi Gerganov** in **March 2023** as a plain C/C++ port of Meta's LLaMA model, aimed at running inference efficiently on consumer hardware without a GPU. The example program that became llama-cli was originally called **main**; it was renamed to **llama-cli** in **2024** when the project standardized its tool names. Development continues under the ggml-org organization with frequent releases.
 
+# INSTALL
+
+```apk: sudo apk add llama.cpp```
+
+```brew: brew install llama.cpp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [llama.cpp](/man/llama.cpp)(1), [llamafile](/man/llamafile)(1), [ollama](/man/ollama)(1), [llm](/man/llm)(1)

@@ -69,6 +69,16 @@ The tool subscribes to the Linux kernel's netlink process connector (requires **
 
 Requires root privileges and a kernel built with the process connector enabled. Linux-only. May impact system performance when tracing heavily.
 
+# INSTALL
+
+```apt: sudo apt install extrace```
+
+```zypper: sudo zypper install extrace```
+
+```nix: nix profile install nixpkgs#extrace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [strace](/man/strace)(1), [ltrace](/man/ltrace)(1), [auditd](/man/auditd)(8)

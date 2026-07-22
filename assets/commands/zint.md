@@ -92,6 +92,22 @@ QR codes and other 2D barcodes have error correction levels that trade capacity 
 
 Not all barcode scanners support all symbologies. Verify compatibility with target readers.
 
+# INSTALL
+
+```apt: sudo apt install zint```
+
+```dnf: sudo dnf install zint```
+
+```pacman: sudo pacman -S zint```
+
+```apk: sudo apk add zint```
+
+```zypper: sudo zypper install zint```
+
+```brew: brew install zint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qrencode](/man/qrencode)(1), [barcode](/man/barcode)(1), [dmtxwrite](/man/dmtxwrite)(1)

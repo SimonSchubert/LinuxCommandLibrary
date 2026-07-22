@@ -65,6 +65,22 @@ Force mode can cause data loss. Firmware setup support depends on UEFI implement
 
 The **reboot** subcommand integrates with systemd's shutdown infrastructure, providing scheduled reboots and firmware setup access that traditional reboot commands lacked.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl-poweroff](/man/systemctl-poweroff)(1), [systemctl-halt](/man/systemctl-halt)(1), [systemctl-soft-reboot](/man/systemctl-soft-reboot)(1), [reboot](/man/reboot)(8), [shutdown](/man/shutdown)(8)

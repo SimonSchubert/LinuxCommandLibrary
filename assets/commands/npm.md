@@ -126,6 +126,16 @@ Requires Node.js. package-lock.json for determinism. Network dependent.
 
 npm was created by **Isaac Schlueter** in 2010 and is the default package manager for Node.js.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [npx](/man/npx)(1), [yarn](/man/yarn)(1), [pnpm](/man/pnpm)(1)

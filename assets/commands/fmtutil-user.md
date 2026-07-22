@@ -78,6 +78,18 @@ Running **fmtutil-user** once causes user-tree formats to **override** system fo
 
 Introduced as an explicit counterpart to **fmtutil-sys** in TeX Live 2017 so bare **fmtutil** would no longer silently default to ambiguous tree selection.
 
+# INSTALL
+
+```dnf: sudo dnf install texlive```
+
+```apk: sudo apk add texlive```
+
+```zypper: sudo zypper install texlive```
+
+```brew: brew install texlive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fmtutil](/man/fmtutil)(1), [fmtutil-sys](/man/fmtutil-sys)(1), [mktexfmt](/man/mktexfmt)(1), [kpsewhich](/man/kpsewhich)(1)

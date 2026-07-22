@@ -76,6 +76,16 @@ SSD trim may bypass overwrite. Journaling filesystems may retain copies. Slow fo
 
 **srm** was developed for secure file deletion. It implements various overwrite methods to prevent data recovery.
 
+# INSTALL
+
+```apt: sudo apt install secure-delete```
+
+```zypper: sudo zypper install srm```
+
+```nix: nix profile install nixpkgs#srm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [shred](/man/shred)(1), [rm](/man/rm)(1), [wipe](/man/wipe)(1)

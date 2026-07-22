@@ -26,6 +26,12 @@ Only works with the Hyprland window manager on Linux. Requires a running Hyprlan
 
 **monitui** was created by **Nathaniel Fargo** and is written in **Rust**.
 
+# INSTALL
+
+```aur: yay -S monitui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hyprctl](/man/hyprctl)(1)

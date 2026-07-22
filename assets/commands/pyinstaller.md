@@ -140,6 +140,16 @@ When PyInstaller is invoked with a spec file, most CLI options have no effect: t
 
 **PyInstaller** began life in 2005 as a fork of Gordon McMillan's **Installer** project, with the goal of producing portable Python executables on Linux, Windows, and macOS from a single codebase. The 2.x and 3.x series consolidated platform support and added the spec-file workflow; **PyInstaller 4** (2020) dropped Python 2; **PyInstaller 5** (2022) reworked bootloader handling; **PyInstaller 6** (2023) introduced the **SOURCE:DEST** syntax for **--add-data** that replaced the older platform-specific separators.
 
+# INSTALL
+
+```apt: sudo apt install pyinstaller```
+
+```apk: sudo apk add py3-pyinstaller```
+
+```brew: brew install pyinstaller```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1)

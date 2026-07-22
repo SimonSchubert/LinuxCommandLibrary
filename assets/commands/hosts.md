@@ -88,6 +88,12 @@ Install via Homebrew (**xwmx/taps**), npm (**hosts.sh**), bpkg, **make install**
 
 Editing the system hosts file usually requires **sudo**. Bad entries can break name resolution; keep backups. On some systems the hosts path differs; the script targets the platform default. Completions are optional when installing the script alone.
 
+# INSTALL
+
+```aur: yay -S hosts```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hostess](/man/hostess)(1), [getent](/man/getent)(1), [dig](/man/dig)(1)

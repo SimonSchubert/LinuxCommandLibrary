@@ -75,6 +75,24 @@ For large files, consider using **less** or **head/tail** instead. Using cat to 
 
 Part of **GNU Coreutils**. Originated in **1971** for first Edition Unix by Ken Thompson at Bell Labs. One of the oldest and most fundamental Unix utilities.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [more](/man/more)(1), [head](/man/head)(1), [tail](/man/tail)(1), [tac](/man/tac)(1)

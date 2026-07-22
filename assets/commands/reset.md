@@ -76,6 +76,22 @@ May not fix all terminal corruption; in some cases closing and reopening the ter
 
 Part of the **ncurses** package, derived from original BSD **tset** command. Essential recovery tool since early Unix for restoring terminals after displaying binary data or when escape sequences corrupt the display state.
 
+# INSTALL
+
+```apt: sudo apt install ncurses-bin```
+
+```dnf: sudo dnf install ncurses```
+
+```pacman: sudo pacman -S ncurses```
+
+```apk: sudo apk add ncurses```
+
+```brew: brew install ncurses```
+
+```nix: nix profile install nixpkgs#ncurses```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tset](/man/tset)(1), [clear](/man/clear)(1), [stty](/man/stty)(1), [tput](/man/tput)(1)

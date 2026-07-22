@@ -154,6 +154,12 @@ PVM is **legacy** software: active development stopped in the mid-2000s and it h
 
 **PVM** was developed starting in **1989** at **Oak Ridge National Laboratory**, the **University of Tennessee**, and **Emory University** by **Al Geist**, **Adam Beguelin**, **Jack Dongarra**, **Robert Manchek**, **Weicheng Jiang**, and **Vaidy Sunderam**. It became the de-facto standard for heterogeneous distributed computing through the 1990s before the MPI standard took over. PVM version 3 is the most widely packaged release.
 
+# INSTALL
+
+```aur: yay -S pvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpirun](/man/mpirun)(1)

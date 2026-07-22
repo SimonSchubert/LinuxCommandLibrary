@@ -52,6 +52,21 @@ System applications cannot be uninstalled without root access or using **adb she
 
 **adb uninstall** has been available since the initial Android SDK release in **2008**, providing a simple way to remove applications during development and testing.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb](/man/adb)(1), [adb-install](/man/adb-install)(1), [adb-shell-pm](/man/adb-shell-pm)(1)

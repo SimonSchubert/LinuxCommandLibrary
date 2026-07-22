@@ -79,6 +79,18 @@ Requires root privileges. The iscsid daemon must be running. CHAP credentials mu
 
 iscsiadm is part of the Open-iSCSI project, which provides the standard iSCSI implementation for Linux. iSCSI was standardized in RFC 3720 in **2004**.
 
+# INSTALL
+
+```apt: sudo apt install open-iscsi```
+
+```pacman: sudo pacman -S open-iscsi```
+
+```apk: sudo apk add open-iscsi```
+
+```zypper: sudo zypper install open-iscsi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsblk](/man/lsblk)(8)

@@ -52,6 +52,20 @@ The default cache location is **$XDG_CACHE_HOME/uv** or **~/.cache/uv** on Linux
 
 Pruning removes only entries not referenced by any project lockfile in the cache metadata. Use `clean` for a full reset if cache corruption is suspected. The cache can grow large in CI environments; use `prune --ci` to minimize disk usage.
 
+# INSTALL
+
+```dnf: sudo dnf install uv```
+
+```pacman: sudo pacman -S uv```
+
+```apk: sudo apk add uv```
+
+```brew: brew install uv```
+
+```nix: nix profile install nixpkgs#uv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uv](/man/uv)(1), [uv-pip](/man/uv-pip)(1), [pip-cache](/man/pip-cache)(1)

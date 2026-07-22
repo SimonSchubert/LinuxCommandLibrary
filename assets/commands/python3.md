@@ -102,6 +102,20 @@ On some systems, **python** may still refer to Python 2; use **python3** explici
 
 Python was created by **Guido van Rossum** and first released in **1991**. Python 3.0 was released on **December 3, 2008**, introducing significant changes that broke backward compatibility with Python 2. The transition period lasted many years, with Python 2.7's end-of-life officially on **January 1, 2020**. Python has grown to become one of the world's most popular programming languages, widely used in web development, data science, artificial intelligence, scripting, and education.
 
+# INSTALL
+
+```apt: sudo apt install python3-minimal```
+
+```dnf: sudo dnf install python3```
+
+```apk: sudo apk add python3```
+
+```brew: brew install python3```
+
+```nix: nix profile install nixpkgs#python3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [ipython](/man/ipython)(1), [virtualenv](/man/virtualenv)(1), [perl](/man/perl)(1), [ruby](/man/ruby)(1)

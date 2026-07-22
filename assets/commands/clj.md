@@ -110,6 +110,22 @@ clj -X:deps mvn-pom    # Generate pom.xml
 
 Requires deps.edn for project configuration. Use `clojure` instead of `clj` in scripts (no rlwrap). JVM options via -J or JAVA_OPTS env var.
 
+# INSTALL
+
+```dnf: sudo dnf install clojure```
+
+```pacman: sudo pacman -S clojure```
+
+```apk: sudo apk add clojure```
+
+```zypper: sudo zypper install clojure```
+
+```brew: brew install clojure```
+
+```nix: nix profile install nixpkgs#clojure```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lein](/man/lein)(1), [java](/man/java)(1), [clojure](/man/clojure)(1)

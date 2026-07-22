@@ -117,6 +117,24 @@ The `dev` command points a library at a local working copy, which is the standar
 
 The default repository is shared system-wide; use `haxelib newrepo` for project-local installs. Library names are case-sensitive on case-sensitive filesystems.
 
+# INSTALL
+
+```apt: sudo apt install haxe```
+
+```dnf: sudo dnf install haxe```
+
+```pacman: sudo pacman -S haxe```
+
+```apk: sudo apk add haxe```
+
+```zypper: sudo zypper install haxe```
+
+```brew: brew install haxe```
+
+```nix: nix profile install nixpkgs#haxe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1)

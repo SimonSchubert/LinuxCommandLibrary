@@ -40,6 +40,24 @@ Both images must have the same dimensions and depth. Part of the Netpbm toolkit.
 
 Images must have the same dimensions. Only supports PNM/PAM formats; convert other formats first using Netpbm tools. PSNR is not always a reliable indicator of perceptual quality.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmarith](/man/pnmarith)(1), [pamarith](/man/pamarith)(1), [pamfile](/man/pamfile)(1), [pnmcat](/man/pnmcat)(1)

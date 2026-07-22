@@ -52,6 +52,12 @@ manages Kaggle notebooks from the command line
 
 **kaggle kernels** manages Kaggle notebooks (kernels) from the command line. Part of the Kaggle CLI, it allows pushing, pulling, and monitoring computational notebooks used for data science projects.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kaggle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kaggle](/man/kaggle)(1), [kaggle-datasets](/man/kaggle-datasets)(1)

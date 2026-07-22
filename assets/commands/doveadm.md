@@ -86,6 +86,24 @@ Requires proper Dovecot configuration. Some commands need root or dovecot user. 
 
 **doveadm** was introduced in **Dovecot 2.0** around **2010**, replacing older administrative scripts. **Dovecot** itself was created by **Timo Sirainen** in **2002** as a secure, high-performance IMAP server. Doveadm unified various administrative tasks into a single, consistent interface.
 
+# INSTALL
+
+```apt: sudo apt install dovecot-core```
+
+```dnf: sudo dnf install dovecot```
+
+```pacman: sudo pacman -S dovecot```
+
+```apk: sudo apk add dovecot```
+
+```zypper: sudo zypper install dovecot```
+
+```brew: brew install dovecot```
+
+```nix: nix profile install nixpkgs#dovecot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dovecot](/man/dovecot)(1), [postfix](/man/postfix)(1), [mutt](/man/mutt)(1)

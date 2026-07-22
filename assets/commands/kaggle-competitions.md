@@ -64,6 +64,12 @@ manages Kaggle machine learning competitions from the command line
 
 **kaggle competitions** manages Kaggle machine learning competitions from the command line. Part of the Kaggle CLI, it allows downloading datasets, submitting predictions, and checking leaderboard standings without using the web interface.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kaggle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kaggle](/man/kaggle)(1), [kaggle-datasets](/man/kaggle-datasets)(1), [kaggle-kernels](/man/kaggle-kernels)(1)

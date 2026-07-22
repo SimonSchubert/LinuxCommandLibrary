@@ -101,6 +101,12 @@ Incorrect hook configuration can render a system unbootable. Always keep a worki
 
 **mkinitcpio** was created by the **Arch Linux** development team as a replacement for older initramfs generation tools. It uses a modular hook-based architecture and has been the standard initramfs generator for Arch Linux and derivatives since 2006.
 
+# INSTALL
+
+```pacman: sudo pacman -S mkinitcpio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dracut](/man/dracut)(8), [mkinitramfs](/man/mkinitramfs)(8)

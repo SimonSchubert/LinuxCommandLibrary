@@ -52,6 +52,12 @@ OpenWrt specific. Requires running ubusd daemon. Available methods depend on ins
 
 **ubus** was developed as part of **OpenWrt's** system architecture to provide a unified IPC mechanism for the lightweight Linux distribution used on routers and embedded devices.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#ubus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uci](/man/uci)(1), [opkg](/man/opkg)(1)

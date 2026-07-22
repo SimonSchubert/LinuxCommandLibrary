@@ -47,6 +47,14 @@ For each character it prints the Unicode codepoint, encoding representations (he
 
 It is written in Rust and useful for developers working with Unicode text or debugging encoding issues.
 
+# INSTALL
+
+```brew: brew install chars```
+
+```nix: nix profile install nixpkgs#chars```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chardet](/man/chardet)(1), [iconv](/man/iconv)(1), [hexdump](/man/hexdump)(1)

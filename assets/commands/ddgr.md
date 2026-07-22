@@ -134,6 +134,20 @@ Requires Python 3. Results depend on DuckDuckGo's HTML interface which may chang
 
 ddgr was created by Arun Prakash Jana as a privacy-focused alternative to googler (a similar tool for Google search). The project emphasizes user privacy by leveraging DuckDuckGo's no-tracking policy and support for the Tor network.
 
+# INSTALL
+
+```dnf: sudo dnf install ddgr```
+
+```pacman: sudo pacman -S ddgr```
+
+```zypper: sudo zypper install ddgr```
+
+```brew: brew install ddgr```
+
+```nix: nix profile install nixpkgs#ddgr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [googler](/man/googler)(1), [surfraw](/man/surfraw)(1), [w3m](/man/w3m)(1), [lynx](/man/lynx)(1)

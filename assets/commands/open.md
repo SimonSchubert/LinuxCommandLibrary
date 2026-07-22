@@ -69,6 +69,20 @@ macOS specific. Use xdg-open on Linux. Application names case-sensitive.
 
 open has been part of **macOS** for launching files with associated applications.
 
+# INSTALL
+
+```dnf: sudo dnf install kbd```
+
+```pacman: sudo pacman -S kbd```
+
+```apk: sudo apk add kbd```
+
+```zypper: sudo zypper install kbd```
+
+```nix: nix profile install nixpkgs#kbd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdg-open](/man/xdg-open)(1)

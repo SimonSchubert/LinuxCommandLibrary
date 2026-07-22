@@ -36,6 +36,24 @@ This command is primarily used in initramfs to transition from the initial RAM f
 
 The new root must be the root of a mount; the command will fail otherwise. Use bind-mounting as a workaround if needed. Must be run as root. Should only be used during early boot from initramfs. Part of the util-linux package.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chroot](/man/chroot)(1), [pivot_root](/man/pivot_root)(8), [mount](/man/mount)(8), [init](/man/init)(8)

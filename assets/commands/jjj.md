@@ -47,6 +47,12 @@ Minimal feature set by design. Does not support file operations like copy, move,
 
 **jjj** was created by **Simone Poggiali** (gibbok) and is written in **C** using the ncurses library.
 
+# INSTALL
+
+```aur: yay -S jjj```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [lf](/man/lf)(1), [ranger](/man/ranger)(1), [nnn](/man/nnn)(1), [vifm](/man/vifm)(1)

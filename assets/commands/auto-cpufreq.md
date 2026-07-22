@@ -95,6 +95,13 @@ Using --install creates a systemd service for automatic operation. The --live an
 
 **auto-cpufreq** was created to provide automatic CPU frequency optimization without manual tuning, particularly useful for laptops to extend battery life while maintaining performance when needed.
 
+# INSTALL
+
+```aur: yay -S auto-cpufreq```
+
+```nix: nix profile install nixpkgs#auto-cpufreq```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [cpupower](/man/cpupower)(1), [cpufreq-info](/man/cpufreq-info)(1), [tlp](/man/tlp)(8)

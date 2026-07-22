@@ -30,6 +30,12 @@ Specific to SteamOS/Steam Deck. The target file must be executable. Proton/Wine 
 
 **steamos-add-to-steam** is a utility developed by **Valve** for SteamOS 3.0, which powers the **Steam Deck** handheld gaming device released in **February 2022**. The command simplifies the process of adding non-Steam content to the library, previously requiring manual shortcut creation.
 
+# INSTALL
+
+```aur: yay -S steamos-add-to-steam```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [steam](/man/steam)(1), [steamos-devmode](/man/steamos-devmode)(1), [steamos-readonly](/man/steamos-readonly)(1), [steamos-session-select](/man/steamos-session-select)(1), [steamos-update](/man/steamos-update)(1), [flatpak](/man/flatpak)(1)

@@ -117,6 +117,20 @@ The tool is commonly used to extract authorization records from one machine and 
 
 Authority files contain sensitive credentials and should have restrictive permissions (readable only by the owner). X11 forwarding with SSH requires proper xauth setup. The program does not contact the X server except when the `generate` command is used.
 
+# INSTALL
+
+```apt: sudo apt install xauth```
+
+```apk: sudo apk add xauth```
+
+```zypper: sudo zypper install xauth```
+
+```brew: brew install xauth```
+
+```nix: nix profile install nixpkgs#xauth```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xhost](/man/xhost)(1), [ssh](/man/ssh)(1), [xdpyinfo](/man/xdpyinfo)(1)

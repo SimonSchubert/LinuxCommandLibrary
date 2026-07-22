@@ -52,6 +52,14 @@ Before installing or updating packages, synchronize the repository index with **
 
 Requires root privileges for system-wide installation. Repository sync (**-S**) should be run before updates. Part of the XBPS package management system for Void Linux.
 
+# INSTALL
+
+```apk: sudo apk add xbps```
+
+```nix: nix profile install nixpkgs#xbps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xbps-query](/man/xbps-query)(1), [xbps-remove](/man/xbps-remove)(1), [xbps-reconfigure](/man/xbps-reconfigure)(1)

@@ -108,6 +108,14 @@ Implemented as a Bash script — works on macOS and Linux but Windows requires W
 
 **nb** was created by **xwmx** as a single-file Bash CLI for note-taking with a strong emphasis on plain text and git-backed sync.
 
+# INSTALL
+
+```brew: brew install nb```
+
+```nix: nix profile install nixpkgs#nb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jrnl](/man/jrnl)(1), [notes](/man/notes)(1), [taskwarrior](/man/taskwarrior)(1), [git](/man/git)(1)

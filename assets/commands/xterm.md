@@ -86,6 +86,24 @@ Requires X11 display. Default appearance is deliberately minimal; extensive cust
 
 Originally written by Mark Vandevoorde at MIT as part of **Project Athena** in the mid-1980s, becoming part of the X Window System distribution. One of the oldest continuously maintained X applications. Thomas Dickey has been the primary maintainer since **1996**.
 
+# INSTALL
+
+```apt: sudo apt install xterm```
+
+```dnf: sudo dnf install xterm```
+
+```pacman: sudo pacman -S xterm```
+
+```apk: sudo apk add xterm```
+
+```zypper: sudo zypper install xterm```
+
+```brew: brew install xterm```
+
+```nix: nix profile install nixpkgs#xterm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uxterm](/man/uxterm)(1), [konsole](/man/konsole)(1), [gnome-terminal](/man/gnome-terminal)(1)

@@ -110,6 +110,22 @@ X11 only. Does not work on Wayland. Part of the x11-utils package (or xorg-xwini
 
 **xwininfo** is a standard X11 utility for displaying information about windows.
 
+# INSTALL
+
+```apt: sudo apt install x11-utils```
+
+```dnf: sudo dnf install xwininfo```
+
+```apk: sudo apk add xwininfo```
+
+```zypper: sudo zypper install xwininfo```
+
+```brew: brew install xwininfo```
+
+```nix: nix profile install nixpkgs#xwininfo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xprop](/man/xprop)(1), [xdotool](/man/xdotool)(1), [xlsclients](/man/xlsclients)(1), [xdpyinfo](/man/xdpyinfo)(1), [xkill](/man/xkill)(1), [wmctrl](/man/wmctrl)(1)

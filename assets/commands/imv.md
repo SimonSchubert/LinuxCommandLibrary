@@ -65,6 +65,24 @@ Requires appropriate backend libraries for format support. Some formats like PSD
 
 imv was created to provide a fast, minimal image viewer suitable for tiling window manager workflows. It supports both X11 and Wayland, making it versatile across different Linux desktop environments.
 
+# INSTALL
+
+```apt: sudo apt install renameutils```
+
+```dnf: sudo dnf install renameutils```
+
+```pacman: sudo pacman -S renameutils```
+
+```apk: sudo apk add imv```
+
+```zypper: sudo zypper install renameutils```
+
+```brew: brew install renameutils```
+
+```nix: nix profile install nixpkgs#renameutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [feh](/man/feh)(1), [sxiv](/man/sxiv)(1), [mpv](/man/mpv)(1)

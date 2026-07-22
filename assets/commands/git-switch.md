@@ -72,6 +72,24 @@ Use `-c` to create a new branch and switch to it in one step, or `--detach` to m
 
 Was marked experimental for several releases after its introduction; behavior has since stabilized, but check `git switch --help` on older Git installs for differences.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-branch](/man/git-branch)(1)

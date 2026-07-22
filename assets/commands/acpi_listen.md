@@ -31,6 +31,21 @@ Requires the **acpid** daemon to be running. Events will not be received if acpi
 
 Part of the **acpid** (ACPI daemon) package, which provides a framework for handling ACPI events on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install acpid```
+
+```dnf: sudo dnf install acpid```
+
+```pacman: sudo pacman -S acpid```
+
+```apk: sudo apk add acpid```
+
+```zypper: sudo zypper install acpid```
+
+```nix: nix profile install nixpkgs#acpid```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [acpi](/man/acpi)(1), [acpid](/man/acpid)(8), [acpi_available](/man/acpi_available)(1)

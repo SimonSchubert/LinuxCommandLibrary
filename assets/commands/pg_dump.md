@@ -106,6 +106,12 @@ Does not dump roles and tablespaces (use pg_dumpall). Plain format cannot be res
 
 **pg_dump** has been part of PostgreSQL since its earliest releases, evolving from the original **POSTGRES** project at **UC Berkeley** in the **1980s**. It has gained features like parallel dump, custom archive format, and selective backup options as PostgreSQL evolved into a major database system.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_restore](/man/pg_restore)(1), [pg_dumpall](/man/pg_dumpall)(1), [psql](/man/psql)(1), [createdb](/man/createdb)(1)

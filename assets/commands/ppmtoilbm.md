@@ -31,6 +31,24 @@ Convert PPM to Amiga IFF ILBM format
 
 **ppmtoilbm** converts PPM images to IFF ILBM (Interleaved Bitmap) format used by Amiga computers. Supports HAM (Hold-And-Modify) modes. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ilbmtoppm](/man/ilbmtoppm)(1), [ppmtoneo](/man/ppmtoneo)(1)

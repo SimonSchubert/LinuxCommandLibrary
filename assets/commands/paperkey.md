@@ -51,6 +51,22 @@ Requires public key for restore. Print and store securely.
 
 paperkey was created for **paper-based GPG key** backup and recovery.
 
+# INSTALL
+
+```apt: sudo apt install paperkey```
+
+```dnf: sudo dnf install paperkey```
+
+```pacman: sudo pacman -S paperkey```
+
+```zypper: sudo zypper install paperkey```
+
+```brew: brew install paperkey```
+
+```nix: nix profile install nixpkgs#paperkey```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [gpg2](/man/gpg2)(1)

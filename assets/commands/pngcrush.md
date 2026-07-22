@@ -82,6 +82,24 @@ All optimization is lossless; image data is preserved exactly. The **-brute** op
 
 **pngcrush** was created by Glenn Randers-Pehrson and has been one of the oldest and most widely used PNG optimization tools, first released in 1998.
 
+# INSTALL
+
+```apt: sudo apt install pngcrush```
+
+```dnf: sudo dnf install pngcrush```
+
+```pacman: sudo pacman -S pngcrush```
+
+```apk: sudo apk add pngcrush```
+
+```zypper: sudo zypper install pngcrush```
+
+```brew: brew install pngcrush```
+
+```nix: nix profile install nixpkgs#pngcrush```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [optipng](/man/optipng)(1), [pngcheck](/man/pngcheck)(1), [pngquant](/man/pngquant)(1), [zopflipng](/man/zopflipng)(1), [convert](/man/convert)(1)

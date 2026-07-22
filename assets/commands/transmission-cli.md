@@ -89,6 +89,20 @@ transmission-cli handles only one torrent at a time and is not designed for cont
 
 **Transmission** was originally created by **Eric Petit** and **Josh Elsasser** in **2005** for macOS, with Linux support following shortly after. The command-line interface was added to provide headless operation capabilities. Transmission became known for its lightweight design and cross-platform support, becoming one of the default BitTorrent clients on many Linux distributions.
 
+# INSTALL
+
+```apt: sudo apt install transmission-cli```
+
+```dnf: sudo dnf install transmission-cli```
+
+```pacman: sudo pacman -S transmission-cli```
+
+```apk: sudo apk add transmission-cli```
+
+```brew: brew install transmission-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [transmission-daemon](/man/transmission-daemon)(1), [transmission-remote](/man/transmission-remote)(1)

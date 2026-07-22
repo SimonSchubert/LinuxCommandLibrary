@@ -75,6 +75,14 @@ Part of git-extras package. Requires network access. Templates may need customiz
 
 git ignore-io is part of **git-extras**, providing command-line access to **gitignore.io**, the web service for generating gitignore files.
 
+# INSTALL
+
+```brew: brew install git-ignore```
+
+```nix: nix profile install nixpkgs#git-ignore```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-ignore](/man/git-ignore)(1), [gibo](/man/gibo)(1), [git-extras](/man/git-extras)(1)

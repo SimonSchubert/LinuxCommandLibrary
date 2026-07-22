@@ -79,6 +79,12 @@ Use **pip config list** to see all active settings and their sources, or **pip c
 **PIP_CONFIG_FILE**
 > Environment variable to override the default config file location.
 
+# INSTALL
+
+```apk: sudo apk add py3-pip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1)

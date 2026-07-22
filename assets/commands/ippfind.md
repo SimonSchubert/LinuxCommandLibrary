@@ -75,6 +75,18 @@ Requires mDNS/DNS-SD support on the network (typically provided by Avahi on Linu
 
 Part of **CUPS** and the IPP tooling suite developed by Michael Sweet. Created to support the IPP Everywhere initiative for driverless printing, leveraging DNS-SD for automatic printer discovery as standardized by the PWG.
 
+# INSTALL
+
+```apt: sudo apt install cups-ipp-utils```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ipptool](/man/ipptool)(1), [ippeveprinter](/man/ippeveprinter)(1), [lpstat](/man/lpstat)(1), [avahi-browse](/man/avahi-browse)(1)

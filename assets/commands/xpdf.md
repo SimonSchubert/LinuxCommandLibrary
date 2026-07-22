@@ -120,6 +120,22 @@ Fewer features than Evince or Okular. Some modern PDF features may not render. X
 
 **xpdf** was created by **Derek Noonburg** starting in **1995**. It was one of the first open-source PDF viewers and spawned the Poppler library used by many modern viewers.
 
+# INSTALL
+
+```apt: sudo apt install xpdf```
+
+```dnf: sudo dnf install xpdf```
+
+```pacman: sudo pacman -S xpdf```
+
+```apk: sudo apk add xpdf```
+
+```brew: brew install xpdf```
+
+```nix: nix profile install nixpkgs#xpdf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [evince](/man/evince)(1), [okular](/man/okular)(1), [mupdf](/man/mupdf)(1), [zathura](/man/zathura)(1)

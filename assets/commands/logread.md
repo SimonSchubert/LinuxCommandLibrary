@@ -60,6 +60,12 @@ Print log and **follow** new messages
 
 Specific to OpenWrt and BusyBox-based systems. Ring buffer has limited size; older messages are overwritten.
 
+# INSTALL
+
+```apk: sudo apk add logbookd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmesg](/man/dmesg)(1), [journalctl](/man/journalctl)(1), [logger](/man/logger)(1)

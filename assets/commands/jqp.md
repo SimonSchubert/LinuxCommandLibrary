@@ -62,6 +62,16 @@ Large JSON files may impact the responsiveness of live preview updates. Input mu
 
 **jqp** was created by **Noah Gorstein** and is written in **Go**. It was designed as a terminal-native alternative to web-based jq playgrounds.
 
+# INSTALL
+
+```apt: sudo apt install jqp```
+
+```brew: brew install jqp```
+
+```nix: nix profile install nixpkgs#jqp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [jnv](/man/jnv)(1), [fx](/man/fx)(1)

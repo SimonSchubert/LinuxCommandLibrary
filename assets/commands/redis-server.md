@@ -107,6 +107,14 @@ With default settings, Redis may lose up to 1 second of writes on crash (RDB mod
 
 Redis was created by **Salvatore Sanfilippo** (antirez) in **2009**. Originally standing for "Remote Dictionary Server," it quickly gained popularity as a high-performance caching and data structure server. Redis became part of Redis Ltd. (formerly Redis Labs) while remaining open source under BSD license.
 
+# INSTALL
+
+```apt: sudo apt install redis-server```
+
+```apk: sudo apk add valkey-compat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [redis-cli](/man/redis-cli)(1), [redis-benchmark](/man/redis-benchmark)(1), [redis-sentinel](/man/redis-sentinel)(1), [memcached](/man/memcached)(1)

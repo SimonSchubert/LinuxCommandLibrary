@@ -47,6 +47,22 @@ Keys are stored in the RPM database and used automatically during package instal
 
 Requires root privileges for importing or deleting keys. The Key ID format is a 16-character hexadecimal string. Deleting repository keys will cause signature verification failures for packages from that repository.
 
+# INSTALL
+
+```apt: sudo apt install rpm```
+
+```dnf: sudo dnf install rpm```
+
+```apk: sudo apk add rpm```
+
+```zypper: sudo zypper install rpm```
+
+```brew: brew install rpm```
+
+```nix: nix profile install nixpkgs#rpm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rpm](/man/rpm)(8), [rpm2cpio](/man/rpm2cpio)(8), [gpg](/man/gpg)(1)

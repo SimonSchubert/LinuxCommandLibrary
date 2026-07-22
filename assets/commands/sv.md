@@ -110,6 +110,18 @@ Exit codes vary: 0 for success, 1 for timeout, 100 for errors. When used as an i
 
 **sv** is part of **runit**, created by **Gerrit Pape** around **2004** as a Unix init scheme with service supervision. Runit was designed as a replacement for sysvinit and is used as the default init system in **Void Linux** and available on many other distributions as an alternative to systemd.
 
+# INSTALL
+
+```apt: sudo apt install runit```
+
+```apk: sudo apk add runit```
+
+```brew: brew install runit```
+
+```nix: nix profile install nixpkgs#runit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [runsv](/man/runsv)(8), [runsvdir](/man/runsvdir)(8), [svlogd](/man/svlogd)(8), [chpst](/man/chpst)(8), [systemctl](/man/systemctl)(1)

@@ -100,6 +100,24 @@ Included with Rust toolchain. Install/update via:
 
 Some lints are opinionated. Use lint configuration to customize for your project. The --fix option modifies files in place.
 
+# INSTALL
+
+```apt: sudo apt install rustup```
+
+```dnf: sudo dnf install rustup```
+
+```pacman: sudo pacman -S rustup```
+
+```apk: sudo apk add rust-clippy```
+
+```zypper: sudo zypper install rustup```
+
+```brew: brew install rustup```
+
+```nix: nix profile install nixpkgs#rustup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-check](/man/cargo-check)(1), [rustfmt](/man/rustfmt)(1)

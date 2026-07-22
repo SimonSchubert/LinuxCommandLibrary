@@ -104,6 +104,14 @@ Carton requires a cpanfile; it cannot automatically detect dependencies. Large d
 
 Carton was created by **Tatsuhiko Miyagawa** (also creator of Plack/PSGI and cpanm) and released in **2011**. It was inspired by Bundler for Ruby and addressed the long-standing problem of managing Perl dependencies per-project rather than system-wide. The tool became an essential part of modern Perl development workflows.
 
+# INSTALL
+
+```apk: sudo apk add perl-carton```
+
+```brew: brew install carton```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cpanm](/man/cpanm)(1), [cpan](/man/cpan)(1)

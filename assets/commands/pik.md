@@ -24,6 +24,16 @@ Interactive TUI for finding and killing processes
 
 **pik** was created by **Jacek Kurlit** (jacek-kurlit) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S pik```
+
+```zypper: sudo zypper install pik```
+
+```nix: nix profile install nixpkgs#pik```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pkill](/man/pkill)(1), [kill](/man/kill)(1), [htop](/man/htop)(1), [procs](/man/procs)(1)

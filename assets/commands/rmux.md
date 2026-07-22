@@ -89,6 +89,14 @@ While the command surface aims for tmux parity, edge-case behaviors and configur
 
 **rmux** is developed by **Helvesec** (**github.com/helvesec/rmux**), with v0.2.0 released **18 May 2026**. It is distributed as cross-platform binaries via a shell script (macOS/Linux), a PowerShell installer (Windows), and as a Cargo crate, and ships alongside a typed Rust SDK.
 
+# INSTALL
+
+```brew: brew install rmux```
+
+```nix: nix profile install nixpkgs#rmux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [screen](/man/screen)(1), [zellij](/man/zellij)(1), [abduco](/man/abduco)(1)

@@ -76,6 +76,12 @@ streams WAL from server to archive
 
 **pg_receivewal** streams WAL from server to archive. Creates continuous WAL archive for point-in-time recovery. Alternative to archive_command for WAL archiving.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_basebackup](/man/pg_basebackup)(1), [pg_archivecleanup](/man/pg_archivecleanup)(1), [pg_recvlogical](/man/pg_recvlogical)(1)

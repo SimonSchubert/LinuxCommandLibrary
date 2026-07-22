@@ -150,6 +150,12 @@ Must be run from the Laravel project root directory where the **artisan** file e
 
 Artisan was introduced with **Laravel 3** in **2012** by Taylor Otwell, inspired by Symfony Console. It has grown with each Laravel release, adding new generators and utilities. The name references Laravel's positioning as "the framework for web artisans." Laravel Tinker, powered by PsySH, was added to provide interactive debugging capabilities.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#artisan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [composer](/man/composer)(1), [php](/man/php)(1), [symfony](/man/symfony)(1)

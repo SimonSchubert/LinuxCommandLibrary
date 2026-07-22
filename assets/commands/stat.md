@@ -103,6 +103,24 @@ Output format differs between GNU stat (Linux) and BSD stat (macOS). Some filesy
 
 **stat** has different origins on different systems. The GNU version (part of **coreutils**) was written by **Michael Meskes** in **2001**. BSD systems have their own implementation with slightly different syntax. The command provides a standard interface to the stat() system call.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [file](/man/file)(1), [touch](/man/touch)(1), [chmod](/man/chmod)(1)

@@ -103,6 +103,12 @@ Requires **CREATEDB** privilege or superuser role. The default template is templ
 
 **createdb** has been part of the PostgreSQL distribution since its early versions, providing a simple command-line interface to the **CREATE DATABASE** SQL command.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dropdb](/man/dropdb)(1), [psql](/man/psql)(1), [pg_dump](/man/pg_dump)(1)

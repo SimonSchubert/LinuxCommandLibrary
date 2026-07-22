@@ -96,6 +96,20 @@ Some system information may not be available on all platforms or configurations.
 
 **screenfetch** was created by **KittyKatt** (Brett Bohnenkamper) and first released in **2010**. It was one of the first popular system information tools designed for Unix customization screenshots. The project gained significant popularity in the Linux community before the emergence of **neofetch** in 2015, which offered more features and customization options. Screenfetch remains available and functional, though it receives less active development than its successors.
 
+# INSTALL
+
+```dnf: sudo dnf install screenfetch```
+
+```pacman: sudo pacman -S screenfetch```
+
+```zypper: sudo zypper install screenfetch```
+
+```brew: brew install screenfetch```
+
+```nix: nix profile install nixpkgs#screenfetch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neofetch](/man/neofetch)(1), [fastfetch](/man/fastfetch)(1), [inxi](/man/inxi)(1), [lshw](/man/lshw)(1), [hwinfo](/man/hwinfo)(1)

@@ -73,6 +73,24 @@ Requires raw or forensic disk images. Deleted file recovery depends on filesyste
 
 fls is part of **The Sleuth Kit** created by Brian Carrier. It evolved from earlier forensic tools and provides cross-platform filesystem analysis for digital investigations.
 
+# INSTALL
+
+```apt: sudo apt install sleuthkit```
+
+```dnf: sudo dnf install sleuthkit```
+
+```pacman: sudo pacman -S sleuthkit```
+
+```apk: sudo apk add sleuthkit```
+
+```zypper: sudo zypper install sleuthkit```
+
+```brew: brew install sleuthkit```
+
+```nix: nix profile install nixpkgs#sleuthkit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ils](/man/ils)(1), [mmls](/man/mmls)(1)

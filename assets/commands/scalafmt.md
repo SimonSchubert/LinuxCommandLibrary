@@ -81,6 +81,12 @@ May change code structure subtly. Configuration options are many. Editor integra
 
 **scalafmt** was created by **Olafur Pall Geirsson** for Scala formatting. It's widely used in the Scala ecosystem for code style enforcement.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#scalafmt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scala](/man/scala)(1), [sbt](/man/sbt)(1), [metals](/man/metals)(1)

@@ -89,6 +89,20 @@ Requires CVS or Git for version control. Device credentials in .cloginrc. Usuall
 
 RANCID was developed by **Shrubbery Networks** for automating network device configuration backup and change tracking.
 
+# INSTALL
+
+```apt: sudo apt install rancid```
+
+```dnf: sudo dnf install rancid```
+
+```apk: sudo apk add rancid```
+
+```brew: brew install rancid```
+
+```nix: nix profile install nixpkgs#rancid```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clogin](/man/clogin)(1), [rancid-cvs](/man/rancid-cvs)(1)

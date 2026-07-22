@@ -83,6 +83,12 @@ Connection string required. Database drivers needed. Rust-based tool.
 
 **rsql** is a command-line SQL client written in Rust, providing a unified interface for multiple database types.
 
+# INSTALL
+
+```brew: brew install rsql```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [psql](/man/psql)(1), [mysql](/man/mysql)(1), [sqlite3](/man/sqlite3)(1)

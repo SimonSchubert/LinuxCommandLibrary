@@ -72,6 +72,14 @@ Generate Terraform config from existing cloud infrastructure
 
 **Deprecated / archived upstream**—no security fixes. Generated code often needs manual cleanup before **terraform apply**. Provider credentials and Terraform provider plugins must be configured. Cloudflare and some other providers have known breakage.
 
+# INSTALL
+
+```brew: brew install terraformer```
+
+```nix: nix profile install nixpkgs#terraformer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [pulumi](/man/pulumi)(1)

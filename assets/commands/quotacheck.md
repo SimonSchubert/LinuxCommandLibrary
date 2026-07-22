@@ -69,6 +69,22 @@ Best run with quotas turned off. Force flag can cause data loss. May take long t
 
 **quotacheck** is part of the Linux disk quota system, derived from BSD Unix quotas. It's essential for initializing and maintaining disk quota enforcement.
 
+# INSTALL
+
+```apt: sudo apt install quota```
+
+```dnf: sudo dnf install quota```
+
+```pacman: sudo pacman -S quota-tools```
+
+```apk: sudo apk add quota-tools```
+
+```zypper: sudo zypper install quota```
+
+```nix: nix profile install nixpkgs#quota```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [quota](/man/quota)(1), [quotaon](/man/quotaon)(8), [edquota](/man/edquota)(8), [repquota](/man/repquota)(8)

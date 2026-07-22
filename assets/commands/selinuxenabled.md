@@ -34,6 +34,16 @@ Only checks if SELinux is enabled, not whether it's in enforcing or permissive m
 
 Part of **libselinux-utils**, providing SELinux status checking utilities.
 
+# INSTALL
+
+```apt: sudo apt install selinux-utils```
+
+```dnf: sudo dnf install libselinux-utils```
+
+```apk: sudo apk add libselinux-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [getenforce](/man/getenforce)(1), [setenforce](/man/setenforce)(8), [sestatus](/man/sestatus)(8)

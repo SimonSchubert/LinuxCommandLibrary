@@ -93,6 +93,24 @@ Config file required. Deleting on one side propagates. IMAP quota limits apply. 
 
 mbsync was developed by **Oswald Buddenhagen** as part of isync, a free IMAP4 sync implementation, providing reliable bidirectional synchronization.
 
+# INSTALL
+
+```apt: sudo apt install isync```
+
+```dnf: sudo dnf install isync```
+
+```pacman: sudo pacman -S isync```
+
+```apk: sudo apk add isync```
+
+```zypper: sudo zypper install isync```
+
+```brew: brew install isync```
+
+```nix: nix profile install nixpkgs#isync```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [offlineimap](/man/offlineimap)(1), [mu](/man/mu)(1), [notmuch](/man/notmuch)(1), [mutt](/man/mutt)(1)

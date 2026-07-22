@@ -67,6 +67,22 @@ PPK format not universal. Passphrase protection recommended. Key type support va
 
 fzputtygen is adapted from **PuTTYgen** for use with FileZilla. It provides key generation and format conversion supporting FileZilla's SFTP functionality.
 
+# INSTALL
+
+```apt: sudo apt install filezilla```
+
+```dnf: sudo dnf install filezilla```
+
+```pacman: sudo pacman -S filezilla```
+
+```apk: sudo apk add filezilla```
+
+```zypper: sudo zypper install filezilla```
+
+```nix: nix profile install nixpkgs#filezilla```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh-keygen](/man/ssh-keygen)(1), [filezilla](/man/filezilla)(1)

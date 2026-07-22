@@ -30,6 +30,16 @@ Requires SSH access to target hosts. Remote hosts must have bash and awk availab
 
 **nerdlog** was created by **dimonomid** and is written in **Go** using the tview library. It supports Linux, FreeBSD, macOS, and Windows (client only).
 
+# INSTALL
+
+```apk: sudo apk add nerdlog```
+
+```brew: brew install nerdlog```
+
+```nix: nix profile install nixpkgs#nerdlog```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [journalctl](/man/journalctl)(1), [lnav](/man/lnav)(1), [lazyjournal](/man/lazyjournal)(1)

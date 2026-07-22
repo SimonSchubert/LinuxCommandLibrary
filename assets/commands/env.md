@@ -138,6 +138,24 @@ Variables set with env don't persist after command exits. Shell built-ins (like 
 
 **env** has been part of Unix since the early days, included in POSIX standards for environment manipulation.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils-env```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [export](/man/export)(1), [printenv](/man/printenv)(1), [set](/man/set)(1)

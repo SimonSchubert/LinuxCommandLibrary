@@ -95,6 +95,22 @@ Large files may be slow. Complex formatting lost. Line structure ignored.
 
 **wdiff** was created as part of GNU and is maintained as a standalone GNU package. It provides word-level differences suited for prose and natural language text where line-based diff output is hard to read.
 
+# INSTALL
+
+```apt: sudo apt install wdiff```
+
+```dnf: sudo dnf install wdiff```
+
+```pacman: sudo pacman -S wdiff```
+
+```zypper: sudo zypper install wdiff```
+
+```brew: brew install wdiff```
+
+```nix: nix profile install nixpkgs#wdiff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [colordiff](/man/colordiff)(1), [dwdiff](/man/dwdiff)(1)

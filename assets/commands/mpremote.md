@@ -77,6 +77,16 @@ Requires MicroPython device. Serial connection needed. Python 3 required.
 
 mpremote was developed by the **MicroPython** project as the official device management tool.
 
+# INSTALL
+
+```zypper: sudo zypper install mpremote```
+
+```brew: brew install mpremote```
+
+```nix: nix profile install nixpkgs#mpremote```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1)

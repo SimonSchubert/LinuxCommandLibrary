@@ -69,6 +69,24 @@ Cannot push uncommitted changes. Force push can cause issues. Remote hooks may r
 
 Push is a core **Mercurial** command for distributed collaboration since version 1.0.
 
+# INSTALL
+
+```apt: sudo apt install mercurial```
+
+```dnf: sudo dnf install mercurial```
+
+```pacman: sudo pacman -S mercurial```
+
+```apk: sudo apk add mercurial```
+
+```zypper: sudo zypper install mercurial```
+
+```brew: brew install mercurial```
+
+```nix: nix profile install nixpkgs#mercurial```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hg](/man/hg)(1), [hg-pull](/man/hg-pull)(1)

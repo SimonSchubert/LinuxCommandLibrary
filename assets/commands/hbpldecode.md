@@ -45,6 +45,12 @@ Specific to HP printers. Part of foo2hbpl package. Limited file format support.
 
 hbpldecode was developed as part of **foo2hbpl** for Linux printing support of HP Business Inkjet printers.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2hbpl](/man/foo2hbpl)(1)

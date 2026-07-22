@@ -106,6 +106,21 @@ Output is PostScript/EPS only; conversion to PNG or other raster formats require
 
 GNU barcode was written by **Alessandro Rubini** and first released in the **late 1990s** as part of the GNU project. It was designed for use with Unix printing systems and document preparation workflows. While newer tools and libraries have emerged for generating barcodes in various formats, GNU barcode remains useful for its simplicity and PostScript output quality.
 
+# INSTALL
+
+```apt: sudo apt install barcode```
+
+```dnf: sudo dnf install barcode```
+
+```pacman: sudo pacman -S barcode```
+
+```apk: sudo apk add barcode```
+
+```zypper: sudo zypper install barcode```
+
+```nix: nix profile install nixpkgs#barcode```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [qrencode](/man/qrencode)(1), [zint](/man/zint)(1), [gs](/man/gs)(1)

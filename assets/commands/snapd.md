@@ -46,6 +46,12 @@ Classic snap support requires a symlink from /snap to /var/lib/snapd/snap. On SE
 
 Snap was developed by **Canonical** as part of Ubuntu, first introduced in **Ubuntu 16.04** (2016). Originally called Snappy, it was designed to provide universal Linux packages that work across distributions with consistent behavior and automatic updates.
 
+# INSTALL
+
+```dnf: sudo dnf install snapd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snap](/man/snap)(8), [flatpak](/man/flatpak)(1), [apparmor](/man/apparmor)(7)

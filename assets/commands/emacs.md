@@ -137,6 +137,22 @@ Emacs has a steep learning curve with its extensive keyboard shortcuts. The defa
 
 The original EMACS was created at MIT in **1976** by **David A. Moon**, **Guy L. Steele Jr.**, and **Richard Stallman**, evolving from editor macros for the TECO editor. GNU Emacs, the most widely used implementation, was first released in **1985** and became the flagship project of the GNU Project. The name originally stood for "**E**ditor **MAC**ro**S**". Emacs inspired the free software movement and remains one of the oldest actively developed software projects. Its rival **vi** sparked the famous "editor wars" among Unix users.
 
+# INSTALL
+
+```dnf: sudo dnf install emacs```
+
+```pacman: sudo pacman -S emacs```
+
+```apk: sudo apk add emacs-gtk3```
+
+```zypper: sudo zypper install emacs```
+
+```brew: brew install emacs```
+
+```nix: nix profile install nixpkgs#emacs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [nano](/man/nano)(1), [emacsclient](/man/emacsclient)(1), [vi](/man/vi)(1)

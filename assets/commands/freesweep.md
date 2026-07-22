@@ -75,6 +75,12 @@ Requires ncurses support. Board dimensions are limited by terminal size.
 
 **freesweep** was written as a free terminal minesweeper clone. Minesweeper was popularized by its inclusion in **Microsoft Windows 3.1** in **1992**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#freesweep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nbmines](/man/nbmines)(6), [greed](/man/greed)(6)

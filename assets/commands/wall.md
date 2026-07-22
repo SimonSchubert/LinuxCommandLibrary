@@ -53,6 +53,16 @@ Users can block wall messages with **mesg n**. Only root can override this restr
 
 The **wall** command has been part of Unix since early versions and is included in the **util-linux** package on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install bsdutils```
+
+```apk: sudo apk add util-linux-misc```
+
+```nix: nix profile install nixpkgs#wall```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [write](/man/write)(1), [mesg](/man/mesg)(1), [talk](/man/talk)(1), [shutdown](/man/shutdown)(8)

@@ -86,6 +86,20 @@ CastXML was created as a replacement for the deprecated GCC-XML tool, providing 
 
 Output format depends on selected option. GCCXML format provided for legacy compatibility. Use with pygccxml for Python-based analysis.
 
+# INSTALL
+
+```apt: sudo apt install castxml```
+
+```dnf: sudo dnf install castxml```
+
+```pacman: sudo pacman -S castxml```
+
+```brew: brew install castxml```
+
+```nix: nix profile install nixpkgs#castxml```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clang](/man/clang)(1), [g++](/man/g++)(1)

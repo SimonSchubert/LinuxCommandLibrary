@@ -98,6 +98,16 @@ Bun respects pre and post lifecycle hooks. Running **bun run build** will execut
 
 TypeScript and JSX are transpiled on-the-fly without configuration. Startup time is significantly faster than npm run. Some Node.js-specific APIs may not be available.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-test](/man/bun-test)(1), [bun-build](/man/bun-build)(1), [node](/man/node)(1), [npm-run](/man/npm-run)(1)

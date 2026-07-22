@@ -67,6 +67,22 @@ The Sieve language has intentional limitations for safety: no variables or loops
 
 The Sieve language was originally standardized in **RFC 3028** (January 2001) by the IETF. The base specification was updated in **RFC 5228** (2008). The GNU Mailutils implementation provides the **sieve** command as part of its mail handling suite. Dovecot's Pigeonhole project provides another popular implementation with the **sieve-filter** command for server-side filtering.
 
+# INSTALL
+
+```apt: sudo apt install mailutils```
+
+```pacman: sudo pacman -S mailutils```
+
+```apk: sudo apk add mailutils```
+
+```zypper: sudo zypper install mailutils```
+
+```brew: brew install mailutils```
+
+```nix: nix profile install nixpkgs#mailutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dovecot](/man/dovecot)(1), [procmail](/man/procmail)(1), [maildrop](/man/maildrop)(1)

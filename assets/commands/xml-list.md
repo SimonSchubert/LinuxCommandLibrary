@@ -44,6 +44,22 @@ _FILE_
 
 Useful for quickly exploring unfamiliar XML files, producing summaries of element hierarchies, or generating templates for **xml sel** queries.
 
+# INSTALL
+
+```dnf: sudo dnf install xmlstarlet```
+
+```pacman: sudo pacman -S xmlstarlet```
+
+```apk: sudo apk add xmlstarlet```
+
+```zypper: sudo zypper install xmlstarlet```
+
+```brew: brew install xmlstarlet```
+
+```nix: nix profile install nixpkgs#xmlstarlet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xml-elements](/man/xml-elements)(1), [xml-select](/man/xml-select)(1), [xmlstarlet](/man/xmlstarlet)(1)

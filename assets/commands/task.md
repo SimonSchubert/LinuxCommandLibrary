@@ -132,6 +132,22 @@ Task IDs are temporary and may change after sync or undo operations. For scripts
 
 Taskwarrior was created by **Paul Beckingham** and first released in **2006**. It has grown from a simple todo list to a sophisticated task management system with sync capabilities, hooks, and extensive customization. The project is maintained by the **Gothenburg Bit Factory** and has inspired numerous frontends and integrations. Version 3.0, released in **2024**, introduced significant architectural changes and improved performance.
 
+# INSTALL
+
+```apt: sudo apt install taskwarrior```
+
+```dnf: sudo dnf install task```
+
+```pacman: sudo pacman -S task```
+
+```apk: sudo apk add go-task-task```
+
+```zypper: sudo zypper install taskwarrior```
+
+```brew: brew install task```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [todo.txt-cli](/man/todo.txt-cli)(1), [remind](/man/remind)(1), [calcurse](/man/calcurse)(1)

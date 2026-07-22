@@ -84,6 +84,12 @@ Central scheduler recommended for production. No built-in triggering (use cron).
 
 Luigi was developed at **Spotify** and open-sourced in **2012** for managing complex data pipelines and machine learning workflows.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#luigi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [airflow](/man/airflow)(1), [prefect](/man/prefect)(1)

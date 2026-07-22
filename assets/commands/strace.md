@@ -111,6 +111,24 @@ Tracing significantly slows down the traced process. Do not use on production sy
 
 **strace** was originally written for SunOS by Paul Kranenburg in 1991. It has become an essential debugging tool on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install strace```
+
+```dnf: sudo dnf install strace```
+
+```pacman: sudo pacman -S strace```
+
+```apk: sudo apk add strace```
+
+```zypper: sudo zypper install strace```
+
+```brew: brew install strace```
+
+```nix: nix profile install nixpkgs#strace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ltrace](/man/ltrace)(1), [ptrace](/man/ptrace)(2), [perf](/man/perf)(1)

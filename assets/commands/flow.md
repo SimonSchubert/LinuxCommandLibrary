@@ -75,6 +75,16 @@ Requires .flowconfig file. Not compatible with all JavaScript patterns. Build st
 
 Flow was created at **Facebook** (now Meta) in 2014 to add type safety to their JavaScript codebase. It competed with TypeScript, offering a different approach to gradual typing.
 
+# INSTALL
+
+```apt: sudo apt install libopm-simulators-bin```
+
+```brew: brew install flow```
+
+```nix: nix profile install nixpkgs#flow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tsc](/man/tsc)(1), [eslint](/man/eslint)(1), [node](/man/node)(1)

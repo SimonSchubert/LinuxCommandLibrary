@@ -66,6 +66,14 @@ Python required. todo.txt format. Configuration recommended.
 
 **topydo** was created as a feature-rich, Python-based todo.txt client with recurring task support.
 
+# INSTALL
+
+```brew: brew install topydo```
+
+```nix: nix profile install nixpkgs#topydo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [todo.sh](/man/todo.sh)(1), [task](/man/task)(1), [todoman](/man/todoman)(1)

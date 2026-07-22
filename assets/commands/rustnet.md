@@ -30,6 +30,16 @@ Root or **CAP_NET_RAW** / packet-capture permissions may be required for full DP
 
 Packet capture may need elevated privileges and can be sensitive on shared machines. Performance cost grows with traffic volume. Not a replacement for **wireshark** for deep forensic analysis.
 
+# INSTALL
+
+```pacman: sudo pacman -S rustnet```
+
+```brew: brew install rustnet```
+
+```nix: nix profile install nixpkgs#rustnet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ss](/man/ss)(8), [iftop](/man/iftop)(1), [nethogs](/man/nethogs)(8), [tcpdump](/man/tcpdump)(1)

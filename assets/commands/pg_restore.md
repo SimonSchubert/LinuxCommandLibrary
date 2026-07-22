@@ -68,6 +68,12 @@ Cannot restore plain SQL dumps. Parallel restore requires directory format. May 
 
 pg_restore is part of **PostgreSQL**, complementing pg_dump for custom format backup restoration.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_dump](/man/pg_dump)(1), [pg_dumpall](/man/pg_dumpall)(1), [psql](/man/psql)(1)

@@ -86,6 +86,20 @@ Requires kernel 5.15+ with CXL support enabled. Hardware must support CXL (Intel
 
 CXL was developed by the **CXL Consortium**, founded in **2019** by Intel, with specifications contributed by major hardware vendors. The Linux **cxl** tool was developed as part of the **ndctl** project by **Dan Williams** at Intel. CXL 1.1 support appeared in Linux 5.12 (2021), with ongoing development adding features for newer CXL specifications (2.0, 3.0).
 
+# INSTALL
+
+```apt: sudo apt install cxl```
+
+```dnf: sudo dnf install ndctl```
+
+```pacman: sudo pacman -S ndctl```
+
+```apk: sudo apk add ndctl```
+
+```zypper: sudo zypper install ndctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ndctl](/man/ndctl)(1), [daxctl](/man/daxctl)(1), [lspci](/man/lspci)(8)

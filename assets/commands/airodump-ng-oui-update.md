@@ -26,6 +26,23 @@ Requires internet connectivity and root privileges. The IEEE OUI database is upd
 
 **airodump-ng-oui-update** is a helper script included with the aircrack-ng suite, added to simplify keeping the OUI database current without manually downloading and placing files.
 
+# INSTALL
+
+```apt: sudo apt install aircrack-ng```
+
+```dnf: sudo dnf install aircrack-ng```
+
+```pacman: sudo pacman -S aircrack-ng```
+
+```apk: sudo apk add aircrack-ng```
+
+```zypper: sudo zypper install aircrack-ng```
+
+```brew: brew install aircrack-ng```
+
+```nix: nix profile install nixpkgs#aircrack-ng```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [airodump-ng](/man/airodump-ng)(1), [aircrack-ng](/man/aircrack-ng)(1)

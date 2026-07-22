@@ -66,6 +66,14 @@ On systemd systems, **systemctl** is preferred. Not all init scripts implement a
 
 Introduced in **Debian** and adopted by other distributions as a standard interface for SysV init scripts. With the transition to systemd, service became a compatibility wrapper that translates commands to systemctl where appropriate.
 
+# INSTALL
+
+```apt: sudo apt install runit-init```
+
+```apk: sudo apk add openrc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [chkconfig](/man/chkconfig)(8), [update-rc.d](/man/update-rc.d)(8)

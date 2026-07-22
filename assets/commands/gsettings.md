@@ -85,6 +85,20 @@ Only works with applications using GSettings (primarily GNOME). Some settings re
 
 GSettings was introduced in GLib 2.26 (**2010**) as a replacement for GConf. It uses dconf as its backend while providing schema validation, making configuration more robust and introspectable.
 
+# INSTALL
+
+```apt: sudo apt install libglib2.0-bin```
+
+```dnf: sudo dnf install glib```
+
+```apk: sudo apk add glib```
+
+```brew: brew install glib```
+
+```nix: nix profile install nixpkgs#glib```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dconf](/man/dconf)(1)

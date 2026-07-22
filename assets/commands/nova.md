@@ -82,6 +82,16 @@ The client communicates with the Nova API to provision compute resources accordi
 
 Requires OpenStack credentials configured (typically via sourcing an openrc file). The legacy nova client is being replaced by **openstack** unified client. Network and storage configurations must exist before VM creation. Admin privileges needed for cross-tenant operations.
 
+# INSTALL
+
+```zypper: sudo zypper install nova```
+
+```brew: brew install nova```
+
+```nix: nix profile install nixpkgs#nova```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openstack](/man/openstack)(1), [neutron](/man/neutron)(1), [glance](/man/glance)(1)

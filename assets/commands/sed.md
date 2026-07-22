@@ -86,6 +86,20 @@ The **-i** option modifies files directly; always test with output to stdout fir
 
 Created by Lee McMahon at **Bell Labs in 1973-1974** as part of Unix. Based on the ed editor's scripting capabilities but designed for non-interactive stream processing. GNU sed extended the original with features like in-place editing and extended regex support.
 
+# INSTALL
+
+```apt: sudo apt install sed```
+
+```dnf: sudo dnf install sed```
+
+```pacman: sudo pacman -S sed```
+
+```apk: sudo apk add sed```
+
+```zypper: sudo zypper install sed```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [awk](/man/awk)(1), [grep](/man/grep)(1), [tr](/man/tr)(1), [ed](/man/ed)(1), [perl](/man/perl)(1)

@@ -49,6 +49,11 @@ Requires a valid GitHub token for API access. Only shows the last three runs per
 
 **act3** was created by **Dhruva Thakur** (dhth) as an open-source Go project released under the MIT license on GitHub.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#act3```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [gh](/man/gh)(1), [act](/man/act)(1)

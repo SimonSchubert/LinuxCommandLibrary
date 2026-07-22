@@ -61,6 +61,20 @@ This command is primarily available on **Debian** and **Ubuntu** based distribut
 
 **update-ca-certificates** was written for the **Debian** project as part of the **ca-certificates** package, which provides a curated collection of CA root certificates from the **Mozilla NSS** project. The ca-certificates package has been a core component of Debian since the early **2000s**, ensuring that system-wide TLS verification works out of the box. The tool has since been adopted by all Debian derivatives including **Ubuntu** and **Linux Mint**.
 
+# INSTALL
+
+```dnf: sudo dnf install ca-certificates```
+
+```pacman: sudo pacman -S ca-certificates```
+
+```apk: sudo apk add ca-certificates```
+
+```zypper: sudo zypper install ca-certificates```
+
+```brew: brew install ca-certificates```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1)

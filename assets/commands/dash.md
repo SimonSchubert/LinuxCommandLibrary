@@ -99,6 +99,24 @@ Strictly POSIX-compliant. Bash-specific features not supported:
 
 Scripts using bash-isms will fail. Use `#!/bin/bash` for bash-specific scripts. dash is /bin/sh on Debian/Ubuntu.
 
+# INSTALL
+
+```apt: sudo apt install dash```
+
+```dnf: sudo dnf install dash```
+
+```pacman: sudo pacman -S dash```
+
+```apk: sudo apk add dash```
+
+```zypper: sudo zypper install dash```
+
+```brew: brew install dash```
+
+```nix: nix profile install nixpkgs#dash```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [sh](/man/sh)(1), [zsh](/man/zsh)(1)

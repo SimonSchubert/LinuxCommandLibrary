@@ -30,6 +30,21 @@ All active adb connections are terminated when the server is killed. Any port fo
 
 The client-server architecture of adb has been part of the Android SDK since its initial release in **2008**. The kill-server command provides a way to reset the server when troubleshooting issues.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb](/man/adb)(1), [adb-start-server](/man/adb-start-server)(1), [adb-devices](/man/adb-devices)(1), [adb-disconnect](/man/adb-disconnect)(1)

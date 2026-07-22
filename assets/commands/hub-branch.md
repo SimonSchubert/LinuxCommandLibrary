@@ -58,6 +58,20 @@ It is included here because, when hub is aliased as `git` (see `hub alias`), any
 
 Hub is no longer actively maintained and has been superseded by the official GitHub CLI (**gh**). For actual GitHub-aware branch operations (e.g. checking out a pull request as a branch), see **hub checkout** or **gh pr checkout** instead.
 
+# INSTALL
+
+```apt: sudo apt install hub```
+
+```pacman: sudo pacman -S hub```
+
+```zypper: sudo zypper install hub```
+
+```brew: brew install hub```
+
+```nix: nix profile install nixpkgs#hub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hub](/man/hub)(1), [git-branch](/man/git-branch)(1), [gh](/man/gh)(1)

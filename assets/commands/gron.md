@@ -65,6 +65,22 @@ Large JSON files produce many lines. Path syntax may vary. Ungron requires valid
 
 gron was created by **Tom Hudson** to solve the problem of searching complex JSON structures with traditional Unix tools.
 
+# INSTALL
+
+```apt: sudo apt install gron```
+
+```pacman: sudo pacman -S gron```
+
+```apk: sudo apk add gron```
+
+```zypper: sudo zypper install gron```
+
+```brew: brew install gron```
+
+```nix: nix profile install nixpkgs#gron```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [grep](/man/grep)(1), [json_pp](/man/json_pp)(1)

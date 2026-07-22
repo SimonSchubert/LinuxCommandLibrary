@@ -59,6 +59,20 @@ Subcommand of kubectl. Requires bash-completion package for bash. Shell-specific
 
 kubectl completion provides shell integration for **kubectl**, improving command-line efficiency.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [bash](/man/bash)(1), [zsh](/man/zsh)(1)

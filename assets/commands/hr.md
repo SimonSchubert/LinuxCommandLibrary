@@ -34,6 +34,16 @@ The terminal width is determined by `tput cols`, falling back to the **COLUMNS**
 
 Multiple implementations of **hr** exist with different features. The most common (LuRsT/hr) is a pure Bash script with no flags or options. Other implementations may support additional features like color or width control.
 
+# INSTALL
+
+```apk: sudo apk add hr```
+
+```brew: brew install hr```
+
+```nix: nix profile install nixpkgs#hr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [echo](/man/echo)(1), [printf](/man/printf)(1), [tput](/man/tput)(1)

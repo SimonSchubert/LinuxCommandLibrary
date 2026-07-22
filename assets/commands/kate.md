@@ -62,6 +62,20 @@ KDE Advanced Text Editor, a feature-rich text editor with syntax
 
 **kate** is the KDE Advanced Text Editor, a feature-rich text editor with syntax highlighting, code folding, terminal integration, and multi-document support. Suitable for programmers and power users who need advanced editing capabilities.
 
+# INSTALL
+
+```apt: sudo apt install kate```
+
+```dnf: sudo dnf install kate```
+
+```pacman: sudo pacman -S kate```
+
+```apk: sudo apk add kate```
+
+```zypper: sudo zypper install kate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kwrite](/man/kwrite)(1), [nano](/man/nano)(1), [vim](/man/vim)(1)

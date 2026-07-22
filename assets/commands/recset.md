@@ -77,6 +77,18 @@ Modifies file in place. Use selection expressions carefully. Part of GNU recutil
 
 recset is part of **GNU recutils** by **Jose E. Marchesi** for managing text databases.
 
+# INSTALL
+
+```dnf: sudo dnf install recutils```
+
+```apk: sudo apk add recutils```
+
+```brew: brew install recutils```
+
+```nix: nix profile install nixpkgs#recutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [recsel](/man/recsel)(1), [recins](/man/recins)(1), [recdel](/man/recdel)(1)

@@ -65,6 +65,24 @@ The tool rasterizes each page from both PDFs and compares the resulting images. 
 
 This is particularly useful for comparing versions of documents where content may be identical but visual presentation differs, or for quality assurance workflows verifying that document generation produces consistent output. The tool returns exit code 0 if files are identical, 1 if different, making it suitable for automated testing.
 
+# INSTALL
+
+```apt: sudo apt install diff-pdf-wx```
+
+```dnf: sudo dnf install diff-pdf```
+
+```pacman: sudo pacman -S diff-pdf```
+
+```apk: sudo apk add diff-pdf```
+
+```zypper: sudo zypper install diff-pdf```
+
+```brew: brew install diff-pdf```
+
+```nix: nix profile install nixpkgs#diff-pdf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdftk](/man/pdftk)(1), [diff](/man/diff)(1), [cpdf](/man/cpdf)(1)

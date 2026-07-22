@@ -25,6 +25,12 @@ Display **detailed status**
 
 **qm status** shows the current status of a virtual machine. Basic output shows running state (running, stopped, paused). Verbose mode shows additional details like uptime and resource usage.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-list](/man/qm-list)(1)

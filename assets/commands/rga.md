@@ -95,6 +95,12 @@ Requires external tools for some formats. Large files slow first search. Cache u
 
 **rga** was created by **phiresky** to extend ripgrep's search capabilities. It adds document format support while maintaining ripgrep's speed and interface.
 
+# INSTALL
+
+```brew: brew install rga```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rg](/man/rg)(1), [pdftotext](/man/pdftotext)(1), [grep](/man/grep)(1)

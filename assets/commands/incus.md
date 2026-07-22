@@ -96,6 +96,24 @@ system container and virtual machine manager
 
 **incus** is a system container and virtual machine manager. Community fork of LXD, maintained by the Linux Containers project. Manages containers via LXC and VMs via QEMU through a unified CLI and REST API. Supports local and remote access, profiles, storage pools, and networking.
 
+# INSTALL
+
+```apt: sudo apt install incus-client```
+
+```dnf: sudo dnf install incus-client```
+
+```pacman: sudo pacman -S incus```
+
+```apk: sudo apk add incus-client```
+
+```zypper: sudo zypper install incus```
+
+```brew: brew install incus```
+
+```nix: nix profile install nixpkgs#incus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lxc](/man/lxc)(1), [docker](/man/docker)(1)

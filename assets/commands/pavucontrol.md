@@ -47,6 +47,22 @@ GUI application. Requires PulseAudio. Per-stream control.
 
 pavucontrol was created for **graphical PulseAudio** volume control.
 
+# INSTALL
+
+```apt: sudo apt install pavucontrol```
+
+```dnf: sudo dnf install pavucontrol```
+
+```pacman: sudo pacman -S pavucontrol```
+
+```apk: sudo apk add pavucontrol```
+
+```zypper: sudo zypper install pavucontrol```
+
+```nix: nix profile install nixpkgs#pavucontrol```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulseaudio](/man/pulseaudio)(1), [pactl](/man/pactl)(1), [alsamixer](/man/alsamixer)(1)

@@ -67,6 +67,14 @@ Complex queries may be slow on large directories. Some fields require reading fi
 
 fselect was created to provide an intuitive query language for file searching. It applies database query concepts to filesystem operations for familiar and powerful searches.
 
+# INSTALL
+
+```brew: brew install fselect```
+
+```nix: nix profile install nixpkgs#fselect```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [find](/man/find)(1), [fd](/man/fd)(1), [locate](/man/locate)(1)

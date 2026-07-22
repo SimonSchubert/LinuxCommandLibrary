@@ -72,6 +72,14 @@ The tool is useful for quick file transfers without setting up full file sharing
 
 Not intended for production use. Requires Node.js 14.18 or higher. If the desired port is already in use, the port is automatically incremented until a free port is found.
 
+# INSTALL
+
+```brew: brew install http-server```
+
+```nix: nix profile install nixpkgs#http-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [http-server](/man/http-server)(1), [updog](/man/updog)(1)

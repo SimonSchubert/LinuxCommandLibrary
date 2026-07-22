@@ -89,6 +89,24 @@ Requires git and npm. By default, existing files on the target branch are remove
 
 gh-pages was created by **Tim Schaub** to simplify GitHub Pages deployments. It became a standard tool in the JavaScript ecosystem for static site deployment.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [git](/man/git)(1), [npm](/man/npm)(1)

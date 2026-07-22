@@ -92,6 +92,12 @@ Compression levels (**lite**, **balanced**, **ultra**) control how aggressively 
 
 **lowfat** reduces tokens by removing detail; verify critical output with **lowfat info** or by running the underlying command without the prefix when debugging. Shell integration rewrites commands transparently, which can surprise users who forget it is active. Python-based plugins may require **uv** for dependency resolution (**lowfat plugin doctor** checks this).
 
+# INSTALL
+
+```aur: yay -S lowfat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [docker](/man/docker)(1), [awk](/man/awk)(1)

@@ -78,6 +78,18 @@ See **cargo upgrade --help** for the full option list.
 
 Incompatible upgrades can break builds; review the diff and run tests. Requires network access to the crate registry unless offline flags apply. Workspace members may need **--manifest-path** or package selection.
 
+# INSTALL
+
+```pacman: sudo pacman -S cargo-edit```
+
+```apk: sudo apk add cargo-edit```
+
+```brew: brew install cargo-edit```
+
+```nix: nix profile install nixpkgs#cargo-edit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo-add](/man/cargo-add)(1), [cargo-update](/man/cargo-update)(1), [cargo-set-version](/man/cargo-set-version)(1), [cargo](/man/cargo)(1)

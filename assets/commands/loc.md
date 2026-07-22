@@ -70,6 +70,12 @@ The tool is written in Rust for speed and can process large codebases significan
 
 Results may differ from other line counters due to differing language detection heuristics and comment-parsing rules. The project is no longer actively maintained.
 
+# INSTALL
+
+```brew: brew install loc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cloc](/man/cloc)(1), [tokei](/man/tokei)(1), [sloccount](/man/sloccount)(1)

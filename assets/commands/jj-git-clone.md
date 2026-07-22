@@ -48,6 +48,20 @@ Subcommand of jj. Creates jj workspace. Colocate for dual Git/jj use.
 
 jj git clone is part of **Jujutsu**, enabling seamless cloning from any Git hosting service.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-git](/man/jj-git)(1), [git-clone](/man/git-clone)(1)

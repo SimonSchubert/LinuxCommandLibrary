@@ -72,6 +72,11 @@ Requires local repository setup. More complex than yay or paru for casual use. D
 
 **aurutils** was developed for users wanting reproducible, local repository-based AUR package management, as opposed to direct installation helpers. It is distributed under the ISC license.
 
+# INSTALL
+
+```aur: yay -S aurutils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [yay](/man/yay)(1), [paru](/man/paru)(1), [makepkg](/man/makepkg)(8)

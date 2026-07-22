@@ -69,6 +69,24 @@ PDF output requires LaTeX or wkhtmltopdf. Format support varies.
 
 Pandoc was created by **John MacFarlane** as a universal document converter.
 
+# INSTALL
+
+```apt: sudo apt install pandoc```
+
+```dnf: sudo dnf install pandoc-cli```
+
+```pacman: sudo pacman -S pandoc-cli```
+
+```apk: sudo apk add pandoc-cli```
+
+```zypper: sudo zypper install pandoc-cli```
+
+```brew: brew install pandoc```
+
+```nix: nix profile install nixpkgs#pandoc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [markdown](/man/markdown)(1), [latex](/man/latex)(1), [groff](/man/groff)(1)

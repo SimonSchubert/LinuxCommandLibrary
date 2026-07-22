@@ -48,6 +48,24 @@ Part of Netpbm. Random output. Reproducible with seed.
 
 pbmnoise is part of **Netpbm** for generating random bitmap noise.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbm](/man/pbm)(5), [pgmnoise](/man/pgmnoise)(1), [netpbm](/man/netpbm)(1)

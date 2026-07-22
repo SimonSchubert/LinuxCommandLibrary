@@ -87,6 +87,12 @@ Superseded by `openstack image ...` in current OpenStack releases; new deploymen
 
 Glance was one of the original OpenStack services, launched alongside **Nova** in the **2010** Austin release, and the `glance` CLI was its dedicated client for years before OpenStack consolidated per-service clients into the single `openstack` command.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#glance```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openstack](/man/openstack)(1), [openstack-image](/man/openstack-image)(1), [nova](/man/nova)(1), [qemu-img](/man/qemu-img)(1)

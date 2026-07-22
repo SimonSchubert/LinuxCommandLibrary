@@ -81,6 +81,14 @@ Requires cloud credentials with read access. Large accounts may take time. Some 
 
 **Prowler** was created by **Toni de la Fuente** for AWS security auditing. It has grown to support multiple cloud providers and compliance frameworks.
 
+# INSTALL
+
+```brew: brew install prowler```
+
+```nix: nix profile install nixpkgs#prowler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws-cli](/man/aws-cli)(1), [scout](/man/scout)(1), [cloudsploit](/man/cloudsploit)(1)

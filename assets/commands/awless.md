@@ -56,6 +56,11 @@ Auth uses standard AWS credentials/regions.
 
 Project activity may lag official **aws** CLI features—verify against current AWS APIs. Templates that create resources incur cost. Prefer least-privilege IAM credentials.
 
+# INSTALL
+
+```aur: yay -S awless```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [saws](/man/saws)(1)

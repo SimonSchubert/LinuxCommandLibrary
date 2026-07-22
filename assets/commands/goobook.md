@@ -57,6 +57,14 @@ Requires Google API credentials and OAuth2 authentication. Google's API quotas m
 
 goobook was created to bridge the gap between command-line email clients like mutt and Google's contact management. It provides a simple interface to Google Contacts that works well with Unix text-processing tools and email workflows.
 
+# INSTALL
+
+```apk: sudo apk add goobook```
+
+```nix: nix profile install nixpkgs#goobook```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mutt](/man/mutt)(1)

@@ -118,6 +118,12 @@ Multi-platform images require **--platform** to select a specific architecture w
 
 Rate limits apply to Docker Hub and other registries. Use **regctl registry ratelimit** to check current status before bulk operations.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#regctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [skopeo](/man/skopeo)(1), [crane](/man/crane)(1), [podman](/man/podman)(1)

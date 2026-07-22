@@ -78,6 +78,20 @@ Part of procmail suite which is no longer actively developed. MIME handling is l
 
 formail was developed by **Stephen van den Berg** as part of the **procmail** mail processing suite in the **1990s**. While procmail is no longer actively maintained, formail remains useful for mail processing scripts.
 
+# INSTALL
+
+```apt: sudo apt install procmail```
+
+```dnf: sudo dnf install procmail```
+
+```zypper: sudo zypper install procmail```
+
+```brew: brew install procmail```
+
+```nix: nix profile install nixpkgs#procmail```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [procmail](/man/procmail)(1), [mail](/man/mail)(1), [mailx](/man/mailx)(1)

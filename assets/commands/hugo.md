@@ -91,6 +91,24 @@ Go-template syntax learning curve. Theme compatibility varies. No dynamic conten
 
 Hugo was created by **Steve Francia** in **2013** as a fast alternative to Jekyll, written in Go. Note: `hugo new` for creating content is deprecated; use `hugo new content` instead.
 
+# INSTALL
+
+```apt: sudo apt install hugo```
+
+```dnf: sudo dnf install hugo```
+
+```pacman: sudo pacman -S hugo```
+
+```apk: sudo apk add hugo```
+
+```zypper: sudo zypper install hugo```
+
+```brew: brew install hugo```
+
+```nix: nix profile install nixpkgs#hugo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hugo-server](/man/hugo-server)(1), [jekyll](/man/jekyll)(1), [hexo](/man/hexo)(1)

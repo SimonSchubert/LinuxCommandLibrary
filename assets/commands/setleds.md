@@ -75,6 +75,22 @@ setleds affects only virtual consoles (TTYs), not graphical environments (X11/Wa
 
 setleds is part of the **kbd** package, a collection of keyboard utilities for Linux console management. It provides low-level control over keyboard indicators that predates modern desktop environments.
 
+# INSTALL
+
+```apt: sudo apt install kbd```
+
+```dnf: sudo dnf install kbd```
+
+```pacman: sudo pacman -S kbd```
+
+```apk: sudo apk add kbd```
+
+```zypper: sudo zypper install kbd```
+
+```nix: nix profile install nixpkgs#kbd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [showkey](/man/showkey)(1), [loadkeys](/man/loadkeys)(1), [dumpkeys](/man/dumpkeys)(1)

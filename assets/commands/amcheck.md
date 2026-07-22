@@ -103,6 +103,13 @@ The **-w** option performs a destructive tape check that overwrites the tape lab
 
 Amanda (Advanced Maryland Automatic Network Disk Archiver) was developed at the **University of Maryland** starting in **1991** by James da Silva. It became one of the most widely used open-source backup solutions for Unix systems. The project has been maintained by the Amanda community and **Zmanda** (later acquired by Carbonite) and continues to be actively developed.
 
+# INSTALL
+
+```apt: sudo apt install amanda-server```
+
+```dnf: sudo dnf install amanda-server```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [amdump](/man/amdump)(8), [amrecover](/man/amrecover)(8)

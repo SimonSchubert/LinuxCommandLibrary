@@ -59,6 +59,16 @@ Scripts in package.json. Use -- for script args. Alias: npm run-script.
 
 npm run is the **primary mechanism** for executing project-defined scripts.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-start](/man/npm-start)(1), [npm-test](/man/npm-test)(1)

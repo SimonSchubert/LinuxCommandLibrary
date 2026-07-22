@@ -93,6 +93,21 @@ Exit codes combine: 1 (new files), 2 (removed files), and 4 (changed files). The
 
 Originally developed as an open-source alternative to proprietary file integrity checkers like Tripwire. Since version 0.17 the report and verbose command-line flags were replaced by configuration directives and the **-L/--log-level** option.
 
+# INSTALL
+
+```apt: sudo apt install aide```
+
+```dnf: sudo dnf install aide```
+
+```aur: yay -S aide```
+
+```zypper: sudo zypper install aide```
+
+```brew: brew install aide```
+
+```nix: nix profile install nixpkgs#aide```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [tripwire](/man/tripwire)(8), [md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1)

@@ -87,6 +87,12 @@ Useful for organizing music libraries and batch tagging MP3 collections.
 
 Only works with MP3 files. Some players may not support all ID3v2 features. Unicode support depends on tag version.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#eyed3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [id3v2](/man/id3v2)(1), [mp3info](/man/mp3info)(1), [ffmpeg](/man/ffmpeg)(1)

@@ -55,6 +55,12 @@ Requires Java. Memory allocation important. Plugin compatibility varies.
 
 PaperMC was forked from **Spigot** for improved Minecraft server performance.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#papermc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [java](/man/java)(1), [screen](/man/screen)(1)

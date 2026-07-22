@@ -26,6 +26,24 @@ Convert PNM to plain ASCII format (obsolete)
 
 **pnmtoplainpnm** was new in Netpbm 8.2 (March 2000) as a renaming of **pnmnoraw**, which was new in Pbmplus in November 1989. It was obsoleted by **pamtopnm** in Netpbm 10.23 (July 2004).
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamtopnm](/man/pamtopnm)(1), [pnmtopnm](/man/pnmtopnm)(1), [pnm](/man/pnm)(1)

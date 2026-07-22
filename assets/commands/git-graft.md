@@ -34,6 +34,24 @@ Part of the **git-extras** suite, the command simplifies the common merge-and-de
 
 Requires the **git-extras** package. The source branch is deleted after merge. Only use for completed work where the branch reference is no longer needed. The merge must be a clean fast-forward or merge commit; conflicts will cause failure.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [git-branch](/man/git-branch)(1), [git-extras](/man/git-extras)(1)

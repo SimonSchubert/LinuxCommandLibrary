@@ -97,6 +97,12 @@ Requires a Slack app / user token. Slack rate-limits uploads and chat messages (
 
 **slackcat** was created by **Bradley Cicenas** (`bcicen`) and is written in **Go**. Source: github.com/bcicen/slackcat.
 
+# INSTALL
+
+```brew: brew install slackcat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [tee](/man/tee)(1), [jq](/man/jq)(1)

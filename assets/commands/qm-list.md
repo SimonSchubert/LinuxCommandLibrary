@@ -27,6 +27,12 @@ List with **full status** for running VMs
 
 With the full option, additional details are shown for running VMs including resource usage.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-status](/man/qm-status)(1)

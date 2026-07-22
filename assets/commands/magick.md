@@ -100,6 +100,18 @@ Complex operations need quoting. Large images use much memory. Some formats have
 
 **ImageMagick** was created by **John Cristy** in **1987**. The magick command was introduced in ImageMagick 7 (2016) to unify the various utility commands under a single interface.
 
+# INSTALL
+
+```pacman: sudo pacman -S imagemagick```
+
+```apk: sudo apk add imagemagick```
+
+```brew: brew install imagemagick```
+
+```nix: nix profile install nixpkgs#imagemagick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [convert](/man/convert)(1), [identify](/man/identify)(1), [mogrify](/man/mogrify)(1), [montage](/man/montage)(1)

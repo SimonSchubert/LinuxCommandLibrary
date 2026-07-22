@@ -59,6 +59,14 @@ Pkl files can import modules from the network, which may have security implicati
 
 Pkl was created by **Apple** and open-sourced in **February 2024** as a type-safe, programmable configuration language.
 
+# INSTALL
+
+```brew: brew install pkl```
+
+```nix: nix profile install nixpkgs#pkl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jsonnet](/man/jsonnet)(1), [dhall](/man/dhall)(1)

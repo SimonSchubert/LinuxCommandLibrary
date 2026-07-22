@@ -81,3 +81,9 @@ Pharo forked from **Squeak** Smalltalk in 2008, focusing on clean, innovative Sm
 # SEE ALSO
 
 [squeak](/man/squeak)(1)
+
+# INSTALL
+
+```nix: nix profile install nixpkgs#pharo```
+
+<!-- packages: 2026-07-22 -->

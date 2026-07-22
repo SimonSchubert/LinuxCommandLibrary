@@ -96,6 +96,17 @@ Delete all mount targets before deleting a file system. Mount targets require on
 
 Amazon EFS was announced at **AWS re:Invent 2015** and became generally available in **June 2016**. It was AWS's first managed NFS service. **Infrequent Access** storage class was added in **2019** for cost optimization. **EFS One Zone** storage classes launched in **2021** for single-AZ workloads at lower cost. Elastic throughput mode was introduced in **2022**.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [mount](/man/mount)(8)

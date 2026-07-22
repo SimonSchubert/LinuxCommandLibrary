@@ -65,6 +65,24 @@ Avoid --body for sensitive values (visible in history). Secrets encrypted in tra
 
 gh secret set is part of the **GitHub CLI's** secret management commands, providing secure secret configuration for CI/CD workflows.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh-secret](/man/gh-secret)(1), [gh-run](/man/gh-run)(1)

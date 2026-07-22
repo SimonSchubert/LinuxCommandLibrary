@@ -98,6 +98,17 @@ Metric data older than 15 months is automatically deleted. High-resolution metri
 
 Amazon CloudWatch launched in **May 2009** alongside EC2 monitoring. Custom metrics were added in **2011**, dashboards in **2015**, and anomaly detection in **2019**. The service has evolved to become the central monitoring hub for all AWS services and is now integrated with CloudWatch Logs and EventBridge.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-logs](/man/aws-logs)(1), [aws-events](/man/aws-events)(1), [aws-ec2](/man/aws-ec2)(1), [aws-sns](/man/aws-sns)(1)

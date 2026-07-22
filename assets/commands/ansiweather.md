@@ -96,6 +96,13 @@ Requires OpenWeatherMap API key for some features. Free API has rate limits. Loc
 
 **ansiweather** was created as a simple, colorful terminal weather tool, leveraging OpenWeatherMap's free API tier for weather data.
 
+# INSTALL
+
+```aur: yay -S ansiweather```
+
+```brew: brew install ansiweather```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [curl](/man/curl)(1), [wttr.in](/man/wttr.in)(1)

@@ -59,6 +59,24 @@ Display **help**
 
 Requires root privileges. Container must exist and be stopped. Use lxc-stop to stop foreground containers.
 
+# INSTALL
+
+```apt: sudo apt install lxc```
+
+```dnf: sudo dnf install lxc```
+
+```pacman: sudo pacman -S lxc```
+
+```apk: sudo apk add lxc```
+
+```zypper: sudo zypper install lxc```
+
+```brew: brew install lxc```
+
+```nix: nix profile install nixpkgs#lxc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lxc-stop](/man/lxc-stop)(1), [lxc-create](/man/lxc-create)(1), [lxc-attach](/man/lxc-attach)(1)

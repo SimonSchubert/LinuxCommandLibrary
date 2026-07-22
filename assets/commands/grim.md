@@ -69,6 +69,22 @@ Wayland-only; does not work on X11 (use scrot or maim instead). Requires a compa
 
 grim was created by Simon Ser (emersion) as part of the Wayland ecosystem tooling for the Sway window manager. It provides functionality similar to X11 tools like scrot but designed specifically for Wayland's security model.
 
+# INSTALL
+
+```apt: sudo apt install grim```
+
+```dnf: sudo dnf install grim```
+
+```pacman: sudo pacman -S grim```
+
+```apk: sudo apk add grim```
+
+```zypper: sudo zypper install grim```
+
+```nix: nix profile install nixpkgs#grim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [slurp](/man/slurp)(1), [wl-copy](/man/wl-copy)(1), [scrot](/man/scrot)(1), [maim](/man/maim)(1)

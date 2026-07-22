@@ -83,6 +83,18 @@ Requires Git repository. Some advanced Git features may not be supported. Large 
 
 **gitu** was inspired by Magit and created to bring similar functionality to a standalone terminal application.
 
+# INSTALL
+
+```pacman: sudo pacman -S gitu```
+
+```apk: sudo apk add gitu```
+
+```brew: brew install gitu```
+
+```nix: nix profile install nixpkgs#gitu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [lazygit](/man/lazygit)(1), [tig](/man/tig)(1)

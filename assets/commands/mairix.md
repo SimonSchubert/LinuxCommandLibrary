@@ -84,6 +84,22 @@ Index must be updated after new mail. Results are symlinks. Only Maildir and MH 
 
 mairix was created by **Richard Curnow** as a fast alternative to grep-based mail searching.
 
+# INSTALL
+
+```apt: sudo apt install mairix```
+
+```dnf: sudo dnf install mairix```
+
+```pacman: sudo pacman -S mairix```
+
+```zypper: sudo zypper install mairix```
+
+```brew: brew install mairix```
+
+```nix: nix profile install nixpkgs#mairix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [notmuch](/man/notmuch)(1), [mu](/man/mu)(1), [mutt](/man/mutt)(1), [maildir](/man/maildir)(5)

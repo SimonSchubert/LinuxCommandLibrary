@@ -46,6 +46,24 @@ Reducing maxval truncates precision. To convert between tuple types (e.g. RGB to
 
 pamdepth is part of **Netpbm** for bit depth conversion.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmdepth](/man/pnmdepth)(1), [pamrecolor](/man/pamrecolor)(1), [netpbm](/man/netpbm)(1)

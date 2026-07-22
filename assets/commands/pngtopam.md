@@ -51,6 +51,24 @@ Reads from standard input if no file is given. Without **-alphapam** or **-alpha
 
 Part of the **Netpbm** package, which descends from Jef Poskanzer's pbmplus from the late 1980s. PAM was introduced in Netpbm 10.x to unify PBM/PGM/PPM/PAM handling.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamtopng](/man/pamtopng)(1), [pngtopnm](/man/pngtopnm)(1), [pnmtopng](/man/pnmtopng)(1)

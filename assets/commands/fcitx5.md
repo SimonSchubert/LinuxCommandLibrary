@@ -80,6 +80,22 @@ Different desktop environments may require different configuration methods for a
 
 Fcitx (Flexible Context Input X) was originally developed for Chinese input on Linux. **Fcitx5** is a complete rewrite released under LGPL-2.1+, offering improved architecture, better Wayland support, and enhanced extensibility. The modular design allows input methods, themes, and features to be added as independent plugins.
 
+# INSTALL
+
+```apt: sudo apt install fcitx5```
+
+```dnf: sudo dnf install fcitx5```
+
+```pacman: sudo pacman -S fcitx5```
+
+```apk: sudo apk add fcitx5```
+
+```zypper: sudo zypper install fcitx5```
+
+```nix: nix profile install nixpkgs#fcitx5```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ibus](/man/ibus)(1)

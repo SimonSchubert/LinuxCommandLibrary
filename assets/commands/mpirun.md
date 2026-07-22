@@ -44,6 +44,20 @@ launches MPI parallel programs
 
 **mpirun** launches MPI parallel programs. Starts multiple processes across nodes for distributed computing. Part of OpenMPI or MPICH implementations.
 
+# INSTALL
+
+```dnf: sudo dnf install openmpi```
+
+```pacman: sudo pacman -S openmpi```
+
+```apk: sudo apk add openmpi```
+
+```brew: brew install openmpi```
+
+```nix: nix profile install nixpkgs#openmpi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpiexec](/man/mpiexec)(1), [mpicc](/man/mpicc)(1)

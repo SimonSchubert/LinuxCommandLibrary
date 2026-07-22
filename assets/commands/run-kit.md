@@ -84,6 +84,12 @@ Install via the shll toolkit installer or Homebrew (**sahil87/tap/run-kit**). **
 
 **riff** requires **$TMUX**, **wt** on **PATH**, and a configured agent/launcher. Agent status dots need a one-time **agent-setup** and new agent sessions after install. Web Push needs a secure context (HTTPS or localhost). Binding **RK_HOST=0.0.0.0** exposes the terminal dashboard on the network—restrict access (VPN/Tailscale, firewall).
 
+# INSTALL
+
+```brew: brew install run-kit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [git](/man/git)(1), [git-worktree](/man/git-worktree)(1), [tailscale](/man/tailscale)(1)

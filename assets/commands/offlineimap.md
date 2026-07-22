@@ -94,6 +94,20 @@ Initial sync of large mailboxes takes time. Configuration can be complex. Deprec
 
 **offlineimap** was created by **John Googin** around **2002** for syncing IMAP mail to local storage. It became essential for offline email workflows. The project is now in maintenance mode, with **isstralsync** as the recommended successor.
 
+# INSTALL
+
+```dnf: sudo dnf install offlineimap```
+
+```pacman: sudo pacman -S offlineimap```
+
+```apk: sudo apk add offlineimap```
+
+```brew: brew install offlineimap```
+
+```nix: nix profile install nixpkgs#offlineimap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mbsync](/man/mbsync)(1), [mutt](/man/mutt)(1), [notmuch](/man/notmuch)(1)

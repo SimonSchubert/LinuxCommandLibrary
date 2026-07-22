@@ -59,6 +59,22 @@ Only works with DVD-RAM media (not DVD±R, DVD±RW, or Blu-ray). Needs access to
 
 **dvd-ram-control** ships with **dvd+rw-tools** by **Andy Polyakov**, a suite of utilities for working with DVD±RW, DVD±R, and DVD-RAM media on Unix.
 
+# INSTALL
+
+```apt: sudo apt install dvd+rw-tools```
+
+```dnf: sudo dnf install dvd+rw-tools```
+
+```pacman: sudo pacman -S dvd+rw-tools```
+
+```apk: sudo apk add dvd+rw-tools```
+
+```zypper: sudo zypper install dvd+rw-tools```
+
+```brew: brew install dvd+rw-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dvd+rw-mediainfo](/man/dvd+rw-mediainfo)(1), [growisofs](/man/growisofs)(1)

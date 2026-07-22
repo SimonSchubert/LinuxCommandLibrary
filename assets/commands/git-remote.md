@@ -82,6 +82,24 @@ Remote names are local aliases. URLs can differ for fetch and push. Removing rem
 
 git remote is a core **Git** command for managing the remote repository connections essential to distributed version control.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-fetch](/man/git-fetch)(1), [git-push](/man/git-push)(1), [git-clone](/man/git-clone)(1)

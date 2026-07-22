@@ -75,6 +75,12 @@ Requires Ghostscript for PostScript/PDF processing. Only works with specific pri
 
 foo2hbpl2 is part of the **foo2zjs** project initiated by Rick Richardson. The project provides open-source drivers for printers that lack native Linux support, reverse-engineering proprietary protocols like ZjStream, HBPL, and others. The foo2zjs family has enabled Linux printing on numerous budget laser printers since the early 2000s.
 
+# INSTALL
+
+```dnf: sudo dnf install foo2hbpl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gs](/man/gs)(1), [foo2zjs](/man/foo2zjs)(1), [cups](/man/cups)(8), [lpr](/man/lpr)(1)

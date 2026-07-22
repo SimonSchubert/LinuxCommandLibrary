@@ -62,6 +62,14 @@ All mounts are read-only. Requires FUSE support on the host system. Some advance
 
 grub-mount is part of GRUB 2, providing a FUSE-based mounting interface using GRUB's file system drivers. This allows administrators to access and verify boot environments without requiring kernel support for all file system types.
 
+# INSTALL
+
+```apt: sudo apt install grub-common```
+
+```apk: sudo apk add grub-mount```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub-probe](/man/grub-probe)(8), [grub-install](/man/grub-install)(8), [grub-mkconfig](/man/grub-mkconfig)(8), [mount](/man/mount)(8), [fusermount](/man/fusermount)(1)

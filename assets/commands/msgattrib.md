@@ -48,6 +48,22 @@ filters gettext PO files by message attributes
 
 **msgattrib** filters gettext PO files by message attributes. Extracts or modifies messages based on translation status (translated, fuzzy, obsolete). Part of GNU gettext for internationalization workflows.
 
+# INSTALL
+
+```apt: sudo apt install gettext```
+
+```dnf: sudo dnf install gettext```
+
+```pacman: sudo pacman -S gettext```
+
+```apk: sudo apk add gettext```
+
+```brew: brew install gettext```
+
+```nix: nix profile install nixpkgs#gettext```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [msgcat](/man/msgcat)(1), [msgfmt](/man/msgfmt)(1), [msgunfmt](/man/msgunfmt)(1)

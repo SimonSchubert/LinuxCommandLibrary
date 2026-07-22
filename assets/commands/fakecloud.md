@@ -90,6 +90,12 @@ fakecloud covers the common AWS services but is not bit-for-bit identical with p
 
 **fakecloud** was launched by **faiscadev** in early **2026** after **LocalStack** announced its shift to a proprietary license, giving teams a free-forever, open-source alternative for fully local AWS testing.
 
+# INSTALL
+
+```brew: brew install fakecloud```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws](/man/aws)(1), [terraform](/man/terraform)(1)

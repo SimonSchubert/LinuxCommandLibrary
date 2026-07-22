@@ -53,6 +53,24 @@ Compare working tree files to index
 
 This command is part of Git's plumbing layer, designed for scripting and automation rather than daily interactive use. It can produce various output formats including raw diff data, patch format, or simple file lists, making it suitable for integration into build tools, pre-commit hooks, or custom Git workflows.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-diff](/man/git-diff)(1), [git-diff-index](/man/git-diff-index)(1), [git-diff-tree](/man/git-diff-tree)(1)

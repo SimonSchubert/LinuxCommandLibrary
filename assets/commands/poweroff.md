@@ -59,6 +59,12 @@ Force option may cause data loss. Requires root privileges. Behavior varies by i
 
 **poweroff** has been a standard Unix command for system shutdown. Modern implementations integrate with systemd or other init systems while maintaining the traditional interface.
 
+# INSTALL
+
+```apt: sudo apt install runit-init```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [shutdown](/man/shutdown)(8), [halt](/man/halt)(8), [reboot](/man/reboot)(8), [systemctl](/man/systemctl)(1)

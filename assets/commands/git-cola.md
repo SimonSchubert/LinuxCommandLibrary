@@ -48,6 +48,20 @@ Unlike simpler Git GUIs, Git Cola is designed for power users who want visual to
 **~/.config/git-cola/**
 > User settings including window layout, theme preferences, and key bindings.
 
+# INSTALL
+
+```dnf: sudo dnf install git-cola```
+
+```apk: sudo apk add git-cola```
+
+```zypper: sudo zypper install git-cola```
+
+```brew: brew install git-cola```
+
+```nix: nix profile install nixpkgs#git-cola```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gitk](/man/gitk)(1), [git-gui](/man/git-gui)(1), [tig](/man/tig)(1), [lazygit](/man/lazygit)(1)

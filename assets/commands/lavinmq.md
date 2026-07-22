@@ -112,6 +112,12 @@ The default **guest/guest** account is intended for local testing only and shoul
 
 **LavinMQ** was created by **CloudAMQP** (84codes) and first released as open source in **2022**. It originated from the company's experience operating large RabbitMQ clusters and aimed to provide a lighter, faster broker with the same wire protocol. Written in **Crystal** and licensed under the **Apache 2.0** license, the project has since added clustering, MQTT support, and a streams protocol.
 
+# INSTALL
+
+```brew: brew install lavinmq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rabbitmq-server](/man/rabbitmq-server)(1), [rabbitmqctl](/man/rabbitmqctl)(1), [mosquitto](/man/mosquitto)(8)

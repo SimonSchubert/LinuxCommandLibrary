@@ -96,6 +96,20 @@ Only for authorized security testing. May trigger WAF rules. Large wordlists slo
 
 **gobuster** was created by **OJ Reeves** as a fast alternative to tools like DirBuster. Written in Go for concurrency and performance, it became a standard tool in penetration testing and bug bounty hunting.
 
+# INSTALL
+
+```apt: sudo apt install gobuster```
+
+```dnf: sudo dnf install gobuster```
+
+```pacman: sudo pacman -S gobuster```
+
+```brew: brew install gobuster```
+
+```nix: nix profile install nixpkgs#gobuster```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dirb](/man/dirb)(1), [ffuf](/man/ffuf)(1), [wfuzz](/man/wfuzz)(1), [feroxbuster](/man/feroxbuster)(1)

@@ -44,6 +44,23 @@ Character-to-grayscale mapping may not produce optimal results for all ASCII art
 
 **asciitopgm** is part of the Netpbm image processing toolkit, which evolved from PBMPLUS in the late **1980s**.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [pgmtopbm](/man/pgmtopbm)(1), [pnmtopng](/man/pnmtopng)(1), [img2txt](/man/img2txt)(1)

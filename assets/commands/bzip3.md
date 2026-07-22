@@ -99,6 +99,24 @@ Not compatible with bzip2 (.bz2 files). Less widely supported than gzip/bzip2. R
 
 **bzip3** was created by Kamila Szewczyk in **2022** as a modern successor to bzip2, using improved algorithms for better compression.
 
+# INSTALL
+
+```apt: sudo apt install bzip3```
+
+```dnf: sudo dnf install bzip3```
+
+```pacman: sudo pacman -S bzip3```
+
+```apk: sudo apk add bzip3```
+
+```zypper: sudo zypper install bzip3```
+
+```brew: brew install bzip3```
+
+```nix: nix profile install nixpkgs#bzip3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bzip2](/man/bzip2)(1), [xz](/man/xz)(1), [zstd](/man/zstd)(1)

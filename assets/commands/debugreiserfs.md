@@ -77,6 +77,12 @@ Only works with ReiserFS (v3) filesystems. Device should not be mounted during e
 
 debugreiserfs was developed as part of the **reiserfsprogs** package. ReiserFS was created by **Hans Reiser** and Namesys, introduced in Linux 2.4.1 (**2001**) as the first journaling filesystem included in the mainline kernel.
 
+# INSTALL
+
+```apt: sudo apt install reiserfsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [debugfs](/man/debugfs)(8)

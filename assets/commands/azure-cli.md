@@ -141,6 +141,19 @@ Requires Python 3.8+. Large installation size (hundreds of MB). Regular updates 
 
 **azure-cli** (version 2.0+) was released in **2017** as a complete rewrite in Python, replacing the Node.js-based version 1.0.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-login](/man/az-login)(1), [az-account](/man/az-account)(1), [az-extension](/man/az-extension)(1), [azcopy](/man/azcopy)(1), [pip](/man/pip)(1)

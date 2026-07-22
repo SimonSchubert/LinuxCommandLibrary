@@ -90,6 +90,22 @@ Only works on Linux virtual consoles (TTYs), not in terminal emulators like xter
 
 **setfont** is part of the **kbd** (keyboard and console utilities) package, which has been a standard Linux component since the early **1990s**. The PSF font format was developed specifically for Linux console fonts. The command evolved from earlier utilities like **loadfont** and integrates Unicode support added in Linux **2.0** era.
 
+# INSTALL
+
+```apt: sudo apt install kbd```
+
+```dnf: sudo dnf install kbd```
+
+```pacman: sudo pacman -S kbd```
+
+```apk: sudo apk add kbd```
+
+```zypper: sudo zypper install kbd```
+
+```nix: nix profile install nixpkgs#kbd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [showconsolefont](/man/showconsolefont)(8), [loadkeys](/man/loadkeys)(1), [consolechars](/man/consolechars)(8)

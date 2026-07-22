@@ -23,6 +23,12 @@ _vmid_
 
 The output indicates the current snapshot with an arrow marker. This helps identify available restore points and manage snapshot storage before performing rollbacks or deletions.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-snapshot](/man/qm-snapshot)(1), [qm-delsnapshot](/man/qm-delsnapshot)(1), [qm-rollback](/man/qm-rollback)(1), [qm-clone](/man/qm-clone)(1)

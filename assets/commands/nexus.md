@@ -26,6 +26,16 @@ Does not support all Postman features like scripting or environment variable sub
 
 **nexus** was created by **Pranav CS** (pranav-cs-1) and is written in **Rust**.
 
+# INSTALL
+
+```dnf: sudo dnf install nexus```
+
+```brew: brew install nexus```
+
+```nix: nix profile install nixpkgs#nexus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [httpie](/man/httpie)(1)

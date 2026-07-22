@@ -87,6 +87,24 @@ Slower than compiled code. Recompiles each run. For performance, use ghc to comp
 
 runghc is part of **GHC** (Glasgow Haskell Compiler), the primary Haskell compiler developed by the GHC team.
 
+# INSTALL
+
+```apt: sudo apt install ghc```
+
+```dnf: sudo dnf install ghc```
+
+```pacman: sudo pacman -S ghc```
+
+```apk: sudo apk add ghc```
+
+```zypper: sudo zypper install ghc```
+
+```brew: brew install ghc```
+
+```nix: nix profile install nixpkgs#ghc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ghc](/man/ghc)(1), [ghci](/man/ghci)(1), [cabal](/man/cabal)(1), [stack](/man/stack)(1)

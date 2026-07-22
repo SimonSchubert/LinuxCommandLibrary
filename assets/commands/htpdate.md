@@ -72,6 +72,18 @@ Less accurate than NTP (HTTP timestamps have one-second resolution). Depends on 
 
 htpdate was created by Eddy Vervest as an alternative to NTP for environments where NTP traffic is restricted. It leverages the ubiquity of HTTP access to provide basic time synchronization.
 
+# INSTALL
+
+```apt: sudo apt install htpdate```
+
+```apk: sudo apk add htpdate```
+
+```brew: brew install htpdate```
+
+```nix: nix profile install nixpkgs#htpdate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ntpd](/man/ntpd)(8), [chrony](/man/chrony)(8), [date](/man/date)(1)

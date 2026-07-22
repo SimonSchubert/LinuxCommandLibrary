@@ -133,6 +133,17 @@ Deleting a cluster requires stopping all tasks and deleting all services first. 
 
 Amazon ECS was announced at **AWS re:Invent 2014** and launched in **April 2015** as AWS's first container orchestration service. **Fargate** serverless compute was added in **November 2017**. ECS Exec for interactive debugging was introduced in **March 2021**. The service continues to evolve alongside AWS's container strategy including integration with EKS.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ecr](/man/aws-ecr)(1), [aws-eks](/man/aws-eks)(1), [docker](/man/docker)(1), [kubectl](/man/kubectl)(1)

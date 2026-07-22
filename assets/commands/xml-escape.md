@@ -25,6 +25,22 @@ _text_
 
 **xml escape** escapes special XML characters. Part of xmlstarlet toolkit. Converts <, >, &, ', " to their XML entity equivalents for safe inclusion in XML documents.
 
+# INSTALL
+
+```dnf: sudo dnf install xmlstarlet```
+
+```pacman: sudo pacman -S xmlstarlet```
+
+```apk: sudo apk add xmlstarlet```
+
+```zypper: sudo zypper install xmlstarlet```
+
+```brew: brew install xmlstarlet```
+
+```nix: nix profile install nixpkgs#xmlstarlet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xml-unescape](/man/xml-unescape)(1), [xml-format](/man/xml-format)(1)

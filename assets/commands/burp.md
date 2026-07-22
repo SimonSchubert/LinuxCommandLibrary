@@ -73,6 +73,16 @@ Burp Suite Community Edition lacks automated scanning capabilities. Using Burp a
 
 Burp Suite was created by **Dafydd Stuttard** (author of "The Web Application Hacker's Handbook") and first released around **2003**. Originally a collection of separate tools, it evolved into an integrated suite. PortSwigger Ltd was founded in **2004** to develop and market Burp Suite professionally. It has become the industry-standard tool for web application penetration testing.
 
+# INSTALL
+
+```apt: sudo apt install burp```
+
+```brew: brew install burp```
+
+```nix: nix profile install nixpkgs#burp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mitmproxy](/man/mitmproxy)(1), [nikto](/man/nikto)(1), [sqlmap](/man/sqlmap)(1)

@@ -110,6 +110,16 @@ Read-only - can't create RAR archives (need rar). Freeware but not open-source. 
 
 **unrar** is developed by **RARLAB** (Eugene Roshal). It's provided as freeware for extracting RAR archives. Creating archives requires the commercial rar program.
 
+# INSTALL
+
+```dnf: sudo dnf install unrar```
+
+```pacman: sudo pacman -S unrar```
+
+```nix: nix profile install nixpkgs#unrar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rar](/man/rar)(1), [7z](/man/7z)(1), [unzip](/man/unzip)(1), [tar](/man/tar)(1)

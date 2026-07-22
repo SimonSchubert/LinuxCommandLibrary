@@ -76,6 +76,14 @@ Quagga is largely superseded by FRRouting (FRR). Default VTY password should be 
 
 **zebra** originated from the GNU Zebra project by Kunihiro Ishiguro, discontinued in 2005. Quagga forked from it and maintained development until FRRouting forked from Quagga in 2017 for faster, more open development. The zebra daemon name persists in both projects.
 
+# INSTALL
+
+```apk: sudo apk add quagga```
+
+```brew: brew install zebra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ospfd](/man/ospfd)(8), [bgpd](/man/bgpd)(8), [ripd](/man/ripd)(8), [vtysh](/man/vtysh)(1)

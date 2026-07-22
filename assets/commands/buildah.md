@@ -143,6 +143,22 @@ Different from Docker workflow (learning curve). Some Docker features not suppor
 
 **buildah** was created by Red Hat around **2017** as a component of their container tooling suite, focusing on building without daemons.
 
+# INSTALL
+
+```apt: sudo apt install buildah```
+
+```dnf: sudo dnf install buildah```
+
+```pacman: sudo pacman -S buildah```
+
+```apk: sudo apk add buildah```
+
+```zypper: sudo zypper install buildah```
+
+```nix: nix profile install nixpkgs#buildah```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [docker](/man/docker)(1), [skopeo](/man/skopeo)(1)

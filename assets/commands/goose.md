@@ -91,6 +91,16 @@ Requires database connection. Migration files must follow naming conventions. Do
 
 **goose** was created as a language-agnostic migration tool supporting both SQL and Go-based migrations, filling the gap for Go developers needing database migrations.
 
+# INSTALL
+
+```dnf: sudo dnf install goose```
+
+```brew: brew install goose```
+
+```nix: nix profile install nixpkgs#goose```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [migrate](https://github.com/golang-migrate/migrate), [dbmate](https://github.com/amacneil/dbmate), [flyway](https://flywaydb.org/), [liquibase](https://www.liquibase.org/)

@@ -89,6 +89,24 @@ Be careful with wildcards. **rm \*** in the wrong directory is destructive. Use 
 
 Root user should use **rm** with extreme caution. Consider aliases that add **-i** by default.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rmdir](/man/rmdir)(1), [unlink](/man/unlink)(1), [shred](/man/shred)(1), [trash-cli](/man/trash-cli)(1)

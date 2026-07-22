@@ -97,6 +97,16 @@ Destructive operations are immediate and cannot be undone. Specifying the wrong 
 
 **sgdisk** is part of the **GPT fdisk** suite by **Rod Smith**, first released around **2010**. It was created as the scriptable counterpart to the interactive **gdisk** tool, filling the need for automated GPT partition management in scripts and deployment workflows.
 
+# INSTALL
+
+```apt: sudo apt install gdisk```
+
+```dnf: sudo dnf install gdisk```
+
+```apk: sudo apk add sgdisk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdisk](/man/gdisk)(1), [fdisk](/man/fdisk)(1), [parted](/man/parted)(1)

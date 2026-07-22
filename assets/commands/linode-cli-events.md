@@ -72,6 +72,14 @@ Requires authentication. Events have retention limits. Part of linode-cli.
 
 linode-cli events is part of the **Linode CLI** for monitoring account activity and audit trails.
 
+# INSTALL
+
+```brew: brew install linode-cli```
+
+```nix: nix profile install nixpkgs#linode-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [linode-cli](/man/linode-cli)(1), [linode-cli-linodes](/man/linode-cli-linodes)(1)

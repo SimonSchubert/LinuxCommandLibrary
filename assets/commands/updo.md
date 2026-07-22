@@ -48,6 +48,12 @@ Uptime monitoring CLI with alerting support
 
 **updo** was created by **Owloops** and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S updo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ping](/man/ping)(1), [curl](/man/curl)(1), [httpstat](/man/httpstat)(1)

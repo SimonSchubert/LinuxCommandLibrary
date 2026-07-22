@@ -98,6 +98,12 @@ Currently only fully supports Linux (kernel 4.5+ recommended). macOS and Windows
 
 **cpx** was created by **Bhuminjay Soni** and publicly introduced around **January 2026**. Written in Rust under the MIT license. The latest version is v0.1.4 (February 2026). Available via Cargo, AUR (as cpx-copy), Nix, and pre-built binaries.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#cpx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cp](/man/cp)(1), [rsync](/man/rsync)(1), [mv](/man/mv)(1), [pv](/man/pv)(1)

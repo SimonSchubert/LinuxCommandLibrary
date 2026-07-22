@@ -69,6 +69,12 @@ Text extraction quality varies. Complex layouts may not preserve structure. Imag
 
 pdf2json is based on PDF.js or similar libraries, providing JSON export for PDF processing pipelines.
 
+# INSTALL
+
+```brew: brew install pdf2json```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdftotext](/man/pdftotext)(1), [pdftohtml](/man/pdftohtml)(1), [poppler-utils](/man/poppler-utils)(1)

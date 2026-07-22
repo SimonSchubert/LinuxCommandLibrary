@@ -116,6 +116,22 @@ Not compatible with iperf2 protocol. Server port (5201) must be accessible throu
 
 **iperf3** was developed by ESnet (Energy Sciences Network) at Lawrence Berkeley National Laboratory, released around **2014** as a rewrite of the original iperf. The rewrite improved the codebase, added features like JSON output and bidirectional testing, and fixed protocol limitations. It has become the standard network throughput testing tool.
 
+# INSTALL
+
+```apt: sudo apt install iperf3```
+
+```dnf: sudo dnf install iperf3```
+
+```pacman: sudo pacman -S iperf3```
+
+```apk: sudo apk add iperf3```
+
+```brew: brew install iperf3```
+
+```nix: nix profile install nixpkgs#iperf3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iperf](/man/iperf)(1), [netperf](/man/netperf)(1), [nuttcp](/man/nuttcp)(8), [speedtest-cli](/man/speedtest-cli)(1)

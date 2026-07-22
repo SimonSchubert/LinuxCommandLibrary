@@ -86,6 +86,12 @@ Implementation varies (several tools named "notes"). Plain text storage. Editor 
 
 Various command-line note tools exist; implementations include those by **Nick Nisi** and others, following Unix philosophy of simple text file management.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#notes```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nb](/man/nb)(1), [jrnl](/man/jrnl)(1), [vim](/man/vim)(1)

@@ -132,6 +132,24 @@ Learning curve for commands and configuration. Some features require plugins/scr
 
 **WeeChat** was created by **Sébastien Helleu** (FlashCode) in **2003**. The name references "wee" (small) and evolved to mean "extensible environment." Written in C for performance with extensive scripting support, it became a popular alternative to irssi for terminal chat.
 
+# INSTALL
+
+```apt: sudo apt install weechat-curses```
+
+```dnf: sudo dnf install weechat```
+
+```pacman: sudo pacman -S weechat```
+
+```apk: sudo apk add weechat```
+
+```zypper: sudo zypper install weechat```
+
+```brew: brew install weechat```
+
+```nix: nix profile install nixpkgs#weechat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [irssi](/man/irssi)(1), [hexchat](/man/hexchat)(1), [matrix-commander](/man/matrix-commander)(1)

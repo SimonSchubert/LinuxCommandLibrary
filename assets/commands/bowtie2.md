@@ -101,6 +101,20 @@ Index must be built before alignment using bowtie2-build. Memory usage scales wi
 
 **Bowtie2** was developed by **Ben Langmead** and **Steven Salzberg** at Johns Hopkins University, published in **2012** in Nature Methods. It succeeded the original Bowtie aligner with improved handling of longer reads and gapped alignments. Bowtie2 has become one of the most widely used aligners in genomics research, particularly for DNA-seq and ChIP-seq analysis.
 
+# INSTALL
+
+```apt: sudo apt install bowtie2```
+
+```dnf: sudo dnf install bowtie2```
+
+```zypper: sudo zypper install bowtie2```
+
+```brew: brew install bowtie2```
+
+```nix: nix profile install nixpkgs#bowtie2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bwa](/man/bwa)(1), [samtools](/man/samtools)(1)

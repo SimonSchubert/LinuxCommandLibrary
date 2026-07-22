@@ -73,6 +73,18 @@ Indexing large genomes requires significant memory and time. Output is uncompres
 
 **BWA** was developed by Heng Li and first published in **2009**. The MEM algorithm was introduced in **2013** and has become the preferred method for most mapping tasks.
 
+# INSTALL
+
+```apt: sudo apt install bwa```
+
+```dnf: sudo dnf install bwa```
+
+```brew: brew install bwa```
+
+```nix: nix profile install nixpkgs#bwa```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [samtools](/man/samtools)(1), [bowtie2](/man/bowtie2)(1), [minimap2](/man/minimap2)(1)

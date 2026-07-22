@@ -45,6 +45,12 @@ Detection is heuristic and may not be accurate for all systems. Some virtual mac
 
 laptop-detect was developed for Debian-based systems to allow software configuration to adapt automatically based on whether the system is mobile or stationary.
 
+# INSTALL
+
+```pacman: sudo pacman -S laptop-detect```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmidecode](/man/dmidecode)(8), [upower](/man/upower)(1), [hostnamectl](/man/hostnamectl)(1)

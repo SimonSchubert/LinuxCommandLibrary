@@ -32,6 +32,24 @@ A tag name must be valid ASCII and may contain lowercase and uppercase letters, 
 
 If no tag is specified, **latest** is used by default for both the source and target.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-tag](/man/docker-tag)(1), [docker-image-ls](/man/docker-image-ls)(1), [docker-image-pull](/man/docker-image-pull)(1), [docker-image-rm](/man/docker-image-rm)(1), [docker-build](/man/docker-build)(1), [docker-pull](/man/docker-pull)(1)

@@ -84,6 +84,20 @@ Only works with WebAssembly binaries, not native executables. Large modules may 
 
 **wasm-objdump** is part of WABT, the WebAssembly Binary Toolkit developed by the WebAssembly Community Group. WABT provides essential tools for working with the WebAssembly format, enabling developers to inspect and manipulate .wasm files.
 
+# INSTALL
+
+```apt: sudo apt install wabt```
+
+```dnf: sudo dnf install wabt```
+
+```pacman: sudo pacman -S wabt```
+
+```brew: brew install wabt```
+
+```nix: nix profile install nixpkgs#wabt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wasm-validate](/man/wasm-validate)(1), [wasm-strip](/man/wasm-strip)(1), [wasm2wat](/man/wasm2wat)(1), [wat2wasm](/man/wat2wasm)(1)

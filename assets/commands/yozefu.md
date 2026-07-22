@@ -28,6 +28,12 @@ TUI application for exploring Kafka cluster data
 
 **yozefu** was created by **Yann Prono** (MAIF) and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install yozefu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kafkacat](/man/kafkacat)(1)

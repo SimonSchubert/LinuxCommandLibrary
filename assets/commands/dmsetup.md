@@ -81,6 +81,22 @@ Requires root privileges. Incorrect use can cause data loss. Tables must specify
 
 dmsetup is part of the **device-mapper** component of **LVM2**, developed primarily by **Red Hat** and **Sistina Software**. Device-mapper was merged into the Linux kernel in **2003**, providing the foundation for flexible storage management.
 
+# INSTALL
+
+```apt: sudo apt install dmsetup```
+
+```dnf: sudo dnf install device-mapper```
+
+```pacman: sudo pacman -S device-mapper```
+
+```apk: sudo apk add device-mapper```
+
+```zypper: sudo zypper install device-mapper```
+
+```brew: brew install device-mapper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvm](/man/lvm)(8), [cryptsetup](/man/cryptsetup)(8), [dmraid](/man/dmraid)(8)

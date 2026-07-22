@@ -81,6 +81,16 @@ Requires appropriate permissions (udev rules on Linux). Reset destroys all crede
 
 fido2-token is part of **libfido2**, developed by **Yubico** and first released around **2019**. It provides open-source tooling for the FIDO2 standard, which succeeded U2F for strong authentication.
 
+# INSTALL
+
+```apt: sudo apt install fido2-tools```
+
+```dnf: sudo dnf install fido2-tools```
+
+```apk: sudo apk add fido2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ykman](/man/ykman)(1)

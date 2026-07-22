@@ -55,6 +55,12 @@ The tool is part of the foo2oak printer driver suite and is primarily used for d
 
 Reads from standard input only. Specific to the OAKT printer language used by certain HP Color LaserJet models.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2oak](/man/foo2oak)(1), [foo2oak-wrapper](/man/foo2oak-wrapper)(1)

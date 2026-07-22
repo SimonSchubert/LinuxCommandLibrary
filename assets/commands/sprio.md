@@ -101,6 +101,12 @@ Only works when the multi-factor priority plugin is configured in Slurm. Read-on
 
 **sprio** is part of **Slurm** (Simple Linux Utility for Resource Management), developed at **Lawrence Livermore National Laboratory** starting in **2002**. The multi-factor priority plugin was added to provide fair and configurable job scheduling in HPC environments. Slurm is now maintained by **SchedMD**.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [squeue](/man/squeue)(1), [scontrol](/man/scontrol)(1), [sacct](/man/sacct)(1), [sprio](/man/sprio)(1)

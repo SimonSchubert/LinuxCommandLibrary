@@ -90,6 +90,12 @@ Rate limited by archive sources. Large domains can take significant time; use -c
 
 **waymore** was created by **xnl-h4ck3r** for web reconnaissance, searching multiple archive sources for URLs.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#waymore```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [waybackurls](/man/waybackurls)(1), [gau](/man/gau)(1), [hakrawler](/man/hakrawler)(1)

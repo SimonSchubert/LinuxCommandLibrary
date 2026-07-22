@@ -46,6 +46,20 @@ The tool queries DigitalOcean's API to provide current information about support
 
 This information is essential for planning database deployments and ensuring configurations align with DigitalOcean's current offerings. Options may vary by region and change as DigitalOcean updates their managed database service.
 
+# INSTALL
+
+```dnf: sudo dnf install doctl```
+
+```pacman: sudo pacman -S doctl```
+
+```apk: sudo apk add doctl```
+
+```brew: brew install doctl```
+
+```nix: nix profile install nixpkgs#doctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doctl-databases](/man/doctl-databases)(1)

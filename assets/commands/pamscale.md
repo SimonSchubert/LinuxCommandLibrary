@@ -69,6 +69,24 @@ Upscaling may blur. Very small scales may lose detail. Large images need memory.
 
 pamscale is part of **Netpbm**, providing high-quality image scaling with various resampling algorithms.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamenlarge](/man/pamenlarge)(1), [pamstretch](/man/pamstretch)(1), [pnmscale](/man/pnmscale)(1)

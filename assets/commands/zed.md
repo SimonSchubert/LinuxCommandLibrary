@@ -82,6 +82,16 @@ Poorly written event scripts can cause system issues. Test scripts thoroughly be
 
 On systemd systems, zed typically runs as a systemd service (zfs-zed.service).
 
+# INSTALL
+
+```pacman: sudo pacman -S zed```
+
+```apk: sudo apk add zfs```
+
+```nix: nix profile install nixpkgs#zfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zfs](/man/zfs)(8), [zpool](/man/zpool)(8), [zpool-events](/man/zpool-events)(8)

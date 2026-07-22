@@ -122,6 +122,14 @@ Requires compile_commands.json or compile_flags.txt for accurate analysis. Initi
 
 **clangd** was developed as part of the **LLVM/Clang project** starting around **2017** to provide a modern language server for C-family languages. It replaced earlier tools like libclang-based completers. The project has seen rapid development, with features like semantic highlighting, inlay hints, and improved indexing added over time. It's now considered one of the most capable C++ language servers.
 
+# INSTALL
+
+```apt: sudo apt install clangd```
+
+```apk: sudo apk add clang22-extra-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clang](/man/clang)(1), [clang-format](/man/clang-format)(1), [clang-tidy](/man/clang-tidy)(1)

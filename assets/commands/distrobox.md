@@ -72,6 +72,22 @@ Run Linux distributions in containers with host integration
 
 Built on top of Podman or Docker, it provides seamless access to different distributions' package managers and software. Applications installed inside containers can be exported to appear in the host's application menu.
 
+# INSTALL
+
+```dnf: sudo dnf install distrobox```
+
+```pacman: sudo pacman -S distrobox```
+
+```apk: sudo apk add distrobox```
+
+```zypper: sudo zypper install distrobox```
+
+```brew: brew install distrobox```
+
+```nix: nix profile install nixpkgs#distrobox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [distrobox-create](/man/distrobox-create)(1), [distrobox-enter](/man/distrobox-enter)(1), [distrobox-list](/man/distrobox-list)(1), [distrobox-rm](/man/distrobox-rm)(1), [distrobox-stop](/man/distrobox-stop)(1), [distrobox-upgrade](/man/distrobox-upgrade)(1), [distrobox-export](/man/distrobox-export)(1), [distrobox-host-exec](/man/distrobox-host-exec)(1), [podman](/man/podman)(1), [docker](/man/docker)(1)

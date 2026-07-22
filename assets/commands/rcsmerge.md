@@ -64,6 +64,24 @@ RCS is a legacy version control system. Conflicts are marked inline and must be 
 
 **rcsmerge** is part of **RCS** (Revision Control System), created by **Walter Tichy** in 1982 at Purdue University.
 
+# INSTALL
+
+```apt: sudo apt install rcs```
+
+```dnf: sudo dnf install rcs```
+
+```pacman: sudo pacman -S rcs```
+
+```apk: sudo apk add rcs```
+
+```zypper: sudo zypper install rcs```
+
+```brew: brew install rcs```
+
+```nix: nix profile install nixpkgs#rcs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rcs](/man/rcs)(1), [rcsdiff](/man/rcsdiff)(1), [merge](/man/merge)(1), [ci](/man/ci)(1), [co](/man/co)(1), [rlog](/man/rlog)(1)

@@ -42,6 +42,24 @@ Output goes to standard output. Part of the **Netpbm** toolkit.
 
 Some less-common Rasterfile encodings (e.g. RT_BYTE_ENCODED RLE with unusual colormaps) may not be supported on every Netpbm build. The converter chooses the narrowest PNM subtype that can losslessly represent the input.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmtorast](/man/pnmtorast)(1), [xwdtopnm](/man/xwdtopnm)(1), [pnm](/man/pnm)(5)

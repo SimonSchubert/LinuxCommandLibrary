@@ -90,6 +90,22 @@ Trashing files on external drives creates a .Trash directory on that drive. Disk
 
 Developed by **Andrea Francia** as a command-line implementation of the FreeDesktop.org Trash specification. Provides Unix philosophy-compliant access to desktop trash functionality, enabling safe deletion practices in terminal workflows.
 
+# INSTALL
+
+```dnf: sudo dnf install trash-cli```
+
+```pacman: sudo pacman -S trash-cli```
+
+```apk: sudo apk add trash-cli```
+
+```zypper: sudo zypper install trash-cli```
+
+```brew: brew install trash-cli```
+
+```nix: nix profile install nixpkgs#trash-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rm](/man/rm)(1), [trash-put](/man/trash-put)(1), [trash-list](/man/trash-list)(1), [trash-restore](/man/trash-restore)(1), [trash-empty](/man/trash-empty)(1), [trash-rm](/man/trash-rm)(1), [gio-trash](/man/gio-trash)(1), [trashy](/man/trashy)(1)

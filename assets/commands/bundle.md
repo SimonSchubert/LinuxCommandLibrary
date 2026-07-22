@@ -123,6 +123,14 @@ Gemfile.lock should be committed for apps (not gems). bundle exec needed to use 
 
 **Bundler** was created by Carl Lerche, Yehuda Katz, and André Arko around **2009** to solve Ruby's dependency management problems, becoming the standard in **2010**.
 
+# INSTALL
+
+```pacman: sudo pacman -S ruby-bundler```
+
+```apk: sudo apk add ruby-bundler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gem](/man/gem)(1), [ruby](/man/ruby)(1), [rake](/man/rake)(1)

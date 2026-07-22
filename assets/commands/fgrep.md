@@ -73,6 +73,22 @@ No regex support by design. Deprecated in favor of grep -F; GNU grep 3.8 (2022) 
 
 fgrep (fast grep) originated in **Unix Version 7** as an optimized grep variant for literal strings. Modern implementations typically link to grep with the -F flag.
 
+# INSTALL
+
+```apt: sudo apt install grep```
+
+```dnf: sudo dnf install grep```
+
+```pacman: sudo pacman -S grep```
+
+```apk: sudo apk add grep```
+
+```zypper: sudo zypper install grep```
+
+```brew: brew install grep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [egrep](/man/egrep)(1), [rg](/man/rg)(1)

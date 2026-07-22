@@ -56,6 +56,14 @@ Thread count and endpoint flags: **s4cmd --help**.
 
 Verify compatibility with your AWS CLI credential setup. Parallel deletes/uploads can incur cost and throttling. Not identical to **aws s3** semantics—test before production migrations.
 
+# INSTALL
+
+```brew: brew install s4cmd```
+
+```nix: nix profile install nixpkgs#s4cmd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws](/man/aws)(1), [s3cmd](/man/s3cmd)(1), [rclone](/man/rclone)(1)

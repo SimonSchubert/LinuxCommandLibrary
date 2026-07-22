@@ -92,6 +92,22 @@ System-wide installation requires root privileges or polkit authentication. Per-
 
 Flatpak was developed by Red Hat's Alexander Larsson, with the first stable release in **2015** (originally called xdg-app). It provides sandboxed application distribution independent of Linux distributions. Flathub, the primary Flatpak repository, launched in **2017** and has become the largest source of Flatpak applications.
 
+# INSTALL
+
+```apt: sudo apt install flatpak```
+
+```dnf: sudo dnf install flatpak```
+
+```pacman: sudo pacman -S flatpak```
+
+```apk: sudo apk add flatpak```
+
+```zypper: sudo zypper install flatpak```
+
+```nix: nix profile install nixpkgs#flatpak```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flatpak](/man/flatpak)(1), [flatpak-update](/man/flatpak-update)(1), [flatpak-run](/man/flatpak-run)(1)

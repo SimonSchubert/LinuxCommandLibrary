@@ -114,6 +114,24 @@ Notes are stored as separate refs and are not pushed or fetched by default. Use 
 
 **git notes** was added to Git in version **1.6.6** (December 2009) to allow attaching metadata to commits without rewriting history.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-commit](/man/git-commit)(1), [git-push](/man/git-push)(1), [git-fetch](/man/git-fetch)(1)

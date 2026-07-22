@@ -147,6 +147,16 @@ NVIDIA GPU monitoring requires the **nvidia-smi** binary to be present; no AMD G
 
 gotop was originally created by **Caleb Bassi** (cjbassi) in **2018** as a Go rewrite of gtop. The original project was archived in **2020**. A community fork maintained by **xxxserxxx** continues development with additional features and fixes. gotop brought the visual monitor style to Go with cross-platform support.
 
+# INSTALL
+
+```apk: sudo apk add gotop```
+
+```brew: brew install gotop```
+
+```nix: nix profile install nixpkgs#gotop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [htop](/man/htop)(1), [btm](/man/btm)(1), [gtop](/man/gtop)(1), [zenith](/man/zenith)(1)

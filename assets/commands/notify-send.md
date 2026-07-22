@@ -69,6 +69,22 @@ Requires notification daemon. Desktop environment dependent. Part of libnotify.
 
 notify-send is part of **libnotify**, implementing the freedesktop.org Desktop Notifications spec.
 
+# INSTALL
+
+```apt: sudo apt install libnotify-bin```
+
+```dnf: sudo dnf install libnotify```
+
+```pacman: sudo pacman -S libnotify```
+
+```apk: sudo apk add libnotify```
+
+```brew: brew install libnotify```
+
+```nix: nix profile install nixpkgs#libnotify```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [noti](/man/noti)(1), [dunst](/man/dunst)(1), [zenity](/man/zenity)(1)

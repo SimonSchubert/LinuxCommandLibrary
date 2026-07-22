@@ -124,6 +124,16 @@ Not 100% Node.js compatible. Some native modules don't work. Not all npm package
 
 **Bun** was created by Jarred Sumner and first released in **2021** as a fast all-in-one JavaScript toolkit built on Zig and JavaScriptCore.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [npm](/man/npm)(1), [deno](/man/deno)(1)

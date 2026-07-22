@@ -131,6 +131,12 @@ Both **git-crypt** and **git-agecrypt** rely on Git filters, which means **git l
 
 **git-agecrypt** was created by **vlaci** and is maintained as an open-source project on GitHub. It builds on **age**, the modern file encryption tool by **Filippo Valsorda**, and is positioned as a lighter, more flexible successor to **git-crypt** for teams that already use age or SSH keys for secrets management.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#git-agecrypt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-crypt](/man/git-crypt)(1), [age](/man/age)(1), [sops](/man/sops)(1), [git](/man/git)(1)

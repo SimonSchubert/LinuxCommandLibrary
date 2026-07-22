@@ -107,6 +107,14 @@ Rain operates on one region at a time. Use **--region** to specify a different r
 
 Rain was developed by the **AWS CloudFormation team** and released as an open-source tool to improve the CloudFormation development experience. The name is a play on "what happens when you have a lot of CloudFormation." It is written in Go and actively maintained on GitHub.
 
+# INSTALL
+
+```brew: brew install rain```
+
+```nix: nix profile install nixpkgs#rain```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws](/man/aws)(1), [terraform](/man/terraform)(1), [sam](/man/sam)(1), [cdk](/man/cdk)(1)

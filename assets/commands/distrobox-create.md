@@ -70,6 +70,22 @@ Create non-interactively, **pulling the image** and installing extra packages
 
 Requires Podman or Docker. Images must be compatible Linux distributions. Home directory sharing is bidirectional. First entry may take time for initialization.
 
+# INSTALL
+
+```dnf: sudo dnf install distrobox```
+
+```pacman: sudo pacman -S distrobox```
+
+```apk: sudo apk add distrobox```
+
+```zypper: sudo zypper install distrobox```
+
+```brew: brew install distrobox```
+
+```nix: nix profile install nixpkgs#distrobox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [distrobox](/man/distrobox)(1), [distrobox-enter](/man/distrobox-enter)(1), [podman](/man/podman)(1)

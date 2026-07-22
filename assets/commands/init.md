@@ -67,6 +67,12 @@ Behavior varies between distributions. On systemd-based systems, **init** is a s
 
 System V init originated in AT&T UNIX System V in **1983**. It was the standard init system on most Linux distributions until systemd began replacing it around **2011**.
 
+# INSTALL
+
+```apt: sudo apt install runit-init```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [telinit](/man/telinit)(8), [runlevel](/man/runlevel)(8), [halt](/man/halt)(8), [reboot](/man/reboot)(8), [shutdown](/man/shutdown)(8), [service](/man/service)(8)

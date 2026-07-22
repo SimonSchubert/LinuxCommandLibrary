@@ -84,6 +84,20 @@ Use only with authorization. May trigger security alerts. Account lockouts possi
 
 Ncrack was developed by the **Nmap Project** team, initially released in **2009** as a network authentication cracking tool complementing Nmap.
 
+# INSTALL
+
+```apt: sudo apt install ncrack```
+
+```dnf: sudo dnf install ncrack```
+
+```pacman: sudo pacman -S ncrack```
+
+```brew: brew install ncrack```
+
+```nix: nix profile install nixpkgs#ncrack```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hydra](/man/hydra)(1), [medusa](/man/medusa)(1), [nmap](/man/nmap)(1), [john](/man/john)(1)

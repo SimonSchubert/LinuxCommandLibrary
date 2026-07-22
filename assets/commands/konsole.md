@@ -80,6 +80,20 @@ Some features require KDE Plasma desktop. Profile settings override command-line
 
 Konsole has been KDE's default terminal emulator since the early days of the KDE project. It was rewritten for KDE 4 and continues to evolve with the Plasma desktop.
 
+# INSTALL
+
+```apt: sudo apt install konsole```
+
+```dnf: sudo dnf install konsole```
+
+```pacman: sudo pacman -S konsole```
+
+```apk: sudo apk add konsole```
+
+```zypper: sudo zypper install konsole```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yakuake](/man/yakuake)(1), [gnome-terminal](/man/gnome-terminal)(1), [xterm](/man/xterm)(1)

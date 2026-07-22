@@ -95,6 +95,18 @@ Cannot extract text from scanned documents or image-based PDFs (use OCR tools li
 
 **pdftotext** was originally developed as part of the **Xpdf** project by **Derek Noonburg** in the late 1990s. The tool has since been incorporated into the **Poppler** library, a fork of Xpdf that has become the standard PDF rendering library on many Linux distributions. Both versions continue to be maintained, with Poppler receiving more active development and becoming the default on most modern systems.
 
+# INSTALL
+
+```apt: sudo apt install poppler-utils```
+
+```dnf: sudo dnf install poppler-utils```
+
+```apk: sudo apk add poppler-utils```
+
+```nix: nix profile install nixpkgs#poppler-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdfinfo](/man/pdfinfo)(1), [pdfimages](/man/pdfimages)(1), [pdftops](/man/pdftops)(1), [tesseract](/man/tesseract)(1), [mutool](/man/mutool)(1)

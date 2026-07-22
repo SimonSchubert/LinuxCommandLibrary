@@ -41,6 +41,14 @@ This process is typically started automatically by cockpit-ws and is not intende
 
 Part of the Cockpit suite. Normally invoked automatically by cockpit-ws rather than directly by users. Requires proper Cockpit installation.
 
+# INSTALL
+
+```dnf: sudo dnf install cockpit-bridge```
+
+```zypper: sudo zypper install cockpit-bridge```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cockpit-ws](/man/cockpit-ws)(8), [cockpit-tls](/man/cockpit-tls)(8)

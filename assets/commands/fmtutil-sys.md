@@ -88,6 +88,18 @@ Usually requires write access to the TeX Live system trees (root or the texlive 
 
 Part of TeX Live's multi-**fmtutil** design; **fmtutil-sys** selects system trees the way **updmap-sys** does for font maps. See the TeX Live sys-vs-user documentation for migration details.
 
+# INSTALL
+
+```dnf: sudo dnf install texlive```
+
+```apk: sudo apk add texlive```
+
+```zypper: sudo zypper install texlive```
+
+```brew: brew install texlive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fmtutil](/man/fmtutil)(1), [fmtutil-user](/man/fmtutil-user)(1), [mktexfmt](/man/mktexfmt)(1), [kpsewhich](/man/kpsewhich)(1), [tlmgr](/man/tlmgr)(1)

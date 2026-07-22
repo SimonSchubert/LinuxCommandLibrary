@@ -64,6 +64,20 @@ Designed primarily for Xfce but works on other desktops. Some features like cust
 
 **Thunar** was created by **Benedikt Meurer** for Xfce, replacing the older xffm file manager. It emphasizes speed and simplicity while providing essential file management features.
 
+# INSTALL
+
+```apt: sudo apt install thunar```
+
+```pacman: sudo pacman -S thunar```
+
+```apk: sudo apk add thunar```
+
+```zypper: sudo zypper install thunar```
+
+```nix: nix profile install nixpkgs#thunar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nautilus](/man/nautilus)(1), [dolphin](/man/dolphin)(1), [pcmanfm](/man/pcmanfm)(1), [nemo](/man/nemo)(1)

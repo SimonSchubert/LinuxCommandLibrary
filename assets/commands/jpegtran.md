@@ -75,6 +75,16 @@ Crop dimensions may be adjusted to MCU (Minimum Coded Unit) boundaries. Some tra
 
 jpegtran is part of libjpeg/libjpeg-turbo, the reference JPEG library. The original libjpeg was developed by the Independent JPEG Group starting in **1991**.
 
+# INSTALL
+
+```apt: sudo apt install libjpeg-turbo-progs```
+
+```dnf: sudo dnf install libjpeg-turbo-utils```
+
+```apk: sudo apk add libjpeg-turbo-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cjpeg](/man/cjpeg)(1), [djpeg](/man/djpeg)(1), [convert](/man/convert)(1)

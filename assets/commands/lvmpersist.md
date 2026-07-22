@@ -77,6 +77,20 @@ Common use cases include SAN-based clusters, high-availability failover pairs, a
 
 Requires SCSI devices that support persistent reservations (SCSI-3 PR). Not all storage arrays implement PR identically; test in your environment. Improper use can cause data loss in shared storage environments. Requires root privileges.
 
+# INSTALL
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvm](/man/lvm)(8), [vgchange](/man/vgchange)(8), [pvcreate](/man/pvcreate)(8), [pvs](/man/pvs)(8)

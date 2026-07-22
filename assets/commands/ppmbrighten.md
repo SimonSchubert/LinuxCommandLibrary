@@ -68,6 +68,24 @@ Values outside -100 to 100 are clamped. Works on PPM only. Consider pamaltsat fo
 
 ppmbrighten is part of **Netpbm** by **Jef Poskanzer** and contributors for basic color adjustment.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmcolormask](/man/ppmcolormask)(1), [ppmgamma](/man/ppmgamma)(1), [netpbm](/man/netpbm)(1)

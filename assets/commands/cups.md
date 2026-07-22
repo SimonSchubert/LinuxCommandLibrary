@@ -111,6 +111,20 @@ Requires user in lpadmin group.
 
 Use lpstat -p -d to see printers and default. Configure via web interface for easiest setup. cups-browsed auto-discovers network printers.
 
+# INSTALL
+
+```dnf: sudo dnf install cups```
+
+```pacman: sudo pacman -S cups```
+
+```zypper: sudo zypper install cups```
+
+```brew: brew install cups```
+
+```nix: nix profile install nixpkgs#cups```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lp](/man/lp)(1), [lpr](/man/lpr)(1), [lpstat](/man/lpstat)(1), [lpq](/man/lpq)(1), [lprm](/man/lprm)(1), [lpadmin](/man/lpadmin)(8), [lpoptions](/man/lpoptions)(1), [cupsctl](/man/cupsctl)(8)

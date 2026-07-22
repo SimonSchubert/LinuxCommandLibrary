@@ -51,6 +51,22 @@ Designed primarily for i3 window manager but works with other status bars. Some 
 
 i3status was created by Michael Stapelberg as part of the i3 window manager project, which began in **2009**. It provides a lightweight, efficient status line generator following Unix philosophy.
 
+# INSTALL
+
+```apt: sudo apt install i3status```
+
+```dnf: sudo dnf install i3status```
+
+```pacman: sudo pacman -S i3status```
+
+```apk: sudo apk add i3status```
+
+```zypper: sudo zypper install i3status```
+
+```nix: nix profile install nixpkgs#i3status```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [i3](/man/i3)(1), [polybar](/man/polybar)(1), [waybar](/man/waybar)(5)

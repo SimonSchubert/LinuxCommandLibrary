@@ -55,6 +55,24 @@ Part of groff package. Uses refer database format. Academic use mainly.
 
 lkbib is part of the **groff** text formatting system, providing bibliography lookup for the refer preprocessor.
 
+# INSTALL
+
+```apt: sudo apt install groff```
+
+```dnf: sudo dnf install groff```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [refer](/man/refer)(1), [lookbib](/man/lookbib)(1), [groff](/man/groff)(1)

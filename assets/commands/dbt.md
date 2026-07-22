@@ -104,6 +104,12 @@ Requires Python and a connection to a supported data warehouse. Complex dependen
 
 dbt was created by **Fishtown Analytics** (now dbt Labs) and released in **2016**. It pioneered the "analytics engineering" approach, bringing software development practices to data transformation and helping establish the modern data stack paradigm.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#dbt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [psql](/man/psql)(1), [bq](/man/bq)(1)

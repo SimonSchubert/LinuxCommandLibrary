@@ -104,6 +104,12 @@ Nub augments rather than replaces Node.js, so a working Node.js installation is 
 
 Nub was published in 2025 as a Rust-based companion to Node.js, positioned alongside all-in-one runtimes such as **bun** and **deno** but focused on speeding up existing Node.js workflows rather than introducing a separate runtime.
 
+# INSTALL
+
+```aur: yay -S nub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [npm](/man/npm)(1), [npx](/man/npx)(1), [pnpm](/man/pnpm)(1), [yarn](/man/yarn)(1), [bun](/man/bun)(1), [deno](/man/deno)(1)

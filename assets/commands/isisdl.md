@@ -62,6 +62,12 @@ TU Berlin specific. Requires ISIS account. Respects rate limits.
 
 isisdl was created to help **TU Berlin** students download course materials from the ISIS learning management system.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#isisdl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wget](/man/wget)(1), [curl](/man/curl)(1), [youtube-dl](/man/youtube-dl)(1)

@@ -83,6 +83,16 @@ The daemon can generate both random (version 4) and time-based (version 1) UUIDs
 
 Time-based UUIDs may expose MAC address information. Running as a daemon requires appropriate permissions. The -r and -t flags are test/request operations that connect to a running daemon rather than generating UUIDs directly.
 
+# INSTALL
+
+```apt: sudo apt install uuid-runtime```
+
+```dnf: sudo dnf install uuidd```
+
+```zypper: sudo zypper install uuidd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uuid](/man/uuid)(1), [uuidgen](/man/uuidgen)(1), [uuidparse](/man/uuidparse)(1)

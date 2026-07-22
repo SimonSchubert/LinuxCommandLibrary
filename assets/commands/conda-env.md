@@ -78,6 +78,14 @@ Use **export --from-history** to create cross-platform environment files that on
 
 The **--from-history** flag only works with structured formats (YAML, JSON), not with explicit or requirements formats. Environment files may not be portable across platforms unless **--from-history** or **--no-builds** is used during export.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-create](/man/conda-create)(1), [conda-activate](/man/conda-activate)(1), [conda-install](/man/conda-install)(1), [conda-list](/man/conda-list)(1)

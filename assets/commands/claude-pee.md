@@ -57,6 +57,12 @@ Requires the **claude** CLI to be installed and on **$PATH**, plus Rust **1.85+*
 
 **claude-pee** was published in **2026** as a community response to the cost difference between interactive and programmatic Claude Code usage, debuting on Hacker News and growing from a single-file Rust prototype into a small drop-in shim.
 
+# INSTALL
+
+```aur: yay -S claude```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1), [jq](/man/jq)(1), [tmux](/man/tmux)(1)

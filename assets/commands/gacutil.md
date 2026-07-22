@@ -74,6 +74,18 @@ Requires strong-named assemblies for GAC installation. Mono's GAC differs from W
 
 The GAC was introduced with **.NET Framework 1.0** by Microsoft for assembly sharing. Mono implemented compatible tools including gacutil for cross-platform .NET development. With .NET Core/.NET 5+, the GAC model was replaced by NuGet packages.
 
+# INSTALL
+
+```pacman: sudo pacman -S mono```
+
+```apk: sudo apk add mono```
+
+```brew: brew install mono```
+
+```nix: nix profile install nixpkgs#mono```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mono](/man/mono)(1), [mcs](/man/mcs)(1), [dotnet](/man/dotnet)(1)

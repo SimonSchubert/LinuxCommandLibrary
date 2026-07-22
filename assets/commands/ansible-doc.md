@@ -77,6 +77,17 @@ Documentation quality varies between core and community modules. Some modules ma
 
 **ansible-doc** has been part of Ansible since early versions, providing offline access to module documentation. Collections support was added with Ansible 2.9 in **2019**.
 
+# INSTALL
+
+```dnf: sudo dnf install ansible-core```
+
+```pacman: sudo pacman -S ansible-core```
+
+```apk: sudo apk add ansible-core```
+
+```zypper: sudo zypper install ansible-core```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ansible](/man/ansible)(1), [ansible-galaxy](/man/ansible-galaxy)(1), [ansible-playbook](/man/ansible-playbook)(1)

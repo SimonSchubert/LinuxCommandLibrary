@@ -103,6 +103,22 @@ The volume must be unmounted before resizing. Back up important data first. Part
 
 ntfsresize is part of **ntfs-3g**, developed by **Szabolcs Szakacsits** and others, providing safe NTFS resizing on Linux.
 
+# INSTALL
+
+```apt: sudo apt install ntfs-3g```
+
+```dnf: sudo dnf install ntfs-3g```
+
+```pacman: sudo pacman -S ntfs-3g```
+
+```apk: sudo apk add ntfs-3g-progs```
+
+```zypper: sudo zypper install ntfs-3g```
+
+```brew: brew install ntfs-3g```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ntfs-3g](/man/ntfs-3g)(8), [ntfsfix](/man/ntfsfix)(8), [parted](/man/parted)(8), [fdisk](/man/fdisk)(8)

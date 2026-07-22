@@ -76,6 +76,19 @@ When **--public-key** is omitted on **create**, Azure generates a new key pair a
 
 Requires Azure CLI to be installed and authenticated; this is a core command, so no extension is needed. Only the public key is stored in Azure. When a key is auto-generated, capture the returned private key right away.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [azure-cli](/man/azure-cli)(1), [az-vm](/man/az-vm)(1), [ssh-keygen](/man/ssh-keygen)(1)

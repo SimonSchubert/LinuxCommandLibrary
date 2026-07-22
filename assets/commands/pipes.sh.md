@@ -90,6 +90,12 @@ CPU usage increases with pipe count. Terminal must support ANSI colors. Best in 
 
 **pipes.sh** is a bash implementation of the classic "pipes" screensaver effect. It has become a popular terminal entertainment and desktop decoration script.
 
+# INSTALL
+
+```aur: yay -S pipes.sh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmatrix](/man/cmatrix)(1), [sl](/man/sl)(1), [asciiquarium](/man/asciiquarium)(1)

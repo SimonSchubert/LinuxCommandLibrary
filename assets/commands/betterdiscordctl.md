@@ -81,6 +81,13 @@ The tool handles installation, updates, and removal of BetterDiscord across diff
 
 Requires root privileges. BetterDiscord may break after Discord updates; reinstallation is often necessary. Using client modifications may violate Discord's Terms of Service.
 
+# INSTALL
+
+```aur: yay -S betterdiscordctl```
+
+```nix: nix profile install nixpkgs#betterdiscordctl```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [discord](/man/discord)(1), [flatpak](/man/flatpak)(1), [snap](/man/snap)(1)

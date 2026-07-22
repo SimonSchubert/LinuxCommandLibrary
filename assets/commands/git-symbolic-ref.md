@@ -58,6 +58,24 @@ Plumbing command. HEAD is most common use. Detached HEAD is not a symbolic ref.
 
 git symbolic-ref is a core **Git** plumbing command for managing symbolic references, fundamental to branch tracking.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-rev-parse](/man/git-rev-parse)(1)

@@ -68,6 +68,12 @@ Requires FLAC encoder. CPU intensive at high levels. No quality improvement poss
 
 **reflac** was created to batch re-encode FLAC files with modern compression settings while preserving all metadata.
 
+# INSTALL
+
+```aur: yay -S reflac```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flac](/man/flac)(1), [metaflac](/man/metaflac)(1), [sox](/man/sox)(1)

@@ -58,6 +58,14 @@ Requires valid OAuth2 client credentials (client ID and secret). The authorizati
 
 **oauth2c** was created by **Cloudentity** to simplify OAuth2 token acquisition from the command line, supporting the full range of OAuth2 grant types.
 
+# INSTALL
+
+```brew: brew install oauth2c```
+
+```nix: nix profile install nixpkgs#oauth2c```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [httpie](/man/httpie)(1)

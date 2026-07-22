@@ -97,6 +97,24 @@ Part of Ruby standard library. Alternative: YARD for enhanced features.
 
 RDoc was created by **Dave Thomas** for Ruby documentation, included in Ruby since version 1.8.
 
+# INSTALL
+
+```apt: sudo apt install ruby```
+
+```dnf: sudo dnf install ruby```
+
+```pacman: sudo pacman -S ruby```
+
+```apk: sudo apk add ruby-rdoc```
+
+```zypper: sudo zypper install ruby```
+
+```brew: brew install ruby```
+
+```nix: nix profile install nixpkgs#ruby```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ri](/man/ri)(1), [yard](/man/yard)(1), [ruby](/man/ruby)(1)

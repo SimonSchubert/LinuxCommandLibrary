@@ -67,6 +67,14 @@ Cgroups v1 and v2 have different hierarchies and features. On cgroups v2 systems
 
 **cgcreate** is part of **libcgroup**, providing user-space tools for managing Linux control groups which were introduced in kernel 2.6.24.
 
+# INSTALL
+
+```apt: sudo apt install cgroup-tools```
+
+```apk: sudo apk add cgroup-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cgdelete](/man/cgdelete)(1), [cgexec](/man/cgexec)(1), [cgset](/man/cgset)(1), [cgroups](/man/cgroups)(7)

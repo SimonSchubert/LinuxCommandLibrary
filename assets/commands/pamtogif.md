@@ -38,6 +38,24 @@ converts PAM/PNM images to GIF format
 
 **pamtogif** converts PAM/PNM images to GIF format. Part of Netpbm toolkit. Automatically reduces colors to 256 for GIF format.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [giftopnm](/man/giftopnm)(1), [ppmtogif](/man/ppmtogif)(1)

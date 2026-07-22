@@ -110,6 +110,17 @@ Playbook syntax errors fail fast; use --syntax-check first. Check mode may not w
 
 **ansible-playbook** has been the primary execution method for Ansible automation since the project's creation in **2012**, enabling infrastructure as code and declarative automation.
 
+# INSTALL
+
+```dnf: sudo dnf install ansible-core```
+
+```pacman: sudo pacman -S ansible-core```
+
+```apk: sudo apk add ansible-core```
+
+```zypper: sudo zypper install ansible-core```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ansible](/man/ansible)(1), [ansible-vault](/man/ansible-vault)(1), [ansible-lint](/man/ansible-lint)(1), [ansible-galaxy](/man/ansible-galaxy)(1)

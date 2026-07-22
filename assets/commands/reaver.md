@@ -90,6 +90,18 @@ Rate limiting and lock detection (**-l** option) are essential to avoid permanen
 
 Reaver was developed after security researcher **Stefan Viehböck** published his paper "Brute forcing Wi-Fi Protected Setup" in December **2011**, demonstrating the fundamental weakness in WPS design. The tool quickly became a standard component of wireless security testing toolkits. The Pixie Dust attack was added later to exploit implementation flaws in specific chipsets.
 
+# INSTALL
+
+```apt: sudo apt install reaver```
+
+```dnf: sudo dnf install reaver```
+
+```pacman: sudo pacman -S reaver```
+
+```brew: brew install reaver```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [wash](/man/wash)(1), [airmon-ng](/man/airmon-ng)(8), [wifite](/man/wifite)(1)

@@ -66,6 +66,12 @@ Not a standard command. Behavior and available flags depend entirely on how the 
 
 **lt** is commonly configured as a shell alias for tree-style directory listing using modern ls alternatives like **lsd**, **exa**, or **eza**.
 
+# INSTALL
+
+```apt: sudo apt install looptools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tree](/man/tree)(1), [lsd](/man/lsd)(1), [exa](/man/exa)(1), [eza](/man/eza)(1), [ls](/man/ls)(1)

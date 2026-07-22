@@ -98,6 +98,12 @@ Requires an X11 display. Network latency significantly affects gameplay on inter
 
 **XPilot** was created by Bjorn Stabell and Ken Ronny Schouten, with the first public release in **1991**. It became one of the earliest popular networked multiplayer games for Unix systems. The game gained a dedicated following throughout the 1990s with servers running worldwide. Various forks emerged including XPilot NG (Next Generation) which modernized the codebase and added features.
 
+# INSTALL
+
+```aur: yay -S xpilot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xpilot-ng](/man/xpilot-ng)(1), [xscreensaver](/man/xscreensaver)(1)

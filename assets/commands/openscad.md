@@ -89,6 +89,22 @@ Full CGAL rendering can be very slow for complex models. The -o output format is
 
 **OpenSCAD** was created by Marius Kintel and Clifford Wolf, first released in **2010** as an open-source tool for script-based 3D CAD modeling using Constructive Solid Geometry.
 
+# INSTALL
+
+```apt: sudo apt install openscad```
+
+```dnf: sudo dnf install openscad```
+
+```pacman: sudo pacman -S openscad```
+
+```apk: sudo apk add openscad```
+
+```zypper: sudo zypper install openscad```
+
+```nix: nix profile install nixpkgs#openscad```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [freecad](/man/freecad)(1), [blender](/man/blender)(1), [meshlab](/man/meshlab)(1)

@@ -77,6 +77,15 @@ Only WAV format is supported for recording and playback at this time. The **moni
 
 **asak** was created by **Qichao Lan** (chaosprint), a developer at the University of Oslo who specializes in Rust audio programming and is also the author of **Glicol**, a graph-oriented live coding language. The first commits appeared in **early 2024** and the project was publicly announced on Hacker News in **December 2024**. The tool reached version 0.3.6 by mid-2025. It is licensed under the MIT license.
 
+# INSTALL
+
+```aur: yay -S asak```
+
+```brew: brew install asak```
+
+```nix: nix profile install nixpkgs#asak```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [sox](/man/sox)(1), [arecord](/man/arecord)(1), [aplay](/man/aplay)(1), [play](/man/play)(1), [rec](/man/rec)(1), [ffmpeg](/man/ffmpeg)(1)

@@ -74,6 +74,16 @@ Must run as the PostgreSQL user. Directory must be empty or non-existent. Encodi
 
 initdb is part of PostgreSQL, developed since **1996** by the PostgreSQL Global Development Group. It originated from the POSTGRES project at UC Berkeley.
 
+# INSTALL
+
+```dnf: sudo dnf install postgresql17```
+
+```apk: sudo apk add postgresql17```
+
+```zypper: sudo zypper install postgresql17```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_ctl](/man/pg_ctl)(1), [postgres](/man/postgres)(1), [createdb](/man/createdb)(1)

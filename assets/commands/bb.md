@@ -85,6 +85,12 @@ Not full Clojure (some features missing). Not as fast as compiled code. Limited 
 
 **Babashka** was created by Michiel Borkent in **2019** to enable fast Clojure scripting without JVM startup overhead.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#babashka```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clojure](/man/clojure)(1), [lein](/man/lein)(1)

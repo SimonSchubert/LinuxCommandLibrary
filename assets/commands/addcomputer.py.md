@@ -64,6 +64,11 @@ For authorized security testing only. The default ms-DS-MachineAccountQuota of 1
 
 Part of the Impacket suite maintained by SecureAuth, this tool gained prominence in security testing as resource-based constrained delegation attacks became more widely understood after **2018**.
 
+# INSTALL
+
+```apk: sudo apk add py3-impacket```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [add-computer.py](/man/add-computer.py)(1), [impacket-getnpusers](/man/impacket-getnpusers)(1)

@@ -55,6 +55,20 @@ Part of HPLIP package. May need root for fixes. Distribution-specific behavior.
 
 hp-check is part of **HPLIP** (HP Linux Imaging and Printing), providing diagnostic capabilities for HP printer setups.
 
+# INSTALL
+
+```apt: sudo apt install hplip```
+
+```dnf: sudo dnf install hplip```
+
+```pacman: sudo pacman -S hplip```
+
+```zypper: sudo zypper install hplip```
+
+```nix: nix profile install nixpkgs#hplip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hp-setup](/man/hp-setup)(1), [hp-info](/man/hp-info)(1)

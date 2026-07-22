@@ -38,6 +38,12 @@ Has no external dependencies. Function syntax uses the **->** operator which dif
 
 **hexowl** was created by **DECE2183** and is written in **Go**. A web implementation is also available at hexowl.ru for browser-based usage.
 
+# INSTALL
+
+```aur: yay -S hexowl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bc](/man/bc)(1), [dc](/man/dc)(1), [kalker](/man/kalker)(1)

@@ -83,6 +83,20 @@ Create a new Rust package in an existing directory
 
 Default edition is 2024 in recent Rust versions. Initializes git repository by default if not already in one.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-new](/man/cargo-new)(1), [cargo-build](/man/cargo-build)(1)

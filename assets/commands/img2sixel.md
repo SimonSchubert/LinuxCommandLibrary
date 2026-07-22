@@ -65,6 +65,14 @@ Requires Sixel-capable terminal. Part of libsixel. Quality depends on colors.
 
 img2sixel is part of **libsixel** by **Hayaki Saito** for terminal graphics.
 
+# INSTALL
+
+```apt: sudo apt install libsixel-bin```
+
+```apk: sudo apk add libsixel-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [viu](/man/viu)(1), [chafa](/man/chafa)(1), [timg](/man/timg)(1)

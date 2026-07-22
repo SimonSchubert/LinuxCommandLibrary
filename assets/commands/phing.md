@@ -86,6 +86,12 @@ Requires PHP CLI. Build files use XML format with Ant-like syntax. Task names an
 
 Phing was originally created by **Andreas Aderhold** in 2002 as a PHP port of Apache Ant. The name is a recursive acronym: PHing Is Not GNU make.
 
+# INSTALL
+
+```aur: yay -S phing```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ant](/man/ant)(1), [make](/man/make)(1), [composer](/man/composer)(1), [php](/man/php)(1)

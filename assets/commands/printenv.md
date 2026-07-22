@@ -51,6 +51,24 @@ Only shows exported environment variables, not shell-local variables. For shell 
 
 **printenv** has been part of Unix systems since **BSD 4.2** in **1983**. The GNU version is part of **coreutils**. It provides a portable way to access environment variables across different shells.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [env](/man/env)(1), [export](/man/export)(1), [set](/man/set)(1)

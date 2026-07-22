@@ -83,6 +83,18 @@ Multiple compilations often needed for references. Bibliography requires bibtex/
 
 LaTeX was created by **Leslie Lamport** in the **1980s** as a set of macros for TeX (created by Donald Knuth in 1978). It remains the standard for academic publishing.
 
+# INSTALL
+
+```dnf: sudo dnf install texlive```
+
+```apk: sudo apk add texlive```
+
+```zypper: sudo zypper install texlive```
+
+```brew: brew install texlive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdflatex](/man/pdflatex)(1), [bibtex](/man/bibtex)(1), [latexmk](/man/latexmk)(1), [texdoc](/man/texdoc)(1)

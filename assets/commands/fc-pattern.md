@@ -45,6 +45,24 @@ Fontconfig patterns specify desired font properties like family, style, weight, 
 
 Pattern syntax can be complex. Output format requires understanding fontconfig internals. Primarily useful for debugging rather than regular font management.
 
+# INSTALL
+
+```apt: sudo apt install fontconfig```
+
+```dnf: sudo dnf install fontconfig```
+
+```pacman: sudo pacman -S fontconfig```
+
+```apk: sudo apk add fontconfig```
+
+```zypper: sudo zypper install fontconfig```
+
+```brew: brew install fontconfig```
+
+```nix: nix profile install nixpkgs#fontconfig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fc-match](/man/fc-match)(1), [fc-list](/man/fc-list)(1), [fc-query](/man/fc-query)(1)

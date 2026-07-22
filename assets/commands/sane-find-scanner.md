@@ -68,6 +68,14 @@ Cannot detect most parallel port scanners except some Mustek models with **-p**.
 
 sane-find-scanner is part of the **SANE** (Scanner Access Now Easy) project, which provides standardized access to scanner hardware on Unix-like systems. The project began in **1996** to create a universal scanner API.
 
+# INSTALL
+
+```apt: sudo apt install sane-utils```
+
+```apk: sudo apk add sane-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scanimage](/man/scanimage)(1), [saned](/man/saned)(8)

@@ -65,6 +65,16 @@ Written in Go. Respects .gitignore.
 
 pt was created as a **fast code search** tool written in Go.
 
+# INSTALL
+
+```apk: sudo apk add tcl-lib```
+
+```brew: brew install pt```
+
+```nix: nix profile install nixpkgs#pt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ag](/man/ag)(1), [rg](/man/rg)(1), [grep](/man/grep)(1)

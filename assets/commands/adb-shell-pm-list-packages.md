@@ -65,6 +65,21 @@ The output format is consistent but verbose. Pipe through **cut -d: -f2** to get
 
 Part of the Android Package Manager since the platform's initial release in **2008**, this command remains one of the most commonly used adb shell operations for device management and debugging.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb-shell-pm](/man/adb-shell-pm)(1), [adb-shell-pm-list](/man/adb-shell-pm-list)(1), [adb-shell](/man/adb-shell)(1), [adb](/man/adb)(1)

@@ -108,6 +108,14 @@ Modifying SNMP values can affect device operation and network stability. Ensure 
 
 **snmpset** is part of the **Net-SNMP** project, an open-source suite of SNMP tools and libraries. Net-SNMP evolved from the CMU SNMP implementation and later UCD-SNMP. It provides comprehensive SNMP v1, v2c, and v3 support and is the standard SNMP toolkit on most Unix-like systems.
 
+# INSTALL
+
+```apt: sudo apt install snmp```
+
+```apk: sudo apk add net-snmp-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snmpget](/man/snmpget)(1), [snmpwalk](/man/snmpwalk)(1), [snmptranslate](/man/snmptranslate)(1)

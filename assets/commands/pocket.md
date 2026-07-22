@@ -85,6 +85,12 @@ Requires Pocket account and API authentication. Third-party CLI client - feature
 
 Pocket CLI clients are community-developed tools for interacting with the **Pocket** service (originally Read It Later), acquired by **Mozilla** in 2017.
 
+# INSTALL
+
+```aur: yay -S pocket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [wget](/man/wget)(1)

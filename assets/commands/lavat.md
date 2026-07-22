@@ -113,6 +113,14 @@ Gradient mode (**-g**) needs a terminal emulator that supports **24-bit truecolo
 
 **lavat** was written by **AngelJumbo** in **C** on top of the **Termbox2** terminal library and published under the **MIT license** on GitHub. It is inspired by web-based JavaScript lava-lamp demos and joins a family of terminal eye-candy tools such as **aafire**, **cmatrix**, and **asciiquarium**.
 
+# INSTALL
+
+```brew: brew install lavat```
+
+```nix: nix profile install nixpkgs#lavat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aafire](/man/aafire)(1), [cacafire](/man/cacafire)(1), [cmatrix](/man/cmatrix)(1), [asciiquarium](/man/asciiquarium)(1), [pipes.sh](/man/pipes.sh)(1)

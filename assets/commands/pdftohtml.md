@@ -72,6 +72,20 @@ Complex PDF layouts may not convert accurately. Scanned PDFs (images) require OC
 
 **pdftohtml** originated in the **xpdf** project and is now maintained as part of **poppler-utils**, a fork that provides shared library access to PDF rendering functionality on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install poppler-utils```
+
+```dnf: sudo dnf install poppler-utils```
+
+```apk: sudo apk add poppler-utils```
+
+```brew: brew install pdftohtml```
+
+```nix: nix profile install nixpkgs#poppler-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdftotext](/man/pdftotext)(1), [pdftoppm](/man/pdftoppm)(1), [pdfinfo](/man/pdfinfo)(1), [pandoc](/man/pandoc)(1)

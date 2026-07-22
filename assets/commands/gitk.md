@@ -103,6 +103,16 @@ Requires Tcl/Tk. Interface is dated. May not be installed by default.
 
 gitk was written by **Paul Mackerras** and is one of the original **Git** GUI tools, providing visual history browsing since Git's early days.
 
+# INSTALL
+
+```dnf: sudo dnf install gitk```
+
+```apk: sudo apk add git-gitk```
+
+```zypper: sudo zypper install gitk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-gui](/man/git-gui)(1), [tig](/man/tig)(1), [git-log](/man/git-log)(1)

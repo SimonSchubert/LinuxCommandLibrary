@@ -55,6 +55,20 @@ Requires root for shadow file. System administration tool.
 
 pwck is a **shadow-utils** utility for password file verification.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grpck](/man/grpck)(8), [passwd](/man/passwd)(1)

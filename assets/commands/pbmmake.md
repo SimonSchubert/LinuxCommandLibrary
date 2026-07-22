@@ -51,6 +51,24 @@ Part of Netpbm. Simple patterns only. PBM format.
 
 pbmmake is part of **Netpbm** for creating bitmap images.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbm](/man/pbm)(5), [ppmmake](/man/ppmmake)(1), [netpbm](/man/netpbm)(1)

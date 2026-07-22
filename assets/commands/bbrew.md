@@ -55,6 +55,13 @@ Built with Node.js and the oclif CLI framework, bbrew supports both macOS (Homeb
 
 The tool does not manage or install packages. It is a search-only interface that queries the Homebrew API. Requires Node.js to be installed. The project is at version 0.0.1 and has minimal documentation.
 
+# INSTALL
+
+```brew: brew install bbrew```
+
+```nix: nix profile install nixpkgs#bbrew```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [brew](/man/brew)(1), [npm](/man/npm)(1)

@@ -62,6 +62,24 @@ All **fgrep** options are supported, including:
 
 The **GREP** environment variable can be set to specify an alternate grep program. The pattern is treated as a fixed string, not a regular expression. For regex searches, use **bzgrep** or **bzegrep**.
 
+# INSTALL
+
+```apt: sudo apt install bzip2```
+
+```dnf: sudo dnf install bzip2```
+
+```pacman: sudo pacman -S bzip2```
+
+```apk: sudo apk add bzip2```
+
+```zypper: sudo zypper install bzip2```
+
+```brew: brew install bzip2```
+
+```nix: nix profile install nixpkgs#bzip2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bzgrep](/man/bzgrep)(1), [bzegrep](/man/bzegrep)(1), [fgrep](/man/fgrep)(1), [bzip2](/man/bzip2)(1)

@@ -81,6 +81,24 @@ Very slow for large images due to exhaustive compression search. CPU intensive. 
 
 **Zopfli** was created by **Google** for maximum deflate compression. zopflipng applies it to PNG images.
 
+# INSTALL
+
+```apt: sudo apt install zopfli```
+
+```dnf: sudo dnf install zopfli```
+
+```pacman: sudo pacman -S zopfli```
+
+```apk: sudo apk add zopfli```
+
+```zypper: sudo zypper install zopfli```
+
+```brew: brew install zopfli```
+
+```nix: nix profile install nixpkgs#zopfli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [optipng](/man/optipng)(1), [pngcrush](/man/pngcrush)(1), [pngquant](/man/pngquant)(1)

@@ -130,6 +130,14 @@ Some adapters require additional packages. Large result sets may impact terminal
 
 Harlequin was created by **Ted Conbeer** and first released in **2023**. Built with Textual framework, it provides a modern terminal SQL experience. The project grew from frustration with CLI database tools lacking visual feedback. It emphasizes the DuckDB ecosystem while supporting traditional databases. Active development continues with new adapters and features.
 
+# INSTALL
+
+```brew: brew install harlequin```
+
+```nix: nix profile install nixpkgs#harlequin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [duckdb](/man/duckdb)(1), [psql](/man/psql)(1), [mysql](/man/mysql)(1), [sqlite3](/man/sqlite3)(1)

@@ -88,6 +88,16 @@ upgrades PostgreSQL to a new major version in place
 
 **pg_upgrade** upgrades PostgreSQL to a new major version in place. Faster than dump/restore for large databases. Preserves data files when possible. Always run with **--check** first to verify compatibility before performing the actual upgrade.
 
+# INSTALL
+
+```dnf: sudo dnf install postgresql17```
+
+```apk: sudo apk add postgresql17```
+
+```zypper: sudo zypper install postgresql17```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_dump](/man/pg_dump)(1), [pg_restore](/man/pg_restore)(1), [pg_ctl](/man/pg_ctl)(1), [pg_dumpall](/man/pg_dumpall)(1)

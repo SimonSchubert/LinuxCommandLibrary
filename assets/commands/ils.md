@@ -65,6 +65,24 @@ Part of sleuthkit. Forensic tool. Read-only analysis.
 
 ils is part of **The Sleuth Kit** by **Brian Carrier** for filesystem forensics.
 
+# INSTALL
+
+```apt: sudo apt install sleuthkit```
+
+```dnf: sudo dnf install sleuthkit```
+
+```pacman: sudo pacman -S sleuthkit```
+
+```apk: sudo apk add sleuthkit```
+
+```zypper: sudo zypper install sleuthkit```
+
+```brew: brew install sleuthkit```
+
+```nix: nix profile install nixpkgs#sleuthkit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fls](/man/fls)(1), [mmls](/man/mmls)(1)

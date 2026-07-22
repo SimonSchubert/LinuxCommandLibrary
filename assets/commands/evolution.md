@@ -74,6 +74,22 @@ Heavy resource usage compared to simpler clients. Some Exchange features require
 
 Evolution was originally developed by **Ximian** starting in **1999**, acquired by Novell in 2003, and later became part of the GNOME project. It was one of the first Linux applications to offer comprehensive groupware functionality.
 
+# INSTALL
+
+```apt: sudo apt install evolution```
+
+```dnf: sudo dnf install evolution```
+
+```pacman: sudo pacman -S evolution```
+
+```apk: sudo apk add evolution```
+
+```zypper: sudo zypper install evolution```
+
+```nix: nix profile install nixpkgs#evolution```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [thunderbird](/man/thunderbird)(1)

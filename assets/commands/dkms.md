@@ -98,6 +98,16 @@ DKMS requires kernel headers to be installed. Module sources are stored in /usr/
 
 **dkms** was developed by Dell as a solution to maintain out-of-tree kernel modules across kernel updates without manual rebuilding.
 
+# INSTALL
+
+```dnf: sudo dnf install dkms```
+
+```pacman: sudo pacman -S dkms```
+
+```zypper: sudo zypper install dkms```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [modprobe](/man/modprobe)(8), [insmod](/man/insmod)(8), [make](/man/make)(1)

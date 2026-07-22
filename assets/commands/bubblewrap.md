@@ -101,6 +101,20 @@ Requires kernel support for user namespaces (may be disabled on some systems). N
 
 **Bubblewrap** was created by **Alexander Larsson** at **Red Hat** in **2016** as a minimal, unprivileged sandboxing tool. It was extracted from the Flatpak project to provide a standalone sandboxing solution. The design focuses on being simple, secure, and usable without root privileges, making it suitable for desktop application isolation.
 
+# INSTALL
+
+```dnf: sudo dnf install bubblewrap```
+
+```pacman: sudo pacman -S bubblewrap```
+
+```zypper: sudo zypper install bubblewrap```
+
+```brew: brew install bubblewrap```
+
+```nix: nix profile install nixpkgs#bubblewrap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flatpak](/man/flatpak)(1), [unshare](/man/unshare)(1), [firejail](/man/firejail)(1), [namespaces](/man/namespaces)(7)

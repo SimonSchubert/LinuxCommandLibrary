@@ -79,6 +79,12 @@ Java required. Large files may need memory tuning. Part of Apache ORC project.
 
 Apache ORC was created at **Hortonworks** for Hive, later becoming a top-level Apache project for efficient columnar storage.
 
+# INSTALL
+
+```brew: brew install orc-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [parquet-tools](/man/parquet-tools)(1), [hive](/man/hive)(1), [spark](/man/spark)(1)

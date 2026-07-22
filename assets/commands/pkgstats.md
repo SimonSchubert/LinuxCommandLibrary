@@ -69,6 +69,12 @@ Requires internet access for submission and queries. Data is anonymous but inclu
 
 **pkgstats** is maintained by **Arch Linux DE** community to gather package usage statistics. It helps the Arch community make informed decisions about package maintenance and repository organization.
 
+# INSTALL
+
+```pacman: sudo pacman -S pkgstats```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pkgfile](/man/pkgfile)(1)

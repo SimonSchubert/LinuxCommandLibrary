@@ -30,6 +30,14 @@ Only supports **Linux x86-64** targets. Requires debug symbols in the binary (co
 
 **bugstalker** was developed as a modern Rust-native debugging tool, aiming to provide a better debugging experience for Rust developers compared to using GDB or LLDB with Rust pretty-printers.
 
+# INSTALL
+
+```pacman: sudo pacman -S bugstalker```
+
+```nix: nix profile install nixpkgs#bugstalker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdb](/man/gdb)(1), [lldb](/man/lldb)(1)

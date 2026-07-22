@@ -143,6 +143,20 @@ Requires DigitalOcean account and API token. Actions may incur charges. Some ope
 
 doctl was developed by **DigitalOcean** as the official CLI for their cloud platform. It provides programmatic access to DigitalOcean services, supporting DevOps workflows and infrastructure as code practices.
 
+# INSTALL
+
+```dnf: sudo dnf install doctl```
+
+```pacman: sudo pacman -S doctl```
+
+```apk: sudo apk add doctl```
+
+```brew: brew install doctl```
+
+```nix: nix profile install nixpkgs#doctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [terraform](/man/terraform)(1), [aws](/man/aws)(1), [gcloud](/man/gcloud)(1)

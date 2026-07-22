@@ -46,6 +46,14 @@ History is stored in memory and does not persist across restarts. Very frequent 
 
 **hwatch** was created by **blacknon** and is written in **Rust**. It was designed to address limitations of the traditional watch command, particularly the inability to review or compare previous outputs.
 
+# INSTALL
+
+```brew: brew install hwatch```
+
+```nix: nix profile install nixpkgs#hwatch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [watch](/man/watch)(1)

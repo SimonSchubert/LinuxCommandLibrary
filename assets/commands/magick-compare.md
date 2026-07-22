@@ -65,6 +65,18 @@ compares two images and outputs their differences
 
 **magick compare** compares two images and outputs their differences. Part of ImageMagick. Produces a difference image and/or calculates numerical metrics. Useful for regression testing and quality assurance.
 
+# INSTALL
+
+```pacman: sudo pacman -S imagemagick```
+
+```apk: sudo apk add imagemagick```
+
+```brew: brew install imagemagick```
+
+```nix: nix profile install nixpkgs#imagemagick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [magick](/man/magick)(1), [magick-convert](/man/magick-convert)(1)

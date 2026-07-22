@@ -100,6 +100,22 @@ Patches may fail if files have changed since the diff was created. Fuzz can caus
 
 **patch** was written by **Larry Wall** in **1985** as part of his contributions to Unix tools. It became essential for distributing software changes before version control systems were widespread. The tool remains important for kernel development, where patches are the standard method for submitting changes.
 
+# INSTALL
+
+```apt: sudo apt install patch```
+
+```dnf: sudo dnf install patch```
+
+```pacman: sudo pacman -S patch```
+
+```apk: sudo apk add patch```
+
+```zypper: sudo zypper install patch```
+
+```nix: nix profile install nixpkgs#patch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [git-apply](/man/git-apply)(1), [quilt](/man/quilt)(1)

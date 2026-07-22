@@ -53,6 +53,21 @@ Only displays help if the container author included a %help section during build
 
 The run-help feature has been part of Singularity/Apptainer since early versions, providing a standardized way for container authors to document container usage. The command was retained when Singularity became Apptainer under the Linux Foundation in **2021**.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-exec](/man/apptainer-exec)(1), [apptainer-inspect](/man/apptainer-inspect)(1), [apptainer-build](/man/apptainer-build)(1)

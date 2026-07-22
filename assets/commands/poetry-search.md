@@ -24,6 +24,18 @@ Search for packages on PyPI
 
 This command was deprecated in Poetry 1.6.0 and may not work in newer versions. Search for packages on pypi.org directly.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [poetry-add](/man/poetry-add)(1)

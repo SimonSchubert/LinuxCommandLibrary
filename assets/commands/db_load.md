@@ -88,6 +88,12 @@ Berkeley DB is being phased out in favor of newer solutions (SQLite, LMDB). Lice
 
 Berkeley DB was developed at **UC Berkeley** starting in **1991** as a replacement for older Unix dbm libraries. The db_load utility has been part of BDB since early versions. Oracle acquired Sleepycat Software (BDB's commercial maintainer) in **2006**. Despite being legacy technology, BDB remains in use in many systems including OpenLDAP and older versions of package managers.
 
+# INSTALL
+
+```apk: sudo apk add db-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sqlite3](/man/sqlite3)(1)

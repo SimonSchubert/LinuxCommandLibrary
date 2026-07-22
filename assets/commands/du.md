@@ -97,6 +97,24 @@ Can be slow on large directory trees. Reports actual disk usage (blocks allocate
 
 **du** has been part of Unix since the early **1970s**, one of the original Unix utilities for disk management.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [df](/man/df)(1), [ncdu](/man/ncdu)(1), [ls](/man/ls)(1), [find](/man/find)(1)

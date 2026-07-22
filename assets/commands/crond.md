@@ -81,6 +81,22 @@ Job output is mailed to the crontab owner unless redirected to syslog with -s or
 
 **crond** is the daemon component of cron, a standard Unix job scheduler that has been in use since Version 7 Unix. Modern implementations include Vixie cron and cronie.
 
+# INSTALL
+
+```apt: sudo apt install cronie```
+
+```dnf: sudo dnf install cronie```
+
+```pacman: sudo pacman -S cronie```
+
+```apk: sudo apk add cronie```
+
+```zypper: sudo zypper install cronie```
+
+```nix: nix profile install nixpkgs#cronie```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crontab](/man/crontab)(1), [crontab](/man/crontab)(5), [anacron](/man/anacron)(8)

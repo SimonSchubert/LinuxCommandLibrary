@@ -84,6 +84,24 @@ enscript supports customization through configuration files and command-line opt
 **~/.enscriptrc**
 > User-specific configuration file for personal preferences.
 
+# INSTALL
+
+```apt: sudo apt install enscript```
+
+```dnf: sudo dnf install enscript```
+
+```pacman: sudo pacman -S enscript```
+
+```apk: sudo apk add enscript```
+
+```zypper: sudo zypper install enscript```
+
+```brew: brew install enscript```
+
+```nix: nix profile install nixpkgs#enscript```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lpr](/man/lpr)(1)

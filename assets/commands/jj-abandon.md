@@ -53,6 +53,20 @@ If the working-copy commit is abandoned, Jujutsu automatically creates a new emp
 
 Abandoning does not delete commits immediately. They remain reachable via the operation log until garbage collected. With **--restore-descendants**, descendants keep their original tree but their parent links are not updated to skip the abandoned commit, which can produce duplicated content.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-squash](/man/jj-squash)(1), [jj-git-push](/man/jj-git-push)(1)

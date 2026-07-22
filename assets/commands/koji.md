@@ -72,6 +72,16 @@ Requires proper authentication configuration. Some operations require specific p
 
 Koji was developed by Red Hat and released in **2007** as the build system for Fedora. The name "Koji" comes from the Japanese word for yeast or mold used in brewing, reflecting its role in "brewing" packages.
 
+# INSTALL
+
+```dnf: sudo dnf install koji```
+
+```brew: brew install koji```
+
+```nix: nix profile install nixpkgs#koji```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mock](/man/mock)(1), [rpmbuild](/man/rpmbuild)(8)

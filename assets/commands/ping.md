@@ -114,6 +114,14 @@ Some hosts and firewalls block ICMP packets, causing ping to fail even when the 
 
 The ping command was written by **Mike Muuss** at the US Army Ballistic Research Laboratory in **December 1983**. The name comes from the sound of sonar, reflecting its purpose of testing if a remote host is "there". Muuss wrote it to diagnose network problems and it became one of the most widely used network utilities. The original implementation was for BSD Unix and has since been ported to virtually every operating system.
 
+# INSTALL
+
+```apt: sudo apt install iputils-ping```
+
+```apk: sudo apk add iputils-ping```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [traceroute](/man/traceroute)(8), [mtr](/man/mtr)(8), [netstat](/man/netstat)(8), [ss](/man/ss)(8)

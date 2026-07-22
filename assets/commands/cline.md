@@ -117,6 +117,12 @@ Requires API keys for cloud-hosted model providers. Local model support via Olla
 
 Cline was originally created as a Visual Studio Code extension under the name **Claude Dev** in **2024**, then renamed to Cline to reflect its model-agnostic design. It quickly grew to become one of the most popular open-source AI coding tools. **Cline CLI 2.0** was released in **February 2026**, rebuilding the full agent for terminal-first workflows with headless mode and ACP support.
 
+# INSTALL
+
+```brew: brew install cline```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1), [aider](/man/aider)(1), [codex](/man/codex)(1), [copilot](/man/copilot)(1)

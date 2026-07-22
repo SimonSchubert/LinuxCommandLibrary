@@ -35,6 +35,24 @@ This is part of the Netpbm package of image manipulation utilities. Input can be
 
 Some BMP variants may not be fully supported. For compressed BMP files, decompression is handled automatically for RLE-encoded images. Very old or non-standard BMP formats may cause errors.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bmptoppm](/man/bmptoppm)(1), [pnmtopng](/man/pnmtopng)(1), [netpbm](/man/netpbm)(1)

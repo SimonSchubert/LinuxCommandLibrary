@@ -42,6 +42,14 @@ Requires root privileges. Only affects IPv4 routes. Changes are not persistent a
 
 ifmetric was created by Lennart Poettering (who later created PulseAudio and systemd) to provide a simple way to manipulate routing metrics without complex ip route commands.
 
+# INSTALL
+
+```apt: sudo apt install ifmetric```
+
+```nix: nix profile install nixpkgs#ifmetric```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip](/man/ip)(8), [route](/man/route)(8), [ifconfig](/man/ifconfig)(8), [ifup](/man/ifup)(8)

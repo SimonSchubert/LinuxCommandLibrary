@@ -107,6 +107,20 @@ Requires C compiler for native builds. Garbage collected by default. Growing eco
 
 Nim was created by **Andreas Rumpf** starting in 2005, originally named Nimrod.
 
+# INSTALL
+
+```pacman: sudo pacman -S nim```
+
+```apk: sudo apk add nim```
+
+```zypper: sudo zypper install nim```
+
+```brew: brew install nim```
+
+```nix: nix profile install nixpkgs#nim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nimble](/man/nimble)(1), [gcc](/man/gcc)(1), [python](/man/python)(1)

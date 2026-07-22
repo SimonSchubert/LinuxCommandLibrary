@@ -42,6 +42,18 @@ displays information about image files
 
 **magick identify** displays information about image files. Part of ImageMagick. Shows format, dimensions, color space, file size, and other metadata. Supports format strings for custom output.
 
+# INSTALL
+
+```pacman: sudo pacman -S imagemagick```
+
+```apk: sudo apk add imagemagick```
+
+```brew: brew install imagemagick```
+
+```nix: nix profile install nixpkgs#imagemagick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [magick](/man/magick)(1), [file](/man/file)(1)

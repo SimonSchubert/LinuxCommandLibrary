@@ -76,6 +76,12 @@ conf_forward:
 
 Some less common Haskell syntax elements are not fully supported. In-source comments may occasionally be moved or lost. This project is effectively unmaintained; consider using Ormolu or Fourmolu instead.
 
+# INSTALL
+
+```aur: yay -S brittany```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ghc](/man/ghc)(1)

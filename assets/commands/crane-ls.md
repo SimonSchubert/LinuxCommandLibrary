@@ -54,6 +54,20 @@ The command is useful for inspecting available image versions without pulling an
 
 Requires authentication for private registries (configured via **crane auth** or Docker config). The **--insecure** flag forces HTTP instead of HTTPS, which should only be used for local or trusted registries.
 
+# INSTALL
+
+```pacman: sudo pacman -S crane```
+
+```apk: sudo apk add crane```
+
+```zypper: sudo zypper install crane```
+
+```brew: brew install crane```
+
+```nix: nix profile install nixpkgs#crane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-pull](/man/crane-pull)(1), [crane-digest](/man/crane-digest)(1), [crane-catalog](/man/crane-catalog)(1), [crane-tag](/man/crane-tag)(1)

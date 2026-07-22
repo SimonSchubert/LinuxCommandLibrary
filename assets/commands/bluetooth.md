@@ -104,6 +104,20 @@ Requires the BlueZ stack and bluetoothd daemon running. Some devices require spe
 
 **BlueZ** is the official Linux Bluetooth protocol stack, originally written by Max Krasnyansky at **Qualcomm** and maintained as an open-source project since the early **2000s**. The **bluetoothctl** utility was introduced with BlueZ 5 (released **2012**) as a replacement for the older hcitool and various other command-line utilities, consolidating Bluetooth management into a single modern interface.
 
+# INSTALL
+
+```dnf: sudo dnf install tlp```
+
+```pacman: sudo pacman -S tlp```
+
+```apk: sudo apk add tlp```
+
+```zypper: sudo zypper install tlp```
+
+```nix: nix profile install nixpkgs#tlp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hciconfig](/man/hciconfig)(1), [hcitool](/man/hcitool)(1), [rfkill](/man/rfkill)(8), [pulseaudio](/man/pulseaudio)(1)

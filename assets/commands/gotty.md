@@ -85,6 +85,12 @@ Security sensitive with -w flag. Use authentication in production. Firewall cons
 
 gotty was created by **Iwasaki Yudai** to share terminal sessions through web browsers.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#gotty```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ttyd](/man/ttyd)(1), [tmux](/man/tmux)(1)

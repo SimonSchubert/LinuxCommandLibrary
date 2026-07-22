@@ -92,6 +92,16 @@ Requires turbo.json config. Monorepo setup needed. The **--parallel** and **--sc
 
 **Turborepo** was created by **Jared Palmer** and acquired by **Vercel** in 2021. It focuses on making monorepo development fast.
 
+# INSTALL
+
+```pacman: sudo pacman -S turbo```
+
+```zypper: sudo zypper install turbo```
+
+```nix: nix profile install nixpkgs#turbo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [yarn](/man/yarn)(1), [pnpm](/man/pnpm)(1), [nx](/man/nx)(1)

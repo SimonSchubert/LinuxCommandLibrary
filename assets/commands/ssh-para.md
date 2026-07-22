@@ -45,6 +45,14 @@ Parallel SSH jobs manager with interactive CLI
 
 **ssh-para** was created by **joknarf** and is written in **Python**.
 
+# INSTALL
+
+```apt: sudo apt install openssh-client```
+
+```apk: sudo apk add dropbear-ssh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pssh](/man/pssh)(1), [pdsh](/man/pdsh)(1), [sake](/man/sake)(1)

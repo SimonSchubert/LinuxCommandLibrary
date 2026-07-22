@@ -69,6 +69,14 @@ Development use only. Not production server. Node.js required.
 
 **serve** is developed by **Vercel** (formerly ZEIT) as a simple static file server for local development.
 
+# INSTALL
+
+```brew: brew install serve```
+
+```nix: nix profile install nixpkgs#serve```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [http-server](/man/http-server)(1), [python](/man/python)(1), [nginx](/man/nginx)(1)

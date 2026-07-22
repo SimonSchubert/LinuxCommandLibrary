@@ -105,6 +105,24 @@ Blame follows renames of the file by default. Rewriting history with **rebase** 
 
 **git blame** was added in **2006**, adopting the name used by CVS and Subversion for the same idea. **git annotate** exists alongside it as a compatibility spelling with a different output format. The **--ignore-rev** and **--ignore-revs-file** options arrived in git **2.23** (**2019**), in response to the problem of repository-wide reformatting commits.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-annotate](/man/git-annotate)(1), [git-log](/man/git-log)(1), [git-bisect](/man/git-bisect)(1), [git-show](/man/git-show)(1), [git-diff](/man/git-diff)(1)

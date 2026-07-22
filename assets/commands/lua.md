@@ -72,6 +72,20 @@ Multiple versions exist (5.1-5.4). Some incompatibilities between versions. Embe
 
 Lua was created in 1993 at **PUC-Rio** in Brazil, designed as a lightweight embeddable scripting language.
 
+# INSTALL
+
+```dnf: sudo dnf install lua```
+
+```pacman: sudo pacman -S lua```
+
+```apk: sudo apk add lua5.1```
+
+```brew: brew install lua```
+
+```nix: nix profile install nixpkgs#lua```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [luajit](/man/luajit)(1), [luac](/man/luac)(1)

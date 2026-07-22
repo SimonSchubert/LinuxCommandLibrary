@@ -121,6 +121,20 @@ GPU support depends on drivers and hardware. Database can grow over time. Some m
 
 zenith was created by **Benjamin Vaisvil** and first released around **2019**. Written in Rust, it was designed to combine real-time monitoring with historical analysis. The project distinguishes itself from other monitors by storing and visualizing historical metrics.
 
+# INSTALL
+
+```pacman: sudo pacman -S zenith```
+
+```apk: sudo apk add zenith```
+
+```zypper: sudo zypper install zenith```
+
+```brew: brew install zenith```
+
+```nix: nix profile install nixpkgs#zenith```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [htop](/man/htop)(1), [top](/man/top)(1), [btm](/man/btm)(1), [gtop](/man/gtop)(1), [glances](/man/glances)(1)

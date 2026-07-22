@@ -67,6 +67,18 @@ Requires a working Java runtime to launch the underlying server JAR. The user ru
 
 **mcli** is a community-built tool that grew out of the practical need to script Minecraft server admin tasks on Linux machines, replacing ad-hoc shell wrappers around `screen` and the server JAR.
 
+# INSTALL
+
+```pacman: sudo pacman -S minio-client```
+
+```apk: sudo apk add minio-client```
+
+```zypper: sudo zypper install minio-client```
+
+```nix: nix profile install nixpkgs#minio-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [java](/man/java)(1), [screen](/man/screen)(1), [tmux](/man/tmux)(1)

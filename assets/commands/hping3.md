@@ -97,6 +97,14 @@ Requires root privileges. Flood mode can cause DoS. Spoofed packets may be illeg
 
 hping was created by **Salvatore Sanfilippo** (antirez, also creator of Redis). hping3 is the latest version, adding scripting capabilities and improved functionality.
 
+# INSTALL
+
+```apt: sudo apt install hping3```
+
+```dnf: sudo dnf install hping3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hping](/man/hping)(8), [nmap](/man/nmap)(1), [ping](/man/ping)(8), [tcpdump](/man/tcpdump)(1), [scapy](/man/scapy)(1)

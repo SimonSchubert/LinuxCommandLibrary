@@ -26,6 +26,12 @@ Obsidian integration requires the "Local REST API" plugin to be installed in you
 
 **tatuin** was created by **Konnov Konstantin** (panter-dsd) and is written in **Rust**.
 
+# INSTALL
+
+```aur: yay -S tatuin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [taskwarrior](/man/taskwarrior)(1), [todoist](/man/todoist)(1), [tui-journal](/man/tui-journal)(1)

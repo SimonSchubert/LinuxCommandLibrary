@@ -96,6 +96,24 @@ Does not create commits. Use git am for patch series. May fail on binary files w
 
 git apply is a core **Git** command for patch application, providing lower-level functionality than git am.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-am](/man/git-am)(1), [git-diff](/man/git-diff)(1), [patch](/man/patch)(1)

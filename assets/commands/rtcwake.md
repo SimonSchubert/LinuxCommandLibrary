@@ -120,6 +120,24 @@ Requires root privileges. Not all hardware supports all modes. Time is relative 
 
 **rtcwake** is part of **util-linux**, providing a standard interface to the Linux RTC wake functionality used for scheduled wake-ups and automated power management.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [hwclock](/man/hwclock)(8), [pm-suspend](/man/pm-suspend)(8)

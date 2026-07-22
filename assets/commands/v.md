@@ -98,6 +98,12 @@ Young language. Ecosystem growing. V-specific.
 
 **V** was created by **Alexander Medvednikov** as a simple, fast, and safe systems programming language.
 
+# INSTALL
+
+```brew: brew install v```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [go](/man/go)(1), [zig](/man/zig)(1)

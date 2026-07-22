@@ -77,6 +77,24 @@ xzcat only decompresses; it cannot handle tar archives (use **tar -xJf** for .ta
 
 xzcat is part of **XZ Utils**, developed by **Lasse Collin** and first released in **2009** as a successor to LZMA Utils. The .xz format was designed to replace .lzma with better features including integrity checking (CRC32/CRC64/SHA-256). XZ Utils became widely adopted as the standard compression tool for software distribution, particularly for Linux kernel and distribution tarballs.
 
+# INSTALL
+
+```apt: sudo apt install xz-utils```
+
+```dnf: sudo dnf install xz```
+
+```pacman: sudo pacman -S xz```
+
+```apk: sudo apk add xz```
+
+```zypper: sudo zypper install xz```
+
+```brew: brew install xz```
+
+```nix: nix profile install nixpkgs#xz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xz](/man/xz)(1), [unxz](/man/unxz)(1), [zcat](/man/zcat)(1), [bzcat](/man/bzcat)(1), [lzcat](/man/lzcat)(1)

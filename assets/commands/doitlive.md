@@ -46,6 +46,14 @@ Replay shell commands live for terminal demos
 
 Demo files can run destructive commands—review before playing. Not a secure automation tool; it is for presentation UX.
 
+# INSTALL
+
+```brew: brew install doitlive```
+
+```nix: nix profile install nixpkgs#doitlive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [script](/man/script)(1), [asciinema](/man/asciinema)(1), [vhs](/man/vhs)(1)

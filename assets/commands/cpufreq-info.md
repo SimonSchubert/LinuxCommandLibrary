@@ -90,6 +90,14 @@ Multiple output-specific options cannot be combined in a single invocation. The 
 
 **cpufreq-info** is part of the **cpufrequtils** package, providing user-space utilities for Linux CPU frequency scaling.
 
+# INSTALL
+
+```apk: sudo apk add cpufrequtils```
+
+```nix: nix profile install nixpkgs#cpufrequtils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cpufreq-set](/man/cpufreq-set)(1), [cpupower](/man/cpupower)(1), [auto-cpufreq](/man/auto-cpufreq)(1)

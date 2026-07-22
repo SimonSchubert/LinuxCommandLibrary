@@ -143,6 +143,14 @@ Passwords passed with **-a** appear in process listings and shell history. Use *
 
 Redis databases are numbered 0-15 by default. Use **-n** to select a database or **SELECT** command interactively.
 
+# INSTALL
+
+```apt: sudo apt install redis-tools```
+
+```apk: sudo apk add valkey-compat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [redis-server](/man/redis-server)(1), [redis-benchmark](/man/redis-benchmark)(1), [memcached](/man/memcached)(1)

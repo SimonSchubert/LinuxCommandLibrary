@@ -43,6 +43,14 @@ Only works with applications that have .desktop files. Application names are cas
 
 gtk-launch is part of GTK's command-line tools, providing a standard way to launch desktop applications. It supports the XDG Desktop Entry Specification for cross-desktop compatibility.
 
+# INSTALL
+
+```apt: sudo apt install libgtk-3-bin```
+
+```apk: sudo apk add gtk+3.0```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdg-open](/man/xdg-open)(1), [gio](/man/gio)(1), [desktop-file-validate](/man/desktop-file-validate)(1)

@@ -44,6 +44,12 @@ inspects PlatformIO project configuration and metadata
 
 **pio project** inspects PlatformIO project configuration and metadata. Shows parsed platformio.ini settings, resolved dependencies, and build information.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-init](/man/pio-init)(1), [pio-run](/man/pio-run)(1)

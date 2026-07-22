@@ -48,6 +48,20 @@ Only removes the database entry; does not delete the actual package file from di
 
 Part of **pacman** package management tools for Arch Linux. Complements repo-add for repository maintenance.
 
+# INSTALL
+
+```apt: sudo apt install pacman-package-manager```
+
+```dnf: sudo dnf install pacman```
+
+```pacman: sudo pacman -S pacman```
+
+```apk: sudo apk add pacman```
+
+```nix: nix profile install nixpkgs#pacman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [repo-add](/man/repo-add)(1), [pacman](/man/pacman)(8)

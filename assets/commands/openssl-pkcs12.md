@@ -95,6 +95,24 @@ PKCS12 passwords can be brute-forced. Use strong passwords. Legacy format uses w
 
 PKCS#12 is a standard from RSA Laboratories, widely supported for portable certificate storage.
 
+# INSTALL
+
+```apt: sudo apt install openssl```
+
+```dnf: sudo dnf install openssl```
+
+```pacman: sudo pacman -S openssl```
+
+```apk: sudo apk add openssl```
+
+```zypper: sudo zypper install openssl```
+
+```brew: brew install openssl```
+
+```nix: nix profile install nixpkgs#openssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl-x509](/man/openssl-x509)(1), [openssl-rsa](/man/openssl-rsa)(1), [keytool](/man/keytool)(1)

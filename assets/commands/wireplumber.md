@@ -58,6 +58,24 @@ The tool provides a GObject-based high-level library that wraps PipeWire's API f
 
 Requires PipeWire to be running. Usually managed by systemd on modern systems. Configuration is Lua-based.
 
+# INSTALL
+
+```apt: sudo apt install wireplumber```
+
+```dnf: sudo dnf install wireplumber```
+
+```pacman: sudo pacman -S wireplumber```
+
+```apk: sudo apk add wireplumber```
+
+```zypper: sudo zypper install wireplumber```
+
+```brew: brew install wireplumber```
+
+```nix: nix profile install nixpkgs#wireplumber```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wpctl](/man/wpctl)(1), [pipewire](/man/pipewire)(1), [pw-cli](/man/pw-cli)(1)

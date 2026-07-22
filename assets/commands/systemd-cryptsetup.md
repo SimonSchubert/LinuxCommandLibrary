@@ -40,6 +40,12 @@ Typically called by systemd automatically, not manually. The mapping appears at 
 
 **systemd-cryptsetup** integrates encrypted volume management with systemd's boot process, enabling automatic unlocking based on `/etc/crypttab` configuration.
 
+# INSTALL
+
+```apt: sudo apt install systemd-cryptsetup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cryptsetup](/man/cryptsetup)(8), [crypttab](/man/crypttab)(5), [systemd-cryptenroll](/man/systemd-cryptenroll)(1)

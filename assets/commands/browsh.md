@@ -90,6 +90,12 @@ Resource intensive due to running a full Firefox instance. Best used for bandwid
 
 Browsh was created as a modern replacement for text browsers like Lynx, capable of rendering modern websites that rely heavily on JavaScript and CSS.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#browsh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lynx](/man/lynx)(1), [w3m](/man/w3m)(1), [links](/man/links)(1), [elinks](/man/elinks)(1), [firefox](/man/firefox)(1)

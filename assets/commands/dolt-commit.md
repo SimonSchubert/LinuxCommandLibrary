@@ -62,6 +62,16 @@ Each commit requires a message describing the changes, creating an audit trail o
 
 Commits can be amended, authored by different users, and can include all modified tables automatically with the -a flag. Use -A (uppercase) to also include new untracked tables. Empty commits are rejected by default to prevent meaningless history entries.
 
+# INSTALL
+
+```pacman: sudo pacman -S dolt```
+
+```brew: brew install dolt```
+
+```nix: nix profile install nixpkgs#dolt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dolt-add](/man/dolt-add)(1), [dolt-status](/man/dolt-status)(1), [dolt-branch](/man/dolt-branch)(1), [dolt-merge](/man/dolt-merge)(1)

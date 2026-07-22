@@ -108,6 +108,14 @@ Messaging integrations require API tokens or credentials from their respective p
 
 OpenClaw was created in November 2025 by **Peter Steinberger**, co-founder and former CEO of PSPDFKit. The project was originally named **Clawdbot** and was open source from the start. In January 2026, Anthropic threatened legal action over the trademark similarity between "Clawd" and "Claude," prompting a rename to **Moltbot**. Just three days later, the project was renamed again to **OpenClaw** after cryptocurrency scammers hijacked abandoned social media accounts associated with the Moltbot name. The project grew rapidly, becoming one of the fastest-growing repositories in GitHub history and surpassing 200,000 stars within 84 days. In February 2026, Steinberger announced he was joining OpenAI to lead next-generation personal AI agents, and the OpenClaw Foundation was established to steward the open-source project.
 
+# INSTALL
+
+```dnf: sudo dnf install openclaw```
+
+```nix: nix profile install nixpkgs#openclaw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1), [ollama](/man/ollama)(1), [llm](/man/llm)(1)

@@ -56,6 +56,22 @@ _days_
 
 It operates on the standard FreeDesktop.org trash locations, including per-user and per-volume trash directories.
 
+# INSTALL
+
+```dnf: sudo dnf install trash-cli```
+
+```pacman: sudo pacman -S trash-cli```
+
+```apk: sudo apk add trash-cli```
+
+```zypper: sudo zypper install trash-cli```
+
+```brew: brew install trash-cli```
+
+```nix: nix profile install nixpkgs#trash-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [trash](/man/trash)(1), [trash-list](/man/trash-list)(1), [trash-restore](/man/trash-restore)(1)

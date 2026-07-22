@@ -56,6 +56,22 @@ Requires root privileges. Cannot deallocate the current VT or VTs with active pr
 
 **deallocvt** is part of the **kbd** package for Linux console utilities and was originally authored by **Andries Brouwer**. It provides low-level management of Linux virtual terminal resources.
 
+# INSTALL
+
+```apt: sudo apt install kbd```
+
+```dnf: sudo dnf install kbd```
+
+```pacman: sudo pacman -S kbd```
+
+```apk: sudo apk add kbd```
+
+```zypper: sudo zypper install kbd```
+
+```nix: nix profile install nixpkgs#kbd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chvt](/man/chvt)(1), [fgconsole](/man/fgconsole)(1)

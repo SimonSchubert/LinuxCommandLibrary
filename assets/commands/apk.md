@@ -135,6 +135,19 @@ Alpine Linux specific; not available on other distributions. Uses a minimal pack
 
 Developed for **Alpine Linux**, a security-oriented, lightweight Linux distribution. Alpine is widely used in container environments due to its small footprint.
 
+# INSTALL
+
+```dnf: sudo dnf install apk-tools```
+
+```pacman: sudo pacman -S apk-tools```
+
+```apk: sudo apk add apk-tools```
+
+```zypper: sudo zypper install apk-tools```
+
+```nix: nix profile install nixpkgs#apk-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apt](/man/apt)(8), [dnf](/man/dnf)(8), [pacman](/man/pacman)(8)

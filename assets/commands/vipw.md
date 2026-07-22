@@ -54,6 +54,20 @@ Using vipw instead of directly editing the password file prevents corruption fro
 
 Requires root privileges. Uses EDITOR or VISUAL environment variable for editor selection. File is locked during editing. Use vigr for group file editing.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vigr](/man/vigr)(8), [passwd](/man/passwd)(1), [useradd](/man/useradd)(8), [usermod](/man/usermod)(8)

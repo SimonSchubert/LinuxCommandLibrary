@@ -39,6 +39,12 @@ fast terminal dashboard for Kubernetes written in Rust
 
 Requires metrics-server deployed on the cluster for resource metrics. May not work properly with Minikube or Kind when running via Docker.
 
+# INSTALL
+
+```brew: brew install kdash```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [k9s](/man/k9s)(1)

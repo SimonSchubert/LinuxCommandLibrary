@@ -38,6 +38,16 @@ Requires authentication. Per-registry check. Empty if not logged in.
 
 npm whoami provides **authentication verification** for npm registry access.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-login](/man/npm-login)(1), [npm-logout](/man/npm-logout)(1)

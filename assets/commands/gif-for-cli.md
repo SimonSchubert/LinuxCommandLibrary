@@ -32,6 +32,12 @@ Display size and color mode flags depend on version—**gif-for-cli --help**.
 
 Performance depends on terminal emulator and GIF resolution. Not suitable for accessibility-critical output. Package install methods vary (pip/source).
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#gif-for-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [timg](/man/timg)(1), [chafa](/man/chafa)(1), [viu](/man/viu)(1)

@@ -72,6 +72,16 @@ Ada program build utility
 
 Multiple main files can be specified to build several executables. Dependencies are computed from Ada source files rather than object file timestamps.
 
+# INSTALL
+
+```apt: sudo apt install gnat-12```
+
+```dnf: sudo dnf install gcc-gnat```
+
+```apk: sudo apk add gcc-gnat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1)

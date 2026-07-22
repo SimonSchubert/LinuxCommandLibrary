@@ -91,6 +91,21 @@ Bloom filters have false positives but no false negatives. A rejected password m
 
 **apgbfm** was created as a companion tool to apg, using bloom filters to efficiently check generated passwords against large dictionaries.
 
+# INSTALL
+
+```apt: sudo apt install apg```
+
+```dnf: sudo dnf install apg```
+
+```aur: yay -S apg```
+
+```apk: sudo apk add apg```
+
+```zypper: sudo zypper install apg```
+
+```nix: nix profile install nixpkgs#apg```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apg](/man/apg)(1)

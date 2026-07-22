@@ -41,6 +41,24 @@ Requires root privileges. The new_root must be a mount point. The current workin
 
 **pivot_root** was added to the Linux kernel to provide a clean way to switch root filesystems during boot. It replaced older methods that used chroot with various mount manipulations.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chroot](/man/chroot)(8), [mount](/man/mount)(8), [switch_root](/man/switch_root)(8)

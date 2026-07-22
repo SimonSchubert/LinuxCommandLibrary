@@ -107,6 +107,14 @@ Platform credentials required for cloud builders. Build times vary significantly
 
 **Packer** was released by **HashiCorp** in **2013**, created by Mitchell Hashimoto. It addressed the challenge of creating identical machine images across multiple platforms. The tool became essential in DevOps workflows for immutable infrastructure. In **2020**, HCL2 template format was introduced, aligning with Terraform syntax.
 
+# INSTALL
+
+```pacman: sudo pacman -S packer```
+
+```nix: nix profile install nixpkgs#packer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [vagrant](/man/vagrant)(1), [docker](/man/docker)(1), [ansible](/man/ansible)(1)

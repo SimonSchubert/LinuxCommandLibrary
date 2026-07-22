@@ -66,6 +66,24 @@ Complex syntax. MLT framework knowledge helpful. Part of MLT package.
 
 melt is the command-line tool for **MLT Multimedia Framework**, used by Kdenlive and Shotcut.
 
+# INSTALL
+
+```apt: sudo apt install melt```
+
+```dnf: sudo dnf install mlt```
+
+```pacman: sudo pacman -S mlt```
+
+```apk: sudo apk add mlt```
+
+```zypper: sudo zypper install melt```
+
+```brew: brew install melt```
+
+```nix: nix profile install nixpkgs#melt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [kdenlive](/man/kdenlive)(1), [shotcut](/man/shotcut)(1)

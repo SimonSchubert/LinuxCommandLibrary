@@ -80,6 +80,15 @@ Rebuilt APKs must be signed before installation. Some protection schemes may pre
 
 **apktool** was created by Brut.all (Connor Tumbleson maintains the fork) and first released around **2010**. It became the standard tool for Android APK reverse engineering.
 
+# INSTALL
+
+```apt: sudo apt install apktool```
+
+```brew: brew install apktool```
+
+```nix: nix profile install nixpkgs#apktool```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apksigner](/man/apksigner)(1), [jadx](/man/jadx)(1)

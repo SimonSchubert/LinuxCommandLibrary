@@ -56,6 +56,24 @@ Use a **custom state** file
 
 Configuration files in /etc/logrotate.d/ are included by the main config. The state file tracks when each log was last rotated. Typically run daily via cron or systemd timer.
 
+# INSTALL
+
+```apt: sudo apt install logrotate```
+
+```dnf: sudo dnf install logrotate```
+
+```pacman: sudo pacman -S logrotate```
+
+```apk: sudo apk add logrotate```
+
+```zypper: sudo zypper install logrotate```
+
+```brew: brew install logrotate```
+
+```nix: nix profile install nixpkgs#logrotate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [logger](/man/logger)(1), [journalctl](/man/journalctl)(1)

@@ -68,6 +68,20 @@ Cloudflare service. Registration required. Daemon must run.
 
 **warp-cli** is the CLI for **Cloudflare WARP**, a VPN and DNS service by Cloudflare.
 
+# INSTALL
+
+```apt: sudo apt install libghc-wai-app-static-dev```
+
+```pacman: sudo pacman -S warp```
+
+```apk: sudo apk add warp```
+
+```zypper: sudo zypper install warp```
+
+```nix: nix profile install nixpkgs#warp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cloudflared](/man/cloudflared)(1)

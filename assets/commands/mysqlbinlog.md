@@ -78,6 +78,22 @@ Statement-based events appear directly as SQL; row-based events are emitted as b
 
 Output from row-based events is not directly executable SQL unless decoded appropriately. When used for recovery, pipe the output to **mysql** rather than saving and re-reading as separate statements, to preserve session state (e.g., temporary tables).
 
+# INSTALL
+
+```dnf: sudo dnf install mariadb```
+
+```pacman: sudo pacman -S mariadb```
+
+```apk: sudo apk add mariadb```
+
+```zypper: sudo zypper install mariadb```
+
+```brew: brew install mariadb```
+
+```nix: nix profile install nixpkgs#mariadb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mysql](/man/mysql)(1), [mysqldump](/man/mysqldump)(1)

@@ -122,6 +122,24 @@ Double-entry accounting requires every transaction to balance, which can be conf
 
 **hledger** was created by **Simon Michael** in **2007** as a Haskell reimplementation inspired by John Wiegley's Ledger. It aims to be a reliable, portable plain text accounting tool with a focus on usability and documentation.
 
+# INSTALL
+
+```apt: sudo apt install hledger```
+
+```dnf: sudo dnf install hledger```
+
+```pacman: sudo pacman -S hledger```
+
+```apk: sudo apk add hledger```
+
+```zypper: sudo zypper install hledger```
+
+```brew: brew install hledger```
+
+```nix: nix profile install nixpkgs#hledger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ledger](/man/ledger)(1), [hledger-ui](/man/hledger-ui)(1), [hledger-web](/man/hledger-web)(1)

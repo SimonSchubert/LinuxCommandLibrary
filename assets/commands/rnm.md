@@ -86,6 +86,12 @@ Regex mode is default; use -ssf for literal strings. Undo only works for the las
 
 **rnm** was created by **Md Jahidul Hamid** (neurobin) as a comprehensive bulk rename solution with features missing from simpler rename tools.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#rnm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rename](/man/rename)(1), [mmv](/man/mmv)(1), [prename](/man/prename)(1)

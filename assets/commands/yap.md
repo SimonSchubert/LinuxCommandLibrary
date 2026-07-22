@@ -102,6 +102,14 @@ Limited availability on modern systems. Most users prefer less or more which off
 
 **yap** was developed for MINIX, Andrew S. Tanenbaum's Unix-like educational operating system. It provided essential paging functionality with the notable addition of backward scrolling, which was not available in the original more command. The less pager later became the standard solution offering similar bidirectional capabilities.
 
+# INSTALL
+
+```brew: brew install yap```
+
+```nix: nix profile install nixpkgs#yap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [more](/man/more)(1), [pg](/man/pg)(1), [cat](/man/cat)(1)

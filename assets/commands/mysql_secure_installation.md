@@ -52,6 +52,14 @@ improves MySQL security after installation
 
 The program reads the **[mysql_secure_installation]** and **[client]** groups from option files.
 
+# INSTALL
+
+```apk: sudo apk add mariadb-client```
+
+```zypper: sudo zypper install mariadb-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mysql](/man/mysql)(1), [mysqladmin](/man/mysqladmin)(1)

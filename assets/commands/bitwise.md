@@ -61,6 +61,22 @@ Interactive mode provides a visual bit toggle interface. Expressions with specia
 
 **bitwise** is an open-source (GPL-3.0) ncurses-based calculator written by **Ramon Fried** (mellowcandle). It targets low-level developers such as kernel and device-driver programmers who frequently work across number bases.
 
+# INSTALL
+
+```apt: sudo apt install bitwise```
+
+```dnf: sudo dnf install bitwise```
+
+```apk: sudo apk add bitwise```
+
+```zypper: sudo zypper install bitwise```
+
+```brew: brew install bitwise```
+
+```nix: nix profile install nixpkgs#bitwise```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bc](/man/bc)(1), [calc](/man/calc)(1)

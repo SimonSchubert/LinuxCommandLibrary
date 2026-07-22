@@ -147,6 +147,24 @@ Numeric sort (**-n**) handles integers and decimals. For version numbers like "1
 
 Memory usage can be significant for large files. Use **-S** to limit buffer size or **-T** to specify temp directory.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uniq](/man/uniq)(1), [join](/man/join)(1), [comm](/man/comm)(1), [cut](/man/cut)(1), [tsort](/man/tsort)(1)

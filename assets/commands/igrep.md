@@ -46,6 +46,22 @@ Requires ripgrep (rg) as a dependency for the search backend. Editor integration
 
 **igrep** was created by **konradsz** and is written in **Rust**. It was designed to bridge the gap between grep's search capabilities and editor integration, providing a visual selection layer.
 
+# INSTALL
+
+```apt: sudo apt install openimageio-tools```
+
+```pacman: sudo pacman -S igrep```
+
+```apk: sudo apk add openimageio-tools```
+
+```zypper: sudo zypper install igrep```
+
+```brew: brew install igrep```
+
+```nix: nix profile install nixpkgs#igrep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [rg](/man/rg)(1), [fzf](/man/fzf)(1)

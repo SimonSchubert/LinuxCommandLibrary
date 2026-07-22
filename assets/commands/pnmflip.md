@@ -52,6 +52,24 @@ Flip and rotate PNM images
 
 **pnmflip** flips and rotates PNM images. Part of Netpbm toolkit for image manipulation. Supports all basic geometric transformations.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm-extras```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmrotate](/man/pnmrotate)(1), [pamflip](/man/pamflip)(1)

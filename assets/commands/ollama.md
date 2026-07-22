@@ -94,6 +94,22 @@ Requires sufficient RAM/VRAM depending on model size. GPU acceleration is suppor
 
 **Ollama** was created by **Jeffrey Morgan** and first released in **2023**. Built on **llama.cpp**, it simplifies the process of downloading, running, and managing open-source language models locally. The project quickly gained popularity as interest in running LLMs without cloud APIs grew.
 
+# INSTALL
+
+```dnf: sudo dnf install ollama```
+
+```pacman: sudo pacman -S ollama```
+
+```apk: sudo apk add ollama```
+
+```zypper: sudo zypper install ollama```
+
+```brew: brew install ollama```
+
+```nix: nix profile install nixpkgs#ollama```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [llama.cpp](/man/llama.cpp)(1), [llamafile](/man/llamafile)(1)

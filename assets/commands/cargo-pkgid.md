@@ -90,6 +90,20 @@ registry+https://github.com/rust-lang/crates.io-index#regex@1.4.3
 
 Errors if specification is ambiguous. Add version qualifier to disambiguate multiple versions. Requires lockfile and fetched dependencies.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-metadata](/man/cargo-metadata)(1)

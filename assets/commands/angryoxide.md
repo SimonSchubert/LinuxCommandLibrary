@@ -96,6 +96,13 @@ Requires root/sudo privileges and a wireless adapter supporting monitor mode and
 
 **angryoxide** was created by **Ragnt** (rage), inspired by hcxdumptool. Written in Rust and licensed under GPL-3.0, it is under heavy active development.
 
+# INSTALL
+
+```aur: yay -S angryoxide```
+
+```nix: nix profile install nixpkgs#angryoxide```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1), [hashcat](/man/hashcat)(1), [tcpdump](/man/tcpdump)(1), [iwconfig](/man/iwconfig)(8)

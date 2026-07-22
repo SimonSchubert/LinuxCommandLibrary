@@ -68,6 +68,18 @@ displays a calendar in the Jalali format, similar to Unix **cal**
 
 A single parameter specifies the year (1-9999). Two parameters denote the month (1-12) and year. The year must be fully specified: "jcal 90" will not display a calendar for 1390.
 
+# INSTALL
+
+```apt: sudo apt install jcal```
+
+```dnf: sudo dnf install jcal```
+
+```brew: brew install jcal```
+
+```nix: nix profile install nixpkgs#jcal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cal](/man/cal)(1)

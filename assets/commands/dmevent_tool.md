@@ -60,6 +60,18 @@ Requires dmeventd running. Root privileges needed. Only works with device-mapper
 
 dmevent_tool is part of the **LVM2** device-mapper tools developed by **Red Hat**. The device-mapper event monitoring infrastructure provides reactive storage management for enterprise Linux deployments.
 
+# INSTALL
+
+```pacman: sudo pacman -S dmraid```
+
+```apk: sudo apk add dmraid```
+
+```zypper: sudo zypper install dmraid```
+
+```nix: nix profile install nixpkgs#dmraid```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmsetup](/man/dmsetup)(1), [lvm](/man/lvm)(1)

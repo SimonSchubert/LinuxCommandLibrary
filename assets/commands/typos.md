@@ -140,6 +140,16 @@ The **[default.extend-words]** and **[default.extend-identifiers]** tables eithe
 
 **typos** was created by **Ed Page** (crate-ci) and released as an open-source project in **2019**, written in **Rust**. It was designed to be fast and accurate enough to run on every commit in large monorepos, drawing inspiration from earlier code-oriented spell checkers like **misspell** and **scspell** while focusing on a curated, low false-positive corpus.
 
+# INSTALL
+
+```pacman: sudo pacman -S typos```
+
+```apk: sudo apk add typos```
+
+```nix: nix profile install nixpkgs#typos```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aspell](/man/aspell)(1), [hunspell](/man/hunspell)(1), [codespell](/man/codespell)(1)

@@ -75,6 +75,24 @@ A practical use is recovering from a damaged primary superblock: `dumpe2fs` prin
 
 **dumpe2fs** is part of **e2fsprogs**, the ext2/3/4 utility suite that **Theodore Ts'o** has maintained since **1993**. It is the counterpart to `tune2fs`: where tune2fs changes filesystem parameters, dumpe2fs shows them, and between them they cover almost everything you can ask or tell an ext filesystem without mounting it. The tool has outlived two filesystem revisions largely unchanged, since ext3 and ext4 both kept the ext2 on-disk layout and simply added features to the superblock's feature flags.
 
+# INSTALL
+
+```apt: sudo apt install e2fsprogs```
+
+```dnf: sudo dnf install e2fsprogs```
+
+```pacman: sudo pacman -S e2fsprogs```
+
+```apk: sudo apk add e2fsprogs-extra```
+
+```zypper: sudo zypper install e2fsprogs```
+
+```brew: brew install e2fsprogs```
+
+```nix: nix profile install nixpkgs#e2fsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tune2fs](/man/tune2fs)(8), [e2fsck](/man/e2fsck)(8), [mke2fs](/man/mke2fs)(8), [debugfs](/man/debugfs)(8), [resize2fs](/man/resize2fs)(8), [blkid](/man/blkid)(8)

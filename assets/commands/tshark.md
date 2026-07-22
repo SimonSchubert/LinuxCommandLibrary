@@ -95,6 +95,16 @@ Requires root or appropriate capabilities for live capture. Capture and display 
 
 Part of the **Wireshark** project, originally called Ethereal. The command-line version has been available since the early days of the project. tshark provides the same protocol analysis engine as Wireshark but suited for scripting and headless systems.
 
+# INSTALL
+
+```apt: sudo apt install tshark```
+
+```apk: sudo apk add tshark```
+
+```nix: nix profile install nixpkgs#tshark```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wireshark](/man/wireshark)(1), [tcpdump](/man/tcpdump)(8), [dumpcap](/man/dumpcap)(1)

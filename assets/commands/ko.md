@@ -155,6 +155,16 @@ The **--local** flag requires a running Docker daemon; without it, **ko** talks 
 
 **ko** was created at **Google** in **2018** by **Jason Hall**, **Matt Moore**, and others on the **Knative** team to publish their Go services without writing Dockerfiles. It was donated to the **ko-build** GitHub organization in **2021** and accepted into the **CNCF Sandbox** in **2022**.
 
+# INSTALL
+
+```pacman: sudo pacman -S ko```
+
+```brew: brew install ko```
+
+```nix: nix profile install nixpkgs#ko```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [buildah](/man/buildah)(1), [crane](/man/crane)(1), [kubectl](/man/kubectl)(1), [skaffold](/man/skaffold)(1)

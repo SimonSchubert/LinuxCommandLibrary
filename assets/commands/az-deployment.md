@@ -116,6 +116,19 @@ Complete mode deletes resources not in the template; use with caution. Deploymen
 
 **Azure Resource Manager** templates launched in **2014** as Azure's infrastructure as code solution. The deployment commands evolved through several CLI versions. **What-if** preview functionality was added in **2020**. **Bicep**, a domain-specific language that compiles to ARM templates, reached version 1.0 in **May 2021** and has become the recommended authoring experience. Template specs for versioned, shareable templates were introduced in **2020**.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-group](/man/az-group)(1), [az-bicep](/man/az-bicep)(1), [az-resource](/man/az-resource)(1)

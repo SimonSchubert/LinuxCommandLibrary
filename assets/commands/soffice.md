@@ -75,6 +75,12 @@ Heavy application. Conversion may be slow. Format fidelity varies.
 
 **soffice** is the main launcher for **LibreOffice**, the free office suite forked from OpenOffice.org.
 
+# INSTALL
+
+```apk: sudo apk add libreoffice-common```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [libreoffice](/man/libreoffice)(1), [lowriter](/man/lowriter)(1), [unoconv](/man/unoconv)(1)

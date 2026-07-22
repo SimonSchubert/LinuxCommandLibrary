@@ -120,6 +120,16 @@ Requires regular updates for effectiveness. May produce false positives on custo
 
 **rkhunter** was created by **Michael Boelen** to help system administrators detect rootkits and potential security issues. It's been actively maintained since 2003.
 
+# INSTALL
+
+```dnf: sudo dnf install rkhunter```
+
+```pacman: sudo pacman -S rkhunter```
+
+```brew: brew install rkhunter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chkrootkit](/man/chkrootkit)(1), [aide](/man/aide)(1), [tripwire](/man/tripwire)(8)

@@ -90,6 +90,12 @@ Requires Video4Linux (V4L/V4L2) compatible capture device. Some distributions pa
 
 **streamer** was developed as part of the xawtv project, a suite of analog TV and video capture tools for Linux. It provided command-line capture functionality alongside the graphical xawtv application. The tool predates many modern capture utilities and remains useful for simple V4L-based capture tasks.
 
+# INSTALL
+
+```apt: sudo apt install streamer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [v4l2-ctl](/man/v4l2-ctl)(1), [cheese](/man/cheese)(1)

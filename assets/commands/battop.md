@@ -50,6 +50,11 @@ On Linux it reads battery information from /sys/class/power_supply, so it only w
 
 **battop** is written in Rust by svartalf and provides a modern, cross-platform battery monitoring interface.
 
+# INSTALL
+
+```aur: yay -S battop```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [acpi](/man/acpi)(1), [upower](/man/upower)(1)

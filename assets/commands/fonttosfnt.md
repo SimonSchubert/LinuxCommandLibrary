@@ -60,6 +60,18 @@ Output remains bitmap, not vector. Limited font metadata support. Best for speci
 
 fonttosfnt is part of the **X.Org** font utilities, providing conversion between traditional X11 bitmap formats and modern SFNT containers for compatibility with newer systems.
 
+# INSTALL
+
+```apt: sudo apt install xfonts-utils```
+
+```dnf: sudo dnf install fonttosfnt```
+
+```zypper: sudo zypper install fonttosfnt```
+
+```nix: nix profile install nixpkgs#fonttosfnt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bdftopcf](/man/bdftopcf)(1), [fontforge](/man/fontforge)(1)

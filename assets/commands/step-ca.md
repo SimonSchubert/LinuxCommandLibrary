@@ -144,6 +144,16 @@ Root key security is critical—compromise enables issuing arbitrary certificate
 
 step-ca was created by **Smallstep** and released in **2018** as part of their open-source PKI toolkit. It was designed to bring modern certificate management to internal infrastructure. The project enables zero-trust security through automated certificate issuance. Smallstep offers commercial products built on the open-source foundation.
 
+# INSTALL
+
+```pacman: sudo pacman -S step-ca```
+
+```apk: sudo apk add step-certificates```
+
+```nix: nix profile install nixpkgs#step-ca```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [certbot](/man/certbot)(1), [cfssl](/man/cfssl)(1), [vault](/man/vault)(1)

@@ -82,6 +82,22 @@ The compiler version and target language level are governed by the **maven-compi
 
 Test sources in **src/test/java** are compiled in a separate phase (**test-compile**) and are not produced by **mvn compile** alone. Generated sources from annotation processors are written to **target/generated-sources/annotations** and must be on the source path for IDE awareness.
 
+# INSTALL
+
+```dnf: sudo dnf install maven```
+
+```pacman: sudo pacman -S maven```
+
+```apk: sudo apk add maven```
+
+```zypper: sudo zypper install maven```
+
+```brew: brew install maven```
+
+```nix: nix profile install nixpkgs#maven```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mvn](/man/mvn)(1), [mvn-package](/man/mvn-package)(1), [mvn-install](/man/mvn-install)(1), [javac](/man/javac)(1)

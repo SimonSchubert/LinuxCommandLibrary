@@ -50,6 +50,20 @@ Without arguments, numlockx turns Num Lock on (equivalent to **numlockx on**).
 
 Only works in X11 sessions; does not work in Wayland or virtual consoles. The state may be reset by some desktop environments during login. For console Num Lock control, use **setleds** instead.
 
+# INSTALL
+
+```apt: sudo apt install numlockx```
+
+```dnf: sudo dnf install numlockx```
+
+```pacman: sudo pacman -S numlockx```
+
+```zypper: sudo zypper install numlockx```
+
+```nix: nix profile install nixpkgs#numlockx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [setleds](/man/setleds)(1), [xset](/man/xset)(1), [xmodmap](/man/xmodmap)(1)

@@ -82,6 +82,18 @@ High scan rates may trigger IDS. Adjust batch size for reliability. For authoriz
 
 **RustScan** was created by **bee-san** for faster port scanning. It combines Rust's performance with nmap's capabilities.
 
+# INSTALL
+
+```pacman: sudo pacman -S rustscan```
+
+```zypper: sudo zypper install rustscan```
+
+```brew: brew install rustscan```
+
+```nix: nix profile install nixpkgs#rustscan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [masscan](/man/masscan)(1), [zmap](/man/zmap)(1)

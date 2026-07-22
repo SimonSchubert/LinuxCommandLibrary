@@ -39,6 +39,14 @@ Gmail requires an app-specific password when two-factor authentication is enable
 
 **nmail** was created by **d99kris** and is written in **C++**.
 
+# INSTALL
+
+```apk: sudo apk add nmail```
+
+```brew: brew install nmail```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mutt](/man/mutt)(1), [alpine](/man/alpine)(1), [meli](/man/meli)(1)

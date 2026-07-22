@@ -26,6 +26,24 @@ Internally, it runs `git branch --no-merged` while filtering out the current bra
 
 Requires **git-extras** to be installed. Only checks local branches, not remote tracking branches. Written by Paul Schreiber.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-show-merged-branches](/man/git-show-merged-branches)(1), [git-extras](/man/git-extras)(1), [git-log](/man/git-log)(1)

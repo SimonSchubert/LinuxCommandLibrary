@@ -51,6 +51,12 @@ Sui Move smart contract development tools
 
 **sui move** manages Move smart contracts on Sui blockchain. Build, test, and deploy Move packages. Part of Sui blockchain development toolkit.
 
+# INSTALL
+
+```brew: brew install sui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sui-client](/man/sui-client)(1)

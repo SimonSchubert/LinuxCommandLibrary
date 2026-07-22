@@ -24,6 +24,12 @@ Requires Nerd Fonts for proper icon rendering.
 
 **smassh** was created by **kraanzu** and is written in **Python**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#smassh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [toipe](/man/toipe)(1), [typioca](/man/typioca)(1), [typtea](/man/typtea)(1)

@@ -111,6 +111,11 @@ asp only provides build files from official Arch repositories, not the AUR. The 
 
 The **asp** tool was created to replace the older **abs** (Arch Build System) tool, which downloaded a complete copy of all PKGBUILDs. Introduced around **2015**, asp uses Git to provide more efficient, incremental access to individual packages. It became the recommended method for obtaining official PKGBUILDs as the Arch package repositories moved to Git-based workflows.
 
+# INSTALL
+
+```aur: yay -S asp```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [makepkg](/man/makepkg)(8), [pacman](/man/pacman)(8), [yay](/man/yay)(1), [paru](/man/paru)(1), [pkgctl](/man/pkgctl)(1), [git](/man/git)(1)

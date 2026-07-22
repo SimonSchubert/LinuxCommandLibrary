@@ -115,6 +115,18 @@ OCR accuracy depends on scan quality. Very low resolution or heavily compressed 
 
 **ocrmypdf** was created by **James R. Barlow** starting around **2013**. It wraps Tesseract OCR with intelligent PDF handling, image preprocessing, and PDF/A output. The project addressed the need for a complete solution to make scanned PDFs searchable, automating what was previously a manual multi-step process.
 
+# INSTALL
+
+```dnf: sudo dnf install ocrmypdf```
+
+```apk: sudo apk add ocrmypdf```
+
+```brew: brew install ocrmypdf```
+
+```nix: nix profile install nixpkgs#ocrmypdf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tesseract](/man/tesseract)(1), [pdftk](/man/pdftk)(1), [pdfimages](/man/pdfimages)(1), [img2pdf](/man/img2pdf)(1)

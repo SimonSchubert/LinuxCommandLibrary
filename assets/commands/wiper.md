@@ -58,6 +58,12 @@ TUI disk space analyzer and cleanup tool
 
 **wiper** was created by **Alexandr Kobrin** (ikebastuz) and is written in **Rust**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#wiper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dust](/man/dust)(1), [dua](/man/dua)(1), [ncdu](/man/ncdu)(1), [du](/man/du)(1)

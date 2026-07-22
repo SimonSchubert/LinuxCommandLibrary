@@ -70,6 +70,20 @@ Device names are platform-specific. Permissions may be required. Screen capture 
 
 ffmpeg device support evolved with multimedia hardware APIs. V4L2 support came with Linux video devices, while screen grabbing capabilities were added for recording and streaming use cases.
 
+# INSTALL
+
+```apt: sudo apt install ffmpeg```
+
+```pacman: sudo pacman -S ffmpeg```
+
+```apk: sudo apk add ffmpeg```
+
+```brew: brew install ffmpeg```
+
+```nix: nix profile install nixpkgs#ffmpeg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [ffprobe](/man/ffprobe)(1), [v4l2-ctl](/man/v4l2-ctl)(1)

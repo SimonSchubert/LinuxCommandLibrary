@@ -33,6 +33,18 @@ Display the installed Pulumi CLI version
 
 **pulumi version** prints the version number of the installed Pulumi CLI. Useful for verifying the installation and checking whether an upgrade is available.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-about](/man/pulumi-about)(1)

@@ -86,6 +86,22 @@ Audio CD burning requires tracks in WAV or Ogg Vorbis format. Using lower burnin
 
 Brasero was developed as part of the GNOME desktop environment to provide a simple, user-friendly disc burning application. It integrates with Nautilus for drag-and-drop file operations.
 
+# INSTALL
+
+```apt: sudo apt install brasero```
+
+```dnf: sudo dnf install brasero```
+
+```pacman: sudo pacman -S brasero```
+
+```apk: sudo apk add brasero```
+
+```zypper: sudo zypper install brasero```
+
+```nix: nix profile install nixpkgs#brasero```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wodim](/man/wodim)(1), [growisofs](/man/growisofs)(1), [cdrecord](/man/cdrecord)(1)

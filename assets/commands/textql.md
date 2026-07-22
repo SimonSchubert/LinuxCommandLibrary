@@ -62,6 +62,14 @@ Memory for large files. SQLite limitations. Go-based tool.
 
 **textql** was created to execute SQL queries against structured text files like CSV using SQLite.
 
+# INSTALL
+
+```apt: sudo apt install textql```
+
+```nix: nix profile install nixpkgs#textql```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sqlite3](/man/sqlite3)(1), [csvq](/man/csvq)(1), [q](/man/q)(1), [miller](/man/miller)(1)

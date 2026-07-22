@@ -65,6 +65,16 @@ Requires device trust approval. Part of libimobiledevice. USB connection needed.
 
 idevicepair is part of **libimobiledevice** for establishing trusted connections with iOS devices.
 
+# INSTALL
+
+```apt: sudo apt install libimobiledevice-utils```
+
+```dnf: sudo dnf install libimobiledevice-utils```
+
+```apk: sudo apk add libimobiledevice-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [idevice_id](/man/idevice_id)(1), [ideviceinfo](/man/ideviceinfo)(1), [idevicename](/man/idevicename)(1)

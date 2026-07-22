@@ -55,6 +55,20 @@ Limited editing features. No support for RAW formats. Part of LXDE but can run s
 
 GPicView was created as part of the **LXDE** (Lightweight X11 Desktop Environment) project, designed for fast performance on low-resource systems. It follows the LXDE philosophy of being lightweight and simple.
 
+# INSTALL
+
+```apt: sudo apt install gpicview```
+
+```dnf: sudo dnf install gpicview```
+
+```pacman: sudo pacman -S gpicview```
+
+```apk: sudo apk add gpicview```
+
+```zypper: sudo zypper install gpicview```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [feh](/man/feh)(1), [eog](/man/eog)(1), [sxiv](/man/sxiv)(1), [imv](/man/imv)(1)

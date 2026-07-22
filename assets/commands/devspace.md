@@ -79,6 +79,14 @@ Configuration is defined in devspace.yaml, specifying images, deployments, dev c
 
 Requires kubectl and access to a Kubernetes cluster. Hot reload performance depends on file sync mechanism. Initial deployment may be slow for large images.
 
+# INSTALL
+
+```brew: brew install devspace```
+
+```nix: nix profile install nixpkgs#devspace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [skaffold](/man/skaffold)(1)

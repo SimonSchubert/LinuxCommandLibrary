@@ -64,5 +64,13 @@ compseq can calculate both observed frequencies and expected frequencies based o
 
 Part of the EMBOSS suite. Input must be valid FASTA format. Large word sizes can produce very large output tables.
 
+# INSTALL
+
+```apt: sudo apt install emboss```
+
+```nix: nix profile install nixpkgs#emboss```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

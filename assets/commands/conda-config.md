@@ -68,6 +68,14 @@ The configuration system uses a hierarchical override mechanism where more speci
 
 Channels are particularly important in conda's configuration as they determine where packages are sourced. The defaults channel points to Anaconda's official repository, while conda-forge is a community-driven channel with a broader package selection. Channel priority affects which package version is selected when the same package exists in multiple channels. The --show-sources option reveals which .condarc files are currently in effect and how configuration values are being inherited or overridden.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-info](/man/conda-info)(1)

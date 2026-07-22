@@ -95,6 +95,20 @@ Learning curve for those unfamiliar with typed functional programming. Large con
 
 Dhall was created by **Gabriella Gonzalez** and first released in **2016**. The name comes from a Hindu grain. It was designed to address the limitations of YAML and JSON for complex configurations while avoiding the Turing-completeness issues that make other templating languages unpredictable. The language has gained adoption for Kubernetes configurations and infrastructure-as-code.
 
+# INSTALL
+
+```apt: sudo apt install dhall```
+
+```dnf: sudo dnf install dhall```
+
+```pacman: sudo pacman -S dhall```
+
+```brew: brew install dhall```
+
+```nix: nix profile install nixpkgs#dhall```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [yq](/man/yq)(1), [jsonnet](/man/jsonnet)(1)

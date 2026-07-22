@@ -70,6 +70,24 @@ Shows instantaneous rates which may fluctuate. Total counts reset on restart. De
 
 **nload** was created by **Roland Riegel** as a simple network load monitor. It fills the niche for quick bandwidth visualization without the complexity of full network analyzers.
 
+# INSTALL
+
+```apt: sudo apt install nload```
+
+```dnf: sudo dnf install nload```
+
+```pacman: sudo pacman -S nload```
+
+```apk: sudo apk add nload```
+
+```zypper: sudo zypper install nload```
+
+```brew: brew install nload```
+
+```nix: nix profile install nixpkgs#nload```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iftop](/man/iftop)(1), [bmon](/man/bmon)(1), [vnstat](/man/vnstat)(1), [nethogs](/man/nethogs)(1)

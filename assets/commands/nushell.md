@@ -84,6 +84,20 @@ Not fully POSIX-compatible. Some Bash scripts and idioms do not work directly in
 
 **nushell** was created by **Yehuda Katz** and **Jonathan Turner** and is written in **Rust**. Development started in **2019**.
 
+# INSTALL
+
+```dnf: sudo dnf install nushell```
+
+```pacman: sudo pacman -S nushell```
+
+```zypper: sudo zypper install nushell```
+
+```brew: brew install nushell```
+
+```nix: nix profile install nixpkgs#nushell```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [zsh](/man/zsh)(1), [fish](/man/fish)(1), [pwsh](/man/pwsh)(1)

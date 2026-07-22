@@ -84,6 +84,20 @@ Requires compatible SDR hardware for RF work. Complex signal processing needs un
 
 GNU Radio was started by **Eric Blossom** in **2001**. It became the leading open-source SDR framework, used in academia, amateur radio, and commercial applications. The project is now community-maintained.
 
+# INSTALL
+
+```dnf: sudo dnf install gnuradio```
+
+```pacman: sudo pacman -S gnuradio```
+
+```zypper: sudo zypper install gnuradio```
+
+```brew: brew install gnuradio```
+
+```nix: nix profile install nixpkgs#gnuradio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rtl_sdr](/man/rtl_sdr)(1), [gqrx](/man/gqrx)(1), [python3](/man/python3)(1)

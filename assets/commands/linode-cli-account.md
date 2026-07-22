@@ -97,6 +97,14 @@ Manage Linode (Akamai) account information and billing
 
 Requires a configured Linode CLI with valid API token. Some account operations require read_write scope on the token. The account view shows the balance and any outstanding credits or promotions.
 
+# INSTALL
+
+```brew: brew install linode-cli```
+
+```nix: nix profile install nixpkgs#linode-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [linode-cli](/man/linode-cli)(1)

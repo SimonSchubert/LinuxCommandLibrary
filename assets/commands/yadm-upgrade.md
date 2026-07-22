@@ -22,6 +22,20 @@ It also normalizes encrypted file storage and other on-disk layouts that have ch
 
 The upgrade is a one-time, mostly idempotent operation; running it on an already-upgraded repository is safe but performs no work. Back up your dotfiles repository before running it on systems with custom yadm hooks or unusual configurations.
 
+# INSTALL
+
+```pacman: sudo pacman -S yadm```
+
+```apk: sudo apk add yadm```
+
+```zypper: sudo zypper install yadm```
+
+```brew: brew install yadm```
+
+```nix: nix profile install nixpkgs#yadm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yadm](/man/yadm)(1), [git](/man/git)(1)

@@ -144,6 +144,24 @@ Generated code frequently needs manual customisation. Complex C APIs (function p
 
 **h2xs** has been part of **Perl** since version 5, providing the standard way to create XS extension modules.
 
+# INSTALL
+
+```apt: sudo apt install perl```
+
+```dnf: sudo dnf install perl```
+
+```pacman: sudo pacman -S perl```
+
+```apk: sudo apk add perl-dev```
+
+```zypper: sudo zypper install perl```
+
+```brew: brew install perl```
+
+```nix: nix profile install nixpkgs#perl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [h2ph](/man/h2ph)(1), [perl](/man/perl)(1), [perldoc](/man/perldoc)(1)

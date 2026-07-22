@@ -77,6 +77,12 @@ Some changes require stopping the VM first. Hardware passthrough requires IOMMU 
 
 **qm set** is part of the **Proxmox VE** virtualization platform for managing QEMU/KVM virtual machines.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-config](/man/qm-config)(1), [qm-pending](/man/qm-pending)(1)

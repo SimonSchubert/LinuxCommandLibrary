@@ -54,6 +54,20 @@ Requires uv. Python ecosystem. May download packages.
 
 **uvx** is part of **uv**, the fast Python package manager, providing ephemeral tool execution similar to pipx.
 
+# INSTALL
+
+```dnf: sudo dnf install uv```
+
+```pacman: sudo pacman -S uv```
+
+```apk: sudo apk add uv```
+
+```brew: brew install uv```
+
+```nix: nix profile install nixpkgs#uv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uv](/man/uv)(1), [pipx](/man/pipx)(1), [python](/man/python)(1)

@@ -116,6 +116,12 @@ Requires pywal as backend. Template files need manual setup for each application
 
 **wpgtk** was created by deviantfero to provide a user-friendly interface on top of pywal. While pywal handles color extraction and basic application, wpgtk adds wallpaper management, color editing, template management, and a graphical interface for users who prefer visual configuration.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#wpgtk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wal](/man/wal)(1), [feh](/man/feh)(1), [nitrogen](/man/nitrogen)(1)

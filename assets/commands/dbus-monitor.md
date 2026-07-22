@@ -81,6 +81,22 @@ May require permissions to eavesdrop. Some buses restrict monitoring. High traff
 
 **dbus-monitor** is part of the **D-Bus** project, started by **Red Hat** in **2002**. D-Bus became the standard IPC mechanism for Linux desktops, and dbus-monitor has been essential for debugging and development since the early days of the project.
 
+# INSTALL
+
+```apt: sudo apt install dbus-bin```
+
+```dnf: sudo dnf install dbus```
+
+```pacman: sudo pacman -S dbus```
+
+```apk: sudo apk add dbus```
+
+```brew: brew install dbus```
+
+```nix: nix profile install nixpkgs#dbus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dbus-send](/man/dbus-send)(1), [busctl](/man/busctl)(1), [gdbus](/man/gdbus)(1), [qdbus](/man/qdbus)(1)

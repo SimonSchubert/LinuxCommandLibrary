@@ -35,6 +35,12 @@ Journal entries are stored as Markdown files in a configurable directory, organi
 
 Uses an integrated text editor within the TUI — users accustomed to their preferred terminal editor may find it limiting. The Markdown files are plain text and can be edited externally.
 
+# INSTALL
+
+```aur: yay -S caps-log```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jrnl](/man/jrnl)(1), [nb](/man/nb)(1)

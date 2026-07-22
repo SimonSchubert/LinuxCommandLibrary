@@ -82,6 +82,16 @@ When used with `-p`, only the specified package is updated conservatively. The `
 
 Cargo.lock is auto-maintained. Update when you want newer compatible versions. Lockfile ensures reproducible builds.
 
+# INSTALL
+
+```pacman: sudo pacman -S cargo-update```
+
+```brew: brew install cargo-update```
+
+```nix: nix profile install nixpkgs#cargo-update```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-generate-lockfile](/man/cargo-generate-lockfile)(1)

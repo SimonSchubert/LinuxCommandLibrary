@@ -65,6 +65,16 @@ Learning curve steep. Limited Excel compatibility. Console only.
 
 **sc-im** is a spreadsheet calculator based on **sc**, with Vim-like interface and modern improvements.
 
+# INSTALL
+
+```apt: sudo apt install scim```
+
+```dnf: sudo dnf install scim```
+
+```pacman: sudo pacman -S scim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sc](/man/sc)(1), [gnumeric](/man/gnumeric)(1), [calc](/man/calc)(1)

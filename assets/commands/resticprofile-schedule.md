@@ -41,6 +41,14 @@ _profile_
 
 **resticprofile schedule** creates scheduled jobs for restic backup profiles. Integrates with systemd timers, launchd, or Windows Task Scheduler. Part of resticprofile wrapper for restic backup.
 
+# INSTALL
+
+```brew: brew install resticprofile```
+
+```nix: nix profile install nixpkgs#resticprofile```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [resticprofile](/man/resticprofile)(1), [restic](/man/restic)(1), [resticprofile-unschedule](/man/resticprofile-unschedule)(1)

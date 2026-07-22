@@ -55,6 +55,24 @@ lists symbols from object files, archives, and executables
 
 **llvm-nm** lists symbols from object files, archives, and executables. Drop-in replacement for GNU nm. Shows symbol names, types, and addresses. Useful for debugging linking issues and understanding binary contents.
 
+# INSTALL
+
+```apt: sudo apt install llvm```
+
+```dnf: sudo dnf install llvm```
+
+```pacman: sudo pacman -S llvm```
+
+```apk: sudo apk add llvm```
+
+```zypper: sudo zypper install llvm```
+
+```brew: brew install llvm```
+
+```nix: nix profile install nixpkgs#llvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nm](/man/nm)(1), [llvm-objdump](/man/llvm-objdump)(1)

@@ -105,6 +105,22 @@ Changing the MAC address usually requires the interface to be brought down first
 
 **ip link** is part of **iproute2**, originally written by **Alexey Kuznetsov** and now maintained by **Stephen Hemminger**. It supersedes the deprecated **ifconfig** command from net-tools.
 
+# INSTALL
+
+```apt: sudo apt install iproute2```
+
+```pacman: sudo pacman -S iproute2```
+
+```apk: sudo apk add iproute2-minimal```
+
+```zypper: sudo zypper install iproute2```
+
+```brew: brew install iproute2```
+
+```nix: nix profile install nixpkgs#iproute2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip](/man/ip)(8), [ip-address](/man/ip-address)(8), [ip-route](/man/ip-route)(8), [ip-tuntap](/man/ip-tuntap)(8), [ip-monitor](/man/ip-monitor)(8), [bridge](/man/bridge)(8), [ethtool](/man/ethtool)(8)

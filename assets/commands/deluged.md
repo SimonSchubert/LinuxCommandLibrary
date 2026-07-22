@@ -79,6 +79,20 @@ Requires proper port configuration for remote access. Firewall rules may need ad
 
 deluged is the core component of the Deluge BitTorrent client, developed since **2006**. The daemon/client separation was a key design decision enabling flexible deployment scenarios from desktop use to dedicated seedboxes.
 
+# INSTALL
+
+```dnf: sudo dnf install deluge```
+
+```pacman: sudo pacman -S deluge```
+
+```apk: sudo apk add deluge```
+
+```zypper: sudo zypper install deluge```
+
+```nix: nix profile install nixpkgs#deluge```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [deluge](/man/deluge)(1), [deluge-console](/man/deluge-console)(1)

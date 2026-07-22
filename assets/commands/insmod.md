@@ -57,6 +57,24 @@ insmod is a low-level tool that does not resolve dependencies and requires the f
 
 **insmod** is part of **kmod**. It provides direct module insertion without the intelligence of modprobe, useful for testing or loading modules not in the standard module path.
 
+# INSTALL
+
+```apt: sudo apt install kmod```
+
+```dnf: sudo dnf install kmod```
+
+```pacman: sudo pacman -S kmod```
+
+```apk: sudo apk add kmod```
+
+```zypper: sudo zypper install kmod```
+
+```brew: brew install kmod```
+
+```nix: nix profile install nixpkgs#kmod```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [modprobe](/man/modprobe)(8), [rmmod](/man/rmmod)(8), [lsmod](/man/lsmod)(8), [modinfo](/man/modinfo)(8), [depmod](/man/depmod)(8), [kmod](/man/kmod)(8), [dmesg](/man/dmesg)(1)

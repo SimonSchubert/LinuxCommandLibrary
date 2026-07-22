@@ -27,6 +27,16 @@ Display system and project diagnostic information
 
 Useful for troubleshooting issues or providing context when reporting bugs.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-upgrade](/man/bun-upgrade)(1)

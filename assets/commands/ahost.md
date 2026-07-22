@@ -48,6 +48,13 @@ Part of the c-ares library tools. May have different features compared to the mo
 
 Part of the **c-ares** asynchronous DNS resolver library, originally forked from the ares library.
 
+# INSTALL
+
+```apk: sudo apk add c-ares-utils```
+
+```zypper: sudo zypper install c-ares-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adig](/man/adig)(1), [acountry](/man/acountry)(1), [host](/man/host)(1), [dig](/man/dig)(1), [nslookup](/man/nslookup)(1)

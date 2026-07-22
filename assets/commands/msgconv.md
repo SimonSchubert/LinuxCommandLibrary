@@ -58,6 +58,22 @@ Part of gettext-tools. May lose data in incompatible conversions. UTF-8 recommen
 
 msgconv is part of **GNU gettext**, providing internationalization tools since 1995.
 
+# INSTALL
+
+```apt: sudo apt install gettext```
+
+```dnf: sudo dnf install gettext```
+
+```pacman: sudo pacman -S gettext```
+
+```apk: sudo apk add gettext```
+
+```brew: brew install gettext```
+
+```nix: nix profile install nixpkgs#gettext```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [msgen](/man/msgen)(1), [msgfmt](/man/msgfmt)(1), [msgmerge](/man/msgmerge)(1)

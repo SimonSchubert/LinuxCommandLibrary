@@ -44,6 +44,22 @@ For services, this sends a stop command (usually SIGTERM followed by SIGKILL aft
 
 Requires root privileges for system units. Stopping a unit does not disable it; it may restart on next boot if enabled. Some services may take time to stop gracefully.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-start](/man/systemctl-start)(1), [systemctl-restart](/man/systemctl-restart)(1)

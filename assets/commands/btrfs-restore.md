@@ -67,6 +67,22 @@ This is a data recovery tool for when other methods fail. It does not repair the
 
 Does not fix the filesystem; only extracts data. May not recover all files from severely damaged filesystems. Regex must match full path including parent directories. Target directory should be on a different filesystem.
 
+# INSTALL
+
+```apt: sudo apt install btrfs-progs```
+
+```dnf: sudo dnf install btrfs-progs```
+
+```pacman: sudo pacman -S btrfs-progs```
+
+```apk: sudo apk add btrfs-progs```
+
+```brew: brew install btrfs-progs```
+
+```nix: nix profile install nixpkgs#btrfs-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [btrfs-rescue](/man/btrfs-rescue)(8), [btrfs-check](/man/btrfs-check)(8)

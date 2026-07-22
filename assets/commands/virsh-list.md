@@ -94,6 +94,18 @@ List libvirt virtual machines
 
 Domain IDs are assigned dynamically and change each time a domain is started. Use domain names or UUIDs for stable references in scripts.
 
+# INSTALL
+
+```apt: sudo apt install libvirt-clients```
+
+```dnf: sudo dnf install libvirt-client```
+
+```apk: sudo apk add libvirt-client```
+
+```zypper: sudo zypper install libvirt-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virsh](/man/virsh)(1), [virsh-help](/man/virsh-help)(1), [virt-manager](/man/virt-manager)(1)

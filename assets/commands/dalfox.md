@@ -104,6 +104,14 @@ Only use on systems you have explicit authorization to test. False positives may
 
 dalfox was created by **hahwul** and released in **2020**. The name stands for "Finder Of XSS" with "dal" meaning moon in Korean. It was designed as a fast, flexible alternative to existing XSS scanners, with emphasis on automation and accuracy.
 
+# INSTALL
+
+```brew: brew install dalfox```
+
+```nix: nix profile install nixpkgs#dalfox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nikto](/man/nikto)(1), [sqlmap](/man/sqlmap)(1), [nuclei](/man/nuclei)(1), [httpx](/man/httpx)(1)

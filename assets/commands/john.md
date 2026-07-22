@@ -69,6 +69,24 @@ Authorized use only. CPU/GPU intensive. Jumbo version has more formats.
 
 John the Ripper was created by **Solar Designer** in 1996 and is maintained by **Openwall** as an open-source password auditing tool.
 
+# INSTALL
+
+```apt: sudo apt install john```
+
+```dnf: sudo dnf install john```
+
+```pacman: sudo pacman -S john```
+
+```apk: sudo apk add john```
+
+```zypper: sudo zypper install john```
+
+```brew: brew install john```
+
+```nix: nix profile install nixpkgs#john```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hashcat](/man/hashcat)(1), [unshadow](/man/unshadow)(1), [zip2john](/man/zip2john)(1)

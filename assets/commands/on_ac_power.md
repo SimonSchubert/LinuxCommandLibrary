@@ -51,6 +51,12 @@ May not work on all systems. Desktop systems without UPS typically return "AC". 
 
 **on_ac_power** is part of the **powermgmt-base** package on Debian-based systems. It provides a simple interface for power-aware scripting without parsing ACPI or sysfs directly.
 
+# INSTALL
+
+```apk: sudo apk add pm-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [acpi](/man/acpi)(1), [upower](/man/upower)(1), [tlp](/man/tlp)(8), [pm-utils](/man/pm-utils)(8)

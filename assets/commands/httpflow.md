@@ -61,6 +61,12 @@ Requires root for live capture. Cannot decode HTTPS. Privacy considerations appl
 
 **httpflow** is an open-source utility built on **libpcap** that reassembles TCP streams to reconstruct HTTP requests and responses for real-time traffic analysis and debugging.
 
+# INSTALL
+
+```brew: brew install httpflow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [mitmproxy](/man/mitmproxy)(1)

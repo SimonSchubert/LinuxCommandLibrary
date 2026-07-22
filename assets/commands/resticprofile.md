@@ -127,6 +127,14 @@ Requires restic to be installed separately. Configuration file format is specifi
 
 **resticprofile** was created as a configuration wrapper for **restic** backup. It simplifies managing multiple backup profiles and scheduling.
 
+# INSTALL
+
+```brew: brew install resticprofile```
+
+```nix: nix profile install nixpkgs#resticprofile```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [restic](/man/restic)(1), [borgbackup](/man/borgbackup)(1), [cron](/man/cron)(1), [crontab](/man/crontab)(1)

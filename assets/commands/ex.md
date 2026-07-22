@@ -69,6 +69,16 @@ No visual feedback in ex mode, making complex edits error-prone. Most modern sys
 
 ex was developed by **Bill Joy** at UC Berkeley in the late 1970s as an extended version of ed. It later gained the visual interface that became vi, with ex remaining as the underlying command mode. ex first appeared in **1BSD** (1978).
 
+# INSTALL
+
+```pacman: sudo pacman -S gvim```
+
+```apk: sudo apk add gvim```
+
+```zypper: sudo zypper install gvim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vi](/man/vi)(1), [vim](/man/vim)(1), [ed](/man/ed)(1), [sed](/man/sed)(1)

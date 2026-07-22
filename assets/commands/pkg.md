@@ -104,6 +104,12 @@ FreeBSD specific. Root required for install. Repository based.
 
 pkg replaced pkg_add as the **FreeBSD package manager**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pkg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pkg-add](/man/pkg-add)(8), [ports](/man/ports)(7)

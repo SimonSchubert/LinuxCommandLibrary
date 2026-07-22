@@ -69,6 +69,14 @@ Not for large datasets. Use mongorestore for BSON. May be slow on big imports.
 
 mongoimport is part of **MongoDB Database Tools**, providing data import capabilities since MongoDB's early versions.
 
+# INSTALL
+
+```apk: sudo apk add mongodb-tools```
+
+```nix: nix profile install nixpkgs#mongodb-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mongoexport](/man/mongoexport)(1), [mongorestore](/man/mongorestore)(1), [mongosh](/man/mongosh)(1)

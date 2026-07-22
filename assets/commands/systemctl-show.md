@@ -79,6 +79,22 @@ Output format is key=value pairs. Some properties may be empty. For human-readab
 
 The **show** subcommand provides machine-parseable property access, enabling scripted queries and monitoring integration.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl-status](/man/systemctl-status)(1), [systemctl-set-property](/man/systemctl-set-property)(1), [systemctl](/man/systemctl)(1)

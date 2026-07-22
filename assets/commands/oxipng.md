@@ -113,6 +113,22 @@ Cannot reduce file size if PNG is already optimally compressed. Zopfli mode is v
 
 **oxipng** was created by **Josh Holmer** around **2016** as a Rust rewrite of OptiPNG. The goal was to provide a faster, multithreaded PNG optimizer with modern code. It has become popular for build pipelines and asset optimization, particularly in web development where PNG size directly affects page load times.
 
+# INSTALL
+
+```dnf: sudo dnf install oxipng```
+
+```pacman: sudo pacman -S oxipng```
+
+```apk: sudo apk add oxipng```
+
+```zypper: sudo zypper install oxipng```
+
+```brew: brew install oxipng```
+
+```nix: nix profile install nixpkgs#oxipng```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [optipng](/man/optipng)(1), [pngcrush](/man/pngcrush)(1), [pngquant](/man/pngquant)(1), [zopflipng](/man/zopflipng)(1)

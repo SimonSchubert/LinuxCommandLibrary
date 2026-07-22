@@ -68,6 +68,20 @@ Different tag versions may conflict. Batch operations should be previewed. Some 
 
 Kid3 was created by **Urs Fleisch** as a simple tag editor for KDE. It evolved to support many formats and became available on multiple platforms.
 
+# INSTALL
+
+```apt: sudo apt install kid3```
+
+```dnf: sudo dnf install kid3```
+
+```pacman: sudo pacman -S kid3```
+
+```zypper: sudo zypper install kid3```
+
+```nix: nix profile install nixpkgs#kid3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [id3v2](/man/id3v2)(1), [easytag](/man/easytag)(1)

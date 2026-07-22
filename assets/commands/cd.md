@@ -93,6 +93,16 @@ Shell built-in (behavior varies by shell). Spaces in paths need quoting. Symboli
 
 **cd** has been a shell built-in command since the earliest Unix shells in the **1970s**, essential for directory navigation.
 
+# INSTALL
+
+```apk: sudo apk add execline```
+
+```brew: brew install execline```
+
+```nix: nix profile install nixpkgs#execline```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pwd](/man/pwd)(1), [pushd](/man/pushd)(1), [popd](/man/popd)(1), [dirs](/man/dirs)(1)

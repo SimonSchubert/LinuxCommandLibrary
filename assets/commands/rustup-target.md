@@ -42,6 +42,22 @@ Manage Rust cross-compilation targets
 
 **rustup target** manages cross-compilation targets. Add targets to compile for different platforms (ARM, WebAssembly, Windows, etc.) from your current system.
 
+# INSTALL
+
+```apt: sudo apt install rustup```
+
+```dnf: sudo dnf install rustup```
+
+```pacman: sudo pacman -S rustup```
+
+```zypper: sudo zypper install rustup```
+
+```brew: brew install rustup```
+
+```nix: nix profile install nixpkgs#rustup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rustup](/man/rustup)(1), [rustup-toolchain](/man/rustup-toolchain)(1)

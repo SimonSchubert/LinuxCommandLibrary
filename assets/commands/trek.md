@@ -36,6 +36,12 @@ Part of the bsdgames package. Text-based interface with command-line input. Game
 
 **trek** is based on the classic **1971** Star Trek mainframe game, one of the earliest computer games. The BSD version was written by **Eric Allman** and has been part of BSD games distributions since the **1980s**.
 
+# INSTALL
+
+```aur: yay -S trek```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rogue](/man/rogue)(6), [adventure](/man/adventure)(6), [battlestar](/man/battlestar)(6)

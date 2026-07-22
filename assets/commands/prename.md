@@ -78,6 +78,12 @@ Perl syntax required. May conflict with util-linux rename. Use full path if need
 
 **prename** was written by **Larry Wall** (creator of Perl) and is often distributed as **rename** with Perl. It's distinct from the simpler util-linux rename command.
 
+# INSTALL
+
+```dnf: sudo dnf install prename```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rename](/man/rename)(1), [mv](/man/mv)(1), [mmv](/man/mmv)(1), [perl](/man/perl)(1)

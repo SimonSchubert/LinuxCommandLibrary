@@ -92,6 +92,18 @@ Requesting host must be in agent's Server parameter. Only works with Zabbix agen
 
 **zabbix_get** is part of the Zabbix monitoring system, created by Alexei Vladishev in 2001. Zabbix has grown into one of the most popular enterprise monitoring solutions, with zabbix_get remaining essential for agent troubleshooting.
 
+# INSTALL
+
+```apt: sudo apt install zabbix-proxy-mysql```
+
+```dnf: sudo dnf install zabbix-proxy-mysql```
+
+```apk: sudo apk add zabbix-utils```
+
+```zypper: sudo zypper install zabbix-proxy-mysql```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zabbix_agentd](/man/zabbix_agentd)(8), [zabbix_server](/man/zabbix_server)(8), [zabbix_proxy](/man/zabbix_proxy)(8)

@@ -120,6 +120,19 @@ Workspaces are the top-level resource for managing quantum jobs, targets, and pr
 
 This command group is in **preview**. Part of the **quantum** extension (Azure CLI 2.73.0 or higher); it installs automatically the first time an **az quantum** command runs, or install it manually with **az extension add --name quantum**. Quantum services have regional availability constraints, and job costs vary significantly by provider and target.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [azure-cli](/man/azure-cli)(1), [az](/man/az)(1)

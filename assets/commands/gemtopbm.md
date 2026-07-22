@@ -20,6 +20,24 @@ The tool is part of the Netpbm suite of image conversion utilities, enabling int
 
 This converter is primarily useful for digital preservation, retro computing enthusiasts, and anyone working with historical computer graphics from the GEM era.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtogem](/man/pbmtogem)(1), [gemtopnm](/man/gemtopnm)(1)

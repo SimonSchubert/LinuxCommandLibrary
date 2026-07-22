@@ -55,6 +55,22 @@ Part of groff package. Requires X11. Dated interface. May have font issues.
 
 gxditview was developed as part of **GNU groff** as an X11 previewer, derived from **xditview** from X11.
 
+# INSTALL
+
+```apt: sudo apt install groff```
+
+```dnf: sudo dnf install groff```
+
+```pacman: sudo pacman -S groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [groffer](/man/groffer)(1)

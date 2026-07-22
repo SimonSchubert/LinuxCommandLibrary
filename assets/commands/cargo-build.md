@@ -108,6 +108,20 @@ Debug builds compile faster but run slower. Release builds are optimized but tak
 
 Same commands work across all operating systems. First build downloads and compiles dependencies.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-run](/man/cargo-run)(1), [cargo-check](/man/cargo-check)(1)

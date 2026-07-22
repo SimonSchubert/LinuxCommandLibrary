@@ -115,6 +115,18 @@ Requires multiple LaTeX/BibTeX runs. Error messages can be cryptic. BibTeX synta
 
 **BibTeX** was created by Oren Patashnik in **1985** as part of the LaTeX document preparation system to manage bibliographies.
 
+# INSTALL
+
+```dnf: sudo dnf install texlive```
+
+```apk: sudo apk add texlive```
+
+```zypper: sudo zypper install texlive```
+
+```brew: brew install texlive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [biber](/man/biber)(1), [latex](/man/latex)(1), [pdflatex](/man/pdflatex)(1)

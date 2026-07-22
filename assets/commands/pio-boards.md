@@ -41,6 +41,12 @@ _filter_
 
 An optional filter argument narrows results by platform, MCU, or board name (e.g., `pio boards arduino`, `pio boards atmega168`).
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio](/man/pio)(1), [pio-init](/man/pio-init)(1), [pio-run](/man/pio-run)(1), [pio-platform](/man/pio-platform)(1)

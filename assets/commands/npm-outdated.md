@@ -102,6 +102,16 @@ Only shows direct dependencies by default; pass **--all** to include transitive 
 
 npm outdated was added to npm to help developers identify packages that need updating, complementing npm update.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-update](/man/npm-update)(1), [npm-ls](/man/npm-ls)(1)

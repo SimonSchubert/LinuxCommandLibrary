@@ -72,6 +72,24 @@ Files must be sorted. Field-based joining. Default whitespace delimiter.
 
 join is part of **POSIX** and traditional Unix utilities, providing relational join operations on text files.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sort](/man/sort)(1), [cut](/man/cut)(1), [paste](/man/paste)(1), [awk](/man/awk)(1)

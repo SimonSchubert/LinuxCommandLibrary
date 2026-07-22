@@ -65,6 +65,12 @@ Quick mode (**-q**) configures only DHCP — Wi-Fi must be set up manually with 
 
 **setup-alpine** has shipped with **Alpine Linux** since the project introduced its installer-on-rails approach in the late 2000s, replacing the earlier manual install process. It is part of the **alpine-conf** package, written in POSIX shell, and is also reused by **setup-bootable**, **setup-acf** and the LXC/Docker minirootfs build pipeline.
 
+# INSTALL
+
+```apk: sudo apk add alpine-conf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lbu](/man/lbu)(8), [apk](/man/apk)(8)

@@ -60,6 +60,22 @@ Without the -s option, you cannot switch to other virtual terminals. Using -d wi
 
 **cage** was developed as a lightweight kiosk compositor for Wayland, named after the caged display concept in kiosk mode deployments.
 
+# INSTALL
+
+```apt: sudo apt install cage```
+
+```dnf: sudo dnf install cage```
+
+```pacman: sudo pacman -S cage```
+
+```apk: sudo apk add cage```
+
+```zypper: sudo zypper install cage```
+
+```nix: nix profile install nixpkgs#cage```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [weston](/man/weston)(1), [sway](/man/sway)(1), [gamescope](/man/gamescope)(1)

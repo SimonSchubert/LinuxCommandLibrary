@@ -95,6 +95,18 @@ Requires Exoscale account and API keys. Actions may incur costs. Zone availabili
 
 exo is the official CLI for **Exoscale**, a Swiss cloud provider founded in **2011** offering GDPR-compliant cloud infrastructure with a focus on European data sovereignty.
 
+# INSTALL
+
+```dnf: sudo dnf install exo```
+
+```pacman: sudo pacman -S exo```
+
+```apk: sudo apk add exoscale```
+
+```nix: nix profile install nixpkgs#exo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws](/man/aws)(1), [gcloud](/man/gcloud)(1), [az](/man/az)(1), [doctl](/man/doctl)(1)

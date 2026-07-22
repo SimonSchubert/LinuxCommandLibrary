@@ -105,6 +105,14 @@ Credentials are typically stored using the system keyring or can be provided int
 
 RBTools is part of the Review Board project, created by **Christian Hammond** and **David Trowbridge** at VMware. Review Board was first released in **2007** as an open-source code review tool designed to simplify the peer review process. The rbt command replaced the earlier post-review script around Review Board 2.0.
 
+# INSTALL
+
+```apk: sudo apk add rbtools```
+
+```brew: brew install rbtools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [hg](/man/hg)(1), [svn](/man/svn)(1), [diff](/man/diff)(1)

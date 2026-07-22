@@ -61,6 +61,16 @@ Must run `systemd-hwdb update` after modifying hwdb source files. The binary dat
 
 **systemd-hwdb** replaces the older udev hwdb management, providing hardware identification data used throughout the system for device setup.
 
+# INSTALL
+
+```apt: sudo apt install udev```
+
+```zypper: sudo zypper install udev```
+
+```nix: nix profile install nixpkgs#udev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [udevadm](/man/udevadm)(8), [hwdb](/man/hwdb)(7)

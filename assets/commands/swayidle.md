@@ -76,6 +76,22 @@ Requires a Wayland compositor with ext-idle-notify support. Commands run as shel
 
 **swayidle** is the idle manager for **Sway** compositor. It handles power management and screen locking triggers.
 
+# INSTALL
+
+```apt: sudo apt install swayidle```
+
+```dnf: sudo dnf install swayidle```
+
+```pacman: sudo pacman -S swayidle```
+
+```apk: sudo apk add swayidle```
+
+```zypper: sudo zypper install swayidle```
+
+```nix: nix profile install nixpkgs#swayidle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sway](/man/sway)(1), [swaylock](/man/swaylock)(1), [swaymsg](/man/swaymsg)(1)

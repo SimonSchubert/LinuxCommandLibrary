@@ -119,6 +119,24 @@ Requires root privileges or appropriate user namespace configuration. OCI bundle
 
 crun was developed by Giuseppe Scrivano at Red Hat as a faster alternative to runc. First released around **2019**, it gained adoption due to its performance benefits. It became the default runtime for Podman and is supported by Kubernetes through CRI-O.
 
+# INSTALL
+
+```apt: sudo apt install crun```
+
+```dnf: sudo dnf install crun```
+
+```pacman: sudo pacman -S crun```
+
+```apk: sudo apk add crun```
+
+```zypper: sudo zypper install crun```
+
+```brew: brew install crun```
+
+```nix: nix profile install nixpkgs#crun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [runc](/man/runc)(1), [podman](/man/podman)(1), [buildah](/man/buildah)(1), [containerd](/man/containerd)(1), [docker](/man/docker)(1)

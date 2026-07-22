@@ -46,6 +46,14 @@ Only works with ttyrec format files. Duration reflects timing data, not actual c
 
 **ttytime** was created as a companion utility to ttyrec and ttyplay to provide quick duration information without requiring full playback. It's part of the ttyrec package commonly used in the Unix community for recording and sharing terminal sessions.
 
+# INSTALL
+
+```apt: sudo apt install ttyrec```
+
+```brew: brew install ttyrec```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ttyrec](/man/ttyrec)(1), [ttyplay](/man/ttyplay)(1), [script](/man/script)(1)

@@ -93,6 +93,12 @@ VM IDs must be unique across the Proxmox cluster. Operations may require root pr
 
 **qm** is part of the **Proxmox VE** virtualization platform, which combines KVM hypervisor and LXC containers with a web-based management interface.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm-start](/man/qm-start)(1), [qm-stop](/man/qm-stop)(1), [qm-config](/man/qm-config)(1), [pct](/man/pct)(1)

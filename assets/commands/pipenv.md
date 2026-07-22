@@ -136,6 +136,14 @@ Lock resolution can be slow for complex dependencies. Not as fast as newer tools
 
 **pipenv** was created by **Kenneth Reitz** (author of requests) around **2017**. It aimed to bring the developer experience of npm/Bundler to Python. PyPA endorsed it as a recommended tool. While newer alternatives like Poetry have emerged, pipenv remains widely used for its simplicity and integration with pip.
 
+# INSTALL
+
+```brew: brew install pipenv```
+
+```nix: nix profile install nixpkgs#pipenv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [poetry](/man/poetry)(1), [virtualenv](/man/virtualenv)(1), [uv](/man/uv)(1)

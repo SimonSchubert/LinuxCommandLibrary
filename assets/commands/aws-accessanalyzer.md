@@ -98,6 +98,17 @@ Requires appropriate IAM permissions to create and manage analyzers. External ac
 
 **AWS IAM Access Analyzer** was announced at **AWS re:Invent 2019** as a service to help identify resources shared with external entities. Over time, it expanded to include unused access analysis, policy validation, and policy generation capabilities, becoming a comprehensive IAM security and governance tool.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-iam](/man/aws-iam)(1), [aws-organizations](/man/aws-organizations)(1), [aws-cloudtrail](/man/aws-cloudtrail)(1), [aws](/man/aws)(1)

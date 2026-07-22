@@ -143,6 +143,21 @@ User namespaces must be enabled in the kernel for rootless operation. Some conta
 
 Apptainer is the continuation of the **Singularity** project after it joined the Linux Foundation in **2021**. The exec subcommand has been a core feature since Singularity's inception at Lawrence Berkeley National Laboratory in **2015**. Apptainer 1.0 was released in **2022**, maintaining full compatibility with Singularity container formats while adding new features.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-shell](/man/apptainer-shell)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-build](/man/apptainer-build)(1), [apptainer-pull](/man/apptainer-pull)(1), [apptainer-overlay](/man/apptainer-overlay)(1), [docker](/man/docker)(1)

@@ -59,6 +59,18 @@ Set **warning days** before expiry
 
 Requires root privileges. Only available on systems with the libuser library installed (primarily Fedora/RHEL-based distributions). Some options may not be available depending on authentication backend configuration (e.g., LDAP).
 
+# INSTALL
+
+```apt: sudo apt install libuser```
+
+```dnf: sudo dnf install libuser```
+
+```apk: sudo apk add libuser```
+
+```zypper: sudo zypper install libuser```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chage](/man/chage)(1), [passwd](/man/passwd)(1), [usermod](/man/usermod)(8)

@@ -102,6 +102,19 @@ Deleting a plan fails if it still contains apps. Free and Shared tiers cannot sc
 
 **Azure App Service** evolved from **Azure Web Sites**, which launched in **June 2012** as Microsoft's first PaaS web hosting service. It was renamed to **Azure App Service** in **March 2015** when it unified Web Apps, Mobile Apps, Logic Apps, and API Apps. **App Service on Linux** was introduced in **2017**. **App Service Environment v3** launched in **2021** with improved performance and simplified networking.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-webapp](/man/az-webapp)(1), [az-functionapp](/man/az-functionapp)(1), [az-group](/man/az-group)(1)

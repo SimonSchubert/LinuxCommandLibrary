@@ -39,6 +39,18 @@ Authenticate with a Pulumi state backend
 
 **pulumi login** authenticates with a Pulumi backend. Supports Pulumi Cloud, self-hosted backends, and cloud storage backends (S3, Azure Blob, GCS). Backend stores stack state and history.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-logout](/man/pulumi-logout)(1), [pulumi-whoami](/man/pulumi-whoami)(1)

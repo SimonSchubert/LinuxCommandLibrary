@@ -65,6 +65,22 @@ Runs as daemon. May conflict with manual IRQ affinity. Linux-specific.
 
 irqbalance was created to automatically balance IRQ loads across CPUs, replacing manual smp_affinity configuration.
 
+# INSTALL
+
+```apt: sudo apt install irqbalance```
+
+```dnf: sudo dnf install irqbalance```
+
+```pacman: sudo pacman -S irqbalance```
+
+```apk: sudo apk add irqbalance```
+
+```zypper: sudo zypper install irqbalance```
+
+```nix: nix profile install nixpkgs#irqbalance```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cpupower](/man/cpupower)(1), [taskset](/man/taskset)(1)

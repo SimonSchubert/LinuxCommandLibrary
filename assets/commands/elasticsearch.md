@@ -80,6 +80,12 @@ Requires Java runtime. Memory-intensive; configure heap size appropriately. Secu
 
 Elasticsearch was created by **Shay Banon** and first released in **2010**. It grew from his earlier work on Compass. Elastic (the company) was founded in **2012**, and the product became the foundation of the Elastic Stack used for observability and security analytics.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#elasticsearch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [opensearch](/man/opensearch)(1), [logstash](/man/logstash)(1), [curl](/man/curl)(1)

@@ -82,6 +82,17 @@ Index creation takes 15-30 minutes. Document ingestion costs apply per document 
 
 Amazon Kendra launched in **December 2019** as an ML-powered enterprise search service. Query suggestions were added in **2021**, and featured results for promoted content in **2022**. The service has expanded data source connectors to support over 14 content repositories.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-opensearch](/man/aws-opensearch)(1)

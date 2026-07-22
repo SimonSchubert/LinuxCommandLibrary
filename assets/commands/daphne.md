@@ -98,6 +98,12 @@ Not suitable for serving static files; use nginx or whitenoise. Production deplo
 
 Daphne was created by **Andrew Godwin** as part of the **Django Channels** project, first released around **2016**. It was developed to bring WebSocket support to Django, enabling the framework to handle real-time applications. Django Channels became an official Django project, with Daphne as its reference ASGI server.
 
+# INSTALL
+
+```apk: sudo apk add py3-daphne```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uvicorn](/man/uvicorn)(1), [hypercorn](/man/hypercorn)(1), [gunicorn](/man/gunicorn)(1), [nginx](/man/nginx)(1)

@@ -83,6 +83,12 @@ Authorized security testing only. GPU support requires appropriate drivers. Data
 
 **pyrit** was created for WiFi security research and penetration testing. It demonstrated the vulnerability of weak WPA passwords to GPU-accelerated attacks.
 
+# INSTALL
+
+```aur: yay -S pyrit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [hashcat](/man/hashcat)(1), [wifite](/man/wifite)(1)

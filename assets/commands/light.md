@@ -67,6 +67,14 @@ Get current **backlight** value
 
 May require udev rules for non-root access. Works with devices exposed through /sys/class/backlight. The minimum brightness cap (-N) prevents the display from going completely dark on controllers that turn off at 0.
 
+# INSTALL
+
+```apt: sudo apt install light```
+
+```dnf: sudo dnf install light```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xbacklight](/man/xbacklight)(1), [brightnessctl](/man/brightnessctl)(1)

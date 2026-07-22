@@ -45,6 +45,18 @@ Requires NetworkManager. Desktop environment dependent. System tray needed.
 
 nm-applet is part of **NetworkManager**, providing graphical network management for Linux desktops.
 
+# INSTALL
+
+```apt: sudo apt install network-manager-applet```
+
+```dnf: sudo dnf install network-manager-applet```
+
+```pacman: sudo pacman -S network-manager-applet```
+
+```apk: sudo apk add network-manager-applet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmcli](/man/nmcli)(1), [nmtui](/man/nmtui)(1), [NetworkManager](/man/NetworkManager)(1)

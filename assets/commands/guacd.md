@@ -55,6 +55,16 @@ guacamole proxy daemon, the core component of Apache Guacamole
 
 **guacd** is the Guacamole proxy daemon, the core component of Apache Guacamole. It handles connections between the Guacamole web application and remote desktop protocols (VNC, RDP, SSH, Telnet, Kubernetes). Written in C for performance, it translates these protocols into the Guacamole protocol for browser-based access.
 
+# INSTALL
+
+```dnf: sudo dnf install guacd```
+
+```apk: sudo apk add guacamole-server```
+
+```nix: nix profile install nixpkgs#guacamole-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sshd](/man/sshd)(1)

@@ -102,6 +102,14 @@ Keys remain in memory while the agent runs; lock with **-x** on shared systems. 
 
 ssh-add is part of **OpenSSH**, developed by the OpenBSD project. The SSH agent concept allows secure key management without repeatedly entering passphrases, originating from the SSH1 implementation in the 1990s.
 
+# INSTALL
+
+```apt: sudo apt install openssh-client```
+
+```apk: sudo apk add openssh-client-common```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh-agent](/man/ssh-agent)(1), [ssh](/man/ssh)(1), [ssh-keygen](/man/ssh-keygen)(1), [ssh-copy-id](/man/ssh-copy-id)(1)

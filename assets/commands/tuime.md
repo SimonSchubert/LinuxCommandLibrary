@@ -28,6 +28,12 @@ Colorful and customizable TUI clock
 
 **tuime** was created by **Nathan Dawit** (nthnd) and is written in **Rust**.
 
+# INSTALL
+
+```aur: yay -S tuime```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tock](/man/tock)(1), [tty-clock](/man/tty-clock)(1)

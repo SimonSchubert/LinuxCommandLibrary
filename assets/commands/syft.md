@@ -119,6 +119,20 @@ Accuracy depends on package metadata quality in images. Some dynamically linked 
 
 **syft** was created by Anchore as an open-source SBOM generation tool. It addresses growing supply chain security requirements and software transparency regulations. The tool supports multiple SBOM standards to meet compliance needs across different industries.
 
+# INSTALL
+
+```pacman: sudo pacman -S syft```
+
+```apk: sudo apk add syft```
+
+```zypper: sudo zypper install syft```
+
+```brew: brew install syft```
+
+```nix: nix profile install nixpkgs#syft```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grype](/man/grype)(1), [docker](/man/docker)(1), [trivy](/man/trivy)(1), [cosign](/man/cosign)(1)

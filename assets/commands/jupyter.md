@@ -69,6 +69,16 @@ Python-based. Browser required. Security considerations for remote access.
 
 Jupyter was spun off from **IPython** in 2014, expanding to support multiple languages (Julia, Python, R - hence Ju-Pyt-eR).
 
+# INSTALL
+
+```apk: sudo apk add py3-jupyter_core```
+
+```brew: brew install jupyter```
+
+```nix: nix profile install nixpkgs#jupyter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ipython](/man/ipython)(1), [jupytext](/man/jupytext)(1)

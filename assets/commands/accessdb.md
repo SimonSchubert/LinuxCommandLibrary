@@ -42,6 +42,21 @@ The database format is specific to man-db and may change between versions. This 
 
 **accessdb** is part of the **man-db** package, which was originally written by John W. Eaton and later maintained by Colin Watson. The man-db project began in **1994** as a replacement for the older man package, introducing database caching for faster manual page lookups.
 
+# INSTALL
+
+```apt: sudo apt install man-db```
+
+```dnf: sudo dnf install man-db```
+
+```pacman: sudo pacman -S man-db```
+
+```apk: sudo apk add man-db```
+
+```brew: brew install man-db```
+
+```nix: nix profile install nixpkgs#man-db```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [man](/man/man)(1), [mandb](/man/mandb)(8), [whatis](/man/whatis)(1), [apropos](/man/apropos)(1)

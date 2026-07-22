@@ -116,6 +116,16 @@ Since Ruby 2.6, Bundler is part of Ruby's standard library.
 
 Always use **bundle exec** when running gem executables to ensure correct versions. The Gemfile.lock should be committed to version control. Running bundle update without arguments may introduce breaking changes.
 
+# INSTALL
+
+```pacman: sudo pacman -S ruby-bundler```
+
+```apk: sudo apk add ruby-bundler```
+
+```nix: nix profile install nixpkgs#bundler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gem](/man/gem)(1), [ruby](/man/ruby)(1), [rake](/man/rake)(1)

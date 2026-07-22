@@ -58,6 +58,24 @@ Does not account for hyperthreading - two hyperthreads on one core count as two 
 
 **nproc** is part of **GNU coreutils**. It was added to provide a portable way to query CPU count, replacing platform-specific methods. The command became essential for build systems and parallel processing scripts, providing consistent behavior across systems.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lscpu](/man/lscpu)(1), [getconf](/man/getconf)(1), [parallel](/man/parallel)(1), [make](/man/make)(1)

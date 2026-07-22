@@ -77,6 +77,14 @@ The tool reads .pgc files containing EXEC SQL statements embedded in C code and 
 
 The generated C file links against libecpg, not libpq directly, so the PostgreSQL client development package must be installed. Compatibility modes change SQL parsing and null handling to match Informix or Oracle, and code written for one mode is generally not portable to another.
 
+# INSTALL
+
+```apt: sudo apt install libecpg-dev```
+
+```apk: sudo apk add libecpg-dev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [psql](/man/psql)(1), [pg_config](/man/pg_config)(1), [postgres](/man/postgres)(1)

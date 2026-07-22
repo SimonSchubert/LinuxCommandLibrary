@@ -73,6 +73,24 @@ displays an income statement showing revenues and expenses for the report
 
 **hledger incomestatement** (alias **is**) displays an income statement (profit & loss report) showing revenues and expenses for the report period, and their difference as net income. Part of hledger's standard financial reports alongside balance sheet and cash flow.
 
+# INSTALL
+
+```apt: sudo apt install hledger```
+
+```dnf: sudo dnf install hledger```
+
+```pacman: sudo pacman -S hledger```
+
+```apk: sudo apk add hledger```
+
+```zypper: sudo zypper install hledger```
+
+```brew: brew install hledger```
+
+```nix: nix profile install nixpkgs#hledger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hledger](/man/hledger)(1), [hledger-balancesheet](/man/hledger-balancesheet)(1)

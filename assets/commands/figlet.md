@@ -73,6 +73,22 @@ Font availability varies by installation. Very long text may wrap awkwardly. Som
 
 figlet (Frank, Ian & Glenn's Letters) was created in 1991 by Glenn Chappell and Ian Chai. It became a Unix classic for creating ASCII banners, spawning hundreds of community-created fonts.
 
+# INSTALL
+
+```dnf: sudo dnf install figlet```
+
+```pacman: sudo pacman -S figlet```
+
+```apk: sudo apk add figlet```
+
+```zypper: sudo zypper install figlet```
+
+```brew: brew install figlet```
+
+```nix: nix profile install nixpkgs#figlet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [toilet](/man/toilet)(1), [banner](/man/banner)(1), [cowsay](/man/cowsay)(1), [showfigfonts](/man/showfigfonts)(6)

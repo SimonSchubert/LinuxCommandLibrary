@@ -71,6 +71,22 @@ Part of the xdp-tools collection for managing XDP programs.
 
 Requires root privileges. Not all network drivers support native XDP mode. Filters operate at layer 2/3, not application layer.
 
+# INSTALL
+
+```apt: sudo apt install xdp-tools```
+
+```dnf: sudo dnf install xdp-tools```
+
+```pacman: sudo pacman -S xdp-tools```
+
+```apk: sudo apk add xdp-tools```
+
+```zypper: sudo zypper install xdp-tools```
+
+```nix: nix profile install nixpkgs#xdp-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iptables](/man/iptables)(8), [nftables](/man/nftables)(8), [tc](/man/tc)(8)

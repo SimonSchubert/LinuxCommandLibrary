@@ -69,6 +69,12 @@ Requires subscription. WireGuard kernel module. Limited to 5 devices.
 
 mozillavpn was launched by **Mozilla** in 2020 as a privacy-focused VPN service using WireGuard technology.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#mozillavpn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wg](/man/wg)(1), [openvpn](/man/openvpn)(1)

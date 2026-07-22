@@ -71,6 +71,18 @@ test runner for .NET projects
 
 The command discovers test methods through framework-specific attributes, executes them, and reports results including pass/fail status, execution time, and detailed failure information. It integrates with code coverage tools and CI/CD pipelines through various loggers and output formats.
 
+# INSTALL
+
+```dnf: sudo dnf install dotnet-host```
+
+```pacman: sudo pacman -S dotnet-host```
+
+```apk: sudo apk add dotnet-host```
+
+```brew: brew install dotnet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dotnet](/man/dotnet)(1), [dotnet-build](/man/dotnet-build)(1), [dotnet-run](/man/dotnet-run)(1)

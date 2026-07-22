@@ -83,6 +83,14 @@ Only works with dynamically linked executables using TCP (SOCK_STREAM) sockets. 
 
 **trickle** was developed by Marius Aamodt Eriksen as a simple solution for application-level bandwidth limiting. It provides an alternative to complex traffic control solutions like tc, working entirely in userspace without system-wide configuration.
 
+# INSTALL
+
+```apt: sudo apt install trickle```
+
+```nix: nix profile install nixpkgs#trickle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tc](/man/tc)(1), [wondershaper](/man/wondershaper)(1), [nethogs](/man/nethogs)(1)

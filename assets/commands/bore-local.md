@@ -55,6 +55,14 @@ The connection is maintained as long as the command runs, and traffic is forward
 
 When **--port** is 0 (the default), the server assigns a random available port and prints the resulting public address on startup. Connection stability depends on network conditions. The secret must match the server's configured secret if authentication is required. Forwarded traffic is not encrypted by bore itself.
 
+# INSTALL
+
+```pacman: sudo pacman -S bore```
+
+```nix: nix profile install nixpkgs#bore```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bore](/man/bore)(1), [ssh](/man/ssh)(1)

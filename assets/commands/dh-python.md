@@ -68,6 +68,12 @@ Python 2 support (dh_python2) is deprecated and removed from modern Debian. Mult
 
 dh-python was developed for Debian to replace the older python-support and python-central systems. Created by **Piotr Ożarowski** around **2012**, it provided a cleaner approach to Python packaging as Python 3 became standard. The tool became the standard method for Debian Python packages and is used by Ubuntu and derivatives.
 
+# INSTALL
+
+```aur: yay -S dh-python```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pybuild](/man/pybuild)(1), [dh](/man/dh)(1), [debhelper](/man/debhelper)(7)

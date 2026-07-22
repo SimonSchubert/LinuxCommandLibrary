@@ -61,6 +61,24 @@ By default, intermediate images created during builds are hidden; use **-a** to 
 
 The command supports filtering by repository name, tag patterns, and various image attributes. Output formatting with Go templates enables custom displays and scripting integration.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-images](/man/docker-images)(1), [docker-image](/man/docker-image)(1)

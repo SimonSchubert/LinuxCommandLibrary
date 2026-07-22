@@ -71,6 +71,24 @@ Input must be valid LLVM IR. Bitcode format may change between LLVM versions. Us
 
 llvm-as has been part of LLVM since the project's inception by **Chris Lattner** at the University of Illinois in **2000**.
 
+# INSTALL
+
+```apt: sudo apt install llvm```
+
+```dnf: sudo dnf install llvm```
+
+```pacman: sudo pacman -S llvm```
+
+```apk: sudo apk add llvm```
+
+```zypper: sudo zypper install llvm```
+
+```brew: brew install llvm```
+
+```nix: nix profile install nixpkgs#llvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [llvm-dis](/man/llvm-dis)(1), [llc](/man/llc)(1), [lli](/man/lli)(1), [opt](/man/opt)(1), [clang](/man/clang)(1)

@@ -41,6 +41,12 @@ compiles MPI C programs
 
 **mpicc** compiles MPI C programs. Wrapper around system C compiler with MPI includes and libraries. Automatically links MPI libraries.
 
+# INSTALL
+
+```apk: sudo apk add openmpi-dev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpirun](/man/mpirun)(1), [mpic++](/man/mpic++)(1)

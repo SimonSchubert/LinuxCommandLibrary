@@ -83,6 +83,16 @@ The tool communicates directly with the graphics hardware through memory-mapped 
 
 radeontool was created by **David Airlie** as part of the Linux open-source graphics effort. It emerged in the early 2000s when ATI Radeon cards required userspace tools to control features not yet supported by the kernel drivers.
 
+# INSTALL
+
+```apt: sudo apt install radeontool```
+
+```dnf: sudo dnf install radeontool```
+
+```pacman: sudo pacman -S radeontool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xrandr](/man/xrandr)(1), [xbacklight](/man/xbacklight)(1), [aticonfig](/man/aticonfig)(1), [lspci](/man/lspci)(1)

@@ -113,6 +113,14 @@ The **--ask** flag prompts for passwords interactively. Use **--show-secrets** c
 
 **nmcli** is the command-line interface for **NetworkManager**, first released around 2004. It provides a way to manage network connections on systems without graphical interfaces or for automation.
 
+# INSTALL
+
+```apt: sudo apt install network-manager```
+
+```apk: sudo apk add networkmanager-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmtui](/man/nmtui)(1), [NetworkManager](/man/NetworkManager)(8), [nm-settings](/man/nm-settings)(5)

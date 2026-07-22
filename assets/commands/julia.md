@@ -116,6 +116,18 @@ First run is slow due to JIT compilation (time-to-first-plot problem). Package p
 
 **Julia** was created by Jeff Bezanson, Stefan Karpinski, Viral B. Shah, and Alan Edelman at MIT, with development starting in **2009** and public release in **2012**. Version 1.0 was released in **August 2018**, marking language stability. Julia has gained significant adoption in scientific computing, data science, and machine learning.
 
+# INSTALL
+
+```dnf: sudo dnf install julia```
+
+```pacman: sudo pacman -S julia```
+
+```brew: brew install julia```
+
+```nix: nix profile install nixpkgs#julia```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [matlab](/man/matlab)(1), [octave](/man/octave)(1)

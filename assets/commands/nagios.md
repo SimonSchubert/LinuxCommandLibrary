@@ -76,6 +76,20 @@ Configuration can be complex for large environments. Web interface requires sepa
 
 **Nagios** was created by **Ethan Galstad** in **1999** as NetSaint, renamed to Nagios in **2002**. It became the standard open-source monitoring system, spawning forks (Icinga, Naemon) and inspiring modern alternatives.
 
+# INSTALL
+
+```dnf: sudo dnf install nagios```
+
+```apk: sudo apk add nagios```
+
+```zypper: sudo zypper install nagios```
+
+```brew: brew install nagios```
+
+```nix: nix profile install nixpkgs#nagios```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [icinga2](/man/icinga2)(1), [naemon](/man/naemon)(8), [check_mk](/man/check_mk)(1), [prometheus](/man/prometheus)(1)

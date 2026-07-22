@@ -88,6 +88,12 @@ Environment variables override TOML values.
 
 **mnemo** requires **mnemo-api** to be running. Entity extraction quality depends on the configured LLM. **mnemo wipe** is irreversible. Install the CLI with `cargo install --path crates/mnemo-cli` from the upstream repository.
 
+# INSTALL
+
+```aur: yay -S mnemo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ollama](/man/ollama)(1), [curl](/man/curl)(1), [docker](/man/docker)(1)

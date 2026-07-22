@@ -85,6 +85,20 @@ By default, tre respects `.gitignore` rules, filtering out ignored files for a c
 
 Not a drop-in replacement for **tree** — uses different flag names (e.g. **-l** instead of **-L** for depth). Respects .gitignore by default, which can be disabled with **-s**.
 
+# INSTALL
+
+```apt: sudo apt install tre-command```
+
+```dnf: sudo dnf install tre```
+
+```pacman: sudo pacman -S tre```
+
+```brew: brew install tre-command```
+
+```nix: nix profile install nixpkgs#tre-command```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tree](/man/tree)(1), [exa](/man/exa)(1), [fd](/man/fd)(1)

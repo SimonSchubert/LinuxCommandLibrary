@@ -88,6 +88,19 @@ Requires xrandr to be installed. Profile matching is based on connected display 
 
 **autorandr** simplifies multi-monitor setup by automatically detecting and applying saved configurations, commonly used with laptop docking stations and external displays.
 
+# INSTALL
+
+```dnf: sudo dnf install autorandr```
+
+```pacman: sudo pacman -S autorandr```
+
+```apk: sudo apk add autorandr```
+
+```zypper: sudo zypper install autorandr```
+
+```nix: nix profile install nixpkgs#autorandr```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [xrandr](/man/xrandr)(1), [arandr](/man/arandr)(1)

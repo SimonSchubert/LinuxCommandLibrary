@@ -69,6 +69,16 @@ Ruby-based. Plugin support varies on GitHub Pages. Large sites may build slowly.
 
 Jekyll was created by **Tom Preston-Werner** in 2008 and became the engine behind **GitHub Pages**.
 
+# INSTALL
+
+```pacman: sudo pacman -S jekyll```
+
+```apk: sudo apk add jekyll```
+
+```nix: nix profile install nixpkgs#jekyll```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bundler](/man/bundle)(1), [hugo](/man/hugo)(1), [hexo](/man/hexo)(1), [gatsby](/man/gatsby)(1)

@@ -69,6 +69,22 @@ Simulation only, not synthesis. Some SystemVerilog limited. Output requires vvp 
 
 Icarus Verilog was created by **Stephen Williams** as an open-source alternative to commercial Verilog simulators.
 
+# INSTALL
+
+```apt: sudo apt install iverilog```
+
+```dnf: sudo dnf install iverilog```
+
+```pacman: sudo pacman -S iverilog```
+
+```apk: sudo apk add iverilog```
+
+```zypper: sudo zypper install iverilog```
+
+```nix: nix profile install nixpkgs#iverilog```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gtkwave](/man/gtkwave)(1), [verilator](/man/verilator)(1), [yosys](/man/yosys)(1)

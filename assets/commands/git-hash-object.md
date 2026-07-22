@@ -61,6 +61,24 @@ Without **-w**, the object is only hashed, not stored. Filters (like `clean` in 
 
 **git hash-object** is a core plumbing command present since Git's earliest releases, exposing the object hashing used internally for blobs, trees, and commits.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-cat-file](/man/git-cat-file)(1), [git-write-tree](/man/git-write-tree)(1)

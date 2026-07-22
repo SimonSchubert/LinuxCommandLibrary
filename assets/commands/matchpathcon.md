@@ -49,6 +49,16 @@ The **-V** (verify) option directly compares the expected and actual contexts, r
 
 Only works on systems with SELinux enabled. The lookup is based on file path patterns, not actual file attributes. A path may match multiple patterns; the most specific pattern wins. This command shows policy defaults, not runtime overrides.
 
+# INSTALL
+
+```apt: sudo apt install selinux-utils```
+
+```dnf: sudo dnf install libselinux-utils```
+
+```apk: sudo apk add libselinux-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [semanage-fcontext](/man/semanage-fcontext)(8), [restorecon](/man/restorecon)(8), [chcon](/man/chcon)(1), [secon](/man/secon)(1), [ls](/man/ls)(1)

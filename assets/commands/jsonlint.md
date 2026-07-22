@@ -82,6 +82,12 @@ Multiple implementations exist (Node.js, Python). Doesn't validate against JSON 
 
 Various jsonlint implementations exist. The concept originated from JavaScript linting tools. Popular implementations include the npm jsonlint package by Zach Carter.
 
+# INSTALL
+
+```brew: brew install jsonlint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1)

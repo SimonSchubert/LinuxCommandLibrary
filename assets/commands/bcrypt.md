@@ -65,6 +65,13 @@ Older tool with limited maintenance. The passphrase resides in memory during ope
 
 **bcrypt** was written by **Johnny Shelley** as a lightweight, portable file encryption tool. It uses Paul Kocher's implementation of the Blowfish cipher, which was designed by **Bruce Schneier** in **1993**. This file utility is unrelated to the **bcrypt** password-hashing function of the same name.
 
+# INSTALL
+
+```dnf: sudo dnf install bcrypt```
+
+```brew: brew install bcrypt```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [openssl](/man/openssl)(1), [ccrypt](/man/ccrypt)(1), [age](/man/age)(1)

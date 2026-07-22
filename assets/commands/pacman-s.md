@@ -59,6 +59,20 @@ View documentation for the original command
 
 **pacman -S** is the short form of **pacman --sync**, which synchronizes packages. It handles installing packages from repositories, updating the package database, and performing system upgrades.
 
+# INSTALL
+
+```apt: sudo apt install pacman-package-manager```
+
+```dnf: sudo dnf install pacman```
+
+```pacman: sudo pacman -S pacman```
+
+```apk: sudo apk add pacman```
+
+```nix: nix profile install nixpkgs#pacman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pacman-sync](/man/pacman-sync)(8)

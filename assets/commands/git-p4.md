@@ -89,6 +89,14 @@ Requires Python and p4 client. Some Perforce features don't map to git. Complex 
 
 git p4 was created to support teams transitioning from **Perforce** to Git, or needing to work with both systems simultaneously.
 
+# INSTALL
+
+```dnf: sudo dnf install git-p4```
+
+```zypper: sudo zypper install git-p4```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [p4](/man/p4)(1), [git-log](/man/git-log)(1)

@@ -25,6 +25,16 @@ displays packages starred by a user
 
 **npm stars** displays packages starred by a user. Shows your starred packages by default. View another user's starred packages by providing username.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-star](/man/npm-star)(1), [npm-unstar](/man/npm-unstar)(1)

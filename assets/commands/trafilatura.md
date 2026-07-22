@@ -105,6 +105,12 @@ Python required. Extraction quality varies by site structure. Network access nee
 
 **trafilatura** was created by **Adrien Barbaresi** as an academic project for web scraping and text extraction, written in **Python**.
 
+# INSTALL
+
+```brew: brew install trafilatura```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [wget](/man/wget)(1), [scrapy](/man/scrapy)(1), [lynx](/man/lynx)(1)

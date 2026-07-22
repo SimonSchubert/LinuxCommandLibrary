@@ -112,6 +112,12 @@ Requires Ghostscript installation. Bounding box must be valid in source EPS. Som
 
 **epstopdf** is part of the **TeX Live** distribution, essential for LaTeX users who need to include EPS graphics in PDF documents. It has been maintained by various TeX developers over the years, with **Karl Berry** and others contributing to its development.
 
+# INSTALL
+
+```apk: sudo apk add texlive-dvi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gs](/man/gs)(1), [ps2pdf](/man/ps2pdf)(1), [pdflatex](/man/pdflatex)(1), [convert](/man/convert)(1)

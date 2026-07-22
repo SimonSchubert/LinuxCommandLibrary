@@ -62,6 +62,22 @@ GNOME dependencies. Some features require plugins. Memory usage scales with libr
 
 gThumb was created by **Paolo Bacchilega** as an image viewer for the **GNOME** desktop environment.
 
+# INSTALL
+
+```apt: sudo apt install gthumb```
+
+```dnf: sudo dnf install gthumb```
+
+```pacman: sudo pacman -S gthumb```
+
+```apk: sudo apk add gthumb```
+
+```zypper: sudo zypper install gthumb```
+
+```nix: nix profile install nixpkgs#gthumb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [eog](/man/eog)(1), [feh](/man/feh)(1)

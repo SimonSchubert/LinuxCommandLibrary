@@ -66,6 +66,18 @@ Large directory trees may take time to scan. Requires read access to repository 
 
 **gfold** was created as a modern alternative to manually checking multiple Git repositories, providing a unified view of repository status across projects.
 
+# INSTALL
+
+```pacman: sudo pacman -S gfold```
+
+```apk: sudo apk add gfold```
+
+```brew: brew install gfold```
+
+```nix: nix profile install nixpkgs#gfold```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [ghq](/man/ghq)(1)

@@ -85,6 +85,14 @@ Quality depends on DEM resolution. Dense contours may be slow. Output size varie
 
 gdal_contour is part of **GDAL** (Geospatial Data Abstraction Library), providing contour generation from digital elevation models for mapping and analysis.
 
+# INSTALL
+
+```apt: sudo apt install gdal-bin```
+
+```apk: sudo apk add gdal-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdaldem](/man/gdaldem)(1), [gdalinfo](/man/gdalinfo)(1), [ogr2ogr](/man/ogr2ogr)(1)

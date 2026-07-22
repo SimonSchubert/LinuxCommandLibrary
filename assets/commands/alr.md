@@ -87,6 +87,15 @@ Requires GNAT Ada compiler to be installed. Some crates may have platform-specif
 
 **Alire** was developed by the Ada community, with the first stable release around **2020**. It modernizes Ada development with package management comparable to other contemporary languages.
 
+# INSTALL
+
+```apt: sudo apt install alire```
+
+```aur: yay -S alire```
+
+```nix: nix profile install nixpkgs#alire```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [alr-help](/man/alr-help)(1), [alr-version](/man/alr-version)(1), [gnatmake](/man/gnatmake)(1), [gprbuild](/man/gprbuild)(1), [cargo](/man/cargo)(1), [opam](/man/opam)(1)

@@ -119,6 +119,12 @@ Requires root privileges and must bind to port 67. Lease file must be writable. 
 
 ISC DHCP was originally developed by **Ted Lemon** at the Internet Systems Consortium, with first release in **1997**. It became the reference DHCP implementation for Unix systems. ISC announced end-of-life for ISC DHCP in **2022**, recommending migration to **Kea**, the next-generation ISC DHCP server.
 
+# INSTALL
+
+```apt: sudo apt install isc-dhcp-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dhclient](/man/dhclient)(8)

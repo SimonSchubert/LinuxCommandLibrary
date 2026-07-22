@@ -72,6 +72,22 @@ Useful for debugging UEFI boot issues and inspecting firmware configuration.
 
 Requires root privileges for write operations. Modifying EFI variables incorrectly can prevent system boot. Some variables are protected by Secure Boot.
 
+# INSTALL
+
+```apt: sudo apt install efivar```
+
+```dnf: sudo dnf install efivar```
+
+```pacman: sudo pacman -S efivar```
+
+```apk: sudo apk add efivar```
+
+```zypper: sudo zypper install efivar```
+
+```nix: nix profile install nixpkgs#efivar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [efibootmgr](/man/efibootmgr)(8), [mokutil](/man/mokutil)(1)

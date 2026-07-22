@@ -82,6 +82,14 @@ Large codebases compile slowly. Template errors can be cryptic. Different standa
 
 g++ is part of **GCC** (GNU Compiler Collection), originally written by Richard Stallman. It evolved from the original GNU C Compiler to support multiple languages including C++.
 
+# INSTALL
+
+```apt: sudo apt install g++```
+
+```apk: sudo apk add g++```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [clang++](/man/clang++)(1), [ld](/man/ld)(1), [make](/man/make)(1), [gdb](/man/gdb)(1)

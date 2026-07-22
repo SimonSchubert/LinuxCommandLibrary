@@ -111,6 +111,16 @@ Requires API keys for cloud model providers (configured via **opencode auth logi
 
 OpenCode was created by **Jay V**, **Frank Wang**, **Dax Raad**, and **Adam Elmore** from the team behind SST (Serverless Stack). It launched on **June 19, 2024** in response to the rise of proprietary AI coding assistants. The project grew to **650,000 monthly users** within five months and has over **70,000 GitHub stars**. It is released under the MIT license.
 
+# INSTALL
+
+```pacman: sudo pacman -S opencode```
+
+```brew: brew install opencode```
+
+```nix: nix profile install nixpkgs#opencode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aider](/man/aider)(1), [claude](/man/claude)(1), [copilot](/man/copilot)(1)

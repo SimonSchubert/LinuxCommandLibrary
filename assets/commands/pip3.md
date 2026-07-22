@@ -65,6 +65,12 @@ Use virtual environments (**venv**) to avoid system package conflicts. The **--u
 
 pip was created by **Ian Bicking** in **2008** as a replacement for easy_install. It became the standard Python package installer, bundled with Python since version **3.4**.
 
+# INSTALL
+
+```apk: sudo apk add py3-pip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [python3](/man/python3)(1)

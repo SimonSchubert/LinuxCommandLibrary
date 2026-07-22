@@ -56,6 +56,22 @@ Part of the bsdgames package. Complex controls with a learning curve. Supports m
 
 **sail** was written by **David Riggle** and **Ed Wang** and is based on the **Avalon Hill** board game "Wooden Ships and Iron Men." It has been part of BSD games since the **1980s**.
 
+# INSTALL
+
+```dnf: sudo dnf install bsd-games```
+
+```pacman: sudo pacman -S bsd-games```
+
+```apk: sudo apk add bsd-games```
+
+```zypper: sudo zypper install bsd-games```
+
+```brew: brew install sail```
+
+```nix: nix profile install nixpkgs#sail```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [trek](/man/trek)(6), [atc](/man/atc)(6), [battlestar](/man/battlestar)(6)

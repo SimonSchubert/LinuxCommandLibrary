@@ -69,6 +69,16 @@ launches JupyterLab, an interactive development environment
 
 JupyterLab is the next-generation web-based interface for Project Jupyter, offering a tabbed workspace with file browser, terminals, text editors, and notebook support all in one environment.
 
+# INSTALL
+
+```dnf: sudo dnf install jupyterlab```
+
+```pacman: sudo pacman -S jupyterlab```
+
+```brew: brew install jupyterlab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jupyter](/man/jupyter)(1), [python](/man/python)(1), [pip](/man/pip)(1)

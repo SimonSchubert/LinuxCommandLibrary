@@ -97,6 +97,14 @@ Requires Node.js. Collections must be exported from Postman in JSON format. The 
 
 Newman was created by **Postman** to enable command-line execution of API collections for testing automation.
 
+# INSTALL
+
+```brew: brew install newman```
+
+```nix: nix profile install nixpkgs#newman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [httpie](/man/httpie)(1), [postman](/man/postman)(1), [npm](/man/npm)(1)

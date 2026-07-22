@@ -96,6 +96,20 @@ Requires SSH key auth for non-interactive use. Password prompt (-A) is interacti
 
 **pssh** was created by **Brent N. Chun** at Intel Research around **2007**. It addressed the need for efficient multi-host command execution in cluster and cloud environments.
 
+# INSTALL
+
+```dnf: sudo dnf install pssh```
+
+```apk: sudo apk add pssh```
+
+```zypper: sudo zypper install pssh```
+
+```brew: brew install pssh```
+
+```nix: nix profile install nixpkgs#pssh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [pdsh](/man/pdsh)(1), [ansible](/man/ansible)(1), [clusterssh](/man/clusterssh)(1)

@@ -112,6 +112,12 @@ First-run model downloads need network access to **download.moonshine.ai** (or H
 
 Moonshine's first-generation models were released with the paper *Moonshine: Speech Recognition for Live Transcription and Voice Commands* (arXiv:2410.15608). Later work added language-specific "Flavors of Moonshine" models and a second generation aimed at streaming latency and edge accuracy, culminating in the **Moonshine Voice** multi-platform library and **moonshine-voice** pip package (Python console scripts plus C++/Swift/Android bindings). The project is developed by **Moonshine AI** under the MIT License.
 
+# INSTALL
+
+```aur: yay -S moonshine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [whisper](/man/whisper)(1), [faster-whisper](/man/faster-whisper)(1), [piper](/man/piper)(1), [tts](/man/tts)(1), [deepspeech](/man/deepspeech)(1)

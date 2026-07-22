@@ -48,6 +48,12 @@ Requires root privileges. The partition must not be in use — unmount filesyste
 
 **delpart** ships as part of **util-linux**, which is maintained by Karel Zak and distributed via the Linux Kernel Archive. It complements **addpart** and **resizepart** as minimal ioctl wrappers intended for scripts that modify partitions on live systems.
 
+# INSTALL
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [addpart](/man/addpart)(8), [partx](/man/partx)(8), [partprobe](/man/partprobe)(8), [fdisk](/man/fdisk)(8), [parted](/man/parted)(8)

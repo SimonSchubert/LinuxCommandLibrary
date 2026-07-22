@@ -45,6 +45,12 @@ Just for fun. Not faster than clear. Rust implementation.
 
 **wipeclean** was created as a fun animated alternative to the clear command for terminal cleaning.
 
+# INSTALL
+
+```aur: yay -S wipeclean```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clear](/man/clear)(1), [reset](/man/reset)(1), [cmatrix](/man/cmatrix)(1)

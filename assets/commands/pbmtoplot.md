@@ -28,6 +28,24 @@ Part of the **Netpbm** toolkit.
 
 The Unix plot format is largely obsolete. The conversion is one-way; there is no corresponding tool to convert plot format back to PBM.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtoascii](/man/pbmtoascii)(1), [pbmtogem](/man/pbmtogem)(1)

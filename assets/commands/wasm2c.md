@@ -50,6 +50,20 @@ Generated code large. Slow compilation. Part of WABT.
 
 **wasm2c** is part of **WABT** (WebAssembly Binary Toolkit), converting WebAssembly to portable C code.
 
+# INSTALL
+
+```apt: sudo apt install wabt```
+
+```dnf: sudo dnf install wabt```
+
+```pacman: sudo pacman -S wabt```
+
+```brew: brew install wabt```
+
+```nix: nix profile install nixpkgs#wabt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wasm2wat](/man/wasm2wat)(1), [wat2wasm](/man/wat2wasm)(1), [wasmtime](/man/wasmtime)(1)

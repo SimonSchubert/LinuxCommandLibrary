@@ -112,6 +112,12 @@ Note: Workflows, caching, and some features are not supported locally.
 
 Local execution runs single jobs only, not workflows. Caching not supported locally. Some CircleCI features require cloud execution.
 
+# INSTALL
+
+```brew: brew install circleci```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [git](/man/git)(1)

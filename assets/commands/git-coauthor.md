@@ -40,6 +40,24 @@ Part of the **git-extras** package. Amends the last commit, which rewrites its h
 
 git coauthor is part of **git-extras**, the community-maintained collection of Git utility scripts, added to support GitHub's co-author trailer convention for attributing collaborative work.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-commit](/man/git-commit)(1), [git-authors](/man/git-authors)(1), [git-extras](/man/git-extras)(1)

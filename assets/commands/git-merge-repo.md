@@ -46,6 +46,24 @@ Part of git-extras package. Requires `git subtree` to be available. May need con
 
 git merge-repo is part of **git-extras**, providing repository consolidation functionality for monorepo creation and library incorporation.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [git-subtree](/man/git-subtree)(1), [git-extras](/man/git-extras)(1)

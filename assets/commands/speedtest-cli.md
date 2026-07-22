@@ -103,6 +103,22 @@ Python-based, needs installation. Server availability varies. Results differ fro
 
 **speedtest-cli** was created by **Matt Martz** as a CLI for Speedtest.net. It enables automated and scripted speed testing.
 
+# INSTALL
+
+```dnf: sudo dnf install speedtest-cli```
+
+```pacman: sudo pacman -S speedtest-cli```
+
+```apk: sudo apk add speedtest-cli```
+
+```zypper: sudo zypper install speedtest-cli```
+
+```brew: brew install speedtest-cli```
+
+```nix: nix profile install nixpkgs#speedtest-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iperf](/man/iperf)(1), [fast](/man/fast)(1), [curl](/man/curl)(1)

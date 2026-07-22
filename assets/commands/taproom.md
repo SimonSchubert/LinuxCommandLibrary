@@ -32,6 +32,12 @@ Requires Homebrew to be installed.
 
 **taproom** was created by **Johnny Huang** (hzqtc) and is written in **Go**.
 
+# INSTALL
+
+```brew: brew install taproom```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [brew](/man/brew)(1), [stew](/man/stew)(1), [nix](/man/nix)(1)

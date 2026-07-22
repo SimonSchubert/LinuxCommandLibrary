@@ -67,6 +67,22 @@ Lazy unmount may leave filesystem in use. Regular users need proper permissions.
 
 **fusermount** is part of the **FUSE** (Filesystem in Userspace) project, originally created by **Miklos Szeredi** around **2001**. FUSE enables userspace programs to export filesystems to the kernel, revolutionizing filesystem development on Linux.
 
+# INSTALL
+
+```apt: sudo apt install fuse3```
+
+```dnf: sudo dnf install fuse3```
+
+```pacman: sudo pacman -S fuse3```
+
+```apk: sudo apk add fuse```
+
+```zypper: sudo zypper install fuse3```
+
+```nix: nix profile install nixpkgs#fuse3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(1), [umount](/man/umount)(1), [sshfs](/man/sshfs)(1), [encfs](/man/encfs)(1)

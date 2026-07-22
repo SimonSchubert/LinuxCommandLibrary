@@ -72,6 +72,12 @@ Written in Node.js and distributed via npm (`npm install --global fkill-cli`), f
 
 Requires Node.js. On Unix, killing system processes usually requires **sudo**. Matching is fuzzy, so double-check the selected process before confirming — especially in interactive mode where the top match is chosen by default.
 
+# INSTALL
+
+```pacman: sudo pacman -S fkill```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kill](/man/kill)(1), [pkill](/man/pkill)(1)

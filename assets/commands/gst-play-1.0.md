@@ -113,6 +113,18 @@ Q or ESC  Quit
 
 **gst-play-1.0** was introduced as part of the **GStreamer** multimedia framework's base plugins. GStreamer itself was created by **Erik Walthinsen** in **1999** and has grown into the standard multimedia framework on Linux. The play tool provides a simple way to test playback pipelines without constructing them manually via **gst-launch-1.0**. It replaced the older **gst-play-0.10** tool when GStreamer transitioned to the 1.x series in **2012**.
 
+# INSTALL
+
+```apt: sudo apt install gstreamer1.0-plugins-base-apps```
+
+```pacman: sudo pacman -S gst-plugins-base```
+
+```apk: sudo apk add gst-plugins-base```
+
+```brew: brew install gst-plugins-base```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gst-launch-1.0](/man/gst-launch-1.0)(1), [gst-inspect-1.0](/man/gst-inspect-1.0)(1), [gst-discoverer-1.0](/man/gst-discoverer-1.0)(1), [ffplay](/man/ffplay)(1), [mpv](/man/mpv)(1)

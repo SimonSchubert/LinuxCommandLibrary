@@ -55,6 +55,12 @@ CRUX-specific tool. Pattern matching uses shell wildcards. Footprint comparison 
 
 **pkginfo** is part of **pkgutils**, the native package management system for CRUX Linux. It provides simple query functionality consistent with CRUX's minimalist philosophy.
 
+# INSTALL
+
+```apk: sudo apk add py3-pkginfo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pkgadd](/man/pkgadd)(8), [pkgrm](/man/pkgrm)(8), [pkgmk](/man/pkgmk)(8)

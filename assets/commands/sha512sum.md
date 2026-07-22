@@ -80,6 +80,24 @@ SHA512 produces significantly longer hashes (128 hex characters) compared to SHA
 
 sha512sum is part of **GNU coreutils**, written by Ulrich Drepper, Scott Miller, and David Madore. SHA-512 was published by NIST as part of the SHA-2 family in **2001**, designed to replace the aging SHA-1 algorithm.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils-sha512sum```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sha256sum](/man/sha256sum)(1), [sha384sum](/man/sha384sum)(1), [sha224sum](/man/sha224sum)(1), [sha1sum](/man/sha1sum)(1), [md5sum](/man/md5sum)(1), [b2sum](/man/b2sum)(1), [shasum](/man/shasum)(1)

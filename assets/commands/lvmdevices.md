@@ -75,6 +75,20 @@ The devices file uses stable device identifiers (WWID, serial numbers) rather th
 
 Requires root privileges. If the devices file is enabled but a device isn't listed, LVM will ignore that device even if it contains valid PV metadata. Use **--update** after hardware changes to ensure device paths are current.
 
+# INSTALL
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvm](/man/lvm)(8), [lvmconfig](/man/lvmconfig)(8), [pvcreate](/man/pvcreate)(8), [pvs](/man/pvs)(8), [vgchange](/man/vgchange)(8)

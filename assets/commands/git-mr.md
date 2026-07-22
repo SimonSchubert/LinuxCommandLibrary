@@ -59,6 +59,12 @@ Part of git-extras package. GitLab-specific functionality. GitHub equivalent is 
 
 git mr is part of **git-extras**, providing GitLab merge request checkout similar to git pr for GitHub pull requests.
 
+# INSTALL
+
+```zypper: sudo zypper install git-mr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-pr](/man/git-pr)(1), [git-checkout](/man/git-checkout)(1)

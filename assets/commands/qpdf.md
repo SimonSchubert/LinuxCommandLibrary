@@ -166,6 +166,24 @@ Cannot edit text content (use other tools). Password-protected files need passwo
 
 **qpdf** was created by **Jay Berkenbilt** at Apex CoVantage starting around **2005**. Originally internal tooling for PDF processing, it was open-sourced and has become a standard library and command-line tool. Unlike PDF editors, qpdf focuses on structural transformations that preserve content exactly.
 
+# INSTALL
+
+```apt: sudo apt install qpdf```
+
+```dnf: sudo dnf install qpdf```
+
+```pacman: sudo pacman -S qpdf```
+
+```apk: sudo apk add qpdf```
+
+```zypper: sudo zypper install qpdf```
+
+```brew: brew install qpdf```
+
+```nix: nix profile install nixpkgs#qpdf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdftk](/man/pdftk)(1), [poppler-utils](/man/poppler-utils)(1), [ghostscript](/man/ghostscript)(1), [pdfunite](/man/pdfunite)(1)

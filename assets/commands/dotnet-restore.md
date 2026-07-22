@@ -84,6 +84,18 @@ Other commands like **dotnet build** and **dotnet run** trigger an implicit rest
 
 Restore obeys the standard NuGet config chain: machine-wide, user, and per-directory **NuGet.config** files. **--source** replaces (not adds to) configured sources. Setting **--locked-mode** without an existing **packages.lock.json** fails immediately.
 
+# INSTALL
+
+```dnf: sudo dnf install dotnet-host```
+
+```pacman: sudo pacman -S dotnet-host```
+
+```apk: sudo apk add dotnet-host```
+
+```brew: brew install dotnet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dotnet-build](/man/dotnet-build)(1), [dotnet-add-package](/man/dotnet-add-package)(1), [dotnet](/man/dotnet)(1)

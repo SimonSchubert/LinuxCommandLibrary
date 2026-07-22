@@ -63,6 +63,24 @@ Part of groff package. Specific to Canon LBP printers. May require printer-speci
 
 grolbp was developed as part of **GNU groff** to support Canon laser beam printers.
 
+# INSTALL
+
+```apt: sudo apt install groff```
+
+```dnf: sudo dnf install groff```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [troff](/man/troff)(1), [grops](/man/grops)(1), [grolj4](/man/grolj4)(1), [lpr](/man/lpr)(1)

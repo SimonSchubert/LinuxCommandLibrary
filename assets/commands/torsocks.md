@@ -66,6 +66,20 @@ Requires running Tor daemon. Some applications may leak DNS or use protocols inc
 
 **torsocks** was developed as an improved replacement for **torify**, providing better security and functionality for routing traffic through the Tor anonymity network.
 
+# INSTALL
+
+```dnf: sudo dnf install torsocks```
+
+```pacman: sudo pacman -S torsocks```
+
+```apk: sudo apk add torsocks```
+
+```brew: brew install torsocks```
+
+```nix: nix profile install nixpkgs#torsocks```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tor](/man/tor)(1), [torify](/man/torify)(1)

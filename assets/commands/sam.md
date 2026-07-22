@@ -85,6 +85,12 @@ Requires AWS credentials configured. Local testing requires Docker. Deployment c
 
 Developed by **AWS** to simplify serverless application development and deployment using Infrastructure as Code.
 
+# INSTALL
+
+```aur: yay -S sam```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws](/man/aws)(1), [docker](/man/docker)(1)

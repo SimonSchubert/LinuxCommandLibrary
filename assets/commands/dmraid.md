@@ -78,6 +78,18 @@ Only supports specific metadata formats. Some RAID levels may have limited suppo
 
 dmraid was developed by **Heinz Mauelshagen** at **Red Hat** to support hardware RAID metadata formats in Linux, addressing the need for compatibility with consumer motherboard RAID implementations that use software RAID with proprietary metadata formats. It is now largely unmaintained; most distributions have moved Intel IMSM and DDF "fake RAID" support to **mdadm**, which reads the same metadata and is the recommended tool for new setups.
 
+# INSTALL
+
+```pacman: sudo pacman -S dmraid```
+
+```apk: sudo apk add dmraid```
+
+```zypper: sudo zypper install dmraid```
+
+```nix: nix profile install nixpkgs#dmraid```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mdadm](/man/mdadm)(8), [dmsetup](/man/dmsetup)(8), [lvm](/man/lvm)(8)

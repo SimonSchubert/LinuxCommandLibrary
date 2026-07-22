@@ -62,6 +62,20 @@ MPlayer project (legacy). FFmpeg often preferred. Complex options.
 
 mencoder was the encoding companion to **MPlayer**, providing video conversion capabilities.
 
+# INSTALL
+
+```apt: sudo apt install mencoder```
+
+```pacman: sudo pacman -S mencoder```
+
+```apk: sudo apk add mplayer```
+
+```brew: brew install mplayer```
+
+```nix: nix profile install nixpkgs#mplayer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [mplayer](/man/mplayer)(1), [handbrake](/man/handbrake)(1)

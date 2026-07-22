@@ -85,6 +85,24 @@ Requires same compiler version on all hosts. Network latency adds overhead for s
 
 **distcc** was created by **Martin Pool** in **2002** at Linuxcare. It addressed the need to speed up Linux kernel and large project builds. The tool became widely used in open source development and was later maintained by the community.
 
+# INSTALL
+
+```apt: sudo apt install distcc```
+
+```dnf: sudo dnf install distcc```
+
+```pacman: sudo pacman -S distcc```
+
+```apk: sudo apk add distcc```
+
+```zypper: sudo zypper install distcc```
+
+```brew: brew install distcc```
+
+```nix: nix profile install nixpkgs#distcc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [distccd](/man/distccd)(1), [ccache](/man/ccache)(1), [make](/man/make)(1), [gcc](/man/gcc)(1)

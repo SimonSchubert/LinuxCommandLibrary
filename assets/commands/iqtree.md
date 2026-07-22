@@ -91,6 +91,12 @@ Large alignments require significant memory. Model selection can be time-consumi
 
 IQ-TREE was developed by **Bui Quang Minh**, **Lam-Tung Nguyen**, and **Arndt von Haeseler** at the University of Vienna. First released in **2014**, it's become a standard tool for molecular phylogenetics.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#iqtree```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mafft](/man/mafft)(1), [raxml](/man/raxml)(1)

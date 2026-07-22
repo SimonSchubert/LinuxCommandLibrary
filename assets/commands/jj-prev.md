@@ -44,6 +44,20 @@ _OFFSET_
 
 This command is a convenient shorthand for navigating backward through commit history in the Jujutsu version control system.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-next](/man/jj-next)(1), [jj-log](/man/jj-log)(1)

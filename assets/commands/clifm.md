@@ -99,6 +99,18 @@ Standard shell commands work. Built-in commands:
 
 CLI-based, not TUI. Shell commands work directly. Highly customizable via profiles.
 
+# INSTALL
+
+```dnf: sudo dnf install clifm```
+
+```apk: sudo apk add clifm```
+
+```brew: brew install clifm```
+
+```nix: nix profile install nixpkgs#clifm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ranger](/man/ranger)(1), [lf](/man/lf)(1), [nnn](/man/nnn)(1)

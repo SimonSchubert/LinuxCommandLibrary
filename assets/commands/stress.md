@@ -84,6 +84,20 @@ This tool is explicitly not a benchmarking tool. Numbers may be suffixed with s,
 
 **stress** was written by **Amos Waterland** as a simple workload generator for POSIX systems. The related **stress-ng** tool by Colin Ian King provides many more stressor types and metrics.
 
+# INSTALL
+
+```apt: sudo apt install stress```
+
+```dnf: sudo dnf install stress```
+
+```pacman: sudo pacman -S stress```
+
+```brew: brew install stress```
+
+```nix: nix profile install nixpkgs#stress```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stress-ng](/man/stress-ng)(1), [sysbench](/man/sysbench)(1), [memtester](/man/memtester)(1), [fio](/man/fio)(1), [top](/man/top)(1), [free](/man/free)(1), [vmstat](/man/vmstat)(1), [uptime](/man/uptime)(1)

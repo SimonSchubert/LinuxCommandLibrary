@@ -57,6 +57,24 @@ Only reads single files, not directories. Format string syntax requires learning
 
 fc-query is part of **fontconfig**, the font configuration library created by Keith Packard for X.org. It provides programmatic access to font metadata used by the fontconfig system.
 
+# INSTALL
+
+```apt: sudo apt install fontconfig```
+
+```dnf: sudo dnf install fontconfig```
+
+```pacman: sudo pacman -S fontconfig```
+
+```apk: sudo apk add fontconfig```
+
+```zypper: sudo zypper install fontconfig```
+
+```brew: brew install fontconfig```
+
+```nix: nix profile install nixpkgs#fontconfig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fc-scan](/man/fc-scan)(1), [fc-list](/man/fc-list)(1), [fc-cache](/man/fc-cache)(1)

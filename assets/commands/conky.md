@@ -87,6 +87,22 @@ Configuration uses Lua syntax with two sections: **conky.config** for settings a
 
 **conky** is a fork of Torsmo and has become one of the most popular system monitors for Linux desktop environments. It supports monitoring CPU, memory, disk, network, and many other system metrics.
 
+# INSTALL
+
+```apt: sudo apt install conky-all```
+
+```dnf: sudo dnf install conky```
+
+```pacman: sudo pacman -S conky```
+
+```apk: sudo apk add conky```
+
+```zypper: sudo zypper install conky```
+
+```nix: nix profile install nixpkgs#conky```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [top](/man/top)(1), [htop](/man/htop)(1), [nmon](/man/nmon)(1)

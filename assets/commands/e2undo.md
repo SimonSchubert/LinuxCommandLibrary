@@ -58,6 +58,24 @@ Undo files are created when these tools are run with the -z option. The undo fil
 
 Requires an undo file, which the e2fsprogs tools only create when run with their own **-z** option (for example `e2fsck -z undo.e2undo /dev/sda1`). The filesystem must be unmounted. e2undo refuses to run if the filesystem has changed since the undo file was written, unless **-f** is given, which risks corrupting the filesystem. Part of the **e2fsprogs** package.
 
+# INSTALL
+
+```apt: sudo apt install e2fsprogs```
+
+```dnf: sudo dnf install e2fsprogs```
+
+```pacman: sudo pacman -S e2fsprogs```
+
+```apk: sudo apk add e2fsprogs-extra```
+
+```zypper: sudo zypper install e2fsprogs```
+
+```brew: brew install e2fsprogs```
+
+```nix: nix profile install nixpkgs#e2fsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [e2fsck](/man/e2fsck)(8), [tune2fs](/man/tune2fs)(8), [resize2fs](/man/resize2fs)(8), [mke2fs](/man/mke2fs)(8)

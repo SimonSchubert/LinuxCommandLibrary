@@ -75,6 +75,16 @@ Requires X server connection. Results depend on driver and configuration. Indire
 
 **glxinfo** is part of the **mesa-utils** package, associated with the **Mesa** 3D Graphics Library. Mesa was started by **Brian Paul** in **1993**, and glxinfo has been a standard diagnostic tool for OpenGL on X11 systems since the early days of GLX.
 
+# INSTALL
+
+```apt: sudo apt install mesa-utils```
+
+```pacman: sudo pacman -S mesa-utils```
+
+```apk: sudo apk add mesa-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glxgears](/man/glxgears)(1), [xdpyinfo](/man/xdpyinfo)(1), [vulkaninfo](/man/vulkaninfo)(1), [nvidia-smi](/man/nvidia-smi)(1)

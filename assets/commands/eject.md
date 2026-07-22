@@ -100,6 +100,16 @@ The default order for device types is cd-rom, scsi, floppy, then tape.
 
 eject unmounts the device (and, by default, all other partitions on it) before ejecting; use **-m** to skip that. Ejection fails if a process still holds a file open on the mounted filesystem. Many laptop and USB optical drives ignore the tray commands, and **-x** speed control depends on drive firmware. Part of the **util-linux** package.
 
+# INSTALL
+
+```apt: sudo apt install eject```
+
+```apk: sudo apk add util-linux-misc```
+
+```nix: nix profile install nixpkgs#eject```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(8), [umount](/man/umount)(8), [lsblk](/man/lsblk)(8), [udisksctl](/man/udisksctl)(1)

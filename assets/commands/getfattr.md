@@ -58,6 +58,24 @@ Extended attribute support depends on the filesystem (ext4, XFS, Btrfs support t
 
 Extended attributes became widely available in Linux with kernel 2.6 in the early 2000s. The getfattr and setfattr commands are part of the attr package, providing command-line access to the xattr system calls.
 
+# INSTALL
+
+```apt: sudo apt install attr```
+
+```dnf: sudo dnf install attr```
+
+```pacman: sudo pacman -S attr```
+
+```apk: sudo apk add attr```
+
+```zypper: sudo zypper install attr```
+
+```brew: brew install attr```
+
+```nix: nix profile install nixpkgs#attr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [setfattr](/man/setfattr)(1), [attr](/man/attr)(1), [getfacl](/man/getfacl)(1)

@@ -66,6 +66,22 @@ It is the copy-oriented sibling of **qmv**, the rename utility from the **rename
 
 Part of the **renameutils** package. Not related to any "quick copy" progress-bar utility; **qcp** does not display transfer progress. Existing destination files are overwritten without prompting by default — use **--dummy** first if you are unsure.
 
+# INSTALL
+
+```apt: sudo apt install renameutils```
+
+```dnf: sudo dnf install renameutils```
+
+```pacman: sudo pacman -S renameutils```
+
+```zypper: sudo zypper install renameutils```
+
+```brew: brew install renameutils```
+
+```nix: nix profile install nixpkgs#renameutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qmv](/man/qmv)(1), [cp](/man/cp)(1), [mv](/man/mv)(1), [rsync](/man/rsync)(1)

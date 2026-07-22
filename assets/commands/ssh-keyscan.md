@@ -73,6 +73,14 @@ Gather SSH public host keys from servers
 
 The tool is primarily used for automating host key distribution in environments where manually accepting host keys during first connection is impractical. It can scan multiple hosts in parallel, read host lists from files, and filter by key type (RSA, Ed25519, ECDSA). The **-H** option hashes hostnames in the output for additional privacy.
 
+# INSTALL
+
+```apt: sudo apt install openssh-client```
+
+```apk: sudo apk add openssh-client-common```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [ssh-keygen](/man/ssh-keygen)(1)

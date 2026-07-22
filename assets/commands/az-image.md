@@ -94,6 +94,19 @@ Custom images are different from marketplace images (managed via **az vm image**
 
 Requires Azure CLI to be installed and authenticated with **az login**. The source VM must be generalized (sysprep on Windows, waagent -deprovision on Linux) before creating an image. Images can only create VMs in the same region.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [az-disk](/man/az-disk)(1), [az-vm](/man/az-vm)(1)

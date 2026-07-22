@@ -72,6 +72,18 @@ Requires root privileges. CUPS must be running. Driver availability varies.
 
 lpadmin is part of **CUPS** (Common Unix Printing System), providing printer administration on Linux and macOS.
 
+# INSTALL
+
+```apt: sudo apt install cups-client```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lp](/man/lp)(1), [lpinfo](/man/lpinfo)(8), [cupsd](/man/cupsd)(8)

@@ -38,6 +38,16 @@ Common use cases include running scaffolding tools (create-react-app, create-nex
 
 Packages are cached but may be removed during cache cleanup. For frequently used tools, consider installing globally with **bun i -g**.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-run](/man/bun-run)(1), [npx](/man/npx)(1)

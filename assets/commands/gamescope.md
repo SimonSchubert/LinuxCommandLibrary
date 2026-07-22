@@ -109,6 +109,20 @@ Requires Vulkan support. Some games may have compatibility issues. HDR support r
 
 gamescope was developed by Valve Software and first released in **2020**. It was created primarily for the Steam Deck handheld gaming PC, providing the foundation for SteamOS 3.0's gaming compositor. The project evolved from earlier work on the steamcompmgr compositor.
 
+# INSTALL
+
+```dnf: sudo dnf install gamescope```
+
+```pacman: sudo pacman -S gamescope```
+
+```apk: sudo apk add gamescope```
+
+```zypper: sudo zypper install gamescope```
+
+```nix: nix profile install nixpkgs#gamescope```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [steam](/man/steam)(1), [cage](/man/cage)(1), [sway](/man/sway)(1), [weston](/man/weston)(1), [Xwayland](/man/Xwayland)(1)

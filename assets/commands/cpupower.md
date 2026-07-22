@@ -72,6 +72,18 @@ Subcommands include frequency-info, frequency-set, idle-info, idle-set, and moni
 
 Requires root privileges for setting values. Available governors and features depend on hardware and kernel configuration. Replaces cpufreq-info and cpufreq-set.
 
+# INSTALL
+
+```apt: sudo apt install linux-cpupower```
+
+```pacman: sudo pacman -S cpupower```
+
+```apk: sudo apk add cpupower```
+
+```zypper: sudo zypper install cpupower```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cpufreq-info](/man/cpufreq-info)(1), [cpufreq-set](/man/cpufreq-set)(1), [turbostat](/man/turbostat)(8)

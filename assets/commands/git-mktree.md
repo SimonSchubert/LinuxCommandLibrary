@@ -48,6 +48,24 @@ Plumbing command. Input must be properly formatted. Objects must exist unless --
 
 git mktree is a core **Git** plumbing command for tree object creation, enabling programmatic manipulation of git's tree structure.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-ls-tree](/man/git-ls-tree)(1), [git-write-tree](/man/git-write-tree)(1)

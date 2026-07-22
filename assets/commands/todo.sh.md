@@ -66,6 +66,12 @@ Bash required. todo.txt format. Configuration file needed.
 
 **todo.sh** was created by **Gina Trapani** as part of the todo.txt format for simple, plain-text task management.
 
+# INSTALL
+
+```apk: sudo apk add todo.txt-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [task](/man/task)(1), [todoman](/man/todoman)(1), [taskwarrior](/man/taskwarrior)(1)

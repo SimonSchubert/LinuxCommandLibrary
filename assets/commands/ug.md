@@ -77,6 +77,24 @@ Unlike plain **ugrep** (which targets scripting and batch use with no sorting fo
 
 The interactive TUI mode (`-Q`) lets you type a query and see results update in real time.
 
+# INSTALL
+
+```apt: sudo apt install ugrep```
+
+```dnf: sudo dnf install ugrep```
+
+```pacman: sudo pacman -S ugrep```
+
+```apk: sudo apk add ugrep```
+
+```zypper: sudo zypper install ugrep```
+
+```brew: brew install ugrep```
+
+```nix: nix profile install nixpkgs#ugrep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ugrep](/man/ugrep)(1), [grep](/man/grep)(1), [rg](/man/rg)(1)

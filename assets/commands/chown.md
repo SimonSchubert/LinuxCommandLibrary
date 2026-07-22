@@ -135,6 +135,24 @@ Usually requires root/sudo. Changing ownership removes some security features (l
 
 **chown** has been part of Unix since the early **1970s** as part of the file ownership security model.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chmod](/man/chmod)(1), [chgrp](/man/chgrp)(1), [ls](/man/ls)(1), [stat](/man/stat)(1)

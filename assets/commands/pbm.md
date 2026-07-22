@@ -38,6 +38,12 @@ Stores only black and white (1 bit per pixel); for grayscale use PGM and for col
 
 PBM originated in **Jef Poskanzer's** PBMplus toolkit in **1988** and is now maintained as part of the **Netpbm** project.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pgm](/man/pgm)(5), [ppm](/man/ppm)(5), [pnm](/man/pnm)(5), [netpbm](/man/netpbm)(1), [pnmtopng](/man/pnmtopng)(1)

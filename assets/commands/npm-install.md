@@ -77,6 +77,16 @@ npm ci is faster for CI/CD. Peer deps may cause issues in npm 7+. Lock file shou
 
 npm install has been the core command of npm since **Isaac Schlueter** created npm in **2010** for Node.js package management.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-ci](/man/npm-ci)(1), [npm-uninstall](/man/npm-uninstall)(1), [yarn](/man/yarn)(1)

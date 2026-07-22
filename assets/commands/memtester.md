@@ -55,6 +55,22 @@ Root privileges are typically required to lock memory pages and prevent swapping
 
 memtester was written by Charles Cazabon as a userspace alternative to boot-time memory testing tools. It allows memory testing without rebooting and can target specific memory regions, useful for diagnosing intermittent faults on running systems.
 
+# INSTALL
+
+```apt: sudo apt install memtester```
+
+```dnf: sudo dnf install memtester```
+
+```pacman: sudo pacman -S memtester```
+
+```apk: sudo apk add memtester```
+
+```brew: brew install memtester```
+
+```nix: nix profile install nixpkgs#memtester```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [free](/man/free)(1), [vmstat](/man/vmstat)(8), [stress](/man/stress)(1)

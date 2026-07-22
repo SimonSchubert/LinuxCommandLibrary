@@ -51,6 +51,16 @@ runs a dedicated Minetest game server
 
 **minetestserver** runs a dedicated Minetest game server. Hosts multiplayer worlds without a graphical client. Supports mods, custom games, and player management.
 
+# INSTALL
+
+```pacman: sudo pacman -S luanti-server```
+
+```apk: sudo apk add luanti-server```
+
+```nix: nix profile install nixpkgs#luanti-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [minetest](/man/minetest)(1)

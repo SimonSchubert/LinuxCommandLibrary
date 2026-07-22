@@ -103,6 +103,18 @@ Running in **user** mode once writes formats under TEXMFVAR that permanently ove
 
 Originally written by Thomas Esser for teTeX; maintained as part of TeX Live. The **-user** / **-sys** split and dedicated **fmtutil-user** / **fmtutil-sys** commands were introduced around TeX Live 2017.
 
+# INSTALL
+
+```dnf: sudo dnf install texlive```
+
+```apk: sudo apk add texlive```
+
+```zypper: sudo zypper install texlive```
+
+```brew: brew install texlive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fmtutil-sys](/man/fmtutil-sys)(1), [fmtutil-user](/man/fmtutil-user)(1), [mktexfmt](/man/mktexfmt)(1), [kpsewhich](/man/kpsewhich)(1), [pdflatex](/man/pdflatex)(1), [latex](/man/latex)(1)

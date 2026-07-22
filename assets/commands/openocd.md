@@ -88,6 +88,24 @@ Requires appropriate adapter hardware. Target configuration must match device. S
 
 **OpenOCD** was started by **Dominic Rath** as a university project in **2005**. It became the standard open-source on-chip debugger, supporting hundreds of target devices and debug adapters. Development continues under community governance.
 
+# INSTALL
+
+```apt: sudo apt install openocd```
+
+```dnf: sudo dnf install openocd```
+
+```pacman: sudo pacman -S openocd```
+
+```apk: sudo apk add openocd```
+
+```zypper: sudo zypper install openocd```
+
+```brew: brew install openocd```
+
+```nix: nix profile install nixpkgs#openocd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdb](/man/gdb)(1), [arm-none-eabi-gdb](/man/arm-none-eabi-gdb)(1), [stlink](/man/stlink)(1), [st-flash](/man/st-flash)(1), [avrdude](/man/avrdude)(1), [flashrom](/man/flashrom)(1)

@@ -112,6 +112,24 @@ GPG passphrase required for encrypted backups (use PASSPHRASE env var for script
 
 **duplicity** was created by **Ben Escoto** in **2002** as an encrypted backup solution. It combined rsync's efficient delta-transfer algorithm with GnuPG encryption. The project has been maintained by various contributors and expanded to support numerous cloud storage backends. It remains a popular choice for secure, automated backups.
 
+# INSTALL
+
+```apt: sudo apt install duplicity```
+
+```dnf: sudo dnf install duplicity```
+
+```pacman: sudo pacman -S duplicity```
+
+```apk: sudo apk add duplicity```
+
+```zypper: sudo zypper install duplicity```
+
+```brew: brew install duplicity```
+
+```nix: nix profile install nixpkgs#duplicity```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rdiff-backup](/man/rdiff-backup)(1), [rsync](/man/rsync)(1), [gpg](/man/gpg)(1), [restic](/man/restic)(1)

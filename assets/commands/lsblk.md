@@ -104,6 +104,24 @@ Some information may require root privileges. Mounted filesystems show mount poi
 
 Part of **util-linux** package. Provides a more readable alternative to /proc/partitions and fdisk -l.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add lsblk```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blkid](/man/blkid)(8), [fdisk](/man/fdisk)(8), [findmnt](/man/findmnt)(8), [df](/man/df)(1), [mount](/man/mount)(8), [parted](/man/parted)(8)

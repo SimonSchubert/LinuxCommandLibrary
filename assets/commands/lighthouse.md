@@ -84,6 +84,16 @@ Requires Node.js and a compatible Chrome/Chromium install. Results can vary betw
 
 **Lighthouse** was developed by **Google** and first released around **2016** as part of the Chrome DevTools ecosystem. Originally focused on Progressive Web Apps, it has grown into a comprehensive web quality auditing tool covering performance, accessibility, SEO, and best practices.
 
+# INSTALL
+
+```apk: sudo apk add lighthouse```
+
+```brew: brew install lighthouse```
+
+```nix: nix profile install nixpkgs#lighthouse```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chromium](/man/chromium)(1), [google-chrome](/man/google-chrome)(1), [puppeteer](/man/puppeteer)(1)

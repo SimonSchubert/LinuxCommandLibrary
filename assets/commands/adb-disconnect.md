@@ -38,6 +38,21 @@ Does not affect USB connections. The device remains in TCP/IP mode after disconn
 
 **adb disconnect** has been available since wireless debugging was introduced in the Android SDK. It provides a clean way to terminate network connections without killing the entire adb server.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb](/man/adb)(1), [adb-connect](/man/adb-connect)(1), [adb-pair](/man/adb-pair)(1), [adb-kill-server](/man/adb-kill-server)(1)

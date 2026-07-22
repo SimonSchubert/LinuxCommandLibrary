@@ -93,6 +93,23 @@ Not as widely supported as SHA-256. Different tools may use BLAKE2b vs BLAKE2s. 
 
 **b2sum** was added to GNU coreutils in version **8.26** (2016), providing BLAKE2 hashing support following the algorithm's publication in **2012**.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [sha256sum](/man/sha256sum)(1), [md5sum](/man/md5sum)(1), [b3sum](/man/b3sum)(1), [cksum](/man/cksum)(1)

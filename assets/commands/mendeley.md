@@ -61,6 +61,12 @@ Requires Elsevier account. Sync storage limited on free tier. Desktop app being 
 
 Mendeley was founded in **2007** in London by **Victor Henning**, **Jan Reichelt**, and **Paul Foeckler**. It was acquired by **Elsevier** in **2013**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#mendeley```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zotero](/man/zotero)(1), [jabref](/man/jabref)(1), [papis](/man/papis)(1)

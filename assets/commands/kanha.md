@@ -38,6 +38,12 @@ Only use against systems you have explicit authorization to test. Fuzzing may ge
 
 **kanha** is written in **Rust** and was designed as a fast, multi-function web application security testing toolkit for terminal-based workflows.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kanha```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [curl](/man/curl)(1), [nikto](/man/nikto)(1)

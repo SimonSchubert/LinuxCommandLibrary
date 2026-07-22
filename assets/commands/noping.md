@@ -104,6 +104,22 @@ May require root privileges or CAP_NET_RAW capability for ICMP access.
 
 **noping** is part of the **liboping** project by **Florian Forster** (octo) and is written in **C**.
 
+# INSTALL
+
+```apt: sudo apt install oping```
+
+```dnf: sudo dnf install liboping```
+
+```apk: sudo apk add liboping```
+
+```zypper: sudo zypper install oping```
+
+```brew: brew install liboping```
+
+```nix: nix profile install nixpkgs#liboping```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ping](/man/ping)(8), [mtr](/man/mtr)(8), [fping](/man/fping)(8), [traceroute](/man/traceroute)(8)

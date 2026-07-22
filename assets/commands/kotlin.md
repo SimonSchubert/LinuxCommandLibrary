@@ -69,6 +69,16 @@ Requires JVM. Scripts use .kts extension. Slower startup than compiled code.
 
 Kotlin was created by **JetBrains** in 2011. The kotlin command runs scripts and provides the REPL.
 
+# INSTALL
+
+```pacman: sudo pacman -S kotlin```
+
+```brew: brew install kotlin```
+
+```nix: nix profile install nixpkgs#kotlin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kotlinc](/man/kotlinc)(1), [java](/man/java)(1), [gradle](/man/gradle)(1)

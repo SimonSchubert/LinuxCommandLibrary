@@ -58,6 +58,22 @@ Accuracy varies by image quality. Works best with clean scans. Consider tesserac
 
 **gocr** (also known as **JOCR**, since the name GOCR was already taken on SourceForge) was created by **Jörg Schulenburg** in the late 1990s as a free OCR program under the GPL.
 
+# INSTALL
+
+```apt: sudo apt install gocr```
+
+```dnf: sudo dnf install gocr```
+
+```pacman: sudo pacman -S gocr```
+
+```zypper: sudo zypper install gocr```
+
+```brew: brew install gocr```
+
+```nix: nix profile install nixpkgs#gocr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tesseract](/man/tesseract)(1), [ocrmypdf](/man/ocrmypdf)(1)

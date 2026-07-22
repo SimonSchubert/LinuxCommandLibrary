@@ -113,6 +113,24 @@ Not a build system - no incremental builds or dependency tracking. Different fro
 
 **just** was created by Casey Rodarmor starting around **2016** as a simpler alternative to make for running commands. Frustrated with make's complexity and focus on building (rather than running), he designed just for the common use case of project-specific task running. The tool has gained popularity in the Rust community and beyond.
 
+# INSTALL
+
+```apt: sudo apt install just```
+
+```dnf: sudo dnf install just```
+
+```pacman: sudo pacman -S just```
+
+```apk: sudo apk add just```
+
+```zypper: sudo zypper install just```
+
+```brew: brew install just```
+
+```nix: nix profile install nixpkgs#just```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [make](/man/make)(1), [task](/man/task)(1), [rake](/man/rake)(1), [npm-run-script](/man/npm-run-script)(1)

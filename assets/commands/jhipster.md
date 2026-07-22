@@ -66,6 +66,12 @@ development platform for generating modern web applications and microservices
 
 **JHipster** is a development platform for generating modern web applications and microservices. Creates production-ready Spring Boot backends with Angular, React, or Vue frontends. Includes authentication, monitoring, API documentation, and database configurations out of the box.
 
+# INSTALL
+
+```brew: brew install jhipster```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [mvn](/man/mvn)(1), [spring](/man/spring)(1)

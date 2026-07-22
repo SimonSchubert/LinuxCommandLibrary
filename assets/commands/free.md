@@ -84,6 +84,24 @@ The "available" memory column (added in Linux 3.14) is a better estimate of how 
 
 Part of the **procps** (or procps-ng) package, which provides process monitoring utilities for Linux.
 
+# INSTALL
+
+```apt: sudo apt install procps```
+
+```dnf: sudo dnf install procps-ng```
+
+```pacman: sudo pacman -S procps-ng```
+
+```apk: sudo apk add procps-ng```
+
+```zypper: sudo zypper install procps```
+
+```brew: brew install procps```
+
+```nix: nix profile install nixpkgs#procps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [top](/man/top)(1), [htop](/man/htop)(1), [vmstat](/man/vmstat)(8), [sar](/man/sar)(1)

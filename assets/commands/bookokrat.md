@@ -39,6 +39,12 @@ The reader features Vim-style keybindings, split-view layout with library/table 
 
 Complex layouts and rich formatting in PDFs may not render well in a text-only environment. Best suited for text-heavy books. EPUB support is generally better than PDF due to the reflowable nature of the format.
 
+# INSTALL
+
+```brew: brew install bookokrat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zathura](/man/zathura)(1), [mupdf](/man/mupdf)(1), [calibre](/man/calibre)(1)

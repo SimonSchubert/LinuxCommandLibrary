@@ -32,6 +32,16 @@ Remove packages from a project
 
 **bun remove** uninstalls packages from the project and removes them from package.json. This is equivalent to **npm uninstall** or **yarn remove**.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-rm](/man/bun-rm)(1), [bun-install](/man/bun-install)(1)

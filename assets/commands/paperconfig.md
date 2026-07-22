@@ -42,6 +42,12 @@ Root required. Part of libpaper. Affects printing defaults.
 
 paperconfig is part of **libpaper** for setting system paper size.
 
+# INSTALL
+
+```apt: sudo apt install libpaper-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [paperconf](/man/paperconf)(1), [lp](/man/lp)(1)

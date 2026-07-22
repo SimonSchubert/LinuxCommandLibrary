@@ -39,6 +39,22 @@ Show installed Rust toolchains and active version
 
 **rustup show** displays rustup installation information. Shows installed toolchains, active toolchain, and configured settings. Default command shows comprehensive overview.
 
+# INSTALL
+
+```apt: sudo apt install rustup```
+
+```dnf: sudo dnf install rustup```
+
+```pacman: sudo pacman -S rustup```
+
+```zypper: sudo zypper install rustup```
+
+```brew: brew install rustup```
+
+```nix: nix profile install nixpkgs#rustup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rustup](/man/rustup)(1), [rustup-default](/man/rustup-default)(1)

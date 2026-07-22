@@ -28,6 +28,12 @@ Simple command-line tool for tracking time
 
 **zeit** was created by **Marius** (mrusme) and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S zeit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [watson](/man/watson)(1)

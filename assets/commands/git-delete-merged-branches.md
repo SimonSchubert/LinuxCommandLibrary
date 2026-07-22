@@ -18,6 +18,14 @@ Remove all branches merged into current branch
 
 The command uses Git's merge-base calculation to determine which branches are safe to delete, ensuring that only branches with no unique commits are removed. It is commonly run after release cycles or as part of repository maintenance routines to prevent branch sprawl.
 
+# INSTALL
+
+```brew: brew install git-delete-merged-branches```
+
+```nix: nix profile install nixpkgs#git-delete-merged-branches```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-extras](/man/git-extras)(1)

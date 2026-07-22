@@ -114,6 +114,14 @@ Requires internet access for downloading versions. GitHub API rate limits may ap
 
 Bob was created by **Mordechai Hadad** as a modern, cross-platform solution for managing multiple Neovim installations, similar to how nvm manages Node.js versions or pyenv manages Python versions.
 
+# INSTALL
+
+```pacman: sudo pacman -S bob```
+
+```brew: brew install bob```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nvim](/man/nvim)(1), [nvm](/man/nvm)(1), [rustup](/man/rustup)(1)

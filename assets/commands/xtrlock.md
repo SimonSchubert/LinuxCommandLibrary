@@ -38,6 +38,16 @@ The lock is transparent, showing the desktop but preventing interaction.
 
 X11 only. Does not blank screen by default. Requires proper PAM configuration for authentication.
 
+# INSTALL
+
+```apt: sudo apt install xtrlock```
+
+```dnf: sudo dnf install xtrlock```
+
+```pacman: sudo pacman -S xtrlock```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xlock](/man/xlock)(1), [i3lock](/man/i3lock)(1), [vlock](/man/vlock)(1)

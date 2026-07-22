@@ -33,6 +33,22 @@ _subcommand_
 
 **rustup help** prints usage, options, and the list of subcommands for **rustup** or any of its subcommands. It is equivalent to running the command with **--help**, but accepts nested subcommand names as positional arguments instead of flags.
 
+# INSTALL
+
+```apt: sudo apt install rustup```
+
+```dnf: sudo dnf install rustup```
+
+```pacman: sudo pacman -S rustup```
+
+```zypper: sudo zypper install rustup```
+
+```brew: brew install rustup```
+
+```nix: nix profile install nixpkgs#rustup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rustup](/man/rustup)(1)

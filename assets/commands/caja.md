@@ -51,6 +51,22 @@ Caja is a fork of GNOME's Nautilus file manager, maintaining a traditional deskt
 **--browser**
 > Open browser window
 
+# INSTALL
+
+```apt: sudo apt install caja```
+
+```dnf: sudo dnf install caja```
+
+```pacman: sudo pacman -S caja```
+
+```apk: sudo apk add caja```
+
+```zypper: sudo zypper install caja```
+
+```nix: nix profile install nixpkgs#caja```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nautilus](/man/nautilus)(1), [dolphin](/man/dolphin)(1), [thunar](/man/thunar)(1), [ranger](/man/ranger)(1)

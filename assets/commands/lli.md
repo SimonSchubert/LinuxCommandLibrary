@@ -66,6 +66,24 @@ Requires LLVM bitcode input. JIT overhead on startup. Part of LLVM toolchain.
 
 lli is part of the **LLVM** project, providing a way to directly execute LLVM intermediate representation.
 
+# INSTALL
+
+```apt: sudo apt install llvm-runtime```
+
+```dnf: sudo dnf install llvm```
+
+```pacman: sudo pacman -S llvm```
+
+```apk: sudo apk add llvm```
+
+```zypper: sudo zypper install llvm```
+
+```brew: brew install llvm```
+
+```nix: nix profile install nixpkgs#llvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [llc](/man/llc)(1), [llvm-as](/man/llvm-as)(1), [clang](/man/clang)(1)

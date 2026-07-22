@@ -136,6 +136,14 @@ Requires Heroku account. Some features require payment. Rate limits apply.
 
 Heroku was originally launched in **2007** for Ruby applications and was acquired by **Salesforce** in **2010**. The CLI tool provides command-line management of the platform.
 
+# INSTALL
+
+```brew: brew install heroku```
+
+```nix: nix profile install nixpkgs#heroku```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [docker](/man/docker)(1), [flyctl](/man/flyctl)(1)

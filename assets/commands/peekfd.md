@@ -72,6 +72,20 @@ Part of **psmisc**. Requires kernel ptrace support and sufficient privileges (us
 
 **peekfd** ships with the **psmisc** package alongside utilities such as fuser, killall, and pstree. It was originally written by Trent Waddington.
 
+# INSTALL
+
+```apt: sudo apt install psmisc```
+
+```dnf: sudo dnf install psmisc```
+
+```pacman: sudo pacman -S psmisc```
+
+```zypper: sudo zypper install psmisc```
+
+```nix: nix profile install nixpkgs#psmisc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [strace](/man/strace)(1), [ltrace](/man/ltrace)(1), [lsof](/man/lsof)(1), [fuser](/man/fuser)(1), [pstree](/man/pstree)(1)

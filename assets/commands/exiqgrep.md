@@ -74,6 +74,14 @@ Commonly used with **exim -Mrm** to remove matching messages from the queue.
 
 Exim mail server specific. Patterns use Perl regular expressions. Requires appropriate permissions to access mail queue.
 
+# INSTALL
+
+```apt: sudo apt install exim4-base```
+
+```apk: sudo apk add exim-scripts```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [exim](/man/exim)(8)

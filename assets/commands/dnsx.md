@@ -90,6 +90,16 @@ High query rates may trigger rate limiting or blocks. Only perform on authorized
 
 dnsx was developed by **ProjectDiscovery**, creators of other security tools like nuclei and httpx. It was released as part of their open-source security toolkit to provide fast, reliable DNS operations for reconnaissance workflows.
 
+# INSTALL
+
+```dnf: sudo dnf install dnsx```
+
+```brew: brew install dnsx```
+
+```nix: nix profile install nixpkgs#dnsx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [massdns](/man/massdns)(1)

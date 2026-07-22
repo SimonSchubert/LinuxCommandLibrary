@@ -79,6 +79,24 @@ Exit status 0 indicates success, 1 indicates failure, and 42 means not all reque
 
 **pmap** is part of the **procps-ng** package, providing process filesystem utilities for Linux. It reads information from /proc/[pid]/maps and related files.
 
+# INSTALL
+
+```apt: sudo apt install procps```
+
+```dnf: sudo dnf install procps-ng```
+
+```pacman: sudo pacman -S procps-ng```
+
+```apk: sudo apk add procps-ng```
+
+```zypper: sudo zypper install procps```
+
+```brew: brew install procps```
+
+```nix: nix profile install nixpkgs#procps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ps](/man/ps)(1), [pgrep](/man/pgrep)(1), [proc](/man/proc)(5)

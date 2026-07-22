@@ -88,6 +88,17 @@ Requires the **avahi-daemon** to be running. If the daemon is not available, the
 
 Part of the **Avahi** suite, developed as a free software implementation of Apple's Bonjour/Zeroconf protocols. Avahi enables service discovery on local networks without requiring configuration, standardized by **IETF** as mDNS and DNS-SD protocols.
 
+# INSTALL
+
+```apt: sudo apt install avahi-utils```
+
+```dnf: sudo dnf install avahi-tools```
+
+```apk: sudo apk add avahi-tools```
+
+```zypper: sudo zypper install avahi-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [avahi-browse](/man/avahi-browse)(1), [avahi-publish](/man/avahi-publish)(1), [avahi-resolve](/man/avahi-resolve)(1), [avahi-daemon](/man/avahi-daemon)(8)

@@ -145,6 +145,24 @@ The more command is considered primitive compared to **less**, which offers back
 
 The **more** command appeared in **3.0BSD**. It was written by **Eric Shienbrood** at UC Berkeley and was one of the first screen-oriented utilities. It became a standard Unix pager, though **less** (written by Mark Nudelman in 1983) has largely superseded it due to additional features.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [most](/man/most)(1), [pg](/man/pg)(1), [cat](/man/cat)(1), [head](/man/head)(1), [tail](/man/tail)(1)

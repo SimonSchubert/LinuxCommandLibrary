@@ -60,6 +60,22 @@ Edit XML documents from command line
 
 **xml edit** modifies XML documents from command line. Part of xmlstarlet toolkit. Supports inserting, updating, deleting, and renaming elements and attributes.
 
+# INSTALL
+
+```dnf: sudo dnf install xmlstarlet```
+
+```pacman: sudo pacman -S xmlstarlet```
+
+```apk: sudo apk add xmlstarlet```
+
+```zypper: sudo zypper install xmlstarlet```
+
+```brew: brew install xmlstarlet```
+
+```nix: nix profile install nixpkgs#xmlstarlet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xml-select](/man/xml-select)(1), [xml-format](/man/xml-format)(1)

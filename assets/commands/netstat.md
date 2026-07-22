@@ -121,6 +121,24 @@ netstat is considered obsolete on Linux; **ss** is the recommended replacement w
 
 netstat originated in **BSD Unix** in the early 1980s as part of the original TCP/IP implementation. It became a standard networking tool across all Unix-like systems and Windows. On Linux, netstat was part of the **net-tools** package, which is now deprecated in favor of the **iproute2** suite. The **ss** command from iproute2, introduced around **2001**, provides similar functionality with better performance by reading directly from kernel data structures.
 
+# INSTALL
+
+```apt: sudo apt install net-tools```
+
+```dnf: sudo dnf install net-tools```
+
+```pacman: sudo pacman -S net-tools```
+
+```apk: sudo apk add net-tools```
+
+```zypper: sudo zypper install net-tools```
+
+```brew: brew install net-tools```
+
+```nix: nix profile install nixpkgs#net-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ss](/man/ss)(8), [ip](/man/ip)(8), [lsof](/man/lsof)(8), [ifconfig](/man/ifconfig)(8)

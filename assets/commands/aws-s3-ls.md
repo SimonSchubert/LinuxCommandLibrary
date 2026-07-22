@@ -65,6 +65,17 @@ When listing bucket contents, objects are displayed with timestamps and sizes, w
 
 The **--output** and **--no-paginate** global arguments are ignored for this command. Output format is fixed and cannot be changed to JSON or other formats. For programmatic access to S3 listings with flexible output, use **aws s3api list-objects-v2** instead.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-s3](/man/aws-s3)(1), [aws-s3-cp](/man/aws-s3-cp)(1), [aws-s3api](/man/aws-s3api)(1), [ls](/man/ls)(1)

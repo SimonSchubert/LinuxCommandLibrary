@@ -73,6 +73,11 @@ Requires the apt-file package to be installed. The database must be updated befo
 
 Part of the **APT** (Advanced Package Tool) ecosystem for Debian-based systems.
 
+# INSTALL
+
+```aur: yay -S apt-file```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-cache](/man/apt-cache)(8), [dpkg](/man/dpkg)(1)

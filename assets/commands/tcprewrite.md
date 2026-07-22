@@ -94,6 +94,24 @@ Packets captured with "any" interface (cooked mode) cannot be properly edited. S
 
 **tcprewrite** is part of the Tcpreplay suite, originally developed by Aaron Turner in 2001. The project is now maintained by AppNeta and distributed under the GPLv3 license. It has become a standard tool for network testing and security analysis.
 
+# INSTALL
+
+```apt: sudo apt install tcpreplay```
+
+```dnf: sudo dnf install tcpreplay```
+
+```pacman: sudo pacman -S tcpreplay```
+
+```apk: sudo apk add tcpreplay```
+
+```zypper: sudo zypper install tcpreplay```
+
+```brew: brew install tcpreplay```
+
+```nix: nix profile install nixpkgs#tcpreplay```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpreplay](/man/tcpreplay)(1), [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1)

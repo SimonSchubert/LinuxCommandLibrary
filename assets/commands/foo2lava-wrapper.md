@@ -63,6 +63,14 @@ Requires Ghostscript. Limited to supported printer models. Color output quality 
 
 foo2lava-wrapper is part of the **foo2zjs** driver collection, providing easy document printing for Konica Minolta printers using the LAVAFLOW protocol.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+```dnf: sudo dnf install foo2lava```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2lava](/man/foo2lava)(1), [gs](/man/gs)(1), [lpr](/man/lpr)(1)

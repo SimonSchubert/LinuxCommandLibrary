@@ -69,6 +69,24 @@ Reduces image sharpness. Use pnmconvol for custom kernels. Part of Netpbm.
 
 pnmsmooth is part of **Netpbm** by **Jef Poskanzer**, providing simple image smoothing via convolution.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmconvol](/man/pnmconvol)(1), [pgmenhance](/man/pgmenhance)(1), [netpbm](/man/netpbm)(1)

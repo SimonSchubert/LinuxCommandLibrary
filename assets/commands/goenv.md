@@ -94,6 +94,12 @@ Version selection is managed through **.go-version** files and shims that interc
 **GOENV_ROOT**
 > Environment variable specifying the goenv installation directory (default ~/.goenv).
 
+# INSTALL
+
+```brew: brew install goenv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [pyenv](/man/pyenv)(1), [rbenv](/man/rbenv)(1)

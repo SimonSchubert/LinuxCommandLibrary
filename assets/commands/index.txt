@@ -1,4 +1,3 @@
-1password.md
 2048.md
 2fa.md
 2to3.md

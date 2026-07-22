@@ -61,6 +61,24 @@ Newer format. May not be everywhere. Part of zstd package.
 
 **unzstd** is part of **Zstandard** (zstd), a fast compression algorithm developed by Facebook.
 
+# INSTALL
+
+```apt: sudo apt install zstd```
+
+```dnf: sudo dnf install zstd```
+
+```pacman: sudo pacman -S zstd```
+
+```apk: sudo apk add zstd```
+
+```zypper: sudo zypper install zstd```
+
+```brew: brew install zstd```
+
+```nix: nix profile install nixpkgs#zstd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zstd](/man/zstd)(1), [gzip](/man/gzip)(1), [xz](/man/xz)(1)

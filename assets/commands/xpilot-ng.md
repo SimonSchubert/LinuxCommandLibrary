@@ -81,6 +81,14 @@ Requires network connectivity for multiplayer. Public servers vary in availabili
 
 **XPilot** was created in 1991 by Bjørn Stabell and Ken Schouten at the University of Tromsø. XPilot NG branched in 2000, adding polygon maps and OpenGL rendering. One of the oldest continuously played online multiplayer games.
 
+# INSTALL
+
+```dnf: sudo dnf install xpilot-ng```
+
+```nix: nix profile install nixpkgs#xpilot-ng```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xpilot](/man/xpilot)(6)

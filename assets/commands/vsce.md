@@ -109,6 +109,14 @@ Requires a Marketplace account and an Azure DevOps PAT with the Marketplace (Man
 
 **vsce** (Visual Studio Code Extension Manager) is developed by **Microsoft** and distributed on npm as `@vscode/vsce`. It has been the primary tool for packaging and publishing VS Code extensions since the Marketplace launched.
 
+# INSTALL
+
+```brew: brew install vsce```
+
+```nix: nix profile install nixpkgs#vsce```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [code](/man/code)(1), [npm](/man/npm)(1)

@@ -53,6 +53,12 @@ Template and geometry flags vary by version; see **termtosvg --help** and the te
 
 Unmaintained since 2020. Unix-like systems only (Linux, macOS, BSD). SVG playback depends on the viewer; very long sessions produce large files. For actively maintained terminal recording, consider **asciinema**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#termtosvg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [asciinema](/man/asciinema)(1), [script](/man/script)(1), [ttyrec](/man/ttyrec)(1), [vhs](/man/vhs)(1)

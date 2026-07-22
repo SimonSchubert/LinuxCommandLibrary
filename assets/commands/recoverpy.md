@@ -34,6 +34,12 @@ Requires **sudo** or root privileges for block device access. Does not reconstru
 
 **recoverpy** was created by **PabloLec** and is written in **Python** using the **Textual** TUI framework.
 
+# INSTALL
+
+```brew: brew install recoverpy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [testdisk](/man/testdisk)(1), [photorec](/man/photorec)(1), [ddrescue](/man/ddrescue)(1), [foremost](/man/foremost)(1), [extundelete](/man/extundelete)(1)

@@ -83,6 +83,22 @@ Requires git to be installed. Some operations modify git history and should be u
 
 **lazygit** was created by **Jesse Duffield** in **2018** to provide an easier way to interact with git from the terminal. Written in Go, it gained popularity quickly among developers who preferred terminal workflows but found raw git commands cumbersome. The project continues active development with features like worktree support and custom commands.
 
+# INSTALL
+
+```apt: sudo apt install lazygit```
+
+```pacman: sudo pacman -S lazygit```
+
+```apk: sudo apk add lazygit```
+
+```zypper: sudo zypper install lazygit```
+
+```brew: brew install lazygit```
+
+```nix: nix profile install nixpkgs#lazygit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [tig](/man/tig)(1), [gitk](/man/gitk)(1), [gitui](/man/gitui)(1)

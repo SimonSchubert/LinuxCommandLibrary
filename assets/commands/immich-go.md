@@ -81,6 +81,16 @@ Unofficial community tool, not maintained by the Immich project. Requires a runn
 
 immich-go was created by **simulot** as a faster, dependency-free alternative CLI for **Immich** with Google Takeout import support. It is written in **Go**.
 
+# INSTALL
+
+```pacman: sudo pacman -S immich-go```
+
+```brew: brew install immich-go```
+
+```nix: nix profile install nixpkgs#immich-go```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [immich-cli](/man/immich-cli)(1), [rclone](/man/rclone)(1)

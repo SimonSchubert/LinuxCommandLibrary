@@ -68,6 +68,12 @@ Requires vendor-specific libraries. SSH/API access must be configured. Python li
 
 NAPALM was created by **David Barroso** and others at Spotify in **2015** to simplify multi-vendor network automation.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#napalm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [netmiko](/man/netmiko)(1), [ansible](/man/ansible)(1)

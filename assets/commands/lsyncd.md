@@ -84,6 +84,22 @@ Initial sync can take time for large directories. Inotify watch limits may need 
 
 **lsyncd** was created by **Axel Kittenberger** around **2008**. It combined inotify's efficient change notification with rsync's reliable file synchronization. The project introduced Lua configuration in version 2, enabling sophisticated sync scenarios.
 
+# INSTALL
+
+```apt: sudo apt install lsyncd```
+
+```dnf: sudo dnf install lsyncd```
+
+```apk: sudo apk add lsyncd```
+
+```zypper: sudo zypper install lsyncd```
+
+```brew: brew install lsyncd```
+
+```nix: nix profile install nixpkgs#lsyncd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rsync](/man/rsync)(1), [inotifywait](/man/inotifywait)(1), [unison](/man/unison)(1), [syncthing](/man/syncthing)(1)

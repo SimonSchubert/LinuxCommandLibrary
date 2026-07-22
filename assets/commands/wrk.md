@@ -74,6 +74,20 @@ wrk must be built from source on most systems as it's not in standard package re
 
 wrk was created by **Will Glozer** and first released around **2012**. It was designed as a modern replacement for older benchmarking tools like ab (Apache Bench), offering better performance through efficient use of modern operating system features. The Lua scripting capability was added to enable complex testing scenarios beyond simple GET requests.
 
+# INSTALL
+
+```apt: sudo apt install wrk```
+
+```apk: sudo apk add wrk```
+
+```zypper: sudo zypper install wrk```
+
+```brew: brew install wrk```
+
+```nix: nix profile install nixpkgs#wrk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ab](/man/ab)(1), [siege](/man/siege)(1), [hey](/man/hey)(1), [curl](/man/curl)(1)

@@ -108,6 +108,22 @@ Requires a UVC-compatible camera and a V4L2-capable kernel driver. Some controls
 
 **guvcview** was created by **Paulo Assis** in **2008** as a simple GTK+ webcam viewer for Linux using the V4L2 API. It has since gained Qt6 GUI support and multiple render/audio backends while remaining a lightweight alternative to full video-editing suites for quick webcam preview and capture.
 
+# INSTALL
+
+```apt: sudo apt install guvcview```
+
+```dnf: sudo dnf install guvcview```
+
+```pacman: sudo pacman -S guvcview```
+
+```apk: sudo apk add guvcview```
+
+```zypper: sudo zypper install guvcview```
+
+```nix: nix profile install nixpkgs#guvcview```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cheese](/man/cheese)(1), [v4l2-ctl](/man/v4l2-ctl)(1), [ffmpeg](/man/ffmpeg)(1)

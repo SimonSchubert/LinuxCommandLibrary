@@ -70,6 +70,21 @@ The resulting mbox is named after the series and saved in the current directory 
 **-3**, **--prep-3way**
 > Prepare fall-back blobs so that **git am -3** can resolve conflicts.
 
+# INSTALL
+
+```dnf: sudo dnf install b4```
+
+```pacman: sudo pacman -S b4```
+
+```apk: sudo apk add b4```
+
+```zypper: sudo zypper install b4```
+
+```brew: brew install b4```
+
+```nix: nix profile install nixpkgs#b4```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [b4](/man/b4)(1), [b4-shazam](/man/b4-shazam)(1), [git-am](/man/git-am)(1)

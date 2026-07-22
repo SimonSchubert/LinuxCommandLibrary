@@ -83,6 +83,14 @@ Custom policies can be written in Python or YAML. For accurate Terraform scannin
 
 **Checkov** was originally developed by **Bridgecrew.io** and has since been acquired by **Palo Alto Networks** as part of their Prisma Cloud platform. It remains open source and actively maintained on GitHub.
 
+# INSTALL
+
+```brew: brew install checkov```
+
+```nix: nix profile install nixpkgs#checkov```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [kubectl](/man/kubectl)(1), [tfsec](/man/tfsec)(1)

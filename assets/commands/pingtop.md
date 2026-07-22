@@ -40,6 +40,12 @@ Requires root or CAP_NET_RAW capability to send ICMP packets. Install via `pip i
 
 **pingtop** was created by **laixintao** and is written in **Python**.
 
+# INSTALL
+
+```aur: yay -S pingtop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ping](/man/ping)(1), [mtr](/man/mtr)(8), [gping](/man/gping)(1), [fping](/man/fping)(1), [hping3](/man/hping3)(1)

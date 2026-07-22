@@ -80,6 +80,16 @@ Browser support for JPEG XL is limited as of 2024. The lossless JPEG transcode f
 
 JPEG XL was standardized as **ISO/IEC 18181** in **2022**. The format was developed by the JPEG committee, combining technologies from Google's PIK and Cloudinary's FUIF projects. The cjxl encoder is part of the reference implementation released by the libjxl project starting in **2019**.
 
+# INSTALL
+
+```apt: sudo apt install libjxl-tools```
+
+```apk: sudo apk add libjxl-tools```
+
+```zypper: sudo zypper install libjxl-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [djxl](/man/djxl)(1), [cjpeg](/man/cjpeg)(1), [convert](/man/convert)(1), [cwebp](/man/cwebp)(1)

@@ -52,6 +52,22 @@ Flakes must be enabled. Evaluates flake. Network for remote flakes.
 
 nix flake show is part of **Nix flakes** for inspecting flake output structure.
 
+# INSTALL
+
+```apt: sudo apt install nix-bin```
+
+```dnf: sudo dnf install nix```
+
+```pacman: sudo pacman -S nix```
+
+```apk: sudo apk add nix```
+
+```zypper: sudo zypper install nix```
+
+```nix: nix profile install nixpkgs#nix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix-flake](/man/nix-flake)(1), [nix-flake-info](/man/nix-flake-info)(1), [nix](/man/nix)(1)

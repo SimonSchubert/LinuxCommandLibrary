@@ -28,6 +28,18 @@ Feature-rich terminal file transfer and explorer
 
 **termscp** was created by **Veeso** (Christian Visintin) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S termscp```
+
+```zypper: sudo zypper install termscp```
+
+```brew: brew install termscp```
+
+```nix: nix profile install nixpkgs#termscp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scp](/man/scp)(1), [sftp](/man/sftp)(1), [rclone](/man/rclone)(1)

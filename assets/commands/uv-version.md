@@ -25,6 +25,20 @@ Display installed uv version
 
 **uv version** displays the installed uv version. Useful for verifying installation and checking for updates.
 
+# INSTALL
+
+```dnf: sudo dnf install uv```
+
+```pacman: sudo pacman -S uv```
+
+```apk: sudo apk add uv```
+
+```brew: brew install uv```
+
+```nix: nix profile install nixpkgs#uv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uv](/man/uv)(1), [uv-self](/man/uv-self)(1)

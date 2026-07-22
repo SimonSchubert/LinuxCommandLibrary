@@ -38,6 +38,24 @@ The radius parameter controls the hexagonal pixel neighborhood size. Larger radi
 
 No pnmnlfilt-specific command-line flags exist; only standard libnetpbm options apply. Part of the Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmsmooth](/man/pnmsmooth)(1), [pnmconvol](/man/pnmconvol)(1)

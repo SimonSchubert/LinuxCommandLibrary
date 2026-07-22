@@ -84,6 +84,18 @@ Requires ncurses. Terminal must support at least 80 columns. PDF and PNG export 
 
 **nudoku** was created by **Michael Jubalh** as a lightweight terminal Sudoku game. The project is hosted on GitHub and packaged for most Linux distributions.
 
+# INSTALL
+
+```dnf: sudo dnf install nudoku```
+
+```zypper: sudo zypper install nudoku```
+
+```brew: brew install nudoku```
+
+```nix: nix profile install nixpkgs#nudoku```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [moon-buggy](/man/moon-buggy)(1), [nsnake](/man/nsnake)(1), [bastet](/man/bastet)(1), [tetris-bsd](/man/tetris-bsd)(1)

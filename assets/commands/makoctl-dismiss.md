@@ -46,6 +46,24 @@ Dismiss **without history**
 **--no-history**
 > Don't add dismissed notifications to history
 
+# INSTALL
+
+```apt: sudo apt install mako-notifier```
+
+```dnf: sudo dnf install mako```
+
+```pacman: sudo pacman -S mako```
+
+```apk: sudo apk add mako```
+
+```zypper: sudo zypper install mako```
+
+```brew: brew install mako```
+
+```nix: nix profile install nixpkgs#mako```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [makoctl](/man/makoctl)(1), [mako](/man/mako)(1)

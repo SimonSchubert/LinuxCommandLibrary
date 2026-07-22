@@ -90,6 +90,21 @@ Requires the **atd** daemon to be running. Time can be specified in various form
 
 Part of the traditional Unix job scheduling system, available since early Unix in the **1970s**. The modern Linux **at** package was mostly written by Thomas Koenig and has since been maintained by various Debian contributors.
 
+# INSTALL
+
+```apt: sudo apt install at```
+
+```dnf: sudo dnf install at```
+
+```pacman: sudo pacman -S at```
+
+```apk: sudo apk add at```
+
+```zypper: sudo zypper install at```
+
+```nix: nix profile install nixpkgs#at```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [atq](/man/atq)(1), [atrm](/man/atrm)(1), [cron](/man/cron)(8), [batch](/man/batch)(1)

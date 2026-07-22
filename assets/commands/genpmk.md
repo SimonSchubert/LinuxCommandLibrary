@@ -44,6 +44,18 @@ Hash tables are SSID-specific. Large wordlists create large hash files. Only for
 
 **genpmk** is part of the **cowpatty** suite, created by **Joshua Wright** for WPA security research. It addresses the performance limitation of WPA key derivation by enabling precomputation.
 
+# INSTALL
+
+```apt: sudo apt install cowpatty```
+
+```dnf: sudo dnf install cowpatty```
+
+```pacman: sudo pacman -S cowpatty```
+
+```nix: nix profile install nixpkgs#cowpatty```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cowpatty](/man/cowpatty)(1), [aircrack-ng](/man/aircrack-ng)(1), [hashcat](/man/hashcat)(1)

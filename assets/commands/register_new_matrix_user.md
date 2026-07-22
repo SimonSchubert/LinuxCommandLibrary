@@ -72,6 +72,18 @@ Requires access to the homeserver.yaml configuration file or the registration sh
 
 Part of **Synapse**, the reference Matrix homeserver implementation. Provides administrative user management.
 
+# INSTALL
+
+```dnf: sudo dnf install synapse```
+
+```pacman: sudo pacman -S synapse```
+
+```apk: sudo apk add synapse```
+
+```nix: nix profile install nixpkgs#synapse```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [synctl](/man/synctl)(1)

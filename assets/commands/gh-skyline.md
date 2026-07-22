@@ -69,6 +69,12 @@ Generate a 3D model of your GitHub contribution history
 
 An ASCII art preview of the skyline is displayed in the terminal. The model can be generated for any GitHub user, for specific years, or for the full contribution history since the user joined GitHub.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#gh-skyline```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-extension](/man/gh-extension)(1)

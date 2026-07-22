@@ -49,6 +49,16 @@ Changes made to files in `node_modules` are lost the next time npm reinstalls or
 
 **npm edit** has been part of **npm** since early releases, providing a quick way to read or hack on installed dependencies during debugging.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-explore](/man/npm-explore)(1)

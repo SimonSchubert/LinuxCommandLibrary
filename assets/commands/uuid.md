@@ -68,6 +68,20 @@ UUIDs are 128-bit identifiers used for uniquely identifying information across d
 
 UUIDv1 may expose system information. UUIDv4 requires good random source. Namespace UUIDs require object name specification.
 
+# INSTALL
+
+```apt: sudo apt install uuid```
+
+```dnf: sudo dnf install uuid```
+
+```apk: sudo apk add ossp-uuid```
+
+```zypper: sudo zypper install ossp-uuid```
+
+```brew: brew install ossp-uuid```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uuidgen](/man/uuidgen)(1), [uuidparse](/man/uuidparse)(1)

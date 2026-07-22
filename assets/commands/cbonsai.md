@@ -93,6 +93,20 @@ The tool supports live animation of tree growth, infinite mode for continuous tr
 
 Requires ncurses library. Color support depends on terminal capabilities.
 
+# INSTALL
+
+```dnf: sudo dnf install cbonsai```
+
+```apk: sudo apk add cbonsai```
+
+```zypper: sudo zypper install cbonsai```
+
+```brew: brew install cbonsai```
+
+```nix: nix profile install nixpkgs#cbonsai```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmatrix](/man/cmatrix)(1), [sl](/man/sl)(1), [cowsay](/man/cowsay)(1)

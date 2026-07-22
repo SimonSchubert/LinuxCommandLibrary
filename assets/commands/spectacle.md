@@ -97,6 +97,20 @@ KDE/Plasma application. May not work on other desktops. Wayland has limitations.
 
 **Spectacle** is the default screenshot application for **KDE Plasma**. It replaced KSnapshot with a modernized interface.
 
+# INSTALL
+
+```apt: sudo apt install kde-spectacle```
+
+```dnf: sudo dnf install spectacle```
+
+```pacman: sudo pacman -S spectacle```
+
+```apk: sudo apk add spectacle```
+
+```zypper: sudo zypper install spectacle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scrot](/man/scrot)(1), [gnome-screenshot](/man/gnome-screenshot)(1), [flameshot](/man/flameshot)(1)

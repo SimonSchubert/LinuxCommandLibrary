@@ -130,7 +130,7 @@ Session key needed for most operations. Store session key securely (environment 
 
 # SEE ALSO
 
-[pass](/man/pass)(1), [gopass](/man/gopass)(1), [1password](/man/1password)(1)
+[pass](/man/pass)(1), [gopass](/man/gopass)(1), [op](/man/op)(1)
 
 # RESOURCES
 

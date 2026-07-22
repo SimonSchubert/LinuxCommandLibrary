@@ -85,6 +85,20 @@ PNG/JNG/MNG formats. Read-only analysis.
 
 pngcheck was created for **PNG file validation** and inspection.
 
+# INSTALL
+
+```apt: sudo apt install pngcheck```
+
+```dnf: sudo dnf install pngcheck```
+
+```zypper: sudo zypper install pngcheck```
+
+```brew: brew install pngcheck```
+
+```nix: nix profile install nixpkgs#pngcheck```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pngcrush](/man/pngcrush)(1), [optipng](/man/optipng)(1), [file](/man/file)(1)

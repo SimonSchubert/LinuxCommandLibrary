@@ -77,6 +77,16 @@ Requires read access to the optical drive device. Some copy-protected discs may 
 
 Part of **cdrtools** (or cdrkit on some distributions), providing CD/DVD burning and reading utilities.
 
+# INSTALL
+
+```apk: sudo apk add cdrkit```
+
+```zypper: sudo zypper install readcd```
+
+```nix: nix profile install nixpkgs#cdrkit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cdrecord](/man/cdrecord)(1), [dd](/man/dd)(1), [wodim](/man/wodim)(1)

@@ -94,6 +94,24 @@ BSD and POSIX options differ. Use aux or -ef.
 
 ps is a **classic Unix** process monitoring utility.
 
+# INSTALL
+
+```apt: sudo apt install procps```
+
+```dnf: sudo dnf install procps-ng```
+
+```pacman: sudo pacman -S procps-ng```
+
+```apk: sudo apk add procps-ng```
+
+```zypper: sudo zypper install procps```
+
+```brew: brew install procps```
+
+```nix: nix profile install nixpkgs#procps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [top](/man/top)(1), [htop](/man/htop)(1), [pgrep](/man/pgrep)(1), [kill](/man/kill)(1)

@@ -28,6 +28,24 @@ create tags for Docker images
 
 **docker tag** creates a tag that references an existing image. An image can have multiple tags. Tags are used to version images and prepare them for pushing to registries.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-image-tag](/man/docker-image-tag)(1)

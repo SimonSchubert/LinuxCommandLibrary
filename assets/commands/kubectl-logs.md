@@ -58,6 +58,20 @@ prints container logs from a pod
 
 The command supports real-time log streaming with the -f flag, similar to `tail -f`, and can target a specific container within a multi-container pod using the -c option. You can also view logs from a previous container instance (useful for inspecting crash loops via --previous), limit output to recent entries with --tail, or filter by time window using --since and --since-time. When used with label selectors, it can aggregate logs across multiple pods simultaneously.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-exec](/man/kubectl-exec)(1)

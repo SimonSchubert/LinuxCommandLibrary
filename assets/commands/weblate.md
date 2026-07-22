@@ -93,6 +93,14 @@ Requires API key from Weblate server. Rate limits may apply. Some operations req
 
 **Weblate** was created by Michal Čihař as a web-based continuous localization system. The wlc client enables command-line and scripted interaction with Weblate servers, supporting automated translation workflows.
 
+# INSTALL
+
+```zypper: sudo zypper install weblate```
+
+```nix: nix profile install nixpkgs#weblate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gettext](/man/gettext)(1), [msgfmt](/man/msgfmt)(1), [poedit](/man/poedit)(1)

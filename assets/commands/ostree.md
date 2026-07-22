@@ -111,6 +111,20 @@ Repository format is not compatible with git. System deployments (bootable trees
 
 OSTree was developed by Colin Walters at Red Hat, initially for GNOME's continuous integration system. It evolved into the foundation for Fedora's immutable desktop variants and container-focused distributions.
 
+# INSTALL
+
+```apt: sudo apt install ostree```
+
+```dnf: sudo dnf install ostree```
+
+```pacman: sudo pacman -S ostree```
+
+```apk: sudo apk add ostree```
+
+```nix: nix profile install nixpkgs#ostree```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rpm-ostree](/man/rpm-ostree)(1), [flatpak](/man/flatpak)(1), [podman](/man/podman)(1)

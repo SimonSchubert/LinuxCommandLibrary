@@ -22,6 +22,18 @@ Word processor from Calligra suite
 
 The application uses ODF (Open Document Format) and is comparable to Microsoft Word or LibreOffice Writer.
 
+# INSTALL
+
+```apt: sudo apt install calligrawords```
+
+```dnf: sudo dnf install calligra```
+
+```pacman: sudo pacman -S calligra```
+
+```apk: sudo apk add calligra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [calligrasheets](/man/calligrasheets)(1), [calligrastage](/man/calligrastage)(1), [libreoffice](/man/libreoffice)(1)

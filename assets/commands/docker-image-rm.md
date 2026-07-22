@@ -40,6 +40,24 @@ An image cannot be removed if any containers (running or stopped) depend on it, 
 
 When an image is removed, Docker also removes any untagged parent images that are no longer referenced by other images, unless **--no-prune** is specified. This automatic cleanup helps maintain a lean image cache.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-rmi](/man/docker-rmi)(1), [docker-image-ls](/man/docker-image-ls)(1)

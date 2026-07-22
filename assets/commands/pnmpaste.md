@@ -77,6 +77,24 @@ Pasted image must fit within background. Use negative coordinates for offset. Pa
 
 pnmpaste is part of **Netpbm** by **Jef Poskanzer**, providing basic image compositing.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmcomp](/man/pnmcomp)(1), [pnmcut](/man/pnmcut)(1), [pnmcat](/man/pnmcat)(1), [netpbm](/man/netpbm)(1)

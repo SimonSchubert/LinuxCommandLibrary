@@ -45,6 +45,18 @@ Requires a compatible fingerprint reader supported by libfprint. Not all readers
 
 fprintd is part of the fprint project, which provides fingerprint reader support for Linux. The project was started to bring standardized fingerprint authentication to Linux systems, leveraging the libfprint library for hardware abstraction.
 
+# INSTALL
+
+```dnf: sudo dnf install fprintd```
+
+```pacman: sudo pacman -S fprintd```
+
+```zypper: sudo zypper install fprintd```
+
+```nix: nix profile install nixpkgs#fprintd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fprintd-enroll](/man/fprintd-enroll)(1), [fprintd-list](/man/fprintd-list)(1), [fprintd-verify](/man/fprintd-verify)(1), [fprintd-delete](/man/fprintd-delete)(1)

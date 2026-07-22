@@ -94,6 +94,22 @@ It supports modern C++ standards and provides advanced static analysis and tooli
 
 Some GCC-specific extensions may not be supported. Use **-stdlib=libc++** for LLVM's libc++ or **-stdlib=libstdc++** for GNU's standard library.
 
+# INSTALL
+
+```apt: sudo apt install clang```
+
+```dnf: sudo dnf install clang```
+
+```pacman: sudo pacman -S clang```
+
+```apk: sudo apk add clang22```
+
+```zypper: sudo zypper install clang```
+
+```nix: nix profile install nixpkgs#clang```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clang](/man/clang)(1), [g++](/man/g++)(1), [clang-format](/man/clang-format)(1)

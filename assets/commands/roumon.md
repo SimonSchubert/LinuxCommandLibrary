@@ -56,6 +56,12 @@ The target Go application must import and expose **net/http/pprof** on an HTTP l
 
 **roumon** was created by **Armin Becher** (becheran) and is written in Go. It is distributed as an open-source project on GitHub.
 
+# INSTALL
+
+```aur: yay -S roumon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pprof](/man/pprof)(1), [dlv](/man/dlv)(1), [go](/man/go)(1), [gotop](/man/gotop)(1), [htop](/man/htop)(1)

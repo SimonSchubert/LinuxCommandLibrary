@@ -55,6 +55,22 @@ The tool is part of the **po4a** (PO for anything) suite, which facilitates docu
 
 Running this tool modifies the PO file in place. Backup your PO files before running if needed. Strings that changed slightly will be marked fuzzy and require translator review. The master document format must match the original format used to create the PO file.
 
+# INSTALL
+
+```dnf: sudo dnf install po4a```
+
+```pacman: sudo pacman -S po4a```
+
+```apk: sudo apk add po4a```
+
+```zypper: sudo zypper install po4a```
+
+```brew: brew install po4a```
+
+```nix: nix profile install nixpkgs#po4a```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [po4a](/man/po4a)(1), [po4a-gettextize](/man/po4a-gettextize)(1), [po4a-translate](/man/po4a-translate)(1), [msgmerge](/man/msgmerge)(1)

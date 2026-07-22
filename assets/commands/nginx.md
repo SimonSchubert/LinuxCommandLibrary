@@ -95,6 +95,24 @@ Behavior is driven entirely by the configuration file; always validate changes w
 
 nginx was created by **Igor Sysoev** and first publicly released in **2004** to solve the C10k problem of handling many simultaneous connections. It is now developed by **F5, Inc.** and powers a large share of the busiest sites on the web.
 
+# INSTALL
+
+```apt: sudo apt install nginx```
+
+```dnf: sudo dnf install nginx```
+
+```pacman: sudo pacman -S nginx```
+
+```apk: sudo apk add nginx```
+
+```zypper: sudo zypper install nginx```
+
+```brew: brew install nginx```
+
+```nix: nix profile install nixpkgs#nginx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apache2](/man/apache2)(8), [caddy](/man/caddy)(1), [haproxy](/man/haproxy)(1)

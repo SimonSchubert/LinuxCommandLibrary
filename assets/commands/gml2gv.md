@@ -47,6 +47,24 @@ Part of Graphviz. Some GML features may not have DOT equivalents. Check attribut
 
 gml2gv is part of **Graphviz**, providing format conversion between common graph description languages.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [gv2gml](/man/gv2gml)(1), [graphml2gv](/man/graphml2gv)(1)

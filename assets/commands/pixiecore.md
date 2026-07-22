@@ -72,6 +72,12 @@ Requires root or equivalent privileges to bind DHCP/TFTP ports. May conflict wit
 
 **Pixiecore** was created at **Google** for simple, API-driven network booting. It simplifies PXE setups by eliminating need for separate DHCP/TFTP configuration.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pixiecore```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dnsmasq](/man/dnsmasq)(1), [pxelinux](/man/pxelinux)(1), [tftp](/man/tftp)(1)

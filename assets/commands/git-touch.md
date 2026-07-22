@@ -38,6 +38,24 @@ Part of git-extras package. Creates empty files. Files still need to be committe
 
 git touch is part of **git-extras**, combining file creation with staging for convenience.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [touch](/man/touch)(1), [git-add](/man/git-add)(1), [git-extras](/man/git-extras)(1)

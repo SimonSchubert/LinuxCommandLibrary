@@ -101,6 +101,16 @@ Shell differs from module syntax. Distribution requires matching cookies. Node n
 
 Erlang was developed at **Ericsson** starting in **1986** by **Joe Armstrong**, **Robert Virding**, and **Mike Williams** for telecom systems. The erl command has been the standard way to run Erlang since its open-source release in **1998**.
 
+# INSTALL
+
+```apt: sudo apt install erlang-base```
+
+```apk: sudo apk add erlang27```
+
+```zypper: sudo zypper install erlang27```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [erlc](/man/erlc)(1), [elixir](/man/elixir)(1)

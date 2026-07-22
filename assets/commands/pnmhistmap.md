@@ -36,6 +36,24 @@ Generate pixel value histogram images
 
 For color images, separate histograms are drawn for each channel. The **-width** and **-height** options control the output image dimensions. The **-white** flag uses a white background instead of the default black, and **-verbose** prints statistical information about the distribution. Part of the Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pgmhist](/man/pgmhist)(1), [ppmhist](/man/ppmhist)(1)

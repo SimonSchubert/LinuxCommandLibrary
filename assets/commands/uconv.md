@@ -101,6 +101,22 @@ Part of ICU developer tools, not installed by default on all systems. Transliter
 
 **uconv** is part of the ICU (International Components for Unicode) project, originally developed at IBM and now maintained by the Unicode Consortium. ICU provides comprehensive Unicode support for software internationalization, with uconv offering command-line access to its conversion capabilities.
 
+# INSTALL
+
+```apt: sudo apt install icu-devtools```
+
+```dnf: sudo dnf install icu```
+
+```pacman: sudo pacman -S icu```
+
+```apk: sudo apk add icu```
+
+```zypper: sudo zypper install icu```
+
+```nix: nix profile install nixpkgs#icu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iconv](/man/iconv)(1), [recode](/man/recode)(1), [file](/man/file)(1), [locale](/man/locale)(1)

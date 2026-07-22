@@ -32,6 +32,16 @@ benchmarks various fsync methods
 
 Requires write access to the target directory. Results are affected by caching layers (hardware, virtualization, filesystem) — benchmark on real production storage for accurate comparisons.
 
+# INSTALL
+
+```dnf: sudo dnf install postgresql17```
+
+```apk: sudo apk add postgresql17```
+
+```zypper: sudo zypper install postgresql17```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_test_timing](/man/pg_test_timing)(1), [postgres](/man/postgres)(1)

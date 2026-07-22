@@ -141,6 +141,22 @@ The **stanza** name must match the value used in **archive_command** and on ever
 
 **pgBackRest** was created by **David Steele** at **Crunchy Data** and first released in **2013** as a more scalable alternative to **pg_basebackup**-based backup workflows. Originally written in Perl, it was progressively rewritten in **C** for performance, with the migration substantially complete by version **2.0**. It has become a de-facto standard for production PostgreSQL backups and is bundled with the major PostgreSQL Kubernetes operators.
 
+# INSTALL
+
+```apt: sudo apt install pgbackrest```
+
+```pacman: sudo pacman -S pgbackrest```
+
+```apk: sudo apk add pgbackrest```
+
+```zypper: sudo zypper install pgbackrest```
+
+```brew: brew install pgbackrest```
+
+```nix: nix profile install nixpkgs#pgbackrest```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_basebackup](/man/pg_basebackup)(1), [pg_dump](/man/pg_dump)(1), [postgres](/man/postgres)(1)

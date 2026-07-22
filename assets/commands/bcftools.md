@@ -127,6 +127,21 @@ Use **-Ou** when piping between bcftools subcommands to avoid unnecessary compre
 
 bcftools was developed as part of the **SAMtools** project, initially created by **Heng Li** at the Wellcome Sanger Institute. It became a separate project around **2014** with the HTSlib library rewrite, gaining significant functionality for variant analysis.
 
+# INSTALL
+
+```apt: sudo apt install bcftools```
+
+```dnf: sudo dnf install bcftools```
+
+```aur: yay -S bcftools```
+
+```zypper: sudo zypper install bcftools```
+
+```brew: brew install bcftools```
+
+```nix: nix profile install nixpkgs#bcftools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [samtools](/man/samtools)(1), [tabix](/man/tabix)(1), [bgzip](/man/bgzip)(1), [vcftools](/man/vcftools)(1)

@@ -44,6 +44,12 @@ Inside a **for** loop, the variable named before **in** is assigned successively
 
 **in** comes from the Bourne shell and has been part of the POSIX shell specification since its inception. It is inherited by all POSIX-compatible shells including bash, ksh, zsh, and dash, and by the C shell family in similar form.
 
+# INSTALL
+
+```aur: yay -S in```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [for](/man/for)(1), [while](/man/while)(1), [do](/man/do)(1), [done](/man/done)(1), [read](/man/read)(1)

@@ -84,6 +84,24 @@ Create, list, and manage tags
 
 Lightweight tags are simple pointers to a commit, while annotated tags store extra metadata such as the tagger name, date, and a message. Signed tags add a GPG signature for verification.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-commit](/man/git-commit)(1)

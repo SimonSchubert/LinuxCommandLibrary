@@ -26,6 +26,16 @@ For machine-parsable output, use **sc_warts2json** or **sc_warts2text** instead.
 
 The output format of sc_wartsdump may change between releases and should not be relied upon for automated processing. Use sc_warts2json for stable structured output.
 
+# INSTALL
+
+```apt: sudo apt install scamper```
+
+```zypper: sudo zypper install scamper```
+
+```brew: brew install scamper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sc_warts2text](/man/sc_warts2text)(1), [scamper](/man/scamper)(1)

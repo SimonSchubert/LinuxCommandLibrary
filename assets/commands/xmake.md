@@ -100,6 +100,22 @@ Less widespread than CMake. Package repository smaller than vcpkg/conan. Lua con
 
 **xmake** was created by **ruki** around **2015** in China. It provides a modern alternative to CMake with integrated package management and simpler syntax.
 
+# INSTALL
+
+```apt: sudo apt install xmake```
+
+```dnf: sudo dnf install xmake```
+
+```pacman: sudo pacman -S xmake```
+
+```apk: sudo apk add xmake```
+
+```brew: brew install xmake```
+
+```nix: nix profile install nixpkgs#xmake```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmake](/man/cmake)(1), [make](/man/make)(1), [meson](/man/meson)(1), [ninja](/man/ninja)(1)

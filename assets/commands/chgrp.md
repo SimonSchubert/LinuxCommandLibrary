@@ -74,6 +74,24 @@ Only root or the file owner can change group ownership. Regular users can only c
 
 **chgrp** is a standard Unix command dating back to early Unix systems. The GNU coreutils version was written by David MacKenzie and is the implementation found on most Linux distributions.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chown](/man/chown)(1), [chmod](/man/chmod)(1), [groups](/man/groups)(1), [ls](/man/ls)(1)

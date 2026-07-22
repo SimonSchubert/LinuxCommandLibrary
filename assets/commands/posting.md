@@ -60,6 +60,14 @@ Designed for keyboard-centric workflows. Usable over SSH.
 
 **posting** was created by **Darren Burns** (darrenburns) and is written in **Python**.
 
+# INSTALL
+
+```brew: brew install posting```
+
+```nix: nix profile install nixpkgs#posting```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [httpie](/man/httpie)(1), [slumber](/man/slumber)(1)

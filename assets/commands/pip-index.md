@@ -59,6 +59,12 @@ Inspect package index version information
 
 The **versions** subcommand lists all available versions for a package, with the latest version shown first. Platform and Python version filters can restrict results to compatible packages.
 
+# INSTALL
+
+```apk: sudo apk add py3-pip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [pip-install](/man/pip-install)(1), [pip-show](/man/pip-show)(1), [pip-list](/man/pip-list)(1)

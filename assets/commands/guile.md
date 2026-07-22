@@ -110,6 +110,20 @@ Scheme syntax differs from other Lisps. Extension libraries and APIs may vary be
 
 Guile was created by the **GNU Project** as its official extension language, first released in **1993**.
 
+# INSTALL
+
+```pacman: sudo pacman -S guile```
+
+```apk: sudo apk add guile```
+
+```zypper: sudo zypper install guile```
+
+```brew: brew install guile```
+
+```nix: nix profile install nixpkgs#guile```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scheme](/man/scheme)(1), [racket](/man/racket)(1), [clisp](/man/clisp)(1), [emacs](/man/emacs)(1)

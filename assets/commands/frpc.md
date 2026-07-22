@@ -72,6 +72,16 @@ Requires frps server running. Configuration must match server. Network connectiv
 
 frpc is part of **frp**, an open source reverse proxy project. It provides the client-side functionality for creating tunnels through NAT and firewalls.
 
+# INSTALL
+
+```apk: sudo apk add frp```
+
+```brew: brew install frpc```
+
+```nix: nix profile install nixpkgs#frp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [frps](/man/frps)(1), [frp](/man/frp)(1), [ssh](/man/ssh)(1)

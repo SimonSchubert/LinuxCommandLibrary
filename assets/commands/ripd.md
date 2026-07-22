@@ -87,6 +87,12 @@ Part of FRRouting (or legacy Quagga). Requires the zebra daemon to be running. R
 
 ripd is part of **Quagga** routing suite (forked from GNU Zebra), and later **FRRouting** for Unix routing daemons.
 
+# INSTALL
+
+```apk: sudo apk add quagga```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zebra](/man/zebra)(8), [ospfd](/man/ospfd)(8), [vtysh](/man/vtysh)(1), [bgpd](/man/bgpd)(8)

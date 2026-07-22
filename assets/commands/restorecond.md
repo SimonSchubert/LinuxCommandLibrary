@@ -71,6 +71,14 @@ Requires SELinux to be enabled in enforcing or permissive mode. Must be run as r
 
 Part of **policycoreutils**, the SELinux policy core utilities package developed by Red Hat. Created to address the issue of applications creating files with incorrect security contexts, which could cause access denials under SELinux.
 
+# INSTALL
+
+```apt: sudo apt install restorecond```
+
+```zypper: sudo zypper install restorecond```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [restorecon](/man/restorecon)(8), [semanage-fcontext](/man/semanage-fcontext)(8), [semanage](/man/semanage)(8)

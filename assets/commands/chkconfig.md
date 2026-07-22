@@ -65,6 +65,12 @@ Legacy tool for SysVinit systems. On systemd-based systems (CentOS 7+, RHEL 7+),
 
 **chkconfig** was developed by Red Hat for managing SysVinit services. With the adoption of systemd, its functionality has been largely replaced by systemctl, though it remains available for compatibility.
 
+# INSTALL
+
+```dnf: sudo dnf install chkconfig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [service](/man/service)(8), [update-rc.d](/man/update-rc.d)(8)

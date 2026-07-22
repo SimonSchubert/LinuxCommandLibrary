@@ -57,6 +57,24 @@ Error numbers may vary between architectures. Some errors are system-specific. D
 
 errno is part of the **moreutils** package. The errno system dates back to early Unix, providing a standardized way for system calls to report errors.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add moreutils```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [strace](/man/strace)(1)

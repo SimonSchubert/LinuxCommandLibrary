@@ -53,6 +53,24 @@ Results depend on luminance preservation. Works best on grayscale or low-saturat
 
 pamrecolor is part of **Netpbm**, providing color manipulation tools for image processing.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmchange](/man/ppmchange)(1), [pamgamma](/man/pamgamma)(1), [ppmtopgm](/man/ppmtopgm)(1)

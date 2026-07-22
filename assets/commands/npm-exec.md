@@ -75,6 +75,16 @@ Unlike **npx**, npm exec requires **--** before the command when passing argumen
 
 npm exec was added in **npm 7** as a built-in alternative to npx, providing similar functionality with better npm integration and workspace support.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npx](/man/npx)(1), [npm-run-script](/man/npm-run-script)(1), [npm-init](/man/npm-init)(1), [npm-install](/man/npm-install)(1)

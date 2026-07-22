@@ -45,6 +45,22 @@ Requires root privileges to access /dev/mem where BIOS data is stored. On modern
 
 biosdecode is part of the **dmidecode** package, originally written by **Alan Cox** and maintained by **Jean Delvare**. It was created to provide a simple tool for extracting BIOS information on Linux systems, predating the more feature-rich dmidecode utility.
 
+# INSTALL
+
+```apt: sudo apt install dmidecode```
+
+```dnf: sudo dnf install dmidecode```
+
+```pacman: sudo pacman -S dmidecode```
+
+```apk: sudo apk add dmidecode```
+
+```zypper: sudo zypper install dmidecode```
+
+```nix: nix profile install nixpkgs#dmidecode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmidecode](/man/dmidecode)(1), [lshw](/man/lshw)(1), [hwinfo](/man/hwinfo)(1)

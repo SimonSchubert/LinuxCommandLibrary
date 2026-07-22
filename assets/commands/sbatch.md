@@ -70,6 +70,12 @@ Resource requests affect queue wait time. Exceeding time limit kills job. Enviro
 
 **sbatch** is part of **SLURM** (Simple Linux Utility for Resource Management), developed at Lawrence Livermore National Laboratory. SLURM is now the most widely used HPC job scheduler.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [squeue](/man/squeue)(1), [scancel](/man/scancel)(1), [sinfo](/man/sinfo)(1), [srun](/man/srun)(1)

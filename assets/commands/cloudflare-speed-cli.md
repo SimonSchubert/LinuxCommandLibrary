@@ -39,6 +39,14 @@ Requires Node.js and npm. Tests against Cloudflare's nearest edge server; server
 
 **speed-cloudflare-cli** was created by **KNawm** as a community-built CLI for Cloudflare's speed test service. Cloudflare launched its browser-based speed test in **September 2020**. The CLI uses the same API endpoints to perform measurements from the terminal. Written in JavaScript under the MIT license. The latest version is 2.0.3.
 
+# INSTALL
+
+```pacman: sudo pacman -S cloudflare-speed-cli```
+
+```brew: brew install cloudflare-speed-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [speedtest-cli](/man/speedtest-cli)(1), [fast](/man/fast)(1), [iperf](/man/iperf)(1), [speed-test](/man/speed-test)(1)

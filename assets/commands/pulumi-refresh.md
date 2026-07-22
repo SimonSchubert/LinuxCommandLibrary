@@ -68,6 +68,18 @@ Sync stack state with cloud resources
 
 **pulumi refresh** updates stack state to match actual cloud resources. Detects drift between Pulumi state and real infrastructure. Run before updates when resources may have changed outside Pulumi.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-up](/man/pulumi-up)(1), [pulumi-preview](/man/pulumi-preview)(1), [pulumi-destroy](/man/pulumi-destroy)(1), [pulumi-stack](/man/pulumi-stack)(1)

@@ -73,6 +73,22 @@ Requires root privileges for most operations. Interface must be down before chan
 
 iw is the modern replacement for the deprecated wireless-tools (iwconfig, iwlist). It was developed to support the nl80211/cfg80211 wireless stack introduced in Linux kernel 2.6.22 (**2007**).
 
+# INSTALL
+
+```apt: sudo apt install iw```
+
+```dnf: sudo dnf install iw```
+
+```pacman: sudo pacman -S iw```
+
+```apk: sudo apk add iw```
+
+```zypper: sudo zypper install iw```
+
+```nix: nix profile install nixpkgs#iw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iw](/man/iw)(8), [ip-link](/man/ip-link)(8), [iwconfig](/man/iwconfig)(8)

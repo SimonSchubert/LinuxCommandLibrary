@@ -83,6 +83,20 @@ Part of the HPLIP package. Installing print queues typically requires root or a 
 
 **hp-setup** is the main installation utility in **HPLIP** (HP Linux Imaging and Printing), HP's open-source printer/scanner driver suite for Linux.
 
+# INSTALL
+
+```apt: sudo apt install hplip```
+
+```dnf: sudo dnf install hplip```
+
+```pacman: sudo pacman -S hplip```
+
+```zypper: sudo zypper install hplip```
+
+```nix: nix profile install nixpkgs#hplip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hp-check](/man/hp-check)(1), [hp-plugin](/man/hp-plugin)(1), [hp-info](/man/hp-info)(1), [lpadmin](/man/lpadmin)(1)

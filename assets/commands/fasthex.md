@@ -76,6 +76,12 @@ Multiple files are concatenated as one stream. With no file argument, **fasthex*
 
 Install via **cargo install --git**; there are no published crate releases yet. Color output to a TTY may use a slower path than piping to a file or **/dev/null**.
 
+# INSTALL
+
+```aur: yay -S fasthex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xxd](/man/xxd)(1), [hexdump](/man/hexdump)(1), [hexyl](/man/hexyl)(1)

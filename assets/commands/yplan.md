@@ -33,6 +33,14 @@ The planner format is designed for printing and binding.
 
 Output requires LaTeX processing. Only generates calendar structure, not content.
 
+# INSTALL
+
+```pacman: sudo pacman -S texlive-latexextra```
+
+```apk: sudo apk add texlive-latexextra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdflatex](/man/pdflatex)(1), [pandoc](/man/pandoc)(1)

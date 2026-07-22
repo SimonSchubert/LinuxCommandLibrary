@@ -34,6 +34,14 @@ Requires Rust 1.67+ for building from source. File preview scripts need to be co
 
 **joshuto** was created by **kamiyaa** and is written in **Rust**. It was designed as a modern, fast alternative to ranger that leverages Rust's performance while maintaining a familiar file manager workflow.
 
+# INSTALL
+
+```brew: brew install joshuto```
+
+```nix: nix profile install nixpkgs#joshuto```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ranger](/man/ranger)(1), [lf](/man/lf)(1), [nnn](/man/nnn)(1), [yazi](/man/yazi)(1)

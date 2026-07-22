@@ -111,6 +111,24 @@ Slower than gzip. Default removes original file (use -k to keep). Single-threade
 
 **bzip2** was created by Julian Seward in **1996** as a replacement for the earlier bzip, using improved algorithms for better compression.
 
+# INSTALL
+
+```apt: sudo apt install bzip2```
+
+```dnf: sudo dnf install bzip2```
+
+```pacman: sudo pacman -S bzip2```
+
+```apk: sudo apk add bzip2```
+
+```zypper: sudo zypper install bzip2```
+
+```brew: brew install bzip2```
+
+```nix: nix profile install nixpkgs#bzip2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bunzip2](/man/bunzip2)(1), [gzip](/man/gzip)(1), [xz](/man/xz)(1), [tar](/man/tar)(1)

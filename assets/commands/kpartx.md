@@ -54,6 +54,18 @@ Requires root privileges. Device mapper and loop device support must be enabled 
 
 kpartx is part of the multipath-tools package. It was developed to simplify working with partitioned disk images, particularly useful for virtual machine images and system administration tasks.
 
+# INSTALL
+
+```apt: sudo apt install kpartx```
+
+```dnf: sudo dnf install kpartx```
+
+```apk: sudo apk add kpartx```
+
+```zypper: sudo zypper install kpartx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [losetup](/man/losetup)(8), [dmsetup](/man/dmsetup)(8), [mount](/man/mount)(8)

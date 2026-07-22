@@ -81,6 +81,22 @@ Provides filtering and sorting capabilities for focused analysis.
 
 Linux only: dysk reads /proc/mounts and sysfs, so it does not run on macOS or BSD. Disk type detection (SSD vs HDD) depends on what the kernel exposes and can be blank for virtual or remote filesystems. The project was previously named **lfs**.
 
+# INSTALL
+
+```apt: sudo apt install dysk```
+
+```pacman: sudo pacman -S dysk```
+
+```apk: sudo apk add dysk```
+
+```zypper: sudo zypper install dysk```
+
+```brew: brew install dysk```
+
+```nix: nix profile install nixpkgs#dysk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [df](/man/df)(1), [lsblk](/man/lsblk)(8), [duf](/man/duf)(1)

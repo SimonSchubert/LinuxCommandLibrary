@@ -154,6 +154,18 @@ GitHub's official **gh gist** subcommand covers much of the same ground and ship
 
 **gist** is a Ruby gem written by **Chris Wanstrath** (**defunkt**), a GitHub co-founder, and is one of the oldest GitHub command line tools, predating the official **gh** CLI by roughly a decade. It is installed with **gem install gist**.
 
+# INSTALL
+
+```apt: sudo apt install yorick```
+
+```pacman: sudo pacman -S gist```
+
+```brew: brew install gist```
+
+```nix: nix profile install nixpkgs#gist```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh-gist](/man/gh-gist)(1), [gh](/man/gh)(1), [curl](/man/curl)(1), [xclip](/man/xclip)(1)

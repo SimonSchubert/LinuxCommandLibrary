@@ -59,6 +59,16 @@ The **bshell** command is part of the Schily-Tools package and may not be instal
 
 The original Bourne Shell was developed by **Stephen Bourne** at Bell Labs and first appeared in **Version 7 Unix in 1979**. It replaced the Thompson shell and became the foundation for subsequent shells including **ksh**, **bash**, and **zsh**. The Schily-Tools implementation by Jörg Schilling provides a modern port of the classic Bourne Shell.
 
+# INSTALL
+
+```apt: sudo apt install avahi-ui-utils```
+
+```dnf: sudo dnf install avahi-ui-tools```
+
+```apk: sudo apk add avahi-ui-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sh](/man/sh)(1), [bash](/man/bash)(1), [dash](/man/dash)(1), [ksh](/man/ksh)(1)

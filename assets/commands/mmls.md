@@ -91,6 +91,24 @@ mmls is a read-only forensic tool: it never modifies the image. Sector values re
 
 mmls is part of **The Sleuth Kit**, a suite of open-source forensic tools for disk image analysis created by **Brian Carrier**, building on the earlier Coroner's Toolkit (TCT).
 
+# INSTALL
+
+```apt: sudo apt install sleuthkit```
+
+```dnf: sudo dnf install sleuthkit```
+
+```pacman: sudo pacman -S sleuthkit```
+
+```apk: sudo apk add sleuthkit```
+
+```zypper: sudo zypper install sleuthkit```
+
+```brew: brew install sleuthkit```
+
+```nix: nix profile install nixpkgs#sleuthkit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fdisk](/man/fdisk)(8), [parted](/man/parted)(8), [fls](/man/fls)(1)

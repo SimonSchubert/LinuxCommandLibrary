@@ -35,6 +35,12 @@ Must be run within a Slurm job context. File distribution time depends on file s
 
 Part of **Slurm** workload manager, providing efficient file distribution for HPC workflows.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sbatch](/man/sbatch)(1), [srun](/man/srun)(1), [salloc](/man/salloc)(1)

@@ -71,6 +71,22 @@ Usually started by init/systemd. Direct invocation rare. Serial configuration co
 
 getty dates back to **early Unix**, managing teletypes and terminals. Modern Linux uses agetty (alternative getty), which provides additional features.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [agetty](/man/agetty)(1), [login](/man/login)(1), [init](/man/init)(1)

@@ -99,6 +99,14 @@ Requires Ruby. Whitespace-sensitive; indentation errors cause failures. The CLI'
 
 HAML was created by **Hampton Catlin** in **2006** as part of the Ruby ecosystem. Haml 6 (2022) replaced the original hand-written compiler with one built on Temple, rewrote the CLI around Thor subcommands, and dropped the html4/xhtml output format options.
 
+# INSTALL
+
+```apt: sudo apt install ruby-haml```
+
+```pacman: sudo pacman -S ruby-haml```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [erb](/man/erb)(1), [slim](/man/slim)(1), [pug](/man/pug)(1)

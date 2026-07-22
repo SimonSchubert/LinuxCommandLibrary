@@ -46,6 +46,24 @@ Different frontends (dialog, readline, noninteractive) control how questions are
 
 Debian/Ubuntu specific. Not all packages support reconfiguration. Some reconfigurations require root privileges.
 
+# INSTALL
+
+```apt: sudo apt install dpkg```
+
+```dnf: sudo dnf install dpkg```
+
+```pacman: sudo pacman -S dpkg```
+
+```apk: sudo apk add dpkg```
+
+```zypper: sudo zypper install dpkg```
+
+```brew: brew install dpkg```
+
+```nix: nix profile install nixpkgs#dpkg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dpkg](/man/dpkg)(1)

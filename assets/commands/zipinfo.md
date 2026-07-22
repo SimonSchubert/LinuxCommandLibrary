@@ -109,6 +109,24 @@ Part of Info-ZIP package. Some encrypted archives may not show all info. Very la
 
 **zipinfo** is part of **Info-ZIP**, developed by the Info-ZIP group starting in the early **1990s**. It provides archive inspection without extraction.
 
+# INSTALL
+
+```apt: sudo apt install unzip```
+
+```dnf: sudo dnf install unzip```
+
+```pacman: sudo pacman -S unzip```
+
+```apk: sudo apk add unzip```
+
+```zypper: sudo zypper install unzip```
+
+```brew: brew install unzip```
+
+```nix: nix profile install nixpkgs#unzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unzip](/man/unzip)(1), [zip](/man/zip)(1), [zipgrep](/man/zipgrep)(1), [zipcloak](/man/zipcloak)(1)

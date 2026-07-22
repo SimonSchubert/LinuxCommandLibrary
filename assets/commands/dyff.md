@@ -84,6 +84,16 @@ Complex nested structures may produce verbose output. Large files can be slow to
 
 **dyff** was created by the Homeport team to address the need for semantic diffing of Kubernetes and configuration files. It provides more meaningful output than traditional diff tools when working with structured configuration data.
 
+# INSTALL
+
+```zypper: sudo zypper install dyff```
+
+```brew: brew install dyff```
+
+```nix: nix profile install nixpkgs#dyff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [kubectl](/man/kubectl)(1), [yq](/man/yq)(1), [dyff](/man/dyff)(1)

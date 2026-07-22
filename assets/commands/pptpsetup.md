@@ -54,6 +54,12 @@ PPTP is deprecated. Creates files in /etc/ppp/.
 
 pptpsetup provides **PPTP tunnel configuration** management.
 
+# INSTALL
+
+```apt: sudo apt install pptp-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pptp](/man/pptp)(8), [pppd](/man/pppd)(8), [pon](/man/pon)(1)

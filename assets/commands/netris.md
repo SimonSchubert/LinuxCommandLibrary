@@ -83,6 +83,14 @@ Terminal game. Network play requires setup. Classic Tetris rules.
 
 netris was created to provide **networked Tetris** gameplay over the internet using TCP/IP.
 
+# INSTALL
+
+```brew: brew install netris```
+
+```nix: nix profile install nixpkgs#netris```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bastet](/man/bastet)(1), [tetrinet](/man/tetrinet)(1), [bsdgames](/man/bsdgames)(1)

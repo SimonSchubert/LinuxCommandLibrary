@@ -32,6 +32,14 @@ Requires an existing Signal account on a mobile device for linking. Does not sup
 
 **gurk** (gurk-rs) was created by **boxdot** and is written in **Rust**. The name is German slang for cucumber. It is the only actively maintained Signal client for the terminal, providing privacy-focused messaging for headless systems and terminal-centric workflows.
 
+# INSTALL
+
+```pacman: sudo pacman -S gurk```
+
+```brew: brew install gurk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iamb](/man/iamb)(1), [weechat](/man/weechat)(1)

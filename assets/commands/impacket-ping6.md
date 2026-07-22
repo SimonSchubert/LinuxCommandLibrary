@@ -35,6 +35,12 @@ Requires root/administrator privileges to create raw sockets. Target must be an 
 
 Part of the **Impacket** library by SecureAuth. Provides IPv6 counterpart to impacket-ping for environments using IPv6 networking.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ping](/man/ping)(1), [impacket-ping](/man/impacket-ping)(1), [ping6](/man/ping6)(1)

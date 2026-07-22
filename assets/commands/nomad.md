@@ -94,6 +94,14 @@ Cluster setup requires planning. ACLs needed for production. Resource limits imp
 
 **Nomad** was released by **HashiCorp** in **2015** as a simpler alternative to Kubernetes for workload scheduling. It focuses on operational simplicity while supporting multiple workload types beyond containers.
 
+# INSTALL
+
+```pacman: sudo pacman -S nomad```
+
+```nix: nix profile install nixpkgs#nomad```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [consul](/man/consul)(1), [vault](/man/vault)(1), [docker](/man/docker)(1), [kubectl](/man/kubectl)(1)

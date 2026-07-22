@@ -46,6 +46,14 @@ The tool overwrites the output file without asking, and converting the wrong dir
 
 **dropbearconvert** exists because Dropbear predates OpenSSH's current key format and chose its own compact encoding, suited to devices where parsing PEM was an unwelcome cost. That decision left the two implementations mutually unreadable, and this small converter is the bridge. It ships with Dropbear itself, and on space-constrained firmware it is often the first binary left out, which is why key conversion is usually done on a workstation and the result copied across.
 
+# INSTALL
+
+```apt: sudo apt install dropbear-bin```
+
+```apk: sudo apk add dropbear-convert```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dropbear](/man/dropbear)(8), [dropbearkey](/man/dropbearkey)(1), [dbclient](/man/dbclient)(1), [ssh-keygen](/man/ssh-keygen)(1)

@@ -32,6 +32,24 @@ Input can be from a file or standard input; output is to standard output.
 
 For grayscale BMP images, consider using **bmptopnm** instead, which will produce more appropriate PGM output. This command always outputs PPM regardless of the input color depth.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bmptopnm](/man/bmptopnm)(1), [ppmtobmp](/man/ppmtobmp)(1), [pnmtojpeg](/man/pnmtojpeg)(1), [netpbm](/man/netpbm)(1)

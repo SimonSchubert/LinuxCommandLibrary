@@ -128,6 +128,17 @@ Credentials stored in plain text; use IAM roles on EC2 or credential helpers for
 
 The AWS CLI was first released in **2012** to replace the older service-specific command-line tools. Version 2, released in **2020**, added features like auto-prompt, SSO integration, and native installers. The CLI is maintained by AWS and updated frequently to support new services and features, making it the primary tool for AWS automation and administration.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-vault](/man/aws-vault)(1), [terraform](/man/terraform)(1), [eksctl](/man/eksctl)(1), [sam](/man/sam)(1)

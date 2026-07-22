@@ -99,6 +99,13 @@ Private keys should be protected; avoid storing them in shell history or plain t
 
 Aptos emerged from the Diem (formerly Libra) blockchain project developed at **Meta (Facebook)**. When Diem was discontinued in **2022**, former team members founded **Aptos Labs** and launched the Aptos mainnet in **October 2022**. The CLI and Move language carry forward innovations from Diem's research, including the Move Prover for formal verification.
 
+# INSTALL
+
+```aur: yay -S aptos```
+
+```brew: brew install aptos```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [solana](/man/solana)(1), [sui](/man/sui)(1)

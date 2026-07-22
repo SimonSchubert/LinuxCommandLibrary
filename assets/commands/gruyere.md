@@ -38,6 +38,12 @@ Requires appropriate permissions to view and kill processes. Killing system proc
 
 **gruyere** was created by **Savannah Ostrowski** as a lightweight utility for developers who frequently need to identify and free up occupied ports. It is written in **Rust** and named after the Swiss cheese known for its holes, a playful reference to network ports.
 
+# INSTALL
+
+```brew: brew install gruyere```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsof](/man/lsof)(1), [ss](/man/ss)(8), [fuser](/man/fuser)(1), [netstat](/man/netstat)(8)

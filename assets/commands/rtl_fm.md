@@ -94,6 +94,24 @@ Requires RTL-SDR dongle. May need PPM correction. Audio player needed for output
 
 rtl_fm is part of **rtl-sdr** tools by **osmocom**, enabling software-defined radio with RTL2832U dongles.
 
+# INSTALL
+
+```apt: sudo apt install rtl-sdr```
+
+```dnf: sudo dnf install rtl-sdr```
+
+```pacman: sudo pacman -S rtl-sdr```
+
+```apk: sudo apk add rtl-sdr```
+
+```zypper: sudo zypper install rtl-sdr```
+
+```brew: brew install rtl-sdr```
+
+```nix: nix profile install nixpkgs#rtl-sdr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rtl_sdr](/man/rtl_sdr)(1), [rtl_power](/man/rtl_power)(1), [gqrx](/man/gqrx)(1)

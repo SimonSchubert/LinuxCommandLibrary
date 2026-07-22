@@ -107,6 +107,18 @@ Initial compilation downloads packages. Network required for new packages. Some 
 
 **Tectonic** was created by **Peter Williams** starting around **2016**. It builds on the XeTeX engine with modern tooling, addressing pain points of traditional TeX distributions.
 
+# INSTALL
+
+```pacman: sudo pacman -S tectonic```
+
+```apk: sudo apk add tectonic```
+
+```brew: brew install tectonic```
+
+```nix: nix profile install nixpkgs#tectonic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdflatex](/man/pdflatex)(1), [xelatex](/man/xelatex)(1), [lualatex](/man/lualatex)(1), [latexmk](/man/latexmk)(1)

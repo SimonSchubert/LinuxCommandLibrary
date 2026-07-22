@@ -41,6 +41,16 @@ print tag information from a Koji build system
 **-h**, **--help**
 > Display help information.
 
+# INSTALL
+
+```dnf: sudo dnf install koji```
+
+```brew: brew install koji```
+
+```nix: nix profile install nixpkgs#koji```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [koji](/man/koji)(1), [koji-tag-build](/man/koji-tag-build)(1)

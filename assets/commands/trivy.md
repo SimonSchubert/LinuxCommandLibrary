@@ -118,6 +118,20 @@ The vulnerability database download requires internet access on first run. For a
 
 Trivy was created by **Teppei Fukuda** and first released in **2019** as a container vulnerability scanner. It was acquired by **Aqua Security** in **2019** and has since expanded to become a comprehensive security scanner. In **2023**, **tfsec** (Terraform security scanner) was merged into Trivy, consolidating Aqua's open-source security tools. Trivy has become one of the most widely adopted open-source vulnerability scanners.
 
+# INSTALL
+
+```dnf: sudo dnf install trivy```
+
+```pacman: sudo pacman -S trivy```
+
+```zypper: sudo zypper install trivy```
+
+```brew: brew install trivy```
+
+```nix: nix profile install nixpkgs#trivy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [tfsec](/man/tfsec)(1), [grype](/man/grype)(1), [syft](/man/syft)(1), [snyk](/man/snyk)(1)

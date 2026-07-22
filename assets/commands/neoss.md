@@ -30,6 +30,12 @@ Requires elevated privileges (sudo) for full process information. Requires Node.
 
 **neoss** was created by **PabloLec** and is written in **TypeScript**.
 
+# INSTALL
+
+```aur: yay -S neoss```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ss](/man/ss)(8), [netstat](/man/netstat)(8)

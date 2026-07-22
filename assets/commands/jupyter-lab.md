@@ -129,6 +129,18 @@ Server exposes full filesystem access from notebook-dir. Production deployments 
 
 JupyterLab development started around **2016** as the successor to Jupyter Notebook interface. Version 1.0 released in **2019** after extensive beta period. It's developed by **Project Jupyter**, which evolved from IPython. The project is part of the broader Jupyter ecosystem including kernels for many languages. JupyterLab 4.0 (2023) brought performance improvements and real-time collaboration.
 
+# INSTALL
+
+```dnf: sudo dnf install jupyterlab```
+
+```pacman: sudo pacman -S jupyterlab```
+
+```apk: sudo apk add jupyterlab```
+
+```brew: brew install jupyterlab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jupyter](/man/jupyter)(1), [ipython](/man/ipython)(1), [jupyterlite](/man/jupyterlite)(1)

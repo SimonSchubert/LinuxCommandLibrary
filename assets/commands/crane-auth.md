@@ -49,6 +49,20 @@ manage container registry authentication
 
 **crane auth** manages authentication for container registries. It stores credentials and retrieves authentication tokens for registry operations.
 
+# INSTALL
+
+```pacman: sudo pacman -S crane```
+
+```apk: sudo apk add crane```
+
+```zypper: sudo zypper install crane```
+
+```brew: brew install crane```
+
+```nix: nix profile install nixpkgs#crane```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crane](/man/crane)(1), [docker-login](/man/docker-login)(1)

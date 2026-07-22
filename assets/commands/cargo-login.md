@@ -80,6 +80,20 @@ global-credential-providers = [
 
 Keep tokens secret. The cargo:token provider stores tokens unencrypted. For enhanced security, use system keychain providers.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-publish](/man/cargo-publish)(1), [cargo-logout](/man/cargo-logout)(1)

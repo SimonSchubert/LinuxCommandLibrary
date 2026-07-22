@@ -79,6 +79,12 @@ Extremely CPU intensive. Generates significant heat. Not suitable for laptops. M
 
 Prime95/mprime was created by **George Woltman** in **1996** for the GIMPS project. It has discovered several record-breaking Mersenne primes.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#mprime```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stress](/man/stress)(1), [stress-ng](/man/stress-ng)(1)

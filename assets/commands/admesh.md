@@ -102,6 +102,17 @@ ADMesh processes only STL files; other 3D formats require conversion first. Very
 
 ADMesh was originally developed by **Anthony D. Martin** in the **mid-1990s** to repair STL files for rapid prototyping machines. It was open-sourced and has been maintained by the community since. The tool gained renewed popularity with the rise of consumer 3D printing in the **2010s** and is now commonly used alongside slicing software in FDM printing workflows.
 
+# INSTALL
+
+```apt: sudo apt install admesh```
+
+```dnf: sudo dnf install admesh```
+
+```aur: yay -S admesh```
+
+```brew: brew install admesh```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [meshlab](/man/meshlab)(1), [openscad](/man/openscad)(1), [blender](/man/blender)(1)

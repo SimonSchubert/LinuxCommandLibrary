@@ -122,6 +122,24 @@ Empty commits (--allow-empty) are occasionally useful for triggering CI/CD pipel
 **.git/hooks/pre-commit**
 > Hook script that runs checks before allowing a commit to proceed.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-add](/man/git-add)(1), [git-status](/man/git-status)(1)

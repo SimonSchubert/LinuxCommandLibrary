@@ -62,6 +62,24 @@ displays information about object files
 
 **llvm-objdump** displays information about object files. Drop-in replacement for GNU objdump. Supports disassembly, header display, symbol tables, and relocation information for various binary formats.
 
+# INSTALL
+
+```apt: sudo apt install llvm```
+
+```dnf: sudo dnf install llvm```
+
+```pacman: sudo pacman -S llvm```
+
+```apk: sudo apk add llvm```
+
+```zypper: sudo zypper install llvm```
+
+```brew: brew install llvm```
+
+```nix: nix profile install nixpkgs#llvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [objdump](/man/objdump)(1), [llvm-nm](/man/llvm-nm)(1)

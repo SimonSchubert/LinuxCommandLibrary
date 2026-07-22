@@ -97,6 +97,17 @@ Dynamic inventories are evaluated when this command runs. Large inventories may 
 
 **ansible-inventory** was introduced in Ansible 2.4 (**2017**) to provide better inventory inspection capabilities, replacing ad-hoc methods of debugging inventory issues.
 
+# INSTALL
+
+```dnf: sudo dnf install ansible-core```
+
+```pacman: sudo pacman -S ansible-core```
+
+```apk: sudo apk add ansible-core```
+
+```zypper: sudo zypper install ansible-core```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ansible](/man/ansible)(1), [ansible-playbook](/man/ansible-playbook)(1)

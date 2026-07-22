@@ -53,6 +53,14 @@ This must be run once after conda installation for full functionality.
 
 Requires restarting the shell or sourcing the configuration file after running.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-activate](/man/conda-activate)(1)

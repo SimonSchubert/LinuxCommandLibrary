@@ -115,6 +115,12 @@ Requires Jupyter or knitr for code execution. Large documents with heavy computa
 
 **Quarto** was released by **Posit** (formerly RStudio) in **2022** as a next-generation version of R Markdown. It was designed to be language-agnostic, supporting Python and Julia equally with R. The name "quarto" refers to a book format and continues the printing/publishing theme from R Markdown.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#quarto```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pandoc](/man/pandoc)(1), [jupyter](/man/jupyter)(1), [rmarkdown](/man/rmarkdown)(1), [marp](/man/marp)(1)

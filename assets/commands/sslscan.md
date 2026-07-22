@@ -103,6 +103,24 @@ Requires network access to target. Some servers rate-limit scans. Results depend
 
 **sslscan** was originally written by **Ian Ventura-Whiting** around **2007**. It was later forked and actively maintained by **rbsec** to support modern TLS features and protocols.
 
+# INSTALL
+
+```apt: sudo apt install sslscan```
+
+```dnf: sudo dnf install sslscan```
+
+```pacman: sudo pacman -S sslscan```
+
+```apk: sudo apk add sslscan```
+
+```zypper: sudo zypper install sslscan```
+
+```brew: brew install sslscan```
+
+```nix: nix profile install nixpkgs#sslscan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [openssl](/man/openssl)(1), [testssl](/man/testssl)(1), [sslyze](/man/sslyze)(1)

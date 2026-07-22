@@ -24,6 +24,12 @@ Richly-styled terminal presentations using Python
 
 **spiel** was created by **Josh Karpel** and is written in **Python**.
 
+# INSTALL
+
+```zypper: sudo zypper install spiel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [slides](/man/slides)(1), [patat](/man/patat)(1), [pysentation](/man/pysentation)(1)

@@ -100,6 +100,16 @@ Some operations load entire files into memory. Type inference can sometimes misc
 
 csvkit was created by Christopher Groskopf and first released in **2011**. It was designed to provide data journalists and analysts with powerful command-line tools for processing CSV data, becoming a standard toolkit in the data science community.
 
+# INSTALL
+
+```pacman: sudo pacman -S csvkit```
+
+```brew: brew install csvkit```
+
+```nix: nix profile install nixpkgs#csvkit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [miller](/man/miller)(1), [xsv](/man/xsv)(1), [jq](/man/jq)(1), [awk](/man/awk)(1), [cut](/man/cut)(1)

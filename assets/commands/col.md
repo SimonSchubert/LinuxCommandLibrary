@@ -70,6 +70,12 @@ All unrecognized control characters and escape sequences are discarded by defaul
 
 **col** is part of the **util-linux** package, originally from BSD Unix. It was designed to process output from nroff for display on terminals that could not handle reverse line feeds.
 
+# INSTALL
+
+```apt: sudo apt install bsdextrautils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nroff](/man/nroff)(1), [tbl](/man/tbl)(1), [colcrt](/man/colcrt)(1), [expand](/man/expand)(1)

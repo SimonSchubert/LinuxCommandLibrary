@@ -52,6 +52,16 @@ Kondo is essentially **rm -rf** with a prompt. Always have a backup of your proj
 
 **kondo** was created by **tbillington** and is written in **Rust**. The name references Marie Kondo's decluttering philosophy applied to developer project directories.
 
+# INSTALL
+
+```pacman: sudo pacman -S kondo```
+
+```brew: brew install kondo```
+
+```nix: nix profile install nixpkgs#kondo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [du](/man/du)(1), [rm](/man/rm)(1), [ncdu](/man/ncdu)(1)

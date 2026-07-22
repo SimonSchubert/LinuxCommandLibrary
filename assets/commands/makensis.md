@@ -89,6 +89,16 @@ Generates Windows-format installers. NSIS script syntax must be learned separate
 
 NSIS (Nullsoft Scriptable Install System) was created by **Nullsoft**, makers of Winamp.
 
+# INSTALL
+
+```apt: sudo apt install nsis```
+
+```brew: brew install nsis```
+
+```nix: nix profile install nixpkgs#nsis```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wine](/man/wine)(1)

@@ -82,6 +82,18 @@ Global tools may have version conflicts. Local tools require manifest restoratio
 
 dotnet tool was introduced in **.NET Core 2.1** (**2018**) to provide extensibility through NuGet-distributed CLI tools, enabling ecosystem growth beyond the built-in commands.
 
+# INSTALL
+
+```dnf: sudo dnf install dotnet-host```
+
+```pacman: sudo pacman -S dotnet-host```
+
+```apk: sudo apk add dotnet-host```
+
+```brew: brew install dotnet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dotnet](/man/dotnet)(1), [dotnet-ef](/man/dotnet-ef)(1)

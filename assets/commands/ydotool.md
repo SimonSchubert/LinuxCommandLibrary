@@ -48,6 +48,18 @@ Requires the ydotoold daemon to be running.
 
 Requires ydotoold daemon running. Needs access to /dev/uinput. Key codes are hardware scancodes, not X11 keysyms.
 
+# INSTALL
+
+```dnf: sudo dnf install ydotool```
+
+```pacman: sudo pacman -S ydotool```
+
+```zypper: sudo zypper install ydotool```
+
+```nix: nix profile install nixpkgs#ydotool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdotool](/man/xdotool)(1), [wtype](/man/wtype)(1)

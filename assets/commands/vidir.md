@@ -74,6 +74,24 @@ Part of the **moreutils** package. Deleting a line removes the file permanently.
 
 **vidir** is part of **moreutils** by **Joey Hess**. It provides intuitive file renaming using familiar editor interfaces.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add moreutils```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qmv](/man/qmv)(1), [rename](/man/rename)(1), [mmv](/man/mmv)(1)

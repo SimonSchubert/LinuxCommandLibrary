@@ -76,6 +76,23 @@ Configuration is stored in ~/.pinerc by default. Alpine may require additional s
 
 Alpine was developed by the **University of Washington** as a successor to **Pine** (Program for Internet News & Email). First released in **2007**, it was designed to address licensing concerns with Pine.
 
+# INSTALL
+
+```apt: sudo apt install alpine```
+
+```dnf: sudo dnf install alpine```
+
+```aur: yay -S alpine```
+
+```apk: sudo apk add alpine```
+
+```zypper: sudo zypper install alpine```
+
+```brew: brew install alpine```
+
+```nix: nix profile install nixpkgs#alpine```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [mutt](/man/mutt)(1), [mail](/man/mail)(1), [pico](/man/pico)(1), [nano](/man/nano)(1), [pine](/man/pine)(1)

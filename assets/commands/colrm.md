@@ -44,6 +44,14 @@ _last_
 
 Column counting starts at 1, not 0. Tabs are treated as advancing to the next multiple of 8 columns. Backspace characters decrement the column count by one. Part of the util-linux package.
 
+# INSTALL
+
+```apt: sudo apt install bsdextrautils```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cut](/man/cut)(1), [column](/man/column)(1), [awk](/man/awk)(1), [expand](/man/expand)(1), [paste](/man/paste)(1)

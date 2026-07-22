@@ -28,6 +28,12 @@ Instantaneous system information snapshots
 
 **zeitfetch** was created by **Henrique** (nidnogg) and is written in **Rust**.
 
+# INSTALL
+
+```dnf: sudo dnf install zeitfetch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neofetch](/man/neofetch)(1), [fastfetch](/man/fastfetch)(1), [onefetch](/man/onefetch)(1)

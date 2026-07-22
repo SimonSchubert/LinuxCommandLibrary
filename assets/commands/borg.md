@@ -148,6 +148,24 @@ Repository corruption can lose all backups (keep offsite copies). Encryption key
 
 **BorgBackup** was created by Thomas Waldmann in **2015** as a fork of Attic backup, focusing on performance, security, and reliability.
 
+# INSTALL
+
+```apt: sudo apt install borgbackup```
+
+```dnf: sudo dnf install borgbackup```
+
+```pacman: sudo pacman -S borg```
+
+```apk: sudo apk add borgbackup```
+
+```zypper: sudo zypper install borgbackup```
+
+```brew: brew install borgbackup```
+
+```nix: nix profile install nixpkgs#borgbackup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [restic](/man/restic)(1), [duplicity](/man/duplicity)(1), [rsync](/man/rsync)(1)

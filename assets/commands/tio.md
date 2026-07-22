@@ -64,6 +64,22 @@ The tool provides essential serial communication features including configurable
 
 Press **Ctrl+t q** to quit the terminal session.
 
+# INSTALL
+
+```apt: sudo apt install tio```
+
+```dnf: sudo dnf install tio```
+
+```apk: sudo apk add tio```
+
+```zypper: sudo zypper install tio```
+
+```brew: brew install tio```
+
+```nix: nix profile install nixpkgs#tio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [minicom](/man/minicom)(1), [screen](/man/screen)(1), [picocom](/man/picocom)(1)

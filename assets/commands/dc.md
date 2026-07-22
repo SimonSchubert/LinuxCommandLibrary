@@ -69,6 +69,24 @@ RPN syntax can be unintuitive for users accustomed to infix notation. Error mess
 
 dc is one of the oldest Unix utilities, written by **Lorinda Cherry** and **Robert Morris** at Bell Labs around **1969-1971**. It predates the C programming language and was originally implemented in B. The bc calculator was later written as a preprocessor for dc.
 
+# INSTALL
+
+```apt: sudo apt install dc```
+
+```dnf: sudo dnf install bc```
+
+```pacman: sudo pacman -S bc```
+
+```apk: sudo apk add bc```
+
+```zypper: sudo zypper install bc```
+
+```brew: brew install bc```
+
+```nix: nix profile install nixpkgs#bc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bc](/man/bc)(1), [calc](/man/calc)(1), [expr](/man/expr)(1)

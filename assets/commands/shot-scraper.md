@@ -131,6 +131,12 @@ Requires Python and Playwright browser binaries (installed via **shot-scraper in
 
 **shot-scraper** was created by Simon Willison and first released in **2022**. It was designed to automate documentation screenshots and web scraping tasks using Playwright's browser automation capabilities. The tool gained popularity for generating automated screenshots in CI/CD pipelines, with notable users including Reuters for data dashboards. Development continues actively with regular releases adding new features.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#shot-scraper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [playwright](/man/playwright)(1), [puppeteer](/man/puppeteer)(1), [chromium](/man/chromium)(1), [firefox](/man/firefox)(1)

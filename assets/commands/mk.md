@@ -66,6 +66,14 @@ Plan 9/9front tool. Different from GNU make. Simpler rules syntax.
 
 mk was created for **Plan 9** at Bell Labs as a cleaner replacement for make.
 
+# INSTALL
+
+```apk: sudo apk add bmk```
+
+```brew: brew install mk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [make](/man/make)(1), [ninja](/man/ninja)(1), [rc](/man/rc)(1)

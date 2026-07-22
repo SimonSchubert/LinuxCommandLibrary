@@ -109,6 +109,22 @@ Reads from stdin only. Designed primarily for email messages. Some URL patterns 
 
 **urlscan** was created as a replacement for urlview, providing better URL extraction and a more modern interface. It integrates well with mutt and other terminal-based mail readers in the Unix tradition.
 
+# INSTALL
+
+```dnf: sudo dnf install urlscan```
+
+```pacman: sudo pacman -S urlscan```
+
+```apk: sudo apk add urlscan```
+
+```zypper: sudo zypper install urlscan```
+
+```brew: brew install urlscan```
+
+```nix: nix profile install nixpkgs#urlscan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mutt](/man/mutt)(1), [urlview](/man/urlview)(1), [xdg-open](/man/xdg-open)(1)

@@ -62,6 +62,16 @@ Postgres focused. Service connection needed. Configuration required.
 
 **Sequin** is a change data capture tool for streaming database changes in real-time.
 
+# INSTALL
+
+```apt: sudo apt install ncbi-tools-x11```
+
+```brew: brew install sequin```
+
+```nix: nix profile install nixpkgs#sequin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [debezium](/man/debezium)(1), [psql](/man/psql)(1), [kafka](/man/kafka)(1)

@@ -85,6 +85,16 @@ Conflicts must be resolved through the system tables, not by editing files; a me
 
 dolt merge implements **git merge** semantics for relational data, which is the whole point of the project: making database changes reviewable and mergeable the way code is. Cell-wise three-way merge, schema merge, and the conflict system tables were built out over successive releases as Dolt matured from a data-sharing tool into a MySQL-compatible database.
 
+# INSTALL
+
+```pacman: sudo pacman -S dolt```
+
+```brew: brew install dolt```
+
+```nix: nix profile install nixpkgs#dolt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dolt](/man/dolt)(1), [dolt-checkout](/man/dolt-checkout)(1), [dolt-branch](/man/dolt-branch)(1), [dolt-commit](/man/dolt-commit)(1), [git-merge](/man/git-merge)(1)

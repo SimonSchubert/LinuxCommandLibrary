@@ -58,6 +58,14 @@ Download GitHub release assets from the command line
 
 Subject to GitHub API rate limits; set a token for private repos or heavy use. Always verify checksums of downloaded binaries when available.
 
+# INSTALL
+
+```pacman: sudo pacman -S dra```
+
+```brew: brew install dra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [curl](/man/curl)(1), [wget](/man/wget)(1)

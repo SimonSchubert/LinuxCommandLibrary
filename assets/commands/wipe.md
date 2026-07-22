@@ -90,6 +90,22 @@ Secure wiping is ineffective on SSDs due to wear-leveling and write amplificatio
 
 wipe implements the Gutmann method for secure deletion, based on Peter Gutmann's **1996** paper on secure data removal from magnetic media. The tool provides a more thorough alternative to **shred** from GNU coreutils.
 
+# INSTALL
+
+```apt: sudo apt install wipe```
+
+```dnf: sudo dnf install wipe```
+
+```pacman: sudo pacman -S wipe```
+
+```apk: sudo apk add wipe```
+
+```zypper: sudo zypper install wipe```
+
+```nix: nix profile install nixpkgs#wipe```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [shred](/man/shred)(1), [srm](/man/srm)(1), [rm](/man/rm)(1), [dd](/man/dd)(1)

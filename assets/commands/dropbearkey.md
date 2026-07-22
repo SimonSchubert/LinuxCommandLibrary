@@ -56,6 +56,22 @@ Prefer **ed25519**: it is small, fast, and well supported. **dss** is obsolete, 
 
 Generating an RSA key on a slow embedded device can take a surprisingly long time, and on a freshly booted system the entropy pool may not be seeded, so host key generation at first boot is a classic source of both delay and weak keys.
 
+# INSTALL
+
+```apt: sudo apt install dropbear-bin```
+
+```dnf: sudo dnf install dropbear```
+
+```pacman: sudo pacman -S dropbear```
+
+```apk: sudo apk add dropbear```
+
+```brew: brew install dropbear```
+
+```nix: nix profile install nixpkgs#dropbear```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dropbearconvert](/man/dropbearconvert)(1), [dropbear](/man/dropbear)(8), [dbclient](/man/dbclient)(1), [ssh-keygen](/man/ssh-keygen)(1)

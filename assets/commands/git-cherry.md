@@ -56,6 +56,24 @@ Compares patch content, not commit IDs. Rebased commits show as missing. Works b
 
 git cherry is a core **Git** command for comparing branches by patch equivalence, named after the cherry-pick operation it helps plan.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-cherry-pick](/man/git-cherry-pick)(1), [git-log](/man/git-log)(1), [git-rebase](/man/git-rebase)(1)

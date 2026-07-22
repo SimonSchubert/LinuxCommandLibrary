@@ -68,6 +68,22 @@ Part of the Graphviz suite, mingle reads a graph in DOT format and produces outp
 
 Part of Graphviz. Output is always in DOT format. May obscure individual edge paths in dense graphs.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [neato](/man/neato)(1), [sfdp](/man/sfdp)(1), [fdp](/man/fdp)(1)

@@ -68,6 +68,22 @@ Requires compiled .mo catalogs. LANG/LC_MESSAGES must be set. Missing translatio
 
 gettext was developed by **GNU** for internationalization. It became the standard Unix localization system, enabling software to support multiple languages.
 
+# INSTALL
+
+```apt: sudo apt install gettext-base```
+
+```dnf: sudo dnf install gettext```
+
+```pacman: sudo pacman -S gettext```
+
+```apk: sudo apk add gettext```
+
+```brew: brew install gettext```
+
+```nix: nix profile install nixpkgs#gettext```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xgettext](/man/xgettext)(1), [msgfmt](/man/msgfmt)(1), [envsubst](/man/envsubst)(1)

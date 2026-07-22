@@ -75,6 +75,12 @@ Ruby required. Command-line only. Manual entry.
 
 **timetrap** was created as a simple command-line time tracking tool using SQLite for storage.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#timetrap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [watson](/man/watson)(1), [timew](/man/timew)(1)

@@ -102,6 +102,14 @@ Uses Dropbear key format, not OpenSSH format. Use **dropbearconvert** to convert
 
 **dbclient** is part of the **Dropbear** SSH suite, created by **Matt Johnston**. Dropbear was designed for embedded systems where the full OpenSSH suite is too large, with the entire server and client typically under 110KB compressed.
 
+# INSTALL
+
+```apt: sudo apt install dropbear-bin```
+
+```apk: sudo apk add dropbear-dbclient```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [scp](/man/scp)(1), [dropbear](/man/dropbear)(8), [dropbearkey](/man/dropbearkey)(1), [dropbearconvert](/man/dropbearconvert)(1)

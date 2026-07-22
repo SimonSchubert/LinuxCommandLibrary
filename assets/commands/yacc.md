@@ -87,6 +87,22 @@ yacc reports shift/reduce and reduce/reduce conflicts that may indicate grammar 
 
 yacc was written by **Stephen C. Johnson** at Bell Labs and first released in **1975** for Unix Version 6. The name stands for "Yet Another Compiler Compiler". **Berkeley Yacc** (byacc) was written by Robert Corbett in **1989** as a public domain implementation. **GNU Bison**, a compatible replacement with extensions, was first released in **1985** and is the standard yacc on GNU/Linux systems.
 
+# INSTALL
+
+```dnf: sudo dnf install bison```
+
+```pacman: sudo pacman -S bison```
+
+```apk: sudo apk add bison```
+
+```zypper: sudo zypper install bison```
+
+```brew: brew install bison```
+
+```nix: nix profile install nixpkgs#bison```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bison](/man/bison)(1), [lex](/man/lex)(1), [flex](/man/flex)(1), [cc](/man/cc)(1)

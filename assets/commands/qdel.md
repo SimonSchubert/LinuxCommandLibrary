@@ -86,6 +86,12 @@ Syntax varies between PBS, SGE, SLURM. Running jobs may take time to terminate. 
 
 qdel is part of the **PBS** (Portable Batch System) originally developed at NASA Ames Research Center.
 
+# INSTALL
+
+```apt: sudo apt install gridengine-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qsub](/man/qsub)(1), [qstat](/man/qstat)(1), [scancel](/man/scancel)(1)

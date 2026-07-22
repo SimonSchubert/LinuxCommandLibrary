@@ -57,6 +57,14 @@ The created `.dvc/` directory contains `config` (repository configuration), `.gi
 **.dvc/config.local**
 > Local machine-specific settings not tracked in Git, such as credentials and cache locations.
 
+# INSTALL
+
+```brew: brew install dvc```
+
+```nix: nix profile install nixpkgs#dvc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dvc](/man/dvc)(1), [dvc-config](/man/dvc-config)(1), [dvc-destroy](/man/dvc-destroy)(1), [git-init](/man/git-init)(1)

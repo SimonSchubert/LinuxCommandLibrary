@@ -46,6 +46,24 @@ display live container resource usage statistics
 
 **docker stats** displays a live stream of container resource usage statistics including CPU percentage, memory usage/limit, network I/O, and block I/O.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-container-stats](/man/docker-container-stats)(1), [docker-top](/man/docker-top)(1)

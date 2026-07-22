@@ -75,6 +75,12 @@ List installed Python packages with versions
 
 **pip list** displays installed Python packages with their versions. Can filter by outdated, up-to-date, or editable packages. Supports multiple output formats including JSON for scripting.
 
+# INSTALL
+
+```apk: sudo apk add py3-pip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [pip-freeze](/man/pip-freeze)(1), [pip-show](/man/pip-show)(1)

@@ -111,6 +111,16 @@ Some readouts require specific system access. GPU detection may not work on all 
 
 **macchina** was created by **Uttarayan Mondal** (grtcdr) around **2020**. Written in Rust for performance, it aimed to provide a faster alternative to neofetch while maintaining customization options. The name comes from the Italian word for "machine."
 
+# INSTALL
+
+```pacman: sudo pacman -S macchina```
+
+```brew: brew install macchina```
+
+```nix: nix profile install nixpkgs#macchina```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neofetch](/man/neofetch)(1), [fastfetch](/man/fastfetch)(1), [pfetch](/man/pfetch)(1), [onefetch](/man/onefetch)(1)

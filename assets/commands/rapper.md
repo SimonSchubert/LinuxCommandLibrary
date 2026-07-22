@@ -88,6 +88,16 @@ Some features depend on how Raptor was compiled. Network URI fetching requires l
 
 Raptor was created by **Dave Beckett** starting in **2000** as part of the Redland RDF Libraries project. The toolkit became one of the most widely used RDF parsing libraries, providing the foundation for many semantic web applications. The name Raptor stands for "RDF Parser Toolkit for Redland."
 
+# INSTALL
+
+```apt: sudo apt install raptor2-utils```
+
+```dnf: sudo dnf install raptor2```
+
+```apk: sudo apk add raptor2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rdfproc](/man/rdfproc)(1), [redland](/man/redland)(3), [roqet](/man/roqet)(1)

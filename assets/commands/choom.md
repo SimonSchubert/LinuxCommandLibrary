@@ -38,6 +38,24 @@ The score adjustment ranges from -1000 (never kill) to +1000 (kill first). A val
 
 Requires appropriate privileges to modify OOM scores of other users' processes. Setting -1000 on too many processes can leave the system with no candidate to kill during memory exhaustion, potentially causing a system hang.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [proc](/man/proc)(5), [kill](/man/kill)(1), [ps](/man/ps)(1)

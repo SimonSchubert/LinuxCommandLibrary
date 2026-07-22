@@ -81,6 +81,14 @@ Most day-to-day work happens in `doppler secrets` and `doppler run`; the project
 
 **delete** removes the project along with every config and secret inside it, and the CLI will only prompt once. Passing **--yes** removes even that prompt, which makes it easy to destroy a production project from a script. Project names are used as identifiers throughout the CLI and API, so renaming one with **update --name** can break service tokens, CI configuration, and `doppler setup` state that referred to the old name.
 
+# INSTALL
+
+```brew: brew install doppler```
+
+```nix: nix profile install nixpkgs#doppler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doppler](/man/doppler)(1), [doppler-secrets](/man/doppler-secrets)(1)

@@ -96,6 +96,14 @@ Passwords passed on command line may be visible in process listings. Large resul
 
 cypher-shell was introduced by Neo4j as part of their database tooling. It replaced the older neo4j-shell, providing better support for modern Neo4j features and the Bolt protocol introduced in **Neo4j 3.0** in **2016**.
 
+# INSTALL
+
+```apk: sudo apk add cypher-shell```
+
+```brew: brew install cypher-shell```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neo4j](/man/neo4j)(1), [neo4j-admin](/man/neo4j-admin)(1)

@@ -138,6 +138,24 @@ Requires terminal with full capabilities. Shell integration requires sourcing th
 
 fzf was created by **Junegunn Choi** in 2013. Written in Go for performance, it became essential tooling for command-line productivity, spawning integrations across shells, editors, and tools.
 
+# INSTALL
+
+```apt: sudo apt install fzf```
+
+```dnf: sudo dnf install fzf```
+
+```pacman: sudo pacman -S fzf```
+
+```apk: sudo apk add fzf```
+
+```zypper: sudo zypper install fzf```
+
+```brew: brew install fzf```
+
+```nix: nix profile install nixpkgs#fzf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sk](/man/sk)(1), [peco](/man/peco)(1), [fd](/man/fd)(1)

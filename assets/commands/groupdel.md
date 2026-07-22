@@ -40,6 +40,20 @@ Cannot delete a group if any user has it as their primary group; the user must b
 
 groupdel is part of the shadow-utils package, providing the standard Unix group management tools. It works in conjunction with groupadd and groupmod for complete group lifecycle management.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groupadd](/man/groupadd)(8), [groupmod](/man/groupmod)(8), [gpasswd](/man/gpasswd)(1), [userdel](/man/userdel)(8), [chgrp](/man/chgrp)(1), [groups](/man/groups)(1)

@@ -28,6 +28,22 @@ Type **quit** or press **Ctrl+D** to exit the interactive session.
 
 Unlike **mate-calc --solve**, this command starts an interactive session rather than evaluating a single expression. For one-off calculations in scripts, use **mate-calc --solve** instead.
 
+# INSTALL
+
+```apt: sudo apt install mate-calc```
+
+```dnf: sudo dnf install mate-calc```
+
+```pacman: sudo pacman -S mate-calc```
+
+```apk: sudo apk add mate-calc```
+
+```zypper: sudo zypper install mate-calc```
+
+```nix: nix profile install nixpkgs#mate-calc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mate-calc](/man/mate-calc)(1), [bc](/man/bc)(1), [calc](/man/calc)(1)

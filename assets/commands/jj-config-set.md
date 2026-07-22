@@ -32,6 +32,20 @@ sets configuration values in Jujutsu config files
 
 **jj config set** sets configuration values in Jujutsu config files. User config applies globally while repo config applies only to the current repository. Values are stored in TOML format.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-config-get](/man/jj-config-get)(1), [jj-config-unset](/man/jj-config-unset)(1)

@@ -100,6 +100,18 @@ Part of MuPDF. Some features require specific builds. Limited editing capabiliti
 
 mutool is part of **MuPDF**, a lightweight PDF renderer created by Artifex Software.
 
+# INSTALL
+
+```apt: sudo apt install mupdf-tools```
+
+```pacman: sudo pacman -S mupdf-tools```
+
+```apk: sudo apk add mupdf-tools```
+
+```brew: brew install mupdf-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdftk](/man/pdftk)(1), [gs](/man/gs)(1), [qpdf](/man/qpdf)(1)

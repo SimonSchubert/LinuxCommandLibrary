@@ -42,6 +42,18 @@ Requires process accounting to be enabled (accton). Historical data depends on a
 
 Part of **acct** (process accounting) package, providing system-wide command usage statistics.
 
+# INSTALL
+
+```apt: sudo apt install acct```
+
+```apk: sudo apk add acct```
+
+```zypper: sudo zypper install acct```
+
+```nix: nix profile install nixpkgs#acct```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lastcomm](/man/lastcomm)(1), [accton](/man/accton)(8), [ac](/man/ac)(1)

@@ -81,6 +81,16 @@ Performance depends on terminal emulator capabilities. A GPU-accelerated termina
 
 **neo** was created by **st3w** as a modern rewrite of **CMatrix** (originally by Chris Allegretta). It adds **32-bit color** and full **Unicode support**, going beyond the original CMatrix capabilities. The project is available on Linux, macOS, and FreeBSD.
 
+# INSTALL
+
+```apt: sudo apt install neo-cli```
+
+```dnf: sudo dnf install neo```
+
+```nix: nix profile install nixpkgs#neo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmatrix](/man/cmatrix)(1), [sl](/man/sl)(1)

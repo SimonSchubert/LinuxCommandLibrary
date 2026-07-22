@@ -108,6 +108,16 @@ The workflow typically involves initializing a project with `cdk init`, writing 
 
 Requires Node.js and AWS credentials configured. Run `cdk bootstrap` once per account/region before first deploy.
 
+# INSTALL
+
+```dnf: sudo dnf install cdk```
+
+```brew: brew install cdk```
+
+```nix: nix profile install nixpkgs#cdk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws](/man/aws)(1), [terraform](/man/terraform)(1), [pulumi](/man/pulumi)(1)

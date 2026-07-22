@@ -58,6 +58,16 @@ A mounted developer disk image is required on the device, otherwise the screensh
 
 Part of the **libimobiledevice** suite. The device must be paired and trusted. Requires a mounted developer disk image. DRM-protected content may appear as black in screenshots.
 
+# INSTALL
+
+```apt: sudo apt install libimobiledevice-utils```
+
+```dnf: sudo dnf install libimobiledevice-utils```
+
+```apk: sudo apk add libimobiledevice-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [idevice_id](/man/idevice_id)(1), [idevicepair](/man/idevicepair)(1), [ideviceinfo](/man/ideviceinfo)(1), [scrcpy](/man/scrcpy)(1)

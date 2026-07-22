@@ -24,6 +24,16 @@ Requires network access to a Proxmox VE instance and valid authentication creden
 
 **pvetui** was created by **devnullvoid** and is written in **Go**.
 
+# INSTALL
+
+```zypper: sudo zypper install pvetui```
+
+```brew: brew install pvetui```
+
+```nix: nix profile install nixpkgs#pvetui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [virsh](/man/virsh)(1), [virsh-help](/man/virsh-help)(1)

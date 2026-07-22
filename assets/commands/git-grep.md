@@ -89,6 +89,24 @@ Only searches tracked files. Regex syntax differs from grep. Binary files skippe
 
 git grep is a core **Git** command providing optimized search that understands git's object model and history.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [git-log](/man/git-log)(1), [rg](/man/rg)(1)

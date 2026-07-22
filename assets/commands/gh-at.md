@@ -89,6 +89,24 @@ Download and verify artifact attestations (alias for gh attestation)
 
 Requires either **--owner** or **--repo** to scope the lookup. Verification depends on network access to GitHub and Sigstore's public-good instance unless **--custom-trusted-root** or **--bundle** is used for fully offline verification.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-release](/man/gh-release)(1)

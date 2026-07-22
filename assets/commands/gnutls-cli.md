@@ -84,6 +84,16 @@ Certificate verification requires proper CA setup. Priority string syntax comple
 
 **gnutls-cli** is part of **GnuTLS**, developed by **Nikos Mavrogiannopoulos** and others starting in **2000**. GnuTLS provides an alternative to OpenSSL under the LGPL license, and gnutls-cli serves as its diagnostic and testing tool.
 
+# INSTALL
+
+```apt: sudo apt install gnutls-bin```
+
+```dnf: sudo dnf install gnutls-utils```
+
+```apk: sudo apk add gnutls-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [curl](/man/curl)(1), [certtool](/man/certtool)(1), [nmap](/man/nmap)(1)

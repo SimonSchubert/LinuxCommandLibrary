@@ -38,6 +38,24 @@ Part of git-extras package. Commands run without "git" prefix. Shell features li
 
 git repl is part of **git-extras**, providing an interactive environment for frequent git users.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [tig](/man/tig)(1), [git-extras](/man/git-extras)(1)

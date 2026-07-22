@@ -138,5 +138,17 @@ A RAUC-based design requires early planning: the target must have at least two r
 
 RAUC was created by **Jan Lübbe** and **Enrico Jörns** at **Pengutronix** and released as open source in **2015** to give embedded Linux projects a vendor-neutral, secure update framework. It has since become a de facto standard in the **Yocto** and **Buildroot** ecosystems and ships with integration layers (**meta-rauc**, **hawkBit** connector) that connect devices to large-scale update servers.
 
+# INSTALL
+
+```apt: sudo apt install rauc```
+
+```dnf: sudo dnf install rauc```
+
+```pacman: sudo pacman -S rauc```
+
+```nix: nix profile install nixpkgs#rauc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

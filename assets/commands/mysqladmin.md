@@ -86,6 +86,16 @@ Requires admin privileges. Dangerous operations (drop). Use carefully in product
 
 mysqladmin is part of the **MySQL** distribution, providing command-line administration since early versions.
 
+# INSTALL
+
+```apt: sudo apt install mariadb-client```
+
+```apk: sudo apk add mariadb-client```
+
+```zypper: sudo zypper install mariadb-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mysql](/man/mysql)(1), [mysqldump](/man/mysqldump)(1), [mysqlcheck](/man/mysqlcheck)(1)

@@ -120,6 +120,24 @@ Part of the Graphviz package. Random graphs vary each run unless a seed is speci
 
 gvgen was developed as part of the **Graphviz** project to provide sample graph generation for testing and demonstration.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [neato](/man/neato)(1), [sfdp](/man/sfdp)(1), [gvpack](/man/gvpack)(1)

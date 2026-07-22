@@ -197,6 +197,24 @@ Not for production orchestration (use Kubernetes). File format versions matter. 
 
 **docker-compose** was created by Orchard Labs (acquired by Docker) around **2014** as Fig, becoming Docker Compose and integral to Docker development workflows.
 
+# INSTALL
+
+```apt: sudo apt install docker-compose```
+
+```dnf: sudo dnf install docker-compose```
+
+```pacman: sudo pacman -S docker-compose```
+
+```apk: sudo apk add docker-cli-compose```
+
+```zypper: sudo zypper install docker-compose```
+
+```brew: brew install docker-compose```
+
+```nix: nix profile install nixpkgs#docker-compose```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [kubectl](/man/kubectl)(1), [podman-compose](/man/podman-compose)(1)

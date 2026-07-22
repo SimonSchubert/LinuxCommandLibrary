@@ -93,6 +93,20 @@ Requires pom.xml. First run downloads dependencies. Local repository in ~/.m2. P
 
 Maven was created at the **Apache Software Foundation** in **2002** by Jason van Zyl as a successor to Apache Ant, emphasizing convention over configuration.
 
+# INSTALL
+
+```dnf: sudo dnf install maven```
+
+```pacman: sudo pacman -S maven```
+
+```zypper: sudo zypper install maven```
+
+```brew: brew install maven```
+
+```nix: nix profile install nixpkgs#maven```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [ant](/man/ant)(1), [java](/man/java)(1)

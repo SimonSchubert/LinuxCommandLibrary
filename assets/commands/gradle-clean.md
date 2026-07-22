@@ -45,6 +45,18 @@ Removes all build output. Next build will be full rebuild. Doesn't clean depende
 
 The clean task is a standard **Gradle** lifecycle task for build artifact removal.
 
+# INSTALL
+
+```pacman: sudo pacman -S gradle```
+
+```apk: sudo apk add gradle```
+
+```brew: brew install gradle```
+
+```nix: nix profile install nixpkgs#gradle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [gradle-build](/man/gradle-build)(1)

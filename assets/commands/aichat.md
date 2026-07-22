@@ -90,6 +90,15 @@ API keys required for cloud providers. Configuration file needed for multi-provi
 
 **aichat** was created by **sigoden** in **2023** as a unified CLI for interacting with multiple AI providers. It grew from a simple chat tool into a comprehensive AI terminal toolkit with execute mode, RAG, and agent capabilities.
 
+# INSTALL
+
+```pacman: sudo pacman -S aichat```
+
+```brew: brew install aichat```
+
+```nix: nix profile install nixpkgs#aichat```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [mods](/man/mods)(1), [smartcat](/man/smartcat)(1), [ollama](/man/ollama)(1), [llm](/man/llm)(1)

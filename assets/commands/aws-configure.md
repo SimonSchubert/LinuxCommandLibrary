@@ -106,6 +106,17 @@ Credentials stored in plain text. Use IAM roles on EC2 instead of credentials wh
 
 **aws configure** was introduced with the AWS CLI in **2013** as the standard way to set up AWS credentials and configuration.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-vault](/man/aws-vault)(1), [aws-sso](/man/aws-sso)(1)

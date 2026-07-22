@@ -106,6 +106,18 @@ A full upgrade can take a long time and may prompt for `sudo`. Transient network
 
 **topgrade** was created by **Roey Darwish Dror** (**r-darwish**) in **2018** as a Rust utility to avoid remembering the update command for every package manager. After the original author stepped away, the project was forked and is now maintained by the community-run **topgrade-rs** organization on GitHub.
 
+# INSTALL
+
+```apk: sudo apk add topgrade```
+
+```zypper: sudo zypper install topgrade```
+
+```brew: brew install topgrade```
+
+```nix: nix profile install nixpkgs#topgrade```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apt](/man/apt)(1), [brew](/man/brew)(1), [pacman](/man/pacman)(8), [flatpak](/man/flatpak)(1), [snap](/man/snap)(1)

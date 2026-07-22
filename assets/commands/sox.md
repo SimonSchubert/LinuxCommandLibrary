@@ -91,6 +91,24 @@ Some formats need external libraries. Complex effects chains can be slow. Qualit
 
 **SoX** was started by **Lance Norskog** in **1991** and has been developed by many contributors. It became the Swiss Army knife of audio processing on Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install sox```
+
+```dnf: sudo dnf install sox```
+
+```pacman: sudo pacman -S sox```
+
+```apk: sudo apk add sox```
+
+```zypper: sudo zypper install sox```
+
+```brew: brew install sox```
+
+```nix: nix profile install nixpkgs#sox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [lame](/man/lame)(1), [flac](/man/flac)(1), [aplay](/man/aplay)(1)

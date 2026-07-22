@@ -59,6 +59,24 @@ displays the state of files in the working directory
 
 **hg status** displays the state of files in the working directory. Status codes: **M** (modified), **A** (added), **R** (removed), **C** (clean), **!** (missing), **?** (untracked), **I** (ignored). Use **hg diff** to see actual content changes.
 
+# INSTALL
+
+```apt: sudo apt install mercurial```
+
+```dnf: sudo dnf install mercurial```
+
+```pacman: sudo pacman -S mercurial```
+
+```apk: sudo apk add mercurial```
+
+```zypper: sudo zypper install mercurial```
+
+```brew: brew install mercurial```
+
+```nix: nix profile install nixpkgs#mercurial```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hg](/man/hg)(1), [hg-commit](/man/hg-commit)(1)

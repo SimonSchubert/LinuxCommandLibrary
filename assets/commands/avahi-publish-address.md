@@ -68,6 +68,17 @@ The published hostname becomes discoverable by other mDNS-capable devices on the
 
 Requires **avahi-daemon** to be running. The hostname registration persists only while the **avahi-publish-address** process is active; terminating the process removes the mapping. For persistent hostname registration, configure static mappings in **/etc/avahi/hosts**.
 
+# INSTALL
+
+```apt: sudo apt install avahi-utils```
+
+```dnf: sudo dnf install avahi-tools```
+
+```apk: sudo apk add avahi-tools```
+
+```zypper: sudo zypper install avahi-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [avahi-publish](/man/avahi-publish)(1), [avahi-publish-service](/man/avahi-publish-service)(1), [avahi-resolve](/man/avahi-resolve)(1), [avahi-browse](/man/avahi-browse)(1), [avahi-daemon](/man/avahi-daemon)(8)

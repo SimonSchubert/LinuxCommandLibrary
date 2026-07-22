@@ -91,6 +91,24 @@ Different from GPG. Sequoia-specific. Some features differ.
 
 **sq** is the CLI for **Sequoia PGP**, a modern OpenPGP implementation written in Rust by former GnuPG developers.
 
+# INSTALL
+
+```apt: sudo apt install sq```
+
+```dnf: sudo dnf install sequoia-sq```
+
+```pacman: sudo pacman -S sequoia-sq```
+
+```apk: sudo apk add sequoia-sq```
+
+```zypper: sudo zypper install sequoia-sq```
+
+```brew: brew install sq```
+
+```nix: nix profile install nixpkgs#sq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [age](/man/age)(1), [rage](/man/rage)(1)

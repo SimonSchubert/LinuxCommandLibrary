@@ -31,6 +31,12 @@ _query_
 
 **nh search** searches Nix packages interactively. Provides fast fuzzy search with preview. Part of nh (nix helper) toolkit.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nh](/man/nh)(1), [nix-search](/man/nix-search)(1)

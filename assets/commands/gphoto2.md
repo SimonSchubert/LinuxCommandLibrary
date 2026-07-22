@@ -139,6 +139,22 @@ Not every camera supports every feature; PTP cameras usually allow capture and c
 
 The **gphoto** project was started in **1997** by **Scott Fritzinger** to give Linux users a common interface for consumer digital cameras. The second-generation library **libgphoto2** and its reference client **gphoto2** were released in **2001**, reworking the architecture around modular camlib drivers. The project is maintained by an open-source community and underpins camera support in desktop environments such as GNOME and KDE.
 
+# INSTALL
+
+```apt: sudo apt install gphoto2```
+
+```dnf: sudo dnf install gphoto2```
+
+```pacman: sudo pacman -S gphoto2```
+
+```apk: sudo apk add gphoto2```
+
+```brew: brew install gphoto2```
+
+```nix: nix profile install nixpkgs#gphoto2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [v4l2-ctl](/man/v4l2-ctl)(1), [exiftool](/man/exiftool)(1)

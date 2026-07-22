@@ -68,6 +68,16 @@ Requires huntd server. Part of BSD games. Terminal-based graphics.
 
 hunt is a classic **BSD** network game from the 1980s, providing multiplayer action in terminals.
 
+# INSTALL
+
+```apt: sudo apt install hunt```
+
+```dnf: sudo dnf install hunt```
+
+```nix: nix profile install nixpkgs#hunt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [huntd](/man/huntd)(6), [nethack](/man/nethack)(6), [bsdgames](/man/bsdgames)(6)

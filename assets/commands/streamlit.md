@@ -93,6 +93,12 @@ Not suited for complex web apps. Limited layout control. Session state needs exp
 
 **Streamlit** was created by **Adrien Treuille**, **Thiago Teixeira**, and **Amanda Kelly** in **2019**. It rapidly gained popularity for data science prototyping and was acquired by **Snowflake** in **2022**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#streamlit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gradio](/man/gradio)(1), [dash](/man/dash)(1), [flask](/man/flask)(1), [python](/man/python)(1)

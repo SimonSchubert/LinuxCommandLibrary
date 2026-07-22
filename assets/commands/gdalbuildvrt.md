@@ -59,6 +59,14 @@ The tool can mosaic adjacent tiles into seamless coverages or stack bands from s
 
 Virtual datasets save disk space and processing time compared to creating physical mosaics. They're ideal for working with large tile collections, time series data, and multi-spectral imagery where logical combinations change frequently.
 
+# INSTALL
+
+```apt: sudo apt install gdal-bin```
+
+```apk: sudo apk add gdal-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdaladdo](/man/gdaladdo)(1), [gdal_translate](/man/gdal_translate)(1)

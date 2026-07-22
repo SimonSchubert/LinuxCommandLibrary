@@ -61,6 +61,16 @@ The grubenv file has a fixed size (1024 bytes). Variables and values must fit wi
 
 grub-editenv is part of GRUB 2's saved default mechanism, allowing boot preferences to persist without modifying the main configuration file. This enables features like "boot once" and remembering the last successful boot.
 
+# INSTALL
+
+```apt: sudo apt install grub-common```
+
+```pacman: sudo pacman -S grub```
+
+```apk: sudo apk add grub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub-set-default](/man/grub-set-default)(8), [grub-reboot](/man/grub-reboot)(8), [grub-mkconfig](/man/grub-mkconfig)(8)

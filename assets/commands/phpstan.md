@@ -93,6 +93,14 @@ High levels may be impractical for legacy code. Some dynamic PHP patterns can't 
 
 **PHPStan** was created by **Ondřej Mirtes** in **2016** to bring static typing benefits to PHP. It became one of the most popular PHP static analysis tools, competing with Psalm and Phan.
 
+# INSTALL
+
+```brew: brew install phpstan```
+
+```nix: nix profile install nixpkgs#phpstan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [psalm](/man/psalm)(1), [php](/man/php)(1), [composer](/man/composer)(1), [phpcs](/man/phpcs)(1)

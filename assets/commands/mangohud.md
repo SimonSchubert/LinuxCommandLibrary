@@ -39,6 +39,22 @@ Environment variables:
 
 Requires Vulkan or OpenGL application. May impact performance slightly. Configure via config file for persistent settings.
 
+# INSTALL
+
+```apt: sudo apt install mangohud```
+
+```dnf: sudo dnf install mangohud```
+
+```pacman: sudo pacman -S mangohud```
+
+```apk: sudo apk add mangohud```
+
+```zypper: sudo zypper install mangohud```
+
+```nix: nix profile install nixpkgs#mangohud```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nvidia-smi](/man/nvidia-smi)(1), [glxinfo](/man/glxinfo)(1)

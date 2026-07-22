@@ -91,6 +91,22 @@ Requires root privileges for most commands. Mail queue persists across restarts.
 
 **Postfix** was written by **Wietse Venema** at IBM Research as a secure, fast replacement for Sendmail. Released in 1998, it became one of the most popular MTAs due to its security design and ease of configuration.
 
+# INSTALL
+
+```apt: sudo apt install postfix```
+
+```dnf: sudo dnf install postfix```
+
+```pacman: sudo pacman -S postfix```
+
+```apk: sudo apk add postfix```
+
+```zypper: sudo zypper install postfix```
+
+```nix: nix profile install nixpkgs#postfix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [postconf](/man/postconf)(1), [postqueue](/man/postqueue)(1), [sendmail](/man/sendmail)(8)

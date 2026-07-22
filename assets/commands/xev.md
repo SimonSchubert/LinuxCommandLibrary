@@ -89,6 +89,20 @@ X11 only, not Wayland. Creates visible window. Output is verbose.
 
 **xev** is part of the standard X11 utilities. It's essential for understanding X input events and configuring key bindings.
 
+# INSTALL
+
+```apt: sudo apt install x11-utils```
+
+```dnf: sudo dnf install xev```
+
+```apk: sudo apk add xev```
+
+```zypper: sudo zypper install xev```
+
+```nix: nix profile install nixpkgs#xev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdotool](/man/xdotool)(1), [xmodmap](/man/xmodmap)(1), [xinput](/man/xinput)(1)

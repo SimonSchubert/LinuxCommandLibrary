@@ -47,6 +47,14 @@ This enables data versioning workflows: you can see what datasets changed betwee
 
 The tool accepts Git revision specifiers (HEAD, branch names, commit hashes) to compare any two points in history. The --json output format is useful for programmatic analysis, while --md generates markdown tables suitable for documentation or pull request descriptions.
 
+# INSTALL
+
+```brew: brew install dvc```
+
+```nix: nix profile install nixpkgs#dvc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dvc](/man/dvc)(1), [git-diff](/man/git-diff)(1)

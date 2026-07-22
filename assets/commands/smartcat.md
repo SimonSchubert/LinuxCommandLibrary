@@ -92,6 +92,14 @@ API key required for cloud providers. Stdin must be provided for pipe mode. Larg
 
 **smartcat** was created by **Emilien Fugier** in **2023** with the tagline "Putting a brain behind `cat`." It was designed as a minimal, composable AI tool for the Unix command line, prioritizing integration with existing shell workflows over feature richness.
 
+# INSTALL
+
+```pacman: sudo pacman -S smartcat```
+
+```nix: nix profile install nixpkgs#smartcat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mods](/man/mods)(1), [aichat](/man/aichat)(1), [llm](/man/llm)(1), [cat](/man/cat)(1)

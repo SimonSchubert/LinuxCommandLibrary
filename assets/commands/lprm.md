@@ -59,6 +59,18 @@ Requires CUPS. Users limited to own jobs. May not stop printing in progress.
 
 lprm originated in **BSD Unix** for removing print jobs, now implemented by CUPS.
 
+# INSTALL
+
+```apt: sudo apt install lpr```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lp](/man/lp)(1), [lpr](/man/lpr)(1), [lpq](/man/lpq)(1), [cancel](/man/cancel)(1)

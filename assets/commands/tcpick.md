@@ -60,6 +60,14 @@ Requires root privileges for packet capture. Uses libpcap for capture functional
 
 **tcpick** provides network analysts with a focused tool for TCP traffic inspection, combining capture and analysis in a single utility.
 
+# INSTALL
+
+```apt: sudo apt install tcpick```
+
+```dnf: sudo dnf install tcpick```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(8), [tcpflow](/man/tcpflow)(1), [wireshark](/man/wireshark)(1)

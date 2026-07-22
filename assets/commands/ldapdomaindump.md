@@ -58,6 +58,12 @@ Dump to **specific directory** without JSON
 
 Requires valid domain credentials. Designed for authorized security assessments and penetration testing only.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#ldapdomaindump```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ldapsearch](/man/ldapsearch)(1), [bloodhound](/man/bloodhound)(1)

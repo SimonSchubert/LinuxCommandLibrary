@@ -88,6 +88,24 @@ Only works with commands that read/write files via standard syscalls. Network op
 
 **progress** was created by **Xfennec** around **2013**, originally named "cv" (coreutils viewer). It addressed the long-standing complaint that cp and dd don't show progress. The tool became popular especially for monitoring dd during disk operations. It was renamed to "progress" for clarity.
 
+# INSTALL
+
+```apt: sudo apt install progress```
+
+```dnf: sudo dnf install progress```
+
+```pacman: sudo pacman -S progress```
+
+```apk: sudo apk add progress```
+
+```zypper: sudo zypper install progress```
+
+```brew: brew install progress```
+
+```nix: nix profile install nixpkgs#progress```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pv](/man/pv)(1), [dd](/man/dd)(1), [rsync](/man/rsync)(1), [watch](/man/watch)(1)

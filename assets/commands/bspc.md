@@ -75,6 +75,22 @@ The tool uses a domain-command structure where domains include node (windows), d
 **-t, --state** _state_
 > Set node state (tiled, floating, fullscreen)
 
+# INSTALL
+
+```apt: sudo apt install bspwm```
+
+```dnf: sudo dnf install bspwm```
+
+```pacman: sudo pacman -S bspwm```
+
+```apk: sudo apk add bspwm```
+
+```zypper: sudo zypper install bspwm```
+
+```nix: nix profile install nixpkgs#bspwm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bspwm](/man/bspwm)(1), [sxhkd](/man/sxhkd)(1)

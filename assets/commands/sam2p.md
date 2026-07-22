@@ -73,6 +73,12 @@ Convert raster images to EPS or PDF
 
 Supported input formats include PNM, PBM, PGM, PPM, XPM, GIF, LBM, TGA, PCX, JPEG, TIFF, PNG, BMP, PS, EPS, and PDF. Output formats include PS (levels 1-3), EPS, PDF, and many raster formats.
 
+# INSTALL
+
+```aur: yay -S sam2p```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [convert](/man/convert)(1), [img2pdf](/man/img2pdf)(1), [a2ping](/man/a2ping)(1), [epstopdf](/man/epstopdf)(1), [ps2pdf](/man/ps2pdf)(1)

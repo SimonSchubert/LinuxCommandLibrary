@@ -48,6 +48,12 @@ Part of the **foo2zjs** printer driver suite.
 
 Input is read from standard input, not as a filename argument. Only useful for debugging printer streams from specific Konica Minolta hardware.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2zjs](/man/foo2zjs)(1), [zjsdecode](/man/zjsdecode)(1), [foo2lava](/man/foo2lava)(1), [gs](/man/gs)(1)

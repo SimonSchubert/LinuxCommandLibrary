@@ -130,6 +130,22 @@ Some GCC-specific features not supported. Different optimization behavior than G
 
 **clang** was created by Apple and the LLVM community starting in **2007** as a modern, modular compiler to replace GCC, first released in **2009**.
 
+# INSTALL
+
+```apt: sudo apt install clang```
+
+```dnf: sudo dnf install clang```
+
+```pacman: sudo pacman -S clang```
+
+```apk: sudo apk add clang22```
+
+```zypper: sudo zypper install clang```
+
+```nix: nix profile install nixpkgs#clang```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [clang++](/man/clang++)(1)

@@ -59,6 +59,24 @@ Port sequence must be kept secret. Network issues can cause knock sequences to f
 
 Port knocking emerged as a security technique in the early **2000s** to hide services from port scanners. The knock/knockd implementation is one of the most widely used port knocking solutions.
 
+# INSTALL
+
+```apt: sudo apt install knockd```
+
+```dnf: sudo dnf install knock```
+
+```pacman: sudo pacman -S knockd```
+
+```apk: sudo apk add knock```
+
+```zypper: sudo zypper install knockd```
+
+```brew: brew install knock```
+
+```nix: nix profile install nixpkgs#knock```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [knockd](/man/knockd)(1), [iptables](/man/iptables)(8), [nmap](/man/nmap)(1)

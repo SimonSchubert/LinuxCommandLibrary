@@ -24,6 +24,14 @@ Reads user and group information from system databases (/etc/passwd and /etc/gro
 
 **ugm** was created by **ariasmn** and is written in **Go** using the Bubble Tea TUI framework.
 
+# INSTALL
+
+```apk: sudo apk add ugm```
+
+```nix: nix profile install nixpkgs#ugm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [id](/man/id)(1), [groups](/man/groups)(1), [getent](/man/getent)(1)

@@ -90,6 +90,12 @@ Requires HDF5 profiling to be enabled in Slurm configuration. Node files must ex
 
 **sh5util** is part of the **Slurm** (Simple Linux Utility for Resource Management) workload manager, developed at **Lawrence Livermore National Laboratory**. Slurm was first released in **2002** and has become one of the most widely used HPC job schedulers. HDF5 profiling support was added to provide detailed job performance analysis capabilities.
 
+# INSTALL
+
+```apt: sudo apt install slurm-wlm-hdf5-plugin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sacct](/man/sacct)(1), [sstat](/man/sstat)(1), [srun](/man/srun)(1), [sbatch](/man/sbatch)(1)

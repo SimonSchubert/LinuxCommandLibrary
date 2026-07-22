@@ -56,6 +56,20 @@ Not limited to NVIDIA; VDPAU is also supported by AMD GPUs via the Mesa va_gl or
 
 **vdpauinfo** was created as a diagnostic tool for NVIDIA's VDPAU API, introduced in 2009 with GeForce 8 series GPUs. VDPAU enabled GPU-accelerated video decoding on Linux, significantly reducing CPU usage for video playback. The tool helps users and developers verify hardware capabilities.
 
+# INSTALL
+
+```apt: sudo apt install vdpauinfo```
+
+```dnf: sudo dnf install vdpauinfo```
+
+```pacman: sudo pacman -S vdpauinfo```
+
+```apk: sudo apk add vdpauinfo```
+
+```nix: nix profile install nixpkgs#vdpauinfo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vainfo](/man/vainfo)(1), [nvidia-smi](/man/nvidia-smi)(1), [nvidia-settings](/man/nvidia-settings)(1), [glxinfo](/man/glxinfo)(1), [vulkaninfo](/man/vulkaninfo)(1)

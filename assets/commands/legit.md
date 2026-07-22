@@ -62,6 +62,14 @@ After installation, legit commands are available as Git subcommands (e.g., `git 
 
 Legit commands wrap standard Git operations. The `undo` command with `--hard` permanently discards changes.
 
+# INSTALL
+
+```brew: brew install legit```
+
+```nix: nix profile install nixpkgs#legit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-flow](/man/git-flow)(1)

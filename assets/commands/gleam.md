@@ -106,6 +106,20 @@ Requires Erlang/OTP for the BEAM target. The JavaScript target needs Node.js, De
 
 Gleam was created by **Louis Pilfold** starting in **2018** to bring static type safety to the BEAM virtual machine ecosystem while maintaining compatibility with Erlang and Elixir libraries. Version 1.0 was released in **March 2024**.
 
+# INSTALL
+
+```pacman: sudo pacman -S gleam```
+
+```apk: sudo apk add gleam```
+
+```zypper: sudo zypper install gleam```
+
+```brew: brew install gleam```
+
+```nix: nix profile install nixpkgs#gleam```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [elixir](/man/elixir)(1), [cargo](/man/cargo)(1), [mix](/man/mix)(1)

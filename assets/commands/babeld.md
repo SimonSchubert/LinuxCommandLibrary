@@ -111,6 +111,21 @@ Requires proper network configuration. All nodes must run compatible Babel imple
 
 **Babel** was designed by Juliusz Chroboczek around **2008** as an improved distance-vector protocol for mesh networks, later standardized as RFC 6126 and updated to RFC 8966.
 
+# INSTALL
+
+```apt: sudo apt install babeld```
+
+```dnf: sudo dnf install babeld```
+
+```pacman: sudo pacman -S babeld```
+
+```apk: sudo apk add babeld```
+
+```brew: brew install babeld```
+
+```nix: nix profile install nixpkgs#babeld```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [bird](/man/bird)(1), [route](/man/route)(8), [ip](/man/ip)(8), [traceroute](/man/traceroute)(1)

@@ -106,6 +106,12 @@ Requires valid domain credentials. Some collection methods (like Session and Log
 
 BloodHound was created by **@_wald0**, **@CptJesus**, and **@harmj0y** at **SpecterOps**, released in **2016**. The Python ingestor (bloodhound-python) was developed by **Dirk-jan Mollema** as a cross-platform alternative to the C# SharpHound collector.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#bloodhound```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ldapsearch](/man/ldapsearch)(1), [impacket](/man/impacket)(1), [netexec](/man/netexec)(1), [crackmapexec](/man/crackmapexec)(1)

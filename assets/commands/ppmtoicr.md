@@ -41,6 +41,24 @@ Convert PPM to NCSA ICR format
 
 If no input file is specified, the image is read from standard input.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmtoxpm](/man/ppmtoxpm)(1), [pnmtops](/man/pnmtops)(1)

@@ -100,6 +100,24 @@ xz format is not compatible with gzip or bzip2. Use appropriate tools (**gzip**,
 
 **xz** was developed by **Lasse Collin** and **Igor Pavlov** (LZMA SDK). The xz format and liblzma were released in **2009** as successors to the LZMA format used by 7-Zip. xz is now widely used for compressing Linux kernel tarballs and package archives.
 
+# INSTALL
+
+```apt: sudo apt install xz-utils```
+
+```dnf: sudo dnf install xz```
+
+```pacman: sudo pacman -S xz```
+
+```apk: sudo apk add xz```
+
+```zypper: sudo zypper install xz```
+
+```brew: brew install xz```
+
+```nix: nix profile install nixpkgs#xz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1), [zstd](/man/zstd)(1), [tar](/man/tar)(1), [xzcat](/man/xzcat)(1)

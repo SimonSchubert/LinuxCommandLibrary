@@ -87,6 +87,20 @@ Provides per-application profiles for common programs like Firefox and VLC.
 
 Some applications may not work correctly in sandbox. Profiles in /etc/firejail/. Use firecfg to integrate with desktop.
 
+# INSTALL
+
+```apt: sudo apt install firejail```
+
+```dnf: sudo dnf install firejail```
+
+```pacman: sudo pacman -S firejail```
+
+```zypper: sudo zypper install firejail```
+
+```nix: nix profile install nixpkgs#firejail```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bubblewrap](/man/bubblewrap)(1), [systemd-nspawn](/man/systemd-nspawn)(1)

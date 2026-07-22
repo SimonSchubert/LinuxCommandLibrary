@@ -55,6 +55,22 @@ uuencode is largely obsolete for email, having been replaced by MIME base64 enco
 
 uuencode was developed at Bell Labs and first appeared in **BSD 4.0** in the early 1980s. It was created to solve the problem of transmitting binary files over UUCP (Unix-to-Unix Copy Protocol) networks, which could only handle 7-bit ASCII. The "uu" prefix stands for "Unix-to-Unix". While largely superseded by MIME for email, it remains useful for simple binary-to-text encoding tasks.
 
+# INSTALL
+
+```apt: sudo apt install sharutils```
+
+```dnf: sudo dnf install sharutils```
+
+```pacman: sudo pacman -S sharutils```
+
+```apk: sudo apk add sharutils```
+
+```zypper: sudo zypper install sharutils```
+
+```nix: nix profile install nixpkgs#sharutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uudecode](/man/uudecode)(1), [base64](/man/base64)(1), [mail](/man/mail)(1)

@@ -36,6 +36,16 @@ Requires an X server to be running or started via xinit/startx. X11 has inherent
 
 **startplasma-x11** replaced the older **startkde** script as part of KDE Plasma 5's modernization. The X11 session remains available for compatibility with older hardware, proprietary drivers, and applications requiring X11-specific features. With Plasma 6 in **2024**, Wayland became the default, but X11 remains supported.
 
+# INSTALL
+
+```apt: sudo apt install plasma-workspace```
+
+```dnf: sudo dnf install plasma-workspace```
+
+```pacman: sudo pacman -S plasma-workspace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [startplasma-wayland](/man/startplasma-wayland)(1), [plasmashell](/man/plasmashell)(1), [startx](/man/startx)(1), [xinit](/man/xinit)(1)

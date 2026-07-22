@@ -58,6 +58,24 @@ Blocking by default. Removed manually. Different from anonymous pipes.
 
 mkfifo is a **POSIX** utility for creating named pipes for inter-process communication.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mknod](/man/mknod)(1)

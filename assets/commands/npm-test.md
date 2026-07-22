@@ -77,6 +77,16 @@ Requires test script to be defined. Default exits with error if no script. Use n
 
 npm test became the standard test command for Node.js projects, integrated into CI/CD pipelines universally.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-run-script](/man/npm-run-script)(1), [npm-start](/man/npm-start)(1)

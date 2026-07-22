@@ -53,6 +53,24 @@ Plumbing command. Usually called by git am. Input must be proper email format.
 
 git mailinfo is part of **Git's** email patch workflow, supporting the patch-by-email development model used by the Linux kernel.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-am](/man/git-am)(1), [git-mailsplit](/man/git-mailsplit)(1)

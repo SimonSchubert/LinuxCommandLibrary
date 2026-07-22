@@ -33,6 +33,16 @@ Only supports OpenAPI v3.0 and v3.1 specifications. Swagger v2 specs must be con
 
 **openapi-tui** was created by **zaghaghi** and is written in **Rust** using the ratatui library.
 
+# INSTALL
+
+```pacman: sudo pacman -S openapi-tui```
+
+```brew: brew install openapi-tui```
+
+```nix: nix profile install nixpkgs#openapi-tui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [httpie](/man/httpie)(1)

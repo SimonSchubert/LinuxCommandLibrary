@@ -88,6 +88,20 @@ Requires proper credentials for most operations. Some commands require administr
 
 Part of **Samba** suite, providing Windows interoperability tools for Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install smbclient```
+
+```dnf: sudo dnf install samba-client```
+
+```pacman: sudo pacman -S smbclient```
+
+```apk: sudo apk add samba-client```
+
+```zypper: sudo zypper install samba-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smbclient](/man/smbclient)(1), [net](/man/net)(8), [enum4linux](/man/enum4linux)(1), [nmap](/man/nmap)(1)

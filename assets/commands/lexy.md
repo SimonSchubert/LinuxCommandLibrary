@@ -45,6 +45,12 @@ Requires an internet connection for the initial download and periodic updates. D
 
 **lexy** was created by **antoniorodr** and is written in **Rust**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#lexy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tldr](/man/tldr)(1), [cheat](/man/cheat)(1), [bat](/man/bat)(1)

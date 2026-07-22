@@ -75,6 +75,12 @@ Individual resource files have a size limit (typically 500 MB, but varies by con
 
 odpscmd resource is part of the **MaxCompute Console** (odpscmd), Alibaba Cloud's command-line tool for managing MaxCompute projects, originally known as ODPS (Open Data Processing Service).
 
+# INSTALL
+
+```aur: yay -S odpscmd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [odpscmd](/man/odpscmd)(1), [odpscmd-func](/man/odpscmd-func)(1), [odpscmd-auth](/man/odpscmd-auth)(1), [odpscmd-tunnel](/man/odpscmd-tunnel)(1)

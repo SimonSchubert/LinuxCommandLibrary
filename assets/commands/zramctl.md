@@ -64,6 +64,24 @@ After creating a zram device with zramctl, use **mkswap** and **swapon** to use 
 
 Requires the zram kernel module. Compression algorithms vary by kernel version. Zram swap can improve performance on memory-constrained systems but uses CPU for compression. Part of the util-linux package.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkswap](/man/mkswap)(8), [swapon](/man/swapon)(8), [free](/man/free)(1), [lsblk](/man/lsblk)(8)

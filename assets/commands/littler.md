@@ -74,5 +74,11 @@ Must be installed separately from R. The command 'r' may conflict with other too
 
 littler was created by **Dirk Eddelbuettel** and **Jeff Horner** in **2006** to provide a proper scripting interface for R.
 
+# INSTALL
+
+```aur: yay -S littler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

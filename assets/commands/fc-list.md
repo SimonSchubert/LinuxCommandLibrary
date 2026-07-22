@@ -70,6 +70,24 @@ Output can be long; pipe to grep or sort. Font names may vary by language. Newly
 
 fc-list is part of **fontconfig**, created by **Keith Packard** around **2000** to provide system-wide font configuration for X11 and other systems. It replaced the older X font system with a more flexible, file-based approach.
 
+# INSTALL
+
+```apt: sudo apt install fontconfig```
+
+```dnf: sudo dnf install fontconfig```
+
+```pacman: sudo pacman -S fontconfig```
+
+```apk: sudo apk add fontconfig```
+
+```zypper: sudo zypper install fontconfig```
+
+```brew: brew install fontconfig```
+
+```nix: nix profile install nixpkgs#fontconfig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fc-cache](/man/fc-cache)(1), [fc-match](/man/fc-match)(1), [fc-query](/man/fc-query)(1)

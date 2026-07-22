@@ -30,6 +30,12 @@ Primarily interactive. Configuration and token storage paths are documented in t
 
 ToS risk for user-token logins. WIP project—expect breaking changes. Handle auth tokens like passwords.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#discordo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [discord](/man/discord)(1), [weechat](/man/weechat)(1)

@@ -102,6 +102,22 @@ View page **source** code
 **q**
 > Quit browser
 
+# INSTALL
+
+```apt: sudo apt install links```
+
+```dnf: sudo dnf install links```
+
+```pacman: sudo pacman -S links```
+
+```apk: sudo apk add links```
+
+```zypper: sudo zypper install links```
+
+```brew: brew install links```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [links2](/man/links2)(1), [lynx](/man/lynx)(1), [w3m](/man/w3m)(1)

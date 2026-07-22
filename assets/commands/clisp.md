@@ -102,6 +102,24 @@ Bytecode is not portable across different CLISP versions or platforms. Some Comm
 
 CLISP was originally developed by **Bruno Haible** and **Michael Stoll** starting in **1987** at the University of Karlsruhe in Germany. It was designed to be portable and memory-efficient. The project has been maintained by various contributors over the decades and remains one of the most portable Common Lisp implementations, running on many platforms including Unix, Windows, and embedded systems.
 
+# INSTALL
+
+```apt: sudo apt install clisp```
+
+```dnf: sudo dnf install clisp```
+
+```pacman: sudo pacman -S clisp```
+
+```apk: sudo apk add clisp```
+
+```zypper: sudo zypper install clisp```
+
+```brew: brew install clisp```
+
+```nix: nix profile install nixpkgs#clisp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sbcl](/man/sbcl)(1), [ecl](/man/ecl)(1), [quicklisp](/man/quicklisp)(1)

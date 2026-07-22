@@ -115,6 +115,18 @@ JVM required. First run downloads dependencies and the Gradle distribution. The 
 
 Gradle was created by **Hans Dockter**, first released in **2007**, becoming the official Android build system in **2013**. Kotlin DSL support was added in Gradle 5.0 (2018). The configuration cache for faster builds was stabilized in Gradle 8.1 (2023).
 
+# INSTALL
+
+```pacman: sudo pacman -S gradle```
+
+```apk: sudo apk add gradle```
+
+```brew: brew install gradle```
+
+```nix: nix profile install nixpkgs#gradle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gradle-wrapper](/man/gradle-wrapper)(1), [mvn](/man/mvn)(1), [ant](/man/ant)(1)

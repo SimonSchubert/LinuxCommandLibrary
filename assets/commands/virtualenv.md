@@ -97,6 +97,16 @@ Environment must be activated in each new shell. Absolute paths are embedded in 
 
 **virtualenv** was created by **Ian Bicking** in **2007** to address Python's lack of built-in environment isolation. It became the standard tool for Python development before venv was added to the standard library in Python 3.3. virtualenv remains popular due to additional features and Python 2 support (historical).
 
+# INSTALL
+
+```apk: sudo apk add py3-virtualenv```
+
+```brew: brew install virtualenv```
+
+```nix: nix profile install nixpkgs#virtualenv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [pip](/man/pip)(1), [pyenv](/man/pyenv)(1), [venv](/man/venv)(1)

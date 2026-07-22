@@ -86,6 +86,22 @@ XLSX import may not preserve all Excel features; complex formulas or formatting 
 
 The original **sc** (Spreadsheet Calculator) was created by **James Gosling** and **Mark Weiser** in **1981** at Carnegie Mellon University. Development stalled around 2002. In **2015**, **Andrés Martinelli** forked the project as **sc-im**, adding modern features like XLSX support, 256 colors, undo/redo, and Lua scripting while maintaining the terminal-based, vim-like interface.
 
+# INSTALL
+
+```apt: sudo apt install sc-im```
+
+```dnf: sudo dnf install sc-im```
+
+```apk: sudo apk add sc-im```
+
+```zypper: sudo zypper install sc-im```
+
+```brew: brew install sc-im```
+
+```nix: nix profile install nixpkgs#sc-im```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sc](/man/sc)(1), [vim](/man/vim)(1), [gnuplot](/man/gnuplot)(1), [csvtool](/man/csvtool)(1)

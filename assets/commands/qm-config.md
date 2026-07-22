@@ -43,6 +43,12 @@ The default output includes pending changes. Use **--current** to see only the a
 
 **qm config** is part of the **Proxmox VE** virtualization platform for managing QEMU/KVM virtual machines.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-set](/man/qm-set)(1), [qm-pending](/man/qm-pending)(1)

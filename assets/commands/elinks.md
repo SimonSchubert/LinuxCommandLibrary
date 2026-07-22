@@ -115,6 +115,22 @@ JavaScript support is limited compared to modern browsers. Some CSS-heavy sites 
 
 **ELinks** is a fork of **Links** browser that began in **2001**, adding features like tabs, mouse support, and improved rendering. The name stands for "Extended Links." While active development has slowed, it remains popular for server administration and terminal-centric workflows.
 
+# INSTALL
+
+```apt: sudo apt install elinks```
+
+```dnf: sudo dnf install elinks```
+
+```pacman: sudo pacman -S elinks```
+
+```apk: sudo apk add elinks```
+
+```zypper: sudo zypper install elinks```
+
+```nix: nix profile install nixpkgs#elinks```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lynx](/man/lynx)(1), [w3m](/man/w3m)(1), [links](/man/links)(1), [curl](/man/curl)(1), [wget](/man/wget)(1)

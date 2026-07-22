@@ -123,6 +123,24 @@ Automatic HTTPS requires port 80/443 access. Let's Encrypt rate limits apply. Ce
 
 **Caddy** was created by Matt Holt in **2015** as a web server prioritizing ease of use with automatic HTTPS, with version 2.0 rewritten in **2019**.
 
+# INSTALL
+
+```apt: sudo apt install caddy```
+
+```dnf: sudo dnf install caddy```
+
+```pacman: sudo pacman -S caddy```
+
+```apk: sudo apk add caddy```
+
+```zypper: sudo zypper install caddy```
+
+```brew: brew install caddy```
+
+```nix: nix profile install nixpkgs#caddy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nginx](/man/nginx)(8), [apache2](/man/apache2)(8), [traefik](/man/traefik)(1)

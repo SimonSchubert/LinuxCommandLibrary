@@ -53,6 +53,12 @@ The user must be mapped to the target role in SELinux policy (see **semanage use
 
 Only works on SELinux-enabled systems. The user must be authorized for the target role in SELinux policy. Failed transitions may result in access denials. Use **id -Z** to verify the current context before and after transition.
 
+# INSTALL
+
+```apt: sudo apt install newrole```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [runcon](/man/runcon)(1), [semanage-user](/man/semanage-user)(8), [id](/man/id)(1), [seinfo](/man/seinfo)(1)

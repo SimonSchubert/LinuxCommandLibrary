@@ -128,6 +128,22 @@ Dialog dimensions must be specified in characters and should fit the terminal. R
 
 Created as a lightweight, newt-based reimplementation of the **dialog** utility. Part of the **newt** library developed by Red Hat. Commonly used in Debian installer and system configuration scripts due to its small footprint.
 
+# INSTALL
+
+```apt: sudo apt install whiptail```
+
+```dnf: sudo dnf install newt```
+
+```apk: sudo apk add newt```
+
+```zypper: sudo zypper install newt```
+
+```brew: brew install newt```
+
+```nix: nix profile install nixpkgs#newt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dialog](/man/dialog)(1), [zenity](/man/zenity)(1), [gum](/man/gum)(1)

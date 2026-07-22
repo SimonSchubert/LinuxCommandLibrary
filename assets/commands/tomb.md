@@ -117,6 +117,14 @@ Tomb refuses to forge keys if swap is enabled (to prevent key material from bein
 
 **tomb** was created by the Dyne.org foundation as a user-friendly wrapper for creating and managing LUKS-encrypted volumes in a portable way.
 
+# INSTALL
+
+```apt: sudo apt install tomb```
+
+```nix: nix profile install nixpkgs#tomb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cryptsetup](/man/cryptsetup)(8), [gpg](/man/gpg)(1), [dm-crypt](/man/dm-crypt)(8)

@@ -97,6 +97,18 @@ The original project has been unmaintained for years, and its Python 2 codebase 
 
 dtrx was written by **Brett Smith** in **2006**, in a period when the tarbomb was a genuine hazard and every archive format wanted a different incantation, `tar xzf` here, `tar xjf` there, `unzip` for one thing and `unrar x` for another. The tool's premise, that the computer can obviously work this out for itself, was compelling enough that it became a fixture in distributions long after `tar` grew automatic decompression detection and made half the original problem go away.
 
+# INSTALL
+
+```apk: sudo apk add dtrx```
+
+```zypper: sudo zypper install dtrx```
+
+```brew: brew install dtrx```
+
+```nix: nix profile install nixpkgs#dtrx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tar](/man/tar)(1), [unzip](/man/unzip)(1), [7z](/man/7z)(1), [atool](/man/atool)(1), [unar](/man/unar)(1)

@@ -56,6 +56,18 @@ By default, it lists all devices and exits. Use **--follow** to continuously mon
 
 Requires GStreamer 1.4+ with appropriate plugins. Device detection depends on installed plugins (ALSA, PulseAudio, V4L2). May require proper permissions to detect some devices.
 
+# INSTALL
+
+```apt: sudo apt install gstreamer1.0-plugins-base-apps```
+
+```pacman: sudo pacman -S gst-plugins-base```
+
+```apk: sudo apk add gst-plugins-base```
+
+```brew: brew install gst-plugins-base```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gst-launch-1.0](/man/gst-launch-1.0)(1), [gst-inspect-1.0](/man/gst-inspect-1.0)(1), [gst-discoverer-1.0](/man/gst-discoverer-1.0)(1)

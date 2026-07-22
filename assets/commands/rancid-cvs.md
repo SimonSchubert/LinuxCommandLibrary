@@ -49,6 +49,20 @@ The command does not configure devices or credentials. Device definitions must b
 
 RANCID was originally developed at **Shrubbery Networks** by Henry Kilmer and John Heasley. The name "Really Awesome New Cisco Config Differ" reflects its origins as a Cisco-focused tool, though it now supports many network device vendors. Development began in the late 1990s as organizations needed automated configuration backup and change tracking.
 
+# INSTALL
+
+```apt: sudo apt install rancid```
+
+```dnf: sudo dnf install rancid```
+
+```apk: sudo apk add rancid```
+
+```brew: brew install rancid```
+
+```nix: nix profile install nixpkgs#rancid```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rancid-run](/man/rancid-run)(1), [cvs](/man/cvs)(1), [svn](/man/svn)(1), [clogin](/man/clogin)(1)

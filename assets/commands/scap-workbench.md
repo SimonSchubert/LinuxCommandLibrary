@@ -53,6 +53,12 @@ SCAP Workbench processes only data stream files, limiting some functionality com
 
 SCAP Workbench is part of the **OpenSCAP** ecosystem, developed to provide graphical access to SCAP compliance scanning. OpenSCAP is NIST-certified and widely used in enterprise environments for security automation and compliance verification.
 
+# INSTALL
+
+```aur: yay -S scap-workbench```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [oscap](/man/oscap)(8), [lynis](/man/lynis)(8)

@@ -91,6 +91,12 @@ The tool handles compilation from source. Activation scripts set up the environm
 
 Builds from source, so build dependencies (gcc, make, ncurses-dev, libssl-dev, etc.) must be installed. Shell script tool — configure via **$HOME/.kerlrc**. Set **KERL_INCLUDE_RELEASE_CANDIDATES=yes** to include release candidates.
 
+# INSTALL
+
+```brew: brew install kerl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [erl](/man/erl)(1), [asdf](/man/asdf)(1)

@@ -80,6 +80,18 @@ Data stored locally by default. Gist sync requires GitHub auth. Not for sensitiv
 
 **Skate** is part of **Charm** tools, created by Charm for beautiful terminal experiences. It provides simple, elegant key-value storage.
 
+# INSTALL
+
+```pacman: sudo pacman -S skate```
+
+```apk: sudo apk add skate```
+
+```brew: brew install skate```
+
+```nix: nix profile install nixpkgs#skate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pass](/man/pass)(1), [secret-tool](/man/secret-tool)(1)

@@ -78,6 +78,22 @@ Requires repository access. Credentials in settings.xml. Network operation.
 
 The deploy goal is part of **Apache Maven's** build lifecycle for artifact distribution.
 
+# INSTALL
+
+```dnf: sudo dnf install maven```
+
+```pacman: sudo pacman -S maven```
+
+```apk: sudo apk add maven```
+
+```zypper: sudo zypper install maven```
+
+```brew: brew install maven```
+
+```nix: nix profile install nixpkgs#maven```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mvn](/man/mvn)(1), [mvn-dependency](/man/mvn-dependency)(1), [gradle](/man/gradle)(1)

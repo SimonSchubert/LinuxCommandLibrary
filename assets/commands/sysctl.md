@@ -73,6 +73,24 @@ Changes are lost on reboot unless saved to **/etc/sysctl.conf** or files in **/e
 
 **sysctl** is part of **procps** (now procps-ng). It provides a convenient interface to the /proc/sys virtual filesystem for reading and writing kernel parameters at runtime.
 
+# INSTALL
+
+```apt: sudo apt install procps```
+
+```dnf: sudo dnf install procps-ng```
+
+```pacman: sudo pacman -S procps-ng```
+
+```apk: sudo apk add procps-ng```
+
+```zypper: sudo zypper install procps```
+
+```brew: brew install procps```
+
+```nix: nix profile install nixpkgs#procps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [proc](/man/proc)(5)

@@ -137,6 +137,20 @@ Requires Perl. Passwords on command line are visible in process listings; use **
 
 **swaks** was created by **John Jetmore** and has been actively maintained since the early **2000s**. It has become a standard tool for mail server administrators and is available in most Linux distribution repositories. The tool is written in Perl and released under GPLv2.
 
+# INSTALL
+
+```dnf: sudo dnf install swaks```
+
+```pacman: sudo pacman -S swaks```
+
+```zypper: sudo zypper install swaks```
+
+```brew: brew install swaks```
+
+```nix: nix profile install nixpkgs#swaks```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sendmail](/man/sendmail)(8), [postfix](/man/postfix)(1), [openssl](/man/openssl)(1), [curl](/man/curl)(1)

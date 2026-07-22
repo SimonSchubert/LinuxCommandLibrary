@@ -75,6 +75,22 @@ For most users, gsettings provides a higher-level, schema-validated interface. d
 
 Values must be in GVariant format. Strings need single quotes inside double quotes. Changes take effect immediately. For schema-validated settings, prefer gsettings.
 
+# INSTALL
+
+```apt: sudo apt install dconf-cli```
+
+```dnf: sudo dnf install dconf```
+
+```pacman: sudo pacman -S dconf```
+
+```apk: sudo apk add dconf```
+
+```zypper: sudo zypper install dconf```
+
+```nix: nix profile install nixpkgs#dconf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gsettings](/man/gsettings)(1), [dconf-read](/man/dconf-read)(1), [dconf-write](/man/dconf-write)(1)

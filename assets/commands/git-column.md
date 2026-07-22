@@ -53,6 +53,24 @@ Display data in columns
 
 The command reads input from stdin and arranges it into columns based on terminal width or specified constraints. It supports different layout modes: column-first (fill columns top to bottom), row-first (fill rows left to right), or plain (no formatting).
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [column](/man/column)(1), [git-branch](/man/git-branch)(1), [git-tag](/man/git-tag)(1)

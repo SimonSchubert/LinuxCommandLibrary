@@ -44,6 +44,20 @@ Not related to the Performance Co-Pilot toolkit (also abbreviated PCP).
 
 Designed for trusted local networks—do not expose on untrusted links without understanding the threat model. Firewall/mDNS restrictions can block discovery. Name clash with Performance Co-Pilot commands on some systems.
 
+# INSTALL
+
+```apt: sudo apt install pcp```
+
+```dnf: sudo dnf install pcp```
+
+```pacman: sudo pacman -S pcp```
+
+```zypper: sudo zypper install pcp```
+
+```brew: brew install pcp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scp](/man/scp)(1), [rsync](/man/rsync)(1), [croc](/man/croc)(1), [magic-wormhole](/man/magic-wormhole)(1)

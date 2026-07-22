@@ -72,6 +72,24 @@ Output is the colormap, not the remapped image. Use pnmremap to apply. Part of N
 
 pnmcolormap is part of **Netpbm**, implementing median-cut color quantization algorithm.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmremap](/man/pnmremap)(1), [ppmquant](/man/ppmquant)(1), [ppmquantall](/man/ppmquantall)(1), [netpbm](/man/netpbm)(1)

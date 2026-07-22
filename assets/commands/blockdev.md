@@ -111,6 +111,24 @@ Requires root privileges. Setting a device read-only while mounted may cause iss
 
 **blockdev** is part of the **util-linux** package, providing low-level block device management on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsblk](/man/lsblk)(8), [blkid](/man/blkid)(8), [fdisk](/man/fdisk)(8), [hdparm](/man/hdparm)(8), [partprobe](/man/partprobe)(8)

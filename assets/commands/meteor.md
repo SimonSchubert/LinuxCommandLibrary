@@ -69,6 +69,12 @@ Node.js-based; modern versions require Node 14 or later. MongoDB is the only fir
 
 **Meteor** was launched by **Meteor Development Group** in **2012** and released **1.0** in **2014**. Stewardship moved to **Tiny** in **2022**, where development continues alongside Meteor's Galaxy hosting service.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#meteor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [npm](/man/npm)(1), [mongod](/man/mongod)(1)

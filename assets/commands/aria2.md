@@ -100,6 +100,19 @@ Multiple connections may be limited or throttled by the server. BitTorrent requi
 
 **aria2** was developed by Tatsuhiro Tsujikawa, with initial release around **2006**. Written in C++, it has become a popular alternative to wget and curl for its multi-connection download capability.
 
+# INSTALL
+
+```dnf: sudo dnf install aria2```
+
+```pacman: sudo pacman -S aria2```
+
+```zypper: sudo zypper install aria2```
+
+```brew: brew install aria2```
+
+```nix: nix profile install nixpkgs#aria2```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aria2c](/man/aria2c)(1), [curl](/man/curl)(1), [wget](/man/wget)(1), [transmission-cli](/man/transmission-cli)(1)

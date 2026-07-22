@@ -88,6 +88,24 @@ Some compiled code may behave differently in interpreter. Memory usage can grow 
 
 GHCi was introduced with **GHC 5.0** in **2001**, providing interactive Haskell evaluation alongside the batch compiler.
 
+# INSTALL
+
+```apt: sudo apt install ghc```
+
+```dnf: sudo dnf install ghc```
+
+```pacman: sudo pacman -S ghc```
+
+```apk: sudo apk add ghc```
+
+```zypper: sudo zypper install ghc```
+
+```brew: brew install ghc```
+
+```nix: nix profile install nixpkgs#ghc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ghc](/man/ghc)(1), [ghcid](/man/ghcid)(1), [cabal](/man/cabal)(1), [stack](/man/stack)(1), [runghc](/man/runghc)(1)

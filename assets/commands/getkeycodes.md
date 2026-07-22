@@ -36,6 +36,22 @@ Requires access to the Linux console (will not work in X11 or Wayland terminal e
 
 getkeycodes is part of the **kbd** package, providing keyboard utilities for Linux console management.
 
+# INSTALL
+
+```apt: sudo apt install kbd```
+
+```dnf: sudo dnf install kbd```
+
+```pacman: sudo pacman -S kbd```
+
+```apk: sudo apk add kbd```
+
+```zypper: sudo zypper install kbd```
+
+```nix: nix profile install nixpkgs#kbd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [showkey](/man/showkey)(1), [dumpkeys](/man/dumpkeys)(1), [loadkeys](/man/loadkeys)(1)

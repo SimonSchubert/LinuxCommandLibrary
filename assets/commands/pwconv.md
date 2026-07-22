@@ -35,6 +35,14 @@ Requires root. One-time migration. System administration.
 
 pwconv is part of **shadow-utils** for shadow password migration.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```apk: sudo apk add shadow-conv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pwunconv](/man/pwunconv)(8), [grpconv](/man/grpconv)(8)

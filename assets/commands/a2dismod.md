@@ -52,6 +52,16 @@ This utility is **Debian-specific** and not available on other Linux distributio
 
 Created as part of the Apache2 package for **Debian GNU/Linux**. The manual page was authored by Daniel Stone and dates to **October 2006**.
 
+# INSTALL
+
+```apt: sudo apt install apache2```
+
+```zypper: sudo zypper install apache2```
+
+```brew: brew install apache2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [a2enmod](/man/a2enmod)(8), [a2enconf](/man/a2enconf)(8), [a2disconf](/man/a2disconf)(8), [a2ensite](/man/a2ensite)(8), [a2dissite](/man/a2dissite)(8), [apache2ctl](/man/apache2ctl)(8)

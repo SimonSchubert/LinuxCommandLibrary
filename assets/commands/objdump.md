@@ -128,6 +128,24 @@ Stripped binaries lack debug info. Large binaries produce verbose output. Disass
 
 **objdump** is part of **GNU Binutils**, started in the late **1980s**. It provides a unified tool for examining various object file formats across different architectures.
 
+# INSTALL
+
+```apt: sudo apt install binutils```
+
+```dnf: sudo dnf install binutils```
+
+```pacman: sudo pacman -S binutils```
+
+```apk: sudo apk add binutils```
+
+```zypper: sudo zypper install binutils```
+
+```brew: brew install binutils```
+
+```nix: nix profile install nixpkgs#binutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [readelf](/man/readelf)(1), [nm](/man/nm)(1), [gdb](/man/gdb)(1), [strings](/man/strings)(1)

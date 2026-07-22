@@ -65,6 +65,20 @@ KRDC is a graphical application and requires a running display server (X11 or Wa
 
 KRDC was originally written by **Tim Jansen** as part of the KDE project. A major rewrite was completed by **Urs Wolfer** during **Google Summer of Code 2007**, modernizing the codebase and improving protocol support. It has been a standard component of the **KDE Applications** suite since KDE 3.x and continues active development as part of KDE Gear releases.
 
+# INSTALL
+
+```apt: sudo apt install krdc```
+
+```dnf: sudo dnf install krdc```
+
+```pacman: sudo pacman -S krdc```
+
+```apk: sudo apk add krdc```
+
+```zypper: sudo zypper install krdc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rdesktop](/man/rdesktop)(1), [xfreerdp](/man/xfreerdp)(1), [vncviewer](/man/vncviewer)(1), [ssh](/man/ssh)(1)

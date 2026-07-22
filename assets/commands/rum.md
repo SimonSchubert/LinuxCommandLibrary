@@ -56,6 +56,12 @@ Simple tool for managing running background jobs
 
 **rum** was created by **Daniel Csillag** (dccsillag) and is written in **Rust**.
 
+# INSTALL
+
+```aur: yay -S rum```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [screen](/man/screen)(1), [tmux](/man/tmux)(1), [nohup](/man/nohup)(1), [disown](/man/disown)(1)

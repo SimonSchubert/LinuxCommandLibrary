@@ -57,6 +57,20 @@ Resolve and lock project dependencies
 
 Locking is automatic when running **uv sync**, **uv run**, or **uv add**, but can be run explicitly to update the lockfile without installing packages.
 
+# INSTALL
+
+```dnf: sudo dnf install uv```
+
+```pacman: sudo pacman -S uv```
+
+```apk: sudo apk add uv```
+
+```brew: brew install uv```
+
+```nix: nix profile install nixpkgs#uv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uv](/man/uv)(1), [uv-sync](/man/uv-sync)(1), [uv-add](/man/uv-add)(1)

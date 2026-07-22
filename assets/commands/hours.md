@@ -38,6 +38,12 @@ Data is stored locally and does not sync across devices. No integration with ext
 
 **hours** was created by **Dhruv Thakur** (dhth) and is written in **Go**. It was designed as a no-frills alternative to web-based time tracking tools for developers who prefer terminal workflows.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#hours```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [time](/man/time)(1)

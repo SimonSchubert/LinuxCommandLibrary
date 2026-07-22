@@ -41,6 +41,18 @@ Check and prepare RabbitMQ upgrades
 
 **rabbitmq-upgrade** assists with RabbitMQ cluster upgrades. Ensures safe rolling upgrades by managing node state and checking quorum health. Part of RabbitMQ CLI tools.
 
+# INSTALL
+
+```dnf: sudo dnf install rabbitmq-server```
+
+```apk: sudo apk add rabbitmq-server```
+
+```zypper: sudo zypper install rabbitmq-server```
+
+```nix: nix profile install nixpkgs#rabbitmq-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rabbitmqctl](/man/rabbitmqctl)(1), [rabbitmq-queues](/man/rabbitmq-queues)(1)

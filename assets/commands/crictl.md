@@ -147,6 +147,22 @@ Must run with appropriate privileges (typically root). Command syntax differs fr
 
 **crictl** is part of the **cri-tools** project maintained by **Kubernetes SIGs**. It was created to provide a standard debugging and troubleshooting tool for CRI-compatible container runtimes, replacing runtime-specific CLIs for Kubernetes node inspection.
 
+# INSTALL
+
+```dnf: sudo dnf install cri-tools```
+
+```pacman: sudo pacman -S crictl```
+
+```apk: sudo apk add cri-tools```
+
+```zypper: sudo zypper install cri-tools```
+
+```brew: brew install cri-tools```
+
+```nix: nix profile install nixpkgs#cri-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [ctr](/man/ctr)(1), [podman](/man/podman)(1), [nerdctl](/man/nerdctl)(1)

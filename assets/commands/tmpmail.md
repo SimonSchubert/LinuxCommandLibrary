@@ -66,6 +66,14 @@ External service dependent. May have limits. Not for sensitive use.
 
 **tmpmail** was created for generating temporary email addresses and checking them from the command line.
 
+# INSTALL
+
+```brew: brew install tmpmail```
+
+```nix: nix profile install nixpkgs#tmpmail```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mail](/man/mail)(1), [mutt](/man/mutt)(1), [curl](/man/curl)(1)

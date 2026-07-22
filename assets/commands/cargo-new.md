@@ -84,6 +84,20 @@ Use `cargo init` for existing directories. Package names must use only alphanume
 
 **cargo** is the package manager and build tool for the Rust programming language, first released with Rust 1.0 in **2015**. The **new** subcommand has been a core part of Cargo since the beginning, streamlining project initialization.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-init](/man/cargo-init)(1), [cargo-build](/man/cargo-build)(1)

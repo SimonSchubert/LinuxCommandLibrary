@@ -36,6 +36,14 @@ Common flags (names vary by version): protocol selection (ICMP/TCP/UDP), max hop
 
 Raw sockets/privileges may be required for some probe types. Geolocation databases can be wrong. Respect remote networks—do not abuse high-rate probing.
 
+# INSTALL
+
+```brew: brew install nexttrace```
+
+```nix: nix profile install nixpkgs#nexttrace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [traceroute](/man/traceroute)(8), [mtr](/man/mtr)(8), [tracepath](/man/tracepath)(8)

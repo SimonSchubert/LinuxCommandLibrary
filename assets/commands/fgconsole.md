@@ -37,6 +37,22 @@ Part of kbd package for console management utilities.
 
 Only works on Linux console. Returns error if not on a virtual terminal. Part of kbd package.
 
+# INSTALL
+
+```apt: sudo apt install kbd```
+
+```dnf: sudo dnf install kbd```
+
+```pacman: sudo pacman -S kbd```
+
+```apk: sudo apk add kbd```
+
+```zypper: sudo zypper install kbd```
+
+```nix: nix profile install nixpkgs#kbd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chvt](/man/chvt)(1), [deallocvt](/man/deallocvt)(1), [dumpkeys](/man/dumpkeys)(1)

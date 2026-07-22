@@ -63,6 +63,14 @@ Show recent commits for standup meetings
 
 The command defaults to showing your commits from the last working day, making it easy to recall what you accomplished.
 
+# INSTALL
+
+```brew: brew install git-standup```
+
+```nix: nix profile install nixpkgs#git-standup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-extras](/man/git-extras)(1)

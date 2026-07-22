@@ -73,6 +73,22 @@ The tool can adjust brightness using absolute values or percentages, with suppor
 
 Requires appropriate permissions (often the video group membership). Not all devices support fine-grained brightness control. Minimum brightness may not be zero.
 
+# INSTALL
+
+```apt: sudo apt install brightnessctl```
+
+```dnf: sudo dnf install brightnessctl```
+
+```pacman: sudo pacman -S brightnessctl```
+
+```apk: sudo apk add brightnessctl```
+
+```zypper: sudo zypper install brightnessctl```
+
+```nix: nix profile install nixpkgs#brightnessctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xbacklight](/man/xbacklight)(1), [light](/man/light)(1), [backlight_control](/man/backlight_control)(1)

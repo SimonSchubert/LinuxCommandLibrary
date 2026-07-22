@@ -29,6 +29,16 @@ checks connectivity to npm registry
 
 Requires network connectivity. If authentication is configured, the ping also verifies token validity.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-config](/man/npm-config)(1)

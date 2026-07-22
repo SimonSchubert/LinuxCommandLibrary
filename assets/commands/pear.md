@@ -89,3 +89,9 @@ PEAR was started in 1999 by **Stig Bakken** as part of the PHP project to provid
 # SEE ALSO
 
 [pecl](/man/pecl)(1), [composer](/man/composer)(1), [php](/man/php)(1)
+
+# INSTALL
+
+```apk: sudo apk add php85-pear```
+
+<!-- packages: 2026-07-22 -->

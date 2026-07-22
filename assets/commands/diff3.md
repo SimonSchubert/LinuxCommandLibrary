@@ -49,6 +49,24 @@ The output format is suitable for merge conflict resolution.
 
 File order matters: mine, older, yours. Commonly used internally by version control systems. Part of GNU diffutils.
 
+# INSTALL
+
+```apt: sudo apt install diffutils```
+
+```dnf: sudo dnf install diffutils```
+
+```pacman: sudo pacman -S diffutils```
+
+```apk: sudo apk add diffutils```
+
+```zypper: sudo zypper install diffutils```
+
+```brew: brew install diffutils```
+
+```nix: nix profile install nixpkgs#diffutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [merge](/man/merge)(1), [patch](/man/patch)(1)

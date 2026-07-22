@@ -69,6 +69,14 @@ Requires Java. Dependency download on first run. Scripts use comment directives.
 
 jbang was created by **Max Rydahl Andersen** to make Java scripting as easy as Python or Bash scripts.
 
+# INSTALL
+
+```brew: brew install jbang```
+
+```nix: nix profile install nixpkgs#jbang```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [java](/man/java)(1), [javac](/man/javac)(1), [kotlin](/man/kotlin)(1)

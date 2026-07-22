@@ -53,6 +53,18 @@ Install Pulumi project dependencies and plugins
 
 **pulumi install** installs packages and plugins required by your Pulumi program or policy pack. If your **Pulumi.yaml** file contains a 'packages' section, this command automatically installs SDKs for all declared packages. Run after cloning a project or updating dependencies.
 
+# INSTALL
+
+```pacman: sudo pacman -S pulumi```
+
+```apk: sudo apk add pulumi```
+
+```brew: brew install pulumi```
+
+```nix: nix profile install nixpkgs#pulumi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulumi](/man/pulumi)(1), [pulumi-plugin](/man/pulumi-plugin)(1), [pulumi-new](/man/pulumi-new)(1), [pulumi-up](/man/pulumi-up)(1)

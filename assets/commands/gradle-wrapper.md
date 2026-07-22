@@ -68,6 +68,18 @@ Wrapper files should be committed. First run downloads Gradle. Use https distrib
 
 The Gradle Wrapper was introduced to solve version consistency problems, becoming the recommended way to run Gradle builds.
 
+# INSTALL
+
+```pacman: sudo pacman -S gradle```
+
+```apk: sudo apk add gradle```
+
+```brew: brew install gradle```
+
+```nix: nix profile install nixpkgs#gradle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gradle](/man/gradle)(1)

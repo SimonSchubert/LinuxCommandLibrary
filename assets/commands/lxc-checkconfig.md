@@ -30,6 +30,24 @@ Check **specific kernel** config
 
 Set CONFIG environment variable to check a different kernel configuration file. Helps diagnose why containers might not work on a system.
 
+# INSTALL
+
+```apt: sudo apt install lxc```
+
+```dnf: sudo dnf install lxc```
+
+```pacman: sudo pacman -S lxc```
+
+```apk: sudo apk add lxc```
+
+```zypper: sudo zypper install lxc```
+
+```brew: brew install lxc```
+
+```nix: nix profile install nixpkgs#lxc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lxc-create](/man/lxc-create)(1), [lxc-start](/man/lxc-start)(1)

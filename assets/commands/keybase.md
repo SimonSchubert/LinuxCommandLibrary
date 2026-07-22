@@ -82,6 +82,12 @@ command-line client for Keybase, providing end-to-end encrypted chat, file
 
 **keybase** is a command-line client for Keybase, providing end-to-end encrypted chat, file sharing, and identity verification. Uses public-key cryptography to verify identities across social networks. Includes encrypted filesystem (KBFS) and encrypted git repositories.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#keybase```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [ssh](/man/ssh)(1)

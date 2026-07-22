@@ -62,6 +62,14 @@ Root required. Debian/Ubuntu specific. Network access configurable.
 
 pbuilder was created for **clean Debian package** building in isolated chroots.
 
+# INSTALL
+
+```dnf: sudo dnf install pbuilder```
+
+```zypper: sudo zypper install pbuilder```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dpkg-buildpackage](/man/dpkg-buildpackage)(1), [sbuild](/man/sbuild)(1), [cowbuilder](/man/cowbuilder)(1)

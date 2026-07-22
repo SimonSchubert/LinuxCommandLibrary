@@ -42,6 +42,16 @@ Create a new Vagrantfile configuration
 
 **vagrant init** creates a new Vagrantfile in the current directory. The Vagrantfile defines VM configuration including box, networking, and provisioning. Start of every Vagrant project.
 
+# INSTALL
+
+```apt: sudo apt install vagrant```
+
+```dnf: sudo dnf install vagrant```
+
+```nix: nix profile install nixpkgs#vagrant```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vagrant](/man/vagrant)(1), [vagrant-box](/man/vagrant-box)(1)

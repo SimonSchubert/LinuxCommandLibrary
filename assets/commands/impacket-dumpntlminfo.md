@@ -59,6 +59,12 @@ Only works against hosts with SMB or RPC services exposed. Firewalls or security
 
 Part of the **Impacket** library, originally developed by **SecureAuth** (now **Fortra**). Impacket is a collection of Python classes for working with network protocols, widely used in penetration testing and security research. The tool leverages the NTLM authentication handshake to extract server metadata without credentials.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [impacket-psexec](/man/impacket-psexec)(1), [impacket-smbclient](/man/impacket-smbclient)(1), [impacket-rpcdump](/man/impacket-rpcdump)(1)

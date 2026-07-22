@@ -31,6 +31,24 @@ converts PBM bitmaps to HP LaserJet PCL format for direct printing
 
 **pbmtolj** converts PBM bitmaps to HP LaserJet PCL format for direct printing. Supports various resolutions and compression. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmtolj](/man/ppmtolj)(1), [pbmtoepson](/man/pbmtoepson)(1)

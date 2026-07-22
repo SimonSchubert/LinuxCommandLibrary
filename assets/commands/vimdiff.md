@@ -68,6 +68,12 @@ vimdiff works best with two files; comparing more than four files can become dif
 
 Diff mode was added to **Vim** by Bram Moolenaar. The vimdiff wrapper script has been part of Vim since version 6.0, released in **2001**. The feature was inspired by similar functionality in other diff tools but integrated directly into Vim's powerful editing environment. Support for up to eight files was added in later versions.
 
+# INSTALL
+
+```apk: sudo apk add vimdiff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [diff](/man/diff)(1), [meld](/man/meld)(1), [kdiff3](/man/kdiff3)(1)

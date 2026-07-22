@@ -113,6 +113,24 @@ dub supports multiple build configurations (debug, release, unittest), allowing 
 
 The package ecosystem revolves around semantic versioning, with dub resolving dependency trees and selecting compatible versions. Projects can specify exact versions, version ranges, or branch references for dependencies. The upgrade command updates dependencies while respecting version constraints.
 
+# INSTALL
+
+```apt: sudo apt install dub```
+
+```dnf: sudo dnf install dub```
+
+```pacman: sudo pacman -S dub```
+
+```apk: sudo apk add dub```
+
+```zypper: sudo zypper install dub```
+
+```brew: brew install dub```
+
+```nix: nix profile install nixpkgs#dub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmd](/man/dmd)(1), [ldc](/man/ldc)(1)

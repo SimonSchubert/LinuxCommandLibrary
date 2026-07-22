@@ -85,6 +85,24 @@ Output defaults to same channels as input. Resampling may affect quality. Use --
 
 Opus was developed by the **IETF** Codec Working Group, standardized as RFC 6716 in **2012**, combining SILK and CELT technologies.
 
+# INSTALL
+
+```apt: sudo apt install opus-tools```
+
+```dnf: sudo dnf install opus-tools```
+
+```pacman: sudo pacman -S opus-tools```
+
+```apk: sudo apk add opus-tools```
+
+```zypper: sudo zypper install opus-tools```
+
+```brew: brew install opus-tools```
+
+```nix: nix profile install nixpkgs#opus-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [opusenc](/man/opusenc)(1), [ffmpeg](/man/ffmpeg)(1)

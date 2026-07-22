@@ -27,6 +27,14 @@ This is useful for catching issues before uploading to Google Play or other app 
 
 Requires Java Runtime Environment (JRE) version 11 or higher. Validation is structural; it does not verify runtime behavior or business logic.
 
+# INSTALL
+
+```brew: brew install bundletool```
+
+```nix: nix profile install nixpkgs#bundletool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bundletool](/man/bundletool)(1), [bundletool-dump](/man/bundletool-dump)(1)

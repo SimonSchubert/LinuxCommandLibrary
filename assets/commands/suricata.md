@@ -137,6 +137,22 @@ Requires root or CAP_NET_RAW capability for live capture. High traffic environme
 
 **Suricata** was developed by the Open Information Security Foundation (OISF) starting in 2009, with the first stable release in 2010. It was created as a modern, multi-threaded alternative to Snort, designed to take advantage of modern multi-core processors. The project is funded by the US Department of Homeland Security and other sponsors.
 
+# INSTALL
+
+```apt: sudo apt install suricata```
+
+```dnf: sudo dnf install suricata```
+
+```apk: sudo apk add suricata```
+
+```zypper: sudo zypper install suricata```
+
+```brew: brew install suricata```
+
+```nix: nix profile install nixpkgs#suricata```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snort](/man/snort)(1), [tcpdump](/man/tcpdump)(1), [zeek](/man/zeek)(1), [tshark](/man/tshark)(1), [iptables](/man/iptables)(8), [nftables](/man/nftables)(8)

@@ -52,6 +52,12 @@ Requires a running Logstash instance with the monitoring API enabled (enabled by
 
 **tuistash** was created by **Edmo Vamerlatti Costa** (edmocosta) and is written in **Rust**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#tuistash```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [logstash](/man/logstash)(1), [elasticsearch](/man/elasticsearch)(1)

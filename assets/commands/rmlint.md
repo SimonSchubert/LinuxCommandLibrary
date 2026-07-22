@@ -106,6 +106,18 @@ Hash-based detection has theoretical collision risk. Large filesystems need sign
 
 **rmlint** was created by **Christopher Pahl** (SeeSpotRun) around **2012** as a fast, modern duplicate finder. Written in C, it replaced slower Python predecessors. The project emphasizes safety (generating review-able scripts) and performance (parallel hashing, incremental matching).
 
+# INSTALL
+
+```apt: sudo apt install rmlint```
+
+```dnf: sudo dnf install rmlint```
+
+```brew: brew install rmlint```
+
+```nix: nix profile install nixpkgs#rmlint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fdupes](/man/fdupes)(1), [jdupes](/man/jdupes)(1), [duperemove](/man/duperemove)(1), [rdfind](/man/rdfind)(1)

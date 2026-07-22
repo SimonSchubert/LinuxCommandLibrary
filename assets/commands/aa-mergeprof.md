@@ -36,6 +36,16 @@ Merging profiles may overwrite existing profiles in the destination directory. T
 
 Part of the **AppArmor** utilities package for managing application security profiles on Linux systems.
 
+# INSTALL
+
+```apk: sudo apk add apparmor-utils```
+
+```zypper: sudo zypper install apparmor-utils```
+
+```nix: nix profile install nixpkgs#apparmor-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aa-genprof](/man/aa-genprof)(8), [aa-logprof](/man/aa-logprof)(8), [aa-cleanprof](/man/aa-cleanprof)(8), [aa-enforce](/man/aa-enforce)(8), [aa-complain](/man/aa-complain)(8), [apparmor](/man/apparmor)(7)

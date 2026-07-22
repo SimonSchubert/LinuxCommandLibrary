@@ -60,6 +60,22 @@ Set **read-only** permission
 
 Requires root privileges. Volume must be unmounted for some operations. Part of LVM2 tools.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvcreate](/man/lvcreate)(8), [lvdisplay](/man/lvdisplay)(8), [lvs](/man/lvs)(8), [lvm](/man/lvm)(8)

@@ -24,6 +24,12 @@ Instant terminal sharing using Zellij sessions
 
 **zmate** was created by **ziinaio** and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#zmate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zellij](/man/zellij)(1), [tmux](/man/tmux)(1)

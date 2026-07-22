@@ -40,6 +40,24 @@ By default the output is a sorted text table. With **-map**, the output is itsel
 **-sort** _method_
 > Sort entries by _frequency_ or _rgb_.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pgmhist](/man/pgmhist)(1), [pnmcolormap](/man/pnmcolormap)(1), [ppmtopgm](/man/ppmtopgm)(1)

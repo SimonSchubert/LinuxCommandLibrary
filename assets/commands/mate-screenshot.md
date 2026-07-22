@@ -78,6 +78,22 @@ Effects like drop shadows can be applied to window captures for a more polished 
 
 Area selection requires mouse interaction to draw the capture region. The delay option is useful for capturing menus or tooltips that appear on hover. Window captures may not work correctly with some compositors or window managers.
 
+# INSTALL
+
+```apt: sudo apt install mate-utils```
+
+```dnf: sudo dnf install mate-utils```
+
+```pacman: sudo pacman -S mate-utils```
+
+```apk: sudo apk add mate-utils```
+
+```zypper: sudo zypper install mate-screenshot```
+
+```nix: nix profile install nixpkgs#mate-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnome-screenshot](/man/gnome-screenshot)(1), [scrot](/man/scrot)(1), [flameshot](/man/flameshot)(1), [maim](/man/maim)(1)

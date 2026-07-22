@@ -85,6 +85,24 @@ Large compressed files must be fully decompressed to search, using CPU and poten
 
 On some systems, zgrep is a wrapper script that may have slightly different behavior than native grep.
 
+# INSTALL
+
+```apt: sudo apt install gzip```
+
+```dnf: sudo dnf install gzip```
+
+```pacman: sudo pacman -S gzip```
+
+```apk: sudo apk add gzip```
+
+```zypper: sudo zypper install gzip```
+
+```brew: brew install gzip```
+
+```nix: nix profile install nixpkgs#gzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [zegrep](/man/zegrep)(1), [zfgrep](/man/zfgrep)(1), [zcat](/man/zcat)(1), [gzip](/man/gzip)(1), [bzgrep](/man/bzgrep)(1)

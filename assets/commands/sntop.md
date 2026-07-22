@@ -42,6 +42,14 @@ Simple network top for monitoring host connectivity
 
 **sntop** was created by **Robert M. Love** and **Chris M. Rivera** and is written in **C**.
 
+# INSTALL
+
+```apt: sudo apt install sntop```
+
+```brew: brew install sntop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fping](/man/fping)(1), [ping](/man/ping)(1), [trippy](/man/trippy)(1)

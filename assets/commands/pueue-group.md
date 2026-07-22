@@ -44,6 +44,20 @@ Default group exists. Part of pueue.
 
 **pueue group** is part of the **pueue** task manager, providing task grouping for independent queue management.
 
+# INSTALL
+
+```pacman: sudo pacman -S pueue```
+
+```apk: sudo apk add pueue```
+
+```zypper: sudo zypper install pueue```
+
+```brew: brew install pueue```
+
+```nix: nix profile install nixpkgs#pueue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pueue](/man/pueue)(1), [pueue-parallel](/man/pueue-parallel)(1)

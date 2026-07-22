@@ -59,6 +59,17 @@ Only works with mDNS-enabled hosts (typically using .local domain). The Avahi da
 
 **avahi-resolve** is part of the **Avahi** package, providing mDNS/DNS-SD name resolution on Linux.
 
+# INSTALL
+
+```apt: sudo apt install avahi-utils```
+
+```dnf: sudo dnf install avahi-tools```
+
+```apk: sudo apk add avahi-tools```
+
+```zypper: sudo zypper install avahi-utils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [avahi-resolve-host-name](/man/avahi-resolve-host-name)(1), [avahi-resolve-address](/man/avahi-resolve-address)(1), [avahi-publish](/man/avahi-publish)(1), [avahi-browse](/man/avahi-browse)(1), [avahi-daemon](/man/avahi-daemon)(8)

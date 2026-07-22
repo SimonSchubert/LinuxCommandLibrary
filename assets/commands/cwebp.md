@@ -97,6 +97,20 @@ Very high quality settings may produce files larger than the source. Some older 
 
 WebP was developed by **Google** and released in **2010**, based on the VP8 video codec. The cwebp encoder is part of the libwebp reference implementation. WebP achieved widespread browser support by **2020** and is recommended for web image optimization.
 
+# INSTALL
+
+```apt: sudo apt install webp```
+
+```dnf: sudo dnf install libwebp-tools```
+
+```apk: sudo apk add libwebp-tools```
+
+```zypper: sudo zypper install libwebp-tools```
+
+```brew: brew install webp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dwebp](/man/dwebp)(1), [gif2webp](/man/gif2webp)(1), [cjpeg](/man/cjpeg)(1), [convert](/man/convert)(1)

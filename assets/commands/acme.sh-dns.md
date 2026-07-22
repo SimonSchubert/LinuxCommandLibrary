@@ -83,6 +83,16 @@ API credentials are stored in account.conf for automatic renewal. DNS propagatio
 
 DNS validation support was added to **acme.sh** in **2016** following the ACME protocol specification. The number of supported DNS providers has grown substantially, with community contributions adding new providers regularly.
 
+# INSTALL
+
+```pacman: sudo pacman -S acme.sh```
+
+```apk: sudo apk add acme.sh```
+
+```brew: brew install acme.sh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [acme.sh](/man/acme.sh)(1), [certbot](/man/certbot)(1), [dig](/man/dig)(1), [nslookup](/man/nslookup)(1)

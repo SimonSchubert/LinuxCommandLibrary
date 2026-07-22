@@ -45,6 +45,24 @@ The archive contains the image's filesystem layers as raw tar files; it is **not
 
 **docker save** was part of the original Docker CLI from **2013**. The subcommand was reorganized under the **docker image** namespace in **Docker 1.13** (January 2017) while keeping the legacy short form as an alias.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-save](/man/docker-save)(1), [docker-image-load](/man/docker-image-load)(1), [docker-load](/man/docker-load)(1)

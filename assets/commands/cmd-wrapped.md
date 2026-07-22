@@ -44,6 +44,12 @@ Accuracy depends on your shell's history configuration. Commands may be undercou
 
 cmd-wrapped was created as a fun end-of-year tool inspired by **Spotify Wrapped**, the popular annual music listening summary. It emerged from the developer community's interest in personal analytics and the trend of "wrapped" summaries across various platforms.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#cmd-wrapped```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [history](/man/history)(1), [bash](/man/bash)(1), [zsh](/man/zsh)(1), [fish](/man/fish)(1)

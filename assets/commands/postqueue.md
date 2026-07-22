@@ -104,6 +104,22 @@ Flushing may not help permanent failures. Use postsuper for advanced queue manag
 
 postqueue is part of **Postfix** by **Wietse Venema**, providing safe queue management for unprivileged users.
 
+# INSTALL
+
+```apt: sudo apt install postfix```
+
+```dnf: sudo dnf install postfix```
+
+```pacman: sudo pacman -S postfix```
+
+```apk: sudo apk add postfix```
+
+```zypper: sudo zypper install postfix```
+
+```nix: nix profile install nixpkgs#postfix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mailq](/man/mailq)(1), [postfix](/man/postfix)(1), [postconf](/man/postconf)(1), [postmap](/man/postmap)(1), [sendmail](/man/sendmail)(1)

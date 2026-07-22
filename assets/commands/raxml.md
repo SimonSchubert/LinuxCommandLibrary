@@ -86,6 +86,12 @@ Computationally intensive. Use raxmlHPC-PTHREADS or MPI version for large datase
 
 RAxML was developed by **Alexandros Stamatakis** for high-performance phylogenetic inference, first released in 2004.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#raxml```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iqtree](/man/iqtree)(1)

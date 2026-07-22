@@ -87,6 +87,16 @@ Automatically fix PHP coding standards issues
 
 Risky fixers may change code behavior and must be explicitly allowed. Configuration via PHP file provides more flexibility than command-line rules.
 
+# INSTALL
+
+```dnf: sudo dnf install php-cs-fixer```
+
+```zypper: sudo zypper install php-cs-fixer```
+
+```brew: brew install php-cs-fixer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [phpcs](/man/phpcs)(1), [phpcbf](/man/phpcbf)(1), [php](/man/php)(1)

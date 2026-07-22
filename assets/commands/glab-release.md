@@ -101,6 +101,24 @@ Manage GitLab project releases
 
 **glab release** manages GitLab project releases from the command line. It provides subcommands for creating releases, uploading binary assets, writing release notes, and managing existing releases.
 
+# INSTALL
+
+```apt: sudo apt install glab```
+
+```dnf: sudo dnf install glab```
+
+```pacman: sudo pacman -S glab```
+
+```apk: sudo apk add glab```
+
+```zypper: sudo zypper install glab```
+
+```brew: brew install glab```
+
+```nix: nix profile install nixpkgs#glab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glab](/man/glab)(1), [git-tag](/man/git-tag)(1)

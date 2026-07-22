@@ -124,6 +124,24 @@ Requires terminal with true color support for best results. Large diffs may be s
 
 delta was created by **Dan Davison** and released in **2019**. It was inspired by diff-so-fancy but implemented in Rust for better performance and with additional features like syntax highlighting.
 
+# INSTALL
+
+```apt: sudo apt install git-delta```
+
+```dnf: sudo dnf install git-delta```
+
+```pacman: sudo pacman -S git-delta```
+
+```apk: sudo apk add delta```
+
+```zypper: sudo zypper install git-delta```
+
+```brew: brew install git-delta```
+
+```nix: nix profile install nixpkgs#delta```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [git](/man/git)(1), [bat](/man/bat)(1), [diff-so-fancy](/man/diff-so-fancy)(1), [less](/man/less)(1), [colordiff](/man/colordiff)(1)

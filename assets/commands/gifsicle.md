@@ -156,6 +156,24 @@ Large animations can use a lot of memory, particularly with **-U**, which expand
 
 **gifsicle** was written by **Eddie Kohler** and first released in **1997**, growing out of his earlier work on GIF tools while he was a graduate student. It became a standard tool for GIF manipulation and web optimization, and is the engine behind many "shrink this GIF" services. Development continues on GitHub, with **--lossy** added in **2015** based on work from the **giflossy** fork.
 
+# INSTALL
+
+```apt: sudo apt install gifsicle```
+
+```dnf: sudo dnf install gifsicle```
+
+```pacman: sudo pacman -S gifsicle```
+
+```apk: sudo apk add gifsicle```
+
+```zypper: sudo zypper install gifsicle```
+
+```brew: brew install gifsicle```
+
+```nix: nix profile install nixpkgs#gifsicle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [convert](/man/convert)(1), [ffmpeg](/man/ffmpeg)(1), [optipng](/man/optipng)(1), [pngquant](/man/pngquant)(1), [imagemagick](/man/imagemagick)(1)

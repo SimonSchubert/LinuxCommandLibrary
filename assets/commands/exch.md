@@ -30,6 +30,14 @@ Part of the **util-linux** package. Useful for quickly swapping configuration fi
 
 Both files must exist. The exchange is atomic (no window where either name is missing), unlike a three-step mv dance. Requires **renameat2**(2) with RENAME_EXCHANGE, so it is Linux-only and both paths must reside on the same filesystem. Added in util-linux 2.41.
 
+# INSTALL
+
+```apt: sudo apt install util-linux-extra```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mv](/man/mv)(1), [cp](/man/cp)(1), [rename](/man/rename)(1)

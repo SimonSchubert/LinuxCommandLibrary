@@ -34,6 +34,22 @@ See the **systemd-mount** documentation for full details on options.
 **--no-block**
 > Do not wait for the unmount operation to complete
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-mount](/man/systemd-mount)(1), [umount](/man/umount)(8), [mount](/man/mount)(8)

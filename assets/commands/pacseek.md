@@ -24,6 +24,12 @@ Only works on Arch Linux and Arch-based distributions. Uses yay as the default A
 
 **pacseek** was created by **moson-mo** and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S pacseek```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pacsea](/man/pacsea)(1), [paru](/man/paru)(1), [yay](/man/yay)(1)

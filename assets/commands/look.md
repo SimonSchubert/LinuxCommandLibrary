@@ -43,6 +43,14 @@ Search in **system dictionary**
 
 Requires input file to be sorted. For correct results, the file must be sorted with LC_COLLATE set to 'C', as look does not compare according to the current locale's collating order. When no file is specified, -f and -d are applied implicitly. Exits 0 if lines were found, 1 if no lines were found, and >1 on error.
 
+# INSTALL
+
+```apt: sudo apt install bsdextrautils```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [sort](/man/sort)(1), [spell](/man/spell)(1)

@@ -104,6 +104,14 @@ tt requires a terminal with proper Unicode support for accurate character displa
 
 **tt** was created by **lemnos** and is hosted on GitHub. Written in **Go**, it was designed as a minimal, scriptable typing test for terminal users who prefer command-line tools over web-based alternatives like monkeytype or typeracer.
 
+# INSTALL
+
+```brew: brew install tt```
+
+```nix: nix profile install nixpkgs#tt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ttyper](/man/ttyper)(1), [gtypist](/man/gtypist)(1), [typespeed](/man/typespeed)(1)

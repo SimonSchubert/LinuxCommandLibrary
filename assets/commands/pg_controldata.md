@@ -25,6 +25,16 @@ displays PostgreSQL cluster control information
 
 **pg_controldata** displays PostgreSQL cluster control information. Shows WAL position, checkpoint info, and database state. Useful for disaster recovery and debugging.
 
+# INSTALL
+
+```dnf: sudo dnf install postgresql17```
+
+```apk: sudo apk add postgresql17```
+
+```zypper: sudo zypper install postgresql17```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_resetwal](/man/pg_resetwal)(1), [pg_rewind](/man/pg_rewind)(1)

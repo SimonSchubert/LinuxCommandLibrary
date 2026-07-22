@@ -36,6 +36,24 @@ displays the current host's unique identifier as a 32-bit hexadecimal value
 
 The value is **not guaranteed to be unique** across machines, particularly when derived from a hostname rather than a fixed **/etc/hostid** file. It has no security value and should not be relied on as a hardware fingerprint.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hostname](/man/hostname)(1), [uname](/man/uname)(1)

@@ -81,6 +81,14 @@ Requires JDK 11+. Initial indexing takes time. Build tool must be supported. Per
 
 Metals was created by **Ólafur Páll Geirsson** at the **Scala Center** in **2018** as the official Scala language server.
 
+# INSTALL
+
+```brew: brew install metals```
+
+```nix: nix profile install nixpkgs#metals```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scala](/man/scala)(1), [sbt](/man/sbt)(1), [javac](/man/javac)(1)

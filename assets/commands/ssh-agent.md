@@ -69,6 +69,14 @@ The agent keeps decrypted private keys in memory. If compromised, all loaded key
 
 ssh-agent was developed as part of OpenSSH, originally created by Tatu Ylönen and later maintained by the OpenBSD project. The agent model allows secure key storage while enabling passwordless SSH connections, and has become the standard approach for managing SSH keys across all major platforms.
 
+# INSTALL
+
+```apt: sudo apt install openssh-client```
+
+```apk: sudo apk add openssh-client-common```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh-add](/man/ssh-add)(1), [ssh](/man/ssh)(1), [ssh-keygen](/man/ssh-keygen)(1), [sshd](/man/sshd)(8)

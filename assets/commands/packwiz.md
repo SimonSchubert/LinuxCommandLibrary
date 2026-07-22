@@ -73,6 +73,12 @@ Minecraft-specific tool. Requires Java for Minecraft. Mod compatibility varies.
 
 **packwiz** was created to simplify Minecraft modpack development and distribution using a text-based workflow.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#packwiz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [java](/man/java)(1), [curl](/man/curl)(1)

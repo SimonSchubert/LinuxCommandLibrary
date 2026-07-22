@@ -69,6 +69,24 @@ The **--privileged** flag grants extended capabilities useful for system adminis
 
 The container must be running. Commands inherit the container's environment. Use **-it** together for interactive shells. The **--privileged** flag reduces container isolation and should be used sparingly.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-container-exec](/man/docker-container-exec)(1), [docker-run](/man/docker-run)(1)

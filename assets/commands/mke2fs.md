@@ -98,6 +98,24 @@ Commonly invoked as **mkfs.ext2**, **mkfs.ext3**, or **mkfs.ext4**, which are sy
 
 **mke2fs** was originally written by **Remy Card** as part of the **e2fsprogs** suite for the ext2 filesystem introduced in Linux **1.0 (1993)**. It was later extended to support ext3 (journaling, **2001**) and ext4 (extents, large volumes, **2008**). Current maintenance is led by **Theodore Ts'o**.
 
+# INSTALL
+
+```apt: sudo apt install e2fsprogs```
+
+```dnf: sudo dnf install e2fsprogs```
+
+```pacman: sudo pacman -S e2fsprogs```
+
+```apk: sudo apk add e2fsprogs```
+
+```zypper: sudo zypper install e2fsprogs```
+
+```brew: brew install e2fsprogs```
+
+```nix: nix profile install nixpkgs#e2fsprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkfs](/man/mkfs)(8), [mkfs.ext4](/man/mkfs.ext4)(8), [tune2fs](/man/tune2fs)(8), [e2fsck](/man/e2fsck)(8), [dumpe2fs](/man/dumpe2fs)(8)

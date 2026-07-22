@@ -70,6 +70,24 @@ The daemon (vnstatd) runs in the background collecting data, while the vnstat co
 
 Requires vnstatd daemon to be running for data collection. Initial statistics require time to accumulate. Traffic counters may reset if the interface is reconfigured. Statistics are based on kernel counters, not packet inspection.
 
+# INSTALL
+
+```apt: sudo apt install vnstat```
+
+```dnf: sudo dnf install vnstat```
+
+```pacman: sudo pacman -S vnstat```
+
+```apk: sudo apk add vnstat```
+
+```zypper: sudo zypper install vnstat```
+
+```brew: brew install vnstat```
+
+```nix: nix profile install nixpkgs#vnstat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vnstatd](/man/vnstatd)(8), [iftop](/man/iftop)(8), [nethogs](/man/nethogs)(8), [nload](/man/nload)(1)

@@ -55,6 +55,14 @@ Requires NetworkManager as the network management daemon. Terminal must support 
 
 **nmtui** was introduced as part of **NetworkManager 0.9.10** in **2014** to provide a lightweight text-mode alternative to the GNOME network settings GUI and the nmcli command-line tool.
 
+# INSTALL
+
+```apt: sudo apt install network-manager```
+
+```apk: sudo apk add networkmanager-tui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmcli](/man/nmcli)(1), [nm-online](/man/nm-online)(1), [NetworkManager](/man/NetworkManager)(8), [nm-connection-editor](/man/nm-connection-editor)(1)

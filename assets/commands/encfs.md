@@ -80,6 +80,20 @@ Leaks file sizes and directory structure. Not resistant to watermarking attacks.
 
 **encfs** was created by **Valient Gough** in **2003**. It pioneered user-space encrypted filesystems on Linux. While popular for years, security audits revealed weaknesses, leading to recommendations for alternatives like gocryptfs for new deployments.
 
+# INSTALL
+
+```apt: sudo apt install encfs```
+
+```pacman: sudo pacman -S encfs```
+
+```apk: sudo apk add encfs```
+
+```zypper: sudo zypper install encfs```
+
+```brew: brew install encfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gocryptfs](/man/gocryptfs)(1), [cryptsetup](/man/cryptsetup)(1), [fusermount](/man/fusermount)(1), [ecryptfs](/man/ecryptfs)(1)

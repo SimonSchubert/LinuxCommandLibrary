@@ -65,6 +65,24 @@ zcat only outputs to stdout; it cannot decompress files in place. For decompress
 
 zcat is part of the **gzip** package, originally written by **Jean-loup Gailly** and **Mark Adler**. gzip was first released in **1992** as a free replacement for the Unix compress utility, which was encumbered by patents on the LZW algorithm. The gzip package became a GNU project and is now a standard utility on Unix-like systems.
 
+# INSTALL
+
+```apt: sudo apt install gzip```
+
+```dnf: sudo dnf install gzip```
+
+```pacman: sudo pacman -S gzip```
+
+```apk: sudo apk add gzip```
+
+```zypper: sudo zypper install gzip```
+
+```brew: brew install gzip```
+
+```nix: nix profile install nixpkgs#gzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gzip](/man/gzip)(1), [gunzip](/man/gunzip)(1), [cat](/man/cat)(1), [zless](/man/zless)(1), [zgrep](/man/zgrep)(1), [bzcat](/man/bzcat)(1), [xzcat](/man/xzcat)(1)

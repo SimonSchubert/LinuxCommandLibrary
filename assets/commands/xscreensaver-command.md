@@ -93,6 +93,22 @@ Requires xscreensaver daemon running. Never use kill -9 while screensaver is act
 
 **xscreensaver** was created by Jamie Zawinski in 1992 and has been the most popular X11 screensaver framework for decades. The modular design separates the daemon, display hacks, and control interface, allowing extensive customization and third-party hack development.
 
+# INSTALL
+
+```apt: sudo apt install xscreensaver```
+
+```dnf: sudo dnf install xscreensaver```
+
+```pacman: sudo pacman -S xscreensaver```
+
+```apk: sudo apk add xscreensaver```
+
+```zypper: sudo zypper install xscreensaver```
+
+```nix: nix profile install nixpkgs#xscreensaver```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xscreensaver](/man/xscreensaver)(1), [xscreensaver-settings](/man/xscreensaver-settings)(1), [xlock](/man/xlock)(1)

@@ -26,6 +26,12 @@ The QEMU Monitor is a powerful interface. Incorrect commands may crash or corrup
 
 Part of **Proxmox VE** QEMU/KVM management tools. The QEMU Monitor provides direct access to QEMU's management interface.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-terminal](/man/qm-terminal)(1)

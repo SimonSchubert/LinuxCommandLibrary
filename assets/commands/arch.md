@@ -32,6 +32,23 @@ The reported value depends on the kernel personality, not the silicon — runnin
 
 **arch** has been available on Unix systems since BSD. On Linux, it's part of coreutils and provides a simple wrapper around uname.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add uutils-coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [uname](/man/uname)(1), [setarch](/man/setarch)(8), [hostnamectl](/man/hostnamectl)(1)

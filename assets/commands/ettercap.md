@@ -105,6 +105,20 @@ Only use on authorized networks. May disrupt network operations. Detectable by s
 
 Ettercap was created by **Alberto Ornaghi** and **Marco Valleri**, released as open source for network security research. It became a standard tool for man-in-the-middle attack demonstrations.
 
+# INSTALL
+
+```apt: sudo apt install ettercap-graphical```
+
+```dnf: sudo dnf install ettercap```
+
+```pacman: sudo pacman -S ettercap```
+
+```brew: brew install ettercap```
+
+```nix: nix profile install nixpkgs#ettercap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [arpspoof](/man/arpspoof)(8), [wireshark](/man/wireshark)(1), [tcpdump](/man/tcpdump)(1), [nmap](/man/nmap)(1), [mitmproxy](/man/mitmproxy)(1)

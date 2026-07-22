@@ -77,6 +77,16 @@ Interact with the diagnostics interface of an iOS device
 
 **idevicediagnostics** interacts with the diagnostics interface of an iOS device to retrieve diagnostics data, MobileGestalt data, and IORegistry information, as well as perform actions like restart, shutdown, and sleep. Part of the **libimobiledevice** suite. Available for iOS 4 and later; IORegistry access requires iOS 5 or later.
 
+# INSTALL
+
+```apt: sudo apt install libimobiledevice-utils```
+
+```dnf: sudo dnf install libimobiledevice-utils```
+
+```apk: sudo apk add libimobiledevice-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ideviceinfo](/man/ideviceinfo)(1), [idevicecrashreport](/man/idevicecrashreport)(1), [idevicepair](/man/idevicepair)(1), [idevicebackup2](/man/idevicebackup2)(1), [idevicesyslog](/man/idevicesyslog)(1), [idevicescreenshot](/man/idevicescreenshot)(1)

@@ -92,6 +92,14 @@ Requires Docker. Presets for common stacks. Wrapper around Docker Compose.
 
 kool was created to streamline Docker-based development workflows with simpler commands and framework presets.
 
+# INSTALL
+
+```brew: brew install kool```
+
+```nix: nix profile install nixpkgs#kool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-compose](/man/docker-compose)(1), [ddev](/man/ddev)(1)

@@ -55,6 +55,22 @@ Used primarily during boot for disk encryption passwords. Multiple agents can ru
 
 **systemd-tty-ask-password-agent** provides the user-facing component of systemd's password query infrastructure, enabling early-boot password prompts without a full login environment.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-ask-password](/man/systemd-ask-password)(1), [cryptsetup](/man/cryptsetup)(8)

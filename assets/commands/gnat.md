@@ -118,6 +118,18 @@ Unlike C/C++, Ada programs cannot be compiled and linked in a single gcc invocat
 
 GNAT was developed by New York University under contract to the US Air Force, with the first public release in **1995**. It was subsequently maintained and enhanced by Ada Core Technologies (now AdaCore). GNAT became part of GCC and is the most widely used Ada compiler, supporting the full Ada language standard on numerous platforms.
 
+# INSTALL
+
+```apt: sudo apt install gnat-12```
+
+```dnf: sudo dnf install gcc-gnat```
+
+```apk: sudo apk add gcc-gnat```
+
+```nix: nix profile install nixpkgs#gnat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [gprbuild](/man/gprbuild)(1), [make](/man/make)(1)

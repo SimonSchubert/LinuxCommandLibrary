@@ -102,6 +102,24 @@ Original compressed file is removed by default. Cannot decompress to a different
 
 **gunzip** is part of the **gzip** package, created by **Jean-loup Gailly** and **Mark Adler** in **1992**. It was designed as a free decompressor for gzip files and also handles other compression formats for compatibility. The tool became standard on Unix systems as part of the transition from the patent-encumbered compress utility.
 
+# INSTALL
+
+```apt: sudo apt install gzip```
+
+```dnf: sudo dnf install gzip```
+
+```pacman: sudo pacman -S gzip```
+
+```apk: sudo apk add gzip```
+
+```zypper: sudo zypper install gzip```
+
+```brew: brew install gzip```
+
+```nix: nix profile install nixpkgs#gzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gzip](/man/gzip)(1), [zcat](/man/zcat)(1), [compress](/man/compress)(1), [bunzip2](/man/bunzip2)(1), [unxz](/man/unxz)(1)

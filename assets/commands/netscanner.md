@@ -32,6 +32,16 @@ Requires elevated privileges for packet capture. On Windows, Npcap must be insta
 
 **netscanner** was created by **Chleba** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S netscanner```
+
+```brew: brew install netscanner```
+
+```nix: nix profile install nixpkgs#netscanner```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [arp-scan](/man/arp-scan)(1), [tcpdump](/man/tcpdump)(8)

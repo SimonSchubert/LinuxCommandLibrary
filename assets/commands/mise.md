@@ -69,6 +69,18 @@ Shell activation needed. Successor to rtx. asdf-compatible.
 
 mise (formerly rtx) was created as a fast, **Rust-based** alternative to asdf for managing tool versions.
 
+# INSTALL
+
+```pacman: sudo pacman -S mise```
+
+```apk: sudo apk add mise```
+
+```brew: brew install mise```
+
+```nix: nix profile install nixpkgs#mise```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [asdf](/man/asdf)(1), [nvm](/man/nvm)(1), [pyenv](/man/pyenv)(1)

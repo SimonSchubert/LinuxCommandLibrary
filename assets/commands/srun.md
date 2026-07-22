@@ -107,6 +107,12 @@ The command handles resource allocation automatically, requesting nodes from the
 
 Interactive jobs (**--pty**) may wait in queue for resources. Resource requests must fit within partition limits. Connection to existing jobs requires appropriate permissions.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sbatch](/man/sbatch)(1), [squeue](/man/squeue)(1), [salloc](/man/salloc)(1), [scontrol](/man/scontrol)(1), [scancel](/man/scancel)(1), [sinfo](/man/sinfo)(1)

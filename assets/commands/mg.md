@@ -57,6 +57,24 @@ Much more limited than GNU Emacs. No Emacs Lisp extension support, no syntax hig
 
 mg was originally named **MicroGNUEmacs** (later shortened to **mg**), created in **1986** by Dave Conroy for systems where full GNU Emacs was too large. It was subsequently maintained by various contributors and is now part of the OpenBSD base system.
 
+# INSTALL
+
+```apt: sudo apt install mg```
+
+```dnf: sudo dnf install mg```
+
+```pacman: sudo pacman -S mg```
+
+```apk: sudo apk add mg```
+
+```zypper: sudo zypper install mg```
+
+```brew: brew install mg```
+
+```nix: nix profile install nixpkgs#mg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [emacs](/man/emacs)(1), [nano](/man/nano)(1), [vi](/man/vi)(1)

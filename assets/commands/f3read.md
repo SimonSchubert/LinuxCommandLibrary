@@ -57,6 +57,22 @@ Requires files from f3write. Tests only the space used by test files. Slower tha
 
 f3read is part of the **F3** (Fight Flash Fraud) project, providing verification of flash storage integrity. Combined with f3write, it offers a non-destructive alternative to f3probe for testing drive capacity.
 
+# INSTALL
+
+```apt: sudo apt install f3```
+
+```dnf: sudo dnf install f3```
+
+```apk: sudo apk add f3```
+
+```zypper: sudo zypper install f3```
+
+```brew: brew install f3```
+
+```nix: nix profile install nixpkgs#f3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [f3write](/man/f3write)(1), [f3probe](/man/f3probe)(1), [f3fix](/man/f3fix)(1)

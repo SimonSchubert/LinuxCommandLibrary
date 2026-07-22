@@ -87,6 +87,12 @@ Space is often limited on embedded devices, so opkg supports installing packages
 
 Package lists must be updated (**opkg update**) before installing new packages. Storage space on embedded devices is limited; check available space before installing. Some packages require rebooting the device to take effect. Dependencies may require manual resolution on resource-constrained systems.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#opkg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apt](/man/apt)(8), [ipkg](/man/ipkg)(8)

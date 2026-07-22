@@ -69,6 +69,14 @@ Part of PolicyKit. Requires polkitd running.
 
 pkcheck is part of **PolicyKit** for checking authorization policies.
 
+# INSTALL
+
+```apt: sudo apt install polkitd```
+
+```apk: sudo apk add polkit-common```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pkaction](/man/pkaction)(1), [pkexec](/man/pkexec)(1), [polkit](/man/polkit)(8)

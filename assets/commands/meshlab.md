@@ -79,6 +79,18 @@ Large meshes need significant RAM. Some filters require manifold meshes. Filter 
 
 MeshLab was developed at the **Visual Computing Lab** of ISTI-CNR, starting in **2005** under the leadership of **Paolo Cignoni**.
 
+# INSTALL
+
+```apt: sudo apt install meshlab```
+
+```dnf: sudo dnf install meshlab```
+
+```zypper: sudo zypper install meshlab```
+
+```nix: nix profile install nixpkgs#meshlab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blender](/man/blender)(1), [openscad](/man/openscad)(1), [freecad](/man/freecad)(1)

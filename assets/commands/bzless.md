@@ -57,6 +57,24 @@ Decompresses entire file for navigation. Cannot edit files. Slower than viewing 
 
 **bzless** has been part of bzip2 utilities since **1996**, modeled after zless for gzip files.
 
+# INSTALL
+
+```apt: sudo apt install bzip2```
+
+```dnf: sudo dnf install bzip2```
+
+```pacman: sudo pacman -S bzip2```
+
+```apk: sudo apk add bzip2```
+
+```zypper: sudo zypper install bzip2```
+
+```brew: brew install bzip2```
+
+```nix: nix profile install nixpkgs#bzip2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [bzcat](/man/bzcat)(1), [bzmore](/man/bzmore)(1), [zless](/man/zless)(1)

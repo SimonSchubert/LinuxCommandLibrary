@@ -63,6 +63,14 @@ Configuration files are searched in multiple locations (/etc/pipewire, ~/.config
 
 Part of **PipeWire**, the modern multimedia framework for Linux. Added to help administrators and users understand PipeWire's flexible configuration system.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-dev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [pw-cli](/man/pw-cli)(1), [wpctl](/man/wpctl)(1)

@@ -69,6 +69,16 @@ Primarily for LLVM projects. Requires test configuration. Python-based.
 
 lit was developed as part of the **LLVM** project to provide a flexible, fast testing framework for compiler tests.
 
+# INSTALL
+
+```apk: sudo apk add llvm-test-utils```
+
+```brew: brew install lit```
+
+```nix: nix profile install nixpkgs#lit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pytest](/man/pytest)(1), [make](/man/make)(1)

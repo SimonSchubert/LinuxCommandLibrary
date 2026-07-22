@@ -62,6 +62,24 @@ At most one of **-count**, **-machine**, or **-size** may be specified.
 
 The **-comments** option only works for PAM images; for PBM, PGM, or PPM images it reports no comments even if present. Without **-allimages**, only the first image in each file is described.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmfile](/man/pnmfile)(1), [file](/man/file)(1), [netpbm](/man/netpbm)(1)

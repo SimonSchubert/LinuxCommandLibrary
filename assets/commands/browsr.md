@@ -46,6 +46,12 @@ Cloud storage access requires appropriate credentials and authentication to be c
 
 **browsr** was created by **Juftin** as a Textual-based file explorer with cloud storage integration. It was designed to bring rich file browsing with syntax highlighting to the terminal.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#browsr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ranger](/man/ranger)(1), [nnn](/man/nnn)(1), [lf](/man/lf)(1), [mc](/man/mc)(1)

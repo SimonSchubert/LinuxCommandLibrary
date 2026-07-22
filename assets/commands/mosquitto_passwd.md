@@ -46,6 +46,24 @@ manages password files for the Mosquitto MQTT broker
 
 Avoid **-b** flag in scripts as passwords may appear in process listings. Use interactive mode or pipe from secure sources.
 
+# INSTALL
+
+```apt: sudo apt install mosquitto```
+
+```dnf: sudo dnf install mosquitto```
+
+```pacman: sudo pacman -S mosquitto```
+
+```apk: sudo apk add mosquitto```
+
+```zypper: sudo zypper install mosquitto```
+
+```brew: brew install mosquitto```
+
+```nix: nix profile install nixpkgs#mosquitto```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mosquitto](/man/mosquitto)(1), [mosquitto_sub](/man/mosquitto_sub)(1), [mosquitto_pub](/man/mosquitto_pub)(1)

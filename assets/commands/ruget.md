@@ -35,6 +35,12 @@ May have fewer features than wget or curl. Check project documentation for suppo
 
 Developed as a Rust alternative to traditional download tools like wget.
 
+# INSTALL
+
+```aur: yay -S ruget```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wget](/man/wget)(1), [curl](/man/curl)(1), [aria2c](/man/aria2c)(1)

@@ -75,6 +75,17 @@ Requires terminal with character-based display. Steep learning curve. Game over 
 
 **atc** was written by **Ed James** at UC Berkeley and has been included in BSD games collections since the **1980s**.
 
+# INSTALL
+
+```dnf: sudo dnf install bsd-games```
+
+```pacman: sudo pacman -S bsd-games```
+
+```apk: sudo apk add bsd-games```
+
+```zypper: sudo zypper install bsd-games```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [nethack-console](/man/nethack-console)(6), [adventure](/man/adventure)(6)

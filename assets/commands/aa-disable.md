@@ -46,6 +46,16 @@ Disabling a profile removes security protections for the associated application.
 
 Part of the **AppArmor** utilities package for managing application security profiles on Linux systems.
 
+# INSTALL
+
+```apk: sudo apk add apparmor-utils```
+
+```zypper: sudo zypper install apparmor-utils```
+
+```nix: nix profile install nixpkgs#apparmor-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aa-enforce](/man/aa-enforce)(8), [aa-complain](/man/aa-complain)(8), [aa-remove-unknown](/man/aa-remove-unknown)(8), [aa-status](/man/aa-status)(8), [apparmor](/man/apparmor)(7)

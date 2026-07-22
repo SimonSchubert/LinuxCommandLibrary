@@ -79,6 +79,20 @@ Minimal UI compared to full players. No playlist support. Filter preview may not
 
 ffplay was created as a reference player demonstrating ffmpeg's decoding capabilities. It serves as both a testing tool and simple player for formats that other players might not support.
 
+# INSTALL
+
+```apt: sudo apt install ffmpeg```
+
+```pacman: sudo pacman -S ffmpeg```
+
+```apk: sudo apk add ffmpeg7```
+
+```brew: brew install ffmpeg```
+
+```nix: nix profile install nixpkgs#ffmpeg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [mpv](/man/mpv)(1), [vlc](/man/vlc)(1)

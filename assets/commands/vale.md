@@ -117,6 +117,20 @@ Vale requires style packages to be installed via **vale sync** before they can b
 
 Vale was created by **Joseph Kato** at Errata AI and first released in **2017**. It was designed to provide maintainable, extensible prose linting similar to how code linters work. Written in Go for performance and cross-platform support, Vale has been adopted by many technical documentation teams including GitLab, Grafana, and Linode.
 
+# INSTALL
+
+```pacman: sudo pacman -S vale```
+
+```apk: sudo apk add vale```
+
+```zypper: sudo zypper install vale```
+
+```brew: brew install vale```
+
+```nix: nix profile install nixpkgs#vale```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [proselint](/man/proselint)(1), [write-good](/man/write-good)(1), [textlint](/man/textlint)(1), [aspell](/man/aspell)(1)

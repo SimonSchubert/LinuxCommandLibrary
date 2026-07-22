@@ -81,6 +81,18 @@ Some import formats (Authy XML, FreeOTP XML, Google Authenticator, Microsoft Aut
 
 **cotp** was created by **replydev** and first released in **late December 2020**. Written in Rust under the GPL-3.0 license. The latest version is v1.9.7 (September 2025), with 45 total releases. Available in Arch Linux, Debian, Ubuntu, NixOS, and via Homebrew and Cargo.
 
+# INSTALL
+
+```apt: sudo apt install cotp```
+
+```pacman: sudo pacman -S cotp```
+
+```brew: brew install cotp```
+
+```nix: nix profile install nixpkgs#cotp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [oathtool](/man/oathtool)(1), [pass](/man/pass)(1)

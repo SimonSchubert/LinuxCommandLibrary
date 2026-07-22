@@ -73,6 +73,24 @@ Keyboard-centric. Vim-like bindings. Plugins extend functionality.
 
 nnn was created as a **blazing fast** terminal file manager with low resource usage.
 
+# INSTALL
+
+```apt: sudo apt install nnn```
+
+```dnf: sudo dnf install nnn```
+
+```pacman: sudo pacman -S nnn```
+
+```apk: sudo apk add nnn```
+
+```zypper: sudo zypper install nnn```
+
+```brew: brew install nnn```
+
+```nix: nix profile install nixpkgs#nnn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ranger](/man/ranger)(1), [mc](/man/mc)(1), [lf](/man/lf)(1)

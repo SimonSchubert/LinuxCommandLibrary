@@ -118,6 +118,14 @@ PowerShell 7+ (pwsh) differs from Windows PowerShell 5.1. Not all Windows module
 
 **PowerShell** was created by **Jeffrey Snover** at Microsoft, released in **2006** for Windows. Open-source cross-platform PowerShell Core was released in **2016**, later renamed to PowerShell 7 in **2020**. It brought modern shell capabilities to Windows and extended to Linux/macOS.
 
+# INSTALL
+
+```brew: brew install powershell```
+
+```nix: nix profile install nixpkgs#powershell```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [zsh](/man/zsh)(1), [fish](/man/fish)(1), [dotnet](/man/dotnet)(1)

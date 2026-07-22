@@ -96,6 +96,12 @@ Requires a valid TGT or credentials. Impersonation via S4U2Self/S4U2Proxy requir
 
 Part of the **Impacket** library by **SecureAuth** (now **Fortra**). The S4U extensions (S4U2Self and S4U2Proxy) were originally designed by Microsoft for constrained delegation scenarios. Security researchers discovered that these mechanisms could be abused for privilege escalation, making getST a key tool in Kerberos-based attack chains.
 
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [impacket-gettgt](/man/impacket-gettgt)(1), [impacket-getuserspns](/man/impacket-getuserspns)(1), [impacket-secretsdump](/man/impacket-secretsdump)(1)

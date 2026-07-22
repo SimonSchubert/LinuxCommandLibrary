@@ -104,6 +104,20 @@ Only applies to bridged traffic. Requires kernel bridge-nf support. Legacy tool;
 
 ebtables was developed for the Linux kernel in the early **2000s** to provide Ethernet frame filtering for bridges. It was modeled after iptables to provide familiar syntax. The project is now considered legacy, with nftables recommended for new deployments.
 
+# INSTALL
+
+```pacman: sudo pacman -S iptables```
+
+```apk: sudo apk add iptables```
+
+```zypper: sudo zypper install iptables```
+
+```brew: brew install iptables```
+
+```nix: nix profile install nixpkgs#iptables```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iptables](/man/iptables)(8), [nft](/man/nft)(8), [brctl](/man/brctl)(8), [bridge](/man/bridge)(8)

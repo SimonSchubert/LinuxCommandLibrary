@@ -89,6 +89,14 @@ URLs are temporary. Subdomains not guaranteed. Free tier has rate limits. Not fo
 
 localtunnel was created by **Roman Shtylman** as a simple alternative to ngrok, providing free tunneling without signup.
 
+# INSTALL
+
+```brew: brew install localtunnel```
+
+```nix: nix profile install nixpkgs#localtunnel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ngrok](/man/ngrok)(1), [cloudflared](/man/cloudflared)(1), [ssh](/man/ssh)(1)

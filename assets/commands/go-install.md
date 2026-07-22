@@ -54,6 +54,24 @@ Use **@latest** or **@version** to install tools independent of current module. 
 
 Since **Go 1.16**, **go install** is the recommended way to build and install commands at a specific version, taking over that role from **go get**, which was fully restricted from doing so as of **Go 1.18**.
 
+# INSTALL
+
+```apt: sudo apt install gccgo-go```
+
+```dnf: sudo dnf install gcc-go```
+
+```pacman: sudo pacman -S gcc-go```
+
+```apk: sudo apk add gcc-go```
+
+```zypper: sudo zypper install gcc-go```
+
+```brew: brew install go```
+
+```nix: nix profile install nixpkgs#go```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [go-build](/man/go-build)(1), [go-get](/man/go-get)(1)

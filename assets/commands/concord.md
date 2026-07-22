@@ -85,6 +85,14 @@ Requires **Java 17** or newer in **PATH**. Local **run** is not a full Concord s
 
 **Concord** was open-sourced by **Walmart Labs** in **2017** as a workflow orchestration and continuous-deployment platform built around YAML-defined flows and a server runtime. The standalone **concord** CLI was added later to give developers a fast local linting and execution loop without round-tripping through the Concord server.
 
+# INSTALL
+
+```brew: brew install concord```
+
+```nix: nix profile install nixpkgs#concord```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [java](/man/java)(1), [git](/man/git)(1), [mvn](/man/mvn)(1), [yq](/man/yq)(1)

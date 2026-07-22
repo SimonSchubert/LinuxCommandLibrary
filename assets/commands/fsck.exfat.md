@@ -77,6 +77,22 @@ The filesystem must be unmounted before running fsck.exfat. Running on a mounted
 
 The **exfatprogs** package was created in **2019** as the official Linux userspace utilities for exFAT after Samsung contributed their exFAT driver to the Linux kernel. The driver was merged into Linux **5.7** in **2020**, replacing the older FUSE-based exfat-utils implementation. Microsoft's decision to publish the exFAT specification in **2019** enabled this native kernel support.
 
+# INSTALL
+
+```apt: sudo apt install exfatprogs```
+
+```dnf: sudo dnf install exfatprogs```
+
+```pacman: sudo pacman -S exfatprogs```
+
+```apk: sudo apk add exfatprogs```
+
+```zypper: sudo zypper install exfatprogs```
+
+```nix: nix profile install nixpkgs#exfatprogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fsck](/man/fsck)(8), [mkfs.exfat](/man/mkfs.exfat)(8), [lsblk](/man/lsblk)(8), [mount](/man/mount)(8)

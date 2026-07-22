@@ -91,6 +91,24 @@ Part of Binaryen. WASM specific. May change semantics rarely.
 
 **wasm-opt** is part of **Binaryen**, a compiler infrastructure library for WebAssembly.
 
+# INSTALL
+
+```apt: sudo apt install binaryen```
+
+```dnf: sudo dnf install binaryen```
+
+```pacman: sudo pacman -S binaryen```
+
+```apk: sudo apk add binaryen```
+
+```zypper: sudo zypper install binaryen```
+
+```brew: brew install binaryen```
+
+```nix: nix profile install nixpkgs#binaryen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wasm2wat](/man/wasm2wat)(1), [wat2wasm](/man/wat2wasm)(1), [wasm-strip](/man/wasm-strip)(1)

@@ -78,6 +78,22 @@ Wayland only; requires a compositor that supports the layer-shell protocol. Does
 
 Written by **Simon Ser** (emersion) as part of the sway/wlroots ecosystem for Wayland. Provides the region selection functionality that **scrot -s** provides on X11, adapted for Wayland's security model.
 
+# INSTALL
+
+```apt: sudo apt install slurp```
+
+```dnf: sudo dnf install slurp```
+
+```pacman: sudo pacman -S slurp```
+
+```apk: sudo apk add slurp```
+
+```zypper: sudo zypper install slurp```
+
+```nix: nix profile install nixpkgs#slurp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grim](/man/grim)(1), [wf-recorder](/man/wf-recorder)(1), [scrot](/man/scrot)(1)

@@ -77,6 +77,24 @@ authenticated HTTP requests to GitHub REST and GraphQL APIs
 
 **gh api** makes authenticated HTTP requests to the GitHub API. Supports both REST and GraphQL APIs with automatic authentication.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [curl](/man/curl)(1)

@@ -56,6 +56,14 @@ Format Terraform configuration files
 
 **terraform fmt** formats Terraform configuration files to canonical style. Ensures consistent formatting across files and teams. Run before commits or in CI.
 
+# INSTALL
+
+```pacman: sudo pacman -S terraform```
+
+```nix: nix profile install nixpkgs#terraform```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [terraform-init](/man/terraform-init)(1), [terraform-plan](/man/terraform-plan)(1)

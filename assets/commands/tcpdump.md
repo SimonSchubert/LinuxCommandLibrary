@@ -146,6 +146,24 @@ Requires root privileges. Packet capture can impact performance on high-traffic 
 
 **tcpdump** was originally written by **Van Jacobson**, **Craig Leres**, and **Steven McCanne** at the **Lawrence Berkeley National Laboratory** in **1988**. It became the foundation for network packet analysis on Unix systems. The libpcap library was extracted from tcpdump and is now used by many network analysis tools including Wireshark.
 
+# INSTALL
+
+```apt: sudo apt install tcpdump```
+
+```dnf: sudo dnf install tcpdump```
+
+```pacman: sudo pacman -S tcpdump```
+
+```apk: sudo apk add tcpdump```
+
+```zypper: sudo zypper install tcpdump```
+
+```brew: brew install tcpdump```
+
+```nix: nix profile install nixpkgs#tcpdump```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wireshark](/man/wireshark)(1), [tshark](/man/tshark)(1), [ngrep](/man/ngrep)(1), [iftop](/man/iftop)(1)

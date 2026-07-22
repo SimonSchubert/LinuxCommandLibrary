@@ -80,6 +80,12 @@ Requires Java Runtime Environment. Some enterprise features require the paid Ent
 
 DBeaver was created by **Serge Rider** and first released in **2010**. It started as a simple database viewer and evolved into a comprehensive database management tool. The project is maintained by DBeaver Corp with both community and enterprise editions.
 
+# INSTALL
+
+```pacman: sudo pacman -S dbeaver```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mysql](/man/mysql)(1), [psql](/man/psql)(1), [sqlite3](/man/sqlite3)(1)

@@ -70,6 +70,12 @@ The four core verbs are new, run, save, drop. Admin helpers include `ls`, `open`
 - Network is fully isolated per machine; use `moo open` / `[network] ports` in `moo.toml` for host reachability.
 - Base images come from OCI registries without a Docker daemon; Docker is not required.
 
+# INSTALL
+
+```aur: yay -S moo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [docker](/man/docker)(1)

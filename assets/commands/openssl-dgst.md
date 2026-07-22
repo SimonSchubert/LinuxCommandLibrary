@@ -87,6 +87,24 @@ perform message digest operations
 
 **openssl dgst** outputs the message digest of files in hexadecimal form. It supports various algorithms including SHA-256, SHA-512, SHA-384, SHA-1, and MD5. Can also generate and verify digital signatures using asymmetric keys, and create HMACs. If no files are specified, standard input is used.
 
+# INSTALL
+
+```apt: sudo apt install openssl```
+
+```dnf: sudo dnf install openssl```
+
+```pacman: sudo pacman -S openssl```
+
+```apk: sudo apk add openssl```
+
+```zypper: sudo zypper install openssl```
+
+```brew: brew install openssl```
+
+```nix: nix profile install nixpkgs#openssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [sha256sum](/man/sha256sum)(1), [openssl-genrsa](/man/openssl-genrsa)(1), [openssl-rsa](/man/openssl-rsa)(1)

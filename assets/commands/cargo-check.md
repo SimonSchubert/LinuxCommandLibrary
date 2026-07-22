@@ -91,6 +91,20 @@ Check a Rust package for errors without compiling
 
 Some errors only appear during full code generation and won't be caught by cargo check. For complete error checking, use `cargo build`. The `--profile test` enables test cfg and checks test code. Significantly faster than `cargo build` for quick iteration.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-build](/man/cargo-build)(1), [cargo-fix](/man/cargo-fix)(1)

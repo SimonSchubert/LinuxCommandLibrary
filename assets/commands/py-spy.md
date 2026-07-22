@@ -58,6 +58,14 @@ Requires root for other users' processes. No code modification needed.
 
 py-spy was created for **low-overhead Python** profiling.
 
+# INSTALL
+
+```brew: brew install py-spy```
+
+```nix: nix profile install nixpkgs#py-spy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [perf](/man/perf)(1), [python](/man/python)(1), [cProfile](/man/cProfile)(1)

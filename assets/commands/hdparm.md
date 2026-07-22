@@ -92,6 +92,22 @@ Some features require kernel and hardware support. APM values 1-127 allow spindo
 
 **hdparm** has been the standard Linux tool for drive parameter control since the early days of IDE drives.
 
+# INSTALL
+
+```apt: sudo apt install hdparm```
+
+```dnf: sudo dnf install hdparm```
+
+```pacman: sudo pacman -S hdparm```
+
+```apk: sudo apk add hdparm```
+
+```zypper: sudo zypper install hdparm```
+
+```nix: nix profile install nixpkgs#hdparm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smartctl](/man/smartctl)(8), [blkid](/man/blkid)(8), [lsblk](/man/lsblk)(8)

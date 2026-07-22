@@ -71,6 +71,12 @@ Requires pyenv installed. May need shell integration configured. Slower than ven
 
 **pyenv-virtualenv** was created as a pyenv plugin by the pyenv community. It brings virtualenv management into the pyenv workflow.
 
+# INSTALL
+
+```brew: brew install pyenv-virtualenv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pyenv](/man/pyenv)(1), [virtualenv](/man/virtualenv)(1), [python](/man/python)(1), [pip](/man/pip)(1)

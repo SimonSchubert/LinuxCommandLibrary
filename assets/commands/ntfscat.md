@@ -55,6 +55,22 @@ Requires ntfs-3g package. Device should be unmounted or mounted read-only. Windo
 
 ntfscat is part of **ntfs-3g**, the open-source NTFS driver and utilities, providing read access to NTFS filesystems.
 
+# INSTALL
+
+```apt: sudo apt install ntfs-3g```
+
+```dnf: sudo dnf install ntfs-3g```
+
+```pacman: sudo pacman -S ntfs-3g```
+
+```apk: sudo apk add ntfs-3g-progs```
+
+```zypper: sudo zypper install ntfs-3g```
+
+```brew: brew install ntfs-3g```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ntfsls](/man/ntfsls)(8), [ntfs-3g](/man/ntfs-3g)(8), [ntfsresize](/man/ntfsresize)(8)

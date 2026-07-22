@@ -108,6 +108,20 @@ Must be run from the project root directory where the yii bootstrap file exists.
 
 The Yii console was introduced with **Yii 2.0**, released in **2014** by **Qiang Xue**. The console runner replaced the yiic tool from Yii 1.x with a more flexible command architecture.
 
+# INSTALL
+
+```dnf: sudo dnf install php```
+
+```pacman: sudo pacman -S php```
+
+```apk: sudo apk add php85```
+
+```brew: brew install php```
+
+```nix: nix profile install nixpkgs#php85```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [php](/man/php)(1), [composer](/man/composer)(1), [artisan](/man/artisan)(1), [symfony](/man/symfony)(1)

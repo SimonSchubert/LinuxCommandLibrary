@@ -37,6 +37,22 @@ _toolchain_
 
 Project-level overrides (from `rust-toolchain.toml` or `rustup override`) take precedence over the default. Changing the default does not affect projects that have overrides set.
 
+# INSTALL
+
+```apt: sudo apt install rustup```
+
+```dnf: sudo dnf install rustup```
+
+```pacman: sudo pacman -S rustup```
+
+```zypper: sudo zypper install rustup```
+
+```brew: brew install rustup```
+
+```nix: nix profile install nixpkgs#rustup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rustup](/man/rustup)(1), [rustup-toolchain](/man/rustup-toolchain)(1), [rustup-override](/man/rustup-override)(1)

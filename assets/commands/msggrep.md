@@ -65,6 +65,22 @@ Part of gettext-tools. Regex syntax. Use -K for keys, -T for translations.
 
 msggrep is part of **GNU gettext**, providing search functionality for translation files.
 
+# INSTALL
+
+```apt: sudo apt install gettext```
+
+```dnf: sudo dnf install gettext```
+
+```pacman: sudo pacman -S gettext```
+
+```apk: sudo apk add gettext```
+
+```brew: brew install gettext```
+
+```nix: nix profile install nixpkgs#gettext```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [msgfilter](/man/msgfilter)(1), [msgconv](/man/msgconv)(1), [grep](/man/grep)(1)

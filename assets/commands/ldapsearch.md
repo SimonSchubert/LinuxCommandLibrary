@@ -80,6 +80,16 @@ Filter syntax must be correct. Base DN must match directory structure. Credentia
 
 **ldapsearch** is part of **OpenLDAP**, which began in **1998** as an open source LDAP implementation. The LDAP protocol itself emerged from X.500 directory services in the early **1990s**.
 
+# INSTALL
+
+```apt: sudo apt install ldap-utils```
+
+```dnf: sudo dnf install openldap-clients```
+
+```apk: sudo apk add openldap-clients```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ldapadd](/man/ldapadd)(1), [ldapmodify](/man/ldapmodify)(1), [slapd](/man/slapd)(8)

@@ -127,6 +127,12 @@ GPU mining support has been removed in recent versions as it is no longer profit
 
 CGMiner was created by **Con Kolivas** (ckolivas) and first released in **2011**. It began as a fork of the CPU miner **cpuminer** by Jeff Garzik. The name stands for **Con's GPU Miner**, though it later expanded to support FPGAs and ASICs. It became one of the most widely used Bitcoin mining programs during the GPU and early ASIC mining eras. BFGMiner was later forked from CGMiner in 2012 with a focus on FPGA/ASIC modularity.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#cgminer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bfgminer](/man/bfgminer)(1), [xmrig](/man/xmrig)(1)

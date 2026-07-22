@@ -79,6 +79,24 @@ Images must be same size. PAM format preferred. Output may need scaling for disp
 
 pamarith is part of **Netpbm**, a toolkit for image manipulation dating back to the late 1980s.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmarith](/man/pnmarith)(1), [pamcomp](/man/pamcomp)(1), [netpbm](/man/netpbm)(1)

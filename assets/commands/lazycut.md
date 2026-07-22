@@ -53,6 +53,12 @@ Requires both **FFmpeg** and **chafa** to be installed and available in PATH. Te
 
 **lazycut** was created by **Emin Ozata** and first released on **GitHub** as an open-source project under the **MIT license**. Written entirely in **Go**, it gained visibility after appearing on Hacker News. The tool provides a lightweight alternative to GUI video editors for simple trimming tasks.
 
+# INSTALL
+
+```brew: brew install lazycut```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [chafa](/man/chafa)(1)

@@ -71,6 +71,14 @@ Part of the FreeRDP project providing open-source RDP implementation.
 
 Certificate warnings should not be ignored in production environments. Password visible in process list if specified on command line.
 
+# INSTALL
+
+```apk: sudo apk add freerdp2```
+
+```zypper: sudo zypper install freerdp2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rdesktop](/man/rdesktop)(1), [vinagre](/man/vinagre)(1), [vncviewer](/man/vncviewer)(1)

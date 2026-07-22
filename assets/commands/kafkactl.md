@@ -104,6 +104,14 @@ Create **$HOME/.config/kafkactl/config.yml** with one or more named contexts (br
 
 **--from-timestamp** / **--to-timestamp** compute offsets at consumer start; they are not wall-clock schedulers for future times. Producing with wrong encoding or schema versions can write data consumers cannot decode. When using Kubernetes mode, kubectl access and RBAC must allow the configured operations.
 
+# INSTALL
+
+```brew: brew install kafkactl```
+
+```nix: nix profile install nixpkgs#kafkactl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kcat](/man/kcat)(1), [kafka-console-consumer](/man/kafka-console-consumer)(1), [kafka-console-producer](/man/kafka-console-producer)(1), [kubectl](/man/kubectl)(1)

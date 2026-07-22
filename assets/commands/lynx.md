@@ -99,6 +99,24 @@ No JavaScript support. No images. Keyboard navigation. Limited CSS support.
 
 Lynx was created at the **University of Kansas** in 1992, becoming one of the oldest web browsers still maintained.
 
+# INSTALL
+
+```apt: sudo apt install lynx```
+
+```dnf: sudo dnf install lynx```
+
+```pacman: sudo pacman -S lynx```
+
+```apk: sudo apk add lynx```
+
+```zypper: sudo zypper install lynx```
+
+```brew: brew install lynx```
+
+```nix: nix profile install nixpkgs#lynx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [w3m](/man/w3m)(1), [links](/man/links)(1), [curl](/man/curl)(1), [wget](/man/wget)(1)

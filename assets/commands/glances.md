@@ -93,6 +93,20 @@ Requires Python and psutil. Some features (web mode, Docker, GPU monitoring) nee
 
 glances was created by **Nicolas Hennion** as a comprehensive system monitoring solution that goes beyond traditional tools like top.
 
+# INSTALL
+
+```dnf: sudo dnf install glances```
+
+```pacman: sudo pacman -S glances```
+
+```apk: sudo apk add glances```
+
+```brew: brew install glances```
+
+```nix: nix profile install nixpkgs#glances```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [htop](/man/htop)(1), [top](/man/top)(1), [iotop](/man/iotop)(1), [nmon](/man/nmon)(1), [vmstat](/man/vmstat)(8)

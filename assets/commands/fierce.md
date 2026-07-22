@@ -67,6 +67,14 @@ Only use against authorized targets. Zone transfers usually fail on properly con
 
 fierce was created by **RSnake** (Robert Hansen) as a DNS reconnaissance tool for penetration testers. The Python 3 rewrite modernized the original Perl script for current security workflows.
 
+# INSTALL
+
+```brew: brew install fierce```
+
+```nix: nix profile install nixpkgs#fierce```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [nmap](/man/nmap)(1), [dnsenum](/man/dnsenum)(1)

@@ -59,6 +59,18 @@ Mono Class Outline Viewer
 
 **monop** is a command-line class outline viewer for the Mono framework. It displays the outline of a .NET type, showing class signatures, methods, properties, fields, events, and constructors. It can inspect types from the standard library or from specific assemblies, making it useful for quick API reference without needing a decompiler or IDE.
 
+# INSTALL
+
+```pacman: sudo pacman -S mono```
+
+```apk: sudo apk add mono```
+
+```brew: brew install mono```
+
+```nix: nix profile install nixpkgs#mono```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [monodis](/man/monodis)(1), [mono](/man/mono)(1), [dotnet](/man/dotnet)(1)

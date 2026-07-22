@@ -76,6 +76,24 @@ Hardlinks only on same filesystem. Symlinks may break if original moves. Careful
 
 **rdfind** (really delete find) was created for efficient duplicate detection. Its multi-stage algorithm handles large file sets quickly.
 
+# INSTALL
+
+```apt: sudo apt install rdfind```
+
+```dnf: sudo dnf install rdfind```
+
+```pacman: sudo pacman -S rdfind```
+
+```apk: sudo apk add rdfind```
+
+```zypper: sudo zypper install rdfind```
+
+```brew: brew install rdfind```
+
+```nix: nix profile install nixpkgs#rdfind```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fdupes](/man/fdupes)(1), [jdupes](/man/jdupes)(1), [duff](/man/duff)(1)

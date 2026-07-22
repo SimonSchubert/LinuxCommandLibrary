@@ -87,6 +87,12 @@ Live capture requires root/administrator privileges. High traffic volumes may ca
 
 **ipsumdump** was developed by Eddie Kohler at UCLA (later ICSI) for network measurement research. First released in the early **2000s**, it's built on the Click modular router framework and remains useful for network traffic analysis and research.
 
+# INSTALL
+
+```brew: brew install ipsumdump```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [tshark](/man/tshark)(1), [ipaggcreate](/man/ipaggcreate)(1), [ipaggmanip](/man/ipaggmanip)(1)

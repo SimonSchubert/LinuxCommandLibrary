@@ -70,6 +70,24 @@ Common use cases include scripting brightness adjustments based on time of day, 
 
 Requires the i2c-dev module: `modprobe i2c-dev`. May need to add user to i2c group. Not all monitors support DDC/CI. Some features may be read-only.
 
+# INSTALL
+
+```apt: sudo apt install ddcutil```
+
+```dnf: sudo dnf install ddcutil```
+
+```pacman: sudo pacman -S ddcutil```
+
+```apk: sudo apk add ddcutil```
+
+```zypper: sudo zypper install ddcutil```
+
+```brew: brew install ddcutil```
+
+```nix: nix profile install nixpkgs#ddcutil```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xrandr](/man/xrandr)(1), [modprobe](/man/modprobe)(8)

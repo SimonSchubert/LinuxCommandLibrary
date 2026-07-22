@@ -86,6 +86,24 @@ Large repos can take time. Shallow clones limit some operations. SSH requires ke
 
 git clone is a fundamental **Git** command from its initial release, providing distributed repository copying that defines git's model.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-fetch](/man/git-fetch)(1), [git-remote](/man/git-remote)(1)

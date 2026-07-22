@@ -50,6 +50,14 @@ The **-json** flag exposes **sensitive values in plain text**, including passwor
 
 The **show** subcommand has been available since early Terraform releases by **HashiCorp**. JSON output support was added in **Terraform 0.12** (May 2019) as part of a broader effort to provide machine-readable output across all commands. The JSON output schema has been incrementally extended to cover additional resource metadata and planned change details.
 
+# INSTALL
+
+```pacman: sudo pacman -S terraform```
+
+```nix: nix profile install nixpkgs#terraform```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [terraform-plan](/man/terraform-plan)(1), [terraform-apply](/man/terraform-apply)(1), [terraform-output](/man/terraform-output)(1)

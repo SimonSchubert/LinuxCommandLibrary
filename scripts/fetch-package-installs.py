@@ -3,20 +3,24 @@
 Resolve package-manager install names for LinuxCommandLibrary man pages.
 
 Downloads distro/package indexes into a local cache, maps command names (and
-binaries) to packages, and emits JSONL for the /add-package-installs skill to
-review and write into assets/commands/*.md.
-
-Does NOT edit man pages (skill owns writes).
+binaries) to packages, emits JSONL, and can apply # INSTALL sections into
+assets/commands/*.md.
 
 Usage:
   python3 scripts/fetch-package-installs.py --build-cache
-  python3 scripts/fetch-package-installs.py --resolve --batch 50
-  python3 scripts/fetch-package-installs.py --resolve jq rg htop
+  python3 scripts/fetch-package-installs.py --resolve              # all missing
+  python3 scripts/fetch-package-installs.py --resolve --batch 100
+  python3 scripts/fetch-package-installs.py --apply --auto         # high+inherited
+  python3 scripts/fetch-package-installs.py --apply --confidence medium --safe-medium
   python3 scripts/fetch-package-installs.py --show rg
   python3 scripts/fetch-package-installs.py --report
 
-Requires: python3, curl (optional; urllib used by default). Optional: brotli CLI
-for nixpkgs packages.json.br.
+Bulk finish (no LLM):
+  python3 scripts/fetch-package-installs.py --resolve --no-aur
+  python3 scripts/fetch-package-installs.py --apply --auto
+  python3 scripts/fetch-package-installs.py --apply --safe-medium
+
+Requires: python3. Optional: brotli (nix), zstd (Fedora/openSUSE).
 """
 
 from __future__ import annotations
@@ -65,6 +69,56 @@ INSTALL_TEMPLATES = {
     "zypper": "sudo zypper install {pkg}",
     "brew": "brew install {pkg}",
     "nix": "nix profile install nixpkgs#{pkg}",
+}
+
+# Extra package-name candidates when cmd ≠ package (applied in candidates_for).
+EXTRA_CANDIDATES: dict[str, list[str]] = {
+    "az": ["azure-cli", "az"],
+    "b2": ["b2-tools", "backblaze-b2", "b2"],
+    "bb": ["babashka", "bb"],
+    "rg": ["ripgrep", "rg"],
+    "fd": ["fd-find", "fd"],
+    "bat": ["bat"],
+    "adb": ["android-tools", "android-tools-adb", "adb"],
+}
+
+# Full install maps that replace resolver output (known collisions / enrichments).
+# Manager → package. Empty dict = force no INSTALL (do not auto-apply garbage).
+INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
+    "az": {
+        "dnf": "azure-cli",
+        "pacman": "azure-cli",
+        "zypper": "azure-cli",
+        "brew": "azure-cli",
+        "nix": "azure-cli",
+    },
+    "b2": {"brew": "b2-tools"},
+    "bb": {"nix": "babashka"},
+    "bat": {
+        "apt": "bat",
+        "apk": "bat",
+        "pacman": "bat",
+        "dnf": "bat",
+        "zypper": "bat",
+        "brew": "bat",
+        "nix": "bat",
+    },
+    # fd: Debian/brew map "fd" → fdclone (file manager); real tool is sharkdp/fd
+    "fd": {
+        "apt": "fd-find",
+        "dnf": "fd-find",
+        "pacman": "fd",
+        "apk": "fd",
+        "zypper": "fd",
+        "brew": "fd",
+        "nix": "fd",
+    },
+    "babel": {"brew": "babel"},
+    "air": {"aur": "air", "nix": "air"},  # not brew (R formatter)
+    "alembic": {"apk": "py3-alembic", "nix": "python3Packages.alembic"},
+    "alex": {"brew": "alexjs"},
+    "amap": {},  # Contents maps to amap-align (wrong product)
+    "1password": {},  # GUI; CLI is op / 1password-cli
 }
 
 # Prefer these path prefixes when mapping binaries (order = priority).
@@ -697,6 +751,290 @@ def load_none_set() -> set[str]:
     }
 
 
+def hyphen_parents(cmd: str) -> list[str]:
+    """Return hyphen parents longest-first: adb-shell-pm → [adb-shell, adb].
+
+    Used for subcommand man pages (adb-shell, aws-s3, git-lfs, …) that are not
+    separate packages — they install the same package as the parent binary.
+    """
+    if "-" not in cmd:
+        return []
+    parts = cmd.split("-")
+    return ["-".join(parts[:i]) for i in range(len(parts) - 1, 0, -1)]
+
+
+def parse_installs_from_page(name: str) -> dict[str, str]:
+    """Parse labeled INSTALL fences from an existing man page, if any."""
+    path = COMMANDS_DIR / f"{name}.md"
+    if not path.exists():
+        return {}
+    try:
+        text = path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return {}
+    m = re.search(r"(?ms)^# INSTALL\s*\n(.*?)(?=^# |\Z)", text)
+    if not m:
+        return {}
+    body = m.group(1)
+    installs: dict[str, str] = {}
+    # ```apt: sudo apt install foo```  or multi-line variant
+    for mgr, rest in re.findall(
+        r"```(" + "|".join(MANAGERS) + r"):\s*([^`\n]+)```", body
+    ):
+        rest = rest.strip()
+        # last token is package name for our templates
+        pkg = rest.split()[-1] if rest else ""
+        # nix: nixpkgs#pkg
+        if mgr == "nix" and "#" in pkg:
+            pkg = pkg.split("#", 1)[-1]
+        if pkg:
+            installs[mgr] = pkg
+    return installs
+
+
+# ---------------------------------------------------------------------------
+# Parent-inheritance gates (avoid ark-survival ← ark, arch-wiki ← arch, …)
+# ---------------------------------------------------------------------------
+
+# Tokens too generic for tagline similarity.
+_TAG_STOPWORDS = frozenset(
+    """
+    a an the and or for with from into onto over under of to in on at by as
+    is are was were be been being it its this that these those you your
+    command line tool cli utility program application software package
+    manage manages management use using used user users system linux
+    terminal shell page pages man manual file files data
+    """.split()
+)
+
+# Suffix segments that look like real CLI subcommands / topics of the parent.
+_SUBCOMMAND_LEXICON = frozenset(
+    """
+    build run pull push shell exec help version list get set add remove
+    delete create update install uninstall start stop status config cache
+    search sign verify test inspect overlay registry capability db enum
+    intel track viz app trace watch pm devices connect disconnect forward
+    reverse pair reboot logcat kill server login logout init login
+    account item vault document read inject signin signout whoami
+    completion format fields export import apply plan destroy validate
+    info show edit view cat head tail tree diff sync fetch clone
+    mount umount open close enable disable reload restart
+    attach detach logs top ps kill
+    moo mark key cdrom extracttemplates ftparchive sortpkgs secure
+    pkgmanagers stacks subsystems
+    """.split()
+)
+
+
+# Parent package names that almost never own long product-style children.
+_GENERIC_PARENT_PACKAGES = frozenset(
+    {
+        "coreutils",
+        "uutils-coreutils",
+        "binutils",
+        "util-linux",
+        "util-linux-misc",
+        "glibc",
+        "bash",
+        "busybox",
+        "linux",
+        "linux-headers",
+        "filesystem",
+        "base-files",
+        "debianutils",
+        "man-db",
+        "man-pages",
+        "ncurses",
+        "readline",
+        "sed",
+        "gawk",
+        "grep",
+        "findutils",
+        "diffutils",
+        "procps",
+        "procps-ng",
+        "psmisc",
+        "shadow",
+        "shadow-utils",
+        "login",
+        "pam",
+        "systemd",
+        "dbus",
+    }
+)
+
+# Explicit child→parent denylist for known false friends (optional safety net).
+_INHERIT_DENY: frozenset[tuple[str, str]] = frozenset(
+    {
+        ("ark-survival-ascended", "ark"),
+        ("ark-survival-evolved", "ark"),
+        ("arch-wiki", "arch"),
+        ("apt-add-repository", "apt"),
+        ("apt-clone", "apt"),
+        ("add-apt-repository", "apt"),
+    }
+)
+
+# CLI umbrellas: every parent-* page documents a subcommand of the same binary
+# (aws ec2, aws s3, …). Always allow inherit even when the service name is not
+# a generic verb and taglines do not share tokens.
+_PREFIX_FAMILIES = frozenset(
+    {
+        "aws",
+        "gcloud",
+        "az",
+        "kubectl",
+        "docker",
+        "podman",
+        "git",
+        "gh",
+        "npm",
+        "pip",
+        "cargo",
+        "dotnet",
+        "flutter",
+        "firebase",
+        "heroku",
+        "vercel",
+        "wrangler",
+        "terraform",
+        "pulumi",
+        "ansible",
+        "kubectl",
+    }
+)
+
+
+def _page_section_text(name: str, section: str) -> str:
+    path = COMMANDS_DIR / f"{name}.md"
+    if not path.exists():
+        return ""
+    try:
+        text = path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return ""
+    m = re.search(
+        rf"(?ms)^# {re.escape(section)}\s*\n(.*?)(?=^# |\Z)",
+        text,
+    )
+    return m.group(1).strip() if m else ""
+
+
+def _content_tokens(*texts: str) -> set[str]:
+    toks: set[str] = set()
+    for text in texts:
+        for raw in re.findall(r"[a-zA-Z][a-zA-Z0-9]+", text.lower()):
+            if len(raw) < 3 or raw in _TAG_STOPWORDS:
+                continue
+            toks.add(raw)
+    return toks
+
+
+def _suffix_segments(child: str, parent: str) -> list[str]:
+    if not child.startswith(parent + "-"):
+        return []
+    return [s for s in child[len(parent) + 1 :].split("-") if s]
+
+
+def _suffix_is_subcommand_like(segments: list[str]) -> bool:
+    """True when every segment looks like a CLI subcommand token, not a product name."""
+    if not segments:
+        return False
+    # Short tokens allowed only if listed (do not treat arbitrary 3-letter
+    # words like "cli" as subcommands — arduino-cli ≠ arduino IDE).
+    short_ok = frozenset({"pm", "db", "ng", "ps", "rm", "cp", "mv", "ls"})
+    for seg in segments:
+        if seg in _SUBCOMMAND_LEXICON or seg in short_ok:
+            continue
+        if re.fullmatch(r"[0-9]+", seg):
+            continue
+        # novel words (survival, ascended, repository, wiki, …) ⇒ different product
+        return False
+    return True
+
+
+def _parent_packages_are_generic(installs: dict[str, str]) -> bool:
+    if not installs:
+        return False
+    pkgs = {p.split("#")[-1].lower() for p in installs.values()}
+    return bool(pkgs) and pkgs <= _GENERIC_PARENT_PACKAGES
+
+
+def should_inherit_from_parent(
+    child: str,
+    parent: str,
+    parent_installs: dict[str, str],
+) -> tuple[bool, str]:
+    """Decide whether child man page may reuse parent's package installs.
+
+    Returns (ok, reason). Reasons are short codes for notes/debug.
+    """
+    if not parent_installs:
+        return False, "parent-empty"
+    if (child, parent) in _INHERIT_DENY:
+        return False, "denylist"
+
+    segments = _suffix_segments(child, parent)
+    if not segments:
+        return False, "not-prefix"
+
+    # aws-*, gcloud-*, az-*, … → same CLI package as parent
+    if parent in _PREFIX_FAMILIES:
+        return True, "prefix-family"
+
+    # Longest matching parent that is still a proper prefix is preferred by caller.
+    # Prefer subcommand-shaped suffixes (adb-shell, apt-get, apptainer-run).
+    if _suffix_is_subcommand_like(segments):
+        # Still block coreutils/binutils parents unless taglines clearly match.
+        if _parent_packages_are_generic(parent_installs):
+            child_tok = _content_tokens(
+                _page_section_text(child, "TAGLINE"),
+                _page_section_text(child, "DESCRIPTION")[:400],
+            )
+            parent_tok = _content_tokens(
+                _page_section_text(parent, "TAGLINE"),
+                _page_section_text(parent, "DESCRIPTION")[:400],
+            )
+            overlap = child_tok & parent_tok
+            if len(overlap) < 2:
+                return False, "generic-parent-weak-tagline"
+        return True, "subcommand-suffix"
+
+    # Product-style suffixes (ark-survival-*, arch-wiki, apt-add-repository,
+    # arduino-cli-interactive from parent arduino): multi-segment non-subcommand
+    # names are almost always a different product — do not inherit via tagline.
+    if len(segments) >= 2:
+        return False, "product-multi-segment"
+
+    if _parent_packages_are_generic(parent_installs):
+        return False, "generic-parent-product-suffix"
+
+    # Single novel segment (e.g. parent-foo): require strong tagline overlap,
+    # not just the shared parent name token.
+    child_tok = _content_tokens(
+        _page_section_text(child, "TAGLINE"),
+        _page_section_text(child, "DESCRIPTION")[:500],
+    )
+    parent_tok = _content_tokens(
+        _page_section_text(parent, "TAGLINE"),
+        _page_section_text(parent, "DESCRIPTION")[:500],
+    )
+    overlap = child_tok & parent_tok
+    meaningful = {
+        t
+        for t in overlap
+        if t != parent
+        and t != child
+        and t not in segments
+        and len(t) >= 4
+    }
+
+    if len(meaningful) >= 2:
+        return True, f"tagline-overlap:{','.join(sorted(meaningful)[:5])}"
+
+    return False, "product-suffix-no-overlap"
+
+
 def candidates_for(
     cmd: str, debian_bin: dict[str, str], alpine_cmd: dict[str, str]
 ) -> list[str]:
@@ -716,8 +1054,43 @@ def candidates_for(
 
     add(debian_bin.get(cmd))
     add(alpine_cmd.get(cmd))
+    for extra in EXTRA_CANDIDATES.get(cmd, []):
+        add(extra)
     add(cmd)
     return ordered
+
+
+def apply_install_overrides(row: dict[str, Any]) -> dict[str, Any]:
+    """Apply INSTALL_OVERRIDES and drop known-bad manager hits."""
+    cmd = row.get("cmd") or ""
+    if cmd in INSTALL_OVERRIDES:
+        installs = dict(INSTALL_OVERRIDES[cmd])
+        row = dict(row)
+        row["installs"] = installs
+        row["install_cmds"] = {
+            mgr: INSTALL_TEMPLATES[mgr].format(pkg=pkg) for mgr, pkg in installs.items()
+        }
+        row["sources"] = {mgr: "override" for mgr in installs}
+        notes = list(row.get("notes") or [])
+        notes.append("install-override")
+        row["notes"] = notes
+        row["confidence"] = "high" if installs else "none"
+        if "inherited_from" in row and not installs:
+            del row["inherited_from"]
+        return row
+
+    installs = dict(row.get("installs") or {})
+    # Drop brew for air-like cases handled only via full override above.
+    # Fix bat apt if still bacula
+    if cmd == "bat" and installs.get("apt") == "bacula-console-qt":
+        installs["apt"] = "bat"
+        row = dict(row)
+        row["installs"] = installs
+        row["install_cmds"] = {
+            mgr: INSTALL_TEMPLATES[mgr].format(pkg=pkg) for mgr, pkg in installs.items()
+        }
+        row.setdefault("notes", []).append("fixed bat apt→bat")
+    return row
 
 
 def pick_from_set(cands: list[str], pkg_set: set[str]) -> str | None:
@@ -747,6 +1120,9 @@ def resolve_one(
     cmd: str,
     indexes: dict[str, Any],
     aur_hits: dict[str, dict] | None = None,
+    *,
+    inherit_parents: bool = False,
+    parent_install_cache: dict[str, dict[str, str]] | None = None,
 ) -> dict[str, Any]:
     debian_bin: dict[str, str] = indexes["debian_bin"]
     alpine_cmd: dict[str, str] = indexes["alpine_cmd"]
@@ -760,6 +1136,7 @@ def resolve_one(
     installs: dict[str, str] = {}
     notes: list[str] = []
     sources: dict[str, str] = {}
+    inherited_from: str | None = None
 
     # apt: prefer Contents binary map
     if cmd in debian_bin:
@@ -816,12 +1193,68 @@ def resolve_one(
         installs["nix"] = nix_pkg
         sources["nix"] = "nixpkgs-attrs"
 
+    # Subcommand pages (adb-shell, apt-get, …): optionally inherit parent installs.
+    # Longest parent first (arduino-cli before arduino), gated by should_inherit
+    # so product names like ark-survival-* do not inherit KDE ark / coreutils / etc.
+    if not installs and inherit_parents:
+        cache = parent_install_cache if parent_install_cache is not None else {}
+        parents = hyphen_parents(cmd)  # longest-first
+        refused: list[str] = []
+        for parent in parents:
+            parent_path = COMMANDS_DIR / f"{parent}.md"
+            if not parent_path.exists():
+                continue
+            if parent in cache:
+                parent_installs = cache[parent]
+            else:
+                parent_installs = parse_installs_from_page(parent)
+                if not parent_installs:
+                    parent_row = resolve_one(
+                        parent,
+                        indexes,
+                        aur_hits=aur_hits,
+                        inherit_parents=False,
+                    )
+                    parent_installs = dict(parent_row.get("installs") or {})
+                cache[parent] = parent_installs
+            if not parent_installs:
+                continue
+            ok, reason = should_inherit_from_parent(cmd, parent, parent_installs)
+            if not ok:
+                refused.append(f"{parent}({reason})")
+                continue
+            installs = dict(parent_installs)
+            inherited_from = parent
+            notes.append(
+                f"inherited from parent `{parent}` ({reason})"
+            )
+            for mgr in installs:
+                sources[mgr] = f"parent:{parent}"
+            break
+        if not installs and refused:
+            notes.append("inherit refused: " + "; ".join(refused[:6]))
+
     conf = confidence_for(cmd, installs, debian_bin, alpine_cmd)
+    if inherited_from and installs:
+        # Parent mapping is trusted enough for subcommand pages
+        if conf == "none":
+            conf = "medium"
+        elif conf == "low":
+            conf = "medium"
+        # If parent had binary maps, treat as high
+        if conf != "high":
+            conf = "high" if any(
+                s.startswith("debian-contents")
+                or s.startswith("alpine-cmd")
+                or s.startswith("parent:")
+                for s in sources.values()
+            ) else conf
+
     install_cmds = {
         mgr: INSTALL_TEMPLATES[mgr].format(pkg=pkg) for mgr, pkg in installs.items()
     }
 
-    return {
+    row: dict[str, Any] = {
         "cmd": cmd,
         "candidates": cands,
         "installs": installs,
@@ -830,6 +1263,9 @@ def resolve_one(
         "confidence": conf,
         "notes": notes,
     }
+    if inherited_from:
+        row["inherited_from"] = inherited_from
+    return apply_install_overrides(row)
 
 
 def resolve_batch(
@@ -837,14 +1273,30 @@ def resolve_batch(
     indexes: dict[str, Any],
     do_aur: bool = True,
 ) -> list[dict[str, Any]]:
-    """Resolve many commands; batch AUR lookups for candidates not in Arch."""
+    """Resolve many commands; batch AUR lookups for candidates not in Arch.
+
+    Also resolves hyphen-parents needed for subcommand inheritance, and applies
+    parent INSTALL inheritance (adb-shell → adb, etc.).
+    """
     arch: set[str] = indexes["arch_pkgs"]
     debian_bin = indexes["debian_bin"]
     alpine_cmd = indexes["alpine_cmd"]
 
+    # Include hyphen parents so inheritance can resolve them in one pass
+    expand: list[str] = []
+    seen_exp: set[str] = set()
+    for cmd in names:
+        if cmd not in seen_exp:
+            expand.append(cmd)
+            seen_exp.add(cmd)
+        for parent in hyphen_parents(cmd):
+            if parent not in seen_exp and (COMMANDS_DIR / f"{parent}.md").exists():
+                expand.append(parent)
+                seen_exp.add(parent)
+
     aur_need: list[str] = []
     if do_aur:
-        for cmd in names:
+        for cmd in expand:
             cands = candidates_for(cmd, debian_bin, alpine_cmd)
             if pick_from_set(cands, arch) is None:
                 aur_need.extend(cands)
@@ -865,7 +1317,70 @@ def resolve_batch(
     else:
         aur_hits = {}
 
-    return [resolve_one(cmd, indexes, aur_hits=aur_hits) for cmd in names]
+    # Resolve shortest names first so parents fill the cache before children
+    expand_sorted = sorted(expand, key=lambda c: (c.count("-"), len(c), c))
+    parent_cache: dict[str, dict[str, str]] = {}
+    by_name: dict[str, dict[str, Any]] = {}
+
+    for cmd in expand_sorted:
+        # Existing man-page INSTALL is authoritative (may be richer than re-resolve,
+        # e.g. adb with android-tools on Arch after a manual enrich).
+        page_installs = parse_installs_from_page(cmd)
+        if page_installs:
+            parent_cache[cmd] = page_installs
+            cands = candidates_for(cmd, debian_bin, alpine_cmd)
+            install_cmds = {
+                mgr: INSTALL_TEMPLATES[mgr].format(pkg=pkg)
+                for mgr, pkg in page_installs.items()
+            }
+            by_name[cmd] = {
+                "cmd": cmd,
+                "candidates": cands,
+                "installs": dict(page_installs),
+                "install_cmds": install_cmds,
+                "sources": {mgr: "man-page" for mgr in page_installs},
+                "confidence": "high",
+                "notes": ["from existing man page # INSTALL"],
+            }
+            continue
+
+        row = resolve_one(
+            cmd,
+            indexes,
+            aur_hits=aur_hits,
+            inherit_parents=True,
+            parent_install_cache=parent_cache,
+        )
+        if row.get("installs"):
+            parent_cache[cmd] = dict(row["installs"])
+        by_name[cmd] = row
+
+    # Second pass: children that still empty may now see parent cache
+    for cmd in expand_sorted:
+        row = by_name[cmd]
+        if row.get("installs"):
+            continue
+        row2 = resolve_one(
+            cmd,
+            indexes,
+            aur_hits=aur_hits,
+            inherit_parents=True,
+            parent_install_cache=parent_cache,
+        )
+        if row2.get("installs"):
+            parent_cache[cmd] = dict(row2["installs"])
+            by_name[cmd] = row2
+
+    # Re-apply overrides (page-existing path skips resolve_one overrides)
+    out: list[dict[str, Any]] = []
+    for cmd in names:
+        if cmd not in by_name:
+            continue
+        row = apply_install_overrides(by_name[cmd])
+        if row.get("installs"):
+            parent_cache[cmd] = dict(row["installs"])
+        out.append(row)
+    return out
 
 
 def queue_missing(limit: int | None, skip_none: bool = True) -> list[str]:
@@ -911,6 +1426,147 @@ def print_show(row: dict[str, Any]) -> None:
     section = format_install_section(row)
     if section:
         print("\n--- markdown ---\n" + section)
+
+
+def insert_install_into_markdown(text: str, section: str) -> str:
+    """Insert or replace # INSTALL section before SEE ALSO / RESOURCES / EOF."""
+    if re.search(r"(?m)^# INSTALL\s*$", text):
+        return re.sub(
+            r"(?ms)^# INSTALL\n.*?(?=^# |\Z)",
+            section.rstrip() + "\n\n",
+            text,
+            count=1,
+        )
+    lines = text.splitlines(keepends=True)
+    for marker in ("# SEE ALSO", "# RESOURCES"):
+        inside = False
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+            if stripped.startswith("```"):
+                after = stripped[3:]
+                if "```" not in after:
+                    inside = not inside
+                continue
+            if not inside and line.startswith(marker):
+                return "".join(lines[:i]) + section.rstrip() + "\n\n" + "".join(lines[i:])
+    if not text.endswith("\n"):
+        text += "\n"
+    return text + "\n" + section.rstrip() + "\n"
+
+
+def row_should_apply(
+    row: dict[str, Any],
+    *,
+    confidences: set[str],
+    require_inherited: bool,
+    safe_medium: bool,
+    auto: bool,
+) -> bool:
+    installs = row.get("installs") or {}
+    if not installs:
+        return False
+    conf = row.get("confidence") or "none"
+    inherited = bool(row.get("inherited_from"))
+
+    if auto:
+        # Happy path: high confidence or any successful inheritance
+        if conf == "high" or inherited:
+            return True
+        if safe_medium and conf == "medium":
+            # Safe medium: every package name equals the command (exact name hit)
+            cmd = row.get("cmd") or ""
+            return all(pkg == cmd for pkg in installs.values())
+        return False
+
+    if require_inherited and not inherited:
+        return False
+    if conf not in confidences:
+        return False
+    if safe_medium and conf == "medium":
+        cmd = row.get("cmd") or ""
+        return all(pkg == cmd for pkg in installs.values())
+    return True
+
+
+def apply_rows_to_pages(
+    rows: list[dict[str, Any]],
+    *,
+    dry_run: bool = False,
+    confidences: set[str] | None = None,
+    require_inherited: bool = False,
+    safe_medium: bool = False,
+    auto: bool = False,
+    force: bool = False,
+    update_none: bool = False,
+) -> dict[str, int]:
+    """Write # INSTALL into man pages. Returns counters."""
+    confidences = confidences or {"high", "medium", "low"}
+    stats = {
+        "written": 0,
+        "skipped_filter": 0,
+        "skipped_exists": 0,
+        "skipped_empty": 0,
+        "missing_file": 0,
+        "none_appended": 0,
+    }
+    none_existing = load_none_set()
+    new_none: list[str] = []
+    date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    for row in rows:
+        cmd = row.get("cmd") or ""
+        installs = row.get("installs") or {}
+        path = COMMANDS_DIR / f"{cmd}.md"
+        if not path.exists():
+            stats["missing_file"] += 1
+            continue
+        if not installs:
+            stats["skipped_empty"] += 1
+            if update_none and cmd not in none_existing:
+                new_none.append(cmd)
+            continue
+        if not row_should_apply(
+            row,
+            confidences=confidences,
+            require_inherited=require_inherited,
+            safe_medium=safe_medium,
+            auto=auto,
+        ):
+            stats["skipped_filter"] += 1
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except OSError:
+            stats["missing_file"] += 1
+            continue
+        if command_has_install(cmd) and not force:
+            stats["skipped_exists"] += 1
+            continue
+        section = format_install_section(row, date=date)
+        if not section:
+            stats["skipped_empty"] += 1
+            continue
+        new_text = insert_install_into_markdown(text, section)
+        if not dry_run:
+            path.write_text(new_text, encoding="utf-8")
+        stats["written"] += 1
+
+    if update_none and new_none and not dry_run:
+        with NONE_FILE.open("a", encoding="utf-8") as f:
+            for n in new_none:
+                f.write(n + "\n")
+        stats["none_appended"] = len(new_none)
+
+    return stats
+
+
+def load_results_jsonl(path: Path) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        rows.append(json.loads(line))
+    return rows
 
 
 # ---------------------------------------------------------------------------
@@ -988,6 +1644,80 @@ def cmd_report(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_apply(args: argparse.Namespace) -> int:
+    """Apply resolved installs into man pages."""
+    cache_dir = Path(args.cache_dir)
+    results_path = (
+        Path(args.from_results)
+        if args.from_results
+        else cache_dir / "results.jsonl"
+    )
+    if not results_path.exists():
+        log(f"missing results file: {results_path} (run --resolve first)")
+        return 1
+
+    rows = load_results_jsonl(results_path)
+    # Re-apply overrides in case results predate INSTALL_OVERRIDES
+    rows = [apply_install_overrides(r) for r in rows]
+
+    conf_set: set[str] = set()
+    if args.confidence:
+        conf_set = {c.strip() for c in args.confidence.split(",") if c.strip()}
+    else:
+        conf_set = {"high", "medium", "low"}
+
+    stats = apply_rows_to_pages(
+        rows,
+        dry_run=args.dry_run,
+        confidences=conf_set,
+        require_inherited=args.require_inherited,
+        safe_medium=args.safe_medium,
+        auto=args.auto,
+        force=args.force_apply,
+        update_none=args.update_none,
+    )
+    mode = "dry-run " if args.dry_run else ""
+    log(
+        f"{mode}apply: written={stats['written']} "
+        f"skipped_filter={stats['skipped_filter']} "
+        f"skipped_exists={stats['skipped_exists']} "
+        f"skipped_empty={stats['skipped_empty']} "
+        f"none_appended={stats['none_appended']} "
+        f"missing_file={stats['missing_file']}"
+    )
+
+    # Write quarantine files for leftovers
+    review_path = cache_dir / "review-needed.jsonl"
+    none_path = cache_dir / "resolve-none.jsonl"
+    review_rows = []
+    none_rows = []
+    for r in rows:
+        if not (r.get("installs") or {}):
+            none_rows.append(r)
+            continue
+        if command_has_install(r["cmd"]):
+            continue
+        if not row_should_apply(
+            r,
+            confidences=conf_set if not args.auto else {"high", "medium", "low"},
+            require_inherited=False,
+            safe_medium=False,
+            auto=args.auto,
+        ):
+            # still missing and not applied under auto rules
+            if args.auto and (
+                r.get("confidence") in ("medium", "low")
+                or not (r.get("confidence") == "high" or r.get("inherited_from"))
+            ):
+                review_rows.append(r)
+    if not args.dry_run:
+        write_jsonl(review_path, review_rows)
+        write_jsonl(none_path, none_rows)
+        log(f"review queue: {len(review_rows)} → {review_path}")
+        log(f"resolve-none: {len(none_rows)} → {none_path}")
+    return 0
+
+
 def cmd_section(args: argparse.Namespace) -> int:
     """Print INSTALL markdown for commands from latest results or live resolve."""
     cache_dir = Path(args.cache_dir)
@@ -1043,6 +1773,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--show", nargs="+", metavar="CMD", help="show resolve for CMD(s)")
     p.add_argument("--report", action="store_true", help="coverage / cache report")
     p.add_argument("--section", nargs="+", metavar="CMD", help="print INSTALL markdown")
+    p.add_argument(
+        "--apply",
+        action="store_true",
+        help="write # INSTALL sections from results JSONL into man pages",
+    )
     p.add_argument("--batch", type=int, default=None, help="with --resolve: next N missing")
     p.add_argument("--output", "-o", default=None, help="results JSONL path")
     p.add_argument("--print", action="store_true", help="print JSONL rows to stdout")
@@ -1056,7 +1791,42 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument(
         "--from-results",
         default=None,
-        help="with --section: read rows from this JSONL",
+        help="with --section/--apply: read rows from this JSONL",
+    )
+    p.add_argument(
+        "--auto",
+        action="store_true",
+        help="with --apply: write high-confidence + inherited rows only",
+    )
+    p.add_argument(
+        "--confidence",
+        default=None,
+        help="with --apply: comma list high,medium,low (default all if not --auto)",
+    )
+    p.add_argument(
+        "--safe-medium",
+        action="store_true",
+        help="with --apply/--auto: also write medium when all packages == command name",
+    )
+    p.add_argument(
+        "--require-inherited",
+        action="store_true",
+        help="with --apply: only write inherited rows",
+    )
+    p.add_argument(
+        "--force-apply",
+        action="store_true",
+        help="with --apply: replace existing # INSTALL sections",
+    )
+    p.add_argument(
+        "--update-none",
+        action="store_true",
+        help="with --apply: append empty resolves to commands_packages_none.txt",
+    )
+    p.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="with --apply: report counts without writing files",
     )
     return p
 
@@ -1070,6 +1840,8 @@ def main(argv: list[str] | None = None) -> int:
         # nargs='*' → [] means "use queue"; non-empty means explicit names
         args.names = list(args.resolve)
         return cmd_resolve(args)
+    if args.apply:
+        return cmd_apply(args)
     if args.show:
         args.names = args.show
         return cmd_show(args)

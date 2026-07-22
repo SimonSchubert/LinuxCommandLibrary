@@ -105,6 +105,22 @@ Compton development has ceased; **picom** is the actively maintained fork and re
 
 Compton was forked from **xcompmgr** in **2011** by Christopher Jeffrey (chjj) to add features and fix bugs. It became popular in the Linux ricing community for its configurability. Development stalled around **2017**, leading to the creation of **picom** as an actively maintained fork.
 
+# INSTALL
+
+```apt: sudo apt install compton```
+
+```dnf: sudo dnf install picom```
+
+```pacman: sudo pacman -S picom```
+
+```apk: sudo apk add picom```
+
+```zypper: sudo zypper install picom```
+
+```nix: nix profile install nixpkgs#picom```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [picom](/man/picom)(1), [xcompmgr](/man/xcompmgr)(1), [i3](/man/i3)(1)

@@ -91,6 +91,24 @@ The command provides comprehensive issue lifecycle management including creation
 
 Integration with pull requests allows linking issues to code changes, with automatic closing when PRs merge using keywords in commit messages.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-pr](/man/gh-pr)(1)

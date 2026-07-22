@@ -81,6 +81,16 @@ Some operations (dump, load, import) require the database to be stopped first. A
 
 neo4j-admin has been part of the Neo4j distribution since its early releases. The command structure was significantly reorganized in **Neo4j 5** (2022), moving from flat commands (e.g., `dump`, `memrec`) to categorized subcommands (e.g., `database dump`, `server memory-recommendation`).
 
+# INSTALL
+
+```apk: sudo apk add neo4j```
+
+```brew: brew install neo4j```
+
+```nix: nix profile install nixpkgs#neo4j```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neo4j](/man/neo4j)(1), [cypher-shell](/man/cypher-shell)(1)

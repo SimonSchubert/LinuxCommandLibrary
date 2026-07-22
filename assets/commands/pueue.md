@@ -108,6 +108,20 @@ Requires the **pueued** daemon to be running. Start it with **pueued -d** (daemo
 
 Pueue (German for "queue") was created by **Arne Beer** for managing long-running shell commands in the background. Written in Rust.
 
+# INSTALL
+
+```pacman: sudo pacman -S pueue```
+
+```apk: sudo apk add pueue```
+
+```zypper: sudo zypper install pueue```
+
+```brew: brew install pueue```
+
+```nix: nix profile install nixpkgs#pueue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nohup](/man/nohup)(1), [screen](/man/screen)(1), [tmux](/man/tmux)(1), [at](/man/at)(1), [batch](/man/batch)(1), [task](/man/task)(1)

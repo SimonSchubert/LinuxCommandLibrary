@@ -48,6 +48,16 @@ KDE 5 specific; KDE 6 uses kreadconfig6. File paths can be relative to ~/.config
 
 kreadconfig5 is part of the KDE Frameworks, providing command-line access to KDE's configuration system. It complements kwriteconfig5 for reading settings in scripts.
 
+# INSTALL
+
+```apt: sudo apt install libkf5config-bin```
+
+```pacman: sudo pacman -S kconfig5```
+
+```apk: sudo apk add kconfig5```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kwriteconfig5](/man/kwriteconfig5)(1), [dconf](/man/dconf)(1)

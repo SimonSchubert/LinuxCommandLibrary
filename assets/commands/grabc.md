@@ -73,6 +73,12 @@ grabc requires a running X11 server and links against Xlib, so it does not work 
 
 grabc was written by **Muhammad A Muquit** and first released on **March 16, 1997**. It remains a compact, single-purpose tool distributed as C source that builds against libX11.
 
+# INSTALL
+
+```apt: sudo apt install grabc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xprop](/man/xprop)(1), [xwininfo](/man/xwininfo)(1), [import](/man/import)(1), [convert](/man/convert)(1)

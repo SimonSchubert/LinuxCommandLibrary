@@ -68,6 +68,20 @@ Works on X11 only and has no effect under native Wayland sessions. Requires the 
 
 **xbanish** was written by Joshua Stein (jcs) to replace the keystroke-hiding behavior of **unclutter** with a cleaner, event-driven implementation built on the XInput and XFixes extensions.
 
+# INSTALL
+
+```apt: sudo apt install xbanish```
+
+```dnf: sudo dnf install xbanish```
+
+```apk: sudo apk add xbanish```
+
+```zypper: sudo zypper install xbanish```
+
+```nix: nix profile install nixpkgs#xbanish```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unclutter](/man/unclutter)(1), [xdotool](/man/xdotool)(1), [xinput](/man/xinput)(1), [xsetroot](/man/xsetroot)(1)

@@ -40,6 +40,12 @@ BloodHound is a powerful security tool that requires proper authorization before
 
 BloodHound was created by **Andy Robbins**, **Rohan Vazarkar**, and **Will Schroeder** at SpecterOps and first presented at **DEF CON 24** in **2016**. It revolutionized Active Directory security assessments by visualizing complex relationships that were previously difficult to analyze manually. The tool is open source and has become an industry standard for AD security assessment.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#bloodhound```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bloodhound-python](/man/bloodhound-python)(1), [neo4j](/man/neo4j)(1), [impacket](/man/impacket)(1), [ldapsearch](/man/ldapsearch)(1)

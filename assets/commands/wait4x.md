@@ -147,6 +147,18 @@ Database and broker connection strings are passed as command-line arguments, whi
 
 **wait4x** was created as a modern, single-binary alternative to shell-based wait scripts and tools like **wait-for-it** and **dockerize**. Written in **Go**, it expanded beyond simple TCP/HTTP checks to include native protocol support for popular databases and message brokers. The project is actively maintained and available via Homebrew, Alpine packages, AUR, NixOS, and Docker.
 
+# INSTALL
+
+```apk: sudo apk add wait4x```
+
+```zypper: sudo zypper install wait4x```
+
+```brew: brew install wait4x```
+
+```nix: nix profile install nixpkgs#wait4x```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nc](/man/nc)(1), [curl](/man/curl)(1), [timeout](/man/timeout)(1)

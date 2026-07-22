@@ -48,6 +48,22 @@ Part of Inkscape. Limited interaction. View-only functionality.
 
 inkview was created as a lightweight SVG viewer companion to **Inkscape** for quick file preview.
 
+# INSTALL
+
+```apt: sudo apt install inkscape```
+
+```dnf: sudo dnf install inkscape```
+
+```pacman: sudo pacman -S inkscape```
+
+```apk: sudo apk add inkscape-view```
+
+```zypper: sudo zypper install inkscape```
+
+```nix: nix profile install nixpkgs#inkscape```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [inkscape](/man/inkscape)(1), [eog](/man/eog)(1), [feh](/man/feh)(1), [display](/man/display)(1)

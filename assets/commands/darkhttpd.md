@@ -132,6 +132,22 @@ Static files only; no CGI, PHP, or dynamic content support. No SSL/TLS; use a re
 
 **darkhttpd** was created by Emil Mikulic in **2003** as a simple, portable HTTP server. The design philosophy emphasizes minimalism and security over features. The single-file C source compiles on virtually any Unix-like system without external dependencies, making it popular for embedded systems and minimal environments.
 
+# INSTALL
+
+```dnf: sudo dnf install darkhttpd```
+
+```pacman: sudo pacman -S darkhttpd```
+
+```apk: sudo apk add darkhttpd```
+
+```zypper: sudo zypper install darkhttpd```
+
+```brew: brew install darkhttpd```
+
+```nix: nix profile install nixpkgs#darkhttpd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nginx](/man/nginx)(8), [python3](/man/python3)(1), [caddy](/man/caddy)(1), [busybox](/man/busybox)(1)

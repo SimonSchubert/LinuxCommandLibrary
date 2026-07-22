@@ -63,6 +63,16 @@ Requires running i3. Socket must be accessible. Commands must be valid i3 syntax
 
 i3-msg is part of the **i3** window manager project for IPC communication.
 
+# INSTALL
+
+```apt: sudo apt install i3-wm```
+
+```pacman: sudo pacman -S i3-wm```
+
+```apk: sudo apk add i3wm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [i3](/man/i3)(1), [swaymsg](/man/swaymsg)(1), [i3lock](/man/i3lock)(1)

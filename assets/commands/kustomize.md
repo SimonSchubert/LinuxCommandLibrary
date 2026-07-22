@@ -130,6 +130,24 @@ The kubectl-embedded version may lag behind the standalone CLI. Some features re
 
 Kustomize was developed by the **Kubernetes SIG CLI** team starting around **2017** as a template-free approach to Kubernetes configuration management. It was integrated into kubectl in version **1.14 (2019)**. The project emphasizes declarative configuration and follows Kubernetes' philosophy of desired state management.
 
+# INSTALL
+
+```apt: sudo apt install kustomize```
+
+```dnf: sudo dnf install kustomize```
+
+```pacman: sudo pacman -S kustomize```
+
+```apk: sudo apk add kustomize```
+
+```zypper: sudo zypper install kustomize```
+
+```brew: brew install kustomize```
+
+```nix: nix profile install nixpkgs#kustomize```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [helm](/man/helm)(1), [k9s](/man/k9s)(1)

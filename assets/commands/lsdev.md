@@ -20,6 +20,16 @@ List **installed hardware**
 
 Part of the procinfo package. Provides a simple overview; use lspci, lsusb, or lshw for detailed hardware information.
 
+# INSTALL
+
+```apt: sudo apt install procinfo```
+
+```dnf: sudo dnf install procinfo```
+
+```zypper: sudo zypper install procinfo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lspci](/man/lspci)(8), [lsusb](/man/lsusb)(8), [lshw](/man/lshw)(1), [hwinfo](/man/hwinfo)(8)

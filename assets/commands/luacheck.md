@@ -144,6 +144,16 @@ Static analysis only; won't catch runtime errors. May have false positives with 
 
 luacheck was created by **Peter Melnichenko** as a comprehensive Lua static analysis tool, filling the gap of linting tools for Lua.
 
+# INSTALL
+
+```pacman: sudo pacman -S luacheck```
+
+```apk: sudo apk add luacheck```
+
+```brew: brew install luacheck```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lua](/man/lua)(1), [luac](/man/luac)(1), [selene](/man/selene)(1), [stylua](/man/stylua)(1)

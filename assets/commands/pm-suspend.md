@@ -90,6 +90,12 @@ Deprecated on systemd-based distributions; prefer **systemctl suspend** (which u
 
 **pm-utils** was developed by **Richard Hughes**, **Peter Jones**, and the Fedora/openSUSE power-management teams in the late 2000s as a replacement for the older `hal`-based scripts. It became the standard suspend/hibernate frontend on most Linux distributions until superseded by **systemd-logind** and **systemd-sleep** around 2012-2015.
 
+# INSTALL
+
+```apk: sudo apk add pm-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [rtcwake](/man/rtcwake)(8)

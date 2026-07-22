@@ -56,6 +56,16 @@ Requires a terminal with ncurses and color support. Minimum terminal size is 80x
 
 **tty-solitaire** was created by **Mats Rauhala** as a lightweight terminal solitaire implementation, providing the classic card game experience without a graphical environment.
 
+# INSTALL
+
+```pacman: sudo pacman -S tty-solitaire```
+
+```brew: brew install tty-solitaire```
+
+```nix: nix profile install nixpkgs#tty-solitaire```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [canfield](/man/canfield)(6), [mille](/man/mille)(6), [cribbage](/man/cribbage)(6)

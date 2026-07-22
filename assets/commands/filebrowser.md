@@ -80,6 +80,14 @@ The application supports user authentication with granular permissions, allowing
 
 filebrowser is ideal for personal cloud storage, team file sharing, or providing controlled access to server directories without SSH. It includes features like drag-and-drop uploads, multi-file operations, and custom command execution hooks.
 
+# INSTALL
+
+```brew: brew install filebrowser```
+
+```nix: nix profile install nixpkgs#filebrowser```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nginx](/man/nginx)(8)

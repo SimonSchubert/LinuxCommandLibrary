@@ -43,6 +43,14 @@ Common tasks include:
 
 Running `texconfig` with no arguments starts the full-screen interactive configurator.
 
+# INSTALL
+
+```pacman: sudo pacman -S texlive-binextra```
+
+```apk: sudo apk add texlive-binextra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tlmgr](/man/tlmgr)(1), [tex](/man/tex)(1)

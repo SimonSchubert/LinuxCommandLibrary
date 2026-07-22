@@ -111,6 +111,12 @@ Requires Python 3.10 or later. Windows support is experimental; WSL is recommend
 
 **cobib** was created by **Max Rossmannek** in **June 2019** as an easy-to-use alternative to reference managers like Mendeley or Zotero. Written in Python under the MIT license. Version 4.0 introduced a TUI built on Textual. The latest version is 6.0.1 (October 2025), with over 1,420 commits and 66 releases.
 
+# INSTALL
+
+```aur: yay -S cobib```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bibtex](/man/bibtex)(1), [papis](/man/papis)(1), [zotero](/man/zotero)(1)

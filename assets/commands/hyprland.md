@@ -85,6 +85,18 @@ Wayland only. Requires compatible graphics drivers. Some X11 apps need XWayland.
 
 Hyprland was created by **vaxerski** in **2022** as a feature-rich Wayland compositor. It quickly gained popularity for its aesthetics and performance, becoming a leading choice for Wayland tiling WM users.
 
+# INSTALL
+
+```pacman: sudo pacman -S hyprland```
+
+```apk: sudo apk add hyprland```
+
+```zypper: sudo zypper install hyprland```
+
+```nix: nix profile install nixpkgs#hyprland```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sway](/man/sway)(1), [waybar](/man/waybar)(1)

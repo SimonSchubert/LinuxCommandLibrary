@@ -74,6 +74,12 @@ Does not perform type checking. Adds slight startup overhead for transpilation. 
 
 **tsx** was created by Hiroki Osame (privatenumber) as a modern alternative to ts-node. It prioritizes speed and simplicity, leveraging esbuild for near-instant transpilation. The project has become popular for running TypeScript during development.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#tsx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ts-node](/man/ts-node)(1), [node](/man/node)(1), [tsc](/man/tsc)(1), [esbuild](/man/esbuild)(1)

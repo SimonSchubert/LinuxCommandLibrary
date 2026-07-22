@@ -122,6 +122,12 @@ Requires Ruby and the colorls gem (gem install colorls). Icons require a Nerd Fo
 
 **colorls** was created by Athitya Kumar and released as a Ruby gem. It gained popularity in the terminal customization community for its visual appeal and practical features. The project was inspired by the desire for a more visually informative directory listing tool. Similar projects include **exa** (now **eza**) and **lsd** which offer comparable features in different languages.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#colorls```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [exa](/man/exa)(1), [eza](/man/eza)(1), [lsd](/man/lsd)(1), [tree](/man/tree)(1)

@@ -93,6 +93,18 @@ NetBIOS is legacy technology. Broadcast queries only reach local subnet. WINS se
 
 **nmblookup** is part of the **Samba** suite, developed by **Andrew Tridgell** and the Samba Team since the **1990s**. It provides Unix/Linux tools for interoperating with Windows networks.
 
+# INSTALL
+
+```apt: sudo apt install samba-common-bin```
+
+```dnf: sudo dnf install samba-client```
+
+```apk: sudo apk add samba-client```
+
+```zypper: sudo zypper install samba-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smbclient](/man/smbclient)(1), [net](/man/net)(8), [nbtscan](/man/nbtscan)(1), [nslookup](/man/nslookup)(1)

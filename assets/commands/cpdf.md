@@ -67,6 +67,16 @@ cpdf is particularly useful for server-side PDF processing, shell scripts, and w
 **-merge**
 > Merge multiple PDFs.
 
+# INSTALL
+
+```dnf: sudo dnf install cpdf```
+
+```apk: sudo apk add cpdf```
+
+```brew: brew install cpdf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdftk](/man/pdftk)(1), [qpdf](/man/qpdf)(1), [gs](/man/gs)(1)

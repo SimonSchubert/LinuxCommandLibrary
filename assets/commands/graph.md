@@ -87,6 +87,22 @@ Part of plotutils package. Limited interactivity. For complex plots, consider gn
 
 graph is part of **GNU plotutils**, maintained by the GNU project. The package provides a collection of plotting utilities following the Unix philosophy of simple, composable tools.
 
+# INSTALL
+
+```apt: sudo apt install plotutils```
+
+```dnf: sudo dnf install plotutils```
+
+```pacman: sudo pacman -S plotutils```
+
+```zypper: sudo zypper install plotutils```
+
+```brew: brew install plotutils```
+
+```nix: nix profile install nixpkgs#plotutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnuplot](/man/gnuplot)(1), [plot](/man/plot)(1)

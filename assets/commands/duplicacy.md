@@ -99,6 +99,12 @@ Free CLI version has limitations; some features require license. Deduplication e
 
 **Duplicacy** was created by Gilbert Chen starting around **2016** as a modern backup solution focusing on deduplication and cloud storage. The lock-free design was a response to limitations in tools like Duplicity where concurrent backups required coordination. Both CLI (open-source) and GUI (commercial) versions are available.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#duplicacy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [restic](/man/restic)(1), [borg](/man/borg)(1), [rclone](/man/rclone)(1), [duplicity](/man/duplicity)(1)

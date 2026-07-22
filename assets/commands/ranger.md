@@ -104,6 +104,22 @@ Configuration is stored in **~/.config/ranger/**. Run **ranger --copy-config=all
 
 Ranger was created by **Roman Zimbelmann** with the first release in **2009**. It was designed to bring Vim's efficient keybinding philosophy to file management. The project is open source and continues to be actively maintained on GitHub.
 
+# INSTALL
+
+```dnf: sudo dnf install ranger```
+
+```pacman: sudo pacman -S ranger```
+
+```apk: sudo apk add ranger```
+
+```zypper: sudo zypper install ranger```
+
+```brew: brew install ranger```
+
+```nix: nix profile install nixpkgs#ranger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mc](/man/mc)(1), [vifm](/man/vifm)(1), [nnn](/man/nnn)(1), [lf](/man/lf)(1)

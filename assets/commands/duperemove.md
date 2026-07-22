@@ -63,6 +63,22 @@ An extent is a contiguous area of storage allocated for a file.
 
 Only works on filesystems supporting extent-level deduplication (Btrfs, XFS). Deduplication is handled by the kernel via the `FIDEDUPERANGE` ioctl. Using a hashfile is strongly recommended for large datasets as it reduces memory usage and enables incremental scans across runs. Without `-d`, the tool only reports duplicates without deduplicating. Read-only files can still be deduplicated since dedup operates at the filesystem level.
 
+# INSTALL
+
+```apt: sudo apt install duperemove```
+
+```dnf: sudo dnf install duperemove```
+
+```pacman: sudo pacman -S duperemove```
+
+```apk: sudo apk add duperemove```
+
+```zypper: sudo zypper install duperemove```
+
+```nix: nix profile install nixpkgs#duperemove```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [fdupes](/man/fdupes)(1), [rmlint](/man/rmlint)(1)

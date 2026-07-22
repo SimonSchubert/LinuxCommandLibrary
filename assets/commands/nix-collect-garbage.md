@@ -42,6 +42,22 @@ removes unreferenced store paths from the Nix store
 
 **nix-collect-garbage** removes unreferenced store paths from the Nix store. Frees disk space by deleting packages not linked from any profile or garbage collection root.
 
+# INSTALL
+
+```apt: sudo apt install nix-bin```
+
+```dnf: sudo dnf install nix```
+
+```pacman: sudo pacman -S nix```
+
+```apk: sudo apk add nix```
+
+```zypper: sudo zypper install nix```
+
+```nix: nix profile install nixpkgs#nix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix-store](/man/nix-store)(1), [nix-env](/man/nix-env)(1)

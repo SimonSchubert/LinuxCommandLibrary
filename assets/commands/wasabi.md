@@ -62,6 +62,12 @@ The wallet can run as a graphical application (**wassabee**) or as a headless da
 
 CoinJoin transactions require a minimum amount and incur coordinator fees. Tor is bundled and used by default. Written in C# (.NET).
 
+# INSTALL
+
+```aur: yay -S wasabi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [electrum](/man/electrum)(1), [lnd](/man/lnd)(1)

@@ -26,6 +26,12 @@ cronic captures both stdout and stderr along with the exit code. If the command 
 
 cronic is a small standalone shell script by Chuck Houpt, not part of the moreutils package; the similar **chronic** command is the moreutils equivalent. The two differ in behavior: cronic also treats any output to stderr as a failure (even with a zero exit status), making it stricter about flagging problems. Output is buffered, which may be problematic for very long-running commands with large output.
 
+# INSTALL
+
+```zypper: sudo zypper install cronic```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chronic](/man/chronic)(1), [cron](/man/cron)(8)

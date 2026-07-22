@@ -68,6 +68,14 @@ Requires a terminal with ncurses and color support. The game runs in real-time, 
 
 **curseofwar** was created as a unique terminal RTS game, focusing on simplified controls while maintaining strategic depth through territory control and resource management.
 
+# INSTALL
+
+```brew: brew install curseofwar```
+
+```nix: nix profile install nixpkgs#curseofwar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nethack](/man/nethack)(6), [rogue](/man/rogue)(6)

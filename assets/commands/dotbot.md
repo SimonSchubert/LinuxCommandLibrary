@@ -102,6 +102,14 @@ Requires Python 3. Symlink creation may require appropriate permissions. Existin
 
 Dotbot was created by **Anish Athalye** in **2014** as a simple, self-contained tool for dotfiles management. It was designed to be included as a git submodule, making dotfiles repositories self-bootstrapping without external dependencies beyond Python.
 
+# INSTALL
+
+```brew: brew install dotbot```
+
+```nix: nix profile install nixpkgs#dotbot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stow](/man/stow)(1), [chezmoi](/man/chezmoi)(1), [yadm](/man/yadm)(1), [ln](/man/ln)(1)

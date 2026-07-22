@@ -100,6 +100,22 @@ Only works with FAT12, FAT16, and FAT32 filesystems. The device must not be moun
 
 **SYSLINUX** was created by H. Peter Anvin starting in 1994. It evolved into a family of bootloaders including ISOLINUX (for CD-ROM), PXELINUX (for network boot), and EXTLINUX (for Linux filesystems). The project provided a simpler alternative to LILO and GRUB for specific use cases like bootable USB drives.
 
+# INSTALL
+
+```apt: sudo apt install syslinux```
+
+```dnf: sudo dnf install syslinux```
+
+```pacman: sudo pacman -S syslinux```
+
+```apk: sudo apk add syslinux```
+
+```zypper: sudo zypper install syslinux```
+
+```nix: nix profile install nixpkgs#syslinux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub-install](/man/grub-install)(1), [dd](/man/dd)(1), [mkfs.fat](/man/mkfs.fat)(8), [parted](/man/parted)(8)

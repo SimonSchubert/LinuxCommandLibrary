@@ -53,6 +53,14 @@ Lua scripting extension requires Lua to be available on the system.
 
 **lsr** was created by **jmattaa** and is written in **C**. It supports macOS, Linux, BSD, and Windows.
 
+# INSTALL
+
+```brew: brew install lsr```
+
+```nix: nix profile install nixpkgs#lsr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [eza](/man/eza)(1), [tree](/man/tree)(1), [lsd](/man/lsd)(1), [exa](/man/exa)(1)

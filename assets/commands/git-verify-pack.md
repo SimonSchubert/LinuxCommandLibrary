@@ -37,6 +37,24 @@ Show only **delta chain statistics** without verifying
 
 With **-v**, for non-deltified objects it shows: object-name, type, size, size-in-packfile, offset-in-packfile. For deltified objects it additionally shows: depth and base-object-name.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-repack](/man/git-repack)(1), [git-fsck](/man/git-fsck)(1)

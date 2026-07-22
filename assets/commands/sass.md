@@ -105,6 +105,14 @@ Node Sass deprecated in favor of Dart Sass (sass package). @import is being phas
 
 **Sass** was created by **Hampton Catlin** and **Natalie Weizenbaum** around **2006**. Originally Ruby-based, it pioneered CSS preprocessing. LibSass (C/C++) improved performance. **Dart Sass** became the primary implementation in **2018**, with the sass npm package replacing node-sass. The SCSS syntax, introduced in **2010**, became the dominant style.
 
+# INSTALL
+
+```apk: sudo apk add dart-sass-js```
+
+```nix: nix profile install nixpkgs#sass```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [postcss](/man/postcss)(1), [stylus](/man/stylus)(1), [tailwindcss](/man/tailwindcss)(1)

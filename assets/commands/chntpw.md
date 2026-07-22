@@ -51,5 +51,21 @@ Requires offline access to the Windows partition. Cannot reset Microsoft account
 
 **chntpw** was created by Petter Nordahl-Hagen for recovering access to Windows systems. It has become a standard tool included in security-focused Linux distributions like Kali Linux.
 
+# INSTALL
+
+```apt: sudo apt install chntpw```
+
+```dnf: sudo dnf install chntpw```
+
+```pacman: sudo pacman -S chntpw```
+
+```apk: sudo apk add chntpw```
+
+```zypper: sudo zypper install chntpw```
+
+```nix: nix profile install nixpkgs#chntpw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

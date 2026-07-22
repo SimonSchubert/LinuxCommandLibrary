@@ -52,6 +52,20 @@ Manage Python version installations
 
 **uv python** manages Python installations. Download, install, and switch between Python versions. Provides hermetic Python management without system Python.
 
+# INSTALL
+
+```dnf: sudo dnf install uv```
+
+```pacman: sudo pacman -S uv```
+
+```apk: sudo apk add uv```
+
+```brew: brew install uv```
+
+```nix: nix profile install nixpkgs#uv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uv](/man/uv)(1), [pyenv](/man/pyenv)(1)

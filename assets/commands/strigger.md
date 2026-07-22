@@ -89,6 +89,12 @@ Only SlurmUser (typically root) can set triggers. Programs run on slurmctld node
 
 **strigger** is part of **Slurm**, developed at **Lawrence Livermore National Laboratory** starting in **2002**. Event triggers allow automated responses to cluster events for monitoring, alerting, and workflow automation. Slurm is now maintained by **SchedMD**.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scontrol](/man/scontrol)(1), [slurmctld](/man/slurmctld)(8)

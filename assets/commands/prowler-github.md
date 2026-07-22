@@ -41,6 +41,14 @@ GitHub organization security assessment
 
 **prowler github** performs security assessment of GitHub organizations and repositories. Checks for security misconfigurations, missing protections, and best practices compliance.
 
+# INSTALL
+
+```brew: brew install prowler```
+
+```nix: nix profile install nixpkgs#prowler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [prowler](/man/prowler)(1), [gh](/man/gh)(1)

@@ -36,6 +36,12 @@ TUI for viewing and editing database files
 
 **termdbms** was created by **mathaou** and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#termdbms```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [litecli](/man/litecli)(1), [harlequin](/man/harlequin)(1), [sqlit](/man/sqlit)(1)

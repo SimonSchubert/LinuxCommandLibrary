@@ -80,6 +80,16 @@ Requires backend tools for each archive format (unzip, tar, 7z, etc.). Some form
 
 **patool** was created by **Bastian Kleineidam** to simplify archive handling. Written in Python, it serves as a wrapper around various archiving tools, providing a consistent interface regardless of the underlying format.
 
+# INSTALL
+
+```dnf: sudo dnf install patool```
+
+```zypper: sudo zypper install patool```
+
+```nix: nix profile install nixpkgs#patool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tar](/man/tar)(1), [unzip](/man/unzip)(1), [7z](/man/7z)(1), [unrar](/man/unrar)(1)

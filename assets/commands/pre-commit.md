@@ -104,6 +104,20 @@ Initial hook installation can be slow. Requires hooks to be installed per-clone.
 
 **pre-commit** was created by **Anthony Sottile** at Yelp around **2014**. It addressed the problem of managing git hooks across teams - previously, hooks were often uncommitted or inconsistent. The framework standardized hook management and spawned a large ecosystem of shareable hooks.
 
+# INSTALL
+
+```dnf: sudo dnf install pre-commit```
+
+```pacman: sudo pacman -S pre-commit```
+
+```apk: sudo apk add pre-commit```
+
+```brew: brew install pre-commit```
+
+```nix: nix profile install nixpkgs#pre-commit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-hooks](/man/git-hooks)(5), [husky](/man/husky)(1), [lefthook](/man/lefthook)(1), [lint-staged](/man/lint-staged)(1)

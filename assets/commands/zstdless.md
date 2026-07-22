@@ -18,6 +18,24 @@ View zstd compressed files with pager
 
 This is particularly useful for browsing compressed log files and data without needing to decompress them to disk first. It is part of the zstd suite of compression utilities.
 
+# INSTALL
+
+```apt: sudo apt install zstd```
+
+```dnf: sudo dnf install zstd```
+
+```pacman: sudo pacman -S zstd```
+
+```apk: sudo apk add zstd```
+
+```zypper: sudo zypper install zstd```
+
+```brew: brew install zstd```
+
+```nix: nix profile install nixpkgs#zstd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zstd](/man/zstd)(1), [zstdcat](/man/zstdcat)(1), [less](/man/less)(1)

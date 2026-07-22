@@ -69,6 +69,21 @@ CD-ROM sources are lower priority than network repositories. Physical media can 
 
 **apt-cdrom** was essential when Linux distributions were primarily distributed on physical media. It remains available but is rarely used since broadband internet became common.
 
+# INSTALL
+
+```apt: sudo apt install apt```
+
+```dnf: sudo dnf install apt```
+
+```pacman: sudo pacman -S apt```
+
+```apk: sudo apk add apt```
+
+```brew: brew install apt```
+
+```nix: nix profile install nixpkgs#apt```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-get](/man/apt-get)(8)

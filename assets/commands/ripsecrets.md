@@ -44,6 +44,14 @@ Additional flags control allowlists and output—see **ripsecrets --help**.
 
 Local pattern matching cannot prove a string is a live credential; it also cannot catch every secret type. Use with commit hooks and complementary scanners for defense in depth. Never commit real secrets “just for testing.”
 
+# INSTALL
+
+```brew: brew install ripsecrets```
+
+```nix: nix profile install nixpkgs#ripsecrets```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [gitleaks](/man/gitleaks)(1), [trufflehog](/man/trufflehog)(1)

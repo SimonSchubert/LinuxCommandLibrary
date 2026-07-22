@@ -28,6 +28,12 @@ Send pretty HTTP and API requests with TUI
 
 **resto** was created by **abdfnx** and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S resto```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [httpie](/man/httpie)(1), [posting](/man/posting)(1)

@@ -66,6 +66,12 @@ Third-party tool. Install with npm install -g. Interactive TUI.
 
 npm-check was created to provide **interactive package updates** and unused dependency detection.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#npm-check```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-outdated](/man/npm-outdated)(1), [ncu](/man/ncu)(1)

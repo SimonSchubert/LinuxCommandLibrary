@@ -65,6 +65,24 @@ Removes original .bz2 file unless -k used. Requires memory proportional to compr
 
 **bunzip2** was included with bzip2 since its creation by Julian Seward in **1996**.
 
+# INSTALL
+
+```apt: sudo apt install bzip2```
+
+```dnf: sudo dnf install bzip2```
+
+```pacman: sudo pacman -S bzip2```
+
+```apk: sudo apk add bzip2```
+
+```zypper: sudo zypper install bzip2```
+
+```brew: brew install bzip2```
+
+```nix: nix profile install nixpkgs#bzip2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bzip2](/man/bzip2)(1), [bzcat](/man/bzcat)(1), [gunzip](/man/gunzip)(1), [xz](/man/xz)(1)

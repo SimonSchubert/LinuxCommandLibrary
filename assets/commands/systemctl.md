@@ -106,6 +106,22 @@ Some commands require root privileges. The **--user** flag manages per-user serv
 
 **systemctl** is part of **systemd**, introduced in 2010 by Lennart Poettering. It replaced traditional SysV init scripts and service management tools like **service** and **chkconfig**.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [journalctl](/man/journalctl)(1), [service](/man/service)(8)

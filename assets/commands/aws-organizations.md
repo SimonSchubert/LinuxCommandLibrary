@@ -112,6 +112,17 @@ Organizations commands must run from the management account. SCPs do not grant p
 
 **AWS Organizations** launched in **February 2017** to enable multi-account management. **Service Control Policies** provided centralized governance. **Consolidated Billing** merged from the older Consolidated Billing feature. Features expanded to include **Tag Policies**, **Backup Policies**, and **AI Services Opt-out Policies**. AWS Control Tower, launched in **2019**, builds on Organizations for landing zone automation.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-iam](/man/aws-iam)(1), [aws-sts](/man/aws-sts)(1), [aws-sso](/man/aws-sso)(1)

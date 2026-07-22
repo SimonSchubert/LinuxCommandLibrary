@@ -68,6 +68,24 @@ See **gsa --help** for verbose flags, hide options, and server bind addresses.
 
 Best results on Go binaries with symbol/package information; stripped binaries yield coarser reports. WebAssembly analysis is experimental. Browser/WASM analysis is much slower than native. Source builds need specific Go version features.
 
+# INSTALL
+
+```apt: sudo apt install gwenhywfar-tools```
+
+```dnf: sudo dnf install gwenhywfar```
+
+```pacman: sudo pacman -S gwenhywfar```
+
+```apk: sudo apk add gwenhywfar```
+
+```zypper: sudo zypper install gwenhywfar-tools```
+
+```brew: brew install gwenhywfar```
+
+```nix: nix profile install nixpkgs#gwenhywfar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [nm](/man/nm)(1), [size](/man/size)(1), [binsider](/man/binsider)(1)

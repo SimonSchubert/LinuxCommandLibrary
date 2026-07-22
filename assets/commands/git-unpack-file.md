@@ -20,6 +20,24 @@ Extract blob contents to a temporary file
 
 Creates a file named **.merge_file_XXXXXX** in the current directory. Git does not remove it automatically; the caller is responsible for deleting it once done.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-cat-file](/man/git-cat-file)(1), [git-hash-object](/man/git-hash-object)(1)

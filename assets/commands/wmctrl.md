@@ -65,6 +65,22 @@ Window titles can be partial matches. Multiple actions can be combined.
 
 X11 only. Requires EWMH-compliant window manager. Some features depend on window manager support.
 
+# INSTALL
+
+```apt: sudo apt install wmctrl```
+
+```dnf: sudo dnf install wmctrl```
+
+```pacman: sudo pacman -S wmctrl```
+
+```zypper: sudo zypper install wmctrl```
+
+```brew: brew install wmctrl```
+
+```nix: nix profile install nixpkgs#wmctrl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdotool](/man/xdotool)(1), [xprop](/man/xprop)(1)

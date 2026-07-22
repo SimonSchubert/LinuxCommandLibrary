@@ -76,6 +76,24 @@ Sizes shown may differ from actual file sizes due to filesystem overhead and res
 
 Part of **GNU Coreutils**. The df command originated in **Version 1 AT&T UNIX** in **1971**.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [du](/man/du)(1), [lsblk](/man/lsblk)(8), [mount](/man/mount)(8)

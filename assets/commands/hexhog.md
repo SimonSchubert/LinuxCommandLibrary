@@ -30,6 +30,12 @@ Primarily designed for smaller binary files. Very large files may impact perform
 
 **hexhog** was created by **DVDTSB** and provides a simple, configurable approach to hex editing in the terminal. The source is available on GitHub at **github.com/DVDTSB/hexhog**.
 
+# INSTALL
+
+```brew: brew install hexhog```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hexyl](/man/hexyl)(1), [xxd](/man/xxd)(1), [heh](/man/heh)(1)

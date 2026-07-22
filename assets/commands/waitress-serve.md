@@ -93,6 +93,12 @@ WSGI only. No ASGI support. Configure behind proxy.
 
 **Waitress** was created by the **Pylons Project** as a production-quality pure-Python WSGI server.
 
+# INSTALL
+
+```apk: sudo apk add py3-waitress```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gunicorn](/man/gunicorn)(1), [uwsgi](/man/uwsgi)(1), [uvicorn](/man/uvicorn)(1), [hypercorn](/man/hypercorn)(1), [flask](/man/flask)(1)

@@ -36,6 +36,24 @@ Set the **number of sectors** per cluster
 
 The "vfat" name refers to the Virtual FAT extension that enables long filename support (up to 255 characters) on FAT filesystems while maintaining compatibility with the original 8.3 filename format.
 
+# INSTALL
+
+```apt: sudo apt install dosfstools```
+
+```dnf: sudo dnf install dosfstools```
+
+```pacman: sudo pacman -S dosfstools```
+
+```apk: sudo apk add dosfstools```
+
+```zypper: sudo zypper install dosfstools```
+
+```brew: brew install dosfstools```
+
+```nix: nix profile install nixpkgs#dosfstools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkfs.fat](/man/mkfs.fat)(8), [mkfs](/man/mkfs)(8), [fsck](/man/fsck)(8), [fatlabel](/man/fatlabel)(8), [mount](/man/mount)(8)

@@ -65,6 +65,20 @@ Subcommand of kubectl. Requires ephemeral containers support. Image must have ne
 
 kubectl debug was added to **Kubernetes** for non-invasive debugging of running workloads.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-exec](/man/kubectl-exec)(1)

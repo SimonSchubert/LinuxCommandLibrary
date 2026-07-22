@@ -88,6 +88,14 @@ Prefix with - to disable, + to enable.
 
 Designed specifically for Google style guide compliance. Some rules may not apply to all projects. Use CPPLINT.cfg file for project-wide configuration.
 
+# INSTALL
+
+```brew: brew install cpplint```
+
+```nix: nix profile install nixpkgs#cpplint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clang-format](/man/clang-format)(1), [clang-tidy](/man/clang-tidy)(1), [cppcheck](/man/cppcheck)(1)

@@ -34,6 +34,20 @@ Create **shadow directory** of symlinks
 
 Originally developed for X Window System builds. Does not follow symbolic links in the source directory by default.
 
+# INSTALL
+
+```apt: sudo apt install xutils-dev```
+
+```apk: sudo apk add outils-lndir```
+
+```zypper: sudo zypper install lndir```
+
+```brew: brew install lndir```
+
+```nix: nix profile install nixpkgs#lndir```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ln](/man/ln)(1), [cp](/man/cp)(1)

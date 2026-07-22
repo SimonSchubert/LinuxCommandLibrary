@@ -90,6 +90,24 @@ HTML entity conversion (**html** charset) handles numeric entities. Named entiti
 
 Recode was originally written by **François Pinard** starting in **1990** and was one of the first comprehensive charset conversion tools for Unix. It became a GNU project and remains useful for batch processing text encoding conversions.
 
+# INSTALL
+
+```apt: sudo apt install recode```
+
+```dnf: sudo dnf install recode```
+
+```pacman: sudo pacman -S recode```
+
+```apk: sudo apk add recode```
+
+```zypper: sudo zypper install recode```
+
+```brew: brew install recode```
+
+```nix: nix profile install nixpkgs#recode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iconv](/man/iconv)(1), [uconv](/man/uconv)(1), [convmv](/man/convmv)(1), [file](/man/file)(1)

@@ -104,6 +104,14 @@ Steep learning curve; expect many deaths while learning. No manual saves - death
 
 Dungeon Crawl Stone Soup forked from **Linley's Dungeon Crawl** in **2006** when the original development stalled. Named after the development philosophy of "stone soup" (collaborative improvement), DCSS has been continuously developed by a community of volunteers. It's considered one of the best modern roguelikes, praised for accessibility while maintaining challenge.
 
+# INSTALL
+
+```dnf: sudo dnf install crawl```
+
+```nix: nix profile install nixpkgs#crawl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nethack](/man/nethack)(6), [angband](/man/angband)(6), [tome](/man/tome)(6)

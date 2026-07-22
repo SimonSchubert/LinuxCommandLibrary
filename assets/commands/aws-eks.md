@@ -85,6 +85,17 @@ Cluster creation takes 10-15 minutes. The control plane and node groups must be 
 
 Amazon EKS launched in **June 2018** as a managed Kubernetes service. Fargate support was added in **December 2019**, managed node groups earlier that year. EKS Anywhere for on-premises deployments launched in **2021**, and Pod Identity simplified IAM access in **2023**.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [kubectl](/man/kubectl)(1), [aws-ecr](/man/aws-ecr)(1), [eksctl](/man/eksctl)(1)

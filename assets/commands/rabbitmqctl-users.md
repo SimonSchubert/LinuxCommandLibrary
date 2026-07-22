@@ -82,6 +82,18 @@ Manage RabbitMQ users and permissions
 
 **rabbitmqctl** user commands manage RabbitMQ users and permissions. Create users, set passwords, assign roles, and configure vhost access. Part of RabbitMQ server management. These commands only manage users in the internal RabbitMQ database; users from alternative authentication backends (such as LDAP) cannot be managed with these commands.
 
+# INSTALL
+
+```dnf: sudo dnf install rabbitmq-server```
+
+```apk: sudo apk add rabbitmq-server```
+
+```zypper: sudo zypper install rabbitmq-server```
+
+```nix: nix profile install nixpkgs#rabbitmq-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rabbitmqctl](/man/rabbitmqctl)(1), [rabbitmqctl-vhosts](/man/rabbitmqctl-vhosts)(1)

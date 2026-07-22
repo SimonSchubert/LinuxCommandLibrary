@@ -62,6 +62,22 @@ Requires running X server and DISPLAY set correctly. Using -queryExtensions may 
 
 **xdpyinfo** is part of the X.Org project's utility collection. X11 has been the standard display protocol for Unix systems since 1987. The tool provides essential diagnostic information for X server administration and troubleshooting.
 
+# INSTALL
+
+```apt: sudo apt install x11-utils```
+
+```dnf: sudo dnf install xdpyinfo```
+
+```apk: sudo apk add xdpyinfo```
+
+```zypper: sudo zypper install xdpyinfo```
+
+```brew: brew install xdpyinfo```
+
+```nix: nix profile install nixpkgs#xdpyinfo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xwininfo](/man/xwininfo)(1), [xprop](/man/xprop)(1), [xrandr](/man/xrandr)(1), [glxinfo](/man/glxinfo)(1), [xset](/man/xset)(1), [xlsclients](/man/xlsclients)(1)

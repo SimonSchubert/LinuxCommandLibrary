@@ -82,6 +82,23 @@ The arp command is deprecated in favor of **ip neigh** on modern Linux. Static e
 
 **arp** has been part of Unix networking since the early days of TCP/IP in the **1980s**. On Linux, it is part of the **net-tools** package, which is being superseded by **iproute2**.
 
+# INSTALL
+
+```apt: sudo apt install net-tools```
+
+```dnf: sudo dnf install net-tools```
+
+```pacman: sudo pacman -S net-tools```
+
+```apk: sudo apk add net-tools```
+
+```zypper: sudo zypper install net-tools```
+
+```brew: brew install net-tools```
+
+```nix: nix profile install nixpkgs#net-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ip-neighbour](/man/ip-neighbour)(8), [arping](/man/arping)(8), [arp-scan](/man/arp-scan)(1), [ifconfig](/man/ifconfig)(8), [ip](/man/ip)(8)

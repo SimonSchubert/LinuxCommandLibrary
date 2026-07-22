@@ -108,6 +108,18 @@ Docker/Podman required for containerized testing. Some roles need privileged con
 
 **Molecule** was created by **Cisco** engineers and released around **2015** to improve Ansible role testing. Red Hat later adopted the project. It replaced ad-hoc testing approaches with a structured framework, becoming the de facto standard for Ansible role testing.
 
+# INSTALL
+
+```pacman: sudo pacman -S molecule```
+
+```zypper: sudo zypper install molecule```
+
+```brew: brew install molecule```
+
+```nix: nix profile install nixpkgs#molecule```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ansible](/man/ansible)(1), [ansible-lint](/man/ansible-lint)(1), [docker](/man/docker)(1)

@@ -109,6 +109,16 @@ HTTPS interception requires CA trust. Some applications pin certificates. Transp
 
 **mitmproxy** and mitmdump were created by **Aldo Cortesi** around **2010**. The project grew from security research tools into a widely-used proxy suite. It's essential for mobile app debugging, API development, and security testing.
 
+# INSTALL
+
+```pacman: sudo pacman -S mitmproxy```
+
+```apk: sudo apk add mitmproxy```
+
+```nix: nix profile install nixpkgs#mitmproxy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mitmproxy](/man/mitmproxy)(1), [charles](/man/charles)(1), [wireshark](/man/wireshark)(1), [tcpdump](/man/tcpdump)(1)

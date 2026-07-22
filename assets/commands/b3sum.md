@@ -106,6 +106,23 @@ Relatively new algorithm (2020). Less widely adopted than SHA-256. Not suitable 
 
 **b3sum** was released in **2020** alongside the BLAKE3 specification, created by Jack O'Connor and Samuel Neves as an evolution of BLAKE2 optimized for speed and parallelism.
 
+# INSTALL
+
+```apt: sudo apt install b3sum```
+
+```dnf: sudo dnf install b3sum```
+
+```pacman: sudo pacman -S b3sum```
+
+```apk: sudo apk add b3sum```
+
+```zypper: sudo zypper install b3sum```
+
+```brew: brew install b3sum```
+
+```nix: nix profile install nixpkgs#b3sum```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [b2sum](/man/b2sum)(1), [sha256sum](/man/sha256sum)(1), [md5sum](/man/md5sum)(1), [xxhsum](/man/xxhsum)(1)

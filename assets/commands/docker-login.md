@@ -52,6 +52,24 @@ authenticate with Docker registries
 
 Using -p exposes the password in shell history and log files. Always prefer --password-stdin for scripted logins.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-pull](/man/docker-pull)(1), [docker-build](/man/docker-build)(1)

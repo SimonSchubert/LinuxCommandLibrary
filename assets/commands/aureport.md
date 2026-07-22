@@ -96,6 +96,21 @@ Requires root privileges. Reports are generated from available audit logs, so co
 
 **aureport** is part of the **audit** package, providing reporting capabilities for the Linux Audit Framework.
 
+# INSTALL
+
+```apt: sudo apt install auditd```
+
+```dnf: sudo dnf install audit```
+
+```pacman: sudo pacman -S audit```
+
+```apk: sudo apk add audit```
+
+```zypper: sudo zypper install audit```
+
+```nix: nix profile install nixpkgs#audit```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ausearch](/man/ausearch)(8), [auditctl](/man/auditctl)(8), [auditd](/man/auditd)(8)

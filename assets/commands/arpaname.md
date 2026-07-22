@@ -30,6 +30,13 @@ This is a simple conversion utility that does not perform DNS queries. It only f
 
 **arpaname** is part of the BIND (Berkeley Internet Name Domain) utilities, the most widely used DNS software. ARPA names follow the format defined in RFC 1035 for IPv4 and RFC 3596 for IPv6.
 
+# INSTALL
+
+```apt: sudo apt install bind9```
+
+```apk: sudo apk add bind-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [dig](/man/dig)(1), [host](/man/host)(1), [nslookup](/man/nslookup)(1)

@@ -106,6 +106,14 @@ User must have read/write permissions on the video device. Resolution must be na
 
 uvccapture was developed for capturing images from UVC webcams on Linux systems. UVC (USB Video Class) is a standard for USB video devices that provides driver-free compatibility across operating systems. The tool was designed as a lightweight alternative to full webcam applications, focusing on command-line scripting and automation use cases.
 
+# INSTALL
+
+```apt: sudo apt install uvccapture```
+
+```nix: nix profile install nixpkgs#uvccapture```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fswebcam](/man/fswebcam)(1), [v4l2-ctl](/man/v4l2-ctl)(1), [ffmpeg](/man/ffmpeg)(1), [streamer](/man/streamer)(1)

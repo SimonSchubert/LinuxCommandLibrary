@@ -32,6 +32,12 @@ Keybindings for navigate/open/delete depend on version—see **ucollage --help**
 
 Requires a terminal with image protocol support for best results (Kitty/iTerm/Sixel, etc.). Behavior degrades on plain VT100 terminals.
 
+# INSTALL
+
+```aur: yay -S ucollage```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [viu](/man/viu)(1), [timg](/man/timg)(1), [ranger](/man/ranger)(1)

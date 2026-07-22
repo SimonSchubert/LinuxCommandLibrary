@@ -52,6 +52,24 @@ Very large digit counts require significant computation time and memory. Results
 
 **pi** implementations have existed in various forms across Unix systems. The constant Pi has been computed to trillions of digits using specialized algorithms like the Chudnovsky algorithm, though command-line tools typically compute fewer digits for practical use.
 
+# INSTALL
+
+```apt: sudo apt install pi```
+
+```dnf: sudo dnf install cln```
+
+```pacman: sudo pacman -S cln```
+
+```apk: sudo apk add cln```
+
+```zypper: sudo zypper install cln```
+
+```brew: brew install cln```
+
+```nix: nix profile install nixpkgs#cln```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bc](/man/bc)(1), [dc](/man/dc)(1), [factor](/man/factor)(1)

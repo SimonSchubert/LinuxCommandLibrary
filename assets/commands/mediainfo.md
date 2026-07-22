@@ -66,6 +66,24 @@ Read-only. Large file support varies. Some formats need extra libraries.
 
 MediaInfo was created by **Jerome Martinez** to provide detailed technical information about audio/video files.
 
+# INSTALL
+
+```apt: sudo apt install mediainfo```
+
+```dnf: sudo dnf install mediainfo```
+
+```pacman: sudo pacman -S mediainfo```
+
+```apk: sudo apk add mediainfo```
+
+```zypper: sudo zypper install mediainfo```
+
+```brew: brew install mediainfo```
+
+```nix: nix profile install nixpkgs#mediainfo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffprobe](/man/ffprobe)(1), [file](/man/file)(1), [exiftool](/man/exiftool)(1)

@@ -85,6 +85,14 @@ Handlebars templates let you customize the generated prompt for specific workflo
 
 Git integrations (`--diff`, `--git-diff-branch`, `--git-log-branch`) make it easy to generate prompts focused on recent changes rather than the entire codebase.
 
+# INSTALL
+
+```brew: brew install code2prompt```
+
+```nix: nix profile install nixpkgs#code2prompt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tree](/man/tree)(1), [find](/man/find)(1), [git](/man/git)(1)

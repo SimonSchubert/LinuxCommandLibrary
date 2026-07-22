@@ -63,6 +63,16 @@ Requires VT-x/AMD-V enabled in BIOS. Nested virtualization needs additional conf
 
 KVM was created by **Qumranet** and merged into Linux kernel **2.6.20** in **2007**. Red Hat acquired Qumranet in 2008. KVM became the standard Linux hypervisor, replacing Xen in many deployments.
 
+# INSTALL
+
+```apt: sudo apt install qemu-system-x86```
+
+```dnf: sudo dnf install qemu-system-x86```
+
+```pacman: sudo pacman -S qemu-system-x86```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qemu](/man/qemu)(1), [virsh](/man/virsh)(1), [virt-manager](/man/virt-manager)(1)

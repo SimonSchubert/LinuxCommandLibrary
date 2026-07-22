@@ -70,6 +70,18 @@ Matching is case-insensitive by default but can be configured.
 
 Similar tools exist: **zoxide**, **autojump**, **fasd** offer comparable functionality with different features.
 
+# INSTALL
+
+```dnf: sudo dnf install z```
+
+```pacman: sudo pacman -S z```
+
+```zypper: sudo zypper install z```
+
+```brew: brew install z```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cd](/man/cd)(1), [zoxide](/man/zoxide)(1), [autojump](/man/autojump)(1), [pushd](/man/pushd)(1)

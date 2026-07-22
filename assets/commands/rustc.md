@@ -117,6 +117,24 @@ Direct rustc usage requires manual dependency management. Most projects should u
 
 **rustc** was developed as part of the **Rust programming language** project, started by **Graydon Hoare** at Mozilla in **2006**. Rust reached version 1.0 in **May 2015**. The compiler was originally written in OCaml but was rewritten in Rust (self-hosted) by version 1.0. Development continues under the Rust Foundation, established in **2021**.
 
+# INSTALL
+
+```apt: sudo apt install rustc```
+
+```dnf: sudo dnf install rust```
+
+```pacman: sudo pacman -S rust```
+
+```apk: sudo apk add rust```
+
+```zypper: sudo zypper install rust```
+
+```brew: brew install rust```
+
+```nix: nix profile install nixpkgs#rustc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [rustup](/man/rustup)(1), [rustfmt](/man/rustfmt)(1), [clippy](/man/clippy)(1)

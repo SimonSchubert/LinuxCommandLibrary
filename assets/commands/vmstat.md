@@ -95,6 +95,24 @@ The first report shows averages since boot. Use **-y** to omit it. Wide mode (**
 
 **vmstat** is part of **procps-ng**, providing virtual memory statistics since early Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install procps```
+
+```dnf: sudo dnf install procps-ng```
+
+```pacman: sudo pacman -S procps-ng```
+
+```apk: sudo apk add procps-ng```
+
+```zypper: sudo zypper install procps```
+
+```brew: brew install procps```
+
+```nix: nix profile install nixpkgs#procps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [free](/man/free)(1), [iostat](/man/iostat)(1), [mpstat](/man/mpstat)(1), [ps](/man/ps)(1), [top](/man/top)(1)

@@ -58,6 +58,24 @@ Part of libimobiledevice. Device must be paired. Limited to accessible areas.
 
 ifuse is part of **libimobiledevice** for iOS filesystem access on Linux.
 
+# INSTALL
+
+```apt: sudo apt install ifuse```
+
+```dnf: sudo dnf install ifuse```
+
+```pacman: sudo pacman -S ifuse```
+
+```apk: sudo apk add ifuse```
+
+```zypper: sudo zypper install ifuse```
+
+```brew: brew install ifuse```
+
+```nix: nix profile install nixpkgs#ifuse```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [idevice_id](/man/idevice_id)(1), [idevicepair](/man/idevicepair)(1), [fusermount](/man/fusermount)(1)

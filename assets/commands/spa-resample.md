@@ -58,6 +58,16 @@ This tool is designed for testing and debugging purposes only, not for productio
 
 **spa-resample** is part of the **PipeWire** multimedia framework, which was created by **Wim Taymans** and first released in **2017**. PipeWire was designed as a unified audio and video server to replace both **PulseAudio** and **JACK** on Linux systems. The spa-resample utility provides standalone access to PipeWire's built-in SPA (Simple Plugin API) resampler, which supports multiple SIMD-optimized backends for efficient sample rate conversion.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```apk: sudo apk add pipewire-spa-tools```
+
+```zypper: sudo zypper install pipewire-spa-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [pw-cli](/man/pw-cli)(1), [pw-cat](/man/pw-cat)(1), [sox](/man/sox)(1), [ffmpeg](/man/ffmpeg)(1)

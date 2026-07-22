@@ -66,6 +66,18 @@ Network checks may be rate-limited. Some sites block automated requests. Rust-ba
 
 lychee was created as a fast, modern **Rust-based** link checker for documentation and websites.
 
+# INSTALL
+
+```pacman: sudo pacman -S lychee```
+
+```zypper: sudo zypper install lychee```
+
+```brew: brew install lychee```
+
+```nix: nix profile install nixpkgs#lychee```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [linkchecker](/man/linkchecker)(1), [wget](/man/wget)(1), [curl](/man/curl)(1)

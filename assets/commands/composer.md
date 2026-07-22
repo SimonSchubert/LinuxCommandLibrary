@@ -155,6 +155,18 @@ First install can be slow. Memory-intensive for large projects. Network required
 
 **Composer** was created by Nils Adermann and Jordi Boggiano in **2011**, inspired by npm and bundler, becoming PHP's standard dependency manager by **2013**.
 
+# INSTALL
+
+```dnf: sudo dnf install composer```
+
+```pacman: sudo pacman -S composer```
+
+```apk: sudo apk add composer```
+
+```brew: brew install composer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [pip](/man/pip)(1), [bundle](/man/bundle)(1)

@@ -125,6 +125,22 @@ tea assumes local git state is published to the remote before performing operati
 
 **tea** was developed by the **Gitea** project as the official command-line interface for Gitea servers. Written in **Go**, it uses the Gitea SDK to interact with the Gitea API. The project is hosted on Gitea's own platform at gitea.com/gitea/tea.
 
+# INSTALL
+
+```apt: sudo apt install tea```
+
+```pacman: sudo pacman -S tea```
+
+```apk: sudo apk add tea```
+
+```zypper: sudo zypper install tea```
+
+```brew: brew install tea```
+
+```nix: nix profile install nixpkgs#tea```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [gh](/man/gh)(1), [glab](/man/glab)(1), [hub](/man/hub)(1)

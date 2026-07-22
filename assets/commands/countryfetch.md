@@ -64,6 +64,14 @@ Country detection relies on a public IP lookup, so it will not work offline and 
 
 **countryfetch** was created by **Nik Revenco** and first released in **March 2025**. Written in Rust under the MIT/Apache-2.0 dual license. The latest version is v0.2.0. Available in the official Arch Linux repositories, Homebrew, and via Cargo. Inspired by the "fetch" family of tools (neofetch, fastfetch), applying the same terminal aesthetic to country data.
 
+# INSTALL
+
+```pacman: sudo pacman -S countryfetch```
+
+```nix: nix profile install nixpkgs#countryfetch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neofetch](/man/neofetch)(1), [fastfetch](/man/fastfetch)(1), [onefetch](/man/onefetch)(1), [cpufetch](/man/cpufetch)(1)

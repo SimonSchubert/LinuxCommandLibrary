@@ -69,6 +69,20 @@ Display help for Cargo commands
 
 Custom subcommands installed via cargo install are listed with --list. Any executable named cargo-* in PATH becomes a cargo subcommand.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [rustc](/man/rustc)(1)

@@ -87,6 +87,12 @@ Python required. SSH-based deployment.
 
 pyinfra was created for **Python-based** infrastructure automation.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pyinfra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ansible](/man/ansible)(1), [fabric](/man/fabric)(1), [salt](/man/salt)(1)

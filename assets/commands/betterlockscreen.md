@@ -66,6 +66,13 @@ Requires i3lock-color and imagemagick. Background images are cached for faster l
 
 **betterlockscreen** was originally created by **Pavan Jadhaw** and is now maintained at the betterlockscreen GitHub organization. It is a Bash wrapper script that adds blur, dim, and pixel effects on top of i3lock-color.
 
+# INSTALL
+
+```aur: yay -S betterlockscreen```
+
+```nix: nix profile install nixpkgs#betterlockscreen```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [i3lock](/man/i3lock)(1), [xscreensaver](/man/xscreensaver)(1)

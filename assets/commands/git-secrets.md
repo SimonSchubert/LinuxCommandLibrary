@@ -77,6 +77,16 @@ Must be installed per-repo or via templates. Only catches patterns, not all secr
 
 git-secrets was created by **AWS Labs** to prevent AWS credential leaks. It's one of several tools addressing the widespread problem of secrets accidentally committed to version control.
 
+# INSTALL
+
+```dnf: sudo dnf install git-secrets```
+
+```brew: brew install git-secrets```
+
+```nix: nix profile install nixpkgs#git-secrets```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [gitleaks](/man/gitleaks)(1), [trufflehog](/man/trufflehog)(1), [detect-secrets](/man/detect-secrets)(1)

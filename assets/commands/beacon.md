@@ -109,5 +109,20 @@ Requires the AX.25 kernel stack and an attached AX.25 interface; **beacon** will
 
 **beacon** ships with **ax25-tools**, the userspace utilities for the Linux AX.25 protocol stack. The Linux AX.25 implementation was started in the early **1990s** by **Alan Cox** and others to bring amateur packet radio to Linux, and **ax25-tools** has been maintained by the Linux AX.25 project ever since. The utility has remained largely unchanged for decades because the AX.25 link-layer protocol itself has been stable since its original 1984 specification.
 
+# INSTALL
+
+```apt: sudo apt install ax25-tools```
+
+```dnf: sudo dnf install ax25-tools```
+
+```aur: yay -S ax25-tools```
+
+```apk: sudo apk add ax25-tools```
+
+```zypper: sudo zypper install ax25-tools```
+
+```nix: nix profile install nixpkgs#ax25-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 

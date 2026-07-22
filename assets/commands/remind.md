@@ -105,6 +105,24 @@ Powerful scripting language has learning curve. Configuration via reminder file.
 
 Remind was written by **David F. Skoll** starting in 1990 as a flexible calendar/reminder system.
 
+# INSTALL
+
+```apt: sudo apt install remind```
+
+```dnf: sudo dnf install remind```
+
+```pacman: sudo pacman -S remind```
+
+```apk: sudo apk add remind```
+
+```zypper: sudo zypper install remind```
+
+```brew: brew install remind```
+
+```nix: nix profile install nixpkgs#remind```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [calcurse](/man/calcurse)(1), [cal](/man/cal)(1)

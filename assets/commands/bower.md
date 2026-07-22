@@ -100,6 +100,16 @@ bower update
 
 **Bower** was created by Twitter in **2012** to manage front-end dependencies, but was officially deprecated in **2017** as npm adopted similar functionality.
 
+# INSTALL
+
+```pacman: sudo pacman -S bower```
+
+```apk: sudo apk add bower```
+
+```brew: brew install bower```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [yarn](/man/yarn)(1), [pnpm](/man/pnpm)(1)

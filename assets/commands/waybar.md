@@ -70,6 +70,22 @@ Wayland only - doesn't work on X11. Some modules are compositor-specific. CSS ca
 
 **Waybar** was created by **Alex D.** (Alexays) around **2018** for Sway and other wlroots compositors. It became the standard status bar for Wayland, similar to polybar's role on X11.
 
+# INSTALL
+
+```apt: sudo apt install waybar```
+
+```dnf: sudo dnf install waybar```
+
+```pacman: sudo pacman -S waybar```
+
+```apk: sudo apk add waybar```
+
+```zypper: sudo zypper install waybar```
+
+```nix: nix profile install nixpkgs#waybar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sway](/man/sway)(1), [polybar](/man/polybar)(1), [i3status](/man/i3status)(1), [hyprland](/man/hyprland)(1)

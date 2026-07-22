@@ -73,6 +73,14 @@ The typescript file contains control characters and escape sequences. Use **cat 
 
 The **script** command first appeared in 3.0BSD. It has been a standard Unix utility for recording terminal sessions since the early 1980s.
 
+# INSTALL
+
+```apt: sudo apt install bsdutils```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scriptreplay](/man/scriptreplay)(1), [scriptlive](/man/scriptlive)(1), [tee](/man/tee)(1), [ttyrec](/man/ttyrec)(1)

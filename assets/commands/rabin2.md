@@ -95,6 +95,22 @@ Part of radare2. Large binaries may be slow. Stripped binaries have limited info
 
 **rabin2** is part of **radare2**, created by **pancake** (Sergi Alvarez) around **2006**. It provides binary analysis without full disassembly.
 
+# INSTALL
+
+```dnf: sudo dnf install radare2```
+
+```pacman: sudo pacman -S radare2```
+
+```apk: sudo apk add radare2```
+
+```zypper: sudo zypper install radare2```
+
+```brew: brew install radare2```
+
+```nix: nix profile install nixpkgs#radare2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [r2](/man/r2)(1), [objdump](/man/objdump)(1), [readelf](/man/readelf)(1), [nm](/man/nm)(1)

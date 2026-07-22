@@ -74,6 +74,24 @@ Requires Vulkan-capable GPU and drivers. May fail silently if Vulkan is misconfi
 
 **vkcubepp** is part of the official Vulkan-Tools repository maintained by the Khronos Group. Vulkan was released in 2016 as a successor to OpenGL, providing lower-level GPU access. The cube demo serves as a minimal Vulkan test case.
 
+# INSTALL
+
+```apt: sudo apt install vulkan-tools```
+
+```dnf: sudo dnf install vulkan-tools```
+
+```pacman: sudo pacman -S vulkan-tools```
+
+```apk: sudo apk add vulkan-tools```
+
+```zypper: sudo zypper install vulkan-tools```
+
+```brew: brew install vulkan-tools```
+
+```nix: nix profile install nixpkgs#vulkan-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vulkaninfo](/man/vulkaninfo)(1), [vkcube](/man/vkcube)(1), [glxinfo](/man/glxinfo)(1), [glxgears](/man/glxgears)(1)

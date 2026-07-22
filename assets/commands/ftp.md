@@ -78,6 +78,16 @@ ftp remains useful for accessing legacy systems and public FTP archives.
 
 ftp is one of the oldest Internet protocols, standardized in **RFC 959** (1985). While largely replaced by secure alternatives, it remains widely deployed for anonymous file archives.
 
+# INSTALL
+
+```dnf: sudo dnf install ftp```
+
+```apk: sudo apk add inetutils-ftp```
+
+```zypper: sudo zypper install ftp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sftp](/man/sftp)(1), [lftp](/man/lftp)(1), [curl](/man/curl)(1)

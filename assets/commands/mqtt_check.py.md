@@ -65,6 +65,12 @@ Nagios plugin format. Requires paho-mqtt. Python script.
 
 mqtt_check.py was created for **Nagios/Icinga** monitoring to provide MQTT broker health checks.
 
+# INSTALL
+
+```apk: sudo apk add py3-impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mosquitto](/man/mosquitto)(1), [mosquitto_pub](/man/mosquitto_pub)(1), [nagios](/man/nagios)(1)

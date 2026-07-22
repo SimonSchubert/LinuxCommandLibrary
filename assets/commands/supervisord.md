@@ -75,6 +75,20 @@ Not a replacement for init systems. Single point of failure. Needs its own monit
 
 **Supervisor** was created by **Chris McDonough** (Agendaless Consulting). It provides simple process management for Python applications and beyond.
 
+# INSTALL
+
+```dnf: sudo dnf install supervisor```
+
+```pacman: sudo pacman -S supervisor```
+
+```apk: sudo apk add supervisor```
+
+```zypper: sudo zypper install supervisor```
+
+```brew: brew install supervisor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [supervisorctl](/man/supervisorctl)(1)

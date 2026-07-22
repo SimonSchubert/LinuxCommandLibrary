@@ -94,6 +94,21 @@ Add a key from **keyserver** with only key ID
 
 Part of the **APT** (Advanced Package Tool) suite. Deprecated starting with Debian 11 and Ubuntu 22.04 in favor of trusted.gpg.d directory.
 
+# INSTALL
+
+```apt: sudo apt install apt```
+
+```dnf: sudo dnf install apt```
+
+```pacman: sudo pacman -S apt```
+
+```apk: sudo apk add apt```
+
+```brew: brew install apt```
+
+```nix: nix profile install nixpkgs#apt```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [gpg](/man/gpg)(1), [apt-secure](/man/apt-secure)(8)

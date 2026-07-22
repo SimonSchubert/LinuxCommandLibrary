@@ -85,6 +85,24 @@ fc-cache must be run once per architecture to generate properly customized font 
 
 Fontconfig was initiated by Keith Packard in **2000** for improved font handling in X11, evolving from the older bitmap-focused X font system to support scalable fonts. The fc-cache utility became stable with Fontconfig 2.0 in **2002**. Fontconfig has become the standard font configuration system on Linux desktops.
 
+# INSTALL
+
+```apt: sudo apt install fontconfig```
+
+```dnf: sudo dnf install fontconfig```
+
+```pacman: sudo pacman -S fontconfig```
+
+```apk: sudo apk add fontconfig```
+
+```zypper: sudo zypper install fontconfig```
+
+```brew: brew install fontconfig```
+
+```nix: nix profile install nixpkgs#fontconfig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fc-list](/man/fc-list)(1), [fc-match](/man/fc-match)(1), [fc-query](/man/fc-query)(1), [fc-scan](/man/fc-scan)(1)

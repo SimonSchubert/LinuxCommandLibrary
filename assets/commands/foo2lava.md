@@ -70,6 +70,14 @@ Only for specific Konica Minolta models. Quality depends on input resolution. So
 
 foo2lava is part of **foo2zjs**, adding support for Konica Minolta printers using the LAVAFLOW protocol, reverse-engineered to provide Linux compatibility.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-foo2zjs```
+
+```dnf: sudo dnf install foo2lava```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foo2lava-wrapper](/man/foo2lava-wrapper)(1), [foo2zjs](/man/foo2zjs)(1)

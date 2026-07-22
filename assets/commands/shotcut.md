@@ -68,6 +68,22 @@ GPU processing varies by hardware and may not be available on all systems. Resou
 
 **Shotcut** was created by **Dan Dennedy**, building on MLT framework to provide a free, open-source video editor.
 
+# INSTALL
+
+```apt: sudo apt install shotcut```
+
+```dnf: sudo dnf install shotcut```
+
+```pacman: sudo pacman -S shotcut```
+
+```apk: sudo apk add shotcut```
+
+```zypper: sudo zypper install shotcut```
+
+```nix: nix profile install nixpkgs#shotcut```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kdenlive](/man/kdenlive)(1), [ffmpeg](/man/ffmpeg)(1), [melt](/man/melt)(1)

@@ -69,6 +69,12 @@ Boot entries are stored on the EFI System Partition (ESP), and the tool manages 
 
 Requires write access to the EFI System Partition. Changes to Limine configuration may require re-enrollment of the config hash if Secure Boot is enabled (see **limine-enroll-config**). The ESP must be mounted before running this tool.
 
+# INSTALL
+
+```aur: yay -S limine-entry-tool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [limine](/man/limine)(1), [limine-enroll-config](/man/limine-enroll-config)(1), [limine-snapper-sync](/man/limine-snapper-sync)(1), [efibootmgr](/man/efibootmgr)(8), [bootctl](/man/bootctl)(1)

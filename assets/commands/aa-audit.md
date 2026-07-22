@@ -50,6 +50,16 @@ Audit mode generates significant log output as it records all access attempts. T
 
 Part of the **AppArmor** application security framework, developed as an alternative to SELinux for Linux systems. AppArmor was originally developed by **Immunix** and later acquired by **Novell** in 2005.
 
+# INSTALL
+
+```apk: sudo apk add apparmor-utils```
+
+```zypper: sudo zypper install apparmor-utils```
+
+```nix: nix profile install nixpkgs#apparmor-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aa-enforce](/man/aa-enforce)(8), [aa-complain](/man/aa-complain)(8), [aa-disable](/man/aa-disable)(8), [aa-status](/man/aa-status)(8), [apparmor](/man/apparmor)(7)

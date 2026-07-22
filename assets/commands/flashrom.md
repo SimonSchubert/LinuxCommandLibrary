@@ -88,6 +88,24 @@ The tool supports over 500 flash chips and 40+ programmer types including intern
 
 Flashrom originated from the **LinuxBIOS** (now coreboot) project around **2005** as a tool to flash open-source firmware. It evolved into a standalone project supporting a wide range of hardware. The project is community-maintained and has become essential for firmware development, coreboot installations, and chip recovery operations.
 
+# INSTALL
+
+```apt: sudo apt install flashrom```
+
+```dnf: sudo dnf install flashrom```
+
+```pacman: sudo pacman -S flashrom```
+
+```apk: sudo apk add flashrom```
+
+```zypper: sudo zypper install flashrom```
+
+```brew: brew install flashrom```
+
+```nix: nix profile install nixpkgs#flashrom```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dd](/man/dd)(1), [hexdump](/man/hexdump)(1)

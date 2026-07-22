@@ -68,6 +68,14 @@ Part of mamba. Repository must be indexed. Uses conda channels.
 
 mamba repoquery provides fast package queries using **mamba's** optimized C++ backend.
 
+# INSTALL
+
+```dnf: sudo dnf install mamba```
+
+```nix: nix profile install nixpkgs#mamba```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mamba](/man/mamba)(1), [conda](/man/conda)(1)

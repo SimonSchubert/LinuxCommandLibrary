@@ -71,6 +71,16 @@ Companion to **munpack**. Sending mail or posting requires a configured local MT
 
 mpack was written by **John G. Myers** at Carnegie Mellon as part of the MIME tools for handling binary email attachments.
 
+# INSTALL
+
+```apt: sudo apt install mpack```
+
+```brew: brew install mpack```
+
+```nix: nix profile install nixpkgs#mpack```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [munpack](/man/munpack)(1), [uuencode](/man/uuencode)(1), [base64](/man/base64)(1), [sendmail](/man/sendmail)(1)

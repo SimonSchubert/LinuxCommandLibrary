@@ -28,6 +28,12 @@ Intended for defensive, educational, and authorized security research use only.
 
 **pillager** was created by **Britton Hayes** (brittonhayes) and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S pillager```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gitleaks](/man/gitleaks)(1), [trufflehog](/man/trufflehog)(1), [grep](/man/grep)(1)

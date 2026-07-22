@@ -69,6 +69,16 @@ Stricter than gofmt -- code formatted by gofumpt is always valid gofmt output, b
 
 gofumpt was created by **Daniel Marti** to provide stricter formatting than standard gofmt.
 
+# INSTALL
+
+```pacman: sudo pacman -S gofumpt```
+
+```brew: brew install gofumpt```
+
+```nix: nix profile install nixpkgs#gofumpt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gofmt](/man/gofmt)(1), [go-fmt](/man/go-fmt)(1)

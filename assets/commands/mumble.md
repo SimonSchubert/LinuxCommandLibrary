@@ -59,6 +59,22 @@ Requires Mumble server (murmur). Needs audio setup. Gaming-focused but general u
 
 Mumble was created in **2005** as an open-source alternative to proprietary voice chat for gamers.
 
+# INSTALL
+
+```apt: sudo apt install mumble```
+
+```dnf: sudo dnf install mumble```
+
+```pacman: sudo pacman -S mumble```
+
+```apk: sudo apk add mumble```
+
+```zypper: sudo zypper install mumble```
+
+```nix: nix profile install nixpkgs#mumble```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [discord](/man/discord)(1), [signal-desktop](/man/signal-desktop)(1)

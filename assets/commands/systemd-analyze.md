@@ -72,6 +72,22 @@ The **blame** and **critical-chain** commands are particularly useful for optimi
 
 Some commands require graphviz (dot) for visualization. Boot timing data is only available after system boots completely. Security scores are recommendations, not requirements.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [journalctl](/man/journalctl)(1), [bootctl](/man/bootctl)(1)

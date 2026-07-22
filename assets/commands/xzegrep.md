@@ -74,6 +74,24 @@ If no file is given, xzegrep reads from standard input. Most options accepted by
 
 The whole file must be decompressed in memory or piped, so searching very large archives is not faster than running **xz -dc | grep -E** manually. On many distributions **xzegrep** is being deprecated in favour of **xzgrep -E**.
 
+# INSTALL
+
+```apt: sudo apt install xz-utils```
+
+```dnf: sudo dnf install xz```
+
+```pacman: sudo pacman -S xz```
+
+```apk: sudo apk add xz```
+
+```zypper: sudo zypper install xz```
+
+```brew: brew install xz```
+
+```nix: nix profile install nixpkgs#xz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xzgrep](/man/xzgrep)(1), [xz](/man/xz)(1), [egrep](/man/egrep)(1), [grep](/man/grep)(1)

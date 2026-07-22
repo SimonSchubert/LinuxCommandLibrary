@@ -24,6 +24,16 @@ Manage OpenCode agents
 
 Agents are project-specific and stored in the local OpenCode configuration. Custom agents inherit the base model configuration but override the system prompt and available tools.
 
+# INSTALL
+
+```pacman: sudo pacman -S opencode```
+
+```brew: brew install opencode```
+
+```nix: nix profile install nixpkgs#opencode```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [opencode](/man/opencode)(1), [opencode-session](/man/opencode-session)(1), [opencode-models](/man/opencode-models)(1)

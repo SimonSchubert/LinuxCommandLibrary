@@ -106,6 +106,24 @@ Submodule contents are not included; a submodule appears as an empty directory.
 
 **git archive** was added in **2006**, replacing the earlier **git-tar-tree** and **git-zip-tree** commands with a single front-end and a pluggable backend. Support for **--add-file** arrived in git **2.28** (**2020**), and **--add-virtual-file** in git **2.34** (**2021**).
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-bundle](/man/git-bundle)(1), [git-checkout](/man/git-checkout)(1), [git-clone](/man/git-clone)(1), [tar](/man/tar)(1), [zip](/man/zip)(1), [gzip](/man/gzip)(1)

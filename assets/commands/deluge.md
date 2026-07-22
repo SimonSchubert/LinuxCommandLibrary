@@ -79,6 +79,20 @@ Requires deluged daemon running for full functionality. GTK interface requires g
 
 Deluge was created in **2006** using Python and GTK. It was designed as a full-featured yet lightweight alternative to other BitTorrent clients, with emphasis on plugin extensibility and cross-platform support.
 
+# INSTALL
+
+```dnf: sudo dnf install deluge```
+
+```pacman: sudo pacman -S deluge```
+
+```apk: sudo apk add deluge```
+
+```zypper: sudo zypper install deluge```
+
+```nix: nix profile install nixpkgs#deluge```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [deluged](/man/deluged)(1), [deluge-console](/man/deluge-console)(1), [transmission-cli](/man/transmission-cli)(1)

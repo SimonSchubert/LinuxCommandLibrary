@@ -53,6 +53,23 @@ When run with command-line options, ark can operate in batch mode without displa
 
 Some archive formats require additional plugins or external programs. RAR creation requires **rar** (proprietary), while extraction works with the free **unrar**. Format support depends on installed KDE archive plugins.
 
+# INSTALL
+
+```apt: sudo apt install ark```
+
+```dnf: sudo dnf install ark```
+
+```pacman: sudo pacman -S ark```
+
+```apk: sudo apk add ark```
+
+```zypper: sudo zypper install ark```
+
+```brew: brew install ark```
+
+```nix: nix profile install nixpkgs#ark```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [tar](/man/tar)(1), [unzip](/man/unzip)(1), [7z](/man/7z)(1)

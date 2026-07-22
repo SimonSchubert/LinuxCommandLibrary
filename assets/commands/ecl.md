@@ -98,6 +98,22 @@ Compiling to C adds complexity. Some libraries may need adaptation for ECL. Debu
 
 ECL was originally developed at **IRCAM** (Paris) in the **1980s** as **KCL** (Kyoto Common Lisp). It was forked and developed as **ECL** by **Giuseppe Attardi** and later maintained by the community. The focus on embeddability distinguishes it from other Common Lisp implementations.
 
+# INSTALL
+
+```apt: sudo apt install ecl```
+
+```pacman: sudo pacman -S ecl```
+
+```apk: sudo apk add ecl```
+
+```zypper: sudo zypper install ecl```
+
+```brew: brew install ecl```
+
+```nix: nix profile install nixpkgs#ecl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sbcl](/man/sbcl)(1), [clisp](/man/clisp)(1)

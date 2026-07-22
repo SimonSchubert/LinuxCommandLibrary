@@ -97,6 +97,20 @@ The API dashboard should not be exposed publicly without authentication. For Doc
 
 Traefik was created by **Emile Vauge** and first released in **2015** by **Traefik Labs** (formerly Containous). It was designed specifically for the cloud-native era and microservices architectures. Traefik 2.0, released in **2019**, introduced a new routing architecture with routers, services, and middlewares. It has become one of the most popular reverse proxies for container environments.
 
+# INSTALL
+
+```pacman: sudo pacman -S traefik```
+
+```apk: sudo apk add traefik```
+
+```zypper: sudo zypper install traefik```
+
+```brew: brew install traefik```
+
+```nix: nix profile install nixpkgs#traefik```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nginx](/man/nginx)(1), [caddy](/man/caddy)(1), [haproxy](/man/haproxy)(1), [docker](/man/docker)(1)

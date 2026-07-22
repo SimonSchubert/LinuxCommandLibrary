@@ -50,6 +50,24 @@ manage sensitive data in Docker Swarm
 
 Only available in Swarm mode. Secrets cannot be updated; create a new version and rotate services.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-swarm](/man/docker-swarm)(1), [docker-service](/man/docker-service)(1)

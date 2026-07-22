@@ -72,6 +72,12 @@ Run unit tests for PlatformIO projects
 
 **pio test** runs unit tests for PlatformIO projects. Supports both native (desktop) and embedded testing. Uses Unity test framework by default. Tests can run on actual hardware or simulators.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-run](/man/pio-run)(1), [pio-debug](/man/pio-debug)(1)

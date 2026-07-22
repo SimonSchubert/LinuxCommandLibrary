@@ -48,6 +48,24 @@ Does not support subgraphs or clusters. GML has no way to declare default node/e
 
 gv2gml is part of the **Graphviz** project, created at **AT&T Labs** for graph format conversion.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [gml2gv](/man/gml2gv)(1), [graphml2gv](/man/graphml2gv)(1), [gxl2gv](/man/gxl2gv)(1)

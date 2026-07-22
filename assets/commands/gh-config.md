@@ -66,6 +66,24 @@ Config stored in ~/.config/gh/config.yml. Environment variables may override set
 
 gh config is part of the **GitHub CLI**, providing user customization following XDG Base Directory conventions on Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-auth](/man/gh-auth)(1)

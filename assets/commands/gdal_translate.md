@@ -78,6 +78,14 @@ Large files may require significant memory. Some formats don't support all featu
 
 GDAL was started by **Frank Warmerdam** in **1998** and is now an OSGeo project. gdal_translate is one of the core GDAL utilities, supporting over 150 raster formats.
 
+# INSTALL
+
+```apt: sudo apt install gdal-bin```
+
+```apk: sudo apk add gdal-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdalwarp](/man/gdalwarp)(1), [gdalinfo](/man/gdalinfo)(1), [ogr2ogr](/man/ogr2ogr)(1)

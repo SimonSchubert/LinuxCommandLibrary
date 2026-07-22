@@ -40,6 +40,22 @@ This is a documentation reference, not an executable. The DHCP options 208-211 a
 
 pxelinux-options is part of the **SYSLINUX** project, created by **H. Peter Anvin**. PXELINUX enables Linux systems to boot over the network using the PXE (Preboot Execution Environment) standard.
 
+# INSTALL
+
+```apt: sudo apt install syslinux-utils```
+
+```dnf: sudo dnf install syslinux```
+
+```pacman: sudo pacman -S syslinux```
+
+```apk: sudo apk add syslinux```
+
+```zypper: sudo zypper install syslinux```
+
+```nix: nix profile install nixpkgs#syslinux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [syslinux](/man/syslinux)(1), [pxelinux](/man/pxelinux)(1), [tftp](/man/tftp)(1), [dhcpd](/man/dhcpd)(1), [dnsmasq](/man/dnsmasq)(1)

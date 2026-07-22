@@ -110,6 +110,20 @@ Requires compatible display server (X11/Wayland). Automatic location needs geocl
 
 Gammastep was forked from **Redshift** by **Maxime Coste** to add Wayland support. Redshift was created by **Jon Lund Steffensen** in 2009 based on research about blue light's effects on circadian rhythms.
 
+# INSTALL
+
+```apt: sudo apt install gammastep```
+
+```dnf: sudo dnf install gammastep```
+
+```pacman: sudo pacman -S gammastep```
+
+```zypper: sudo zypper install gammastep```
+
+```nix: nix profile install nixpkgs#gammastep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [redshift](/man/redshift)(1), [xrandr](/man/xrandr)(1), [wlsunset](/man/wlsunset)(1)

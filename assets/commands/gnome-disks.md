@@ -51,6 +51,22 @@ GTK application requires graphical environment. Some operations need root. Part 
 
 GNOME Disks was developed as part of the **GNOME** project, replacing older disk management tools with a modern, integrated utility.
 
+# INSTALL
+
+```apt: sudo apt install gnome-disk-utility```
+
+```dnf: sudo dnf install gnome-disk-utility```
+
+```pacman: sudo pacman -S gnome-disk-utility```
+
+```apk: sudo apk add gnome-disk-utility```
+
+```zypper: sudo zypper install gnome-disk-utility```
+
+```nix: nix profile install nixpkgs#gnome-disk-utility```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [udisksctl](/man/udisksctl)(1), [fdisk](/man/fdisk)(1), [parted](/man/parted)(1), [lsblk](/man/lsblk)(1)

@@ -64,6 +64,21 @@ With **-M** the series is brought in as a merge, and with **-H** b4 prepares a F
 
 The series is applied to whatever branch is currently checked out, so make sure you are on the intended base commit before running it. b4 tries to find the right base, but a mismatched tree can still cause **git am** conflicts.
 
+# INSTALL
+
+```dnf: sudo dnf install b4```
+
+```pacman: sudo pacman -S b4```
+
+```apk: sudo apk add b4```
+
+```zypper: sudo zypper install b4```
+
+```brew: brew install b4```
+
+```nix: nix profile install nixpkgs#b4```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [b4](/man/b4)(1), [b4-am](/man/b4-am)(1), [git-am](/man/git-am)(1)

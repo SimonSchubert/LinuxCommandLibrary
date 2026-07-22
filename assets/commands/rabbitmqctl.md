@@ -106,6 +106,18 @@ Requires access to Erlang cookie. Some commands need administrator privileges. C
 
 **rabbitmqctl** has been RabbitMQ's management CLI since the broker's release by **Rabbit Technologies** (acquired by VMware, now part of Broadcom) starting around **2007**. It remains the primary administrative interface.
 
+# INSTALL
+
+```dnf: sudo dnf install rabbitmq-server```
+
+```apk: sudo apk add rabbitmq-server```
+
+```zypper: sudo zypper install rabbitmq-server```
+
+```nix: nix profile install nixpkgs#rabbitmq-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rabbitmq-server](/man/rabbitmq-server)(8), [rabbitmq-plugins](/man/rabbitmq-plugins)(8), [rabbitmq-diagnostics](/man/rabbitmq-diagnostics)(8)

@@ -69,6 +69,14 @@ Simplified Kubernetes. Single binary. Uses sqlite3 by default.
 
 K3s was created by **Rancher Labs** in 2019 as a lightweight, certified Kubernetes distribution.
 
+# INSTALL
+
+```apk: sudo apk add k3s```
+
+```nix: nix profile install nixpkgs#k3s```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [k3d](/man/k3d)(1), [crictl](/man/crictl)(1)

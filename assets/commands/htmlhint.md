@@ -88,6 +88,14 @@ Requires Node.js. Rule set is configurable via .htmlhintrc or CLI flags. Some ru
 
 HTMLHint was created to provide ESLint-style static analysis for HTML documents.
 
+# INSTALL
+
+```brew: brew install htmlhint```
+
+```nix: nix profile install nixpkgs#htmlhint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [eslint](/man/eslint)(1), [prettier](/man/prettier)(1), [tidy](/man/tidy)(1)

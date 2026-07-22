@@ -40,6 +40,18 @@ Starting from a console may require the DBus session wrapper depending on your s
 
 **startplasma-wayland** was introduced as KDE Plasma gained Wayland support. KDE began Wayland development in **2014** with the KWin compositor, reaching production-ready status around KDE Plasma 5.20 in **2020**. Plasma 6, released in **2024**, made Wayland the default session. The command replaced older X11-only startup methods as part of KDE's transition to Wayland.
 
+# INSTALL
+
+```apt: sudo apt install plasma-workspace```
+
+```dnf: sudo dnf install plasma-workspace```
+
+```pacman: sudo pacman -S plasma-workspace```
+
+```apk: sudo apk add plasma-workspace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [startplasma-x11](/man/startplasma-x11)(1), [plasmashell](/man/plasmashell)(1)

@@ -38,6 +38,12 @@ Does not yet support browser extensions or downloading files directly. Ad blocki
 
 **carbonyl** was released by **Fathy Boundjadj** in **2022** as an experimental Chromium fork. It generated wide interest as a proof of concept for running modern web applications, including videos and games, in a terminal emulator.
 
+# INSTALL
+
+```aur: yay -S carbonyl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [browsh](/man/browsh)(1), [lynx](/man/lynx)(1), [w3m](/man/w3m)(1), [elinks](/man/elinks)(1)

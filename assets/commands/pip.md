@@ -178,6 +178,12 @@ On Linux systems, avoid using pip with sudo to install packages globally as it c
 
 pip was created by **Ian Bicking** and first released in **2008** as a replacement for easy_install. The name is a recursive acronym: "**p**ip **i**nstalls **p**ackages". It became the standard Python package manager, included by default with Python since version 3.4. The Python Packaging Authority (PyPA) now maintains pip, continuously improving dependency resolution, security, and performance.
 
+# INSTALL
+
+```apk: sudo apk add py3-pip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [pip-freeze](/man/pip-freeze)(1), [virtualenv](/man/virtualenv)(1), [pipx](/man/pipx)(1), [uv](/man/uv)(1), [pipenv](/man/pipenv)(1), [conda](/man/conda)(1)

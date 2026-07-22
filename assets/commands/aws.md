@@ -108,6 +108,17 @@ Requires valid AWS credentials configured. API rate limits apply. Some operation
 
 The **AWS CLI** was released by Amazon in **2013** to provide a unified interface replacing multiple service-specific tools. Version 2 was released in **2020** with improved installation and features.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-configure](/man/aws-configure)(1), [aws-s3](/man/aws-s3)(1), [aws-vault](/man/aws-vault)(1), [terraform](/man/terraform)(1)

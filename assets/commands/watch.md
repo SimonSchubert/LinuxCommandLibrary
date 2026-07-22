@@ -103,6 +103,24 @@ Commands with special characters may need extra quoting due to shell interpretat
 
 The watch command was written by **Tony Rems** and became part of the **procps** package (later **procps-ng**) for Linux. It provides a simple alternative to writing custom loops for monitoring command output. The concept of periodically executing and displaying a command's output has been implemented in various forms across Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install procps```
+
+```dnf: sudo dnf install procps-ng```
+
+```pacman: sudo pacman -S procps-ng```
+
+```apk: sudo apk add procps-ng```
+
+```zypper: sudo zypper install procps```
+
+```brew: brew install procps```
+
+```nix: nix profile install nixpkgs#procps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tail](/man/tail)(1), [top](/man/top)(1), [htop](/man/htop)(1), [while](/man/while)(1)

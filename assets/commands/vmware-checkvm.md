@@ -31,6 +31,22 @@ When run inside VMware, it returns the VMware software version information.
 
 VMware specific. Only detects VMware virtualization. Part of open-vm-tools package.
 
+# INSTALL
+
+```apt: sudo apt install open-vm-tools```
+
+```dnf: sudo dnf install open-vm-tools```
+
+```pacman: sudo pacman -S open-vm-tools```
+
+```apk: sudo apk add open-vm-tools```
+
+```zypper: sudo zypper install open-vm-tools```
+
+```nix: nix profile install nixpkgs#open-vm-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virt-what](/man/virt-what)(1), [systemd-detect-virt](/man/systemd-detect-virt)(1)

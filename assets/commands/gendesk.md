@@ -79,6 +79,12 @@ Primarily designed for Arch Linux packaging workflows. Desktop file standards ma
 
 gendesk was created by **Alexander F. Rodseth** for **Arch Linux** packaging to simplify .desktop file generation during package builds, reducing boilerplate in PKGBUILDs.
 
+# INSTALL
+
+```pacman: sudo pacman -S gendesk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [desktop-file-validate](/man/desktop-file-validate)(1), [xdg-desktop-menu](/man/xdg-desktop-menu)(1)

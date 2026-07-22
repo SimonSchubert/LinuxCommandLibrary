@@ -68,6 +68,20 @@ Cinnamon does not support using a different window manager; Muffin is integral t
 
 **Cinnamon** was developed by the **Linux Mint** team starting in **2011** as a fork of GNOME 3's GNOME Shell. It was created to provide a more traditional desktop experience after GNOME 3 moved to a significantly different interface paradigm. The window manager Muffin was forked from GNOME's Mutter in version 1.2 (January 2012).
 
+# INSTALL
+
+```apt: sudo apt install cinnamon```
+
+```dnf: sudo dnf install cinnamon```
+
+```pacman: sudo pacman -S cinnamon```
+
+```zypper: sudo zypper install cinnamon```
+
+```nix: nix profile install nixpkgs#cinnamon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [muffin](/man/muffin)(1), [nemo](/man/nemo)(1), [cinnamon-launcher](/man/cinnamon-launcher)(1)

@@ -56,6 +56,16 @@ displays the dependency tree of installed packages
 
 **npm list** displays the dependency tree of installed packages. Shows versions and relationships. Use depth=0 for top-level only. Alias: npm ls.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-install](/man/npm-install)(1)

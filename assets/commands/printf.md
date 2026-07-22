@@ -67,6 +67,24 @@ Format string required. More portable than echo.
 
 printf originated from **C programming language** formatting functions.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [echo](/man/echo)(1), [print](/man/print)(1), [fmt](/man/fmt)(1)

@@ -48,6 +48,24 @@ Exact color matching by default. Part of Netpbm suite.
 
 ppmchange was created as part of **Netpbm** for color replacement.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmcolormask](/man/ppmcolormask)(1), [pnmremap](/man/pnmremap)(1), [ppm](/man/ppm)(5)

@@ -88,6 +88,22 @@ Requires format-specific modules. Configuration file defines document mappings. 
 
 **po4a** was created by **Martin Quinson** to simplify documentation translation using the proven gettext workflow. It enables collaborative translation using standard PO editor tools.
 
+# INSTALL
+
+```dnf: sudo dnf install po4a```
+
+```pacman: sudo pacman -S po4a```
+
+```apk: sudo apk add po4a```
+
+```zypper: sudo zypper install po4a```
+
+```brew: brew install po4a```
+
+```nix: nix profile install nixpkgs#po4a```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [po4a-gettextize](/man/po4a-gettextize)(1), [po4a-translate](/man/po4a-translate)(1), [po4a-updatepo](/man/po4a-updatepo)(1), [gettext](/man/gettext)(1), [msgfmt](/man/msgfmt)(1)

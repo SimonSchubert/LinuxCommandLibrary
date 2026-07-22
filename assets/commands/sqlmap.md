@@ -126,6 +126,18 @@ Only use with explicit authorization—unauthorized testing is illegal. High lev
 
 sqlmap was created by **Daniele Bellucci** and **Bernardo Damele A. G.** with development starting in **2006**. It became one of the most widely used penetration testing tools for SQL injection. The project is open-source, written in Python, and continues active development. sqlmap is included by default in Kali Linux and other security-focused distributions.
 
+# INSTALL
+
+```pacman: sudo pacman -S sqlmap```
+
+```zypper: sudo zypper install sqlmap```
+
+```brew: brew install sqlmap```
+
+```nix: nix profile install nixpkgs#sqlmap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [burpsuite](/man/burpsuite)(1), [nikto](/man/nikto)(1), [skipfish](/man/skipfish)(1), [wpscan](/man/wpscan)(1)

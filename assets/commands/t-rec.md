@@ -36,6 +36,14 @@ Blazingly fast terminal recorder generating animated GIFs
 
 **t-rec** was created by **Sven Assmann** (sassman) and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install t-rec```
+
+```nix: nix profile install nixpkgs#t-rec```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [asciinema](/man/asciinema)(1), [vhs](/man/vhs)(1), [terminalizer](/man/terminalizer)(1)

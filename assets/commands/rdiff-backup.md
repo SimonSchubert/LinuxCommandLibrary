@@ -98,6 +98,22 @@ Requires rdiff-backup installed on both local and remote machines for remote bac
 
 **rdiff-backup** combines rsync-style mirroring with reverse-diff versioning. It provides space-efficient incremental backup while maintaining easy restoration.
 
+# INSTALL
+
+```apt: sudo apt install rdiff-backup```
+
+```dnf: sudo dnf install rdiff-backup```
+
+```apk: sudo apk add rdiff-backup```
+
+```zypper: sudo zypper install rdiff-backup```
+
+```brew: brew install rdiff-backup```
+
+```nix: nix profile install nixpkgs#rdiff-backup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rsync](/man/rsync)(1), [borgbackup](/man/borgbackup)(1), [duplicity](/man/duplicity)(1), [restic](/man/restic)(1), [tar](/man/tar)(1)

@@ -82,6 +82,12 @@ Install from GitHub releases (add the binary to **PATH**). Use **rsv** *command*
 
 **sort** is in-memory and limited (at most two columns per upstream docs). Very wide or huge Excel sheets may need more RAM. Confirm separator flags for TSV/non-CSV text.
 
+# INSTALL
+
+```aur: yay -S rsv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xsv](/man/xsv)(1), [csvkit](/man/csvkit)(1), [qsv](/man/qsv)(1), [mlr](/man/mlr)(1)

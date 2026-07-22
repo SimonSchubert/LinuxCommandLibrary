@@ -101,6 +101,24 @@ Requires a dictionary for each language to be installed separately (e.g. **hunsp
 
 Hunspell was created by **László Németh** as an improved ispell/myspell-compatible spell checker with better Unicode, compounding, and morphological support. It remains actively maintained and is the spell-checking engine behind most major open-source office suites and browsers.
 
+# INSTALL
+
+```apt: sudo apt install hunspell```
+
+```dnf: sudo dnf install hunspell```
+
+```pacman: sudo pacman -S hunspell```
+
+```apk: sudo apk add hunspell```
+
+```zypper: sudo zypper install hunspell```
+
+```brew: brew install hunspell```
+
+```nix: nix profile install nixpkgs#hunspell```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aspell](/man/aspell)(1), [ispell](/man/ispell)(1), [spell](/man/spell)(1)

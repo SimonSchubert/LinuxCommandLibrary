@@ -90,6 +90,22 @@ The tool requires the uptimed daemon to be running to collect uptime data. By de
 
 Requires uptimed daemon to be running. Historical data depends on how long uptimed has been active. New installations have no historical data.
 
+# INSTALL
+
+```apt: sudo apt install uptimed```
+
+```dnf: sudo dnf install uptimed```
+
+```pacman: sudo pacman -S uptimed```
+
+```apk: sudo apk add uptimed```
+
+```brew: brew install uptimed```
+
+```nix: nix profile install nixpkgs#uptimed```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uptime](/man/uptime)(1), [uptimed](/man/uptimed)(8)

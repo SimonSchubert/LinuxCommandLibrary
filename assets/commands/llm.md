@@ -115,6 +115,14 @@ Cloud models require API keys stored via **llm keys set**. Conversation logs are
 
 **llm** was created by **Simon Willison** to provide unified CLI access to language model APIs and local models, and to make it easy to log and query past prompts.
 
+# INSTALL
+
+```brew: brew install llm```
+
+```nix: nix profile install nixpkgs#llm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ollama](/man/ollama)(1), [chatgpt](/man/chatgpt)(1)

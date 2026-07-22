@@ -123,6 +123,22 @@ Requires RawTherapee installation. Processing is CPU-intensive. Supports most RA
 
 RawTherapee was created by **Gábor Horváth** in 2004, with CLI added for batch processing workflows.
 
+# INSTALL
+
+```apt: sudo apt install rawtherapee```
+
+```dnf: sudo dnf install rawtherapee```
+
+```pacman: sudo pacman -S rawtherapee```
+
+```apk: sudo apk add rawtherapee```
+
+```zypper: sudo zypper install rawtherapee```
+
+```nix: nix profile install nixpkgs#rawtherapee```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [darktable-cli](/man/darktable-cli)(1), [dcraw](/man/dcraw)(1), [convert](/man/convert)(1)

@@ -92,6 +92,20 @@ Requires vdirsyncer for sync. Python-based. Configuration file needed.
 
 khal was created as a terminal-based calendar client compatible with CalDAV through the vdirsyncer ecosystem.
 
+# INSTALL
+
+```dnf: sudo dnf install khal```
+
+```pacman: sudo pacman -S khal```
+
+```apk: sudo apk add khal```
+
+```brew: brew install khal```
+
+```nix: nix profile install nixpkgs#khal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vdirsyncer](/man/vdirsyncer)(1), [todoman](/man/todoman)(1), [calcurse](/man/calcurse)(1)

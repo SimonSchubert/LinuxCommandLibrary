@@ -77,6 +77,24 @@ The interface must be down before changing MAC on most systems. Changes are not 
 
 **macchanger** was written by **Alvaro Lopez Ortega** and is commonly used for privacy and network testing on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install macchanger```
+
+```dnf: sudo dnf install macchanger```
+
+```pacman: sudo pacman -S macchanger```
+
+```apk: sudo apk add macchanger```
+
+```zypper: sudo zypper install macchanger```
+
+```brew: brew install macchanger```
+
+```nix: nix profile install nixpkgs#macchanger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip-link](/man/ip-link)(8), [ifconfig](/man/ifconfig)(8)

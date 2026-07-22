@@ -35,6 +35,20 @@ shows differences between the current live configuration and the proposed
 
 **kubectl diff** shows differences between the current live configuration and the proposed configuration in a file. Useful for previewing changes before applying them. Uses server-side dry run to compute the diff.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-apply](/man/kubectl-apply)(1)

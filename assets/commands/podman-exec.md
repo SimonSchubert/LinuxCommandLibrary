@@ -71,6 +71,24 @@ Container must be running. Command must exist in the container image. Rootless P
 
 podman exec is part of **Podman**, the daemonless container engine developed by **Red Hat** as a Docker-compatible alternative.
 
+# INSTALL
+
+```apt: sudo apt install podman```
+
+```dnf: sudo dnf install podman```
+
+```pacman: sudo pacman -S podman```
+
+```apk: sudo apk add podman```
+
+```zypper: sudo zypper install podman```
+
+```brew: brew install podman```
+
+```nix: nix profile install nixpkgs#podman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman-run](/man/podman-run)(1), [podman](/man/podman)(1), [docker-exec](/man/docker-exec)(1)

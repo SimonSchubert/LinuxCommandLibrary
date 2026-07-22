@@ -103,6 +103,16 @@ Requires proper chroot configuration. Sessions must be ended to release resource
 
 Developed for **Debian** as an improved chroot solution with better security and usability features.
 
+# INSTALL
+
+```apt: sudo apt install schroot```
+
+```pacman: sudo pacman -S schroot```
+
+```nix: nix profile install nixpkgs#schroot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chroot](/man/chroot)(8), [debootstrap](/man/debootstrap)(8)

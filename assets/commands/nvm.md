@@ -69,6 +69,14 @@ Shell function not executable. Source in profile. Per-shell activation required.
 
 nvm was created to allow **easy switching** between Node.js versions for development.
 
+# INSTALL
+
+```pacman: sudo pacman -S nvm```
+
+```brew: brew install nvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [npm](/man/npm)(1), [fnm](/man/fnm)(1), [n](/man/n)(1)

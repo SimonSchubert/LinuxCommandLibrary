@@ -52,6 +52,23 @@ Only works with directed graphs in DOT format. acyclic makes a graph acyclic by 
 
 **acyclic** is part of the Graphviz project, developed at AT&T Labs Research starting in **1991**. The tool was included to support preprocessing of graphs for hierarchical layout algorithms like **dot**, which require acyclic input graphs.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [dot](/man/dot)(1), [tred](/man/tred)(1), [gc](/man/gc)(1), [gvpr](/man/gvpr)(1), [gvcolor](/man/gvcolor)(1), [ccomps](/man/ccomps)(1), [sccmap](/man/sccmap)(1)

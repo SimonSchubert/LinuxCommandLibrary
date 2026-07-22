@@ -96,6 +96,22 @@ The tool's key advantage is notification replacement: by storing the notificatio
 
 Additional features include action buttons that can trigger commands when clicked, custom hints for advanced styling, and the ability to close notifications programmatically. The tool integrates seamlessly with dunst's configuration for consistent appearance and behavior.
 
+# INSTALL
+
+```apt: sudo apt install dunst```
+
+```dnf: sudo dnf install dunst```
+
+```pacman: sudo pacman -S dunst```
+
+```apk: sudo apk add dunstify```
+
+```zypper: sudo zypper install dunst```
+
+```nix: nix profile install nixpkgs#dunst```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dunst](/man/dunst)(1), [dunstctl](/man/dunstctl)(1), [notify-send](/man/notify-send)(1)

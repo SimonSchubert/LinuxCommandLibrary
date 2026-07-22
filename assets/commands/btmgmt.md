@@ -93,6 +93,24 @@ The tool is part of the BlueZ Bluetooth stack and uses the management interface 
 
 Some commands require net-admin capability or root privileges. This is a low-level interface meant for bluetoothd; applications should use D-Bus APIs instead. Direct use may cause unexpected behavior with the Bluetooth daemon.
 
+# INSTALL
+
+```apt: sudo apt install bluez```
+
+```dnf: sudo dnf install bluez```
+
+```pacman: sudo pacman -S bluez```
+
+```apk: sudo apk add bluez-btmgmt```
+
+```zypper: sudo zypper install bluez```
+
+```brew: brew install bluez```
+
+```nix: nix profile install nixpkgs#bluez```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bluetoothctl](/man/bluetoothctl)(1), [hciconfig](/man/hciconfig)(1), [hcitool](/man/hcitool)(1), [bluetoothd](/man/bluetoothd)(8)

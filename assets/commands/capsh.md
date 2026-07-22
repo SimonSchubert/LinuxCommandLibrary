@@ -86,6 +86,14 @@ Returns 0 on success, 1 on error.
 
 Many operations require specific capabilities to perform. Understanding Linux capabilities is essential for effective use.
 
+# INSTALL
+
+```apt: sudo apt install libcap2-bin```
+
+```apk: sudo apk add libcap-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [getcap](/man/getcap)(8), [setcap](/man/setcap)(8), [capabilities](/man/capabilities)(7)

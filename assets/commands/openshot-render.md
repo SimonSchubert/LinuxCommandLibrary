@@ -67,6 +67,12 @@ The .osp project file references absolute paths to media; missing source files w
 
 **openshot-render** is provided by the OpenShot project for command-line export and batch processing. It uses the same rendering engine as the OpenShot Qt GUI.
 
+# INSTALL
+
+```dnf: sudo dnf install openshot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openshot](/man/openshot)(1), [ffmpeg](/man/ffmpeg)(1), [melt](/man/melt)(1)

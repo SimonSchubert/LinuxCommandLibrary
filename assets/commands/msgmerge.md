@@ -94,6 +94,22 @@ Part of **gettext-tools** package. Fuzzy matches are marked with a **#, fuzzy** 
 
 msgmerge is part of **GNU gettext**, essential for maintaining translation files across software updates.
 
+# INSTALL
+
+```apt: sudo apt install gettext```
+
+```dnf: sudo dnf install gettext```
+
+```pacman: sudo pacman -S gettext```
+
+```apk: sudo apk add gettext```
+
+```brew: brew install gettext```
+
+```nix: nix profile install nixpkgs#gettext```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [msginit](/man/msginit)(1), [msgfmt](/man/msgfmt)(1), [msgcat](/man/msgcat)(1), [xgettext](/man/xgettext)(1)

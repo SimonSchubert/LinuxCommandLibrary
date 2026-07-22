@@ -51,6 +51,22 @@ All grep options are supported.
 
 **lzgrep** searches for patterns in lzip-compressed files. Automatically decompresses before searching. Passes options through to grep. Use lzegrep for extended regex or lzfgrep for fixed strings.
 
+# INSTALL
+
+```dnf: sudo dnf install xz```
+
+```pacman: sudo pacman -S xz```
+
+```apk: sudo apk add xz```
+
+```zypper: sudo zypper install xz```
+
+```brew: brew install xz```
+
+```nix: nix profile install nixpkgs#xz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lzip](/man/lzip)(1), [grep](/man/grep)(1), [zgrep](/man/zgrep)(1)

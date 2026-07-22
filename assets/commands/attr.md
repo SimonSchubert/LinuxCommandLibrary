@@ -85,6 +85,23 @@ Not all filesystems support extended attributes; ext4, XFS, and Btrfs do when mo
 
 Extended attributes were added to Linux in kernel **2.6** (2003), inspired by similar features in IRIX and other Unix systems. The implementation followed the POSIX 1003.1e draft standard for extended security attributes. The **attr** package providing these utilities has been the standard interface for managing extended attributes since their introduction.
 
+# INSTALL
+
+```apt: sudo apt install attr```
+
+```dnf: sudo dnf install attr```
+
+```pacman: sudo pacman -S attr```
+
+```apk: sudo apk add attr```
+
+```zypper: sudo zypper install attr```
+
+```brew: brew install attr```
+
+```nix: nix profile install nixpkgs#attr```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [getfattr](/man/getfattr)(1), [setfattr](/man/setfattr)(1), [getfacl](/man/getfacl)(1), [setfacl](/man/setfacl)(1), [lsattr](/man/lsattr)(1), [chattr](/man/chattr)(1)

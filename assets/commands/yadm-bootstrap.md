@@ -20,6 +20,20 @@ After `yadm clone` successfully clones a repository, yadm will prompt whether to
 
 The bootstrap program can be any executable file, though bash scripts are common. It is recommended to make the bootstrap logic idempotent so it can be safely re-run when merging changes from other hosts. The bootstrap path can be overridden with the `--yadm-bootstrap` option.
 
+# INSTALL
+
+```pacman: sudo pacman -S yadm```
+
+```apk: sudo apk add yadm```
+
+```zypper: sudo zypper install yadm```
+
+```brew: brew install yadm```
+
+```nix: nix profile install nixpkgs#yadm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yadm](/man/yadm)(1), [yadm-clone](/man/yadm-clone)(1)

@@ -96,6 +96,23 @@ For tools that change output based on whether stdout is a tty (e.g. `ls`, `grep`
 
 Some programs (htop, man) emit additional control sequences; piping through `ul` or using `--line-fix` may be required for best results. Blinking text needs `--stylesheet` and a custom `.blink` CSS class on modern browsers.
 
+# INSTALL
+
+```apt: sudo apt install aha```
+
+```dnf: sudo dnf install aha```
+
+```pacman: sudo pacman -S aha```
+
+```apk: sudo apk add aha```
+
+```zypper: sudo zypper install aha```
+
+```brew: brew install aha```
+
+```nix: nix profile install nixpkgs#aha```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ul](/man/ul)(1)

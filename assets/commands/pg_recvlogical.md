@@ -47,6 +47,12 @@ receives logical replication changes
 
 **pg_recvlogical** receives logical replication changes. Streams decoded changes from logical replication slot. Useful for change data capture and debugging.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_receivewal](/man/pg_receivewal)(1)

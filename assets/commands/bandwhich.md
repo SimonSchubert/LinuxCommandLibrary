@@ -95,6 +95,17 @@ Requires root/sudo for packet capture. May not capture all traffic types. Hostna
 
 **bandwhich** was created by Aram Drevekenin around **2019** as a modern, user-friendly alternative to tools like iftop and nethogs. It is written in Rust and is currently in passive maintenance.
 
+# INSTALL
+
+```pacman: sudo pacman -S bandwhich```
+
+```apk: sudo apk add bandwhich```
+
+```brew: brew install bandwhich```
+
+```nix: nix profile install nixpkgs#bandwhich```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [iftop](/man/iftop)(8), [nethogs](/man/nethogs)(8), [nload](/man/nload)(1), [netstat](/man/netstat)(8)

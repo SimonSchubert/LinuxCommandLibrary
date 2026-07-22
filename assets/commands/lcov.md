@@ -69,6 +69,22 @@ Requires gcc/gcov. C/C++ focused. Part of LCOV package.
 
 lcov was created for the **Linux Test Project** to provide graphical code coverage analysis.
 
+# INSTALL
+
+```dnf: sudo dnf install lcov```
+
+```pacman: sudo pacman -S lcov```
+
+```apk: sudo apk add lcov```
+
+```zypper: sudo zypper install lcov```
+
+```brew: brew install lcov```
+
+```nix: nix profile install nixpkgs#lcov```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gcov](/man/gcov)(1), [genhtml](/man/genhtml)(1)

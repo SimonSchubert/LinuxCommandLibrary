@@ -104,6 +104,16 @@ Requires root privileges for full analysis. Results depend on kernel version, CP
 
 **spectre-meltdown-checker** was created by **Stephane Lesimple** in response to the Spectre and Meltdown vulnerabilities disclosed in January **2018**. These CPU vulnerabilities affected most modern processors and required coordinated disclosure with Intel, AMD, and ARM. The tool has been continuously updated to detect new speculative execution vulnerabilities.
 
+# INSTALL
+
+```dnf: sudo dnf install spectre-meltdown-checker```
+
+```zypper: sudo zypper install spectre-meltdown-checker```
+
+```nix: nix profile install nixpkgs#spectre-meltdown-checker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lscpu](/man/lscpu)(1), [dmesg](/man/dmesg)(1), [uname](/man/uname)(1)

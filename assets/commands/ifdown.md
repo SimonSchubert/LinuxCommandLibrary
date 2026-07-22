@@ -90,6 +90,16 @@ Part of the ifupdown package, primarily used on Debian-based systems. Modern sys
 
 ifdown is part of the ifupdown package, the traditional network interface configuration system on Debian and derivatives. It has been used since the early days of Debian but is gradually being replaced by NetworkManager and systemd-networkd on desktop and server systems respectively.
 
+# INSTALL
+
+```apt: sudo apt install ifupdown```
+
+```apk: sudo apk add ifupdown-ng```
+
+```nix: nix profile install nixpkgs#ifupdown-ng```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ifup](/man/ifup)(8), [ip](/man/ip)(8)

@@ -129,6 +129,19 @@ Initial import of large libraries can be time-consuming due to online lookups. A
 
 Beets was created by **Adrian Sampson** starting in **2010** as a research project while pursuing a PhD in computer science. It grew from a personal tool into a comprehensive music management system. The project has been open source since inception and benefits from community-contributed plugins. It remains one of the most capable command-line music library managers available.
 
+# INSTALL
+
+```dnf: sudo dnf install beets```
+
+```pacman: sudo pacman -S beets```
+
+```zypper: sudo zypper install beets```
+
+```brew: brew install beets```
+
+```nix: nix profile install nixpkgs#beets```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [picard](/man/picard)(1), [kid3](/man/kid3)(1), [metaflac](/man/metaflac)(1), [mpd](/man/mpd)(1), [mpc](/man/mpc)(1), [ffmpeg](/man/ffmpeg)(1)

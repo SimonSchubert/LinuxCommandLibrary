@@ -55,6 +55,24 @@ The command stops the associated BuildKit daemon and cleans up its state by defa
 
 The default builder cannot be removed. The **--keep-daemon** flag only works with docker-container and kubernetes drivers. The **--keep-state** flag only works with the docker-container driver.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-buildx-ls](/man/docker-buildx-ls)(1), [docker-buildx-prune](/man/docker-buildx-prune)(1), [docker-build](/man/docker-build)(1), [docker](/man/docker)(1)

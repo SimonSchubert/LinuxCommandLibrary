@@ -36,6 +36,11 @@ The tool is designed for AUR package maintainers to simplify the update and publ
 
 Requires AUR SSH access to be configured. The PKGBUILD must pass validation before publishing. Existing **.SRCINFO** files will be regenerated automatically.
 
+# INSTALL
+
+```pacman: sudo pacman -S aurpublish```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [makepkg](/man/makepkg)(8), [git](/man/git)(1), [pacman](/man/pacman)(8)

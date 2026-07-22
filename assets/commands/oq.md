@@ -52,6 +52,16 @@ Requires jq to be installed. XML-to-JSON conversion follows specific mapping rul
 
 **oq** was created by **Blacksmoke16** and is written in **Crystal**.
 
+# INSTALL
+
+```apk: sudo apk add oq```
+
+```brew: brew install oq```
+
+```nix: nix profile install nixpkgs#oq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [yq](/man/yq)(1), [xq](/man/xq)(1)

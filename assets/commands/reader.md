@@ -24,6 +24,14 @@ Terminal reader view for cleaner web page content
 
 **reader** was created by **mrusme** and is written in **Go**.
 
+# INSTALL
+
+```apk: sudo apk add reader```
+
+```nix: nix profile install nixpkgs#reader```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lynx](/man/lynx)(1), [w3m](/man/w3m)(1), [curl](/man/curl)(1)

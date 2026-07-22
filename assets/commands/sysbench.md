@@ -142,6 +142,24 @@ Results depend on test parameters. Synthetic benchmarks don't reflect all worklo
 
 **sysbench** was created by **Alexey Kopytov** at MySQL AB around **2004**. It became a standard tool for MySQL benchmarking and general system performance testing.
 
+# INSTALL
+
+```apt: sudo apt install sysbench```
+
+```dnf: sudo dnf install sysbench```
+
+```pacman: sudo pacman -S sysbench```
+
+```apk: sudo apk add sysbench```
+
+```zypper: sudo zypper install sysbench```
+
+```brew: brew install sysbench```
+
+```nix: nix profile install nixpkgs#sysbench```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fio](/man/fio)(1), [stress-ng](/man/stress-ng)(1), [pgbench](/man/pgbench)(1), [iperf](/man/iperf)(1)

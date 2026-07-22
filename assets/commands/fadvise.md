@@ -60,6 +60,14 @@ Useful for preloading files before heavy read workloads, or for dropping pages a
 
 Part of util-linux. Advice is a hint to the kernel, not a command. Actual behavior depends on system memory pressure.
 
+# INSTALL
+
+```apt: sudo apt install util-linux-extra```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fincore](/man/fincore)(1), [vmtouch](/man/vmtouch)(1)

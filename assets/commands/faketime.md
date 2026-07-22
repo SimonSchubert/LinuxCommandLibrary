@@ -52,6 +52,24 @@ _command_
 
 Uses LD_PRELOAD, so it may not work with statically linked binaries or setuid programs. To freeze time, give an absolute timestamp; to let it advance or scale, use the -f advanced format.
 
+# INSTALL
+
+```apt: sudo apt install faketime```
+
+```dnf: sudo dnf install libfaketime```
+
+```pacman: sudo pacman -S libfaketime```
+
+```apk: sudo apk add libfaketime```
+
+```zypper: sudo zypper install libfaketime```
+
+```brew: brew install libfaketime```
+
+```nix: nix profile install nixpkgs#libfaketime```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [date](/man/date)(1), [timedatectl](/man/timedatectl)(1)

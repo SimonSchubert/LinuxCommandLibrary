@@ -60,6 +60,16 @@ Generate a Software Bill of Materials for the project
 
 Requires npm 9.5.0 or later. A package-lock.json or node_modules must exist. The --sbom-format option is required for usable output.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-audit](/man/npm-audit)(1), [npm-ls](/man/npm-ls)(1)

@@ -112,6 +112,12 @@ The project is self-described as **pre-alpha**; keyboard shortcuts, views, and f
 
 **chdig** was created by **Azat Khuzhin**, a Principal Software Engineer at ClickHouse. Written in Rust under the MIT license. The latest version is v26.2.3. There is an ongoing effort to bundle chdig as part of ClickHouse itself.
 
+# INSTALL
+
+```brew: brew install chdig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [htop](/man/htop)(1), [top](/man/top)(1)

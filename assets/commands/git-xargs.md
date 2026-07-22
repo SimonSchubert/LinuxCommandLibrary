@@ -56,6 +56,12 @@ Requires GitHub authentication (token with repo scope).
 
 Powerful and potentially destructive—test with **--dry-run** and a single repo first. Respect branch protection and CODEOWNERS. Disk and API rate limits matter at org scale.
 
+# INSTALL
+
+```brew: brew install git-xargs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [multi-gitter](/man/multi-gitter)(1), [gh](/man/gh)(1), [git](/man/git)(1)

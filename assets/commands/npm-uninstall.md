@@ -39,6 +39,16 @@ removes packages from node_modules and optionally from package
 
 **npm uninstall** removes packages from node_modules and optionally from package.json. Also removes unused dependencies. Aliases: npm rm, npm remove, npm un.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-install](/man/npm-install)(1)

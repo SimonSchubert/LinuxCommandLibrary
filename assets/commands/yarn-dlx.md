@@ -56,6 +56,20 @@ yarn dlx is available in Yarn 2+ (Berry) only; Yarn 1.x does not include this co
 
 yarn dlx was introduced in **Yarn 2** (Berry) released in **2020** as part of the modernized Yarn architecture. It provides functionality similar to npx but integrated with Yarn's package resolution and caching system.
 
+# INSTALL
+
+```pacman: sudo pacman -S yarn```
+
+```apk: sudo apk add yarn```
+
+```zypper: sudo zypper install yarn```
+
+```brew: brew install yarn```
+
+```nix: nix profile install nixpkgs#yarn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yarn](/man/yarn)(1), [npx](/man/npx)(1), [npm](/man/npm)(1)

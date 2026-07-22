@@ -109,6 +109,22 @@ Database must be updated regularly to reflect changes. updatedb typically runs d
 
 **plocate** was created by **Steinar H. Gunderson** around **2020** as a faster alternative to mlocate. It uses techniques from information retrieval (posting lists, SIMD acceleration) to achieve 10-100x faster searches. Despite being a complete rewrite, it maintains compatibility with mlocate databases.
 
+# INSTALL
+
+```apt: sudo apt install plocate```
+
+```dnf: sudo dnf install plocate```
+
+```pacman: sudo pacman -S plocate```
+
+```apk: sudo apk add plocate```
+
+```zypper: sudo zypper install plocate```
+
+```nix: nix profile install nixpkgs#plocate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [locate](/man/locate)(1), [mlocate](/man/mlocate)(1), [updatedb](/man/updatedb)(8), [find](/man/find)(1)

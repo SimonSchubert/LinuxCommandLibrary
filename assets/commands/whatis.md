@@ -71,6 +71,22 @@ Requires the whatis database to be built (usually done automatically by mandb). 
 
 Derived from **BSD Unix** as part of the man page system. The whatis database was introduced to speed up lookups compared to scanning all man pages. On modern systems, **mandb** maintains the database, replacing older **makewhatis** implementations.
 
+# INSTALL
+
+```apt: sudo apt install man-db```
+
+```dnf: sudo dnf install man-db```
+
+```pacman: sudo pacman -S man-db```
+
+```apk: sudo apk add mandoc-apropos```
+
+```brew: brew install man-db```
+
+```nix: nix profile install nixpkgs#man-db```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [man](/man/man)(1), [apropos](/man/apropos)(1), [whereis](/man/whereis)(1), [mandb](/man/mandb)(8)

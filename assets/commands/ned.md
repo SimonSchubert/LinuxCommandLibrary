@@ -45,6 +45,12 @@ Minimal feature set. Less common than nano/vim. Check if installed.
 
 ned is one of several **simple text editors** available for command-line text editing.
 
+# INSTALL
+
+```aur: yay -S ned```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nano](/man/nano)(1), [vim](/man/vim)(1), [ed](/man/ed)(1)

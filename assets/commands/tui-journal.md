@@ -28,6 +28,16 @@ Terminal journal and notes app
 
 **tui-journal** was created by **Ammar Abou Zor** (AmmarAbouZor) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S tui-journal```
+
+```zypper: sudo zypper install tui-journal```
+
+```nix: nix profile install nixpkgs#tui-journal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jrnl](/man/jrnl)(1), [nb](/man/nb)(1), [rucola](/man/rucola)(1)

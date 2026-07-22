@@ -62,6 +62,12 @@ Pass-the-hash attacks (**-hashes**) require the target to accept NTLM authentica
 
 Impacket tools require Python and the impacket library. Install via **pip install impacket** or use Kali Linux which includes impacket-scripts.
 
+# INSTALL
+
+```apk: sudo apk add py3-impacket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xfreerdp](/man/xfreerdp)(1), [rdesktop](/man/rdesktop)(1), [nmap](/man/nmap)(1), [crackmapexec](/man/crackmapexec)(1)

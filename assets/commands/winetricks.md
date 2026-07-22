@@ -66,6 +66,20 @@ Some components require accepting license agreements even in unattended mode. Do
 
 Created by **Dan Kegel** and released in **2007** as a shell script to automate common Wine setup tasks. Became an essential companion tool for Wine users, reducing the complexity of configuring Windows applications. Now maintained by the Wine community.
 
+# INSTALL
+
+```dnf: sudo dnf install winetricks```
+
+```pacman: sudo pacman -S winetricks```
+
+```zypper: sudo zypper install winetricks```
+
+```brew: brew install winetricks```
+
+```nix: nix profile install nixpkgs#winetricks```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wine](/man/wine)(1), [winecfg](/man/winecfg)(1)

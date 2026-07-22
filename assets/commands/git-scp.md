@@ -24,6 +24,24 @@ Copy files to a remote Git repository via scp
 
 **git scp** copies files to a Git remote using scp. Part of **git-extras**, it uses the remote's URL from your Git configuration to determine the host and path, then transfers files via scp. To copy files from a remote, use **git rscp** instead.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-rscp](/man/git-rscp)(1), [scp](/man/scp)(1), [git-extras](/man/git-extras)(1)

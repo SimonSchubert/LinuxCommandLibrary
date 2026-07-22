@@ -81,6 +81,16 @@ Requires systemd and appropriate services running. Some operations require root 
 
 importctl is part of systemd, introduced to provide a unified interface for managing container and extension images. It replaces older, more fragmented approaches to image management in the systemd ecosystem.
 
+# INSTALL
+
+```apt: sudo apt install systemd-container```
+
+```dnf: sudo dnf install systemd-container```
+
+```zypper: sudo zypper install systemd-container```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [machinectl](/man/machinectl)(1), [systemd-nspawn](/man/systemd-nspawn)(1), [systemctl](/man/systemctl)(1)

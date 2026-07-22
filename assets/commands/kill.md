@@ -89,6 +89,24 @@ SIGKILL (-9) should be used as a last resort as it doesn't allow the process to 
 
 Part of standard Unix since early versions. The **kill** command has been available since **Version 4 AT&T UNIX** (1973).
 
+# INSTALL
+
+```apt: sudo apt install procps```
+
+```dnf: sudo dnf install uutils-coreutils```
+
+```pacman: sudo pacman -S uutils-coreutils```
+
+```apk: sudo apk add uutils-coreutils```
+
+```zypper: sudo zypper install procps```
+
+```brew: brew install procps```
+
+```nix: nix profile install nixpkgs#procps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [killall](/man/killall)(1), [pkill](/man/pkill)(1), [pgrep](/man/pgrep)(1), [ps](/man/ps)(1), [top](/man/top)(1)

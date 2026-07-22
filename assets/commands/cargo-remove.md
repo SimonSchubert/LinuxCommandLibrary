@@ -68,6 +68,20 @@ The command modifies Cargo.toml directly but does not update Cargo.lock until th
 
 Does not remove dependencies from Cargo.lock until next build. Use cargo-machete to detect unused dependencies.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-add](/man/cargo-add)(1), [cargo-update](/man/cargo-update)(1)

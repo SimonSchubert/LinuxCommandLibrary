@@ -89,6 +89,16 @@ The tool operates on a task-based system defined in YAML configuration files. Ta
 
 FlexGet can run as a daemon for continuous monitoring or execute tasks on-demand. It maintains a database of seen entries to prevent duplicate downloads and supports series tracking with automatic episode progression. The plugin architecture enables extensive customization for specific workflows.
 
+# INSTALL
+
+```apk: sudo apk add flexget```
+
+```brew: brew install flexget```
+
+```nix: nix profile install nixpkgs#flexget```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [transmission-cli](/man/transmission-cli)(1)

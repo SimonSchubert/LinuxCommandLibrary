@@ -28,6 +28,24 @@ _files_
 
 **pamstack** combines multiple single-plane images into a multi-plane PAM. Creates RGB from separate R, G, B files or adds alpha channel. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamsplit](/man/pamsplit)(1)

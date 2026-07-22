@@ -59,6 +59,14 @@ As part of the **libspf2** library, spfquery implements the full SPF specificati
 
 Requires DNS connectivity to resolve SPF records. SPF records must exist for the queried domain. Result codes require proper interpretation for policy enforcement.
 
+# INSTALL
+
+```apk: sudo apk add libspf2-tools```
+
+```zypper: sudo zypper install libspf2-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [host](/man/host)(1), [nslookup](/man/nslookup)(1), [sendmail](/man/sendmail)(1), [postfix](/man/postfix)(1)

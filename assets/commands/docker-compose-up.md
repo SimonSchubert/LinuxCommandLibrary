@@ -111,6 +111,24 @@ When run without **-d**, it streams aggregated logs from all attached containers
 
 If the Compose file has changed, containers are recreated unless **--no-recreate** is set. Using **--force-recreate** and **-V** together discards all existing data in anonymous volumes for recreated services.
 
+# INSTALL
+
+```apt: sudo apt install docker-compose```
+
+```dnf: sudo dnf install docker-compose```
+
+```pacman: sudo pacman -S docker-compose```
+
+```apk: sudo apk add docker-cli-compose```
+
+```zypper: sudo zypper install docker-compose```
+
+```brew: brew install docker-compose```
+
+```nix: nix profile install nixpkgs#docker-compose```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-compose](/man/docker-compose)(1), [docker-compose-down](/man/docker-compose-down)(1)

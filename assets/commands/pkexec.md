@@ -53,6 +53,16 @@ Requires polkitd daemon running. Graphical prompt needs authentication agent (of
 
 **pkexec** is part of **PolicyKit** (polkit), developed by **David Zeuthen** at Red Hat. It provides a modern privilege escalation mechanism that integrates with desktop environments and supports fine-grained authorization policies.
 
+# INSTALL
+
+```apt: sudo apt install pkexec```
+
+```apk: sudo apk add polkit-common```
+
+```zypper: sudo zypper install pkexec```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sudo](/man/sudo)(8), [doas](/man/doas)(1), [run0](/man/run0)(1), [polkit](/man/polkit)(8)

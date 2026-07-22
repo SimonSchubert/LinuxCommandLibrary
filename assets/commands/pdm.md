@@ -141,6 +141,14 @@ PEP 582 support varies by Python version and tools. Some older packages may not 
 
 PDM was created by **Frost Ming** and first released in **2019**. It pioneered PEP 582 support and modern Python packaging standards. The project emphasizes standards compliance (PEP 517, 518, 621) over custom formats. PDM gained popularity as an alternative to pip, Poetry, and pipenv with its focus on PEP standards and performance.
 
+# INSTALL
+
+```brew: brew install pdm```
+
+```nix: nix profile install nixpkgs#pdm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [poetry](/man/poetry)(1), [pipenv](/man/pipenv)(1), [uv](/man/uv)(1)

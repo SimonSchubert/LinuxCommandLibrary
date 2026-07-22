@@ -117,6 +117,14 @@ Starting with SQL Server 2025, mandatory encryption (**-Nm**) is the default, wh
 
 **sqlcmd** was introduced by Microsoft as the replacement for the older **osql** and **isql** utilities. The ODBC-based version has been available since SQL Server 2005 and was ported to Linux when SQL Server on Linux was released in **2017**. In **2022**, Microsoft released go-sqlcmd, a Go-based reimplementation with modern features and cross-platform support. Development continues with SQL Server 2025 adding TDS 8.0 support.
 
+# INSTALL
+
+```brew: brew install sqlcmd```
+
+```nix: nix profile install nixpkgs#sqlcmd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [psql](/man/psql)(1), [mysql](/man/mysql)(1)

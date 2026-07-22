@@ -47,6 +47,21 @@ The document covers:
 
 Understanding apt-secure is important for adding third-party repositories safely. Using allow-insecure or allow-unauthenticated bypasses security.
 
+# INSTALL
+
+```apt: sudo apt install apt```
+
+```dnf: sudo dnf install apt```
+
+```pacman: sudo pacman -S apt```
+
+```apk: sudo apk add apt```
+
+```brew: brew install apt```
+
+```nix: nix profile install nixpkgs#apt```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [apt-key](/man/apt-key)(8), [gpg](/man/gpg)(1)

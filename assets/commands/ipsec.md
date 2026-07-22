@@ -126,6 +126,24 @@ Requires kernel IPsec support. Certificate management can be complex. Firewall r
 
 IPsec was standardized by IETF in the 1990s. strongSwan (forked from FreeS/WAN in 2005) and Libreswan are the main Linux implementations, providing the ipsec command interface.
 
+# INSTALL
+
+```apt: sudo apt install libreswan```
+
+```dnf: sudo dnf install libreswan```
+
+```pacman: sudo pacman -S strongswan```
+
+```apk: sudo apk add strongswan```
+
+```zypper: sudo zypper install strongswan```
+
+```brew: brew install strongswan```
+
+```nix: nix profile install nixpkgs#libreswan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip](/man/ip)(8), [openvpn](/man/openvpn)(8), [wg](/man/wg)(8)

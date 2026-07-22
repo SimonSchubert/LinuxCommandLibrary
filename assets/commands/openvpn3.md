@@ -83,6 +83,14 @@ Requires the openvpn3-linux package and associated D-Bus services. Not all OpenV
 
 Developed by **OpenVPN Inc.** as a modernized Linux client using the OpenVPN 3 Core library. Released to address limitations of the traditional OpenVPN 2.x client, particularly around privilege separation and desktop integration. The D-Bus architecture was introduced to allow unprivileged VPN management.
 
+# INSTALL
+
+```apt: sudo apt install openvpn3-client```
+
+```nix: nix profile install nixpkgs#openvpn3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openvpn](/man/openvpn)(8), [nmcli](/man/nmcli)(1), [networkctl](/man/networkctl)(1)

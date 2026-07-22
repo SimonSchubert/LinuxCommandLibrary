@@ -86,6 +86,14 @@ Requires an active shell session to record commands. Syncing across devices requ
 
 **hishtory** was created by **David Dworken** and is written in **Go**. It was designed to address the limitations of built-in shell history by adding encryption, cross-device sync, and contextual metadata.
 
+# INSTALL
+
+```brew: brew install hishtory```
+
+```nix: nix profile install nixpkgs#hishtory```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [history](/man/history)(1), [atuin](/man/atuin)(1), [fzf](/man/fzf)(1)

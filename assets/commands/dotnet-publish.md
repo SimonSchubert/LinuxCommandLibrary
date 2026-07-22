@@ -117,6 +117,18 @@ Publishing a *solution* with `-o` is an error in recent SDKs, because all projec
 
 **dotnet publish** arrived with the first .NET Core SDK in **2016** and replaced the platform-specific packaging that .NET Framework applications had needed. Its capabilities have widened with each release: self-contained deployment, then single-file bundling and ReadyToRun in .NET Core 3, trimming made viable in .NET 6, and Native AOT from .NET 7 onward, which together turned a runtime once seen as heavyweight into one that can produce small, dependency-free native executables.
 
+# INSTALL
+
+```dnf: sudo dnf install dotnet-host```
+
+```pacman: sudo pacman -S dotnet-host```
+
+```apk: sudo apk add dotnet-host```
+
+```brew: brew install dotnet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dotnet](/man/dotnet)(1), [dotnet-build](/man/dotnet-build)(1), [dotnet-run](/man/dotnet-run)(1), [dotnet-restore](/man/dotnet-restore)(1), [msbuild](/man/msbuild)(1)

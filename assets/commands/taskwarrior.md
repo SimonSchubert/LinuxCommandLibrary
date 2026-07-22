@@ -132,6 +132,12 @@ First run creates `~/.taskrc`. Task IDs change as tasks are completed; use UUID 
 
 **Taskwarrior** was created by Paul Beckingham and Federico Hernandez. The first version was released in 2006, with the project growing into a task management ecosystem. Taskwarrior 3.0 (2024) replaced the file-based store and `taskd` server with the TaskChampion library and a new sync protocol.
 
+# INSTALL
+
+```zypper: sudo zypper install taskwarrior```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [timew](/man/timew)(1), [todo.txt-cli](/man/todo.txt-cli)(1)

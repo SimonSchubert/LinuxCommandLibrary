@@ -69,6 +69,22 @@ Terraform fork. Provider compatibility. State file important.
 
 **OpenTofu** was forked from **Terraform** in 2023 after HashiCorp changed Terraform's license, maintained by the Linux Foundation.
 
+# INSTALL
+
+```dnf: sudo dnf install opentofu```
+
+```pacman: sudo pacman -S opentofu```
+
+```apk: sudo apk add opentofu```
+
+```zypper: sudo zypper install opentofu```
+
+```brew: brew install opentofu```
+
+```nix: nix profile install nixpkgs#opentofu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [pulumi](/man/pulumi)(1), [ansible](/man/ansible)(1)

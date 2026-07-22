@@ -80,6 +80,24 @@ FTP transmits credentials in cleartext; enable SSL/TLS for security. Passive mod
 
 vsftpd was written by **Chris Evans** with a focus on security, becoming the most widely deployed FTP server on Linux. Its design prioritizes security through privilege separation and minimal attack surface.
 
+# INSTALL
+
+```apt: sudo apt install vsftpd```
+
+```dnf: sudo dnf install vsftpd```
+
+```pacman: sudo pacman -S vsftpd```
+
+```apk: sudo apk add vsftpd```
+
+```zypper: sudo zypper install vsftpd```
+
+```brew: brew install vsftpd```
+
+```nix: nix profile install nixpkgs#vsftpd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sftp](/man/sftp)(1), [ftp](/man/ftp)(1)

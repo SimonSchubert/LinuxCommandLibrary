@@ -62,6 +62,12 @@ The tool color-codes output based on configurable time thresholds: lines exceedi
 
 Requires **Node.js** and is installed via npm (`npm install -g gnomon`). Adds minor latency to output. Best suited for diagnosing slow processes rather than precise benchmarking.
 
+# INSTALL
+
+```pacman: sudo pacman -S gnomon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ts](/man/ts)(1), [time](/man/time)(1), [pv](/man/pv)(1)

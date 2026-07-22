@@ -61,6 +61,12 @@ Some information requires root privileges. Benchmark results are relative and sh
 
 hardinfo was created by Leandro A. F. Pereira and first released in **2003**. It has been a popular system information tool on Linux desktops, providing functionality similar to Windows' System Information utility.
 
+# INSTALL
+
+```zypper: sudo zypper install hardinfo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lshw](/man/lshw)(1), [inxi](/man/inxi)(1), [hwinfo](/man/hwinfo)(8), [lscpu](/man/lscpu)(1)

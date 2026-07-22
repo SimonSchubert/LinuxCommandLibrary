@@ -100,6 +100,14 @@ Developed by Google as part of their Container Tools suite, container-diff helps
 
 The project was archived in March 2024 and is no longer actively maintained. Does not support Docker IDs directly (tag first). Use docker-credential-helpers for registry auth. Without **--type**, defaults to size analysis.
 
+# INSTALL
+
+```pacman: sudo pacman -S container-diff```
+
+```zypper: sudo zypper install container-diff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [skopeo](/man/skopeo)(1), [dive](/man/dive)(1)

@@ -52,6 +52,12 @@ Requires terminal with color support. Internet access for sprites.
 
 pokeget was created for **displaying Pokemon** sprites in the terminal.
 
+# INSTALL
+
+```aur: yay -S pokeget```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pokemon-colorscripts](/man/pokemon-colorscripts)(1)

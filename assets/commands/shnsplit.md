@@ -107,6 +107,20 @@ Requires appropriate encoders/decoders (flac, wavpack, mac) installed for non-WA
 
 **shntool** and **shnsplit** were developed by **Jason Jordan** as part of the shntool audio processing suite. The project began in the early **2000s** to provide Unix/Linux users with tools for handling Shorten (.shn) files, which were popular for lossless audio distribution. The suite expanded to support multiple formats and remains a standard tool for audio file manipulation.
 
+# INSTALL
+
+```apt: sudo apt install shntool```
+
+```dnf: sudo dnf install shntool```
+
+```zypper: sudo zypper install shntool```
+
+```brew: brew install shntool```
+
+```nix: nix profile install nixpkgs#shntool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cuebreakpoints](/man/cuebreakpoints)(1), [cuetag](/man/cuetag)(1), [flac](/man/flac)(1), [sox](/man/sox)(1), [ffmpeg](/man/ffmpeg)(1)

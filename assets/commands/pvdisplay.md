@@ -93,6 +93,22 @@ Requires root (or `cap_sys_admin`) to read PV metadata. The device must have bee
 
 **pvdisplay** is part of **LVM2**, the in-kernel Logical Volume Manager user-space toolset. LVM2 is maintained by **Red Hat** and distributed under the GPL.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pvs](/man/pvs)(8), [pvcreate](/man/pvcreate)(8), [pvmove](/man/pvmove)(8), [vgdisplay](/man/vgdisplay)(8), [lvdisplay](/man/lvdisplay)(8), [lvm](/man/lvm)(8)

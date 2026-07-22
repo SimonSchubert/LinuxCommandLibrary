@@ -82,6 +82,13 @@ The exit code indicates backup status: **0** = success, **1** = error, **2** = a
 
 Amanda (Advanced Maryland Automatic Network Disk Archiver) was developed at the **University of Maryland** starting in **1991**. It pioneered the concept of holding disk as intermediate storage and intelligent scheduling across backup cycles. The project became a cornerstone of enterprise Unix backup strategies and continues development under open-source community governance.
 
+# INSTALL
+
+```apt: sudo apt install amanda-server```
+
+```dnf: sudo dnf install amanda-server```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [amcheck](/man/amcheck)(8), [amrecover](/man/amrecover)(8)

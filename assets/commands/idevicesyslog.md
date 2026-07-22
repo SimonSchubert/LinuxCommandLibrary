@@ -101,6 +101,16 @@ Part of libimobiledevice. Continuous stream. May need developer mode on iOS 16+.
 
 idevicesyslog is part of **libimobiledevice** for iOS log streaming.
 
+# INSTALL
+
+```apt: sudo apt install libimobiledevice-utils```
+
+```dnf: sudo dnf install libimobiledevice-utils```
+
+```apk: sudo apk add libimobiledevice-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [idevice_id](/man/idevice_id)(1), [ideviceinfo](/man/ideviceinfo)(1), [idevicepair](/man/idevicepair)(1), [adb](/man/adb)(1)

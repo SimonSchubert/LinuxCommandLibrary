@@ -51,6 +51,20 @@ Physical dimension checking means expressions with incompatible units produce ty
 
 **numbat** was created by **sharkdp** (David Peter) and is written in **Rust**.
 
+# INSTALL
+
+```apt: sudo apt install numbat```
+
+```pacman: sudo pacman -S numbat```
+
+```zypper: sudo zypper install numbat```
+
+```brew: brew install numbat```
+
+```nix: nix profile install nixpkgs#numbat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bc](/man/bc)(1), [kalker](/man/kalker)(1), [qalc](/man/qalc)(1)

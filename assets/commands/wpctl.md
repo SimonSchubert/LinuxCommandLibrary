@@ -78,6 +78,24 @@ The special name @DEFAULT_SINK@ can be used instead of numeric IDs to target the
 
 Requires WirePlumber running. Object IDs may change between sessions. Volume percentages can exceed 100% unless limited.
 
+# INSTALL
+
+```apt: sudo apt install wireplumber```
+
+```dnf: sudo dnf install wireplumber```
+
+```pacman: sudo pacman -S wireplumber```
+
+```apk: sudo apk add wireplumber```
+
+```zypper: sudo zypper install wireplumber```
+
+```brew: brew install wireplumber```
+
+```nix: nix profile install nixpkgs#wireplumber```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wireplumber](/man/wireplumber)(1), [pw-cli](/man/pw-cli)(1), [pactl](/man/pactl)(1)

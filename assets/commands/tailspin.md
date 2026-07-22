@@ -28,6 +28,16 @@ Log file highlighter with zero configuration
 
 **tailspin** was created by **Ben Sadeh** (bensadeh) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S tailspin```
+
+```brew: brew install tailspin```
+
+```nix: nix profile install nixpkgs#tailspin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lnav](/man/lnav)(1), [ccze](/man/ccze)(1), [multitail](/man/multitail)(1)

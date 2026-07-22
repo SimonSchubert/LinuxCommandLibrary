@@ -93,6 +93,24 @@ SHA-1 is cryptographically weakened - use SHA-256+ for security. Hash verificati
 
 **shasum** is a Perl script included with Perl. It provides a unified interface to SHA algorithms, mirroring the functionality of sha256sum and similar coreutils programs.
 
+# INSTALL
+
+```apt: sudo apt install perl```
+
+```dnf: sudo dnf install perl```
+
+```pacman: sudo pacman -S perl```
+
+```apk: sudo apk add perl-utils```
+
+```zypper: sudo zypper install perl```
+
+```brew: brew install perl```
+
+```nix: nix profile install nixpkgs#perl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sha1sum](/man/sha1sum)(1), [sha256sum](/man/sha256sum)(1), [md5sum](/man/md5sum)(1), [openssl](/man/openssl)(1), [b2sum](/man/b2sum)(1)

@@ -106,6 +106,17 @@ Must remove all targets before deleting a rule. Schedule expressions use UTC tim
 
 **CloudWatch Events** launched in **January 2016** as AWS's first event-driven integration service. It was rebranded as **Amazon EventBridge** at **AWS re:Invent 2019** with expanded capabilities including custom event buses and third-party SaaS integrations. Schema registry and discovery were added to help developers understand event structures. The service continues to be central to serverless and event-driven architectures on AWS.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-lambda](/man/aws-lambda)(1), [aws-sns](/man/aws-sns)(1), [aws-sqs](/man/aws-sqs)(1)

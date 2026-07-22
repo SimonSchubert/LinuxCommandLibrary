@@ -66,6 +66,20 @@ Multiple tools named todo. Check which installed. Features vary.
 
 Various **todo** implementations exist for command-line task management, each with slightly different features.
 
+# INSTALL
+
+```apt: sudo apt install devtodo```
+
+```pacman: sudo pacman -S todoman```
+
+```apk: sudo apk add todoman```
+
+```brew: brew install todoman```
+
+```nix: nix profile install nixpkgs#devtodo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [task](/man/task)(1), [todo.sh](/man/todo.sh)(1), [todoman](/man/todoman)(1)

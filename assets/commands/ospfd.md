@@ -76,6 +76,12 @@ Part of FRRouting suite. Requires zebra daemon. Configuration via vtysh recommen
 
 ospfd was part of GNU Zebra, then Quagga, and is now maintained as part of **FRRouting**, the leading open-source routing suite.
 
+# INSTALL
+
+```apk: sudo apk add quagga```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zebra](/man/zebra)(8), [vtysh](/man/vtysh)(1), [bgpd](/man/bgpd)(8), [ripd](/man/ripd)(8)

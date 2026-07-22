@@ -37,6 +37,20 @@ The eCryptfs filesystem must be mounted before running this command. The tool do
 
 ecryptfs-find is part of the **ecryptfs-utils** package. eCryptfs is a POSIX-compliant stacked cryptographic filesystem included in the Linux kernel since version **2.6.19** (released **2006**).
 
+# INSTALL
+
+```apt: sudo apt install ecryptfs-utils```
+
+```dnf: sudo dnf install ecryptfs-utils```
+
+```pacman: sudo pacman -S ecryptfs-utils```
+
+```apk: sudo apk add ecryptfs-utils```
+
+```zypper: sudo zypper install ecryptfs-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ecryptfs-setup-private](/man/ecryptfs-setup-private)(1), [ecryptfs-verify](/man/ecryptfs-verify)(1), [ecryptfs](/man/ecryptfs)(1), [encfs](/man/encfs)(1), [fscrypt](/man/fscrypt)(1)

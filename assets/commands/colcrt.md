@@ -46,6 +46,14 @@ Designed for older terminal handling. Modern terminals typically handle nroff ou
 
 **colcrt** is a traditional Unix utility dating back to **BSD** systems in the **1970s**. It was created when terminals had varied capabilities and could not all handle the escape sequences in nroff output. Though rarely needed today, it remains in many Unix distributions.
 
+# INSTALL
+
+```apt: sudo apt install bsdextrautils```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nroff](/man/nroff)(1), [col](/man/col)(1), [ul](/man/ul)(1), [man](/man/man)(1)

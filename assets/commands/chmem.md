@@ -55,6 +55,24 @@ Memory blocks are chunks of physical memory that can be individually managed. Th
 
 Requires root privileges. Not all systems support memory hotplug. Memory containing kernel data or in-use pages cannot be offlined. Virtual machines may require specific configuration to support memory hotplug.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsmem](/man/lsmem)(1), [free](/man/free)(1)

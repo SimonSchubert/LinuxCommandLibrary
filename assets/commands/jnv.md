@@ -62,6 +62,16 @@ Uses jaq (not jq) internally, so some advanced jq features or edge cases may beh
 
 **jnv** was created by **ynqa** and is written in **Rust**. It was designed to provide a more polished and self-contained interactive JSON exploration experience compared to earlier tools like jid and jiq.
 
+# INSTALL
+
+```pacman: sudo pacman -S jnv```
+
+```brew: brew install jnv```
+
+```nix: nix profile install nixpkgs#jnv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [jaq](/man/jaq)(1), [fx](/man/fx)(1), [jiq](/man/jiq)(1)

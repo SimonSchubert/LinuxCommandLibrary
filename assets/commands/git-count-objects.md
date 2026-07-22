@@ -47,6 +47,24 @@ Core git command. Unpacked objects indicate recent activity. Large counts may in
 
 git count-objects is a core **Git** command for repository maintenance, helping administrators understand storage usage.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-gc](/man/git-gc)(1), [git-prune](/man/git-prune)(1), [git-fsck](/man/git-fsck)(1)

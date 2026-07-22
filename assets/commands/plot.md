@@ -102,6 +102,22 @@ The **plot** command converts metafiles; it does not plot data directly. Use **g
 
 **plot** is part of GNU **plotutils**, originally written by **Robert Maier**. The plotutils package provides tools for generating 2-D vector graphics and is based on the traditional Unix plotting utilities.
 
+# INSTALL
+
+```apt: sudo apt install plotutils```
+
+```dnf: sudo dnf install plotutils```
+
+```pacman: sudo pacman -S plotutils```
+
+```zypper: sudo zypper install plotutils```
+
+```brew: brew install plotutils```
+
+```nix: nix profile install nixpkgs#plotutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnuplot](/man/gnuplot)(1), [graph](/man/graph)(1)

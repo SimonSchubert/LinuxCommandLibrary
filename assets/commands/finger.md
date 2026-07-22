@@ -67,6 +67,14 @@ Privacy concerns led to disabling on most systems. Remote finger is often blocke
 
 finger originated at **Stanford** in 1971 and became a standard Unix utility. Once ubiquitous for user lookup, it's now largely deprecated due to privacy and security concerns.
 
+# INSTALL
+
+```apt: sudo apt install finger```
+
+```dnf: sudo dnf install finger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [who](/man/who)(1), [w](/man/w)(1), [pinky](/man/pinky)(1)

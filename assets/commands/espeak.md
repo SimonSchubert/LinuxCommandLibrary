@@ -93,6 +93,22 @@ Voice quality robotic compared to neural TTS. Some language support limited. Pro
 
 eSpeak was created by **Jonathan Duddington** and released as open source. Its formant synthesis approach prioritizes small size and multi-language support over naturalistic voice quality. Development of the original eSpeak stopped around 2015; the actively maintained fork **espeak-ng** is now the recommended version, and on many distributions `espeak` is a compatibility wrapper around it.
 
+# INSTALL
+
+```apt: sudo apt install espeak```
+
+```dnf: sudo dnf install espeak```
+
+```apk: sudo apk add espeak```
+
+```zypper: sudo zypper install espeak```
+
+```brew: brew install espeak```
+
+```nix: nix profile install nixpkgs#espeak```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [espeak-ng](/man/espeak-ng)(1), [festival](/man/festival)(1), [pico2wave](/man/pico2wave)(1)

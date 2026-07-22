@@ -56,6 +56,24 @@ Uses uniform random distribution only. For Gaussian or other noise types, use **
 
 **pgmnoise** is part of **Netpbm**, the graphics toolkit originally created by **Jef Poskanzer** in the late 1980s and maintained by **Bryan Henderson** since 2000.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmnoise](/man/pnmnoise)(1), [pgmmake](/man/pgmmake)(1), [ppmforge](/man/ppmforge)(1), [pnmtopng](/man/pnmtopng)(1), [netpbm](/man/netpbm)(1)

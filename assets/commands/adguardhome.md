@@ -73,6 +73,15 @@ Running as a DNS server requires port 53, which may conflict with systemd-resolv
 
 **AdGuard Home** was developed by AdGuard Software Limited, first released in **2018** as an open-source network-wide ad blocker. It was designed as a self-hosted alternative to Pi-hole with additional features like encrypted DNS protocols.
 
+# INSTALL
+
+```pacman: sudo pacman -S adguardhome```
+
+```apk: sudo apk add adguardhome```
+
+```nix: nix profile install nixpkgs#adguardhome```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [pihole](/man/pihole)(1), [dnsmasq](/man/dnsmasq)(1), [unbound](/man/unbound)(1)

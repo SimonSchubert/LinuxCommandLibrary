@@ -24,6 +24,12 @@ Swiss army knife bootstrapping 1000+ CLI tools
 
 **x-cmd** was created by the **x-cmd team** and is written in **Shell** (POSIX Shell).
 
+# INSTALL
+
+```brew: brew install x-cmd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix](/man/nix)(1), [asdf](/man/asdf)(1)

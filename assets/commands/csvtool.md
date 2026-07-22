@@ -83,6 +83,14 @@ Column numbers are 1-indexed, not 0-indexed. Some operations require loading the
 
 csvtool ships with the **ocaml-csv** library, a CSV parser for OCaml originally written by Richard Jones and now maintained by Christophe Troestler. The command-line tool exposes the library's parsing for quick shell-based CSV transformations.
 
+# INSTALL
+
+```apt: sudo apt install csvtool```
+
+```nix: nix profile install nixpkgs#csvtool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [csvkit](/man/csvkit)(1), [cut](/man/cut)(1), [awk](/man/awk)(1), [miller](/man/miller)(1)

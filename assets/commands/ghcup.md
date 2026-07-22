@@ -101,6 +101,12 @@ The tool handles downloading, installing, and setting up PATH entries for all Ha
 **~/.ghcup/bin/**
 > Installation directory for all managed toolchain binaries.
 
+# INSTALL
+
+```brew: brew install ghcup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ghc](/man/ghc)(1), [cabal](/man/cabal)(1), [stack](/man/stack)(1)

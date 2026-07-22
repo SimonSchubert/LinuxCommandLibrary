@@ -88,6 +88,24 @@ Documentation must be installed. Use gem rdoc --all to generate gem docs. Part o
 
 ri is part of **Ruby's** RDoc system, providing command-line documentation access since early Ruby versions.
 
+# INSTALL
+
+```apt: sudo apt install ruby```
+
+```dnf: sudo dnf install ruby```
+
+```pacman: sudo pacman -S ruby```
+
+```apk: sudo apk add ruby-rdoc```
+
+```zypper: sudo zypper install ruby```
+
+```brew: brew install ruby```
+
+```nix: nix profile install nixpkgs#ruby```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rdoc](/man/rdoc)(1), [ruby](/man/ruby)(1), [irb](/man/irb)(1)

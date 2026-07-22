@@ -67,6 +67,24 @@ Learning curve for interface files. C/C++ knowledge needed. Build system integra
 
 **SWIG** (Simplified Wrapper and Interface Generator) was created by **David Beazley** for connecting C/C++ with scripting languages.
 
+# INSTALL
+
+```apt: sudo apt install swig```
+
+```dnf: sudo dnf install swig```
+
+```pacman: sudo pacman -S swig```
+
+```apk: sudo apk add swig```
+
+```zypper: sudo zypper install swig```
+
+```brew: brew install swig```
+
+```nix: nix profile install nixpkgs#swig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cython](/man/cython)(1), [pybind11](/man/pybind11)(1), [ctypes](/man/ctypes)(1)

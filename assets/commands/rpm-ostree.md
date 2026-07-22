@@ -132,6 +132,14 @@ Changes require reboot to take effect. Base system is immutable. Package layerin
 
 **rpm-ostree** was developed by Red Hat to combine the reliability of OSTree image deployment with the flexibility of RPM package management for container-focused and immutable desktop distributions.
 
+# INSTALL
+
+```dnf: sudo dnf install rpm-ostree```
+
+```nix: nix profile install nixpkgs#rpm-ostree```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ostree](/man/ostree)(1), [rpm](/man/rpm)(8), [flatpak](/man/flatpak)(1)

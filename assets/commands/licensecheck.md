@@ -75,6 +75,12 @@ Heuristic-based detection may miss or misidentify licenses. Custom licenses need
 
 licensecheck originated in Debian as a tool for checking license compliance in package source code, helping maintainers verify licensing.
 
+# INSTALL
+
+```dnf: sudo dnf install licensecheck```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [license](/man/license)(1), [reuse](/man/reuse)(1)

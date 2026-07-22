@@ -70,6 +70,14 @@ Official Firefox Send service was discontinued. Requires compatible Send server.
 
 ffsend was created as a CLI client for **Firefox Send**, Mozilla's encrypted file sharing service. While Mozilla discontinued the official service in 2020, self-hosted Send instances and ffsend remain usable.
 
+# INSTALL
+
+```brew: brew install ffsend```
+
+```nix: nix profile install nixpkgs#ffsend```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [wget](/man/wget)(1), [croc](/man/croc)(1)

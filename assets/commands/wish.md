@@ -70,6 +70,22 @@ Requires a display server (X11 or Wayland with XWayland). Tk applications look d
 
 **wish** was created by John Ousterhout alongside Tcl in the late 1980s. Tk was one of the first cross-platform GUI toolkits and influenced many later frameworks. Wish remains popular for quick GUI scripting and is used by tools like gitk.
 
+# INSTALL
+
+```apt: sudo apt install tk```
+
+```dnf: sudo dnf install tk```
+
+```pacman: sudo pacman -S tk```
+
+```apk: sudo apk add tk```
+
+```zypper: sudo zypper install tk```
+
+```nix: nix profile install nixpkgs#tk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gitk](/man/gitk)(1), [xdotool](/man/xdotool)(1)

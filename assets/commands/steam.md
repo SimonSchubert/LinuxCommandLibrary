@@ -84,6 +84,12 @@ Proprietary software. Some games don't support Linux. Large disk usage.
 
 **Steam** was created by **Valve Corporation** in **2003**. Linux support was added in **2013**, significantly expanding gaming on the platform.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#steam```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [steamcmd](/man/steamcmd)(1), [proton](/man/proton)(1), [wine](/man/wine)(1)

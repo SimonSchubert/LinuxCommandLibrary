@@ -39,6 +39,20 @@ Display pueue task queue state
 
 **pueue status** displays the current state of all tasks in the queue. Shows queued, running, completed, and failed tasks with their task IDs, commands, status, and execution times.
 
+# INSTALL
+
+```pacman: sudo pacman -S pueue```
+
+```apk: sudo apk add pueue```
+
+```zypper: sudo zypper install pueue```
+
+```brew: brew install pueue```
+
+```nix: nix profile install nixpkgs#pueue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pueue](/man/pueue)(1), [pueue-add](/man/pueue-add)(1), [pueue-log](/man/pueue-log)(1), [pueue-clean](/man/pueue-clean)(1), [pueue-follow](/man/pueue-follow)(1)

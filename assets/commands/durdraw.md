@@ -148,6 +148,12 @@ Requires terminal with proper ANSI support. Animation playback depends on termin
 
 **durdraw** was created by Sam "cmang" Foster as a modern successor to DOS-era ANSI editors like TheDraw and ACiDDraw, bringing terminal art creation to Linux, Unix, and macOS with features such as 256-color support, Unicode, and frame animation.
 
+# INSTALL
+
+```brew: brew install durdraw```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gimp](/man/gimp)(1), [imagemagick](/man/imagemagick)(1)

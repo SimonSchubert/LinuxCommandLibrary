@@ -93,6 +93,16 @@ Requires Docker daemon access and appropriate permissions. Container stats are l
 
 **dtop** was created to provide Docker-specific monitoring similar to what top/htop provide for system processes. It fills the gap between Docker's built-in stats command and more complex monitoring solutions.
 
+# INSTALL
+
+```apt: sudo apt install diod```
+
+```brew: brew install dtop```
+
+```nix: nix profile install nixpkgs#diod```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-stats](/man/docker-stats)(1), [ctop](/man/ctop)(1), [lazydocker](/man/lazydocker)(1)

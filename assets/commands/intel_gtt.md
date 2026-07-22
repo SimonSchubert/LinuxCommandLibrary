@@ -45,6 +45,18 @@ Intel graphics only. Requires root. Part of intel-gpu-tools.
 
 intel_gtt is part of **intel-gpu-tools**, developed for low-level debugging of Intel integrated graphics.
 
+# INSTALL
+
+```apt: sudo apt install intel-gpu-tools```
+
+```pacman: sudo pacman -S intel-gpu-tools```
+
+```zypper: sudo zypper install intel-gpu-tools```
+
+```nix: nix profile install nixpkgs#intel-gpu-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [intel_reg_read](/man/intel_reg_read)(1), [intel_error_decode](/man/intel_error_decode)(1)

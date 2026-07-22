@@ -84,6 +84,20 @@ MONO_PATH environment variable should not be used by deployed applications as it
 
 **Mono** was started by **Miguel de Icaza** and **Ximian** in **2001** as an open-source implementation of the .NET Framework. It was later sponsored by Novell, Xamarin, and Microsoft. The project enabled cross-platform .NET development before Microsoft's official .NET Core release.
 
+# INSTALL
+
+```apt: sudo apt install mono-runtime```
+
+```pacman: sudo pacman -S mono```
+
+```apk: sudo apk add mono```
+
+```brew: brew install mono```
+
+```nix: nix profile install nixpkgs#mono```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mcs](/man/mcs)(1), [gacutil](/man/gacutil)(1), [dotnet](/man/dotnet)(1)

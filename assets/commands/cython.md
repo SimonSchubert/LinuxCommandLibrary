@@ -80,6 +80,18 @@ Generated C files must still be compiled with a C compiler. Build systems like s
 
 Cython evolved from **Pyrex**, created by Greg Ewing in **2002**. The Cython fork began in **2007**, adding features like typed memoryviews and parallel support. It's widely used for scientific computing and creating Python bindings for C libraries.
 
+# INSTALL
+
+```apt: sudo apt install cython3```
+
+```pacman: sudo pacman -S cython```
+
+```apk: sudo apk add cython```
+
+```brew: brew install cython```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [gcc](/man/gcc)(1), [cythonize](/man/cythonize)(1)

@@ -102,6 +102,22 @@ C-based tool. Chaining syntax. Consider jq for complex queries.
 
 jshon was created as a shell-friendly JSON parser with a pipeline-oriented interface.
 
+# INSTALL
+
+```apt: sudo apt install jshon```
+
+```pacman: sudo pacman -S jshon```
+
+```apk: sudo apk add jshon```
+
+```zypper: sudo zypper install jshon```
+
+```brew: brew install jshon```
+
+```nix: nix profile install nixpkgs#jshon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [jo](/man/jo)(1), [json_pp](/man/json_pp)(1)

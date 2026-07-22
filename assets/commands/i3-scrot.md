@@ -67,6 +67,22 @@ Requires scrot and xclip to be installed. Designed for i3/Manjaro but works with
 
 i3-scrot was developed by Manjaro Linux as part of their i3 edition, providing convenient screenshot functionality integrated with the i3 window manager workflow.
 
+# INSTALL
+
+```apt: sudo apt install i3-wm```
+
+```dnf: sudo dnf install i3```
+
+```pacman: sudo pacman -S i3-wm```
+
+```apk: sudo apk add i3wm```
+
+```zypper: sudo zypper install i3```
+
+```nix: nix profile install nixpkgs#i3```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scrot](/man/scrot)(1), [xclip](/man/xclip)(1), [i3](/man/i3)(1), [maim](/man/maim)(1), [grim](/man/grim)(1)

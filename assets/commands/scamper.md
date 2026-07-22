@@ -82,6 +82,16 @@ Requires raw socket access. High-rate probing may cause issues. Research-oriente
 
 **scamper** was developed by **Matthew Luckie** for Internet measurement research. It's used by researchers studying network topology and performance.
 
+# INSTALL
+
+```apt: sudo apt install scamper```
+
+```zypper: sudo zypper install scamper```
+
+```brew: brew install scamper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [traceroute](/man/traceroute)(1), [ping](/man/ping)(1), [mtr](/man/mtr)(1)

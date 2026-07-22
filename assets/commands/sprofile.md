@@ -20,6 +20,12 @@ View Spotify listening activity in the terminal
 
 **sprofile** was created by **Sushant Ray** (GoodBoyNeon) and is written in **Rust**.
 
+# INSTALL
+
+```aur: yay -S sprofile```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ncspot](/man/ncspot)(1)

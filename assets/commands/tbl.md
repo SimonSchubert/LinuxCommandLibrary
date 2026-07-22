@@ -74,6 +74,24 @@ GNU tbl output requires GNU troff; it cannot be processed by AT&T troff. Complex
 
 **tbl** was written by **M.E. Lesk** at Bell Labs and first documented in **1976** in the paper "TBL -- A Program to Format Tables." The GNU version was written by **James Clark** as part of groff. It extends the original with features like unlimited columns and improved compatibility.
 
+# INSTALL
+
+```apt: sudo apt install groff-base```
+
+```dnf: sudo dnf install groff-base```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [troff](/man/troff)(1), [nroff](/man/nroff)(1), [eqn](/man/eqn)(1), [pic](/man/pic)(1), [refer](/man/refer)(1), [col](/man/col)(1)

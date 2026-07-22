@@ -64,6 +64,24 @@ Without **-s**, fold breaks lines exactly at the specified width, potentially sp
 
 The **fold** command originated in early Unix systems and was standardized in POSIX. The GNU version, written by **David MacKenzie**, is part of the **coreutils** package and includes extensions like the **-c** character counting option not found in all implementations.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fmt](/man/fmt)(1), [pr](/man/pr)(1), [cut](/man/cut)(1)

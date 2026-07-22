@@ -93,6 +93,24 @@ Rootless by default. Docker CLI compatible.
 
 Podman was created by **Red Hat** as a daemonless Docker alternative.
 
+# INSTALL
+
+```apt: sudo apt install podman```
+
+```dnf: sudo dnf install podman```
+
+```pacman: sudo pacman -S podman```
+
+```apk: sudo apk add podman```
+
+```zypper: sudo zypper install podman```
+
+```brew: brew install podman```
+
+```nix: nix profile install nixpkgs#podman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [buildah](/man/buildah)(1), [skopeo](/man/skopeo)(1)

@@ -65,6 +65,18 @@ Requires Netlify account. Same as netlify command. Authentication required.
 
 ntl is a **shorthand alias** for the Netlify CLI, introduced for convenience.
 
+# INSTALL
+
+```dnf: sudo dnf install ntl```
+
+```pacman: sudo pacman -S ntl```
+
+```brew: brew install ntl```
+
+```nix: nix profile install nixpkgs#ntl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [netlify](/man/netlify)(1), [npm](/man/npm)(1), [vercel](/man/vercel)(1)

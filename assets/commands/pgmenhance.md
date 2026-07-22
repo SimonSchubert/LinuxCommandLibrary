@@ -29,6 +29,24 @@ Edge-enhance a PGM grayscale image
 
 **pgmenhance** reads a PGM image as input, enhances the edges, and writes a PGM image as output. The enhancement technique is derived from Philip R. Thompson's **xim** program. Part of the **Netpbm** toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pgmnorm](/man/pgmnorm)(1), [pgmedge](/man/pgmedge)(1), [pamedge](/man/pamedge)(1)

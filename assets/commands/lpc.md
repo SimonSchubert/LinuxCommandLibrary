@@ -51,6 +51,18 @@ This command is **deprecated** and will be removed in a future release of CUPS. 
 
 lpc originated in **BSD Unix** as part of the Berkeley Line Printer system for controlling print queues. CUPS provides a compatibility implementation with limited functionality.
 
+# INSTALL
+
+```apt: sudo apt install lpr```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lp](/man/lp)(1), [lpq](/man/lpq)(1), [lpr](/man/lpr)(1), [lpstat](/man/lpstat)(1), [lpadmin](/man/lpadmin)(8)

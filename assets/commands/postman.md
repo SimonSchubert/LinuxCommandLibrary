@@ -86,6 +86,12 @@ Postman GUI requires account for cloud features. Newman runs locally without acc
 
 Postman was founded by **Abhinav Asthana** in 2014, evolving from a Chrome extension to a full API platform.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#postman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [httpie](/man/httpie)(1)

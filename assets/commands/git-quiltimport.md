@@ -54,6 +54,24 @@ Requires properly formatted quilt patches. Author info may need specification. O
 
 git quiltimport supports migration from **quilt**, a popular patch management tool used before git became widespread, particularly in Linux distribution development.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-am](/man/git-am)(1), [git-apply](/man/git-apply)(1), [quilt](/man/quilt)(1)

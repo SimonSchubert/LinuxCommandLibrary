@@ -72,6 +72,14 @@ The cmusfm server runs as a background process and must be restarted (via **pkil
 
 **cmusfm** was created as a lightweight, standalone Last.fm scrobbler specifically for the **cmus** console music player. It is written in **C** and uses the Last.fm API for authentication and scrobbling. The project is maintained on GitHub by **arkq**.
 
+# INSTALL
+
+```brew: brew install cmusfm```
+
+```nix: nix profile install nixpkgs#cmusfm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmus](/man/cmus)(1), [mpd](/man/mpd)(1), [ncmpcpp](/man/ncmpcpp)(1), [mpc](/man/mpc)(1)

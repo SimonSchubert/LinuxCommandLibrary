@@ -117,6 +117,22 @@ Requires root privileges or proper group membership for the control interface. T
 
 **wpa_cli** is part of **wpa_supplicant**, a WPA and WPA2 supplicant for Linux, BSD, and Windows, commonly used for wireless network authentication.
 
+# INSTALL
+
+```apt: sudo apt install wpasupplicant```
+
+```dnf: sudo dnf install wpa_supplicant```
+
+```pacman: sudo pacman -S wpa_supplicant```
+
+```apk: sudo apk add wpa_supplicant```
+
+```zypper: sudo zypper install wpa_supplicant```
+
+```nix: nix profile install nixpkgs#wpa_supplicant```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wpa_supplicant](/man/wpa_supplicant)(8), [iwconfig](/man/iwconfig)(8), [nmcli](/man/nmcli)(1), [iw](/man/iw)(8)

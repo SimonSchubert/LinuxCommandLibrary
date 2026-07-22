@@ -70,6 +70,22 @@ The local cache must be updated periodically with **--update** to get new and up
 
 The tldr-pages project was started in **2013** to address the problem of overly complex man pages. It grew into a community project with thousands of contributors maintaining practical command examples across all major platforms.
 
+# INSTALL
+
+```apt: sudo apt install tealdeer```
+
+```dnf: sudo dnf install tldr```
+
+```pacman: sudo pacman -S tealdeer```
+
+```zypper: sudo zypper install tealdeer```
+
+```brew: brew install tealdeer```
+
+```nix: nix profile install nixpkgs#tealdeer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [man](/man/man)(1), [info](/man/info)(1), [cheat](/man/cheat)(1), [help](/man/help)(1)

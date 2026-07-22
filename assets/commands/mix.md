@@ -92,6 +92,22 @@ Requires Elixir to be installed. Package installation requires Hex (`mix local.h
 
 Mix was created as the standard build tool for **Elixir** by **José Valim** and ships with every Elixir installation.
 
+# INSTALL
+
+```apt: sudo apt install elixir```
+
+```dnf: sudo dnf install elixir```
+
+```pacman: sudo pacman -S elixir```
+
+```apk: sudo apk add elixir```
+
+```zypper: sudo zypper install elixir```
+
+```brew: brew install elixir```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [elixir](/man/elixir)(1), [iex](/man/iex)(1)

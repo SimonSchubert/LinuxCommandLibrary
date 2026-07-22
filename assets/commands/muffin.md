@@ -61,6 +61,20 @@ Cinnamon desktop specific. Requires X11 compositing support. GPU acceleration re
 
 muffin was forked from **GNOME's Mutter** for use with the Linux Mint Cinnamon desktop environment. It is maintained as part of the Cinnamon project.
 
+# INSTALL
+
+```apt: sudo apt install muffin```
+
+```dnf: sudo dnf install muffin```
+
+```pacman: sudo pacman -S muffin```
+
+```zypper: sudo zypper install muffin```
+
+```nix: nix profile install nixpkgs#muffin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mutter](/man/mutter)(1), [cinnamon](/man/cinnamon)(1), [kwin](/man/kwin)(1), [openbox](/man/openbox)(1)

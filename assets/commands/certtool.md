@@ -69,6 +69,16 @@ The tool supports the full PKI workflow: generating private keys, creating self-
 
 Template file format differs from OpenSSL configuration. Some features may require specific GnuTLS version. Certificate templates must specify all required fields.
 
+# INSTALL
+
+```apt: sudo apt install gnutls-bin```
+
+```dnf: sudo dnf install gnutls-utils```
+
+```apk: sudo apk add gnutls-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [gnutls-cli](/man/gnutls-cli)(1)

@@ -87,6 +87,18 @@ Requires hardware performance-counter support and an accessible **perf_event** s
 
 **tiptop** was written by **Erven Rohou** at **INRIA** to make hardware performance counters as accessible as **top**. A separate, unrelated Python tool of the same name exists; this page documents the canonical Erven Rohou implementation packaged as **tiptop** in Debian, Ubuntu, Fedora, and Arch.
 
+# INSTALL
+
+```apt: sudo apt install tiptop```
+
+```dnf: sudo dnf install tiptop```
+
+```zypper: sudo zypper install tiptop```
+
+```nix: nix profile install nixpkgs#tiptop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [top](/man/top)(1), [htop](/man/htop)(1), [perf](/man/perf)(1), [pidstat](/man/pidstat)(1)

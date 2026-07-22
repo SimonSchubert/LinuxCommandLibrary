@@ -79,6 +79,24 @@ LuaJIT is compatible with Lua 5.1 only, not Lua 5.2 or later. The FFI library re
 
 LuaJIT was created by **Mike Pall** starting in 2005. LuaJIT 2.0, featuring the current trace compiler architecture, was released in 2012.
 
+# INSTALL
+
+```apt: sudo apt install luajit```
+
+```dnf: sudo dnf install luajit```
+
+```pacman: sudo pacman -S luajit```
+
+```apk: sudo apk add luajit```
+
+```zypper: sudo zypper install luajit```
+
+```brew: brew install luajit```
+
+```nix: nix profile install nixpkgs#luajit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lua](/man/lua)(1), [luac](/man/luac)(1)

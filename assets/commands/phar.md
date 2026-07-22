@@ -90,6 +90,12 @@ Requires phar.readonly=0 in php.ini for write operations. OpenSSL signing requir
 
 **PHAR** (PHP Archive) was introduced in PHP 5.3 as a native way to distribute PHP applications. The phar command-line tool provides archive management capabilities outside of PHP scripts.
 
+# INSTALL
+
+```apk: sudo apk add php85-phar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [php](/man/php)(1), [composer](/man/composer)(1)

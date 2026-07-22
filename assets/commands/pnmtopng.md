@@ -47,6 +47,24 @@ Convert PNM images to PNG format
 
 The **-alpha** option attaches a separate PGM file as an alpha transparency channel. The **-compression** level (0-9) controls the deflate compression effort, and **-interlace** creates Adam7 interlaced PNGs for progressive display. The **-transparent** option designates a specific color as fully transparent. Part of the Netpbm toolkit; superseded by **pamtopng**.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pngtopnm](/man/pngtopnm)(1), [pamtopng](/man/pamtopng)(1)

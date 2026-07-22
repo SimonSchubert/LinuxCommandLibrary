@@ -64,6 +64,16 @@ Requires SELinux to be enabled. Boolean names and availability vary by distribut
 
 SELinux booleans were introduced to provide flexibility in the policy without requiring policy source modifications. getsebool is part of the libselinux-utils package, providing command-line access to SELinux functionality.
 
+# INSTALL
+
+```apt: sudo apt install selinux-utils```
+
+```dnf: sudo dnf install libselinux-utils```
+
+```apk: sudo apk add libselinux-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [setsebool](/man/setsebool)(8), [semanage](/man/semanage)(8), [getenforce](/man/getenforce)(1), [sestatus](/man/sestatus)(8)

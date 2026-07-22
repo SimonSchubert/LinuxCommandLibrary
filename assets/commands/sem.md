@@ -81,6 +81,20 @@ The semaphore identifier defaults to the controlling tty, so commands run from d
 
 **sem** is part of GNU Parallel, created and maintained by Ole Tange. GNU Parallel was first released in **2010** as a tool for executing jobs in parallel using multiple CPU cores. The semaphore functionality (sem) was included to provide a simple way to limit concurrent execution of shell commands. The project is developed under the GNU Project and continues active maintenance.
 
+# INSTALL
+
+```dnf: sudo dnf install parallel```
+
+```pacman: sudo pacman -S parallel```
+
+```apk: sudo apk add parallel```
+
+```brew: brew install parallel```
+
+```nix: nix profile install nixpkgs#parallel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [parallel](/man/parallel)(1), [xargs](/man/xargs)(1), [flock](/man/flock)(1), [nohup](/man/nohup)(1)

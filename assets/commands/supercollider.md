@@ -83,6 +83,16 @@ Requires scsynth audio server for audio synthesis. The SuperCollider IDE provide
 
 **SuperCollider** was developed by James McCartney starting in 1996. It was initially proprietary software for Macintosh but was released as free software under the GPL in 2002. The language has become a standard tool in the computer music community, used for live coding performances and academic research.
 
+# INSTALL
+
+```pacman: sudo pacman -S supercollider```
+
+```zypper: sudo zypper install supercollider```
+
+```nix: nix profile install nixpkgs#supercollider```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [csound](/man/csound)(1)

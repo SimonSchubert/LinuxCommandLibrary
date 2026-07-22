@@ -36,6 +36,18 @@ Terminal game. Requires appropriate terminal. Various implementations exist.
 
 Gomoku is a traditional strategy board game. Terminal versions provide accessible gameplay.
 
+# INSTALL
+
+```dnf: sudo dnf install bsd-games```
+
+```pacman: sudo pacman -S bsd-games```
+
+```apk: sudo apk add bsd-games```
+
+```zypper: sudo zypper install bsd-games```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnugo](/man/gnugo)(1)

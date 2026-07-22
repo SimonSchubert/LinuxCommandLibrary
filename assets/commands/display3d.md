@@ -39,6 +39,12 @@ See **display3d --help** for the full set of camera, transform, animation, and d
 
 Requires a terminal with reliable ANSI escape code support (often unreliable on Windows). Colourful OBJ rendering needs a matching **.mtl** beside the **.obj**. Performance depends on model complexity and terminal size.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#display3d```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chafa](/man/chafa)(1), [timg](/man/timg)(1), [ascii-image-converter](/man/ascii-image-converter)(1)

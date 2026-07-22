@@ -89,6 +89,20 @@ Subcommand of kubectl. Blocks execution. Set reasonable timeouts.
 
 kubectl wait provides synchronization for **Kubernetes** automation and scripting.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-get](/man/kubectl-get)(1), [kubectl-apply](/man/kubectl-apply)(1), [kubectl-rollout](/man/kubectl-rollout)(1), [kubectl-describe](/man/kubectl-describe)(1)

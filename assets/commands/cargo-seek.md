@@ -35,6 +35,14 @@ TUI for searching, adding, and installing cargo crates
 
 **cargo-seek** is a Cargo subcommand that provides a terminal user interface for searching, adding, and installing crates from the crates.io registry. It supports searching in Online, Project, Installed, or All scopes, visually labels project dependencies and installed binaries, and allows adding/removing crates, installing/uninstalling binaries, and opening documentation. Results can be sorted by relevance, name, downloads, or recency.
 
+# INSTALL
+
+```apk: sudo apk add cargo-seek```
+
+```nix: nix profile install nixpkgs#cargo-seek```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-search](/man/cargo-search)(1)

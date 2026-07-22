@@ -57,6 +57,22 @@ Common uses include swapping Caps Lock and Control, remapping special keys, or c
 
 Changes are not persistent across X server restarts. For permanent changes, add xmodmap commands to **~/.xinitrc** or **~/.xprofile**. Use **xev** to find keycodes. Modern systems may prefer **setxkbmap** for keyboard configuration.
 
+# INSTALL
+
+```apt: sudo apt install x11-xserver-utils```
+
+```dnf: sudo dnf install xmodmap```
+
+```apk: sudo apk add xmodmap```
+
+```zypper: sudo zypper install xmodmap```
+
+```brew: brew install xmodmap```
+
+```nix: nix profile install nixpkgs#xmodmap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xev](/man/xev)(1), [setxkbmap](/man/setxkbmap)(1), [xkbcomp](/man/xkbcomp)(1)

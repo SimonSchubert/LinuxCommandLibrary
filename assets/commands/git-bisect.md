@@ -113,6 +113,24 @@ If history contains merges, the first bad commit may be a merge, and the actual 
 
 **git bisect** was added by **Linus Torvalds** in **2005**, in git's first year, initially as a shell script. **git bisect run** followed shortly after, contributed by **Christian Couder**, who also added the **old**/**new** terminology in git **2.7** (**2015**) for bisecting changes that are not bugs. The implementation was gradually rewritten in C over subsequent releases.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-log](/man/git-log)(1), [git-blame](/man/git-blame)(1), [git-annotate](/man/git-annotate)(1), [git-stash](/man/git-stash)(1)

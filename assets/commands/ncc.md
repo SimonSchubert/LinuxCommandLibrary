@@ -93,6 +93,12 @@ Native modules need special handling. Dynamic requires may not resolve. Some pac
 
 **ncc** was created by **Vercel** (formerly ZEIT) around **2018** to simplify Node.js deployment. It enables distributing Node.js applications as single files, similar to Go binaries, addressing node_modules complexity.
 
+# INSTALL
+
+```brew: brew install ncc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [webpack](/man/webpack)(1), [esbuild](/man/esbuild)(1), [rollup](/man/rollup)(1), [pkg](/man/pkg)(1)

@@ -99,6 +99,24 @@ Some modules require specific system support or libraries. GPU detection may nee
 
 **fastfetch** was created by **Linus Dierheimer** (LinusDierheimer) in **2021** as a faster alternative to neofetch. It was written in C for performance, addressing complaints about neofetch's bash implementation being slow. The project gained popularity rapidly due to its speed and extensive customization options.
 
+# INSTALL
+
+```apt: sudo apt install fastfetch```
+
+```dnf: sudo dnf install fastfetch```
+
+```pacman: sudo pacman -S fastfetch```
+
+```apk: sudo apk add fastfetch```
+
+```zypper: sudo zypper install fastfetch```
+
+```brew: brew install fastfetch```
+
+```nix: nix profile install nixpkgs#fastfetch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neofetch](/man/neofetch)(1), [screenfetch](/man/screenfetch)(1), [inxi](/man/inxi)(1), [hwinfo](/man/hwinfo)(1)

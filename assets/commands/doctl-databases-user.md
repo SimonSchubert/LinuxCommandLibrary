@@ -81,6 +81,20 @@ Each user has associated credentials (username and password) and potentially dif
 
 Proper user management follows security best practices: creating dedicated users for each application, regularly rotating credentials, and removing unused accounts to minimize security exposure.
 
+# INSTALL
+
+```dnf: sudo dnf install doctl```
+
+```pacman: sudo pacman -S doctl```
+
+```apk: sudo apk add doctl```
+
+```brew: brew install doctl```
+
+```nix: nix profile install nixpkgs#doctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doctl-databases](/man/doctl-databases)(1), [doctl-databases-pool](/man/doctl-databases-pool)(1), [doctl-databases-db](/man/doctl-databases-db)(1), [doctl-databases-firewalls](/man/doctl-databases-firewalls)(1)

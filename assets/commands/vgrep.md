@@ -59,6 +59,18 @@ Go implementation. Editor config needed. Different from grep.
 
 **vgrep** was created for quickly searching code and opening results in an editor by index.
 
+# INSTALL
+
+```dnf: sudo dnf install vgrep```
+
+```zypper: sudo zypper install vgrep```
+
+```brew: brew install vgrep```
+
+```nix: nix profile install nixpkgs#vgrep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [rg](/man/rg)(1), [ag](/man/ag)(1)

@@ -59,6 +59,24 @@ The operations are not commutative: swapping _file1_ and _file2_ can change the 
 
 **combine** is part of **moreutils**, a collection of Unix utilities maintained by Joey Hess since around **2006**. It provides set-theoretic operations that would otherwise require multiple pipeline stages with **sort** and **comm**.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add moreutils```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [comm](/man/comm)(1), [sort](/man/sort)(1), [uniq](/man/uniq)(1), [join](/man/join)(1), [diff](/man/diff)(1), [grep](/man/grep)(1)

@@ -92,6 +92,16 @@ Most mount operations require root privileges. Use /etc/fstab for persistent mou
 
 Part of **util-linux** package. The mount command has been part of Unix since early versions, dating back to **1971**.
 
+# INSTALL
+
+```apt: sudo apt install mount```
+
+```apk: sudo apk add mount```
+
+```nix: nix profile install nixpkgs#mount```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [umount](/man/umount)(8), [fstab](/man/fstab)(5), [findmnt](/man/findmnt)(8), [lsblk](/man/lsblk)(8)

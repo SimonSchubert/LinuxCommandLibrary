@@ -96,6 +96,15 @@ Applications require repository and cluster access configured. Automated sync sh
 
 Application management is the core functionality of Argo CD, central to the GitOps workflow since the project's creation in **2018**.
 
+# INSTALL
+
+```pacman: sudo pacman -S argocd```
+
+```brew: brew install argocd```
+
+```nix: nix profile install nixpkgs#argocd```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [argocd](/man/argocd)(1), [kubectl](/man/kubectl)(1)

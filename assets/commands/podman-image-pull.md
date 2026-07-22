@@ -82,6 +82,24 @@ Large images may take significant time and bandwidth to download. Pulling from i
 
 **Podman** was developed by **Red Hat** as a daemonless container engine, first released in **2018**. The image pull command mirrors Docker's functionality while adding rootless container support. Podman has become a standard container tool in RHEL/Fedora ecosystems.
 
+# INSTALL
+
+```apt: sudo apt install podman```
+
+```dnf: sudo dnf install podman```
+
+```pacman: sudo pacman -S podman```
+
+```apk: sudo apk add podman```
+
+```zypper: sudo zypper install podman```
+
+```brew: brew install podman```
+
+```nix: nix profile install nixpkgs#podman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [podman-pull](/man/podman-pull)(1), [podman-images](/man/podman-images)(1), [podman-run](/man/podman-run)(1), [docker-pull](/man/docker-pull)(1)

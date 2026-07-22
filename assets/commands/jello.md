@@ -97,6 +97,16 @@ Requires Python 3.6 or later. Slower than jq for simple tasks due to Python star
 
 jello was created by **Kelly Brazil** as a Python-based alternative to jq for users more familiar with Python syntax.
 
+# INSTALL
+
+```dnf: sudo dnf install jello```
+
+```brew: brew install jello```
+
+```nix: nix profile install nixpkgs#jello```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [jc](/man/jc)(1), [python](/man/python)(1), [gron](/man/gron)(1), [fx](/man/fx)(1), [yq](/man/yq)(1)

@@ -24,6 +24,12 @@ TUI audio analyzer with real-time visualization
 
 **soundscope** was created by **bananaofhappiness** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S soundscope```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cava](/man/cava)(1), [sox](/man/sox)(1)

@@ -49,6 +49,22 @@ Extend to **100% free** space
 
 Reducing requires filesystem resize first or --resizefs. Extending is generally safe. Always backup before reducing.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvextend](/man/lvextend)(8), [lvreduce](/man/lvreduce)(8), [lvm](/man/lvm)(8)

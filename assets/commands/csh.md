@@ -91,6 +91,22 @@ csh scripting has known deficiencies and is not recommended for complex scripts.
 
 The C shell was written by Bill Joy at UC Berkeley in **1978** as part of BSD Unix. It introduced command history and job control to Unix shells. While influential, its scripting limitations led to recommendations against using it for scripts, famously documented in "Csh Programming Considered Harmful."
 
+# INSTALL
+
+```dnf: sudo dnf install tcsh```
+
+```pacman: sudo pacman -S tcsh```
+
+```apk: sudo apk add tcsh```
+
+```zypper: sudo zypper install tcsh```
+
+```brew: brew install tcsh```
+
+```nix: nix profile install nixpkgs#tcsh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcsh](/man/tcsh)(1), [bash](/man/bash)(1), [sh](/man/sh)(1), [zsh](/man/zsh)(1)

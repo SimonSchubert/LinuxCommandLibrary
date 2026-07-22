@@ -79,6 +79,22 @@ Only works in Linux virtual consoles, not terminal emulators or SSH sessions. Re
 
 gpm was created by Alessandro Rubini in **1994** to bring mouse support to the Linux console. It became essential for text-mode applications and system administration before graphical desktops became prevalent. The project remains maintained for console-based systems.
 
+# INSTALL
+
+```apt: sudo apt install gpm```
+
+```dnf: sudo dnf install gpm```
+
+```pacman: sudo pacman -S gpm```
+
+```apk: sudo apk add gpm```
+
+```zypper: sudo zypper install gpm```
+
+```nix: nix profile install nixpkgs#gpm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [Xorg](/man/Xorg)(1)

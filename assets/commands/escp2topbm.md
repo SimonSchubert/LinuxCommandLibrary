@@ -22,6 +22,24 @@ ESC/P2 is Epson's enhanced printer control language, widely used in dot-matrix a
 
 escp2topbm defines no options of its own; it accepts the options common to all Netpbm programs, such as **-plain** and **-quiet** (the common **-plain** option had no effect before Netpbm 10.72).
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtoescp2](/man/pbmtoescp2)(1), [pbmtoepson](/man/pbmtoepson)(1), [pnmtopng](/man/pnmtopng)(1)

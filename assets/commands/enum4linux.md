@@ -76,6 +76,12 @@ A Perl wrapper around tools like smbclient, rpcclient, and nmblookup for penetra
 
 Security testing tool. Use only on systems you have permission to test. Some enumeration requires valid credentials or a null session, which modern Windows blocks by default. May trigger security alerts. The original Perl enum4linux is effectively unmaintained; **enum4linux-ng**, a Python rewrite, is the actively developed successor and produces cleaner, machine-readable output.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#enum4linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smbclient](/man/smbclient)(1), [rpcclient](/man/rpcclient)(1), [nmap](/man/nmap)(1), [nmblookup](/man/nmblookup)(1)

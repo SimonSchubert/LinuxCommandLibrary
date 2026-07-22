@@ -93,6 +93,12 @@ Requires Java runtime. Large libraries may be slow. Some web fetchers have rate 
 
 JabRef was started by **Morten O. Alver** in **2003** as an open-source alternative to commercial reference managers. It's maintained by a community of developers and is popular in academic circles.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#jabref```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bibtex](/man/bibtex)(1), [zotero](/man/zotero)(1), [mendeley](/man/mendeley)(1)

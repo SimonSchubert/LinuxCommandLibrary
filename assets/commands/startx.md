@@ -80,6 +80,20 @@ Typically startx runs a window manager or desktop environment and sets up the X 
 
 Requires X server to be installed. The .xinitrc file in the user's home directory controls which programs start with X. Not needed when using a display manager like GDM, SDDM, or LightDM.
 
+# INSTALL
+
+```apt: sudo apt install xinit```
+
+```apk: sudo apk add xinit```
+
+```zypper: sudo zypper install xinit```
+
+```brew: brew install xinit```
+
+```nix: nix profile install nixpkgs#xinit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xinit](/man/xinit)(1), [Xorg](/man/Xorg)(1), [xrandr](/man/xrandr)(1), [xterm](/man/xterm)(1)

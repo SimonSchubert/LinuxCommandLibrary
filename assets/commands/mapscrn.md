@@ -62,6 +62,22 @@ The functionality of **mapscrn** is now built into **setfont** — modern kbd in
 
 **mapscrn** is part of the **kbd** package, the standard Linux console keyboard and character utilities maintained by Alexey Gladkov and others.
 
+# INSTALL
+
+```apt: sudo apt install kbd```
+
+```dnf: sudo dnf install kbd```
+
+```pacman: sudo pacman -S kbd```
+
+```apk: sudo apk add kbd```
+
+```zypper: sudo zypper install kbd```
+
+```nix: nix profile install nixpkgs#kbd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [setfont](/man/setfont)(8), [loadkeys](/man/loadkeys)(1), [showconsolefont](/man/showconsolefont)(8)

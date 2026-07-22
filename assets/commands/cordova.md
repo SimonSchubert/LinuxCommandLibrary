@@ -94,6 +94,14 @@ Platform SDKs must be installed separately (Android SDK, Xcode for iOS). iOS dev
 
 Cordova originated as **PhoneGap**, created by Nitobi Software in **2009**. Adobe acquired Nitobi in **2011** and donated the codebase to the Apache Software Foundation, where it was renamed Cordova. It remains one of the most widely used hybrid mobile development frameworks.
 
+# INSTALL
+
+```pacman: sudo pacman -S cordova```
+
+```nix: nix profile install nixpkgs#cordova```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ionic](/man/ionic)(1), [npm](/man/npm)(1)

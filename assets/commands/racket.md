@@ -93,6 +93,24 @@ Different from standard Scheme in some areas. Package system requires network ac
 
 **Racket** evolved from **PLT Scheme**, which began at **Rice University** in **1995**. The name changed to Racket in **2010** to reflect its evolution beyond Scheme. It's widely used in programming language research and education.
 
+# INSTALL
+
+```apt: sudo apt install racket```
+
+```dnf: sudo dnf install racket```
+
+```pacman: sudo pacman -S racket```
+
+```apk: sudo apk add racket```
+
+```zypper: sudo zypper install racket```
+
+```brew: brew install racket```
+
+```nix: nix profile install nixpkgs#racket```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [raco](/man/raco)(1), [drracket](/man/drracket)(1), [scheme](/man/scheme)(1), [guile](/man/guile)(1)

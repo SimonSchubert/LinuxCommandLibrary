@@ -89,6 +89,22 @@ Simplified versions (fewer features than GNU tools). Some advanced options missi
 
 **BusyBox** was created by Bruce Perens in **1996** for Debian installer, becoming the standard multi-call binary for embedded Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install busybox```
+
+```dnf: sudo dnf install busybox```
+
+```pacman: sudo pacman -S busybox```
+
+```apk: sudo apk add busybox```
+
+```zypper: sudo zypper install busybox```
+
+```nix: nix profile install nixpkgs#busybox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [alpine](/man/alpine)(1), [toybox](/man/toybox)(1), [coreutils](/man/coreutils)(7)

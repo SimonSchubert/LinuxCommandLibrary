@@ -59,6 +59,12 @@ Alias for autojump. Requires shell integration. Database builds over time.
 
 j is the default alias for **autojump**, created by **William Ting** to speed up directory navigation in the shell.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#j```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [autojump](/man/autojump)(1), [z](/man/z)(1), [cd](/man/cd)(1), [fasd](/man/fasd)(1)

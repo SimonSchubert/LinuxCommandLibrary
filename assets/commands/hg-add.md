@@ -46,6 +46,24 @@ schedules files to be added to the repository on the next commit
 
 **hg add** schedules files to be added to the repository on the next commit. Without arguments, it adds all new files in the working directory. Use a .hgignore file to exclude files from version control. Added files appear with 'A' status in **hg status** until committed.
 
+# INSTALL
+
+```apt: sudo apt install mercurial```
+
+```dnf: sudo dnf install mercurial```
+
+```pacman: sudo pacman -S mercurial```
+
+```apk: sudo apk add mercurial```
+
+```zypper: sudo zypper install mercurial```
+
+```brew: brew install mercurial```
+
+```nix: nix profile install nixpkgs#mercurial```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hg](/man/hg)(1), [hg-commit](/man/hg-commit)(1), [hg-status](/man/hg-status)(1)

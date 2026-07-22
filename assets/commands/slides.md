@@ -80,6 +80,16 @@ Requires a terminal that supports ANSI escape codes for proper rendering. Code e
 
 **slides** was created by Maas Lalani as an open-source terminal presentation tool written in Go. It was designed to provide a simple, distraction-free way to give presentations directly from the terminal using familiar Markdown syntax. The project gained popularity among developers who prefer terminal-based workflows and live coding demonstrations.
 
+# INSTALL
+
+```apk: sudo apk add slides```
+
+```brew: brew install slides```
+
+```nix: nix profile install nixpkgs#slides```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mdp](/man/mdp)(1), [patat](/man/patat)(1), [presenterm](/man/presenterm)(1), [tpp](/man/tpp)(1)

@@ -83,6 +83,24 @@ Cannot change the endianness of input files; target format must match source end
 
 Part of **GNU Binutils**, first released in **1991** alongside other binary utilities like objdump and nm. Developed to complement the GNU toolchain (GCC, GAS, ld) for cross-platform development and embedded systems programming.
 
+# INSTALL
+
+```apt: sudo apt install binutils```
+
+```dnf: sudo dnf install binutils```
+
+```pacman: sudo pacman -S binutils```
+
+```apk: sudo apk add binutils```
+
+```zypper: sudo zypper install binutils```
+
+```brew: brew install binutils```
+
+```nix: nix profile install nixpkgs#binutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [objdump](/man/objdump)(1), [strip](/man/strip)(1), [readelf](/man/readelf)(1), [nm](/man/nm)(1), [ld](/man/ld)(1)

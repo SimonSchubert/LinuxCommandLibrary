@@ -70,6 +70,24 @@ Command-line passwords visible in process list. Less secure than SSH keys. Not r
 
 **sshpass** was written by **Shachar Shemesh** to address the need for non-interactive SSH password entry in scripts and automation where key-based authentication wasn't feasible.
 
+# INSTALL
+
+```apt: sudo apt install sshpass```
+
+```dnf: sudo dnf install sshpass```
+
+```pacman: sudo pacman -S sshpass```
+
+```apk: sudo apk add sshpass```
+
+```zypper: sudo zypper install sshpass```
+
+```brew: brew install sshpass```
+
+```nix: nix profile install nixpkgs#sshpass```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [ssh-keygen](/man/ssh-keygen)(1), [expect](/man/expect)(1), [ssh-agent](/man/ssh-agent)(1)

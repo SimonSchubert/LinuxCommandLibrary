@@ -86,6 +86,18 @@ Multi-line field values may need special handling. Part of GNU recutils package.
 
 rec2csv is part of **GNU recutils** by **Jose E. Marchesi** for managing plain text databases.
 
+# INSTALL
+
+```dnf: sudo dnf install recutils```
+
+```apk: sudo apk add recutils```
+
+```brew: brew install recutils```
+
+```nix: nix profile install nixpkgs#recutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [recsel](/man/recsel)(1), [recins](/man/recins)(1), [recdel](/man/recdel)(1)

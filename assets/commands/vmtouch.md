@@ -68,6 +68,20 @@ Root for lock. Linux-specific features. Page cache only.
 
 **vmtouch** was created by **Doug Hoyte** for controlling the file system cache from the command line.
 
+# INSTALL
+
+```apt: sudo apt install vmtouch```
+
+```dnf: sudo dnf install vmtouch```
+
+```zypper: sudo zypper install vmtouch```
+
+```brew: brew install vmtouch```
+
+```nix: nix profile install nixpkgs#vmtouch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [free](/man/free)(1), [sync](/man/sync)(1), [dd](/man/dd)(1)

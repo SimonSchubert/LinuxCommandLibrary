@@ -59,6 +59,22 @@ GNOME specific. Requires GPU compositing. Usually run via GNOME Shell.
 
 Mutter is derived from **Metacity** and became the standard GNOME window manager with GNOME 3.
 
+# INSTALL
+
+```apt: sudo apt install mutter```
+
+```dnf: sudo dnf install mutter```
+
+```pacman: sudo pacman -S mutter```
+
+```apk: sudo apk add mutter```
+
+```zypper: sudo zypper install mutter```
+
+```nix: nix profile install nixpkgs#mutter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [muffin](/man/muffin)(1)

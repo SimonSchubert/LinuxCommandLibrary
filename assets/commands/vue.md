@@ -85,6 +85,12 @@ Vue CLI is in maintenance mode for Vue 2/3 projects. For new Vue 3 projects, **c
 
 **Vue CLI** was created by **Evan You** for Vue.js project management. Version 3+ provides plugin-based architecture.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#vue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [vite](/man/vite)(1), [node](/man/node)(1), [vue-serve](/man/vue-serve)(1), [yarn](/man/yarn)(1)

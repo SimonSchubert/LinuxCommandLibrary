@@ -98,6 +98,24 @@ Part of librsync. Basis file needed for patch. Signature must match original fil
 
 rdiff uses the **rsync** algorithm by **Andrew Tridgell**, implemented in **librsync** by **Martin Pool**.
 
+# INSTALL
+
+```apt: sudo apt install rdiff```
+
+```dnf: sudo dnf install librsync```
+
+```pacman: sudo pacman -S librsync```
+
+```apk: sudo apk add librsync```
+
+```zypper: sudo zypper install rdiff```
+
+```brew: brew install librsync```
+
+```nix: nix profile install nixpkgs#librsync```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rsync](/man/rsync)(1), [diff](/man/diff)(1), [patch](/man/patch)(1), [xdelta](/man/xdelta)(1)

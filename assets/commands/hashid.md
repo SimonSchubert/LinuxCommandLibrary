@@ -60,6 +60,12 @@ python tool that identifies hash types by analyzing their length and character
 
 Identification is based on pattern matching (length and character set), so results are probabilistic, not definitive; many hash types share the same format (e.g. MD5 and NTLM are both 32 hex characters).
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#hashid```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hashcat](/man/hashcat)(1), [john](/man/john)(1)

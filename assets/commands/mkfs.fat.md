@@ -101,6 +101,24 @@ Volume names are limited to 11 characters. The tool does not create bootable fil
 
 The FAT filesystem was developed by **Microsoft** starting in **1977** for standalone Disk BASIC. FAT12 appeared with MS-DOS 1.0 in 1981, FAT16 with MS-DOS 3.0 in 1984, and FAT32 with Windows 95 OSR2 in 1996. The mkfs.fat utility is part of the **dosfstools** package maintained for Linux.
 
+# INSTALL
+
+```apt: sudo apt install dosfstools```
+
+```dnf: sudo dnf install dosfstools```
+
+```pacman: sudo pacman -S dosfstools```
+
+```apk: sudo apk add dosfstools```
+
+```zypper: sudo zypper install dosfstools```
+
+```brew: brew install dosfstools```
+
+```nix: nix profile install nixpkgs#dosfstools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkfs](/man/mkfs)(8), [fatlabel](/man/fatlabel)(8), [mkfs.ext4](/man/mkfs.ext4)(8)

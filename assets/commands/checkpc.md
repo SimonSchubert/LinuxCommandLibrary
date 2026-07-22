@@ -83,6 +83,12 @@ The **-f** option should be run as root. Running as non-root will report many pe
 
 **checkpc** is part of **LPRng** (LPR Next Generation), an enhanced printer spooler system with functionality similar to the original Berkeley LPR software but with additional features and improved security.
 
+# INSTALL
+
+```apt: sudo apt install lprng```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lpr](/man/lpr)(1), [lpq](/man/lpq)(1), [lprm](/man/lprm)(1), [lpc](/man/lpc)(8)

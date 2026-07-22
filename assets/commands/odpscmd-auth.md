@@ -59,6 +59,12 @@ For the newer Go-based CLI, see [odps-auth](/man/odps-auth)(1).
 
 Legacy tool. Credentials are stored in a local config file in plaintext. Requires Java runtime.
 
+# INSTALL
+
+```aur: yay -S odpscmd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [odpscmd](/man/odpscmd)(1), [odps-auth](/man/odps-auth)(1)

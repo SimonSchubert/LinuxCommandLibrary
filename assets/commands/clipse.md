@@ -104,6 +104,12 @@ On **Wayland**, requires **wl-clipboard** installed for text and image clipboard
 
 **clipse** was created by **savedra1** on GitHub. The first stable release (v1.0.0) arrived in **July 2023** with multi-select, custom theme support, and image/text previews. Version 1.1.0 (October 2023) added custom keybinds, and v1.2.0 (December 2024) brought a major performance overhaul with C API integration for X11/Darwin, auto-paste, and excluded apps support.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#clipse```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xclip](/man/xclip)(1), [xsel](/man/xsel)(1), [wl-copy](/man/wl-copy)(1), [pbcopy](/man/pbcopy)(1)

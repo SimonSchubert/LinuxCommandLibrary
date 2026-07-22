@@ -90,6 +90,16 @@ Both sender and receiver must have wormhole installed. The wormhole code must be
 
 Magic-Wormhole was created by **Brian Warner** and first released in **2015**. It was designed to solve the problem of securely transferring files between computers without complex setup. The PAKE-based security model allows strong encryption from easy-to-type codes. Alternative implementations exist in Go (wormhole-william) and Rust.
 
+# INSTALL
+
+```apk: sudo apk add wormhole-william```
+
+```brew: brew install wormhole-william```
+
+```nix: nix profile install nixpkgs#wormhole-william```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scp](/man/scp)(1), [rsync](/man/rsync)(1), [croc](/man/croc)(1), [ffsend](/man/ffsend)(1)

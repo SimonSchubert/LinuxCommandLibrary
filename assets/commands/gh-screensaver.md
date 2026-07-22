@@ -51,6 +51,12 @@ This extension must be installed first with **gh extension install vilmibm/gh-sc
 
 Requires the GitHub CLI (**gh**) and must be installed as an extension. Some animations may not render correctly in terminals with limited color support.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#gh-screensaver```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-extension](/man/gh-extension)(1), [cmatrix](/man/cmatrix)(1)

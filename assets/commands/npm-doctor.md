@@ -26,6 +26,16 @@ Each check is reported as **OK** or shows the specific problem. If any check fai
 
 Some checks require network access. On restricted systems (CI, air-gapped), registry connectivity checks will fail. Cache verification can be slow on large caches.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-cache](/man/npm-cache)(1), [npm-install](/man/npm-install)(1)

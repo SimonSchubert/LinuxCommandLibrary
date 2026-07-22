@@ -110,6 +110,14 @@ Wi-Fi operations require the NetworkManager daemon to be running and the device 
 
 Part of the **nmcli** command-line interface for **NetworkManager**. Provides device-level network management.
 
+# INSTALL
+
+```apt: sudo apt install network-manager```
+
+```apk: sudo apk add networkmanager-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmcli](/man/nmcli)(1), [nmcli-connection](/man/nmcli-connection)(1), [nmcli-general](/man/nmcli-general)(1), [iw](/man/iw)(8), [iwctl](/man/iwctl)(1)

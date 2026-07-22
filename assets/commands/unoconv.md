@@ -104,6 +104,20 @@ Requires LibreOffice installation. First conversion may be slow while LibreOffic
 
 **unoconv** was created by Dag Wieers to provide command-line access to LibreOffice's conversion capabilities. It became widely used for automated document processing. The project is now in maintenance mode with unoserver as its successor.
 
+# INSTALL
+
+```dnf: sudo dnf install unoconv```
+
+```pacman: sudo pacman -S unoconv```
+
+```zypper: sudo zypper install unoconv```
+
+```brew: brew install unoconv```
+
+```nix: nix profile install nixpkgs#unoconv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [libreoffice](/man/libreoffice)(1), [pandoc](/man/pandoc)(1), [soffice](/man/soffice)(1)

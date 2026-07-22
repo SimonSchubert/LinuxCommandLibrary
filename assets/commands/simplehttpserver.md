@@ -65,6 +65,12 @@ Not suitable for production use. No authentication, encryption, or access contro
 
 **SimpleHTTPServer** has been part of the Python standard library since Python 2. Python 3 reorganized the module as **http.server** with added options for binding, directory selection, and CGI support.
 
+# INSTALL
+
+```aur: yay -S simplehttpserver```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [serve](/man/serve)(1), [http-server](/man/http-server)(1)

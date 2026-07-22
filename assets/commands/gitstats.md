@@ -63,6 +63,12 @@ Generate statistics from Git repositories
 
 The output is a static HTML site that can be viewed in any browser, providing a visual overview of project history and contributor patterns.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#gitstats```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-summary](/man/git-summary)(1)

@@ -60,6 +60,18 @@ One of gcal's most powerful features is its holiday calculation capability, whic
 
 gcal is highly scriptable and can be used for complex date calculations, making it valuable for both interactive use and automation tasks that require sophisticated calendar operations.
 
+# INSTALL
+
+```apt: sudo apt install gcal```
+
+```dnf: sudo dnf install gcal```
+
+```zypper: sudo zypper install gcal```
+
+```nix: nix profile install nixpkgs#gcal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cal](/man/cal)(1), [ncal](/man/ncal)(1)

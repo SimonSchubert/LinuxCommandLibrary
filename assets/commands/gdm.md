@@ -60,6 +60,20 @@ Requires X11 or Wayland. Configuration through dconf. Managed by systemd on mode
 
 GDM was created as part of the **GNOME project** to provide a display manager integrated with the GNOME desktop environment. It replaced xdm for GNOME users.
 
+# INSTALL
+
+```dnf: sudo dnf install gdm```
+
+```pacman: sudo pacman -S gdm```
+
+```apk: sudo apk add gdm```
+
+```zypper: sudo zypper install gdm```
+
+```nix: nix profile install nixpkgs#gdm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ly](/man/ly)(1), [slim](/man/slim)(1), [xinit](/man/xinit)(1)

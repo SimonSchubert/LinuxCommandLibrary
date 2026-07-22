@@ -56,6 +56,24 @@ Syntax differs from LaTeX. Output requires troff processing. Complex equations n
 
 eqn was written by **Brian Kernighan** and **Lorinda Cherry** at Bell Labs in the 1970s. It was one of the first tools for typesetting mathematics and influenced later systems.
 
+# INSTALL
+
+```apt: sudo apt install groff-base```
+
+```dnf: sudo dnf install groff-base```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [troff](/man/troff)(1), [tbl](/man/tbl)(1), [pic](/man/pic)(1), [neqn](/man/neqn)(1)

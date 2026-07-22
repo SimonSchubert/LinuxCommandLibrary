@@ -65,6 +65,12 @@ Run continuous integration builds for PlatformIO projects
 
 **pio ci** runs continuous integration builds for PlatformIO projects. It builds source files against specified boards without requiring an existing project structure. Using the provided source and library contents, PlatformIO initialises a new project in a build directory and processes it via the **pio run** command. Commonly used in CI/CD pipelines.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-run](/man/pio-run)(1), [pio-test](/man/pio-test)(1), [pio](/man/pio)(1)

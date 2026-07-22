@@ -71,6 +71,16 @@ Requires configured calendars. vdirsyncer recommended. Python-based.
 
 **todoman** was created for managing todo items in iCalendar format, with CalDAV server support via vdirsyncer.
 
+# INSTALL
+
+```pacman: sudo pacman -S todoman```
+
+```brew: brew install todoman```
+
+```nix: nix profile install nixpkgs#todoman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vdirsyncer](/man/vdirsyncer)(1), [khal](/man/khal)(1), [task](/man/task)(1)

@@ -75,6 +75,24 @@ Running Samba as an AD DC requires careful DNS and Kerberos configuration. The s
 
 Samba was created by **Andrew Tridgell** in **1992** as a reverse-engineered implementation of SMB. Originally named "smbserver," it was renamed Samba after trademark concerns. Active Directory support was added in version 4.0 (**2012**), enabling full domain controller functionality.
 
+# INSTALL
+
+```apt: sudo apt install samba-ad-dc```
+
+```dnf: sudo dnf install samba-dc```
+
+```pacman: sudo pacman -S samba```
+
+```apk: sudo apk add samba-dc```
+
+```zypper: sudo zypper install samba-ad-dc```
+
+```brew: brew install samba```
+
+```nix: nix profile install nixpkgs#samba```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smbclient](/man/smbclient)(1)

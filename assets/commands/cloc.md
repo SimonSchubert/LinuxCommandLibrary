@@ -123,6 +123,20 @@ Does not analyze semantic code complexity. Some edge cases in multi-language fil
 
 **cloc** was created by **Al Danial**, first released on SourceForge and later moved to GitHub. It has become one of the most widely used open-source code counting tools.
 
+# INSTALL
+
+```dnf: sudo dnf install cloc```
+
+```pacman: sudo pacman -S cloc```
+
+```apk: sudo apk add cloc```
+
+```brew: brew install cloc```
+
+```nix: nix profile install nixpkgs#cloc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wc](/man/wc)(1), [sloccount](/man/sloccount)(1), [tokei](/man/tokei)(1)

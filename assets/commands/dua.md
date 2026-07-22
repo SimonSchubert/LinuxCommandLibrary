@@ -146,6 +146,14 @@ Numbers from dua and `du` will not always agree, and neither is wrong: they diff
 
 dua was created by **Sebastian Thiel** (Byron), who also wrote gitoxide, and first released around **2019**. Written in Rust, it belongs to the generation of tools that revisited the classic Unix utilities on the assumption that the machine has many cores and a fast SSD, neither of which was true when `du` was designed. Its distinguishing feature over `ncdu` and `dust` is that deletion is a first-class operation, not an afterthought.
 
+# INSTALL
+
+```apk: sudo apk add dua```
+
+```nix: nix profile install nixpkgs#dua```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [du](/man/du)(1), [ncdu](/man/ncdu)(1), [dust](/man/dust)(1), [gdu](/man/gdu)(1), [duf](/man/duf)(1)

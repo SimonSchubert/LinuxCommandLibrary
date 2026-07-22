@@ -58,6 +58,24 @@ Mostly redundant with modern ar. Index may need updating after modifications. So
 
 **ranlib** dates back to early Unix, when archive indexes were not automatically maintained. Part of **GNU Binutils**, it remains for compatibility though ar now typically handles indexing automatically.
 
+# INSTALL
+
+```apt: sudo apt install binutils```
+
+```dnf: sudo dnf install binutils```
+
+```pacman: sudo pacman -S binutils```
+
+```apk: sudo apk add binutils```
+
+```zypper: sudo zypper install binutils```
+
+```brew: brew install binutils```
+
+```nix: nix profile install nixpkgs#binutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ar](/man/ar)(1), [nm](/man/nm)(1), [ld](/man/ld)(1), [objdump](/man/objdump)(1)

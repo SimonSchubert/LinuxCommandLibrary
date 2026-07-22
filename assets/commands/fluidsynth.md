@@ -105,6 +105,24 @@ Requires at least one SoundFont file (**.sf2** or **.sf3**) to produce sound. Ma
 
 FluidSynth was created by **Peter Hanappe** in **2000** as an open-source software synthesizer. Originally named "IIWU Synth," it was renamed to FluidSynth and has grown into a widely-used MIDI synthesizer for Linux, macOS, and Windows. The project continues active development, with version 2.x introducing significant improvements to the API and audio quality.
 
+# INSTALL
+
+```apt: sudo apt install fluidsynth```
+
+```dnf: sudo dnf install fluidsynth```
+
+```pacman: sudo pacman -S fluidsynth```
+
+```apk: sudo apk add fluidsynth```
+
+```zypper: sudo zypper install fluidsynth```
+
+```brew: brew install fluidsynth```
+
+```nix: nix profile install nixpkgs#fluidsynth```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [timidity](/man/timidity)(1), [aplaymidi](/man/aplaymidi)(1), [aconnect](/man/aconnect)(1), [amidi](/man/amidi)(1)

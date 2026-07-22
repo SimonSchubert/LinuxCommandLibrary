@@ -75,6 +75,12 @@ Storage capacity depends on line lengths in the cover file. Very short lines pro
 
 **SNOW** (Steganographic Nature Of Whitespace) was created by **Matthew Kwan** in **1996**. The program is one of the earliest and most well-known text-based steganography tools, using the simple but effective technique of encoding data in trailing whitespace that is invisible to casual observers.
 
+# INSTALL
+
+```apt: sudo apt install stegsnow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [steghide](/man/steghide)(1), [outguess](/man/outguess)(1), [gzip](/man/gzip)(1)

@@ -107,6 +107,14 @@ Requires authentication. Node pools incur charges. Kubernetes version support va
 
 linode-cli lke is part of the **Linode CLI** for managing Linode Kubernetes Engine (LKE) clusters.
 
+# INSTALL
+
+```brew: brew install linode-cli```
+
+```nix: nix profile install nixpkgs#linode-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [linode-cli](/man/linode-cli)(1), [kubectl](/man/kubectl)(1), [helm](/man/helm)(1), [linode-cli-linodes](/man/linode-cli-linodes)(1), [linode-cli-volumes](/man/linode-cli-volumes)(1)

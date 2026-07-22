@@ -88,6 +88,15 @@ Active mode generates DNS traffic that may trigger alerts. Brute-forcing can tak
 
 **amass enum** has been the core functionality since amass was first released. It has expanded to include dozens of data sources and multiple enumeration techniques.
 
+# INSTALL
+
+```aur: yay -S amass```
+
+```brew: brew install amass```
+
+```nix: nix profile install nixpkgs#amass```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [amass](/man/amass)(1), [amass-intel](/man/amass-intel)(1), [amass-track](/man/amass-track)(1), [subfinder](/man/subfinder)(1)

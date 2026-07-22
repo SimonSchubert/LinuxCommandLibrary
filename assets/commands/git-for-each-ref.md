@@ -75,6 +75,24 @@ The format string syntax supports field extraction using %(fieldname) placeholde
 
 This command is primarily used in scripts and Git aliases rather than direct user interaction. The filtering options (--merged, --no-merged, --points-at) provide powerful selection mechanisms for finding references matching specific criteria.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-tag](/man/git-tag)(1), [git-rev-parse](/man/git-rev-parse)(1)

@@ -81,6 +81,20 @@ No encryption support in some builds.
 
 The "r" stands for "reduced" - minimal format support, not recursive.
 
+# INSTALL
+
+```apt: sudo apt install 7zip```
+
+```dnf: sudo dnf install 7zip```
+
+```pacman: sudo pacman -S 7zip```
+
+```zypper: sudo zypper install 7zip```
+
+```brew: brew install 7zip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [7z](/man/7z)(1), [7za](/man/7za)(1), [tar](/man/tar)(1)

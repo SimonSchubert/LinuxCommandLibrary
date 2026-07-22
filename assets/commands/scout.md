@@ -67,6 +67,14 @@ Scout relies on pre-built indexes that may not include all packages or the lates
 
 Scout was developed by the **openSUSE** project to provide helpful suggestions when users type commands that are not installed. The project has been succeeded by **cnf** (command-not-found) in newer openSUSE releases.
 
+# INSTALL
+
+```apt: sudo apt install openafs-client```
+
+```nix: nix profile install nixpkgs#scout```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zypper](/man/zypper)(8), [pkgfile](/man/pkgfile)(1), [apt-file](/man/apt-file)(1)

@@ -47,6 +47,22 @@ Quality depends on source PDF complexity. Text may be converted to outlines. Som
 
 **pstoedit** was created by **Wolfgang Glunz** to enable conversion of PostScript graphics to editable vector formats. It has been maintained since the 1990s and supports many output formats.
 
+# INSTALL
+
+```apt: sudo apt install pstoedit```
+
+```dnf: sudo dnf install pstoedit```
+
+```pacman: sudo pacman -S pstoedit```
+
+```zypper: sudo zypper install pstoedit```
+
+```brew: brew install pstoedit```
+
+```nix: nix profile install nixpkgs#pstoedit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ps2pdf](/man/ps2pdf)(1), [pdf2svg](/man/pdf2svg)(1), [convert](/man/convert)(1)

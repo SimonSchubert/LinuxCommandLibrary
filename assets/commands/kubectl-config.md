@@ -109,6 +109,20 @@ The subcommands let you inspect the merged view, switch between contexts to targ
 
 **kubectl config** has shipped with **kubectl** since early **Kubernetes** releases and codifies the kubeconfig format used across the ecosystem (kubectl, client-go, Helm, kustomize, ...).
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectx](/man/kubectx)(1), [kubens](/man/kubens)(1)

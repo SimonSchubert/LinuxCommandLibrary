@@ -38,6 +38,11 @@ Used for debugging purposes. The bundle's state may not match current repository
 
 **aptitude-run-state-bundle** complements aptitude-create-state-bundle, enabling developers to reproduce reported issues.
 
+# INSTALL
+
+```apt: sudo apt install aptitude```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aptitude](/man/aptitude)(8), [aptitude-create-state-bundle](/man/aptitude-create-state-bundle)(1)

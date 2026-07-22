@@ -72,6 +72,11 @@ Requires application key authorization before use. Large file uploads are automa
 
 **b2-tools** is the official CLI developed by **Backblaze** for their B2 Cloud Storage service. It was open-sourced on GitHub and is installable via pip as `b2`.
 
+# INSTALL
+
+```brew: brew install b2-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [b2](/man/b2)(1), [rclone](/man/rclone)(1), [duplicity](/man/duplicity)(1)

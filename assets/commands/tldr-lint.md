@@ -59,6 +59,22 @@ TLDR format specific. Node.js required. For tldr contributors.
 
 **tldr-lint** was created for the **tldr-pages** project to validate page formatting consistency.
 
+# INSTALL
+
+```apt: sudo apt install tealdeer```
+
+```dnf: sudo dnf install tldr```
+
+```pacman: sudo pacman -S tealdeer```
+
+```zypper: sudo zypper install tealdeer```
+
+```brew: brew install tealdeer```
+
+```nix: nix profile install nixpkgs#tealdeer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tldr](/man/tldr)(1), [markdownlint](/man/markdownlint)(1)

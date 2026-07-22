@@ -45,6 +45,22 @@ converts Macintosh PICT images to PPM
 
 **picttoppm** reads a Macintosh PICT file (version 1 or 2) and outputs a PPM image. PICT was the native graphics format on classic Mac OS, encoded in QuickDraw commands. Part of the Netpbm toolkit.
 
+# INSTALL
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmtopict](/man/ppmtopict)(1), [macptopbm](/man/macptopbm)(1)

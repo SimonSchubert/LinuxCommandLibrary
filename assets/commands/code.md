@@ -97,6 +97,14 @@ The **code** command must be added to PATH, which can be done via the "Install '
 
 Visual Studio Code was released by **Microsoft** in **April 2015** as a free, open-source editor built on Electron. It rapidly grew to become one of the most popular development environments. The CLI has been part of VS Code since its early releases, enabling terminal-based workflows.
 
+# INSTALL
+
+```pacman: sudo pacman -S code```
+
+```nix: nix profile install nixpkgs#code```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [nano](/man/nano)(1), [subl](/man/subl)(1), [atom](/man/atom)(1)

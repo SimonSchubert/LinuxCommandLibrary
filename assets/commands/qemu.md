@@ -62,6 +62,18 @@ Performance varies by mode. KVM for best performance.
 
 QEMU was created by **Fabrice Bellard** for processor emulation.
 
+# INSTALL
+
+```dnf: sudo dnf install qemu```
+
+```zypper: sudo zypper install qemu```
+
+```brew: brew install qemu```
+
+```nix: nix profile install nixpkgs#qemu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qemu-img](/man/qemu-img)(1), [kvm](/man/kvm)(1), [virsh](/man/virsh)(1)

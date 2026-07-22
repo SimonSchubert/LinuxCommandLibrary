@@ -61,6 +61,16 @@ Terminal game. Requires ncurses. High scores stored locally.
 
 moon-buggy was created as a **console game** inspired by classic arcade moon patrol style games.
 
+# INSTALL
+
+```dnf: sudo dnf install moon-buggy```
+
+```brew: brew install moon-buggy```
+
+```nix: nix profile install nixpkgs#moon-buggy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ninvaders](/man/ninvaders)(1), [bastet](/man/bastet)(1), [nethack](/man/nethack)(1)

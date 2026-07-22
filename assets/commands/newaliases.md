@@ -62,6 +62,22 @@ MTA-dependent (sendmail, postfix, etc.). File location varies by system. Root pr
 
 newaliases has been part of Unix mail systems since the early days of sendmail, developed at UC Berkeley in the **1980s**.
 
+# INSTALL
+
+```apt: sudo apt install dma```
+
+```dnf: sudo dnf install postfix```
+
+```pacman: sudo pacman -S postfix```
+
+```apk: sudo apk add postfix```
+
+```zypper: sudo zypper install postfix```
+
+```nix: nix profile install nixpkgs#dma```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sendmail](/man/sendmail)(8), [postfix](/man/postfix)(1)

@@ -76,6 +76,24 @@ Results vary with test parameters. May fill disk with test files. Requires under
 
 fio was created by **Jens Axboe**, the Linux block layer maintainer. It's the most comprehensive open source storage benchmark, supporting virtually every I/O pattern and storage backend.
 
+# INSTALL
+
+```apt: sudo apt install fio```
+
+```dnf: sudo dnf install fio```
+
+```pacman: sudo pacman -S fio```
+
+```apk: sudo apk add fio```
+
+```zypper: sudo zypper install fio```
+
+```brew: brew install fio```
+
+```nix: nix profile install nixpkgs#fio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dd](/man/dd)(1), [hdparm](/man/hdparm)(1), [ioping](/man/ioping)(1)

@@ -28,6 +28,12 @@ Mouse-driven SVG favicon editor for the terminal
 
 **rusticon** was created by **Ron Ilan** (ronilan) and is written in **Rust**.
 
+# INSTALL
+
+```aur: yay -S rusticon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [imagemagick](/man/imagemagick)(1), [figlet](/man/figlet)(1), [chafa](/man/chafa)(1)

@@ -82,6 +82,21 @@ By default, beanstalkd stores all jobs in memory; a restart loses all queued job
 
 Beanstalkd was created by **Keith Rarick** in **2007** at Causes.com to handle background job processing. It gained popularity as a lightweight alternative to heavier message queue systems, known for its simplicity and sub-millisecond latency.
 
+# INSTALL
+
+```apt: sudo apt install beanstalkd```
+
+```dnf: sudo dnf install beanstalkd```
+
+```aur: yay -S beanstalkd```
+
+```apk: sudo apk add beanstalkd```
+
+```brew: brew install beanstalkd```
+
+```nix: nix profile install nixpkgs#beanstalkd```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [redis-server](/man/redis-server)(1), [rabbitmq-server](/man/rabbitmq-server)(1), [memcached](/man/memcached)(1)

@@ -66,6 +66,14 @@ Kubernetes required. Host cluster needed. Loft Labs product.
 
 **vcluster** was created by **Loft Labs** for running lightweight virtual Kubernetes clusters inside existing clusters.
 
+# INSTALL
+
+```brew: brew install vcluster```
+
+```nix: nix profile install nixpkgs#vcluster```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [k3s](/man/k3s)(1), [kind](/man/kind)(1)

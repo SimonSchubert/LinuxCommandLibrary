@@ -65,6 +65,22 @@ The terminal supports multiple profiles and can execute commands on startup.
 
 Designed for XFCE but works on other desktops. Requires GTK and VTE libraries.
 
+# INSTALL
+
+```apt: sudo apt install xfce4-terminal```
+
+```dnf: sudo dnf install xfce4-terminal```
+
+```pacman: sudo pacman -S xfce4-terminal```
+
+```apk: sudo apk add xfce4-terminal```
+
+```zypper: sudo zypper install xfce4-terminal```
+
+```nix: nix profile install nixpkgs#xfce4-terminal```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnome-terminal](/man/gnome-terminal)(1), [konsole](/man/konsole)(1), [xterm](/man/xterm)(1)

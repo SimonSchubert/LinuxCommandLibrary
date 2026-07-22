@@ -79,6 +79,21 @@ The atd spool directory (**/var/spool/at/**) does not work correctly when mounte
 
 The **at** command and its daemon have origins in early Unix systems, dating back to **Version 7 Unix** in **1979**. The concept of deferred command execution was part of the original Unix job control philosophy. The modern implementation includes the **batch** command for load-sensitive scheduling, making it useful for resource-intensive tasks that should run during low-usage periods.
 
+# INSTALL
+
+```apt: sudo apt install at```
+
+```dnf: sudo dnf install at```
+
+```pacman: sudo pacman -S at```
+
+```apk: sudo apk add at```
+
+```zypper: sudo zypper install at```
+
+```nix: nix profile install nixpkgs#at```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [at](/man/at)(1), [atq](/man/atq)(1), [atrm](/man/atrm)(1), [batch](/man/batch)(1), [cron](/man/cron)(8), [crontab](/man/crontab)(1)

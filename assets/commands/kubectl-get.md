@@ -126,6 +126,20 @@ Subcommand of kubectl. By default, only resources in the current namespace are s
 
 kubectl get is the primary resource listing command for **Kubernetes** cluster inspection.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-describe](/man/kubectl-describe)(1), [kubectl-apply](/man/kubectl-apply)(1), [kubectl-delete](/man/kubectl-delete)(1), [kubectl-logs](/man/kubectl-logs)(1)

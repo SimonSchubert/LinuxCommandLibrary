@@ -80,6 +80,24 @@ Use **--append** to add another node (context/endpoint) to an existing named bui
 
 The **docker** driver does not support multi-platform image builds or cache export. **docker-container**, **kubernetes**, and **remote** drivers require **docker buildx build --load** to make images appear in **docker images**. Remote and Kubernetes builders may show as inactive if their endpoint is unreachable within **--timeout**.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-buildx-ls](/man/docker-buildx-ls)(1), [docker-buildx-rm](/man/docker-buildx-rm)(1), [docker-build](/man/docker-build)(1), [docker](/man/docker)(1)

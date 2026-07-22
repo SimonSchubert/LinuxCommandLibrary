@@ -62,6 +62,22 @@ Audio latency varies. Controller mapping needed. Resource intensive.
 
 Mixxx started in 2001 as an open-source alternative to commercial **DJ software** like Traktor.
 
+# INSTALL
+
+```apt: sudo apt install mixxx```
+
+```dnf: sudo dnf install mixxx```
+
+```pacman: sudo pacman -S mixxx```
+
+```apk: sudo apk add mixxx```
+
+```zypper: sudo zypper install mixxx```
+
+```nix: nix profile install nixpkgs#mixxx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [audacity](/man/audacity)(1), [ardour](/man/ardour)(1)

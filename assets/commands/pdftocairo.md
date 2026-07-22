@@ -111,6 +111,18 @@ Vector output may have issues with complex fonts. Very high DPI uses significant
 
 **pdftocairo** is part of **poppler-utils** and uses the **Cairo** graphics library. It provides higher-quality output than older rasterization tools by leveraging Cairo's sophisticated rendering.
 
+# INSTALL
+
+```apt: sudo apt install poppler-utils```
+
+```dnf: sudo dnf install poppler-utils```
+
+```apk: sudo apk add poppler-utils```
+
+```nix: nix profile install nixpkgs#poppler-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdftoppm](/man/pdftoppm)(1), [convert](/man/convert)(1), [inkscape](/man/inkscape)(1), [pdfimages](/man/pdfimages)(1)

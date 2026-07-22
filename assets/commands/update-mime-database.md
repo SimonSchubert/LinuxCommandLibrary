@@ -62,6 +62,24 @@ Requires write permission to target directory. System directory updates need roo
 
 **update-mime-database** is part of the freedesktop.org shared-mime-info project, created to standardize MIME type handling across Linux desktop environments. Before this project, GNOME and KDE maintained separate incompatible MIME databases.
 
+# INSTALL
+
+```apt: sudo apt install shared-mime-info```
+
+```dnf: sudo dnf install shared-mime-info```
+
+```pacman: sudo pacman -S shared-mime-info```
+
+```apk: sudo apk add shared-mime-info```
+
+```zypper: sudo zypper install shared-mime-info```
+
+```brew: brew install shared-mime-info```
+
+```nix: nix profile install nixpkgs#shared-mime-info```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdg-mime](/man/xdg-mime)(1), [file](/man/file)(1), [mimetype](/man/mimetype)(1)

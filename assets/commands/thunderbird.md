@@ -76,6 +76,20 @@ Desktop application. Profile-based storage. Memory usage can be high with many a
 
 **Thunderbird** was originally developed by **Mozilla Foundation** as a companion to Firefox. Since 2020, it has been maintained by the **MZLA Technologies** subsidiary. It was rebranded as **Thunderbird Supernova** with the major UI refresh in version 115 (2023).
 
+# INSTALL
+
+```apt: sudo apt install thunderbird```
+
+```dnf: sudo dnf install thunderbird```
+
+```pacman: sudo pacman -S thunderbird```
+
+```apk: sudo apk add thunderbird```
+
+```nix: nix profile install nixpkgs#thunderbird```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mutt](/man/mutt)(1), [evolution](/man/evolution)(1), [firefox](/man/firefox)(1), [neomutt](/man/neomutt)(1)

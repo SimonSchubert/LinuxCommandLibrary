@@ -104,6 +104,24 @@ Requires accounts that match the queries `type:A` (assets) and `type:L` (liabili
 
 Balancesheet is a standard report in **hledger** for viewing financial position at a point in time.
 
+# INSTALL
+
+```apt: sudo apt install hledger```
+
+```dnf: sudo dnf install hledger```
+
+```pacman: sudo pacman -S hledger```
+
+```apk: sudo apk add hledger```
+
+```zypper: sudo zypper install hledger```
+
+```brew: brew install hledger```
+
+```nix: nix profile install nixpkgs#hledger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hledger](/man/hledger)(1), [hledger-balance](/man/hledger-balance)(1), [hledger-incomestatement](/man/hledger-incomestatement)(1)

@@ -40,6 +40,24 @@ Part of git-extras package. Counts commits on current branch. Merge commits incl
 
 git count is part of **git-extras**, providing simple commit counting that complements git shortlog.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-count-objects](/man/git-count-objects)(1), [git-shortlog](/man/git-shortlog)(1)

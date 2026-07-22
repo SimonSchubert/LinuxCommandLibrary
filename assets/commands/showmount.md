@@ -59,6 +59,20 @@ Requires rpcbind/portmapper. Firewalls may block queries. NFSv4 may not report a
 
 **showmount** is part of NFS utilities dating to original NFS implementations. It provides essential information for NFS administration.
 
+# INSTALL
+
+```apt: sudo apt install nfs-common```
+
+```dnf: sudo dnf install nfs-utils```
+
+```pacman: sudo pacman -S nfs-utils```
+
+```apk: sudo apk add nfs-utils```
+
+```nix: nix profile install nixpkgs#nfs-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(8), [exports](/man/exports)(5), [nfsd](/man/nfsd)(8)

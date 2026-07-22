@@ -57,6 +57,24 @@ Part of Netpbm. Output is plain text only, not an image. Row and column numberin
 
 pamslice is part of the **Netpbm** toolkit for image manipulation and analysis. It was added as a tool for extracting profile data from images.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamcut](/man/pamcut)(1), [pamfile](/man/pamfile)(1), [pamtopnm](/man/pamtopnm)(1), [netpbm](/man/netpbm)(1)

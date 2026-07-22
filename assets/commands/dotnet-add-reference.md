@@ -38,6 +38,18 @@ P2P references enable code sharing within a solution while maintaining clear dep
 
 Circular references are not allowed and will produce an error. The referenced project must exist. Use `dotnet list reference` to verify existing references.
 
+# INSTALL
+
+```dnf: sudo dnf install dotnet-host```
+
+```pacman: sudo pacman -S dotnet-host```
+
+```apk: sudo apk add dotnet-host```
+
+```brew: brew install dotnet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dotnet](/man/dotnet)(1), [dotnet-build](/man/dotnet-build)(1), [dotnet-add-package](/man/dotnet-add-package)(1)

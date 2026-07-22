@@ -72,6 +72,12 @@ High scan rates may trigger IDS/IPS alerts or violate network policies. Some fea
 
 **Angry IP Scanner** was created by Anton Keks and first released in **2001**. Originally written for Windows, it was rewritten in Java around **2007** to become cross-platform. It remains one of the most popular open-source network scanners with millions of downloads.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#ipscan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [masscan](/man/masscan)(1), [ping](/man/ping)(1), [netcat](/man/netcat)(1)

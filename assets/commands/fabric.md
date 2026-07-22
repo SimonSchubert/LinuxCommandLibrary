@@ -91,6 +91,14 @@ Version 2.x is significantly different from 1.x. Requires SSH access. Python 3 r
 
 Fabric was created by **Jeff Forcier** in **2009** as a simpler alternative to Capistrano for Python deployments. Version 2.0, released in **2018**, was a complete rewrite with a modernized API.
 
+# INSTALL
+
+```pacman: sudo pacman -S fabric```
+
+```brew: brew install fabric```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ansible](/man/ansible)(1), [ssh](/man/ssh)(1)

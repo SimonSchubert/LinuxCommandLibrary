@@ -92,6 +92,14 @@ Bundles its own Node.js runtime since version 1.0. Compatible with MongoDB 4.0+,
 
 mongosh was released by **MongoDB** in 2020 as the next-generation shell replacement for the legacy mongo shell.
 
+# INSTALL
+
+```brew: brew install mongosh```
+
+```nix: nix profile install nixpkgs#mongosh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mongo](/man/mongo)(1), [mongod](/man/mongod)(1), [mongoimport](/man/mongoimport)(1), [mongoexport](/man/mongoexport)(1), [mongodump](/man/mongodump)(1)

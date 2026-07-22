@@ -39,6 +39,22 @@ Will not overwrite existing files. Nix flakes must be enabled in the Nix configu
 
 Nix flakes were introduced as an experimental feature in **Nix 2.4** (2021) to provide reproducible, composable builds. The `nix flake init` subcommand is part of the new-style `nix` CLI (`nix3`).
 
+# INSTALL
+
+```apt: sudo apt install nix-bin```
+
+```dnf: sudo dnf install nix```
+
+```pacman: sudo pacman -S nix```
+
+```apk: sudo apk add nix```
+
+```zypper: sudo zypper install nix```
+
+```nix: nix profile install nixpkgs#nix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nix-flake](/man/nix-flake)(1), [nix-flake-show](/man/nix-flake-show)(1), [nix](/man/nix)(1)

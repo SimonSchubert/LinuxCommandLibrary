@@ -54,6 +54,16 @@ Kubernetes application deploy tool focused on labeled resource sets
 
 Requires working **kubectl** cluster access. Label-based ownership can conflict if labels are edited manually. Not a full Helm replacement for chart ecosystems.
 
+# INSTALL
+
+```apk: sudo apk add kapp```
+
+```brew: brew install kapp```
+
+```nix: nix profile install nixpkgs#kapp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [ytt](/man/ytt)(1), [helm](/man/helm)(1), [kustomize](/man/kustomize)(1)

@@ -72,6 +72,20 @@ The utility prompts for the password interactively; it cannot be provided on the
 
 **cifscreds** is part of the **cifs-utils** package, which provides tools for interacting with CIFS/SMB network shares on Linux. The utility was developed to support the multiuser mount feature that allows different users to access the same mount with individual credentials.
 
+# INSTALL
+
+```apt: sudo apt install cifs-utils```
+
+```dnf: sudo dnf install cifs-utils```
+
+```pacman: sudo pacman -S cifs-utils```
+
+```zypper: sudo zypper install cifs-utils```
+
+```nix: nix profile install nixpkgs#cifs-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount.cifs](/man/mount.cifs)(8), [cifs.idmap](/man/cifs.idmap)(8), [keyctl](/man/keyctl)(1)

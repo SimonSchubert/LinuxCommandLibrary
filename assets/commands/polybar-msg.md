@@ -42,6 +42,22 @@ Send IPC messages to running Polybar
 
 **polybar-msg** sends IPC messages to running polybar instances. Controls modules, triggers hooks, and manages polybar lifecycle. Used for dynamic bar updates and scripted interactions.
 
+# INSTALL
+
+```apt: sudo apt install polybar```
+
+```dnf: sudo dnf install polybar```
+
+```pacman: sudo pacman -S polybar```
+
+```apk: sudo apk add polybar```
+
+```zypper: sudo zypper install polybar```
+
+```nix: nix profile install nixpkgs#polybar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [polybar](/man/polybar)(1)

@@ -108,6 +108,16 @@ The cron daemon starts at boot and runs continuously, waking up every minute to 
 
 Jobs run with limited environment. Set PATH explicitly in crontab. Output mailed to user unless redirected. Use MAILTO="" to disable mail.
 
+# INSTALL
+
+```apt: sudo apt install cron```
+
+```zypper: sudo zypper install cron```
+
+```nix: nix profile install nixpkgs#cron```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [crontab](/man/crontab)(5), [at](/man/at)(1)

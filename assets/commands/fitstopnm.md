@@ -30,6 +30,24 @@ convert astronomical FITS images to PNM
 
 The tool reads multi-dimensional image data from FITS files and converts it to the portable anymap format, making astronomical images accessible to standard image processing tools. Part of the Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmtofits](/man/pnmtofits)(1), [pamtofits](/man/pamtofits)(1)

@@ -82,6 +82,24 @@ The command is essential for backporting bug fixes to maintenance branches, inco
 
 When specifying a range with `..`, the start commit is excluded. To include both endpoints use `start^..end`. Cherry-picking can encounter conflicts when changes don't apply cleanly to the target branch's context. The operation can be paused to allow manual resolution before continuing with `--continue`.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-rebase](/man/git-rebase)(1), [git-revert](/man/git-revert)(1), [git-cherry](/man/git-cherry)(1)

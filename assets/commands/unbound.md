@@ -81,6 +81,24 @@ Running as a public DNS resolver requires careful access control configuration t
 
 **Unbound** was developed by **NLnet Labs** in the Netherlands, with the first version released in **May 2008**. It was designed as a modern, secure alternative to BIND, focusing on code cleanliness and security. Unbound has become the default DNS resolver in several BSD operating systems and is widely used with Pi-hole and other DNS filtering solutions.
 
+# INSTALL
+
+```apt: sudo apt install unbound```
+
+```dnf: sudo dnf install unbound```
+
+```pacman: sudo pacman -S unbound```
+
+```apk: sudo apk add unbound```
+
+```zypper: sudo zypper install unbound```
+
+```brew: brew install unbound```
+
+```nix: nix profile install nixpkgs#unbound```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unbound-control](/man/unbound-control)(8), [unbound-checkconf](/man/unbound-checkconf)(8), [unbound-host](/man/unbound-host)(1), [dig](/man/dig)(1), [nslookup](/man/nslookup)(1)

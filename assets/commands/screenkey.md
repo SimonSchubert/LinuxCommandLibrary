@@ -93,6 +93,18 @@ Requires X11; may not work properly on Wayland without XWayland. The tool captur
 
 **screenkey** was created for screencasting and educational purposes, allowing presenters to show keyboard input visually to their audience.
 
+# INSTALL
+
+```dnf: sudo dnf install screenkey```
+
+```pacman: sudo pacman -S screenkey```
+
+```zypper: sudo zypper install screenkey```
+
+```nix: nix profile install nixpkgs#screenkey```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [slop](/man/slop)(1), [xdotool](/man/xdotool)(1)

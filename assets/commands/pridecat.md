@@ -79,6 +79,12 @@ Colors are applied as ANSI escape sequences. Output may not display correctly in
 
 **pridecat** was created as a fun, colorful alternative to cat, allowing users to display file contents decorated with pride flag colors.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pridecat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cat](/man/cat)(1), [lolcat](/man/lolcat)(1)

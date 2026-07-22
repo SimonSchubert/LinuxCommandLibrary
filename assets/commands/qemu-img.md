@@ -90,6 +90,22 @@ The **create** command builds new images with optional thin provisioning, while 
 
 Part of the QEMU suite (qemu-utils package). Shrinking images with resize requires the guest filesystem to be resized first. Only qcow2, qed, and vdi formats support consistency checks.
 
+# INSTALL
+
+```apt: sudo apt install qemu-utils```
+
+```dnf: sudo dnf install qemu-img```
+
+```pacman: sudo pacman -S qemu-img```
+
+```apk: sudo apk add qemu-img```
+
+```zypper: sudo zypper install qemu-img```
+
+```nix: nix profile install nixpkgs#qemu-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qemu](/man/qemu)(1), [virt-sparsify](/man/virt-sparsify)(1)

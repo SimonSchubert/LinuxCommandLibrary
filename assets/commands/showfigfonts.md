@@ -42,6 +42,24 @@ Large font directories take time. Output can be very long. Some fonts are wide.
 
 **showfigfonts** is distributed with **figlet** for font preview. It helps users discover available fonts.
 
+# INSTALL
+
+```apt: sudo apt install figlet```
+
+```dnf: sudo dnf install figlet```
+
+```pacman: sudo pacman -S figlet```
+
+```apk: sudo apk add figlet```
+
+```zypper: sudo zypper install figlet```
+
+```brew: brew install figlet```
+
+```nix: nix profile install nixpkgs#figlet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [figlet](/man/figlet)(1), [toilet](/man/toilet)(1), [banner](/man/banner)(1)

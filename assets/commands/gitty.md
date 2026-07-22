@@ -32,6 +32,12 @@ Other flags control provider tokens and output—see **gitty --help**. Uses **GI
 
 Needs network access and API credentials for private repos. Output depends on remote hosting (GitHub/GitLab support varies by version).
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#gitty```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [git](/man/git)(1), [glab](/man/glab)(1)

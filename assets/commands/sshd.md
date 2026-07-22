@@ -114,6 +114,18 @@ Requires root to bind privileged ports (below 1024). Misconfiguration can lock y
 
 **sshd** is part of **OpenSSH**, developed by the OpenBSD project starting in **1999**. It replaced insecure protocols like telnet and rsh.
 
+# INSTALL
+
+```apt: sudo apt install openssh-server```
+
+```dnf: sudo dnf install openssh-server```
+
+```apk: sudo apk add openssh-server```
+
+```zypper: sudo zypper install openssh-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [ssh-keygen](/man/ssh-keygen)(1)

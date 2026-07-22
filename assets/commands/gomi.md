@@ -54,6 +54,14 @@ The tool uses the XDG Trash specification on Linux and integrates with system tr
 
 Trashed files still consume disk space until the trash is emptied. Behavior differs from `rm` which permanently deletes files. Cross-filesystem trashing may copy files instead of moving them. Trash should be emptied periodically to reclaim space.
 
+# INSTALL
+
+```brew: brew install gomi```
+
+```nix: nix profile install nixpkgs#gomi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rm](/man/rm)(1), [trash-cli](/man/trash-cli)(1)

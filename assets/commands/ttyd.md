@@ -99,6 +99,22 @@ By default, ttyd provides no authentication; always use **-c** or firewall rules
 
 **ttyd** was created by **Shuanglei Tao** (tsl0922) and first released around **2016**. Written in C, it uses libwebsockets for WebSocket communication and xterm.js for the browser-based terminal. The project was inspired by older tools like shellinabox but with modern web technologies.
 
+# INSTALL
+
+```dnf: sudo dnf install ttyd```
+
+```pacman: sudo pacman -S ttyd```
+
+```apk: sudo apk add ttyd```
+
+```zypper: sudo zypper install ttyd```
+
+```brew: brew install ttyd```
+
+```nix: nix profile install nixpkgs#ttyd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [screen](/man/screen)(1), [gotty](/man/gotty)(1), [ssh](/man/ssh)(1)

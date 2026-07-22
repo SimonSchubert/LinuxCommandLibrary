@@ -89,6 +89,22 @@ Modern diff (3.4+) supports built-in color:
 
 Written in Perl. Requires ANSI color support in terminal (xterm, etc.). Colors can be customized via configuration files.
 
+# INSTALL
+
+```dnf: sudo dnf install colordiff```
+
+```pacman: sudo pacman -S colordiff```
+
+```apk: sudo apk add colordiff```
+
+```zypper: sudo zypper install colordiff```
+
+```brew: brew install colordiff```
+
+```nix: nix profile install nixpkgs#colordiff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [git-diff](/man/git-diff)(1), [vimdiff](/man/vimdiff)(1)

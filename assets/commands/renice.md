@@ -52,6 +52,14 @@ Lowering niceness (increasing priority) requires root privileges. The actual sch
 
 The **renice** command originated in 4.0BSD and has been a standard Unix utility since. It complements the **nice** command, which sets priority when launching new processes.
 
+# INSTALL
+
+```apt: sudo apt install bsdutils```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nice](/man/nice)(1), [top](/man/top)(1), [ps](/man/ps)(1), [ionice](/man/ionice)(1)

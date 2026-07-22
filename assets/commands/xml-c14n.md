@@ -56,6 +56,22 @@ Inclusive canonicalization includes ancestor namespace declarations; exclusive c
 
 The mode flag is positional — every invocation must supply exactly one of the four mode options before the input file. The XPath argument is itself an XML file containing an XPath, not a literal expression on the command line.
 
+# INSTALL
+
+```dnf: sudo dnf install xmlstarlet```
+
+```pacman: sudo pacman -S xmlstarlet```
+
+```apk: sudo apk add xmlstarlet```
+
+```zypper: sudo zypper install xmlstarlet```
+
+```brew: brew install xmlstarlet```
+
+```nix: nix profile install nixpkgs#xmlstarlet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xmlstarlet](/man/xmlstarlet)(1), [xml-canonic](/man/xml-canonic)(1), [xml-format](/man/xml-format)(1), [xmllint](/man/xmllint)(1)

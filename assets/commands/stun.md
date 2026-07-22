@@ -57,6 +57,16 @@ STUN server required. Network dependent. UDP by default.
 
 **stun** is a STUN (Session Traversal Utilities for NAT) client for testing NAT behavior and discovering external addresses.
 
+# INSTALL
+
+```apt: sudo apt install stun-client```
+
+```dnf: sudo dnf install stun```
+
+```nix: nix profile install nixpkgs#stun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pystun3](/man/pystun3)(1), [nmap](/man/nmap)(1), [netcat](/man/netcat)(1)

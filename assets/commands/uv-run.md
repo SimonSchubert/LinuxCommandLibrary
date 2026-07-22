@@ -75,6 +75,20 @@ When running a `.py` file with inline script metadata (PEP 723), uv automaticall
 
 If no `pyproject.toml` is found, **uv run** operates without a project context. The **--frozen** flag requires an existing lockfile and will fail if one is not present.
 
+# INSTALL
+
+```dnf: sudo dnf install uv```
+
+```pacman: sudo pacman -S uv```
+
+```apk: sudo apk add uv```
+
+```brew: brew install uv```
+
+```nix: nix profile install nixpkgs#uv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uv](/man/uv)(1), [uv-sync](/man/uv-sync)(1), [uv-lock](/man/uv-lock)(1), [python](/man/python)(1), [pip](/man/pip)(1)

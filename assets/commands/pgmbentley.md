@@ -28,6 +28,24 @@ Part of the Netpbm toolkit.
 
 Only accepts PGM (grayscale) input. For color images, split channels first with **ppmtopgm** or process with a separate workflow.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pgmoil](/man/pgmoil)(1), [pgmnoise](/man/pgmnoise)(1), [pnm](/man/pnm)(5)

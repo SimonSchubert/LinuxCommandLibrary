@@ -55,6 +55,24 @@ converts PAM/PNM images to TGA format
 
 **pamtotga** converts PAM/PNM images to TGA (Targa) format. Supports 24-bit and 32-bit with alpha. By default, the most constrained compatible type is chosen (monochrome over colormapped over unmapped). RLE compression is enabled by default. Part of the Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tgatoppm](/man/tgatoppm)(1), [ppmtotga](/man/ppmtotga)(1)

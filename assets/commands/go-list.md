@@ -82,6 +82,24 @@ list Go packages and module information
 
 **go list** displays information about Go packages and modules. It enumerates packages, their source directories, import paths, and dependencies. With **-m**, it lists modules instead of packages. The **-f** flag allows custom formatting using Go template syntax with access to package struct fields like ImportPath, Dir, Deps, and GoFiles.
 
+# INSTALL
+
+```apt: sudo apt install gccgo-go```
+
+```dnf: sudo dnf install gcc-go```
+
+```pacman: sudo pacman -S gcc-go```
+
+```apk: sudo apk add gcc-go```
+
+```zypper: sudo zypper install gcc-go```
+
+```brew: brew install go```
+
+```nix: nix profile install nixpkgs#go```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [go-mod](/man/go-mod)(1), [go-build](/man/go-build)(1), [go-get](/man/go-get)(1)

@@ -53,6 +53,24 @@ Plumbing command. Usually called by git am. Output is individual email files.
 
 git mailsplit is part of **Git's** email patch workflow, breaking mailboxes into individual messages for processing.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-am](/man/git-am)(1), [git-mailinfo](/man/git-mailinfo)(1)

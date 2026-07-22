@@ -121,6 +121,24 @@ Binary files may display incorrectly or cause terminal issues. Very long lines c
 
 **less** was written by **Mark Nudelman** and first released in **1984** as an improved replacement for the Unix **more** command. The name is a play on the phrase "less is more." It has become a standard utility on Unix-like systems and is the default pager on most Linux distributions. The program continues to be actively maintained with regular updates adding new features and improvements.
 
+# INSTALL
+
+```apt: sudo apt install less```
+
+```dnf: sudo dnf install less```
+
+```pacman: sudo pacman -S less```
+
+```apk: sudo apk add less```
+
+```zypper: sudo zypper install less```
+
+```brew: brew install less```
+
+```nix: nix profile install nixpkgs#less```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [more](/man/more)(1), [cat](/man/cat)(1), [tail](/man/tail)(1), [head](/man/head)(1), [most](/man/most)(1)

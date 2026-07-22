@@ -93,6 +93,14 @@ Part of **zisofs-tools**. Transparent decompression requires Linux kernel zisofs
 
 mkzftree is part of **zisofs-tools** for creating transparent compression on ISO9660 filesystems.
 
+# INSTALL
+
+```apt: sudo apt install genisoimage```
+
+```dnf: sudo dnf install genisoimage```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkisofs](/man/mkisofs)(1), [genisoimage](/man/genisoimage)(1)

@@ -44,6 +44,20 @@ adds or updates labels on Kubernetes resources
 
 To add a label, specify a key=value pair; to remove one, append a minus sign to the key name (e.g., `key-`). By default, overwriting an existing label requires the --overwrite flag to prevent accidental changes. The command can operate on individual resources, on all resources of a given type with --all, or on a filtered set matched by a label selector.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-annotate](/man/kubectl-annotate)(1)

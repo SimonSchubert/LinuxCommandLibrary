@@ -62,6 +62,14 @@ Requires OAuth authentication. API quotas apply. Not for large-scale operations.
 
 gdrive was created as an unofficial command-line client for Google Drive, filling the gap left by Google's lack of an official Linux client.
 
+# INSTALL
+
+```brew: brew install gdrive```
+
+```nix: nix profile install nixpkgs#gdrive```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rclone](/man/rclone)(1), [gdown](/man/gdown)(1)

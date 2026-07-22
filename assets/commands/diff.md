@@ -170,6 +170,24 @@ Large files can be slow. Binary files show as "differ" without details. Whitespa
 
 **diff** was written by **James W. Hunt** and **Doug McIlroy** at Bell Labs around **1974**, with the algorithm published in their joint paper in **1976**.
 
+# INSTALL
+
+```apt: sudo apt install diffutils```
+
+```dnf: sudo dnf install diffutils```
+
+```pacman: sudo pacman -S diffutils```
+
+```apk: sudo apk add diffutils```
+
+```zypper: sudo zypper install diffutils```
+
+```brew: brew install diffutils```
+
+```nix: nix profile install nixpkgs#diffutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [patch](/man/patch)(1), [git-diff](/man/git-diff)(1), [cmp](/man/cmp)(1), [vimdiff](/man/vimdiff)(1)

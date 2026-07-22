@@ -126,6 +126,11 @@ Git repository integration requires valid credentials and appropriate repository
 
 **AWS Amplify** was announced at **AWS re:Invent 2017** as a framework and toolchain for mobile and web app development. **Amplify Console** (now Amplify Hosting) launched in **November 2018**, providing continuous deployment and hosting capabilities for modern web applications.
 
+# INSTALL
+
+```brew: brew install aws-amplify```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-cloudfront](/man/aws-cloudfront)(1), [aws-codecommit](/man/aws-codecommit)(1), [aws-cognito-idp](/man/aws-cognito-idp)(1), [aws](/man/aws)(1)

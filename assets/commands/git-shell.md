@@ -43,6 +43,24 @@ Login shell, not a command. Only allows git commands. Used for git server accoun
 
 git-shell was created to enable **secure git hosting** by providing a restricted shell that only permits git operations.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [ssh](/man/ssh)(1), [chsh](/man/chsh)(1)

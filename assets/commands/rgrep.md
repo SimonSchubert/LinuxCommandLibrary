@@ -82,6 +82,20 @@ On most GNU/Linux systems, rgrep is installed by default as part of the GNU grep
 
 By default follows symlinks on the command line. May be slow on large trees. Deprecated in GNU grep in favor of **grep -r**, but still provided for backward compatibility. Consider ripgrep (**rg**) for better performance on large codebases.
 
+# INSTALL
+
+```apt: sudo apt install grep```
+
+```dnf: sudo dnf install grep```
+
+```pacman: sudo pacman -S grep```
+
+```zypper: sudo zypper install grep```
+
+```brew: brew install grep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [egrep](/man/egrep)(1), [fgrep](/man/fgrep)(1), [rg](/man/rg)(1)

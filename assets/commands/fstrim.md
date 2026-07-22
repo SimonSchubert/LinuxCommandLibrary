@@ -52,6 +52,24 @@ Only works on filesystems whose underlying storage supports discard (most SSDs, 
 
 **fstrim** is part of the **util-linux** package, providing TRIM support for SSD optimization on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add fstrim```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blkdiscard](/man/blkdiscard)(8), [mount](/man/mount)(8)

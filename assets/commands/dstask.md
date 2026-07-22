@@ -99,6 +99,14 @@ Requires Git to be initialized and configured. Remote sync requires valid Git re
 
 **dstask** was created by Cody Chan as a task manager that embraces plain-text storage and Git for synchronization. It was inspired by todo.txt but adds Git integration and a more modern interface.
 
+# INSTALL
+
+```brew: brew install dstask```
+
+```nix: nix profile install nixpkgs#dstask```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [task](/man/task)(1)

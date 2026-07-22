@@ -51,6 +51,20 @@ The filesystem must not be mounted read-write. Run zerofree from a live/rescue e
 
 **zerofree** was written by Ron Yorston to help shrink User-Mode Linux and virtual machine disk images. It is packaged as **zerofree** on most distributions.
 
+# INSTALL
+
+```apt: sudo apt install zerofree```
+
+```dnf: sudo dnf install zerofree```
+
+```apk: sudo apk add zerofree```
+
+```zypper: sudo zypper install zerofree```
+
+```nix: nix profile install nixpkgs#zerofree```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [e2fsck](/man/e2fsck)(8), [fstrim](/man/fstrim)(8), [blkdiscard](/man/blkdiscard)(8), [shred](/man/shred)(1)

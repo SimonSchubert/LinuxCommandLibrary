@@ -93,6 +93,24 @@ Requires a terminal that supports ANSI escape codes and curses library. Heavy CP
 
 CMatrix was originally written by **Chris Allegretta** in **1999**, inspired by the visual effects in the 1999 film "The Matrix." It was created as a fun terminal application for Unix-like systems and has become a popular way to add visual flair to terminal sessions. The project is open source and continues to receive updates from the community.
 
+# INSTALL
+
+```apt: sudo apt install cmatrix```
+
+```dnf: sudo dnf install cmatrix```
+
+```pacman: sudo pacman -S cmatrix```
+
+```apk: sudo apk add cmatrix```
+
+```zypper: sudo zypper install cmatrix```
+
+```brew: brew install cmatrix```
+
+```nix: nix profile install nixpkgs#cmatrix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sl](/man/sl)(1), [cowsay](/man/cowsay)(1), [figlet](/man/figlet)(1), [lolcat](/man/lolcat)(1)

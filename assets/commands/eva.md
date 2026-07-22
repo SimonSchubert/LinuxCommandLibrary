@@ -68,6 +68,16 @@ Complex expressions may need quoting to avoid shell interpretation. Variables do
 
 eva was created as a modern command-line calculator, providing an alternative to bc and similar tools with a more intuitive syntax and additional features.
 
+# INSTALL
+
+```pacman: sudo pacman -S eva```
+
+```brew: brew install eva```
+
+```nix: nix profile install nixpkgs#eva```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bc](/man/bc)(1), [calc](/man/calc)(1), [qalc](/man/qalc)(1)

@@ -66,6 +66,14 @@ OpenRC-specific, not for systemd systems. Requires root for service control. Ser
 
 **rc-service** is part of **OpenRC**, an init system created for Gentoo Linux. It provides dependency-based service management as an alternative to systemd.
 
+# INSTALL
+
+```apt: sudo apt install openrc```
+
+```apk: sudo apk add openrc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rc-update](/man/rc-update)(8), [rc-status](/man/rc-status)(8), [openrc](/man/openrc)(8)

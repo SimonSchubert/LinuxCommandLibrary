@@ -69,6 +69,18 @@ Configure aliases first. S3 compatible. Different from Midnight Commander mc.
 
 MinIO Client was created by **MinIO** for managing object storage across cloud providers.
 
+# INSTALL
+
+```apt: sudo apt install minio-client```
+
+```pacman: sudo pacman -S minio-client```
+
+```zypper: sudo zypper install minio-client```
+
+```nix: nix profile install nixpkgs#minio-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [minio-server](/man/minio-server)(1), [aws](/man/aws)(1), [s3cmd](/man/s3cmd)(1)

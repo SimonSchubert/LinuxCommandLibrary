@@ -45,6 +45,12 @@ checks PostgreSQL server connection readiness
 
 **pg_isready** checks PostgreSQL server connection readiness. Returns exit code indicating server status. Useful for scripts and health checks before connecting.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [psql](/man/psql)(1), [pg_ctl](/man/pg_ctl)(1)

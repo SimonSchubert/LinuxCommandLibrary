@@ -112,6 +112,14 @@ Requires Python 3.7+. The Snakefile must be valid Python syntax. When using **--
 
 **Snakemake** was created by Johannes Köster and first published in **2012** in the journal Bioinformatics. The name is a play on "make" (the build automation tool) and Python ("snake"). It was designed to address the reproducibility challenges in computational biology workflows. The project has grown significantly, with hundreds of citations per year and integration with major bioinformatics communities. Development continues actively with regular releases.
 
+# INSTALL
+
+```brew: brew install snakemake```
+
+```nix: nix profile install nixpkgs#snakemake```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [make](/man/make)(1), [nextflow](/man/nextflow)(1), [dvc](/man/dvc)(1)

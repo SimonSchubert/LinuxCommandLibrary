@@ -102,6 +102,12 @@ Requires a synced cardano-node. Database must be persisted for wallet recovery. 
 
 **cardano-wallet** was developed by **Input Output Global (IOG)** as the official wallet backend for Cardano. It was introduced during the **Shelley era** in **2020** to provide a standard wallet implementation. The tool supports the evolving Cardano protocol including staking, native tokens, and smart contract interactions.
 
+# INSTALL
+
+```aur: yay -S cardano-wallet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cardano-cli](/man/cardano-cli)(1), [cardano-node](/man/cardano-node)(1)

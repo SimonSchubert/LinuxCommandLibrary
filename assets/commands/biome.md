@@ -114,6 +114,18 @@ Biome may not support all ESLint rules or Prettier options, and some projects wi
 
 Biome emerged from **Rome Tools**, a project started by **Sebastian McKenzie** (creator of Babel) in **2020**. When Rome Tools Inc. ceased operations in **2023**, the community forked the project as Biome under a new governance model. The fork quickly gained traction, maintaining the performance-focused Rust implementation while accelerating development under community stewardship. Biome 2.0, released in 2025, introduced a plugin system and type-aware linting.
 
+# INSTALL
+
+```pacman: sudo pacman -S biome```
+
+```zypper: sudo zypper install biome```
+
+```brew: brew install biome```
+
+```nix: nix profile install nixpkgs#biome```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [eslint](/man/eslint)(1), [prettier](/man/prettier)(1), [deno](/man/deno)(1), [node](/man/node)(1)

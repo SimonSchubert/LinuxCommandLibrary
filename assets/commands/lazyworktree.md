@@ -63,6 +63,14 @@ Requires Git with worktree support. CI/CD features require GitHub Actions or Git
 
 **lazyworktree** was created by **chmouel** and is written in **Go** using the BubbleTea framework.
 
+# INSTALL
+
+```zypper: sudo zypper install lazyworktree```
+
+```nix: nix profile install nixpkgs#lazyworktree```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-worktree](/man/git-worktree)(1), [lazygit](/man/lazygit)(1)

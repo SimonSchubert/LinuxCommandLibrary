@@ -65,6 +65,16 @@ Requires authentication. Tokens are sensitive. Store securely.
 
 npm token provides **token management** for automated npm registry access.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-login](/man/npm-login)(1), [npm-publish](/man/npm-publish)(1)

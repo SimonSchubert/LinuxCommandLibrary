@@ -53,6 +53,24 @@ Compare tree to working tree or index
 
 The tool is particularly useful in automation scenarios that need to detect whether files have changed since a specific commit, such as CI/CD pipelines checking for uncommitted modifications or scripts validating clean working directories. Its --quiet flag enables simple boolean checks for changes without processing full diff output.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-diff](/man/git-diff)(1), [git-diff-tree](/man/git-diff-tree)(1)

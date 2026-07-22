@@ -122,6 +122,22 @@ Nightly may have breaking changes or bugs. Some components not available for all
 
 **rustup** was developed by **Brian Anderson** and the Rust team, released in **2016** as the official Rust installer, replacing multirust. It unified Rust installation across platforms and simplified version management. Rustup became the recommended way to install Rust, replacing distribution packages for most developers.
 
+# INSTALL
+
+```apt: sudo apt install rustup```
+
+```dnf: sudo dnf install rustup```
+
+```pacman: sudo pacman -S rustup```
+
+```zypper: sudo zypper install rustup```
+
+```brew: brew install rustup```
+
+```nix: nix profile install nixpkgs#rustup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rustc](/man/rustc)(1), [cargo](/man/cargo)(1), [rustfmt](/man/rustfmt)(1), [clippy](/man/clippy)(1)

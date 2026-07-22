@@ -78,6 +78,20 @@ measures the latency and throughput of a web server by sending HTTP requests
 
 **httping** measures the latency and throughput of a web server by sending HTTP requests and timing the response. Unlike ICMP ping, it measures actual HTTP round-trip time including network latency and server processing. Use **-S** to see breakdown of connection phases.
 
+# INSTALL
+
+```apt: sudo apt install httping```
+
+```dnf: sudo dnf install httping```
+
+```pacman: sudo pacman -S httping```
+
+```brew: brew install httping```
+
+```nix: nix profile install nixpkgs#httping```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ping](/man/ping)(1), [curl](/man/curl)(1)

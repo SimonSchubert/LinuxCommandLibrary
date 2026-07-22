@@ -44,6 +44,14 @@ Display Terraform output values
 
 Use **-raw** to get a bare string suitable for shell scripting (no quotes or formatting). Use **-json** to get machine-readable output including type information. When called without a name, all outputs are displayed.
 
+# INSTALL
+
+```pacman: sudo pacman -S terraform```
+
+```nix: nix profile install nixpkgs#terraform```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [terraform-apply](/man/terraform-apply)(1), [terraform-plan](/man/terraform-plan)(1)

@@ -58,6 +58,12 @@ To bypass the cache for a single install, use **pip install --no-cache-dir** _pk
 
 **pip cache list** and **remove** only operate on the wheel cache, not the HTTP response cache. **purge** clears both. The HTTP cache uses ETag/Last-Modified validation, so safely removable at any time.
 
+# INSTALL
+
+```apk: sudo apk add py3-pip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pip](/man/pip)(1), [pip-install](/man/pip-install)(1)

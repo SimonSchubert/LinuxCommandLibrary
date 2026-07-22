@@ -48,6 +48,12 @@ Python/GTK application. Development slowed. Consider alternatives like Joplin.
 
 KeepNote was created by **Matt Rasmussen** as an open-source note-taking application with hierarchical organization.
 
+# INSTALL
+
+```aur: yay -S keepnote```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [joplin](/man/joplin)(1)

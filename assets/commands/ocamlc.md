@@ -85,6 +85,24 @@ Bytecode slower than native. Link order matters. Use ocamlopt for production.
 
 OCaml was developed at **INRIA** (French computing research institute), evolving from Caml Light. The bytecode compiler has been part of OCaml since its creation.
 
+# INSTALL
+
+```apt: sudo apt install ocaml```
+
+```dnf: sudo dnf install ocaml```
+
+```pacman: sudo pacman -S ocaml```
+
+```apk: sudo apk add ocaml5```
+
+```zypper: sudo zypper install ocaml```
+
+```brew: brew install ocaml```
+
+```nix: nix profile install nixpkgs#ocaml```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ocamlopt](/man/ocamlopt)(1), [dune](/man/dune)(1), [opam](/man/opam)(1)

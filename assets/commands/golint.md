@@ -49,6 +49,12 @@ Deprecated in favor of staticcheck or golangci-lint. Suggestions are stylistic, 
 
 golint was created by the **Go team** at Google as a style checker. It was deprecated in **2021** in favor of more comprehensive linters like staticcheck. The project recommends using golangci-lint which includes multiple linters.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#golint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [gofmt](/man/gofmt)(1), [staticcheck](/man/staticcheck)(1), [golangci-lint](/man/golangci-lint)(1)

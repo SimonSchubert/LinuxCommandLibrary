@@ -107,6 +107,18 @@ Performance depends on hardware and world complexity. Large servers need tuning.
 
 **Minetest** was created by **Perttu Ahola** (celeron55) in **2010**, inspired by Minecraft and InfiniMiner. It was designed as an open-source, moddable voxel engine. In **2024**, the project was renamed to **Luanti** to establish its own identity separate from Minecraft.
 
+# INSTALL
+
+```pacman: sudo pacman -S luanti```
+
+```apk: sudo apk add luanti```
+
+```zypper: sudo zypper install luanti```
+
+```nix: nix profile install nixpkgs#luanti```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [luantiserver](/man/luantiserver)(1), [minetestserver](/man/minetestserver)(1)

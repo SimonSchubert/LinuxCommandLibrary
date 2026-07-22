@@ -48,6 +48,14 @@ Azure cloud security assessment
 
 **prowler azure** performs security assessment of Azure subscriptions. Checks configuration against best practices and compliance frameworks. Identifies security issues in Azure resources.
 
+# INSTALL
+
+```brew: brew install prowler```
+
+```nix: nix profile install nixpkgs#prowler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [prowler](/man/prowler)(1), [az](/man/az)(1)

@@ -65,6 +65,14 @@ Hash identification is probabilistic — many hash types produce output of ident
 
 **HAITI** was created by **Alexandre ZANNI** (noraj) and is written in **Ruby**. It was developed as a modern replacement for older hash identification tools, with a focus on supporting the latest algorithms and providing direct references to cracking tools. It is available in **Kali Linux** and other security-focused distributions.
 
+# INSTALL
+
+```brew: brew install haiti```
+
+```nix: nix profile install nixpkgs#haiti```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hashcat](/man/hashcat)(1), [john](/man/john)(1)

@@ -34,6 +34,24 @@ After **sudo**, whoami shows the target user (usually root), not the original us
 
 The command shows the **effective** user ID. In setuid programs, this may differ from the real user ID.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [who](/man/who)(1), [id](/man/id)(1), [logname](/man/logname)(1), [users](/man/users)(1)

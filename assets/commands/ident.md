@@ -52,6 +52,24 @@ Part of RCS package. Keywords must be expanded. Historical tool.
 
 ident is part of **RCS** (Revision Control System), predating modern version control systems.
 
+# INSTALL
+
+```apt: sudo apt install rcs```
+
+```dnf: sudo dnf install rcs```
+
+```pacman: sudo pacman -S rcs```
+
+```apk: sudo apk add rcs```
+
+```zypper: sudo zypper install rcs```
+
+```brew: brew install rcs```
+
+```nix: nix profile install nixpkgs#rcs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rcs](/man/rcs)(1), [ci](/man/ci)(1), [co](/man/co)(1)

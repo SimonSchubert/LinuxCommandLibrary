@@ -62,6 +62,14 @@ Package Electron apps for distribution
 
 **electron-packager** packages Electron applications for distribution. Creates standalone executables for macOS, Windows, and Linux from source code.
 
+# INSTALL
+
+```pacman: sudo pacman -S electron```
+
+```nix: nix profile install nixpkgs#electron```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [electron](/man/electron)(1)

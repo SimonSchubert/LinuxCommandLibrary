@@ -30,6 +30,14 @@ Requires a running database server for MySQL and PostgreSQL connections. SQLite 
 
 **lazysql** was created by **Jorge Rojas** (jorgerojas26) and is written in **Go**. It was inspired by lazygit.
 
+# INSTALL
+
+```brew: brew install lazysql```
+
+```nix: nix profile install nixpkgs#lazysql```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mysql](/man/mysql)(1), [psql](/man/psql)(1), [sqlite3](/man/sqlite3)(1)

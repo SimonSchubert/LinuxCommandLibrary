@@ -29,6 +29,24 @@ The tool is part of the Netpbm image processing toolkit and can extract individu
 
 fiascotopnm is useful when working with legacy FIASCO-compressed images or when interfacing with systems that use FIASCO as an intermediate format.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmtofiasco](/man/pnmtofiasco)(1), [pnm](/man/pnm)(5)

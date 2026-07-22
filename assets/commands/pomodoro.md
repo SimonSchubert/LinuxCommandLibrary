@@ -48,6 +48,12 @@ Configuration is typically under the XDG config home; see upstream README for **
 
 Multiple overlapping installs of unrelated “pomodoro” tools exist—ensure PATH points to openpomodoro-cli. Desktop notifications depend on optional hooks.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pomodoro```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sleep](/man/sleep)(1), [timer](/man/timer)(1), [arttime](/man/arttime)(1)

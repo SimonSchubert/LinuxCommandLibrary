@@ -55,6 +55,20 @@ To automatically capture clipboard entries as they are copied, run `wl-paste --w
 
 Wayland-only, does not work with X11. Requires wl-clipboard (wl-copy, wl-paste). History is stored in memory by default. Images are supported but may consume significant memory.
 
+# INSTALL
+
+```apt: sudo apt install cliphist```
+
+```dnf: sudo dnf install cliphist```
+
+```pacman: sudo pacman -S cliphist```
+
+```zypper: sudo zypper install cliphist```
+
+```nix: nix profile install nixpkgs#cliphist```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wl-copy](/man/wl-copy)(1), [wl-paste](/man/wl-paste)(1), [xclip](/man/xclip)(1)

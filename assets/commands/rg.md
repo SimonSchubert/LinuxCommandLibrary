@@ -135,6 +135,24 @@ For very large result sets, consider **-l** (files only) or **-c** (counts) to r
 
 Ripgrep was created by **Andrew Gallant** (BurntSushi) and first released in **2016**. Written in Rust, it combines the usability of The Silver Searcher (ag) with the raw speed of GNU grep, while adding gitignore support. It has become one of the most popular grep alternatives.
 
+# INSTALL
+
+```apt: sudo apt install ripgrep```
+
+```dnf: sudo dnf install ripgrep```
+
+```pacman: sudo pacman -S ripgrep```
+
+```apk: sudo apk add ripgrep```
+
+```zypper: sudo zypper install ripgrep```
+
+```brew: brew install ripgrep```
+
+```nix: nix profile install nixpkgs#ripgrep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [ag](/man/ag)(1), [ack](/man/ack)(1), [git-grep](/man/git-grep)(1)

@@ -74,6 +74,12 @@ Python required. Terminal only. Performance varies.
 
 **unimatrix** was created as a Python recreation of the Matrix falling code animation with Unicode support.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#unimatrix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cmatrix](/man/cmatrix)(1), [pipes.sh](/man/pipes.sh)(1), [asciiquarium](/man/asciiquarium)(1)

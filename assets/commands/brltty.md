@@ -92,6 +92,22 @@ Default configuration file is **/etc/brltty.conf**. Text tables are stored in **
 
 Must be run as root or with appropriate permissions for device access. The braille display must be connected and powered on before starting. Supports 70+ braille display models from various manufacturers.
 
+# INSTALL
+
+```apt: sudo apt install brltty```
+
+```dnf: sudo dnf install brltty```
+
+```pacman: sudo pacman -S brltty```
+
+```apk: sudo apk add brltty```
+
+```zypper: sudo zypper install brltty```
+
+```nix: nix profile install nixpkgs#brltty```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [espeak](/man/espeak)(1), [screen](/man/screen)(1)

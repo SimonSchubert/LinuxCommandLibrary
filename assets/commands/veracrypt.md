@@ -58,6 +58,14 @@ Forgetting password or losing keyfile results in permanent data loss. Volume cre
 
 **VeraCrypt** is a fork of the discontinued TrueCrypt project, continuing development with security improvements and new features.
 
+# INSTALL
+
+```pacman: sudo pacman -S veracrypt```
+
+```nix: nix profile install nixpkgs#veracrypt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cryptsetup](/man/cryptsetup)(8)

@@ -76,6 +76,14 @@ The **-dump** option is useful for scripting, converting web pages to plain text
 
 Graphics mode requires X11 or framebuffer support. Not all graphics drivers are available on all systems. JavaScript is not supported.
 
+# INSTALL
+
+```apt: sudo apt install links2```
+
+```nix: nix profile install nixpkgs#links2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [links](/man/links)(1), [lynx](/man/lynx)(1), [w3m](/man/w3m)(1), [curl](/man/curl)(1), [wget](/man/wget)(1)

@@ -104,6 +104,24 @@ Cannot compress directories directly (use tar first). Original file is removed b
 
 **gzip** was written by **Jean-loup Gailly** and **Mark Adler** in **1992** as a free replacement for the Unix compress utility, which was encumbered by patents. The gzip format became the standard for file compression on Unix systems and is used by HTTP for content encoding. The underlying DEFLATE algorithm is also used in ZIP files and PNG images.
 
+# INSTALL
+
+```apt: sudo apt install gzip```
+
+```dnf: sudo dnf install gzip```
+
+```pacman: sudo pacman -S gzip```
+
+```apk: sudo apk add gzip```
+
+```zypper: sudo zypper install gzip```
+
+```brew: brew install gzip```
+
+```nix: nix profile install nixpkgs#gzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gunzip](/man/gunzip)(1), [zcat](/man/zcat)(1), [bzip2](/man/bzip2)(1), [xz](/man/xz)(1), [tar](/man/tar)(1)

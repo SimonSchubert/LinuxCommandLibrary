@@ -20,6 +20,24 @@ Rename a Git remote
 
 Requires git-extras to be installed. The standard `git remote rename` command provides equivalent functionality and is available in all Git installations.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-remote](/man/git-remote)(1), [git-extras](/man/git-extras)(1)

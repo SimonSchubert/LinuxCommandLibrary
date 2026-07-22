@@ -20,6 +20,24 @@ Rename a Git tag locally and on the remote
 
 Always pushes to the remote named `origin`; it does not accept a different remote as an argument.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-tag](/man/git-tag)(1), [git-extras](/man/git-extras)(1)

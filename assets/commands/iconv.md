@@ -81,6 +81,16 @@ Not all character mappings are reversible. Some characters may be lost or approx
 
 **iconv** is part of the **POSIX standard** and has implementations in glibc (GNU libc) and other C libraries. The character conversion functionality has been standardized since **POSIX.2** in **1992**. The GNU implementation supports an extensive list of encodings and is the version found on most Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install libc-bin```
+
+```apk: sudo apk add musl-utils```
+
+```nix: nix profile install nixpkgs#iconv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chardet](/man/chardet)(1), [file](/man/file)(1), [recode](/man/recode)(1), [uconv](/man/uconv)(1)

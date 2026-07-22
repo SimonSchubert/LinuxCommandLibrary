@@ -78,6 +78,11 @@ Plugin updates require running antibody update; they don't auto-update. Static l
 
 **antibody** was created by **Carlos Alexandro Becker** as a faster alternative to Antigen, the popular Zsh plugin manager, using Go for improved performance. The project has since been deprecated and superseded by **antidote**, a Zsh reimplementation by mattmc3.
 
+# INSTALL
+
+```aur: yay -S antibody```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [zsh](/man/zsh)(1), [antigen](/man/antigen)(1), [zinit](/man/zinit)(1)

@@ -131,6 +131,20 @@ QGIS is primarily a GUI application; command-line usage is limited to launching 
 
 Development began in **February 2002** by **Gary Sherman** as **Quantum GIS**, initially a simple PostGIS data viewer for Linux. The first public release came in **July 2002**. It became an **OSGeo** incubator project in **2007**, and version 1.0 was released in **January 2009**. In **September 2013**, version 2.0 was released and the project was officially renamed from Quantum GIS to **QGIS**. Gary Sherman received the **Sol Katz Award** for open-source GIS contributions in **2014**.
 
+# INSTALL
+
+```apt: sudo apt install qgis```
+
+```dnf: sudo dnf install qgis```
+
+```pacman: sudo pacman -S qgis```
+
+```zypper: sudo zypper install qgis```
+
+```nix: nix profile install nixpkgs#qgis```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdalinfo](/man/gdalinfo)(1), [ogr2ogr](/man/ogr2ogr)(1), [ogrinfo](/man/ogrinfo)(1), [gdalwarp](/man/gdalwarp)(1), [gdal_translate](/man/gdal_translate)(1)

@@ -77,6 +77,20 @@ Taints are the standard mechanism for dedicating nodes to a workload class (e.g.
 
 kubectl taint provides taint management for **Kubernetes** advanced scheduling control.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-cordon](/man/kubectl-cordon)(1), [kubectl-label](/man/kubectl-label)(1)

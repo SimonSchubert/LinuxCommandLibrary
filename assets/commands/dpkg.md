@@ -99,6 +99,24 @@ dpkg does not handle dependencies automatically. Use **apt** or **apt-get** for 
 
 **dpkg** was originally created for the **Debian** project in **1994** by **Ian Murdock**, then rewritten in C by **Ian Jackson** who became its primary developer. It remains the foundation of package management on Debian-based systems.
 
+# INSTALL
+
+```apt: sudo apt install dpkg```
+
+```dnf: sudo dnf install dpkg```
+
+```pacman: sudo pacman -S dpkg```
+
+```apk: sudo apk add dpkg```
+
+```zypper: sudo zypper install dpkg```
+
+```brew: brew install dpkg```
+
+```nix: nix profile install nixpkgs#dpkg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [dpkg-deb](/man/dpkg-deb)(1), [dpkg-query](/man/dpkg-query)(1)

@@ -27,6 +27,24 @@ Convert between map projections for images
 
 The forward transform converts equirectangular to Mercator projection, stretching areas near the poles. The **-inverse** option reverses this, converting from Mercator back to equirectangular. Part of the Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamscale](/man/pamscale)(1), [pnmshear](/man/pnmshear)(1)

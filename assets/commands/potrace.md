@@ -88,6 +88,24 @@ Works best on high-contrast images. Photos don't trace well. Input should be mon
 
 potrace was written by **Peter Selinger** as an improved alternative to autotrace, using optimal polygon algorithms.
 
+# INSTALL
+
+```apt: sudo apt install potrace```
+
+```dnf: sudo dnf install potrace```
+
+```pacman: sudo pacman -S potrace```
+
+```apk: sudo apk add potrace```
+
+```zypper: sudo zypper install potrace```
+
+```brew: brew install potrace```
+
+```nix: nix profile install nixpkgs#potrace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [inkscape](/man/inkscape)(1), [convert](/man/convert)(1)

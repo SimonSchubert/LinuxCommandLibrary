@@ -100,6 +100,22 @@ No built-in panel or taskbar. Requires manual configuration. Use with panel (tin
 
 Openbox was originally a fork of Blackbox, rewritten by **Dana Jansens** starting in **2002** to provide a modern, standards-compliant window manager.
 
+# INSTALL
+
+```apt: sudo apt install openbox```
+
+```dnf: sudo dnf install openbox```
+
+```pacman: sudo pacman -S openbox```
+
+```apk: sudo apk add openbox```
+
+```zypper: sudo zypper install openbox```
+
+```nix: nix profile install nixpkgs#openbox```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [i3](/man/i3)(1), [polybar](/man/polybar)(1), [feh](/man/feh)(1), [nitrogen](/man/nitrogen)(1)

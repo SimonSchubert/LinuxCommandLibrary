@@ -42,6 +42,14 @@ Inline image support depends on the terminal emulator. Some terminals may only d
 
 **mdcat** was created by **swsnr** and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install mdcat```
+
+```nix: nix profile install nixpkgs#mdcat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glow](/man/glow)(1), [bat](/man/bat)(1), [mandown](/man/mandown)(1), [cat](/man/cat)(1)

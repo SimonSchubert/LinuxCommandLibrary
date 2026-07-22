@@ -116,6 +116,24 @@ Update signatures before scanning:
 
 --remove is dangerous due to false positives. Use --move or --copy instead. Single-threaded by default. For multi-threaded scanning, use clamdscan with clamd daemon.
 
+# INSTALL
+
+```apt: sudo apt install clamav```
+
+```dnf: sudo dnf install clamav```
+
+```pacman: sudo pacman -S clamav```
+
+```apk: sudo apk add clamav-scanner```
+
+```zypper: sudo zypper install clamav```
+
+```brew: brew install clamav```
+
+```nix: nix profile install nixpkgs#clamav```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [freshclam](/man/freshclam)(1), [clamdscan](/man/clamdscan)(1), [clamd](/man/clamd)(8)

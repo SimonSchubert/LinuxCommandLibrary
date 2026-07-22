@@ -97,6 +97,24 @@ Language detection may need hints. Theme appearance varies by output format. Som
 
 **highlight** was created by **Andre Simon** as a universal source code highlighter. It has been actively developed since **2002**, continuously adding language support and output formats.
 
+# INSTALL
+
+```apt: sudo apt install highlight```
+
+```dnf: sudo dnf install highlight```
+
+```pacman: sudo pacman -S highlight```
+
+```apk: sudo apk add highlight```
+
+```zypper: sudo zypper install highlight```
+
+```brew: brew install highlight```
+
+```nix: nix profile install nixpkgs#highlight```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pygmentize](/man/pygmentize)(1), [bat](/man/bat)(1), [source-highlight](/man/source-highlight)(1), [vim](/man/vim)(1)

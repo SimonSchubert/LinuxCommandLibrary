@@ -61,6 +61,14 @@ The **logging** subcommand controls NetworkManager's debug output, useful for tr
 
 Setting hostname or logging levels requires root privileges. Logging changes affect the running daemon immediately but don't persist across restarts unless configured in NetworkManager.conf. High debug levels can generate substantial log output.
 
+# INSTALL
+
+```apt: sudo apt install network-manager```
+
+```apk: sudo apk add networkmanager-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmcli](/man/nmcli)(1), [nmcli-networking](/man/nmcli-networking)(1), [NetworkManager.conf](/man/NetworkManager.conf)(5), [hostnamectl](/man/hostnamectl)(1)

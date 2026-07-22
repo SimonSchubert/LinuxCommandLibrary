@@ -56,6 +56,12 @@ Exact long options and recipient flags: **kryptor --help** or https://www.krypto
 
 Keep passphrases and private keys safe; lost keys mean lost data. Verify you are using the official binary. Encryption does not replace backups.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kryptor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [age](/man/age)(1), [minisign](/man/minisign)(1), [gpg](/man/gpg)(1)

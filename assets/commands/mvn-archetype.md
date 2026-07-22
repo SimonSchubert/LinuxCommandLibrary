@@ -98,6 +98,22 @@ Common archetypes include `maven-archetype-quickstart` (a minimal Java app), `ma
 
 When run without parameters the plugin enters interactive mode, listing numbered archetypes and prompting for coordinates.
 
+# INSTALL
+
+```dnf: sudo dnf install maven```
+
+```pacman: sudo pacman -S maven```
+
+```apk: sudo apk add maven```
+
+```zypper: sudo zypper install maven```
+
+```brew: brew install maven```
+
+```nix: nix profile install nixpkgs#maven```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mvn](/man/mvn)(1), [maven](/man/maven)(1), [mvn-compile](/man/mvn-compile)(1), [mvn-package](/man/mvn-package)(1), [mvn-dependency](/man/mvn-dependency)(1)

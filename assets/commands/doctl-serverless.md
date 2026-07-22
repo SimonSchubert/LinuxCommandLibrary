@@ -91,6 +91,20 @@ Under the hood the platform is built on **Apache OpenWhisk**, which is why proje
 
 The serverless subcommands are not part of the doctl binary itself: **doctl serverless install** downloads a plugin first, and **doctl serverless upgrade** must be re-run after doctl is updated or the commands refuse to work. You also have to **connect** to a namespace before deploying, and a namespace belongs to exactly one region. Functions are subject to platform limits on execution time, memory, and payload size, and long-running or stateful workloads belong in App Platform or a Droplet instead.
 
+# INSTALL
+
+```dnf: sudo dnf install doctl```
+
+```pacman: sudo pacman -S doctl```
+
+```apk: sudo apk add doctl```
+
+```brew: brew install doctl```
+
+```nix: nix profile install nixpkgs#doctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doctl](/man/doctl)(1), [doctl-apps](/man/doctl-apps)(1)

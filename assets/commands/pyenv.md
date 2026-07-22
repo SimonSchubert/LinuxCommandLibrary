@@ -113,6 +113,18 @@ Requires shell initialization in profile (~/.bashrc or ~/.zshrc). Installing Pyt
 
 **pyenv** was created by **Yuu Yamashita** (yyuu) in **2012**, inspired by rbenv for Ruby. It addressed the common problem of managing multiple Python versions on development machines. The project has grown to include plugins for virtualenv management and became a standard tool in the Python ecosystem.
 
+# INSTALL
+
+```pacman: sudo pacman -S pyenv```
+
+```zypper: sudo zypper install pyenv```
+
+```brew: brew install pyenv```
+
+```nix: nix profile install nixpkgs#pyenv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [pip](/man/pip)(1), [virtualenv](/man/virtualenv)(1), [rbenv](/man/rbenv)(1)

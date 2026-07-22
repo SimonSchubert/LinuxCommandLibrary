@@ -85,6 +85,22 @@ Qt dependencies required. Some skins may not work. Plugin availability varies.
 
 **Qmmp** started as a Qt-based alternative to XMMS and Audacious. It preserves the classic Winamp interface style in a modern media player.
 
+# INSTALL
+
+```apt: sudo apt install qmmp```
+
+```dnf: sudo dnf install qmmp```
+
+```pacman: sudo pacman -S qmmp```
+
+```zypper: sudo zypper install qmmp```
+
+```brew: brew install qmmp```
+
+```nix: nix profile install nixpkgs#qmmp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [audacious](/man/audacious)(1), [mpv](/man/mpv)(1), [vlc](/man/vlc)(1), [cmus](/man/cmus)(1)

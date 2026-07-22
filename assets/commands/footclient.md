@@ -84,6 +84,24 @@ Requires foot server to be running. All terminals share the same server process,
 
 Foot was created by Daniel Eklöf as a fast, lightweight terminal emulator designed specifically for Wayland compositors. The server/client architecture was implemented to address the startup time and memory overhead of launching multiple terminal instances. Foot has gained popularity in the Wayland ecosystem for its performance and simplicity.
 
+# INSTALL
+
+```apt: sudo apt install foot```
+
+```dnf: sudo dnf install foot```
+
+```pacman: sudo pacman -S foot```
+
+```apk: sudo apk add foot```
+
+```zypper: sudo zypper install foot```
+
+```brew: brew install foot```
+
+```nix: nix profile install nixpkgs#foot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [foot](/man/foot)(1), [alacritty](/man/alacritty)(1), [kitty](/man/kitty)(1), [wezterm](/man/wezterm)(1)

@@ -106,6 +106,20 @@ File system event reliability varies between operating systems and file systems.
 
 watchexec was created by **Félix Saparelli** (passcod) and first released in **2017**. It was developed as a modern, cross-platform alternative to tools like inotifywait and fswatch. Written in Rust, it leverages the notify crate for efficient file system monitoring. The project has become popular in development workflows, particularly for Rust, Node.js, and other compiled or hot-reloading environments.
 
+# INSTALL
+
+```pacman: sudo pacman -S watchexec```
+
+```apk: sudo apk add watchexec```
+
+```zypper: sudo zypper install watchexec```
+
+```brew: brew install watchexec```
+
+```nix: nix profile install nixpkgs#watchexec```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [entr](/man/entr)(1), [inotifywait](/man/inotifywait)(1), [fswatch](/man/fswatch)(1), [nodemon](/man/nodemon)(1)

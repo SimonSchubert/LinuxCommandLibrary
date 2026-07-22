@@ -133,6 +133,24 @@ Requires modern terminal with true color support. GPU monitoring needs appropria
 
 **btop++** was created by **Jakob P. Liljenberg** (aristocratos) in **2021** as a C++ rewrite of bpytop, providing significantly better performance and additional features.
 
+# INSTALL
+
+```apt: sudo apt install btop```
+
+```dnf: sudo dnf install btop```
+
+```pacman: sudo pacman -S btop```
+
+```apk: sudo apk add btop```
+
+```zypper: sudo zypper install btop```
+
+```brew: brew install btop```
+
+```nix: nix profile install nixpkgs#btop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [htop](/man/htop)(1), [bpytop](/man/bpytop)(1), [top](/man/top)(1)

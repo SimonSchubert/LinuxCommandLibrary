@@ -53,6 +53,24 @@ Show commit logs with file-level diff information
 
 This command is deprecated and scheduled for removal in a future Git release. Use `git log --raw` instead. When limiting output to a path, add `--` before the path to avoid ambiguity with branch names, e.g. `git whatchanged -- [file]`.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-diff](/man/git-diff)(1)

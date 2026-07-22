@@ -67,6 +67,20 @@ Changes affect the entire Wine prefix unless application-specific rules are set.
 
 **winecfg** was created as part of Wine to provide a user-friendly configuration interface. Wine (Wine Is Not an Emulator) has been in development since 1993, providing a compatibility layer for running Windows applications on Unix-like systems.
 
+# INSTALL
+
+```dnf: sudo dnf install wine```
+
+```pacman: sudo pacman -S wine```
+
+```apk: sudo apk add wine```
+
+```zypper: sudo zypper install wine```
+
+```nix: nix profile install nixpkgs#wine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wine](/man/wine)(1), [regedit](/man/regedit)(1), [winetricks](/man/winetricks)(1)

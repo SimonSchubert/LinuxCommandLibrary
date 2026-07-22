@@ -84,6 +84,22 @@ Requires shell integration by adding an `eval $(keychain --eval ...)` line to yo
 
 keychain was created by **Daniel Robbins** (Funtoo) to simplify SSH agent management across sessions.
 
+# INSTALL
+
+```dnf: sudo dnf install keychain```
+
+```pacman: sudo pacman -S keychain```
+
+```apk: sudo apk add keychain```
+
+```zypper: sudo zypper install keychain```
+
+```brew: brew install keychain```
+
+```nix: nix profile install nixpkgs#keychain```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh-agent](/man/ssh-agent)(1), [ssh-add](/man/ssh-add)(1), [ssh](/man/ssh)(1), [gpg](/man/gpg)(1)

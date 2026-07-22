@@ -77,6 +77,18 @@ Interactive mode provides additional commands for detailed inspection of the NTP
 
 Queries the local ntpd by default; specify a hostname to query remote daemons. Requires ntpd to be running. Some information may require authentication to access. The output format is cryptic; refer to NTP documentation for interpretation.
 
+# INSTALL
+
+```apt: sudo apt install ntpsec```
+
+```dnf: sudo dnf install ntpsec```
+
+```apk: sudo apk add ntpsec```
+
+```zypper: sudo zypper install ntpsec```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ntpd](/man/ntpd)(8), [ntpdate](/man/ntpdate)(8), [chronyc](/man/chronyc)(1), [timedatectl](/man/timedatectl)(1)

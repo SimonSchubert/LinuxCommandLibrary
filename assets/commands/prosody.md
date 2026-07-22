@@ -102,5 +102,21 @@ Requires Lua. Configuration in /etc/prosody/. Certificates needed for TLS.
 
 Prosody was created by **Matthew Wild** starting in 2008 as a modern, lightweight XMPP server.
 
+# INSTALL
+
+```apt: sudo apt install prosody```
+
+```dnf: sudo dnf install prosody```
+
+```pacman: sudo pacman -S prosody```
+
+```apk: sudo apk add prosody```
+
+```zypper: sudo zypper install prosody```
+
+```nix: nix profile install nixpkgs#prosody```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

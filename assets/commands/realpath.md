@@ -85,6 +85,24 @@ Behavior may differ between GNU coreutils and BSD versions. Without -e, path may
 
 **realpath** as a standalone command became part of **GNU coreutils** in version **8.15** (released **2012**). Prior to this, the realpath() function existed in C libraries, and the readlink command provided similar functionality. The standalone command simplified common shell scripting tasks.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [readlink](/man/readlink)(1), [dirname](/man/dirname)(1), [basename](/man/basename)(1), [pwd](/man/pwd)(1)

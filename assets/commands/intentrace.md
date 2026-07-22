@@ -72,6 +72,12 @@ Currently only supports **x86-64** Linux. Covers approximately 166 of the 380+ L
 
 **intentrace** was created by **sectordistrict** and is written in **Rust**. It was designed as a more informative alternative to strace that provides context and meaning for each syscall rather than just raw data.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#intentrace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [strace](/man/strace)(1), [ltrace](/man/ltrace)(1), [ptrace](/man/ptrace)(2)

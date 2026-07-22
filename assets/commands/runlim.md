@@ -69,6 +69,12 @@ Linux-specific; relies on /proc filesystem. Resource measurements are sampled, n
 
 Written by **Armin Biere** and **Toni Jussila**. Commonly used in SAT solver competitions and automated testing environments.
 
+# INSTALL
+
+```apt: sudo apt install runlim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [time](/man/time)(1), [timeout](/man/timeout)(1), [ulimit](/man/ulimit)(1)

@@ -99,6 +99,14 @@ A working OCI runtime (Docker, Podman, nerdctl) is required; Dagger spins up its
 
 **Dagger** was founded by **Solomon Hykes** (creator of Docker), **Sam Alba**, and **Andrea Luzzardi** and publicly launched in **March 2022**. The initial 0.x releases drove pipelines via **CUE**. In **early 2023** the project pivoted to a polyglot **module** model with native-language SDKs, and **dagger call** replaced the older **dagger do** entry point. Version **0.9** introduced the module system as the default in late 2023.
 
+# INSTALL
+
+```pacman: sudo pacman -S dagger```
+
+```brew: brew install dagger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [podman](/man/podman)(1), [act](/man/act)(1), [buildah](/man/buildah)(1)

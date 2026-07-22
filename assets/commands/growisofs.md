@@ -61,6 +61,22 @@ Requires dvd+rw-tools. Media type affects options. Speed depends on drive and me
 
 growisofs was developed by **Andy Polyakov** as part of the **dvd+rw-tools** package for Linux optical disc burning.
 
+# INSTALL
+
+```apt: sudo apt install growisofs```
+
+```dnf: sudo dnf install dvd+rw-tools```
+
+```pacman: sudo pacman -S dvd+rw-tools```
+
+```apk: sudo apk add dvd+rw-tools```
+
+```zypper: sudo zypper install dvd+rw-tools```
+
+```brew: brew install dvd+rw-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkisofs](/man/mkisofs)(1), [cdrecord](/man/cdrecord)(1)

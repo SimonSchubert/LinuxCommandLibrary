@@ -85,6 +85,12 @@ On 64-bit Linux systems, running 32-bit Squeak images requires 32-bit compatibil
 
 **Squeak** was created at Apple in **1996** by Alan Kay, Dan Ingalls, and others as an open-source implementation of Smalltalk-80. The name comes from the mouse mascot. It evolved from the original Xerox PARC Smalltalk and has been continuously developed by an international community. Squeak has spawned derivative projects including Pharo and serves as a platform for educational programming tools like Scratch (its original implementation).
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#squeak```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pharo](/man/pharo)(1), [smalltalkci](/man/smalltalkci)(1)

@@ -35,6 +35,14 @@ The API token is **only removed from local storage**. It is **not** revoked on t
 
 Introduced in **Terraform v0.12.21** in early **2020** alongside **terraform login** to simplify credential management for Terraform Cloud and Enterprise connections.
 
+# INSTALL
+
+```pacman: sudo pacman -S terraform```
+
+```nix: nix profile install nixpkgs#terraform```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [terraform-login](/man/terraform-login)(1)

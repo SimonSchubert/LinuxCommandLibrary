@@ -119,6 +119,12 @@ Requires Terraform CLI installed separately. Provider binding generation can be 
 
 CDK for Terraform was announced by **HashiCorp** in partnership with **AWS** in **July 2020**, bringing the CDK (Cloud Development Kit) approach from AWS CDK to Terraform. It reached general availability in **August 2022**. The project was sunset on **December 10, 2025** after not finding product-market fit at scale, with HashiCorp choosing to focus on Terraform core instead.
 
+# INSTALL
+
+```brew: brew install cdktf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [pulumi](/man/pulumi)(1)

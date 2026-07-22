@@ -97,6 +97,22 @@ Requires ALSA and appropriate sound card drivers. Very high or low frequencies m
 
 **speaker-test** is part of **alsa-utils**, the ALSA (Advanced Linux Sound Architecture) utility collection. ALSA became the standard Linux sound system in kernel **2.6** (2003), replacing OSS. The speaker-test tool helps users configure multi-channel audio setups and verify surround sound configurations.
 
+# INSTALL
+
+```apt: sudo apt install alsa-utils```
+
+```dnf: sudo dnf install alsa-utils```
+
+```pacman: sudo pacman -S alsa-utils```
+
+```apk: sudo apk add alsa-utils```
+
+```zypper: sudo zypper install alsa-utils```
+
+```nix: nix profile install nixpkgs#alsa-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aplay](/man/aplay)(1), [arecord](/man/arecord)(1), [amixer](/man/amixer)(1), [alsamixer](/man/alsamixer)(1)

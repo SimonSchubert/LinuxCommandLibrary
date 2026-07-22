@@ -91,6 +91,16 @@ HTTPS interception requires installing the mitmproxy CA certificate on the clien
 
 **mitmweb** is part of the **mitmproxy** project, created by Aldo Cortesi. The mitmproxy project started in **2010** and mitmweb was added to provide a browser-based alternative to the console-based mitmproxy interface.
 
+# INSTALL
+
+```pacman: sudo pacman -S mitmproxy```
+
+```apk: sudo apk add mitmproxy```
+
+```nix: nix profile install nixpkgs#mitmproxy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mitmproxy](/man/mitmproxy)(1), [mitmdump](/man/mitmdump)(1), [wireshark](/man/wireshark)(1), [tshark](/man/tshark)(1)

@@ -71,6 +71,18 @@ Requires a graphical session (GTK4/Wayland or X11); not usable over a plain SSH 
 
 HandBrake was originally created by **Eric Petit** in **2003** as "MediaFork" for BeOS, later renamed and ported to other platforms. The GTK interface was written for Linux users after the project's revival by the open-source community, and now targets GTK 4.
 
+# INSTALL
+
+```apt: sudo apt install handbrake```
+
+```pacman: sudo pacman -S handbrake```
+
+```brew: brew install handbrake```
+
+```nix: nix profile install nixpkgs#handbrake```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [handbrakecli](/man/handbrakecli)(1), [ffmpeg](/man/ffmpeg)(1), [vlc](/man/vlc)(1)

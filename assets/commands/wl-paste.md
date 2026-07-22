@@ -80,6 +80,24 @@ Only works under Wayland; use **xclip** or **xsel** for X11. MIME type availabil
 
 Part of **wl-clipboard**, written by Sergey Bugaev for Wayland-native clipboard access. Provides the paste counterpart to wl-copy, implementing the Wayland data-device protocol for clipboard reading.
 
+# INSTALL
+
+```apt: sudo apt install wl-clipboard```
+
+```dnf: sudo dnf install wl-clipboard```
+
+```pacman: sudo pacman -S wl-clipboard```
+
+```apk: sudo apk add wl-clipboard```
+
+```zypper: sudo zypper install wl-clipboard```
+
+```brew: brew install wl-clipboard```
+
+```nix: nix profile install nixpkgs#wl-clipboard```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wl-copy](/man/wl-copy)(1), [xclip](/man/xclip)(1), [xsel](/man/xsel)(1)

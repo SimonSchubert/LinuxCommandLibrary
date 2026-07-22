@@ -51,6 +51,16 @@ User identity information (name and email) can be provided during initialization
 
 The command will fail if the current directory already contains an initialized Dolt repository.
 
+# INSTALL
+
+```pacman: sudo pacman -S dolt```
+
+```brew: brew install dolt```
+
+```nix: nix profile install nixpkgs#dolt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dolt-clone](/man/dolt-clone)(1), [dolt-status](/man/dolt-status)(1), [dolt-commit](/man/dolt-commit)(1), [dolt-sql](/man/dolt-sql)(1), [git-init](/man/git-init)(1)

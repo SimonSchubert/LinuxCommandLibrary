@@ -58,6 +58,12 @@ Multi-format transcoder and query tool powered by jq syntax
 
 **qq** was created by **JFryy** and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#qq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [yq](/man/yq)(1), [oq](/man/oq)(1), [gron](/man/gron)(1)

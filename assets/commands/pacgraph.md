@@ -95,6 +95,12 @@ Large systems with many packages produce complex graphs that may be difficult to
 
 Developed for Arch Linux to provide visual insight into package relationships. Helps users understand disk usage distribution across packages and identify opportunities for cleanup by showing which packages have few dependents.
 
+# INSTALL
+
+```aur: yay -S pacgraph```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pactree](/man/pactree)(8), [expac](/man/expac)(1)

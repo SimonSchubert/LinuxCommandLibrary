@@ -47,6 +47,24 @@ This is most useful for extracting single-file archives from pipes without creat
 
 Only extracts the first member from a ZIP archive. For multi-file archives, use **unzip** instead. When the first member is a directory, funzip simply creates it and exits.
 
+# INSTALL
+
+```apt: sudo apt install unzip```
+
+```dnf: sudo dnf install unzip```
+
+```pacman: sudo pacman -S unzip```
+
+```apk: sudo apk add unzip```
+
+```zypper: sudo zypper install unzip```
+
+```brew: brew install unzip```
+
+```nix: nix profile install nixpkgs#unzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gzip](/man/gzip)(1), [unzip](/man/unzip)(1), [unzipsfx](/man/unzipsfx)(1), [zip](/man/zip)(1), [zipinfo](/man/zipinfo)(1)

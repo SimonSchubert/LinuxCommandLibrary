@@ -72,6 +72,23 @@ There is no error detection or correction. Data corruption during transfer goes 
 
 **ascii-xfr** was written by **Miquel van Smoorenburg** and **Jukka Lahtinen**, the authors of **minicom**. Minicom originated in the early 1990s as a free, text-based replacement for the DOS program Telix and became the de facto standard serial terminal emulator on Linux. ascii-xfr was created as a companion utility for the simplest possible file transfer scenario.
 
+# INSTALL
+
+```apt: sudo apt install minicom```
+
+```dnf: sudo dnf install minicom```
+
+```pacman: sudo pacman -S minicom```
+
+```apk: sudo apk add minicom```
+
+```zypper: sudo zypper install minicom```
+
+```brew: brew install minicom```
+
+```nix: nix profile install nixpkgs#minicom```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [minicom](/man/minicom)(1)

@@ -106,6 +106,17 @@ Domain names must be lowercase and unique within a region. Configuration changes
 
 **Amazon Elasticsearch Service** launched in **October 2015** as a managed Elasticsearch offering. Following the Elasticsearch license change, AWS forked the project and rebranded the service as **Amazon OpenSearch Service** in **September 2021**, based on the open-source OpenSearch project. The service has added features like UltraWarm storage tiers, serverless collections, and vector search for AI applications.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [curl](/man/curl)(1), [aws-logs](/man/aws-logs)(1), [aws-firehose](/man/aws-firehose)(1)

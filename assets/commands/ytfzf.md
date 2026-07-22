@@ -71,6 +71,16 @@ The tool supports searching, streaming, and downloading videos with thumbnail pr
 
 Requires fzf, mpv, and yt-dlp or youtube-dl. Thumbnail preview requires ueberzug or similar.
 
+# INSTALL
+
+```pacman: sudo pacman -S ytfzf```
+
+```apk: sudo apk add ytfzf```
+
+```nix: nix profile install nixpkgs#ytfzf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yt-dlp](/man/yt-dlp)(1), [youtube-dl](/man/youtube-dl)(1), [mpv](/man/mpv)(1)

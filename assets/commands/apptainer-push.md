@@ -55,6 +55,21 @@ Authentication is required for most registries. Use **apptainer remote login** t
 
 Pushing to the Container Library requires a Sylabs account and API token. Large images may take considerable time to upload depending on network bandwidth. Unsigned containers may be rejected by some registries.
 
+# INSTALL
+
+```dnf: sudo dnf install apptainer```
+
+```pacman: sudo pacman -S apptainer```
+
+```apk: sudo apk add apptainer```
+
+```zypper: sudo zypper install apptainer```
+
+```brew: brew install apptainer```
+
+```nix: nix profile install nixpkgs#apptainer```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apptainer](/man/apptainer)(1), [apptainer-pull](/man/apptainer-pull)(1), [apptainer-sign](/man/apptainer-sign)(1), [apptainer-delete](/man/apptainer-delete)(1)

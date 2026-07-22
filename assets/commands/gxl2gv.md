@@ -50,6 +50,24 @@ Part of Graphviz package. Requires valid GXL input. Some attributes may not conv
 
 gxl2gv is part of the **Graphviz** project, created at **AT&T Labs** for XML-based graph interchange.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gv2gxl](/man/gv2gxl)(1), [graphml2gv](/man/graphml2gv)(1), [dot](/man/dot)(1)

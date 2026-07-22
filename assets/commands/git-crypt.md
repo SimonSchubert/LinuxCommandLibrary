@@ -77,6 +77,24 @@ Encrypted files appear as binary. File names are not encrypted. Requires GPG for
 
 git-crypt was created by **Andrew Ayer** to solve the problem of storing secrets in git repositories. It provides simpler setup than alternative approaches like git-secret.
 
+# INSTALL
+
+```apt: sudo apt install git-crypt```
+
+```dnf: sudo dnf install git-crypt```
+
+```pacman: sudo pacman -S git-crypt```
+
+```apk: sudo apk add git-crypt```
+
+```zypper: sudo zypper install git-crypt```
+
+```brew: brew install git-crypt```
+
+```nix: nix profile install nixpkgs#git-crypt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [gpg](/man/gpg)(1), [git-secret](/man/git-secret)(1)

@@ -90,6 +90,15 @@ JSON to Avro conversion requires a schema file; the JSON structure must match th
 
 Apache Avro was created by **Doug Cutting** (also creator of Hadoop and Lucene) and first released in **2009**. It was developed to address limitations of existing serialization frameworks when working with big data systems like Hadoop. Avro became a top-level Apache project in **2010** and is widely used in data engineering, particularly with Kafka, Spark, and Hadoop ecosystems.
 
+# INSTALL
+
+```aur: yay -S avro-tools```
+
+```brew: brew install avro-tools```
+
+```nix: nix profile install nixpkgs#avro-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [parquet-tools](/man/parquet-tools)(1)

@@ -41,6 +41,22 @@ Apply XSLT stylesheets to XML
 
 **xml transform** applies XSLT stylesheets to XML documents. Part of xmlstarlet toolkit. Transforms XML using XSLT 1.0 processor for document conversion and processing.
 
+# INSTALL
+
+```dnf: sudo dnf install xmlstarlet```
+
+```pacman: sudo pacman -S xmlstarlet```
+
+```apk: sudo apk add xmlstarlet```
+
+```zypper: sudo zypper install xmlstarlet```
+
+```brew: brew install xmlstarlet```
+
+```nix: nix profile install nixpkgs#xmlstarlet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xml-select](/man/xml-select)(1), [xsltproc](/man/xsltproc)(1)

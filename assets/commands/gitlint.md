@@ -130,6 +130,18 @@ Custom Python rules can be written to enforce project-specific conventions. The 
 
 Requires Python 3. When used as a hook, only the latest commit message is checked. The **--commits** flag is needed for CI to check all commits in a branch. Custom rules require writing Python classes.
 
+# INSTALL
+
+```dnf: sudo dnf install gitlint```
+
+```apk: sudo apk add gitlint```
+
+```brew: brew install gitlint```
+
+```nix: nix profile install nixpkgs#gitlint```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-commit](/man/git-commit)(1), [pre-commit](/man/pre-commit)(1)

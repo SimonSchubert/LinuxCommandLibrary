@@ -55,6 +55,18 @@ Unlike the System V versions (_enable_ / _disable_), the CUPS commands have been
 
 Depending on the CUPS configuration, the command may prompt for an administrator password rather than requiring the root user. The **--release** flag is commonly paired with **cupsdisable --hold** for scheduled maintenance.
 
+# INSTALL
+
+```apt: sudo apt install cups-client```
+
+```dnf: sudo dnf install cups-client```
+
+```apk: sudo apk add cups-client```
+
+```zypper: sudo zypper install cups-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cupsdisable](/man/cupsdisable)(1), [cupsaccept](/man/cupsaccept)(1), [cupsreject](/man/cupsreject)(1), [cancel](/man/cancel)(1), [lp](/man/lp)(1), [lpadmin](/man/lpadmin)(1), [lpstat](/man/lpstat)(1)

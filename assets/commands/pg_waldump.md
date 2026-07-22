@@ -41,6 +41,16 @@ displays WAL file contents in human-readable format
 
 **pg_waldump** displays WAL file contents in human-readable format. Shows transaction details and operations. Useful for debugging and understanding WAL activity.
 
+# INSTALL
+
+```dnf: sudo dnf install postgresql17```
+
+```apk: sudo apk add postgresql17```
+
+```zypper: sudo zypper install postgresql17```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_walsummary](/man/pg_walsummary)(1), [pg_receivewal](/man/pg_receivewal)(1)

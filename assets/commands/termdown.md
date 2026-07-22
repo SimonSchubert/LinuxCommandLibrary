@@ -95,6 +95,14 @@ Terminal display only. Figlet fonts are optional but recommended for large visib
 
 **termdown** was created as a terminal countdown timer with large figlet-style display for visibility.
 
+# INSTALL
+
+```pacman: sudo pacman -S termdown```
+
+```nix: nix profile install nixpkgs#termdown```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [figlet](/man/figlet)(1), [watch](/man/watch)(1), [sleep](/man/sleep)(1)

@@ -93,6 +93,18 @@ Some packages designed for pdfLaTeX may be incompatible. Compilation is slightly
 
 **XeTeX** was created by Jonathan Kew, initially for Mac OS X in **2004**. It was ported to Linux in **2006** and included in TeX Live **2007**. XeTeX brought modern font technology and Unicode support to TeX, making it practical for multilingual and professionally typeset documents.
 
+# INSTALL
+
+```dnf: sudo dnf install texlive-xetex```
+
+```pacman: sudo pacman -S texlive-xetex```
+
+```apk: sudo apk add texlive-xetex```
+
+```zypper: sudo zypper install texlive-xetex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xetex](/man/xetex)(1), [pdflatex](/man/pdflatex)(1), [lualatex](/man/lualatex)(1), [latexmk](/man/latexmk)(1), [biber](/man/biber)(1)

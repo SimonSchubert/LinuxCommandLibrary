@@ -54,6 +54,12 @@ Hardware dependent. May need permissions. Backlight control.
 
 **ybacklight** is a backlight control utility, similar to xbacklight, for adjusting display brightness.
 
+# INSTALL
+
+```aur: yay -S ybacklight```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xbacklight](/man/xbacklight)(1), [brightnessctl](/man/brightnessctl)(1), [light](/man/light)(1)

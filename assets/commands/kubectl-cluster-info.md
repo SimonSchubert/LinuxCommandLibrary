@@ -46,6 +46,20 @@ displays the addresses of the control plane and cluster services
 
 Requires a valid kubeconfig with access to the cluster. The dump subcommand can produce very large output for clusters with many pods. Use `--namespaces` to limit scope. Dump output may contain sensitive information like environment variables and secrets.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-get](/man/kubectl-get)(1)

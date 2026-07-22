@@ -58,6 +58,12 @@ Requires LaTeX installation. Output is images, not MathML. Consider MathJax for 
 
 gladtex was created to enable mathematical formulas in HTML before widespread browser support for MathML and JavaScript math rendering.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#gladtex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [latex](/man/latex)(1), [pandoc](/man/pandoc)(1)

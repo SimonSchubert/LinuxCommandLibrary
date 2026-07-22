@@ -98,6 +98,14 @@ Community strings are plaintext. v3 recommended for security. Large walks may be
 
 **snmpwalk** is part of **Net-SNMP**, the standard open-source SNMP implementation. It's essential for network device monitoring and discovery.
 
+# INSTALL
+
+```apt: sudo apt install snmp```
+
+```apk: sudo apk add net-snmp-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snmpget](/man/snmpget)(1), [snmpset](/man/snmpset)(1), [snmptranslate](/man/snmptranslate)(1)

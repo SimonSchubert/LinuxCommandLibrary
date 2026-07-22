@@ -83,6 +83,22 @@ Some information requires root privileges. Accuracy depends on available system 
 
 inxi was created as a fork of infobash by locsmif and is maintained by the inxi project team. It has become a standard tool in many Linux distributions for quickly gathering system information for debugging.
 
+# INSTALL
+
+```dnf: sudo dnf install inxi```
+
+```pacman: sudo pacman -S inxi```
+
+```apk: sudo apk add inxi```
+
+```zypper: sudo zypper install inxi```
+
+```brew: brew install inxi```
+
+```nix: nix profile install nixpkgs#inxi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lshw](/man/lshw)(1), [hwinfo](/man/hwinfo)(8), [lscpu](/man/lscpu)(1)

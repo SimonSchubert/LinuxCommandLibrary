@@ -98,6 +98,16 @@ The -b flag exposes passwords in process listings. Basic authentication sends cr
 
 **htpasswd** has been part of the Apache HTTP Server project since its early days in the mid-1990s. It evolved from NCSA HTTPd's password management tools. The bcrypt option was added later as password security requirements increased. The tool remains the standard for managing Apache basic auth despite the availability of more sophisticated authentication methods.
 
+# INSTALL
+
+```apt: sudo apt install apache2-utils```
+
+```apk: sudo apk add apache2-utils```
+
+```zypper: sudo zypper install apache2-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apache2](/man/apache2)(8), [nginx](/man/nginx)(8), [openssl](/man/openssl)(1)

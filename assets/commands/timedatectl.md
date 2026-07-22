@@ -90,6 +90,22 @@ Setting time manually (set-time) disables NTP synchronization. RTC in local time
 
 **timedatectl** is part of **systemd**, introduced to provide a unified interface for time/date management replacing older tools like hwclock and tzselect.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hwclock](/man/hwclock)(8), [date](/man/date)(1)

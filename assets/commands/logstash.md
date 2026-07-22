@@ -116,6 +116,14 @@ JVM-based with significant memory requirements (1GB+ heap typical). Startup is s
 
 **Logstash** was created by **Jordan Sissel** in **2009** as a tool for managing logs and events. Originally independent, it was acquired by **Elastic** (then Elasticsearch) in **2013** and became a core part of the ELK Stack. The project evolved from a simple log shipper to a full data processing pipeline, with major rewrites including the move to a persistent queue architecture.
 
+# INSTALL
+
+```brew: brew install logstash```
+
+```nix: nix profile install nixpkgs#logstash```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [filebeat](/man/filebeat)(1), [elasticsearch](/man/elasticsearch)(1)

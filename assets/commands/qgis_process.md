@@ -98,6 +98,20 @@ On headless systems, **QT_QPA_PLATFORM=offscreen** must be set or the tool will 
 
 **qgis_process** was proposed in **February 2019** by **Nyall Dawson** as QGIS Enhancement Proposal #140, originally named **qgis_transform** before being renamed after community discussion. Development was **sponsored by the Swedish QGIS User Group**. The pull request was merged in **April 2020** and the tool first shipped with **QGIS 3.14 "Pi"** in **June 2020**. It has been continuously enhanced in subsequent releases with features like plugin management and JSON I/O.
 
+# INSTALL
+
+```apt: sudo apt install qgis```
+
+```dnf: sudo dnf install qgis```
+
+```pacman: sudo pacman -S qgis```
+
+```zypper: sudo zypper install qgis```
+
+```nix: nix profile install nixpkgs#qgis```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qgis](/man/qgis)(1), [gdalinfo](/man/gdalinfo)(1), [ogr2ogr](/man/ogr2ogr)(1), [ogrinfo](/man/ogrinfo)(1), [gdalwarp](/man/gdalwarp)(1), [gdal_translate](/man/gdal_translate)(1)

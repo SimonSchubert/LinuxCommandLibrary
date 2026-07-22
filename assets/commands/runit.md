@@ -97,6 +97,18 @@ Different from systemd syntax. Learning curve for run script creation. Less wide
 
 **runit** was created by **Gerrit Pape** around **2004** as a lightweight init system. It's used by Void Linux as the default init and available on many distributions.
 
+# INSTALL
+
+```apt: sudo apt install runit```
+
+```apk: sudo apk add runit```
+
+```brew: brew install runit```
+
+```nix: nix profile install nixpkgs#runit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sv](/man/sv)(1), [runsv](/man/runsv)(1), [runsvdir](/man/runsvdir)(1), [svlogd](/man/svlogd)(8)

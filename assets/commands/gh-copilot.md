@@ -52,6 +52,24 @@ This integration brings GitHub Copilot's AI capabilities directly into the termi
 
 Deprecated. The **gh copilot** extension was archived in **October 2025** in favor of the standalone, agentic **GitHub Copilot CLI** (invoked as **copilot**). Existing installations still work, but new users should install the replacement instead.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-agent](/man/gh-agent)(1)

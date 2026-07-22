@@ -126,6 +126,19 @@ Web app names must be globally unique (used in the azurewebsites.net URL). Basic
 
 **az webapp** has been part of Azure CLI since version 2.0 in **2017**, replacing the older Azure CLI for managing App Service web apps.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [azure-cli](/man/azure-cli)(1), [az-functionapp](/man/az-functionapp)(1), [az-appservice](/man/az-appservice)(1)

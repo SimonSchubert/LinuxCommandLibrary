@@ -78,6 +78,22 @@ Requires ffmpeg for encoding. Large recordings take time. Complex interactions n
 
 **VHS** was created by **Charm** for terminal recording. It provides reproducible, high-quality terminal GIFs.
 
+# INSTALL
+
+```dnf: sudo dnf install vhs```
+
+```pacman: sudo pacman -S vhs```
+
+```apk: sudo apk add vhs```
+
+```zypper: sudo zypper install vhs```
+
+```brew: brew install vhs```
+
+```nix: nix profile install nixpkgs#vhs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [asciinema](/man/asciinema)(1), [ttyrec](/man/ttyrec)(1), [terminalizer](/man/terminalizer)(1)

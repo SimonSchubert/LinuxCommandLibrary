@@ -65,6 +65,24 @@ Loses image metadata and history. Only exports filesystem. Use podman save for i
 
 podman export is part of **Podman**, providing Docker-compatible container export functionality in a daemonless architecture.
 
+# INSTALL
+
+```apt: sudo apt install podman```
+
+```dnf: sudo dnf install podman```
+
+```pacman: sudo pacman -S podman```
+
+```apk: sudo apk add podman```
+
+```zypper: sudo zypper install podman```
+
+```brew: brew install podman```
+
+```nix: nix profile install nixpkgs#podman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman-import](/man/podman-import)(1), [podman-save](/man/podman-save)(1), [podman-ps](/man/podman-ps)(1)

@@ -60,6 +60,12 @@ Extensions can be downloaded from the official LibreOffice Extensions website an
 
 Some extensions require LibreOffice restart. Extension IDs are needed for removal. GUI mode requires display server.
 
+# INSTALL
+
+```apk: sudo apk add libreoffice-common```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [libreoffice](/man/libreoffice)(1)

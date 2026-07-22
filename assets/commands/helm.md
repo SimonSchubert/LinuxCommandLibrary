@@ -101,6 +101,22 @@ Requires kubectl configured with cluster access. Chart versions should be pinned
 
 Helm was created by **Deis** and is now a **CNCF** graduated project, becoming the standard for Kubernetes package management.
 
+# INSTALL
+
+```dnf: sudo dnf install helm```
+
+```pacman: sudo pacman -S helm```
+
+```apk: sudo apk add helm```
+
+```zypper: sudo zypper install helm```
+
+```brew: brew install helm```
+
+```nix: nix profile install nixpkgs#helm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kustomize](/man/kustomize)(1)

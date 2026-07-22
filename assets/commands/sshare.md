@@ -104,6 +104,12 @@ Requires slurmdbd and the multifactor priority plugin. Share values are relative
 
 **sshare** is part of **Slurm**, developed at **Lawrence Livermore National Laboratory** starting in **2002**. Fair-share scheduling was added to support equitable resource allocation in multi-user HPC environments. Slurm is now maintained by **SchedMD**.
 
+# INSTALL
+
+```apt: sudo apt install slurm-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sprio](/man/sprio)(1), [sacctmgr](/man/sacctmgr)(1), [sreport](/man/sreport)(1), [scontrol](/man/scontrol)(1)

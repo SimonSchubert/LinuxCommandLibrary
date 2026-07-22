@@ -50,6 +50,18 @@ Scaleway cloud infrastructure CLI
 
 Requires Scaleway API keys; store them securely. Resource names and SKUs change—check current product docs. Incurs cloud costs when creating paid resources.
 
+# INSTALL
+
+```pacman: sudo pacman -S scaleway-cli```
+
+```apk: sudo apk add scaleway-cli```
+
+```brew: brew install scw```
+
+```nix: nix profile install nixpkgs#scaleway-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aws](/man/aws)(1), [doctl](/man/doctl)(1), [kubectl](/man/kubectl)(1)

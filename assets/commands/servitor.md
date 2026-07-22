@@ -28,6 +28,12 @@ Serverless command-line Fediverse client
 
 **servitor** was created by **Benton Edmondson** (BentonEdmondson) and is written in **Go**.
 
+# INSTALL
+
+```aur: yay -S servitor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [toot](/man/toot)(1), [tuisky](/man/tuisky)(1)

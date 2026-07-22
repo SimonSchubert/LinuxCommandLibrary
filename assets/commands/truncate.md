@@ -90,6 +90,24 @@ Truncating a file being written to by another process can cause data corruption 
 
 The **truncate** command is part of **GNU Coreutils** and has been available on Linux systems for many years. The underlying **ftruncate()** system call has been part of POSIX since the beginning, but the command-line utility provides convenient access to this functionality. On BSD systems, a similar **truncate** command exists with slightly different syntax. The GNU version became the standard on most Linux distributions.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dd](/man/dd)(1), [fallocate](/man/fallocate)(1), [touch](/man/touch)(1), [stat](/man/stat)(1), [rm](/man/rm)(1)

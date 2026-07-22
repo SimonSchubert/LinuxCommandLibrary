@@ -87,6 +87,24 @@ Reads .pc files. Compatible with pkg-config. Used in most build systems.
 
 pkgconf was created by **William Pitcock** as a lighter, faster alternative to pkg-config from freedesktop.org.
 
+# INSTALL
+
+```apt: sudo apt install pkgconf-bin```
+
+```dnf: sudo dnf install pkgconf```
+
+```pacman: sudo pacman -S pkgconf```
+
+```apk: sudo apk add pkgconf```
+
+```zypper: sudo zypper install pkgconf```
+
+```brew: brew install pkgconf```
+
+```nix: nix profile install nixpkgs#pkgconf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pkg-config](/man/pkg-config)(1), [gcc](/man/gcc)(1), [make](/man/make)(1)

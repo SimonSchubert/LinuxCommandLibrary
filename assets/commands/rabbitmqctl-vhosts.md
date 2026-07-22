@@ -48,6 +48,18 @@ Manage RabbitMQ virtual hosts
 
 **rabbitmqctl** vhost commands manage RabbitMQ virtual hosts. Virtual hosts provide logical separation for queues, exchanges, and permissions. Part of RabbitMQ server management.
 
+# INSTALL
+
+```dnf: sudo dnf install rabbitmq-server```
+
+```apk: sudo apk add rabbitmq-server```
+
+```zypper: sudo zypper install rabbitmq-server```
+
+```nix: nix profile install nixpkgs#rabbitmq-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rabbitmqctl](/man/rabbitmqctl)(1), [rabbitmqctl-users](/man/rabbitmqctl-users)(1)

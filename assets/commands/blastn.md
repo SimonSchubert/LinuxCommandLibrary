@@ -84,6 +84,12 @@ Large database searches require significant memory and time. Remote searches are
 
 BLAST was developed at NCBI (National Center for Biotechnology Information) with the original algorithm published in **1990** by Altschul et al. It has become one of the most widely used bioinformatics tools.
 
+# INSTALL
+
+```apt: sudo apt install ncbi-blast+```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blastp](/man/blastp)(1), [blastx](/man/blastx)(1), [tblastn](/man/tblastn)(1), [makeblastdb](/man/makeblastdb)(1)

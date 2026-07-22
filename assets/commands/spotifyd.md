@@ -102,6 +102,20 @@ Requires Spotify Premium for playback. Authentication may require OAuth setup in
 
 **spotifyd** was created as an open-source alternative to the official Spotify client for users who wanted lightweight, headless Spotify playback. It's built on **librespot**, a reverse-engineered Spotify client library. The project gained popularity for running Spotify on servers, Raspberry Pi devices, and systems where the full client is impractical. Development continues with community contributions.
 
+# INSTALL
+
+```pacman: sudo pacman -S spotifyd```
+
+```apk: sudo apk add spotifyd```
+
+```zypper: sudo zypper install spotifyd```
+
+```brew: brew install spotifyd```
+
+```nix: nix profile install nixpkgs#spotifyd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ncspot](/man/ncspot)(1)

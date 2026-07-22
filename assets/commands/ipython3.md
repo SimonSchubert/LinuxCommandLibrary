@@ -86,6 +86,16 @@ Separate from standard Python. Some magic commands are IPython-specific. Jupyter
 
 IPython was created by **Fernando Pérez** in **2001** to improve Python's interactive capabilities. It became the foundation for Jupyter, which generalized the notebook concept to multiple languages.
 
+# INSTALL
+
+```pacman: sudo pacman -S ipython```
+
+```apk: sudo apk add ipython```
+
+```brew: brew install ipython```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python3](/man/python3)(1), [jupyter](/man/jupyter)(1), [bpython](/man/bpython)(1)

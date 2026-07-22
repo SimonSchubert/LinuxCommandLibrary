@@ -105,6 +105,14 @@ Icon display requires a Nerd Font installed in the terminal.
 
 **lstr** was created by **bgreenwell** and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install lstr```
+
+```nix: nix profile install nixpkgs#lstr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tree](/man/tree)(1), [ls](/man/ls)(1), [eza](/man/eza)(1)

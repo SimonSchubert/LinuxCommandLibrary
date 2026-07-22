@@ -105,6 +105,24 @@ Press "?" for online help while running, and "q" to exit. lnav automatically det
 
 **lnav** was created to provide an advanced log file navigator with automatic format detection, syntax highlighting, and efficient navigation for system administrators and developers.
 
+# INSTALL
+
+```apt: sudo apt install lnav```
+
+```dnf: sudo dnf install lnav```
+
+```pacman: sudo pacman -S lnav```
+
+```apk: sudo apk add lnav```
+
+```zypper: sudo zypper install lnav```
+
+```brew: brew install lnav```
+
+```nix: nix profile install nixpkgs#lnav```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [tail](/man/tail)(1), [journalctl](/man/journalctl)(1), [multitail](/man/multitail)(1)

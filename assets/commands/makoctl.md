@@ -73,6 +73,24 @@ Use an external **menu** program to select a notification action
 **-h**, **--help**
 > Show help message and quit.
 
+# INSTALL
+
+```apt: sudo apt install mako-notifier```
+
+```dnf: sudo dnf install mako```
+
+```pacman: sudo pacman -S mako```
+
+```apk: sudo apk add mako```
+
+```zypper: sudo zypper install mako```
+
+```brew: brew install mako```
+
+```nix: nix profile install nixpkgs#mako```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mako](/man/mako)(1), [makoctl-dismiss](/man/makoctl-dismiss)(1), [notify-send](/man/notify-send)(1), [dunstctl](/man/dunstctl)(1)

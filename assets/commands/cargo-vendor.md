@@ -73,6 +73,20 @@ cargo build --offline
 
 Vendored sources are read-only. Use [patch] for modifications. Resolution may differ from online mode. Run cargo fetch first for complete dependency download.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-fetch](/man/cargo-fetch)(1)

@@ -97,6 +97,22 @@ Not all original wget options are supported. Some behavioral differences exist c
 
 **wget2** was developed by Tim Ruehsen as a modern rewrite of GNU Wget. Development began around 2012, with version 2.0.0 released in 2021. It adds HTTP/2, parallel downloading, and Metalink support while maintaining backward compatibility.
 
+# INSTALL
+
+```apt: sudo apt install wget2```
+
+```dnf: sudo dnf install wget2```
+
+```apk: sudo apk add wget2```
+
+```zypper: sudo zypper install wget2```
+
+```brew: brew install wget2```
+
+```nix: nix profile install nixpkgs#wget2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wget](/man/wget)(1), [curl](/man/curl)(1), [aria2c](/man/aria2c)(1)

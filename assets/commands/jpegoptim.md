@@ -109,6 +109,24 @@ Lossy optimization permanent. Stripping ICC may affect colors. Some metadata use
 
 **jpegoptim** was created by **Timo Kokkonen** as a command-line JPEG optimizer. It provides a simpler alternative to jpegtran for common optimization tasks, focusing on ease of use for batch processing.
 
+# INSTALL
+
+```apt: sudo apt install jpegoptim```
+
+```dnf: sudo dnf install jpegoptim```
+
+```pacman: sudo pacman -S jpegoptim```
+
+```apk: sudo apk add jpegoptim```
+
+```zypper: sudo zypper install jpegoptim```
+
+```brew: brew install jpegoptim```
+
+```nix: nix profile install nixpkgs#jpegoptim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jpegtran](/man/jpegtran)(1), [optipng](/man/optipng)(1), [convert](/man/convert)(1), [exiftool](/man/exiftool)(1)

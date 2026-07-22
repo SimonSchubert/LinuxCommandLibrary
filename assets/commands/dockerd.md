@@ -75,6 +75,16 @@ Usually managed by systemd rather than run directly.
 
 Requires root privileges or proper group membership. Configuration typically via /etc/docker/daemon.json. Exposing TCP socket without TLS is insecure.
 
+# INSTALL
+
+```apt: sudo apt install docker.io```
+
+```apk: sudo apk add docker-engine```
+
+```brew: brew install docker-engine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [systemctl](/man/systemctl)(1), [containerd](/man/containerd)(8)

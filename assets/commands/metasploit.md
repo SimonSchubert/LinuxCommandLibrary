@@ -96,6 +96,14 @@ Requires authorization for use. Database setup recommended. Regular updates need
 
 Metasploit was created by **H.D. Moore** in **2003** as a portable network tool. It was acquired by **Rapid7** in **2009** and remains the most popular penetration testing framework.
 
+# INSTALL
+
+```pacman: sudo pacman -S metasploit```
+
+```nix: nix profile install nixpkgs#metasploit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [nikto](/man/nikto)(1), [sqlmap](/man/sqlmap)(1), [hydra](/man/hydra)(1), [wireshark](/man/wireshark)(1)

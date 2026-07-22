@@ -88,6 +88,14 @@ Full sync requires significant disk space. Resource intensive. Mainnet sync take
 
 geth is developed by the **Ethereum Foundation** as the official Go implementation. It was one of the original Ethereum clients and remains the most popular for running nodes.
 
+# INSTALL
+
+```apk: sudo apk add geth```
+
+```brew: brew install geth```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [solc](/man/solc)(1)

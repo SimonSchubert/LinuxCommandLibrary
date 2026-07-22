@@ -55,6 +55,22 @@ When run with a command, both stdout and stderr are captured. When used as a pip
 
 When used in a pipeline, only the piped output is captured. The identifier defaults to the name of the invoked program, or "cat" in pipe mode. Priority levels follow syslog conventions (0=emerg through 7=debug).
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [journalctl](/man/journalctl)(1), [logger](/man/logger)(1), [systemctl](/man/systemctl)(1)

@@ -58,6 +58,12 @@ Requires **ffmpeg** and **ffprobe** to be installed and discoverable in **PATH**
 
 **nano-ffmpeg** is an open-source project written in **Go** by **dgr8akki**, distributed via Homebrew, Scoop, **go install**, and prebuilt binaries on GitHub. It was created to lower the barrier to entry for ffmpeg by exposing a guided, discoverable workflow without sacrificing access to the underlying command.
 
+# INSTALL
+
+```aur: yay -S nano-ffmpeg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [ffprobe](/man/ffprobe)(1)

@@ -93,6 +93,17 @@ Stack deletions can fail if resources have deletion protection or dependencies o
 
 AWS CloudFormation launched in **February 2011** as one of the first infrastructure-as-code services. It introduced change sets in **2016** for safer updates, drift detection in **2018**, and has continuously expanded resource type coverage. The service now supports over 700 AWS resource types.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ec2](/man/aws-ec2)(1), [aws-s3](/man/aws-s3)(1), [aws-iam](/man/aws-iam)(1), [terraform](/man/terraform)(1)

@@ -99,6 +99,12 @@ Image display requires a compatible terminal emulator (kitty, iTerm2, or one sup
 
 **neofetch** was created by **Dylan Araps** and first released in **2015** as a bash script. It quickly gained popularity as a more feature-rich alternative to **screenfetch**. The project became well-known in the Unix rice (customization) community for its extensive customization options and wide distribution support. In **April 2024**, the original developer archived the project, though community forks like **hyfetch** and **fastfetch** continue its legacy.
 
+# INSTALL
+
+```aur: yay -S neofetch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [screenfetch](/man/screenfetch)(1), [fastfetch](/man/fastfetch)(1), [inxi](/man/inxi)(1), [hwinfo](/man/hwinfo)(1), [lshw](/man/lshw)(1)

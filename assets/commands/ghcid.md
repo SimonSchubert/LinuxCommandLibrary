@@ -155,6 +155,16 @@ Filesystem notifications can be unreliable over network mounts, in containers an
 
 **ghcid** was written by **Neil Mitchell**, with significant contributions from **JP Moresmau**, and released around **2014**. It became a standard part of many Haskell development setups by offering fast, editor-independent feedback, and is distributed through **Hackage** and **Stackage**.
 
+# INSTALL
+
+```dnf: sudo dnf install ghcid```
+
+```brew: brew install ghcid```
+
+```nix: nix profile install nixpkgs#ghcid```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ghci](/man/ghci)(1), [ghc](/man/ghc)(1), [cabal](/man/cabal)(1), [stack](/man/stack)(1), [hlint](/man/hlint)(1)

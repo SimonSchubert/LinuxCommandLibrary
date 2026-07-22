@@ -35,6 +35,20 @@ Not all V4L2 features may be fully supported. Some applications may require nati
 
 Part of **PipeWire**, the modern multimedia framework for Linux. Extends PipeWire's device abstraction to video capture devices.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-v4l2```
+
+```dnf: sudo dnf install pipewire-v4l2```
+
+```pacman: sudo pacman -S pipewire-v4l2```
+
+```apk: sudo apk add pipewire-tools```
+
+```zypper: sudo zypper install pipewire-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [pw-cli](/man/pw-cli)(1), [v4l2-ctl](/man/v4l2-ctl)(1)

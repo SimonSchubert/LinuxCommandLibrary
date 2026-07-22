@@ -72,6 +72,20 @@ os: Linux [kernel 6.1.0]
 
 Operates offline with no side effects. Useful for CI/CD and build script checks.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [rustc](/man/rustc)(1), [rustup](/man/rustup)(1)

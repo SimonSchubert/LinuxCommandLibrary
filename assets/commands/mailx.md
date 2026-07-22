@@ -92,6 +92,12 @@ Multiple implementations exist (heirloom-mailx, s-nail, BSD mailx) with differin
 
 mailx evolved from the original **Unix mail** command through Berkeley Mail. Modern implementations include **s-nail** (successor to heirloom-mailx) which adds MIME, SMTP, POP3, and IMAP support.
 
+# INSTALL
+
+```zypper: sudo zypper install mailx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mail](/man/mail)(1), [mutt](/man/mutt)(1), [sendmail](/man/sendmail)(8)

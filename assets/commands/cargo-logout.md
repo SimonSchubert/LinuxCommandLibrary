@@ -39,6 +39,20 @@ Removes the token entry from ~/.cargo/credentials.toml for the specified registr
 
 To fully revoke access, also regenerate the token on the registry website (e.g., https://crates.io/me for crates.io). Only removes local credentials.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-login](/man/cargo-login)(1), [cargo-publish](/man/cargo-publish)(1)

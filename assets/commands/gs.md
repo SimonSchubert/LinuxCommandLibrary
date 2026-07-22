@@ -94,6 +94,24 @@ The available devices depend on your Ghostscript installation. Use gs -h to see 
 
 **Ghostscript** has been developed since 1986, providing free PostScript and PDF interpretation. It is widely used for PDF manipulation on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install ghostscript```
+
+```dnf: sudo dnf install ghostscript```
+
+```pacman: sudo pacman -S ghostscript```
+
+```apk: sudo apk add ghostscript```
+
+```zypper: sudo zypper install ghostscript```
+
+```brew: brew install ghostscript```
+
+```nix: nix profile install nixpkgs#ghostscript```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ps2pdf](/man/ps2pdf)(1), [pdf2ps](/man/pdf2ps)(1), [pdftops](/man/pdftops)(1)

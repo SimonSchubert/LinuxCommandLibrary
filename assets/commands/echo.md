@@ -71,6 +71,24 @@ Behavior differs between shells and between the shell built-in and `/bin/echo`. 
 
 **echo** has been part of Unix since Version 2 in **1972**, though its behavior has varied across different Unix variants.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [printf](/man/printf)(1), [cat](/man/cat)(1), [tee](/man/tee)(1)

@@ -74,6 +74,16 @@ Output format support depends on build configuration. Some HDR features may requ
 
 djxl is part of the **libjxl** reference implementation of JPEG XL, developed by the **JPEG Committee** with contributions from Google. JPEG XL was standardized in **2022** as a next-generation image format combining features from Google's PIK and Cloudinary's FUIF.
 
+# INSTALL
+
+```apt: sudo apt install libjxl-tools```
+
+```apk: sudo apk add libjxl-tools```
+
+```zypper: sudo zypper install libjxl-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cjxl](/man/cjxl)(1), [djpeg](/man/djpeg)(1), [convert](/man/convert)(1)

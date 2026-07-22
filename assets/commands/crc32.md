@@ -48,6 +48,14 @@ CRC-32 is not suitable for security purposes as it can be easily manipulated. It
 
 CRC-32 was first published in **1975** as part of Ethernet protocol development. The specific polynomial used (IEEE 802.3) became the most common variant. The crc32 command provides convenient command-line access to this widely-used checksum algorithm.
 
+# INSTALL
+
+```pacman: sudo pacman -S perl-archive-zip```
+
+```apk: sudo apk add perl-archive-zip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cksum](/man/cksum)(1), [md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1), [sha1sum](/man/sha1sum)(1), [b2sum](/man/b2sum)(1)

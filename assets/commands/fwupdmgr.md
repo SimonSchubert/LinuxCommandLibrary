@@ -73,6 +73,24 @@ Firmware updates carry risk of bricking hardware if interrupted. Ensure stable p
 
 fwupdmgr is part of fwupd, created by Richard Hughes in **2015**. The project was developed to bring reliable firmware updates to Linux, partnering with hardware vendors through the Linux Vendor Firmware Service. Major vendors including Dell, Lenovo, HP, and Logitech now distribute firmware via LVFS.
 
+# INSTALL
+
+```apt: sudo apt install fwupd```
+
+```dnf: sudo dnf install fwupd```
+
+```pacman: sudo pacman -S fwupd```
+
+```apk: sudo apk add fwupd```
+
+```zypper: sudo zypper install fwupd```
+
+```brew: brew install fwupd```
+
+```nix: nix profile install nixpkgs#fwupd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fwupdtool](/man/fwupdtool)(1), [efibootmgr](/man/efibootmgr)(8)

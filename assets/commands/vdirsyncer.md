@@ -74,6 +74,20 @@ Initial discover is required before sync. Google CardDAV has known issues with d
 
 **vdirsyncer** was created as part of the pimutils project to provide command-line personal information management. It fills the role for calendars and contacts that OfflineIMAP fills for email, enabling offline access and local tooling for CalDAV/CardDAV data.
 
+# INSTALL
+
+```dnf: sudo dnf install vdirsyncer```
+
+```pacman: sudo pacman -S vdirsyncer```
+
+```apk: sudo apk add vdirsyncer```
+
+```brew: brew install vdirsyncer```
+
+```nix: nix profile install nixpkgs#vdirsyncer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [khal](/man/khal)(1), [calcurse](/man/calcurse)(1)

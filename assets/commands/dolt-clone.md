@@ -74,6 +74,16 @@ Large repositories may take time to clone. Network connectivity required. Storag
 
 dolt clone is part of **Dolt**, implementing Git's clone semantics for database repositories. It enables distributed collaboration on versioned databases through DoltHub and other remotes.
 
+# INSTALL
+
+```pacman: sudo pacman -S dolt```
+
+```brew: brew install dolt```
+
+```nix: nix profile install nixpkgs#dolt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dolt](/man/dolt)(1), [dolt-fetch](/man/dolt-fetch)(1), [dolt-branch](/man/dolt-branch)(1), [git-clone](/man/git-clone)(1)

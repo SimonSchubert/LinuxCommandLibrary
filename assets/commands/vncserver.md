@@ -76,6 +76,20 @@ Each server instance runs on a separate display number. The first available disp
 
 Password must be set with **vncpasswd** before first use. Display number is added to base port 5900 (e.g., display :1 uses port 5901). Firewall may need to allow VNC ports. VNC traffic is unencrypted by default; use SSH tunneling or TLS security types for secure connections.
 
+# INSTALL
+
+```dnf: sudo dnf install tigervnc```
+
+```pacman: sudo pacman -S tigervnc```
+
+```apk: sudo apk add tigervnc```
+
+```zypper: sudo zypper install tigervnc```
+
+```nix: nix profile install nixpkgs#tigervnc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vncviewer](/man/vncviewer)(1), [vncpasswd](/man/vncpasswd)(1), [x11vnc](/man/x11vnc)(1), [ssh](/man/ssh)(1)

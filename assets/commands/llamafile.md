@@ -116,6 +116,12 @@ File sizes can be large (several GB). Requires chmod +x on Unix systems. Apple S
 
 llamafile was created by **Justine Tunney** at **Mozilla** in **2023**, combining Cosmopolitan Libc's universal binary format with llama.cpp.
 
+# INSTALL
+
+```aur: yay -S llamafile```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [llama.cpp](/man/llama.cpp)(1), [ollama](/man/ollama)(1)

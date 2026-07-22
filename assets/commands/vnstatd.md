@@ -76,6 +76,24 @@ Statistics begin from daemon start, not historically. Kernel counter resets (reb
 
 **vnstatd** is part of vnStat, created by Teemu Toivola for lightweight network traffic monitoring. The project began in 2002 and has become a standard tool for bandwidth monitoring on Linux servers and embedded systems.
 
+# INSTALL
+
+```apt: sudo apt install vnstat```
+
+```dnf: sudo dnf install vnstat```
+
+```pacman: sudo pacman -S vnstat```
+
+```apk: sudo apk add vnstat```
+
+```zypper: sudo zypper install vnstat```
+
+```brew: brew install vnstat```
+
+```nix: nix profile install nixpkgs#vnstat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vnstat](/man/vnstat)(1), [vnstati](/man/vnstati)(1), [iftop](/man/iftop)(8), [nethogs](/man/nethogs)(8)

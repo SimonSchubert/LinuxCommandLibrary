@@ -97,6 +97,22 @@ On Wayland, some features may require additional permissions or compositor-speci
 
 Flameshot was created by **lupoDharkael** and first released in **2017**. It was designed as a modern alternative to older screenshot tools, drawing inspiration from Greenshot (Windows). The project is written in **C++** using the Qt framework and has become one of the most popular screenshot utilities in the Linux ecosystem.
 
+# INSTALL
+
+```apt: sudo apt install flameshot```
+
+```dnf: sudo dnf install flameshot```
+
+```pacman: sudo pacman -S flameshot```
+
+```apk: sudo apk add flameshot```
+
+```zypper: sudo zypper install flameshot```
+
+```nix: nix profile install nixpkgs#flameshot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnome-screenshot](/man/gnome-screenshot)(1), [scrot](/man/scrot)(1), [maim](/man/maim)(1), [spectacle](/man/spectacle)(1)

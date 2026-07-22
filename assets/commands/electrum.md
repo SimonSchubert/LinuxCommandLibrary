@@ -150,6 +150,18 @@ Electrum connects to third-party servers that can see your addresses and transac
 
 Electrum was created by **Thomas Voegtlin** and first released in **November 2011**. It was one of the first lightweight Bitcoin wallets, pioneering the use of SPV (Simplified Payment Verification) with remote servers. The name comes from the Latin word for amber, chosen because amber produces static electricity when rubbed. Electrum introduced the concept of seed phrases for wallet backup, which became a standard across the cryptocurrency industry.
 
+# INSTALL
+
+```dnf: sudo dnf install electrum```
+
+```pacman: sudo pacman -S electrum```
+
+```apk: sudo apk add electrum```
+
+```nix: nix profile install nixpkgs#electrum```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bitcoin-cli](/man/bitcoin-cli)(1), [trezorctl](/man/trezorctl)(1)

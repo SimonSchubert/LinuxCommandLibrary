@@ -124,6 +124,24 @@ Learning curve for advanced features. Large binary files need git-lfs. History r
 
 Git was created by **Linus Torvalds** in **2005** for Linux kernel development after BitKeeper licensing issues. It has become the standard version control system for most software projects.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [git-commit](/man/git-commit)(1), [git-push](/man/git-push)(1), [git-log](/man/git-log)(1), [git-branch](/man/git-branch)(1)

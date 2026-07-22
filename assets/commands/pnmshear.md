@@ -33,6 +33,24 @@ _angle_
 
 Anti-aliasing is applied by default for smooth results. The **-background** option sets the fill color for newly exposed areas, and **-noantialias** disables smoothing. Part of the Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnmrotate](/man/pnmrotate)(1), [pnmflip](/man/pnmflip)(1)

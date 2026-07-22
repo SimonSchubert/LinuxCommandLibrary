@@ -78,6 +78,24 @@ shows transactions and running balance for a single account in bank-statement fo
 
 **hledger aregister** (alias **areg**) shows transactions and running balance for a single account in bank-statement format. Each transaction appears on one line with the date, description, other accounts involved, amount, and running balance. Unlike **register**, which shows one line per posting, aregister groups postings by transaction. The account can be specified by full name or a case-insensitive regular expression matching the first account alphabetically.
 
+# INSTALL
+
+```apt: sudo apt install hledger```
+
+```dnf: sudo dnf install hledger```
+
+```pacman: sudo pacman -S hledger```
+
+```apk: sudo apk add hledger```
+
+```zypper: sudo zypper install hledger```
+
+```brew: brew install hledger```
+
+```nix: nix profile install nixpkgs#hledger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hledger](/man/hledger)(1), [hledger-balance](/man/hledger-balance)(1), [hledger-print](/man/hledger-print)(1)

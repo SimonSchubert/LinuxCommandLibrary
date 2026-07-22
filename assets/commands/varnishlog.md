@@ -78,6 +78,20 @@ Requires a running Varnish instance. Familiarity with VSL query language is help
 
 **varnishlog** is part of **Varnish Cache**, displaying the Varnish Shared Memory Log for debugging.
 
+# INSTALL
+
+```apt: sudo apt install varnish```
+
+```dnf: sudo dnf install varnish```
+
+```apk: sudo apk add varnish```
+
+```brew: brew install varnish```
+
+```nix: nix profile install nixpkgs#varnish```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [varnishhist](/man/varnishhist)(1), [varnishstat](/man/varnishstat)(1), [varnishd](/man/varnishd)(1)

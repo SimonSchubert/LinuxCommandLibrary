@@ -80,6 +80,12 @@ Loading the ONNX model has noticeable startup cost; for low-latency applications
 
 **piper** was created by **Michael Hansen** in **November 2022** under the **Rhasspy** umbrella for use in offline voice assistants and is now developed at **Nabu Casa / Open Home Foundation** as the GPL-3.0 **piper1-gpl** project. It powers TTS in **Home Assistant**, the **NVDA** screen reader, and **LocalAI**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#piper-tts```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [espeak-ng](/man/espeak-ng)(1), [festival](/man/festival)(1), [flite](/man/flite)(1)

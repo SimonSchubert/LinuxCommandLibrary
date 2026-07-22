@@ -74,6 +74,18 @@ Set display **position**
 
 Output IDs can be numeric (1, 2) or connector names (HDMI-A-1, DP-2). Use `--outputs` to find the correct identifiers. This tool is specific to KDE Plasma and requires the KScreen backend to be running. On X11, xrandr provides similar functionality; on Wayland-only desktops outside KDE, use compositor-specific tools.
 
+# INSTALL
+
+```apt: sudo apt install libkscreen-bin```
+
+```dnf: sudo dnf install libkscreen```
+
+```pacman: sudo pacman -S libkscreen```
+
+```apk: sudo apk add libkscreen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kscreen-console](/man/kscreen-console)(1), [xrandr](/man/xrandr)(1)

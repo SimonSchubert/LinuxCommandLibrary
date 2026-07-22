@@ -72,6 +72,24 @@ Export a single Git commit to a CVS checkout
 
 The command handles file additions, modifications, and deletions, translating Git's commit semantics into equivalent CVS operations. It is particularly useful in hybrid environments where teams are transitioning from CVS to Git but must maintain synchronization with CVS-dependent systems.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [cvs](/man/cvs)(1), [git-format-patch](/man/git-format-patch)(1)

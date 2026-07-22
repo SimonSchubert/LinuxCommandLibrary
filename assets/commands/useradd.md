@@ -109,6 +109,20 @@ The **-p** option requires an already-encrypted password. Do not use plain text 
 
 **useradd** is part of the **shadow-utils** package, managing user account security on Unix systems. On Debian systems, **adduser** provides a friendlier interface.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [adduser](/man/adduser)(8), [userdel](/man/userdel)(8), [usermod](/man/usermod)(8), [passwd](/man/passwd)(1), [groupadd](/man/groupadd)(8)

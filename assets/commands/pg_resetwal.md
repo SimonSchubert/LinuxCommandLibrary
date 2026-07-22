@@ -66,6 +66,16 @@ resets write-ahead log and control information
 
 Use only as a last resort when WAL is corrupted or pg_controldata shows inconsistencies. May cause data loss and transaction integrity issues. The PostgreSQL server must be stopped before running.
 
+# INSTALL
+
+```dnf: sudo dnf install postgresql17```
+
+```apk: sudo apk add postgresql17```
+
+```zypper: sudo zypper install postgresql17```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_controldata](/man/pg_controldata)(1), [pg_rewind](/man/pg_rewind)(1)

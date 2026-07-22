@@ -29,6 +29,12 @@ Some configuration changes require a VM restart to take effect. The pending comm
 
 **qm pending** is part of the **Proxmox VE** virtualization platform for managing QEMU/KVM virtual machines.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-config](/man/qm-config)(1), [qm-set](/man/qm-set)(1), [qm-start](/man/qm-start)(1)

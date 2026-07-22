@@ -80,6 +80,22 @@ Requires OpenCL for GPU acceleration (same as GUI). Processing is single-threade
 
 darktable was created by **Johannes Hanika** and first released in **2009** as an open-source photography workflow application, inspired by Adobe Lightroom. The CLI interface was added to enable scripted processing and integration with other tools. darktable has grown to become one of the premier open-source RAW processing applications.
 
+# INSTALL
+
+```apt: sudo apt install darktable```
+
+```dnf: sudo dnf install darktable```
+
+```pacman: sudo pacman -S darktable```
+
+```apk: sudo apk add darktable```
+
+```zypper: sudo zypper install darktable```
+
+```nix: nix profile install nixpkgs#darktable```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rawtherapee-cli](/man/rawtherapee-cli)(1), [dcraw](/man/dcraw)(1), [exiftool](/man/exiftool)(1)

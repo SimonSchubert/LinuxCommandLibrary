@@ -95,6 +95,23 @@ Requires root privileges for some features. Can consume significant resources wh
 
 Developed by Gerlof Langeveld. Designed to provide more detailed system monitoring than **top** with historical data logging.
 
+# INSTALL
+
+```apt: sudo apt install atop```
+
+```dnf: sudo dnf install atop```
+
+```pacman: sudo pacman -S atop```
+
+```apk: sudo apk add atop```
+
+```zypper: sudo zypper install atop```
+
+```brew: brew install atop```
+
+```nix: nix profile install nixpkgs#atop```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [top](/man/top)(1), [htop](/man/htop)(1), [btop](/man/btop)(1), [glances](/man/glances)(1)

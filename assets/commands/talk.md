@@ -44,6 +44,14 @@ Both users must be logged in. Requires the talk daemon (talkd) to be running. Th
 
 **talk** originated in BSD Unix in the **1980s** as an early form of instant messaging. It was part of the standard Unix networking tools and is now included in GNU inetutils.
 
+# INSTALL
+
+```dnf: sudo dnf install talk```
+
+```zypper: sudo zypper install talk```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [write](/man/write)(1), [wall](/man/wall)(1), [mesg](/man/mesg)(1)

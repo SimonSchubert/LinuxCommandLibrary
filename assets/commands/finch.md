@@ -68,6 +68,18 @@ Text-based alternative to the Pidgin GUI client.
 
 Requires ncurses library. Uses same libpurple plugins as Pidgin. Account configuration shared with Pidgin if using same config directory.
 
+# INSTALL
+
+```apt: sudo apt install finch```
+
+```dnf: sudo dnf install finch```
+
+```apk: sudo apk add finch```
+
+```zypper: sudo zypper install finch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [irssi](/man/irssi)(1), [weechat](/man/weechat)(1)

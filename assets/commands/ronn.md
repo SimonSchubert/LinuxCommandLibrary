@@ -115,6 +115,16 @@ Ruby gem (gem install ronn-ng). Filename convention: name.section.ronn.
 
 Ronn was created by **Ryan Tomayko** to simplify writing man pages. ronn-ng is the maintained fork.
 
+# INSTALL
+
+```apk: sudo apk add ronn```
+
+```brew: brew install ronn```
+
+```nix: nix profile install nixpkgs#ronn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [man](/man/man)(1), [pandoc](/man/pandoc)(1), [groff](/man/groff)(1)

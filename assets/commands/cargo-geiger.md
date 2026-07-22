@@ -66,6 +66,16 @@ Analysis is based on source-level detection and may not catch all forms of unsaf
 
 **cargo-geiger** was created by **Anders Kaseorg** and the Rust community as a security auditing tool. It addresses the concern that Rust's safety guarantees only hold for safe code, and that unsafe blocks in dependencies can undermine the safety of the entire application.
 
+# INSTALL
+
+```pacman: sudo pacman -S cargo-geiger```
+
+```brew: brew install cargo-geiger```
+
+```nix: nix profile install nixpkgs#cargo-geiger```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1)

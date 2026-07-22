@@ -105,6 +105,22 @@ Parted modifies the partition table directly and changes take effect immediately
 
 **parted** is part of the GNU Parted package, first released in 1999 by Andrew Clausen. It was designed to handle larger disks and more partition types than traditional fdisk.
 
+# INSTALL
+
+```apt: sudo apt install parted```
+
+```dnf: sudo dnf install parted```
+
+```pacman: sudo pacman -S parted```
+
+```apk: sudo apk add parted```
+
+```zypper: sudo zypper install parted```
+
+```nix: nix profile install nixpkgs#parted```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fdisk](/man/fdisk)(8), [gdisk](/man/gdisk)(8), [mkfs](/man/mkfs)(8), [partprobe](/man/partprobe)(8)

@@ -70,6 +70,16 @@ Powerful alternative to sysctl with TUI
 
 **systeroid** was created by **Orhun Poyraz** (orhun) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S systeroid```
+
+```apk: sudo apk add systeroid```
+
+```nix: nix profile install nixpkgs#systeroid```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sysctl](/man/sysctl)(1), [proc](/man/proc)(5), [tuned](/man/tuned)(1)

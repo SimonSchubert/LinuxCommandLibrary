@@ -44,6 +44,20 @@ executes a command in a container running in a pod
 
 The double dash (--) is required to separate kubectl flags from the command and its arguments that should be passed to the container. When combined with -i (stdin) and -t (tty) flags, it provides a fully interactive terminal session. For pods with multiple containers, the -c flag lets you specify which container to target.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-attach](/man/kubectl-attach)(1)

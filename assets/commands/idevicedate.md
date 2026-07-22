@@ -42,6 +42,16 @@ displays or sets the date and time on iOS devices
 
 **idevicedate** displays or sets the date and time on iOS devices. Part of the libimobiledevice suite. Can synchronize device time with host system.
 
+# INSTALL
+
+```apt: sudo apt install libimobiledevice-utils```
+
+```dnf: sudo dnf install libimobiledevice-utils```
+
+```apk: sudo apk add libimobiledevice-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ideviceinfo](/man/ideviceinfo)(1), [date](/man/date)(1)

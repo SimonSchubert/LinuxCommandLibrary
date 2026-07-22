@@ -111,6 +111,24 @@ Higher compression levels use more memory. Ultra levels (20-22) require signific
 
 **Zstandard** was developed by **Yann Collet** at **Facebook** starting in **2015**, building on his earlier LZ4 work. It was released publicly in **2016** and became RFC 8478 in **2018**. Zstd has been adopted by the Linux kernel for compression, and is supported by tar, HTTP content-encoding, and numerous other tools.
 
+# INSTALL
+
+```apt: sudo apt install zstd```
+
+```dnf: sudo dnf install zstd```
+
+```pacman: sudo pacman -S zstd```
+
+```apk: sudo apk add zstd```
+
+```zypper: sudo zypper install zstd```
+
+```brew: brew install zstd```
+
+```nix: nix profile install nixpkgs#zstd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gzip](/man/gzip)(1), [xz](/man/xz)(1), [lz4](/man/lz4)(1), [bzip2](/man/bzip2)(1)

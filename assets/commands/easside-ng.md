@@ -67,6 +67,24 @@ Requires wireless card supporting monitor mode and packet injection. WEP is depr
 
 easside-ng is part of the **Aircrack-ng** suite, developed from the original Aircrack project. The tool was created to demonstrate WEP vulnerabilities and for legitimate security testing. WEP attacks helped drive the adoption of WPA/WPA2.
 
+# INSTALL
+
+```apt: sudo apt install aircrack-ng```
+
+```dnf: sudo dnf install aircrack-ng```
+
+```pacman: sudo pacman -S aircrack-ng```
+
+```apk: sudo apk add aircrack-ng```
+
+```zypper: sudo zypper install aircrack-ng```
+
+```brew: brew install aircrack-ng```
+
+```nix: nix profile install nixpkgs#aircrack-ng```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1), [aireplay-ng](/man/aireplay-ng)(1), [buddy-ng](/man/buddy-ng)(1)

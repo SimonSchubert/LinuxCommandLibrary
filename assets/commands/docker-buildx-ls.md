@@ -45,6 +45,24 @@ Each builder may have multiple nodes representing different build environments o
 
 Builder status is loaded with a default 20-second timeout. Builders using remote drivers or Kubernetes may appear as inactive if the endpoint is unreachable within the timeout window.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-buildx-rm](/man/docker-buildx-rm)(1), [docker-buildx-du](/man/docker-buildx-du)(1), [docker-build](/man/docker-build)(1), [docker](/man/docker)(1)

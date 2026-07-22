@@ -73,6 +73,18 @@ The configuration file must exist and be valid YAML. When using workers, each wo
 
 **Synapse** is developed by Element (formerly New Vector) as the reference implementation of the Matrix protocol. Matrix is an open standard for decentralized, real-time communication. Synapse was first released in 2014 and remains the most widely deployed Matrix homeserver.
 
+# INSTALL
+
+```dnf: sudo dnf install synapse```
+
+```pacman: sudo pacman -S synapse```
+
+```apk: sudo apk add synapse```
+
+```nix: nix profile install nixpkgs#synapse```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [register_new_matrix_user](/man/register_new_matrix_user)(1), [systemctl](/man/systemctl)(1)

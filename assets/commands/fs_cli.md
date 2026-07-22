@@ -87,6 +87,16 @@ Requires the Event Socket module to be loaded and properly configured in FreeSWI
 
 fs_cli is part of the FreeSWITCH project, an open-source communications platform started in **2006** by Anthony Minessale II. It was created as a modern, scalable alternative to Asterisk for building telephony applications.
 
+# INSTALL
+
+```apk: sudo apk add freeswitch```
+
+```brew: brew install freeswitch```
+
+```nix: nix profile install nixpkgs#freeswitch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [asterisk](/man/asterisk)(8)

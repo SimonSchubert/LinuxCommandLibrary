@@ -105,6 +105,20 @@ Running mkosi on a filesystem with reflink support (XFS, btrfs) significantly im
 
 **mkosi** is part of the **systemd** project, developed by Lennart Poettering and others. It was designed to build modern, legacy-free Linux images using systemd components like systemd-nspawn, systemd-repart, and unified kernel images. The tool emphasizes reproducibility and image-based deployments.
 
+# INSTALL
+
+```dnf: sudo dnf install mkosi```
+
+```pacman: sudo pacman -S mkosi```
+
+```apk: sudo apk add mkosi```
+
+```zypper: sudo zypper install mkosi```
+
+```nix: nix profile install nixpkgs#mkosi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-nspawn](/man/systemd-nspawn)(1), [systemd-repart](/man/systemd-repart)(8), [qemu](/man/qemu)(1)

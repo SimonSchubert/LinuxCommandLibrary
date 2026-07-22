@@ -88,6 +88,24 @@ Each gist supports multiple files and full version history through git. They can
 
 The CLI provides full lifecycle management from creation through editing and deletion, with support for reading content from stdin for scripting workflows.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gist](/man/gist)(1), [git](/man/git)(1)

@@ -105,6 +105,16 @@ The **-C** color option only supports the basic 8-color terminal palette. Center
 
 **tty-clock** was created by **Martin Duquesnoy** (xorg62) in **2008** as a lightweight terminal clock utility written in C. The project has been community-maintained since, with contributions improving signal handling, locale compatibility, and ncurses support over the years.
 
+# INSTALL
+
+```apt: sudo apt install tty-clock```
+
+```brew: brew install tty-clock```
+
+```nix: nix profile install nixpkgs#tty-clock```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tty](/man/tty)(1), [date](/man/date)(1), [watch](/man/watch)(1)

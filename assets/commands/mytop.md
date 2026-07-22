@@ -123,6 +123,20 @@ Requires MySQL PROCESS privilege. Some features need SUPER privilege. Not active
 
 **mytop** was written by **Jeremy Zawodny** around **2000** when he worked at Yahoo. It became a standard tool for MySQL administrators, filling the gap for real-time server monitoring before such features were built into management tools.
 
+# INSTALL
+
+```apt: sudo apt install mariadb-client```
+
+```dnf: sudo dnf install mytop```
+
+```pacman: sudo pacman -S mariadb-mytop```
+
+```apk: sudo apk add mariadb-mytop```
+
+```zypper: sudo zypper install mariadb-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mysql](/man/mysql)(1), [mysqladmin](/man/mysqladmin)(1)

@@ -80,6 +80,16 @@ Security tool. Legal use only. Requires monitor mode. Authorized testing only.
 
 mdk4 is the successor to **mdk3**, providing updated wireless security testing capabilities.
 
+# INSTALL
+
+```apt: sudo apt install mdk4```
+
+```pacman: sudo pacman -S mdk4```
+
+```nix: nix profile install nixpkgs#mdk4```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mdk3](/man/mdk3)(1), [aircrack-ng](/man/aircrack-ng)(1), [wifite](/man/wifite)(1)

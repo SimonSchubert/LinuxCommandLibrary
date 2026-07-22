@@ -95,6 +95,18 @@ Some plugins require node restart. Dependencies enabled automatically. Managemen
 
 RabbitMQ plugins system was developed by **Pivotal** (now VMware) as part of RabbitMQ's extensible architecture.
 
+# INSTALL
+
+```dnf: sudo dnf install rabbitmq-server```
+
+```apk: sudo apk add rabbitmq-server```
+
+```zypper: sudo zypper install rabbitmq-server```
+
+```nix: nix profile install nixpkgs#rabbitmq-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rabbitmqctl](/man/rabbitmqctl)(8), [rabbitmq-diagnostics](/man/rabbitmq-diagnostics)(8), [rabbitmq-server](/man/rabbitmq-server)(8)

@@ -88,6 +88,16 @@ Error counts persist until cleared. CKSUM errors may indicate controller or cabl
 
 **zpool status** is the primary tool for ZFS pool health monitoring. ZFS was developed by Sun Microsystems and introduced data integrity verification features that make status reporting more informative than traditional storage systems.
 
+# INSTALL
+
+```apt: sudo apt install zfs-fuse```
+
+```apk: sudo apk add zfs```
+
+```nix: nix profile install nixpkgs#zfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zpool](/man/zpool)(8), [zpool-events](/man/zpool-events)(8), [zfs](/man/zfs)(8)

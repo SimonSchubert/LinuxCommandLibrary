@@ -114,6 +114,20 @@ Requires SCAP content (commonly from **scap-security-guide**). Full system scans
 
 **OpenSCAP** was launched in **2008** by **Red Hat** and became a NIST-certified SCAP scanner in **2014**. It is the reference implementation of the SCAP standards used by RHEL, Fedora, CentOS, Ubuntu, SUSE, and Oracle Linux for compliance auditing (CIS, PCI-DSS, STIG, HIPAA, etc.).
 
+# INSTALL
+
+```apt: sudo apt install openscap-scanner```
+
+```dnf: sudo dnf install openscap-scanner```
+
+```apk: sudo apk add openscap```
+
+```zypper: sudo zypper install openscap```
+
+```nix: nix profile install nixpkgs#openscap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scap-workbench](/man/scap-workbench)(1), [lynis](/man/lynis)(1)

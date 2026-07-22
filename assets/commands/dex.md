@@ -69,6 +69,20 @@ Useful for window managers that don't have built-in autostart support.
 
 Desktop entries must comply with XDG specification. Some entries may require specific desktop environments. Autostart directories default to `~/.config/autostart` and `/etc/xdg/autostart`.
 
+# INSTALL
+
+```pacman: sudo pacman -S dex```
+
+```apk: sudo apk add dex```
+
+```zypper: sudo zypper install dex```
+
+```brew: brew install dex```
+
+```nix: nix profile install nixpkgs#dex```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdg-open](/man/xdg-open)(1), [update-desktop-database](/man/update-desktop-database)(1)

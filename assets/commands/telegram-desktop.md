@@ -59,6 +59,16 @@ Account required. Internet needed. Qt-based application.
 
 **Telegram Desktop** is the official desktop client for **Telegram**, created by the Durov brothers' team.
 
+# INSTALL
+
+```pacman: sudo pacman -S telegram-desktop```
+
+```zypper: sudo zypper install telegram-desktop```
+
+```nix: nix profile install nixpkgs#telegram-desktop```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [signal-desktop](/man/signal-desktop)(1), [discord](/man/discord)(1)

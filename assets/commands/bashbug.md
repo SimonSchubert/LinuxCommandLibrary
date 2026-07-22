@@ -53,6 +53,23 @@ Requires working mail system configured. May not work on all systems. Consider r
 
 **bashbug** has been included with bash distributions since the early versions to facilitate bug reporting to the development team.
 
+# INSTALL
+
+```apt: sudo apt install bash```
+
+```dnf: sudo dnf install bash```
+
+```pacman: sudo pacman -S bash```
+
+```apk: sudo apk add bash-dev```
+
+```zypper: sudo zypper install bash```
+
+```brew: brew install bash```
+
+```nix: nix profile install nixpkgs#bash```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [bash](/man/bash)(1), [reportbug](/man/reportbug)(1)

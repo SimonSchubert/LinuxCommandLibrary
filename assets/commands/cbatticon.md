@@ -78,6 +78,18 @@ The tool is designed for minimal window managers and desktop environments that d
 
 Requires a system tray to display. May not work with Wayland compositors that lack tray support. Critical level commands run with user privileges.
 
+# INSTALL
+
+```apt: sudo apt install cbatticon```
+
+```pacman: sudo pacman -S cbatticon```
+
+```apk: sudo apk add cbatticon```
+
+```nix: nix profile install nixpkgs#cbatticon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [upower](/man/upower)(1), [acpi](/man/acpi)(1)

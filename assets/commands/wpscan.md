@@ -123,6 +123,14 @@ Only use with authorization. May trigger security alerts. API token needed for v
 
 **WPScan** was created by the **WPScan Team** around **2011**. It became the standard WordPress security assessment tool, used by security professionals and bug bounty hunters.
 
+# INSTALL
+
+```pacman: sudo pacman -S wpscan```
+
+```nix: nix profile install nixpkgs#wpscan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [nikto](/man/nikto)(1), [sqlmap](/man/sqlmap)(1), [burp](/man/burp)(1)

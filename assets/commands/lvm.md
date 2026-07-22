@@ -104,6 +104,22 @@ LVM requires physical volumes to be initialized before use. Reducing volumes req
 
 **LVM2** is the second major version of the Linux Logical Volume Manager, providing enterprise-grade storage management capabilities.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvcreate](/man/lvcreate)(8), [lvextend](/man/lvextend)(8), [vgcreate](/man/vgcreate)(8), [pvcreate](/man/pvcreate)(8), [pvs](/man/pvs)(8), [vgs](/man/vgs)(8), [lvs](/man/lvs)(8)

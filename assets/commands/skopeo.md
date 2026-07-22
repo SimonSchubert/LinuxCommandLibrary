@@ -78,6 +78,24 @@ Registry authentication may be needed. Some operations require write access. Lar
 
 **skopeo** was developed by **Red Hat** as part of the container tools project alongside podman and buildah. It enables daemonless container image operations, fitting the podman philosophy.
 
+# INSTALL
+
+```apt: sudo apt install skopeo```
+
+```dnf: sudo dnf install skopeo```
+
+```pacman: sudo pacman -S skopeo```
+
+```apk: sudo apk add skopeo```
+
+```zypper: sudo zypper install skopeo```
+
+```brew: brew install skopeo```
+
+```nix: nix profile install nixpkgs#skopeo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [podman](/man/podman)(1), [docker](/man/docker)(1), [crane](/man/crane)(1), [buildah](/man/buildah)(1)

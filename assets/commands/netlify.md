@@ -80,6 +80,12 @@ Requires Netlify account. Node.js based. Git integration recommended.
 
 Netlify CLI was created by **Netlify** to enable command-line deployment and site management.
 
+# INSTALL
+
+```aur: yay -S netlify```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vercel](/man/vercel)(1), [firebase](/man/firebase)(1), [gh-pages](/man/gh-pages)(1)

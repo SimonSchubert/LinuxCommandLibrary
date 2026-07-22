@@ -72,6 +72,16 @@ Part of mosquitto-clients. Requires broker access. Default QoS is 0.
 
 mosquitto_pub is the **publishing client** distributed with the Eclipse Mosquitto MQTT broker.
 
+# INSTALL
+
+```apt: sudo apt install mosquitto-clients```
+
+```apk: sudo apk add mosquitto-clients```
+
+```zypper: sudo zypper install mosquitto-clients```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mosquitto_sub](/man/mosquitto_sub)(1), [mosquitto](/man/mosquitto)(1)

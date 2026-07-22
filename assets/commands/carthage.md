@@ -113,6 +113,12 @@ git "https://example.com/repo.git" "branch-name"
 
 Supports dynamic frameworks on iOS 8+. Static framework support since version 0.30.0. Consider Swift Package Manager for new projects. Frameworks go to Carthage/Build directory.
 
+# INSTALL
+
+```brew: brew install carthage```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [swift](/man/swift)(1), [xcodebuild](/man/xcodebuild)(1), [git](/man/git)(1)

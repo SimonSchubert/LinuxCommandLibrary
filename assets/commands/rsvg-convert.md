@@ -84,6 +84,16 @@ Not all SVG features supported. Part of librsvg. For complex SVGs, consider Inks
 
 rsvg-convert is part of **librsvg** by the **GNOME Project**, originally by **Raph Levien**, for SVG rendering.
 
+# INSTALL
+
+```apt: sudo apt install librsvg2-bin```
+
+```apk: sudo apk add rsvg-convert```
+
+```zypper: sudo zypper install rsvg-convert```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [inkscape](/man/inkscape)(1), [convert](/man/convert)(1)

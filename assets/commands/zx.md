@@ -50,6 +50,14 @@ Inside scripts, the primary API is **$`command`** plus helpers documented upstre
 
 Not an officially supported Google product. Requires a JS runtime on PATH. Prefer quoting/escaping via **$** templates rather than string concatenation to avoid injection. Behavior of the host shell still matters for complex pipelines.
 
+# INSTALL
+
+```brew: brew install zx```
+
+```nix: nix profile install nixpkgs#zx```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [bash](/man/bash)(1), [npm](/man/npm)(1)

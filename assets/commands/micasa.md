@@ -90,6 +90,12 @@ micasa requires a terminal with mouse and keyboard support. The optional LLM fea
 
 **micasa** (Spanish for "my house") was created by **Phillip Cloud** (cpcloud) as an open-source Go project hosted on GitHub. It was designed as a privacy-first alternative to cloud-based home management apps, keeping all data local in a single SQLite database. The TUI design is inspired by VisiData.
 
+# INSTALL
+
+```brew: brew install micasa```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sqlite3](/man/sqlite3)(1), [ollama](/man/ollama)(1)

@@ -74,6 +74,20 @@ Each context switch spawns a subshell, so deeply nested switches increase shell 
 
 kubie was created to provide isolated context management avoiding the issues of global context switching.
 
+# INSTALL
+
+```pacman: sudo pacman -S kubie```
+
+```apk: sudo apk add kubie```
+
+```zypper: sudo zypper install kubie```
+
+```brew: brew install kubie```
+
+```nix: nix profile install nixpkgs#kubie```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectx](/man/kubectx)(1), [kubens](/man/kubens)(1)

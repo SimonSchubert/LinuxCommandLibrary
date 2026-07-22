@@ -66,6 +66,24 @@ There is no in-line chemistry syntax (like eqn's $...$ construct) and no way to 
 
 The GNU version of **chem** was written by **Bernd Warken**, based on documentation of Brian Kernighan's original awk version. The chemical structure diagram language was developed at Bell Labs alongside other troff preprocessors like **eqn** and **pic**.
 
+# INSTALL
+
+```apt: sudo apt install groff```
+
+```dnf: sudo dnf install groff```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [pic](/man/pic)(1), [eqn](/man/eqn)(1), [groffer](/man/groffer)(1)

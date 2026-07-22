@@ -48,6 +48,18 @@ Manage RabbitMQ cluster membership and status
 
 **rabbitmqctl** cluster commands manage RabbitMQ cluster membership. Form clusters, add/remove nodes, and monitor cluster health. Part of RabbitMQ server management.
 
+# INSTALL
+
+```dnf: sudo dnf install rabbitmq-server```
+
+```apk: sudo apk add rabbitmq-server```
+
+```zypper: sudo zypper install rabbitmq-server```
+
+```nix: nix profile install nixpkgs#rabbitmq-server```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rabbitmqctl](/man/rabbitmqctl)(1), [rabbitmq-queues](/man/rabbitmq-queues)(1)

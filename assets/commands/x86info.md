@@ -88,6 +88,14 @@ Requires CPUID and MSR kernel modules for full functionality. MSR access require
 
 **x86info** was written by **Dave Jones** (davej@redhat.com), who also contributed significantly to the Linux kernel's CPU identification code. The tool has been available since the early **2000s** and provides detailed x86 CPU diagnostics not easily available through other means.
 
+# INSTALL
+
+```apt: sudo apt install x86info```
+
+```nix: nix profile install nixpkgs#x86info```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cpuid](/man/cpuid)(1), [lscpu](/man/lscpu)(1), [dmidecode](/man/dmidecode)(8)

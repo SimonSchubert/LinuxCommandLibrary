@@ -55,6 +55,16 @@ The output is a synthetic full backup that can be used directly with **pg_restor
 
 The output directory must not already exist. All backups in the chain must be present and listed in order. The full backup must have been taken with **--manifest** (the default). Incremental backup support requires PostgreSQL 17 or later.
 
+# INSTALL
+
+```dnf: sudo dnf install postgresql17```
+
+```apk: sudo apk add postgresql17```
+
+```zypper: sudo zypper install postgresql17```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pg_basebackup](/man/pg_basebackup)(1)

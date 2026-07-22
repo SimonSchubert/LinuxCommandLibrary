@@ -20,6 +20,18 @@ Simple TUI audio mixer for PipeWire
 
 **wiremix** was created by **Thomas Sowell** (tsowell) and is written in **Rust**.
 
+# INSTALL
+
+```dnf: sudo dnf install wiremix```
+
+```pacman: sudo pacman -S wiremix```
+
+```zypper: sudo zypper install wiremix```
+
+```nix: nix profile install nixpkgs#wiremix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pulsemixer](/man/pulsemixer)(1), [pavucontrol](/man/pavucontrol)(1)

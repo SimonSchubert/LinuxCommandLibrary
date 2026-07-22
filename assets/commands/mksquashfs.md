@@ -124,6 +124,18 @@ Squashfs filesystems are read-only and require the squashfs kernel module. Appen
 
 **Squashfs** was created by **Phillip Lougher** and first released in **2002**. It was merged into the Linux kernel mainline in version **2.6.29 (2009)**. The filesystem is widely used in Linux distributions for live media, container images, and read-only root filesystems.
 
+# INSTALL
+
+```apt: sudo apt install squashfs-tools```
+
+```dnf: sudo dnf install squashfs-tools```
+
+```pacman: sudo pacman -S squashfs-tools```
+
+```apk: sudo apk add squashfs-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unsquashfs](/man/unsquashfs)(1), [sqfscat](/man/sqfscat)(1), [mount](/man/mount)(8)

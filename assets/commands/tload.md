@@ -63,6 +63,24 @@ Passing **-d 0** sets the internal **alarm(2)** timer to zero, which never fires
 
 **tload** originated in the early **procps** utilities for Linux (mid-1990s) as a lightweight counterpart to **xload** on systems without X11. It is now maintained as part of the **procps-ng** suite alongside **ps**, **top**, **uptime**, and **w**.
 
+# INSTALL
+
+```apt: sudo apt install procps```
+
+```dnf: sudo dnf install procps-ng```
+
+```pacman: sudo pacman -S procps-ng```
+
+```apk: sudo apk add procps-ng```
+
+```zypper: sudo zypper install procps```
+
+```brew: brew install procps```
+
+```nix: nix profile install nixpkgs#procps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uptime](/man/uptime)(1), [top](/man/top)(1), [htop](/man/htop)(1), [w](/man/w)(1), [ps](/man/ps)(1)

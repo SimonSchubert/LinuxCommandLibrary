@@ -98,6 +98,22 @@ RTMP is declining in use as modern streaming protocols like HLS and DASH have re
 
 **rtmpdump** was created as an open-source RTMP client. It enabled downloading Adobe Flash video streams before modern streaming protocols became common.
 
+# INSTALL
+
+```apt: sudo apt install rtmpdump```
+
+```dnf: sudo dnf install rtmpdump```
+
+```pacman: sudo pacman -S rtmpdump```
+
+```apk: sudo apk add rtmpdump```
+
+```brew: brew install rtmpdump```
+
+```nix: nix profile install nixpkgs#rtmpdump```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [streamlink](/man/streamlink)(1), [youtube-dl](/man/youtube-dl)(1), [curl](/man/curl)(1)

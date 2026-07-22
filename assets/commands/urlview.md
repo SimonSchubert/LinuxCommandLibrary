@@ -54,6 +54,20 @@ The default URL regular expression may not match all valid URL formats. Complex 
 
 **urlview** was originally written by **Michael Elkins**, the creator of the mutt email client, in the late **1990s**. It was designed to complement mutt by providing easy URL handling in a terminal environment. The tool has been maintained by various contributors and remains a standard utility for terminal-based email workflows.
 
+# INSTALL
+
+```apt: sudo apt install urlview```
+
+```dnf: sudo dnf install urlview```
+
+```apk: sudo apk add urlview```
+
+```zypper: sudo zypper install urlview```
+
+```brew: brew install urlview```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [urlscan](/man/urlscan)(1), [mutt](/man/mutt)(1), [lynx](/man/lynx)(1), [xdg-open](/man/xdg-open)(1)

@@ -71,6 +71,24 @@ dynamically update container resource limits
 
 The **--kernel-memory** option has been deprecated since Docker 20.10. Memory changes on running containers may require a restart to take full effect on some systems.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-container-update](/man/docker-container-update)(1), [docker-run](/man/docker-run)(1), [docker-inspect](/man/docker-inspect)(1)

@@ -41,6 +41,12 @@ Lazygit-style TUI for SQL databases
 
 **sqlit** was created by **Maxteabag** (Peter Adams) and is written in **Python**.
 
+# INSTALL
+
+```aur: yay -S sqlit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [litecli](/man/litecli)(1), [harlequin](/man/harlequin)(1), [usql](/man/usql)(1), [pgcli](/man/pgcli)(1), [mycli](/man/mycli)(1)

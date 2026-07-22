@@ -20,5 +20,11 @@ Real-time satellite tracking and orbit prediction in the terminal
 
 **tracker** was created by **ShenMian** and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install tracker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

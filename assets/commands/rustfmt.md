@@ -105,6 +105,24 @@ Some configurations are unstable and require nightly. Cannot format macros that 
 
 **rustfmt** was developed by **Nick Cameron** starting in **2015** to provide official formatting for Rust code. It reached 1.0 alongside Rust 1.24 in **2018**. The tool was influenced by gofmt and aims to end style debates by providing a single canonical format. It's now maintained by the Rust style team.
 
+# INSTALL
+
+```apt: sudo apt install rustup```
+
+```dnf: sudo dnf install rustup```
+
+```pacman: sudo pacman -S rustup```
+
+```apk: sudo apk add rustfmt```
+
+```zypper: sudo zypper install rustup```
+
+```brew: brew install rustup```
+
+```nix: nix profile install nixpkgs#rustup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo-fmt](/man/cargo-fmt)(1), [cargo](/man/cargo)(1), [rustc](/man/rustc)(1), [clippy](/man/clippy)(1)

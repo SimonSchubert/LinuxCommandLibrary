@@ -80,6 +80,16 @@ Large downloads may take significant time. Some OS editions require specific rel
 
 **quickget** is the companion tool to **quickemu**, developed by **Martin Wimpress**. It simplifies the process of obtaining and preparing VM images for various operating systems.
 
+# INSTALL
+
+```apt: sudo apt install quickemu```
+
+```dnf: sudo dnf install quickemu```
+
+```nix: nix profile install nixpkgs#quickemu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [quickemu](/man/quickemu)(1), [wget](/man/wget)(1), [aria2c](/man/aria2c)(1)

@@ -66,6 +66,14 @@ The binary name is lowercase (`typtea`). All modes live under the `start` subcom
 
 **typtea** was created by **Ashish Kumar** (GitHub `ashish0kumar`) and is written in **Go** using **Bubble Tea**. It is distributed via GitHub Releases and packaged in several distros (e.g. FreeBSD ports, AUR).
 
+# INSTALL
+
+```brew: brew install typtea```
+
+```nix: nix profile install nixpkgs#typtea```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [typioca](/man/typioca)(1), [tt](/man/tt)(1), [ttyper](/man/ttyper)(1), [smassh](/man/smassh)(1)

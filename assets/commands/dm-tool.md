@@ -53,6 +53,22 @@ dm-tool communicates with LightDM via D-Bus, sending commands that control the d
 
 Only works with LightDM display manager. Other display managers (GDM, SDDM) have different tools. Session type must be valid.
 
+# INSTALL
+
+```apt: sudo apt install lightdm```
+
+```dnf: sudo dnf install lightdm```
+
+```pacman: sudo pacman -S lightdm```
+
+```apk: sudo apk add lightdm```
+
+```zypper: sudo zypper install lightdm```
+
+```nix: nix profile install nixpkgs#lightdm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [loginctl](/man/loginctl)(1)

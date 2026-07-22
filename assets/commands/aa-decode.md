@@ -43,6 +43,16 @@ The utility only decodes hexadecimal strings in the specific format used by AppA
 
 Part of the **AppArmor** utilities package for managing application security profiles on Linux systems.
 
+# INSTALL
+
+```apk: sudo apk add apparmor-utils```
+
+```zypper: sudo zypper install apparmor-utils```
+
+```nix: nix profile install nixpkgs#apparmor-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aa-logprof](/man/aa-logprof)(8), [aa-notify](/man/aa-notify)(8), [aa-status](/man/aa-status)(8), [apparmor](/man/apparmor)(7)

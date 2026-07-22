@@ -81,6 +81,20 @@ Requires root (or **CAP_NET_RAW** / **CAP_NET_ADMIN**). It is part of the netsni
 
 **netsniff-ng** was created by **Daniel Borkmann** in **2009** as a free, Linux-native, zero-copy packet analyzer, and grew into the broader netsniff-ng networking toolkit. It is licensed under the GPLv2.
 
+# INSTALL
+
+```apt: sudo apt install netsniff-ng```
+
+```dnf: sudo dnf install netsniff-ng```
+
+```pacman: sudo pacman -S netsniff-ng```
+
+```zypper: sudo zypper install netsniff-ng```
+
+```nix: nix profile install nixpkgs#netsniff-ng```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [tshark](/man/tshark)(1)

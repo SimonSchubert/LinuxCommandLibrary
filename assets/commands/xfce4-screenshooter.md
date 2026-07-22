@@ -84,6 +84,22 @@ Screenshots can be saved to file, copied to clipboard, or opened in an image edi
 
 Designed for XFCE but works on other desktops. Region selection requires mouse interaction.
 
+# INSTALL
+
+```apt: sudo apt install xfce4-screenshooter```
+
+```dnf: sudo dnf install xfce4-screenshooter```
+
+```pacman: sudo pacman -S xfce4-screenshooter```
+
+```apk: sudo apk add xfce4-screenshooter```
+
+```zypper: sudo zypper install xfce4-screenshooter```
+
+```nix: nix profile install nixpkgs#xfce4-screenshooter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scrot](/man/scrot)(1), [gnome-screenshot](/man/gnome-screenshot)(1), [flameshot](/man/flameshot)(1), [maim](/man/maim)(1), [spectacle](/man/spectacle)(1), [import](/man/import)(1)

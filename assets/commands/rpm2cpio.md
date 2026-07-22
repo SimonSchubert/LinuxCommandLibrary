@@ -35,6 +35,22 @@ The cpio archive is in `newc` format (or `xz`/`lzma`/`zstd`-compressed payload, 
 
 Does not execute pre/post install scriptlets, run triggers, or update the rpm database. File capabilities, SELinux labels, and file digests stored in the RPM header are **not** applied to the extracted files — only what the cpio payload itself encodes. Extracted files land relative to the current directory; use `cpio -id` (no `-D`) carefully to avoid overwriting host files when paths are absolute.
 
+# INSTALL
+
+```apt: sudo apt install rpm2cpio```
+
+```dnf: sudo dnf install rpm```
+
+```apk: sudo apk add rpm```
+
+```zypper: sudo zypper install rpm```
+
+```brew: brew install rpm2cpio```
+
+```nix: nix profile install nixpkgs#rpm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rpm](/man/rpm)(8), [cpio](/man/cpio)(1), [rpmkeys](/man/rpmkeys)(8)

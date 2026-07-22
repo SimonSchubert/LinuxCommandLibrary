@@ -141,6 +141,18 @@ Compile-time DI requires annotation processors configured correctly. Some featur
 
 Micronaut was created by **Graeme Rocher** (creator of Grails) at **Object Computing, Inc.** and released in **2018**. It was designed to address startup time and memory issues in traditional frameworks like Spring. Micronaut pioneered compile-time DI in the Java ecosystem. Version 4.0 (2023) brought modular architecture. The framework is popular for serverless and Kubernetes deployments.
 
+# INSTALL
+
+```apt: sudo apt install mininet```
+
+```dnf: sudo dnf install mininet```
+
+```zypper: sudo zypper install mininet```
+
+```nix: nix profile install nixpkgs#mininet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [maven](/man/maven)(1), [quarkus](/man/quarkus)(1)

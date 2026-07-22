@@ -101,6 +101,12 @@ Requires a **PERPLEXITY_API_KEY** environment variable with a valid API key from
 
 Perplexity AI was founded in **2022** by former Google and Meta engineers, launching as an AI-powered search engine. The company introduced their API in **2024**, enabling programmatic access to their Sonar models. Community CLI tools emerged to provide terminal access, with various implementations supporting different feature sets from simple queries to advanced RAG capabilities.
 
+# INSTALL
+
+```aur: yay -S perplexity```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [anthropic](/man/anthropic)(1), [ollama](/man/ollama)(1), [llm](/man/llm)(1)

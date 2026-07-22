@@ -83,6 +83,20 @@ Higher memory usage than bzip2. Thread count affects memory. Compatible with bzi
 
 lbzip2 was written by **Mikolaj Izdebski** as a drop-in parallel replacement for bzip2 that maintains full compatibility with the original format.
 
+# INSTALL
+
+```apt: sudo apt install lbzip2```
+
+```dnf: sudo dnf install lbzip2```
+
+```pacman: sudo pacman -S lbzip2```
+
+```zypper: sudo zypper install lbzip2```
+
+```nix: nix profile install nixpkgs#lbzip2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bzip2](/man/bzip2)(1), [pbzip2](/man/pbzip2)(1), [pigz](/man/pigz)(1), [xz](/man/xz)(1)

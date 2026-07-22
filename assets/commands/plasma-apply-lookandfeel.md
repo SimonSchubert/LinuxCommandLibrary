@@ -52,6 +52,18 @@ Global themes may override individual theme settings. Theme IDs use reverse doma
 
 **plasma-apply-lookandfeel** is part of **KDE Plasma Workspace**, providing unified theme application for KDE's modular appearance system.
 
+# INSTALL
+
+```apt: sudo apt install plasma-workspace```
+
+```dnf: sudo dnf install plasma-workspace```
+
+```pacman: sudo pacman -S plasma-workspace```
+
+```apk: sudo apk add plasma-workspace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [plasma-apply-colorscheme](/man/plasma-apply-colorscheme)(1), [plasma-apply-desktoptheme](/man/plasma-apply-desktoptheme)(1)

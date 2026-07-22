@@ -66,6 +66,24 @@ Requires proper security config. Default no authentication. Consider TLS for pro
 
 mosquitto was created by **Roger Light** around **2009** and later joined the **Eclipse Foundation** in **2014**. It provides a lightweight, open source MQTT broker suitable for embedded and IoT applications.
 
+# INSTALL
+
+```apt: sudo apt install mosquitto```
+
+```dnf: sudo dnf install mosquitto```
+
+```pacman: sudo pacman -S mosquitto```
+
+```apk: sudo apk add mosquitto```
+
+```zypper: sudo zypper install mosquitto```
+
+```brew: brew install mosquitto```
+
+```nix: nix profile install nixpkgs#mosquitto```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mosquitto_pub](/man/mosquitto_pub)(1), [mosquitto_sub](/man/mosquitto_sub)(1)

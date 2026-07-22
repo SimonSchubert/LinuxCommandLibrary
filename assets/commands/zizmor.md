@@ -28,6 +28,20 @@ Static analysis tool for GitHub Actions security
 
 **zizmor** was created by **William Woodruff** (Trail of Bits) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S zizmor```
+
+```apk: sudo apk add zizmor```
+
+```zypper: sudo zypper install zizmor```
+
+```brew: brew install zizmor```
+
+```nix: nix profile install nixpkgs#zizmor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [semgrep](/man/semgrep)(1)

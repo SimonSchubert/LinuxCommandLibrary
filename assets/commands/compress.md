@@ -78,6 +78,22 @@ The program uses a modified Lempel-Ziv algorithm starting with 9-bit codes. Typi
 
 **compress** implements the classic Unix LZW compression algorithm. While largely superseded by gzip and other modern compressors, it remains available for compatibility and for processing .Z files.
 
+# INSTALL
+
+```apt: sudo apt install ncompress```
+
+```dnf: sudo dnf install ncompress```
+
+```pacman: sudo pacman -S ncompress```
+
+```zypper: sudo zypper install ncompress```
+
+```brew: brew install ncompress```
+
+```nix: nix profile install nixpkgs#ncompress```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uncompress](/man/uncompress)(1), [gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1), [zcat](/man/zcat)(1)

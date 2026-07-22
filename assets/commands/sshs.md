@@ -24,6 +24,16 @@ Interactive TUI for browsing and connecting to SSH hosts
 
 **sshs** was created by **quantumsheep** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S sshs```
+
+```brew: brew install sshs```
+
+```nix: nix profile install nixpkgs#sshs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [sshclick](/man/sshclick)(1), [ssh-list](/man/ssh-list)(1)

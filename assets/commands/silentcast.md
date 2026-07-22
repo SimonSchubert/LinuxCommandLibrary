@@ -35,6 +35,12 @@ Cannot run multiple instances simultaneously. Does not support recording its own
 
 **silentcast** was created by **Colin Keenan** as an open-source screen recording tool. Version 3.0 introduced a completely redesigned GUI interface. The project is released under the GPL-3.0 license and maintained on GitHub.
 
+# INSTALL
+
+```aur: yay -S silentcast```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [byzanz-record](/man/byzanz-record)(1), [recordmydesktop](/man/recordmydesktop)(1), [peek](/man/peek)(1)

@@ -79,6 +79,24 @@ Documentation is only available for installed modules. Uses the system pager (us
 
 **perldoc** has been part of the core Perl distribution since **Perl 5.004** (1997). It replaced the need to manually search for and format POD documentation.
 
+# INSTALL
+
+```apt: sudo apt install perl```
+
+```dnf: sudo dnf install perl```
+
+```pacman: sudo pacman -S perl```
+
+```apk: sudo apk add perl```
+
+```zypper: sudo zypper install perl```
+
+```brew: brew install perl```
+
+```nix: nix profile install nixpkgs#perl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [perl](/man/perl)(1), [pod2man](/man/pod2man)(1), [pod2html](/man/pod2html)(1)

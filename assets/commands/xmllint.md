@@ -102,6 +102,14 @@ XPath support is limited to XPath 1.0; for XPath 2.0+ use tools like **saxon**. 
 
 **xmllint** was developed as part of the **libxml2** project, created by **Daniel Veillard** starting in **1998**. The library and its tools became the standard XML processing toolkit on Unix-like systems, used by projects like GNOME, PHP, and countless others. It is installed by default on most Linux distributions and macOS. The tool has been continuously maintained and updated to support evolving XML standards.
 
+# INSTALL
+
+```apt: sudo apt install libxml2-utils```
+
+```apk: sudo apk add libxml2-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xsltproc](/man/xsltproc)(1), [xmlstarlet](/man/xmlstarlet)(1), [jq](/man/jq)(1), [yq](/man/yq)(1), [xq](/man/xq)(1)

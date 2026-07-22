@@ -94,6 +94,18 @@ A full filesystem relabel can take significant time. Using -B with onboot then r
 
 **fixfiles** is part of the **policycoreutils** package, providing SELinux file context management utilities for Red Hat-based systems.
 
+# INSTALL
+
+```apt: sudo apt install policycoreutils```
+
+```dnf: sudo dnf install policycoreutils```
+
+```zypper: sudo zypper install policycoreutils```
+
+```nix: nix profile install nixpkgs#policycoreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [restorecon](/man/restorecon)(8), [setfiles](/man/setfiles)(8), [chcon](/man/chcon)(1)

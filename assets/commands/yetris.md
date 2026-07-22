@@ -45,6 +45,14 @@ The game runs entirely in the terminal and supports keyboard controls.
 
 Requires ncurses support. Terminal size affects display. No mouse support.
 
+# INSTALL
+
+```brew: brew install yetris```
+
+```nix: nix profile install nixpkgs#yetris```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tetris](/man/tetris)(6), [bastet](/man/bastet)(6)

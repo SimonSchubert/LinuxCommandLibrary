@@ -137,6 +137,24 @@ Default encryption is weak (ZipCrypto); use 7z for strong encryption. Maximum fi
 
 The ZIP format was created by **Phil Katz** for **PKZIP** in **1989**. The **Info-ZIP** project was started the same year to provide free implementations. Info-ZIP's zip became the standard Unix ZIP utility and is included in virtually all Unix-like systems. The format has evolved to support larger files (ZIP64) and better compression.
 
+# INSTALL
+
+```apt: sudo apt install zip```
+
+```dnf: sudo dnf install zip```
+
+```pacman: sudo pacman -S zip```
+
+```apk: sudo apk add zip```
+
+```zypper: sudo zypper install zip```
+
+```brew: brew install zip```
+
+```nix: nix profile install nixpkgs#zip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unzip](/man/unzip)(1), [tar](/man/tar)(1), [gzip](/man/gzip)(1), [7z](/man/7z)(1)

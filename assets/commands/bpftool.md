@@ -106,6 +106,18 @@ Requires root privileges or CAP_BPF capability. Output format may vary between k
 
 **bpftool** is developed in the Linux kernel source tree under **tools/bpf/bpftool** and ships with the kernel. It is periodically synced to a stand-alone build mirror maintained by the libbpf project, which packages it independently of the full kernel tree.
 
+# INSTALL
+
+```apt: sudo apt install bpftool```
+
+```dnf: sudo dnf install bpftool```
+
+```apk: sudo apk add bpftool```
+
+```zypper: sudo zypper install bpftool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bpftrace](/man/bpftrace)(8), [tc](/man/tc)(8), [perf](/man/perf)(1)

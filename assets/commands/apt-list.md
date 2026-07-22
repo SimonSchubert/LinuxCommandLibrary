@@ -82,6 +82,21 @@ APT explicitly warns that **apt** does not have a stable CLI; output formatting 
 
 The **list** subcommand was introduced when **apt** was released in **Debian 8 (Jessie, 2015)** as a friendlier front-end to apt-get and apt-cache. It consolidates functionality previously split between **dpkg -l** and **apt-cache pkgnames** into a single human-oriented command.
 
+# INSTALL
+
+```apt: sudo apt install apt```
+
+```dnf: sudo dnf install apt```
+
+```pacman: sudo pacman -S apt```
+
+```apk: sudo apk add apt```
+
+```brew: brew install apt```
+
+```nix: nix profile install nixpkgs#apt```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-cache](/man/apt-cache)(8), [apt-get](/man/apt-get)(8), [dpkg-query](/man/dpkg-query)(1), [dpkg](/man/dpkg)(1)

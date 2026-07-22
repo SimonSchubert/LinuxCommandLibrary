@@ -96,6 +96,18 @@ Filters use **field=value** syntax with AND, OR, and NOT operators:
 
 Requires root privileges for live capture. Kernel headers may be needed for certain features. Generates significant data on busy systems.
 
+# INSTALL
+
+```pacman: sudo pacman -S sysdig```
+
+```zypper: sudo zypper install sysdig```
+
+```brew: brew install sysdig```
+
+```nix: nix profile install nixpkgs#sysdig```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [strace](/man/strace)(1), [tcpdump](/man/tcpdump)(8), [perf](/man/perf)(1)

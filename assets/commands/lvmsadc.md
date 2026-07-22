@@ -26,6 +26,22 @@ This command is **not supported under LVM2**. Modern LVM2 installations should u
 
 **Deprecated**: This command only works on legacy LVM1 systems. For LVM2, use **dmstats** to collect and report I/O statistics on device-mapper devices.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvmsar](/man/lvmsar)(8), [iostat](/man/iostat)(1), [lvm](/man/lvm)(8)

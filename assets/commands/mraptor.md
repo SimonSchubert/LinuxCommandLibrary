@@ -77,6 +77,12 @@ Heuristic-based; may have false positives. Cannot detect all malware. Part of ol
 
 mraptor was developed by **Philippe Lagadec** as part of **oletools**, a collection of Python tools for analyzing Microsoft Office documents.
 
+# INSTALL
+
+```apk: sudo apk add py3-oletools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [olevba](/man/olevba)(1), [oleid](/man/oleid)(1), [oletools](/man/oletools)(1), [yara](/man/yara)(1)

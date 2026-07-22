@@ -59,6 +59,12 @@ The free Community Edition has limited functionality; Professional Edition is pa
 
 **Burp Suite** was created by Dafydd Stuttard (PortSwigger) and first released in **2003**. It has become one of the most widely used tools for web application security testing.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#burpsuite```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mitmproxy](/man/mitmproxy)(1), [nikto](/man/nikto)(1), [sqlmap](/man/sqlmap)(1)

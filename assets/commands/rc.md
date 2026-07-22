@@ -82,6 +82,14 @@ Limited availability in default package repositories. May require building from 
 
 Rc was created by **Tom Duff** at Bell Labs in **1989** for the Research Unix Version 10 and later became the standard shell for Plan 9. The name stands for "run commands." Byron Rakitzis created a popular Unix reimplementation in **1991**, which continues to be maintained. Duff is also known for "Duff's device," an optimization technique in C.
 
+# INSTALL
+
+```dnf: sudo dnf install rc```
+
+```nix: nix profile install nixpkgs#rc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sh](/man/sh)(1), [bash](/man/bash)(1), [zsh](/man/zsh)(1), [es](/man/es)(1)

@@ -49,6 +49,14 @@ Commands are actually executed, which may have side effects. Use with caution on
 
 Part of **util-linux** package, extending script's recording capabilities with live execution.
 
+# INSTALL
+
+```apt: sudo apt install bsdutils```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [script](/man/script)(1), [scriptreplay](/man/scriptreplay)(1)

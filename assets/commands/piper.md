@@ -77,6 +77,20 @@ Models must be downloaded before use (typically 15-75 MB each). Speech quality v
 
 **Piper** was created by **Michael Hansen** (rhasspy) for offline voice assistants. It provides fast, high-quality TTS suitable for embedded and edge devices.
 
+# INSTALL
+
+```dnf: sudo dnf install piper```
+
+```pacman: sudo pacman -S piper```
+
+```apk: sudo apk add piper```
+
+```zypper: sudo zypper install piper```
+
+```nix: nix profile install nixpkgs#piper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [espeak](/man/espeak)(1), [festival](/man/festival)(1), [mimic](/man/mimic)(1), [say](/man/say)(1)

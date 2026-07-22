@@ -48,6 +48,19 @@ Requires Term::Animation Perl module. Works best with 256-color terminal support
 
 **asciiquarium** was written by Kirk Baucom as a Perl script providing terminal entertainment through animated ASCII art.
 
+# INSTALL
+
+```dnf: sudo dnf install asciiquarium```
+
+```pacman: sudo pacman -S asciiquarium```
+
+```apk: sudo apk add asciiquarium```
+
+```brew: brew install asciiquarium```
+
+```nix: nix profile install nixpkgs#asciiquarium```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [cmatrix](/man/cmatrix)(1), [sl](/man/sl)(6), [cowsay](/man/cowsay)(1)

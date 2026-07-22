@@ -54,6 +54,24 @@ Changelists are purely a client-side organizational mechanism and do not affect 
 
 Changelists apply only to files, not directories. A file can belong to at most one changelist. Changelists are local to the working copy and not shared with other users.
 
+# INSTALL
+
+```apt: sudo apt install subversion```
+
+```dnf: sudo dnf install subversion```
+
+```pacman: sudo pacman -S subversion```
+
+```apk: sudo apk add subversion```
+
+```zypper: sudo zypper install subversion```
+
+```brew: brew install subversion```
+
+```nix: nix profile install nixpkgs#subversion```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [svn](/man/svn)(1), [svnadmin](/man/svnadmin)(1)

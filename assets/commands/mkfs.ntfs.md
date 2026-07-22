@@ -94,6 +94,22 @@ Windows chkdsk may report uppercase filename warnings due to Unicode version dif
 
 NTFS was developed by **Microsoft** and introduced with **Windows NT 3.1 in 1993**. It replaced FAT as the primary filesystem for Windows. The Linux ntfs-3g driver and mkfs.ntfs utility were developed by the **NTFS-3G** project, providing reliable read/write access to NTFS volumes from Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install ntfs-3g```
+
+```dnf: sudo dnf install ntfs-3g```
+
+```pacman: sudo pacman -S ntfs-3g```
+
+```apk: sudo apk add ntfs-3g-progs```
+
+```zypper: sudo zypper install ntfs-3g```
+
+```brew: brew install ntfs-3g```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkfs](/man/mkfs)(8), [mkfs.ext4](/man/mkfs.ext4)(8), [mkfs.vfat](/man/mkfs.vfat)(8), [ntfs-3g](/man/ntfs-3g)(8), [ntfsfix](/man/ntfsfix)(8), [fdisk](/man/fdisk)(8), [mount](/man/mount)(8), [badblocks](/man/badblocks)(8)

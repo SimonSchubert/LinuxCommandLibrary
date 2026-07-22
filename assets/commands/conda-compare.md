@@ -24,6 +24,14 @@ Over time, conda environments can drift from their original specifications throu
 
 The tool is particularly useful in collaborative settings where environment.yml files are version controlled and shared among team members. By comparing the current environment against the canonical specification, developers can verify they're working in the correct environment state or identify when an environment needs to be rebuilt from the specification to ensure consistency across the team.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-env](/man/conda-env)(1), [conda-list](/man/conda-list)(1)

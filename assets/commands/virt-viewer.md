@@ -61,6 +61,22 @@ libvirt required. VM must be running. X11/Wayland needed.
 
 **virt-viewer** is part of the **virt-manager** project, providing a minimal tool for viewing VM graphical consoles.
 
+# INSTALL
+
+```apt: sudo apt install virt-viewer```
+
+```dnf: sudo dnf install virt-viewer```
+
+```pacman: sudo pacman -S virt-viewer```
+
+```apk: sudo apk add virt-viewer```
+
+```zypper: sudo zypper install virt-viewer```
+
+```nix: nix profile install nixpkgs#virt-viewer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virsh](/man/virsh)(1), [virt-manager](/man/virt-manager)(1), [remote-viewer](/man/remote-viewer)(1)

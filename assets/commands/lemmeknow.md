@@ -42,6 +42,14 @@ Identification is based on pattern matching and may produce false positives for 
 
 **lemmeknow** was created by **swanandx** and is written in **Rust**. It is available as both a CLI tool and a library.
 
+# INSTALL
+
+```brew: brew install lemmeknow```
+
+```nix: nix profile install nixpkgs#lemmeknow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [file](/man/file)(1)

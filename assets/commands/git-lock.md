@@ -31,6 +31,24 @@ Part of git-extras (a thin wrapper around `git update-index --skip-worktree`), n
 
 git lock is part of **git-extras**, a community collection of Git utility scripts. It predates and is unrelated to Git LFS's server-enforced file locking.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-locked](/man/git-locked)(1), [git-unlock](/man/git-unlock)(1), [git-lfs](/man/git-lfs)(1), [git-update-index](/man/git-update-index)(1)

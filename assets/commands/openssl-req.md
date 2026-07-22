@@ -120,6 +120,24 @@ Self-signed certificates are not trusted by browsers without manual import. The 
 
 Certificate request functionality has been part of OpenSSL since its SSL/TLS implementation origins.
 
+# INSTALL
+
+```apt: sudo apt install openssl```
+
+```dnf: sudo dnf install openssl```
+
+```pacman: sudo pacman -S openssl```
+
+```apk: sudo apk add openssl```
+
+```zypper: sudo zypper install openssl```
+
+```brew: brew install openssl```
+
+```nix: nix profile install nixpkgs#openssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [openssl-x509](/man/openssl-x509)(1), [openssl-ca](/man/openssl-ca)(1), [openssl-genpkey](/man/openssl-genpkey)(1), [openssl-pkey](/man/openssl-pkey)(1), [openssl-rsa](/man/openssl-rsa)(1)

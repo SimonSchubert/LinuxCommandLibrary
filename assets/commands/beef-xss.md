@@ -74,6 +74,11 @@ Default credentials must be changed before use. Requires Ruby and various depend
 
 BeEF was created by **Wade Alcorn** and the BeEF development team. It has been an active open-source project since **2006**, becoming a standard tool in web application penetration testing for assessing browser-based attack vectors.
 
+# INSTALL
+
+```aur: yay -S beef-xss```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [metasploit](/man/metasploit)(1), [burpsuite](/man/burpsuite)(1), [nikto](/man/nikto)(1)

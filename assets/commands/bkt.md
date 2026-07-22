@@ -58,6 +58,16 @@ Subprocess cache for expensive command output
 
 Cached output can be wrong if external state changes within the TTL. Do not cache commands with required side effects unless you understand the implications. Cache location is under the user's cache directory.
 
+# INSTALL
+
+```apt: sudo apt install bkt```
+
+```brew: brew install bkt```
+
+```nix: nix profile install nixpkgs#bkt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [time](/man/time)(1), [chronic](/man/chronic)(1), [memoize](/man/memoize)(1)

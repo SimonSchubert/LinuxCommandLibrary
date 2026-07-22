@@ -83,6 +83,12 @@ Requires DocBook stylesheets and supporting tools (xmllint, xsltproc, fop). Larg
 
 DAPS was developed by **SUSE** for their documentation team, released as open source around **2012**. It evolved from internal tooling to support the complex requirements of enterprise documentation with translations, versioning, and multiple output formats.
 
+# INSTALL
+
+```zypper: sudo zypper install daps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xmllint](/man/xmllint)(1), [xsltproc](/man/xsltproc)(1), [fop](/man/fop)(1), [asciidoctor](/man/asciidoctor)(1)

@@ -76,6 +76,20 @@ Requires Java. project.clj configuration. Consider deps.edn for newer projects.
 
 Leiningen was created by **Phil Hagelberg** as the standard build tool for Clojure projects.
 
+# INSTALL
+
+```pacman: sudo pacman -S leiningen```
+
+```apk: sudo apk add leiningen```
+
+```zypper: sudo zypper install leiningen```
+
+```brew: brew install leiningen```
+
+```nix: nix profile install nixpkgs#leiningen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clojure](/man/clojure)(1), [java](/man/java)(1), [boot](/man/boot)(1)

@@ -97,6 +97,21 @@ Requires Python on managed nodes. SSH key-based authentication is recommended. W
 
 **Ansible** was created by Michael DeHaan and released in **2012**. Red Hat acquired Ansible Inc. in **2015**. It has become one of the most popular configuration management and automation tools.
 
+# INSTALL
+
+```dnf: sudo dnf install ansible-core```
+
+```pacman: sudo pacman -S ansible-core```
+
+```apk: sudo apk add ansible-core```
+
+```zypper: sudo zypper install ansible-core```
+
+```brew: brew install ansible```
+
+```nix: nix profile install nixpkgs#ansible```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ansible-playbook](/man/ansible-playbook)(1), [ansible-inventory](/man/ansible-inventory)(1), [ansible-vault](/man/ansible-vault)(1), [ansible-doc](/man/ansible-doc)(1)

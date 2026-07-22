@@ -120,6 +120,24 @@ Less feature-rich than less for some advanced operations. Window management has 
 
 **most** was written by **John E. Davis** in the early **1990s** as part of the S-Lang library utilities. It was designed to address limitations in existing pagers, particularly adding multiple window support and better handling of wide files. The tool remains actively maintained as part of the S-Lang project.
 
+# INSTALL
+
+```apt: sudo apt install most```
+
+```dnf: sudo dnf install most```
+
+```pacman: sudo pacman -S most```
+
+```apk: sudo apk add most```
+
+```zypper: sudo zypper install most```
+
+```brew: brew install most```
+
+```nix: nix profile install nixpkgs#most```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [more](/man/more)(1), [bat](/man/bat)(1), [view](/man/view)(1)

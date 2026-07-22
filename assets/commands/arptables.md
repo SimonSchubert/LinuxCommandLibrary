@@ -100,6 +100,19 @@ Requires root privileges. Uses the nftables backend on modern systems. The nft-b
 
 **arptables** is part of the **xtables-nft** suite, providing ARP packet filtering integrated with the netfilter framework.
 
+# INSTALL
+
+```pacman: sudo pacman -S iptables```
+
+```apk: sudo apk add iptables```
+
+```zypper: sudo zypper install iptables```
+
+```brew: brew install iptables```
+
+```nix: nix profile install nixpkgs#iptables```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [iptables](/man/iptables)(8), [nft](/man/nft)(8), [arp](/man/arp)(8), [ebtables](/man/ebtables)(8)

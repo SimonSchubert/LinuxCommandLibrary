@@ -81,6 +81,20 @@ Steep learning curve for synthesis programming. Real-time performance depends on
 
 **Csound** was developed by **Barry Vercoe** at **MIT** in **1986**, based on earlier Music N languages dating to **1957**. It descends from Max Mathews' MUSIC series at Bell Labs. Csound remains actively developed, used in academic research, electronic music, and multimedia installations.
 
+# INSTALL
+
+```apt: sudo apt install csound```
+
+```pacman: sudo pacman -S csound```
+
+```zypper: sudo zypper install csound```
+
+```brew: brew install csound```
+
+```nix: nix profile install nixpkgs#csound```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sox](/man/sox)(1), [supercollider](/man/supercollider)(1), [ffmpeg](/man/ffmpeg)(1)

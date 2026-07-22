@@ -154,6 +154,24 @@ Tree does not follow symbolic links by default if they would cause recursion. Us
 
 Using **--prune** and **--du** causes tree to accumulate the entire tree in memory before output, which may be slow for very large directory trees.
 
+# INSTALL
+
+```apt: sudo apt install tree```
+
+```dnf: sudo dnf install tree```
+
+```pacman: sudo pacman -S tree```
+
+```apk: sudo apk add tree```
+
+```zypper: sudo zypper install tree```
+
+```brew: brew install tree```
+
+```nix: nix profile install nixpkgs#tree```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [find](/man/find)(1), [du](/man/du)(1), [exa](/man/exa)(1), [eza](/man/eza)(1), [lsd](/man/lsd)(1)

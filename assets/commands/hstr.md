@@ -77,6 +77,20 @@ Requires shell configuration. Large history may be slow initially. Favorites sto
 
 **hstr** was created by **Martin Dvorak** to improve command-line history navigation. It addresses the limitations of basic Ctrl+R search by providing visual feedback and better ranking algorithms.
 
+# INSTALL
+
+```apt: sudo apt install hstr```
+
+```dnf: sudo dnf install hstr```
+
+```apk: sudo apk add hstr```
+
+```brew: brew install hstr```
+
+```nix: nix profile install nixpkgs#hstr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fzf](/man/fzf)(1), [mcfly](/man/mcfly)(1), [history](/man/history)(1), [bash](/man/bash)(1)

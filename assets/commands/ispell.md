@@ -102,6 +102,22 @@ Largely replaced by aspell/hunspell. Dictionary availability varies. Format-spec
 
 ispell was created by **Ralph E. Gorin** at Stanford in 1971, later rewritten as International Ispell by **Geoff Kuenning**.
 
+# INSTALL
+
+```apt: sudo apt install ispell```
+
+```pacman: sudo pacman -S ispell```
+
+```apk: sudo apk add aspell-compat```
+
+```zypper: sudo zypper install ispell```
+
+```brew: brew install ispell```
+
+```nix: nix profile install nixpkgs#ispell```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aspell](/man/aspell)(1), [hunspell](/man/hunspell)(1), [spell](/man/spell)(1)

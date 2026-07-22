@@ -35,6 +35,18 @@ Intel graphics only (GEN 4 or newer). Requires active display. Part of intel-gpu
 
 intel_infoframes is part of **intel-gpu-tools**, created for debugging digital display connections on Intel graphics.
 
+# INSTALL
+
+```apt: sudo apt install intel-gpu-tools```
+
+```pacman: sudo pacman -S intel-gpu-tools```
+
+```zypper: sudo zypper install intel-gpu-tools```
+
+```nix: nix profile install nixpkgs#intel-gpu-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [intel_panel_fitter](/man/intel_panel_fitter)(1), [intel_reg_read](/man/intel_reg_read)(1), [xrandr](/man/xrandr)(1)

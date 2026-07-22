@@ -86,3 +86,11 @@ Editor and API endpoint settings live in the Dnote config used by the CLI. Overr
 ```[Source code](https://github.com/dnote/dnote)```
 
 <!-- verified: 2026-07-14 -->
+
+# INSTALL
+
+```brew: brew install dnote```
+
+```nix: nix profile install nixpkgs#dnote```
+
+<!-- packages: 2026-07-22 -->

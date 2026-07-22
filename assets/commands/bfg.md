@@ -100,6 +100,13 @@ Rewrites history (force push required). Protects HEAD by default (use --no-blob-
 
 **BFG Repo-Cleaner** was created by Roberto Tyley in **2012** to provide a faster, user-friendly alternative to git-filter-branch for repository cleaning.
 
+# INSTALL
+
+```aur: yay -S bfg```
+
+```brew: brew install bfg```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [git-filter-branch](/man/git-filter-branch)(1), [git-filter-repo](/man/git-filter-repo)(1), [git](/man/git)(1)

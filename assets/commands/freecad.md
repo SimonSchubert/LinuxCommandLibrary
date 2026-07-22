@@ -89,6 +89,14 @@ Large assemblies may be slow. Learning curve for parametric modeling. Some impor
 
 FreeCAD was started by **Jürgen Riegel** in **2002** and has been developed by a community of contributors. It became a significant open-source alternative to commercial CAD software, particularly for mechanical engineering and 3D printing.
 
+# INSTALL
+
+```pacman: sudo pacman -S freecad```
+
+```nix: nix profile install nixpkgs#freecad```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openscad](/man/openscad)(1), [blender](/man/blender)(1), [meshlab](/man/meshlab)(1)

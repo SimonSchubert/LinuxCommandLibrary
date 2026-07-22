@@ -27,6 +27,12 @@ Display help with **detailed** information
 
 Use verbose mode for more detailed explanations and examples.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1)

@@ -79,6 +79,14 @@ Not all distributions use qtchooser; Debian/Ubuntu still do, but Fedora and Arch
 
 **qtchooser** was created to handle the transition between Qt4 and Qt5 on Linux systems, allowing both versions to coexist while maintaining compatibility with build systems.
 
+# INSTALL
+
+```apt: sudo apt install qtchooser```
+
+```dnf: sudo dnf install qtchooser```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qmake](/man/qmake)(1), [moc](/man/moc)(1), [qt-select](/man/qt-select)(1)

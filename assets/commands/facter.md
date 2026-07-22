@@ -101,6 +101,16 @@ Some facts require root privileges. Custom facts may slow collection. Facts may 
 
 Facter was created by **Luke Kanies** as part of the Puppet project at **Puppet Labs** (now Puppet) in the mid-**2000s**. Facter 3, a rewrite in C++ (later Ruby again), was released in **2015** for improved performance.
 
+# INSTALL
+
+```dnf: sudo dnf install facter```
+
+```pacman: sudo pacman -S facter```
+
+```nix: nix profile install nixpkgs#facter```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [puppet](/man/puppet)(8), [ansible](/man/ansible)(1)

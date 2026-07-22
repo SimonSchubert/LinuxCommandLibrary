@@ -72,6 +72,24 @@ HTTPS filtering requires browser configuration. Complex rules need tuning. May b
 
 **Privoxy** evolved from **Internet Junkbuster** in **2001**, created as a privacy-focused web proxy. It's developed by a team of volunteers and remains one of the most flexible content-filtering proxies.
 
+# INSTALL
+
+```apt: sudo apt install privoxy```
+
+```dnf: sudo dnf install privoxy```
+
+```pacman: sudo pacman -S privoxy```
+
+```apk: sudo apk add privoxy```
+
+```zypper: sudo zypper install privoxy```
+
+```brew: brew install privoxy```
+
+```nix: nix profile install nixpkgs#privoxy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [squid](/man/squid)(8), [tinyproxy](/man/tinyproxy)(1), [tor](/man/tor)(1), [dnsmasq](/man/dnsmasq)(1)

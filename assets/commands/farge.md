@@ -55,5 +55,11 @@ Useful for designers and developers to quickly sample colors from anywhere on sc
 
 Requires clipboard and notification tools. Works on X11 and Wayland with appropriate backends.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#farge```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 

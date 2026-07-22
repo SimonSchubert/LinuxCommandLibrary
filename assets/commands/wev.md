@@ -56,6 +56,22 @@ This tool is useful for debugging Wayland input handling, discovering keycodes, 
 
 Wayland only. Output can be verbose. Some events may require specific compositor support.
 
+# INSTALL
+
+```apt: sudo apt install wev```
+
+```dnf: sudo dnf install wev```
+
+```pacman: sudo pacman -S wev```
+
+```apk: sudo apk add wev```
+
+```zypper: sudo zypper install wev```
+
+```nix: nix profile install nixpkgs#wev```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xev](/man/xev)(1), [libinput](/man/libinput)(1)

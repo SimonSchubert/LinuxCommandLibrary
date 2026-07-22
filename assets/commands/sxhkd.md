@@ -82,6 +82,22 @@ sxhkd only works on X11; it does not support Wayland. Keysym names are determine
 
 **sxhkd** was created by **Bastien Dejean** (baskerville), the same developer behind **bspwm**. It was first released around **2013** as a standalone hotkey daemon that could work with any window manager, addressing the need for a simple, scriptable keybinding system independent of the window manager.
 
+# INSTALL
+
+```apt: sudo apt install sxhkd```
+
+```dnf: sudo dnf install sxhkd```
+
+```pacman: sudo pacman -S sxhkd```
+
+```apk: sudo apk add sxhkd```
+
+```zypper: sudo zypper install sxhkd```
+
+```nix: nix profile install nixpkgs#sxhkd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xev](/man/xev)(1), [xdotool](/man/xdotool)(1), [bspwm](/man/bspwm)(1), [xbindkeys](/man/xbindkeys)(1)

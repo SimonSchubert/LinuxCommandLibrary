@@ -25,6 +25,24 @@ _file_
 
 **pbmtomgr** reads a PBM image as input and produces a MGR bitmap as output. MGR is a window manager that was a smaller alternative to the X Window System, developed at Bellcore in the 1980s. Part of the Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mgrtopbm](/man/mgrtopbm)(1), [xbmtopbm](/man/xbmtopbm)(1)

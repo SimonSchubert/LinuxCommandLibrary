@@ -74,6 +74,22 @@ The tool provides accurate memory usage analysis by accounting for shared librar
 
 Requires read access to **/proc/[pid]/smaps** (typically root for all processes). PSS calculation can be slow on systems with many processes. Kernel must have CONFIG_PROC_PAGE_MONITOR enabled.
 
+# INSTALL
+
+```dnf: sudo dnf install cfitsio```
+
+```pacman: sudo pacman -S cfitsio```
+
+```apk: sudo apk add cfitsio```
+
+```zypper: sudo zypper install cfitsio```
+
+```brew: brew install cfitsio```
+
+```nix: nix profile install nixpkgs#cfitsio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ps](/man/ps)(1), [top](/man/top)(1), [free](/man/free)(1), [pmap](/man/pmap)(1)

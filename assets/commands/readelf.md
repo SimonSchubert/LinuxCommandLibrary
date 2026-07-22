@@ -114,6 +114,24 @@ Unlike objdump, readelf operates independently of the BFD library and may show d
 
 **readelf** is part of the GNU **binutils** package. It provides more detailed ELF analysis compared to objdump for ELF-specific information.
 
+# INSTALL
+
+```apt: sudo apt install binutils```
+
+```dnf: sudo dnf install binutils```
+
+```pacman: sudo pacman -S binutils```
+
+```apk: sudo apk add binutils```
+
+```zypper: sudo zypper install binutils```
+
+```brew: brew install binutils```
+
+```nix: nix profile install nixpkgs#binutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [objdump](/man/objdump)(1), [nm](/man/nm)(1), [strings](/man/strings)(1), [strip](/man/strip)(1), [size](/man/size)(1), [elf](/man/elf)(5)

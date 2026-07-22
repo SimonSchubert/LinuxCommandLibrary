@@ -52,6 +52,16 @@ Not needed for programs with built-in readline. May interfere with some interact
 
 ledit was written by **Daniel de Rauglaudre** as part of the Camlp5 project for use with OCaml and other interpreters lacking line editing.
 
+# INSTALL
+
+```apt: sudo apt install ledit```
+
+```brew: brew install ledit```
+
+```nix: nix profile install nixpkgs#ledit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rlwrap](/man/rlwrap)(1), [readline](/man/readline)(3), [ocaml](/man/ocaml)(1)

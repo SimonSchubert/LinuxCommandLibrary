@@ -42,6 +42,16 @@ mounts disk images on iOS devices
 
 **ideviceimagemounter** mounts disk images on iOS devices. Part of the libimobiledevice suite. Primarily used to mount Developer Disk Images for debugging and development tools like Xcode instruments. Requires the corresponding signature file.
 
+# INSTALL
+
+```apt: sudo apt install libimobiledevice-utils```
+
+```dnf: sudo dnf install libimobiledevice-utils```
+
+```apk: sudo apk add libimobiledevice-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ideviceinfo](/man/ideviceinfo)(1)

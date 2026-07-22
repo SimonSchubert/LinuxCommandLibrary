@@ -117,6 +117,17 @@ Broker creation takes several minutes. Instance types and storage cannot be chan
 
 Amazon MQ launched in **November 2017** with support for Apache ActiveMQ Classic. RabbitMQ engine support was added in **October 2020**. Support for ActiveMQ Artemis (the next-generation ActiveMQ) is not yet available through Amazon MQ.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-sqs](/man/aws-sqs)(1), [aws-sns](/man/aws-sns)(1), [aws-kafka](/man/aws-kafka)(1)

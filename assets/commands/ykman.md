@@ -82,6 +82,22 @@ Requires YubiKey. Some operations are destructive. Backup before reset.
 
 **ykman** (YubiKey Manager) is the official CLI from **Yubico**. It replaces older tools with unified management.
 
+# INSTALL
+
+```dnf: sudo dnf install yubikey-manager```
+
+```pacman: sudo pacman -S yubikey-manager```
+
+```apk: sudo apk add yubikey-manager```
+
+```zypper: sudo zypper install yubikey-manager```
+
+```brew: brew install ykman```
+
+```nix: nix profile install nixpkgs#yubikey-manager```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [ssh-keygen](/man/ssh-keygen)(1)

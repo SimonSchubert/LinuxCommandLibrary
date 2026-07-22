@@ -105,6 +105,16 @@ Cover file capacity depends on file size and content; **info** command shows ava
 
 **steghide** was created by **Stefan Hetzl** and first released in **2003**. It remains one of the most widely used open-source steganography tools, commonly used in CTF competitions, security research, and privacy applications. The tool is available in most Linux distribution repositories.
 
+# INSTALL
+
+```apt: sudo apt install steghide```
+
+```dnf: sudo dnf install steghide```
+
+```nix: nix profile install nixpkgs#steghide```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [stegsnow](/man/stegsnow)(1), [outguess](/man/outguess)(1), [openstego](/man/openstego)(1)

@@ -62,6 +62,13 @@ This command is primarily available on BSD systems and macOS; it is not part of 
 
 The **apply** command originated in BSD Unix in the **1980s**. It provided a simple mechanism for command iteration before more sophisticated tools like **xargs** and **find -exec** became common. The command remains available in FreeBSD, OpenBSD, and macOS but was never widely adopted on Linux systems.
 
+# INSTALL
+
+```aur: yay -S outils-apply```
+
+```apk: sudo apk add outils-apply```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [xargs](/man/xargs)(1), [parallel](/man/parallel)(1), [find](/man/find)(1)

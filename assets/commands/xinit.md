@@ -80,6 +80,20 @@ xinit is a low-level utility; **startx** provides a friendlier interface for typ
 
 xinit has been part of X11 since the early X Window System releases. The X Window System was developed at MIT starting in **1984**, with xinit providing the fundamental mechanism for starting X sessions without a display manager.
 
+# INSTALL
+
+```apt: sudo apt install xinit```
+
+```apk: sudo apk add xinit```
+
+```zypper: sudo zypper install xinit```
+
+```brew: brew install xinit```
+
+```nix: nix profile install nixpkgs#xinit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [startx](/man/startx)(1), [Xorg](/man/Xorg)(1), [xterm](/man/xterm)(1)

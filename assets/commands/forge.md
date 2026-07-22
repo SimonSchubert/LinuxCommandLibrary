@@ -127,6 +127,18 @@ Requires API keys from supported AI providers, configured via **forge provider l
 
 Forge was developed by **Antinomy** as an open-source alternative to proprietary AI coding tools like Cursor and Claude Code. It is written in Rust for performance and released under an open-source license. The project is hosted at github.com/antinomyhq/forge.
 
+# INSTALL
+
+```apt: sudo apt install snap```
+
+```pacman: sudo pacman -S forge```
+
+```zypper: sudo zypper install forge```
+
+```brew: brew install snap```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1), [aider](/man/aider)(1), [codex](/man/codex)(1), [opencode](/man/opencode)(1)

@@ -52,6 +52,24 @@ Correcting your own identity does not need this tool. **git commit --amend --aut
 
 **git blame-someone-else** was written by **Jay Phelps** in **2016** as a joke. Its README quotes an endorsement from **Linus Torvalds**, which is itself a fabricated commit produced by the tool to demonstrate that it works.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-blame](/man/git-blame)(1), [git-commit](/man/git-commit)(1), [git-filter-branch](/man/git-filter-branch)(1), [git-rebase](/man/git-rebase)(1)

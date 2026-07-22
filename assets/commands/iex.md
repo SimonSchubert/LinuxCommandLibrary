@@ -69,6 +69,22 @@ Requires Elixir/Erlang. Node features need setup. Mix integration common.
 
 iex is part of **Elixir**, created by **José Valim** as a functional language on the Erlang VM.
 
+# INSTALL
+
+```apt: sudo apt install elixir```
+
+```dnf: sudo dnf install elixir```
+
+```pacman: sudo pacman -S elixir```
+
+```apk: sudo apk add elixir```
+
+```zypper: sudo zypper install elixir```
+
+```brew: brew install elixir```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [elixir](/man/elixir)(1), [mix](/man/mix)(1), [erl](/man/erl)(1)

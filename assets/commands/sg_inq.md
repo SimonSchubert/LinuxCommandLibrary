@@ -114,6 +114,22 @@ Requires root privileges to access raw device nodes. On Linux 2.4 kernels, only 
 
 **sg_inq** is part of the **sg3_utils** package, a collection of utilities for SCSI devices on Linux. The sg3_utils project was created to provide user-space tools for interacting with SCSI devices through the Linux SCSI generic (sg) driver. The package has evolved to support ATA devices via SAT (SCSI/ATA Translation) and more recently NVMe devices.
 
+# INSTALL
+
+```apt: sudo apt install sg3-utils```
+
+```dnf: sudo dnf install sg3_utils```
+
+```pacman: sudo pacman -S sg3_utils```
+
+```apk: sudo apk add sg3_utils```
+
+```zypper: sudo zypper install sg3_utils```
+
+```nix: nix profile install nixpkgs#sg3_utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lsscsi](/man/lsscsi)(1), [smartctl](/man/smartctl)(8), [hdparm](/man/hdparm)(8)

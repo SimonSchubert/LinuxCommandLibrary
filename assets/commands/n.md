@@ -80,6 +80,12 @@ Requires sudo for global install. Simpler than nvm. Bash script based.
 
 n was created by **TJ Holowaychuk** as a simpler alternative to nvm for Node.js version management.
 
+# INSTALL
+
+```brew: brew install n```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nvm](/man/nvm)(1), [node](/man/node)(1), [npm](/man/npm)(1)

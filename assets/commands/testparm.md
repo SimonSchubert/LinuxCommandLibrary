@@ -94,6 +94,16 @@ testparm checks for **syntactic correctness** but cannot guarantee that services
 
 **testparm** has been part of the **Samba** suite since its early releases. Samba was originally written by **Andrew Tridgell** in **1992** to provide SMB/CIFS file and print services on Unix. The testparm utility was created to help administrators validate configuration changes before restarting the Samba daemons, reducing downtime from misconfiguration.
 
+# INSTALL
+
+```apt: sudo apt install samba-common-bin```
+
+```dnf: sudo dnf install samba-common-tools```
+
+```apk: sudo apk add samba-common-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smbclient](/man/smbclient)(1), [samba](/man/samba)(7)

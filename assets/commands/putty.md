@@ -124,6 +124,24 @@ Uses the PPK key format; convert OpenSSH keys with **puttygen**. The **-pw** fla
 
 PuTTY was created by **Simon Tatham** and first released in **1999**. It became the standard SSH client on Windows, where no built-in SSH client was available until Windows 10 (2018).
 
+# INSTALL
+
+```apt: sudo apt install putty```
+
+```dnf: sudo dnf install putty```
+
+```pacman: sudo pacman -S putty```
+
+```apk: sudo apk add putty```
+
+```zypper: sudo zypper install putty```
+
+```brew: brew install putty```
+
+```nix: nix profile install nixpkgs#putty```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [plink](/man/plink)(1), [pscp](/man/pscp)(1)

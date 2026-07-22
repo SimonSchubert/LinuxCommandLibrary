@@ -65,3 +65,9 @@ omshell was created for **runtime DHCP management** via the OMAPI protocol.
 
 [dhcpd](/man/dhcpd)(1), [dhclient](/man/dhclient)(1)
 
+
+# INSTALL
+
+```apt: sudo apt install isc-dhcp-server```
+
+<!-- packages: 2026-07-22 -->

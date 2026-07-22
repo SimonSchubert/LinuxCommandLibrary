@@ -55,6 +55,16 @@ You must supply the decryption keys yourself; mp4decrypt does not fetch, derive,
 
 **mp4decrypt** is part of the **Bento4** toolkit created by **Gilles Boccon-Gibod** of **Axiomatic Systems, LLC**, with development dating back to **2002**. The toolkit was first publicly available on SourceForge around **2005** and has been continuously expanded to support modern encryption schemes (MPEG-CENC, CBCS) and adaptive streaming formats (DASH, HLS, CMAF). It has been forked by **Dolby Laboratories** and **XBMC/Kodi**.
 
+# INSTALL
+
+```apk: sudo apk add bento4```
+
+```brew: brew install bento4```
+
+```nix: nix profile install nixpkgs#bento4```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [ffprobe](/man/ffprobe)(1)

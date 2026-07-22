@@ -49,6 +49,16 @@ Requires a terminal with ncurses support. Some distribution packages may ship ol
 
 The New BSD Games collection was created by abakh as a modern companion to classic BSD games, adding original and improved text-mode implementations. Version 6.0.2 was released in **June 2026** with 21 games. Individual games in the package are documented separately in this library.
 
+# INSTALL
+
+```zypper: sudo zypper install nbsdgames```
+
+```brew: brew install nbsdgames```
+
+```nix: nix profile install nixpkgs#nbsdgames```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nbmines](/man/nbmines)(1), [nbsudoku](/man/nbsudoku)(1), [nbreversi](/man/nbreversi)(1), [nbbattleship](/man/nbbattleship)(1), [bsdgames](/man/bsdgames)(6)

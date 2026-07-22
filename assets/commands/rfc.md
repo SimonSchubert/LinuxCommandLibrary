@@ -32,6 +32,14 @@ Behavior for keyword search, local caching, and offline mirrors depends on the v
 
 Requires network access unless a local RFC collection is configured. Formatting is plain text; some RFCs are better read as PDF/HTML on the IETF site.
 
+# INSTALL
+
+```pacman: sudo pacman -S rfc```
+
+```nix: nix profile install nixpkgs#rfc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [less](/man/less)(1), [man](/man/man)(1)

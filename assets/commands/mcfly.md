@@ -78,6 +78,20 @@ Requires shell integration to replace Ctrl+R. The neural network needs time to l
 
 **mcfly** was created by **Andrew Cantino** to bring intelligent command suggestion to the shell. It uses machine learning principles to provide context-aware history search, going beyond simple text matching.
 
+# INSTALL
+
+```pacman: sudo pacman -S mcfly```
+
+```apk: sudo apk add mcfly```
+
+```zypper: sudo zypper install mcfly```
+
+```brew: brew install mcfly```
+
+```nix: nix profile install nixpkgs#mcfly```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [hstr](/man/hstr)(1), [fzf](/man/fzf)(1), [atuin](/man/atuin)(1), [history](/man/history)(1), [bash](/man/bash)(1), [zsh](/man/zsh)(1)

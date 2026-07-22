@@ -78,6 +78,16 @@ This command depends on the registry implementation; third-party registries may 
 
 Most subcommands only work against npmjs.com or compatible registries. The command is unaware of workspaces. Changing email or enabling 2FA may require an OTP when prompted.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-adduser](/man/npm-adduser)(1), [npm-access](/man/npm-access)(1), [npm-config](/man/npm-config)(1)

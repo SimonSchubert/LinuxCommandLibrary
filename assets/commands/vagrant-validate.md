@@ -25,6 +25,16 @@ Validate Vagrantfile syntax
 
 **vagrant validate** checks the Vagrantfile for syntax errors. It validates the configuration without creating or modifying machines, making it useful for CI/CD pipelines and pre-commit checks. If valid, it prints "Vagrantfile validated successfully."
 
+# INSTALL
+
+```apt: sudo apt install vagrant```
+
+```dnf: sudo dnf install vagrant```
+
+```nix: nix profile install nixpkgs#vagrant```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vagrant](/man/vagrant)(1), [vagrant-init](/man/vagrant-init)(1)

@@ -51,6 +51,24 @@ Part of Graphviz. Matrix Market format only. For sparse matrices.
 
 mm2gv is part of **Graphviz** for converting Matrix Market sparse matrices to graph format.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [gvpr](/man/gvpr)(1), [neato](/man/neato)(1)

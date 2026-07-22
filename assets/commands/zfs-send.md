@@ -107,6 +107,16 @@ Incremental receives require the base snapshot to exist at destination. Replicat
 
 **zfs send** has been part of ZFS since its introduction in Solaris 10. The command evolved with OpenZFS to include features like raw encrypted sends, redacted sends, and resumable transfers. It remains the primary method for ZFS backup and replication.
 
+# INSTALL
+
+```apt: sudo apt install zfs-fuse```
+
+```apk: sudo apk add zfs```
+
+```nix: nix profile install nixpkgs#zfs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zfs-receive](/man/zfs-receive)(8), [zfs](/man/zfs)(8), [zpool](/man/zpool)(8)

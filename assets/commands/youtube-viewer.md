@@ -98,6 +98,14 @@ Requires a valid YouTube Data API v3 key. May break with YouTube API changes. A 
 
 **youtube-viewer** was created by **trizen** as a lightweight command-line YouTube client written in Perl. It provides terminal-based search, streaming, and downloading of YouTube content using the YouTube Data API v3.
 
+# INSTALL
+
+```apk: sudo apk add youtube-viewer```
+
+```nix: nix profile install nixpkgs#youtube-viewer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yt-dlp](/man/yt-dlp)(1), [mpv](/man/mpv)(1), [vlc](/man/vlc)(1)

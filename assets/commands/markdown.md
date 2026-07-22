@@ -74,6 +74,24 @@ Many implementations with slight differences. No single standard (CommonMark aim
 
 Markdown was created by **John Gruber** with contributions from **Aaron Swartz** in **2004**. It became the de facto standard for README files and documentation.
 
+# INSTALL
+
+```apt: sudo apt install discount```
+
+```dnf: sudo dnf install discount```
+
+```pacman: sudo pacman -S discount```
+
+```apk: sudo apk add discount```
+
+```zypper: sudo zypper install discount```
+
+```brew: brew install discount```
+
+```nix: nix profile install nixpkgs#discount```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pandoc](/man/pandoc)(1), [cmark](/man/cmark)(1), [grip](/man/grip)(1)

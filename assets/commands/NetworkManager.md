@@ -78,6 +78,22 @@ May conflict with other network tools. Connections stored in /etc/NetworkManager
 
 NetworkManager was developed by **Red Hat** starting in **2004** to simplify network configuration on Linux desktops.
 
+# INSTALL
+
+```apt: sudo apt install network-manager```
+
+```dnf: sudo dnf install NetworkManager```
+
+```pacman: sudo pacman -S networkmanager```
+
+```apk: sudo apk add networkmanager```
+
+```zypper: sudo zypper install NetworkManager```
+
+```nix: nix profile install nixpkgs#networkmanager```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmcli](/man/nmcli)(1), [nmtui](/man/nmtui)(1), [netctl](/man/netctl)(1)

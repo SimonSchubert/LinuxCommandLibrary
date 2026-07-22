@@ -72,6 +72,14 @@ Conversion may not be perfect. Obfuscated code remains obfuscated. Some Dalvik f
 
 **dex2jar** was created by **Bob Pan** (pxb1988) for Android reverse engineering. It became a standard tool in the Android security research community, often used alongside jd-gui for decompiling the resulting JAR files.
 
+# INSTALL
+
+```brew: brew install dex2jar```
+
+```nix: nix profile install nixpkgs#dex2jar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apktool](/man/apktool)(1), [jadx](/man/jadx)(1)

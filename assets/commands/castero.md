@@ -73,6 +73,12 @@ Requires an external media player (**VLC** or **mpv**) to be installed for audio
 
 **castero** was created by **Jake Robertson** and first released in **April 2018**. Major milestones include episode downloading (v0.2.0, 2018), mpv backend support (v0.4.0, 2019), SQLite database and played/unplayed tracking (v0.5.0, 2019), and OPML import/export (v0.6.0, 2019). The latest release is v0.9.5.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#castero```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpv](/man/mpv)(1), [vlc](/man/vlc)(1), [newsboat](/man/newsboat)(1), [cmus](/man/cmus)(1)

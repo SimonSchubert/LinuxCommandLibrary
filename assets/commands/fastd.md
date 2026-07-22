@@ -75,6 +75,20 @@ fast and secure VPN daemon
 
 The tool supports multiple encryption methods and is optimized for low-latency, high-performance VPN connections. It uses UDP for transport and supports various authentication and encryption ciphers. Configuration defines peers, network interfaces, and security parameters.
 
+# INSTALL
+
+```apt: sudo apt install fastd```
+
+```dnf: sudo dnf install fastd```
+
+```pacman: sudo pacman -S fastd```
+
+```brew: brew install fastd```
+
+```nix: nix profile install nixpkgs#fastd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wg](/man/wg)(8), [openvpn](/man/openvpn)(8), [ipsec](/man/ipsec)(8)

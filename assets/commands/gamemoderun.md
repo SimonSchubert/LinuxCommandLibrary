@@ -43,6 +43,20 @@ gamemoderun itself takes no flags; it executes its arguments under GameMode via 
 
 GameMode optimizations are best-effort and depend on the host configuration and privileges. On some systems the CPU governor changes may be restricted. The daemon must be installed and running (or activatable via user service) for optimizations to apply; missing daemon still allows the game to start.
 
+# INSTALL
+
+```dnf: sudo dnf install gamemode```
+
+```pacman: sudo pacman -S gamemode```
+
+```apk: sudo apk add gamemode```
+
+```zypper: sudo zypper install gamemode```
+
+```nix: nix profile install nixpkgs#gamemode```
+
+<!-- packages: 2026-07-22 -->
+
 # RESOURCES
 
 ```[Source code](https://github.com/FeralInteractive/gamemode)```

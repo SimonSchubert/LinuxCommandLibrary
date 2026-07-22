@@ -78,6 +78,12 @@ Designed for development and testing only; not suitable for production use. Defa
 
 **httplab** was created by **Gustavo Chaín** (qustavo) and is written in **Go**. It was designed to provide developers with a quick way to inspect and mock HTTP interactions without configuring a full mock server.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#httplab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [nc](/man/nc)(1), [httpie](/man/httpie)(1)

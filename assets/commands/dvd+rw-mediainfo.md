@@ -33,6 +33,22 @@ Requires media in drive for most info. Some information depends on drive capabil
 
 dvd+rw-mediainfo is part of **dvd+rw-tools**, providing disc analysis capabilities essential for DVD authoring and burning on Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install dvd+rw-tools```
+
+```dnf: sudo dnf install dvd+rw-tools```
+
+```pacman: sudo pacman -S dvd+rw-tools```
+
+```apk: sudo apk add dvd+rw-tools```
+
+```zypper: sudo zypper install dvd+rw-tools```
+
+```brew: brew install dvd+rw-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dvd+rw-booktype](/man/dvd+rw-booktype)(1), [growisofs](/man/growisofs)(1), [cdrecord](/man/cdrecord)(1)

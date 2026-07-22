@@ -61,6 +61,24 @@ Requires DocBook XSL stylesheets and an XSLT processor (xsltproc) to be installe
 
 **xmlto** was created for converting XML documents, particularly DocBook, to various output formats.
 
+# INSTALL
+
+```apt: sudo apt install xmlto```
+
+```dnf: sudo dnf install xmlto```
+
+```pacman: sudo pacman -S xmlto```
+
+```apk: sudo apk add xmlto```
+
+```zypper: sudo zypper install xmlto```
+
+```brew: brew install xmlto```
+
+```nix: nix profile install nixpkgs#xmlto```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xsltproc](/man/xsltproc)(1), [docbook2html](/man/docbook2html)(1), [pandoc](/man/pandoc)(1)

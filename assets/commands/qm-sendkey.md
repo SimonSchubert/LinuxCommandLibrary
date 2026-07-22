@@ -45,6 +45,12 @@ Key encoding follows QEMU monitor format, not standard key names. The --skiplock
 
 Part of **Proxmox VE** QEMU/KVM management tools for virtual machine administration.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-monitor](/man/qm-monitor)(1), [qm-start](/man/qm-start)(1), [qm-stop](/man/qm-stop)(1), [qm-terminal](/man/qm-terminal)(1)

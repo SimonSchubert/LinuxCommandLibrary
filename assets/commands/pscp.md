@@ -63,6 +63,22 @@ Windows-specific (part of PuTTY). Uses PPK key format. On Unix, use scp instead.
 
 pscp is part of **PuTTY**, the SSH client suite for Windows created by **Simon Tatham** in 1999.
 
+# INSTALL
+
+```apt: sudo apt install putty-tools```
+
+```dnf: sudo dnf install pssh```
+
+```apk: sudo apk add pssh```
+
+```zypper: sudo zypper install pssh```
+
+```brew: brew install pssh```
+
+```nix: nix profile install nixpkgs#pssh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scp](/man/scp)(1), [putty](/man/putty)(1), [plink](/man/plink)(1)

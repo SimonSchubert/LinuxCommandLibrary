@@ -86,6 +86,20 @@ Must be a member of the team to add it.
 
 Only existing owners can modify ownership. Users must have logged into crates.io. Teams cannot add or remove other owners.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-publish](/man/cargo-publish)(1), [cargo-login](/man/cargo-login)(1)

@@ -56,6 +56,12 @@ The command is still useful for custom project templates hosted on GitHub or sto
 
 This is a Vue CLI 2.x command. Vue CLI 3+ uses **vue create** for new projects. The built-in templates (webpack, browserify, etc.) are no longer maintained. To use **vue init** with **@vue/cli** 3+, install **@vue/cli-init** globally.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#vue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vue](/man/vue)(1)

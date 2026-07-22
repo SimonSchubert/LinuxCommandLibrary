@@ -67,6 +67,14 @@ The tool handles resource compilation, XML processing, asset packaging, and APK 
 
 **aapt** was introduced as part of the Android SDK in **2008** with the initial public release of Android. It served as the primary resource packaging tool until **2017** when Google introduced aapt2 with improved performance and incremental build support. The original aapt remains included in the SDK for compatibility.
 
+# INSTALL
+
+```apt: sudo apt install aapt```
+
+```nix: nix profile install nixpkgs#aapt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [aapt2](/man/aapt2)(1), [apksigner](/man/apksigner)(1), [apktool](/man/apktool)(1), [zipalign](/man/zipalign)(1), [adb](/man/adb)(1)

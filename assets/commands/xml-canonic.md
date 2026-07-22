@@ -42,6 +42,22 @@ It is part of the **xmlstarlet** command-line XML toolkit. Canonical XML is comm
 
 Canonicalization is lossy: comments may be stripped, whitespace normalized, and namespace declarations rewritten. Non-canonical formatting differences are intentionally erased. Cryptographic signatures over canonicalized XML require both parties to use the same C14N variant.
 
+# INSTALL
+
+```dnf: sudo dnf install xmlstarlet```
+
+```pacman: sudo pacman -S xmlstarlet```
+
+```apk: sudo apk add xmlstarlet```
+
+```zypper: sudo zypper install xmlstarlet```
+
+```brew: brew install xmlstarlet```
+
+```nix: nix profile install nixpkgs#xmlstarlet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xml-c14n](/man/xml-c14n)(1), [xml-format](/man/xml-format)(1)

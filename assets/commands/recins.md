@@ -82,6 +82,18 @@ Creates file if doesn't exist. Appends by default. Part of GNU recutils.
 
 recins is part of **GNU recutils** by **Jose E. Marchesi** for text-based database management.
 
+# INSTALL
+
+```dnf: sudo dnf install recutils```
+
+```apk: sudo apk add recutils```
+
+```brew: brew install recutils```
+
+```nix: nix profile install nixpkgs#recutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [recsel](/man/recsel)(1), [recdel](/man/recdel)(1), [recset](/man/recset)(1)

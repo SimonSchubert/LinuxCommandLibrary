@@ -111,6 +111,18 @@ Requires Docker daemon access (user must be in docker group or use sudo). Live s
 
 **lazydocker** was created by Jesse Duffield around **2019** as part of a series of "lazy" terminal UIs (including lazygit). Written in Go, it was inspired by the desire for a more visual way to manage Docker without leaving the terminal. The project has become popular among developers who prefer keyboard-driven interfaces.
 
+# INSTALL
+
+```pacman: sudo pacman -S lazydocker```
+
+```apk: sudo apk add lazydocker```
+
+```brew: brew install lazydocker```
+
+```nix: nix profile install nixpkgs#lazydocker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-compose](/man/docker-compose)(1), [lazygit](/man/lazygit)(1), [ctop](/man/ctop)(1), [podman](/man/podman)(1), [dive](/man/dive)(1)

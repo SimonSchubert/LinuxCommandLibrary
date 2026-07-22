@@ -46,6 +46,20 @@ This operation only checks local database; it does not query sync databases for 
 
 Part of **pacman**, the package manager for Arch Linux and derivatives.
 
+# INSTALL
+
+```apt: sudo apt install pacman-package-manager```
+
+```dnf: sudo dnf install pacman```
+
+```pacman: sudo pacman -S pacman```
+
+```apk: sudo apk add pacman```
+
+```nix: nix profile install nixpkgs#pacman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pacman-sync](/man/pacman-sync)(8)

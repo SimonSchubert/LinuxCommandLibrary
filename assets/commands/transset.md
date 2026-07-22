@@ -77,6 +77,16 @@ Requires a running compositing manager for visible effects. X11 only; does not w
 
 **transset** was developed as part of the X.Org project to demonstrate and utilize the COMPOSITE extension. The transset-df variant by Daniel Forchheimer added command-line options for scripted use without interactive clicking.
 
+# INSTALL
+
+```apt: sudo apt install x11-apps```
+
+```zypper: sudo zypper install transset```
+
+```nix: nix profile install nixpkgs#transset```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xwininfo](/man/xwininfo)(1), [picom](/man/picom)(1), [xcompmgr](/man/xcompmgr)(1), [xprop](/man/xprop)(1)

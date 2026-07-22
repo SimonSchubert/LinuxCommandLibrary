@@ -69,6 +69,20 @@ Requires LLVM. D language specific. May lag DMD features.
 
 LDC was created to provide LLVM-based compilation for the **D programming language**, offering better optimization.
 
+# INSTALL
+
+```dnf: sudo dnf install ldc```
+
+```pacman: sudo pacman -S ldc```
+
+```zypper: sudo zypper install ldc```
+
+```brew: brew install ldc```
+
+```nix: nix profile install nixpkgs#ldc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dmd](/man/dmd)(1), [gdc](/man/gdc)(1), [dub](/man/dub)(1)

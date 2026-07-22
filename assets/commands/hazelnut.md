@@ -79,6 +79,12 @@ The daemon (hazelnutd) is only available on **macOS** and **Linux**; on Windows 
 
 **hazelnut** was created by **Ricardo Dantas** and is written in **Rust** using the **Ratatui** TUI library. It was inspired by the popular macOS automation app Hazel, bringing similar file organization capabilities to the terminal.
 
+# INSTALL
+
+```pacman: sudo pacman -S hazelnut```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [watch](/man/watch)(1), [find](/man/find)(1), [mv](/man/mv)(1)

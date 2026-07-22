@@ -97,6 +97,15 @@ Requires AWS credentials configured. Large log queries may be slow. CloudWatch L
 
 **awslogs** was created by Jorge Bastida around **2015** to provide a better command-line experience for viewing CloudWatch Logs compared to the official AWS CLI.
 
+# INSTALL
+
+```aur: yay -S awslogs```
+
+```brew: brew install awslogs```
+
+```nix: nix profile install nixpkgs#awslogs```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-logs](/man/aws-logs)(1), [tail](/man/tail)(1)

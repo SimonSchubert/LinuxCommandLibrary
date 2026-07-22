@@ -32,6 +32,24 @@ In addition to the resolution options, **ppmtoascii** supports the common Netpbm
 
 Note that **ppmtoterm** does a similar conversion but displays each character as a single pixel (using the same dense character for every pixel), whereas **ppmtoascii** combines 2 or 8 pixels into one character that roughly represents those pixels.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtoascii](/man/pbmtoascii)(1), [ppmtoterm](/man/ppmtoterm)(1), [ppmtosixel](/man/ppmtosixel)(1)

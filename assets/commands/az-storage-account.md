@@ -106,6 +106,19 @@ Storage account names must be globally unique across all Azure customers. Changi
 
 Azure Storage was one of the first Azure services, available since the platform's launch in **2010**. StorageV2 accounts became the recommended default in **2018**, unifying previously separate storage types and enabling new features like access tiers.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [azure-cli](/man/azure-cli)(1), [az-storage](/man/az-storage)(1), [az-storage-blob](/man/az-storage-blob)(1), [az-storage-container](/man/az-storage-container)(1), [azcopy](/man/azcopy)(1)

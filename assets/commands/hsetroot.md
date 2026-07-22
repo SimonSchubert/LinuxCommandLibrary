@@ -78,6 +78,20 @@ X11 only; doesn't work with Wayland. Some compositors may override. Requires Iml
 
 hsetroot is a fork/rewrite of various root background setters. It's commonly used in the minimal/tiling window manager community where dedicated wallpaper handling is needed.
 
+# INSTALL
+
+```apt: sudo apt install hsetroot```
+
+```dnf: sudo dnf install hsetroot```
+
+```pacman: sudo pacman -S hsetroot```
+
+```zypper: sudo zypper install hsetroot```
+
+```nix: nix profile install nixpkgs#hsetroot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [feh](/man/feh)(1), [nitrogen](/man/nitrogen)(1), [xwallpaper](/man/xwallpaper)(1), [xsetroot](/man/xsetroot)(1)

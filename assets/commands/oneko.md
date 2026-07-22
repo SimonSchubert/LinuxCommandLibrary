@@ -83,6 +83,16 @@ X11 only. May not work with Wayland. Requires X11 compositor support. Can be dis
 
 oneko (お猫, "honorable cat") originated on the NEC PC-9801 in Japan. The X11 version was created by **Tatsuya Kato** in **1991**.
 
+# INSTALL
+
+```dnf: sudo dnf install oneko```
+
+```zypper: sudo zypper install oneko```
+
+```nix: nix profile install nixpkgs#oneko```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xeyes](/man/xeyes)(1), [xscreensaver](/man/xscreensaver)(1)

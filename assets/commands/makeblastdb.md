@@ -73,6 +73,12 @@ Large sequences need significant memory. Database files must stay together. Rebu
 
 makeblastdb is part of **BLAST+**, the successor to legacy BLAST, developed at **NCBI** (National Center for Biotechnology Information).
 
+# INSTALL
+
+```apt: sudo apt install ncbi-blast+```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blastn](/man/blastn)(1), [blastp](/man/blastp)(1), [blastx](/man/blastx)(1), [tblastn](/man/tblastn)(1)

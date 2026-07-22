@@ -80,6 +80,13 @@ AWStats requires Perl with the Encode module. The configuration file must be pro
 
 AWStats was created by Laurent Destailleur and first released in **2000**. It became one of the most popular open-source web analytics tools before the rise of JavaScript-based analytics like Google Analytics. The project continues to be maintained on SourceForge and GitHub, providing server-side log analysis that doesn't require JavaScript or client-side tracking.
 
+# INSTALL
+
+```pacman: sudo pacman -S awstats```
+
+```nix: nix profile install nixpkgs#awstats```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [goaccess](/man/goaccess)(1), [apache2](/man/apache2)(8)

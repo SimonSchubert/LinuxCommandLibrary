@@ -111,6 +111,12 @@ Building Perl requires development tools. Some modules need recompilation when s
 
 **plenv** was created by **Tokuhiro Matsuno** around **2011**, inspired by rbenv. It provides Perl version management following the same principles that made rbenv successful for Ruby.
 
+# INSTALL
+
+```brew: brew install plenv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [perlbrew](/man/perlbrew)(1), [cpanm](/man/cpanm)(1), [perl](/man/perl)(1), [rbenv](/man/rbenv)(1)

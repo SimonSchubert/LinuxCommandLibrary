@@ -66,6 +66,12 @@ Node.js tool. JSON5 is a superset of JSON. Output is standard JSON.
 
 json5 implements the **JSON5** specification, designed to make JSON more human-friendly for configuration files.
 
+# INSTALL
+
+```brew: brew install json5```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [json_pp](/man/json_pp)(1), [jsonlint](/man/jsonlint)(1)

@@ -45,6 +45,20 @@ Memory usage is approximately 17 times the size of the old file for bsdiff, maki
 
 bsdiff was created by **Colin Percival** and first released in **2003**. He developed the algorithm while working on FreeBSD binary updates. The tool became widely adopted for software update systems, including Google Chrome and various game platforms. The algorithm's efficiency with binary files made it a standard choice for delta updates in bandwidth-constrained environments.
 
+# INSTALL
+
+```apt: sudo apt install bsdiff```
+
+```dnf: sudo dnf install bsdiff```
+
+```zypper: sudo zypper install bsdiff```
+
+```brew: brew install bsdiff```
+
+```nix: nix profile install nixpkgs#bsdiff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [patch](/man/patch)(1), [xdelta](/man/xdelta)(1), [rdiff](/man/rdiff)(1)

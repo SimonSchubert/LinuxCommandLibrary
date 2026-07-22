@@ -90,6 +90,16 @@ Requires authentication via Qwen OAuth or OpenAI-compatible API keys. Environmen
 
 Qwen Code was launched by **Alibaba** in **July 2025** alongside the Qwen3-Coder model. The flagship model is Qwen3-Coder-480B-A35B-Instruct, a 480B-parameter Mixture-of-Experts model with 35B active parameters supporting 256K native context and 1M tokens with extrapolation. The tool is released as open-source on GitHub.
 
+# INSTALL
+
+```pacman: sudo pacman -S qwen-code```
+
+```brew: brew install qwen-code```
+
+```nix: nix profile install nixpkgs#qwen-code```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gemini](/man/gemini)(1), [claude](/man/claude)(1), [opencode](/man/opencode)(1), [aider](/man/aider)(1)

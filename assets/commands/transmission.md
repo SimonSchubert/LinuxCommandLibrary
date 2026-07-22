@@ -78,6 +78,16 @@ Different packages for each interface. Daemon needs configuration. Port forwardi
 
 **Transmission** was created in **2005** focusing on simplicity and low resource usage. It became popular for its clean design and cross-platform support.
 
+# INSTALL
+
+```dnf: sudo dnf install transmission```
+
+```zypper: sudo zypper install transmission```
+
+```brew: brew install transmission```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [transmission-remote](/man/transmission-remote)(1), [aria2c](/man/aria2c)(1), [qbittorrent](/man/qbittorrent)(1)

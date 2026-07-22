@@ -85,6 +85,18 @@ Written in Rust for high performance, it's the CLI version of the Czkawka applic
 
 The **-D** flag permanently deletes files. Always review results before deletion. Use **-f** to save results first.
 
+# INSTALL
+
+```apt: sudo apt install czkawka-cli```
+
+```apk: sudo apk add czkawka```
+
+```brew: brew install czkawka```
+
+```nix: nix profile install nixpkgs#czkawka```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fdupes](/man/fdupes)(1), [rmlint](/man/rmlint)(1)

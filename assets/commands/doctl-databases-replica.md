@@ -81,6 +81,20 @@ In disaster recovery scenarios, replicas can be promoted to standalone clusters,
 
 Replication is asynchronous, so a replica can lag behind the primary and serve slightly stale rows. **promote** is irreversible: the replica becomes an independent cluster, stops following the primary, and is billed as a full cluster from then on. Read replicas are not offered for every engine or plan (they are unavailable on the smallest shared-CPU tiers and on some engines), and each replica is billed at the price of its own size.
 
+# INSTALL
+
+```dnf: sudo dnf install doctl```
+
+```pacman: sudo pacman -S doctl```
+
+```apk: sudo apk add doctl```
+
+```brew: brew install doctl```
+
+```nix: nix profile install nixpkgs#doctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doctl](/man/doctl)(1), [doctl-databases](/man/doctl-databases)(1), [doctl-databases-user](/man/doctl-databases-user)(1)

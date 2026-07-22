@@ -102,6 +102,12 @@ Requires internet connectivity to reach the Carbon rendering service. Custom the
 
 Carbon was created by **Dawn Labs** and launched in **2017** as a web application for creating beautiful code images. The carbon-now-cli was developed as a community project to provide command-line access to the service. It became popular among developers for quickly generating code images for documentation, tweets, and presentations without opening a browser.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#carbon-now-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [silicon](/man/silicon)(1), [pygmentize](/man/pygmentize)(1), [highlight](/man/highlight)(1)

@@ -20,6 +20,16 @@ The output helps understand what will be included in the next commit and what ch
 
 Similar to git status, it provides a clear overview of repository state, indicating which tables need attention and what actions (add, commit, or reset) might be appropriate next.
 
+# INSTALL
+
+```pacman: sudo pacman -S dolt```
+
+```brew: brew install dolt```
+
+```nix: nix profile install nixpkgs#dolt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dolt-add](/man/dolt-add)(1)

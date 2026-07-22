@@ -51,6 +51,12 @@ manages NixOS system configurations
 
 **nh os** manages NixOS system configurations. Friendly wrapper around nixos-rebuild with better output and flake support. Part of nh (nix helper) toolkit.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nh](/man/nh)(1), [nixos-rebuild](/man/nixos-rebuild)(1)

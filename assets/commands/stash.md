@@ -85,6 +85,12 @@ The default bind address is **0.0.0.0**, which exposes the UI to the local netwo
 
 Stash was started in **2018** by **WithoutPants** as an open-source alternative to commercial media managers. The project moved to the **stashapp** GitHub organization and grew a large community of plugin and scraper contributors. It is distributed as a single static binary for **Linux**, **macOS**, and **Windows**, with an official Docker image, under the **AGPL-3.0** license.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#stash```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1)

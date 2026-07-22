@@ -79,6 +79,12 @@ It supports UEFI and Legacy BIOS, secure boot, persistence, and hundreds of diff
 
 Installation destroys existing data on the drive. Some ISOs may not be compatible. Secure boot requires additional setup on some systems.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#ventoy```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dd](/man/dd)(1)

@@ -62,6 +62,22 @@ Detectable technologies include: KVM, QEMU, VMware, VirtualBox, Xen, Hyper-V, Do
 
 Detection relies on various heuristics and may not detect all virtualization types. Some nested virtualization scenarios may report only the innermost layer. Part of the systemd suite.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-nspawn](/man/systemd-nspawn)(1), [machinectl](/man/machinectl)(1)

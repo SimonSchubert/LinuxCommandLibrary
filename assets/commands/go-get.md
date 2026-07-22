@@ -62,6 +62,24 @@ Since **Go 1.18**, **go get** no longer builds or installs packages; it only edi
 
 go get is part of the **Go** toolchain. Its build/install functionality was split off into **go install** in **Go 1.17-1.18** as part of the modules transition, leaving go get focused solely on dependency resolution.
 
+# INSTALL
+
+```apt: sudo apt install gccgo-go```
+
+```dnf: sudo dnf install gcc-go```
+
+```pacman: sudo pacman -S gcc-go```
+
+```apk: sudo apk add gcc-go```
+
+```zypper: sudo zypper install gcc-go```
+
+```brew: brew install go```
+
+```nix: nix profile install nixpkgs#go```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [go-mod](/man/go-mod)(1), [go-install](/man/go-install)(1)

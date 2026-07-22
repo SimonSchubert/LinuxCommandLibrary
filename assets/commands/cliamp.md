@@ -155,6 +155,12 @@ AAC, ALAC (.m4a), Opus, and WMA playback requires **ffmpeg** installed. MP3, WAV
 
 **cliamp** is a terminal music player written in **Go** by developer **bjarneo** (iamdothash), inspired by **Winamp 2.x**. It is built with the **Bubbletea** TUI framework, **Lip Gloss** for styling, and **Beep** for audio playback.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#cliamp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mpv](/man/mpv)(1), [ffmpeg](/man/ffmpeg)(1), [ffplay](/man/ffplay)(1)

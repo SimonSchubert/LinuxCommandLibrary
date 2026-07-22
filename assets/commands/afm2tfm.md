@@ -76,6 +76,13 @@ The generated TFM files only contain metric information, not the actual font out
 
 **afm2tfm** was written by **Tom Rokicki** as part of the dvips package in the late **1980s**. It became essential when PostScript printers became common and users wanted to use professional Type 1 fonts with TeX instead of the limited Computer Modern family. The tool remains part of TeX Live and MiKTeX distributions today.
 
+# INSTALL
+
+```apt: sudo apt install texlive-binaries```
+
+```apk: sudo apk add texlive-dvi```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [dvips](/man/dvips)(1)

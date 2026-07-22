@@ -84,6 +84,22 @@ dhcpcd is commonly used as the default network configuration tool on many Linux 
 
 May conflict with NetworkManager or systemd-networkd. Configuration file is /etc/dhcpcd.conf. Requires root privileges.
 
+# INSTALL
+
+```apt: sudo apt install dhcpcd-base```
+
+```dnf: sudo dnf install dhcpcd```
+
+```pacman: sudo pacman -S dhcpcd```
+
+```apk: sudo apk add dhcpcd```
+
+```zypper: sudo zypper install dhcpcd```
+
+```nix: nix profile install nixpkgs#dhcpcd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dhclient](/man/dhclient)(8), [nmcli](/man/nmcli)(1), [ip](/man/ip)(8)

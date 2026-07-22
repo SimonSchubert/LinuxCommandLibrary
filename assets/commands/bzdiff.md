@@ -67,6 +67,24 @@ Returns the exit status from diff or cmp, preserving the comparison result.
 
 Error messages refer to temporary filenames instead of original filenames. Files are decompressed to temporary storage during comparison.
 
+# INSTALL
+
+```apt: sudo apt install bzip2```
+
+```dnf: sudo dnf install bzip2```
+
+```pacman: sudo pacman -S bzip2```
+
+```apk: sudo apk add bzip2```
+
+```zypper: sudo zypper install bzip2```
+
+```brew: brew install bzip2```
+
+```nix: nix profile install nixpkgs#bzip2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [diff](/man/diff)(1), [cmp](/man/cmp)(1), [bzgrep](/man/bzgrep)(1), [bzmore](/man/bzmore)(1), [bzip2](/man/bzip2)(1)

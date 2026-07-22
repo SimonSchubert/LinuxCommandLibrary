@@ -45,6 +45,12 @@ enables remote development with PlatformIO
 
 **pio remote** enables remote development with PlatformIO. Run builds and uploads on remote machines with connected hardware. Requires PlatformIO account and running remote agent.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-run](/man/pio-run)(1), [pio-device](/man/pio-device)(1)

@@ -62,6 +62,20 @@ Only works with mbox format mailboxes. May not work with modern mail delivery sy
 
 **from** is a classic **BSD utility** for checking local mail, originating from 4.2BSD. It predates modern mail systems and works with traditional Unix mbox format files.
 
+# INSTALL
+
+```pacman: sudo pacman -S mailutils```
+
+```apk: sudo apk add mailutils```
+
+```zypper: sudo zypper install mailutils```
+
+```brew: brew install mailutils```
+
+```nix: nix profile install nixpkgs#mailutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mail](/man/mail)(1), [biff](/man/biff)(1), [mailx](/man/mailx)(1), [sendmail](/man/sendmail)(1)

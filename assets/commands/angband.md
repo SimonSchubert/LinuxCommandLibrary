@@ -114,6 +114,17 @@ Permadeath means losing hours of progress to a single mistake. The learning curv
 
 Angband originated as a variant of **Moria** (1983), which itself was inspired by **Rogue** (1980). The name comes from Tolkien's fortress of Morgoth. Development began in **1990** by students at the University of Warwick. It became one of the most influential roguelikes, spawning numerous variants including ZAngband, ToME, and Sil. The game remains actively maintained by the community.
 
+# INSTALL
+
+```dnf: sudo dnf install angband```
+
+```pacman: sudo pacman -S angband```
+
+```brew: brew install angband```
+
+```nix: nix profile install nixpkgs#angband```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [nethack](/man/nethack)(1), [crawl](/man/crawl)(6), [tome](/man/tome)(6), [moria](/man/moria)(6), [rogue](/man/rogue)(6)

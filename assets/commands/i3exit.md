@@ -73,6 +73,12 @@ Requires appropriate permissions for power management operations. Behavior may v
 
 i3exit was developed for Manjaro Linux's i3 edition to provide a convenient power management interface for i3 users. It abstracts the differences between various power management backends.
 
+# INSTALL
+
+```aur: yay -S i3exit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [i3](/man/i3)(1), [systemctl](/man/systemctl)(1), [loginctl](/man/loginctl)(1)

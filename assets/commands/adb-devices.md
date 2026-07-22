@@ -47,6 +47,21 @@ Devices showing "unauthorized" require you to accept the RSA key prompt on the d
 
 The **adb devices** command has been part of adb since its initial release with the Android SDK in **2008**. The -l flag for extended information was added later to help distinguish between multiple devices of the same model.
 
+# INSTALL
+
+```apt: sudo apt install adb```
+
+```dnf: sudo dnf install android-tools```
+
+```pacman: sudo pacman -S android-tools```
+
+```apk: sudo apk add android-tools-adb```
+
+```zypper: sudo zypper install android-tools```
+
+```nix: nix profile install nixpkgs#android-tools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adb](/man/adb)(1), [adb-connect](/man/adb-connect)(1), [fastboot](/man/fastboot)(1)

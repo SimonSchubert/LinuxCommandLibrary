@@ -87,6 +87,16 @@ Supports npm registry packages, semver ranges, git URLs (git+https://...), local
 
 Creates a binary bun.lockb lockfile (or bun.lock text lockfile in newer versions). Package versions default to caret (^) ranges unless --exact is specified. Global packages are stored in Bun's global store, not system-wide.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-install](/man/bun-install)(1), [bun-remove](/man/bun-remove)(1), [npm-install](/man/npm-install)(1), [yarn](/man/yarn)(1)

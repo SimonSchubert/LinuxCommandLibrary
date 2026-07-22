@@ -161,6 +161,16 @@ In-memory databases are lost when the process exits. Write operations lock the d
 
 **DuckDB** was created by Mark Raasveldt and Hannes Mühleisen at CWI Amsterdam (the research institute where PostgreSQL originated). Development started around **2018** with the goal of creating an embeddable analytical database akin to "SQLite for analytics." The project gained significant adoption in the data science community starting in **2020**.
 
+# INSTALL
+
+```pacman: sudo pacman -S duckdb```
+
+```brew: brew install duckdb```
+
+```nix: nix profile install nixpkgs#duckdb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sqlite3](/man/sqlite3)(1), [psql](/man/psql)(1), [csvq](/man/csvq)(1), [jq](/man/jq)(1)

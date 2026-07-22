@@ -88,6 +88,24 @@ Different output format than ls. May break scripts expecting ls output. Icons ne
 
 exa was created by **Benjamin Sago** (ogham) starting around **2014** as a modern ls replacement. Development stopped in **2023**, with **eza** continuing as an active fork.
 
+# INSTALL
+
+```apt: sudo apt install eza```
+
+```dnf: sudo dnf install eza```
+
+```pacman: sudo pacman -S eza```
+
+```apk: sudo apk add eza```
+
+```zypper: sudo zypper install eza```
+
+```brew: brew install eza```
+
+```nix: nix profile install nixpkgs#eza```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [eza](/man/eza)(1), [lsd](/man/lsd)(1), [tree](/man/tree)(1)

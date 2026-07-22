@@ -116,6 +116,20 @@ Migrates code from one Rust edition to the next (e.g., 2021 to 2024). After runn
 
 Can only fix normally compiled code. Conditionally compiled code requires appropriate **--features** or **--target** flags. Built into Cargo since Rust 1.29. By default, requires a clean VCS state; use **--allow-dirty** or **--allow-staged** to override.
 
+# INSTALL
+
+```apt: sudo apt install cargo```
+
+```dnf: sudo dnf install cargo```
+
+```apk: sudo apk add cargo```
+
+```zypper: sudo zypper install cargo```
+
+```nix: nix profile install nixpkgs#cargo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [cargo-check](/man/cargo-check)(1), [cargo-clippy](/man/cargo-clippy)(1), [cargo-build](/man/cargo-build)(1)

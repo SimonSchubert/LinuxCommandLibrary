@@ -59,6 +59,24 @@ Compare content of tree objects
 
 The command accepts one or two tree-ish arguments and outputs the differences in various formats. It can process commits via stdin, enabling efficient batch processing of history. While rarely needed in daily Git use, it underpins many higher-level operations and is essential for scripts and custom diff tools.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-diff](/man/git-diff)(1), [git-diff-index](/man/git-diff-index)(1)

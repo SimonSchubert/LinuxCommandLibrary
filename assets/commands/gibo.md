@@ -69,6 +69,14 @@ An initial `gibo update` is required the first time you use the tool, to clone t
 
 **gibo** was created by **Simon Whitaker** as a shell script that wraps a local clone of **github.com/github/gitignore**. A Go rewrite (gibo-go) has since replaced the original shell implementation while keeping the same command surface.
 
+# INSTALL
+
+```brew: brew install gibo```
+
+```nix: nix profile install nixpkgs#gibo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1)

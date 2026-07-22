@@ -85,6 +85,20 @@ Requires Expect and Tcl. The .cloginrc file contains sensitive credentials; prot
 
 clogin was developed as part of **RANCID** (Really Awesome New Cisco confIg Differ) by **Henry Kilmer** and others at **Shrubbery Networks** in the late **1990s**. RANCID was created to automate configuration backup and change tracking for network devices. The toolkit has grown to support numerous vendors beyond Cisco, with clogin handling Cisco-specific devices.
 
+# INSTALL
+
+```apt: sudo apt install rancid```
+
+```dnf: sudo dnf install rancid```
+
+```apk: sudo apk add rancid```
+
+```brew: brew install rancid```
+
+```nix: nix profile install nixpkgs#rancid```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [expect](/man/expect)(1)

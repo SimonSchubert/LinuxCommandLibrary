@@ -76,6 +76,22 @@ Pure wrapper — no new features beyond what `ip route list` provides. Some dist
 
 **routel** was originally written by **Stephen R. van den Berg** and rewritten/maintained by **Stephen Hemminger** as part of the **iproute2** package.
 
+# INSTALL
+
+```apt: sudo apt install iproute2```
+
+```pacman: sudo pacman -S iproute2```
+
+```apk: sudo apk add iproute2```
+
+```zypper: sudo zypper install iproute2```
+
+```brew: brew install iproute2```
+
+```nix: nix profile install nixpkgs#iproute2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip-route](/man/ip-route)(8), [ip](/man/ip)(8), [route](/man/route)(8), [netstat](/man/netstat)(8), [ss](/man/ss)(8)

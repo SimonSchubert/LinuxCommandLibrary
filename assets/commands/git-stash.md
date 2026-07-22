@@ -90,6 +90,24 @@ Temporarily save uncommitted changes for later
 
 Use `pop` to restore and remove a stash, or `apply` to restore while keeping it. Stashes are stored as a stack, with the most recent at `stash@{0}`.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-reset](/man/git-reset)(1), [git-restore](/man/git-restore)(1), [git-commit](/man/git-commit)(1), [git-switch](/man/git-switch)(1)

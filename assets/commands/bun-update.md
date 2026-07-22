@@ -53,6 +53,16 @@ When called without package names, every dependency is considered. Naming one or
 
 **--latest** can pull in major-version bumps and break the project. The binary `bun.lockb` is not human-diffable; use `--save-text-lockfile` (or `bun install --save-text-lockfile`) to maintain a `bun.lock` file for code review.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-outdated](/man/bun-outdated)(1), [bun-install](/man/bun-install)(1)

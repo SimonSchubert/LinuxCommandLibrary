@@ -72,6 +72,12 @@ Some metadata sources may have regional restrictions or rate limits.
 
 Downloaded content may be subject to copyright. Respect content creators' rights.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#ytmdl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yt-dlp](/man/yt-dlp)(1), [ffmpeg](/man/ffmpeg)(1), [youtube-dl](/man/youtube-dl)(1), [spotdl](/man/spotdl)(1)

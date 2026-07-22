@@ -72,6 +72,24 @@ Requires locale with UTF-8 support. Needs appropriate Unicode fonts installed (x
 
 **uxterm** was created as part of xterm to simplify running the terminal with proper Unicode support. It emerged as Unicode became standard and users needed reliable UTF-8 display without manually configuring xterm's complex options.
 
+# INSTALL
+
+```apt: sudo apt install xterm```
+
+```dnf: sudo dnf install xterm```
+
+```pacman: sudo pacman -S xterm```
+
+```apk: sudo apk add xterm```
+
+```zypper: sudo zypper install xterm```
+
+```brew: brew install xterm```
+
+```nix: nix profile install nixpkgs#xterm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xterm](/man/xterm)(1), [locale](/man/locale)(1)

@@ -26,6 +26,24 @@ Note that SBIG Type 3 is distinct from the older SBIG ST-4 format handled by [pg
 
 The program accepts input from a file argument or standard input, and writes to standard output. It has no tool-specific options beyond the common Netpbm options. Part of the Netpbm toolkit (since Netpbm 10.70).
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sbigtopgm](/man/sbigtopgm)(1), [pgmtost4](/man/pgmtost4)(1), [fitstopnm](/man/fitstopnm)(1), [netpbm](/man/netpbm)(1)

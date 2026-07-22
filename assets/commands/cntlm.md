@@ -103,6 +103,22 @@ In addition to HTTP proxying, cntlm provides SOCKS5 proxy support and TCP/IP tun
 
 Use -M to auto-detect strongest working auth. Store password hashes instead of plaintext. Config file same syntax as OpenSSH.
 
+# INSTALL
+
+```apt: sudo apt install cntlm```
+
+```dnf: sudo dnf install cntlm```
+
+```apk: sudo apk add cntlm```
+
+```zypper: sudo zypper install cntlm```
+
+```brew: brew install cntlm```
+
+```nix: nix profile install nixpkgs#cntlm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [squid](/man/squid)(8), [privoxy](/man/privoxy)(1), [tinyproxy](/man/tinyproxy)(8)

@@ -96,6 +96,22 @@ Essential for managing dual-boot systems and UEFI boot configuration.
 
 Requires root privileges. Modifies UEFI NVRAM variables. Use with caution as incorrect settings can prevent system boot. Backup boot entries before making changes. Only works on systems booted in UEFI mode, not legacy BIOS.
 
+# INSTALL
+
+```apt: sudo apt install efibootmgr```
+
+```dnf: sudo dnf install efibootmgr```
+
+```pacman: sudo pacman -S efibootmgr```
+
+```apk: sudo apk add efibootmgr```
+
+```zypper: sudo zypper install efibootmgr```
+
+```nix: nix profile install nixpkgs#efibootmgr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [efivar](/man/efivar)(1), [grub-install](/man/grub-install)(8), [mokutil](/man/mokutil)(1)

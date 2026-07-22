@@ -49,6 +49,24 @@ Only a single operand is accepted; passing two or more arguments is an error. Di
 
 **unlink** is a long-standing Unix utility that exposes the **unlink(2)** system call. The GNU coreutils implementation conforms to **POSIX.1-2001**.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rm](/man/rm)(1), [rmdir](/man/rmdir)(1), [ln](/man/ln)(1)

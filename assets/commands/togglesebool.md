@@ -33,6 +33,16 @@ This tool has been deprecated and is often removed in favor of setsebool. Change
 
 **togglesebool** was part of the early SELinux tools for managing boolean values. It has been superseded by **setsebool** which provides more control over persistence.
 
+# INSTALL
+
+```apt: sudo apt install selinux-utils```
+
+```dnf: sudo dnf install libselinux-utils```
+
+```apk: sudo apk add libselinux-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [getsebool](/man/getsebool)(8), [setsebool](/man/setsebool)(8), [semanage-boolean](/man/semanage-boolean)(8)

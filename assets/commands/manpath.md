@@ -49,6 +49,22 @@ Show **global** manpath
 
 If **MANPATH** is set, **manpath** generally returns its value unaltered (or augmented per the configuration files). Otherwise it derives the path from **/etc/manpath.config** and **PATH**.
 
+# INSTALL
+
+```apt: sudo apt install man-db```
+
+```dnf: sudo dnf install man-db```
+
+```pacman: sudo pacman -S man-db```
+
+```apk: sudo apk add man-db```
+
+```brew: brew install man-db```
+
+```nix: nix profile install nixpkgs#man-db```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [man](/man/man)(1), [mandb](/man/mandb)(8)

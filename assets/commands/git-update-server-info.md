@@ -71,6 +71,24 @@ The shipped hook contains a single line calling **exec git update-server-info**,
 
 The dumb HTTP transport and its helper commands appeared in early Git releases, when smart transports over HTTP did not yet exist and many sites only had access to plain static web servers. Today **git update-server-info** is mostly a legacy compatibility tool, still maintained because some hosting setups (object storage, locked-down corporate proxies, archival mirrors) cannot run a smart Git service.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-daemon](/man/git-daemon)(1), [git-repack](/man/git-repack)(1)

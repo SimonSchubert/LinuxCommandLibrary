@@ -70,6 +70,22 @@ personal and small-business financial accounting
 **~/.config/gnucash/**
 > User configuration directory for preferences and UI state.
 
+# INSTALL
+
+```apt: sudo apt install gnucash```
+
+```dnf: sudo dnf install gnucash```
+
+```pacman: sudo pacman -S gnucash```
+
+```apk: sudo apk add gnucash```
+
+```zypper: sudo zypper install gnucash```
+
+```nix: nix profile install nixpkgs#gnucash```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnucash-cli](/man/gnucash-cli)(1), [ledger](/man/ledger)(1), [hledger](/man/hledger)(1)

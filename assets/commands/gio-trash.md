@@ -52,6 +52,20 @@ Trash storage is per-filesystem; trashing files from a full filesystem may fail.
 
 gio trash replaced the older gvfs-trash command when GLib consolidated GVfs utilities into the gio tool in **2016**. The underlying FreeDesktop.org Trash specification dates back to **2004**.
 
+# INSTALL
+
+```apt: sudo apt install libglib2.0-bin```
+
+```dnf: sudo dnf install glib```
+
+```apk: sudo apk add glib```
+
+```brew: brew install glib```
+
+```nix: nix profile install nixpkgs#glib```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gio](/man/gio)(1), [rm](/man/rm)(1), [trash-cli](/man/trash-cli)(1), [trash-put](/man/trash-put)(1), [trash-restore](/man/trash-restore)(1), [trash-empty](/man/trash-empty)(1)

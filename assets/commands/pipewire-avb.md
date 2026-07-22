@@ -63,6 +63,24 @@ Requires a network interface and switch infrastructure that support **AVB/TSN** 
 
 AVB support was added to **PipeWire** as part of its push into professional networked audio. PipeWire was created by **Wim Taymans** at Red Hat and first released in **2017**, and now ships as the default audio server in major Linux distributions.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-bin```
+
+```dnf: sudo dnf install pipewire```
+
+```pacman: sudo pacman -S pipewire```
+
+```apk: sudo apk add pipewire```
+
+```zypper: sudo zypper install pipewire```
+
+```brew: brew install pipewire```
+
+```nix: nix profile install nixpkgs#pipewire```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [pipewire-aes67](/man/pipewire-aes67)(1), [pipewire-pulse](/man/pipewire-pulse)(1), [pw-cli](/man/pw-cli)(1), [pw-dump](/man/pw-dump)(1)

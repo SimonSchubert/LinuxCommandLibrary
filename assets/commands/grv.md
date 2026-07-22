@@ -68,6 +68,12 @@ GRV is no longer actively maintained (last release 2019). It reads git repositor
 
 **GRV** was created by **Robert Burke** and written in **Go**. It was designed as a lightweight alternative to graphical Git clients, providing a fast terminal-based workflow for inspecting repository history and diffs.
 
+# INSTALL
+
+```aur: yay -S grv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [tig](/man/tig)(1), [gitui](/man/gitui)(1), [lazygit](/man/lazygit)(1)

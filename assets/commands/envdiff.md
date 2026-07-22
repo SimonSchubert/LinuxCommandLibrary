@@ -70,6 +70,12 @@ Sensitive data is masked by default but may still be captured. Large environment
 
 **envdiff** was created to help developers troubleshoot environment-related issues by providing a way to track and compare environment states over time.
 
+# INSTALL
+
+```aur: yay -S envdiff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [env](/man/env)(1), [printenv](/man/printenv)(1), [export](/man/export)(1)

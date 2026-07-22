@@ -77,6 +77,24 @@ Requires root privileges to read kernel slab cache information. Sort criteria ca
 
 **slabtop** is part of the **procps-ng** package. It provides insight into the kernel's slab allocator, which manages memory for frequently used kernel objects.
 
+# INSTALL
+
+```apt: sudo apt install procps```
+
+```dnf: sudo dnf install procps-ng```
+
+```pacman: sudo pacman -S procps-ng```
+
+```apk: sudo apk add procps-ng```
+
+```zypper: sudo zypper install procps```
+
+```brew: brew install procps```
+
+```nix: nix profile install nixpkgs#procps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [top](/man/top)(1), [vmstat](/man/vmstat)(8), [free](/man/free)(1), [ps](/man/ps)(1)

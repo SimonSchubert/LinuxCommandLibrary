@@ -70,6 +70,23 @@ For authorized testing only. Interface must be in monitor mode. WPA mode require
 
 **airtun-ng** was added to the aircrack-ng suite to enable post-exploitation scenarios where captured keys could be used to interact with the network using standard tools.
 
+# INSTALL
+
+```apt: sudo apt install aircrack-ng```
+
+```dnf: sudo dnf install aircrack-ng```
+
+```pacman: sudo pacman -S aircrack-ng```
+
+```apk: sudo apk add aircrack-ng```
+
+```zypper: sudo zypper install aircrack-ng```
+
+```brew: brew install aircrack-ng```
+
+```nix: nix profile install nixpkgs#aircrack-ng```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [airbase-ng](/man/airbase-ng)(1), [airdecap-ng](/man/airdecap-ng)(1), [airodump-ng](/man/airodump-ng)(1), [aireplay-ng](/man/aireplay-ng)(1)

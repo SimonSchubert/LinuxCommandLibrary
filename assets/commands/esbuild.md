@@ -105,6 +105,22 @@ Plugin ecosystem smaller than webpack. Some transformations not supported. Confi
 
 esbuild was created by **Evan Wallace** (co-founder of Figma) and released in **2020**. Its dramatic speed improvement over existing tools came from being written in Go with parallelization.
 
+# INSTALL
+
+```apt: sudo apt install esbuild```
+
+```pacman: sudo pacman -S esbuild```
+
+```apk: sudo apk add esbuild```
+
+```zypper: sudo zypper install esbuild```
+
+```brew: brew install esbuild```
+
+```nix: nix profile install nixpkgs#esbuild```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [webpack](/man/webpack)(1), [rollup](/man/rollup)(1), [vite](/man/vite)(1), [swc](/man/swc)(1)

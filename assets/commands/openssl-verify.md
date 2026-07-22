@@ -98,6 +98,24 @@ Does not check revocation by default; use -crl_check or -crl_download. System CA
 
 Certificate verification is fundamental to PKI, with openssl verify providing command-line access to OpenSSL's verification functions. The -show_chain option was added in OpenSSL 1.1.0.
 
+# INSTALL
+
+```apt: sudo apt install openssl```
+
+```dnf: sudo dnf install openssl```
+
+```pacman: sudo pacman -S openssl```
+
+```apk: sudo apk add openssl```
+
+```zypper: sudo zypper install openssl```
+
+```brew: brew install openssl```
+
+```nix: nix profile install nixpkgs#openssl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl-x509](/man/openssl-x509)(1), [openssl-s_client](/man/openssl-s_client)(1), [openssl-crl](/man/openssl-crl)(1)

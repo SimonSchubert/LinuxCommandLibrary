@@ -54,6 +54,14 @@ PRQL is experimental. Supports multiple SQL dialects.
 
 PRQL was created as a **modern alternative** to SQL syntax.
 
+# INSTALL
+
+```brew: brew install prqlc```
+
+```nix: nix profile install nixpkgs#prqlc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [psql](/man/psql)(1), [sqlite3](/man/sqlite3)(1)

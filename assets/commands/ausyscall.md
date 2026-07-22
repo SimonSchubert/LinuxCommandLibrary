@@ -71,6 +71,21 @@ Part of the **audit** package (`audit-userspace`). The syscall table is baked in
 
 **ausyscall** ships with the Linux Audit user-space tools originally developed by **Red Hat** (primarily **Steve Grubb**). It uses the syscall tables maintained in the audit source tree alongside `auparse`.
 
+# INSTALL
+
+```apt: sudo apt install auditd```
+
+```dnf: sudo dnf install audit```
+
+```pacman: sudo pacman -S audit```
+
+```apk: sudo apk add audit```
+
+```zypper: sudo zypper install audit```
+
+```nix: nix profile install nixpkgs#audit```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [auditctl](/man/auditctl)(8), [ausearch](/man/ausearch)(8), [aureport](/man/aureport)(8), [strace](/man/strace)(1)

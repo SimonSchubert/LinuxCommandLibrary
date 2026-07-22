@@ -77,6 +77,12 @@ For authorized testing only. Rate limiting may be needed. Large wordlists are sl
 
 **wfuzz** was created by **Christian Martorella** (Edge-Security) for web application testing. It's a standard tool in penetration testing.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#wfuzz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffuf](/man/ffuf)(1), [gobuster](/man/gobuster)(1), [dirb](/man/dirb)(1)

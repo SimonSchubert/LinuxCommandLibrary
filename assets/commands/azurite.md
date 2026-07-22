@@ -110,6 +110,13 @@ Not all Azure Storage features are supported. Some API behaviors differ from pro
 
 **Azurite** was created by Xiao Ning Guo and adopted by Microsoft in **2019** as the official replacement for the Windows-only Azure Storage Emulator, providing cross-platform support.
 
+# INSTALL
+
+```brew: brew install azurite```
+
+```nix: nix profile install nixpkgs#azurite```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az-storage](/man/az-storage)(1), [docker](/man/docker)(1), [node](/man/node)(1), [npm](/man/npm)(1)

@@ -41,6 +41,24 @@ converts PAM images to TIFF format
 
 **pamtotiff** converts PAM images to TIFF format. Supports alpha channel and various compression methods. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tifftopnm](/man/tifftopnm)(1), [pnmtotiff](/man/pnmtotiff)(1)

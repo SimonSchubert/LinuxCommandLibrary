@@ -122,6 +122,24 @@ Requires root or capabilities for raw socket access (ICMP/UDP) unless using TCP 
 
 **mtr** was written by **Matt Kimball** in **1997** as an improvement over traditional traceroute. The name originally stood for "Matt's TraceRoute." Roger Wolff took over maintenance, adding many features. The tool has become a standard network diagnostic utility, included in most Linux distributions and available for other Unix-like systems and Windows.
 
+# INSTALL
+
+```apt: sudo apt install mtr```
+
+```dnf: sudo dnf install mtr```
+
+```pacman: sudo pacman -S mtr```
+
+```apk: sudo apk add mtr```
+
+```zypper: sudo zypper install mtr```
+
+```brew: brew install mtr```
+
+```nix: nix profile install nixpkgs#mtr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [traceroute](/man/traceroute)(1), [ping](/man/ping)(1), [tracepath](/man/tracepath)(1), [nmap](/man/nmap)(1), [ss](/man/ss)(1), [netstat](/man/netstat)(1)

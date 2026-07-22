@@ -110,6 +110,24 @@ Requires shared key with named. Default port 953. Generate key with rndc-confgen
 
 rndc is part of **BIND** (Berkeley Internet Name Domain) by **ISC** (Internet Systems Consortium).
 
+# INSTALL
+
+```apt: sudo apt install bind9-utils```
+
+```dnf: sudo dnf install bind```
+
+```pacman: sudo pacman -S bind```
+
+```apk: sudo apk add bind```
+
+```zypper: sudo zypper install bind```
+
+```brew: brew install bind```
+
+```nix: nix profile install nixpkgs#bind```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [named](/man/named)(8), [named.conf](/man/named.conf)(5)

@@ -69,6 +69,12 @@ OpenShift specific extensions. Compatible with kubectl. Requires cluster access.
 
 oc was developed by **Red Hat** as the command-line interface for OpenShift Container Platform.
 
+# INSTALL
+
+```zypper: sudo zypper install oc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [docker](/man/docker)(1), [podman](/man/podman)(1)

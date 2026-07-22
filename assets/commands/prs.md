@@ -89,6 +89,16 @@ Requires authentication via the `gh` CLI or a `GITHUB_TOKEN` in the environment.
 
 **prs** was created by **dhth** and is written in **Go**. Source lives at github.com/dhth/prs.
 
+# INSTALL
+
+```apt: sudo apt install prs```
+
+```brew: brew install prs```
+
+```nix: nix profile install nixpkgs#prs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [git](/man/git)(1), [hub](/man/hub)(1)

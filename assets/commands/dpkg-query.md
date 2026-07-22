@@ -96,6 +96,24 @@ This queries only what dpkg knows about, meaning packages installed on this syst
 
 Note that a package listed by **-l** is not necessarily installed: the leading status characters matter, and `rc` means removed but with configuration files still on disk.
 
+# INSTALL
+
+```apt: sudo apt install dpkg```
+
+```dnf: sudo dnf install dpkg```
+
+```pacman: sudo pacman -S dpkg```
+
+```apk: sudo apk add dpkg```
+
+```zypper: sudo zypper install dpkg```
+
+```brew: brew install dpkg```
+
+```nix: nix profile install nixpkgs#dpkg```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dpkg](/man/dpkg)(1), [dpkg-deb](/man/dpkg-deb)(1), [apt-cache](/man/apt-cache)(8), [apt-file](/man/apt-file)(1), [aptitude](/man/aptitude)(8)

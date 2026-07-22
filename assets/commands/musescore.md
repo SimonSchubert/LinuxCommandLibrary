@@ -66,6 +66,20 @@ GUI application. Soundfont required for playback. Resource intensive for large s
 
 MuseScore was first released in **2002** as open-source alternative to commercial notation software.
 
+# INSTALL
+
+```apt: sudo apt install musescore```
+
+```dnf: sudo dnf install musescore```
+
+```pacman: sudo pacman -S musescore```
+
+```zypper: sudo zypper install musescore```
+
+```nix: nix profile install nixpkgs#musescore```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mscore](/man/mscore)(1), [lilypond](/man/lilypond)(1)

@@ -55,6 +55,12 @@ Clipboard support requires a clipboard provider on the system. Use **--no-clipbo
 
 **motus** was created by **oleiade** and is written in **Rust**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#motus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pass](/man/pass)(1), [pwgen](/man/pwgen)(1)

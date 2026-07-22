@@ -20,6 +20,12 @@ Regular expression based file rename tool
 
 **regname** was created by **mobzystems** and is written in **C#**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#regname```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rename](/man/rename)(1), [mmv](/man/mmv)(1), [nomino](/man/nomino)(1)

@@ -92,6 +92,16 @@ Requires root for capture. Rule tuning needed. High bandwidth challenging.
 
 **Snort** was created by **Martin Roesch** in **1998**. It became the most widely deployed IDS, now maintained by Cisco.
 
+# INSTALL
+
+```apk: sudo apk add snort```
+
+```brew: brew install snort```
+
+```nix: nix profile install nixpkgs#snort```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [suricata](/man/suricata)(1), [tcpdump](/man/tcpdump)(1), [zeek](/man/zeek)(1)

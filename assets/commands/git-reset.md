@@ -69,6 +69,24 @@ The three main modes are `--soft` (keeps changes staged), `--mixed` (unstages ch
 
 Hard reset discards changes permanently. Be careful with --hard on uncommitted work.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-revert](/man/git-revert)(1), [git-restore](/man/git-restore)(1)

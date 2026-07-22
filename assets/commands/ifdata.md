@@ -66,6 +66,24 @@ retrieves network interface information in a script-friendly format
 
 **ifdata** retrieves network interface information in a script-friendly format. Part of the moreutils package. Unlike ifconfig or ip, it returns single clean values without parsing. Exit codes indicate success/failure for conditional testing in scripts.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add moreutils```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip](/man/ip)(1), [ifconfig](/man/ifconfig)(1)

@@ -97,6 +97,16 @@ corepack hydrate ./yarn.tgz        # Install from archive
 
 Must be enabled before use. Respects packageManager in nearest package.json. Zero runtime dependencies.
 
+# INSTALL
+
+```pacman: sudo pacman -S corepack```
+
+```brew: brew install corepack```
+
+```nix: nix profile install nixpkgs#corepack```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [yarn](/man/yarn)(1), [pnpm](/man/pnpm)(1), [node](/man/node)(1)

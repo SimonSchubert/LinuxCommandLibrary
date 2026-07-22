@@ -62,6 +62,20 @@ Pattern syntax differs from standard shell globbing. Always preview with **-n** 
 
 mmv was written by **Vladimir Lanin** and published in **1990**. It provides mass file operations using pattern matching and substitution.
 
+# INSTALL
+
+```apt: sudo apt install mmv```
+
+```dnf: sudo dnf install mmv```
+
+```zypper: sudo zypper install mmv```
+
+```brew: brew install mmv```
+
+```nix: nix profile install nixpkgs#mmv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rename](/man/rename)(1), [mv](/man/mv)(1), [prename](/man/prename)(1)

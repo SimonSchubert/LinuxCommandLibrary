@@ -123,6 +123,22 @@ Only works under X11 (Wayland compositors render themselves). Requires a GPU dri
 
 **picom** is a maintained fork of **compton**, itself a fork of **xcompmgr-dana**/**xcompmgr**. Maintained by **yshui** after compton became inactive, picom is now the community-standard compositor for tiling WMs.
 
+# INSTALL
+
+```apt: sudo apt install picom```
+
+```dnf: sudo dnf install picom```
+
+```pacman: sudo pacman -S picom```
+
+```apk: sudo apk add picom```
+
+```zypper: sudo zypper install picom```
+
+```nix: nix profile install nixpkgs#picom```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xcompmgr](/man/xcompmgr)(1), [compton](/man/compton)(1), [i3](/man/i3)(1), [bspwm](/man/bspwm)(1)

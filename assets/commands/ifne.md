@@ -52,6 +52,24 @@ Part of **moreutils**. Input must fit in memory or in the pipe buffer; the entir
 
 ifne is part of **moreutils**, a collection of Unix tools by **Joey Hess**.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add moreutils```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xargs](/man/xargs)(1), [moreutils](/man/moreutils)(7), [test](/man/test)(1)

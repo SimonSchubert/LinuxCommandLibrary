@@ -59,6 +59,12 @@ Uses SPDX identifiers. Rust-based tool. May need installation via cargo.
 
 licensor was created by **Raphael Theriault** (raftario) as a **Rust-based** license text generator using SPDX license identifiers.
 
+# INSTALL
+
+```brew: brew install licensor```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [license](/man/license)(1), [cargo](/man/cargo)(1)

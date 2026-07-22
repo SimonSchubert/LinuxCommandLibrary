@@ -81,6 +81,14 @@ Network play requires one player to listen on a port that is accessible to the c
 
 vitetris was created by **Victor Geraldsson** and first released in **2007**. It was designed to be a lightweight, portable Tetris implementation for terminals. The game has been ported to multiple platforms including Linux, BSD, Windows, and DOS. Network play support was added to enable competitive multiplayer over the internet.
 
+# INSTALL
+
+```apk: sudo apk add micro-tetris```
+
+```nix: nix profile install nixpkgs#tetris```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tetris-bsd](/man/tetris-bsd)(6), [bastet](/man/bastet)(6), [nudoku](/man/nudoku)(6)

@@ -28,6 +28,12 @@ Browse and download YouTube from your terminal
 
 **yt-x** was created by **Benedict Xavier** (Benexl) and is written in **Shell** (Bash).
 
+# INSTALL
+
+```aur: yay -S yt-x```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [yt-dlp](/man/yt-dlp)(1), [youtube-dl](/man/youtube-dl)(1), [mpv](/man/mpv)(1)

@@ -83,6 +83,12 @@ Google Chrome stable release browser
 
 Common command-line options are identical to Chromium, including headless mode, remote debugging, user profile management, and various flags for development and testing. The command name varies by system: **google-chrome**, **google-chrome-stable**, or simply **chrome** may be available.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#google-chrome```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chromium](/man/chromium)(1), [firefox](/man/firefox)(1)

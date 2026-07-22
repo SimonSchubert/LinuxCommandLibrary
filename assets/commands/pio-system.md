@@ -38,6 +38,12 @@ Manage PlatformIO system information and maintenance
 
 **pio system** provides system information and maintenance commands. Shows PlatformIO installation details and cleans up unused packages and cache data.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-settings](/man/pio-settings)(1), [pio-upgrade](/man/pio-upgrade)(1)

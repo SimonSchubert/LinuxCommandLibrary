@@ -56,6 +56,22 @@ dotty came out of the original Graphviz work at **AT&T Bell Labs** and later AT&
 
 Its removal was unusually cautious even by Graphviz standards. The maintainers suspected lefty had been unused for years but, given how widely Graphviz is deployed, staged the removal across several years so that anyone still depending on it would have time to object. Almost nobody did.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [xdot](/man/xdot)(1), [neato](/man/neato)(1), [graphviz](/man/graphviz)(7)

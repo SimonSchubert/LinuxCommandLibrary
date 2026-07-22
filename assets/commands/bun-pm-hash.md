@@ -30,6 +30,16 @@ The related subcommands **hash-string** and **hash-print** provide additional in
 
 The hash is computed from the lockfile content, so any manual edits will change the hash even if the actual dependency tree is unchanged. The command requires a valid lockfile to exist in the project; run **bun install** first if one is missing. Bun versions prior to 1.2 used a binary lockfile format (bun.lockb); newer versions use a text-based bun.lock format.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-pm](/man/bun-pm)(1), [bun-install](/man/bun-install)(1)

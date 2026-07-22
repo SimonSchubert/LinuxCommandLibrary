@@ -64,6 +64,24 @@ The write subcommand generates or updates the commit graph, either for all reach
 
 Modern Git versions include commit-graph maintenance as part of git gc and git maintenance, so manual invocation is rarely necessary. The verify subcommand checks graph integrity, ensuring the data structure remains consistent with repository state.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-gc](/man/git-gc)(1), [git-maintenance](/man/git-maintenance)(1), [git-log](/man/git-log)(1)

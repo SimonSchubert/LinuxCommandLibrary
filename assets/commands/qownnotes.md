@@ -79,6 +79,14 @@ Qt-based application requiring a display server. The binary name may vary by pla
 
 QOwnNotes was created by **Patrizio Bekerle** as an open-source, cross-platform plain-text Markdown note-taking application. It is built with Qt/C++ and focuses on keeping notes in standard Markdown files that remain portable and editable outside the application. Optional Nextcloud/ownCloud integration provides cloud sync with server-side versioning and encryption.
 
+# INSTALL
+
+```dnf: sudo dnf install qownnotes```
+
+```nix: nix profile install nixpkgs#qownnotes```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [joplin](/man/joplin)(1), [notable](/man/notable)(1)

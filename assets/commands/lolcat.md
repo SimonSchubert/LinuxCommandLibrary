@@ -81,6 +81,18 @@ Requires a terminal that supports ANSI color codes. Animation mode can be CPU-in
 
 **lolcat** was created by **busyloop** and released as a Ruby gem in **2011**. Inspired by similar colorization tools, it quickly gained popularity in the Unix community for its simple but entertaining approach to terminal output. Multiple implementations now exist in various languages including C, Python, and Rust, with the C version (**c-lolcat**) offering better performance for large files.
 
+# INSTALL
+
+```dnf: sudo dnf install lolcat```
+
+```pacman: sudo pacman -S lolcat```
+
+```brew: brew install lolcat```
+
+```nix: nix profile install nixpkgs#lolcat```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [figlet](/man/figlet)(1), [cowsay](/man/cowsay)(1), [toilet](/man/toilet)(1), [cmatrix](/man/cmatrix)(1), [cat](/man/cat)(1)

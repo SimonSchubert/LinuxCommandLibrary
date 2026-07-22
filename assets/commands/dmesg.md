@@ -104,6 +104,24 @@ Requires root privileges on most systems. The **-w** (follow) option requires ke
 
 Part of **util-linux** package. The kernel ring buffer has been part of Linux since early versions, providing essential diagnostic information.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add dmesg```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [journalctl](/man/journalctl)(1), [tail](/man/tail)(1)

@@ -78,6 +78,12 @@ Legacy tool. Most cards now have native drivers. Requires Windows driver files.
 
 ndiswrapper was created to use **Windows network drivers** on Linux when native drivers weren't available.
 
+# INSTALL
+
+```pacman: sudo pacman -S ndiswrapper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iwconfig](/man/iwconfig)(1), [modprobe](/man/modprobe)(1), [lspci](/man/lspci)(1)

@@ -77,6 +77,19 @@ This is useful for debugging boot issues, network misconfigurations, or when the
 
 Part of the **serial-console** extension (Azure CLI 2.15.0 or higher); it installs automatically the first time an **az serial-console** command runs, or install it manually with **az extension add --name serial-console**. Serial console access requires boot diagnostics to be enabled on the VM and appropriate RBAC permissions. The **enable** and **disable** commands toggle the service for the entire subscription, not per VM.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [azure-cli](/man/azure-cli)(1), [az-vm](/man/az-vm)(1), [ssh](/man/ssh)(1)

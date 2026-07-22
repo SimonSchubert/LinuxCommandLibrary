@@ -106,6 +106,19 @@ Extensions may have version compatibility requirements with the Azure CLI. Updat
 
 The Azure CLI extension system was introduced with **Azure CLI 2.0** in **2017** to enable modular functionality without bloating the core installation. The extension index has grown to include hundreds of extensions covering preview services, experimental features, and partner integrations. **Dynamic install** was added to automatically suggest extensions when commands are not found.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [pip](/man/pip)(1), [az-config](/man/az-config)(1)

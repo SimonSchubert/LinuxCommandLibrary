@@ -76,6 +76,23 @@ When both -o and -x are used, each block is written to a separate file. If _outf
 
 Input files must be in Graphviz DOT format. The tool identifies articulation points (cutvertices) that separate components. Large graphs may require significant processing time.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [ccomps](/man/ccomps)(1), [gc](/man/gc)(1), [dot](/man/dot)(1), [gvpr](/man/gvpr)(1), [sccmap](/man/sccmap)(1), [tred](/man/tred)(1), [acyclic](/man/acyclic)(1)

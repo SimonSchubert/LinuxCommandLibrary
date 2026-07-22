@@ -96,6 +96,16 @@ These tools are for authorized security testing only. IPv6 attacks can disrupt n
 
 THC-IPv6 was created by **van Hauser** (Marc Heuse) of **The Hacker's Choice** (THC), a German hacker collective. The toolkit was developed to demonstrate IPv6 security weaknesses as organizations began IPv6 deployment. It highlights that IPv6 introduces new attack surfaces absent in IPv4 networks, particularly around neighbor discovery and router advertisement protocols.
 
+# INSTALL
+
+```dnf: sudo dnf install thc-ipv6```
+
+```pacman: sudo pacman -S thc-ipv6```
+
+```nix: nix profile install nixpkgs#thc-ipv6```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [ip](/man/ip)(8), [ping6](/man/ping6)(8), [traceroute6](/man/traceroute6)(8)

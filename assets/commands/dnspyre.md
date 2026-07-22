@@ -101,6 +101,12 @@ High QPS tests may overwhelm target servers. The --duration and --number options
 
 **dnspyre** was developed by **Tantalor93** as a modern fork of dnstrace, adding support for modern DNS protocols (DoT, DoH, DoQ) and improved concurrency control.
 
+# INSTALL
+
+```brew: brew install dnspyre```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [q](/man/q)(1)

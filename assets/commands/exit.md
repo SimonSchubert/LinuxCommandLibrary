@@ -41,6 +41,16 @@ Non-zero exits may trigger set -e termination. Status limited to 0-255. Subshell
 
 exit is a fundamental POSIX shell builtin, present since the original Bourne shell. Its semantics are consistent across all Unix shells.
 
+# INSTALL
+
+```apk: sudo apk add execline```
+
+```brew: brew install execline```
+
+```nix: nix profile install nixpkgs#execline```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [trap](/man/trap)(1)

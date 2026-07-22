@@ -107,6 +107,17 @@ Queries are charged based on data scanned; use partitioning and columnar formats
 
 **Amazon Athena** was launched in **November 2016** as a serverless query service based on Presto. It enables SQL queries on S3 data without provisioning infrastructure. Athena integrates with AWS Glue for schema discovery and supports ANSI SQL with extensions for nested data types common in analytics workloads.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-s3](/man/aws-s3)(1), [aws-glue](/man/aws-glue)(1)

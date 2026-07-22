@@ -59,6 +59,16 @@ Requires systemd-dissect to be installed and symlinked to /sbin/mount.ddi. Use u
 
 **mount.ddi** is part of **systemd** and provides integration between DDI disk images and the standard Unix mount infrastructure. It was developed to simplify mounting of OS images and portable service images.
 
+# INSTALL
+
+```apt: sudo apt install systemd-container```
+
+```dnf: sudo dnf install systemd-container```
+
+```zypper: sudo zypper install systemd-container```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-dissect](/man/systemd-dissect)(1), [mount](/man/mount)(8), [umount](/man/umount)(8)

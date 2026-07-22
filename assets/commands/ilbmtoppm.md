@@ -76,6 +76,24 @@ The program handles normal ILBMs with 1-16 planes, Amiga Extra_Halfbrite (EHB), 
 
 Some ILBM files use non-standard or unofficial extensions that may not be correctly auto-detected. Use the **-isham**, **-isehb**, or **-isdeep** flags to force the correct interpretation when auto-detection fails.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmtoilbm](/man/ppmtoilbm)(1), [netpbm](/man/netpbm)(1)

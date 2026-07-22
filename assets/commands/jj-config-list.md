@@ -62,6 +62,20 @@ displays all Jujutsu configuration values
 
 Available template fields: **name** (config name), **value** (TOML value), **overridden** (boolean), **source** (origin), **path** (config file path).
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-config-get](/man/jj-config-get)(1), [jj-config-set](/man/jj-config-set)(1), [jj-config-edit](/man/jj-config-edit)(1)

@@ -139,6 +139,17 @@ Some operations require sorted input. Large files consume significant memory. Co
 
 **bedtools** was created by Aaron Quinlan and Ira Hall, first released in **2010** as a comprehensive toolkit for genomic interval analysis.
 
+# INSTALL
+
+```apt: sudo apt install bedtools```
+
+```aur: yay -S bedtools```
+
+```brew: brew install bedtools```
+
+```nix: nix profile install nixpkgs#bedtools```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [samtools](/man/samtools)(1), [vcftools](/man/vcftools)(1), [bcftools](/man/bcftools)(1)

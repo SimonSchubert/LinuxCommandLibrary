@@ -32,6 +32,24 @@ Provided by **git-extras**, not a built-in git command. Install via your package
 
 **git-extras** is a long-running project by **TJ Holowaychuk** that bundles dozens of git subcommands for everyday workflows. `git abort` was added to consolidate the operation-specific `--abort` flags under one memorable command.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-rebase](/man/git-rebase)(1), [git-merge](/man/git-merge)(1), [git-cherry-pick](/man/git-cherry-pick)(1), [git-am](/man/git-am)(1), [git-extras](/man/git-extras)(1)

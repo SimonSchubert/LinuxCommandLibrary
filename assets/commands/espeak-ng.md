@@ -96,6 +96,24 @@ Still sounds robotic (formant synthesis). Some advanced SSML features unsupporte
 
 espeak-ng was forked from eSpeak by **Reece H. Dunn** to continue development after the original project became inactive. It's now the actively maintained version used in most Linux distributions.
 
+# INSTALL
+
+```apt: sudo apt install espeak-ng```
+
+```dnf: sudo dnf install espeak-ng```
+
+```pacman: sudo pacman -S espeak-ng```
+
+```apk: sudo apk add espeak-ng```
+
+```zypper: sudo zypper install espeak-ng```
+
+```brew: brew install espeak-ng```
+
+```nix: nix profile install nixpkgs#espeak-ng```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [espeak](/man/espeak)(1), [festival](/man/festival)(1), [mimic](/man/mimic)(1), [pico2wave](/man/pico2wave)(1)

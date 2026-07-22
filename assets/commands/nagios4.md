@@ -48,6 +48,12 @@ current stable IT infrastructure monitoring system
 
 **nagios4** (version 4) is the current stable IT infrastructure monitoring system. Monitors hosts, services, network devices, and applications. Provides alerting, reporting, and web interface.
 
+# INSTALL
+
+```apt: sudo apt install nagios4-core```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [icinga2](/man/icinga2)(1), [prometheus](/man/prometheus)(1)

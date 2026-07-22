@@ -130,6 +130,24 @@ iperf (version 2) and iperf3 are separate projects with incompatible protocols. 
 
 iperf was developed by NLANR/DAST as an open-source network testing tool. The original iperf (version 2) became widely used for network diagnostics. **iperf3** is a complete rewrite by ESnet with enhanced features but uses an incompatible protocol, requiring both endpoints to use the same version.
 
+# INSTALL
+
+```apt: sudo apt install iperf```
+
+```dnf: sudo dnf install iperf```
+
+```pacman: sudo pacman -S iperf```
+
+```apk: sudo apk add iperf```
+
+```zypper: sudo zypper install iperf```
+
+```brew: brew install iperf```
+
+```nix: nix profile install nixpkgs#iperf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iperf3](/man/iperf3)(1), [netcat](/man/netcat)(1), [speedtest-cli](/man/speedtest-cli)(1), [ping](/man/ping)(8)

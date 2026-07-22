@@ -100,6 +100,14 @@ Requires Go environment with GOPATH and GOBIN set for installation. The **save**
 
 bit was created by **Chris Walz** in **2020** as an experiment to modernize the git CLI experience. It aimed to reduce the complexity of common git operations while maintaining full git compatibility for power users.
 
+# INSTALL
+
+```brew: brew install bit```
+
+```nix: nix profile install nixpkgs#bit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [gh](/man/gh)(1), [tig](/man/tig)(1), [lazygit](/man/lazygit)(1)

@@ -57,6 +57,24 @@ Keys must be exported in ASCII-armored format (e.g. via **gpg --armor --export**
 
 Requires authentication via **gh auth login**. The acting user must have **admin:gpg_key** scope on their token. Keys uploaded to GitHub cannot be used to decrypt anything — GitHub only stores public keys for signature verification.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-ssh-key](/man/gh-ssh-key)(1), [gpg](/man/gpg)(1), [git-commit](/man/git-commit)(1)

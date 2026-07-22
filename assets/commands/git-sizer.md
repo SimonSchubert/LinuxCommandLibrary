@@ -59,6 +59,20 @@ Compute and report repository size metrics
 
 The tool reports metrics with concern levels shown as asterisks (*), helping maintainers understand whether their repository structure may cause issues with cloning, fetching, or general Git operations. It must be run from within a Git repository.
 
+# INSTALL
+
+```apt: sudo apt install git-sizer```
+
+```pacman: sudo pacman -S git-sizer```
+
+```apk: sudo apk add git-sizer```
+
+```brew: brew install git-sizer```
+
+```nix: nix profile install nixpkgs#git-sizer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-filter-repo](/man/git-filter-repo)(1), [git-gc](/man/git-gc)(1)

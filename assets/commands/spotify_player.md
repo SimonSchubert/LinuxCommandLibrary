@@ -30,6 +30,12 @@ Default invocation opens the TUI. Subcommands exist for non-interactive controlâ
 
 Spotify API and ToS constraints apply; features break when Spotify changes APIs. Streaming quality and device limits depend on account type.
 
+# INSTALL
+
+```brew: brew install spotify_player```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [spt](/man/spt)(1), [ncspot](/man/ncspot)(1), [playerctl](/man/playerctl)(1)

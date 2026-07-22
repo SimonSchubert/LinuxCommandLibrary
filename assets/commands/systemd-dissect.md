@@ -68,6 +68,16 @@ The tool supports various image formats including raw disk images with GPT parti
 
 Requires appropriate kernel support for filesystem types in the image. dm-verity images require the root hash to be provided. Part of the systemd suite.
 
+# INSTALL
+
+```apt: sudo apt install systemd-container```
+
+```dnf: sudo dnf install systemd-container```
+
+```zypper: sudo zypper install systemd-container```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-nspawn](/man/systemd-nspawn)(1), [losetup](/man/losetup)(8), [mount](/man/mount)(8)

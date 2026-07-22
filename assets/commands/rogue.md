@@ -129,6 +129,16 @@ The game is intentionally difficult and unforgiving. Most items are unidentified
 
 Rogue was created by **Michael Toy** and **Glenn Wichman** at UC Santa Cruz in **1980**, with later contributions from **Ken Arnold**. Originally written for Unix using the curses library, it popularized procedural generation and permadeath in games. The game spawned the entire "roguelike" genre, including NetHack, Angband, and modern games like Hades and Spelunky. The name comes from the Dungeons & Dragons character class, and the subtitle "Exploring the Dungeons of Doom" references early D&D modules.
 
+# INSTALL
+
+```dnf: sudo dnf install rogue```
+
+```brew: brew install rogue```
+
+```nix: nix profile install nixpkgs#rogue```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nethack](/man/nethack)(6), [angband](/man/angband)(6), [crawl](/man/crawl)(6), [moria](/man/moria)(6)

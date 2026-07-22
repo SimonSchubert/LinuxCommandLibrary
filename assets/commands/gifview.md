@@ -98,6 +98,24 @@ Requires X11 display. Part of gifsicle package. Limited to GIF format only.
 
 gifview is part of **gifsicle**, the GIF manipulation toolkit created by **Eddie Kohler**.
 
+# INSTALL
+
+```apt: sudo apt install gifsicle```
+
+```dnf: sudo dnf install gifsicle```
+
+```pacman: sudo pacman -S gifsicle```
+
+```apk: sudo apk add gifsicle```
+
+```zypper: sudo zypper install gifsicle```
+
+```brew: brew install gifsicle```
+
+```nix: nix profile install nixpkgs#gifsicle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gifsicle](/man/gifsicle)(1), [feh](/man/feh)(1), [display](/man/display)(1)

@@ -67,6 +67,24 @@ zmore cannot scroll backward through files; use **zless** for bi-directional scr
 
 zmore was created as part of the **gzip** package in the early 1990s to provide convenient viewing of compressed files. It wraps the traditional more pager with on-the-fly decompression.
 
+# INSTALL
+
+```apt: sudo apt install gzip```
+
+```dnf: sudo dnf install gzip```
+
+```pacman: sudo pacman -S gzip```
+
+```apk: sudo apk add gzip```
+
+```zypper: sudo zypper install gzip```
+
+```brew: brew install gzip```
+
+```nix: nix profile install nixpkgs#gzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zless](/man/zless)(1), [zcat](/man/zcat)(1), [more](/man/more)(1), [gzip](/man/gzip)(1)

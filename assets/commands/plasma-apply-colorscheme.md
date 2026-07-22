@@ -47,6 +47,18 @@ Requires a running Plasma desktop session. Color scheme names are case-sensitive
 
 **plasma-apply-colorscheme** is part of the **KDE Plasma** desktop environment, providing command-line access to appearance settings.
 
+# INSTALL
+
+```apt: sudo apt install plasma-workspace```
+
+```dnf: sudo dnf install plasma-workspace```
+
+```pacman: sudo pacman -S plasma-workspace```
+
+```apk: sudo apk add plasma-workspace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [plasma-apply-wallpaperimage](/man/plasma-apply-wallpaperimage)(1), [plasma-apply-cursortheme](/man/plasma-apply-cursortheme)(1)

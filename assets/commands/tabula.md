@@ -71,6 +71,12 @@ Requires Java Runtime Environment. Table detection accuracy varies by PDF layout
 
 **Tabula** was created by journalists at **ProPublica** and **The New York Times** for extracting data from PDF documents.
 
+# INSTALL
+
+```aur: yay -S tabula```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdftotext](/man/pdftotext)(1), [camelot](/man/camelot)(1), [pdf2json](/man/pdf2json)(1)

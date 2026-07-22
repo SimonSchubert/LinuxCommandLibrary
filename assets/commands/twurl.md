@@ -61,6 +61,12 @@ Twitter API changes. Developer account needed. Ruby required.
 
 **twurl** was created by **Twitter** as an OAuth-enabled curl alternative for the Twitter API.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#twurl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [httpie](/man/httpie)(1)

@@ -39,6 +39,24 @@ Input must be a grayscale PGM. Convert color images with **ppmtopgm** first. **p
 
 pgmedge is part of **Netpbm** by **Jef Poskanzer** and contributors, implementing classic image processing algorithms.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pamedge](/man/pamedge)(1), [pgmenhance](/man/pgmenhance)(1), [ppmtopgm](/man/ppmtopgm)(1), [netpbm](/man/netpbm)(1)

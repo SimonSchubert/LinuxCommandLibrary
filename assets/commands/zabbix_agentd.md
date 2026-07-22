@@ -78,6 +78,20 @@ Requires a Zabbix server or proxy to receive collected data. A configuration fil
 
 **zabbix_agentd** is the agent daemon for **Zabbix**, an enterprise monitoring solution.
 
+# INSTALL
+
+```apt: sudo apt install zabbix-agent```
+
+```dnf: sudo dnf install zabbix-agent```
+
+```pacman: sudo pacman -S zabbix-agent```
+
+```apk: sudo apk add zabbix-agent```
+
+```zypper: sudo zypper install zabbix-agent```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zabbix_server](/man/zabbix_server)(1), [zabbix_proxy](/man/zabbix_proxy)(1), [zabbix_get](/man/zabbix_get)(1)

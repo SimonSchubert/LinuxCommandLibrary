@@ -28,6 +28,24 @@ Convert Windows icons to PPM format
 
 **winicontoppm** converts Windows ICO files to PPM format. Does not preserve transparency; use winicontopam for alpha channel. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmtowinicon](/man/ppmtowinicon)(1), [winicontopam](/man/winicontopam)(1)

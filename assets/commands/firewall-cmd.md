@@ -138,6 +138,20 @@ Changes without --permanent are lost on reload or reboot. After permanent change
 
 **firewall-cmd** is the client for **firewalld**, Red Hat's dynamic firewall management daemon used in RHEL, CentOS, and Fedora.
 
+# INSTALL
+
+```dnf: sudo dnf install firewalld```
+
+```pacman: sudo pacman -S firewalld```
+
+```apk: sudo apk add firewalld```
+
+```zypper: sudo zypper install firewalld```
+
+```nix: nix profile install nixpkgs#firewalld```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [firewalld](/man/firewalld)(1), [iptables](/man/iptables)(8), [nft](/man/nft)(8)

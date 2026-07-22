@@ -68,6 +68,14 @@ Requires setup per clone. Password management. Git-specific.
 
 **transcrypt** was created for transparently encrypting files in a Git repository using OpenSSL.
 
+# INSTALL
+
+```brew: brew install transcrypt```
+
+```nix: nix profile install nixpkgs#transcrypt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-crypt](/man/git-crypt)(1), [age](/man/age)(1), [gpg](/man/gpg)(1)

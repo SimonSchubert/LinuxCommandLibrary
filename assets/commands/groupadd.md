@@ -70,6 +70,20 @@ Group names must be 32 characters maximum and cannot start with dash, plus, or t
 
 **groupadd** is part of the **shadow-utils** package for managing group accounts on Unix-like systems.
 
+# INSTALL
+
+```apt: sudo apt install passwd```
+
+```pacman: sudo pacman -S shadow```
+
+```apk: sudo apk add shadow```
+
+```zypper: sudo zypper install shadow```
+
+```nix: nix profile install nixpkgs#shadow```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groupdel](/man/groupdel)(8), [groupmod](/man/groupmod)(8), [gpasswd](/man/gpasswd)(1), [useradd](/man/useradd)(8)

@@ -114,6 +114,16 @@ The specification is still a **proposal** on the freedesktop.org **terminal-wg**
 
 **xdg-terminal-exec** was created by **Vladimir Kudrya** (Vladimir-csp) as a shell-based reference implementation accompanying a merge request against the freedesktop.org terminal-wg specifications repository. It is packaged by several distributions (Debian, Arch, Fedora) as a dependency of modern desktop launchers that need a generic way to spawn terminals.
 
+# INSTALL
+
+```dnf: sudo dnf install xdg-terminal-exec```
+
+```zypper: sudo zypper install xdg-terminal-exec```
+
+```nix: nix profile install nixpkgs#xdg-terminal-exec```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdg-open](/man/xdg-open)(1), [xdg-mime](/man/xdg-mime)(1), [xdg-settings](/man/xdg-settings)(1)

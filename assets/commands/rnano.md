@@ -57,6 +57,24 @@ Just links to nano -v. Limited compared to less/more. No search history.
 
 **rnano** is typically a symlink to **nano** that invokes it in read-only (view) mode, similar to how view relates to vim.
 
+# INSTALL
+
+```apt: sudo apt install nano```
+
+```dnf: sudo dnf install nano```
+
+```pacman: sudo pacman -S nano```
+
+```apk: sudo apk add nano```
+
+```zypper: sudo zypper install nano```
+
+```brew: brew install nano```
+
+```nix: nix profile install nixpkgs#nano```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nano](/man/nano)(1), [less](/man/less)(1), [view](/man/view)(1), [cat](/man/cat)(1)

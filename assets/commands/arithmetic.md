@@ -42,6 +42,17 @@ By default, problems use all four basic operations. The range option controls th
 
 **arithmetic** is one of the classic BSD games, originating in the Unix games collection and carried into **4.4BSD**. It ships in the **bsdgames** package on most Linux distributions as a simple educational utility.
 
+# INSTALL
+
+```dnf: sudo dnf install bsd-games```
+
+```pacman: sudo pacman -S bsd-games```
+
+```apk: sudo apk add bsd-games```
+
+```zypper: sudo zypper install bsd-games```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [bc](/man/bc)(1), [dc](/man/dc)(1)

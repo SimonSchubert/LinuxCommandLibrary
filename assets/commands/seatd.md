@@ -72,6 +72,22 @@ seatd requires appropriate permissions to access device nodes. The socket path m
 
 **seatd** was created by Kenny Levinsen as a minimal alternative to the seat management functionality provided by logind/elogind. It was designed specifically to support Wayland compositors, particularly wlroots-based ones like Sway, without requiring the full systemd or elogind stack. The project gained traction as more users sought lightweight alternatives for running Wayland on systems without systemd.
 
+# INSTALL
+
+```apt: sudo apt install seatd```
+
+```dnf: sudo dnf install seatd```
+
+```pacman: sudo pacman -S seatd```
+
+```apk: sudo apk add seatd```
+
+```zypper: sudo zypper install seatd```
+
+```nix: nix profile install nixpkgs#seatd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sway](/man/sway)(1)

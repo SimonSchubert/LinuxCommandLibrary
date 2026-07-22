@@ -81,6 +81,12 @@ For authorized security testing only. May trigger security controls. High worker
 
 hakrawler was created by **Luke Stephens** (hakluke) as part of a suite of security tools. It's designed for bug bounty hunters and penetration testers doing web reconnaissance.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#hakrawler```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [waybackurls](/man/waybackurls)(1), [gau](/man/gau)(1), [curl](/man/curl)(1)

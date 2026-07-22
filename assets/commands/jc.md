@@ -92,6 +92,22 @@ Parser accuracy varies. Not all command versions supported. May need updates for
 
 jc was created by **Kelly Brazil** to enable JSON-based automation from traditional Unix command output.
 
+# INSTALL
+
+```dnf: sudo dnf install jc```
+
+```pacman: sudo pacman -S jc```
+
+```apk: sudo apk add jc```
+
+```zypper: sudo zypper install jc```
+
+```brew: brew install jc```
+
+```nix: nix profile install nixpkgs#jc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [jo](/man/jo)(1), [gron](/man/gron)(1), [mlr](/man/mlr)(1)

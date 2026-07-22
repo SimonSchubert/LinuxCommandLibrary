@@ -99,6 +99,22 @@ Wayland-only; does not work on X11. Application icons require an icon theme inst
 
 fuzzel was created by Daniel Eklof (the same developer as foot terminal) and first released around **2020**. It was designed specifically for Wayland compositors as a lightweight alternative to rofi, which primarily targets X11.
 
+# INSTALL
+
+```apt: sudo apt install fuzzel```
+
+```dnf: sudo dnf install fuzzel```
+
+```pacman: sudo pacman -S fuzzel```
+
+```apk: sudo apk add fuzzel```
+
+```zypper: sudo zypper install fuzzel```
+
+```nix: nix profile install nixpkgs#fuzzel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rofi](/man/rofi)(1), [dmenu](/man/dmenu)(1), [wofi](/man/wofi)(1), [bemenu](/man/bemenu)(1)

@@ -65,6 +65,12 @@ Results vary by server. Network conditions affect measurements. ISP throttling p
 
 **speed-test** is an npm package for command-line speed testing. It uses the same methodology as speedtest.net.
 
+# INSTALL
+
+```aur: yay -S speed-test```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [speedtest-cli](/man/speedtest-cli)(1), [fast](/man/fast)(1), [iperf](/man/iperf)(1)

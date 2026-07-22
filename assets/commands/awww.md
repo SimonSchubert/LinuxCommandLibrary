@@ -117,6 +117,17 @@ Requires a compositor implementing the wlr-layer-shell protocol (typically wlroo
 
 **awww** is the renamed successor to **swww**, created by **LGFae**. The project was renamed from "A Solution to your Wayland Wallpaper Woes" to "An Answer to your Wayland Wallpaper Woes" and moved from GitHub to Codeberg in **October 2025**. It focuses on efficiency and smooth animations while maintaining low resource usage. Released under GPL-3.0.
 
+# INSTALL
+
+```pacman: sudo pacman -S awww```
+
+```apk: sudo apk add awww```
+
+```zypper: sudo zypper install awww```
+
+```nix: nix profile install nixpkgs#awww```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [swww](/man/swww)(1), [swaybg](/man/swaybg)(1), [hyprpaper](/man/hyprpaper)(1), [feh](/man/feh)(1)

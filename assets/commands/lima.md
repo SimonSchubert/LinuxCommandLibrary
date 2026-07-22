@@ -72,6 +72,16 @@ macOS focused. Requires QEMU. Uses significant resources for VMs.
 
 Lima was created by **Akihiro Suda** to provide lightweight Linux virtual machines on macOS with seamless integration.
 
+# INSTALL
+
+```zypper: sudo zypper install lima```
+
+```brew: brew install lima```
+
+```nix: nix profile install nixpkgs#lima```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [nerdctl](/man/nerdctl)(1), [colima](/man/colima)(1)

@@ -81,6 +81,24 @@ Shell wrapper around unzip/egrep. May be slow on large archives. Part of Info-ZI
 
 **zipgrep** is part of **Info-ZIP** utilities. It provides grep functionality for ZIP contents.
 
+# INSTALL
+
+```apt: sudo apt install unzip```
+
+```dnf: sudo dnf install unzip```
+
+```pacman: sudo pacman -S unzip```
+
+```apk: sudo apk add unzip```
+
+```zypper: sudo zypper install unzip```
+
+```brew: brew install unzip```
+
+```nix: nix profile install nixpkgs#unzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unzip](/man/unzip)(1), [grep](/man/grep)(1), [zgrep](/man/zgrep)(1)

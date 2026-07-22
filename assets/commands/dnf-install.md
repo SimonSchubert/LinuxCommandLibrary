@@ -52,6 +52,12 @@ _package_
 
 Requires root privileges. Package names must match repository names exactly. Installing from URLs requires network access.
 
+# INSTALL
+
+```pacman: sudo pacman -S dnf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dnf](/man/dnf)(8), [rpm](/man/rpm)(8)

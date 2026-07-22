@@ -99,6 +99,14 @@ Deprecated in favor of dig. Behavior varies by implementation. Interactive mode 
 
 **nslookup** was written by **Andrew Cherenson** at UC Berkeley as part of BIND. While still included in most systems, the BIND documentation recommends using dig for DNS queries due to more consistent behavior.
 
+# INSTALL
+
+```apt: sudo apt install bind9-dnsutils```
+
+```apk: sudo apk add bind-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dig](/man/dig)(1), [host](/man/host)(1), [drill](/man/drill)(1), [getent](/man/getent)(1)

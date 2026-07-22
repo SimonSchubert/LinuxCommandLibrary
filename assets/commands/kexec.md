@@ -61,6 +61,22 @@ Requires CONFIG_KEXEC in the kernel. Some hardware may not work correctly after 
 
 kexec was developed to enable fast reboots and kernel crash dumping. It was merged into the Linux kernel in version 2.6.13 (**2005**) and has become essential for kdump functionality.
 
+# INSTALL
+
+```apt: sudo apt install kexec-tools```
+
+```dnf: sudo dnf install kexec-tools```
+
+```pacman: sudo pacman -S kexec-tools```
+
+```apk: sudo apk add kexec-tools```
+
+```zypper: sudo zypper install kexec-tools```
+
+```nix: nix profile install nixpkgs#kexec-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [reboot](/man/reboot)(8)

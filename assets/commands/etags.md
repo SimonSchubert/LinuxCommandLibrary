@@ -73,6 +73,22 @@ Different from ctags (Vim tags). TAGS file can grow large. Needs regeneration af
 
 **etags** has been part of **GNU Emacs** since its early versions. It provides the Emacs counterpart to ctags. The tool has evolved to support many programming languages while maintaining compatibility with Emacs tag navigation.
 
+# INSTALL
+
+```dnf: sudo dnf install emacs```
+
+```pacman: sudo pacman -S emacs```
+
+```apk: sudo apk add emacs```
+
+```zypper: sudo zypper install emacs```
+
+```brew: brew install emacs```
+
+```nix: nix profile install nixpkgs#emacs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ctags](/man/ctags)(1), [emacs](/man/emacs)(1), [cscope](/man/cscope)(1)

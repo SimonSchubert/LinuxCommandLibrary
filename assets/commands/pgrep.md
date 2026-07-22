@@ -110,6 +110,24 @@ Matches are substring by default - "sh" matches bash, fish, zsh. Use -x for exac
 
 **pgrep** was introduced in **Solaris 7** (1998) and ported to Linux as part of **procps**. It provides a cleaner interface than the traditional `ps aux | grep pattern` approach, avoiding the common "grep matching itself" problem. The tool is part of the procps-ng package on most Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install procps```
+
+```dnf: sudo dnf install procps-ng```
+
+```pacman: sudo pacman -S procps-ng```
+
+```apk: sudo apk add procps-ng```
+
+```zypper: sudo zypper install procps```
+
+```brew: brew install procps```
+
+```nix: nix profile install nixpkgs#procps```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pkill](/man/pkill)(1), [ps](/man/ps)(1), [pidof](/man/pidof)(1), [kill](/man/kill)(1)

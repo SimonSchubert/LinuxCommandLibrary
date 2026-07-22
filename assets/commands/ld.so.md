@@ -56,6 +56,12 @@ Not directly invoked usually. Security implications of LD_PRELOAD. Ignored for s
 
 ld.so is part of the **glibc** package, implementing dynamic linking for Linux executables.
 
+# INSTALL
+
+```apt: sudo apt install libc-bin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ldd](/man/ldd)(1), [ldconfig](/man/ldconfig)(8), [ld](/man/ld)(1)

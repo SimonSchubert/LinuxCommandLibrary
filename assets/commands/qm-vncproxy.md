@@ -26,6 +26,12 @@ Typically used internally by the Proxmox web interface. Direct use requires unde
 
 Part of **Proxmox VE** QEMU/KVM management tools. Provides the backend for web-based VNC console access.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-terminal](/man/qm-terminal)(1)

@@ -52,6 +52,24 @@ list Docker images stored locally
 
 **docker images** lists images stored on the local system. Shorthand for docker image ls. Shows repository, tag, image ID, creation time, and size. Images are the templates from which containers are created, containing the filesystem and configuration needed to run an application.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-image-ls](/man/docker-image-ls)(1), [docker-rmi](/man/docker-rmi)(1), [docker-pull](/man/docker-pull)(1)

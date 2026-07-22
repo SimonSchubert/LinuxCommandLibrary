@@ -72,6 +72,16 @@ C library, not a command. Requires understanding of C and GLib conventions. Memo
 
 GLib was originally part of **GTK+**, extracted as a separate library in **1998** to enable non-GUI programs to use its utilities. It's maintained by the GNOME project and used throughout the Linux desktop ecosystem.
 
+# INSTALL
+
+```dnf: sudo dnf install glib```
+
+```brew: brew install glib```
+
+```nix: nix profile install nixpkgs#glib```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pkg-config](/man/pkg-config)(1), [gdbus](/man/gdbus)(1), [gsettings](/man/gsettings)(1)

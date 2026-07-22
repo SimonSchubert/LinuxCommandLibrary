@@ -53,6 +53,18 @@ Presentation application from Calligra suite
 
 The application uses ODF (Open Document Format) and is comparable to Microsoft PowerPoint or LibreOffice Impress.
 
+# INSTALL
+
+```apt: sudo apt install calligrastage```
+
+```dnf: sudo dnf install calligra```
+
+```pacman: sudo pacman -S calligra```
+
+```apk: sudo apk add calligra```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [calligrawords](/man/calligrawords)(1), [calligrasheets](/man/calligrasheets)(1), [calligraflow](/man/calligraflow)(1), [libreoffice](/man/libreoffice)(1)

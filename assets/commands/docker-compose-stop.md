@@ -35,6 +35,24 @@ Use a specific **compose file**
 
 Unlike **docker compose down**, this command does not remove containers, networks, or volumes. It is useful when you want a temporary stop while preserving the ability to resume the same containers quickly.
 
+# INSTALL
+
+```apt: sudo apt install docker-compose```
+
+```dnf: sudo dnf install docker-compose```
+
+```pacman: sudo pacman -S docker-compose```
+
+```apk: sudo apk add docker-cli-compose```
+
+```zypper: sudo zypper install docker-compose```
+
+```brew: brew install docker-compose```
+
+```nix: nix profile install nixpkgs#docker-compose```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker-compose](/man/docker-compose)(1), [docker-compose-up](/man/docker-compose-up)(1), [docker-compose-down](/man/docker-compose-down)(1)

@@ -66,6 +66,18 @@ Export Poetry dependencies to other formats
 
 Requires the **poetry-plugin-export** plugin to be installed. The `--dev` flag is deprecated in favor of `--with dev`.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [poetry-lock](/man/poetry-lock)(1), [poetry-install](/man/poetry-install)(1), [pip](/man/pip)(1)

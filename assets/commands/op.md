@@ -1,75 +1,128 @@
 # TAGLINE
 
-1Password CLI
+1Password CLI (command-line password manager and secrets)
 
 # TLDR
 
-**Sign in**
+**Sign in** to a 1Password account
 
 ```op signin```
 
-**List vaults**
+**List all items** in a vault
 
-```op vault list```
+```op item list --vault [vault_name]```
 
-**Get item**
+**Get details** of a specific item
 
 ```op item get "[item_name]"```
 
-**Get password**
+**Get specific fields** from an item
 
-```op item get "[item_name]" --field password```
+```op item get "[item_name]" --fields label=username,label=password```
 
-**Create item**
+**Read a secret** using a secret reference
 
-```op item create --category login --title "[name]"```
+```op read "op://[vault]/[item]/[field]"```
 
-**List items**
+**Run a command** with secrets injected as environment variables
 
-```op item list```
+```op run --env-file [.env] -- [command]```
+
+**Create a new item** in a vault
+
+```op item create --category login --title "[title]" --vault [vault_name]```
+
+**List all vaults** in the account
+
+```op vault list```
 
 # SYNOPSIS
 
-**op** [_command_] [_options_]
+**op** [_command_] [_subcommand_] [_flags_]
 
 # PARAMETERS
 
+**account**
+> Manage locally configured 1Password accounts
+
+**item**
+> Perform CRUD operations on vault items (get, list, create, edit, delete)
+
+**vault**
+> Manage vaults and their permissions
+
+**document**
+> Manage document-type items (get, list, create, edit, delete)
+
+**read**
+> Resolve and retrieve secret references
+
+**run**
+> Pass secrets as environment variables to a subprocess
+
+**inject**
+> Insert secrets into configuration files or templates
+
 **signin**
-> Authenticate to 1Password.
+> Authenticate to a 1Password account
 
-**vault list**
-> List vaults.
+**signout**
+> End the current session
 
-**item get** _NAME_
-> Get item details.
+**whoami**
+> Display information about the signed-in account
 
-**item list**
-> List items.
+**completion**
+> Generate shell completion scripts
 
-**item create**
-> Create new item.
+**--format** _json_
+> Output results in JSON format for parsing with tools like jq
 
-**--field** _FIELD_
-> Get specific field.
+**--fields** _label=field_
+> Specify particular fields to retrieve from an item
 
-**--help**
-> Display help information.
+**--vault** _name_
+> Target a specific vault for the operation
+
+**--cache=false**
+> Disable daemon caching (useful in restricted environments)
 
 # DESCRIPTION
 
-**op** is the 1Password CLI. Manages passwords and secrets from terminal.
+**op** is the official command-line interface for 1Password (packaged as **1password-cli**). It enables secure access to passwords, credentials, and sensitive data directly from the terminal.
 
-The tool provides secure credential access. Integrates with shells and scripts.
+The CLI follows a noun-verb command structure where the first argument is typically a resource type (item, vault, user) followed by an action (get, list, create). It supports both interactive and scripted workflows, making it suitable for development automation and CI/CD pipelines.
+
+Key capabilities include retrieving credentials using secret references in the format **op://vault/item/field**, injecting secrets into environment variables for running processes, and managing vault contents programmatically. The tool uses daemon-based caching on Unix systems to improve performance and reduce API calls.
+
+Items can be referenced by name or by their 26-character alphanumeric ID, with IDs being more stable and efficient for automation. Output can be formatted as JSON for integration with tools like **jq**.
 
 # CAVEATS
 
-Requires 1Password account. Biometric auth supported. Session tokens expire.
+Requires a 1Password account and must be authenticated before most operations. The daemon caching feature stores encrypted data in memory, which may not be suitable for all security environments—use **--cache=false** to disable. Service accounts have different authentication flows than personal accounts. This page documents the **CLI** only (binary **op** / package **1password-cli**), not the 1Password desktop GUI.
 
 # HISTORY
 
-op was created by **1Password** for command-line access to password vaults.
+1Password was founded by **AgileBits** in **2006** as a password manager for macOS. The command-line interface was first released in **2017** to support developer workflows and automation. Version 2 of the CLI, released in **2022**, introduced the current noun-verb command structure, secret references, and improved service account support for CI/CD integration.
+
+# INSTALL
+
+```aur: yay -S 1password-cli```
+
+```nix: nix profile install nixpkgs#_1password-cli```
+
+```brew: brew install --cask 1password-cli```
+
+<!-- packages: 2026-07-22 -->
 
 # SEE ALSO
 
-[pass](/man/pass)(1), [gopass](/man/gopass)(1), [bitwarden-cli](/man/bitwarden-cli)(1)
+[pass](/man/pass)(1), [gopass](/man/gopass)(1), [bitwarden-cli](/man/bitwarden-cli)(1), [bw](/man/bw)(1), [vault](/man/vault)(1), [gpg](/man/gpg)(1)
 
+# RESOURCES
+
+```[Homepage](https://1password.com/)```
+
+```[Documentation](https://developer.1password.com/docs/cli/)```
+
+<!-- verified: 2026-07-22 -->

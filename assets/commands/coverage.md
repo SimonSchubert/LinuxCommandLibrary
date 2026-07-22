@@ -122,6 +122,12 @@ Coverage measurement adds runtime overhead. Dynamic code generation and exec() m
 
 Coverage.py was created by **Ned Batchelder** and first released in **2004**. It has become the standard code coverage tool for Python, integrated with test runners like pytest and unittest. The tool is widely used in CI/CD pipelines and is supported by coverage reporting services like Codecov and Coveralls.
 
+# INSTALL
+
+```apk: sudo apk add py3-coverage```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pytest](/man/pytest)(1), [python](/man/python)(1), [tox](/man/tox)(1), [codecov](/man/codecov)(1)

@@ -90,6 +90,12 @@ Requires access to network interface statistics in /proc or /sys. Interface name
 
 **speedometer** was created as a Python script for visualizing network bandwidth. The tool provides a lightweight alternative to graphical network monitors, suitable for remote SSH sessions and headless servers. It has been available in Linux distribution repositories since the mid-**2000s**.
 
+# INSTALL
+
+```aur: yay -S speedometer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iftop](/man/iftop)(8), [nethogs](/man/nethogs)(8), [bmon](/man/bmon)(1), [vnstat](/man/vnstat)(1)

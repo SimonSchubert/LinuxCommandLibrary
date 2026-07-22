@@ -59,6 +59,24 @@ Merge a GitLab merge request
 
 **glab mr merge** merges a GitLab merge request. It supports squash merging, rebasing, automatic source branch deletion, and deferred merging that waits for the CI pipeline to pass before completing.
 
+# INSTALL
+
+```apt: sudo apt install glab```
+
+```dnf: sudo dnf install glab```
+
+```pacman: sudo pacman -S glab```
+
+```apk: sudo apk add glab```
+
+```zypper: sudo zypper install glab```
+
+```brew: brew install glab```
+
+```nix: nix profile install nixpkgs#glab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [glab-mr](/man/glab-mr)(1), [glab-mr-create](/man/glab-mr-create)(1)

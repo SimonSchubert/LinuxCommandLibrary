@@ -67,6 +67,18 @@ Requires a terminal that supports the iTerm2 inline images protocol or the Kitty
 
 **serie** was created by **Kyosuke Fujimoto** (lusingander) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S serie```
+
+```apk: sudo apk add serie```
+
+```brew: brew install serie```
+
+```nix: nix profile install nixpkgs#serie```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tig](/man/tig)(1), [lazygit](/man/lazygit)(1), [gitui](/man/gitui)(1)

@@ -71,6 +71,18 @@ Standard ISO9660 has a 4GiB file size limit. Use **-udf** or **-allow-limited-si
 
 genisoimage is a fork of mkisofs created in **2006** due to licensing concerns with the original cdrtools package. It's maintained as part of the cdrkit project and is the default ISO creation tool on Debian-based systems.
 
+# INSTALL
+
+```apt: sudo apt install genisoimage```
+
+```dnf: sudo dnf install genisoimage```
+
+```apk: sudo apk add cdrkit```
+
+```nix: nix profile install nixpkgs#cdrkit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mkisofs](/man/mkisofs)(1), [wodim](/man/wodim)(1), [mount](/man/mount)(8)

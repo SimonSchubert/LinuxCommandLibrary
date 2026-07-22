@@ -73,6 +73,12 @@ Does not persist across system reboots. Process tracking relies on PID files sto
 
 **hapless** was created by **Misha Behersky** (bmwant) and is written in **Python**. It was designed to be a simpler alternative to tools like **screen**, **tmux**, or **nohup** for basic background process management, with the goal of requiring zero configuration.
 
+# INSTALL
+
+```brew: brew install hapless```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nohup](/man/nohup)(1), [screen](/man/screen)(1), [tmux](/man/tmux)(1), [bg](/man/bg)(1)

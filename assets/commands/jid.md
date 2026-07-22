@@ -118,6 +118,18 @@ Reads entire JSON into memory, so very large files may be slow. Query syntax is 
 
 jid was created by **simeji** and first released around **2016**. Written in Go, it was designed to make JSON exploration interactive rather than requiring query construction upfront. The project provides a bridge between exploring unknown JSON structures and building jq queries for automation.
 
+# INSTALL
+
+```apt: sudo apt install jid```
+
+```dnf: sudo dnf install jid```
+
+```brew: brew install jid```
+
+```nix: nix profile install nixpkgs#jid```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [gojq](/man/gojq)(1), [jless](/man/jless)(1), [fx](/man/fx)(1)

@@ -59,6 +59,22 @@ Terminal-based. Vim keybindings. Configuration via lfrc.
 
 lf was created as a **ranger**-inspired file manager written in Go for better performance and simplicity.
 
+# INSTALL
+
+```apt: sudo apt install lf```
+
+```pacman: sudo pacman -S lf```
+
+```apk: sudo apk add lf```
+
+```zypper: sudo zypper install lf```
+
+```brew: brew install lf```
+
+```nix: nix profile install nixpkgs#lf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ranger](/man/ranger)(1), [nnn](/man/nnn)(1), [mc](/man/mc)(1)

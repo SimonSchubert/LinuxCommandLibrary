@@ -57,6 +57,24 @@ Vulkan drivers needed. GPU required. Display required.
 
 **vkcube** is part of the **Vulkan SDK**, providing a simple test application for Vulkan functionality.
 
+# INSTALL
+
+```apt: sudo apt install vulkan-tools```
+
+```dnf: sudo dnf install vulkan-tools```
+
+```pacman: sudo pacman -S vulkan-tools```
+
+```apk: sudo apk add vulkan-tools```
+
+```zypper: sudo zypper install vulkan-tools```
+
+```brew: brew install vulkan-tools```
+
+```nix: nix profile install nixpkgs#vulkan-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vulkaninfo](/man/vulkaninfo)(1), [glxgears](/man/glxgears)(1), [vkcubepp](/man/vkcubepp)(1)

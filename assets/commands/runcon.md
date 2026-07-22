@@ -61,6 +61,22 @@ Requires SELinux to be enabled. Transitions must be allowed by SELinux policy. N
 
 Part of **GNU Coreutils**, providing SELinux context manipulation for command execution.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [secon](/man/secon)(1), [run_init](/man/run_init)(8), [chcon](/man/chcon)(1)

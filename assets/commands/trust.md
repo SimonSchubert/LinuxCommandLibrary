@@ -72,6 +72,24 @@ May require root privileges to modify the system trust store if no user-specific
 
 Part of **p11-kit**, developed as part of the FreeDesktop.org project to provide a standard way to manage trust anchors across Linux distributions. Replaces distribution-specific methods like update-ca-certificates.
 
+# INSTALL
+
+```apt: sudo apt install p11-kit```
+
+```dnf: sudo dnf install p11-kit```
+
+```pacman: sudo pacman -S p11-kit```
+
+```apk: sudo apk add p11-kit-trust```
+
+```zypper: sudo zypper install p11-kit```
+
+```brew: brew install p11-kit```
+
+```nix: nix profile install nixpkgs#p11-kit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [update-ca-trust](/man/update-ca-trust)(8), [update-ca-certificates](/man/update-ca-certificates)(8), [openssl](/man/openssl)(1), [p11-kit](/man/p11-kit)(8)

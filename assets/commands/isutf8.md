@@ -39,6 +39,24 @@ checks whether files contain valid UTF-8 encoded text
 
 **isutf8** checks whether files contain valid UTF-8 encoded text. Part of the moreutils package. Returns exit code 0 if valid UTF-8, 1 if invalid. Useful in scripts to validate file encoding before processing.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add moreutils```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [file](/man/file)(1), [iconv](/man/iconv)(1)

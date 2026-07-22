@@ -139,6 +139,12 @@ The **spring run** command was removed in Spring Boot 3.0; use Maven/Gradle plug
 
 Spring Boot was created by **Pivotal** (now VMware) team led by **Phil Webb** and released in **2014**. It simplified Spring Framework development with convention over configuration. Spring Boot 2.0 (2018) updated to Spring Framework 5. Version 3.0 (2022) required Java 17, removed the CLI **run** command, and added native compilation support. Spring Boot is the most widely used Java application framework.
 
+# INSTALL
+
+```pacman: sudo pacman -S spring```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mvn](/man/mvn)(1), [gradle](/man/gradle)(1), [quarkus](/man/quarkus)(1)

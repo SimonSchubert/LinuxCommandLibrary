@@ -83,6 +83,14 @@ Screen capture requires X11 on Linux. Key bindings are only active during captur
 
 **menyoki** was created by **Orhun Parmaksız** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S menyoki```
+
+```nix: nix profile install nixpkgs#menyoki```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [scrot](/man/scrot)(1), [import](/man/import)(1), [ffmpeg](/man/ffmpeg)(1)

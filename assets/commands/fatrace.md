@@ -68,6 +68,18 @@ Useful for debugging, security monitoring, and understanding application file ac
 
 Requires root privileges. Uses fanotify which requires Linux 2.6.37+. May impact system performance on busy systems.
 
+# INSTALL
+
+```apt: sudo apt install fatrace```
+
+```dnf: sudo dnf install fatrace```
+
+```zypper: sudo zypper install fatrace```
+
+```nix: nix profile install nixpkgs#fatrace```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [inotifywait](/man/inotifywait)(1), [lsof](/man/lsof)(8), [strace](/man/strace)(1)

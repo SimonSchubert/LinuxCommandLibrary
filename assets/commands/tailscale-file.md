@@ -37,6 +37,22 @@ Transfer files between Tailscale devices
 
 The **cp** subcommand sends files to a target device, specified by its Tailscale hostname followed by a colon. The **get** subcommand receives pending files into a local directory. By default, the receiver waits for incoming transfers; the **--wait=false** flag lists pending files without blocking. Transfers work across platforms including Linux, macOS, Windows, iOS, and Android.
 
+# INSTALL
+
+```dnf: sudo dnf install tailscale```
+
+```pacman: sudo pacman -S tailscale```
+
+```apk: sudo apk add tailscale```
+
+```zypper: sudo zypper install tailscale```
+
+```brew: brew install tailscale```
+
+```nix: nix profile install nixpkgs#tailscale```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tailscale](/man/tailscale)(1)

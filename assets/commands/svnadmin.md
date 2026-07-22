@@ -132,6 +132,24 @@ Operates only on local repositories, not URLs. Dump files can be very large for 
 
 **svnadmin** has been part of Subversion since its initial release in 2000. Subversion was created by CollabNet as a replacement for CVS. The tool evolved alongside repository format changes, adding support for FSFS (Subversion 1.1), repository packing (1.6), and various performance improvements.
 
+# INSTALL
+
+```apt: sudo apt install subversion```
+
+```dnf: sudo dnf install subversion```
+
+```pacman: sudo pacman -S subversion```
+
+```apk: sudo apk add subversion```
+
+```zypper: sudo zypper install subversion```
+
+```brew: brew install subversion```
+
+```nix: nix profile install nixpkgs#subversion```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [svn](/man/svn)(1), [svnserve](/man/svnserve)(8), [git](/man/git)(1)

@@ -47,6 +47,22 @@ The eyes track the mouse pointer position across the entire screen.
 
 X11 only. Limited practical use beyond testing display connections.
 
+# INSTALL
+
+```apt: sudo apt install x11-apps```
+
+```dnf: sudo dnf install xeyes```
+
+```apk: sudo apk add xeyes```
+
+```zypper: sudo zypper install xeyes```
+
+```brew: brew install xeyes```
+
+```nix: nix profile install nixpkgs#xeyes```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xclock](/man/xclock)(1), [xlogo](/man/xlogo)(1)

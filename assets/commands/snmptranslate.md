@@ -87,6 +87,14 @@ Translation accuracy depends on having the correct MIBs installed and loaded. Ve
 
 **snmptranslate** is part of the **Net-SNMP** project, an open-source suite of SNMP tools and libraries. It provides a way to work with OIDs without network communication, making it useful for MIB exploration, documentation, and scripting. The tool has been part of Net-SNMP since its early versions.
 
+# INSTALL
+
+```apt: sudo apt install snmp```
+
+```apk: sudo apk add net-snmp-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snmpget](/man/snmpget)(1), [snmpset](/man/snmpset)(1), [snmpwalk](/man/snmpwalk)(1)

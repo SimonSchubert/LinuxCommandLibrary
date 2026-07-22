@@ -77,6 +77,12 @@ Specific to Alpine Linux diskless installations. Changes in RAM are lost on rebo
 
 lbu is part of Alpine Linux's approach to running diskless systems, allowing customizations to be preserved across reboots while keeping the base system read-only.
 
+# INSTALL
+
+```apk: sudo apk add alpine-conf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apk](/man/apk)(1), [setup-alpine](/man/setup-alpine)(8)

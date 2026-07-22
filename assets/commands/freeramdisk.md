@@ -20,6 +20,12 @@ Before running freeramdisk, the RAM disk must be unmounted with umount. Once fre
 
 RAM disks are typically created with size limitations defined when the ramdisk kernel module loads. The freeramdisk utility is part of the util-linux package and works with the legacy ramdisk driver, though tmpfs and ramfs are more commonly used in modern systems.
 
+# INSTALL
+
+```apt: sudo apt install loadlin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mount](/man/mount)(8), [umount](/man/umount)(8)

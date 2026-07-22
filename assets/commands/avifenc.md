@@ -60,6 +60,13 @@ Encoding at low speed values can be extremely slow. AVIF support in browsers and
 
 AVIF was developed by the Alliance for Open Media and finalized in **2019**. It is based on the AV1 video codec, which itself was designed to be a royalty-free alternative to HEVC/H.265.
 
+# INSTALL
+
+```apt: sudo apt install libavif-bin```
+
+```apk: sudo apk add libavif-apps```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [avifdec](/man/avifdec)(1), [cwebp](/man/cwebp)(1), [convert](/man/convert)(1)

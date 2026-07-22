@@ -71,6 +71,18 @@ Part of the LLVM/Clang toolchain, it is useful for quick validation and AST expl
 
 Requires Clang to be installed. For project-wide analysis with correct include paths, use a compilation database (compile_commands.json).
 
+# INSTALL
+
+```apt: sudo apt install clang-tools```
+
+```apk: sudo apk add clang22-extra-tools```
+
+```zypper: sudo zypper install clang-tools```
+
+```nix: nix profile install nixpkgs#clang-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [clang](/man/clang)(1), [clang-tidy](/man/clang-tidy)(1), [clang-format](/man/clang-format)(1)

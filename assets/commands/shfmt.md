@@ -106,6 +106,22 @@ May change script behavior in edge cases. Some heredoc formatting can be tricky.
 
 **shfmt** was created by **Daniel Martí** (mvdan) around **2016**. Written in Go, it was inspired by gofmt's approach to code formatting. The project fills a gap - while other languages have standard formatters, shell scripts traditionally lacked one. It's widely adopted in CI pipelines and editor integrations.
 
+# INSTALL
+
+```apt: sudo apt install shfmt```
+
+```pacman: sudo pacman -S shfmt```
+
+```apk: sudo apk add shfmt```
+
+```zypper: sudo zypper install shfmt```
+
+```brew: brew install shfmt```
+
+```nix: nix profile install nixpkgs#shfmt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [shellcheck](/man/shellcheck)(1), [bash](/man/bash)(1), [sh](/man/sh)(1), [prettier](/man/prettier)(1)

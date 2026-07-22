@@ -47,6 +47,20 @@ Requires Rust 1.65+ to build from source. Initial configuration of mail accounts
 
 **meli** is written in **Rust** and supports BSD, Linux, and macOS.
 
+# INSTALL
+
+```apt: sudo apt install meli```
+
+```apk: sudo apk add meli```
+
+```zypper: sudo zypper install meli```
+
+```brew: brew install meli```
+
+```nix: nix profile install nixpkgs#meli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mutt](/man/mutt)(1), [neomutt](/man/neomutt)(1), [himalaya](/man/himalaya)(1)

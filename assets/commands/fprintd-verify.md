@@ -46,6 +46,22 @@ This is useful for testing fingerprint enrollment quality and troubleshooting au
 
 Verification success depends on scan quality and may require multiple attempts. Environmental factors like moisture or dirt on the sensor can affect results. This command is for testing purposes; actual login authentication uses the PAM module **pam_fprintd**. The fprintd daemon must be running for this command to work.
 
+# INSTALL
+
+```apt: sudo apt install fprintd```
+
+```dnf: sudo dnf install fprintd```
+
+```pacman: sudo pacman -S fprintd```
+
+```apk: sudo apk add fprintd```
+
+```zypper: sudo zypper install fprintd```
+
+```nix: nix profile install nixpkgs#fprintd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fprintd](/man/fprintd)(1), [fprintd-enroll](/man/fprintd-enroll)(1), [fprintd-delete](/man/fprintd-delete)(1), [fprintd-list](/man/fprintd-list)(1)

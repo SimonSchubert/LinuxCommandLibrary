@@ -77,6 +77,24 @@ Requires repository write access for most operations. PR creation needs branch p
 
 gh pr is a core command in the **GitHub CLI**, providing the pull request workflows that are central to GitHub's collaboration model.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-pr-merge](/man/gh-pr-merge)(1), [gh-pr-checks](/man/gh-pr-checks)(1)

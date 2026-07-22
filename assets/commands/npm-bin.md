@@ -68,6 +68,16 @@ Local bin changes per project. Global path varies by installation method. npx is
 
 npm bin has been part of npm since early versions, helping developers locate and use locally installed executables.
 
+# INSTALL
+
+```pacman: sudo pacman -S npm```
+
+```apk: sudo apk add npm```
+
+```brew: brew install npm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [npm](/man/npm)(1), [npx](/man/npx)(1), [npm-exec](/man/npm-exec)(1), [npm-prefix](/man/npm-prefix)(1)

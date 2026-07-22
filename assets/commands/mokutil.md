@@ -107,6 +107,22 @@ Operations that modify the MOK database (import, delete, enable/disable validati
 
 **mokutil** is part of the **shim** project, developed to enable Secure Boot on Linux systems. Shim is a first-stage bootloader signed by Microsoft, allowing Linux distributions to boot on UEFI systems with Secure Boot enabled by using MOKs to authorize distribution-specific signing keys.
 
+# INSTALL
+
+```apt: sudo apt install mokutil```
+
+```dnf: sudo dnf install mokutil```
+
+```pacman: sudo pacman -S mokutil```
+
+```apk: sudo apk add mokutil```
+
+```zypper: sudo zypper install mokutil```
+
+```nix: nix profile install nixpkgs#mokutil```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [efibootmgr](/man/efibootmgr)(8)

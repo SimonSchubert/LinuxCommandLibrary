@@ -86,6 +86,20 @@ DSL syntax differs from awk. Field names are case-sensitive. Large files process
 
 Miller was created by **John Kerl** starting in **2015** to provide a unified tool for structured text processing.
 
+# INSTALL
+
+```dnf: sudo dnf install miller```
+
+```pacman: sudo pacman -S miller```
+
+```zypper: sudo zypper install miller```
+
+```brew: brew install miller```
+
+```nix: nix profile install nixpkgs#miller```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [awk](/man/awk)(1), [csvkit](/man/csvkit)(1), [xsv](/man/xsv)(1)

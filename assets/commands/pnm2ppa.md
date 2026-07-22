@@ -70,6 +70,16 @@ Only works with specific HP DeskJet PPA printers. Considered legacy; most modern
 
 pnm2ppa was created for **HP PPA printers** lacking standard driver support.
 
+# INSTALL
+
+```apt: sudo apt install printer-driver-pnm2ppa```
+
+```dnf: sudo dnf install pnm2ppa```
+
+```zypper: sudo zypper install pnm2ppa```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pnm](/man/pnm)(5), [pbmtoppa](/man/pbmtoppa)(1), [gs](/man/gs)(1), [lpr](/man/lpr)(1), [lpstat](/man/lpstat)(1)

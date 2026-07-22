@@ -74,6 +74,12 @@ You maintain a character profile (values, strengths, purpose), quests with a sin
 
 Set **EARTH_GAME_DB** to point at another SQLite file. On Arch Linux the package may be installed from the AUR as **earth-game**.
 
+# INSTALL
+
+```aur: yay -S earth-game```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [taskwarrior](/man/task)(1)

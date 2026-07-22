@@ -69,6 +69,22 @@ _value_
 
 Quoting is tricky: shell quotes wrap GVariant format. Strings need both shell quotes and GVariant quotes. Invalid values are silently ignored. For validated writes, use gsettings.
 
+# INSTALL
+
+```apt: sudo apt install dconf-cli```
+
+```dnf: sudo dnf install dconf```
+
+```pacman: sudo pacman -S dconf```
+
+```apk: sudo apk add dconf```
+
+```zypper: sudo zypper install dconf```
+
+```nix: nix profile install nixpkgs#dconf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dconf](/man/dconf)(1), [dconf-read](/man/dconf-read)(1), [gsettings](/man/gsettings)(1)

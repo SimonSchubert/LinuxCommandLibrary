@@ -44,6 +44,24 @@ Factor 1.0 is no change, 0.0 is black. Only works with PPM format images. Part o
 
 ppmdim was created as part of **Netpbm** for image dimming.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmflash](/man/ppmflash)(1), [pamfunc](/man/pamfunc)(1), [ppmbrighten](/man/ppmbrighten)(1), [ppm](/man/ppm)(5)

@@ -82,6 +82,22 @@ No JavaScript support limits modern website compatibility. CSS support is incomp
 
 Dillo was started by **Jorge Arellano Cid** in **1999**. Development focused on creating a minimalist browser that could run on low-resource systems. After periods of dormancy, the project continues with community maintenance.
 
+# INSTALL
+
+```apt: sudo apt install dillo```
+
+```dnf: sudo dnf install dillo```
+
+```pacman: sudo pacman -S dillo```
+
+```apk: sudo apk add dillo```
+
+```brew: brew install dillo```
+
+```nix: nix profile install nixpkgs#dillo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [firefox](/man/firefox)(1), [links](/man/links)(1), [lynx](/man/lynx)(1), [surf](/man/surf)(1)

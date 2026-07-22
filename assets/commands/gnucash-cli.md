@@ -81,6 +81,22 @@ command-line interface for GnuCash reports and quotes
 
 Quotes functionality requires Finance::Quote to be properly configured. Database URIs are supported for MySQL and PostgreSQL backends.
 
+# INSTALL
+
+```apt: sudo apt install gnucash```
+
+```dnf: sudo dnf install gnucash```
+
+```pacman: sudo pacman -S gnucash```
+
+```apk: sudo apk add gnucash```
+
+```zypper: sudo zypper install gnucash```
+
+```nix: nix profile install nixpkgs#gnucash```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnucash](/man/gnucash)(1), [ledger](/man/ledger)(1)

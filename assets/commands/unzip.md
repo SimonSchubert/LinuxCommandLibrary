@@ -104,6 +104,24 @@ Password on command line is insecure (visible in process list). Large archives w
 
 **unzip** is part of **Info-ZIP**, a project started in **1989** to provide free ZIP utilities. The tools were created by **Mark Adler**, **Jean-loup Gailly**, **Greg Roelofs**, and others to provide open-source alternatives to PKWARE's PKZIP. Info-ZIP utilities became the standard ZIP tools on Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install unzip```
+
+```dnf: sudo dnf install unzip```
+
+```pacman: sudo pacman -S unzip```
+
+```apk: sudo apk add unzip```
+
+```zypper: sudo zypper install unzip```
+
+```brew: brew install unzip```
+
+```nix: nix profile install nixpkgs#unzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zip](/man/zip)(1), [tar](/man/tar)(1), [gzip](/man/gzip)(1), [7z](/man/7z)(1)

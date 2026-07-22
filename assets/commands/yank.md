@@ -54,6 +54,24 @@ Terminal required. Clipboard setup varies. Simple tool.
 
 **yank** was created for interactively selecting and copying terminal output to the clipboard.
 
+# INSTALL
+
+```apt: sudo apt install emboss```
+
+```dnf: sudo dnf install yank```
+
+```pacman: sudo pacman -S yank```
+
+```apk: sudo apk add yank```
+
+```zypper: sudo zypper install yank```
+
+```brew: brew install yank```
+
+```nix: nix profile install nixpkgs#emboss```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xclip](/man/xclip)(1), [xsel](/man/xsel)(1), [fzf](/man/fzf)(1)

@@ -51,6 +51,18 @@ Requires appropriate wireless interface and permissions. Access Point mode requi
 
 **impala** was created to provide a user-friendly TUI for wireless network management, making it easier to manage Wi-Fi connections in terminal environments.
 
+# INSTALL
+
+```pacman: sudo pacman -S impala```
+
+```apk: sudo apk add impala```
+
+```zypper: sudo zypper install impala```
+
+```nix: nix profile install nixpkgs#impala```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iwctl](/man/iwctl)(1), [nmtui](/man/nmtui)(1), [nmcli](/man/nmcli)(1), [wpa_cli](/man/wpa_cli)(8)

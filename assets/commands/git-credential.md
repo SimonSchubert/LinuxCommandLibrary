@@ -75,6 +75,24 @@ Usually called internally by Git, not directly by users. Credential helpers must
 
 The git credential subsystem was introduced in **Git 1.7.9** (2012) to standardize credential management across helpers, replacing the earlier ad-hoc authentication handling.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-config](/man/git-config)(1), [git-credential-store](/man/git-credential-store)(1), [git-credential-cache](/man/git-credential-cache)(1)

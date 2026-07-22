@@ -66,6 +66,18 @@ Usually run by **runsvdir**, not directly. Service directory must have correct p
 
 **runsv** is part of **runit** by **Gerrit Pape**. It provides the core supervision functionality for individual services.
 
+# INSTALL
+
+```apt: sudo apt install runit```
+
+```apk: sudo apk add runit```
+
+```brew: brew install runit```
+
+```nix: nix profile install nixpkgs#runit```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [runit](/man/runit)(8), [sv](/man/sv)(8), [runsvdir](/man/runsvdir)(8), [svlogd](/man/svlogd)(8), [chpst](/man/chpst)(8)

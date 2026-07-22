@@ -51,6 +51,20 @@ disassembles
 
 **monodis** disassembles .NET assemblies (DLL/EXE) to CIL (Common Intermediate Language) text. Part of the Mono framework. Used for debugging, reverse engineering, and understanding .NET bytecode.
 
+# INSTALL
+
+```apt: sudo apt install mono-utils```
+
+```pacman: sudo pacman -S mono```
+
+```apk: sudo apk add mono```
+
+```brew: brew install mono```
+
+```nix: nix profile install nixpkgs#mono```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [monop](/man/monop)(1)

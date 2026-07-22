@@ -39,6 +39,12 @@ Basic calculator. Various implementations exist.
 
 qc provides **quick calculations** from the command line.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#qc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bc](/man/bc)(1), [qalc](/man/qalc)(1), [calc](/man/calc)(1)

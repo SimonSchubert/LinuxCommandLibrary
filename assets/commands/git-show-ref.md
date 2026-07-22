@@ -83,6 +83,24 @@ Plumbing command. Shows local refs only. Use git ls-remote for remote refs.
 
 git show-ref is a core **Git** plumbing command for reference inspection, commonly used in scripts.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-ls-remote](/man/git-ls-remote)(1), [git-for-each-ref](/man/git-for-each-ref)(1)

@@ -126,6 +126,24 @@ Some columns (last login, failed login, password expiration) require the calling
 
 **lslogins** was added to **util-linux** (upstream by **Ondrej Oprala**) to consolidate information previously spread across `who`, `last`, `lastlog`, `faillog`, and `getent passwd`.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-login```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [who](/man/who)(1), [last](/man/last)(1), [id](/man/id)(1), [getent](/man/getent)(1), [passwd](/man/passwd)(1)

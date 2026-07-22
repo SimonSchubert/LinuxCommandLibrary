@@ -39,6 +39,22 @@ All data on the logical volume will be permanently lost. Ensure backups exist be
 
 **lvremove** is part of **LVM2**, the Linux Logical Volume Manager.
 
+# INSTALL
+
+```apt: sudo apt install lvm2```
+
+```dnf: sudo dnf install lvm2```
+
+```pacman: sudo pacman -S lvm2```
+
+```apk: sudo apk add lvm2```
+
+```zypper: sudo zypper install lvm2```
+
+```nix: nix profile install nixpkgs#lvm2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lvm](/man/lvm)(8), [lvcreate](/man/lvcreate)(8), [vgremove](/man/vgremove)(8)

@@ -56,6 +56,16 @@ Extensive datasource URL schemes are documented at https://docs.gomplate.ca/
 
 Template injection risks apply if templates or datasources are untrusted. Network datasources need connectivity and credentials. Syntax is Go text/template plus gomplate functions—not Jinja/Mustache.
 
+# INSTALL
+
+```apk: sudo apk add gomplate```
+
+```brew: brew install gomplate```
+
+```nix: nix profile install nixpkgs#gomplate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [envsubst](/man/envsubst)(1), [jinja2](/man/jinja2)(1), [ytt](/man/ytt)(1), [helm](/man/helm)(1)

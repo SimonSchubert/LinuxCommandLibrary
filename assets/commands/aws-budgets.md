@@ -111,6 +111,17 @@ Budgets have a processing delay of up to 24 hours for cost data. Budget limits a
 
 **AWS Budgets** launched in **January 2017** as part of AWS Cost Management tools. It evolved from the earlier Billing Alerts feature. Budget actions for automated responses were added in **2020**, enabling automatic cost control measures beyond just notifications.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ce](/man/aws-ce)(1), [aws-sns](/man/aws-sns)(1), [aws-organizations](/man/aws-organizations)(1)

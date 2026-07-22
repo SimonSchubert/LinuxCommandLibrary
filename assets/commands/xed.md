@@ -55,6 +55,18 @@ The editor supports multiple character encodings and can convert between them.
 
 Designed for Cinnamon desktop. May require GTK libraries on other environments. Plugins require Python.
 
+# INSTALL
+
+```dnf: sudo dnf install xed```
+
+```pacman: sudo pacman -S xed```
+
+```zypper: sudo zypper install xed```
+
+```nix: nix profile install nixpkgs#xed```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gedit](/man/gedit)(1), [pluma](/man/pluma)(1), [nano](/man/nano)(1)

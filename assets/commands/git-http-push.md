@@ -65,6 +65,24 @@ Legacy protocol. Modern servers use smart HTTP. Rarely needed directly. The remo
 
 git http-push was one of the early remote protocols in **Git**, using WebDAV for HTTP push before the smart HTTP protocol was developed.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-push](/man/git-push)(1), [git-remote](/man/git-remote)(1), [git-fetch](/man/git-fetch)(1)

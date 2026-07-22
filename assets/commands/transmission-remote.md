@@ -103,6 +103,20 @@ Requires transmission-daemon to be running. Default connection is localhost:9091
 
 **transmission-remote** was developed as part of the **Transmission** project, which began in **2005**. The remote control utility was created to enable headless operation of the BitTorrent client, allowing system administrators to manage torrent downloads on servers without graphical interfaces. It has become a standard tool for automated torrent management in scripts and server environments.
 
+# INSTALL
+
+```apt: sudo apt install transmission-cli```
+
+```dnf: sudo dnf install transmission-cli```
+
+```pacman: sudo pacman -S transmission-cli```
+
+```apk: sudo apk add transmission-remote```
+
+```brew: brew install transmission-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [transmission-daemon](/man/transmission-daemon)(1), [transmission-cli](/man/transmission-cli)(1), [transmission-create](/man/transmission-create)(1), [transmission-show](/man/transmission-show)(1)

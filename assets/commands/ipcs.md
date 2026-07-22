@@ -90,6 +90,24 @@ Only shows System V IPC, not POSIX IPC resources. User can only see resources th
 
 ipcs has been a standard Unix utility since System V IPC was introduced in the early **1980s**. It remains the primary tool for inspecting System V IPC resources.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ipcmk](/man/ipcmk)(1), [ipcrm](/man/ipcrm)(1), [lsipc](/man/lsipc)(1)

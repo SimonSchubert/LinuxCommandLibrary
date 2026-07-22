@@ -71,6 +71,14 @@ Requires root. Container runtime needed. Network plugin not included.
 
 kubeadm was created as the official cluster bootstrapping tool for **Kubernetes**, simplifying cluster setup.
 
+# INSTALL
+
+```pacman: sudo pacman -S kubeadm```
+
+```apk: sudo apk add kubeadm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kops](/man/kops)(1)

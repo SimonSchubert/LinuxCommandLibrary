@@ -94,6 +94,12 @@ Must be built from source. Large model files required (several GB). Quality depe
 
 **stable-diffusion.cpp** was created by **leejet** in **2023**, inspired by llama.cpp's approach of bringing ML models to C/C++ with minimal dependencies. It brought Stable Diffusion inference to resource-constrained environments and platforms without Python support.
 
+# INSTALL
+
+```aur: yay -S sd-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mflux](/man/mflux)(1), [comfyui](/man/comfyui)(1), [convert](/man/convert)(1)

@@ -81,6 +81,20 @@ Requires GLib and GVfs to be properly installed. Some virtual filesystem operati
 
 gio was introduced in GLib 2.50 (**2016**) as a unified command-line interface for GIO operations, consolidating various gvfs-* utilities into a single tool with subcommands.
 
+# INSTALL
+
+```apt: sudo apt install libglib2.0-bin```
+
+```dnf: sudo dnf install glib```
+
+```apk: sudo apk add glib```
+
+```brew: brew install glib```
+
+```nix: nix profile install nixpkgs#glib```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xdg-open](/man/xdg-open)(1), [nautilus](/man/nautilus)(1)

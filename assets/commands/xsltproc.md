@@ -103,6 +103,22 @@ xsltproc only supports XSLT 1.0; XSLT 2.0 and 3.0 features are not available. Fo
 
 xsltproc was developed by **Daniel Veillard** as part of the **libxslt** library for the GNOME project, with the first release around **2001**. It is built on libxml2 for XML parsing. The tool has become a standard for command-line XSLT processing on Unix-like systems and is included in most Linux distributions.
 
+# INSTALL
+
+```apt: sudo apt install xsltproc```
+
+```dnf: sudo dnf install libxslt```
+
+```pacman: sudo pacman -S libxslt```
+
+```apk: sudo apk add libxslt```
+
+```brew: brew install libxslt```
+
+```nix: nix profile install nixpkgs#libxslt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xmlstarlet](/man/xmlstarlet)(1), [xmllint](/man/xmllint)(1), [saxon](/man/saxon)(1), [xalan](/man/xalan)(1)

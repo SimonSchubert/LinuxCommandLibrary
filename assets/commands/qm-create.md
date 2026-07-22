@@ -79,6 +79,12 @@ VM IDs must be unique across the cluster. Some options require additional storag
 
 Part of **Proxmox VE** QEMU/KVM management tools for virtual machine administration.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-clone](/man/qm-clone)(1), [qm-destroy](/man/qm-destroy)(1)

@@ -112,6 +112,22 @@ Some advanced jq features have minor behavioral differences. Performance may dif
 
 gojq was created by **itchyny** and first released around **2019**. It was developed to provide jq functionality in a single Go binary without C dependencies. YAML support was added as a distinguishing feature. The project maintains close compatibility with jq while serving as a library for Go applications needing JSON transformation.
 
+# INSTALL
+
+```apt: sudo apt install gojq```
+
+```dnf: sudo dnf install gojq```
+
+```apk: sudo apk add gojq```
+
+```zypper: sudo zypper install gojq```
+
+```brew: brew install gojq```
+
+```nix: nix profile install nixpkgs#gojq```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jq](/man/jq)(1), [yq](/man/yq)(1), [jless](/man/jless)(1), [fx](/man/fx)(1)

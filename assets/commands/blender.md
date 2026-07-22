@@ -111,6 +111,22 @@ Heavy resource usage. Learning curve is steep. Background rendering requires all
 
 Note that order matters: arguments are evaluated left to right, so the .blend file must be given before the render flags that act on it.
 
+# INSTALL
+
+```apt: sudo apt install blender```
+
+```dnf: sudo dnf install blender```
+
+```pacman: sudo pacman -S blender```
+
+```apk: sudo apk add blender```
+
+```zypper: sudo zypper install blender```
+
+```nix: nix profile install nixpkgs#blender```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gimp](/man/gimp)(1), [inkscape](/man/inkscape)(1), [krita](/man/krita)(1), [ffmpeg](/man/ffmpeg)(1)

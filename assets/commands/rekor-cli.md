@@ -93,6 +93,22 @@ Requires network access to Rekor server. Entries are public. Key management sepa
 
 **Rekor** is part of the **Sigstore** project, initiated by **Google**, **Red Hat**, and others. It provides transparency logging for software supply chain security.
 
+# INSTALL
+
+```apt: sudo apt install rekor```
+
+```pacman: sudo pacman -S rekor```
+
+```apk: sudo apk add rekor```
+
+```zypper: sudo zypper install rekor```
+
+```brew: brew install rekor-cli```
+
+```nix: nix profile install nixpkgs#rekor-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cosign](/man/cosign)(1), [fulcio](/man/fulcio)(1)

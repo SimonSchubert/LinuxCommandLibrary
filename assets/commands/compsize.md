@@ -40,6 +40,22 @@ Running compsize requires root privileges because it needs low-level access to f
 
 Only works on btrfs filesystems. Requires root privileges to access extent information. Results depend on file content and compression algorithm.
 
+# INSTALL
+
+```apt: sudo apt install btrfs-compsize```
+
+```dnf: sudo dnf install compsize```
+
+```pacman: sudo pacman -S compsize```
+
+```apk: sudo apk add btrfs-compsize```
+
+```zypper: sudo zypper install compsize```
+
+```nix: nix profile install nixpkgs#compsize```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [btrfs-filesystem](/man/btrfs-filesystem)(8), [df](/man/df)(1), [du](/man/du)(1)

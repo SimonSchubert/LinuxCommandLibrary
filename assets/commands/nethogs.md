@@ -79,6 +79,24 @@ Requires root privileges to capture network packets. May not accurately track al
 
 **nethogs** was developed by **Arnout Engelen** as a "net top" tool that groups bandwidth by process. It fills a gap left by traditional tools like iftop and nload which show interface-level statistics.
 
+# INSTALL
+
+```apt: sudo apt install nethogs```
+
+```dnf: sudo dnf install nethogs```
+
+```pacman: sudo pacman -S nethogs```
+
+```apk: sudo apk add nethogs```
+
+```zypper: sudo zypper install nethogs```
+
+```brew: brew install nethogs```
+
+```nix: nix profile install nixpkgs#nethogs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iftop](/man/iftop)(8), [nload](/man/nload)(1), [bmon](/man/bmon)(1), [ss](/man/ss)(8)

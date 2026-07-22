@@ -34,6 +34,12 @@ Alongside your stored commands, cheatshh can display **tldr** and **man** pages 
 **-h**, **--help**
 > Display help information
 
+# INSTALL
+
+```aur: yay -S cheatshh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tldr](/man/tldr)(1), [man](/man/man)(1), [cheat](/man/cheat)(1), [fzf](/man/fzf)(1)

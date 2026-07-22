@@ -24,6 +24,16 @@ _command_ | **up**
 
 **up** was created by **Mateusz Czaplinski** (akavel) and is written in **Go**.
 
+# INSTALL
+
+```pacman: sudo pacman -S up```
+
+```brew: brew install up```
+
+```nix: nix profile install nixpkgs#up```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [watch](/man/watch)(1), [fzf](/man/fzf)(1), [pv](/man/pv)(1)

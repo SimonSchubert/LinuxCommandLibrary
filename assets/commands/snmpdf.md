@@ -57,6 +57,14 @@ Requires a running SNMP agent on the remote host. The default hrStorageTable may
 
 **snmpdf** is part of the **Net-SNMP** suite, which evolved from the UCD-SNMP project originally developed at the University of California, Davis.
 
+# INSTALL
+
+```apt: sudo apt install snmp```
+
+```apk: sudo apk add net-snmp-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [snmpget](/man/snmpget)(1), [snmpwalk](/man/snmpwalk)(1), [snmpset](/man/snmpset)(1), [df](/man/df)(1)

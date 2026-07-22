@@ -97,6 +97,24 @@ SI and IEC units differ significantly at large values. The 'iec-i' format uses e
 
 **numfmt** is part of **GNU coreutils**, added to provide standardized number formatting across utilities. It addresses the inconsistency of human-readable output between different commands, providing a single tool for number conversion that respects both SI and IEC standards.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [printf](/man/printf)(1), [bc](/man/bc)(1), [units](/man/units)(1), [factor](/man/factor)(1)

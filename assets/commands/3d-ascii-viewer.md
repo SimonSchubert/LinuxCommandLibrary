@@ -51,6 +51,12 @@ Requires the ncurses developer libraries to build (`libncurses-dev` on Debian-ba
 
 **3d-ascii-viewer** is an open-source experiment by `autopawn` demonstrating real-time 3D rasterization to ASCII characters without any graphics libraries. It continues a long tradition of terminal 3D renderers from the demoscene and ASCII-art communities.
 
+# INSTALL
+
+```apt: sudo apt install 3d-ascii-viewer```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blender](/man/blender)(1), [openscad](/man/openscad)(1), [meshlab](/man/meshlab)(1), [figlet](/man/figlet)(1)

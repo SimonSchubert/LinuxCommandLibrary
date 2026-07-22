@@ -114,6 +114,12 @@ Requires Snowflake account. Large results may be slow. MFA may be required.
 
 **SnowSQL** is the official CLI for **Snowflake** cloud data warehouse. It provides terminal-based access to Snowflake's SQL engine.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#snowsql```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [psql](/man/psql)(1), [mysql](/man/mysql)(1), [bq](/man/bq)(1)

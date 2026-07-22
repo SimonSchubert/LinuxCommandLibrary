@@ -64,6 +64,24 @@ Requires GNOME libraries. Format support depends on installed tools (unrar, p7zi
 
 file-roller is part of the **GNOME desktop** project, providing archive management since GNOME 2. It serves as the default archive manager for GNOME and GNOME-based distributions.
 
+# INSTALL
+
+```apt: sudo apt install file-roller```
+
+```dnf: sudo dnf install file-roller```
+
+```pacman: sudo pacman -S file-roller```
+
+```apk: sudo apk add file-roller```
+
+```zypper: sudo zypper install file-roller```
+
+```brew: brew install file-roller```
+
+```nix: nix profile install nixpkgs#file-roller```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tar](/man/tar)(1), [zip](/man/zip)(1), [7z](/man/7z)(1)

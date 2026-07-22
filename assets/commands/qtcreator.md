@@ -87,6 +87,16 @@ Resource-intensive for large projects. Initial project loading can be slow. Some
 
 **Qt Creator** was released by **Nokia** (then owner of Qt) in **2008**. It consolidated Qt development tools into a modern IDE. Development continues under **The Qt Company**.
 
+# INSTALL
+
+```apt: sudo apt install qtcreator```
+
+```pacman: sudo pacman -S qtcreator```
+
+```nix: nix profile install nixpkgs#qtcreator```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qmake](/man/qmake)(1), [cmake](/man/cmake)(1), [gdb](/man/gdb)(1), [clang](/man/clang)(1)

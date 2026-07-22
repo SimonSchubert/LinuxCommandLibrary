@@ -45,6 +45,12 @@ The exact boot sequence varies between distributions, hardware platforms, and in
 
 The System V init process originated in **AT&T Unix System V** released in 1983. Linux distributions historically adopted this model before the transition to **systemd** beginning around 2010-2011. Systemd became the default init system in most major distributions by 2015.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#boot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [journalctl](/man/journalctl)(1), [init](/man/init)(1), [grub](/man/grub)(1)

@@ -78,6 +78,24 @@ Bar::baz()
 
 Mangled names must be complete tokens - trailing punctuation prevents demangling. Different compilers use different mangling schemes; use -s to specify format.
 
+# INSTALL
+
+```apt: sudo apt install binutils```
+
+```dnf: sudo dnf install binutils```
+
+```pacman: sudo pacman -S binutils```
+
+```apk: sudo apk add binutils```
+
+```zypper: sudo zypper install binutils```
+
+```brew: brew install binutils```
+
+```nix: nix profile install nixpkgs#binutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nm](/man/nm)(1), [objdump](/man/objdump)(1), [readelf](/man/readelf)(1)

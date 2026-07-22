@@ -89,6 +89,24 @@ Part of Graphviz package. Input graphs must have node position information; run 
 
 gvmap was developed as part of **Graphviz** at **AT&T Labs** for creating geographical-style graph visualizations.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [neato](/man/neato)(1), [sfdp](/man/sfdp)(1)

@@ -79,6 +79,16 @@ Requires Docker daemon access. When installing with cargo, use `--locked` to avo
 
 **ducker** was developed to bring the k9s experience to Docker users, providing a powerful TUI for container management. It aims to make Docker management faster and more efficient for developers who prefer terminal-based workflows.
 
+# INSTALL
+
+```pacman: sudo pacman -S ducker```
+
+```brew: brew install ducker```
+
+```nix: nix profile install nixpkgs#ducker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [k9s](/man/k9s)(1), [lazydocker](/man/lazydocker)(1), [oxker](/man/oxker)(1)

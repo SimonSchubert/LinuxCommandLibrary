@@ -97,6 +97,12 @@ Requires Python 3.6 or above. Knowledge base data is stored locally. No built-in
 
 **kb** was created by **gnebbia** and is written in **Python**. It was designed as a quick note collection and access tool with a focus on simplicity and efficiency.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tldr](/man/tldr)(1), [cheat](/man/cheat)(1), [nb](/man/nb)(1)

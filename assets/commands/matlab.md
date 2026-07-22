@@ -95,6 +95,12 @@ Commercial license required. Large memory footprint. Startup time can be signifi
 
 **MATLAB** was created by **Cleve Moler** in the late **1970s** to provide students access to LINPACK and EISPACK without Fortran. **MathWorks** was founded in **1984** to commercialize it. MATLAB became the standard for numerical computing in academia and industry.
 
+# INSTALL
+
+```aur: yay -S matlab```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [octave](/man/octave)(1), [python](/man/python)(1), [julia](/man/julia)(1), [r](/man/r)(1)

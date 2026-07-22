@@ -115,6 +115,22 @@ Requires true color terminal for accurate display. Terminal color accuracy varie
 
 **pastel** was created by **David Peter** (sharkdp) around **2019**. Written in Rust, it's part of a suite of modern CLI tools including fd and bat. The tool addresses the need for color manipulation in terminal workflows, design, and accessibility testing. It emphasizes perceptually uniform color operations.
 
+# INSTALL
+
+```dnf: sudo dnf install pastel```
+
+```pacman: sudo pacman -S pastel```
+
+```apk: sudo apk add pastel```
+
+```zypper: sudo zypper install pastel```
+
+```brew: brew install pastel```
+
+```nix: nix profile install nixpkgs#pastel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [color](/man/color)(1), [tput](/man/tput)(1), [convert](/man/convert)(1)

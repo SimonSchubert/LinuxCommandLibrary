@@ -101,6 +101,14 @@ Requires Docker or Podman. At least one nested X server backend (Xephyr, Xpra, n
 
 **x11docker** was created by **Martin Viereck** to run Docker containers with GUI applications while preserving host security. It predates modern Wayland-native container workflows and remains a widely-used solution for desktop containerization.
 
+# INSTALL
+
+```dnf: sudo dnf install x11docker```
+
+```nix: nix profile install nixpkgs#x11docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [xhost](/man/xhost)(1), [xephyr](/man/xephyr)(1)

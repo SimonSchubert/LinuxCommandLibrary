@@ -56,6 +56,14 @@ package uninstaller
 
 Dependencies that are no longer needed may remain; use **conda clean** to remove them.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-install](/man/conda-install)(1), [conda-clean](/man/conda-clean)(1)

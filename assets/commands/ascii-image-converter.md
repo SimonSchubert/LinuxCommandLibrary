@@ -112,6 +112,13 @@ Output quality depends on terminal font and size. Colored output requires a term
 
 **ascii-image-converter** is a modern Go-based tool for ASCII art generation, providing more features than traditional tools like jp2a.
 
+# INSTALL
+
+```aur: yay -S ascii-image-converter```
+
+```nix: nix profile install nixpkgs#ascii-image-converter```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [jp2a](/man/jp2a)(1), [img2txt](/man/img2txt)(1)

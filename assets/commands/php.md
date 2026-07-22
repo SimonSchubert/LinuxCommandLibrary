@@ -125,6 +125,20 @@ Configuration is controlled by php.ini; the loaded file location varies by syste
 
 PHP was created by **Rasmus Lerdorf** in **1994**, originally as a set of CGI binaries for tracking visits to his web resume. It evolved into a full server-side scripting language. PHP 5 introduced a mature object model, and PHP 7 (2015) brought major performance improvements. PHP 8 (2020) added JIT compilation, named arguments, and attributes.
 
+# INSTALL
+
+```dnf: sudo dnf install php```
+
+```pacman: sudo pacman -S php```
+
+```apk: sudo apk add php85```
+
+```brew: brew install php```
+
+```nix: nix profile install nixpkgs#php85```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [composer](/man/composer)(1), [phpunit](/man/phpunit)(1), [pecl](/man/pecl)(1), [php-cs-fixer](/man/php-cs-fixer)(1), [phpize](/man/phpize)(1), [php-config](/man/php-config)(1)

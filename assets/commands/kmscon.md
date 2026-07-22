@@ -55,6 +55,18 @@ Requires KMS support from the graphics driver. May conflict with other framebuff
 
 kmscon was developed as part of the systemd project to provide a modern replacement for the Linux VT subsystem. It uses libtsm for terminal emulation and works with Wayland-like infrastructure.
 
+# INSTALL
+
+```dnf: sudo dnf install kmscon```
+
+```pacman: sudo pacman -S kmscon```
+
+```zypper: sudo zypper install kmscon```
+
+```nix: nix profile install nixpkgs#kmscon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [getty](/man/getty)(8), [agetty](/man/agetty)(8)

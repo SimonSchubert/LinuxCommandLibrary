@@ -109,6 +109,12 @@ Requires appropriate privileges to create roles. Superuser creation requires sup
 
 **createuser** has been part of PostgreSQL since early versions, providing a shell interface to role management. PostgreSQL evolved from the **POSTGRES** project at **UC Berkeley** in the **1980s**. The distinction between users and roles was unified in PostgreSQL 8.1.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dropuser](/man/dropuser)(1), [psql](/man/psql)(1), [createdb](/man/createdb)(1), [dropdb](/man/dropdb)(1), [pg_dump](/man/pg_dump)(1), [pg_restore](/man/pg_restore)(1)

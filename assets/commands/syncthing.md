@@ -113,6 +113,24 @@ Initial sync of large datasets takes time. Conflict files need manual resolution
 
 **Syncthing** was created by **Jakob Borg** in **2013** as an open-source alternative to proprietary sync services like Dropbox. It emphasizes privacy (no central server), security (all data encrypted), and openness (open-source, open protocol). The project has grown into a widely-used synchronization solution.
 
+# INSTALL
+
+```apt: sudo apt install syncthing```
+
+```dnf: sudo dnf install syncthing```
+
+```pacman: sudo pacman -S syncthing```
+
+```apk: sudo apk add syncthing```
+
+```zypper: sudo zypper install syncthing```
+
+```brew: brew install syncthing```
+
+```nix: nix profile install nixpkgs#syncthing```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rsync](/man/rsync)(1), [rclone](/man/rclone)(1), [unison](/man/unison)(1)

@@ -72,6 +72,12 @@ Use **portablemc --help** and subcommand **--help** for the full flag set of you
 
 Online play requires a valid Microsoft account flow. Some unsupported architectures may need extra flags. Mod loader installs depend on upstream loader availability. Network access is required for first-time downloads.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#portablemc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [java](/man/java)(1), [minecraft](/man/minecraft)(1)

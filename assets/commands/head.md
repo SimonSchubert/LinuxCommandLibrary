@@ -61,6 +61,24 @@ NUM may have a multiplier suffix: b (512), kB (1000), K (1024), MB (1000*1000), 
 
 **head** has been part of Unix since early versions and is included in GNU **coreutils**.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tail](/man/tail)(1), [cat](/man/cat)(1), [less](/man/less)(1), [more](/man/more)(1)

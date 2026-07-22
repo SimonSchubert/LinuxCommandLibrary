@@ -97,6 +97,12 @@ The **s** command requires a browser to display results. In headless environment
 
 **s** was created by **Josh Ellithorpe** (zquestz) and first released on **GitHub** around **2016**. It is written in **Go** and designed to streamline web searches from developer workflows. The project has grown to support over 100 search providers.
 
+# INSTALL
+
+```aur: yay -S s```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ddgr](/man/ddgr)(1), [googler](/man/googler)(1), [surfraw](/man/surfraw)(1)

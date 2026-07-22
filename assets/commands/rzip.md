@@ -79,6 +79,20 @@ High memory usage proportional to file size. Cannot compress or decompress from 
 
 rzip was written by **Andrew Tridgell** (author of rsync and Samba) to efficiently compress large files with long-distance redundancy.
 
+# INSTALL
+
+```apt: sudo apt install rzip```
+
+```dnf: sudo dnf install rzip```
+
+```zypper: sudo zypper install rzip```
+
+```brew: brew install rzip```
+
+```nix: nix profile install nixpkgs#rzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [lrzip](/man/lrzip)(1), [bzip2](/man/bzip2)(1), [gzip](/man/gzip)(1), [xz](/man/xz)(1), [rsync](/man/rsync)(1)

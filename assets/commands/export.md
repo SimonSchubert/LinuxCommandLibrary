@@ -78,6 +78,16 @@ Only **-p** is specified by POSIX. **-f** and **-n** are extensions, so scripts 
 
 **export** dates to the **Bourne shell** in the late **1970s** and is standardized by POSIX. It is implemented as a shell builtin in every major shell, because an external program could not modify the shell's own environment. Some systems also ship a **/usr/bin/export** stub for standards compliance, but it has no useful effect.
 
+# INSTALL
+
+```apk: sudo apk add execline```
+
+```brew: brew install execline```
+
+```nix: nix profile install nixpkgs#execline```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [unset](/man/unset)(1), [env](/man/env)(1), [printenv](/man/printenv)(1), [set](/man/set)(1), [declare](/man/declare)(1), [readonly](/man/readonly)(1), [typeset](/man/typeset)(1), [bash](/man/bash)(1)

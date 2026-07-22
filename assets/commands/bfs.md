@@ -127,6 +127,21 @@ Less widely available than find. Different traversal order may affect some opera
 
 **bfs** was created by Tavian Barnes in **2015** as an optimized, breadth-first alternative to the traditional find command.
 
+# INSTALL
+
+```apt: sudo apt install bfs```
+
+```dnf: sudo dnf install bfs```
+
+```pacman: sudo pacman -S bfs```
+
+```apk: sudo apk add bfs```
+
+```brew: brew install bfs```
+
+```nix: nix profile install nixpkgs#bfs```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [find](/man/find)(1), [fd](/man/fd)(1), [locate](/man/locate)(1)

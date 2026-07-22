@@ -76,6 +76,20 @@ Requires root privileges or membership in the frr/quagga group to access daemon 
 
 **vtysh** was developed as part of the **Quagga** routing suite, which forked from GNU Zebra in **2003**. When Quagga development stalled, the **FRRouting** project forked it in **2017** and continued active development. vtysh remains the primary CLI for FRR, providing a familiar interface for network engineers accustomed to commercial router operating systems.
 
+# INSTALL
+
+```apt: sudo apt install frr```
+
+```dnf: sudo dnf install frr```
+
+```apk: sudo apk add quagga```
+
+```zypper: sudo zypper install frr```
+
+```nix: nix profile install nixpkgs#frr```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zebra](/man/zebra)(8), [bgpd](/man/bgpd)(8), [ospfd](/man/ospfd)(8), [ripd](/man/ripd)(8)

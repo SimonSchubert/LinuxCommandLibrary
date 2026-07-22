@@ -86,6 +86,12 @@ Requires a terminal with at least 50 lines. Server availability varies; public s
 
 **TetriNET** was created by St0rmCat in 1997 as a multiplayer Tetris variant for Windows. The Linux client was developed to provide compatible access from Unix systems. The game became popular in the late 1990s and early 2000s for its unique special block mechanics that added strategic depth to multiplayer Tetris.
 
+# INSTALL
+
+```pacman: sudo pacman -S tetrinet```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tint](/man/tint)(1), [bastet](/man/bastet)(1), [vitetris](/man/vitetris)(1), [netris](/man/netris)(1)

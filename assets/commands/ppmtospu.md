@@ -21,6 +21,24 @@ Convert PPM to Atari Spectrum 512 format
 
 **ppmtospu** converts PPM images to Atari Spectrum 512 format, which displays 512 colors on Atari ST. Part of Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sputoppm](/man/sputoppm)(1), [ppmtoneo](/man/ppmtoneo)(1)

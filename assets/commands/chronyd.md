@@ -96,6 +96,24 @@ Requires root privileges to adjust system time. Cannot run simultaneously with o
 
 **chrony** was originally written by **Richard Curnow** starting in **1997** as an alternative to the reference NTP implementation. It was designed specifically for systems that don't maintain continuous network connections. The project is now maintained by **Miroslav Lichvar** at Red Hat. Chrony has become the default NTP implementation in many Linux distributions including Fedora, RHEL, and CentOS.
 
+# INSTALL
+
+```apt: sudo apt install chrony```
+
+```dnf: sudo dnf install chrony```
+
+```pacman: sudo pacman -S chrony```
+
+```apk: sudo apk add chrony```
+
+```zypper: sudo zypper install chrony```
+
+```brew: brew install chrony```
+
+```nix: nix profile install nixpkgs#chrony```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [chronyc](/man/chronyc)(1), [ntpd](/man/ntpd)(8), [timedatectl](/man/timedatectl)(1)

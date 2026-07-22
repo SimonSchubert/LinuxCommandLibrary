@@ -45,6 +45,24 @@ Requires lldpd daemon to be running. Root privileges needed for full functionali
 
 LLDP was standardized as IEEE 802.1AB in **2005** as a vendor-neutral discovery protocol, replacing proprietary protocols like Cisco CDP.
 
+# INSTALL
+
+```apt: sudo apt install lldpd```
+
+```dnf: sudo dnf install lldpd```
+
+```pacman: sudo pacman -S lldpd```
+
+```apk: sudo apk add lldpd```
+
+```zypper: sudo zypper install lldpd```
+
+```brew: brew install lldpd```
+
+```nix: nix profile install nixpkgs#lldpd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(8)

@@ -33,6 +33,24 @@ Squash a branch into a single commit
 
 **git squash** merges all commits from a specified branch or commit range into the current branch as a single squashed commit. Part of git-extras, it is useful for cleaning up feature branch history before merging into the main branch. When a commit ref from the current branch is given, the range from that ref to HEAD is squashed. If no commit message is provided and **--squash-msg** is not used, changes are staged but not committed.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [git-rebase](/man/git-rebase)(1), [git-extras](/man/git-extras)(1)

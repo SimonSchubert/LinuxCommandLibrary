@@ -62,6 +62,24 @@ Passing `-a` shows `git status`, asks for confirmation, then stages everything b
 
 Must be run inside a git working tree; it changes to the repository's top level automatically. The generated message is just a list of changed files, not a meaningful description, so this is best suited for quick WIP commits rather than history you intend to keep readable.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-commit](/man/git-commit)(1), [git-extras](/man/git-extras)(1)

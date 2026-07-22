@@ -77,6 +77,22 @@ Not every drive supports book type modification, and support often depends on th
 
 dvd+rw-booktype is part of the **dvd+rw-tools** package, developed for managing DVD+R/RW media on Linux. Booktype modification became important for compatibility when DVD+ format competed with DVD-.
 
+# INSTALL
+
+```apt: sudo apt install dvd+rw-tools```
+
+```dnf: sudo dnf install dvd+rw-tools```
+
+```pacman: sudo pacman -S dvd+rw-tools```
+
+```apk: sudo apk add dvd+rw-tools```
+
+```zypper: sudo zypper install dvd+rw-tools```
+
+```brew: brew install dvd+rw-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [growisofs](/man/growisofs)(1), [dvd+rw-mediainfo](/man/dvd+rw-mediainfo)(1)

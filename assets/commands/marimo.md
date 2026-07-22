@@ -98,6 +98,12 @@ Different mental model from Jupyter - linear execution not guaranteed. Some Jupy
 
 **marimo** was created by **Akshay Agrawal** and **Myles Scolnick** in **2023** at Stanford. It addresses reproducibility issues in traditional notebooks by making execution deterministic through reactive programming.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#marimo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jupyter](/man/jupyter)(1), [ipython](/man/ipython)(1), [streamlit](/man/streamlit)(1), [python](/man/python)(1)

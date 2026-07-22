@@ -119,6 +119,20 @@ Rules are not persistent by default; use **iptables-save** and **iptables-restor
 
 Part of the **netfilter** project. Introduced in **Linux 2.4** (2001) as a replacement for ipchains. Being gradually replaced by **nftables**.
 
+# INSTALL
+
+```pacman: sudo pacman -S iptables```
+
+```apk: sudo apk add iptables```
+
+```zypper: sudo zypper install iptables```
+
+```brew: brew install iptables```
+
+```nix: nix profile install nixpkgs#iptables```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ip6tables](/man/ip6tables)(8), [iptables-save](/man/iptables-save)(8), [iptables-restore](/man/iptables-restore)(8), [nft](/man/nft)(8), [firewall-cmd](/man/firewall-cmd)(1), [ufw](/man/ufw)(8)

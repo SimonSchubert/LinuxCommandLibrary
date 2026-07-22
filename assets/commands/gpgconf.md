@@ -74,6 +74,14 @@ GnuPG component configuration utility
 
 The tool is commonly used to reload gpg-agent after configuration changes, list available components, and troubleshoot GnuPG installations.
 
+# INSTALL
+
+```apt: sudo apt install gpgconf```
+
+```apk: sudo apk add gnupg-gpgconf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gpg](/man/gpg)(1)

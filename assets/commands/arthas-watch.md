@@ -80,6 +80,11 @@ This enables debugging production issues without stopping the application or add
 
 OGNL expressions can be complex; test carefully. Watching hot methods may impact performance.
 
+# INSTALL
+
+```aur: yay -S arthas```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [arthas](/man/arthas)(1), [arthas-trace](/man/arthas-trace)(1)

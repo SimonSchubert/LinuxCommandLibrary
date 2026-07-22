@@ -80,6 +80,13 @@ Requires Amanda to be properly installed and configured. Some operations require
 
 **Amanda** was developed at the University of Maryland starting in **1991**. It became one of the most widely used open-source backup solutions for Unix systems, with amadmin providing its administrative interface.
 
+# INSTALL
+
+```apt: sudo apt install amanda-server```
+
+```dnf: sudo dnf install amanda-server```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [amcheck](/man/amcheck)(8), [amdump](/man/amdump)(8), [amrecover](/man/amrecover)(8)

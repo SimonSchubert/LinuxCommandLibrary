@@ -35,6 +35,12 @@ Part of Twisted. Basic highlighting.
 
 pyhtmlizer is part of **Twisted framework** utilities.
 
+# INSTALL
+
+```apk: sudo apk add py3-twisted```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pygmentize](/man/pygmentize)(1), [highlight](/man/highlight)(1)

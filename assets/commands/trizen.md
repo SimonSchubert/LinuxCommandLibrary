@@ -66,6 +66,12 @@ AUR packages are user-submitted and not officially supported. Review PKGBUILDs b
 
 **trizen** was written in Perl as a lightweight AUR helper for Arch Linux, focusing on simplicity and speed while maintaining compatibility with pacman commands.
 
+# INSTALL
+
+```aur: yay -S trizen```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [yay](/man/yay)(8), [paru](/man/paru)(1)

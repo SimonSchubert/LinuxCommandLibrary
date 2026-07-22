@@ -82,6 +82,18 @@ Requires pass (password-store) installed. OTP secrets should be backed up separa
 
 **pass-otp** was created as an extension to **pass** (password-store) by **zx2c4**. It brings two-factor authentication capabilities to the Unix password manager.
 
+# INSTALL
+
+```dnf: sudo dnf install pass-otp```
+
+```pacman: sudo pacman -S pass-otp```
+
+```zypper: sudo zypper install pass-otp```
+
+```brew: brew install pass-otp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pass](/man/pass)(1), [oathtool](/man/oathtool)(1), [gpg](/man/gpg)(1)

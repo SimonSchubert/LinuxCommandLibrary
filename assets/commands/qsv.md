@@ -36,6 +36,16 @@ Blazing-fast data-wrangling toolkit for CSV and tabular data
 
 **qsv** was created by **jqnatividad** (dathere) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S qsv```
+
+```brew: brew install qsv```
+
+```nix: nix profile install nixpkgs#qsv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [csvlens](/man/csvlens)(1), [xsv](/man/xsv)(1), [miller](/man/miller)(1), [cut](/man/cut)(1)

@@ -73,6 +73,24 @@ Part of the Graphviz package. The pattern-action language has a learning curve, 
 
 gvpr was developed as part of **Graphviz** at **AT&T Labs** to provide AWK-like processing for graph structures, replacing the earlier **gpr** tool.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [awk](/man/awk)(1), [gc](/man/gc)(1), [nop](/man/nop)(1)

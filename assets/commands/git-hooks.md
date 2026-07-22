@@ -56,6 +56,24 @@ post-update        After all refs updated
 
 Hooks are not version-controlled in .git/hooks. Use tools like Husky or pre-commit to share hooks. Hooks can be bypassed with --no-verify. Keep hooks fast to avoid workflow friction.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [git-commit](/man/git-commit)(1), [husky](/man/husky)(1), [pre-commit](/man/pre-commit)(1)

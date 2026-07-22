@@ -51,6 +51,24 @@ Part of the Graphviz package. GraphML features like hyperedges and nested graphs
 
 graphml2gv is part of the **Graphviz** project, created at **AT&T Labs** to handle format conversions for graph visualization.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gv2gml](/man/gv2gml)(1), [gml2gv](/man/gml2gv)(1), [dot](/man/dot)(1), [neato](/man/neato)(1), [graphviz](/man/graphviz)(1)

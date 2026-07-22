@@ -70,6 +70,17 @@ New SES accounts start in sandbox mode, which limits sending to verified email a
 
 Amazon SES launched in **January 2011** as AWS's email sending service, providing developers with a cost-effective way to send email at scale. The service has evolved to include receiving capabilities, templates, and advanced deliverability features.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [sendmail](/man/sendmail)(1), [mail](/man/mail)(1)

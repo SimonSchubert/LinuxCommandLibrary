@@ -126,6 +126,20 @@ F-keys may conflict with terminal emulator. Backend (tmux vs screen) affects fea
 **~/.byobu/.tmux.conf**
 > Byobu-specific tmux configuration overrides
 
+# INSTALL
+
+```dnf: sudo dnf install byobu```
+
+```apk: sudo apk add byobu```
+
+```zypper: sudo zypper install byobu```
+
+```brew: brew install byobu```
+
+```nix: nix profile install nixpkgs#byobu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tmux](/man/tmux)(1), [screen](/man/screen)(1), [zellij](/man/zellij)(1)

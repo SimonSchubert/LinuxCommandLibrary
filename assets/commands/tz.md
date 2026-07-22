@@ -36,6 +36,16 @@ Interactive terminal-based time zone helper
 
 **tz** was created by **Arnaud Berthomier** (oz) and is written in **Go**.
 
+# INSTALL
+
+```apk: sudo apk add tz```
+
+```brew: brew install tz```
+
+```nix: nix profile install nixpkgs#tz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [timedatectl](/man/timedatectl)(1), [date](/man/date)(1), [tzupdate](/man/tzupdate)(1)

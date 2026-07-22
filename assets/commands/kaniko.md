@@ -129,6 +129,12 @@ Kaniko runs inside containers and is not meant for direct host execution. Some D
 
 Kaniko was developed by **Google** and released in **2018** as part of Google Container Tools. It was created to enable secure container builds in Kubernetes environments where running Docker daemon is impractical or forbidden. The project is maintained by the open-source community and widely used in cloud-native CI/CD pipelines.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#kaniko```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [buildah](/man/buildah)(1), [podman](/man/podman)(1)

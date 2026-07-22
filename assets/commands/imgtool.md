@@ -61,6 +61,20 @@ Part of MCUboot project. Specific image format. Cryptographic keys required.
 
 imgtool is part of **MCUboot**, an open-source secure bootloader for microcontrollers.
 
+# INSTALL
+
+```apt: sudo apt install mame-tools```
+
+```dnf: sudo dnf install mame-tools```
+
+```pacman: sudo pacman -S mame-tools```
+
+```zypper: sudo zypper install mame-tools```
+
+```nix: nix profile install nixpkgs#mame-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1)

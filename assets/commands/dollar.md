@@ -114,6 +114,12 @@ Unquoted expansions undergo word splitting and glob expansion. Always quote **"$
 
 Command substitution strips trailing newlines from output.
 
+# INSTALL
+
+```aur: yay -S dollar```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bash](/man/bash)(1), [sh](/man/sh)(1), [env](/man/env)(1), [export](/man/export)(1)

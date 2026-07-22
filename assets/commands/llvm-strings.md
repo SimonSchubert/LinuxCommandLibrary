@@ -39,6 +39,24 @@ extracts printable strings from binary files
 
 **llvm-strings** extracts printable strings from binary files. Drop-in replacement for GNU strings. Useful for analyzing executables, finding embedded text, and reverse engineering.
 
+# INSTALL
+
+```apt: sudo apt install llvm```
+
+```dnf: sudo dnf install llvm```
+
+```pacman: sudo pacman -S llvm```
+
+```apk: sudo apk add llvm```
+
+```zypper: sudo zypper install llvm```
+
+```brew: brew install llvm```
+
+```nix: nix profile install nixpkgs#llvm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [strings](/man/strings)(1), [llvm-objdump](/man/llvm-objdump)(1)

@@ -65,6 +65,20 @@ Secure CLI and TUI password and API key manager
 
 **pass-cli** was created by **arimxyer** and is written in **Go**.
 
+# INSTALL
+
+```dnf: sudo dnf install pass```
+
+```pacman: sudo pacman -S pass```
+
+```apk: sudo apk add pass```
+
+```brew: brew install pass```
+
+```nix: nix profile install nixpkgs#pass```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pass](/man/pass)(1), [passepartui](/man/passepartui)(1), [kure](/man/kure)(1), [gopass](/man/gopass)(1)

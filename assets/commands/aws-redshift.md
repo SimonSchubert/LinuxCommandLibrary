@@ -112,6 +112,17 @@ Cluster creation takes several minutes. Classic resize creates a new cluster and
 
 **Amazon Redshift** launched in **February 2013** as AWS's first data warehouse service, named after the astronomical phenomenon. **Redshift Spectrum** was introduced in **2017** for querying data directly in S3. **RA3 nodes** with managed storage launched in **2019**, separating compute and storage. **Redshift Serverless** became generally available in **July 2022**. The service has added features like AQUA (Advanced Query Accelerator), ML integration, and data sharing.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [psql](/man/psql)(1), [aws-s3](/man/aws-s3)(1)

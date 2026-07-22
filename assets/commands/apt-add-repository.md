@@ -14,6 +14,11 @@ This command is an alias of **add-apt-repository**.
 
 **apt-add-repository** is an alternative name for **add-apt-repository**, used to add APT repositories to the system's sources list on Debian-based distributions.
 
+# INSTALL
+
+```apt: sudo apt install software-properties-common```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [add-apt-repository](/man/add-apt-repository)(1), [apt](/man/apt)(8), [apt-get](/man/apt-get)(8)

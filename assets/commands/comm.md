@@ -84,6 +84,24 @@ Input files must be sorted. Use process substitution for unsorted files: comm <(
 
 **comm** originated in **AT&T Unix** Version 4 (1973). It is part of GNU coreutils on Linux.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sort](/man/sort)(1), [diff](/man/diff)(1), [uniq](/man/uniq)(1)

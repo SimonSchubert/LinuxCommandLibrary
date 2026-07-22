@@ -122,6 +122,12 @@ Requires root privileges for raw socket access. High scan rates may trigger IDS/
 
 **unicornscan** was developed by Jack Louis and Robert E. Lee. It was designed for scalability and speed, addressing limitations of synchronous scanners. The tool became popular for penetration testing and is included in Kali Linux.
 
+# INSTALL
+
+```aur: yay -S unicornscan```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [masscan](/man/masscan)(1), [zmap](/man/zmap)(1), [hping3](/man/hping3)(1)

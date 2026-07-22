@@ -66,6 +66,22 @@ Requires kubeconfig. Terminal-based. Keyboard shortcuts to learn.
 
 k9s was created by **Fernand Galiana** to provide a fast, terminal-based interface for managing Kubernetes clusters.
 
+# INSTALL
+
+```dnf: sudo dnf install k9s```
+
+```pacman: sudo pacman -S k9s```
+
+```apk: sudo apk add k9s```
+
+```zypper: sudo zypper install k9s```
+
+```brew: brew install k9s```
+
+```nix: nix profile install nixpkgs#k9s```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [stern](/man/stern)(1), [kubectx](/man/kubectx)(1)

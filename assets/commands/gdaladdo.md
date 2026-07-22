@@ -53,6 +53,14 @@ Without specified levels, the tool generates default pyramids. Custom levels def
 
 Overviews can be stored internally in the file or as separate .ovr sidecar files. Compression settings reduce overview file size. gdaladdo is essential for working with large imagery in GIS applications and web mapping services.
 
+# INSTALL
+
+```apt: sudo apt install gdal-bin```
+
+```apk: sudo apk add gdal-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gdal_translate](/man/gdal_translate)(1), [gdalinfo](/man/gdalinfo)(1)

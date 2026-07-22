@@ -59,6 +59,22 @@ Requires GTK+ libraries. Plugin system extends functionality. Some gedit 2 plugi
 
 **pluma** was created as part of the **MATE** desktop project, which forked GNOME 2 components when GNOME 3 was released. The name comes from Latin/Portuguese for "feather" (pen).
 
+# INSTALL
+
+```apt: sudo apt install pluma```
+
+```dnf: sudo dnf install pluma```
+
+```pacman: sudo pacman -S pluma```
+
+```apk: sudo apk add pluma```
+
+```zypper: sudo zypper install pluma```
+
+```nix: nix profile install nixpkgs#pluma```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gedit](/man/gedit)(1), [nano](/man/nano)(1), [vim](/man/vim)(1)

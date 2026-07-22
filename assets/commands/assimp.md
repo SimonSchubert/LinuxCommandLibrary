@@ -86,6 +86,21 @@ Conversion quality varies by format. Some features may be lost in translation. C
 
 The **Open Asset Import Library** was created around **2008** to provide a unified interface for loading 3D models across game engines and graphics applications.
 
+# INSTALL
+
+```apt: sudo apt install assimp-utils```
+
+```dnf: sudo dnf install assimp```
+
+```pacman: sudo pacman -S assimp```
+
+```apk: sudo apk add assimp```
+
+```brew: brew install assimp```
+
+```nix: nix profile install nixpkgs#assimp```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [blender](/man/blender)(1), [meshlab](/man/meshlab)(1), [meshlabserver](/man/meshlabserver)(1)

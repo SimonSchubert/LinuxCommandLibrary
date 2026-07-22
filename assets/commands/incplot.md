@@ -34,6 +34,12 @@ Requires a terminal with Unicode support for proper rendering. Output quality de
 
 **incplot** was created by **InCom-0** and is written in **C++**. It was designed as a quick visualization tool that prioritizes ergonomics and automatic formatting over manual configuration.
 
+# INSTALL
+
+```aur: yay -S incplot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnuplot](/man/gnuplot)(1), [youplot](/man/youplot)(1)

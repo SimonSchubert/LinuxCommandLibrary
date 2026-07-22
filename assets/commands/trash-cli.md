@@ -98,6 +98,20 @@ Trash uses disk space until emptied. Trashing large files fills disk. Doesn't wo
 
 **trash-cli** was created by **Andrea Francia** to provide command-line access to the standard Linux trash. It follows the FreeDesktop.org Trash specification for interoperability.
 
+# INSTALL
+
+```dnf: sudo dnf install trash-cli```
+
+```pacman: sudo pacman -S trash-cli```
+
+```zypper: sudo zypper install trash-cli```
+
+```brew: brew install trash-cli```
+
+```nix: nix profile install nixpkgs#trash-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rm](/man/rm)(1), [gio](/man/gio)(1), [gvfs-trash](/man/gvfs-trash)(1)

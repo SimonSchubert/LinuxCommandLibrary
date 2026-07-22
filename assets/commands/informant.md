@@ -72,6 +72,12 @@ Specific to Arch Linux. Requires network access to fetch news. Some operations r
 
 informant was created to address a common issue in Arch Linux: users updating their systems without reading important news announcements that may require manual intervention. It can block pacman updates until news is acknowledged.
 
+# INSTALL
+
+```aur: yay -S informant```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [yay](/man/yay)(8), [paru](/man/paru)(8)

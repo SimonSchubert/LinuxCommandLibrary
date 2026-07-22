@@ -111,6 +111,12 @@ Some games require a capable terminal emulator. Multiplayer games may not work w
 
 The BSD games collection evolved alongside Unix at **UC Berkeley** from the **1970s** onward. Many games were contributed by students and staff, becoming part of BSD Unix distributions. The collection represents a snapshot of early computer gaming when terminals were the primary interface. These games were open source before the term existed and have been preserved by the Linux community.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#bsdgames```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nethack](/man/nethack)(6), [angband](/man/angband)(6), [cowsay](/man/cowsay)(1)

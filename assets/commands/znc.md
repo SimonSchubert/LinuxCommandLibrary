@@ -50,6 +50,24 @@ Initial configuration is performed interactively with the **-c** flag, which wal
 
 Initial setup required via -c flag. Web interface available on configured port. Requires persistent server for continuous operation.
 
+# INSTALL
+
+```apt: sudo apt install znc```
+
+```dnf: sudo dnf install znc```
+
+```pacman: sudo pacman -S znc```
+
+```apk: sudo apk add znc```
+
+```zypper: sudo zypper install znc```
+
+```brew: brew install znc```
+
+```nix: nix profile install nixpkgs#znc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [irssi](/man/irssi)(1), [weechat](/man/weechat)(1)

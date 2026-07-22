@@ -128,6 +128,17 @@ Log groups have no default retention; logs are kept forever unless configured. T
 
 **Amazon CloudWatch Logs** launched in **July 2014** as an extension of CloudWatch monitoring. It initially supported EC2 logs via the CloudWatch agent. **CloudWatch Logs Insights** was introduced at **re:Invent 2018** for interactive log analysis. **Live Tail** was added in **2023** for real-time log streaming in the console. The service expanded to handle logs from virtually all AWS services.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-cloudwatch](/man/aws-cloudwatch)(1), [journalctl](/man/journalctl)(1), [tail](/man/tail)(1)

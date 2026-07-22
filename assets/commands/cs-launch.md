@@ -74,6 +74,20 @@ First launch downloads dependencies which takes time. Network connectivity requi
 
 cs launch is part of Coursier, created by Alexandre Archambault. The launch functionality enables the "run without install" workflow popularized by tools like npx, applied to the JVM ecosystem.
 
+# INSTALL
+
+```apt: sudo apt install csound```
+
+```pacman: sudo pacman -S csound```
+
+```zypper: sudo zypper install csound```
+
+```brew: brew install csound```
+
+```nix: nix profile install nixpkgs#csound```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cs](/man/cs)(1), [cs-resolve](/man/cs-resolve)(1), [java](/man/java)(1), [scala](/man/scala)(1)

@@ -95,6 +95,12 @@ Requires API keys from supported providers set via environment variables (ANTHRO
 
 Crush was developed by **Charmbracelet**, a company known for creating engaging terminal applications. It originated from a project by Kujtim Hoxha that was briefly associated with the OpenCode name before Charmbracelet rebranded their version as Crush, with the OpenCode name continuing as a separate fork. The project is released under the FSL-1.1-MIT license (MIT-compatible) and has gained over 8,900 GitHub stars. Version 0.4.0 was released in August 2025.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#crush```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1), [opencode](/man/opencode)(1), [aider](/man/aider)(1), [codex](/man/codex)(1)

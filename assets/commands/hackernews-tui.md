@@ -43,6 +43,12 @@ Requires an internet connection to fetch stories. The reader view may not render
 
 **hackernews-tui** was created by **aome510** and is written in **Rust** using the **Cursive** TUI library. It was first released in **2021** to provide a native terminal experience for Hacker News readers.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#hackernews-tui```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [circumflex](/man/circumflex)(1), [curl](/man/curl)(1)

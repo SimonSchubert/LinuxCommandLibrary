@@ -93,6 +93,16 @@ Requires rustup for toolchain management.
 
 Binary search is much faster than linear for the many Rust minor versions. Requires rustup for downloading and managing toolchains. The `find` command compiles the project with each candidate version, which can be slow for large projects. The `rust-version` field in Cargo.toml only supports two-component versions (e.g., 1.56) since Rust 1.56.
 
+# INSTALL
+
+```pacman: sudo pacman -S cargo-msrv```
+
+```brew: brew install cargo-msrv```
+
+```nix: nix profile install nixpkgs#cargo-msrv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [rustup](/man/rustup)(1)

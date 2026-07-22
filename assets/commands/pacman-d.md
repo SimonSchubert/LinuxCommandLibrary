@@ -52,6 +52,20 @@ The most common use is changing a package's install reason between dependency an
 
 Marking packages incorrectly can affect orphan detection with `pacman -Qdtq`. Packages marked `--asdeps` may be removed when running `pacman -Rs`.
 
+# INSTALL
+
+```apt: sudo apt install pacman-package-manager```
+
+```dnf: sudo dnf install pacman```
+
+```pacman: sudo pacman -S pacman```
+
+```apk: sudo apk add pacman```
+
+```nix: nix profile install nixpkgs#pacman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pacman-database](/man/pacman-database)(8), [pacman-query](/man/pacman-query)(8)

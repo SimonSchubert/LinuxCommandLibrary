@@ -55,6 +55,24 @@ Convert PPM to HP PaintJet format
 
 **ppmtopj** reads a PPM image and converts it to HP PaintJet printer format for direct printing. For best results, the input should be in 8-color RGB form (binary combinations of full-on and full-off primaries). Part of the Netpbm toolkit.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pjtoppm](/man/pjtoppm)(1), [ppmtopjxl](/man/ppmtopjxl)(1)

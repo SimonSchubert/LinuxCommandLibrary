@@ -83,6 +83,22 @@ Thunderbolt security levels are set in BIOS/UEFI. Not all systems support all se
 
 Thunderbolt security became important with the discovery of DMA attacks through Thunderbolt ports. The bolt project was developed to provide user-space security controls for Linux systems.
 
+# INSTALL
+
+```apt: sudo apt install bolt```
+
+```dnf: sudo dnf install bolt```
+
+```pacman: sudo pacman -S bolt```
+
+```apk: sudo apk add bolt```
+
+```zypper: sudo zypper install bolt```
+
+```nix: nix profile install nixpkgs#bolt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [boltd](/man/boltd)(8), [udevadm](/man/udevadm)(8)

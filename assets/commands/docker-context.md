@@ -74,6 +74,24 @@ The default context named "default" connects to the local Docker daemon via Unix
 **~/.docker/contexts**
 > Directory storing context metadata and TLS certificates for custom contexts.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-machine](/man/docker-machine)(1)

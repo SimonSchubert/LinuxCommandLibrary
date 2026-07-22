@@ -131,6 +131,14 @@ The tool is used by Android Studio, the Android Gradle plugin, and Google Play t
 
 Requires Java Runtime Environment. Device installation requires ADB and a connected Android device. Signed APKs require keystore credentials. App bundles must be valid according to Android App Bundle specification.
 
+# INSTALL
+
+```brew: brew install bundletool```
+
+```nix: nix profile install nixpkgs#bundletool```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [adb](/man/adb)(1), [apksigner](/man/apksigner)(1), [zipalign](/man/zipalign)(1)

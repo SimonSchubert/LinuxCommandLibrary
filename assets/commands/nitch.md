@@ -53,6 +53,12 @@ Package count accuracy depends on the package manager detected. Some information
 
 **nitch** was developed by **ssleert** as an alternative to heavier system fetch tools like neofetch and fastfetch. Written in Nim for high performance, it focuses on displaying only essential system information with minimal resource usage. It targets Linux systems and retrieves data directly from system files such as /proc and /etc/os-release.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nitch```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [neofetch](/man/neofetch)(1), [fastfetch](/man/fastfetch)(1), [screenfetch](/man/screenfetch)(1), [pfetch](/man/pfetch)(1), [cpufetch](/man/cpufetch)(1)

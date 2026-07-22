@@ -71,6 +71,15 @@ Large enumerations produce complex visualizations that may be slow to render. D3
 
 **amass viz** was added to help security professionals visualize and communicate enumeration results, supporting multiple output formats for different use cases.
 
+# INSTALL
+
+```aur: yay -S amass```
+
+```brew: brew install amass```
+
+```nix: nix profile install nixpkgs#amass```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [amass](/man/amass)(1), [amass-enum](/man/amass-enum)(1), [amass-db](/man/amass-db)(1), [amass-track](/man/amass-track)(1), [dot](/man/dot)(1)

@@ -65,6 +65,20 @@ Full features need agent imported. Works with compatible Go versions. Some info 
 
 gops was created by **Jaana Dogan** at Google to provide a diagnostic tool for Go processes.
 
+# INSTALL
+
+```dnf: sudo dnf install gops```
+
+```apk: sudo apk add gops```
+
+```zypper: sudo zypper install gops```
+
+```brew: brew install gops```
+
+```nix: nix profile install nixpkgs#gops```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go-tool](/man/go-tool)(1), [pprof](/man/pprof)(1)

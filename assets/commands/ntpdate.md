@@ -63,6 +63,12 @@ Multiple servers can be specified; ntpdate queries all and uses the best respons
 
 ntpdate was part of the original NTP distribution but has been deprecated since NTP 4.2.8. Modern systems typically use **systemd-timesyncd**, **chrony**, or **ntpd** for time synchronization.
 
+# INSTALL
+
+```apt: sudo apt install ntpsec-ntpdate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ntpd](/man/ntpd)(8), [chronyc](/man/chronyc)(1), [timedatectl](/man/timedatectl)(1), [sntp](/man/sntp)(8)

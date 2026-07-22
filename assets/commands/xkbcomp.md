@@ -74,6 +74,22 @@ Complex syntax requires understanding XKB architecture. Without $DISPLAY, only c
 
 **xkbcomp** is part of the X Keyboard Extension (XKB), introduced in X11R6 to replace the limited keyboard handling of earlier X versions. XKB provides a comprehensive framework for keyboard configuration that supports internationalization and accessibility features.
 
+# INSTALL
+
+```apt: sudo apt install x11-xkb-utils```
+
+```dnf: sudo dnf install xkbcomp```
+
+```apk: sudo apk add xkbcomp```
+
+```zypper: sudo zypper install xkbcomp```
+
+```brew: brew install xkbcomp```
+
+```nix: nix profile install nixpkgs#xkbcomp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [setxkbmap](/man/setxkbmap)(1), [xmodmap](/man/xmodmap)(1), [xev](/man/xev)(1)

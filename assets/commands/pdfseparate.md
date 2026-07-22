@@ -60,6 +60,18 @@ Cannot select non-contiguous pages. Each page is a separate file (no multi-page 
 
 **pdfseparate** is part of **poppler-utils**, the open-source PDF utilities derived from **Xpdf**. It provides simple page extraction without complex dependencies.
 
+# INSTALL
+
+```apt: sudo apt install poppler-utils```
+
+```dnf: sudo dnf install poppler-utils```
+
+```apk: sudo apk add poppler-utils```
+
+```nix: nix profile install nixpkgs#poppler-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pdfunite](/man/pdfunite)(1), [pdftk](/man/pdftk)(1), [qpdf](/man/qpdf)(1), [pdfinfo](/man/pdfinfo)(1)

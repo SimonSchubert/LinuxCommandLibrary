@@ -94,6 +94,22 @@ Requires a valid Flatpak runtime and SDK to be installed. Large applications wit
 
 Flatpak-builder was developed alongside **Flatpak** by Alexander Larsson at Red Hat, with initial releases around **2015-2016**. It emerged from the xdg-app project and became the standard tool for building Flatpak applications from source, enabling reproducible builds across different Linux distributions.
 
+# INSTALL
+
+```apt: sudo apt install flatpak-builder```
+
+```dnf: sudo dnf install flatpak-builder```
+
+```pacman: sudo pacman -S flatpak-builder```
+
+```apk: sudo apk add flatpak-builder```
+
+```zypper: sudo zypper install flatpak-builder```
+
+```nix: nix profile install nixpkgs#flatpak-builder```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [flatpak](/man/flatpak)(1), [flatpak-install](/man/flatpak-install)(1)

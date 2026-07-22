@@ -91,6 +91,14 @@ Default installation binds to localhost only. For remote access, configuration c
 
 CouchDB was created by Damien Katz, who began the project in **2005** using C++, then rewrote it in Erlang in **2008**. It became an Apache project in **2008** and graduated to top-level project status in **2010**. The name refers to sitting on your "couch" and relaxing.
 
+# INSTALL
+
+```pacman: sudo pacman -S couchdb```
+
+```brew: brew install couchdb```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [mongod](/man/mongod)(1), [redis-server](/man/redis-server)(1)

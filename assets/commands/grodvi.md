@@ -54,6 +54,24 @@ Part of groff package. DVI format has limitations compared to PDF. Requires TeX 
 
 grodvi was developed as part of **GNU groff** to provide DVI output capability, bridging groff and TeX ecosystems.
 
+# INSTALL
+
+```apt: sudo apt install groff```
+
+```dnf: sudo dnf install groff```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [grops](/man/grops)(1), [dvips](/man/dvips)(1)

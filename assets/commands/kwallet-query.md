@@ -64,6 +64,14 @@ Wallet must be unlocked before querying. Sensitive data will be displayed in pla
 
 **KWallet** is the credential storage subsystem of **KDE**, introduced in the early 2000s as KDE's equivalent to GNOME Keyring. **kwallet-query** was added to provide a non-interactive, scriptable interface to wallet contents for scripts and headless setups, complementing the graphical **kwalletmanager**.
 
+# INSTALL
+
+```apt: sudo apt install kwallet6```
+
+```apk: sudo apk add kwallet-bin```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [secret-tool](/man/secret-tool)(1)

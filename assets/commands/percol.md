@@ -108,6 +108,12 @@ Written in Python and noticeably slower than `fzf` or `peco` on very large input
 
 **percol** was created by **mooz** and written in **Python**. Its interface is inspired by `anything.el` for Emacs. It predates `fzf` and `peco` and popularized the "interactive filter pipe" pattern.
 
+# INSTALL
+
+```brew: brew install percol```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fzf](/man/fzf)(1), [peco](/man/peco)(1), [sk](/man/sk)(1), [grep](/man/grep)(1), [rofi](/man/rofi)(1)

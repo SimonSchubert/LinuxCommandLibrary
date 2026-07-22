@@ -24,6 +24,14 @@ Requires a Reddit API "script" application to be created via the Reddit develope
 
 **reddix** was created by **ck-zhang** and is written in **Rust**.
 
+# INSTALL
+
+```brew: brew install reddix```
+
+```nix: nix profile install nixpkgs#reddix```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tuir](/man/tuir)(1)

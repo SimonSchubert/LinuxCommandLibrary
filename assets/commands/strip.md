@@ -121,6 +121,24 @@ Stripping modifies files in place; back up originals if needed. Over-stripping c
 
 **strip** is part of GNU **binutils**, the collection of binary tools maintained by the Free Software Foundation. The command originated in early Unix at Bell Labs in the **1970s** as a way to reduce executable size on systems with limited storage. GNU binutils provides the modern implementation used on Linux.
 
+# INSTALL
+
+```apt: sudo apt install binutils```
+
+```dnf: sudo dnf install binutils```
+
+```pacman: sudo pacman -S binutils```
+
+```apk: sudo apk add binutils```
+
+```zypper: sudo zypper install binutils```
+
+```brew: brew install binutils```
+
+```nix: nix profile install nixpkgs#binutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [objcopy](/man/objcopy)(1), [objdump](/man/objdump)(1), [readelf](/man/readelf)(1), [nm](/man/nm)(1), [ar](/man/ar)(1), [size](/man/size)(1)

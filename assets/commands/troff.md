@@ -101,6 +101,24 @@ Direct use of troff is uncommon; **groff** is the preferred wrapper that handles
 
 The original troff was written by **Joe Ossanna** at Bell Labs in **1973** as part of Unix, evolving from the earlier runoff formatter. After Ossanna's death in 1977, **Brian Kernighan** rewrote and maintained troff. GNU troff (groff) was developed by **James Clark** starting in **1989** as a free software replacement, and is now maintained by the groff project as part of the GNU system.
 
+# INSTALL
+
+```apt: sudo apt install groff-base```
+
+```dnf: sudo dnf install groff-base```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [nroff](/man/nroff)(1), [man](/man/man)(1), [tbl](/man/tbl)(1), [eqn](/man/eqn)(1)

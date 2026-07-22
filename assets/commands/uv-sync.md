@@ -45,6 +45,20 @@ Synchronize project virtual environment
 
 **uv sync** synchronizes the virtual environment with project dependencies. Creates venv if needed, installs/removes packages to match lockfile. Core command for environment management.
 
+# INSTALL
+
+```dnf: sudo dnf install uv```
+
+```pacman: sudo pacman -S uv```
+
+```apk: sudo apk add uv```
+
+```brew: brew install uv```
+
+```nix: nix profile install nixpkgs#uv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uv](/man/uv)(1), [uv-lock](/man/uv-lock)(1), [uv-add](/man/uv-add)(1)

@@ -86,6 +86,20 @@ D-Bus method signatures must match exactly. Complex types require proper GVarian
 
 gdbus was introduced as part of GLib's GDBus implementation in **2010** (GLib 2.26), replacing the older dbus-glib bindings. It provides a more modern, GObject-based interface to D-Bus.
 
+# INSTALL
+
+```apt: sudo apt install libglib2.0-bin```
+
+```dnf: sudo dnf install glib```
+
+```apk: sudo apk add glib```
+
+```brew: brew install glib```
+
+```nix: nix profile install nixpkgs#glib```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dbus-send](/man/dbus-send)(1), [busctl](/man/busctl)(1), [qdbus](/man/qdbus)(1)

@@ -108,6 +108,18 @@ Tape operations can be slow, especially erase and retension. Using the wrong dev
 
 **mt** (magnetic tape) has been a standard Unix utility since early Unix systems for controlling tape drives. The Linux version supports additional SCSI tape features beyond traditional operations.
 
+# INSTALL
+
+```dnf: sudo dnf install mt-st```
+
+```apk: sudo apk add mt-st```
+
+```zypper: sudo zypper install mt-st```
+
+```nix: nix profile install nixpkgs#mt-st```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tar](/man/tar)(1), [dd](/man/dd)(1), [st](/man/st)(4)

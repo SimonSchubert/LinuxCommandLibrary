@@ -100,6 +100,21 @@ Requires root privileges to access audit logs. The audit daemon must be running 
 
 **ausearch** is part of the **audit** package, providing search capabilities for the Linux Audit Framework.
 
+# INSTALL
+
+```apt: sudo apt install auditd```
+
+```dnf: sudo dnf install audit```
+
+```pacman: sudo pacman -S audit```
+
+```apk: sudo apk add audit```
+
+```zypper: sudo zypper install audit```
+
+```nix: nix profile install nixpkgs#audit```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aureport](/man/aureport)(8), [auditctl](/man/auditctl)(8), [audit2why](/man/audit2why)(1)

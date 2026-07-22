@@ -83,6 +83,16 @@ Requires Exercism account and API token. Internet connection needed for download
 
 **Exercism** was founded by **Katrina Owen** in **2013** as a platform for deliberate practice in programming. The CLI enables offline work on exercises with integration to the web platform for submission and mentoring.
 
+# INSTALL
+
+```dnf: sudo dnf install exercism```
+
+```brew: brew install exercism```
+
+```nix: nix profile install nixpkgs#exercism```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git](/man/git)(1), [npm](/man/npm)(1), [pip](/man/pip)(1)

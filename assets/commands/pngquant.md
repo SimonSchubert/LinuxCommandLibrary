@@ -101,6 +101,24 @@ Lossy compression - some quality is lost. 256 color maximum limits complex image
 
 **pngquant** was created by **Greg Roelofs** around **1997** with the original PNG specification work. The project was later taken over by **Kornel Lesinski** who rewrote it with the libimagequant library around **2011**. It became essential for web optimization, used in build tools and image CDNs to reduce bandwidth.
 
+# INSTALL
+
+```apt: sudo apt install pngquant```
+
+```dnf: sudo dnf install pngquant```
+
+```pacman: sudo pacman -S pngquant```
+
+```apk: sudo apk add pngquant```
+
+```zypper: sudo zypper install pngquant```
+
+```brew: brew install pngquant```
+
+```nix: nix profile install nixpkgs#pngquant```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [optipng](/man/optipng)(1), [oxipng](/man/oxipng)(1), [imagemagick](/man/imagemagick)(1), [jpegoptim](/man/jpegoptim)(1)

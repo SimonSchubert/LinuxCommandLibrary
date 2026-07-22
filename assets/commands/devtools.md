@@ -115,6 +115,12 @@ Requires sudo and systemd-nspawn. Initial chroot creation downloads the base sys
 
 devtools was developed by **Arch Linux developers** to standardize package building. The scripts evolved from manual processes into automated tools. Using clean chroots became mandatory for official Arch packages to ensure reproducibility. The tools have been refined over years of use by the Arch packaging community.
 
+# INSTALL
+
+```pacman: sudo pacman -S devtools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [makepkg](/man/makepkg)(8), [pacman](/man/pacman)(8), [pkgctl](/man/pkgctl)(1), [systemd-nspawn](/man/systemd-nspawn)(1)

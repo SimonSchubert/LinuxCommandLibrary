@@ -46,6 +46,14 @@ environment command executor
 
 **conda run** executes a command within a conda environment without activating it. This is useful for scripts and automation where you need to run commands in different environments.
 
+# INSTALL
+
+```dnf: sudo dnf install conda```
+
+```nix: nix profile install nixpkgs#conda```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [conda-activate](/man/conda-activate)(1)

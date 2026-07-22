@@ -51,6 +51,14 @@ The table mode (-t) is particularly useful for aligning structured data into rea
 
 Part of util-linux. The table mode requires consistent delimiter usage. Very long lines may cause formatting issues.
 
+# INSTALL
+
+```apt: sudo apt install bsdextrautils```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [colrm](/man/colrm)(1), [cut](/man/cut)(1), [paste](/man/paste)(1)

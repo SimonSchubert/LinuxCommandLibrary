@@ -66,6 +66,24 @@ If both **-r** and **-t** are given, the last one specified controls the behavio
 
 **soelim** is part of the GNU **groff** (GNU troff) package, which is the GNU implementation of the traditional Unix document formatting system troff. The groff system has been developed since the late 1980s as a free software replacement for the proprietary Unix troff. soelim provides compatibility with traditional troff preprocessing workflows.
 
+# INSTALL
+
+```apt: sudo apt install groff-base```
+
+```dnf: sudo dnf install groff-base```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [groff](/man/groff)(1), [troff](/man/troff)(1), [nroff](/man/nroff)(1), [eqn](/man/eqn)(1), [tbl](/man/tbl)(1), [refer](/man/refer)(1), [man](/man/man)(1)

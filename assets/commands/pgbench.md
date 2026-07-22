@@ -126,6 +126,12 @@ Not a full TPC-B implementation. Results depend on hardware, configuration, and 
 
 **pgbench** has been part of **PostgreSQL** since version 7.0, originally written by **Tatsuo Ishii**. It provides a standard way to test PostgreSQL performance and compare configurations.
 
+# INSTALL
+
+```apk: sudo apk add postgresql17-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [psql](/man/psql)(1), [pg_dump](/man/pg_dump)(1), [postgres](/man/postgres)(1)

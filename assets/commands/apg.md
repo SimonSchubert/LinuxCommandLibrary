@@ -81,6 +81,21 @@ Pronounceable passwords may have patterns that reduce entropy. For high-security
 
 **apg** was created by Adel I. Mirzazhanov, implementing both random and pronounceable password generation algorithms for Unix systems.
 
+# INSTALL
+
+```apt: sudo apt install apg```
+
+```dnf: sudo dnf install apg```
+
+```aur: yay -S apg```
+
+```apk: sudo apk add apg```
+
+```zypper: sudo zypper install apg```
+
+```nix: nix profile install nixpkgs#apg```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [pwgen](/man/pwgen)(1), [openssl](/man/openssl)(1), [mkpasswd](/man/mkpasswd)(1)

@@ -119,6 +119,12 @@ Only use with explicit authorization. WinRM must be enabled on the target (ports
 
 Evil-WinRM was created by **Hackplayers** for the security research community, providing a feature-rich alternative to standard WinRM tools for penetration testing.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#evil-winrm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [winrm](/man/winrm)(1), [impacket](/man/impacket)(1), [sshpass](/man/sshpass)(1)

@@ -86,6 +86,14 @@ Requires SDL for graphics and sound. Levels vary wildly in rules, objectives and
 
 **cuyo** was written by **Mark Weyer** and first released around **2001** as a free software homage to Puyo Puyo, but it quickly diverged by introducing per-level rule changes and a level description language. It is packaged in Debian and Ubuntu under the **cuyo** package.
 
+# INSTALL
+
+```pacman: sudo pacman -S cuyo```
+
+```nix: nix profile install nixpkgs#cuyo```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tetris](/man/tetris)(6), [bastet](/man/bastet)(6)

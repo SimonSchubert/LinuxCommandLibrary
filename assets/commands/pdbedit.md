@@ -79,6 +79,24 @@ Requires root privileges. User must exist in Unix passwd database before adding 
 
 Part of the **Samba** suite since Samba 3.0, replacing older password database tools. Provides a unified interface for managing various Samba passdb backends as Samba moved away from the legacy smbpasswd file format.
 
+# INSTALL
+
+```apt: sudo apt install samba```
+
+```dnf: sudo dnf install samba```
+
+```pacman: sudo pacman -S samba```
+
+```apk: sudo apk add samba-common-tools```
+
+```zypper: sudo zypper install samba```
+
+```brew: brew install samba```
+
+```nix: nix profile install nixpkgs#samba```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [smbpasswd](/man/smbpasswd)(8), [samba](/man/samba)(7)

@@ -144,6 +144,20 @@ Pico was originally part of the Pine email suite which had licensing restriction
 
 Pico was developed at the **University of Washington** as part of the **Pine** email client, first released in **1992**. The name stands for "**P**ine **I**nternal **CO**mposer" or "**P**rogram for **I**nternet **CO**mmunications". Due to Pine's restrictive license, the GNU project created **nano** in **1999** as a free replacement. Nano eventually superseded pico in most distributions, though the pico command often remains as an alias.
 
+# INSTALL
+
+```dnf: sudo dnf install alpine```
+
+```apk: sudo apk add alpine```
+
+```zypper: sudo zypper install alpine```
+
+```brew: brew install alpine```
+
+```nix: nix profile install nixpkgs#alpine```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nano](/man/nano)(1), [vi](/man/vi)(1), [emacs](/man/emacs)(1), [pine](/man/pine)(1)

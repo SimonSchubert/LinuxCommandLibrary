@@ -100,6 +100,15 @@ Requires plugins for each tool. Shell initialization needed (~/.bashrc or ~/.zsh
 
 **asdf** was created by @HashNuke around **2014** to provide a single version manager replacing language-specific tools like nvm, rbenv, and pyenv. Originally a Bash/shim project, it was rewritten in Go for the **0.16** release in early 2025.
 
+# INSTALL
+
+```zypper: sudo zypper install asdf```
+
+```brew: brew install asdf```
+
+```nix: nix profile install nixpkgs#asdf```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [nvm](/man/nvm)(1), [rbenv](/man/rbenv)(1), [pyenv](/man/pyenv)(1), [mise](/man/mise)(1), [direnv](/man/direnv)(1)

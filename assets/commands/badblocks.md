@@ -98,6 +98,23 @@ Write modes DESTROY all data on the device. Requires root privileges. Very slow 
 
 **badblocks** has been part of e2fsprogs since the early **1990s**, created as a companion tool for ext2 filesystem management.
 
+# INSTALL
+
+```apt: sudo apt install e2fsprogs```
+
+```dnf: sudo dnf install e2fsprogs```
+
+```pacman: sudo pacman -S e2fsprogs```
+
+```apk: sudo apk add e2fsprogs-extra```
+
+```zypper: sudo zypper install e2fsprogs```
+
+```brew: brew install e2fsprogs```
+
+```nix: nix profile install nixpkgs#e2fsprogs```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [e2fsck](/man/e2fsck)(8), [fsck](/man/fsck)(8), [smartctl](/man/smartctl)(8), [dd](/man/dd)(1), [hdparm](/man/hdparm)(8)

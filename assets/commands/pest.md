@@ -92,6 +92,12 @@ Requires PHP 8.1 or higher. Built on PHPUnit. Some PHPUnit features accessed dif
 
 **Pest** was created by **Nuno Maduro** in **2020**. It brings a modern, expressive syntax to PHP testing while maintaining full PHPUnit compatibility.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#pest```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [phpunit](/man/phpunit)(1), [php](/man/php)(1), [composer](/man/composer)(1)

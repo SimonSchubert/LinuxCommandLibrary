@@ -63,6 +63,22 @@ Configuration files use a declarative format defining users and groups. Users cr
 
 **systemd-sysusers** is part of **systemd**, implementing declarative system user/group creation to ensure consistent user accounts across installations.
 
+# INSTALL
+
+```apt: sudo apt install systemd```
+
+```dnf: sudo dnf install systemd```
+
+```pacman: sudo pacman -S systemd```
+
+```zypper: sudo zypper install systemd```
+
+```brew: brew install systemd```
+
+```nix: nix profile install nixpkgs#systemd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-tmpfiles](/man/systemd-tmpfiles)(8), [useradd](/man/useradd)(8)

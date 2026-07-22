@@ -103,6 +103,16 @@ The **-n** option (wait for any single job) is a Bash extension not available in
 
 If no arguments are given and no child processes exist, wait returns 0. If a specified PID does not exist, wait returns 127.
 
+# INSTALL
+
+```apk: sudo apk add execline```
+
+```brew: brew install execline```
+
+```nix: nix profile install nixpkgs#execline```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jobs](/man/jobs)(1), [bg](/man/bg)(1), [fg](/man/fg)(1), [kill](/man/kill)(1), [bash](/man/bash)(1), [disown](/man/disown)(1)

@@ -60,6 +60,24 @@ converts PGM grayscale images to PBM bitmap
 
 **pgmtopbm** converts PGM grayscale images to PBM bitmap format. It uses dithering or thresholding to create 1-bit output from grayscale input. Part of the Netpbm toolkit. This tool is largely obsolete since Netpbm 10.23 (July 2004); [pamditherbw](/man/pamditherbw)(1) is the recommended replacement with better gamma handling.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pbmtopgm](/man/pbmtopgm)(1), [pamditherbw](/man/pamditherbw)(1), [pgmtoppm](/man/pgmtoppm)(1)

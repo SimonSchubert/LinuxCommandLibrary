@@ -68,6 +68,16 @@ The tool supports common operations including creating and modifying DNS records
 
 Flarectl is particularly useful for infrastructure-as-code workflows, CI/CD pipelines, and bulk operations across multiple domains. It outputs results in human-readable format by default, with JSON output available for scripting and automation.
 
+# INSTALL
+
+```apk: sudo apk add flarectl```
+
+```brew: brew install flarectl```
+
+```nix: nix profile install nixpkgs#flarectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cloudflared](/man/cloudflared)(1)

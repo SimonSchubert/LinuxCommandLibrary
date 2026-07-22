@@ -113,6 +113,19 @@ The **sg** alias may conflict with other commands on some systems. Pattern synta
 
 **ast-grep** was created by **Herrington Darkholme** and released in **2022**. Written in Rust for performance, it was designed to bring structural code search to the command line, inspired by tools like Semgrep and Comby.
 
+# INSTALL
+
+```pacman: sudo pacman -S ast-grep```
+
+```apk: sudo apk add ast-grep```
+
+```zypper: sudo zypper install ast-grep```
+
+```brew: brew install ast-grep```
+
+```nix: nix profile install nixpkgs#ast-grep```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [grep](/man/grep)(1), [ripgrep](/man/ripgrep)(1), [sed](/man/sed)(1), [semgrep](/man/semgrep)(1)

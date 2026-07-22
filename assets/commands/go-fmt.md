@@ -65,6 +65,24 @@ format Go source code to standard style
 
 **go fmt** and **gofmt** accept different parameters. Use **gofmt** directly for **-s**, **-d**, **-l**, and **-r** options.
 
+# INSTALL
+
+```apt: sudo apt install gccgo-go```
+
+```dnf: sudo dnf install gcc-go```
+
+```pacman: sudo pacman -S gcc-go```
+
+```apk: sudo apk add gcc-go```
+
+```zypper: sudo zypper install gcc-go```
+
+```brew: brew install go```
+
+```nix: nix profile install nixpkgs#go```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [goimports](/man/goimports)(1)

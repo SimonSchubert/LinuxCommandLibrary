@@ -73,6 +73,14 @@ privacy-focused Firefox fork with enhanced security defaults
 
 **librewolf** is a privacy-focused Firefox fork with enhanced security defaults. Removes telemetry, includes uBlock Origin, and applies privacy-hardening configurations. Maintains Firefox compatibility while prioritizing user privacy. Since it is based on Firefox, it accepts all standard Firefox command-line options.
 
+# INSTALL
+
+```apk: sudo apk add librewolf```
+
+```nix: nix profile install nixpkgs#librewolf```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [firefox](/man/firefox)(1)

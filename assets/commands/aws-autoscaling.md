@@ -120,6 +120,17 @@ Launch templates are recommended over legacy launch configurations. Deleting a g
 
 **Amazon EC2 Auto Scaling** launched in **May 2009** as one of AWS's earliest services for elastic compute capacity. Originally using launch configurations, AWS introduced launch templates in **2017** for more flexibility. The service has expanded to support mixed instance types, predictive scaling, and warm pools for faster scaling.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ec2](/man/aws-ec2)(1), [aws-elbv2](/man/aws-elbv2)(1), [aws-cloudwatch](/man/aws-cloudwatch)(1)

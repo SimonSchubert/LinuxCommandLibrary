@@ -84,6 +84,22 @@ Requires a valid **pom.xml**. Network access is needed for initial resolution. T
 
 The Maven Dependency Plugin is part of **Apache Maven**, providing dependency analysis since early Maven versions.
 
+# INSTALL
+
+```dnf: sudo dnf install maven```
+
+```pacman: sudo pacman -S maven```
+
+```apk: sudo apk add maven```
+
+```zypper: sudo zypper install maven```
+
+```brew: brew install maven```
+
+```nix: nix profile install nixpkgs#maven```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mvn](/man/mvn)(1), [mvn-deploy](/man/mvn-deploy)(1), [gradle](/man/gradle)(1)

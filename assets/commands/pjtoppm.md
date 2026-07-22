@@ -34,6 +34,24 @@ Only a limited subset of PaintJet commands is supported, so complex PCL document
 
 **pjtoppm** was written by Christos Zoulas in 1991 and has shipped as part of the **Netpbm** package ever since. It references the HP PaintJet XL Color Graphics Printer User's Guide.
 
+# INSTALL
+
+```apt: sudo apt install netpbm```
+
+```dnf: sudo dnf install netpbm```
+
+```pacman: sudo pacman -S netpbm```
+
+```apk: sudo apk add netpbm```
+
+```zypper: sudo zypper install netpbm```
+
+```brew: brew install netpbm```
+
+```nix: nix profile install nixpkgs#netpbm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ppmtopj](/man/ppmtopj)(1), [pcxtoppm](/man/pcxtoppm)(1), [pnmtops](/man/pnmtops)(1)

@@ -52,6 +52,24 @@ SSH remotes (**git@host:user/repo.git**) are converted to HTTPS automatically. W
 
 Only recognizes GitHub, GitLab, and Bitbucket remote URL formats. Requires a browser opener (**open**, **xdg-open**, or **start**) available on the system.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh-browse](/man/gh-browse)(1), [git-extras](/man/git-extras)(1)

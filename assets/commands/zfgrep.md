@@ -72,6 +72,24 @@ Fixed string matching means special characters like **.**,**\***, **[** are lite
 
 Processing large compressed files requires CPU for decompression.
 
+# INSTALL
+
+```apt: sudo apt install gzip```
+
+```dnf: sudo dnf install gzip```
+
+```pacman: sudo pacman -S gzip```
+
+```apk: sudo apk add gzip```
+
+```zypper: sudo zypper install gzip```
+
+```brew: brew install gzip```
+
+```nix: nix profile install nixpkgs#gzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [zgrep](/man/zgrep)(1), [zegrep](/man/zegrep)(1), [fgrep](/man/fgrep)(1), [zcat](/man/zcat)(1), [gzip](/man/gzip)(1)

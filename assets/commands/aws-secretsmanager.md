@@ -77,6 +77,17 @@ Deleted secrets enter a recovery window (default 30 days) before permanent delet
 
 AWS Secrets Manager was launched in **April 2018** to provide a centralized secrets management service with built-in rotation capabilities. It replaced ad-hoc solutions like storing secrets in environment variables, configuration files, or Parameter Store.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-ssm](/man/aws-ssm)(1), [vault](/man/vault)(1)

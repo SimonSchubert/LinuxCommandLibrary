@@ -107,6 +107,18 @@ Requires compatible TL866 or T48 programmer hardware. Not all chips in database 
 
 **minipro** was created as an open-source alternative to the proprietary Windows software for TL866 programmers. Development began around **2014**, enabling Linux and macOS support for this popular affordable programmer.
 
+# INSTALL
+
+```dnf: sudo dnf install minipro```
+
+```apk: sudo apk add minipro```
+
+```brew: brew install minipro```
+
+```nix: nix profile install nixpkgs#minipro```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [avrdude](/man/avrdude)(1), [flashrom](/man/flashrom)(8)

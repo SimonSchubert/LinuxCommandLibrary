@@ -33,6 +33,24 @@ The operation is destructive and cannot be undone, as it permanently deletes unc
 
 Irreversibly deletes untracked and ignored files alongside the hard reset; there is no undo. Requires **git-extras** to be installed.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-clear-soft](/man/git-clear-soft)(1), [git-reset](/man/git-reset)(1), [git-clean](/man/git-clean)(1), [git-extras](/man/git-extras)(1)

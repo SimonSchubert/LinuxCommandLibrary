@@ -82,6 +82,22 @@ Requires modern terminal with Unicode support. Some features platform-specific. 
 
 **bottom** was created by Clement Tsang around **2019** as a modern, customizable system monitor written in Rust.
 
+# INSTALL
+
+```apt: sudo apt install btm```
+
+```pacman: sudo pacman -S bottom```
+
+```apk: sudo apk add bottom```
+
+```zypper: sudo zypper install bottom```
+
+```brew: brew install bottom```
+
+```nix: nix profile install nixpkgs#bottom```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [htop](/man/htop)(1), [btop](/man/btop)(1), [top](/man/top)(1)

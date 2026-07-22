@@ -37,6 +37,14 @@ See **fzf-make --help** for flags supported by your version (history, config, an
 
 Needs a terminal UI and the underlying tool (**make**, **npm**, **task**, etc.) installed for the project type you select. Behaviour depends on how targets are declared; malformed Makefiles or Taskfiles may yield incomplete lists.
 
+# INSTALL
+
+```brew: brew install fzf-make```
+
+```nix: nix profile install nixpkgs#fzf-make```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [make](/man/make)(1), [just](/man/just)(1), [task](/man/task)(1), [fzf](/man/fzf)(1)

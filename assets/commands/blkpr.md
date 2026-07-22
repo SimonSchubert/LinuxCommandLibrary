@@ -54,6 +54,14 @@ Requires devices that support SCSI Persistent Reservations. Used in clustered st
 
 **blkpr** is part of **util-linux**, providing block device persistent reservation management.
 
+# INSTALL
+
+```apt: sudo apt install util-linux-extra```
+
+```apk: sudo apk add util-linux-misc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [blockdev](/man/blockdev)(8)

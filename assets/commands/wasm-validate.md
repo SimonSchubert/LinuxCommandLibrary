@@ -123,6 +123,20 @@ Valid modules may still have runtime errors. Feature flags must match the capabi
 
 **wasm-validate** is part of WABT (WebAssembly Binary Toolkit), developed by the WebAssembly Community Group. It provides early detection of invalid modules before attempting to run them, useful in build pipelines and debugging.
 
+# INSTALL
+
+```apt: sudo apt install wabt```
+
+```dnf: sudo dnf install wabt```
+
+```pacman: sudo pacman -S wabt```
+
+```brew: brew install wabt```
+
+```nix: nix profile install nixpkgs#wabt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [wasm-objdump](/man/wasm-objdump)(1), [wasm-strip](/man/wasm-strip)(1), [wasm2wat](/man/wasm2wat)(1), [wat2wasm](/man/wat2wasm)(1), [wasm2c](/man/wasm2c)(1)

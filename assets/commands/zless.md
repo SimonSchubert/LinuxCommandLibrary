@@ -78,6 +78,24 @@ zless is a gzip-specific tool and does not natively support bzip2, xz, lzma, or 
 
 zless is part of the **gzip** package and was created as a companion to the zcat and zmore utilities. It combines the decompression capabilities of gzip with the advanced paging features of **less**, which became the preferred pager over **more** due to its ability to scroll backward and search. The command is included in most Unix-like systems as part of the standard gzip distribution.
 
+# INSTALL
+
+```apt: sudo apt install gzip```
+
+```dnf: sudo dnf install gzip```
+
+```pacman: sudo pacman -S gzip```
+
+```apk: sudo apk add gzip```
+
+```zypper: sudo zypper install gzip```
+
+```brew: brew install gzip```
+
+```nix: nix profile install nixpkgs#gzip```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [less](/man/less)(1), [zcat](/man/zcat)(1), [zmore](/man/zmore)(1), [zgrep](/man/zgrep)(1), [gzip](/man/gzip)(1)

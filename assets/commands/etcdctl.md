@@ -97,6 +97,16 @@ API version 3 is default (set ETCDCTL_API=3). Authentication may be required. Cl
 
 etcd was created by **CoreOS** in **2013** as a distributed configuration store for their Container Linux. It became a CNCF project and is now maintained by the etcd community. Kubernetes adopted etcd as its backing store from the beginning.
 
+# INSTALL
+
+```apt: sudo apt install etcd-client```
+
+```apk: sudo apk add etcd-ctl```
+
+```zypper: sudo zypper install etcdctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [consul](/man/consul)(1)

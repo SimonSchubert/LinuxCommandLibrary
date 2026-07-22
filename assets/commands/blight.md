@@ -88,6 +88,12 @@ The utility prioritizes integrated graphics, followed by dedicated Nvidia GPU an
 
 Requires write access to sysfs backlight files. Run `sudo blight setup` once to configure udev rules and permissions, or add your user to the video group manually. Only works with displays that expose backlight control through sysfs.
 
+# INSTALL
+
+```apt: sudo apt install blight```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xbacklight](/man/xbacklight)(1), [brightnessctl](/man/brightnessctl)(1), [light](/man/light)(1)

@@ -86,6 +86,24 @@ In short format (**-s**), each file is shown with a two-character status code: t
 
 The **--porcelain** format provides stable, machine-readable output suitable for scripting, while the default long format is designed for human readability. Use **--porcelain=v2** for richer machine-readable output including rename and copy information.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-diff](/man/git-diff)(1), [git-add](/man/git-add)(1), [git-commit](/man/git-commit)(1), [git-stash](/man/git-stash)(1)

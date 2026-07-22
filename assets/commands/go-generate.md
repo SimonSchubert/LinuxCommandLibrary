@@ -57,6 +57,24 @@ run code generation directives in Go source files
 
 Environment variables $GOARCH, $GOOS, $GOFILE, $GOLINE, $GOPACKAGE, $GOROOT, $DOLLAR, and $PATH are set during execution. Generated files should include a comment matching **^// Code generated .* DO NOT EDIT\.$** before non-comment content. **go generate** is never run automatically by **go build** or **go test**; it must be invoked explicitly.
 
+# INSTALL
+
+```apt: sudo apt install gccgo-go```
+
+```dnf: sudo dnf install gcc-go```
+
+```pacman: sudo pacman -S gcc-go```
+
+```apk: sudo apk add gcc-go```
+
+```zypper: sudo zypper install gcc-go```
+
+```brew: brew install go```
+
+```nix: nix profile install nixpkgs#go```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [go](/man/go)(1), [go-build](/man/go-build)(1)

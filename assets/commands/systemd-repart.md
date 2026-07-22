@@ -48,6 +48,12 @@ Only modifies partition tables, not filesystems. Configuration files define desi
 
 **systemd-repart** supports image-based OS deployment by enabling declarative partition management, allowing systems to automatically configure disk layout on first boot.
 
+# INSTALL
+
+```apt: sudo apt install systemd-repart```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [systemd-growfs](/man/systemd-growfs)(8), [repart.d](/man/repart.d)(5), [fdisk](/man/fdisk)(8)

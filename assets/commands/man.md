@@ -75,6 +75,24 @@ Sections vary by system. Some commands lack man pages. Use info for GNU docs.
 
 man dates back to the first **Unix** system at Bell Labs, remaining the standard documentation format.
 
+# INSTALL
+
+```apt: sudo apt install man-db```
+
+```dnf: sudo dnf install man-db```
+
+```pacman: sudo pacman -S man-db```
+
+```apk: sudo apk add mandoc```
+
+```zypper: sudo zypper install mandoc```
+
+```brew: brew install man-db```
+
+```nix: nix profile install nixpkgs#man-db```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [info](/man/info)(1), [apropos](/man/apropos)(1), [whatis](/man/whatis)(1), [mandb](/man/mandb)(8), [manpath](/man/manpath)(1), [less](/man/less)(1)

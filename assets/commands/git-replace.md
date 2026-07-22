@@ -79,6 +79,24 @@ Replacements are used by default in all Git commands except reachability travers
 
 Common use cases include fixing published history, grafting histories together, or replacing large blobs. The `--graft` option simplifies rewriting commit parentage, replacing the legacy `$GIT_DIR/info/grafts` mechanism.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-commit](/man/git-commit)(1), [git-tag](/man/git-tag)(1), [git-filter-branch](/man/git-filter-branch)(1), [git-fsck](/man/git-fsck)(1)

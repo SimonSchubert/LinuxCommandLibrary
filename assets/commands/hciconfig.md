@@ -88,6 +88,24 @@ Deprecated in favor of bluetoothctl. Requires root for configuration. Changes ma
 
 **hciconfig** is part of **BlueZ**, the official Linux Bluetooth stack. BlueZ was created by **Maxim Krasnyansky** and **Marcel Holtmann**, and is maintained by the community with Intel contributions. While hciconfig is being phased out, it remains useful for low-level Bluetooth configuration.
 
+# INSTALL
+
+```apt: sudo apt install bluez```
+
+```dnf: sudo dnf install bluez```
+
+```pacman: sudo pacman -S bluez```
+
+```apk: sudo apk add bluez-deprecated```
+
+```zypper: sudo zypper install bluez```
+
+```brew: brew install bluez```
+
+```nix: nix profile install nixpkgs#bluez```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bluetoothctl](/man/bluetoothctl)(1), [hcitool](/man/hcitool)(1), [btmgmt](/man/btmgmt)(1), [rfkill](/man/rfkill)(1)

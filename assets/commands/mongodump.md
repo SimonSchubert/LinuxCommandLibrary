@@ -115,6 +115,14 @@ Not recommended for large production databases - use filesystem snapshots instea
 
 **mongodump** has been part of **MongoDB** since early versions, developed by MongoDB, Inc. (formerly 10gen). It provides the standard method for exporting MongoDB data, complemented by mongorestore for imports. It's part of the MongoDB Database Tools package.
 
+# INSTALL
+
+```apk: sudo apk add mongodb-tools```
+
+```nix: nix profile install nixpkgs#mongodb-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mongorestore](/man/mongorestore)(1), [mongoexport](/man/mongoexport)(1), [mongoimport](/man/mongoimport)(1), [mongo](/man/mongo)(1)

@@ -69,6 +69,12 @@ Requires installation. Uses prompt_toolkit.
 
 ptpython was created as an **enhanced Python REPL** with modern features.
 
+# INSTALL
+
+```brew: brew install ptpython```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [python](/man/python)(1), [ipython](/man/ipython)(1), [bpython](/man/bpython)(1)

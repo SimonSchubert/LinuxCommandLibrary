@@ -60,6 +60,24 @@ Manual firmware installation bypasses LVFS signature verification. Only install 
 
 fwupdtool is part of the fwupd project, created by Richard Hughes in **2015**. It serves as the development and debugging companion to the main fwupdmgr tool.
 
+# INSTALL
+
+```apt: sudo apt install fwupd```
+
+```dnf: sudo dnf install fwupd```
+
+```pacman: sudo pacman -S fwupd```
+
+```apk: sudo apk add fwupd```
+
+```zypper: sudo zypper install fwupd```
+
+```brew: brew install fwupd```
+
+```nix: nix profile install nixpkgs#fwupd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [fwupdmgr](/man/fwupdmgr)(1), [efibootmgr](/man/efibootmgr)(8)

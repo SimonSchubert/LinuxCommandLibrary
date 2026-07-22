@@ -51,6 +51,12 @@ manages PlatformIO account authentication
 
 **pio account** manages PlatformIO account authentication. Required for accessing PlatformIO Registry, Teams, and remote development features. Free accounts available.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-org](/man/pio-org)(1), [pio-team](/man/pio-team)(1)

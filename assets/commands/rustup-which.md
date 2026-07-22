@@ -29,6 +29,22 @@ Show path to Rust toolchain binaries
 
 **rustup which** displays the path to Rust tools. Shows which binary would be executed for a given command. Useful for debugging toolchain issues.
 
+# INSTALL
+
+```apt: sudo apt install rustup```
+
+```dnf: sudo dnf install rustup```
+
+```pacman: sudo pacman -S rustup```
+
+```zypper: sudo zypper install rustup```
+
+```brew: brew install rustup```
+
+```nix: nix profile install nixpkgs#rustup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rustup](/man/rustup)(1), [which](/man/which)(1)

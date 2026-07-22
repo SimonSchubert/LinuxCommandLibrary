@@ -44,6 +44,20 @@ Format Python code with Ruff
 
 The **--check** flag validates formatting without modifying files, returning a non-zero exit code if changes would be made, which is useful for CI pipelines. The **--diff** flag displays the exact changes that would be applied. Configuration options like **--line-length** can be set per-project in pyproject.toml or ruff.toml.
 
+# INSTALL
+
+```dnf: sudo dnf install ruff```
+
+```pacman: sudo pacman -S ruff```
+
+```apk: sudo apk add ruff```
+
+```brew: brew install ruff```
+
+```nix: nix profile install nixpkgs#ruff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ruff](/man/ruff)(1), [ruff-check](/man/ruff-check)(1), [black](/man/black)(1)

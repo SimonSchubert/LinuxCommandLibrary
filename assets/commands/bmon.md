@@ -59,6 +59,24 @@ The tool provides both a graphical TUI display and text output options suitable 
 **-U, --unit** _unit_
 > Force a specific unit for rates (e.g., B, KiB, MiB)
 
+# INSTALL
+
+```apt: sudo apt install bmon```
+
+```dnf: sudo dnf install bmon```
+
+```pacman: sudo pacman -S bmon```
+
+```apk: sudo apk add bmon```
+
+```zypper: sudo zypper install bmon```
+
+```brew: brew install bmon```
+
+```nix: nix profile install nixpkgs#bmon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iftop](/man/iftop)(8), [nethogs](/man/nethogs)(8), [vnstat](/man/vnstat)(1), [nload](/man/nload)(1)

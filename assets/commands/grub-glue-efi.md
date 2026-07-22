@@ -47,6 +47,16 @@ Part of GRUB package. Requires both architecture binaries. For special bootloade
 
 grub-glue-efi was developed as part of **GNU GRUB** to support universal EFI boot media creation.
 
+# INSTALL
+
+```apt: sudo apt install grub-common```
+
+```pacman: sudo pacman -S grub```
+
+```apk: sudo apk add grub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub](/man/grub)(8), [grub-install](/man/grub-install)(8)

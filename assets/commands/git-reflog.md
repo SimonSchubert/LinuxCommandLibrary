@@ -68,6 +68,24 @@ Local only, not pushed. Entries expire (90 days reachable, 30 days unreachable, 
 
 git reflog is a core **Git** safety feature, providing local history of ref movements to enable recovery from destructive operations.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-reset](/man/git-reset)(1), [git-gc](/man/git-gc)(1)

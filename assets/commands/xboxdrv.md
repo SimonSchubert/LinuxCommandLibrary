@@ -85,6 +85,12 @@ Deprecated in favor of kernel xpad driver (Linux 6.1+). Requires uinput kernel m
 
 **xboxdrv** was created when Linux kernel support for Xbox controllers was incomplete. It provided features the kernel driver lacked. As kernel support improved, xboxdrv development was discontinued, with users encouraged to use the kernel driver instead.
 
+# INSTALL
+
+```apt: sudo apt install xboxdrv```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jstest](/man/jstest)(1), [evtest](/man/evtest)(1), [udevadm](/man/udevadm)(8)

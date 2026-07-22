@@ -75,6 +75,22 @@ Wayland/Sway only. PAM configuration needed. Some effects need swaylock-effects 
 
 **swaylock** is the screen locker for **Sway** compositor. It's a Wayland replacement for i3lock.
 
+# INSTALL
+
+```apt: sudo apt install swaylock```
+
+```dnf: sudo dnf install swaylock```
+
+```pacman: sudo pacman -S swaylock```
+
+```apk: sudo apk add swaylock```
+
+```zypper: sudo zypper install swaylock```
+
+```nix: nix profile install nixpkgs#swaylock```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sway](/man/sway)(1), [swaybg](/man/swaybg)(1), [i3lock](/man/i3lock)(1)

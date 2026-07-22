@@ -74,6 +74,24 @@ Input must already contain edge geometry from a layout engine; otherwise edgepai
 
 **edgepaint** is part of **Graphviz**, originally developed at **AT&T Labs Research**. It implements ideas from Yifan Hu's work on edge coloring for graph readability.
 
+# INSTALL
+
+```apt: sudo apt install graphviz```
+
+```dnf: sudo dnf install graphviz```
+
+```pacman: sudo pacman -S graphviz```
+
+```apk: sudo apk add graphviz```
+
+```zypper: sudo zypper install graphviz```
+
+```brew: brew install graphviz```
+
+```nix: nix profile install nixpkgs#graphviz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [dot](/man/dot)(1), [neato](/man/neato)(1), [graphviz](/man/graphviz)(7)

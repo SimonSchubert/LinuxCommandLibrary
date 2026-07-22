@@ -55,6 +55,16 @@ Configuration needed. Charm Labs tool. Go implementation.
 
 **wishlist** is part of the **Charm** ecosystem, providing an SSH directory for easy host access.
 
+# INSTALL
+
+```pacman: sudo pacman -S wishlist```
+
+```brew: brew install wishlist```
+
+```nix: nix profile install nixpkgs#wishlist```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [sshd](/man/sshd)(8), [tmux](/man/tmux)(1)

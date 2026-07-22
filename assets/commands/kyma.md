@@ -75,6 +75,12 @@ Requires access to a Kubernetes cluster with Kyma installed. Module availability
 
 **kyma** CLI is developed by the **Kyma project** (part of the SAP ecosystem) and is written in **Go**. The v3 release refocused the tool toward application developers using Kyma as their Kubernetes-based runtime.
 
+# INSTALL
+
+```aur: yay -S kyma```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [helm](/man/helm)(1)

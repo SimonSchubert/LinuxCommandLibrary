@@ -61,6 +61,24 @@ Slow for very large files. Part of xz-utils. Single-threaded by default.
 
 **unxz** is part of **XZ Utils**, created by **Lasse Collin** and first released in **2009** as the successor to LZMA Utils. The XZ format has become the standard compression for Linux kernel sources and many source tarballs.
 
+# INSTALL
+
+```apt: sudo apt install xz-utils```
+
+```dnf: sudo dnf install xz```
+
+```pacman: sudo pacman -S xz```
+
+```apk: sudo apk add xz```
+
+```zypper: sudo zypper install xz```
+
+```brew: brew install xz```
+
+```nix: nix profile install nixpkgs#xz```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xz](/man/xz)(1), [gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1)

@@ -83,6 +83,22 @@ Requires configuration file. Default port 9090. Use with Grafana for visualizati
 
 Prometheus was created at **SoundCloud** starting in 2012 and joined the **CNCF** in 2016 as the second hosted project.
 
+# INSTALL
+
+```apt: sudo apt install prometheus```
+
+```dnf: sudo dnf install prometheus```
+
+```pacman: sudo pacman -S prometheus```
+
+```apk: sudo apk add prometheus```
+
+```brew: brew install prometheus```
+
+```nix: nix profile install nixpkgs#prometheus```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grafana](/man/grafana)(1), [alertmanager](/man/alertmanager)(1)

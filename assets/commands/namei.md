@@ -88,6 +88,24 @@ Symbolic link loops will cause errors. The command stops at the first unresolvab
 
 **namei** is part of **util-linux**, the standard Linux utility collection. It provides a diagnostic tool for understanding complex path structures and resolving symlink issues.
 
+# INSTALL
+
+```apt: sudo apt install util-linux```
+
+```dnf: sudo dnf install util-linux```
+
+```pacman: sudo pacman -S util-linux```
+
+```apk: sudo apk add util-linux-misc```
+
+```zypper: sudo zypper install util-linux```
+
+```brew: brew install util-linux```
+
+```nix: nix profile install nixpkgs#util-linux```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [stat](/man/stat)(1), [readlink](/man/readlink)(1)

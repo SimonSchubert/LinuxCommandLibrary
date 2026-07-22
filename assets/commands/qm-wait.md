@@ -39,6 +39,12 @@ Without timeout, the command may block indefinitely if the VM doesn't stop. Alwa
 
 Part of **Proxmox VE** QEMU/KVM management tools for virtual machine administration.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-shutdown](/man/qm-shutdown)(1), [qm-stop](/man/qm-stop)(1)

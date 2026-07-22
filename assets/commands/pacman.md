@@ -113,6 +113,20 @@ Always run **-Syu** instead of just **-Sy** before installing packages to avoid 
 
 **pacman** was created by Judd Vinet for Arch Linux and first released in 2002. It is the front-end to libalpm (Arch Linux Package Management library), allowing alternative front-ends like pamac or octopi.
 
+# INSTALL
+
+```apt: sudo apt install pacman-package-manager```
+
+```dnf: sudo dnf install pacman```
+
+```pacman: sudo pacman -S pacman```
+
+```apk: sudo apk add pacman```
+
+```nix: nix profile install nixpkgs#pacman```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pacman.conf](/man/pacman.conf)(5), [makepkg](/man/makepkg)(8), [yay](/man/yay)(8), [paru](/man/paru)(8)

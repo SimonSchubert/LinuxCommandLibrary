@@ -57,6 +57,20 @@ When invoked without path arguments or **--interactive**, all changes in the wor
 
 Unlike git, Jujutsu automatically treats the working copy as a mutable commit, so this command finalizes the current changes by setting a description and advancing the working copy.
 
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [jj](/man/jj)(1), [jj-describe](/man/jj-describe)(1), [jj-new](/man/jj-new)(1), [jj-status](/man/jj-status)(1), [jj-diff](/man/jj-diff)(1)

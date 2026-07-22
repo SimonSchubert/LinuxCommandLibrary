@@ -79,6 +79,17 @@ Shard iterators expire after 15 minutes. Stream records are retained for only 24
 
 DynamoDB Streams was announced at **AWS re:Invent 2014** and became generally available in **July 2015**. It was designed to enable real-time processing of DynamoDB changes, complementing the introduction of AWS Lambda triggers for DynamoDB. The feature supports cross-region replication through Global Tables.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-dynamodb](/man/aws-dynamodb)(1), [aws-lambda](/man/aws-lambda)(1), [aws-kinesis](/man/aws-kinesis)(1)

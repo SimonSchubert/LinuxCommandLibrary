@@ -72,6 +72,16 @@ Devices are addressed by logical address (0-15), where 0 is typically the TV, 1 
 
 Requires a USB CEC adapter (like Pulse-Eight). Device addresses are 0-15 where 0 is typically the TV. Root privileges required for device access.
 
+# INSTALL
+
+```apt: sudo apt install cec-utils```
+
+```apk: sudo apk add libcec-tools```
+
+```zypper: sudo zypper install cec-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cec-ctl](/man/cec-ctl)(1)

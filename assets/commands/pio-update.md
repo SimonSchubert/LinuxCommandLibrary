@@ -39,6 +39,12 @@ Update PlatformIO packages and libraries (deprecated)
 
 Deprecated since PlatformIO 6.0 and will be removed in a future release. Use **pio pkg update** instead.
 
+# INSTALL
+
+```aur: yay -S pio```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pio-upgrade](/man/pio-upgrade)(1), [pio-pkg](/man/pio-pkg)(1), [pio-platform](/man/pio-platform)(1), [pio-lib](/man/pio-lib)(1)

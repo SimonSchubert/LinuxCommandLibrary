@@ -59,6 +59,17 @@ Text-only interface. Requires understanding of adventure game conventions. Parse
 
 **battlestar** was written by **David Riggle** in **1979** as an experiment with the C programming language. It has been part of BSD games distributions since then.
 
+# INSTALL
+
+```dnf: sudo dnf install bsd-games```
+
+```pacman: sudo pacman -S bsd-games```
+
+```apk: sudo apk add bsd-games```
+
+```zypper: sudo zypper install bsd-games```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [adventure](/man/adventure)(6), [nethack-console](/man/nethack-console)(6)

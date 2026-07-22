@@ -68,6 +68,12 @@ The TUI mode provides an interactive fuzzy-search interface for browsing and man
 
 Bookmarks are stored locally and not synced across devices by default. Import formats may be limited to specific file types.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#bmm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [buku](/man/buku)(1), [nb](/man/nb)(1)

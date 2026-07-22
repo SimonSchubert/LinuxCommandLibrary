@@ -96,6 +96,14 @@ Running **terraform apply** without **-auto-approve** in non-interactive environ
 
 **Terraform** was created by **Mitchell Hashimoto** and released by **HashiCorp** in **2014**. It pioneered the infrastructure-as-code approach using a declarative configuration language (HCL). The apply command has been a core part of the plan-then-apply workflow since the initial release, with JSON output support added in later versions.
 
+# INSTALL
+
+```pacman: sudo pacman -S terraform```
+
+```nix: nix profile install nixpkgs#terraform```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [terraform](/man/terraform)(1), [terraform-plan](/man/terraform-plan)(1), [terraform-init](/man/terraform-init)(1), [terraform-fmt](/man/terraform-fmt)(1)

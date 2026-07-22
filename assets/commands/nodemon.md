@@ -73,6 +73,12 @@ Development tool. Not for production. Watches file system.
 
 nodemon was created by **Remy Sharp** to improve Node.js development workflow.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#nodemon```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [pm2](/man/pm2)(1), [forever](/man/forever)(1)

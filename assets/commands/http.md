@@ -107,6 +107,22 @@ Python package. Different from curl syntax. JSON by default.
 
 HTTPie was created by **Jakub Roztocil** as a more user-friendly alternative to curl for API testing.
 
+# INSTALL
+
+```dnf: sudo dnf install httpie```
+
+```pacman: sudo pacman -S httpie```
+
+```apk: sudo apk add httpie```
+
+```zypper: sudo zypper install httpie```
+
+```brew: brew install httpie```
+
+```nix: nix profile install nixpkgs#httpie```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [wget](/man/wget)(1), [https](/man/https)(1), [xh](/man/xh)(1), [curlie](/man/curlie)(1)

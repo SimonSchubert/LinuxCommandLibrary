@@ -22,6 +22,16 @@ Remove symbolic package links created by bun link
 
 This is the reverse of the `bun link` workflow used during local package development.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-link](/man/bun-link)(1), [bun-install](/man/bun-install)(1)

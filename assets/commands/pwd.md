@@ -42,6 +42,24 @@ Shell built-in and external command. Behavior may differ.
 
 pwd is a **classic Unix** command for directory display.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cd](/man/cd)(1), [dirs](/man/dirs)(1), [basename](/man/basename)(1)

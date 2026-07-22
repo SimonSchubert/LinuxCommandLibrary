@@ -88,6 +88,22 @@ X11 only; for Wayland use **grim** with **slurp**. Selection mode may not work w
 
 Originally written by Tom Gilbert, who also created **feh**. A simple, focused screenshot tool that has been widely used in Linux desktop environments, often integrated with keyboard shortcuts for quick captures.
 
+# INSTALL
+
+```apt: sudo apt install scrot```
+
+```dnf: sudo dnf install scrot```
+
+```pacman: sudo pacman -S scrot```
+
+```apk: sudo apk add scrot```
+
+```zypper: sudo zypper install scrot```
+
+```nix: nix profile install nixpkgs#scrot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [maim](/man/maim)(1), [grim](/man/grim)(1), [import](/man/import)(1), [flameshot](/man/flameshot)(1)

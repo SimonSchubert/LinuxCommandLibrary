@@ -142,6 +142,12 @@ Requires access to a Boundary controller. Targets must be configured by administ
 
 Boundary was announced by **HashiCorp** in **October 2020** as part of their security product line alongside Vault. It addresses modern identity-based access patterns, replacing traditional VPNs and bastion hosts. Version 0.1 was released in **October 2020**. The project reached 1.0 GA status in **2022**. Boundary integrates with Vault for credential brokering and injection, providing just-in-time access to infrastructure.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#boundary```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vault](/man/vault)(1), [ssh](/man/ssh)(1), [tsh](/man/tsh)(1), [kubectl](/man/kubectl)(1)

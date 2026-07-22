@@ -71,6 +71,16 @@ move crash reports from a device to a local directory
 
 Output lines are prefixed with "Link:", "Copy:", or "Move:" depending on whether a symlink was created, a file was copied, or moved from the device.
 
+# INSTALL
+
+```apt: sudo apt install libimobiledevice-utils```
+
+```dnf: sudo dnf install libimobiledevice-utils```
+
+```apk: sudo apk add libimobiledevice-progs```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ideviceinfo](/man/ideviceinfo)(1), [idevicediagnostics](/man/idevicediagnostics)(1), [idevicesyslog](/man/idevicesyslog)(1)

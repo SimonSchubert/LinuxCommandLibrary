@@ -90,6 +90,17 @@ SPICE datasets have storage limits based on subscription tier. Dashboard refresh
 
 Amazon QuickSight launched in **November 2016** as a cloud-native BI service. Q (natural language querying) was added in **2020**. The service has expanded to include paginated reports, APIs for programmatic dashboard creation, and ML-powered insights.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-athena](/man/aws-athena)(1), [aws-redshift](/man/aws-redshift)(1)

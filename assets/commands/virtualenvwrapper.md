@@ -101,6 +101,12 @@ Requires shell configuration: source the virtualenvwrapper.sh script in your she
 
 **virtualenvwrapper** was created by **Doug Hellmann** to make managing Python virtual environments easier.
 
+# INSTALL
+
+```brew: brew install virtualenvwrapper```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virtualenv](/man/virtualenv)(1), [venv](/man/venv)(1), [pip](/man/pip)(1)

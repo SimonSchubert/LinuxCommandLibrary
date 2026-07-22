@@ -67,6 +67,21 @@ Steep learning curve. Generated Makefiles are complex. Requires understanding of
 
 **Automake** was created by David MacKenzie and Tom Tromey, first released in **1994** to complement autoconf with makefile generation.
 
+# INSTALL
+
+```dnf: sudo dnf install automake```
+
+```pacman: sudo pacman -S automake```
+
+```apk: sudo apk add automake```
+
+```zypper: sudo zypper install automake```
+
+```brew: brew install automake```
+
+```nix: nix profile install nixpkgs#automake```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [autoconf](/man/autoconf)(1), [autoreconf](/man/autoreconf)(1), [make](/man/make)(1)

@@ -99,6 +99,12 @@ Requires Node.js. Configuration can be complex. Build times increase with file c
 
 **Babel** was created by Sebastian McKenzie in **2014** (originally as 6to5) to enable developers to use ES6 features before widespread browser support.
 
+# INSTALL
+
+```brew: brew install babel```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [node](/man/node)(1), [npx](/man/npx)(1), [webpack](/man/webpack)(1), [tsc](/man/tsc)(1), [eslint](/man/eslint)(1)

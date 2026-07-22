@@ -79,6 +79,11 @@ Attaching to production JVMs should be done carefully. Some features may impact 
 
 **Arthas** was developed by Alibaba and open-sourced in **2018**. It has become a popular Java diagnostic tool, especially in the Chinese developer community.
 
+# INSTALL
+
+```aur: yay -S arthas```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [jstack](/man/jstack)(1), [jmap](/man/jmap)(1)

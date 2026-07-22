@@ -39,6 +39,18 @@ Connect or reconnect to a libvirt hypervisor from within a virsh shell
 
 If no URI is given, virsh reconnects using the current URI. The URI format is `driver[+transport]://[user@][host][:port]/[path]`. Common local URIs include `qemu:///system` (system-wide QEMU/KVM, requires root), `qemu:///session` (per-user QEMU/KVM), `xen:///system` (Xen), and `lxc:///system` (Linux Containers). Remote connections use transport suffixes such as **+ssh**, **+tls**, **+tcp**, or **+libssh**. When no URI is specified at all, libvirt checks the `LIBVIRT_DEFAULT_URI` environment variable, then the `uri_default` setting in the client configuration, and finally probes available hypervisors.
 
+# INSTALL
+
+```apt: sudo apt install libvirt-clients```
+
+```dnf: sudo dnf install libvirt-client```
+
+```apk: sudo apk add libvirt-client```
+
+```zypper: sudo zypper install libvirt-client```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [virsh](/man/virsh)(1), [virsh-list](/man/virsh-list)(1), [virsh-help](/man/virsh-help)(1)

@@ -70,6 +70,24 @@ verify artifact attestations and build provenance
 
 **gh attestation** verifies artifact attestations using GitHub's artifact attestation feature. It cryptographically validates that artifacts were built in trusted GitHub Actions workflows with SLSA build provenance. Attestations can be verified online against the GitHub API or offline using downloaded bundle files.
 
+# INSTALL
+
+```apt: sudo apt install gh```
+
+```dnf: sudo dnf install gh```
+
+```pacman: sudo pacman -S github-cli```
+
+```apk: sudo apk add github-cli```
+
+```zypper: sudo zypper install gh```
+
+```brew: brew install gh```
+
+```nix: nix profile install nixpkgs#gh```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-release](/man/gh-release)(1)

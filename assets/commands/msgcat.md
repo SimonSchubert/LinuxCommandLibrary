@@ -45,6 +45,22 @@ concatenates and merges gettext PO files
 
 **msgcat** concatenates and merges gettext PO files. Combines multiple translation files, handles duplicates, and normalizes output. Part of GNU gettext for managing internationalization catalogs.
 
+# INSTALL
+
+```apt: sudo apt install gettext```
+
+```dnf: sudo dnf install gettext```
+
+```pacman: sudo pacman -S gettext```
+
+```apk: sudo apk add gettext```
+
+```brew: brew install gettext```
+
+```nix: nix profile install nixpkgs#gettext```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [msgattrib](/man/msgattrib)(1), [msgfmt](/man/msgfmt)(1), [msgunfmt](/man/msgunfmt)(1)

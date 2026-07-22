@@ -170,6 +170,24 @@ Text extraction quality depends on the PDF's internal structure. Scanned PDFs wi
 
 **pdfgrep** was written by **Hans-Peter Deifel** starting around **2010**. It uses the Poppler library for PDF parsing and provides a grep-compatible interface for searching PDF text content.
 
+# INSTALL
+
+```apt: sudo apt install pdfgrep```
+
+```dnf: sudo dnf install pdfgrep```
+
+```pacman: sudo pacman -S pdfgrep```
+
+```apk: sudo apk add pdfgrep```
+
+```zypper: sudo zypper install pdfgrep```
+
+```brew: brew install pdfgrep```
+
+```nix: nix profile install nixpkgs#pdfgrep```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grep](/man/grep)(1), [pdftotext](/man/pdftotext)(1), [ripgrep](/man/ripgrep)(1), [pdfinfo](/man/pdfinfo)(1)

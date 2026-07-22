@@ -59,6 +59,16 @@ displays a notification bar for the i3 window manager
 
 **i3-nagbar** displays a notification bar for the i3 window manager. Used by i3 to report configuration errors and for user-defined warnings or confirmations. Supports buttons that execute shell commands either in a terminal or directly.
 
+# INSTALL
+
+```apt: sudo apt install i3-wm```
+
+```pacman: sudo pacman -S i3-wm```
+
+```apk: sudo apk add i3wm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [i3](/man/i3)(1), [i3-msg](/man/i3-msg)(1)

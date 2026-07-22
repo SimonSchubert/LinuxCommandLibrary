@@ -83,6 +83,12 @@ Benchmarks only; doesn't test data integrity. Results depend on network. Use mul
 
 memtier_benchmark was developed by **Redis Labs** (now Redis Inc.) as a comprehensive benchmarking tool for in-memory data stores.
 
+# INSTALL
+
+```brew: brew install memtier_benchmark```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [redis-benchmark](/man/redis-benchmark)(1), [redis-cli](/man/redis-cli)(1), [memcached](/man/memcached)(1)

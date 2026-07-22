@@ -92,3 +92,13 @@ pg_ctl is part of **PostgreSQL**, the open source database originally from UC Be
 # SEE ALSO
 
 [postgres](/man/postgres)(1), [pg_dump](/man/pg_dump)(1), [pg_restore](/man/pg_restore)(1), [initdb](/man/initdb)(1)
+
+# INSTALL
+
+```dnf: sudo dnf install postgresql17```
+
+```apk: sudo apk add postgresql17```
+
+```zypper: sudo zypper install postgresql17```
+
+<!-- packages: 2026-07-22 -->

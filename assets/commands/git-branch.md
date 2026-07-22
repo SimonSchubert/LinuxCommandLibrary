@@ -113,6 +113,24 @@ Deleting a branch with **-d** fails if the branch has unmerged changes. Use **-D
 
 Branching has been a core Git feature since its creation by Linus Torvalds in **2005**. Git's lightweight branching model, where branches are simply pointers to commits rather than full directory copies, was revolutionary and enabled workflows like GitFlow and GitHub Flow.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-switch](/man/git-switch)(1), [git-merge](/man/git-merge)(1), [git-fetch](/man/git-fetch)(1)

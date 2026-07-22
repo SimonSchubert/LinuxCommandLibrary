@@ -98,6 +98,14 @@ For authorized testing only. Some WAFs may block detection. False positives poss
 
 **wafw00f** was originally written by **Sandro Gauci** and released by **EnableSecurity** around **2009**. It has since become a standard recon tool, bundled with Kali Linux and actively maintained on GitHub. The name is a pun on "WAF" combined with a dog's bark.
 
+# INSTALL
+
+```dnf: sudo dnf install wafw00f```
+
+```nix: nix profile install nixpkgs#wafw00f```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nmap](/man/nmap)(1), [nikto](/man/nikto)(1), [wfuzz](/man/wfuzz)(1), [burpsuite](/man/burpsuite)(1)

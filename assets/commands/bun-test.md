@@ -97,6 +97,16 @@ Tests use **describe**, **test/it**, **expect**, **beforeAll**, **beforeEach**, 
 
 While aiming for Jest compatibility, not all Jest features are implemented. GitHub Actions annotations are automatically enabled when running in CI. Some Jest-specific plugins may not work.
 
+# INSTALL
+
+```pacman: sudo pacman -S bun```
+
+```brew: brew install bun```
+
+```nix: nix profile install nixpkgs#bun```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-run](/man/bun-run)(1), [jest](/man/jest)(1), [vitest](/man/vitest)(1)

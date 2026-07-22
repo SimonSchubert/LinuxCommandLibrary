@@ -97,6 +97,18 @@ Requires appropriate permissions to access bgpd control socket. Some commands ma
 
 **bgpctl** is part of **OpenBGPD**, which was developed by Henning Brauer and Claudio Jeker for **OpenBSD** starting in **2003**. It was designed as a clean, secure implementation of BGP after concerns about other implementations. The portable version for Linux and other systems has been available since **2016**. OpenBGPD is known for its simplicity and security focus.
 
+# INSTALL
+
+```apt: sudo apt install openbgpd```
+
+```dnf: sudo dnf install openbgpd```
+
+```apk: sudo apk add openbgpd```
+
+```nix: nix profile install nixpkgs#openbgpd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [bgpd](/man/bgpd)(8), [vtysh](/man/vtysh)(1)

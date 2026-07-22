@@ -42,6 +42,20 @@ adds or updates annotations on Kubernetes resources
 
 **kubectl annotate** adds or updates annotations on Kubernetes resources. Annotations are key-value pairs for storing metadata. Unlike labels, annotations are not used for selection but for tools and libraries.
 
+# INSTALL
+
+```apt: sudo apt install kubectl```
+
+```pacman: sudo pacman -S kubectl```
+
+```apk: sudo apk add kubectl```
+
+```brew: brew install kubectl```
+
+```nix: nix profile install nixpkgs#kubectl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-label](/man/kubectl-label)(1)

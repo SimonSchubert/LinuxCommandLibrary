@@ -76,6 +76,22 @@ Requires Java. Graphviz needed for some diagrams. Large diagrams may be slow. Co
 
 **PlantUML** was created by **Arnaud Roques** starting in **2009**. It brought text-based diagramming to UML, integrating with wikis, documentation tools, and IDEs.
 
+# INSTALL
+
+```dnf: sudo dnf install plantuml```
+
+```pacman: sudo pacman -S plantuml```
+
+```apk: sudo apk add plantuml```
+
+```zypper: sudo zypper install plantuml```
+
+```brew: brew install plantuml```
+
+```nix: nix profile install nixpkgs#plantuml```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [graphviz](/man/graphviz)(1), [mermaid](/man/mermaid)(1), [ditaa](/man/ditaa)(1), [drawio](/man/drawio)(1)

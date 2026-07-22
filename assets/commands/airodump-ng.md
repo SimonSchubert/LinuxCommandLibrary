@@ -80,6 +80,23 @@ For authorized security testing only. Requires monitor mode interface. Capture f
 
 **airodump-ng** is a core component of the aircrack-ng suite, first released in **2006**. It replaced the original airodump with improved features and stability.
 
+# INSTALL
+
+```apt: sudo apt install aircrack-ng```
+
+```dnf: sudo dnf install aircrack-ng```
+
+```pacman: sudo pacman -S aircrack-ng```
+
+```apk: sudo apk add aircrack-ng```
+
+```zypper: sudo zypper install aircrack-ng```
+
+```brew: brew install aircrack-ng```
+
+```nix: nix profile install nixpkgs#aircrack-ng```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aircrack-ng](/man/aircrack-ng)(1), [aireplay-ng](/man/aireplay-ng)(1), [airmon-ng](/man/airmon-ng)(1), [airodump-ng-oui-update](/man/airodump-ng-oui-update)(1), [wireshark](/man/wireshark)(1)

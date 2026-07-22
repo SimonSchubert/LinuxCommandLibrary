@@ -104,6 +104,14 @@ Conda-compatible but may have minor edge case differences in dependency resoluti
 
 mamba was created by **QuantStack** to provide faster package management than conda.
 
+# INSTALL
+
+```dnf: sudo dnf install mamba```
+
+```nix: nix profile install nixpkgs#mamba```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [conda](/man/conda)(1), [micromamba](/man/micromamba)(1), [pip](/man/pip)(1)

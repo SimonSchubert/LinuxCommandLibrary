@@ -50,6 +50,12 @@ The generated Perl code may require manual cleanup for optimal style and perform
 
 **a2p** was written by Larry Wall, the creator of Perl, and first appeared with Perl 1.0 in **1987**. It was one of the earliest tools designed to help users migrate from Unix scripting tools to Perl during a time when Perl was being positioned as a replacement for awk, sed, and shell scripting. It was removed from the Perl core distribution in Perl 5.22 (2015).
 
+# INSTALL
+
+```apk: sudo apk add perl-app-a2p```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [awk](/man/awk)(1), [perl](/man/perl)(1)

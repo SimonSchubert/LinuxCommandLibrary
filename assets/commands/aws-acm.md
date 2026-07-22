@@ -106,6 +106,17 @@ Certificates managed by ACM cannot be exported unless they were imported or are 
 
 **AWS Certificate Manager** was launched in **January 2016** to simplify SSL/TLS certificate management on AWS. Initially supporting only Elastic Load Balancing, it expanded to CloudFront, API Gateway, and other services. Private CA support was added in **April 2018**, and DNS validation became available to streamline the validation process.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws-acm-pca](/man/aws-acm-pca)(1), [aws-elbv2](/man/aws-elbv2)(1), [aws-cloudfront](/man/aws-cloudfront)(1), [aws-apigateway](/man/aws-apigateway)(1), [aws](/man/aws)(1)

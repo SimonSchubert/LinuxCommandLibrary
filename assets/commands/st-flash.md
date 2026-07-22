@@ -61,6 +61,24 @@ ST-Link required. STM32 specific. Correct address needed.
 
 **st-flash** is part of **stlink**, an open-source toolset for programming STM32 microcontrollers via ST-Link.
 
+# INSTALL
+
+```apt: sudo apt install stlink-tools```
+
+```dnf: sudo dnf install stlink```
+
+```pacman: sudo pacman -S stlink```
+
+```apk: sudo apk add stlink```
+
+```zypper: sudo zypper install stlink```
+
+```brew: brew install stlink```
+
+```nix: nix profile install nixpkgs#stlink```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [st-info](/man/st-info)(1), [st-util](/man/st-util)(1), [openocd](/man/openocd)(1)

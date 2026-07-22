@@ -45,6 +45,20 @@ Modify torrent file metadata
 
 **transmission-edit** is a command-line utility to modify .torrent files' announce URLs. It can add, remove, or replace tracker URLs in existing torrent files. The **-r** option performs substring matching, which is useful when a tracker changes its domain or your passcode changes. Part of the Transmission BitTorrent client suite.
 
+# INSTALL
+
+```apt: sudo apt install transmission-cli```
+
+```dnf: sudo dnf install transmission-cli```
+
+```pacman: sudo pacman -S transmission-cli```
+
+```apk: sudo apk add transmission-extra```
+
+```brew: brew install transmission-cli```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [transmission-cli](/man/transmission-cli)(1), [transmission-create](/man/transmission-create)(1), [transmission-show](/man/transmission-show)(1), [transmission-daemon](/man/transmission-daemon)(1), [transmission-remote](/man/transmission-remote)(1)

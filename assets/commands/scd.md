@@ -67,6 +67,12 @@ scd is available as an oh-my-zsh plugin and also works with bash through shell i
 
 Primarily a zsh script; bash support requires separate setup. History-based learning needs time to build a useful index.
 
+# INSTALL
+
+```aur: yay -S scd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cd](/man/cd)(1), [z](/man/z)(1), [autojump](/man/autojump)(1), [fasd](/man/fasd)(1)

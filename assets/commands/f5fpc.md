@@ -76,6 +76,12 @@ Proprietary commercial VPN client for enterprise networks.
 
 Proprietary software from F5 Networks. Requires root privileges. May require browser-based initial authentication. Not available in standard package repositories.
 
+# INSTALL
+
+```aur: yay -S f5fpc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openconnect](/man/openconnect)(8), [openvpn](/man/openvpn)(8)

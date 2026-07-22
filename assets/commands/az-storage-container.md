@@ -96,6 +96,19 @@ Containers can have different access levels: private (default), blob (anonymous 
 
 Container names must be 3-63 characters, lowercase letters, numbers, and hyphens only. Deleting a container deletes all contained blobs. Soft-delete policies allow recovery within the retention period. Immutability policies and legal holds prevent deletion for compliance purposes.
 
+# INSTALL
+
+```dnf: sudo dnf install azure-cli```
+
+```pacman: sudo pacman -S azure-cli```
+
+```zypper: sudo zypper install azure-cli```
+
+```brew: brew install azure-cli```
+
+```nix: nix profile install nixpkgs#azure-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [az](/man/az)(1), [azure-cli](/man/azure-cli)(1), [az-storage](/man/az-storage)(1), [az-storage-blob](/man/az-storage-blob)(1), [az-storage-account](/man/az-storage-account)(1), [azcopy](/man/azcopy)(1)

@@ -78,6 +78,12 @@ Requires email configuration for sending reports. Use "other" as package name fo
 
 Part of **Debian** quality assurance infrastructure. Provides standardized bug reporting for the Debian ecosystem.
 
+# INSTALL
+
+```aur: yay -S reportbug```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [apt](/man/apt)(8), [dpkg](/man/dpkg)(1)

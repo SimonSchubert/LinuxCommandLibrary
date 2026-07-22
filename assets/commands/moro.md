@@ -77,6 +77,12 @@ Node.js based. Simple flat file storage. Local machine tracking only. The projec
 
 moro was created as a **simple time tracker** for developers who work from the terminal.
 
+# INSTALL
+
+```aur: yay -S moro```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [timew](/man/timew)(1), [watson](/man/watson)(1)

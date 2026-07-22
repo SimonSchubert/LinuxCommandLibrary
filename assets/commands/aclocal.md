@@ -74,6 +74,21 @@ Must be run before autoconf when building from source. The search order for .m4 
 
 **aclocal** was created as part of GNU Automake by David MacKenzie and Tom Tromey, first released in **1994**. It was designed to simplify the process of gathering M4 macros required for Autoconf-based build systems.
 
+# INSTALL
+
+```dnf: sudo dnf install automake```
+
+```pacman: sudo pacman -S automake```
+
+```apk: sudo apk add automake```
+
+```zypper: sudo zypper install automake```
+
+```brew: brew install automake```
+
+```nix: nix profile install nixpkgs#automake```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [autoconf](/man/autoconf)(1), [automake](/man/automake)(1), [autoreconf](/man/autoreconf)(1), [libtoolize](/man/libtoolize)(1), [make](/man/make)(1)

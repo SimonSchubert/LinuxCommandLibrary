@@ -71,6 +71,24 @@ Usually use cargo doc instead. Library paths needed for dependencies. Doc tests 
 
 **rustdoc** has been part of Rust since early development. Documentation culture is strong in Rust, and rustdoc enables it with doc comments that compile to HTML and include tested code examples.
 
+# INSTALL
+
+```apt: sudo apt install rustc```
+
+```dnf: sudo dnf install rust```
+
+```pacman: sudo pacman -S rust```
+
+```apk: sudo apk add rust```
+
+```zypper: sudo zypper install rust```
+
+```brew: brew install rust```
+
+```nix: nix profile install nixpkgs#rustc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [rustc](/man/rustc)(1), [doxygen](/man/doxygen)(1)

@@ -139,6 +139,20 @@ Not encrypted by default. Repository can grow large without maintenance. Restore
 
 **bup** was created by Avery Pennarun around **2010** to provide git-like backup with efficient deduplication for large files.
 
+# INSTALL
+
+```apt: sudo apt install bup```
+
+```pacman: sudo pacman -S bup```
+
+```zypper: sudo zypper install bup```
+
+```brew: brew install bup```
+
+```nix: nix profile install nixpkgs#bup```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [borg](/man/borg)(1), [restic](/man/restic)(1), [git](/man/git)(1), [rsync](/man/rsync)(1), [tar](/man/tar)(1)

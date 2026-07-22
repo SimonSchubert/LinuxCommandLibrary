@@ -126,6 +126,22 @@ Downloaded content may be subject to copyright. Respect content creators' rights
 
 Merging formats requires **ffmpeg** to be installed for proper video/audio combination.
 
+# INSTALL
+
+```dnf: sudo dnf install yt-dlp```
+
+```pacman: sudo pacman -S yt-dlp```
+
+```apk: sudo apk add yt-dlp-core```
+
+```zypper: sudo zypper install yt-dlp```
+
+```brew: brew install yt-dlp```
+
+```nix: nix profile install nixpkgs#yt-dlp```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [youtube-dl](/man/youtube-dl)(1), [aria2c](/man/aria2c)(1), [wget](/man/wget)(1)

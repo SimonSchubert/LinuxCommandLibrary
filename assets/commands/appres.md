@@ -49,6 +49,17 @@ Only applies to X11 applications using Xlib resources. Modern toolkit applicatio
 
 **appres** is a standard X11 utility that has been part of the X Window System since the X11R4 release in **1989**.
 
+# INSTALL
+
+```apt: sudo apt install x11-utils```
+
+```dnf: sudo dnf install appres```
+
+```zypper: sudo zypper install appres```
+
+```nix: nix profile install nixpkgs#appres```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [xrdb](/man/xrdb)(1), [xprop](/man/xprop)(1)

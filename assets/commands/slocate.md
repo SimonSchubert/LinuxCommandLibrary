@@ -68,6 +68,14 @@ Database may be stale. Root for update. Superseded by mlocate.
 
 **slocate** (Secure Locate) was created by **Kevin Lindsay** to address security concerns with the original GNU locate, which could leak information about restricted files. It has been largely replaced by **mlocate** on modern Linux distributions.
 
+# INSTALL
+
+```apk: sudo apk add mlocate```
+
+```nix: nix profile install nixpkgs#mlocate```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [locate](/man/locate)(1), [mlocate](/man/mlocate)(1), [find](/man/find)(1), [updatedb](/man/updatedb)(1)

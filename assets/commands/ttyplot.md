@@ -73,6 +73,22 @@ Input must be numeric values, one per line. Use sed or awk to extract numeric va
 
 **ttyplot** was created as a simple way to visualize streaming numeric data directly in the terminal without requiring a graphical environment.
 
+# INSTALL
+
+```apt: sudo apt install ttyplot```
+
+```dnf: sudo dnf install ttyplot```
+
+```apk: sudo apk add ttyplot```
+
+```zypper: sudo zypper install ttyplot```
+
+```brew: brew install ttyplot```
+
+```nix: nix profile install nixpkgs#ttyplot```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gnuplot](/man/gnuplot)(1), [termgraph](/man/termgraph)(1), [sed](/man/sed)(1), [awk](/man/awk)(1)

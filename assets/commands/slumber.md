@@ -28,6 +28,16 @@ Terminal-based HTTP/REST client with YAML recipes
 
 **slumber** was created by **Lucas Pickering** (LucasPickering) and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S slumber```
+
+```brew: brew install slumber```
+
+```nix: nix profile install nixpkgs#slumber```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [curl](/man/curl)(1), [httpie](/man/httpie)(1), [posting](/man/posting)(1)

@@ -31,6 +31,24 @@ This provides a quick way to see what changes will be pushed before actually pus
 
 Requires the current branch to have an upstream set; otherwise Git reports an error about there being no upstream configured.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-extras](/man/git-extras)(1)

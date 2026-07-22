@@ -85,6 +85,20 @@ Hub is no longer actively maintained and has been superseded by the official Git
 
 hub was created by **GitHub** as a command-line wrapper for git, later superseded by the official **gh** CLI.
 
+# INSTALL
+
+```apt: sudo apt install hub```
+
+```pacman: sudo pacman -S hub```
+
+```zypper: sudo zypper install hub```
+
+```brew: brew install hub```
+
+```nix: nix profile install nixpkgs#hub```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [gh](/man/gh)(1), [git](/man/git)(1), [gist](/man/gist)(1)

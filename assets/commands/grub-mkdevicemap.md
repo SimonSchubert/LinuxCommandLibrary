@@ -51,6 +51,12 @@ Mostly unnecessary today since GRUB generates a device map on the fly and identi
 
 grub-mkdevicemap was developed as part of **GNU GRUB** for device mapping between BIOS and Linux.
 
+# INSTALL
+
+```apt: sudo apt install grub-common```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [grub-install](/man/grub-install)(8), [grub-mkconfig](/man/grub-mkconfig)(8), [grub](/man/grub)(8)

@@ -94,6 +94,20 @@ For patch failures. May not always work. Line changes needed.
 
 **wiggle** was created by **Neil Brown** to help apply patches that were rejected due to minor conflicts.
 
+# INSTALL
+
+```apt: sudo apt install wiggle```
+
+```apk: sudo apk add wiggle```
+
+```zypper: sudo zypper install wiggle```
+
+```brew: brew install wiggle```
+
+```nix: nix profile install nixpkgs#wiggle```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [patch](/man/patch)(1), [diff](/man/diff)(1), [merge](/man/merge)(1)

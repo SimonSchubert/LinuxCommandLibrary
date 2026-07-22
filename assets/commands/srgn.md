@@ -80,6 +80,16 @@ Actions are composable and applied in a fixed order regardless of flag order. Re
 
 **srgn** was created by **Alex Povel** and is written in **Rust**.
 
+# INSTALL
+
+```pacman: sudo pacman -S srgn```
+
+```brew: brew install srgn```
+
+```nix: nix profile install nixpkgs#srgn```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [sed](/man/sed)(1), [tr](/man/tr)(1), [ripgrep](/man/ripgrep)(1), [ast-grep](/man/ast-grep)(1)

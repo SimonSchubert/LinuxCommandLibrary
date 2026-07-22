@@ -69,6 +69,22 @@ The plugin is no longer actively developed and was retired from the official Mav
 
 The Maven IDEA Plugin (groupId **org.apache.maven.plugins**, artifactId **maven-idea-plugin**) was created before IntelliJ IDEA gained native Maven import support. It was officially retired by Apache Maven once IDEA's first-class Maven integration matured.
 
+# INSTALL
+
+```dnf: sudo dnf install maven```
+
+```pacman: sudo pacman -S maven```
+
+```apk: sudo apk add maven```
+
+```zypper: sudo zypper install maven```
+
+```brew: brew install maven```
+
+```nix: nix profile install nixpkgs#maven```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [mvn](/man/mvn)(1), [mvn-compile](/man/mvn-compile)(1), [idea](/man/idea)(1)

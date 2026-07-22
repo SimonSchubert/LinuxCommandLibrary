@@ -49,6 +49,18 @@ Some advanced JACK features may behave differently under PipeWire. Applications 
 
 Part of **PipeWire**, the modern multimedia framework for Linux. Enables JACK application compatibility without requiring a separate JACK server.
 
+# INSTALL
+
+```apt: sudo apt install pipewire-jack```
+
+```pacman: sudo pacman -S pipewire-jack```
+
+```apk: sudo apk add pipewire-jack```
+
+```zypper: sudo zypper install pipewire-jack```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [pipewire](/man/pipewire)(1), [jackd](/man/jackd)(1), [pw-cli](/man/pw-cli)(1)

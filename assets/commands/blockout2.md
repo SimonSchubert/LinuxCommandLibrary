@@ -40,6 +40,12 @@ Requires OpenGL support. The **BL2_HOME** environment variable may need to be se
 
 The original BlockOut was released in **1989** by California Dreams for DOS. BlockOut II is an open-source recreation that began development in the early 2000s, with version 2.5 adding 64-bit support and unifying the OpenGL renderer across platforms.
 
+# INSTALL
+
+```aur: yay -S blockout2```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [tetris-bsd](/man/tetris-bsd)(6)

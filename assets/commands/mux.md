@@ -57,6 +57,16 @@ Requires the Interception Tools framework to be installed and configured. Named 
 
 **mux** is part of **Interception Tools**, developed by Francisco Lopes (oblitum). The framework provides low-level input event interception on Linux, enabling tools like caps2esc and space2meta for keyboard customization.
 
+# INSTALL
+
+```apt: sudo apt install interception-tools```
+
+```pacman: sudo pacman -S interception-tools```
+
+```nix: nix profile install nixpkgs#interception-tools```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [intercept](/man/intercept)(1), [udevmon](/man/udevmon)(1), [uinput](/man/uinput)(1)

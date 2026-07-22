@@ -88,6 +88,12 @@ Expression errors can rename files incorrectly. Use -n first. May conflict with 
 
 **perl-rename** was written by **Larry Wall**, creator of Perl, and is distributed as an example script. Various packaged versions exist including prename (Debian) and file-rename. It demonstrates Perl's text processing for practical file management.
 
+# INSTALL
+
+```pacman: sudo pacman -S perl-rename```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [rename](/man/rename)(1), [mmv](/man/mmv)(1), [mv](/man/mv)(1), [perl](/man/perl)(1)

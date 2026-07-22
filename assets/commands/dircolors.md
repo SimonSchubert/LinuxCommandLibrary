@@ -61,6 +61,24 @@ Output must be evaluated by the shell (e.g., `eval "$(dircolors)"`) to take effe
 
 **dircolors** is part of GNU coreutils and has been included in Linux distributions since the early days of colorized terminal output.
 
+# INSTALL
+
+```apt: sudo apt install coreutils```
+
+```dnf: sudo dnf install coreutils```
+
+```pacman: sudo pacman -S coreutils```
+
+```apk: sudo apk add coreutils```
+
+```zypper: sudo zypper install coreutils```
+
+```brew: brew install coreutils```
+
+```nix: nix profile install nixpkgs#coreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [dir](/man/dir)(1)

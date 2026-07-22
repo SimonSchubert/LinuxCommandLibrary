@@ -136,6 +136,24 @@ Function keys are used extensively and may conflict with terminal emulator short
 
 Midnight Commander was created in **1994** by **Miguel de Icaza** as a Unix clone of Norton Commander.
 
+# INSTALL
+
+```apt: sudo apt install mc```
+
+```dnf: sudo dnf install mc```
+
+```pacman: sudo pacman -S mc```
+
+```apk: sudo apk add mc```
+
+```zypper: sudo zypper install mc```
+
+```brew: brew install mc```
+
+```nix: nix profile install nixpkgs#mc```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ranger](/man/ranger)(1), [nnn](/man/nnn)(1), [lf](/man/lf)(1)

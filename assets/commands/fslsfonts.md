@@ -76,6 +76,12 @@ Requires running X font server. XLFD patterns can be complex. Less relevant with
 
 fslsfonts is part of the **X Window System** font server utilities. It queries xfs font servers, which were the standard way to share fonts across X terminals and workstations.
 
+# INSTALL
+
+```apt: sudo apt install x11-xfs-utils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [xlsfonts](/man/xlsfonts)(1), [xfs](/man/xfs)(1), [fc-list](/man/fc-list)(1)

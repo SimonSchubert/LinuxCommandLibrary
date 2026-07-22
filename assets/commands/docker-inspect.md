@@ -49,6 +49,24 @@ The **--format** flag accepts a Go template for extracting specific fields, usef
 
 When multiple objects share a name, **--type** must be used to disambiguate. For containers, **--size** adds **SizeRw** and **SizeRootFs** fields but is expensive on large filesystems. The output schema differs between containers, images, networks, and volumes, so format templates are not portable across object types.
 
+# INSTALL
+
+```apt: sudo apt install docker-cli```
+
+```dnf: sudo dnf install docker-cli```
+
+```pacman: sudo pacman -S docker```
+
+```apk: sudo apk add docker-cli```
+
+```zypper: sudo zypper install docker```
+
+```brew: brew install docker```
+
+```nix: nix profile install nixpkgs#docker```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-ps](/man/docker-ps)(1), [docker-images](/man/docker-images)(1)

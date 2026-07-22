@@ -83,6 +83,22 @@ Requires AP-capable wireless card. Configuration complex. Driver support varies.
 
 **hostapd** was developed by **Jouni Malinen** as part of the Linux wireless stack. It became the standard way to create software access points on Linux, supporting evolving wireless security standards.
 
+# INSTALL
+
+```apt: sudo apt install hostapd```
+
+```dnf: sudo dnf install hostapd```
+
+```pacman: sudo pacman -S hostapd```
+
+```apk: sudo apk add hostapd```
+
+```zypper: sudo zypper install hostapd```
+
+```nix: nix profile install nixpkgs#hostapd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [iw](/man/iw)(1), [iwconfig](/man/iwconfig)(1), [wpa_supplicant](/man/wpa_supplicant)(1), [dnsmasq](/man/dnsmasq)(1)

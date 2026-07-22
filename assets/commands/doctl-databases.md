@@ -121,6 +121,20 @@ Cluster IDs are UUIDs, but most subcommands also accept the cluster name. Add **
 
 **delete** destroys the cluster and all of its backups; there is no undo. Managed clusters accept TLS connections only, so clients usually need the certificate from **get-ca**. Resizing is one-way for storage (disks can grow but not shrink) and briefly interrupts connections while nodes are replaced. Not every subcommand applies to every engine: **pool** is PostgreSQL-only, **sql-mode** is MySQL-only, **topics** is Kafka-only, and **indexes** is OpenSearch-only.
 
+# INSTALL
+
+```dnf: sudo dnf install doctl```
+
+```pacman: sudo pacman -S doctl```
+
+```apk: sudo apk add doctl```
+
+```brew: brew install doctl```
+
+```nix: nix profile install nixpkgs#doctl```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [doctl](/man/doctl)(1), [doctl-databases-user](/man/doctl-databases-user)(1), [doctl-databases-replica](/man/doctl-databases-replica)(1), [psql](/man/psql)(1), [mysql](/man/mysql)(1)

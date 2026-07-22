@@ -65,6 +65,12 @@ Multiple implementations exist. Security sensitive. Verify algorithms carefully.
 
 jwt CLI tools provide command-line access to **JSON Web Token** encoding and decoding for testing and debugging.
 
+# INSTALL
+
+```apt: sudo apt install jwt```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [jq](/man/jq)(1)

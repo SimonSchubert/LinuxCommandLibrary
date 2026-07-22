@@ -50,6 +50,24 @@ Requires groff and an image conversion tool (typically GraphicsMagick or ImageMa
 
 eqn2graph is part of the **groff** suite, providing a convenient way to generate equation images from eqn's preprocessor language.
 
+# INSTALL
+
+```apt: sudo apt install groff```
+
+```dnf: sudo dnf install groff```
+
+```pacman: sudo pacman -S groff```
+
+```apk: sudo apk add groff```
+
+```zypper: sudo zypper install groff```
+
+```brew: brew install groff```
+
+```nix: nix profile install nixpkgs#groff```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [eqn](/man/eqn)(1), [groff](/man/groff)(1)

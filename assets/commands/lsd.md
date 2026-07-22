@@ -178,6 +178,24 @@ A Nerd Font must be installed and configured in the terminal for icons to render
 
 **lsd** (LSDeluxe) was created as a modern, colorful Rust-based replacement for the traditional `ls` command. It draws inspiration from similar tools like `exa` and `eza`.
 
+# INSTALL
+
+```apt: sudo apt install lsd```
+
+```dnf: sudo dnf install lsd```
+
+```pacman: sudo pacman -S lsd```
+
+```apk: sudo apk add lsd```
+
+```zypper: sudo zypper install lsd```
+
+```brew: brew install lsd```
+
+```nix: nix profile install nixpkgs#lsd```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [exa](/man/exa)(1), [eza](/man/eza)(1), [tree](/man/tree)(1)

@@ -43,6 +43,20 @@ Some Vim plugins may not be compatible. The recommended configuration language i
 
 **Neovim** was started in **2014** by **Thiago de Arruda** as a fork of Vim with the goal of aggressive refactoring and modernization. It is written in **C** and **Lua**.
 
+# INSTALL
+
+```dnf: sudo dnf install neovim```
+
+```pacman: sudo pacman -S neovim```
+
+```zypper: sudo zypper install neovim```
+
+```brew: brew install neovim```
+
+```nix: nix profile install nixpkgs#neovim```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [nvim](/man/nvim)(1), [vim](/man/vim)(1), [vi](/man/vi)(1)

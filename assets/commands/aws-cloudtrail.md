@@ -128,6 +128,17 @@ lookup-events only searches the last 90 days; use Athena on S3 logs for older ev
 
 **AWS CloudTrail** launched in **November 2013** as AWS's audit logging service. It became a critical component for security, compliance, and governance. CloudTrail Insights for anomaly detection was added in **2019**. CloudTrail Lake for SQL-based event querying launched in **2022**.
 
+# INSTALL
+
+```dnf: sudo dnf install aws```
+
+```pacman: sudo pacman -S aws-cli```
+
+```apk: sudo apk add aws-cli```
+
+```zypper: sudo zypper install aws-cli```
+
+<!-- packages: 2026-07-22 -->
 # SEE ALSO
 
 [aws](/man/aws)(1), [aws-s3](/man/aws-s3)(1), [aws-athena](/man/aws-athena)(1)

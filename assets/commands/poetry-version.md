@@ -62,6 +62,18 @@ Only updates pyproject.toml. Does not create git tags.
 
 poetry version provides **version management** for Poetry projects.
 
+# INSTALL
+
+```dnf: sudo dnf install poetry```
+
+```apk: sudo apk add poetry```
+
+```brew: brew install poetry```
+
+```nix: nix profile install nixpkgs#poetry```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [poetry](/man/poetry)(1), [semver](/man/semver)(1)

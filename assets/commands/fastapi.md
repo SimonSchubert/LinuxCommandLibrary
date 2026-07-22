@@ -88,6 +88,14 @@ The CLI is a convenience wrapper; production deployments often use Uvicorn/Gunic
 
 FastAPI was created by **Sebastián Ramírez** and first released in **December 2018**. Built on Starlette and Pydantic, it emphasizes type hints for validation, serialization, and documentation. The framework quickly became one of the most popular Python web frameworks for APIs. The **fastapi** CLI was added later to simplify the development experience. FastAPI is used in production by Microsoft, Netflix, Uber, and many others.
 
+# INSTALL
+
+```apk: sudo apk add py3-fastapi```
+
+```brew: brew install fastapi```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [uvicorn](/man/uvicorn)(1), [gunicorn](/man/gunicorn)(1), [flask](/man/flask)(1), [django-admin](/man/django-admin)(1)

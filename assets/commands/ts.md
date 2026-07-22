@@ -95,6 +95,24 @@ ts requires the **moreutils** package, which may not be installed by default. Th
 
 **ts** was written by **Joey Hess** as part of **moreutils**, a collection of Unix utilities. Moreutils was first released around **2006** to provide additional tools that complement the standard coreutils, filling gaps in common command-line workflows.
 
+# INSTALL
+
+```apt: sudo apt install moreutils```
+
+```dnf: sudo dnf install moreutils```
+
+```pacman: sudo pacman -S moreutils```
+
+```apk: sudo apk add moreutils```
+
+```zypper: sudo zypper install moreutils```
+
+```brew: brew install moreutils```
+
+```nix: nix profile install nixpkgs#moreutils```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [date](/man/date)(1), [sponge](/man/sponge)(1), [chronic](/man/chronic)(1)

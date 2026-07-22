@@ -59,6 +59,20 @@ Terminal-based, no WYSIWYG. Limited formatting. Specific to prose writing.
 
 **WordGrinder** was created for focused terminal writing. It provides a distraction-free word processing environment.
 
+# INSTALL
+
+```apt: sudo apt install wordgrinder-ncurses```
+
+```dnf: sudo dnf install wordgrinder```
+
+```apk: sudo apk add wordgrinder```
+
+```brew: brew install wordgrinder```
+
+```nix: nix profile install nixpkgs#wordgrinder```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [vim](/man/vim)(1), [nano](/man/nano)(1), [joe](/man/joe)(1)

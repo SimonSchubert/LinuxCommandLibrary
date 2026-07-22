@@ -20,6 +20,12 @@ Sleek minimal IRC client for the terminal
 
 **ZUSE** was created by **Baby Commando** (babycommando) and is written in **Go**.
 
+# INSTALL
+
+```nix: nix profile install nixpkgs#zuse```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [irssi](/man/irssi)(1), [weechat](/man/weechat)(1)

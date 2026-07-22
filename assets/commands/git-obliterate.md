@@ -30,6 +30,24 @@ It is useful for removing accidentally committed secrets, credentials, or large 
 
 This rewrites history and changes all commit hashes. Coordinate with collaborators before using on shared branches. Run `git reflog expire --expire=now --all && git gc --prune=now --aggressive` afterward to actually reclaim disk space and drop the old blobs.
 
+# INSTALL
+
+```apt: sudo apt install git```
+
+```dnf: sudo dnf install git```
+
+```pacman: sudo pacman -S git```
+
+```apk: sudo apk add git```
+
+```zypper: sudo zypper install git```
+
+```brew: brew install git```
+
+```nix: nix profile install nixpkgs#git```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [git-filter-branch](/man/git-filter-branch)(1), [git-gc](/man/git-gc)(1), [git-extras](/man/git-extras)(1)

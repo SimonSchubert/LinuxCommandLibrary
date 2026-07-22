@@ -57,6 +57,12 @@ The guest OS must have ACPI support enabled and respond to shutdown events. If t
 
 **qm shutdown** is part of the **Proxmox VE** virtualization platform for managing QEMU/KVM virtual machines.
 
+# INSTALL
+
+```dnf: sudo dnf install qm```
+
+<!-- packages: 2026-07-22 -->
+
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-start](/man/qm-start)(1), [qm-stop](/man/qm-stop)(1)
