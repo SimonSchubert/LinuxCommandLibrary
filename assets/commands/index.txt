@@ -1208,6 +1208,7 @@ clang.md
 clangd.md
 claude-pee.md
 claude-pulse.md
+claude-thermos.md
 claude.md
 claumon.md
 clawk.md
@@ -3206,6 +3207,7 @@ handler.md
 handlr.md
 hangman.md
 hangups.md
+hanky.md
 hapless.md
 happy.md
 haproxy.md
