@@ -125,6 +125,7 @@ agent-vault.md
 agentbox.md
 agenthatch.md
 agentico.md
+agentnest.md
 agetty.md
 agg.md
 agy.md
@@ -4534,6 +4535,7 @@ migratepages.md
 mii-tool.md
 mille.md
 miller.md
+millwright.md
 mimeopen..md
 mimetype.md
 mimic.md
