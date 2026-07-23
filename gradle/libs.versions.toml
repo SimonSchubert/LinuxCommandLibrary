@@ -1,5 +1,5 @@
 [versions]
-agp = "9.3.0"
+agp = "9.3.1"
 appVersion = "4.4.0"
 androidVersionCode = "169"
 android-compileSdk = "37"
@@ -23,7 +23,7 @@ kotlinxCollectionsImmutable = "0.5.1"
 mordant = "3.0.2"
 skie = "0.10.13"
 paparazzi = "2.0.0-alpha05"
-androidSdkCommon = "32.3.0"
+androidSdkCommon = "32.3.1"
 lifecycleCompose = "2.11.0"
 savedstateCompose = "1.5.0"
 
