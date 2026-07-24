@@ -775,6 +775,7 @@ bombardier.md
 bondai.md
 boo.md
 bookokrat.md
+bookshelf.md
 boot.md
 bootc-switch.md
 bootc.md
@@ -1206,6 +1207,7 @@ clang-format.md
 clang-tidy.md
 clang.md
 clangd.md
+claude-hibernate.md
 claude-pee.md
 claude-pulse.md
 claude-thermos.md
@@ -7707,6 +7709,7 @@ terraform-show.md
 terraform-taint.md
 terraform-tui.md
 terraform-untaint.md
+terraform-validate.md
 terraform.md
 terraformer.md
 terragrunt.md
@@ -7978,6 +7981,7 @@ turbostat.md
 turm.md
 tuxi.md
 tv.md
+tw.md
 twine.md
 twitch-tui.md
 twm.md
