@@ -68,6 +68,17 @@ private val MATCH_SCROLL_MARGIN = 48.dp
 
 private data class ElementPosKey(val sectionIndex: Int, val elementIndex: Int)
 
+/**
+ * Identity of the match we should scroll to. Omits start/end offsets on purpose: refining a
+ * query ("e" → "ex" → "exit") changes those every keystroke even when the hit stays in the same
+ * element, and re-running the two-hop scroll on that is what made the list jiggle while typing.
+ */
+private data class MatchScrollTarget(
+    val sectionIndex: Int,
+    val elementIndex: Int,
+    val ordinal: Int,
+)
+
 @Composable
 fun CommandDetailScreen(
     viewModel: CommandDetailViewModel,
@@ -126,6 +137,13 @@ fun CommandDetailContent(
     val activeHighlightColor = MaterialTheme.colorScheme.primary
     val onActiveHighlightColor = MaterialTheme.colorScheme.onPrimary
     val activeMatch = matchIndex.matches.getOrNull(activeMatchIndex)
+    val scrollTarget = activeMatch?.let {
+        MatchScrollTarget(
+            sectionIndex = it.sectionIndex,
+            elementIndex = it.elementIndex,
+            ordinal = activeMatchIndex,
+        )
+    }
 
     // Plain (non-snapshot) map on purpose: onGloballyPositioned fires every frame while scrolling,
     // and a snapshot map would turn that into a recomposition storm. Only the scroll effect reads
@@ -134,22 +152,34 @@ fun CommandDetailContent(
     var rootCoords by remember { mutableStateOf<LayoutCoordinates?>(null) }
     val scrollMarginPx = with(LocalDensity.current) { MATCH_SCROLL_MARGIN.toPx() }
 
-    // Two hops, because an off-screen section isn't composed and so has no coordinates yet:
-    // scroll the section into view first, then refine to the matching element once it has laid
-    // out. Both hops are non-animated so it reads as a single crisp jump, like a browser's find.
-    LaunchedEffect(activeMatch, matchIndex) {
-        val match = activeMatch ?: return@LaunchedEffect
-        listState.scrollToItem(match.sectionIndex)
-        val key = ElementPosKey(match.sectionIndex, match.elementIndex)
-        repeat(3) {
-            withFrameNanos { }
+    // Scroll only when the target element/ordinal changes (prev/next, or first hit moves), not
+    // when typing merely refines the highlighted range inside the same element.
+    // Two hops when off-screen: an uncomposed section has no coordinates yet, so bring the section
+    // into view first, then land on the element. Prefer a single scrollBy when coords already
+    // exist, and skip entirely if the match is already in view.
+    LaunchedEffect(scrollTarget) {
+        val target = scrollTarget ?: return@LaunchedEffect
+        val key = ElementPosKey(target.sectionIndex, target.elementIndex)
+
+        suspend fun tryScrollToElement(): Boolean {
             val root = rootCoords
             val coords = elementCoords[key]
-            if (root != null && coords != null && coords.isAttached) {
-                val y = root.localPositionOf(coords, Offset.Zero).y
+            if (root == null || coords == null || !coords.isAttached) return false
+            val y = root.localPositionOf(coords, Offset.Zero).y
+            val viewportHeight = root.size.height.toFloat()
+            val alreadyInView = y >= scrollMarginPx && y <= viewportHeight - scrollMarginPx
+            if (!alreadyInView) {
                 listState.scrollBy(y - scrollMarginPx)
-                return@LaunchedEffect
             }
+            return true
+        }
+
+        if (tryScrollToElement()) return@LaunchedEffect
+
+        listState.scrollToItem(target.sectionIndex)
+        repeat(3) {
+            withFrameNanos { }
+            if (tryScrollToElement()) return@LaunchedEffect
         }
     }
 

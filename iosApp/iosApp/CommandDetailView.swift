@@ -33,10 +33,10 @@ struct CommandDetailView: View {
             }
             ScrollViewReader { proxy in
                 sectionList
-                    .onChange(of: store.activeMatchIndex) { _ in
-                        scrollToActiveMatch(proxy)
-                    }
-                    .onChange(of: store.searchQuery) { _ in
+                    // Scroll only when the target element/ordinal changes (prev/next, or the
+                    // first hit moves). Keying on searchQuery re-ran the two-hop scroll on
+                    // every keystroke and jiggled the list even when the hit stayed put.
+                    .onChange(of: store.matchScrollTarget) { _ in
                         scrollToActiveMatch(proxy)
                     }
             }
@@ -133,22 +133,27 @@ struct CommandDetailView: View {
     }
 
     /// Two hops, because `List` only realises rows near the viewport: scroll to the section first
-    /// so its elements exist, then land on the element holding the match.
+    /// so its elements exist, then land on the element holding the match. No animation — a
+    /// browser-style crisp jump; animating the intermediate hop was part of the typing jiggle.
     private func scrollToActiveMatch(_ proxy: ScrollViewProxy) {
         guard let match = store.activeMatch else { return }
         let sectionIndex = Int(match.sectionIndex)
         guard sectionIndex < store.state.sections.count else { return }
+        let elementAnchor = ManPageAnchor(section: sectionIndex, element: Int(match.elementIndex))
 
         proxy.scrollTo(store.state.sections[sectionIndex].id, anchor: .top)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-            withAnimation(.easeOut(duration: 0.15)) {
-                proxy.scrollTo(
-                    ManPageAnchor(section: sectionIndex, element: Int(match.elementIndex)),
-                    anchor: .center
-                )
-            }
+            proxy.scrollTo(elementAnchor, anchor: .center)
         }
     }
+}
+
+/// Identity of the match we should scroll to. Omits start/end offsets so refining a query
+/// inside the same element does not re-trigger scroll.
+private struct MatchScrollTarget: Equatable {
+    let section: Int
+    let element: Int
+    let ordinal: Int
 }
 
 /// Toolbar bookmark button with a manual scale-bounce on toggle, since
@@ -393,6 +398,16 @@ final class CommandDetailStore: ObservableObject {
     var activeMatch: ManPageMatch? {
         guard activeMatchIndex < matchIndex.matches.count else { return nil }
         return matchIndex.matches[activeMatchIndex]
+    }
+
+    /// Stable scroll key: same element + ordinal while typing does not re-scroll.
+    var matchScrollTarget: MatchScrollTarget? {
+        guard let match = activeMatch else { return nil }
+        return MatchScrollTarget(
+            section: Int(match.sectionIndex),
+            element: Int(match.elementIndex),
+            ordinal: activeMatchIndex
+        )
     }
 
     init(commandName: String, onManTap: @escaping (String) -> Void) {
