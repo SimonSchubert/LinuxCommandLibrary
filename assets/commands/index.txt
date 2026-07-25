@@ -4298,6 +4298,7 @@ lualatex.md
 luanti.md
 luantiserver.md
 luatex.md
+lucen.md
 ludusavi.md
 lue.md
 luigi.md
@@ -5173,6 +5174,7 @@ nvm.md
 nvme.md
 nvrs.md
 nvtop.md
+nwipe.md
 nx.md
 nxc-ftp.md
 nxc-ldap.md
