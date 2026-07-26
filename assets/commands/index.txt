@@ -548,6 +548,7 @@ aws.md
 awsesh.md
 awslocal.md
 awslogs.md
+awsmux.md
 awstats.md
 awww.md
 axel.md
@@ -1639,6 +1640,7 @@ depmod.md
 depsguard.md
 deptrust.md
 desktop-file-validate.md
+desktui.md
 detect-secrets.md
 detex.md
 detox.md
@@ -6854,6 +6856,7 @@ rubish.md
 rubocop.md
 ruby.md
 rucola.md
+rudoc.md
 ruff-check.md
 ruff-format.md
 ruff.md
