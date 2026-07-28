@@ -837,6 +837,7 @@ brltty.md
 broot.md
 brotli.md
 brows.md
+browser-act.md
 browser-sync.md
 browsh.md
 browsr.md
@@ -985,6 +986,7 @@ calligraflow.md
 calligrasheets.md
 calligrastage.md
 calligrawords.md
+callme.md
 cam.md
 camelot.md
 canberra-gtk-play.md
@@ -1517,6 +1519,7 @@ ctest.md
 ctop.md
 ctr.md
 ctrlaltdel.md
+ctrlb-decompose.md
 ctx.md
 ctypes.md
 cu.md
@@ -1750,6 +1753,7 @@ dnf-system-upgrade.md
 dnf-versionlock.md
 dnf.md
 dnf4.md
+dnf5-copr.md
 dnf5-group.md
 dnf5.md
 dnote.md
@@ -4434,6 +4438,7 @@ markdown2pdf.md
 markdownlint.md
 marky.md
 marp.md
+marzban-cli.md
 mashtree.md
 masscan.md
 massdns.md
@@ -5292,6 +5297,7 @@ openconnect.md
 opencubicplayer.md
 openfortivpn.md
 openhack.md
+openlaked.md
 openocd.md
 openrc.md
 openrgb.md
@@ -5622,6 +5628,7 @@ pct-delsnapshot.md
 pct-destroy.md
 pct-enter.md
 pct-exec.md
+pct-fsck.md
 pct-list.md
 pct-listsnapshot.md
 pct-mount.md
@@ -6370,6 +6377,7 @@ pvecm.md
 pvenode-config.md
 pveperf.md
 pvesh.md
+pvesm-add.md
 pvesm.md
 pvesubscription.md
 pvetui.md
@@ -6496,7 +6504,9 @@ qm-disk.md
 qm-guest-exec.md
 qm-guest.md
 qm-help.md
+qm-import.md
 qm-importdisk.md
+qm-importovf.md
 qm-list.md
 qm-listsnapshot.md
 qm-migrate.md
@@ -6507,6 +6517,7 @@ qm-mtunnel.md
 qm-nbdstop.md
 qm-pending.md
 qm-reboot.md
+qm-remote-migrate.md
 qm-rescan.md
 qm-reset.md
 qm-resize.md
@@ -7015,6 +7026,7 @@ sdiag.md
 sdiff.md
 sdk.md
 sdkmanager.md
+sealbot.md
 sealert.md
 searchsploit.md
 seatd.md
@@ -8028,6 +8040,8 @@ udiskie.md
 udisksctl.md
 udisksd.md
 ufraw-batch.md
+ufw-disable.md
+ufw-enable.md
 ufw.md
 ug.md
 ugdb.md
@@ -8473,6 +8487,7 @@ wl-paste.md
 wlc.md
 wlsunset.md
 wmctrl.md
+wmo.md
 wn.md
 wodim.md
 woeusb.md
