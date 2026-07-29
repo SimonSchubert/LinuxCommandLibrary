@@ -1552,6 +1552,7 @@ cwebp.md
 cwl-runner.md
 cxl.md
 cygcheck.md
+cynative.md
 cypher-shell.md
 cython.md
 cythonize.md
@@ -3388,6 +3389,7 @@ husky.md
 hut.md
 hw-probe.md
 hwatch.md
+hwatu.md
 hwclock.md
 hwdb.md
 hwinfo-tui.md
@@ -4390,6 +4392,7 @@ magick-import.md
 magick-mogrify.md
 magick-montage.md
 magick.md
+magpie.md
 maigret.md
 mail.md
 maildir.md
@@ -7016,6 +7019,7 @@ scriptlive.md
 scriptreplay.md
 scrontab.md
 scrot.md
+scrub.md
 scrun.md
 scw.md
 scylladb.md
@@ -8040,6 +8044,7 @@ udiskie.md
 udisksctl.md
 udisksd.md
 ufraw-batch.md
+ufw-allow.md
 ufw-disable.md
 ufw-enable.md
 ufw.md
