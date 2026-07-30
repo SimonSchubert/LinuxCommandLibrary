@@ -1210,6 +1210,8 @@ clang-format.md
 clang-tidy.md
 clang.md
 clangd.md
+claude-account.md
+claude-code-merge-queue.md
 claude-hibernate.md
 claude-pee.md
 claude-pulse.md
@@ -1249,6 +1251,7 @@ clonezilla.md
 cloud-init.md
 cloudflare-speed-cli.md
 cloudflared.md
+cloudrift.md
 cloudsploit.md
 cluster.md
 clusterctl.md
@@ -1922,6 +1925,7 @@ double-bracket.md
 double-parenthesis.md
 doveadm.md
 dovecot.md
+dowe.md
 doxygen.md
 dphys-swapfile.md
 dpigs.md
@@ -2088,6 +2092,7 @@ emacs.md
 emacsclient.md
 emaint.md
 ember.md
+emboss.md
 emcc.md
 emerge.md
 empire.md
@@ -4701,6 +4706,7 @@ mount.md
 mount.smb3.md
 mount.steamos.md
 mountpoint.md
+mousecrack.md
 mousetweaks.md
 mozillavpn.md
 mp3info.md
@@ -5302,6 +5308,7 @@ openfortivpn.md
 openhack.md
 openlaked.md
 openocd.md
+openparser.md
 openrc.md
 openrgb.md
 opensc-tool.md
@@ -6888,6 +6895,7 @@ runghc.md
 runit.md
 runlevel.md
 runlim.md
+runnburn.md
 runsv.md
 runsvchdir.md
 runsvdir.md
@@ -7174,6 +7182,7 @@ siege.md
 sieve.md
 sig.md
 sighthound.md
+sightmap.md
 sigmap.md
 signal-desktop.md
 silentcast.md
