@@ -4520,6 +4520,7 @@ memweave.md
 mencoder.md
 mendeley.md
 menyoki.md
+mere.run.md
 merge.md
 mergiraf.md
 mermaid.md
@@ -6818,6 +6819,7 @@ rogue.md
 roll.md
 rolldice.md
 rollup.md
+rom.md
 ronn.md
 ropgadget.md
 ropper.md
