@@ -721,6 +721,7 @@ bird.md
 birdc.md
 bison.md
 bit.md
+bitbang.md
 bitchat-tui.md
 bitcoin-cli.md
 bitcoin-qt.md
@@ -4034,6 +4035,7 @@ kustomize.md
 kvm.md
 kwallet-query.md
 kwin.md
+kwin_wayland.md
 kwrite.md
 kwriteconfig5.md
 kyanos.md
@@ -8408,6 +8410,7 @@ wasm2c.md
 wasm2wat.md
 wasmer.md
 wasmtime.md
+waste.md
 wat2wasm.md
 watch.md
 watchdog.md
