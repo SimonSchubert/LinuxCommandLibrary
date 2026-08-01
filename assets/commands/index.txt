@@ -8497,6 +8497,7 @@ wireplumber.md
 wireshark.md
 wish.md
 wishlist.md
+wisp.md
 witr.md
 wizu.md
 wkhtmltoimage.md

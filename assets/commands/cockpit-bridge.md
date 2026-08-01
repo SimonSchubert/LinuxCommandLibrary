@@ -4,11 +4,11 @@ Cockpit web service message relay
 
 # TLDR
 
-**List** all cockpit packages
+Show **installed Cockpit packages** known to the bridge
 
 ```cockpit-bridge --packages```
 
-Display **help**
+Print bridge **usage and options**
 
 ```cockpit-bridge --help```
 

@@ -4,7 +4,7 @@ creates a lost+found directory in the current working directory
 
 # TLDR
 
-Create a **lost+found directory** in the current directory
+Create a preallocated **lost+found** directory (for fsck)
 
 ```mklost+found```
 

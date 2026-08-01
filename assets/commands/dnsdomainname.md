@@ -4,7 +4,7 @@ display DNS domain name
 
 # TLDR
 
-Show the system's **DNS domain name**
+Print the **DNS domain** portion of the FQDN
 
 ```dnsdomainname```
 

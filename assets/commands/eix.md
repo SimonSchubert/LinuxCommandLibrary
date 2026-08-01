@@ -4,23 +4,23 @@ fast Gentoo package search utility
 
 # TLDR
 
-**Search** for a package
+Search the Portage package cache by **name**
 
 ```eix [query]```
 
-Search for **installed** packages
+Limit results to packages that are **already installed**
 
 ```eix --installed [query]```
 
-Search in package **descriptions**
+Match against the package **description** text
 
-```eix --description "[description]"```
+```eix --description "[text]"```
 
-Search by package **license**
+Filter by **license** name
 
 ```eix --license [license]```
 
-**Exclude** results from search
+Invert a filter (e.g. packages **not** under a license)
 
 ```eix --not --license [license]```
 

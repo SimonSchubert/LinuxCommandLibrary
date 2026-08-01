@@ -4,19 +4,19 @@ Control the state of NumLock
 
 # TLDR
 
-Show the current **number lock status**
+Report whether Num Lock is **on or off**
 
 ```numlockx status```
 
-Turn the number lock **on**
+Turn Num Lock **on**
 
 ```numlockx on```
 
-Turn the number lock **off**
+Turn Num Lock **off**
 
 ```numlockx off```
 
-**Toggle** the current state
+**Flip** the current Num Lock state
 
 ```numlockx toggle```
 

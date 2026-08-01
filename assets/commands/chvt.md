@@ -4,9 +4,9 @@ Switch the foreground virtual terminal
 
 # TLDR
 
-Change to a **specific TTY**
+Switch the console to **TTY number N** (requires root)
 
-```sudo chvt [3]```
+```sudo chvt [N]```
 
 # SYNOPSIS
 

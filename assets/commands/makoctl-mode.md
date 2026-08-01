@@ -4,25 +4,25 @@ manages notification modes in the mako notification daemon
 
 # TLDR
 
-**List** all currently active modes
+Print **active** mako modes
 
 ```makoctl mode```
 
-**Add** a mode
+**Enable** a mode (e.g. do-not-disturb)
 
 ```makoctl mode -a [do-not-disturb]```
 
-**Remove** a mode
+**Disable** a mode
 
 ```makoctl mode -r [do-not-disturb]```
 
-**Toggle** a mode (add if absent, remove if present)
+**Toggle** a mode on or off
 
 ```makoctl mode -t [do-not-disturb]```
 
-**Set specific modes**, replacing all current modes
+Replace the mode set with an explicit **list**
 
-```makoctl mode -s [mode1 mode2 ...]```
+```makoctl mode -s [mode1] [mode2]```
 
 # SYNOPSIS
 

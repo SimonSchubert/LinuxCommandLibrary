@@ -4,19 +4,19 @@ collects diagnostic information about the LVM2 subsystem for troubleshooting
 
 # TLDR
 
-Generate a **basic dump**
+Collect a **standard LVM diagnostic dump** (tarball)
 
 ```lvmdump```
 
-Generate an **extended dump** with metadata and daemon info
+Include **advanced** data (metadata, locks, daemon info)
 
 ```lvmdump -a -l -m```
 
-Dump the information into a **directory** instead of a tarball
+Write dump files into a **directory** (not a tarball)
 
 ```lvmdump -d [path/to/directory]```
 
-Display **help**
+Show **help**
 
 ```lvmdump -h```
 

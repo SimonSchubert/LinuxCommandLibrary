@@ -4,15 +4,15 @@ real-time media server and proxy that supports multiple streaming protocols
 
 # TLDR
 
-**Run** MediaMTX
+Start the MediaMTX server with the **default config**
 
 ```mediamtx```
 
-Run MediaMTX with a **custom configuration** location
+Start with a **custom YAML** config path
 
 ```mediamtx [path/to/config.yml]```
 
-Start MediaMTX as a **daemon**
+If installed as a unit, start via **systemd**
 
 ```systemctl start mediamtx```
 

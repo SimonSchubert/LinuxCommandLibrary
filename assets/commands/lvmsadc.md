@@ -4,11 +4,11 @@ was the LVM system activity data collector for gathering I/O
 
 # TLDR
 
-Run the **collector** (legacy LVM1 systems only)
+Start the **legacy LVM1** statistics collector (obsolete on modern LVM2)
 
 ```lvmsadc```
 
-Report **I/O statistics** using the device-mapper replacement
+On current systems, report I/O stats with **dmstats** instead
 
 ```dmstats report [/dev/mapper/device]```
 

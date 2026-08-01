@@ -4,43 +4,35 @@ Arch Linux AUR helper
 
 # TLDR
 
-
-**Interactively search** and install packages from the repos and AUR
-
-```yay [package_name|search_term]```
-
-  
-**Synchronize and update** all packages from the repos and AUR
+**Update** all packages from repos and the AUR
 
 ```yay```
 
-  
-**Install** a new package from the repos and AUR and do not ask to confirm transactions
+Interactively **search and install** by name or term
+
+```yay [search_term]```
+
+**Install** a package without confirmation prompts
 
 ```yay -S [package] --noconfirm```
 
-  
-**Remove** an installed package and both its dependencies and configuration files
-
-```yay -Rns [package]```
-
-  
-**Search** the package database for a keyword from the repos and AUR
+**Search** repos and AUR for a keyword
 
 ```yay -Ss [keyword]```
 
-  
-**Remove orphaned packages** (installed as dependencies but not required by any package)
+**Remove** a package with unused deps and configs
+
+```yay -Rns [package]```
+
+Clean **orphans** tracked by yay
 
 ```yay -Yc```
 
-  
-**Clean pacman and yay caches** (old package versions kept for rollback and downgrade purposes)
+Clear **pacman/yay package caches**
 
 ```yay -Scc```
 
-  
-**Show statistics for** installed packages and system health
+Print package/system **stats**
 
 ```yay -Ps```
 

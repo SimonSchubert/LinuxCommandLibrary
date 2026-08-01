@@ -4,7 +4,7 @@ Display system information with ASCII art logo
 
 # TLDR
 
-Show **system information**
+Print a **system summary** (OS, kernel, hardware)
 
 ```archey```
 

@@ -4,21 +4,21 @@ generate optimized subsets of font files
 
 # TLDR
 
-**Subset** a TTF font file to the Basic Latin Unicode block
+Subset a font to **Basic Latin** code points
 
 ```fonttools subset [path/to/font.ttf] --unicodes=U+0000-007F```
 
-Change the file type to **WOFF2**
+Write the subset with an explicit **output path**
+
+```fonttools subset [path/to/font.ttf] --unicodes=U+0000-007F --output-file=[path/to/subset.ttf]```
+
+Emit **WOFF2** instead of TTF
 
 ```fonttools subset [path/to/font.ttf] --unicodes=U+0000-007F --flavor=woff2```
 
-Keep only the **onum** (oldstyle figures) and **kern** (kerning) OpenType font features
+Keep only selected OpenType **layout features**
 
 ```fonttools subset [path/to/font.ttf] --unicodes=U+0000-007F --layout-features=onum,kern```
-
-Set the **output file's name**
-
-```fonttools subset [path/to/font.ttf] --unicodes=U+0000-007F --output-file=[path/to/subset.ttf]```
 
 # SYNOPSIS
 

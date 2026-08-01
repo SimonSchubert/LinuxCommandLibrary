@@ -4,15 +4,15 @@ Deprecated LVM1 system activity reporter for logical volume I/O statistics
 
 # TLDR
 
-Run the **legacy reporter** (LVM1 systems only)
+Run the **legacy LVM1** statistics reporter (obsolete on modern LVM2)
 
 ```lvmsar```
 
-Report **I/O statistics** for a device using device-mapper stats
+Report device-mapper **I/O statistics**
 
 ```dmstats report [/dev/mapper/device]```
 
-**List statistics regions** for a device
+**List** configured statistics regions
 
 ```dmstats list [/dev/mapper/device]```
 

@@ -4,7 +4,7 @@ Update Arch binary repository database
 
 # TLDR
 
-**Update** the binary repository as final release step
+Push pending package updates into the **binary repository** (release step)
 
 ```pkgctl db update```
 

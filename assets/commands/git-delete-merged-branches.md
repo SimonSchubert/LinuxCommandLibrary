@@ -4,7 +4,7 @@ Remove all branches merged into current branch
 
 # TLDR
 
-**Delete merged branches**
+Remove local branches already **merged into the current branch**
 
 ```git delete-merged-branches```
 

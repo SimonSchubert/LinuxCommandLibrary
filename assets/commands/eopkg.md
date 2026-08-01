@@ -4,15 +4,15 @@ Package manager for Solus Linux
 
 # TLDR
 
-**Install** a specific package
-
-```sudo eopkg install [package]```
-
-**Update** all packages
+**Refresh and upgrade** every installed package
 
 ```sudo eopkg upgrade```
 
-**Search** for packages
+**Install** one or more packages
+
+```sudo eopkg install [package]```
+
+**Search** the repository index
 
 ```sudo eopkg search [search_term]```
 

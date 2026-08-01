@@ -4,15 +4,15 @@ generate UUID from coredump for crash deduplication
 
 # TLDR
 
-Calculate and save the UUID for the **current working directory**
+Compute and store a UUID for C/C++ crashes in the **current dump dir**
 
 ```abrt-action-analyze-c```
 
-Calculate and save the UUID for a **specific directory**
+Do the same for a **specified dump directory**
 
 ```abrt-action-analyze-c -d [path/to/directory]```
 
-Calculate and save the UUID **verbosely**
+Run with **verbose** output
 
 ```abrt-action-analyze-c -v```
 

@@ -4,17 +4,17 @@ Stop systemd units
 
 # TLDR
 
-**Stop** a unit
+**Stop** a running system unit
 
 ```systemctl stop [unit]```
 
-Stop a service and **suppress warnings**
+Stop a unit managed by the **user** instance
 
-```systemctl stop [unit] --no-warn```
+```systemctl --user stop [unit]```
 
-Stop a **user** unit
+Stop while **suppressing** certain warnings
 
-```systemctl stop [unit] --user```
+```systemctl stop --no-warn [unit]```
 
 # SYNOPSIS
 

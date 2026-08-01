@@ -4,19 +4,19 @@ sets the system date and time by querying NTP servers
 
 # TLDR
 
-**Synchronize and set** date and time
-
-```sudo ntpdate [host]```
-
-**Query** the host without setting the time
+**Query** a time server without changing the clock
 
 ```ntpdate -q [host]```
 
-Use an **unprivileged port** in case a firewall is blocking privileged ports
+Set the clock from a server (**sync**)
+
+```sudo ntpdate [host]```
+
+Use an **unprivileged** source port (firewalls)
 
 ```sudo ntpdate -u [host]```
 
-**Force time to be stepped** using settimeofday instead of slewed
+**Step** the clock immediately instead of slewing
 
 ```sudo ntpdate -b [host]```
 

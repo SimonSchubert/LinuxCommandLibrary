@@ -4,17 +4,17 @@ Enable unit auto-start at boot
 
 # TLDR
 
-**Enable** a service to run on boot
+Enable a unit so it **starts at boot**
 
 ```systemctl enable [unit]```
 
-Enable a service to run on boot **and start it now**
+Enable and **start immediately**
 
-```systemctl enable [unit] --now```
+```systemctl enable --now [unit]```
 
-Enable a **user** unit to run on login
+Enable a **user** unit for the current user session lifecycle
 
-```systemctl enable [unit] --user```
+```systemctl enable --user [unit]```
 
 # SYNOPSIS
 

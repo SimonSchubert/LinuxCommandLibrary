@@ -4,25 +4,25 @@ terminal-based spaced repetition flashcards
 
 # TLDR
 
-Open a **menu of available flashcard decks** for selection
+Launch the **deck picker** UI
 
 ```flash```
 
-Display **information** about the flashcard system
+Show flash **system information**
 
 ```flash -i```
 
-Change the **previewer** from default bat to cat
+Use a custom **preview** program instead of bat
 
 ```flash -p [cat]```
 
-Display **help**
-
-```flash -h```
-
-Display **version**
+Print **version**
 
 ```flash -v```
+
+Show **help**
+
+```flash -h```
 
 # SYNOPSIS
 

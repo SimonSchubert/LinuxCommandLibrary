@@ -4,23 +4,23 @@ determines the fastest network servers from a list of hosts by measuring
 
 # TLDR
 
-Choose the server with the **lowest latency**
+Pick the host with the **lowest measured latency**
 
-```sudo netselect [host_1 host_2 ...]```
+```sudo netselect [host1] [host2] [host3]```
 
-Display **nameserver resolution and statistics**
+Return the **N fastest** hosts
 
-```sudo netselect -vv [host_1 host_2 ...]```
+```sudo netselect -s [N] [host1] [host2] [host3]```
 
-Define **maximum TTL** (time to live)
+Increase verbosity for **DNS and probe stats**
 
-```sudo netselect -m [10] [host_1 host_2 ...]```
+```sudo netselect -vv [host1] [host2]```
 
-Print **n fastest servers** among the hosts
+Cap probe **TTL**
 
-```sudo netselect -s [n] [host_1 host_2 host_3 ...]```
+```sudo netselect -m [10] [host1] [host2]```
 
-Display **help**
+Show built-in **usage** (no hosts)
 
 ```netselect```
 

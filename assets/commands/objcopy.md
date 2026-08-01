@@ -4,25 +4,25 @@ copies the contents of an object file to another, optionally transforming it
 
 # TLDR
 
-**Copy** data to another file
+**Copy** an object file to a new path
 
-```objcopy [path/to/source_file] [path/to/target_file]```
+```objcopy [source] [dest]```
 
-Translate object files from **one format to another**
+**Strip all symbols** into a new file
 
-```objcopy --input-target=[input_format] --output-target [output_format] [path/to/source_file] [path/to/target_file]```
+```objcopy --strip-all [source] [dest]```
 
-**Strip all symbol** information from the file
+Strip only **debug** sections
 
-```objcopy --strip-all [path/to/source_file] [path/to/target_file]```
+```objcopy --strip-debug [source] [dest]```
 
-Strip **debugging information** from the file
+Copy a **single section** only
 
-```objcopy --strip-debug [path/to/source_file] [path/to/target_file]```
+```objcopy --only-section=[section] [source] [dest]```
 
-Copy a **specific section** from the source file to the destination file
+Convert between object **formats**
 
-```objcopy --only-section [section] [path/to/source_file] [path/to/target_file]```
+```objcopy --input-target=[in_fmt] --output-target=[out_fmt] [source] [dest]```
 
 # SYNOPSIS
 

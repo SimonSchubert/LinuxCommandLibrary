@@ -4,11 +4,11 @@ Set terminal environment to match window size
 
 # TLDR
 
-**Resize** the terminal
+Ask the terminal to report/update its **size** (for serial consoles)
 
 ```resize```
 
-**Print** terminal size
+Print rows/columns in a form usable by the **shell**
 
 ```resize -s```
 

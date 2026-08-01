@@ -4,7 +4,7 @@ Remove installed packages on CRUX Linux
 
 # TLDR
 
-**Remove** an installed package
+Uninstall a package that was installed with **pkgadd**
 
 ```pkgrm [package]```
 

@@ -4,13 +4,13 @@ Python toolkit for manipulating font files
 
 # TLDR
 
-**Subset** a TTF font file to the Basic Latin Unicode block
-
-```fonttools subset [path/to/font.ttf] --unicodes=U+0000-007F```
-
-Display **help**
+Show top-level **fonttools** help and subcommands
 
 ```fonttools --help```
+
+Subset a TTF to the **Basic Latin** Unicode range
+
+```fonttools subset [path/to/font.ttf] --unicodes=U+0000-007F```
 
 # SYNOPSIS
 

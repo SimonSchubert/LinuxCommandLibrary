@@ -4,7 +4,7 @@ Display an ASCII cow easter egg.
 
 # TLDR
 
-Print a **cow easter egg**
+Show apt's **ASCII cow** easter egg
 
 ```apt moo```
 

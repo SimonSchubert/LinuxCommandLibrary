@@ -4,11 +4,11 @@ Manage the rustup installation itself
 
 # TLDR
 
-**Update rustup**
+**Upgrade** the rustup binary itself
 
 ```rustup self update```
 
-**Uninstall rustup**
+**Remove** rustup and its installed toolchains
 
 ```rustup self uninstall```
 

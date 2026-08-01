@@ -4,21 +4,21 @@ converts PDF files to HTML, XML, or PNG format
 
 # TLDR
 
-**Convert** a PDF file to an HTML file
+Convert PDF pages to **HTML**
 
-```pdftohtml [path/to/file.pdf] [path/to/output_file.html]```
+```pdftohtml [file.pdf] [output.html]```
 
-**Ignore images** in the PDF file
+Produce **one HTML file** for the whole document
 
-```pdftohtml -i [path/to/file.pdf] [path/to/output_file.html]```
+```pdftohtml -s [file.pdf] [output.html]```
 
-Generate a **single HTML file** that includes all PDF pages
+Skip embedding **images**
 
-```pdftohtml -s [path/to/file.pdf] [path/to/output_file.html]```
+```pdftohtml -i [file.pdf] [output.html]```
 
-Convert a PDF file to an **XML file**
+Emit **XML** instead of HTML
 
-```pdftohtml -xml [path/to/file.pdf] [path/to/output_file.xml]```
+```pdftohtml -xml [file.pdf] [output.xml]```
 
 # SYNOPSIS
 

@@ -4,13 +4,13 @@ Start systemd units
 
 # TLDR
 
-**Start** a unit
+**Start** a system unit now
 
 ```systemctl start [unit]```
 
-Start a **user** unit
+Start a unit in the **user** manager
 
-```systemctl start [unit] --user```
+```systemctl --user start [unit]```
 
 # SYNOPSIS
 

@@ -4,17 +4,17 @@ Linux kernel resource control and isolation
 
 # TLDR
 
-View documentation for **cgclassify**
+This page is an index — see **cgcreate** for creating control groups
 
-```tldr cgclassify```
+```cgcreate -g [controllers]:[path]```
 
-View documentation for **cgcreate**
+Run a process in a cgroup with **cgexec**
 
-```tldr cgcreate```
+```cgexec -g [controllers]:[path] [command]```
 
-View documentation for **cgexec**
+Move a running process with **cgclassify**
 
-```tldr cgexec```
+```cgclassify -g [controllers]:[path] [pid]```
 
 # DESCRIPTION
 

@@ -4,17 +4,17 @@ offline Windows password and registry editor
 
 # TLDR
 
-**List** all users in the SAM file
+Open the SAM database in **interactive** mode
+
+```chntpw -i [path/to/sam_file]```
+
+**List** usernames stored in a Windows SAM file
 
 ```chntpw -l [path/to/sam_file]```
 
-**Edit** user interactively
+Edit a **named user** (password/unlock) offline
 
 ```chntpw -u [username] [path/to/sam_file]```
-
-Use chntpw **interactively**
-
-```chntpw -i [path/to/sam_file]```
 
 # SYNOPSIS
 

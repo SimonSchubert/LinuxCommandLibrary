@@ -4,13 +4,13 @@ Enter single-user rescue mode
 
 # TLDR
 
-Enter **rescue** mode
+Switch the system into **rescue** target (single-user-like)
 
 ```systemctl rescue```
 
-Enter rescue mode **asynchronously**
+Request rescue mode **without waiting** for completion
 
-```systemctl rescue --no-block```
+```systemctl --no-block rescue```
 
 # SYNOPSIS
 

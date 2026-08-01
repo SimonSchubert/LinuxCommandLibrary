@@ -4,15 +4,15 @@ Apply KDE Plasma cursor themes
 
 # TLDR
 
-List **available** cursor themes
-
-```plasma-apply-cursortheme --list-themes```
-
-**Apply** a cursor theme
+**Apply** a cursor theme by name
 
 ```plasma-apply-cursortheme [breeze_cursors]```
 
-Display **help**
+**List** installed cursor themes
+
+```plasma-apply-cursortheme --list-themes```
+
+Show **help**
 
 ```plasma-apply-cursortheme --help```
 

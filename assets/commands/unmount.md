@@ -4,9 +4,9 @@ Common misspelling redirect to umount
 
 # TLDR
 
-**View documentation for the correct command**
+This spelling is wrong — use **umount** to detach filesystems
 
-```tldr umount```
+```umount [device|mountpoint]```
 
 # DESCRIPTION
 

@@ -4,7 +4,7 @@ Send feedback to the Azure CLI team
 
 # TLDR
 
-**Send feedback** to the Azure CLI team
+Open the form to **report feedback** about Azure CLI
 
 ```az feedback```
 

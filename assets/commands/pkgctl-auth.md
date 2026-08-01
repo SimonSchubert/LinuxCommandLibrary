@@ -4,11 +4,11 @@ Manage pkgctl service authentication
 
 # TLDR
 
-**Authenticate** pkgctl with the GitLab instance
+Log in to Arch GitLab for **pkgctl** operations
 
 ```pkgctl auth login```
 
-View **authentication status**
+Show whether **credentials** are configured
 
 ```pkgctl auth status```
 

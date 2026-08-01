@@ -4,11 +4,11 @@ displays information about group membership on Linux systems
 
 # TLDR
 
-List **primary and secondary groups** of a specific user
+Show groups that include a **user** (primary and supplementary)
 
 ```sudo lid [username]```
 
-List **users of a specific group**
+Show members of a **group**
 
 ```sudo lid --group [group_name]```
 

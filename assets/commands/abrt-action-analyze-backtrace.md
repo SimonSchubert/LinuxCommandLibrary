@@ -4,17 +4,17 @@ analyze crash backtrace for duplication and quality
 
 # TLDR
 
-Analyze backtrace for the **current working directory**
+Analyze a backtrace **with verbose logging**
 
-```abrt-action-analyze-backtrace```
+```abrt-action-analyze-backtrace -v```
 
-Analyze backtrace for a **specific directory**
+Analyze problem data in a **given dump directory**
 
 ```abrt-action-analyze-backtrace -d [path/to/directory]```
 
-Analyze backtrace **verbosely**
+Analyze the dump directory in the **current working directory**
 
-```abrt-action-analyze-backtrace -v```
+```abrt-action-analyze-backtrace```
 
 # SYNOPSIS
 

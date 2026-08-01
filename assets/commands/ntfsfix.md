@@ -4,7 +4,7 @@ fixes common NTFS problems that prevent the filesystem from being mounted
 
 # TLDR
 
-**Fix** a given NTFS partition
+Repair an **NTFS filesystem** on a block device
 
 ```sudo ntfsfix [/dev/sdXN]```
 

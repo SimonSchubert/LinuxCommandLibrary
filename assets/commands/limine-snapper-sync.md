@@ -4,23 +4,23 @@ synchronizes Limine bootloader menu entries with Btrfs snapshots
 
 # TLDR
 
-Manually **synchronize Snapper snapshots** to create boot entries in Limine
+Sync Snapper snapshots into **Limine boot entries**
 
 ```limine-snapper-sync```
 
-**List** the current snapshot entries managed by Limine
+**List** snapshot boot entries managed for Limine
 
 ```limine-snapper-list```
 
-Display **detailed information** about bootable snapshots and their files
+Show **details** of bootable snapshots
 
 ```limine-snapper-info```
 
-**Restore** the system from a selected bootable snapshot
+**Restore** the system from a bootable snapshot
 
 ```limine-snapper-restore```
 
-Start the **watcher process** to monitor for Snapper snapshot changes
+Run the **background watcher** for new Snapper snapshots
 
 ```limine-snapper-watcher```
 

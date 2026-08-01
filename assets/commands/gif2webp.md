@@ -4,9 +4,9 @@ Convert GIF images to WebP format
 
 # TLDR
 
-Convert a **GIF image** to WebP
+Encode a GIF as WebP and **write the output file**
 
-```gif2webp [path/to/image.gif] -o [path/to/image.webp]```
+```gif2webp [input.gif] -o [output.webp]```
 
 # SYNOPSIS
 

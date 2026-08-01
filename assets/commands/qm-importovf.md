@@ -4,9 +4,9 @@ Import a VM from an OVF manifest into Proxmox VE
 
 # TLDR
 
-Import from an **OVF manifest** and its accompanying files
+Create a VM from an **OVF** package into the given storage
 
-```qm importovf [100] [path/to/manifest].ovf [storage_name]```
+```qm importovf [vmid] [path/to/manifest.ovf] [storage]```
 
 # SYNOPSIS
 

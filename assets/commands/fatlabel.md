@@ -4,11 +4,11 @@ FAT filesystem volume label utility
 
 # TLDR
 
-**Get** the label of a FAT32 partition
+**Read** the volume label of a FAT filesystem
 
 ```fatlabel [/dev/sda1]```
 
-**Set** the label of a FAT32 partition
+**Write** a new volume label
 
 ```fatlabel [/dev/sdc3] "[new_label]"```
 

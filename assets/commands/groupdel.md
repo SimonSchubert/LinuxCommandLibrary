@@ -4,7 +4,7 @@ delete a group from the system
 
 # TLDR
 
-**Delete** an existing group
+Remove a group from the system by **name**
 
 ```sudo groupdel [group_name]```
 

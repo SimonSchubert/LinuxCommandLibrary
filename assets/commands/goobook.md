@@ -4,11 +4,11 @@ Google Contacts command-line interface
 
 # TLDR
 
-Allow goobook to access Google contacts using **OAuth2**
+Complete **OAuth2** setup so goobook can read Google Contacts
 
 ```goobook authenticate```
 
-**Dump** all contacts to XML (stdout)
+Export all contacts as **XML** on stdout
 
 ```goobook dump_contacts```
 

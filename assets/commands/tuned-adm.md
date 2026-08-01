@@ -4,23 +4,23 @@ Manage system performance tuning profiles
 
 # TLDR
 
-**List** available profiles
-
-```tuned-adm list```
-
-**Show** the currently active profile
+Show the **active** tuned profile
 
 ```tuned-adm active```
 
-**Set** a specific tuning profile
+**List** profiles available on this system
+
+```tuned-adm list```
+
+**Switch** to a named profile
 
 ```tuned-adm profile [profile_name]```
 
-**Recommend** a suitable profile based on the current system
+Ask tuned for a **recommended** profile
 
 ```tuned-adm recommend```
 
-**Disable** tuning
+**Turn off** dynamic tuning
 
 ```tuned-adm off```
 

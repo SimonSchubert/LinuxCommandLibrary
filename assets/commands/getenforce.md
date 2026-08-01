@@ -4,7 +4,7 @@ SELinux enforcement mode checker
 
 # TLDR
 
-Display the **current mode** of SELinux
+Print SELinux mode: **Enforcing**, **Permissive**, or **Disabled**
 
 ```getenforce```
 

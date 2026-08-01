@@ -4,25 +4,25 @@ Name Service Switch database query tool
 
 # TLDR
 
-Get list of all **groups**
+Look up a **passwd** entry by UID
+
+```getent passwd [1000]```
+
+List every entry in the **group** database
 
 ```getent group```
 
-See the **members** of a group
+Show members of one **group name**
 
 ```getent group [group_name]```
 
-Get list of all **services**
+Resolve a hostname via **hosts** (NSS)
+
+```getent hosts [hostname]```
+
+List known **services** from the services database
 
 ```getent services```
-
-Find a **username by UID**
-
-```getent passwd 1000```
-
-Perform a **reverse DNS lookup**
-
-```getent hosts [host]```
 
 # SYNOPSIS
 

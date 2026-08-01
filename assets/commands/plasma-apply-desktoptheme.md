@@ -4,15 +4,15 @@ Apply KDE Plasma desktop themes
 
 # TLDR
 
-List **available** desktop themes
-
-```plasma-apply-desktoptheme --list-themes```
-
-**Apply** a desktop theme
+**Apply** a Plasma desktop theme by name
 
 ```plasma-apply-desktoptheme [default]```
 
-Display **help**
+**List** available desktop themes
+
+```plasma-apply-desktoptheme --list-themes```
+
+Show **help**
 
 ```plasma-apply-desktoptheme --help```
 

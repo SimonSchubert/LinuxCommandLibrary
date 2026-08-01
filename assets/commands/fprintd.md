@@ -4,21 +4,21 @@ D-Bus fingerprint authentication service
 
 # TLDR
 
-View documentation for **listing** enrolled fingerprints
+Fingerprint enrollment and matching are split tools — list **enrolled** prints
 
-```tldr fprintd-list```
+```fprintd-list [username]```
 
-View documentation for **enrolling** new fingerprints
+**Enroll** a new fingerprint
 
-```tldr fprintd-enroll```
+```fprintd-enroll [username]```
 
-View documentation for **verifying** a fingerprint against a database
+**Verify** a finger against enrolled data
 
-```tldr fprintd-verify```
+```fprintd-verify [username]```
 
-View documentation for **deleting** fingerprints from a database
+**Delete** enrolled fingerprints
 
-```tldr fprintd-delete```
+```fprintd-delete [username]```
 
 # SYNOPSIS
 

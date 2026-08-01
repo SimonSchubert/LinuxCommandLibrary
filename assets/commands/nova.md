@@ -4,27 +4,27 @@ command-line client for OpenStack Compute, which manages virtual machine
 
 # TLDR
 
-**List VMs** on current tenant
+List servers in the **current project/tenant**
 
 ```nova list```
 
-List VMs of **all tenants** (admin user only)
+List servers across **all tenants** (admin)
 
 ```nova list --all-tenants```
 
-**Boot a VM** on a specific host
+**Boot** an instance with network, image, and flavor
 
 ```nova boot --nic net-id=[net_id] --image [image_id] --flavor [flavor] --availability-zone nova:[host_name] [vm_name]```
 
-**Start** a server
+**Power on** a server
 
 ```nova start [server]```
 
-**Stop** a server
+**Power off** a server
 
 ```nova stop [server]```
 
-**Attach a network interface** to a specific VM
+**Attach** a network interface to a server
 
 ```nova interface-attach --net-id [net_id] [server]```
 
