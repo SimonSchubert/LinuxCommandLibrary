@@ -1,3 +1,16 @@
+## v4.5.0 - 2026-08-02
+
+### Features
+- Added package install sections on command detail pages (Android and iOS)
+- Added 71 new commands, including AI/agent tools (mere.run, claude helpers, agentnest), Proxmox and UFW helpers, disk utilities (nwipe, scrub), and other CLIs from tldr and Hacker News
+
+### Fixes
+- Fixed man page search UI jiggle on Android and iOS
+
+### Improvements
+- Improved documentation for existing commands
+- Upgraded dependencies (Kotlin 2.4.10, AGP 9.3.1, and related tooling)
+
 ## v4.4.0 - 2026-07-19
 
 ### Features

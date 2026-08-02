@@ -2,7 +2,7 @@
 
 ![Icon](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandLibrary/master/art/web_hi_res_144.png)
 
-The app currently has **8817** manual pages, **30+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
+The app currently has **8887** manual pages, **30+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
 
 [![App Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/app_store_badge.png)](https://apps.apple.com/us/app/linux-command-library/id1219649976)
 [![Play Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/play_store_badge.png)](https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca)
@@ -92,7 +92,7 @@ The source code is licensed under the Apache 2.0 license and the copyright of th
 
 #### Monthly
 
-<a href="https://github.com/mikegyro"><img src="https://avatars.githubusercontent.com/u/51263724?s=60&v=4" width="60px" alt="mikegyro" /></a> <a href="https://github.com/zodiac-systems"><img src="https://avatars.githubusercontent.com/u/297461072?s=60&v=4" width="60px" alt="zodiac-systems" /></a> <a href="https://github.com/sergutelo"><img src="https://avatars.githubusercontent.com/u/218789846?s=60&v=4" width="60px" alt="sergutelo" /></a> <a href="https://github.com/nikosmizeros"><img src="https://avatars.githubusercontent.com/u/290152856?s=60&v=4" width="60px" alt="nikosmizeros" /></a> 
+<a href="https://github.com/mikegyro"><img src="https://avatars.githubusercontent.com/u/51263724?s=60&v=4" width="60px" alt="mikegyro" /></a> <a href="https://github.com/zodiac-systems"><img src="https://avatars.githubusercontent.com/u/297461072?s=60&v=4" width="60px" alt="zodiac-systems" /></a> <a href="https://github.com/sergutelo"><img src="https://avatars.githubusercontent.com/u/218789846?s=60&v=4" width="60px" alt="sergutelo" /></a> <a href="https://github.com/nikosmizeros"><img src="https://avatars.githubusercontent.com/u/290152856?s=60&v=4" width="60px" alt="nikosmizeros" /></a> <a href="https://github.com/Bilouzzz"><img src="https://avatars.githubusercontent.com/u/206933872?s=60&v=4" width="60px" alt="Bilouzzz" /></a> 
 
 #### Previous
 
