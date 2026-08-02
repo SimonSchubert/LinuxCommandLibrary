@@ -629,6 +629,7 @@ balena.md
 ballast.md
 balooctl.md
 bandwhich.md
+banksia.md
 banner.md
 banshee.md
 baobab.md
@@ -3894,6 +3895,7 @@ keyd.md
 keynav.md
 keytool.md
 kfp.md
+kh.md
 khal.md
 kibi.md
 kid3.md
@@ -4107,6 +4109,7 @@ ledctl.md
 ledger.md
 ledit.md
 lefthook.md
+legionlinuxtui.md
 legit.md
 lein.md
 lemmeknow.md
@@ -7526,6 +7529,7 @@ sx.md
 sxhkd.md
 sxiv.md
 syft.md
+symbio.md
 symfony.md
 sync.md
 syncthing.md
@@ -8467,6 +8471,7 @@ whoami.md
 whohas.md
 whois.md
 whosthere.md
+wienerdog.md
 wifi-menu.md
 wifite.md
 wifitui.md
