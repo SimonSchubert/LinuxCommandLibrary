@@ -401,7 +401,7 @@ final class CommandDetailStore: ObservableObject {
     }
 
     /// Stable scroll key: same element + ordinal while typing does not re-scroll.
-    var matchScrollTarget: MatchScrollTarget? {
+    fileprivate var matchScrollTarget: MatchScrollTarget? {
         guard let match = activeMatch else { return nil }
         return MatchScrollTarget(
             section: Int(match.sectionIndex),
