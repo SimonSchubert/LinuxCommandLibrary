@@ -8062,6 +8062,7 @@ udisksctl.md
 udisksd.md
 ufraw-batch.md
 ufw-allow.md
+ufw-deny.md
 ufw-disable.md
 ufw-enable.md
 ufw.md
