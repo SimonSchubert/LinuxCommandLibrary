@@ -1937,6 +1937,7 @@ dpkg-query.md
 dpkg-reconfigure.md
 dpkg.md
 dra.md
+draco.md
 dracut.md
 drawing.md
 drawio.md
@@ -4550,6 +4551,7 @@ mhwd-kernel.md
 mhwd.md
 micasa.md
 micro.md
+microcodex.md
 microcom.md
 micromamba.md
 microsoft-edge.md
