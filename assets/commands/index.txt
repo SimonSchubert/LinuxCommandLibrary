@@ -1263,6 +1263,7 @@ clx.md
 cmake.md
 cmark.md
 cmatrix.md
+cmcp.md
 cmctl.md
 cmd-wrapped.md
 cmdperf.md
@@ -3863,6 +3864,7 @@ kb.md
 kbt.md
 kcadm.sh.md
 kcat.md
+kcmshell6.md
 kdash.md
 kde-builder.md
 kde-inhibit.md
@@ -4183,6 +4185,7 @@ linux32.md
 linux64.md
 liquidctl.md
 lispmtopgm.md
+listnr.md
 lit.md
 litecli.md
 littler.md
@@ -7073,6 +7076,7 @@ semanage.md
 semantic-release.md
 semgrep.md
 semodule.md
+semsearch.md
 semtools.md
 semver.md
 sen.md
@@ -7304,6 +7308,7 @@ sort.md
 sot.md
 sou.md
 soundscope.md
+soup.md
 soupault.md
 source-highlight.md
 sox.md
@@ -7521,6 +7526,7 @@ swaynag.md
 swc.md
 swift.md
 swiftc.md
+swiftlet.md
 swig.md
 swipl.md
 switch_root.md
