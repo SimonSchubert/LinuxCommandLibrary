@@ -4049,6 +4049,7 @@ l123.md
 l2ping.md
 l9gpu.md
 labcoat.md
+labgrid-mcp.md
 lambo-new.md
 lambo.md
 lame.md
@@ -4491,6 +4492,7 @@ mcookie.md
 mcopy.md
 mcp-postgres.md
 mcp-probe.md
+mcpscore.md
 mcpsnoop.md
 mcptube.md
 mcs.md
@@ -5553,6 +5555,7 @@ para-cada.md
 parallel-lint.md
 parallel.md
 paramspider.md
+paranoia-local.md
 parcel.md
 parenthesis.md
 parllama.md
