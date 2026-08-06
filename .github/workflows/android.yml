@@ -272,7 +272,8 @@ jobs:
       - name: Install AppImage tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y libfuse2 file
+          # zsync provides zsyncmake, used by appimagetool -u to generate .zsync delta metadata
+          sudo apt-get install -y libfuse2 file zsync
           wget -q https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
           chmod +x appimagetool-x86_64.AppImage
       - name: Build application distribution
@@ -316,12 +317,24 @@ jobs:
           chmod +x AppDir/AppRun
       - name: Build AppImage
         run: |
-          ARCH=x86_64 ./appimagetool-x86_64.AppImage --appimage-extract-and-run AppDir LinuxCommandLibrary-x86_64.AppImage
+          VERSION="${GITHUB_REF_NAME#v}"
+          APPIMAGE_NAME="LinuxCommandLibrary-${VERSION}-linux.AppImage"
+          # Embed AppImageUpdate info and generate .zsync for delta updates via GitHub Releases.
+          # Pattern must match the release asset name (see rename step / this versioned filename).
+          UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY_OWNER}|${GITHUB_REPOSITORY#*/}|latest|LinuxCommandLibrary-*-linux.AppImage.zsync"
+          ARCH=x86_64 ./appimagetool-x86_64.AppImage --appimage-extract-and-run \
+            -u "$UPINFO" \
+            AppDir "$APPIMAGE_NAME"
+          # Fail early if zsync was not produced (update info would be useless without it)
+          test -f "${APPIMAGE_NAME}.zsync"
+          ls -la LinuxCommandLibrary-*-linux.AppImage*
       - name: Upload AppImage Artifact
         uses: actions/upload-artifact@v4
         with:
           name: appimage-package
-          path: LinuxCommandLibrary-*.AppImage
+          path: |
+            LinuxCommandLibrary-*-linux.AppImage
+            LinuxCommandLibrary-*-linux.AppImage.zsync
 
   flatpak:
     name: Generate Flatpak
@@ -520,7 +533,18 @@ jobs:
           mv *.msi "LinuxCommandLibrary-${VERSION}-windows.msi"
           mv *.deb "LinuxCommandLibrary-${VERSION}-linux.deb"
           mv *.rpm "LinuxCommandLibrary-${VERSION}-linux.rpm"
-          mv *.AppImage "LinuxCommandLibrary-${VERSION}-linux.AppImage"
+          # AppImage job already emits final names:
+          #   LinuxCommandLibrary-${VERSION}-linux.AppImage
+          #   LinuxCommandLibrary-${VERSION}-linux.AppImage.zsync
+          # Fallback if an older unversioned artifact is present.
+          if [ ! -f "LinuxCommandLibrary-${VERSION}-linux.AppImage" ] && [ -f LinuxCommandLibrary-x86_64.AppImage ]; then
+            mv LinuxCommandLibrary-x86_64.AppImage "LinuxCommandLibrary-${VERSION}-linux.AppImage"
+          fi
+          test -f "LinuxCommandLibrary-${VERSION}-linux.AppImage"
+          # zsync is optional only for the unversioned fallback path; prefer present when built with -u
+          if [ ! -f "LinuxCommandLibrary-${VERSION}-linux.AppImage.zsync" ] && [ -f LinuxCommandLibrary-x86_64.AppImage.zsync ]; then
+            mv LinuxCommandLibrary-x86_64.AppImage.zsync "LinuxCommandLibrary-${VERSION}-linux.AppImage.zsync"
+          fi
           mv LinuxCommandLibrary-linux-x86_64.tar.gz "LinuxCommandLibrary-${VERSION}-linux-x86_64.tar.gz"
           mv LinuxCommandLibrary.flatpak "LinuxCommandLibrary-${VERSION}-linux.flatpak"
 
