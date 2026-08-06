@@ -1001,6 +1001,7 @@ caprover.md
 caps-log.md
 capsh.md
 captoinfo.md
+capy.md
 carbon-now-cli.md
 carbon-now.md
 carbonyl.md
@@ -1099,6 +1100,7 @@ cdrecord.md
 cec-client.md
 cec-ctl.md
 celerator.md
+celld.md
 ceph.md
 cephadm.md
 certbot.md
@@ -3384,6 +3386,7 @@ hub-fork.md
 hub-init.md
 hub-issue.md
 hub.md
+hud.md
 huggingface-cli.md
 hugo-server.md
 hugo.md
@@ -8408,6 +8411,7 @@ wal-telegram.md
 wal.md
 walker.md
 wall.md
+wallfacer.md
 wami.md
 wapm.md
 wappalyzer.md

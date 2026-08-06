@@ -120,6 +120,7 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     "amap": {},  # Contents maps to amap-align (wrong product)
     "1password": {},  # GUI; CLI is op / 1password-cli
     "draco": {},  # google/draco 3D mesh codec, not 0xchasercat/draco scraper
+    "hud": {},  # AUR "hud" is Unity/Rofi menu (nikatar/HUD), not adrida/hud-mode
 }
 
 # Prefer these path prefixes when mapping binaries (order = priority).
