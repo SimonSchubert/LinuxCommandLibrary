@@ -57,4 +57,4 @@ The **command** builtin was specified in **POSIX.2** (1992) to provide a standar
 
 # SEE ALSO
 
-[which](/man/which)(1), [type](/man/type)(1), [builtin](/man/builtin)(1), [hash](/man/hash)(1)
+[which](/man/which)(1), [type](/man/type)(1), [whence](/man/whence)(1), [builtin](/man/builtin)(1), [hash](/man/hash)(1)

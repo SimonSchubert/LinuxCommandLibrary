@@ -75,7 +75,7 @@ Shell built-in; behavior and available options vary by shell (bash, zsh, ksh eac
 
 # SEE ALSO
 
-[type](/man/type)(1), [which](/man/which)(1), [command](/man/command)(1)
+[type](/man/type)(1), [which](/man/which)(1), [whence](/man/whence)(1), [command](/man/command)(1)
 
 # RESOURCES
 

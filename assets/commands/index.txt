@@ -8476,6 +8476,7 @@ wget2.md
 whatis.md
 whatwaf.md
 whatweb.md
+whence.md
 whereis.md
 which.md
 whichllm.md

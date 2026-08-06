@@ -95,4 +95,4 @@ The **type** command has been a shell builtin since the Bourne shell in early Un
 
 # SEE ALSO
 
-[which](/man/which)(1), [command](/man/command)(1), [whereis](/man/whereis)(1), [bash](/man/bash)(1)
+[which](/man/which)(1), [whence](/man/whence)(1), [command](/man/command)(1), [whereis](/man/whereis)(1), [bash](/man/bash)(1)

@@ -57,4 +57,4 @@ If a command isn't found, which typically exits with status 1 and produces no ou
 
 # SEE ALSO
 
-[type](/man/type)(1), [whereis](/man/whereis)(1), [command](/man/command)(1), [hash](/man/hash)(1)
+[type](/man/type)(1), [whence](/man/whence)(1), [whereis](/man/whereis)(1), [command](/man/command)(1), [hash](/man/hash)(1)
