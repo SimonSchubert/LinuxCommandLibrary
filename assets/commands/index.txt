@@ -6748,6 +6748,7 @@ rekal.md
 rekor-cli.md
 relaymux.md
 relic.md
+remembrane.md
 reminal.md
 remind.md
 remmina.md
@@ -8562,6 +8563,7 @@ wump.md
 wuphf.md
 wut.md
 wuzz.md
+wyzerc.md
 x-cmd.md
 x0vncserver.md
 x11docker.md
