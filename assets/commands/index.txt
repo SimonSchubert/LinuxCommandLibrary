@@ -4495,6 +4495,7 @@ mcookie.md
 mcopy.md
 mcp-postgres.md
 mcp-probe.md
+mcpp.md
 mcpscore.md
 mcpsnoop.md
 mcptube.md
@@ -7837,6 +7838,7 @@ tiptop.md
 tiup.md
 tiv.md
 tkst.md
+tlc.md
 tldr-lint.md
 tldr.md
 tldrl.md

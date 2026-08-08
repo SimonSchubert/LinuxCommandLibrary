@@ -121,6 +121,11 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     "1password": {},  # GUI; CLI is op / 1password-cli
     "draco": {},  # google/draco 3D mesh codec, not 0xchasercat/draco scraper
     "hud": {},  # AUR "hud" is Unity/Rofi menu (nikatar/HUD), not adrida/hud-mode
+    # mcpp: distro "mcpp" is the classic C preprocessor; C++23 build tool is mcpp-community/mcpp
+    "mcpp": {
+        "aur": "mcpp-bin",
+        "brew": "mcpp-community/mcpp/mcpp-m",
+    },
 }
 
 # Prefer these path prefixes when mapping binaries (order = priority).
