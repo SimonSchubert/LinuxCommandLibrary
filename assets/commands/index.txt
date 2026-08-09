@@ -1325,6 +1325,7 @@ comfyui.md
 comm.md
 comma.md
 command.md
+compactdiff.md
 compare.md
 compgen.md
 compiledb.md
