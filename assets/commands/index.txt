@@ -161,6 +161,7 @@ alacritty.md
 alembic.md
 alertmanager.md
 alex.md
+algebruh.md
 ali.md
 alias.md
 alien.md
@@ -8031,6 +8032,7 @@ tuned-adm.md
 tuned.md
 tunelp.md
 tuptime.md
+tura.md
 turbo.md
 turbostat.md
 turm.md
