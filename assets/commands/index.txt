@@ -157,6 +157,7 @@ airtun-ng.md
 aislop.md
 ajson.md
 ak.md
+akmods.md
 alacritty.md
 alembic.md
 alertmanager.md
@@ -4331,6 +4332,7 @@ ludusavi.md
 lue.md
 luigi.md
 luit.md
+lumabri.md
 lumen.md
 lumon.md
 lure.md
