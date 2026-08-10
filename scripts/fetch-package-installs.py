@@ -126,6 +126,8 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
         "aur": "mcpp-bin",
         "brew": "mcpp-community/mcpp/mcpp-m",
     },
+    # ante: nixpkgs "ante" is jfecher/ante (programming language), not AntigmaLabs coding agent
+    "ante": {},
 }
 
 # Prefer these path prefixes when mapping binaries (order = priority).

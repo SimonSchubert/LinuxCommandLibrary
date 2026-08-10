@@ -215,6 +215,7 @@ ansible-vault.md
 ansible.md
 ansiweather.md
 ant.md
+ante.md
 anthropic.md
 antibody.md
 antigen.md
@@ -3828,6 +3829,7 @@ jupyter.md
 jupyterlab.md
 jupyterlite.md
 jupytext.md
+juror.md
 just.1.md
 just.js.md
 just.md
