@@ -3214,6 +3214,7 @@ gzexe.md
 gzip.md
 h2ph.md
 h2xs.md
+h3.md
 ha-manager.md
 habitctl.md
 hackernews-tui.md
@@ -4504,6 +4505,7 @@ mcp-probe.md
 mcpp.md
 mcpscore.md
 mcpsnoop.md
+mcptoon.md
 mcptube.md
 mcs.md
 md5sum.md
@@ -8123,6 +8125,7 @@ unimatrix.md
 uniq.md
 unison.md
 units.md
+unity.md
 unix2dos.md
 unix2mac.md
 unlink.md

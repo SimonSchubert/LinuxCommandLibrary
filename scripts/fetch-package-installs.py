@@ -128,6 +128,8 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     },
     # ante: nixpkgs "ante" is jfecher/ante (programming language), not AntigmaLabs coding agent
     "ante": {},
+    # h3: distro packages are Uber's geospatial H3 (libh3-bin / h3); antirez h3-metal is source-only
+    "h3": {},
 }
 
 # Prefer these path prefixes when mapping binaries (order = priority).
