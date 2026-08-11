@@ -6500,6 +6500,7 @@ pymol.md
 pyp.md
 pypy.md
 pyra.md
+pyrig.md
 pyright.md
 pyrit.md
 pysentation.md
