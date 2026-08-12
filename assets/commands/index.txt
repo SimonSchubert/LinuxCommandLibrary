@@ -2056,6 +2056,7 @@ ect.md
 ed.md
 eddy.md
 edgepaint.md
+edid-decode.md
 edit.md
 editcap.md
 editor.md
@@ -2571,6 +2572,7 @@ genkernel.md
 genpkey.1s.md
 genpmk.md
 ges-launch-1.0.md
+get-edid.md
 get-nodeinstalllocation.md
 get-nodeversions.md
 get_iplayer.md
