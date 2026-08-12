@@ -8866,6 +8866,7 @@ zfs-send.md
 zfs.md
 zgen.md
 zgrep.md
+zhist.md
 zic.md
 zig.md
 zigfetch.md
