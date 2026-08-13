@@ -1636,6 +1636,7 @@ debuginfod.md
 debugreiserfs.md
 debuild.md
 decaffeinate.md
+decant.md
 declare.md
 decode-dimms.md
 deemix.md
