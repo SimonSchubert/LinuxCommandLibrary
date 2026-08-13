@@ -6640,6 +6640,7 @@ radare2.md
 radeontool.md
 radeontop.md
 radiusd.md
+rag-staleness-check.md
 rage.md
 rails-console.md
 rails-db.md
