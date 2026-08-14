@@ -3085,6 +3085,7 @@ gradle-wrapper.md
 gradle.md
 grafana-cli.md
 grafana.md
+graft.md
 grammarly.md
 grap.md
 grap2graph.md
@@ -5330,6 +5331,7 @@ opencode-uninstall.md
 opencode-upgrade.md
 opencode-web.md
 opencode.md
+opencomplai.md
 openconnect.md
 opencubicplayer.md
 openfortivpn.md
