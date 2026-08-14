@@ -7198,6 +7198,7 @@ shiny-mirrors.md
 shiori.md
 shnsplit.md
 shntool-split.md
+shoehorn.md
 shopt.md
 shot-scraper.md
 shotcut.md

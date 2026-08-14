@@ -70,6 +70,7 @@ Run and optimize large language models on your own hardware.
 ```[reame](/man/reame)```
 ```[whichllm](/man/whichllm)```
 ```[auto-round](/man/auto-round)```
+```[shoehorn](/man/shoehorn)```
 
 ## Image Generation
 ```[sd-cli](/man/sd-cli)```
