@@ -8,13 +8,22 @@ import kotlinx.collections.immutable.toImmutableList
  */
 object MarkdownParser {
 
+    // Compiled once. These are used per line (and per table cell) of every page we parse, so
+    // building them inside the functions meant recompiling the same patterns thousands of times
+    // per page - cheap on the JVM, considerably less so on Kotlin/Native.
+    private val boldRegex = Regex("""\*\*([^*]+)\*\*""")
+    private val italicRegex = Regex("""_([^_]+)_""")
+    private val inlineCodeRegex = Regex("""`([^`]+)`""")
+    private val linkRegex = Regex("""\[([^\]]+)]\(([^)]+)\)""")
+    private val linkTextRegex = Regex("""\[([^\]]+)]\([^)]+\)""")
+    private val manLinkRegex = Regex("""\[([^\]]+)]\(/man/([^)]+)\)""")
+    private val tableSeparatorRegex = Regex("[|\\-\\s]")
+
     /**
      * Parse text with **bold** and _italic_ formatting into TextElement list.
      */
     fun parseTextWithBold(text: String): ImmutableList<TextElement> {
         val elements = mutableListOf<TextElement>()
-        val boldRegex = Regex("""\*\*([^*]+)\*\*""")
-        val italicRegex = Regex("""_([^_]+)_""")
         var remaining = text
 
         while (remaining.isNotEmpty()) {
@@ -68,8 +77,6 @@ object MarkdownParser {
         var remaining = code
 
         // Parse [text](target) markdown links, classifying the target afterwards
-        val linkRegex = Regex("""\[([^\]]+)]\(([^)]+)\)""")
-
         while (remaining.isNotEmpty()) {
             val match = linkRegex.find(remaining)
             if (match != null) {
@@ -112,7 +119,7 @@ object MarkdownParser {
      * Strip markdown link syntax from code content.
      * Replaces [text](target) with just the display text.
      */
-    fun cleanMarkdownCommand(code: String): String = code.replace(Regex("""\[([^\]]+)]\([^)]+\)"""), "$1")
+    fun cleanMarkdownCommand(code: String): String = code.replace(linkTextRegex, "$1")
 
     /**
      * Parse markdown content into sections suitable for display.
@@ -222,7 +229,7 @@ object MarkdownParser {
         // Skip separator row (second row with dashes) and parse data rows
         val dataRows = lines.drop(2).mapNotNull { line ->
             // Skip separator rows (contain only |, -, and spaces)
-            if (line.trim().replace(Regex("[|\\-\\s]"), "").isEmpty()) {
+            if (line.trim().replace(tableSeparatorRegex, "").isEmpty()) {
                 return@mapNotNull null
             }
             splitTableRow(line).map { parseTableCellContent(it) }.toImmutableList()
@@ -240,11 +247,7 @@ object MarkdownParser {
         val elements = mutableListOf<TextElement>()
         var remaining = cell
 
-        // Pattern to match bold (**text**), italic (_text_), inline code with man link (`[text](/man/command) ...`), or plain inline code (`...`)
-        val boldRegex = Regex("""\*\*([^*]+)\*\*""")
-        val italicRegex = Regex("""_([^_]+)_""")
-        val inlineCodeRegex = Regex("""`([^`]+)`""")
-
+        // Matches bold (**text**), italic (_text_), inline code with man link (`[text](/man/command) ...`), or plain inline code (`...`)
         while (remaining.isNotEmpty()) {
             val boldMatch = boldRegex.find(remaining)
             val italicMatch = italicRegex.find(remaining)
@@ -302,7 +305,6 @@ object MarkdownParser {
      * Parse inline code content for man links.
      */
     private fun parseInlineCodeContent(codeContent: String, elements: MutableList<TextElement>) {
-        val manLinkRegex = Regex("""\[([^\]]+)]\(/man/([^)]+)\)""")
         var remaining = codeContent
 
         while (remaining.isNotEmpty()) {
@@ -452,7 +454,7 @@ object MarkdownParser {
         if (tldrSection != null) {
             val firstTextLine = tldrSection.content.lines()
                 .firstOrNull { it.trim().isNotEmpty() && !it.trim().startsWith("```") }
-            description = firstTextLine?.trim()?.replace(Regex("\\*\\*([^*]+)\\*\\*"), "$1") ?: ""
+            description = firstTextLine?.trim()?.replace(boldRegex, "$1") ?: ""
         }
 
         return CommandInfo(

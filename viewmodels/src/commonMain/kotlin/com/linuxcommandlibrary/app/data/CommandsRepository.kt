@@ -10,7 +10,9 @@ class CommandsRepository(private val assetReader: AssetReader) {
 
     private var cachedCommands: ImmutableList<CommandInfo>? = null
     private var cachedCommandNames: Set<String>? = null
-    private var cachedQueryIndex: List<Pair<CommandInfo, String>>? = null
+
+    /** Lowercased command names, positionally parallel to [cachedCommands]. */
+    private var cachedLowerNames: List<String>? = null
 
     private val sectionsCache = linkedMapOf<String, ImmutableList<CommandSectionInfo>>()
     private val sectionsCacheMaxSize = 50
@@ -34,26 +36,45 @@ class CommandsRepository(private val assetReader: AssetReader) {
 
         cachedCommands = commands
         cachedCommandNames = commands.mapTo(HashSet()) { it.name }
-        cachedQueryIndex = commands.map { it to it.name.lowercase() }
+        cachedLowerNames = commands.map { it.name.lowercase() }
         return commands
     }
 
+    /**
+     * Commands whose name contains [query], exact match first, then prefix matches, then the rest,
+     * each group alphabetical.
+     *
+     * Bucketing rather than sorting: [getCommands] already returns names in ascending order, so
+     * appending in input order keeps each bucket alphabetical for free. This runs on every
+     * keystroke against ~9k commands, where the comparator sort was doing O(n log n) work plus
+     * boxing a Boolean per comparison.
+     */
     fun getCommandsByQuery(query: String): ImmutableList<CommandInfo> {
+        val commands = cachedCommands ?: getCommands()
+        val lowerNames = cachedLowerNames ?: return persistentListOf()
         val lowerQuery = query.lowercase()
-        if (cachedQueryIndex == null) getCommands()
-        val index = cachedQueryIndex ?: return persistentListOf()
 
-        return index
-            .filter { (_, lowerName) -> lowerName.contains(lowerQuery) }
-            .sortedWith(
-                compareBy(
-                    { (_, lowerName) -> lowerName != lowerQuery },
-                    { (_, lowerName) -> !lowerName.startsWith(lowerQuery) },
-                    { (cmd, _) -> cmd.name },
-                ),
-            )
-            .map { (cmd, _) -> cmd }
-            .toImmutableList()
+        val exact = mutableListOf<CommandInfo>()
+        val prefixed = mutableListOf<CommandInfo>()
+        val contained = mutableListOf<CommandInfo>()
+
+        // Iterated rather than indexed: an ImmutableList is a trie, so commands[i] walks it.
+        var i = 0
+        for (command in commands) {
+            val lowerName = lowerNames[i++]
+            if (!lowerName.contains(lowerQuery)) continue
+            when {
+                lowerName == lowerQuery -> exact += command
+                lowerName.startsWith(lowerQuery) -> prefixed += command
+                else -> contained += command
+            }
+        }
+
+        val result = ArrayList<CommandInfo>(exact.size + prefixed.size + contained.size)
+        result.addAll(exact)
+        result.addAll(prefixed)
+        result.addAll(contained)
+        return result.toImmutableList()
     }
 
     fun hasCommand(name: String): Boolean {

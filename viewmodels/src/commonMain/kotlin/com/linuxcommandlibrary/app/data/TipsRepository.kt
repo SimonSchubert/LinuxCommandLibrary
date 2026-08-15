@@ -10,6 +10,13 @@ import kotlinx.collections.immutable.toImmutableList
 
 class TipsRepository(private val assetReader: AssetReader) {
 
+    private companion object {
+        val TIP_BLOCK_REGEX = Regex("(?=^## )", RegexOption.MULTILINE)
+
+        // Applied per line of tips.md, so it is compiled once rather than a few hundred times.
+        val ANCHOR_OPEN_REGEX = Regex("""<a href="[^"]*">""")
+    }
+
     fun getTips(): ImmutableList<TipInfo> = try {
         val content = assetReader.readFile("tips.md") ?: return persistentListOf()
         parseTips(content)
@@ -20,7 +27,7 @@ class TipsRepository(private val assetReader: AssetReader) {
     private fun parseTips(content: String): ImmutableList<TipInfo> {
         val tips = mutableListOf<TipInfo>()
 
-        val tipBlocks = content.split(Regex("(?=^## )", RegexOption.MULTILINE))
+        val tipBlocks = content.split(TIP_BLOCK_REGEX)
             .filter { it.trim().startsWith("## ") }
 
         for (block in tipBlocks) {
@@ -96,7 +103,7 @@ class TipsRepository(private val assetReader: AssetReader) {
     }
 
     private fun cleanHtmlText(text: String): String = text
-        .replace(Regex("""<a href="[^"]*">"""), "")
+        .replace(ANCHOR_OPEN_REGEX, "")
         .replace("</a>", "")
         .replace("<code>", "")
         .replace("</code>", "")

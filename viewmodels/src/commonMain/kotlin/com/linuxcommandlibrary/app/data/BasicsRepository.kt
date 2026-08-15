@@ -18,6 +18,11 @@ class BasicsRepository(private val assetReader: AssetReader) {
     private val cachedGroupsAndSections =
         mutableMapOf<String, Pair<ImmutableList<BasicGroup>, ImmutableMap<Long, ImmutableList<TipSectionElement>>>>()
 
+    /** Search-only view of every group: the match plus its description pre-lowercased. */
+    private class GroupSearchEntry(val match: BasicGroupMatch, val lowerDescription: String)
+
+    private var cachedSearchIndex: List<GroupSearchEntry>? = null
+
     fun getCategories(): ImmutableList<BasicCategory> {
         cachedCategories?.let { return it }
 
@@ -43,7 +48,7 @@ class BasicsRepository(private val assetReader: AssetReader) {
 
     private fun readCategoryTitle(filename: String): String? = try {
         val content = assetReader.readFile("basics/$filename")
-        content?.lines()?.firstOrNull { it.startsWith("# ") }?.removePrefix("# ")?.trim()
+        content?.lineSequence()?.firstOrNull { it.startsWith("# ") }?.removePrefix("# ")?.trim()
     } catch (e: Exception) {
         null
     }
@@ -89,23 +94,50 @@ class BasicsRepository(private val assetReader: AssetReader) {
     fun usesCardLayout(categoryId: String): Boolean = categoryId.endsWith("texteditor") ||
         categoryId in setOf("shellscripting", "tmux", "regularexpressions", "terminalgames", "backupimaging", "systemrecovery")
 
+    /**
+     * Group headings across every category, ready to match against.
+     *
+     * Deliberately does not go through [getGroupsAndSections]: that parses every group's body into
+     * [TipSectionElement]s, which search never looks at. Splitting on the `## ` headers alone is
+     * roughly an order of magnitude cheaper, and it used to be paid on the first keystroke in the
+     * search box. Descriptions are lowercased once here rather than once per group per keystroke.
+     */
+    private fun getSearchIndex(): List<GroupSearchEntry> {
+        cachedSearchIndex?.let { return it }
+
+        val entries = mutableListOf<GroupSearchEntry>()
+        for (category in getCategories()) {
+            val content = try {
+                assetReader.readFile("basics/${category.id}.md")
+            } catch (e: Exception) {
+                null
+            } ?: continue
+
+            for ((description, _) in MarkdownParser.splitByHeaders(content, "## ")) {
+                entries += GroupSearchEntry(
+                    match = BasicGroupMatch(
+                        // Must stay in sync with getGroupsAndSections: the id is what the search
+                        // result hands back for auto-expanding the group on the detail screen.
+                        groupId = (category.id + description).hashCode().toLong(),
+                        description = description,
+                        categoryId = category.id,
+                        categoryTitle = category.title,
+                    ),
+                    lowerDescription = description.lowercase(),
+                )
+            }
+        }
+
+        cachedSearchIndex = entries
+        return entries
+    }
+
     fun getMatchingGroups(query: String): ImmutableList<BasicGroupMatch> {
         if (query.isBlank()) return persistentListOf()
         val lower = query.lowercase()
-        val matches = mutableListOf<BasicGroupMatch>()
-        for (category in getCategories()) {
-            val (groups, _) = getGroupsAndSections(category.id)
-            for (group in groups) {
-                if (group.description.lowercase().contains(lower)) {
-                    matches += BasicGroupMatch(
-                        groupId = group.id,
-                        description = group.description,
-                        categoryId = category.id,
-                        categoryTitle = category.title,
-                    )
-                }
-            }
-        }
-        return matches.toImmutableList()
+        return getSearchIndex()
+            .filter { it.lowerDescription.contains(lower) }
+            .map { it.match }
+            .toImmutableList()
     }
 }

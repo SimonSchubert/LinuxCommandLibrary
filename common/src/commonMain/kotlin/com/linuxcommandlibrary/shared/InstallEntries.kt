@@ -39,6 +39,7 @@ object InstallEntries {
     )
 
     private val LINE_REGEX = Regex("""^(\w+):\s*(.+)$""")
+    private val WHITESPACE_REGEX = Regex("""\s+""")
 
     /**
      * Extract install rows from already-parsed markdown elements (INSTALL section body).
@@ -75,7 +76,7 @@ object InstallEntries {
      * when present; otherwise keep the last token as-is.
      */
     fun extractPackageName(manager: String, command: String): String? {
-        val last = command.trim().split(Regex("\\s+")).lastOrNull()?.takeIf { it.isNotEmpty() }
+        val last = command.trim().split(WHITESPACE_REGEX).lastOrNull()?.takeIf { it.isNotEmpty() }
             ?: return null
         return when {
             manager == "nix" && '#' in last -> last.substringAfterLast('#').ifEmpty { null }

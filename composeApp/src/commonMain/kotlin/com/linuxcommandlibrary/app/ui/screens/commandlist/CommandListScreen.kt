@@ -97,8 +97,6 @@ fun CommandListItem(
     isBookmarked: Boolean,
     isSelected: Boolean = false,
 ) {
-    val bookmarkPainter = rememberIconPainter(AppIcon.BOOKMARK)
-
     ListItem(
         headlineContent = {
             HighlightedText(
@@ -107,10 +105,12 @@ fun CommandListItem(
             )
         },
         colors = selectableListItemColors(isSelected),
+        // Resolved inside the slot rather than up here: hoisting it made every visible row load
+        // the drawable, when only bookmarked rows ever draw it.
         trailingContent = if (isBookmarked) {
             {
                 Icon(
-                    painter = bookmarkPainter,
+                    painter = rememberIconPainter(AppIcon.BOOKMARK),
                     contentDescription = "Bookmarked",
                 )
             }
