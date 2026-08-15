@@ -621,6 +621,7 @@ babel.md
 babeld.md
 babo.md
 backgammon.md
+backintime.md
 backlight_control.md
 backlit-kbd.md
 bacon.md
@@ -837,6 +838,7 @@ brew-upgrade.md
 brew.md
 bridge.md
 brightnessctl.md
+briskdb.md
 brittany.md
 brltty.md
 broot.md

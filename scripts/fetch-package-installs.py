@@ -80,6 +80,7 @@ EXTRA_CANDIDATES: dict[str, list[str]] = {
     "fd": ["fd-find", "fd"],
     "bat": ["bat"],
     "adb": ["android-tools", "android-tools-adb", "adb"],
+    "backintime": ["backintime-common", "backintime"],
 }
 
 # Full install maps that replace resolver output (known collisions / enrichments).
@@ -116,6 +117,14 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     "babel": {"brew": "babel"},
     "air": {"aur": "air", "nix": "air"},  # not brew (R formatter)
     "alembic": {"apk": "py3-alembic", "nix": "python3Packages.alembic"},
+    # backintime: CLI binary is in backintime-common on Debian/Fedora (arch:all, missed by Contents-amd64)
+    "backintime": {
+        "apt": "backintime-common",
+        "dnf": "backintime-common",
+        "aur": "backintime",
+        "zypper": "backintime",
+        "nix": "backintime",
+    },
     "alex": {"brew": "alexjs"},
     "amap": {},  # Contents maps to amap-align (wrong product)
     "1password": {},  # GUI; CLI is op / 1password-cli
