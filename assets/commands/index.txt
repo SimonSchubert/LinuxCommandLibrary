@@ -6510,6 +6510,8 @@ pyra.md
 pyrig.md
 pyright.md
 pyrit.md
+pyscrappy-mcp.md
+pyscrappy.md
 pysentation.md
 pysetup3.4.md
 pystun3.md
