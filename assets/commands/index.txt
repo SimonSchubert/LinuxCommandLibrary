@@ -7558,7 +7558,7 @@ swiftlet.md
 swig.md
 swipl.md
 switch_root.md
-switcheroo-control.md
+switcherooctl.md
 swupd.md
 swww.md
 sx.md

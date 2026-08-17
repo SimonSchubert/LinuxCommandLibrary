@@ -40,4 +40,4 @@ Requires nvidia-prime package and proper driver setup. Only works with Nvidia pr
 
 # SEE ALSO
 
-[nvidia-smi](/man/nvidia-smi)(1), [optirun](/man/optirun)(1), [switcheroo-control](/man/switcheroo-control)(1)
+[nvidia-smi](/man/nvidia-smi)(1), [optirun](/man/optirun)(1), [switcherooctl](/man/switcherooctl)(1)
