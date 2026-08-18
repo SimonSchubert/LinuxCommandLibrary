@@ -461,6 +461,7 @@ avidemux.md
 avifdec.md
 avifenc.md
 avo.md
+avouch.md
 avr-gcc.md
 avrdude.md
 avro-tools.md
@@ -3564,6 +3565,7 @@ impacket-sniffer.md
 impacket-ticketconverter.md
 impacket.md
 impala.md
+impersonate-proxy.md
 import.im6.md
 import.md
 importctl.md
@@ -7235,6 +7237,7 @@ simplehttpserver.md
 simtool.md
 simutrans.md
 sinfo.md
+singular.md
 singularity.md
 sipcalc.md
 sirix-cli.md
