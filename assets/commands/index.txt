@@ -5342,6 +5342,7 @@ opencubicplayer.md
 openfortivpn.md
 openhack.md
 openlaked.md
+openleetcode.md
 openocd.md
 openparser.md
 openrc.md
@@ -7243,6 +7244,7 @@ sipcalc.md
 sirix-cli.md
 sirix-shell.md
 sirtopnm.md
+site-health.md
 size.md
 sizeof.md
 sk.md
