@@ -50,6 +50,7 @@ Utilities that manage, sandbox, monitor, test, and extend coding agents.
 ```[confessor](/man/confessor)```
 ```[decant](/man/decant)```
 ```[graft](/man/graft)```
+```[doberman](/man/doberman)```
 
 ## AI Assistants
 General-purpose autonomous assistants that run locally or on your own server.

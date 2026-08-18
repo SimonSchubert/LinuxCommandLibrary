@@ -1786,6 +1786,7 @@ dnsx.md
 do-release-upgrade.md
 do.md
 doas.md
+doberman.md
 doc-engine.md
 docbook2html.md
 dockdiver.md
