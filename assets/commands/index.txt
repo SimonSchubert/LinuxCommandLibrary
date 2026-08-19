@@ -4673,6 +4673,7 @@ mlr.md
 mm2gv.md
 mmcli.md
 mmd.md
+mmdblookup.md
 mmdc.md
 mmdebstrap.md
 mmls.md
@@ -5357,6 +5358,7 @@ openssl-crl.md
 openssl-dgst.md
 openssl-genpkey.md
 openssl-genrsa.md
+openssl-passwd.md
 openssl-pkcs12.md
 openssl-pkey.md
 openssl-prime.md
