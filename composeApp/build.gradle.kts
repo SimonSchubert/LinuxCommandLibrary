@@ -40,6 +40,7 @@ kotlin {
         }
         lint {
             abortOnError = false
+            checkReleaseBuilds = false
         }
     }
 
@@ -158,6 +159,7 @@ tasks
 
 lint {
     abortOnError = false
+    checkReleaseBuilds = false
 }
 
 dependencies {

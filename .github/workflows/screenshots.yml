@@ -22,7 +22,9 @@ jobs:
           distribution: 'temurin'
       - uses: android-actions/setup-android@v3
       - uses: gradle/actions/setup-gradle@v4
+      # leftover lint errors (not auto-fixable) must not skip screenshot updates
       - run: ./gradlew :composeApp:lintFix :android:lintFix
+        continue-on-error: true
       - run: ./gradlew :screenshotTests:updateScreenshots
       - name: Auto-commit if changed
         if: github.event_name == 'push'

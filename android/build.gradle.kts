@@ -23,6 +23,7 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.koin.androidx.compose)
 
+    androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     androidTestImplementation(libs.androidx.preference)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
@@ -98,6 +99,7 @@ android {
     }
     lint {
         abortOnError = false
+        checkReleaseBuilds = false
         checkDependencies = true
     }
     namespace = "com.inspiredandroid.linuxcommandbibliotheca"
