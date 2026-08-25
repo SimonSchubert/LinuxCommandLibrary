@@ -27,6 +27,7 @@ dependencies {
     androidTestImplementation(libs.androidx.preference)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
+    lintChecks(libs.compose.lint.checks)
 }
 
 android {

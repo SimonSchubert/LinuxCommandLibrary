@@ -151,3 +151,7 @@ tasks
     }.configureEach {
         dependsOn(convertIconsToVectorDrawables)
     }
+
+dependencies {
+    lintChecks(libs.compose.lint.checks)
+}
