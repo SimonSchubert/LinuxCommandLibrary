@@ -13,6 +13,7 @@ buildscript {
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.kotlin.multiplatform.library)
+    alias(libs.plugins.android.lint)
     alias(libs.plugins.compose.multiplatform)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlin.serialization)
@@ -36,6 +37,9 @@ kotlin {
         }
         androidResources {
             enable = true
+        }
+        lint {
+            abortOnError = false
         }
     }
 
@@ -151,6 +155,10 @@ tasks
     }.configureEach {
         dependsOn(convertIconsToVectorDrawables)
     }
+
+lint {
+    abortOnError = false
+}
 
 dependencies {
     lintChecks(libs.compose.lint.checks)

@@ -98,6 +98,7 @@ android {
     }
     lint {
         abortOnError = false
+        checkDependencies = true
     }
     namespace = "com.inspiredandroid.linuxcommandbibliotheca"
 }

@@ -22,6 +22,7 @@ jobs:
           distribution: 'temurin'
       - uses: android-actions/setup-android@v3
       - uses: gradle/actions/setup-gradle@v4
+      - run: ./gradlew :composeApp:lintFix :android:lintFix
       - run: ./gradlew :screenshotTests:updateScreenshots
       - name: Auto-commit if changed
         if: github.event_name == 'push'
@@ -30,5 +31,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Auto: refresh Paparazzi screenshots [skip ci]"
+          git commit -m "Auto-fix: lintFix and refresh Paparazzi screenshots [skip ci]"
           git push
