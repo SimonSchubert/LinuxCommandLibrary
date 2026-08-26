@@ -37,7 +37,7 @@ Download music with automatic metadata tagging
 > Audio format (mp3, m4a, opus, etc.)
 
 **--skip-meta**
-> Skip quering metadata and downloading default one
+> Skip querying metadata and downloading default one
 
 **-q**, **--quiet**
 > Suppress output
