@@ -7830,6 +7830,7 @@ tex.md
 texconfig.md
 texcount.md
 texdoc.md
+texlite.md
 texliveonfly.md
 textlint.md
 textql.md
@@ -8370,6 +8371,7 @@ vinagre.md
 vipe.md
 vipw.md
 virsh-connect.md
+virsh-domblkinfo.md
 virsh-domblklist.md
 virsh-dumpxml.md
 virsh-help.md
