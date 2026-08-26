@@ -51,6 +51,7 @@ Utilities that manage, sandbox, monitor, test, and extend coding agents.
 ```[decant](/man/decant)```
 ```[graft](/man/graft)```
 ```[doberman](/man/doberman)```
+```[oms](/man/oms)```
 
 ## AI Assistants
 General-purpose autonomous assistants that run locally or on your own server.
@@ -69,6 +70,7 @@ Run and optimize large language models on your own hardware.
 ```[llamafile](/man/llamafile)```
 ```[llama.cpp](/man/llama.cpp)```
 ```[coli](/man/coli)```
+```[litert-lm](/man/litert-lm)```
 ```[reame](/man/reame)```
 ```[whichllm](/man/whichllm)```
 ```[auto-round](/man/auto-round)```

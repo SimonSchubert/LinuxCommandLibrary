@@ -194,6 +194,7 @@ amp.md
 amrecover.md
 amtool.md
 anacron.md
+ananicy-cpp.md
 anbox.md
 andcli.md
 androguard.md
@@ -1529,6 +1530,7 @@ csvsql.md
 csvstack.md
 csvstat.md
 csvtool.md
+csvtotable.md
 ctags.md
 ctest.md
 ctop.md
@@ -1801,6 +1803,7 @@ docker-buildx-version.md
 docker-commit.md
 docker-compose-down.md
 docker-compose-logs.md
+docker-compose-start.md
 docker-compose-stop.md
 docker-compose-up.md
 docker-compose.md
@@ -1889,6 +1892,7 @@ doggo.md
 doitlive.md
 dokku.md
 dollar.md
+dolos.md
 dolphie.md
 dolphin.md
 dolt-add.md
@@ -3051,6 +3055,7 @@ gotz.md
 gouldtoppm.md
 gource.md
 gova.md
+govulncheck.md
 gow.md
 gox.md
 gpasswd.md
@@ -3426,7 +3431,10 @@ hygg.md
 hypercorn.md
 hyperfine.md
 hyprctl.md
+hyprcursor-util.md
+hypridle.md
 hyprland.md
+hyprlock.md
 hyprpaper.md
 hyprpicker.md
 hyprpm.md
@@ -3901,6 +3909,7 @@ keepassxc-cli.md
 keepnote.md
 kerberos.md
 kerl.md
+kern.md
 kernel-install.md
 kerneloops.md
 kernelstub.md
@@ -3990,6 +3999,7 @@ krunvm.md
 kryptor.md
 kscreen-console.md
 kscreen-doctor.md
+kscreenctl.md
 ksh.md
 kstack.md
 ksvgtopng5.md
@@ -4086,6 +4096,7 @@ latexmk.md
 latexpand.md
 lathe.md
 latte-dock.md
+lattice.md
 launchctl.md
 lavadecode.md
 lavat.md
@@ -4207,6 +4218,7 @@ lispmtopgm.md
 listnr.md
 lit.md
 litecli.md
+litert-lm.md
 littler.md
 live-server.md
 lkbib.md
@@ -4808,6 +4820,7 @@ muffin.md
 mullvad.md
 mult.md
 multi-gitter.md
+multipass-transfer.md
 multipass.md
 multitail.md
 mumble.md
@@ -5303,6 +5316,7 @@ omf.md
 omm.md
 omny.md
 omp.md
+oms.md
 omshell.md
 omz.md
 on_ac_power.md
@@ -6847,6 +6861,7 @@ rmarkdown.md
 rmdir.md
 rmlint.md
 rmmod.md
+rmpc.md
 rmux.md
 rnano.md
 rndc.md
@@ -7269,6 +7284,7 @@ slashem.md
 sldtoppm.md
 sleep.md
 slides.md
+slideshow.md
 slim.md
 slimrb.md
 slocate.md
@@ -7478,6 +7494,7 @@ steghide.md
 stegsnow.md
 step-ca.md
 step.md
+steppewm.md
 stern.md
 stew.md
 stl2gts.md
@@ -7738,6 +7755,7 @@ tb.md
 tbl.md
 tblastn.md
 tblastx.md
+tblue.md
 tc.md
 tcc.md
 tcl.md
@@ -7802,6 +7820,7 @@ test.md
 testdisk.md
 testparm.md
 testssl.md
+tether.md
 tetrinet.md
 tetris-bsd.md
 tetris.md
@@ -8111,6 +8130,7 @@ ufw-allow.md
 ufw-deny.md
 ufw-disable.md
 ufw-enable.md
+ufw-status.md
 ufw.md
 ug.md
 ugdb.md
@@ -8351,6 +8371,7 @@ vipe.md
 vipw.md
 virsh-connect.md
 virsh-domblklist.md
+virsh-dumpxml.md
 virsh-help.md
 virsh-list.md
 virsh-pool-autostart.md
@@ -8362,6 +8383,9 @@ virsh-pool-info.md
 virsh-pool-list.md
 virsh-pool-start.md
 virsh-pool-undefine.md
+virsh-snapshot-delete.md
+virsh-snapshot-dumpxml.md
+virsh-snapshot-list.md
 virsh-undefine.md
 virsh.md
 virt-clone.md
@@ -8673,6 +8697,7 @@ xkbcomp.md
 xkcdpass.md
 xkill.md
 xleak.md
+xlistman.md
 xlock.md
 xlogo.md
 xlsclients.md
@@ -8852,6 +8877,7 @@ zbarcam.md
 zbarimg.md
 zcat.md
 zcmp.md
+zcomplete.md
 zdb.md
 zdiff.md
 zdump.md
