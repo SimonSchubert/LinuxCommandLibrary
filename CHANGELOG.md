@@ -1,3 +1,16 @@
+## v4.6.0 - 2026-08-26
+
+### Features
+- Added 80 new commands, including Hyprland tools (hyprlock, hypridle, hyprcursor-util), libvirt snapshot helpers, AI/MCP CLIs, and the ksh/zsh `whence` builtin
+
+### Fixes
+- Fixed iOS archive build failing due to matchScrollTarget access
+
+### Improvements
+- Sped up search and markdown parsing
+- Embedded AppImage update metadata and zsync for delta updates
+- Upgraded dependencies (Compose Multiplatform 1.12.0, AGP 9.3.2, Compose BOM 2026.08.00, Gradle 9.7.1)
+
 ## v4.5.0 - 2026-08-02
 
 ### Features
