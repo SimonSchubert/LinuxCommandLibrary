@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import kotlin.math.abs
 
 @Composable
+@androidx.compose.runtime.ReadOnlyComposable
 private fun scrollbarStyle(): ScrollbarStyle {
     val color = MaterialTheme.colorScheme.onSurface
     return ScrollbarStyle(
