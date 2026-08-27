@@ -25,6 +25,7 @@ Agents that read, edit, and run code in your project directly from the terminal.
 ```[vtcode](/man/vtcode)```
 ```[agy](/man/agy)```
 ```[forall](/man/forall)```
+```[devx](/man/devx)```
 
 ## Agent Tooling
 Utilities that manage, sandbox, monitor, test, and extend coding agents.
@@ -52,6 +53,7 @@ Utilities that manage, sandbox, monitor, test, and extend coding agents.
 ```[graft](/man/graft)```
 ```[doberman](/man/doberman)```
 ```[oms](/man/oms)```
+```[reachpad](/man/reachpad)```
 
 ## AI Assistants
 General-purpose autonomous assistants that run locally or on your own server.

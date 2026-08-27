@@ -1671,6 +1671,7 @@ devenv.md
 devpod.md
 devspace.md
 devtools.md
+devx.md
 devzat.md
 dex.md
 dex2jar.md
@@ -6733,6 +6734,7 @@ rdkit.md
 rdoc.md
 rdp_check.py.md
 rdrview.md
+reachpad.md
 react-native-start.md
 react-native.md
 react-scripts.md
@@ -7728,6 +7730,7 @@ tabix.md
 tabula.md
 tac.md
 tail.md
+tailcat.md
 tailf.md
 tailscale-file.md
 tailscale-funnel.md
