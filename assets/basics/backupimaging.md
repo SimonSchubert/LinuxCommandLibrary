@@ -109,6 +109,9 @@ Copying a running database's files mid-write produces a corrupt backup. Dump to 
 ```[pg_dumpall](/man/pg_dumpall) > postgres-backup.sql```
 ```[sqlite3](/man/sqlite3) app.db ".backup app-backup.db"```
 
+A dump you have never restored is only a hope. `restoredrill` loads a PostgreSQL `pg_dump` into a throwaway container, runs the checks you define, and writes a timestamped JSON report.
+```[restoredrill](/man/restoredrill) --config restoredrill.yml --trigger manual```
+
 The same applies to anything that writes constantly (virtual machine disks, mail spools): stop the writer, dump it, or back up from a filesystem snapshot (see below).
 
 ## Disk & Partition Imaging

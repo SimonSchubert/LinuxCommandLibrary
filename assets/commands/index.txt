@@ -3366,6 +3366,7 @@ hp-setup.md
 hping.md
 hping3.md
 hr.md
+hrdx.md
 hsd-cli.md
 hsetroot.md
 hstr.md
@@ -6279,6 +6280,7 @@ pptp.md
 pptpsetup.md
 pqrs.md
 pqviewer.md
+pr-lens.md
 pr.md
 pre-commit.md
 preconv.md
@@ -6747,6 +6749,7 @@ readlink.md
 readom.md
 readonly.md
 readpe.md
+realdiff.md
 realpath.md
 realsr-ncnn-vulkan.md
 reame.md
@@ -6825,6 +6828,7 @@ resticprofile.md
 resto.md
 restorecon.md
 restorecond.md
+restoredrill.md
 retroarch.md
 reuse.md
 rev.md
