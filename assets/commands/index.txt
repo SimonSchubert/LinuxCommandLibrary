@@ -2208,6 +2208,7 @@ exo-dbaas.md
 exo-iam.md
 exo-storage.md
 exo.md
+exp.md
 expac.md
 expand.md
 expect.md
