@@ -3395,6 +3395,7 @@ httpry.md
 https.md
 httpstat.md
 httpx.md
+httpx2.md
 httpyac.md
 httrack.md
 hub-branch.md
@@ -5864,6 +5865,7 @@ phpstan.md
 phpstorm.md
 phpunit.md
 physlock.md
+pi-black.md
 pi.md
 pi1toppm.md
 pi3topbm.md

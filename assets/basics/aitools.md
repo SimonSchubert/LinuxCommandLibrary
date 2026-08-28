@@ -26,6 +26,7 @@ Agents that read, edit, and run code in your project directly from the terminal.
 ```[agy](/man/agy)```
 ```[forall](/man/forall)```
 ```[devx](/man/devx)```
+```[pi-black](/man/pi-black)```
 
 ## Agent Tooling
 Utilities that manage, sandbox, monitor, test, and extend coding agents.
