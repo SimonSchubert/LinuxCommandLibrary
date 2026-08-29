@@ -79,6 +79,7 @@ Run and optimize large language models on your own hardware.
 ```[whichllm](/man/whichllm)```
 ```[auto-round](/man/auto-round)```
 ```[shoehorn](/man/shoehorn)```
+```[vllm](/man/vllm)```
 
 ## Image Generation
 ```[sd-cli](/man/sd-cli)```
@@ -107,3 +108,4 @@ Chat with models, pipe text through them, and prepare data for them.
 ```[mcptube](/man/mcptube)```
 ```[kanwas](/man/kanwas)```
 ```[revdiff](/man/revdiff)```
+```[tokensift](/man/tokensift)```
