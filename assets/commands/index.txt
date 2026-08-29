@@ -2673,6 +2673,7 @@ ghost.md
 ghostscript.md
 ghostty.md
 ghq.md
+ghui.md
 gibo.md
 gif-for-cli.md
 gif2webp.md
@@ -5316,6 +5317,7 @@ oletools.md
 olevba.md
 ollama.md
 oma.md
+omarchy.md
 omega-rpg.md
 omf.md
 omm.md
@@ -5420,6 +5422,7 @@ oq.md
 orbiton.md
 orc-tools.md
 orca-c.md
+ori.md
 oryx.md
 osage.md
 oscap.md
@@ -7038,6 +7041,7 @@ sar.md
 sass.md
 satis.md
 sattach.md
+satty.md
 saws.md
 saxon.md
 say.md
@@ -8049,6 +8053,7 @@ trunk.io.md
 trunk.md
 trust.md
 try-rs.md
+try.md
 ts-node.md
 ts.md
 tsc.md
@@ -8058,6 +8063,7 @@ tshark.md
 tslint.md
 tsort.md
 tspin.md
+tsui.md
 tsv-filter.md
 tsx.md
 tt.md
@@ -8275,6 +8281,7 @@ uvcdynctrl.md
 uvicorn.md
 uvx.md
 uwsgi.md
+uwsm.md
 uxterm.md
 v.md
 v4l2-compliance.md
@@ -8444,6 +8451,7 @@ volatility.md
 volta.md
 vortix.md
 vosk.md
+voxtype.md
 vpnc.md
 vpod.md
 vrms.md
