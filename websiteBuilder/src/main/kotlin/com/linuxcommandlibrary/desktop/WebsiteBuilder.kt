@@ -86,33 +86,47 @@ data class Ad(val imageUrl: String, val url: String, val backgroundColor: String
 val jsonString = File("products_dataset.json").readText()
 val products = JSONArray(jsonString)
 
-fun main() {
-    val minifier = Minifier()
+fun main(args: Array<String>) {
+    val commandNames = args.map { it.trim() }.filter { it.isNotEmpty() }
     val (currentSponsors, pastSponsors) = getPublicSponsors()
     val websiteBuilder = WebsiteBuilder(currentSponsors, pastSponsors)
 
     val folder = File("html")
     folder.mkdir()
-    minifier.copyWebImages()
 
-    websiteBuilder.createCommandsHtmlFile(folder)
+    if (commandNames.isEmpty()) {
+        val minifier = Minifier()
+        minifier.copyWebImages()
 
-    websiteBuilder.createBasicsHtmlFile(folder)
-    websiteBuilder.createTipsHtmlFile(folder)
-    minifier.minifyScriptsAndSheets(true)
+        websiteBuilder.createCommandsHtmlFile(folder)
 
-    websiteBuilder.createBasicHtmlFiles(File(folder, "basic"))
+        websiteBuilder.createBasicsHtmlFile(folder)
+        websiteBuilder.createTipsHtmlFile(folder)
+        minifier.minifyScriptsAndSheets(true)
 
-    websiteBuilder.createManHtmlFiles(File(folder, "man"))
+        websiteBuilder.createBasicHtmlFiles(File(folder, "basic"))
 
-    websiteBuilder.create404HtmlFile()
-    websiteBuilder.createPrivacyPolicyHtmlFile(folder)
-    websiteBuilder.createContactHtmlFile(folder)
-    websiteBuilder.createTermsAndConditionsHtmlFile(folder)
+        websiteBuilder.createManHtmlFiles(File(folder, "man"))
 
-    websiteBuilder.createSitemap(folder)
+        websiteBuilder.create404HtmlFile()
+        websiteBuilder.createPrivacyPolicyHtmlFile(folder)
+        websiteBuilder.createContactHtmlFile(folder)
+        websiteBuilder.createTermsAndConditionsHtmlFile(folder)
 
-    minifier.minifyScriptsAndSheets(true)
+        websiteBuilder.createSitemap(folder)
+
+        minifier.minifyScriptsAndSheets(true)
+    } else {
+        val only = commandNames.map { it.lowercase(Locale.US) }.toSet()
+        val missing = only.filterNot { File("assets/commands", "$it.md").isFile }
+        if (missing.isNotEmpty()) {
+            error("No markdown page for command(s): ${missing.sorted().joinToString(", ")}")
+        }
+        println("Incremental website build for: ${commandNames.joinToString(", ")}")
+        websiteBuilder.createCommandsHtmlFile(folder)
+        websiteBuilder.createManHtmlFiles(File(folder, "man"), only = only)
+        websiteBuilder.createSitemap(folder)
+    }
 }
 
 class WebsiteBuilder(
@@ -172,10 +186,17 @@ class WebsiteBuilder(
     }
 
     /**
-     * Get all commands with their info from markdown files.
+     * Get commands with their info from markdown files.
+     * When [only] is set, parse just those names (lowercase file stems) instead of the full set.
      */
-    private fun getCommandsFromMarkdown(): List<CommandInfo> {
+    private fun getCommandsFromMarkdown(only: Set<String>? = null): List<CommandInfo> {
         val commandsDir = File("assets/commands")
+        if (only != null) {
+            return only.mapNotNull { name ->
+                val file = File(commandsDir, "$name.md")
+                if (file.isFile) parseCommandMarkdown(file) else null
+            }.sortedBy { it.name }
+        }
         return commandsDir.listFiles { file -> file.extension == "md" }
             ?.mapNotNull { parseCommandMarkdown(it) }
             ?.sortedBy { it.name }
@@ -643,10 +664,18 @@ class WebsiteBuilder(
      */
     private fun parseTipsMarkdown(content: String): List<TipInfo> = MarkdownParser.parseTips(content)
 
-    fun createManHtmlFiles(folder: File) {
+    fun createManHtmlFiles(folder: File, only: Set<String>? = null) {
         folder.mkdir()
 
-        val commands = getCommandsFromMarkdown()
+        val requested = only?.map { it.lowercase(Locale.US) }?.toSet()
+        val commands = getCommandsFromMarkdown(requested)
+        if (requested != null) {
+            val found = commands.map { it.name.lowercase(Locale.US) }.toSet()
+            val missing = requested - found
+            if (missing.isNotEmpty()) {
+                error("No markdown page for command(s): ${missing.sorted().joinToString(", ")}")
+            }
+        }
         val totalCount = commands.size
 
         commands.forEachIndexed { index, command ->

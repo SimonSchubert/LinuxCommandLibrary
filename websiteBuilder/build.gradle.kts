@@ -30,4 +30,11 @@ tasks.register<JavaExec>("runWebsiteBuilder") {
     classpath = sourceSets["main"].runtimeClasspath
     mainClass.set("com.linuxcommandlibrary.desktop.WebsiteBuilderKt")
     workingDir = rootProject.projectDir
+    val commands =
+        (findProperty("commands") as String?)
+            ?.split(Regex("[,\\s]+"))
+            ?.map { it.trim() }
+            ?.filter { it.isNotEmpty() }
+            ?: emptyList()
+    args(commands)
 }
