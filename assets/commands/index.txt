@@ -3985,6 +3985,7 @@ konsole.md
 kool.md
 kopia.md
 kops.md
+kosh.md
 kosmorro.md
 kotlin.md
 kotlinc.md
