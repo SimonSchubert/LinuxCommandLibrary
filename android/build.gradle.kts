@@ -101,6 +101,7 @@ android {
         abortOnError = false
         checkReleaseBuilds = false
         checkDependencies = true
+        lintConfig = rootProject.file("lint.xml")
     }
     namespace = "com.inspiredandroid.linuxcommandbibliotheca"
 }

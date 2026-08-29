@@ -41,6 +41,7 @@ kotlin {
         lint {
             abortOnError = false
             checkReleaseBuilds = false
+            lintConfig = rootProject.file("lint.xml")
         }
     }
 
@@ -160,6 +161,7 @@ tasks
 lint {
     abortOnError = false
     checkReleaseBuilds = false
+    lintConfig = rootProject.file("lint.xml")
 }
 
 dependencies {

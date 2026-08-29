@@ -91,10 +91,10 @@ fun buildCommandElementString(
 fun CommandView(
     command: String,
     elements: ImmutableList<CommandElement>,
+    modifier: Modifier = Modifier,
     onNavigate: (NavEvent) -> Unit = {},
     verticalPadding: Dp = 6.dp,
     highlight: ElementHighlight? = null,
-    modifier: Modifier = Modifier,
 ) {
     val codeColor = MaterialTheme.colorScheme.primary
     val styledAnnotatedString = remember(elements, codeColor) {

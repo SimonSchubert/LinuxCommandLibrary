@@ -21,10 +21,12 @@ import com.linuxcommandlibrary.app.platform.backIcon
 @Composable
 fun PaneTopBar(
     title: String,
+    modifier: Modifier = Modifier,
     onBack: (() -> Unit)? = null,
     actions: @Composable RowScope.() -> Unit = {},
 ) {
     TopAppBar(
+        modifier = modifier,
         expandedHeight = 56.dp,
         title = {
             Text(

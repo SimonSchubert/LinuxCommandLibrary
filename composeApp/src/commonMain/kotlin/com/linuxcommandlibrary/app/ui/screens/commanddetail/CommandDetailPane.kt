@@ -21,6 +21,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -71,7 +72,7 @@ fun CommandDetailPane(
 
     val searchState = rememberSearchState()
     var matchIndex by remember { mutableStateOf(MatchIndex.EMPTY) }
-    var activeMatchIndex by remember { mutableStateOf(0) }
+    var activeMatchIndex by remember { mutableIntStateOf(0) }
 
     // This composable keeps its identity when the selected command changes, so the search would
     // otherwise stay open holding a query matched against the previous page.

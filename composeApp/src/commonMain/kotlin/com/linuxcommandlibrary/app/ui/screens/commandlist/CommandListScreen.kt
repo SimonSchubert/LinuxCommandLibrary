@@ -9,8 +9,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.PointerIcon
@@ -30,34 +28,16 @@ import kotlinx.collections.immutable.ImmutableSet
 
 @Composable
 fun CommandListScreen(
-    viewModel: CommandListViewModel,
-    listState: LazyListState,
-    onNavigate: (NavEvent) -> Unit,
-    selectedName: String? = null,
-) {
-    val commands by viewModel.commands.collectAsState()
-    val bookmarkedNames by viewModel.bookmarkedNames.collectAsState()
-
-    ComposeListContent(
-        listState = listState,
-        commands = commands,
-        bookmarkedNames = bookmarkedNames,
-        onNavigate = onNavigate,
-        selectedName = selectedName,
-    )
-}
-
-@Composable
-private fun ComposeListContent(
-    listState: LazyListState,
     commands: ImmutableList<CommandInfo>,
     bookmarkedNames: ImmutableSet<String>,
+    listState: LazyListState,
     onNavigate: (NavEvent) -> Unit,
-    selectedName: String?,
+    modifier: Modifier = Modifier,
+    selectedName: String? = null,
 ) {
     WithScrollbar(
         state = listState,
-        modifier = Modifier
+        modifier = modifier
             .background(MaterialTheme.colorScheme.background)
             .fillMaxSize(),
     ) {
@@ -92,9 +72,10 @@ private fun ComposeListContent(
 @Composable
 fun CommandListItem(
     command: CommandInfo,
-    searchText: String = "",
     onNavigate: (NavEvent) -> Unit,
     isBookmarked: Boolean,
+    modifier: Modifier = Modifier,
+    searchText: String = "",
     isSelected: Boolean = false,
 ) {
     ListItem(
@@ -117,7 +98,7 @@ fun CommandListItem(
         } else {
             null
         },
-        modifier = Modifier
+        modifier = modifier
             .pointerHoverIcon(PointerIcon.Hand)
             .debouncedClickable {
                 onNavigate(NavEvent.ToCommand(command.name))

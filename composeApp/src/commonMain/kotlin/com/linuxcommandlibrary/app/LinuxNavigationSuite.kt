@@ -32,7 +32,7 @@ import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 internal fun LinuxNavigationSuite(
     state: LinuxNavState,
     layoutType: NavigationSuiteType,
-    contentModifier: Modifier,
+    modifier: Modifier = Modifier,
     content: @Composable () -> Unit,
 ) {
     val hoverModifier = Modifier.pointerHoverIcon(PointerIcon.Hand)
@@ -78,7 +78,7 @@ internal fun LinuxNavigationSuite(
         },
     ) {
         Box(
-            modifier = contentModifier
+            modifier = modifier
                 .fillMaxSize()
                 .background(MaterialTheme.colorScheme.surface),
         ) {

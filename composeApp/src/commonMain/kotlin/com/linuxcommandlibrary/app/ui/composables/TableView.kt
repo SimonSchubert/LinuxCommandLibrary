@@ -33,8 +33,8 @@ import kotlinx.collections.immutable.ImmutableList
 fun TableView(
     headers: ImmutableList<ImmutableList<TextElement>>,
     rows: ImmutableList<ImmutableList<ImmutableList<TextElement>>>,
-    onNavigate: (NavEvent) -> Unit = {},
     modifier: Modifier = Modifier,
+    onNavigate: (NavEvent) -> Unit = {},
     highlight: ElementHighlight? = null,
 ) {
     val textMeasurer = rememberTextMeasurer()

@@ -88,12 +88,11 @@ fun CommandDetailScreen(
     onMatchIndexChange: (MatchIndex) -> Unit = {},
 ) {
     val uiState by viewModel.state.collectAsState()
-    val onToggleExpanded = remember(viewModel) { viewModel::onToggleExpanded }
 
     CommandDetailContent(
         uiState = uiState,
         onNavigate = onNavigate,
-        onToggleExpanded = onToggleExpanded,
+        onToggleExpanded = viewModel::onToggleExpanded,
         searchQuery = searchQuery,
         activeMatchIndex = activeMatchIndex,
         onMatchIndexChange = onMatchIndexChange,

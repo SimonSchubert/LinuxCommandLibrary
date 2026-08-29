@@ -16,6 +16,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -67,8 +68,8 @@ fun FastScrollBar(
     if (itemCount == 0) return
 
     val coroutineScope = rememberCoroutineScope()
-    var trackHeightPx by remember { mutableStateOf(0f) }
-    var thumbHeightPx by remember { mutableStateOf(0f) }
+    var trackHeightPx by remember { mutableFloatStateOf(0f) }
+    var thumbHeightPx by remember { mutableFloatStateOf(0f) }
     var isDragging by remember { mutableStateOf(false) }
 
     val scrollableRange by remember {

@@ -42,7 +42,7 @@ internal fun ExpandedLinuxLayout(
         LinuxNavigationSuite(
             state = state,
             layoutType = layoutType,
-            contentModifier = Modifier
+            modifier = Modifier
                 .padding(start = 8.dp)
                 .clip(RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp)),
             content = content,

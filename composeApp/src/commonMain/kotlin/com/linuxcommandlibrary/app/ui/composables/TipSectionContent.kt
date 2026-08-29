@@ -1,5 +1,6 @@
 package com.linuxcommandlibrary.app.ui.composables
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material3.MaterialTheme
@@ -86,67 +87,70 @@ fun buildTextElementString(
 fun TipSectionContent(
     sections: ImmutableList<TipSectionElement>,
     onNavigate: (NavEvent) -> Unit,
+    modifier: Modifier = Modifier,
     textColor: Color = Color.Unspecified,
     commandVerticalPadding: Dp = 0.dp,
     highlights: Map<Int, ElementHighlight>? = null,
     onElementPositioned: ((Int, LayoutCoordinates) -> Unit)? = null,
 ) {
     val linkColor = MaterialTheme.colorScheme.primary
-    sections.forEachIndexed { elementIndex, section ->
-        val highlight = highlights?.get(elementIndex)
-        val positionModifier = if (onElementPositioned != null && highlight != null) {
-            Modifier.onGloballyPositioned { onElementPositioned(elementIndex, it) }
-        } else {
-            Modifier
-        }
-        when (section) {
-            is TipSectionElement.Text -> {
-                val styledString = remember(section.elements, textColor, linkColor) {
-                    buildTextElementString(section.elements, textColor, linkColor, onNavigate)
-                }
-                val annotatedString = remember(styledString, highlight) {
-                    styledString.withMatchHighlight(highlight)
-                }
-                Text(
-                    text = annotatedString,
-                    color = textColor,
-                    modifier = positionModifier,
-                )
+    Column(modifier = modifier) {
+        sections.forEachIndexed { elementIndex, section ->
+            val highlight = highlights?.get(elementIndex)
+            val positionModifier = if (onElementPositioned != null && highlight != null) {
+                Modifier.onGloballyPositioned { onElementPositioned(elementIndex, it) }
+            } else {
+                Modifier
             }
-
-            is TipSectionElement.Blockquote -> {
-                val styledString = remember(section.elements, textColor) {
-                    buildTextElementString(section.elements, textColor)
+            when (section) {
+                is TipSectionElement.Text -> {
+                    val styledString = remember(section.elements, textColor, linkColor) {
+                        buildTextElementString(section.elements, textColor, linkColor, onNavigate)
+                    }
+                    val annotatedString = remember(styledString, highlight) {
+                        styledString.withMatchHighlight(highlight)
+                    }
+                    Text(
+                        text = annotatedString,
+                        color = textColor,
+                        modifier = positionModifier,
+                    )
                 }
-                val annotatedString = remember(styledString, highlight) {
-                    styledString.withMatchHighlight(highlight)
+
+                is TipSectionElement.Blockquote -> {
+                    val styledString = remember(section.elements, textColor) {
+                        buildTextElementString(section.elements, textColor)
+                    }
+                    val annotatedString = remember(styledString, highlight) {
+                        styledString.withMatchHighlight(highlight)
+                    }
+                    Text(
+                        text = annotatedString,
+                        color = textColor,
+                        modifier = positionModifier.padding(start = 8.dp, bottom = 8.dp),
+                    )
                 }
-                Text(
-                    text = annotatedString,
-                    color = textColor,
-                    modifier = positionModifier.padding(start = 8.dp, bottom = 8.dp),
-                )
-            }
 
-            is TipSectionElement.Code -> {
-                CommandView(
-                    command = section.command,
-                    elements = section.elements,
-                    onNavigate = onNavigate,
-                    verticalPadding = commandVerticalPadding,
-                    highlight = highlight,
-                    modifier = positionModifier,
-                )
-            }
+                is TipSectionElement.Code -> {
+                    CommandView(
+                        command = section.command,
+                        elements = section.elements,
+                        onNavigate = onNavigate,
+                        verticalPadding = commandVerticalPadding,
+                        highlight = highlight,
+                        modifier = positionModifier,
+                    )
+                }
 
-            is TipSectionElement.Table -> {
-                TableView(
-                    headers = section.headers,
-                    rows = section.rows,
-                    onNavigate = onNavigate,
-                    highlight = highlight,
-                    modifier = positionModifier,
-                )
+                is TipSectionElement.Table -> {
+                    TableView(
+                        headers = section.headers,
+                        rows = section.rows,
+                        onNavigate = onNavigate,
+                        highlight = highlight,
+                        modifier = positionModifier,
+                    )
+                }
             }
         }
     }

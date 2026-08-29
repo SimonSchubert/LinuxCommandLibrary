@@ -18,10 +18,13 @@ import androidx.compose.material3.adaptive.navigation.BackNavigationBehavior
 import androidx.compose.material3.adaptive.navigation.ThreePaneScaffoldNavigator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.linuxcommandlibrary.app.NavEvent
+import com.linuxcommandlibrary.app.data.CommandInfo
 import com.linuxcommandlibrary.app.nav.TabStackEntry
 import com.linuxcommandlibrary.app.nav.TabStackEntryContent
 import com.linuxcommandlibrary.app.ui.composables.InlineSearchField
@@ -30,6 +33,8 @@ import com.linuxcommandlibrary.app.ui.composables.SearchState
 import com.linuxcommandlibrary.app.ui.screens.commanddetail.CommandDetailPane
 import com.linuxcommandlibrary.app.ui.screens.commandlist.CommandListScreen
 import com.linuxcommandlibrary.app.ui.screens.commandlist.CommandListViewModel
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.ImmutableSet
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -49,6 +54,8 @@ internal fun CommandsPaneScreen(
     isExpanded: Boolean,
 ) {
     val listViewModel: CommandListViewModel = koinInject()
+    val commands by listViewModel.commands.collectAsState()
+    val bookmarkedNames by listViewModel.bookmarkedNames.collectAsState()
 
     LaunchedEffect(pendingSelection) {
         val name = pendingSelection ?: return@LaunchedEffect
@@ -94,7 +101,8 @@ internal fun CommandsPaneScreen(
                 exitTransition = ExitTransition.None,
             ) {
                 CommandsListPane(
-                    listViewModel = listViewModel,
+                    commands = commands,
+                    bookmarkedNames = bookmarkedNames,
                     listState = listState,
                     searchState = searchState,
                     selectedName = selectedName,
@@ -133,7 +141,8 @@ internal fun CommandsPaneScreen(
 
 @Composable
 private fun CommandsListPane(
-    listViewModel: CommandListViewModel,
+    commands: ImmutableList<CommandInfo>,
+    bookmarkedNames: ImmutableSet<String>,
     listState: LazyListState,
     searchState: SearchState,
     selectedName: String?,
@@ -153,7 +162,8 @@ private fun CommandsListPane(
             selectedBasicGroupId = selectedSearchBasicGroupId,
         ) {
             CommandListScreen(
-                viewModel = listViewModel,
+                commands = commands,
+                bookmarkedNames = bookmarkedNames,
                 listState = listState,
                 onNavigate = onNavigate,
                 selectedName = selectedName,

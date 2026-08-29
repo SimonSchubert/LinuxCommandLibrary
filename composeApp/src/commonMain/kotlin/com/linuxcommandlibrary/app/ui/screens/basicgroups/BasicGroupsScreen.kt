@@ -24,7 +24,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
@@ -51,7 +50,6 @@ fun BasicGroupsScreen(
     onFocusConsumed: () -> Unit = {},
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val toggleCollapse = remember(viewModel) { viewModel::toggleCollapse }
     val listState = rememberLazyListState()
 
     LaunchedEffect(uiState.basicGroups, focusGroupId) {
@@ -68,7 +66,7 @@ fun BasicGroupsScreen(
     BasicGroupsContent(
         uiState = uiState,
         listState = listState,
-        toggleCollapse = toggleCollapse,
+        toggleCollapse = viewModel::toggleCollapse,
         onNavigate = onNavigate,
     )
 }
@@ -114,59 +112,62 @@ fun BasicGroupsContent(
 fun BasicGroupColumn(
     basicGroup: BasicGroup,
     categoryTitle: String,
-    sections: ImmutableList<TipSectionElement> = persistentListOf(),
     isExpanded: Boolean,
     onToggleCollapse: () -> Unit,
+    modifier: Modifier = Modifier,
+    sections: ImmutableList<TipSectionElement> = persistentListOf(),
     onNavigate: (NavEvent) -> Unit = {},
 ) {
     val painter = rememberIconPainter(basicGroup.getIconId(categoryTitle))
     val chevronRotation by animateFloatAsState(targetValue = if (isExpanded) 180f else 0f)
 
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .pointerHoverIcon(PointerIcon.Hand, overrideDescendants = true)
-            .clickable { onToggleCollapse() }
-            .padding(horizontal = 16.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Icon(
-            painter = painter,
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.size(40.dp),
-        )
-        Text(
-            text = basicGroup.description,
-            maxLines = 3,
-            style = MaterialTheme.typography.bodyLarge,
-            modifier = Modifier
-                .weight(1f)
-                .padding(horizontal = 16.dp),
-        )
-        Icon(
-            imageVector = AppIcons.ExpandMore,
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.graphicsLayer { rotationZ = chevronRotation },
-        )
-    }
-
-    if (isExpanded) {
-        Card(
+    Column(modifier = modifier) {
+        Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 4.dp),
-            shape = RoundedCornerShape(16.dp),
-            colors = CardDefaults.cardColors(
-                containerColor = MaterialTheme.colorScheme.surfaceContainer,
-            ),
-            elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
+                .pointerHoverIcon(PointerIcon.Hand, overrideDescendants = true)
+                .clickable { onToggleCollapse() }
+                .padding(horizontal = 16.dp, vertical = 12.dp),
+            verticalAlignment = Alignment.CenterVertically,
         ) {
-            ExpandedGroupContent(
-                sections = sections,
-                onNavigate = onNavigate,
+            Icon(
+                painter = painter,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.size(40.dp),
             )
+            Text(
+                text = basicGroup.description,
+                maxLines = 3,
+                style = MaterialTheme.typography.bodyLarge,
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(horizontal = 16.dp),
+            )
+            Icon(
+                imageVector = AppIcons.ExpandMore,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.graphicsLayer { rotationZ = chevronRotation },
+            )
+        }
+
+        if (isExpanded) {
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 4.dp),
+                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.surfaceContainer,
+                ),
+                elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
+            ) {
+                ExpandedGroupContent(
+                    sections = sections,
+                    onNavigate = onNavigate,
+                )
+            }
         }
     }
 }

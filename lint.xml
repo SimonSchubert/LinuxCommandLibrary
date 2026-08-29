@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Shared Android Lint configuration for :composeApp and :android.
+
+  Slack compose-lint-checks are on by default. Entries below are the ones this
+  codebase deliberately does not follow, each with the reason.
+-->
+<lint>
+
+    <!--
+      Screen roots and App() are navigation entry points, not reusable components:
+      nothing positions or decorates them from the outside. Reusable composables
+      under ui/composables/ still have to take a modifier.
+    -->
+    <issue id="ComposeModifierMissing">
+        <ignore path="**/linuxcommandlibrary/app/App.kt" />
+        <ignore path="**/ui/screens/**" />
+    </issue>
+
+    <!-- Theme extras (nav/top bar colors) that Material3 ColorScheme does not cover. -->
+    <issue id="ComposeCompositionLocalUsage">
+        <option name="allowed-composition-locals" value="LocalCustomColors" />
+    </issue>
+
+</lint>

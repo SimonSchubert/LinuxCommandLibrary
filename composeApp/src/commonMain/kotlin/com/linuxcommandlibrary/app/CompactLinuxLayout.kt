@@ -34,7 +34,6 @@ internal fun CompactLinuxLayout(
         LinuxNavigationSuite(
             state = state,
             layoutType = layoutType,
-            contentModifier = Modifier,
             content = content,
         )
     }

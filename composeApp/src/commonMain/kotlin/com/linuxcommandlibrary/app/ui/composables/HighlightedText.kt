@@ -4,6 +4,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextDirection
@@ -14,6 +15,7 @@ import androidx.compose.ui.text.withStyle
 fun HighlightedText(
     text: String,
     pattern: String,
+    modifier: Modifier = Modifier,
     maxLines: Int = 1,
 ) {
     val bodyLarge = MaterialTheme.typography.bodyLarge
@@ -21,6 +23,7 @@ fun HighlightedText(
     if (pattern.isEmpty()) {
         Text(
             text = text,
+            modifier = modifier,
             maxLines = maxLines,
             overflow = TextOverflow.Ellipsis,
             style = ltrStyle,
@@ -28,6 +31,7 @@ fun HighlightedText(
     } else if (text.equals(pattern, ignoreCase = true)) {
         Text(
             text = text,
+            modifier = modifier,
             maxLines = maxLines,
             overflow = TextOverflow.Ellipsis,
             color = MaterialTheme.colorScheme.primary,
@@ -50,6 +54,7 @@ fun HighlightedText(
         }
         Text(
             text = annotatedString,
+            modifier = modifier,
             maxLines = maxLines,
             overflow = TextOverflow.Ellipsis,
             style = ltrStyle,

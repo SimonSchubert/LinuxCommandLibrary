@@ -2,6 +2,7 @@ package com.linuxcommandlibrary.app.ui.composables
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -46,6 +47,6 @@ fun rememberSearchState(initialText: String = ""): SearchState {
     val isVisible = rememberSaveable { mutableStateOf(initialText.isNotEmpty()) }
     // Transient request signal, not state — `remember` only. After process death the user
     // returns to a focused-but-not-keyboard-raised search field, which is fine.
-    val focusEpoch = remember { mutableStateOf(0) }
+    val focusEpoch = remember { mutableIntStateOf(0) }
     return remember { SearchState(textFieldValue, isVisible, focusEpoch) }
 }

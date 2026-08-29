@@ -10,7 +10,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun SectionTitle(modifier: Modifier = Modifier, title: String) {
+fun SectionTitle(title: String, modifier: Modifier = Modifier) {
     Text(
         text = title,
         fontSize = 20.sp,
