@@ -6652,6 +6652,7 @@ quotaon.md
 qutebrowser.md
 qwen-code.md
 qwen.md
+qwiksi.md
 r.md
 r2.md
 r2e.md
