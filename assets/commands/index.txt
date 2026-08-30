@@ -5342,6 +5342,7 @@ opam.md
 opamui.md
 open.fish.md
 open.md
+open_oscar_server.md
 openai.md
 openapi-generator.md
 openapi-tui.md
