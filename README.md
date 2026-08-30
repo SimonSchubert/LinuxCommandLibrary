@@ -102,6 +102,3 @@ The source code is licensed under the Apache 2.0 license and the copyright of th
 
 http://letsgokoyo.com - App Icon
 
-https://icons8.com - Icons
-
-https://tldr.sh - TLDR

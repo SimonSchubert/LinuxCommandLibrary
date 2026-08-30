@@ -952,8 +952,6 @@ class WebsiteBuilder(
                     h2 { +"Copyright and Credits" }
                     p {
                         +"Man pages referenced on this site are copyrighted by their respective authors and used under fair use principles for educational reference. We gratefully acknowledge inspiration and contributions from "
-                        a(href = "https://tldr.sh/") { +"TLDR" }
-                        +" and "
                         a(href = "https://www.commandlinefu.com/") { +"commandlinefu.com" }
                         +"."
                     }

@@ -167,10 +167,6 @@ class MarkdownBuilder {
         stream.appendLine("### Thanks to")
         stream.appendLine()
         stream.appendLine("http://letsgokoyo.com - App Icon")
-        stream.appendLine()
-        stream.appendLine("https://icons8.com - Icons")
-        stream.appendLine()
-        stream.appendLine("https://tldr.sh - TLDR")
 
         stream.close()
     }
