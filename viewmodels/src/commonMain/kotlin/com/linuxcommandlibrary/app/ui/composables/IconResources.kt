@@ -161,7 +161,6 @@ enum class AppIcon {
     TIMER,
     USB,
     USER_PASSWORD,
-    VIP_LOOKUP,
     VOLUME_OFF,
     VOLUME_UP,
     VPN_KEY,
@@ -186,6 +185,45 @@ enum class AppIcon {
     ACCOUNT_TREE,
     INVENTORY,
     CONTENT_CUT,
+
+    // Purpose-fit additions (semantic icon pass)
+    MIC,
+    SOUND_WAVE,
+    LOCK,
+    LOCK_OPEN,
+    HIBERNATE,
+    FILTER,
+    MANAGE_SEARCH,
+    FUZZY,
+    TAG,
+    CLICK,
+    COLUMNS,
+    SHUFFLE,
+    SORT,
+    QUOTE,
+    BUG,
+    DATABASE,
+    FOLDER_ZIP,
+    ARCHIVE,
+    LINK_OFF,
+    SPLIT,
+    SCREENSHOT,
+    TOGGLE_ON,
+    SPEED,
+    HTTP,
+    PDF,
+    CRON,
+    HOURGLASS,
+    THERMOSTAT,
+    GIF,
+    SMART_DISPLAY,
+    BACKGROUND_TASK,
+    TRAIN,
+    SWITCH_ACCOUNT,
+    SPLITSCREEN,
+    RESIZE,
+    ANCHOR,
+    REGEX,
 }
 
 fun BasicGroup.getIconId(categoryTitle: String): AppIcon = basicGroupIconsByCategory[categoryTitle]?.get(description)
@@ -210,13 +248,13 @@ fun BasicCategory.getIconId(): AppIcon = when (title) {
     "Terminal games" -> AppIcon.CONTROLLER
     "Shell Scripting" -> AppIcon.CONSOLE
     "Tmux" -> AppIcon.RESTORE_WINDOW
-    "Regular Expressions" -> AppIcon.LOUPE
+    "Regular Expressions" -> AppIcon.REGEX
     "VIM Text Editor", "Emacs Text Editor", "Nano Text Editor", "Pico Text Editor", "Micro Text Editor" -> AppIcon.TEXT
     "Cryptocurrencies" -> AppIcon.BITCOIN
     "Input" -> AppIcon.MOUSE
     "JSON" -> AppIcon.JSON
     "Fun" -> AppIcon.FUN
-    "AI tools" -> AppIcon.AGENT
+    "AI tools" -> AppIcon.BOT
     "Backup & Imaging" -> AppIcon.SAVE
     "System Recovery" -> AppIcon.HEALING
     else -> AppIcon.MOUSE
