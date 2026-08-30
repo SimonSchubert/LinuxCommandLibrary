@@ -1,3 +1,16 @@
+## v4.7.0 - 2026-08-30
+
+### Features
+- Added an open source licenses screen
+- Added 26 new commands
+
+### Improvements
+- Rewrote TLDR examples for over 120 commands
+- Improved accessibility on Android and iOS: screen reader labels, large text sizes, and tables that reflow instead of squeezing into unreadable columns
+- Overhauled the icon set: redrew off-style icons, gave every basics group a fitting one, and removed unused art
+- Removed the affiliate banners from the info dialog
+- Upgraded dependencies
+
 ## v4.6.0 - 2026-08-26
 
 ### Features
