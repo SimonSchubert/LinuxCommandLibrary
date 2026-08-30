@@ -4,37 +4,49 @@ captures screenshots in the MATE desktop environment
 
 # TLDR
 
-Create a **fullscreen** screenshot
+Capture the **whole screen**
 
 ```mate-screenshot```
 
-Create an **active window** screenshot
+Capture only the **focused window**
 
 ```mate-screenshot --window```
 
-Create a **specific area** screenshot
+**Drag out a region** to capture
 
 ```mate-screenshot --area```
 
-Create a screenshot **interactively**
+Open the **dialog** and choose the options there
 
 ```mate-screenshot --interactive```
 
-Create a screenshot **without borders**
+**Wait a few seconds** first, so a menu can be opened
+
+```mate-screenshot --delay=[5]```
+
+Delay **and** capture just the window
+
+```mate-screenshot --window --delay=[3]```
+
+**Keep** the window border
+
+```mate-screenshot --window --include-border```
+
+**Strip** the window border
 
 ```mate-screenshot --window --remove-border```
 
-Create a screenshot with a **specific effect**
+Add a **drop shadow** around the window
 
-```mate-screenshot --effect [shadow|border|none]```
+```mate-screenshot --window --border-effect=[shadow]```
 
-Create a screenshot with a **specific delay** in seconds
-
-```mate-screenshot --delay [5]```
-
-Create a screenshot and **copy to clipboard** instead of saving
+Put the image on the **clipboard** rather than saving it
 
 ```mate-screenshot --clipboard```
+
+Capture a region **straight to the clipboard**
+
+```mate-screenshot --area --clipboard```
 
 # SYNOPSIS
 
@@ -57,8 +69,8 @@ Create a screenshot and **copy to clipboard** instead of saving
 **--remove-border, -B**
 > Remove window border from window captures
 
-**--effect _type_, -e**
-> Add an effect: shadow, border, or none
+**--border-effect _type_, -e**
+> Add an effect to the window border: shadow, border, or none
 
 **--include-border, -b**
 > Include window border in capture (default)

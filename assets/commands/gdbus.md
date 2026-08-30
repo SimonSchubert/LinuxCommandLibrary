@@ -4,38 +4,55 @@ command-line tool for D-Bus introspection and interaction
 
 # TLDR
 
-List all names on the **session bus**
+List the **names currently on the session bus**
 
-```gdbus list-names --session```
+```gdbus call --session --dest org.freedesktop.DBus --object-path /org/freedesktop/DBus --method org.freedesktop.DBus.ListNames```
 
-List all names on the **system bus**
+Show an object's **interfaces, methods and properties**
 
-```gdbus list-names --system```
+```gdbus introspect --session --dest [org.example.Service] --object-path /[org/example/Object]```
 
-**Introspect** an object to see its interfaces and methods
+Print the raw introspection **XML**
 
-```gdbus introspect --session --dest [destination_bus_name] --object-path /[path/to/object]```
+```gdbus introspect --session --dest [service] --object-path /[path] --xml```
 
-**Call a method** on an object with arguments
+Walk the **whole object tree** below a path
 
-```gdbus call --session --dest [destination_bus_name] --object-path /[path/to/object] --method [interface.method_name] [args...]```
+```gdbus introspect --session --dest [service] --object-path / --recurse```
 
-**Emit a signal** from an object with arguments
+Show only the interfaces that carry **properties**
 
-```gdbus emit --session --object-path /[path/to/object] --signal [interface.signal_name] [args...]```
+```gdbus introspect --session --dest [service] --object-path /[path] --only-properties```
 
-**Monitor** all messages on the session bus
+**Call a method**, passing arguments as serialized GVariant
 
-```gdbus monitor --session```
+```gdbus call --session --dest [service] --object-path /[path] --method [org.example.Iface.Method] [argument]```
+
+Call a method on the **system bus** instead
+
+```gdbus call --system --dest [service] --object-path /[path] --method [method]```
+
+Allow a slow call **longer than the default timeout**
+
+```gdbus call --session --dest [service] --object-path /[path] --method [method] --timeout [30]```
+
+**Emit a signal**
+
+```gdbus emit --session --object-path /[path] --signal [org.example.Iface.Signal] [argument]```
+
+**Watch the traffic** belonging to one service
+
+```gdbus monitor --session --dest [service]```
+
+**Block until a service appears** on the bus
+
+```gdbus wait --session [org.example.Service]```
 
 # SYNOPSIS
 
 **gdbus** _command_ [_options_]
 
 # PARAMETERS
-
-**list-names**
-> List all names on a bus
 
 **introspect**
 > Introspect a remote object

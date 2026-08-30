@@ -4,37 +4,49 @@ KDE command-line client for KIO network-transparent file operations
 
 # TLDR
 
-**Open a URL** with its default KDE handler
+Open a URL with **whichever KDE application handles it**
 
-```kioclient exec [url]```
+```kioclient exec [https://example.com]```
 
-**Print the contents** of a remote file to stdout
+Open a **local file** with its default application
+
+```kioclient exec [path/to/file.pdf]```
+
+Print a **remote file** to standard output
 
 ```kioclient cat [sftp://user@host/path/to/file]```
 
-**List the contents** of a remote directory
+**List a remote directory**
 
 ```kioclient ls [smb://server/share]```
 
-**Copy one or more files** via KIO
+**Copy across protocols**, from a remote share to a local path
 
-```kioclient cp [path/to/source1] [path/to/source2] [path/to/destination]```
+```kioclient copy [sftp://host/path/to/file] [path/to/local]```
 
-**Move a file** via KIO
+Copy **several sources** into one directory
 
-```kioclient mv [path/to/source] [path/to/destination]```
+```kioclient cp [path/to/file1] [path/to/file2] [path/to/destination]```
 
-**Remove a file** via KIO
+**Move** a file
 
-```kioclient rm [url]```
+```kioclient move [path/to/source] [path/to/destination]```
 
-**Create a new directory** via KIO
+**Delete** a file through KIO
 
-```kioclient mkdir [url]```
+```kioclient remove [sftp://host/path/to/file]```
 
-**Open the KDE Properties dialog** for a URL
+**Create a directory** on a remote share
 
-```kioclient5 openProperties [url]```
+```kioclient mkdir [sftp://host/path/to/dir]```
+
+**Download** a remote file, asking where to save it
+
+```kioclient download [sftp://host/path/to/file]```
+
+Open KDE's **file properties** dialog
+
+```kioclient openProperties [path/to/file]```
 
 # SYNOPSIS
 

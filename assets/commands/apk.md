@@ -4,41 +4,61 @@ Alpine Linux package manager
 
 # TLDR
 
-**Update** repository indexes and upgrade all packages
-
-```apk upgrade -U```
-
-Only update **repository indexes**
+**Refresh** the package index
 
 ```apk update```
 
-**Install** a new package
+**Install** packages
 
-```apk add [package]```
+```apk add [package1] [package2]```
 
-**Install** without caching the index (common in Dockerfiles)
+Install **without leaving an index cache** behind, as in a Dockerfile
 
 ```apk add --no-cache [package]```
 
-**Remove** a package
+Install build dependencies under a **virtual name**
 
-```apk del [package]```
+```apk add --virtual [.build-deps] [gcc] [make]```
 
-**Repair/Reinstall** a package without modifying main dependencies
+**Drop that whole group** again in one command
 
-```apk fix [package]```
+```apk del [.build-deps]```
 
-**Search** for packages by name with descriptions
+**Upgrade everything** after refreshing the index
 
-```apk search -v [keyword]```
+```apk upgrade --update-cache```
 
-Search for packages by **description**
+**Preview** a change without applying it
 
-```apk search -d [keyword]```
+```apk add --simulate [package]```
 
-Display **information** about a specific package
+**Search** by name, listing descriptions
+
+```apk search --verbose [keyword]```
+
+Search **inside descriptions**
+
+```apk search --description [keyword]```
+
+Show a package's **details**
 
 ```apk info [package]```
+
+Find **which package owns a file**
+
+```apk info --who-owns [/usr/bin/ssh]```
+
+List the **files a package installed**
+
+```apk info --contents [package]```
+
+List **everything installed**
+
+```apk list --installed```
+
+**Repair** a package without touching its dependencies
+
+```apk fix [package]```
 
 # SYNOPSIS
 
