@@ -4,41 +4,45 @@ bluetooth Host Controller Interface tool for monitoring, configuring
 
 # TLDR
 
-**Scan** for Bluetooth devices
+List the **local Bluetooth adapters**
+
+```hcitool dev```
+
+**Discover** nearby devices
 
 ```hcitool scan```
 
-Scan for **Bluetooth Low Energy (BLE)** devices
+Inquire, showing **device class and clock offset** as well
+
+```hcitool inq```
+
+Scan for **Bluetooth Low Energy** devices
 
 ```hcitool lescan```
 
-Output the **name** of a device by MAC address
+Read the **friendly name** of a remote device
 
-```hcitool name [bdaddr]```
+```hcitool name [00:11:22:33:44:55]```
 
-Fetch **information** about a remote Bluetooth device
+Dump a remote device's **features and firmware version**
 
-```hcitool info [bdaddr]```
+```hcitool info [00:11:22:33:44:55]```
 
-Check the **link quality** to a Bluetooth device
+Show the adapter's **active connections**
 
-```hcitool lq [bdaddr]```
+```hcitool con```
 
-Modify the **transmit power** level
+Read the **signal strength** of a connection
 
-```hcitool tpl [bdaddr] [0|1]```
+```hcitool rssi [00:11:22:33:44:55]```
 
-Display the **link policy**
+Check the **link quality** of a connection
 
-```hcitool lp```
+```hcitool lq [00:11:22:33:44:55]```
 
-Request **authentication** with a specific device
+Work with a **specific adapter** when more than one is present
 
-```hcitool auth [bdaddr]```
-
-Display **local devices**
-
-```hcitool dev```
+```hcitool -i [hci0] scan```
 
 # SYNOPSIS
 

@@ -4,37 +4,73 @@ Forgejo CLI for the terminal
 
 # TLDR
 
-**Log in** to a Forgejo instance
+**Authenticate** against a Forgejo instance
 
 ```fj auth login```
 
+List the instances you are **already logged in to**
+
+```fj auth list```
+
+Show which **account** the current instance sees
+
+```fj whoami```
+
 **Clone** a repository
 
-```fj repo clone [owner]/[repository]```
+```fj repo clone [owner]/[repo]```
 
-**Create** a new issue interactively
+**Fork** a repository into your own account
+
+```fj repo fork [owner]/[repo]```
+
+Print a repository's **README** without leaving the terminal
+
+```fj repo readme [owner]/[repo]```
+
+**Star** a repository
+
+```fj repo star [owner]/[repo]```
+
+**Search** the issues of the current repository
+
+```fj issue search```
+
+**Open** a new issue
 
 ```fj issue create```
 
-**Open** an issue in the browser
+**Read** a single issue
 
-```fj issue browse [issue_number]```
+```fj issue view [42]```
 
-**Create** a new pull request
+**Comment** on an issue
+
+```fj issue comment [42]```
+
+**Close** an issue
+
+```fj issue close [42]```
+
+Open a **pull request** from the current branch
 
 ```fj pr create```
 
+Check the **CI status** of a pull request
+
+```fj pr status```
+
 **Check out** a pull request branch locally
 
-```fj pr checkout [pr_number]```
+```fj pr checkout [7]```
 
-**List** the releases of a repository
+**Merge** a pull request
 
-```fj release list```
+```fj pr merge [7]```
 
-**Show** the currently logged-in user
+Show a **published release**
 
-```fj whoami```
+```fj release view [v1.2.0]```
 
 # SYNOPSIS
 

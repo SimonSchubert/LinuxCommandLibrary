@@ -4,37 +4,53 @@ reconfigures a NixOS system by building a new configuration
 
 # TLDR
 
-**Build and switch** to new configuration (make boot default)
+Build the configuration, **activate it, and make it the boot default**
 
 ```sudo nixos-rebuild switch```
 
-Build and switch with **custom profile name**
+Build from a **flake** rather than `/etc/nixos`
 
-```sudo nixos-rebuild switch -p [name]```
+```sudo nixos-rebuild switch --flake [path/to/flake]#[hostname]```
 
-Build, switch, and **install updates**
+Check that the configuration **still builds**, changing nothing
 
-```sudo nixos-rebuild switch --upgrade```
+```nixos-rebuild dry-build```
 
-**Rollback** to previous generation
+Print what **activation would change**
+
+```sudo nixos-rebuild dry-activate```
+
+Activate for **this session only**, leaving the boot entry alone
+
+```sudo nixos-rebuild test --fast```
+
+Stage the configuration for the **next boot** without activating it now
+
+```sudo nixos-rebuild boot --install-bootloader```
+
+Update **every channel** and rebuild
+
+```sudo nixos-rebuild switch --upgrade-all```
+
+Go back to the **previous generation**
 
 ```sudo nixos-rebuild switch --rollback```
 
-Build and make **boot default** without activating
+List the generations, as **JSON**
 
-```sudo nixos-rebuild boot```
+```nixos-rebuild list-generations --json```
 
-Build and **test** without making boot entry
+Boot the configuration in a **virtual machine** to try it out
 
-```sudo nixos-rebuild test```
+```sudo nixos-rebuild build-vm-with-bootloader```
 
-Build configuration and run in **virtual machine**
+Deploy the configuration to a **remote machine**
 
-```sudo nixos-rebuild build-vm```
+```nixos-rebuild switch --target-host [user]@[host] --use-remote-sudo```
 
-**List** available generations
+Print a **full trace** when evaluation fails
 
-```nixos-rebuild list-generations```
+```sudo nixos-rebuild switch --show-trace```
 
 # SYNOPSIS
 

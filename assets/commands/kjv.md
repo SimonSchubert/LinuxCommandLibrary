@@ -4,37 +4,53 @@ command-line Bible reader providing access to the King James Version text
 
 # TLDR
 
-**List** all books
+**List** the available books
 
 ```kjv -l```
 
-Open a specific **book**
+Read an entire **book**
 
-```kjv [Genesis]```
+```kjv [Ruth]```
 
-Open a specific **chapter**
+Read one **chapter**
 
-```kjv [Genesis] [2]```
+```kjv [Genesis]:[2]```
 
-Open a specific **verse**
+Read a single **verse**
 
-```kjv [John] [3]:[16]```
+```kjv [John]:[3]:[16]```
 
-Open a **range of verses**
+Read **several individual verses**
 
-```kjv [Proverbs] [3]:[1-6]```
+```kjv [John]:[3]:[16],[17]```
 
-Display verses across **multiple chapters**
+Read a **range of verses**
 
-```kjv [Matthew] [1]:[7]-[2]:[6]```
+```kjv [Proverbs]:[3]:[1-6]```
 
-**Search** for a pattern
+Read a **range of chapters**
 
-```kjv /[Plagues]```
+```kjv [Psalms]:[120-134]```
 
-Search within a **specific book**
+Read a range that **crosses chapters**
 
-```kjv [1Jn]/[antichrist]```
+```kjv [Matthew]:[1]:[7]-[2]:[6]```
+
+**Search** the whole text for a pattern
+
+```kjv /[lovingkindness]```
+
+Search **within one book**
+
+```kjv [Acts]/[Macedonia]```
+
+Show each match **in the context of its chapter**
+
+```kjv -C /[mustard seed]```
+
+Show a fixed number of verses **before and after** each match
+
+```kjv -B [2] -A [2] /[shibboleth]```
 
 # SYNOPSIS
 
@@ -45,23 +61,50 @@ Search within a **specific book**
 **-l**
 > List all books
 
+**-A** _num_
+> Show _num_ verses of context after each matching verse
+
+**-B** _num_
+> Show _num_ verses of context before each matching verse
+
+**-C**
+> Show matching verses in the context of their whole chapter
+
+**-e**
+> Highlight chapter and verse numbers (default when output is a TTY)
+
+**-p**
+> Pipe output through **less** with grouping, indentation and line wrapping (default when output is a TTY)
+
+**-h**
+> Show help
+
 _BOOK_
-> Display entire book
+> Display an entire book
 
-_BOOK CHAPTER_
-> Display specific chapter
+_BOOK_**:**_CHAPTER_
+> Display a single chapter
 
-_BOOK CHAPTER:VERSE_
-> Display specific verse
+_BOOK_**:**_CHAPTER_**:**_VERSE_[**,**_VERSE_]...
+> Display one or more individual verses
 
-_BOOK CHAPTER:START-END_
-> Display verse range
+_BOOK_**:**_CHAPTER_**-**_CHAPTER_
+> Display a range of chapters
+
+_BOOK_**:**_CHAPTER_**:**_VERSE_**-**_VERSE_
+> Display a range of verses within a chapter
+
+_BOOK_**:**_CHAPTER_**:**_VERSE_**-**_CHAPTER_**:**_VERSE_
+> Display a range spanning several chapters
 
 **/**_PATTERN_
-> Search all text for pattern
+> Show every verse matching a pattern
 
 _BOOK_**/**_PATTERN_
-> Search within specific book
+> Search within a single book
+
+_BOOK_**:**_CHAPTER_**/**_PATTERN_
+> Search within a single chapter
 
 # DESCRIPTION
 

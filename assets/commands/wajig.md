@@ -4,37 +4,57 @@ Simplified Debian package management wrapper
 
 # TLDR
 
-**Update** package list
+**Refresh** the package lists
 
 ```wajig update```
 
-**Install** package
+**Search** for a package by name or description
 
-```wajig install [package]```
+```wajig search [keyword]```
 
-**Purge** package
+Show the **full details** of a package
 
-```wajig purge [package]```
+```wajig show [package]```
 
-**Daily** upgrade
+**Install** a package
 
-```wajig daily-upgrade```
+```wajig install [package1] [package2]```
 
-Show package **sizes**
+Apply only the **safe upgrades**, which add and remove nothing
 
-```wajig sizes```
+```wajig safeupgrade```
 
-List **versions**
+Do the routine **update and full upgrade** in one step
 
-```wajig versions```
+```wajig dailyupgrade```
 
-List **upgradable**
+Find which package **owns a file**
+
+```wajig whichpackage [/usr/bin/awk]```
+
+List the **files a package installed**
+
+```wajig listfiles [package]```
+
+Show which installed packages are **upgradable**
 
 ```wajig toupgrade```
 
-Show **dependents**
+Report **orphaned libraries** that nothing depends on
 
-```wajig dependents [package]```
+```wajig orphans```
+
+Show the **largest installed** packages
+
+```wajig large```
+
+**Verify** installed packages against their checksums
+
+```wajig integrity```
+
+Purge configuration left behind by **already-removed** packages
+
+```wajig purgeremoved```
 
 # SYNOPSIS
 

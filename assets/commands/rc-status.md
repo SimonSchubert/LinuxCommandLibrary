@@ -4,33 +4,41 @@ Display OpenRC service and runlevel status
 
 # TLDR
 
-**Show** a summary of services and their status
+Summarize the services in the **current runlevel**
 
 ```rc-status```
 
-**Include** services in all runlevels in the summary
+Cover **every runlevel** at once
 
-```rc-status -a```
+```rc-status --all```
 
-**List** services that have crashed
+Show only the services that have **crashed**
 
-```rc-status -c```
+```rc-status --crashed```
 
-**List** manually started services
+Show services started **by hand** rather than by a runlevel
 
-```rc-status -m```
+```rc-status --manual```
 
-**List** supervised services
+Show services under **supervision**
 
-```rc-status -S```
+```rc-status --supervised```
 
-**Display** the current runlevel
+Show services **not assigned to any runlevel**
 
-```rc-status -r```
+```rc-status --unused```
 
-**List** all runlevels
+Print just the **name of the current runlevel**
 
-```rc-status -l```
+```rc-status --runlevel```
+
+List the **runlevels that exist**
+
+```rc-status --list```
+
+List **every service**, whatever its state
+
+```rc-status --servicelist```
 
 # SYNOPSIS
 

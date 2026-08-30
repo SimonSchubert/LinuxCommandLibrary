@@ -4,37 +4,41 @@ manages the LVM devices file that controls which block devices LVM can
 
 # TLDR
 
-**List devices** recorded in the devices file
+Show which devices LVM is currently **allowed to use**
 
 ```sudo lvmdevices```
 
-**Add a device** to the devices file
+**Authorize** a disk so LVM will scan it
 
-```sudo lvmdevices --adddev [/dev/sdXN]```
+```sudo lvmdevices --adddev [/dev/sdb1]```
 
-**Remove a device** from the devices file
+**Revoke** a disk
 
-```sudo lvmdevices --deldev [/dev/sdXN]```
+```sudo lvmdevices --deldev [/dev/sdb1]```
 
-**Add a physical volume** by its PVID
+Record a physical volume by its **PVID**, which survives renaming
 
 ```sudo lvmdevices --addpvid [PVID]```
 
-**Remove a physical volume** by its PVID
+Drop a physical volume by PVID
 
 ```sudo lvmdevices --delpvid [PVID]```
 
-**Update** the devices file after device names change
+**Repair** stale entries after disks were renamed or replaced
 
 ```sudo lvmdevices --update```
 
-**Check** the devices file for problems
+Prune entries whose devices are **no longer present**
+
+```sudo lvmdevices --update --delnotfound```
+
+**Report** inconsistencies without changing anything
 
 ```sudo lvmdevices --check```
 
-Display **version**
+Work on a **named devices file** instead of the default
 
-```lvmdevices --version```
+```sudo lvmdevices --devicesfile [vg_backup] --check```
 
 # SYNOPSIS
 

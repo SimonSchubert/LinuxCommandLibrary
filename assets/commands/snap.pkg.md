@@ -4,35 +4,67 @@ Manage sandboxed snap packages
 
 # TLDR
 
-**Search** for a package
+**Search** the store
 
-```snap find [query]```
+```snap find [keyword]```
 
-**Install** a package
+Show a snap's **details and available channels**
 
-```snap install [package]```
+```snap info [package]```
 
-**Update** a package
+**Install** a snap
 
-```snap refresh [package]```
+```sudo snap install [package]```
 
-Update to a specific **channel**
+Install from a **specific channel**
 
-```snap refresh [package] --channel=[channel]```
+```sudo snap install [package] --channel=[latest/edge]```
 
-Update **all packages**
+Install a local snap that is **not signed by the store**
 
-```snap refresh```
+```sudo snap install --dangerous [path/to/file.snap]```
 
-**List** installed snaps
+**List** the installed snaps and their revisions
 
 ```snap list```
 
-**Remove** a package
+Show **every revision** still kept on disk
 
-```snap remove [package]```
+```snap list --all```
 
-Check recent **changes**
+**Update** everything that has a newer revision
+
+```sudo snap refresh```
+
+Move one snap to a **different channel**
+
+```sudo snap refresh [package] --channel=[stable]```
+
+**Roll back** a snap to its previous revision
+
+```sudo snap revert [package]```
+
+Show a snap's **background services**
+
+```snap services [package]```
+
+Read a service's **logs**
+
+```snap logs [package]```
+
+List the **interfaces** a snap is connected to
+
+```snap connections [package]```
+
+**Grant** a snap access to an interface it needs
+
+```sudo snap connect [package]:[interface]```
+
+**Uninstall** a snap, discarding its data and snapshots
+
+```sudo snap remove --purge [package]```
+
+Review **recent system changes** made by snapd
 
 ```snap changes```
 

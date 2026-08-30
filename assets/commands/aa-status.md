@@ -4,33 +4,37 @@ Report AppArmor profile and confinement status
 
 # TLDR
 
-Check **AppArmor status**
+Report which profiles are loaded and which processes they confine
 
 ```sudo aa-status```
 
-Display status in **JSON format**
+Test whether AppArmor is **enabled at all**, for use in a script
 
-```sudo aa-status --json```
+```sudo aa-status --enabled```
 
-Display status in **pretty JSON format**
+Emit the same report as **machine-readable JSON**
 
 ```sudo aa-status --pretty-json```
 
-Display the number of **loaded policies**
+Count the profiles that are **loaded**
 
 ```sudo aa-status --profiled```
 
-Display the number of **enforcing policies**
+Count the profiles that **block** violations
 
 ```sudo aa-status --enforced```
 
-Display the number of **complaining policies**
+Count the profiles that only **log** violations
 
 ```sudo aa-status --complaining```
 
-Display the number of policies in **kill mode**
+Count the profiles that **kill** offending tasks
 
 ```sudo aa-status --kill```
+
+Count processes that have a profile but are running **unconfined**
+
+```sudo aa-status --unconfined```
 
 # SYNOPSIS
 

@@ -4,37 +4,41 @@ Create multiboot USB drives from ISOs
 
 # TLDR
 
-**Install** Ventoy
+Show what is **already on a drive** before touching it
 
-```sudo ventoy -i [/dev/sdX]```
+```sudo ventoy -l [/dev/sdb]```
 
-Install with **GPT** partition
+**Install** Ventoy onto a USB stick, erasing it
 
-```sudo ventoy -i -g [/dev/sdX]```
+```sudo ventoy -i [/dev/sdb]```
 
-Install with **options**
+Install using a **GPT** layout instead of MBR
 
-```sudo ventoy -i -g -S -L [LABEL_NAME] [/dev/sdX]```
+```sudo ventoy -i -g [/dev/sdb]```
 
-**Reserve** space at end
+Install with **secure boot support disabled**
 
-```sudo ventoy -i -r [SIZE_MB] [/dev/sdX]```
+```sudo ventoy -i -S [/dev/sdb]```
 
-**Force** install
+Give the data partition a **custom label**
 
-```sudo ventoy -I [/dev/sdX]```
+```sudo ventoy -i -L [MYSTICK] [/dev/sdb]```
 
-**Update** Ventoy
+Leave **space free at the end** of the disk for another partition
 
-```sudo ventoy -u [/dev/sdX]```
+```sudo ventoy -i -r [4096] [/dev/sdb]```
 
-Display **info**
+Install **without reformatting**, where the existing layout allows it
 
-```sudo ventoy -l [/dev/sdX]```
+```sudo ventoy -i -n [/dev/sdb]```
 
-**Non-destructive** install
+**Reinstall** over an existing Ventoy installation
 
-```sudo ventoy -i -n [/dev/sdX]```
+```sudo ventoy -I [/dev/sdb]```
+
+**Upgrade** Ventoy in place, keeping the stored ISOs
+
+```sudo ventoy -u [/dev/sdb]```
 
 # SYNOPSIS
 

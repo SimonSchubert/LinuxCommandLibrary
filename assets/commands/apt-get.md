@@ -4,37 +4,45 @@ Install, upgrade, and manage packages.
 
 # TLDR
 
-**Update** the list of available packages
+**Refresh** the package index from every configured source
 
 ```sudo apt-get update```
 
-**Install** a package or update it to the latest version
+**Install** a package, answering yes to every prompt
 
-```sudo apt-get install [package]```
+```sudo apt-get install -y [package]```
 
-**Remove** a package
+Install one **specific version** instead of the newest
 
-```sudo apt-get remove [package]```
+```sudo apt-get install [package]=[version]```
 
-**Remove** a package and its configuration files
+**Reinstall** a package that is already at the newest version
 
-```sudo apt-get purge [package]```
+```sudo apt-get install --reinstall [package]```
 
-**Upgrade** all installed packages
+**Dry-run** an operation and print what it would change
 
-```sudo apt-get upgrade```
+```sudo apt-get -s dist-upgrade```
 
-**Clean** the local repository of interrupted downloads
-
-```sudo apt-get autoclean```
-
-**Remove** all packages that are no longer needed
-
-```sudo apt-get autoremove```
-
-**Upgrade** and handle changing dependencies
+**Upgrade** everything, letting APT add and remove packages as dependencies require
 
 ```sudo apt-get dist-upgrade```
+
+**Uninstall** packages while leaving their configuration in place
+
+```sudo apt-get remove [package1] [package2]```
+
+Uninstall a package **with its configuration** and any orphans it leaves behind
+
+```sudo apt-get purge --auto-remove [package]```
+
+**Repair** a broken or half-configured dependency state
+
+```sudo apt-get -f install```
+
+Reclaim disk space by **emptying the downloaded .deb cache**
+
+```sudo apt-get clean```
 
 # SYNOPSIS
 

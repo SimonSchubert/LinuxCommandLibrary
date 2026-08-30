@@ -4,39 +4,53 @@ modern Linux networking command for showing and manipulating routing
 
 # TLDR
 
-List interfaces with **detailed info**
+Show every interface and address as a **compact, colored table**
 
-```ip address```
+```ip -c -br address```
 
-List interfaces with **brief** network layer info
+Show the addresses of a **single interface**
 
-```ip -br address```
+```ip address show dev [eth0]```
 
-List interfaces with brief **link layer** info
+Restrict the output to **IPv4** (or `-6` for IPv6)
 
-```ip -br link```
+```ip -4 address```
 
-Display the **routing table**
+**Assign** an address to an interface, with its prefix length
+
+```sudo ip address add [192.168.1.10]/[24] dev [eth0]```
+
+**Remove** an address from an interface
+
+```sudo ip address del [192.168.1.10]/[24] dev [eth0]```
+
+Bring an interface **up** (or `down` to disable it)
+
+```sudo ip link set dev [eth0] up```
+
+Change an interface's **MTU**
+
+```sudo ip link set dev [eth0] mtu [9000]```
+
+Print per-interface **error and packet counters**
+
+```ip -s link show dev [eth0]```
+
+Print the **routing table**
 
 ```ip route```
 
-Show **neighbors** (ARP table)
+Ask which route the kernel would actually **use for one destination**
 
-```ip neighbour```
+```ip route get [1.1.1.1]```
 
-Make an interface **up/down**
+Set the **default gateway**
 
-```sudo ip link set [ethX] up```
-```sudo ip link set [ethX] down```
+```sudo ip route add default via [192.168.1.1] dev [eth0]```
 
-**Add/Delete** an IP address to an interface
+Inspect the **neighbour (ARP) cache**
 
-```sudo ip address add [ip_address]/[mask] dev [ethX]```
-```sudo ip address delete [ip_address]/[mask] dev [ethX]```
-
-Add a **default route**
-
-```sudo ip route add default via [ip_address] dev [ethX]```
+```ip neighbour show```
 
 # SYNOPSIS
 

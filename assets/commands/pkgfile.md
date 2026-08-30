@@ -4,37 +4,49 @@ Search Arch repositories for file ownership
 
 # TLDR
 
-**Synchronize** pkgfile database
+**Refresh** the file database, which is required before the first search
 
 ```sudo pkgfile --update```
 
-Search for package **owning a file**
+Find which package **provides a file**
 
-```pkgfile [filename]```
+```pkgfile [/usr/bin/ss]```
 
-**List files** provided by a package
+Search only the **executables** in `bin` and `sbin`
 
-```pkgfile --list [package]```
+```pkgfile --binaries [ss]```
 
-List **executables** in a package
+Match with a **glob** pattern
 
-```pkgfile --list --binaries [package]```
+```pkgfile --glob [*/libssl.so*]```
 
-**Case-insensitive** search
+Match with a **regular expression**
 
-```pkgfile --ignorecase [filename]```
+```pkgfile --regex [libc.*\.so]```
 
-Search in **bin/sbin** directories only
+Ignore **case** while searching
 
-```pkgfile --binaries [filename]```
+```pkgfile --ignorecase [readme]```
 
-Search with **version** display
+List **everything a package installs**
 
-```pkgfile --verbose [filename]```
+```pkgfile --list [openssh]```
 
-Search in a **specific repository**
+List only the **executables a package installs**
 
-```pkgfile --repo [core] [filename]```
+```pkgfile --list --binaries [openssh]```
+
+Restrict the search to **one repository**
+
+```pkgfile --repo [extra] [filename]```
+
+Show the **package version** alongside each match
+
+```pkgfile --verbose [/usr/bin/ss]```
+
+Print **unformatted output** for scripts
+
+```pkgfile --raw [/usr/bin/ss]```
 
 # SYNOPSIS
 

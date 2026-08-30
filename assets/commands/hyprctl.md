@@ -4,33 +4,57 @@ command-line control utility for Hyprland, a dynamic tiling Wayland compositor
 
 # TLDR
 
-**Reload** Hyprland configuration
+**Reload** the configuration after editing it
 
 ```hyprctl reload```
 
-Return the **active window** name
+Show the connected **monitors** and their modes
 
-```hyprctl activewindow```
+```hyprctl monitors```
 
-List all connected **input devices**
+Show every **open window**
+
+```hyprctl clients```
+
+Show the **focused window** as JSON, ready for a status bar
+
+```hyprctl -j activewindow```
+
+Show the **active workspace**
+
+```hyprctl activeworkspace```
+
+List the **input devices**, whose names the config refers to
 
 ```hyprctl devices```
 
-List all **workspaces** with properties
+List the configured **keybindings**
 
-```hyprctl workspaces```
+```hyprctl binds```
 
-Call a **dispatcher**
+Run a **dispatcher**, the same actions `bind` uses
 
-```hyprctl dispatch [dispatcher]```
+```hyprctl dispatch exec [kitty]```
 
-Set a **configuration keyword** dynamically
+Change a **configuration option** at runtime
 
-```hyprctl keyword [keyword] [value]```
+```hyprctl keyword [general:gaps_in] [10]```
 
-Display **version**
+Read an option's **current value**
 
-```hyprctl version```
+```hyprctl getoption [general:gaps_in]```
+
+**Close a window** by clicking it
+
+```hyprctl kill```
+
+Show a **notification** on screen
+
+```hyprctl notify [1] [3000] [0] "[Config reloaded]"```
+
+Dump the **system information** used in bug reports
+
+```hyprctl systeminfo```
 
 # SYNOPSIS
 

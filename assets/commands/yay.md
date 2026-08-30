@@ -4,37 +4,49 @@ Arch Linux AUR helper
 
 # TLDR
 
-**Update** all packages from repos and the AUR
+**Update** everything from the repositories and the AUR
 
-```yay```
+```yay -Syu```
 
-Interactively **search and install** by name or term
+Include **-git and -svn packages**, which have no version bump to detect
 
-```yay [search_term]```
+```yay -Syu --devel```
 
-**Install** a package without confirmation prompts
-
-```yay -S [package] --noconfirm```
-
-**Search** repos and AUR for a keyword
+**Search** the repositories and the AUR
 
 ```yay -Ss [keyword]```
 
-**Remove** a package with unused deps and configs
+Pick from an **interactive menu** of search results
 
-```yay -Rns [package]```
+```yay [keyword]```
 
-Clean **orphans** tracked by yay
+**Install** packages without confirmation prompts
+
+```yay -S --noconfirm [package1] [package2]```
+
+Show the **details** of an AUR package before building it
+
+```yay -Si [package]```
+
+Upgrade **only the AUR packages**
+
+```yay -Sua```
+
+**Download a PKGBUILD** so you can read it before trusting it
+
+```yay -G [package]```
+
+**Remove** packages along with their dependencies and configuration
+
+```yay -Rns [package1] [package2]```
+
+Remove **orphans** that nothing depends on any more
 
 ```yay -Yc```
 
-Clear **pacman/yay package caches**
+Clear the **build and package caches**
 
-```yay -Scc```
-
-Print package/system **stats**
-
-```yay -Ps```
+```yay -Sc```
 
 # SYNOPSIS
 

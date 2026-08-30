@@ -4,33 +4,57 @@ GNOME Shell extension manager
 
 # TLDR
 
-**List** all the installed extensions
+**List** the installed extensions
 
 ```gnome-extensions list```
 
-Display **information** about a specific extension
+List only the ones that are **enabled**
 
-```gnome-extensions info "[extension_id]"```
+```gnome-extensions list --enabled```
 
-**Enable** a specific extension
+List the ones with an **update waiting**
 
-```gnome-extensions enable "[extension_id]"```
+```gnome-extensions list --updates```
 
-**Disable** a specific extension
+Show an extension's **details**
 
-```gnome-extensions disable "[extension_id]"```
+```gnome-extensions info [extension_id]```
 
-**Uninstall** a specific extension
+**Enable** an extension
 
-```gnome-extensions uninstall "[extension_id]"```
+```gnome-extensions enable [extension_id]```
 
-Display **help** for a specific subcommand
+**Disable** an extension
 
-```gnome-extensions help [subcommand]```
+```gnome-extensions disable [extension_id]```
 
-Display **version**
+**Reset** an extension to its system default state
 
-```gnome-extensions version```
+```gnome-extensions reset [extension_id]```
+
+Open an extension's **preferences dialog**
+
+```gnome-extensions prefs [extension_id]```
+
+**Install** an extension from a zip file
+
+```gnome-extensions install [path/to/extension.zip]```
+
+Reinstall **over an existing copy**
+
+```gnome-extensions install --force [path/to/extension.zip]```
+
+**Uninstall** an extension
+
+```gnome-extensions uninstall [extension_id]```
+
+**Scaffold** a new extension interactively
+
+```gnome-extensions create --interactive```
+
+**Pack** an extension for distribution
+
+```gnome-extensions pack [path/to/source]```
 
 # SYNOPSIS
 

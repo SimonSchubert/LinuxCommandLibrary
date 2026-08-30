@@ -4,37 +4,45 @@ Graphical virtual machine manager
 
 # TLDR
 
-Launch **GUI**
+Start the manager
 
 ```virt-manager```
 
-**Connect** to hypervisor
+Manage the **system** libvirt daemon explicitly
 
-```virt-manager --connect [hypervisor_uri]```
+```virt-manager --connect qemu:///system```
 
-Run in **foreground**
+Manage a **remote host over SSH**
 
-```virt-manager --no-fork```
+```virt-manager --connect qemu+ssh://[user]@[host]/system```
 
-**Debug** mode
+Open straight into a machine's **graphical console**
 
-```virt-manager --debug```
+```virt-manager --show-domain-console [vm_name]```
 
-Open **New VM** wizard
+Open a machine's **hardware settings**
+
+```virt-manager --show-domain-editor [vm_name]```
+
+Open a machine's **performance graphs**
+
+```virt-manager --show-domain-performance [vm_name]```
+
+Jump straight to the **new machine wizard**
 
 ```virt-manager --show-domain-creator```
 
-Show VM **details**
+Open the **delete confirmation** for a machine
 
-```virt-manager --show-domain-editor [name|id|uuid]```
+```virt-manager --show-domain-delete [vm_name]```
 
-Show VM **performance**
+Keep the process in the **foreground with debug logging**
 
-```virt-manager --show-domain-performance [name|id|uuid]```
+```virt-manager --no-fork --debug```
 
-Show **connection** details
+Stop SPICE from **redirecting USB devices automatically**
 
-```virt-manager --show-host-summary```
+```virt-manager --spice-disable-auto-usbredir```
 
 # SYNOPSIS
 

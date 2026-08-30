@@ -4,31 +4,39 @@ Query user for system password
 
 # TLDR
 
-**Query** a system password with a specific prompt
+Ask for a password on the terminal or through a running agent
 
 ```systemd-ask-password "[prompt]"```
 
-**Specify** an identifier for the password query
+**Echo** the characters as they are typed
 
-```systemd-ask-password --id [identifier] "[prompt]"```
+```systemd-ask-password --echo "[prompt]"```
 
-**Use** a kernel keyring key name as cache
+Reuse an answer that is **already cached** in the kernel keyring
 
-```systemd-ask-password --keyname [key_name] "[prompt]"```
+```systemd-ask-password --accept-cached --keyname [key_name] "[prompt]"```
 
-**Set** a custom timeout for the query
-
-```systemd-ask-password --timeout [seconds] "[prompt]"```
-
-**Force** the use of an agent system (never ask on TTY)
-
-```systemd-ask-password --no-tty "[prompt]"```
-
-**Store** a password in the kernel keyring without displaying
+Cache the answer **without printing it**
 
 ```systemd-ask-password --no-output --keyname [key_name] "[prompt]"```
 
-**Pipe** a password to a command without trailing newline
+Accept **several passwords** in one query
+
+```systemd-ask-password --multiple "[prompt]"```
+
+Give up after a **time limit**
+
+```systemd-ask-password --timeout [30] "[prompt]"```
+
+Never prompt on the terminal, so **only an agent** can answer
+
+```systemd-ask-password --no-tty --id [myapp]/[disk] "[prompt]"```
+
+Choose the **icon** an agent shows beside the prompt
+
+```systemd-ask-password --icon [drive-harddisk] "[prompt]"```
+
+Feed the answer to a command **without a trailing newline**
 
 ```systemd-ask-password -n | [command]```
 

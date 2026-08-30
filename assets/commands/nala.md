@@ -4,37 +4,61 @@ modern package management utility for Debian-based systems, serving
 
 # TLDR
 
-**Install** a package
+**Refresh** the package lists
 
-```sudo nala install [package]```
+```sudo nala update```
 
-**Remove** a package
+**Install** packages, with a readable summary of what will change
 
-```sudo nala remove [package]```
+```sudo nala install [package1] [package2]```
 
-**Purge** a package (remove with config files)
+Install **without prompting**
 
-```sudo nala purge [package]```
+```sudo nala install -y [package]```
 
-**Search** for packages
+**Preview** an operation without carrying it out
 
-```nala search "[pattern]"```
+```sudo nala install --simulate [package]```
 
-**Update and upgrade** the system
+**Upgrade** the whole system
 
 ```sudo nala upgrade```
 
-**Remove unused packages**
+**Search** names and descriptions
 
-```sudo nala autoremove```
+```nala search [pattern]```
 
-**Fetch fast mirrors**
+Show a package's **details**
+
+```nala show [package]```
+
+List the packages that are **currently installed**
+
+```nala list --installed```
+
+**Remove** a package together with its configuration
+
+```sudo nala purge [package]```
+
+Remove **everything no longer needed**, configuration included
+
+```sudo nala autopurge```
+
+Rank the mirrors and keep the **fastest ones**
 
 ```sudo nala fetch```
 
-Display **transaction history**
+Inspect one **past transaction**
 
-```nala history```
+```nala history info [3]```
+
+**Undo** a past transaction
+
+```sudo nala history undo [3]```
+
+Delete the **downloaded archives**
+
+```sudo nala clean```
 
 # SYNOPSIS
 

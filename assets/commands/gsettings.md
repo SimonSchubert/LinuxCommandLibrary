@@ -4,33 +4,53 @@ GNOME desktop configuration command-line interface
 
 # TLDR
 
-**Set** the value of a key
+List every **schema** installed on the system
 
-```gsettings set [org.example.schema] [example-key] [value]```
+```gsettings list-schemas```
 
-**Get** the value of a key
+List the **keys** a schema defines
 
-```gsettings get [org.example.schema] [example-key]```
+```gsettings list-keys [org.gnome.desktop.interface]```
 
-**Reset** a key to its schema default value
+**Read** a key
 
-```gsettings reset [org.example.schema] [example-key]```
+```gsettings get [org.gnome.desktop.interface] [color-scheme]```
 
-Display all schemas, keys, and **values recursively**
+**Write** a key
 
-```gsettings list-recursively```
+```gsettings set [org.gnome.desktop.interface] [color-scheme] [prefer-dark]```
 
-Display keys and values from **one schema**
+Show what a key is **for**
 
-```gsettings list-recursively [org.example.schema]```
+```gsettings describe [org.gnome.desktop.interface] [color-scheme]```
 
-Display **allowed values** for a key
+Show the values a key will **accept**
 
-```gsettings range [org.example.schema] [example-key]```
+```gsettings range [org.gnome.desktop.interface] [color-scheme]```
 
-Display the **description** of a key
+Check whether a key is **writable** or locked down by policy
 
-```gsettings describe [org.example.schema] [example-key]```
+```gsettings writable [org.gnome.desktop.interface] [color-scheme]```
+
+**Watch** a key and print every change as it happens
+
+```gsettings monitor [org.gnome.desktop.interface] [color-scheme]```
+
+Dump **every key and value** in one schema
+
+```gsettings list-recursively [org.gnome.desktop.wm.keybindings]```
+
+**Undo** a single customization
+
+```gsettings reset [org.gnome.desktop.interface] [color-scheme]```
+
+Undo **every customization** in a schema
+
+```gsettings reset-recursively [org.gnome.desktop.interface]```
+
+Use schemas from a **directory that is not installed system-wide**
+
+```gsettings --schemadir [path/to/schemas] list-schemas```
 
 # SYNOPSIS
 

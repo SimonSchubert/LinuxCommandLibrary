@@ -4,33 +4,41 @@ directory stack display command
 
 # TLDR
 
-**Display directory stack**
+Show the current directory stack
 
 ```dirs```
 
-**Display with indices**
+**Number** every entry, which is the form `pushd +N` expects
 
 ```dirs -v```
 
-**Display one entry per line**
+Print **absolute paths** instead of abbreviating the home directory
+
+```dirs -l```
+
+Print **one entry per line**, ready to pipe
 
 ```dirs -p```
 
-**Clear directory stack**
+Number the entries **and** expand the home directory
+
+```dirs -v -l```
+
+Show only the **top** of the stack, the current directory
+
+```dirs +0```
+
+Show only the **oldest** entry
+
+```dirs -0```
+
+**Count** how many directories are stacked
+
+```dirs -p | wc -l```
+
+**Empty** the stack
 
 ```dirs -c```
-
-**Show nth entry from left** (0-indexed)
-
-```dirs +[n]```
-
-**Show nth entry from right**
-
-```dirs -[n]```
-
-**Display full paths** without tilde abbreviation
-
-```dirs -l```
 
 # SYNOPSIS
 

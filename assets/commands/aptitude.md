@@ -4,45 +4,53 @@ Advanced package management with dependency resolution
 
 # TLDR
 
-**Synchronize** list of packages and versions
+Launch the **full-screen interactive** package browser
+
+```aptitude```
+
+**Refresh** the package lists
 
 ```sudo aptitude update```
 
-**Install** a new package
+**Search** by name using aptitude's own pattern language
 
-```sudo aptitude install [package]```
+```aptitude search '~n[keyword]'```
 
-**Search** for a package
+Find packages that are installed but **no longer in any repository**
 
-```aptitude search [package]```
+```aptitude search '~o'```
 
-Search for an **installed** package
+Show the **full record** for one package
 
-```aptitude search '?installed([package])'```
+```aptitude show [package]```
 
-**Remove** a package and all packages depending on it
+**Preview** an installation without changing anything
 
-```sudo aptitude remove [package]```
+```sudo aptitude -s install [package]```
 
-**Upgrade** installed packages
+Apply only the upgrades that **install or remove nothing else**
 
-```sudo aptitude upgrade```
+```sudo aptitude safe-upgrade```
 
-**Full upgrade** including removing obsolete packages
+Upgrade everything, **allowing dependency changes**
 
 ```sudo aptitude full-upgrade```
 
-**Simulate** an install without making changes
-
-```sudo aptitude install -s [package]```
-
-**Show why** a package is installed
+**Explain** why a package is on the system
 
 ```aptitude why [package]```
 
-**Hold** a package to prevent automatic upgrades
+Explain why a package **cannot** be installed
 
-```sudo aptitude hold '?installed([package])'```
+```aptitude why-not [package]```
+
+**Pin** a package at its current version
+
+```sudo aptitude hold [package]```
+
+Purge **configuration files** left behind by removed packages
+
+```sudo aptitude purge '~c'```
 
 # SYNOPSIS
 

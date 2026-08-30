@@ -4,37 +4,53 @@ application sandboxing with Linux namespaces
 
 # TLDR
 
-**Integrate** firejail with desktop environment
+Run a program inside a sandbox using its **default security profile**
+
+```firejail [program]```
+
+Give the sandbox a **name** you can refer to later
+
+```firejail --name=[web] [firefox]```
+
+Show a **process tree** of everything currently sandboxed
+
+```firejail --tree```
+
+Watch sandbox resource usage, **top-style**
+
+```firejail --top```
+
+**Attach a shell** to a running sandbox
+
+```firejail --join=[web]```
+
+Deny the sandbox **any network access**
+
+```firejail --net=none [program]```
+
+Give the program a **throwaway home directory**
+
+```firejail --private [program]```
+
+Expose only **specific paths** from the real home directory
+
+```firejail --whitelist=[~/Documents] [program]```
+
+Mount a path **read-only** inside the sandbox
+
+```firejail --read-only=[~/.ssh] [program]```
+
+Block **sound and 3D acceleration**
+
+```firejail --nosound --no3d [program]```
+
+**Terminate** a sandbox by name or PID
+
+```firejail --shutdown=[web]```
+
+Register firejail profiles for **desktop launchers**
 
 ```sudo firecfg```
-
-Open a **restricted** Firefox
-
-```firejail [firefox]```
-
-Start restricted Apache on specific **network**
-
-```firejail --net=[eth0] --ip=[192.168.1.244] [/etc/init.d/apache2] [start]```
-
-**List** running sandboxes
-
-```firejail --list```
-
-List **network activity** from sandboxes
-
-```firejail --netstats```
-
-**Shutdown** a running sandbox
-
-```firejail --shutdown=[7777]```
-
-Run **highly restricted** Firefox session
-
-```firejail --seccomp --private --private-dev --private-tmp --protocol=inet firefox --new-instance --no-remote --safe-mode --private-window```
-
-Use **custom hosts** file
-
-```firejail --hosts-file=[~/myhosts] [curl http://mysite.arpa]```
 
 # SYNOPSIS
 

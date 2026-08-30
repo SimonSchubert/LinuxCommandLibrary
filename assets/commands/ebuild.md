@@ -4,37 +4,53 @@ Gentoo package build interface
 
 # TLDR
 
-Create/update package **manifest**
+Run the **whole build and install** in one go
 
-```ebuild [path/to/file.ebuild] manifest```
+```ebuild [path/to/package.ebuild] merge```
 
-**Clean** temporary build directories
+Only **download** the source archives
 
-```ebuild [path/to/file.ebuild] clean```
+```ebuild [path/to/package.ebuild] fetch```
 
-**Fetch** sources
+**Regenerate the Manifest**, which a local overlay needs after any edit
 
-```ebuild [path/to/file.ebuild] fetch```
+```ebuild [path/to/package.ebuild] manifest```
 
-**Extract** sources
+Skip the Manifest check while testing a **work-in-progress** ebuild
 
-```ebuild [path/to/file.ebuild] unpack```
+```ebuild --skip-manifest [path/to/package.ebuild] compile```
 
-**Compile** sources
+Unpack the sources and apply **patches and prepare steps**
 
-```ebuild [path/to/file.ebuild] compile```
+```ebuild [path/to/package.ebuild] prepare```
 
-**Install** to temporary directory
+Run the package's **configure** phase
 
-```ebuild [path/to/file.ebuild] install```
+```ebuild [path/to/package.ebuild] configure```
 
-Install to **live filesystem**
+Run the upstream **test suite**
 
-```ebuild [path/to/file.ebuild] qmerge```
+```ebuild [path/to/package.ebuild] test```
 
-**Full build** (fetch, unpack, compile, install, merge)
+Build a **binary package** without merging it
 
-```ebuild [path/to/file.ebuild] merge```
+```ebuild [path/to/package.ebuild] package```
+
+Merge the staged image into the **live filesystem**
+
+```ebuild [path/to/package.ebuild] qmerge```
+
+**Uninstall** the package again
+
+```ebuild [path/to/package.ebuild] unmerge```
+
+Delete the **temporary build tree**
+
+```ebuild [path/to/package.ebuild] clean```
+
+Trace a failing phase with **debug output**
+
+```ebuild --debug [path/to/package.ebuild] compile```
 
 # SYNOPSIS
 

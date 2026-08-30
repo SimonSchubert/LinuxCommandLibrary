@@ -4,33 +4,45 @@ determines the MIME type of files using the shared-mime-info database
 
 # TLDR
 
-Print the **MIME type** of a given file
+Show a file's **MIME type**
 
 ```mimetype [path/to/file]```
 
-Display only the MIME type, **not the filename**
+Check **several files** at once
+
+```mimetype [path/to/file1] [path/to/file2]```
+
+Print **only the type**, which is what scripts want
 
 ```mimetype --brief [path/to/file]```
 
-Display a **description** of the MIME type
+Print a **human-readable description** instead of the type
 
-```mimetype --describe [path/to/file]```
+```mimetype --describe --brief [path/to/file]```
 
-Determine the MIME type of **stdin**
+Show **every rule that matched**, with debugging detail
 
-```[command] | mimetype --stdin```
+```mimetype --debug --all [path/to/file]```
 
-Display **debug information** about how the MIME type was determined
+Classify data arriving on **standard input**
 
-```mimetype --debug [path/to/file]```
+```[command] | mimetype --stdin --brief```
 
-Display **all possible MIME types** in confidence order
+Judge by **content only**, ignoring the filename
 
-```mimetype --all [path/to/file]```
+```mimetype --magic-only [path/to/file]```
 
-Specify the **language code** of the output
+Follow a **symlink** instead of reporting the link itself
 
-```mimetype --language [path/to/file]```
+```mimetype --dereference [path/to/symlink]```
+
+Print the description in **another language**
+
+```mimetype --language [de] --describe [path/to/file]```
+
+Read the list of files to check **from a file**
+
+```mimetype --namefile [path/to/list.txt]```
 
 # SYNOPSIS
 
@@ -38,23 +50,44 @@ Specify the **language code** of the output
 
 # PARAMETERS
 
-**--brief, -b**
-> Output only the MIME type without the filename
+**-a, --all**
+> Show the output of every rule that matches the file
 
-**--describe, -d**
-> Output a human-readable description of the MIME type
+**-b, --brief**
+> Output only the MIME type, without the filename
 
-**--stdin, -i**
-> Read data from standard input instead of a file
+**-d, --describe**
+> Output a human-readable description instead of the MIME type
 
-**--debug, -D**
-> Show debugging information about type detection
+**-D, --debug**
+> Show debugging information about how the type was determined
 
-**--all, -a**
-> List all possible MIME types with confidence scores
+**--stdin**
+> Read the data from standard input instead of a file
 
-**--language _code_**
+**-f, --namefile=**_file_
+> Read the list of filenames to check from _file_
+
+**-i, --mimetype**
+> Print the MIME type in **file**(1) compatible output
+
+**-L, --dereference**
+> Follow symlinks and report on the target
+
+**-l, --language=**_code_
 > Set the output language using a 2-letter code
+
+**-M, --magic-only**
+> Determine the type from content only, ignoring the filename
+
+**-N, --noalign**
+> Do not pad the output into aligned columns
+
+**-F, --separator=**_string_
+> Use _string_ between the filename and the type
+
+**--database=**_dirs_
+> Use an alternative colon-separated list of MIME directories
 
 # DESCRIPTION
 

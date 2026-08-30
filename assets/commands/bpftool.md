@@ -4,37 +4,53 @@ Inspect and manage eBPF programs and maps.
 
 # TLDR
 
-List information about loaded **eBPF programs**
+Show every **eBPF program** currently loaded
 
-```bpftool prog list```
+```bpftool prog show```
 
-List eBPF program attachments in the **networking subsystem**
+Emit **pretty-printed JSON** for scripting
 
-```bpftool net list```
+```bpftool -p prog show```
 
-List all **active links**
+Disassemble a program's **verifier-translated** instructions
 
-```bpftool link list```
+```bpftool prog dump xlated id [42]```
 
-List all **tracepoint and kprobe** attachments
+Disassemble the **JIT-compiled** machine code
 
-```bpftool perf list```
+```bpftool prog dump jited id [42]```
 
-List **BPF Type Format (BTF)** data
+Show the loaded **maps**
 
-```bpftool btf list```
+```bpftool map show```
 
-List information about loaded **maps**
+Dump the **key/value contents** of one map
 
-```bpftool map list```
+```bpftool map dump id [17]```
 
-**Probe** a network device for supported eBPF features
+Show programs attached to **network interfaces**
 
-```bpftool feature probe dev [eth0]```
+```bpftool net show```
 
-Run commands in **batch mode** from a file
+Show **cgroup attachments** as a tree
 
-```bpftool batch file [myfile]```
+```bpftool cgroup tree```
+
+Show the loaded **BPF Type Format** objects
+
+```bpftool btf show```
+
+Print the **type information** carried by one BTF object
+
+```bpftool btf dump id [3]```
+
+**Pin** a program to the bpf filesystem so it outlives its loader
+
+```bpftool prog pin id [42] /sys/fs/bpf/[myprog]```
+
+Report which **eBPF features the running kernel** supports
+
+```bpftool feature probe kernel```
 
 # SYNOPSIS
 

@@ -4,37 +4,53 @@ Initialize basic system settings
 
 # TLDR
 
-**Operate** on a specified directory instead of the host system
+Configure a **mounted image or chroot** rather than the running host
 
-```sudo systemd-firstboot --root [path/to/root_directory]```
+```sudo systemd-firstboot --root=[/mnt]```
 
-**Set** the system keyboard layout
+Set **locale and keyboard** in one pass
 
-```sudo systemd-firstboot --keymap [keymap]```
+```sudo systemd-firstboot --root=[/mnt] --locale=[en_US.UTF-8] --keymap=[us]```
 
-**Set** the system hostname
+Set the **hostname and timezone**
 
-```sudo systemd-firstboot --hostname [hostname]```
+```sudo systemd-firstboot --root=[/mnt] --hostname=[myhost] --timezone=[Europe/Berlin]```
 
-**Set** the root user's password
+Set the root password from a **hash** rather than plaintext
 
-```sudo systemd-firstboot --root-password [password]```
+```sudo systemd-firstboot --root=[/mnt] --root-password-hashed=[hash]```
 
-**Prompt** the user interactively for a setting
+Read the root password from a **file**
 
-```sudo systemd-firstboot --prompt [setting]```
+```sudo systemd-firstboot --root=[/mnt] --root-password-file=[path/to/password]```
 
-**Force** writing configuration even if files exist
+Choose the **root account's shell**
 
-```sudo systemd-firstboot --force```
+```sudo systemd-firstboot --root=[/mnt] --root-shell=[/bin/bash]```
 
-**Remove** all existing firstboot configuration files
+**Copy the host's** locale, keymap, timezone and root password into the image
 
-```sudo systemd-firstboot --reset```
+```sudo systemd-firstboot --root=[/mnt] --copy```
 
-**Remove** the password of the root user
+Generate a **machine ID** for the image
 
-```sudo systemd-firstboot --delete-root-password```
+```sudo systemd-firstboot --root=[/mnt] --setup-machine-id```
+
+**Ask interactively** for anything not already configured
+
+```sudo systemd-firstboot --prompt```
+
+**Overwrite** settings that are already present
+
+```sudo systemd-firstboot --root=[/mnt] --force --hostname=[myhost]```
+
+**Clear** every setting systemd-firstboot manages
+
+```sudo systemd-firstboot --root=[/mnt] --reset```
+
+Leave the root account with an **empty password**
+
+```sudo systemd-firstboot --root=[/mnt] --delete-root-password```
 
 # SYNOPSIS
 

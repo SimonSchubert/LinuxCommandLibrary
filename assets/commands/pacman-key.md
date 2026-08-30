@@ -4,37 +4,53 @@ wrapper around GnuPG for managing the keyring used by pacman to verify package
 
 # TLDR
 
-**Initialize** the pacman keyring
+Create the keyring for the first time
 
 ```sudo pacman-key --init```
 
-Add the **default Arch Linux keys**
+Load the distribution's **bundled trusted keys**
 
-```sudo pacman-key --populate```
+```sudo pacman-key --populate archlinux```
 
-**List keys** from the public keyring
+**Rebuild the trust database** after changing trust levels
 
-```pacman-key -l```
+```sudo pacman-key --updatedb```
 
-**Add** the specified keys
+**Refresh every key** from the keyservers, picking up revocations
 
-```sudo pacman-key -a [path/to/keyfile.gpg]```
+```sudo pacman-key --refresh-keys```
 
-**Receive a key** from a key server
+List the keys the system currently **trusts**
 
-```sudo pacman-key -r "[uid|name|email]"```
+```pacman-key --list-keys```
 
-Print the **fingerprint** of a specific key
+Show a key's **fingerprint** before deciding to trust it
 
-```pacman-key -f "[uid|name|email]"```
+```pacman-key --finger [key_id]```
 
-**Sign** an imported key locally
+**Fetch** a key from a keyserver by ID
 
-```sudo pacman-key --lsign-key "[uid|name|email]"```
+```sudo pacman-key --recv-keys [key_id]```
 
-**Remove** a specific key
+**Locally sign** a fetched key to mark it trusted
 
-```sudo pacman-key -d "[uid|name|email]"```
+```sudo pacman-key --lsign-key [key_id]```
+
+Import a key **from a file**
+
+```sudo pacman-key --add [path/to/key.gpg]```
+
+**Export** a key so it can be shared
+
+```pacman-key --export [key_id]```
+
+**Delete** a key from the keyring
+
+```sudo pacman-key --delete [key_id]```
+
+**Verify** a detached signature against the keyring
+
+```pacman-key --verify [path/to/file.sig]```
 
 # SYNOPSIS
 
