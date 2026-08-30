@@ -434,7 +434,7 @@ If Yay exits for any reason After the refresh without upgrading. It is then the 
 
 # CAVEAT
 
-Like other AUR helpers, yay facilitates installing **user-submitted packages** from the Arch User Repository, which **aren't officially vetted** and could potentially contain malicious code—always review the PKGBUILD file before proceeding with installation to mitigate security risks.
+Like other AUR helpers, yay facilitates installing **user-submitted packages** from the Arch User Repository, which **aren't officially vetted** and could potentially contain malicious code, so always review the PKGBUILD file before proceeding with installation to mitigate security risks.
 
 # HISTORY
 

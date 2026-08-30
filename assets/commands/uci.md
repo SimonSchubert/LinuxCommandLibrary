@@ -4,41 +4,57 @@ OpenWrt unified configuration interface
 
 # TLDR
 
-**Get** a value
+Read a single option
 
 ```uci get [network.lan.ipaddr]```
 
-**Show** all options
+Dump an entire **configuration file**
 
 ```uci show [network]```
 
-**Set** a value
+Dump just **one section**
 
-```uci set [config].[section].[option]=[value]```
+```uci show [network.lan]```
 
-**Add** new section
+**Change** an option
 
-```uci add [config] [section]```
+```uci set [network.lan.ipaddr]=[192.168.2.1]```
 
-**Delete** section or option
+**Add** an anonymous section
 
-```uci delete [config].[section].[option]```
+```uci add [firewall] [rule]```
 
-**Commit** changes
+**Rename** a section to something readable
 
-```uci commit [config]```
+```uci rename [network].[cfg01]=[lan]```
 
-**Revert** uncommitted changes
+**Append** a value to a list option
 
-```uci revert [config]```
+```uci add_list [network.lan.dns]=[1.1.1.1]```
 
-**Add a value** to a list option
+**Remove one value** from a list option
 
-```uci add_list [network.lan.dns]=[8.8.8.8]```
+```uci del_list [network.lan.dns]=[1.1.1.1]```
 
-**Show pending changes**
+**Delete** an option or a whole section
+
+```uci delete [network.guest]```
+
+Review the changes that are **staged but not yet written**
 
 ```uci changes```
+
+**Write** the staged changes to disk
+
+```uci commit [network]```
+
+**Discard** the staged changes
+
+```uci revert [network]```
+
+**Export** a configuration in a form that can be imported again
+
+```uci export [network]```
 
 # SYNOPSIS
 

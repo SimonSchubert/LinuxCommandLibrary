@@ -4,33 +4,57 @@ apt-get-like functionality for third-party .deb packages
 
 # TLDR
 
-**Update** available packages list
+**Refresh** the list of available packages
 
 ```deb-get update```
 
-**Search** for a package
+List **every package deb-get knows about**, without checking install state
 
-```deb-get search [package]```
+```deb-get list --raw```
 
-Show **information** about a package
+List **only what is installed**, which is much faster
 
-```deb-get show [package]```
+```deb-get list --installed```
 
-**Install** or upgrade a package
+**Search** the catalogue with a regular expression
 
-```deb-get install [package]```
+```deb-get search [pattern]```
 
-**Remove** a package
+Show the details of **one or more packages**
 
-```deb-get remove [package]```
+```deb-get show [package1] [package2]```
 
-**Upgrade** all installed packages
+**Install** packages from their upstream sources
+
+```deb-get install [package1] [package2]```
+
+**Reinstall** a package
+
+```deb-get reinstall [package]```
+
+**Upgrade** everything deb-get manages
 
 ```deb-get upgrade```
 
-**List** all available packages
+**Remove** a package and drop the apt repository it came from
 
-```deb-get list```
+```deb-get remove --remove-repo [package]```
+
+Remove a package **and its configuration**
+
+```deb-get purge [package]```
+
+**Repair** packages whose definitions changed upstream
+
+```deb-get fix-installed```
+
+Show what is sitting in the **download cache**
+
+```deb-get cache```
+
+**Empty** the download cache
+
+```deb-get clean```
 
 # SYNOPSIS
 

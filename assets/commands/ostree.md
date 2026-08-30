@@ -4,33 +4,61 @@ version control system for binary files, optimized for managing operating system
 
 # TLDR
 
-**Initialize** a repository
+Create a repository, choosing how objects are **stored**
 
-```ostree init --repo [path/to/repo]```
+```ostree init --repo=[path/to/repo] --mode=archive```
 
-Create a **commit** (snapshot) of the files
+**Commit** a directory tree onto a branch
 
-```ostree commit --repo [path/to/repo] --branch [branch_name]```
+```ostree commit --repo=[path/to/repo] --branch=[branch] --subject="[message]" [path/to/tree]```
 
-**Show files** in a commit
+List the **branches** a repository holds
 
-```ostree ls --repo [path/to/repo] [commit_id]```
+```ostree refs --repo=[path/to/repo]```
 
-Show **metadata** of a commit
+Show a branch's **history**
 
-```ostree show --repo [path/to/repo] [commit_id]```
+```ostree log --repo=[path/to/repo] [branch]```
 
-Show **list of commits** (log)
+Show one commit's **metadata**
 
-```ostree log --repo [path/to/repo] [branch_name]```
+```ostree show --repo=[path/to/repo] [commit]```
 
-Show **repo summary**
+**List the files** inside a commit
 
-```ostree summary --repo [path/to/repo] --view```
+```ostree ls --repo=[path/to/repo] [commit] [/usr/bin]```
 
-Show available **refs** (branches)
+Print a **single file** out of a commit
 
-```ostree refs --repo [path/to/repo]```
+```ostree cat --repo=[path/to/repo] [commit] [/etc/os-release]```
+
+**Compare** two commits
+
+```ostree diff --repo=[path/to/repo] [commit_a] [commit_b]```
+
+**Extract** a commit into a real directory
+
+```ostree checkout --repo=[path/to/repo] [branch] [path/to/dir]```
+
+Register a **remote** to pull from
+
+```ostree remote add --repo=[path/to/repo] [name] [url]```
+
+**Fetch** a branch from a remote
+
+```ostree pull --repo=[path/to/repo] [remote] [branch]```
+
+Check the repository for **corruption**
+
+```ostree fsck --repo=[path/to/repo]```
+
+Reclaim space by deleting **unreachable objects**
+
+```ostree prune --repo=[path/to/repo] --refs-only```
+
+Show the **deployments** on an OSTree-based system
+
+```ostree admin status```
 
 # SYNOPSIS
 

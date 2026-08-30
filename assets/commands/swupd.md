@@ -4,37 +4,41 @@ Clear Linux software update and bundle manager
 
 # TLDR
 
-**Update** to latest version
-
-```sudo swupd update```
-
-Check for **available updates**
+Show the installed version and whether a **newer one exists**
 
 ```swupd check-update```
 
-**List** installed bundles
+**Update** the OS to the newest version
 
-```swupd bundle-list```
+```sudo swupd update```
 
-**Search** for a package
+List **every bundle available**, not just the installed ones
 
-```swupd search -b [package]```
+```swupd bundle-list --all```
 
-**Install** a bundle
+Show what a bundle **contains** before installing it
 
-```sudo swupd bundle-add [bundle]```
+```swupd bundle-info [bundle]```
 
-**Remove** a bundle
+**Install** one or more bundles
 
-```sudo swupd bundle-remove [bundle]```
+```sudo swupd bundle-add [bundle1] [bundle2]```
 
-**Verify** and repair system files
+**Remove** bundles
 
-```sudo swupd verify```
+```sudo swupd bundle-remove [bundle1] [bundle2]```
 
-Show **system info**
+**Repair** files that are damaged or missing
 
-```swupd info```
+```sudo swupd repair```
+
+Turn **automatic updates off**
+
+```sudo swupd autoupdate --disable```
+
+Free the space used by **cached update data**
+
+```sudo swupd clean```
 
 # SYNOPSIS
 
