@@ -202,6 +202,13 @@ enum class AppIcon {
     RESIZE,
     ANCHOR,
     REGEX,
+
+    // One glyph per text editor
+    EDITOR_VIM,
+    EDITOR_EMACS,
+    EDITOR_NANO,
+    EDITOR_PICO,
+    EDITOR_MICRO,
 }
 
 fun BasicGroup.getIconId(categoryTitle: String): AppIcon = basicGroupIconsByCategory[categoryTitle]?.get(description)
@@ -227,7 +234,11 @@ fun BasicCategory.getIconId(): AppIcon = when (title) {
     "Shell Scripting" -> AppIcon.CONSOLE
     "Tmux" -> AppIcon.RESTORE_WINDOW
     "Regular Expressions" -> AppIcon.REGEX
-    "VIM Text Editor", "Emacs Text Editor", "Nano Text Editor", "Pico Text Editor", "Micro Text Editor" -> AppIcon.TEXT
+    "VIM Text Editor" -> AppIcon.EDITOR_VIM
+    "Emacs Text Editor" -> AppIcon.EDITOR_EMACS
+    "Nano Text Editor" -> AppIcon.EDITOR_NANO
+    "Pico Text Editor" -> AppIcon.EDITOR_PICO
+    "Micro Text Editor" -> AppIcon.EDITOR_MICRO
     "Cryptocurrencies" -> AppIcon.BITCOIN
     "Input" -> AppIcon.MOUSE
     "JSON" -> AppIcon.JSON

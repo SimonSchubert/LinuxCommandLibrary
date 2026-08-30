@@ -197,6 +197,11 @@ fun appIconAssetName(icon: AppIcon): String = when (icon) {
     AppIcon.RESIZE -> "ic_resize"
     AppIcon.ANCHOR -> "ic_anchor"
     AppIcon.REGEX -> "ic_regex"
+    AppIcon.EDITOR_VIM -> "ic_editor_vim"
+    AppIcon.EDITOR_EMACS -> "ic_editor_emacs"
+    AppIcon.EDITOR_NANO -> "ic_editor_nano"
+    AppIcon.EDITOR_PICO -> "ic_editor_pico"
+    AppIcon.EDITOR_MICRO -> "ic_editor_micro"
 }
 
 fun assetNameForCategory(category: BasicCategory): String = appIconAssetName(category.getIconId())

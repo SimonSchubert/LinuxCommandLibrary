@@ -48,6 +48,11 @@ import com.linuxcommandlibrary.app.resources.ic_difference
 import com.linuxcommandlibrary.app.resources.ic_dns
 import com.linuxcommandlibrary.app.resources.ic_dns_black_24dp
 import com.linuxcommandlibrary.app.resources.ic_draw
+import com.linuxcommandlibrary.app.resources.ic_editor_emacs
+import com.linuxcommandlibrary.app.resources.ic_editor_micro
+import com.linuxcommandlibrary.app.resources.ic_editor_nano
+import com.linuxcommandlibrary.app.resources.ic_editor_pico
+import com.linuxcommandlibrary.app.resources.ic_editor_vim
 import com.linuxcommandlibrary.app.resources.ic_electronics
 import com.linuxcommandlibrary.app.resources.ic_expand_all
 import com.linuxcommandlibrary.app.resources.ic_explore
@@ -380,6 +385,11 @@ fun rememberIconPainter(icon: AppIcon): Painter {
             AppIcon.RESIZE -> Res.drawable.ic_resize
             AppIcon.ANCHOR -> Res.drawable.ic_anchor
             AppIcon.REGEX -> Res.drawable.ic_regex
+            AppIcon.EDITOR_VIM -> Res.drawable.ic_editor_vim
+            AppIcon.EDITOR_EMACS -> Res.drawable.ic_editor_emacs
+            AppIcon.EDITOR_NANO -> Res.drawable.ic_editor_nano
+            AppIcon.EDITOR_PICO -> Res.drawable.ic_editor_pico
+            AppIcon.EDITOR_MICRO -> Res.drawable.ic_editor_micro
         }
     }
     return painterResource(resource)
