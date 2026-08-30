@@ -116,12 +116,30 @@ private struct AppInfoSheet: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
-                    Text("Linux Command Library")
-                        .font(.title2.bold())
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Linux Command Library")
+                            .font(.title2.bold())
+                        Text("Version \(Version.shared.APP_VERSION)")
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                    }
                     Text("A reference for Linux commands, basics, and tips. Bookmark commands you use often, and tap any underlined command to drill into its man page.")
                         .foregroundColor(.secondary)
                     Link("Source on GitHub", destination: URL(string: "https://github.com/SimonSchubert/LinuxCommandLibrary")!)
                         .foregroundColor(.brandRed)
+                    Divider()
+                    NavigationLink {
+                        LicensesView()
+                    } label: {
+                        HStack {
+                            Text("Open source licenses")
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .font(.footnote)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                    .foregroundColor(.brandRed)
                 }
                 .padding()
             }

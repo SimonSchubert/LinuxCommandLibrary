@@ -7,4 +7,5 @@ sealed class NavEvent {
         val expandGroupId: Long? = null,
     ) : NavEvent()
     data class OpenAction(val action: String) : NavEvent()
+    data object ToLicenses : NavEvent()
 }

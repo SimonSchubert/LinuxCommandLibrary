@@ -119,7 +119,13 @@ private fun TipsTab(state: LinuxNavState) {
             TipsScreen(viewModel = viewModel, onNavigate = state::onNavigate)
         }
         if (showInfo) {
-            AppInfoDialog(onDismiss = { showInfo = false })
+            AppInfoDialog(
+                onDismiss = { showInfo = false },
+                onOpenLicenses = {
+                    showInfo = false
+                    state.onNavigate(NavEvent.ToLicenses)
+                },
+            )
         }
         TabStackTop(
             stack = state.stackFor(RouteKey.Tips),

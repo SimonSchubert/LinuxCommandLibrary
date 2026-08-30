@@ -113,6 +113,8 @@ internal class LinuxNavState(
                 }
             }
 
+            NavEvent.ToLicenses -> stackFor(currentKeyNow).add(TabStackEntry.License)
+
             is NavEvent.OpenAction -> openAppAction(event.action)
         }
     }

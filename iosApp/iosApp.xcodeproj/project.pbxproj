@@ -26,6 +26,7 @@
 		F4FF80180000000000000018 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF80170000000000000017 /* AppRouter.swift */; };
 		F4FF801A000000000000001A /* DetailPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF80190000000000000019 /* DetailPlaceholder.swift */; };
 		F4FF801C000000000000001C /* ManPageSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF801B000000000000001B /* ManPageSearch.swift */; };
+		F4FF801E000000000000001E /* LicensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF801D000000000000001D /* LicensesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		F4FF80170000000000000017 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		F4FF80190000000000000019 /* DetailPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlaceholder.swift; sourceTree = "<group>"; };
 		F4FF801B000000000000001B /* ManPageSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManPageSearch.swift; sourceTree = "<group>"; };
+		F4FF801D000000000000001D /* LicensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				F4FF80170000000000000017 /* AppRouter.swift */,
 				F4FF80190000000000000019 /* DetailPlaceholder.swift */,
 				F4FF801B000000000000001B /* ManPageSearch.swift */,
+				F4FF801D000000000000001D /* LicensesView.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				F4FF80180000000000000018 /* AppRouter.swift in Sources */,
 				F4FF801A000000000000001A /* DetailPlaceholder.swift in Sources */,
 				F4FF801C000000000000001C /* ManPageSearch.swift in Sources */,
+				F4FF801E000000000000001E /* LicensesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

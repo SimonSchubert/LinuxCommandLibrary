@@ -88,6 +88,7 @@ internal fun BasicsPaneScreen(
     val selectedId = when (stackTop) {
         is TabStackEntry.BasicGroup -> stackTop.categoryId
         is TabStackEntry.Command -> null
+        TabStackEntry.License -> null
         null -> navigator.currentDestination?.contentKey
     }
     val selectedSearchCommandName = (stackTop as? TabStackEntry.Command)?.name

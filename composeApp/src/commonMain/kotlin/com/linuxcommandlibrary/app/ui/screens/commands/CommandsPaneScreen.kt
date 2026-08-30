@@ -87,6 +87,7 @@ internal fun CommandsPaneScreen(
     val selectedName = when (stackTop) {
         is TabStackEntry.Command -> stackTop.name
         is TabStackEntry.BasicGroup -> null
+        TabStackEntry.License -> null
         null -> navigator.currentDestination?.contentKey
     }
     // Basic-groups only land on Commands via the stack, so it's the only source.
