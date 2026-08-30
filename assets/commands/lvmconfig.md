@@ -4,29 +4,53 @@ displays and manipulates Logical Volume Manager configuration information
 
 # TLDR
 
-Display the **effective configuration** in use (after merging all config sources)
+Print the settings **actually in force**
 
 ```lvmconfig --typeconfig current --mergedconfig```
 
-Show only settings that **differ from defaults**
+Show only what **differs from the shipped defaults**
 
 ```lvmconfig --typeconfig diff```
 
-**List all configuration keys**
+Print the **full default** configuration
 
-```lvmconfig -l```
+```lvmconfig --typeconfig default```
 
-Print the **default configuration** with full comments and extra spacing
+Include the **explanatory comments** and blank lines
 
 ```lvmconfig --typeconfig default --withcomments --withspaces```
 
-**Validate** the full merged configuration and report errors
+Annotate each setting with the **version that introduced it**
 
-```lvmconfig --mergedconfig --validate```
+```lvmconfig --typeconfig default --withversions```
 
-**Write** the current effective configuration to a file
+List the **names** of every setting
 
-```lvmconfig --typeconfig current -f [path/to/output.conf]```
+```lvmconfig --list```
+
+Print a **single section**
+
+```lvmconfig devices```
+
+Print a **single setting**
+
+```lvmconfig devices/filter```
+
+**Check** the configuration for errors
+
+```lvmconfig --validate```
+
+Show what a **particular LVM version** would understand
+
+```lvmconfig --typeconfig default --atversion [2.03.11]```
+
+Show settings **absent from the config file**
+
+```lvmconfig --typeconfig missing```
+
+**Save** the effective configuration to a file
+
+```lvmconfig --typeconfig current --file [path/to/lvm.conf]```
 
 # SYNOPSIS
 

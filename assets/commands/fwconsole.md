@@ -4,33 +4,53 @@ command-line interface for FreePBX administration
 
 # TLDR
 
-**Reload** FreePBX configurations
+Apply the configuration changes made in the **web interface**
 
 ```fwconsole reload```
 
-**Start** Asterisk and other commands needed by FreePBX
+**Start** Asterisk and the services FreePBX depends on
 
 ```fwconsole start```
 
-**Stop** Asterisk and other commands needed by FreePBX
+**Stop** them
 
 ```fwconsole stop```
 
-View and **update settings**
+**Restart** them
+
+```fwconsole restart```
+
+List the **modules installed**
+
+```fwconsole ma list```
+
+**Install** a module that is already downloaded
+
+```fwconsole ma install [module_name]```
+
+**Download and install** a module from the online repository
+
+```fwconsole ma downloadinstall [module_name]```
+
+**Upgrade every module** that has an update waiting
+
+```fwconsole ma upgradeall```
+
+Read or change a **setting**
 
 ```fwconsole setting [keyword] [new_value]```
 
-List available **backups**
+List the **backups** that exist
 
 ```fwconsole backup --list```
 
-List available **FreePBX commands**
-
-```fwconsole list```
-
-Change **ownership** of all FreePBX files to the apache user
+**Repair file ownership** after editing files by hand
 
 ```fwconsole chown```
+
+List **every fwconsole command**
+
+```fwconsole list```
 
 # SYNOPSIS
 

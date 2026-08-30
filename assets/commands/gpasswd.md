@@ -4,25 +4,33 @@ Administer group passwords and membership
 
 # TLDR
 
-Define group **administrators**
-
-```sudo gpasswd -A [user1,user2] [group]```
-
-Set the list of group **members**
-
-```sudo gpasswd -M [user1,user2] [group]```
-
-Create a **password** for the named group
+Set a group password **interactively**
 
 ```gpasswd [group]```
 
-**Add** a user to the named group
+**Add** a user to a group
 
-```gpasswd -a [user] [group]```
+```sudo gpasswd --add [user] [group]```
 
-**Remove** a user from the named group
+**Remove** a user from a group
 
-```gpasswd -d [user] [group]```
+```sudo gpasswd --delete [user] [group]```
+
+**Replace the member list** outright
+
+```sudo gpasswd --members [user1,user2] [group]```
+
+Name the group's **administrators**
+
+```sudo gpasswd --administrators [user1,user2] [group]```
+
+**Clear the group password**, so only members can join with `newgrp`
+
+```sudo gpasswd --remove-password [group]```
+
+**Restrict** the group to its listed members
+
+```sudo gpasswd --restrict [group]```
 
 # SYNOPSIS
 

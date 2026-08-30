@@ -4,37 +4,53 @@ removable media ejection utility
 
 # TLDR
 
-Display the **default** device
-
-```eject [-d|--default]```
-
-**Eject** the default device
+Open the tray of whichever device is the **default**
 
 ```eject```
 
-**Eject** a specific device
+Eject a **named device**
 
-```eject [/dev/cdrom]```
+```eject [/dev/sr0]```
 
-**Toggle** tray open/closed
+Eject by **mount point** instead
 
-```eject [-T|--traytoggle] [/dev/cdrom]```
+```eject [/media/cdrom]```
 
-Eject a **cd** drive
+Show **which device** would be used by default
 
-```eject [-r|--cdrom] [/dev/cdrom]```
+```eject --default```
 
-Eject a **floppy** drive
+**Close** the tray again
 
-```eject [-f|--floppy] [/mnt/floppy]```
+```eject --trayclose [/dev/sr0]```
 
-Eject a **tape** drive
+**Toggle** the tray open or closed
 
-```eject [-q|--tape] [/mnt/tape]```
+```eject --traytoggle [/dev/sr0]```
 
-Set whether physical button is **ignored**
+Show what would happen **without doing it**
 
-```eject [-i|--manualeject] [on|off]```
+```eject --noop [/dev/sr0]```
+
+Eject **even if the device is busy**
+
+```eject --force [/dev/sr0]```
+
+Treat the device as a **tape drive**
+
+```eject --tape [/dev/st0]```
+
+Set the drive's **read speed**
+
+```eject --cdspeed [8] [/dev/sr0]```
+
+List the **speeds the drive supports**
+
+```eject --listspeed [/dev/sr0]```
+
+**Lock the physical eject button**
+
+```eject --manualeject on [/dev/sr0]```
 
 # SYNOPSIS
 

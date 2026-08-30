@@ -4,33 +4,57 @@ Query the APT package cache
 
 # TLDR
 
-**Search** for a package in your current sources
+**Search** package names and descriptions
 
-```apt-cache search [query]```
+```apt-cache search [keyword]```
 
-**Search** only in package names
+Restrict the search to **names only**
 
-```apt-cache search --names-only [query]```
+```apt-cache search --names-only [keyword]```
 
-Show **information** about a package
+Show a package's **record**
 
 ```apt-cache show [package]```
 
-Show whether a package is **installed and up to date**
+Show which **versions are available** and which is installed
 
 ```apt-cache policy [package]```
 
-Show **dependencies** for a package
+Show the versions **each repository offers**
+
+```apt-cache madison [package]```
+
+Show what a package **depends on**
 
 ```apt-cache depends [package]```
 
-Show packages that **depend on** a particular package
+Show only the **hard dependencies**, skipping suggests and recommends
+
+```apt-cache depends --important [package]```
+
+Show **what depends on** a package
 
 ```apt-cache rdepends [package]```
 
-Show **available versions** in a table format
+Limit reverse dependencies to **installed packages**
 
-```apt-cache madison [package]```
+```apt-cache rdepends --installed [package]```
+
+Show the raw record, including **providers and reverse dependencies**
+
+```apt-cache showpkg [package]```
+
+List **every package name** starting with a prefix
+
+```apt-cache pkgnames [prefix]```
+
+Report **unmet dependencies** in the cache
+
+```apt-cache unmet```
+
+Summarize the **cache itself**
+
+```apt-cache stats```
 
 # SYNOPSIS
 

@@ -4,37 +4,57 @@ creates initial ramdisk environments for booting the Linux kernel
 
 # TLDR
 
-Perform a **dry run** (print what would be done)
+Show what **would** be built, without writing anything
 
 ```mkinitcpio```
 
-Generate ramdisk environments based on **all existing presets**
+Rebuild **every preset**, which is what a config change calls for
 
-```sudo mkinitcpio -P```
+```sudo mkinitcpio --allpresets```
 
-Generate a ramdisk environment based on the **linux preset**
+Rebuild **one preset**
 
-```sudo mkinitcpio -p linux```
+```sudo mkinitcpio --preset linux```
 
-Generate a ramdisk environment based on the **linux-lts preset**
+Build an image for a **kernel that is not running**
 
-```sudo mkinitcpio -p linux-lts```
+```sudo mkinitcpio --kernel [6.6.1-arch1-1] --generate [path/to/initramfs.img]```
 
-Generate an initramfs image using an **alternative configuration file**
+Build using a **different configuration file**
 
-```sudo mkinitcpio -c [path/to/mkinitcpio.conf] -g [path/to/initramfs.img]```
+```sudo mkinitcpio --config [path/to/mkinitcpio.conf] --generate [path/to/initramfs.img]```
 
-Generate an initramfs image for a **different kernel version**
+**Add a hook** on top of the configured ones
 
-```sudo mkinitcpio -k [kernel_version] -g [path/to/initramfs.img]```
+```sudo mkinitcpio --addhooks [encrypt] --preset linux```
 
-**List all available hooks**
+**Skip a hook** that is causing trouble
 
-```mkinitcpio -L```
+```sudo mkinitcpio --skiphooks [fsck] --preset linux```
 
-Display **help for a specific hook**
+Choose the **compression** for the image
 
-```mkinitcpio -H [hook_name]```
+```sudo mkinitcpio --compress [zstd] --preset linux```
+
+Build a **unified kernel image** for secure boot
+
+```sudo mkinitcpio --preset linux --uki [path/to/linux.efi]```
+
+Show the modules **autodetection** would include
+
+```mkinitcpio --automods```
+
+**List the hooks** available
+
+```mkinitcpio --listhooks```
+
+Read the **documentation for one hook**
+
+```mkinitcpio --hookhelp [encrypt]```
+
+Show **verbose output** while building
+
+```sudo mkinitcpio --verbose --preset linux```
 
 # SYNOPSIS
 

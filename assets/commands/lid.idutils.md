@@ -4,29 +4,41 @@ queries an ID database to find tokens matching a specified pattern
 
 # TLDR
 
-List all **tokens and their file locations** in the ID database
+Dump **every token** in the database along with where it occurs
 
 ```lid```
 
-Find **files containing a specific token**
+Show which files use **one identifier**
 
 ```lid [token]```
 
-Find tokens **matching a pattern, ignoring case**
+Match **regardless of case**
 
-```lid -i [token]```
+```lid --ignore-case [token]```
 
-Find tokens matching an **extended regex**
+Match any token **containing the text**
 
-```lid -r "[pattern]"```
+```lid --substring [text]```
 
-Output matching lines in **grep-style format**
+Match with an **extended regular expression**
 
-```lid -R grep [token]```
+```lid --regexp "[pattern]"```
 
-Find tokens that **appear only once** (useful for finding unused definitions)
+Print results as **grep-style lines**
 
-```lid -F 1```
+```lid --result=grep [token]```
+
+Print **only the filenames**
+
+```lid --result=filenames [token]```
+
+Read a database from **another path**
+
+```lid --file [path/to/ID] [token]```
+
+Show identifiers that occur **exactly once**, which often means dead code
+
+```lid --frequency 1```
 
 # SYNOPSIS
 

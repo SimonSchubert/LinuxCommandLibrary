@@ -4,25 +4,41 @@ GNOME document viewer for PDF and PostScript
 
 # TLDR
 
-**Open** a PDF file
+Open a document
 
 ```evince [path/to/file.pdf]```
 
-Open **multiple** documents
+Open **several documents** at once
 
-```evince [file1.pdf] [file2.pdf]```
+```evince [path/to/file1.pdf] [path/to/file2.pdf]```
 
-Open in **fullscreen** mode
+Jump straight to a page by its **position in the file**
 
-```evince [-f|--fullscreen] [path/to/file.pdf]```
+```evince --page-index [5] [path/to/file.pdf]```
 
-Open in **presentation** mode
+Jump to a page by its **printed label**, which may not be a plain number
 
-```evince [-s|--presentation] [path/to/file.pdf]```
+```evince --page-label [iv] [path/to/file.pdf]```
 
-Open a specific **page** number
+Open with a **search already running**
 
-```evince [-i|--page-index] [5] [path/to/file.pdf]```
+```evince --find "[keyword]" [path/to/file.pdf]```
+
+Start **full screen**
+
+```evince --fullscreen [path/to/file.pdf]```
+
+Start in **presentation mode**
+
+```evince --presentation [path/to/slides.pdf]```
+
+Open in **preview mode**, which shows a print toolbar
+
+```evince --preview [path/to/file.pdf]```
+
+Jump to a **named destination** inside the document
+
+```evince --named-dest [chapter1] [path/to/file.pdf]```
 
 # SYNOPSIS
 

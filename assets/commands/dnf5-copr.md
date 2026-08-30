@@ -8,27 +8,31 @@ Manage Copr repositories with DNF5
 
 ```sudo dnf5 copr enable [owner]/[project]```
 
-Enable a Copr repository for a specific **chroot**
+Enable it for a **chroot other than the running system**
 
-```sudo dnf5 copr enable [owner]/[project] [fedora-rawhide-ppc64le]```
+```sudo dnf5 copr enable [owner]/[project] [fedora-rawhide-x86_64]```
 
-Enable a Copr repository from a specific **hub**
+Enable one hosted on a **different Copr hub**
 
 ```sudo dnf5 copr enable [hub]/[owner]/[project]```
 
-**Disable** a Copr repository
+Name the hub with its **own option** instead of a prefix
 
-```sudo dnf5 copr disable [owner]/[project]```
+```sudo dnf5 copr --hub [copr.example.com] enable [owner]/[project]```
 
-**Remove** a Copr repository
-
-```sudo dnf5 copr remove [owner]/[project]```
-
-**List** configured Copr repositories
+**List** the Copr repositories configured here
 
 ```dnf5 copr list```
 
-Print **debug** information about the system
+Turn a repository **off without discarding its configuration**
+
+```sudo dnf5 copr disable [owner]/[project]```
+
+**Delete** the repository configuration outright
+
+```sudo dnf5 copr remove [owner]/[project]```
+
+Print the values Copr uses to **pick a chroot** for this system
 
 ```dnf5 copr debug```
 

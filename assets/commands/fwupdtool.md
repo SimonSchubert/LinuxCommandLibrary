@@ -4,17 +4,53 @@ low-level firmware manipulation tool
 
 # TLDR
 
-Display all **devices detected** by fwupd
+List every device the plugins can see, **including the hidden ones**
 
-```fwupdtool get-devices```
+```sudo fwupdtool get-devices --show-all```
 
-**Install** firmware from a file
+Show which **plugins loaded** and which failed
 
-```fwupdtool install [path/to/firmware]```
+```sudo fwupdtool get-plugins```
 
-Display **help**
+**Inspect a firmware file** before flashing anything
 
-```fwupdtool -h```
+```fwupdtool get-details [path/to/firmware.cab]```
+
+**Install** firmware from a cabinet file
+
+```sudo fwupdtool install [path/to/firmware.cab]```
+
+Write a **raw blob** to one device
+
+```sudo fwupdtool install-blob [path/to/firmware.bin] [device_id]```
+
+Load **only one plugin**, which makes debugging tractable
+
+```sudo fwupdtool get-devices --plugins [uefi_capsule]```
+
+**Parse a firmware image** and print its structure
+
+```fwupdtool firmware-parse [path/to/firmware.bin]```
+
+List the **firmware formats** it understands
+
+```fwupdtool get-firmware-types```
+
+Dump the **SMBIOS tables**
+
+```sudo fwupdtool smbios-dump```
+
+Show the **hardware IDs** used to match firmware to this machine
+
+```sudo fwupdtool hwids```
+
+Report the host's **firmware security attributes**
+
+```sudo fwupdtool security```
+
+Run with **full debug output**
+
+```sudo fwupdtool get-devices --verbose```
 
 # SYNOPSIS
 

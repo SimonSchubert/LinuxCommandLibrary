@@ -4,29 +4,37 @@ Detect virtualization environment
 
 # TLDR
 
-**List** detectable virtualization technologies
-
-```systemd-detect-virt --list```
-
-**Detect** virtualization and print the result
+Report which **virtualization is in use**, if any
 
 ```systemd-detect-virt```
 
-**Silently** check without printing anything
+Report through the **exit status only**, printing nothing
 
-```systemd-detect-virt -q```
+```systemd-detect-virt --quiet```
 
-**Only** detect container virtualization
+Use it as a **condition in a script**
 
-```systemd-detect-virt -c```
+```systemd-detect-virt --quiet && echo "[running virtualized]"```
 
-**Only** detect hardware virtualization
+Only consider **container** technologies
 
-```systemd-detect-virt -v```
+```systemd-detect-virt --container```
 
-**Detect** whether in a chroot environment
+Only consider **full machine** virtualization
 
-```systemd-detect-virt -r```
+```systemd-detect-virt --vm```
+
+Detect a **chroot**
+
+```systemd-detect-virt --chroot```
+
+Detect a **user namespace**
+
+```systemd-detect-virt --private-users```
+
+List everything it can **recognize**
+
+```systemd-detect-virt --list```
 
 # SYNOPSIS
 

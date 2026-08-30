@@ -4,21 +4,37 @@ Translate SELinux denial messages into human-readable explanations.
 
 # TLDR
 
-Explain the **most recent** SELinux denial
+Explain the denials recorded **since the last boot**
 
-```sudo audit2why```
+```sudo audit2why --boot```
 
-Explain SELinux denials from a **specific audit log** file
+Explain **every denial** in the audit log
 
-```sudo audit2why -i [path/to/audit.log]```
+```sudo audit2why --all```
 
-Explain **all SELinux denials** from the audit log
+Read a **particular log file**
+
+```sudo audit2why --input [path/to/audit.log]```
+
+Read denials out of the **kernel ring buffer**
+
+```sudo audit2why --dmesg```
+
+Explain only what happened **since the last policy reload**
+
+```sudo audit2why --lastreload```
+
+Feed it records **filtered by ausearch**
 
 ```sudo ausearch -m avc | audit2why```
 
-Explain denials for a **specific service**
+Narrow those records to **one process**
 
-```sudo ausearch -m avc -c [service_name] | audit2why```
+```sudo ausearch -m avc -c [httpd] | audit2why```
+
+Check the denials against a **specific policy file**
+
+```sudo audit2why --policy [path/to/policy.pp] --all```
 
 # SYNOPSIS
 

@@ -4,33 +4,49 @@ Check and repair btrfs filesystem integrity
 
 # TLDR
 
-**Check** a btrfs filesystem
+Check a filesystem **read-only**, which is the default and is safe
 
-```sudo btrfs check [path/to/partition]```
+```sudo btrfs check [/dev/sda1]```
 
-Check and **repair** a btrfs filesystem (dangerous)
+Show **progress** while it runs
 
-```sudo btrfs check --repair [path/to/partition]```
+```sudo btrfs check --progress [/dev/sda1]```
 
-Show the **progress** of the check
+Verify the **data checksums** as well as the metadata
 
-```sudo btrfs check -p [path/to/partition]```
+```sudo btrfs check --check-data-csum [/dev/sda1]```
 
-Verify the **checksum** of each data block
+Read a **backup superblock** when the first one is damaged
 
-```sudo btrfs check --check-data-csum [path/to/partition]```
+```sudo btrfs check --super [1] [/dev/sda1]```
 
-Use a specific **superblock** (0, 1, or 2)
+Fall back to the **backup roots**
 
-```sudo btrfs check -s [n] [path/to/partition]```
+```sudo btrfs check --backup [/dev/sda1]```
 
-**Rebuild** the checksum tree
+Trade speed for **lower memory use** on a large filesystem
 
-```sudo btrfs check --repair --init-csum-tree [path/to/partition]```
+```sudo btrfs check --mode lowmem [/dev/sda1]```
 
-**Rebuild** the extent tree
+Report **quota group** inconsistencies
 
-```sudo btrfs check --repair --init-extent-tree [path/to/partition]```
+```sudo btrfs check --qgroup-report [/dev/sda1]```
+
+Attempt repairs, which **can destroy the filesystem**
+
+```sudo btrfs check --repair [/dev/sda1]```
+
+Discard and regenerate the **tree of data checksums**
+
+```sudo btrfs check --repair --init-csum-tree [/dev/sda1]```
+
+Discard and regenerate the **tree that tracks allocated extents**
+
+```sudo btrfs check --repair --init-extent-tree [/dev/sda1]```
+
+Drop the **free space cache** so it is rebuilt at the next mount
+
+```sudo btrfs check --clear-space-cache v2 [/dev/sda1]```
 
 # SYNOPSIS
 

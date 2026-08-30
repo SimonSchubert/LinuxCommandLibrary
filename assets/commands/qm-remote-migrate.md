@@ -4,25 +4,29 @@ Migrate a Proxmox VM to a remote host or cluster
 
 # TLDR
 
-**Migrate** a VM to a remote host
+Move a **stopped** virtual machine to a remote cluster
 
 ```qm remote-migrate [vmid] [target_vmid] 'apitoken=PVEAPIToken=[user]@[realm]![token]=[secret],host=[address],fingerprint=[fingerprint]' --target-bridge [bridge] --target-storage [storage]```
 
-Migrate a **running** VM with live migration
+Move it **while it keeps running**
 
 ```qm remote-migrate [vmid] [target_vmid] 'apitoken=PVEAPIToken=[user]@[realm]![token]=[secret],host=[address],fingerprint=[fingerprint]' --target-bridge [bridge] --target-storage [storage] --online```
 
-**Delete** the source VM after a successful migration
+Reach an API listening on a **non-standard port**
 
-```qm remote-migrate [vmid] [target_vmid] 'apitoken=PVEAPIToken=[user]@[realm]![token]=[secret],host=[address],fingerprint=[fingerprint]' --target-bridge [bridge] --target-storage [storage] --delete 1```
+```qm remote-migrate [vmid] [target_vmid] 'apitoken=PVEAPIToken=[user]@[realm]![token]=[secret],host=[address],fingerprint=[fingerprint],port=[8006]' --target-bridge [bridge] --target-storage [storage]```
 
-**Limit** migration bandwidth
+Keep the **same bridge and storage names** on the far side
+
+```qm remote-migrate [vmid] [target_vmid] 'apitoken=PVEAPIToken=[user]@[realm]![token]=[secret],host=[address],fingerprint=[fingerprint]' --target-bridge 1 --target-storage 1```
+
+**Throttle** the transfer so it does not saturate the link
 
 ```qm remote-migrate [vmid] [target_vmid] 'apitoken=PVEAPIToken=[user]@[realm]![token]=[secret],host=[address],fingerprint=[fingerprint]' --target-bridge [bridge] --target-storage [storage] --bwlimit [value]```
 
-Use the **same** bridge and storage names on the target
+**Remove the source** machine once the copy succeeds
 
-```qm remote-migrate [vmid] [target_vmid] 'apitoken=PVEAPIToken=[user]@[realm]![token]=[secret],host=[address],fingerprint=[fingerprint]' --target-bridge 1 --target-storage 1```
+```qm remote-migrate [vmid] [target_vmid] 'apitoken=PVEAPIToken=[user]@[realm]![token]=[secret],host=[address],fingerprint=[fingerprint]' --target-bridge [bridge] --target-storage [storage] --delete 1```
 
 # SYNOPSIS
 

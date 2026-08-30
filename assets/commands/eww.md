@@ -4,37 +4,65 @@ custom desktop widget system
 
 # TLDR
 
-Start the **daemon**
+Start the daemon that hosts the widgets
 
 ```eww daemon```
 
-**Open** a widget
+Start it against a **specific configuration directory**
 
-```eww [-c|--config] [path/to/source_code_directory] open [window_name]```
+```eww --config [path/to/config] daemon```
 
-**Close** a widget
+**Open** a window defined in the configuration
 
-```eww [-c|--config] [path/to/source_code_directory] close [window_name]```
+```eww open [window_name]```
 
-**Reload** configuration
+Open **several windows** at once
+
+```eww open-many [bar] [sidebar]```
+
+**Close** a window
+
+```eww close [window_name]```
+
+Close **every open window**
+
+```eww close-all```
+
+**Reload** the configuration after editing it
 
 ```eww reload```
 
-**Kill** the daemon
-
-```eww kill```
-
-**Get** the value of a variable
+**Read** a variable's current value
 
 ```eww get [variable_name]```
 
-**Update** a variable
+**Set** a variable, which is how scripts drive the widgets
 
-```eww update [variable_name]="[value]"```
+```eww update [variable_name]=[value]```
 
-Print and **watch logs**
+Dump **every variable** and its value
+
+```eww state```
+
+List the **windows the configuration defines**
+
+```eww list-windows```
+
+Open the **widget inspector** to debug layout
+
+```eww inspector```
+
+Print the **widget tree** as a graph
+
+```eww graph```
+
+Follow the **logs**
 
 ```eww logs```
+
+**Stop** the daemon
+
+```eww kill```
 
 # SYNOPSIS
 

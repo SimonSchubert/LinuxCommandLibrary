@@ -4,33 +4,33 @@ script that provides system power management and session control for the i3
 
 # TLDR
 
-**Log out** of i3
-
-```i3exit logout```
-
 **Lock** the screen
 
 ```i3exit lock```
 
-**Suspend** the system
+**End the i3 session**
+
+```i3exit logout```
+
+Return to the display manager to **sign in as someone else**
+
+```i3exit switch_user```
+
+**Suspend** to RAM
 
 ```i3exit suspend```
 
-**Hibernate** the system
+**Hibernate** to disk
 
 ```i3exit hibernate```
 
-**Reboot** the system
+**Restart** the machine
 
 ```i3exit reboot```
 
-**Shut down** the system
+**Power off** the machine
 
 ```i3exit shutdown```
-
-**Switch user** (return to login screen)
-
-```i3exit switch_user```
 
 # SYNOPSIS
 

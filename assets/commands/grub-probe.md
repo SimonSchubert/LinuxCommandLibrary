@@ -4,37 +4,53 @@ probe device and filesystem information for GRUB
 
 # TLDR
 
-Get GRUB **filesystem module** for a path
+Name the **filesystem module** GRUB needs for a path
 
-```sudo grub-probe -t fs /boot/grub```
+```sudo grub-probe --target fs [/boot]```
 
-Get the **system device** containing a path
+Name the **device** that holds a path
 
-```sudo grub-probe -t device /boot/grub```
+```sudo grub-probe --target device [/boot]```
 
-Get the **underlying disk** for a system device
+Translate a system device into **GRUB's own drive name**
 
-```sudo grub-probe -t disk /dev/sdX -d```
+```sudo grub-probe --device --target drive [/dev/sda1]```
 
-Get **filesystem UUID**
+Read the filesystem **UUID**
 
-```sudo grub-probe -t fs_uuid /boot/grub```
+```sudo grub-probe --target fs_uuid [/boot]```
 
-Get **filesystem label**
+Read the filesystem **label**
 
-```sudo grub-probe -t fs_label /boot/grub```
+```sudo grub-probe --target fs_label [/boot]```
 
-Get **MBR partition type** code
+Report the **partition table type**
 
-```sudo grub-probe -t msdos_parttype /dev/sdX```
+```sudo grub-probe --target partmap [/boot]```
 
-Get the **partition map type**
+Report the **MBR partition type byte**
 
-```sudo grub-probe -t partmap /boot/grub```
+```sudo grub-probe --device --target msdos_parttype [/dev/sda1]```
 
-Probe using a **custom device map**
+Report **abstractions** such as LVM or RAID in the path
 
-```sudo grub-probe -t fs /boot/grub -m [path/to/custom_device.map]```
+```sudo grub-probe --target abstraction [/boot]```
+
+Report the UUID of an **encrypted container**
+
+```sudo grub-probe --target cryptodisk_uuid [/boot]```
+
+Emit the **hint strings** used in generated GRUB config
+
+```sudo grub-probe --target hints_string [/boot]```
+
+Probe through a **custom device map**
+
+```sudo grub-probe --device-map [path/to/device.map] --target drive [/boot]```
+
+Show **what it is doing** while probing
+
+```sudo grub-probe --verbose --target fs [/boot]```
 
 # SYNOPSIS
 

@@ -4,33 +4,61 @@ distributed storage cluster management
 
 # TLDR
 
-Check cluster **health status**
+Show the **overall cluster health**
 
 ```ceph status```
 
-Check cluster **usage stats**
+Explain **why the cluster is not healthy**
+
+```ceph health detail```
+
+Watch cluster events **as they happen**
+
+```ceph -w```
+
+Show **capacity, overall and per pool**
 
 ```ceph df```
 
-Get **placement group** statistics
+**List the pools**
 
-```ceph pg dump --format [plain]```
+```ceph osd pool ls```
 
-**Create** a storage pool
+**Create** a pool with a placement group count
 
-```ceph osd pool create [pool_name] [pg_num]```
+```ceph osd pool create [pool_name] [128]```
 
-**Delete** a storage pool
+Change a pool's **replica count**
 
-```ceph osd pool delete [pool_name]```
+```ceph osd pool set [pool_name] size [3]```
 
-**Rename** a storage pool
+**Rename** a pool
 
 ```ceph osd pool rename [current_name] [new_name]```
 
-**Self-repair** pool storage
+**Delete** a pool, which insists on the name twice and a confirmation flag
 
-```ceph pg repair [pool_name]```
+```ceph osd pool delete [pool_name] [pool_name] --yes-i-really-really-mean-it```
+
+Show the **OSDs arranged by host and rack**
+
+```ceph osd tree```
+
+Mark an OSD **out** so its data drains onto the others
+
+```ceph osd out [osd.3]```
+
+Summarize the **placement group states**
+
+```ceph pg stat```
+
+**Repair** a specific placement group
+
+```ceph pg repair [pg_id]```
+
+Show the **monitor quorum**
+
+```ceph mon stat```
 
 # SYNOPSIS
 

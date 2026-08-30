@@ -4,27 +4,27 @@ Convert a standalone VDO volume into an LVM-managed VDO logical volume
 
 # TLDR
 
-Import a VDO volume with **automatic names** for the VG/LV
-
-```lvm_import_vdo [/dev/mapper/vdo_volume]```
-
-Import and set the **destination VG/LV name**
-
-```lvm_import_vdo -n [vg_name/lv_name] [/dev/mapper/vdo_volume]```
-
-Show what would be done **without changing anything**
+**Rehearse** the conversion first, since the real thing cannot be undone
 
 ```lvm_import_vdo --dry-run [/dev/mapper/vdo_volume]```
 
-Convert in place **without using a temporary snapshot** (less safe)
+Convert a VDO volume, letting LVM **choose the names**
+
+```lvm_import_vdo [/dev/mapper/vdo_volume]```
+
+**Choose the volume group and logical volume** name yourself
+
+```lvm_import_vdo --name [vg_name/lv_name] [/dev/mapper/vdo_volume]```
+
+Answer the prompts automatically and **show each step**
+
+```lvm_import_vdo --verbose --yes [/dev/mapper/vdo_volume]```
+
+Skip the protective snapshot, which is quicker but leaves **no way back**
 
 ```lvm_import_vdo --no-snapshot [/dev/mapper/vdo_volume]```
 
-**Verbose output** and automatically answer "yes" to prompts
-
-```lvm_import_vdo -v -y [/dev/mapper/vdo_volume]```
-
-Use a **VDO manager configuration file** during import
+Read the settings from a **VDO manager configuration file**
 
 ```lvm_import_vdo --vdo-config [path/to/vdo.conf] [/dev/mapper/vdo_volume]```
 

@@ -4,21 +4,25 @@ Search a container library for available images.
 
 # TLDR
 
-**Search** for container images matching a query
+Search the Container Library for images
 
 ```apptainer search [query]```
 
-Search for container images for a **specific architecture**
+Restrict the results to **one architecture**
 
-```apptainer search --arch [amd64|arm64|386|ppc64le|s390x] [query]```
+```apptainer search --arch [arm64] [query]```
 
-Search for only **signed** container images
+Show only images that carry a **signature**
 
 ```apptainer search --signed [query]```
 
-Search in a **specific Container Library**
+Search a **self-hosted library** instead of the default
 
-```apptainer search --library [library_url] [query]```
+```apptainer search --library [https://library.example.com] [query]```
+
+**Combine the filters**
+
+```apptainer search --arch [amd64] --signed [query]```
 
 # SYNOPSIS
 

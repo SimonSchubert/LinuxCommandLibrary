@@ -4,33 +4,61 @@ Hardware-accelerated screen recorder
 
 # TLDR
 
-Select a source using a **desktop portal** and record it
+Record a monitor to a file
+
+```gpu-screen-recorder -w screen -o [path/to/video.mp4]```
+
+Let the **desktop portal** choose the source, which is how Wayland grants access
 
 ```gpu-screen-recorder -w portal -o [path/to/video.mp4]```
 
-Specify a **specific video source**
+Record **one named output**
 
-```gpu-screen-recorder -w [screen|DP-1|HDMI-A1|...] -o [path/to/video.mp4]```
+```gpu-screen-recorder -w [DP-1] -o [path/to/video.mp4]```
 
-List **video capture** sources
+Show the **capture sources** this machine offers
 
 ```gpu-screen-recorder --list-capture-options```
 
-List **audio capture** sources
+Show the **audio devices** available
 
 ```gpu-screen-recorder --list-audio-devices```
 
-Record using the **replay buffer**
+Record **desktop audio** alongside the video
 
-```gpu-screen-recorder -w screen -r 30 -c mp4 -ro [path/to/directory] -o whatever```
+```gpu-screen-recorder -w screen -a default_output -o [path/to/video.mp4]```
 
-**Capture** a video from the replay buffer
+Match the **frame rate** of a high refresh monitor
+
+```gpu-screen-recorder -w screen -f [144] -o [path/to/video.mp4]```
+
+Choose the **codec and container**
+
+```gpu-screen-recorder -w screen -k h264 -c mkv -o [path/to/video.mkv]```
+
+Use **constant bitrate**, which keeps memory use steady in high motion scenes
+
+```gpu-screen-recorder -w screen -bm cbr -q [40000] -o [path/to/video.mp4]```
+
+Keep the **last 30 seconds in a replay buffer**, writing into a directory
+
+```gpu-screen-recorder -w screen -c mkv -r [30] -o [path/to/directory]```
+
+**Save** whatever is in the replay buffer
 
 ```pkill -SIGUSR1 -f gpu-screen-recorder```
 
-Run gpu-screen-recorder in the **background**
+**Stop** recording and close the file cleanly
 
-```systemctl start --user gpu-screen-recorder```
+```pkill -SIGINT -f gpu-screen-recorder```
+
+Run a **script each time a video is saved**
+
+```gpu-screen-recorder -w screen -sc [path/to/script.sh] -o [path/to/video.mp4]```
+
+Start the replay buffer **at login**, as a user service
+
+```systemctl enable --now --user gpu-screen-recorder```
 
 # SYNOPSIS
 

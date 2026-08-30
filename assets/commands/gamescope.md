@@ -4,37 +4,61 @@ Wayland gaming micro-compositor
 
 # TLDR
 
-Run a program with **gamescope**
+Run a program inside gamescope
 
 ```gamescope -- [program]```
 
-Run a game with gamescope through **Steam**
+Use it as a **Steam launch option**
 
 ```gamescope -- %command%```
 
-**Upscale** a 720p game to 1440p with integer scaling
+Render at one resolution and **output at another**
 
-```gamescope -h 720 -H 1440 -S integer -- [command]```
+```gamescope -w [1280] -h [720] -W [2560] -H [1440] -- [program]```
 
-**Limit** a vsynced game to 30 FPS
+Upscale with **AMD FidelityFX**
 
-```gamescope -r 30 -- [command]```
+```gamescope -F fsr -- [program]```
 
-Launch **Steam in Big Picture Mode** with gamescope integration
+Tune how sharp that upscaling looks
 
-```gamescope -e -- /usr/bin/steam -tenfoot```
+```gamescope -F fsr --sharpness [5] -- [program]```
 
-Specify which **display** to prefer
+Use **integer scaling**, which keeps pixel art crisp
 
-```gamescope -O [HDMI-A-1|DP-3|...] -- [program]```
+```gamescope -S integer -- [program]```
 
-Toggle **fullscreen**
+Cap the **refresh rate** of the nested display
 
-```Super+f```
+```gamescope -r [60] -- [program]```
 
-Display **help**
+Cap the **frame rate** without changing the refresh rate
 
-```gamescope --help```
+```gamescope --framerate-limit [60] -- [program]```
+
+Drop to a lower refresh rate **when the window loses focus**
+
+```gamescope -r [144] -o [30] -- [program]```
+
+Enable **variable refresh rate**
+
+```gamescope --adaptive-sync -- [program]```
+
+Enable **HDR output**
+
+```gamescope --hdr-enabled -- [program]```
+
+Choose **which display** to open on
+
+```gamescope -O [DP-1] -- [program]```
+
+Overlay **MangoHud** statistics
+
+```gamescope --mangoapp -- [program]```
+
+Launch **Steam Big Picture** inside gamescope
+
+```gamescope -e -- steam -tenfoot```
 
 # SYNOPSIS
 

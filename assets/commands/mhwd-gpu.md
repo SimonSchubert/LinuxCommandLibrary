@@ -4,25 +4,25 @@ manjaro Linux utility for configuring graphics card settings, specifically
 
 # TLDR
 
-Show current **Xorg configuration path**
+Print which **Xorg configuration is active**
 
 ```mhwd-gpu --status```
 
-**Check** if Xorg configuration has a valid symlink
+Confirm the Xorg configuration **symlink is valid**
 
 ```mhwd-gpu --check```
 
-Set a **custom Xorg configuration** for an Nvidia GPU
+Point Xorg at a **custom configuration for an NVIDIA card**
 
-```sudo mhwd-gpu --setmod nvidia --setxorg [/path/to/nvidia.conf]```
+```sudo mhwd-gpu --setmod nvidia --setxorg [/etc/X11/mhwd.d/nvidia.conf]```
 
-Set a custom Xorg configuration for an **AMD GPU**
+Do the same for an **AMD card**
 
-```sudo mhwd-gpu --setmod [catalyst|ati] --setxorg [/path/to/amdgpu.conf]```
+```sudo mhwd-gpu --setmod [ati] --setxorg [/etc/X11/mhwd.d/amdgpu.conf]```
 
-Display **help**
+Switch the active **OpenGL implementation**
 
-```mhwd-gpu --help```
+```sudo mhwd-gpu --setgl [nvidia]```
 
 # SYNOPSIS
 

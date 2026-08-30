@@ -4,37 +4,49 @@ FreeSWITCH command-line interface
 
 # TLDR
 
-Connect to the **local FreeSWITCH** instance with an interactive session
+Open an **interactive console** on the local FreeSWITCH
 
 ```fs_cli```
 
-Connect to a **remote FreeSWITCH** server
+Connect to a **remote server**
 
-```fs_cli -H [host] -P [port] -p [password]```
+```fs_cli --host [10.0.0.5] --port [8021] --password [secret]```
 
-Execute a **single command** and exit
+Run **one command and exit**, which is what scripts want
 
-```fs_cli -x "[command]"```
+```fs_cli --execute "status"```
 
-Show FreeSWITCH **system status**
+**Reload the XML configuration** without restarting the switch
 
-```fs_cli -x "status"```
+```fs_cli --execute "reloadxml"```
 
-**Reload** FreeSWITCH XML configuration
+List the **calls currently up**
 
-```fs_cli -x "reloadxml"```
+```fs_cli --execute "show calls"```
 
-Check if a **module is loaded**
+List the **registered SIP endpoints**
 
-```fs_cli -x "module_exists [module_name]"```
+```fs_cli --execute "sofia status profile internal reg"```
 
-Show **active calls**
+Check whether a **module is loaded**
 
-```fs_cli -x "show calls"```
+```fs_cli --execute "module_exists [mod_sofia]"```
 
-**Retry** connection on failure
+**Load a module** at runtime
 
-```fs_cli -r```
+```fs_cli --execute "load [mod_sofia]"```
+
+Choose how much the console **prints**
+
+```fs_cli --loglevel [debug]```
+
+Keep **retrying** while FreeSWITCH is still starting
+
+```fs_cli --retry```
+
+**Reconnect automatically** if the connection drops
+
+```fs_cli --reconnect```
 
 # SYNOPSIS
 

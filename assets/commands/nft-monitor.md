@@ -4,21 +4,33 @@ displays real-time changes to the nftables firewall configuration
 
 # TLDR
 
-Monitor **all nftables events**
+Watch **every change** to the ruleset as it happens
 
 ```sudo nft monitor```
 
-Monitor only **rule updates** (add, delete, replace)
+Watch **rule changes** only
 
 ```sudo nft monitor rules```
 
-Monitor **set and element** updates
+Watch **set and element** changes only
 
 ```sudo nft monitor sets```
 
-Monitor events and print **JSON output**
+Watch only what is **added**
+
+```sudo nft monitor new rules```
+
+Watch only what is **removed**
+
+```sudo nft monitor destroy rules```
+
+Emit **JSON** so a program can consume the stream
 
 ```sudo nft -j monitor```
+
+**Follow packets** through the ruleset, once a rule has set nftrace
+
+```sudo nft monitor trace```
 
 # SYNOPSIS
 

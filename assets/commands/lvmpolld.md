@@ -4,27 +4,31 @@ LVM poll daemon that supervises long-running LVM operations
 
 # TLDR
 
-Start the daemon in the **foreground**
+Run in the **foreground** rather than daemonizing
 
-```lvmpolld -f```
+```lvmpolld --foreground```
 
-Start in the foreground with **debug logging**
+Add **debug logging** while troubleshooting
 
-```lvmpolld -f -l debug```
+```lvmpolld --foreground --log debug```
 
-Set the **idle shutdown timeout** (seconds)
+**Exit after a period with no work** to do
 
-```lvmpolld -t [300]```
+```lvmpolld --timeout [300]```
 
-Use a **custom socket** path
+Listen on a **non-default socket**
 
-```lvmpolld -s [/tmp/lvmpolld.socket]```
+```lvmpolld --socket [/tmp/lvmpolld.socket]```
 
-Use a **custom PID file**
+Write the **PID file** somewhere else
 
-```lvmpolld -p [/tmp/lvmpolld.pid]```
+```lvmpolld --pidfile [/tmp/lvmpolld.pid]```
 
-**Dump the current state**
+Use a **specific lvm binary** for the polling work
+
+```lvmpolld --binary [/usr/sbin/lvm]```
+
+Print what the running daemon is **currently tracking**
 
 ```lvmpolld --dump```
 

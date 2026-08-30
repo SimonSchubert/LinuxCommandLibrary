@@ -4,27 +4,31 @@ AI coding assistant using DeepSeek Coder models
 
 # TLDR
 
-**Start interactive mode**
+Open an **interactive session**
 
 ```deepseek```
 
-**Run a single prompt**
+Send a **single prompt** and print the answer
 
-```deepseek chat "[write a Python function for binary search]"```
+```deepseek chat "[write a binary search in Python]"```
 
-**Start with a specific model**
+Choose **which model** answers
 
 ```deepseek --model [deepseek-coder:6.7b]```
 
-**Set up the local environment** (Ollama)
+Prepare the **local Ollama backend**
 
 ```deepseek setup```
 
-**Force the CLI to use local mode**
+Insist on the **local model** rather than the hosted API
 
 ```deepseek --local```
 
-**Display help**
+Combine a local model with a **one-off prompt**
+
+```deepseek --local --model [deepseek-coder:6.7b] chat "[explain this regex]"```
+
+Show the **available options**
 
 ```deepseek --help```
 

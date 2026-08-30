@@ -4,29 +4,29 @@ Manage Proxmox LXC container templates
 
 # TLDR
 
-**Update** container template database
+**Refresh** the template catalogue
 
 ```pveam update```
 
-List **available** templates
+List the templates **available to download**
 
 ```pveam available```
 
-**Download** a template
+Narrow that list to **one section**
 
-```pveam download local [template_name]```
+```pveam available --section [system]```
 
-List **downloaded** templates
+**Download** a template into a storage
 
-```pveam list local```
+```pveam download [local] [template_name]```
 
-List templates in a **specific section**
+List what has **already been downloaded**
 
-```pveam available --section [system|turnkeylinux|mail]```
+```pveam list [local]```
 
-**Remove** a template
+**Delete** a downloaded template
 
-```pveam remove local:vztmpl/[template_name]```
+```pveam remove [local]:vztmpl/[template_name]```
 
 # SYNOPSIS
 

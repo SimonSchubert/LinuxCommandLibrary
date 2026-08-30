@@ -4,37 +4,65 @@ lightweight package manager used primarily on OpenWrt and other embedded Linux
 
 # TLDR
 
-**Install** a package
-
-```opkg install [package]```
-
-**Remove** a package
-
-```opkg remove [package]```
-
-**Update** the list of available packages
+**Refresh** the package lists
 
 ```opkg update```
 
-**Upgrade** one or more specific packages
+**Install** a package from the configured feeds
 
-```opkg upgrade [package(s)]```
+```opkg install [package]```
 
-Display **information** for a specific package
+Install a **local .ipk file**
 
-```opkg info [package]```
+```opkg install [path/to/package.ipk]```
 
-**List** all available packages
+Install onto **another destination**, such as attached storage
 
-```opkg list```
+```opkg install --dest [usb] [package]```
 
-Find out **which package owns** a file
+**Upgrade** named packages
 
-```opkg search [/path/to/file]```
+```opkg upgrade [package1] [package2]```
 
-List all **files belonging** to a package
+Show which installed packages have **updates waiting**
+
+```opkg list-upgradable```
+
+List **everything installed**
+
+```opkg list-installed```
+
+**Search the catalogue** by name pattern
+
+```opkg find [pattern]```
+
+Find **which package provides a file**
+
+```opkg search [/usr/bin/wget]```
+
+List the **files a package installed**
 
 ```opkg files [package]```
+
+Show what a package **depends on**
+
+```opkg depends [package]```
+
+Show **what depends on** a package
+
+```opkg whatdepends [package]```
+
+**Uninstall** a package
+
+```opkg remove [package]```
+
+Remove a package **and everything that needs it**
+
+```opkg remove --force-removal-of-dependent-packages [package]```
+
+List configuration files **changed since install**
+
+```opkg list-changed-conffiles```
 
 # SYNOPSIS
 

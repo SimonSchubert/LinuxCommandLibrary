@@ -4,23 +4,27 @@ curses-based TUI for NetworkManager
 
 # TLDR
 
-Open the **user interface**
+Open the full text interface
 
 ```nmtui```
 
-**List available connections**, with the option to activate or deactivate them
+Jump straight to the **connection list**, where connections can be brought up or down
 
 ```nmtui connect```
 
-**Connect** to a given network
+**Activate** one connection by name, UUID, device or SSID
 
-```nmtui connect [name|uuid|device|SSID]```
+```nmtui connect [name]```
 
-**Edit/Add/Delete** a given network
+Open the **editor** to create, change or delete connections
 
-```nmtui edit [name|id]```
+```nmtui edit```
 
-Set the **system hostname**
+Edit **one named connection** directly
+
+```nmtui edit [connection_name]```
+
+Change the **system hostname**
 
 ```nmtui hostname```
 

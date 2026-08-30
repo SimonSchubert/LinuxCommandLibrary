@@ -4,29 +4,49 @@ Protocol Buffers compiler and code generator
 
 # TLDR
 
-**Generate Python code** from a .proto file
+Generate **Python** bindings
 
-```protoc --python_out=[path/to/output_directory] [input_file.proto]```
-  
-**Generate Java code** from a .proto file that imports other .proto files
+```protoc --python_out=[path/to/output] [file.proto]```
 
-```protoc --java_out=[path/to/output_directory] --proto_path=[path/to/import_search_path] [input_file.proto]```
-  
-**Generate Go code** using a plugin
+Add an **import search path** so `import` statements resolve
 
-```protoc --go_out=[path/to/output_directory] --go_opt=paths=source_relative [input_file.proto]```
+```protoc --proto_path=[path/to/protos] --python_out=[path/to/output] [file.proto]```
 
-**Encode** a text-format message into a **protocol message** from a .proto file
+The same flag in its **short form**
 
-```protoc < [message.txt] --encode=[TypeName] [input_file.proto]```
+```protoc -I [path/to/protos] --cpp_out=[path/to/output] [file.proto]```
 
-**Decode a protocol message** into text-format from a .proto file
+Generate for **several languages** in one run
 
-```protoc < [message.bin] --decode=[TypeName] [input_file.proto]```
+```protoc --java_out=[path/to/java] --csharp_out=[path/to/csharp] [file.proto]```
 
-**Decode a protocol message** into raw tag/value pairs
+Generate **Go** code through its plugin
 
-```protoc < [message.bin] --decode_raw```
+```protoc --go_out=[path/to/output] --go_opt=paths=source_relative [file.proto]```
+
+Compile **every proto** in a directory
+
+```protoc -I [path/to/protos] --python_out=[path/to/output] [path/to/protos]/*.proto```
+
+Write a **descriptor set** for other tools to consume
+
+```protoc --descriptor_set_out=[path/to/descriptor.pb] --include_imports [file.proto]```
+
+**Encode** a text-format message into the binary wire format
+
+```protoc --encode=[package.TypeName] [file.proto] < [message.txt] > [message.bin]```
+
+**Decode** a binary message back into text
+
+```protoc --decode=[package.TypeName] [file.proto] < [message.bin]```
+
+Inspect an **unknown message** as raw tag and value pairs
+
+```protoc --decode_raw < [message.bin]```
+
+Print the **compiler version**
+
+```protoc --version```
 
 # SYNOPSIS
 

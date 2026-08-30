@@ -4,45 +4,77 @@ modern package management frontend for dpkg-based Linux distributions
 
 # TLDR
 
-Enter the **interactive** package management interface
+Open the **interactive** package browser
 
 ```sudo oma```
+
+**Refresh** the package lists
+
+```sudo oma refresh```
 
 **Install** a package
 
 ```sudo oma install [package_name]```
 
+**Choose a particular version** from those available
+
+```sudo oma pick [package_name]```
+
 **Remove** a package
 
 ```sudo oma remove [package_name]```
+
+**Upgrade** everything installed
+
+```sudo oma upgrade```
 
 **Search** for a package
 
 ```oma search [keyword]```
 
-Show **detailed information** for a package
+Show a package's **details**
 
 ```oma show [package_name]```
 
-**Upgrade** all installed packages to their latest versions
+List packages with their **installation status**
 
-```sudo oma upgrade```
+```oma list [package_name]```
 
-**Update** the list of available packages
-
-```sudo oma refresh```
-
-List **files** in a package
+List the **files a package installs**
 
 ```oma files [package_name]```
 
-**Fix broken** dependencies
+Find **which package provides a path**
+
+```oma provides [/usr/bin/ssh]```
+
+Show what a package **depends on**
+
+```oma depends [package_name]```
+
+Show **what depends on** a package
+
+```oma rdepends [package_name]```
+
+Draw the **dependency tree**
+
+```oma tree [package_name]```
+
+**Hold** a package at its current version
+
+```sudo oma mark hold [package_name]```
+
+**Repair** broken dependencies
 
 ```sudo oma fix-broken```
 
-Display **help**
+Review **past transactions**
 
-```oma help```
+```oma history```
+
+Free the **download cache**
+
+```sudo oma clean```
 
 # SYNOPSIS
 

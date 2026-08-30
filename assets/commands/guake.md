@@ -4,29 +4,61 @@ drop-down terminal for GNOME that provides quick access to a terminal
 
 # TLDR
 
-**Toggle** Guake visibility
+Toggle the drop-down terminal with the **default key**
 
 ```F12```
 
-Toggle **fullscreen** mode
+Toggle it from a **script or another binding**
 
-```F11```
+```guake --toggle-visibility```
 
-Open a **new tab**
+**Show** it without toggling
 
-```Ctrl+Shift+T```
+```guake --show```
 
-**Close** the terminal
+**Hide** it
 
-```Super+X```
+```guake --hide```
 
-Go to the **previous tab**
+Ask whether it is **currently visible**
 
-```Ctrl+PageUp```
+```guake --is-visible```
 
-**Search** selected text in browser
+Open a **new tab** in a given directory
 
-```Ctrl+Shift+L```
+```guake --new-tab [path/to/directory]```
+
+**Run a command** in the current tab
+
+```guake --execute-command "[command]"```
+
+**Switch to a tab** by its index
+
+```guake --select-tab [2]```
+
+**Rename** the current tab
+
+```guake --rename-current-tab "[title]"```
+
+Split the current terminal **side by side**
+
+```guake --split-vertical```
+
+Split it **top and bottom**
+
+```guake --split-horizontal```
+
+Open the **preferences** window
+
+```guake --preferences```
+
+**Save the current settings** to a file
+
+```guake --save-preferences [path/to/preferences]```
+
+**Quit** guake entirely
+
+```guake --quit```
 
 # SYNOPSIS
 

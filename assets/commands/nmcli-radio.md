@@ -4,29 +4,37 @@ controls the software radio switches for wireless interfaces managed
 
 # TLDR
 
-Show **status of Wi-Fi**
-
-```nmcli radio wifi```
-
-Turn **Wi-Fi on or off**
-
-```nmcli radio wifi [on|off]```
-
-Show **status of WWAN** (mobile broadband)
-
-```nmcli radio wwan```
-
-Turn **WWAN on or off**
-
-```nmcli radio wwan [on|off]```
-
-Show **status of both** switches
+Show **both radio switches**
 
 ```nmcli radio```
 
-Turn **both switches** on or off
+Show only the **Wi-Fi** switch
 
-```nmcli radio all [on|off]```
+```nmcli radio wifi```
+
+Turn Wi-Fi **off**
+
+```nmcli radio wifi off```
+
+Turn Wi-Fi **back on**
+
+```nmcli radio wifi on```
+
+Show the **mobile broadband** switch
+
+```nmcli radio wwan```
+
+Turn mobile broadband off
+
+```nmcli radio wwan off```
+
+Turn **every radio off** at once
+
+```nmcli radio all off```
+
+Read a switch's state in a **script-friendly** form
+
+```nmcli --terse radio wifi```
 
 # SYNOPSIS
 
@@ -53,7 +61,7 @@ Turn **both switches** on or off
 
 **nmcli radio** controls the software radio switches for wireless interfaces managed by NetworkManager. This is equivalent to airplane mode functionality, allowing Wi-Fi and mobile broadband radios to be enabled or disabled independently.
 
-Disabling a radio switch turns off the corresponding hardware transmitter, preventing any wireless communication. This is different from just disconnecting—the radio itself is turned off.
+Disabling a radio switch turns off the corresponding hardware transmitter, preventing any wireless communication. This is different from just disconnecting: the radio itself is turned off.
 
 Without an on/off argument, the command displays the current state of the specified radio(s).
 

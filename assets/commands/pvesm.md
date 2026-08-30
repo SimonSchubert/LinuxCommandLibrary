@@ -4,29 +4,41 @@ Configure Proxmox storage backends
 
 # TLDR
 
-Get **status** for all datastores
+Show every storage and **whether it is online**
 
 ```pvesm status```
 
-**List** storage contents
+**List the contents** of one storage
 
 ```pvesm list [storage_name]```
 
-**Add** a directory storage
+Resolve a stored file to its **path on disk**
+
+```pvesm path [local]:iso/[filename.iso]```
+
+**Add** a directory-backed storage
 
 ```pvesm add dir [storage_name] --path [path/to/directory]```
 
-**Set** storage to contain specific content
+**Restrict what a storage may hold**
 
-```pvesm set [storage_name] --content [iso,images,backup,vztmpl]```
+```pvesm set [storage_name] --content [iso,backup,vztmpl]```
 
-**Delete** a file from storage
+**Disable** a storage without deleting its definition
 
-```pvesm free local:iso/[filename.iso]```
+```pvesm set [storage_name] --disable 1```
 
-**Remove** a storage
+**Delete a file** from a storage
+
+```pvesm free [local]:iso/[filename.iso]```
+
+**Remove** the storage definition
 
 ```pvesm remove [storage_name]```
+
+**Scan a server for NFS exports** worth adding
+
+```pvesm scan nfs [server_address]```
 
 # SYNOPSIS
 

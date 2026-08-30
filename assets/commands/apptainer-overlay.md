@@ -4,25 +4,29 @@ Create and manage writable overlay filesystems for containers.
 
 # TLDR
 
-**Add a writable overlay** to an existing SIF image
+Attach a **writable layer inside an existing SIF**, so the image can be changed
 
-```apptainer overlay create -s [size] [path/to/image.sif]```
+```apptainer overlay create --size [500] [path/to/image.sif]```
 
-Create a **standalone EXT3** writable overlay image
+Build a **standalone overlay file** that several images can share
 
-```apptainer overlay create -s [size] [path/to/overlay.img]```
+```apptainer overlay create --size [1024] [path/to/overlay.img]```
 
-Create a **sparse overlay** image
+Allocate it **sparsely**, taking disk space only as it fills
 
-```apptainer overlay create -s [size] -S [path/to/overlay.img]```
+```apptainer overlay create --size [1024] --sparse [path/to/overlay.img]```
 
-Create an overlay for use with **fakeroot**
+Lay it out for **unprivileged fakeroot** use
 
-```apptainer overlay create -f -s [size] [path/to/overlay.img]```
+```apptainer overlay create --fakeroot --size [1024] [path/to/overlay.img]```
 
-Create an overlay with a **specific directory** in the layout
+**Pre-create a directory** inside the overlay
 
-```apptainer overlay create --create-dir [path/to/directory] [path/to/overlay.img]```
+```apptainer overlay create --create-dir [/data] --size [1024] [path/to/overlay.img]```
+
+**Run a container against** an overlay file
+
+```apptainer run --overlay [path/to/overlay.img] [path/to/image.sif]```
 
 # SYNOPSIS
 

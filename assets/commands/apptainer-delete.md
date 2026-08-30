@@ -4,23 +4,23 @@ Delete container images from a remote library.
 
 # TLDR
 
-**Delete an image** from the Container Library
+Remove an image from the **Container Library**
 
 ```apptainer delete library://[user/collection/container]:[tag]```
 
-Delete an image for a **specific architecture**
+Remove only the build for **one architecture**
 
-```apptainer delete -A [amd64|arm64|ppc64le] library://[user/collection/container]:[tag]```
+```apptainer delete --arch [arm64] library://[user/collection/container]:[tag]```
 
-**Force delete** an image without confirmation
+Skip the **confirmation prompt**, which scripts need
 
-```apptainer delete -F library://[user/collection/container]:[tag]```
+```apptainer delete --force library://[user/collection/container]:[tag]```
 
-Delete an image from a **specific library server**
+Target a **self-hosted library server**
 
 ```apptainer delete --library [https://library.example.com] library://[user/collection/container]:[tag]```
 
-Delete an image using **HTTP** instead of HTTPS
+Talk to a server over **plain HTTP**
 
 ```apptainer delete --no-https library://[hostname/user/collection/container]:[tag]```
 

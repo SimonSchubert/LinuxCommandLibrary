@@ -4,17 +4,49 @@ Add a storage backend definition in Proxmox VE
 
 # TLDR
 
-Add a **directory** storage
+Add a **directory-backed** storage
 
 ```pvesm add dir [storage_name] --path [path/to/directory]```
 
-Add an **LVM** storage
+Say **what it is allowed to hold**
 
-```pvesm add lvm [storage_name] --vgname [volume_group_name]```
+```pvesm add dir [storage_name] --path [path/to/directory] --content [iso,backup,vztmpl]```
 
-Add an **LVM-Thin** storage
+Add an **LVM volume group**
 
-```pvesm add lvmthin [storage_name] --vgname [volume_group_name] --thinpool [logical_volume_name]```
+```pvesm add lvm [storage_name] --vgname [volume_group]```
+
+Add an **LVM-thin pool**
+
+```pvesm add lvmthin [storage_name] --vgname [volume_group] --thinpool [pool_name]```
+
+Add a **ZFS pool**
+
+```pvesm add zfspool [storage_name] --pool [zpool_name]```
+
+Add a **BTRFS** subvolume
+
+```pvesm add btrfs [storage_name] --path [path/to/subvolume]```
+
+Add an **NFS export**
+
+```pvesm add nfs [storage_name] --server [server_address] --export [/exports/pve]```
+
+Add a **CIFS or SMB share**
+
+```pvesm add cifs [storage_name] --server [server_address] --share [share_name] --username [user]```
+
+Add a **Ceph RBD pool**
+
+```pvesm add rbd [storage_name] --pool [pool_name] --monhost [monitor_address]```
+
+Add a **Proxmox Backup Server**
+
+```pvesm add pbs [storage_name] --server [server_address] --datastore [datastore] --username [user@pbs]```
+
+Add it **disabled**, so it can be configured before anything uses it
+
+```pvesm add dir [storage_name] --path [path/to/directory] --disable 1```
 
 # SYNOPSIS
 

@@ -4,33 +4,33 @@ Manage SCSI persistent reservations on LVM physical volumes
 
 # TLDR
 
-Start PR on all PVs in a VG with a **local key** (exclusive access by default)
+Reserve every physical volume in a group for **this host alone**
 
 ```lvmpersist start --ourkey [0x1234abcd] --vg [vg_name]```
 
-Start PR for a **shared VG** (allow multiple hosts)
+Reserve them so **several hosts may write**, as a cluster filesystem needs
 
 ```lvmpersist start --ourkey [0x1234abcd] --access sh --vg [vg_name]```
 
-**Stop PR** on a VG and unregister the local key
+Reserve **named devices** rather than a whole group
 
-```lvmpersist stop --ourkey [0x1234abcd] --vg [vg_name]```
+```lvmpersist start --ourkey [0x1234abcd] --device [/dev/sdb] --device [/dev/mapper/mpatha]```
 
-**Take over** a local VG by preempting another host while starting PR
-
-```lvmpersist start --ourkey [0xmy_key] --removekey [0xother_key] --vg [vg_name]```
-
-**Remove another host's key** from a shared VG
-
-```lvmpersist remove --ourkey [0xmy_key] --removekey [0xother_key] --vg [vg_name]```
-
-**Show registered keys** and reservations for a VG
+Show the **keys and reservations** currently held
 
 ```lvmpersist read --vg [vg_name]```
 
-Operate on **specific devices** instead of a VG
+**Seize** a group from a host that has failed
 
-```lvmpersist start --ourkey [0x1234abcd] --device [/dev/sdX] --device [/dev/mapper/mpathY]```
+```lvmpersist start --ourkey [0xmykey] --removekey [0xotherkey] --vg [vg_name]```
+
+**Evict one host** from a shared reservation
+
+```lvmpersist remove --ourkey [0xmykey] --removekey [0xotherkey] --vg [vg_name]```
+
+**Release** the reservation and unregister this host's key
+
+```lvmpersist stop --ourkey [0x1234abcd] --vg [vg_name]```
 
 # SYNOPSIS
 

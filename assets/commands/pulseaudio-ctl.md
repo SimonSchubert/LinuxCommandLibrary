@@ -4,33 +4,41 @@ Simple PulseAudio volume control commands
 
 # TLDR
 
-**Increase** volume by 5%
+Raise the volume by the **default 5% step**
 
 ```pulseaudio-ctl up```
 
-Increase volume by a **specific amount**
+Raise it by a **chosen amount**
 
-```pulseaudio-ctl up 10```
+```pulseaudio-ctl up [10]```
 
-**Decrease** volume by 5%
+Lower it by the default step
 
 ```pulseaudio-ctl down```
 
-**Set** volume to a specific percentage
+Lower it by a chosen amount
 
-```pulseaudio-ctl set 50```
+```pulseaudio-ctl down [10]```
 
-Set volume if current is **higher** than provided value
+Jump to an **exact level**
 
-```pulseaudio-ctl atmost 80```
+```pulseaudio-ctl set [50]```
 
-Toggle **mute**
+**Cap** the volume, lowering it only when it is above the limit
+
+```pulseaudio-ctl atmost [80]```
+
+Toggle **output mute**
 
 ```pulseaudio-ctl mute```
 
-Toggle **microphone mute**
+Toggle the **microphone** instead of the speakers
 
 ```pulseaudio-ctl mute-input```
+
+Print the **volume and mute state** together
+
+```pulseaudio-ctl full-status```
 
 # SYNOPSIS
 

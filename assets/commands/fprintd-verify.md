@@ -4,25 +4,29 @@ verify a fingerprint against enrolled prints
 
 # TLDR
 
-Verify **all stored fingerprints** for the current user
+Check a scan against **everything stored** for the current user
 
 ```fprintd-verify```
 
-Verify a **specific fingerprint** for the current user
+Check against **one specific finger**
 
-```fprintd-verify -f [left-thumb|left-index-finger|right-thumb|...]```
+```fprintd-verify --finger [right-index-finger]```
 
-Verify fingerprints for a **specific user**
+Check **another user's** prints, which needs root
 
-```fprintd-verify [username]```
+```sudo fprintd-verify [username]```
 
-Verify a **specific fingerprint** for a **specific user**
+Name **both the finger and the user**
 
-```fprintd-verify -f [finger_name] [username]```
+```sudo fprintd-verify --finger [left-thumb] [username]```
 
-Display **help**
+Make a **non-match fatal**, which a script can then act on
 
-```fprintd-verify -h```
+```fprintd-verify --g-fatal-warnings```
+
+See the **finger names** it will accept
+
+```fprintd-verify --help```
 
 # SYNOPSIS
 

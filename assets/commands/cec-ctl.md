@@ -4,17 +4,53 @@ kernel CEC device control tool
 
 # TLDR
 
-**List** CEC devices
+List the **CEC adapters** the kernel knows about
 
 ```cec-ctl --list-devices```
 
-**Monitor** CEC traffic
+Show the **topology** of the HDMI bus
 
-```sudo cec-ctl -m```
+```cec-ctl --show-topology```
 
-Show **CEC topology**
+Register this machine as a **playback device** under a chosen name
 
-```cec-ctl -S```
+```sudo cec-ctl --playback --osd-name [MyPC]```
+
+Set the **physical address** by hand
+
+```sudo cec-ctl --phys-addr [1.0.0.0]```
+
+**Wake the TV** and have it switch to this input
+
+```cec-ctl --to 0 --image-view-on```
+
+Announce this device as the **active source**
+
+```cec-ctl --active-source phys-addr=[1.0.0.0]```
+
+Put the TV into **standby**
+
+```cec-ctl --to 0 --standby```
+
+Ask the TV for its **power state**
+
+```cec-ctl --to 0 --give-device-power-status```
+
+**Watch the traffic** addressed to this adapter
+
+```sudo cec-ctl --monitor```
+
+Watch **every message** on the bus, addressed to us or not
+
+```sudo cec-ctl --monitor-all```
+
+Work with a **specific adapter**
+
+```cec-ctl -d [/dev/cec1] --show-topology```
+
+**Clear** the adapter's configuration
+
+```sudo cec-ctl --clear```
 
 # SYNOPSIS
 

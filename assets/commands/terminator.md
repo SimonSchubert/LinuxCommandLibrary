@@ -4,25 +4,53 @@ Multiple GNOME terminals in one window
 
 # TLDR
 
-**Start** terminator window
+Start terminator
 
 ```terminator```
 
-**Start** with a fullscreen window
+Start **maximised**
 
-```terminator -f```
+```terminator --maximise```
 
-**Split** terminals horizontally
+Start **full screen**
 
-```Ctrl+Shift+O```
+```terminator --fullscreen```
 
-**Split** terminals vertically
+Start **without window decorations**
+
+```terminator --borderless```
+
+Start from a **saved layout**
+
+```terminator --layout [layout_name]```
+
+Start with a particular **profile**
+
+```terminator --profile [profile_name]```
+
+**Run a command** in the new window
+
+```terminator --command "[command]"```
+
+Start in a given **working directory**
+
+```terminator --working-directory [path/to/directory]```
+
+Set the **window title**
+
+```terminator --title "[title]"```
+
+Split the current terminal **left and right**
 
 ```Ctrl+Shift+E```
 
-**Open** new tab
+Split the current terminal **top and bottom**
 
-```Ctrl+Shift+T```
+```Ctrl+Shift+O```
+
+Move between the **split panes**
+
+```Alt+Arrow keys```
 
 # SYNOPSIS
 

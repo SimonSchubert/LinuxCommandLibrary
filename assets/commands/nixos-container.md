@@ -4,29 +4,61 @@ manages lightweight NixOS containers using Linux namespaces
 
 # TLDR
 
-**List** running containers
+List the containers that exist
 
 ```sudo nixos-container list```
 
-**Create** a NixOS container with a specific configuration file
+Create one from an **inline configuration**
 
-```sudo nixos-container create [container_name] --config-file [path/to/nix_config_file]```
+```sudo nixos-container create [name] --config '{ services.openssh.enable = true; }'```
 
-**Start, stop, terminate, or destroy** a specific container
+Create one from a **configuration file**
 
-```sudo nixos-container [start|stop|terminate|destroy|status] [container_name]```
+```sudo nixos-container create [name] --config-file [path/to/configuration.nix]```
 
-**Run a command** in a running container
+Give it **fixed private addresses** on both sides of the link
 
-```sudo nixos-container run [container_name] -- [command] [arguments]```
+```sudo nixos-container create [name] --local-address [10.233.4.2] --host-address [10.233.4.1]```
 
-**Update** a container configuration
+Have it **start automatically at boot**
 
-```sudo nixos-container update [container_name]```
+```sudo nixos-container create [name] --auto-start```
 
-Enter an **interactive shell** session on a running container
+**Start** a container
 
-```sudo nixos-container root-login [container_name]```
+```sudo nixos-container start [name]```
+
+Check whether it is **running**
+
+```sudo nixos-container status [name]```
+
+Find its **IP address**
+
+```sudo nixos-container show-ip [name]```
+
+Open a **root shell** inside it
+
+```sudo nixos-container root-login [name]```
+
+Run **one command** inside it
+
+```sudo nixos-container run [name] -- [command]```
+
+**Rebuild** it after editing its configuration
+
+```sudo nixos-container update [name]```
+
+**Stop** it
+
+```sudo nixos-container stop [name]```
+
+**Kill** it without a clean shutdown
+
+```sudo nixos-container terminate [name]```
+
+**Delete** it along with its filesystem
+
+```sudo nixos-container destroy [name]```
 
 # SYNOPSIS
 

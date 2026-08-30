@@ -4,33 +4,37 @@ dedicated server runs a headless game server for the asymmetric multiplayer
 
 # TLDR
 
-Start a server with **default settings**
+Start a dedicated server with the defaults
 
 ```[path/to]/server_linux```
 
-Give a server a **custom name** that shows in the server browser
+**Name it** as it appears in the server browser
 
 ```[path/to]/server_linux -name '[server_name]'```
 
-Specify a **connection port** for the server
+Choose the **port** it listens on
 
 ```[path/to]/server_linux -port [27015]```
 
-Specify **maximum player count**
+Cap the **number of players**
 
-```[path/to]/server_linux -limit [2..24]```
+```[path/to]/server_linux -limit [24]```
 
-Specify the **initial map** the server starts on
+Choose the **map it starts on**
 
 ```[path/to]/server_linux -map [ns2_summit]```
 
-Limit access to the server with a **password**
+Require a **password** to join
 
 ```[path/to]/server_linux -password [password]```
 
-Start a server with **webui admin** interface
+Turn on the **web admin** interface
 
 ```[path/to]/server_linux -webadmin -webport [8080]```
+
+A **complete private server** in one line
+
+```[path/to]/server_linux -name '[My Server]' -map [ns2_veil] -limit [12] -password [secret]```
 
 # SYNOPSIS
 

@@ -4,17 +4,21 @@ Generate AppArmor profiles by monitoring program behavior
 
 # TLDR
 
-Start generating a **profile** for a program
+Begin learning a profile, then **exercise the program in another terminal**
 
-```sudo aa-genprof [/path/to/program]```
+```sudo aa-genprof [/usr/bin/program]```
 
-Specify a **custom directory** for profiles
+Write the resulting profile into a **directory of your own**
 
-```sudo aa-genprof -d [/path/to/profiles] [/path/to/program]```
+```sudo aa-genprof --dir [path/to/profiles] [/usr/bin/program]```
 
-Specify a **custom logfile** for profiling
+Read the events from a **specific log** rather than the system one
 
-```sudo aa-genprof -f [/path/to/logfile] [/path/to/program]```
+```sudo aa-genprof --file [path/to/logfile] [/usr/bin/program]```
+
+List the options it accepts
+
+```aa-genprof --help```
 
 # SYNOPSIS
 

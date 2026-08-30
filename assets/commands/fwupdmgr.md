@@ -4,25 +4,61 @@ command-line firmware update client
 
 # TLDR
 
-Display all **devices detected** by fwupd
+List the devices **fwupd can see**
 
 ```fwupdmgr get-devices```
 
-Download the latest **firmware metadata** from LVFS
+**Refresh** the firmware metadata from LVFS
 
 ```fwupdmgr refresh```
 
-List the **updates available** for devices on your system
+Refresh **even if the cache is still considered fresh**
+
+```fwupdmgr refresh --force```
+
+Show the **updates waiting**
 
 ```fwupdmgr get-updates```
 
-**Install** firmware updates
+Apply **every available update**
 
 ```fwupdmgr update```
 
-Show firmware **update history**
+Update **one device** by its ID
+
+```fwupdmgr update [device_id]```
+
+Show **all releases** published for a device
+
+```fwupdmgr get-releases [device_id]```
+
+**Go back** to an older firmware version
+
+```fwupdmgr downgrade [device_id]```
+
+**Reinstall** the version already running
+
+```fwupdmgr reinstall [device_id]```
+
+Show what has been **flashed before**
 
 ```fwupdmgr get-history```
+
+List the configured **remotes**
+
+```fwupdmgr get-remotes```
+
+**Enable** the testing remote to get pre-release firmware
+
+```fwupdmgr enable-remote lvfs-testing```
+
+**Check firmware checksums** against the vendor's records
+
+```fwupdmgr verify [device_id]```
+
+Report the host's **firmware security attributes**
+
+```fwupdmgr security```
 
 # SYNOPSIS
 

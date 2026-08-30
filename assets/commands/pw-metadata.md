@@ -4,29 +4,37 @@ Monitor and manage PipeWire metadata
 
 # TLDR
 
-Show metadata in **default** name
+Show the **default metadata object**
 
 ```pw-metadata```
 
-Show metadata with **ID 0** in settings
+**List every** metadata object
 
-```pw-metadata -n settings 0```
+```pw-metadata --list```
 
-List all **available metadata** objects
+Show the entries of a **named object**
 
-```pw-metadata -l```
+```pw-metadata --name [settings] [0]```
 
-Keep running and **log changes** to metadata
+**Read one property**
 
-```pw-metadata -m```
+```pw-metadata --name [settings] [0] [log.level]```
 
-**Delete** all metadata
+**Set a property**
 
-```pw-metadata -d```
+```pw-metadata --name [settings] [0] [log.level] [1]```
 
-**Set** log.level to 1 in settings
+Change the **default audio sink**
 
-```pw-metadata -n settings 0 log.level 1```
+```pw-metadata [0] [default.audio.sink] '{ "name": "[sink_name]" }'```
+
+**Follow changes** as they happen
+
+```pw-metadata --monitor```
+
+**Clear** all metadata
+
+```pw-metadata --delete```
 
 # SYNOPSIS
 

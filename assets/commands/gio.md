@@ -4,29 +4,65 @@ GNOME file operations utility supporting local and virtual filesystems
 
 # TLDR
 
-**Open** a file with the default application
+Open a file with its **default application**
 
 ```gio open [path/to/file]```
 
-**List** files in a directory
+List a directory, including **virtual locations**
 
-```gio list [path/to/directory]```
+```gio list [smb://server/share]```
 
-Show **information** about a file
+Show a file's **attributes**
 
 ```gio info [path/to/file]```
 
-**Copy** a file
+Show a **specific group of attributes**
 
-```gio copy [path/to/source] [path/to/destination]```
+```gio info --attributes=[standard::*] [path/to/file]```
 
-Send a file to the **trash** (reversible)
+Print a **remote file** to standard output
+
+```gio cat [sftp://host/path/to/file]```
+
+**Copy across backends**, from local disk to a remote share
+
+```gio copy [path/to/local] [sftp://host/path/]```
+
+**Move** a file
+
+```gio move [path/to/source] [path/to/destination]```
+
+Send a file to the **trash**
 
 ```gio trash [path/to/file]```
 
-**Launch** an application from a .desktop file
+Delete **everything in the trash**
 
-```gio launch [path/to/file].desktop```
+```gio trash --empty```
+
+Delete a file **permanently**
+
+```gio remove [path/to/file]```
+
+Show the **tree** below a location
+
+```gio tree [path/to/directory]```
+
+**Mount** a remote share through GVfs
+
+```gio mount [smb://server/share]```
+
+**Unmount** it again
+
+```gio mount --unmount [smb://server/share]```
+
+**Watch a directory** and print changes as they happen
+
+```gio monitor [path/to/directory]```
+
+Mark a launcher **trusted** so it can be run
+
+```gio set [path/to/file.desktop] metadata::trusted true```
 
 # SYNOPSIS
 

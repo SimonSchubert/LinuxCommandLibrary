@@ -4,17 +4,17 @@ Prevent idle sleep for fullscreen applications
 
 # TLDR
 
-Start a **caffeine server**
+Run the daemon that keeps the screensaver away while a **full-screen window** has focus
 
 ```caffeine```
 
-Display **help**
+List the **options** it accepts
 
-```caffeine -h```
+```caffeine --help```
 
-Display **version**
+Print the **version**
 
-```caffeine -V```
+```caffeine --version```
 
 # SYNOPSIS
 

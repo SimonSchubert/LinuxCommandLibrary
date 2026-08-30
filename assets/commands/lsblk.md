@@ -4,41 +4,65 @@ List information about block devices
 
 # TLDR
 
-List all storage devices in a **tree-like format**
+Show the block devices as a **tree**
 
 ```lsblk```
 
-Also list **empty devices**
+Show **filesystem type, label, UUID and mountpoint**
 
-```lsblk -a```
+```lsblk --fs```
 
-Print the SIZE column in **bytes**
+Print **full device paths** as a flat list
 
-```lsblk -b```
+```lsblk --paths --list```
 
-Output info about **filesystems**
+Choose **exactly the columns** you want
 
-```lsblk -f```
+```lsblk --output NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS```
 
-Output info about **block-device topology**
+**Add** columns to the default set
 
-```lsblk -t```
+```lsblk --output +SERIAL,MODEL```
 
-Use **ASCII characters** for tree formatting
+Show **every available column**
 
-```lsblk -i```
+```lsblk --output-all```
 
-Add extra columns to output
+Emit **JSON**
 
-```lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT,MODEL```
+```lsblk --json```
 
-Output in **JSON** format
+Emit **key=value pairs** that a shell can read
 
-```lsblk -J```
+```lsblk --pairs --output NAME,FSTYPE,UUID```
 
-List information about a **specific device**
+Print sizes in **exact bytes**
 
-```lsblk /dev/sda```
+```lsblk --bytes```
+
+Show **one device** without its partitions
+
+```lsblk --nodeps /dev/sda```
+
+Hide the **loop devices** that snap packages create
+
+```lsblk --exclude 7```
+
+Show **owner, group and mode** of each device node
+
+```lsblk --perms```
+
+Show queue **topology**, including sector sizes
+
+```lsblk --topology```
+
+Show which devices support **discard (TRIM)**
+
+```lsblk --discard```
+
+Show a partition's **parents** instead of its children
+
+```lsblk --inverse /dev/sda1```
 
 # SYNOPSIS
 

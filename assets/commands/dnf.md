@@ -4,35 +4,67 @@ Fedora/RHEL package manager
 
 # TLDR
 
-**Upgrade** installed packages to newest versions
+Apply **all available updates**
 
 ```sudo dnf upgrade```
 
-**Search** packages via keywords
+See what **would** be updated, without touching anything
+
+```dnf check-upgrade```
+
+**Install** packages, answering yes to prompts
+
+```sudo dnf install --assumeyes [package1] [package2]```
+
+**Search** names and summaries
 
 ```dnf search [keyword]```
 
-Display **details** about a package
+Show a package's **details**
 
 ```dnf info [package]```
 
-**Install** new packages
+Find **what provides** a file or command
 
-```sudo dnf install [package]```
+```dnf provides [/usr/bin/ss]```
 
-**Remove** packages
-
-```sudo dnf remove [package]```
-
-List **installed** packages
+List the **installed** packages
 
 ```dnf list --installed```
 
-Find which packages **provide** a command
+Ask **which packages require** a given one
 
-```dnf provides [command]```
+```dnf repoquery --whatrequires [package]```
 
-**Clean** cached data
+List the **files a package ships**, without installing it
+
+```dnf repoquery --list [package]```
+
+Install a **package group**
+
+```sudo dnf group install "[Development Tools]"```
+
+**Remove** a package
+
+```sudo dnf remove [package]```
+
+Remove **leaf packages** that nothing needs any more
+
+```sudo dnf autoremove```
+
+Review the **transaction history**
+
+```dnf history```
+
+**Undo** a past transaction
+
+```sudo dnf history undo [12]```
+
+**Download** a package without installing it
+
+```dnf download [package]```
+
+Empty the **caches**
 
 ```sudo dnf clean all```
 

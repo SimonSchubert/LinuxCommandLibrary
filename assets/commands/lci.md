@@ -4,17 +4,21 @@ interpreter for LOLCODE, an esoteric programming language inspired by lolcat
 
 # TLDR
 
-**Run** a LOLCODE file
+Run a LOLCODE program
 
-```lci [path/to/file.lol]```
+```lci [path/to/program.lol]```
 
-Display **help**
+Run one that starts with a **shebang line**, once it is executable
 
-```lci -h```
+```./[program.lol]```
 
-Display **version**
+Print the **version**
 
-```lci -v```
+```lci --version```
+
+List the **options** it accepts
+
+```lci --help```
 
 # SYNOPSIS
 

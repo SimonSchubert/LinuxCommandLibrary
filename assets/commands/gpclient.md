@@ -4,37 +4,37 @@ GlobalProtect VPN client for Linux
 
 # TLDR
 
-**Connect** to a GlobalProtect VPN using a portal server
+**Connect** through a GlobalProtect portal
 
-```gpclient connect [vpn_gateway_url]```
+```gpclient connect [vpn.example.com]```
 
-**Disconnect** from the currently connected VPN server
+**Disconnect** from the current session
 
 ```gpclient disconnect```
 
-Launch the **graphical user interface** for VPN management
+Open the **graphical interface**
 
 ```gpclient launch-gui```
 
-Generate a **HIP report** (Host Integrity Protection)
+Generate a **HIP report**, which some portals require before granting access
 
 ```gpclient hip```
 
-Use **OpenSSL workaround** to bypass legacy renegotiation errors
+Work around **legacy TLS renegotiation**, which many portals still need
 
-```gpclient connect --fix-openssl [vpn_gateway_url]```
+```gpclient connect --fix-openssl [vpn.example.com]```
 
-**Ignore TLS errors** during connection
+Proceed despite **certificate errors**
 
-```gpclient connect --ignore-tls-errors [vpn_gateway_url]```
+```gpclient connect --ignore-tls-errors [vpn.example.com]```
 
-Display **version**
+Show the **version**
 
 ```gpclient --version```
 
-Display **help** for any command
+Read the **help for one subcommand**
 
-```gpclient help [command]```
+```gpclient help [connect]```
 
 # SYNOPSIS
 

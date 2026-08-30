@@ -4,37 +4,41 @@ generates shell autocompletion scripts
 
 # TLDR
 
-Generate the autocompletion script for your **shell**
+Print the completion script for a **shell**
 
-```gcrane completion [shell_name]```
+```gcrane completion [bash]```
 
-**Disable** completion descriptions
+Print it **without the descriptive comments**
 
-```gcrane completion [shell_name] --no-descriptions```
+```gcrane completion [bash] --no-descriptions```
 
-Load completions in your **current shell session** (Bash/Zsh)
+Enable it in the **running Bash shell**
 
 ```source <(gcrane completion bash)```
 
-Load completions in your current shell session (**fish**)
+Enable it in the **running Zsh shell**
+
+```source <(gcrane completion zsh)```
+
+Enable it in the **running fish shell**
 
 ```gcrane completion fish | source```
 
-Load completions for **every new Bash session**
+Install it for **every Bash session**
 
-```gcrane completion bash > /etc/bash_completion.d/gcrane```
+```gcrane completion bash | sudo tee /etc/bash_completion.d/gcrane```
 
-Load completions for **every new Zsh session**
+Install it for **every Zsh session**
 
 ```gcrane completion zsh > "${fpath[1]}/_gcrane"```
 
-Load completions for **every new fish session**
+Install it for **every fish session**
 
 ```gcrane completion fish > ~/.config/fish/completions/gcrane.fish```
 
-Display **help**
+Load it in **PowerShell**
 
-```gcrane completion [shell_name] -h```
+```gcrane completion powershell | Out-String | Invoke-Expression```
 
 # SYNOPSIS
 

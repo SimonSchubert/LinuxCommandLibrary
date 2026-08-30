@@ -4,25 +4,25 @@ classic snake game that runs in the terminal using ncurses
 
 # TLDR
 
-**Start** a snake game
+Start the game
 
 ```nsnake```
 
-**Navigate** the snake
+**Steer** the snake
 
-```Arrow keys (Up/Down/Left/Right)```
+```Arrow keys```
 
-**Pause/unpause** the game
+**Pause** and resume
 
 ```p```
 
-**Quit** the game
-
-```q```
-
-Display **help** during the game
+Show the **in-game help**
 
 ```h```
+
+**Leave** the game at any point
+
+```q```
 
 # SYNOPSIS
 

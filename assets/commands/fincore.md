@@ -4,17 +4,37 @@ page cache inspector for files
 
 # TLDR
 
-Display **cache details** for a file
+Show how much of a file is **resident in the page cache**
 
 ```fincore [path/to/file]```
 
-Display **all** possible data columns
+Check **several files** at once
+
+```fincore [path/to/file1] [path/to/file2]```
+
+Show **every column** available
 
 ```fincore --output-all [path/to/file]```
 
-Display **help**
+**Choose the columns** yourself
 
-```fincore [-h|--help]```
+```fincore --output PAGES,SIZE,FILE [path/to/file]```
+
+Print **exact byte counts** rather than human-readable sizes
+
+```fincore --bytes [path/to/file]```
+
+Emit **JSON**
+
+```fincore --json [path/to/file]```
+
+Drop the header, which a **script** does not want
+
+```fincore --noheadings --output RES,FILE [path/to/file]```
+
+Check **everything in a directory**
+
+```fincore [path/to/directory]/*```
 
 # SYNOPSIS
 

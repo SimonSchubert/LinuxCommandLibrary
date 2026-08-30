@@ -4,29 +4,49 @@ manages configuration profiles for LXD containers and virtual machines
 
 # TLDR
 
-**List** all available profiles
+List the profiles that exist
 
 ```lxc profile list```
 
-**Show** the configuration of a specific profile
+Show **one profile's configuration**
 
 ```lxc profile show [profile_name]```
 
-**Edit** a specific profile in the default editor
-
-```lxc profile edit [profile_name]```
-
-**Create** a new profile
+**Create** an empty profile
 
 ```lxc profile create [profile_name]```
 
-**Launch** a new container with specific profiles
+Open a profile in the **editor**
 
-```lxc launch [container_image] [container_name] -p [profile1] -p [profile2]```
+```lxc profile edit [profile_name]```
 
-**Change the profiles** of a running container
+Load a profile **from a YAML file**
 
-```lxc profile assign [container_name] [profile1,profile2]```
+```lxc profile edit [profile_name] < [path/to/config.yaml]```
+
+Set a **single key** without opening an editor
+
+```lxc profile set [profile_name] [limits.memory] [2GiB]```
+
+Attach a **device** to a profile
+
+```lxc profile device add [profile_name] [eth0] nic network=[lxdbr0]```
+
+**Launch a container** with a chosen set of profiles
+
+```lxc launch [images:ubuntu/22.04] [container_name] --profile [default] --profile [gpu]```
+
+**Replace the profiles** on an existing container
+
+```lxc profile assign [container_name] [default,gpu]```
+
+**Copy** a profile under a new name
+
+```lxc profile copy [source_profile] [target_profile]```
+
+**Delete** a profile
+
+```lxc profile delete [profile_name]```
 
 # SYNOPSIS
 

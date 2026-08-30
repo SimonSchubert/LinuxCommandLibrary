@@ -4,37 +4,65 @@ provides a user interface to the Environment Modules package, enabling dynamic
 
 # TLDR
 
-Display **available modules**
+List the modules **available to load**
 
 ```module avail```
 
-**Search** for a module by name
+**Filter** that list by name
 
-```module avail [module_name]```
+```module avail [gcc]```
+
+Search the **whole hierarchy**, including modules not currently available
+
+```module spider [openmpi]```
+
+Show **what a version needs loaded first** before it becomes available
+
+```module spider [openmpi/4.1.1]```
+
+Search module **descriptions** by keyword
+
+```module keyword [compiler]```
 
 **Load** a module
 
-```module load [module_name]```
+```module load [gcc/11.2.0]```
 
-Display **loaded modules**
+Show **what a module actually changes** in the environment
+
+```module show [gcc/11.2.0]```
+
+List what is **loaded right now**
 
 ```module list```
 
-**Unload** a specific module
+**Swap** one module for another
 
-```module unload [module_name]```
+```module swap [gcc] [intel]```
 
-**Unload all** loaded modules
+**Unload** a module
+
+```module unload [gcc]```
+
+Unload **everything**
 
 ```module purge```
 
-**Save** the current set of loaded modules
+Add a directory of **personal modulefiles**
+
+```module use [path/to/modulefiles]```
+
+**Save** the current set under a name
 
 ```module save [collection_name]```
 
-**Restore** a saved collection
+**Restore** a saved set
 
 ```module restore [collection_name]```
+
+List the **collections saved**
+
+```module savelist```
 
 # SYNOPSIS
 

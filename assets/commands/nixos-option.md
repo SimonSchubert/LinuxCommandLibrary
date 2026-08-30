@@ -4,29 +4,33 @@ inspects NixOS configuration values, showing what options are set and their
 
 # TLDR
 
-List all **subkeys** of a given option key
+Show an option's **value, type, default and where it was set**
 
-```nixos-option [option_key]```
+```nixos-option [services.openssh.enable]```
 
-List current **boot kernel modules**
+List the **children** under a namespace
+
+```nixos-option [services.nginx]```
+
+Walk a **whole subtree** at once
+
+```nixos-option --recursive [users.users]```
+
+Check which **kernel modules** the configuration loads
 
 ```nixos-option boot.kernelModules```
 
-List **authorized keys** for a specific user
+Inspect a user's **authorized SSH keys**
 
 ```nixos-option users.users.[username].openssh.authorizedKeys.keys```
 
-List all **remote builders**
+Look at the configured **remote build machines**
 
 ```nixos-option nix.buildMachines```
 
-List subkeys on **another NixOS configuration**
+Query a **configuration file other than the system one**
 
 ```NIXOS_CONFIG=[path/to/configuration.nix] nixos-option [option_key]```
-
-Show **recursively all values** of a user
-
-```nixos-option -r users.users.[user]```
 
 # SYNOPSIS
 

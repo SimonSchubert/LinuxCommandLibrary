@@ -4,29 +4,49 @@ process manager for Procfile-based applications
 
 # TLDR
 
-**Start** an application with the Procfile in the current directory
+Start every process in the Procfile
 
 ```foreman start```
 
-Start an application with a **specified Procfile**
+Start **one process type**
 
-```foreman start -f [Procfile]```
+```foreman start [web]```
 
-Start a **specific** application
+Use a Procfile **somewhere else**
 
-```foreman start [process]```
+```foreman start --procfile [path/to/Procfile]```
 
-**Validate** Procfile format
+Load the environment from a **specific file**
+
+```foreman start --env [path/to/.env]```
+
+Run from **another directory**
+
+```foreman start --directory [path/to/app]```
+
+**Scale** the process types
+
+```foreman start --formation "[web=3,worker=2]"```
+
+Run everything **except** the workers
+
+```foreman start --formation "[all=1,worker=0]"```
+
+Choose the **base port** the processes get
+
+```foreman start --port [3000]```
+
+Check that the **Procfile parses**
 
 ```foreman check```
 
-Run **one-off commands** with the process's environment
+Run a **one-off command** with the app's environment
 
 ```foreman run [command]```
 
-Start all processes **except** the one named "worker"
+**Export** the Procfile as systemd units
 
-```foreman start -m all=1,worker=0```
+```foreman export systemd [path/to/output] --app [myapp]```
 
 # SYNOPSIS
 

@@ -4,23 +4,23 @@ Clean AppArmor profiles by removing redundant rules
 
 # TLDR
 
-**Clean** a profile to remove unused rules
+Strip **redundant rules** from a profile
 
 ```sudo aa-cleanprof [profile_name]```
 
-Clean **multiple profiles** at once
+Clean **several profiles** in one run
 
 ```sudo aa-cleanprof [profile1] [profile2]```
 
-Specify the **directory** containing profiles
+Work on profiles kept **outside the system directory**
 
-```sudo aa-cleanprof -d /path/to/profiles [profile_name]```
+```sudo aa-cleanprof --dir [path/to/profiles] [profile_name]```
 
-Run **silently** without prompts
+Skip the **confirmation prompts**
 
-```sudo aa-cleanprof -s [profile_name]```
+```sudo aa-cleanprof --silent [profile_name]```
 
-Prevent profile **reload** after cleaning
+Leave the **running policy untouched**, so the change applies on the next reload
 
 ```sudo aa-cleanprof --no-reload [profile_name]```
 

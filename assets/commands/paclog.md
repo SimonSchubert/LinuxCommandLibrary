@@ -4,27 +4,47 @@ filters and displays entries from the pacman log file
 
 # TLDR
 
-Display the **entire pacman log**
+Show the **whole pacman log**
 
 ```paclog```
 
-Display pacman-style logged **commandline entries**
+Read a **different log file**
+
+```paclog --log [path/to/pacman.log]```
+
+Show only the **pacman commands** that were run
 
 ```paclog --commandline```
 
-Display log events for a **specific package**
+Show everything that happened to **one package**
 
 ```paclog --package [package_name]```
 
-Display package actions of a **specific type**
+Show only **installations**
 
-```paclog --action [install|reinstall|upgrade|downgrade|remove|all]```
+```paclog --action install```
 
-Display only **errors, warnings, and notes**
+Show only **removals**
+
+```paclog --action remove```
+
+Show only **errors, warnings and notes**
 
 ```paclog --warnings```
 
-Display the list of **installed packages** according to the log
+Limit the output to entries **after a date**
+
+```paclog --after [2026-01-01]```
+
+Limit the output to entries **before a date**
+
+```paclog --before [2026-06-01]```
+
+Filter the log with a **regular expression**
+
+```paclog --grep [pattern]```
+
+Reconstruct the **installed package list** from the log
 
 ```paclog --pkglist```
 

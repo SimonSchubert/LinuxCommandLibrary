@@ -4,23 +4,23 @@ register fingerprints for authentication
 
 # TLDR
 
-Enroll the **right index finger** for the current user
+Record the right index finger for **whoever is logged in**
 
 ```fprintd-enroll```
 
-Enroll a **specific finger** for the current user
+Record a **different finger**
 
-```fprintd-enroll -f [left-thumb|left-index-finger|right-thumb|...]```
+```fprintd-enroll --finger [left-thumb]```
 
-Enroll the right index finger for a **specific user**
+Record a print for **another user**, which needs root
 
-```fprintd-enroll [username]```
+```sudo fprintd-enroll [username]```
 
-Enroll a **specific finger** for a **specific user**
+Name **both the finger and the user**
 
-```fprintd-enroll -f [finger_name] [username]```
+```sudo fprintd-enroll --finger [right-middle-finger] [username]```
 
-Display **help**
+See the **finger names** it will accept
 
 ```fprintd-enroll --help```
 

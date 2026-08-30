@@ -4,33 +4,57 @@ command-line interface for the NordVPN service, providing secure VPN
 
 # TLDR
 
-**Interactively log into** a NordVPN account
+**Log in** to a NordVPN account
 
 ```nordvpn login```
 
-Display the **connection status**
+Show **whether the tunnel is up** and where it lands
 
 ```nordvpn status```
 
-Connect to the **nearest NordVPN server**
+Connect to the **fastest nearby server**
 
 ```nordvpn connect```
 
-List all **available countries**
+List the **countries** with servers
 
 ```nordvpn countries```
 
-Connect to a server in a **specific country**
+List the **cities** available in a country
+
+```nordvpn cities [Germany]```
+
+Connect to a **specific country**
 
 ```nordvpn connect [Germany]```
 
-Connect to a server in a **specific country and city**
+Connect to a **specific city**
 
 ```nordvpn connect [Germany] [Berlin]```
 
-Set **autoconnect option**
+Connect to a **server group**, such as the P2P set
+
+```nordvpn connect [P2P]```
+
+**Disconnect**
+
+```nordvpn disconnect```
+
+Review the **current settings**
+
+```nordvpn settings```
+
+Connect **automatically** whenever the machine comes up
 
 ```nordvpn set autoconnect on```
+
+Block traffic entirely if the **tunnel drops**
+
+```nordvpn set killswitch on```
+
+**Log out** of the account
+
+```nordvpn logout```
 
 # SYNOPSIS
 

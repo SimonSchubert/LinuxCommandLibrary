@@ -4,33 +4,49 @@ CLI for Marzban proxy panel administration
 
 # TLDR
 
-**List** all administrators
+List the **administrators**
 
 ```marzban cli admin list```
 
-**Create** a new administrator
+**Create** an administrator
 
-```marzban cli admin create -u [username]```
+```marzban cli admin create --username [username]```
 
-**List** all users
+**Change** an administrator's details
+
+```marzban cli admin update --username [username]```
+
+**Delete** an administrator
+
+```marzban cli admin delete --username [username]```
+
+Import the administrator defined in the **environment file**
+
+```marzban cli admin import-from-env```
+
+List the **users**
 
 ```marzban cli user list```
 
-**Transfer** ownership of a user to another administrator
+Move a user to a **different administrator**
 
-```marzban cli user set-owner -u [username] --owner [owner]```
+```marzban cli user set-owner --username [username] --owner [owner]```
 
-Generate a **subscription config** for a user
+Print a user's **subscription link**
 
-```marzban cli subscription get-config -u [username] -f [v2ray|clash]```
+```marzban cli subscription get-link --username [username]```
 
-Display a user's **subscription link**
+Generate the **client configuration** in a chosen format
 
-```marzban cli subscription get-link -u [username]```
+```marzban cli subscription get-config --username [username] --format [v2ray]```
 
-Display **help**
+Print the **shell completion** script
 
-```marzban cli --help```
+```marzban cli completion show [bash]```
+
+**Install** shell completion
+
+```marzban cli completion install [bash]```
 
 # SYNOPSIS
 

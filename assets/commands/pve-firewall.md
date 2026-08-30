@@ -4,33 +4,37 @@ Proxmox distributed firewall manager
 
 # TLDR
 
-**Compile** and print all firewall rules
+Show whether the firewall is **running and enabled**
 
-```pve-firewall compile```
+```pve-firewall status```
 
-Show information about the **local network**
-
-```pve-firewall localnet```
-
-**Restart** the Proxmox VE Firewall service
-
-```pve-firewall restart```
-
-**Start** the Proxmox VE Firewall service
+**Start** the firewall service
 
 ```pve-firewall start```
 
-**Stop** the Proxmox VE Firewall service
+**Stop** it
 
 ```pve-firewall stop```
 
-**Simulate** all firewall rules
+**Restart** it after editing the rule files
 
-```pve-firewall simulate```
+```pve-firewall restart```
 
-Show the **status** of Proxmox VE Firewall
+**Compile** the configuration and print the iptables rules it produces
 
-```pve-firewall status```
+```pve-firewall compile```
+
+Show which network the node treats as **local**
+
+```pve-firewall localnet```
+
+**Trace how a packet would be handled**
+
+```pve-firewall simulate --from [vm100] --to [host] --dport [22]```
+
+Trace it with **full detail**
+
+```pve-firewall simulate --verbose --from [outside] --to [vm100] --dport [80]```
 
 # SYNOPSIS
 

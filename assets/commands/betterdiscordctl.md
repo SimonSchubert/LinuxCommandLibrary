@@ -4,25 +4,45 @@ Manage BetterDiscord installation on Linux
 
 # TLDR
 
-**Install** BetterDiscord on Discord Stable
+Install BetterDiscord into **Discord Stable**
 
 ```sudo betterdiscordctl install```
 
-Install BetterDiscord on **Discord Canary**
+Install it into **Canary**
 
-```sudo betterdiscordctl -f canary install```
+```sudo betterdiscordctl --d-flavors canary install```
 
-Install BetterDiscord on **Discord PTB**
+Install it into **PTB**
 
-```sudo betterdiscordctl -f ptb install```
+```sudo betterdiscordctl --d-flavors ptb install```
 
-Install BetterDiscord on Discord installed with **Flatpak**
+Install where Discord came from **Flatpak**
 
-```sudo betterdiscordctl -i flatpak install```
+```sudo betterdiscordctl --d-install flatpak install```
 
-Install BetterDiscord on Discord installed with **Snap**
+Install where Discord came from **Snap**
 
-```sudo betterdiscordctl -i snap install```
+```sudo betterdiscordctl --d-install snap install```
+
+Check **whether it is installed** and which version
+
+```betterdiscordctl status```
+
+**Update** BetterDiscord after Discord updates itself
+
+```sudo betterdiscordctl upgrade```
+
+**Reinstall** when a Discord update breaks the injection
+
+```sudo betterdiscordctl reinstall```
+
+**Remove** it again
+
+```sudo betterdiscordctl uninstall```
+
+Update **betterdiscordctl itself**
+
+```sudo betterdiscordctl self-upgrade```
 
 # SYNOPSIS
 

@@ -4,19 +4,27 @@ Set AppArmor profiles to audit mode
 
 # TLDR
 
-Set a profile to **audit mode**
+Put a profile into **audit mode**, so permitted actions are logged too
 
 ```sudo aa-audit [profile_name]```
 
-Set **multiple profiles** to audit mode
+Do it for **several profiles** at once
 
 ```sudo aa-audit [profile1] [profile2]```
 
-Set a profile to audit mode from a **specific directory**
+Take a profile **back out** of audit mode
 
-```sudo aa-audit -d /path/to/profiles [profile_name]```
+```sudo aa-audit --remove [profile_name]```
 
-Set a profile to audit mode **without reloading** it
+Read profiles from a **directory other than the system one**
+
+```sudo aa-audit --dir [path/to/profiles] [profile_name]```
+
+Apply it **again** even though the profile already has it
+
+```sudo aa-audit --force [profile_name]```
+
+Change the file but **leave the running policy alone**
 
 ```sudo aa-audit --no-reload [profile_name]```
 

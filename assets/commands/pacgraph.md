@@ -4,37 +4,37 @@ visualizes the dependency relationships between installed packages
 
 # TLDR
 
-Produce an **SVG and PNG** graph
+Draw the dependency graph as **both SVG and PNG**
 
 ```pacgraph```
 
-Produce an **SVG** graph only
+Stop after the **SVG**
 
-```pacgraph -s```
+```pacgraph --svg```
 
-Print **summary to console**
+Print a **text summary** instead of drawing anything
 
-```pacgraph -c```
+```pacgraph --console```
 
-Override the default **filename/location**
+Write to a chosen path, **without an extension**
 
-```pacgraph -f [path/to/file]```
+```pacgraph --file [path/to/graph]```
 
-Change the color of **packages that are not dependencies**
+Recolor the packages **nothing else depends on**
 
-```pacgraph -t [color]```
+```pacgraph --top [color]```
 
-Change the color of **package dependencies**
+Recolor the **dependencies**
 
-```pacgraph -d [color]```
+```pacgraph --dep [color]```
 
-Change the **background color**
+Recolor the **arrows between packages**
 
-```pacgraph -b [color]```
+```pacgraph --link [color]```
 
-Change the color of **links between packages**
+Change the **background**
 
-```pacgraph -l [color]```
+```pacgraph --background [color]```
 
 # SYNOPSIS
 

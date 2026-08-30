@@ -4,37 +4,61 @@ low-level Debian package manager
 
 # TLDR
 
-**Install** a package
+**Install** a package file
 
-```sudo dpkg -i [path/to/file.deb]```
+```sudo dpkg --install [path/to/package.deb]```
 
-**Remove** a package
+**Unpack** without configuring it yet
 
-```sudo dpkg -r [package]```
+```sudo dpkg --unpack [path/to/package.deb]```
 
-**List** installed packages
+**Configure** a package that is unpacked but not set up
 
-```dpkg -l [pattern]```
+```sudo dpkg --configure [package]```
 
-List a package's **contents**
+Configure **everything** left half-installed
 
-```dpkg -L [package]```
+```sudo dpkg --configure -a```
 
-List contents of a **local package file**
+**Remove** a package, keeping its configuration
 
-```dpkg -c [path/to/file.deb]```
+```sudo dpkg --remove [package]```
 
-Find which package **owns** a file
+Remove a package **and its configuration**
 
-```dpkg -S [path/to/file]```
+```sudo dpkg --purge [package]```
 
-**Purge** a package including configuration files
+**List** installed packages matching a pattern
 
-```sudo dpkg -P [package]```
+```dpkg --list '[*ssh*]'```
 
-Show package **status**
+Show one package's **status**
 
-```dpkg -s [package]```
+```dpkg --status [package]```
+
+List the **files a package installed**
+
+```dpkg --listfiles [package]```
+
+Find **which package owns a file**
+
+```dpkg --search [/usr/bin/ssh]```
+
+List what is **inside a .deb** without installing it
+
+```dpkg --contents [path/to/package.deb]```
+
+**Extract** a .deb into a directory
+
+```dpkg --extract [path/to/package.deb] [path/to/dir]```
+
+**Verify** installed files against their recorded checksums
+
+```dpkg --verify [package]```
+
+Report packages that are **broken or half-installed**
+
+```dpkg --audit```
 
 # SYNOPSIS
 

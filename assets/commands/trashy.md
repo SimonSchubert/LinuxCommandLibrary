@@ -4,33 +4,37 @@ Rust-based command-line trash utility
 
 # TLDR
 
-Move a specific **file** to the trash
+Move files to the trash
 
-```trash [path/to/file]```
+```trashy [path/to/file1] [path/to/file2]```
 
-Move **multiple files** to the trash
+The same thing, **spelled out**
 
-```trash [path/to/file1] [path/to/file2]```
+```trashy put [path/to/file]```
 
-**List** items in the trash
+**List** what is currently in the trash
 
-```trash list```
+```trashy list```
 
-**Restore** a specific file from the trash
+**Restore** the entries matching a regular expression
 
-```trash restore [file]```
+```trashy restore [pattern]```
 
-**Remove** a specific file from the trash
+Restore by **exact name** rather than by pattern
 
-```trash empty [file]```
+```trashy restore --match=exact [filename]```
 
-Restore **all files** from the trash
+Restore **everything**
 
-```trash restore --all```
+```trashy restore --all```
 
-Remove **all files** from the trash
+**Permanently delete** the entries matching a pattern
 
-```trash empty --all```
+```trashy empty [pattern]```
+
+Empty the whole trash **without prompting**
+
+```trashy empty --all --force```
 
 # SYNOPSIS
 

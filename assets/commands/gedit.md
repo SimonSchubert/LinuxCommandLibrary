@@ -4,21 +4,45 @@ text editor for GNOME desktop environment
 
 # TLDR
 
-**Open** a text file
+Open a file
 
 ```gedit [path/to/file]```
 
-Open **multiple** text files
+Open **several files** in tabs
 
-```gedit [file1] [file2] ...```
+```gedit [path/to/file1] [path/to/file2]```
 
-Open a text file with a **specific encoding**
+Jump straight to a **line number**
 
-```gedit --encoding UTF-8 [path/to/file]```
+```gedit +[42] [path/to/file]```
 
-Display a list of **supported encodings**
+Jump to a **line and column**
+
+```gedit +[42]:[8] [path/to/file]```
+
+Force a **character encoding** when the guess is wrong
+
+```gedit --encoding [ISO-8859-1] [path/to/file]```
+
+See which **encodings** it knows about
 
 ```gedit --list-encodings```
+
+Open in a **new window** rather than a tab
+
+```gedit --new-window [path/to/file]```
+
+Start with an **empty document**
+
+```gedit --new-document```
+
+**Block until the file is closed**, which is what git expects of an editor
+
+```gedit --wait [path/to/file]```
+
+Read the text from a **pipe**
+
+```[command] | gedit -```
 
 # SYNOPSIS
 

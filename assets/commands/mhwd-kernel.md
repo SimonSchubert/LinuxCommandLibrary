@@ -4,25 +4,25 @@ manages Linux kernel installation and removal on Manjaro Linux
 
 # TLDR
 
-List all **available kernels**
+Show the kernels **Manjaro offers**
 
-```mhwd-kernel -l```
+```mhwd-kernel --list```
 
-List all **installed kernels**
+Show which kernels are **already installed**
 
-```mhwd-kernel -li```
+```mhwd-kernel --listinstalled```
 
-**Install** a kernel
+Install another kernel **alongside** the current one
 
-```sudo mhwd-kernel -i [kernel]```
+```sudo mhwd-kernel --install [linux66]```
 
-**Remove** a kernel
+Install one and **remove the running kernel** in the same step
 
-```sudo mhwd-kernel -r [kernel]```
+```sudo mhwd-kernel --install [linux66] rmc```
 
-Install a kernel, **replacing the currently running kernel**
+Remove a kernel you **no longer boot**
 
-```sudo mhwd-kernel -i [kernel] rmc```
+```sudo mhwd-kernel --remove [linux61]```
 
 # SYNOPSIS
 
@@ -51,7 +51,7 @@ Install a kernel, **replacing the currently running kernel**
 
 Kernel names follow the pattern **linux** followed by the version number (e.g., linux515, linux61, linux66). The tool automatically handles kernel modules and headers alongside the kernel itself.
 
-The **rmc** (remove current) option is useful when replacing a problematic kernel—it removes the currently running kernel after successfully installing the new one and after a reboot.
+The **rmc** (remove current) option is useful when replacing a problematic kernel: it removes the currently running kernel after successfully installing the new one and after a reboot.
 
 # CAVEATS
 

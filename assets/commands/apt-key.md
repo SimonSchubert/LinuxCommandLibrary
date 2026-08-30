@@ -4,35 +4,43 @@ Deprecated APT key management utility for package authentication
 
 # TLDR
 
-**List** trusted keys
+List the keys apt currently **trusts**
 
 ```apt-key list```
 
-**Add** a key to the trusted keystore
+Show the **fingerprints** of those keys
 
-```apt-key add [public_key_file.asc]```
+```apt-key finger```
 
-**Delete** a key from the trusted keystore
+Add a key **from a file**
 
-```apt-key del [key_id]```
+```sudo apt-key add [path/to/key.asc]```
 
-Add a **remote key** to the trusted keystore
+Add a key **read from a pipe**
 
-```wget -qO - [https://host.tld/filename.key] | apt-key add -```
+```curl -fsSL [https://example.com/key.asc] | sudo apt-key add -```
 
-Add a key from **keyserver** with only key ID
+Fetch a key from a **keyserver** by ID
 
-```apt-key adv --keyserver pgp.mit.edu --recv [KEYID]```
+```sudo apt-key adv --keyserver [keyserver.ubuntu.com] --recv-keys [key_id]```
 
-**Export** all trusted keys
+**Delete** a key
+
+```sudo apt-key del [key_id]```
+
+**Export** a single key
+
+```apt-key export [key_id]```
+
+Export **every** trusted key
 
 ```apt-key exportall```
 
-**Modern replacement**: download a key directly into trusted.gpg.d (no apt-key needed)
+Preferred today: give the repository **its own keyring file**
 
-```curl -fsSL [https://example.com/key.gpg] | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/[example].gpg```
+```curl -fsSL [https://example.com/key.gpg] | sudo gpg --dearmor -o /usr/share/keyrings/[example].gpg```
 
-**Modern replacement**: use signed-by in sources.list
+Preferred today: bind one repository to that keyring with **signed-by**
 
 ```echo "deb [signed-by=/usr/share/keyrings/[example].gpg] [https://repo.example.com] [stable] main" | sudo tee /etc/apt/sources.list.d/[example].list```
 

@@ -4,19 +4,23 @@ mounts or unmounts SteamOS filesystem partitions, used primarily for accessing
 
 # TLDR
 
-**Mount** all necessary partitions from a device to a target directory
+Mount every SteamOS partition from a disk under one directory
 
 ```sudo mount.steamos [/dev/sdX] [/mnt]```
 
-Mount with options to **exclude specific partitions** (e.g. /home, overlays)
+Leave the **home partition** out
+
+```sudo mount.steamos -o nohome [/dev/sdX] [/mnt]```
+
+Leave the **overlays** out as well
 
 ```sudo mount.steamos -o nohome,nooverlay [/dev/sdX] [/mnt]```
 
-**Unmount** all partitions mounted under a target directory
+**Unmount** everything it mounted there
 
 ```sudo mount.steamos -u [/mnt]```
 
-Display **help**
+List the **options it accepts**
 
 ```mount.steamos -h```
 

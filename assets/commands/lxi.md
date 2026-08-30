@@ -4,25 +4,33 @@ controls LXI compatible test equipment such as oscilloscopes, spectrum
 
 # TLDR
 
-**Discover** LXI devices on available networks
+Find LXI instruments on the network
 
 ```lxi discover```
 
-Capture a **screenshot**, detecting a plugin automatically
+Ask an instrument to **identify itself**
 
-```lxi screenshot -a [ip_address]```
+```lxi scpi --address [192.168.1.50] "*IDN?"```
 
-Capture a screenshot using a **specified plugin**
+Send **any SCPI command** and print the reply
 
-```lxi screenshot -a [ip_address] -p [rigol-1000z]```
+```lxi scpi --address [192.168.1.50] "[MEASure:VOLTage:DC?]"```
 
-Send an **SCPI command** to an instrument
+Allow **longer for a slow instrument** to answer
 
-```lxi scpi -a [ip_address] "[*IDN?]"```
+```lxi scpi --address [192.168.1.50] --timeout [5000] "*IDN?"```
 
-Run a **benchmark** for request and response performance
+Grab a **screenshot**, detecting the model automatically
 
-```lxi benchmark -a [ip_address]```
+```lxi screenshot --address [192.168.1.50]```
+
+Grab one using a **named plugin**, when detection guesses wrong
+
+```lxi screenshot --address [192.168.1.50] --plugin [rigol-1000z]```
+
+Measure **request and response latency**
+
+```lxi benchmark --address [192.168.1.50]```
 
 # SYNOPSIS
 

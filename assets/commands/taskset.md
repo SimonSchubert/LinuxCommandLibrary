@@ -4,33 +4,37 @@ Set process CPU affinity
 
 # TLDR
 
-**Get** a running process' CPU affinity by PID
+Show which CPUs a **running process** is allowed to use
 
-```taskset -p -c [pid]```
+```taskset --pid --cpu-list [pid]```
 
-**Set** a running process' CPU affinity by PID
+**Pin** a running process to one CPU
 
-```taskset -p -c [cpu_id] [pid]```
+```taskset --pid --cpu-list [2] [pid]```
 
-**Start** a new process with affinity for a single CPU
+Pin **every thread** of the process, not just the main one
 
-```taskset -c [cpu_id] [command]```
+```taskset --all-tasks --pid --cpu-list [0-3] [pid]```
 
-**Start** a new process with affinity for multiple non-sequential CPUs
+**Launch** a command pinned to a single CPU
 
-```taskset -c [cpu_id_1,cpu_id_2,cpu_id_3] [command]```
+```taskset --cpu-list [0] [command]```
 
-**Start** a new process with affinity for CPUs 1 through 4
+Launch a command pinned to a **range** of CPUs
 
-```taskset -c [1-4] [command]```
+```taskset --cpu-list [0-3] [command]```
 
-**Set affinity using a hex bitmask** (CPUs 0 and 1)
+Launch a command pinned to a **non-contiguous set**
 
-```taskset -p [0x3] [pid]```
+```taskset --cpu-list [0,2,4] [command]```
 
-**Set affinity for all threads** of a process
+Use a **hexadecimal mask** instead of a list
 
-```taskset -a -p -c [0-3] [pid]```
+```taskset [0x3] [command]```
+
+Read a process's affinity **as a mask**
+
+```taskset --pid [pid]```
 
 # SYNOPSIS
 

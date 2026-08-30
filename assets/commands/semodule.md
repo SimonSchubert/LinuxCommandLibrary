@@ -4,33 +4,53 @@ Manage SELinux policy modules
 
 # TLDR
 
-**List** all installed policy modules
+List the modules in the **active policy**
 
-```sudo semodule -l```
+```sudo semodule --list-modules```
 
-**Install** a new policy module
+List them with their **priorities and enabled state**
 
-```sudo semodule -i path/to/module.pp```
+```sudo semodule --list-modules=full```
 
-**Remove** a policy module
+**Install** a compiled policy module
 
-```sudo semodule -r module_name```
+```sudo semodule --install [path/to/module.pp]```
 
-**Enable** a policy module
+Install at a **higher priority**, overriding the one the distribution ships
 
-```sudo semodule -e module_name```
+```sudo semodule --priority [400] --install [path/to/module.pp]```
 
-**Disable** a policy module
+**Disable** a module without removing it
 
-```sudo semodule -d module_name```
+```sudo semodule --disable [module_name]```
 
-**Reload** all policy modules
+**Re-enable** it
 
-```sudo semodule -R```
+```sudo semodule --enable [module_name]```
 
-List with **verbose** version info
+**Remove** a module
 
-```sudo semodule -l -v```
+```sudo semodule --remove [module_name]```
+
+Make several changes, then **reload once** at the end
+
+```sudo semodule --noreload --install [path/to/module.pp]```
+
+**Rebuild and reload** the whole policy
+
+```sudo semodule --build```
+
+**Reload** the policy as it stands
+
+```sudo semodule --reload```
+
+Turn off **dontaudit rules**, so silent denials show up in the audit log
+
+```sudo semodule --disable_dontaudit --build```
+
+**Extract** an installed module back out to a file
+
+```sudo semodule --extract [module_name]```
 
 # SYNOPSIS
 

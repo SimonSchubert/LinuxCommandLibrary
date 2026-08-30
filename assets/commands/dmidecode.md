@@ -4,41 +4,57 @@ DMI/SMBIOS hardware information decoder
 
 # TLDR
 
-**Show all DMI table contents**
+Dump the **whole DMI table**
 
 ```sudo dmidecode```
 
-**Show the BIOS version**
+Read a **single value** by keyword
 
-```sudo dmidecode -s bios-version```
+```sudo dmidecode --string system-serial-number```
 
-**Show the system serial number**
-
-```sudo dmidecode -s system-serial-number```
-
-**Show BIOS information**
-
-```sudo dmidecode -t bios```
-
-**Show CPU information**
-
-```sudo dmidecode -t processor```
-
-**Show memory information**
-
-```sudo dmidecode -t memory```
-
-**Show system manufacturer and product name**
-
-```sudo dmidecode -t system```
-
-**Dump DMI data to a binary file**
-
-```sudo dmidecode --dump-bin [output.bin]```
-
-**List available string keywords**
+List the **keywords** that can be read this way
 
 ```dmidecode --list-strings```
+
+Show one **table type** by name
+
+```sudo dmidecode --type memory```
+
+Show the **installed DIMMs**, with size and speed
+
+```sudo dmidecode --type 17```
+
+List the **type names and numbers** available
+
+```dmidecode --list-types```
+
+Show the **BIOS** vendor, version and release date
+
+```sudo dmidecode --type bios```
+
+Show **several types** in one run
+
+```sudo dmidecode --type baseboard --type chassis```
+
+Look up a single structure by its **handle**
+
+```sudo dmidecode --handle [0x1000]```
+
+Drop the banner and handle lines, for **scripting**
+
+```sudo dmidecode --quiet --type system```
+
+**Save the raw table** for analysis elsewhere
+
+```sudo dmidecode --dump-bin [path/to/dmi.bin]```
+
+Read a **saved dump**, which needs no root
+
+```dmidecode --from-dump [path/to/dmi.bin]```
+
+Show the **raw hex** beside the decoded output
+
+```sudo dmidecode --dump```
 
 # SYNOPSIS
 

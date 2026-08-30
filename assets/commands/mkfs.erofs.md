@@ -4,21 +4,53 @@ creates EROFS images from a directory tree
 
 # TLDR
 
-Create an **EROFS filesystem** based on the root directory
+Build an image from a **directory tree**
 
-```mkfs.erofs [image.erofs] [root/]```
+```mkfs.erofs [image.erofs] [path/to/root]```
 
-Create an EROFS image with a **specific UUID**
+Compress it with **LZ4 HC**
 
-```mkfs.erofs -U [UUID] [image.erofs] [root/]```
+```mkfs.erofs -zlz4hc [image.erofs] [path/to/root]```
 
-Create a **compressed** EROFS image
+Compress with **LZMA**, which packs smaller but builds slower
 
-```mkfs.erofs -zlz4hc [image.erofs] [root/]```
+```mkfs.erofs -zlzma [image.erofs] [path/to/root]```
 
-Create an EROFS image where **all files are owned by root**
+Pick the **compression level**
 
-```mkfs.erofs --all-root [image.erofs] [root/]```
+```mkfs.erofs -zlz4hc,[12] [image.erofs] [path/to/root]```
+
+Set the **block size**
+
+```mkfs.erofs -b [4096] [image.erofs] [path/to/root]```
+
+Pin the **UUID**, which reproducible builds need
+
+```mkfs.erofs -U [uuid] [image.erofs] [path/to/root]```
+
+Pin the **timestamp** as well
+
+```mkfs.erofs -T [1700000000] -U [uuid] [image.erofs] [path/to/root]```
+
+Make every file **owned by root**
+
+```mkfs.erofs --all-root [image.erofs] [path/to/root]```
+
+**Leave a path out** of the image
+
+```mkfs.erofs --exclude-path=[path/to/skip] [image.erofs] [path/to/root]```
+
+Exclude by **pattern**
+
+```mkfs.erofs --exclude-regex=[\.git.*] [image.erofs] [path/to/root]```
+
+Build straight from a **tarball**
+
+```mkfs.erofs --tar=f [image.erofs] [path/to/archive.tar]```
+
+Record **SELinux labels** from a file_contexts file
+
+```mkfs.erofs --file-contexts=[path/to/file_contexts] [image.erofs] [path/to/root]```
 
 # SYNOPSIS
 

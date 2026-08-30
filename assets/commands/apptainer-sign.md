@@ -4,25 +4,29 @@ Cryptographically sign SIF container images
 
 # TLDR
 
-**Sign** a container image using the default PGP key
+Sign an image with the **default PGP key**
 
 ```apptainer sign [path/to/image.sif]```
 
-Sign a container image using a **specific private key** file
+Choose **which key in the keyring** to sign with
+
+```apptainer sign --keyidx [1] [path/to/image.sif]```
+
+Sign with a **PEM private key** rather than PGP
 
 ```apptainer sign --key [path/to/private.pem] [path/to/image.sif]```
 
-Sign a container image using a **specific PGP key index**
+Sign **every object** the image contains
 
-```apptainer sign -k [key_index] [path/to/image.sif]```
+```apptainer sign --all [path/to/image.sif]```
 
-Sign a **specific object group** within the image
+Sign one **object group**
 
-```apptainer sign -g [group_id] [path/to/image.sif]```
+```apptainer sign --group-id [1] [path/to/image.sif]```
 
-Sign a **specific object by ID** within the image
+Sign a **single object** by its SIF id
 
-```apptainer sign -i [object_id] [path/to/image.sif]```
+```apptainer sign --sif-id [3] [path/to/image.sif]```
 
 # SYNOPSIS
 

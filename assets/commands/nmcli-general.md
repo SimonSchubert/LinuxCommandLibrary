@@ -4,29 +4,37 @@ Manage general NetworkManager settings and status
 
 # TLDR
 
-Show the **general status** of NetworkManager
+Show NetworkManager's **overall state**
 
-```nmcli general```
+```nmcli general status```
 
-Show the **hostname** of the current device
+Print the **current hostname**
 
 ```nmcli general hostname```
 
-**Change the hostname** of the current device
+**Change** the hostname
 
 ```sudo nmcli general hostname [new_hostname]```
 
-Show the **permissions** of NetworkManager
+Show which operations the **caller is allowed** to perform
 
 ```nmcli general permissions```
 
-Show the **current logging level** and domains
+Show the **logging level and domains** in force
 
 ```nmcli general logging```
 
-**Set the logging level** and/or domains
+Turn logging **all the way up** while debugging
 
-```sudo nmcli general logging level [INFO|OFF|ERR|WARN|DEBUG|TRACE] domain [domain_1,domain_2,...]```
+```sudo nmcli general logging level DEBUG domain ALL```
+
+Raise the level for **one subsystem** only
+
+```sudo nmcli general logging level INFO domain WIFI```
+
+Return the state in a form a **script can parse**
+
+```nmcli --terse --fields STATE,CONNECTIVITY general status```
 
 # SYNOPSIS
 
