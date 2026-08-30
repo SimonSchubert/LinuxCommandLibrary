@@ -4,39 +4,47 @@ Verify cryptographic signatures on container images
 
 # TLDR
 
-**Verify** a container image using the default PGP keyring
+Check an image's signature against the **local keyring**
 
 ```apptainer verify [path/to/image.sif]```
 
-Verify a container image using a **specific public key** file
+Check it against **one public key** file
 
 ```apptainer verify --key [path/to/public.pem] [path/to/image.sif]```
 
-Verify a container image using a **certificate** file
+Check an **X.509 certificate** signature instead of PGP
 
 ```apptainer verify --certificate [path/to/certificate.pem] [path/to/image.sif]```
 
-Verify **all objects** in the image
+Supply the **root certificates** the chain must lead back to
 
-```apptainer verify -a [path/to/image.sif]```
+```apptainer verify --certificate [path/to/cert.pem] --certificate-roots [path/to/roots.pem] [path/to/image.sif]```
 
-Verify a **specific object group** within the image
+Ask the CA whether the certificate has been **revoked**
 
-```apptainer verify -g [group_id] [path/to/image.sif]```
+```apptainer verify --certificate [path/to/cert.pem] --ocsp-verify [path/to/image.sif]```
 
-Verify a **specific object by ID** within the image
+Check **every signed object**, not just the primary one
 
-```apptainer verify -i [object_id] [path/to/image.sif]```
+```apptainer verify --all [path/to/image.sif]```
 
-Output verification results in **JSON format**
+Check one **object group**
 
-```apptainer verify -j [path/to/image.sif]```
+```apptainer verify --group-id [1] [path/to/image.sif]```
 
-Verify using only **local keys** in the keyring
+Check a **single object** by its SIF id
 
-```apptainer verify -l [path/to/image.sif]```
+```apptainer verify --sif-id [3] [path/to/image.sif]```
 
-Verify **legacy** (insecure) signatures
+Report the result as **JSON**
+
+```apptainer verify --json [path/to/image.sif]```
+
+Use **only local keys**, never contacting a keyserver
+
+```apptainer verify --local [path/to/image.sif]```
+
+Accept the **old signature format**, which is not secure
 
 ```apptainer verify --legacy-insecure [path/to/image.sif]```
 

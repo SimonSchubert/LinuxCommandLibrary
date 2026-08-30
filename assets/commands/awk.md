@@ -4,29 +4,65 @@ Pattern scanning and text processing language
 
 # TLDR
 
-Print the **fifth column** (a.k.a. field) in a space-separated file
+Print a **single field** from every line
 
-```awk '{print $5}' [path/to/file] ```
+```awk '{print $3}' [path/to/file]```
 
-Print the second column of the **lines containing "foo"** in a space-separated file
+Print the **last field**, whatever the field count
 
-```awk '/[foo]/ {print $2}' [path/to/file] ```
+```awk '{print $NF}' [path/to/file]```
 
-Print the **last column** of each line in a file, using a **comma** (instead of space) as a field separator
+Split on something other than whitespace
 
-```awk -F ',' '{print $NF}' [path/to/file]```
+```awk -F ':' '{print $1, $7}' /etc/passwd```
 
-**Sum the values** in the first column of a file and print the total
+Print a field only from lines **matching a pattern**
 
-```awk '{s+=$1} END {print s}' [path/to/file]```
+```awk '/[error]/ {print $1}' [path/to/file]```
 
-Print different values **based on conditions**
+Keep the lines where a field **passes a numeric test**
 
-```awk '{if ($1 == "foo") print "Exact match foo"; else if ($1 ~ "bar") print "Partial match bar"; else print "Baz"}' [path/to/file]```
+```awk '$3 > [100]' [path/to/file]```
 
-Print all the lines which the 10th column value is **between a min and a max**
+Combine a **field test with an action**
 
-```awk '($10 >= [min_value] && $10 <= [max_value])'```
+```awk -F ',' '$2 == "[EU]" {print $1}' [path/to/file]```
+
+**Sum** a column
+
+```awk '{sum += $1} END {print sum}' [path/to/file]```
+
+**Average** a column
+
+```awk '{sum += $2} END {print sum / NR}' [path/to/file]```
+
+**Count how often** each value appears
+
+```awk '{count[$1]++} END {for (key in count) print count[key], key}' [path/to/file]```
+
+Select a **range of line numbers**
+
+```awk 'NR >= [10] && NR <= [20]' [path/to/file]```
+
+Skip the **header line**
+
+```awk 'NR > 1' [path/to/file]```
+
+Read one separator and **write another**
+
+```awk -F ',' -v OFS='\t' '{print $1, $3}' [path/to/file]```
+
+Pass a **shell value** into the program
+
+```awk -v threshold=[100] '$1 > threshold' [path/to/file]```
+
+Drop **duplicate lines** while keeping the original order
+
+```awk '!seen[$0]++' [path/to/file]```
+
+Print a **formatted table** with a header
+
+```awk -F ':' 'BEGIN {printf "%-20s %6s\n", "USER", "UID"} $3 >= 1000 {printf "%-20s %6d\n", $1, $3}' /etc/passwd```
 
 # SYNOPSIS
 

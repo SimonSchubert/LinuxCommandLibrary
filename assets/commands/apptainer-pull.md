@@ -4,33 +4,53 @@ Download container images from remote registries.
 
 # TLDR
 
-Pull a container from **Docker Hub**
+Pull from a registry, letting apptainer **name the file**
 
-```apptainer pull [path/to/image.sif] docker://[image]:[tag]```
+```apptainer pull docker://[ubuntu]:[22.04]```
 
-Pull a container from the **Container Library**
+Pull and **choose the output filename**
 
-```apptainer pull [path/to/image.sif] library://[user/collection/container]:[tag]```
+```apptainer pull [path/to/image.sif] docker://[ubuntu]:[22.04]```
 
-Pull a container from an **OCI registry**
+Download into a **particular directory**
 
-```apptainer pull [path/to/image.sif] oras://[registry/namespace/image]:[tag]```
+```apptainer pull --dir [path/to/images] docker://[image]:[tag]```
 
-Pull a container for a **specific architecture**
+Pull from the **Container Library**
 
-```apptainer pull --arch [amd64|arm64|ppc64le] [path/to/image.sif] library://[image]:[tag]```
+```apptainer pull library://[user/collection/container]:[tag]```
 
-**Force overwrite** an existing image file
+Pull from an OCI registry over **ORAS**
 
-```apptainer pull -F [path/to/image.sif] docker://[image]:[tag]```
+```apptainer pull oras://[registry/namespace/image]:[tag]```
 
-Pull a container as a **writable sandbox** directory
+Pull a build for **another architecture**
 
-```apptainer pull --sandbox [path/to/directory] docker://[image]:[tag]```
+```apptainer pull --arch [arm64] [path/to/image.sif] library://[image]:[tag]```
 
-Pull a container **without using the cache**
+Pull straight into a **writable sandbox directory**
+
+```apptainer pull --sandbox [path/to/sandbox] docker://[image]:[tag]```
+
+**Overwrite** a file that is already there
+
+```apptainer pull --force [path/to/image.sif] docker://[image]:[tag]```
+
+**Log in interactively** for a private registry
+
+```apptainer pull --docker-login docker://[private/image]:[tag]```
+
+Use **stored registry credentials** instead
+
+```apptainer pull --authfile [path/to/auth.json] docker://[private/image]:[tag]```
+
+Skip the **cache** entirely
 
 ```apptainer pull --disable-cache [path/to/image.sif] docker://[image]:[tag]```
+
+Make the result **reproducible** by reusing the source creation date
+
+```apptainer pull --reproducible [path/to/image.sif] docker://[image]:[tag]```
 
 # SYNOPSIS
 

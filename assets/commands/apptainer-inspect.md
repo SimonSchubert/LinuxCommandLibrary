@@ -4,37 +4,49 @@ Display metadata from container images.
 
 # TLDR
 
-Show the **labels** of an image (default)
+Show an image's **labels**, which is the default
 
 ```apptainer inspect [path/to/image.sif]```
 
-Show the **definition file** used to build the image
+Show the **definition file** it was built from
 
-```apptainer inspect -d [path/to/image.sif]```
+```apptainer inspect --deffile [path/to/image.sif]```
 
-Show the **runscript** for the image
+Show the **runscript** that `apptainer run` executes
 
-```apptainer inspect -r [path/to/image.sif]```
+```apptainer inspect --runscript [path/to/image.sif]```
 
-Show the **environment variables** of the image
+Show the **startscript** that instances use
 
-```apptainer inspect -e [path/to/image.sif]```
+```apptainer inspect --startscript [path/to/image.sif]```
 
-Show the **startscript** for the image
+Show the **environment** baked into the image
 
-```apptainer inspect -s [path/to/image.sif]```
+```apptainer inspect --environment [path/to/image.sif]```
 
-Inspect a **specific app** within the container
+Show the definition's **%test section**
 
-```apptainer inspect --app [app_name] [path/to/image.sif]```
+```apptainer inspect --test [path/to/image.sif]```
 
-**List all apps** in the container
+Show the **help text** the author shipped
+
+```apptainer inspect --helpfile [path/to/image.sif]```
+
+**List the apps** the image provides
 
 ```apptainer inspect --list-apps [path/to/image.sif]```
 
-Show **all available data** in JSON format
+Inspect **one app** rather than the image as a whole
+
+```apptainer inspect --app [app_name] --runscript [path/to/image.sif]```
+
+Dump **everything** the image records
 
 ```apptainer inspect --all [path/to/image.sif]```
+
+Emit **JSON** for a script to parse
+
+```apptainer inspect --json --labels [path/to/image.sif]```
 
 # SYNOPSIS
 

@@ -4,33 +4,53 @@ Build Apptainer container images from definition files or remote sources.
 
 # TLDR
 
-Build a container from a **definition file**
+Build an image from a **definition file**
 
 ```apptainer build [path/to/image.sif] [path/to/definition.def]```
 
-Build a container from **Docker Hub**
+Convert a **registry image** straight into a SIF
 
-```apptainer build [path/to/image.sif] docker://[image]:[tag]```
+```apptainer build [path/to/image.sif] docker://[ubuntu]:[22.04]```
 
-Build a container from the **Container Library**
+Build into a **writable sandbox directory**, which is easier to iterate on
 
-```apptainer build [path/to/image.sif] library://[user/collection/container]:[tag]```
+```apptainer build --sandbox [path/to/sandbox] docker://[ubuntu]:[22.04]```
 
-Build a **writable sandbox** directory instead of an image file
+Turn a finished sandbox **back into a SIF**
 
-```apptainer build -s [path/to/directory] docker://[image]:[tag]```
+```apptainer build [path/to/image.sif] [path/to/sandbox]```
 
-Build a container **without using the cache**
+Build **without root**, using user namespaces
+
+```apptainer build --fakeroot [path/to/image.sif] [path/to/definition.def]```
+
+**Overwrite** an image that already exists
+
+```apptainer build --force [path/to/image.sif] [path/to/definition.def]```
+
+Skip the definition's **%test section**
+
+```apptainer build --notest [path/to/image.sif] [path/to/definition.def]```
+
+Run **only some sections** of the definition
+
+```apptainer build --section [post] [path/to/image.sif] [path/to/definition.def]```
+
+Pass a **build argument** into the definition
+
+```apptainer build --build-arg [VERSION]=[1.2] [path/to/image.sif] [path/to/definition.def]```
+
+Ignore the **local cache**
 
 ```apptainer build --disable-cache [path/to/image.sif] docker://[image]:[tag]```
 
-**Force overwrite** an existing image file
+Build for a **different architecture**
 
-```apptainer build -F [path/to/image.sif] [path/to/definition.def]```
+```apptainer build --arch [arm64] [path/to/image.sif] [path/to/definition.def]```
 
-Build using **fakeroot** for unprivileged builds
+Produce an **encrypted** image
 
-```apptainer build -f [path/to/image.sif] [path/to/definition.def]```
+```apptainer build --encrypt --pem-path [path/to/key.pem] [path/to/image.sif] [path/to/definition.def]```
 
 # SYNOPSIS
 

@@ -4,29 +4,45 @@ display battery, thermal, and power information
 
 # TLDR
 
-Show **battery** information
+Show the **battery charge** and time remaining
 
 ```acpi```
 
-Show **thermal** information
+Include the **design capacity and wear** of each battery
 
-```acpi -t```
+```acpi --battery --details```
 
-Show **cooling device** information
+Include slots that hold **no battery**
 
-```acpi -c```
+```acpi --battery --show-empty```
 
-Show thermal information in **Fahrenheit**
+Report whether the **AC adapter** is connected
 
-```acpi -t -f```
+```acpi --ac-adapter```
 
-Show **all** information
+Show **thermal zone** temperatures
 
-```acpi -V```
+```acpi --thermal```
 
-Extract information from **/proc** instead of /sys
+Show temperatures in **Fahrenheit**
 
-```acpi -p```
+```acpi --thermal --fahrenheit```
+
+Show temperatures in **Kelvin**
+
+```acpi --thermal --kelvin```
+
+Show the **cooling devices** and their current state
+
+```acpi --cooling```
+
+Show **everything** at once
+
+```acpi --everything```
+
+Read from **/proc** rather than /sys
+
+```acpi --proc```
 
 # SYNOPSIS
 

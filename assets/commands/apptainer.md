@@ -4,33 +4,61 @@ Build, run, and manage application containers for HPC
 
 # TLDR
 
-**Download a container** from Docker Hub
+Fetch an image from a registry
 
-```apptainer pull [path/to/image.sif] docker://[image]:[tag]```
+```apptainer pull docker://[ubuntu]:[22.04]```
 
-**Download a container** from the Container Library
-
-```apptainer pull [path/to/image.sif] library://[user/collection/container]:[tag]```
-
-**Build a container** from a definition file
-
-```apptainer build [path/to/image.sif] [path/to/definition.def]```
-
-Start an **interactive shell** inside a container
-
-```apptainer shell [path/to/image.sif]```
-
-**Execute a command** inside a container
-
-```apptainer exec [path/to/image.sif] [command]```
-
-**Run the default runscript** of a container
+Run the image's **default action**
 
 ```apptainer run [path/to/image.sif]```
 
-**Inspect** a container's metadata
+Run **one command** inside the image
+
+```apptainer exec [path/to/image.sif] [python3] [script.py]```
+
+Get an **interactive shell** in the image
+
+```apptainer shell [path/to/image.sif]```
+
+**Mount a host directory** so the job can reach your data
+
+```apptainer exec --bind [/data]:[/mnt] [path/to/image.sif] [command]```
+
+Expose the host's **GPUs** to the container
+
+```apptainer exec --nv [path/to/image.sif] [command]```
+
+**Isolate** the container from the host environment and filesystem
+
+```apptainer exec --cleanenv --containall [path/to/image.sif] [command]```
+
+**Build** an image from a definition file
+
+```apptainer build [path/to/image.sif] [path/to/definition.def]```
+
+Show an image's **labels and metadata**
 
 ```apptainer inspect [path/to/image.sif]```
+
+Run an image as a **background service**
+
+```apptainer instance start [path/to/image.sif] [name]```
+
+List the **running instances**
+
+```apptainer instance list```
+
+**Stop** a running instance
+
+```apptainer instance stop [name]```
+
+**Verify** an image's signature
+
+```apptainer verify [path/to/image.sif]```
+
+Reclaim the space used by the **download cache**
+
+```apptainer cache clean```
 
 # SYNOPSIS
 
