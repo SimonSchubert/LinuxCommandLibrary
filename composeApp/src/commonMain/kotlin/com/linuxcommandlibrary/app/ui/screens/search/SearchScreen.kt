@@ -24,6 +24,7 @@ import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.BasicGroup
@@ -86,7 +87,13 @@ fun SearchContent(
                 .clickable(enabled = false, onClick = {})
                 .background(MaterialTheme.colorScheme.background),
         ) {
-            Text("404 command not found", modifier = Modifier.align(Alignment.Center))
+            Text(
+                text = "404 command not found",
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .align(Alignment.Center)
+                    .padding(horizontal = 16.dp),
+            )
         }
     } else {
         WithScrollbar(

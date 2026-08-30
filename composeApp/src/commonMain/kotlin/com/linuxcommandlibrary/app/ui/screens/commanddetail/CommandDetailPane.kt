@@ -1,22 +1,25 @@
 package com.linuxcommandlibrary.app.ui.screens.commanddetail
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -42,6 +45,7 @@ import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.platform.backIcon
 import com.linuxcommandlibrary.app.ui.AppIcons
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
+import com.linuxcommandlibrary.app.ui.composables.AutoSizeText
 import com.linuxcommandlibrary.app.ui.composables.MatchIndex
 import com.linuxcommandlibrary.app.ui.composables.PaneTopBar
 import com.linuxcommandlibrary.app.ui.composables.SearchState
@@ -117,44 +121,84 @@ fun CommandDetailPane(
                 onClose = { searchState.clear() },
             )
         } else {
-            PaneTopBar(
-                title = commandName,
-                onBack = onBack,
-                actions = {
-                    IconButton(
-                        modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                        onClick = {
-                            searchState.show()
-                            searchState.requestFocus()
-                        },
-                    ) {
-                        Icon(
-                            imageVector = AppIcons.Search,
-                            contentDescription = "Search in page",
-                        )
-                    }
-                    IconButton(
-                        modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                        onClick = { viewModel.onToggleAllExpanded() },
-                    ) {
-                        Icon(
-                            painter = expandPainter,
-                            contentDescription = if (isAllExpanded) "Collapse all" else "Expand all",
-                        )
-                    }
-                    IconButton(
-                        modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                        onClick = {
-                            if (uiState.isBookmarked) viewModel.removeBookmark() else viewModel.addBookmark()
-                        },
-                    ) {
-                        Icon(
-                            painter = bookmarkPainter,
-                            contentDescription = if (uiState.isBookmarked) "Remove bookmark" else "Add bookmark",
-                        )
-                    }
-                },
-            )
+            val expandLabel = if (isAllExpanded) "Collapse all" else "Expand all"
+            val bookmarkLabel = if (uiState.isBookmarked) "Remove bookmark" else "Add bookmark"
+            val onToggleExpand = { viewModel.onToggleAllExpanded() }
+            val onToggleBookmark = {
+                if (uiState.isBookmarked) viewModel.removeBookmark() else viewModel.addBookmark()
+            }
+            BoxWithConstraints {
+                // Three action icons plus the back button eat 192dp. On a narrow pane - a phone at
+                // the largest display size is only ~274dp - that left the command name a 40dp
+                // sliver, so the two secondary actions move into an overflow menu.
+                val useOverflow = maxWidth < 360.dp
+                PaneTopBar(
+                    title = commandName,
+                    onBack = onBack,
+                    actions = {
+                        IconButton(
+                            modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
+                            onClick = {
+                                searchState.show()
+                                searchState.requestFocus()
+                            },
+                        ) {
+                            Icon(
+                                imageVector = AppIcons.Search,
+                                contentDescription = "Search in page",
+                            )
+                        }
+                        if (useOverflow) {
+                            var menuExpanded by remember { mutableStateOf(false) }
+                            Box {
+                                IconButton(
+                                    modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
+                                    onClick = { menuExpanded = true },
+                                ) {
+                                    Icon(
+                                        imageVector = AppIcons.MoreVert,
+                                        contentDescription = "More options",
+                                    )
+                                }
+                                DropdownMenu(
+                                    expanded = menuExpanded,
+                                    onDismissRequest = { menuExpanded = false },
+                                ) {
+                                    DropdownMenuItem(
+                                        text = { Text(expandLabel) },
+                                        leadingIcon = { Icon(painter = expandPainter, contentDescription = null) },
+                                        onClick = {
+                                            menuExpanded = false
+                                            onToggleExpand()
+                                        },
+                                    )
+                                    DropdownMenuItem(
+                                        text = { Text(bookmarkLabel) },
+                                        leadingIcon = { Icon(painter = bookmarkPainter, contentDescription = null) },
+                                        onClick = {
+                                            menuExpanded = false
+                                            onToggleBookmark()
+                                        },
+                                    )
+                                }
+                            }
+                        } else {
+                            IconButton(
+                                modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
+                                onClick = onToggleExpand,
+                            ) {
+                                Icon(painter = expandPainter, contentDescription = expandLabel)
+                            }
+                            IconButton(
+                                modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
+                                onClick = onToggleBookmark,
+                            ) {
+                                Icon(painter = bookmarkPainter, contentDescription = bookmarkLabel)
+                            }
+                        }
+                    },
+                )
+            }
         }
         CommandDetailScreen(
             viewModel = viewModel,
@@ -171,7 +215,7 @@ fun CommandDetailPane(
  * prev/next. Expand-all and bookmark are dropped for the duration - there is no room on a phone,
  * and expand-all is meaningless while search force-expands every section anyway.
  */
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
+@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 private fun CommandSearchTopBar(
     searchState: SearchState,
@@ -190,80 +234,107 @@ private fun CommandSearchTopBar(
         }
     }
 
-    TopAppBar(
-        expandedHeight = 56.dp,
-        title = {
-            val textStyle = MaterialTheme.typography.bodyLarge.copy(
-                color = MaterialTheme.colorScheme.onSurface,
-            )
-            BasicTextField(
-                value = searchState.currentValue,
-                onValueChange = { searchState.updateText(it) },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .focusRequester(textFieldFocus),
-                singleLine = true,
-                textStyle = textStyle,
-                cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
-                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-                keyboardActions = KeyboardActions(onSearch = { onNext() }),
-                decorationBox = { innerTextField ->
-                    Box(contentAlignment = Alignment.CenterStart) {
-                        if (searchState.searchText.isEmpty()) {
-                            Text(
-                                text = "Search in page",
-                                style = textStyle,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            )
-                        }
-                        innerTextField()
-                    }
-                },
-            )
-        },
-        navigationIcon = {
-            IconButton(
-                modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                onClick = onClose,
-            ) {
-                Icon(imageVector = backIcon, contentDescription = "Close search")
-            }
-        },
-        actions = {
-            Text(
-                text = if (matchCount == 0) "0/0" else "${activeMatchIndex + 1}/$matchCount",
-                style = MaterialTheme.typography.labelLarge,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.padding(horizontal = 4.dp),
-            )
-            IconButton(
-                modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                onClick = onPrevious,
-                enabled = matchCount > 0,
-            ) {
-                Icon(
-                    imageVector = AppIcons.ExpandMore,
-                    contentDescription = "Previous match",
-                    modifier = Modifier.graphicsLayer { rotationZ = 180f },
-                )
-            }
-            IconButton(
-                modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                onClick = onNext,
-                enabled = matchCount > 0,
-            ) {
-                Icon(
-                    imageVector = AppIcons.ExpandMore,
-                    contentDescription = "Next match",
-                )
-            }
-        },
-        colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = MaterialTheme.colorScheme.surface,
-            titleContentColor = MaterialTheme.colorScheme.onSurface,
-            navigationIconContentColor = MaterialTheme.colorScheme.onSurface,
-            actionIconContentColor = MaterialTheme.colorScheme.onSurface,
-        ),
-        windowInsets = WindowInsets(0, 0, 0, 0),
+    val textStyle = MaterialTheme.typography.bodyLarge.copy(
+        color = MaterialTheme.colorScheme.onSurface,
     )
+    val closeButton: @Composable () -> Unit = {
+        IconButton(
+            modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
+            onClick = onClose,
+        ) {
+            Icon(imageVector = backIcon, contentDescription = "Close search")
+        }
+    }
+    val queryField: @Composable (Modifier) -> Unit = { fieldModifier ->
+        BasicTextField(
+            value = searchState.currentValue,
+            onValueChange = { searchState.updateText(it) },
+            modifier = fieldModifier.focusRequester(textFieldFocus),
+            singleLine = true,
+            textStyle = textStyle,
+            cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
+            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+            keyboardActions = KeyboardActions(onSearch = { onNext() }),
+            decorationBox = { innerTextField ->
+                Box(contentAlignment = Alignment.CenterStart) {
+                    if (searchState.searchText.isEmpty()) {
+                        AutoSizeText(
+                            text = "Search in page",
+                            style = textStyle,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                    innerTextField()
+                }
+            },
+        )
+    }
+    val matchControls: @Composable () -> Unit = {
+        AutoSizeText(
+            text = if (matchCount == 0) "0/0" else "${activeMatchIndex + 1}/$matchCount",
+            style = MaterialTheme.typography.labelLarge,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(horizontal = 4.dp),
+        )
+        IconButton(
+            modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
+            onClick = onPrevious,
+            enabled = matchCount > 0,
+        ) {
+            Icon(
+                imageVector = AppIcons.ExpandMore,
+                contentDescription = "Previous match",
+                modifier = Modifier.graphicsLayer { rotationZ = 180f },
+            )
+        }
+        IconButton(
+            modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
+            onClick = onNext,
+            enabled = matchCount > 0,
+        ) {
+            Icon(
+                imageVector = AppIcons.ExpandMore,
+                contentDescription = "Next match",
+            )
+        }
+    }
+
+    // A Row rather than a TopAppBar so the query field can take the width the controls leave over
+    // - TopAppBar sizes its title slot independently, which squeezed the field to about two
+    // visible characters. On a narrow pane even the leftovers are too little, so the counter and
+    // the arrows drop to a second row.
+    Surface(
+        modifier = Modifier.fillMaxWidth(),
+        color = MaterialTheme.colorScheme.surface,
+        contentColor = MaterialTheme.colorScheme.onSurface,
+    ) {
+        BoxWithConstraints {
+            if (maxWidth < 360.dp) {
+                Column(modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        closeButton()
+                        queryField(Modifier.weight(1f).padding(horizontal = 4.dp))
+                    }
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.End,
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        matchControls()
+                    }
+                }
+            } else {
+                Row(
+                    modifier = Modifier
+                        .heightIn(min = 56.dp)
+                        .padding(horizontal = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    closeButton()
+                    queryField(Modifier.weight(1f).padding(horizontal = 4.dp))
+                    matchControls()
+                }
+            }
+        }
+    }
 }

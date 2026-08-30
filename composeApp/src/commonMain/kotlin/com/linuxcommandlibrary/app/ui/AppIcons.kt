@@ -176,6 +176,31 @@ object AppIcons {
         }.build()
     }
 
+    val MoreVert: ImageVector by lazy {
+        ImageVector.Builder(
+            name = "MoreVert",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f,
+        ).apply {
+            path(fill = SolidColor(Color.Black)) {
+                moveTo(12.0f, 8.0f)
+                arcToRelative(2.0f, 2.0f, 0f, true, false, 0.0f, -4.0f)
+                arcToRelative(2.0f, 2.0f, 0f, true, false, 0.0f, 4.0f)
+                close()
+                moveTo(12.0f, 14.0f)
+                arcToRelative(2.0f, 2.0f, 0f, true, false, 0.0f, -4.0f)
+                arcToRelative(2.0f, 2.0f, 0f, true, false, 0.0f, 4.0f)
+                close()
+                moveTo(12.0f, 20.0f)
+                arcToRelative(2.0f, 2.0f, 0f, true, false, 0.0f, -4.0f)
+                arcToRelative(2.0f, 2.0f, 0f, true, false, 0.0f, 4.0f)
+                close()
+            }
+        }.build()
+    }
+
     val Info: ImageVector by lazy {
         ImageVector.Builder(
             name = "Info",

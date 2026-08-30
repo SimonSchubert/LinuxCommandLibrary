@@ -1,5 +1,6 @@
 package com.linuxcommandlibrary.app.ui.composables
 
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
@@ -41,7 +42,7 @@ fun TableView(
     val density = LocalDensity.current
     val bodyLarge = MaterialTheme.typography.bodyLarge
     val textStyle = remember(bodyLarge) { bodyLarge.copy(fontWeight = FontWeight.Bold) }
-    val firstColumnWidth = remember(headers, rows, textStyle) {
+    val measuredFirstColumnWidth = remember(headers, rows, textStyle) {
         val allFirstCells = listOf(headers.firstOrNull()?.toPlainText() ?: "") +
             rows.map { it.firstOrNull()?.toPlainText() ?: "" }
         val maxWidthPx = allFirstCells.maxOfOrNull { textMeasurer.measure(it, style = textStyle).size.width } ?: 0
@@ -62,89 +63,96 @@ fun TableView(
         }
     }
 
-    Column(modifier = modifier.fillMaxWidth()) {
-        if (hasHeaders) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(IntrinsicSize.Min),
-            ) {
-                headers.forEachIndexed { index, headerElements ->
-                    val cellModifier = if (index == 0) Modifier.width(firstColumnWidth) else Modifier.weight(1f)
-                    val headerString = remember(headerElements, highlight) {
-                        AnnotatedString(headerElements.toPlainText())
-                            .withMatchHighlight(highlight, subIndex = index)
+    BoxWithConstraints(modifier = modifier.fillMaxWidth()) {
+        // A first-column cell can measure wider than the whole viewport at large font scales or
+        // display sizes. Modifier.width would then take the entire row and leave the weighted
+        // second column zero width, blanking the table - so always keep a third of the row for it.
+        val firstColumnWidth = measuredFirstColumnWidth.coerceAtMost(maxWidth * 0.66f)
+
+        Column(modifier = Modifier.fillMaxWidth()) {
+            if (hasHeaders) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(IntrinsicSize.Min),
+                ) {
+                    headers.forEachIndexed { index, headerElements ->
+                        val cellModifier = if (index == 0) Modifier.width(firstColumnWidth) else Modifier.weight(1f)
+                        val headerString = remember(headerElements, highlight) {
+                            AnnotatedString(headerElements.toPlainText())
+                                .withMatchHighlight(highlight, subIndex = index)
+                        }
+                        Text(
+                            text = headerString,
+                            fontWeight = FontWeight.Bold,
+                            style = MaterialTheme.typography.bodyLarge.copy(textDirection = TextDirection.Ltr),
+                            modifier = cellModifier
+                                .padding(horizontal = 8.dp, vertical = 4.dp),
+                        )
                     }
-                    Text(
-                        text = headerString,
-                        fontWeight = FontWeight.Bold,
-                        style = MaterialTheme.typography.bodyLarge.copy(textDirection = TextDirection.Ltr),
-                        modifier = cellModifier
-                            .padding(horizontal = 8.dp, vertical = 4.dp),
-                    )
                 }
             }
-        }
 
-        rows.forEachIndexed { rowIndex, row ->
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(IntrinsicSize.Min),
-            ) {
-                row.forEachIndexed { index, cellElements ->
-                    val cellModifier = if (index == 0) Modifier.width(firstColumnWidth) else Modifier.weight(1f)
-                    val subIndex = rowSubIndexOffsets[rowIndex] + index
-                    val styledString = remember(cellElements, codeColor) {
-                        buildAnnotatedString {
-                            cellElements.forEach { element ->
-                                when (element) {
-                                    is TextElement.Plain -> append(element.text)
+            rows.forEachIndexed { rowIndex, row ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(IntrinsicSize.Min),
+                ) {
+                    row.forEachIndexed { index, cellElements ->
+                        val cellModifier = if (index == 0) Modifier.width(firstColumnWidth) else Modifier.weight(1f)
+                        val subIndex = rowSubIndexOffsets[rowIndex] + index
+                        val styledString = remember(cellElements, codeColor) {
+                            buildAnnotatedString {
+                                cellElements.forEach { element ->
+                                    when (element) {
+                                        is TextElement.Plain -> append(element.text)
 
-                                    is TextElement.Bold -> {
-                                        withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
-                                            append(element.text)
+                                        is TextElement.Bold -> {
+                                            withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
+                                                append(element.text)
+                                            }
                                         }
-                                    }
 
-                                    is TextElement.Italic -> {
-                                        withStyle(style = SpanStyle(fontStyle = FontStyle.Italic)) {
-                                            append(element.text)
+                                        is TextElement.Italic -> {
+                                            withStyle(style = SpanStyle(fontStyle = FontStyle.Italic)) {
+                                                append(element.text)
+                                            }
                                         }
-                                    }
 
-                                    is TextElement.Man -> {
-                                        val start = this.length
-                                        withStyle(style = SpanStyle(color = codeColor)) {
-                                            append(element.man)
+                                        is TextElement.Man -> {
+                                            val start = this.length
+                                            withStyle(style = SpanStyle(color = codeColor)) {
+                                                append(element.man)
+                                            }
+                                            val end = this.length
+                                            addLink(
+                                                LinkAnnotation.Clickable(
+                                                    tag = "man:${element.man}",
+                                                    linkInteractionListener = {
+                                                        onNavigate(NavEvent.ToCommand(element.man))
+                                                    },
+                                                ),
+                                                start,
+                                                end,
+                                            )
                                         }
-                                        val end = this.length
-                                        addLink(
-                                            LinkAnnotation.Clickable(
-                                                tag = "man:${element.man}",
-                                                linkInteractionListener = {
-                                                    onNavigate(NavEvent.ToCommand(element.man))
-                                                },
-                                            ),
-                                            start,
-                                            end,
-                                        )
-                                    }
 
-                                    is TextElement.Link -> append(element.text)
+                                        is TextElement.Link -> append(element.text)
+                                    }
                                 }
                             }
                         }
+                        val annotatedString = remember(styledString, highlight, subIndex) {
+                            styledString.withMatchHighlight(highlight, subIndex = subIndex)
+                        }
+                        Text(
+                            text = annotatedString,
+                            style = MaterialTheme.typography.bodyLarge.copy(textDirection = TextDirection.Ltr),
+                            modifier = cellModifier
+                                .padding(horizontal = 8.dp, vertical = 4.dp),
+                        )
                     }
-                    val annotatedString = remember(styledString, highlight, subIndex) {
-                        styledString.withMatchHighlight(highlight, subIndex = subIndex)
-                    }
-                    Text(
-                        text = annotatedString,
-                        style = MaterialTheme.typography.bodyLarge.copy(textDirection = TextDirection.Ltr),
-                        modifier = cellModifier
-                            .padding(horizontal = 8.dp, vertical = 4.dp),
-                    )
                 }
             }
         }

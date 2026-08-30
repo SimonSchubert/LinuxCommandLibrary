@@ -4,11 +4,11 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationItemColors
-import androidx.compose.material3.Text
 import androidx.compose.material3.adaptive.ExperimentalMaterial3AdaptiveApi
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteDefaults
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteItem
@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.nav.LinuxNavState
 import com.linuxcommandlibrary.app.nav.TopLevelDestinations
 import com.linuxcommandlibrary.app.nav.route
+import com.linuxcommandlibrary.app.ui.composables.AutoSizeText
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
 import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 
@@ -71,7 +72,14 @@ internal fun LinuxNavigationSuite(
                             modifier = Modifier.size(24.dp),
                         )
                     },
-                    label = { Text(dest.label) },
+                    label = {
+                        // A bar item is a third of the screen wide. At large font scales
+                        // "Commands" wrapped to a second line that ran past the right edge.
+                        AutoSizeText(
+                            text = dest.label,
+                            modifier = Modifier.padding(horizontal = 4.dp),
+                        )
+                    },
                     colors = itemColors,
                 )
             }

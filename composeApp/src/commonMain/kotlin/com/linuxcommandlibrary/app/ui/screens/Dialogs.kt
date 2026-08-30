@@ -3,6 +3,7 @@ package com.linuxcommandlibrary.app.ui.screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -31,6 +32,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -41,6 +43,7 @@ import com.linuxcommandlibrary.app.resources.af_linode
 import com.linuxcommandlibrary.app.resources.af_proton
 import com.linuxcommandlibrary.app.resources.app_logo
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
+import com.linuxcommandlibrary.app.ui.composables.AutoSizeText
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
 import com.linuxcommandlibrary.shared.Version
 import org.jetbrains.compose.resources.painterResource
@@ -83,28 +86,25 @@ fun AppInfoDialog(
 
                 Spacer(Modifier.height(20.dp))
 
-                Row(
-                    horizontalArrangement = Arrangement.spacedBy(12.dp),
-                    modifier = Modifier.fillMaxWidth(),
-                ) {
-                    if (showRateAppButton) {
-                        Button(
-                            onClick = {
-                                uriHandler.openUri("https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca")
-                            },
-                            modifier = Modifier.weight(1f).pointerHoverIcon(PointerIcon.Hand),
-                            shape = RoundedCornerShape(12.dp),
-                            elevation = ButtonDefaults.buttonElevation(defaultElevation = 0.dp),
-                            colors = ButtonDefaults.buttonColors(contentColor = Color.White),
-                        ) {
-                            Text("Rate the app")
-                        }
+                val rateButton: @Composable (Modifier) -> Unit = { buttonModifier ->
+                    Button(
+                        onClick = {
+                            uriHandler.openUri("https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca")
+                        },
+                        modifier = buttonModifier.pointerHoverIcon(PointerIcon.Hand),
+                        shape = RoundedCornerShape(12.dp),
+                        elevation = ButtonDefaults.buttonElevation(defaultElevation = 0.dp),
+                        colors = ButtonDefaults.buttonColors(contentColor = Color.White),
+                    ) {
+                        AutoSizeText("Rate the app")
                     }
+                }
+                val githubButton: @Composable (Modifier) -> Unit = { buttonModifier ->
                     OutlinedButton(
                         onClick = {
                             uriHandler.openUri("https://github.com/SimonSchubert/LinuxCommandLibrary")
                         },
-                        modifier = Modifier.weight(1f).pointerHoverIcon(PointerIcon.Hand),
+                        modifier = buttonModifier.pointerHoverIcon(PointerIcon.Hand),
                         shape = RoundedCornerShape(12.dp),
                     ) {
                         Icon(
@@ -113,7 +113,34 @@ fun AppInfoDialog(
                             modifier = Modifier.size(18.dp),
                         )
                         Spacer(Modifier.width(8.dp))
-                        Text("GitHub")
+                        AutoSizeText("GitHub")
+                    }
+                }
+                BoxWithConstraints(modifier = Modifier.fillMaxWidth()) {
+                    // Half of a narrow dialog leaves each label about 37dp - "GitHub" came out as
+                    // "Gi / tH / ub". Stack the buttons when the dialog is narrow (largest display
+                    // size) or the text is scaled up, so each label gets the full width.
+                    val stack = maxWidth < 260.dp || LocalDensity.current.fontScale > 1.3f
+                    if (stack) {
+                        Column(
+                            verticalArrangement = Arrangement.spacedBy(12.dp),
+                            modifier = Modifier.fillMaxWidth(),
+                        ) {
+                            if (showRateAppButton) {
+                                rateButton(Modifier.fillMaxWidth())
+                            }
+                            githubButton(Modifier.fillMaxWidth())
+                        }
+                    } else {
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(12.dp),
+                            modifier = Modifier.fillMaxWidth(),
+                        ) {
+                            if (showRateAppButton) {
+                                rateButton(Modifier.weight(1f))
+                            }
+                            githubButton(Modifier.weight(1f))
+                        }
                     }
                 }
 
@@ -145,7 +172,7 @@ fun AppInfoDialog(
                         modifier = Modifier.size(18.dp),
                     )
                     Spacer(Modifier.width(8.dp))
-                    Text("Sponsor on GitHub")
+                    AutoSizeText("Sponsor on GitHub")
                 }
                 Spacer(Modifier.height(12.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {

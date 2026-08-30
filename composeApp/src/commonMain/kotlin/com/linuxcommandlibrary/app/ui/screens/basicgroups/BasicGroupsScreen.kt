@@ -137,8 +137,10 @@ fun BasicGroupColumn(
                 modifier = Modifier.size(40.dp),
             )
             Text(
+                // Deliberately unbounded: a fixed maxLines silently clipped the longer titles at
+                // large font scales, where the text column is only ~146dp wide. Letting the row
+                // grow keeps the whole title readable.
                 text = basicGroup.description,
-                maxLines = 3,
                 style = MaterialTheme.typography.bodyLarge,
                 modifier = Modifier
                     .weight(1f)
