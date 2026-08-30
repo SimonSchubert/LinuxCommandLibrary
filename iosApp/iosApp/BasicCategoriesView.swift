@@ -21,7 +21,7 @@ struct BasicCategoriesView: View {
                             size: 28,
                             tint: isSelected ? .white : .brandRed
                         )
-                        Text(category.title)
+                        WordSafeText(category.title)
                     }
                     .tag(category.id)
                 }

@@ -43,7 +43,7 @@ struct BasicGroupsView: View {
                                 size: 22,
                                 tint: .brandRed
                             )
-                            Text(group.description_)
+                            WordSafeText(group.description_)
                                 .font(.headline)
                                 .foregroundColor(.primary)
                                 .multilineTextAlignment(.leading)

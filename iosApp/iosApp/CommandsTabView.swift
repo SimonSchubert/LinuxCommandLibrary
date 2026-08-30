@@ -35,6 +35,9 @@ struct CommandsTabView: View {
             .listStyle(.insetGrouped)
             .navigationTitle("Commands")
             .searchable(text: $query, prompt: "Search commands")
+            // Command names are lowercase; without this the field shows "Ls" for a typed "ls".
+            .autocorrectionDisabled()
+            .textInputAutocapitalization(.never)
         } detail: {
             NavigationStack(path: $path) {
                 if let cmd = selectedCommand {

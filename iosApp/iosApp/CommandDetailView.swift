@@ -112,7 +112,7 @@ struct CommandDetailView: View {
                         store.toggle(sectionId: section.id)
                     } label: {
                         HStack {
-                            Text(section.title.uppercased())
+                            WordSafeText(section.title.uppercased())
                                 .font(.headline)
                                 .foregroundColor(.primary)
                                 .multilineTextAlignment(.leading)
@@ -314,7 +314,9 @@ private struct FlowLayout: Layout {
         let height = rows.reduce(CGFloat(0)) { acc, row in
             acc + row.height + (acc > 0 ? spacing : 0)
         }
-        let width = rows.map(\.width).max() ?? 0
+        // Clamped: reporting a width wider than the proposal makes the parent centre the whole
+        // layout, which pushes chips off both edges instead of just wrapping them.
+        let width = min(rows.map(\.width).max() ?? 0, maxWidth)
         return CGSize(width: width, height: height)
     }
 
@@ -347,7 +349,14 @@ private struct FlowLayout: Layout {
     private func layoutRows(maxWidth: CGFloat, subviews: Subviews) -> [Row] {
         var rows: [Row] = [Row()]
         for subview in subviews {
-            let size = subview.sizeThatFits(.unspecified)
+            var size = subview.sizeThatFits(.unspecified)
+            if size.width > maxWidth {
+                // A chip whose label is wider than the whole row (long command names at
+                // accessibility text sizes) has to wrap inside its own bounds; measuring it
+                // unconstrained would let it overflow the container.
+                size = subview.sizeThatFits(ProposedViewSize(width: maxWidth, height: nil))
+                size.width = min(size.width, maxWidth)
+            }
             let projected = (rows[rows.count - 1].sizes.isEmpty ? 0 : rows[rows.count - 1].width + spacing) + size.width
             if projected > maxWidth, !rows[rows.count - 1].sizes.isEmpty {
                 rows.append(Row())

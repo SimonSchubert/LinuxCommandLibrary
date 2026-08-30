@@ -62,6 +62,9 @@ private struct TipSectionElementView: View {
                 highlight: highlight
             )
         case let .blockquote(bqCase):
+            // .fixedSize on the HStack: the Text inside grows past the proposed height, and
+            // without it the Rectangle sizes to the *proposal* and the rule stops short of the
+            // last line or two of a wrapped quote.
             HStack(alignment: .top, spacing: 8) {
                 Rectangle()
                     .fill(Color.secondary.opacity(0.4))
@@ -74,6 +77,7 @@ private struct TipSectionElementView: View {
                 )
                 .foregroundColor(.secondary)
             }
+            .fixedSize(horizontal: false, vertical: true)
         case let .code(codeCase):
             CommandLineView(
                 command: codeCase.command,
@@ -226,9 +230,20 @@ private struct MarkdownTableView: View {
         }
     }
 
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+
     var body: some View {
+        if dynamicTypeSize.isAccessibilitySize {
+            stackedRows
+        } else {
+            columns
+        }
+    }
+
+    /// Normal layout: one row per record, columns sharing the width evenly.
+    private var columns: some View {
         let offsets = rowSubIndexOffsets
-        VStack(alignment: .leading, spacing: 4) {
+        return VStack(alignment: .leading, spacing: 4) {
             HStack(alignment: .top) {
                 ForEach(Array(headers.enumerated()), id: \.offset) { index, headerCell in
                     TextElementsView(
@@ -256,6 +271,47 @@ private struct MarkdownTableView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
+            }
+        }
+    }
+
+    /// Accessibility-size layout: an N-way split leaves each column a couple of characters wide,
+    /// which breaks identifiers like `MNEMO_DB_PATH` one letter per line and scrolls the header
+    /// row out of sight. Each record becomes a stacked label/value block instead.
+    private var stackedRows: some View {
+        let offsets = rowSubIndexOffsets
+        return VStack(alignment: .leading, spacing: 12) {
+            ForEach(Array(rows.enumerated()), id: \.offset) { rowIndex, row in
+                if rowIndex > 0 {
+                    Divider()
+                }
+                VStack(alignment: .leading, spacing: 4) {
+                    ForEach(Array(row.enumerated()), id: \.offset) { cellIndex, cell in
+                        if cellIndex < headers.count {
+                            TextElementsView(
+                                elements: headers[cellIndex],
+                                onTapMan: onTapMan,
+                                onTapLink: onTapLink,
+                                highlight: highlight,
+                                // Header text repeats per record, so only the first record carries
+                                // the header's real sub-index — otherwise one find-in-page hit on a
+                                // header would light up in every row.
+                                subIndex: rowIndex == 0 ? cellIndex : -1
+                            )
+                            .font(.body.bold())
+                            .foregroundColor(.secondary)
+                        }
+                        TextElementsView(
+                            elements: cell,
+                            onTapMan: onTapMan,
+                            onTapLink: onTapLink,
+                            highlight: highlight,
+                            subIndex: offsets[rowIndex] + cellIndex
+                        )
+                        .padding(.bottom, cellIndex == row.count - 1 ? 0 : 4)
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
     }

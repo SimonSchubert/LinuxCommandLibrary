@@ -104,6 +104,11 @@ extension AttributedString {
 }
 
 /// The find-in-page bar shown under the navigation bar while a search is active.
+///
+/// Field + counter + stepper + Done do not fit one row on a narrow screen at accessibility text
+/// sizes: the field collapses to a few points wide, the counter stacks vertically and "Done" wraps
+/// one letter per line off the trailing edge. Above `.accessibility1` the controls move to their
+/// own row underneath the field instead.
 struct ManPageFindBar: View {
     @Binding var query: String
     let matchCount: Int
@@ -112,8 +117,40 @@ struct ManPageFindBar: View {
     let onNext: () -> Void
     let onClose: () -> Void
     @FocusState.Binding var isFieldFocused: Bool
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var body: some View {
+        Group {
+            if dynamicTypeSize.isAccessibilitySize {
+                VStack(alignment: .leading, spacing: 12) {
+                    searchField
+                    HStack(spacing: 12) {
+                        matchCounter
+                        stepButtons
+                        Spacer(minLength: 0)
+                        doneButton
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            } else {
+                HStack(spacing: 10) {
+                    searchField
+                    matchCounter
+                    stepButtons
+                    doneButton
+                }
+            }
+        }
+        .tint(.brandRed)
+        .padding(.horizontal, 16)
+        .padding(.vertical, 10)
+        .background(Color(.secondarySystemBackground))
+        .overlay(alignment: .bottom) {
+            Divider()
+        }
+    }
+
+    private var searchField: some View {
         HStack(spacing: 10) {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.secondary)
@@ -136,32 +173,38 @@ struct ManPageFindBar: View {
                 }
                 .accessibilityLabel("Clear search")
             }
-
-            Text(matchCount == 0 ? "0/0" : "\(activeMatchIndex + 1)/\(matchCount)")
-                .font(.footnote.monospacedDigit())
-                .foregroundColor(.secondary)
-
-            Button(action: onPrevious) {
-                Image(systemName: "chevron.up")
-            }
-            .disabled(matchCount == 0)
-            .accessibilityLabel("Previous match")
-
-            Button(action: onNext) {
-                Image(systemName: "chevron.down")
-            }
-            .disabled(matchCount == 0)
-            .accessibilityLabel("Next match")
-
-            Button("Done", action: onClose)
-                .font(.body.weight(.semibold))
         }
-        .tint(.brandRed)
-        .padding(.horizontal, 16)
-        .padding(.vertical, 10)
-        .background(Color(.secondarySystemBackground))
-        .overlay(alignment: .bottom) {
-            Divider()
+    }
+
+    /// `lineLimit` + `minimumScaleFactor`, never `fixedSize`: squeezed without a line limit the
+    /// counter renders as a vertical stack of digits, and pinned at its ideal size it pushes the
+    /// row wider than the screen, which makes the parent centre (and so clip) the whole bar.
+    private var matchCounter: some View {
+        Text(matchCount == 0 ? "0/0" : "\(activeMatchIndex + 1)/\(matchCount)")
+            .font(.footnote.monospacedDigit())
+            .foregroundColor(.secondary)
+            .lineLimit(1)
+            .minimumScaleFactor(0.5)
+    }
+
+    @ViewBuilder private var stepButtons: some View {
+        Button(action: onPrevious) {
+            Image(systemName: "chevron.up")
         }
+        .disabled(matchCount == 0)
+        .accessibilityLabel("Previous match")
+
+        Button(action: onNext) {
+            Image(systemName: "chevron.down")
+        }
+        .disabled(matchCount == 0)
+        .accessibilityLabel("Next match")
+    }
+
+    private var doneButton: some View {
+        Button("Done", action: onClose)
+            .font(.body.weight(.semibold))
+            .lineLimit(1)
+            .minimumScaleFactor(0.5)
     }
 }
