@@ -1648,6 +1648,7 @@ deemix.md
 deepseek.md
 deepspeech.md
 deflect.md
+defragger-cli.md
 deja.md
 delgroup.md
 delpart.md
