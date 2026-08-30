@@ -54,7 +54,7 @@ Agent integrations depend on which tools you install. Socket API and plugins exp
 
 # SEE ALSO
 
-[tmux](/man/tmux)(1), [zellij](/man/zellij)(1), [gemini](/man/gemini)(1)
+[tmux](/man/tmux)(1), [zellij](/man/zellij)(1), [gemini](/man/gemini)(1), [shepherdr](/man/shepherdr)(1)
 
 # RESOURCES
 

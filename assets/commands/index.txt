@@ -7237,6 +7237,7 @@ shasum.md
 shc.md
 shellcheck.md
 shelly.md
+shepherdr.md
 sherlock.md
 shfmt.md
 shiny-mirrors.md
