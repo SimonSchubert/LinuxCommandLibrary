@@ -4073,6 +4073,7 @@ kubetail.md
 kubie.md
 kure.md
 kustomize.md
+kveritas.md
 kvm.md
 kwallet-query.md
 kwin.md
