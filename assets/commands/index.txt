@@ -3305,6 +3305,7 @@ hexpatch.md
 hexyl.md
 hey.md
 hf.md
+hflow.md
 hg-add.md
 hg-branch.md
 hg-clone.md
