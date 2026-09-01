@@ -3899,6 +3899,8 @@ kb.md
 kbt.md
 kcadm.sh.md
 kcat.md
+kcc-c2e.md
+kcc-c2p.md
 kcmshell6.md
 kdash.md
 kde-builder.md

@@ -116,6 +116,9 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     },
     "babel": {"brew": "babel"},
     "air": {"aur": "air", "nix": "air"},  # not brew (R formatter)
+    # kcc-c2e/kcc-c2p: Fedora "kcc" is Kanji Code Converter, not Kindle Comic Converter
+    "kcc-c2e": {"aur": "kcc", "nix": "kcc"},
+    "kcc-c2p": {"aur": "kcc", "nix": "kcc"},
     "alembic": {"apk": "py3-alembic", "nix": "python3Packages.alembic"},
     # backintime: CLI binary is in backintime-common on Debian/Fedora (arch:all, missed by Contents-amd64)
     "backintime": {
