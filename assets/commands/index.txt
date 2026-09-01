@@ -4075,6 +4075,7 @@ kubie.md
 kure.md
 kustomize.md
 kveritas.md
+kvist.md
 kvm.md
 kwallet-query.md
 kwin.md
