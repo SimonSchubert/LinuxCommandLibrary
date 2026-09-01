@@ -2291,6 +2291,7 @@ feluda.md
 feroxbuster.md
 festival.md
 fetchmail.md
+ff-16-tui.md
 ffe.md
 ffmpeg-devices.md
 ffmpeg-utils.md
@@ -8154,6 +8155,8 @@ udisksctl.md
 udisksd.md
 ufraw-batch.md
 ufw-allow.md
+ufw-default.md
+ufw-delete.md
 ufw-deny.md
 ufw-disable.md
 ufw-enable.md
