@@ -3783,6 +3783,11 @@ jj-diffedit.md
 jj-duplicate.md
 jj-edit.md
 jj-evolog.md
+jj-file-annotate.md
+jj-file-list.md
+jj-file-search.md
+jj-file-show.md
+jj-file.md
 jj-git-clone.md
 jj-git-fetch.md
 jj-git-init.md
@@ -7316,6 +7321,7 @@ slocate.md
 sloccount.md
 slop.md
 slopo.md
+slotstream.md
 slumber.md
 slurmctld.md
 slurmd.md
