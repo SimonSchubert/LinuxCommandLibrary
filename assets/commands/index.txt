@@ -1798,9 +1798,12 @@ dockdiver.md
 docker-build.md
 docker-buildx-create.md
 docker-buildx-du.md
+docker-buildx-inspect.md
 docker-buildx-ls.md
 docker-buildx-prune.md
 docker-buildx-rm.md
+docker-buildx-stop.md
+docker-buildx-use.md
 docker-buildx-version.md
 docker-commit.md
 docker-compose-down.md
