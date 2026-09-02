@@ -78,6 +78,7 @@ EXTRA_CANDIDATES: dict[str, list[str]] = {
     "bb": ["babashka", "bb"],
     "rg": ["ripgrep", "rg"],
     "fd": ["fd-find", "fd"],
+    "lore": ["lore-vcs-bin", "lore-vcs"],
     "bat": ["bat"],
     "adb": ["android-tools", "android-tools-adb", "adb"],
     "backintime": ["backintime-common", "backintime"],
@@ -104,6 +105,8 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
         "brew": "bat",
         "nix": "bat",
     },
+    # lore: AUR "lore" is robinovitch61/lore (terminal pager); Epic VCS is lore-vcs-bin
+    "lore": {"aur": "lore-vcs-bin"},
     # fd: Debian/brew map "fd" → fdclone (file manager); real tool is sharkdp/fd
     "fd": {
         "apt": "fd-find",

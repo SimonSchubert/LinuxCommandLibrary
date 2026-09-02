@@ -4314,6 +4314,7 @@ lookandfeeltool.md
 lookbib.md
 loopsy.md
 lorder.md
+lore.md
 lorem.md
 losetup.md
 lotus-miner.md
