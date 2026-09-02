@@ -3957,6 +3957,7 @@ kinfocenter.md
 kinit.md
 kioclient.md
 kismet.md
+kit.md
 kite.md
 kiterunner-brute.md
 kiterunner-kb.md
