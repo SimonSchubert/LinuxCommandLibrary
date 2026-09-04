@@ -1,0 +1,36 @@
+# Linux Command Library - user settings
+# Copy to ~/.config/lcl/config.toml (or $XDG_CONFIG_HOME/lcl/config.toml).
+# Every key is optional; the file itself is optional.
+#
+# Colours are NOT configured here by default. They come from the active Omarchy
+# theme (colors.toml), so changing theme restyles the app for free. Proportions
+# come from the same theme's shell.toml, so the app scales with the shell.
+
+# Follow the active Omarchy theme. Set false to pin the built-in dark palette
+# and ignore the theme entirely.
+follow_omarchy = true
+
+# Font family. Anything fontconfig resolves.
+font_family = "monospace"
+
+# Multiplies the type scale from the theme's [font] base-size. Handy on a phone.
+font_scale = 1.0
+
+# Window width, in logical pixels, below which the layout collapses to a single
+# pane with a bottom bar instead of a side rail and two panes.
+compact_below = 700
+
+# Section shown at startup: "basics", "tips" or "commands".
+start_section = "commands"
+
+# Escape hatch: pin individual colours on top of the theme. Keys match the ones
+# in an Omarchy theme's colors.toml.
+# [colors]
+# accent            = "#ff9e64"
+# background        = "#1a1b26"
+# dark_background   = "#13141c"
+# lighter_background = "#24283b"
+# foreground        = "#a9b1d6"
+# bright_foreground = "#c0caf5"
+# selection         = "#292e42"
+# muted             = "#414868"

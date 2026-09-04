@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Linux Command Library
+Comment=Linux command reference and cheat sheets
+Exec=lcl-gui %u
+Icon=lcl-gui
+Type=Application
+Categories=Utility;Development;Documentation;
+Keywords=linux;command;terminal;man;reference;
+Terminal=false
+StartupWMClass=lcl-gui
