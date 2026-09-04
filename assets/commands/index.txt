@@ -1299,6 +1299,7 @@ codeburn.md
 codecov.md
 codecrafters.md
 codeflowmap.md
+codeknow.md
 codemod.md
 coderabbit.md
 codesign.md
