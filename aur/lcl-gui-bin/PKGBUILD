@@ -3,7 +3,7 @@
 
 pkgname=lcl-gui-bin
 pkgver=4.7.1
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux command reference and cheat sheets - native Qt desktop application'
 arch=('x86_64' 'aarch64')
 url='https://github.com/SimonSchubert/LinuxCommandLibrary'
@@ -27,12 +27,17 @@ provides=('lcl-gui')
 conflicts=('lcl-gui')
 options=('!strip')
 
+# The x86_64 binary is built against Arch's own Qt. Arch compiles Qt with
+# -mno-direct-extern-access, so linking against another distribution's Qt produces copy
+# relocations against protected symbols that Arch's loader rejects at startup
+# (GNU_PROPERTY_1_NEEDED_INDIRECT_EXTERN_ACCESS).
+
 # Tagged linux-gui-v${pkgver} rather than v${pkgver}: the "Build and Release" workflow
 # fires on v* tags and would cut a full multi-platform release. This is Linux only.
 _base="https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/linux-gui-v${pkgver}"
 source_x86_64=("LinuxCommandLibrary-${pkgver}-linux-gui-x86_64.tar.gz::${_base}/LinuxCommandLibrary-${pkgver}-linux-gui-x86_64.tar.gz")
 source_aarch64=("LinuxCommandLibrary-${pkgver}-linux-gui-aarch64.tar.gz::${_base}/LinuxCommandLibrary-${pkgver}-linux-gui-aarch64.tar.gz")
-sha256sums_x86_64=('7cf2e6809bd533f56d8dba1c2a06227ad3e9b3d562bd010fd8f3d803bc813f03')
+sha256sums_x86_64=('c9c5ec6dd8934edf22162295e03db32a2089a658ee67e2d42ff2c445348946ed')
 sha256sums_aarch64=('0cee72a7086b10b5ae082230c5e95df2bfda8df544d34af8f960ba3fd24bbb56')
 
 package() {
