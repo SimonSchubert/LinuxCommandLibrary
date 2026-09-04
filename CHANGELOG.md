@@ -1,3 +1,14 @@
+## v4.7.1 - 2026-09-05
+
+### Features
+- Replaced the Compose desktop app on Linux with a native Qt 6 / QML application, sharing the same Kotlin data and parsing layer as the Android and iOS apps
+- The Linux app follows the active Omarchy theme: colours from the theme's `colors.toml`, type scale and spacing from its `shell.toml`, and it repaints live when the theme changes
+- Added a user config file at `~/.config/lcl/config.toml` for font family and scale, the layout breakpoint, the section shown at startup, and optional colour overrides
+- Added an aarch64 build, so the Linux app runs on ARM devices such as the PinePhone
+
+### Notes
+- Linux-only release; the Android, iOS, Windows and macOS apps are unchanged from v4.7.0
+
 ## v4.7.0 - 2026-08-30
 
 ### Features

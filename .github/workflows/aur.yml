@@ -10,6 +10,19 @@ on:
   workflow_run:
     workflows: ["Build and Release"]
     types: [completed]
+  # Publish to the AUR without cutting a full release. The PKGBUILD and .SRCINFO are
+  # pushed exactly as committed, so their checksums must already match the published
+  # release assets.
+  workflow_dispatch:
+    inputs:
+      package:
+        description: 'AUR package to publish'
+        type: choice
+        options:
+          - lcl-gui-bin
+          - lcl-bin
+          - both
+        default: lcl-gui-bin
 
 jobs:
   validate:
@@ -168,3 +181,72 @@ jobs:
           git add aur/
           git commit -m "Update AUR packages to ${VERSION}" || exit 0
           git push
+
+  publish-manual:
+    name: Publish to AUR (manual)
+    if: github.event_name == 'workflow_dispatch'
+    needs: validate
+    runs-on: ubuntu-latest
+    container: archlinux:base-devel
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pacman -Sy --noconfirm openssh git
+
+      - name: Verify sources are reachable and checksums match
+        run: |
+          pacman -Sy --noconfirm curl
+          for pkg in lcl-bin lcl-gui-bin; do
+            [ "${{ inputs.package }}" = "both" ] || [ "${{ inputs.package }}" = "$pkg" ] || continue
+            echo "== $pkg =="
+            # .SRCINFO carries fully resolved URLs; the PKGBUILD builds them from a
+            # variable, so its source lines are not literal URLs. Sources and their
+            # checksums appear in matching order, including the per-arch pairs.
+            srcinfo="aur/$pkg/.SRCINFO"
+            while read -r url want; do
+              [ "$want" = "SKIP" ] && { echo "  skipping $url"; continue; }
+              echo "  fetching $url"
+              curl -fsSL -o /tmp/asset "$url"
+              got=$(sha256sum /tmp/asset | cut -d' ' -f1)
+              if [ "$got" != "$want" ]; then
+                echo "  MISMATCH: expected $want, got $got"
+                exit 1
+              fi
+              echo "  ok $got"
+            done < <(paste <(grep -E '^[[:space:]]+source' "$srcinfo" | sed 's/.*:://') \
+                           <(grep -E '^[[:space:]]+sha256sums' "$srcinfo" | awk '{print $3}'))
+          done
+
+      - name: Push to AUR
+        env:
+          AUR_SSH_KEY: ${{ secrets.AUR_SSH_KEY }}
+        run: |
+          echo "aur.archlinux.org ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEuBKrPzbawxA/k2g6NcyV5jmqwJ2s+zpgZGZ7tpLIcN" >> /etc/ssh/ssh_known_hosts
+          for dir in "$HOME" "/root"; do
+            mkdir -p "$dir/.ssh"
+            echo "$AUR_SSH_KEY" > "$dir/.ssh/aur"
+            chmod 600 "$dir/.ssh/aur"
+            printf "Host aur.archlinux.org\n  IdentityFile %s/.ssh/aur\n  User aur\n" "$dir" > "$dir/.ssh/config"
+            chmod 700 "$dir/.ssh"
+            chmod 600 "$dir/.ssh/config"
+          done
+
+          git config --global user.name "Simon Schubert"
+          git config --global user.email "sschubert89@gmail.com"
+
+          for pkg in lcl-bin lcl-gui-bin; do
+            [ "${{ inputs.package }}" = "both" ] || [ "${{ inputs.package }}" = "$pkg" ] || continue
+            version=$(grep -oP '^pkgver=\K.*' "$GITHUB_WORKSPACE/aur/$pkg/PKGBUILD")
+            cd /tmp
+            rm -rf "$pkg"
+            git clone "ssh://aur@aur.archlinux.org/$pkg.git"
+            cp "$GITHUB_WORKSPACE/aur/$pkg/PKGBUILD" "$pkg/"
+            cp "$GITHUB_WORKSPACE/aur/$pkg/.SRCINFO" "$pkg/"
+            cd "$pkg"
+            git add PKGBUILD .SRCINFO
+            git diff --cached --quiet && { echo "$pkg unchanged, skipping"; continue; }
+            git commit -m "Update to $version"
+            git push
+          done
