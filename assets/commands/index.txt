@@ -5129,6 +5129,7 @@ notox.md
 nova.md
 now.md
 nox.md
+npc-forge.md
 nping.md
 npm-access.md
 npm-adduser.md
@@ -7834,6 +7835,7 @@ termscp.md
 termshark.md
 termtosvg.md
 termusic.md
+termy.md
 terraform-apply.md
 terraform-console.md
 terraform-destroy.md
