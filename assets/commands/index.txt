@@ -634,6 +634,7 @@ balena-etcher.md
 balena.md
 ballast.md
 balooctl.md
+balrogg.md
 bandwhich.md
 banksia.md
 banner.md
