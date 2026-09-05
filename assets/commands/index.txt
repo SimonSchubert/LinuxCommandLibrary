@@ -3276,6 +3276,7 @@ havn.md
 haxelib.md
 hazelnut.md
 hbpldecode.md
+hc2html.md
 hciconfig.md
 hciemu.md
 hcitool.md
@@ -4720,6 +4721,7 @@ mmroff.md
 mmv.md
 mn.md
 mnemo.md
+mobilecode.md
 moc.md
 mocha.md
 mock.md
