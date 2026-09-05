@@ -144,6 +144,8 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     },
     # ante: nixpkgs "ante" is jfecher/ante (programming language), not AntigmaLabs coding agent
     "ante": {},
+    # declick: AUR "declick" is a 2020 WAV declicker (wahlm), not ucsandman/declick (npm CLI)
+    "declick": {},
     # h3: distro packages are Uber's geospatial H3 (libh3-bin / h3); antirez h3-metal is source-only
     "h3": {},
     # singular: distro/brew/nix "singular" is the Singular CAS, not alex-reysa/singular-lite

@@ -1644,6 +1644,7 @@ debuild.md
 decaffeinate.md
 decant.md
 declare.md
+declick.md
 decode-dimms.md
 deemix.md
 deepseek.md
