@@ -1,3 +1,15 @@
+## v4.8.0 — 2026-09-07
+
+### Features
+- Added 30 new commands, including docker-buildx helpers, jj-file, UFW extras, kcc-c2e/kcc-c2p, woodpecker-cli and meclaw
+- Linux Qt GUI (x86_64 and aarch64) now ships with the full multi-platform release, including AUR `lcl-gui-bin` on Arch ARM
+
+### Fixes
+- Built the x86_64 Linux app against Arch's Qt so it starts on Arch Linux
+
+### Improvements
+- Upgraded dependencies (Android Gradle Plugin 9.4.0, Mordant 3.1.0, Spotless 8.10.2)
+
 ## v4.7.1 - 2026-09-05
 
 ### Features
