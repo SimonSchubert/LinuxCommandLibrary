@@ -5335,6 +5335,7 @@ ogrmerge.py.md
 oh-my-posh.md
 oh-my-zsh.md
 oha.md
+okf.md
 okular.md
 oleid.md
 oletools.md
