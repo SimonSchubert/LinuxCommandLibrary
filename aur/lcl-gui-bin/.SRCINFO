@@ -1,7 +1,7 @@
 pkgbase = lcl-gui-bin
 	pkgdesc = Linux command reference and cheat sheets - native Qt desktop application
-	pkgver = 4.7.1
-	pkgrel = 2
+	pkgver = 4.8.0
+	pkgrel = 1
 	url = https://github.com/SimonSchubert/LinuxCommandLibrary
 	arch = x86_64
 	arch = aarch64
@@ -19,9 +19,9 @@ pkgbase = lcl-gui-bin
 	provides = lcl-gui
 	conflicts = lcl-gui
 	options = !strip
-	source_x86_64 = LinuxCommandLibrary-4.7.1-linux-gui-x86_64.tar.gz::https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/linux-gui-v4.7.1/LinuxCommandLibrary-4.7.1-linux-gui-x86_64.tar.gz
-	sha256sums_x86_64 = c9c5ec6dd8934edf22162295e03db32a2089a658ee67e2d42ff2c445348946ed
-	source_aarch64 = LinuxCommandLibrary-4.7.1-linux-gui-aarch64.tar.gz::https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/linux-gui-v4.7.1/LinuxCommandLibrary-4.7.1-linux-gui-aarch64.tar.gz
-	sha256sums_aarch64 = 0cee72a7086b10b5ae082230c5e95df2bfda8df544d34af8f960ba3fd24bbb56
+	source_x86_64 = LinuxCommandLibrary-4.8.0-linux-gui-x86_64.tar.gz::https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v4.8.0/LinuxCommandLibrary-4.8.0-linux-gui-x86_64.tar.gz
+	sha256sums_x86_64 = 56af95f21ec1a32de804207507875a0128d343756b540b389f7e1348930cbc9b
+	source_aarch64 = LinuxCommandLibrary-4.8.0-linux-gui-aarch64.tar.gz::https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v4.8.0/LinuxCommandLibrary-4.8.0-linux-gui-aarch64.tar.gz
+	sha256sums_aarch64 = 5e3c8aef48ef55fa6b8e32659d65409f272495997058f036eb9d986eba51a6ca
 
 pkgname = lcl-gui-bin
