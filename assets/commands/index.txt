@@ -8182,6 +8182,7 @@ ufw-deny.md
 ufw-disable.md
 ufw-enable.md
 ufw-status.md
+ufw-version.md
 ufw.md
 ug.md
 ugdb.md
