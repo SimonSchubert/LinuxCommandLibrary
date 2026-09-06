@@ -60,6 +60,7 @@ Utilities that manage, sandbox, monitor, test, and extend coding agents.
 ## AI Assistants
 General-purpose autonomous assistants that run locally or on your own server.
 ```[openclaw](/man/openclaw)```
+```[meclaw](/man/meclaw)```
 ```[zeroclaw](/man/zeroclaw)```
 ```[nanobot](/man/nanobot)```
 ```[picoclaw](/man/picoclaw)```
