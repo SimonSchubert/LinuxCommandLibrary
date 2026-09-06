@@ -87,20 +87,21 @@ jobs:
       - name: Update PKGBUILDs and checksums
         run: |
           VERSION="${{ steps.version.outputs.version }}"
+          BASE="https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v${VERSION}"
 
-          # Download CLI zip and compute SHA256
-          CLI_URL="https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v${VERSION}/LinuxCommandLibrary-${VERSION}-cli-linux-x64.zip"
-          curl -L -o cli.zip "$CLI_URL"
-          CLI_SHA256=$(sha256sum cli.zip | cut -d' ' -f1)
-          rm cli.zip
+          fetch_sha() {
+            local url=$1 dest=$2
+            echo "fetching $url" >&2
+            curl -fL --retry 5 --retry-delay 10 -o "$dest" "$url"
+            sha256sum "$dest" | cut -d' ' -f1
+            rm -f "$dest"
+          }
 
-          # Download GUI tarball and compute SHA256
-          GUI_URL="https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v${VERSION}/LinuxCommandLibrary-${VERSION}-linux-x86_64.tar.gz"
-          curl -L -o gui.tar.gz "$GUI_URL"
-          GUI_SHA256=$(sha256sum gui.tar.gz | cut -d' ' -f1)
-          rm gui.tar.gz
+          CLI_SHA256=$(fetch_sha "$BASE/LinuxCommandLibrary-${VERSION}-cli-linux-x64.zip" /tmp/cli.zip)
+          GUI_X64_SHA256=$(fetch_sha "$BASE/LinuxCommandLibrary-${VERSION}-linux-gui-x86_64.tar.gz" /tmp/gui-x64.tar.gz)
+          GUI_ARM_SHA256=$(fetch_sha "$BASE/LinuxCommandLibrary-${VERSION}-linux-gui-aarch64.tar.gz" /tmp/gui-arm.tar.gz)
 
-          # Update lcl-bin PKGBUILD
+          # Update lcl-bin PKGBUILD (x86_64 CLI zip)
           cd aur/lcl-bin
           sed -i "s|^pkgver=.*|pkgver=${VERSION}|" PKGBUILD
           sed -i "s|^pkgrel=.*|pkgrel=1|" PKGBUILD
@@ -110,11 +111,18 @@ jobs:
           echo "=== lcl-bin PKGBUILD ==="
           cat PKGBUILD
 
-          # Update lcl-gui-bin PKGBUILD
+          # Update lcl-gui-bin PKGBUILD (Qt tarballs, per-arch checksums).
+          # 4.7.1 used a linux-gui-v* tag so it would not fire this workflow; full
+          # releases publish those tarballs on the v* GitHub release.
           cd ../lcl-gui-bin
           sed -i "s|^pkgver=.*|pkgver=${VERSION}|" PKGBUILD
           sed -i "s|^pkgrel=.*|pkgrel=1|" PKGBUILD
-          sed -i "s|^sha256sums=.*|sha256sums=('${GUI_SHA256}')|" PKGBUILD
+          sed -i 's|/download/linux-gui-v${pkgver}|/download/v${pkgver}|' PKGBUILD
+          sed -i "s|^sha256sums_x86_64=.*|sha256sums_x86_64=('${GUI_X64_SHA256}')|" PKGBUILD
+          sed -i "s|^sha256sums_aarch64=.*|sha256sums_aarch64=('${GUI_ARM_SHA256}')|" PKGBUILD
+          grep -q "sha256sums_x86_64=('${GUI_X64_SHA256}')" PKGBUILD
+          grep -q "sha256sums_aarch64=('${GUI_ARM_SHA256}')" PKGBUILD
+          grep -q "/download/v\${pkgver}" PKGBUILD
           chown -R builder:builder .
           su builder -c "makepkg --printsrcinfo" > .SRCINFO
           echo "=== lcl-gui-bin PKGBUILD ==="

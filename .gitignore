@@ -45,3 +45,7 @@ scripts
 /fastlane/play-store-key.json
 /fastlane/report.xml
 /fastlane/play-bulk-bucket
+/build-linuxApp/
+/linux-gui-destdir/
+/lcl-gui-*/
+/LinuxCommandLibrary-*-linux-gui-*.tar.gz

@@ -32,8 +32,9 @@ options=('!strip')
 # relocations against protected symbols that Arch's loader rejects at startup
 # (GNU_PROPERTY_1_NEEDED_INDIRECT_EXTERN_ACCESS).
 
-# Tagged linux-gui-v${pkgver} rather than v${pkgver}: the "Build and Release" workflow
-# fires on v* tags and would cut a full multi-platform release. This is Linux only.
+# Full v* releases attach linux-gui-{x86_64,aarch64} tarballs on the same GitHub
+# release as the other platforms. 4.7.1 used a linux-gui-v* tag because that cut
+# was Linux-only and must not fire the "Build and Release" workflow.
 _base="https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/linux-gui-v${pkgver}"
 source_x86_64=("LinuxCommandLibrary-${pkgver}-linux-gui-x86_64.tar.gz::${_base}/LinuxCommandLibrary-${pkgver}-linux-gui-x86_64.tar.gz")
 source_aarch64=("LinuxCommandLibrary-${pkgver}-linux-gui-aarch64.tar.gz::${_base}/LinuxCommandLibrary-${pkgver}-linux-gui-aarch64.tar.gz")
