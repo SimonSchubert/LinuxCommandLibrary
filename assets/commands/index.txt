@@ -8619,6 +8619,7 @@ wifite.md
 wifitui.md
 wiggle.md
 wiki-tui.md
+wikifuse.md
 wikiman.md
 wikit.md
 windres.md
