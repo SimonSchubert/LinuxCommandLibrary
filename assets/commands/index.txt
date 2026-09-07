@@ -770,6 +770,7 @@ bluetoothd.md
 bluetui.md
 bluetuith.md
 blueutil-tui.md
+blunderbase.md
 blurlock.md
 bmaptool.md
 bmm.md
