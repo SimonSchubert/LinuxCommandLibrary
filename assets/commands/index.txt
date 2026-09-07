@@ -1873,10 +1873,13 @@ docker-volume.md
 docker.md
 dockerd.md
 docsify.md
+doctl-1-click.md
 doctl-account.md
 doctl-apps.md
 doctl-auth.md
 doctl-balance.md
+doctl-billing-history.md
+doctl-completion.md
 doctl-compute-droplet.md
 doctl-databases-db.md
 doctl-databases-firewalls.md
@@ -1887,9 +1890,11 @@ doctl-databases-replica.md
 doctl-databases-sql-mode.md
 doctl-databases-user.md
 doctl-databases.md
+doctl-invoice.md
 doctl-kubernetes-cluster.md
 doctl-kubernetes-options.md
 doctl-serverless.md
+doctl-vpcs.md
 doctl.md
 doctum.md
 docusaurus.md
@@ -2133,6 +2138,7 @@ enc2xs.md
 enca.md
 encfs.md
 engrampa.md
+engrim.md
 enscript.md
 entr.md
 enum4linux.md
@@ -3570,6 +3576,7 @@ impacket-getnpusers.md
 impacket-getst.md
 impacket-gettgt.md
 impacket-getuserspns.md
+impacket-machine_role.md
 impacket-mqtt_check.md
 impacket-mssqlclient.md
 impacket-ntfs-read.md
@@ -3805,6 +3812,9 @@ jj-interdiff.md
 jj-log.md
 jj-new.md
 jj-next.md
+jj-operation-diff.md
+jj-operation-log.md
+jj-operation-show.md
 jj-operation.md
 jj-parallelize.md
 jj-prev.md
@@ -4451,6 +4461,7 @@ macchanger.md
 macchina.md
 mach.md
 machine-id.md
+machine_role.py.md
 machinectl.md
 machma.md
 macmon.md
