@@ -1657,6 +1657,7 @@ deja.md
 delgroup.md
 delpart.md
 delta.md
+deltafin.md
 deluge-console.md
 deluge.md
 deluged.md
