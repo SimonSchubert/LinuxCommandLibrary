@@ -1995,6 +1995,7 @@ dsniff.md
 dss.md
 dstask.md
 dstat.md
+dsync.md
 dtach.md
 dtc.md
 dte.md
@@ -3362,6 +3363,7 @@ holehe.md
 hollywood.md
 holos.md
 home-manager.md
+homebutler.md
 homectl.md
 homeshick.md
 host.md
