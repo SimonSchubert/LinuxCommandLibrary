@@ -2587,6 +2587,7 @@ gdown.md
 gdrive.md
 gdu.md
 gedit.md
+geiger-scan.md
 gem.md
 gemini.md
 gemtopbm.md
@@ -3286,6 +3287,7 @@ haveged.md
 havn.md
 haxelib.md
 hazelnut.md
+hazzel.md
 hbpldecode.md
 hc2html.md
 hciconfig.md
@@ -8610,6 +8612,7 @@ whatwaf.md
 whatweb.md
 whence.md
 whereis.md
+whetuu.md
 which.md
 whichllm.md
 while.md
