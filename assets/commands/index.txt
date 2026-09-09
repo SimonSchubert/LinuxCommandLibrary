@@ -8403,6 +8403,7 @@ vectro.md
 vegeta.md
 vela.md
 velero.md
+veloxml.md
 ventoy.md
 venv.md
 veracrypt.md
