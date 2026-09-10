@@ -146,6 +146,8 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     "ante": {},
     # declick: AUR "declick" is a 2020 WAV declicker (wahlm), not ucsandman/declick (npm CLI)
     "declick": {},
+    # tithon: AUR "tithon" is greboid/tithon (Electron IRC client), not rnoro/tithon (Jupyter daemon)
+    "tithon": {},
     # h3: distro packages are Uber's geospatial H3 (libh3-bin / h3); antirez h3-metal is source-only
     "h3": {},
     # singular: distro/brew/nix "singular" is the Singular CAS, not alex-reysa/singular-lite

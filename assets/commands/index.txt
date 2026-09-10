@@ -7593,6 +7593,7 @@ subfinder.md
 subl.md
 subliminal.md
 sublist3r.md
+subnetlens.md
 sudo.md
 sudoedit.md
 sudoku.md
@@ -7947,6 +7948,7 @@ tinyproxy.md
 tio.md
 tip.md
 tiptop.md
+tithon.md
 tiup.md
 tiv.md
 tkst.md
