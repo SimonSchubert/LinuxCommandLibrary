@@ -7002,6 +7002,7 @@ ruff-format.md
 ruff.md
 ruget.md
 rum.md
+rumdl.md
 run-help.md
 run-kit.md
 run-mailcap.md
