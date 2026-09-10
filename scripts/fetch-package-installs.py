@@ -148,6 +148,8 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     "declick": {},
     # tithon: AUR "tithon" is greboid/tithon (Electron IRC client), not rnoro/tithon (Jupyter daemon)
     "tithon": {},
+    # filament: AUR "filament" is google/filament (PBR renderer), not galaxy-io/filament (replication CLI)
+    "filament": {},
     # h3: distro packages are Uber's geospatial H3 (libh3-bin / h3); antirez h3-metal is source-only
     "h3": {},
     # singular: distro/brew/nix "singular" is the Singular CAS, not alex-reysa/singular-lite

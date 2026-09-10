@@ -2093,6 +2093,7 @@ efivar.md
 eg.md
 eget.md
 eglinfo.md
+egma.md
 ego.md
 egrep.md
 eim.md
@@ -2327,6 +2328,7 @@ fido2-token.md
 fierce.md
 figlet.md
 figlist.md
+filament.md
 file-hierarchy.md
 file-rename.md
 file-roller.md
