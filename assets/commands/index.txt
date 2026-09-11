@@ -8000,6 +8000,7 @@ tmt-try.md
 tmt.md
 tmux.md
 tmuxinator.md
+toast.md
 tock.md
 tod.md
 todo.md

@@ -154,6 +154,9 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     "h3": {},
     # singular: distro/brew/nix "singular" is the Singular CAS, not alex-reysa/singular-lite
     "singular": {},
+    # toast: apt/apk/dnf are libgsm GSM 06.10; brew/nix core are stepchowfun/toast.
+    # paradise-runner/toast (terminal IDE) is GitHub releases / paradise-runner/tap.
+    "toast": {},
 }
 
 # Prefer these path prefixes when mapping binaries (order = priority).
