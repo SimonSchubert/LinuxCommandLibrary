@@ -3821,8 +3821,12 @@ jj-interdiff.md
 jj-log.md
 jj-new.md
 jj-next.md
+jj-operation-abandon.md
 jj-operation-diff.md
+jj-operation-integrate.md
 jj-operation-log.md
+jj-operation-restore.md
+jj-operation-revert.md
 jj-operation-show.md
 jj-operation.md
 jj-parallelize.md
