@@ -3101,6 +3101,7 @@ gpm.md
 gprbuild.md
 gprof.md
 gprolog.md
+gpty.md
 gpu-screen-recorder.md
 gpustat.md
 gqrx.md
