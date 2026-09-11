@@ -7464,6 +7464,7 @@ spicetify.md
 spiel.md
 spike.md
 split.md
+spnda.md
 sponge.md
 sport.md
 spotdl.md
