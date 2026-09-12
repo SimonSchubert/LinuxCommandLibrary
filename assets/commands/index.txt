@@ -3814,10 +3814,14 @@ jj-file-search.md
 jj-file-show.md
 jj-file.md
 jj-git-clone.md
+jj-git-colocation.md
+jj-git-export.md
 jj-git-fetch.md
+jj-git-import.md
 jj-git-init.md
 jj-git-push.md
 jj-git-remote.md
+jj-git-root.md
 jj-git.md
 jj-interdiff.md
 jj-log.md

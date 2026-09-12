@@ -94,4 +94,4 @@ Subcommand of jj. Requires Git backend. Some Git workflows (e.g., staging area) 
 
 # SEE ALSO
 
-[jj](/man/jj)(1), [jj-git-push](/man/jj-git-push)(1), [jj-git-clone](/man/jj-git-clone)(1), [git](/man/git)(1)
+[jj](/man/jj)(1), [jj-git-clone](/man/jj-git-clone)(1), [jj-git-colocation](/man/jj-git-colocation)(1), [jj-git-import](/man/jj-git-import)(1), [jj-git-export](/man/jj-git-export)(1), [jj-git-root](/man/jj-git-root)(1), [jj-git-push](/man/jj-git-push)(1), [git](/man/git)(1)
