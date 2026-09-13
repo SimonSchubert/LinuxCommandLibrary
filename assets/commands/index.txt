@@ -4195,6 +4195,7 @@ ldd.md
 lddd.md
 leaf.md
 leaftoppm.md
+learnlance.md
 leave.md
 leaves.md
 lebab.md
