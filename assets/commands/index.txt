@@ -2920,6 +2920,7 @@ git-touch.md
 git-undo.md
 git-unlock.md
 git-unpack-file.md
+git-unpack-objects.md
 git-update-index.md
 git-update-ref.md
 git-update-server-info.md
@@ -8907,6 +8908,7 @@ yast2.md
 yatto.md
 yay.md
 yazi.md
+yazses.md
 ybacklight.md
 ybmtopbm.md
 ydotool.md
