@@ -3810,9 +3810,12 @@ jj-duplicate.md
 jj-edit.md
 jj-evolog.md
 jj-file-annotate.md
+jj-file-chmod.md
 jj-file-list.md
 jj-file-search.md
 jj-file-show.md
+jj-file-track.md
+jj-file-untrack.md
 jj-file.md
 jj-git-clone.md
 jj-git-colocation.md

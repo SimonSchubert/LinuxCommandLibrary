@@ -85,7 +85,7 @@ Subcommand of **jj**. **untrack** only accepts paths that are already ignored (f
 
 # SEE ALSO
 
-[jj](/man/jj)(1), [jj-file-list](/man/jj-file-list)(1), [jj-file-show](/man/jj-file-show)(1), [jj-file-search](/man/jj-file-search)(1), [jj-file-annotate](/man/jj-file-annotate)(1), [jj-diff](/man/jj-diff)(1)
+[jj](/man/jj)(1), [jj-file-list](/man/jj-file-list)(1), [jj-file-show](/man/jj-file-show)(1), [jj-file-search](/man/jj-file-search)(1), [jj-file-annotate](/man/jj-file-annotate)(1), [jj-file-chmod](/man/jj-file-chmod)(1), [jj-file-track](/man/jj-file-track)(1), [jj-file-untrack](/man/jj-file-untrack)(1), [jj-diff](/man/jj-diff)(1)
 
 # RESOURCES
 
