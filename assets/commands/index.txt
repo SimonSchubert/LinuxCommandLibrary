@@ -2406,6 +2406,7 @@ fluxctl.md
 fluxion.md
 fly.md
 flyctl.md
+flysim.md
 fmql.md
 fmt.md
 fmtutil-sys.md
@@ -3847,6 +3848,7 @@ jj-restore.md
 jj-revert.md
 jj-show.md
 jj-simplify-parents.md
+jj-sparse.md
 jj-split.md
 jj-squash.md
 jj-status.md
