@@ -558,6 +558,18 @@ Type the words racing across the screen before they reach the other side.
  result ------->
 ```
 
+## vibeworld
+A persistent cyberpunk multiplayer world in the terminal for developers and scientists.
+```[vibeworld](/man/vibeworld)```
+```
+  .  *   TERRA
+ /--AI--AGORA-\
+ | @you  @sam |
+ |  HELP  !   |
+  \----LUNA---/
+   scream >> *
+```
+
 ## wumpus
 Hunt the Wumpus through a cave of connected rooms, armed with crooked arrows.
 ```[wump](/man/wump)```

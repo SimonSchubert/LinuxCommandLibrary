@@ -8452,6 +8452,7 @@ vi-mongo.md
 vi.md
 vibe.md
 viberaven.md
+vibeworld.md
 viddy.md
 vidir.md
 view.md
