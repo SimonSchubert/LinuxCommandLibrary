@@ -1801,6 +1801,7 @@ doc-engine.md
 docbook2html.md
 dockdiver.md
 docker-build.md
+docker-buildx-build.md
 docker-buildx-create.md
 docker-buildx-du.md
 docker-buildx-inspect.md
@@ -3068,6 +3069,7 @@ googler.md
 goose.md
 gopass.md
 gophish.md
+gopls.md
 gops.md
 gorae.md
 goreload.md
@@ -8664,7 +8666,10 @@ wine-reg-delete.md
 wine-reg-query.md
 wine-reg.md
 wine.md
+wineboot.md
 winecfg.md
+winedbg.md
+wineserver.md
 winetricks.md
 winicontopam.md
 winicontoppm.md
