@@ -157,6 +157,8 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     # toast: apt/apk/dnf are libgsm GSM 06.10; brew/nix core are stepchowfun/toast.
     # paradise-runner/toast (terminal IDE) is GitHub releases / paradise-runner/tap.
     "toast": {},
+    # livediff: AUR "livediff" is SoCkEt7/Livediff (Rust TUI); stagas/livediff is curl-installed Go
+    "livediff": {},
 }
 
 # Prefer these path prefixes when mapping binaries (order = priority).

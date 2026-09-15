@@ -4288,6 +4288,7 @@ litecli.md
 litert-lm.md
 littler.md
 live-server.md
+livediff.md
 lkbib.md
 lla.md
 llama-cli.md
