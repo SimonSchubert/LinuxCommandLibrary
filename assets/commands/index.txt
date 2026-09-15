@@ -307,6 +307,7 @@ ar.md
 arandr.md
 arc.md
 arch-chroot.md
+arch-update.md
 arch-wiki.md
 arch.md
 archdetect.md
@@ -798,6 +799,7 @@ borg.md
 borgbackup.md
 bosh.md
 bottom.md
+bough.md
 boundary.md
 bower.md
 bowtie2.md
@@ -8660,15 +8662,20 @@ wikifuse.md
 wikiman.md
 wikit.md
 windres.md
+wine-net.md
 wine-reg-add.md
 wine-reg-copy.md
 wine-reg-delete.md
 wine-reg-query.md
 wine-reg.md
+wine-sc.md
+wine-start.md
+wine-uninstaller.md
 wine.md
 wineboot.md
 winecfg.md
 winedbg.md
+winepath.md
 wineserver.md
 winetricks.md
 winicontopam.md
