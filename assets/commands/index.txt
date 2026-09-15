@@ -4278,6 +4278,7 @@ lint.md
 lintian-info.md
 lintian.md
 linux-boot-prober.md
+linux-doctor.md
 linux32.md
 linux64.md
 liquidctl.md
