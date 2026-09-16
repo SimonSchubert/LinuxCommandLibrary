@@ -1588,6 +1588,7 @@ daemonize.md
 daff.md
 dagger.md
 dagster.md
+daidocs.md
 dalfox.md
 daphne.md
 daps.md
@@ -8678,6 +8679,8 @@ wine.md
 wineboot.md
 winecfg.md
 winedbg.md
+winedump.md
+winemaker.md
 winepath.md
 wineserver.md
 winetricks.md
