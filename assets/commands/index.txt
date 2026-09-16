@@ -113,6 +113,7 @@ aerc.md
 afconvert.md
 afm2tfm.md
 afmtodit.md
+aft-mtp-cli.md
 aftr.md
 ag.md
 agate.md
@@ -3839,6 +3840,7 @@ jj-git.md
 jj-help.md
 jj-interdiff.md
 jj-log.md
+jj-metaedit.md
 jj-new.md
 jj-next.md
 jj-operation-abandon.md
