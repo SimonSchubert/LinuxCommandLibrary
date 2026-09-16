@@ -3809,6 +3809,7 @@ jj-config-path.md
 jj-config-set.md
 jj-config-unset.md
 jj-config.md
+jj-converge.md
 jj-describe.md
 jj-diff.md
 jj-diffedit.md
@@ -3848,10 +3849,12 @@ jj-operation.md
 jj-parallelize.md
 jj-prev.md
 jj-rebase.md
+jj-redo.md
 jj-resolve.md
 jj-restore.md
 jj-revert.md
 jj-show.md
+jj-sign.md
 jj-simplify-parents.md
 jj-sparse.md
 jj-split.md
@@ -3862,6 +3865,8 @@ jj-tag-list.md
 jj-tag-set.md
 jj-tag.md
 jj-undo.md
+jj-unsign.md
+jj-workspace.md
 jj.md
 jjj.md
 jjui.md
