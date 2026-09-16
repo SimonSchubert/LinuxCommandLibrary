@@ -3824,6 +3824,7 @@ jj-file-show.md
 jj-file-track.md
 jj-file-untrack.md
 jj-file.md
+jj-fix.md
 jj-git-clone.md
 jj-git-colocation.md
 jj-git-export.md
@@ -3834,6 +3835,7 @@ jj-git-push.md
 jj-git-remote.md
 jj-git-root.md
 jj-git.md
+jj-help.md
 jj-interdiff.md
 jj-log.md
 jj-new.md
