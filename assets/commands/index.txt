@@ -1600,6 +1600,7 @@ dart.md
 dasel.md
 dash.md
 datamash.md
+datamimic.md
 datasette.md
 date.md
 daxctl.md
