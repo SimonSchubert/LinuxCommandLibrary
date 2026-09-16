@@ -23,7 +23,9 @@ jobs:
       - name: Set execution flag for gradlew
         run: chmod +x gradlew
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
+        with:
+          packages: platform-tools
       - name: Install Android Build Tools
         run: sdkmanager "build-tools;29.0.3"
       - name: Run unit tests
@@ -485,7 +487,9 @@ jobs:
       - name: Set execution flag for gradlew
         run: chmod +x gradlew
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
+        with:
+          packages: platform-tools
       - name: Decode keystore
         run: echo "${{ secrets.KEYSTORE_B64 }}" | base64 --decode > /tmp/keystore.jks
       - name: Decode service account key
