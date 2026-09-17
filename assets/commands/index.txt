@@ -3802,6 +3802,7 @@ jira.md
 jiratui.md
 jj-abandon.md
 jj-absorb.md
+jj-arrange.md
 jj-bisect.md
 jj-bookmark.md
 jj-commit.md
@@ -3860,6 +3861,7 @@ jj-redo.md
 jj-resolve.md
 jj-restore.md
 jj-revert.md
+jj-root.md
 jj-show.md
 jj-sign.md
 jj-simplify-parents.md
@@ -3873,6 +3875,7 @@ jj-tag-set.md
 jj-tag.md
 jj-undo.md
 jj-unsign.md
+jj-util.md
 jj-workspace.md
 jj.md
 jjj.md
