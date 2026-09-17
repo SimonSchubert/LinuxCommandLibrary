@@ -3359,6 +3359,7 @@ hike.md
 himalaya.md
 hipstopgm.md
 hishtory.md
+hister.md
 history.md
 hive.md
 hl.md
@@ -3827,6 +3828,7 @@ jj-file-track.md
 jj-file-untrack.md
 jj-file.md
 jj-fix.md
+jj-gerrit.md
 jj-git-clone.md
 jj-git-colocation.md
 jj-git-export.md
