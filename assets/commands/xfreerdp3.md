@@ -54,17 +54,17 @@ Connect to a **Hyper-V console** (port 2179)
 
 # SYNOPSIS
 
-**xfreerdp3** [_file_] [_options_] [**/v:**_server_\[:_port_\]]
+**xfreerdp3** [_file_] [_options_] [**/v:**server[:port]]
 
 # PARAMETERS
 
-**/v:** _server_\[:_port_\]
-> Server hostname, IPv4/IPv6 address, `vsock://` URI, named pipe, or `|:`_fd_ to pass an existing TCP socket. Default port is **3389**.
+**/v:** _host_[:_port_]
+> Server hostname, IPv4/IPv6 address, vsock URI, named pipe, or an existing TCP socket. Default port is **3389**.
 
-**/u:** _[[domain\]user|user[@domain]]_
-> Username. Domain can be prefixed with a backslash or appended after `@`.
+**/u:** _username_
+> Username. Domain can be prefixed with a backslash (`DOMAIN\user`) or appended after `@`.
 
-**/p:** \[_password_\]
+**/p:** [_password_]
 > Password. Passing `/p` with no value silences interactive prompts when the server needs no credentials. A password on the command line is visible in the process list.
 
 **/d:** _domain_
@@ -74,7 +74,7 @@ Connect to a **Hyper-V console** (port 2179)
 > Server port (alternative to `/v:host:port`).
 
 **/f**
-> Fullscreen. Toggle with `Ctrl+Alt+Enter`.
+> Fullscreen. Toggle with Ctrl+Alt+Enter.
 
 **/w:** _width_
 > Window width in pixels (default **1024**).
@@ -82,7 +82,7 @@ Connect to a **Hyper-V console** (port 2179)
 **/h:** _height_
 > Window height in pixels (default **768**).
 
-**/size:** _width_x_height_ | _percent_%\[w|h\]
+**/size:** _WxH_ | _N_%w | _N_%h
 > Screen size. `50%h` uses 50% of the local screen height.
 
 **+dynamic-resolution**
@@ -94,34 +94,34 @@ Connect to a **Hyper-V console** (port 2179)
 **/drive:** _name_,_path_
 > Redirect local directory _path_ as share _name_. `/drive:hotplug,*` redirects drives plugged in later.
 
-**/sound:** \[_sys:_sys_\]
+**/sound:** [sys:_name_]
 > Audio output redirection. Example: `/sound:sys:alsa`.
 
-**/microphone:** \[_sys:_sys_\]
+**/microphone:** [sys:_name_]
 > Audio input (microphone) redirection.
 
-**/cert:** _deny_ | _ignore_ | _tofu_ | _name:_name_ | _fingerprint:_hash_
+**/cert:** deny | ignore | tofu | name:_name_ | fingerprint:_hash_
 > Certificate policy. **ignore** skips all checks; **tofu** accepts the first certificate and rejects later mismatches.
 
-**/sec:** _rdp_ | _tls_ | _nla_ | _ext_ | _aad_
+**/sec:** rdp | tls | nla | ext | aad
 > Force a security protocol. `/sec:nla` enables NLA and disables the others.
 
-**/gateway:**_g:_host_\[:_port_\]
+**/gateway:**g:_host_[:_port_]
 > RD Gateway. Short form: `/gw:`.
 
 **/admin**
 > Admin (console) session. Alias: `/console`.
 
-**/app:** _program:_path_
+**/app:** program:_path_
 > RemoteApp (run a single remote program instead of a full desktop).
 
-**/smartcard:** \[_filter_\]
+**/smartcard:** [_filter_]
 > Redirect matching smart cards.
 
-**/printer:** \[_name_\[,_driver_\]\]
+**/printer:** [_name_[,_driver_]]
 > Redirect a printer.
 
-**/usb:** _id:_vid:_pid_
+**/usb:** id:_vid_:_pid_
 > Redirect a USB device by vendor/product id.
 
 **/from-stdin**
