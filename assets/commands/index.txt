@@ -3862,6 +3862,7 @@ jj-resolve.md
 jj-restore.md
 jj-revert.md
 jj-root.md
+jj-run.md
 jj-show.md
 jj-sign.md
 jj-simplify-parents.md
@@ -5396,6 +5397,7 @@ ogrmerge.py.md
 oh-my-posh.md
 oh-my-zsh.md
 oha.md
+oj.md
 okf.md
 okular.md
 oleid.md
@@ -5496,6 +5498,7 @@ openvpn3.md
 opera-stable.md
 opera.md
 ophcrack.md
+opi.md
 opkg.md
 opldecode.md
 oproxy.md

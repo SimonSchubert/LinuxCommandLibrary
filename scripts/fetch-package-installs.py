@@ -152,6 +152,8 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     "filament": {},
     # h3: distro packages are Uber's geospatial H3 (libh3-bin / h3); antirez h3-metal is source-only
     "h3": {},
+    # oj: brew "oj" is ohler55/ojg (JSON CLI), not lovablelabs/oj (Vite-compatible React build tool)
+    "oj": {},
     # singular: distro/brew/nix "singular" is the Singular CAS, not alex-reysa/singular-lite
     "singular": {},
     # toast: apt/apk/dnf are libgsm GSM 06.10; brew/nix core are stepchowfun/toast.
