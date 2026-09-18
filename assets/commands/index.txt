@@ -8823,6 +8823,7 @@ xfce4-terminal.md
 xfontsel.md
 xfr.md
 xfreerdp.md
+xfreerdp3.md
 xfs.md
 xfs_admin.md
 xfs_repair.md
