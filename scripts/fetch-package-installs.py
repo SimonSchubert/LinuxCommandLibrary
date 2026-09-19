@@ -107,6 +107,8 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     },
     # lore: AUR "lore" is robinovitch61/lore (terminal pager); Epic VCS is lore-vcs-bin
     "lore": {"aur": "lore-vcs-bin"},
+    # jeff: AUR "jeff" is markcda/jeff (Qt chatbot), not Alurith/jeff (semantic review CLI)
+    "jeff": {},
     # fd: Debian/brew map "fd" → fdclone (file manager); real tool is sharkdp/fd
     "fd": {
         "apt": "fd-find",
