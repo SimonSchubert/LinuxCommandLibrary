@@ -114,6 +114,7 @@ afconvert.md
 afm2tfm.md
 afmtodit.md
 aft-mtp-cli.md
+aft-mtp-mount.md
 aftr.md
 ag.md
 agate.md

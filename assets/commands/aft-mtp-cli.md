@@ -136,7 +136,7 @@ The device must be unlocked and in MTP (or PTP) mode; a charging-only USB mode o
 
 # SEE ALSO
 
-[jmtpfs](/man/jmtpfs)(1), [simple-mtpfs](/man/simple-mtpfs)(1), [gio](/man/gio)(1), [gvfs-mount](/man/gvfs-mount)(1), [fusermount](/man/fusermount)(1)
+[aft-mtp-mount](/man/aft-mtp-mount)(1), [jmtpfs](/man/jmtpfs)(1), [simple-mtpfs](/man/simple-mtpfs)(1), [gio](/man/gio)(1), [gvfs-mount](/man/gvfs-mount)(1), [fusermount](/man/fusermount)(1)
 
 # RESOURCES
 
