@@ -1547,6 +1547,7 @@ ctrlb-decompose.md
 ctx.md
 ctypes.md
 cu.md
+cua.md
 cuabot.md
 cubemastercli.md
 cucumber.md
@@ -4446,6 +4447,7 @@ lue.md
 luigi.md
 luit.md
 lumabri.md
+lume.md
 lumen.md
 lumon.md
 lure.md
