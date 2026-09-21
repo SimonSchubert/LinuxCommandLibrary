@@ -390,6 +390,7 @@ asterisk.md
 astronomer.md
 astroterm.md
 astyle.md
+asusctl.md
 at.md
 atac.md
 atc.md
@@ -736,6 +737,7 @@ bitbang.md
 bitchat-tui.md
 bitcoin-cli.md
 bitcoin-qt.md
+bitcoin-rs.md
 bitcoind.md
 bitwarden-cli.md
 bitwise.md
@@ -3779,6 +3781,7 @@ jenkins.md
 jenv.md
 jest.md
 jetifier.md
+jevals.md
 jevchat.md
 jf.md
 jfrog.md
