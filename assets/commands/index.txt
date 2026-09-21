@@ -2417,6 +2417,7 @@ fluxion.md
 fly.md
 flyctl.md
 flysim.md
+fmg.md
 fmql.md
 fmt.md
 fmtutil-sys.md
@@ -2452,6 +2453,7 @@ fop.md
 for.md
 forall.md
 foreman.md
+foremerge.md
 foremost.md
 forever.md
 forge.md
@@ -4350,6 +4352,7 @@ loadndisdriver.md
 loadtest.md
 lobtui.md
 loc.md
+local-coder.md
 local.md
 locale-gen.md
 locale.md
@@ -7277,6 +7280,7 @@ setquota.md
 setsebool.md
 setserial.md
 setsid.md
+setup-ai.md
 setup-alpine.md
 setxkbmap.md
 sf.md
