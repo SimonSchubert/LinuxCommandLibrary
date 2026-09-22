@@ -3662,6 +3662,7 @@ install-tl.md
 install.md
 installpkg.md
 instaloader.md
+instinctflash.md
 intel_bios_reader.md
 intel_error_decode.md
 intel_gtt.md
@@ -4810,6 +4811,7 @@ moe.md
 mogrify.im6.md
 mogrify.md
 mokutil.md
+mold.md
 mole.md
 molecule.md
 moltbook-tui.md
