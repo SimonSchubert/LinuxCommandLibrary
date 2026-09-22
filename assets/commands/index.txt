@@ -7930,6 +7930,7 @@ terraform-login.md
 terraform-logout.md
 terraform-output.md
 terraform-plan.md
+terraform-providers.md
 terraform-show.md
 terraform-taint.md
 terraform-tui.md
