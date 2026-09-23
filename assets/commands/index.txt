@@ -128,6 +128,7 @@ agentbox.md
 agenthatch.md
 agentico.md
 agentnest.md
+agentrun.md
 agetty.md
 agg.md
 agy.md
@@ -6212,6 +6213,7 @@ pod2text.md
 podchecker.md
 podliner.md
 podman-build.md
+podman-commit.md
 podman-compose.md
 podman-exec.md
 podman-export.md
