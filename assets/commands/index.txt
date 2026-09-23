@@ -168,6 +168,7 @@ algebruh.md
 ali.md
 alias.md
 alien.md
+all-your-agents.md
 alltray.md
 alpine.md
 alr-help.md
@@ -3133,6 +3134,7 @@ gradle-tasks.md
 gradle-test.md
 gradle-wrapper.md
 gradle.md
+graf.md
 grafana-cli.md
 grafana.md
 graft.md

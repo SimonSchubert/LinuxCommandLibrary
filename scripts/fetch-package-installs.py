@@ -109,6 +109,8 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     "lore": {"aur": "lore-vcs-bin"},
     # jeff: AUR "jeff" is markcda/jeff (Qt chatbot), not Alurith/jeff (semantic review CLI)
     "jeff": {},
+    # graf: AUR "graf" is sovereign-society VCS, not ctxrs/graf (local code-graph CLI)
+    "graf": {},
     # fd: Debian/brew map "fd" → fdclone (file manager); real tool is sharkdp/fd
     "fd": {
         "apt": "fd-find",
