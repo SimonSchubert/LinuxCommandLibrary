@@ -6,33 +6,33 @@ Create an image from a container's changes
 
 **Create an image** from a container
 
-```podman commit [container] [image:tag]```
+```podman container commit [container] [image:tag]```
 
 **Set the author**
 
-```podman commit --author "[Jane Doe]" [container] [image:tag]```
+```podman container commit --author "[Jane Doe]" [container] [image:tag]```
 
 **Apply image instructions** while committing
 
-```podman commit --change "CMD [/bin/bash]" --change "LABEL [blue=image]" [container] [image:tag]```
+```podman container commit --change "CMD [/bin/bash]" --change "LABEL [blue=image]" [container] [image:tag]```
 
 **Commit a running container** without pausing it
 
-```podman commit --pause=false [container] [image:tag]```
+```podman container commit --pause=false [container] [image:tag]```
 
 **Print only the new image ID**
 
-```podman commit --quiet [container] [image:tag]```
+```podman container commit --quiet [container] [image:tag]```
 
 **Squash the committed layers** into one
 
-```podman commit --squash [container] [image:tag]```
+```podman container commit --squash [container] [image:tag]```
 
 # SYNOPSIS
 
-**podman commit** [_options_] _container_ [_image_]
-
 **podman container commit** [_options_] _container_ [_image_]
+
+**podman commit** [_options_] _container_ [_image_]
 
 # PARAMETERS
 
@@ -74,9 +74,7 @@ _IMAGE_
 
 # DESCRIPTION
 
-**podman commit** creates an image from the changed root filesystem of a container. The container is paused while the snapshot is taken, unless **--pause** is set to false. When the commit finishes, Podman prints the ID of the new image.
-
-**podman container commit** is the same command.
+**podman container commit** creates an image from the changed root filesystem of a container. It is the same command as **podman commit**, registered under the **podman container** group. The container is paused while the snapshot is taken, unless **--pause** is set to false. When the commit finishes, Podman prints the ID of the new image.
 
 The image records the container's current filesystem, plus any instructions passed with **--change**. It does not record a Containerfile, so the result cannot be rebuilt from a recipe the way **podman build** can.
 
@@ -90,7 +88,7 @@ Pausing is on by default so other processes cannot change the root filesystem mi
 
 # HISTORY
 
-The **podman-commit** manual page was first compiled in December 2017 by Urvashi Mohnani. The command is part of Podman, the daemonless container engine.
+The **podman-commit** manual page was first compiled in December 2017 by Urvashi Mohnani. **podman container commit** is the same command under Podman's container subcommand group.
 
 # INSTALL
 
@@ -108,11 +106,11 @@ The **podman-commit** manual page was first compiled in December 2017 by Urvashi
 
 ```nix: nix profile install nixpkgs#podman```
 
-<!-- packages: 2026-09-23 -->
+<!-- packages: 2026-09-24 -->
 
 # SEE ALSO
 
-[podman](/man/podman)(1), [podman-container-commit](/man/podman-container-commit)(1), [podman-build](/man/podman-build)(1), [podman-run](/man/podman-run)(1), [docker-commit](/man/docker-commit)(1)
+[podman](/man/podman)(1), [podman-commit](/man/podman-commit)(1), [podman-build](/man/podman-build)(1), [podman-run](/man/podman-run)(1), [docker-container-commit](/man/docker-container-commit)(1)
 
 # RESOURCES
 
@@ -122,4 +120,4 @@ The **podman-commit** manual page was first compiled in December 2017 by Urvashi
 
 ```[Documentation](https://docs.podman.io/en/latest/markdown/podman-commit.1.html)```
 
-<!-- verified: 2026-09-23 -->
+<!-- verified: 2026-09-24 -->
