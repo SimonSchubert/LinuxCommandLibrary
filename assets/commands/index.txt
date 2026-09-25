@@ -4275,6 +4275,7 @@ lich.md
 lid.idutils.md
 lid.libuser.md
 lid.md
+lifeboat.md
 light.md
 lighthouse.md
 lightpanda.md
@@ -6212,6 +6213,7 @@ pod2html.md
 pod2man.md
 pod2text.md
 podchecker.md
+podlet.md
 podliner.md
 podman-build.md
 podman-commit.md
