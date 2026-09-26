@@ -1,3 +1,11 @@
+## v4.9.0 - 2026-09-26
+
+### Features
+- Added 115 new commands, including a large set of jj (Jujutsu) subcommands, Wine tools (winedbg, winemaker, wineserver and more), doctl extras, podman-commit, gopls, mold and xfreerdp3
+
+### Improvements
+- Upgraded dependencies (Kotlin 2.4.20, Compose Multiplatform 1.12.1, Android Gradle Plugin 9.4.1, Compose BOM 2026.09.00, SKIE 0.10.15)
+
 ## v4.8.0 — 2026-09-07
 
 ### Features
