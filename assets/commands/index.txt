@@ -2697,6 +2697,7 @@ gh-secret-set.md
 gh-secret.md
 gh-skyline.md
 gh-ssh-key.md
+gh-stack.md
 gh-status.md
 gh-variable.md
 gh-workflow.md
