@@ -6914,6 +6914,7 @@ rehash.md
 reindexdb.md
 rekal.md
 rekor-cli.md
+reladraw.md
 relaymux.md
 relic.md
 remembrane.md
