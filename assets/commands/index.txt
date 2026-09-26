@@ -3892,6 +3892,7 @@ jj-tag.md
 jj-undo.md
 jj-unsign.md
 jj-util.md
+jj-workspace-root.md
 jj-workspace.md
 jj.md
 jjj.md
