@@ -2,7 +2,7 @@
 # https://github.com/SimonSchubert/LinuxCommandLibrary
 
 pkgname=lcl-gui-bin
-pkgver=4.8.0
+pkgver=4.9.0
 pkgrel=1
 pkgdesc='Linux command reference and cheat sheets - native Qt desktop application'
 arch=('x86_64' 'aarch64')
@@ -38,8 +38,8 @@ options=('!strip')
 _base="https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v${pkgver}"
 source_x86_64=("LinuxCommandLibrary-${pkgver}-linux-gui-x86_64.tar.gz::${_base}/LinuxCommandLibrary-${pkgver}-linux-gui-x86_64.tar.gz")
 source_aarch64=("LinuxCommandLibrary-${pkgver}-linux-gui-aarch64.tar.gz::${_base}/LinuxCommandLibrary-${pkgver}-linux-gui-aarch64.tar.gz")
-sha256sums_x86_64=('56af95f21ec1a32de804207507875a0128d343756b540b389f7e1348930cbc9b')
-sha256sums_aarch64=('5e3c8aef48ef55fa6b8e32659d65409f272495997058f036eb9d986eba51a6ca')
+sha256sums_x86_64=('3a6113d603d80ad58994df2b34bd6d7956d85e794d359b5ff1519ddd97bc6650')
+sha256sums_aarch64=('e9b30611fee43d4a4669f3fd118695ea5f53c81f6e2de7d76871b774a338fdfc')
 
 package() {
     cd "${srcdir}/lcl-gui-${pkgver}"
