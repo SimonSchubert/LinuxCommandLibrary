@@ -6111,6 +6111,7 @@ pkill.md
 pkl.md
 pl2pm.md
 plandex.md
+planmaker.md
 planor.md
 plantuml.md
 plasma-apply-colorscheme.md
@@ -7969,6 +7970,7 @@ texdoc.md
 texlite.md
 texliveonfly.md
 textlint.md
+textmaker.md
 textql.md
 textsnap.md
 textual-astview.md
