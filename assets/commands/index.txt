@@ -3152,6 +3152,7 @@ greed.md
 grep.md
 grepathy.md
 gresource.md
+grev.md
 grex.md
 gri.md
 grim.md
@@ -8626,6 +8627,7 @@ wakeonlan.md
 wakey.md
 wal-telegram.md
 wal.md
+walgit.md
 walker.md
 wall.md
 wallfacer.md
