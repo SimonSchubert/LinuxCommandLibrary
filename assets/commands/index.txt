@@ -6455,6 +6455,7 @@ prowler-kubernetes.md
 prowler-m365.md
 prowler.md
 proxify.md
+proxy-scraper.md
 proxychains.md
 prqlc.md
 prs.md
