@@ -32,13 +32,9 @@ Leave one interface **out** of the reload
 
 ```ifreload -a -X [eth0]```
 
-Touch only interfaces whose configuration **actually changed**
-
-```ifreload --diff -a```
-
 # SYNOPSIS
 
-**ifreload** [**-h**] (**-a** | **-c** | **--allow**=_CLASS_) [**-n**] [**-v**] [**-d**] [**-f**] [**-s**] [**-X** _PATTERN_] [**--diff**] [options]
+**ifreload** [**-h**] (**-a** | **-c** | **--allow**=_CLASS_) [**-n**] [**-v**] [**-d**] [**-f**] [**-s**] [**-X** _PATTERN_] [options]
 
 # PARAMETERS
 
@@ -68,9 +64,6 @@ Touch only interfaces whose configuration **actually changed**
 
 **-X** _PATTERN_, **--exclude** _PATTERN_
 > Skip interfaces matching _PATTERN_. Repeat the flag to skip more than one. If the skipped interface has dependents (a bridge or bond and its members), list each dependent as well or they stay in the run.
-
-**--diff**
-> Only bring an interface up or down when its configuration differs from the saved state.
 
 **-u**, **--use-current-config**
 > Decide what to bring down from the current interfaces file. The default reads the saved state. Use this when that state file is missing or stale.
@@ -103,7 +96,7 @@ ifupdown2 reads **/etc/network/ifupdown2/ifupdown2.conf**. Interface stanzas sta
 > **0** (the value in the upstream sample) runs **down** only for interfaces deleted from the file. **1** also runs **down** on interfaces whose configuration changed before bringing them back up.
 
 **state_dir**
-> Directory for the saved interface state used on the next reload. The upstream sample sets **/var/tmp/network/**. A packaged build may point this somewhere else, such as **/run/network/**.
+> Directory for the saved interface state used on the next reload. The packaged config sets **/var/tmp/network/**.
 
 # INSTALL
 
