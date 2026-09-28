@@ -3785,6 +3785,7 @@ jco.md
 jdeps.md
 jdupes.md
 jeeves.md
+jeff-serve.md
 jeff.md
 jekyll.md
 jellex.md
