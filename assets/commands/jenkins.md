@@ -74,4 +74,4 @@ Jenkins was forked from **Hudson** in 2011 by **Kohsuke Kawaguchi**. It became t
 
 # SEE ALSO
 
-[java](/man/java)(1), [docker](/man/docker)(1), [gitlab-runner](/man/gitlab-runner)(1)
+[java](/man/java)(1), [jenkins-cli](/man/jenkins-cli)(1), [docker](/man/docker)(1), [gitlab-runner](/man/gitlab-runner)(1)

@@ -167,6 +167,13 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     "toast": {},
     # livediff: AUR "livediff" is SoCkEt7/Livediff (Rust TUI); stagas/livediff is curl-installed Go
     "livediff": {},
+    # jenkins-cli: brew formula and AUR package named jenkins-cli are jenkins-zh/jcli
+    # (binary jcli). Homebrew's jenkins formula and nixpkgs#jenkins install the
+    # official jar as a wrapper named jenkins-cli.
+    "jenkins-cli": {
+        "brew": "jenkins",
+        "nix": "jenkins",
+    },
 }
 
 # Prefer these path prefixes when mapping binaries (order = priority).

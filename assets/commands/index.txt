@@ -3787,6 +3787,7 @@ jeff.md
 jekyll.md
 jellex.md
 jello.md
+jenkins-cli.md
 jenkins.md
 jenv.md
 jest.md
