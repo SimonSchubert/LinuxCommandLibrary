@@ -3389,6 +3389,7 @@ hledger-web.md
 hledger.md
 hlint.md
 hn.md
+hntui.md
 hoard.md
 holehe.md
 hollywood.md
@@ -3570,6 +3571,7 @@ ifdown.md
 ifmetric.md
 ifne.md
 ifquery.md
+ifreload.md
 ifs.md
 ifstat.md
 ifstatus.md

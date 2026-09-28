@@ -137,6 +137,9 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
         "zypper": "backintime",
         "nix": "backintime",
     },
+    # ifreload: /usr/sbin/ifreload is in ifupdown2 (Architecture: all), so Contents-amd64
+    # never maps the binary. Classic ifupdown and ifupdown-ng do not ship it.
+    "ifreload": {"apt": "ifupdown2"},
     "alex": {"brew": "alexjs"},
     "amap": {},  # Contents maps to amap-align (wrong product)
     "flint": {},  # distro flint is FLINT (flintlib number theory), not mainak55512/flint
