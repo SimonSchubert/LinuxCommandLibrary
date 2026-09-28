@@ -1,89 +1,137 @@
 # TAGLINE
 
-official installer for TeX Live, a comprehensive TeX distribution including
+official installer for the TeX Live distribution
 
 # TLDR
 
-**Start the TeX Live installer** interactively
+**Start the TeX Live installer** interactively (text menu on Unix)
 
-```install-tl```
+```sudo ./install-tl```
 
-**Install TeX Live** in unattended mode with default settings
+**Install immediately** with default settings, without the menu
 
-```install-tl --no-interaction```
+```sudo ./install-tl --no-interaction```
+
+**Install a smaller scheme** unattended
+
+```sudo ./install-tl --scheme=small --no-interaction```
+
+**Install into a user directory** without root
+
+```./install-tl --texdir=[~/texlive/2026] --no-interaction```
+
+Install **without documentation and source** files to save space
+
+```sudo ./install-tl --no-doc-install --no-src-install```
 
 **Install from a local ISO** or directory
 
-```install-tl --repository [/path/to/texlive/iso]```
+```sudo ./install-tl --repository [/mnt/texlive]```
 
-**Install a minimal scheme** (basic packages only)
+**Unattended install** from a profile file
 
-```install-tl --scheme=small```
+```sudo ./install-tl --profile=[texlive.profile]```
 
-**Specify custom installation directory**
+Start the **graphical installer**
 
-```install-tl --texdir=[/opt/texlive/2024]```
-
-**Install with a specific profile** file
-
-```install-tl --profile=[texlive.profile]```
+```./install-tl --gui```
 
 # SYNOPSIS
 
-**install-tl** [_-gui_] [_-no-gui_] [_-repository URL_] [_-scheme SCHEME_] [_-profile FILE_] [_-texdir DIR_] [_-no-interaction_] [_-help_]
+**install-tl** [_option_]...
 
 # PARAMETERS
 
-**-gui**
-> Start in GUI mode (requires Perl/Tk)
+**-gui** [_module_]
+> Start the Tcl/Tk GUI installer; module **text** is the same as **-no-gui**.
 
 **-no-gui**
-> Force text mode installation
-
-**-repository** _URL_
-> Specify package repository (local path or URL)
-
-**-scheme** _SCHEME_
-> Installation scheme: full, medium, small, basic, minimal, etc.
-
-**-profile** _FILE_
-> Use settings from profile file for automated installation
-
-**-texdir** _DIR_
-> Main TeX Live installation directory
-
-**-texmflocal** _DIR_
-> Directory for site-wide local files
-
-**-texmfhome** _DIR_
-> Directory for user-specific files
-
-**-portable**
-> Install for portable use (USB drive, no system integration)
+> Use the text-mode installer (default on Unix).
 
 **-no-interaction**
-> Run without user interaction (automated installation)
+> Skip the interactive menu and install immediately after parsing options.
+
+**-repository** _URL|PATH_
+> Package repository to install from (default: automatic CTAN mirror; **ctan** is an alias).
+
+**-select-repository**
+> Choose a specific CTAN mirror from a list.
+
+**-scheme** _SCHEME_
+> Installation scheme, e.g. full (default), medium, small, basic, minimal, infraonly.
+
+**-profile** _FILE_
+> Install without interaction using settings from a profile file.
+
+**-init-from-profile** _FILE_
+> Load settings from a profile, then start the interactive menu.
+
+**-texdir** _DIR_
+> Main installation directory (default **/usr/local/texlive/YYYY**).
+
+**-texuserdir** _DIR_
+> User directory (default **~/.texliveYYYY**).
+
+**-texmflocal** _DIR_
+> Directory for site-wide local files.
+
+**-texmfhome** _DIR_
+> Directory for user-specific files (default **~/texmf**).
+
+**-paper** _a4|letter_
+> Default paper size (default a4).
+
+**-portable**
+> Install for portable use (USB drive, no system integration).
+
+**-no-doc-install**, **-no-src-install**
+> Do not install documentation or source files.
+
+**-no-verify-downloads**
+> Skip GnuPG verification of downloads.
+
+**-no-continue**
+> Abort if a non-core package fails to install.
+
+**-print-platform**
+> Print the detected platform identifier and exit.
+
+**-logfile** _FILE_
+> Write all messages to a log file.
+
+**-q**
+> Omit informational messages.
 
 **-no-cls**
-> Do not clear screen before output
+> Do not clear the screen in text mode.
 
 **-help**
-> Display help information
+> Display help information.
 
 # DESCRIPTION
 
-**install-tl** is the official installer for TeX Live, a comprehensive TeX distribution including LaTeX, fonts, and related programs. The installer can run in GUI, text, or fully automated mode depending on available dependencies and command-line options.
+**install-tl** is the official installer for TeX Live, a comprehensive TeX distribution including LaTeX, fonts, and related programs. It is shipped in **install-tl-unx.tar.gz** (Unix) and **install-tl-windows.exe**/**install-tl.zip** (Windows). Options may be given with **-** or **--**, and values separated by a space or **=**.
 
-The installer downloads packages from CTAN mirrors or uses a local repository. Installation schemes range from minimal (~100MB) to full (~7GB). Post-installation, use **tlmgr** (TeX Live Manager) to update and manage packages.
+The installer downloads packages from CTAN mirrors or uses a local repository. Installation schemes range from infraonly and minimal to full (several GB, the recommended default). After installation, add the **bin/**_platform_ directory to **PATH** and use **tlmgr** (TeX Live Manager) to update and manage packages. A profile of the finished installation is saved in **tlpkg/texlive.profile**.
 
 # CAVEATS
 
-Full installation requires several gigabytes of disk space. Network installations depend on CTAN mirror availability. GUI mode requires Perl/Tk which may not be installed by default. Annual releases mean reinstallation is typically needed each year rather than upgrades.
+Full installation requires about 8 GB of disk space. Network installations depend on CTAN mirror availability. The GUI requires Tcl/Tk (the former Perl/Tk interface was replaced). **PATH** is not adjusted on Unix by default. Each yearly release installs into a new directory; upgrading across releases is not supported by tlmgr, so a fresh install is normally done each year. Do not use install-tl to modify an existing installation: use **tlmgr**.
 
 # HISTORY
 
-TeX Live was first released in **1996** as a collaboration between TeX user groups worldwide to provide a consistent, cross-platform TeX distribution. The install-tl script has evolved alongside, with the Perl-based installer becoming standard around **2008**. It replaced earlier platform-specific installers and continues to be actively maintained by the TeX Live team.
+TeX Live was first released in **1996** as a collaboration between TeX user groups worldwide to provide a consistent, cross-platform TeX distribution. The Perl-based **install-tl** became the standard installer with **TeX Live 2008**, replacing earlier platform-specific installers. It is maintained by the TeX Live team, mainly **Karl Berry** and **Norbert Preining**.
 
 # SEE ALSO
 
 [tlmgr](/man/tlmgr)(1), [pdflatex](/man/pdflatex)(1), [xelatex](/man/xelatex)(1), [lualatex](/man/lualatex)(1), [tex](/man/tex)(1)
+
+# RESOURCES
+
+```[Homepage](https://tug.org/texlive/)```
+
+```[Source code](https://tug.org/texlive/svn/)```
+
+```[Documentation](https://tug.org/texlive/doc/install-tl.html)```
+
+<!-- verified: 2026-09-29 -->

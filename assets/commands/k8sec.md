@@ -4,71 +4,93 @@ manages Kubernetes secrets from the command line
 
 # TLDR
 
-**List secrets**
+**List** all secrets with decoded values
 
 ```k8sec list```
 
-**Get secret value**
+**Show** the keys and values of one secret
 
-```k8sec get [secret-name]```
+```k8sec list [secret-name]```
 
-**Set secret**
+Show values **base64-encoded**
 
-```k8sec set [secret-name] [key=value]```
+```k8sec list --base64 [secret-name]```
 
-**Delete secret key**
+**Set** one or more keys in a secret
 
-```k8sec unset [secret-name] [key]```
+```k8sec set [secret-name] [key1=value1] [key2=value2]```
 
-**List in namespace**
+**Remove** keys from a secret
 
-```k8sec list -n [namespace]```
+```k8sec unset [secret-name] [key1] [key2]```
 
-**Dump secret as env**
+**Load** keys from a dotenv file
 
-```k8sec dump [secret-name]```
+```k8sec load -f [.env] [secret-name]```
+
+**Dump** a secret as a dotenv file
+
+```k8sec dump -f [.env] [secret-name]```
+
+Work in a specific **namespace and context**
+
+```k8sec list -n [namespace] --context [context]```
 
 # SYNOPSIS
 
-**k8sec** _command_ [_options_]
+**k8sec** _command_ [_options_] [_arguments_]
+
+# COMMANDS
+
+**list** [**--base64**] [_NAME_]
+> List secrets with their keys and decoded values.
+
+**set** [**--base64**] _NAME_ _KEY=VALUE_...
+> Set keys in a secret. With **--base64**, values are taken as already base64-encoded.
+
+**unset** _NAME_ _KEY_...
+> Remove keys from a secret.
+
+**load** [**-f** _FILE_] _NAME_
+> Load keys from dotenv (key=value) text, read from a file or stdin.
+
+**dump** [**-f** _FILE_] [**--noquotes**] [_NAME_]
+> Print secrets in dotenv format, optionally to a file and without quotes around values.
 
 # PARAMETERS
 
-**list**
-> List secrets.
+**-n**, **--namespace** _NAMESPACE_
+> Kubernetes namespace (default: default).
 
-**get** _NAME_
-> Get secret values.
+**--context** _CONTEXT_
+> Kubernetes context to use.
 
-**set** _NAME_ _KEY=VALUE_
-> Set secret key.
+**--kubeconfig** _PATH_
+> Path to kubeconfig (default: ~/.kube/config).
 
-**unset** _NAME_ _KEY_
-> Remove secret key.
-
-**dump** _NAME_
-> Export as env vars.
-
-**-n** _NAMESPACE_
-> Kubernetes namespace.
-
-**--help**
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**k8sec** manages Kubernetes secrets from the command line. It simplifies viewing and editing secret values.
+**k8sec** manages Kubernetes secrets from the command line. It shows secret values decoded from base64 and lets you set, unset, import and export keys without writing YAML manifests.
 
-The tool decodes base64 automatically. It provides an easier interface than kubectl for secret management.
+The **load** and **dump** commands convert between secrets and dotenv files, which is handy for syncing application environment variables with a cluster.
 
 # CAVEATS
 
-Requires kubeconfig. Secrets stored base64. Consider RBAC permissions.
+Requires a working kubeconfig and RBAC permissions to read and modify secrets. Secrets are only base64-encoded, not encrypted, unless encryption at rest is enabled in the cluster. Dumped files contain plaintext credentials.
 
 # HISTORY
 
-k8sec was created to simplify Kubernetes secret management with a more intuitive command-line interface.
+k8sec was written in **Go** by **dtan4** to make Kubernetes secret management easier than raw kubectl commands.
 
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubeseal](/man/kubeseal)(1), [vault](/man/vault)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/dtan4/k8sec)```
+
+<!-- verified: 2026-09-29 -->

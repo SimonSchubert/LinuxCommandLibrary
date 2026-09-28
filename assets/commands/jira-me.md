@@ -1,28 +1,28 @@
 # TAGLINE
 
-lists issues assigned to the current user
+prints the configured Jira user
 
 # TLDR
 
-**List my issues**
+**Show the configured login**
 
 ```jira me```
 
-**My issues in project**
+**List issues assigned to me**
 
-```jira me -p [PROJECT]```
+```jira issue list -a$(jira me)```
 
-**My open issues**
+**My issues in progress**
 
-```jira me --status [Open]```
+```jira issue list -a$(jira me) -s"[In Progress]"```
 
-**My issues with limit**
+**Assign an issue to myself**
 
-```jira me -l [20]```
+```jira issue assign [PROJ-123] $(jira me)```
 
-**My issues raw output**
+**My issues in the current sprint**
 
-```jira me --plain```
+```jira sprint list --current -a$(jira me)```
 
 # SYNOPSIS
 
@@ -30,35 +30,28 @@ lists issues assigned to the current user
 
 # PARAMETERS
 
-**-p** _PROJECT_
-> Filter by project.
-
-**--status** _STATUS_
-> Filter by status.
-
-**-l** _LIMIT_
-> Maximum results.
-
-**--plain**
-> Plain text output.
+**-c**, **--config** _FILE_
+> Read the login from an alternative config file.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**jira me** lists issues assigned to the current user. It provides a quick view of personal workload.
-
-The command filters by default to show open issues. Additional filters narrow results by project or status.
+**jira me** prints the login (username or email) stored in the jira-cli configuration. It does not query the server or list issues itself; it is meant for command substitution, so other commands can filter or assign by the current user.
 
 # CAVEATS
 
-Subcommand of jira-cli. Requires authentication. May be aliased in config.
-
-# HISTORY
-
-jira me is a convenience command in **jira-cli** for quickly viewing issues assigned to the authenticated user.
+Subcommand of **jira-cli** (ankitpokhrel/jira-cli). Prints the **login** value from the config file created by **jira init**, so it returns nothing useful before configuration.
 
 # SEE ALSO
 
-[jira](/man/jira)(1), [jira-sprint](/man/jira-sprint)(1), [jira-open](/man/jira-open)(1)
+[jira](/man/jira)(1), [jira-issue](/man/jira-issue)(1), [jira-sprint](/man/jira-sprint)(1), [jira-open](/man/jira-open)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ankitpokhrel/jira-cli)```
+
+```[Documentation](https://github.com/ankitpokhrel/jira-cli/wiki)```
+
+<!-- verified: 2026-09-29 -->

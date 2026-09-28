@@ -87,6 +87,17 @@ EXTRA_CANDIDATES: dict[str, list[str]] = {
 # Full install maps that replace resolver output (known collisions / enrichments).
 # Manager → package. Empty dict = force no INSTALL (do not auto-apply garbage).
 INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
+    "ip-maddress": {"apt": "iproute2", "pacman": "iproute2", "apk": "iproute2-minimal", "zypper": "iproute2", "brew": "iproute2", "nix": "iproute2"},
+    "ip-monitor": {"apt": "iproute2", "pacman": "iproute2", "apk": "iproute2-minimal", "zypper": "iproute2", "brew": "iproute2", "nix": "iproute2"},
+    "ip-route": {"apt": "iproute2", "pacman": "iproute2", "apk": "iproute2-minimal", "zypper": "iproute2", "brew": "iproute2", "nix": "iproute2"},
+    "ip-route-get": {"apt": "iproute2", "pacman": "iproute2", "apk": "iproute2-minimal", "zypper": "iproute2", "brew": "iproute2", "nix": "iproute2"},
+    "ip-route-list": {"apt": "iproute2", "pacman": "iproute2", "apk": "iproute2-minimal", "zypper": "iproute2", "brew": "iproute2", "nix": "iproute2"},
+    "ip-route-show": {"apt": "iproute2", "pacman": "iproute2", "apk": "iproute2-minimal", "zypper": "iproute2", "brew": "iproute2", "nix": "iproute2"},
+    "ip-stats": {"apt": "iproute2", "pacman": "iproute2", "apk": "iproute2-minimal", "zypper": "iproute2", "brew": "iproute2", "nix": "iproute2"},
+    "koji-call": {"dnf": "koji", "brew": "koji", "nix": "koji"},
+    "koji-download-build": {"dnf": "koji", "brew": "koji", "nix": "koji"},
+    "koji-tag-build": {"dnf": "koji", "brew": "koji", "nix": "koji"},
+    "jj-simplify-parents": {"pacman": "jujutsu", "apk": "jujutsu", "zypper": "jujutsu", "brew": "jujutsu", "nix": "jujutsu"},
     "az": {
         "dnf": "azure-cli",
         "pacman": "azure-cli",

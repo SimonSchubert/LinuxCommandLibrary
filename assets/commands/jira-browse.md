@@ -8,13 +8,21 @@ opens a Jira issue or project in your default web browser
 
 ```jira browse [ISSUE-123]```
 
-**Open current project board**
+**Open an issue by number** in the configured project
+
+```jira browse [123]```
+
+**Open the configured project page**
 
 ```jira browse```
 
-**Open specific project**
+**Open a specific project**
 
-```jira browse --project [PROJECT]```
+```jira browse -p [PROJECT]```
+
+**Print the URL** without opening a browser
+
+```jira browse [ISSUE-123] -n```
 
 # SYNOPSIS
 
@@ -22,14 +30,27 @@ opens a Jira issue or project in your default web browser
 
 # PARAMETERS
 
-**--project** _key_
+_ISSUE-KEY_
+> Issue key; a bare number is prefixed with the project key.
+
+**-n**, **--no-browser**
+> Only print the URL, don't open the browser.
+
+**-p**, **--project** _key_
 > Specify project key.
 
 # DESCRIPTION
 
-**jira browse** opens a Jira issue or project in your default web browser. Part of jira-cli, a command-line interface for Jira. Quickly access issues without navigating through the web interface manually.
+**jira browse** is an alias of **jira open** in **jira-cli** (ankitpokhrel/jira-cli). It opens a Jira issue, or the project page when no key is given, in your default web browser and prints the URL. **jira navigate** is another alias.
 
 # SEE ALSO
 
-[jira](/man/jira)(1), [jira-issue](/man/jira-issue)(1)
+[jira](/man/jira)(1), [jira-open](/man/jira-open)(1), [jira-issue](/man/jira-issue)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/ankitpokhrel/jira-cli)```
+
+```[Documentation](https://github.com/ankitpokhrel/jira-cli/wiki)```
+
+<!-- verified: 2026-09-29 -->

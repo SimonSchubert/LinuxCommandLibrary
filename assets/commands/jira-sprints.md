@@ -1,60 +1,86 @@
 # TAGLINE
 
-lists sprints for a Jira project
+alias of jira sprint for listing and managing sprints
 
 # TLDR
 
-**List all sprints**
+**List sprints** of the configured board
 
-```jira sprints -p [PROJECT]```
+```jira sprints list```
 
-**List active sprints**
+**List only active and future sprints**
 
-```jira sprints --state active -p [PROJECT]```
+```jira sprints list --state active,future```
 
-**List closed sprints**
+**List closed sprints** in a plain table
 
-```jira sprints --state closed -p [PROJECT]```
+```jira sprints list --state closed --table --plain```
 
-**List with limit**
+**Show issues in the current sprint**
 
-```jira sprints -l [10] -p [PROJECT]```
+```jira sprints list --current```
+
+**Show issues of a specific sprint**
+
+```jira sprints list [SPRINT_ID] --plain```
+
+**Add issues to a sprint**
+
+```jira sprints add [SPRINT_ID] [PROJ-123] [PROJ-124]```
+
+**Close a sprint**
+
+```jira sprints close [SPRINT_ID]```
 
 # SYNOPSIS
 
-**jira sprints** [_options_]
+**jira sprints** _subcommand_ [_options_]
 
 # PARAMETERS
 
-**-p** _PROJECT_
-> Project key.
+**list** [_SPRINT_ID_]
+> List sprints, or the issues of a sprint.
+
+**add** _SPRINT_ID_ _ISSUE_...
+> Add issues to a sprint.
+
+**close** _SPRINT_ID_
+> Close (complete) a sprint.
 
 **--state** _STATE_
-> Sprint state (active, closed, future).
+> Comma-separated sprint states: active, closed, future (default: active,closed).
 
-**-l** _LIMIT_
-> Maximum results.
+**--current**, **--prev**, **--next**
+> Show issues in the current, previous or next sprint.
 
-**--plain**
-> Plain text output.
+**--table**
+> Show sprints in a table instead of the explorer view.
+
+**--plain**, **--no-headers**, **--columns** _list_
+> Plain text output for scripting.
+
+**-p** _PROJECT_
+> Project key.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**jira sprints** lists sprints for a Jira project. It shows sprint names, states, and dates.
-
-The command provides an overview of sprint history and planning. It filters by state to focus on relevant sprints.
+**jira sprints** is an alias of **jira sprint** in **jira-cli** (ankitpokhrel/jira-cli). Without a subcommand it only prints help. **list** shows up to 50 sprints of the configured board in an interactive explorer view, with table and plain modes for scripting.
 
 # CAVEATS
 
-Subcommand of jira-cli. Requires Scrum board configured. Project permissions needed.
-
-# HISTORY
-
-jira sprints is part of **jira-cli**, providing sprint listing functionality for Agile project management.
+Requires a Scrum board configured for the project (set during **jira init**). There is no limit flag; the Jira API returns at most 50 sprints at once.
 
 # SEE ALSO
 
-[jira](/man/jira)(1), [jira-sprint](/man/jira-sprint)(1), [jira-me](/man/jira-me)(1)
+[jira](/man/jira)(1), [jira-sprint](/man/jira-sprint)(1), [jira-issue](/man/jira-issue)(1), [jira-me](/man/jira-me)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ankitpokhrel/jira-cli)```
+
+```[Documentation](https://github.com/ankitpokhrel/jira-cli/wiki)```
+
+<!-- verified: 2026-09-29 -->

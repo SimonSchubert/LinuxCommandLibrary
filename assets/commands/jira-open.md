@@ -1,6 +1,6 @@
 # TAGLINE
 
-opens Jira resources in the default web browser
+opens Jira issues or projects in the default web browser
 
 # TLDR
 
@@ -8,53 +8,55 @@ opens Jira resources in the default web browser
 
 ```jira open [PROJ-123]```
 
-**Open project board**
+**Open the configured project page**
+
+```jira open```
+
+**Open a different project**
 
 ```jira open -p [PROJECT]```
 
-**Open current sprint**
+**Print the URL only** without launching a browser
 
-```jira open --sprint```
-
-**Open backlog**
-
-```jira open --backlog -p [PROJECT]```
+```jira open [PROJ-123] --no-browser```
 
 # SYNOPSIS
 
-**jira open** [_options_] [_issue_]
+**jira open** [_issue_] [_options_]
 
 # PARAMETERS
 
 _ISSUE_
-> Issue key to open.
+> Issue key to open; a bare number is prefixed with the project key.
 
-**-p** _PROJECT_
-> Project to open.
+**-n**, **--no-browser**
+> Print the destination URL without opening the browser.
 
-**--sprint**
-> Open active sprint.
+**-p**, **--project** _PROJECT_
+> Project to use instead of the configured one.
 
-**--backlog**
-> Open backlog.
+**-c**, **--config** _FILE_
+> Use an alternative config file.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**jira open** opens Jira resources in the default web browser. It provides quick access to issues, boards, and backlogs.
-
-The command translates issue keys or project identifiers to web URLs. It's faster than navigating through the web interface.
+**jira open** opens a Jira issue, or the project page when no key is given, in the default web browser. It builds a **/browse/** URL from the configured server (or **browse_server** if set) and always prints it. **jira browse** and **jira navigate** are aliases.
 
 # CAVEATS
 
-Subcommand of jira-cli. Requires configured server. Uses default browser.
-
-# HISTORY
-
-jira open is a convenience command in **jira-cli** for quickly accessing Jira web interface from terminal.
+Subcommand of **jira-cli** (ankitpokhrel/jira-cli). Requires a configured server (**jira init**). There are no options to open boards, sprints or backlogs.
 
 # SEE ALSO
 
-[jira](/man/jira)(1), [jira-me](/man/jira-me)(1), [open](/man/open)(1)
+[jira](/man/jira)(1), [jira-browse](/man/jira-browse)(1), [jira-issue](/man/jira-issue)(1), [xdg-open](/man/xdg-open)(1), [open](/man/open)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ankitpokhrel/jira-cli)```
+
+```[Documentation](https://github.com/ankitpokhrel/jira-cli/wiki)```
+
+<!-- verified: 2026-09-29 -->

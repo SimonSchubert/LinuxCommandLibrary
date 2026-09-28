@@ -1,56 +1,101 @@
 # TAGLINE
 
-reads files from remote Windows systems via SMB by directly parsing the NTFS
+read-only NTFS explorer that parses a volume or disk image directly
 
 # TLDR
 
-**Read a file from a remote NTFS share**
+**Open an NTFS partition** in an interactive read-only shell
 
-```impacket-ntfs-read '[domain]/[user]:[password]@[192.168.1.100]' '[C$\Windows\System32\config\SAM]'```
+```sudo impacket-ntfs-read [/dev/sdb1]```
 
-**Read file using NTLM hash** authentication
+**Browse a raw disk image** of an NTFS volume
 
-```impacket-ntfs-read -hashes ':[nthash]' '[domain]/[user]@[192.168.1.100]' '[share\path\to\file]'```
+```impacket-ntfs-read [path/to/volume.img]```
 
-**Read file using Kerberos** authentication
+**Extract a single file** without entering the shell
 
-```impacket-ntfs-read -k -no-pass '[domain]/[user]@[target]' '[C$\path\to\file]'```
+```sudo impacket-ntfs-read [/dev/sdb1] -extract '[\windows\system32\config\SAM]'```
+
+**Enable debug output** with timestamps
+
+```impacket-ntfs-read [/dev/sdb1] -debug -ts```
 
 # SYNOPSIS
 
-**impacket-ntfs-read** [_-h_] [_-hashes LMHASH:NTHASH_] [_-no-pass_] [_-k_] [_-aesKey KEY_] [_-dc-ip IP_] _target_ _path_
+**impacket-ntfs-read** [_-h_] [_-extract_ _pathname_] [_-debug_] [_-ts_] _volume_
 
 # PARAMETERS
 
-**-hashes** _LMHASH:NTHASH_
-> Use NTLM hashes for authentication instead of password
+_volume_
+> NTFS volume to open, e.g. a block device like /dev/sdb1, a raw image file, or \\\\.\\C: on Windows
 
-**-no-pass**
-> Don't ask for password (useful with -k)
+**-extract** _pathname_
+> Extract the given NTFS path (backslash-separated) to the current directory and exit
 
-**-k**
-> Use Kerberos authentication from ccache file
+**-debug**
+> Turn debug output on
 
-**-aesKey** _KEY_
-> AES key to use for Kerberos authentication
+**-ts**
+> Add a timestamp to every logging output
 
-**-dc-ip** _IP_
-> IP address of the domain controller (for Kerberos)
+**-h**
+> Show help and exit
+
+# SHELL COMMANDS
+
+**ls**
+> List files in the current directory
+
+**cd** _path_
+> Change the current directory on the volume
+
+**pwd**
+> Show the current directory on the volume
+
+**cat** _file_
+> Print the contents of a file
+
+**hexdump** _file_
+> Hexdump the contents of a file
+
+**get** _file_
+> Copy a file from the volume to the local directory
+
+**lcd** _path_
+> Change the local directory
+
+**!** _command_
+> Run a local shell command
+
+**exit**
+> Leave the shell
 
 # DESCRIPTION
 
-**impacket-ntfs-read** reads files from remote Windows systems via SMB by directly parsing the NTFS file system structures. This allows reading files that might be locked by the operating system, such as registry hives or other system files.
+**impacket-ntfs-read** (upstream name **ntfs-read.py**) is a small NTFS explorer from the Impacket suite. It opens an NTFS volume or image and parses the MFT and file records itself instead of relying on the operating system's filesystem driver, then offers a mini shell to browse and extract files.
 
-The tool connects to administrative shares (C$, ADMIN$) and reads files at the raw NTFS level, bypassing Windows file locking mechanisms. This is particularly useful for extracting sensitive files during penetration tests.
+Because it reads the raw structures, it can copy files that Windows keeps locked while running, such as registry hives (SAM, SYSTEM, SECURITY) or NTDS.dit, when run against the live volume with administrator rights. It is also handy for inspecting disk images forensically without mounting them.
 
 # CAVEATS
 
-Requires administrative access to the target system (access to C$ or ADMIN$ shares). Some files may still be inaccessible due to NTFS permissions. The path should use backslashes and reference the share name.
+The tool is strictly read-only and works on local volumes or images only; it has no network or SMB support. Reading a block device on Linux requires root. Paths use backslashes. Compressed and encrypted (EFS) files may not be extracted correctly.
 
 # HISTORY
 
-Part of the **Impacket** library by SecureAuth. The tool implements NTFS parsing over SMB to enable reading locked files, a technique commonly used in credential extraction workflows.
+Part of **Impacket**, originally developed by Alberto Solino at Core Security, later maintained by SecureAuth and now by Fortra. The script is installed as **impacket-ntfs-read** on Kali and Debian-based packages.
+
+# INSTALL
+
+```pacman: sudo pacman -S impacket```
+
+<!-- packages: 2026-07-22 -->
 
 # SEE ALSO
 
-[impacket-secretsdump](/man/impacket-secretsdump)(1), [smbclient](/man/smbclient)(1), [impacket-smbclient](/man/impacket-smbclient)(1)
+[ntfs-read.py](/man/ntfs-read.py)(1), [impacket-secretsdump](/man/impacket-secretsdump)(1), [ntfsls](/man/ntfsls)(8), [ntfscat](/man/ntfscat)(8), [ntfs-3g](/man/ntfs-3g)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/fortra/impacket)```
+
+<!-- verified: 2026-09-29 -->

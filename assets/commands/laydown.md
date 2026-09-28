@@ -1,60 +1,106 @@
 # TAGLINE
 
-manages configuration layers
+keep track of what to say at your next daily standup
 
 # TLDR
 
-**Create layer**
+**Show** your current standup
 
-```laydown create [layer-name]```
+```laydown```
 
-**List layers**
+Add items to the **DID** section
 
-```laydown list```
+```laydown did "[item1]" "[item2]"```
 
-**Apply layer**
+Add an item to the **DOING** section
 
-```laydown apply [layer-name]```
+```laydown doing "[item]"```
 
-**Remove layer**
+Add a **blocker**
 
-```laydown remove [layer-name]```
+```laydown blocker "[item]"```
+
+Add a topic for a **sidebar** discussion
+
+```laydown sidebar "[item]"```
+
+**Edit** the standup data directly (uses $EDITOR, else the given editor or vi)
+
+```laydown --edit [nano]```
+
+**Undo** the last added item
+
+```laydown --undo```
+
+**Archive** today's standup and start a fresh one
+
+```laydown --archive```
+
+**Clear** all items without archiving
+
+```laydown --clear```
 
 # SYNOPSIS
 
-**laydown** _command_ [_options_]
+**laydown** [_options_]
+
+**laydown** **did**|**doing**|**blocker**|**sidebar** "_item_" ["_item_"...]
 
 # PARAMETERS
 
-**create** _NAME_
-> Create new layer.
+**did** _ITEMS_
+> Add items to the DID section.
 
-**list**
-> List all layers.
+**doing** _ITEMS_
+> Add items to the DOING section.
 
-**apply** _NAME_
-> Apply layer.
+**blocker** _ITEMS_
+> Add items to the BLOCKERS section.
 
-**remove** _NAME_
-> Remove layer.
+**sidebar** _ITEMS_
+> Add items to the SIDEBARS section.
 
-**--help**
+**--clear**
+> Remove all items from the standup.
+
+**--edit** [_EDITOR_]
+> Open the standup data file in **$EDITOR**; if it is unset, use the given editor (default **vi**).
+
+**--undo**
+> Remove the last added item.
+
+**--archive**
+> Save the standup to **archive/YYYY-MM-DD.txt** in the data directory and clear it (asks before overwriting an existing archive for today).
+
+**--data-dir**
+> Print the location of the laydown data directory.
+
+**-h**, **--help**
 > Display help information.
+
+**-V**, **--version**
+> Display version information.
 
 # DESCRIPTION
 
-**laydown** manages configuration layers. It organizes settings and files in composable layers.
+**laydown** is a small command-line application that helps you remember what to say at your next daily standup meeting. Running it without arguments prints the standup, grouped into **DID**, **DOING**, **BLOCKERS** and **SIDEBARS** sections.
 
-The tool enables modular configuration management. Layers can be applied and removed independently.
+Items are stored in a data file in the user's data directory, so they persist until you clear them. Each argument after a section command is added as a separate item, so quote items that contain spaces.
 
 # CAVEATS
 
-Configuration specific. Layer system approach. May vary by implementation.
+Items are not cleared automatically after a standup; use **--archive** or **--clear** to start fresh. **$EDITOR** always takes precedence over the editor passed to **--edit**.
 
 # HISTORY
 
-laydown provides layered configuration management for organizing complex system setups.
+laydown was written in **Rust** by Bobby Dorrance and is distributed via crates.io.
 
 # SEE ALSO
 
-[stow](/man/stow)(1), [chezmoi](/man/chezmoi)(1)
+[todo](/man/todo)(1), [task](/man/task)(1), [jrnl](/man/jrnl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/badjr13/laydown)```
+
+<!-- verified: 2026-09-29 -->

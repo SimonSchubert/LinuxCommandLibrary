@@ -6,89 +6,140 @@ JavaScript testing framework with focus on simplicity
 
 **Run all tests**
 
-```jest```
+```npx jest```
 
-**Run specific test file**
+**Run specific test files** (argument is a regex matched against paths)
 
-```jest [path/to/test.js]```
+```npx jest [path/to/test.js]```
 
-**Run tests matching pattern**
+**Run tests whose name matches a pattern**
 
-```jest -t "[pattern]"```
+```npx jest -t "[pattern]"```
 
-**Run in watch mode**
+**Run in watch mode** (only files changed since last commit)
 
-```jest --watch```
+```npx jest --watch```
 
 **Generate coverage report**
 
-```jest --coverage```
+```npx jest --coverage```
 
 **Update snapshots**
 
-```jest -u```
+```npx jest -u```
 
-**Run tests in parallel**
+**Run tests serially** in the current process (useful for debugging)
 
-```jest --maxWorkers=[4]```
+```npx jest --runInBand```
 
-**Run only changed tests**
+**Run tests related to changed source files**
 
-```jest --onlyChanged```
+```npx jest --findRelatedTests [src/file.js]```
+
+**Re-run only the tests that failed last time**
+
+```npx jest --onlyFailures```
+
+**Run in CI** with a fixed number of workers
+
+```npx jest --ci --maxWorkers=[4]```
 
 # SYNOPSIS
 
-**jest** [_options_] [_files_...]
+**jest** [_options_] [_regexForTestFiles_...]
 
 # DESCRIPTION
 
-**jest** is a JavaScript testing framework with focus on simplicity. It provides test runners, assertions, mocking, and code coverage in a single package.
+**jest** is a JavaScript testing framework with focus on simplicity. It provides a test runner, assertions, mocking, and code coverage in a single package.
 
-The tool features snapshot testing, parallel execution, and intelligent test selection. It works with React, Vue, Node.js, and most JavaScript projects.
+The tool features snapshot testing, parallel execution in worker processes, and intelligent test selection based on changed files. It works with React, Vue, Node.js, TypeScript, and most JavaScript projects. Configuration lives in **jest.config.js**/**.ts**/**.json** or the **jest** key of **package.json**.
 
 # PARAMETERS
 
 **--watch**
-> Watch mode for changed files.
+> Watch files and rerun tests related to changed files (requires git or hg).
 
 **--watchAll**
-> Watch all files.
+> Watch files and rerun all tests when something changes.
 
 **--coverage**
 > Collect code coverage.
 
-**-t** _pattern_
-> Run matching test names.
+**-t**, **--testNamePattern** _regex_
+> Run only tests whose name matches.
+
+**--testPathPatterns** _regex_
+> Run only test files whose path matches (was **--testPathPattern** before Jest 30).
 
 **-u**, **--updateSnapshot**
-> Update snapshots.
+> Re-record failing snapshots.
 
-**--maxWorkers** _n_
-> Max parallel workers.
+**-w**, **--maxWorkers** _n_|_percent_
+> Max parallel workers (e.g. 4 or 50%).
 
-**--onlyChanged**
-> Run only changed tests.
+**-i**, **--runInBand**
+> Run all tests serially in the current process.
 
-**--bail**
-> Stop on first failure.
+**-o**, **--onlyChanged**
+> Run only tests related to files changed since the last commit.
+
+**-f**, **--onlyFailures**
+> Run only tests that failed in the previous run.
+
+**--changedSince** _branch_
+> Run tests related to changes since the given branch or commit.
+
+**--findRelatedTests** _files_...
+> Run tests covering the given source files.
+
+**-b**, **--bail**[=_n_]
+> Stop after the first (or _n_) failing test suites.
 
 **--verbose**
-> Display individual test results.
+> Display individual test results with the test hierarchy.
 
-**--config** _file_
+**--silent**
+> Suppress console output from tests.
+
+**-c**, **--config** _file_
 > Configuration file.
 
 **--ci**
-> CI mode settings.
+> CI mode: new snapshots fail instead of being written automatically.
+
+**--listTests**
+> Print the test files that would run and exit.
+
+**--detectOpenHandles**
+> Report handles that prevent Jest from exiting.
+
+**--passWithNoTests**
+> Exit successfully when no tests are found.
+
+**--shard** _n_/_total_
+> Run only one shard of the test suite.
+
+**--json**
+> Print results as JSON (with **--outputFile** to write to a file).
 
 # CAVEATS
 
-Default test regex may miss files. Snapshots need review. Coverage may miss edge cases. Memory usage high with many tests.
+Positional arguments are regex patterns, not exact paths. Native ES modules still require **--experimental-vm-modules**. TypeScript needs a transformer such as **babel-jest** or **ts-jest**. Snapshots need review before being committed. Memory usage can be high with many workers; lower **--maxWorkers** in constrained CI environments.
 
 # HISTORY
 
-**Jest** was created by **Facebook** (Meta), initially for testing React applications. Released around **2014**, it evolved from Jasmine roots to become one of the most popular JavaScript testing frameworks, known for its zero-configuration approach.
+**Jest** was created at **Facebook** (Meta) in **2014**, initially for testing React applications, and evolved from Jasmine roots into one of the most popular JavaScript testing frameworks. In **2022** Meta transferred it to the **OpenJS Foundation**. **Jest 30** (2025) dropped support for older Node.js versions and renamed **--testPathPattern** to **--testPathPatterns**.
 
 # SEE ALSO
 
-[npm](/man/npm)(1), [mocha](/man/mocha)(1), [vitest](/man/vitest)(1), [playwright](/man/playwright)(1)
+[npm](/man/npm)(1), [npx](/man/npx)(1), [mocha](/man/mocha)(1), [vitest](/man/vitest)(1), [playwright](/man/playwright)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/jestjs/jest)```
+
+```[Homepage](https://jestjs.io/)```
+
+```[Documentation](https://jestjs.io/docs/cli)```
+
+<!-- verified: 2026-09-29 -->

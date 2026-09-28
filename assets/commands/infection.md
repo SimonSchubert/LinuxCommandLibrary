@@ -8,67 +8,121 @@ PHP mutation testing framework
 
 ```infection```
 
-**Run with specific threads**
+Run with **all CPU cores**
 
-```infection --threads=[4]```
+```infection --threads=max```
 
-**Target specific files**
+**Mutate specific files** only
 
-```infection --filter=[src/Service/]```
+```infection [src/Service/Mailer.php] [src/Entity/]```
 
-**Set minimum score**
+**Fail the build** below a minimum score
 
-```infection --min-msi=[70]```
+```infection --min-msi=[70] --min-covered-msi=[80]```
 
-**Show mutations**
+Mutate only **lines changed** in the current branch
 
-```infection --show-mutations```
+```infection --git-diff-lines --git-diff-base=[origin/main]```
 
-**Output to file**
+Show **all mutation diffs**
 
-```infection --log-verbosity=all --logger-text=[infection.log]```
+```infection --show-mutations=max```
+
+**Write an HTML report**
+
+```infection --logger-html=[infection.html]```
+
+Reuse **existing coverage** and skip the initial test run
+
+```infection --coverage=[build/coverage] --skip-initial-tests```
 
 # SYNOPSIS
 
-**infection** [_options_]
+**infection** [_options_] [_paths_...]
 
 # PARAMETERS
 
-**--threads** _N_
-> Parallel execution threads.
-
-**--filter** _PATH_
-> Filter source files to mutate.
+**-j**, **--threads** _N|max_
+> Number of parallel test processes; **max** uses all CPU cores.
 
 **--min-msi** _N_
-> Minimum Mutation Score Indicator.
+> Minimum Mutation Score Indicator required; fail otherwise.
 
 **--min-covered-msi** _N_
-> Minimum covered code MSI.
+> Minimum MSI for code covered by tests.
 
-**--show-mutations**
-> Display mutation details.
+**-s**, **--show-mutations** _N|max_
+> Number of mutation diffs to show (default 20, **0** for none).
 
 **--mutators** _LIST_
-> Specific mutators to use.
+> Comma-separated mutators or profiles to use.
+
+**--test-framework** _NAME_
+> Test framework: phpunit, phpspec, codeception.
+
+**--test-framework-extra-args** _ARGS_
+> Extra arguments for the test framework.
+
+**--git-diff-filter** _FILTER_
+> Mutate only files matching a git diff filter, e.g. **AM**.
+
+**--git-diff-lines**
+> Mutate only added or changed lines.
+
+**--git-diff-base** _BRANCH_
+> Base branch for git diff options.
+
+**--coverage** _DIR_
+> Use existing coverage reports.
+
+**--skip-initial-tests**
+> Skip the initial test run (requires **--coverage**).
+
+**--only-covered**
+> Mutate only code covered by tests.
+
+**--logger-text**, **--logger-html**, **--logger-github**, **--logger-gitlab** _FILE_
+> Write a report in the given format.
+
+**--log-verbosity** _all|default|none_
+> Detail level of file logs.
+
+**-c**, **--configuration** _FILE_
+> Custom configuration file (default **infection.json5**).
+
+**--dry-run**
+> Generate mutants without running tests.
+
+**--filter** _PATH_
+> Deprecated since 0.34.0; pass paths as arguments instead.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**infection** is a PHP mutation testing framework. It modifies code to test the effectiveness of your test suite.
+**infection** is a PHP mutation testing framework. It makes small changes (mutants) to your source code and runs the test suite against each one.
 
-The tool creates mutants (modified code) and runs tests against them. Surviving mutants indicate weak test coverage.
+A killed mutant means tests caught the change; an escaped mutant indicates weak tests. Results are summarized as the Mutation Score Indicator (MSI). Configuration lives in **infection.json5**, created interactively on first run.
 
 # CAVEATS
 
-PHP-only. Requires PHPUnit or Codeception. Resource intensive on large codebases.
+PHP-only. Requires a coverage driver (Xdebug, PCOV or phpdbg) and PHPUnit, PhpSpec or Codeception. Resource intensive on large codebases. Tests that depend on each other or a shared database can produce false results with multiple threads.
 
 # HISTORY
 
-infection was created as a mutation testing tool for **PHP**, inspired by similar tools in other languages like Stryker.
+Infection was created by **Maks Rafalko** and first released in **2017**, bringing AST-based mutation testing to PHP.
 
 # SEE ALSO
 
-[phpunit](/man/phpunit)(1), [phpspec](/man/phpspec)(1), [pest](/man/pest)(1)
+[phpunit](/man/phpunit)(1), [phpspec](/man/phpspec)(1), [pest](/man/pest)(1), [composer](/man/composer)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/infection/infection)```
+
+```[Homepage](https://infection.github.io)```
+
+```[Documentation](https://infection.github.io/guide/command-line-options.html)```
+
+<!-- verified: 2026-09-29 -->

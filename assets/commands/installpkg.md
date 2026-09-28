@@ -1,60 +1,98 @@
 # TAGLINE
 
-installs Slackware packages, which are compressed tar archives containing
+installs Slackware packages
 
 # TLDR
 
 **Install** a Slackware package
 
-```sudo installpkg [path/to/package.tgz]```
+```sudo installpkg [path/to/package.txz]```
 
-**Simulate** installation and report to stdout
+Install **several packages** at once
 
-```installpkg -warn [path/to/package.tgz]```
+```sudo installpkg [path/to/*.txz]```
 
-**Create** a package from current directory
+**Show which files would be overwritten** without installing
 
-```installpkg -m [package_name.tgz]```
+```installpkg --warn [path/to/package.txz]```
 
-**Install** contents of current directory as named package
+**Back up** files that the package would overwrite
 
-```sudo installpkg -r [package_name.tgz]```
+```tar czvf [/tmp/backup.tar.gz] $(installpkg --warn [path/to/package.txz])```
+
+Install into an **alternate root** directory
+
+```sudo installpkg --root [/mnt/target] [path/to/package.txz]```
+
+Install with **terse** one-line output
+
+```sudo installpkg --terse [path/to/package.txz]```
 
 # SYNOPSIS
 
-**installpkg** [_options_] _package_
+**installpkg** [_options_] _package_ [_package2_ ...]
 
 # PARAMETERS
 
-**-warn**
-> Generate installation report without actually installing
+**--warn**, **--dry-run**
+> List files that would be overwritten, without installing.
 
-**-m** _NAME_
-> Make a package from the current directory
+**--md5sum**
+> Record the package md5sum in the package metadata.
 
-**-r** _NAME_
-> Install current directory contents as a package
+**--root** _DIR_
+> Install using _DIR_ instead of **/** as the root (same as the **ROOT** environment variable).
 
-**-menu**
-> Interactive package browser
+**--infobox**
+> Show an informational dialog box during installation.
 
-**-priority** _ORDER_
-> Set search order for packages
+**--menu**
+> Ask via a dialog menu whether to install each package.
+
+**--ask**
+> With **--menu**, always ask regardless of package priority.
+
+**--priority** _ADD|REC|OPT|SKP_
+> Override tagfile priorities in menu mode.
+
+**--tagfile** _FILE_
+> Use a different tagfile for package priorities.
+
+**--terse**
+> Display only a single description line per package.
+
+**--terselength** _N_
+> Maximum line length in terse mode.
+
+**--verbose**
+> Display the complete file list during installation.
+
+**--threads** _N_
+> Maximum threads for xz/plzip decompression.
+
+**--no-overwrite**
+> Do not overwrite existing files (used internally by upgradepkg).
 
 # DESCRIPTION
 
-**installpkg** installs Slackware packages, which are compressed tar archives containing files and installation scripts. It extracts package contents to the filesystem and runs any included doinst.sh installation script.
+**installpkg** installs Slackware binary packages, which are compressed tar archives (**.txz**, **.tgz**, **.tbz**, **.tlz**) containing files and an optional **install/doinst.sh** script. It extracts the contents to the filesystem and runs the install script.
 
-Package metadata is stored in /var/log/packages, allowing tracking of installed files for later removal or upgrade. The tool handles the .tgz, .txz, .tbz, and .tlz package formats.
+Package metadata is stored in **/var/lib/pkgtools/packages** (with **/var/log/packages** as a compatibility link), allowing installed files to be tracked for later removal or upgrade. To replace an already installed package, use **upgradepkg** instead.
 
 # CAVEATS
 
-Slackware-specific package tool. Does not handle dependencies automatically. Overwrites existing files without warning unless using -warn option.
+Slackware-specific package tool. Does not resolve dependencies. Overwrites existing files without warning; run with **--warn** first to check. The old **-m** and **-r** options for building packages were removed; use Slackware's **makepkg** from pkgtools.
 
 # HISTORY
 
-installpkg has been part of Slackware Linux since its early releases in **1993**. Slackware's package management is intentionally simple, preferring manual dependency handling to give users full control.
+installpkg has been part of Slackware Linux since its early releases in **1993**, written by **Patrick J. Volkerding** as part of **pkgtools**. Slackware's package management is intentionally simple, leaving dependency handling to the user.
 
 # SEE ALSO
 
-[removepkg](/man/removepkg)(8), [upgradepkg](/man/upgradepkg)(8), [pkgtool](/man/pkgtool)(8)
+[upgradepkg](/man/upgradepkg)(8), [removepkg](/man/removepkg)(8), [explodepkg](/man/explodepkg)(8), [pkgtool](/man/pkgtool)(8), [slackpkg](/man/slackpkg)(8)
+
+# RESOURCES
+
+```[Homepage](http://www.slackware.com/)```
+
+<!-- verified: 2026-09-29 -->
