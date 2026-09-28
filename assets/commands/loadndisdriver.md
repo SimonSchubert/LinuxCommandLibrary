@@ -1,61 +1,69 @@
 # TAGLINE
 
-loads Windows NDIS drivers in Linux
+ndiswrapper helper that loads Windows NDIS drivers into the kernel module
 
 # TLDR
 
-**Load Windows driver**
+Show the **version** of the ndiswrapper utilities
 
-```loadndisdriver [driver.inf] [driver.sys]```
+```loadndisdriver -v```
 
-**Install driver**
+Load the **ndiswrapper kernel module**, which calls loadndisdriver automatically
 
-```loadndisdriver -i [driver.inf]```
+```sudo modprobe ndiswrapper```
 
-**Load with device ID**
+**Install** a Windows driver so it can be loaded (use ndiswrapper, not loadndisdriver)
 
-```loadndisdriver [driver.sys] [device_id]```
-
-**List loaded drivers**
-
-```loadndisdriver -l```
+```sudo ndiswrapper -i [path/to/driver.inf]```
 
 # SYNOPSIS
 
-**loadndisdriver** [_options_] _driver_
+**loadndisdriver** **-v**
+
+**loadndisdriver** _command_ _debug_ _version_ _arguments_...
 
 # PARAMETERS
 
-_DRIVER_
-> Windows driver file (.sys).
+**-v**, **--version**
+> Print the utilities version and exit.
 
-**-i** _INF_
-> Install from INF file.
+**load_device** _debug_ _version_ _vendor_ _device_ _subvendor_ _subdevice_ _bus_
+> Load the configuration for a device identified by hexadecimal PCI/USB IDs.
 
-**-l**
-> List loaded drivers.
+**load_driver** _debug_ _version_ _driver_ _conf_file_
+> Load the Windows driver files (.sys, .conf) for _driver_ from /etc/ndiswrapper.
 
-**-d**
-> Debug mode.
+**load_bin_file** _debug_ _version_ _driver_ _file_
+> Load an additional binary firmware file used by a driver.
 
-**--help**
-> Display help information.
+_debug_
+> Debug level (0 or higher); messages go to syslog.
+
+_version_
+> Utilities version expected by the kernel module; a mismatch aborts loading.
 
 # DESCRIPTION
 
-**loadndisdriver** loads Windows NDIS drivers in Linux. It enables Windows wireless drivers through ndiswrapper.
+**loadndisdriver** is a low-level helper from **ndiswrapper**, installed in **/sbin**. It is not meant to be run by hand: the ndiswrapper kernel module invokes it as a usermode helper when a matching device is found, and it reads the driver files that **ndiswrapper -i** installed under **/etc/ndiswrapper/**_driver_ and passes them to the module through the **/dev/ndiswrapper** ioctl device.
 
-The tool is used when Linux native drivers are unavailable. It translates Windows driver calls.
+Drivers are installed, listed and removed with the **ndiswrapper** command; loadndisdriver only performs the loading step.
 
 # CAVEATS
 
-Deprecated approach. Native drivers preferred. 32/64-bit matching required. Part of ndiswrapper.
+The loadndisdriver version must match the loaded ndiswrapper kernel module. Windows drivers must match the kernel architecture (32-bit drivers for 32-bit kernels, 64-bit for 64-bit). ndiswrapper only supports old Windows XP-era NDIS 5 drivers, is no longer actively developed, and does not build against recent kernels without patches; native Linux drivers are strongly preferred.
 
 # HISTORY
 
-loadndisdriver was created as part of **ndiswrapper** to enable Windows wireless drivers on Linux systems.
+loadndisdriver ships with **ndiswrapper**, started by **Pontus Fuchs** and **Giridhar Pemmasani** in **2003** to run Windows wireless drivers on Linux when no native driver existed. The last release, 1.63, dates from **2020**.
 
 # SEE ALSO
 
-[ndiswrapper](/man/ndiswrapper)(8), [modprobe](/man/modprobe)(8)
+[ndiswrapper](/man/ndiswrapper)(8), [modprobe](/man/modprobe)(8), [lspci](/man/lspci)(8), [lsusb](/man/lsusb)(8)
 
+# RESOURCES
+
+```[Source code](https://github.com/pgiri/ndiswrapper)```
+
+```[Homepage](https://sourceforge.net/projects/ndiswrapper/)```
+
+<!-- verified: 2026-09-29 -->

@@ -12,48 +12,49 @@ creates files of specified size
 
 ```mkfile -n [1g] [filename]```
 
-**Create file in bytes**
+**Create file of exact byte size** (no suffix means bytes)
 
 ```mkfile [1048576] [filename]```
+
+**Create file in 512-byte blocks**
+
+```mkfile [2048]b [filename]```
 
 **Create multiple files**
 
 ```mkfile [10m] [file1] [file2]```
 
-**Verbose output**
+**Report** names and sizes of created files
 
 ```mkfile -v [100m] [filename]```
 
 # SYNOPSIS
 
-**mkfile** [_options_] _size_ _file_
+**mkfile** [**-nv**] _size_[**b**|**k**|**m**|**g**] _file_ ...
 
 # PARAMETERS
 
 _SIZE_
-> File size (b, k, m, g suffixes).
+> File size in bytes; suffixes **b** (512), **k** (1024), **m** (1048576), **g** (1073741824).
 
 _FILE_
-> Output filename.
+> One or more output filenames.
 
 **-n**
-> Create sparse file.
+> Create an empty (sparse) file: the size is recorded but disk blocks are not allocated until written.
 
 **-v**
-> Verbose output.
-
-**--help**
-> Display help information.
+> Verbose: report the names and sizes of created files.
 
 # DESCRIPTION
 
-**mkfile** creates files of specified size. It can create empty files or sparse files.
+**mkfile** creates one or more files of a given size, padded with zeros by default. It was designed to create NFS-mounted swap files, so it also sets the **sticky bit** on the new files (non-root users must set it with chmod).
 
-The tool is useful for testing and creating disk images. Sparse files don't allocate full space.
+It is handy for creating test files and disk images. With **-n** the file is sparse and consumes no space until data is written.
 
 # CAVEATS
 
-macOS/Solaris utility. Linux uses truncate/fallocate. Sparse file support varies.
+macOS/Solaris/BSD utility, not available on Linux: use **truncate -s** (sparse) or **fallocate -l** (allocated) instead. Note that the **b** suffix means 512-byte blocks, not bytes. On macOS the tool lives in /usr/sbin.
 
 # HISTORY
 
@@ -63,3 +64,8 @@ mkfile originates from **Solaris** and is also available on macOS for creating f
 
 [truncate](/man/truncate)(1), [fallocate](/man/fallocate)(1), [dd](/man/dd)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/apple-oss-distributions/system_cmds/tree/main/mkfile)```
+
+<!-- verified: 2026-09-29 -->

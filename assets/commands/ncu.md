@@ -1,6 +1,6 @@
 # TAGLINE
 
-identifies outdated dependencies in package
+identifies outdated dependencies in package.json
 
 # TLDR
 
@@ -16,90 +16,132 @@ identifies outdated dependencies in package
 
 ```ncu [lodash] [react]```
 
-**Check packages matching pattern**
+**Check packages matching a regex**
 
-```ncu "/^@types/"```
+```ncu "/^@types\//"```
 
 **Exclude packages**
 
 ```ncu --reject [typescript]```
 
-**Interactive mode**
+**Interactive mode**, choosing which upgrades to apply
 
 ```ncu -i```
 
-**Check only minor updates**
+Only upgrade to **minor or patch** versions
 
-```ncu --target minor```
+```ncu -u --target minor```
 
-**Show peer dependencies**
+Ignore versions **published less than 7 days ago**
 
-```ncu --peer```
+```ncu --cooldown [7d]```
+
+Check **all workspaces** of a monorepo
+
+```ncu --workspaces```
+
+Check **globally installed** packages
+
+```ncu -g```
 
 # SYNOPSIS
 
-**ncu** [_-u_] [_-i_] [_--target level_] [_--reject pattern_] [_options_] [_packages_]
+**ncu** [_options_] [_filter_]
 
 # PARAMETERS
 
 **-u**, **--upgrade**
-> Update package.json.
+> Overwrite package file with upgraded versions instead of only printing them.
 
 **-i**, **--interactive**
-> Interactive mode.
+> Interactive prompts for each dependency; implies -u.
 
-**-t**, **--target** _LEVEL_
-> Update target (latest, minor, patch, semver).
+**-t**, **--target** _VALUE_
+> Version to upgrade to: latest (default), newest, greatest, minor, patch, semver, @tag.
 
 **-f**, **--filter** _PATTERN_
-> Only include matching packages.
+> Only include package names matching a string, glob, list or /regex/.
 
 **-x**, **--reject** _PATTERN_
 > Exclude matching packages.
 
+**--dep** _SECTIONS_
+> Check only these dependency sections: dev, optional, peer, prod, packageManager.
+
 **-g**, **--global**
-> Check global packages.
+> Check global packages instead of the current project.
 
 **-p**, **--packageManager** _PM_
-> Package manager (npm, yarn, pnpm).
+> npm (default), yarn, pnpm, deno, bun or staticRegistry.
 
 **--peer**
-> Check peer dependencies.
+> Check peer dependencies of installed packages and filter updates to compatible versions.
 
-**-d**, **--deep**
-> Check workspaces.
+**--deep**
+> Run recursively in the current directory (alias for --packageFile '\*\*/package.json').
 
-**--pre**
-> Include prerelease versions.
+**-w**, **--workspaces**
+> Run on all workspaces. **--workspace** _NAME_ selects specific ones.
 
-**--format** _FMT_
-> Output format.
+**--pre** _N_
+> Include prerelease versions (1 to enable).
 
-**--doctor**
-> Test upgrades one by one.
+**-c**, **--cooldown** _PERIOD_
+> Minimum age of a version before it is considered, e.g. 7 (days), 7d, 12h, 30m.
+
+**-m**, **--minimal**
+> Do not upgrade versions already satisfied by the current range.
+
+**--format** _LIST_
+> Output formatting: dep, group, ownerChanged, repo, time, lines, installedVersion, cooldown.
+
+**-e**, **--errorLevel** _N_
+> 2 exits non-zero if any package needs updating (useful in CI).
+
+**-j**, **--jsonAll**
+> Output the new package file as JSON.
+
+**--jsonUpgraded**
+> Output only the upgraded dependencies as JSON.
+
+**-d**, **--doctor**
+> Install upgrades one at a time and run tests to find the breaking ones. Requires -u.
+
+**--packageFile** _PATH_
+> Package file(s) location (default ./package.json).
+
+**-r**, **--registry** _URL_
+> Registry to use when looking up versions.
+
+**--cache**
+> Cache versions to ~/.ncu-cache.json.
 
 # DESCRIPTION
 
-**ncu** (npm-check-updates) identifies outdated dependencies in package.json. It shows available updates without installing them.
+**ncu** (npm-check-updates) upgrades the dependencies in package.json to the latest versions, ignoring the specified version ranges. By default it only prints the available upgrades as "current range -> new version"; nothing is modified.
 
-The tool compares installed versions against npm registry. Output shows current version, wanted version, and latest version for each package.
+It compares the version ranges declared in package.json against the registry, not the versions installed in node_modules.
 
-Update mode (-u) modifies package.json with new versions. Run npm install afterward to actually install updates.
+Upgrade mode (-u) rewrites package.json while preserving the range operators (^, ~). Run npm install (or the equivalent) afterward to actually install updates; the --install option controls whether ncu offers to do this.
 
-Interactive mode lets you select which packages to update. This is useful when upgrading incrementally or avoiding certain updates.
+Target levels control update scope: patch allows only patch updates, minor allows minor and patch, and latest allows major upgrades.
 
-Target levels control update scope: patch allows only patch updates (1.0.x), minor allows minor (1.x.x), and latest allows any version.
-
-Filter and reject patterns focus on specific packages. Regex patterns match package names.
+Options can be stored in a **.ncurc** file (JSON, YAML or JS) in the project directory.
 
 # CAVEATS
 
-Updates package.json but doesn't install. Breaking changes possible with major updates. Test after updating. Doesn't check actual compatibility.
+Updates package.json but doesn't install. Major upgrades can contain breaking changes; test after updating. ncu does not check actual compatibility unless --peer or --doctor is used.
 
 # HISTORY
 
-**npm-check-updates** was created around **2014** to fill a gap in npm's update workflow. npm update installs updates but doesn't modify package.json, while ncu updates the file for explicit version control.
+**npm-check-updates** was created around **2013** by Tomas Junnonen and has long been maintained by Raine Revere. It fills a gap in npm's workflow: npm update only installs versions within the existing ranges, while ncu rewrites the ranges themselves.
 
 # SEE ALSO
 
-[npm](/man/npm)(1), [yarn](/man/yarn)(1), [pnpm](/man/pnpm)(1), [npm-outdated](/man/npm-outdated)(1)
+[npm](/man/npm)(1), [yarn](/man/yarn)(1), [pnpm](/man/pnpm)(1), [npm-outdated](/man/npm-outdated)(1), [npm-update](/man/npm-update)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/raineorshine/npm-check-updates)```
+
+<!-- verified: 2026-09-29 -->

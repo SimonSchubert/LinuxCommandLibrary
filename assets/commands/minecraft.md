@@ -1,65 +1,112 @@
 # TAGLINE
 
-launches the Minecraft game
+launches the Minecraft game or runs a Minecraft server
 
 # TLDR
 
-**Launch Minecraft**
+**Launch** the official Minecraft Launcher
 
 ```minecraft-launcher```
 
-**Run server**
+Use a custom **working directory** instead of ~/.minecraft
 
-```java -Xmx[2G] -jar [server.jar] nogui```
+```minecraft-launcher --workDir [/path/to/minecraft]```
 
-**Specify version**
+Start the launcher with **GPU acceleration disabled** (fixes blank windows)
 
-```minecraft-launcher --version [1.20]```
+```minecraft-launcher --disableGPU```
 
-**Specify game directory**
+Run a **dedicated server** without the GUI
 
-```minecraft-launcher --gameDir [/path/to/minecraft]```
+```java -Xms[1G] -Xmx[4G] -jar [server.jar] nogui```
 
-**Demo mode**
+Run a server on a **custom port** and world folder
 
-```minecraft-launcher --demo```
+```java -Xmx[4G] -jar [server.jar] --port [25566] --world [myworld] nogui```
+
+Generate **server.properties and eula.txt** and exit
+
+```java -jar [server.jar] --initSettings```
+
+**Upgrade** all chunks of a world to the current version
+
+```java -jar [server.jar] --forceUpgrade nogui```
 
 # SYNOPSIS
 
 **minecraft-launcher** [_options_]
 
+**java** [_jvm-options_] **-jar** _server.jar_ [_server-options_] [**nogui**]
+
 # PARAMETERS
 
-**--version** _VER_
-> Game version.
+**-w**, **--workDir** _DIR_
+> Launcher working directory (location of the .minecraft data).
 
-**--gameDir** _DIR_
-> Game directory.
+**-l**, **--lockDir** _DIR_
+> Restrict the launcher installation to the given directory.
+
+**--clean**
+> Delete the game and runtime directories from the working directory.
+
+**--disableGPU**
+> Disable GPU acceleration in the launcher UI.
+
+**-h**, **--help**
+> Display launcher help.
+
+# SERVER OPTIONS
+
+**nogui**, **--nogui**
+> Do not open the server management window.
+
+**--port** _PORT_
+> Listen port (default 25565, overrides server.properties).
+
+**--world** _NAME_
+> World folder name to load.
+
+**--universe** _DIR_
+> Directory that contains the world folders.
+
+**--initSettings**
+> Create server.properties and eula.txt, then exit.
+
+**--forceUpgrade**
+> Convert all chunks of the world to the current game version.
+
+**--eraseCache**
+> Erase cached data during a forced upgrade.
+
+**--safeMode**
+> Load the vanilla data pack only.
+
+**--bonusChest**
+> Generate a bonus chest in new worlds.
 
 **--demo**
-> Demo mode.
-
-**--server** _HOST_
-> Auto-connect to server.
-
-**--help**
-> Display help information.
+> Run the server in demo mode.
 
 # DESCRIPTION
 
-**minecraft** launches the Minecraft game. The launcher manages versions and profiles.
+**minecraft-launcher** is the official launcher for **Minecraft: Java Edition**. It handles Microsoft account sign-in, installation profiles, game versions, mod loaders and a bundled Java runtime, then starts the game client.
 
-The tool downloads game files and manages Java runtime. Supports mods and custom configurations.
+The **dedicated server** is a separate server.jar downloaded from minecraft.net and run directly with Java. On first start it writes eula.txt, which must be edited to **eula=true** before the server will run. Settings live in server.properties in the working directory.
 
 # CAVEATS
 
-Requires purchase. Java needed for server. Large download.
+The game requires a purchased Microsoft account. The server needs a matching Java version; recent releases require Java 21 or newer. Game options such as **--gameDir** or **--demo** are passed to the game client by the launcher and are not launcher options. Allocate memory with **-Xmx**; too little causes lag and out-of-memory crashes.
 
 # HISTORY
 
-Minecraft was created by **Markus "Notch" Persson** in 2009, now developed by Mojang Studios (Microsoft).
+Minecraft was created by **Markus "Notch" Persson** in 2009 and is developed by Mojang Studios, owned by Microsoft since 2014.
 
 # SEE ALSO
 
 [java](/man/java)(1), [mcli](/man/mcli)(1)
 
+# RESOURCES
+
+```[Homepage](https://www.minecraft.net/en-us/download)```
+
+<!-- verified: 2026-09-29 -->

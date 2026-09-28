@@ -4,101 +4,163 @@ automated penetration testing framework
 
 # TLDR
 
-**Scan target for vulnerabilities**
+**Port scan a target**
 
-```nettacker -i [target.com]```
+```nettacker -i [target.com] -m port_scan```
 
-**Scan with specific modules**
+**Scan specific ports** across a subnet
 
-```nettacker -i [target] -m [ssh_brute,ftp_brute]```
+```nettacker -i [192.168.0.0/24] -m port_scan -g [22,80,443]```
 
-**Scan targets from file**
+**Scan targets from a file**
 
-```nettacker -l [targets.txt]```
+```nettacker -l [targets.txt] -m [port_scan]```
 
-**Scan with all modules**
+**Run all modules** except some
 
-```nettacker -i [target] -m all```
+```nettacker -i [target] -m all -x [ssh_brute,ftp_brute]```
 
-**Scan with specific ports**
+**Scan subdomains too**, skipping service discovery
 
-```nettacker -i [target] -p [22,80,443]```
+```nettacker -i [example.com] -d -s -m http_status_scan```
 
-**Save results to file**
+**Brute force SSH** with username and password lists
 
-```nettacker -i [target] -o [report.html]```
+```nettacker -i [target] -m ssh_brute -U [users.txt] -P [passwords.txt]```
 
-**Set threads and timeout**
+**Save an HTML report** with a graph
 
-```nettacker -i [target] -t [10] --timeout [5]```
+```nettacker -i [target] -m port_scan -o [report.html] --graph d3_tree_v2_graph```
+
+**Set threads per host** and timeout
+
+```nettacker -i [target] -m port_scan -t [100] -T [3]```
+
+**List available modules**
+
+```nettacker --show-all-modules```
+
+**Start the API and web UI**
+
+```nettacker --start-api```
 
 # SYNOPSIS
 
-**nettacker** [_-i target_] [_-l file_] [_-m modules_] [_-p ports_] [_-o output_] [_options_]
+**nettacker** [_-i targets_ | _-l file_] [_-m modules_ | _--profile name_] [_options_]
 
 # PARAMETERS
 
-**-i** _TARGET_
-> Target (IP, hostname, CIDR).
+**-i**, **--targets** _TARGETS_
+> Comma-separated targets (IP, range, CIDR, hostname, URL).
 
-**-l** _FILE_
-> Target list file.
+**-l**, **--targets-list** _FILE_
+> Read targets from a file.
 
-**-m** _MODULES_
-> Modules to run (comma-separated).
+**-m**, **--modules** _MODULES_
+> Modules to run (comma-separated, or all).
 
-**-p** _PORTS_
-> Ports to scan.
+**--profile** _PROFILES_
+> Run all modules of the given profiles (e.g. scan, brute, vuln).
 
-**-o** _FILE_
-> Output file.
+**-x**, **--exclude-modules** _MODULES_
+> Modules to exclude.
 
-**-t** _N_
-> Number of threads.
+**--show-all-modules**, **--show-all-profiles**
+> List available modules or profiles.
 
-**--timeout** _SEC_
-> Timeout in seconds.
+**-g**, **--ports** _PORTS_
+> Ports to scan (e.g. 22,80,1-1000).
 
-**-u** _USER_
-> Username for brute force.
+**-X**, **--exclude-ports** _PORTS_
+> Ports to exclude.
 
-**-U** _FILE_
-> Username list file.
+**-o**, **--output** _FILE_
+> Report file; format follows the extension (.html, .json, .csv, otherwise text).
 
-**-P** _FILE_
-> Password list file.
+**--graph** _NAME_
+> Graph for HTML reports (d3_tree_v1_graph, d3_tree_v2_graph).
 
-**--method** _METHOD_
-> Scan method.
+**-t**, **--thread-per-host** _N_
+> Number of concurrent connections per host.
 
-**--graph** _TYPE_
-> Generate graph (d3_tree, etc.).
+**-M**, **--parallel-module-scan** _N_
+> Number of modules to run in parallel.
 
-**--api**
-> Run API server.
+**-T**, **--timeout** _SEC_
+> Request timeout in seconds.
+
+**-w**, **--time-sleep-between-requests** _SEC_
+> Delay between requests.
+
+**-u**, **--usernames** _USERS_ / **-U**, **--users-list** _FILE_
+> Usernames for brute force modules.
+
+**-p**, **--passwords** _PASSWORDS_ / **-P**, **--passwords-list** _FILE_
+> Passwords for brute force modules.
+
+**-W**, **--wordlist** _FILE_
+> Wordlist for modules that read one (e.g. directory scanning).
+
+**-r**, **--range**
+> Scan the entire IP range of the target.
+
+**-s**, **--sub-domains**
+> Find and scan subdomains.
+
+**-d**, **--skip-service-discovery**
+> Skip service discovery and run modules directly.
+
+**-H**, **--add-http-header** _HEADER_
+> Add a custom HTTP header to requests.
+
+**-R**, **--socks-proxy** _URL_
+> Route traffic through a SOCKS proxy.
+
+**--ping-before-scan**
+> Ping hosts first and skip unresponsive ones.
+
+**-K**, **--scan-compare** _ID_
+> Compare current results with a previous scan.
+
+**--start-api**
+> Start the REST API and web UI (**--api-host**, **--api-port**, **--api-access-key** to configure).
+
+**-L**, **--language** _LANG_
+> Interface language.
+
+**-v**, **--verbose**
+> Verbose output.
 
 # DESCRIPTION
 
-**nettacker** is an automated penetration testing framework. It scans for vulnerabilities, performs brute force attacks, and identifies misconfigurations.
+**nettacker** (OWASP Nettacker) is an automated penetration testing and information gathering framework. It performs port scanning, service detection, subdomain enumeration, vulnerability checks and credential brute forcing.
 
-Modules target specific vulnerabilities or services: SSH brute force, FTP anonymous access, web vulnerabilities, subdomain enumeration, and more.
+Modules are YAML-defined and grouped by category, with names like port_scan, ssh_brute, http_status_scan or wordpress_version_scan. Profiles bundle related modules.
 
-The framework supports network scanning, service detection, and exploitation in an automated workflow. Results are collected and reported.
+Results are stored in a database, so past scans can be searched and compared to detect new hosts, ports or vulnerabilities (useful in CI pipelines). Reports can be HTML with D3 graphs, JSON, CSV or text.
 
-Output formats include HTML reports with graphs, JSON for processing, and text. The D3 graph visualization shows attack paths and findings.
-
-An API server enables integration with other tools and automation frameworks. The web interface provides point-and-click scanning.
+The --start-api option runs a REST API with a web interface for launching scans and browsing results.
 
 This tool is designed for authorized security assessments and penetration testing.
 
 # CAVEATS
 
-Only use with proper authorization. May trigger IDS/IPS alerts. Brute force can cause account lockouts. Some modules are intrusive.
+Only use with proper authorization. May trigger IDS/IPS alerts. Brute force can cause account lockouts. Some modules are intrusive. Commonly run via the owasp/nettacker Docker image, e.g. docker run owasp/nettacker -i target -m port_scan.
 
 # HISTORY
 
-**OWASP Nettacker** was developed as part of the **OWASP** (Open Web Application Security Project) as an open-source penetration testing framework. It provides automated security scanning capabilities for security professionals.
+**OWASP Nettacker** was started by Ali Razmjoo in **2017** as an **OWASP** project. Version 0.4.0 restructured it into an installable Python package with a nettacker command, replacing the earlier python nettacker.py invocation.
 
 # SEE ALSO
 
-[nmap](/man/nmap)(1), [metasploit](/man/metasploit)(1), [nikto](/man/nikto)(1), [sqlmap](/man/sqlmap)(1)
+[nmap](/man/nmap)(1), [metasploit](/man/metasploit)(1), [nikto](/man/nikto)(1), [sqlmap](/man/sqlmap)(1), [subfinder](/man/subfinder)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/OWASP/Nettacker)```
+
+```[Homepage](https://owasp.org/nettacker)```
+
+```[Documentation](https://nettacker.readthedocs.io)```
+
+<!-- verified: 2026-09-29 -->

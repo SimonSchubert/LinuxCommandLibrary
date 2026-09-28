@@ -32,21 +32,35 @@ wraps websites as desktop applications using Electron
 
 ```nativefier --single-instance "[https://example.com]"```
 
-**Create with injected CSS**
+**Create with injected CSS** or JavaScript (repeatable)
 
-```nativefier --inject [style.css] "[https://example.com]"```
+```nativefier --inject [style.css] --inject [script.js] "[https://example.com]"```
+
+Build for **another platform** and architecture
+
+```nativefier --platform [windows] --arch [x64] "[https://example.com]"```
+
+Keep **login and OAuth pages** inside the app
+
+```nativefier --internal-urls "[.*?\.example\.com.*?]" "[https://example.com]"```
+
+**Upgrade** an existing app to the latest Electron, keeping its options
+
+```nativefier --upgrade [path/to/App-linux-x64]```
 
 # SYNOPSIS
 
-**nativefier** [_--name name_] [_--icon path_] [_--tray_] [_options_] _url_ [_output_dir_]
+**nativefier** [_options_] _url_ [_output_dir_]
+
+**nativefier** **--upgrade** _app_path_ [_options_]
 
 # PARAMETERS
 
-**--name** _NAME_
+**-n**, **--name** _NAME_
 > Application name.
 
-**--icon** _PATH_
-> Custom icon file.
+**-i**, **--icon** _PATH_
+> Custom icon file (.png on Linux, .ico on Windows, .icns on macOS).
 
 **-p**, **--platform** _OS_
 > Target platform (mac, windows, linux).
@@ -54,8 +68,20 @@ wraps websites as desktop applications using Electron
 **-a**, **--arch** _ARCH_
 > Target architecture.
 
-**--tray**
-> Add system tray icon.
+**-e**, **--electron-version** _VERSION_
+> Electron version to bundle.
+
+**--upgrade** _PATH_
+> Rebuild an existing app in place, reusing its options.
+
+**--tray** [**start-in-tray**]
+> Add system tray icon; optionally start hidden in the tray.
+
+**--width**, **--height** _PIXELS_
+> Initial window size (default 1280x800).
+
+**--full-screen**
+> Start in full screen.
 
 **--maximize**
 > Start maximized.
@@ -66,8 +92,20 @@ wraps websites as desktop applications using Electron
 **--inject** _FILE_
 > Inject CSS or JavaScript.
 
-**--user-agent** _STRING_
-> Custom user agent.
+**-u**, **--user-agent** _STRING_
+> Custom user agent, or a preset such as **firefox** or **safari**.
+
+**-m**, **--show-menu-bar**
+> Show the menu bar.
+
+**-c**, **--conceal**
+> Pack the app source into an asar archive.
+
+**--portable**
+> Store user data (cookies, cache) next to the app.
+
+**--counter**
+> Show the count from the page title on the dock/taskbar icon.
 
 **--internal-urls** _REGEX_
 > URLs to open internally.
@@ -77,9 +115,6 @@ wraps websites as desktop applications using Electron
 
 **--disable-context-menu**
 > Disable right-click menu.
-
-**--flash**
-> Enable Flash plugin.
 
 **--widevine**
 > Enable Widevine DRM.
@@ -100,12 +135,20 @@ Platform targeting creates apps for Windows, macOS, or Linux from any developmen
 
 # CAVEATS
 
-Electron apps are large (100MB+). Security depends on wrapped site. Flash support deprecated. Some sites detect and block embedding. Project is in maintenance mode.
+Electron apps are large (100MB+) and bundle a Chromium that no longer receives updates once built; rebuild regularly with **--upgrade** for security fixes. Some sites (e.g. Google sign-in) block embedded browsers. The **--flash** option was removed in v43. The project is **unmaintained and archived** (2023); consider alternatives such as Pake or the browser's own "install as app" feature.
 
 # HISTORY
 
-**nativefier** was created by **Jia Hao Gao** around **2015** to easily create desktop apps from web pages. It became popular for wrapping services like Slack, WhatsApp Web, and internal tools. The project is now in maintenance mode with limited updates.
+**nativefier** was created by **Jia Hao Gao** around **2015** to easily create desktop apps from web pages. It became popular for wrapping services like Slack, WhatsApp Web, and internal tools. After its maintainers stepped back, the GitHub repository was **archived in 2023** and no further releases are made.
 
 # SEE ALSO
 
-[electron](/man/electron)(1), [pwa](/man/pwa)(1)
+[electron](/man/electron)(1), [pake](/man/pake)(1), [pwa](/man/pwa)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/nativefier/nativefier)```
+
+```[Documentation](https://github.com/nativefier/nativefier/blob/master/API.md)```
+
+<!-- verified: 2026-09-29 -->

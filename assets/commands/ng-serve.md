@@ -4,17 +4,21 @@ builds an Angular application and starts a development server
 
 # TLDR
 
-**Start development server**
+**Start development server** on http://localhost:4200
 
 ```ng serve```
 
 **Serve on specific port**
 
-```ng serve --port [4200]```
+```ng serve --port [4201]```
 
 **Serve and open browser**
 
 ```ng serve --open```
+
+**Make the server reachable** from other devices on the network
+
+```ng serve --host 0.0.0.0```
 
 **Serve specific project**
 
@@ -28,39 +32,82 @@ builds an Angular application and starts a development server
 
 ```ng serve --proxy-config [proxy.conf.json]```
 
+**Serve over HTTPS**
+
+```ng serve --ssl```
+
 # SYNOPSIS
 
 **ng serve** [_project_] [_options_]
 
+**ng dev** [_project_] [_options_]
+
+**ng s** [_project_] [_options_]
+
 # PARAMETERS
 
 **--port** _port_
-> Port number.
+> Port to listen on (default 4200).
 
-**--open**, **-o**
-> Open in browser.
+**-o**, **--open**
+> Open the URL in the default browser.
 
 **--host** _host_
-> Bind address.
+> Host to listen on (default localhost).
 
-**--configuration** _name_
-> Build configuration.
+**-c**, **--configuration** _name_
+> Named build configuration(s) from angular.json, comma-separated (e.g. development, production).
 
 **--proxy-config** _file_
-> Proxy configuration.
+> Proxy configuration file for forwarding requests to a backend.
 
 **--ssl**
-> Enable HTTPS.
+> Serve using HTTPS (a self-signed certificate is generated unless --ssl-cert and --ssl-key are given).
 
-**--watch**
-> Rebuild on changes (default).
+**--ssl-cert** _file_, **--ssl-key** _file_
+> SSL certificate and key to use for HTTPS.
+
+**--allowed-hosts**
+> Hosts the development server responds to (Vite allowedHosts option).
+
+**--serve-path** _path_
+> Pathname where the application is served.
+
+**--headers** _headers_
+> Custom HTTP headers added to all responses.
+
+**--hmr**
+> Hot module replacement (defaults to the live-reload setting).
 
 **--live-reload**
-> Enable live reload.
+> Reload the page on change (default true).
+
+**--watch**
+> Rebuild on change (default true).
+
+**--poll** _ms_
+> Use polling for file watching with the given interval.
+
+**--prebundle**
+> Vite dependency prebundling (default true).
+
+**--define** _KEY=VALUE_
+> Replace global identifiers with constant values.
+
+**--inspect** _host:port_
+> Activate the Node.js debugging inspector (SSR/SSG only).
+
+**--build-target** _target_
+> Build target to serve, as project:target[:configuration].
+
+**--verbose**
+> More detailed output logging.
 
 # DESCRIPTION
 
-**ng serve** builds an Angular application and starts a development server. It watches for file changes and automatically rebuilds, with live reload updating the browser.
+**ng serve** builds an Angular application and starts a development server. It watches for file changes and automatically rebuilds, with live reload or hot module replacement updating the browser.
+
+With the default application builder (esbuild), the development server is based on **Vite**. Builds are kept in memory; nothing is written to dist/.
 
 This is the primary command for Angular development workflow.
 
@@ -78,12 +125,20 @@ This is the primary command for Angular development workflow.
 
 # CAVEATS
 
-Development only; use ng build for production. Memory-intensive for large projects. Part of Angular CLI.
+Development only; use ng build for production deployments. The default configuration for serve is development. Binding to 0.0.0.0 exposes the dev server on the network. Must be run inside an Angular workspace.
 
 # HISTORY
 
-Angular CLI's serve command was introduced with Angular CLI in **2016**, providing a complete development server solution for Angular applications.
+Angular CLI's serve command was introduced with Angular CLI in **2016**, initially backed by webpack-dev-server. Since Angular 17 new projects use the esbuild-based application builder with a Vite dev server. Recent versions also accept **ng dev** as an alias.
 
 # SEE ALSO
 
-[ng](/man/ng)(1), [webpack](/man/webpack)(1), [vite](/man/vite)(1)
+[ng](/man/ng)(1), [ng-build](/man/ng-build)(1), [vite](/man/vite)(1), [webpack](/man/webpack)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/angular/angular-cli)```
+
+```[Documentation](https://angular.dev/cli/serve)```
+
+<!-- verified: 2026-09-29 -->
