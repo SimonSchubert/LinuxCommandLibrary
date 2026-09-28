@@ -125,4 +125,4 @@ Cloud models require API keys stored via **llm keys set**. Conversation logs are
 
 # SEE ALSO
 
-[ollama](/man/ollama)(1), [chatgpt](/man/chatgpt)(1)
+[llm-keys](/man/llm-keys)(1), [llm-logs](/man/llm-logs)(1), [llm-models](/man/llm-models)(1), [ollama](/man/ollama)(1), [chatgpt](/man/chatgpt)(1)

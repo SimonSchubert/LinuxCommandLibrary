@@ -161,7 +161,7 @@ vLLM started in the **Sky Computing Lab** at **UC Berkeley**. The 2023 SOSP pape
 
 # SEE ALSO
 
-[ollama](/man/ollama)(1), [llama.cpp](/man/llama.cpp)(1), [llama-cli](/man/llama-cli)(1), [llamafile](/man/llamafile)(1), [huggingface-cli](/man/huggingface-cli)(1), [uv](/man/uv)(1)
+[vllm-chat](/man/vllm-chat)(1), [ollama](/man/ollama)(1), [llama.cpp](/man/llama.cpp)(1), [llama-cli](/man/llama-cli)(1), [llamafile](/man/llamafile)(1), [huggingface-cli](/man/huggingface-cli)(1), [uv](/man/uv)(1)
 
 # RESOURCES
 

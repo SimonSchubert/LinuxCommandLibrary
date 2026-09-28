@@ -2279,6 +2279,7 @@ faketime.md
 fallocate.md
 false.md
 fancontrol.md
+far2l.md
 farge.md
 fasd.md
 fast.md
@@ -4335,6 +4336,9 @@ llc.md
 lldb.md
 lldpctl.md
 lli.md
+llm-keys.md
+llm-logs.md
+llm-models.md
 llm.md
 llmcat.md
 llvd.md
@@ -8014,6 +8018,7 @@ tilda.md
 tilde.md
 time.md
 timedatectl.md
+timekpra.md
 timeout.md
 timeshift.md
 timetrap.md
@@ -8576,6 +8581,7 @@ vkcube.md
 vkcubepp.md
 vkpurge.md
 vlc.md
+vllm-chat.md
 vllm.md
 vlock.md
 vmstat.md
