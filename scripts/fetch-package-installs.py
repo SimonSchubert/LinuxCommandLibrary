@@ -111,6 +111,8 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     "jeff": {},
     # graf: AUR "graf" is sovereign-society VCS, not ctxrs/graf (local code-graph CLI)
     "graf": {},
+    # gat: brew/nix/AUR "gat" is koki-develop/gat (cat alternative), not getgat-dev/gat
+    "gat": {},
     # fd: Debian/brew map "fd" → fdclone (file manager); real tool is sharkdp/fd
     "fd": {
         "apt": "fd-find",

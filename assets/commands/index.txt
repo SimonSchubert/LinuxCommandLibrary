@@ -2542,6 +2542,7 @@ gamescope.md
 gammastep.md
 ganache-cli.md
 ganache.md
+gat.md
 gatsby.md
 gau.md
 gawk.md
