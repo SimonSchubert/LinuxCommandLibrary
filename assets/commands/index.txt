@@ -3534,6 +3534,8 @@ iceauth.md
 icinga2.md
 icloudpd.md
 ico.md
+icoextract.md
+icolist.md
 icontopbm.md
 iconv.md
 id.md
@@ -6837,6 +6839,7 @@ raspi-gpio.md
 raspinfo.md
 rasttopnm.md
 rauc.md
+raven.md
 raw.md
 rawtherapee-cli.md
 rawtopgm.md
@@ -8294,6 +8297,7 @@ ufw-delete.md
 ufw-deny.md
 ufw-disable.md
 ufw-enable.md
+ufw-limit.md
 ufw-status.md
 ufw-version.md
 ufw.md
