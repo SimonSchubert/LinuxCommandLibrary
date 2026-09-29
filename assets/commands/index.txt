@@ -1415,6 +1415,7 @@ core-validate-commit.md
 coredumpctl.md
 corepack.md
 coreutils.md
+corral.md
 cosign.md
 cotp.md
 cotton.md
@@ -2613,6 +2614,7 @@ gemtopbm.md
 gemtopnm.md
 genact.md
 gendesk.md
+geneva.md
 genfstab.md
 genhtml.md
 genid.md
