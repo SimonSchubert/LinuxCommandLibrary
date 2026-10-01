@@ -2157,6 +2157,7 @@ enc2xs.md
 enca.md
 encfs.md
 engrampa.md
+engrams.md
 engrim.md
 enscript.md
 entr.md
