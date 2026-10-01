@@ -3518,6 +3518,7 @@ iPXE.md
 ia.md
 iam-policy-autopilot.md
 iamb.md
+ibexpress.md
 ibmcloud-api.md
 ibmcloud-config.md
 ibmcloud-cr.md
