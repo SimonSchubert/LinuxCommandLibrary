@@ -5908,6 +5908,7 @@ perlivp.md
 perlre.md
 perplexity.md
 personality.md
+perspica.md
 pest.md
 pet.md
 pf2afm.md
@@ -9008,6 +9009,7 @@ yazi.md
 yazses.md
 ybacklight.md
 ybmtopbm.md
+ycc.md
 ydotool.md
 yek.md
 yelp.md
