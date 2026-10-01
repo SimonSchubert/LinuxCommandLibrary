@@ -3251,6 +3251,7 @@ gunicorn.md
 gunzip.md
 gup.md
 gurk.md
+gutsy-inference.md
 guvcview.md
 gv2gml.md
 gv2gxl.md
@@ -5724,6 +5725,7 @@ paperconfig.md
 paperkey.md
 papermc.md
 papernews.md
+papero-extract.md
 papis.md
 paprefs.md
 par2.md
