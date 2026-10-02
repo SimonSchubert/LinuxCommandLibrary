@@ -410,6 +410,7 @@ attr.md
 atuin.md
 audacious.md
 audacity.md
+audionaut-cli.md
 audit2allow.md
 audit2why.md
 auditctl.md
