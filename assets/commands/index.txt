@@ -4350,6 +4350,7 @@ llc.md
 lldb.md
 lldpctl.md
 lli.md
+llm-install.md
 llm-keys.md
 llm-logs.md
 llm-models.md
@@ -4554,6 +4555,7 @@ machinectl.md
 machma.md
 macmon.md
 macptopbm.md
+mado.md
 maestral.md
 mafft.md
 magento.md
@@ -6693,6 +6695,7 @@ python3.4.md
 python3.md
 pytorch.md
 pyversions.md
+pyxel.md
 q.md
 qalc.md
 qbittorrent.md
