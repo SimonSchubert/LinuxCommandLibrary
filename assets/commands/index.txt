@@ -6002,6 +6002,7 @@ phpspec.md
 phpstan.md
 phpstorm.md
 phpunit.md
+phresh.md
 physlock.md
 pi-black.md
 pi.md
