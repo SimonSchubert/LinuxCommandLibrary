@@ -3676,6 +3676,7 @@ inkview.md
 inotify-wait.md
 inotifywait.md
 inputattach.md
+insights.md
 insmod.md
 inspect-cert-chain.md
 install-tl.md
