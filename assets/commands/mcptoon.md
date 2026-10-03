@@ -10,7 +10,7 @@ Token-efficient Model Context Protocol (MCP) CLI client
 
 **Add** an MCP server over stdio
 
-```mcptoon add [fetch] --stdio npx -y [@modelcontextprotocol/server-fetch]```
+```mcptoon add [everything] --stdio npx -y [@modelcontextprotocol/server-everything]```
 
 **List tools** in compact TOON form
 
@@ -18,7 +18,7 @@ Token-efficient Model Context Protocol (MCP) CLI client
 
 **Call a tool** with JSON arguments
 
-```mcptoon call [fetch] [fetch] '{"url":"https://example.com"}' --toon```
+```mcptoon call [everything] [echo] '{"message":"hi"}' --toon```
 
 **Pipe large arguments** via stdin
 
