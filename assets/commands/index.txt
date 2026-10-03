@@ -2246,6 +2246,7 @@ exp.md
 expac.md
 expand.md
 expect.md
+explainroo.md
 explodepkg.md
 expo.md
 export.md
