@@ -3800,6 +3800,10 @@ jdupes.md
 jeeves.md
 jeff-serve.md
 jeff.md
+jeffy-build.md
+jeffy-evaluate.md
+jeffy-serve.md
+jeffy-train.md
 jekyll.md
 jellex.md
 jello.md
