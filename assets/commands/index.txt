@@ -1676,6 +1676,7 @@ deluge-console.md
 deluge.md
 deluged.md
 deluser.md
+deno-fmt.md
 deno.md
 dep.md
 depmod.md
