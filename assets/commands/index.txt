@@ -7677,6 +7677,7 @@ stormlock.md
 stormy.md
 stow.md
 strace.md
+strata.md
 stratis.md
 streambed.md
 streamer.md
