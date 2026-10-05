@@ -3494,6 +3494,7 @@ hwloc-ls.md
 hx.md
 hydra.md
 hygg.md
+hypercmd.md
 hypercorn.md
 hyperfine.md
 hyprctl.md
