@@ -3791,6 +3791,7 @@ java.md
 javac.md
 javadoc.md
 javap.md
+jaynshare.md
 jbang.md
 jc.json.md
 jc.md
