@@ -883,6 +883,7 @@ btrfs-device.md
 btrfs-filesystem.md
 btrfs-inspect-internal.md
 btrfs-property.md
+btrfs-receive.md
 btrfs-rescue.md
 btrfs-restore.md
 btrfs-scrub.md
@@ -5586,6 +5587,9 @@ ostree.md
 osv-scanner.md
 otel-cli.md
 oterm.md
+otpu-chat.md
+otpu-lens.md
+otpu-smi.md
 otree.md
 ots.md
 otti.md
