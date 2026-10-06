@@ -83,6 +83,7 @@ EXTRA_CANDIDATES: dict[str, list[str]] = {
     "adb": ["android-tools", "android-tools-adb", "adb"],
     "backintime": ["backintime-common", "backintime"],
     "insights": ["cppinsights"],
+    "tte": ["terminaltexteffects"],
 }
 
 # Full install maps that replace resolver output (known collisions / enrichments).
@@ -191,6 +192,8 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
         "brew": "jenkins",
         "nix": "jenkins",
     },
+    # tte: the terminaltexteffects application. No distro package is named tte.
+    "tte": {"nix": "terminaltexteffects"},
 }
 
 # Prefer these path prefixes when mapping binaries (order = priority).

@@ -1662,6 +1662,13 @@ decant.md
 declare.md
 declick.md
 decode-dimms.md
+deda_anonmask_apply.md
+deda_anonmask_create.md
+deda_clean_document.md
+deda_compare_prints.md
+deda_create_dots.md
+deda_extract_yd.md
+deda_parse_print.md
 deemix.md
 deepseek.md
 deepspeech.md
@@ -5990,6 +5997,7 @@ pharo.md
 phetch.md
 phing.md
 phive.md
+photoc.md
 photorec.md
 php-artisan.md
 php-build.md
@@ -7983,6 +7991,9 @@ terraform-apply.md
 terraform-console.md
 terraform-destroy.md
 terraform-fmt.md
+terraform-get.md
+terraform-graph.md
+terraform-import.md
 terraform-init.md
 terraform-login.md
 terraform-logout.md
@@ -8244,6 +8255,7 @@ tsv-filter.md
 tsx.md
 tt.md
 ttar.md
+tte.md
 tts.md
 ttsc.md
 ttsx.md
