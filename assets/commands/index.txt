@@ -1823,6 +1823,7 @@ doberman.md
 doc-engine.md
 docbook2html.md
 dockdiver.md
+docker-agent.md
 docker-build.md
 docker-buildx-build.md
 docker-buildx-create.md
@@ -2048,6 +2049,7 @@ dunstify.md
 duperemove.md
 duplicacy.md
 duplicity.md
+durable-actors.md
 durdraw.md
 dust.md
 dutree.md
@@ -4008,6 +4010,7 @@ kanha.md
 kaniko.md
 kanwas.md
 kapp.md
+karotte.md
 kaskade.md
 kassette.md
 kastor.md
@@ -5082,6 +5085,7 @@ neomutt.md
 neoss.md
 neotoppm.md
 neovim.md
+neptune.md
 neqn.md
 nerdctl.md
 nerdlog.md
@@ -6064,6 +6068,7 @@ ping6.md
 pingtop.md
 pinky.md
 pinout.md
+pinrail.md
 pint.md
 pinta.md
 pio-access.md
@@ -6481,6 +6486,7 @@ pro.md
 proc.md
 process-compose.md
 processing.md
+procinsh.md
 procmail.md
 procmux.md
 procs.md
@@ -7020,6 +7026,7 @@ rfkill.md
 rg.md
 rga.md
 rgb3toppm.md
+rgpu-run.md
 rgrep.md
 rhash.md
 rhit.md
@@ -8235,6 +8242,7 @@ trek.md
 trex.md
 trezorctl.md
 trickle.md
+trigora.md
 trip.md
 trippy.md
 tripwire.md
