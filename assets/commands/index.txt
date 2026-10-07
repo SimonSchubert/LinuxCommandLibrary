@@ -5026,6 +5026,7 @@ nano.md
 nanobot.md
 nanoclaw.md
 nanoeuler.md
+nanomuse.md
 nanosleep.md
 nap.md
 napalm.md
