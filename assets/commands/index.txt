@@ -6969,6 +6969,7 @@ rekor-cli.md
 reladraw.md
 relaymux.md
 relic.md
+relinker.md
 remembrane.md
 reminal.md
 remind.md
