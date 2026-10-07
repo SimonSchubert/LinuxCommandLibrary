@@ -4981,6 +4981,8 @@ mupdf.md
 musescore.md
 musikcube.md
 musl-gcc.md
+musql-convert.md
+musqld.md
 mutagen.md
 mutool.md
 mutt.md
@@ -8228,6 +8230,7 @@ tree.md
 treemd.md
 treepeat.md
 treetime.md
+treg.md
 trek.md
 trex.md
 trezorctl.md
