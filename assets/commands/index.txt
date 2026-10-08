@@ -3666,6 +3666,7 @@ in-toto-run.md
 in-toto-sign.md
 in.md
 in2csv.md
+incident-bench.md
 incplot.md
 incus.md
 indent.md
@@ -3985,6 +3986,7 @@ just.md
 jwt-ui.md
 jwt.md
 jxlinfo.md
+k10s.md
 k3d.md
 k3s.md
 k6.md
