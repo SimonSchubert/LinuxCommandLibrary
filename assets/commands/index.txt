@@ -3216,6 +3216,7 @@ grub-mkconfig.md
 grub-mkdevicemap.md
 grub-mkfont.md
 grub-mklayout.md
+grub-mkrelpath.md
 grub-mkrescue.md
 grub-mount.md
 grub-probe.md
@@ -6369,6 +6370,7 @@ powershell.md
 powerstat.md
 powertop.md
 powertop2tuned.md
+ppa-purge.md
 ppdc.md
 ppdhtml.md
 ppdi.md
@@ -7231,6 +7233,7 @@ sbcl.md
 sbctl.md
 sbigtopgm.md
 sbopkg.md
+sbpctl.md
 sbt.md
 sbuild.md
 sc-im.md
@@ -8260,6 +8263,7 @@ try-rs.md
 try.md
 ts-node.md
 ts.md
+tsc-rs.md
 tsc.md
 tset.md
 tsh.md
