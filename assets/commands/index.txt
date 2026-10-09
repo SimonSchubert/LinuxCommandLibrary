@@ -5489,6 +5489,7 @@ omshell.md
 omz.md
 on_ac_power.md
 onboard.md
+once.md
 onda.md
 onefetch.md
 oneko.md
