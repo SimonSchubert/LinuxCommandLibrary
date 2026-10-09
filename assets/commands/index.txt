@@ -2430,6 +2430,8 @@ flux-bootstrap.md
 flux-build.md
 flux-check.md
 flux-create.md
+flux-suspend.md
+flux-uninstall.md
 flux.md
 fluxctl.md
 fluxion.md
