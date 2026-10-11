@@ -277,6 +277,7 @@ apptainer-test.md
 apptainer-verify.md
 apptainer.md
 apropos.md
+apsw.md
 apt-add-repository.md
 apt-cache.md
 apt-cdrom.md
