@@ -1728,6 +1728,7 @@ diff-so-fancy.md
 diff.md
 diff3.md
 diffimg.md
+diffle.md
 diffnav.md
 diffoscope.md
 diffstat.md
@@ -4628,6 +4629,7 @@ mangohud.md
 manhole.md
 mani.md
 manim.md
+manimgx.md
 manpath.md
 mapfile.md
 mapscii.md
