@@ -1931,6 +1931,7 @@ docx.md
 dog.md
 dogecoincore.md
 doggo.md
+doiter.md
 doitlive.md
 dokku.md
 dollar.md
@@ -6194,6 +6195,9 @@ playerctl.md
 playwright.md
 plenv.md
 plesk.md
+plimsoll-attest.md
+plimsoll-clients.md
+plimsolld.md
 plink.md
 plocate.md
 plot.md
@@ -6475,6 +6479,8 @@ pre-commit.md
 preconv.md
 prefect.md
 prek.md
+preloop-runner.md
+preloop.md
 prename.md
 presenterm.md
 prettier.md
@@ -7477,6 +7483,7 @@ skaffold.md
 skate.md
 skicka.md
 skillfile.md
+skillshub-cli.md
 skipfish.md
 skopeo.md
 sl.md
