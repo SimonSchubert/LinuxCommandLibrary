@@ -2082,6 +2082,7 @@ dyff.md
 dysk.md
 dzdo.md
 e1s.md
+e2e.md
 e2freefrag.md
 e2fsck.md
 e2image.md
@@ -6936,6 +6937,7 @@ rdkit.md
 rdoc.md
 rdp_check.py.md
 rdrview.md
+rea.md
 reachpad.md
 react-native-start.md
 react-native.md
@@ -7310,6 +7312,7 @@ sdiag.md
 sdiff.md
 sdk.md
 sdkmanager.md
+sdr-recv.md
 sealbot.md
 sealert.md
 searchsploit.md
@@ -8703,6 +8706,9 @@ vulkaninfo.md
 vultr-cli.md
 vzdump.md
 w.md
+w1700k-spectrum.md
+w1700k-stream.md
+w1700k.md
 w3m.md
 wacli-messages-context.md
 wacli-messages-list.md
