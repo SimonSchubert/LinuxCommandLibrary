@@ -131,6 +131,7 @@ agentnest.md
 agentrun.md
 agetty.md
 agg.md
+agor.md
 agy.md
 aha.md
 ahost.md
@@ -8229,6 +8230,7 @@ traceroute.md
 traceroute6.md
 tracexec.md
 tracker.md
+trackfetch.md
 tradingagents.md
 traefik.md
 trafilatura.md
