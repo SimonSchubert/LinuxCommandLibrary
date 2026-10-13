@@ -7624,6 +7624,7 @@ split.md
 spnda.md
 sponge.md
 sport.md
+spotatui.md
 spotdl.md
 spotify_player.md
 spotifyd.md
