@@ -1185,6 +1185,7 @@ chirpw.md
 chisel.md
 chkconfig.md
 chkfont.md
+chkit.md
 chkrootkit.md
 chmem.md
 chmod.md
@@ -3802,6 +3803,11 @@ jabref.md
 jack_connect.md
 jackd.md
 jadx.md
+janas-bench.md
+janas-chat.md
+janas-get.md
+janas-mcp.md
+janas-server.md
 janus.md
 jaq.md
 jar.md
@@ -7572,6 +7578,7 @@ soffice.md
 solana.md
 solc.md
 solcjs.md
+solidcraft-cli.md
 solo.md
 sonar-scanner.md
 sops.md
