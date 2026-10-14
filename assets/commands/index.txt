@@ -567,6 +567,7 @@ awstats.md
 awww.md
 axel.md
 axi-cache.md
+axiomcode.md
 az-account.md
 az-acr.md
 az-advisor.md
@@ -793,6 +794,7 @@ boltctl.md
 boltd.md
 bombadillo.md
 bombardier.md
+bomfather-agent.md
 bondai.md
 boo.md
 bookokrat.md
@@ -3172,6 +3174,7 @@ grap.md
 grap2graph.md
 graph.md
 graphene.md
+graphicle.md
 graphify-csharp.md
 graphml2gv.md
 graphsignal-run.md
@@ -5089,6 +5092,7 @@ ndiswrapper-1.9.md
 ndiswrapper.md
 neato.md
 nebula.md
+neckbeard.md
 ned.md
 needle.md
 needrestart.md
