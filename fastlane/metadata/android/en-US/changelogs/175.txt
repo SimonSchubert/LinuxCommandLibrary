@@ -1,0 +1,4 @@
+Added 120 new commands, including Terraform subcommands, Stripe CLI tools, llm subcommands, Flux extras, jenkins-cli, far2l and ppa-purge
+Fixed a crash when opening a link with no app installed to handle it
+Corrected the ifreload flags
+Upgraded dependencies

@@ -1,3 +1,15 @@
+## v4.9.1 - 2026-10-15
+
+### Features
+- Added 120 new commands, including Terraform subcommands (graph, import, query), Stripe CLI tools, llm subcommands, Flux extras, jenkins-cli, far2l, ppa-purge, pyxel and the DEDA printer-dot toolkit
+
+### Fixes
+- Fixed a crash when opening a link with no app installed to handle it
+- Corrected the ifreload flags
+
+### Improvements
+- Upgraded dependencies (Compose Material3 Adaptive 1.3.0, Gradle 9.8.1)
+
 ## v4.9.0 - 2026-09-26
 
 ### Features
