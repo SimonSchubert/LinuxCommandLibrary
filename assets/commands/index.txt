@@ -3843,6 +3843,7 @@ jetifier.md
 jev-reviewer.md
 jevals.md
 jevchat.md
+jevcrawl.md
 jf.md
 jfrog.md
 jfs_tune.md
@@ -7129,6 +7130,7 @@ rpmspec.md
 rr.md
 rscript.md
 rsh.md
+rsi.md
 rspamadm.md
 rspamc.md
 rspamd.md
