@@ -9,12 +9,15 @@ import androidx.compose.material3.adaptive.ExperimentalMaterial3AdaptiveApi
 import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteType
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.movableContentOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.backhandler.BackHandler
+import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.platform.UriHandler
 import com.linuxcommandlibrary.app.data.CommandsRepository
 import com.linuxcommandlibrary.app.nav.navigationSuiteTypeFor
 import com.linuxcommandlibrary.app.nav.rememberLinuxNavState
@@ -39,13 +42,25 @@ fun App(
         }
     }
 
-    LinuxTheme(darkMode = darkMode) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(MaterialTheme.colorScheme.background),
-        ) {
-            LinuxApp(initialDeeplink = initialDeeplink)
+    // The platform handler throws when no app can open the link (e.g. no browser installed).
+    val platformUriHandler = LocalUriHandler.current
+    val safeUriHandler = remember(platformUriHandler) {
+        object : UriHandler {
+            override fun openUri(uri: String) {
+                runCatching { platformUriHandler.openUri(uri) }
+            }
+        }
+    }
+
+    CompositionLocalProvider(LocalUriHandler provides safeUriHandler) {
+        LinuxTheme(darkMode = darkMode) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(MaterialTheme.colorScheme.background),
+            ) {
+                LinuxApp(initialDeeplink = initialDeeplink)
+            }
         }
     }
 }
