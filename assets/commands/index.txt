@@ -8389,6 +8389,7 @@ udisksctl.md
 udisksd.md
 ufraw-batch.md
 ufw-allow.md
+ufw-app.md
 ufw-default.md
 ufw-delete.md
 ufw-deny.md
