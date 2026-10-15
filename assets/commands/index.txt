@@ -1665,6 +1665,8 @@ debugreiserfs.md
 debuild.md
 decaffeinate.md
 decant.md
+decdn-node.md
+decdn.md
 declare.md
 declick.md
 decode-dimms.md
