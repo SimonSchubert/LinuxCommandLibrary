@@ -5194,6 +5194,9 @@ nicotine.md
 nikto.md
 nim.md
 nimble.md
+ninfer-perplexity.md
+ninfer-serve.md
+ninfer.md
 ninja.md
 ninoxai.md
 ninvaders.md
