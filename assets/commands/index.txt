@@ -4132,6 +4132,7 @@ komac.md
 komi-learn.md
 kompose.md
 kondo.md
+konnect.md
 konsave.md
 konsole.md
 kool.md

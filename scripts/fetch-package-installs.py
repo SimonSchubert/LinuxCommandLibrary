@@ -194,6 +194,9 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     },
     # tte: the terminaltexteffects application. No distro package is named tte.
     "tte": {"nix": "terminaltexteffects"},
+    # konnect: AUR "konnect" is Kopano's OpenID provider (stash.kopano.io),
+    # not mixelpixx/Konnect (KiCad MCP server). No distro packages the latter.
+    "konnect": {},
 }
 
 # Prefer these path prefixes when mapping binaries (order = priority).
