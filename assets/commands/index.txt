@@ -7486,6 +7486,7 @@ sigmap.md
 signal-desktop.md
 silentcast.md
 silicon.md
+siltop.md
 simctl.md
 simple-mtpfs.md
 simplehttpserver.md
