@@ -254,7 +254,7 @@ Numbers come from macOS APIs a normal user may call: the SMC for fans, temperatu
 
 # CONFIGURATION
 
-Preferences live in **$XDG_CONFIG_HOME/siltop/config.toml** (default **~/.config/siltop/config.toml**). The file is written only when a setting changes. User themes are ***.toml** files in **themes/** beside it.
+Preferences live in **$XDG_CONFIG_HOME/siltop/config.toml** (default **~/.config/siltop/config.toml**). The file is written only when a setting changes. User themes are **.toml** files in **themes/** beside it.
 
 State lives in **$XDG_STATE_HOME/siltop/** (default **~/.local/state/siltop/**): **history/** (up to 30 days), **bench.ndjson**, **updates.toml**, **agent.json** and **agent.log** when the agent runs, and **crash-<time>.txt** if the process panics. **agent install** adds **~/Library/LaunchAgents/com.siltop.agent.plist** and **uninstall** removes it.
 
