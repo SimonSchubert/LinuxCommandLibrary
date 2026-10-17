@@ -982,6 +982,7 @@ bzmore.md
 c++.md
 c++filt.md
 c2hs.md
+c64-hw-sim.md
 c99.md
 cProfile.md
 cabal.md
@@ -2217,6 +2218,9 @@ eselect-profile.md
 eselect-repository.md
 eselect.md
 eslint.md
+esp32sim-c3.md
+esp32sim-c6.md
+esp32sim.md
 espanso.md
 espeak-ng.md
 espeak.md
