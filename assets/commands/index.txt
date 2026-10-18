@@ -4810,6 +4810,7 @@ miniserve.md
 minisign.md
 minitest.md
 mirrord.md
+mirrorselect.md
 misa.md
 mise.md
 mispipe.md
@@ -7280,6 +7281,7 @@ sbopkg.md
 sbpctl.md
 sbt.md
 sbuild.md
+sbx.md
 sc-im.md
 sc.md
 sc_analysis_dump.md

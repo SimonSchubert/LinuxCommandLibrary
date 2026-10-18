@@ -109,6 +109,9 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     },
     "b2": {"brew": "b2-tools"},
     "bb": {"nix": "babashka"},
+    # sbx: Docker Sandboxes. nixpkgs pname is docker-sbx (mainProgram = sbx).
+    # Not in Debian/Fedora/Arch/Alpine/openSUSE or Homebrew core.
+    "sbx": {"nix": "docker-sbx"},
     "bat": {
         "apt": "bat",
         "apk": "bat",
