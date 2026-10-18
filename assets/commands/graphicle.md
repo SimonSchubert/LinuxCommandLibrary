@@ -121,7 +121,7 @@ Without a model, **ask** prints evidence only. A full `graphicle graph extract` 
 
 # SEE ALSO
 
-[graf](/man/graf)(1), [graphify-csharp](/man/graphify-csharp)(1), [ctags](/man/ctags)(1), [cscope](/man/cscope)(1), [rg](/man/rg)(1), [claude](/man/claude)(1), [codex](/man/codex)(1), [git](/man/git)(1)
+[graphicle-graph](/man/graphicle-graph)(1), [graf](/man/graf)(1), [graphify-csharp](/man/graphify-csharp)(1), [ctags](/man/ctags)(1), [cscope](/man/cscope)(1), [rg](/man/rg)(1), [claude](/man/claude)(1), [codex](/man/codex)(1), [git](/man/git)(1)
 
 # RESOURCES
 
