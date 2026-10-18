@@ -1332,6 +1332,9 @@ cohere.md
 cointop.md
 col.md
 cola.md
+colab-exec.md
+colab-run.md
+colab.md
 colcrt.md
 coli.md
 colima.md
