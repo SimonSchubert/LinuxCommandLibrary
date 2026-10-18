@@ -1972,6 +1972,7 @@ dos2unix.md
 dosbox.md
 dosfslabel.md
 dot.md
+dot2gxl.md
 dotbot.md
 dotenv-diff.md
 dotenvx.md
@@ -7401,6 +7402,7 @@ setquota.md
 setsebool.md
 setserial.md
 setsid.md
+setterm.md
 setup-ai.md
 setup-alpine.md
 setxkbmap.md
