@@ -5515,6 +5515,7 @@ omarchy.md
 omega-rpg.md
 omf.md
 omm.md
+omnipty.md
 omny.md
 omp.md
 oms.md
