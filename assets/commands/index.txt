@@ -5972,6 +5972,7 @@ peeked.md
 peekfd.md
 peerflix.md
 peerindex.md
+penmentor.md
 peplum.md
 percent.md
 perch.md
@@ -8722,6 +8723,7 @@ vncviewer.md
 vnstat.md
 vnstatd.md
 vnstati.md
+voidaccess.md
 volatility.md
 volta.md
 vortix.md
