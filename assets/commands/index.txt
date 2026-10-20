@@ -9112,6 +9112,8 @@ yadm-upgrade.md
 yadm.md
 yakuake.md
 yamllint.md
+yana-ai.md
+yana-rt.md
 yank.md
 yaourt.md
 yap.md
