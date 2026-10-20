@@ -7064,6 +7064,7 @@ resto.md
 restorecon.md
 restorecond.md
 restoredrill.md
+reticle.md
 retroarch.md
 reuse.md
 rev.md
