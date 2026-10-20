@@ -6936,6 +6936,7 @@ rasttopnm.md
 rauc.md
 raven.md
 raw.md
+rawlink.md
 rawtherapee-cli.md
 rawtopgm.md
 rawtoppm.md
