@@ -113,7 +113,7 @@ Install from the openTPU tree (`pip install -e .`); the scripts are not a separa
 
 # SEE ALSO
 
-[otpu-smi](/man/otpu-smi)(1), [otpu-lens](/man/otpu-lens)(1), [llama-cli](/man/llama-cli)(1), [ollama](/man/ollama)(1), [nvidia-smi](/man/nvidia-smi)(1)
+[otpu-serve](/man/otpu-serve)(1), [otpu-smi](/man/otpu-smi)(1), [otpu-lens](/man/otpu-lens)(1), [otpu-selftest](/man/otpu-selftest)(1), [llama-cli](/man/llama-cli)(1), [ollama](/man/ollama)(1)
 
 # RESOURCES
 

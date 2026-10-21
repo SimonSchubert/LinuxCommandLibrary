@@ -106,7 +106,7 @@ Lost events are reported in each profile's **hwtrace** metadata, as notes, and o
 
 # SEE ALSO
 
-[otpu-chat](/man/otpu-chat)(1), [otpu-smi](/man/otpu-smi)(1), [perf](/man/perf)(1)
+[otpu-chat](/man/otpu-chat)(1), [otpu-smi](/man/otpu-smi)(1), [otpu-diag](/man/otpu-diag)(1), [perf](/man/perf)(1)
 
 # RESOURCES
 

@@ -5637,7 +5637,12 @@ osv-scanner.md
 otel-cli.md
 oterm.md
 otpu-chat.md
+otpu-diag.md
 otpu-lens.md
+otpu-lock.md
+otpu-selftest.md
+otpu-serve.md
+otpu-setup.md
 otpu-smi.md
 otree.md
 ots.md
