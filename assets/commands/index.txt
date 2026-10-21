@@ -5150,6 +5150,7 @@ netshow.md
 netsniff-ng.md
 netstat.md
 nettacker.md
+netwasm-wit-bindgen.md
 networkctl.md
 neutron.md
 newaliases.md
