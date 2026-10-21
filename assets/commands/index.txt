@@ -8730,6 +8730,8 @@ volta.md
 vortix.md
 vosk.md
 voxtype.md
+vp-env.md
+vp.md
 vpnc.md
 vpod.md
 vrms.md

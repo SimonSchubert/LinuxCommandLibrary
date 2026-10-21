@@ -84,6 +84,8 @@ EXTRA_CANDIDATES: dict[str, list[str]] = {
     "backintime": ["backintime-common", "backintime"],
     "insights": ["cppinsights"],
     "tte": ["terminaltexteffects"],
+    "vp": ["vite-plus"],
+    "vp-env": ["vite-plus"],
 }
 
 # Full install maps that replace resolver output (known collisions / enrichments).
@@ -129,6 +131,9 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     "graf": {},
     # gat: brew/nix/AUR "gat" is koki-develop/gat (cat alternative), not getgat-dev/gat
     "gat": {},
+    # vp: brew alias vp → vite-plus; AUR/nix "vp" are Virtual Pascal / erikg slideshow
+    "vp": {"aur": "vite-plus", "brew": "vite-plus"},
+    "vp-env": {"aur": "vite-plus", "brew": "vite-plus"},
     # fd: Debian/brew map "fd" → fdclone (file manager); real tool is sharkdp/fd
     "fd": {
         "apt": "fd-find",
