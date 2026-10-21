@@ -67,7 +67,7 @@ Linux only. Safe to re-run: every step checks first and changes only what differ
 > Install the module for the running kernel only, even when DKMS is available.
 
 **--src** _dir_
-> Use a local `dma_ip_drivers` git clone at the pinned commit instead of fetching from GitHub.
+> Use a local **dma_ip_drivers** git clone at the pinned commit instead of fetching from GitHub.
 
 **-h**, **--help**
 > Print the script's comment header and exit.

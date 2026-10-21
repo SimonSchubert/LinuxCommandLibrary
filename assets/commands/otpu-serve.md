@@ -46,7 +46,7 @@ Models whose image holds several sequences (Qwen3 and the Llama-likes) decode cl
 
 **--backend isa** runs on the Python ISA simulator. **board** talks to an Inspur YPCB-00338 Kintex-7 card through XDMA (**--dev**, default `/dev/xdma0`). **board-sim** uses the Verilator board model.
 
-A model with a vision side (MiniCPM-V) accepts `image_url` parts in chat completions (`data:` URLs by default; **--image-fetch** also fetches http(s)). **--api-key** or **OTPU_API_KEY** requires `Authorization: Bearer`. Tools, logprobs, and images on a model without a vision side are not supported.
+A model with a vision side (MiniCPM-V) accepts image URL parts in chat completions (data URLs by default; **--image-fetch** also fetches http(s)). **--api-key** or the OTPU API KEY environment variable requires `Authorization: Bearer`. Tools, logprobs, and images on a model without a vision side are not supported.
 
 # PARAMETERS
 
@@ -105,13 +105,13 @@ A model with a vision side (MiniCPM-V) accepts `image_url` parts in chat complet
 > Directory for the disk tier, kept across restarts (default `~/otpu-build/kvcache`).
 
 **--think**
-> Enable thinking mode by default. A request's `chat_template_kwargs.enable_thinking` overrides it.
+> Enable thinking mode by default. A request's enable-thinking chat-template flag overrides it.
 
 **--reasoning-parser** _qwen3_
-> Move a reply's `<think> ... </think>` into `reasoning_content` (also while streaming).
+> Move a reply's think tags into the reasoning content field (also while streaming).
 
 **--api-key** _key_
-> Require `Authorization: Bearer` (default **OTPU_API_KEY**).
+> Require `Authorization: Bearer` (default: the OTPU API KEY environment variable).
 
 **--pool** _file_
 > Expert-pool file for a streamed mixture-of-experts model.
@@ -126,14 +126,14 @@ A model with a vision side (MiniCPM-V) accepts `image_url` parts in chat complet
 > MiniCPM-V: default extra image slices besides the thumbnail (processor default **9**, at most **36**).
 
 **--image-fetch**
-> Fetch http(s) `image_url`s (default: `data:` URLs only). A request never opens a local file.
+> Fetch http(s) image URLs (default: data URLs only). A request never opens a local file.
 
 **--warm-cap** _SEC_
 > Streamed MoE: `/health` returns 503 `warming` while the expert pool is read into the page cache, for at most this many seconds (default **300**; **0** never).
 
 # CAVEATS
 
-Install from the openTPU tree (`pip install -e .`); the scripts are not a separate PyPI distribution. Tokenizers and checkpoints need **transformers** and a Hugging Face download into `models/<name>`. **--backend board** needs the XDMA driver, a loaded bitstream, and typically **otpu-setup**. The process holds the device lock while it runs. Tools and logprobs are not implemented. `presence_penalty` and `frequency_penalty` are ignored. **--mtp** only accepts sampling the device loop supports (greedy, top-k 1–64, repetition penalty ≥ 1). A streamed MoE's `/health` may report 503 while the pool warms; requests are still served, with misses from disk.
+Install from the openTPU tree (`pip install -e .`); the scripts are not a separate PyPI distribution. Tokenizers and checkpoints need **transformers** and a Hugging Face download into `models/<name>`. **--backend board** needs the XDMA driver, a loaded bitstream, and typically **otpu-setup**. The process holds the device lock while it runs. Tools and logprobs are not implemented. OpenAI presence and frequency penalty fields are ignored. **--mtp** only accepts sampling the device loop supports (greedy, top-k 1–64, repetition penalty ≥ 1). A streamed MoE's `/health` may report 503 while the pool warms; requests are still served, with misses from disk.
 
 # HISTORY
 
