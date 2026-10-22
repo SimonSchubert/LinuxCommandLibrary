@@ -7732,6 +7732,7 @@ st.1.md
 st.md
 st4topgm.md
 stack.md
+stackdome.md
 stalonetray.md
 standard-version.md
 standard.md
