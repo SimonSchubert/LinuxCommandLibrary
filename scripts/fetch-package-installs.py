@@ -205,6 +205,9 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     # konnect: AUR "konnect" is Kopano's OpenID provider (stash.kopano.io),
     # not mixelpixx/Konnect (KiCad MCP server). No distro packages the latter.
     "konnect": {},
+    # omnara: brew formula is archived Python CLI 1.7.0 (disabled 2026-09-15).
+    # Current CLI is the Node.js npm package from omnara-ai/omnara.
+    "omnara": {},
 }
 
 # Prefer these path prefixes when mapping binaries (order = priority).
