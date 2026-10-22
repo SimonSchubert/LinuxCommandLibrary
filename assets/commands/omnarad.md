@@ -97,10 +97,23 @@ The usual install path is the hosted script `https://api.omnara.com/install/omna
 > Daemon home. **OMNARA_HOME** must be an absolute, already-clean path. Default is `~/.omnarad`.
 
 **~/.omnarad/daemon.json**
-> Runtime config, mode `0600`. Fields include `schema_version`, `api_url` (default `https://api.omnara.com/v1`), `machine_token`, `installation_id`, `machine_id`, `no_update`, `runner_path`, and `git_credentials_disabled`.
+> Runtime config, mode `0600`. Default API root is `https://api.omnara.com/v1`.
+
+```
+{
+  "schema_version": 1,
+  "api_url": "https://api.omnara.com/v1",
+  "machine_token": "",
+  "installation_id": "",
+  "machine_id": "",
+  "no_update": false,
+  "runner_path": "",
+  "git_credentials_disabled": false
+}
+```
 
 **~/.omnarad/install.json**
-> Install receipt (`schema_version`, `install_method` `omnarad.sh`, `release_manifest_url`) used for repairs and background updates.
+> Install receipt used for repairs and background updates: schema version, install method `omnarad.sh`, and the release manifest URL.
 
 **omnara machines create-local** refuses to run when this home already holds a daemon install. Run **omnarad uninstall** first to connect the computer as a new machine.
 
@@ -113,7 +126,7 @@ The usual install path is the hosted script `https://api.omnara.com/install/omna
 > Control-plane API root written into `daemon.json`. Default `https://api.omnara.com/v1`.
 
 **OMNARA_MACHINE_TOKEN**
-> One-time machine token (`omnara_daemon_v1_…`). Required at install if not prompted interactively. A rejected token is reported against the configured API URL.
+> One-time machine token (prefix `omnara-daemon-v1-`). Required at install if not prompted interactively. A rejected token is reported against the configured API URL.
 
 **OMNARA_NO_UPDATE**
 > `1` disables background updates; `0` enables them. Other values are an error.
@@ -130,7 +143,7 @@ Installer coverage is macOS and Linux on amd64 and arm64. macOS binaries require
 
 **status** exits **1** when the daemon is stopped, so it is not a success-only health check in scripts. Hidden internal subcommands (`run-service`, process runner, file transfer, git credential helper) are used by the service manager and agent runtime; they are not user commands.
 
-The daemon connects outbound only. Grant the machine to a project with **omnara grant machines add** (or pass **--project-ids** at create) before agent configs can target it by `machine_name`.
+The daemon connects outbound only. Grant the machine to a project with **omnara grant machines add** (or pass **--project-ids** at create) before agent configs can target it by machine name.
 
 # HISTORY
 

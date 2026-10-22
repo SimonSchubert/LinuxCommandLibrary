@@ -69,7 +69,7 @@ Hosted API requests go to `https://api.omnara.com/v1` and browser login uses `ht
 > Print the authenticated user and their organizations.
 
 **agents** (alias **agent**)
-> Launch and manage agents. Subcommands: **list**, **get** _agent-id_, **launch**, **update** _agent-id_, **cancel** _agent-id_, **archive** _agent-id_, **mcp-add** _agent-id_, **chat** [_agent-id_], **input** _agent-id_, **events**, **interactions**. **launch** takes **--file**, **--source**, **--config**, and/or **--profile**, plus **--name** and **--message**. **chat** needs an interactive terminal. **input** sends **--message** or **--content-blocks**; **--delivery-mode** is `queued` or `steering`. **events list** / **events stream** read the timeline; **stream** accepts **--after-sequence** and **--deltas**. **cancel** stops the current turn; **archive** retires the agent (no unarchive). Agent `activity.state` is `running`, `waiting_on_interaction`, `idle`, or `archived`.
+> Launch and manage agents. Subcommands: **list**, **get** _agent-id_, **launch**, **update** _agent-id_, **cancel** _agent-id_, **archive** _agent-id_, **mcp-add** _agent-id_, **chat** [_agent-id_], **input** _agent-id_, **events**, **interactions**. **launch** takes **--file**, **--source**, **--config**, and/or **--profile**, plus **--name** and **--message**. **chat** needs an interactive terminal. **input** sends **--message** or **--content-blocks**; **--delivery-mode** is `queued` or `steering`. **events list** / **events stream** read the timeline; **stream** accepts **--after-sequence** and **--deltas**. **cancel** stops the current turn; **archive** retires the agent (no unarchive). Agent activity state is running, waiting on interaction, idle, or archived.
 
 **machines** (alias **machine**)
 > Manage BYO machines. **create-local** creates a machine, mints a daemon token, and installs **omnarad** on this computer (**--display-name** required). It refuses if `~/.omnarad` (or **OMNARA_HOME**) already holds a daemon; run **omnarad uninstall** first. **create** prints a one-time token and install command for another computer. Also **list**, **get**, **update**, **delete**.
@@ -110,10 +110,10 @@ Hosted API requests go to `https://api.omnara.com/v1` and browser login uses `ht
 > Inline YAML or JSON agent config.
 
 **--config** _id_
-> Existing agent config ID (`acfg_…`).
+> Existing agent config ID (prefix `acfg-`).
 
 **--profile** _id_
-> Agent profile ID (`aprf_…`). Runs that profile's current config unless a config is also given.
+> Agent profile ID (prefix `aprf-`). Runs that profile's current config unless a config is also given.
 
 **--message** _text_
 > First user message on **launch**, or a single text block on **agents input**.
@@ -127,7 +127,17 @@ Hosted API requests go to `https://api.omnara.com/v1` and browser login uses `ht
 # CONFIGURATION
 
 **~/.config/omnara/config.json**
-> Saved token, default organization, default project, and API URLs. The directory is created mode `0700` and the file is written mode `0600`. Keys: `token`, `org_id`, `project_id`, `api_url`, `issuer_url`. A legacy `base_url` key is dropped on load.
+> Saved token, default organization, default project, and API URLs. The directory is created mode `0700` and the file is written mode `0600`. A legacy base-url key is dropped on load.
+
+```
+{
+  "token": "",
+  "org_id": "",
+  "project_id": "",
+  "api_url": "",
+  "issuer_url": ""
+}
+```
 
 An agent config is YAML or JSON. A minimal hosted-cloud example:
 
@@ -147,13 +157,13 @@ On Omnara Cloud the first project includes provider `omnara-openrouter` and pool
 # ENVIRONMENT
 
 **OMNARA_API_KEY**
-> Bearer token. Overrides the token in the config file. The REST docs also show `OMNARA_TOKEN` for curl and the SDK; the CLI reads **OMNARA_API_KEY**.
+> Bearer token. Overrides the token in the config file. Curl and the SDK use a similarly named token variable; the CLI reads this one.
 
 **OMNARA_ORG_ID**
-> Default organization ID. Overrides `org_id` in the config file.
+> Default organization ID. Overrides the organization key in the config file.
 
 **OMNARA_PROJECT_ID**
-> Default project ID. Overrides `project_id` in the config file.
+> Default project ID. Overrides the project key in the config file.
 
 **OMNARA_API_URL**
 > API root used for requests. Default `https://api.omnara.com/v1`. Self-hosted example: `http://localhost:8000/api/v1`.
@@ -163,9 +173,9 @@ On Omnara Cloud the first project includes provider `omnara-openrouter` and pool
 
 # CAVEATS
 
-Requires Node.js 22 or later. **agents chat** and **config select** need an interactive terminal. Without a saved token and without a TTY, commands fail with `not logged in: run 'omnara login' or set OMNARA_API_KEY`. **logout** does not revoke the token on the server.
+Requires Node.js 22 or later. **agents chat** and **config select** need an interactive terminal. Without a saved token and without a TTY, commands fail with: not logged in; run **omnara login** or set **OMNARA_API_KEY**. **logout** does not revoke the token on the server.
 
-**machines create-local** will not overwrite an existing daemon home. Public resource IDs use a type prefix (`agt_`, `acfg_`, `aprf_`, `mch_`, `org_`, `proj_`, …) plus 26 lowercase base32 characters; treat them as opaque.
+**machines create-local** will not overwrite an existing daemon home. Public resource IDs use a type prefix (agt, acfg, aprf, mch, org, proj, and others) plus 26 lowercase base32 characters; treat them as opaque.
 
 Archiving an agent deletes its integration subscriptions, stops work, drops queued inputs, and releases pooled machines. Machines you connected yourself, configs, and profiles remain.
 
