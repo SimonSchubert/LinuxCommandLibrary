@@ -56,13 +56,13 @@ Pin **levels** (SCL, SDA, ALERT)
 **smbus** (bus 1)
 > PCIe edge-connector SMBus (SCL R26, SDA R27). The host's own SMBus controller may also drive this bus.
 
-A transaction writes at most one byte to a device: the command code (register pointer) of a read, then a repeated START. It never writes data, so it cannot change a regulator's OPERATION, `VOUT_COMMAND`, PAGE, or any other setting. PMBus send-byte commands (`CLEAR_FAULTS`, `STORE_*`, `RESTORE_*`) are refused as command codes. No command code is written to 0x30-0x37 (DIMM SPD write-protect and page), 0x0C (alert response), or 0x61 (ARP).
+A transaction writes at most one byte to a device: the command code (register pointer) of a read, then a repeated START. It never writes data, so it cannot change a regulator's OPERATION, VOUT COMMAND, PAGE, or any other setting. PMBus send-byte commands (CLEAR FAULTS, STORE, RESTORE) are refused as command codes. No command code is written to 0x30-0x37 (DIMM SPD write-protect and page), 0x0C (alert response), or 0x61 (ARP).
 
-**scan** probes addresses **0x08-0x77** with one-byte reads and, unless **--no-identify**, classifies each ACK: LM73, INA current monitor, or PMBus (`MFR_ID` / `MFR_MODEL` and `READ_*` telemetry). Identification skips I/O expanders (0x20-0x27, 0x38-0x3F), I2C multiplexers (0x70-0x77), and EEPROMs (0x50-0x57); **read** can still address them explicitly. A full two-bus scan is cached as `<run dir>/<device>.i2c.json` for **otpu-smi**.
+**scan** probes addresses **0x08-0x77** with one-byte reads and, unless **--no-identify**, classifies each ACK: LM73, INA current monitor, or PMBus (manufacturer id/model and telemetry). Identification skips I/O expanders (0x20-0x27, 0x38-0x3F), I2C multiplexers (0x70-0x77), and EEPROMs (0x50-0x57); **read** can still address them explicitly. A full two-bus scan is cached as `<run dir>/<device>.i2c.json` for **otpu-smi**.
 
 **read** fetches **-n** bytes (default 1). With _reg_, that command code is written first. **--block** is an SMBus block read (the first byte is the count, at most 32).
 
-**pmbus-dump** requires `PMBUS_REVISION`; it prints identification, `VOUT_MODE`, `READ_*` telemetry, and derived power.
+**pmbus-dump** requires a PMBus revision response; it prints identification, VOUT MODE, telemetry, and derived power.
 
 **levels** prints SCL and SDA of both buses plus the LM73 ALERT pin. It does not start a transaction.
 
@@ -74,7 +74,7 @@ Processes serialize with an flock on `<run dir>/<device>.i2c.lock`. The SMBus wa
 > XDMA device prefix (default `/dev/xdma0`).
 
 **--fake**
-> In-memory demo buses (`fake_i2c.card_buses`). No hardware.
+> In-memory demo buses. No hardware.
 
 **--khz** _N_
 > SCL rate bound in kHz (default **100**). Half-bit delay is `0.5 / (khz * 1e3)`; PCIe register accesses add to the period, so the bus typically runs slower (about 50-80 kHz at the default).
@@ -98,7 +98,7 @@ Processes serialize with an flock on `<run dir>/<device>.i2c.lock`. The SMBus wa
 > SMBus block read.
 
 **pmbus-dump** _bus_ _addr_
-> PMBus identification and `READ_*` telemetry.
+> PMBus identification and telemetry.
 
 **levels**
 > Pin levels only.
