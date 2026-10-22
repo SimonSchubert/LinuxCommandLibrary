@@ -5574,6 +5574,7 @@ openrgb.md
 opensc-tool.md
 openscad.md
 opensearch.md
+openshell.md
 openshot-render.md
 openshot.md
 openssl-ca.md
