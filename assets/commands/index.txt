@@ -3190,6 +3190,7 @@ graphify-csharp.md
 graphml2gv.md
 graphsignal-run.md
 graphviz.md
+grdctl.md
 greed.md
 grep.md
 grepathy.md
