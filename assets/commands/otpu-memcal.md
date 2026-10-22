@@ -36,7 +36,7 @@ A **named** XDMA device
 
 **otpu-memcal** is the DDR3 calibration tool for **openTPU** bitstreams whose memory controllers are **LiteDRAM** (CAPS bit27, register map 2 or later). After `pip install -e .` in the FeSens/openTPU tree it is installed as a console script (`opentpu.host.memcal:main`). Older **MIG** bitstreams calibrate themselves in hardware; this command then reports them as self-calibrating and has nothing to do.
 
-LiteDRAM's PHY is calibrated through each controller's CSRs in the BAR0 window at **R_MEMCAL** (0x10000). Per channel the CK phase is scanned over one tCK with the channel's BIST as the traffic check, the phase is set to the centre of the window common to all nine byte lanes, write latency and read leveling are programmed, and the channel's ready bit (STATUS **CALIB0** / **CALIB1**) rises. The CSR map and init sequence ship in `opentpu/host/litedram/` (`csr.csv`, `sdram_init.py`).
+LiteDRAM's PHY is calibrated through each controller's CSRs in the BAR0 window at **R_MEMCAL** (0x10000). Per channel the CK phase is scanned over one tCK with the channel's BIST as the traffic check, the phase is set to the centre of the window common to all nine byte lanes, write latency and read leveling are programmed, and the channel's ready bit (STATUS **CALIB0** / **CALIB1**) rises. The CSR map and init sequence ship in `opentpu/host/litedram` as `csr.csv` and `sdram_init.py`.
 
 Two ways to run it:
 
