@@ -92,7 +92,7 @@ Real-card output needs the XDMA character devices and a bitstream that identifie
 
 # SEE ALSO
 
-[otpu-chat](/man/otpu-chat)(1), [otpu-serve](/man/otpu-serve)(1), [otpu-diag](/man/otpu-diag)(1), [otpu-lens](/man/otpu-lens)(1), [nvidia-smi](/man/nvidia-smi)(1)
+[otpu-chat](/man/otpu-chat)(1), [otpu-serve](/man/otpu-serve)(1), [otpu-diag](/man/otpu-diag)(1), [otpu-i2c](/man/otpu-i2c)(1), [otpu-lens](/man/otpu-lens)(1), [nvidia-smi](/man/nvidia-smi)(1)
 
 # RESOURCES
 

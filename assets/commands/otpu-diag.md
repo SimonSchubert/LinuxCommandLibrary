@@ -86,7 +86,7 @@ A real card needs XDMA character devices and a loaded openTPU bitstream. Checks 
 
 # SEE ALSO
 
-[otpu-selftest](/man/otpu-selftest)(1), [otpu-setup](/man/otpu-setup)(1), [otpu-smi](/man/otpu-smi)(1), [otpu-chat](/man/otpu-chat)(1)
+[otpu-selftest](/man/otpu-selftest)(1), [otpu-setup](/man/otpu-setup)(1), [otpu-smi](/man/otpu-smi)(1), [otpu-i2c](/man/otpu-i2c)(1), [otpu-memcal](/man/otpu-memcal)(1), [otpu-chat](/man/otpu-chat)(1)
 
 # RESOURCES
 

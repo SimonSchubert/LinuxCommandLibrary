@@ -5640,9 +5640,12 @@ osv-scanner.md
 otel-cli.md
 oterm.md
 otpu-chat.md
+otpu-ddr4.md
 otpu-diag.md
+otpu-i2c.md
 otpu-lens.md
 otpu-lock.md
+otpu-memcal.md
 otpu-selftest.md
 otpu-serve.md
 otpu-setup.md

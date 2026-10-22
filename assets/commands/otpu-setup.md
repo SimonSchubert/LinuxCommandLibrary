@@ -82,7 +82,7 @@ Must run on the Linux PC that holds the card. Modes other than **--check** need 
 
 # SEE ALSO
 
-[otpu-selftest](/man/otpu-selftest)(1), [otpu-diag](/man/otpu-diag)(1), [otpu-chat](/man/otpu-chat)(1), [lspci](/man/lspci)(1), [modprobe](/man/modprobe)(1), [dkms](/man/dkms)(1)
+[otpu-selftest](/man/otpu-selftest)(1), [otpu-diag](/man/otpu-diag)(1), [otpu-memcal](/man/otpu-memcal)(1), [otpu-chat](/man/otpu-chat)(1), [lspci](/man/lspci)(1), [modprobe](/man/modprobe)(1), [dkms](/man/dkms)(1)
 
 # RESOURCES
 
