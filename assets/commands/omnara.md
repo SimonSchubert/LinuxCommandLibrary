@@ -110,10 +110,10 @@ Hosted API requests go to `https://api.omnara.com/v1` and browser login uses `ht
 > Inline YAML or JSON agent config.
 
 **--config** _id_
-> Existing agent config ID (prefix `acfg-`).
+> Existing agent config ID (acfg prefix).
 
 **--profile** _id_
-> Agent profile ID (prefix `aprf-`). Runs that profile's current config unless a config is also given.
+> Agent profile ID (aprf prefix). Runs that profile's current config unless a config is also given.
 
 **--message** _text_
 > First user message on **launch**, or a single text block on **agents input**.

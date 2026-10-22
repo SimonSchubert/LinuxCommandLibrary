@@ -126,7 +126,7 @@ The usual install path is the hosted script `https://api.omnara.com/install/omna
 > Control-plane API root written into `daemon.json`. Default `https://api.omnara.com/v1`.
 
 **OMNARA_MACHINE_TOKEN**
-> One-time machine token (prefix `omnara-daemon-v1-`). Required at install if not prompted interactively. A rejected token is reported against the configured API URL.
+> One-time machine token (omnara daemon v1 prefix). Required at install if not prompted interactively. A rejected token is reported against the configured API URL.
 
 **OMNARA_NO_UPDATE**
 > `1` disables background updates; `0` enables them. Other values are an error.
