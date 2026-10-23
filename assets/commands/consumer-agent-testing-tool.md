@@ -46,7 +46,7 @@ List **surrogate targets** as JSON
 
 # DESCRIPTION
 
-**consumer-agent-testing-tool** (CATT) is a local test host that approximates how a consumer assistant talks to your service. It drives an MCP server, an embedded MCP app, a website, or a mapped HTTP API, then checks what the service actually did, seals the evidence, and compares runs. The console script is **consumer-agent-testing-tool** (`consumer_agent_testing_tool.cli:main`). Package version **0.2.1**. Python **3.12** or newer is required. From a clone, **uv run consumer-agent-testing-tool** is the documented invocation.
+**consumer-agent-testing-tool** (CATT) is a local test host that approximates how a consumer assistant talks to your service. It drives an MCP server, an embedded MCP app, a website, or a mapped HTTP API, then checks what the service actually did, seals the evidence, and compares runs. The package installs the console script **consumer-agent-testing-tool**. Package version **0.2.1**. Python **3.12** or newer is required. From a clone, **uv run consumer-agent-testing-tool** is the documented invocation.
 
 **Muse** is the default surrogate target. **Instinct** is also supported on the connector lane. Both share a native/CLI testing contract (routing, memory, payments, browser/HTTP tasks, scheduling). The inference model is a separate choice from the assistant being emulated. A passing test does not certify compatibility with Muse, Instinct, or any hosted assistant. Each Muse-specific behavior is labeled `documented`, `unofficial`, `assumed`, or `unknown`.
 
@@ -163,7 +163,7 @@ defaults:
   model_profile: openrouter-dev
 ```
 
-Live adapters in the supported release: **openrouter**, **meta**, **bedrock**, **local-glimmer**. Profiles are labeled `specified/unverified` until live evidence marks them `supported`. Contributor-mode model IDs (the token `contributor`) require `allow_training_on_prompts: true`.
+Live adapters in the supported release: **openrouter**, **meta**, **bedrock**, **local-glimmer**. Profiles are labeled `specified/unverified` until live evidence marks them `supported`. Contributor-mode model IDs (the token `contributor`) require **--allow-training-on-prompts** at **init**.
 
 Connector scenarios are YAML (`connector-v1`). Scripted calls are a JSON list of tool-call steps, optional `{"idle": true}` pauses, and a final answer. Replace `TODO(scaffold)` placeholders before **connector-run**.
 
