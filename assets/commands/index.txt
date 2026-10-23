@@ -2687,6 +2687,7 @@ getuserspns.py.md
 gfold.md
 gfortran.md
 gftp.md
+gguf2jns.md
 gh-a11y.md
 gh-accessibility.md
 gh-agent-task.md
@@ -3395,6 +3396,7 @@ hexpatch.md
 hexyl.md
 hey.md
 hf.md
+hf2jns_mtp.md
 hflow.md
 hg-add.md
 hg-branch.md
@@ -3979,6 +3981,7 @@ jless.md
 jmap.md
 jmeter.md
 jmtpfs.md
+jns_planes.md
 jnv.md
 jo.md
 jobs.md

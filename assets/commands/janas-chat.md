@@ -164,7 +164,7 @@ Janas is early software: the public API and the command line change without noti
 
 # SEE ALSO
 
-[janas-get](/man/janas-get)(1), [janas-bench](/man/janas-bench)(1), [janas-server](/man/janas-server)(1), [janas-mcp](/man/janas-mcp)(1), [janas-flights](/man/janas-flights)(1), [janas-git](/man/janas-git)(1), [janas-github](/man/janas-github)(1), [janas-maps](/man/janas-maps)(1), [janas-prices](/man/janas-prices)(1), [janas-quakes](/man/janas-quakes)(1), [janas-system](/man/janas-system)(1), [janas-weather](/man/janas-weather)(1), [janas-wiki](/man/janas-wiki)(1), [llama-cli](/man/llama-cli)(1), [ollama](/man/ollama)(1), [janus](/man/janus)(1), [koboldcpp](/man/koboldcpp)(1)
+[janas-get](/man/janas-get)(1), [gguf2jns](/man/gguf2jns)(1), [hf2jns_mtp](/man/hf2jns_mtp)(1), [jns_planes](/man/jns_planes)(1), [janas-bench](/man/janas-bench)(1), [janas-server](/man/janas-server)(1), [janas-mcp](/man/janas-mcp)(1), [janas-flights](/man/janas-flights)(1), [janas-git](/man/janas-git)(1), [janas-github](/man/janas-github)(1), [janas-maps](/man/janas-maps)(1), [janas-prices](/man/janas-prices)(1), [janas-quakes](/man/janas-quakes)(1), [janas-system](/man/janas-system)(1), [janas-weather](/man/janas-weather)(1), [janas-wiki](/man/janas-wiki)(1), [llama-cli](/man/llama-cli)(1), [ollama](/man/ollama)(1), [janus](/man/janus)(1), [koboldcpp](/man/koboldcpp)(1)
 
 # RESOURCES
 
