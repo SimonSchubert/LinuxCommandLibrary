@@ -9140,6 +9140,7 @@ yadm-upgrade.md
 yadm.md
 yakuake.md
 yamllint.md
+yana-ai-rt.md
 yana-ai.md
 yana-rt.md
 yank.md

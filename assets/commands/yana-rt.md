@@ -173,7 +173,7 @@ The runtime crate **yana-rt** is the native engine of Yana AI, started **17 May 
 
 # SEE ALSO
 
-[yana-ai](/man/yana-ai)(1), [cargo](/man/cargo)(1), [claude](/man/claude)(1), [codex](/man/codex)(1), [aider](/man/aider)(1), [aichat](/man/aichat)(1), [ollama](/man/ollama)(1), [direnv](/man/direnv)(1), [git](/man/git)(1)
+[yana-ai](/man/yana-ai)(1), [yana-ai-rt](/man/yana-ai-rt)(1), [cargo](/man/cargo)(1), [claude](/man/claude)(1), [codex](/man/codex)(1), [aider](/man/aider)(1), [aichat](/man/aichat)(1), [ollama](/man/ollama)(1), [direnv](/man/direnv)(1), [git](/man/git)(1)
 
 # RESOURCES
 
