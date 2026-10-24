@@ -3162,6 +3162,7 @@ gprof.md
 gprolog.md
 gpty.md
 gpu-screen-recorder.md
+gpu_check.md
 gpustat.md
 gqrx.md
 grabc.md
@@ -8739,6 +8740,7 @@ vitree.md
 viu.md
 vivaldi-stable.md
 vivaldi.md
+vkcheck.md
 vkcube.md
 vkcubepp.md
 vkpurge.md

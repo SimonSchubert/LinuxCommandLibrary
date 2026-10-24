@@ -90,7 +90,7 @@ The engine is deliberately hard on the machine: it fills free memory and reads t
 
 # SEE ALSO
 
-[janas-chat](/man/janas-chat)(1), [janas-get](/man/janas-get)(1), [janas-server](/man/janas-server)(1), [llama-cli](/man/llama-cli)(1), [ollama](/man/ollama)(1)
+[janas-chat](/man/janas-chat)(1), [vkcheck](/man/vkcheck)(1), [gpu_check](/man/gpu_check)(1), [janas-get](/man/janas-get)(1), [janas-server](/man/janas-server)(1), [vulkaninfo](/man/vulkaninfo)(1), [llama-cli](/man/llama-cli)(1), [ollama](/man/ollama)(1)
 
 # RESOURCES
 
