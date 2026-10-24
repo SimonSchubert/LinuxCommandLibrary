@@ -10,6 +10,9 @@ import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.ViewModelStoreOwner
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.LocalViewModelStoreOwner
+import androidx.navigationevent.NavigationEventDispatcher
+import androidx.navigationevent.NavigationEventDispatcherOwner
+import androidx.navigationevent.compose.LocalNavigationEventDispatcherOwner
 import androidx.savedstate.SavedStateRegistry
 import androidx.savedstate.SavedStateRegistryController
 import androidx.savedstate.SavedStateRegistryOwner
@@ -18,12 +21,14 @@ import androidx.savedstate.compose.LocalSavedStateRegistryOwner
 private class TestNavOwner :
     ViewModelStoreOwner,
     LifecycleOwner,
-    SavedStateRegistryOwner {
+    SavedStateRegistryOwner,
+    NavigationEventDispatcherOwner {
     override val viewModelStore: ViewModelStore = ViewModelStore()
     private val lifecycleRegistry = LifecycleRegistry(this)
     override val lifecycle: Lifecycle = lifecycleRegistry
     private val savedStateController = SavedStateRegistryController.create(this)
     override val savedStateRegistry: SavedStateRegistry = savedStateController.savedStateRegistry
+    override val navigationEventDispatcher: NavigationEventDispatcher = NavigationEventDispatcher()
 
     init {
         savedStateController.performAttach()
@@ -39,6 +44,7 @@ fun WithNavOwner(content: @Composable () -> Unit) {
         LocalViewModelStoreOwner provides owner,
         LocalLifecycleOwner provides owner,
         LocalSavedStateRegistryOwner provides owner,
+        LocalNavigationEventDispatcherOwner provides owner,
     ) {
         content()
     }
