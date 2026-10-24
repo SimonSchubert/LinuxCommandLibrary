@@ -166,6 +166,9 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     "alex": {"brew": "alexjs"},
     "amap": {},  # Contents maps to amap-align (wrong product)
     "flint": {},  # distro flint is FLINT (flintlib number theory), not mainak55512/flint
+    # enzyme: brew/nix/AUR "enzyme" is EnzymeAD/Enzyme (LLVM AD, enzyme.mit.edu),
+    # not byenzyme/enzyme (knowledge-base CLI). Unpackaged; do not auto-apply.
+    "enzyme": {},
     "1password": {},  # GUI; CLI is op / 1password-cli
     "draco": {},  # google/draco 3D mesh codec, not 0xchasercat/draco scraper
     "hud": {},  # AUR "hud" is Unity/Rofi menu (nikatar/HUD), not adrida/hud-mode

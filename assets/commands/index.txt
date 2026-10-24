@@ -2198,6 +2198,7 @@ envoy.md
 envsubst.md
 envx.md
 envycontrol.md
+enzyme.md
 eog.md
 eol.md
 eopkg.md
