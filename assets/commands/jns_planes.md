@@ -38,7 +38,7 @@ This is a layout rewrite, not a requantize: Q6-K downs stay Q6-K values. Other d
 
 # SEE ALSO
 
-[gguf2jns](/man/gguf2jns)(1), [janas-get](/man/janas-get)(1), [hf2jns_mtp](/man/hf2jns_mtp)(1), [janas-chat](/man/janas-chat)(1), [janas-bench](/man/janas-bench)(1)
+[gguf2jns](/man/gguf2jns)(1), [jns_neurons](/man/jns_neurons)(1), [jns_check](/man/jns_check)(1), [janas-get](/man/janas-get)(1), [hf2jns_mtp](/man/hf2jns_mtp)(1), [janas-chat](/man/janas-chat)(1), [janas-bench](/man/janas-bench)(1)
 
 # RESOURCES
 

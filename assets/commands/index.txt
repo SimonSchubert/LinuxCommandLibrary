@@ -3981,6 +3981,8 @@ jless.md
 jmap.md
 jmeter.md
 jmtpfs.md
+jns_check.md
+jns_neurons.md
 jns_planes.md
 jnv.md
 jo.md
