@@ -2449,6 +2449,11 @@ flux-bootstrap.md
 flux-build.md
 flux-check.md
 flux-create.md
+flux-delete.md
+flux-export.md
+flux-get.md
+flux-reconcile.md
+flux-resume.md
 flux-suspend.md
 flux-uninstall.md
 flux.md

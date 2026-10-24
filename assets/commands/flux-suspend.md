@@ -86,7 +86,7 @@ Suspension is stored on the live cluster object. GitOps will restore the previou
 
 # SEE ALSO
 
-[flux](/man/flux)(1), [flux-check](/man/flux-check)(1), [flux-create](/man/flux-create)(1), [flux-bootstrap](/man/flux-bootstrap)(1)
+[flux](/man/flux)(1), [flux-resume](/man/flux-resume)(1), [flux-reconcile](/man/flux-reconcile)(1), [flux-check](/man/flux-check)(1)
 
 # RESOURCES
 

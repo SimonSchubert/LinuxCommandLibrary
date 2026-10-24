@@ -990,6 +990,9 @@ _PREFIX_FAMILIES = frozenset(
         "pulumi",
         "ansible",
         "kubectl",
+        # flux delete/get/export are generic verbs; resume/reconcile/bootstrap are not.
+        # Every flux-* page is a subcommand of the same flux binary.
+        "flux",
     }
 )
 

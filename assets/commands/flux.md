@@ -139,4 +139,4 @@ Flux was originally created by Weaveworks in **2016** as one of the first GitOps
 
 # SEE ALSO
 
-[kubectl](/man/kubectl)(1), [helm](/man/helm)(1), [kustomize](/man/kustomize)(1), [argocd](/man/argocd)(1)
+[kubectl](/man/kubectl)(1), [helm](/man/helm)(1), [kustomize](/man/kustomize)(1), [argocd](/man/argocd)(1), [flux-get](/man/flux-get)(1), [flux-reconcile](/man/flux-reconcile)(1), [flux-resume](/man/flux-resume)(1)

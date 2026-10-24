@@ -79,7 +79,7 @@ It supports the major Flux resource kinds and many common configuration options.
 
 # SEE ALSO
 
-[flux](/man/flux)(1), [flux-bootstrap](/man/flux-bootstrap)(1), [flux-build](/man/flux-build)(1), [flux-check](/man/flux-check)(1)
+[flux](/man/flux)(1), [flux-delete](/man/flux-delete)(1), [flux-export](/man/flux-export)(1), [flux-build](/man/flux-build)(1)
 
 # RESOURCES
 
