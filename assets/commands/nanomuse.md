@@ -177,7 +177,7 @@ Sensitive prompts and file contents go to the configured model provider. Convers
 
 # SEE ALSO
 
-[claude](/man/claude)(1), [aider](/man/aider)(1), [opencode](/man/opencode)(1), [codex](/man/codex)(1), [llm](/man/llm)(1), [ollama](/man/ollama)(1), [chatgpt](/man/chatgpt)(1), [python](/man/python)(1), [uv](/man/uv)(1), [bubblewrap](/man/bubblewrap)(1), [playwright](/man/playwright)(1), [uvicorn](/man/uvicorn)(1)
+[nanomuse-device](/man/nanomuse-device)(1), [nanomuse-browser](/man/nanomuse-browser)(1), [nanomuse-open](/man/nanomuse-open)(1), [claude](/man/claude)(1), [aider](/man/aider)(1), [opencode](/man/opencode)(1), [codex](/man/codex)(1), [llm](/man/llm)(1), [ollama](/man/ollama)(1), [chatgpt](/man/chatgpt)(1), [python](/man/python)(1), [uv](/man/uv)(1), [bubblewrap](/man/bubblewrap)(1), [playwright](/man/playwright)(1), [uvicorn](/man/uvicorn)(1)
 
 # RESOURCES
 

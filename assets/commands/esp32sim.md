@@ -16,7 +16,7 @@ Skip ROM and jump straight to the **app image**
 
 ```esp32sim --boot app --app [firmware.bin] --max-seconds [5]```
 
-Pick another SoC on this binary (**esp32sim-c3** / **esp32sim-c6** are aliases)
+Pick another SoC on this binary (**esp32sim-c3**, **esp32sim-c6**, and **esp32sim-p4** are aliases)
 
 ```esp32sim --chip [c3] --boot rom --bootloader [bootloader.bin] --ptable [partition-table.bin] --app [app.bin] --max-seconds [26]```
 
@@ -30,17 +30,17 @@ Serve the **browser board UI**
 
 # SYNOPSIS
 
-**esp32sim** [**--chip** **esp32**|**s3**|**c3**|**c6**] [**--boot** **rom**|**app**] [**--bootloader** _file_] [**--ptable** _file_] [**--app** _file_] [**--elf** _file_]... [_options_]
+**esp32sim** [**--chip** **esp32**|**s3**|**c3**|**c6**|**p4**] [**--boot** **rom**|**app**] [**--bootloader** _file_] [**--ptable** _file_] [**--app** _file_] [**--elf** _file_]... [_options_]
 
 **esp32sim** **-h** | **--help**
 
 # PARAMETERS
 
 **--chip** _name_
-> SoC: **esp32** (classic dual LX6), **s3** / **esp32s3** (default), **c3** / **esp32c3**, **c6** / **esp32c6**. **esp32sim-c3** and **esp32sim-c6** are the same CLI with a different default.
+> SoC: **esp32** (classic dual LX6), **s3** / **esp32s3** (default), **c3** / **esp32c3**, **c6** / **esp32c6**, **p4** / **esp32p4**. **esp32sim-c3**, **esp32sim-c6**, and **esp32sim-p4** are the same CLI with a different default.
 
 **--boot** **rom**|**app**
-> **rom** starts at the mask ROM reset vector (real boot chain). **app** loads the app image segments and jumps to its entry. Default **app** on dual-core chips (S3, classic ESP32), **rom** on single-core chips (C3, C6).
+> **rom** starts at the mask ROM reset vector (real boot chain). **app** loads the app image segments and jumps to its entry. Default **app** on the S3 and the classic ESP32, **rom** on C3, C6, and P4.
 
 **--bootloader** _file_, **--ptable** _file_, **--app** _file_
 > Written to flash at **0x0**, **0x8000**, and **0x10000**.
@@ -92,7 +92,7 @@ Serve the **browser board UI**
 
 # DESCRIPTION
 
-**esp32sim** runs unmodified ESP32 firmware in an instruction-level emulator: the real mask ROM, the real second-stage bootloader, and an unmodified application image. One CLI covers four SoCs. **esp32sim** defaults to the **ESP32-S3** (dual Xtensa LX7). **--chip esp32** selects the classic dual LX6 ESP32. **esp32sim-c3** and **esp32sim-c6** are alias binaries for **--chip c3** and **--chip c6** (RISC-V).
+**esp32sim** runs unmodified ESP32 firmware in an instruction-level emulator: the real mask ROM, the real second-stage bootloader, and an unmodified application image. One CLI covers five SoCs. **esp32sim** defaults to the **ESP32-S3** (dual Xtensa LX7). **--chip esp32** selects the classic dual LX6 ESP32. **esp32sim-c3**, **esp32sim-c6**, and **esp32sim-p4** are alias binaries for **--chip c3**, **--chip c6**, and **--chip p4** (RISC-V). P4 is a draft dual RV32IMAFC, silicon rev before 3.
 
 The S3 model is the most complete: GPIO, UART, USB-Serial/JTAG, timers, SPI flash/PSRAM, SHA/AES/RSA, GDMA, I2S, LCD_CAM, RMT, I2C, a virtual Wi-Fi access point, and several boards with displays, cameras, and WS2812. On AArch64 hosts, basic blocks compile to native code by default (**--no-jit** keeps the interpreter, which must match). C3 and C6 reuse the shared peripheral models with their own memory maps; they are documented as draft relative to the S3.
 
@@ -119,7 +119,7 @@ The S3 default board is **atech14**. On C6 and classic ESP32 that name is treate
 
 # SEE ALSO
 
-[esp32sim-c3](/man/esp32sim-c3)(1), [esp32sim-c6](/man/esp32sim-c6)(1), [esptool](/man/esptool)(1), [cargo](/man/cargo)(1), [qemu-system-riscv64](/man/qemu-system-riscv64)(1), [platformio](/man/platformio)(1)
+[esp32sim-c3](/man/esp32sim-c3)(1), [esp32sim-c6](/man/esp32sim-c6)(1), [esp32sim-p4](/man/esp32sim-p4)(1), [esptool](/man/esptool)(1), [cargo](/man/cargo)(1), [qemu-system-riscv64](/man/qemu-system-riscv64)(1), [platformio](/man/platformio)(1)
 
 # RESOURCES
 

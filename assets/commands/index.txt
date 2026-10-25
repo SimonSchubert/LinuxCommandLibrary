@@ -2226,6 +2226,7 @@ eselect.md
 eslint.md
 esp32sim-c3.md
 esp32sim-c6.md
+esp32sim-p4.md
 esp32sim.md
 espanso.md
 espeak-ng.md
@@ -5089,6 +5090,9 @@ nano.md
 nanobot.md
 nanoclaw.md
 nanoeuler.md
+nanomuse-browser.md
+nanomuse-device.md
+nanomuse-open.md
 nanomuse.md
 nanosleep.md
 nap.md
@@ -8337,6 +8341,7 @@ tree.md
 treemd.md
 treepeat.md
 treetime.md
+treg-worker.md
 treg.md
 trek.md
 trex.md

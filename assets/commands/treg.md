@@ -170,7 +170,7 @@ Secrets are write-only. **secret ls** does not print stored values.
 
 # SEE ALSO
 
-[curl](/man/curl)(1), [httpie](/man/httpie)(1), [gh](/man/gh)(1), [stripe](/man/stripe)(1), [claude](/man/claude)(1), [codex](/man/codex)(1), [jq](/man/jq)(1), [python](/man/python)(1), [uv](/man/uv)(1), [pip](/man/pip)(1), [node](/man/node)(1)
+[treg-worker](/man/treg-worker)(1), [curl](/man/curl)(1), [httpie](/man/httpie)(1), [gh](/man/gh)(1), [stripe](/man/stripe)(1), [claude](/man/claude)(1), [codex](/man/codex)(1), [jq](/man/jq)(1), [python](/man/python)(1), [uv](/man/uv)(1), [pip](/man/pip)(1), [node](/man/node)(1)
 
 # RESOURCES
 

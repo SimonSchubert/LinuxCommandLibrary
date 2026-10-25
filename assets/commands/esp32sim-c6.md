@@ -65,7 +65,7 @@ Upstream calls the C6 port a draft. Camera, PSRAM, and S3 board models are absen
 
 # SEE ALSO
 
-[esp32sim](/man/esp32sim)(1), [esp32sim-c3](/man/esp32sim-c3)(1), [esptool](/man/esptool)(1), [qemu-system-riscv64](/man/qemu-system-riscv64)(1), [cargo](/man/cargo)(1)
+[esp32sim](/man/esp32sim)(1), [esp32sim-c3](/man/esp32sim-c3)(1), [esp32sim-p4](/man/esp32sim-p4)(1), [esptool](/man/esptool)(1), [qemu-system-riscv64](/man/qemu-system-riscv64)(1), [cargo](/man/cargo)(1)
 
 # RESOURCES
 
