@@ -26,9 +26,9 @@ Preselect a **database connection** and skip the prompts
 
 # DESCRIPTION
 
-**create-chkit** scaffolds a new **chkit** project from an example. The npm package name is `create-chkit`, and the program it installs is **create-chkit**. `npm create chkit`, `pnpm create chkit`, `bun create chkit`, and `yarn create chkit` all run that program.
+**create-chkit** scaffolds a new **chkit** project from an example. The npm package name is **create-chkit**, and the program it installs is **create-chkit**. **npm create chkit**, **pnpm create chkit**, **bun create chkit**, and **yarn create chkit** all run that program.
 
-The directory argument is the target. Omit it and the tool asks. **--example** is an example name (`hello`, `clickbench`) or a full GitHub URL. Omit it and the prompt lists the bundled examples with **hello** preselected. **hello** is two small tables and one migration, with no dataset load. **clickbench** is the ClickBench schema and a dataset load.
+The directory argument is the target. Omit it and the tool asks. **--example** is an example name (**hello**, **clickbench**) or a full GitHub URL. Omit it and the prompt lists the bundled examples with **hello** preselected. **hello** is two small tables and one migration, with no dataset load. **clickbench** is the ClickBench schema and a dataset load.
 
 **--package-manager** forces npm, pnpm, Yarn, or Bun. When it is omitted, the invoking package manager is detected. **--skip-install** leaves dependencies uninstalled. **--skip-onboarding** skips the database connection prompt. **--connect** preselects that prompt: **claim**, **account**, **clickhouse**, or **later**. **--email** and **--code** fill the claim flow so it does not ask. **--org-name** overrides the organization name created for a claim.
 
@@ -43,7 +43,7 @@ _directory_
 > Example name or full GitHub URL. Prompted when omitted, with **hello** preselected
 
 **-m**, **--package-manager** _pm_
-> `npm`, `pnpm`, `yarn`, or `bun`. Overrides auto-detection
+> **npm**, **pnpm**, **yarn**, or **bun**. Overrides auto-detection
 
 **--skip-install**
 > Do not install dependencies after scaffolding
@@ -71,11 +71,11 @@ _directory_
 
 # CAVEATS
 
-Passing extra flags through `npm create` needs `--` before them (`npm create chkit@latest my-app -- --example hello`). **--email** and **--code** are the claim flow's credentials; do not put a real code in a shell history you share. **--skip-install** leaves a project that will not run until dependencies are installed. The example list can grow; the prompt is the list for the version you invoked.
+Passing extra flags through **npm create** needs **--** before them (**npm create chkit@latest my-app -- --example hello**). **--email** and **--code** are the claim flow's credentials; do not put a real code in a shell history you share. **--skip-install** leaves a project that will not run until dependencies are installed. The example list can grow; the prompt is the list for the version you invoked.
 
 # HISTORY
 
-**create-chkit** is the scaffold package in **obsessiondb/chkit**, MIT-licensed, beside the **chkit** CLI. Package version lines in the repo are `0.2.0-beta` releases.
+**create-chkit** is the scaffold package in **obsessiondb/chkit**, MIT-licensed, beside the **chkit** CLI. Package version lines in the repo are **0.2.0-beta** releases.
 
 # SEE ALSO
 

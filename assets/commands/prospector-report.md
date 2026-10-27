@@ -36,7 +36,7 @@ With no file argument it reads stdin, so a pipe from **plimsolld** works. **-o**
 
 **-grants** points at the same grants file the daemon ran with. The report then embeds a paste-ready API-design prompt under each API-change finding, using the profile's declared routes. Agent-fixable findings are left alone: their fix is switching to a route that already exists, not adding an endpoint.
 
-Build from `cmd/prospector-report` (`go install github.com/plimsollmark/plimsoll/cmd/prospector-report@latest`).
+Build from **cmd/prospector-report** (**go install github.com/plimsollmark/plimsoll/cmd/prospector-report@latest**).
 
 # PARAMETERS
 
@@ -61,7 +61,7 @@ The page is only as complete as the audit lines it is given. **-grants** must be
 
 # HISTORY
 
-Part of **Plimsoll** (`plimsollmark/plimsoll`), Apache-2.0. The binary lives at `cmd/prospector-report`.
+Part of **Plimsoll** (**plimsollmark/plimsoll**), Apache-2.0. The binary lives at **cmd/prospector-report**.
 
 # SEE ALSO
 

@@ -18,13 +18,13 @@ Show **flags and defaults**
 
 # DESCRIPTION
 
-**sponsord** holds the owner key of one deCDN **PaymentPool**. It signs capped, expiring capabilities (`dcap1:` tokens) for trusted callers over a small HTTP API, and it keeps that pool funded from the treasury wallet. The process loads the keystore, checks that the key owns the pool, then serves until Ctrl-C or SIGTERM. A top-up already sent is allowed to finish before exit.
+**sponsord** holds the owner key of one deCDN **PaymentPool**. It signs capped, expiring capabilities (**dcap1:** tokens) for trusted callers over a small HTTP API, and it keeps that pool funded from the treasury wallet. The process loads the keystore, checks that the key owns the pool, then serves until Ctrl-C or SIGTERM. A top-up already sent is allowed to finish before exit.
 
-Every setting is a flag and an environment variable of the same name: uppercase, a **SPONSORD** prefix, hyphens written as underscores. A secret may be given as a value or as a file (`--api-token-file`, `--treasury-password-file`). **--rpc-url** is hidden from **--help** because the URL often carries an API key. Fatal errors are printed through a redacting formatter so that URL is not dumped on stderr.
+Every setting is a flag and an environment variable of the same name: uppercase, a **SPONSORD** prefix, hyphens written as underscores. A secret may be given as a value or as a file (**--api-token-file**, **--treasury-password-file**). **--rpc-url** is hidden from **--help** because the URL often carries an API key. Fatal errors are printed through a redacting formatter so that URL is not dumped on stderr.
 
-The pool itself is opened out of band with `decdn pool open`. Default listen address is **127.0.0.1:8090**. Default chain id is **421614** (Arbitrum Sepolia). The bearer must be at least **32 bytes**. A zero spending cap, TTL, or watch interval is refused.
+The pool itself is opened out of band with **decdn pool open**. Default listen address is **127.0.0.1:8090**. Default chain id is **421614** (Arbitrum Sepolia). The bearer must be at least **32 bytes**. A zero spending cap, TTL, or watch interval is refused.
 
-Signed Linux binaries are on the deCDN GitHub releases. A container image is published as `ghcr.io/decdn/sponsord`.
+Signed Linux binaries are on the deCDN GitHub releases. A container image is published as **ghcr.io/decdn/sponsord**.
 
 # PARAMETERS
 
@@ -75,11 +75,11 @@ Signed Linux binaries are on the deCDN GitHub releases. A container image is pub
 
 # CAVEATS
 
-The treasury key signs real top-ups. Fund that wallet only with what you are willing to spend. Default chain id is the Arbitrum Sepolia testnet, matching deCDN's public testnet. **--rpc-url** and the bearer are secrets: prefer the file forms and do not put them in a process listing. The daemon does not open the pool; `decdn pool open` does that first. A bind failure is avoided while a top-up is in flight, but a wrong pool id or a key that does not own the pool fails at startup.
+The treasury key signs real top-ups. Fund that wallet only with what you are willing to spend. Default chain id is the Arbitrum Sepolia testnet, matching deCDN's public testnet. **--rpc-url** and the bearer are secrets: prefer the file forms and do not put them in a process listing. The daemon does not open the pool; **decdn pool open** does that first. A bind failure is avoided while a top-up is in flight, but a wrong pool id or a key that does not own the pool fails at startup.
 
 # HISTORY
 
-**sponsord** is a crate in the **deCDN** repository (`decdn/decdn`), MIT or Apache-2.0. It is the operator-side companion of the **decdn** client and the **decdn-node** daemon.
+**sponsord** is a crate in the **deCDN** repository (**decdn/decdn**), MIT or Apache-2.0. It is the operator-side companion of the **decdn** client and the **decdn-node** daemon.
 
 # SEE ALSO
 

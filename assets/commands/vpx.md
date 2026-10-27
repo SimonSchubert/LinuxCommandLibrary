@@ -34,9 +34,9 @@ Pass a **Node.js** option before the script
 
 # DESCRIPTION
 
-**vpx** is the package-runner bin shipped with **vite-plus**, the same job as **vp dlx** when it downloads a package. The `vite-plus` package installs it as `vpx`. Inside a project, the copy that package managers put first on PATH for scripts does not hand off to a global CLI.
+**vpx** is the package-runner bin shipped with **vite-plus**, the same job as **vp dlx** when it downloads a package. The **vite-plus** package installs it as **vpx**. Inside a project, the copy that package managers put first on PATH for scripts does not hand off to a global CLI.
 
-A name that is installed as a project-local binary runs directly (`vpx eslint .`). A package, a `name@version`, **--package**, or **--shell-mode** runs through this package's `vp dlx`. A script path, or Node.js options followed by a script, runs in Node.js with the loader from this package. TypeScript files are scripts (`vpx ./scripts/seed.ts`).
+A name that is installed as a project-local binary runs directly (**vpx eslint .**). A package, a **name@version**, **--package**, or **--shell-mode** runs through this package's **vp dlx**. A script path, or Node.js options followed by a script, runs in Node.js with the loader from this package. TypeScript files are scripts (**vpx ./scripts/seed.ts**).
 
 Flags that **vpx** itself understands must come before the first positional argument. **--watch** before a script reruns it when a file it uses changes; it does not turn on Node.js's own watch mode. **--watch-path** is rejected. **--package** and **--shell-mode** cannot be combined with running a script. **--tsconfig** applies only to a script.
 
@@ -45,16 +45,16 @@ With nothing to run, **vpx** exits with an error and prints usage.
 # PARAMETERS
 
 **-p**, **--package** _pkg_
-> Package to place on PATH. Repeatable. Also `-p=name` and `--package=name`
+> Package to place on PATH. Repeatable. Also **-p=name** and **--package=name**
 
 **-c**, **--shell-mode**
 > Run the positional text as a shell command, as in the cowsay example
 
 **-s**, **--silent**
-> Quieter package execution. Forwarded to the `vp dlx` invocation
+> Quieter package execution. Forwarded to the **vp dlx** invocation
 
 **--tsconfig** _file_
-> TypeScript config for a script. Also `--tsconfig=file`. Not valid in package mode
+> TypeScript config for a script. Also **--tsconfig=file**. Not valid in package mode
 
 **--watch**
 > Before a script, rerun it when a file it uses changes
@@ -73,7 +73,7 @@ _script_
 
 # CAVEATS
 
-A leading option is never treated as a package name: it selects script mode, and a missing script is an error rather than a download. **--package** together with a script path fails. The project-local `vpx` never delegates to a different global `vpx`. Package execution goes through **vp dlx** from this same package.
+A leading option is never treated as a package name: it selects script mode, and a missing script is an error rather than a download. **--package** together with a script path fails. The project-local **vpx** never delegates to a different global **vpx**. Package execution goes through **vp dlx** from this same package.
 
 # HISTORY
 

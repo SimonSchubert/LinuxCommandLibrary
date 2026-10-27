@@ -22,19 +22,19 @@ Show **vp run** help
 
 # DESCRIPTION
 
-**vpr** is the **vp run** command as its own program. The `vite-plus` package installs it next to **vp**. Starting the process as `vpr` rewrites the argument list to `run` plus the same arguments, then enters the Vite+ CLI. **-C** is applied first, so `vpr -C dir task` changes directory and then runs the task.
+**vpr** is the **vp run** command as its own program. The **vite-plus** package installs it next to **vp**. Starting the process as **vpr** rewrites the argument list to **run** plus the same arguments, then enters the Vite+ CLI. **-C** is applied first, so **vpr -C dir task** changes directory and then runs the task.
 
-**vp run** executes `package.json` scripts and monorepo tasks with caching. Built-in **vp** commands such as **dev**, **test**, and **build** are not replaced by a script of the same name; **vpr** is how those scripts are run. A global Vite+ install that dispatches on the program name treats `vpr` the same way.
+**vp run** executes **package.json** scripts and monorepo tasks with caching. Built-in **vp** commands such as **dev**, **test**, and **build** are not replaced by a script of the same name; **vpr** is how those scripts are run. A global Vite+ install that dispatches on the program name treats **vpr** the same way.
 
-The binary ships in the `vite-plus` package. See **vp**(1) for install and for the rest of the toolchain.
+The binary ships in the **vite-plus** package. See **vp**(1) for install and for the rest of the toolchain.
 
 # PARAMETERS
 
 **-C** _dir_
-> Run as if started in _dir_. Accepted as `-C dir`, `-Cdir`, or `-C=dir`, and consumed before the `run` rewrite
+> Run as if started in _dir_. Accepted as **-C dir**, **-Cdir**, or **-C=dir**, and consumed before the **run** rewrite
 
 _task_
-> `package.json` script or configured monorepo task. Further arguments are passed through to **vp run**
+> **package.json** script or configured monorepo task. Further arguments are passed through to **vp run**
 
 **--help**
 > Help for the run command, rendered by the installed toolchain
@@ -45,7 +45,7 @@ _task_
 
 # HISTORY
 
-**vpr** is a bin entry of the **vite-plus** package from **voidzero-dev/vite-plus** (Vite+, VoidZero). The name is the program `vpr`; the command it runs is `run`.
+**vpr** is a bin entry of the **vite-plus** package from **voidzero-dev/vite-plus** (Vite+, VoidZero). The name is the program **vpr**; the command it runs is **run**.
 
 # INSTALL
 
