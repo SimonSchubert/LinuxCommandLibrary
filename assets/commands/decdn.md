@@ -206,7 +206,7 @@ deCDN is written in Rust. Its public testnet on Arbitrum Sepolia opened in Octob
 
 # SEE ALSO
 
-[decdn-node](/man/decdn-node)(8), [sponsord](/man/sponsord)(8)
+[decdn-node](/man/decdn-node)(8), [sponsord](/man/sponsord)(8), [sponsord-onramp](/man/sponsord-onramp)(8)
 
 # RESOURCES
 

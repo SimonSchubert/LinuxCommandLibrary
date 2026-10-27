@@ -1498,6 +1498,7 @@ crc32.md
 crda.md
 create-chkit.md
 create-image.md
+create-vite-plus.md
 create_ap.md
 createdb.md
 createrepo.md
@@ -7710,6 +7711,7 @@ spike.md
 split.md
 spnda.md
 sponge.md
+sponsord-onramp.md
 sponsord.md
 sport.md
 spotatui.md

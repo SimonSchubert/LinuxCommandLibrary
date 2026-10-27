@@ -184,7 +184,7 @@ On Alpine (musl), managed Node.js needs `libstdc++`. A missing prebuilt binary f
 
 # SEE ALSO
 
-[vpr](/man/vpr)(1), [vpx](/man/vpx)(1), [vp-env](/man/vp-env)(1), [vite](/man/vite)(1), [vitest](/man/vitest)(1), [npm](/man/npm)(1), [pnpm](/man/pnpm)(1), [node](/man/node)(1), [nvm](/man/nvm)(1), [uv](/man/uv)(1)
+[vpr](/man/vpr)(1), [vpx](/man/vpx)(1), [vp-env](/man/vp-env)(1), [create-vite-plus](/man/create-vite-plus)(1), [vite](/man/vite)(1), [vitest](/man/vitest)(1), [npm](/man/npm)(1), [pnpm](/man/pnpm)(1), [node](/man/node)(1), [nvm](/man/nvm)(1), [uv](/man/uv)(1)
 
 # RESOURCES
 

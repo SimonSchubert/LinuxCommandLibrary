@@ -152,7 +152,7 @@ A fatal error during startup is printed with the RPC URL redacted, because API k
 
 # SEE ALSO
 
-[decdn](/man/decdn)(1), [sponsord](/man/sponsord)(8)
+[decdn](/man/decdn)(1), [sponsord](/man/sponsord)(8), [sponsord-onramp](/man/sponsord-onramp)(8)
 
 # RESOURCES
 

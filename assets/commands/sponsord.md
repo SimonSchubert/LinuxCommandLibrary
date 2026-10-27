@@ -83,7 +83,7 @@ The treasury key signs real top-ups. Fund that wallet only with what you are wil
 
 # SEE ALSO
 
-[decdn](/man/decdn)(1), [decdn-node](/man/decdn-node)(8)
+[decdn](/man/decdn)(1), [decdn-node](/man/decdn-node)(8), [sponsord-onramp](/man/sponsord-onramp)(8)
 
 # RESOURCES
 
