@@ -192,7 +192,7 @@ NVIDIA published OpenShell in **March 2026** as an open-source runtime for runni
 
 # SEE ALSO
 
-[openshell-gateway](/man/openshell-gateway)(1), [openshell-prover](/man/openshell-prover)(1), [docker](/man/docker)(1), [podman](/man/podman)(1), [kubectl](/man/kubectl)(1), [ssh](/man/ssh)(1)
+[openshell-gateway](/man/openshell-gateway)(1), [openshell-prover](/man/openshell-prover)(1), [openshell-supervisor](/man/openshell-supervisor)(1), [docker](/man/docker)(1), [podman](/man/podman)(1), [kubectl](/man/kubectl)(1), [ssh](/man/ssh)(1)
 
 # RESOURCES
 

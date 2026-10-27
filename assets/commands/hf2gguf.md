@@ -55,7 +55,7 @@ The GGUF is unquantized bf16. Quantize it (llama.cpp's quantizer) before **gguf2
 
 # SEE ALSO
 
-[gguf2jns](/man/gguf2jns)(1), [hf2jns_mtp](/man/hf2jns_mtp)(1), [janas-get](/man/janas-get)(1), [huggingface-cli](/man/huggingface-cli)(1), [llama-cli](/man/llama-cli)(1)
+[gguf2jns](/man/gguf2jns)(1), [janas-nsm](/man/janas-nsm)(1), [hf2jns_mtp](/man/hf2jns_mtp)(1), [janas-get](/man/janas-get)(1), [huggingface-cli](/man/huggingface-cli)(1), [llama-cli](/man/llama-cli)(1)
 
 # RESOURCES
 

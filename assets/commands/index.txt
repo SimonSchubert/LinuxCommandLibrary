@@ -3842,6 +3842,7 @@ janas-git.md
 janas-github.md
 janas-maps.md
 janas-mcp.md
+janas-nsm.md
 janas-prices.md
 janas-quakes.md
 janas-server.md
@@ -5609,6 +5610,7 @@ openscad.md
 opensearch.md
 openshell-gateway.md
 openshell-prover.md
+openshell-supervisor.md
 openshell.md
 openshot-render.md
 openshot.md

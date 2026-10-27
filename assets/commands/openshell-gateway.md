@@ -182,7 +182,7 @@ NVIDIA published OpenShell in **March 2026**. The **0.1.x** line is the stable r
 
 # SEE ALSO
 
-[openshell](/man/openshell)(1), [openshell-prover](/man/openshell-prover)(1), [docker](/man/docker)(1), [podman](/man/podman)(1), [kubectl](/man/kubectl)(1), [systemctl](/man/systemctl)(1), [journalctl](/man/journalctl)(1), [sqlite3](/man/sqlite3)(1)
+[openshell](/man/openshell)(1), [openshell-prover](/man/openshell-prover)(1), [openshell-supervisor](/man/openshell-supervisor)(1), [docker](/man/docker)(1), [podman](/man/podman)(1), [kubectl](/man/kubectl)(1), [systemctl](/man/systemctl)(1), [journalctl](/man/journalctl)(1), [sqlite3](/man/sqlite3)(1)
 
 # RESOURCES
 
