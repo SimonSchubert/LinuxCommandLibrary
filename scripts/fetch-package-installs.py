@@ -134,6 +134,10 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     # vp: brew alias vp → vite-plus; AUR/nix "vp" are Virtual Pascal / erikg slideshow
     "vp": {"aur": "vite-plus", "brew": "vite-plus"},
     "vp-env": {"aur": "vite-plus", "brew": "vite-plus"},
+    # vpr/vpx: argv0 symlinks of the vite-plus binary (brew and AUR both link them).
+    # AUR "vpr" is Verilog-to-Routing (verilogtorouting.org), not Vite+.
+    "vpr": {"aur": "vite-plus", "brew": "vite-plus"},
+    "vpx": {"aur": "vite-plus", "brew": "vite-plus"},
     # fd: Debian/brew map "fd" → fdclone (file manager); real tool is sharkdp/fd
     "fd": {
         "apt": "fd-find",

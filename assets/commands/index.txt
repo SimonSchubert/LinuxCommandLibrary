@@ -1496,6 +1496,7 @@ crawl.md
 crawlie.md
 crc32.md
 crda.md
+create-chkit.md
 create-image.md
 create_ap.md
 createdb.md
@@ -6274,6 +6275,7 @@ plenv.md
 plesk.md
 plimsoll-attest.md
 plimsoll-clients.md
+plimsoll-specgen.md
 plimsolld.md
 plink.md
 plocate.md
@@ -6593,6 +6595,7 @@ promtool.md
 proselint.md
 prosody.md
 prosodyctl.md
+prospector-report.md
 protoc.md
 proton.md
 protontricks.md
@@ -7248,6 +7251,7 @@ runit.md
 runlevel.md
 runlim.md
 runnburn.md
+runner-watch.md
 runsv.md
 runsvchdir.md
 runsvdir.md
@@ -7658,6 +7662,7 @@ solc.md
 solcjs.md
 solidcraft-cli.md
 solo.md
+solvecraft-cli.md
 sonar-scanner.md
 sops.md
 sort.md
@@ -7701,6 +7706,7 @@ spike.md
 split.md
 spnda.md
 sponge.md
+sponsord.md
 sport.md
 spotatui.md
 spotdl.md
@@ -8785,6 +8791,8 @@ vp-env.md
 vp.md
 vpnc.md
 vpod.md
+vpr.md
+vpx.md
 vrms.md
 vsce.md
 vscli.md

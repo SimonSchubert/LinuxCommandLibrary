@@ -125,7 +125,7 @@ Project commands (**generate**, **migrate**, **status**, **drift**, **check**, *
 
 # SEE ALSO
 
-[goose](/man/goose)(1), [diesel](/man/diesel)(1), [prisma](/man/prisma)(1), [sqlx](/man/sqlx)(1)
+[create-chkit](/man/create-chkit)(1), [goose](/man/goose)(1), [diesel](/man/diesel)(1), [prisma](/man/prisma)(1), [sqlx](/man/sqlx)(1)
 
 # RESOURCES
 

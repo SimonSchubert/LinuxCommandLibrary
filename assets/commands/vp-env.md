@@ -163,7 +163,7 @@ On Alpine Linux, install `libstdc++` before using managed Node.js (unofficial mu
 
 # SEE ALSO
 
-[vp](/man/vp)(1), [nvm](/man/nvm)(1), [fnm](/man/fnm)(1), [volta](/man/volta)(1), [corepack](/man/corepack)(1), [node](/man/node)(1), [pnpm](/man/pnpm)(1)
+[vp](/man/vp)(1), [vpr](/man/vpr)(1), [vpx](/man/vpx)(1), [nvm](/man/nvm)(1), [fnm](/man/fnm)(1), [volta](/man/volta)(1), [corepack](/man/corepack)(1), [node](/man/node)(1), [pnpm](/man/pnpm)(1)
 
 # RESOURCES
 

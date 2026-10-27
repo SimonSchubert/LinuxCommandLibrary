@@ -134,7 +134,7 @@ This is the headless CLI, not the GUI. A failed timeline feature aborts **run** 
 
 # SEE ALSO
 
-[openscad](/man/openscad)(1), [freecad](/man/freecad)(1), [blender](/man/blender)(1), [meshlab](/man/meshlab)(1)
+[solvecraft-cli](/man/solvecraft-cli)(1), [openscad](/man/openscad)(1), [freecad](/man/freecad)(1), [blender](/man/blender)(1), [meshlab](/man/meshlab)(1)
 
 # RESOURCES
 
