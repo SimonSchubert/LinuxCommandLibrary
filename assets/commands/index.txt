@@ -2122,6 +2122,7 @@ ecryptfs.md
 ect.md
 ed.md
 eddy.md
+edgepad.md
 edgepaint.md
 edid-decode.md
 edit.md
@@ -2318,6 +2319,7 @@ false.md
 fancontrol.md
 far2l.md
 farge.md
+farol.md
 fasd.md
 fast.md
 fastapi.md
@@ -5040,6 +5042,7 @@ multitail.md
 mumble.md
 munpack.md
 mupdf.md
+musclememory.md
 musescore.md
 musikcube.md
 musl-gcc.md
@@ -5230,6 +5233,7 @@ ni.md
 nibble.md
 nice.md
 nicotine.md
+nietzschian.md
 nikto.md
 nim.md
 nimble.md
@@ -7553,6 +7557,7 @@ simutrans.md
 sinfo.md
 singular.md
 singularity.md
+sio.md
 sipcalc.md
 sirix-cli.md
 sirix-shell.md
@@ -7656,6 +7661,7 @@ solo.md
 sonar-scanner.md
 sops.md
 sort.md
+sos.md
 sot.md
 sou.md
 soundscope.md
@@ -8090,6 +8096,7 @@ telinit.md
 telnet.md
 tenere.md
 tere.md
+termcraft.md
 termdbms.md
 termdown.md
 termframe.md

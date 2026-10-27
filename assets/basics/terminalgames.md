@@ -548,6 +548,16 @@ Falling blocks; bastet cruelly always gives you the worst possible piece.
   [][][][]
 ```
 
+## termcraft
+Side-view block world you can play alone or host for other terminals.
+```[termcraft](/man/termcraft)```
+```
+   *
+ ######
+ #.@.#
+ ######
+```
+
 ## typespeed
 Type the words racing across the screen before they reach the other side.
 ```[typespeed](/man/typespeed)```

@@ -211,6 +211,13 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     # omnara: brew formula is archived Python CLI 1.7.0 (disabled 2026-09-15).
     # Current CLI is the Node.js npm package from omnara-ai/omnara.
     "omnara": {},
+    # sio: binary from level1techs/siomon. Package name is siomon (AUR + nixpkgs).
+    # No Debian archive package (PPA only). Do not bind a same-named sio package.
+    "sio": {"aur": "siomon", "nix": "siomon"},
+    # sos: command from sosreport/sos. Debian trixie package sos is arch:all
+    # (missed by Contents-amd64) and ships /usr/bin/sos. Fedora and AUR are sos.
+    # nixpkgs attribute is sosreport (bin/sos).
+    "sos": {"apt": "sos", "dnf": "sos", "aur": "sos", "nix": "sosreport"},
 }
 
 # Prefer these path prefixes when mapping binaries (order = priority).
