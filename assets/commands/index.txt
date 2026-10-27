@@ -3407,6 +3407,7 @@ hexpatch.md
 hexyl.md
 hey.md
 hf.md
+hf2gguf.md
 hf2jns_mtp.md
 hflow.md
 hg-add.md
@@ -5470,6 +5471,7 @@ nvm.md
 nvme.md
 nvrs.md
 nvtop.md
+nwc.md
 nwipe.md
 nx.md
 nxc-ftp.md

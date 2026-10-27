@@ -85,7 +85,7 @@ Converted models are large (from under 1 GB to about 48 GB for Qwen3-Next-80B). 
 
 # SEE ALSO
 
-[janas-chat](/man/janas-chat)(1), [janas-bench](/man/janas-bench)(1), [janas-server](/man/janas-server)(1), [gguf2jns](/man/gguf2jns)(1), [hf2jns_mtp](/man/hf2jns_mtp)(1), [jns_planes](/man/jns_planes)(1), [jns_neurons](/man/jns_neurons)(1), [jns_check](/man/jns_check)(1), [huggingface-cli](/man/huggingface-cli)(1), [curl](/man/curl)(1)
+[janas-chat](/man/janas-chat)(1), [janas-bench](/man/janas-bench)(1), [janas-server](/man/janas-server)(1), [gguf2jns](/man/gguf2jns)(1), [hf2gguf](/man/hf2gguf)(1), [hf2jns_mtp](/man/hf2jns_mtp)(1), [jns_planes](/man/jns_planes)(1), [jns_neurons](/man/jns_neurons)(1), [jns_check](/man/jns_check)(1), [huggingface-cli](/man/huggingface-cli)(1), [curl](/man/curl)(1)
 
 # RESOURCES
 

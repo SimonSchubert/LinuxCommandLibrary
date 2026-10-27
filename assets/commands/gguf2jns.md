@@ -44,7 +44,7 @@ Conversion needs room for both the GGUF and the **.jns** at once, about twice th
 
 # SEE ALSO
 
-[janas-get](/man/janas-get)(1), [hf2jns_mtp](/man/hf2jns_mtp)(1), [jns_planes](/man/jns_planes)(1), [jns_neurons](/man/jns_neurons)(1), [jns_check](/man/jns_check)(1), [janas-chat](/man/janas-chat)(1), [janas-bench](/man/janas-bench)(1), [huggingface-cli](/man/huggingface-cli)(1)
+[janas-get](/man/janas-get)(1), [hf2gguf](/man/hf2gguf)(1), [hf2jns_mtp](/man/hf2jns_mtp)(1), [jns_planes](/man/jns_planes)(1), [jns_neurons](/man/jns_neurons)(1), [jns_check](/man/jns_check)(1), [janas-chat](/man/janas-chat)(1), [janas-bench](/man/janas-bench)(1), [huggingface-cli](/man/huggingface-cli)(1)
 
 # RESOURCES
 

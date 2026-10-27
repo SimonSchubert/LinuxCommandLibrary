@@ -102,7 +102,7 @@ NetWasm is an independent .NET-for-WebAssembly compiler, CoreLib, runtime, and S
 
 # SEE ALSO
 
-[dotnet](/man/dotnet)(1), [dotnet-tool](/man/dotnet-tool)(1), [wasmtime](/man/wasmtime)(1), [jco](/man/jco)(1)
+[nwc](/man/nwc)(1), [dotnet](/man/dotnet)(1), [dotnet-tool](/man/dotnet-tool)(1), [wasmtime](/man/wasmtime)(1), [jco](/man/jco)(1)
 
 # RESOURCES
 

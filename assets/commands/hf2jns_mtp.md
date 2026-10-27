@@ -67,7 +67,7 @@ The stderr usage line omits the **hf:** form; it still works. Qwen3.5 and Qwen3.
 
 # SEE ALSO
 
-[gguf2jns](/man/gguf2jns)(1), [janas-get](/man/janas-get)(1), [jns_planes](/man/jns_planes)(1), [janas-chat](/man/janas-chat)(1), [janas-bench](/man/janas-bench)(1), [huggingface-cli](/man/huggingface-cli)(1)
+[gguf2jns](/man/gguf2jns)(1), [hf2gguf](/man/hf2gguf)(1), [janas-get](/man/janas-get)(1), [jns_planes](/man/jns_planes)(1), [janas-chat](/man/janas-chat)(1), [janas-bench](/man/janas-bench)(1), [huggingface-cli](/man/huggingface-cli)(1)
 
 # RESOURCES
 
