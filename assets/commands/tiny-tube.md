@@ -50,85 +50,85 @@ Originals are stored under **VIDEO_DIR** (default `videos`, relative to the work
 
 # CONFIGURATION
 
-```VIDEO_DIR```
+**VIDEO_DIR**
 > Directory for originals, HLS, posters, and the default database. Default `videos`. Relative paths use the working directory.
 
-```ADDR```
+**ADDR**
 > Full `host:port` listen address. When set, it overrides **HOST** and **PORT**. Must be a host and a port.
 
-```HOST```
+**HOST**
 > Bind host when **ADDR** is unset. Default `127.0.0.1`. Use `0.0.0.0` for IPv4 access from other machines.
 
-```PORT```
+**PORT**
 > TCP port when **ADDR** is unset. Default `8081`. Must be 1-65535. `8080` is accepted.
 
-```STORE```
+**STORE**
 > `sqlite` (default) or `fs`.
 
-```DB_PATH```
+**DB_PATH**
 > SQLite file. Default is `tiny-tube.db` inside **VIDEO_DIR**. Relative paths use the working directory.
 
-```ADMIN_USER```
+**ADMIN_USER**
 > Name of the first administrator, created only when no users exist. Default `admin`.
 
-```ADMIN_PASS```
+**ADMIN_PASS**
 > Password for that first account. Startup refuses an empty password or `changeme` while the user table is empty.
 
-```AUTH_MODE```
+**AUTH_MODE**
 > `local` (default), `ldap`, or `both`. In `both`, existing local accounts use their local password. Other names go to LDAP. LDAP does not take over a same-named local account.
 
-```COOKIE_SECURE```
+**COOKIE_SECURE**
 > `true` marks the session cookie Secure. Use that behind HTTPS. Default `false`.
 
-```FFMPEG_BIN```
+**FFMPEG_BIN**
 > FFmpeg executable. An explicit path that does not work prevents startup. When unset, FFmpeg is taken from `PATH` if present.
 
-```MAX_UPLOAD_BYTES```
+**MAX_UPLOAD_BYTES**
 > Maximum size of a whole multipart upload, including form fields. Default 2147483648 (2 GiB). Must be a positive integer.
 
-```TRANSCODE_WORKERS```
+**TRANSCODE_WORKERS**
 > Concurrent FFmpeg processes, from 1 to 16. Default 1.
 
-```AUTH_REQUESTS_PER_MINUTE```
+**AUTH_REQUESTS_PER_MINUTE**
 > Protected-route requests per source IP per minute, before authentication. Default 60. Range 1-3600. Extra requests get HTTP 429.
 
-```UPLOAD_TIMEOUT_SECONDS```
+**UPLOAD_TIMEOUT_SECONDS**
 > Deadline for an authenticated multipart upload. Default 1800. Range 1-86400.
 
-```TRANSCODE_TIMEOUT_SECONDS```
+**TRANSCODE_TIMEOUT_SECONDS**
 > Deadline for one HLS and poster job. Default 1800. Range 1-86400. An expired job is marked failed and the original is kept.
 
-```LDAP_ADDR```
+**LDAP_ADDR**
 > Directory URL. Default `ldap://localhost:389`. `ldaps://` is accepted.
 
-```LDAP_BASE_DN```
+**LDAP_BASE_DN**
 > Fallback search base and the default used in a direct bind. Default `dc=example,dc=com`.
 
-```LDAP_BIND_DN```
+**LDAP_BIND_DN**
 > Service account for a subtree search. When unset, users bind directly.
 
-```LDAP_BIND_PASSWORD```
+**LDAP_BIND_PASSWORD**
 > Password for that service account.
 
-```LDAP_SEARCH_BASES```
+**LDAP_SEARCH_BASES**
 > Semicolon-separated search bases. Setting this turns on subtree search.
 
-```LDAP_USER_FILTER```
+**LDAP_USER_FILTER**
 > Search filter. `%s` is the escaped username. Default `(uid=%s)`.
 
-```LDAP_USER_DN```
+**LDAP_USER_DN**
 > Direct-bind DN template. Default is `uid=%s` plus the base DN.
 
-```LDAP_ATTR_EMAIL```
+**LDAP_ATTR_EMAIL**
 > Directory attribute stored as the user's email. Default `mail`.
 
-```LDAP_ATTR_FIRST_NAME```
+**LDAP_ATTR_FIRST_NAME**
 > Directory attribute for the given name. Default `givenName`.
 
-```LDAP_ATTR_LAST_NAME```
+**LDAP_ATTR_LAST_NAME**
 > Directory attribute for the surname. Default `sn`.
 
-```LDAP_ALWAYS_UPDATE```
+**LDAP_ALWAYS_UPDATE**
 > When `true` (default), each LDAP login refreshes the local user record from the directory.
 
 # CAVEATS

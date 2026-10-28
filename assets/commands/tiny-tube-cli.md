@@ -89,13 +89,13 @@ The grouped form is `users` plus a subcommand. The same actions exist as flat co
 
 # CONFIGURATION
 
-```VIDEO_DIR```
+**VIDEO_DIR**
 > Video storage directory. Default `videos`, resolved to an absolute path. Relative paths use the working directory.
 
-```STORE```
+**STORE**
 > `sqlite` (default) or `fs`. Any other value is an error.
 
-```DB_PATH```
+**DB_PATH**
 > SQLite file when **STORE** is `sqlite`. Default is `tiny-tube.db` inside **VIDEO_DIR**.
 
 A `.env` file in the working directory fills variables that are not already set. Values already in the environment are left as they are. The file may quote values. It does not expand variables.
