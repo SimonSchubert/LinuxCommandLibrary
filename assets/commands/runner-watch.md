@@ -95,7 +95,7 @@ The binary is the **runner-watch** crate in the preloop workspace. From a checko
 
 # SEE ALSO
 
-[preloop](/man/preloop)(1), [preloop-runner](/man/preloop-runner)(1), [gh](/man/gh)(1), [git](/man/git)(1), [act](/man/act)(1)
+[preloop](/man/preloop)(1), [preloop-server](/man/preloop-server)(1), [preloop-runner](/man/preloop-runner)(1), [gh](/man/gh)(1), [git](/man/git)(1), [act](/man/act)(1)
 
 # RESOURCES
 

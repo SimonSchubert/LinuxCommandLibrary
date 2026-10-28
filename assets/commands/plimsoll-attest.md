@@ -76,7 +76,7 @@ Part of **Plimsoll** (`plimsollmark/plimsoll`), Apache-2.0. The binary lives at 
 
 # SEE ALSO
 
-[plimsolld](/man/plimsolld)(1), [plimsoll-clients](/man/plimsoll-clients)(1), [plimsoll-specgen](/man/plimsoll-specgen)(1), [prospector-report](/man/prospector-report)(1), [go](/man/go)(1)
+[plimsolld](/man/plimsolld)(1), [plimsoll-mcp](/man/plimsoll-mcp)(1), [plimsoll-clients](/man/plimsoll-clients)(1), [plimsoll-specgen](/man/plimsoll-specgen)(1), [prospector-report](/man/prospector-report)(1), [go](/man/go)(1)
 
 # RESOURCES
 

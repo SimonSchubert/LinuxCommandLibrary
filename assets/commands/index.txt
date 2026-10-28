@@ -6280,6 +6280,7 @@ plenv.md
 plesk.md
 plimsoll-attest.md
 plimsoll-clients.md
+plimsoll-mcp.md
 plimsoll-specgen.md
 plimsolld.md
 plink.md
@@ -6564,6 +6565,7 @@ preconv.md
 prefect.md
 prek.md
 preloop-runner.md
+preloop-server.md
 preloop.md
 prename.md
 presenterm.md

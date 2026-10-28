@@ -99,7 +99,7 @@ Install with `go install github.com/plimsollmark/plimsoll/cmd/plimsolld@latest`.
 
 # SEE ALSO
 
-[plimsoll-clients](/man/plimsoll-clients)(1), [plimsoll-attest](/man/plimsoll-attest)(1), [plimsoll-specgen](/man/plimsoll-specgen)(1), [prospector-report](/man/prospector-report)(1), [go](/man/go)(1), [docker](/man/docker)(1)
+[plimsoll-mcp](/man/plimsoll-mcp)(1), [plimsoll-clients](/man/plimsoll-clients)(1), [plimsoll-attest](/man/plimsoll-attest)(1), [plimsoll-specgen](/man/plimsoll-specgen)(1), [prospector-report](/man/prospector-report)(1), [go](/man/go)(1), [docker](/man/docker)(1)
 
 # RESOURCES
 

@@ -94,7 +94,7 @@ This binary is the runner, not the Preloop control plane. To run `.github/workfl
 
 # SEE ALSO
 
-[preloop](/man/preloop)(1), [runner-watch](/man/runner-watch)(1), [act](/man/act)(1), [gh](/man/gh)(1), [git](/man/git)(1)
+[preloop](/man/preloop)(1), [preloop-server](/man/preloop-server)(1), [runner-watch](/man/runner-watch)(1), [act](/man/act)(1), [gh](/man/gh)(1), [git](/man/git)(1)
 
 # RESOURCES
 
