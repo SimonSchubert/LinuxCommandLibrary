@@ -47,7 +47,7 @@ The same filter in its **short form**
 # PARAMETERS
 
 **-t** _filetype_, **--type** _filetype_
-> Keep entries of this type. Repeat the flag to include more than one type. Short forms may be joined to the letter (`-tf`, `-td`).
+> Keep entries of this type. Repeat the flag to include more than one type. Short forms may be joined to the letter (**-tf**, **-td**).
 
 **f**, **file**
 > Regular files
@@ -78,15 +78,15 @@ The same filter in its **short form**
 
 # DESCRIPTION
 
-**fd --type** (short **-t**) restricts a search with the **fd** file finder to one or more entry types. There is no separate `fd-type` binary. On Debian and Ubuntu the same program is often installed as **fdfind**, and the flag is the same: `fdfind -t f`.
+**fd --type** (short **-t**) restricts a search with the **fd** file finder to one or more entry types. There is no separate **fd-type** binary. On Debian and Ubuntu the same program is often installed as **fdfind**, and the flag is the same: **fdfind -t f**.
 
 Hidden entries and gitignore patterns stay out of the results unless you pass **--hidden** or **--no-ignore**. The search pattern is still a regex matched against the file name, not a glob, unless you pass **--glob**.
 
-Repeat the flag to combine types. `--type file --type symlink` prints regular files and symbolic links. **executable** works differently: `--type executable` implies regular files, so it does not also list directories that happen to be executable. **empty** matches empty files and empty directories until you add **file** or **directory** beside it.
+Repeat the flag to combine types. **--type file --type symlink** prints regular files and symbolic links. **executable** works differently: **--type executable** implies regular files, so it does not also list directories that happen to be executable. **empty** matches empty files and empty directories until you add **file** or **directory** beside it.
 
 # CAVEATS
 
-Type the flag on **fd** or **fdfind**. There is no `fd-type` command. **executable** implies **file**. **empty** covers both empty files and empty directories until you narrow it. A default search still skips hidden paths and does not follow symlinked directories, so device nodes, sockets, and pipes are easy to miss under `/dev` without **--hidden** and a path.
+Type the flag on **fd** or **fdfind**. There is no **fd-type** command. **executable** implies **file**. **empty** covers both empty files and empty directories until you narrow it. A default search still skips hidden paths and does not follow symlinked directories, so device nodes, sockets, and pipes are easy to miss under **/dev** without **--hidden** and a path.
 
 # INSTALL
 
