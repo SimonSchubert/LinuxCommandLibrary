@@ -94,7 +94,7 @@ The OpenShell Policy Prover landed in the NVIDIA OpenShell tree in **2026** as a
 
 # SEE ALSO
 
-[openshell](/man/openshell)(1), [openshell-gateway](/man/openshell-gateway)(1)
+[openshell](/man/openshell)(1), [openshell-gateway](/man/openshell-gateway)(1), [openshell-driver-vm](/man/openshell-driver-vm)(1)
 
 # RESOURCES
 

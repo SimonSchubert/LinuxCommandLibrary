@@ -5609,6 +5609,7 @@ openrgb.md
 opensc-tool.md
 openscad.md
 opensearch.md
+openshell-driver-vm.md
 openshell-gateway.md
 openshell-prover.md
 openshell-supervisor.md
