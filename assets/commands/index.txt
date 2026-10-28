@@ -8216,6 +8216,8 @@ timidity.md
 tinboard.md
 tinifier.md
 tint.md
+tiny-tube-cli.md
+tiny-tube.md
 tinygo.md
 tinyproxy.md
 tio.md
