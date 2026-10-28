@@ -40,13 +40,13 @@ Print a one-use **owner enrollment** code
 
 With no argument it speaks MCP on stdin and stdout. Diagnostics go to stderr so they do not mix with the protocol stream. It serves the MCP revision dated 2026-07-28 and the 2025 revisions (Go SDK 1.8.0). **--version** and **-version** print the server name (**plimsoll**) and version (**0.1.0** in the current source).
 
-The tools are **run_code** (Python or JavaScript, optional files, optional sandbox handle), **open_sandbox**, **close_sandbox**, **get_record**, and **server_info**. A sandbox handle is random and is not the daemon's session id. A failed program is a result that carries the exit code. A refusal before any code is sent is a tool error whose `ran` field is **no**. A call that may have run without a checked answer is **maybe** and must not be retried.
+The tools are **run_code** (Python or JavaScript, optional files, optional sandbox handle), **open_sandbox**, **close_sandbox**, **get_record**, and **server_info**. A sandbox handle is random and is not the daemon's session id. A failed program is a result that carries the exit code. A refusal before any code is sent is a tool error whose **ran** field is **no**. A call that may have run without a checked answer is **maybe** and must not be retried.
 
 **get_record** keeps the last **256** checked records in memory (at most **64 KiB** each, **16 MiB** in all) until the process exits. Signed receipts, when configured, are written beside that and are checked with **plimsoll-attest**.
 
 One argument selects an operator command instead of stdio. **status**, **disable**, **enable**, **enroll**, and **reset-owner** print one JSON object and give up after **7** seconds. **serve-http** and **enroll-http** bind a loopback HTTP listener for the optional single-owner remote mode.
 
-The module is **github.com/plimsollmark/plimsoll/clients/mcp** and needs **Go 1.26**. From a checkout of `clients/mcp`, `go build -o plimsoll-mcp ./cmd/plimsoll-mcp` produces the same binary. An npm launcher (`@plimsollmark/mcp`) exists for published releases; install that package and point the host at the installed path rather than `npx` from an untrusted project directory.
+The module is **github.com/plimsollmark/plimsoll/clients/mcp** and needs **Go 1.26**. From a checkout of **clients/mcp**, **go build -o plimsoll-mcp ./cmd/plimsoll-mcp** produces the same binary. An npm launcher (**@plimsollmark/mcp**) exists for published releases; install that package and point the host at the installed path rather than **npx** from an untrusted project directory.
 
 # COMMANDS
 
@@ -61,13 +61,13 @@ The module is **github.com/plimsollmark/plimsoll/clients/mcp** and needs **Go 1.
 
 # CONFIGURATION
 
-Stdio and **serve-http** read the daemon client from the environment. An empty value counts as unset. A value that is still a host placeholder (`${...}`) is an error. Cleartext HTTP is accepted only to loopback unless **PLIMSOLL_INSECURE_HTTP** is **1**.
+Stdio and **serve-http** read the daemon client from the environment. An empty value counts as unset. A value that is still a host placeholder (**${...}**) is an error. Cleartext HTTP is accepted only to loopback unless **PLIMSOLL_INSECURE_HTTP** is **1**.
 
 **PLIMSOLL_URL**
-> Required for stdio and **serve-http**. The **plimsolld** base URL, such as `http://127.0.0.1:8746`
+> Required for stdio and **serve-http**. The **plimsolld** base URL, such as **http://127.0.0.1:8746**
 
 **PLIMSOLL_TOKEN**
-> Caller token with the `code:run` scope. Omit only for an open development daemon. **serve-http** requires it
+> Caller token with the **code:run** scope. Omit only for an open development daemon. **serve-http** requires it
 
 **PLIMSOLL_MIN_ISOLATION**
 > Weakest tier a run accepts: **vm**, **kernel** (default), **container**, or **process**. **serve-http** allows only **kernel** or **vm**
@@ -119,7 +119,7 @@ Stdio and **serve-http** read the daemon client from the environment. An empty v
 
 # CAVEATS
 
-The isolation tier is the daemon's configuration and startup checks, not hardware attestation. A sandbox has no network, and no file comes back except as stdout and stderr. A **maybe** result is never retried. Receipt signing is not available on Windows. **serve-http** is stricter than stdio: kernel or VM floor, receipts, an authenticated caller, and no insecure daemon transport. Do not launch the published npm package with `npx` from a project directory you do not trust. Exit **2** is bad usage or configuration. Exit **1** is a failed command or a server error. On a signal the process cancels calls and closes sandboxes within **5** seconds; a host may kill it sooner, which is why the sandbox lifetime exists.
+The isolation tier is the daemon's configuration and startup checks, not hardware attestation. A sandbox has no network, and no file comes back except as stdout and stderr. A **maybe** result is never retried. Receipt signing is not available on Windows. **serve-http** is stricter than stdio: kernel or VM floor, receipts, an authenticated caller, and no insecure daemon transport. Do not launch the published npm package with **npx** from a project directory you do not trust. Exit **2** is bad usage or configuration. Exit **1** is a failed command or a server error. On a signal the process cancels calls and closes sandboxes within **5** seconds; a host may kill it sooner, which is why the sandbox lifetime exists.
 
 # HISTORY
 
