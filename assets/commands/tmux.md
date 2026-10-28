@@ -181,7 +181,7 @@ The default prefix **Ctrl-b** shadows the readline/emacs "back one character" bi
 
 # SEE ALSO
 
-[screen](/man/screen)(1), [zellij](/man/zellij)(1), [byobu](/man/byobu)(1), [dtach](/man/dtach)(1), [abduco](/man/abduco)(1), [tmuxinator](/man/tmuxinator)(1)
+[screen](/man/screen)(1), [zellij](/man/zellij)(1), [byobu](/man/byobu)(1), [dtach](/man/dtach)(1), [abduco](/man/abduco)(1), [tmuxinator](/man/tmuxinator)(1), [sesh](/man/sesh)(1)
 
 # RESOURCES
 

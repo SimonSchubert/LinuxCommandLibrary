@@ -82,7 +82,7 @@ This enables environment variables to be set in the current shell session, which
 
 # CAVEATS
 
-The application directly modifies the AWS credentials file (~/.aws/credentials. Users with complex or hand-maintained credential configurations should back up the file before first use. The tool is currently in beta and has not reached a stable 1.0 release. A TypeScript rewrite is available on the beta branch with an API-based architecture for plugin and scripting support.
+The application directly modifies the AWS credentials file (~/.aws/credentials. Users with complex or hand-maintained credential configurations should back up the file before first use. The tool is currently in beta and has not reached a stable 1.0 release. A TypeScript rewrite is available on the beta branch with an API-based architecture for plugin and scripting support. A different project, the tmux session manager **sesh**, installs a binary with the same command name.
 
 # HISTORY
 
@@ -90,4 +90,4 @@ The application directly modifies the AWS credentials file (~/.aws/credentials. 
 
 # SEE ALSO
 
-[aws-sso](/man/aws-sso)(1), [aws-vault](/man/aws-vault)(1), [aws-configure](/man/aws-configure)(1), [aws](/man/aws)(1)
+[aws-sso](/man/aws-sso)(1), [aws-vault](/man/aws-vault)(1), [aws-configure](/man/aws-configure)(1), [aws](/man/aws)(1), [sesh](/man/sesh)(1)

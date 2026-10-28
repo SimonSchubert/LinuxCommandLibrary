@@ -148,6 +148,13 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
         "brew": "fd",
         "nix": "fd",
     },
+    # sesh: joshmedeski/sesh (tmux). AUR name is sesh-bin (provides sesh).
+    # Not awsesh, which is also invoked as sesh. No distro package under "sesh".
+    "sesh": {
+        "aur": "sesh-bin",
+        "brew": "sesh",
+        "nix": "sesh",
+    },
     "babel": {"brew": "babel"},
     "air": {"aur": "air", "nix": "air"},  # not brew (R formatter)
     # kcc-c2e/kcc-c2p: Fedora "kcc" is Kanji Code Converter, not Kindle Comic Converter

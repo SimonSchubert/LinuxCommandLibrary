@@ -89,7 +89,7 @@ Uses regex patterns by default, not glob syntax. Ignores hidden and .gitignore f
 
 # SEE ALSO
 
-[fd](/man/fd)(1), [find](/man/find)(1), [ripgrep](/man/ripgrep)(1)
+[fd](/man/fd)(1), [fd-type](/man/fd-type)(1), [find](/man/find)(1), [ripgrep](/man/ripgrep)(1)
 
 # RESOURCES
 

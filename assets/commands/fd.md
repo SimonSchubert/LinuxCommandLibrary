@@ -108,4 +108,4 @@ fd was created by **David Peter** as a simpler, faster alternative to find. Writ
 
 # SEE ALSO
 
-[find](/man/find)(1), [rg](/man/rg)(1), [locate](/man/locate)(1)
+[fd-type](/man/fd-type)(1), [find](/man/find)(1), [rg](/man/rg)(1), [locate](/man/locate)(1)

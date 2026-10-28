@@ -120,4 +120,4 @@ Requires Ruby. Complex layouts need careful configuration. Some tmux versions ma
 
 # SEE ALSO
 
-[tmux](/man/tmux)(1), [screen](/man/screen)(1), [byobu](/man/byobu)(1)
+[tmux](/man/tmux)(1), [sesh](/man/sesh)(1), [screen](/man/screen)(1), [byobu](/man/byobu)(1)

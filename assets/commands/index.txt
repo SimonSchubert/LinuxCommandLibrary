@@ -2348,6 +2348,7 @@ fcitx.md
 fcitx5.md
 fclones.md
 fcrackzip.md
+fd-type.md
 fd.md
 fdfind.md
 fdisk.md
@@ -7460,6 +7461,7 @@ serverless.md
 service.md
 servitor.md
 sesearch.md
+sesh.md
 sestatus.md
 set.md
 setarch.md
