@@ -238,7 +238,7 @@ General UDP is unsupported. DNS stays on the supervisor-mediated path.
 
 # SEE ALSO
 
-[openshell](/man/openshell)(1), [openshell-gateway](/man/openshell-gateway)(1), [openshell-supervisor](/man/openshell-supervisor)(1), [openshell-driver-docker](/man/openshell-driver-docker)(1), [openshell-driver-kubernetes](/man/openshell-driver-kubernetes)(1), [openshell-driver-vm](/man/openshell-driver-vm)(1), [podman](/man/podman)(1)
+[openshell](/man/openshell)(1), [openshell-gateway](/man/openshell-gateway)(1), [openshell-supervisor](/man/openshell-supervisor)(1), [openshell-sandbox](/man/openshell-sandbox)(1), [openshell-driver-docker](/man/openshell-driver-docker)(1), [openshell-driver-kubernetes](/man/openshell-driver-kubernetes)(1), [openshell-driver-vm](/man/openshell-driver-vm)(1), [podman](/man/podman)(1)
 
 # RESOURCES
 

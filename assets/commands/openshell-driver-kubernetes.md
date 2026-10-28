@@ -271,7 +271,7 @@ The client is the default Kubernetes client (in-cluster configuration or the loc
 
 # SEE ALSO
 
-[openshell](/man/openshell)(1), [openshell-gateway](/man/openshell-gateway)(1), [openshell-supervisor](/man/openshell-supervisor)(1), [openshell-driver-docker](/man/openshell-driver-docker)(1), [openshell-driver-podman](/man/openshell-driver-podman)(1), [openshell-driver-kubernetes-secrets](/man/openshell-driver-kubernetes-secrets)(1), [openshell-driver-vm](/man/openshell-driver-vm)(1), [kubectl](/man/kubectl)(1)
+[openshell](/man/openshell)(1), [openshell-gateway](/man/openshell-gateway)(1), [openshell-supervisor](/man/openshell-supervisor)(1), [openshell-sandbox](/man/openshell-sandbox)(1), [openshell-driver-docker](/man/openshell-driver-docker)(1), [openshell-driver-podman](/man/openshell-driver-podman)(1), [openshell-driver-kubernetes-secrets](/man/openshell-driver-kubernetes-secrets)(1), [openshell-driver-vm](/man/openshell-driver-vm)(1), [kubectl](/man/kubectl)(1)
 
 # RESOURCES
 

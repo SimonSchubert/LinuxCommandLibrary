@@ -5617,6 +5617,7 @@ openshell-driver-vault.md
 openshell-driver-vm.md
 openshell-gateway.md
 openshell-prover.md
+openshell-sandbox.md
 openshell-supervisor.md
 openshell.md
 openshot-render.md
