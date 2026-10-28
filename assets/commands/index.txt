@@ -5609,6 +5609,11 @@ openrgb.md
 opensc-tool.md
 openscad.md
 opensearch.md
+openshell-driver-docker.md
+openshell-driver-kubernetes-secrets.md
+openshell-driver-kubernetes.md
+openshell-driver-podman.md
+openshell-driver-vault.md
 openshell-driver-vm.md
 openshell-gateway.md
 openshell-prover.md

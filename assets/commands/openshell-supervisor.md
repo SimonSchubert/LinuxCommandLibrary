@@ -283,7 +283,7 @@ This binary is started by the gateway or the compute driver more often than by h
 
 # SEE ALSO
 
-[openshell](/man/openshell)(1), [openshell-gateway](/man/openshell-gateway)(1), [openshell-prover](/man/openshell-prover)(1), [openshell-driver-vm](/man/openshell-driver-vm)(1), [docker](/man/docker)(1), [podman](/man/podman)(1)
+[openshell](/man/openshell)(1), [openshell-gateway](/man/openshell-gateway)(1), [openshell-prover](/man/openshell-prover)(1), [openshell-driver-docker](/man/openshell-driver-docker)(1), [openshell-driver-podman](/man/openshell-driver-podman)(1), [openshell-driver-kubernetes](/man/openshell-driver-kubernetes)(1), [openshell-driver-vm](/man/openshell-driver-vm)(1), [docker](/man/docker)(1), [podman](/man/podman)(1)
 
 # RESOURCES
 
