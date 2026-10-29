@@ -128,7 +128,7 @@ Internal probe helpers (**capability-probe-launch**, **capability-socket-child**
 
 # SEE ALSO
 
-[openshell](/man/openshell)(1), [openshell-gateway](/man/openshell-gateway)(1), [openshell-supervisor](/man/openshell-supervisor)(1), [openshell-prover](/man/openshell-prover)(1), [openshell-driver-docker](/man/openshell-driver-docker)(1), [openshell-driver-podman](/man/openshell-driver-podman)(1), [openshell-driver-kubernetes](/man/openshell-driver-kubernetes)(1), [openshell-driver-vm](/man/openshell-driver-vm)(1)
+[openshell](/man/openshell)(1), [openshell-gateway](/man/openshell-gateway)(1), [openshell-supervisor](/man/openshell-supervisor)(1), [openshell-prover](/man/openshell-prover)(1), [openshell-seccomp-perf](/man/openshell-seccomp-perf)(1), [openshell-vm-init](/man/openshell-vm-init)(1), [openshell-driver-docker](/man/openshell-driver-docker)(1), [openshell-driver-podman](/man/openshell-driver-podman)(1), [openshell-driver-kubernetes](/man/openshell-driver-kubernetes)(1), [openshell-driver-vm](/man/openshell-driver-vm)(1)
 
 # RESOURCES
 

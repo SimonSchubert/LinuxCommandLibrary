@@ -5619,7 +5619,9 @@ openshell-driver-vm.md
 openshell-gateway.md
 openshell-prover.md
 openshell-sandbox.md
+openshell-seccomp-perf.md
 openshell-supervisor.md
+openshell-vm-init.md
 openshell.md
 openshot-render.md
 openshot.md
