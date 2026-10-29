@@ -164,11 +164,11 @@ Typed on the input line inside the screen.
 
 **uji** is a coding agent for the terminal, configured in Lua. Every view, tool, command, and key can be swapped at runtime, including the core. It is written in Rust with an embedded Lua runtime. The binary name is **uji** (`[[bin]]` in `crates/uji`).
 
-Start it in the directory you want to work on. The first run asks you to sign in to a provider. Anthropic and OpenAI offer a browser subscription or an API key; OpenAI also offers a device-code subscription. Other providers ask for a key (or the environment variable they already read, such as the Anthropic API key). A Custom provider asks for a `base_url` and model of a server that takes OpenAI chat requests.
+Start it in the directory you want to work on. The first run asks you to sign in to a provider. Anthropic and OpenAI offer a browser subscription or an API key; OpenAI also offers a device-code subscription. Other providers ask for a key (or the environment variable they already read, such as the Anthropic API key). A Custom provider asks for a base URL and model of a server that takes OpenAI chat requests.
 
 On the screen, Enter sends a message. Shift+Enter, Alt+Enter, or Ctrl+J start a new line. Esc clears the input, or stops the turn on an empty line. A line that starts with `!` runs in your shell in the session's directory; the model does not see it. When a tool call needs approval, `y` lets it run; `n` or Esc refuses it.
 
-Built-in tools are `read_file`, `edit_file`, `write_file`, `run_command`, `ask_user`, `job_output`, and `stop_job`. `reload_config` is available when uji runs in its config directory. Packs add more; `uji.pack.add` installs a directory or git repository with its own `lua/` and `plugin/` trees, and `/sync` updates them.
+Built-in tools are read-file, edit-file, write-file, run-command, ask-user, job-output, and stop-job. reload-config is available when uji runs in its config directory. Packs add more; `uji.pack.add` installs a directory or git repository with its own `lua/` and `plugin/` trees, and `/sync` updates them.
 
 # CONFIGURATION
 
