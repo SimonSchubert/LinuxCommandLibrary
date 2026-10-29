@@ -95,7 +95,7 @@ The pip script is not the Rust binary; without a compiled **yana-rt** it exits *
 
 # SEE ALSO
 
-[yana-rt](/man/yana-rt)(1), [yana-ai](/man/yana-ai)(1), [ollama](/man/ollama)(1), [aichat](/man/aichat)(1), [claude](/man/claude)(1), [codex](/man/codex)(1), [cargo](/man/cargo)(1), [pip](/man/pip)(1)
+[yana-rt](/man/yana-rt)(1), [yana-ai](/man/yana-ai)(1), [trace-audit](/man/trace-audit)(1), [ollama](/man/ollama)(1), [aichat](/man/aichat)(1), [claude](/man/claude)(1), [codex](/man/codex)(1), [cargo](/man/cargo)(1), [pip](/man/pip)(1)
 
 # RESOURCES
 

@@ -5099,6 +5099,7 @@ nanobot.md
 nanoclaw.md
 nanoeuler.md
 nanomuse-browser.md
+nanomuse-cloud.md
 nanomuse-device.md
 nanomuse-open.md
 nanomuse.md
@@ -8329,6 +8330,7 @@ tpp.md
 tput.md
 tqdm.md
 tr.md
+trace-audit.md
 trace-cmd-list.md
 trace-cmd-record.md
 trace-cmd-report.md

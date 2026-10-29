@@ -188,7 +188,7 @@ Yana AI was started on **17 May 2026** by **Vũ Văn Tâm** in Vietnam (Apache-2
 
 # SEE ALSO
 
-[yana-rt](/man/yana-rt)(1), [yana-ai-rt](/man/yana-ai-rt)(1), [claude](/man/claude)(1), [codex](/man/codex)(1), [aider](/man/aider)(1), [aichat](/man/aichat)(1), [ollama](/man/ollama)(1), [pip](/man/pip)(1), [cargo](/man/cargo)(1), [git](/man/git)(1)
+[yana-rt](/man/yana-rt)(1), [yana-ai-rt](/man/yana-ai-rt)(1), [trace-audit](/man/trace-audit)(1), [claude](/man/claude)(1), [codex](/man/codex)(1), [aider](/man/aider)(1), [aichat](/man/aichat)(1), [ollama](/man/ollama)(1), [pip](/man/pip)(1), [cargo](/man/cargo)(1), [git](/man/git)(1)
 
 # RESOURCES
 

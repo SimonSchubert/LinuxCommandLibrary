@@ -112,7 +112,7 @@ The request timeout is **600** seconds. This drives the in-app browser the user 
 
 # SEE ALSO
 
-[nanomuse](/man/nanomuse)(1), [nanomuse-device](/man/nanomuse-device)(1), [nanomuse-open](/man/nanomuse-open)(1), [python](/man/python)(1)
+[nanomuse](/man/nanomuse)(1), [nanomuse-cloud](/man/nanomuse-cloud)(1), [nanomuse-device](/man/nanomuse-device)(1), [nanomuse-open](/man/nanomuse-open)(1), [python](/man/python)(1)
 
 # RESOURCES
 

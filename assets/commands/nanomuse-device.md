@@ -72,7 +72,7 @@ The request timeout is **600** seconds. The token lasts for that agent command p
 
 # SEE ALSO
 
-[nanomuse](/man/nanomuse)(1), [nanomuse-browser](/man/nanomuse-browser)(1), [nanomuse-open](/man/nanomuse-open)(1), [python](/man/python)(1)
+[nanomuse](/man/nanomuse)(1), [nanomuse-cloud](/man/nanomuse-cloud)(1), [nanomuse-browser](/man/nanomuse-browser)(1), [nanomuse-open](/man/nanomuse-open)(1), [python](/man/python)(1)
 
 # RESOURCES
 

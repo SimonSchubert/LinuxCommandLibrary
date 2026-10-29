@@ -51,7 +51,7 @@ Outside an agent command, the program exits **2**. A bridge error exits **1**.
 
 # SEE ALSO
 
-[nanomuse](/man/nanomuse)(1), [nanomuse-browser](/man/nanomuse-browser)(1), [nanomuse-device](/man/nanomuse-device)(1), [python](/man/python)(1)
+[nanomuse](/man/nanomuse)(1), [nanomuse-cloud](/man/nanomuse-cloud)(1), [nanomuse-browser](/man/nanomuse-browser)(1), [nanomuse-device](/man/nanomuse-device)(1), [python](/man/python)(1)
 
 # RESOURCES
 
