@@ -1969,6 +1969,7 @@ dolt.md
 domainname.md
 done.md
 doom.md
+doomformer.md
 dopewars.md
 doppler-projects.md
 doppler-run.md
@@ -4289,6 +4290,7 @@ laptop-detect.md
 larasail.md
 laravel-zero.md
 laravel.md
+lasm.md
 last.md
 lastb.md
 lastcomm.md
@@ -6643,6 +6645,7 @@ ps2pdf.md
 ps2ps.md
 psalm.md
 pscp.md
+psd.md
 psgrep.md
 psidtopgm.md
 pspg.md
