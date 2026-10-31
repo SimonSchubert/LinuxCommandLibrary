@@ -5165,6 +5165,7 @@ neptune.md
 neqn.md
 nerdctl.md
 nerdlog.md
+nesformer.md
 nest.md
 net.md
 netcat.md
@@ -7729,6 +7730,7 @@ spi.md
 spicetify.md
 spiel.md
 spike.md
+spinf-serve.md
 split.md
 spnda.md
 sponge.md
