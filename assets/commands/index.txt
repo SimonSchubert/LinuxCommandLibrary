@@ -1116,6 +1116,7 @@ ccxt.md
 ccze.md
 cd.md
 cdecl.md
+cdemu.md
 cdk.md
 cdktf.md
 cdparanoia.md
@@ -4214,6 +4215,8 @@ ktx.md
 kube-capacity.md
 kube-fzf.md
 kube-linter.md
+kube32-cli.md
+kube32-sim.md
 kubeadm.md
 kubeaudit.md
 kubecolor.md
