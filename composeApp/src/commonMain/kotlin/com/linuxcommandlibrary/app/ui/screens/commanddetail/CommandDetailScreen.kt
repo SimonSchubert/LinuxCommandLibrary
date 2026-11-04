@@ -182,49 +182,53 @@ fun CommandDetailContent(
         }
     }
 
-    SelectionContainer {
-        WithScrollbar(
+    WithScrollbar(
+        state = listState,
+        modifier = Modifier
+            .background(MaterialTheme.colorScheme.background)
+            .fillMaxSize(),
+    ) {
+        LazyColumn(
             state = listState,
             modifier = Modifier
-                .background(MaterialTheme.colorScheme.background)
-                .fillMaxSize(),
+                .fillMaxSize()
+                .onGloballyPositioned { rootCoords = it },
         ) {
-            LazyColumn(
-                state = listState,
-                modifier = Modifier
-                    .fillMaxSize()
-                    .onGloballyPositioned { rootCoords = it },
-            ) {
-                itemsIndexed(
-                    items = uiState.sections,
-                    key = { index, _ -> index },
-                    contentType = { _, _ -> "command_section_item" },
-                ) { sectionIndex, section ->
-                    val highlights = remember(matchIndex, sectionIndex, activeMatch) {
-                        matchIndex.elementHighlightsFor(
-                            sectionIndex = sectionIndex,
-                            activeMatch = activeMatch,
-                            color = highlightColor,
-                            activeColor = activeHighlightColor,
-                            onActiveColor = onActiveHighlightColor,
+            itemsIndexed(
+                items = uiState.sections,
+                key = { index, _ -> index },
+                contentType = { _, _ -> "command_section_item" },
+            ) { sectionIndex, section ->
+                val highlights = remember(matchIndex, sectionIndex, activeMatch) {
+                    matchIndex.elementHighlightsFor(
+                        sectionIndex = sectionIndex,
+                        activeMatch = activeMatch,
+                        color = highlightColor,
+                        activeColor = activeHighlightColor,
+                        onActiveColor = onActiveHighlightColor,
+                    )
+                }
+                // Per-item container: one spanning the whole LazyColumn crashed in
+                // SelectionManager once selected items were recycled (Play vitals, v175).
+                SelectionContainer {
+                    Column {
+                        CommandSectionColumn(
+                            section = section,
+                            // While searching everything is forced open so no hit can hide inside a
+                            // collapsed section. The user's own expand state is left untouched
+                            // underneath and comes back when the query is cleared.
+                            isExpanded = isSearching || (uiState.expandedSectionsMap[section.id] ?: false),
+                            seeAlsoCommands = uiState.seeAlsoCommands,
+                            resources = uiState.resources,
+                            installEntries = uiState.installEntries,
+                            onToggleExpanded = onToggleExpanded,
+                            onNavigate = onNavigate,
+                            highlights = highlights,
+                            onElementPositioned = { elementIndex, coords ->
+                                elementCoords[ElementPosKey(sectionIndex, elementIndex)] = coords
+                            },
                         )
                     }
-                    CommandSectionColumn(
-                        section = section,
-                        // While searching everything is forced open so no hit can hide inside a
-                        // collapsed section. The user's own expand state is left untouched
-                        // underneath and comes back when the query is cleared.
-                        isExpanded = isSearching || (uiState.expandedSectionsMap[section.id] ?: false),
-                        seeAlsoCommands = uiState.seeAlsoCommands,
-                        resources = uiState.resources,
-                        installEntries = uiState.installEntries,
-                        onToggleExpanded = onToggleExpanded,
-                        onNavigate = onNavigate,
-                        highlights = highlights,
-                        onElementPositioned = { elementIndex, coords ->
-                            elementCoords[ElementPosKey(sectionIndex, elementIndex)] = coords
-                        },
-                    )
                 }
             }
         }

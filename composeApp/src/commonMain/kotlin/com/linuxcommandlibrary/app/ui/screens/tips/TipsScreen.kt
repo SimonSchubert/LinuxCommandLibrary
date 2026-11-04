@@ -39,24 +39,24 @@ fun TipsContent(
     onNavigate: (NavEvent) -> Unit,
 ) {
     val gridState = rememberLazyStaggeredGridState()
-    SelectionContainer {
-        WithScrollbar(
+    WithScrollbar(
+        state = gridState,
+        modifier = Modifier
+            .background(MaterialTheme.colorScheme.background)
+            .fillMaxSize(),
+    ) {
+        LazyVerticalStaggeredGrid(
             state = gridState,
-            modifier = Modifier
-                .background(MaterialTheme.colorScheme.background)
-                .fillMaxSize(),
+            modifier = Modifier.fillMaxSize(),
+            columns = StaggeredGridCells.Adaptive(minSize = 300.dp),
+            contentPadding = PaddingValues(horizontal = 4.dp, vertical = 4.dp),
         ) {
-            LazyVerticalStaggeredGrid(
-                state = gridState,
-                modifier = Modifier.fillMaxSize(),
-                columns = StaggeredGridCells.Adaptive(minSize = 300.dp),
-                contentPadding = PaddingValues(horizontal = 4.dp, vertical = 4.dp),
-            ) {
-                items(
-                    items = tips,
-                    key = { it.id },
-                    contentType = { "tip_item" },
-                ) { tip ->
+            items(
+                items = tips,
+                key = { it.id },
+                contentType = { "tip_item" },
+            ) { tip ->
+                SelectionContainer {
                     RichContentCard(
                         title = tip.title,
                         sections = tip.sections,

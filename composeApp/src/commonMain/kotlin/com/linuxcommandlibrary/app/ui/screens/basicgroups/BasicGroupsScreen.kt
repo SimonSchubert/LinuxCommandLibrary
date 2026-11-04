@@ -78,22 +78,22 @@ fun BasicGroupsContent(
     toggleCollapse: (Long) -> Unit,
     onNavigate: (NavEvent) -> Unit,
 ) {
-    SelectionContainer {
-        WithScrollbar(
+    WithScrollbar(
+        state = listState,
+        modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.background),
+    ) {
+        LazyColumn(
             state = listState,
-            modifier = Modifier
-                .fillMaxSize()
-                .background(MaterialTheme.colorScheme.background),
+            modifier = Modifier.fillMaxSize(),
         ) {
-            LazyColumn(
-                state = listState,
-                modifier = Modifier.fillMaxSize(),
-            ) {
-                items(
-                    items = uiState.basicGroups,
-                    key = { it.id },
-                    contentType = { "basic_group_item" },
-                ) { basicGroup ->
+            items(
+                items = uiState.basicGroups,
+                key = { it.id },
+                contentType = { "basic_group_item" },
+            ) { basicGroup ->
+                SelectionContainer {
                     BasicGroupColumn(
                         basicGroup = basicGroup,
                         categoryTitle = uiState.categoryTitle,

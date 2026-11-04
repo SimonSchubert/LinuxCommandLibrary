@@ -42,24 +42,24 @@ fun BasicEditorContent(
     onNavigate: (NavEvent) -> Unit,
 ) {
     val gridState = rememberLazyStaggeredGridState()
-    SelectionContainer {
-        WithScrollbar(
+    WithScrollbar(
+        state = gridState,
+        modifier = Modifier
+            .background(MaterialTheme.colorScheme.background)
+            .fillMaxSize(),
+    ) {
+        LazyVerticalStaggeredGrid(
             state = gridState,
-            modifier = Modifier
-                .background(MaterialTheme.colorScheme.background)
-                .fillMaxSize(),
+            modifier = Modifier.fillMaxSize(),
+            columns = StaggeredGridCells.Adaptive(minSize = 300.dp),
+            contentPadding = PaddingValues(horizontal = 4.dp, vertical = 4.dp),
         ) {
-            LazyVerticalStaggeredGrid(
-                state = gridState,
-                modifier = Modifier.fillMaxSize(),
-                columns = StaggeredGridCells.Adaptive(minSize = 300.dp),
-                contentPadding = PaddingValues(horizontal = 4.dp, vertical = 4.dp),
-            ) {
-                items(
-                    items = groups,
-                    key = { it.id },
-                    contentType = { "editor_group_item" },
-                ) { group ->
+            items(
+                items = groups,
+                key = { it.id },
+                contentType = { "editor_group_item" },
+            ) { group ->
+                SelectionContainer {
                     RichContentCard(
                         title = group.description,
                         sections = group.sections,
