@@ -36,13 +36,13 @@ _capability_
 > **clipboard**, **calendar**, **alarm**, **timer**, **contacts**, **location**, **notify**, **photo**, or **list**. **list** with no action prints one capability per line.
 
 _action_
-> **read**, **write**, **list**, **create**, **set**, **search**, **pick**, and similar. Omit it for **notify**, **location**, and **calendars**. If this word contains `=`, it is treated as a _key=value_ and there is no action.
+> **read**, **write**, **list**, **create**, **set**, **search**, **pick**, and similar. Omit it for **notify**, **location**, and **calendars**. If this word contains an equals sign, it is treated as a _key=value_ and there is no action.
 
 _key=value_
 > Arguments for that capability. A value that is JSON (a number, **true**, **false**, or an array) is parsed; anything else stays text. A hyphen in a name is normalized before the request.
 
 **--json**
-> Print the raw result object. Exit **0** when `ok` is true, **1** otherwise.
+> Print the raw result object. Exit **0** when **ok** is true, **1** otherwise.
 
 # DESCRIPTION
 
@@ -66,7 +66,7 @@ Outside that agent command the bridge variables are unset and the program exits 
 
 # CAVEATS
 
-This is not a standalone phone client. With no phone connected, **list** prints that and exits **1**. A missing or refused bridge (HTTP error, or the server not reachable) is an error result, exit **1**, unless **--json** is set, which still exits **1** when `ok` is false.
+This is not a standalone phone client. With no phone connected, **list** prints that and exits **1**. A missing or refused bridge (HTTP error, or the server not reachable) is an error result, exit **1**, unless **--json** is set, which still exits **1** when **ok** is false.
 
 The request timeout is **600** seconds. The token lasts for that agent command plus a short grace period, then the server forgets it.
 

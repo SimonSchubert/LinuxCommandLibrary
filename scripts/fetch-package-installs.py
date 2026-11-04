@@ -86,6 +86,10 @@ EXTRA_CANDIDATES: dict[str, list[str]] = {
     "tte": ["terminaltexteffects"],
     "vp": ["vite-plus"],
     "vp-env": ["vite-plus"],
+    # psd: binary name; distro package is profile-sync-daemon (Debian Contents misses /usr/bin/psd)
+    "psd": ["profile-sync-daemon"],
+    # cdemu: binary name; package is cdemu-client (Debian Contents misses arch:all /usr/bin/cdemu)
+    "cdemu": ["cdemu-client"],
 }
 
 # Full install maps that replace resolver output (known collisions / enrichments).
@@ -161,6 +165,26 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     "kcc-c2e": {"aur": "kcc", "nix": "kcc"},
     "kcc-c2p": {"aur": "kcc", "nix": "kcc"},
     "alembic": {"apk": "py3-alembic", "nix": "python3Packages.alembic"},
+    # psd: command is psd; package is profile-sync-daemon. Debian Contents-amd64
+    # omits /usr/bin/psd (arch:all); Fedora repodata snapshot also missed it.
+    # Verified: packages.debian.org filelist, Fedora pkgs page, Arch extra, openSUSE, nixpkgs.
+    "psd": {
+        "apt": "profile-sync-daemon",
+        "dnf": "profile-sync-daemon",
+        "pacman": "profile-sync-daemon",
+        "zypper": "profile-sync-daemon",
+        "nix": "profile-sync-daemon",
+    },
+    # cdemu: command is cdemu; package is cdemu-client. Debian Contents-amd64
+    # omits /usr/bin/cdemu (arch:all). Fedora default repos have no package
+    # (COPR rok/cdemu only). Verified: packages.debian.org, Arch extra,
+    # openSUSE, nixpkgs. No brew/apk hit.
+    "cdemu": {
+        "apt": "cdemu-client",
+        "pacman": "cdemu-client",
+        "zypper": "cdemu-client",
+        "nix": "cdemu-client",
+    },
     # backintime: CLI binary is in backintime-common on Debian/Fedora (arch:all, missed by Contents-amd64)
     "backintime": {
         "apt": "backintime-common",

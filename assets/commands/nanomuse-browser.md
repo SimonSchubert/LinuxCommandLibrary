@@ -93,20 +93,23 @@ POST a body, or switch the **profile**, then close
 nanomuse.bridge.cli:browser_main
 ```
 
-While **nanomuse serve** runs an agent command, this program posts one JSON request to `/api/bridge/browser` and prints the answer. The action name and its arguments are the JSON body. It uses only the Python standard library.
+While **nanomuse serve** runs an agent command, this program posts one JSON request to **/api/bridge/browser** and prints the answer. The action name and its arguments are the JSON body. It uses only the Python standard library.
 
 The bridge URL and token are supplied by the server for that command. The two variable names, which must both be set:
 
 ```
 NANOMUSE_BRIDGE
+```
+
+```
 NANOMUSE_BRIDGE_TOKEN
 ```
 
-A text success prints the `output` field. Image paths are printed as `[image]` lines. Errors go to stderr.
+A text success prints the **output** field. Image paths are printed as **[image]** lines. Errors go to stderr.
 
 # CAVEATS
 
-Outside an agent command from **nanomuse serve**, the bridge variables are unset and the program exits **2**. A bridge error exits **1**. **--json** prints the object either way and exits **1** when `ok` is false.
+Outside an agent command from **nanomuse serve**, the bridge variables are unset and the program exits **2**. A bridge error exits **1**. **--json** prints the object either way and exits **1** when **ok** is false.
 
 The request timeout is **600** seconds. This drives the in-app browser the user can see; it is not a separate Playwright process.
 

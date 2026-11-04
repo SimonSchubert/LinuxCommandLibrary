@@ -22,7 +22,7 @@ _url_
 > Page to open. This is the user's browser in the app (the phone's browser for the root filesystem), for something they have to do themselves.
 
 **--json**
-> Print the raw result object. Exit **0** when `ok` is true, **1** otherwise.
+> Print the raw result object. Exit **0** when **ok** is true, **1** otherwise.
 
 # DESCRIPTION
 
@@ -32,16 +32,19 @@ _url_
 nanomuse.bridge.cli:open_main
 ```
 
-While **nanomuse serve** runs an agent command, it posts `{"url": ...}` to `/api/bridge/open` and prints the answer. It uses only the Python standard library.
+While **nanomuse serve** runs an agent command, it posts a JSON object whose only field is the URL to **/api/bridge/open** and prints the answer. It uses only the Python standard library.
 
 The server sets the bridge URL and a one-call token for that command. Both must be present:
 
 ```
 NANOMUSE_BRIDGE
+```
+
+```
 NANOMUSE_BRIDGE_TOKEN
 ```
 
-The request is sent with header `X-Nanomuse-Bridge` and a **600** second timeout. A text success prints the `output` field.
+The request is sent with header **X-Nanomuse-Bridge** and a **600** second timeout. A text success prints the **output** field.
 
 # CAVEATS
 

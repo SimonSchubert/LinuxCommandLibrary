@@ -101,7 +101,7 @@ Fold new ledger rows into daily **spend**
 
 # DESCRIPTION
 
-**treg-worker** is the server console script of the Treg registry (`treg.worker:main` in the **tools-registry** package). **treg** is the member-facing client. This binary is the scheduled maintainer: capacity, overflow routes, deferred-task settlement, hub checks, and the read models behind Arena, the catalog, showcase, spend, and the public site.
+**treg-worker** is the server console script of the Treg registry (**treg.worker:main** in the **tools-registry** package). **treg** is the member-facing client. This binary is the scheduled maintainer: capacity, overflow routes, deferred-task settlement, hub checks, and the read models behind Arena, the catalog, showcase, spend, and the public site.
 
 It expects the registry server's environment (database and platform keys) and is what upstream runs from cron. It is not part of the request path. Each analytics command is a bounded pass over the audit or ledger table; the web process reads only what these jobs published. A pass that stops on its time or row cap leaves a cursor for the next run.
 
