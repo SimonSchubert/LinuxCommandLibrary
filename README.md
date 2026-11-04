@@ -101,3 +101,5 @@ The source code is licensed under the Apache 2.0 license and the copyright of th
 ### Thanks to
 
 http://letsgokoyo.com - App Icon
+
+https://github.com/tldr-pages/tldr - Some command examples are adapted from tldr-pages, © tldr-pages contributors, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Changes were made.

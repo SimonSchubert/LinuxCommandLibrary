@@ -18,7 +18,6 @@ import kotlinx.html.HTMLTag
 import kotlinx.html.InputType
 import kotlinx.html.LINK
 import kotlinx.html.META
-import kotlinx.html.ScriptCrossorigin
 import kotlinx.html.UL
 import kotlinx.html.a
 import kotlinx.html.attributesMapOf
@@ -59,7 +58,6 @@ import kotlinx.html.unsafe
 import kotlinx.html.visit
 import org.json.JSONArray
 import org.json.JSONObject
-import org.json.JSONWriter
 import java.io.File
 import java.io.PrintStream
 import java.util.Locale
@@ -82,9 +80,6 @@ import kotlin.text.startsWith
 */
 
 data class Ad(val imageUrl: String, val url: String, val backgroundColor: String)
-
-val jsonString = File("products_dataset.json").readText()
-val products = JSONArray(jsonString)
 
 fun main(args: Array<String>) {
     val commandNames = args.map { it.trim() }.filter { it.isNotEmpty() }
@@ -111,6 +106,7 @@ fun main(args: Array<String>) {
         websiteBuilder.create404HtmlFile()
         websiteBuilder.createPrivacyPolicyHtmlFile(folder)
         websiteBuilder.createContactHtmlFile(folder)
+        websiteBuilder.createImpressumHtmlFile(folder)
         websiteBuilder.createTermsAndConditionsHtmlFile(folder)
 
         websiteBuilder.createSitemap(folder)
@@ -919,7 +915,7 @@ class WebsiteBuilder(
         stream.appendHTML().html {
             lang = "en"
             head {
-                commonMeta(adSense = false)
+                commonMeta()
                 val title = "Terms and Conditions | Linux Command Library"
                 uncommonMeta(
                     title = title,
@@ -955,6 +951,13 @@ class WebsiteBuilder(
                         a(href = "https://www.commandlinefu.com/") { +"commandlinefu.com" }
                         +"."
                     }
+                    p {
+                        +"Some command examples are adapted from "
+                        a(href = "https://github.com/tldr-pages/tldr") { +"tldr-pages" }
+                        +", © tldr-pages contributors, licensed under "
+                        a(href = "https://creativecommons.org/licenses/by/4.0/") { +"CC BY 4.0" }
+                        +". Changes were made."
+                    }
                 }
 
                 footer(showAd = false)
@@ -977,7 +980,7 @@ class WebsiteBuilder(
         stream.appendHTML().html {
             lang = "en"
             head {
-                commonMeta(adSense = false)
+                commonMeta()
                 val title = "Privacy Policy | Linux Command Library"
                 uncommonMeta(
                     title = title,
@@ -996,33 +999,31 @@ class WebsiteBuilder(
                     id = "content"
 
                     h1 { +"Privacy Policy" }
-                    p { +"Last Updated: April 19, 2025" }
+                    p { +"Last Updated: November 4, 2026" }
 
                     h2 { +"1. No Data Collection or Tracking" }
-                    p { +"Our website does not use cookies, web beacons, or any other tracking technologies to collect personal information about your browsing activities." }
+                    p { +"Our website does not use cookies, web beacons, analytics, advertising or any other tracking technologies." }
                     p { +"We do not collect any personal data from users. There are no contact forms, email sign-ups, or other mechanisms that gather personal information on our website." }
 
-                    h2 { +"2. Future Use of Cookies (Google AdSense)" }
+                    h2 { +"2. GitHub Sponsor Avatars" }
                     p {
-                        +"If our website is approved for Google AdSense, we may use cookies to serve personalized advertisements. These cookies would be managed by Google and are subject to "
-                        a(href = "https://policies.google.com/privacy") { +"Google’s Privacy Policy" }
-                        +". If this occurs, we will update this Privacy Policy to reflect the change and provide details on how cookies are used for advertising purposes."
+                        +"The footer shows the profile pictures of our GitHub Sponsors. These images are loaded directly from GitHub, so your browser connects to GitHub's servers and transmits your IP address to GitHub when you view a page. See "
+                        a(href = "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement") { +"GitHub's Privacy Statement" }
+                        +"."
                     }
-                    p { +"You will be able to manage your ad preferences through Google’s Ad Settings." }
 
                     h2 { +"3. Your Rights (GDPR Compliance)" }
                     p { +"For EU Users: If you are located in the European Union, you have the right to access, correct, or delete any personal data we may hold about you. Since we do not collect personal data through tracking or forms, no such data is stored." }
-                    p { +"Cookie Consent (Future): If we introduce cookies for advertising in the future, we will implement a cookie consent mechanism for EU users to ensure compliance with GDPR." }
 
-                    h2 { +"4.Language Detection for Amazon Links" }
-                    p { +"We use your browser's preferred language setting (for example de-DE, en-US, fr-FR) only in your browser to automatically show Amazon affiliate products and links from the most relevant Amazon store (such as Amazon.de for German users or Amazon.com for English users)." }
-                    p { +"This information is never collected, stored, sent to our servers, or logged. It is processed entirely on your device." }
+                    h2 { +"4. Contact Us" }
+                    p {
+                        +"If you have any questions or concerns about this Privacy Policy, you can contact us at "
+                        a(href = "mailto:info@linuxcommandlibrary.com") { +"info@linuxcommandlibrary.com" }
+                        +"."
+                    }
 
-                    h2 { +"5. Contact Us" }
-                    p { +"If you have any questions or concerns about this Privacy Policy, you can contact us at [your email address]." }
-
-                    h2 { +"6. Changes to This Policy" }
-                    p { +"We may update this Privacy Policy from time to time, especially if we introduce new features or services that affect data handling (e.g., Google AdSense). Any changes will be posted on this page with an updated 'Last Updated' date." }
+                    h2 { +"5. Changes to This Policy" }
+                    p { +"We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated 'Last Updated' date." }
                 }
 
                 footer(showAd = false)
@@ -1045,7 +1046,7 @@ class WebsiteBuilder(
         stream.appendHTML().html {
             lang = "en"
             head {
-                commonMeta(adSense = false)
+                commonMeta()
                 val title = "Contact | Linux Command Library"
                 uncommonMeta(
                     title = title,
@@ -1076,8 +1077,71 @@ class WebsiteBuilder(
                         +"For more information about our site, please review our "
                         a(href = "/privacy-policy") { +"Privacy Policy" }
                         +" and "
-                        a(href = "/terms-and-conditions") { +"Terms and Conditions" }
+                        a(href = "/terms-conditions") { +"Terms and Conditions" }
                         +"."
+                    }
+                }
+
+                footer(showAd = false)
+            }
+        }
+        stream.close()
+    }
+
+    fun createImpressumHtmlFile(folder: File) {
+        println("Create impressum html")
+
+        folder.mkdir()
+
+        val file = File(folder, "impressum.html")
+        file.delete()
+        val stream = PrintStream(file)
+
+        stream.appendLine("<!DOCTYPE html>")
+
+        stream.appendHTML().html {
+            lang = "de"
+            head {
+                commonMeta()
+                val title = "Impressum | Linux Command Library"
+                uncommonMeta(
+                    title = title,
+                    description = "Impressum / Legal notice of Linux Command Library",
+                    url = "https://linuxcommandlibrary.com/${file.nameWithoutExtension}",
+                    keywords = "",
+                )
+                meta(name = "robots", content = "noindex")
+
+                styleLink("/stylesheets/main.css?v=$cacheVersion")
+            }
+
+            body {
+                header(-1)
+
+                div {
+                    id = "content"
+
+                    h1 { +"Impressum" }
+                    p { +"Angaben gemäß § 5 DDG" }
+                    p {
+                        +"Simon Schubert"
+                        br
+                        +"Parkstr. 43"
+                        br
+                        +"13585 Berlin"
+                        br
+                        +"Deutschland"
+                    }
+
+                    h2 { +"Kontakt" }
+                    p {
+                        +"E-Mail: "
+                        a(href = "mailto:info@linuxcommandlibrary.com") { +"info@linuxcommandlibrary.com" }
+                    }
+
+                    h2 { +"Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV" }
+                    p {
+                        +"Simon Schubert, Anschrift wie oben"
                     }
                 }
 
@@ -1144,7 +1208,7 @@ class WebsiteBuilder(
         stream.appendHTML().html {
             lang = "en"
             head {
-                commonMeta(adSense = false)
+                commonMeta()
                 val title = "404 command not found | Linux Command Library"
                 uncommonMeta(
                     title = title,
@@ -1295,7 +1359,7 @@ class WebsiteBuilder(
         "<loc>https://linuxcommandlibrary.com/$urlPart</loc>" +
         "</url>"
 
-    private fun HEAD.commonMeta(adSense: Boolean = true) {
+    private fun HEAD.commonMeta() {
         meta(charset = "utf-8")
         meta(name = "viewport", content = "width=device-width, initial-scale=1")
         link(rel = "apple-touch-icon", sizes = "180x180", href = "/apple-touch-icon.png")
@@ -1304,14 +1368,6 @@ class WebsiteBuilder(
         link(rel = "manifest", href = "/site.webmanifest")
         meta(name = "msapplication-TileColor", content = "#da532c")
         meta(name = "theme-color", content = "#ffffff")
-        if (adSense) {
-            script {
-                src =
-                    "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3003920357099437"
-                async = true
-                crossorigin = ScriptCrossorigin.anonymous
-            }
-        }
     }
 
     private fun HEAD.uncommonMeta(
@@ -1387,37 +1443,10 @@ class WebsiteBuilder(
 //                div {
 //                    classes = setOf("side-panel")
 //                    style = "width: 200px"
-//
-//                    products("column")
 //                }
 //            }
         }
         return this
-    }
-
-    private fun FlowContent.products(direction: String) {
-        div {
-            classes = setOf("products-grid")
-            attributes["data-dir"] = direction
-            style = "display: flex; flex-direction: $direction; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; padding: 10px 0;"
-
-            div {
-                style = "width: 100%"
-                div {
-                    style = "width: 180px; padding: 12px 0 4px 0; border-bottom: 2px solid #e45151; margin-bottom: 8px; margin: auto"
-
-                    h2 {
-                        style = "margin: 0; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #ffffff; display: flex; align-items: center; gap: 6px;"
-                        +"> TERMINAL_GEAR"
-                    }
-
-                    p {
-                        style = "margin: 4px 0 0 0; font-size: 10px; color: #999; font-weight: 400; font-style: italic;"
-                        +"Curated for the Linux community"
-                    }
-                }
-            }
-        }
     }
 
     private fun FlowContent.footer(showAd: Boolean = true): FlowContent {
@@ -1451,7 +1480,6 @@ class WebsiteBuilder(
                         )
                     }
                 }
-                // products("row")
             }
         }
         footer {
@@ -1507,6 +1535,13 @@ class WebsiteBuilder(
                     rel = "noopener"
                     href = "/contact"
                     text("Contact")
+                }
+                text(" | ")
+                a {
+                    target = ATarget.self
+                    rel = "noopener"
+                    href = "/impressum"
+                    text("Impressum")
                 }
             }
             a("https://apps.apple.com/us/app/linux-command-library/id1219649976") {
@@ -1598,58 +1633,7 @@ class WebsiteBuilder(
 //                }
 //            }
         }
-        if (showAd) {
-            productsScript()
-        }
         return this
-    }
-
-    private fun FlowContent.productsScript() {
-        val grouped = mutableMapOf<String, MutableList<JSONObject>>()
-        for (i in 0 until products.length()) {
-            val obj = products.getJSONObject(i)
-            val country = obj.getString("country")
-            grouped.getOrPut(country) { mutableListOf() }.add(obj)
-        }
-        val jsData = buildString {
-            append("var P={")
-            grouped.entries.forEachIndexed { idx, (country, items) ->
-                if (idx > 0) append(",")
-                append(country)
-                append(":[")
-                items.forEachIndexed { jIdx, obj ->
-                    if (jIdx > 0) append(",")
-                    append("{t:")
-                    append(JSONWriter.valueToString(obj.getString("title")))
-                    append(",i:")
-                    append(JSONWriter.valueToString(obj.getString("imageUrl")))
-                    append(",p:")
-                    append(JSONWriter.valueToString(obj.getString("price")))
-                    append(",u:")
-                    append(JSONWriter.valueToString(obj.getString("redirectUrl")))
-                    append("}")
-                }
-                append("]")
-            }
-            append("};")
-        }
-        script {
-            unsafe {
-                raw(
-                    jsData +
-                        """
-function E(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-var l=(navigator.language||'').toLowerCase();
-var c=l.startsWith('de')?'de':l.startsWith('fr')?'fr':'us';
-var items=P[c]||P['us'];
-for(var i=items.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var tmp=items[i];items[i]=items[j];items[j]=tmp;}
-var sel=items.slice(0,3);
-var grids=document.querySelectorAll('.products-grid');
-for(var g=0;g<grids.length;g++){var h='';for(var k=0;k<sel.length;k++){var s=sel[k];h+='<a href="'+E(s.u)+'" target="_blank" rel="noopener noreferrer" style="display:flex;flex-direction:column;text-decoration:none;overflow:hidden;border-radius:10px;width:180px;background-color:#2a2a2a;border:1px solid #333;transition:transform 0.2s ease,border-color 0.2s ease;">'+'<img src="'+E(s.i)+'" alt="'+E(s.t)+'" style="width:180px;height:150px;display:block;object-fit:cover;border-bottom:1px solid #333;">'+'<div style="padding:10px;display:flex;flex-direction:column;gap:6px;">'+'<p style="margin:0;font-size:11px;font-weight:600;line-height:1.4;color:#eeeeee;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;height:30px;">'+E(s.t)+'</p>'+'<span style="font-size:14px;font-weight:800;color:#4ade80;">'+E(s.p)+'</span>'+'</div></a>';}grids[g].insertAdjacentHTML('beforeend',h);}
-""",
-                )
-            }
-        }
     }
 
     private fun FlowContent.tooltip(): FlowContent {

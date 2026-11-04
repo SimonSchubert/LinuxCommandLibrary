@@ -167,6 +167,8 @@ class MarkdownBuilder {
         stream.appendLine("### Thanks to")
         stream.appendLine()
         stream.appendLine("http://letsgokoyo.com - App Icon")
+        stream.appendLine()
+        stream.appendLine("https://github.com/tldr-pages/tldr - Some command examples are adapted from tldr-pages, © tldr-pages contributors, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Changes were made.")
 
         stream.close()
     }

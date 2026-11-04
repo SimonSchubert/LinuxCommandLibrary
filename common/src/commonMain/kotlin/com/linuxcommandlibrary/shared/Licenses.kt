@@ -46,6 +46,13 @@ object Licenses {
                     "Copyright or Licence.",
             ),
             LicenseEntry(
+                name = "tldr-pages",
+                license = "Creative Commons Attribution 4.0 (CC BY 4.0)",
+                copyright = "Copyright (c) tldr-pages contributors. Some command examples are " +
+                    "adapted from tldr-pages; changes were made.",
+                url = "https://github.com/tldr-pages/tldr",
+            ),
+            LicenseEntry(
                 name = "App icon",
                 license = "Designed by letsgokoyo",
                 url = "https://letsgokoyo.com",
