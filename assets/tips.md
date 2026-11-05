@@ -203,12 +203,12 @@ Permission types:
 
 Operators for the modification command are **+** (plus) and **-** (minus).
 
-## Set file permissions via binary references
+## Set file permissions via octal notation
 Example: Give the owner read and write permission, the group read permission and no permission to other.
 
 ```[chmod](/man/chmod) 640 test.txt```
 
-The first number represents the **owner** permissions, the second the **group** permissions, and the last number the permissions for all other users. The numbers are a binary representation of the **rwx** string.
+The first number represents the **owner** permissions, the second the **group** permissions, and the last number the permissions for all other users. Each octal digit is the sum of the enabled read (4), write (2), and execute (1) permission bits.
 
 | Permission | Value |
 |------------|--------|
