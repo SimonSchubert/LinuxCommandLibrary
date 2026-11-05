@@ -72,7 +72,7 @@ One-liners, AI tools, System information, System control, System Recovery, Users
 
 #### Tips
 
-Clear and reset the terminal, List of recent commands, Close a frozen window/application, Tab Completion, Temporary aliases, Permanent aliases, Chain commands, Command syntax, Cursor navigation, Redirection, Special characters in commands, View file permissions, Modify file permissions, Set file permissions via binary references, Running commands in the background, Scheduling tasks with cron
+Clear and reset the terminal, List of recent commands, Close a frozen window/application, Tab Completion, Temporary aliases, Permanent aliases, Chain commands, Command syntax, Cursor navigation, Redirection, Special characters in commands, View file permissions, Modify file permissions, Set file permissions via octal notation, Running commands in the background, Scheduling tasks with cron
 
 ### CI/CD
 

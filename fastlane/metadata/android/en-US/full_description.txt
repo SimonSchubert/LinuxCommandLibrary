@@ -48,6 +48,6 @@ The app currently has <b>9257</b> manual pages, <b>30</b> basic categories and a
 * Special characters in commands
 * View file permissions
 * Modify file permissions
-* Set file permissions via binary references
+* Set file permissions via octal notation
 * Running commands in the background
 * Scheduling tasks with cron
