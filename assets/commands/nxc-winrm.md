@@ -49,13 +49,13 @@ _TARGET_
 
 # DESCRIPTION
 
-**nxc winrm** is the NetExec WinRM module. Tests Windows Remote Management.
+**nxc winrm** is the NetExec WinRM module. It validates Windows Remote Management (WS-Management) credentials and executes commands on hosts where WinRM (ports 5985/5986) is enabled.
 
-The tool validates WinRM access and executes commands. Part of NetExec suite.
+It supports plaintext passwords, NT hash pass-the-hash authentication, and running either cmd (**-x**) or PowerShell (**-X**) commands. Part of the NetExec suite, the maintained successor to CrackMapExec.
 
 # CAVEATS
 
-Security tool. Authorized use only. Part of NetExec.
+Security tool. Only use against systems you have explicit written permission to test. Part of NetExec.
 
 # HISTORY
 
@@ -64,4 +64,12 @@ nxc winrm provides **WinRM penetration testing** capabilities within NetExec.
 # SEE ALSO
 
 [nxc](/man/nxc)(1), [evil-winrm](/man/evil-winrm)(1), [winrm](/man/winrm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Pennyw0rth/NetExec)```
+
+```[Documentation](https://www.netexec.wiki)```
+
+<!-- verified: 2026-11-07 -->
 

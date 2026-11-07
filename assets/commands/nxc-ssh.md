@@ -39,17 +39,33 @@ tests SSH credentials and executes commands
 > Execute command.
 
 **--port** _port_
-> SSH port.
+> SSH port (default: 22).
+
+**--continue-on-success**
+> Keep testing credentials after the first valid login (useful for spraying).
+
+**--sudo-check**
+> Check whether the account has sudo privileges.
 
 # DESCRIPTION
 
-**nxc ssh** tests SSH credentials and executes commands. Part of NetExec security testing framework. Supports password spraying and credential validation.
+**nxc ssh** tests SSH credentials and executes commands. Part of the NetExec security testing framework (the maintained successor to CrackMapExec). Supports password spraying and credential validation across a range of targets (CIDR, host list file, or single host).
+
+Usernames and passwords can be given inline or as files; combining a user list with a password list performs a spray. By default NetExec stops after the first success per host, so use **--continue-on-success** to enumerate every valid pair.
 
 # CAVEATS
 
-For authorized security assessments only. Requires proper authorization.
+For authorized security assessments only. Only use against systems you have explicit written permission to test.
 
 # SEE ALSO
 
 [nxc](/man/nxc)(1), [ssh](/man/ssh)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Pennyw0rth/NetExec)```
+
+```[Documentation](https://www.netexec.wiki)```
+
+<!-- verified: 2026-11-07 -->
 

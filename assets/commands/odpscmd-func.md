@@ -65,3 +65,9 @@ odpscmd func provides **UDF management** for MaxCompute Console.
 
 [odpscmd](/man/odpscmd)(1), [odpscmd-resource](/man/odpscmd-resource)(1)
 
+
+# RESOURCES
+
+```[Documentation](https://www.alibabacloud.com/help/en/maxcompute/)```
+
+<!-- verified: 2026-11-07 -->

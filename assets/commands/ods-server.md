@@ -1,61 +1,78 @@
 # TAGLINE
 
-openDNSSEC signer daemon
+openDNSSEC signer engine daemon
 
 # TLDR
 
-**Start ODS server**
+**Start the signer engine (normally done via ods-control)**
 
-```ods-server```
+```ods-control start```
 
-**Start on specific port**
+**Run the signer daemon in the foreground**
 
-```ods-server -p [port]```
+```ods-signerd -d```
 
-**Start with configuration**
+**Use an alternate configuration file**
 
-```ods-server -c [config.conf]```
+```ods-signerd -c [conf.xml]```
 
-**Run in foreground**
+**Run once then exit (debugging)**
 
-```ods-server -f```
+```ods-signerd -1```
+
+**Print the parsed configuration and exit**
+
+```ods-signerd -i```
 
 # SYNOPSIS
 
-**ods-server** [_options_]
+**ods-signerd** [_options_]
 
 # PARAMETERS
 
-**-p** _PORT_
-> Listen port.
+**-d**
+> Run in the foreground instead of daemonizing.
 
 **-c** _FILE_
-> Configuration file.
+> Read configuration from _FILE_ instead of the default conf.xml.
 
-**-f**
-> Run in foreground.
+**-1**
+> Run the engine a single time, then exit (debugging).
 
-**-d**
-> Debug mode.
+**-i**
+> Print the parsed configuration and exit (debugging).
 
-**--help**
+**-v**
+> Increase verbosity.
+
+**-V**
+> Print version and exit.
+
+**-h**
 > Display help information.
 
 # DESCRIPTION
 
-**ods-server** is the OpenDNSSEC signer daemon. Signs DNS zones with DNSSEC.
+The OpenDNSSEC Signer Engine daemon keeps DNS zones continuously signed with DNSSEC. The actual binary is **ods-signerd**; there is no separate "ods-server" program.
 
-The daemon handles zone signing operations. Part of OpenDNSSEC suite.
+It is rarely started directly. In normal operation it is launched and stopped through **ods-control** (which wraps `ods-signer start`/`stop`), and it takes signing instructions from the policies defined by the KASP and the Enforcer. Diagnostics are written to syslog.
 
 # CAVEATS
 
-Part of OpenDNSSEC. Requires proper configuration. Works with KASP policies.
+Part of OpenDNSSEC. Requires a valid conf.xml and a working HSM (or SoftHSM) configuration. Run the Enforcer (**ods-enforcer**) so keys and signing policy are available.
 
 # HISTORY
 
-ods-server was developed as part of **OpenDNSSEC** for automated DNSSEC signing.
+Developed as part of **OpenDNSSEC** for automated, policy-driven DNSSEC zone signing.
 
 # SEE ALSO
 
 [ods-control](/man/ods-control)(1), [ods-enforcer](/man/ods-enforcer)(1), [named](/man/named)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/opendnssec/opendnssec)```
+
+```[Homepage](https://www.opendnssec.org)```
+
+<!-- verified: 2026-11-07 -->

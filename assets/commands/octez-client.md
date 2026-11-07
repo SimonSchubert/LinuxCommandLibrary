@@ -42,27 +42,43 @@ tezos blockchain client
 **show address** _ALIAS_
 > Display address.
 
-**-A** _NODE_
-> Node address.
+**-A** _ADDR_
+> Node RPC host (default: localhost).
+
+**-P** _PORT_
+> Node RPC port (default: 8732).
+
+**-E** _URI_
+> Full node RPC endpoint URI (replaces -A/-P).
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**octez-client** is the Tezos blockchain client. Manages accounts and transactions.
+**octez-client** is the command-line client for the Tezos blockchain, part of the Octez implementation. It manages accounts (keys and aliases), queries chain state, transfers tez, and originates and calls smart contracts.
 
-The tool interacts with Tezos network. Supports smart contracts.
+The client talks to a Tezos node over its RPC interface, so a reachable node (local or remote, selected with **-E** or **-A**/**-P**) is required for most operations. Protocol-specific commands become available once the client connects to a node running that protocol.
 
 # CAVEATS
 
-Requires Tezos node connection. Transaction fees apply. Network dependent.
+Requires a Tezos node RPC connection. Transactions pay fees in tez and depend on network conditions. Use testnets before mainnet.
 
 # HISTORY
 
-octez-client is the **official Tezos client** for interacting with the blockchain.
+octez-client is the **official Tezos client** (formerly tezos-client) for interacting with the blockchain.
 
 # SEE ALSO
 
 [octez-node](/man/octez-node)(1), [octez-baker](/man/octez-baker)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/tezos/tezos)```
+
+```[Documentation](https://octez.tezos.com/docs/active/cli-commands.html)```
+
+```[Homepage](https://tezos.com)```
+
+<!-- verified: 2026-11-07 -->
 

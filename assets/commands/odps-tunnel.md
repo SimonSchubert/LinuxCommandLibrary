@@ -62,3 +62,9 @@ odps tunnel provides **high-speed data transfer** for Alibaba Cloud MaxCompute.
 
 [odps](/man/odps)(1), [odpscmd-tunnel](/man/odpscmd-tunnel)(1)
 
+
+# RESOURCES
+
+```[Documentation](https://www.alibabacloud.com/help/en/maxcompute/user-guide/faq-about-tunnel-commands)```
+
+<!-- verified: 2026-11-07 -->

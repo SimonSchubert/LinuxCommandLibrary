@@ -65,3 +65,9 @@ odps auth provides **authentication management** for Alibaba Cloud MaxCompute.
 
 [odps](/man/odps)(1), [odpscmd](/man/odpscmd)(1)
 
+
+# RESOURCES
+
+```[Documentation](https://www.alibabacloud.com/help/en/maxcompute/)```
+
+<!-- verified: 2026-11-07 -->
