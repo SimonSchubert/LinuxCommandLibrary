@@ -29,7 +29,7 @@ class FdroidInfoBuilder {
     fun buildFullDescription() {
         val file = File("fastlane/metadata/android/en-US/full_description.txt")
         val stream = PrintStream(file)
-        stream.appendLine("The app currently has <b>${MarkdownFileUtils.getCommandCount()}</b> manual pages, <b>${MarkdownFileUtils.getBasicCategories().size}</b> basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.")
+        stream.appendLine("The app currently has <b>${MarkdownFileUtils.getCommandCount()}</b> manual pages (manpages), <b>${MarkdownFileUtils.getBasicCategories().size}</b> basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.")
         stream.appendLine()
         stream.appendLine("<b>Categories</b>")
         stream.appendLine()

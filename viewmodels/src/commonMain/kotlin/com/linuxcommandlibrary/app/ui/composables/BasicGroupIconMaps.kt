@@ -249,6 +249,7 @@ internal val basicGroupIconsByCategory: Map<String, Map<String, AppIcon>> = mapO
         "Tags" to AppIcon.TAG,
         "Remotes" to AppIcon.CONNECTED,
         "Rewriting History" to AppIcon.HISTORY,
+        "Encrypting Secrets" to AppIcon.LOCK,
         "Getting Help" to AppIcon.INFO_SMALL,
     ),
     "SSH" to mapOf(

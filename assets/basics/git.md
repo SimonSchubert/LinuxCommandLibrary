@@ -106,6 +106,18 @@ A remote is a named URL of another copy of the repository; **origin** is the con
 
 Interactive rebase (**-i**) lets you reorder, squash, and reword commits. As with **reset**, never rebase commits that others may already have pulled.
 
+## Encrypting Secrets
+**git-crypt** encrypts chosen files on commit and decrypts them on checkout, so secrets can live in a public repository. Choose which files get encrypted with a line in **.gitattributes**.
+```[git-crypt](/man/git-crypt) init```
+```[echo](/man/echo) "[secrets/**] filter=git-crypt diff=git-crypt" >> .gitattributes```
+```[git-crypt](/man/git-crypt) add-gpg-user [user@example.com]```
+```[git-crypt](/man/git-crypt) status```
+
+Collaborators without a GPG key can unlock with an exported symmetric key file.
+```[git-crypt](/man/git-crypt) export-key [path/to/keyfile]```
+```[git-crypt](/man/git-crypt) unlock [path/to/keyfile]```
+```[git-crypt](/man/git-crypt) lock```
+
 ## Getting Help
 ```[git](/man/git) help [command]```
 ```[git](/man/git) help -g```

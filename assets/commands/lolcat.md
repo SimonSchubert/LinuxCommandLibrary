@@ -75,6 +75,8 @@ Commonly paired with ASCII art generators like **figlet** or **cowsay**, lolcat 
 
 # CAVEATS
 
+Several unrelated programs ship under the name **lolcat**. Debian, Ubuntu, Arch, Homebrew and Nix package the original Ruby version documented here, while Fedora packages a C reimplementation with a different, smaller option set that has no **-a** animation mode. Run **lolcat --help** to see which one is installed.
+
 Requires a terminal that supports ANSI color codes. Animation mode can be CPU-intensive on large files. Color output may not display correctly when piped to commands that don't preserve ANSI codes (use **-f** flag and ensure the receiving program supports raw control characters).
 
 # HISTORY

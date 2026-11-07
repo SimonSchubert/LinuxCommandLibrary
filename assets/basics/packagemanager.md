@@ -12,6 +12,7 @@ Every distribution family ships its own package manager. Find yours in the table
 | **emerge** | Gentoo |
 | **apk** | Alpine |
 | **pkg** | FreeBSD, Termux |
+| **nix** | NixOS, works on any distribution |
 | **snap**, **flatpak** | Distribution-independent app formats |
 
 **apt** is the friendlier front end to **apt-get**/**apt-cache** and the better choice for interactive use. On Fedora, **dnf** replaced **yum**.
@@ -25,6 +26,7 @@ Every distribution family ships its own package manager. Find yours in the table
 ```[emerge](/man/emerge) -av [packageName]```
 ```[apk](/man/apk) add [packageName]```
 ```[pkg](/man/pkg) install [packageName]```
+```[nix](/man/nix) profile install nixpkgs#[packageName]```
 ```[snap](/man/snap) install [packageName]```
 ```[flatpak](/man/flatpak) install [remote] [packageName]```
 
@@ -48,6 +50,7 @@ Prefer **apt install ./package.deb** over **dpkg -i**: apt resolves and installs
 ```[emerge](/man/emerge) --depclean [packageName]```
 ```[apk](/man/apk) del [packageName]```
 ```[pkg](/man/pkg) delete [packageName]```
+```[nix](/man/nix) profile remove [packageName]```
 ```[snap](/man/snap) remove [packageName]```
 ```[flatpak](/man/flatpak) uninstall [packageName]```
 
@@ -57,6 +60,7 @@ Clean up dependencies that are no longer needed by anything.
 ```[apt](/man/apt) autoremove```
 ```[dnf](/man/dnf) autoremove```
 ```[pacman](/man/pacman) -Qdtq```
+```[nix-collect-garbage](/man/nix-collect-garbage) -d```
 
 ## Find a package
 ```[apt](/man/apt) search [query]```
@@ -68,6 +72,7 @@ Clean up dependencies that are no longer needed by anything.
 ```[emerge](/man/emerge) -S [query]```
 ```[apk](/man/apk) search [query]```
 ```[pkg](/man/pkg) search [query]```
+```[nix](/man/nix) search nixpkgs [query]```
 ```[snap](/man/snap) find [query]```
 ```[flatpak](/man/flatpak) search [query]```
 
@@ -93,6 +98,10 @@ Refresh the list of available packages and versions without installing anything.
 ```[emerge](/man/emerge) --sync```
 ```[apk](/man/apk) update```
 ```[pkg](/man/pkg) update```
+```[nix-channel](/man/nix-channel) --update```
+
+On Arch, **checkupdates** (from pacman-contrib) lists pending updates using a temporary copy of the database, so it never leaves the system half-synced like a bare **pacman -Sy** can.
+```[checkupdates](/man/checkupdates)```
 
 ## Upgrade installed packages
 ```[apt](/man/apt) upgrade```
@@ -105,6 +114,10 @@ Refresh the list of available packages and versions without installing anything.
 ```[pkg](/man/pkg) upgrade```
 ```[snap](/man/snap) refresh```
 ```[flatpak](/man/flatpak) update```
+```[nix](/man/nix) profile upgrade --all```
+
+On NixOS, system packages are declared in **/etc/nixos/configuration.nix**. **nixos-rebuild switch** applies that file, **--upgrade** also pulls the latest channel first.
+```[nixos-rebuild](/man/nixos-rebuild) switch --upgrade```
 
 **On Arch, always sync and upgrade together** with **pacman -Syu**. Refreshing the database with **-Sy** and then installing single packages can break the system (partial upgrade).
 
@@ -136,6 +149,7 @@ List the files a package installed.
 ```[apk](/man/apk) list --installed```
 ```[snap](/man/snap) list```
 ```[flatpak](/man/flatpak) list```
+```[nix](/man/nix) profile list```
 ```[pip](/man/pip) list```
 
 ## AUR Helpers
