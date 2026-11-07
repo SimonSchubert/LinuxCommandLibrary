@@ -3,12 +3,10 @@ package com.linuxcommandlibrary.app.ui.screens.basics
 import androidx.compose.animation.EnterTransition
 import androidx.compose.animation.ExitTransition
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
 import androidx.compose.material3.adaptive.ExperimentalMaterial3AdaptiveApi
 import androidx.compose.material3.adaptive.layout.AnimatedPane
 import androidx.compose.material3.adaptive.layout.ListDetailPaneScaffold
@@ -19,30 +17,22 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.snapshots.SnapshotStateList
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.linuxcommandlibrary.app.NavEvent
-import com.linuxcommandlibrary.app.data.BasicsRepository
 import com.linuxcommandlibrary.app.nav.TabStackEntry
 import com.linuxcommandlibrary.app.nav.TabStackEntryContent
 import com.linuxcommandlibrary.app.ui.composables.InlineSearchField
-import com.linuxcommandlibrary.app.ui.composables.PaneTopBar
 import com.linuxcommandlibrary.app.ui.composables.SearchOverlayBox
 import com.linuxcommandlibrary.app.ui.composables.SearchState
 import com.linuxcommandlibrary.app.ui.screens.basiccategories.BasicCategoriesScreen
 import com.linuxcommandlibrary.app.ui.screens.basiccategories.BasicCategoriesViewModel
-import com.linuxcommandlibrary.app.ui.screens.basicgroups.BasicEditorScreen
-import com.linuxcommandlibrary.app.ui.screens.basicgroups.BasicEditorViewModel
-import com.linuxcommandlibrary.app.ui.screens.basicgroups.BasicGroupsScreen
-import com.linuxcommandlibrary.app.ui.screens.basicgroups.BasicGroupsViewModel
+import com.linuxcommandlibrary.app.ui.screens.basicgroups.BasicCategoryDetail
+import com.linuxcommandlibrary.app.ui.screens.commands.EmptyDetailPlaceholder
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import org.koin.compose.currentKoinScope
 import org.koin.compose.koinInject
-import org.koin.core.parameter.parametersOf
 
 @OptIn(ExperimentalMaterial3AdaptiveApi::class)
 @Composable
@@ -61,7 +51,6 @@ internal fun BasicsPaneScreen(
     isExpanded: Boolean,
 ) {
     val categoriesViewModel: BasicCategoriesViewModel = koinInject()
-    val basicsRepository: BasicsRepository = koinInject()
 
     val categories by categoriesViewModel.basicCategories.collectAsState()
 
@@ -140,57 +129,20 @@ internal fun BasicsPaneScreen(
                 } else {
                     val navSelectedId = navigator.currentDestination?.contentKey
                     if (navSelectedId == null) {
-                        Box(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .background(MaterialTheme.colorScheme.surface),
-                            contentAlignment = Alignment.Center,
-                        ) {
-                            Text(
-                                text = "Select a category",
-                                style = MaterialTheme.typography.bodyLarge,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            )
-                        }
+                        EmptyDetailPlaceholder("Select a category")
                     } else {
-                        val koinScope = currentKoinScope()
-                        val usesCardLayout = basicsRepository.usesCardLayout(navSelectedId)
-                        val selectedTitle = categories.firstOrNull { it.id == navSelectedId }?.title.orEmpty()
-                        Column(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .background(MaterialTheme.colorScheme.surface),
-                        ) {
-                            PaneTopBar(
-                                title = selectedTitle,
-                                onBack = {
-                                    scope.launch {
-                                        navigator.navigateBack(BackNavigationBehavior.PopUntilContentChange)
-                                    }
-                                },
-                            )
-                            if (usesCardLayout) {
-                                val editorViewModel = remember(navSelectedId, koinScope) {
-                                    koinScope.get<BasicEditorViewModel> { parametersOf(navSelectedId) }
+                        BasicCategoryDetail(
+                            categoryId = navSelectedId,
+                            title = categories.firstOrNull { it.id == navSelectedId }?.title.orEmpty(),
+                            onBack = {
+                                scope.launch {
+                                    navigator.navigateBack(BackNavigationBehavior.PopUntilContentChange)
                                 }
-                                BasicEditorScreen(viewModel = editorViewModel, onNavigate = onNavigate)
-                                // Card-layout categories have no collapsible groups; drop the
-                                // pending id so it doesn't trigger on a later non-card visit.
-                                LaunchedEffect(pendingExpandGroupId, navSelectedId) {
-                                    if (pendingExpandGroupId != null) onExpandConsumed()
-                                }
-                            } else {
-                                val groupsViewModel = remember(navSelectedId, koinScope) {
-                                    koinScope.get<BasicGroupsViewModel> { parametersOf(navSelectedId) }
-                                }
-                                BasicGroupsScreen(
-                                    viewModel = groupsViewModel,
-                                    onNavigate = onNavigate,
-                                    focusGroupId = pendingExpandGroupId,
-                                    onFocusConsumed = onExpandConsumed,
-                                )
-                            }
-                        }
+                            },
+                            onNavigate = onNavigate,
+                            focusGroupId = pendingExpandGroupId,
+                            onFocusConsumed = onExpandConsumed,
+                        )
                     }
                 }
             }

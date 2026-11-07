@@ -27,9 +27,7 @@ struct BasicEditorView: View {
                         onTapMan: { name in
                             onManTap(name)
                             Haptics.selection()
-                        },
-                        onTapLink: store.tapLink,
-                        onTapUrl: store.tapUrl
+                        }
                     )
                 }
             }
@@ -46,8 +44,6 @@ private struct EditorCard: View {
     let group: BasicGroup_
     let showTitle: Bool
     let onTapMan: (String) -> Void
-    let onTapLink: (String) -> Void
-    let onTapUrl: (String) -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -57,9 +53,7 @@ private struct EditorCard: View {
             }
             MarkdownView(
                 elements: group.sections,
-                onTapMan: onTapMan,
-                onTapLink: onTapLink,
-                onTapUrl: onTapUrl
+                onTapMan: onTapMan
             )
         }
         .padding(12)
@@ -91,15 +85,5 @@ private final class BasicEditorStore: ObservableObject {
     deinit {
         task?.cancel()
         viewModel.cancel()
-    }
-
-    func tapLink(_: String) {
-        // No external app launch on iOS for "settings"/"terminal" — silently ignore
-    }
-
-    func tapUrl(_ url: String) {
-        if let target = URL(string: url) {
-            UIApplication.shared.open(target)
-        }
     }
 }

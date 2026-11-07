@@ -17,7 +17,7 @@
         <ignore path="**/ui/screens/**" />
     </issue>
 
-    <!-- Theme extras (nav/top bar colors) that Material3 ColorScheme does not cover. -->
+    <!-- Theme extras (nav bar colors) that Material3 ColorScheme does not cover. -->
     <issue id="ComposeCompositionLocalUsage">
         <option name="allowed-composition-locals" value="LocalCustomColors" />
     </issue>

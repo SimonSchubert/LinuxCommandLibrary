@@ -27,9 +27,6 @@ class SearchState(
     fun show() {
         isVisibleState.value = true
     }
-    fun hide() {
-        isVisibleState.value = false
-    }
     fun clear() {
         textFieldValue.value = TextFieldValue(text = "", selection = TextRange(0))
         isVisibleState.value = false

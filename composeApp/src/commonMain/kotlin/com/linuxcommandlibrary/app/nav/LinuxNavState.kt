@@ -144,7 +144,7 @@ internal class LinuxNavState(
         val key = currentKeyNow
         val stack = stackFor(key)
         if (stack.isNotEmpty()) {
-            stack.removeAt(stack.lastIndex)
+            popStack(key)
             val nav = navigatorFor(key)
             if (stack.isEmpty() &&
                 nav?.canNavigateBack(backBehavior) != true &&
@@ -200,27 +200,17 @@ internal fun rememberLinuxNavState(
     // render the final UI, which screenshot tooling depends on.
     val initialCommandName = (deeplinkResult.selection as? InitialSelection.Command)?.name
     val initialBasicId = (deeplinkResult.selection as? InitialSelection.Basics)?.id
+    fun initialHistory(detail: String?) = listOfNotNull(
+        ThreePaneScaffoldDestinationItem(ListDetailPaneScaffoldRole.List, null),
+        detail?.let { ThreePaneScaffoldDestinationItem(ListDetailPaneScaffoldRole.Detail, it) },
+    )
     val commandsNavigator = rememberListDetailPaneScaffoldNavigator(
         scaffoldDirective = listDetailDirective,
-        initialDestinationHistory = if (initialCommandName != null) {
-            listOf(
-                ThreePaneScaffoldDestinationItem(ListDetailPaneScaffoldRole.List, null),
-                ThreePaneScaffoldDestinationItem(ListDetailPaneScaffoldRole.Detail, initialCommandName),
-            )
-        } else {
-            listOf(ThreePaneScaffoldDestinationItem(ListDetailPaneScaffoldRole.List, null))
-        },
+        initialDestinationHistory = initialHistory(initialCommandName),
     )
     val basicsNavigator = rememberListDetailPaneScaffoldNavigator(
         scaffoldDirective = listDetailDirective,
-        initialDestinationHistory = if (initialBasicId != null) {
-            listOf(
-                ThreePaneScaffoldDestinationItem(ListDetailPaneScaffoldRole.List, null),
-                ThreePaneScaffoldDestinationItem(ListDetailPaneScaffoldRole.Detail, initialBasicId),
-            )
-        } else {
-            listOf(ThreePaneScaffoldDestinationItem(ListDetailPaneScaffoldRole.List, null))
-        },
+        initialDestinationHistory = initialHistory(initialBasicId),
     )
 
     val pendingCommand = rememberSaveable { mutableStateOf<String?>(null) }

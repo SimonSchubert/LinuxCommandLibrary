@@ -32,8 +32,6 @@ val ColorScheme.mutedBodyText: Color
 
 data class CustomColors(
     val navBarBackground: Color = Color(0xFF00695C),
-    val topBarBackground: Color = BrandRed,
-    val topBarContent: Color = Color.White,
 )
 
 val LocalCustomColors = compositionLocalOf { CustomColors() }

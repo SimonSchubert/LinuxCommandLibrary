@@ -1,5 +1,7 @@
 package com.linuxcommandlibrary.nativecli
 
+import com.linuxcommandlibrary.shared.TextElement
+
 /**
  * Converts a command section's markdown into CLI-friendly, terminal-styled text.
  *
@@ -15,6 +17,17 @@ package com.linuxcommandlibrary.nativecli
  * RESOURCES links are always clickable web links in both modes.
  */
 object ContentFormatter {
+
+    /** Already-parsed inline elements (basics, tips) as styled terminal text. */
+    fun renderTextElements(elements: List<TextElement>): String = elements.joinToString("") { element ->
+        when (element) {
+            is TextElement.Plain -> element.text
+            is TextElement.Bold -> Theme.boldText(element.text)
+            is TextElement.Italic -> Theme.italicText(element.text)
+            is TextElement.Man -> element.man
+            is TextElement.Link -> element.text
+        }
+    }
 
     private const val MAN_BASE_URL = "https://linuxcommandlibrary.com/man/"
 

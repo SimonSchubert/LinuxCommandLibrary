@@ -28,8 +28,10 @@ fun main() {
 
 class MarkdownBuilder {
     fun build() {
-        val file = File("README.md")
-        val stream = PrintStream(file)
+        PrintStream(File("README.md")).use { write(it) }
+    }
+
+    private fun write(stream: PrintStream) {
         stream.appendLine("## Linux Command Library (Android+iOS+Desktop GUI and CLI+Web)")
         stream.appendLine()
         stream.appendLine("![Icon](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandLibrary/master/art/web_hi_res_144.png)")
@@ -73,36 +75,20 @@ class MarkdownBuilder {
         stream.appendLine("```")
         stream.appendLine()
 
-        stream.appendLine("### Android screenshots")
-        stream.appendLine()
-        stream.appendLine("<p>")
-        val androidScreenshotFiles =
-            listOf("screen-android-1.png", "screen-android-2.png")
-        androidScreenshotFiles.forEach { fileName ->
-            stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/${fileName}\" width=\"200\">")
+        listOf(
+            Triple("Android", listOf("screen-android-1.png", "screen-android-2.png"), 200),
+            Triple("iOS", listOf("screen-ios-1.png", "screen-ios-2.png"), 200),
+            Triple("Desktop", listOf("screen-desktop-1.png", "screen-desktop-2.png"), 400),
+        ).forEach { (platform, fileNames, width) ->
+            stream.appendLine("### $platform screenshots")
+            stream.appendLine()
+            stream.appendLine("<p>")
+            fileNames.forEach { fileName ->
+                stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/${fileName}\" width=\"$width\">")
+            }
+            stream.appendLine("</p>")
+            stream.appendLine()
         }
-        stream.appendLine("</p>")
-        stream.appendLine()
-        stream.appendLine("### iOS screenshots")
-        stream.appendLine()
-        stream.appendLine("<p>")
-        val iosScreenshotFiles =
-            listOf("screen-ios-1.png", "screen-ios-2.png")
-        iosScreenshotFiles.forEach { fileName ->
-            stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/${fileName}\" width=\"200\">")
-        }
-        stream.appendLine("</p>")
-        stream.appendLine()
-        stream.appendLine("### Desktop screenshots")
-        stream.appendLine()
-        stream.appendLine("<p>")
-        val desktopScreenshotFiles =
-            listOf("screen-desktop-1.png", "screen-desktop-2.png")
-        desktopScreenshotFiles.forEach { fileName ->
-            stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/${fileName}\" width=\"400\">")
-        }
-        stream.appendLine("</p>")
-        stream.appendLine()
         stream.appendLine("### CLI screenshot")
         stream.appendLine()
         stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-cli-1.png\" width=\"400\">")
@@ -143,20 +129,12 @@ class MarkdownBuilder {
         if (currentSponsors.isNotEmpty() || pastSponsors.isNotEmpty()) {
             stream.appendLine()
             stream.appendLine("### Public GitHub Sponsors")
-            if (currentSponsors.isNotEmpty()) {
+            listOf("Monthly" to currentSponsors, "Previous" to pastSponsors).forEach { (heading, sponsors) ->
+                if (sponsors.isEmpty()) return@forEach
                 stream.appendLine()
-                stream.appendLine("#### Monthly")
+                stream.appendLine("#### $heading")
                 stream.appendLine()
-                currentSponsors.forEach { (username, avatar) ->
-                    stream.append("<a href=\"https://github.com/$username\"><img src=\"$avatar\" width=\"60px\" alt=\"$username\" /></a> ")
-                }
-                stream.appendLine()
-            }
-            if (pastSponsors.isNotEmpty()) {
-                stream.appendLine()
-                stream.appendLine("#### Previous")
-                stream.appendLine()
-                pastSponsors.forEach { (username, avatar) ->
+                sponsors.forEach { (username, avatar) ->
                     stream.append("<a href=\"https://github.com/$username\"><img src=\"$avatar\" width=\"60px\" alt=\"$username\" /></a> ")
                 }
                 stream.appendLine()
@@ -169,8 +147,6 @@ class MarkdownBuilder {
         stream.appendLine("http://letsgokoyo.com - App Icon")
         stream.appendLine()
         stream.appendLine("https://github.com/tldr-pages/tldr - Some command examples are adapted from tldr-pages, © tldr-pages contributors, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Changes were made.")
-
-        stream.close()
     }
 }
 

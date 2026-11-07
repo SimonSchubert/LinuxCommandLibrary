@@ -8,6 +8,7 @@ import SwiftUI
 struct CommandDetailView: View {
     let commandName: String
     @StateObject private var store: CommandDetailStore
+    @Environment(\.openURL) private var openURL
     @FocusState private var isSearchFieldFocused: Bool
 
     init(commandName: String, onManTap: @escaping (String) -> Void = { _ in }) {
@@ -72,35 +73,35 @@ struct CommandDetailView: View {
                     // collapsed one. The user's own expand state is left untouched underneath.
                     if store.isSearchVisible || store.isExpanded(sectionId: section.id) {
                         if section.title == "SEE ALSO" {
-                            SeeAlsoChips(
-                                names: store.state.seeAlsoCommands,
+                            ChipFlow(
+                                chips: store.state.seeAlsoCommands.map { name in
+                                    (label: name, action: { store.tapMan(name) })
+                                },
                                 fallback: section.parsedContent,
-                                onTapMan: store.tapMan,
-                                onTapLink: store.tapLink,
-                                onTapUrl: store.tapUrl
+                                onTapMan: store.tapMan
                             )
                         } else if section.title == "RESOURCES" {
-                            ResourcesChips(
-                                links: store.state.resources,
+                            ChipFlow(
+                                chips: store.state.resources.map { link in
+                                    (label: link.label, action: {
+                                        if let url = URL(string: link.url) {
+                                            openURL(url)
+                                        }
+                                    })
+                                },
                                 fallback: section.parsedContent,
-                                onTapMan: store.tapMan,
-                                onTapLink: store.tapLink,
-                                onTapUrl: store.tapUrl
+                                onTapMan: store.tapMan
                             )
                         } else if section.title.uppercased() == "INSTALL" {
                             InstallRows(
                                 entries: store.state.installEntries,
                                 fallback: section.parsedContent,
-                                onTapMan: store.tapMan,
-                                onTapLink: store.tapLink,
-                                onTapUrl: store.tapUrl
+                                onTapMan: store.tapMan
                             )
                         } else {
                             MarkdownView(
                                 elements: section.parsedContent,
                                 onTapMan: store.tapMan,
-                                onTapLink: store.tapLink,
-                                onTapUrl: store.tapUrl,
                                 highlights: store.highlights(sectionIndex: sectionIndex),
                                 anchorSection: store.isSearchVisible ? sectionIndex : nil
                             )
@@ -183,58 +184,24 @@ private struct BookmarkToolbarButton: View {
     }
 }
 
-private struct SeeAlsoChips: View {
-    let names: [String]
+/// SEE ALSO commands and RESOURCES links as tappable chips. Falls back to the section's markdown
+/// when there is nothing to show as a chip.
+private struct ChipFlow: View {
+    let chips: [(label: String, action: () -> Void)]
     let fallback: [TipSectionElement]
     let onTapMan: (String) -> Void
-    let onTapLink: (String) -> Void
-    let onTapUrl: (String) -> Void
 
     var body: some View {
-        if names.isEmpty {
+        if chips.isEmpty {
             MarkdownView(
                 elements: fallback,
-                onTapMan: onTapMan,
-                onTapLink: onTapLink,
-                onTapUrl: onTapUrl
+                onTapMan: onTapMan
             )
         } else {
             FlowLayout(spacing: 8) {
-                ForEach(names, id: \.self) { name in
-                    Button(name) {
-                        onTapMan(name)
-                        Haptics.selection()
-                    }
-                    .buttonStyle(.bordered)
-                    .tint(.brandRed)
-                }
-            }
-        }
-    }
-}
-
-/// External resource links (Source code / Homepage / Documentation) shown as
-/// tappable chips that open the URL in the browser, mirroring See Also.
-private struct ResourcesChips: View {
-    let links: [ResourceLink]
-    let fallback: [TipSectionElement]
-    let onTapMan: (String) -> Void
-    let onTapLink: (String) -> Void
-    let onTapUrl: (String) -> Void
-
-    var body: some View {
-        if links.isEmpty {
-            MarkdownView(
-                elements: fallback,
-                onTapMan: onTapMan,
-                onTapLink: onTapLink,
-                onTapUrl: onTapUrl
-            )
-        } else {
-            FlowLayout(spacing: 8) {
-                ForEach(links, id: \.url) { link in
-                    Button(link.label) {
-                        onTapUrl(link.url)
+                ForEach(Array(chips.enumerated()), id: \.offset) { _, chip in
+                    Button(chip.label) {
+                        chip.action()
                         Haptics.selection()
                     }
                     .buttonStyle(.bordered)
@@ -250,16 +217,12 @@ private struct InstallRows: View {
     let entries: [InstallEntry]
     let fallback: [TipSectionElement]
     let onTapMan: (String) -> Void
-    let onTapLink: (String) -> Void
-    let onTapUrl: (String) -> Void
 
     var body: some View {
         if entries.isEmpty {
             MarkdownView(
                 elements: fallback,
-                onTapMan: onTapMan,
-                onTapLink: onTapLink,
-                onTapUrl: onTapUrl
+                onTapMan: onTapMan
             )
         } else {
             VStack(alignment: .leading, spacing: 8) {
@@ -499,15 +462,5 @@ final class CommandDetailStore: ObservableObject {
     func tapMan(_ name: String) {
         onManTap_(name)
         Haptics.selection()
-    }
-
-    func tapLink(_: String) {
-        // No external app launch on iOS for "settings"/"terminal" actions — silently ignore
-    }
-
-    func tapUrl(_ url: String) {
-        if let target = URL(string: url) {
-            UIApplication.shared.open(target)
-        }
     }
 }

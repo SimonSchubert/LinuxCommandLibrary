@@ -6,7 +6,6 @@ import com.linuxcommandlibrary.app.ui.AppIcons
 
 actual val showRateAppButton: Boolean = false
 actual val showFastScrollBar: Boolean = false
-actual val backIcon: ImageVector = AppIcons.ArrowBack
 actual val shareButtonIcon: ImageVector = AppIcons.ContentCopy
 actual val shareButtonDescription: String = "Copy to clipboard"
 

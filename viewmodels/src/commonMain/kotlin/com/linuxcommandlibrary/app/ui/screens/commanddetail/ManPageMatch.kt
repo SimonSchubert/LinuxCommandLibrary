@@ -53,42 +53,19 @@ fun findManPageMatches(
         if (rendersAsChips) return@forEachIndexed
 
         section.parsedContent.forEachIndexed { elementIndex, element ->
+            fun addMatches(text: String, subIndex: Int = 0) {
+                matches += matchesIn(text, query, sectionIndex, elementIndex, subIndex)
+            }
             when (element) {
-                is TipSectionElement.Text -> matches += matchesIn(
-                    text = element.elements.toPlainText(),
-                    query = query,
-                    sectionIndex = sectionIndex,
-                    elementIndex = elementIndex,
-                    subIndex = 0,
-                )
+                is TipSectionElement.Text -> addMatches(element.elements.toPlainText())
 
-                is TipSectionElement.Blockquote -> matches += matchesIn(
-                    text = element.elements.toPlainText(),
-                    query = query,
-                    sectionIndex = sectionIndex,
-                    elementIndex = elementIndex,
-                    subIndex = 0,
-                )
+                is TipSectionElement.Blockquote -> addMatches(element.elements.toPlainText())
 
-                is TipSectionElement.Code -> matches += matchesIn(
-                    text = element.elements.toPlainText(),
-                    query = query,
-                    sectionIndex = sectionIndex,
-                    elementIndex = elementIndex,
-                    subIndex = 0,
-                )
+                is TipSectionElement.Code -> addMatches(element.elements.toPlainText())
 
                 is TipSectionElement.Table ->
                     tableCellsInRenderOrder(element.headers, element.rows)
-                        .forEachIndexed { subIndex, cell ->
-                            matches += matchesIn(
-                                text = cell.toPlainText(),
-                                query = query,
-                                sectionIndex = sectionIndex,
-                                elementIndex = elementIndex,
-                                subIndex = subIndex,
-                            )
-                        }
+                        .forEachIndexed { subIndex, cell -> addMatches(cell.toPlainText(), subIndex) }
             }
         }
     }

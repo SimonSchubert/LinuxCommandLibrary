@@ -14,7 +14,7 @@ class SelectableList<T>(
 ) {
     private var scrollOffset: Int = 0
 
-    val selectedItem: ListItem<T>?
+    private val selectedItem: ListItem<T>?
         get() = items.getOrNull(selectedIndex)
 
     val selectedValue: T?
@@ -97,11 +97,5 @@ class SelectableList<T>(
         }
 
         return sb.toString()
-    }
-
-    fun reset(newSelectedIndex: Int = 0) {
-        selectedIndex = newSelectedIndex.coerceIn(0, (items.size - 1).coerceAtLeast(0))
-        scrollOffset = 0
-        adjustScroll()
     }
 }

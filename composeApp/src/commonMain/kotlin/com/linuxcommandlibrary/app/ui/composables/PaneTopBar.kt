@@ -17,7 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.unit.dp
-import com.linuxcommandlibrary.app.platform.backIcon
+import com.linuxcommandlibrary.app.ui.AppIcons
 
 /**
  * A Row rather than a Material [androidx.compose.material3.TopAppBar] because the bar has to grow
@@ -47,7 +47,7 @@ fun PaneTopBar(
                     modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
                     onClick = onBack,
                 ) {
-                    Icon(imageVector = backIcon, contentDescription = "Back")
+                    Icon(imageVector = AppIcons.ArrowBack, contentDescription = "Back")
                 }
             } else {
                 Spacer(Modifier.width(12.dp))

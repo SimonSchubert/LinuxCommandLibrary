@@ -8,6 +8,7 @@ import com.linuxcommandlibrary.shared.BasicInfo
 import com.linuxcommandlibrary.shared.MarkdownParser
 import com.linuxcommandlibrary.shared.TipInfo
 import com.linuxcommandlibrary.shared.getSectionSortPriority
+import com.linuxcommandlibrary.shared.rankByNameMatch
 
 data class CommandInfo(val name: String)
 
@@ -23,19 +24,9 @@ object DataRepository {
 
     fun getCommands(): List<CommandInfo> = commandNames.map { CommandInfo(it) }
 
-    fun getCommandsByQuery(query: String): List<CommandInfo> {
-        val lowerQuery = query.lowercase()
-        return commandNames
-            .filter { it.lowercase().contains(lowerQuery) }
-            .sortedWith(
-                compareBy(
-                    { it.lowercase() != lowerQuery },
-                    { !it.lowercase().startsWith(lowerQuery) },
-                    { it },
-                ),
-            )
-            .map { CommandInfo(it) }
-    }
+    private val lowerCommandNames by lazy { commandNames.map { it.lowercase() } }
+
+    fun getCommandsByQuery(query: String): List<CommandInfo> = rankByNameMatch(commandNames, lowerCommandNames, query).map { CommandInfo(it) }
 
     fun getCommandSections(name: String): List<CommandSection> {
         val content = allCommands[name] ?: return emptyList()
@@ -46,13 +37,7 @@ object DataRepository {
     }
 
     fun getBasicCategories(): List<BasicCategory> = basicsData.mapNotNull { (id, content) ->
-        val title = content.lines().firstOrNull { it.startsWith("# ") }
-            ?.removePrefix("# ")?.trim()
-        if (title != null) {
-            BasicCategory(id = id, title = title)
-        } else {
-            null
-        }
+        MarkdownParser.parseTitle(content)?.let { BasicCategory(id = id, title = it) }
     }.sortedBy { it.title }
 
     fun getBasicInfo(categoryId: String): BasicInfo? {

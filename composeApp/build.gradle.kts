@@ -88,6 +88,12 @@ kotlin {
                 implementation(compose.desktop.currentOs)
             }
         }
+
+        getByName("desktopTest") {
+            dependencies {
+                implementation(kotlin("test"))
+            }
+        }
     }
 }
 

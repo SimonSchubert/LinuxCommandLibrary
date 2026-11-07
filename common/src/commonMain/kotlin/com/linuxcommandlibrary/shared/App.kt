@@ -21,68 +21,7 @@ sealed class CommandElement {
     data class Url(val command: String, val url: String) : CommandElement()
 }
 
-/**
- * Return a list of sealed Elements for visual representation
- */
-fun String.getCommandList(
-    mans: String,
-    hasBrackets: Boolean = false,
-): List<CommandElement> {
-    var command = " $this"
-    val list = mutableListOf<CommandElement>()
-    mans.split(",").filterNot { it.isEmpty() }.map { it.replace("(", "").replace(")", "") }
-        .forEach {
-            command = if (it.startsWith("url:")) {
-                val cmd = it.substring(4).split("|").first()
-                command.replace(cmd, " ü${it}ä")
-            } else {
-                if (hasBrackets) {
-                    val escapedIt = Regex.escape(it)
-                    val regex = "(?:[\\s,])($escapedIt)".toRegex()
-                    command.replace(regex, " ü${it}ä")
-                } else {
-                    command.replace(it, " ü${it}ä")
-                }
-            }
-        }
-
-    var currentText = ""
-    var currentCommand = ""
-    var isCommand = false
-    command.trim().forEach {
-        if (it == 'ü') {
-            list.add(CommandElement.Text(currentText.replace("\n", "")))
-            currentText = ""
-            isCommand = true
-        } else if (it == 'ä') {
-            if (currentCommand.isNotBlank()) {
-                when {
-                    currentCommand.startsWith("url:") -> {
-                        val url = currentCommand.split("|").last()
-                        val cmd = currentCommand.substring(4).split("|").first()
-                        list.add(CommandElement.Url(cmd, url))
-                    }
-
-                    else -> {
-                        list.add(CommandElement.Man(currentCommand))
-                    }
-                }
-            }
-            currentCommand = ""
-            isCommand = false
-        } else {
-            if (isCommand) {
-                currentCommand += it
-            } else {
-                currentText += it
-            }
-        }
-    }
-    list.add(CommandElement.Text(currentText.replace("[cmd]", "[command]").replace("\n", "")))
-    return list.toList()
-}
-
-val onlyCharactersRegex = "[^a-z]".toRegex()
+private val onlyCharactersRegex = "[^a-z]".toRegex()
 
 val basicsSortOrder =
     listOf(

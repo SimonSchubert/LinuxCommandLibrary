@@ -27,9 +27,7 @@ struct BasicGroupsView: View {
                             onTapMan: { name in
                                 onManTap(name)
                                 Haptics.selection()
-                            },
-                            onTapLink: store.tapLink,
-                            onTapUrl: store.tapUrl
+                            }
                         )
                         .padding(.vertical, 4)
                     }
@@ -104,15 +102,5 @@ private final class BasicGroupsStore: ObservableObject {
     func toggle(groupId: Int64) {
         viewModel.toggleCollapse(id: groupId)
         Haptics.selection()
-    }
-
-    func tapLink(_: String) {
-        // No external app launch on iOS for "settings"/"terminal" — silently ignore
-    }
-
-    func tapUrl(_ url: String) {
-        if let target = URL(string: url) {
-            UIApplication.shared.open(target)
-        }
     }
 }

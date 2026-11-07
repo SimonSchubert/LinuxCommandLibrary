@@ -8,9 +8,6 @@ class ContentViewer(
 ) {
     private var scrollOffset: Int = 0
 
-    val totalLines: Int
-        get() = lines.size
-
     // Index of the first content line currently shown (top of the viewport).
     val firstVisibleLine: Int
         get() = scrollOffset
@@ -75,10 +72,6 @@ class ContentViewer(
         }
 
         return sb.toString()
-    }
-
-    fun reset() {
-        scrollOffset = 0
     }
 
     companion object {

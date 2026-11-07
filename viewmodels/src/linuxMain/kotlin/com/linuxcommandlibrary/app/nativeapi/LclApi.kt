@@ -71,14 +71,11 @@ object LclApi {
 
     fun sectionBlockCount(index: Int): Int = sectionBlocks(index).size
 
-    fun sectionBlockKind(index: Int, block: Int): String =
-        sectionBlocks(index).getOrNull(block)?.kind().orEmpty()
+    fun sectionBlockKind(index: Int, block: Int): String = sectionBlocks(index).getOrNull(block)?.kind().orEmpty()
 
-    fun sectionBlockText(index: Int, block: Int): String =
-        sectionBlocks(index).getOrNull(block)?.toMarkdown().orEmpty()
+    fun sectionBlockText(index: Int, block: Int): String = sectionBlocks(index).getOrNull(block)?.toMarkdown().orEmpty()
 
-    private fun sectionBlocks(index: Int): List<TipSectionElement> =
-        sections.getOrNull(index)?.parsedContent.orEmpty()
+    private fun sectionBlocks(index: Int): List<TipSectionElement> = sections.getOrNull(index)?.parsedContent.orEmpty()
 
     // --- Basics categories ---
     // No local cache: BasicsRepository already memoises getCategories().
@@ -114,11 +111,9 @@ object LclApi {
 
     fun groupBlockCount(index: Int): Int = groupBlocks.getOrNull(index)?.size ?: 0
 
-    fun groupBlockKind(index: Int, block: Int): String =
-        groupBlocks.getOrNull(index)?.getOrNull(block)?.kind().orEmpty()
+    fun groupBlockKind(index: Int, block: Int): String = groupBlocks.getOrNull(index)?.getOrNull(block)?.kind().orEmpty()
 
-    fun groupBlockText(index: Int, block: Int): String =
-        groupBlocks.getOrNull(index)?.getOrNull(block)?.toMarkdown().orEmpty()
+    fun groupBlockText(index: Int, block: Int): String = groupBlocks.getOrNull(index)?.getOrNull(block)?.toMarkdown().orEmpty()
 
     // --- Tips ---
     // Cached locally because TipsRepository.getTips() re-parses tips.md on every call.
@@ -130,8 +125,7 @@ object LclApi {
         return tipInfos
     }
 
-    private fun tipSections(index: Int): List<TipSectionElement> =
-        tipList().getOrNull(index)?.sections.orEmpty()
+    private fun tipSections(index: Int): List<TipSectionElement> = tipList().getOrNull(index)?.sections.orEmpty()
 
     fun tipCount(): Int = tipList().size
 
@@ -141,17 +135,14 @@ object LclApi {
      * Rough rendered size of a tip, for balancing the card columns. Counts characters
      * without building anything, so laying out the grid does not render every tip.
      */
-    fun tipWeight(index: Int): Int =
-        tipTitle(index).length + tipSections(index).sumOf { it.weight() }
+    fun tipWeight(index: Int): Int = tipTitle(index).length + tipSections(index).sumOf { it.weight() }
 
     // Tips are drawn as cards rather than one Markdown document, so the UI needs the
     // blocks individually: code lines get a chip background, prose does not.
 
     fun tipBlockCount(index: Int): Int = tipSections(index).size
 
-    fun tipBlockKind(index: Int, block: Int): String =
-        tipSections(index).getOrNull(block)?.kind().orEmpty()
+    fun tipBlockKind(index: Int, block: Int): String = tipSections(index).getOrNull(block)?.kind().orEmpty()
 
-    fun tipBlockText(index: Int, block: Int): String =
-        tipSections(index).getOrNull(block)?.toMarkdown().orEmpty()
+    fun tipBlockText(index: Int, block: Int): String = tipSections(index).getOrNull(block)?.toMarkdown().orEmpty()
 }

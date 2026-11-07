@@ -1,15 +1,14 @@
 package com.linuxcommandlibrary.nativecli.screens
 
-import com.github.ajalt.mordant.input.KeyboardEvent
 import com.github.ajalt.mordant.input.MouseEvent
 import com.linuxcommandlibrary.nativecli.ContentFormatter
 import com.linuxcommandlibrary.nativecli.Theme
 import com.linuxcommandlibrary.nativecli.components.ContentViewer
 import com.linuxcommandlibrary.nativecli.data.DataRepository
 
-class CommandDetailScreen(private val commandName: String) : Screen {
+class CommandDetailScreen(private val commandName: String) : ViewerScreen {
 
-    private val viewer: ContentViewer
+    override val viewer: ContentViewer
 
     // SEE ALSO / inline man references, with screen positions for click navigation.
     private val links: List<ContentFormatter.ManLink>
@@ -64,50 +63,6 @@ class CommandDetailScreen(private val commandName: String) : Screen {
         val contentIndex = viewer.firstVisibleLine + viewportRow
         return links.firstOrNull { it.lineIndex == contentIndex && x >= it.startCol && x < it.endCol }
             ?.command
-    }
-
-    override fun handleInput(event: KeyboardEvent): ScreenResult = when (event.key) {
-        "ArrowUp", "k" -> {
-            viewer.scrollUp()
-            ScreenResult.Stay
-        }
-
-        "ArrowDown", "j" -> {
-            viewer.scrollDown()
-            ScreenResult.Stay
-        }
-
-        "PageUp", "b" -> {
-            viewer.pageUp()
-            ScreenResult.Stay
-        }
-
-        "PageDown", " " -> {
-            viewer.pageDown()
-            ScreenResult.Stay
-        }
-
-        "Home", "g" -> {
-            viewer.jumpToStart()
-            ScreenResult.Stay
-        }
-
-        "End", "G" -> {
-            viewer.jumpToEnd()
-            ScreenResult.Stay
-        }
-
-        "q", "Escape", "Enter", "h" -> ScreenResult.Back
-
-        else -> ScreenResult.Stay
-    }
-
-    override fun handleFallbackInput(input: String): ScreenResult {
-        val trimmed = input.trim().lowercase()
-        return when (trimmed) {
-            "", "0", "back", "q", "exit" -> ScreenResult.Back
-            else -> ScreenResult.Stay
-        }
     }
 
     companion object {

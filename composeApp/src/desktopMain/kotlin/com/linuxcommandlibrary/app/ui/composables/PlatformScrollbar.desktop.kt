@@ -41,43 +41,32 @@ actual fun WithScrollbar(
     state: LazyListState,
     modifier: Modifier,
     content: @Composable BoxScope.() -> Unit,
-) {
-    Box(modifier) {
-        content()
-        VerticalScrollbar(
-            adapter = rememberScrollbarAdapter(state),
-            modifier = Modifier.align(Alignment.CenterEnd).fillMaxHeight(),
-            style = scrollbarStyle(),
-        )
-    }
-}
+) = ScrollbarBox(rememberScrollbarAdapter(state), modifier, content)
 
 @Composable
 actual fun WithScrollbar(
     state: LazyGridState,
     modifier: Modifier,
     content: @Composable BoxScope.() -> Unit,
-) {
-    Box(modifier) {
-        content()
-        VerticalScrollbar(
-            adapter = rememberScrollbarAdapter(state),
-            modifier = Modifier.align(Alignment.CenterEnd).fillMaxHeight(),
-            style = scrollbarStyle(),
-        )
-    }
-}
+) = ScrollbarBox(rememberScrollbarAdapter(state), modifier, content)
 
 @Composable
 actual fun WithScrollbar(
     state: LazyStaggeredGridState,
     modifier: Modifier,
     content: @Composable BoxScope.() -> Unit,
+) = ScrollbarBox(remember(state) { LazyStaggeredGridScrollbarAdapter(state) }, modifier, content)
+
+@Composable
+private fun ScrollbarBox(
+    adapter: ScrollbarAdapter,
+    modifier: Modifier,
+    content: @Composable BoxScope.() -> Unit,
 ) {
     Box(modifier) {
         content()
         VerticalScrollbar(
-            adapter = remember(state) { LazyStaggeredGridScrollbarAdapter(state) },
+            adapter = adapter,
             modifier = Modifier.align(Alignment.CenterEnd).fillMaxHeight(),
             style = scrollbarStyle(),
         )

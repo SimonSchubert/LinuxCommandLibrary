@@ -48,10 +48,16 @@ class BasicsRepository(private val assetReader: AssetReader) {
 
     private fun readCategoryTitle(filename: String): String? = try {
         val content = assetReader.readFile("basics/$filename")
-        content?.lineSequence()?.firstOrNull { it.startsWith("# ") }?.removePrefix("# ")?.trim()
+        content?.let(MarkdownParser::parseTitle)
     } catch (e: Exception) {
         null
     }
+
+    /**
+     * Shared by [getGroupsAndSections] and the search index: the id is what a search result hands
+     * back for auto-expanding the group on the detail screen, so both must compute it the same way.
+     */
+    private fun groupId(categoryId: String, description: String): Long = (categoryId + description).hashCode().toLong()
 
     fun getGroupsAndSections(
         categoryId: String,
@@ -68,7 +74,7 @@ class BasicsRepository(private val assetReader: AssetReader) {
             val groupSections = MarkdownParser.splitByHeaders(content, "## ")
 
             for ((description, groupContent) in groupSections) {
-                val groupId = (categoryId + description).hashCode().toLong()
+                val groupId = groupId(categoryId, description)
                 groups.add(BasicGroup(id = groupId, description = description))
                 sectionsByGroupId[groupId] = MarkdownParser.parseMarkdownContent(groupContent)
             }
@@ -116,9 +122,7 @@ class BasicsRepository(private val assetReader: AssetReader) {
             for ((description, _) in MarkdownParser.splitByHeaders(content, "## ")) {
                 entries += GroupSearchEntry(
                     match = BasicGroupMatch(
-                        // Must stay in sync with getGroupsAndSections: the id is what the search
-                        // result hands back for auto-expanding the group on the detail screen.
-                        groupId = (category.id + description).hashCode().toLong(),
+                        groupId = groupId(category.id, description),
                         description = description,
                         categoryId = category.id,
                         categoryTitle = category.title,

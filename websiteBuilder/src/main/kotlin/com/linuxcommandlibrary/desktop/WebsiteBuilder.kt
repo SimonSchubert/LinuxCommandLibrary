@@ -1,19 +1,18 @@
 package com.linuxcommandlibrary.desktop
 
-import com.linuxcommandlibrary.shared.BasicInfo
 import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.CommandInfo
 import com.linuxcommandlibrary.shared.InstallEntries
 import com.linuxcommandlibrary.shared.MarkdownParser
-import com.linuxcommandlibrary.shared.TipInfo
 import com.linuxcommandlibrary.shared.TipSectionElement
 import com.linuxcommandlibrary.shared.basicsSortOrder
 import com.linuxcommandlibrary.shared.getSortPriority
-import com.linuxcommandlibrary.shared.onlyCharactersRegex
+import com.linuxcommandlibrary.shared.toHtmlFileName
 import kotlinx.html.ATarget
 import kotlinx.html.DIV
 import kotlinx.html.FlowContent
 import kotlinx.html.HEAD
+import kotlinx.html.HTML
 import kotlinx.html.HTMLTag
 import kotlinx.html.InputType
 import kotlinx.html.LINK
@@ -49,10 +48,7 @@ import kotlinx.html.span
 import kotlinx.html.stream.appendHTML
 import kotlinx.html.style
 import kotlinx.html.styleLink
-import kotlinx.html.table
-import kotlinx.html.td
 import kotlinx.html.title
-import kotlinx.html.tr
 import kotlinx.html.ul
 import kotlinx.html.unsafe
 import kotlinx.html.visit
@@ -61,8 +57,6 @@ import org.json.JSONObject
 import java.io.File
 import java.io.PrintStream
 import java.util.Locale
-import kotlin.io.readLines
-import kotlin.text.startsWith
 
 /* Copyright 2022 Simon Schubert
  *
@@ -78,8 +72,6 @@ import kotlin.text.startsWith
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-
-data class Ad(val imageUrl: String, val url: String, val backgroundColor: String)
 
 fun main(args: Array<String>) {
     val commandNames = args.map { it.trim() }.filter { it.isNotEmpty() }
@@ -199,25 +191,14 @@ class WebsiteBuilder(
             ?: emptyList()
     }
 
-    /**
-     * Parse a command markdown file into CommandInfo.
-     */
-    private fun parseCommandMarkdown(file: File): CommandInfo? {
-        val content = file.readText()
-        val commandName = file.nameWithoutExtension
-        return MarkdownParser.parseCommand(content, commandName)
-    }
+    private fun parseCommandMarkdown(file: File): CommandInfo? = MarkdownParser.parseCommand(file.readText(), file.nameWithoutExtension)
 
     fun createCommandsHtmlFile(folder: File) {
         println("Create index html")
 
         val file = File(folder, "commands.html")
-        file.delete()
-        val stream = PrintStream(file)
 
-        stream.appendLine("<!DOCTYPE html>")
-        stream.appendHTML().html {
-            lang = "en"
+        writeHtmlPage(file) {
             head {
                 commonMeta()
                 val title = "Commands | Linux Command Library"
@@ -284,31 +265,16 @@ class WebsiteBuilder(
                 footer()
             }
         }
-        stream.close()
     }
 
     fun createBasicsHtmlFile(folder: File) {
         println("Create basics html")
 
         val file = File(folder, "index.html")
-        file.delete()
-        val stream = PrintStream(file)
 
-        // Get basic categories from markdown files
-        val basicsDir = File("assets/basics")
-        val basicTitles = basicsDir.listFiles { f -> f.extension == "md" }
-            ?.map { mdFile ->
-                val firstLine = mdFile.readLines().firstOrNull { it.startsWith("# ") } ?: "# Unknown"
-                firstLine.removePrefix("# ").trim()
-            }
-            ?.sortedBy {
-                basicsSortOrder.indexOf(it)
-            }
-            ?: emptyList()
+        val basicTitles = MarkdownFileUtils.getBasicCategories()
 
-        stream.appendLine("<!DOCTYPE html>")
-        stream.appendHTML().html {
-            lang = "en"
+        writeHtmlPage(file) {
             head {
                 commonMeta()
 
@@ -331,10 +297,9 @@ class WebsiteBuilder(
                             classes = setOf("grid-container")
 
                             basicTitles.forEach { categoryTitle ->
-                                val htmlFileName = categoryTitle.lowercase(Locale.US).replace(onlyCharactersRegex, "")
                                 li {
                                     classes = setOf("grid-item")
-                                    a("basic/$htmlFileName") {
+                                    a("basic/${categoryTitle.toHtmlFileName()}") {
                                         div {
                                             i {
                                                 classes = setOf("invert-color")
@@ -357,7 +322,6 @@ class WebsiteBuilder(
                 footer()
             }
         }
-        stream.close()
     }
 
     /**
@@ -405,40 +369,25 @@ class WebsiteBuilder(
     fun createBasicHtmlFiles(folder: File) {
         folder.mkdir()
 
-        val basicsDir = File("assets/basics")
-        val mdFiles = basicsDir.listFiles { file -> file.extension == "md" }.sortedBy {
-            val title = it.readLines().firstOrNull { it.startsWith("# ") }?.removePrefix("# ")?.trim()
-            basicsSortOrder.indexOf(title)
-        }
-        val totalCount = mdFiles.size
+        val basics = File("assets/basics").listFiles { file -> file.extension == "md" }
+            .map { MarkdownParser.parseBasic(it.readText()) }
+            .sortedBy { basicsSortOrder.indexOf(it.title) }
+        val totalCount = basics.size
 
-        mdFiles.forEachIndexed { index, mdFile ->
+        basics.forEachIndexed { index, basicInfo ->
             print("\rCreate basic category html ${index + 1}/$totalCount")
 
-            val basicInfo = parseBasicsMarkdown(mdFile.readText())
             val categoryTitle = basicInfo.title
             val groups = basicInfo.groups
+            val file = File(folder, "${categoryTitle.toHtmlFileName()}.html")
 
-            // Create a mock BasicCategory for helper functions
-            val category = object {
-                val title = categoryTitle
-                fun getHtmlFileName() = categoryTitle.lowercase(Locale.US).replace(onlyCharactersRegex, "")
-                fun getDescription() = getDescriptionForTitle(categoryTitle)
-            }
-
-            val file = File(folder, "${category.getHtmlFileName()}.html")
-            file.delete()
-            val stream = PrintStream(file)
-
-            stream.appendLine("<!DOCTYPE html>")
-            stream.appendHTML().html {
-                lang = "en"
+            writeHtmlPage(file) {
                 head {
-                    val title = "${category.title} | Basic | Cheat sheet | Linux Command Library"
+                    val title = "$categoryTitle | Basic | Cheat sheet | Linux Command Library"
                     commonMeta()
                     uncommonMeta(
                         title = title,
-                        description = category.getDescription(),
+                        description = getDescriptionForTitle(categoryTitle),
                         url = "https://linuxcommandlibrary.com/${folder.name}/${file.nameWithoutExtension}",
                         keywords = getKeywordsForTitle(categoryTitle),
                     )
@@ -454,7 +403,7 @@ class WebsiteBuilder(
                         }
                     }
 
-                    if (category.title == "One-liners") {
+                    if (categoryTitle == "One-liners") {
                         style {
                             unsafe { +".masonry{-webkit-column-width: 400px !important;-moz-column-width: 400px !important;column-width: 400px !important;}" }
                         }
@@ -487,7 +436,7 @@ class WebsiteBuilder(
                     contentWrapper {
                         div {
                             h1 {
-                                text(category.title)
+                                text(categoryTitle)
                             }
                             div {
                                 classes = setOf("masonry")
@@ -501,11 +450,7 @@ class WebsiteBuilder(
                                             }
                                         }
                                         unsafe {
-                                            if (categoryTitle == "Terminal games") {
-                                                +HtmlMarkdownRenderer.renderSectionsWithPreviews(group.sections)
-                                            } else {
-                                                +HtmlMarkdownRenderer.renderSections(group.sections)
-                                            }
+                                            +HtmlMarkdownRenderer.renderSections(group.sections, previews = categoryTitle == "Terminal games")
                                         }
                                     }
                                 }
@@ -517,15 +462,9 @@ class WebsiteBuilder(
                     footer()
                 }
             }
-            stream.close()
         }
         println()
     }
-
-    /**
-     * Parse a basics markdown file into BasicInfo.
-     */
-    private fun parseBasicsMarkdown(content: String): BasicInfo = MarkdownParser.parseBasic(content)
 
     /**
      * Get description for a category title.
@@ -592,15 +531,11 @@ class WebsiteBuilder(
         folder.mkdir()
 
         val file = File(folder, "tips.html")
-        file.delete()
-        val stream = PrintStream(file)
 
         // Read tips from markdown file
-        val tips = parseTipsMarkdown(File("assets/tips.md").readText())
+        val tips = MarkdownParser.parseTips(File("assets/tips.md").readText())
 
-        stream.appendLine("<!DOCTYPE html>")
-        stream.appendHTML().html {
-            lang = "en"
+        writeHtmlPage(file) {
             head {
                 commonMeta()
                 val title = "Tips | Cheat sheets | Linux Command Library"
@@ -652,13 +587,7 @@ class WebsiteBuilder(
                 footer()
             }
         }
-        stream.close()
     }
-
-    /**
-     * Parse tips.md content into list of TipInfo objects.
-     */
-    private fun parseTipsMarkdown(content: String): List<TipInfo> = MarkdownParser.parseTips(content)
 
     fun createManHtmlFiles(folder: File, only: Set<String>? = null) {
         folder.mkdir()
@@ -679,12 +608,7 @@ class WebsiteBuilder(
 
             val file = File(folder, "${command.name.lowercase()}.html")
 
-            file.delete()
-            val stream = PrintStream(file)
-
-            stream.appendLine("<!DOCTYPE html>")
-            stream.appendHTML().html {
-                lang = "en"
+            writeHtmlPage(file) {
                 head {
                     commonMeta()
 
@@ -815,12 +739,6 @@ class WebsiteBuilder(
                                                         classes = setOf("install-list")
                                                         entries.forEach { entry ->
                                                             // Same pattern as code-wrapper: command + copy.
-                                                            val escapedCommand = entry.command
-                                                                .replace("&", "&amp;")
-                                                                .replace("<", "&lt;")
-                                                                .replace(">", "&gt;")
-                                                                .replace("\"", "&quot;")
-                                                                .replace("'", "&#039;")
                                                             div {
                                                                 classes = setOf("code-wrapper", "install-row")
                                                                 span {
@@ -828,7 +746,7 @@ class WebsiteBuilder(
                                                                     text(entry.command)
                                                                 }
                                                                 div {
-                                                                    onClick = "javascript:copy('$escapedCommand')"
+                                                                    onClick = "javascript:copy('${entry.command.escapeJsAttribute()}')"
                                                                     classes = setOf("copy-button")
                                                                     attributes["title"] = "Copy install command"
                                                                     unsafe {
@@ -852,7 +770,7 @@ class WebsiteBuilder(
                                             "PREVIEW" -> {
                                                 div {
                                                     unsafe {
-                                                        +HtmlMarkdownRenderer.renderSectionsWithPreviews(section.elements)
+                                                        +HtmlMarkdownRenderer.renderSections(section.elements, previews = true)
                                                     }
                                                 }
                                             }
@@ -896,221 +814,154 @@ class WebsiteBuilder(
                     }
                 }
             }
-            stream.close()
         }
         println()
     }
 
     fun createTermsAndConditionsHtmlFile(folder: File) {
         println("Create terms and conditions html")
+        createLegalPage(folder, "terms-conditions", "Terms and Conditions | Linux Command Library") {
+            h1 { +"Terms and Conditions" }
 
-        folder.mkdir()
-
-        val file = File(folder, "terms-conditions.html")
-        file.delete()
-        val stream = PrintStream(file)
-
-        stream.appendLine("<!DOCTYPE html>")
-
-        stream.appendHTML().html {
-            lang = "en"
-            head {
-                commonMeta()
-                val title = "Terms and Conditions | Linux Command Library"
-                uncommonMeta(
-                    title = title,
-                    description = "",
-                    url = "https://linuxcommandlibrary.com/${file.nameWithoutExtension}",
-                    keywords = "",
-                )
-
-                styleLink("/stylesheets/main.css?v=$cacheVersion")
+            h2 { +"Educational Purpose Only" }
+            p {
+                +"The content on Linux Command Library is provided solely for educational and informational purposes. It is intended to assist users in learning about Linux commands."
             }
 
-            body {
-                header(-1)
+            h2 { +"Disclaimer of Liability" }
+            p {
+                +"The commands on this website can be powerful and may cause data loss or system damage if misused. Users are responsible for verifying and safely using the commands. Linux Command Library is not liable for any damage or loss resulting from the use or misuse of this information."
+            }
 
-                div {
-                    id = "content"
-
-                    h1 { +"Terms and Conditions" }
-
-                    h2 { +"Educational Purpose Only" }
-                    p {
-                        +"The content on Linux Command Library is provided solely for educational and informational purposes. It is intended to assist users in learning about Linux commands."
-                    }
-
-                    h2 { +"Disclaimer of Liability" }
-                    p {
-                        +"The commands on this website can be powerful and may cause data loss or system damage if misused. Users are responsible for verifying and safely using the commands. Linux Command Library is not liable for any damage or loss resulting from the use or misuse of this information."
-                    }
-
-                    h2 { +"Copyright and Credits" }
-                    p {
-                        +"Man pages referenced on this site are copyrighted by their respective authors and used under fair use principles for educational reference. We gratefully acknowledge inspiration and contributions from "
-                        a(href = "https://www.commandlinefu.com/") { +"commandlinefu.com" }
-                        +"."
-                    }
-                    p {
-                        +"Some command examples are adapted from "
-                        a(href = "https://github.com/tldr-pages/tldr") { +"tldr-pages" }
-                        +", © tldr-pages contributors, licensed under "
-                        a(href = "https://creativecommons.org/licenses/by/4.0/") { +"CC BY 4.0" }
-                        +". Changes were made."
-                    }
-                }
-
-                footer(showAd = false)
+            h2 { +"Copyright and Credits" }
+            p {
+                +"Man pages referenced on this site are copyrighted by their respective authors and used under fair use principles for educational reference. We gratefully acknowledge inspiration and contributions from "
+                a(href = "https://www.commandlinefu.com/") { +"commandlinefu.com" }
+                +"."
+            }
+            p {
+                +"Some command examples are adapted from "
+                a(href = "https://github.com/tldr-pages/tldr") { +"tldr-pages" }
+                +", © tldr-pages contributors, licensed under "
+                a(href = "https://creativecommons.org/licenses/by/4.0/") { +"CC BY 4.0" }
+                +". Changes were made."
             }
         }
-        stream.close()
     }
 
     fun createPrivacyPolicyHtmlFile(folder: File) {
         println("Create privacy html")
+        createLegalPage(folder, "privacy-policy", "Privacy Policy | Linux Command Library") {
+            h1 { +"Privacy Policy" }
+            p { +"Last Updated: November 4, 2026" }
 
-        folder.mkdir()
+            h2 { +"1. No Data Collection or Tracking" }
+            p { +"Our website does not use cookies, web beacons, analytics, advertising or any other tracking technologies." }
+            p { +"We do not collect any personal data from users. There are no contact forms, email sign-ups, or other mechanisms that gather personal information on our website." }
 
-        val file = File(folder, "privacy-policy.html")
-        file.delete()
-        val stream = PrintStream(file)
-
-        stream.appendLine("<!DOCTYPE html>")
-
-        stream.appendHTML().html {
-            lang = "en"
-            head {
-                commonMeta()
-                val title = "Privacy Policy | Linux Command Library"
-                uncommonMeta(
-                    title = title,
-                    description = "",
-                    url = "https://linuxcommandlibrary.com/${file.nameWithoutExtension}",
-                    keywords = "",
-                )
-
-                styleLink("/stylesheets/main.css?v=$cacheVersion")
+            h2 { +"2. GitHub Sponsor Avatars" }
+            p {
+                +"The footer shows the profile pictures of our GitHub Sponsors. These images are loaded directly from GitHub, so your browser connects to GitHub's servers and transmits your IP address to GitHub when you view a page. See "
+                a(href = "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement") { +"GitHub's Privacy Statement" }
+                +"."
             }
 
-            body {
-                header(-1)
+            h2 { +"3. Your Rights (GDPR Compliance)" }
+            p { +"For EU Users: If you are located in the European Union, you have the right to access, correct, or delete any personal data we may hold about you. Since we do not collect personal data through tracking or forms, no such data is stored." }
 
-                div {
-                    id = "content"
-
-                    h1 { +"Privacy Policy" }
-                    p { +"Last Updated: November 4, 2026" }
-
-                    h2 { +"1. No Data Collection or Tracking" }
-                    p { +"Our website does not use cookies, web beacons, analytics, advertising or any other tracking technologies." }
-                    p { +"We do not collect any personal data from users. There are no contact forms, email sign-ups, or other mechanisms that gather personal information on our website." }
-
-                    h2 { +"2. GitHub Sponsor Avatars" }
-                    p {
-                        +"The footer shows the profile pictures of our GitHub Sponsors. These images are loaded directly from GitHub, so your browser connects to GitHub's servers and transmits your IP address to GitHub when you view a page. See "
-                        a(href = "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement") { +"GitHub's Privacy Statement" }
-                        +"."
-                    }
-
-                    h2 { +"3. Your Rights (GDPR Compliance)" }
-                    p { +"For EU Users: If you are located in the European Union, you have the right to access, correct, or delete any personal data we may hold about you. Since we do not collect personal data through tracking or forms, no such data is stored." }
-
-                    h2 { +"4. Contact Us" }
-                    p {
-                        +"If you have any questions or concerns about this Privacy Policy, you can contact us at "
-                        a(href = "mailto:info@linuxcommandlibrary.com") { +"info@linuxcommandlibrary.com" }
-                        +"."
-                    }
-
-                    h2 { +"5. Changes to This Policy" }
-                    p { +"We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated 'Last Updated' date." }
-                }
-
-                footer(showAd = false)
+            h2 { +"4. Contact Us" }
+            p {
+                +"If you have any questions or concerns about this Privacy Policy, you can contact us at "
+                a(href = "mailto:info@linuxcommandlibrary.com") { +"info@linuxcommandlibrary.com" }
+                +"."
             }
+
+            h2 { +"5. Changes to This Policy" }
+            p { +"We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated 'Last Updated' date." }
         }
-        stream.close()
     }
 
     fun createContactHtmlFile(folder: File) {
         println("Create contact html")
-
-        folder.mkdir()
-
-        val file = File(folder, "contact.html")
-        file.delete()
-        val stream = PrintStream(file)
-
-        stream.appendLine("<!DOCTYPE html>")
-
-        stream.appendHTML().html {
-            lang = "en"
-            head {
-                commonMeta()
-                val title = "Contact | Linux Command Library"
-                uncommonMeta(
-                    title = title,
-                    description = "",
-                    url = "https://linuxcommandlibrary.com/${file.nameWithoutExtension}",
-                    keywords = "",
-                )
-
-                styleLink("/stylesheets/main.css?v=$cacheVersion")
+        createLegalPage(folder, "contact", "Contact | Linux Command Library") {
+            h1 { +"Contact Us" }
+            p {
+                +"Have questions, feedback, or issues about Linux Command Library?"
             }
-
-            body {
-                header(-1)
-
-                div {
-                    id = "content"
-
-                    h1 { +"Contact Us" }
-                    p {
-                        +"Have questions, feedback, or issues about Linux Command Library?"
-                    }
-                    p {
-                        +"Please reach out to us at "
-                        a(href = "mailto:info@linuxcommandlibrary.com") { +"info@linuxcommandlibrary.com" }
-                        +". We aim to respond within 2-3 business days."
-                    }
-                    p {
-                        +"For more information about our site, please review our "
-                        a(href = "/privacy-policy") { +"Privacy Policy" }
-                        +" and "
-                        a(href = "/terms-conditions") { +"Terms and Conditions" }
-                        +"."
-                    }
-                }
-
-                footer(showAd = false)
+            p {
+                +"Please reach out to us at "
+                a(href = "mailto:info@linuxcommandlibrary.com") { +"info@linuxcommandlibrary.com" }
+                +". We aim to respond within 2-3 business days."
+            }
+            p {
+                +"For more information about our site, please review our "
+                a(href = "/privacy-policy") { +"Privacy Policy" }
+                +" and "
+                a(href = "/terms-conditions") { +"Terms and Conditions" }
+                +"."
             }
         }
-        stream.close()
     }
 
     fun createImpressumHtmlFile(folder: File) {
         println("Create impressum html")
+        createLegalPage(
+            folder,
+            "impressum",
+            "Impressum | Linux Command Library",
+            description = "Impressum / Legal notice of Linux Command Library",
+            lang = "de",
+            extraHead = { meta(name = "robots", content = "noindex") },
+        ) {
+            h1 { +"Impressum" }
+            p { +"Angaben gemäß § 5 DDG" }
+            p {
+                +"Simon Schubert"
+                br
+                +"Parkstr. 43"
+                br
+                +"13585 Berlin"
+                br
+                +"Deutschland"
+            }
 
+            h2 { +"Kontakt" }
+            p {
+                +"E-Mail: "
+                a(href = "mailto:info@linuxcommandlibrary.com") { +"info@linuxcommandlibrary.com" }
+            }
+
+            h2 { +"Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV" }
+            p {
+                +"Simon Schubert, Anschrift wie oben"
+            }
+        }
+    }
+
+    /**
+     * A text-only page (legal notices, contact) without ads, sharing one head and layout.
+     * [extraHead] is emitted between the page meta and the stylesheet.
+     */
+    private fun createLegalPage(
+        folder: File,
+        fileName: String,
+        title: String,
+        description: String = "",
+        lang: String = "en",
+        extraHead: HEAD.() -> Unit = {},
+        content: DIV.() -> Unit,
+    ) {
         folder.mkdir()
-
-        val file = File(folder, "impressum.html")
-        file.delete()
-        val stream = PrintStream(file)
-
-        stream.appendLine("<!DOCTYPE html>")
-
-        stream.appendHTML().html {
-            lang = "de"
+        writeHtmlPage(File(folder, "$fileName.html"), lang) {
             head {
                 commonMeta()
-                val title = "Impressum | Linux Command Library"
                 uncommonMeta(
                     title = title,
-                    description = "Impressum / Legal notice of Linux Command Library",
-                    url = "https://linuxcommandlibrary.com/${file.nameWithoutExtension}",
+                    description = description,
+                    url = "https://linuxcommandlibrary.com/$fileName",
                     keywords = "",
                 )
-                meta(name = "robots", content = "noindex")
+                extraHead()
 
                 styleLink("/stylesheets/main.css?v=$cacheVersion")
             }
@@ -1120,80 +971,42 @@ class WebsiteBuilder(
 
                 div {
                     id = "content"
-
-                    h1 { +"Impressum" }
-                    p { +"Angaben gemäß § 5 DDG" }
-                    p {
-                        +"Simon Schubert"
-                        br
-                        +"Parkstr. 43"
-                        br
-                        +"13585 Berlin"
-                        br
-                        +"Deutschland"
-                    }
-
-                    h2 { +"Kontakt" }
-                    p {
-                        +"E-Mail: "
-                        a(href = "mailto:info@linuxcommandlibrary.com") { +"info@linuxcommandlibrary.com" }
-                    }
-
-                    h2 { +"Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV" }
-                    p {
-                        +"Simon Schubert, Anschrift wie oben"
-                    }
+                    content()
                 }
 
                 footer(showAd = false)
             }
         }
-        stream.close()
     }
 
-    private fun sanitizeHtml(content: String): String = content.replace(Regex("(?i)<(html|head|title|body)[^>]*>.*?</\\1>|<(html|head|title|body)[^>]*>"), "")
-        .replace(Regex("(?i)</?(html|head|title|body)>"), "")
+    /**
+     * Writes one HTML page: doctype plus the kotlinx.html document built by [block].
+     */
+    private fun writeHtmlPage(file: File, lang: String = "en", block: HTML.() -> Unit) {
+        file.delete()
+        PrintStream(file).use { stream ->
+            stream.appendLine("<!DOCTYPE html>")
+            stream.appendHTML().html {
+                this.lang = lang
+                block()
+            }
+        }
+    }
+
+    private val seeAlsoManLinkRegex = Regex("""\[([^\]]+)]\(/man/([^)]+)\)""")
 
     /**
-     * Parse SEE ALSO section for man page links.
-     * Handles markdown links like [less](/man/less)(1) and plain text.
+     * Parse SEE ALSO section for man page links like [less](/man/less)(1); everything else is text.
      */
     private fun getSeeAlsoSectionElements(content: String): List<CommandElement> {
         val elements = mutableListOf<CommandElement>()
-        var remaining = content
-
-        // Pattern to match markdown man links: [command](/man/command) optionally followed by (1) etc.
-        val manLinkRegex = Regex("""\[([^\]]+)]\(/man/([^)]+)\)(\([^)]*\))?""")
-
-        while (remaining.isNotEmpty()) {
-            val match = manLinkRegex.find(remaining)
-            if (match != null) {
-                // Add text before the match
-                if (match.range.first > 0) {
-                    val textBefore = remaining.substring(0, match.range.first)
-                    if (textBefore.isNotEmpty()) {
-                        elements.add(CommandElement.Text(textBefore))
-                    }
-                }
-                // Add the man link (use the command name from the URL path)
-                val manName = match.groupValues[2]
-                elements.add(CommandElement.Man(manName))
-                // Add the section number if present (e.g., "(1)")
-                val sectionNum = match.groupValues[3]
-                if (sectionNum.isNotEmpty()) {
-                    elements.add(CommandElement.Text(sectionNum))
-                }
-
-                remaining = remaining.substring(match.range.last + 1)
-            } else {
-                // No more links, add remaining text
-                if (remaining.isNotEmpty()) {
-                    elements.add(CommandElement.Text(remaining))
-                }
-                break
-            }
+        var last = 0
+        for (match in seeAlsoManLinkRegex.findAll(content)) {
+            if (match.range.first > last) elements += CommandElement.Text(content.substring(last, match.range.first))
+            elements += CommandElement.Man(match.groupValues[2])
+            last = match.range.last + 1
         }
-
+        if (last < content.length) elements += CommandElement.Text(content.substring(last))
         return elements
     }
 
@@ -1201,12 +1014,8 @@ class WebsiteBuilder(
         println("Create 404 html")
 
         val file = File("html/error_404.html")
-        file.delete()
-        val stream = PrintStream(file)
 
-        stream.appendLine("<!DOCTYPE html>")
-        stream.appendHTML().html {
-            lang = "en"
+        writeHtmlPage(file) {
             head {
                 commonMeta()
                 val title = "404 command not found | Linux Command Library"
@@ -1249,7 +1058,7 @@ class WebsiteBuilder(
         href: String,
         index: Int,
         selectedIndex: Int,
-    ): FlowContent {
+    ) {
         li {
             a(href) {
                 if (selectedIndex == index) {
@@ -1258,7 +1067,6 @@ class WebsiteBuilder(
                 text(title)
             }
         }
-        return this
     }
 
     private fun FlowContent.header(selectedIndex: Int) {
@@ -1342,10 +1150,8 @@ class WebsiteBuilder(
         // Get basic categories from markdown files
         val basicsDir = File("assets/basics")
         basicsDir.listFiles { f -> f.extension == "md" }?.forEach { mdFile ->
-            val firstLine = mdFile.readLines().firstOrNull { it.startsWith("# ") } ?: "# Unknown"
-            val title = firstLine.removePrefix("# ").trim()
-            val htmlFileName = title.lowercase(Locale.US).replace(onlyCharactersRegex, "")
-            stream.print(getSitemapUrlNode("basic/$htmlFileName"))
+            val title = MarkdownParser.parseTitle(mdFile.readText()) ?: "Unknown"
+            stream.print(getSitemapUrlNode("basic/${title.toHtmlFileName()}"))
         }
         // Get commands from markdown files
         getCommandNamesFromMarkdown().forEach { commandName ->
@@ -1410,46 +1216,14 @@ class WebsiteBuilder(
         consumer,
     ).visit(block)
 
-    val verticalAds = listOf(
-        Ad("linode-vertical.webp", "/linode-2025", "#ea9230"),
-        Ad("digitalocean-vertical.webp", "/digitalocean-2025", "#173a62"),
-        Ad("proton-free-vertical.webp", "/proton-free-2025", "#01a4e8"),
-        Ad("proton-paid-vertical.webp", "/proton-paid-2025", "#f1c522"),
-    )
-    val horizontalAds = listOf(
-        Ad("beelink-horizontal-1.webp", "/beelink", "#e47617"),
-        Ad("beelink-horizontal-2.webp", "/beelink", "#e47617"),
-    )
-
-    private fun FlowContent.contentWrapper(content: DIV.() -> Unit = {}): FlowContent {
-        val randomAds = verticalAds.shuffled().take(2)
+    private fun FlowContent.contentWrapper(content: DIV.() -> Unit = {}) {
         div {
             id = "content-wrapper"
-//            randomAds[0].let { ad ->
-//                div {
-//                    classes = setOf("side-panel")
-//                    style = "background-color: ${ad.backgroundColor}"
-//                    a {
-//                        href = ad.url
-//                        img {
-//                            src = "/images/af/${ad.imageUrl}"
-//                            width = "200"
-//                        }
-//                    }
-//                }
-//            }
             content()
-//            randomAds[1].let { ad ->
-//                div {
-//                    classes = setOf("side-panel")
-//                    style = "width: 200px"
-//                }
-//            }
         }
-        return this
     }
 
-    private fun FlowContent.footer(showAd: Boolean = true): FlowContent {
+    private fun FlowContent.footer(showAd: Boolean = true) {
         if (showAd) {
             div {
                 classes = setOf("bottom-panel")
@@ -1582,68 +1356,16 @@ class WebsiteBuilder(
             }
             br
             br
-//            div {
-//                style =
-//                    "width: 100%; justify-content: center; padding-top: 6px; display: flex; align-items: center; gap: 6px;"
-//                text("My other projects: ")
-//                div {
-//                    classes = setOf("project")
-//                    a("https://adahub.io") {
-//                        target = ATarget.blank
-//                        rel = "noopener"
-//                        img {
-//                            src = "https://adahub.io/favicon.svg"
-//                            alt = "adahub.io"
-//                            width = "30"
-//                            height = "30"
-//                        }
-//                    }
-//                    br
-//                    text("Blockchain")
-//                }
-//                div {
-//                    classes = setOf("project")
-//                    a("https://simonschubert.github.io/YogaBase/") {
-//                        target = ATarget.blank
-//                        rel = "noopener"
-//                        img {
-//                            src = "https://simonschubert.github.io/YogaBase/favicon.svg"
-//                            alt = ""
-//                            width = "30"
-//                            height = "30"
-//                        }
-//                    }
-//                    br
-//                    text("Yoga")
-//                }
-//                div {
-//                    classes = setOf("project")
-//                    a("https://betabase.fun") {
-//                        target = ATarget.blank
-//                        rel = "noopener"
-//                        img {
-//                            src = "https://betabase.fun/images/icon.png"
-//                            alt = "betabase.fun"
-//                            width = "30"
-//                            height = "30"
-//                        }
-//                    }
-//                    br
-//                    text("Climbing")
-//                }
-//            }
         }
-        return this
     }
 
-    private fun FlowContent.tooltip(): FlowContent {
+    private fun FlowContent.tooltip() {
         div {
             classes = setOf("tooltip")
             b {
                 text("Copied to clipboard")
             }
         }
-        return this
     }
 
     inline fun HTMLTag.meta(

@@ -8,9 +8,7 @@ import com.linuxcommandlibrary.app.ui.screens.basicgroups.BasicEditorViewModel
 import com.linuxcommandlibrary.app.ui.screens.basicgroups.BasicGroupsViewModel
 import com.linuxcommandlibrary.app.ui.screens.commanddetail.CommandDetailViewModel
 import com.linuxcommandlibrary.app.ui.screens.commandlist.CommandListViewModel
-import com.linuxcommandlibrary.app.ui.screens.search.SearchViewModel
 import com.linuxcommandlibrary.app.ui.screens.tips.TipsViewModel
-import com.linuxcommandlibrary.shared.platform.ShareHandler
 import org.koin.core.context.startKoin
 import org.koin.core.parameter.parametersOf
 import org.koin.mp.KoinPlatform.getKoin
@@ -24,8 +22,6 @@ import org.koin.mp.KoinPlatform.getKoin
  * Lifecycle: SwiftUI views own a single VM instance and call its `cancel()` method
  * on disappear (or via `deinit`) to release in-flight coroutines.
  */
-
-fun makeSearchViewModel(): SearchViewModel = getKoin().get()
 
 fun makeCommandListViewModel(): CommandListViewModel = getKoin().get()
 
@@ -44,11 +40,6 @@ fun makeTipsViewModel(): TipsViewModel = getKoin().get()
  * grid (BasicEditorView) instead of the collapsible groups list (BasicGroupsView).
  */
 fun categoryUsesCardLayout(categoryId: String): Boolean = getKoin().get<BasicsRepository>().usesCardLayout(categoryId)
-
-/**
- * Returns the singleton iOS share handler (presents UIActivityViewController).
- */
-fun makeShareHandler(): ShareHandler = getKoin().get()
 
 /**
  * Bootstraps Koin's dependency graph. Call once from the iOS app's entry point.

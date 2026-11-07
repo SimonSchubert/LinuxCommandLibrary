@@ -2,6 +2,7 @@ package com.linuxcommandlibrary.app.data
 
 import com.linuxcommandlibrary.shared.MarkdownParser
 import com.linuxcommandlibrary.shared.platform.AssetReader
+import com.linuxcommandlibrary.shared.rankByNameMatch
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
@@ -40,47 +41,16 @@ class CommandsRepository(private val assetReader: AssetReader) {
         return commands
     }
 
-    /**
-     * Commands whose name contains [query], exact match first, then prefix matches, then the rest,
-     * each group alphabetical.
-     *
-     * Bucketing rather than sorting: [getCommands] already returns names in ascending order, so
-     * appending in input order keeps each bucket alphabetical for free. This runs on every
-     * keystroke against ~9k commands, where the comparator sort was doing O(n log n) work plus
-     * boxing a Boolean per comparison.
-     */
+    /** Commands whose name contains [query], ranked by [rankByNameMatch]. Runs on every keystroke. */
     fun getCommandsByQuery(query: String): ImmutableList<CommandInfo> {
         val commands = cachedCommands ?: getCommands()
         val lowerNames = cachedLowerNames ?: return persistentListOf()
-        val lowerQuery = query.lowercase()
-
-        val exact = mutableListOf<CommandInfo>()
-        val prefixed = mutableListOf<CommandInfo>()
-        val contained = mutableListOf<CommandInfo>()
-
-        // Iterated rather than indexed: an ImmutableList is a trie, so commands[i] walks it.
-        var i = 0
-        for (command in commands) {
-            val lowerName = lowerNames[i++]
-            if (!lowerName.contains(lowerQuery)) continue
-            when {
-                lowerName == lowerQuery -> exact += command
-                lowerName.startsWith(lowerQuery) -> prefixed += command
-                else -> contained += command
-            }
-        }
-
-        val result = ArrayList<CommandInfo>(exact.size + prefixed.size + contained.size)
-        result.addAll(exact)
-        result.addAll(prefixed)
-        result.addAll(contained)
-        return result.toImmutableList()
+        return rankByNameMatch(commands, lowerNames, query).toImmutableList()
     }
 
     fun hasCommand(name: String): Boolean {
-        val names = cachedCommandNames
-            ?: getCommands().mapTo(HashSet()) { it.name }.also { cachedCommandNames = it }
-        return name in names
+        getCommands()
+        return name in cachedCommandNames!!
     }
 
     fun getSections(commandName: String): ImmutableList<CommandSectionInfo> {

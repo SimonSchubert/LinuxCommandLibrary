@@ -6,8 +6,6 @@ import SwiftUI
 struct MarkdownView: View {
     let elements: [TipSectionElement]
     let onTapMan: (String) -> Void
-    let onTapLink: (String) -> Void
-    let onTapUrl: (String) -> Void
     /// Find-in-page match ranges for this section, keyed by element index. Nil when not searching
     /// or when this section has no hits.
     var highlights: [Int: ElementHighlight]?
@@ -20,8 +18,6 @@ struct MarkdownView: View {
                 TipSectionElementView(
                     element: element,
                     onTapMan: onTapMan,
-                    onTapLink: onTapLink,
-                    onTapUrl: onTapUrl,
                     highlight: highlights?[index]
                 )
                 .modifier(MatchAnchor(section: anchorSection, element: index))
@@ -48,8 +44,6 @@ private struct MatchAnchor: ViewModifier {
 private struct TipSectionElementView: View {
     let element: TipSectionElement
     let onTapMan: (String) -> Void
-    let onTapLink: (String) -> Void
-    let onTapUrl: (String) -> Void
     var highlight: ElementHighlight?
 
     var body: some View {
@@ -58,7 +52,6 @@ private struct TipSectionElementView: View {
             TextElementsView(
                 elements: textCase.elements,
                 onTapMan: onTapMan,
-                onTapLink: onTapLink,
                 highlight: highlight
             )
         case let .blockquote(bqCase):
@@ -72,7 +65,6 @@ private struct TipSectionElementView: View {
                 TextElementsView(
                     elements: bqCase.elements,
                     onTapMan: onTapMan,
-                    onTapLink: onTapLink,
                     highlight: highlight
                 )
                 .foregroundColor(.secondary)
@@ -83,7 +75,6 @@ private struct TipSectionElementView: View {
                 command: codeCase.command,
                 elements: codeCase.elements,
                 onTapMan: onTapMan,
-                onTapUrl: onTapUrl,
                 highlight: highlight
             )
         case let .table(tableCase):
@@ -91,7 +82,6 @@ private struct TipSectionElementView: View {
                 headers: tableCase.headers,
                 rows: tableCase.rows,
                 onTapMan: onTapMan,
-                onTapLink: onTapLink,
                 highlight: highlight
             )
         }
@@ -103,7 +93,6 @@ private struct TipSectionElementView: View {
 private struct TextElementsView: View {
     let elements: [TextElement]
     let onTapMan: (String) -> Void
-    let onTapLink: (String) -> Void
     var highlight: ElementHighlight?
     /// Which string this view renders within its element — always 0 except for table cells.
     var subIndex: Int = 0
@@ -151,7 +140,7 @@ private struct TextElementsView: View {
             onTapMan(url.host ?? url.path.trimmingCharacters(in: CharacterSet(charactersIn: "/")))
             return .handled
         case "lcl-action":
-            onTapLink(url.host ?? url.path.trimmingCharacters(in: CharacterSet(charactersIn: "/")))
+            // "settings"/"terminal" actions have no iOS equivalent: swallow the tap.
             return .handled
         default:
             return .systemAction
@@ -165,7 +154,6 @@ private struct CommandLineView: View {
     let command: String
     let elements: [CommandElement]
     let onTapMan: (String) -> Void
-    let onTapUrl: (String) -> Void
     var highlight: ElementHighlight?
 
     var body: some View {
@@ -207,7 +195,7 @@ private struct CommandLineView: View {
             onTapMan(url.host ?? url.path.trimmingCharacters(in: CharacterSet(charactersIn: "/")))
             return .handled
         }
-        onTapUrl(url.absoluteString)
+        // External resource link: let the system open it.
         return .systemAction
     }
 }
@@ -216,7 +204,6 @@ private struct MarkdownTableView: View {
     let headers: [[TextElement]]
     let rows: [[[TextElement]]]
     let onTapMan: (String) -> Void
-    let onTapLink: (String) -> Void
     var highlight: ElementHighlight?
 
     /// Start of each row's sub-index run. Mirrors `tableCellsInRenderOrder` in `:common`, which
@@ -249,7 +236,6 @@ private struct MarkdownTableView: View {
                     TextElementsView(
                         elements: headerCell,
                         onTapMan: onTapMan,
-                        onTapLink: onTapLink,
                         highlight: highlight,
                         subIndex: index
                     )
@@ -264,7 +250,6 @@ private struct MarkdownTableView: View {
                         TextElementsView(
                             elements: cell,
                             onTapMan: onTapMan,
-                            onTapLink: onTapLink,
                             highlight: highlight,
                             subIndex: offsets[rowIndex] + cellIndex
                         )
@@ -291,7 +276,6 @@ private struct MarkdownTableView: View {
                             TextElementsView(
                                 elements: headers[cellIndex],
                                 onTapMan: onTapMan,
-                                onTapLink: onTapLink,
                                 highlight: highlight,
                                 // Header text repeats per record, so only the first record carries
                                 // the header's real sub-index — otherwise one find-in-page hit on a
@@ -304,7 +288,6 @@ private struct MarkdownTableView: View {
                         TextElementsView(
                             elements: cell,
                             onTapMan: onTapMan,
-                            onTapLink: onTapLink,
                             highlight: highlight,
                             subIndex: offsets[rowIndex] + cellIndex
                         )

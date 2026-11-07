@@ -24,7 +24,7 @@ object Theme {
     // Text formatting functions
     fun title(text: String): String = titleStyle(text)
     fun selected(text: String): String = selectedStyle(text)
-    fun help(text: String): String = com.github.ajalt.mordant.rendering.TextStyles.dim(text)
+    fun help(text: String): String = dim(text)
     fun code(text: String): String = codeStyle(text)
     fun header(text: String): String = headerStyle(text)
     fun highlight(text: String): String = primary(text)
@@ -46,7 +46,6 @@ object Theme {
     // Logo styling - gradient from bright to regular red
     fun logoLine(line: String, lineIndex: Int): String = when {
         lineIndex < 3 -> brightRed(line)
-        lineIndex < 6 -> red(line)
         else -> red(line)
     }
 

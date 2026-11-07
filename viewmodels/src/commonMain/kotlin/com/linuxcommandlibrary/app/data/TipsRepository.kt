@@ -2,113 +2,15 @@ package com.linuxcommandlibrary.app.data
 
 import com.linuxcommandlibrary.shared.MarkdownParser
 import com.linuxcommandlibrary.shared.TipInfo
-import com.linuxcommandlibrary.shared.TipSectionElement
 import com.linuxcommandlibrary.shared.platform.AssetReader
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
-import kotlinx.collections.immutable.toImmutableList
 
 class TipsRepository(private val assetReader: AssetReader) {
 
-    private companion object {
-        val TIP_BLOCK_REGEX = Regex("(?=^## )", RegexOption.MULTILINE)
-
-        // Applied per line of tips.md, so it is compiled once rather than a few hundred times.
-        val ANCHOR_OPEN_REGEX = Regex("""<a href="[^"]*">""")
-    }
-
     fun getTips(): ImmutableList<TipInfo> = try {
-        val content = assetReader.readFile("tips.md") ?: return persistentListOf()
-        parseTips(content)
+        assetReader.readFile("tips.md")?.let(MarkdownParser::parseTips) ?: persistentListOf()
     } catch (e: Exception) {
         persistentListOf()
     }
-
-    private fun parseTips(content: String): ImmutableList<TipInfo> {
-        val tips = mutableListOf<TipInfo>()
-
-        val tipBlocks = content.split(TIP_BLOCK_REGEX)
-            .filter { it.trim().startsWith("## ") }
-
-        for (block in tipBlocks) {
-            val lines = block.lines()
-            val titleLine = lines.firstOrNull() ?: continue
-            val title = titleLine.removePrefix("## ").trim()
-            if (title.isEmpty()) continue
-
-            val contentLines = lines.drop(1)
-            val sections = parseContent(contentLines)
-
-            tips.add(
-                TipInfo(
-                    id = title.hashCode().toLong(),
-                    title = title,
-                    sections = sections.toImmutableList(),
-                ),
-            )
-        }
-
-        return tips.toImmutableList()
-    }
-
-    private fun parseContent(lines: List<String>): List<TipSectionElement> {
-        val sections = mutableListOf<TipSectionElement>()
-        var i = 0
-
-        while (i < lines.size) {
-            val line = lines[i]
-
-            when {
-                line.trim().startsWith("|") && line.trim().endsWith("|") -> {
-                    val tableLines = mutableListOf<String>()
-                    while (i < lines.size && lines[i].trim().let { it.startsWith("|") && it.endsWith("|") }) {
-                        tableLines.add(lines[i])
-                        i++
-                    }
-                    if (tableLines.isNotEmpty()) {
-                        val table = MarkdownParser.parseMarkdownTable(tableLines)
-                        if (table != null) {
-                            sections.add(table)
-                        }
-                    }
-                }
-
-                line.trim().startsWith("```") && line.trim().endsWith("```") -> {
-                    val codeContent = line.trim().removeSurrounding("```")
-                    val elements = MarkdownParser.parseCodeToElements(codeContent)
-                    sections.add(
-                        TipSectionElement.Code(
-                            command = MarkdownParser.cleanMarkdownCommand(codeContent),
-                            elements = elements.toImmutableList(),
-                        ),
-                    )
-                    i++
-                }
-
-                line.trim().isNotEmpty() -> {
-                    val cleanText = cleanHtmlText(line.trim())
-                    if (cleanText.isNotEmpty()) {
-                        sections.add(TipSectionElement.Text(MarkdownParser.parseTextWithBold(cleanText)))
-                    }
-                    i++
-                }
-
-                else -> {
-                    i++
-                }
-            }
-        }
-
-        return sections
-    }
-
-    private fun cleanHtmlText(text: String): String = text
-        .replace(ANCHOR_OPEN_REGEX, "")
-        .replace("</a>", "")
-        .replace("<code>", "")
-        .replace("</code>", "")
-        .replace("&gt;", ">")
-        .replace("&lt;", "<")
-        .replace("&amp;", "&")
-        .trim()
 }

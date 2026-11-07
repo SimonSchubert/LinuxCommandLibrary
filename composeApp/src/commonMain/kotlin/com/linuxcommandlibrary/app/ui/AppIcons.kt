@@ -32,27 +32,6 @@ object AppIcons {
         }.build()
     }
 
-    val ArrowBackIos: ImageVector by lazy {
-        ImageVector.Builder(
-            name = "ArrowBackIos",
-            defaultWidth = 24.dp,
-            defaultHeight = 24.dp,
-            viewportWidth = 24f,
-            viewportHeight = 24f,
-            autoMirror = true,
-        ).apply {
-            path(fill = SolidColor(Color.Black)) {
-                moveTo(11.67f, 3.87f)
-                lineTo(9.9f, 2.1f)
-                lineTo(0.0f, 12.0f)
-                lineToRelative(9.9f, 9.9f)
-                lineToRelative(1.77f, -1.77f)
-                lineTo(3.54f, 12.0f)
-                close()
-            }
-        }.build()
-    }
-
     val Close: ImageVector by lazy {
         ImageVector.Builder(
             name = "Close",

@@ -33,8 +33,7 @@ class LinuxPreferencesStorage(
         persist()
     }
 
-    override fun getBoolean(key: String, defaultValue: Boolean): Boolean =
-        values[key]?.toBooleanStrictOrNull() ?: defaultValue
+    override fun getBoolean(key: String, defaultValue: Boolean): Boolean = values[key]?.toBooleanStrictOrNull() ?: defaultValue
 
     override fun putBoolean(key: String, value: Boolean) = putString(key, value.toString())
 

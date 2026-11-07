@@ -158,7 +158,7 @@ private fun CommandsListPane(
 }
 
 @Composable
-private fun EmptyDetailPlaceholder(text: String) {
+internal fun EmptyDetailPlaceholder(text: String) {
     Box(
         modifier = Modifier
             .fillMaxSize()

@@ -3,9 +3,7 @@ package com.linuxcommandlibrary.app
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.windowInsetsPadding
@@ -34,9 +32,7 @@ internal fun ExpandedLinuxLayout(
         modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.surfaceContainer)
-            .windowInsetsPadding(
-                WindowInsets.safeDrawing.only(WindowInsetsSides.Horizontal + WindowInsetsSides.Vertical),
-            )
+            .windowInsetsPadding(WindowInsets.safeDrawing)
             .padding(start = 4.dp, top = 16.dp, end = 16.dp),
     ) {
         LinuxNavigationSuite(

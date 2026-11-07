@@ -22,47 +22,38 @@ object MarkdownParser {
     /**
      * Parse text with **bold** and _italic_ formatting into TextElement list.
      */
-    fun parseTextWithBold(text: String): ImmutableList<TextElement> {
+    fun parseTextWithBold(text: String): ImmutableList<TextElement> = parseInline(text, withCode = false)
+
+    /**
+     * Earliest-match inline parser for **bold**, _italic_ and (optionally) `code` with man links.
+     */
+    private fun parseInline(text: String, withCode: Boolean): ImmutableList<TextElement> {
         val elements = mutableListOf<TextElement>()
         var remaining = text
 
         while (remaining.isNotEmpty()) {
-            val boldMatch = boldRegex.find(remaining)
-            val italicMatch = italicRegex.find(remaining)
+            val match = listOfNotNull(
+                boldRegex.find(remaining),
+                italicRegex.find(remaining),
+                if (withCode) inlineCodeRegex.find(remaining) else null,
+            ).minByOrNull { it.range.first }
 
-            // Find the earliest match
-            val earliestMatch = listOfNotNull(
-                boldMatch?.let { it.range.first to "bold" },
-                italicMatch?.let { it.range.first to "italic" },
-            ).minByOrNull { it.first }
-
-            if (earliestMatch == null) {
-                if (remaining.isNotEmpty()) {
-                    elements.add(TextElement.Plain(remaining))
-                }
+            if (match == null) {
+                elements.add(TextElement.Plain(remaining))
                 break
             }
 
-            val (matchStart, matchType) = earliestMatch
-
-            // Add text before the match
-            if (matchStart > 0) {
-                elements.add(TextElement.Plain(remaining.substring(0, matchStart)))
+            if (match.range.first > 0) {
+                elements.add(TextElement.Plain(remaining.substring(0, match.range.first)))
             }
 
-            when (matchType) {
-                "bold" -> {
-                    val match = boldMatch!!
-                    elements.add(TextElement.Bold(match.groupValues[1]))
-                    remaining = remaining.substring(match.range.last + 1)
-                }
-
-                "italic" -> {
-                    val match = italicMatch!!
-                    elements.add(TextElement.Italic(match.groupValues[1]))
-                    remaining = remaining.substring(match.range.last + 1)
-                }
+            val content = match.groupValues[1]
+            when (match.value.first()) {
+                '*' -> elements.add(TextElement.Bold(content))
+                '_' -> elements.add(TextElement.Italic(content))
+                else -> parseInlineCodeContent(content, elements)
             }
+            remaining = remaining.substring(match.range.last + 1)
         }
 
         return elements.toImmutableList()
@@ -121,6 +112,19 @@ object MarkdownParser {
      */
     fun cleanMarkdownCommand(code: String): String = code.replace(linkTextRegex, "$1")
 
+    private fun codeBlock(code: String) = TipSectionElement.Code(
+        command = cleanMarkdownCommand(code),
+        elements = parseCodeToElements(code).toImmutableList(),
+    )
+
+    /**
+     * The document title: the first `# ` header line, or null if there is none.
+     */
+    fun parseTitle(content: String): String? = content.lineSequence()
+        .firstOrNull { it.startsWith("# ") }
+        ?.removePrefix("# ")
+        ?.trim()
+
     /**
      * Parse markdown content into sections suitable for display.
      * Handles bold text, code blocks (triple backticks), and blockquotes.
@@ -146,14 +150,7 @@ object MarkdownParser {
 
                 // Inline code block ```code``` (must have content between markers, length > 6)
                 line.trim().let { it.startsWith("```") && it.endsWith("```") && it.length > 6 } -> {
-                    val codeContent = line.trim().removeSurrounding("```")
-                    val elements = parseCodeToElements(codeContent)
-                    sections.add(
-                        TipSectionElement.Code(
-                            command = cleanMarkdownCommand(codeContent),
-                            elements = elements.toImmutableList(),
-                        ),
-                    )
+                    sections.add(codeBlock(line.trim().removeSurrounding("```")))
                     i++
                 }
 
@@ -166,14 +163,7 @@ object MarkdownParser {
                         i++
                     }
                     if (i < lines.size) i++ // Skip closing ```
-                    val codeContent = codeLines.joinToString("\n")
-                    val elements = parseCodeToElements(codeContent)
-                    sections.add(
-                        TipSectionElement.Code(
-                            command = cleanMarkdownCommand(codeContent),
-                            elements = elements.toImmutableList(),
-                        ),
-                    )
+                    sections.add(codeBlock(codeLines.joinToString("\n")))
                 }
 
                 // Blockquote
@@ -243,63 +233,7 @@ object MarkdownParser {
     /**
      * Parse content within a table cell, handling bold, italic, inline code, and man links.
      */
-    fun parseTableCellContent(cell: String): ImmutableList<TextElement> {
-        val elements = mutableListOf<TextElement>()
-        var remaining = cell
-
-        // Matches bold (**text**), italic (_text_), inline code with man link (`[text](/man/command) ...`), or plain inline code (`...`)
-        while (remaining.isNotEmpty()) {
-            val boldMatch = boldRegex.find(remaining)
-            val italicMatch = italicRegex.find(remaining)
-            val codeMatch = inlineCodeRegex.find(remaining)
-
-            // Find the earliest match
-            val earliestMatch = listOfNotNull(
-                boldMatch?.let { it.range.first to "bold" },
-                italicMatch?.let { it.range.first to "italic" },
-                codeMatch?.let { it.range.first to "code" },
-            ).minByOrNull { it.first }
-
-            if (earliestMatch == null) {
-                // No more matches, add remaining as text
-                if (remaining.isNotEmpty()) {
-                    elements.add(TextElement.Plain(remaining))
-                }
-                break
-            }
-
-            val (matchStart, matchType) = earliestMatch
-
-            // Add text before the match
-            if (matchStart > 0) {
-                elements.add(TextElement.Plain(remaining.substring(0, matchStart)))
-            }
-
-            when (matchType) {
-                "bold" -> {
-                    val match = boldMatch!!
-                    elements.add(TextElement.Bold(match.groupValues[1]))
-                    remaining = remaining.substring(match.range.last + 1)
-                }
-
-                "italic" -> {
-                    val match = italicMatch!!
-                    elements.add(TextElement.Italic(match.groupValues[1]))
-                    remaining = remaining.substring(match.range.last + 1)
-                }
-
-                "code" -> {
-                    val match = codeMatch!!
-                    val codeContent = match.groupValues[1]
-                    // Parse man links within inline code
-                    parseInlineCodeContent(codeContent, elements)
-                    remaining = remaining.substring(match.range.last + 1)
-                }
-            }
-        }
-
-        return elements.toImmutableList()
-    }
+    fun parseTableCellContent(cell: String): ImmutableList<TextElement> = parseInline(cell, withCode = true)
 
     /**
      * Parse inline code content for man links.
@@ -374,9 +308,7 @@ object MarkdownParser {
             }
 
             // Only treat as header if NOT inside code block
-            if (!insideCodeBlock && line.startsWith(headerPrefix) &&
-                (headerPrefix == "## " || !line.startsWith("## "))
-            ) {
+            if (!insideCodeBlock && line.startsWith(headerPrefix)) {
                 // Save previous section
                 if (currentTitle != null) {
                     sections.add(currentTitle to currentContent.toString().trim())
@@ -411,17 +343,6 @@ object MarkdownParser {
      * Parse a basics markdown file into BasicInfo.
      */
     fun parseBasic(content: String): BasicInfo {
-        val lines = content.lines()
-        var title = ""
-
-        // Find the title (# Header)
-        for (line in lines) {
-            if (line.startsWith("# ") && !line.startsWith("## ")) {
-                title = line.removePrefix("# ").trim()
-                break
-            }
-        }
-
         // Get groups using ## headers
         val groups = splitByHeaders(content, "## ").map { (groupTitle, groupContent) ->
             BasicGroup(
@@ -431,7 +352,7 @@ object MarkdownParser {
             )
         }.toImmutableList()
 
-        return BasicInfo(title = title, groups = groups)
+        return BasicInfo(title = parseTitle(content) ?: "", groups = groups)
     }
 
     /**

@@ -20,44 +20,28 @@ fun HighlightedText(
 ) {
     val bodyLarge = MaterialTheme.typography.bodyLarge
     val ltrStyle = remember(bodyLarge) { bodyLarge.copy(textDirection = TextDirection.Ltr) }
-    if (pattern.isEmpty()) {
-        Text(
-            text = text,
-            modifier = modifier,
-            maxLines = maxLines,
-            overflow = TextOverflow.Ellipsis,
-            style = ltrStyle,
-        )
-    } else if (text.equals(pattern, ignoreCase = true)) {
-        Text(
-            text = text,
-            modifier = modifier,
-            maxLines = maxLines,
-            overflow = TextOverflow.Ellipsis,
-            color = MaterialTheme.colorScheme.primary,
-            style = ltrStyle,
-        )
-    } else {
-        val highlightColor = MaterialTheme.colorScheme.primary
-        val annotatedString = remember(text, pattern, highlightColor) {
-            buildAnnotatedString {
-                val splitText = text.split(pattern, ignoreCase = true)
-                splitText.forEachIndexed { index, s ->
-                    append(s)
-                    if (index != splitText.size - 1) {
-                        withStyle(style = SpanStyle(color = highlightColor)) {
-                            append(pattern)
-                        }
-                    }
+    val highlightColor = MaterialTheme.colorScheme.primary
+    val annotatedString = remember(text, pattern, highlightColor) {
+        buildAnnotatedString {
+            // Style the original substring, not the pattern, so the text keeps its own casing.
+            var from = 0
+            while (pattern.isNotEmpty()) {
+                val start = text.indexOf(pattern, from, ignoreCase = true)
+                if (start < 0) break
+                append(text.substring(from, start))
+                withStyle(SpanStyle(color = highlightColor)) {
+                    append(text.substring(start, start + pattern.length))
                 }
+                from = start + pattern.length
             }
+            append(text.substring(from))
         }
-        Text(
-            text = annotatedString,
-            modifier = modifier,
-            maxLines = maxLines,
-            overflow = TextOverflow.Ellipsis,
-            style = ltrStyle,
-        )
     }
+    Text(
+        text = annotatedString,
+        modifier = modifier,
+        maxLines = maxLines,
+        overflow = TextOverflow.Ellipsis,
+        style = ltrStyle,
+    )
 }

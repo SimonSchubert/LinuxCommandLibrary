@@ -9,13 +9,12 @@ import com.linuxcommandlibrary.shared.platform.AssetReader
 class LinuxAssetReader(
     private val baseDir: String = env("LCL_ASSETS_DIR") ?: "/usr/share/lcl/assets",
 ) : AssetReader {
-    override fun listFiles(path: String): List<String> =
-        readTextFile("$baseDir/$path/index.txt")
-            ?.lineSequence()
-            ?.map { it.trim() }
-            ?.filter { it.isNotEmpty() }
-            ?.toList()
-            .orEmpty()
+    override fun listFiles(path: String): List<String> = readTextFile("$baseDir/$path/index.txt")
+        ?.lineSequence()
+        ?.map { it.trim() }
+        ?.filter { it.isNotEmpty() }
+        ?.toList()
+        .orEmpty()
 
     override fun readFile(path: String): String? = readTextFile("$baseDir/$path")
 }

@@ -1,5 +1,6 @@
 package com.linuxcommandlibrary.desktop
 
+import com.linuxcommandlibrary.shared.MarkdownParser
 import com.linuxcommandlibrary.shared.basicsSortOrder
 import java.io.File
 
@@ -38,10 +39,7 @@ object MarkdownFileUtils {
     fun getBasicCategories(): List<String> {
         val basicsDir = File("assets/basics")
         return basicsDir.listFiles { file -> file.extension == "md" }
-            ?.mapNotNull { mdFile ->
-                val firstLine = mdFile.readLines().firstOrNull { it.startsWith("# ") }
-                firstLine?.removePrefix("# ")?.trim()
-            }
+            ?.mapNotNull { MarkdownParser.parseTitle(it.readText()) }
             ?.sortedBy { basicsSortOrder.indexOf(it) }
             ?: emptyList()
     }

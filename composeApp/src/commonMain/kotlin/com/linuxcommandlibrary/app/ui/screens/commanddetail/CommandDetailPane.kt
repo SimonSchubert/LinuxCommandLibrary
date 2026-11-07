@@ -42,7 +42,6 @@ import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
-import com.linuxcommandlibrary.app.platform.backIcon
 import com.linuxcommandlibrary.app.ui.AppIcons
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
 import com.linuxcommandlibrary.app.ui.composables.AutoSizeText
@@ -200,9 +199,10 @@ fun CommandDetailPane(
                 )
             }
         }
-        CommandDetailScreen(
-            viewModel = viewModel,
+        CommandDetailContent(
+            uiState = uiState,
             onNavigate = onNavigate,
+            onToggleExpanded = viewModel::onToggleExpanded,
             searchQuery = searchState.searchText,
             activeMatchIndex = activeMatchIndex,
             onMatchIndexChange = { matchIndex = it },
@@ -242,7 +242,7 @@ private fun CommandSearchTopBar(
             modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
             onClick = onClose,
         ) {
-            Icon(imageVector = backIcon, contentDescription = "Close search")
+            Icon(imageVector = AppIcons.ArrowBack, contentDescription = "Close search")
         }
     }
     val queryField: @Composable (Modifier) -> Unit = { fieldModifier ->

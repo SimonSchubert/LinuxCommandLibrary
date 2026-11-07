@@ -29,7 +29,6 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -78,26 +77,6 @@ private data class MatchScrollTarget(
     val elementIndex: Int,
     val ordinal: Int,
 )
-
-@Composable
-fun CommandDetailScreen(
-    viewModel: CommandDetailViewModel,
-    onNavigate: (NavEvent) -> Unit,
-    searchQuery: String = "",
-    activeMatchIndex: Int = 0,
-    onMatchIndexChange: (MatchIndex) -> Unit = {},
-) {
-    val uiState by viewModel.state.collectAsState()
-
-    CommandDetailContent(
-        uiState = uiState,
-        onNavigate = onNavigate,
-        onToggleExpanded = viewModel::onToggleExpanded,
-        searchQuery = searchQuery,
-        activeMatchIndex = activeMatchIndex,
-        onMatchIndexChange = onMatchIndexChange,
-    )
-}
 
 @Composable
 fun CommandDetailContent(
@@ -282,30 +261,20 @@ private fun CommandSectionColumn(
             ),
             elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
         ) {
+            val uriHandler = LocalUriHandler.current
             when {
-                section.title == "SEE ALSO" -> SeeAlsoSectionContent(
-                    parsedContent = section.parsedContent,
-                    seeAlsoCommands = seeAlsoCommands,
-                    onNavigate = onNavigate,
-                    highlights = highlights,
-                    onElementPositioned = onElementPositioned,
+                section.title == "SEE ALSO" && seeAlsoCommands.isNotEmpty() -> ChipFlowRow(
+                    labels = seeAlsoCommands,
+                    onClick = { onNavigate(NavEvent.ToCommand(seeAlsoCommands[it])) },
                 )
 
-                section.title == "RESOURCES" -> ResourcesSectionContent(
-                    parsedContent = section.parsedContent,
-                    resources = resources,
-                    onNavigate = onNavigate,
-                    highlights = highlights,
-                    onElementPositioned = onElementPositioned,
+                section.title == "RESOURCES" && resources.isNotEmpty() -> ChipFlowRow(
+                    labels = resources.map { it.label },
+                    onClick = { uriHandler.openUri(resources[it].url) },
                 )
 
-                section.title.equals("INSTALL", ignoreCase = true) -> InstallSectionContent(
-                    parsedContent = section.parsedContent,
-                    installEntries = installEntries,
-                    onNavigate = onNavigate,
-                    highlights = highlights,
-                    onElementPositioned = onElementPositioned,
-                )
+                section.title.equals("INSTALL", ignoreCase = true) && installEntries.isNotEmpty() ->
+                    InstallSectionContent(installEntries)
 
                 else -> DefaultSectionContent(
                     parsedContent = section.parsedContent,
@@ -318,101 +287,30 @@ private fun CommandSectionColumn(
     }
 }
 
+/** SEE ALSO / RESOURCES with data: one chip per entry instead of the raw markdown. */
 @Composable
-private fun SeeAlsoSectionContent(
-    parsedContent: ImmutableList<TipSectionElement>,
-    seeAlsoCommands: ImmutableList<String>,
-    onNavigate: (NavEvent) -> Unit,
-    highlights: Map<Int, ElementHighlight>? = null,
-    onElementPositioned: ((Int, LayoutCoordinates) -> Unit)? = null,
-) {
-    if (seeAlsoCommands.isNotEmpty()) {
-        FlowRow(
-            modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            seeAlsoCommands.forEach { name ->
-                SuggestionChip(
-                    modifier = Modifier.pointerHoverIcon(PointerIcon.Hand, overrideDescendants = true),
-                    onClick = rememberDebouncedClick {
-                        onNavigate(NavEvent.ToCommand(name))
-                    },
-                    label = {
-                        Text(
-                            text = name,
-                            color = MaterialTheme.colorScheme.onSurface,
-                        )
-                    },
-                )
-            }
+private fun ChipFlowRow(labels: List<String>, onClick: (index: Int) -> Unit) {
+    FlowRow(
+        modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        labels.forEachIndexed { index, label ->
+            SuggestionChip(
+                modifier = Modifier.pointerHoverIcon(PointerIcon.Hand, overrideDescendants = true),
+                onClick = rememberDebouncedClick { onClick(index) },
+                label = {
+                    Text(
+                        text = label,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                },
+            )
         }
-    } else {
-        DefaultSectionContent(
-            parsedContent = parsedContent,
-            onNavigate = onNavigate,
-            highlights = highlights,
-            onElementPositioned = onElementPositioned,
-        )
     }
 }
 
 @Composable
-private fun ResourcesSectionContent(
-    parsedContent: ImmutableList<TipSectionElement>,
-    resources: ImmutableList<ResourceLink>,
-    onNavigate: (NavEvent) -> Unit,
-    highlights: Map<Int, ElementHighlight>? = null,
-    onElementPositioned: ((Int, LayoutCoordinates) -> Unit)? = null,
-) {
-    if (resources.isNotEmpty()) {
-        val uriHandler = LocalUriHandler.current
-        FlowRow(
-            modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            resources.forEach { resource ->
-                SuggestionChip(
-                    modifier = Modifier.pointerHoverIcon(PointerIcon.Hand, overrideDescendants = true),
-                    onClick = rememberDebouncedClick {
-                        uriHandler.openUri(resource.url)
-                    },
-                    label = {
-                        Text(
-                            text = resource.label,
-                            color = MaterialTheme.colorScheme.onSurface,
-                        )
-                    },
-                )
-            }
-        }
-    } else {
-        DefaultSectionContent(
-            parsedContent = parsedContent,
-            onNavigate = onNavigate,
-            highlights = highlights,
-            onElementPositioned = onElementPositioned,
-        )
-    }
-}
-
-@Composable
-private fun InstallSectionContent(
-    parsedContent: ImmutableList<TipSectionElement>,
-    installEntries: ImmutableList<InstallEntry>,
-    onNavigate: (NavEvent) -> Unit,
-    highlights: Map<Int, ElementHighlight>? = null,
-    onElementPositioned: ((Int, LayoutCoordinates) -> Unit)? = null,
-) {
-    if (installEntries.isEmpty()) {
-        DefaultSectionContent(
-            parsedContent = parsedContent,
-            onNavigate = onNavigate,
-            highlights = highlights,
-            onElementPositioned = onElementPositioned,
-        )
-        return
-    }
-
+private fun InstallSectionContent(installEntries: ImmutableList<InstallEntry>) {
     Column(
         modifier = Modifier
             .fillMaxWidth()

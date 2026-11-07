@@ -3,6 +3,7 @@ package com.linuxcommandlibrary.desktop
 import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.TextElement
 import com.linuxcommandlibrary.shared.TipSectionElement
+import com.linuxcommandlibrary.shared.toPlainText
 
 /**
  * Renders TipSectionElement lists to HTML strings for the website.
@@ -10,37 +11,19 @@ import com.linuxcommandlibrary.shared.TipSectionElement
 object HtmlMarkdownRenderer {
 
     /**
-     * Render a list of sections to HTML string.
+     * Render a list of sections to HTML string. With [previews], multi-line code blocks are styled
+     * as previews (monospace, no $ prefix, no copy button).
      */
-    fun renderSections(sections: List<TipSectionElement>): String = buildString {
-        sections.forEach { section ->
-            when (section) {
-                is TipSectionElement.Text -> append(renderText(section))
-                is TipSectionElement.Blockquote -> append(renderBlockquote(section))
-                is TipSectionElement.Code -> append(renderCode(section))
-                is TipSectionElement.Table -> append(renderTable(section))
-            }
-        }
-    }
-
-    /**
-     * Render sections with multi-line code blocks styled as previews (monospace, no $ prefix, no copy button).
-     */
-    fun renderSectionsWithPreviews(sections: List<TipSectionElement>): String = buildString {
+    fun renderSections(sections: List<TipSectionElement>, previews: Boolean = false): String = buildString {
         sections.forEach { section ->
             when (section) {
                 is TipSectionElement.Text -> append(renderText(section))
 
                 is TipSectionElement.Blockquote -> append(renderBlockquote(section))
 
-                is TipSectionElement.Code -> {
-                    val isMultiLine = section.command.contains("\n")
-                    if (isMultiLine) {
-                        append(renderPreviewCode(section))
-                    } else {
-                        append(renderCode(section))
-                    }
-                }
+                is TipSectionElement.Code -> append(
+                    if (previews && section.command.contains("\n")) renderPreviewCode(section) else renderCode(section),
+                )
 
                 is TipSectionElement.Table -> append(renderTable(section))
             }
@@ -67,52 +50,38 @@ object HtmlMarkdownRenderer {
         is TextElement.Plain -> element.text.escapeHtml()
         is TextElement.Bold -> "<b>${element.text.escapeHtml()}</b>"
         is TextElement.Italic -> "<i>${element.text.escapeHtml()}</i>"
-        is TextElement.Man -> """<a href="/man/${element.man}" title="${element.man} man page">${element.man}</a>"""
+        is TextElement.Man -> manLink(element.man)
         is TextElement.Link -> "<b>${element.text.escapeHtml()}</b>"
     }
 
-    private fun renderCode(code: TipSectionElement.Code): String {
-        val escapedCommand = code.command.escapeHtml().replace("'", "&#039;")
-        return buildString {
-            append("""<div class="code-wrapper"><span class="code">$ """)
-            code.elements.forEach { element ->
-                when (element) {
-                    is CommandElement.Man -> append("""<a href="/man/${element.man}" title="${element.man} man page">${element.man}</a>""")
-
-                    is CommandElement.Text -> {
-                        element.text.split("\n").forEachIndexed { index, line ->
-                            if (index > 0) {
-                                append("<br>")
-                            }
-                            // Replace spaces with &nbsp; to preserve formatting
-                            line.split(" ").forEachIndexed { spaceIndex, word ->
-                                if (spaceIndex > 0) {
-                                    append("&nbsp;")
-                                }
-                                append(word.escapeHtml())
-                            }
-                        }
-                    }
-
-                    is CommandElement.Url -> append("""<a href="${element.url}" target="_blank" rel="noopener">${element.command.escapeHtml()}</a>""")
-                }
-            }
-            append("""</span><div onclick="javascript:copy('$escapedCommand')" class="copy-button">""")
-            append("""<img src="/images/icon-copy.svg" alt="copy" width="24" height="24"></div></div>""")
-        }
-    }
-
-    private fun renderPreviewCode(code: TipSectionElement.Code): String = buildString {
-        append("""<pre class="code-preview">""")
+    private fun renderCode(code: TipSectionElement.Code): String = buildString {
+        append("""<div class="code-wrapper"><span class="code">$ """)
         code.elements.forEach { element ->
             when (element) {
-                is CommandElement.Text -> append(element.text.escapeHtml())
-                is CommandElement.Man -> append(element.man.escapeHtml())
-                is CommandElement.Url -> append(element.command.escapeHtml())
+                is CommandElement.Man -> append(manLink(element.man))
+
+                is CommandElement.Text -> {
+                    element.text.split("\n").forEachIndexed { index, line ->
+                        if (index > 0) {
+                            append("<br>")
+                        }
+                        // Replace spaces with &nbsp; to preserve formatting
+                        line.split(" ").forEachIndexed { spaceIndex, word ->
+                            if (spaceIndex > 0) {
+                                append("&nbsp;")
+                            }
+                            append(word.escapeHtml())
+                        }
+                    }
+                }
+
+                is CommandElement.Url -> append("""<a href="${element.url}" target="_blank" rel="noopener">${element.command.escapeHtml()}</a>""")
             }
         }
-        append("</pre>")
+        append(copyButtonEnd(code.command))
     }
+
+    private fun renderPreviewCode(code: TipSectionElement.Code): String = """<pre class="code-preview">${code.elements.toPlainText().escapeHtml()}</pre>"""
 
     private fun renderTable(table: TipSectionElement.Table): String = buildString {
         append("<table>")
@@ -147,23 +116,10 @@ object HtmlMarkdownRenderer {
             append("<tr>")
             row.forEachIndexed { index, cells ->
                 append("<td>")
-                if (index == 0) {
-                    // First column often contains bold shortcuts
-                    cells.forEach { element ->
-                        when (element) {
-                            is TextElement.Bold -> append("<b>${element.text.escapeHtml()}</b>")
-                            else -> append(renderTextElement(element))
-                        }
-                    }
+                if (index > 0 && cells.any { it is TextElement.Man }) {
+                    append(renderCellAsCode(cells))
                 } else {
-                    val hasCode = cells.any { it is TextElement.Man }
-                    if (hasCode) {
-                        append(renderCellAsCode(cells))
-                    } else {
-                        cells.forEach { element ->
-                            append(renderTextElement(element))
-                        }
-                    }
+                    cells.forEach { append(renderTextElement(it)) }
                 }
                 append("</td>")
             }
@@ -174,21 +130,12 @@ object HtmlMarkdownRenderer {
     }
 
     private fun renderCellAsCode(elements: List<TextElement>): String {
-        val command = elements.joinToString("") {
-            when (it) {
-                is TextElement.Man -> it.man
-                is TextElement.Plain -> it.text
-                is TextElement.Bold -> it.text
-                is TextElement.Italic -> it.text
-                is TextElement.Link -> it.text
-            }
-        }
-        val escapedCommand = command.escapeHtml().replace("'", "&#039;")
+        val command = elements.toPlainText()
         return buildString {
             append("""<div class="code-wrapper"><span class="code">$ """)
             elements.forEach { element ->
                 when (element) {
-                    is TextElement.Man -> append("""<a href="/man/${element.man}" title="${element.man} man page">${element.man}</a>""")
+                    is TextElement.Man -> append(manLink(element.man))
 
                     is TextElement.Plain -> {
                         element.text.split(" ").forEachIndexed { i, word ->
@@ -200,17 +147,26 @@ object HtmlMarkdownRenderer {
                     else -> append(renderTextElement(element))
                 }
             }
-            append("""</span><div onclick="javascript:copy('$escapedCommand')" class="copy-button">""")
-            append("""<img src="/images/icon-copy.svg" alt="copy" width="24" height="24"></div></div>""")
+            append(copyButtonEnd(command))
         }
     }
 
-    /**
-     * Escape HTML special characters.
-     */
-    private fun String.escapeHtml(): String = this
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace("\"", "&quot;")
+    private fun manLink(man: String) = """<a href="/man/$man" title="$man man page">$man</a>"""
+
+    private fun copyButtonEnd(command: String) = """</span><div onclick="javascript:copy('${command.escapeJsAttribute()}')" class="copy-button">""" +
+        """<img src="/images/icon-copy.svg" alt="copy" width="24" height="24"></div></div>"""
 }
+
+/**
+ * Escape HTML special characters.
+ */
+private fun String.escapeHtml(): String = this
+    .replace("&", "&amp;")
+    .replace("<", "&lt;")
+    .replace(">", "&gt;")
+    .replace("\"", "&quot;")
+
+/**
+ * Escape a command for embedding in a single-quoted `onclick="copy('...')"` attribute.
+ */
+internal fun String.escapeJsAttribute(): String = escapeHtml().replace("'", "&#039;")
