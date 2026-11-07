@@ -190,7 +190,11 @@ internal fun rememberLinuxNavState(
     // landscape phone window without truncating list rows.
     // Default inter-pane spacer is 24dp at expanded width — tighter at 8dp avoids the wide
     // dead column between list and detail.
-    val listDetailDirective = calculatePaneScaffoldDirective(adaptiveInfo).copy(
+    // Adaptive info comes from the V2 API, which allows 3 partitions at XL width (>=1600dp);
+    // cap at 2 since list-detail has no extra pane.
+    val defaultDirective = calculatePaneScaffoldDirective(adaptiveInfo)
+    val listDetailDirective = defaultDirective.copy(
+        maxHorizontalPartitions = defaultDirective.maxHorizontalPartitions.coerceAtMost(2),
         defaultPanePreferredWidth = 320.dp,
         horizontalPartitionSpacerSize = 8.dp,
     )

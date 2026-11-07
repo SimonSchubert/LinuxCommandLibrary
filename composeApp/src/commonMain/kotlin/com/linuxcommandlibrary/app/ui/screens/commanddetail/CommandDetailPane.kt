@@ -31,7 +31,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.backhandler.BackHandler
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.SolidColor
@@ -41,6 +40,9 @@ import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
+import androidx.navigationevent.NavigationEventInfo
+import androidx.navigationevent.compose.NavigationBackHandler
+import androidx.navigationevent.compose.rememberNavigationEventState
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.ui.AppIcons
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
@@ -88,14 +90,13 @@ fun CommandDetailPane(
         activeMatchIndex = 0
     }
 
-    // Deprecated in CMP 1.11 in favor of androidx.navigationevent's NavigationEventHandler, but
-    // that reads LocalNavigationEventDispatcherOwner, which CMP only wires up via its internal
-    // compat local that this BackHandler uses - migrating would throw on desktop/iOS. Revisit
-    // once CMP provides the public local (see JetBrains/compose-multiplatform).
-    // Nested inside the app-level handler in App.kt; Compose routes back to the innermost
-    // enabled one, so back closes the search before it pops the pane.
-    @Suppress("DEPRECATION")
-    BackHandler(enabled = searchState.isVisible) { searchState.clear() }
+    // Nested inside the app-level handler in App.kt; the dispatcher routes back to the most
+    // recently added enabled handler, so back closes the search before it pops the pane.
+    NavigationBackHandler(
+        state = rememberNavigationEventState(NavigationEventInfo.None),
+        isBackEnabled = searchState.isVisible,
+        onBackCompleted = { searchState.clear() },
+    )
 
     Column(
         modifier = Modifier

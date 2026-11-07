@@ -6,18 +6,19 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.adaptive.ExperimentalMaterial3AdaptiveApi
-import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
+import androidx.compose.material3.adaptive.currentWindowAdaptiveInfoV2
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteType
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.movableContentOf
 import androidx.compose.runtime.remember
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.backhandler.BackHandler
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.UriHandler
+import androidx.navigationevent.NavigationEventInfo
+import androidx.navigationevent.compose.NavigationBackHandler
+import androidx.navigationevent.compose.rememberNavigationEventState
 import com.linuxcommandlibrary.app.data.CommandsRepository
 import com.linuxcommandlibrary.app.nav.navigationSuiteTypeFor
 import com.linuxcommandlibrary.app.nav.rememberLinuxNavState
@@ -65,20 +66,19 @@ fun App(
     }
 }
 
-@OptIn(ExperimentalMaterial3AdaptiveApi::class, ExperimentalComposeUiApi::class)
+@OptIn(ExperimentalMaterial3AdaptiveApi::class)
 @Composable
 fun LinuxApp(initialDeeplink: String? = null) {
-    val adaptiveInfo = currentWindowAdaptiveInfo()
+    val adaptiveInfo = currentWindowAdaptiveInfoV2()
     val state = rememberLinuxNavState(initialDeeplink, adaptiveInfo)
     val layoutType = navigationSuiteTypeFor(adaptiveInfo)
     val isCompact = layoutType == NavigationSuiteType.NavigationBar
 
-    // Deprecated in CMP 1.11 in favor of androidx.navigationevent's NavigationEventHandler, but
-    // that reads LocalNavigationEventDispatcherOwner, which CMP only wires up via its internal
-    // compat local that this BackHandler uses - migrating would throw on desktop/iOS. Revisit
-    // once CMP provides the public local (see JetBrains/compose-multiplatform).
-    @Suppress("DEPRECATION")
-    BackHandler(enabled = state.isBackEnabled()) { state.onBack() }
+    NavigationBackHandler(
+        state = rememberNavigationEventState(NavigationEventInfo.None),
+        isBackEnabled = state.isBackEnabled(),
+        onBackCompleted = { state.onBack() },
+    )
 
     // Wrapped in movableContentOf so the navigation graph (and its mounted ListDetailPaneScaffold
     // navigators / SeekableTransitionState) survive the if/else swap when the window crosses the

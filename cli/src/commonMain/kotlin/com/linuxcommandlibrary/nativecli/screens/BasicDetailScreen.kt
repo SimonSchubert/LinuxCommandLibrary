@@ -58,16 +58,6 @@ class BasicDetailScreen(
         viewer = ContentViewer.fromText(content, pageSize = 20)
     }
 
-    private fun ContentFormatter.renderTextElements(elements: List<com.linuxcommandlibrary.shared.TextElement>): String = elements.joinToString("") { element ->
-        when (element) {
-            is com.linuxcommandlibrary.shared.TextElement.Plain -> element.text
-            is com.linuxcommandlibrary.shared.TextElement.Bold -> Theme.boldText(element.text)
-            is com.linuxcommandlibrary.shared.TextElement.Italic -> Theme.italicText(element.text)
-            is com.linuxcommandlibrary.shared.TextElement.Man -> element.man
-            is com.linuxcommandlibrary.shared.TextElement.Link -> element.text
-        }
-    }
-
     override fun render(): String {
         val sb = StringBuilder()
         sb.appendLine()

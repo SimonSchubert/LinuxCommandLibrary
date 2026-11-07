@@ -63,7 +63,7 @@ kotlin {
                 implementation(libs.compose.material3.adaptive.layout)
                 implementation(libs.compose.material3.adaptive.navigation)
                 implementation(libs.compose.ui)
-                implementation(libs.compose.ui.backhandler)
+                implementation(libs.navigationevent.compose)
                 implementation(libs.compose.components.resources)
                 implementation(libs.kotlinx.coroutines.core)
                 implementation(libs.kotlinx.collections.immutable)
