@@ -16,13 +16,33 @@ command-line utility for monitoring and managing NVIDIA GPU devices
 
 ```nvidia-smi -l [1]```
 
-**Show only specific GPU**
+**List GPUs with their UUIDs**
+
+```nvidia-smi -L```
+
+**Show only a specific GPU**
 
 ```nvidia-smi -i [0]```
 
-**Show processes using GPU**
+**Show detailed memory and temperature info**
+
+```nvidia-smi -q -d MEMORY,TEMPERATURE```
+
+**Monitor per-process GPU usage**
 
 ```nvidia-smi pmon```
+
+**Monitor device stats (power, temperature, utilization) every second**
+
+```nvidia-smi dmon```
+
+**List compute processes using the GPU**
+
+```nvidia-smi --query-compute-apps=pid,process_name,used_memory --format=csv```
+
+**Log selected metrics to CSV every 5 seconds**
+
+```nvidia-smi --query-gpu=timestamp,utilization.gpu,memory.used,temperature.gpu --format=csv -l [5] -f [gpu.csv]```
 
 **Query specific attributes**
 
@@ -30,15 +50,15 @@ command-line utility for monitoring and managing NVIDIA GPU devices
 
 **Set power limit** (watts)
 
-```nvidia-smi -pl [250]```
+```sudo nvidia-smi -i [0] -pl [250]```
 
-**Set persistence mode**
+**Enable persistence mode**
 
-```nvidia-smi -pm [1]```
+```sudo nvidia-smi -pm 1```
 
 **Reset GPU**
 
-```nvidia-smi -r```
+```sudo nvidia-smi -i [0] -r```
 
 **Show driver version**
 
@@ -58,41 +78,71 @@ nvidia-smi is included with the NVIDIA driver package and works with Tesla, Quad
 
 # PARAMETERS
 
-**-l** _sec_, **--loop=** _sec_
-> Continuously update every sec seconds.
-
-**-i** _id_
-> Target specific GPU by index.
+**-L**, **--list-gpus**
+> List each GPU (and MIG device) with its UUID.
 
 **-q**, **--query**
-> Display detailed information.
+> Display detailed GPU or unit information.
 
-**-d** _type_
-> Display specific info type (MEMORY, UTILIZATION, TEMPERATURE, POWER, CLOCK).
+**-d** _type_, **--display=**_type_
+> With **-q**, show only selected sections: MEMORY, UTILIZATION, ECC, TEMPERATURE, POWER, CLOCK, COMPUTE, PIDS, PERFORMANCE, SUPPORTED_CLOCKS and others (comma-separated).
 
-**--query-gpu=** _attrs_
-> Query specific attributes.
+**-i** _id_, **--id=**_id_
+> Target a specific GPU by index, PCI bus ID or UUID.
 
-**--format=** _format_
-> Output format (csv, noheader, nounits).
+**-l** _sec_, **--loop=**_sec_
+> Repeat the query every _sec_ seconds.
 
-**-pm** _mode_
-> Set persistence mode (0 or 1).
+**-lms** _ms_, **--loop-ms=**_ms_
+> Repeat the query every _ms_ milliseconds.
 
-**-pl** _watts_
-> Set power limit.
+**-f** _file_, **--filename=**_file_
+> Write output to a file instead of stdout.
+
+**-x**, **--xml-format**
+> Produce XML output (with **-q**).
+
+**--query-gpu=**_attrs_
+> Query specific GPU attributes (see **nvidia-smi --help-query-gpu**).
+
+**--query-compute-apps=**_attrs_
+> Query running compute processes (pid, process_name, used_memory, ...).
+
+**--format=**_format_
+> Output format for **--query-***: csv, optionally with noheader and nounits.
+
+**-pm** _mode_, **--persistence-mode=**_mode_
+> Enable (1) or disable (0) persistence mode. Linux only.
+
+**-pl** _watts_, **--power-limit=**_watts_
+> Set the board power limit in watts.
+
+**-c** _mode_, **--compute-mode=**_mode_
+> Set compute mode: DEFAULT, EXCLUSIVE_PROCESS or PROHIBITED.
+
+**-lgc** _min,max_, **--lock-gpu-clocks=**_min,max_
+> Lock GPU clocks to a range in MHz; **-rgc** resets them.
+
+**-mig** _mode_, **--multi-instance-gpu=**_mode_
+> Enable (1) or disable (0) MIG mode on supported GPUs.
 
 **-r**, **--gpu-reset**
-> Reset GPU.
+> Reset a GPU (requires root, **-i**, and no processes using it).
+
+**dmon**
+> Scrolling per-device monitoring of power, temperature, utilization and clocks.
 
 **pmon**
 > Process monitoring mode.
 
-**topo**
-> Show GPU topology.
+**topo -m**
+> Show the GPU/NIC topology matrix.
 
-**nvlink**
+**nvlink -s**
 > Show NVLink status.
+
+**mig**
+> Manage Multi-Instance GPU partitions (see **nvidia-smi-mig**).
 
 # QUERY ATTRIBUTES
 
@@ -104,15 +154,27 @@ nvidia-smi is included with the NVIDIA driver package and works with Tesla, Quad
 **utilization.memory**: Memory utilization %
 **temperature.gpu**: GPU temperature
 **power.draw**: Power consumption
+**power.limit**: Current power limit
+**clocks.sm**: Current SM clock
+**fan.speed**: Fan speed %
+**driver_version**: Driver version
 
 # CAVEATS
 
-Requires NVIDIA proprietary drivers. Some features limited on consumer GPUs. Power management requires root. Persistence mode recommended for servers to avoid initialization delays.
+Requires the NVIDIA driver (proprietary or open kernel modules); not available with nouveau. Some features limited on consumer GPUs. Changing settings (power limit, persistence, clocks, reset) requires root. Run **nvidia-smi --help-query-gpu** for the full attribute list. Persistence mode recommended for servers to avoid initialization delays.
 
 # HISTORY
 
-**nvidia-smi** has been part of the **NVIDIA driver package** since the early **2000s**. It evolved alongside NVIDIA's GPU computing platforms (CUDA), gaining features for monitoring compute workloads. The tool became essential with the rise of GPU computing for machine learning and scientific applications.
+**nvidia-smi** ships with the **NVIDIA driver package** and first appeared alongside NVIDIA's **Tesla** compute products in the late **2000s**. It evolved alongside NVIDIA's GPU computing platforms (CUDA), gaining features for monitoring compute workloads. The tool became essential with the rise of GPU computing for machine learning and scientific applications.
 
 # SEE ALSO
 
-[nvtop](/man/nvtop)(1), [gpustat](/man/gpustat)(1), [nvidia-settings](/man/nvidia-settings)(1)
+[nvidia-smi-mig](/man/nvidia-smi-mig)(1), [nvtop](/man/nvtop)(1), [nvitop](/man/nvitop)(1), [gpustat](/man/gpustat)(1), [nvidia-settings](/man/nvidia-settings)(1)
+
+# RESOURCES
+
+```[Homepage](https://developer.nvidia.com/system-management-interface)```
+
+```[Documentation](https://docs.nvidia.com/deploy/nvidia-smi/index.html)```
+
+<!-- verified: 2026-11-07 -->
