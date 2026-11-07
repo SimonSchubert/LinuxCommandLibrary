@@ -140,6 +140,7 @@ aichat.md
 aict.md
 aide.md
 aider.md
+aigude.md
 aim.md
 aimock.md
 air.md
@@ -1277,6 +1278,7 @@ cloctui.md
 clogin.md
 clojure.md
 clone.md
+cloneguard.md
 clonezilla.md
 cloud-init.md
 cloudflare-speed-cli.md
@@ -1320,6 +1322,7 @@ codecrafters.md
 codediff.md
 codeflowmap.md
 codeknow.md
+codemap.md
 codemod.md
 coderabbit.md
 codesign.md
@@ -1702,6 +1705,7 @@ deluser.md
 deno-fmt.md
 deno.md
 dep.md
+deployment.md
 depmod.md
 depsguard.md
 deptrust.md
@@ -2571,6 +2575,7 @@ func.md
 function.md
 fungible.md
 funzip.md
+fuseiso.md
 fuser.md
 fusermount.md
 fuzzel.md
@@ -2597,6 +2602,7 @@ ganache.md
 gat.md
 gatsby.md
 gau.md
+gauge.md
 gawk.md
 gbp.md
 gc.md
@@ -3119,6 +3125,7 @@ godap.md
 godoc.md
 godot.md
 goenv.md
+goethe.md
 gofmt.md
 gofumpt.md
 goimports.md
@@ -3178,6 +3185,8 @@ gpty.md
 gpu-screen-recorder.md
 gpu_check.md
 gpustat.md
+gpuworks-agent.md
+gpuworks.md
 gqrx.md
 grabc.md
 gradio.md
@@ -3550,6 +3559,7 @@ hygg.md
 hypercmd.md
 hypercorn.md
 hyperfine.md
+hyperflow-h3-flash.md
 hyprctl.md
 hyprcursor-util.md
 hypridle.md
@@ -3897,6 +3907,7 @@ jhipster.md
 jhsdb.md
 jid.md
 jigsaw.md
+jik.md
 jinfo.md
 jiq.md
 jira-browse.md
@@ -4067,6 +4078,7 @@ kaggle-kernels.md
 kaggle-models.md
 kaggle.md
 kahlan.md
+kairos.md
 kak.md
 kakoune.md
 kalker.md
@@ -4341,6 +4353,7 @@ ldc.md
 ldconfig.md
 ldd.md
 lddd.md
+ldraw-mecha.md
 leaf.md
 leaftoppm.md
 learnlance.md
@@ -5567,6 +5580,7 @@ omf.md
 omm.md
 omnara.md
 omnarad.md
+omnidiff.md
 omnipty.md
 omny.md
 omp.md
@@ -7793,6 +7807,7 @@ sshfs.md
 sshpass.md
 sshs.md
 sshuttle.md
+ssimulacra2.md
 ssl-checker.md
 sslscan.md
 sslstrip.md
@@ -7870,6 +7885,7 @@ stripe-docs.md
 stripe-listen.md
 stripe-logs.md
 stripe.md
+stroq.md
 sttr.md
 stty.md
 stu.md
@@ -8170,6 +8186,7 @@ terraform-taint.md
 terraform-tui.md
 terraform-untaint.md
 terraform-validate.md
+terraform-workspace.md
 terraform.md
 terraformer.md
 terragrunt.md
@@ -8513,6 +8530,7 @@ ufw-deny.md
 ufw-disable.md
 ufw-enable.md
 ufw-limit.md
+ufw-reload.md
 ufw-status.md
 ufw-version.md
 ufw.md
@@ -8900,6 +8918,7 @@ waybackurls.md
 waybar.md
 waydroid.md
 wayland-info.md
+waymark-executor.md
 waymore.md
 waypipe.md
 wbinfo.md
@@ -8998,6 +9017,7 @@ wkhtmltopdf.md
 wl-copy.md
 wl-paste.md
 wlc.md
+wlcrosshairctl.md
 wlsunset.md
 wmctrl.md
 wmo.md

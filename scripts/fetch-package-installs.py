@@ -135,6 +135,8 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     "graf": {},
     # gat: brew/nix/AUR "gat" is koki-develop/gat (cat alternative), not getgat-dev/gat
     "gat": {},
+    # gauge: brew/nix "gauge" is ThoughtWorks Gauge (gauge.org), not @withgauge/cli
+    "gauge": {},
     # vp: brew alias vp → vite-plus; AUR/nix "vp" are Virtual Pascal / erikg slideshow
     "vp": {"aur": "vite-plus", "brew": "vite-plus"},
     "vp-env": {"aur": "vite-plus", "brew": "vite-plus"},
