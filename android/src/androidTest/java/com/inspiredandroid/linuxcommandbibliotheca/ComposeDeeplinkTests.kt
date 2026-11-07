@@ -3,12 +3,26 @@ package com.inspiredandroid.linuxcommandbibliotheca
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import androidx.activity.compose.setContent
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.remember
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalWindowInfo
+import androidx.compose.ui.platform.WindowInfo
+import androidx.compose.ui.test.assertCountEquals
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertTextEquals
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onAllNodesWithContentDescription
+import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
+import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.unit.IntSize
+import androidx.compose.ui.unit.dp
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.linuxcommandlibrary.app.App
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -75,6 +89,36 @@ class ComposeDeeplinkTests {
 
         composeTestRule.onNodeWithContentDescription("TopAppBarTitle")
             .assertTextEquals("Commands")
+    }
+
+    @Test
+    fun testCommandListDoesNotSelectFirstCommandOnExpandedLayout() {
+        // Pretend the window is tablet sized so the two-pane list/detail layout is used.
+        composeTestRule.runOnUiThread {
+            composeTestRule.activity.setContent {
+                val windowInfo = LocalWindowInfo.current
+                val density = LocalDensity.current
+                val expandedWindowInfo = remember(windowInfo, density) {
+                    object : WindowInfo by windowInfo {
+                        override val containerSize: IntSize
+                            get() = with(density) { IntSize(1280.dp.roundToPx(), 800.dp.roundToPx()) }
+                    }
+                }
+                CompositionLocalProvider(LocalWindowInfo provides expandedWindowInfo) {
+                    App(initialDeeplink = "https://linuxcommandlibrary.com/")
+                }
+            }
+        }
+
+        // Wait for the command list to load before checking that nothing got selected.
+        composeTestRule.waitUntil(timeoutMillis = 10_000) {
+            composeTestRule.onAllNodesWithText("2048").fetchSemanticsNodes().isNotEmpty()
+        }
+        composeTestRule.waitForIdle()
+
+        composeTestRule.onNodeWithText("Select a command").assertIsDisplayed()
+        composeTestRule.onAllNodesWithContentDescription("Search in page")
+            .assertCountEquals(0)
     }
 
     @Test

@@ -84,7 +84,6 @@ private fun CommandsTab(state: LinuxNavState, withTabStackOverlay: Boolean) {
             onNavigate = state::onNavigate,
             stack = commandsStack,
             onPopStack = { state.popStack(RouteKey.Commands) },
-            isExpanded = !withTabStackOverlay,
         )
         if (withTabStackOverlay) {
             TabStackTop(
