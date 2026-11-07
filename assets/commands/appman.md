@@ -101,7 +101,7 @@ AppImage and portable application manager for local installations
 
 **appman** is a rootless, portable package manager for AppImages and other portable Linux applications. It is a redistribution of the **AM Application Manager** that does not require root privileges, installing and managing all applications locally within the user's home directory.
 
-AppMan downloads installation scripts from the AM database and converts them for local use. Applications are stored in a user-chosen directory (e.g. **~/Applications**), with executable links placed in **~/.local/bin/** and desktop entries in **~/.local/share/applications/**. The database lists over 8747 AppImages and 415 standalone/portable programs.
+AppMan downloads installation scripts from the AM database and converts them for local use. Applications are stored in a user-chosen directory (e.g. **~/Applications**), with executable links placed in **~/.local/bin/** and desktop entries in **~/.local/share/applications/**. The database lists over 8800 AppImages and 400 standalone/portable programs.
 
 AppMan supports the same commands as AM — simply replace **am** with **appman**. It handles installation, updates, removal, sandboxing, rollback, and desktop integration without ever requiring sudo access.
 
