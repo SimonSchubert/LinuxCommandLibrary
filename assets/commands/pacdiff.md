@@ -20,9 +20,17 @@ Use a **specific editor** to view and merge configuration files
 
 ```DIFFPROG=[editor] pacdiff```
 
-Scan for files with **locate** instead of pacman database
+**List** pacnew/pacsave files without merging
 
-```pacdiff -l```
+```pacdiff -o```
+
+Scan **/etc and /boot** with find instead of the pacman database
+
+```DIFFSEARCHPATH="/etc /boot" pacdiff -f```
+
+Use **meld** as viewer and **git merge-file** for 3-way merges
+
+```DIFFPROG=meld MERGEPROG="git merge-file -p" pacdiff -s```
 
 # SYNOPSIS
 
@@ -37,40 +45,71 @@ Scan for files with **locate** instead of pacman database
 > Create .bak backup of original when overwriting
 
 **-l**, **--locate**
-> Find files using locate instead of pacman database
+> Scan using locate
 
 **-f**, **--find**
-> Find files using find command
+> Scan using find (searches DIFFSEARCHPATH, default /etc)
 
 **-p**, **--pacmandb**
 > Scan using pacman database (default)
 
+**-c**, **--cachedir** _dir_
+> Scan _dir_ for 3-way merge base candidates (default: from pacman.conf)
+
 **-o**, **--output**
-> Print files to stdout instead of interactive mode
+> Print files instead of merging them
 
 **-3**, **--threeway**
-> View diffs in three-way comparison (original, new, current)
+> View diffs in 3-way fashion (base package version, new, current)
 
-**-m**, **--merge**
-> Perform a three-way merge
+**--nocolor**
+> Do not colorize output
 
 **-h**, **--help**
 > Display help message
+
+**-V**, **--version**
+> Display version information
 
 # DESCRIPTION
 
 **pacdiff** manages configuration file conflicts created by pacman during package upgrades. When pacman encounters modified configuration files, it saves new versions with **.pacnew** extension and original versions as **.pacorig** or **.pacsave**, requiring manual review.
 
-The tool presents each file interactively, allowing users to view differences, edit files, overwrite with new version, or remove the conflict file. It uses **vim -d** by default for viewing differences, but respects the **DIFFPROG** environment variable for custom diff tools.
+For each file it prompts **(V)iew, (M)erge, (S)kip, (R)emove, (O)verwrite, (Q)uit**. Viewing opens **vim -d** (or **nvim -d** if EDITOR=nvim) unless **DIFFPROG** is set. Merging performs a 3-way merge with **diff3 -m** (override with **MERGEPROG**), using the previous package version from the pacman cache as the merge base.
+
+# ENVIRONMENT
+
+**DIFFPROG**
+> Diff/view program (default: vim -d)
+
+**MERGEPROG**
+> 3-way merge program (default: diff3 -m)
+
+**DIFFSEARCHPATH**
+> Directories scanned with **--find** (default: /etc)
 
 # CAVEATS
 
-Interactive mode requires user attention for each file. The default diff viewer (vim -d) requires vim to be installed. Using **-l** (locate) requires an updated mlocate database. Always review changes carefully before overwriting system configuration files.
+Interactive mode requires user attention for each file. The default diff viewer (vim -d) requires vim to be installed. Using **-l** requires an up-to-date locate database. Merging needs the old package still present in the pacman cache, so aggressive **paccache** cleanup can prevent it. Always review changes carefully before overwriting system configuration files.
 
 # HISTORY
 
 Part of **pacman-contrib**, a collection of maintenance scripts for Arch Linux. Addresses one of the most common maintenance tasks on rolling-release distributions where frequent updates may conflict with user-customized configuration files.
 
+# INSTALL
+
+```pacman: sudo pacman -S pacman-contrib```
+
+<!-- packages: 2026-11-07 -->
+
 # SEE ALSO
 
-[pacman](/man/pacman)(8), [paccache](/man/paccache)(8), [vimdiff](/man/vimdiff)(1)
+[pacman](/man/pacman)(8), [paccache](/man/paccache)(8), [vimdiff](/man/vimdiff)(1), [diff3](/man/diff3)(1), [meld](/man/meld)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.archlinux.org/pacman/pacman-contrib)```
+
+```[Documentation](https://wiki.archlinux.org/title/Pacnew_and_Pacsave_files)```
+
+<!-- verified: 2026-11-07 -->

@@ -68,23 +68,13 @@ wrapper around pacman, the Arch Linux package manager
 
 # DESCRIPTION
 
-**paci** is a wrapper around pacman, the Arch Linux package manager. It provides a simplified interface while maintaining pacman's power.
+**paci** is a name used by several small, community-written wrappers around **pacman**, the Arch Linux package manager. Such wrappers typically pass pacman-style operations (**-S**, **-R**, **-Q**, **-Syu**) through to pacman, add **sudo** automatically where needed, and may treat a bare argument as a search.
 
-The tool uses a familiar syntax for common operations: install, remove, update, and query. Complex pacman flags are abstracted into simpler commands.
-
-Search functionality finds packages in repositories without requiring explicit flags. Interactive selection may be available depending on configuration.
-
-Integration with AUR helpers may be included, enabling installation of community packages alongside official repositories.
-
-The wrapper aims to reduce the learning curve for pacman while remaining compatible with its behavior.
+There is no single canonical **paci** project, so available options and behavior depend on the script you have installed. Check **paci --help** or read the script itself.
 
 # CAVEATS
 
-Arch Linux specific. Wraps pacman, so pacman must be available. May not support all pacman features. Behavior may differ between implementations.
-
-# HISTORY
-
-Various **paci** implementations exist as pacman wrappers. They emerged from the Arch Linux community's desire for simpler package management interfaces while maintaining access to pacman's functionality.
+Arch Linux specific and not packaged in the official repositories or a well-known AUR package. Since it wraps pacman, all pacman semantics (partial upgrades are unsupported, **-Sc** removes cached packages) still apply. For AUR support use a maintained helper such as **yay** or **paru**.
 
 # SEE ALSO
 

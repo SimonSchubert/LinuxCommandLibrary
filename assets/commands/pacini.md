@@ -18,7 +18,11 @@ Always show **directive names** even for single directives
 
 Display directives in a **specific section**
 
-```pacini [path/to/file] --section [section_name]```
+```pacini --section [section_name] [path/to/file]```
+
+Print the value of a **single directive**
+
+```pacini --section [options] [path/to/file] [directive]```
 
 Display **help**
 
@@ -26,7 +30,7 @@ Display **help**
 
 # SYNOPSIS
 
-**pacini** [_options_] [_file_] [_directive_...]
+**pacini** [_options_] [_file_ [_directive_...]]
 
 # PARAMETERS
 
@@ -37,10 +41,7 @@ Display **help**
 > Query directives only from the specified section
 
 **--verbose**
-> Always show directive names in output
-
-**--null**
-> Use null delimiter for output
+> Always show directive names even if only one directive is given
 
 **--help**
 > Display help information
@@ -52,16 +53,28 @@ Display **help**
 
 **pacini** parses and queries INI-style configuration files in the format used by pacman. It can display the full parsed configuration, list sections, or extract specific directive values from named sections.
 
-The tool handles pacman's configuration format including Include directives, making it useful for scripts that need to extract values from pacman.conf or similar configuration files. Reads from stdin if no file is specified.
+If no directives are given, the file is printed in a normalized format. With a single directive, only its value is printed (or the directive name for valueless options). If _file_ is omitted or **-**, input is read from stdin. Unlike **pacconf**, no pacman defaults or variable substitution are applied, so it works for any file in pacman's INI dialect.
 
 # CAVEATS
 
-Specific to pacman-style INI format; may not correctly parse all INI variations. Include directives are not followed by default. Section names are case-sensitive.
+Specific to pacman-style INI format; may not correctly parse all INI variations. To query pacman.conf with defaults applied, use **pacconf** instead.
 
 # HISTORY
 
 Part of **pacutils**, a collection of utilities for pacman by Andrew Gregory. Provides a dedicated tool for parsing pacman configuration files, complementing pacconf which specifically handles pacman.conf.
 
+# INSTALL
+
+```pacman: sudo pacman -S pacutils```
+
+<!-- packages: 2026-11-07 -->
+
 # SEE ALSO
 
-[pacconf](/man/pacconf)(8), [pacman.conf](/man/pacman.conf)(5)
+[pacconf](/man/pacconf)(1), [pacman.conf](/man/pacman.conf)(5)
+
+# RESOURCES
+
+```[Source code](https://github.com/andrewgregory/pacutils)```
+
+<!-- verified: 2026-11-07 -->

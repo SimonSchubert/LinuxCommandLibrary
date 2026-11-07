@@ -16,9 +16,17 @@ Always show **directive names** even for single directives
 
 ```pacconf --verbose [directive]```
 
-Display only **first value** of multi-value options
+Show only **global settings** from the [options] section
 
-```pacconf --single```
+```pacconf --options```
+
+Show the **settings of one repository**
+
+```pacconf --repo [core]```
+
+Check a **single directive** (prints only its value)
+
+```pacconf [ParallelDownloads]```
 
 Display **help**
 
@@ -36,11 +44,20 @@ Display **help**
 **--root** _path_
 > Use alternate installation root
 
+**--sysroot** _path_
+> Use alternate system root (see pacutils-sysroot(7))
+
+**--arch** _arch_
+> Use alternate architecture
+
+**--options**
+> Only display global settings from the [options] section (header not printed)
+
 **--repo-list**
 > List configured repositories
 
 **--repo** _name_
-> Query options for specific repository
+> Only display directives for repository _name_ (header not printed)
 
 **--verbose**
 > Always show directive names in output
@@ -48,11 +65,11 @@ Display **help**
 **--single**
 > Display only the first value of multi-value directives
 
-**--null**
-> Use null delimiter for output
+**--null**[=_sep_]
+> Set the separator for values read from stdin (NUL if _sep_ is omitted)
 
 **--raw**
-> Display unprocessed directive values
+> Display unmodified values: Includes are processed, but defaults are not set and $arch/$repo are not substituted
 
 **--help**
 > Display help information
@@ -64,7 +81,11 @@ Display **help**
 
 **pacconf** queries and displays pacman's configuration as it would be parsed by pacman itself. It can show the complete configuration or specific directive values, making it useful for scripts that need to read pacman settings.
 
-The tool handles configuration include directives and processes values the same way pacman does, ensuring accurate representation of the active configuration. It can query global options or repository-specific settings.
+All defaults are applied, **Include** directives are processed, **$arch** and **$repo** in server URLs are substituted, and **Architecture = auto** is resolved. When a single directive is queried, only its value is printed (or the directive name for valueless options like **Color**), which makes it easy to use in scripts:
+
+```bash
+[[ -n $(pacconf Color) ]] && echo "color enabled"
+```
 
 # CAVEATS
 
@@ -74,6 +95,18 @@ Output represents the parsed configuration, which may differ from the raw config
 
 Part of **pacutils**, a collection of helper utilities for pacman by Andrew Gregory. Provides programmatic access to pacman configuration, useful for system administration scripts and tools that interact with pacman.
 
+# INSTALL
+
+```pacman: sudo pacman -S pacutils```
+
+<!-- packages: 2026-11-07 -->
+
 # SEE ALSO
 
-[pacman](/man/pacman)(8), [pacman.conf](/man/pacman.conf)(5), [paccheck](/man/paccheck)(8)
+[pacman](/man/pacman)(8), [pacman.conf](/man/pacman.conf)(5), [pacini](/man/pacini)(1), [paccheck](/man/paccheck)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/andrewgregory/pacutils)```
+
+<!-- verified: 2026-11-07 -->

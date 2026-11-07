@@ -8,15 +8,19 @@ Display information about a **specific package**
 
 ```pacinfo [package_name]```
 
-Disable **low-speed timeouts** for downloads
+Show info for a package from a **specific repository**
 
-```pacinfo --no-timeout [package_name]```
+```pacinfo [extra/package_name]```
+
+Show **brief info** for many packages read from stdin
+
+```pacsift --name [libreoffice] | pacinfo --short```
 
 Display sizes in bytes and dates as **Unix timestamps**
 
 ```pacinfo --raw [package_name]```
 
-Display **additional** package information
+Display **additional** info (required by, optional for, signature)
 
 ```pacinfo --verbose [package_name]```
 
@@ -26,15 +30,24 @@ Display **help**
 
 # SYNOPSIS
 
-**pacinfo** [_options_] _package_...
+**pacinfo** [_options_] (_pkgspec_ | _pkgname_)...
 
 # PARAMETERS
 
-**--raw**
-> Display sizes in bytes and dates as Unix timestamps
+**--short**
+> Display brief information, suitable for many packages
 
 **--verbose**
-> Display additional package information
+> Also display required by, optional for, and base64 signature
+
+**--raw**
+> Display raw numeric size and date values
+
+**--removable-size**
+> Include the size of removable dependencies in installed size
+
+**--null**[=_sep_]
+> Set the separator for package names read from stdin (NUL if _sep_ is omitted)
 
 **--no-timeout**
 > Disable low-speed download timeouts
@@ -45,8 +58,14 @@ Display **help**
 **--dbpath** _path_
 > Use alternate database path
 
+**--dbext** _ext_
+> Use alternate sync database extension
+
 **--root** _path_
 > Use alternate installation root
+
+**--sysroot** _path_
+> Use alternate system root (see pacutils-sysroot(7))
 
 **--help**
 > Display help information
@@ -58,16 +77,28 @@ Display **help**
 
 **pacinfo** displays detailed information about packages from the pacman database. It shows package metadata including name, version, description, dependencies, install date, size, and other attributes stored in the package database.
 
-The tool can query both locally installed packages and packages available in configured repositories. It provides more detailed output options than pacman's built-in query commands, with machine-readable raw output for scripting.
+Given a bare _pkgname_, information for every matching package in all databases (local and sync) is shown; a _pkgspec_ such as **local/bash** or **core/bash** selects one database. If stdin is not a terminal, package names are read from it, so it pairs well with **pacsift**.
 
 # CAVEATS
 
-Requires packages to be in pacman's database (either installed or available in repositories). Network access needed for repository package queries if sync database is not current.
+Whether to read from stdin is decided by a naive **isatty** check: inside scripts or pipes where stdin carries no package names, close stdin (**pacinfo foo <&-**) to avoid hanging. Sync database info is only as current as the last **pacman -Sy**.
 
 # HISTORY
 
 Part of **pacutils**, a collection of helper utilities for pacman by Andrew Gregory. Provides enhanced package information display compared to standard **pacman -Qi** and **pacman -Si** commands.
 
+# INSTALL
+
+```pacman: sudo pacman -S pacutils```
+
+<!-- packages: 2026-11-07 -->
+
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pacconf](/man/pacconf)(8), [pacsift](/man/pacsift)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/andrewgregory/pacutils)```
+
+<!-- verified: 2026-11-07 -->
