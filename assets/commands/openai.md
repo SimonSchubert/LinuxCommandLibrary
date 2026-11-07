@@ -1,64 +1,99 @@
 # TAGLINE
 
-chat completion
+official command-line client for the OpenAI API
 
 # TLDR
 
-**Chat completion**
+**Send a request** to the Responses API
 
-```openai api chat.completions.create -m gpt-4 -g user "[prompt]"```
+```openai responses create --model [gpt-5.5] --input "[prompt]"```
 
-**Create embedding**
+**Read the prompt from a file**
 
-```openai api embeddings.create -m text-embedding-ada-002 -i "[text]"```
+```openai responses create --model [gpt-5.5] --input @[prompt.txt]```
 
-**List models**
+**Generate an image** and save it locally
 
-```openai api models.list```
+```openai images generate --prompt "[description]"```
 
-**Generate image**
+**List available models** as JSON lines
 
-```openai api images.generate -p "[description]"```
+```openai models list --format jsonl```
+
+**Upload a file**
+
+```openai files upload [report.txt] --purpose user_data```
+
+**Extract a field** from the response
+
+```openai files get [file-id] --transform filename```
+
+**Search commands** interactively in plain words
+
+```openai explore```
+
+**Show help** for a command
+
+```openai images generate --help```
 
 # SYNOPSIS
 
-**openai** [_command_] [_options_]
+**openai** _resource_ [_subresource_...] _command_ [_flags_]
 
 # PARAMETERS
 
-**api** _ENDPOINT_
-> API command.
+**--api-key** _KEY_
+> API key to use (default: **OPENAI_API_KEY**).
 
-**-m** _MODEL_
-> Model name.
+**--organization** _ID_
+> Organization ID (default: **OPENAI_ORG_ID**).
 
-**-g** _ROLE_ _MESSAGE_
-> Message with role.
+**--project** _ID_
+> Project ID (default: **OPENAI_PROJECT_ID**).
 
-**-i** _INPUT_
-> Input text.
+**--base-url** _URL_
+> Custom API backend (default: https://api.openai.com/v1). HTTPS is required except for loopback addresses.
 
-**-p** _PROMPT_
-> Prompt text.
+**-H**, **--header** _"Name: Value"_
+> Add a request header; repeatable.
+
+**--format** _FORMAT_
+> Output format: auto, text, explore, json, jsonl, pretty, raw, yaml.
+
+**--transform** _PATH_
+> Transform the output using GJSON syntax.
+
+**--debug**
+> Log redacted HTTP headers and timing to stderr.
+
+**-v**, **--version**
+> Show the CLI version.
 
 **--help**
-> Display help information.
+> Show usage for any command.
 
 # DESCRIPTION
 
-**openai** is the OpenAI CLI. Interacts with GPT models and other APIs.
+**openai** is the official command-line tool for the OpenAI REST API. Commands map to API resources such as **responses**, **images**, **files**, **batches**, **models** and **admin**, in the form _openai resource command --flags_.
 
-The tool provides command-line API access. Requires API key.
+Arguments that take JSON values accept **@file** to read local file contents, and request bodies can also be passed as JSON or YAML on stdin. **openai explore** offers a searchable command picker, and in zsh the chosen command can be inserted back at the prompt.
 
 # CAVEATS
 
-Requires OPENAI_API_KEY. API usage billed. Rate limits apply.
+API usage is billed and rate limited. An API key is needed for requests; run **openai help setup** to configure one. When piping JSON from an untrusted source, set **OPENAI_UNTRUSTED_STDIN=1** so **@file** references are not expanded. Interactive installs enable automatic updates; set **OPENAI_CLI_NO_UPDATE_CHECK** to disable update checks.
 
 # HISTORY
 
-openai CLI was created by **OpenAI** for command-line API access.
+The original **openai** command shipped with the **openai** Python package and used the syntax _openai api chat.completions.create_. That legacy CLI was removed in openai-python **2.35.0** (May 2026) and replaced by a standalone Go CLI, released by **OpenAI** in 2026.
 
 # SEE ALSO
 
-[curl](/man/curl)(1), [ollama](/man/ollama)(1)
+[codex](/man/codex)(1), [curl](/man/curl)(1), [jq](/man/jq)(1), [ollama](/man/ollama)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/openai/openai-cli)```
+
+```[Documentation](https://github.com/openai/openai-cli/blob/main/docs/cli-reference.md)```
+
+<!-- verified: 2026-11-07 -->

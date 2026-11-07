@@ -12,11 +12,23 @@ manages virtual machine images in OpenStack Glance
 
 ```openstack image show [ubuntu-22.04]```
 
-**Create image from file**
+**Upload an image** from a file
 
-```openstack image create --file [image.qcow2] --disk-format qcow2 [image_name]```
+```openstack image create --file [image.qcow2] --disk-format qcow2 --container-format bare [image_name]```
 
-**Delete image**
+**Upload a public image** with minimum requirements
+
+```openstack image create --file [image.qcow2] --disk-format qcow2 --public --min-disk [10] --min-ram [1024] [image_name]```
+
+**Download an image** to a file
+
+```openstack image save --file [output.qcow2] [image_name]```
+
+**Set a property** on an image
+
+```openstack image set --property [hw_disk_bus=scsi] [image_name]```
+
+**Delete an image**
 
 ```openstack image delete [image_name]```
 
@@ -29,32 +41,61 @@ manages virtual machine images in OpenStack Glance
 **list**
 > List images.
 
-**show** _name_
+**show** _image_
 > Show image details.
 
 **create** _name_
-> Create/upload image.
+> Create or upload an image.
 
-**delete** _name_
-> Delete image.
+**set** _image_
+> Change image properties.
+
+**save** _image_
+> Download an image.
+
+**delete** _image_
+> Delete an image.
 
 **--file** _path_
-> Image file to upload.
+> Image file to upload (create) or write to (save).
 
 **--disk-format** _format_
-> Disk format (qcow2, raw, vmdk, etc.).
+> Disk format: raw, qcow2, vmdk, vdi, iso, vhd, vhdx, ploop, aki, ari, ami (default: raw).
 
 **--container-format** _format_
-> Container format (bare, ovf, etc.).
+> Container format: bare, ovf, ova, docker, aki, ari, ami, compressed (default: bare).
 
-**--public**
-> Make image public.
+**--public** / **--private** / **--shared** / **--community**
+> Image visibility.
+
+**--min-disk** _GB_
+> Minimum disk size needed to boot the image.
+
+**--min-ram** _MB_
+> Minimum RAM needed to boot the image.
+
+**--property** _key=value_
+> Set an image property; repeatable.
+
+**--protected** / **--unprotected**
+> Prevent or allow image deletion.
 
 # DESCRIPTION
 
-**openstack image** manages virtual machine images in OpenStack Glance. Upload, download, and manage boot images for instances. Part of OpenStack unified CLI.
+**openstack image** manages virtual machine images in OpenStack Glance. Upload, download, share and manage boot images for instances. Part of the OpenStack unified CLI.
+
+# CAVEATS
+
+Creating **--public** images usually requires admin rights. Protected images must be set **--unprotected** before they can be deleted.
 
 # SEE ALSO
 
-[openstack-server](/man/openstack-server)(1), [openstack](/man/openstack)(1)
+[openstack-server](/man/openstack-server)(1), [openstack-flavor](/man/openstack-flavor)(1), [openstack](/man/openstack)(1)
 
+# RESOURCES
+
+```[Source code](https://opendev.org/openstack/python-openstackclient)```
+
+```[Documentation](https://docs.openstack.org/python-openstackclient/latest/cli/command-objects/image-v2.html)```
+
+<!-- verified: 2026-11-07 -->

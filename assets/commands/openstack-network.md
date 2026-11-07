@@ -8,15 +8,27 @@ manages virtual networks in OpenStack Neutron
 
 ```openstack network list```
 
-**Create network**
+**List external networks**
+
+```openstack network list --external```
+
+**Create a network**
 
 ```openstack network create [network_name]```
+
+**Create an external provider network** (admin)
+
+```openstack network create --external --provider-network-type flat --provider-physical-network [physnet1] [network_name]```
 
 **Show network details**
 
 ```openstack network show [network_name]```
 
-**Delete network**
+**Rename a network**
+
+```openstack network set --name [new_name] [network_name]```
+
+**Delete a network**
 
 ```openstack network delete [network_name]```
 
@@ -30,28 +42,54 @@ manages virtual networks in OpenStack Neutron
 > List networks.
 
 **create** _name_
-> Create network.
+> Create a network.
 
-**delete** _name_
-> Delete network.
+**set** _network_
+> Change network properties.
 
-**show** _name_
+**show** _network_
 > Show network details.
 
-**--external**
-> Create as external network.
+**delete** _network_
+> Delete a network.
 
-**--share**
-> Share network across projects.
+**--external** / **--internal**
+> Mark the network as external or internal (default: internal).
+
+**--share** / **--no-share**
+> Share the network across projects.
 
 **--provider-network-type** _type_
-> Provider network type (flat, vlan, vxlan).
+> Physical mechanism: flat, geneve, gre, local, vlan, vxlan.
+
+**--provider-physical-network** _name_
+> Physical network the virtual network is implemented on.
+
+**--provider-segment** _id_
+> VLAN ID or tunnel ID for the segment.
+
+**--mtu** _size_
+> Network MTU.
+
+**--enable** / **--disable**
+> Set the administrative state.
 
 # DESCRIPTION
 
-**openstack network** manages virtual networks in OpenStack Neutron. Create isolated networks, configure external connectivity, and manage network infrastructure. Part of OpenStack unified CLI.
+**openstack network** manages virtual networks in OpenStack Neutron. Create isolated networks, configure external connectivity, and manage network infrastructure. IP addressing is added separately with subnets. Part of the OpenStack unified CLI.
+
+# CAVEATS
+
+Provider options and **--external** usually require admin rights. A network cannot be deleted while ports are still in use on it.
 
 # SEE ALSO
 
 [openstack-subnet](/man/openstack-subnet)(1), [openstack-port](/man/openstack-port)(1), [openstack-server](/man/openstack-server)(1)
 
+# RESOURCES
+
+```[Source code](https://opendev.org/openstack/python-openstackclient)```
+
+```[Documentation](https://docs.openstack.org/python-openstackclient/latest/cli/command-objects/network.html)```
+
+<!-- verified: 2026-11-07 -->

@@ -1,55 +1,64 @@
 # TAGLINE
 
-queries and displays the capabilities supported by libalpm
+queries which features libalpm was built with
 
 # TLDR
 
-List all **available capabilities**
+**List all enabled** capabilities
 
 ```paccapability```
 
-Check for a **specified capability**
+**Check** a specific capability
 
-```paccapability nls```
+```paccapability [nls]```
 
-Check for **downloader** capability
+**Check several** capabilities at once
 
-```paccapability downloader```
+```paccapability [downloader] [signatures]```
 
-Check for **signatures** capability
+**Use in a script** to test for signature support
 
-```paccapability signatures```
-
-Display **help**
-
-```paccapability --help```
+```paccapability signatures >/dev/null && echo "signatures supported"```
 
 # SYNOPSIS
 
 **paccapability** [_options_] [_capability_...]
 
+**paccapability** (**--help**|**--version**)
+
 # PARAMETERS
 
+_capability_
+> Capability to check: **nls**, **downloader** or **signatures**. Case-insensitive; the **ALPM_CAPABILITY_** prefix may be omitted.
+
 **--help**
-> Display help message
+> Display usage information and exit.
 
 **--version**
-> Display version information
+> Display version information and exit.
 
 # DESCRIPTION
 
-**paccapability** queries and displays the capabilities supported by libalpm (Arch Linux Package Management library). It can list all available capabilities or check if specific capabilities are supported.
+**paccapability** queries which features libalpm, the Arch Linux package management library, was built with. Recognized capabilities are **ALPM_CAPABILITY_NLS** (native language support), **ALPM_CAPABILITY_DOWNLOADER** (built-in downloader) and **ALPM_CAPABILITY_SIGNATURES** (package signature verification).
 
-Common capabilities include nls (native language support), downloader (built-in download support), and signatures (package signature verification).
-
-# CAVEATS
-
-Available capabilities depend on how libalpm was compiled. Some capabilities may not be available on all systems.
+Without arguments, all enabled capabilities are printed one per line. With arguments, each capability is printed followed by **1** (enabled) or **0** (disabled), and the exit status is non-zero if any of them is disabled.
 
 # HISTORY
 
-Part of **pacutils**, a collection of utilities for Arch Linux package management built on top of libalpm.
+Part of **pacutils**, a collection of helper tools for libalpm and pacman written by **Andrew Gregory**.
+
+# INSTALL
+
+```pacman: sudo pacman -S pacutils```
+
+<!-- packages: 2026-11-07 -->
 
 # SEE ALSO
 
-[pacman](/man/pacman)(8), [libalpm](/man/libalpm)(3)
+[pacman](/man/pacman)(8), [libalpm](/man/libalpm)(3), [paccheck](/man/paccheck)(1), [pacconf](/man/pacconf)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/andrewgregory/pacutils)```
+
+<!-- verified: 2026-11-07 -->
