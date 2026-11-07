@@ -4,7 +4,7 @@ import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.TextElement
 import com.linuxcommandlibrary.shared.TipSectionElement
 
-/**
+/*
  * Renders parsed basics/tips content back to Markdown for Qt's Text.MarkdownText.
  *
  * Commands already ship as Markdown and are passed through untouched, but basics and
@@ -14,6 +14,7 @@ import com.linuxcommandlibrary.shared.TipSectionElement
  * Man pages and links become `man:` / `lcl:` URLs so QML's onLinkActivated can route
  * them without needing to know how they were encoded.
  */
+
 /** Block kind, so the UI can style code and quotes differently from prose. */
 internal fun TipSectionElement.kind(): String = when (this) {
     is TipSectionElement.Text -> "text"
