@@ -5560,6 +5560,7 @@ oletools.md
 olevba.md
 ollama.md
 oma.md
+omalauncher.md
 omarchy.md
 omega-rpg.md
 omf.md
