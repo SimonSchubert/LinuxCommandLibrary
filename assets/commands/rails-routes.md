@@ -20,9 +20,13 @@ Display URL routing table for Rails application
 
 ```rails routes --expanded```
 
+**Find unused routes**
+
+```rails routes --unused```
+
 # SYNOPSIS
 
-**rails routes** [**-g** _pattern_] [**-c** _controller_] [**--expanded**]
+**rails routes** [**-g** _pattern_] [**-c** _controller_] [**-E**] [**-u**]
 
 # PARAMETERS
 
@@ -34,6 +38,9 @@ Display URL routing table for Rails application
 
 **--expanded**, **-E**
 > Print routes in expanded table format (one attribute per line)
+
+**-u**, **--unused**
+> Print unused routes, which have neither a controller action nor a view
 
 **-h**, **--help**
 > Show help information
@@ -55,3 +62,11 @@ Routes are displayed in the order they are matched. The first matching route han
 # SEE ALSO
 
 [rails](/man/rails)(1), [rails-server](/man/rails-server)(1), [rake](/man/rake)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rails/rails)```
+
+```[Documentation](https://guides.rubyonrails.org/routing.html)```
+
+<!-- verified: 2026-11-08 -->

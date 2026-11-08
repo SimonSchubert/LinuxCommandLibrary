@@ -21,3 +21,9 @@ View documentation for the original command
 # SEE ALSO
 
 [shnsplit](/man/shnsplit)(1)
+
+# RESOURCES
+
+```[Homepage](http://shnutils.freeshell.org/shntool/)```
+
+<!-- verified: 2026-11-08 -->

@@ -1,10 +1,10 @@
 # TAGLINE
 
-Run make in Sailfish build environment
+Run the make build step in the Sailfish build environment
 
 # TLDR
 
-**Build project with make**
+**Build the project**
 
 ```sfdk make```
 
@@ -12,19 +12,28 @@ Run make in Sailfish build environment
 
 ```sfdk make -j[4]```
 
-**Clean build**
+**Run a specific make target**
 
-```sfdk make clean```
+```sfdk make [clean]```
 
 # SYNOPSIS
 
-**sfdk make** [_make_options_]
+**sfdk make** [_make-extra-arg_...]
 
 # DESCRIPTION
 
-**sfdk make** runs make inside the Sailfish OS build environment. Part of Sailfish SDK.
+**sfdk make** runs **rpmbuild** to execute just the %build section of the RPM SPEC file, suppressing any **qmake** invocation and any project-generating **cmake** invocation found there. Extra arguments are passed to make. Part of the Sailfish SDK command-line tool.
+
+For CMake projects using make as the build tool, **sfdk cmake --build .** **--** _make-extra-arg_ gives the same results.
 
 # SEE ALSO
 
-[sfdk](/man/sfdk)(1), [sfdk-make-install](/man/sfdk-make-install)(1), [make](/man/make)(1)
+[sfdk](/man/sfdk)(1), [sfdk-qmake](/man/sfdk-qmake)(1), [sfdk-cmake](/man/sfdk-cmake)(1), [sfdk-make-install](/man/sfdk-make-install)(1), [make](/man/make)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/sailfishos/sailfish-qtcreator)```
+
+```[Documentation](https://docs.sailfishos.org/Tools/Sailfish_SDK/)```
+
+<!-- verified: 2026-11-08 -->

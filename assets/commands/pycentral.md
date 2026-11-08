@@ -14,8 +14,17 @@ Deprecated Debian Python module manager
 
 # PARAMETERS
 
-_ACTION_
-> Action to perform.
+**bccompile**
+> Byte compile .py files in a package.
+
+**bcremove**
+> Remove the byte compiled .py files.
+
+**-v**, **--version**
+> Limit output to the version numbers of the Python versions.
+
+**-h**, **--help**
+> Print help text.
 
 # DESCRIPTION
 
@@ -29,9 +38,16 @@ Deprecated. Use dh-python instead.
 
 # HISTORY
 
-pycentral was a **deprecated Debian** tool for Python module management.
+pycentral shipped in the Debian **python-central** package, which was removed from the archive after wheezy (bug #717091).
 
 # SEE ALSO
 
 [pybuild](/man/pybuild)(1), [dh-python](/man/dh-python)(1)
 
+# RESOURCES
+
+```[Documentation](https://manpages.debian.org/wheezy/python-central/pycentral.1.en.html)```
+
+```[Homepage](https://tracker.debian.org/pkg/python-central)```
+
+<!-- verified: 2026-11-08 -->

@@ -16,17 +16,30 @@ Open database console for Rails application
 
 ```rails db --database=[database_name]```
 
+**Pass the password** from database.yml to the client
+
+```rails db -p```
+
 # SYNOPSIS
 
-**rails db** [**-e** _environment_] [**--database** _name_] [**-h**]
+**rails db** [**-e** _environment_] [**--database** _name_] [**-p**] [**--mode** _mode_] [**--header**] [**-h**]
 
 # PARAMETERS
 
 **-e**, **--environment** _ENV_
 > Specify the Rails environment (development, test, production)
 
-**--database** _name_
+**--database**, **--db** _name_
 > Connect to a specific database when multiple databases are configured
+
+**-p**, **--include-password**
+> Automatically provide the password from database.yml
+
+**--mode** _html|list|line|column_
+> Put the sqlite3 client in the specified mode
+
+**--header**
+> Show column headers (sqlite3)
 
 **-h**, **--help**
 > Show help information
@@ -46,3 +59,11 @@ Database credentials are read from the configuration file. Ensure sensitive cred
 # SEE ALSO
 
 [rails](/man/rails)(1), [rails-console](/man/rails-console)(1), [psql](/man/psql)(1), [mysql](/man/mysql)(1), [sqlite3](/man/sqlite3)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rails/rails)```
+
+```[Documentation](https://guides.rubyonrails.org/command_line.html)```
+
+<!-- verified: 2026-11-08 -->

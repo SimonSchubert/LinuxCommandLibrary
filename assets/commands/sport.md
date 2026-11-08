@@ -64,14 +64,27 @@ sudo mkdir -p /usr/ports
 sudo rsync -av rsync://slackbuilds.org/slackbuilds/$(awk '{print $2}' /etc/slackware-version)/ /usr/ports/
 ```
 
+# CONFIGURATION
+
+**/etc/sport.conf**
+> Sets **SBOPATH**, the local SlackBuilds tree, and **MASTER**, the rsync source for your Slackware version.
+
 # CAVEATS
 
 Dependencies are not automatically resolved; check .info files for requirements. Builds compile from source, requiring development tools. The SlackBuilds tree must be kept updated with **sport rsync**. Specific to Slackware-based distributions.
 
 # HISTORY
 
-**sport** was created for Slackware Linux to simplify working with SlackBuilds.org, the community repository of build scripts for Slackware. SlackBuilds.org was established in **2006** to provide a standardized way of building third-party software for Slackware.
+**sport**, the Slackware Port system, was written for the Slackermedia project as a shell frontend modeled on BSD Ports, to simplify working with SlackBuilds.org, the community repository of build scripts for Slackware. SlackBuilds.org was established in **2006** to provide a standardized way of building third-party software for Slackware.
 
 # SEE ALSO
 
 [sbopkg](/man/sbopkg)(8), [slackpkg](/man/slackpkg)(8), [slapt-src](/man/slapt-src)(8)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/slackport/sport)```
+
+```[Documentation](http://slackermedia.info/handbook/doku.php?id=slackbuilds)```
+
+<!-- verified: 2026-11-08 -->

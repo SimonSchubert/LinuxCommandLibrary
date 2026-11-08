@@ -1,6 +1,6 @@
 # TAGLINE
 
-Look up Kubernetes RBAC roles for users
+Find Kubernetes roles bound to users, groups, or service accounts
 
 # TLDR
 
@@ -20,37 +20,37 @@ Look up Kubernetes RBAC roles for users
 
 ```rbac-lookup [subject] -o wide```
 
-**Search in namespace**
+**Query a specific kubeconfig context**
 
-```rbac-lookup [subject] -n [namespace]```
+```rbac-lookup [subject] --context [context]```
 
-**All bindings for subject**
+**Include GKE IAM roles**
 
-```rbac-lookup [subject] --all-namespaces```
+```rbac-lookup [subject] --gke```
 
 # SYNOPSIS
 
-**rbac-lookup** [_--kind type_] [_-n namespace_] [_-o format_] [_options_] _subject_
+**rbac-lookup** [_subject_query_] [**-k** _kind_] [**-o** _format_] [**--kubeconfig** _file_] [**--context** _name_] [**--gke**]
 
 # PARAMETERS
 
-**--kind** _TYPE_
-> Subject kind (user, group, serviceaccount).
+_subject_query_
+> Substring matched against subject names.
 
-**-n**, **--namespace** _NS_
-> Namespace to search.
-
-**-A**, **--all-namespaces**
-> All namespaces.
+**-k**, **--kind** _TYPE_
+> Filter by subject kind (user, group, serviceaccount).
 
 **-o**, **--output** _FORMAT_
-> Output format.
+> Output format (normal, wide).
 
 **--gke**
-> GKE-specific mode.
+> Enable GKE integration.
 
-**-k**, **--kubeconfig** _FILE_
-> Kubeconfig file.
+**--kubeconfig** _FILE_
+> Kubeconfig file location.
+
+**--context** _NAME_
+> Kubeconfig context to use.
 
 # DESCRIPTION
 
@@ -61,11 +61,11 @@ The tool supports lookups by user identity, group membership, and service accoun
 # CONFIGURATION
 
 **~/.kube/config**
-> Default kubeconfig file specifying cluster connections, authentication credentials, and context selection. Override with **-k** flag.
+> Default kubeconfig file specifying cluster connections, authentication credentials, and context selection. Override with **--kubeconfig**.
 
 # CAVEATS
 
-Requires cluster read access. Large clusters may be slow. Aggregated roles not expanded.
+Requires read access to role bindings. The query matches by substring, so similar names are returned together. It lists bindings rather than the individual permissions inside each role.
 
 # HISTORY
 
@@ -74,3 +74,11 @@ Requires cluster read access. Large clusters may be slow. Aggregated roles not e
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [rbac-tool](/man/rbac-tool)(1), [kubeaudit](/man/kubeaudit)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/FairwindsOps/rbac-lookup)```
+
+```[Documentation](https://rbac-lookup.docs.fairwinds.com/)```
+
+<!-- verified: 2026-11-08 -->

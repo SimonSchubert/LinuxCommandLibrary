@@ -1,6 +1,6 @@
 # TAGLINE
 
-AI-powered shell assistant using ChatGPT
+AI-powered shell assistant using large language models
 
 # TLDR
 
@@ -12,9 +12,13 @@ AI-powered shell assistant using ChatGPT
 
 ```sgpt -s "[list all PDF files]"```
 
-**Execute shell command**
+**Print a shell command without the interactive prompt**
 
-```sgpt -se "[find large files]"```
+```sgpt -s --no-interaction "[find large files]"```
+
+**Describe a shell command**
+
+```sgpt -d "[ls -la]"```
 
 **Generate code**
 
@@ -23,6 +27,10 @@ AI-powered shell assistant using ChatGPT
 **Chat mode**
 
 ```sgpt --chat [session_name] "[message]"```
+
+**Interactive REPL session**
+
+```sgpt --repl [temp]```
 
 **Use specific role**
 
@@ -39,32 +47,68 @@ AI-powered shell assistant using ChatGPT
 # PARAMETERS
 
 **-s**, **--shell**
-> Generate shell command.
+> Generate a shell command, then prompt to execute, describe or abort.
 
-**-se**
-> Shell and execute.
+**--no-interaction**
+> With **--shell**, print the command to stdout without prompting.
+
+**-d**, **--describe-shell**
+> Describe a shell command.
 
 **-c**, **--code**
-> Generate code.
+> Generate only code.
 
-**--chat** _NAME_
-> Chat session.
+**--chat** _ID_
+> Continue a conversation; use **temp** for a quick session.
+
+**--repl** _ID_
+> Start a REPL session.
+
+**--show-chat** _ID_
+> Show all messages of a conversation.
+
+**-lc**, **--list-chats**
+> List existing conversations.
 
 **--role** _ROLE_
-> Use role.
+> Use a system role.
+
+**--create-role** _NAME_
+> Create a custom role.
+
+**--show-role** _NAME_
+> Show a role.
+
+**-lr**, **--list-roles**
+> List roles.
 
 **--model** _MODEL_
 > Specify model.
 
 **--temperature** _TEMP_
-> Response randomness.
+> Response randomness, from 0.0 to 2.0.
+
+**--top-p** _VALUE_
+> Limit the highest probable tokens, from 0.0 to 1.0.
+
+**--no-md**
+> Disable markdown prettifying.
+
+**--editor**
+> Open **$EDITOR** to write the prompt.
 
 **--no-cache**
 > Disable caching.
 
+**--install-integration**
+> Add the Ctrl+L shell integration to **.bashrc** or **.zshrc**.
+
+**--install-functions**
+> Install the default function calls.
+
 # DESCRIPTION
 
-**sgpt** (Shell GPT) is a command-line interface for interacting with OpenAI's ChatGPT models, optimized for developer and system administration workflows. It operates in several modes: general queries for quick answers, shell mode (**-s**) for generating executable commands with explanations, and code mode (**-c**) for producing programming solutions with automatic language detection.
+**sgpt** (Shell GPT) is a command-line interface for interacting with OpenAI GPT models and, through LiteLLM, local models such as Ollama, optimized for developer and system administration workflows. It operates in several modes: general queries for quick answers, shell mode (**-s**) for generating executable commands with explanations, and code mode (**-c**) for producing code without commentary.
 
 Chat sessions maintain conversation context across multiple invocations, allowing follow-up questions and iterative refinement. Roles customize the AI's behavior for specific tasks, with predefined roles for common scenarios and support for user-defined custom roles.
 
@@ -79,11 +123,11 @@ The tool integrates naturally with Unix pipelines, accepting input via stdin to 
 > Configuration file for default model, temperature, cache settings, and other preferences.
 
 **~/.config/shell_gpt/roles/**
-> Directory containing custom role definitions as text files.
+> Directory containing role definitions as JSON files.
 
 # CAVEATS
 
-Requires OpenAI API key. Costs per token. Internet connection needed.
+Requires an OpenAI API key or a compatible backend; local models work through LiteLLM (**USE_LITELLM=true**). Hosted APIs charge per token and need an internet connection. Review generated shell commands before executing them.
 
 # HISTORY
 
@@ -92,3 +136,9 @@ Requires OpenAI API key. Costs per token. Internet connection needed.
 # SEE ALSO
 
 [chatgpt](/man/chatgpt)(1), [github-copilot-cli](/man/github-copilot-cli)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/TheR1D/shell_gpt)```
+
+<!-- verified: 2026-11-08 -->

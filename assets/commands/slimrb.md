@@ -16,9 +16,21 @@ Compile Slim templates to HTML
 
 ```slimrb -p [template.slim]```
 
-**With Rails support**
+**Generate Rails-compatible Ruby code**
 
-```slimrb -r [template.slim]```
+```slimrb --rails [template.slim]```
+
+**Convert to ERB**
+
+```slimrb -e [template.slim]```
+
+**Load the logic-less plugin**
+
+```slimrb -r slim/logic_less [template.slim]```
+
+**Pass local variables**
+
+```slimrb -l '{name: "[World]"}' [template.slim]```
 
 **Compile from stdin**
 
@@ -26,24 +38,42 @@ Compile Slim templates to HTML
 
 # SYNOPSIS
 
-**slimrb** [_-p_] [_-r_] [_options_] [_input_] [_output_]
+**slimrb** [_options_] [_input_] [_output_]
 
 # PARAMETERS
 
-**-p**, **--pretty**
-> Pretty print HTML.
+**-s**, **--stdin**
+> Read input from standard input instead of a file.
 
-**-r**, **--rails**
-> Rails mode.
+**-c**, **--compile**
+> Compile only, printing Ruby code without running it.
 
 **-e**, **--erb**
-> Convert from ERB.
+> Convert to ERB.
 
-**-l**, **--logic-less**
-> Logic-less mode.
+**--rails**
+> Generate Rails-compatible code; implies **--compile**.
 
-**-t**, **--translator**
-> Translation mode.
+**-r**, **--require** _library_
+> Load a library or plugin, such as **slim/logic_less** or **slim/translator**.
+
+**-p**, **--pretty**
+> Produce pretty HTML.
+
+**-o**, **--option** _name=code_
+> Set a Slim option.
+
+**-l**, **--locals** _Hash|YAML|JSON_
+> Set local variables.
+
+**--trace**
+> Show a full traceback on error.
+
+**-h**, **--help**
+> Show help.
+
+**-v**, **--version**
+> Print the version.
 
 # DESCRIPTION
 
@@ -64,3 +94,11 @@ Ruby required. Slim gem needed. Ruby-specific templating.
 # SEE ALSO
 
 [erb](/man/erb)(1), [haml](/man/haml)(1), [ruby](/man/ruby)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/slim-template/slim)```
+
+```[Homepage](https://slim-template.github.io/)```
+
+<!-- verified: 2026-11-08 -->

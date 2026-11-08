@@ -85,8 +85,18 @@ Python 2 is EOL and receives no updates. Security vulnerabilities unfixed. Migra
 
 # HISTORY
 
-Python 2.0 was released in 2000. Python 2.7 was the final 2.x release (2010), with support ending January 1, 2020.
+Python 2.0 was released in 2000. Python 2.7 was the final 2.x series (first released July 3, 2010). Support ended January 1, 2020, and the last release, 2.7.18, came out in April 2020.
 
 # SEE ALSO
 
 [python3](/man/python3)(1), [2to3](/man/2to3)(1), [pip](/man/pip)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/python/cpython)```
+
+```[Homepage](https://www.python.org/)```
+
+```[Documentation](https://docs.python.org/2.7/)```
+
+<!-- verified: 2026-11-08 -->

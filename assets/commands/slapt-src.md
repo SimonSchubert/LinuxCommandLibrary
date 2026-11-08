@@ -24,6 +24,14 @@ Build and install SlackBuild packages
 
 ```slapt-src -w [slackbuild_name]```
 
+**Upgrade** all installed slackbuilds
+
+```slapt-src -U```
+
+**Simulate** an install
+
+```slapt-src -t -i [slackbuild_name]```
+
 # SYNOPSIS
 
 **slapt-src** [_OPTIONS_] [_slackbuild_name_...]
@@ -51,14 +59,38 @@ Build and install SlackBuild packages
 **-f, --fetch** _name_
 > Download slackbuild sources only
 
-**--yes**
-> Assume yes to all prompts
+**-U, --upgrade-all**
+> Upgrade all installed slackbuilds
 
-**--no**
-> Assume no to all prompts
+**-e, --clean**
+> Clean the build directory
+
+**-y, --yes**
+> Do not prompt
+
+**-t, --simulate**
+> Show what will be done
+
+**-n, --no-dep**
+> Do not look for dependencies
+
+**-p, --postprocess** _cmd_
+> Run the specified command on the generated package
+
+**-B, --build-only**
+> Build only; applies to **--upgrade-all**
+
+**-F, --fetch-only**
+> Fetch only; applies to **--upgrade-all**
+
+**-S, --skip-installable**
+> Skip slackbuilds available via slapt-get; applies to **--upgrade-all**
 
 **-c, --config** _file_
 > Use alternate configuration file
+
+**-v, --version**
+> Display version information
 
 **-h, --help**
 > Display help information
@@ -76,7 +108,7 @@ SlackBuild sources are configured in the **slapt-srcrc** configuration file, whi
 
 # CAVEATS
 
-Requires **slapt-get** and **curl** as dependencies. SlackBuilds are source packages that compile on your system, which can be time-consuming for large packages. Build dependencies must be satisfied before compilation. Configuration must point to valid SlackBuild repositories.
+Requires **slapt-get** and **curl** as dependencies. SlackBuilds are source packages that compile on your system, which can be time-consuming for large packages. Dependencies are looked up unless **--no-dep** is given. Configuration must point to valid SlackBuild repositories.
 
 # HISTORY
 
@@ -85,3 +117,9 @@ Requires **slapt-get** and **curl** as dependencies. SlackBuilds are source pack
 # SEE ALSO
 
 [slapt-get](/man/slapt-get)(8), [sbopkg](/man/sbopkg)(8), [slackpkg](/man/slackpkg)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/jaos/slapt-src)```
+
+<!-- verified: 2026-11-08 -->

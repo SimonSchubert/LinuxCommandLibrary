@@ -12,6 +12,10 @@ Automated Slackware package management tool
 
 ```slackpkg search [package_name]```
 
+**Find which package contains a file**
+
+```slackpkg file-search [filename]```
+
 **Install a package**
 
 ```slackpkg install [package_name]```
@@ -23,6 +27,10 @@ Automated Slackware package management tool
 **Upgrade all installed packages**
 
 ```slackpkg upgrade-all```
+
+**Upgrade all packages without prompts**
+
+```slackpkg -batch=on -default_answer=y upgrade-all```
 
 **Remove a package**
 
@@ -78,11 +86,32 @@ Automated Slackware package management tool
 **clean-system**
 > Remove packages not in official Slackware distribution
 
-**blacklist** _package_
-> Add package to blacklist
+**download** _package_
+> Download packages to /var/cache/packages without installing them
+
+**check-updates**
+> Check whether ChangeLog.txt has changed; useful from cron
+
+**show-changelog**
+> Display the Slackware ChangeLog.txt
+
+**blacklist**
+> Show blacklisted packages; edit /etc/slackpkg/blacklist to change them
 
 **new-config**
-> Find and merge new configuration files
+> Find .new configuration files and ask what to do with them
+
+**generate-template** _name_
+> Create a template from the installed official packages
+
+**install-template** _name_
+> Install all packages in a template from /etc/slackpkg/templates
+
+**remove-template** _name_
+> Remove all packages in a template
+
+**help**
+> Show actions with a short description
 
 # DESCRIPTION
 
@@ -90,7 +119,7 @@ Automated Slackware package management tool
 
 Before use, configure a mirror in **/etc/slackpkg/mirrors** by uncommenting one entry. Run **slackpkg update** to download the package list. The blacklist feature in /etc/slackpkg/blacklist prevents specific packages from being modified.
 
-slackpkg provides both menu-based and command-line interfaces. Set DIALOG=off in /etc/slackpkg/slackpkg.conf for console-only operation.
+slackpkg provides both menu-based and command-line interfaces. Set DIALOG=off in /etc/slackpkg/slackpkg.conf for console-only operation. Most settings can also be passed before the action as **-variable=value**, for example **-dialog=off**.
 
 # CONFIGURATION
 
@@ -105,7 +134,7 @@ slackpkg provides both menu-based and command-line interfaces. Set DIALOG=off in
 
 # CAVEATS
 
-Only one mirror can be active at a time. slackpkg manages only official Slackware packages; use **slackpkg+** for third-party repositories. The **clean-system** command removes all unofficial packages, so use with caution.
+Only one mirror can be active at a time. slackpkg manages only official Slackware packages; use **slackpkg+** for third-party repositories. The **clean-system** command removes all unofficial packages, so blacklist anything to keep first. Run **install-new** before **upgrade-all** when moving to a new release or following -current.
 
 # HISTORY
 
@@ -114,3 +143,13 @@ slackpkg was created to provide network-based package management for Slackware L
 # SEE ALSO
 
 [sbopkg](/man/sbopkg)(8), [installpkg](/man/installpkg)(8), [upgradepkg](/man/upgradepkg)(8), [removepkg](/man/removepkg)(8)
+
+# RESOURCES
+
+```[Source code](https://mirrors.slackware.com/slackware/slackware64-current/source/ap/slackpkg/)```
+
+```[Homepage](https://slackpkg.org/)```
+
+```[Documentation](https://slackpkg.org/documentation.html)```
+
+<!-- verified: 2026-11-08 -->

@@ -50,3 +50,9 @@ Disables read-only protections that prevent system modifications. System updates
 # SEE ALSO
 
 [steamos-readonly](/man/steamos-readonly)(1), [pacman](/man/pacman)(8), [steamos-add-to-steam](/man/steamos-add-to-steam)(1)
+
+# RESOURCES
+
+```[Homepage](https://store.steampowered.com/steamos)```
+
+<!-- verified: 2026-11-08 -->

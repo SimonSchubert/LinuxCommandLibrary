@@ -81,8 +81,8 @@ Manage parallel SDK versions for JVM languages
 **update**
 > Refresh candidate metadata cache
 
-**flush** [**tmp**|**broadcast**|**archives**|**version**]
-> Clear local cache and state
+**flush** [**tmp**|**metadata**|**version**]
+> Clear local state; with no argument clears tmp and metadata
 
 **config**
 > Open SDKMAN configuration file
@@ -117,3 +117,13 @@ SDKMAN was originally created as **GVM** (Groovy enVironment Manager) by **Marco
 # SEE ALSO
 
 [java](/man/java)(1), [javac](/man/javac)(1), [gradle](/man/gradle)(1), [mvn](/man/mvn)(1), [sbt](/man/sbt)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/sdkman/sdkman-cli)```
+
+```[Homepage](https://sdkman.io/)```
+
+```[Documentation](https://sdkman.io/usage)```
+
+<!-- verified: 2026-11-08 -->

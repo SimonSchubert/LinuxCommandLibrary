@@ -52,3 +52,10 @@ pydoc2.7 is **Python 2.7's** documentation tool.
 
 [pydoc](/man/pydoc)(1), [pydoc3](/man/pydoc3)(1), [python2.7](/man/python2.7)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/python/cpython)```
+
+```[Documentation](https://docs.python.org/2.7/)```
+
+<!-- verified: 2026-11-08 -->

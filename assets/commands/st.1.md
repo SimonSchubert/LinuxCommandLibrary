@@ -24,10 +24,17 @@ Set **geometry**
 
 ```st -g [columns]x[rows]```
 
+Open a **serial line**
+
+```st -l [/dev/ttyS0] [115200]```
+
 # KEYBOARD SHORTCUTS
 
 **Ctrl+Shift+PageUp/PageDown**
 > Increase/decrease font size
+
+**Ctrl+Shift+Home**
+> Reset font size
 
 **Ctrl+Shift+c**
 > Copy to clipboard
@@ -35,8 +42,20 @@ Set **geometry**
 **Ctrl+Shift+v**
 > Paste from clipboard
 
-**Ctrl+Shift+y**
+**Ctrl+Shift+y**, **Shift+Insert**
 > Paste from selection
+
+**Print Screen**
+> Print the selection to the iofile
+
+**Shift+Print Screen**
+> Print the full screen to the iofile
+
+**Ctrl+Print Screen**
+> Toggle printing to the iofile
+
+**Break**
+> Send a break on the serial line
 
 # SYNOPSIS
 
@@ -53,29 +72,32 @@ Set **geometry**
 **-e** _command_ [_args_]
 > Execute command instead of shell
 
-**-o** _file_
-> Write terminal output to file
+**-o** _iofile_
+> Write all I/O to a file; **-** means standard output
+
+**-l** _line_ [_stty_args_...]
+> Use a tty line such as a serial device instead of a pseudo terminal
 
 **-g** _geometry_
-> Set window geometry (WxH+X+Y)
+> Set window geometry as an X11 string in columns and rows ([=][cols]x[rows][+x][+y])
 
 **-f** _font_
-> Set font (X11 font string)
+> Set font (fontconfig pattern, such as Monospace:size=12)
 
 **-c** _class_
-> Set window class
+> Set window class (default $TERM)
 
 **-n** _name_
-> Set window name
+> Set window instance name (default $TERM)
 
 **-w** _windowid_
 > Embed in given window ID
 
 **-a**
-> Disable alternate screen buffer
+> Disable alternate screens
 
 **-i**
-> Fix screen on insert mode
+> Fixate the position given with -g
 
 **-v**
 > Print version
@@ -92,8 +114,16 @@ Configuration requires editing config.h and recompiling. No scrollback by defaul
 
 # HISTORY
 
-**st** was created by the **suckless.org** community, known for minimalist software including **dwm** window manager. The project follows the suckless philosophy emphasizing simplicity, clarity, and frugality in software design. st has been developed since **2012** as an alternative to bloated terminal emulators.
+**st** was created by the **suckless.org** community, known for minimalist software including **dwm** window manager. The project follows the suckless philosophy emphasizing simplicity, clarity, and frugality in software design. st has been developed since **2008** as an alternative to bloated terminal emulators.
 
 # SEE ALSO
 
 [xterm](/man/xterm)(1), [urxvt](/man/urxvt)(1), [alacritty](/man/alacritty)(1), [tmux](/man/tmux)(1)
+
+# RESOURCES
+
+```[Source code](https://git.suckless.org/st)```
+
+```[Homepage](https://st.suckless.org/)```
+
+<!-- verified: 2026-11-08 -->

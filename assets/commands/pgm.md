@@ -35,7 +35,7 @@ Simple ASCII or binary format, easy to read and write programmatically.
 ```
 P2              # ASCII format (P5 for binary)
 width height
-maxval          # Maximum gray value (usually 255)
+maxval          # Maximum gray value (1 to 65535, usually 255)
 pixel_values    # Space-separated (ASCII) or raw (binary)
 ```
 
@@ -65,7 +65,7 @@ pnmtopng image.pgm > image.png
 
 # CAVEATS
 
-ASCII format is larger but human-readable. Binary more efficient. Part of Netpbm toolkit.
+ASCII (plain, P2) format is larger but human-readable. Binary (raw, P5) is more efficient and uses 1 byte per sample when maxval is below 256, otherwise 2 bytes. Part of Netpbm toolkit.
 
 # HISTORY
 
@@ -74,3 +74,11 @@ PGM was designed by **Jef Poskanzer** as part of the **Netpbm** (formerly Pbmplu
 # SEE ALSO
 
 [ppm](/man/ppm)(5), [pbm](/man/pbm)(5), [pnm](/man/pnm)(5), [netpbm](/man/netpbm)(1)
+
+# RESOURCES
+
+```[Homepage](https://netpbm.sourceforge.net/)```
+
+```[Documentation](https://netpbm.sourceforge.net/doc/pgm.html)```
+
+<!-- verified: 2026-11-08 -->

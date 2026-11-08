@@ -32,9 +32,13 @@ SlackBuilds.org package management tool
 
 ```sbopkg -b [package]```
 
+**List installed SBo packages**
+
+```sbopkg -p```
+
 # SYNOPSIS
 
-**sbopkg** [_-r_] [_-c_] [_-i package_] [_-b package_] [_-s package_] [_-g_]
+**sbopkg** [_-r_] [_-c_] [_-i package_] [_-b package_] [_-s package_] [_-g package_] [_-d package_] [_-p_]
 
 # PARAMETERS
 
@@ -51,12 +55,24 @@ SlackBuilds.org package management tool
 > Build a package without installing it
 
 **-s** _package_
-> Search and display package information (README, SlackBuild, .info)
+> Specific search for a package and display its information (README, SlackBuild, .info)
 
-**-g**
-> Upgrade installed packages with available updates
+**-d** _package_
+> Download source archives without building
 
-**-V**
+**-g** _package_
+> General search for packages matching the string
+
+**-p**
+> List installed SBo packages
+
+**-B**
+> Process without prompting for confirmation
+
+**-V** _version_
+> Set the repository and branch to use
+
+**-v**
 > Display version information
 
 **-h**
@@ -81,3 +97,11 @@ sbopkg was created to simplify access to SlackBuilds.org, a community repository
 # SEE ALSO
 
 [slackpkg](/man/slackpkg)(8), [installpkg](/man/installpkg)(8), [upgradepkg](/man/upgradepkg)(8), [makepkg](/man/makepkg)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/sbopkg/sbopkg)```
+
+```[Homepage](https://sbopkg.org/)```
+
+<!-- verified: 2026-11-08 -->

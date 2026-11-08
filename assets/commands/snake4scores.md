@@ -21,3 +21,9 @@ The high score file tracks the top 200 users, with one entry per user. This is a
 # SEE ALSO
 
 [snake4](/man/snake4)(6)
+
+# RESOURCES
+
+```[Homepage](https://shh.thathost.com/pub-unix/html/snake4.html)```
+
+<!-- verified: 2026-11-08 -->

@@ -48,37 +48,25 @@ Crack password hashes using rainbow tables
 **-ntlm** _FILE_
 > Load NTLM hashes from pwdump file
 
-**-t** _DIR_
-> Rainbow tables directory
-
-**-o** _FILE_
-> Write cracked passwords to output file
-
-**-p** _NUM_
-> Number of threads to use
-
-**-s**
-> Display cracking statistics
-
-**-u**
-> Display username with cracked password
+_table_path_
+> Directory where rainbow tables (*.rt, *.rtc) are stored
 
 # SUPPORTED ALGORITHMS
 
 **lm**
-> LAN Manager hash (up to 7 characters)
+> LAN Manager hash (plaintext length 0-7)
 
 **ntlm**
-> NT LAN Manager hash (up to 15 characters)
+> NT LAN Manager hash (plaintext length 0-15)
 
 **md5**
-> MD5 hash (up to 15 characters)
+> MD5 hash (plaintext length 0-15)
 
 **sha1**
-> SHA-1 hash (up to 20 characters)
+> SHA-1 hash (plaintext length 0-20)
 
 **sha256**
-> SHA-256 hash (up to 20 characters)
+> SHA-256 hash (plaintext length 0-20)
 
 # DESCRIPTION
 

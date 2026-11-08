@@ -18,6 +18,11 @@ Start the daemon (typically **invoked automatically**)
 
 The daemon manages I/O streams (stdin, stdout, stderr) for job steps, tracks accounting information including CPU time, memory usage, and I/O statistics, and processes signals directed at job steps. Each job step within a multi-step job has its own slurmstepd process.
 
+# ENVIRONMENT
+
+**SLURM_DEBUG_FLAGS**
+> Debug flags for slurmstepd; takes precedence over the **slurm.conf** setting
+
 # SIGNALS
 
 **SIGINT, SIGTERM, SIGQUIT**
@@ -40,3 +45,13 @@ Should never be manually started; it is spawned automatically by slurmd. Multipl
 # SEE ALSO
 
 [slurmd](/man/slurmd)(8), [srun](/man/srun)(1), [scancel](/man/scancel)(1), [sstat](/man/sstat)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/SchedMD/slurm)```
+
+```[Homepage](https://slurm.schedmd.com/)```
+
+```[Documentation](https://slurm.schedmd.com/slurmstepd.html)```
+
+<!-- verified: 2026-11-08 -->

@@ -38,9 +38,12 @@ Switch between Qt installation versions
 **-qt=**_version_
 > Select Qt version.
 
+**-install** [**-f**] [**-local**] _name_ _path-to-qmake_
+> Create a configuration entry for a Qt installation.
+
 # DESCRIPTION
 
-**qtchooser** (or qt-select) allows switching between multiple Qt installations. It manages which Qt version's tools (qmake, moc, etc.) are used by default.
+**qtchooser** switches between multiple Qt installations. It is usually reached through symlinks named after tools such as qmake and moc, and it picks the Qt version from **-qt=**, **QT_SELECT**, or the default configuration. There is no separate **qt-select** program; selection is done with **qtchooser** and the **QT_SELECT** variable.
 
 # EXAMPLES
 
@@ -65,26 +68,35 @@ qtchooser -run-tool=qmake -qt=5 --version
 
 # CONFIGURATION
 
-**/usr/share/qtchooser/**
-> System-wide Qt version configuration files, each specifying bin and lib paths for a Qt installation.
+**/etc/xdg/qtchooser/*.conf**
+> System-wide configuration files. Each has two lines: the path to the binaries, then the path to the libraries. **default.conf** is used when nothing else is selected.
 
-**~/.config/qtchooser/**
-> User-level Qt version configuration files overriding system defaults.
+**~/.config/qtchooser/*.conf**
+> User-level configuration files.
 
 **QT_SELECT**
 > Environment variable selecting the default Qt version (e.g., qt5, qt6).
 
+**QTCHOOSER_RUNTOOL**
+> Environment variable naming the tool to run, same as **-run-tool**.
+
 **QTCHOOSER_NO_GLOBAL_DIR**
-> Environment variable to ignore system-wide configuration directory when set to 1.
+> When set, ignores the search paths compiled in with **QTCHOOSER_GLOBAL_DIR**, which some distributions use (for example /usr/share/qtchooser).
 
 # CAVEATS
 
-Not available on all distributions. May conflict with manually installed Qt. Use environment variable for persistent selection.
+Not available on all distributions. A version can only be selected if a matching .conf file exists, and Qt 6 packages commonly install versioned tools such as **qmake6** instead of using qtchooser.
 
 # HISTORY
 
-qtchooser was created to manage multiple Qt installations on Linux systems with distribution packaging.
+qtchooser was written by **Thiago Macieira** of Intel to manage multiple Qt installations, such as Qt 4 and Qt 5 side by side.
 
 # SEE ALSO
 
 [qmake](/man/qmake)(1), [update-alternatives](/man/update-alternatives)(1), [qt](/man/qt)(1)
+
+# RESOURCES
+
+```[Source code](https://code.qt.io/cgit/qtsdk/qtchooser.git)```
+
+<!-- verified: 2026-11-08 -->

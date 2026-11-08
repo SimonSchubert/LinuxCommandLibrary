@@ -16,9 +16,17 @@ Open local Rust documentation in browser
 
 ```rustup doc --std```
 
-**Open specific crate docs**
+**Open the core library docs**
 
 ```rustup doc --core```
+
+**Open the docs for a specific item**
+
+```rustup doc [std::fs::File]```
+
+**Print the documentation path** instead of opening it
+
+```rustup doc --path```
 
 # SYNOPSIS
 
@@ -41,8 +49,23 @@ Open local Rust documentation in browser
 **--alloc**
 > Alloc library docs.
 
+**--cargo**
+> The Cargo Book.
+
+**--clippy**
+> The Clippy documentation.
+
 **--path**
 > Print path instead of opening.
+
+**--serve**
+> Serve the docs over a local HTTP server, for sandboxed browsers that cannot open file:// URLs (recent versions).
+
+**--toolchain** _name_
+> Use a specific toolchain.
+
+_topic_
+> Item to open, such as std::fs or usize.
 
 # DESCRIPTION
 
@@ -52,3 +75,10 @@ Open local Rust documentation in browser
 
 [rustup](/man/rustup)(1), [cargo-doc](/man/cargo-doc)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/rustup)```
+
+```[Documentation](https://rust-lang.github.io/rustup/)```
+
+<!-- verified: 2026-11-08 -->

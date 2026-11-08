@@ -51,6 +51,9 @@ Ruby on Rails web application framework CLI
 **console**, **c**
 > Open an interactive IRB session with the application context
 
+**dbconsole**, **db**
+> Open a console for the configured database
+
 **generate**, **g**
 > Run code generators for models, controllers, migrations, etc.
 
@@ -69,6 +72,15 @@ Ruby on Rails web application framework CLI
 **db:setup**
 > Create database, load schema, and seed data
 
+**db:prepare**
+> Create and migrate the database if needed
+
+**db:rollback**
+> Revert the most recent migration
+
+**credentials:edit**
+> Edit encrypted credentials
+
 **routes**
 > Display all defined routes
 
@@ -78,14 +90,14 @@ Ruby on Rails web application framework CLI
 **--help**, **-h**
 > Display help for any command
 
-**--version**
+**--version**, **-v**
 > Show the Rails version
 
 **-e**, **--environment** _ENV_
-> Specify environment (development, test, production)
+> Specify environment for commands such as server, console, and dbconsole
 
 **-p**, **--port** _PORT_
-> Set server port (default 3000)
+> Set the port for **rails server** (default 3000)
 
 # DESCRIPTION
 
@@ -122,8 +134,18 @@ Database commands require proper database configuration in **config/database.yml
 
 # HISTORY
 
-Rails was created by **David Heinemeier Hansson** and extracted from the Basecamp project management tool in **2004**. The first public release was version 1.0 in December **2005**. The framework popularized the MVC pattern for web development and introduced conventions like RESTful routing that influenced many subsequent frameworks.
+Rails was created by **David Heinemeier Hansson** and extracted from the Basecamp project management tool in **2004**. It was first released publicly in July **2004**, and version 1.0 followed in December **2005**. The framework popularized the MVC pattern for web development and introduced conventions like RESTful routing that influenced many subsequent frameworks.
 
 # SEE ALSO
 
 [ruby](/man/ruby)(1), [bundle](/man/bundle)(1), [rake](/man/rake)(1), [gem](/man/gem)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rails/rails)```
+
+```[Homepage](https://rubyonrails.org)```
+
+```[Documentation](https://guides.rubyonrails.org/command_line.html)```
+
+<!-- verified: 2026-11-08 -->

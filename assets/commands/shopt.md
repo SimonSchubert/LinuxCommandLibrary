@@ -83,11 +83,23 @@ Toggle Bash shell behavior options
 **expand_aliases**
 > Enable alias expansion (default in interactive shells)
 
+**autocd**
+> Treat a command that is a directory name as an argument to cd
+
+**checkwinsize**
+> Update LINES and COLUMNS after each external command
+
+**failglob**
+> Report an error when a glob pattern matches nothing
+
+**lastpipe**
+> Run the last command of a pipeline in the current shell when job control is off
+
 # DESCRIPTION
 
 **shopt** is a Bash builtin that enables or disables shell options for the current session. These options modify shell behavior including globbing, history handling, directory navigation, and command completion.
 
-Without arguments, shopt lists all options and their current status. Use **-s** to enable and **-u** to disable specific options. The **-q** flag tests options silently, setting exit status 0 if enabled, 1 if disabled.
+Without arguments, shopt lists all options and their current status. Use **-s** to enable and **-u** to disable specific options. The **-q** flag tests options silently, setting exit status 0 only if all named options are enabled.
 
 Options set with shopt persist only for the current session. Add shopt commands to **~/.bashrc** for permanent configuration.
 
@@ -102,3 +114,11 @@ shopt is a Bash builtin introduced in **Bash 2.0** (1996) to provide a cleaner i
 # SEE ALSO
 
 [set](/man/set)(1), [bash](/man/bash)(1)
+
+# RESOURCES
+
+```[Homepage](https://tiswww.case.edu/php/chet/bash/bashtop.html)```
+
+```[Documentation](https://tiswww.case.edu/php/chet/bash/bashref.html)```
+
+<!-- verified: 2026-11-08 -->

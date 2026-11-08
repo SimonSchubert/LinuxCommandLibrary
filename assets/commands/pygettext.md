@@ -29,8 +29,8 @@ Extract translatable strings from Python code
 **-o**, **--output** _file_
 > Output file name.
 
-**-d**, **--domain** _name_
-> Text domain name.
+**-d**, **--default-domain** _name_
+> Write to name.pot instead of messages.pot.
 
 **-p**, **--output-dir** _dir_
 > Output directory.
@@ -38,17 +38,29 @@ Extract translatable strings from Python code
 **-D**, **--docstrings**
 > Extract docstrings.
 
-**-k** _keyword_
-> Additional keyword to look for.
+**-k**, **--keyword** _word_
+> Additional keyword to look for. Repeatable.
+
+**-K**, **--no-default-keywords**
+> Disable the default keywords.
+
+**-c**_TAG_, **--add-comments**=_TAG_
+> Extract translator comments starting with TAG.
+
+**-x**, **--exclude-file** _file_
+> File listing strings not to extract.
 
 **-n**, **--add-location**
-> Include file:line comments.
+> Write file:line comments (the default in current versions).
+
+**--no-location**
+> Do not write location comments.
 
 # DESCRIPTION
 
-**pygettext** extracts translatable strings from Python source code. It searches for strings marked with _(), gettext(), and similar functions, creating a POT template file.
+**pygettext** extracts translatable strings from Python source code. It searches for strings marked with _(), gettext(), ngettext(), pgettext() and related functions, creating a POT template file (messages.pot by default). Directory arguments are searched recursively.
 
-Part of Python standard library.
+Ships with CPython in Tools/i18n rather than as a library module, so some distributions package it separately or omit it.
 
 # EXAMPLES
 
@@ -63,7 +75,7 @@ pygettext -d myapp -p locale src/*.py
 pygettext -D -o docs.pot module.py
 
 # Custom keywords
-pygettext -k N_ -k ngettext:1,2 app.py
+pygettext -k N_ app.py
 ```
 
 # MARKING STRINGS
@@ -94,3 +106,11 @@ pygettext is part of **Python** tools for internationalization, implementing get
 # SEE ALSO
 
 [xgettext](/man/xgettext)(1), [msgfmt](/man/msgfmt)(1), [gettext](/man/gettext)(1), [babel](/man/babel)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/python/cpython/blob/main/Tools/i18n/pygettext.py)```
+
+```[Documentation](https://docs.python.org/3/library/gettext.html)```
+
+<!-- verified: 2026-11-08 -->

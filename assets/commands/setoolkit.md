@@ -66,8 +66,8 @@ Social engineering penetration testing framework
 **9) Powershell Attack Vectors**
 > Windows PowerShell-based attacks
 
-**10) SMS Spoofing Attack Vector**
-> Spoofed SMS messages
+**10) Third Party Modules**
+> Additional community modules
 
 # CONFIGURATION
 
@@ -84,7 +84,7 @@ SET is designed for authorized penetration testing and security awareness traini
 
 # CAVEATS
 
-Requires root privileges to run. Many attacks require additional configuration (email servers, domain names, SSL certificates). The toolkit must only be used with explicit authorization—unauthorized use is illegal. Some antivirus software may flag generated payloads. The deprecated **se-toolkit** command has been replaced by **setoolkit**.
+Requires root privileges to run. Many attacks require additional configuration (email servers, domain names, SSL certificates). The toolkit must only be used with explicit authorization, and unauthorized use is illegal. Some antivirus software may flag generated payloads. The deprecated **se-toolkit** command has been replaced by **setoolkit**.
 
 # HISTORY
 
@@ -93,3 +93,11 @@ The Social-Engineer Toolkit was created by **David Kennedy** (ReL1K) at **Truste
 # SEE ALSO
 
 [msfconsole](/man/msfconsole)(1), [beef-xss](/man/beef-xss)(1), [gophish](/man/gophish)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/trustedsec/social-engineer-toolkit)```
+
+```[Homepage](https://www.trustedsec.com/tools/the-social-engineer-toolkit-set)```
+
+<!-- verified: 2026-11-08 -->

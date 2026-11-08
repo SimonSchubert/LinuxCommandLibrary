@@ -41,6 +41,21 @@ Modern terminal file manager
 **-c**, **--config-file** _path_
 > Use a custom configuration file instead of the default
 
+**-hf**, **--hotkey-file** _path_
+> Use a custom hotkey file
+
+**-fh**, **--fix-hotkeys**
+> Add any missing hotkeys to the hotkey file
+
+**-fch**, **--fix-config-file**
+> Add any missing fields to the config file
+
+**-pld**, **--print-last-dir**
+> Print the last directory to stdout on exit, for use with cd
+
+**-cf**, **--chooser-file** _path_
+> On opening a file, write its path to this file and exit
+
 **--version**
 > Display version information
 
@@ -50,23 +65,26 @@ Modern terminal file manager
 **path-list**, **pl**
 > Print paths of all configuration files
 
+**debug-info**, **di**
+> Print debug information
+
 # DESCRIPTION
 
 **spf** (Superfile) is a modern terminal file manager with a focus on aesthetics and usability. It provides a multi-panel interface for efficient file navigation and operations, supporting keyboard-driven workflows similar to vim.
 
 The interface displays file listings with icons (requires Nerd Font), metadata previews, and supports multiple panels for working across directories simultaneously. Operations include copying, moving, renaming, deleting files, and creating new files and directories.
 
-Key navigation uses vim-style bindings by default: **h/j/k/l** for movement, **y** to copy, **p** to paste, **d** to delete, and **enter** to open. Press **>** to open the command prompt for SPF-specific commands like **split** to open additional panels.
+By default, **j/k** or the arrow keys move, **Ctrl+c** copies, **Ctrl+x** cuts, **Ctrl+v** pastes, **Ctrl+d** deletes, **Ctrl+r** renames, and **enter** or **l** opens. Press **:** for a shell command line, or **>** for the prompt with SPF-specific commands like **split** to open additional panels. Vim-style bindings such as **y**, **p** and **d** ship in **vimHotkeys.toml**.
 
-Configuration files control hotkeys, themes, and behavior. Files are stored in **~/.config/superfile/** on Linux and macOS. Themes and border styles are fully customizable.
+Configuration files control hotkeys, themes, and behavior. Files are stored in **~/.config/superfile/** on Linux and **~/Library/Application Support/superfile/** on macOS. Themes and border styles are fully customizable.
 
 # CONFIGURATION
 
 **~/.config/superfile/config.toml**
 > Main configuration file controlling keybindings, default sort order, display options, and panel behavior.
 
-**~/.config/superfile/theme.toml**
-> Theme configuration defining colors, border styles, and icon settings.
+**~/.config/superfile/theme/**
+> Directory of theme TOML files defining colors, selected with the **theme** key in **config.toml**.
 
 **~/.config/superfile/hotkeys.toml**
 > Custom keybinding overrides for navigation and file operations.
@@ -82,3 +100,11 @@ Superfile requires a **Nerd Font** to display file and directory icons correctly
 # SEE ALSO
 
 [ranger](/man/ranger)(1), [mc](/man/mc)(1), [nnn](/man/nnn)(1), [lf](/man/lf)(1), [vifm](/man/vifm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/yorukot/superfile)```
+
+```[Homepage](https://superfile.dev/)```
+
+<!-- verified: 2026-11-08 -->

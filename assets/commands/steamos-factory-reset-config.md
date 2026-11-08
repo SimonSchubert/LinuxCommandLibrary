@@ -29,3 +29,9 @@ Internal command not intended for manual use. Running this command directly may 
 # SEE ALSO
 
 [steamos-factory-reset](/man/steamos-factory-reset)(1)
+
+# RESOURCES
+
+```[Homepage](https://store.steampowered.com/steamos)```
+
+<!-- verified: 2026-11-08 -->

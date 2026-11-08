@@ -38,14 +38,24 @@ Generate shell completions for rustup
 **powershell**
 > PowerShell completions.
 
-**cargo**
-> Generate for cargo instead.
+**elvish**
+> Elvish completions.
+
+**rustup** | **cargo**
+> Tool to generate completions for (default rustup).
 
 # DESCRIPTION
 
-**rustup completions** generates shell completion scripts. Outputs completion code for rustup or cargo commands. Install to appropriate shell configuration.
+**rustup completions** generates shell completion scripts. The script is written to stdout, so redirect it to the location your shell loads completions from.
 
 # SEE ALSO
 
 [rustup](/man/rustup)(1), [cargo](/man/cargo)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/rust-lang/rustup)```
+
+```[Documentation](https://rust-lang.github.io/rustup/)```
+
+<!-- verified: 2026-11-08 -->

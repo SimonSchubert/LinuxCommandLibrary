@@ -18,7 +18,7 @@ Manage per-domain SELinux permissive mode
 
 # SYNOPSIS
 
-**semanage permissive** [**-l**|**-a**|**-d**] [_domain_]
+**semanage permissive** [**-n**] [**-N**] [**-S** _store_] (**-a** _type_ | **-d** _type_ | **-D** | **-E** | **-l**)
 
 # PARAMETERS
 
@@ -31,6 +31,21 @@ Manage per-domain SELinux permissive mode
 **-d, --delete**
 > Remove a domain from permissive mode
 
+**-D, --deleteall**
+> Remove all local customizations of permissive domains
+
+**-E, --extract**
+> Extract customizable commands, for use within a transaction
+
+**-n, --noheading**
+> Do not print a heading when listing
+
+**-N, --noreload**
+> Do not reload the policy after commit
+
+**-S, --store** _store_
+> Select an alternate SELinux policy store
+
 # DESCRIPTION
 
 **semanage permissive** manages per-domain permissive mode in SELinux. When a domain is set to permissive, SELinux logs policy violations but does not enforce them for processes in that domain.
@@ -39,8 +54,14 @@ This provides more granular control than global permissive mode (**setenforce 0*
 
 # CAVEATS
 
-Permissive domains are effectively unconfined and should only be used for troubleshooting. For production systems, configure proper SELinux policy rules instead of leaving domains in permissive mode. Requires root privileges.
+Permissive domains are effectively unconfined and should only be used for troubleshooting. For production systems, configure proper SELinux policy rules instead of leaving domains in permissive mode. **-d** can only remove domains listed as "Customized Permissive Types" by **semanage permissive -l**, not ones made permissive by the base policy. Requires root privileges.
 
 # SEE ALSO
 
 [semanage](/man/semanage)(8), [setenforce](/man/setenforce)(8), [getenforce](/man/getenforce)(8), [audit2allow](/man/audit2allow)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/SELinuxProject/selinux)```
+
+<!-- verified: 2026-11-08 -->

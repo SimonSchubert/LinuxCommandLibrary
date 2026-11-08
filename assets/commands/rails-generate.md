@@ -20,6 +20,18 @@ Scaffold Rails application components from templates
 
 ```rails generate migration [Name]```
 
+**Preview** generated files
+
+```rails generate scaffold [Name] --pretend```
+
+**List all generators**
+
+```rails generate```
+
+**Use the short alias**
+
+```rails g model [Name] [field:type]```
+
 # SYNOPSIS
 
 **rails** **generate** _generator_ _name_ [_options_]
@@ -41,8 +53,17 @@ Scaffold Rails application components from templates
 **-p**, **--pretend**
 > Preview without creating.
 
+**-f**, **--force**
+> Overwrite files that already exist.
+
+**-s**, **--skip**
+> Skip files that already exist.
+
+**-q**, **--quiet**
+> Suppress status output.
+
 **--skip-routes**
-> Don't add routes.
+> Don't add routes to config/routes.rb (controller generator).
 
 # DESCRIPTION
 
@@ -54,3 +75,10 @@ Each generator produces the appropriate set of files including source code, test
 
 [rails](/man/rails)(1), [rails-destroy](/man/rails-destroy)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/rails/rails)```
+
+```[Documentation](https://guides.rubyonrails.org/generators.html)```
+
+<!-- verified: 2026-11-08 -->

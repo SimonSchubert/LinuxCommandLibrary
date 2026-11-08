@@ -8,6 +8,10 @@ Display all **available updates**
 
 ```snap --nosplash --nogui --modules --list --refresh```
 
+**Update all** installed modules
+
+```snap --nosplash --nogui --modules --update-all```
+
 Display **help**
 
 ```snap --help```
@@ -41,6 +45,15 @@ Launch in **headless mode**
 **--refresh**
 > Check for updates
 
+**--update-all**
+> Update all installed modules; use with **--modules**
+
+**--update** _module_
+> Update the named module; use with **--modules**
+
+**--install** _module_
+> Install the named module; use with **--modules**
+
 **--help**
 > Display help information
 
@@ -61,3 +74,13 @@ Requires Java Runtime Environment. Large satellite datasets demand significant m
 # SEE ALSO
 
 [gdalinfo](/man/gdalinfo)(1), [gdal_translate](/man/gdal_translate)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/senbox-org/snap-desktop)```
+
+```[Homepage](https://step.esa.int/main/toolboxes/snap/)```
+
+```[Documentation](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/30539785/Update+SNAP+from+the+command+line)```
+
+<!-- verified: 2026-11-08 -->

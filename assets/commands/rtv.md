@@ -26,11 +26,11 @@ Browse Reddit in the terminal
 
 # PARAMETERS
 
-**-s**, **--subreddit** _name_
+**-s** _name_
 > Open subreddit.
 
-**-l**, **--link** _url_
-> Open submission.
+**-l** _url_
+> Deprecated; pass the link as a positional argument instead.
 
 **--log** _file_
 > Log file.
@@ -42,13 +42,28 @@ Browse Reddit in the terminal
 > ASCII-only mode.
 
 **--theme** _name_
-> Color theme.
+> Color theme, by name or file.
+
+**--list-themes**
+> List the available themes.
+
+**--monochrome**
+> Disable colors.
+
+**--enable-media**
+> Open external links using programs defined in the mailcap config.
+
+**--clear-auth**
+> Remove any saved user data before launching.
+
+**--copy-config**
+> Copy the default configuration to ~/.config/rtv/rtv.cfg.
 
 # DESCRIPTION
 
 **rtv** (Reddit Terminal Viewer) is a terminal interface for Reddit. It displays subreddits, posts, and comments in a text-based interface with vim-like navigation.
 
-Note: Project is discontinued; consider using tuir fork.
+Note: The project is no longer maintained; consider using the tuir fork.
 
 # EXAMPLES
 
@@ -76,7 +91,8 @@ j/k     - Move down/up
 l/h     - Open/back
 o       - Open in browser
 c       - Compose
-/       - Search
+/       - Open a prompt to select a subreddit
+f       - Search the current subreddit
 r       - Refresh
 q       - Quit
 ?       - Help
@@ -98,3 +114,9 @@ rtv was created by **Michael Lazar** as a terminal Reddit client. Development st
 # SEE ALSO
 
 [tuir](/man/tuir)(1), [w3m](/man/w3m)(1), [lynx](/man/lynx)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/michael-lazar/rtv)```
+
+<!-- verified: 2026-11-08 -->

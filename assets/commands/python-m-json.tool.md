@@ -22,24 +22,36 @@ Validate and pretty-print JSON data
 
 # SYNOPSIS
 
-**python -m json.tool** [_options_] [_file_]
+**python -m json.tool** [_options_] [_infile_] [_outfile_]
 
 # PARAMETERS
 
-_FILE_
-> JSON file to format.
+_INFILE_
+> JSON file to validate (default stdin).
+
+_OUTFILE_
+> Where to write the result (default stdout).
 
 **--sort-keys**
-> Sort object keys.
+> Sort object keys alphabetically.
 
-**--compact**
-> Compact output.
+**--json-lines**
+> Parse every input line as a separate JSON object.
 
 **--indent** _N_
-> Indentation level.
+> Spaces per indentation level (default 4).
+
+**--tab**
+> Indent with tabs.
+
+**--no-indent**
+> Single line with default separators.
+
+**--compact**
+> Suppress all whitespace.
 
 **--no-ensure-ascii**
-> Allow non-ASCII.
+> Do not escape non-ASCII characters.
 
 # DESCRIPTION
 
@@ -49,7 +61,7 @@ The tool is useful for quickly inspecting API responses, configuration files, or
 
 # CAVEATS
 
-Part of Python standard library. Basic functionality.
+**--indent**, **--tab**, **--no-indent**, **--compact** and **--no-ensure-ascii** need Python 3.9+, and the whitespace options are mutually exclusive.
 
 # HISTORY
 
@@ -59,3 +71,10 @@ json.tool is a **Python standard library** module for JSON formatting.
 
 [jq](/man/jq)(1), [python](/man/python)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/python/cpython)```
+
+```[Documentation](https://docs.python.org/3/library/json.html)```
+
+<!-- verified: 2026-11-08 -->

@@ -29,3 +29,11 @@ Part of **Proxmox VE** QEMU/KVM management tools. Provides the data transfer mec
 # SEE ALSO
 
 [qm](/man/qm)(1), [qm-migrate](/man/qm-migrate)(1)
+
+# RESOURCES
+
+```[Source code](https://git.proxmox.com/?p=qemu-server.git)```
+
+```[Documentation](https://pve.proxmox.com/pve-docs/qm.1.html)```
+
+<!-- verified: 2026-11-08 -->

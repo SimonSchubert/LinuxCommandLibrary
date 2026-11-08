@@ -8,36 +8,53 @@ Scheme programming language interpreter
 
 ```scheme```
 
-**Run file**
+**Load a file, then enter the REPL** (Chez Scheme)
 
-```scheme [file.scm]```
+```scheme [file.ss]```
 
-**Evaluate expression**
+**Run a script** (Chez Scheme)
 
-```scheme -e "[(+ 1 2)]"```
+```scheme --script [file.ss]```
 
-**Load file then REPL**
+**Run an R6RS top-level program** (Chez Scheme)
 
-```scheme -l [file.scm]```
+```scheme --program [file.sps]```
 
-**Quiet mode**
+**Start without the greeting** (Chez Scheme)
 
 ```scheme -q```
 
+**Load a file** (MIT/GNU Scheme)
+
+```scheme --load [file.scm]```
+
+**Evaluate an expression** (MIT/GNU Scheme)
+
+```scheme --eval "[(display (+ 1 2))]"```
+
 # SYNOPSIS
 
-**scheme** [_-e expr_] [_-l file_] [_options_] [_file_]
+**scheme** [_options_] [_file_ ...]
 
 # PARAMETERS
 
-**-e** _EXPR_
-> Evaluate expression.
+**--script** _FILE_
+> Chez: run FILE as a Scheme shell script.
 
-**-l** _FILE_
-> Load file.
+**--program** _FILE_
+> Chez: run FILE as an R6RS top-level program.
 
-**-q**
-> Quiet startup.
+**-q**, **--quiet**
+> Chez: suppress greeting and prompt.
+
+**--load** _FILE_ ...
+> MIT: load the listed files.
+
+**--eval** _EXPR_ ...
+> MIT: evaluate the listed expressions.
+
+**--no-init-file**
+> MIT: ignore ~/.scheme.init.
 
 **--help**
 > Show help.
@@ -49,13 +66,13 @@ Scheme programming language interpreter
 
 **scheme** is an interpreter for the Scheme programming language, a minimalist dialect of Lisp emphasizing functional programming, lexical scoping, and first-class procedures. It provides both an interactive REPL for experimentation and the ability to run Scheme source files directly.
 
-Scheme's design follows the R5RS and R7RS language standards, providing a small but powerful core with features like proper tail recursion, continuations, and hygienic macros. The interactive REPL allows evaluating expressions immediately, making it well-suited for learning, prototyping, and exploring algorithms.
+Scheme's design follows the RnRS language standards (R5RS, R6RS, R7RS), providing a small but powerful core with features like proper tail recursion, continuations, and hygienic macros. The interactive REPL allows evaluating expressions immediately, making it well-suited for learning, prototyping, and exploring algorithms.
 
-The **scheme** command may refer to different implementations depending on the system, including MIT/GNU Scheme, Chez Scheme, or GNU Guile. Each implementation offers its own extensions beyond the standard, so behavior and available libraries may vary.
+The **scheme** command may refer to different implementations depending on the system, most commonly Chez Scheme or MIT/GNU Scheme. Their command-line options differ, and each implementation offers its own extensions beyond the standard, so behavior and available libraries may vary.
 
 # CAVEATS
 
-Implementation varies. Name may differ (guile, mit-scheme). Portability concerns.
+Options are implementation-specific: check which Scheme provides the command. Other implementations use their own name, such as guile or mit-scheme.
 
 # HISTORY
 
@@ -64,3 +81,13 @@ Implementation varies. Name may differ (guile, mit-scheme). Portability concerns
 # SEE ALSO
 
 [guile](/man/guile)(1), [racket](/man/racket)(1), [clisp](/man/clisp)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cisco/ChezScheme)```
+
+```[Homepage](https://www.gnu.org/software/mit-scheme/)```
+
+```[Documentation](https://cisco.github.io/ChezScheme/)```
+
+<!-- verified: 2026-11-08 -->

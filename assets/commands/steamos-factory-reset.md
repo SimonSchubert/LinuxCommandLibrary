@@ -33,3 +33,9 @@ This operation is destructive and cannot be undone. All user data, installed gam
 # SEE ALSO
 
 [steamos-factory-reset-config](/man/steamos-factory-reset-config)(1), [steamos-update](/man/steamos-update)(1)
+
+# RESOURCES
+
+```[Homepage](https://store.steampowered.com/steamos)```
+
+<!-- verified: 2026-11-08 -->

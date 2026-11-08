@@ -12,7 +12,7 @@ Python 2.7 translatable string extraction
 
 ```pygettext2.7 -o [messages.pot] [file.py]```
 
-**Extract from directory**
+**Set the output domain**
 
 ```pygettext2.7 -d [domain] [*.py]```
 
@@ -29,7 +29,7 @@ _FILES_
 > Output file.
 
 **-d** _DOMAIN_
-> Text domain.
+> Write to DOMAIN.pot instead of messages.pot.
 
 **-k** _KEYWORD_
 > Additional keyword.
@@ -52,3 +52,10 @@ pygettext2.7 is **Python 2.7's** string extraction tool.
 
 [pygettext](/man/pygettext)(1), [xgettext](/man/xgettext)(1), [gettext](/man/gettext)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/python/cpython)```
+
+```[Documentation](https://docs.python.org/2.7/)```
+
+<!-- verified: 2026-11-08 -->

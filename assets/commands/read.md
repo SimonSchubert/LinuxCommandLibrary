@@ -30,11 +30,11 @@ Read a line of input into shell variables
 
 **Read from a file** line by line
 
-```while read line; do echo "$line"; done < [file]```
+```while IFS= read -r line; do echo "$line"; done < [file]```
 
 # SYNOPSIS
 
-**read** [**-p** _prompt_] [**-t** _timeout_] [**-n** _nchars_] [**-s**] [**-a** _array_] [**-d** _delim_] [_name_...]
+**read** [**-Eers**] [**-a** _array_] [**-d** _delim_] [**-i** _text_] [**-n** _nchars_] [**-N** _nchars_] [**-p** _prompt_] [**-t** _timeout_] [**-u** _fd_] [_name_...]
 
 # PARAMETERS
 
@@ -45,10 +45,10 @@ Read a line of input into shell variables
 > Silent mode; do not echo input (for passwords)
 
 **-t** _timeout_
-> Timeout after specified seconds; fail if no input
+> Fail after the given seconds (fractions allowed), with a status above 128; **0** only tests whether input is available
 
 **-n** _nchars_
-> Return after reading specified number of characters
+> Return after reading specified number of characters, or earlier at the delimiter
 
 **-N** _nchars_
 > Read exactly N characters, ignoring delimiters
@@ -57,7 +57,7 @@ Read a line of input into shell variables
 > Read words into array variable
 
 **-d** _delim_
-> Use specified delimiter instead of newline
+> Use the first character of the delimiter instead of newline; an empty string means NUL
 
 **-r**
 > Do not treat backslash as escape character (raw mode)
@@ -67,6 +67,12 @@ Read a line of input into shell variables
 
 **-e**
 > Use readline for input (enables line editing)
+
+**-E**
+> Use readline with Bash's default and programmable completion
+
+**-i** _text_
+> Place text in the readline buffer before editing (with **-e** or **-E**)
 
 # DESCRIPTION
 
@@ -86,8 +92,14 @@ Without **-r**, backslashes are interpreted as escape characters. Always use **r
 
 Leading and trailing whitespace is stripped based on IFS. To preserve whitespace, set **IFS=** before read: `IFS= read -r line`
 
-The **-t** timeout option may not work in all shells or when reading from regular files (only terminals/pipes).
+The **-t** timeout has no effect when reading from regular files, only from terminals, pipes, and other special files.
 
 # SEE ALSO
 
 [echo](/man/echo)(1), [printf](/man/printf)(1), [bash](/man/bash)(1), [sh](/man/sh)(1)
+
+# RESOURCES
+
+```[Documentation](https://www.gnu.org/software/bash/manual/bash.html#index-read)```
+
+<!-- verified: 2026-11-08 -->

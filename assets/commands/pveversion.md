@@ -30,3 +30,9 @@ This is useful for support requests, verifying update status, and checking compo
 # SEE ALSO
 
 [pvesh](/man/pvesh)(1), [pveam](/man/pveam)(1), [pvecm](/man/pvecm)(1)
+
+# RESOURCES
+
+```[Source code](https://git.proxmox.com/?p=pve-manager.git)```
+
+<!-- verified: 2026-11-08 -->

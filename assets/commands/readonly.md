@@ -26,12 +26,12 @@ Mark shell variables as read-only
 
 # SYNOPSIS
 
-**readonly** [_options_] [_name_[=_value_]...]
+**readonly** [**-aAf**] [**-p**] [_name_[=_value_]...]
 
 # PARAMETERS
 
 **-p**
-> Print readonly variables.
+> Print readonly names in a format reusable as input.
 
 **-f**
 > Make functions readonly.
@@ -81,7 +81,7 @@ readonly VERSION="1.0.0"
 
 # CAVEATS
 
-Cannot unset readonly variables (until shell exits). Subshells don't inherit readonly status. Bash specific.
+Readonly variables cannot be changed or unset until the shell exits. Subshells keep the readonly status, but child processes do not, even for exported variables. POSIX defines only **-p**; **-a**, **-A**, and **-f** are shell extensions.
 
 # HISTORY
 
@@ -90,3 +90,9 @@ readonly is a **POSIX** shell builtin, with extended options in bash and other m
 # SEE ALSO
 
 [declare](/man/declare)(1), [export](/man/export)(1), [typeset](/man/typeset)(1), [bash](/man/bash)(1)
+
+# RESOURCES
+
+```[Documentation](https://www.gnu.org/software/bash/manual/bash.html#index-readonly)```
+
+<!-- verified: 2026-11-08 -->

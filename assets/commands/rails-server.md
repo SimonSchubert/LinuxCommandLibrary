@@ -28,6 +28,10 @@ Start the Rails development web server
 
 ```rails server -d```
 
+**Use the short alias**
+
+```rails s```
+
 # SYNOPSIS
 
 **rails server** [**-p** _port_] [**-b** _address_] [**-e** _environment_] [**-d**] [**-u** _server_]
@@ -38,7 +42,7 @@ Start the Rails development web server
 > Run server on specified port (default: 3000)
 
 **-b**, **--binding** _IP_
-> Bind to specified IP address (default: localhost)
+> Bind to specified IP address (default: localhost in development, 0.0.0.0 in other environments)
 
 **-e**, **--environment** _ENV_
 > Run in specified environment (development, test, production)
@@ -52,8 +56,14 @@ Start the Rails development web server
 **-P**, **--pid** _FILE_
 > Specify PID file path
 
+**-c**, **--config** _FILE_
+> Use a custom rackup configuration (default: config.ru)
+
 **-C**, **--dev-caching**
-> Toggle development mode caching
+> Enable caching in development; **--no-dev-caching** disables it
+
+**--log-to-stdout**
+> Log to standard output (default in development when not daemonized)
 
 **--early-hints**
 > Enable HTTP/2 early hints
@@ -71,7 +81,7 @@ Binding to 0.0.0.0 makes the server accessible from other machines on the networ
 
 # CAVEATS
 
-The default binding to localhost (127.0.0.1) only accepts connections from the local machine. Use **-b 0.0.0.0** to accept external connections, but be aware of security implications.
+In development, the default binding to localhost only accepts connections from the local machine. Use **-b 0.0.0.0** to accept external connections, but be aware of security implications.
 
 Development mode is not suitable for production. It lacks performance optimizations and may expose debugging information. Always use **-e production** with a proper production configuration for deployed applications.
 
@@ -80,3 +90,11 @@ The daemon mode (**-d**) requires manual process management. Use process manager
 # SEE ALSO
 
 [rails](/man/rails)(1), [puma](/man/puma)(1), [rails-routes](/man/rails-routes)(1), [bundle](/man/bundle)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rails/rails)```
+
+```[Documentation](https://guides.rubyonrails.org/command_line.html)```
+
+<!-- verified: 2026-11-08 -->

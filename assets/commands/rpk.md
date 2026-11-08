@@ -24,9 +24,13 @@ Manage Redpanda streaming topics and clusters
 
 ```rpk cluster info```
 
-**Check configuration**
+**Show a cluster configuration property**
 
-```rpk redpanda config```
+```rpk cluster config get [property]```
+
+**Connect to specific brokers**
+
+```rpk topic list -X brokers=[host:9092]```
 
 # SYNOPSIS
 
@@ -50,10 +54,7 @@ Manage Redpanda streaming topics and clusters
 > Consumer groups.
 
 **-X** _PROP=VAL_
-> Client property.
-
-**--brokers** _HOSTS_
-> Broker addresses.
+> Client property, such as **brokers=HOST:PORT** or SASL and TLS settings.
 
 # DESCRIPTION
 
@@ -61,7 +62,7 @@ Manage Redpanda streaming topics and clusters
 
 Topic operations include creating, deleting, describing, and listing topics, as well as producing messages to and consuming messages from topics for testing and debugging. Cluster commands provide health checks, configuration inspection, and broker management. The tool also handles ACL (Access Control List) management and consumer group operations.
 
-The **-X** flag passes client properties like authentication credentials and TLS settings, and **--brokers** specifies the cluster endpoints to connect to.
+The **-X** flag passes client properties like authentication credentials, TLS settings and the cluster endpoints (**-X brokers=...**), replacing older flags such as **--brokers**.
 
 # CAVEATS
 
@@ -74,3 +75,13 @@ Requires Redpanda/Kafka. Network access needed. Authentication may be required.
 # SEE ALSO
 
 [kafka-topics](/man/kafka-topics)(1), [kafkacat](/man/kafkacat)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/redpanda-data/redpanda)```
+
+```[Homepage](https://www.redpanda.com/)```
+
+```[Documentation](https://docs.redpanda.com/current/reference/rpk/)```
+
+<!-- verified: 2026-11-08 -->

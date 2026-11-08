@@ -26,7 +26,7 @@ Add a **comment record** to the data file
 
 # SYNOPSIS
 
-**sadc** [_-C comment_] [_-D_] [_-F_] [_-L_] [_-V_] [_-S {keyword,...}_] [_interval_] [_count_] [_outfile_]
+**sadc** [_-C comment_] [_-D_] [_-F_] [_-f_] [_-L_] [_-V_] [_-S {keyword,...}_] [_interval_] [_count_] [_outfile_]
 
 # PARAMETERS
 
@@ -39,11 +39,14 @@ Add a **comment record** to the data file
 **-F**
 > Force creation of outfile; truncate if it exists with an incompatible format
 
+**-f**
+> Use fdatasync() to reduce the chance of corrupted data files after a sudden reset, at some performance cost
+
 **-L**
 > Try to get an exclusive lock on the outfile before writing or truncating
 
 **-S** _keyword_
-> Specify optional activities to collect: INT (interrupts), DISK (block devices), XDISK (partitions/filesystems), SNMP, IPV6, POWER, ALL, XALL
+> Specify optional activities to collect: INT (interrupts), DISK (block devices), XDISK (DISK plus partitions and filesystems), SNMP, IPV6, POWER, ALL (all except extensions), XALL (everything including XDISK)
 
 **-V**
 > Print version number and exit
@@ -54,11 +57,11 @@ Add a **comment record** to the data file
 
 The collector gathers metrics including CPU utilization, memory usage, I/O statistics, network activity, and process information. By default, it collects most kernel data except interrupts and disk statistics, which require explicit **-S** flags.
 
-When outfile is set to **-**, sadc writes to the standard daily data file /var/log/sa/saDD. If count is omitted, sadc runs endlessly. The binary output is not human-readable and requires **sar** to interpret.
+When outfile is set to **-**, sadc writes to the standard daily data file, by default /var/log/sa/saDD (/var/log/sysstat on Debian-based systems). A directory given as outfile is used as the location of that daily file. If count is omitted, sadc runs endlessly. The binary output is not human-readable and requires **sar** to interpret.
 
 # CAVEATS
 
-The **/proc** filesystem must be mounted for sadc to function. Available statistics depend on kernel version. sadc is typically invoked by the **sa1** script via cron rather than run directly. Output files from older sadc versions may be incompatible with newer releases.
+sadc is not usually in PATH: look in /usr/lib/sysstat or /usr/lib64/sa. The **-S** option is ignored when appending to an existing data file. The **/proc** filesystem must be mounted for sadc to function. Available statistics depend on kernel version. sadc is typically invoked by the **sa1** script via cron rather than run directly. Output files from older sadc versions may be incompatible with newer releases.
 
 # HISTORY
 
@@ -67,3 +70,11 @@ sadc is part of the **sysstat** package, originally written by Sebastien Godard.
 # SEE ALSO
 
 [sar](/man/sar)(1), [iostat](/man/iostat)(1), [mpstat](/man/mpstat)(1), [vmstat](/man/vmstat)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/sysstat/sysstat)```
+
+```[Homepage](https://sysstat.github.io/)```
+
+<!-- verified: 2026-11-08 -->

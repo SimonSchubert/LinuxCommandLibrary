@@ -16,6 +16,10 @@ Bind raw character devices to block devices
 
 ```raw -qa```
 
+**Unbind** a raw device
+
+```raw /dev/raw/raw1 0 0```
+
 # SYNOPSIS
 
 **raw** _/dev/raw/rawN_ _major_ _minor_
@@ -36,7 +40,7 @@ Bind raw character devices to block devices
 > Query all raw devices (with -q)
 
 _major_ _minor_
-> Block device specified by major/minor numbers
+> Block device specified by major/minor numbers; **0 0** removes the binding
 
 _/dev/blockdev_
 > Block device path to bind to raw device
@@ -49,7 +53,7 @@ When a raw device is bound to a block device, reading and writing to the raw dev
 
 # CAVEATS
 
-Raw devices are largely **deprecated** in favor of O_DIRECT flag on regular file I/O. Requires the raw driver to be loaded (modprobe raw). Raw device nodes must exist in /dev/raw/ before binding. Only root can bind raw devices.
+The raw driver was **removed in Linux 5.14**, so this command only works on older kernels; use the O_DIRECT flag instead. On those kernels it requires the raw driver to be loaded (modprobe raw). All I/O must be sector-aligned in memory and on disk, and an exact number of sectors long. Raw device nodes must exist in /dev/raw/ before binding. Only root can bind raw devices.
 
 # HISTORY
 
@@ -58,3 +62,11 @@ Raw devices were introduced in **Linux 2.4** to support databases like Oracle th
 # SEE ALSO
 
 [losetup](/man/losetup)(8), [dd](/man/dd)(1), [blockdev](/man/blockdev)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man8/raw.8.html)```
+
+<!-- verified: 2026-11-08 -->

@@ -38,7 +38,7 @@ List only **customized** users
 
 # DESCRIPTION
 
-**semanage user** manages SELinux user mappings that control what roles a user can assume. SELinux users are mapped to Linux users through semanage login.
+**semanage user** controls the mapping between an SELinux user and its roles and MLS/MCS levels. SELinux users are mapped to Linux users through semanage login.
 
 # PARAMETERS
 
@@ -55,13 +55,28 @@ List only **customized** users
 > Modify an existing SELinux user
 
 **-R, --roles ROLES**
-> Specify MLS/MCS roles for the user
+> SELinux roles; quote multiple roles separated by spaces, or repeat **-R**
 
 **-L, --level LEVEL**
 > Specify default MLS/MCS level (default s0)
 
 **-r, --range RANGE**
-> Specify MLS/MCS range for the user
+> MLS/MCS security range for the user (default s0)
+
+**-P, --prefix PREFIX**
+> Labeling prefix used by genhomedircon for home directory contexts (default user)
+
+**-D, --deleteall**
+> Remove all local customizations
+
+**-E, --extract**
+> Extract customizable commands, for use within a transaction
+
+**-N, --noreload**
+> Do not reload the policy after commit
+
+**-S, --store STORE**
+> Select an alternate SELinux policy store
 
 **-C, --locallist**
 > List only local customizations
@@ -80,3 +95,9 @@ Requires root privileges. Changes to SELinux user definitions affect what roles 
 # SEE ALSO
 
 [semanage](/man/semanage)(8), [semanage-login](/man/semanage-login)(8), [seinfo](/man/seinfo)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/SELinuxProject/selinux)```
+
+<!-- verified: 2026-11-08 -->

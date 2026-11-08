@@ -1,6 +1,6 @@
 # TAGLINE
 
-Toggle SteamOS filesystem write protection
+Control SteamOS filesystem write protection
 
 # TLDR
 
@@ -12,9 +12,17 @@ Toggle SteamOS filesystem write protection
 
 ```sudo steamos-readonly enable```
 
+View the current **status**
+
+```steamos-readonly status```
+
+**Toggle** read-only mode
+
+```sudo steamos-readonly toggle```
+
 # SYNOPSIS
 
-**steamos-readonly** _enable_|_disable_
+**steamos-readonly** _enable_|_disable_|_status_|_toggle_
 
 # COMMANDS
 
@@ -23,6 +31,12 @@ Toggle SteamOS filesystem write protection
 
 **disable**
 > Set filesystem to writable mode
+
+**status**
+> Show whether the filesystem is read-only
+
+**toggle**
+> Switch between read-only and writable
 
 # DESCRIPTION
 
@@ -41,3 +55,9 @@ Changes to the filesystem may be overwritten by system updates. Disabling read-o
 # SEE ALSO
 
 [steamos-devmode](/man/steamos-devmode)(1), [btrfs](/man/btrfs)(8), [mount](/man/mount)(8)
+
+# RESOURCES
+
+```[Homepage](https://store.steampowered.com/steamos)```
+
+<!-- verified: 2026-11-08 -->

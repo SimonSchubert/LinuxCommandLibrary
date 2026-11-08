@@ -16,7 +16,7 @@ Audit PHP dependencies for known vulnerabilities
 
 ```security-checker security:check --format=json```
 
-**Check with end-of-life**
+**Use a custom vulnerability service**
 
 ```security-checker security:check --end-point=[url]```
 
@@ -43,13 +43,15 @@ Audit PHP dependencies for known vulnerabilities
 
 # DESCRIPTION
 
-**security-checker** audits PHP project dependencies for known security vulnerabilities by analyzing the **composer.lock** file against the FriendsOfPHP security advisories database. It identifies installed packages with published CVEs or security issues.
+**Note:** this tool is obsolete. Its web service stopped at the end of January 2021 and the repository is archived; use **symfony check:security** or local-php-security-checker instead.
+
+**security-checker** audited PHP project dependencies for known security vulnerabilities by analyzing the **composer.lock** file against the FriendsOfPHP security advisories database. It identifies installed packages with published CVEs or security issues.
 
 The tool returns a non-zero exit code when vulnerabilities are found, making it suitable for CI/CD pipeline integration as a gate check. Output is available in text, JSON, and YAML formats for both human review and programmatic processing by other tools.
 
 # CAVEATS
 
-PHP/Composer specific. Database may lag. Network required.
+No longer works against the original service, which shut down in January 2021. PHP/Composer specific.
 
 # HISTORY
 
@@ -57,4 +59,10 @@ PHP/Composer specific. Database may lag. Network required.
 
 # SEE ALSO
 
-[composer](/man/composer)(1), [npm-audit](/man/npm-audit)(1), [snyk](/man/snyk)(1)
+[symfony](/man/symfony)(1), [composer](/man/composer)(1), [npm-audit](/man/npm-audit)(1), [snyk](/man/snyk)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/sensiolabs/security-checker)```
+
+<!-- verified: 2026-11-08 -->

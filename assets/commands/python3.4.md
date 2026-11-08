@@ -82,7 +82,7 @@ import selectors       # I/O multiplexing
 
 # CAVEATS
 
-Python 3.4 is EOL (March 2019). Use Python 3.10+ for current development. Older versions lack security updates.
+Python 3.4 is EOL (March 2019). Use a currently supported Python 3 release. Older versions lack security updates.
 
 # HISTORY
 
@@ -91,3 +91,13 @@ Python 3.4 was released March 16, 2014. Each Python version has ~5 year support 
 # SEE ALSO
 
 [python3](/man/python3)(1), [pip](/man/pip)(1), [venv](/man/venv)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/python/cpython)```
+
+```[Homepage](https://www.python.org/)```
+
+```[Documentation](https://docs.python.org/3.4/)```
+
+<!-- verified: 2026-11-08 -->

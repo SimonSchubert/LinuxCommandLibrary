@@ -48,7 +48,7 @@ Zero-configuration Ruby style linter
 > Create **.standard_todo.yml** to ignore existing violations.
 
 **--format** _format_
-> Output format: progress, simple, json, etc.
+> Output with any RuboCop formatter: progress, simple, json, etc.
 
 **--lsp**
 > Run as Language Server Protocol server for IDE integration.
@@ -59,11 +59,11 @@ Zero-configuration Ruby style linter
 **--parallel**
 > Run in parallel mode for faster linting.
 
-**--config** _file_
-> Use a specific configuration file.
-
 **-v**, **--version**
 > Display version information.
+
+**-V**, **--verbose-version**
+> Display the version of Standard and its dependencies.
 
 **-h**, **--help**
 > Display help information.
@@ -76,9 +76,14 @@ The tool enforces consistent style across Ruby projects without requiring config
 
 Standard Ruby integrates with editors via LSP support and can be used in CI pipelines. The **--generate-todo** option helps adopt Standard in existing projects by creating an ignore file for current violations that can be addressed incrementally.
 
+# CONFIGURATION
+
+**.standard.yml**
+> Optional project file for the few available settings, such as **fix**, **parallel**, **format**, **ruby_version** and **ignore**.
+
 # CAVEATS
 
-Standard is intentionally unconfigurable; if you need custom rules, use RuboCop directly. The **--fix-unsafely** option may change code behavior in rare cases. Standard forwards most CLI arguments to RuboCop, so RuboCop flags generally work. Requires Ruby 2.6 or later.
+Standard deliberately does not allow changing its rules; if you need custom rules, use RuboCop directly. The **--fix-unsafely** option may change code behavior in rare cases. Standard forwards most CLI arguments to RuboCop, so RuboCop flags generally work, except **--config**, which is dropped. Requires Ruby 3.0 or later.
 
 # HISTORY
 
@@ -87,3 +92,9 @@ Standard is intentionally unconfigurable; if you need custom rules, use RuboCop 
 # SEE ALSO
 
 [rubocop](/man/rubocop)(1), [ruby](/man/ruby)(1), [bundle](/man/bundle)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/standardrb/standard)```
+
+<!-- verified: 2026-11-08 -->

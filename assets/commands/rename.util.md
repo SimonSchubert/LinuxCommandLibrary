@@ -38,7 +38,7 @@ Change **file extensions**
 > Show which files are being renamed
 
 **-n**, **--no-act**
-> Dry run; show what would be renamed without doing it
+> Do not make any changes; add **--verbose** to see what would change
 
 **-o**, **--no-overwrite**
 > Do not overwrite existing files
@@ -55,6 +55,9 @@ Change **file extensions**
 **-i**, **--interactive**
 > Prompt before overwriting
 
+**-c**, **--copy**
+> Copy files instead of renaming them (recent versions)
+
 **-V**, **--version**
 > Display version information
 
@@ -69,7 +72,7 @@ The command processes all matching files, making it efficient for bulk operation
 
 # CAVEATS
 
-**Overwrites files without prompting** by default; use **-n** for dry runs and **-o** to prevent overwrites. Only replaces the first occurrence unless **-a** is specified. Does not support regular expressions; use Perl rename for complex patterns.
+**Overwrites files without prompting** by default; use **-n -v** for dry runs and **-o** to prevent overwrites. Only replaces the first occurrence unless **-a** is specified. Does not support regular expressions; use Perl rename for complex patterns.
 
 # HISTORY
 
@@ -78,3 +81,11 @@ Part of **util-linux**, the standard Linux utility collection. Provides simple s
 # SEE ALSO
 
 [mv](/man/mv)(1), [rename](/man/rename)(1), [mmv](/man/mmv)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man1/rename.1.html)```
+
+<!-- verified: 2026-11-08 -->

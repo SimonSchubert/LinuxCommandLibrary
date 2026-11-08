@@ -30,36 +30,48 @@ Display API path **usage instructions**
 
 # PARAMETERS
 
-**get**, **g**
+**get** _path_
 > Retrieve data from API path
 
-**ls**, **l**
+**ls** _path_
 > List available subpaths
 
-**usage**, **u**
+**usage** _path_ [**--command** _method_] [**-v**]
 > Show usage information for API path
 
-**create**
-> Create new resource at API path
+**create** _path_
+> Call API POST on path
 
-**set**
-> Modify existing resource
+**set** _path_
+> Call API PUT on path
 
-**delete**
-> Remove resource at API path
+**delete** _path_
+> Call API DELETE on path
 
 **--output-format** _format_
-> Output format (text, json, json-pretty)
+> Output format: text (default), json, json-pretty, yaml
+
+**--noborder**, **--noheader**
+> Omit table borders or column headers in text output
+
+**--human-readable** _0|1_
+> Render values as human-readable text (default 1)
+
+**--quiet**
+> Suppress printing results
+
+**--noproxy**
+> Disable automatic proxying to other cluster nodes
 
 # DESCRIPTION
 
-**pvesh** provides direct command-line access to the Proxmox VE REST API. It allows querying and modifying all cluster resources including nodes, VMs, containers, storage, and users. This is useful for scripting and automation tasks.
+**pvesh** invokes Proxmox VE API functions directly from the command line, without going through the REST/HTTPS server. It allows querying and modifying all cluster resources including nodes, VMs, containers, storage, and users. This is useful for scripting and automation tasks.
 
 The tool mirrors the web interface's capabilities, enabling administrators to perform any operation available through the GUI from the command line or scripts.
 
 # CAVEATS
 
-Requires root privileges or appropriate Proxmox permissions. API paths match the web interface structure. Complex operations may require multiple API calls.
+Only root is allowed to run pvesh. API paths match the web interface structure. Complex operations may require multiple API calls.
 
 # HISTORY
 
@@ -68,3 +80,11 @@ Part of **Proxmox VE**, providing CLI access to the same API used by the web int
 # SEE ALSO
 
 [qm](/man/qm)(1), [pct](/man/pct)(1), [pvesm](/man/pvesm)(1), [pveum](/man/pveum)(1)
+
+# RESOURCES
+
+```[Source code](https://git.proxmox.com/?p=pve-manager.git)```
+
+```[Documentation](https://pve.proxmox.com/pve-docs/pvesh.1.html)```
+
+<!-- verified: 2026-11-08 -->

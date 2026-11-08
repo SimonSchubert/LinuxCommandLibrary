@@ -33,11 +33,11 @@ Open **multiple files** in split windows
 > Position cursor at line N
 
 **-O**_N_
-> Open N files in vertical split
+> Open N files in vertical split (Vim)
 
 # DESCRIPTION
 
-**sensible-editor** opens files in the user's preferred text editor. It checks environment variables (VISUAL, EDITOR) and system defaults to determine which editor to launch.
+**sensible-editor** opens files in the user's preferred text editor. It tries **VISUAL**, **EDITOR**, **SENSIBLE_EDITOR** and **SELECTED_EDITOR**, then the choice saved in ~/.selected_editor by select-editor, and finally editor, nano, nano-tiny and vi.
 
 Options are passed through to the underlying editor (typically vim, nano, or emacs).
 
@@ -51,4 +51,10 @@ Part of **sensible-utils** package, providing Debian policy-compliant default ap
 
 # SEE ALSO
 
-[editor](/man/editor)(1), [update-alternatives](/man/update-alternatives)(8)
+[sensible-browser](/man/sensible-browser)(1), [editor](/man/editor)(1), [update-alternatives](/man/update-alternatives)(8)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/sensible-utils)```
+
+<!-- verified: 2026-11-08 -->

@@ -14,7 +14,7 @@ Scala source code compiler
 
 **Compile with classpath** dependencies
 
-```scalac -classpath [lib/*] [Source.scala]```
+```scalac -classpath "[lib/*]" [Source.scala]```
 
 **Compile with verbose output**
 
@@ -75,7 +75,7 @@ Scala source code compiler
 
 **scalac** is the compiler for the Scala programming language. It reads Scala source files (.scala) and compiles them into Java bytecode class files that run on the JVM.
 
-By default, class files are placed in the same directory as their source files. Use **-d** to specify an alternate output directory or JAR file. The compiler integrates with Java classes via the classpath mechanism.
+By default, class files are placed in the current directory. Use **-d** to specify an alternate output directory or JAR file. The compiler integrates with Java classes via the classpath mechanism.
 
 Options are categorized by prefix: **-W** for warnings, **-V** for verbose output, **-X** for extended options, and **-Y** for private/experimental options.
 
@@ -89,7 +89,7 @@ Options are categorized by prefix: **-W** for warnings, **-V** for verbose outpu
 
 # CAVEATS
 
-The JAVA_HOME environment variable must point to a valid JDK installation. JAVA_OPTS can pass additional options to the underlying JVM. Scala 3 uses a different compiler with some incompatible options.
+The JAVA_HOME environment variable must point to a valid JDK installation. JAVA_OPTS can pass additional options to the underlying JVM. Scala 3 uses a different compiler with some incompatible options; **-Xlint** is a Scala 2 option.
 
 # HISTORY
 
@@ -98,3 +98,13 @@ Scala was designed by **Martin Odersky** starting in **2001** at EPFL, with the 
 # SEE ALSO
 
 [scala](/man/scala)(1), [javac](/man/javac)(1), [sbt](/man/sbt)(1), [java](/man/java)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/scala/scala3)```
+
+```[Homepage](https://www.scala-lang.org/)```
+
+```[Documentation](https://docs.scala-lang.org/overviews/compiler-options/index.html)```
+
+<!-- verified: 2026-11-08 -->
