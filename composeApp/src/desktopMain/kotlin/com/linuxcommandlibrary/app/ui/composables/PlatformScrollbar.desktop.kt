@@ -60,7 +60,7 @@ actual fun WithScrollbar(
 @Composable
 private fun ScrollbarBox(
     adapter: ScrollbarAdapter,
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     content: @Composable BoxScope.() -> Unit,
 ) {
     Box(modifier) {
