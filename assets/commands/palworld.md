@@ -4,65 +4,78 @@ runs a dedicated Palworld game server on Linux
 
 # TLDR
 
+**Install or update** the server with SteamCMD
+
+```steamcmd +login anonymous +app_update 2394010 validate +quit```
+
 Start server with **default** settings
 
-```[path/to]/PalServer.sh```
+```~/Steam/steamapps/common/PalServer/PalServer.sh```
 
 Start with specific **port** and **player count**
 
-```[path/to]/PalServer.sh -port=[8211] -players=[16]```
+```[path/to]/PalServer.sh -port=[8211] -players=[32]```
 
-Start as **public** lobby
+Start as a **community server**
 
 ```[path/to]/PalServer.sh -publiclobby```
+
+Start **community server** with manual public IP and port
+
+```[path/to]/PalServer.sh -publiclobby -publicip=[ip_address] -publicport=[port]```
 
 Start with **multi-threaded** optimizations
 
 ```[path/to]/PalServer.sh -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS```
 
-Start **community server** with public IP
-
-```[path/to]/PalServer.sh -publicip=[ip_address] -publicport=[port]```
-
 # SYNOPSIS
 
-**PalServer.sh** [**-port=**_port_] [**-players=**_count_] [**-publiclobby**] [**-publicip=**_ip_] [**-publicport=**_port_]
+**PalServer.sh** [**-port=**_port_] [**-players=**_count_] [**-publiclobby**] [**-publicip=**_ip_] [**-publicport=**_port_] [_options_]
 
 # PARAMETERS
 
 **-port=_port_**
-> Server port number (default: 8211)
+> Port the server listens on (default: UDP 8211)
 
 **-players=_count_**
-> Maximum player count (1-32)
+> Maximum number of players
 
 **-publiclobby**
-> Make server visible in public server list
+> Run as a community server, visible in the community server list
 
 **-publicip=_ip_**
-> Public IP address for community servers
+> Global IP address for community servers. Auto-detected if omitted
 
 **-publicport=_port_**
-> Public port for community servers
+> Public port for community servers. Auto-detected if omitted; does not change the listening port
 
 **-useperfthreads**
 > Enable performance thread optimizations
 
 **-NoAsyncLoadingThread**
-> Disable async loading for better stability
+> Performance flag, used together with the other multithreading flags
 
 **-UseMultithreadForDS**
 > Enable multi-threading for dedicated server
+
+**-NumberOfWorkerThreadsServer=_count_**
+> Number of worker threads, used together with the multithreading flags
+
+**-logformat=_format_**
+> Log format: text or json
+
+**-enable-gamedata-api**
+> Enable the gamedata API
 
 # DESCRIPTION
 
 **PalServer.sh** runs a dedicated Palworld game server on Linux. Palworld is a multiplayer survival game featuring creature collection and base building. The dedicated server allows hosting persistent worlds for multiple players.
 
-The server requires Steam and SteamCMD for installation. Configuration is done through command-line arguments and the PalWorldSettings.ini file.
+The server is installed with SteamCMD as app ID 2394010. World rules are set in **Pal/Saved/Config/LinuxServer/PalWorldSettings.ini**, which starts as a copy of **DefaultPalWorldSettings.ini**.
 
 # CAVEATS
 
-Requires significant system resources (8+ GB RAM recommended). Port forwarding needed for public servers. Steam authentication required for player connections. Regular backups of world data recommended.
+16 GB of RAM and 4 or more CPU cores are recommended. 8 GB will boot but risks out-of-memory crashes. Low-performance storage may corrupt save data, so use an SSD. Forward UDP port 8211 for players connecting from the internet. From v1.0 on, leaving the multithreading flags unset may perform better. Regular backups of world data are recommended.
 
 # HISTORY
 
@@ -71,3 +84,9 @@ Requires significant system resources (8+ GB RAM recommended). Port forwarding n
 # SEE ALSO
 
 [steamcmd](/man/steamcmd)(1), [screen](/man/screen)(1), [tmux](/man/tmux)(1)
+
+# RESOURCES
+
+```[Documentation](https://docs.palworldgame.com/)```
+
+<!-- verified: 2026-11-08 -->
