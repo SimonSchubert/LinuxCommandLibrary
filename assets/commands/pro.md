@@ -55,6 +55,21 @@ List **third-party** packages
 **disable**
 > Disable specific Pro services
 
+**refresh**
+> Refresh contract and service information
+
+**cve** _id_
+> Show information about a CVE
+
+**cves**
+> List CVEs that affect the system
+
+**collect-logs**
+> Collect logs and relevant system information
+
+**api**
+> Call the Client API endpoints
+
 # PARAMETERS
 
 **--unavailable**
@@ -63,8 +78,17 @@ List **third-party** packages
 **--thirdparty**
 > Show third-party packages
 
+**--esm-infra**, **--esm-apps**
+> Show packages from the respective ESM archive (with security-status)
+
+**--dry-run**
+> Show what **fix** would do without applying it
+
+**--no-related**
+> Do not fix related USNs (with fix)
+
 **--format _format_**
-> Output format (json, yaml)
+> Output format (json, yaml or others, depending on the command)
 
 # DESCRIPTION
 
@@ -78,8 +102,16 @@ Requires Ubuntu Pro subscription for most features. Free tier available for pers
 
 # HISTORY
 
-**pro** replaced the **ubuntu-advantage-tools** command, providing a simpler interface to Ubuntu's commercial support services. It was renamed to align with the Ubuntu Pro branding.
+**pro** replaced the older **ua** command from the **ubuntu-advantage-tools** package, and was renamed to align with the Ubuntu Pro branding.
 
 # SEE ALSO
 
 [apt](/man/apt)(8), [unattended-upgrades](/man/unattended-upgrades)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/canonical/ubuntu-pro-client)```
+
+```[Documentation](https://ubuntu.com/pro-client/docs/en/latest/)```
+
+<!-- verified: 2026-11-08 -->

@@ -33,7 +33,10 @@ Destroy and **purge** references
 > Destroy even if the container is running
 
 **--purge**
-> Also remove all references to this container (jobs, replication, etc.)
+> Remove the container from all related configurations, such as backup jobs, replication jobs and HA
+
+**--destroy-unreferenced-disks**
+> Also destroy all disks with this VMID on enabled storages that are not referenced in the config
 
 # CAVEATS
 
@@ -46,3 +49,11 @@ This operation is irreversible. All container data will be lost. Snapshots assoc
 # SEE ALSO
 
 [pct](/man/pct)(1), [pct-create](/man/pct-create)(1)
+
+# RESOURCES
+
+```[Documentation](https://pve.proxmox.com/pve-docs/pct.1.html)```
+
+```[Source code](https://git.proxmox.com/?p=pve-container.git)```
+
+<!-- verified: 2026-11-08 -->

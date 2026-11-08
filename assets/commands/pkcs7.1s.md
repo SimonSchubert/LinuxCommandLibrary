@@ -42,7 +42,16 @@ Process PKCS#7 certificate chain structures
 > Input format (PEM, DER).
 
 **-noout**
-> No output.
+> Do not output the encoded structure.
+
+**-outform** _FORMAT_
+> Output format (PEM, DER).
+
+**-print**
+> Print the full structure.
+
+**-quiet**
+> Print certificates without their subject and issuer lines.
 
 # DESCRIPTION
 
@@ -52,7 +61,7 @@ The **-print_certs** option extracts individual PEM certificates from the chain.
 
 # CAVEATS
 
-Part of OpenSSL. Certificate chains only. No private keys.
+Only understands PKCS#7 v1.5 as specified in RFC 2315.
 
 # HISTORY
 
@@ -62,3 +71,10 @@ PKCS#7 support in OpenSSL handles **certificate chain** structures.
 
 [openssl](/man/openssl)(1), [openssl-pkcs12](/man/openssl-pkcs12)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/openssl/openssl)```
+
+```[Documentation](https://docs.openssl.org/master/man1/openssl-pkcs7/)```
+
+<!-- verified: 2026-11-08 -->

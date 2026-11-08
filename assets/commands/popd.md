@@ -8,7 +8,7 @@ Pop directory from shell directory stack
 
 ```popd```
 
-**Pop and go to Nth directory**
+**Remove the Nth entry** (counting from zero)
 
 ```popd +[N]```
 
@@ -22,18 +22,18 @@ Pop directory from shell directory stack
 
 # SYNOPSIS
 
-**popd** [_options_] [_+N_|-N_]
+**popd** [**-n**] [**+**_N_|**-**_N_]
 
 # PARAMETERS
 
 **+N**
-> Remove Nth entry from left.
+> Remove the Nth entry counting from the left of the stack, starting at zero.
 
 **-N**
-> Remove Nth entry from right.
+> Remove the Nth entry counting from the right of the stack, starting at zero.
 
 **-n**
-> Suppress directory change.
+> Suppress the directory change, manipulating only the stack.
 
 # DESCRIPTION
 

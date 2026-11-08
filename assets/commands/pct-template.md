@@ -32,3 +32,11 @@ The container must be stopped before conversion. This operation is irreversible 
 # SEE ALSO
 
 [pct](/man/pct)(1), [pct-clone](/man/pct-clone)(1), [pct-create](/man/pct-create)(1)
+
+# RESOURCES
+
+```[Documentation](https://pve.proxmox.com/pve-docs/pct.1.html)```
+
+```[Source code](https://git.proxmox.com/?p=pve-container.git)```
+
+<!-- verified: 2026-11-08 -->

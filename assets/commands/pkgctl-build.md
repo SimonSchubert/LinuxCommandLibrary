@@ -25,7 +25,7 @@ Manually build packages with **specific options**
 > Target repository
 
 **--clean**
-> Clean the chroot before building
+> Recreate the chroot before building
 
 **--staging**
 > Build against staging repositories
@@ -33,8 +33,26 @@ Manually build packages with **specific options**
 **--testing**
 > Build against testing repositories
 
-**--worker _n_**
-> Number of parallel workers
+**-w**, **--worker _slot_**
+> Name of the worker slot, useful for concurrent builds
+
+**-o**, **--offload**
+> Build on a remote server and transfer artifacts afterwards
+
+**--nocheck**
+> Do not run the check() function in the PKGBUILD
+
+**--rebuild**
+> Increment the current pkgrel variable
+
+**--update-checksums**
+> Force computation and update of the checksums
+
+**-r**, **--release**
+> Automatically commit, tag and release after building
+
+**-u**, **--db-update**
+> Automatically update the pacman database as the last action (requires **--release**)
 
 **--inspect _when_**
 > Inspect chroot: always, never, or failure
@@ -54,3 +72,11 @@ Requires devtools package and proper chroot setup. First build downloads base sy
 # SEE ALSO
 
 [pkgctl](/man/pkgctl)(1), [pkgctl-repo](/man/pkgctl-repo)(1), [makepkg](/man/makepkg)(8), [makechrootpkg](/man/makechrootpkg)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.archlinux.org/archlinux/devtools)```
+
+```[Documentation](https://man.archlinux.org/man/pkgctl-build.1.en)```
+
+<!-- verified: 2026-11-08 -->

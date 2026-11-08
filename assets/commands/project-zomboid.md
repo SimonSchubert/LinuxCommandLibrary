@@ -21,6 +21,9 @@ Start a server with a **specific name**
 **-servername** _name_
 > Specify a custom server name
 
+**-adminpassword** _password_
+> Set the admin password non-interactively on first launch
+
 # DESCRIPTION
 
 **Project Zomboid** dedicated server runs a headless multiplayer server for the open-world survival horror game. The **start-server.sh** script launches the server without a graphical interface, making it suitable for remote hosting on Linux machines or cloud instances.
@@ -39,7 +42,7 @@ The **-servername** option allows running multiple server instances on the same 
 
 # CAVEATS
 
-Server configuration is stored in separate config files. Requires sufficient system resources for world simulation and player connections.
+Server configuration is stored in separate config files. The first launch prompts for an admin password unless one is supplied. Java memory is set with **-Xmx** in ProjectZomboid64.json, not on the command line. Requires sufficient system resources for world simulation and player connections.
 
 # HISTORY
 

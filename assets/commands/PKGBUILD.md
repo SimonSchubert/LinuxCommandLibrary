@@ -70,11 +70,24 @@ depends     - Runtime dependencies
 makedepends - Build dependencies
 source      - Source URLs
 sha256sums  - Checksums
+b2sums      - BLAKE2 checksums
+pkgbase     - Base name for split packages
+epoch       - Force a package to be seen as newer
+license     - Licenses
+checkdepends - Dependencies for check()
+optdepends  - Optional dependencies
+provides    - Virtual packages provided
+conflicts   - Conflicting packages
+replaces    - Packages made obsolete
+backup      - Config files to preserve
+options     - Build options
+validpgpkeys - Trusted PGP key fingerprints
 ```
 
 # FUNCTIONS
 
 ```bash
+pkgver()    - Compute the version for VCS sources
 prepare()   - Prepare sources
 build()     - Compile
 check()     - Run tests
@@ -92,3 +105,11 @@ PKGBUILD format was designed for **Arch Linux** by **Judd Vinet**, enabling simp
 # SEE ALSO
 
 [makepkg](/man/makepkg)(8), [pacman](/man/pacman)(8), [namcap](/man/namcap)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.archlinux.org/pacman/pacman)```
+
+```[Documentation](https://man.archlinux.org/man/PKGBUILD.5.en)```
+
+<!-- verified: 2026-11-08 -->

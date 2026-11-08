@@ -16,14 +16,21 @@ Display text as ASCII paper tape art
 
 ```echo "Hello" | ppt```
 
+**Decode paper tape** from standard input
+
+```ppt -d < [tape.txt]```
+
 # SYNOPSIS
 
-**ppt** [_text_]
+**ppt** [**-d**] [_text_...]
 
 # PARAMETERS
 
 _TEXT_
-> Text to convert.
+> Text to convert. Standard input is read if omitted.
+
+**-d**
+> Decode paper tape from standard input.
 
 # DESCRIPTION
 

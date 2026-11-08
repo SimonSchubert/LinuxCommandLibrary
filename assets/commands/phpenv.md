@@ -80,7 +80,7 @@ Version selection follows a hierarchy: PHPENV_VERSION environment variable, .php
 
 The local command creates a .php-version file in the current directory. When entering that directory, phpenv automatically uses the specified version.
 
-Installation requires php-build plugin, which compiles PHP from source. Build dependencies must be installed first.
+**phpenv install** requires the php-build plugin, cloned into $(phpenv root)/plugins/php-build, which compiles PHP from source. Build dependencies must be installed first.
 
 After installing PHP extensions or PEAR packages, run rehash to create shims for new executables.
 
@@ -97,3 +97,9 @@ Compiling PHP requires build dependencies. Build times can be significant. Shell
 # SEE ALSO
 
 [php](/man/php)(1), [composer](/man/composer)(1), [rbenv](/man/rbenv)(1), [php-build](/man/php-build)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/phpenv/phpenv)```
+
+<!-- verified: 2026-11-08 -->

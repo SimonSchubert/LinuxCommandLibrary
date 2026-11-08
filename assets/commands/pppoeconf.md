@@ -14,12 +14,26 @@ Configure PPPoE on Debian systems
 
 # SYNOPSIS
 
-**pppoeconf** [_interface_]
+**pppoeconf** [**-nox**] [_interface_]
 
 # PARAMETERS
 
 _INTERFACE_
-> Network interface.
+> Force the use of this network interface.
+
+**-nox**
+> Force ncurses use.
+
+# CONFIGURATION
+
+**/etc/ppp/peers/dsl-provider**
+> pppd options file for the DSL provider.
+
+**/etc/ppp/pap-secrets**, **/etc/ppp/chap-secrets**
+> Credentials added by pppoeconf.
+
+**/etc/network/interfaces**
+> Network interface configuration.
 
 # DESCRIPTION
 
@@ -39,3 +53,8 @@ pppoeconf was created for **Debian** PPPoE configuration.
 
 [pppoe](/man/pppoe)(8), [pppoe-setup](/man/pppoe-setup)(8), [pppd](/man/pppd)(8)
 
+# RESOURCES
+
+```[Documentation](https://manpages.debian.org/trixie/pppoeconf/pppoeconf.8.en.html)```
+
+<!-- verified: 2026-11-08 -->

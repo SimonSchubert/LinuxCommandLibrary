@@ -1,6 +1,6 @@
 # TAGLINE
 
-laTeX package for including external PDF documents
+LaTeX package for including external PDF documents
 
 # TLDR
 
@@ -74,8 +74,16 @@ Only works with pdfLaTeX, XeLaTeX, or LuaLaTeX. PDF must be valid. Large PDFs in
 
 # HISTORY
 
-pdfpages was created by **Andreas Matthias** for the LaTeX Project, enabling seamless PDF inclusion.
+pdfpages is written and maintained by **Andreas Matthias** and distributed through CTAN.
 
 # SEE ALSO
 
 [pdflatex](/man/pdflatex)(1), [pdfjam](/man/pdfjam)(1), [pdfbook](/man/pdfbook)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/AndreasMatthias/pdfpages)```
+
+```[Documentation](https://ctan.org/pkg/pdfpages)```
+
+<!-- verified: 2026-11-08 -->

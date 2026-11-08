@@ -20,9 +20,17 @@ Command-line interface for Plesk hosting panel
 
 ```plesk repair all```
 
-**Check status**
+**Check for problems without repairing**
 
-```plesk bin service --status```
+```plesk repair all -n```
+
+**Generate a one-time login link**
+
+```plesk login```
+
+**Open the Plesk database console**
+
+```plesk db```
 
 # SYNOPSIS
 
@@ -33,8 +41,29 @@ Command-line interface for Plesk hosting panel
 **bin** _COMMAND_
 > Run Plesk utility.
 
-**repair** _COMPONENT_
-> Repair component.
+**repair** _ASPECT_
+> Check and repair an aspect: all, mail, web, dns, ftp, db, mysql, fs or installation. **-n** only checks, **-y** repairs without asking.
+
+**login** [_USER_]
+> Generate a one-time login link.
+
+**db** [_SQL_]
+> Open the database console or run a query.
+
+**log** _NAME_
+> View a log file.
+
+**conf** _NAME_
+> Edit a configuration file such as panel.ini.
+
+**daily** [_TASK_]
+> Run the daily maintenance script.
+
+**installer**
+> Run the Plesk installer.
+
+**sbin** _COMMAND_
+> Run an internal utility.
 
 **version**
 > Show version.
@@ -50,7 +79,7 @@ The **bin** subcommand runs individual Plesk utilities for specific tasks like d
 
 # CAVEATS
 
-Commercial software. Root access required. Server administration.
+Commercial software. Root access required. One-time login links can be used once and expire after 24 hours.
 
 # HISTORY
 
@@ -60,3 +89,10 @@ Plesk CLI provides **command-line management** of Plesk hosting panel.
 
 [apache2ctl](/man/apache2ctl)(1), [nginx](/man/nginx)(1)
 
+# RESOURCES
+
+```[Homepage](https://www.plesk.com/)```
+
+```[Documentation](https://docs.plesk.com/en-US/obsidian/cli-linux/plesk-utility.75661/)```
+
+<!-- verified: 2026-11-08 -->

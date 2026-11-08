@@ -41,6 +41,12 @@ Manage PlatformIO organization teams and members
 **remove** _team_ _user_
 > Remove team member.
 
+**update** _team_
+> Update a team's **--name** or **--description**.
+
+**--description** _text_
+> Team description, used with **create** and **update**.
+
 # DESCRIPTION
 
 **pio team** manages teams within PlatformIO organizations. Teams allow granular permission management for package access. Uses org:team naming convention.
@@ -49,3 +55,10 @@ Manage PlatformIO organization teams and members
 
 [pio-org](/man/pio-org)(1), [pio-access](/man/pio-access)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/platformio/platformio-core)```
+
+```[Documentation](https://docs.platformio.org/en/latest/core/userguide/team/index.html)```
+
+<!-- verified: 2026-11-08 -->

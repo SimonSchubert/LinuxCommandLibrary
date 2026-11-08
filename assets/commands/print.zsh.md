@@ -20,7 +20,7 @@ Zsh enhanced text output built-in
 
 ```print -f "%s: %d\n" "Count" [5]```
 
-**Push to directory stack**
+**Expand a prompt sequence** (current directory)
 
 ```print -P "%~"```
 
@@ -34,7 +34,7 @@ Zsh enhanced text output built-in
 > No newline.
 
 **-r**
-> Raw mode.
+> Ignore the escape conventions of echo.
 
 **-l**
 > One argument per line.
@@ -48,6 +48,24 @@ Zsh enhanced text output built-in
 **-P**
 > Perform prompt expansion.
 
+**-N**
+> Separate and terminate arguments with nulls.
+
+**-o**, **-O**
+> Sort arguments in ascending or descending order.
+
+**-c**, **-C** _cols_
+> Print arguments in columns.
+
+**-s**
+> Place the results in the history list.
+
+**-v** _name_
+> Store the output in a parameter.
+
+**-D**
+> Replace directory prefixes with ~ expressions.
+
 # DESCRIPTION
 
 **print** in zsh is an enhanced built-in command for text output that extends the ksh version with additional features. It supports printf-style formatting via **-f**, prompt expansion with **-P** (for displaying prompt escape sequences like %~ for the current directory), and can print array elements one per line with **-l**.
@@ -56,7 +74,7 @@ The command provides reliable text output behavior compared to echo, whose handl
 
 # CAVEATS
 
-Zsh specific. Different from ksh print.
+Zsh specific. Different from ksh print. **print -l** with an empty list still outputs one empty line, so use **print -rC1 --** for possibly empty lists.
 
 # HISTORY
 
@@ -66,3 +84,10 @@ print is a **zsh built-in** with extended functionality.
 
 [echo](/man/echo)(1), [printf](/man/printf)(1), [print](/man/print)(1)
 
+# RESOURCES
+
+```[Homepage](https://www.zsh.org/)```
+
+```[Documentation](https://zsh.sourceforge.io/Doc/Release/Shell-Builtin-Commands.html)```
+
+<!-- verified: 2026-11-08 -->

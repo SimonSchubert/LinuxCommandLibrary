@@ -33,7 +33,7 @@ changes the size of a Proxmox LXC container's storage volume
 
 # CAVEATS
 
-Only size increases are supported for most storage types. Shrinking volumes may cause data loss and is not supported for all storage backends. The container can be running during resize.
+Shrinking a disk is not supported. The container can be running during resize.
 
 # HISTORY
 
@@ -42,3 +42,11 @@ Only size increases are supported for most storage types. Shrinking volumes may 
 # SEE ALSO
 
 [pct](/man/pct)(1), [pct-set](/man/pct-set)(1)
+
+# RESOURCES
+
+```[Documentation](https://pve.proxmox.com/pve-docs/pct.1.html)```
+
+```[Source code](https://git.proxmox.com/?p=pve-container.git)```
+
+<!-- verified: 2026-11-08 -->

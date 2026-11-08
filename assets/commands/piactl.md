@@ -109,3 +109,11 @@ Requires PIA daemon running. Subscription required. Some features need GUI confi
 # SEE ALSO
 
 [openvpn](/man/openvpn)(1), [wg](/man/wg)(1), [nmcli](/man/nmcli)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/pia-foss/desktop)```
+
+```[Homepage](https://www.privateinternetaccess.com/)```
+
+<!-- verified: 2026-11-08 -->

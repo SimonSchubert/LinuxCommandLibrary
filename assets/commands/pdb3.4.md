@@ -12,7 +12,7 @@ python debugger
 
 ```import pdb; pdb.set_trace()```
 
-**Run post-mortem debug**
+**Run until an error**, then enter post-mortem debugging
 
 ```python3.4 -m pdb -c continue [script.py]```
 
@@ -44,7 +44,7 @@ The tool provides breakpoints and inspection. Part of Python standard library.
 
 # CAVEATS
 
-Version specific (3.4). Same as pdb for other versions. Interactive debugger.
+Version specific: Python 3.4 reached end of life in March 2019. Later Python versions add features this one lacks, such as **python -m pdb -m module** and the **breakpoint()** built-in.
 
 # HISTORY
 
@@ -54,3 +54,10 @@ pdb has been part of **Python standard library** since early versions.
 
 [python](/man/python)(1), [ipdb](/man/ipdb)(1), [pudb](/man/pudb)(1)
 
+# RESOURCES
+
+```[Documentation](https://docs.python.org/3/library/pdb.html)```
+
+```[Source code](https://github.com/python/cpython)```
+
+<!-- verified: 2026-11-08 -->

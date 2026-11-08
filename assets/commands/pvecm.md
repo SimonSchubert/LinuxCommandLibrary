@@ -41,26 +41,38 @@ Display the cluster **status**
 **add** _host_
 > Join this node to existing cluster
 
-**addnode**, **addn** _node_
+**addnode** _node_
 > Add node to cluster config (internal use)
 
-**apiver**, **ap**
+**apiver**
 > Show cluster join API version
 
-**create**, **c** _name_
+**create** _name_
 > Create new cluster with given name
 
-**delnode**, **d** _node_
+**delnode** _node_
 > Remove node from cluster configuration
 
-**nodes**, **n**
+**nodes**
 > List cluster nodes
 
-**status**, **s**
+**status**
 > Show cluster status
 
 **expected** _votes_
-> Set expected votes for quorum
+> Tell corosync a new value of expected votes
+
+**qdevice setup** _address_
+> Set up the use of an external QDevice
+
+**qdevice remove**
+> Remove a configured QDevice
+
+**updatecerts**
+> Update node certificates
+
+**--link**_N_ _address_
+> Corosync link address, used with **create** and **add** (link0 to link7)
 
 # DESCRIPTION
 
@@ -70,7 +82,7 @@ Proxmox clustering uses corosync for cluster communication and pmxcfs for distri
 
 # CAVEATS
 
-Creating a cluster is irreversible without reinstalling. Removing nodes requires the node to be offline and clean shutdown procedures. Network configuration must allow cluster communication (default port 5405-5412).
+Separating a node from a cluster without reinstalling it is possible but not recommended, and a removed node keeps access to any shared storage. Power off a node before removing it with **delnode**. All nodes must be able to reach each other on UDP ports 5405-5412.
 
 # HISTORY
 
@@ -79,3 +91,11 @@ Part of **Proxmox VE**, enabling multi-node deployments with shared management. 
 # SEE ALSO
 
 [pvesh](/man/pvesh)(1), [qm](/man/qm)(1), [pct](/man/pct)(1), [ha-manager](/man/ha-manager)(1)
+
+# RESOURCES
+
+```[Documentation](https://pve.proxmox.com/pve-docs/pvecm.1.html)```
+
+```[Source code](https://git.proxmox.com/?p=pve-cluster.git)```
+
+<!-- verified: 2026-11-08 -->

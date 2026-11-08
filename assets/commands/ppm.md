@@ -4,13 +4,13 @@ Portable Pixmap color image format
 
 # TLDR
 
-**PPM format overview**
+**Convert a color JPEG to PPM**
 
-```ppm```
+```jpegtopnm [image.jpg] > [output.ppm]```
 
-**Convert to PPM**
+**Convert PPM to PNG**
 
-```anytopnm [image] | ppmtopgm```
+```pnmtopng [image.ppm] > [output.png]```
 
 **View PPM info**
 
@@ -18,12 +18,7 @@ Portable Pixmap color image format
 
 # SYNOPSIS
 
-**ppm** [_file_]
-
-# PARAMETERS
-
-_FILE_
-> PPM image file.
+PPM format specification and related utilities
 
 # DESCRIPTION
 

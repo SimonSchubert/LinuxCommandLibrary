@@ -12,11 +12,11 @@ manages PlatformIO organizations for team collaboration
 
 ```pio org list```
 
-**Add member**
+**Add owner**
 
 ```pio org add [orgname] [username]```
 
-**Remove member**
+**Remove owner**
 
 ```pio org remove [orgname] [username]```
 
@@ -36,10 +36,16 @@ manages PlatformIO organizations for team collaboration
 > List organizations.
 
 **add** _org_ _user_
-> Add member.
+> Add a user as an owner.
 
 **remove** _org_ _user_
-> Remove member.
+> Remove an owner.
+
+**--email** _address_
+> Organization e-mail, used with **create**.
+
+**--displayname** _name_
+> Organization display name, used with **create**.
 
 **update** _org_
 > Update organization.
@@ -52,3 +58,10 @@ manages PlatformIO organizations for team collaboration
 
 [pio-account](/man/pio-account)(1), [pio-team](/man/pio-team)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/platformio/platformio-core)```
+
+```[Documentation](https://docs.platformio.org/en/latest/core/userguide/org/index.html)```
+
+<!-- verified: 2026-11-08 -->

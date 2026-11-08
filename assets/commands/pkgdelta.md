@@ -35,13 +35,18 @@ Part of the pacman package manager suite, it uses the xdelta3 algorithm to compu
 
 # CAVEATS
 
-Arch Linux specific. Requires xdelta3. Space savings vary.
+Obsolete: delta package support and **pkgdelta** were removed from pacman in version 5.2 (2019). Only relevant to older pacman installations. Requires xdelta3.
 
 # HISTORY
 
-pkgdelta was created for **bandwidth-efficient** Arch package updates.
+pkgdelta was created for **bandwidth-efficient** Arch package updates. Delta support was removed entirely in **pacman 5.2** in October 2019.
 
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [xdelta3](/man/xdelta3)(1)
 
+# RESOURCES
+
+```[Source code](https://gitlab.archlinux.org/pacman/pacman)```
+
+<!-- verified: 2026-11-08 -->

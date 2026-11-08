@@ -75,3 +75,9 @@ Requires Pkgfile in current directory. Build dependencies must be installed manu
 # SEE ALSO
 
 [pkgadd](/man/pkgadd)(8), [pkginfo](/man/pkginfo)(1), [prt-get](/man/prt-get)(8)
+
+# RESOURCES
+
+```[Homepage](https://crux.nu/)```
+
+<!-- verified: 2026-11-08 -->

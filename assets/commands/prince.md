@@ -32,8 +32,26 @@ Convert HTML and CSS to PDF documents
 **-s**, **--style** _file_
 > Additional CSS file.
 
-**--javascript**
+**-j**, **--javascript**
 > Enable JavaScript.
+
+**-i**, **--input** _format_
+> Input format (auto, xml, html and others).
+
+**--input-list** _file_
+> Read the list of input files from a file.
+
+**--baseurl** _url_
+> Base URL for resolving relative links.
+
+**--pdf-profile** _profile_
+> PDF profile to produce.
+
+**--pdf-title** _title_
+> Set the document title.
+
+**--license-file** _file_
+> Use a license file from a non-standard location.
 
 **--media** _type_
 > CSS media type.
@@ -84,3 +102,11 @@ Prince was developed by **YesLogic** starting in 2003 as a high-quality HTML to 
 # SEE ALSO
 
 [wkhtmltopdf](/man/wkhtmltopdf)(1), [weasyprint](/man/weasyprint)(1), [pandoc](/man/pandoc)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.princexml.com/)```
+
+```[Documentation](https://www.princexml.com/doc/command-line/)```
+
+<!-- verified: 2026-11-08 -->

@@ -22,7 +22,7 @@ List **enabled extensions** for version and SAPI
 
 # SYNOPSIS
 
-**phpquery** [**-v** _version_] [**-s** _sapi_] [**-V**|**-S**|**-M**|**-m** _module_]
+**phpquery** [**-d**] [**-q**] [**-v** _version_] [**-s** _sapi_] [**-V**|**-S**|**-M**|**-m** _module_]
 
 # PARAMETERS
 
@@ -46,6 +46,9 @@ List **enabled extensions** for version and SAPI
 
 **-q**
 > Quiet mode, exit status only
+
+**-d**
+> Verbose output for debugging
 
 # DESCRIPTION
 

@@ -79,6 +79,24 @@ LXC container management tool for Proxmox VE
 **resize** _vmid_ _disk_ _size_
 > Resize container disk
 
+**shutdown** _vmid_
+> Shut down a container cleanly
+
+**reboot** _vmid_
+> Reboot a container
+
+**migrate** _vmid_ _target_
+> Migrate a container to another node
+
+**pull** _vmid_ _path_ _destination_
+> Copy a file from the container to the host
+
+**push** _vmid_ _file_ _destination_
+> Copy a file from the host to the container
+
+**df** _vmid_
+> Show the container's current disk usage
+
 **--purge**
 > Remove all related resources when destroying
 
@@ -93,3 +111,11 @@ Container IDs must be unique across the Proxmox cluster. Some operations require
 # SEE ALSO
 
 [pct-create](/man/pct-create)(1), [pct-exec](/man/pct-exec)(1), [qm](/man/qm)(1)
+
+# RESOURCES
+
+```[Documentation](https://pve.proxmox.com/pve-docs/pct.1.html)```
+
+```[Source code](https://git.proxmox.com/?p=pve-container.git)```
+
+<!-- verified: 2026-11-08 -->

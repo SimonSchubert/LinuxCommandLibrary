@@ -44,3 +44,9 @@ CRUX-specific package manager. Packages must be built locally or downloaded. No 
 # SEE ALSO
 
 [pkgrm](/man/pkgrm)(8), [pkginfo](/man/pkginfo)(1), [pkgmk](/man/pkgmk)(8)
+
+# RESOURCES
+
+```[Homepage](https://crux.nu/)```
+
+<!-- verified: 2026-11-08 -->

@@ -14,7 +14,7 @@ Display **help**
 
 # SYNOPSIS
 
-**pg** [**-**_number_] [**-p** _prompt_] [**-cefnrs**] [_file_...]
+**pg** [**-**_number_] [**-p** _prompt_] [**-cefnrs**] [**+**_line_] [**+/**_pattern_**/**] [_file_...]
 
 # PARAMETERS
 
@@ -37,7 +37,13 @@ Display **help**
 > Use string as the prompt
 
 **-r**
-> Allow restricted shell escape
+> Disallow the shell escape
+
+**+_number_**
+> Start at the given line number
+
+**+/_pattern_/**
+> Start at the first line matching the basic regular expression
 
 **-s**
 > Display messages in standout mode
@@ -59,3 +65,11 @@ Less feature-rich than modern pagers like less. Not installed by default on many
 # SEE ALSO
 
 [less](/man/less)(1), [more](/man/more)(1), [cat](/man/cat)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man1/pg.1.html)```
+
+<!-- verified: 2026-11-08 -->

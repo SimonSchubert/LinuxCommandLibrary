@@ -14,15 +14,15 @@ Enable extension for **specific version** and SAPI
 
 # SYNOPSIS
 
-**phpenmod** [**-v** _version_] [**-s** _sapi_] _module_
+**phpenmod** [**-v** ALL|_version_] [**-s** ALL|_sapi_] _module_ [_module_...]
 
 # PARAMETERS
 
 **-v _version_**
-> PHP version (e.g., 7.4, 8.0, 8.1)
+> PHP version (e.g., 8.2), or ALL
 
 **-s _sapi_**
-> SAPI type (cli, fpm, apache2, cgi)
+> SAPI type (cli, fpm, apache2, cgi), or ALL
 
 **module**
 > Extension name to enable

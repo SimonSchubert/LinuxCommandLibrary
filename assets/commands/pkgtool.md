@@ -8,21 +8,21 @@ Launch **interactive** package tool
 
 ```sudo pkgtool```
 
-**Remove** packages interactively
+**Install** packages from a directory without the menu
 
-```sudo pkgtool --remove_menu```
+```sudo pkgtool --source_dir [path/to/packages]```
 
-**View** installed packages
+Install only selected **series**
 
-```pkgtool --view_menu```
+```sudo pkgtool --source_dir [path/to/packages] --sets [a#ap#d]```
 
-**Install** packages from current directory
+Install while **ignoring tagfiles**
 
-```sudo pkgtool --install_menu```
+```sudo pkgtool --source_dir [path/to/packages] --ignore-tagfiles```
 
-**Setup** packages (run installation scripts)
+Install into an **alternate root**
 
-```sudo pkgtool --setup_menu```
+```sudo pkgtool --source_dir [path/to/packages] --target_dir [/mnt]```
 
 # SYNOPSIS
 
@@ -34,17 +34,26 @@ Launch **interactive** package tool
 
 # PARAMETERS
 
-**--remove_menu**
-> Open the remove packages menu
+**--sets** _list_
+> Package series to install, separated by #
 
-**--view_menu**
-> Open the view installed packages menu
+**--source_dir** _dir_
+> Directory containing the packages to install
 
-**--install_menu**
-> Open the install packages menu (from current directory)
+**--target_dir** _dir_
+> Root directory to install into
 
-**--setup_menu**
-> Open the setup menu (runs doinst.sh scripts)
+**--source_device** _device_
+> Device holding the packages
+
+**--source-mounted**
+> Treat the package source as already mounted
+
+**--ignore-tagfiles**
+> Ignore tagfiles and install every package in the selected series
+
+**--tagfile** _name_
+> Use an alternate tagfile name
 
 # CAVEATS
 

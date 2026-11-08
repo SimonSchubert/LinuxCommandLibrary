@@ -14,7 +14,7 @@ Move and **delete** old volume
 
 # SYNOPSIS
 
-**pct move-volume** _vmid_ _volume_ _storage_ [_OPTIONS_]
+**pct move-volume** _vmid_ _volume_ [_storage_] [_target-vmid_] [_target-volume_] [_OPTIONS_]
 
 # DESCRIPTION
 
@@ -34,12 +34,21 @@ Move and **delete** old volume
 **--delete**
 > Delete the source volume after successful move
 
-**--target-vmid** _id_
-> Move volume to a different container
+**target-vmid**
+> Optional positional argument: container to move the volume to
+
+**target-volume**
+> Optional positional argument: config key for the volume on the target container
+
+**--bwlimit** _KiB/s_
+> Override the I/O bandwidth limit
+
+**--digest** _sha1_
+> Prevent changes if the configuration file has a different SHA1 digest
 
 # CAVEATS
 
-The container should be stopped for safe volume moves. Without **--delete**, the old volume remains and must be manually removed. Moving to a different storage type may affect performance.
+Without **--delete**, the original volume is kept as an unused volume entry and must be removed separately. Moving to a different storage type may affect performance.
 
 # HISTORY
 
@@ -48,3 +57,11 @@ The container should be stopped for safe volume moves. Without **--delete**, the
 # SEE ALSO
 
 [pct](/man/pct)(1), [pct-resize](/man/pct-resize)(1)
+
+# RESOURCES
+
+```[Documentation](https://pve.proxmox.com/pve-docs/pct.1.html)```
+
+```[Source code](https://git.proxmox.com/?p=pve-container.git)```
+
+<!-- verified: 2026-11-08 -->

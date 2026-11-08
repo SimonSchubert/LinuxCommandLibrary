@@ -94,12 +94,18 @@ Key features include automated debugging of terminal commands, fast project map 
 
 # CAVEATS
 
-Windows is only supported via WSL; the tool does not work in CMD or PowerShell. Requires API keys from supported providers. Large context operations may consume significant tokens. The sandbox approach means changes are not immediately reflected in project files until applied.
+Windows is only supported via WSL; the tool does not work in CMD or PowerShell. Requires API keys from supported providers. Large context operations may consume significant tokens. The sandbox approach means changes are not immediately reflected in project files until applied. Plandex Cloud has been winding down since October 2025 and no longer accepts new users, so new setups must self-host.
 
 # HISTORY
 
-Plandex was founded by **Dane Schneider** in **2024** in San Francisco. The open-source release was announced in **April 2024**. Schneider previously founded EnvkeyConfig (YC W18). The project has gained over 14,000 GitHub stars and is designed to address the challenges of AI-assisted development on large codebases.
+Plandex was founded by **Dane Schneider** in **2024** in San Francisco. The open-source release was announced in **April 2024**. Schneider previously founded EnvkeyConfig (YC W18). The project has gained over 15,000 GitHub stars and is designed to address the challenges of AI-assisted development on large codebases.
 
 # SEE ALSO
 
 [claude](/man/claude)(1), [aider](/man/aider)(1), [codex](/man/codex)(1), [opencode](/man/opencode)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/plandex-ai/plandex)```
+
+<!-- verified: 2026-11-08 -->

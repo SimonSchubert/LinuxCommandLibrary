@@ -45,6 +45,18 @@ _FILES_
 **-n**
 > Ignore warnings.
 
+**-s**
+> Show sniff codes in reports.
+
+**-p**
+> Show progress.
+
+**--extensions** _LIST_
+> File extensions to check.
+
+**--ignore** _PATTERNS_
+> Paths to skip.
+
 **--help**
 > Display help.
 
@@ -60,9 +72,14 @@ Configuration via phpcs.xml. Custom standards possible.
 
 # HISTORY
 
-PHP_CodeSniffer was created for **enforcing PHP coding standards**.
+PHP_CodeSniffer was created by **Squiz Labs** for enforcing PHP coding standards. That package is abandoned, and development continues under the **PHPCSStandards** organization.
 
 # SEE ALSO
 
 [phpcbf](/man/phpcbf)(1), [php-cs-fixer](/man/php-cs-fixer)(1), [phpmd](/man/phpmd)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/PHPCSStandards/PHP_CodeSniffer)```
+
+<!-- verified: 2026-11-08 -->

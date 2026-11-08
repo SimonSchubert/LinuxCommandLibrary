@@ -42,8 +42,14 @@ joins PDF files
 **--landscape**
 > Landscape orientation.
 
-**--tidy**
-> Remove temp files.
+**--tidy**, **--no-tidy**
+> Remove or keep temporary files.
+
+**--fitpaper** _BOOL_
+> Fit the output paper size to the page contents (pdfjoin sets this to true).
+
+**--suffix** _STRING_
+> Suffix for the output filename (pdfjoin defaults to joined).
 
 **--**
 > End of options.
@@ -52,7 +58,7 @@ joins PDF files
 
 **pdfjoin** joins PDF files. It combines multiple PDFs into one.
 
-Part of pdfjam utilities. Uses LaTeX pdfpages package.
+A wrapper around pdfjam, which uses the LaTeX pdfpages package.
 
 Page selection supported. Specify ranges or individual pages.
 
@@ -60,12 +66,18 @@ Preserves PDF quality. No recompression.
 
 # CAVEATS
 
-Requires LaTeX installation. Part of pdfjam package. Large files may be slow.
+Requires a LaTeX installation. No longer shipped with **pdfjam**: it now lives in the unmaintained **pdfjam-extras** collection. It is a thin wrapper, so **pdfjam --fitpaper true --rotateoversize true --suffix joined** is equivalent. Large files may be slow.
 
 # HISTORY
 
-**pdfjoin** is part of **pdfjam**, a collection of shell scripts for PDF manipulation using LaTeX.
+**pdfjoin** was originally distributed with **pdfjam** and is now kept, unmaintained, in the separate **pdfjam-extras** repository.
 
 # SEE ALSO
 
 [pdfjam](/man/pdfjam)(1), [pdfunite](/man/pdfunite)(1), [gs](/man/gs)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/pdfjam/pdfjam-extras)```
+
+<!-- verified: 2026-11-08 -->

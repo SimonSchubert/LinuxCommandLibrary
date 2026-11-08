@@ -18,7 +18,7 @@ Convert private keys to PKCS#8 format
 
 **Convert from PKCS#8**
 
-```openssl pkcs8 -in [key.p8] -out [key.pem]```
+```openssl pkcs8 -in [key.p8] -out [key.pem] -traditional```
 
 # SYNOPSIS
 
@@ -44,15 +44,30 @@ Convert private keys to PKCS#8 format
 **-inform** _FORMAT_
 > Input format.
 
+**-outform** _FORMAT_
+> Output format.
+
+**-traditional**
+> Write a traditional format private key when **-topk8** is not used.
+
+**-scrypt**
+> Use scrypt for private key encryption.
+
+**-passin** _ARG_
+> Input password source.
+
+**-passout** _ARG_
+> Output password source.
+
 # DESCRIPTION
 
 **openssl pkcs8** converts private keys between traditional OpenSSL format and the standardized PKCS#8 format. PKCS#8 is a widely supported container format for private keys that works across different cryptographic libraries and programming languages.
 
-The **-topk8** flag converts from traditional to PKCS#8 format. Keys can be encrypted with various ciphers using **-v2** or left unencrypted with **-nocrypt**. Without **-topk8**, the tool reads PKCS#8 input and outputs in traditional format.
+The **-topk8** flag converts from traditional to PKCS#8 format. Keys can be encrypted with various ciphers using **-v2** or left unencrypted with **-nocrypt**. Without **-topk8**, the tool reads PKCS#8 input and writes an unencrypted PKCS#8 PEM key, unless **-traditional** is given.
 
 # CAVEATS
 
-Part of OpenSSL. Key format conversion. Encryption optional.
+With **-topk8** the output is encrypted unless **-nocrypt** is given, using AES-256 with HMAC-SHA256 by default. Some older implementations do not support PKCS#5 v2.0.
 
 # HISTORY
 
@@ -62,3 +77,10 @@ PKCS#8 support in OpenSSL enables **private key format** conversion.
 
 [openssl](/man/openssl)(1), [openssl-rsa](/man/openssl-rsa)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/openssl/openssl)```
+
+```[Documentation](https://docs.openssl.org/master/man1/openssl-pkcs8/)```
+
+<!-- verified: 2026-11-08 -->

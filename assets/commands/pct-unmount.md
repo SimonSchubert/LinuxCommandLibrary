@@ -32,3 +32,11 @@ Ensure no processes are accessing the mounted filesystem before unmounting. Fail
 # SEE ALSO
 
 [pct](/man/pct)(1), [pct-mount](/man/pct-mount)(1)
+
+# RESOURCES
+
+```[Documentation](https://pve.proxmox.com/pve-docs/pct.1.html)```
+
+```[Source code](https://git.proxmox.com/?p=pve-container.git)```
+
+<!-- verified: 2026-11-08 -->

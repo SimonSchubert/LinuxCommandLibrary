@@ -41,6 +41,15 @@ _FILES_
 **--full**
 > Full detailed output.
 
+**--short-strings**
+> Short summary counting strings only.
+
+**--short-words**
+> Short summary counting words only.
+
+**--no-color**
+> Show output without color.
+
 # DESCRIPTION
 
 **pocount** counts translation statistics in PO (Portable Object) files, reporting the number of translated, fuzzy, and untranslated strings and words. It provides a quick overview of translation progress for localization projects.
@@ -59,3 +68,10 @@ pocount was created as part of **translate-toolkit** for translation statistics.
 
 [msgfmt](/man/msgfmt)(1), [pofilter](/man/pofilter)(1), [gettext](/man/gettext)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/translate/translate)```
+
+```[Documentation](https://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/pocount.html)```
+
+<!-- verified: 2026-11-08 -->

@@ -42,14 +42,26 @@ Clone a package repository over **HTTPS**
 **web**
 > Open repository in web browser
 
-**--protocol _proto_**
-> Clone protocol: ssh (default) or https
+**clean**
+> Remove untracked files from the working tree
 
-**--maintainer _name_**
-> Filter by maintainer
+**configure**
+> Configure a clone according to distro specs
+
+**--protocol https**
+> Clone over read-only HTTPS instead of SSH
+
+**-m**, **--maintainer _name_**
+> Clone all packages of the named maintainer
 
 **--universe**
-> Clone from universe (community) rather than packages
+> Clone all existing packages, useful for cache warming
+
+**--switch _version_**
+> Switch to a specific version after cloning
+
+**-j**, **--jobs _n_**
+> Run up to N jobs in parallel
 
 # DESCRIPTION
 
@@ -66,3 +78,11 @@ SSH clone requires GitLab account with SSH key configured. Repository creation r
 # SEE ALSO
 
 [pkgctl](/man/pkgctl)(1), [pkgctl-build](/man/pkgctl-build)(1), [git](/man/git)(1), [asp](/man/asp)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.archlinux.org/archlinux/devtools)```
+
+```[Documentation](https://man.archlinux.org/man/pkgctl-repo.1.en)```
+
+<!-- verified: 2026-11-08 -->

@@ -70,7 +70,7 @@ ppmgamma 0.45 linear.ppm > srgb.ppm
 
 # CAVEATS
 
-Use pamgamma for more features. Values at 0 and max unchanged. Part of Netpbm.
+No **ppmgamma** program could be found in current Netpbm documentation. Use **pnmgamma**, which handles PPM, PGM and PBM input.
 
 # HISTORY
 

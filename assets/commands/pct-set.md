@@ -6,7 +6,7 @@ modifies the configuration of a Proxmox LXC container
 
 Enable **autostart** on boot
 
-```pct set 100 --onboot```
+```pct set 100 --onboot 1```
 
 Set **static IP**
 
@@ -57,7 +57,25 @@ Set **tags**
 > Mount point configuration for bind mounts
 
 **--tags** _list_
-> Comma-separated list of tags
+> Tags of the container
+
+**--cores** _number_
+> Number of cores assigned to the container
+
+**--swap** _megabytes_
+> Swap limit in MB
+
+**--hostname** _name_
+> Hostname of the container
+
+**--nameserver** _address_
+> DNS server for the container
+
+**--protection** _boolean_
+> Prevent removal of the container and its disks
+
+**--revert** _list_
+> Revert a pending change
 
 **--delete** _list_
 > Remove specified options
@@ -73,3 +91,11 @@ Some changes require stopping the container first. Network changes may disconnec
 # SEE ALSO
 
 [pct](/man/pct)(1), [pct-config](/man/pct-config)(1)
+
+# RESOURCES
+
+```[Documentation](https://pve.proxmox.com/pve-docs/pct.1.html)```
+
+```[Source code](https://git.proxmox.com/?p=pve-container.git)```
+
+<!-- verified: 2026-11-08 -->
