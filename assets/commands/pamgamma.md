@@ -1,78 +1,57 @@
 # TAGLINE
 
-applies gamma correction to images
+not a Netpbm program; gamma correction is done with pnmgamma
 
 # TLDR
 
-**Apply gamma correction**
+**Apply gamma correction** with the real tool
 
-```pamgamma [2.2] [input.pam] > [output.pam]```
+```pnmgamma [2.2] [input.ppm] > [output.ppm]```
 
-**Apply inverse gamma**
+**Reverse gamma correction**
 
-```pamgamma [0.45] [input.pam] > [output.pam]```
+```pnmgamma -ungamma [2.2] [input.ppm] > [linear.ppm]```
 
-**Convert sRGB to linear**
+**Convert BT.709 to linear**
 
-```pamgamma -ungamma [input.pam] > [linear.pam]```
+```pnmgamma -bt709tolinear [input.ppm] > [linear.ppm]```
 
-**Convert linear to sRGB**
+**Convert linear to BT.709**
 
-```pamgamma -gamma [linear.pam] > [srgb.pam]```
+```pnmgamma -lineartobt709 [linear.ppm] > [output.ppm]```
+
+**Convert BT.709 to sRGB**
+
+```pnmgamma -bt709tosrgb [input.ppm] > [srgb.ppm]```
 
 # SYNOPSIS
 
-**pamgamma** [_options_] [_gamma_] [_pamfile_]
+**pnmgamma** [**-ungamma**] [_gamma_ | _rgamma_ _ggamma_ _bgamma_] [_file_]
 
-# PARAMETERS
-
-**gamma**
-> Gamma value (> 0).
-
-**-ungamma**
-> Remove gamma (to linear).
-
-**-gamma**
-> Apply gamma (to sRGB).
-
-**-bt709**
-> Use BT.709 transfer.
-
-**-srgb**
-> Use sRGB transfer.
+**pnmgamma** **-bt709tolinear**|**-lineartobt709**|**-bt709tosrgb**|**-srgbtobt709** [**-gamma=**_value_] [**-maxval=**_value_] [_file_]
 
 # DESCRIPTION
 
-**pamgamma** applies gamma correction to images. Gamma correction adjusts the brightness curve; values > 1 darken midtones, values < 1 brighten them.
+There is no **pamgamma** program in Netpbm: it does not appear in the Netpbm program directory, source tree, or distribution man pages. Gamma correction is provided by **pnmgamma**, which reads PNM images.
 
-Standard display gamma is approximately 2.2; inverse is about 0.45.
-
-# COMMON VALUES
-
-```
-2.2   - Standard gamma
-0.45  - Inverse gamma (1/2.2)
-1.0   - No change
-```
-
-# EXAMPLE
-
-```bash
-# Brighten dark image
-pamgamma 0.7 dark.ppm > brighter.ppm
-
-# Standard gamma encode
-pamgamma 2.2 linear.ppm > encoded.ppm
-```
+Without a transfer option, **pnmgamma** applies a simple exponential with a gamma of 2.2. A gamma above 1 brightens midtones and **-ungamma** applies the inverse. See [pnmgamma](/man/pnmgamma)(1) for all options.
 
 # CAVEATS
 
-Input should match expected gamma. Clipping may occur at extremes.
+Commands named **pamgamma** in scripts or tutorials fail with "command not found". Replace them with **pnmgamma**, and note that flags such as **-srgb** and **-bt709** do not exist there.
 
 # HISTORY
 
-pamgamma is part of **Netpbm**, providing gamma correction as part of color space conversions.
+The page exists for readers searching this name. The conversion options of **pnmgamma** were added in Netpbm **10.32** (2006).
 
 # SEE ALSO
 
-[pnmgamma](/man/pnmgamma)(1), [pamrecolor](/man/pamrecolor)(1), [netpbm](/man/netpbm)(1)
+[pnmgamma](/man/pnmgamma)(1), [pamfunc](/man/pamfunc)(1), [netpbm](/man/netpbm)(1)
+
+# RESOURCES
+
+```[Homepage](https://netpbm.sourceforge.net/)```
+
+```[Documentation](https://netpbm.sourceforge.net/doc/pnmgamma.html)```
+
+<!-- verified: 2026-11-08 -->

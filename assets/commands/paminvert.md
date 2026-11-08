@@ -1,36 +1,30 @@
 # TAGLINE
 
-produces a negative of a PAM or PNM image by inverting all pixel values
+not a Netpbm program; image negatives are made with pnminvert
 
 # TLDR
 
-**Invert image colors**
+**Invert an image** with the real tool
 
-```paminvert [input.pam] > [output.pam]```
+```pnminvert [input.ppm] > [output.ppm]```
 
-**Invert from pipe**
+**Invert from a pipe**
 
-```cat [image.ppm] | paminvert > [inverted.ppm]```
+```cat [image.ppm] | pnminvert > [inverted.ppm]```
+
+**Invert and convert to PNG**
+
+```pnminvert [photo.ppm] | pnmtopng > [negative.png]```
 
 # SYNOPSIS
 
-**paminvert** [_pamfile_]
+**pnminvert** [_pnmfile_]
 
 # DESCRIPTION
 
-**paminvert** produces a negative of a PAM or PNM image by inverting all pixel values. Each sample value is replaced with maxval minus the sample value.
+There is no **paminvert** program in Netpbm: it does not appear in the Netpbm program directory, source tree, or distribution man pages. Image negatives are produced by **pnminvert**, which reads a PNM image and inverts it black for white.
 
-For grayscale, black becomes white and vice versa. For color, each channel is inverted independently.
-
-# EXAMPLE
-
-```bash
-# Create negative
-paminvert photo.ppm > negative.ppm
-
-# Invert and convert to PNG
-paminvert photo.ppm | pnmtopng > negative.png
-```
+Each gray value or RGB component is replaced with maxval minus that value. See [pnminvert](/man/pnminvert)(1) for details.
 
 # FORMULA
 
@@ -45,12 +39,20 @@ Gray (128)  -> Gray (127)
 
 # CAVEATS
 
-Simple inversion; not perceptual negative. Alpha channel also inverted if present.
+Commands named **paminvert** in scripts or tutorials fail with "command not found". **pnminvert** works on PNM images, so the operation is applied to gamma-adjusted values rather than linear light.
 
 # HISTORY
 
-paminvert is part of **Netpbm**, providing simple image inversion as a fundamental operation.
+The page exists for readers searching this name. **pnminvert** is a long-standing part of **Netpbm**.
 
 # SEE ALSO
 
-[pnminvert](/man/pnminvert)(1), [pamarith](/man/pamarith)(1), [netpbm](/man/netpbm)(1)
+[pnminvert](/man/pnminvert)(1), [pamfunc](/man/pamfunc)(1), [netpbm](/man/netpbm)(1)
+
+# RESOURCES
+
+```[Homepage](https://netpbm.sourceforge.net/)```
+
+```[Documentation](https://netpbm.sourceforge.net/doc/pnminvert.html)```
+
+<!-- verified: 2026-11-08 -->

@@ -12,13 +12,17 @@ controls Particle IoT devices
 
 ```particle list```
 
-**Flash device**
+**Flash a project over the air**
 
-```particle flash [device_name] [firmware.bin]```
+```particle flash [device_name] [project_dir]```
 
-**Compile locally**
+**Compile the current directory and flash over USB**
 
-```particle compile [photon] [project_dir]```
+```particle flash --local```
+
+**Compile in the cloud**
+
+```particle compile [p2] [project_dir] --saveTo [firmware.bin]```
 
 **Monitor serial output**
 
@@ -32,9 +36,9 @@ controls Particle IoT devices
 
 ```particle get [device_name] [variable]```
 
-**Setup new device**
+**Claim a new device**
 
-```particle setup```
+```particle device add [device_id]```
 
 # SYNOPSIS
 
@@ -42,20 +46,26 @@ controls Particle IoT devices
 
 # PARAMETERS
 
-**login**
-> Authenticate with Particle Cloud.
+**login**, **logout**
+> Save or revoke the access token for the CLI session.
 
 **list**
-> List claimed devices.
+> List your devices with their functions and variables.
 
 **flash**
-> Flash firmware to device.
+> Flash firmware to a device, over the air or with **--local** over USB.
 
 **compile**
-> Compile project.
+> Compile a project in the cloud, or locally with **--compiler local** (CLI 3.52.0+).
 
 **serial**
-> Serial port commands.
+> Serial port commands, such as **monitor** and **identify**.
+
+**usb**
+> USB commands, such as **list**, **dfu**, **listen**, **reset** and **safe-mode**.
+
+**update**
+> Update Device OS on a connected device.
 
 **call**
 > Call device function.
@@ -63,8 +73,11 @@ controls Particle IoT devices
 **get**
 > Get device variable.
 
-**setup**
-> Setup new device.
+**device**
+> Add, rename or remove devices with **add**, **rename** and **remove**.
+
+**identify**
+> Show the device ID and system firmware version over USB.
 
 **subscribe**
 > Subscribe to events.
@@ -75,13 +88,16 @@ controls Particle IoT devices
 **webhook**
 > Manage webhooks.
 
+**keys doctor**
+> Repair out-of-sync device keys.
+
 # DESCRIPTION
 
 **particle** controls Particle IoT devices. It manages device firmware, cloud functions, and variables.
 
-Devices include Photon, Argon, Boron, and Electron boards. Cloud connectivity enables remote management.
+Supported device types include **p2** (Photon 2), **argon**, **boron**, **bsom**, **b5som**, **tracker**, and the older **photon**, **p1** and **electron**.
 
-Compilation can happen locally or in Particle Cloud. Flashing sends firmware over-the-air or via USB.
+Compilation happens in Particle Cloud by default and can run locally. Flashing sends firmware over-the-air or via USB.
 
 Functions and variables expose device capabilities. Events enable pub/sub messaging between devices.
 
@@ -91,10 +107,22 @@ Serial monitoring shows device debug output. Useful during development and troub
 
 Requires Particle Cloud account. Some features need device to be online. OTA flash requires stable connection.
 
+**particle setup** is no longer available: use the web-based setup at setup.particle.io. **particle serial flash** was removed in CLI 3.21.0. Removing a cellular device with **particle device remove** does not stop billing unless the SIM is also released.
+
 # HISTORY
 
-**Particle** (formerly Spark) was founded in **2012** through a Kickstarter campaign. The CLI provides developer tools for their IoT platform and device ecosystem.
+**Particle** began as **Spark**, founded by **Zach Supalla** around **2012**, and raised funds for the Spark Core through a **2013** Kickstarter campaign. The company was renamed Particle in **May 2015**. The CLI provides developer tools for its IoT platform and device ecosystem.
 
 # SEE ALSO
 
 [arduino-cli](/man/arduino-cli)(1), [platformio](/man/platformio)(1), [esptool](/man/esptool)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/particle-iot/particle-cli)```
+
+```[Homepage](https://www.particle.io/)```
+
+```[Documentation](https://docs.particle.io/reference/developer-tools/cli/)```
+
+<!-- verified: 2026-11-08 -->
