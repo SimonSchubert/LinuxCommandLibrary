@@ -53,7 +53,7 @@ PAM module to set the default SELinux security context
 > Attempt to inform the user when the security context is set.
 
 **select_context**
-> Prompt the user to select a custom role for the security context. Mutually exclusive with **env_params**.
+> Prompt the user to select a custom role for the security context, and a sensitivity level if MLS is on. Mutually exclusive with **env_params**.
 
 **env_params**
 > Obtain a custom security context role from PAM environment variables (SELINUX_ROLE_REQUESTED, SELINUX_LEVEL_REQUESTED, SELINUX_USE_CURRENT_RANGE). Mutually exclusive with **select_context**.
@@ -88,3 +88,11 @@ Only applicable on systems with SELinux enabled. This module provides only the *
 # SEE ALSO
 
 [pam](/man/pam)(8), [pam.d](/man/pam.d)(5), [chcon](/man/chcon)(1), [semanage](/man/semanage)(8), [sestatus](/man/sestatus)(8), [getenforce](/man/getenforce)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/linux-pam/linux-pam)```
+
+```[Documentation](https://man7.org/linux/man-pages/man8/pam_selinux.8.html)```
+
+<!-- verified: 2026-11-09 -->

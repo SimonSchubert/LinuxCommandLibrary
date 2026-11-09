@@ -12,13 +12,13 @@ Mermaid CLI for generating diagrams from text
 
 ```mmdc -i [input.mmd] -o [output.png] -t dark```
 
-**Generate a PDF scaled to fit the chart**
+**Generate a PDF** on a fixed paper size
 
-```mmdc -i [input.mmd] -o [output.pdf] -f```
+```mmdc -i [input.mmd] -o [output.pdf] --pdf-paper-format [A4]```
 
-**Set custom page dimensions and scale**
+**Set the diagram size and scale**
 
-```mmdc -i [input.mmd] -o [output.png] -w [1200] -H [800] -s [2]```
+```mmdc -i [input.mmd] -o [output.png] --size [1200] -s [2]```
 
 **Use a custom Mermaid configuration file**
 
@@ -39,46 +39,55 @@ Mermaid CLI for generating diagrams from text
 # PARAMETERS
 
 **-i**, **--input** _FILE_
-> Input file path. Use `-` for stdin. Files ending in .md or .markdown are treated as Markdown.
+> Input file path. Use `-` for stdin; if omitted, stdin is read with a warning. Files ending in .md or .markdown are treated as Markdown.
 
 **-o**, **--output** _FILE_
-> Output file path. Use `-` for stdout. Defaults to `{input}.svg`.
+> Output file path, ending in md, svg, png, or pdf. Use `-` for stdout. Defaults to `{input}.svg`.
 
 **-e**, **--outputFormat** _FORMAT_
 > Output format: svg, png, or pdf. Inferred from output extension by default.
 
 **-t**, **--theme** _THEME_
-> Mermaid theme: default, dark, forest, or neutral.
+> Mermaid theme: base, dark, default, forest, neutral, neo, neo-dark, redux, redux-dark, redux-color, redux-dark-color, or null.
 
 **-b**, **--backgroundColor** _COLOR_
-> Background color for PNG/SVG output (default: white).
+> Background color for PNG/SVG output, not PDF (default: white).
 
-**-w**, **--width** _WIDTH_
-> Page width in pixels (default: 800).
-
-**-H**, **--height** _HEIGHT_
-> Page height in pixels (default: 600).
+**--size** _SIZE_
+> Diagram size: maximum height or width of a PNG, `max-width` of an SVG, or CSS pixels for a PDF.
 
 **-s**, **--scale** _FACTOR_
 > Puppeteer scale factor for deviceScaleFactor (default: 1).
 
-**-f**, **--pdfFit**
-> Scale PDF output to fit chart dimensions.
+**--pdf-paper-format** _FORMAT_
+> Output a PDF on a paper size (Letter, Legal, Tabloid, Ledger, A0 to A6) instead of fitting the diagram.
 
 **-c**, **--configFile** _FILE_
 > JSON configuration file for Mermaid settings.
 
 **-C**, **--cssFile** _FILE_
-> Path to custom CSS file for injection into the page.
+> CSS file for the page, used as Mermaid's `themeCSS`.
 
 **-I**, **--svgId** _ID_
-> ID attribute for the SVG element (default: my-svg).
+> ID attribute for the SVG element.
 
 **-p**, **--puppeteerConfigFile** _FILE_
 > JSON configuration file for Puppeteer launch options.
 
 **-a**, **--artefacts** _PATH_
-> Output path for images when processing Markdown files.
+> Output path for images when processing Markdown files (default: output directory).
+
+**-j**, **--jobs** _N_
+> Number of parallel jobs when rendering multiple diagrams (default: half the available CPUs).
+
+**--no-font-embed**
+> Do not embed fonts into the SVG, reducing its size.
+
+**--iconPacks** _PACKAGES_
+> Installed Iconify NPM icon packs to use, e.g. `@iconify-json/logos`.
+
+**--iconPacksNamesAndUrls** _PREFIX#URL_
+> Icon packs to download by URL, with the prefix before the `#`.
 
 **-q**, **--quiet**
 > Suppress log output to stdout.
@@ -99,7 +108,7 @@ The **--configFile** option accepts a JSON file that configures Mermaid behavior
 
 # CAVEATS
 
-Requires **Node.js** and downloads a Chromium browser via **Puppeteer** for rendering. The first run may take time due to the browser download. The scale factor (**-s**) only affects PNG output resolution.
+Requires **Node.js** 22.13 or later (mermaid-cli 12) and downloads a Chromium browser via **Puppeteer** for rendering. The first run may take time due to the browser download. The scale factor (**-s**) only affects PNG output resolution. The **-w**, **-H**, and **-f** (**--pdfFit**) options of older releases are gone in mermaid-cli 12; use **--size** and **--pdf-paper-format**, as PDFs fit the diagram by default.
 
 # HISTORY
 
@@ -107,5 +116,12 @@ Requires **Node.js** and downloads a Chromium browser via **Puppeteer** for rend
 
 # SEE ALSO
 
-[graphviz](/man/graphviz)(1), [plantuml](/man/plantuml)(1), [dot](/man/dot)(1)
+[mermaid](/man/mermaid)(1), [graphviz](/man/graphviz)(1), [plantuml](/man/plantuml)(1), [dot](/man/dot)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/mermaid-js/mermaid-cli)```
+
+```[Homepage](https://mermaid.js.org)```
+
+<!-- verified: 2026-11-09 -->

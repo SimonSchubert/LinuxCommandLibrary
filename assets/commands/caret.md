@@ -8,9 +8,13 @@ Shell history substitution and regex anchor character
 
 ```^[old]^[new]```
 
-**Repeat last command replacing text**
+**Replace all occurrences** in the last command
 
-```^typo^fixed```
+```!!:gs/[old]/[new]/```
+
+**Print the substituted command** without running it
+
+```^[old]^[new]^:p```
 
 **Start of line anchor (regex)**
 
@@ -48,7 +52,7 @@ Shell history substitution and regex anchor character
 
 **Character class negation**: **[^abc]** matches any character except a, b, or c.
 
-**Exponentiation**: In **$((...))** and some languages, **^** may be XOR or exponent (use ******** in bash for exponent).
+**Bitwise XOR**: In **$((...))**, **^** is bitwise XOR. Use `**` for exponentiation.
 
 # CAVEATS
 
@@ -56,7 +60,7 @@ Shell history substitution and regex anchor character
 
 In some shells/contexts, **^** may need escaping or behave differently.
 
-The caret substitution must be at the start of the command line.
+The caret substitution must be at the start of the command line. It is part of history expansion, so it works only in interactive shells where history expansion is enabled (disabled with **set +H**). The character can be changed through the second character of **histchars**.
 
 # SEE ALSO
 

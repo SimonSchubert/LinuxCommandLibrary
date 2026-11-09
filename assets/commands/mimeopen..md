@@ -46,7 +46,7 @@ open files by mimetype
 **-M**, **--magic-only**
 > Do not check for extensions, globs, or inode type, only look at the content of the file.
 
-**--database** _mimedir:mimedir:..._
+**--database=**_mimedir:mimedir:..._
 > Force the program to look in these directories for the shared mime-info database.
 
 **-D**, **--debug**
@@ -69,9 +69,14 @@ The tool is part of the **File::MimeInfo** Perl module (perl-file-mimeinfo packa
 
 # CAVEATS
 
-Part of perl-file-mimeinfo. Uses the shared MIME info database following freedesktop.org standards. Desktop integration may vary depending on the environment.
+Part of perl-file-mimeinfo. Requires the freedesktop.org shared MIME info database and desktop-file-utils. Desktop integration may vary depending on the environment.
 
 # SEE ALSO
 
 [xdg-open](/man/xdg-open)(1), [mimetype](/man/mimetype)(1), [file](/man/file)(1)
 
+# RESOURCES
+
+```[Source code](https://codeberg.org/michielb/File-MimeInfo)```
+
+<!-- verified: 2026-11-09 -->

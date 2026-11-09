@@ -12,7 +12,7 @@ displays SDK version information
 
 ```gcloud version --format=json```
 
-**Brief version (top-level flag)**
+**Same information via the top-level flag**
 
 ```gcloud --version```
 
@@ -27,7 +27,7 @@ displays SDK version information
 # PARAMETERS
 
 **--format** _FORMAT_
-> Output format: text, json, yaml.
+> Output format, such as json, yaml, text or value. Available on all gcloud commands.
 
 **--help**
 > Display help information.
@@ -51,3 +51,11 @@ gcloud version is part of the **Google Cloud SDK** diagnostic commands, providin
 # SEE ALSO
 
 [gcloud](/man/gcloud)(1), [gcloud-components](/man/gcloud-components)(1)
+
+# RESOURCES
+
+```[Homepage](https://cloud.google.com/sdk)```
+
+```[Documentation](https://docs.cloud.google.com/sdk/gcloud/reference/version)```
+
+<!-- verified: 2026-11-09 -->

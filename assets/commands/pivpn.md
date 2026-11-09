@@ -6,62 +6,87 @@ Simple OpenVPN and WireGuard server manager
 
 **Add** new client device
 
-```sudo pivpn add```
+```pivpn add```
+
+Add a client **non-interactively** by name
+
+```pivpn add -n [name]```
+
+Show a client's **QR code** for the mobile app (WireGuard)
+
+```pivpn qrcode [name]```
 
 **List** all clients
 
-```sudo pivpn list```
+```pivpn list```
 
 Show **connected** clients and statistics
 
-```sudo pivpn clients```
+```pivpn clients```
 
-**Revoke** a client
+**Remove** a client (WireGuard)
 
-```sudo pivpn revoke```
+```pivpn remove [name]```
+
+**Revoke** a client (OpenVPN)
+
+```pivpn revoke```
+
+Run a command for one protocol when **both** are installed
+
+```pivpn [wg|ovpn] [command]```
 
 **Uninstall** PiVPN
 
-```sudo pivpn uninstall```
+```pivpn uninstall```
 
 # SYNOPSIS
 
-**pivpn** [**add**|**list**|**clients**|**revoke**|**uninstall**|**-d**|**-u**]
+**pivpn** [**wg**|**ovpn**] _command_ [_options_]
 
 # COMMANDS
 
-**add**
-> Create new client configuration
+**add, -a**
+> Create new client configuration. **-n** sets the client name; run without options for interactive mode.
 
-**list**
+**list, -l**
 > List all client configurations
 
-**clients**
+**clients, -c**
 > Show connected clients with statistics
 
-**revoke**
-> Revoke client certificate
+**remove, -r** (WireGuard), **revoke, -r** (OpenVPN)
+> Remove a client or revoke its certificate
 
-**uninstall**
-> Remove PiVPN installation
+**qrcode, -qr** (WireGuard)
+> Show a client's QR code for use with the mobile app.
+
+**off, -off** (WireGuard)
+> Disable a client without removing it.
+
+**on, -on** (WireGuard)
+> Re-enable a disabled client.
 
 **debug, -d**
 > Generate debug output for troubleshooting.
 
-**update, -u**
-> Check for PiVPN updates.
+**update, -up**
+> Update the PiVPN scripts.
 
-**off**
-> Disable the PiVPN server.
-
-**backup**
+**backup, -bk**
 > Create a backup of server/client configurations.
+
+**uninstall, -u**
+> Remove PiVPN installation
+
+**help, -h**
+> Show the available commands.
 
 # DESCRIPTION
 
 **pivpn** simplifies OpenVPN or WireGuard server management on Linux, particularly Raspberry Pi. It handles certificate generation, client configuration, and connection management through an interactive menu system.
 
-Originally designed for Raspberry Pi, it works on any Debian-based system. It automates the complex setup of VPN servers with security-hardened configurations.
+Originally designed for Raspberry Pi, it should also work on most Debian and Ubuntu based distributions. The command elevates itself with sudo when needed. When both protocols are installed, prefix the command with **wg** or **ovpn**. It automates the complex setup of VPN servers with security-hardened configurations.
 
 # CONFIGURATION
 
@@ -76,7 +101,7 @@ Originally designed for Raspberry Pi, it works on any Debian-based system. It au
 
 # CAVEATS
 
-Requires curl for installation script. Initial setup requires internet access. Port forwarding needed on router for external access. WireGuard mode requires kernel 5.6+ or DKMS module.
+Maintained upstream on a best-effort basis. Requires curl for installation script. Initial setup requires internet access. Port forwarding needed on router for external access. WireGuard mode requires kernel 5.6+ or DKMS module.
 
 # HISTORY
 
@@ -85,3 +110,13 @@ Requires curl for installation script. Initial setup requires internet access. P
 # SEE ALSO
 
 [openvpn](/man/openvpn)(8), [wg](/man/wg)(8), [wg-quick](/man/wg-quick)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/pivpn/pivpn)```
+
+```[Homepage](https://pivpn.io)```
+
+```[Documentation](https://docs.pivpn.io)```
+
+<!-- verified: 2026-11-09 -->

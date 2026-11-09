@@ -43,7 +43,7 @@ The tool is the counterpart to smali, together forming a complete assembler/disa
 **disassemble** (or **d**)
 > Disassemble a DEX file into smali files.
 
-**list** _type_
+**list** (or **l**) _type_
 > List items (classes, methods, fields, etc.) from a DEX file.
 
 **deodex** (or **x**)
@@ -52,31 +52,34 @@ The tool is the counterpart to smali, together forming a complete assembler/disa
 **-o**, **--output** _dir_
 > Output directory (default: out/).
 
-**-a**, **--api-level** _level_
-> API level for disassembly.
+**-a**, **--api** _level_
+> Numeric API level of the file being disassembled.
 
 **-j**, **--jobs** _num_
 > Number of threads for parallel processing.
 
-**-b**, **--bootclasspath** _classpath_
-> Colon-separated bootclasspath jars for analysis.
+**-b**, **--bootclasspath**, **--bcp** _classpath_
+> Colon-separated files to include in the bootclasspath when analyzing the dex file.
 
-**-d**, **--bootclasspath-dir** _dir_
-> Directory containing framework files.
+**-c**, **--classpath**, **--cp** _classpath_
+> Colon-separated additional files for the classpath.
+
+**-d**, **--classpath-dir**, **--cpd**, **--dir** _dir_
+> Directory to search for classpath files. May be repeated.
 
 **--debug-info**, **--di**
 > Include debug metadata in output (default: true).
 
-**--use-locals**
+**-l**, **--use-locals**
 > Use .locals directive instead of .registers.
 
-**--code-offsets**, **--off**
+**--code-offsets**, **--offsets**, **--off**
 > Add a comment before each instruction with its code offset.
 
 **--accessor-comments**, **--ac**
 > Generate helper comments for synthetic accessors (default: true).
 
-**--sequential-labels**, **--sl**
+**--sequential-labels**, **--seq**, **--sl**
 > Use sequential numbering for labels.
 
 **--classes** _LIST_
@@ -107,8 +110,14 @@ Requires Java runtime. Obfuscated code produces hard-to-read output. API level a
 
 # HISTORY
 
-**baksmali** (Icelandic for "disassembler") was created by Ben Gruver (JesusFreke) around **2010** as part of the smali project for Android reverse engineering.
+**baksmali** (Icelandic for "disassembler") was created by Ben Gruver (JesusFreke) around **2010** as part of the smali project for Android reverse engineering. The original repository is archived; Google maintains a fork, released from version 3.0.0 under the com.android.tools.smali namespace.
 
 # SEE ALSO
 
 [apktool](/man/apktool)(1), [dex2jar](/man/dex2jar)(1), [jadx](/man/jadx)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/smali)```
+
+<!-- verified: 2026-11-09 -->

@@ -4,9 +4,13 @@ Filter platforms from a container image manifest index
 
 # TLDR
 
-**Filter an index to keep only linux/amd64**
+**Filter an index in place to keep only linux/amd64**
 
 ```crane index filter [image] --platform linux/amd64```
+
+**Keep every platform of one OS and push a copy**
+
+```crane index filter [image] --platform linux -t [registry/image:tag]```
 
 **Filter to multiple platforms and tag the result**
 
@@ -27,10 +31,10 @@ Filter platforms from a container image manifest index
 # PARAMETERS
 
 **--platform** _platform_
-> Platform(s) to keep in the form os/arch[/variant][:osversion]. Can be specified multiple times.
+> Platform(s) to keep in the form os/arch[/variant][:osversion][,platform]. Accepts a comma-separated list and can be repeated.
 
 **-t**, **--tag** _tag_
-> Tag to apply to the resulting filtered image.
+> Tag to apply to the resulting filtered image. Without it, the source reference is updated in place.
 
 **--insecure**
 > Allow image references to be fetched without TLS.
@@ -55,3 +59,11 @@ The **--platform** flag uses the format **os/arch[/variant][:osversion]**, such 
 # SEE ALSO
 
 [crane](/man/crane)(1), [crane-index](/man/crane-index)(1), [crane-index-append](/man/crane-index-append)(1), [crane-manifest](/man/crane-manifest)(1), [crane-push](/man/crane-push)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/go-containerregistry)```
+
+```[Documentation](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_index_filter.md)```
+
+<!-- verified: 2026-11-09 -->

@@ -4,13 +4,13 @@ distributed platform for change data capture
 
 # TLDR
 
-**Start Debezium server**
+**Start Debezium Server** from the unpacked distribution directory
 
-```debezium-server```
+```./run.sh```
 
 **Run Debezium Server with Docker**
 
-```docker run -it --name debezium -p 8080:8080 -v $PWD/conf:/debezium/conf debezium/server```
+```docker run -it --name debezium -p 8080:8080 -v $PWD/config:/debezium/config -v $PWD/data:/debezium/data quay.io/debezium/server```
 
 **Run MySQL connector in Kafka Connect**
 
@@ -26,13 +26,13 @@ distributed platform for change data capture
 
 # SYNOPSIS
 
-**debezium-server** (standalone)
+**./run.sh** (Debezium Server, run from the **debezium-server** directory)
 
 Kafka Connect REST API at **http://localhost:8083/connectors**
 
 # CONFIGURATION
 
-**application.properties** (Debezium Server):
+**config/application.properties** (Debezium Server):
 ```properties
 debezium.source.connector.class=io.debezium.connector.mysql.MySqlConnector
 debezium.source.offset.storage.file.filename=data/offsets.dat
@@ -41,19 +41,25 @@ debezium.source.database.port=3306
 debezium.source.database.user=debezium
 debezium.source.database.password=dbz
 debezium.source.database.server.id=1
-debezium.source.database.server.name=mydb
+debezium.source.topic.prefix=mydb
+debezium.source.schema.history.internal=io.debezium.storage.file.history.FileSchemaHistory
+debezium.source.schema.history.internal.file.filename=data/schema_history.dat
 debezium.sink.type=kafka
 debezium.sink.kafka.producer.bootstrap.servers=localhost:9092
+debezium.sink.kafka.producer.key.serializer=org.apache.kafka.common.serialization.StringSerializer
+debezium.sink.kafka.producer.value.serializer=org.apache.kafka.common.serialization.StringSerializer
 ```
 
 # CONNECTORS
 
-**MySQL**: Reads MySQL/MariaDB binlog
+**MySQL**, **MariaDB**: Read the binlog
 **PostgreSQL**: Uses logical replication
 **MongoDB**: Reads oplog
 **SQL Server**: Uses CDC tables
 **Oracle**: Uses LogMiner or XStream
 **Cassandra**: Reads commit log
+**Db2**, **CockroachDB**: Also available
+**Vitess**, **Spanner**, **Informix**: Incubating
 
 # DESCRIPTION
 
@@ -74,3 +80,13 @@ Debezium was created at **Red Hat** by **Randall Hauch** and first released in *
 # SEE ALSO
 
 [kafka](/man/kafka)(1), [docker](/man/docker)(1), [docker-compose](/man/docker-compose)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/debezium/debezium)```
+
+```[Homepage](https://debezium.io)```
+
+```[Documentation](https://debezium.io/documentation/)```
+
+<!-- verified: 2026-11-09 -->

@@ -8,6 +8,14 @@ Google Cloud authentication management
 
 ```gcloud auth login```
 
+**Login on a machine without a browser**
+
+```gcloud auth login --no-browser```
+
+**Set Application Default Credentials** for client libraries
+
+```gcloud auth application-default login```
+
 **Activate service account**
 
 ```gcloud auth activate-service-account --key-file=[key.json]```
@@ -19,6 +27,14 @@ Google Cloud authentication management
 **Print access token**
 
 ```gcloud auth print-access-token```
+
+**Print an identity token**
+
+```gcloud auth print-identity-token```
+
+**Register gcloud as a Docker credential helper** for a registry
+
+```gcloud auth configure-docker [us-central1-docker.pkg.dev]```
 
 **Revoke credentials**
 
@@ -34,7 +50,7 @@ _COMMAND_
 > Operation: login, list, revoke, etc.
 
 **login**
-> Authenticate with user account.
+> Authenticate with user account. **--no-browser** completes the flow with a second machine that has a browser, **--update-adc** also writes Application Default Credentials, and **--force** reruns authorization.
 
 **activate-service-account**
 > Authenticate with service account.
@@ -45,8 +61,11 @@ _COMMAND_
 **print-access-token**
 > Output current access token.
 
+**print-identity-token**
+> Output an identity token for the account.
+
 **revoke** _ACCOUNT_
-> Revoke credentials.
+> Revoke credentials. **--all** revokes every credentialed account.
 
 **--key-file** _FILE_
 > Service account key file.
@@ -70,7 +89,7 @@ The command supports multiple concurrent authenticated accounts, allowing you to
 
 # CAVEATS
 
-Browser required for user login. Service account keys are sensitive. Token expiration requires re-authentication.
+User login needs a browser on this or a second machine. **gcloud auth login** does not set the credentials used by client libraries: use **application-default login** or **--update-adc** for those. Service account keys are sensitive. Token expiration requires re-authentication.
 
 # HISTORY
 
@@ -79,3 +98,11 @@ gcloud auth is part of the **Google Cloud SDK**, providing unified authenticatio
 # SEE ALSO
 
 [gcloud](/man/gcloud)(1), [gcloud-config](/man/gcloud-config)(1)
+
+# RESOURCES
+
+```[Homepage](https://cloud.google.com/sdk)```
+
+```[Documentation](https://docs.cloud.google.com/sdk/gcloud/reference/auth)```
+
+<!-- verified: 2026-11-09 -->

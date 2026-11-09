@@ -20,6 +20,10 @@ SELinux persistent policy management tool
 
 ```sudo semanage permissive --add|--delete [httpd_t]```
 
+**List** only local file context customizations
+
+```sudo semanage fcontext -l -C```
+
 **Export** local customizations to a file
 
 ```sudo semanage export -f [path/to/file]```
@@ -70,6 +74,12 @@ SELinux persistent policy management tool
 **import**
 > Import local customizations.
 
+**ibpkey**
+> Manage InfiniBand pkey type definitions.
+
+**ibendport**
+> Manage InfiniBand end port type definitions.
+
 **-a**, **--add**
 > Add a new record.
 
@@ -82,28 +92,43 @@ SELinux persistent policy management tool
 **-l**, **--list**
 > List records.
 
+**-D**, **--deleteall**
+> Remove all local customizations of the object type.
+
+**-E**, **--extract**
+> Print customizable commands, for use within a transaction.
+
+**-t**, **--type** _type_
+> SELinux type for the object.
+
+**-S**, **--store** _store_
+> Select an alternate SELinux policy store to manage.
+
+**-N**, **--noreload**
+> Do not reload the policy after commit.
+
 **-n**, **--noheading**
 > Suppress the heading line when listing.
 
 **-C**, **--locallist**
 > List only local customizations (not base policy records).
 
-**-f**, **--fcontext** _file_
-> With export/import, read from or write to this file.
+**-f**, **--output_file** | **--input_file** _file_
+> With export, write to this file; with import, read from it.
 
 # DESCRIPTION
 
-**semanage** is the SELinux Policy Management tool for configuring persistent security policy settings. Unlike **setsebool** or **chcon**, changes made with semanage persist across reboots.
+**semanage** is the SELinux Policy Management tool for configuring persistent security policy settings. Unlike **chcon**, or **setsebool** without **-P**, changes made with semanage persist across reboots and relabels.
 
 The tool manages booleans, file contexts, ports, network interfaces, and user mappings. It provides granular control over SELinux policy without requiring policy source modification.
 
 # CONFIGURATION
 
 **/etc/selinux/*/policy/**
-> SELinux policy store directory containing the active policy modules and local customizations.
+> Directory containing the compiled binary policy loaded into the kernel.
 
 **/var/lib/selinux/**
-> Policy module database storing installed and locally modified policy components.
+> Policy store holding installed modules and local customizations.
 
 # CAVEATS
 
@@ -112,3 +137,11 @@ Requires root privileges. Changes to file contexts require **restorecon** to app
 # SEE ALSO
 
 [semanage-boolean](/man/semanage-boolean)(8), [semanage-fcontext](/man/semanage-fcontext)(8), [semanage-port](/man/semanage-port)(8), [restorecon](/man/restorecon)(8), [getsebool](/man/getsebool)(8), [setsebool](/man/setsebool)(8), [chcon](/man/chcon)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/SELinuxProject/selinux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man8/semanage.8.html)```
+
+<!-- verified: 2026-11-09 -->

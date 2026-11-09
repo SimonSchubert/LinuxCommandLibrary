@@ -28,6 +28,14 @@ privacy-focused VS Code without Microsoft telemetry
 
 ```codium --list-extensions```
 
+**Add a folder** to the last active window
+
+```codium --add [path/to/folder]```
+
+**Read from stdin** into an editor tab
+
+```[command] | codium -```
+
 **Open in new window**
 
 ```codium -n [path/to/project]```
@@ -55,6 +63,15 @@ privacy-focused VS Code without Microsoft telemetry
 
 **-w**, **--wait**
 > Wait for files to be closed before returning.
+
+**-a**, **--add** _folder_
+> Add folder(s) to the last active window as a multi-root workspace.
+
+**--remove** _folder_
+> Remove folder(s) from the last active window.
+
+**--profile** _name_
+> Open with the named profile, creating it if it does not exist.
 
 **--locale** _locale_
 > Set display language.
@@ -89,7 +106,7 @@ privacy-focused VS Code without Microsoft telemetry
 # EXTENSION COMMANDS
 
 **--install-extension** _id_
-> Install or update extension by ID from Open VSX Registry.
+> Install or update extension by ID from Open VSX Registry, or from a VSIX file path. Append **@version** for a specific version.
 
 **--uninstall-extension** _id_
 > Remove an installed extension.
@@ -124,3 +141,13 @@ VSCodium was created in **2018** as a response to concerns about Microsoft's tel
 # SEE ALSO
 
 [code](/man/code)(1), [neovim](/man/neovim)(1), [vim](/man/vim)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/VSCodium/vscodium)```
+
+```[Homepage](https://vscodium.com)```
+
+```[Documentation](https://github.com/VSCodium/vscodium/blob/master/docs/index.md)```
+
+<!-- verified: 2026-11-09 -->

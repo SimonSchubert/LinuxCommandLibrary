@@ -16,9 +16,9 @@ Apply changes to the kernel **configuration** before compiling
 
 ```sudo genkernel --menuconfig all```
 
-Generate a kernel with a **custom name**
+Append a **custom suffix** to the kernel version
 
-```sudo genkernel --kernname=[custom_name] all```
+```sudo genkernel --kernel-append-localversion=[-custom] all```
 
 Use a kernel source **outside** the default directory
 
@@ -37,13 +37,13 @@ Use a kernel source **outside** the default directory
 > Build only the compressed kernel image.
 
 **initramfs**
-> Build only the initial ramdisk.
+> Build only the ramdisk/initramfs.
 
 **kernel**
 > Build only the kernel and modules.
 
 **ramdisk**
-> Build only the ramdisk.
+> Same as **initramfs**.
 
 **--menuconfig**
 > Run menuconfig before compilation.
@@ -51,20 +51,26 @@ Use a kernel source **outside** the default directory
 **--nconfig**
 > Run nconfig (ncurses-based) before compilation.
 
-**--kernname** _NAME_
-> Tag the kernel and initramfs with _NAME_.
+**--kernel-append-localversion=**_VALUE_
+> Append _VALUE_ to the kernel local version, giving a separate kernel image, initramfs, and modules directory.
 
-**--kerneldir** _DIR_
+**--kernel-config=**_FILE_
+> Kernel configuration file to use, or **default** to start from genkernel defaults.
+
+**--kerneldir=**_DIR_
 > Use kernel source from _DIR_ instead of /usr/src/linux.
 
-**--makeopts** _OPTS_
+**--makeopts=**_OPTS_
 > Pass options to make (e.g., -j4).
 
 **--no-clean**
-> Skip `make clean` before compilation.
+> Skip `make clean` before compilation. Implies **--no-mrproper**.
 
 **--no-mrproper**
 > Skip `make mrproper` before compilation, preserving the existing kernel config.
+
+**--no-install**
+> Do not install the kernel to /boot after building.
 
 **--lvm**
 > Add LVM support to initramfs.
@@ -81,7 +87,7 @@ Use a kernel source **outside** the default directory
 
 **genkernel** is a Gentoo Linux utility that automates the kernel compilation and installation process. It builds a generic kernel with broad hardware support, similar to kernels found in binary distributions.
 
-The tool handles configuring, compiling, and installing the kernel along with generating an initramfs (initial ramdisk) required for booting. It can automatically detect hardware and enable appropriate kernel modules.
+The tool handles configuring, compiling, and installing the kernel along with generating an initramfs (initial ramdisk) required for booting. The kernel is set up similarly to the Gentoo LiveCD kernels, which auto-detect hardware.
 
 genkernel reads configuration from **/etc/genkernel.conf** and supports various filesystem, encryption, and boot features through command-line options.
 
@@ -96,3 +102,11 @@ genkernel was developed for Gentoo Linux to provide an alternative to manual ker
 # SEE ALSO
 
 [make](/man/make)(1), [emerge](/man/emerge)(1), [eselect](/man/eselect)(1), [dracut](/man/dracut)(8), [mkinitcpio](/man/mkinitcpio)(8)
+
+# RESOURCES
+
+```[Source code](https://gitweb.gentoo.org/proj/genkernel.git)```
+
+```[Documentation](https://wiki.gentoo.org/wiki/Genkernel)```
+
+<!-- verified: 2026-11-09 -->

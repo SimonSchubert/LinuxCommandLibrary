@@ -75,12 +75,18 @@ Default thresholds are set based on baud rate when the tty is opened: 10 for 50-
 
 # CAVEATS
 
-Only works with Cyclades serial hardware and drivers. Incorrect settings can cause data loss or poor performance. Requires root privileges to modify settings. Not applicable to standard serial ports. The -q monitoring option is only available if the driver was compiled with ENABLE_MONITORING defined.
+Removed from util-linux in version 2.25 (2014), so it is only available from older releases. The Linux Cyclades driver has since been removed from the kernel as well. Only works with Cyclades serial hardware and drivers. Incorrect settings can cause data loss or poor performance. Requires root privileges to modify settings. Not applicable to standard serial ports. The -q monitoring option is only available if the driver was compiled with ENABLE_MONITORING defined.
 
 # HISTORY
 
-**cytune** was developed for the Cyclades multiport serial card drivers in Linux and is part of the **util-linux** package. Cyclades produced high-density serial solutions for applications requiring many serial ports.
+**cytune** was developed for the Cyclades multiport serial card drivers in Linux and was part of the **util-linux** package until its removal in 2014, when the maintainers had no hardware left to test it on. Cyclades produced high-density serial solutions for applications requiring many serial ports.
 
 # SEE ALSO
 
 [setserial](/man/setserial)(8), [stty](/man/stty)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+<!-- verified: 2026-11-09 -->

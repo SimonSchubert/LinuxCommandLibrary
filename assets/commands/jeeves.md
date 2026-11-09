@@ -20,6 +20,10 @@ Run development dependencies inside pre-configured Docker containers
 
 ```jeeves stop [mysql]```
 
+**Stop all containers** of a service
+
+```jeeves stop [mysql] --all```
+
 **List active Jeeves containers**
 
 ```jeeves list```
@@ -38,24 +42,30 @@ Run development dependencies inside pre-configured Docker containers
 > Create and start a container for the named service. Prompts for version, port, password, and volume name unless **--default** is given.
 
 **stop** _SERVICE_
-> Stop and remove the container for the named service.
+> Stop and remove the container for the named service. Prompts if several containers match, unless **--all** is given.
 
 **list**
 > Print a table of Jeeves-managed containers.
 
-**--help**, **-h**
+**--help**
 > Show help for the command or subcommand.
+
+**--version**
+> Show the version.
 
 # PARAMETERS
 
-**--default**
-> Skip interactive configuration prompts and use sensible defaults.
+**-d**, **--default**
+> Skip interactive configuration prompts and use sensible defaults (for **start**).
+
+**-a**, **--all**
+> Stop and remove all containers of the service (for **stop**).
 
 # DESCRIPTION
 
-**jeeves** is a Python-based command-line butler that wraps **Docker** so developers can bring up common local dependencies (**MySQL**, **PostgreSQL**, **MongoDB**, **Redis**, **Memcached**, **Mailhog**, and others) with single-line commands. Each service is started in its own container with a named Docker volume for persistence, so data survives between restarts.
+**jeeves** is a Python-based command-line butler that wraps **Docker** so developers can bring up common local dependencies (**MySQL**, **MariaDB**, **PostgreSQL**, **MongoDB**, **Redis**) with single-line commands. Each service is started in its own container with a named Docker volume for persistence, so data survives between restarts.
 
-Because Jeeves uses regular Docker containers under the hood, standard Docker tooling (**docker ps**, **docker logs**, **docker exec**) continues to work alongside it — Jeeves is only responsible for the declaration and lifecycle, not for re-implementing container management.
+Because Jeeves uses regular Docker containers under the hood, standard Docker tooling (**docker ps**, **docker logs**, **docker exec**) continues to work alongside it: Jeeves is only responsible for the declaration and lifecycle, not for re-implementing container management.
 
 # REQUIREMENTS
 
@@ -73,3 +83,9 @@ The project is marked **experimental** and is not recommended for production wor
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-compose](/man/docker-compose)(1), [takeout](/man/takeout)(1), [lando](/man/lando)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/fhsinchy/jeeves)```
+
+<!-- verified: 2026-11-09 -->

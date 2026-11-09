@@ -26,7 +26,7 @@ List top-level installed packages that are not dependencies
 
 # DESCRIPTION
 
-**brew leaves** lists installed formulae that are not dependencies of any other installed formula or cask. These are your "top-level" packages that you explicitly installed.
+**brew leaves** lists installed formulae that are not dependencies of any other installed formula or cask. These are your "top-level" packages, usually the ones you explicitly installed.
 
 This command shows the leaves of Homebrew's dependency graph - packages that can be safely uninstalled without breaking other packages.
 
@@ -40,8 +40,18 @@ This command shows the leaves of Homebrew's dependency graph - packages that can
 
 # CAVEATS
 
-Not the same as "manually installed" - shows packages with no dependents. A manually installed package might have dependents and won't appear. Use -r flag for truly manual installations.
+Not the same as "manually installed": it shows formulae with no dependents. A manually installed formula that others depend on will not appear, even with **-r**, which only filters the leaf list. Use **brew list --installed-on-request** for all manually installed formulae. **-r** and **-p** cannot be combined.
 
 # SEE ALSO
 
 [brew](/man/brew)(1), [brew-list](/man/brew-list)(1), [brew-autoremove](/man/brew-autoremove)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Homebrew/brew)```
+
+```[Homepage](https://brew.sh)```
+
+```[Documentation](https://docs.brew.sh/Manpage)```
+
+<!-- verified: 2026-11-09 -->

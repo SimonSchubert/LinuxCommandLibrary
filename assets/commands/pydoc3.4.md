@@ -59,3 +59,12 @@ Python 3.4 reached end-of-life in March 2019. Use the latest **pydoc3** for curr
 
 [pydoc](/man/pydoc)(1), [pydoc3](/man/pydoc3)(1), [python3.4](/man/python3.4)(1), [python3](/man/python3)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/python/cpython)```
+
+```[Homepage](https://www.python.org)```
+
+```[Documentation](https://docs.python.org/3.4/library/pydoc.html)```
+
+<!-- verified: 2026-11-09 -->

@@ -30,7 +30,7 @@ Create device with **owner and group**
 
 # SYNOPSIS
 
-**ip tuntap** [_command_] [_options_]
+**ip tuntap** { **add** | **del** | **show** | **list** | **lst** | **help** } [**dev** _NAME_] [**mode** { **tun** | **tap** }] [**user** _USER_] [**group** _GROUP_] [**one_queue**] [**pi**] [**vnet_hdr**] [**multi_queue**] [**name** _NAME_]
 
 # PARAMETERS
 
@@ -43,6 +43,9 @@ Create device with **owner and group**
 **show** | **list**
 > List existing TUN/TAP devices.
 
+**dev** _NAME_, **name** _NAME_
+> Name of the device.
+
 **mode** _tun|tap_
 > Device mode: tun (layer 3, IP packets) or tap (layer 2, Ethernet frames).
 
@@ -53,7 +56,7 @@ Create device with **owner and group**
 > Set device group by name or GID.
 
 **one_queue**
-> Use the old single-queue TUN/TAP driver.
+> Set the IFF_ONE_QUEUE flag. Accepted for compatibility, with no effect on current kernels.
 
 **pi**
 > Enable packet information (prepend a 4-byte header to each packet).
@@ -81,3 +84,11 @@ TUN/TAP support has been in the Linux kernel since version 2.4. The ip tuntap co
 # SEE ALSO
 
 [ip](/man/ip)(8), [ip-link](/man/ip-link)(8), [openvpn](/man/openvpn)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/iproute2/iproute2)```
+
+```[Documentation](https://www.kernel.org/doc/html/latest/networking/tuntap.html)```
+
+<!-- verified: 2026-11-09 -->

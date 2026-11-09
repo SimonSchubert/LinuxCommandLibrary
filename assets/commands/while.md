@@ -14,7 +14,7 @@ Shell loop with conditional execution
 
 **Read file line by line**
 
-```while read -r line; do echo "$line"; done < [file.txt]```
+```while IFS= read -r line; do echo "$line"; done < [file.txt]```
 
 **Loop until command fails**
 
@@ -26,7 +26,7 @@ Shell loop with conditional execution
 
 **Process command output**
 
-```[command] | while read -r line; do echo "$line"; done```
+```[command] | while IFS= read -r line; do echo "$line"; done```
 
 **Loop with break**
 
@@ -60,7 +60,7 @@ Common patterns include reading files line by line with **read**, implementing r
 
 # CAVEATS
 
-Using a pipe to while creates a subshell, so variable changes inside the loop are not visible outside. Use process substitution or here-strings to avoid this: **while read line; do ...; done < <(command)**. Always use **read -r** to prevent backslash interpretation.
+In bash (without the **lastpipe** option) and most POSIX shells, a pipe into while runs the loop in a subshell, so variable changes inside it are not visible outside; zsh and ksh run the last pipeline element in the current shell. In bash, zsh, and ksh, process substitution avoids this: **while read -r line; do ...; done < <(command)**. Use **read -r** to prevent backslash interpretation and **IFS=** to keep leading and trailing whitespace.
 
 # HISTORY
 

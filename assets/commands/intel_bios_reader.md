@@ -53,18 +53,24 @@ extracts and displays Intel graphics BIOS information
 
 # DESCRIPTION
 
-**intel_bios_reader** parses the Intel Video BIOS Tables (VBT) and prints the information in a human-readable format. The binary VBT can be read from kernel debug interfaces or from a previously saved dump file.
+**intel_bios_reader** is the former name of **intel_vbt_decode**. It parses the Intel Video BIOS Tables (VBT) and prints the information in a human-readable format. The binary VBT can be read from kernel debug interfaces or from a previously saved dump file.
 
 The tool shows panel timing, backlight settings, and display connector information. It is primarily used for debugging Intel integrated graphics display configuration issues.
 
 # CAVEATS
 
-Intel graphics only. A VBT dump file (produced by intel_bios_dumper) or appropriate kernel debug access is required. Part of intel-gpu-tools.
+Renamed to **intel_vbt_decode** in 2017, so current igt-gpu-tools releases ship only that binary. It takes the same options and adds **--panel-type2**, **--panel-edid**, **--panel-edid2**, **--header** and **--describe**. Intel graphics only. A VBT dump file (produced by intel_bios_dumper) or appropriate kernel debug access is required. Part of intel-gpu-tools.
 
 # HISTORY
 
-intel_bios_reader is part of **intel-gpu-tools** (igt-gpu-tools), developed for debugging Intel integrated graphics hardware.
+intel_bios_reader was part of **intel-gpu-tools** (now igt-gpu-tools), developed for debugging Intel integrated graphics hardware. It was renamed to **intel_vbt_decode** in January 2017 to match the naming of the other decoding tools.
 
 # SEE ALSO
 
 [intel_error_decode](/man/intel_error_decode)(1), [intel_reg_read](/man/intel_reg_read)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.freedesktop.org/drm/igt-gpu-tools)```
+
+<!-- verified: 2026-11-09 -->

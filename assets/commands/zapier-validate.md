@@ -6,29 +6,59 @@ Validate Zapier integration configuration
 
 **Validate integration**
 
-```zapier validate```
+```zapier-platform validate```
 
-**Validate including style checks**
+**Skip the server-side style checks**
 
-```zapier validate --include-style```
+```zapier-platform validate --without-style```
+
+**Skip the build step** before validating
+
+```zapier-platform validate --skip-build```
+
+**Fail in CI** on checks that would block publishing
+
+```zapier-platform validate --fail-for-publishing```
+
+**Print results as JSON**
+
+```zapier-platform validate --format json```
 
 # SYNOPSIS
 
-**zapier** **validate** [_--include-style_] [_--format_ _json|plain_]
+**zapier-platform** **validate** [_--without-style_] [_--skip-build_] [_--fail-for-publishing_] [_-f_ _format_]
 
 # PARAMETERS
 
-**--include-style**
-> Run additional lint/style checks used by the Zapier app review.
+**--without-style**
+> Skip pinging the Zapier server to run further checks.
 
-**--format** _FORMAT_
-> Output format: plain (default) or json.
+**--skip-build**
+> Skip running the _zapier-build script before validation.
+
+**--fail-for-publishing**
+> Also exit non-zero when a check would block promoting or publishing the integration.
+
+**-f**, **--format** _FORMAT_
+> Output format: plain, json, raw, row, or table (default: table).
+
+**-d**, **--debug**
+> Show extra debugging output.
 
 # DESCRIPTION
 
-**zapier validate** checks a Zapier integration for errors. It validates the integration schema, required fields, and configuration. Run before **zapier push** to catch issues early, since invalid integrations cannot be uploaded.
+**zapier-platform validate** (formerly **zapier validate**) checks a Zapier integration for structural errors using a JSON Schema routine, the same one that runs during **zapier-platform build**, **upload**, **push**, and **test**. Run it before **zapier-platform push** to catch issues early, since invalid integrations cannot be uploaded.
+
+Further style checks are performed on the Zapier server unless **--without-style** is passed. By default the command exits non-zero only when the integration is structurally invalid.
 
 # SEE ALSO
 
 [zapier](/man/zapier)(1), [zapier-test](/man/zapier-test)(1), [zapier-push](/man/zapier-push)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/zapier/zapier-platform)```
+
+```[Documentation](https://docs.zapier.com/integrations/build-cli/overview)```
+
+<!-- verified: 2026-11-09 -->

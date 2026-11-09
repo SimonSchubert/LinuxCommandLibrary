@@ -1,79 +1,49 @@
 # TAGLINE
 
-Manage Cinnamon desktop applets, desklets, and extensions
+Create skeleton Cinnamon desktop extensions
 
 # TLDR
 
-**List all installed extensions**
+**Create a new extension** interactively
 
-```cinnamon-extension-tool --list --extension```
+```cinnamon-extension-tool --create-extension```
 
-**List all installed applets**
+**Show usage**
 
-```cinnamon-extension-tool --list --applet```
-
-**List all installed desklets**
-
-```cinnamon-extension-tool --list --desklet```
-
-**Enable an extension by UUID**
-
-```cinnamon-extension-tool --enable [extension-uuid]```
-
-**Disable an extension by UUID**
-
-```cinnamon-extension-tool --disable [extension-uuid]```
-
-**Reload the Cinnamon shell**
-
-```cinnamon-extension-tool --reload```
+```cinnamon-extension-tool --help```
 
 # SYNOPSIS
 
-**cinnamon-extension-tool** [**--list**] [**--enable** _UUID_] [**--disable** _UUID_] [**--reload**] [**--applet**|**--desklet**|**--extension**|**--lnf**]
+**cinnamon-extension-tool** [**--create-extension**]
 
 # DESCRIPTION
 
-**cinnamon-extension-tool** manages Cinnamon "spices" (applets, desklets, extensions, and themes) from the command line. It provides functionality for listing, enabling, disabling, and reloading desktop components without using the graphical settings interface.
+**cinnamon-extension-tool** is a small Python script from older Cinnamon releases. With **--create-extension** it prompts for a name, description and UUID, writes **extension.js**, **metadata.json** and a sample stylesheet to **~/.local/share/cinnamon/extensions/\<uuid\>/**, then opens **extension.js** in the default editor.
 
-Each spice is identified by a unique UUID, which can be obtained from the **--list** output. Enabled items are marked with an asterisk (*).
+The tool's man page describes it as running a graphical extension manager, but the script itself only implements the creation flow.
 
 # PARAMETERS
 
-**--list**
-> List installed spices of the specified type
+**--create-extension**
+> Create a new Cinnamon extension from the built-in sample.
 
-**--enable** _UUID_
-> Enable the spice with the specified UUID
-
-**--disable** _UUID_
-> Disable the spice with the specified UUID
-
-**--reload**
-> Reload the Cinnamon shell
-
-**Spice type selectors:**
-
-**--applet**
-> Target panel applets
-
-**--desklet**
-> Target desktop widgets
-
-**--extension**
-> Target shell extensions
-
-**--lnf**
-> Target look & feel themes
+**-h**, **--help**
+> Show usage information.
 
 # CAVEATS
 
-Requires an active Cinnamon desktop session to communicate with. UUIDs are case-sensitive. Changes typically apply immediately, though some may require a shell reload or logout.
+No longer shipped: the script is present in Cinnamon up to 3.0 and absent from 3.2 onward. On current systems, manage extensions with **cinnamon-settings extensions** and applets with **cinnamon-settings applets**.
 
 # HISTORY
 
-**cinnamon-extension-tool** was introduced in **Cinnamon 2.4** (2014) by the Linux Mint team to provide command-line management of Cinnamon spices, similar to GNOME's extension CLI tools.
+**cinnamon-extension-tool** was part of the Cinnamon source tree from its early releases (its man page is dated **2012**) until it was dropped after Cinnamon 3.0.
 
 # SEE ALSO
 
 [cinnamon](/man/cinnamon)(1), [cinnamon-launcher](/man/cinnamon-launcher)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/linuxmint/cinnamon)```
+
+<!-- verified: 2026-11-09 -->

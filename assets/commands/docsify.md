@@ -8,9 +8,9 @@ dynamic Markdown documentation site generator
 
 ```docsify init [./docs]```
 
-**Initialize with a specific theme**
+**Initialize and copy docsify locally** instead of using a CDN
 
-```docsify init [./docs] --theme [dark]```
+```docsify init [./docs] --local```
 
 **Start local preview** server
 
@@ -27,6 +27,10 @@ dynamic Markdown documentation site generator
 **Generate sidebar** automatically
 
 ```docsify generate [./docs]```
+
+**Regenerate an existing sidebar**
+
+```docsify generate [./docs] --overwrite```
 
 # SYNOPSIS
 
@@ -47,10 +51,13 @@ _PATH_
 > Copy docsify files to the docs path instead of using CDN (default: false).
 
 **--theme, -t** _THEME_
-> Choose a theme: vue, buble, dark, pure (default: vue).
+> Theme file to use (default: vue). docsify-cli 5 accepts only vue.
 
 **--plugins, -p**
 > Add plugin script tags to index.html.
+
+**--rcMode, --rc**
+> Use the docsify preview (release candidate) version instead of the major version.
 
 **serve** [_PATH_]
 > Start local server with live reload. Shorthand: **s**.
@@ -64,6 +71,12 @@ _PATH_
 **--open, -o**
 > Open browser automatically.
 
+**--livereload-port, -P** _N_
+> LiveReload listen port (default: 35729).
+
+**--index-name, -i** _FILE_
+> Serve a custom file instead of index.html.
+
 **generate** [_PATH_]
 > Generate sidebar file. Shorthand: **g**.
 
@@ -73,8 +86,11 @@ _PATH_
 **--overwrite, -o**
 > Allow overwriting existing files.
 
-**--help**
+**--help, -h**
 > Display help information.
+
+**--version, -v**
+> Display the version number.
 
 # DESCRIPTION
 
@@ -86,7 +102,7 @@ docsify is particularly suited for project documentation, requiring no build ste
 
 # CAVEATS
 
-Requires JavaScript for rendering (no static HTML). SEO may be affected by client-side rendering. Large documentation sites may have initial load delay.
+Requires JavaScript for rendering (no static HTML). SEO may be affected by client-side rendering. Large documentation sites may have initial load delay. docsify-cli 5 requires Node.js 20.11 or later.
 
 # HISTORY
 
@@ -95,3 +111,13 @@ docsify was created by **QingWei-Li** (cinwell) and released as an open-source p
 # SEE ALSO
 
 [mkdocs](/man/mkdocs)(1), [vuepress](/man/vuepress)(1), [gitbook](/man/gitbook)(1), [npm](/man/npm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/docsifyjs/docsify-cli)```
+
+```[Homepage](https://docsify.js.org)```
+
+```[Documentation](https://cli.docsifyjs.org)```
+
+<!-- verified: 2026-11-09 -->

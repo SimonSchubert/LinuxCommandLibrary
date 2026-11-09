@@ -20,9 +20,9 @@ Set **bit rate** for AAC encoding
 
 ```afconvert -f m4af -d aac -b [128000] [input.wav] [output.m4a]```
 
-Convert with VBR **strategy**
+Encode **true VBR** at a quality level (0-127)
 
-```afconvert -f m4af -d aac -s 3 -b [128000] [input.wav] [output.m4a]```
+```afconvert -f m4af -d aac -s 3 -u vbrq [90] [input.wav] [output.m4a]```
 
 List supported **formats**
 
@@ -47,7 +47,7 @@ The tool provides access to Apple's audio codecs and can perform sample rate con
 > Audio data format (aac, alac, BEI16, LEF32, etc.). Can include sample rate and format flags.
 
 **-b**, **--bitrate** _rate_
-> Total bit rate in bits per second for compressed formats.
+> Total bit rate in bits per second for compressed formats. Has no effect with **-s 3** (true VBR), which is controlled by **-u vbrq**.
 
 **-c**, **--channels** _number_
 > Number of output channels.
@@ -62,13 +62,22 @@ The tool provides access to Apple's audio codecs and can perform sample rate con
 > Sample rate converter quality (0-127, default: 127).
 
 **--src-complexity** _complexity_
-> Sample rate converter complexity (line, norm, bats).
+> Sample rate converter complexity (line, norm, bats, minp).
 
 **-s**, **--strategy** _strategy_
 > Bitrate allocation strategy (0=CBR, 1=ABR, 2=VBR_constrained, 3=VBR).
 
 **-o** _filename_
-> Specify output file path.
+> Specify an (additional) output file. Output options that follow apply to it.
+
+**-m**, **--channelmap** _channels_
+> Map input channels to outputs, numbered from zero; -1 makes a silent channel. For example, **-m 1 0** swaps stereo.
+
+**-u**, **--userproperty** _property_ _value_
+> Set an AudioConverter property by four-character code, for example **-u vbrq 90** for the VBR quality level.
+
+**--soundcheck-generate**
+> Analyze the audio and add Sound Check data to the output file.
 
 **--dither** _algorithm_
 > Dither algorithm (1 or 2).

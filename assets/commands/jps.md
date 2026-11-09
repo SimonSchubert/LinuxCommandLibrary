@@ -30,12 +30,14 @@ lists Java Virtual Machine processes
 
 # SYNOPSIS
 
-**jps** [_options_] [_hostid_]
+**jps** [**-q**] [**-mlvV**] [_hostid_]
+
+**jps** **-help**
 
 # PARAMETERS
 
 _HOSTID_
-> Remote host to query.
+> Target host, in the form [_protocol_:][[//]_hostname_][:_port_][/_servername_]. Querying a remote host requires **jstatd** running there.
 
 **-l**
 > Display the full package name of the main class or the full path to the JAR file.
@@ -63,7 +65,7 @@ The tool is the Java equivalent of ps for Java processes. It provides quick iden
 
 # CAVEATS
 
-Part of JDK. Shows JVM processes only. Requires same user or permissions.
+Part of JDK. Documented by Oracle as experimental and unsupported. Lists instrumented HotSpot JVMs only, and only those the user has access permissions for.
 
 # HISTORY
 
@@ -72,3 +74,13 @@ jps has been part of the **JDK** since Java 5, providing process listing for Jav
 # SEE ALSO
 
 [java](/man/java)(1), [jstack](/man/jstack)(1), [jmap](/man/jmap)(1), [ps](/man/ps)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/openjdk/jdk)```
+
+```[Homepage](https://openjdk.org/)```
+
+```[Documentation](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jps.html)```
+
+<!-- verified: 2026-11-09 -->

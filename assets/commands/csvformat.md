@@ -22,7 +22,11 @@ CSV format and delimiter converter
 
 **Change line terminator**
 
-```csvformat -M "\r\n" [input.csv]```
+```csvformat -M $'\r\n' [input.csv]```
+
+**Omit the header row** from the output
+
+```csvformat -E [input.csv]```
 
 # SYNOPSIS
 
@@ -30,20 +34,35 @@ CSV format and delimiter converter
 
 # PARAMETERS
 
-**-T**
-> Output tab-delimited.
+**-T**, **--out-tabs**
+> Output tab-delimited. Overrides **-D**.
 
-**-D** _delimiter_
+**-A**, **--out-asv**
+> Output with the ASCII unit and record separators. Overrides **-T**, **-D** and **-M**.
+
+**-D** _delimiter_, **--out-delimiter** _delimiter_
 > Set output delimiter.
 
-**-U** _style_
+**-Q** _char_, **--out-quotechar** _char_
+> Set output quote character.
+
+**-U** _style_, **--out-quoting** _style_
 > Quoting style: 0=minimal, 1=all, 2=non-numeric, 3=none.
 
-**-K** _n_
-> Skip first n rows.
+**-B**, **--out-no-doublequote**
+> Do not double quote characters in the output.
 
-**-M** _char_
+**-P** _char_, **--out-escapechar** _char_
+> Output escape character, used with **-U 3** or **-B**.
+
+**-M** _char_, **--out-lineterminator** _char_
 > Set output line terminator.
+
+**-E**, **--skip-header**
+> Do not output a header row.
+
+**-K** _n_, **--skip-lines** _n_
+> Skip first n lines of the input.
 
 **-d** _CHAR_, **--delimiter** _CHAR_
 > Input field delimiter (default: comma).
@@ -61,7 +80,7 @@ Quoting styles include minimal (quote only when necessary), all fields, non-nume
 
 # CAVEATS
 
-Part of csvkit, requires Python. Type inference determines quoting behavior in minimal mode. Some combinations of options may produce invalid CSV for certain parsers.
+Part of csvkit, requires Python. Type inference determines which fields count as numeric with **-U 2**. Some combinations of options may produce invalid CSV for certain parsers.
 
 # HISTORY
 
@@ -70,3 +89,11 @@ csvformat is part of **csvkit**, created by Christopher Groskopf in **2011**. It
 # SEE ALSO
 
 [csvkit](/man/csvkit)(1), [csvlook](/man/csvlook)(1), [csvcut](/man/csvcut)(1), [csvgrep](/man/csvgrep)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/wireservice/csvkit)```
+
+```[Documentation](https://csvkit.readthedocs.io/en/latest/scripts/csvformat.html)```
+
+<!-- verified: 2026-11-09 -->

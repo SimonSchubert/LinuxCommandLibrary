@@ -18,7 +18,7 @@ Reboot with a **timeout** of 60 seconds
 
 # DESCRIPTION
 
-**pct reboot** shuts down and restarts a Proxmox LXC container. The command performs a clean reboot by first requesting the container to shut down gracefully, then starting it again. If the container does not stop within the timeout period, the operation fails.
+**pct reboot** shuts down and restarts a Proxmox LXC container, applying pending configuration changes. The command first requests a graceful shutdown, then starts the container again. If the container does not stop within the timeout, it is killed before being started again.
 
 # PARAMETERS
 
@@ -26,11 +26,11 @@ Reboot with a **timeout** of 60 seconds
 > The numeric ID of the container (100 or higher)
 
 **--timeout** _seconds_
-> Wait this many seconds for the shutdown before failing. The default is 60 seconds.
+> Wait at most this many seconds for the shutdown before killing the container. If omitted, the default timeout of **lxc-stop** applies.
 
 # CAVEATS
 
-The container must be running for a reboot to succeed. If the container has processes that block shutdown, the reboot may time out. Unlike a hard reset, this performs a graceful shutdown first, so unresponsive containers may need to be stopped and started manually instead.
+The container must be running for a reboot to succeed. Processes that block shutdown until the timeout are killed, so services may not exit cleanly.
 
 # HISTORY
 
@@ -38,4 +38,14 @@ The container must be running for a reboot to succeed. If the container has proc
 
 # SEE ALSO
 
-[pct](/man/pct)(1), [pct-status](/man/pct-status)(1)
+[pct](/man/pct)(1), [pct-status](/man/pct-status)(1), [pct-start](/man/pct-start)(1), [pct-stop](/man/pct-stop)(1), [pct-shutdown](/man/pct-shutdown)(1)
+
+# RESOURCES
+
+```[Source code](https://git.proxmox.com/?p=pve-container.git)```
+
+```[Homepage](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview)```
+
+```[Documentation](https://pve.proxmox.com/pve-docs/pct.1.html)```
+
+<!-- verified: 2026-11-09 -->

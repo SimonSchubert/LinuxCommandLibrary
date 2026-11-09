@@ -24,9 +24,25 @@ Display **updates** for installed AUR packages
 
 ```auracle clone --recurse [package]```
 
+Search by **maintainer**
+
+```auracle search --searchby=maintainer [name]```
+
+Print the **build order** of a package and its dependencies
+
+```auracle buildorder [package]```
+
+Show a file **other than the PKGBUILD**
+
+```auracle show --show-file=[.SRCINFO] [package]```
+
+Print selected fields with a **custom format**
+
+```auracle info -F '{name} {version}' [package]```
+
 # SYNOPSIS
 
-**auracle** _command_ [_options_] [_packages_]
+**auracle** [_options_] _command_ [_args_...]
 
 # DESCRIPTION
 
@@ -45,14 +61,17 @@ Written in C++, auracle focuses on AUR queries rather than full package manageme
 **show** _packages_
 > Print the PKGBUILD file for packages
 
-**outdated**
-> List installed AUR packages with available updates
+**outdated** [_packages_]
+> List installed foreign packages with newer versions in the AUR
 
 **clone** _packages_
-> Clone package git repositories
+> Clone package git repositories, or update existing clones
 
-**download** _packages_
-> Download packages that are outdated, optionally with `--recurse` to also download new dependencies
+**update** [_packages_]
+> Like `outdated`, but download the outdated packages, optionally with `--recurse` to also download new dependencies
+
+**resolve** _dependencies_
+> Find AUR packages that satisfy dependency strings such as `foo>=1.0`
 
 **buildorder** _packages_
 > Show the build order and origin of packages needed for a given set of AUR packages
@@ -68,31 +87,46 @@ Written in C++, auracle focuses on AUR queries rather than full package manageme
 **-q**, **--quiet**
 > Limit output to package names only (used with `search` and `outdated`)
 
-**--sort** _field_
-> Sort search results by field (name, votes, popularity)
+**--sort=**_key_
+> Sort search and info results ascending by key: name, popularity, votes, firstsubmitted, or lastmodified
 
-**--rsort** _field_
-> Sort search results by field in reverse order
+**--rsort=**_key_
+> Sort search and info results descending by key
 
 **--literal**
 > Treat search terms as literal strings rather than regular expressions
 
-**--recurse**
-> Recursively follow and process dependencies (used with `clone` and `download`)
+**-r**, **--recurse**
+> Recursively follow and process dependencies (used with `clone` and `update`)
 
-**--show-file** _file_
-> Control which source file is displayed by the `show` subcommand
+**--resolve-deps=**_deplist_
+> Dependency kinds to consider when recursing: depends, makedepends, checkdepends (default: all)
 
-**--search-by** _field_
-> Search by a specific field (name, name-desc, maintainer, depends, makedepends, optdepends, checkdepends)
+**-C**, **--chdir=**_dir_
+> Change to _dir_ before performing any actions (useful with `clone`)
 
-**--color** _when_
+**-F**, **--format=**_format_
+> Custom output format for `info` and `search`, e.g. `{name} {version}`
+
+**--show-file=**_file_
+> Source file displayed by the `show` subcommand (default: PKGBUILD)
+
+**--searchby=**_field_
+> Search dimension: name, name-desc, maintainer, depends, makedepends, optdepends, checkdepends, submitter, provides, conflicts, replaces, keywords, groups, or comaintainers (default: name-desc)
+
+**--color=**_when_
 > Control colored output: `auto`, `never`, or `always` (default: auto)
 
 # CAVEATS
 
-Does not build or install packages; use with **makepkg** or an AUR helper for installation. Regex patterns should be quoted to prevent shell expansion. Only queries the AUR API; does not access local package databases.
+Does not build or install packages; use with **makepkg** or an AUR helper for installation. Regex patterns should be quoted to prevent shell expansion. The AUR does not support regular expressions itself, so regex search is best-effort. The `outdated` and `buildorder` commands also consult the local pacman database.
 
 # SEE ALSO
 
 [yay](/man/yay)(1), [paru](/man/paru)(1), [makepkg](/man/makepkg)(8), [pacman](/man/pacman)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/falconindy/auracle)```
+
+<!-- verified: 2026-11-09 -->

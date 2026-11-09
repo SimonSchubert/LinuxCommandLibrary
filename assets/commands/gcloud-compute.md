@@ -10,11 +10,15 @@ Google Compute Engine resource management
 
 **Create instance**
 
-```gcloud compute instances create [name] --zone=[zone]```
+```gcloud compute instances create [name] --zone=[zone] --machine-type=[e2-medium]```
 
 **SSH to instance**
 
 ```gcloud compute ssh [instance] --zone=[zone]```
+
+**SSH through IAP** to an instance without a public IP
+
+```gcloud compute ssh [instance] --zone=[zone] --tunnel-through-iap```
 
 **Stop instance**
 
@@ -93,3 +97,11 @@ gcloud compute is part of the **Google Cloud SDK** for managing Compute Engine, 
 # SEE ALSO
 
 [gcloud](/man/gcloud)(1), [gcloud-container](/man/gcloud-container)(1)
+
+# RESOURCES
+
+```[Homepage](https://cloud.google.com/sdk)```
+
+```[Documentation](https://docs.cloud.google.com/sdk/gcloud/reference/compute)```
+
+<!-- verified: 2026-11-09 -->

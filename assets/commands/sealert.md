@@ -10,15 +10,15 @@ Analyze and explain SELinux denial messages
 
 **Lookup** specific alert ID
 
-```sudo sealert -l alert_id```
+```sudo sealert -l [alert_id]```
 
-Display **summary** of recent alerts
+Launch the alert **browser** GUI
 
 ```sudo sealert -b```
 
-Display **all alerts** in HTML format
+Display **all alerts** in the database
 
-```sudo sealert -a /var/log/audit/audit.log -H```
+```sudo sealert -l "*"```
 
 # SYNOPSIS
 
@@ -40,9 +40,6 @@ Display **all alerts** in HTML format
 
 **-P**, **--plugin** _plugin_
 > Specify the plugin name to use with **--fix**.
-
-**-H**
-> Output alerts in HTML format instead of plain text (used with **-l** or **-a**).
 
 **-s**, **--service**
 > Start the sealert D-Bus service (typically invoked by D-Bus).
@@ -73,3 +70,9 @@ Part of **setroubleshoot-server** package, providing user-friendly SELinux troub
 # SEE ALSO
 
 [audit2why](/man/audit2why)(1), [audit2allow](/man/audit2allow)(1), [ausearch](/man/ausearch)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/fedora-selinux/setroubleshoot)```
+
+<!-- verified: 2026-11-09 -->

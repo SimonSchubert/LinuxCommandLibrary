@@ -58,6 +58,12 @@ Manipulate IP address aggregate files created by ipaggcreate
 **--sample** _N_
 > Randomly sample packets with probability 1/N.
 
+**--cull** _N_
+> Randomly reduce the input to at most N packets.
+
+**--cull-labels** _N_
+> Randomly reduce the input to at most N labels, keeping their counts.
+
 **--cut-smaller** _N_
 > Drop labels with fewer than N packets.
 
@@ -88,6 +94,12 @@ Manipulate IP address aggregate files created by ipaggcreate
 **--xor**
 > Keep labels present in exactly one file.
 
+**-v**, **--version**
+> Print version information.
+
+**-h**, **--help**
+> Print usage information.
+
 # DESCRIPTION
 
 **ipaggmanip** manipulates IP address aggregate files created by **ipaggcreate**. It can merge multiple aggregate files, filter by thresholds, re-aggregate with different parameters, and convert between formats.
@@ -96,7 +108,7 @@ This tool completes the ipsumdump suite's workflow for network traffic analysis:
 
 # CAVEATS
 
-Input files must be in the ipagg format produced by ipaggcreate. Merging files with incompatible aggregation parameters may produce unexpected results.
+Input files must be in the ipagg format produced by ipaggcreate. Transformations are applied in order, but each run can contain at most one action. Merging files with incompatible aggregation parameters may produce unexpected results.
 
 # HISTORY
 
@@ -105,3 +117,11 @@ Part of the **ipsumdump** package developed by Eddie Kohler. Designed for large-
 # SEE ALSO
 
 [ipsumdump](/man/ipsumdump)(1), [ipaggcreate](/man/ipaggcreate)(1), [tcpdump](/man/tcpdump)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/kohler/ipsumdump)```
+
+```[Homepage](https://read.seas.harvard.edu/~kohler/ipsumdump/)```
+
+<!-- verified: 2026-11-09 -->

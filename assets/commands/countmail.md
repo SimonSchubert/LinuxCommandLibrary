@@ -1,76 +1,39 @@
 # TAGLINE
 
-counts messages in a mailbox
+be obnoxious about how much mail you have
 
 # TLDR
 
-**Count messages** in the default mailbox
+**Announce** how many messages are in your mailbox
 
 ```countmail```
 
-**Count messages in a specific** mailbox file
-
-```countmail [/var/mail/user]```
-
-**Count messages in a Maildir**
-
-```countmail [~/Maildir]```
-
-**Show unread message count** only
-
-```countmail --unread```
-
-**Display count for multiple** mailboxes
-
-```countmail [mailbox1] [mailbox2]```
-
-**Output in machine-readable** format
-
-```countmail --quiet [mailbox]```
-
 # SYNOPSIS
 
-**countmail** [_options_] [_mailbox_...]
-
-# PARAMETERS
-
-_MAILBOX_
-> Path to mailbox file or Maildir to count. Uses default mailbox if omitted.
-
-**--unread**
-> Count only unread messages.
-
-**--read**
-> Count only read messages.
-
-**--quiet**
-> Output only the number, no labels.
-
-**--mbox**
-> Treat the path as mbox format.
-
-**--maildir**
-> Treat the path as Maildir format.
-
-**-h**, **--help**
-> Display help information.
+**countmail**
 
 # DESCRIPTION
 
-**countmail** is a simple utility for counting messages in mailboxes. It supports both traditional mbox format files and Maildir directories, automatically detecting the format when possible.
+**countmail** is a small shell script from the BSD games collection that counts your mail and tells you about it rather obnoxiously. It spells out the message count in capital letters, followed by a mocking **HAHAHAHAHA!**.
 
-The tool is useful for status bars, scripts, and notifications that need to display unread mail counts. It can process multiple mailboxes and output results suitable for parsing by other programs.
-
-countmail reads mailbox headers efficiently without loading entire messages, making it fast even for large mailboxes. It can distinguish between read and unread messages based on standard mail flags.
+The count comes from the number of lines printed by **from**(1) for the current user. The command takes no options or arguments.
 
 # CAVEATS
 
-Mailbox format detection may fail for unusual configurations; use explicit **--mbox** or **--maildir** flags when needed. File locking is not performed, so counts may be slightly off if the mailbox is being modified concurrently.
+This is a joke program, not a mail utility: it cannot select a mailbox, read Maildir folders, or separate read from unread messages. Use **from**, **mail**, or a mail client for real work. On Linux it is usually packaged in **bsdgames** or **bsd-games**.
 
 # HISTORY
 
-countmail is part of the tradition of simple Unix mail utilities. Various implementations exist to provide this basic functionality, often as part of larger mail handling toolkits or as standalone scripts for desktop integration.
+**countmail** was first written by **Noah Friedman** in 1993. The BSD version was written by **Charles M. Hannum** and first appeared in **NetBSD 1.3**.
 
 # SEE ALSO
 
-[mail](/man/mail)(1), [from](/man/from)(1), [mutt](/man/mutt)(1), [fetchmail](/man/fetchmail)(1), [procmail](/man/procmail)(1)
+[from](/man/from)(1), [wc](/man/wc)(1), [mail](/man/mail)(1), [mutt](/man/mutt)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/NetBSD/src/tree/trunk/games/countmail)```
+
+```[Documentation](https://man.netbsd.org/countmail.6)```
+
+<!-- verified: 2026-11-09 -->

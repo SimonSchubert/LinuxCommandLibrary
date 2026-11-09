@@ -10,7 +10,7 @@ Toolkit for collecting code coverage and metrics
 
 **Generate a coverage badge**
 
-```octocov badge```
+```octocov badge coverage --out [coverage.svg]```
 
 **Compare two coverage reports**
 
@@ -28,6 +28,10 @@ Toolkit for collecting code coverage and metrics
 
 ```octocov init```
 
+**Dump the report** using a specific coverage file
+
+```octocov dump --report [coverage.out]```
+
 # SYNOPSIS
 
 **octocov** [_command_] [_options_]
@@ -40,20 +44,32 @@ Toolkit for collecting code coverage and metrics
 **ls-files**
 > List all source files recorded in the coverage report.
 
-**view**, **cat**
-> Display file-level coverage details for a given source file.
+**view**, **cat** _file_...
+> Display file-level coverage details for the given source files.
 
-**diff** [_report_a_] [_report_b_]
-> Compare two coverage reports and show the differences.
+**diff**, **compare** [_report_a_] [_report_b_]
+> Compare two coverage reports or octocov report.json files. **--patch** also shows coverage of changed lines through the GitHub API.
 
-**badge**
-> Generate a coverage badge image based on the current report.
+**badge** _coverage|ratio|time_
+> Generate a coverage, code-to-test ratio, or test execution time badge. **--out** sets the output file.
+
+**dump**
+> Dump the report.
+
+**migrate-bq-table**
+> Migrate the BigQuery table of the code metrics datastore.
+
+**--config** _path_
+> Config file path.
+
+**-r**, **--report** _path_
+> Coverage report file path.
 
 # DESCRIPTION
 
 **octocov** is a toolkit for collecting code metrics including code coverage, code-to-test ratio, and test execution time. It works both as a local CLI tool and as a CI tool integrated with GitHub Actions.
 
-Features include support for multiple coverage report formats (Go, Ruby, Python, Clover, LCOV, and more), badge generation, pull request commenting, and report storage in GitHub, S3, or BigQuery. It can aggregate reports from multiple repositories for centralized monitoring. Configuration is defined in `.octocov.yml`.
+Features include support for multiple coverage report formats (Go coverage, LCOV, SimpleCov, Clover, Cobertura, and JaCoCo), badge generation, pull request commenting, and report storage in GitHub repositories, GitHub Actions artifacts, S3, GCS, BigQuery, or local paths. It can aggregate reports from multiple repositories for centralized monitoring. Configuration is defined in `.octocov.yml`.
 
 # CAVEATS
 
@@ -65,4 +81,12 @@ Coverage report format support depends on the language and test framework used. 
 
 # SEE ALSO
 
-[go-test](/man/go-test)(1)
+[go-test](/man/go-test)(1), [gcov](/man/gcov)(1), [lcov](/man/lcov)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/k1LoW/octocov)```
+
+```[Homepage](https://octocov.dev)```
+
+<!-- verified: 2026-11-09 -->

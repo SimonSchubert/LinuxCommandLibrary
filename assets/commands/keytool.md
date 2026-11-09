@@ -6,7 +6,7 @@ manages Java keystores and certificates
 
 **Generate key pair**
 
-```keytool -genkeypair -alias [mykey] -keystore [keystore.jks]```
+```keytool -genkeypair -alias [mykey] -keyalg [RSA] -keysize [2048] -validity [365] -keystore [keystore.p12]```
 
 **List keystore contents**
 
@@ -76,6 +76,21 @@ manages Java keystores and certificates
 **-genseckey**
 > Generate a secret (symmetric) key.
 
+**-gencert**
+> Generate a certificate from a certificate request.
+
+**-printcertreq**
+> Print the content of a certificate request.
+
+**-printcrl**
+> Print the content of a CRL file.
+
+**-storepasswd**
+> Change the store password of a keystore.
+
+**-keypasswd**
+> Change the key password of an entry.
+
 **-alias** _NAME_
 > Entry alias.
 
@@ -87,6 +102,24 @@ manages Java keystores and certificates
 
 **-storepass** _PASS_
 > Keystore password.
+
+**-cacerts**
+> Access the JDK cacerts keystore.
+
+**-keyalg** _ALG_
+> Key algorithm name (e.g. RSA, EC).
+
+**-keysize** _BITS_
+> Key size in bits.
+
+**-validity** _DAYS_
+> Certificate validity in days.
+
+**-dname** _NAME_
+> Distinguished name for the certificate subject.
+
+**-file** _FILE_
+> Input or output file.
 
 **-v**
 > Verbose output.
@@ -111,3 +144,13 @@ keytool has been part of the **JDK** since early versions, providing certificate
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [java](/man/java)(1), [jarsigner](/man/jarsigner)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/openjdk/jdk)```
+
+```[Homepage](https://openjdk.org/)```
+
+```[Documentation](https://docs.oracle.com/en/java/javase/25/docs/specs/man/keytool.html)```
+
+<!-- verified: 2026-11-09 -->

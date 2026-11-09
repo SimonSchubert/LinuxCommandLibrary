@@ -38,7 +38,7 @@ generate completion matches in bash
 
 # SYNOPSIS
 
-**compgen** [_options_] [_word_]
+**compgen** [**-V** _varname_] [_options_] [_word_]
 
 # DESCRIPTION
 
@@ -53,7 +53,7 @@ generate completion matches in bash
 > Generate shell builtin names.
 
 **-c**
-> Generate command names (builtins, functions, and executables on PATH).
+> Generate command names (aliases, reserved words, functions, builtins, and executables on PATH).
 
 **-d**
 > Generate directory names.
@@ -83,7 +83,13 @@ generate completion matches in bash
 > Generate shell variable names.
 
 **-A** _action_
-> Generate completions using the given action. Valid actions include: alias, arrayvar, binding, builtin, command, directory, disabled, enabled, export, file, function, group, hostname, job, keyword, running, service, setopt, signal, stopped, user, variable.
+> Generate completions using the given action. Valid actions include: alias, arrayvar, binding, builtin, command, directory, disabled, enabled, export, file, function, group, helptopic, hostname, job, keyword, running, service, setopt, shopt, signal, stopped, user, variable.
+
+**-V** _varname_
+> Store the matches in the indexed array _varname_ instead of printing them (Bash 5.3+).
+
+**-o** _comp-option_
+> Control how matches are generated, e.g. **plusdirs**, **dirnames**, **default**, or **bashdefault**.
 
 **-F** _function_
 > Call shell function to generate completions.
@@ -112,4 +118,12 @@ Bash builtin only, not available in other shells. Returns true unless invalid op
 
 # SEE ALSO
 
-[complete](/man/complete)(1), [bash](/man/bash)(1)
+[complete](/man/complete)(1), [compopt](/man/compopt)(1), [bash](/man/bash)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/bash.git)```
+
+```[Documentation](https://www.gnu.org/software/bash/manual/)```
+
+<!-- verified: 2026-11-09 -->

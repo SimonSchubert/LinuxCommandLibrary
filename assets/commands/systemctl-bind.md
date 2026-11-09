@@ -30,22 +30,32 @@ Bind as **read-only**
 > Mount the path as read-only inside the unit
 
 **--mkdir**
-> Create the destination directory if it doesn't exist
+> Create the destination before mounting. Despite the name, this also creates a file node when the source is not a directory
 
 # DESCRIPTION
 
-**systemctl bind** ephemerally bind-mounts a file or directory from the host into a running unit's mount namespace. This allows injecting files into sandboxed services without modifying their unit configuration.
+**systemctl bind** ephemerally bind-mounts a file, directory, device node, AF_UNIX socket or FIFO from the host into a running unit's mount namespace. This allows injecting files into sandboxed services without modifying their unit configuration.
 
 If only one path is specified, the mount appears at the same location inside the unit. If two paths are given, the source is mounted at the destination inside the unit.
 
 # CAVEATS
 
-Requires the unit to have a separate mount namespace (PrivateMounts=yes or similar). Binds are ephemeral and don't persist across unit restarts. The unit must be running.
+Only supported for units that run within a mount namespace (e.g. with RootImage= or PrivateMounts=). Binds are ephemeral and are undone as soon as the current unit process exits. The unit must be running. The mount is added to the namespace of the main service process; processes run by ExecReload=, ExecStartPre= and similar use distinct namespaces.
 
 # HISTORY
 
-The **bind** subcommand was added to **systemctl** for runtime injection of files into isolated services. It complements systemd's sandboxing features like PrivateMounts and ProtectSystem.
+The **bind** subcommand was added to **systemctl** in **systemd 248** for runtime injection of files into isolated services. It complements systemd's sandboxing features like PrivateMounts and ProtectSystem.
 
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [mount](/man/mount)(8), [systemd-run](/man/systemd-run)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

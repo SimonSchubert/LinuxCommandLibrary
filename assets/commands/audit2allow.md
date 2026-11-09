@@ -16,6 +16,10 @@ Create **policy module**
 
 ```sudo audit2allow -a -M my_module```
 
+**Install** the generated module
+
+```sudo semodule -i my_module.pp```
+
 **Explain** denials
 
 ```sudo audit2allow -a -w```
@@ -41,7 +45,7 @@ The tool can produce simple allow rules for quick troubleshooting or generate co
 # PARAMETERS
 
 **-a, --all**
-> Read input from audit and message logs.
+> Read input from the audit log. Conflicts with **-i**.
 
 **-b, --boot**
 > Read input from audit messages since the last boot.
@@ -56,10 +60,10 @@ The tool can produce simple allow rules for quick troubleshooting or generate co
 > Read only AVC denials since the last policy reload.
 
 **-m, --module** _name_
-> Generate module output (source, not packaged).
+> Set the module name and generate module source. Implies **--requires**.
 
-**-M** _name_
-> Generate a loadable policy module package (.pp).
+**-M, --module-package** _name_
+> Generate a loadable policy module package (.pp). Conflicts with **-o** and **-m**.
 
 **-o, --output** _file_
 > Append output to the given file.
@@ -85,11 +89,20 @@ The tool can produce simple allow rules for quick troubleshooting or generate co
 **-t, --type** _regex_
 > Filter output by type regular expression.
 
-**-C**
+**-C, --cil**
 > Generate CIL (Common Intermediate Language) output.
 
+**-p, --policy** _file_
+> Policy file to use for analysis.
+
+**--perm-map** _file_
+> Use the given permission map file.
+
+**--interface-info** _file_
+> Use the given interface information file.
+
 **-r, --requires**
-> Generate require statements for loadable modules.
+> Generate require statements for rules.
 
 **-v, --verbose**
 > Enable verbose output.
@@ -105,3 +118,11 @@ Generated policies should be reviewed before installation. Blindly allowing all 
 # SEE ALSO
 
 [audit2why](/man/audit2why)(1), [ausearch](/man/ausearch)(8), [semodule](/man/semodule)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/SELinuxProject/selinux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man1/audit2allow.1.html)```
+
+<!-- verified: 2026-11-09 -->

@@ -14,11 +14,11 @@ Shell loop executing until condition becomes true
 
 **Wait for process**
 
-```until pgrep [process]; do sleep 1; done```
+```until pgrep -x [process] > /dev/null; do sleep 1; done```
 
 **Counter loop**
 
-```until [ $i -gt 10 ]; do echo $i; i=$((i+1)); done```
+```i=0; until [ $i -gt 10 ]; do echo $i; i=$((i+1)); done```
 
 # SYNOPSIS
 
@@ -34,12 +34,12 @@ The exit status of an until loop is the exit status of the last command executed
 
 # CAVEATS
 
-Shell builtin. Opposite of while. Condition evaluated each iteration.
+Shell reserved word, not a standalone program. Opposite of while. Condition evaluated each iteration.
 
 # EXAMPLES
 
 ```
-until ping -c1 host &>/dev/null; do
+until ping -c1 host >/dev/null 2>&1; do
   echo "Waiting..."
   sleep 5
 done

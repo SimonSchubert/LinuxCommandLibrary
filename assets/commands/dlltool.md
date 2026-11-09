@@ -8,17 +8,17 @@ Windows DLL import library creator
 
 ```dlltool -d [library.def] -l [library.a]```
 
-**Create def file** from DLL
+**Create def file** from object files
 
-```dlltool -z [output.def] [library.dll]```
+```dlltool --export-all-symbols -z [output.def] [objects.o]```
 
-**Create DLL from** def and objects
+**Create exports file** from def and objects
 
 ```dlltool -d [library.def] -e [exports.o] [objects.o]```
 
 **Specify machine type**
 
-```dlltool -m [i386] -d [library.def] -l [library.a]```
+```dlltool -m [i386:x86-64] -d [library.def] -l [library.a]```
 
 **Create both import** lib and exports
 
@@ -40,13 +40,13 @@ Windows DLL import library creator
 > Generate an exports file.
 
 **-z**, **--output-def** _FILE_
-> Generate a .def file (from DLL or objects).
+> Generate a .def file from the input object files.
 
 **-y**, **--output-delaylib** _FILE_
 > Create a delay-import library.
 
 **-m**, **--machine** _MACHINE_
-> Target machine type (e.g. i386, x86_64, arm).
+> Target machine type (e.g. i386, i386:x86-64, arm).
 
 **-D**, **--dllname** _NAME_
 > Name of input DLL recorded in the library.
@@ -91,3 +91,13 @@ dlltool is part of **GNU binutils**, developed for supporting Windows DLL creati
 # SEE ALSO
 
 [ld](/man/ld)(1), [nm](/man/nm)(1), [objdump](/man/objdump)(1), [windres](/man/windres)(1)
+
+# RESOURCES
+
+```[Source code](https://sourceware.org/git/binutils-gdb.git)```
+
+```[Homepage](https://sourceware.org/binutils/)```
+
+```[Documentation](https://sourceware.org/binutils/docs/binutils/dlltool.html)```
+
+<!-- verified: 2026-11-09 -->

@@ -4,17 +4,29 @@ API documentation generator for PHP
 
 # TLDR
 
-**Generate documentation**
+**Parse and render** documentation
 
 ```doctum update [doctum.php]```
 
-**Parse and render** documentation
+**Parse only**, without rendering
+
+```doctum parse [doctum.php]```
+
+**Render** from already parsed data
 
 ```doctum render [doctum.php]```
 
-**Update and render** in one step
+**Rebuild** from scratch
 
 ```doctum update [doctum.php] --force```
+
+**Build only one version**
+
+```doctum update [doctum.php] --only-version=[main]```
+
+**Keep CI green** despite parse errors
+
+```doctum update [doctum.php] --ignore-parse-errors --no-progress```
 
 **Show verbose output**
 
@@ -27,7 +39,7 @@ API documentation generator for PHP
 # PARAMETERS
 
 _COMMAND_
-> Operation: update, render, parse.
+> Operation: update, render, parse, version.
 
 _CONFIG-FILE_
 > PHP configuration file.
@@ -41,8 +53,11 @@ _CONFIG-FILE_
 **parse**
 > Parse source without rendering.
 
+**version**
+> Show version data.
+
 **--force**
-> Force complete regeneration.
+> Rebuild from scratch.
 
 **--only-version** _VERSION_
 > Restrict build to the specified version only.
@@ -52,6 +67,12 @@ _CONFIG-FILE_
 
 **--ignore-parse-errors**
 > Ignore parse errors and exit with code 0.
+
+**--output-format** _FORMAT_
+> Format used to display errors.
+
+**--print-frozen-errors**
+> Print errors for frozen versions.
 
 **-v**, **--verbose**
 > Verbose output.
@@ -70,11 +91,11 @@ Doctum creates searchable documentation with cross-references between classes an
 # CONFIGURATION
 
 **doctum.php**
-> Configuration file defining source directories, build paths, themes, and parsing options.
+> Configuration file defining source directories, build paths, themes, and parsing options. It must return an instance of `Doctum\Doctum`.
 
 # CAVEATS
 
-Requires PHP 8.1+. Large codebases may have slow initial parse. Configuration requires PHP knowledge. Some PHP edge cases may not parse correctly.
+Requires PHP 8.1+. Distributed as **doctum.phar**, so the command may need to be invoked under that name. Large codebases may have slow initial parse. Configuration requires PHP knowledge. Some PHP edge cases may not parse correctly.
 
 # HISTORY
 
@@ -83,3 +104,11 @@ Doctum is a fork of **Sami**, originally created by **Fabien Potencier** (creato
 # SEE ALSO
 
 [phpdoc](/man/phpdoc)(1), [doxygen](/man/doxygen)(1), [php](/man/php)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/code-lts/doctum)```
+
+```[Homepage](https://doctum.long-term.support)```
+
+<!-- verified: 2026-11-09 -->

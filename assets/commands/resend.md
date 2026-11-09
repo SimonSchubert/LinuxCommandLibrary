@@ -16,13 +16,25 @@ Email API CLI for sending emails and managing webhooks
 
 ```resend doctor```
 
-**Start a local webhook** listener
+**Start a local webhook** listener through a public tunnel
 
-```resend webhooks listen```
+```resend webhooks listen --url [https://xxxx.ngrok-free.app]```
+
+**Forward webhook events** to a local app
+
+```resend webhooks listen --url [https://xxxx.ngrok-free.app] --forward-to [localhost:3000/api/webhooks]```
 
 **Create a webhook** for production events
 
-```resend webhooks create```
+```resend webhooks create --endpoint [https://app.example.com/hooks/resend] --events [all]```
+
+**Validate an email** without sending it
+
+```resend emails send --from [sender@example.com] --to [recipient@example.com] --subject "[Hello]" --text "[Body]" --dry-run```
+
+**Use a named profile** for one command
+
+```resend --profile [production] domains list```
 
 **Send an email** with HTML body
 
@@ -30,21 +42,21 @@ Email API CLI for sending emails and managing webhooks
 
 # SYNOPSIS
 
-**resend** _command_ [_options_]
+**resend** [_global options_] _command_ [_options_]
 
 # PARAMETERS
 
 **login**
-> Authenticate with your Resend account via the browser.
+> Store an API key locally after validating it. Prompts for the key in a terminal; use **--web** for browser login or **--key** in non-interactive mode.
 
 **doctor**
-> Verify API key validity, list verified domains, and check readiness.
+> Check the CLI version, API key, and domains, and detect AI agent integrations.
 
 **emails send**
 > Send an email with specified sender, recipient, subject, and body.
 
 **webhooks listen**
-> Start a local server on port 4318 to capture and display incoming webhook events.
+> Start a local server (default port 4318), register a temporary webhook at the public tunnel given by **--url**, print events in the terminal, and delete the webhook on exit.
 
 **webhooks create**
 > Register a new webhook endpoint for production environments.
@@ -53,7 +65,7 @@ Email API CLI for sending emails and managing webhooks
 > Sender email address.
 
 **--to** _address_
-> Recipient email address.
+> One or more recipient email addresses (space-separated).
 
 **--subject** _text_
 > Email subject line.
@@ -64,8 +76,44 @@ Email API CLI for sending emails and managing webhooks
 **--html** _body_
 > HTML email body.
 
+**--html-file** _path_
+> Path to an HTML file to use as the body.
+
+**--cc**, **--bcc** _addresses_
+> CC and BCC recipients (space-separated).
+
+**--reply-to** _address_
+> Reply-to email address.
+
+**--dry-run**
+> Validate and print the payload without calling the API (**emails send**, **emails batch**, **broadcasts create**).
+
+**--url** _url_
+> Public tunnel URL that reaches this machine (required by **webhooks listen**).
+
+**--port** _port_
+> Local port for **webhooks listen** (default: 4318).
+
+**--endpoint** _url_
+> HTTPS URL that receives webhook POSTs (**webhooks create**).
+
+**--events** _events_
+> Event names to subscribe to, or `all`.
+
 **--forward-to** _url_
-> Forward webhook payloads to a local server, preserving signature headers.
+> Also POST each webhook payload to this URL, preserving Svix signature headers.
+
+**--api-key** _key_
+> Override the API key for this invocation (global option).
+
+**-p**, **--profile** _name_
+> Profile to use (global option).
+
+**--json**
+> Force JSON output (global option).
+
+**-q**, **--quiet**
+> Suppress spinners and status output; implies **--json** (global option).
 
 **--version**
 > Show version information.
@@ -83,7 +131,7 @@ The webhook listener (**resend webhooks listen**) creates a local development se
 
 # CAVEATS
 
-Requires a Resend account and API key for authentication. Sending emails requires a verified domain. The webhook listener needs Tailscale for exposing local ports to the internet during development. The CLI outputs JSON in non-interactive mode but human-readable text in interactive mode.
+Requires a Resend account and API key for authentication. Sending emails requires a verified domain. The API key is resolved from **--api-key**, then **RESEND_API_KEY**, then the stored login. The webhook listener needs a public tunnel, such as **ngrok**, that forwards to its local port. The CLI outputs JSON in non-interactive mode but human-readable text in interactive mode.
 
 # HISTORY
 
@@ -92,3 +140,13 @@ Requires a Resend account and API key for authentication. Sending emails require
 # SEE ALSO
 
 [mail](/man/mail)(1), [sendmail](/man/sendmail)(1), [curl](/man/curl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/resend/resend-cli)```
+
+```[Homepage](https://resend.com)```
+
+```[Documentation](https://resend.com/docs/cli)```
+
+<!-- verified: 2026-11-09 -->

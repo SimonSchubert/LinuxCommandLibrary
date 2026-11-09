@@ -12,6 +12,10 @@ TUI monitor and debugger for Celery tasks
 
 ```celerator --broker=amqp://guest:guest@localhost:5672//```
 
+**Start a Celery worker** that emits the required events
+
+```celery -A [project] worker --loglevel=info --events```
+
 # SYNOPSIS
 
 **celerator** **--broker=**_URI_
@@ -42,7 +46,7 @@ Up/Down  Navigate task list
 
 # CAVEATS
 
-Celery workers must be started with the **--events** flag, otherwise celerator will not receive any task data. Requires Python with **celery>=5.5.2**, **textual>=3.2.0**, and **redis>=6.0.0**. No code changes are required in the monitored application.
+Celery workers must be started with the **--events** flag, otherwise celerator will not receive any task data. Requires Python with **celery>=5.5.2**, **textual>=3.2.0**, **rich>=14.0.0**, and **redis>=6.0.0**. No code changes are required in the monitored application.
 
 # HISTORY
 
@@ -51,3 +55,9 @@ Celery workers must be started with the **--events** flag, otherwise celerator w
 # SEE ALSO
 
 [redis-cli](/man/redis-cli)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/f4rih/celerator)```
+
+<!-- verified: 2026-11-09 -->

@@ -4,6 +4,10 @@ Multiplayer FPS dedicated server
 
 # TLDR
 
+**Install or update** the server files with SteamCMD
+
+```steamcmd +login anonymous +force_install_dir [path/to/cs2] +app_update 730 validate +quit```
+
 Run a **casual game server**
 
 ```[path/to]/cs2 -dedicated +game_type 0 +game_mode 0 +map [de_dust2]```
@@ -30,7 +34,7 @@ Run with **Steam authentication token**
 
 The server can be configured through command-line parameters, console commands, and configuration files. It supports custom game modes, maps, plugins, and administrative controls. Dedicated servers are essential for hosting competitive matches, community servers, and private games with specific rule sets.
 
-Server performance depends on player count, tick rate, and available system resources. The dedicated server is distributed via SteamCMD and requires Steam authentication to run.
+Server performance depends on player count, tick rate, and available system resources. The dedicated server is distributed via SteamCMD as app 730, the same app ID as the game client, and requires Steam authentication to run.
 
 # PARAMETERS
 
@@ -45,6 +49,9 @@ Server performance depends on player count, tick rate, and available system reso
 
 **+game_mode** _mode_
 > Game mode (varies by game_type, e.g., 0 = Casual, 1 = Competitive)
+
+**+game_alias** _alias_
+> Shorthand for a game type and mode (e.g., competitive, casual, deathmatch)
 
 **+mapgroup** _group_
 > Map group to use (e.g., mg_active, mg_allclassic)
@@ -97,8 +104,16 @@ Server performance depends on player count, tick rate, and available system reso
 
 # CAVEATS
 
-Requires Steam and valid game files. Server hardware requirements depend on player count. Network configuration (port forwarding, firewall) needed for public servers.
+Requires Steam and valid game files. On Linux, start the server through the **game/cs2.sh** wrapper or the **game/bin/linuxsteamrt64/cs2** binary. Server hardware requirements depend on player count. Network configuration (port forwarding, firewall) needed for public servers.
 
 # SEE ALSO
 
 [steamcmd](/man/steamcmd)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.counter-strike.net)```
+
+```[Documentation](https://developer.valvesoftware.com/wiki/Counter-Strike_2/Dedicated_Servers)```
+
+<!-- verified: 2026-11-09 -->

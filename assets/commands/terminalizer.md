@@ -24,17 +24,25 @@ Record terminal sessions as GIF
 
 ```terminalizer render [filename.yml] -o [output.gif]```
 
-**Generate global config** file
+**Render with lower quality** and fewer frames for a smaller GIF
+
+```terminalizer render [filename.yml] -q [50] -s [2] -o [output.gif]```
+
+**Play at double speed**
+
+```terminalizer play [filename.yml] -s [0.5]```
+
+**Create the global config** directory
 
 ```terminalizer init```
+
+**Copy the default config** into the current directory
+
+```terminalizer config```
 
 **Share recording online**
 
 ```terminalizer share [filename.yml]```
-
-**Generate a web player** page for the recording
-
-```terminalizer generate [filename.yml]```
 
 # SYNOPSIS
 
@@ -52,19 +60,19 @@ Record terminal sessions as GIF
 > Render a recording to an animated GIF.
 
 **generate** _FILE_
-> Generate a shareable HTML web player link.
+> Generate a web player for a recording. Not implemented yet: the command only prints a notice.
 
 **share** _FILE_
-> Upload the recording and share it on terminalizer.com.
+> Upload the recording and get a link for an online player.
 
 **init**
-> Create a global config file at `~/.terminalizer/config.yml`.
+> Create the global config directory at `~/.terminalizer`.
 
 **config**
-> Print the default config to stdout.
+> Copy the default config to `config.yml` in the current directory.
 
 **-c** _FILE_, **--config** _FILE_
-> Use a custom config file.
+> Overwrite the default configuration with this file (record).
 
 **-d** _COMMAND_, **--command** _COMMAND_
 > Command to run instead of the default shell (record).
@@ -79,10 +87,13 @@ Record terminal sessions as GIF
 > GIF quality 1-100 (render).
 
 **-s** _NUM_, **--step** _NUM_
-> Frame step count; higher values reduce GIF size (render).
+> Render only every Nth frame to reduce GIF size (render, default: 1).
 
-**-r** _NUM_, **--real-timing**
-> Play using original recording speeds (play).
+**-r**, **--real-timing**
+> Use the actual delays between frames as recorded (play).
+
+**-s** _NUM_, **--speed-factor** _NUM_
+> Multiply the frame delays by this factor (play, default: 1).
 
 **-h**, **--help**
 > Display help information.
@@ -95,12 +106,18 @@ Recordings can be played back in the terminal, rendered to GIF locally, or share
 
 # CAVEATS
 
-Requires **Node.js** (installed via `npm install -g terminalizer`). GIF rendering uses Electron and can be CPU- and memory-intensive. Resulting GIFs may be large; tune `quality` and `step` in the config or via flags to balance size and smoothness.
+Requires **Node.js** (installed via `npm install -g terminalizer` or `yarn global add terminalizer`). Installation is smooth on Node.js v4 to v16; newer versions may need build tools for its C++ add-ons. GIF rendering uses Electron and can be CPU- and memory-intensive. Resulting GIFs may be large; tune `quality` and `step` in the config or via flags to balance size and smoothness.
 
 # HISTORY
 
-**Terminalizer** was created by **Mohammad Fares (faressoft)** and first released in **2017** as an npm package. It provides an alternative to asciinema with the benefit of producing shareable GIF animations without needing a dedicated player.
+**Terminalizer** was created by **Mohammad Fares (faressoft)** and first released in **2018** as an npm package. It provides an alternative to asciinema with the benefit of producing shareable GIF animations without needing a dedicated player.
 
 # SEE ALSO
 
 [asciinema](/man/asciinema)(1), [script](/man/script)(1), [ttyrec](/man/ttyrec)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/faressoft/terminalizer)```
+
+<!-- verified: 2026-11-09 -->

@@ -8,11 +8,11 @@ Set the process execution domain via system call
 
 ```setarch $(uname -m) -R [command]```
 
-**Run 32-bit binary on 64-bit system**
+**Run a command with uname reporting a 32-bit architecture**
 
 ```linux32 [command]```
 
-**Run 64-bit binary**
+**Run a command with uname reporting a 64-bit architecture**
 
 ```linux64 [command]```
 
@@ -34,7 +34,7 @@ int personality(unsigned long persona);
 > Standard Linux execution domain.
 
 **PER_LINUX32**
-> 32-bit execution mode on 64-bit kernels.
+> uname(2) reports the name of the 32-bit architecture (i686 instead of x86_64).
 
 **ADDR_NO_RANDOMIZE**
 > Disable Address Space Layout Randomization (ASLR).
@@ -56,9 +56,9 @@ int personality(unsigned long persona);
 
 # DESCRIPTION
 
-**personality**(2) is a Linux system call that sets the process execution domain, telling the kernel to emulate behavior of other UNIX flavors or to toggle compatibility flags. It is primarily invoked indirectly through wrapper commands such as **setarch**, **linux32**, and **linux64**.
+**personality**(2) is a Linux system call that sets the process execution domain, telling the kernel to emulate behavior of other UNIX flavors or to toggle compatibility flags. Passing 0xffffffff returns the current persona without changing it. It is primarily invoked indirectly through wrapper commands such as **setarch**, **linux32**, and **linux64**.
 
-Common use cases include disabling ASLR to produce reproducible memory addresses during debugging, running legacy 32-bit binaries under a 64-bit kernel, and emulating older UNIX memory layouts for compatibility.
+Common use cases include disabling ASLR to produce reproducible memory addresses during debugging, making legacy 32-bit software see a 32-bit architecture under a 64-bit kernel, and emulating older UNIX memory layouts for compatibility.
 
 # CAVEATS
 
@@ -66,8 +66,14 @@ Linux-specific. There is no standalone **personality** CLI binary; use **setarch
 
 # HISTORY
 
-The personality(2) system call originated in early Linux 1.2/2.x to support binary compatibility with SCO, SVr4, Solaris, and other UNIX systems whose binaries could run under Linux via iBCS2.
+The personality(2) system call appeared in Linux 1.1.20, with a glibc wrapper since 2.3, to support binary compatibility with SCO, SVr4, Solaris, and other UNIX systems whose binaries could run under Linux via iBCS2.
 
 # SEE ALSO
 
 [setarch](/man/setarch)(8), [linux32](/man/linux32)(8), [linux64](/man/linux64)(8)
+
+# RESOURCES
+
+```[Documentation](https://man7.org/linux/man-pages/man2/personality.2.html)```
+
+<!-- verified: 2026-11-09 -->

@@ -16,7 +16,7 @@ Check **multiple** units
 
 ```systemctl is-enabled [unit] -q```
 
-Show **targets** and symlinks
+Show installation **targets**
 
 ```systemctl is-enabled [unit] -l```
 
@@ -42,11 +42,13 @@ Show **targets** and symlinks
 
 **systemctl is-enabled** checks whether unit files are enabled to start at boot. It returns the enablement state: enabled, disabled, static, masked, generated, transient, indirect, or alias.
 
-Exit code 0 indicates the unit is enabled or will start at boot via other means.
+The exit code is 0 if at least one of the units is enabled, non-zero otherwise. The states enabled, enabled-runtime, alias, static, indirect, generated and transient return 0; disabled, linked and masked return a value above 0; not-found returns 4.
 
 # ENABLEMENT STATES
 
 **enabled** - Will start at boot
+
+**enabled-runtime** - Enabled transiently via /run/systemd/system/
 
 **disabled** - Won't start at boot
 
@@ -54,11 +56,19 @@ Exit code 0 indicates the unit is enabled or will start at boot via other means.
 
 **masked** - Completely blocked from starting
 
+**masked-runtime** - Masked transiently via /run/systemd/system/
+
+**linked** - Made available through a symlink to a unit file (**linked-runtime** when transient)
+
 **indirect** - Enabled through another unit
 
 **generated** - Generated dynamically by a generator tool
 
 **alias** - Name is an alias for another unit
+
+**transient** - Created dynamically with the runtime API
+
+**not-found** - The unit file does not exist
 
 # CAVEATS
 
@@ -67,3 +77,13 @@ Exit code 0 indicates the unit is enabled or will start at boot via other means.
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-is-active](/man/systemctl-is-active)(1), [systemctl-enable](/man/systemctl-enable)(1), [systemctl-disable](/man/systemctl-disable)(1), [systemctl-status](/man/systemctl-status)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

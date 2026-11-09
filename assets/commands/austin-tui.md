@@ -8,6 +8,10 @@ Top-like TUI for the Austin Python frame stack sampler
 
 ```austin-tui python3 [path/to/script.py]```
 
+**Pick a running Python process** interactively
+
+```austin-tui```
+
 **Attach to a running Python process** by PID
 
 ```sudo austin-tui -p [pid]```
@@ -34,6 +38,8 @@ Top-like TUI for the Austin Python frame stack sampler
 
 **austin-tui** [_options_] **-p** _pid_
 
+**austin-tui** **-o** _file_
+
 # PARAMETERS
 
 **-p** _pid_, **--pid** _pid_
@@ -57,13 +63,16 @@ Top-like TUI for the Austin Python frame stack sampler
 **-t** _milliseconds_, **--timeout** _milliseconds_
 > Approximate startup wait time; increase on slow machines (default is 100 ms).
 
+**-o** _file_, **--open** _file_
+> Open a saved MOJO profile instead of sampling a process.
+
 # DESCRIPTION
 
 **austin-tui** is a top-like text-based user interface for **Austin**, the frame stack sampler for CPython. It provides a real-time terminal view of where a Python application spends its time or allocates memory, displaying CPU and memory usage plots alongside per-frame statistics.
 
 Austin works by reading the CPython interpreter's virtual memory to sample frame stacks, requiring zero instrumentation and imposing minimal overhead on the target application. austin-tui wraps this sampling data in a curses-based interface inspired by the Unix **top** command.
 
-The default view shows the last-seen stack for the current process and thread, refreshing approximately once per second. Pressing **F** switches to full mode, which displays a hierarchical tree of all collected frame statistics. Pressing **G** activates a live flame graph visualization. Thread navigation is done with the left and right arrow keys, with the current PID and TID shown in the header.
+The default view shows the last-seen stack for the current process and thread, refreshing approximately once per second. Pressing **F** switches to full mode, which displays a hierarchical tree of all collected frame statistics. Pressing **G** activates a live flame graph visualization. Thread navigation is done with the left and right arrow keys, with the current PID and TID shown in the header. Run without a command or PID, it offers a picker of running Python processes.
 
 Additional interactive keys include **P** to pause the display while sampling continues in the background, **S** to save collected profiling data to a timestamped file, and **+**/**-** to adjust the minimum percentage threshold for displayed frames.
 
@@ -88,3 +97,9 @@ Requires the **Austin 3** binary to be installed and available on the PATH. On m
 # SEE ALSO
 
 [top](/man/top)(1), [htop](/man/htop)(1), [py-spy](/man/py-spy)(1), [perf](/man/perf)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/P403n1x87/austin-tui)```
+
+<!-- verified: 2026-11-09 -->

@@ -38,14 +38,19 @@ Zsh line editor builtin
 
 # SYNOPSIS
 
-**zle** [_-lLaD_] [_widget ..._]
+**zle** **-l** [**-L** | **-a**] [_string ..._]
+**zle** **-D** _widget ..._
+**zle** **-A** _old-widget_ _new-widget_
 **zle** **-N** _widget_ [_function_]
+**zle** **-f** _flag ..._
 **zle** **-C** _widget_ _completion-widget_ _function_
 **zle** **-R** [**-c**] [_display-string_] [_string ..._]
 **zle** **-M** _string_
 **zle** **-U** _string_
 **zle** **-K** _keymap_
-**zle** **-F** [**-Lw**] [_fd_ [_handler_]]
+**zle** **-F** [**-L** | **-w**] [_fd_ [_handler_]]
+**zle** **-I**
+**zle** **-T** [_tc_ _function_ | **-r** _tc_ | **-L**]
 **zle** _widget_ [**-n** _num_] [**-f** _flag_] [**-Nw**] [**-K** _keymap_] [**--** _args ..._]
 
 # PARAMETERS
@@ -60,7 +65,7 @@ Zsh line editor builtin
 > List user-defined widgets. **-L**: format as zle commands. **-a**: include builtins
 
 **-D** _widget ..._
-> Delete named user-defined widgets
+> Delete the named widgets
 
 **-A** _old-widget_ _new-widget_
 > Create an alias; both names refer to the same widget
@@ -77,14 +82,23 @@ Zsh line editor builtin
 **-K** _keymap_
 > Select the named keymap for subsequent keystrokes
 
-**-F** [**-Lw**] [_fd_ [_handler_]]
+**-F** [**-L** | **-w**] [_fd_ [_handler_]]
 > Install or remove a handler for a file descriptor. **-w**: handler is a widget. **-L**: list handlers
 
 **-I**
 > Invalidate the current display before external output
 
 **-f** _flag ..._
-> Set flags on the current widget: **yank**, **yankbefore**, **kill**, **vichange**, **nolast**
+> Set flags on the running widget: **yank**, **yankbefore**, **kill**, **vichange**. When invoking a widget, **-f nolast** keeps **LASTWIDGET** unchanged
+
+**-T** [_tc_ _function_ | **-r** _tc_ | **-L**]
+> Add, remove, or list internal line editor transformations. Mainly for debugging and testing
+
+**-n** _num_
+> When invoking a widget, temporarily set the numeric argument to _num_. **-N** sets it to the default
+
+**-w**
+> When invoking a widget, set **WIDGET** and related parameters to reflect it
 
 # DESCRIPTION
 
@@ -105,7 +119,7 @@ ZLE provides eight built-in keymaps:
 **command** -- Command name reading mode
 **.safe** -- Immutable fallback keymap
 
-The **main** keymap links to either **emacs** or **viins** depending on the **EDITOR** environment variable, or can be set with **bindkey -e** (emacs) or **bindkey -v** (vi).
+The **main** keymap links to **viins** if **VISUAL** or **EDITOR** contains **vi** when the shell starts, otherwise to **emacs**. Override it with **bindkey -e** (emacs) or **bindkey -v** (vi).
 
 # CONFIGURATION
 
@@ -119,7 +133,7 @@ prepend-sudo() {
   CURSOR+=5
 }
 zle -N prepend-sudo
-bindkey '^s' prepend-sudo
+bindkey '^[s' prepend-sudo
 ```
 
 # SPECIAL PARAMETERS
@@ -147,3 +161,13 @@ ZLE is a fundamental component of zsh, the Z Shell, originally written by **Paul
 # SEE ALSO
 
 [zsh](/man/zsh)(1), [bindkey](/man/bindkey)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/zsh-users/zsh)```
+
+```[Homepage](https://www.zsh.org/)```
+
+```[Documentation](https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html)```
+
+<!-- verified: 2026-11-09 -->

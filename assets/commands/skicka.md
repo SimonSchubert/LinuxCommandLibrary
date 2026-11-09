@@ -67,7 +67,7 @@ Command-line Google Drive client
 > Display free space on Drive
 
 **fsck**
-> Check consistency of local and Drive files
+> Run experimental consistency checks on Drive files, including metadata and duplicates
 
 **init**
 > Create an initial configuration file
@@ -78,7 +78,16 @@ Command-line Google Drive client
 # PARAMETERS
 
 **-encrypt**
-> Encrypt files before uploading
+> Encrypt files before uploading (reads the passphrase from **SKICKA_PASSPHRASE**)
+
+**-dry-run**
+> Print the paths that would be transferred without transferring (upload, download)
+
+**-follow-symlinks** _maxdepth_
+> Follow symbolic links when uploading
+
+**-no-browser-auth**
+> Do not open a web browser for the initial authorization (common option, placed before the command)
 
 **-ignore-times**
 > Force content comparison instead of relying on modification times
@@ -88,6 +97,12 @@ Command-line Google Drive client
 
 **-s**
 > Skip trash and permanently delete (for rm)
+
+**-r**
+> Remove recursively (for rm), or list recursively (for ls)
+
+**-l**, **-ll**
+> Long listing with sizes and times, or also MD5 checksums (for ls)
 
 # DESCRIPTION
 
@@ -106,3 +121,9 @@ A notable feature is client-side encryption (**-encrypt**), which encrypts files
 # SEE ALSO
 
 [rclone](/man/rclone)(1), [gdrive](/man/gdrive)(1), [drive](/man/drive)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/google/skicka)```
+
+<!-- verified: 2026-11-09 -->

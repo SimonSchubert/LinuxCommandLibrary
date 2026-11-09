@@ -12,6 +12,10 @@ Resubmit **without waiting**
 
 ```koji resubmit [task_id] --nowait```
 
+**Wait** for the task, even when running in the background
+
+```koji resubmit [task_id] --wait```
+
 Resubmit in **quiet** mode
 
 ```koji resubmit [task_id] --quiet```
@@ -33,6 +37,9 @@ Display **help**
 **task_id**
 > The ID of the task to resubmit
 
+**--wait**
+> Wait on the task, even if running in the background
+
 **--nowait**, **--nowatch**
 > Do not wait for task completion
 
@@ -44,8 +51,18 @@ Display **help**
 
 # CAVEATS
 
-Only failed or cancelled tasks can be resubmitted. Tasks that failed due to source issues will likely fail again without fixing the underlying problem.
+Only failed or cancelled top-level tasks can be resubmitted, and only by the task owner or an admin. Tasks that failed due to source issues will likely fail again without fixing the underlying problem.
 
 # SEE ALSO
 
 [koji](/man/koji)(1), [koji-cancel](/man/koji-cancel)(1), [koji-build](/man/koji-build)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/koji-project/koji)```
+
+```[Homepage](https://koji.build)```
+
+```[Documentation](https://docs.pagure.org/koji/)```
+
+<!-- verified: 2026-11-09 -->

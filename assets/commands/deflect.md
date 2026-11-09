@@ -87,3 +87,11 @@ Because Deflect One executes arbitrary remote commands on your behalf — includ
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [ansible](/man/ansible)(1), [htop](/man/htop)(1), [tmux](/man/tmux)(1), [lazydocker](/man/lazydocker)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Frytskyy/deflect-one)```
+
+```[Homepage](https://www.vladonai.com/deflect-one)```
+
+<!-- verified: 2026-11-09 -->

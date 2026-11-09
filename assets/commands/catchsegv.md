@@ -20,20 +20,20 @@ catch segmentation faults and print backtraces
 
 **catchsegv** is a debugging wrapper that intercepts segmentation faults in a program and prints a symbolic backtrace to help diagnose the crash. It works by using LD_PRELOAD to inject libSegFault.so, which installs a signal handler for SIGSEGV and other fatal signals.
 
-When the wrapped program crashes, catchsegv displays a stack trace with function names, source file locations (if debug symbols are available), and memory map information. This provides a lightweight alternative to running programs under a full debugger when you only need crash diagnostics.
+When the wrapped program crashes, catchsegv uses addr2line to resolve addresses and displays a stack trace with function names, source file locations (if debug symbols are available), and memory map information. This provides a lightweight alternative to running programs under a full debugger when you only need crash diagnostics.
 
 The tool was part of the glibc debug utilities but has been removed from glibc 2.35 and later. Modern alternatives include AddressSanitizer and core dump analysis with GDB.
 
 # ENVIRONMENT
 
 **SEGFAULT_OUTPUT_NAME**
-> Output file (default: stderr)
+> Output file of libSegFault.so (default: stderr). catchsegv always sets it to a temporary file
 
 **SEGFAULT_SIGNALS**
-> Signals to handle: segv, ill, bus, stkflt, abrt, fpe
+> Signals to handle: segv, ill, bus, stkflt, abrt, fpe, or all
 
 **SEGFAULT_USE_ALTSTACK**
-> Use alternate stack for handler
+> Use alternate stack for handler. catchsegv always sets it
 
 # DEBUG SYMBOLS
 
@@ -56,4 +56,12 @@ Removed from glibc 2.35+. Modern alternatives include out-of-process debuggers a
 
 # SEE ALSO
 
-[gdb](/man/gdb)(1), [addr2line](/man/addr2line)(1)
+[gdb](/man/gdb)(1), [addr2line](/man/addr2line)(1), [valgrind](/man/valgrind)(1), [coredumpctl](/man/coredumpctl)(1)
+
+# RESOURCES
+
+```[Source code](https://sourceware.org/git/glibc.git)```
+
+```[Homepage](https://sourceware.org/glibc/)```
+
+<!-- verified: 2026-11-09 -->

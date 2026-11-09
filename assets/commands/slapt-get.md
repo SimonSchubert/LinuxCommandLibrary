@@ -34,10 +34,10 @@ APT-like package manager for Slackware
 
 # PARAMETERS
 
-**--update**
+**--update**, **-u**
 > Update package list from sources
 
-**--install _package_**
+**--install**, **-i _package_**
 > Install or upgrade a package
 
 **--remove _package_**
@@ -46,8 +46,11 @@ APT-like package manager for Slackware
 **--upgrade**
 > Upgrade all installed packages
 
-**--search _query_**
-> Search for packages by name, disk set, or version
+**--install-set _disk_set_**
+> Install all packages from the given disk sets
+
+**--search _expression_**
+> Search package names, versions, locations, and descriptions with a regular expression
 
 **--show _package_**
 > Display package information
@@ -56,7 +59,7 @@ APT-like package manager for Slackware
 > Clean package cache
 
 **--autoclean**
-> Remove only obsolete packages from cache
+> Remove only cached packages that can no longer be downloaded
 
 **--dist-upgrade**
 > Upgrade to a newer Slackware release
@@ -94,6 +97,18 @@ APT-like package manager for Slackware
 **--no-prompt**, **-y**
 > Do not prompt for confirmation
 
+**--prompt**, **-p**
+> Always prompt for package install confirmation
+
+**--ignore-excludes**
+> Install packages on the exclude list anyway
+
+**--no-upgrade**
+> Install a package without upgrading a previous version, e.g. for kernels
+
+**--allow-unauthenticated**
+> Allow unauthenticated packages
+
 **--print-uris**
 > Print URIs of packages to stdout without downloading
 
@@ -105,6 +120,9 @@ APT-like package manager for Slackware
 
 **--config**, **-c _file_**
 > Use an alternate configuration file
+
+**--show-stats**, **-S**
+> Show download statistics
 
 # DESCRIPTION
 
@@ -119,8 +137,14 @@ Package sources are configured in the slapt-getrc configuration file.
 
 # CAVEATS
 
-Requires configured package sources in slapt-getrc. Designed specifically for Slackware Linux distributions.
+Requires configured package sources in slapt-getrc. Designed specifically for Slackware Linux distributions. Official Slackware packages carry no dependency data, so dependencies are only resolved for packages built with it.
 
 # SEE ALSO
 
 [installpkg](/man/installpkg)(8), [removepkg](/man/removepkg)(8), [pkgtool](/man/pkgtool)(8), [slackpkg](/man/slackpkg)(1), [slapt-src](/man/slapt-src)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/jaos/slapt-get)```
+
+<!-- verified: 2026-11-09 -->

@@ -28,9 +28,13 @@ View Python module documentation
 
 ```pydoc -w [module]```
 
+**Run through a specific interpreter** when no pydoc script is installed
+
+```python3 -m pydoc [module]```
+
 # SYNOPSIS
 
-**pydoc** [**-k** _keyword_] [**-p** _port_] [**-b**] [**-w**] [_name_...]
+**pydoc** [**-k** _keyword_] [**-n** _host_] [**-p** _port_] [**-b**] [**-w**] [_name_...]
 
 # PARAMETERS
 
@@ -41,7 +45,7 @@ _name_
 > Search synopsis lines of all available modules for keyword.
 
 **-p** _port_
-> Start HTTP documentation server on the given port.
+> Start HTTP documentation server on the given port. Port 0 picks an arbitrary unused port.
 
 **-b**
 > Start HTTP server and open a web browser to its page.
@@ -50,7 +54,7 @@ _name_
 > Write HTML documentation for the module to a file in the current directory.
 
 **-n** _host_
-> Hostname for the HTTP server (default: localhost). Python 3.11+.
+> Hostname for the HTTP server (default: localhost). Python 3.7+.
 
 # DESCRIPTION
 
@@ -58,11 +62,11 @@ _name_
 
 The **-p** flag starts a local HTTP documentation server that provides a browsable interface to all installed Python modules, and **-b** opens this server automatically in the default web browser. pydoc is part of the Python standard library and provides the same functionality as the interactive **help()** function.
 
-The **PAGER** environment variable controls which program is used for terminal display. The **BROWSER** environment variable controls which browser is used with **-b**.
+The **MANPAGER** or **PAGER** environment variable controls which program is used for terminal display. The **BROWSER** environment variable controls which browser is used with **-b**.
 
 # CAVEATS
 
-Documentation quality depends on the presence of docstrings in the module source. Importing a module to inspect it may execute module-level code. The **-n** flag for specifying the server hostname requires Python 3.11+.
+Documentation quality depends on the presence of docstrings in the module source. Importing a module to inspect it may execute module-level code. The **-n** flag requires Python 3.7+.
 
 # HISTORY
 
@@ -72,3 +76,12 @@ Documentation quality depends on the presence of docstrings in the module source
 
 [python](/man/python)(1), [python3](/man/python3)(1), [pydoc3](/man/pydoc3)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/python/cpython)```
+
+```[Homepage](https://www.python.org)```
+
+```[Documentation](https://docs.python.org/3/library/pydoc.html)```
+
+<!-- verified: 2026-11-09 -->

@@ -12,6 +12,18 @@ F-Droid repository management tool
 
 ```fdroid build [app.id]```
 
+**Build a specific version** of an app
+
+```fdroid build [app.id]:[versionCode]```
+
+**Build only the latest version**
+
+```fdroid build --latest [app.id]```
+
+**Create metadata** for new APKs in the repo
+
+```fdroid update --create-metadata```
+
 **Initialize repository**
 
 ```fdroid init```
@@ -56,7 +68,7 @@ _COMMAND_
 > Check for available upstream updates.
 
 **scanner** _APP_
-> Scan APKs for known non-free libraries.
+> Scan the source code of a package, or an APK, for known problems such as non-free libraries.
 
 **rewritemeta** _APP_
 > Reformat and normalize metadata files.
@@ -64,8 +76,32 @@ _COMMAND_
 **deploy**
 > Deploy the repository to a server.
 
+**verify**
+> Verify the integrity of downloaded packages.
+
+**gpgsign**
+> Add PGP signatures using GnuPG for packages in the repo.
+
+**signindex**
+> Sign indexes created using **update --nosign**.
+
+**install**
+> Install built packages on devices.
+
+**signatures**
+> Extract signatures from APKs.
+
+**btlog**
+> Update the binary transparency log for a URL.
+
+**nightly**
+> Set up an app build for a nightly build repo.
+
+**mirror**
+> Download complete mirrors of small repos.
+
 **import**
-> Import a new app from source repository.
+> Extract application metadata from a source repository.
 
 **readmeta**
 > Read and validate metadata.
@@ -103,3 +139,13 @@ fdroid is the server component of **F-Droid**, the open source Android app repos
 # SEE ALSO
 
 [fdroidcl](/man/fdroidcl)(1), [apktool](/man/apktool)(1), [adb](/man/adb)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/fdroid/fdroidserver)```
+
+```[Homepage](https://f-droid.org)```
+
+```[Documentation](https://f-droid.org/docs/)```
+
+<!-- verified: 2026-11-09 -->

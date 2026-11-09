@@ -16,9 +16,13 @@ Cloudflare WARP diagnostic and troubleshooting tool
 
 ```warp-diag --output [path/to/directory]```
 
-**Submit feedback** to Cloudflare interactively
+**Include a route test** for all Split Tunnel IPs and domains
 
-```warp-diag feedback```
+```warp-diag --enable-all-routes```
+
+**Submit feedback** to Cloudflare interactively, opening a support ticket
+
+```sudo warp-diag feedback```
 
 # SYNOPSIS
 
@@ -32,12 +36,15 @@ Cloudflare WARP diagnostic and troubleshooting tool
 **--add-ts**
 > Add a timestamp to the output filename.
 
+**--enable-all-routes**
+> Add a route test for all IPs and domains in the Split Tunnel configuration. Makes the run longer.
+
 **feedback**
-> Submit feedback to Cloudflare interactively.
+> Submit feedback to Cloudflare interactively, which opens a support ticket.
 
 # DESCRIPTION
 
-**warp-diag** collects diagnostic information for the Cloudflare WARP client and packages it into a zip file. It gathers WARP client logs, system network configuration, DNS settings, connectivity test results, and client state to help troubleshoot connection issues.
+**warp-diag** collects diagnostic information for the Cloudflare WARP client and packages it into a file named **warp-debugging-info-\<date\>-\<time\>.zip**. It gathers WARP client logs, system network configuration, DNS settings, connectivity test results, and client state to help troubleshoot connection issues.
 
 The generated zip file can be shared with Cloudflare support for analysis.
 
@@ -49,3 +56,8 @@ Requires the Cloudflare WARP client (warp-svc) to be installed. Some diagnostics
 
 [warp-cli](/man/warp-cli)(1)
 
+# RESOURCES
+
+```[Documentation](https://developers.cloudflare.com/cloudflare-one/team-and-resources/devices/cloudflare-one-client/troubleshooting/diagnostic-logs/)```
+
+<!-- verified: 2026-11-09 -->

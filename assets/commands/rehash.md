@@ -12,6 +12,10 @@ Rebuild the command hash table
 
 ```sudo apt install [package] && rehash```
 
+**Make zsh completion rehash automatically** (in ~/.zshrc)
+
+```zstyle ':completion:*' rehash true```
+
 # SYNOPSIS
 
 **rehash**
@@ -22,7 +26,7 @@ Rebuild the command hash table
 
 Running **rehash** forces the shell to discard the cached hash table and rediscover all executables in the directories listed in **$PATH**.
 
-In **zsh**, rehash also regenerates the completion list so that tab completion reflects newly installed commands.
+In **zsh**, **rehash** is the same as **hash -r**. It also refreshes the command list used by tab completion, so newly installed commands can be completed.
 
 # CAVEATS
 
@@ -30,7 +34,7 @@ In **bash**, the equivalent command is **hash -r**. Most modern shells handle th
 
 # HISTORY
 
-Command hashing was introduced in the **Bourne Shell** to improve performance by caching command locations. The **rehash** builtin appeared in **csh** (1978) and was adopted by **tcsh**, **zsh**, and other shells. Bash uses the **hash** builtin instead but supports the same concept.
+Shells hash commands to improve performance by caching their locations. The **rehash** builtin appeared in **csh** (1978) and was adopted by **tcsh**, **zsh**, and other shells. Bash uses the **hash** builtin instead but supports the same concept.
 
 # SEE ALSO
 

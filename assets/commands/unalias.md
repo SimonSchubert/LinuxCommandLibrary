@@ -38,7 +38,7 @@ Returns 0 on success, or a value greater than 0 if a specified alias name does n
 
 # CAVEATS
 
-Shell builtin. Not persistent across sessions. Only affects the current shell execution environment.
+Shell builtin. Not persistent across sessions. Only affects the current shell execution environment. In **zsh**, **-m** removes aliases matching a pattern and **-s** removes suffix aliases.
 
 # HISTORY
 

@@ -16,7 +16,7 @@ Reset **multiple** units
 
 ```systemctl reset-failed [unit1 unit2 ...]```
 
-**List** failed units first, then reset them
+**List** failed units to review before resetting them
 
 ```systemctl --failed```
 
@@ -28,7 +28,7 @@ Reset **multiple** units
 
 **systemctl reset-failed** clears the "failed" state from one or more units, resetting their state counters. Without arguments, it resets all failed units.
 
-When a unit fails (process exits with a non-zero code, terminates abnormally, or times out), it enters the "failed" state with its exit code and status recorded. This state persists until the unit is restarted or explicitly reset with this command.
+When a unit fails (process exits with a non-zero code, terminates abnormally, or times out), it enters the "failed" state with its exit code and status recorded. This state persists until the unit is stopped, restarted or explicitly reset with this command.
 
 In addition to clearing the failed state, this command also resets:
 
@@ -48,3 +48,13 @@ The **reset-failed** subcommand provides a way to acknowledge and clear failed u
 # SEE ALSO
 
 [systemctl-status](/man/systemctl-status)(1), [systemctl-restart](/man/systemctl-restart)(1), [systemctl-start](/man/systemctl-start)(1), [systemctl](/man/systemctl)(1), [journalctl](/man/journalctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->
