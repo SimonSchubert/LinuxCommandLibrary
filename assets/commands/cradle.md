@@ -12,25 +12,29 @@ CLI for the Cradle PHP framework
 
 ```cradle install -f```
 
-**Create a new module**
+**Start a PHP server**
 
-```cradle make:module [module_name]```
+```cradle server -h [127.0.0.1] -p [8888]```
 
-**Run database migrations**
+**Update all packages**
 
-```cradle migrate```
+```cradle update```
 
-**Generate model from a database table**
+**Install a package from Packagist**
 
-```cradle make:model [table_name]```
+```cradle package install [foo/bar]```
 
-**Start the development server**
+**Rebuild the database schema**
 
-```cradle serve```
+```cradle sql build```
 
-**Clear application cache**
+**Connect to a configured server**
 
-```cradle cache:clear```
+```cradle connect [app-1]```
+
+**Deploy code to a server**
+
+```cradle deploy production```
 
 # SYNOPSIS
 
@@ -39,46 +43,56 @@ CLI for the Cradle PHP framework
 # PARAMETERS
 
 **install**
-> Install the Cradle framework and dependencies. Supports `-f`/`--force` to override files, `--skip-sql`, `--skip-versioning`, `--skip-mkdir`, `--skip-chmod`.
+> Install the Cradle framework and dependencies. Supports `-f`/`--force` to override files, `--skip-sql`, `--skip-versioning`, `--skip-mkdir`, `--skip-chmod`, and `-h`, `-u`, `-p` for the database host, user and password.
 
-**serve**
-> Start the built-in development server.
+**server**
+> Start a PHP server. Use `-h` for the host and `-p` for the port.
 
-**migrate**
-> Run database migrations.
-
-**make:module** _NAME_
-> Generate a new module scaffold.
-
-**make:model** _TABLE_
-> Generate a model from a database table.
-
-**make:controller** _NAME_
-> Generate a new controller.
-
-**cache:clear**
-> Clear the application cache.
-
-**queue:work**
-> Process jobs from the queue.
+**update**
+> Update all packages to their latest version.
 
 **connect** _NAME_
-> Connect to a configured server.
+> Connect to a server defined in `config/deploy.php`.
 
-**--help**
-> Display help for a command.
+**deploy production**
+> Deploy code to the server defined in `config/deploy.php`.
+
+**deploy s3**
+> Upload static assets to S3. Supports `--include-yarn` and `--include-upload`.
+
+**elastic** **flush**|**map**|**populate** [_PACKAGE_]
+> Truncate the index, submit the schema, or populate ElasticSearch.
+
+**package** **install**|**update** _PACKAGE_ [_VERSION_]
+> Install a package from Packagist or update it.
+
+**package** **list**
+> List the available packages.
+
+**package** **remove** _PACKAGE_
+> Remove a package.
+
+**package** **search** _TERM_
+> Search Packagist for a package.
+
+**redis** **flush** [_PACKAGE_]
+> Truncate the entire cache.
+
+**sql** **flush**|**build**|**populate** [_PACKAGE_]
+> Truncate the database, rebuild the schema, or populate the tables.
+
+**help**
+> Display the general help menu.
 
 # DESCRIPTION
 
-**Cradle** is a PHP framework designed for rapid application development with a focus on modularity and developer experience. The CLI tool provides commands for scaffolding, database management, and development server operations.
+**Cradle** is a PHP framework and content management system designed for rapid application development with a focus on modularity and developer experience. The CLI tool provides commands for installation, package management, deployment, and managing the SQL, Redis and ElasticSearch services of a project.
 
-The framework follows an event-driven architecture, allowing loose coupling between components. Modules can be developed independently and plugged into applications. The make commands generate boilerplate code following the framework's conventions.
-
-Cradle CLI handles common development tasks including database migrations, model generation from existing schemas, and cache management. The built-in server provides quick access for local development without configuring external web servers.
+The framework follows an event-driven architecture, allowing loose coupling between components. Modules can be developed independently and plugged into applications.
 
 # CAVEATS
 
-Requires PHP 7.4+ and Composer. Database commands require proper configuration in the framework's settings. The development server is not suitable for production use.
+Requires PHP 7.1 or newer and Composer. Database commands require proper configuration in the framework's settings. The project appears inactive: its main repository was last pushed in **2022**.
 
 # HISTORY
 
@@ -87,3 +101,13 @@ Cradle was developed as a modern PHP framework emphasizing event-driven programm
 # SEE ALSO
 
 [composer](/man/composer)(1), [php](/man/php)(1), [artisan](/man/artisan)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/CradlePHP/Cradle)```
+
+```[Homepage](https://cradlephp.github.io/)```
+
+```[Documentation](https://cradlephp.github.io/docs/3.B.-Reference-Command-Line-Tools.html)```
+
+<!-- verified: 2026-11-09 -->

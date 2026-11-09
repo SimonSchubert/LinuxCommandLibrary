@@ -12,9 +12,13 @@ Output only **package names**
 
 ```check-dfsg-status -s```
 
-Show **explanations** for non-free classification
+Print nothing if **no non-free** packages are installed
 
-```check-dfsg-status -e```
+```check-dfsg-status -q```
+
+Hide **explanations** for non-free classification
+
+```check-dfsg-status --noexplain```
 
 # SYNOPSIS
 
@@ -32,7 +36,21 @@ The tool was formerly known as **vrms** (Virtual Richard M. Stallman) and helps 
 > Output only package names without descriptions
 
 **-e**, **--explain**
-> Explain why packages are classified as non-free
+> Explain why packages are classified as non-free, if available. This is the default.
+
+**-q**, **--quiet**
+> Do nothing if no non-free packages are installed
+
+**--reason-dir** _DIR_
+> Read explanations from _DIR_ instead of /usr/share/check-dfsg-status/reasons/
+
+**-d**, **--debug**
+> Generate debugging information
+
+**-h**, **--help**
+> Display help
+
+Options can be prefixed with **--no** to turn them off, for example **--noexplain**.
 
 # CAVEATS
 
@@ -40,8 +58,16 @@ Only checks packages from official Debian repositories. Manually installed softw
 
 # HISTORY
 
-The original **vrms** was created as a playful tool named after Richard Stallman, founder of the Free Software Foundation. It was renamed to **check-dfsg-status** for a more neutral and descriptive name.
+The original **vrms** was written by Bdale Garbee and Bill Geddes as a playful tool named after Richard Stallman, founder of the Free Software Foundation. It was renamed to **check-dfsg-status** following Debian bug #962696.
 
 # SEE ALSO
 
 [apt](/man/apt)(8), [dpkg](/man/dpkg)(1), [vrms](/man/vrms)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/check-dfsg-status)```
+
+```[Documentation](https://manpages.debian.org/check-dfsg-status)```
+
+<!-- verified: 2026-11-09 -->

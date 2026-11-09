@@ -8,9 +8,9 @@ modular CSS minifier built on PostCSS
 
 ```cssnano [input.css] [output.css]```
 
-**Minify with default preset**
+**Minify using stdin and stdout**
 
-```npx cssnano [input.css] > [output.min.css]```
+```cssnano < [input.css] > [output.min.css]```
 
 **Use as PostCSS plugin**
 
@@ -36,10 +36,18 @@ modular CSS minifier built on PostCSS
 **--no-[featureName]**
 > Disable any individual processor module by its name.
 
-**--config** _file_
-> PostCSS configuration file.
+**--safe**
+> Disable advanced optimizations that are not always safe.
+
+**--version, -v**
+> Output the version number.
+
+**--help, -h**
+> Output the help screen.
 
 # PRESETS
+
+Presets apply to cssnano used as a PostCSS plugin, not to the legacy CLI.
 
 **default**
 > Safe optimizations suitable for most use cases.
@@ -68,7 +76,7 @@ As a PostCSS plugin, cssnano integrates with existing build pipelines (webpack, 
 
 # CAVEATS
 
-Aggressive minification may cause issues with CSS that relies on specific formatting. The advanced preset can change behavior in edge cases. Source maps are essential for debugging minified CSS. Some optimizations remove vendor prefixes that may still be needed.
+Current cssnano has no command-line interface. The **cssnano** command comes from the legacy **cssnano-cli** package (1.0.5), which depends on cssnano 3; use **postcss** with the plugin instead. Aggressive minification may cause issues with CSS that relies on specific formatting. The advanced preset can change behavior in edge cases. Source maps are essential for debugging minified CSS. Some optimizations remove vendor prefixes that may still be needed.
 
 # HISTORY
 
@@ -77,3 +85,13 @@ cssnano was created by **Ben Briggs** and first released in **2015**. Built on P
 # SEE ALSO
 
 [postcss](/man/postcss)(1), [autoprefixer](/man/autoprefixer)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cssnano/cssnano)```
+
+```[Homepage](https://cssnano.github.io/cssnano/)```
+
+```[Documentation](https://cssnano.github.io/cssnano/docs/introduction/)```
+
+<!-- verified: 2026-11-09 -->

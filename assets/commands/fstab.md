@@ -8,9 +8,17 @@ filesystem mount configuration file
 
 ```cat /etc/fstab```
 
-**Check fstab syntax**
+**Verify fstab syntax**
+
+```sudo findmnt --verify```
+
+**Mount all entries** to test new ones
 
 ```sudo mount -a```
+
+**Reload systemd** after editing
+
+```sudo systemctl daemon-reload```
 
 **Show mounted filesystems**
 
@@ -35,19 +43,19 @@ UUID=abc123     /home         ext4    defaults,noatime    0      2
 # FIELDS
 
 **device**
-> Device, UUID, LABEL, or network path.
+> Device, UUID=, LABEL=, PARTUUID=, PARTLABEL=, or network path. Escape spaces as \040.
 
 **mountpoint**
 > Where to mount (directory or "none" for swap).
 
 **type**
-> Filesystem type (ext4, xfs, btrfs, nfs, cifs, swap).
+> Filesystem type (ext4, xfs, btrfs, nfs, cifs, swap). Use subtypes such as fuse.sshfs; none suits bind mounts.
 
 **options**
 > Mount options, comma-separated.
 
 **dump**
-> Backup flag (usually 0).
+> Used by dump to decide what to back up (usually 0).
 
 **pass**
 > fsck order (0=skip, 1=root, 2=other).
@@ -55,20 +63,35 @@ UUID=abc123     /home         ext4    defaults,noatime    0      2
 # COMMON OPTIONS
 
 ```
-defaults    - rw,suid,dev,exec,auto,nouser,async
-noauto      - Don't mount at boot
+defaults    - Kernel defaults, usually rw,suid,dev,exec,auto,nouser,async
+noauto      - Don't mount at boot or with mount -a
 nofail      - Don't fail boot if device missing
 ro          - Read-only
 noexec      - Don't allow execution
 nosuid      - Ignore setuid bits
 noatime     - Don't update access times
 user        - Allow non-root users to mount
+owner       - Allow the device owner to mount
+_netdev     - Device needs network access
+x-systemd.automount - Mount on first access
 ```
 
 # CAVEATS
 
-Errors can prevent boot. Always test with `mount -a` before reboot. Use UUID or LABEL for reliable device identification. Network mounts need special handling.
+Errors can prevent boot. Always test with `findmnt --verify` and `mount -a` before reboot. On systemd-based systems, run `systemctl daemon-reload` after editing. Use UUID or LABEL for reliable device identification. Network mounts need special handling.
+
+# HISTORY
+
+The ancestor of the **fstab** file format appeared in **4.0BSD**.
 
 # SEE ALSO
 
-[mount](/man/mount)(8), [findmnt](/man/findmnt)(8), [blkid](/man/blkid)(8)
+[mount](/man/mount)(8), [findmnt](/man/findmnt)(8), [blkid](/man/blkid)(8), [swapon](/man/swapon)(8), [crypttab](/man/crypttab)(5)
+
+# RESOURCES
+
+```[Source code](https://github.com/util-linux/util-linux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man5/fstab.5.html)```
+
+<!-- verified: 2026-11-09 -->

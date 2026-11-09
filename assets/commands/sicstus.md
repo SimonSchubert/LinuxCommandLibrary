@@ -26,7 +26,7 @@ SICStus Prolog development system
 
 **Execute a goal** on startup
 
-```sicstus -e "[goal]"```
+```sicstus --goal "[goal]."```
 
 **Start with additional arguments** passed to Prolog
 
@@ -39,27 +39,45 @@ SICStus Prolog development system
 # PARAMETERS
 
 **-l** _file_
-> Load a Prolog file on startup. This is done before any initialization file is loaded. Only one **-l** argument is allowed.
+> Load a Prolog file on startup. This is done before any initialization file is loaded. Can be repeated.
 
 **-r** _file_
-> Restore a saved state on startup.
+> Restore a saved state on startup. Only one **-r** is allowed.
 
 **-i**
 > Force interactive mode. Prompts for user input even if standard input is redirected.
 
-**-e** _goal_
-> Execute the specified goal on startup.
+**-f**
+> Fast start. Do not read the initialization file.
+
+**-m**
+> Use **malloc()** and related functions for memory allocation.
+
+**--goal** _goal_
+> Read a term from _goal_, terminated by a full stop, and pass it to **call/1** after all files are loaded. Only one **--goal** is allowed.
+
+**-D**_var_=_value_
+> Set a system property.
+
+**--locale** _name_
+> Set the process locale. Not supported on Windows.
+
+**--no-locale**
+> Do not inherit the process locale from the environment.
+
+**--noinfo**
+> Start with the **informational** flag off, suppressing informational messages.
 
 **--nologo**
 > Suppress the startup banner and version information.
 
-**--iso**
-> Start in ISO Prolog mode.
+**-Xrs**
+> Keep the default OS signal behavior on UNIX-like systems.
 
-**--sicstus**
-> Start in SICStus Prolog mode (default).
+**--help**
+> Display help and exit.
 
-**--**
+**--**, **-a** _argument..._
 > End of flags. Remaining arguments are passed as Prolog arguments.
 
 # DESCRIPTION
@@ -72,7 +90,7 @@ SICStus Prolog includes features for constraint solving, interfacing with C and 
 
 # CAVEATS
 
-SICStus Prolog is commercial software requiring a valid license. When executing saved states, all command-line arguments are treated as Prolog arguments, so flags like **-l** and **-r** are not available. The **-l** option only accepts one file; use the interpreter to load additional files after startup.
+SICStus Prolog is commercial software requiring a valid license. When executing saved states, all command-line arguments are treated as Prolog arguments, so flags like **-l** and **-r** are not available.
 
 # HISTORY
 
@@ -81,3 +99,11 @@ SICStus Prolog is commercial software requiring a valid license. When executing 
 # SEE ALSO
 
 [swipl](/man/swipl)(1), [gprolog](/man/gprolog)(1)
+
+# RESOURCES
+
+```[Homepage](https://sicstus.sics.se/)```
+
+```[Documentation](https://sicstus.sics.se/documentation.html)```
+
+<!-- verified: 2026-11-09 -->

@@ -16,10 +16,6 @@ CLI for the nf-core community collection of Nextflow pipelines
 
 ```nf-core pipelines launch [pipeline-name]```
 
-**Show information about a pipeline**
-
-```nf-core pipelines info [pipeline-name]```
-
 **Create a new pipeline from template**
 
 ```nf-core pipelines create```
@@ -28,9 +24,13 @@ CLI for the nf-core community collection of Nextflow pipelines
 
 ```nf-core pipelines lint```
 
-**List available pipeline schemas**
+**Lint a pipeline parameter schema**
 
 ```nf-core pipelines schema lint```
+
+**Install a module into a pipeline**
+
+```nf-core modules install [tool]```
 
 # SYNOPSIS
 
@@ -53,28 +53,40 @@ CLI for the nf-core community collection of Nextflow pipelines
 **pipelines lint**
 > Check pipeline code against nf-core best practices.
 
-**pipelines info**
-> Show detailed information about a pipeline.
-
 **pipelines schema**
 > Manage pipeline parameter schema files.
 
+**pipelines create-params-file**
+> Build a parameter file for a pipeline.
+
+**pipelines sync**
+> Sync a pipeline's TEMPLATE branch with the nf-core template.
+
+**pipelines bump-version**
+> Update the version number in a pipeline.
+
+**modules**
+> Manage Nextflow DSL2 modules.
+
+**subworkflows**
+> Manage Nextflow DSL2 subworkflows.
+
 # PARAMETERS
 
-**--help**
+**-h**, **--help**
 > Display help information.
 
 **--version**
 > Show version.
 
-**--verbose**
-> Increase output verbosity.
+**-v**, **--verbose**
+> Print verbose output to the console.
 
 **--hide-progress**
 > Do not show progress bars.
 
-**--log-file** _FILE_
-> Save log output to a file.
+**-l**, **--log-file** _FILE_
+> Save a verbose log to a file.
 
 # DESCRIPTION
 
@@ -86,7 +98,7 @@ For pipeline developers, **create** scaffolds a new pipeline from the nf-core te
 
 # CAVEATS
 
-Requires Python 3.8 or later. Nextflow must be installed separately to actually run pipelines. Pipeline downloads can be large when including container images. Internet access is required for listing and downloading pipelines.
+Requires Python 3.10 or later. Nextflow must be installed separately to actually run pipelines. Pipeline downloads can be large when including container images. Internet access is required for listing and downloading pipelines.
 
 # HISTORY
 
@@ -96,3 +108,12 @@ nf-core was established in **2018** as a community effort to create a curated se
 
 [nextflow](/man/nextflow)(1), [conda](/man/conda)(1), [docker](/man/docker)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/nf-core/tools)```
+
+```[Homepage](https://nf-co.re)```
+
+```[Documentation](https://nf-co.re/docs/nf-core-tools)```
+
+<!-- verified: 2026-11-09 -->

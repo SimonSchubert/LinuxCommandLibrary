@@ -32,7 +32,7 @@ Ethereum network bootstrap node
 
 **bootnode** runs a bootstrap node for the Ethereum Discovery Protocol. Bootstrap nodes help new nodes discover and connect to peers in the Ethereum network without being full nodes themselves.
 
-The tool is part of the go-ethereum (geth) project and implements the Node Discovery Protocol v4 and v5, enabling peer-to-peer network formation.
+The tool was part of the go-ethereum (geth) project until its removal in v1.15.0. It implements the Node Discovery Protocol v4 and v5, enabling peer-to-peer network formation.
 
 # PARAMETERS
 
@@ -42,17 +42,23 @@ The tool is part of the go-ethereum (geth) project and implements the Node Disco
 **-nodekey** _file_
 > Path to the node's private key file
 
+**-nodekeyhex** _hex_
+> Private key as hex (for testing)
+
 **-addr** _ip:port_
 > Listen address (default: :30301)
 
 **-writeaddress**
-> Write the node's public key/URL to stdout
+> Write out the node's public key and quit
 
 **-verbosity** _level_
-> Logging verbosity (0=silent, 5=detail)
+> Logging verbosity, 0 to 5 (default: 3)
+
+**-vmodule** _pattern_
+> Per-module log verbosity pattern
 
 **-nat** _method_
-> NAT port mapping mechanism (none, upnp, pmp, extip:IP)
+> NAT port mapping mechanism (any, none, upnp, pmp, pmp:IP, extip:IP; default: none)
 
 **-netrestrict** _CIDR_
 > Restrict network communication to given CIDR
@@ -62,7 +68,7 @@ The tool is part of the go-ethereum (geth) project and implements the Node Disco
 
 # CAVEATS
 
-Bootnodes should have stable, publicly reachable IP addresses. The node key must be kept secure as it identifies the node. Bootnodes do not participate in blockchain consensus or store chain data.
+Bootnodes should have stable, publicly reachable IP addresses. The node key must be kept secure as it identifies the node. Bootnodes do not participate in blockchain consensus or store chain data. The **bootnode** utility was removed in go-ethereum v1.15.0 and is only available in older releases (last in the v1.14 series). Use **devp2p** from the same project instead, for example **devp2p key generate** and **devp2p discv5 listen**.
 
 # HISTORY
 
@@ -71,3 +77,13 @@ bootnode was developed as part of the **go-ethereum** project by the Ethereum Fo
 # SEE ALSO
 
 [geth](/man/geth)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ethereum/go-ethereum)```
+
+```[Homepage](https://geth.ethereum.org/)```
+
+```[Documentation](https://geth.ethereum.org/docs)```
+
+<!-- verified: 2026-11-09 -->

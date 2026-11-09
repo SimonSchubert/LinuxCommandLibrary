@@ -8,6 +8,10 @@ Declare floating-point shell variables
 
 ```float [myvar]=3.14```
 
+**Display in fixed-point** with 2 decimal places
+
+```float -F 2 [price]=19.99```
+
 **Declare multiple float variables**
 
 ```float [x]=1.5 [y]=2.7```
@@ -30,27 +34,48 @@ Declare floating-point shell variables
 
 # SYNOPSIS
 
-**float** [**-ghlrtux**] [_name_[=_value_]...]
+**float** [{**+**|**-**}**Hghlprtux**] [{**+**|**-**}**EFLRZ** [_n_]] [_name_[=_value_]...]
 
 # PARAMETERS
 
+**-E** [_n_]
+> Display in scientific notation with n significant figures (default: 10)
+
+**-F** [_n_]
+> Display in fixed-point notation with n digits after the decimal point (default: 10)
+
+**-L** [_n_]
+> Left-justify and remove leading blanks on expansion
+
+**-R** [_n_]
+> Right-justify on expansion
+
+**-Z** [_n_]
+> Right-justify with leading zeros on expansion
+
 **-g**
-> Create global variable when used inside a function
+> Do not restrict the parameter to local scope when used inside a function
+
+**-H**
+> Do not display the value when listing parameters
 
 **-h**
-> Hide variable; do not export to child processes even if exported in outer scope
+> Hide the special behavior of special parameters when made local
 
 **-l**
-> Left-justify and strip leading blanks
+> Convert the result to lower case on expansion
+
+**-p**
+> Print parameters and values as a typeset command
 
 **-r**
 > Make variable read-only
 
 **-t**
-> Tag the variable (user-defined attribute)
+> Tag the variable (for the user's own purposes)
 
 **-u**
-> Force uppercase on assignment (for string context)
+> Convert the result to upper case on expansion
 
 **-x**
 > Export variable to environment of child processes
@@ -62,13 +87,13 @@ Declare floating-point shell variables
 
 **float** is a zsh builtin command that declares variables with the floating-point attribute. It is equivalent to **typeset -E**, causing the variable to be stored and displayed in floating-point (scientific) notation.
 
-When a value is assigned to a float variable, zsh performs arithmetic evaluation, allowing expressions like `float x=1.0/3.0`. The result is stored as a double-precision floating-point number. Variables declared with float display in scientific notation by default (e.g., `3.1400000000000000e+00`).
+When a value is assigned to a float variable, zsh performs arithmetic evaluation, allowing expressions like `float x=1.0/3.0`. The result is stored as a double-precision floating-point number. Variables declared with float display in scientific notation by default (e.g., `3.140000000e+00`).
 
 Without arguments, **float** lists all currently declared floating-point variables and their values.
 
 # CAVEATS
 
-Only available in **zsh**; not a builtin in bash or other POSIX shells. Floating-point arithmetic is subject to the usual IEEE 754 precision limitations and rounding errors. Read-only float variables cannot be unset or modified.
+A **zsh** builtin; bash has no floating-point variables. Floating-point arithmetic is subject to the usual IEEE 754 precision limitations and rounding errors. Read-only float variables cannot be unset or modified.
 
 # HISTORY
 
@@ -77,3 +102,13 @@ The **float** builtin was introduced in **zsh** as a convenience shorthand for *
 # SEE ALSO
 
 [typeset](/man/typeset)(1), [declare](/man/declare)(1), [readonly](/man/readonly)(1), [zsh](/man/zsh)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/zsh-users/zsh)```
+
+```[Homepage](https://www.zsh.org/)```
+
+```[Documentation](https://zsh.sourceforge.io/Doc/Release/Shell-Builtin-Commands.html)```
+
+<!-- verified: 2026-11-09 -->

@@ -20,6 +20,14 @@ Kernel source symlink manager for Gentoo
 
 ```eselect kernel show```
 
+**Update** the symlink to the running kernel's sources
+
+```eselect kernel update```
+
+**Update** only if the symlink is not set
+
+```eselect kernel update ifunset```
+
 # SYNOPSIS
 
 **eselect kernel** _action_ [_options_]
@@ -35,6 +43,9 @@ Kernel source symlink manager for Gentoo
 **show**
 > Display the current symlink target
 
+**update** [**ifunset**]
+> Point the symlink at the sources of the running kernel. With **ifunset**, keep an existing valid symlink
+
 # DESCRIPTION
 
 **eselect kernel** is a module of the eselect framework that manages the /usr/src/linux symlink on Gentoo systems. This symlink is critical as it determines which kernel source tree is used when building external kernel modules, configuring the kernel, or compiling software that needs kernel headers.
@@ -43,8 +54,18 @@ When multiple kernel source versions are installed (common during kernel upgrade
 
 # CAVEATS
 
-Gentoo Linux specific. Requires kernel sources to be installed via emerge. Changes affect kernel module compilation paths. Does not affect the currently running kernel, only which source tree is pointed to by /usr/src/linux.
+Gentoo Linux specific. Requires kernel sources to be installed via emerge. Changing the symlink requires root. Changes affect kernel module compilation paths. Does not affect the currently running kernel, only which source tree is pointed to by /usr/src/linux.
 
 # SEE ALSO
 
-[eselect](/man/eselect)(1), [emerge](/man/emerge)(1)
+[eselect](/man/eselect)(1), [emerge](/man/emerge)(1), [genkernel](/man/genkernel)(8)
+
+# RESOURCES
+
+```[Source code](https://gitweb.gentoo.org/proj/eselect.git)```
+
+```[Homepage](https://wiki.gentoo.org/wiki/Project:Eselect)```
+
+```[Documentation](https://wiki.gentoo.org/wiki/Kernel/Upgrade)```
+
+<!-- verified: 2026-11-09 -->

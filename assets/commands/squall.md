@@ -16,9 +16,21 @@ TUI SQLite viewer and editor
 
 **squall** [**-f** _database_path_]
 
+# PARAMETERS
+
+**-f**, **--filepath** _PATH_
+> Path to a SQLite database to load.
+
+**-h**, **--help**
+> Show the help message and exit.
+
 # DESCRIPTION
 
-**squall** is a terminal-based SQLite database viewer and editor. It displays tables and query results in panes with syntax highlighting, supports browsing tables, executing SQL queries, and editing records directly. It has a minimal resource footprint.
+**squall** is a terminal-based SQLite database viewer and editor. It displays tables and query results in panes with syntax highlighting, supports browsing tables, executing SQL queries, and editing records directly.
+
+# CAVEATS
+
+The upstream README documents the long option as **--filename**, but the program's argument parser defines **--filepath**. The short form **-f** avoids the mismatch. The package is published on PyPI as **squall_sql**, while the command is **squall**.
 
 # HISTORY
 
@@ -27,3 +39,9 @@ TUI SQLite viewer and editor
 # SEE ALSO
 
 [litecli](/man/litecli)(1), [sqlite3](/man/sqlite3)(1), [sqlit](/man/sqlit)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/driscollis/squall)```
+
+<!-- verified: 2026-11-09 -->

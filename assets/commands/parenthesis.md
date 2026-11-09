@@ -42,7 +42,7 @@ Parentheses **( )** in shell have several distinct uses depending on context:
 
 **Command substitution**: **$(...)** captures command output.
 
-**Arithmetic**: **((...))** performs arithmetic evaluation, **$((...))** expands to the result.
+**Arithmetic**: **((...))** performs arithmetic evaluation, **$((...))** expands to the result. **$((...))** is POSIX, while **((...))** is a bash/zsh/ksh extension.
 
 # SUBSHELL BEHAVIOR
 
@@ -69,7 +69,9 @@ result=$(( a * b ))         # Capture result
 
 Subshells have overhead from process creation. For simple grouping without isolation, use braces **{ ...; }** instead.
 
-**{ }** grouping requires a space after **{** and semicolon before **}**; parentheses don't.
+**{ }** grouping requires a space after **{** and a semicolon or newline before **}**; parentheses don't.
+
+**((...))** returns exit status 1 when the expression evaluates to 0, which stops scripts running under **set -e**.
 
 Subshell exit status is visible to parent, but variable changes are not.
 
@@ -78,3 +80,9 @@ Nested parentheses may need careful quoting to avoid syntax issues.
 # SEE ALSO
 
 [bash](/man/bash)(1), [sh](/man/sh)(1), [test](/man/test)(1)
+
+# RESOURCES
+
+```[Documentation](https://www.gnu.org/software/bash/manual/bash.html#Command-Grouping)```
+
+<!-- verified: 2026-11-09 -->

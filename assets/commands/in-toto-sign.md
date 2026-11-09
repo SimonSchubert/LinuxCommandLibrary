@@ -12,9 +12,13 @@ adds cryptographic signatures to in-toto metadata files
 
 ```in-toto-sign -k [key] -f [root.layout]```
 
-**Append** signature to existing signatures
+**Append** signature to a layout's existing signatures
 
-```in-toto-sign -k [key] -f [file] -a```
+```in-toto-sign -k [key] -f [root.layout] -a```
+
+**Sign a layout with several keys** at once
+
+```in-toto-sign -k [key1] [key2] -f [unsigned.layout] -o [root.layout]```
 
 **Output** signed metadata to a specific file
 
@@ -30,24 +34,27 @@ adds cryptographic signatures to in-toto metadata files
 
 # SYNOPSIS
 
-**in-toto-sign** [_options_]
+**in-toto-sign** **-f** _file_ { **-k** _path_ ... | **-g** [_keyid_ ...] } [_options_]
 
 # PARAMETERS
 
-**-k** _KEY_
-> Private signing key file.
+**-k**, **--key** _PATH_ ...
+> Key files used to sign (PEM/PKCS8) or verify (PEM/subjectPublicKeyInfo).
 
-**-f** _FILE_
-> File to sign (link or layout).
+**-p**, **--prompt**
+> Prompt for the signing key decryption password.
+
+**-f**, **--file** _FILE_
+> File to sign or verify (link or layout). Required.
 
 **-a**, **--append**
-> Append signature instead of replacing.
+> Append signature instead of replacing. Layout metadata only.
 
-**-o** _OUTPUT_
-> Output file path.
+**-o**, **--output** _OUTPUT_
+> Output file path. By default, a layout is written to the input path and a link to NAME.KEYID-PREFIX.link.
 
-**-g** [_KEYID ..._]
-> GPG keyids used to sign or verify
+**-g**, **--gpg** [_KEYID ..._]
+> GPG keyids used to sign or verify. Without keyids, the default GPG key is used for signing.
 
 **--gpg-home** _PATH_
 > GPG home directory path
@@ -55,10 +62,10 @@ adds cryptographic signatures to in-toto metadata files
 **--verify**
 > Verify signatures instead of signing
 
-**-v**
+**-v**, **--verbose**
 > Verbose output
 
-**-q**
+**-q**, **--quiet**
 > Quiet output
 
 **--version**
@@ -71,11 +78,11 @@ adds cryptographic signatures to in-toto metadata files
 
 **in-toto-sign** adds cryptographic signatures to in-toto metadata files. It signs both link files from build steps and layout files that define supply chain policies.
 
-Multiple signatures can be added for multi-party verification. The tool supports GPG and PEM key formats.
+It is useful to re-sign metadata when changing keys, or to sign unsigned links such as those from **in-toto-mock**. Layouts can carry multiple signatures for threshold signing. The tool supports GPG and PEM key formats.
 
 # CAVEATS
 
-Part of in-toto framework. Requires compatible key format. Signatures must match verification keys.
+Part of in-toto framework. Link metadata can only be signed by one key at a time. **--key** and **--gpg** are mutually exclusive. **--verify** cannot be combined with **--append** or **--output**, and GPG verification requires an explicit keyid.
 
 # HISTORY
 
@@ -84,3 +91,13 @@ in-toto-sign is part of **in-toto**, developed at **NYU** Secure Systems Lab for
 # SEE ALSO
 
 [in-toto-run](/man/in-toto-run)(1), [in-toto-record](/man/in-toto-record)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/in-toto/in-toto)```
+
+```[Homepage](https://in-toto.io/)```
+
+```[Documentation](https://in-toto.readthedocs.io/en/latest/command-line-tools/in-toto-sign.html)```
+
+<!-- verified: 2026-11-09 -->

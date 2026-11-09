@@ -16,6 +16,10 @@ Argos Translate package manager for offline translation models
 
 ```argospm install [translate-en_es]```
 
+**Install all** available translation packages
+
+```argospm install translate```
+
 **List** installed translation packages
 
 ```argospm list```
@@ -34,10 +38,10 @@ Argos Translate package manager for offline translation models
 > Download the remote package index from the Argos Translate package repository.
 
 **search**
-> Search for available translation packages in the remote index. Use **--from-lang** and **--to-lang** to filter by language pair.
+> Search for available translation packages in the remote index. Use **-f**/**--from-lang** and **-t**/**--to-lang** to filter by ISO 639-1 language code.
 
 **install**
-> Install a translation package by name (e.g., translate-en_es).
+> Install a translation package by name (e.g., translate-en_es). The name **translate** installs all packages.
 
 **list**
 > List all currently installed translation packages.
@@ -56,7 +60,7 @@ Each package provides translation between a specific source and target language.
 
 # CAVEATS
 
-Translation packages can be large as they contain neural network models. The package index must be updated with **argospm update** before searching or installing new packages. Quality varies between language pairs — well-resourced language pairs like English-Spanish have better translation quality than less common pairs.
+Translation packages can be large as they contain neural network models. The package index must be updated with **argospm update** before searching or installing new packages. Quality varies between language pairs: well-resourced language pairs like English-Spanish have better translation quality than less common pairs.
 
 # HISTORY
 
@@ -65,3 +69,13 @@ Translation packages can be large as they contain neural network models. The pac
 # SEE ALSO
 
 [argos-translate](/man/argos-translate)(1), [trans](/man/trans)(1), [pip](/man/pip)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/argosopentech/argos-translate)```
+
+```[Homepage](https://www.argosopentech.com/)```
+
+```[Documentation](https://argos-translate.readthedocs.io/en/latest/)```
+
+<!-- verified: 2026-11-09 -->

@@ -22,7 +22,7 @@ Manage encrypted Elasticsearch secure settings
 
 **Add setting from stdin**
 
-```echo "[value]" | elasticsearch-keystore add --stdin [setting.name]```
+```echo -n "[value]" | elasticsearch-keystore add --stdin [setting.name]```
 
 **Add setting from file**
 
@@ -40,6 +40,10 @@ Manage encrypted Elasticsearch secure settings
 
 ```elasticsearch-keystore upgrade```
 
+**Change the keystore password**
+
+```elasticsearch-keystore passwd```
+
 # SYNOPSIS
 
 **elasticsearch-keystore** _command_ [_options_]
@@ -52,17 +56,17 @@ Manage encrypted Elasticsearch secure settings
 **list**
 > List entries in keystore.
 
-**add**
-> Add setting (prompts for value).
+**add** _settings_...
+> Add one or more settings (prompts for values).
 
-**add-file**
-> Add setting from file.
+**add-file** (_setting_ _path_)...
+> Add one or more settings from files.
 
-**remove**
-> Remove setting.
+**remove** _settings_...
+> Remove one or more settings.
 
-**show**
-> Display setting value.
+**show** [**-o** _file_] _setting_
+> Display the value of a single setting.
 
 **has-passwd**
 > Check if keystore is password-protected.
@@ -71,21 +75,21 @@ Manage encrypted Elasticsearch secure settings
 > Upgrade keystore format.
 
 **passwd**
-> Change keystore password.
+> Change or set the keystore password.
 
 # PARAMETERS
 
-**--stdin**
-> Read setting value from stdin (used with add).
+**-x**, **--stdin**
+> Read setting values from stdin, separated by newlines (used with add).
 
 **-f**, **--force**
-> Overwrite existing setting without prompting.
+> Overwrite existing settings without prompting (used with add). Also creates an obfuscated keystore if none exists.
 
 **-p**
-> Prompt for password when creating keystore.
+> Prompt for a password when creating the keystore. Without one the keystore is only obfuscated.
 
-**-o** _file_
-> Output file (used with show).
+**-o**, **--output** _file_
+> Write the setting to a file (used with show).
 
 **-h**, **--help**
 > Display help.
@@ -100,7 +104,20 @@ Manage encrypted Elasticsearch secure settings
 
 **elasticsearch-keystore** manages the secure settings keystore for Elasticsearch. Stores sensitive configuration like passwords and API keys in encrypted form.
 
+# CAVEATS
+
+Run as the user that runs Elasticsearch. Secure settings are node-specific, so run the command on every node. Changes take effect after a restart unless the setting is reloadable. Settings are not validated, so unsupported ones can stop Elasticsearch from starting. Shell quoting matters: quotes around a value become part of it.
+
 # SEE ALSO
 
 [elasticsearch](/man/elasticsearch)(1), [elasticsearch-certutil](/man/elasticsearch-certutil)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/elastic/elasticsearch)```
+
+```[Homepage](https://www.elastic.co/elasticsearch)```
+
+```[Documentation](https://www.elastic.co/docs/reference/elasticsearch/command-line-tools/elasticsearch-keystore)```
+
+<!-- verified: 2026-11-09 -->

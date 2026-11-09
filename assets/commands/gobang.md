@@ -33,44 +33,78 @@ Cross-platform TUI database management tool
 
 # DESCRIPTION
 
-**gobang** is a cross-platform terminal-based database management tool written in Rust, supporting MySQL, PostgreSQL, and SQLite. It provides an interactive TUI for browsing databases, running queries, and managing tables.
+**gobang** is a cross-platform terminal-based database management tool written in Rust, supporting MySQL, PostgreSQL, and SQLite. It provides a keyboard-only TUI for browsing databases, tables, and records, with filtering and cell copying.
 
-Database connections are configured in a TOML config file (default: **~/.config/gobang/config.toml**). The tool features a SQL editor with syntax highlighting and result display in table format.
+# CONFIGURATION
+
+Connections are defined in **~/.config/gobang/config.toml** (**%APPDATA%/gobang/config.toml** on Windows).
+
+```
+[[conn]]
+type = "mysql"
+user = "root"
+host = "localhost"
+port = 3306
+database = "foo"
+name = "mysql Foo DB"
+
+[[conn]]
+type = "sqlite"
+path = "/path/to/baz.db"
+```
 
 # KEYBINDINGS
 
-**↑/↓**
-> Navigate tables/columns
+**h**, **j**, **k**, **l**
+> Scroll left/down/up/right
 
-**Enter**
-> Select table/view columns
+**Ctrl-u**, **Ctrl-d**
+> Scroll up/down multiple lines
 
-**Tab**
-> Switch between panels
+**g**, **G**
+> Scroll to top/bottom
 
-**e**
-> Edit connection
+**H**, **J**, **K**, **L**
+> Extend selection by one cell
 
-**d**
-> Delete record
+**y**
+> Copy a cell value
 
-**q**
-> Quit
+**←**, **→**
+> Move focus left/right
 
-**>**
-> Open query editor
+**c**
+> Move focus to connections
+
+**/**
+> Filter
+
+**1**-**5**
+> Switch to records/columns/constraints/foreign keys/indexes tab
+
+**Esc**
+> Hide popup
 
 **?**
 > Show help
 
+**q**
+> Quit
+
 # CAVEATS
 
-Requires database credentials. Large query results may impact performance. Some database-specific features may not be supported.
+Still in alpha, with no release since 0.1.0-alpha.5 and little development since 2023. Connections must be added by editing the config file. The unreleased main branch adds extra tabs and changes the number key assignments.
 
 # HISTORY
 
-**gobang** was created as a universal terminal-based database client, similar to GUI tools like DBeaver but for the terminal.
+**gobang** was created by **Takayuki Maeda** (TaKO8Ki). The name refers to the Japanese game played on a goban, whose grid resembles a table.
 
 # SEE ALSO
 
 [psql](/man/psql)(1), [mysql](/man/mysql)(1), [litecli](/man/litecli)(1), [pgcli](/man/pgcli)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/TaKO8Ki/gobang)```
+
+<!-- verified: 2026-11-09 -->

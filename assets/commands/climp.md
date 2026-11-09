@@ -32,6 +32,10 @@ Command-line interface music player
 
 ```climp --current```
 
+**Discover** media files and play them
+
+```climp-discoverer [~/Music] | sort -V | climp --stdin --play```
+
 **Quit** the daemon
 
 ```climp --quit```
@@ -42,10 +46,10 @@ Command-line interface music player
 
 # PARAMETERS
 
-**--play** [_args_]
+**--play** [_args_], **-p**
 > Start playback. Arguments can be media files, .m3u/.txt playlists, URIs, or a playlist index (0-based, negative indices supported).
 
-**--add** [_files_]
+**--add** [_files_], **-a**
 > Add media files or playlists to the current playlist.
 
 **--playlist** [_args_]
@@ -66,8 +70,8 @@ Command-line interface music player
 **--volume** [_int_], **-v**
 > Get or set the volume level.
 
-**--seek** _time_
-> Seek to a position. Formats: m:ss, m.ss, or seconds.
+**--seek** [_time_]
+> Seek to a position, or print the current position when no argument is given. Formats: m:ss, m.ss, m,ss, or seconds.
 
 **--speed** [_float_]
 > Get or set the playback speed.
@@ -93,17 +97,29 @@ Command-line interface music player
 **--sort**
 > Sort the playlist alphabetically by file path.
 
-**--stdin**, **-i**
+**--stdin**
 > Read playlist entries from stdin for piping.
+
+**--files**
+> Print all files in the current playlist.
+
+**--uris**
+> Print the URI of each file in the playlist.
+
+**--config**
+> Print the climpd configuration.
 
 **--quit**, **-q**
 > Shut down the climpd daemon.
+
+**--help**
+> Print the help message.
 
 # DESCRIPTION
 
 **climp** is a lightweight terminal-based music player written in C that uses a client-daemon architecture. The **climp** binary is a thin client that sends commands over a Unix domain socket to **climpd**, the background daemon that handles actual audio playback via GStreamer. If the daemon is not running when a command is issued, climp automatically spawns it. It supports local media files, network streams (web radio), and playlist management (.m3u and .txt formats).
 
-A companion utility **climp-discover** recursively discovers media files in directories for piping into climp.
+A companion utility **climp-discoverer** recursively discovers media files in directories for piping into climp.
 
 # CONFIGURATION
 
@@ -115,8 +131,14 @@ Cannot run as root. Requires GStreamer and its plugins for codec support. The pr
 
 # HISTORY
 
-**climp** was created by **Steffen Nuessl** in **February 2014**. Written in C and licensed under GPL-3.0. The repository accumulated 153 commits and was last active around January 2016. Developed and tested on Arch Linux and Debian Jessie.
+**climp** was created by **Steffen Nuessl** in **February 2014**. Written in C and licensed under GPL-3.0. The repository accumulated 153 commits and was last active in March 2016. Developed and tested on Arch Linux and Debian Jessie.
 
 # SEE ALSO
 
 [cmus](/man/cmus)(1), [moc](/man/moc)(1), [mpd](/man/mpd)(1), [mpc](/man/mpc)(1), [mpv](/man/mpv)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/stnuessl/climp)```
+
+<!-- verified: 2026-11-09 -->

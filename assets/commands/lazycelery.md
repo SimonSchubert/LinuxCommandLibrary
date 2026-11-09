@@ -38,10 +38,25 @@ TUI for monitoring and managing Celery workers and tasks
 
 # PARAMETERS
 
-**--broker** _URL_
+**init**
+> Run interactive configuration setup.
+
+**config**
+> Show the current configuration.
+
+**set-broker** _URL_
+> Set the broker URL in the configuration.
+
+**set-refresh** _MS_
+> Set the UI refresh interval in milliseconds.
+
+**-b**, **--broker** _URL_
 > Override the broker URL for this session.
 
-**--config** _FILE_
+**--result-backend** _URL_
+> Set the result backend URL.
+
+**-c**, **--config** _FILE_
 > Use a custom configuration file.
 
 # DESCRIPTION
@@ -50,9 +65,38 @@ TUI for monitoring and managing Celery workers and tasks
 
 Features include real-time worker monitoring, queue management with message counts, task listing with status tracking, search and filter capabilities, task retry and revoke functionality, and queue purge operations.
 
+# KEYBINDINGS
+
+**Tab**
+> Switch between Workers/Queues/Tasks
+
+**↑/↓**, **j/k**
+> Navigate items
+
+**/**
+> Search
+
+**Enter**, **d**
+> Show task details
+
+**r**
+> Retry task
+
+**x**
+> Revoke task
+
+**p**
+> Purge queue
+
+**?**
+> Show help
+
+**q**
+> Quit
+
 # CAVEATS
 
-Currently supports Redis-based Celery brokers. Requires a running Celery infrastructure to connect to. Install via `cargo install lazycelery` or Homebrew.
+Accepts **redis://**, **amqp://**, and **rabbitmq://** broker URLs; other schemes are rejected. Requires a running Celery infrastructure to connect to.
 
 # HISTORY
 
@@ -60,4 +104,10 @@ Currently supports Redis-based Celery brokers. Requires a running Celery infrast
 
 # SEE ALSO
 
-[lazydocker](/man/lazydocker)(1)
+[lazydocker](/man/lazydocker)(1), [lazygit](/man/lazygit)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Fguedes90/lazycelery)```
+
+<!-- verified: 2026-11-09 -->

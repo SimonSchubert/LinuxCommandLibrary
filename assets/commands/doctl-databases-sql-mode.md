@@ -12,9 +12,13 @@ manage MySQL SQL mode settings
 
 ```doctl databases sql-mode set [cluster_id] [ANSI_QUOTES] [STRICT_TRANS_TABLES]```
 
-**Set SQL mode with output format**
+**Show only the mode names**, without headers
 
-```doctl databases sql-mode get [cluster_id] --format [SQLMode]```
+```doctl databases sql-mode get [cluster_id] --format Name --no-header```
+
+**Output as JSON**
+
+```doctl databases sql-mode get [cluster_id] -o json```
 
 # SYNOPSIS
 
@@ -23,18 +27,21 @@ manage MySQL SQL mode settings
 # SUBCOMMANDS
 
 **get**
-> Get current SQL mode for a MySQL database cluster.
+> Get current SQL mode for a MySQL database cluster (alias: g).
 
 **set**
-> Set SQL mode for a MySQL database cluster. Provide one or more modes as space-separated arguments.
+> Set SQL mode for a MySQL database cluster. Provide one or more modes as space-separated arguments (alias: s).
 
 # PARAMETERS
 
 **--format** _columns_
-> Columns for output in a comma-separated list.
+> Columns for output in a comma-separated list. Possible value: Name.
 
 **--no-header**
 > Return raw data with no headers.
+
+**-o**, **--output** _format_
+> Output format: text (default) or json.
 
 # DESCRIPTION
 
@@ -47,3 +54,11 @@ Setting SQL modes replaces the existing configuration entirely rather than appen
 # SEE ALSO
 
 [doctl-databases](/man/doctl-databases)(1), [doctl](/man/doctl)(1), [mysql](/man/mysql)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/digitalocean/doctl)```
+
+```[Documentation](https://docs.digitalocean.com/reference/doctl/reference/databases/sql-mode/)```
+
+<!-- verified: 2026-11-09 -->

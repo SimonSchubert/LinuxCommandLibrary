@@ -1,37 +1,68 @@
 # TAGLINE
 
-Run a shell command string through Bun's built-in shell
+Scaffold new projects from templates (alias of bun create)
 
 # TLDR
 
-**Run a shell command**
+**Create a project from a template**
 
-```bun -c "[shell command]"```
+```bun c [template] [destination]```
 
-**Run a pipeline**
+**Create from a GitHub repository**
 
-```bun -c "cat [file.txt] | grep [pattern]"```
+```bun c [github-user/repo] [destination]```
 
-**Run with environment from .env file**
+**Create without installing dependencies**
 
-```bun -c "[command]" --env-file [.env]```
+```bun c [template] [destination] --no-install```
+
+**Create without initializing Git**
+
+```bun c [template] [destination] --no-git```
+
+**Overwrite existing files**
+
+```bun c [template] [destination] --force```
 
 # SYNOPSIS
 
-**bun** **-c** _command_ [_options_]
+**bun c** _template_ [_destination_] [_options_]
 
 # PARAMETERS
 
-**-c** _command_
-> Execute the given command string using Bun's built-in shell.
+**--force**
+> Overwrite existing files.
 
-**--env-file** _file_
-> Load environment variables from the specified file before executing.
+**--no-install**
+> Skip installing node_modules and tasks.
+
+**--ignore-scripts**
+> Skip tasks and lifecycle scripts.
+
+**--no-git**
+> Do not initialize a Git repository.
+
+**--open**
+> Start and open in the browser after finishing.
 
 # DESCRIPTION
 
-**bun -c** runs a shell command string, similar to **sh -c** but using Bun's built-in cross-platform shell implementation. It supports common shell features like pipes, redirects, and environment variable expansion. It can load environment variables from **.env** files before executing the command, making it useful for running scripts that depend on environment configuration without additional tooling.
+**bun c** is a short alias of **bun create**. It scaffolds a new project from a React component, an npm package named **create-**_template_, a GitHub repository, or a local template.
+
+# CAVEATS
+
+**bun c** is a subcommand. The flag **bun -c** is unrelated: it is short for **--config** and sets the path to the Bun configuration file.
 
 # SEE ALSO
 
-[bun](/man/bun)(1), [bun-run](/man/bun-run)(1), [bun-x](/man/bun-x)(1), [sh](/man/sh)(1)
+[bun](/man/bun)(1), [bun-create](/man/bun-create)(1), [bun-x](/man/bun-x)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/oven-sh/bun)```
+
+```[Homepage](https://bun.com/)```
+
+```[Documentation](https://bun.com/docs/runtime/templating/create)```
+
+<!-- verified: 2026-11-09 -->

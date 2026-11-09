@@ -36,10 +36,22 @@ Diagramming and flowcharting application
 
 Calligra Flow supports ODF (Open Document Format) for vector graphics and is the KDE equivalent of Microsoft Visio.
 
+# CAVEATS
+
+Flow was dropped in Calligra 3.0 and is no longer in the Calligra source tree, so it is only available from Calligra 2.x packages.
+
 # HISTORY
 
-Calligra Flow was originally named **Kivio**. It is part of the **Calligra Suite**, a free and open source office suite by KDE.
+Calligra Flow was originally named **Kivio**. It was part of the **Calligra Suite**, a free and open source office suite by KDE, until the 3.0 release cut back the number of applications.
 
 # SEE ALSO
 
 [calligrawords](/man/calligrawords)(1), [calligrasheets](/man/calligrasheets)(1), [dia](/man/dia)(1), [inkscape](/man/inkscape)(1)
+
+# RESOURCES
+
+```[Source code](https://invent.kde.org/office/calligra)```
+
+```[Homepage](https://calligra.org/)```
+
+<!-- verified: 2026-11-09 -->

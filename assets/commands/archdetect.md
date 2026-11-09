@@ -31,7 +31,8 @@ architecture/subarchitecture
 
 Examples:
 - amd64/generic
-- i386/686
+- amd64/efi
+- amd64/mac
 - arm64/generic
 
 # CAVEATS
@@ -40,8 +41,14 @@ Specific to Debian-based systems. Output format is for installer use, not genera
 
 # HISTORY
 
-**archdetect** was created for the Debian installer to standardize architecture detection across installation media.
+**archdetect** is part of the **hw-detect** source package of the Debian installer, created to standardize architecture detection across installation media.
 
 # SEE ALSO
 
 [arch](/man/arch)(1), [uname](/man/uname)(1), [dpkg](/man/dpkg)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/installer-team/hw-detect)```
+
+<!-- verified: 2026-11-09 -->

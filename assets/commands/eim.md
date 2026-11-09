@@ -12,6 +12,10 @@ ESP-IDF Installation Manager
 
 ```eim install -i [v5.3.2] -n false```
 
+**Run the interactive installer wizard**
+
+```eim wizard```
+
 **List installed ESP-IDF versions**
 
 ```eim list```
@@ -28,6 +32,18 @@ ESP-IDF Installation Manager
 
 ```eim remove [version]```
 
+**Run a command** in an ESP-IDF environment
+
+```eim run "[idf.py build]" [version]```
+
+**Open a shell** with an ESP-IDF environment activated
+
+```eim shell [version]```
+
+**Repair an installation**
+
+```eim fix -p [path/to/esp-idf]```
+
 # SYNOPSIS
 
 **eim** _command_ [_options_]
@@ -35,10 +51,13 @@ ESP-IDF Installation Manager
 # PARAMETERS
 
 _COMMAND_
-> Operation: install, list, select, rename, remove, run, purge.
+> Operation: install, wizard, list, list-tools, list-features, select, rename, remove, fix, purge, import, run, shell, completions.
 
-**install** [**-i** _version_]
-> Install an ESP-IDF version. Runs non-interactively (headless) by default.
+**install** [**-i** _versions_]
+> Install one or more comma-separated ESP-IDF versions. Runs non-interactively (headless) by default.
+
+**wizard**
+> Run the interactive installer wizard. Accepts the same options as install.
 
 **list**
 > List installed ESP-IDF versions.
@@ -52,14 +71,38 @@ _COMMAND_
 **remove** _version_
 > Remove a specific ESP-IDF version.
 
-**run** _version_ _command_
-> Run a command in the context of a specific ESP-IDF version.
+**run** _command_ [_version_]
+> Run a command in the context of an ESP-IDF version (default: the selected one). Quote commands that contain spaces or shell characters.
+
+**shell** [_version_]
+> Start an interactive shell with the environment of an ESP-IDF version activated.
+
+**fix** [**-p** _path_]
+> Repair an existing installation by reinstalling its tools and dependencies.
 
 **purge**
 > Remove all ESP-IDF installations.
 
-**-n** _bool_
-> Set interactive mode (true/false, default: true for headless install).
+**-i**, **--idf-versions** _versions_
+> ESP-IDF versions to install (comma-separated).
+
+**-p**, **--path** _path_
+> Base path for all installed files and folders.
+
+**-t**, **--target** _targets_
+> Target platforms (comma-separated).
+
+**-c**, **--config** _file_
+> Path to a configuration file.
+
+**-m**, **--mirror** _url_
+> Mirror for tool downloads instead of github.com.
+
+**--idf-mirror** _url_
+> Mirror for ESP-IDF downloads instead of github.com.
+
+**-n**, **--non-interactive** _bool_
+> Non-interactive mode (default: true). Set to false to run interactively.
 
 **--help**
 > Display help information.
@@ -80,4 +123,12 @@ Requires build dependencies for the ESP-IDF toolchain. Installation may take sig
 
 # SEE ALSO
 
-[asdf](/man/asdf)(1)
+[esptool](/man/esptool)(1), [asdf](/man/asdf)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/espressif/idf-im-ui)```
+
+```[Documentation](https://docs.espressif.com/projects/idf-im-ui/en/latest/)```
+
+<!-- verified: 2026-11-09 -->

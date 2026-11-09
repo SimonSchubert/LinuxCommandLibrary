@@ -6,19 +6,19 @@ displays the configuration of a Proxmox LXC container
 
 **Show** container configuration
 
-```pct config 100```
+```pct config [100]```
 
 Show **current** running config
 
-```pct config 100 --current```
+```pct config [100] --current```
 
 Show **snapshot** configuration
 
-```pct config 100 --snapshot snapshot_name```
+```pct config [100] --snapshot [snapshot_name]```
 
 # SYNOPSIS
 
-**pct config** [_OPTIONS_] _vmid_
+**pct config** _vmid_ [_OPTIONS_]
 
 # DESCRIPTION
 
@@ -46,3 +46,13 @@ The default output shows saved configuration with pending changes. Use **--curre
 # SEE ALSO
 
 [pct](/man/pct)(1), [pct-set](/man/pct-set)(1), [pct-list](/man/pct-list)(1), [pct-status](/man/pct-status)(1)
+
+# RESOURCES
+
+```[Source code](https://git.proxmox.com/?p=pve-container.git)```
+
+```[Homepage](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview)```
+
+```[Documentation](https://pve.proxmox.com/pve-docs/pct.1.html)```
+
+<!-- verified: 2026-11-09 -->

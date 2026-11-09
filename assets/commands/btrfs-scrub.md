@@ -24,13 +24,21 @@ Start in **foreground**
 
 ```sudo btrfs scrub start -B path/to/mount```
 
+Start with a per-device **throughput limit**
+
+```sudo btrfs scrub start --limit [100M] path/to/mount```
+
+Show the current **limits**
+
+```sudo btrfs scrub limit path/to/mount```
+
 Start in **quiet** mode
 
-```sudo btrfs scrub start -q path/to/mount```
+```sudo btrfs -q scrub start path/to/mount```
 
 # SYNOPSIS
 
-**btrfs scrub** _command_ [_OPTIONS_] _path_
+**btrfs scrub** _command_ [_OPTIONS_] _path_|_device_
 
 # DESCRIPTION
 
@@ -48,13 +56,13 @@ Start in **quiet** mode
 > Cancel a running scrub
 
 **resume**
-> Resume a cancelled scrub
+> Resume a cancelled or interrupted scrub
+
+**limit**
+> Show or set per-device scrub limits. Use **-a**, **--all** or **-d**, **--devid** _id_ to select devices and **-l**, **--limit** _size_ to set the limit (0 resets to unlimited).
 
 **-B**
-> Do not run in background (foreground mode)
-
-**-q, --quiet**
-> Suppress errors and statistics output
+> Do not run in background (foreground mode) and print statistics when finished
 
 **-r**
 > Read-only mode - do not attempt repairs
@@ -63,11 +71,17 @@ Start in **quiet** mode
 > Print separate statistics for each device in the filesystem
 
 **-R**
-> Raw print mode - print statistics without units
+> Raw print mode - print full data instead of a summary
+
+**--limit** _limit_
+> Set the throughput limit per device for this scrub, in bytes per second with optional KMGT suffix
+
+**-f**
+> Force starting a new scrub even if one is reported as running, for example when the status file is damaged
 
 # CAVEATS
 
-Scrub can be I/O intensive and may impact system performance. On RAID configurations, scrub can repair errors from redundant copies. Single-disk setups can detect but not repair errors.
+Scrub can be I/O intensive and may impact system performance. On RAID configurations, scrub can repair errors from redundant copies. Single-disk setups can detect but not repair errors. The **scrub start -q** option is deprecated in favor of the global **btrfs -q**.
 
 # HISTORY
 
@@ -76,3 +90,11 @@ Scrub can be I/O intensive and may impact system performance. On RAID configurat
 # SEE ALSO
 
 [btrfs](/man/btrfs)(8), [btrfs-balance](/man/btrfs-balance)(8), [btrfs-check](/man/btrfs-check)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/kdave/btrfs-progs)```
+
+```[Documentation](https://btrfs.readthedocs.io/en/latest/btrfs-scrub.html)```
+
+<!-- verified: 2026-11-09 -->

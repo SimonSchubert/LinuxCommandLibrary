@@ -38,7 +38,7 @@ Descriptive statistics calculator for CSV columns
 
 # SYNOPSIS
 
-**csvstat** [_options_] _file_
+**csvstat** [_options_] [_file_]
 
 # DESCRIPTION
 
@@ -48,8 +48,8 @@ The tool reports counts, unique values, min/max, mean, median, standard deviatio
 
 # PARAMETERS
 
-**-c** _columns_
-> Columns to analyze.
+**-c**, **--columns** _columns_
+> Comma-separated column indices, names or ranges to examine (e.g. 1,id,3-5). Defaults to all columns.
 
 **--type**
 > Show column data types only.
@@ -75,6 +75,9 @@ The tool reports counts, unique values, min/max, mean, median, standard deviatio
 **--freq**
 > Show frequent values only.
 
+**--freq-count** _n_
+> Maximum number of frequent values to display.
+
 **--count**
 > Show row count only.
 
@@ -82,10 +85,16 @@ The tool reports counts, unique values, min/max, mean, median, standard deviatio
 > Show sum values only.
 
 **--len**
-> Show max string length only.
+> Show the length of the longest values only.
+
+**--max-precision**
+> Show the most decimal places only.
 
 **--nulls**
-> Show null value counts only.
+> Show whether columns contain nulls only.
+
+**--non-nulls**
+> Show counts of non-null values only.
 
 **--csv**
 > Output results as CSV table.
@@ -93,19 +102,31 @@ The tool reports counts, unique values, min/max, mean, median, standard deviatio
 **--json**
 > Output results as JSON.
 
-**-n**
+**-i**, **--indent** _n_
+> Indent JSON output by this many spaces.
+
+**-n**, **--names**
 > Show column names and indices only.
 
-**-d** _char_
+**--decimal-format** _format_
+> %-format specification for printing decimal numbers (default: %.3f).
+
+**-G**, **--no-grouping-separator**
+> Do not use grouping separators in decimal numbers.
+
+**-d**, **--delimiter** _char_
 > Field delimiter.
 
-**-e** _encoding_
+**-e**, **--encoding** _encoding_
 > Character encoding of the input file.
 
-**-y** _n_
-> Sniff limit for type detection (0 to disable).
+**-H**, **--no-header-row**
+> Input has no header row.
 
-**-I**
+**-y**, **--snifflimit** _n_
+> Limit CSV dialect sniffing to n bytes (0 disables sniffing, -1 sniffs the entire file).
+
+**-I**, **--no-inference**
 > Disable type inference; treat all columns as text.
 
 # CAVEATS
@@ -119,3 +140,11 @@ Loads entire file into memory. Large files can be slow. Type detection may miscl
 # SEE ALSO
 
 [csvcut](/man/csvcut)(1), [csvlook](/man/csvlook)(1), [csvclean](/man/csvclean)(1), [wc](/man/wc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/wireservice/csvkit)```
+
+```[Documentation](https://csvkit.readthedocs.io/en/latest/scripts/csvstat.html)```
+
+<!-- verified: 2026-11-09 -->

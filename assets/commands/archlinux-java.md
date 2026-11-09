@@ -47,11 +47,14 @@ Switch between installed Java environments on Arch Linux
 > Remove the default Java environment setting
 
 **fix**
-> Fix an invalid or broken default Java environment configuration. If no default is set, looks for valid environments and sets one automatically, preferring OpenJDK.
+> Fix an invalid or broken default Java environment configuration. If no default is set, looks for valid environments and sets one automatically, preferring OpenJDK 8.
+
+**help**
+> Display usage information.
 
 # CAVEATS
 
-Requires root privileges for **set**, **unset**, and **fix** commands. Java environments are installed in /usr/lib/jvm/. Changes take effect for new shell sessions. The JAVA_ENV argument for **set** must match the directory name under /usr/lib/jvm/ (e.g., java-17-openjdk, java-21-openjdk).
+Requires root privileges for **set**, **unset**, and **fix** commands. Java environments are installed in /usr/lib/jvm/. Changes apply to any program started afterwards through the default symlinks. The JAVA_ENV argument for **set** must be a name shown by **status** (e.g., java-17-openjdk, java-21-openjdk).
 
 # HISTORY
 
@@ -60,3 +63,9 @@ Requires root privileges for **set**, **unset**, and **fix** commands. Java envi
 # SEE ALSO
 
 [java](/man/java)(1), [update-alternatives](/man/update-alternatives)(1)
+
+# RESOURCES
+
+```[Documentation](https://wiki.archlinux.org/title/Java)```
+
+<!-- verified: 2026-11-09 -->

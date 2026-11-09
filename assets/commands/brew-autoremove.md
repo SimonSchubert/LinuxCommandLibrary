@@ -27,21 +27,20 @@ Remove orphaned Homebrew dependencies
 
 # HOW IT WORKS
 
-When you install a package like **git**, dependencies (gettext, pcre2) are installed automatically. When you uninstall **git**, those dependencies remain. Running **brew autoremove** removes these orphaned dependencies.
+When you install a package like **git**, dependencies (gettext, pcre2) are installed automatically. **brew uninstall** and **brew cleanup** remove dependencies that are no longer needed on their own, unless **HOMEBREW_NO_AUTOREMOVE** is set. **brew autoremove** runs the same removal on demand, which is mainly useful with that variable set.
 
 # EXAMPLE WORKFLOW
 
 ```
-brew uninstall git          # Remove package
-brew autoremove             # Clean up dependencies
-brew cleanup                # Remove cached downloads
+brew autoremove --dry-run   # Preview unused dependencies
+brew autoremove             # Remove them
 ```
 
 # PREVENTING REMOVAL
 
-To prevent a formula from being removed by autoremove, reinstall it explicitly to mark it as "installed on request":
+To prevent a formula from being removed by autoremove, mark it as "installed on request":
 
-```brew install formula```
+```brew tab --installed-on-request formula```
 
 This changes the formula's status from dependency to explicitly installed.
 
@@ -63,3 +62,13 @@ Only removes formulae installed as dependencies, not those explicitly installed.
 # SEE ALSO
 
 [brew](/man/brew)(1), [brew-uninstall](/man/brew-uninstall)(1), [brew-cleanup](/man/brew-cleanup)(1), [brew-leaves](/man/brew-leaves)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Homebrew/brew)```
+
+```[Homepage](https://brew.sh/)```
+
+```[Documentation](https://docs.brew.sh/Manpage)```
+
+<!-- verified: 2026-11-09 -->

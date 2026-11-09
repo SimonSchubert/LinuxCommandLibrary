@@ -1,53 +1,75 @@
 # TAGLINE
 
-calculates Levenshtein distance between strings
+NetHack special levels compiler
 
 # TLDR
 
-**Compare two strings and show the distance**
+**Compile a level description file**
 
-```lev_comp "[string1]" "[string2]"```
+```lev_comp [file.des]```
 
-**Compare strings with detailed distance output**
+**Compile with extra checks** and warnings
 
-```lev_comp -d "[string1]" "[string2]"```
+```lev_comp -w [file.des]```
 
-**Compare strings case-insensitively**
+**Compile several files**
 
-```lev_comp -i "[String1]" "[string2]"```
+```lev_comp [file1.des] [file2.des]```
+
+**Read a description** from standard input
+
+```lev_comp < [file.des]```
 
 # SYNOPSIS
 
-**lev_comp** [_options_] _string1_ _string2_
+**lev_comp** [**-w**] [_files_]
 
 # PARAMETERS
 
-_STRING1_ _STRING2_
-> Strings to compare.
+_FILES_
+> Level description files to compile. If none are given, standard input is read.
 
-**-d**
-> Show Levenshtein distance.
-
-**-i**
-> Case insensitive comparison.
-
-**--help**
-> Display help information.
+**-w**
+> Perform extra checks on the level and display additional warnings, which are sometimes superfluous.
 
 # DESCRIPTION
 
-**lev_comp** calculates the Levenshtein distance between two strings. The distance represents the minimum number of single-character edit operations (insertions, deletions, or substitutions) needed to transform one string into the other.
+**lev_comp** is the special level compiler for NetHack. It takes level description files and produces binary level files, with a **.lev** extension, that the game loads at runtime.
 
-A lower distance means the strings are more similar. A distance of zero means the strings are identical.
+It gives NetHack administrators and implementors a way to add special levels or modify existing ones without recompiling the game. Each level defined in a description file is written to its own output file, named after the level.
+
+# FILE FORMAT
+
+```
+MAZE : "fortress", random
+GEOMETRY : center , center
+MAP
+}}}|-|}}}
+}}|-.-|}}
+}}}|-|}}}
+ENDMAP
+MONSTER: '@', "Wizard of Yendor", (4,1)
+OBJECT: '"', "Amulet of Yendor", (4,1)
+```
 
 # CAVEATS
 
-This is a niche utility and may not be available in standard package repositories. Only handles simple edit distance without support for weighted operations or transpositions.
+Compiled levels are tied to the NetHack version that built them. The tool is usually installed with the game's data files or only in the build tree, so it may not be on PATH.
 
 # HISTORY
 
-lev_comp implements **Levenshtein distance**, named after Vladimir Levenshtein who defined the metric in 1965.
+**lev_comp** ships with NetHack and its man page documents the compiler for version 3.2 and higher. NetHack 3.7 no longer includes it, having moved special levels to Lua scripts.
 
 # SEE ALSO
 
-[diff](/man/diff)(1), [cmp](/man/cmp)(1)
+[nethack](/man/nethack)(6), [dgn_comp](/man/dgn_comp)(6), [dlb](/man/dlb)(6)
+
+# RESOURCES
+
+```[Source code](https://github.com/NetHack/NetHack)```
+
+```[Homepage](https://www.nethack.org/)```
+
+```[Documentation](https://github.com/NetHack/NetHack/blob/NetHack-3.6/doc/lev_comp.txt)```
+
+<!-- verified: 2026-11-09 -->

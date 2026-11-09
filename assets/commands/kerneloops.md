@@ -43,11 +43,11 @@ The daemon monitors /var/log/messages for kernel oops data and automatically sub
 
 # CAVEATS
 
-Submitted oops data may contain kernel state information. Requires network connectivity to submit reports to oops.kernel.org. The daemon typically runs as root.
+The **oops.kernel.org** host named in the documentation no longer resolves in DNS, and the original kerneloops.org service was reported defunct on the kernel mailing list in 2011, so default submissions are unlikely to succeed. Distributions still package the client. Submitted oops data may contain kernel state information. The daemon reads a syslog-style file, so it needs **/var/log/messages** or an equivalent to find oopses. The daemon typically runs as root.
 
 # HISTORY
 
-kerneloops was created by **Intel** to collect kernel crash data and help identify bugs in the Linux kernel.
+kerneloops was written by **Arjan van de Ven** at **Intel** to collect kernel crash data and help identify bugs in the Linux kernel.
 
 # SEE ALSO
 

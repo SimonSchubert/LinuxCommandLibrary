@@ -24,6 +24,10 @@ creates an initial ramdisk image for Linux
 
 ```sudo mkinitramfs -d [/etc/initramfs-tools] -o [/boot/initrd.img]```
 
+**Override the compression method and level**
+
+```sudo mkinitramfs -c [zstd] -l [19] -o [/boot/initrd.img]```
+
 # SYNOPSIS
 
 **mkinitramfs** [_options_] **-o** _outfile_ [_version_]
@@ -43,7 +47,22 @@ creates an initial ramdisk image for Linux
 > Verbose output showing files being added.
 
 **-c** _COMPRESS_
-> Override the compression method (gzip, lz4, lzma, lzop, xz, zstd).
+> Override the COMPRESS setting in initramfs.conf (gzip, lz4, lzma, lzop, xz, zstd).
+
+**-l** _LEVEL_
+> Override the COMPRESSLEVEL setting in initramfs.conf.
+
+**-m** _MODULES_
+> Override the MODULES setting in initramfs.conf.
+
+**-r** _ROOT_
+> Override the ROOT setting in initramfs.conf.
+
+**--version**
+> Display version information and exit.
+
+**-h**, **--help**
+> Display usage information and exit.
 
 _VERSION_
 > Kernel version to generate initramfs for. Defaults to the currently running kernel.
@@ -74,4 +93,12 @@ mkinitramfs is part of **initramfs-tools** developed for Debian-based systems, r
 
 # SEE ALSO
 
-[update-initramfs](/man/update-initramfs)(8), [mkinitcpio](/man/mkinitcpio)(8), [dracut](/man/dracut)(8)
+[update-initramfs](/man/update-initramfs)(8), [initramfs-tools](/man/initramfs-tools)(8), [mkinitcpio](/man/mkinitcpio)(8), [dracut](/man/dracut)(8)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/kernel-team/initramfs-tools)```
+
+```[Documentation](https://manpages.debian.org/testing/initramfs-tools-core/mkinitramfs.8.en.html)```
+
+<!-- verified: 2026-11-09 -->

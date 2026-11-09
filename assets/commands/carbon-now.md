@@ -24,6 +24,10 @@ Generate beautiful images of source code
 
 ```carbon-now --from-clipboard```
 
+**From stdin**
+
+```echo '[code]' | carbon-now```
+
 **Copy result to clipboard**
 
 ```carbon-now [file.ts] --to-clipboard```
@@ -77,7 +81,7 @@ The tool uses a headless browser (Playwright) to render images through the Carbo
 > Open in browser instead of saving
 
 **--config** _path_
-> Use different config file
+> Use a different, local config file (read-only)
 
 **--settings** _json_
 > Override specific settings
@@ -103,3 +107,9 @@ Requires Node.js and npm. Uses headless browser (Playwright) for rendering. Inte
 # SEE ALSO
 
 [silicon](/man/silicon)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/mixn/carbon-now-cli)```
+
+<!-- verified: 2026-11-09 -->

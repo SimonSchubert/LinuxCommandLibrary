@@ -4,17 +4,21 @@ Groff font file format description
 
 # TLDR
 
-**List available fonts**
+**List available fonts** for a device
 
-```groff -Tps -Z -f[fontname] < /dev/null```
+```ls /usr/share/groff/current/font/devps/```
 
 **View font directory**
 
 ```ls /usr/share/groff/current/font/```
 
-**Check font files**
+**Show a device description file**
 
 ```cat /usr/share/groff/current/font/devps/DESC```
+
+**Show a font description file**
+
+```cat /usr/share/groff/current/font/devps/TR```
 
 # DESCRIPTION
 
@@ -25,12 +29,16 @@ Font files are stored in device-specific subdirectories under /usr/share/groff/.
 # FONT FILE FORMAT
 
 ```
-name fontname
+name F
 spacewidth n
 slant n
-ligatures ...
+ligatures lig1 ... lign [0]
+special
 charset
-char width type code
+name metrics type index [entity-name] [-- comment]
+...
+kernpairs
+g1 g2 n
 ...
 ```
 
@@ -46,18 +54,29 @@ char width type code
 # STANDARD FONTS
 
 ```
-R   - Roman (Times)
-I   - Italic
-B   - Bold
-BI  - Bold Italic
-CR  - Courier Roman
-H   - Helvetica
+R   - Roman (terminal devices)
+I   - Italic (terminal devices)
+B   - Bold (terminal devices)
+BI  - Bold Italic (terminal devices)
+TR  - Times Roman (PostScript)
+CR  - Courier Roman (PostScript)
+HR  - Helvetica Roman (PostScript)
 ```
 
 # CAVEATS
 
-Font availability depends on device. Custom fonts need proper installation. PostScript fonts require AFM files. Modern use may prefer pdfgroff.
+Font availability depends on device. Custom fonts need proper installation. Font description files for PostScript fonts are generated from AFM files with **afmtodit**. A **charset** subsection is mandatory unless the device's DESC file has the **unicode** directive.
 
 # SEE ALSO
 
 [groff](/man/groff)(1), [troff](/man/troff)(1), [afmtodit](/man/afmtodit)(1)
+
+# RESOURCES
+
+```[Source code](https://cgit.git.savannah.gnu.org/cgit/groff.git)```
+
+```[Homepage](https://www.gnu.org/software/groff/)```
+
+```[Documentation](https://www.gnu.org/software/groff/manual/)```
+
+<!-- verified: 2026-11-09 -->

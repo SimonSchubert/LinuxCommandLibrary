@@ -94,6 +94,15 @@ pre-configured Neovim distribution with IDE-like features
 **:LvimDocs**
 > Open documentation.
 
+**:LvimReload**
+> Reload the LunarVim configuration.
+
+**:LvimVersion**
+> Show the LunarVim version.
+
+**:LvimChangelog**
+> Show the changelog.
+
 # DESCRIPTION
 
 **lvim** (LunarVim) is a pre-configured Neovim distribution that provides an IDE-like experience out of the box. It includes curated plugins, keybindings, and sensible defaults while remaining fully customizable.
@@ -102,16 +111,22 @@ LunarVim includes built-in support for LSP (Language Server Protocol), providing
 
 Configuration is done via **~/.config/lvim/config.lua** using Lua. The **lvim** global object exposes settings for plugins, keybindings, and editor options. Custom plugins can be added through the lvim.plugins table.
 
-Since LunarVim is built on Neovim, all Neovim command-line options are supported. The editor inherits Vim's modal editing paradigm with Normal, Insert, Visual, and Command-line modes.
+The **lvim** command is a wrapper script that runs **nvim -u** with LunarVim's own init.lua and forwards all other arguments, so Neovim command-line options work. The editor inherits Vim's modal editing paradigm with Normal, Insert, Visual, and Command-line modes.
 
 # CAVEATS
 
-Requires Neovim 0.9.0 or higher, along with git, make, pip, npm, node, cargo, and ripgrep. Initial installation downloads and compiles multiple plugins, requiring internet connectivity. Updates may occasionally require manual intervention if breaking changes occur.
+Requires Neovim 0.9 on the 1.4 release branch and 0.10 on master, along with git, make, pip, npm, node, cargo, and ripgrep. Initial installation downloads and compiles multiple plugins, requiring internet connectivity. Updates may occasionally require manual intervention if breaking changes occur.
 
 # HISTORY
 
-LunarVim was created in **2021** by **Christian Chiarulli** as a way to provide a batteries-included Neovim experience. It gained popularity as a more approachable alternative to building a custom Neovim configuration from scratch. Note: the project has been **archived** and is no longer actively maintained as of **2024**.
+LunarVim was created in **2021** by **Christian Chiarulli** as a way to provide a batteries-included Neovim experience. It gained popularity as a more approachable alternative to building a custom Neovim configuration from scratch. The repository is not formally archived, but the last release is **1.4.0** (May **2024**) and the last commit dates from June **2025**, so the project is effectively unmaintained.
 
 # SEE ALSO
 
 [nvim](/man/nvim)(1), [vim](/man/vim)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/LunarVim/LunarVim)```
+
+<!-- verified: 2026-11-09 -->

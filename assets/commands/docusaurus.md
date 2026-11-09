@@ -42,22 +42,22 @@ static site generator optimized for documentation
 
 # PARAMETERS
 
-**start** [**--port** _n_]
+**start** [**--port** _n_] [**--host** _host_] [**--no-open**]
 > Start development server (default port 3000).
 
 **build** [**--out-dir** _path_]
 > Build static site for production.
 
-**serve** [**--port** _n_]
+**serve** [**--port** _n_] [**--dir** _path_] [**--build**]
 > Serve built site locally.
 
-**deploy**
+**deploy** [**--skip-build**]
 > Deploy to GitHub Pages.
 
 **clear**
 > Clear generated files and caches.
 
-**swizzle** _theme_ _component_
+**swizzle** _theme_ _component_ [**--eject** | **--wrap**] [**--list**]
 > Eject or wrap a theme component for customization (interactive).
 
 **docs:version** _version_
@@ -110,12 +110,22 @@ my-website/
 
 # CAVEATS
 
-Requires Node.js 18+. Large sites may have slow build times. Custom React components need familiarity with React. Swizzling (customizing) theme components may break on version upgrades. Full-text search requires additional setup (Algolia DocSearch or a local search plugin).
+Requires Node.js 20+. Large sites may have slow build times. Custom React components need familiarity with React. Swizzling (customizing) theme components may break on version upgrades. Full-text search requires additional setup (Algolia DocSearch or a local search plugin).
 
 # HISTORY
 
-Docusaurus was created at **Facebook** (Meta) and open-sourced in **2017**. It was designed to power documentation for Facebook's open-source projects. Version 2, a complete rewrite using React, was released in **2022**. The project is maintained by Meta and a community of contributors.
+Docusaurus was created at **Facebook** (Meta) and open-sourced in **2017**. It was designed to power documentation for Facebook's open-source projects. Version 2, a complete rewrite using React, was released in **2022**, followed by version 3 in **2023**. The project is maintained by Meta and a community of contributors.
 
 # SEE ALSO
 
 [gatsby](/man/gatsby)(1), [vitepress](/man/vitepress)(1), [mkdocs](/man/mkdocs)(1), [hugo](/man/hugo)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/meta/docusaurus)```
+
+```[Homepage](https://docusaurus.io/)```
+
+```[Documentation](https://docusaurus.io/docs/cli)```
+
+<!-- verified: 2026-11-09 -->

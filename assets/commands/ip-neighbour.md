@@ -18,7 +18,11 @@ Display the **neighbour/ARP table**
 
 **Add** a static ARP entry
 
-```sudo ip neighbour add [192.168.1.100] lladdr [00:11:22:33:44:55] dev [eth0] nud reachable```
+```sudo ip neighbour add [192.168.1.100] lladdr [00:11:22:33:44:55] dev [eth0] nud permanent```
+
+**Show** only entries in a given state
+
+```ip neighbour show nud [reachable]```
 
 **Delete** an ARP entry
 
@@ -50,7 +54,7 @@ Display the **neighbour/ARP table**
 > Add or change entry
 
 **flush** **dev** _DEVICE_
-> Clear entries for a device
+> Clear entries for a device. Takes the same selectors as show, refuses to run without arguments, and skips permanent and noarp entries by default.
 
 **get** _IP_ **dev** _DEVICE_
 > Lookup single entry
@@ -64,6 +68,24 @@ Display the **neighbour/ARP table**
 **to** _PREFIX_
 > Filter entries by address prefix (used with show/flush).
 
+**router**
+> Mark the neighbour as a router.
+
+**extern_learn**
+> Mark the entry as learned externally by a controller. The kernel will not garbage-collect it.
+
+**protocol** _PROTO_
+> Origin of the entry; also filters show/flush output.
+
+**vrf** _NAME_
+> Only list neighbours for the given VRF (show/flush).
+
+**nomaster**
+> Only list neighbours on interfaces with no master (show/flush).
+
+**unused**
+> Only list neighbours not currently in use (show).
+
 # DESCRIPTION
 
 **ip neighbour** manages the ARP (IPv4) and NDP (IPv6) neighbour tables. These tables map IP addresses to link-layer (MAC) addresses for hosts on directly connected networks.
@@ -72,7 +94,7 @@ The neighbour cache is normally populated automatically through ARP/NDP protocol
 
 # CAVEATS
 
-Modifying entries requires root privileges. Static entries may become stale if the actual MAC changes. IPv6 uses NDP instead of ARP but is managed through the same interface.
+Modifying entries requires root privileges. Permanent entries do not follow MAC changes on the network and must be updated by hand. Deleting or changing a kernel-created **noarp** entry may cause unpredictable behaviour. IPv6 uses NDP instead of ARP but is managed through the same interface.
 
 # HISTORY
 
@@ -81,3 +103,12 @@ ip neighbour is part of iproute2 and replaces the older arp command from net-too
 # SEE ALSO
 
 [ip](/man/ip)(8), [arp](/man/arp)(8), [arping](/man/arping)(8)
+
+# RESOURCES
+
+```[Source code](https://git.kernel.org/pub/scm/network/iproute2/iproute2.git)```
+
+```[Documentation](https://man7.org/linux/man-pages/man8/ip-neighbour.8.html)```
+
+<!-- verified: 2026-11-09 -->
+

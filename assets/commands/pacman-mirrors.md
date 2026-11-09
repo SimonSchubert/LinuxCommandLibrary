@@ -24,6 +24,14 @@ Use **geoip** mirrors
 
 ```sudo pacman-mirrors --geoip```
 
+Use mirrors from specific **countries**
+
+```sudo pacman-mirrors --country [Germany,France]```
+
+List available **countries**
+
+```pacman-mirrors --country-list```
+
 # SYNOPSIS
 
 **pacman-mirrors** [_OPTIONS_]
@@ -35,28 +43,46 @@ Use **geoip** mirrors
 # PARAMETERS
 
 **-f, --fasttrack** [_number_]
-> Generate mirrorlist with the fastest mirrors
+> Generate mirrorlist with a number of up-to-date mirrors, ranked by access time
 
 **--status**
 > Display the status of current mirrors
 
-**-g, --geoip**
+**--geoip**
 > Use geolocation to select mirrors from your country
 
-**--get-branch**
+**--continent**
+> Use mirrors from the geolocated continent
+
+**-i, --interactive**
+> Generate a custom mirrorlist interactively
+
+**-G, --get-branch**
 > Display the current branch
 
-**--api**
-> Use the API for branch switching
+**-a, --api**
+> Activate processing of API arguments such as --set-branch
 
-**--set-branch** _branch_
-> Set the branch (stable, testing, unstable)
+**-S, -B, --set-branch** _branch_
+> API: replace the branch in the configuration (stable, stable-staging, testing, unstable)
+
+**-P, --proto, --protocols** _proto_ ...
+> API: replace protocols in the configuration (all, http, https, ftp, ftps)
 
 **-c, --country** _country_
 > Limit mirrors to specific countries
 
-**-l, --list**
+**-l, --list, --country-list**
 > List available countries
+
+**-m, --method** _method_
+> Generation method (rank, random)
+
+**-t, --timeout** _seconds_
+> Maximum waiting time for a server response
+
+**-q, --quiet**
+> Less verbose output
 
 # CAVEATS
 
@@ -69,3 +95,9 @@ After generating a new mirrorlist, synchronize and upgrade with **sudo pacman -S
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pacman-sync](/man/pacman-sync)(8)
+
+# RESOURCES
+
+```[Documentation](https://wiki.manjaro.org/index.php?title=Pacman-mirrors)```
+
+<!-- verified: 2026-11-09 -->

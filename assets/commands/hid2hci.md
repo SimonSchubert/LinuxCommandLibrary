@@ -6,15 +6,19 @@ switches Bluetooth USB dongles between HID and HCI modes
 
 **Switch device to HCI mode**
 
-```sudo hid2hci --mode=hci --method=csr --devpath=[/sys/devices/...]```
+```sudo hid2hci --mode=hci --method=csr --devpath=[/devices/...]```
 
 **Switch Dell device to HCI mode**
 
-```sudo hid2hci --mode=hci --method=dell --devpath=[/sys/devices/...]```
+```sudo hid2hci --mode=hci --method=dell --devpath=[/devices/...]```
+
+**Switch Logitech device to HCI mode**
+
+```sudo hid2hci --method=logitech-hid --devpath=[/devices/...]```
 
 **Restore device to HID mode**
 
-```sudo hid2hci --mode=hid --method=csr --devpath=[/sys/devices/...]```
+```sudo hid2hci --mode=hid --method=csr --devpath=[/devices/...]```
 
 # SYNOPSIS
 
@@ -22,16 +26,16 @@ switches Bluetooth USB dongles between HID and HCI modes
 
 # PARAMETERS
 
-**--mode** _MODE_
-> Target mode to switch the device to: hid or hci.
+**-m**, **--mode**=_MODE_
+> Target mode to switch the device to: hid or hci (default: hci).
 
-**--method** _METHOD_
-> Vendor-specific switching method (csr, csr2, logitech-hdi, dell).
+**-M**, **--method**=_METHOD_
+> Vendor-specific switching method: csr, csr2, logitech-hid, or dell. Required.
 
-**--devpath** _PATH_
-> Device path in /sys.
+**-p**, **--devpath**=_PATH_
+> Device path relative to /sys, as in udev's %p (e.g. /devices/pci0000:00/...). Required.
 
-**--help**
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
@@ -42,7 +46,7 @@ The tool is needed for certain USB Bluetooth adapters that start in keyboard/mou
 
 # CAVEATS
 
-Device-specific. Requires correct method. Part of BlueZ package.
+Device-specific. Requires correct method. Part of BlueZ, only built when enabled at compile time, and installed in the udev helper directory rather than on PATH. It is normally run by udev rules (**hid2hci.rules**), not by hand. The upstream man page spells the Logitech method "logitech-hdi", but the code accepts only **logitech-hid**.
 
 # HISTORY
 
@@ -50,4 +54,10 @@ hid2hci was developed as part of **BlueZ** to handle USB Bluetooth adapters with
 
 # SEE ALSO
 
-[bluetoothctl](/man/bluetoothctl)(1), [hciconfig](/man/hciconfig)(1)
+[bluetoothctl](/man/bluetoothctl)(1), [hciconfig](/man/hciconfig)(1), [udevadm](/man/udevadm)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/bluez/bluez)```
+
+<!-- verified: 2026-11-09 -->

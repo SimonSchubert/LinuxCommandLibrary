@@ -32,20 +32,30 @@ Show **disk** space used
 
 ```balooctl check```
 
+Show a file's status as **JSON**
+
+```balooctl status -f json [path/to/file]```
+
+Use the **KDE Frameworks 6** binary
+
+```balooctl6 status```
+
 # SYNOPSIS
 
 **balooctl** [_OPTIONS_] _COMMAND_
 
+**balooctl6** [_OPTIONS_] _COMMAND_
+
 # DESCRIPTION
 
-**balooctl** is the control utility for Baloo, the file indexing and search framework used in KDE Plasma. It manages the file indexer daemon that powers fast desktop file search, allowing users to enable, disable, suspend, and monitor the indexing process.
+**balooctl** is the control utility for Baloo, the file indexing and search framework used in KDE Plasma. It manages the file indexer daemon that powers fast desktop file search, allowing users to enable, disable, suspend, and monitor the indexing process. On KDE Frameworks 6 the binary is named **balooctl6**.
 
 The tool is useful for troubleshooting search issues, reclaiming disk space used by the index, and checking which files have been indexed.
 
 # PARAMETERS
 
-**status**
-> Display current indexer status
+**status** [_file..._]
+> Display current indexer status, or the status of the given files
 
 **enable**
 > Enable the file indexer
@@ -83,6 +93,15 @@ The tool is useful for troubleshooting search issues, reclaiming disk space used
 **failed**
 > List files that could not be indexed
 
+**-f**, **--format** _format_
+> Output format for **status** with file arguments: multiline (default), json, or simple
+
+**-h**, **--help**
+> Display help
+
+**-v**, **--version**
+> Display version
+
 # CONFIGURATION
 
 **~/.config/baloofilerc**
@@ -99,3 +118,11 @@ Purging the index requires re-indexing all files which can take time. The indexe
 # SEE ALSO
 
 [locate](/man/locate)(1)
+
+# RESOURCES
+
+```[Source code](https://invent.kde.org/frameworks/baloo)```
+
+```[Documentation](https://community.kde.org/Baloo)```
+
+<!-- verified: 2026-11-09 -->

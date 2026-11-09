@@ -14,7 +14,7 @@ gcloud CLI configuration management
 
 **Get the value of a property**
 
-```gcloud config get-value [project]```
+```gcloud config get [project]```
 
 **Unset a property**
 
@@ -23,6 +23,10 @@ gcloud CLI configuration management
 **List all properties in the active configuration**
 
 ```gcloud config list```
+
+**List all properties, including unset ones**
+
+```gcloud config list --all```
 
 **Create a new named configuration**
 
@@ -36,26 +40,30 @@ gcloud CLI configuration management
 
 ```gcloud config configurations list```
 
+**Rename a configuration**
+
+```gcloud config configurations rename [name] --new-name=[new_name]```
+
 # SYNOPSIS
 
 **gcloud config** _command_ [_options_]
 
 # PARAMETERS
 
-**set** _SECTION/PROPERTY_ _VALUE_
-> Set a configuration property to a given value.
+**set** _SECTION/PROPERTY_ _VALUE_ [**--installation**]
+> Set a property. The **core/** section prefix is optional. With **--installation**, the value applies to the whole gcloud installation instead of the active configuration.
 
-**get-value** _SECTION/PROPERTY_
-> Print the value of a property.
+**get** _SECTION/PROPERTY_
+> Print the value of a property from the active configuration.
 
-**unset** _SECTION/PROPERTY_
-> Remove a property from the active configuration.
+**unset** _SECTION/PROPERTY_ [**--installation**]
+> Clear a property.
 
-**list**
-> List all properties in the active configuration.
+**list** [_SECTION/PROPERTY_] [**--all**]
+> Show properties of the active configuration. **--all** includes unset properties.
 
-**configurations create** _NAME_
-> Create a new named configuration.
+**configurations create** _NAME_ [**--no-activate**]
+> Create a new named configuration and activate it, unless **--no-activate** is given.
 
 **configurations activate** _NAME_
 > Switch to a named configuration.
@@ -68,6 +76,9 @@ gcloud CLI configuration management
 
 **configurations list**
 > List all available configurations.
+
+**configurations rename** _NAME_ **--new-name**=_NEW_NAME_
+> Rename a named configuration.
 
 **--help**
 > Display help information.
@@ -82,7 +93,7 @@ Named configurations enable managing multiple independent sets of properties, ma
 
 # CAVEATS
 
-Per-command options override config. Configuration is user-specific. Some properties require valid values. The active configuration cannot be deleted.
+Per-command flags such as **--project** override config. The active configuration can be selected for one command with **--configuration** or through the **CLOUDSDK_ACTIVE_CONFIG_NAME** environment variable. Configuration is user-specific. Some properties require valid values. The active configuration cannot be deleted, even when overridden with **--configuration**. The older **get-value** form is no longer listed in the reference; **get** is the documented command.
 
 # HISTORY
 
@@ -91,3 +102,11 @@ gcloud config is part of the **Google Cloud SDK** configuration system, providin
 # SEE ALSO
 
 [gcloud](/man/gcloud)(1), [gcloud-auth](/man/gcloud-auth)(1), [gcloud-init](/man/gcloud-init)(1), [gcloud-components](/man/gcloud-components)(1)
+
+# RESOURCES
+
+```[Homepage](https://cloud.google.com/sdk)```
+
+```[Documentation](https://docs.cloud.google.com/sdk/gcloud/reference/config)```
+
+<!-- verified: 2026-11-09 -->

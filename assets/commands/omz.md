@@ -28,13 +28,21 @@ Oh My Zsh management CLI
 
 ```omz theme set [theme_name]```
 
-**Show the current theme**
+**Load a theme for the current session only**
 
 ```omz theme use [theme_name]```
+
+**List enabled plugins**
+
+```omz plugin list --enabled```
 
 **Show changelog**
 
 ```omz changelog```
+
+**Show the installed version**
+
+```omz version```
 
 **Reload the Zsh configuration**
 
@@ -49,8 +57,11 @@ Oh My Zsh management CLI
 **update**
 > Update Oh My Zsh to the latest version.
 
-**plugin list**
-> List all available plugins.
+**plugin list** [**--enabled**]
+> List all available plugins, or only the enabled ones.
+
+**plugin load** _NAME_
+> Load a plugin in the current session.
 
 **plugin enable** _NAME_
 > Enable a plugin by adding it to the plugins array in .zshrc.
@@ -76,7 +87,22 @@ Oh My Zsh management CLI
 **reload**
 > Reload the current Zsh session with updated configuration.
 
-**--help**
+**pr clean**
+> Delete all pull request branches.
+
+**pr test** _PR_
+> Fetch and test a pull request.
+
+**version**
+> Show the installed version.
+
+**shop**
+> Open the Oh My Zsh shop.
+
+**shellsaver** [_scene_]
+> Launch a terminal screensaver (aquarium by default).
+
+**help**
 > Display help information.
 
 # DESCRIPTION
@@ -91,3 +117,12 @@ Requires Oh My Zsh to be installed. Only works with the Zsh shell. Plugin/theme 
 
 [zsh](/man/zsh)(1), [oh-my-zsh](/man/oh-my-zsh)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/ohmyzsh/ohmyzsh)```
+
+```[Homepage](https://ohmyz.sh)```
+
+```[Documentation](https://github.com/ohmyzsh/ohmyzsh/wiki)```
+
+<!-- verified: 2026-11-09 -->

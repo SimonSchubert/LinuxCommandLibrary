@@ -34,7 +34,7 @@ Show information for a specific **architecture**
 
 # PARAMETERS
 
-**--user**
+**-u, --user**
 > Use per-user configuration
 
 **--system**
@@ -76,6 +76,12 @@ Show information for a specific **architecture**
 **-v, --verbose**
 > Output debug information
 
+**--ostree-verbose**
+> Print OSTree debug information
+
+**-h, --help**
+> Show help options and exit
+
 # DESCRIPTION
 
 **Flatpak remote-info** displays details about an application or runtime available in a remote repository. It shows information such as the application ID, architecture, branch, commit hash, download size, installed size, and runtime dependencies.
@@ -95,3 +101,13 @@ Part of the **Flatpak** project developed by Alexander Larsson at Red Hat. Flatp
 # SEE ALSO
 
 [flatpak](/man/flatpak)(1), [flatpak-update](/man/flatpak-update)(1), [flatpak-install](/man/flatpak-install)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/flatpak/flatpak)```
+
+```[Homepage](https://flatpak.org/)```
+
+```[Documentation](https://docs.flatpak.org/en/latest/flatpak-command-reference.html)```
+
+<!-- verified: 2026-11-09 -->
