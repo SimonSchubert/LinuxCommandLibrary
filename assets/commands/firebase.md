@@ -24,9 +24,29 @@ Firebase platform management CLI
 
 ```firebase deploy --only functions```
 
+**Deploy a single function**
+
+```firebase deploy --only functions:[function_name]```
+
+**Deploy to a specific project**
+
+```firebase deploy -P [project_id]```
+
+**Deploy to a Hosting preview channel**
+
+```firebase hosting:channel:deploy [channel_name]```
+
 **Start local emulators**
 
 ```firebase emulators:start```
+
+**Run a test script against the emulators**, then shut them down
+
+```firebase emulators:exec "[npm test]"```
+
+**View Cloud Functions logs**
+
+```firebase functions:log```
 
 **List projects**
 
@@ -50,14 +70,26 @@ Firebase platform management CLI
 **deploy**
 > Deploy to Firebase services.
 
-**--only** _services_
-> Deploy specific services.
+**--only** _targets_
+> Restrict deploy, serve or emulators to specific targets (e.g. hosting, functions:name).
+
+**--except** _targets_
+> Deploy to all targets except those listed.
+
+**-m**, **--message** _message_
+> Optional message describing the deploy.
+
+**-P**, **--project** _id_
+> Use the given project or alias for this command.
 
 **serve**
 > Start local development server.
 
 **emulators:start**
 > Start Firebase emulators.
+
+**emulators:exec** _script_
+> Start emulators, run a script, then shut them down.
 
 **projects:list**
 > List available projects.
@@ -87,7 +119,7 @@ The CLI handles project initialization, local development with emulators, and de
 
 # CAVEATS
 
-Requires Node.js (install via `npm install -g firebase-tools`). A Google account is needed for authentication. Some services (Cloud Functions, extended Firestore usage) require a Blaze billing plan. The emulator suite requires Java for Firestore and Realtime Database emulators.
+Install with `npm install -g firebase-tools` (Node.js 20 or newer) or as a standalone binary with `curl -sL firebase.tools | bash`. A Google account is needed for authentication. Some services (Cloud Functions, extended Firestore usage) require a Blaze billing plan. The emulator suite requires Java for Firestore and Realtime Database emulators.
 
 # HISTORY
 
@@ -96,3 +128,13 @@ Firebase was founded in **2011** and acquired by **Google** in **2014**. The Fir
 # SEE ALSO
 
 [gcloud](/man/gcloud)(1), [npm](/man/npm)(1), [node](/man/node)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/firebase/firebase-tools)```
+
+```[Homepage](https://firebase.google.com/)```
+
+```[Documentation](https://firebase.google.com/docs/cli)```
+
+<!-- verified: 2026-11-09 -->

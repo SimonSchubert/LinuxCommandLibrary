@@ -54,11 +54,24 @@ Cache is **enabled by default** for local development machines. It is disabled i
 
 Cache behaviour can be further configured in **angular.json** under `cli.cache`:
 
-- **enabled** — whether the cache is active
-- **environment** — where caching applies: `local` (default), `ci`, or `all`
-- **path** — directory used to store cache files (default: `.angular/cache`)
+- **enabled**: whether the cache is active
+- **environment**: where caching applies: `local` (default), `ci`, or `all`
+- **path**: directory used to store cache files (default: `.angular/cache`)
+
+# CAVEATS
+
+Must be run inside an Angular workspace.
 
 # SEE ALSO
 
 [ng](/man/ng)(1), [ng-build](/man/ng-build)(1), [ng-config](/man/ng-config)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/angular/angular-cli)```
+
+```[Homepage](https://angular.dev)```
+
+```[Documentation](https://angular.dev/cli/cache)```
+
+<!-- verified: 2026-11-09 -->

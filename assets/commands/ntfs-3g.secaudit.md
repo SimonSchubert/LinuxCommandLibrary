@@ -26,7 +26,15 @@ NTFS security data auditing tool
 
 **Get a user mapping proposal**
 
-```sudo ntfs-3g.secaudit -u [/dev/sda1] [/path/to/windows/file]```
+```ntfs-3g.secaudit -u [/mnt/windows/path/to/file]```
+
+**Set permissions** on a file
+
+```sudo ntfs-3g.secaudit [/dev/sda1] [644] [/path/to/file]```
+
+**Recursively set permissions** in a directory
+
+```sudo ntfs-3g.secaudit -r [/dev/sda1] [644] [/path/to/directory]```
 
 # SYNOPSIS
 
@@ -34,9 +42,12 @@ NTFS security data auditing tool
 **ntfs-3g.secaudit** **-b**[**v**] _volume_ [_directory_]
 **ntfs-3g.secaudit** **-s**[**ev**] _volume_ [_backup-file_]
 **ntfs-3g.secaudit** **-r**[**v**] _volume_ _directory_
-**ntfs-3g.secaudit** **-u**[**v**] _volume_ _mounted-file_
+**ntfs-3g.secaudit** **-u**[**v**] _mounted-file_
 **ntfs-3g.secaudit** **-h** _file_
-**ntfs-3g.secaudit** _volume_ _directory_
+**ntfs-3g.secaudit** [**-v**] _volume_ _file_
+**ntfs-3g.secaudit** [**-v**] _mounted-file_
+**ntfs-3g.secaudit** _volume_ _perms_ _file_
+**ntfs-3g.secaudit** **-r**[**v**] _volume_ _perms_ _directory_
 
 # PARAMETERS
 
@@ -53,7 +64,7 @@ NTFS security data auditing tool
 > Used with -s to set extra backed-up parameters.
 
 **-r**
-> Recurse into subdirectories. With -a, checks file relations to global security data.
+> Recurse into subdirectories, displaying or setting permissions. With -a, also scans files and checks their relations to global security data.
 
 **-u**
 > Display a proposed user mapping file based on Windows ownership of a mounted file.
@@ -66,11 +77,11 @@ NTFS security data auditing tool
 
 # DESCRIPTION
 
-**ntfs-3g.secaudit** displays the ownership and permissions of files on an NTFS file system and checks their consistency. It can audit security data, backup and restore ACLs, and propose user mappings. The volume must be unmounted and the command must be run as root.
+**ntfs-3g.secaudit** displays the ownership and permissions of files on an NTFS file system and checks their consistency. It can audit security data, backup and restore ACLs, and propose user mappings. When a volume is given it must be unmounted and the command must be run as root. It can also set permissions, given as an octal mode or a POSIX ACL.
 
 # CAVEATS
 
-Requires root privileges. The volume must be unmounted before use. Output should be redirected to a file for large directory operations. Returns 0 on success and 1 when errors are detected.
+Current ntfs-3g releases install this tool as **ntfssecaudit**; **ntfs-3g.secaudit** is the older name. Operations on a volume need root and an unmounted volume, while the _mounted-file_ forms do not. Volumes from before NTFS 3.0 have no global security data to audit. Output should be redirected to a file for large directory operations. Returns 0 on success and 1 when errors are detected.
 
 # HISTORY
 
@@ -79,3 +90,11 @@ Requires root privileges. The volume must be unmounted before use. Output should
 # SEE ALSO
 
 [ntfs-3g](/man/ntfs-3g)(8), [ntfs-3g.usermap](/man/ntfs-3g.usermap)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/tuxera/ntfs-3g)```
+
+```[Documentation](https://github.com/tuxera/ntfs-3g/wiki)```
+
+<!-- verified: 2026-11-09 -->

@@ -52,8 +52,16 @@ The tool accesses files through GVFS backends, providing unified information acr
 
 # CAVEATS
 
-Deprecated since GNOME 3.22 in favor of **gio info**. Requires the GVFS daemon to be running. Only available on systems with the GNOME/GLib stack.
+Deprecated since GNOME 3.22 (gvfs 1.31.1) in favor of **gio info**, which takes the same options; the gvfs utilities were removed in gvfs 1.37.2, so current systems no longer ship this command. Requires the GVFS daemon to be running. Only available on systems with the GNOME/GLib stack.
 
 # SEE ALSO
 
 [gio](/man/gio)(1), [stat](/man/stat)(1), [file](/man/file)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gvfs)```
+
+```[Homepage](https://wiki.gnome.org/Projects/gvfs)```
+
+<!-- verified: 2026-11-09 -->

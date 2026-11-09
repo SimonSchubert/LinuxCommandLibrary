@@ -64,6 +64,9 @@ Interactive command-line benchmarking tool
 **--markdown=**_FILE_
 > Export results to Markdown file.
 
+**--json=**_FILE_
+> Export results to JSON file.
+
 **--fail-on-error**
 > Exit with non-zero status if any command returns non-zero exit code.
 
@@ -76,18 +79,30 @@ Interactive command-line benchmarking tool
 **--version**
 > Display version information.
 
+**--cpu-profile=**_FILE_, **--mem-profile=**_FILE_, **--block-profile=**_FILE_
+> Write a CPU, memory or goroutine blocking profile to a file.
+
+**--pprof-server**
+> Start a pprof HTTP server on :6060.
+
 # DESCRIPTION
 
 **cmdperf** runs one or more shell commands repeatedly and gathers timing statistics, displaying them in a live terminal UI with a progress bar, ETA, and key metrics including mean execution time, standard deviation, and min/max ranges. It supports single command benchmarking, multi-command comparison, concurrent execution to simulate load, duration-based runs, and rate limiting for HTTP endpoint testing.
 
 # CAVEATS
 
-Designed for quick interactive benchmarking, not a replacement for rigorous statistical profiling tools. Default shell wrapping adds overhead; use **-N/--no-shell** for tighter measurements when shell features are not needed.
+Designed for quick interactive benchmarking, not a replacement for rigorous statistical profiling tools. Default shell wrapping adds overhead; use **-N/--no-shell** for tighter measurements when shell features are not needed. In that mode the command is split on spaces (respecting quotes), and pipes, redirections and variable expansions do not work.
 
 # HISTORY
 
-**cmdperf** was created by **miklosn** and is written in Go under the MIT license. The latest release is v0.1.4 (January 2026). It fills a niche as a lightweight, interactive alternative to tools like **hyperfine**, with a focus on live TUI experience and concurrent execution simulation.
+**cmdperf** was created by **miklosn** and is written in Go under the MIT license. It fills a niche as a lightweight, interactive alternative to tools like **hyperfine**, with a focus on live TUI experience and concurrent execution simulation.
 
 # SEE ALSO
 
 [hyperfine](/man/hyperfine)(1), [time](/man/time)(1), [perf](/man/perf)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/miklosn/cmdperf)```
+
+<!-- verified: 2026-11-09 -->

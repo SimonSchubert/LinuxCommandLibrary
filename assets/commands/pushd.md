@@ -26,7 +26,7 @@ Navigate directories using a stack
 
 # SYNOPSIS
 
-**pushd** [_options_] [_dir_]
+**pushd** [**-n**] [**+N** | **-N** | _dir_]
 
 # PARAMETERS
 
@@ -34,13 +34,13 @@ _DIR_
 > Directory to push.
 
 **-n**
-> Add without changing.
+> Suppress the change of directory when rotating or adding, so only the stack is manipulated.
 
 **+N**
-> Rotate Nth entry (from left) to top.
+> Rotate the stack so the Nth entry, counting from the left of the **dirs** list starting at zero, is at the top.
 
 **-N**
-> Rotate Nth entry (from right) to top.
+> Rotate the stack so the Nth entry, counting from the right of the **dirs** list starting at zero, is at the top.
 
 # DESCRIPTION
 
@@ -50,7 +50,7 @@ When called with a directory argument, pushd changes to that directory and pushe
 
 # CAVEATS
 
-Shell built-in. Works with popd and dirs.
+Shell built-in and not part of POSIX, so plain **sh** scripts cannot rely on it. On success, Bash prints the resulting stack by running **dirs**; redirect the output to silence it. Returns non-zero if the change of directory fails.
 
 # HISTORY
 

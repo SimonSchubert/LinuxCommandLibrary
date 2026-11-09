@@ -8,27 +8,51 @@ multiplayer terminal fantasy RPG game
 
 ```phantasia```
 
-**Start in setup/wizard mode**
+**Start without header information**
 
 ```phantasia -s```
 
+**List all character names**
+
+```phantasia -a```
+
+**Show the scoreboard**
+
+```phantasia -b```
+
+**List the monsters**
+
+```phantasia -m```
+
 # SYNOPSIS
 
-**phantasia** [**-s**] [**-m**] [**-a**] [**-p**]
+**phantasia** [**-abHmpSsx**]
 
 # PARAMETERS
 
-**-s**
-> Setup/wizard mode.
+**-a**
+> Get a listing of all character names on file.
+
+**-b**
+> Show scoreboard of top characters per login.
+
+**-H**
+> Print header only.
 
 **-m**
-> Manage the game (admin).
-
-**-a**
-> All players listing.
+> Get a monster listing.
 
 **-p**
 > Purge old characters.
+
+**-S**
+> Turn on wizard options, if allowed, when running as root.
+
+**-s**
+> Invoke phantasia without header information.
+
+**-x**
+> Examine or change a particular character on file.
 
 # PREVIEW
 
@@ -52,8 +76,16 @@ Part of the bsdgames package. Multi-player features require shared file access o
 
 # HISTORY
 
-**phantasia** was written by **Edward Straker** and has been part of BSD games distributions since the **1980s**. It is one of the earliest multiplayer RPGs on Unix.
+**phantasia** was written by **Edward Estes** and has been part of BSD games distributions since the **1980s**. It is one of the earliest multiplayer RPGs on Unix.
 
 # SEE ALSO
 
 [rogue](/man/rogue)(6), [nethack](/man/nethack)(6), [moria](/man/moria)(6)
+
+# RESOURCES
+
+```[Source code](https://cvsweb.netbsd.org/bsdweb.cgi/src/games/phantasia/)```
+
+```[Documentation](https://man.netbsd.org/phantasia.6)```
+
+<!-- verified: 2026-11-09 -->

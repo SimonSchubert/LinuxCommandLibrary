@@ -24,6 +24,14 @@ SQL query executor and database importer for CSV
 
 ```csvsql --db [sqlite:///data.db] --insert --create-if-not-exists [data.csv]```
 
+**Generate a CREATE TABLE** for a specific SQL dialect
+
+```csvsql -i [postgresql] [data.csv]```
+
+**Replace an existing table**
+
+```csvsql --db [sqlite:///data.db] --insert --overwrite [data.csv]```
+
 **Query with aggregation**
 
 ```csvsql --query "[SELECT category, COUNT(*) FROM data GROUP BY category]" [data.csv]```
@@ -35,7 +43,7 @@ SQL query executor and database importer for CSV
 # PARAMETERS
 
 **--query** _SQL_
-> Execute SQL query on the CSV data.
+> Execute one or more SQL queries delimited by **--sql-delimiter** and output the result of the last query as CSV. May be a filename, and may be given multiple times.
 
 **--db** _CONNECTION_
 > Database connection string (SQLAlchemy format).
@@ -44,22 +52,46 @@ SQL query executor and database importer for CSV
 > Insert data into database (requires --db).
 
 **--create-if-not-exists**
-> Create table if it doesn't exist.
+> Create the table if it does not exist, otherwise keep going. Requires **--insert**.
+
+**--overwrite**
+> Drop the table if it already exists. Requires **--insert**. Cannot be used with **--no-create**.
+
+**-i** _DIALECT_, **--dialect** _DIALECT_
+> Dialect of SQL to generate (mssql, mysql, oracle, postgresql, sqlite, duckdb, crate, ingres). Cannot be used with **--db**.
+
+**--prefix** _EXPR_
+> Add an expression following the INSERT keyword, like OR IGNORE or OR REPLACE.
+
+**--before-insert** _SQL_, **--after-insert** _SQL_
+> Execute SQL queries before or after the INSERT. Requires **--insert**.
+
+**--no-constraints**
+> Generate a schema without length limits or null checks.
+
+**--unique-constraint** _COLUMNS_
+> Column names to include in a UNIQUE constraint.
+
+**--db-schema** _SCHEMA_
+> Name of the database schema to create tables in.
+
+**--chunk-size** _N_
+> Chunk size for batch insert. Requires **--insert**.
 
 **--tables** _NAMES_
-> Comma-separated table names (default: filenames).
+> Comma-separated table names (default: filenames without extensions, or "stdin").
 
 **--no-create**
-> Don't generate CREATE TABLE statement.
+> Skip creating the table. Requires **--insert**.
 
 **-d** _CHAR_, **--delimiter** _CHAR_
-> Field delimiter (default: comma).
+> Delimiting character of the input CSV file.
 
 **-e** _ENCODING_, **--encoding** _ENCODING_
 > Input file encoding.
 
-**--no-inference**
-> Disable type inference.
+**-I**, **--no-inference**
+> Disable type inference when parsing the input.
 
 # DESCRIPTION
 
@@ -79,4 +111,12 @@ csvsql is part of **csvkit**, created by Christopher Groskopf in **2011**. It br
 
 # SEE ALSO
 
-[csvkit](/man/csvkit)(1), [sqlite3](/man/sqlite3)(1)
+[csvkit](/man/csvkit)(1), [csvlook](/man/csvlook)(1), [csvstack](/man/csvstack)(1), [in2csv](/man/in2csv)(1), [sqlite3](/man/sqlite3)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/wireservice/csvkit)```
+
+```[Documentation](https://csvkit.readthedocs.io/en/latest/scripts/csvsql.html)```
+
+<!-- verified: 2026-11-09 -->

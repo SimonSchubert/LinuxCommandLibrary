@@ -6,11 +6,15 @@ complex roguelike RPG with city and dungeon exploration
 
 **Start a game**
 
-```omega```
+```omega-rpg```
+
+**Restore a save file** (deleted after a successful restore)
+
+```omega-rpg [save_file]```
 
 # SYNOPSIS
 
-**omega**
+**omega-rpg** [_save_file_]
 
 # PREVIEW
 
@@ -25,9 +29,9 @@ complex roguelike RPG with city and dungeon exploration
 
 # DESCRIPTION
 
-**omega** is a complex roguelike RPG from the **1980s** featuring both dungeon crawling and city exploration. Unlike most roguelikes, the game has a persistent overworld with cities containing guilds, temples, shops, and other locations.
+**omega** (installed as **omega-rpg** on Debian and derivatives) is a complex roguelike RPG from the **1980s** featuring both dungeon crawling and city exploration. Unlike most roguelikes, the game has a persistent overworld with cities containing guilds, temples, shops, and other locations.
 
-The game offers multiple paths to victory through combat, magic, or diplomacy. Characters can join guilds, worship deities, and take on quests. Movement uses hjklyubn keys.
+The game has a number of ways to win, including becoming the highest ranked head of a guild, sect or college, and a "total winner" status. Characters can join guilds, worship deities, and take on quests. Movement uses hjklyubn keys.
 
 # CAVEATS
 

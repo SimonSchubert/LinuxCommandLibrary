@@ -28,6 +28,14 @@ Force GPG **key** update
 
 ```urpmi.update -a --force-key```
 
+**Force** refreshing the synthesis files
+
+```urpmi.update -a -f```
+
+Mark a medium as **ignored** without updating it
+
+```urpmi.update --ignore [medium]```
+
 # SYNOPSIS
 
 **urpmi.update** [_OPTIONS_] [_MEDIUM_...]
@@ -35,10 +43,22 @@ Force GPG **key** update
 # PARAMETERS
 
 **-a**
-> Update all enabled non-static media.
+> Select all enabled non-removable media.
 
 **--update**
-> Use only update media.
+> Update only update media.
+
+**-f**
+> Force updating the synthesis files. Use **-ff** to really force it.
+
+**--ignore**, **--no-ignore**
+> Do not update; mark the media as ignored or enabled.
+
+**--probe-rpms**
+> Use rpm files directly instead of synthesis files.
+
+**--urpmi-root** _path_
+> Use another root for the urpmi database and rpm installation.
 
 **--no-md5sum**
 > Disable MD5SUM file checking.
@@ -61,8 +81,17 @@ Force GPG **key** update
 **--curl**
 > Use curl for downloading.
 
-**--proxy** _url_
-> Use specified HTTP proxy.
+**--prozilla**
+> Use prozilla for downloading.
+
+**--aria2**
+> Use aria2 for downloading.
+
+**--metalink**
+> Generate and use a local metalink.
+
+**--proxy** _host[:port]_
+> Use specified HTTP proxy. The port defaults to 1080.
 
 **--proxy-user** _user:pass_
 > Proxy authentication credentials.
@@ -80,3 +109,11 @@ Mageia specific. Network access required for remote media. Should be run regular
 # SEE ALSO
 
 [urpmi](/man/urpmi)(8), [urpmi.addmedia](/man/urpmi.addmedia)(8), [urpmi.removemedia](/man/urpmi.removemedia)(8), [urpme](/man/urpme)(8), [urpmq](/man/urpmq)(8)
+
+# RESOURCES
+
+```[Source code](https://gitweb.mageia.org/software/rpm/urpmi/)```
+
+```[Documentation](https://wiki.mageia.org/en/URPMI)```
+
+<!-- verified: 2026-11-09 -->

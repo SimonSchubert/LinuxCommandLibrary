@@ -97,7 +97,7 @@ Configuration stored in **/etc/kernelstub/configuration** (auto-created if missi
 
 # CAVEATS
 
-Must be run as **root** (exit code 176 if not). UEFI-only — has no purpose on legacy BIOS systems. The **-f** flag can overwrite another OS's boot configuration on dual-boot systems. Command-line options override configuration file settings, and some flags (**-o**, **-l**, **-s**, **-m**) persist changes to the config file.
+Must be run as **root** (exit code 176 if not). Without **-o**, the **quiet splash** boot options are assumed by default. UEFI-only: has no purpose on legacy BIOS systems. The **-f** flag can overwrite another OS's boot configuration on dual-boot systems. Command-line options override configuration file settings, and some flags (**-o**, **-l**, **-s**, **-m**) persist changes to the config file.
 
 # HISTORY
 
@@ -106,3 +106,9 @@ Must be run as **root** (exit code 176 if not). UEFI-only — has no purpose on 
 # SEE ALSO
 
 [bootctl](/man/bootctl)(1), [efibootmgr](/man/efibootmgr)(8), [update-initramfs](/man/update-initramfs)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/pop-os/kernelstub)```
+
+<!-- verified: 2026-11-09 -->

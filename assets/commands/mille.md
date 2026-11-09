@@ -33,9 +33,33 @@ _file_
 
 **mille** plays a two-handed game of Mille Bornes against the computer. Players race to reach 1000 miles while playing hazard cards on the opponent and using remedies and safeties.
 
-During play, you can pick cards from the deck, play or discard cards by typing their number, toggle hand sorting, save the game with 'S', or redraw the screen with Ctrl-L.
-
 Part of the **bsdgames** package.
+
+# CONTROLS
+
+**P**
+> Pick a card from the deck
+
+**D**
+> Discard a card: type its number (or P for the just-picked card), then Return or Space
+
+**U**
+> Use a card: type its number, then Return or Space
+
+**O**
+> Toggle ordering the hand
+
+**Q**
+> Quit the game, with confirmation
+
+**S**
+> Save the game in a file
+
+**R** / **Ctrl-L**
+> Redraw the screen
+
+**W**
+> Toggle the score window type
 
 # CAVEATS
 
@@ -49,3 +73,10 @@ mille is part of **bsdgames**, implementing the French card game Mille Bornes (1
 
 [canfield](/man/canfield)(6), [bsdgames](/man/bsdgames)(6)
 
+# RESOURCES
+
+```[Source code](https://github.com/NetBSD/src/tree/trunk/games/mille)```
+
+```[Documentation](https://man.netbsd.org/mille.6)```
+
+<!-- verified: 2026-11-09 -->

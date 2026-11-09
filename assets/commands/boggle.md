@@ -20,6 +20,10 @@ Word search game on a grid of letter cubes
 
 ```boggle [abcdefghijklmnop]```
 
+**Print all dictionary words** found on a board
+
+```boggle -b [abcdefghijklmnop] < [path/to/wordlist]```
+
 **Allow cubes to be reused (not in succession)**
 
 ```boggle +```
@@ -73,8 +77,16 @@ Type **?** during play for help. Words containing 'q' must have 'u' immediately 
 
 # HISTORY
 
-Boggle is a word game originally published by Parker Brothers in **1972**. The BSD games version is a terminal implementation included in the classic Unix games collection that originated from Berkeley Software Distribution.
+Boggle is a word game originally published by Parker Brothers in **1972**. The BSD games version is a terminal implementation written by **Barry Brachman** at the University of British Columbia and included in the classic Unix games collection that originated from Berkeley Software Distribution.
 
 # SEE ALSO
 
 [hangman](/man/hangman)(6), [quiz](/man/quiz)(6)
+
+# RESOURCES
+
+```[Source code](https://github.com/NetBSD/src/tree/trunk/games/boggle)```
+
+```[Documentation](https://man.netbsd.org/boggle.6)```
+
+<!-- verified: 2026-11-09 -->

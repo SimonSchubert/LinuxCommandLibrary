@@ -12,6 +12,10 @@ Automatic security update installer
 
 ```sudo unattended-upgrades --dry-run```
 
+**Download upgrades** without installing them
+
+```sudo unattended-upgrades --download-only```
+
 **Run with verbose output**
 
 ```sudo unattended-upgrades -v```
@@ -30,7 +34,7 @@ Automatic security update installer
 
 # SYNOPSIS
 
-**unattended-upgrades** [**-d**] [**-v**] [**--dry-run**] [**--minimal-upgrade-steps**]
+**unattended-upgrades** [_options_]
 
 # PARAMETERS
 
@@ -41,7 +45,10 @@ Automatic security update installer
 > Show verbose output during operation.
 
 **--dry-run**
-> Simulate the upgrade process without actually installing packages.
+> Simulate the upgrade process: packages are downloaded but not installed.
+
+**--download-only**
+> Only download packages, without trying to install them.
 
 **--apt-debug**
 > Enable detailed APT/LibAPT output for debugging.
@@ -87,3 +94,11 @@ Automatic updates can cause issues if packages have breaking changes or require 
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [dpkg](/man/dpkg)(1), [systemctl](/man/systemctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/mvo5/unattended-upgrades)```
+
+```[Documentation](https://wiki.debian.org/PeriodicUpdates)```
+
+<!-- verified: 2026-11-09 -->

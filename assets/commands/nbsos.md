@@ -8,7 +8,7 @@ terminal SOS game
 
 ```nbsos```
 
-**Play against computer** with specific AI difficulty
+**Set a fixed AI difficulty**
 
 ```nbsos -p [5]```
 
@@ -33,13 +33,13 @@ terminal SOS game
 > Set player 2 type: h (human) or c (computer).
 
 **-p** _depth_
-> Set AI difficulty level (1-127).
+> Set a fixed AI search depth (1-127). Without it, the AI strength adapts after each game.
 
 **-l** _number_
-> Set board length (0-1000).
+> Set board length (0-1000, default 5).
 
 **-w** _number_
-> Set board width (0-1000).
+> Set board width (0-1000, default 6).
 
 **-n**
 > Disable replay prompts at game end.
@@ -60,17 +60,22 @@ terminal SOS game
 
 **nbsos** is a terminal-based SOS board game from the **nbsdgames** collection. Players take turns placing the letters S or O on a grid. Forming a straight connected S-O-S sequence scores a point; the player with the highest score wins.
 
-Controls: arrow keys or hjkl to move cursor, S/O to place a letter, q to quit. Mouse input is also supported.
+Controls: arrow keys or hjkl to move cursor, S/O to place a letter, q to quit, F1 and F2 for help on controls and gameplay. Mouse input is also supported.
 
 # CAVEATS
 
-Requires a terminal with curses support. Board dimensions are adjustable but very large boards may not display well. Part of the nbsdgames collection.
+Requires a terminal with curses support. Boards larger than the terminal can be scrolled with PgUp, PgDn, < and >. Part of the nbsdgames collection.
 
 # HISTORY
 
-**nbsos** is part of **nbsdgames**, a package of 18 text-based terminal games created by **abakh**. It implements the classic SOS paper-and-pencil game.
+**nbsos** is part of **nbsdgames**, a collection of text-based terminal games created by **abakh**. It implements the classic SOS paper-and-pencil game.
 
 # SEE ALSO
 
-[nbmines](/man/nbmines)(1), [nbfifteen](/man/nbfifteen)(1), [nbmemoblocks](/man/nbmemoblocks)(1)
+[nbmines](/man/nbmines)(1), [nbfifteen](/man/nbfifteen)(1), [nbmemoblocks](/man/nbmemoblocks)(1), [nbsdgames](/man/nbsdgames)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/abakh/nbsdgames)```
+
+<!-- verified: 2026-11-09 -->

@@ -20,6 +20,10 @@ sets resource limits for user sessions
 
 ```echo "nginx hard nofile 100000" > /etc/security/limits.d/nginx.conf```
 
+**Cap concurrent logins for a group**
+
+```echo "@[group] - maxlogins 4" >> /etc/security/limits.conf```
+
 # SYNOPSIS
 
 **pam_limits.so** [_options_]
@@ -27,13 +31,10 @@ sets resource limits for user sessions
 # PARAMETERS
 
 **conf=**_FILE_
-> Use an alternate limits configuration file instead of `/etc/security/limits.conf`.
+> Use an alternate limits configuration file instead of `/etc/security/limits.conf`. The files in `limits.d/` are then not parsed.
 
 **debug**
 > Print debug information to the system log.
-
-**change_uid**
-> Change to the user's UID before reading the limits file. Useful when the limits file is only accessible by the target user.
 
 **utmp_early**
 > Read the utmp entry before the module runs. Works around broken applications that allocate utmp entries before PAM completes.
@@ -50,17 +51,17 @@ Configuration is read from `/etc/security/limits.conf` and drop-in files in `/et
 
 **pam_limits** is a PAM session module that enforces per-user and per-group resource limits at login time. It reads limit definitions from `/etc/security/limits.conf` and any `*.conf` files in `/etc/security/limits.d/`, which are applied in lexicographic order.
 
-Each rule in the configuration has the format: `domain type item value`. The domain is a username, `@groupname`, `*` (all users), or a UID/GID range. The type is `soft` (user-adjustable ceiling), `hard` (kernel-enforced maximum), or `-` (set both). Common items include `nofile` (open file descriptors), `nproc` (processes), `memlock` (locked memory in KB), `stack` (stack size in KB), `cpu` (CPU time in minutes), `as` (address space in KB), `maxlogins` (concurrent logins per user), and `priority` (scheduling priority).
+Each rule in the configuration has the format: `domain type item value`. The domain is a username, `@groupname`, `*` (all users), `%` or `%group` (for login-count limits only), or a UID/GID range such as `1000:2000` or `@500:`. The type is `soft` (user-adjustable ceiling), `hard` (kernel-enforced maximum), or `-` (set both). Common items include `nofile` (open file descriptors), `nproc` (processes), `memlock` (locked memory in KB), `stack` (stack size in KB), `cpu` (CPU time in minutes), `as` (address space in KB), `maxlogins` (concurrent logins per user), `maxsyslogins` (total logins on the system), `nice`, `rtprio`, `nonewprivs`, and `priority` (scheduling priority).
 
-Individual user entries take precedence over group entries. Users including root (uid=0) are subject to these limits. Use `unlimited`, `infinity`, or `-1` as the value to remove a limit (not valid for `priority`, `nice`, or `nonewprivs`).
+Individual user entries take precedence over group entries. Users including root (uid=0) are subject to these limits. Use `unlimited`, `infinity`, or `-1` as the value to remove a limit (not valid for `priority`, `nice`, or `nonewprivs`). For `nofile`, these values are replaced by the contents of `/proc/sys/fs/nr_open`.
 
 Limits only take effect for new login sessions; running processes are not affected.
 
 # CAVEATS
 
-Session module only — must be placed in the `session` stack of a PAM service file (e.g. `/etc/pam.d/common-session`). Limits are applied per-session at login; changes require the user to log out and back in.
+Session module only: must be placed in the `session` stack of a PAM service file (e.g. `/etc/pam.d/common-session`). Limits are applied per-session at login; changes require the user to log out and back in.
 
-Root (uid=0) is affected by these limits like any other user.
+Root (uid=0) is affected by these limits like any other user, except for `maxlogins` and `maxsyslogins`.
 
 Systemd services ignore `/etc/security/limits.conf`; use `LimitNOFILE=` and related directives in the unit file instead.
 
@@ -68,4 +69,10 @@ This module must not be called from a multithreaded application.
 
 # SEE ALSO
 
-[limits.conf](/man/limits.conf)(5), [pam](/man/pam)(8), [ulimit](/man/ulimit)(1), [sysctl](/man/sysctl)(8)
+[limits.conf](/man/limits.conf)(5), [pam](/man/pam)(8), [pam.d](/man/pam.d)(5), [ulimit](/man/ulimit)(1), [prlimit](/man/prlimit)(1), [getrlimit](/man/getrlimit)(2), [sysctl](/man/sysctl)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/linux-pam/linux-pam)```
+
+<!-- verified: 2026-11-09 -->

@@ -8,6 +8,14 @@ shell function definition keyword
 
 ```function greet() { echo "Hello $1"; }```
 
+**Define a function** without parentheses
+
+```function greet { echo "Hello $1"; }```
+
+**Define a function** the POSIX-portable way
+
+```greet() { echo "Hello $1"; }```
+
 **Call the function**
 
 ```greet [World]```
@@ -24,9 +32,15 @@ shell function definition keyword
 
 ```unset -f [function_name]```
 
+**Export a function** to child bash processes
+
+```export -f [function_name]```
+
 # SYNOPSIS
 
-**function** _name_() { _commands_; }
+**function** _name_ [**()**] _compound-command_ [_redirections_]
+
+_name_ **()** _compound-command_ [_redirections_]
 
 # PARAMETERS
 
@@ -52,13 +66,13 @@ _COMMANDS_
 
 **function** is a shell keyword for defining reusable command groups. Functions encapsulate commands, accept parameters, and can return exit status values.
 
-Functions enable code reuse, modularity, and cleaner scripts. They have local scope for variables with the `local` keyword. Parameters are accessed through positional variables ($1, $2, etc.).
+Functions run in the current shell, without creating a new process. Variables are global unless declared with `local`. Parameters are accessed through positional variables ($1, $2, etc.).
 
-In bash, both `function name() { ...; }` and `name() { ...; }` syntax define functions. The POSIX-portable form omits the `function` keyword. In ksh and zsh, the `function` keyword is also supported.
+In bash, `function name() { ...; }`, `function name { ...; }` and `name() { ...; }` all define functions: when the `function` reserved word is supplied the parentheses are optional. The POSIX-portable form omits the `function` keyword. In ksh and zsh, the `function` keyword is also supported.
 
 # CAVEATS
 
-Functions must be defined before use. `return` only sets exit status (0-255), not output values — use command substitution to capture output. Variable scope requires explicit `local` declarations; without it, variables are global.
+Functions must be defined before use. `return` only sets exit status (0-255), not output values: use command substitution to capture output. Variable scope requires explicit `local` declarations; without it, variables are global.
 
 # SEE ALSO
 

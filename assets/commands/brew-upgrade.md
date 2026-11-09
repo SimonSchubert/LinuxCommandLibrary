@@ -24,6 +24,10 @@ Upgrade installed Homebrew packages to newer versions
 
 ```brew upgrade --greedy```
 
+**Upgrade without asking for confirmation**
+
+```brew upgrade -y```
+
 **Upgrade with verbose output showing verification and post-install steps**
 
 ```brew upgrade --verbose [formula]```
@@ -34,11 +38,11 @@ Upgrade installed Homebrew packages to newer versions
 
 # DESCRIPTION
 
-**brew upgrade** upgrades outdated casks and outdated, unpinned formulae using the same options they were originally installed with. Without arguments, it upgrades all installed packages. With arguments, it upgrades only the specified packages.
+**brew upgrade** upgrades outdated, unpinned packages using the same options they were originally installed with, plus any appended formula options. Without arguments, it upgrades all outdated packages. With arguments, it upgrades only the specified packages, unless they are pinned.
 
 Unless **$HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK** is set, **brew upgrade** or **brew reinstall** will be run for outdated dependents and dependents with broken linkage, respectively.
 
-Unless **$HOMEBREW_NO_INSTALL_CLEANUP** is set, **brew cleanup** will then be run for the upgraded formulae or, every 30 days, for all formulae.
+Unless **$HOMEBREW_NO_INSTALL_CLEANUP** is set, **brew cleanup** will then be run for the upgraded formulae and casks or, every 30 days, for all packages.
 
 # PARAMETERS
 
@@ -63,14 +67,23 @@ Unless **$HOMEBREW_NO_INSTALL_CLEANUP** is set, **brew cleanup** will then be ru
 **--display-times**
 > Print install times for each package at the end of the run. Enabled by default if **$HOMEBREW_DISPLAY_INSTALL_TIMES** is set.
 
-**--ask**
-> Ask for confirmation before downloading and upgrading formulae. Print download, install and net install sizes of bottles and dependencies. Enabled by default if **$HOMEBREW_ASK** is set.
+**-y**, **--no-ask**, **--yes**
+> Do not ask for confirmation before downloading and upgrading. Ask mode is the default. Enabled by default if **$HOMEBREW_NO_ASK** is set.
+
+**--minimum-version** _version_
+> Only upgrade a named formula or cask with an installed version below the given minimum version.
+
+**--vulnerable**
+> Only select outdated formulae with open vulnerabilities from OSV.dev. Implies **--formula**.
+
+**--severity** _level_
+> With **--vulnerable**, only select findings at or above low, medium, high or critical.
 
 **-f**, **--force**
 > Install formulae without checking for previously installed keg-only or non-migrated versions. When installing casks, overwrite existing files (binaries and symlinks are excluded, unless originally from the same cask).
 
 **-g**, **--greedy**
-> Also include casks with **auto_updates true** or **version :latest**. Enabled by default if **$HOMEBREW_UPGRADE_GREEDY** is set.
+> Also include casks with **version :latest** and **auto_updates true** casks that would otherwise be skipped. Enabled by default if **$HOMEBREW_UPGRADE_GREEDY** is set.
 
 **--greedy-latest**
 > Also include casks with **version :latest**.
@@ -87,8 +100,23 @@ Unless **$HOMEBREW_NO_INSTALL_CLEANUP** is set, **brew cleanup** will then be ru
 **--force-bottle**
 > Install from a bottle if it exists for the current or newest version of macOS, even if it would not normally be used for installation.
 
+**-i**, **--interactive**
+> Download and patch the formula, then open a shell.
+
+**--debug-symbols**
+> Generate debug symbols on build. Requires **--build-from-source**.
+
 **--skip-cask-deps**
 > Skip installing cask dependencies.
+
+**--no-quit**
+> Prevent running cask applications from being quit during upgrade.
+
+**--[no-]binaries**
+> Disable or enable linking of helper executables (default: enabled).
+
+**--require-sha**
+> Require all casks to have a checksum.
 
 **--overwrite**
 > Delete files that already exist in the prefix while linking.
@@ -107,8 +135,11 @@ Unless **$HOMEBREW_NO_INSTALL_CLEANUP** is set, **brew cleanup** will then be ru
 **HOMEBREW_DISPLAY_INSTALL_TIMES**
 > Enables **--display-times** by default.
 
-**HOMEBREW_ASK**
-> Enables **--ask** by default.
+**HOMEBREW_NO_ASK**
+> Disables the default ask mode, like **--no-ask**.
+
+**HOMEBREW_NO_UPGRADE_QUIT_CASKS**
+> Enables **--no-quit** by default.
 
 **HOMEBREW_UPGRADE_GREEDY**
 > Enables **--greedy** by default.
@@ -120,3 +151,13 @@ Run **brew update** first to fetch the latest package definitions before upgradi
 # SEE ALSO
 
 [brew](/man/brew)(1), [brew-update](/man/brew-update)(1), [brew-outdated](/man/brew-outdated)(1), [brew-install](/man/brew-install)(1), [brew-reinstall](/man/brew-reinstall)(1), [brew-cleanup](/man/brew-cleanup)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Homebrew/brew)```
+
+```[Homepage](https://brew.sh)```
+
+```[Documentation](https://docs.brew.sh/Manpage)```
+
+<!-- verified: 2026-11-09 -->

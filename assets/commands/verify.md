@@ -44,6 +44,9 @@ Validate X.509 certificate chains
 **-CApath** _dir_
 > Directory containing trusted CA certificates (hashed filenames).
 
+**-no-CAfile**, **-no-CApath**, **-no-CAstore**
+> Do not load the default file, directory or store of trusted certificates.
+
 **-untrusted** _file_
 > File containing untrusted intermediate certificates for chain building.
 
@@ -75,7 +78,13 @@ Validate X.509 certificate chains
 > Check entire chain against CRL.
 
 **-CRLfile** _file_
-> File containing Certificate Revocation List.
+> File or URI containing CRLs in PEM or DER format. May be repeated.
+
+**-crl_download**
+> Attempt to download CRLs using the certificates' CDP entries.
+
+**-x509_strict**
+> Apply strict X.509 compliance checks.
 
 **-partial_chain**
 > Accept chains anchored by intermediate certificates.
@@ -107,12 +116,22 @@ The command is typically invoked as **openssl verify** rather than standalone **
 
 # CAVEATS
 
-Certificate path must be a PEM-encoded file. Multiple certificates in one file are processed, but only the first is verified by default. Hostname verification requires explicit **-verify_hostname** flag. Self-signed certificates need **-partial_chain** or inclusion in trusted store.
+Each target certificate is given in its own file, and with no file a single certificate is read from standard input. Options must come before the first certificate file, since anything after it is treated as a certificate. OpenSSL ships no trust anchors of its own, so the default trust store depends on how the distribution configured it. Hostname verification requires explicit **-verify_hostname** flag. Self-signed certificates need **-partial_chain** or inclusion in trusted store.
 
 # HISTORY
 
-The **verify** command has been part of **OpenSSL** since its early releases in the late **1990s**. It implements certificate path validation as defined in RFC 5280 (X.509 PKI). The command has evolved to support modern requirements like hostname verification, multiple trust anchors, and advanced policy checking.
+The **verify** command has been part of **OpenSSL** since its early releases in the late **1990s**. It implements certificate path validation as defined in RFC 5280 (X.509 PKI). The command has evolved to support modern requirements like hostname verification, multiple trust anchors, and advanced policy checking. The **-show_chain** option was added in OpenSSL 1.1.0, and **-engine** was removed in OpenSSL 4.0.
 
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [openssl-verify](/man/openssl-verify)(1), [openssl-x509](/man/openssl-x509)(1), [openssl-s_client](/man/openssl-s_client)(1), [openssl-req](/man/openssl-req)(1), [openssl-ca](/man/openssl-ca)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/openssl/openssl)```
+
+```[Homepage](https://www.openssl.org/)```
+
+```[Documentation](https://docs.openssl.org/master/man1/openssl-verify/)```
+
+<!-- verified: 2026-11-09 -->

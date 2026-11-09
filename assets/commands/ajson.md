@@ -20,6 +20,10 @@ Read **multiline** JSON (one JSON object per line)
 
 ```ajson -m '$.name' [file.jsonl]```
 
+Query JSON from a **URL**
+
+```ajson '$.results.*.name' '[https://example.com/data.json]'```
+
 **Evaluate** an expression over JSON data
 
 ```ajson 'avg($..price)' [file.json]```
@@ -40,7 +44,7 @@ JSONPath syntax is similar to XPath for XML, with **$** representing the root ob
 > JSONPath expression or evaluation string to evaluate.
 
 **file**
-> Path to JSON file (reads stdin if omitted).
+> Path to a JSON file, or an http(s) URL to fetch (reads stdin if omitted).
 
 **-m**, **--multiline**
 > Read input as multiline JSON, where each line is a separate valid JSON object.
@@ -59,3 +63,9 @@ JSONPath implementations may vary in supported features. Complex nested queries 
 # SEE ALSO
 
 [jq](/man/jq)(1), [yq](/man/yq)(1), [fx](/man/fx)(1), [gron](/man/gron)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/spyzhov/ajson)```
+
+<!-- verified: 2026-11-09 -->

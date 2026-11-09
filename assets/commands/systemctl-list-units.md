@@ -40,6 +40,18 @@ List units **with full names** (no ellipsis)
 
 ```systemctl list-units --full```
 
+List **user** service manager units
+
+```systemctl --user list-units```
+
+Output suitable for **scripts**
+
+```systemctl list-units --plain --no-legend --no-pager```
+
+Show the **possible states** for filtering
+
+```systemctl --state=help```
+
 # SYNOPSIS
 
 **systemctl list-units** [_OPTIONS_] [_PATTERN_...]
@@ -67,6 +79,12 @@ List units **with full names** (no ellipsis)
 **--with-dependencies**
 > Show specified units and their dependencies
 
+**--plain**
+> Print a list instead of a tree and omit the bullet circles
+
+**--user**
+> Talk to the user's service manager instead of the system one
+
 **--no-pager**
 > Disable pager output
 
@@ -83,17 +101,17 @@ The output shows the unit name, load state, active state, sub-state, and descrip
 
 **UNIT** - Unit name
 
-**LOAD** - Load state (loaded, not-found, error)
+**LOAD** - Load state (loaded, not-found, bad-setting, error, masked)
 
-**ACTIVE** - Active state (active, inactive, failed)
+**ACTIVE** - Active state (active, reloading, inactive, failed, activating, deactivating, maintenance)
 
-**SUB** - Sub-state (running, exited, dead, listening)
+**SUB** - Unit-type-specific sub-state (for example running, exited, dead, listening)
 
 **DESCRIPTION** - Unit description
 
 # CAVEATS
 
-Only shows currently loaded units. Use `list-unit-files` to see all installed units. Failed units remain visible until acknowledged with `systemctl reset-failed`.
+Only shows currently loaded units. Use `list-unit-files` to see all installed units. Unit templates such as `foo@.service` never appear here, only their instances. Failed units remain visible until acknowledged with `systemctl reset-failed`.
 
 # HISTORY
 
@@ -102,3 +120,13 @@ The **list-units** subcommand is the primary status overview command in systemd,
 # SEE ALSO
 
 [systemctl-list-unit-files](/man/systemctl-list-unit-files)(1), [systemctl-list-timers](/man/systemctl-list-timers)(1), [systemctl-status](/man/systemctl-status)(1), [systemctl](/man/systemctl)(1), [journalctl](/man/journalctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

@@ -28,6 +28,10 @@ Publish Python packages to PyPI
 
 ```uv publish --check-url https://pypi.org/simple/```
 
+**Validate** without uploading anything
+
+```uv publish --dry-run```
+
 # SYNOPSIS
 
 **uv** **publish** [_options_] [_files_...]
@@ -35,31 +39,37 @@ Publish Python packages to PyPI
 # PARAMETERS
 
 **--publish-url** _url_
-> URL of the upload endpoint for the target registry.
+> URL of the upload endpoint (not the index URL). Defaults to `https://upload.pypi.org/legacy/`. Env: UV_PUBLISH_URL.
 
 **--index** _name_
-> Publish to a named index configured in pyproject.toml.
+> Publish to a named index from the configuration, which must have a **publish-url**. Its URL is also used to skip existing files. Env: UV_PUBLISH_INDEX.
 
-**--token** _token_
+**--token**, **-t** _token_
 > Authentication token (e.g., PyPI API token). Env: UV_PUBLISH_TOKEN.
 
-**--username** _user_
+**--username**, **-u** _user_
 > Repository username. Env: UV_PUBLISH_USERNAME.
 
-**--password** _pass_
+**--password**, **-p** _pass_
 > Repository password. Env: UV_PUBLISH_PASSWORD.
 
 **--check-url** _url_
-> Index URL to check for existing packages; skips identical uploads and handles parallel races.
+> Index URL to check for existing packages; skips identical uploads and handles parallel races. Env: UV_PUBLISH_CHECK_URL.
 
 **--trusted-publishing** _value_
-> Configure trusted publishing (always, never). Supported in GitHub Actions and GitLab CI/CD.
+> Configure trusted publishing (automatic, always, never). Supported in GitHub Actions and GitLab CI/CD.
 
 **--keyring-provider** _provider_
-> Use keyring for authentication (subprocess).
+> Use keyring for authentication (disabled by default, or subprocess to call the keyring CLI). Env: UV_KEYRING_PROVIDER.
+
+**--dry-run**
+> Check distribution metadata locally, and existing files if **--check-url** or **--index** is given, without uploading.
+
+**--allow-insecure-host** _host_
+> Skip certificate verification for a host. Env: UV_INSECURE_HOST.
 
 **--no-attestations**
-> Disable automatic attestation uploads. Env: UV_PUBLISH_NO_ATTESTATIONS.
+> Do not upload matching PEP 740 attestations. Env: UV_PUBLISH_NO_ATTESTATIONS.
 
 # DESCRIPTION
 
@@ -71,3 +81,10 @@ When **--check-url** is provided, uv skips uploading files that are identical to
 
 [uv](/man/uv)(1), [uv-build](/man/uv-build)(1), [twine](/man/twine)(1), [pip](/man/pip)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/astral-sh/uv)```
+
+```[Documentation](https://docs.astral.sh/uv/)```
+
+<!-- verified: 2026-11-09 -->

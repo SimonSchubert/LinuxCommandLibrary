@@ -24,31 +24,35 @@ Create **unprivileged** container with CPU and swap limits
 
 ```pct create 100 local:vztmpl/distro.tar.zst --rootfs local-lvm:4 --unprivileged 1 --cores 2 --swap 512```
 
+Enable **nesting** for containers that run containers
+
+```pct create 100 local:vztmpl/distro.tar.zst --rootfs local-lvm:4 --features nesting=1```
+
 Create and **start** immediately
 
-```pct create 100 local:vztmpl/distro.tar.zst --rootfs local-lvm:4 --start```
+```pct create 100 local:vztmpl/distro.tar.zst --rootfs local-lvm:4 --start 1```
 
 # SYNOPSIS
 
-**pct create** _vmid_ _template_ [_OPTIONS_]
+**pct create** _vmid_ _ostemplate_ [_OPTIONS_]
 
 # DESCRIPTION
 
-**pct create** creates a new LXC container in Proxmox VE from a template image. It configures storage, networking, resources, and other container properties during creation.
+**pct create** creates a new LXC container in Proxmox VE from a template image, or restores one from a backup file with **--restore 1**. It configures storage, networking, resources, and other container properties during creation.
 
 # PARAMETERS
 
 **vmid**
-> The numeric ID for the new container
+> The unique numeric ID for the new container (100 to 999999999)
 
-**template**
-> Path to the container template (e.g., local:vztmpl/distro.tar.zst)
+**ostemplate**
+> The OS template or backup file (e.g., local:vztmpl/distro.tar.zst)
 
 **--rootfs** _storage:size_
-> Root filesystem storage and size in GB
+> Root volume, using _storage:size_ in GiB to allocate a new one. If omitted, a 4 GiB volume is allocated on **--storage**.
 
 **--memory** _megabytes_
-> Memory limit in MB
+> Amount of RAM in MB (default: 512)
 
 **--hostname** _name_
 > Container hostname
@@ -60,19 +64,19 @@ Create and **start** immediately
 > Network interface configuration
 
 **--cores** _number_
-> Number of CPU cores assigned to the container
+> Number of CPU cores assigned to the container (default: all available cores)
 
 **--swap** _megabytes_
 > Swap memory limit in MB (default: 512)
 
 **--unprivileged** _0|1_
-> Create as unprivileged container (1, recommended for security)
+> Run the container as an unprivileged user. Defaults to 1 on creation; on restore, the value from the backup is used.
 
 **--ssh-public-keys** _filepath_
 > SSH public keys for root user authentication
 
 **--features** _list_
-> Enable features like nesting, keyctl, fuse, mknod
+> Enable features as key=value pairs: nesting, keyctl, fuse, mknod, mount, force_rw_sys
 
 **--start** _0|1_
 > Start container after creation (default: 0).
@@ -87,11 +91,35 @@ Create and **start** immediately
 > DNS server IP address for the container.
 
 **--ostype** _type_
-> OS type (e.g., debian, ubuntu, centos, alpine, archlinux, fedora, gentoo, opensuse, unmanaged).
+> OS type: alpine, archlinux, centos, debian, devuan, fedora, gentoo, nixos, opensuse, ubuntu or unmanaged.
+
+**--arch** _arch_
+> OS architecture: amd64 (default), arm64, armhf, i386, riscv32 or riscv64.
+
+**--mp**_N_ _config_
+> Additional mount point, for example volume,mp=/path.
+
+**--searchdomain** _domain_
+> DNS search domains for the container.
+
+**--timezone** _zone_
+> Time zone to use, or **host** to match the host.
+
+**--tags** _tags_
+> Tags of the container (meta information only).
+
+**--pool** _pool_
+> Add the container to the specified pool.
+
+**--restore** _0|1_
+> Mark this as a restore task.
+
+**--force** _0|1_
+> Allow overwriting an existing container.
 
 # CAVEATS
 
-Templates must be downloaded or uploaded to Proxmox storage first. The container ID must be unique across the cluster. Enable nesting for containers that run Docker or other containers inside.
+Templates must be downloaded with **pveam** or uploaded to Proxmox storage first. The container ID must be unique across the cluster. Enable nesting for containers that run Docker or other containers inside.
 
 # HISTORY
 
@@ -99,4 +127,12 @@ Templates must be downloaded or uploaded to Proxmox storage first. The container
 
 # SEE ALSO
 
-[pct](/man/pct)(1), [pct-clone](/man/pct-clone)(1), [pct-enter](/man/pct-enter)(1), [pct-destroy](/man/pct-destroy)(1)
+[pct](/man/pct)(1), [pct-clone](/man/pct-clone)(1), [pct-enter](/man/pct-enter)(1), [pct-destroy](/man/pct-destroy)(1), [pveam](/man/pveam)(1)
+
+# RESOURCES
+
+```[Documentation](https://pve.proxmox.com/pve-docs/pct.1.html)```
+
+```[Source code](https://git.proxmox.com/?p=pve-container.git)```
+
+<!-- verified: 2026-11-09 -->

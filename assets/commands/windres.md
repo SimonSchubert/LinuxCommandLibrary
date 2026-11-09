@@ -18,15 +18,19 @@ GNU Windows resource compiler
 
 **Specify input format** explicitly
 
-```windres -I rc -i [input.rc] -O coff -o [output.o]```
+```windres -J rc -i [input.rc] -O coff -o [output.o]```
 
 **Include directory** for headers
 
-```windres --include-dir=[path/to/includes] [input.rc] -o [output.o]```
+```windres -I [path/to/includes] [input.rc] -o [output.o]```
 
 **Define preprocessor symbol**
 
 ```windres -D [SYMBOL=value] [input.rc] -o [output.o]```
+
+**Extract resources** from an executable to a resource script
+
+```windres -i [app.exe] -o [resources.rc]```
 
 **Cross-compile for 64-bit Windows**
 
@@ -34,27 +38,27 @@ GNU Windows resource compiler
 
 # SYNOPSIS
 
-**windres** [**-i** _infile_] [**-o** _outfile_] [**-I** _format_] [**-O** _format_] [**-F** _target_] [**--include-dir** _dir_] [**-D** _sym_] [_options_]
+**windres** [_options_] [_input-file_] [_output-file_]
 
 # PARAMETERS
 
 **-i** _file_, **--input** _file_
-> Input file name. Without this, uses first non-option argument.
+> Input file name. Without this, uses the first non-option argument, or standard input if there is none.
 
 **-o** _file_, **--output** _file_
-> Output file name.
+> Output file name. Without an output file, resources are printed in rc format to standard output.
 
-**-I** _format_, **--input-format** _format_
-> Input format: rc (resource script), res (binary), coff (object).
+**-J** _format_, **--input-format** _format_
+> Input format: rc (resource script), res (binary), coff (object). Guessed from the file name or contents if omitted.
 
 **-O** _format_, **--output-format** _format_
-> Output format: rc, res, or coff.
+> Output format: rc, res, or coff. Guessed from the file name if omitted.
 
 **-F** _target_, **--target** _target_
 > Specify BFD target format for COFF output.
 
-**--include-dir** _dir_
-> Add directory to search path for included files.
+**-I** _dir_, **--include-dir** _dir_
+> Add directory to search path for included files. An argument matching a format name behaves like **-J** with a deprecation warning; prefix a directory of that name with ./ to avoid this.
 
 **-D** _sym_[=_val_], **--define** _sym_[=_val_]
 > Define preprocessor symbol.
@@ -63,10 +67,19 @@ GNU Windows resource compiler
 > Undefine preprocessor symbol.
 
 **--preprocessor** _prog_
-> Preprocessor program to use. Default is `gcc -E -xc-header -DRC_INVOKED`.
+> Preprocessor program to use (default: gcc).
 
 **--preprocessor-arg** _arg_
 > Additional argument for preprocessor.
+
+**-c** _val_, **--codepage** _val_
+> Default codepage for rc files, in decimal or 0x-prefixed hexadecimal.
+
+**-l** _val_, **--language** _val_
+> Default language for rc files, as a hexadecimal language code.
+
+**-r**
+> Ignored for compatibility with rc.
 
 **--no-use-temp-file**
 > Use pipes for communication with the preprocessor (default).
@@ -80,10 +93,10 @@ GNU Windows resource compiler
 **-v**, **--verbose**
 > Enable verbose mode.
 
-**--help**
+**-h**, **--help**
 > Display help message.
 
-**--version**
+**-V**, **--version**
 > Display version information.
 
 # DESCRIPTION
@@ -106,4 +119,14 @@ Resource script syntax follows Microsoft conventions but may have minor compatib
 
 # SEE ALSO
 
-[gcc](/man/gcc)(1), [ld](/man/ld)(1), [objcopy](/man/objcopy)(1), [objdump](/man/objdump)(1)
+[gcc](/man/gcc)(1), [ld](/man/ld)(1), [objcopy](/man/objcopy)(1), [objdump](/man/objdump)(1), [dlltool](/man/dlltool)(1)
+
+# RESOURCES
+
+```[Source code](https://sourceware.org/git/binutils-gdb.git)```
+
+```[Homepage](https://sourceware.org/binutils/)```
+
+```[Documentation](https://sourceware.org/binutils/docs/binutils/windres.html)```
+
+<!-- verified: 2026-11-09 -->

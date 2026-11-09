@@ -6,35 +6,51 @@ Vanilla OS system operator tool
 
 Check for **updates**
 
-```vso sys-upgrade check```
+```vso upgrade check```
 
-**Upgrade** system now
+**Upgrade** the system in the background
 
-```vso sys-upgrade upgrade --now```
+```vso upgrade```
 
-Initialize **Pico** subsystem
+**Upgrade** and reboot once the update is ready
 
-```vso pico-init```
+```vso upgrade --now```
+
+Initialize the **native subsystem**
+
+```vso native init```
 
 **Install** applications
 
-```vso install [package1] [package2]```
+```vso native install [package1] [package2]```
 
 **Remove** applications
 
-```vso remove [package1] [package2]```
+```vso native remove [package1] [package2]```
+
+**Sideload** a local package
+
+```vso native sideload [path/to/package.deb]```
 
 Enter subsystem **shell**
 
-```vso shell```
+```vso native shell```
 
-**Run** application
+**Run** a command from the subsystem
 
-```vso run [package]```
+```vso native run [command]```
+
+**Export** an application to the host desktop
+
+```vso native export --app [app_name]```
 
 Show **config**
 
 ```vso config show```
+
+List scheduled **tasks**
+
+```vso tasks list```
 
 # SYNOPSIS
 
@@ -42,43 +58,91 @@ Show **config**
 
 # COMMANDS
 
-**sys-upgrade check**
+**upgrade** [**--now**]
+> Prepare the available system image update in the background
+
+**upgrade check** [**--json**]
 > Check for system updates
 
-**sys-upgrade upgrade**
-> Upgrade the system
+**native init** [**-f**]
+> Initialize the VSO subsystem used for package management
 
-**pico-init**
-> Initialize Pico subsystem
+**native install**
+> Install applications in the subsystem
 
-**install**
-> Install applications in subsystem
+**native remove**
+> Remove applications from the subsystem
 
-**remove**
-> Remove applications from subsystem
+**native sideload**
+> Sideload DEB/APK packages inside the subsystem
 
-**shell**
-> Enter subsystem shell
+**native update**
+> Update the subsystem's package repository
 
-**run**
-> Run application from subsystem
+**native upgrade**
+> Upgrade the packages inside the subsystem
 
-**export**
-> Export an installed application as a desktop entry
+**native shell**
+> Enter the subsystem shell
 
-**unexport**
-> Remove an exported desktop entry
+**native run** [**--no-reset**]
+> Run an application from the subsystem
+
+**native export**
+> Export an application or binary from the subsystem
+
+**native unexport**
+> Remove an exported application or binary
 
 **config show**
 > Display configuration
 
-**help**
-> Show help for a command
+**config get** _KEY_
+> Read a configuration value
+
+**config set** _KEY_ _VALUE_
+> Change a configuration value (requires administrative privileges)
+
+**tasks list** [**-j**]
+> List all scheduled tasks
+
+**tasks new**
+> Create a new task
+
+**tasks rm** [**-n** _NAME_] [**-f**]
+> Remove a task
+
+**tasks rotate**
+> Rotate tasks
+
+**man**
+> Generate the manual page
 
 # PARAMETERS
 
 **--now**
-> Perform system upgrade immediately without scheduling
+> With **upgrade**: reboot after the upgrade is ready
+
+**--json**
+> With **upgrade check**: output the result in JSON format
+
+**-f**, **--force**
+> With **native init**: initialize even if the subsystem already exists
+
+**--no-reset**
+> With **native run**: do not propose to reset the subsystem if something goes wrong
+
+**--app** _NAME_
+> With **native export** or **unexport**: name of the application
+
+**--bin** _NAME_
+> With **native export** or **unexport**: name of the binary
+
+**--bin-output** _PATH_
+> With **native export** or **unexport**: path of the binary output (default: ~/.local/bin/)
+
+**-j**, **--json**
+> With **tasks list**: output in JSON format
 
 **-h**, **--help**
 > Show help information
@@ -86,16 +150,34 @@ Show **config**
 **--version**
 > Show version information
 
+# CONFIGURATION
+
+**updates.smart**
+> Accepts true or false.
+
+**updates.schedule**
+> Accepts never, daily, weekly or monthly.
+
 # DESCRIPTION
 
-**vso** (Vanilla System Operator) is a package manager, system updater, and task automator for Vanilla OS. It manages the immutable host system and a mutable Pico subsystem for package installation.
+**vso** (Vanilla System Operator) provides the user-facing commands for system upgrades, native package management and scheduled tasks on Vanilla OS. Image deployment is delegated to ABRoot, so the current system remains usable while the future state is prepared.
 
-The subsystem provides a container-like environment where traditional packages can be installed without modifying the base system.
+The native subsystem installs Debian packages without modifying the host image. It is managed by Apx under the name apx-vso-native.
 
 # CAVEATS
 
-Vanilla OS specific. Subsystem must be initialized before package operations. System upgrades may require reboot.
+Vanilla OS specific. The subsystem must be initialized before package operations. VSO 3 replaced the VSO 2 **sys-upgrade** command and the top-level package commands (**pico-init**, **install**, **remove**, **shell**, **run**, **export**), and no longer provides the former Android and Waydroid commands. Installations upgraded from an older release may also contain the legacy apx-vso-pico subsystem.
 
 # SEE ALSO
 
-[apx](/man/apx)(1), [flatpak](/man/flatpak)(1), [snap](/man/snap)(1)
+[abroot](/man/abroot)(1), [apx](/man/apx)(1), [flatpak](/man/flatpak)(1), [snap](/man/snap)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Vanilla-OS/vanilla-system-operator)```
+
+```[Homepage](https://vanillaos.org)```
+
+```[Documentation](https://docs.vanillaos.org/docs/en/vso)```
+
+<!-- verified: 2026-11-09 -->

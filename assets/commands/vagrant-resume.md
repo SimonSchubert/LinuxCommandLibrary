@@ -20,6 +20,10 @@ Resume a suspended Vagrant machine
 
 ```vagrant resume --no-provision```
 
+Run only **specific provisioners** afterward
+
+```vagrant resume --provision-with [shell,ansible]```
+
 # SYNOPSIS
 
 **vagrant** **resume** [_options_] [_name_]
@@ -27,10 +31,13 @@ Resume a suspended Vagrant machine
 # PARAMETERS
 
 **--provision**
-> Run provisioners.
+> Force the provisioners to run. By default they do not run on resume.
 
 **--no-provision**
 > Skip provisioners.
+
+**--provision-with** _x_,_y_,_z_
+> Run only the given provisioners, by type or by name.
 
 # DESCRIPTION
 
@@ -40,3 +47,10 @@ Resume a suspended Vagrant machine
 
 [vagrant](/man/vagrant)(1), [vagrant-suspend](/man/vagrant-suspend)(1), [vagrant-halt](/man/vagrant-halt)(1), [vagrant-status](/man/vagrant-status)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/hashicorp/vagrant)```
+
+```[Documentation](https://developer.hashicorp.com/vagrant/docs/cli/resume)```
+
+<!-- verified: 2026-11-09 -->

@@ -6,7 +6,7 @@ Portable Anymap image format family
 
 **View PNM info**
 
-```pnmfile [image.pnm]```
+```pamfile [image.pnm]```
 
 **Convert to other format**
 
@@ -37,7 +37,7 @@ PNM serves as the intermediate format in the Netpbm toolkit, where images are co
 
 # CAVEATS
 
-PNM files are uncompressed and can be very large compared to formats like PNG or JPEG. The more general term "Netpbm format" also includes PAM. No official MIME type is registered; image/x-portable-anymap is used by convention.
+PNM files are uncompressed and can be very large compared to formats like PNG or JPEG. The older **pnmfile** program was replaced by **pamfile** in Netpbm 10.9 (September 2002). The more general term "Netpbm format" also includes PAM. No official MIME type is registered; image/x-portable-anymap is used by convention.
 
 # HISTORY
 
@@ -45,5 +45,14 @@ PNM was created as part of the **Netpbm** project, originally derived from Jef P
 
 # SEE ALSO
 
-[pbm](/man/pbm)(5), [pgm](/man/pgm)(5), [ppm](/man/ppm)(5), [netpbm](/man/netpbm)(1)
+[pbm](/man/pbm)(5), [pgm](/man/pgm)(5), [ppm](/man/ppm)(5), [netpbm](/man/netpbm)(1), [pamfile](/man/pamfile)(1), [pnmtopng](/man/pnmtopng)(1), [pngtopnm](/man/pngtopnm)(1)
 
+# RESOURCES
+
+```[Source code](https://sourceforge.net/p/netpbm/code/HEAD/tree/)```
+
+```[Homepage](https://netpbm.sourceforge.net/)```
+
+```[Documentation](https://netpbm.sourceforge.net/doc/)```
+
+<!-- verified: 2026-11-09 -->

@@ -10,11 +10,11 @@ wireless recon visualization tool for Kismet data
 
 **Query for specific access points by ESSID**
 
-```giskismet -q "select * from wireless where ESSID='[MyNetwork]'"```
+```giskismet -q "select * from wireless where ESSID='[MyNetwork]'" -o [output.kml]```
 
-**Export results to KML file**
+**Export all access points to a KML file**
 
-```giskismet -x [data.netxml] -o [output.kml]```
+```giskismet -q "select * from wireless" -o [output.kml]```
 
 **Filter by encryption type**
 
@@ -58,13 +58,25 @@ wireless recon visualization tool for Kismet data
 > Insert only access points.
 
 **-q** _SQL_, **--query** _SQL_
-> Execute SQL query against the database.
+> Execute SQL query against the database and build a KML document from the results.
+
+**-m** _FILE_, **--manual** _FILE_
+> CSV output of manual SQL query.
 
 **-o** _FILE_, **--output** _FILE_
-> Specify output filename for KML export.
+> Specify output filename for KML export (used with **-q**).
 
 **-n** _NAME_, **--name** _NAME_
 > Set KML layer name.
+
+**--desc** _TEXT_
+> Set KML layer description.
+
+**--database** _FILE_
+> SQLite3 database name (default: wireless.dbl).
+
+**--ignore-gps**
+> Import data even when GPS fields are missing.
 
 **-s**, **--silent**
 > Suppress output when adding access points.
@@ -74,13 +86,13 @@ wireless recon visualization tool for Kismet data
 
 # DESCRIPTION
 
-**giskismet** is a Perl-based tool that processes wireless recon data gathered by **Kismet** and stores it in a SQLite database. Users can run SQL queries against the data and generate **Google Earth KML** files for mapping access point locations.
+**giskismet** is a Perl-based tool by **Joshua D. Abraham** that processes wireless recon data gathered by **Kismet** and stores it in a SQLite database. Users can run SQL queries against the data and generate **Google Earth KML** files for mapping access point locations.
 
 The tool supports filtering by BSSID, ESSID, encryption type, and channel, making it useful for wireless security assessments and site surveys.
 
 # CAVEATS
 
-Requires Kismet NETXML output files as input. GPS data must be present in the Kismet capture for meaningful KML output. The tool is deprecated in favor of newer Kismet built-in visualization features.
+Requires Kismet NETXML output files as input. GPS data must be present in the Kismet capture for meaningful KML output. The last upstream version is 0.02. Current Kismet writes kismetdb logs and ships its own converters such as kismetdb_to_kml, while giskismet reads the older NETXML and CSV formats.
 
 # SEE ALSO
 

@@ -24,6 +24,10 @@ Common Workflow Language executor
 
 ```cwl-runner --validate [workflow.cwl]```
 
+**Generate a template** input object
+
+```cwl-runner --make-template [workflow.cwl]```
+
 **Run in parallel**
 
 ```cwl-runner --parallel [workflow.cwl] [inputs.yml]```
@@ -41,10 +45,13 @@ Common Workflow Language executor
 > Output directory for results.
 
 **--no-container**
-> Disable Docker/container execution.
+> Do not execute jobs in a Docker container, even when DockerRequirement is specified under hints.
 
 **--parallel**
-> Run workflow steps in parallel.
+> Run jobs in parallel.
+
+**--parallel-max** _NUM_
+> Maximum number of parallel jobs (0 matches the number of CPU cores).
 
 **--cachedir** _path_
 > Directory for caching intermediate results.
@@ -58,9 +65,6 @@ Common Workflow Language executor
 **--quiet**
 > Only print warnings and errors.
 
-**--validate**
-> Validate the CWL document without running.
-
 **--leave-tmpdir**
 > Don't delete temporary directories.
 
@@ -71,7 +75,7 @@ Common Workflow Language executor
 > Generate template input object.
 
 **--on-error** _action_
-> Workflow behavior on failure (stop or continue).
+> Workflow behavior when a step fails: stop (default) or continue.
 
 **--singularity**
 > Use Singularity container runtime instead of Docker.
@@ -79,13 +83,30 @@ Common Workflow Language executor
 **--podman**
 > Use Podman container runtime instead of Docker.
 
+**--default-container** _IMAGE_
+> Container image to use when a tool specifies no software container.
+
+**--disable-pull**
+> Do not try to pull Docker images.
+
+**--pack**
+> Combine components into a single document and print it.
+
+**--print-deps**
+> Print CWL document dependencies.
+
+**--provenance** _DIR_
+> Save provenance to the specified folder.
+
 # DESCRIPTION
 
 **cwl-runner** executes workflows defined in Common Workflow Language (CWL), a specification for describing analysis workflows in data-intensive sciences. CWL workflows are portable across different execution environments.
 
 The runner takes a CWL document and input parameters, resolves dependencies, and executes tools in the correct order. Steps can be run in containers (Docker/Singularity) for reproducibility, or natively if tools are installed locally.
 
-Input parameters can be specified in a YAML/JSON file or as command-line arguments. Outputs are placed in the specified output directory with a manifest describing the results.
+Input parameters can be specified in a YAML/JSON file or as command-line arguments. Output files are placed in the output directory, and a JSON object describing the results is printed to standard output.
+
+**cwl-runner** is the implementation-agnostic name for the default CWL interpreter on a host. It is provided for the reference implementation **cwltool** by the optional **cwlref-runner** package.
 
 # INPUT FILE EXAMPLE
 
@@ -111,3 +132,13 @@ Common Workflow Language was developed by a community effort starting in **2014*
 # SEE ALSO
 
 [snakemake](/man/snakemake)(1), [nextflow](/man/nextflow)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/common-workflow-language/cwltool)```
+
+```[Homepage](https://www.commonwl.org)```
+
+```[Documentation](https://cwltool.readthedocs.io)```
+
+<!-- verified: 2026-11-09 -->

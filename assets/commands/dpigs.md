@@ -51,8 +51,14 @@ dpigs is part of the debian-goodies package, a collection of useful utilities fo
 
 # CAVEATS
 
-Shows installed size, not download size. Debian/Ubuntu specific. Part of debian-goodies package.
+Shows installed size, not download size, in kilobytes unless **-H** is given. Debian/Ubuntu specific. Part of the debian-goodies package and relies on grep-status from dctrl-tools.
 
 # SEE ALSO
 
 [dpkg-query](/man/dpkg-query)(1), [apt](/man/apt)(8), [du](/man/du)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/debian-goodies)```
+
+<!-- verified: 2026-11-09 -->

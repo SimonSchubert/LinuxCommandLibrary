@@ -14,9 +14,9 @@ Fetch the latest Homebrew and package definitions
 
 **Update only if needed (for scripts)**
 
-```brew update --auto-update```
+```brew update-if-needed```
 
-**Force update from latest commit**
+**Always do a full update check**
 
 ```brew update --force```
 
@@ -38,27 +38,27 @@ Aliases: **brew up**
 
 # PARAMETERS
 
-**--verbose, -v**
-> Show detailed update information
+**-v**, **--verbose**
+> Print the directories checked and git operations performed
 
-**--debug, -d**
-> Show debugging information
+**-d**, **--debug**
+> Display a trace of all shell commands as they are executed
 
-**--force**
-> Always do a slower full update
+**-f**, **--force**
+> Always do a slower, full update check (even if unnecessary)
 
 **--auto-update**
-> Run only when needed (fast no-op otherwise)
+> Run on auto-updates (e.g. before brew install). Skips some slower steps
 
-**--merge**
-> Use git merge instead of git rebase
+**-q**, **--quiet**
+> Make some output more quiet
 
 # AUTO-UPDATE
 
-Homebrew auto-updates before **brew install** by default. Configure with:
+Homebrew auto-updates before some commands, e.g. **brew install**, **brew upgrade** or **brew tap**. Configure with:
 
 **HOMEBREW_AUTO_UPDATE_SECS**
-> Seconds between auto-updates
+> Seconds between auto-updates. Default: 86400 (24 hours), 3600 (1 hour) if a developer command has been run, or 300 (5 minutes) if HOMEBREW_NO_INSTALL_FROM_API is set
 
 **HOMEBREW_NO_AUTO_UPDATE=1**
 > Disable auto-update entirely
@@ -74,8 +74,18 @@ brew cleanup     # Remove old versions
 
 # CAVEATS
 
-Only updates definitions, not installed software. For installed packages, run **brew upgrade** after updating. Auto-update may slow down install commands; disable with environment variable if needed.
+Only updates definitions, not installed software. For installed packages, run **brew upgrade** after updating. Auto-update may slow down install commands; disable with environment variable if needed. **brew update-reset** destroys all uncommitted or committed local changes in the repositories it resets.
 
 # SEE ALSO
 
-[brew](/man/brew)(1), [brew-upgrade](/man/brew-upgrade)(1), [brew-outdated](/man/brew-outdated)(1)
+[brew](/man/brew)(1), [brew-upgrade](/man/brew-upgrade)(1), [brew-outdated](/man/brew-outdated)(1), [brew-cleanup](/man/brew-cleanup)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Homebrew/brew)```
+
+```[Homepage](https://brew.sh)```
+
+```[Documentation](https://docs.brew.sh/Manpage)```
+
+<!-- verified: 2026-11-09 -->

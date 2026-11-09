@@ -20,9 +20,17 @@ Build books and documentation from Markdown
 
 ```gitbook build [.] [output_dir]```
 
-**Serve with a specific version**
+**Build with a specific GitBook version**
 
 ```gitbook build --gitbook=[2.0.1]```
+
+**Serve on another port**
+
+```gitbook serve --port [4001]```
+
+**Generate a PDF**
+
+```gitbook pdf [.] [book.pdf]```
 
 **Install plugins**
 
@@ -76,20 +84,41 @@ Build books and documentation from Markdown
 **fetch** _version_
 > Download and install a specific version.
 
+**current**
+> Display the currently activated version.
+
+**alias** _folder_ _version_
+> Use a local folder as a GitBook version.
+
 **update**
 > Update to the latest GitBook version.
 
 **uninstall** _version_
 > Remove a specific installed version.
 
-**--gitbook** _version_
+**-v**, **--gitbook** _version_
 > Force a specific GitBook version for the command.
 
 **-d**, **--debug**
 > Enable verbose error output with stack traces.
 
 **--log** _level_
-> Log level: debug, info, warn, error, disabled.
+> Log level: debug, info (default), warn, error, disabled.
+
+**--format** _format_
+> Build format for build and serve: website (default), json, ebook.
+
+**--port** _port_
+> Port for **serve** (default: 4000).
+
+**--lrport** _port_
+> Livereload port for **serve** (default: 35729).
+
+**--no-watch**
+> Disable the file watcher and live reloading in **serve**.
+
+**--open**
+> Open the book in the browser after **serve** starts.
 
 # DESCRIPTION
 
@@ -116,3 +145,9 @@ Legacy CLI is no longer under active development. Requires older Node.js version
 # SEE ALSO
 
 [mdbook](/man/mdbook)(1), [mkdocs](/man/mkdocs)(1), [hugo](/man/hugo)(1), [pandoc](/man/pandoc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/GitbookIO/gitbook-cli)```
+
+<!-- verified: 2026-11-09 -->

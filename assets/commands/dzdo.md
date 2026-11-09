@@ -84,3 +84,11 @@ dzdo is part of **Centrify DirectControl** (now **Delinea**), providing sudo-com
 # SEE ALSO
 
 [doas](/man/doas)(1), [su](/man/su)(1), [sudo](/man/sudo)(8)
+
+# RESOURCES
+
+```[Homepage](https://delinea.com/products/server-suite)```
+
+```[Documentation](https://docs.delinea.com/online-help/server-suite/index.htm)```
+
+<!-- verified: 2026-11-09 -->

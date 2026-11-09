@@ -23,7 +23,7 @@ Process .so includes in roff source files
 # PARAMETERS
 
 **-C**, **--compatible**
-> Enable .so requests followed by something other than whitespace
+> Accepted for compatibility with other soelim programs. Enabling .so requests followed by something other than whitespace is already the default, so this flag is ignored
 
 **-V**, **--version**
 > Display version information
@@ -39,16 +39,24 @@ When man pages contain lines like **.so man3/other.3**, zsoelim reads and substi
 
 The "z" prefix indicates support for gzip-compressed input files, typical of the man page system where sources may be stored compressed.
 
-zsoelim searches for included files in the standard man page hierarchy and processes them recursively.
+If a requested file cannot be opened, zsoelim also looks for it with a compression extension such as .gz, .Z or .z and decompresses it. Included files are processed recursively.
 
 # CAVEATS
 
 Primarily used as part of the man page processing pipeline, rarely invoked directly.
 
-File paths in .so directives are relative to the man directory structure, not the current directory.
+Paths in .so directives are usually relative to the top of a manual hierarchy, such as man3/other.3. When run directly, zsoelim tries the path as given, then looks in each manpath entry.
 
 The tool expects roff/man page format input. It's not a general-purpose file includer.
 
 # SEE ALSO
 
-[soelim](/man/soelim)(1), [man](/man/man)(1), [groff](/man/groff)(1), [zcat](/man/zcat)(1)
+[soelim](/man/soelim)(1), [man](/man/man)(1), [groff](/man/groff)(1), [zcat](/man/zcat)(1), [nroff](/man/nroff)(1), [troff](/man/troff)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/man-db/man-db)```
+
+```[Homepage](https://man-db.gitlab.io/man-db/)```
+
+<!-- verified: 2026-11-09 -->

@@ -16,9 +16,13 @@ enumerate available Kubernetes configuration values
 
 ```doctl kubernetes options sizes```
 
-**List versions in a specific output format**
+**Print the versions as JSON** for scripting
 
-```doctl kubernetes options versions --format [slug]```
+```doctl kubernetes options versions --output json```
+
+**Use the short aliases**
+
+```doctl k8s o v```
 
 # SYNOPSIS
 
@@ -29,27 +33,24 @@ enumerate available Kubernetes configuration values
 _COMMAND_
 > Option type: versions, regions, sizes.
 
-**versions**
+**versions**, **v**
 > List available Kubernetes versions.
 
-**regions**
+**regions**, **r**
 > List regions supporting Kubernetes.
 
-**sizes**
+**sizes**, **s**
 > List machine sizes available for node pools.
 
-**--format** _columns_
-> Columns for output in a comma-separated list.
+**-o**, **--output** _format_
+> Global doctl flag: output format, text (default) or json.
 
-**--no-header**
-> Return raw data with no headers.
-
-**--help**
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**doctl kubernetes options** enumerates valid values for use with DigitalOcean Kubernetes (DOKS) cluster commands. It helps users determine valid values for cluster creation and modification, such as supported Kubernetes versions, regions where DOKS is available, and machine sizes suitable for worker nodes.
+**doctl kubernetes options** (aliases **opts**, **o**) enumerates valid values for use with DigitalOcean Kubernetes (DOKS) cluster commands. It helps users determine valid values for cluster creation and modification, such as supported Kubernetes versions, regions where DOKS is available, and machine sizes suitable for worker nodes.
 
 Using these options ensures cluster configurations are valid and helps identify available resources in different regions.
 
@@ -64,3 +65,11 @@ doctl kubernetes options is part of the Kubernetes management commands added to 
 # SEE ALSO
 
 [doctl](/man/doctl)(1), [kubectl](/man/kubectl)(1), [doctl-kubernetes-cluster](/man/doctl-kubernetes-cluster)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/digitalocean/doctl)```
+
+```[Documentation](https://docs.digitalocean.com/reference/doctl/reference/kubernetes/options/)```
+
+<!-- verified: 2026-11-09 -->

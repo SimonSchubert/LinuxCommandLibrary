@@ -4,25 +4,55 @@ Collection of classic logic games
 
 # TLDR
 
-**Launch the puzzle collection** launcher
+**Play a specific puzzle** on Debian or Ubuntu
 
-```puzzle```
+```sgt-[fifteen]```
 
-**Play a specific puzzle** by name
+**Play a specific puzzle** on Arch Linux
 
-```puzzle [fifteen]```
+```puzzles-[fifteen]```
 
-**Play a puzzle with a custom game ID** (preset size/difficulty)
+**Start with specific game parameters**
 
-```puzzle [solo] --generate [3x3]```
+```sgt-[net] [7x7w]```
+
+**Print game IDs** without opening a window
+
+```sgt-[solo] --generate [5]```
+
+**Generate printable puzzles** as PostScript, with solutions
+
+```sgt-[net] --generate [12] --print [2x3] --with-solutions [7x7w] > [puzzles.ps]```
 
 # SYNOPSIS
 
-**puzzle** [_name_]
+**sgt-**_name_ [_options_] [_game-parameters_]
+
+**puzzles-**_name_ [_options_] [_game-parameters_]
+
+# PARAMETERS
+
+**--generate** _n_
+> Print _n_ invented game IDs on standard output instead of showing a puzzle.
+
+**--print** _w_**x**_h_
+> Send unsolved puzzles to standard output as PostScript, _w_ across and _h_ down per page.
+
+**--with-solutions**
+> With **--print**, follow the puzzle pages with their solutions.
+
+**--save** _file-prefix_ [**--save-suffix** _file-suffix_]
+> Write saved-game files for unsolved puzzles instead of showing a puzzle.
+
+**--delete-prefs**
+> Delete the stored user preferences file for this puzzle.
+
+**--version**
+> Print version information and exit.
 
 # DESCRIPTION
 
-**puzzle** refers to various puzzle game collections, most commonly Simon Tatham's Portable Puzzle Collection. Each puzzle in the collection is a standalone executable. The collection includes classic puzzles like Sudoku, Minesweeper variants, sliding puzzles, and logic games. On many systems, the individual binaries are prefixed with **sgt-** (e.g., **sgt-solo** for Sudoku).
+**puzzle** here refers to Simon Tatham's Portable Puzzle Collection. Each puzzle in the collection is a standalone executable, run by its own name. The collection includes classic puzzles like Sudoku, Minesweeper variants, sliding puzzles, and logic games. Distributions usually add a prefix to the binary names, such as **sgt-solo** or **puzzles-solo** for Sudoku.
 
 # COMMON PUZZLES
 
@@ -48,23 +78,18 @@ unequal     - Futoshiki puzzle
 # EXAMPLES
 
 ```bash
-# Play the fifteen sliding tile puzzle
-puzzle fifteen
-
-# Play Sudoku (9x9 by default)
-puzzle solo
-
-# Play Minesweeper
-puzzle mines
-
-# On Debian/Ubuntu with sgt- prefix
+# Debian/Ubuntu: sgt- prefix
 sgt-solo
 sgt-mines
+
+# Arch Linux: puzzles- prefix
+puzzles-solo
+puzzles-mines
 ```
 
 # CAVEATS
 
-Specific binary names vary by distribution and package. On Debian/Ubuntu, puzzles are installed as individual binaries with an **sgt-** prefix (e.g., **sgt-solo**). On Arch Linux, the package is **puzzles** and binaries have no prefix. On macOS, the collection can be installed via Homebrew as **puzzles**.
+Specific binary names vary by distribution and package. On Debian/Ubuntu, the package is **sgt-puzzles** and the binaries in /usr/games have an **sgt-** prefix (e.g., **sgt-solo**). On Arch Linux, the package is **puzzles** and the binaries have a **puzzles-** prefix (e.g., **puzzles-solo**). Homebrew also provides a **puzzles** formula.
 
 # HISTORY
 
@@ -73,3 +98,11 @@ Simon Tatham's Portable Puzzle Collection was created by **Simon Tatham** (autho
 # SEE ALSO
 
 [gnome-sudoku](/man/gnome-sudoku)(1), [gnome-mines](/man/gnome-mines)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/)```
+
+```[Documentation](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/)```
+
+<!-- verified: 2026-11-09 -->

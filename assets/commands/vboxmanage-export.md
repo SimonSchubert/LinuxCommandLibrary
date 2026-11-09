@@ -31,10 +31,13 @@ Export VMs to OVF/OVA format
 # PARAMETERS
 
 **-o**, **--output** _file_
-> Output file. Use .ova for a single-file archive or .ovf for multiple files.
+> Output file. Use .ova for a single-file archive or .ovf for multiple files. Exported disk images are stored as compressed VMDK next to an OVF file, so the directory needs enough free space.
 
 **--legacy09**
-> Export in OVF 0.9 legacy format.
+> Export in OVF 0.9 legacy mode, for products not fully compatible with OVF 1.0.
+
+**--ovf09**
+> Export in OVF 0.9 format.
 
 **--ovf10**
 > Export in OVF 1.0 format (default).
@@ -80,9 +83,18 @@ Export VMs to OVF/OVA format
 
 # DESCRIPTION
 
-**vboxmanage export** exports one or more virtual machines to the Open Virtualization Format (OVF/OVA). This creates portable appliance packages suitable for sharing, backup, or migration to other virtualization platforms. OVA is a single-file tar archive containing all appliance files; OVF produces a directory with separate descriptor, disk, and manifest files. Per-VM metadata options (product, vendor, description, etc.) require **--vsys** to specify which VM they apply to.
+**vboxmanage export** exports one or more virtual machines to the Open Virtualization Format (OVF/OVA). This creates portable appliance packages suitable for sharing, backup, or migration to other virtualization platforms. OVA is a single-file tar archive containing all appliance files; OVF produces a directory with separate descriptor, disk, and manifest files. Per-VM metadata options (product, vendor, description, etc.) require **--vsys** to specify which VM they apply to. The command can also export a single VM to Oracle Cloud Infrastructure using **--output=OCI://** and the **--cloud** options.
 
 # SEE ALSO
 
 [vboxmanage](/man/vboxmanage)(1), [vboxmanage-import](/man/vboxmanage-import)(1), [vboxmanage-clonevm](/man/vboxmanage-clonevm)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/VirtualBox/virtualbox)```
+
+```[Homepage](https://www.virtualbox.org/)```
+
+```[Documentation](https://www.virtualbox.org/manual/)```
+
+<!-- verified: 2026-11-09 -->

@@ -41,7 +41,7 @@ LPU-powered terminal coding assistant
 > Provide a custom system message for the conversation.
 
 **-d**, **--debug**
-> Enable debug logging output to debug-agent.log.
+> Enable debug logging to debug-agent.log in the current directory.
 
 **-p**, **--proxy** _url_
 > Configure proxy for API requests. Supports HTTP, HTTPS, and SOCKS5 protocols.
@@ -56,7 +56,7 @@ LPU-powered terminal coding assistant
 
 **groq** (Groq Code CLI) is a command-line coding assistant powered by Groq's LPU (Language Processing Unit) inference engine, known for extremely fast response times. It provides an interactive terminal-based interface for AI-assisted code generation and development tasks.
 
-The CLI stores configuration in a **.groq/** folder in your home directory, including API keys and model preferences. Users can select different language models available on the Groq platform using the **/model** command.
+The CLI stores configuration in a **.groq/** folder in your home directory, including API keys and model preferences. Inside a session, slash commands include **/help**, **/login**, **/model** (select a model), **/clear** (clear history and context), **/reasoning** (toggle reasoning display) and **/stats** (session statistics and token usage).
 
 Proxy configuration follows a priority order: CLI flag (**--proxy**) takes precedence over **HTTPS_PROXY**, which takes precedence over **HTTP_PROXY** environment variables.
 
@@ -67,7 +67,7 @@ Proxy configuration follows a priority order: CLI flag (**--proxy**) takes prece
 
 # CAVEATS
 
-Requires a **GROQ_API_KEY** environment variable or authentication via the **/login** command. API usage is subject to Groq's rate limits and terms of service. The CLI requires Node.js for installation.
+Requires a **GROQ_API_KEY** environment variable or authentication via the **/login** command. API usage is subject to Groq's rate limits and terms of service. Install with `npm install -g groq-code-cli@latest`, which requires Node.js.
 
 # HISTORY
 
@@ -76,3 +76,9 @@ Groq Code CLI was released as an open-source project by Groq to showcase their L
 # SEE ALSO
 
 [claude](/man/claude)(1), [ollama](/man/ollama)(1), [anthropic](/man/anthropic)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/build-with-groq/groq-code-cli)```
+
+<!-- verified: 2026-11-09 -->

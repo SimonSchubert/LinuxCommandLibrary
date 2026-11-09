@@ -41,6 +41,9 @@ The companion program **teachgammon** teaches the rules and strategy of backgamm
 
 # PARAMETERS
 
+**-**
+> Print a description of the possible arguments
+
 **-n**
 > Don't ask for rules or instructions
 
@@ -85,7 +88,7 @@ The companion program **teachgammon** teaches the rules and strategy of backgamm
 **s**
 > Save game
 
-Moves are expressed as source-destination (e.g., 3-5).
+At the Move: prompt, a move is a sequence of **s-f** (move from s to f) or **s/r** (move one man on s the roll r), separated by commas or spaces and ended with a newline. Use **b** for bar and **h** for home. A question mark usually gets some help.
 
 # CAVEATS
 
@@ -98,3 +101,11 @@ Text-based interface only. Part of the bsd-games package on most systems.
 # SEE ALSO
 
 [adventure](/man/adventure)(6), [nethack-console](/man/nethack-console)(6)
+
+# RESOURCES
+
+```[Source code](https://github.com/NetBSD/src/tree/trunk/games/backgammon)```
+
+```[Documentation](https://man.netbsd.org/backgammon.6)```
+
+<!-- verified: 2026-11-09 -->

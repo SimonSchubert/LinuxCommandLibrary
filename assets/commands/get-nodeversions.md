@@ -40,7 +40,7 @@ Versions are returned as SemVer.Version objects sorted from highest to lowest, a
 
 # CAVEATS
 
-The **-Remote** flag requires network access to query the Node.js release server. This command is specific to ps-nvm; other version managers use different commands (e.g., `nvm ls-remote`).
+The **-Remote** flag requires network access to query the Node.js release server (nodejs.org/dist/index.json). The module is installed with `Install-Module nvm` from the PowerShell Gallery. This command is specific to ps-nvm; other version managers use different commands (e.g., `nvm ls-remote`).
 
 # HISTORY
 
@@ -49,3 +49,11 @@ get-nodeversions is a utility provided by the **ps-nvm** PowerShell module for N
 # SEE ALSO
 
 [nvm](/man/nvm)(1), [fnm](/man/fnm)(1), [node](/man/node)(1), [ps-nvm](/man/ps-nvm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aaronpowell/ps-nvm)```
+
+```[Documentation](https://github.com/aaronpowell/ps-nvm/blob/master/.docs/reference.md)```
+
+<!-- verified: 2026-11-09 -->

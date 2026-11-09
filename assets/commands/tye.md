@@ -28,6 +28,22 @@
 
 ```tye init```
 
+**Wait for a debugger** on every service
+
+```tye run --debug "*"```
+
+**Deploy interactively**, prompting for required values
+
+```tye deploy --interactive```
+
+**Build and push** containers without deploying
+
+```tye push```
+
+**Remove** a deployed application
+
+```tye undeploy```
+
 # SYNOPSIS
 
 **tye** _command_ [_options_] [_path_]
@@ -40,8 +56,14 @@
 **build**
 > Build containers for the application.
 
+**push**
+> Build containers and push them to the container registry.
+
 **deploy**
 > Deploy the application to Kubernetes.
+
+**undeploy**
+> Remove a deployed application from Kubernetes.
 
 **init**
 > Scaffold a tye.yaml configuration file.
@@ -70,6 +92,24 @@
 **--tags** _TAGS_
 > Filter running services by tag.
 
+**--dtrace** _PROVIDER_
+> Write distributed traces to a provider (zipkin).
+
+**-f, --framework** _TFM_
+> Target framework hint for cross-targeting projects.
+
+**-i, --interactive**
+> Prompt for required values (build, push, deploy, undeploy).
+
+**-n, --namespace** _NAME_
+> Kubernetes namespace (deploy, undeploy).
+
+**--force**
+> Override validation and force deployment; with **init**, overwrite an existing tye.yaml.
+
+**--what-if**
+> With **undeploy**, show what would be deleted.
+
 **-v, --verbosity** _LEVEL_
 > Output verbosity: Debug, Info (default), Quiet.
 
@@ -83,7 +123,7 @@ Configuration is defined in a **tye.yaml** file that lists services, their depen
 
 # CAVEATS
 
-Tye is an experimental project and is no longer actively developed. It requires .NET SDK. Kubernetes deployment requires a container registry and cluster access.
+Tye is an experimental project and is no longer developed; its GitHub repository is archived. It requires .NET SDK. Kubernetes deployment requires a container registry and cluster access.
 
 # HISTORY
 
@@ -92,3 +132,11 @@ Tye is an experimental project and is no longer actively developed. It requires 
 # SEE ALSO
 
 [docker-compose](/man/docker-compose)(1), [dotnet](/man/dotnet)(1), [kubectl](/man/kubectl)(1), [helm](/man/helm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/dotnet/tye)```
+
+```[Documentation](https://github.com/dotnet/tye/tree/main/docs)```
+
+<!-- verified: 2026-11-09 -->

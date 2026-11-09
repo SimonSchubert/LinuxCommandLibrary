@@ -28,6 +28,10 @@ List processes on local and remote devices using Frida
 
 ```frida-ps -H [192.168.1.100]```
 
+**Output** the installed applications as **JSON**
+
+```frida-ps -Uai -j```
+
 # SYNOPSIS
 
 **frida-ps** [_options_]
@@ -39,6 +43,12 @@ List processes on local and remote devices using Frida
 
 **-i**, **--installed**
 > Include all installed applications (requires **-a**).
+
+**-j**, **--json**
+> Output results as JSON.
+
+**-e**, **--exclude-icons**
+> Exclude icons from the output.
 
 **-U**, **--usb**
 > Connect to USB device.
@@ -67,6 +77,9 @@ List processes on local and remote devices using Frida
 **-O** _FILE_, **--options-file** _FILE_
 > Text file containing additional command-line options.
 
+**--version**
+> Show the version number.
+
 # DESCRIPTION
 
 **frida-ps** is a command-line tool for listing processes, part of the Frida dynamic instrumentation toolkit. It functions similarly to the Unix **ps** command but is designed to work with both local and remote devices (USB-connected phones, remote frida-server instances). It can list all running processes or filter to only applications, including installed but not running ones.
@@ -79,6 +92,22 @@ To list processes on a remote or USB-connected device, **frida-server** must be 
 
 **frida-ps** is included in the **frida-tools** package, installable via **pip install frida-tools**. Frida was created by **Ole Andre Vadla Ravnas** and publicly released in **2014**.
 
+# INSTALL
+
+```aur: yay -S frida-tools```
+
+<!-- packages: 2026-11-09 -->
+
 # SEE ALSO
 
 [frida](/man/frida)(1), [frida-trace](/man/frida-trace)(1), [ps](/man/ps)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/frida/frida-tools)```
+
+```[Homepage](https://frida.re/)```
+
+```[Documentation](https://frida.re/docs/frida-ps/)```
+
+<!-- verified: 2026-11-09 -->

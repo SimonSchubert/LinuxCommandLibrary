@@ -36,6 +36,10 @@ PikaOS unified package manager
 
 ```pikman --aur init```
 
+**List** the available upgrades as JSON
+
+```pikman upgrades --json```
+
 # SYNOPSIS
 
 **pikman** [_global options_] _command_ [_command options_] [_arguments..._]
@@ -120,14 +124,14 @@ pikman handles privilege escalation internally and must **not** be run with sudo
 > Run a command inside a managed container
 
 **upgrades**
-> List the available upgrades
+> List the available upgrades on native and Flatpak targets (**--json** for JSON output)
 
 **help**, **h**
 > Show a list of commands or help for a specific command
 
 # CAVEATS
 
-Pikman is designed specifically for **PikaOS** and is not a general-purpose tool for other distributions. Before installing packages from other distributions (Arch, Fedora, Alpine), you must first initialize the respective container with **pikman --aur init** (or **--fedora init**, etc.). For Flatpak packages, use **pikman --flatpak update** instead of **upgrade** to match Flatpak conventions.
+Pikman is designed specifically for **PikaOS** and is not a general-purpose tool for other distributions. Packages from other distributions (Arch, Fedora, Alpine) need a container; pikman creates it automatically on first use if it is missing, or you can create it ahead of time with **pikman --aur init** (or **--fedora init**, etc.). Container-only commands such as **enter**, **export** and **init** are not valid for native packages. For Flatpak packages, use **pikman --flatpak update** instead of **upgrade** to match Flatpak conventions.
 
 # HISTORY
 
@@ -135,4 +139,14 @@ Pikman was created as part of the **PikaOS** project, a Debian-based distributio
 
 # SEE ALSO
 
-[apt](/man/apt)(8), [flatpak](/man/flatpak)(1), [pacman](/man/pacman)(8), [dnf](/man/dnf)(8), [podman](/man/podman)(1)
+[apt](/man/apt)(8), [apx](/man/apx)(1), [flatpak](/man/flatpak)(1), [pacman](/man/pacman)(8), [dnf](/man/dnf)(8), [podman](/man/podman)(1)
+
+# RESOURCES
+
+```[Source code](https://git.pika-os.com/general-packages/pikman)```
+
+```[Homepage](https://pika-os.com/)```
+
+```[Documentation](https://wiki.pika-os.com/en/home)```
+
+<!-- verified: 2026-11-09 -->

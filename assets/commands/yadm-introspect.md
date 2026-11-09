@@ -46,3 +46,12 @@ Display internal yadm information
 
 [yadm](/man/yadm)(1), [yadm-config](/man/yadm-config)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/yadm-dev/yadm)```
+
+```[Homepage](https://yadm.io)```
+
+```[Documentation](https://yadm.io/docs/overview)```
+
+<!-- verified: 2026-11-09 -->

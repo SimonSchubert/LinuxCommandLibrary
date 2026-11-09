@@ -8,21 +8,9 @@ terminal memory matching game
 
 ```nbmemoblocks```
 
-**Start with difficulty**
-
-```nbmemoblocks -d [easy]```
-
 # SYNOPSIS
 
-**nbmemoblocks** [_options_]
-
-# PARAMETERS
-
-**-d** _LEVEL_
-> Difficulty level.
-
-**--help**
-> Display help information.
+**nbmemoblocks**
 
 # PREVIEW
 
@@ -35,13 +23,13 @@ terminal memory matching game
 
 # DESCRIPTION
 
-**nbmemoblocks** is a terminal memory matching game. Match pairs of blocks.
+**nbmemoblocks** is a terminal memory matching game from the **nbsdgames** collection. Reveal a tile to see its glyph, then find the matching glyph. A pair only counts when the match is the tile revealed directly after the first one. The game ends when all pairs are found.
 
-The tool trains memory skills. Uses ncurses interface.
+Controls: arrow keys or hjkl to move the cursor, ENTER to reveal, q to quit, F1 and F2 for help on controls and gameplay. Mouse input is also supported.
 
 # CAVEATS
 
-Terminal-based game. Part of games collection. Keyboard navigation.
+Requires a terminal with ncurses support. Part of the nbsdgames collection. No command-line options are available.
 
 # HISTORY
 
@@ -49,5 +37,10 @@ nbmemoblocks is a **terminal implementation** of the classic memory card matchin
 
 # SEE ALSO
 
-[nbfifteen](/man/nbfifteen)(1), [nbmines](/man/nbmines)(1), [nbsos](/man/nbsos)(1)
+[nbfifteen](/man/nbfifteen)(1), [nbmines](/man/nbmines)(1), [nbsos](/man/nbsos)(1), [nbsdgames](/man/nbsdgames)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/abakh/nbsdgames)```
+
+<!-- verified: 2026-11-09 -->

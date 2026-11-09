@@ -8,15 +8,28 @@ Stop a running storage pool
 
 ```virsh pool-destroy [pool]```
 
+**Stop a running storage pool by UUID**
+
+```virsh pool-destroy [uuid]```
+
 # SYNOPSIS
 
-**virsh** **pool-destroy** _pool_
+**virsh** **pool-destroy** _pool-or-uuid_
 
 # DESCRIPTION
 
-**virsh pool-destroy** stops (deactivates) a running storage pool. Despite the name, it does not delete the pool's data or its persistent configuration. The pool must be active for this command to succeed. After destroying a pool, it can be restarted with **pool-start**. To remove the configuration, use **pool-undefine**. To delete the underlying storage data, use **pool-delete** (the pool must be stopped first).
+**virsh pool-destroy** stops (deactivates) a running storage pool, so libvirt no longer manages the storage it describes. Despite the name, it does not change the raw data in the pool or delete its persistent configuration. The pool must be active for this command to succeed. After destroying a pool, it can be restarted with **pool-start**. To remove the configuration, use **pool-undefine**. To delete the underlying storage data, use **pool-delete** (the pool must be stopped first).
 
 # SEE ALSO
 
 [virsh](/man/virsh)(1), [virsh-pool-start](/man/virsh-pool-start)(1), [virsh-pool-delete](/man/virsh-pool-delete)(1), [virsh-pool-undefine](/man/virsh-pool-undefine)(1)
 
+# RESOURCES
+
+```[Source code](https://gitlab.com/libvirt/libvirt)```
+
+```[Homepage](https://libvirt.org/)```
+
+```[Documentation](https://libvirt.org/manpages/virsh.html)```
+
+<!-- verified: 2026-11-09 -->

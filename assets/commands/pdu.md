@@ -40,6 +40,18 @@ Highly parallelized, fast directory tree disk usage analyzer
 
 ```pdu --deduplicate-hardlinks [path/to/directory]```
 
+**Limit the tree depth**
+
+```pdu --max-depth=[3] [path/to/directory]```
+
+**Stay on one filesystem**
+
+```pdu -x [path/to/directory]```
+
+**Export everything as JSON for further processing**
+
+```pdu --min-ratio=0 --max-depth=inf --json-output | jq```
+
 # SYNOPSIS
 
 **pdu** [_options_] [_files_...]
@@ -58,14 +70,17 @@ By default, **pdu** measures block size, sorts entries by size (largest first), 
 **--quantity**, **-q** _MEASURE_
 > What to measure. Possible values: **block-size** (default), **apparent-size**, **block-count**.
 
-**--max-depth**, **-d** _N_
+**--max-depth**, **--depth**, **-d** _N_
 > Maximum depth of the tree to display. Use **inf** for unlimited. Default: **10**.
 
 **--min-ratio**, **-m** _RATIO_
-> Minimum size proportion (0–1) required for an entry to appear. Default: **0.01** (1%).
+> Minimum size proportion (0 to 1) required for an entry to appear. Default: **0.01** (1%).
 
-**--total-width**, **-w** _N_
-> Width in characters of the entire visualization.
+**--total-width**, **--width**, **-w** _N_
+> Width in characters of the entire visualization. Conflicts with **--column-width**.
+
+**--column-width** _TREE_WIDTH_ _BAR_WIDTH_
+> Maximum width of the tree column and width of the bar column.
 
 **--top-down**
 > Print the tree top-down instead of bottom-up.
@@ -76,13 +91,16 @@ By default, **pdu** measures block size, sorts entries by size (largest first), 
 **--no-sort**
 > Do not sort branches; preserve filesystem order.
 
-**--deduplicate-hardlinks**, **-H**
-> Detect hardlinks and subtract their sizes from parent nodes to avoid double-counting.
+**--deduplicate-hardlinks**, **--detect-links**, **--dedupe-links**, **-H**
+> Detect hardlinks and subtract their sizes from parent directory totals to avoid double-counting.
+
+**--one-file-system**, **-x**
+> Skip directories on different filesystems.
 
 **--progress**, **-p**
 > Report scanning progress. Has a performance cost.
 
-**--silent-errors**, **-s**
+**--silent-errors**, **--no-errors**, **-s**
 > Suppress filesystem error messages on stderr.
 
 **--threads** _N_
@@ -92,7 +110,10 @@ By default, **pdu** measures block size, sorts entries by size (largest first), 
 > Print disk usage data as JSON instead of rendering a chart.
 
 **--json-input**
-> Read previously exported JSON from stdin and render it as a chart.
+> Read previously exported JSON from stdin and render it as a chart. Conflicts with **--quantity**, **--deduplicate-hardlinks** and **--one-file-system**.
+
+**--omit-json-shared-details**, **--omit-json-shared-summary**
+> Leave `.shared.details` or `.shared.summary` out of the JSON output. Require **--json-output** and **--deduplicate-hardlinks**.
 
 **-h**, **--help**
 > Print help information.
@@ -107,3 +128,9 @@ By default, **pdu** measures block size, sorts entries by size (largest first), 
 # SEE ALSO
 
 [du](/man/du)(1), [dust](/man/dust)(1), [ncdu](/man/ncdu)(1), [gdu](/man/gdu)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/KSXGitHub/parallel-disk-usage)```
+
+<!-- verified: 2026-11-09 -->

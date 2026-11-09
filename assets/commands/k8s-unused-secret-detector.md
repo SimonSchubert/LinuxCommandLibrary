@@ -4,7 +4,7 @@ identifies Kubernetes secrets that are not referenced by any pods
 
 # TLDR
 
-**Detect unused secrets in cluster**
+**Detect unused secrets in the default namespace**
 
 ```k8s-unused-secret-detector```
 
@@ -14,7 +14,7 @@ identifies Kubernetes secrets that are not referenced by any pods
 
 **Detect and delete unused secrets in a namespace**
 
-```k8s-unused-secret-detector -n [namespace] | kubectl delete secret -n [namespace]```
+```k8s-unused-secret-detector -n [namespace] | xargs kubectl delete secret -n [namespace]```
 
 # SYNOPSIS
 
@@ -22,17 +22,26 @@ identifies Kubernetes secrets that are not referenced by any pods
 
 # PARAMETERS
 
-**-n** _namespace_
-> Check specific namespace.
+**-n**, **--namespace** _namespace_
+> Check specific namespace (default: default).
 
 **--context** _context_
 > Specify the kubectl context to use.
 
 # DESCRIPTION
 
-**k8s-unused-secret-detector** detects unused Kubernetes Secrets that are no longer referenced by any resources. Outputs secret names to stdout, which can be piped to kubectl for deletion. Note: this project is archived and no longer maintained; consider [kubectl-reap](https://github.com/micnncim/kubectl-reap) as an alternative.
+**k8s-unused-secret-detector** detects unused Kubernetes Secrets by comparing the Secrets in a namespace against its Pods. Outputs secret names to stdout, which can be passed to kubectl for deletion.
+
+# CAVEATS
+
+The project is archived and no longer maintained; its README points to the similar project kubectl-reap. Only one namespace is checked per run.
 
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [k9s](/man/k9s)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/dtan4/k8s-unused-secret-detector)```
+
+<!-- verified: 2026-11-09 -->

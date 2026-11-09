@@ -31,3 +31,9 @@ Not intended for direct use. The ndiswrapper approach to wireless networking is 
 # SEE ALSO
 
 [loadndisdriver](/man/loadndisdriver)(8), [ndiswrapper](/man/ndiswrapper)(8), [ndiswrapper-1.9](/man/ndiswrapper-1.9)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/pgiri/ndiswrapper)```
+
+<!-- verified: 2026-11-09 -->

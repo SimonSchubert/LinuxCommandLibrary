@@ -20,6 +20,10 @@ creates presentations from Markdown
 
 ```marp [slides.md] --images [png] -o [slides/]```
 
+**Convert the first slide** to a larger image
+
+```marp [slides.md] --image [png] --image-scale [2] -o [title.png]```
+
 **Preview with live reload**
 
 ```marp -p [slides.md]```
@@ -36,9 +40,15 @@ creates presentations from Markdown
 
 ```marp -w [slides.md] -o [slides.html]```
 
+**Convert a whole directory**, keeping its structure
+
+```marp -I [slides/] -o [output/]```
+
 # SYNOPSIS
 
-**marp** [_options_] _file_
+**marp** [_options_] _files_...
+
+**marp** [_options_] **-I** _dir_
 
 # PARAMETERS
 
@@ -50,6 +60,9 @@ creates presentations from Markdown
 
 **--pptx**
 > Export as PowerPoint.
+
+**--pptx-editable**
+> Experimental: generate an editable PPTX (needs LibreOffice Impress).
 
 **--images** [png|jpeg]
 > Export slides as multiple image files.
@@ -66,8 +79,17 @@ creates presentations from Markdown
 **-s**, **--server** _dir_
 > Start server mode for on-demand conversion.
 
-**--theme** _css_
-> Custom theme CSS file.
+**--theme** _name|css_
+> Override the theme by name or CSS file.
+
+**--theme-set** _path_
+> Path to additional theme CSS files.
+
+**--html**
+> Enable or disable HTML tags.
+
+**--template** _name_
+> Choose the HTML template.
 
 **-w**, **--watch**
 > Watch for file changes and auto-convert.
@@ -82,7 +104,7 @@ creates presentations from Markdown
 > Allow access to local files during conversion.
 
 **--image-scale** _factor_
-> Scale factor for rendered images (default: 1).
+> Scale factor for rendered images (default: 1, or 2 for PPTX).
 
 **-I**, **--input-dir** _dir_
 > Base directory for input with output directory preservation.
@@ -92,6 +114,12 @@ creates presentations from Markdown
 
 **--engine** _module_
 > Specify Marpit-based conversion engine.
+
+**-P**, **--parallel** _n_
+> Maximum parallel processes for multiple conversions.
+
+**--browser** _name_
+> Browser used for PDF, PPTX and image conversion.
 
 # DESCRIPTION
 
@@ -120,7 +148,7 @@ More content
 
 # CAVEATS
 
-PDF and image export require Chrome, Edge, or Firefox. Some CSS features are limited in PPTX output. Local file references require **--allow-local-files** for PDF/image conversion.
+PDF, PPTX and image export require Chrome, Edge, or Firefox. Some CSS features are limited in PPTX output. Local file references require **--allow-local-files** for PDF/image conversion.
 
 # HISTORY
 
@@ -129,3 +157,11 @@ Marp was created by **Yuki Hattori** (yhatt) in **2016** as Marp desktop app, la
 # SEE ALSO
 
 [pandoc](/man/pandoc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/marp-team/marp-cli)```
+
+```[Homepage](https://marp.app/)```
+
+<!-- verified: 2026-11-09 -->
