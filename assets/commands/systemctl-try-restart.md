@@ -32,7 +32,7 @@ Does nothing for inactive units. Unlike `restart`, this won't start a stopped se
 
 # ALIASES
 
-This command is also known as `condrestart`.
+This command is also accepted as `condrestart`, an undocumented compatibility alias for Red Hat style init scripts.
 
 # HISTORY
 
@@ -41,3 +41,13 @@ The **try-restart** subcommand provides safe restart operations that respect the
 # SEE ALSO
 
 [systemctl-restart](/man/systemctl-restart)(1), [systemctl-try-reload-or-restart](/man/systemctl-try-reload-or-restart)(1), [systemctl](/man/systemctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

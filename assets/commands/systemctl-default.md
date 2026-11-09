@@ -23,13 +23,13 @@ Enter default mode **asynchronously**
 
 # DESCRIPTION
 
-**systemctl default** transitions the system to the default target, typically `graphical.target` or `multi-user.target` depending on system configuration. This is equivalent to `systemctl isolate default.target`.
+**systemctl default** transitions the system to the default target, typically `graphical.target` or `multi-user.target` depending on system configuration. This is equivalent to `systemctl isolate default.target` and blocks until complete unless `--no-block` is given.
 
 This command is useful for returning a system to normal operation after being in rescue or emergency mode.
 
 # CAVEATS
 
-The default target is determined by the symlink at `/etc/systemd/system/default.target`. Switching targets may stop services that are not required by the new target.
+The default target is determined by the `default.target` symlink, normally `/etc/systemd/system/default.target`, falling back to the vendor one in `/usr/lib/systemd/system/`. Switching targets may stop services that are not required by the new target.
 
 # HISTORY
 
@@ -38,3 +38,13 @@ The **default** subcommand provides a convenient way to return to normal system 
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-rescue](/man/systemctl-rescue)(1), [systemctl-emergency](/man/systemctl-emergency)(1), [systemctl-get-default](/man/systemctl-get-default)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

@@ -1,5 +1,3 @@
-# TLDR
-
 # TAGLINE
 
 Query Mageia package information
@@ -18,13 +16,17 @@ Show **recursive** dependencies
 
 ```urpmq -d [package]```
 
-List missing dependencies for **RPM**
+List source URLs of missing dependencies for an **RPM**
 
-```sudo urpmq -d -m --sources [path/to/file.rpm]```
+```urpmq -m --sources [path/to/file.rpm]```
 
 List **media** with URLs
 
-```urpmq --list-media --list-url```
+```urpmq --list-url```
+
+List available **packages**
+
+```urpmq --list```
 
 **Fuzzy** search with group and release
 
@@ -36,7 +38,7 @@ List **media** with URLs
 
 # SYNOPSIS
 
-**urpmq** [_OPTIONS_] [_PACKAGE_...]
+**urpmq** [_OPTIONS_] [_PACKAGE_ | _RPM_FILE_...]
 
 # PARAMETERS
 
@@ -44,31 +46,52 @@ List **media** with URLs
 > Display package information
 
 **--requires**
-> Show direct dependencies
+> Show package requires
 
 **-d, --requires-recursive**
-> Show all dependencies recursively
+> Show dependencies (maximal closure)
+
+**-u**
+> Deselect packages if a better version is already installed
 
 **-m**
-> Show sources for dependencies
+> Equivalent to -du
 
 **--sources**
-> Print package sources
+> Print source URLs or file names of selected packages
 
-**--list-media**
-> List configured media
+**--list**
+> List available packages
+
+**--list-media** [_TYPE_]
+> List media; _TYPE_ is **all** (default), **update** or **active**
 
 **--list-url**
-> Show media URLs
+> List media and their URLs
 
 **-g**
 > Show package group
 
 **-r**
-> Show release information
+> Show version and release
+
+**-f**
+> Show version, release and architecture
+
+**-l**
+> List files in packages
+
+**-p, --whatprovides**
+> Search in provides
+
+**--whatrequires**
+> Reverse search for packages requiring the given one
 
 **-y, --fuzzy**
 > Fuzzy match package names
+
+**-Y**
+> Like --fuzzy, but case-insensitive
 
 # DESCRIPTION
 
@@ -78,8 +101,16 @@ Part of the urpmi package management suite for Mageia.
 
 # CAVEATS
 
-Mageia specific. Some operations require root privileges. Recursive dependency queries may produce long output.
+Mageia specific. Recursive dependency queries may produce long output.
 
 # SEE ALSO
 
 [urpmi](/man/urpmi)(8), [urpmf](/man/urpmf)(8), [urpme](/man/urpme)(8)
+
+# RESOURCES
+
+```[Source code](https://gitweb.mageia.org/software/rpm/urpmi/)```
+
+```[Documentation](https://wiki.mageia.org/en/URPMI)```
+
+<!-- verified: 2026-11-09 -->

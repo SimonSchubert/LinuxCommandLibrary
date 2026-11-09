@@ -4,7 +4,7 @@ Initialize Toolbx container internals
 
 # TLDR
 
-**Initialize** a running container
+**Initialize** a running container (normally done by the container entry point)
 
 ```toolbox init-container --gid [gid] --home [home] --shell [shell] --uid [uid] --user [user]```
 
@@ -15,42 +15,50 @@ Initialize Toolbx container internals
 # PARAMETERS
 
 **--gid** _GID_
-> Group ID of the user
+> The user's numerical group ID from the host
 
 **--home** _PATH_
-> Home directory path
+> Create the user with this login directory (required)
 
 **--home-link**
-> Create symbolic link for home
+> Make /home a symbolic link to /var/home
 
 **--media-link**
-> Create symbolic link for media
+> Make /media a symbolic link to /run/media
 
 **--mnt-link**
-> Create symbolic link for mnt
+> Make /mnt a symbolic link to /var/mnt
 
 **--monitor-host**
-> Monitor host for configuration changes
+> Deprecated, does nothing
 
 **--shell** _SHELL_
-> User's login shell
+> Create the user with this login shell (required)
 
 **--uid** _UID_
-> User ID
+> Create the user with this numerical user ID (required)
 
 **--user** _NAME_
-> Username
+> Create the user with this login name (required)
 
 # DESCRIPTION
 
-**toolbox init-container** initializes a running Toolbx container. This is an internal command executed automatically when a container starts and should not be run manually by users.
+**toolbox init-container** initializes a newly created Toolbx container that is running. It is the entry point of all Toolbx containers and is not expected to be invoked directly by humans.
 
-The command sets up the container environment to match the host system's user configuration, creating necessary symbolic links and configuring user identity.
+It customizes the container for the current user by creating a matching user with sudo and root access. It keeps configuration files such as /etc/hosts, /etc/localtime and /etc/resolv.conf synchronized with the host, and bind mounts parts of the host file system into the container. Doing this at runtime lets newer Toolbx versions improve containers created by older ones, since OCI container configuration cannot be changed after creation.
 
 # CAVEATS
 
-This command cannot be run on the host system. It is designed for internal use by the Toolbx container initialization process only.
+This command cannot be run on the host system. It must run inside the container being initialized.
 
 # SEE ALSO
 
-[toolbox](/man/toolbox)(1), [toolbox-create](/man/toolbox-create)(1)
+[toolbox](/man/toolbox)(1), [toolbox-create](/man/toolbox-create)(1), [podman](/man/podman)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/containers/toolbox)```
+
+```[Homepage](https://containertoolbx.org/)```
+
+<!-- verified: 2026-11-09 -->

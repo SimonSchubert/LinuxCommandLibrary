@@ -4,65 +4,104 @@ TypeORM database migration and entity CLI
 
 # TLDR
 
-**Initialize project**
+**Initialize a project**
 
-```typeorm init```
+```typeorm init --name [my-project] --database [postgres]```
 
-**Generate migration**
+**Create an entity file**
 
-```typeorm migration:generate -n [MigrationName]```
+```typeorm entity:create [path/to/entity/Name]```
+
+**Create an empty migration**
+
+```typeorm migration:create [path/to/migrations/Name]```
+
+**Generate a migration from entity changes**
+
+```typeorm migration:generate -d [path/to/datasource] [path/to/migrations/Name]```
 
 **Run migrations**
 
-```typeorm migration:run```
+```typeorm migration:run -d [path/to/datasource]```
 
-**Revert migration**
+**Revert the last migration**
 
-```typeorm migration:revert```
+```typeorm migration:revert -d [path/to/datasource]```
 
-**Create entity**
+**Show migration status**
 
-```typeorm entity:create -n [EntityName]```
+```typeorm migration:show -d [path/to/datasource]```
 
-**Sync schema**
+**Synchronize the schema**
 
-```typeorm schema:sync```
+```typeorm schema:sync -d [path/to/datasource]```
+
+**Log schema changes without running them**
+
+```typeorm schema:log -d [path/to/datasource]```
 
 # SYNOPSIS
 
-**typeorm** _command_ [_-n name_] [_options_]
+**typeorm** _command_ [_path_] [**-d** _datasource_] [_options_]
 
 # PARAMETERS
 
 **init**
-> Initialize project.
+> Create a new project (**--name**, **--database**, **--module esm**, **--express**, **--docker**).
 
-**migration:generate**
-> Generate migration.
+**entity:create** _PATH_
+> Create an entity file.
+
+**subscriber:create** _PATH_
+> Create a subscriber file.
+
+**migration:create** _PATH_
+> Create an empty migration.
+
+**migration:generate** _PATH_
+> Generate a migration by comparing entities with the database schema (**-o** JavaScript output, **-p** pretty-print queries).
 
 **migration:run**
-> Run migrations.
+> Execute all pending migrations.
 
 **migration:revert**
-> Revert last.
+> Revert the last migration.
 
-**entity:create**
-> Create entity.
+**migration:show**
+> List all migrations with their execution status.
 
 **schema:sync**
-> Sync database.
+> Synchronize the database schema with entities.
+
+**schema:log**
+> Show the queries schema:sync would run.
+
+**schema:drop**
+> Drop the database schema.
+
+**query** _SQL_
+> Run an SQL query.
+
+**cache:clear**
+> Clear the query cache.
+
+**version**
+> Show local and global TypeORM versions.
+
+**-d** _PATH_
+> Path to the data source configuration.
 
 # DESCRIPTION
 
 **typeorm** is the command-line interface for TypeORM, a TypeScript and JavaScript ORM that supports PostgreSQL, MySQL, SQLite, and other databases. It provides tools for managing database migrations, generating entity scaffolds, and synchronizing schema changes.
 
-Migrations track database schema changes as versioned files that can be applied and reverted. The **migration:generate** command automatically creates migration files by comparing the current entities to the database state. Schema sync provides a simpler alternative that directly updates the database to match entity definitions.
+Migrations track database schema changes as versioned files that can be applied and reverted. The **migration:generate** command creates migration files by comparing the current entities to the database state. Schema sync directly updates the database to match entity definitions.
 
-The CLI also supports initializing new projects with boilerplate configuration and entity files.
+The CLI also initializes new projects with boilerplate configuration and entity files.
 
 # CAVEATS
 
-TypeScript/Node.js. Config file needed. Database connection required.
+The **-n** name flag of older releases was replaced by a path argument. **migration:run** and **migration:revert** work on .js files, so compile TypeScript first or use **typeorm-ts-node-commonjs** or **typeorm-ts-node-esm**. When run through **npm run**, add `--` before the CLI options. **schema:sync** and **schema:drop** can lose data and should be used carefully in production.
 
 # HISTORY
 
@@ -71,3 +110,13 @@ TypeScript/Node.js. Config file needed. Database connection required.
 # SEE ALSO
 
 [prisma](/man/prisma)(1), [knex](/man/knex)(1), [sequelize](/man/sequelize)(1)
+
+# RESOURCES
+
+```[Homepage](https://typeorm.io)```
+
+```[Source code](https://github.com/typeorm/typeorm)```
+
+```[Documentation](https://typeorm.io/docs/advanced-topics/using-cli/)```
+
+<!-- verified: 2026-11-09 -->

@@ -1,38 +1,56 @@
 # TAGLINE
 
-Manage TeX Live system PATH integration
+Link TeX Live programs into system directories
 
 # TLDR
 
-**Add TeX Live to PATH**
+**Add symlinks to system directories**
 
-```tlmgr path add```
+```sudo tlmgr path add```
 
-**Remove from PATH**
+**Remove symlinks from system directories**
 
-```tlmgr path remove```
+```sudo tlmgr path remove```
+
+**Show the directory used for executables**
+
+```tlmgr option sys_bin```
+
+**Change the directory used for executables**
+
+```tlmgr option sys_bin [/usr/local/bin]```
 
 # SYNOPSIS
 
-**tlmgr path** _action_
+**tlmgr path** [**--windowsmode**=user|admin] add|remove
 
 # PARAMETERS
 
 **add**
-> Add TeX Live to system PATH.
+> Add symlinks for executables, man pages and Info pages.
 
 **remove**
-> Remove TeX Live from system PATH.
+> Remove those symlinks.
+
+**--windowsmode**=user|admin
+> Windows only: choose whether the user or system PATH is changed.
 
 # DESCRIPTION
 
-**tlmgr path** manages system PATH integration for TeX Live. Creates or removes symlinks in /usr/local/bin for TeX programs. Part of TeX Live Manager.
+**tlmgr path** manages system integration for TeX Live. On Unix it creates or removes symlinks in the directories set by the **sys_bin**, **sys_man** and **sys_info** options. On Windows it changes the registry entry for PATH. Part of TeX Live Manager.
 
 # CAVEATS
 
-Requires root privileges. May conflict with system TeX packages.
+Writing to system directories usually requires root privileges. May conflict with system TeX packages. Shell initialization files are not changed. Executables added or removed by later updates are not handled automatically, so rerun this command as needed.
 
 # SEE ALSO
 
-[tlmgr](/man/tlmgr)(1)
+[tlmgr](/man/tlmgr)(1), [tlmgr-option](/man/tlmgr-option)(1)
 
+# RESOURCES
+
+```[Homepage](https://www.tug.org/texlive/)```
+
+```[Documentation](https://www.tug.org/texlive/doc/tlmgr.html)```
+
+<!-- verified: 2026-11-09 -->

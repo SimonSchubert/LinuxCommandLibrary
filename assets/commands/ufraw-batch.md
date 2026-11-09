@@ -8,17 +8,25 @@ Batch convert camera RAW photos
 
 ```ufraw-batch --out-type=jpeg [image.raw]```
 
-**Convert to TIFF**
+**Convert to 16-bit TIFF**
 
-```ufraw-batch --out-type=tiff [image.raw]```
+```ufraw-batch --out-type=tiff --out-depth=16 [image.raw]```
 
 **Set output directory**
 
-```ufraw-batch --out-path=[output/] [image.raw]```
+```ufraw-batch --out-type=jpeg --out-path=[output/] [image.raw]```
 
-**Apply white balance**
+**Use the camera white balance**
 
-```ufraw-batch --wb=camera [image.raw]```
+```ufraw-batch --wb=camera --out-type=jpeg [image.raw]```
+
+**Set JPEG quality and overwrite existing files**
+
+```ufraw-batch --out-type=jpeg --compression=[95] --overwrite [image.raw]```
+
+**Extract the embedded preview image**
+
+```ufraw-batch --embedded-image [image.raw]```
 
 **Batch process**
 
@@ -26,36 +34,61 @@ Batch convert camera RAW photos
 
 # SYNOPSIS
 
-**ufraw-batch** [_--out-type format_] [_--out-path dir_] [_options_] _files_
+**ufraw-batch** [_options_] _rawfiles_
 
 # PARAMETERS
 
-**--out-type** _FORMAT_
-> Output format (jpeg, tiff, png).
+**--out-type**=_FORMAT_
+> Output format: ppm, tiff, tif, png, jpeg, jpg or fits (default: ppm).
 
-**--out-path** _DIR_
-> Output directory.
+**--out-depth**=_8|16_
+> Output bit depth per channel. JPEG allows only 8.
 
-**--wb** _MODE_
-> White balance.
+**--out-path**=_DIR_
+> Output directory (default: same as the input file).
 
-**--exposure** _STOPS_
-> Exposure adjustment.
+**--output**=_FILE_
+> Output file name, for a single input. Use - for stdout.
 
-**--compression** _N_
-> JPEG quality.
+**--overwrite**
+> Overwrite existing files without asking.
+
+**--wb**=_camera|auto_
+> White balance setting.
+
+**--temperature**=_K_, **--green**=_VALUE_
+> Set white balance manually.
+
+**--exposure**=_auto|EV_
+> Auto exposure or correction in EV, from -3.00 to 3.00 (default: 0).
+
+**--compression**=_N_
+> JPEG quality from 0 to 100 (default: 85).
+
+**--shrink**=_FACTOR_, **--size**=_SIZE_
+> Shrink by a factor, or downsize the longest side to SIZE.
+
+**--rotate**=_camera|ANGLE|no_
+> Rotation (default: camera).
+
+**--conf**=_FILE_
+> Load all parameters from a UFRaw ID-file.
+
+**--embedded-image**
+> Extract the embedded preview image instead of converting.
+
+**--silent**
+> Do not display messages during conversion.
 
 # DESCRIPTION
 
-**ufraw-batch** is the batch processing mode of UFRaw (Unidentified Flying Raw), a tool for reading and converting camera RAW image files. It processes multiple RAW files non-interactively, applying adjustments like white balance, exposure compensation, and color correction before converting to JPEG, TIFF, or PNG output formats.
+**ufraw-batch** is the batch processing mode of UFRaw (Unidentified Flying Raw), a tool for reading and converting camera RAW image files. It processes files non-interactively with no preview, applying adjustments like white balance, exposure compensation, and color correction before writing the output format.
 
-The tool supports RAW formats from most major camera manufacturers through the dcraw library. Adjustments can be specified via command-line options or loaded from previously saved UFRaw settings files, enabling consistent processing across large sets of images.
-
-Output quality, compression, and bit depth are configurable. The tool integrates with GIMP as a plugin for interactive RAW editing.
+UFRaw reads RAW formats using Dave Coffin's dcraw. Settings can be given as command-line options or loaded from UFRaw ID-files, enabling consistent processing across large sets of images. Command-line options take precedence over settings from ID-files and from the user's resource file.
 
 # CAVEATS
 
-Legacy tool. Consider darktable-cli. Many RAW formats.
+UFRaw is no longer developed: its last release on SourceForge is 0.22, and Debian dropped the package after buster. Consider darktable-cli or rawtherapee-cli. Newer camera models may not be supported. Without **--out-type**, output is PPM.
 
 # HISTORY
 
@@ -64,3 +97,11 @@ Legacy tool. Consider darktable-cli. Many RAW formats.
 # SEE ALSO
 
 [darktable-cli](/man/darktable-cli)(1), [dcraw](/man/dcraw)(1), [rawtherapee-cli](/man/rawtherapee-cli)(1)
+
+# RESOURCES
+
+```[Homepage](https://ufraw.sourceforge.net)```
+
+```[Source code](https://sourceforge.net/projects/ufraw/)```
+
+<!-- verified: 2026-11-09 -->

@@ -36,7 +36,7 @@ This is useful for injecting configuration into services without modifying their
 
 # CAVEATS
 
-Only affects services started after the change. Changes are temporary and lost on reboot. Already running services are not affected. Use `import-environment` to import from the shell.
+Only affects services started after the change. Changes are temporary and lost on reboot. Already running services are not affected. Fails if a name or value is invalid. This block is separate from variables set in manager configuration or by generators. Use `import-environment` to import from the shell.
 
 # HISTORY
 
@@ -45,3 +45,13 @@ The **set-environment** subcommand enables dynamic environment configuration for
 # SEE ALSO
 
 [systemctl-show-environment](/man/systemctl-show-environment)(1), [systemctl-unset-environment](/man/systemctl-unset-environment)(1), [systemctl-import-environment](/man/systemctl-import-environment)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

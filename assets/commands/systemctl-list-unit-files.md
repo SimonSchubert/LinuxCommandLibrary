@@ -26,7 +26,7 @@ Output without **pager**
 
 Output without **headers**
 
-```systemctl list-unit-files --no-legend```
+```systemctl list-unit-files --legend=false```
 
 # SYNOPSIS
 
@@ -43,26 +43,26 @@ Output without **headers**
 **--no-pager**
 > Disable pager output
 
-**--no-legend**
-> Suppress header and footer
+**--legend=** _BOOL_
+> Show or hide the column headers and footer (default true); replaces the older `--no-legend`
 
 # DESCRIPTION
 
-**systemctl list-unit-files** displays all installed unit files and their enablement states. Unlike `list-units` which shows runtime state, this shows the boot configuration for all available units.
+**systemctl list-unit-files** displays all installed unit files and their enablement states. Unlike `list-units` which shows runtime state, this shows the boot configuration for all available units, including template units.
 
-The output shows the unit file name and its state: enabled, disabled, static, masked, generated, transient, indirect, or alias.
+The output shows the unit file name and its state: enabled, enabled-runtime, linked, linked-runtime, alias, masked, masked-runtime, static, indirect, disabled, generated, transient, or bad.
 
 # ENABLEMENT STATES
 
-**enabled** - Starts automatically at boot
+**enabled** - Enabled via .wants/, .requires/ or Alias= symlinks
 
-**disabled** - Does not start at boot
+**disabled** - Not enabled, but has an [Install] section
 
-**static** - No install section, started as dependency
+**static** - Not enabled and has no [Install] provisions; started as a dependency
 
-**masked** - Completely blocked
+**masked** - Linked to /dev/null, so any start fails
 
-**indirect** - Enabled via another unit
+**indirect** - Not enabled itself, but `Also=` lists other units that might be, or it has an alias under another name
 
 # CAVEATS
 
@@ -75,3 +75,13 @@ The **list-unit-files** subcommand provides visibility into the full set of avai
 # SEE ALSO
 
 [systemctl-list-units](/man/systemctl-list-units)(1), [systemctl-enable](/man/systemctl-enable)(1), [systemctl](/man/systemctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

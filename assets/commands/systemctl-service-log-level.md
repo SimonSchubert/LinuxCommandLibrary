@@ -36,18 +36,28 @@ Show service **log level**
 
 # DESCRIPTION
 
-**systemctl service-log-level** gets or sets the runtime log level for a specific service via D-Bus. This allows adjusting service verbosity without restarting the service or editing configuration.
+**systemctl service-log-level** gets or sets the runtime log level for a specific service via D-Bus. This allows adjusting service verbosity without restarting the service or editing configuration. Levels may also be given as numbers from 0 to 7.
 
-The service must support the standard D-Bus logging interface for this to work.
+The service must have `BusName=` set and implement the generic `org.freedesktop.LogControl1` D-Bus interface for this to work.
 
 # CAVEATS
 
-Only works with services that expose the D-Bus logging interface. Changes are temporary and reset when the service restarts. Not all services support this feature.
+Only works with services that implement `org.freedesktop.LogControl1`. Changes are temporary and reset when the service restarts. Not all services support this feature.
 
 # HISTORY
 
-The **service-log-level** subcommand provides per-service logging control, enabling debugging of specific services without affecting system-wide verbosity.
+The **service-log-level** subcommand provides per-service logging control, enabling debugging of specific services without affecting system-wide verbosity. It has been available since systemd 247.
 
 # SEE ALSO
 
 [systemctl-log-level](/man/systemctl-log-level)(1), [systemctl-service-log-target](/man/systemctl-service-log-target)(1), [journalctl](/man/journalctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

@@ -12,32 +12,65 @@ Start server with **world**
 
 ```[path/to]/TerrariaServer -world [path/to/world.wld]```
 
+Start with a **configuration file**
+
+```[path/to]/TerrariaServer -config [serverconfig.txt]```
+
+**Create** a medium world if none exists and start
+
+```[path/to]/TerrariaServer -world [path/to/world.wld] -autocreate [2] -worldname [name]```
+
+Set **port** and **player** limit
+
+```[path/to]/TerrariaServer -world [path/to/world.wld] -port [7777] -players [8]```
+
 # SYNOPSIS
 
 **TerrariaServer** [_OPTIONS_]
 
 # PARAMETERS
 
-**-world** _PATH_
-> World file to load
+**-config** _FILE_
+> Configuration file to use
 
 **-port** _PORT_
-> Server port (default: 7777)
+> Port to listen on (default: 7777)
 
-**-maxplayers** _N_
-> Maximum players allowed
+**-players**, **-maxplayers** _N_
+> Maximum number of players
 
-**-password** _PASS_
+**-pass**, **-password** _PASS_
 > Server password
 
-**-config** _FILE_
-> Configuration file path
+**-world** _PATH_
+> Load a world and automatically start the server
 
 **-autocreate** _SIZE_
-> Auto-create world (1=small, 2=medium, 3=large)
+> Create a world if none is found at the **-world** path (1=small, 2=medium, 3=large)
 
 **-worldname** _NAME_
-> Name for auto-created world
+> Name of the world when using **-autocreate**
+
+**-seed** _SEED_
+> World seed when using **-autocreate**
+
+**-banlist** _PATH_
+> Location of the banlist (default: banlist.txt in the working directory)
+
+**-ip** _ADDRESS_
+> IP address to listen on
+
+**-secure**
+> Add additional cheat protection
+
+**-noupnp**
+> Disable automatic port forwarding
+
+**-steam**
+> Enable Steam support
+
+**-lobby** _friends_|_private_
+> With Steam enabled, allow friends to join or set the server private
 
 # DESCRIPTION
 
@@ -47,7 +80,7 @@ The server hosts multiplayer Terraria sessions, allowing players to connect and 
 
 # CAVEATS
 
-Requires a valid Terraria server installation. World files are platform-specific. Server consumes significant resources for large worlds with many players.
+Requires a Terraria server installation. To run several servers on one machine, each needs its own configuration file, world and port.
 
 # HISTORY
 
@@ -56,3 +89,11 @@ Requires a valid Terraria server installation. World files are platform-specific
 # SEE ALSO
 
 [screen](/man/screen)(1), [tmux](/man/tmux)(1)
+
+# RESOURCES
+
+```[Homepage](https://terraria.org)```
+
+```[Documentation](https://terraria.wiki.gg/wiki/Server)```
+
+<!-- verified: 2026-11-09 -->

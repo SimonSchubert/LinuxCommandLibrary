@@ -4,33 +4,41 @@ Command-line Todoist client in Rust
 
 # TLDR
 
+**Log in** with OAuth
+
+```tod auth login```
+
+**Save** an API token
+
+```tod auth token [token]```
+
 **Import** projects
 
 ```tod project import```
 
-**Quickadd** a task
+**Quick-add** a task with natural language
 
-```tod --quickadd [Buy more milk today]```
+```tod task quick-add --content [Buy more milk today]```
 
-**Create** a new task
-
-```tod task create```
-
-Create task in **project**
+**Create** a task in a **project**
 
 ```tod task create --content "[Write more rust]" --project [code]```
 
-Get **next** task
+Get the **next** task
 
 ```tod task next```
 
-Get **scheduled** tasks
+**Complete** the last fetched task
 
-```tod task list --scheduled --project [work]```
+```tod task complete```
 
-**List** all tasks
+**List** tasks in a project
 
-```tod task list --project [work]```
+```tod list view --project [work]```
+
+List tasks by **filter**
+
+```tod list view --filter [overdue,today,tom]```
 
 # SYNOPSIS
 
@@ -38,46 +46,76 @@ Get **scheduled** tasks
 
 # COMMANDS
 
+**auth login**
+> Log into Todoist using OAuth
+
+**auth token**
+> Save a Todoist API token to the config
+
 **project import**
 > Import your Todoist projects
 
+**task quick-add**
+> Create a new task using natural language
+
 **task create**
-> Create a new task
+> Create a new task without natural language processing
 
 **task next**
-> Get the next task for a project
+> Get the next task by priority
 
-**task list**
-> List tasks
+**task complete**
+> Complete the last task fetched with next
+
+**list view**
+> View tasks by project or filter
+
+**list process**
+> Work through tasks one at a time interactively
+
+**list schedule**, **list prioritize**
+> Schedule or prioritize groups of tasks
+
+**shell completions**
+> Generate shell completions
 
 # PARAMETERS
 
-**--quickadd** _TEXT_
-> Quickly create a task with natural language
+**-c**, **--config** _PATH_
+> Absolute path to the configuration file
 
-**--content** _TEXT_
-> Task content/description
+**-j**, **--json**
+> Output results as JSON and suppress interactive prompts
 
-**--project** _NAME_
-> Specify project name
+**-t**, **--timeout** _SECONDS_
+> Time to wait for API responses (default: 30)
 
-**--scheduled**
-> Show only scheduled tasks
+**-v**, **--verbose**
+> Display additional debug information
+
+**-h**, **--help**
+> Display help, also available per command
 
 # DESCRIPTION
 
-**tod** is a tiny Todoist client written in Rust. It provides a command-line interface for managing tasks in your Todoist account. The tool leverages natural language processing to parse due dates, tags, and other task attributes from simple text input.
+**tod** is an unofficial Todoist command-line client written in Rust. It takes simple input and places it in your inbox or another project, using Todoist's natural language processing to assign due dates, labels and priorities.
 
-Tasks can be quickly added to your inbox or assigned to specific projects. The tool supports viewing scheduled tasks and managing your work queue.
+Beyond quick capture, it supports importing projects, viewing tasks by project or Todoist filter, and working through tasks one at a time with interactive flows for scheduling, prioritizing and completing them.
 
 # CAVEATS
 
-Requires Todoist account and API token configuration. Projects must be imported before they can be referenced. Natural language parsing depends on Todoist's processing capabilities.
+Requires a Todoist account and either OAuth login or an API token. Projects must be imported before they can be referenced. Older versions used **tod --quickadd** and **tod task list**, which are not part of the current interface.
 
 # HISTORY
 
-**tod** was created as a lightweight, fast command-line Todoist client using Rust, focusing on quick task entry and simple project management workflows.
+**tod** was created by Alan Vardy as a command-line Todoist client in Rust and is now developed under the tod-org GitHub organization.
 
 # SEE ALSO
 
 [taskwarrior](/man/taskwarrior)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tod-org/tod)```
+
+<!-- verified: 2026-11-09 -->

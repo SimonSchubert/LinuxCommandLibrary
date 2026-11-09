@@ -16,6 +16,10 @@ Check for **patches** only
 
 ```sudo synoupgrade --download```
 
+Download **patches** only
+
+```sudo synoupgrade --download-smallupdate```
+
 **Start** upgrade process
 
 ```sudo synoupgrade --start```
@@ -38,28 +42,17 @@ Display **help**
 
 # SYNOPSIS
 
-**synoupgrade** [**-h**]
+**synoupgrade** [_option_]
 
-**synoupgrade** [**-p** _file.pat_] [**--no-reboot**]
-
-**synoupgrade** [**--online** | **--online_download** | **--online_install**]
+**synoupgrade** **--patch** _/path/to/file.pat_
 
 # PARAMETERS
 
-**-h**
-> Display help information
-
-**-p, --patch** _file.pat_
-> Upgrade from local patch file (absolute path required)
-
-**--no-reboot**
-> Prevent automatic reboot after upgrade
-
 **--check**
-> Check for available upgrades online
+> Check for available upgrades
 
 **--check-smallupdate**
-> Check for patches without major version upgrade
+> Check for patches without upgrading the DSM version
 
 **--download**
 > Download latest upgrade
@@ -74,31 +67,29 @@ Display **help**
 > Automatically upgrade to latest version
 
 **--auto-smallupdate**
-> Automatically apply patches
+> Automatically apply patches without upgrading the DSM version
 
-**--online**
-> Check online servers for updates
-
-**--online_download**
-> Download available updates
-
-**--online_install**
-> Install downloaded updates
+**--patch** _file.pat_
+> Upgrade from a local patch file (absolute path required)
 
 # DESCRIPTION
 
-**synoupgrade** is the firmware upgrade utility for Synology DiskStation Manager (DSM). It provides command-line control over the NAS operating system update process, enabling both manual upgrades from local patch files and automated online updates.
-
-The tool handles DSM's proprietary .pat firmware packages and manages the complete upgrade workflow including download, verification, installation, and system reboot.
+**synoupgrade** is the command-line upgrade utility for Synology DiskStation Manager (DSM). It can check for, download and install DSM updates, or upgrade from a local .pat firmware file. Synology does not publish a reference for it, so run it without arguments to see the options on your DSM version.
 
 # CAVEATS
 
-Requires root privileges. SSH access must be enabled on the NAS. Only accepts Synology .pat firmware files. Interruption during upgrade can cause system corruption or data loss. Always backup critical data before upgrading. The system typically reboots after upgrade unless --no-reboot is specified.
+Requires root privileges and SSH access to the NAS. Interruption during an upgrade can cause system corruption or data loss. Always backup critical data before upgrading.
 
 # HISTORY
 
-**synoupgrade** is developed by **Synology Inc.** as part of DiskStation Manager. Synology NAS devices have been available since **2004**, with DSM evolving as the primary operating system. The command-line upgrade tool complements the web-based Control Panel upgrade interface.
+**synoupgrade** is developed by **Synology Inc.** as part of DiskStation Manager. It complements the web-based Control Panel upgrade interface.
 
 # SEE ALSO
 
 [synopkg](/man/synopkg)(8), [synoservice](/man/synoservice)(8)
+
+# RESOURCES
+
+```[Homepage](https://www.synology.com/en-global/dsm)```
+
+<!-- verified: 2026-11-09 -->

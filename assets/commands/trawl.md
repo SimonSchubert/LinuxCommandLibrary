@@ -1,69 +1,103 @@
 # TAGLINE
 
-Network connection viewer and monitor
+Print network interface information
 
 # TLDR
 
-**Show network connections**
+**Show interfaces that are up**
 
 ```trawl```
 
-**Show all connections**
+**Show with column names**
 
-```trawl -a```
+```trawl -n```
 
-**Filter by process**
+**Filter interface names by regular expression**
 
-```trawl -p [pid]```
+```trawl -f [eth]```
 
-**Show listening only**
+**List available interfaces**
+
+```trawl -i```
+
+**Include the loopback interface**
 
 ```trawl -l```
 
-**Watch mode**
+**Show one interface**
 
-```trawl -w```
+```trawl [eth0]```
+
+**Print only the IPv4 address of an interface**
+
+```trawl -a [eth0]```
+
+**Show your public IP address**
+
+```trawl -p```
 
 # SYNOPSIS
 
-**trawl** [_-a_] [_-l_] [_-p pid_] [_-w_] [_options_]
+**trawl** [_options_] [_interface_]
 
 # PARAMETERS
 
-**-a**
-> All connections.
+**-n**
+> Show column names.
+
+**-f** _REGEX_
+> Filter interface names with a case-insensitive regular expression.
+
+**-i**
+> List available interfaces.
 
 **-l**
-> Listening only.
+> Include the loopback interface.
 
-**-p** _PID_
-> Filter by process.
+**-p**
+> Print your public IP address.
 
-**-w**
-> Watch mode.
+**-a** _INTERFACE_
+> Print the IPv4 address.
 
-**-n**
-> Numeric output.
+**-m** _INTERFACE_
+> Print the IPv4 subnet mask.
 
-**--help**
-> Show help.
+**-s** _INTERFACE_
+> Print the IPv4 network.
+
+**-u** _INTERFACE_
+> Print the MTU.
+
+**-hw** _INTERFACE_
+> Print the MAC address.
+
+**-6a** _INTERFACE_
+> Print the IPv6 address and mask.
+
+**-4c**, **-6c** _INTERFACE_
+> Print the complete list of IPv4 or IPv6 addresses.
 
 # DESCRIPTION
 
-**trawl** is a network connection viewer that displays information about active TCP connections on a system. It shows details including local and remote addresses, connection state, and the processes associated with each connection.
+**trawl** prints network interface information to the console, similar to ifconfig, ipconfig, ip or ifdata. For each interface that is up it shows the name, IPv4 address, mask and network, MTU, MAC address, IPv6 address and address count.
 
-The watch mode provides continuous updates, refreshing the connection list at regular intervals for real-time monitoring. Connections can be filtered by process ID to focus on a specific application's network activity, and the listening-only mode shows sockets waiting for incoming connections.
-
-Output is designed to be clean and readable, with options for numeric display to avoid DNS resolution delays.
+The loopback interface is ignored by default. Single-value flags print just one field for a named interface, which suits shell scripts.
 
 # CAVEATS
 
-Root may be needed. Platform specific. Network tool.
+The robphoenix/trawl repository is archived and no longer developed. The name is shared with unrelated projects.
 
 # HISTORY
 
-**trawl** is a network connection viewer providing information about active TCP connections.
+**trawl** was written in Go by Rob Phoenix and also runs on Windows.
 
 # SEE ALSO
 
-[ss](/man/ss)(1), [netstat](/man/netstat)(1), [lsof](/man/lsof)(1)
+[ip](/man/ip)(8), [ifconfig](/man/ifconfig)(8), [ss](/man/ss)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/robphoenix/trawl)```
+
+<!-- verified: 2026-11-09 -->

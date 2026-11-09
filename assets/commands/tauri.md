@@ -4,23 +4,23 @@ Build desktop apps with web technologies
 
 # TLDR
 
-**Initialize a new Tauri project**
+**Initialize Tauri in an existing project**
 
 ```tauri init```
 
-**Start development server**
+**Start the development server**
 
 ```tauri dev```
 
-**Build production application**
+**Build the production application**
 
 ```tauri build```
 
-**Build with debug symbols**
+**Build with the debug profile**
 
 ```tauri build --debug```
 
-**Build for specific target**
+**Build for a specific target**
 
 ```tauri build --target [x86_64-apple-darwin]```
 
@@ -28,13 +28,21 @@ Build desktop apps with web technologies
 
 ```tauri build --bundles [deb,appimage]```
 
+**Compile without creating bundles**
+
+```tauri build --no-bundle```
+
+**Add a plugin**
+
+```tauri add [plugin]```
+
 **Generate icons**
 
 ```tauri icon [icon.png]```
 
-**Display version**
+**Show environment information**
 
-```tauri --version```
+```tauri info```
 
 # SYNOPSIS
 
@@ -44,21 +52,37 @@ Build desktop apps with web technologies
 
 # COMMANDS
 
-**init**: Initialize a new Tauri project in existing directory.
+**init**: Initialize a Tauri project in an existing directory.
 
-**dev**: Start development server with hot-reload.
+**dev**: Start the application in development mode with hot-reload.
 
-**build**: Build production application bundle.
+**build**: Build the application for production.
 
-**icon**: Generate icons from source image.
+**bundle**: Generate bundles for an already built application.
+
+**android**: Android development and build commands.
+
+**ios**: iOS development and build commands (macOS only).
+
+**migrate**: Migrate a project from Tauri v1 to v2.
 
 **info**: Show environment diagnostic information.
 
 **add**: Add a Tauri plugin to the project.
 
+**remove**: Remove a Tauri plugin from the project.
+
 **plugin**: Plugin development commands.
 
+**icon**: Generate icons from a source image.
+
 **signer**: Signing utilities for updates.
+
+**permission**: Manage permissions.
+
+**capability**: Manage capabilities.
+
+**inspect**: Inspect project values.
 
 **completions**: Generate shell completions.
 
@@ -68,22 +92,31 @@ Build desktop apps with web technologies
 > Enable verbose logging.
 
 **-d**, **--debug**
-> Build with debug profile.
+> Build with the debug profile (build and bundle).
 
 **-t**, **--target** _target_
 > Target triple (e.g., x86_64-unknown-linux-gnu).
 
 **-f**, **--features** _features_
-> Comma-separated Rust features to enable.
+> Space or comma separated Rust features to enable.
 
 **-b**, **--bundles** _bundles_
-> Bundle types: deb, rpm, appimage, msi, app, dmg, updater.
+> Bundle types to package, such as deb, rpm, appimage, msi, nsis, app or dmg.
+
+**--no-bundle**
+> Skip the bundling step after compiling.
+
+**--no-sign**
+> Skip code signing during build or bundling.
+
+**--ci**
+> Skip prompting for values (also enabled by the CI environment variable).
 
 **-r**, **--runner** _runner_
-> Build tool to use (default: cargo).
+> Binary to use for building the application (default: cargo).
 
-**-c**, **--config** _file_
-> Path to tauri.conf.json or config JSON string.
+**-c**, **--config** _config_
+> JSON string or path to a JSON, JSON5 or TOML file to merge with the default configuration.
 
 **-h**, **--help**
 > Display help information.
@@ -104,8 +137,18 @@ Requires Rust toolchain and platform-specific dependencies (WebKitGTK on Linux, 
 
 # HISTORY
 
-**Tauri** was created as a lightweight alternative to Electron, using system webviews instead of bundled Chromium. Version 1.0 was released in 2022, with version 2.0 adding mobile platform support. The project is maintained by the Tauri Program within the Commons Conservancy.
+**Tauri** was created as a lightweight alternative to Electron, using system webviews instead of bundled Chromium. Version 1.0 was released in 2022, and version 2.0 added mobile platform support. The project is maintained by the Tauri Programme within The Commons Conservancy.
 
 # SEE ALSO
 
 [cargo](/man/cargo)(1), [npm](/man/npm)(1), [electron](/man/electron)(1)
+
+# RESOURCES
+
+```[Homepage](https://tauri.app)```
+
+```[Source code](https://github.com/tauri-apps/tauri)```
+
+```[Documentation](https://tauri.app/reference/cli/)```
+
+<!-- verified: 2026-11-09 -->

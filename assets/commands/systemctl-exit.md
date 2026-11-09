@@ -18,7 +18,7 @@ Exit **container** service manager
 
 # SYNOPSIS
 
-**systemctl exit** [_EXIT_CODE_]
+**systemctl exit** [_OPTIONS_] [_EXIT_CODE_]
 
 # PARAMETERS
 
@@ -30,7 +30,7 @@ _EXIT_CODE_
 
 # DESCRIPTION
 
-**systemctl exit** asks the service manager to quit. When used with `--user`, it terminates the per-user systemd instance and all user services. When used without `--user` in a container, it cleanly shuts down the container.
+**systemctl exit** asks the service manager to quit. When used with `--user`, it terminates the per-user systemd instance and all user services. When used without `--user` in a container, it cleanly shuts down the container. The command is asynchronous and returns once the exit operation is enqueued.
 
 On a regular system without `--user`, this is equivalent to `systemctl poweroff`.
 
@@ -45,3 +45,13 @@ The **exit** subcommand supports clean shutdown of containerized systemd instanc
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-poweroff](/man/systemctl-poweroff)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

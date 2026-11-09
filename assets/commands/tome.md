@@ -8,48 +8,52 @@ Roguelike dungeon crawler in Middle Earth
 
 ```tome```
 
-**Start with specific character file**
+**Use a specific savefile**
 
-```tome -u [savefile]```
+```tome -u[name]```
 
-**Start in graphics mode**
+**Use the rogue-like keyset**
 
-```tome -g```
+```tome -r```
 
-**Start in text/ASCII mode**
+**Use the original keyset**
 
-```tome -m```
+```tome -o```
 
-**Start with specific display size**
+**Use a specific module**
 
-```tome -- -geometry [80x50]```
+```tome -M[module]```
+
+**Display help**
+
+```tome -h```
 
 # SYNOPSIS
 
-**tome** [_options_]
+**tome** [_options_] [**--** _sub-options_]
 
 # PARAMETERS
 
-**-u** _file_
-> Use specific save file.
-
-**-g**
-> Force graphics mode.
-
-**-m**
-> Force monochrome/ASCII mode.
-
-**-n**
-> Start a new character.
+**-u**_NAME_
+> Use the savefile for NAME.
 
 **-r**
-> Restore from save file.
+> Request the rogue-like keyset.
 
-**-s**
-> Show high scores.
+**-o**
+> Request the original keyset.
 
-**-v**
-> Display version.
+**-M**_MODULE_
+> Use the given game module.
+
+**-w**
+> Request wizard mode.
+
+**-h**
+> Display help.
+
+**--**
+> Pass the remaining options to the display front end.
 
 # CONTROLS
 
@@ -57,7 +61,7 @@ Roguelike dungeon crawler in Middle Earth
 
 **=**: Set game options.
 
-**Movement**: Arrow keys or vi keys (hjklyubn).
+**Movement**: Arrow keys, or hjklyubn with the rogue-like keyset.
 
 **>**: Go down stairs.
 
@@ -65,34 +69,34 @@ Roguelike dungeon crawler in Middle Earth
 
 **i**: View inventory.
 
-**d**: Drop item.
-
-**e**: Eat food.
-
 **q**: Quaff potion.
 
 **r**: Read scroll.
 
 **w**: Wear/wield equipment.
 
-**Ctrl+S**: Save and exit.
-
 # DESCRIPTION
 
-**tome** (Tales of Middle Earth) is a roguelike dungeon crawling game set in Tolkien's Middle Earth. Players explore procedurally generated dungeons, fight monsters, collect items, and develop their character through experience and equipment.
+**tome** (Tales of Middle Earth) is a roguelike dungeon crawling game derived from Angband and set in Tolkien's Middle Earth. Players explore procedurally generated dungeons, fight monsters, collect items, and develop their character through experience and equipment.
 
-The game features permadeath, meaning character death is permanent and save files are deleted upon death. It includes extensive character customization with multiple races, classes, and skills. The world includes themed locations from the Middle Earth setting.
+Character death is permanent. The game includes character customization with multiple races, classes and skills.
 
-ToME descended from Angband and introduced many innovations including overworld travel, multiple dungeons, and expanded skill systems. The interface combines traditional roguelike keyboard commands with optional graphical tiles.
+The tome2 repository maintains this 2.x line of the game, which is separate from the later Tales of Maj'Eyal.
 
 # CAVEATS
 
-Permadeath means lost progress on death. Games can last many hours. Some versions require specific terminal sizes. The learning curve is steep for new roguelike players. Save files are deleted upon character death.
+Permadeath means lost progress on death. Options such as **-u** and **-M** take their value with no space. Available front ends and their sub-options depend on how the game was built.
 
 # HISTORY
 
-**ToME** began as PernAngband in 1994, evolving through several name changes before becoming Tales of Middle Earth. It forked from Angband to add story elements and a connected world. The name later changed to Tales of Maj'Eyal (ToME 4) after 2010, moving to an original fantasy setting while the Middle Earth version continued separately. ToME won the ASCII Dreams Roguelike of the Year award multiple times.
+**ToME** is a variant of Angband. A later game, Tales of Maj'Eyal (ToME 4), moved to an original fantasy setting, while the Middle Earth version is maintained separately as tome2.
 
 # SEE ALSO
 
 [angband](/man/angband)(6), [nethack](/man/nethack)(6), [crawl](/man/crawl)(6), [rogue](/man/rogue)(6), [moria](/man/moria)(6)
+
+# RESOURCES
+
+```[Source code](https://github.com/tome2/tome2)```
+
+<!-- verified: 2026-11-09 -->

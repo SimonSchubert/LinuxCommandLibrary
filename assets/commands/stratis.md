@@ -34,18 +34,21 @@ Managed pool-based Linux storage
 
 # SYNOPSIS
 
-**stratis** _command_ [_subcommand_] [_arguments_]
+**stratis** [_global options_] **pool**|**filesystem**|**fs**|**blockdev**|**key**|**report**|**daemon** [_subcommand_] [_arguments_]
 
 # COMMANDS
 
 **pool create** _name_ _devices_...
 > Create storage pool from block devices
 
-**pool list**
-> List existing pools
+**pool list** [**--stopped**]
+> List started pools, or stopped pools with **--stopped**
 
-**pool add-data** _pool_ _device_
-> Add device to pool
+**pool add-data** _pool_ _devices_...
+> Add one or more devices to a pool
+
+**pool extend-data** _pool_
+> Use space added to existing data devices, for example after RAID expansion
 
 **pool destroy** _pool_
 > Remove a pool (requires no filesystems)
@@ -53,13 +56,22 @@ Managed pool-based Linux storage
 **pool rename** _old_ _new_
 > Rename a pool
 
-**pool init-cache** _pool_ _devices_
-> Initialize SSD cache tier
+**pool stop** **--name** _pool_
+> Tear down the storage stack but keep all metadata
 
-**filesystem create** _pool_ _name_
+**pool start** **--name** _pool_
+> Start a stopped pool
+
+**pool init-cache** _pool_ _devices_...
+> Initialize a cache tier, typically on faster drives
+
+**pool add-cache** _pool_ _devices_...
+> Add devices to an initialized cache
+
+**filesystem create** _pool_ _name_ [**--size** _size_] [**--size-limit** _limit_]
 > Create thin filesystem from pool
 
-**filesystem list**
+**filesystem list** [_pool_]
 > List filesystems
 
 **filesystem snapshot** _pool_ _source_ _name_
@@ -71,8 +83,14 @@ Managed pool-based Linux storage
 **filesystem rename** _pool_ _old_ _new_
 > Rename filesystem
 
-**blockdev list**
+**blockdev list** [_pool_]
 > List block devices in pools
+
+**key set** **--capture-key** _description_
+> Set a key in the kernel keyring for pool encryption
+
+**key list**
+> List key descriptions usable for encryption
 
 **daemon version**
 > Show stratisd version
@@ -108,3 +126,13 @@ Requires stratisd service running. Uses XFS exclusively; other filesystems not s
 # SEE ALSO
 
 [lvm](/man/lvm)(8), [btrfs](/man/btrfs)(8), [xfs](/man/xfs)(5), [systemctl](/man/systemctl)(1)
+
+# RESOURCES
+
+```[Homepage](https://stratis-storage.github.io)```
+
+```[Source code](https://github.com/stratis-storage/stratis-cli)```
+
+```[Documentation](https://stratis-storage.github.io/howto/)```
+
+<!-- verified: 2026-11-09 -->

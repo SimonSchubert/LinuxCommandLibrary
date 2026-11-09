@@ -1,64 +1,73 @@
 # TAGLINE
 
-Rust-based TLDR pages client
+Alias of tldr-lint, a linter for tldr pages
 
 # TLDR
 
-**Show page**
+**Lint a page**
 
-```tldrl [command]```
+```tldrl [path/to/page.md]```
 
-**Update cache**
+**Lint all pages in a directory**
 
-```tldrl --update```
+```tldrl [path/to/directory]```
 
-**List all pages**
+**Format a page to stdout**
 
-```tldrl --list```
+```tldrl -f [path/to/page.md]```
 
-**Show platform-specific**
+**Format a page in place**
 
-```tldrl --platform [linux] [command]```
+```tldrl -i [path/to/page.md]```
 
-**Search pages**
+**Ignore specific error codes**
 
-```tldrl --search "[keyword]"```
+```tldrl -I [TLDR001,TLDR014] [path/to/page.md]```
 
 # SYNOPSIS
 
-**tldrl** [_--update_] [_--platform os_] [_options_] [_command_]
+**tldrl** [_options_] _file_|_directory_
 
 # PARAMETERS
 
-**--update**
-> Update cache.
+**-f**, **--format**
+> Also attempt formatting (to stdout, or as specified by **-o**).
 
-**--list**
-> List pages.
+**-o**, **--output** _FILE_
+> Output to a formatted file.
 
-**--platform** _OS_
-> Platform filter.
+**-i**, **--in-place**
+> Format in place.
 
-**--search** _TERM_
-> Search pages.
+**-t**, **--tabular**
+> Print errors in a tabular format.
 
-**--help**
+**-v**, **--verbose**
+> Print verbose output.
+
+**-I**, **--ignore** _CODES_
+> Ignore comma-separated tldr-lint error codes.
+
+**-V**, **--version**
+> Display the version.
+
+**-h**, **--help**
 > Show help.
 
 # DESCRIPTION
 
-**tldrl** is a fast, Rust-based client for accessing TLDR pages, the community-maintained collection of simplified command-line documentation focused on practical examples. It caches pages locally for offline access and quick lookups.
-
-The client supports platform-specific pages for Linux, macOS, and Windows, and provides search functionality to find relevant commands by keyword. The cache can be updated with **--update** to fetch the latest pages from the TLDR repository.
+**tldrl** is an alias of **tldr-lint**, a tool for validating pages of the tldr-pages project against its style rules. It reports errors by code and can also reformat pages.
 
 # CAVEATS
 
-Internet for updates. Cache needs refresh. Not official tldr client.
-
-# HISTORY
-
-**tldrl** is a Rust implementation of a TLDR client for accessing community-maintained simplified man pages.
+Installed through npm as the tldr-lint package, which provides both command names. It checks page files and does not display tldr pages; use a tldr client for that.
 
 # SEE ALSO
 
-[tldr](/man/tldr)(1), [man](/man/man)(1), [cheat](/man/cheat)(1)
+[tldr-lint](/man/tldr-lint)(1), [tldr](/man/tldr)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tldr-pages/tldr-lint)```
+
+<!-- verified: 2026-11-09 -->

@@ -38,7 +38,7 @@ Declare shell variables with attributes
 
 # SYNOPSIS
 
-**typeset** [**-aAfFgilnrtux**] [**-p**] [_name_[=_value_]...]
+**typeset** [**-aAfFgiIlnrtux**] [**-p**] [_name_[=_value_]...]
 
 # PARAMETERS
 
@@ -52,10 +52,13 @@ Declare shell variables with attributes
 > Display function names and definitions
 
 **-F**
-> Display function names only
+> Display function names and attributes only; implies **-f**
 
 **-g**
-> Create global variable when used in a function (bash only)
+> Create or modify variable at global scope when used in a function
+
+**-I**
+> Make a local variable inherit the attributes and value of a same-named variable at a surrounding scope (bash)
 
 **-i**
 > Treat variable as integer; arithmetic evaluation on assignment
@@ -81,6 +84,9 @@ Declare shell variables with attributes
 **-p**
 > Display attributes and values of variables
 
+**+**_attr_
+> Using **+** instead of **-** turns off an attribute (except that **+a** and **+A** cannot destroy arrays and **+r** cannot remove read-only)
+
 # DESCRIPTION
 
 **typeset** is a shell builtin that declares variables and assigns them attributes. In bash, it is a synonym for **declare** and is provided for compatibility with ksh (KornShell).
@@ -93,12 +99,20 @@ Without arguments, typeset displays all variables with their attributes. With at
 
 # CAVEATS
 
-In bash, **typeset** is marked as obsolete in favor of **declare**, but both work identically. Behavior differs between shells (bash, ksh, zsh). The **-n** nameref option requires bash 4.3+ or ksh93. Associative arrays (**-A**) require bash 4+.
+In bash, **typeset** is a synonym for **declare** that exists for ksh compatibility, so both work identically. Behavior differs between shells (bash, ksh, zsh). The **-n** nameref option requires bash 4.3+ or ksh93. Associative arrays (**-A**) require bash 4+.
 
 # HISTORY
 
-**typeset** originated in the **KornShell** (ksh) developed by **David Korn** at Bell Labs in the early **1980s**. When bash was created, it implemented similar functionality as **declare** but included **typeset** as an alias for ksh compatibility. The command remains important for portable shell scripts targeting multiple Korn-like shells.
+**typeset** originated in the **KornShell** (ksh) developed by **David Korn** at Bell Labs in the early **1980s**. When bash was created, it implemented similar functionality as **declare** but included **typeset** as a synonym for ksh compatibility. The command remains important for portable shell scripts targeting multiple Korn-like shells.
 
 # SEE ALSO
 
 [declare](/man/declare)(1), [local](/man/local)(1), [export](/man/export)(1), [readonly](/man/readonly)(1), [bash](/man/bash)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/bash/)```
+
+```[Documentation](https://www.gnu.org/software/bash/manual/)```
+
+<!-- verified: 2026-11-09 -->

@@ -34,13 +34,15 @@ Set to **auto**
 
 # LOG TARGETS
 
-**console** - Send logs to stderr
+**console** - Send logs to the service's standard error
+
+**kmsg** - Send logs to the kernel log buffer
 
 **journal** - Send logs to systemd-journald
 
 **syslog** - Send logs to /dev/log
 
-**auto** - Let systemd choose
+**auto** - Choose automatically, typically console if run interactively and journal or syslog otherwise
 
 **null** - Disable all log output
 
@@ -48,16 +50,26 @@ Set to **auto**
 
 **systemctl service-log-target** gets or sets where a service sends its log messages via D-Bus. This allows redirecting service logs at runtime without restarting.
 
-The service must support the standard D-Bus logging interface.
+The service must have `BusName=` set and implement the generic `org.freedesktop.LogControl1` D-Bus interface.
 
 # CAVEATS
 
-Only works with D-Bus integrated services. Changes are temporary and reset on service restart. Not all services support this feature.
+Only works with services that implement `org.freedesktop.LogControl1`. Most normal services only implement console, journal, and null. Changes are temporary and reset on service restart. Not all services support this feature.
 
 # HISTORY
 
-The **service-log-target** subcommand enables per-service log routing control for debugging and troubleshooting specific services.
+The **service-log-target** subcommand enables per-service log routing control for debugging and troubleshooting specific services. It has been available since systemd 247.
 
 # SEE ALSO
 
 [systemctl-service-log-level](/man/systemctl-service-log-level)(1), [systemctl-log-target](/man/systemctl-log-target)(1), [journalctl](/man/journalctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

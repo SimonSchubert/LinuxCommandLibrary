@@ -18,7 +18,7 @@ Import for **user** services
 
 # SYNOPSIS
 
-**systemctl import-environment** _VARIABLE_...
+**systemctl import-environment** [_OPTIONS_] _VARIABLE_...
 
 # PARAMETERS
 
@@ -32,11 +32,11 @@ Import for **user** services
 
 **systemctl import-environment** imports environment variables from the current shell session into the systemd service manager's environment. These imported variables become available to all units started by the service manager.
 
-This is commonly used with `--user` to pass display-related variables (like DISPLAY, WAYLAND_DISPLAY, or XDG_SESSION_ID) from the login session to user services.
+This is commonly used with `--user` to pass display-related variables (like DISPLAY, WAYLAND_DISPLAY, or XDG_CURRENT_DESKTOP) from the login session to user services.
 
 # CAVEATS
 
-Only affects services started after the import. Does not affect already running services. The system service manager typically runs in a minimal environment; importing user session variables may not be appropriate.
+Only affects services started after the import. Does not affect already running services. The system service manager typically runs in a minimal environment; importing user session variables may not be appropriate. Calling it without arguments imports the entire inherited environment, which is deprecated because most shell variables only make sense locally. Invalid names or values given explicitly raise an error.
 
 # HISTORY
 
@@ -45,3 +45,13 @@ The **import-environment** subcommand enables proper integration between login s
 # SEE ALSO
 
 [systemctl-show-environment](/man/systemctl-show-environment)(1), [systemctl-set-environment](/man/systemctl-set-environment)(1), [systemctl](/man/systemctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

@@ -8,11 +8,11 @@ Ubuntu graphical software update manager
 
 ```update-manager```
 
-**Check for distribution upgrade**
+**Check for a new distribution release**
 
 ```update-manager -c```
 
-**Check for updates** and launch GUI
+**Upgrade to the development release** (from the latest supported release)
 
 ```update-manager -d```
 
@@ -20,13 +20,17 @@ Ubuntu graphical software update manager
 
 ```update-manager --no-focus-on-map```
 
-**Check for updates from proposed repository**
+**Upgrade using the proposed release upgrader**
 
 ```update-manager -p```
 
+**Start without checking for updates**
+
+```update-manager --no-update```
+
 # SYNOPSIS
 
-**update-manager** [**-c**|**--check-dist-upgrades**] [**-d**|**--devel-release**] [**-p**|**--proposed**] [**--no-focus-on-map**]
+**update-manager** [**-c**|**--check-dist-upgrades**] [**-d**|**--devel-release**] [**-p**|**--proposed**] [**--no-focus-on-map**] [**--no-update**] [**--install-all**]
 
 # PARAMETERS
 
@@ -34,16 +38,28 @@ Ubuntu graphical software update manager
 > Check if a new distribution release is available for upgrade.
 
 **-d**, **--devel-release**
-> Check for upgrades to the latest development release.
+> If using the latest supported release, upgrade to the development release.
 
 **-p**, **--proposed**
-> Include updates from the proposed repository (pre-release updates).
+> Upgrade using the latest proposed version of the release upgrader.
 
 **--no-focus-on-map**
 > Do not focus the window when it appears. Useful for background notifications.
 
 **--no-update**
 > Do not check for updates when starting.
+
+**--install-all**
+> Install all updates when starting.
+
+**--data-dir** _DIR_
+> Directory that contains the data files.
+
+**--debug**
+> Show debug messages.
+
+**-V**, **--version**
+> Show version.
 
 **-h**, **--help**
 > Show help message.
@@ -62,8 +78,16 @@ Requires a graphical environment (X11 or Wayland). For headless servers, use apt
 
 # HISTORY
 
-**update-manager** was developed by Canonical as part of Ubuntu's user-friendly desktop experience. It first appeared in early Ubuntu releases around **2004-2005** to make system updates accessible to users unfamiliar with command-line package management. The tool has evolved to include distribution upgrade capabilities and integration with Ubuntu's Long Term Support (LTS) release cycle.
+**update-manager** was started in October **2004** by Michiel Sikkes and first uploaded to Ubuntu for the Hoary release in November **2004** by Michael Vogt. The tool has evolved to include distribution upgrade capabilities and integration with Ubuntu's Long Term Support (LTS) release cycle.
 
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [do-release-upgrade](/man/do-release-upgrade)(8), [unattended-upgrades](/man/unattended-upgrades)(8)
+
+# RESOURCES
+
+```[Source code](https://git.launchpad.net/update-manager)```
+
+```[Homepage](https://launchpad.net/update-manager)```
+
+<!-- verified: 2026-11-09 -->

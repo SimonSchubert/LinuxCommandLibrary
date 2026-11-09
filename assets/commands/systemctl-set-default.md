@@ -42,8 +42,18 @@ Requires root privileges. Takes effect on next boot. Does not affect the current
 
 # HISTORY
 
-The **set-default** subcommand replaces traditional runlevel configuration, providing a simple way to control what target (runlevel equivalent) the system boots into.
+The **set-default** subcommand replaces traditional runlevel configuration, providing a simple way to control what target (runlevel equivalent) the system boots into. It has been documented since systemd 205.
 
 # SEE ALSO
 
 [systemctl-get-default](/man/systemctl-get-default)(1), [systemctl-isolate](/man/systemctl-isolate)(1), [systemctl](/man/systemctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

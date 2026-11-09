@@ -4,21 +4,17 @@ Storage device management D-Bus daemon
 
 # TLDR
 
-**Daemon is started automatically by D-Bus or systemd**
+**Restart the daemon** with debug output (full path varies by distribution)
 
-```udisksd```
+```sudo /usr/libexec/udisks2/udisksd --replace --debug```
 
-**Run with debug output**
+**Run without handling SIGINT**
 
-```udisksd --debug```
+```sudo /usr/libexec/udisks2/udisksd --no-sigint```
 
-**Run without replacing existing instance**
+**Activate modules on startup**
 
-```udisksd --no-replace```
-
-**Run without LUKS support**
-
-```udisksd --no-cryptsetup```
+```sudo /usr/libexec/udisks2/udisksd --force-load-modules```
 
 # SYNOPSIS
 
@@ -26,26 +22,23 @@ Storage device management D-Bus daemon
 
 # PARAMETERS
 
-**--debug**
-> Enable debug output.
+**-r**, **--replace**
+> Replace the existing daemon.
 
-**--no-replace**
-> Don't replace existing daemon instance.
+**-d**, **--debug**
+> Print debug or informational messages on stdout/stderr.
 
-**--no-cryptsetup**
-> Disable LUKS cryptographic volume support.
-
-**--no-sigint**
-> Don't exit on SIGINT for debugging.
+**-s**, **--no-sigint**
+> Do not handle SIGINT for controlled shutdown.
 
 **--force-load-modules**
-> Load kernel modules even if not needed.
+> Activate udisks modules on startup.
+
+**--disable-modules**
+> Do not load modules even when asked for it.
 
 **-h**, **--help**
 > Display help.
-
-**--version**
-> Display version.
 
 # DESCRIPTION
 
@@ -57,12 +50,22 @@ Users should not start udisksd manually; it's automatically activated by D-Bus o
 
 # CAVEATS
 
-Requires polkit for access control. Automatic mounting depends on desktop environment integration. Debug mode produces verbose output. Some features require specific kernel modules.
+Requires polkit for access control. Automatic mounting depends on desktop environment integration. Debug mode produces verbose output. The binary is usually not in the PATH: it is at /usr/libexec/udisks2/udisksd on Debian and /usr/lib/udisks2/udisksd on Arch Linux. The "modules" in the options are udisks daemon modules, not kernel modules.
 
 # HISTORY
 
-**udisksd** evolved from the original udisks project (DeviceKit-disks) created for modern Linux desktop storage management. The udisks2 rewrite improved the API and added features like LUKS support. It's now maintained as part of the storaged project and is a core component of most Linux desktop environments.
+**udisksd** evolved from the original udisks project (DeviceKit-disks) created for modern Linux desktop storage management. The udisks2 rewrite improved the API. It's now maintained under the storaged project and is a core component of most Linux desktop environments.
 
 # SEE ALSO
 
-[udisksctl](/man/udisksctl)(1), [polkit](/man/polkit)(8), [mount](/man/mount)(8), [udevadm](/man/udevadm)(8)
+[udisksctl](/man/udisksctl)(1), [polkit](/man/polkit)(8), [mount](/man/mount)(8), [udevadm](/man/udevadm)(8), [dbus-daemon](/man/dbus-daemon)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/storaged-project/udisks)```
+
+```[Homepage](https://www.freedesktop.org/wiki/Software/udisks/)```
+
+```[Documentation](https://storaged.org/doc/udisks2-api/latest/)```
+
+<!-- verified: 2026-11-09 -->

@@ -20,13 +20,13 @@ Switch between installed Java versions
 
 ```sudo update-java-alternatives --jre --set [java-17-openjdk-amd64]```
 
-**Test what would be done** without making changes
+**Show each alternative** provided by an installation
 
-```update-java-alternatives --test --set [java-17-openjdk-amd64]```
+```update-java-alternatives --verbose --list [java-17-openjdk-amd64]```
 
 # SYNOPSIS
 
-**update-java-alternatives** [**-l**|**--list**] [**-s**|**--set** _jname_] [**-a**|**--auto**] [**--jre**] [**--jre-headless**] [**--plugin**]
+**update-java-alternatives** [**--jre-headless**] [**--jre**] [**--plugin**] [**-v**|**--verbose**] **-l**|**--list** [_jname_] | **-s**|**--set** _jname_ | **-a**|**--auto** | **-h**|**--help**
 
 # PARAMETERS
 
@@ -48,8 +48,8 @@ Switch between installed Java versions
 **--plugin**
 > Limit actions to browser plugin alternatives.
 
-**-t**, **--test**
-> Dry run mode. Show what would be done without making changes.
+**-v**, **--verbose**
+> Verbose output. With **--list**, shows each alternative provided by the packages.
 
 **-h**, **--help**
 > Display help message.
@@ -60,18 +60,24 @@ Switch between installed Java versions
 
 When switching Java versions, this tool ensures all associated commands point to the same installation, preventing version mismatches between the JRE and JDK tools. This is essential for development environments that require specific Java versions.
 
-The jname parameter corresponds to the directory name under /usr/lib/jvm/ for the Java installation. Use **--list** to see available installations and their names.
+The jname parameter corresponds to a package-provided description file named /usr/lib/jvm/._jname_.jinfo. Use **--list** to see available installations and their names.
 
 The tool is part of the java-common package on Debian-based systems.
 
 # CAVEATS
 
-Requires root privileges to modify system alternatives. Only manages Java installations installed through the package manager that register with the alternatives system. Manual Java installations must be registered with update-alternatives separately. JAVA_HOME environment variable may need to be set separately in user profiles.
+Requires root privileges to modify system alternatives. Only manages Java installations that provide a .jinfo file, which manual installations usually lack. Those must be registered with update-alternatives separately. JAVA_HOME environment variable may need to be set separately in user profiles.
 
 # HISTORY
 
-**update-java-alternatives** was developed for **Debian** and Ubuntu to simplify Java version management. It addresses the complexity of having multiple Java binaries (java, javac, jar, keytool, etc.) that must all be switched together. The tool has been part of the java-common package since the early **2000s** and remains the standard way to manage Java versions on Debian-based systems.
+**update-java-alternatives** and its manual page were written by Matthias Klose for **Debian** and Ubuntu to simplify Java version management. It addresses the complexity of having multiple Java binaries (java, javac, jar, keytool, etc.) that must all be switched together.
 
 # SEE ALSO
 
 [update-alternatives](/man/update-alternatives)(1), [java](/man/java)(1), [javac](/man/javac)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/java-team/java-common)```
+
+<!-- verified: 2026-11-09 -->

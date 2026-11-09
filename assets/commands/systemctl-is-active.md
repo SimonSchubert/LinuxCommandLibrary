@@ -39,11 +39,11 @@ Check **user** unit
 
 **systemctl is-active** checks whether one or more units are currently active (running). It prints the active state and returns exit code 0 if at least one unit is active.
 
-Possible states include: active, inactive, activating, deactivating, failed. For multiple units, each state is printed on a separate line.
+Possible states include: active, inactive, activating, deactivating, reloading, refreshing, maintenance, failed. For multiple units, each state is printed on a separate line.
 
 # EXIT STATUS
 
-Returns **0** if at least one unit is active, **non-zero** otherwise. This makes it useful in shell scripts for conditional logic based on service state.
+Returns **0** if at least one unit is active, **non-zero** otherwise (typically **3**). This makes it useful in shell scripts for conditional logic based on service state.
 
 # CAVEATS
 
@@ -56,3 +56,13 @@ The **is-active** subcommand provides a scriptable way to query service state, r
 # SEE ALSO
 
 [systemctl-is-enabled](/man/systemctl-is-enabled)(1), [systemctl-status](/man/systemctl-status)(1), [systemctl](/man/systemctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

@@ -53,6 +53,8 @@ Switch to **bleeding edge**
 
 After switching branches, run `steamos-update` to update to the selected branch's latest version.
 
+The command is deprecated in favor of **atomupd-manager**.
+
 # CAVEATS
 
 Beta and main branches may contain bugs and instability. Switching to older branches may require a factory reset. Updates on non-stable branches may occur more frequently.

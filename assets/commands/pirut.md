@@ -24,7 +24,7 @@ Legacy tool, not available on modern Fedora/RHEL systems. Replaced by GNOME Soft
 
 # HISTORY
 
-**pirut** was the default graphical package manager in early Fedora releases (Fedora Core 5-6 era). It was superseded by PackageKit-based tools and eventually GNOME Software as Fedora modernized its desktop software management.
+**pirut** was a graphical package manager for yum-based Fedora and Red Hat systems. It was superseded by PackageKit-based tools and eventually GNOME Software as Fedora modernized its desktop software management.
 
 # SEE ALSO
 

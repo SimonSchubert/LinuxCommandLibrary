@@ -65,22 +65,24 @@ Synology NAS service management
 
 # DESCRIPTION
 
-**synoservice** and related commands (**synoservicecfg**, **synoservicectl**) are Synology NAS utilities for managing system and package services from the command line via SSH.
+**synoservice** and related commands (**synoservicecfg**, **synoservicectl**) are Synology NAS utilities reported to manage system and package services from the command line via SSH. Synology does not publish a reference for them, so the commands and flags on this page come from community usage and may differ between DSM versions.
 
-These commands control DSM (DiskStation Manager) services including web server, Samba file sharing, SSH, FTP, Docker, and third-party packages. They are located in /usr/syno/sbin/ and require root privileges.
-
-Common services include DSM, nginx, samba, ssh-shell, nfsd, ftpd, crond, and package services prefixed with pkgctl- such as pkgctl-Docker and pkgctl-WebStation.
-
-In DSM 7 and newer, the standard **systemctl** command can also be used for service management.
+Package services are commonly referred to with a pkgctl- prefix, such as pkgctl-WebStation.
 
 # CAVEATS
 
-Requires SSH access and root privileges (use sudo -i). Commands may differ slightly between DSM versions. Package services use the pkgctl- prefix. Some critical services should not be stopped remotely. On DSM 7+, consider using systemctl as an alternative.
+Not documented by Synology; run the tool without arguments on your own system to see what it accepts. Requires SSH access and root privileges (use sudo -i). Community reports indicate these tools do not work reliably on DSM 7, where **synosystemctl** is used instead. Some critical services should not be stopped remotely.
 
 # HISTORY
 
-**synoservice** utilities are Synology-proprietary tools developed for their DiskStation Manager operating system. They provide a consistent interface for managing services across different DSM versions and hardware platforms. DSM 7 introduced better systemd integration alongside these legacy tools.
+These utilities are Synology-proprietary tools for the DiskStation Manager operating system.
 
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [service](/man/service)(8)
+
+# RESOURCES
+
+```[Homepage](https://www.synology.com/en-global/dsm)```
+
+<!-- verified: 2026-11-09 -->
