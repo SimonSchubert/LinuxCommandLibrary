@@ -1,3 +1,17 @@
+## v4.9.2 - 2026-11-09
+
+### Features
+- Added 151 new commands, including Flux extras, terraform-workspace, ufw-app, mkarchiso, mirrorselect, grdctl, fuseiso and sesh
+- Added Nix, checkupdates and git-crypt basics
+
+### Fixes
+- Fixed a crash when selecting text in long lists
+- Stopped the Commands tab from opening the first command on wide layouts
+- Fixed formatting on many command pages and corrected octal permission wording
+
+### Improvements
+- Upgraded dependencies (Kotlin 2.4.21, Compose Multiplatform 1.12.2, Gradle 9.9.0)
+
 ## v4.9.1 - 2026-10-15
 
 ### Features

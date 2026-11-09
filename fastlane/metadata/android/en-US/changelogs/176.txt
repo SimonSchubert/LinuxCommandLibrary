@@ -1,0 +1,6 @@
+Added 151 new commands, including Flux extras, terraform-workspace, ufw-app, mkarchiso, mirrorselect, grdctl, fuseiso and sesh
+Added Nix, checkupdates and git-crypt basics
+Fixed a crash when selecting text in long lists
+Stopped the Commands tab from opening the first command on wide layouts
+Fixed formatting on many command pages and corrected octal permission wording
+Upgraded dependencies
