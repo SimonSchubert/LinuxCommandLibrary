@@ -12,9 +12,17 @@ Transparent encryption for yadm files
 
 ```yadm git-crypt unlock```
 
+**Lock repository**
+
+```yadm git-crypt lock```
+
 **Add GPG key**
 
 ```yadm git-crypt add-gpg-user [key-id]```
+
+**Show encryption status** of files
+
+```yadm git-crypt status```
 
 # SYNOPSIS
 
@@ -22,9 +30,22 @@ Transparent encryption for yadm files
 
 # DESCRIPTION
 
-**yadm git-crypt** wraps git-crypt for transparent encryption. Files matching .gitattributes patterns are encrypted on push, decrypted on pull. Alternative to yadm encrypt for per-file encryption.
+**yadm git-crypt** passes its options directly to git-crypt, with the environment configured to use the yadm repository. Files matching patterns in **.gitattributes** are encrypted when committed and decrypted on checkout. It is a separate alternative to **yadm encrypt**, which stores files in a single archive.
+
+# CAVEATS
+
+**git-crypt** must be installed separately.
 
 # SEE ALSO
 
-[yadm](/man/yadm)(1), [git-crypt](/man/git-crypt)(1)
+[yadm](/man/yadm)(1), [git-crypt](/man/git-crypt)(1), [yadm-transcrypt](/man/yadm-transcrypt)(1), [yadm-encrypt](/man/yadm-encrypt)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/yadm-dev/yadm)```
+
+```[Homepage](https://yadm.io)```
+
+```[Documentation](https://yadm.io/docs/encryption)```
+
+<!-- verified: 2026-11-09 -->

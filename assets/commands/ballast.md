@@ -12,21 +12,14 @@ Snapshot-based API load testing tool
 
 ```ballast --no-snapshot```
 
-**Run load tests** with a description for the snapshot
-
-```ballast --desc "[initial baseline]"```
-
 # SYNOPSIS
 
-**ballast** [**--no-snapshot**] [**--desc** _description_]
+**ballast** [**--no-snapshot**]
 
 # PARAMETERS
 
 **--no-snapshot**
 > Run load tests without writing a snapshot file. Useful for one-off tests where no baseline comparison is needed.
-
-**--desc** _description_
-> Attach a description to the snapshot for identification purposes.
 
 # DESCRIPTION
 
@@ -92,3 +85,9 @@ Ballast requires a **ballast.json** file in the current directory; there is no w
 # SEE ALSO
 
 [ab](/man/ab)(1), [wrk](/man/wrk)(1), [curl](/man/curl)(1), [ali](/man/ali)(1), [hey](/man/hey)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/synoet/ballast)```
+
+<!-- verified: 2026-11-09 -->

@@ -20,57 +20,68 @@ Offline speech recognition toolkit
 
 ```vosk-transcriber --list-languages```
 
-**Transcribe from microphone (vosk-cli)**
+**List available models**
 
-```vosk mic -o [output.txt] -t english```
+```vosk-transcriber --list-models```
 
-**Transcribe audio file (vosk-cli)**
+**Transcribe with a local model**
 
-```vosk rec -c english [audio.mp3]```
+```vosk-transcriber -m [path/to/model] -i [audio.wav] -o [output.txt]```
+
+**Transcribe a folder** to subtitles
+
+```vosk-transcriber -i [input_dir] -o [output_dir] -t srt```
 
 # SYNOPSIS
 
-**vosk-transcriber** [_options_] -i _input_ -o _output_
-
-**vosk** _command_ [_options_]
+**vosk-transcriber** [_options_] -i _input_ [-o _output_]
 
 # PARAMETERS
 
-**-i** _file_
-> Input audio or video file.
+**-i**, **--input** _path_
+> Input audio or video file, or a directory of files.
 
-**-o** _file_
-> Output file for transcription.
+**-o**, **--output** _path_
+> Output file, or output directory when the input is a directory.
 
-**-t** _format_
-> Output format: txt, srt, vtt.
+**-t**, **--output-type** _format_
+> Output format: txt (default), srt or json.
 
-**-l** _lang_
-> Language code (en, fr, de, es, ru, etc.).
+**-l**, **--lang** _lang_
+> Select model by language. Default en-us.
+
+**-m**, **--model** _path_
+> Use a local model directory.
+
+**-n**, **--model-name** _name_
+> Select model by name.
 
 **--list-languages**
-> Show available language models.
+> List available languages.
 
-**--model** _path_
-> Use custom model directory.
+**--list-models**
+> List available models.
 
-**--show-words**
-> Include word-level timestamps.
+**-s**, **--server** _url_
+> Use a recognition server, for example ws://localhost:2700.
 
-**--server**
-> Start WebSocket recognition server.
+**-ts**, **--tasks** _N_
+> Number of parallel recognition tasks. Default 10.
+
+**--log-level** _level_
+> Logging level. Default INFO.
 
 # DESCRIPTION
 
 **vosk** is an offline speech recognition toolkit supporting 20+ languages including English, German, French, Spanish, Chinese, Russian, and many others. It provides automatic speech recognition without requiring internet connectivity.
 
-The vosk-transcriber CLI processes audio and video files, automatically downloading appropriate language models on first use. Output formats include plain text and subtitle formats (SRT, VTT) with timestamps. The toolkit can also run as a WebSocket server for real-time streaming recognition.
+The vosk-transcriber CLI processes audio and video files, automatically downloading appropriate language models on first use. Output formats are plain text, SRT subtitles with timestamps, and JSON. Recognition can also be delegated to a separate Vosk server over WebSocket with **--server**.
 
 Models range from small (50MB) for mobile/embedded use to large models for maximum accuracy. The underlying engine supports continuous transcription, speaker identification, and vocabulary customization.
 
 # CAVEATS
 
-First run downloads language model (50MB-1GB depending on language and size). Requires Python 3.6+ and ffmpeg for video processing. Recognition accuracy varies by model size and audio quality. Some languages have limited model options.
+First run downloads language model (50MB-1GB depending on language and size). Requires Python 3 and ffmpeg, which decodes the input. Recognition accuracy varies by model size and audio quality. Some languages have limited model options.
 
 # HISTORY
 
@@ -79,3 +90,11 @@ First run downloads language model (50MB-1GB depending on language and size). Re
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [whisper](/man/whisper)(1), [sox](/man/sox)(1)
+
+# RESOURCES
+
+```[Homepage](https://alphacephei.com/vosk/)```
+
+```[Source code](https://github.com/alphacep/vosk-api)```
+
+<!-- verified: 2026-11-09 -->

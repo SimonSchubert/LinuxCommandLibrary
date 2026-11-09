@@ -24,7 +24,7 @@ VNC-accessible virtual X server
 
 ```Xvnc :1 -rfbport [5901]```
 
-**Use vncserver script (recommended)**
+**Start through the vncserver wrapper**
 
 ```vncserver :1```
 
@@ -41,22 +41,52 @@ VNC-accessible virtual X server
 > Color depth: 16, 24, or 32 (default: 24).
 
 **-rfbport** _port_
-> VNC listener port (default: 5900+display).
+> VNC listener port (default: 5900+display, -1 disables TCP).
 
-**-PasswordFile** _file_
-> Password file for authentication.
+**-PasswordFile** _file_, **-rfbauth** _file_
+> Password file for VNC authentication.
+
+**-pixelformat** _format_
+> Pixel format, BGRnnn or RGBnnn (default: RGB565 for depth 16, RGB888 for 24 and 32).
+
+**-desktop** _name_
+> Desktop name shown by viewers (default: user@hostname).
 
 **-SecurityTypes** _types_
-> Comma-separated list of security types.
+> Comma-separated list of security types: None, VncAuth, Plain, TLSNone, TLSVnc, TLSPlain, X509None, X509Vnc, X509Plain, RA2, RA2ne, RA2_256, RA2ne_256 (default: TLSVnc,VncAuth).
 
 **-localhost**
 > Only accept connections from localhost.
 
+**-interface** _ip_
+> Listen on the given interface only (default: all).
+
+**-rfbunixpath** _path_
+> Also listen on a Unix domain socket.
+
+**-rendernode** _path_
+> DRM render node for DRI3 GPU acceleration; an empty path disables it (default: auto).
+
 **-AlwaysShared**
-> Allow multiple simultaneous connections.
+> Always treat incoming connections as shared.
 
 **-NeverShared**
-> Disconnect existing clients on new connection.
+> Never treat incoming connections as shared.
+
+**-DisconnectClients**
+> Disconnect existing clients when a non-shared connection arrives (default: on).
+
+**-IdleTimeout** _seconds_
+> Drop idle connections after this time (default: 0, never).
+
+**-MaxDisconnectionTime** _seconds_
+> Terminate when no client has been connected for this time (default: 0).
+
+**-inetd**
+> Run from inetd.
+
+**-help**
+> List all options and parameters.
 
 # DESCRIPTION
 
@@ -64,11 +94,11 @@ VNC-accessible virtual X server
 
 The server listens on TCP port 5900+display for VNC connections. Unlike x11vnc which shares an existing display, Xvnc creates new independent virtual displays.
 
-The vncserver script is the recommended way to start Xvnc, handling environment setup and running initial applications. Multiple Xvnc instances can run on different display numbers.
+With TigerVNC, the recommended way to start Xvnc is **vncsession**, usually through the **vncserver@.service** systemd unit, which handles environment setup and starts a desktop environment. Multiple Xvnc instances can run on different display numbers.
 
 # CAVEATS
 
-No hardware acceleration for 3D. Each session uses separate display number. Password file must be created with vncpasswd. Firewall rules needed for remote access.
+Each session uses separate display number. Password file must be created with vncpasswd. Firewall rules needed for remote access.
 
 # HISTORY
 
@@ -77,3 +107,13 @@ No hardware acceleration for 3D. Each session uses separate display number. Pass
 # SEE ALSO
 
 [vncserver](/man/vncserver)(1), [vncviewer](/man/vncviewer)(1), [vncpasswd](/man/vncpasswd)(1), [x11vnc](/man/x11vnc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/TigerVNC/tigervnc)```
+
+```[Homepage](https://tigervnc.org/)```
+
+```[Documentation](https://tigervnc.org/doc/Xvnc.html)```
+
+<!-- verified: 2026-11-09 -->

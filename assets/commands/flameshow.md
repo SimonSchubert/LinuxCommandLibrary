@@ -4,61 +4,81 @@ Terminal-based flamegraph viewer
 
 # TLDR
 
-**View** a flamegraph file
+**View** a profile
 
-```flameshow [profile.json]```
+```flameshow [profile.out]```
 
-**View** folded stacks
+**View** Brendan Gregg folded stacks
 
 ```flameshow [stacks.folded]```
 
-**View** from stdin
+**View** a Go goroutine dump from pprof
 
-```cat [profile] | flameshow```
+```curl [http://localhost:9100/debug/pprof/goroutine] -o [goroutine.out] && flameshow [goroutine.out]```
+
+**View** a profile from stdin
+
+```cat [profile] | flameshow -```
+
+**Write debug logs** to a file
+
+```flameshow -l [path/to/log] -vvv [profile]```
 
 # SYNOPSIS
 
-**flameshow** [_options_] [_file_]
+**flameshow** [_options_] _profile_
 
 # PARAMETERS
 
-**-h, --help**
-> Display help and exit
+_profile_
+> Profile file to open, or **-** for stdin
+
+**-v**, **--verbose**
+> Increase log verbosity; repeat for more
+
+**-l**, **--log-to** _file_
+> Write logs to a file (default: no logs)
 
 **--version**
 > Display version and exit
 
-**--theme** _THEME_
-> Color theme: dark, light
+**--help**
+> Display help and exit
 
 # DESCRIPTION
 
-**flameshow** is a Python-based terminal flamegraph viewer. It allows users to visualize profiling data directly in the terminal, making it easy to analyze performance data without leaving the command line.
+**flameshow** is a terminal flamegraph viewer written in Python with Textual. It renders flamegraphs in the terminal, supports zooming and percentages, and can switch between sample types. All operations are available from the keyboard and the mouse.
 
-The tool supports various profile formats and provides an interactive TUI for exploring flamegraphs, identifying hotspots, and understanding application performance.
+Supported formats are Go pprof, Brendan Gregg's folded stacks, Python **austin** output, Speedscope (evented and sampled profiles) and the Google Trace Event format.
 
 # KEYBINDINGS
 
-**↑/↓**
-> Navigate through frames
+**h**, **j**, **k**, **l** or arrow keys
+> Move around
 
 **Enter**
-> Expand/collapse frame
+> Zoom in
+
+**Esc**
+> Zoom out
 
 **q**
 > Quit
 
-**?**
-> Show help
-
 # CAVEATS
 
-Requires Python environment. May not support all profiler output formats. Performance depends on terminal capabilities. Large profiles may impact rendering speed.
+Requires Python 3.10 or later. There is no standard profile format, so output from other profilers may not be recognized.
 
 # HISTORY
 
-**flameshow** was developed as an alternative to browser-based flamegraph viewers, focusing on terminal-native display and quick profile inspection.
+**flameshow** was created by **laixintao**. Its renderer is available separately as the **flamegraph-textual** package.
 
 # SEE ALSO
 
-[flamelens](https://github.com/YS-L/flamelens), [flamegraph](https://github.com/brendangregg/FlameGraph), [py-spy](https://github.com/benfred/py-spy)
+[flamelens](/man/flamelens)(1), [flamegraph](/man/flamegraph)(1), [py-spy](/man/py-spy)(1), [perf](/man/perf)(1), [pprof](/man/pprof)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/laixintao/flameshow)```
+
+<!-- verified: 2026-11-09 -->

@@ -45,7 +45,7 @@ Dotfiles manager that sources shell configuration from multiple repos
 **install**
 > Build shell configuration and create symlinks. This is the default when no command is given.
 
-**update** [_filter_]
+**update**, **up** [_filter_]
 > Fetch latest changes from source repositories and rebuild. Optionally filter by **--local**, a GitHub _username_, or _username/repo_.
 
 **clean**
@@ -59,6 +59,12 @@ Dotfiles manager that sources shell configuration from multiple repos
 
 **show**
 > Display freshrc lines with their matching source files.
+
+_user/repo_ _file_ [_options_]
+> Add a new line to **~/.freshrc** after confirmation, then build it.
+
+_name_
+> Run a **fresh-**_name_ executable found in **$PATH** as a subcommand.
 
 **help**
 > Show usage documentation.
@@ -74,7 +80,7 @@ Fresh supports three types of sourced content: **shell files** (concatenated int
 # FRESHRC OPTIONS
 
 **--file**[**=**_path_]
-> Link or build a configuration file. With a path like **--file=~/.vimrc**, the file is symlinked to that location. Without a path, files are concatenated into **~/.fresh/build/** using their original name.
+> Link or build a configuration file. With a path like **--file=~/.vimrc**, the file is symlinked to that location. Without a path, it is linked to a dotfile in home named after the source file (**config/ackrc** becomes **~/.ackrc**). A relative path builds into **~/.fresh/build/** without symlinking, and a trailing slash handles whole directories.
 
 **--bin**[**=**_path_]
 > Create an executable symlink in **~/bin/** (or a custom path). The source file is made executable automatically.
@@ -86,7 +92,7 @@ Fresh supports three types of sourced content: **shell files** (concatenated int
 > Pipe the source file through a shell command before including it (e.g. **--filter="gpg -d"**).
 
 **--marker=**_string_
-> Add comment markers around sourced content for identification in built files.
+> Add comment markers around sourced content for identification in built files. Only valid with **--file**.
 
 **--ignore-missing**
 > Suppress errors when a source file is not available.
@@ -120,22 +126,30 @@ fresh-options
 
 Environment variables for customization:
 
-**FRESH_RCFILE** — configuration file path (default: **~/.freshrc**)
-**FRESH_PATH** — installation directory (default: **~/.fresh**)
-**FRESH_LOCAL** — local dotfiles repository (default: **~/.dotfiles**)
-**FRESH_BIN_PATH** — binary installation directory (default: **~/bin**)
-**FRESH_NO_LOCAL_CHECK** — disable local sourcing warnings
-**FRESH_NO_PATH_EXPORT** — skip automatic PATH modification
-**FRESH_NO_BIN_CONFLICT_CHECK** — suppress multi-source binary warnings
+**FRESH_RCFILE**: configuration file path (default: **~/.freshrc**)
+**FRESH_PATH**: installation directory (default: **~/.fresh**)
+**FRESH_LOCAL**: local dotfiles repository (default: **~/.dotfiles**)
+**FRESH_BIN_PATH**: binary installation directory (default: **~/bin**)
+**FRESH_NO_LOCAL_CHECK**: disable local sourcing warnings
+**FRESH_NO_PATH_EXPORT**: skip automatic PATH modification
+**FRESH_NO_BIN_CONFLICT_CHECK**: suppress multi-source binary warnings
 
 # CAVEATS
 
-Fresh requires **git** and **bash** to be installed. All shell sources are concatenated into a single file, so naming conflicts between sourced functions or aliases from different repositories must be managed manually. The built shell script must be explicitly sourced from your **.bashrc** or **.zshrc** — fresh does not modify these files automatically.
+Fresh requires **git**, **bash** and **perl** to be installed. All shell sources are concatenated into a single file, so naming conflicts between sourced functions or aliases from different repositories must be managed manually. The built shell script must be explicitly sourced from your **.bashrc** or **.zshrc**, as fresh does not modify these files automatically.
 
 # HISTORY
 
-**fresh** was created by **Jason Weathered** (jasoncodes) and **Scott Barron** (twe4ked) as an open-source shell tool released under the **MIT license**. It was inspired by the concept of Bundler for Ruby, applying the same dependency-sourcing philosophy to dotfiles management across the shell ecosystem.
+**fresh** is maintained by **jasoncodes** and **twe4ked** and released under the **MIT license**. The project started in **2012**. It was inspired by the concept of Bundler for Ruby, applying the same dependency-sourcing philosophy to dotfiles management across the shell ecosystem.
 
 # SEE ALSO
 
 [git](/man/git)(1), [bash](/man/bash)(1), [stow](/man/stow)(8), [dotbot](/man/dotbot)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/freshshell/fresh)```
+
+```[Homepage](https://freshshell.com)```
+
+<!-- verified: 2026-11-09 -->

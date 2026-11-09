@@ -57,3 +57,13 @@ The command respects the **files** field in package.json, **.npmignore**, and **
 # SEE ALSO
 
 [bun](/man/bun)(1), [bun-pm](/man/bun-pm)(1), [bun-publish](/man/bun-publish)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/oven-sh/bun)```
+
+```[Homepage](https://bun.com)```
+
+```[Documentation](https://bun.com/docs/pm/cli/pm)```
+
+<!-- verified: 2026-11-09 -->

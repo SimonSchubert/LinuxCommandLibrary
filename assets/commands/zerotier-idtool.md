@@ -4,25 +4,37 @@ Manage ZeroTier cryptographic identities
 
 # TLDR
 
-**Generate new identity**
+**Generate new identity** and print it
 
-```zerotier-idtool generate [identity.secret]```
+```zerotier-idtool generate```
+
+**Generate identity files**
+
+```zerotier-idtool generate [identity.secret] [identity.public]```
+
+**Generate an identity with a vanity address prefix**
+
+```zerotier-idtool generate [identity.secret] [identity.public] [abc]```
 
 **Get public identity from secret**
 
 ```zerotier-idtool getpublic [identity.secret]```
 
+**Validate an identity**
+
+```zerotier-idtool validate [identity.secret]```
+
 **Sign a file**
 
-```zerotier-idtool sign [identity.secret] [file]```
+```zerotier-idtool sign [identity.secret] [file] > [file.sig]```
 
 **Verify signature**
 
 ```zerotier-idtool verify [identity.public] [file] [signature]```
 
-**Show identity address**
+**Create a moon definition** from a seed identity
 
-```zerotier-idtool info [identity.secret]```
+```zerotier-idtool initmoon [identity.public] > [moon.json]```
 
 # SYNOPSIS
 
@@ -30,26 +42,26 @@ Manage ZeroTier cryptographic identities
 
 # SUBCOMMANDS
 
-**generate** _secret_file_
-> Generate new identity, write to file
+**generate** [_identity.secret_] [_identity.public_] [_vanity_]
+> Generate a new identity. Writes to the given files, or prints the secret identity to stdout if none are given. _vanity_ is a hex prefix for the address.
 
-**getpublic** _secret_file_
+**validate** _identity_
+> Check that a secret or public identity is valid
+
+**getpublic** _identity.secret_
 > Output public identity from secret
 
-**sign** _secret_file_ _file_to_sign_
-> Sign file with identity
+**sign** _identity.secret_ _file_
+> Sign a file and print the hex signature to stdout
 
-**verify** _public_file_ _file_ _signature_
-> Verify signature against public identity
+**verify** _identity_ _file_ _signature_
+> Verify a signature against a secret or public identity
 
-**info** _identity_file_
-> Display identity information (address, type)
-
-**initmoon** _identity_file_
-> Initialize moon (custom root) definition
+**initmoon** _identity.public_
+> Print a moon (custom root) JSON definition for the first seed
 
 **genmoon** _moon_json_
-> Generate moon.d file from JSON definition
+> Generate a **.moon** file from a JSON definition
 
 # DESCRIPTION
 
@@ -72,3 +84,13 @@ Moon creation requires understanding ZeroTier's root server architecture.
 # SEE ALSO
 
 [zerotier-cli](/man/zerotier-cli)(1), [zerotier-one](/man/zerotier-one)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/zerotier/ZeroTierOne)```
+
+```[Homepage](https://www.zerotier.com)```
+
+```[Documentation](https://docs.zerotier.com)```
+
+<!-- verified: 2026-11-09 -->

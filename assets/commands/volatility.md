@@ -4,7 +4,19 @@ Memory forensics analysis framework
 
 # TLDR
 
-**List available plugins** and profiles
+**List processes** with Volatility 3 (no profile needed)
+
+```vol -f [memory.img] linux.pslist```
+
+**Identify the kernel** to pick a matching symbol table (Volatility 3)
+
+```vol -f [memory.img] banners```
+
+**Recover bash history** (Volatility 3)
+
+```vol -f [memory.img] linux.bash```
+
+**List available plugins** and profiles (Volatility 2)
 
 ```volatility --info```
 
@@ -26,7 +38,7 @@ Memory forensics analysis framework
 
 **Show process command lines**
 
-```volatility -f [memory.img] --profile=[Profile] linux_cmdline```
+```volatility -f [memory.img] --profile=[Profile] linux_psaux```
 
 **Scan for Yara rules**
 
@@ -35,6 +47,8 @@ Memory forensics analysis framework
 # SYNOPSIS
 
 **volatility** -f _memory_image_ [--profile=_PROFILE_] _plugin_ [_options_]
+
+**vol** -f _memory_image_ [_options_] _plugin_ [_plugin_options_]
 
 **vol.py** -f _memory_image_ _plugin_
 
@@ -47,27 +61,55 @@ Memory forensics analysis framework
 > Operating system profile (required for Volatility 2)
 
 **--info**
-> List available plugins and profiles
+> List available plugins and profiles (Volatility 2)
 
 **-d**, **--debug**
-> Enable debug output
+> Enable debug output (Volatility 2)
 
 **-h**, **--help**
 > Show help message
 
 **-p** _PID_
-> Filter by process ID
+> Filter by process ID (Volatility 2 plugin option)
 
 **-o** _OFFSET_
-> Physical offset in memory
+> Physical offset in memory (Volatility 2 plugin option)
 
 **--output** _FORMAT_
-> Output format (text, json, html)
+> Output format, such as text, json or html (Volatility 2)
 
 **--output-file** _FILE_
-> Write output to file
+> Write output to file (Volatility 2)
+
+# VOLATILITY 3 OPTIONS
+
+**-s** _DIRS_, **--symbol-dirs** _DIRS_
+> Directories to search for symbol tables
+
+**-p** _DIRS_, **--plugin-dirs** _DIRS_
+> Directories to search for plugins
+
+**-o** _DIR_, **--output-dir** _DIR_
+> Directory for files written by plugins
+
+**-r** _RENDERER_, **--renderer** _RENDERER_
+> Output renderer, such as quick, csv, pretty or json
+
+**-c** _FILE_, **--config** _FILE_
+> Load configuration from a JSON file
+
+**-v**, **--verbosity**
+> Increase output verbosity
+
+**-q**, **--quiet**
+> Remove progress feedback
+
+**--offline**
+> Do not fetch symbol tables or other data remotely
 
 # LINUX PLUGINS
+
+Volatility 2 names are shown. Volatility 3 uses dotted names such as **linux.pslist**, **linux.pstree**, **linux.bash** and **linux.malfind**.
 
 **linux_pslist**
 > List running processes
@@ -84,8 +126,8 @@ Memory forensics analysis framework
 **linux_lsof**
 > List open file descriptors
 
-**linux_cmdline**
-> Show process command-line arguments
+**linux_psaux**
+> Show processes with their full command lines
 
 **linux_mount**
 > List mounted filesystems
@@ -108,16 +150,24 @@ Memory forensics analysis framework
 
 The framework supports Windows, Linux, and macOS memory analysis. Linux plugins are prefixed with **linux_** and require a profile matching the exact distribution, kernel version, and architecture of the system that created the dump.
 
-Volatility 3 simplifies profile management with automatic symbol detection, while Volatility 2 requires manually building or obtaining profiles. Memory dumps can be acquired using tools like LiME (Linux Memory Extractor) or VMware snapshots.
+Volatility 3 replaces profiles with symbol tables (ISF files) that it detects automatically from its **symbols** directory, while Volatility 2 requires manually building or obtaining profiles. Memory dumps can be acquired using tools like LiME (Linux Memory Extractor) or VMware snapshots.
 
 # CAVEATS
 
-Linux analysis requires a profile matching the exact kernel version and distribution. Building profiles requires kernel headers and debug symbols. Memory images are large and analysis can be resource-intensive. Anti-forensic techniques may interfere with some plugins. Not all plugins work on all memory formats.
+The Volatility 2 repository is archived; upstream points to Volatility 3 for modern investigations. Linux analysis requires a profile (Volatility 2) or symbol table (Volatility 3) matching the exact kernel. Building them requires kernel debug symbols. Memory images are large and analysis can be resource-intensive. Anti-forensic techniques may interfere with some plugins. Not all plugins work on all memory formats.
 
 # HISTORY
 
-The Volatility Framework was created by **Aaron Walters** and first released in **2007**. It emerged from academic research into memory forensics at George Mason University. The project became the standard tool for memory analysis in digital forensics and incident response. Volatility 3, released in **2019**, introduced Python 3 support and automatic symbol table generation, simplifying Linux and macOS analysis.
+The Volatility Framework was created by **Aaron Walters** and first released in **2007**. The project became the standard tool for memory analysis in digital forensics and incident response. Volatility 3, released in **2019**, introduced Python 3 support and automatic symbol table generation, simplifying Linux and macOS analysis.
 
 # SEE ALSO
 
 [lime](/man/lime)(1), [strings](/man/strings)(1), [file](/man/file)(1), [dd](/man/dd)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/volatilityfoundation/volatility3)```
+
+```[Documentation](https://volatility3.readthedocs.io/en/stable/)```
+
+<!-- verified: 2026-11-09 -->

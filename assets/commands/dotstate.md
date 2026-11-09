@@ -1,92 +1,133 @@
 # TAGLINE
 
-Modern dotfile manager with Git integration
+Dotfile manager with a TUI and Git sync
 
 # TLDR
 
-**Initialize** a new dotstate repository
+**Open the TUI** to set up and manage dotfiles
 
-```dotstate init [directory]```
+```dotstate```
 
-**Add** a file to dotstate tracking
+**Add** a file to sync
 
 ```dotstate add [path/to/file]```
 
-**Sync** dotfiles to current system
+**Sync** with the remote: commit, pull and push
 
 ```dotstate sync```
 
-**Track** and commit changes
+**Sync** with a custom commit message
 
-```dotstate commit -m "message"```
+```dotstate sync -m "[message]"```
+
+**List** all synced files
+
+```dotstate list```
+
+**Activate** symlinks after cloning on a new machine
+
+```dotstate activate```
+
+**Switch** to another profile
+
+```dotstate profile switch [work]```
+
+**Install** missing packages for the profile
+
+```dotstate packages install```
+
+**Diagnose and fix** problems
+
+```dotstate doctor --fix```
 
 # SYNOPSIS
 
-**dotstate** [_command_] [_options_] [_arguments_]
+**dotstate** [_command_] [_options_]
 
 # PARAMETERS
 
-**-c, --config** _FILE_
-> Configuration file path
+**--no-colors**
+> Disable colors in the TUI (also respects **NO_COLOR**)
 
-**-d, --dotfiles** _DIR_
-> Dotfiles repository directory
+**--skill**
+> Print the built-in agent skill (SKILL.md) and exit
 
-**-v, --verbose**
-> Enable verbose output
+**--install**
+> With **--skill**: install the skill to ~/.claude/skills/dotstate/SKILL.md
 
-**--dry-run**
-> Show what would be done without making changes
-
-**-h, --help**
+**-h**, **--help**
 > Display help and exit
 
-**--version**
+**-V**, **--version**
 > Display version and exit
-
-# DESCRIPTION
-
-**dotstate** is a modern dotfile manager that uses Git for version control while providing a simplified interface for common dotfile operations. It helps users manage configuration files across multiple machines by tracking them in a Git repository.
-
-The tool provides commands for initializing a dotfiles repo, adding files to tracking, synchronizing configurations between systems, and handling platform-specific files. It maintains a clean separation between the actual dotfiles in the home directory and the repository.
 
 # COMMANDS
 
-**init** [_DIRECTORY_]
-> Initialize a new dotstate repository
+**sync** [**-m** _message_]
+> Commit, pull with rebase, and push
 
-**add** _FILE_
-> Add a file to dotstate tracking
+**list** [**-v**]
+> List all synced files
 
-**remove** _FILE_
-> Remove a file from tracking
+**add** _path_ [**--common**] [**-y**]
+> Add a file to sync. **--common** shares it across all profiles
 
-**sync**
-> Synchronize dotfiles to current system
+**remove** _path_ [**--common**] [**-y**]
+> Remove a file from sync. The path is relative to the home directory
 
-**status**
-> Show repository status
+**activate**
+> Activate the symlinks, restoring app state after deactivation
 
-**commit** [_-m_ _MESSAGE_]
-> Commit changes to repository
+**deactivate**
+> Deactivate the symlinks and restore the original files
 
-**push**
-> Push changes to remote
+**profile** [**current** | **list** | **switch** _name_]
+> Show, list or switch profiles
 
-**pull**
-> Pull changes from remote
+**packages** **list** | **add** | **remove** | **check** | **install**
+> Manage the CLI tools tracked for a profile
 
-**list**
-> List all tracked files
+**doctor** [**--fix**] [**-v**] [**--json**]
+> Run diagnostics and optionally fix issues
+
+**upgrade** [**--check**]
+> Check for updates and optionally upgrade
+
+**logs** | **config** | **repository**
+> Show the location of the logs, configuration file or repository
+
+**omarchy** **--install** | **--uninstall**
+> Add or remove a floating launcher app entry on Omarchy
+
+**completions** [_shell_]
+> Generate shell completions
+
+**help** [_command_]
+> Show help for a command
+
+# DESCRIPTION
+
+**dotstate** is a terminal-based dotfile manager written in Rust. Files are stored in a Git repository (by default **~/.config/dotstate/storage**) and linked into place with automatically managed symlinks, with backups taken before file operations. It needs no Git knowledge: setup can create a GitHub repository for you or use your own on any Git host.
+
+Profiles keep separate configurations for contexts such as work, personal, or an operating system. A profile can extend a parent and override only what differs, and common files are shared across all profiles. Packages can be tracked per profile through managers such as Homebrew, Cargo, npm and pip.
+
+# CONFIGURATION
+
+**~/.config/dotstate/config.toml**
+> Main configuration, including update checks, the theme and the keymap preset (Standard, Vim or Emacs).
 
 # CAVEATS
 
-Requires Git to be installed and configured. May overwrite existing files during sync - backups recommended. Platform-specific configurations need manual handling. Symbolic link handling varies by operating system.
-
-# HISTORY
-
-**dotstate** was created as a modern alternative to traditional dotfile managers, focusing on simplicity and Git integration. It aims to provide the power of version control without the complexity of manual Git operations.
+Requires Git. Run the TUI once to set up a repository before relying on the sync commands.
 
 # SEE ALSO
 
 [git](/man/git)(1), [stow](/man/stow)(1), [chezmoi](/man/chezmoi)(1), [yadm](/man/yadm)(1)
+
+# RESOURCES
+
+```[Homepage](https://dotstate.serkan.dev/)```
+
+```[Source code](https://github.com/serkanyersen/dotstate)```
+
+<!-- verified: 2026-11-09 -->

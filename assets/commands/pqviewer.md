@@ -10,7 +10,7 @@ View Apache Parquet files in your terminal
 
 # SYNOPSIS
 
-**pqviewer** [_options_] _file_
+**pqviewer** _file_
 
 # DESCRIPTION
 
@@ -23,3 +23,9 @@ View Apache Parquet files in your terminal
 # SEE ALSO
 
 [parqeye](/man/parqeye)(1), [parqv](/man/parqv)(1), [csvlens](/man/csvlens)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/thread53/pqviewer)```
+
+<!-- verified: 2026-11-09 -->

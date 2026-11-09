@@ -16,6 +16,10 @@ Lightweight Zsh plugin manager
 
 ```zgen load [zsh-users/zsh-autosuggestions]```
 
+**Load a subdirectory** of a repository on a specific branch
+
+```zgen load [zsh-users/zsh-completions] [src] [master]```
+
 **Load theme**
 
 ```zgen oh-my-zsh themes/[robbyrussell]```
@@ -41,25 +45,37 @@ Lightweight Zsh plugin manager
 **oh-my-zsh** [_plugin_or_theme_]
 > Load Oh My Zsh or specific component
 
-**load** _repo_ [_file_]
-> Load plugin from GitHub repository
+**prezto** [_module_] [_option_ _values_]
+> Load Prezto, a module, or set a module option
+
+**pmodule** _repo_ [_branch_]
+> Load a repository as a Prezto module
+
+**load** _repo_ [_location_] [_branch_]
+> Load a plugin from GitHub, a git URL or a local repository
+
+**loadall**
+> Load several plugins, one per line, from stdin
 
 **save**
-> Save current configuration to init script
+> Generate the static init script
+
+**saved**
+> Return 0 if an init script exists
 
 **update**
-> Update all plugins
+> Pull updates for every plugin and remove the init script
 
 **reset**
-> Delete generated init script (regenerates on next load)
+> Delete generated init script (regenerates on next load). Plugins stay on disk
 
 **list**
-> List loaded plugins
+> Print the generated init script
 
 **selfupdate**
 > Update zgen itself
 
-**clone** _repo_
+**clone** _repo_ [_branch_]
 > Clone repository without loading
 
 # DESCRIPTION
@@ -71,7 +87,9 @@ The typical workflow:
 2. Run **zgen save** to generate the init script
 3. Subsequent shell starts load the pre-generated script
 
-zgen supports Oh My Zsh, Prezto, and any GitHub-hosted Zsh plugin. It handles cloning repositories and sourcing the appropriate files.
+zgen supports Oh My Zsh, Prezto, and any git-hosted Zsh plugin. It handles cloning repositories and sourcing the appropriate files.
+
+Set **ZGEN_RESET_ON_CHANGE** to a list of files, and zgen resets automatically when any of them changes.
 
 Configuration example in .zshrc:
 ```
@@ -88,10 +106,16 @@ fi
 
 After changing plugins in .zshrc, run **zgen reset** and restart the shell to regenerate the init script.
 
-zgen development is less active. Consider **zinit** or **sheldon** for actively maintained alternatives.
+zgen's last commit was in 2021. **zgenom** is an actively maintained fork, and **zinit** is an alternative.
 
 Plugin updates require manual **zgen update**. No automatic update mechanism.
 
 # SEE ALSO
 
-[zsh](/man/zsh)(1), [zplug](/man/zplug)(1), [antigen](/man/antigen)(1)
+[zsh](/man/zsh)(1), [zplug](/man/zplug)(1), [antigen](/man/antigen)(1), [zinit](/man/zinit)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/tarjoilija/zgen)```
+
+<!-- verified: 2026-11-09 -->

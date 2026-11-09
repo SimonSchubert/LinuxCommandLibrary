@@ -4,6 +4,10 @@ Terminal dashboard for AdGuard Home
 
 # TLDR
 
+**Launch and enter connection details** at the interactive prompts
+
+```adguardian```
+
 **Launch the dashboard** with connection details
 
 ```ADGUARD_IP="192.168.1.1" ADGUARD_PORT="3000" ADGUARD_USERNAME="admin" ADGUARD_PASSWORD="pass" adguardian```
@@ -42,11 +46,11 @@ The dashboard refreshes automatically and shows queries allowed, filtered, or bl
 
 # CONFIGURATION
 
-Configuration can be set via environment variables or command-line flags. Supported environment variables: **ADGUARD_IP**, **ADGUARD_PORT**, **ADGUARD_USERNAME**, **ADGUARD_PASSWORD**, **ADGUARD_PROTOCOL** (default: http), and **ADGUARD_UPDATE_INTERVAL** (default: 2 seconds).
+Configuration can be set via environment variables or command-line flags. Supported environment variables: **ADGUARD_IP**, **ADGUARD_PORT**, **ADGUARD_USERNAME**, **ADGUARD_PASSWORD**, **ADGUARD_PROTOCOL** (default: http), **ADGUARD_UPDATE_INTERVAL** (default: 2 seconds), **ADGUARD_TIMEOUT** (per-request timeout, default: 5 seconds), and **ADGUARD_QUERYLOG_LIMIT** (query log entries fetched per update, default: 100). The protocol, interval, timeout and query log limit have no command-line flags.
 
 # CAVEATS
 
-Requires a running AdGuard Home instance with API access. Credentials must be provided via environment variables or flags. The tool only communicates with the configured AdGuard Home instance and makes no other external requests.
+Requires a running AdGuard Home instance, version 0.107.29 or later, with API access. Any connection details not given by environment variable or flag are prompted for at startup. Besides the configured AdGuard Home instance, the tool contacts crates.io to check for a newer release. GL.iNet routers running AdGuard Home in **--glinet** mode do not accept a username and password, so authentication fails there.
 
 # HISTORY
 
@@ -55,3 +59,11 @@ Requires a running AdGuard Home instance with API access. Credentials must be pr
 # SEE ALSO
 
 [pihole](/man/pihole)(1), [htop](/man/htop)(1)
+
+# RESOURCES
+
+```[Homepage](https://adguardian.as93.net/)```
+
+```[Source code](https://github.com/lissy93/AdGuardian-Term)```
+
+<!-- verified: 2026-11-09 -->

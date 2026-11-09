@@ -20,6 +20,18 @@ Streaming torrent client for the terminal
 
 ```webtorrent download [magnet] --chromecast```
 
+**List files** in a torrent
+
+```webtorrent download [magnet] -s```
+
+**Download one file** by index
+
+```webtorrent download [magnet] -s [0]```
+
+**Limit bandwidth** and keep seeding (kB/s)
+
+```webtorrent download [magnet] -d [500] -u [100] --keep-seeding```
+
 **Seed file**
 
 ```webtorrent seed [file.mp4]```
@@ -34,15 +46,18 @@ Streaming torrent client for the terminal
 
 # SYNOPSIS
 
-**webtorrent** _command_ [_--vlc_|_--mpv_] [_-o dir_] [_options_] _torrent_
+**webtorrent** [_command_] _torrent-id_ [_options_]
 
 # PARAMETERS
 
 **download** _TORRENT_
 > Download torrent.
 
+**downloadmeta** _TORRENT_
+> Download torrent metadata only.
+
 **seed** _FILE_
-> Seed file.
+> Seed a file or folder.
 
 **info** _TORRENT_
 > Show info.
@@ -65,8 +80,47 @@ Streaming torrent client for the terminal
 **--airplay**
 > Cast to AirPlay.
 
-**-s**, **--select** _N_
-> Select file index.
+**--dlna**, **--mplayer**, **--iina**, **--smplayer**, **--omx**, **--xbmc**
+> Stream to the named device or player.
+
+**--stdout**
+> Stream to standard output (implies --quiet).
+
+**-s**, **--select** [_N_]
+> Select file index; without a value, list files.
+
+**-i**, **--interactive-select**
+> Select a file interactively.
+
+**-t**, **--subtitles** _FILE_
+> Load a subtitles file.
+
+**-p**, **--port** _PORT_
+> HTTP server port. Default 8000.
+
+**-a**, **--announce** _URL_
+> Tracker URL to announce to.
+
+**-b**, **--blocklist** _FILE_
+> Load a blocklist file or URL.
+
+**-d**, **--download-limit** _KBPS_
+> Maximum download speed in kB/s.
+
+**-u**, **--upload-limit** _KBPS_
+> Maximum upload speed in kB/s.
+
+**-q**, **--quiet**
+> Do not show the UI on stdout.
+
+**--keep-seeding**
+> Do not quit when the download is done.
+
+**--on-done** _SCRIPT_
+> Run a script after the download is done.
+
+**--player-args** _ARGS_
+> Add player-specific arguments.
 
 # DESCRIPTION
 
@@ -78,7 +132,7 @@ The seed command shares local files over the BitTorrent network, and the create 
 
 # CAVEATS
 
-Some trackers not supported. Streaming needs sufficient bandwidth. Browser version is different.
+Streaming needs sufficient bandwidth. The default output location is the current directory when downloading and a temporary folder when streaming. **download** is the default command, so it can be omitted.
 
 # HISTORY
 
@@ -87,3 +141,11 @@ Some trackers not supported. Streaming needs sufficient bandwidth. Browser versi
 # SEE ALSO
 
 [transmission-cli](/man/transmission-cli)(1), [aria2c](/man/aria2c)(1), [vlc](/man/vlc)(1)
+
+# RESOURCES
+
+```[Homepage](https://webtorrent.io/)```
+
+```[Source code](https://github.com/webtorrent/webtorrent-cli)```
+
+<!-- verified: 2026-11-09 -->

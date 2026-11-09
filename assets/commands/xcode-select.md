@@ -30,7 +30,7 @@ Manage macOS developer tool directories
 
 # SYNOPSIS
 
-**xcode-select** [_-h_|_-help_] [_-s path_|_--switch path_] [_-p_|_--print-path_] [_-r_|_--reset_] [_-v_|_--version_] [_--install_]
+**xcode-select** [_-h_|_--help_] [_-s path_|_--switch path_] [_-p_|_--print-path_] [_-r_|_--reset_] [_-v_|_--version_] [_--install_]
 
 # PARAMETERS
 
@@ -56,9 +56,11 @@ Manage macOS developer tool directories
 
 **xcode-select** manages the active developer directory on macOS, controlling which Xcode or Command Line Tools installation is used by build tools like xcrun, xcodebuild, clang, and make.
 
-The command line tools package includes compilers (clang, gcc), build tools (make, cmake), version control (git, svn), and the macOS SDK. When multiple Xcode versions are installed, xcode-select switches between them.
+The command line tools package includes compilers (clang, gcc), build tools (make), version control (git), and the macOS SDK. When multiple Xcode versions are installed, xcode-select switches between them.
 
 The tools are installed to /Library/Developer/CommandLineTools when using **--install** without full Xcode, or within /Applications/Xcode.app when using the full IDE.
+
+The **DEVELOPER_DIR** environment variable overrides the active developer directory without superuser permissions, for example for a single shell session.
 
 # CAVEATS
 
@@ -66,8 +68,16 @@ The **--switch** and **--reset** options require superuser privileges and affect
 
 # HISTORY
 
-xcode-select has been part of macOS developer tools since Xcode 3. Apple separated Command Line Tools from Xcode proper around **2012**, allowing development without the full IDE download.
+Apple separated Command Line Tools from Xcode proper around **2012**, allowing development without the full IDE download.
 
 # SEE ALSO
 
 [xcrun](/man/xcrun)(1), [xcodebuild](/man/xcodebuild)(1), [clang](/man/clang)(1), [make](/man/make)(1)
+
+# RESOURCES
+
+```[Homepage](https://developer.apple.com/xcode/)```
+
+```[Documentation](https://developer.apple.com/library/archive/technotes/tn2339/_index.html)```
+
+<!-- verified: 2026-11-09 -->

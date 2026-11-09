@@ -34,9 +34,9 @@ Vite-powered static site generator
 
 **build** _root_: Build static site for production.
 
-**preview** _root_: Preview production build locally.
+**preview** _root_: Preview production build locally (alias: **serve**).
 
-**init**: Initialize new VitePress project.
+**init**: Start the setup wizard for a new VitePress project.
 
 # PARAMETERS
 
@@ -44,34 +44,43 @@ _root_
 > Project root directory (default: current directory).
 
 **--host** _host_
-> Development server host (default: localhost).
+> Development server host (dev only, default: localhost).
 
 **--port** _port_
-> Development server port (default: 5173).
+> Server port (dev default: 5173, preview default: 4173).
+
+**--open** [_path_]
+> Open browser on startup (dev only).
 
 **--base** _path_
-> Public base path.
+> Public base path (default: /).
+
+**--assetsBase** _url_
+> URL prefix the generated assets are served from, e.g. a CDN (build and preview).
 
 **--cors**
-> Enable CORS.
+> Enable CORS (dev only).
 
 **--strictPort**
-> Exit if port is in use.
+> Exit if port is in use (dev only).
 
 **--force**
-> Force optimizer to ignore cache.
+> Force optimizer to ignore cache (dev only).
 
-**--minify**
-> Enable minification (build only).
+**--minify** _value_
+> Minification setting passed to Vite (build only).
 
 **--mpa**
-> Multi-page app mode.
+> Experimental MPA mode without client-side hydration (build only).
 
-**-h**, **--help**
-> Display help.
+**--outDir** _dir_
+> Output directory relative to the working directory (build only, default: _root_/.vitepress/dist).
 
-**-v**, **--version**
-> Display version.
+**--target** _target_
+> Transpile target (build only, default: modules).
+
+**--assetsInlineLimit** _bytes_
+> Static asset base64 inline threshold (build only, default: 4096).
 
 # DESCRIPTION
 
@@ -87,7 +96,7 @@ Install via npm: `npm add -D vitepress`
 
 # CAVEATS
 
-Requires Node.js 18+. Vue 3 only (not compatible with Vue 2). Custom themes require Vue knowledge. Large sites may have longer build times.
+Stable 1.x requires Node.js 18+, while the 2.x prereleases require Node.js 22+. Vue 3 only (not compatible with Vue 2). Custom themes require Vue knowledge. Large sites may have longer build times.
 
 # HISTORY
 
@@ -96,3 +105,13 @@ Requires Node.js 18+. Vue 3 only (not compatible with Vue 2). Custom themes requ
 # SEE ALSO
 
 [vite](/man/vite)(1), [vuepress](/man/vuepress)(1), [hugo](/man/hugo)(1), [jekyll](/man/jekyll)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/vuejs/vitepress)```
+
+```[Homepage](https://vitepress.dev/)```
+
+```[Documentation](https://vitepress.dev/reference/cli)```
+
+<!-- verified: 2026-11-09 -->

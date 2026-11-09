@@ -16,64 +16,105 @@ Generate Go structs from XML documents
 
 ```zek -n [StructName] [file.xml]```
 
-**Use compact output format**
+**Add comments with example values**
 
-```zek -c [file.xml]```
+```zek -e [file.xml]```
 
 **Read from URL**
 
 ```zek [https://example.com/feed.xml]```
 
+**Infer one struct from several files** and write it to a package
+
+```zek -P [main] -o [struct.go] [a.xml] [b.xml]```
+
+**Write out a runnable example program**
+
+```zek -p [file.xml] > [sample.go]```
+
 # SYNOPSIS
 
-**zek** [_options_] [_file_|_url_]
+**zek** [_options_] [_file_|_url_...]
 
 # PARAMETERS
 
-**-c**
-> Compact output (minimize struct tags)
+**-n** _name_
+> Use a different name for the top-level struct.
 
 **-e**
-> Add XMLName field to struct
-
-**-n** _name_
-> Use specified struct name (default: derived from root element)
-
-**-p**
-> Add xml.Name XMLName field for precise marshaling
-
-**-t**
-> Include type comments in output
-
-**-x**
-> Emit only the struct, no package declaration
+> Add comments with examples.
 
 **-max-examples** _n_
-> Maximum examples to show in comments
+> Limit the number of examples (default 10).
+
+**-x** _n_
+> Maximum characters per example (default 25).
+
+**-u**
+> Filter out duplicated examples.
+
+**-j**
+> Add JSON tags.
+
+**-C**
+> Emit a less compact struct. Compact output is the default since 0.1.7, so **-c** is a no-op.
+
+**-m**
+> Omit empty Text fields.
+
+**-t** _tag_
+> Emit the struct for the tag matching this name.
+
+**-I**
+> Use verbatim innerxml instead of chardata.
+
+**-P** _package_
+> Write out the struct within a package with the given name.
+
+**-o** _file_
+> Write to an output file, not stdout.
+
+**-p**
+> Write out an example program.
+
+**-S** _n_
+> Read at most this many tags, approximately (0 is unlimited).
+
+**-s**
+> Strict parsing and writing.
+
+**-F**
+> Skip formatting.
+
+**-B**
+> Use a fixed banner string, for example for CI.
+
+**-d**
+> Debug output.
 
 **-version**
-> Print version and exit
+> Show version.
 
 # DESCRIPTION
 
-**zek** generates Go struct definitions from XML documents. It analyzes the XML structure and produces type-safe Go code that can unmarshal (and marshal) that XML format.
+**zek** generates Go struct definitions from XML documents. Given one or more XML files or URLs, it produces a single struct with xml struct tags, handling nested elements, attributes and repeated elements (slices). Multiple inputs are combined for schema inference across files.
 
-Given an XML file, zek infers the structure and generates appropriate Go types with proper xml struct tags. It handles nested elements, attributes, repeated elements (slices), and mixed content.
-
-This is useful for quickly creating Go types for consuming XML APIs, parsing XML data files, or working with XML-based formats like RSS, Atom, or SOAP.
-
-zek uses sampling to infer types, so providing representative XML with all possible fields yields the best results.
+This is useful for quickly creating Go types for consuming XML APIs, parsing XML data files, or working with XML-based formats like RSS, Atom, or SOAP. Providing representative XML with all possible fields yields the best results.
 
 # CAVEATS
 
-Type inference is heuristic. Rarely-used optional fields may be missed if not present in the sample XML.
+There is no type inference: everything is accessible as a string. Recursive types are not supported.
 
-Complex XML schemas with polymorphic elements or namespaces may require manual adjustment of generated structs.
+The generated struct works best for reading XML. Upstream describes zek as an experimental prototype.
 
-For very large XML files, zek reads the entire document into memory for analysis.
-
-Generated code should be reviewed and adjusted for production use, especially for null handling and validation.
+Fields not present in the sample XML will be missing from the struct.
 
 # SEE ALSO
 
 [xmllint](/man/xmllint)(1), [xq](/man/xq)(1), [xmlstarlet](/man/xmlstarlet)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/miku/zek)```
+
+<!-- verified: 2026-11-09 -->

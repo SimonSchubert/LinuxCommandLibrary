@@ -99,3 +99,9 @@ The author disclaims responsibility for any data loss resulting from use of this
 # SEE ALSO
 
 [cp](/man/cp)(1), [tar](/man/tar)(1), [rsync](/man/rsync)(1), [mv](/man/mv)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/gergelyk/bkp)```
+
+<!-- verified: 2026-11-09 -->

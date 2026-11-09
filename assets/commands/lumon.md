@@ -20,12 +20,18 @@ Built using the Bubble Tea framework and Charm libraries, it offers a faithful t
 
 # CAVEATS
 
-This is an entertainment/novelty tool inspired by the TV series Severance. Not affiliated with Apple TV+ or the show.
+This is an entertainment/novelty tool inspired by the TV series Severance. Not affiliated with Apple TV+ or the show. The repository publishes only a README and prebuilt binaries, no source code.
 
 # HISTORY
 
-**lumon** was created by **Terminal Trove** and is written in **Go** using the Bubble Tea framework.
+**lumon** was created by **Terminal Trove** as an April Fools' project, released as v1.0.0 on **April 1, 2025**. It is built with the **Go** Bubble Tea framework.
 
 # SEE ALSO
 
 [cmatrix](/man/cmatrix)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/terminaltrove/lumon)```
+
+<!-- verified: 2026-11-09 -->

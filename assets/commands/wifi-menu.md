@@ -12,6 +12,10 @@ Connect with **obscured** password
 
 ```wifi-menu -o```
 
+Connect using a **specific interface**
+
+```wifi-menu [wlan0]```
+
 Display **help**
 
 ```wifi-menu -h```
@@ -23,10 +27,13 @@ Display **help**
 # PARAMETERS
 
 **-o, --obscure**
-> Obscure the wireless passphrase
+> Show asterisks for the characters of the password and store it as a hexadecimal string
 
 **-h, --help**
 > Display help information
+
+_INTERFACE_
+> Wireless interface to use; can be omitted if only one is available
 
 # DESCRIPTION
 
@@ -36,8 +43,16 @@ Part of the netctl package for Arch Linux, it creates and manages netctl profile
 
 # CAVEATS
 
-Arch Linux specific (netctl). Requires root privileges. Creates profile files in /etc/netctl/. May conflict with NetworkManager.
+Arch Linux specific (netctl). Requires root privileges and the **dialog** and **wpa_supplicant** packages. Creates profile files in /etc/netctl/. May conflict with NetworkManager.
 
 # SEE ALSO
 
 [netctl](/man/netctl)(1), [nmcli](/man/nmcli)(1), [iwctl](/man/iwctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/joukewitteveen/netctl)```
+
+```[Documentation](https://wiki.archlinux.org/title/Netctl)```
+
+<!-- verified: 2026-11-09 -->

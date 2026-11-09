@@ -16,26 +16,47 @@ Display VirtualBox VM configuration details
 
 ```vboxmanage showvminfo [vmname] --details```
 
+**Print the VM log (VBox.log)**
+
+```vboxmanage showvminfo [vmname] --log=0```
+
 # SYNOPSIS
 
-**vboxmanage** **showvminfo** _vmname_ [_options_]
+**vboxmanage** **showvminfo** _vmname_|_uuid_ [**--details**] [**--machinereadable**] [**--password-id** _id_] [**--password** _file_|**-**]
+
+**vboxmanage** **showvminfo** _vmname_|_uuid_ **--log**=_index_ [**--password-id** _id_] [**--password** _file_|**-**]
 
 # PARAMETERS
 
 **--machinereadable**
-> Output parseable format.
+> Output as _property_=_value_ lines for scripting.
 
 **--details**
-> Show detailed info.
+> Include detailed information about the VM.
 
-**--log** _n_
-> Show log file n.
+**--log**=_index_
+> Print a log file: **0** is **VBox.log**, **1** is **VBoxHardening.log**, **2** and up are other logs such as **VBox.log.1**.
+
+**--password-id** _id_
+> Password ID of an encrypted VM.
+
+**--password** _file_|**-**
+> Password of an encrypted VM, from a file or prompted with **-**.
 
 # DESCRIPTION
 
-**vboxmanage showvminfo** displays detailed VM configuration. Shows hardware settings, state, snapshots, and shared folders. Use --machinereadable for scripting.
+**vboxmanage showvminfo** displays detailed VM configuration or the contents of its log files. Shows hardware settings, state, snapshots, and shared folders. Use --machinereadable for scripting.
 
 # SEE ALSO
 
 [vboxmanage](/man/vboxmanage)(1), [vboxmanage-list](/man/vboxmanage-list)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/VirtualBox/virtualbox)```
+
+```[Homepage](https://www.virtualbox.org/)```
+
+```[Documentation](https://www.virtualbox.org/manual/topics/vboxmanage.html#vboxmanage-showvminfo)```
+
+<!-- verified: 2026-11-09 -->

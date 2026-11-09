@@ -22,34 +22,57 @@ Manage ZeroTier virtual network connections
 
 **List connected peers**
 
-```sudo zerotier-cli listpeers```
+```sudo zerotier-cli peers```
 
-**Show node info**
+**Allow a network to set the default route**
 
-```sudo zerotier-cli info```
+```sudo zerotier-cli set [network_id] allowDefault=1```
+
+**Show the assigned IP** on a network
+
+```sudo zerotier-cli get [network_id] ip```
+
+**Output full JSON**
+
+```sudo zerotier-cli -j listnetworks```
 
 # SYNOPSIS
 
-**zerotier-cli** [_options_] _command_ [_args_]
+**zerotier-cli** [_-switches_] _command_ [_args_]
 
 # PARAMETERS
 
-**-D** _path_
-> ZeroTier home directory
+**-h**
+> Display help.
 
-**-p** _port_
-> Local API port
+**-v**
+> Show version.
 
-**-T** _token_
-> Authentication token
+**-j**
+> Display full raw JSON output.
+
+**-D**_path_
+> ZeroTier home path for parameter auto-detect. No space before the value.
+
+**-p**_port_
+> HTTP port of the local API (default: auto). No space before the value.
+
+**-T**_token_
+> Authentication token (default: auto). No space before the value.
 
 # SUBCOMMANDS
 
-**status**
-> Show node status and address
+**info**, **status**
+> Display node status info and address
 
-**info**
-> Display node information
+**listpeers**
+> List all peers
+
+**peers**
+> List all peers (prettier)
+
+**listnetworks**
+> List joined networks
 
 **join** _network_
 > Join a ZeroTier network
@@ -57,11 +80,14 @@ Manage ZeroTier virtual network connections
 **leave** _network_
 > Leave a ZeroTier network
 
-**listnetworks**
-> List joined networks
+**set** _network_ _setting_**=**_value_
+> Set a network setting such as **allowManaged**, **allowGlobal**, **allowDefault** or **allowDNS**
 
-**listpeers**
-> List connected peers
+**get** _network_ _setting_
+> Get a network setting: a property from the **-j listnetworks** output, or **ip**, **ip4**, **ip6**, **ip6plane**, **ip6prefix**
+
+**dump**
+> Debug settings dump for support
 
 **listmoons**
 > List joined moons (custom roots)
@@ -71,9 +97,6 @@ Manage ZeroTier virtual network connections
 
 **deorbit** _world_id_
 > Leave a moon
-
-**set** _network_ _setting_ _value_
-> Configure network settings
 
 # DESCRIPTION
 
@@ -96,3 +119,13 @@ Network performance depends on whether direct peer connections can be establishe
 # SEE ALSO
 
 [zerotier-one](/man/zerotier-one)(8), [zerotier-idtool](/man/zerotier-idtool)(1), [ip](/man/ip)(8), [wg](/man/wg)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/zerotier/ZeroTierOne)```
+
+```[Homepage](https://www.zerotier.com)```
+
+```[Documentation](https://docs.zerotier.com)```
+
+<!-- verified: 2026-11-09 -->

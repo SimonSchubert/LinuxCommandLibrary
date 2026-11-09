@@ -42,9 +42,9 @@ AI-powered agentic coding CLI from Augment Code
 
 **auggie** **login** | **logout**
 
-**auggie** **models** **list**
+**auggie** **model** **list**
 
-**auggie** **session** **list** | **continue** | **resume** [_id_] | **share**
+**auggie** **session** **list** | **continue** | **resume** [_id_] | **share** | **delete** | **stats**
 
 **auggie** **mcp** **add** | **add-json** | **list** | **remove**
 
@@ -63,41 +63,35 @@ AI-powered agentic coding CLI from Augment Code
 **--print**, **-p**
 > Run the prompt once and print the result to stdout, then exit. Useful for CI/CD pipelines and scripted automation.
 
-**--quiet**
+**--quiet**, **-q**
 > Return only the final output, suppressing intermediate messages and progress indicators.
 
 **--compact**
 > Output tool calls, results, and response as single lines.
 
 **--output-format** _FORMAT_
-> Output format for print mode (e.g., json).
+> Output format for print mode: text (default) or json.
 
 **--continue**, **-c**
 > Resume the most recent conversation session.
 
-**--resume** _ID_
-> Resume a specific session by ID or ID prefix.
-
-**-f**
-> Filter session list to the current workspace only.
+**--resume** [_ID_], **-r**
+> Resume a specific session by ID or ID prefix. Without an ID, pick from saved sessions interactively.
 
 **--dont-save-session**
 > Skip saving conversation history for this session.
 
-**--delete-saved-sessions**
-> Remove all saved sessions.
-
-**--model** _NAME_
+**--model** _NAME_, **-m**
 > Select the model to use. Short names are supported (e.g., sonnet4.5).
 
-**--instruction** _TEXT_
-> Provide an initial instruction for interactive mode.
+**--instruction** _TEXT_, **-i**
+> Provide an initial instruction.
 
-**--instruction-file** _PATH_
+**--instruction-file** _PATH_, **-if**
 > Load the initial instruction from a file.
 
-**--workspace-root** _PATH_
-> Set the workspace root directory.
+**--workspace-root** _PATH_, **-w**
+> Set the workspace root to index (auto-detects the git root if not specified).
 
 **--rules** _PATH_
 > Append additional rules from a file.
@@ -120,8 +114,11 @@ AI-powered agentic coding CLI from Augment Code
 **--shell** _SHELL_
 > Set the shell to use for command execution.
 
-**--startup-script** _PATH_
-> Specify a shell startup script.
+**--startup-script** _SCRIPT_
+> Inline script to run before each command.
+
+**--startup-script-file** _PATH_
+> Path to a script file to run before each command.
 
 **--mcp**
 > Run auggie as an MCP tool server.
@@ -132,11 +129,8 @@ AI-powered agentic coding CLI from Augment Code
 **--mcp-auto-workspace**
 > Enable automatic workspace discovery in MCP mode.
 
-**-w** _PATH_
-> Specify a workspace directory to pre-index.
-
 **--log-file** _PATH_
-> Enable error logging to a file in MCP mode (default: /tmp/augment-log.txt).
+> Write logs to a file, or to the console with **-**. Defaults to a temp file.
 
 **--acp**
 > Enable Agent Client Protocol support for external editor integration.
@@ -145,7 +139,7 @@ AI-powered agentic coding CLI from Augment Code
 > Allow codebase indexing in ACP mode.
 
 **--augment-session-json** _JSON_
-> Provide authentication session as JSON.
+> Provide the authentication session as JSON or as a path to a JSON file. Alternative to the AUGMENT_SESSION_AUTH environment variable.
 
 **--help**, **-h**
 > Show help information.
@@ -186,12 +180,28 @@ The plugin system allows extending functionality through marketplaces, and an ag
 
 # CAVEATS
 
-Requires Node.js 22 or higher. Authentication via auggie login is mandatory before first use, and an active Augment subscription is required to use the tool. The CLI auto-updates by default; this can be disabled via the autoUpdate setting or the AUGMENT_DISABLE_AUTO_UPDATE environment variable. The software is proprietary and licensed under a custom license from Augment Computing, Inc.
+Requires Node.js 22 or higher. Authentication via auggie login is mandatory before first use, and an active Augment subscription is required to use the tool. The CLI auto-updates by default; this can be disabled via the autoUpdate setting or the AUGMENT_DISABLE_AUTO_UPDATE environment variable. The software is proprietary and licensed under a custom license from Augment Computing, Inc. The flags here describe the stable 0.x line that npm installs by default; the 1.x preview (the **preview** npm tag) changes several of them, and the online CLI reference follows 1.x.
 
 # HISTORY
 
 **auggie** was announced by **Augment Code** on **July 31, 2025** and launched in beta, with enterprise customers receiving immediate access and a phased rollout to teams and individuals. The GitHub repository was created in **September 2025**. By version **0.7.0**, the CLI dropped its beta label and reached general availability. Development has been rapid, with features like MCP server support, Agent Client Protocol integration, session sharing, parallel tool calls, plugin marketplaces, and agent skills added across frequent releases. The tool is part of Augment Code's broader platform that also includes VS Code and JetBrains IDE extensions.
 
+# INSTALL
+
+```aur: yay -S auggie```
+
+<!-- packages: 2026-11-09 -->
+
 # SEE ALSO
 
 [claude](/man/claude)(1), [copilot](/man/copilot)(1), [aider](/man/aider)(1), [codex](/man/codex)(1), [opencode](/man/opencode)(1), [grok](/man/grok)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.augmentcode.com/)```
+
+```[Source code](https://github.com/augmentcode/auggie)```
+
+```[Documentation](https://docs.augmentcode.com/cli/overview)```
+
+<!-- verified: 2026-11-09 -->

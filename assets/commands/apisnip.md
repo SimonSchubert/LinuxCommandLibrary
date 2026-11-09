@@ -34,6 +34,8 @@ _output_
 
 Written in Rust using Ratatui, apisnip supports both JSON and YAML formats, fuzzy search with weighted scoring, HTTP method syntax highlighting, automatic theme detection, mouse support, and smart grouping of selected endpoints at the top of the list.
 
+In the TUI, **Space** toggles the current endpoint, **/** starts a search, **w** writes the selection to the output file and quits, and **q** quits without saving.
+
 # CAVEATS
 
 Output preserves the original specification structure and ordering. Only endpoints can be selectively included; component schemas are automatically resolved based on selected endpoint references.
@@ -45,3 +47,9 @@ Output preserves the original specification structure and ordering. Only endpoin
 # SEE ALSO
 
 [jq](/man/jq)(1), [yq](/man/yq)(1), [curl](/man/curl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Tuurlijk/apisnip)```
+
+<!-- verified: 2026-11-09 -->

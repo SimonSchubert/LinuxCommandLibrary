@@ -16,7 +16,7 @@ Deploys an Angular application to a hosting provider
 
 ```ng deploy --configuration production```
 
-**Deploy without building first**
+**Deploy without building first** (option of some builders, such as angular-cli-ghpages)
 
 ```ng deploy --no-build```
 
@@ -27,36 +27,35 @@ Deploys an Angular application to a hosting provider
 # PARAMETERS
 
 _project_
-> The project to deploy. Defaults to the default project in the workspace.
+> The project to deploy. Defaults to the only project with a deploy target, or the project in the current working directory.
 
-**--configuration** _name_
-> Build configuration to use for deployment.
-
-**--no-build**
-> Skip the build step before deploying.
+**-c**, **--configuration** _names_
+> Comma-separated list of named builder configurations from **angular.json**.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**ng deploy** builds and deploys an Angular application to a remote hosting provider. The deploy command requires a deployment builder to be configured in the project's **angular.json** file, which is typically set up by adding a hosting provider package such as **@angular/fire**, **@azure/ng-deploy**, or **@netlify-builder/deploy**.
+**ng deploy** invokes the deploy builder for a project. The builder must be configured in the project's **angular.json** file, which is typically set up by adding a hosting provider package such as **@angular/fire**, **@netlify-builder/deploy**, **angular-cli-ghpages** or **@jefiozie/ngx-aws-deploy**.
 
-The command first runs the build process and then invokes the configured builder to upload the output to the target hosting environment.
+Most builders run the build first and then upload the output to the target hosting environment. Any further options are defined by the builder in use.
 
 # CONFIGURATION
 
 A deploy builder must be added via **ng add** before using this command:
 
 ```ng add @angular/fire```
+
 ```ng add @netlify-builder/deploy```
-```ng add @azure/ng-deploy```
+
+```ng add angular-cli-ghpages```
 
 This registers the deploy target in **angular.json** under the project's architect section.
 
 # CAVEATS
 
-Requires a deploy builder package to be installed and configured. Without one, the command will fail with a "no deploy target" error. Authentication with the hosting provider is typically required. Part of Angular CLI.
+Requires a deploy builder package to be installed and configured. Without one, the command reports that it cannot find a "deploy" target and offers to add one of the known providers. Authentication with the hosting provider is typically required. Part of Angular CLI.
 
 # HISTORY
 
@@ -65,3 +64,11 @@ Requires a deploy builder package to be installed and configured. Without one, t
 # SEE ALSO
 
 [ng](/man/ng)(1), [ng-build](/man/ng-build)(1), [firebase](/man/firebase)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/angular/angular-cli)```
+
+```[Documentation](https://angular.dev/cli/deploy)```
+
+<!-- verified: 2026-11-09 -->

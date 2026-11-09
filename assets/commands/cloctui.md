@@ -27,7 +27,7 @@ TUI for counting lines of code with CLOC
 # PARAMETERS
 
 **path**
-> Directory path to analyze with CLOC. If omitted, usage instructions are displayed.
+> Directory to analyze with CLOC. Must be a directory; if omitted, usage instructions are displayed.
 
 **-f**, **--fullscreen**
 > Run in fullscreen mode instead of the default inline mode.
@@ -49,3 +49,9 @@ Requires **cloc** to be separately installed on the system; cloctui is only a fr
 # SEE ALSO
 
 [cloc](/man/cloc)(1), [tokei](/man/tokei)(1), [scc](/man/scc)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/brent-lidstone/cloctui)```
+
+<!-- verified: 2026-11-09 -->

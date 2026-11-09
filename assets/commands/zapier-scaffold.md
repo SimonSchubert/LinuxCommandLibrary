@@ -6,39 +6,70 @@ Generate Zapier integration boilerplate code
 
 **Scaffold trigger**
 
-```zapier scaffold trigger [name]```
+```zapier-platform scaffold trigger [noun]```
 
 **Scaffold create action**
 
-```zapier scaffold create [name]```
+```zapier-platform scaffold create [noun]```
 
 **Scaffold search action**
 
-```zapier scaffold search [name]```
+```zapier-platform scaffold search [noun]```
+
+**Scaffold resource**, overwriting existing files
+
+```zapier-platform scaffold resource [noun] --force```
+
+**Scaffold into a custom directory**
+
+```zapier-platform scaffold trigger [noun] --dest=[src/triggers] --entry=[src/index.js]```
 
 # SYNOPSIS
 
-**zapier** **scaffold** _type_ _name_ [_options_]
+**zapier-platform** **scaffold** _type_ _noun_ [_options_]
 
 # PARAMETERS
 
-**trigger** _name_
-> Create trigger scaffold.
+_type_
+> One of **trigger**, **search**, **create** or **resource**.
 
-**create** _name_
-> Create action scaffold.
+_noun_
+> What the scaffold acts on, such as **contact** or **deal**.
 
-**search** _name_
-> Create search scaffold.
+**-d**, **--dest** _dir_
+> Directory for the new file. Defaults to **[triggers|searches|creates]/_noun_**.
 
-**resource** _name_
-> Create resource scaffold.
+**--test-dest** _dir_
+> Directory for the new test file. Defaults to **test/[triggers|searches|creates]/_noun_**.
+
+**-e**, **--entry** _path_
+> Path to the integration's entry point. Detected automatically if omitted.
+
+**-f**, **--force**
+> Overwrite an existing file.
+
+**--no-help**
+> Skip adding helpful intro comments.
+
+**--debug**
+> Show extra debugging output.
 
 # DESCRIPTION
 
-**zapier scaffold** generates boilerplate code for integration components. Creates triggers, actions, and searches with starter code. Speeds up integration development.
+**zapier-platform scaffold** creates a new file with starter code, such as **triggers/contact.js**, and imports and registers it inside **index.js**.
+
+# CAVEATS
+
+The binary is **zapier-platform**. The old **zapier** name was deprecated in zapier-platform-cli 18.0.0 and removed in 19.0.0.
 
 # SEE ALSO
 
-[zapier](/man/zapier)(1), [zapier-init](/man/zapier-init)(1)
+[zapier](/man/zapier)(1), [zapier-init](/man/zapier-init)(1), [zapier-test](/man/zapier-test)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/zapier/zapier-platform)```
+
+```[Documentation](https://github.com/zapier/zapier-platform/blob/main/packages/cli/docs/cli.md)```
+
+<!-- verified: 2026-11-09 -->

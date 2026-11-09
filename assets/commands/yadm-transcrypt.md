@@ -6,15 +6,23 @@ Transparent encryption for yadm files
 
 **Initialize transcrypt**
 
-```yadm transcrypt -c aes-256-gcm```
+```yadm transcrypt -c aes-256-cbc -p [password]```
 
-**Unlock files**
+**Show the configuration and password**
 
 ```yadm transcrypt --display```
 
-**Configure transcrypt**
+**List encrypted files**
 
-```yadm transcrypt -p [password]```
+```yadm transcrypt --list```
+
+**Change the password** and re-encrypt
+
+```yadm transcrypt --rekey -p [password]```
+
+**Remove credentials** and re-encrypt the working copy
+
+```yadm transcrypt --flush-credentials```
 
 # SYNOPSIS
 
@@ -22,20 +30,45 @@ Transparent encryption for yadm files
 
 # PARAMETERS
 
-**-c** _cipher_
-> Encryption cipher.
+**-c**, **--cipher=** _cipher_
+> Encryption cipher. Defaults to **aes-256-cbc**.
 
-**-p** _password_
-> Set password.
+**-p**, **--password=** _password_
+> Set the password used to derive the key.
 
-**--display**
-> Show configuration.
+**-d**, **--display**
+> Show the configuration and password.
+
+**-l**, **--list**
+> List files managed by transcrypt.
+
+**-r**, **--rekey**
+> Re-encrypt all files with a new password.
+
+**-f**, **--flush-credentials**
+> Remove the stored credentials.
+
+**-y**, **--yes**
+> Assume yes for all prompts.
 
 # DESCRIPTION
 
-**yadm transcrypt** wraps transcrypt for transparent file encryption. Encrypts files on push using .gitattributes patterns. Alternative encryption method to yadm encrypt.
+**yadm transcrypt** passes its options directly to transcrypt, with the environment configured to use the yadm repository. Files matching **.gitattributes** patterns are transparently encrypted when committed and decrypted on checkout. It is a separate alternative to **yadm encrypt**.
+
+# CAVEATS
+
+**transcrypt** must be installed separately. Unlike the **yadm encrypt** archive, it encrypts files individually. See [transcrypt](/man/transcrypt)(1) for all options.
 
 # SEE ALSO
 
-[yadm](/man/yadm)(1), [transcrypt](/man/transcrypt)(1)
+[yadm](/man/yadm)(1), [transcrypt](/man/transcrypt)(1), [yadm-git-crypt](/man/yadm-git-crypt)(1), [yadm-encrypt](/man/yadm-encrypt)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/yadm-dev/yadm)```
+
+```[Homepage](https://yadm.io)```
+
+```[Documentation](https://yadm.io/docs/encryption)```
+
+<!-- verified: 2026-11-09 -->

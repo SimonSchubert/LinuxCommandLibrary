@@ -8,9 +8,9 @@ Decode video game audio formats
 
 ```vgmstream_cli -o [output.wav] [input.adx]```
 
-**Play audio directly**
+**Pipe audio** to a player
 
-```vgmstream_cli -p [file.brstm]```
+```vgmstream_cli -p [file.brstm] | aplay```
 
 **Show file info**
 
@@ -24,39 +24,76 @@ Decode video game audio formats
 
 ```vgmstream_cli -s 3 [file.awb]```
 
+**Extract all subsongs**
+
+```vgmstream_cli -S 0 -o "?f#?s.wav" [file.awb]```
+
 **Disable looping**
 
 ```vgmstream_cli -i -o [output.wav] [input.adx]```
 
 # SYNOPSIS
 
-**vgmstream_cli** [_-o file_] [_-p_] [_-m_] [_-l loops_] [_-s subsong_] [_-i_] _file_
+**vgmstream_cli** [_-o outfile.wav_] [_options_] _infile_...
 
 # PARAMETERS
 
 **-o** _FILE_
-> Output WAV file.
-
-**-p**
-> Play to audio device.
+> Output WAV file, default _infile_.wav. Wildcards: ?s subsong, ?n stream name, ?f infile.
 
 **-m**
-> Show metadata only.
-
-**-l** _N_
-> Loop count.
-
-**-s** _N_
-> Select subsong.
+> Print metadata only, don't decode.
 
 **-i**
-> Ignore loops.
+> Ignore looping information and play the stream once.
+
+**-l** _N.n_
+> Loop count. Default 2.0.
+
+**-f** _N.n_
+> Fade time in seconds after loops. Default 10.0.
+
+**-d** _N.n_
+> Fade delay in seconds. Default 0.0.
+
+**-F**
+> Don't fade after loops; play the rest of the stream.
+
+**-e**
+> Set end-to-end looping if the file has no loop points.
+
+**-E**
+> Force end-to-end looping even with real loop points.
+
+**-s** _N_
+> Select subsong N.
 
 **-S** _N_
-> Start at subsong.
+> Select end subsong N (0 for all).
 
-**-E** _N_
-> End at subsong.
+**-p**
+> Output to stdout for piping into another program.
+
+**-P**
+> Output to stdout even if stdout is a terminal.
+
+**-c**
+> Loop forever to stdout.
+
+**-L**
+> Append a smpl chunk and create a looping WAV.
+
+**-w**
+> Keep the original sample format rather than mixing to PCM16.
+
+**-V**
+> Print version info and supported extensions as JSON.
+
+**-I**
+> Print file info as JSON.
+
+**-h**
+> Print all commands.
 
 # DESCRIPTION
 
@@ -66,7 +103,7 @@ The tool handles game-specific features like seamless looping, subsong extractio
 
 # CAVEATS
 
-Decode only. Cannot encode to game formats. Some formats need companion files.
+Decode only. Cannot encode to game formats. Some formats need companion files. Upstream builds and docs name the executable **vgmstream-cli**; the binary name may differ by package.
 
 # HISTORY
 
@@ -75,3 +112,11 @@ Decode only. Cannot encode to game formats. Some formats need companion files.
 # SEE ALSO
 
 [ffmpeg](/man/ffmpeg)(1), [sox](/man/sox)(1), [audacity](/man/audacity)(1)
+
+# RESOURCES
+
+```[Homepage](https://vgmstream.org/)```
+
+```[Source code](https://github.com/vgmstream/vgmstream)```
+
+<!-- verified: 2026-11-09 -->

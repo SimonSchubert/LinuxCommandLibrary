@@ -40,7 +40,7 @@ result = session.run_ps(_powershell_script_)
 > Tuple of (username, password) for authentication.
 
 **transport**
-> Authentication method: basic, ntlm, kerberos, ssl, or credssp.
+> Authentication method: basic, plaintext, certificate, ssl, kerberos, ntlm, or credssp.
 
 **run_cmd**(_command_, [_args_])
 > Execute a Windows command (cmd.exe).
@@ -69,12 +69,20 @@ Windows hosts must have WinRM enabled (Enable-PSRemoting -Force) and configured 
 
 # CAVEATS
 
-WinRM communication is unencrypted over HTTP by default; use HTTPS or NTLM/Kerberos transport for security. Basic authentication requires explicit enabling on Windows hosts. Kerberos requires proper domain configuration and kinit initialization. Firewall rules must allow WinRM ports (5985/5986).
+Basic authentication only base64-encodes credentials and works only for local accounts; use HTTPS, or NTLM, Kerberos or CredSSP with message encryption. Basic authentication requires explicit enabling on Windows hosts. CredSSP works only over HTTPS. Kerberos requires proper domain configuration and kinit initialization. Firewall rules must allow WinRM ports (5985/5986).
 
 # HISTORY
 
-**WinRM** (Windows Remote Management) was introduced by **Microsoft** in **Windows Vista** and **Server 2008** as part of the WS-Management standard. **pywinrm** was developed to enable WinRM access from Python on non-Windows systems. The library became essential for cross-platform Windows management, particularly gaining prominence through **Ansible's** Windows support starting around **2014**.
+**WinRM** (Windows Remote Management) is **Microsoft's** implementation of the WS-Management standard. **pywinrm** was developed to enable WinRM access from Python on non-Windows systems. The library became essential for cross-platform Windows management, particularly gaining prominence through **Ansible's** Windows support starting around **2014**.
 
 # SEE ALSO
 
 [ssh](/man/ssh)(1), [ansible](/man/ansible)(1), [powershell](/man/powershell)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/diyan/pywinrm)```
+
+```[Documentation](https://learn.microsoft.com/en-us/windows/win32/winrm/portal)```
+
+<!-- verified: 2026-11-09 -->

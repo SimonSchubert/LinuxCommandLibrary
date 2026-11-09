@@ -12,15 +12,19 @@ Locate and run macOS developer tools
 
 ```xcrun [clang] [arguments]```
 
+**Print the path of an SDK**
+
+```xcrun --sdk [iphoneos] --show-sdk-path```
+
 **List available SDKs**
 
-```xcrun --show-sdk-path --sdk [iphoneos]```
+```xcodebuild -showsdks```
 
 **Run with a specific SDK**
 
 ```xcrun --sdk [macosx] [tool] [arguments]```
 
-**Show the current developer directory path**
+**Print the platform path** of the selected SDK
 
 ```xcrun --show-sdk-platform-path```
 
@@ -28,7 +32,7 @@ Locate and run macOS developer tools
 
 ```xcrun --toolchain [XcodeDefault] [swift] --version```
 
-**Run simulator** with a specific device
+**Boot a simulator** device
 
 ```xcrun simctl boot "[iPhone 15]"```
 
@@ -48,10 +52,10 @@ Locate and run macOS developer tools
 **--toolchain** _name_
 > Use the specified toolchain.
 
-**--find** _tool_
+**-f**, **--find** _tool_
 > Print the full path to the specified tool.
 
-**--run** _tool_
+**-r**, **--run** _tool_
 > Run the specified tool (default behavior when tool name given).
 
 **--show-sdk-path**
@@ -60,23 +64,29 @@ Locate and run macOS developer tools
 **--show-sdk-version**
 > Print the version of the selected SDK.
 
+**--show-sdk-build-version**
+> Print the build version of the selected SDK.
+
+**--show-toolchain-path**
+> Print the path to the preferred toolchain for the selected SDK.
+
 **--show-sdk-platform-path**
 > Print the platform path for the selected SDK.
 
 **--show-sdk-platform-version**
 > Print the platform version for the selected SDK.
 
-**--log**
-> Print the executed command to stderr.
+**-l**, **--log**
+> Print the full command line that is invoked.
 
-**--verbose**
-> Show verbose output.
+**-v**, **--verbose**
+> Add verbose information on how the tool lookup is performed.
 
-**--no-cache**
-> Do not use cached values for tool paths.
+**-n**, **--no-cache**
+> Do not consult the cache; refreshes the cache entry.
 
-**--kill-cache**
-> Clear the tool path cache.
+**-k**, **--kill-cache**
+> Remove the cache so all values are re-cached.
 
 **-h**, **--help**
 > Display help information.
@@ -85,7 +95,7 @@ Locate and run macOS developer tools
 
 **xcrun** is macOS's command-line utility for locating and invoking developer tools from the Xcode toolchain. It serves as an intelligent wrapper that finds the correct version of tools like **clang**, **swift**, **ld**, and others based on the active Xcode installation and selected SDK.
 
-The tool resolves the complexity of having multiple Xcode versions or SDKs installed by automatically selecting the appropriate tool version. It respects the **DEVELOPER_DIR** environment variable and the setting from **xcode-select**, making it essential for build scripts and CI/CD pipelines that need consistent tool resolution.
+The tool resolves the complexity of having multiple Xcode versions or SDKs installed by automatically selecting the appropriate tool version. It respects the **DEVELOPER_DIR**, **SDKROOT** and **TOOLCHAINS** environment variables and the setting from **xcode-select**, making it essential for build scripts and CI/CD pipelines that need consistent tool resolution.
 
 Beyond simple tool invocation, xcrun provides access to powerful subcommands through tools like **simctl** for iOS Simulator management, **notarytool** for app notarization, **altool** for App Store uploads, and **stapler** for attaching notarization tickets.
 
@@ -95,8 +105,16 @@ Only available on macOS with Xcode or Command Line Tools installed. Tool resolut
 
 # HISTORY
 
-**xcrun** was introduced by Apple alongside the separation of developer tools into the Xcode application bundle. It became the standard way to invoke command-line developer tools starting with **Xcode 4** around **2011**, replacing direct paths to tools that were previously in /usr/bin. This architecture allows multiple Xcode versions to coexist and enables tools to be versioned with their parent Xcode release.
+**xcrun** ships with Xcode and the Command Line Tools. Its lookup through the active developer directory allows multiple Xcode versions to coexist and enables tools to be versioned with their parent Xcode release.
 
 # SEE ALSO
 
 [xcode-select](/man/xcode-select)(1), [xcodebuild](/man/xcodebuild)(1), [clang](/man/clang)(1), [swift](/man/swift)(1), [simctl](/man/simctl)(1)
+
+# RESOURCES
+
+```[Homepage](https://developer.apple.com/xcode/)```
+
+```[Documentation](https://developer.apple.com/library/archive/technotes/tn2339/_index.html)```
+
+<!-- verified: 2026-11-09 -->

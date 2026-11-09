@@ -8,19 +8,34 @@ Delete storage pool data
 
 ```virsh pool-delete [pool]```
 
+**Stop a pool and delete its storage**
+
+```virsh pool-destroy [pool] && virsh pool-delete [pool]```
+
 # SYNOPSIS
 
-**virsh** **pool-delete** _pool_
+**virsh** **pool-delete** _pool-or-uuid_
 
 # DESCRIPTION
 
-**virsh pool-delete** destroys the underlying storage for a pool. Removes all data from the storage pool. Pool must be stopped first. Configuration remains until pool-undefine is run.
+**virsh pool-delete** destroys the resources used by a storage pool. Pool must be stopped first. The pool object still exists afterwards, ready for the creation of new storage volumes, until pool-undefine is run.
+
+What is removed depends on the backend. Directory-style pools (**dir**, **fs**, **netfs**) only remove the empty target directory, so the command fails if volumes remain inside it.
 
 # CAVEATS
 
-This permanently destroys all data in the pool. Cannot be undone.
+This operation is non-recoverable.
 
 # SEE ALSO
 
-[virsh](/man/virsh)(1), [virsh-pool-undefine](/man/virsh-pool-undefine)(1)
+[virsh](/man/virsh)(1), [virsh-pool-destroy](/man/virsh-pool-destroy)(1), [virsh-pool-undefine](/man/virsh-pool-undefine)(1)
 
+# RESOURCES
+
+```[Source code](https://gitlab.com/libvirt/libvirt)```
+
+```[Homepage](https://libvirt.org/)```
+
+```[Documentation](https://libvirt.org/manpages/virsh.html)```
+
+<!-- verified: 2026-11-09 -->
