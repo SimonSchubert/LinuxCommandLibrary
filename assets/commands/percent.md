@@ -20,6 +20,14 @@
 
 ```%?[string]```
 
+**Resume job N in the background**
+
+```%[N] &```
+
+**Pass a job to another command**
+
+```kill %[N]```
+
 **Use modulo operator in arithmetic**
 
 ```echo $((10 % 3))```
@@ -43,11 +51,11 @@
 > Job whose command starts with string
 
 **%?string**
-> Job whose command contains string
+> Job whose command contains string. If a prefix or substring matches more than one job, the shell reports an error.
 
 # DESCRIPTION
 
-**%** in shell context refers to job control, bringing background jobs to the foreground. It's shorthand for the **fg** command.
+**%** in shell context refers to job control, bringing background jobs to the foreground. It's shorthand for the **fg** command, and appending **&** (as in **%1 &**) is equivalent to **bg**. The same job specifications are accepted by builtins such as **kill**, **wait** and **disown**.
 
 When a command is suspended (Ctrl+Z) or run in background (&), it gets a job number. The **%** notation provides quick access to these jobs.
 
@@ -65,4 +73,10 @@ Job numbers reset when the shell restarts.
 
 # SEE ALSO
 
-[fg](/man/fg)(1), [bg](/man/bg)(1), [jobs](/man/jobs)(1), [kill](/man/kill)(1)
+[fg](/man/fg)(1), [bg](/man/bg)(1), [jobs](/man/jobs)(1), [kill](/man/kill)(1), [disown](/man/disown)(1), [wait](/man/wait)(1)
+
+# RESOURCES
+
+```[Documentation](https://www.gnu.org/software/bash/manual/html_node/Job-Control-Basics.html)```
+
+<!-- verified: 2026-11-09 -->

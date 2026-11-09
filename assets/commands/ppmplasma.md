@@ -1,73 +1,31 @@
 # TAGLINE
 
-Generate colorful plasma fractal images
+Not a Netpbm program: use ppmforge for fractal clouds
 
 # TLDR
 
-**Generate plasma pattern**
+**Generate fractal clouds** with the real Netpbm tool
 
-```ppmplasma [width] [height] > [plasma.ppm]```
+```ppmforge -clouds -width [800] -height [600] > [clouds.ppm]```
 
-**With random seed**
+**Use a fixed seed** for a reproducible result
 
-```ppmplasma -randomseed [42] [512] [512] > [plasma.ppm]```
+```ppmforge -clouds -seed [42] -width [512] -height [512] > [clouds.ppm]```
 
-**As PNG**
+**Save as PNG**
 
-```ppmplasma [800] [600] | pnmtopng > [plasma.png]```
+```ppmforge -clouds -width [800] -height [600] | pnmtopng > [clouds.png]```
 
 # SYNOPSIS
 
-**ppmplasma** [_options_] _width_ _height_
-
-# PARAMETERS
-
-**width**
-> Image width in pixels.
-
-**height**
-> Image height in pixels.
-
-**-randomseed** _n_
-> Seed for reproducibility.
+**ppmforge** [**-clouds**] [**-seed** _seed_] [**-width** _width_] [**-height** _height_]
 
 # DESCRIPTION
 
-**ppmplasma** generates a plasma fractal image with colorful, cloud-like patterns. It uses recursive subdivision to create smooth, organic-looking textures.
+No program named **ppmplasma** could be found in the Netpbm program directory or its distribution packages, so its existence and options cannot be confirmed.
 
-Part of Netpbm toolkit.
-
-# EXAMPLES
-
-```bash
-# Basic plasma
-ppmplasma 640 480 > plasma.ppm
-
-# Reproducible result
-ppmplasma -randomseed 12345 512 512 > plasma.ppm
-
-# Convert to PNG
-ppmplasma 800 600 | pnmtopng > plasma.png
-
-# Create desktop background
-ppmplasma 1920 1080 | pnmtojpeg > wallpaper.jpg
-```
-
-# ALGORITHM
-
-Uses midpoint displacement algorithm:
-1. Set corner colors
-2. Recursively subdivide
-3. Average colors with random displacement
-
-# CAVEATS
-
-Fixed color palette. For grayscale output, pipe through [ppmtopgm](/man/ppmtopgm). Part of the Netpbm toolkit. Different random seeds produce different patterns.
-
-# HISTORY
-
-ppmplasma is part of **Netpbm**, implementing the plasma cloud algorithm (midpoint displacement) popular in demoscene and computer graphics since the 1990s.
+The closest Netpbm tool is **ppmforge**, which generates fractal forgeries of clouds, planets and starry skies. For other generated images, see **ppmpat** (patterns), **pgmnoise** (noise) and **ppmmake** (solid color).
 
 # SEE ALSO
 
-[ppmforge](/man/ppmforge)(1), [pgmnoise](/man/pgmnoise)(1), [ppmmake](/man/ppmmake)(1), [netpbm](/man/netpbm)(1)
+[ppmforge](/man/ppmforge)(1), [ppmpat](/man/ppmpat)(1), [pgmnoise](/man/pgmnoise)(1), [ppmmake](/man/ppmmake)(1), [netpbm](/man/netpbm)(1)

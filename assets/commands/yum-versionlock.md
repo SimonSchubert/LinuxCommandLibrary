@@ -20,7 +20,7 @@ Lock packages to specific versions
 
 ```sudo yum versionlock clear```
 
-**Lock a package to a specific version**
+**Lock a specific installed version** of a package
 
 ```sudo yum versionlock add [package_name]-[version]-[release]```
 
@@ -28,7 +28,7 @@ Lock packages to specific versions
 
 ```sudo yum versionlock exclude [package_pattern*]```
 
-**Show status** of versionlock plugin
+**List updates blocked** by versionlock (yum only)
 
 ```yum versionlock status```
 
@@ -39,7 +39,7 @@ Lock packages to specific versions
 # PARAMETERS
 
 **add** _package_
-> Lock the specified package(s) to their currently installed versions. Prevents yum from updating these packages.
+> Lock the specified package(s) to their currently installed versions. Prevents yum from updating these packages. DNF also locks to available versions when the package is not installed.
 
 **list**
 > Display all currently locked packages and their versions.
@@ -54,21 +54,24 @@ Lock packages to specific versions
 > Disallow currently available versions of the packages matching the given wildcards.
 
 **status**
-> List any available updates that are currently blocked by versionlock.
+> List any available updates that are currently blocked by versionlock (yum only, not in DNF).
+
+**--raw**
+> DNF only: use the given spec as is instead of resolving it to NEVRAs, for example **dnf versionlock add --raw 'bash-5.*'**.
 
 # DESCRIPTION
 
 **yum-versionlock** is a yum plugin that allows administrators to lock specific packages to their currently installed versions, preventing them from being updated during system upgrades. This is useful for maintaining stability when newer package versions might break compatibility or when specific versions are required for compliance.
 
-When a package is locked, yum will skip it during **yum update** operations, even if newer versions are available in configured repositories. The lock persists across reboots and update sessions until explicitly removed.
+When a package is locked, yum excludes every other version of it, so **yum update** skips the package even if newer versions are available in configured repositories. The lock persists across reboots and update sessions until explicitly removed.
 
-Locked packages are stored in **/etc/yum/pluginconf.d/versionlock.list** (or similar path depending on the distribution). Each entry follows the NEVRA format: name-epoch:version-release.arch.
+Locked packages are stored in **/etc/yum/pluginconf.d/versionlock.list** with entries of the form EPOCH:NAME-VERSION-RELEASE.ARCH, one per line, optionally prefixed with **!** for excludes. The DNF plugin uses **/etc/dnf/plugins/versionlock.list** and dnf5 uses the TOML file **/etc/dnf/versionlock.toml**.
 
-The plugin must be installed separately via **yum install yum-plugin-versionlock** (RHEL/CentOS 7) or **dnf install python3-dnf-plugin-versionlock** (Fedora/RHEL 8+). On newer systems using DNF, the command syntax is **dnf versionlock**.
+The plugin must be installed separately via **yum install yum-plugin-versionlock** (RHEL/CentOS 7) or **dnf install python3-dnf-plugin-versionlock** (Fedora/RHEL 8+). On newer systems using DNF, the command syntax is **dnf versionlock**, which dnf5 provides as a built-in command.
 
 # CAVEATS
 
-Locking packages may create dependency conflicts if other packages require newer versions. Security updates are also blocked for locked packages, potentially leaving vulnerabilities unpatched. The lock file format changed between yum and dnf versions. Version locks do not prevent manual installation of specific versions.
+Locking packages may create dependency conflicts if other packages require newer versions. Security updates are also blocked for locked packages, potentially leaving vulnerabilities unpatched. The lock file format differs between yum, dnf and dnf5. In DNF the lock only applies to in-repository packages, so local RPM files given on the command line are not affected.
 
 # HISTORY
 
@@ -77,3 +80,11 @@ The versionlock plugin was developed as part of the yum-utils package collection
 # SEE ALSO
 
 [yum](/man/yum)(8), [dnf](/man/dnf)(8), [rpm](/man/rpm)(8), [yum-config-manager](/man/yum-config-manager)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rpm-software-management/yum-utils)```
+
+```[Documentation](https://dnf-plugins-core.readthedocs.io/en/latest/versionlock.html)```
+
+<!-- verified: 2026-11-09 -->

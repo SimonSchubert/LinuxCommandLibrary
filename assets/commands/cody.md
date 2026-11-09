@@ -41,22 +41,46 @@ Sourcegraph Cody AI coding assistant CLI
 > Include a local file as context for the query.
 
 **--context-repo** _repository_
-> Include a remote repository as context (e.g. github.com/owner/repo).
+> Include a remote repository as context (e.g. github.com/owner/repo). Sourcegraph Enterprise only.
 
 **--stdin**
-> Read input from standard input.
+> Read input from standard input. A trailing **-** argument does the same.
 
 **--model** _model_
-> Specify LLM model (e.g. claude-3.5-sonnet).
+> Chat model to use.
+
+**--show-context**
+> Show context items in the reply.
+
+**--silent**
+> Disable streaming of the reply.
+
+**-C**, **--dir** _dir_
+> Run in the given directory.
+
+**--endpoint** _url_
+> URL of the Sourcegraph instance. Also set by **SRC_ENDPOINT**.
+
+**--access-token** _token_
+> Sourcegraph access token. Also set by **SRC_ACCESS_TOKEN**.
+
+**--debug**
+> Enable debug logging.
 
 **auth login** [**--web**]
-> Authenticate with Sourcegraph. Use **--web** for browser-based login.
+> Authenticate with Sourcegraph. Use **--web** for browser-based login or **--access-token** to provide a token.
 
 **auth logout**
 > Sign out and remove stored access token.
 
 **auth whoami**
 > Display current authentication status and account info.
+
+**auth accounts**
+> List the authenticated accounts.
+
+**auth settings-path**
+> Print the path to the user settings JSON file.
 
 **chat** [**-m** _message_]
 > Send a message to Cody AI assistant.
@@ -73,7 +97,7 @@ Authentication credentials are stored securely in the operating system's credent
 
 # CAVEATS
 
-Requires Node.js v20 or newer. The CLI is marked as experimental and requires a Sourcegraph Enterprise account. Starting **July 2025**, Cody Free and Pro plans were discontinued; users are directed to Amp (ampcode.com) as an alternative.
+Requires Node.js v20 or newer. Install with `npm install -g @sourcegraph/cody`. The CLI is marked as experimental and requires a Sourcegraph Enterprise account. Starting **July 2025**, Cody Free and Pro plans were discontinued; users are directed to Amp (ampcode.com) as an alternative. The public source repository has been archived as a snapshot.
 
 # HISTORY
 
@@ -82,3 +106,11 @@ Cody was developed by **Sourcegraph**, a company founded in **2013** focused on 
 # SEE ALSO
 
 [claude](/man/claude)(1), [gh](/man/gh)(1), [copilot](/man/copilot)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/sourcegraph/cody-public-snapshot)```
+
+```[Documentation](https://sourcegraph.com/docs/cody/clients/install-cli)```
+
+<!-- verified: 2026-11-09 -->

@@ -28,9 +28,17 @@ cache cleaning utility for pacman, the Arch Linux package manager
 
 ```paccache -dv```
 
+**Keep packages** used within the last 30 days, even beyond the keep count
+
+```sudo paccache -r --min-atime "[30 days ago]"```
+
+**Clean a specific** cache directory
+
+```sudo paccache -r -c [path/to/cache]```
+
 # SYNOPSIS
 
-**paccache** [_options_] [_targets_...]
+**paccache** _operation_ [_options_] [_targets_...]
 
 # PARAMETERS
 
@@ -50,13 +58,13 @@ cache cleaning utility for pacman, the Arch Linux package manager
 > Target uninstalled packages only
 
 **-c**, **--cachedir** _dir_
-> Specify alternate cache directory
+> Scan _dir_ for packages. Can be used more than once. Defaults to the value from pacman.conf.
 
 **-a**, **--arch** _arch_
-> Filter packages by architecture
+> Scan for _arch_ only (default: all architectures)
 
 **-v**, **--verbose**
-> Show removed or moved packages
+> Increase verbosity. Can be specified up to 3 times.
 
 **-q**, **--quiet**
 > Minimize output
@@ -70,11 +78,14 @@ cache cleaning utility for pacman, the Arch Linux package manager
 **--nocolor**
 > Remove color from the output.
 
-**--notime** _time_
-> Keep packages with an atime/mtime not older than _time_, even if exceeding **--keep**.
+**--min-atime** _time_, **--min-mtime** _time_
+> Keep packages with an atime/mtime not older than _time_, even if exceeding **--keep**. Accepts date strings such as "30 days ago".
 
 **-z**, **--null**
-> Use null delimiters for output.
+> Use null delimiters for candidate names (only with -v and -vv).
+
+**-V**, **--version**
+> Display version information.
 
 **-h**, **--help**
 > Display help message.
@@ -83,7 +94,7 @@ cache cleaning utility for pacman, the Arch Linux package manager
 
 **paccache** is a cache cleaning utility for pacman, the Arch Linux package manager. It removes old package versions from the pacman cache directory (/var/cache/pacman/pkg/) while preserving recent versions for potential rollbacks.
 
-By default, it keeps the 3 most recent versions of each package. This helps reclaim disk space while maintaining the ability to downgrade packages if needed. The tool can target all cached packages or only those no longer installed on the system.
+By default, it keeps the 3 most recent versions of each package. This helps reclaim disk space while maintaining the ability to downgrade packages if needed. The tool can target all cached packages or only those no longer installed on the system. One of the operations **-d**, **-m** or **-r** is required. pacman-contrib also ships a **paccache.timer** systemd unit for periodic cleaning.
 
 # CAVEATS
 
@@ -96,3 +107,11 @@ Part of **pacman-contrib**, a collection of scripts for pacman previously includ
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pactree](/man/pactree)(8), [pacdiff](/man/pacdiff)(8)
+
+# RESOURCES
+
+```[Source code](https://gitlab.archlinux.org/pacman/pacman-contrib)```
+
+```[Documentation](https://man.archlinux.org/man/paccache.8.en)```
+
+<!-- verified: 2026-11-09 -->

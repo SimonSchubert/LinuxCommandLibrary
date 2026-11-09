@@ -28,9 +28,17 @@ Sublime Text command-line launcher
 
 ```subl -w [path/to/file]```
 
+**Load a project** file
+
+```subl --project [path/to/project.sublime-project]```
+
 **Open from stdin**
 
 ```echo "[text]" | subl -```
+
+**Edit stdin and write the result to stdout**
+
+```echo "[text]" | subl - > [output.txt]```
 
 # SYNOPSIS
 
@@ -72,16 +80,24 @@ Sublime Text command-line launcher
 
 **subl** is the command-line interface for Sublime Text, a popular cross-platform text editor. It allows opening files and directories from the terminal and integrating with Unix tools like git and subversion.
 
-Files can include a **:line** or **:line:column** suffix to open at a specific location (1-based). The tool can read from stdin using **-**. When used with **-w**, it blocks until files are closed, making it suitable as an external editor for version control systems (e.g., `EDITOR='subl -w' git commit`).
+Files can include a **:line** or **:line:column** suffix to open at a specific location (1-based). Use **--** before file names that start with a hyphen. The tool can read from stdin using **-**. When used with **-w**, it blocks until files are closed, making it suitable as an external editor for version control systems (e.g., `EDITOR='subl -w' git commit`).
 
 # CAVEATS
 
-The **subl** command requires Sublime Text to be installed. On manual installations, you may need to create a symlink: **ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl**. Package manager installations typically create this symlink automatically in /usr/bin/.
+The **subl** command requires Sublime Text to be installed. On manual installations, you may need to create a symlink: **sudo ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl**. Package manager installations typically create this symlink automatically in /usr/bin/. On macOS, add **/Applications/Sublime Text.app/Contents/SharedSupport/bin** to PATH. Available flags vary per operating system.
 
 # HISTORY
 
-Sublime Text was created by **Jon Skinner** and first released in **January 2008**. The command-line helper **subl** has been part of Sublime Text since version 2, enabling terminal-based workflows. Sublime Text 3 was released in **2013**, and Sublime Text 4 followed in **2021** with GPU rendering and improved performance.
+Sublime Text was created by **Jon Skinner** and first released in **January 2008**. The command-line helper **subl** has been part of Sublime Text since version 2, enabling terminal-based workflows. Sublime Text 3 entered public beta in **2013**, and Sublime Text 4 followed in **2021** with GPU rendering and improved performance.
 
 # SEE ALSO
 
 [code](/man/code)(1), [vim](/man/vim)(1), [nano](/man/nano)(1), [emacs](/man/emacs)(1), [atom](/man/atom)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.sublimetext.com/)```
+
+```[Documentation](https://www.sublimetext.com/docs/command_line.html)```
+
+<!-- verified: 2026-11-09 -->

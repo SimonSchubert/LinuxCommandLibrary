@@ -24,13 +24,17 @@ Official CLI for the JFrog Platform
 
 ```jfrog rt build-publish [build-name] [build-number]```
 
+**Log in** through the browser
+
+```jfrog login```
+
 **Scan** the current project for security vulnerabilities
 
 ```jfrog audit```
 
 **Push** a Docker image to an Artifactory Docker registry
 
-```jfrog docker push [image:tag] [repo]```
+```jfrog docker push [registry/image:tag]```
 
 **Delete** artifacts matching a pattern
 
@@ -43,7 +47,7 @@ Official CLI for the JFrog Platform
 # PARAMETERS
 
 **config**
-> Manage server configurations (add, edit, remove, show, export, import).
+> Manage server configurations (add, edit, show, remove, import, export, use).
 
 **rt**
 > Artifactory commands (upload, download, search, delete, copy, move, build-publish, etc.).
@@ -54,11 +58,14 @@ Official CLI for the JFrog Platform
 **audit**
 > Scan project dependencies for security vulnerabilities and license compliance.
 
-**docker**
-> Docker registry integration (push and pull via Artifactory).
+**login**
+> Authenticate with the JFrog Platform through a web browser.
 
-**npm**, **pip**, **go**, **maven**, **gradle**, **nuget**
-> Package manager integrations with build-info collection.
+**docker**
+> Docker client integration (push, pull and build via Artifactory) with build-info collection.
+
+**npm**, **yarn**, **pip**, **pipenv**, **poetry**, **go**, **mvn**, **gradle**, **nuget**, **dotnet**, **helm**, **twine**, **ruby**, **terraform**
+> Package manager and build tool integrations with build-info collection.
 
 **--url** _URL_
 > JFrog Platform URL.
@@ -84,7 +91,7 @@ Official CLI for the JFrog Platform
 
 The tool manages binary artifacts across all major package types including Maven, npm, PyPI, Docker, Go, NuGet, and generic files. It integrates with CI/CD pipelines for build-info collection, promotion, and security scanning. The CLI supports file specs (JSON-based query syntax) for advanced artifact operations.
 
-The **jfrog** executable has been renamed to **jf** in recent versions, though the **jfrog** name continues to work as an alias.
+Current JFrog documentation uses the executable name **jf**. The same program is also distributed as a separate **jfrog** executable with identical commands.
 
 # CAVEATS
 
@@ -92,8 +99,18 @@ Requires a JFrog server (self-hosted or SaaS). Enterprise features such as Xray 
 
 # HISTORY
 
-JFrog CLI was created by **JFrog** to provide unified command-line access to their artifact management platform. The CLI executable was renamed from **jfrog** to **jf** starting in 2022, though both names remain functional.
+JFrog CLI was created by **JFrog** to provide unified command-line access to their artifact management platform. JFrog CLI v2 introduced the **jf** executable name, and **jfrog** remains available.
 
 # SEE ALSO
 
 [jf](/man/jf)(1), [docker](/man/docker)(1), [mvn](/man/mvn)(1), [npm](/man/npm)(1), [pip](/man/pip)(1), [go](/man/go)(1), [gradle](/man/gradle)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/jfrog/jfrog-cli)```
+
+```[Homepage](https://jfrog.com/getcli/)```
+
+```[Documentation](https://docs.jfrog.com/integrations/docs/jfrog-cli)```
+
+<!-- verified: 2026-11-09 -->

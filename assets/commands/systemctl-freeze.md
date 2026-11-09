@@ -12,9 +12,17 @@ Freeze **multiple** units
 
 ```systemctl freeze unit1 unit2```
 
-Freeze **all** running units
+Freeze units matching a **pattern**
 
-```systemctl freeze '*'```
+```systemctl freeze 'app-*.service'```
+
+Freeze a **user** unit
+
+```systemctl --user freeze unit_name```
+
+**Resume** a frozen unit
+
+```systemctl thaw unit_name```
 
 # SYNOPSIS
 
@@ -31,12 +39,22 @@ Freeze **all** running units
 
 # CAVEATS
 
-Frozen units remain in memory but cannot execute. Use "systemctl thaw" to resume frozen units. Only service, scope, and slice unit types support freezing. Requires cgroup v2 (unified hierarchy) support in the kernel.
+Frozen units remain in memory but cannot execute. Use "systemctl thaw" to resume frozen units. A unit is automatically thawed just before a job is executed against it, for example before it is stopped. Only service, scope, and slice unit types support freezing. Requires cgroup v2 (unified hierarchy) support in the kernel.
 
 # HISTORY
 
-**systemctl freeze** is part of **systemd**, providing cgroup-based process freezing for service management.
+**systemctl freeze** was added in **systemd 246** as part of cgroup-based process freezing for service management.
 
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-thaw](/man/systemctl-thaw)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

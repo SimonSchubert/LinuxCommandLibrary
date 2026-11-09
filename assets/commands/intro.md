@@ -12,13 +12,17 @@ Introduction to user commands (man page section 1)
 
 ```man [1] intro```
 
-**Search for all intro pages across sections**
+**Read every intro page** in turn
 
-```man -k intro```
+```man -a intro```
+
+**List all intro pages** with their sections
+
+```man -f intro```
 
 # SYNOPSIS
 
-**intro** - introduction to user commands
+**man** [_section_] **intro**
 
 # DESCRIPTION
 
@@ -37,7 +41,7 @@ Each manual section has its own intro page providing an overview of the section'
 
 # CAVEATS
 
-Read-only documentation. Content varies by distribution. Part of the **man-pages** package on Linux.
+A manual page only, not an executable command. Content varies by distribution. Part of the **man-pages** package on Linux.
 
 # HISTORY
 
@@ -46,3 +50,13 @@ intro pages have been part of **Unix documentation** since the earliest versions
 # SEE ALSO
 
 [man](/man/man)(1), [apropos](/man/apropos)(1), [whatis](/man/whatis)(1), [manpath](/man/manpath)(1)
+
+# RESOURCES
+
+```[Source code](https://git.kernel.org/pub/scm/docs/man-pages/man-pages.git)```
+
+```[Homepage](https://www.kernel.org/doc/man-pages/)```
+
+```[Documentation](https://man7.org/linux/man-pages/man1/intro.1.html)```
+
+<!-- verified: 2026-11-09 -->

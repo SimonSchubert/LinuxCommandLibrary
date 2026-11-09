@@ -16,9 +16,13 @@ retrieve DigitalOcean account billing balance
 
 ```doctl balance get --format MonthToDateUsage```
 
+**Print the balance without a header**, for scripts
+
+```doctl balance get --format AccountBalance --no-header```
+
 # SYNOPSIS
 
-**doctl balance** _command_ [_options_]
+**doctl balance** **get** [_options_]
 
 # PARAMETERS
 
@@ -26,10 +30,13 @@ retrieve DigitalOcean account billing balance
 > Retrieve current account balance, month-to-date usage, and balance as of last invoice.
 
 **--format** _COLUMNS_
-> Display specific columns (e.g., MonthToDateUsage, AccountBalance, MonthToDateBalance, GeneratedAt).
+> Display specific columns: MonthToDateBalance, AccountBalance, MonthToDateUsage, GeneratedAt.
 
-**--output** _FORMAT_
-> Output format: text or json.
+**-o**, **--output** _FORMAT_
+> Output format: text (default) or json.
+
+**--no-header**
+> Omit the header row from text output.
 
 **--help**
 > Display help information.
@@ -53,3 +60,11 @@ Balance updates may have a slight delay from real-time usage. Does not show deta
 # SEE ALSO
 
 [doctl](/man/doctl)(1), [doctl-account](/man/doctl-account)(1), [doctl-auth](/man/doctl-auth)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/digitalocean/doctl)```
+
+```[Documentation](https://docs.digitalocean.com/reference/doctl/reference/balance/)```
+
+<!-- verified: 2026-11-09 -->

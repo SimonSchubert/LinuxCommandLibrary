@@ -16,9 +16,9 @@ Backup with a specific **mode** (snapshot, stop, or suspend)
 
 ```vzdump [vm_id] --mode [snapshot|stop|suspend]```
 
-Backup **all** VMs with email notification
+Backup **all** guests to a specific **storage**
 
-```vzdump --all --mode snapshot --mailto [root@example.com]```
+```vzdump --all --mode snapshot --storage [storage_id]```
 
 Backup with **zstd compression** to a specific directory
 
@@ -32,9 +32,15 @@ Backup with **retention policy**
 
 ```vzdump [vm_id] --mode snapshot --prune-backups keep-last=5,keep-daily=7```
 
+Stream a container backup to **stdout** and restore it elsewhere
+
+```vzdump [vm_id] --stdout | pct restore --rootfs [4] [new_id] -```
+
 # SYNOPSIS
 
-**vzdump** [_OPTIONS_] _VMID_...
+**vzdump** {_VMID_} [_OPTIONS_]
+
+**vzdump** **help**
 
 # PARAMETERS
 
@@ -48,7 +54,10 @@ Backup with **retention policy**
 > Store resulting backup files to the specified Proxmox storage.
 
 **--mailto** _EMAIL_
-> Send notification email to address. Deprecated in favor of notification system.
+> Deprecated: use notification targets and matchers instead. Comma-separated list of addresses or users to notify.
+
+**--notification-mode** _auto|legacy-sendmail|notification-system_
+> Select the notification mechanism (default: auto).
 
 **--all**
 > Backup all known guest systems on the host.
@@ -60,22 +69,22 @@ Backup with **retention policy**
 > Backup all guest systems in the specified pool.
 
 **--compress** _TYPE_
-> Compression type: 0 (none, default), gzip, lzo, or zstd.
+> Compression type: 0 (none, default), 1, gzip, lzo, or zstd.
 
 **--zstd** _N_
 > Zstandard thread count (default: 1). 0 uses half of available cores.
 
 **--pigz** _N_
-> Use parallel gzip. N=1 uses half of available cores; N>1 uses N threads.
+> Use pigz instead of gzip when N>0. N=1 uses half of available cores; N>1 uses N threads.
 
 **--prune-backups** _RETENTION_
 > Retention policy (e.g., keep-last=N,keep-daily=N,keep-weekly=N,keep-monthly=N,keep-yearly=N). Default: keep-all=1.
 
-**--maxfiles** _N_
-> Deprecated. Maximum number of backup files per VM. Use --prune-backups instead.
+**--remove** _BOOLEAN_
+> Prune older backups according to --prune-backups (default: 1).
 
 **--protected**
-> Mark backup as protected to prevent automatic removal.
+> Mark backup as protected to prevent automatic removal. Requires --storage.
 
 **--bwlimit** _KiB/s_
 > Limit I/O bandwidth in KiB/s (default: 0, unlimited).
@@ -95,8 +104,29 @@ Backup with **retention policy**
 **--script** _FILE_
 > Execute hook script during backup.
 
+**--exclude-path** _PATH_
+> Exclude files or directories (shell globs). Paths starting with / are anchored to the container's root. Repeatable.
+
+**--fleecing** _enabled=1,storage=ID_
+> Use backup fleecing (VM only) to reduce the impact of a slow backup target on guest I/O.
+
+**--performance** _max-workers=N,pbs-entries-max=N_
+> Other performance-related settings.
+
+**--pbs-change-detection-mode** _data|legacy|metadata_
+> Change detection mode for container backups to Proxmox Backup Server.
+
+**--stdout**
+> Write tar to standard output instead of a file.
+
+**--stop**
+> Stop running backup jobs on this host.
+
+**--node** _NODE_
+> Only run if executed on this node.
+
 **--notes-template** _TEMPLATE_
-> Template for backup notes. Variables: {{vmid}}, {{guestname}}, {{node}}, {{cluster}}.
+> Template for backup notes. Variables: {{vmid}}, {{guestname}}, {{node}}, {{cluster}}. Requires --storage.
 
 **--quiet**
 > Suppress verbose output.
@@ -108,12 +138,20 @@ Backup with **retention policy**
 
 **vzdump** is a backup utility for Proxmox VE virtual machines (KVM) and containers (LXC). It creates consistent backups that can be restored later using **qmrestore** (VMs) or **pct restore** (containers).
 
-Three backup modes are available: **snapshot** (default, minimal downtime using LVM/ZFS/QEMU snapshots), **stop** (highest consistency, stops the guest during backup), and **suspend** (legacy compatibility mode). Backups are stored in /var/lib/vz/dump/ by default, or to a configured Proxmox storage.
+Three backup modes are available: **snapshot** (default, lowest downtime), **stop** (highest consistency, the guest is shut down for the start of the backup), and **suspend** (compatibility mode for VMs; for containers it uses rsync to keep downtime small). Proxmox VE backups are always full backups containing the guest configuration and all data. Backups are stored in the default dump directory (usually /var/lib/vz/dump/) or on a configured Proxmox storage, such as a Proxmox Backup Server.
 
 # CAVEATS
 
-Proxmox VE specific. Large VMs require significant backup storage. Snapshot mode requires LVM, ZFS, or QEMU snapshot support. The --maxfiles option is deprecated in favor of --prune-backups. Global configuration can be set in /etc/vzdump.conf.
+Proxmox VE specific. Large VMs require significant backup storage. VM snapshot mode uses QEMU live backup and works on any storage type, while container snapshot mode requires all backed up volumes to be on a storage that supports snapshots. Stop mode can mean a long downtime for containers. Global configuration can be set in /etc/vzdump.conf.
 
 # SEE ALSO
 
 [qmrestore](/man/qmrestore)(1), [pct](/man/pct)(1), [qm](/man/qm)(1), [pvesm](/man/pvesm)(1)
+
+# RESOURCES
+
+```[Source code](https://git.proxmox.com/?p=pve-manager.git)```
+
+```[Documentation](https://pve.proxmox.com/pve-docs/vzdump.1.html)```
+
+<!-- verified: 2026-11-09 -->

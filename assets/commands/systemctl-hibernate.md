@@ -8,13 +8,21 @@ Hibernate system to disk
 
 ```systemctl hibernate```
 
-**Force** hibernation, ignoring inhibitors
+Hibernate, **ignoring inhibitor locks**
+
+```systemctl hibernate -i```
+
+**Force** hibernation if logind returns an error
 
 ```systemctl hibernate --force```
 
 Hibernate without sending a **wall message** to logged-in users
 
 ```systemctl hibernate --no-wall```
+
+**Show** what would be done
+
+```systemctl hibernate --dry-run```
 
 # SYNOPSIS
 
@@ -24,20 +32,28 @@ Hibernate without sending a **wall message** to logged-in users
 
 **systemctl hibernate** hibernates the system by saving the current state to disk (swap) and powering off. When the system is powered on again, it resumes from where it left off.
 
+The command triggers **hibernate.target** and is asynchronous: it returns once the operation is enqueued and does not wait for the hibernate and resume cycle to complete.
+
 # PARAMETERS
 
 **-f, --force**
-> Force hibernation even if inhibitors are present (programs blocking sleep). When specified twice, the operation is executed without contacting the login manager.
+> Ignore an error returned by systemd-logind and start the hibernate target directly
 
 **--no-wall**
 > Do not send wall message to logged-in users before hibernating
 
-**-i, --ignore-inhibitors**
-> Ignore inhibitor locks when performing the hibernate operation
+**--check-inhibitors=** _auto|yes|no_
+> Control the checking of inhibitor locks (default: auto)
+
+**-i**
+> Ignore inhibitor locks; shortcut for **--check-inhibitors=no**
+
+**--dry-run**
+> Just print what would be done
 
 # CAVEATS
 
-Requires sufficient swap space to hold the contents of RAM. The system must support hibernation at the hardware level. Some systems may need additional kernel parameters for hibernation to work properly.
+Requires sufficient swap space to hold the contents of RAM. The system must support hibernation at the hardware level. Some systems may need additional kernel parameters for hibernation to work properly. Hibernation can be disabled with **AllowHibernation=no** in **/etc/systemd/sleep.conf**.
 
 # HISTORY
 
@@ -46,3 +62,13 @@ Requires sufficient swap space to hold the contents of RAM. The system must supp
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-suspend](/man/systemctl-suspend)(1), [systemctl-hybrid-sleep](/man/systemctl-hybrid-sleep)(1), [systemctl-suspend-then-hibernate](/man/systemctl-suspend-then-hibernate)(1), [systemctl-poweroff](/man/systemctl-poweroff)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

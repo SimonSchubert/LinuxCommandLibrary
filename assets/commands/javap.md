@@ -32,6 +32,22 @@ disassemble Java class files
 
 ```javap -s [ClassName]```
 
+**Show static final constants**
+
+```javap -constants [ClassName]```
+
+**Disassemble a compiled file** by path
+
+```javap -c [path/to/ClassName.class]```
+
+**Inspect a class** inside a JAR by URL
+
+```javap -c jar:file:///[path/to/lib.jar]!/[com/example/ClassName.class]```
+
+**Inspect a JDK class** from a module
+
+```javap --module [java.base] [java.lang.String]```
+
 # SYNOPSIS
 
 **javap** [_options_] _class_...
@@ -39,7 +55,7 @@ disassemble Java class files
 # PARAMETERS
 
 _CLASS_
-> One or more class names or .class file paths to disassemble.
+> One or more classes to disassemble, given as a file name, a URL, or a fully qualified class name.
 
 **-c**
 > Disassemble bytecode instructions for each method.
@@ -66,18 +82,39 @@ _CLASS_
 > Print internal type signatures.
 
 **-sysinfo**
-> Show system information (path, size, date, MD5 hash) of the class.
+> Show system information (path, size, date, SHA-256 hash, MD5 on older JDKs) of the class.
 
-**-cp** _PATH_, **-classpath** _PATH_
+**-constants**
+> Show static final constants.
+
+**-verify**
+> Print additional class verification info.
+
+**-cp** _PATH_, **-classpath** _PATH_, **--class-path** _PATH_
 > Classpath for locating classes. Overrides CLASSPATH environment variable.
+
+**-m** _MODULE_, **--module** _MODULE_
+> Specify the module containing the classes to disassemble.
+
+**--module-path** _PATH_
+> Specify where to find application modules.
+
+**--system** _JDK_
+> Specify where to find system modules.
+
+**--multi-release** _VERSION_
+> Specify the version to select in multi-release JAR files.
 
 **-bootclasspath** _PATH_
 > Path from which to load bootstrap classes.
 
-**-J** _FLAG_
-> Pass a flag directly to the Java runtime system.
+**-J**_FLAG_
+> Pass a flag directly to the Java runtime system, with no space after **-J**.
 
-**--help**
+**-version**
+> Print release information.
+
+**--help**, **-help**, **-h**, **-?**
 > Display help information.
 
 # DESCRIPTION
@@ -88,7 +125,7 @@ The tool is useful for understanding compiled Java code, debugging compilation i
 
 # CAVEATS
 
-Shows compiled bytecode, not original source code. Understanding JVM bytecode instructions is helpful for interpreting **-c** output. Class names should use dot notation (com.example.MyClass), not file paths. Part of the JDK; requires a Java installation.
+Shows compiled bytecode, not original source code. Understanding JVM bytecode instructions is helpful for interpreting **-c** output. Not aware of multi-release JARs by default: the class path form shows the base entry, so use **--multi-release** or the URL form for a specific version. Part of the JDK; requires a Java installation.
 
 # HISTORY
 
@@ -97,3 +134,13 @@ Shows compiled bytecode, not original source code. Understanding JVM bytecode in
 # SEE ALSO
 
 [java](/man/java)(1), [javac](/man/javac)(1), [jar](/man/jar)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/openjdk/jdk)```
+
+```[Homepage](https://openjdk.org)```
+
+```[Documentation](https://docs.oracle.com/en/java/javase/25/docs/specs/man/javap.html)```
+
+<!-- verified: 2026-11-09 -->

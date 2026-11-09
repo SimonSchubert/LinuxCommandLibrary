@@ -1,12 +1,16 @@
 # TAGLINE
 
-IP address geolocation lookup via DNS
+IP address country lookup via DNS (obsolete, removed from c-ares)
 
 # TLDR
 
 Print the **country** where an IPv4 address or host is located
 
 ```acountry [example.com]```
+
+Look up **several** hosts or addresses
+
+```acountry [example.com] [192.0.2.1]```
 
 Print extra **debugging** output
 
@@ -18,13 +22,13 @@ Print more **verbose** information
 
 # SYNOPSIS
 
-**acountry** [_-d_] [_-v_] _hostname_or_ip_
+**acountry** [_-?hdv_] _host_|_addr_ ...
 
 # DESCRIPTION
 
-**acountry** prints the country where an IPv4 address or hostname is located. It works by performing DNS-based lookups against country code databases to determine the geographic origin of an IP address. The tool is part of the **c-ares** library utilities, which provide asynchronous DNS resolution capabilities.
+**acountry** printed the country where an IPv4 address or hostname is located. It resolved hostnames with the **c-ares** asynchronous DNS library, then queried the third-party **countries.nerd.dk** DNS zone with the reversed address and derived the country code from the answer. The tool was one of the small utilities shipped with c-ares.
 
-Unlike GeoIP database tools, acountry relies on DNS TXT record queries to specialized services that map IP ranges to country codes. This makes it lightweight and dependency-free but limited to country-level granularity.
+Because it relied only on DNS, it needed no local GeoIP database and was limited to country-level granularity.
 
 # PARAMETERS
 
@@ -34,14 +38,25 @@ Unlike GeoIP database tools, acountry relies on DNS TXT record queries to specia
 **-v**
 > Print more verbose information
 
+**-h**, **-?**
+> Display help
+
 # CAVEATS
 
-Geographic IP location is approximate and may not reflect the actual physical location of the server or user. IP addresses can be reassigned or routed through different countries.
+The **countries.nerd.dk** service has been decommissioned, so acountry can no longer return results even where an old binary is still installed. No comparable DNS service exists. Use a GeoIP database or web service instead.
 
 # HISTORY
 
-Part of the **c-ares** asynchronous DNS resolver library tools.
+Part of the **c-ares** asynchronous DNS resolver library tools since 2007. It stopped being built in **c-ares 1.20.0** (2023) after nerd.dk went offline, and the source and manual page were removed in **c-ares 1.28.0** (2024).
 
 # SEE ALSO
 
 [ahost](/man/ahost)(1), [adig](/man/adig)(1), [host](/man/host)(1), [dig](/man/dig)(1), [nslookup](/man/nslookup)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/c-ares/c-ares)```
+
+```[Homepage](https://c-ares.org)```
+
+<!-- verified: 2026-11-09 -->

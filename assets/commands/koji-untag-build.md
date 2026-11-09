@@ -24,6 +24,10 @@ Untag all except **latest version**
 
 ```koji untag-build [tag] [nvr] --test```
 
+Untag all but the latest build of **every package** in a tag
+
+```koji untag-build [tag] --non-latest --force```
+
 Untag with **verbose** output
 
 ```koji untag-build [tag] [nvr] --verbose```
@@ -50,6 +54,9 @@ Untag with **verbose** output
 **-v**, **--verbose**
 > Print verbose output.
 
+**--force**
+> Force the operation. With **--non-latest**, allows omitting the package names to act on the whole tag.
+
 **-h**, **--help**
 > Display help information.
 
@@ -60,3 +67,13 @@ Untagging builds may affect repository contents and downstream consumers. Use `-
 # SEE ALSO
 
 [koji](/man/koji)(1), [koji-tag-build](/man/koji-tag-build)(1), [koji-build](/man/koji-build)(1)
+
+# RESOURCES
+
+```[Source code](https://forge.fedoraproject.org/koji/koji)```
+
+```[Homepage](https://koji.build/)```
+
+```[Documentation](https://docs.pagure.org/koji/)```
+
+<!-- verified: 2026-11-09 -->

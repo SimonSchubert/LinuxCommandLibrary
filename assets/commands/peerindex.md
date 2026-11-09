@@ -1,61 +1,71 @@
 # TAGLINE
 
-Extract and analyze peer information from BitTorrent files
+Inspect the Peer Index Table of MRT BGP routing dumps
 
 # TLDR
 
-**Analyze torrent peer data**
+**List all peers** in an MRT RIB dump
 
-```peerindex [file.torrent]```
+```peerindex [path/to/rib.bz2]```
 
-**Show verbose output**
+**List only peers referenced** by at least one RIB entry
 
-```peerindex -v [file.torrent]```
+```peerindex -r [path/to/rib.bz2]```
 
-**Export peer list**
+**Write the peer list to a file**
 
-```peerindex -o [peers.txt] [file.torrent]```
+```peerindex -o [peers.txt] [path/to/rib.gz]```
 
-**Analyze multiple torrents**
+**Process several dumps** at once
 
-```peerindex [file1.torrent] [file2.torrent]```
+```peerindex -r [path/to/rib.*.gz]```
+
+**Read uncompressed MRT data** from standard input
+
+```cat [path/to/rib.mrt] | peerindex```
 
 # SYNOPSIS
 
-**peerindex** [_-v_] [_-o file_] [_options_] _torrent-files_
+**peerindex** [_options_] [_files_...]
 
 # PARAMETERS
 
-**-v**, **--verbose**
-> Verbose output.
+_FILES_
+> MRT RIB dumps, plain or compressed with gzip, bzip2 or xz. With no files, or with **-**, uncompressed MRT data is read from standard input.
 
-**-o**, **--output** _FILE_
-> Output file.
+**-o** _FILE_
+> Write output to _FILE_ instead of standard output. If given multiple times, the last one is used.
 
-**-q**, **--quiet**
-> Minimal output.
+**-r**, **--only-refs**
+> Only print peers referenced by RIB entries.
 
-**-h**, **--help**
-> Show help.
+**-h**, **-?**, **--help**
+> Print a short help message.
 
 # DESCRIPTION
 
-**peerindex** extracts and analyzes peer information from BitTorrent files. It shows tracker URLs and embedded peer data.
+**peerindex** reads Multi-Threaded Routing Toolkit (MRT) Routing Information Base dumps, as published by route collecting projects, and prints the PEER INDEX TABLE records of the TABLE_DUMPV2 format. It is part of **µbgpsuite**.
 
-Torrent files may contain cached peer addresses. This reveals swarm participants without connecting to trackers.
+Each peer is printed on one line as `peer-address peer-asn|ASN32BIT`. The ASN32BIT field is 1 if the peer AS number was encoded in 32 bits and 0 otherwise. A value of 0 only describes how the entry was encoded, not whether the peer supports 32-bit AS numbers.
 
-Tracker analysis shows all announce URLs. Multi-tracker setups display tier information.
-
-The tool aids in understanding torrent structure. Useful for network forensics and research.
+The compression format is chosen from the file extension, case-insensitively. Files with an unknown or missing extension are treated as uncompressed.
 
 # CAVEATS
 
-Peer data may be outdated. Not all torrents contain peer caches. Analysis is passive and doesn't contact network.
+Multiple PEER INDEX TABLES are concatenated in the output, so the same peer may appear more than once when several dumps are processed.
+
+Corruption is tolerated where possible. If it cannot be tolerated, the whole dump is dropped with a diagnostic on standard error and processing moves to the next file. The exit status is greater than 0 if any errors were detected.
 
 # HISTORY
 
-**peerindex** is part of BitTorrent analysis toolsets used for network research and forensics.
+**peerindex** was written by **Lorenzo Cogotti** as part of µbgpsuite. It conforms to RFC 6396 and RFC 8050.
 
 # SEE ALSO
 
-[transmission-show](/man/transmission-show)(1), [aria2c](/man/aria2c)(1), [btshowmetainfo](/man/btshowmetainfo)(1)
+[bgpgrep](/man/bgpgrep)(1), [awk](/man/awk)(1), [grep](/man/grep)(1)
+
+# RESOURCES
+
+```[Source code](https://codeberg.org/1414codeforge/ubgpsuite)```
+
+<!-- verified: 2026-11-09 -->

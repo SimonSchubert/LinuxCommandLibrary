@@ -20,13 +20,13 @@ Upgrade the operating system to the latest release
 
 ```sudo do-release-upgrade -c```
 
-**Run upgrade in server mode with text frontend**
+**Run a non-interactive upgrade**
 
-```sudo do-release-upgrade -m server -f DistUpgradeViewText```
+```sudo do-release-upgrade -f DistUpgradeViewNonInteractive```
 
-**Test upgrade in a sandbox without modifying the system**
+**Keep third-party repositories enabled** during the upgrade
 
-```sudo do-release-upgrade -s```
+```sudo do-release-upgrade --allow-third-party```
 
 # SYNOPSIS
 
@@ -37,38 +37,58 @@ Upgrade the operating system to the latest release
 **-h**, **--help**
 > Show help message and exit.
 
+**-V**, **--version**
+> Show version and exit.
+
 **-d**, **--devel-release**
 > If using the latest supported release, upgrade to the development release.
 
 **-p**, **--proposed**
-> Try upgrading using the upgrader from ubuntu-proposed.
+> Try upgrading using the upgrader from the -proposed pocket.
 
 **-c**, **--check-dist-upgrade-only**
-> Check if a new release is available and exit without upgrading.
-
-**-m** _MODE_, **--mode** _MODE_
-> Run in a special upgrade mode. Supported modes are "desktop" and "server".
+> Check only if a new release is available and report the result via the exit code.
 
 **-f** _FRONTEND_, **--frontend** _FRONTEND_
-> Run the specified frontend (DistUpgradeViewGtk3, DistUpgradeViewText, DistUpgradeViewNonInteractive).
+> Run the specified frontend (default: DistUpgradeViewText).
 
-**-s**, **--sandbox**
-> Test upgrade with a sandbox aufs overlay.
+**--allow-third-party**
+> Try the upgrade with third-party mirrors and repositories enabled instead of commenting them out.
+
+**-q**, **--quiet**
+> Reduce output.
+
+**--data-dir** _DIR_
+> Directory that contains the data files.
+
+**-m** _MODE_, **--mode** _MODE_
+> Upgrade mode, "desktop" or "server". Ubuntu 24.04 and earlier only.
+
+**-e** _ENV_, **--env** _ENV_
+> Comma-separated list of environment variables (VAR1=VALUE1,VAR2=VALUE2) to set during the upgrade. Ubuntu 24.04 and earlier only.
 
 # DESCRIPTION
 
-**do-release-upgrade** upgrades Ubuntu to a new release version. It handles the complex process of updating sources, upgrading packages, and resolving conflicts. It is the recommended command for upgrading servers and systems without a graphical environment, or when upgrading over a remote connection.
+**do-release-upgrade** upgrades Ubuntu to a new release version. It handles the complex process of updating sources, upgrading packages, and resolving conflicts. It is the preferred command for upgrading servers and systems without a graphical environment, or when upgrading over a remote connection.
 
-By default, upgrades are only offered to the next LTS release (for LTS users) or the next release (for non-LTS users). The **-d** flag is needed to upgrade to a development release.
+Which releases are offered is controlled by the **Prompt** setting in **/etc/update-manager/release-upgrades**: **lts** offers only LTS releases, **normal** offers every release, and **never** disables upgrades. The **-d** flag is needed to upgrade to a development release.
 
 # CAVEATS
 
-Ubuntu-specific. Backup important data before upgrading. May take significant time. Third-party repositories are disabled during upgrade and may cause issues. Run from a terminal multiplexer (screen or tmux) when upgrading over SSH to avoid disconnection problems.
+Ubuntu-specific. Backup important data before upgrading. May take significant time. Third-party repositories are disabled during upgrade unless **--allow-third-party** is used, and may cause issues. Run from a terminal multiplexer (screen or tmux) when upgrading over SSH to avoid disconnection problems. **-d** and **-p** are mutually exclusive. The former **-s**/**--sandbox** option no longer exists.
 
 # HISTORY
 
-**do-release-upgrade** is part of the **ubuntu-release-upgrader** package, the standard tool for performing Ubuntu release upgrades since at least Ubuntu 8.04 (Hardy Heron). It replaced manual sources.list editing as the recommended upgrade method.
+**do-release-upgrade** is part of the **ubuntu-release-upgrader-core** package, split out of **update-manager**. It replaced manual sources.list editing as the recommended upgrade method.
 
 # SEE ALSO
 
 [apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [update-manager](/man/update-manager)(8), [screen](/man/screen)(1)
+
+# RESOURCES
+
+```[Source code](https://git.launchpad.net/ubuntu-release-upgrader)```
+
+```[Documentation](https://manpages.ubuntu.com/manpages/noble/man8/do-release-upgrade.8.html)```
+
+<!-- verified: 2026-11-09 -->

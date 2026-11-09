@@ -20,9 +20,17 @@ Remove shell variables or functions
 
 ```unset -v [VARIABLE]```
 
+Remove an **array element** (bash)
+
+```unset '[array][index]'```
+
+Unset a **nameref** itself, not its target (bash)
+
+```unset -n [ref]```
+
 # SYNOPSIS
 
-**unset** [_-f_] [_-v_] _name_ ...
+**unset** [_-f_] [_-v_] [_-n_] _name_ ...
 
 # PARAMETERS
 
@@ -30,7 +38,7 @@ Remove shell variables or functions
 > Unset function.
 
 **-v**
-> Unset variable (default).
+> Treat each name as a variable.
 
 **-n**
 > Unset the nameref variable itself rather than the variable it references.
@@ -40,7 +48,7 @@ _name_
 
 # DESCRIPTION
 
-**unset** is a shell builtin that removes variables and function definitions from the current shell environment. By default it removes variables, but with the **-f** flag it removes function definitions instead.
+**unset** is a shell builtin that removes variables and function definitions from the current shell environment. By default it removes variables; in bash, if no variable has the given name, a function of that name is removed instead. With the **-f** flag it removes function definitions.
 
 Unsetting a variable removes it completely from the environment, unlike setting it to an empty string which leaves the variable defined but empty. This distinction matters for scripts that check whether a variable exists versus whether it has a value. Unsetting exported variables also removes them from the environment inherited by child processes.
 

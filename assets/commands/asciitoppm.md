@@ -1,36 +1,25 @@
 # TAGLINE
 
-Convert ASCII text to PPM color image
+Not an existing Netpbm program, use asciitopgm and pgmtoppm
 
 # TLDR
 
-**Convert ASCII text file to a PPM image**
+Convert ASCII art to a **PPM** image with the real Netpbm tools
 
-```asciitoppm < [ascii.txt] > [output.ppm]```
+```asciitopgm [height] [width] < [ascii.txt] | pgmtoppm [white] > [output.ppm]```
 
-**Convert using a specific color definition file**
+Render the result in a **color**
 
-```asciitoppm -d [colorfile] < [ascii.txt] > [output.ppm]```
+```asciitopgm [height] [width] < [ascii.txt] | pgmtoppm [red] > [output.ppm]```
 
 # SYNOPSIS
 
-**asciitoppm** [_options_] [_height_ _width_] < _input_ > _output_
+**asciitopgm** _height_ _width_ [_asciifile_] | **pgmtoppm** _colorspec_
 
 # DESCRIPTION
 
-**asciitoppm** converts ASCII text to a PPM (Portable Pixmap) color image. Each character in the input is mapped to a colored pixel, producing a visual representation of the text content.
-
-Unlike **asciitopgm** which produces grayscale output, **asciitoppm** generates full-color images. The input is read from standard input and written to standard output. It is part of the Netpbm image processing toolkit.
-
-# PARAMETERS
-
-**-d** _colorfile_
-> Use the specified color definition file to map characters to colors.
-
-# HISTORY
-
-Part of the Netpbm toolkit for image processing.
+Netpbm does not contain a program called **asciitoppm**, and no other upstream project providing it could be found. The closest real program is **asciitopgm**, which converts ASCII art to a PGM grayscale image. Its output can be piped into **pgmtoppm** to obtain a PPM image.
 
 # SEE ALSO
 
-[asciitopgm](/man/asciitopgm)(1), [ppmtopgm](/man/ppmtopgm)(1), [pbmtoascii](/man/pbmtoascii)(1), [ppmtoascii](/man/ppmtoascii)(1)
+[asciitopgm](/man/asciitopgm)(1), [pgmtoppm](/man/pgmtoppm)(1), [ppmtoascii](/man/ppmtoascii)(1), [pbmtoascii](/man/pbmtoascii)(1)

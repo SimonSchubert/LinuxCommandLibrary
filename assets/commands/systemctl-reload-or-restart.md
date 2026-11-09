@@ -32,6 +32,9 @@ For **user** units
 **--user**
 > Operate on user units
 
+**--marked**
+> Deprecated alias of **systemctl enqueue-marked**
+
 # DESCRIPTION
 
 **systemctl reload-or-restart** reloads one or more units if they support it. If not, it stops and then starts them instead. If the units are not running yet, they will be started.
@@ -49,3 +52,13 @@ The **reload-or-restart** subcommand provides a safe way to apply configuration 
 # SEE ALSO
 
 [systemctl-reload](/man/systemctl-reload)(1), [systemctl-restart](/man/systemctl-restart)(1), [systemctl-try-reload-or-restart](/man/systemctl-try-reload-or-restart)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

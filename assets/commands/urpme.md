@@ -34,7 +34,10 @@ Remove package and clean up **orphaned dependencies**
 > Remove orphaned packages (no longer needed as dependencies).
 
 **--auto**
-> Automatically confirm removal without prompting.
+> Automatically select a package in choices and remove without prompting.
+
+**--keep-kernels**
+> Do not remove orphan kernels when using **--auto-orphans**.
 
 **--test**
 > Simulate removal without actually changing the system.
@@ -45,8 +48,17 @@ Remove package and clean up **orphaned dependencies**
 **--noscripts**
 > Do not execute package scriptlets during removal.
 
+**--force**
+> Force invocation even if some packages do not exist.
+
+**--root** _dir_
+> Use another root for rpm removal.
+
+**--urpmi-root** _dir_
+> Use another root for the urpmi database and rpm removal.
+
 **-a**
-> Remove all matching packages if name is ambiguous.
+> Select all packages matching the expression.
 
 **-v, --verbose**
 > Verbose output.
@@ -59,8 +71,16 @@ Part of the urpmi package management suite for Mageia (formerly Mandriva Linux).
 
 # CAVEATS
 
-Mageia-specific tool. Use --auto-orphans carefully as it may remove packages you still need indirectly. Requires root privileges for actual removal. Use --test first to preview changes.
+Mageia-specific tool. Use --auto-orphans carefully as it may remove packages you still need indirectly. Requires root privileges for actual removal; --test does not. Use --test first to preview changes. Removing a package that would break the system is refused.
 
 # SEE ALSO
 
 [urpmi](/man/urpmi)(8), [urpmq](/man/urpmq)(8), [urpmi.update](/man/urpmi.update)(8), [rpm](/man/rpm)(8)
+
+# RESOURCES
+
+```[Source code](https://gitweb.mageia.org/software/rpm/urpmi/)```
+
+```[Documentation](https://wiki.mageia.org/en/URPMI)```
+
+<!-- verified: 2026-11-09 -->

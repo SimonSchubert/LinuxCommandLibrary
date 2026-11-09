@@ -12,6 +12,10 @@ Manage TeX Live package repositories
 
 ```tlmgr repository add [url] [tag]```
 
+**List packages** in a configured repository
+
+```tlmgr repository list [tag]```
+
 **Remove repository**
 
 ```tlmgr repository remove [url]```
@@ -60,3 +64,12 @@ The **set** action replaces all previously configured repositories. One reposito
 
 [tlmgr-update](/man/tlmgr-update)(1), [tlmgr](/man/tlmgr)(1), [tlmgr-conf](/man/tlmgr-conf)(1), [tlmgr-install](/man/tlmgr-install)(1)
 
+# RESOURCES
+
+```[Homepage](https://www.tug.org/texlive/)```
+
+```[Documentation](https://www.tug.org/texlive/doc/tlmgr.html)```
+
+```[Source code](https://www.tug.org/texlive/svn/)```
+
+<!-- verified: 2026-11-09 -->

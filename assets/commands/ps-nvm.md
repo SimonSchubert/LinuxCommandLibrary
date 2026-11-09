@@ -4,58 +4,94 @@ Node.js version manager for PowerShell
 
 # TLDR
 
-**List Node versions (PowerShell)**
+**Install the module** from the PowerShell Gallery
 
-```ps-nvm list```
+```Install-Module nvm```
 
-**Install Node version**
+**List installed Node versions**
 
-```ps-nvm install [18.0.0]```
+```Get-NodeVersions```
 
-**Use specific version**
+**List versions available** to download
 
-```ps-nvm use [18.0.0]```
+```Get-NodeVersions -Remote -Filter "[>=18.0.0 <21.0.0]"```
 
-**Set default version**
+**Install a Node version** or semver range
 
-```ps-nvm default [18.0.0]```
+```Install-NodeVersion [18]```
+
+**Use a version** in the current session
+
+```Set-NodeVersion [18]```
+
+**Set the default version** for the current user (Windows only)
+
+```Set-NodeVersion -Persist User [18]```
+
+**Install the version** from .nvmrc or package.json
+
+```Install-NodeVersion```
+
+**Remove a version**
+
+```Remove-NodeVersion [v18.0.0]```
 
 # SYNOPSIS
 
-**ps-nvm** _command_ [_version_]
+**Install-NodeVersion** [_-Version_ _range_] [_-Force_] [_-Architecture_ _arch_] [_-Proxy_ _url_]
+
+**Set-NodeVersion** [_-Version_ _range_] [_-SemVer_ _version_] [_-Persist_ _User|Machine_]
+
+**Get-NodeVersions** [_-Remote_] [_-Filter_ _range_]
+
+**Remove-NodeVersion** _-Version_ _version_
+
+**Get-NodeInstallLocation**
+
+**Set-NodeInstallLocation** _-Path_ _path_
 
 # PARAMETERS
 
-**list**
-> List installed versions.
+**Install-NodeVersion**
+> Download and install one or more versions. **-Force** reinstalls, **-Architecture** selects Arm, Arm64, X64, X86 or AMD64, **-Proxy** sets an HTTP proxy.
 
-**install** _VERSION_
-> Install Node version.
+**Set-NodeVersion**
+> Activate a version in PATH. **-Persist** also writes it to the permanent User or Machine path.
 
-**use** _VERSION_
-> Switch to version.
+**Get-NodeVersions**
+> List installed versions, or downloadable ones with **-Remote**. **-Filter** takes a semver range.
 
-**default** _VERSION_
-> Set default version.
+**Remove-NodeVersion**
+> Remove an installed version and its npm modules.
 
-**uninstall** _VERSION_
-> Remove version.
+**Get-NodeInstallLocation**
+> Show the directory Node versions are installed into.
+
+**Set-NodeInstallLocation** _-Path_ _path_
+> Override the install directory (absolute path).
 
 # DESCRIPTION
 
-**ps-nvm** is a Node.js version manager designed natively for PowerShell on Windows. It allows installing, switching between, and managing multiple Node.js versions on a single system, similar to nvm on Unix but built specifically for the PowerShell environment.
+**ps-nvm** is a PowerShell module for installing and switching between multiple Node.js versions, inspired by the Bash **nvm** tool. It is published on the PowerShell Gallery as **nvm** and provides cmdlets rather than a **ps-nvm** executable.
 
-The tool downloads and manages Node.js binaries, adjusting the system PATH to point to the selected version. A default version can be set to persist across new PowerShell sessions.
+Versions accept npm-style semver ranges such as **^6.0.0**, **6** or **>=6.0.0 <9.0.0**. When no version is given, the cmdlets read **.nvmrc** in the current directory, then the **engines.node** field of **package.json**. Returned versions are SemVer objects that can be compared with **-gt** and **-lt**.
 
 # CAVEATS
 
-PowerShell only; Windows-specific alternative to nvm. Installed as a PowerShell module. Requires administrative privileges for some operations.
+Works on Windows, macOS and Linux, but **-Persist** is Windows only. The default install path is relative to the module, which can hit the Windows path length limit; use **Set-NodeInstallLocation** to move it.
 
 # HISTORY
 
-ps-nvm was created for **PowerShell** Node.js version management.
+ps-nvm was created by **Aaron Powell** as a PowerShell counterpart to creationix's **nvm**.
 
 # SEE ALSO
 
 [nvm](/man/nvm)(1), [node](/man/node)(1), [volta](/man/volta)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/aaronpowell/ps-nvm)```
+
+```[Documentation](https://github.com/aaronpowell/ps-nvm/blob/master/.docs/reference.md)```
+
+<!-- verified: 2026-11-09 -->

@@ -12,9 +12,9 @@ Command-line interface to the Calibre ebook database
 
 ```calibredb add [book.epub]```
 
-**Remove book by ID**
+**Remove books by ID** (comma-separated, ranges allowed)
 
-```calibredb remove [23]```
+```calibredb remove [23,34,57-85]```
 
 **Search for books**
 
@@ -36,13 +36,21 @@ Command-line interface to the Calibre ebook database
 
 ```calibredb add_format [42] [book.mobi]```
 
+**List books as JSON**, with selected fields
+
+```calibredb list --for-machine -f [title,authors,formats]```
+
+**Operate on a remote library** through a Content server
+
+```calibredb list --with-library [http://localhost:8080/#mylibrary] --username [user] --password [pass]```
+
 # SYNOPSIS
 
 **calibredb** _command_ [_options_] [_arguments_]
 
 # DESCRIPTION
 
-**calibredb** is the command-line interface to the Calibre ebook database. It manages ebook libraries, adds/removes books, modifies metadata, and can connect to local or remote Calibre Content servers.
+**calibredb** is the command-line interface to the Calibre ebook database. It manages ebook libraries, adds/removes books, modifies metadata, and can connect to local or remote Calibre Content servers. Because it can modify libraries, a Content server must have authentication configured, or local write access enabled with **--enable-local-write**, before calibredb can make changes through it.
 
 # COMMANDS
 
@@ -53,7 +61,7 @@ Command-line interface to the Calibre ebook database
 > Import book files into the library.
 
 **remove**
-> Remove books by ID.
+> Remove books by ID. Uses the trash bin unless **--permanent** is given.
 
 **search**
 > Query library using calibre's search syntax.
@@ -97,31 +105,43 @@ Command-line interface to the Calibre ebook database
 **fts_search**
 > Perform full-text searches across library content.
 
+**list_categories**
+> Report on the categories in the database.
+
+**saved_searches**
+> List, add, or remove saved searches.
+
+**add_custom_column**, **custom_columns**, **remove_custom_column**, **set_custom**
+> Manage custom columns and their values.
+
+**virtual_libraries**
+> List, add, rename, or remove virtual libraries.
+
+**notes**, **items**, **annotations**, **data_files**, **trash**
+> Manage notes, category items, annotations, extra data files, and the trash bin.
+
 # PARAMETERS
 
-**--library-path** _path_
-> Path to Calibre library (directory containing metadata.db).
-
-**--with-library** _url_
-> Connect to a Calibre Content server (e.g., http://localhost:8080).
+**--with-library**, **--library-path** _path_|_url_
+> Path to the calibre library, or the URL of a Content server in the form http://hostname:port/#library_id. Use **-** as library_id to list available libraries.
 
 **--username** _user_
 > Username for Content server authentication.
 
 **--password** _pass_
-> Password for Content server authentication.
+> Password for Content server authentication. Use **<stdin>** or **<f:/path/to/file>** to read it instead of passing it on the command line.
 
 **--timeout** _seconds_
 > Network connection timeout in seconds (default: 120).
 
 **-f**, **--field** _name:value_
-> Set metadata field (used with set_metadata).
+> Set metadata field (used with set_metadata; repeatable).
 
 **--as-opf**
-> Output metadata as OPF XML.
+> Output metadata as OPF XML (used with show_metadata).
 
 **--for-machine**
-> Output in JSON format (machine-readable).
+> Output in JSON format (used with list and other listing commands).
 
 # CAVEATS
 
@@ -134,3 +154,13 @@ Book IDs can be found using the **list** or **search** commands. Arguments with 
 # SEE ALSO
 
 [calibre](/man/calibre)(1), [ebook-convert](/man/ebook-convert)(1), [ebook-meta](/man/ebook-meta)(1), [calibre-server](/man/calibre-server)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/kovidgoyal/calibre)```
+
+```[Homepage](https://calibre-ebook.com/)```
+
+```[Documentation](https://manual.calibre-ebook.com/generated/en/calibredb.html)```
+
+<!-- verified: 2026-11-09 -->

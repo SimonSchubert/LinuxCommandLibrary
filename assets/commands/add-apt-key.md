@@ -22,7 +22,7 @@ Add GPG keys to the APT keyring
 
 # DESCRIPTION
 
-**add-apt-key** requests the specified GPG key from a public keyserver and inserts it into the APT keyring so that archives signed with that key will be trusted. The default keyserver can be configured in /etc/default/add-apt-key.
+**add-apt-key** requests the specified GPG key from a public keyserver and inserts it into the APT keyring so that archives signed with that key will be trusted. The default keyserver is configured in /etc/default/add-apt-key.
 
 # PARAMETERS
 
@@ -50,8 +50,14 @@ _keyid_
 
 # CAVEATS
 
-This tool may not be available on all distributions. The modern approach is to place repository keys in /etc/apt/keyrings/ and reference them directly in source list files with the signed-by option.
+The **add-apt-key** package is Ubuntu-specific and listed in the Ubuntu manpages only up to 22.04. It belongs to the **apt-key** keyring model, which is deprecated. The modern approach is to place repository keys in /etc/apt/keyrings/ and reference them directly in source list files with the signed-by option.
 
 # SEE ALSO
 
 [apt-key](/man/apt-key)(8), [gpg](/man/gpg)(1), [apt](/man/apt)(8)
+
+# RESOURCES
+
+```[Documentation](https://manpages.ubuntu.com/manpages/jammy/man8/add-apt-key.8.html)```
+
+<!-- verified: 2026-11-09 -->

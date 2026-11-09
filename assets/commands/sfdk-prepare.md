@@ -8,22 +8,23 @@ Prepare sources for Sailfish OS builds
 
 ```sfdk prepare```
 
-**Prepare with verbose output**
+**Prepare for a specific target**
 
-```sfdk prepare --verbose```
+```sfdk config target=[target_name] && sfdk prepare```
+
+**Prepare without recording changes** in version control
+
+```sfdk -c no-vcs-apply prepare```
 
 # SYNOPSIS
 
-**sfdk prepare** [_options_]
-
-# PARAMETERS
-
-**--verbose**
-> Enable verbose output during preparation.
+**sfdk prepare**
 
 # DESCRIPTION
 
-**sfdk prepare** prepares source files for building Sailfish OS packages. It executes the `%prep` phase of the RPM spec file, which typically involves unpacking source archives, applying patches, and generating any auto-configured files. This is the first step in the RPM build process before actual compilation.
+**sfdk prepare** runs rpmbuild and executes just the `%prep` section of the RPM spec file, which typically involves unpacking source archives, applying patches, and generating any auto-configured files. This is usually done before actual compilation.
+
+When the source tree is managed with Git, the only supported version control system, changes made by `%prep` are recorded as new commits: one for each applied patch and a final one for other changes. This keeps them separate from your own changes. Patch changes can be propagated back with the **scrape** command. The **no-vcs-apply** configuration option suppresses this behavior.
 
 Part of the **Sailfish SDK** (`sfdk`) toolchain for developing Sailfish OS applications and packages.
 
@@ -33,5 +34,14 @@ Requires a properly configured Sailfish SDK build environment and a valid RPM sp
 
 # SEE ALSO
 
-[sfdk](/man/sfdk)(1), [sfdk-build-init](/man/sfdk-build-init)(1)
+[sfdk](/man/sfdk)(1), [sfdk-build-init](/man/sfdk-build-init)(1), [sfdk-apply](/man/sfdk-apply)(1), [sfdk-make](/man/sfdk-make)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/sailfishos/sailfish-qtcreator)```
+
+```[Homepage](https://sailfishos.org/)```
+
+```[Documentation](https://docs.sailfishos.org/Tools/Sailfish_SDK/)```
+
+<!-- verified: 2026-11-09 -->

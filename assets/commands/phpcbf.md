@@ -28,6 +28,18 @@ PHP Code Beautifier and Fixer
 
 ```phpcbf --extensions=[php,inc] [path/to/src/]```
 
+**Skip paths matching patterns** and show progress
+
+```phpcbf -p --ignore=[*/vendor/*,*/tests/*] [path/to/src/]```
+
+**Fix files in parallel**
+
+```phpcbf --parallel=[8] [path/to/src/]```
+
+**List installed coding standards**
+
+```phpcbf -i```
+
 # SYNOPSIS
 
 **phpcbf** [_options_] [_files_...]
@@ -38,7 +50,7 @@ _FILES_
 > Files or directories to fix.
 
 **--standard=**_NAME_
-> Coding standard to use (e.g., PSR1, PSR2, PSR12, Squiz, PEAR).
+> Name of or path to the coding standard (e.g., PSR1, PSR2, PSR12, Squiz, PEAR). Can be a comma-separated list. Without it, a [.]phpcs.xml[.dist] ruleset is searched for in the current directory and those above it.
 
 **--sniffs=**_LIST_
 > Comma-separated list of specific sniffs to apply.
@@ -47,19 +59,31 @@ _FILES_
 > Comma-separated list of sniffs to exclude.
 
 **--extensions=**_LIST_
-> Comma-separated file extensions to fix (default: php,inc). Can include type: module/php,es/js.
+> Comma-separated file extensions to fix (default: php,inc).
+
+**--ignore=**_PATTERNS_
+> Comma-separated patterns of files and directories to skip.
+
+**--parallel=**_N_
+> Number of files to process simultaneously (default: 1). Needs the PHP PCNTL extension.
+
+**-l**
+> Process the local directory only, without recursion.
+
+**-n**
+> Do not include warnings, only errors.
 
 **--suffix=**_SUFFIX_
 > Write fixed files with this suffix instead of overwriting originals.
 
-**--no-patch**
-> Use PHP for file replacement instead of diff/patch commands.
-
-**--diff**
-> Generate a diff of changes instead of applying them.
-
 **-p**
 > Show progress during fixing.
+
+**-q**
+> Quiet mode, disables progress and verbose output.
+
+**-i**
+> List installed coding standards.
 
 **--help**
 > Display help information.
@@ -68,11 +92,33 @@ _FILES_
 
 **phpcbf** (PHP Code Beautifier and Fixer) automatically corrects coding standard violations detected by phpcs. It is the companion fixer tool in the **PHP_CodeSniffer** package.
 
-The tool modifies files in-place by default, applying fixes for violations that have an automatic fixer defined. Not all phpcs violations are auto-fixable; phpcbf will only fix those with corresponding fixer implementations. Use **--suffix** to write fixed copies instead of overwriting originals, or **--diff** to generate a patch without modifying files.
+The tool modifies files in-place by default, applying fixes for violations that have an automatic fixer defined. Not all phpcs violations are auto-fixable; phpcbf will only fix those with corresponding fixer implementations. Use **--suffix** to write fixed copies instead of overwriting originals. To preview changes without modifying files, run **phpcs --report=diff**.
 
 # CAVEATS
 
-Part of PHP_CodeSniffer. Not all coding standard violations are automatically fixable. Always review changes after fixing, especially on first use with a codebase.
+Part of PHP_CodeSniffer. Not all coding standard violations are automatically fixable. Always review changes after fixing, especially on first use with a codebase. Version 4.0 and later only process PHP files; JS and CSS scanning and the _ext/tokenizer_ form of **--extensions** are no longer supported.
+
+# EXIT CODES
+
+Since version 4.0 the exit code is a bitmask, so values can combine. Earlier versions use different codes.
+
+**0**
+> No issues remain.
+
+**1**
+> Auto-fixable issues remain.
+
+**2**
+> Issues that cannot be auto-fixed remain.
+
+**4**
+> A file failed to fix, typically due to conflicting sniffs.
+
+**16**
+> Processing error, such as an invalid option or ruleset.
+
+**64**
+> Requirements to run are not met.
 
 # HISTORY
 
@@ -82,3 +128,10 @@ PHPCBF is part of **PHP_CodeSniffer**, originally by **Greg Sherwood** (Squiz La
 
 [phpcs](/man/phpcs)(1), [php-cs-fixer](/man/php-cs-fixer)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/PHPCSStandards/PHP_CodeSniffer)```
+
+```[Documentation](https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki)```
+
+<!-- verified: 2026-11-09 -->

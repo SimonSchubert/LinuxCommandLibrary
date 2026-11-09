@@ -10,7 +10,11 @@ Static Composer repository generator
 
 **Build specific packages**
 
-```satis build [satis.json] [output-dir] [package1] [package2]```
+```satis build [satis.json] [output-dir] [vendor/package1] [vendor/package2]```
+
+**Update only one repository** by URL
+
+```satis build [satis.json] [output-dir] --repository-url [https://git.example.com/vendor/repo.git]```
 
 **Build without user interaction** (e.g. for CI)
 
@@ -22,9 +26,13 @@ Static Composer repository generator
 
 **Add repository**
 
-```satis add [https://packagist.org] [satis.json]```
+```satis add [https://git.example.com/vendor/repo.git] [satis.json]```
 
-**Purge old files**
+**Remove repository**
+
+```satis remove [https://git.example.com/vendor/repo.git] [satis.json]```
+
+**Purge old archives**
 
 ```satis purge [satis.json] [output-dir]```
 
@@ -34,25 +42,49 @@ Static Composer repository generator
 
 # PARAMETERS
 
-**build**
-> Build repository.
+**build** [_file_] [_output-dir_] [_packages_...]
+> Build the repository. The file defaults to ./satis.json.
 
-**init**
-> Create config.
+**init** [_file_]
+> Create a configuration file. Accepts **--name** and **--homepage**.
 
-**add**
-> Add repository.
+**add** _url_ [_file_]
+> Add a repository URL to the configuration. Accepts **--type** (default: vcs) and **--name**.
 
-**purge**
-> Remove old files.
+**remove** _url_ [_file_]
+> Remove a repository URL from the configuration.
 
-**-n**
+**purge** [_file_] [_output-dir_] [_dry-run_]
+> Delete archives that are no longer referenced.
+
+**--repository-url** _URL_
+> Only update the repository at the given URL (**build**, repeatable).
+
+**--repository-strict**
+> Also apply the repository filter when resolving dependencies (**build**).
+
+**--branch** _BRANCH_
+> Only update the given branch or version range of the specified packages (**build**).
+
+**--no-html-output**
+> Turn off the HTML view (**build**).
+
+**--skip-errors**
+> Skip download or archive errors (**build**).
+
+**--stats**
+> Display the download progress bar (**build**).
+
+**--minify**
+> Minify the output (**build**).
+
+**-n**, **--no-interaction**
 > No interaction.
 
 **-v**
 > Verbose output.
 
-**-q**
+**-q**, **--quiet**
 > Quiet output.
 
 # DESCRIPTION
@@ -63,7 +95,7 @@ The generated repository acts as a local mirror and cache for both private and p
 
 # CAVEATS
 
-Requires Composer. Disk space for packages. Rebuild for updates.
+Requires PHP and Composer, and disk space for packages. Rebuild for updates. When run from source the command is **php bin/satis**; a **composer/satis** Docker image is also available. Do not **purge** archives that projects still reference in their **composer.lock**.
 
 # HISTORY
 
@@ -72,3 +104,11 @@ Requires Composer. Disk space for packages. Rebuild for updates.
 # SEE ALSO
 
 [composer](/man/composer)(1), [packagist](/man/packagist)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/composer/satis)```
+
+```[Documentation](https://getcomposer.org/doc/articles/handling-private-packages.md)```
+
+<!-- verified: 2026-11-09 -->

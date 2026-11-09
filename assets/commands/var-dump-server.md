@@ -16,6 +16,10 @@ Symfony PHP variable dump receiver
 
 ```var-dump-server --format=html > [dump.html]```
 
+Send dumps from a **command** to the server
+
+```VAR_DUMPER_FORMAT=server [php script.php]```
+
 # SYNOPSIS
 
 **var-dump-server** [_--host address_] [_--format fmt_] [_options_]
@@ -26,7 +30,7 @@ Symfony PHP variable dump receiver
 > Bind address and port (default: 127.0.0.1:9912, or the VAR_DUMPER_SERVER env var).
 
 **--format** _FMT_
-> Output format (cli or html).
+> Output format: cli (default) or html.
 
 **--help**
 > Show help.
@@ -37,9 +41,11 @@ Symfony PHP variable dump receiver
 
 This approach keeps debug output separate from application responses, making it particularly useful for debugging API endpoints, AJAX requests, and command-line scripts. The server formats dumps with syntax highlighting and collapsible structures, providing a cleaner debugging experience than inline var_dump output.
 
+Applications send dumps to the server when **VAR_DUMPER_FORMAT=server** is set, or when configured through **debug.dump_destination** in Symfony; **VAR_DUMPER_FORMAT** can also hold an address such as `tcp://127.0.0.1:1234`. The same server is available in Symfony applications as **php bin/console server:dump**.
+
 # CAVEATS
 
-Symfony/PHP specific. VarDumper required. Development tool.
+Symfony/PHP specific. Requires the **symfony/var-dumper** and **symfony/console** packages, usually installed at **vendor/bin/var-dump-server**. Intended for development only.
 
 # HISTORY
 
@@ -48,3 +54,11 @@ Symfony/PHP specific. VarDumper required. Development tool.
 # SEE ALSO
 
 [php](/man/php)(1), [symfony](/man/symfony)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/symfony/var-dumper)```
+
+```[Documentation](https://symfony.com/doc/current/components/var_dumper.html)```
+
+<!-- verified: 2026-11-09 -->

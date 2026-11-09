@@ -16,13 +16,17 @@ Resume suspended jobs in the background
 
 ```bg %[string]```
 
+**Resume several jobs** at once
+
+```bg %[1] %[2]```
+
 # SYNOPSIS
 
-**bg** [_job-spec_]
+**bg** [_job-spec_ ...]
 
 # DESCRIPTION
 
-**bg** resumes suspended jobs in the background. It is a shell built-in command that continues execution of jobs that were stopped (typically with Ctrl+Z) while allowing continued use of the terminal. If no job is specified, the most recently stopped job is resumed.
+**bg** resumes suspended jobs in the background. It is a shell built-in command that continues execution of jobs that were stopped (typically with Ctrl+Z) while allowing continued use of the terminal. If no job is specified, the shell uses its notion of the current job, which is usually the most recently stopped one.
 
 The command is part of POSIX shell job control functionality and is available in bash, zsh, ksh, and other POSIX-compatible shells.
 
@@ -31,7 +35,7 @@ The command is part of POSIX shell job control functionality and is available in
 _job-spec_
 > Job identifier (%1, %2, etc.)
 
-If no job specified, bg operates on the most recently stopped job.
+If no job is specified, bg operates on the current job.
 
 # JOB SPECIFICATIONS
 
@@ -83,3 +87,9 @@ Only works with job control enabled shells. Backgrounded jobs may stop if they t
 # SEE ALSO
 
 [fg](/man/fg)(1), [jobs](/man/jobs)(1), [disown](/man/disown)(1), [nohup](/man/nohup)(1)
+
+# RESOURCES
+
+```[Documentation](https://www.gnu.org/software/bash/manual/bash.html#Job-Control-Builtins)```
+
+<!-- verified: 2026-11-09 -->

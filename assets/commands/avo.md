@@ -41,14 +41,14 @@ CLI for the Avo analytics tracking plan platform
 **init**
 > Initialize an Avo workspace in the current folder.
 
-**pull** [_source_]
-> Pull analytics wrappers from your Avo workspace.
+**pull** [_source_] [**--branch** _name_] [**-f**]
+> Pull analytics wrappers from your Avo workspace, optionally from a named branch.
 
-**checkout** _branch_
-> Switch to a different Avo branch.
+**checkout** [_branch_]
+> Switch to a different Avo branch (alias: **branch**).
 
-**source** _command_
-> Manage sources for the current project.
+**source** [**add**|**remove**] [_source_]
+> List, add, or remove sources for the current project.
 
 **status** [_source_]
 > Show the status of the Avo implementation.
@@ -57,13 +57,13 @@ CLI for the Avo analytics tracking plan platform
 > Pull the Avo main branch into your current branch.
 
 **conflict**
-> Resolve git conflicts in Avo files.
+> Resolve git conflicts in Avo files (aliases: **resolve**, **conflicts**).
 
 **edit**
 > Open the Avo workspace in the browser.
 
-**login**
-> Log into the Avo platform.
+**login** [**-m**]
+> Log into the Avo platform. **-m** forces manual login with a copied code.
 
 **logout**
 > Log out from the Avo platform.
@@ -75,7 +75,7 @@ CLI for the Avo analytics tracking plan platform
 > Make output more verbose.
 
 **-f**, **--force**
-> Proceed with merge when incoming branch is open.
+> For **merge**: proceed when the incoming branch is open. For **pull**: proceed ignoring unsupported features.
 
 **--version**
 > Show version number.
@@ -96,3 +96,13 @@ Requires Node.js >= 14.16. Must be authenticated via `avo login` before pulling.
 # SEE ALSO
 
 [npm](/man/npm)(1), [node](/man/node)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/avohq/avo)```
+
+```[Homepage](https://www.avo.app/)```
+
+```[Documentation](https://www.avo.app/docs/implementation/cli)```
+
+<!-- verified: 2026-11-09 -->
