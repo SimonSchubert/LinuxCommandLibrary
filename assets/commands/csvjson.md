@@ -60,20 +60,32 @@ _FILE_
 **--lon** _COLUMN_
 > Longitude column for GeoJSON output.
 
+**--type** _COLUMN_
+> Column containing a GeoJSON type. Requires **--lat** and **--lon**.
+
+**--geometry** _COLUMN_
+> Column containing a GeoJSON geometry. Requires **--lat** and **--lon**.
+
+**--crs** _CRS_
+> Coordinate reference system string to include in GeoJSON output. Requires **--lat** and **--lon**.
+
+**--no-bbox**
+> Disable the calculation of a bounding box.
+
 **-d** _CHAR_, **--delimiter** _CHAR_
 > Field delimiter (default: comma).
 
 **-e** _ENCODING_, **--encoding** _ENCODING_
 > Input file encoding.
 
-**--no-inference**
+**-I**, **--no-inference**
 > Disable type inference (keep all values as strings).
 
 **-H**, **--no-header-row**
 > Treat file as having no header row; columns are labeled a, b, c, etc.
 
-**--snifflimit** _N_
-> Limit CSV dialect sniffing to N bytes (0 to disable).
+**-y** _N_, **--snifflimit** _N_
+> Limit CSV dialect sniffing to N bytes (default 1024; 0 to disable, -1 to sniff the entire file).
 
 # DESCRIPTION
 
@@ -94,3 +106,11 @@ csvjson is part of **csvkit**, created by Christopher Groskopf in **2011**. It e
 # SEE ALSO
 
 [in2csv](/man/in2csv)(1), [jq](/man/jq)(1), [csvkit](/man/csvkit)(1), [miller](/man/miller)(1), [csvlook](/man/csvlook)(1), [csvsql](/man/csvsql)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/wireservice/csvkit)```
+
+```[Documentation](https://csvkit.readthedocs.io/en/latest/scripts/csvjson.html)```
+
+<!-- verified: 2026-11-09 -->

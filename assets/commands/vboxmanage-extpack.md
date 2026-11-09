@@ -12,13 +12,17 @@ Manage VirtualBox extension packs
 
 ```vboxmanage extpack install --replace [extension.vbox-extpack]```
 
+**Install non-interactively** by accepting the license with its SHA-256 hash
+
+```vboxmanage extpack install --accept-license=[sha256] [extension.vbox-extpack]```
+
 **Uninstall an extension pack by name**
 
-```vboxmanage extpack uninstall "[Oracle VM VirtualBox Extension Pack]"```
+```vboxmanage extpack uninstall "[Oracle VirtualBox Extension Pack]"```
 
 **Force uninstall an extension pack**
 
-```vboxmanage extpack uninstall --force "[Oracle VM VirtualBox Extension Pack]"```
+```vboxmanage extpack uninstall --force "[Oracle VirtualBox Extension Pack]"```
 
 **List installed extension packs**
 
@@ -34,7 +38,7 @@ Manage VirtualBox extension packs
 
 # PARAMETERS
 
-**install** [**--replace**] _tarball_
+**install** [**--replace**] [**--accept-license=**_sha256_] _tarball_
 > Install an extension pack from the specified file. Fails if an older version is already installed unless --replace is used.
 
 **uninstall** [**--force**] _name_
@@ -45,6 +49,9 @@ Manage VirtualBox extension packs
 
 **--replace**
 > Used with install. Uninstall any existing version before installing the new one.
+
+**--accept-license=**_sha256_
+> Used with install. Accept the license text with the given SHA-256 hash, which VBoxManage displays during a manual installation.
 
 **--force**
 > Used with uninstall. Override most refusals to uninstall an extension pack.
@@ -57,3 +64,12 @@ Manage VirtualBox extension packs
 
 [vboxmanage](/man/vboxmanage)(1), [vboxmanage-list](/man/vboxmanage-list)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/VirtualBox/virtualbox)```
+
+```[Homepage](https://www.virtualbox.org/)```
+
+```[Documentation](https://www.virtualbox.org/manual/topics/vboxmanage.html)```
+
+<!-- verified: 2026-11-09 -->

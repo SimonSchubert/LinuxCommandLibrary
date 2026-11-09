@@ -20,9 +20,13 @@ Collection of scripts for managing AUR packages through a local repository.
 
 ```aur sync -u```
 
-**Clean** build files after syncing
+Build a package in a **clean chroot**
 
 ```aur sync -c [package]```
+
+**Clean** leftover work files after a successful build
+
+```aur sync -C [package]```
 
 Install a package **without review prompts**
 
@@ -32,7 +36,7 @@ Install a package **without review prompts**
 
 ```aur fetch [package]```
 
-Show the **dependency tree** for a package
+Show the **dependency pairs** for a package
 
 ```aur depends [package]```
 
@@ -42,7 +46,7 @@ Show the **dependency tree** for a package
 
 # DESCRIPTION
 
-**aur** (aurutils) is a collection of scripts for managing AUR packages through a local pacman repository. It automates downloading PKGBUILDs, building packages in clean chroots, and adding them to a local repository that pacman can use directly.
+**aur** (aurutils) is a collection of scripts for managing AUR packages through a local pacman repository. It automates downloading PKGBUILDs, building packages (optionally in clean chroots), and adding them to a local repository that pacman can use directly.
 
 Unlike AUR helpers that install packages directly, aurutils maintains a proper local repository, enabling cleaner dependency management and the ability to share built packages across systems.
 
@@ -64,11 +68,29 @@ Unlike AUR helpers that install packages directly, aurutils maintains a proper l
 > Build packages from downloaded sources
 
 **depends**
-> Display package dependency trees
+> Resolve package dependencies using aurweb and print them as pkgbase and dependency pairs
+
+**view**
+> Inspect build files before they are executed
+
+**query**
+> Send requests to the aurweb RPC interface
+
+**vercmp**
+> Compare local package versions against the AUR
+
+**chroot**
+> Build packages in a systemd-nspawn container
+
+**graph**
+> Print package and dependency order from .SRCINFO data
+
+**srcver**
+> List the latest revision of VCS packages
 
 # CAVEATS
 
-Requires a local repository to be configured in **/etc/pacman.conf**. Uses **vifm** by default for PKGBUILD review (configurable via **AUR_PAGER** environment variable). Building occurs in a clean chroot, requiring the **devtools** package. Initial setup is more involved than simple AUR helpers like yay or paru.
+Requires a local repository to be configured in **/etc/pacman.conf**. Build files are shown with **AUR_PAGER** if defined, otherwise with **vifm** if installed. Packages are built with makepkg by default; building in a container needs **-c**/**--chroot** and the **devtools** package. Initial setup is more involved than simple AUR helpers like yay or paru.
 
 # HISTORY
 
@@ -76,4 +98,10 @@ Requires a local repository to be configured in **/etc/pacman.conf**. Uses **vif
 
 # SEE ALSO
 
-[aur-sync](/man/aur-sync)(1), [pacman](/man/pacman)(8), [makepkg](/man/makepkg)(8), [yay](/man/yay)(1)
+[aur-sync](/man/aur-sync)(1), [aurutils](/man/aurutils)(1), [pacman](/man/pacman)(8), [makepkg](/man/makepkg)(8), [yay](/man/yay)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aurutils/aurutils)```
+
+<!-- verified: 2026-11-09 -->

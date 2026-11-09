@@ -16,17 +16,37 @@ VirtualBox command-line management interface
 
 ```vboxmanage startvm [vmname] --type headless```
 
-**Stop VM**
+**List running VMs**
+
+```vboxmanage list runningvms```
+
+**Stop VM** immediately
 
 ```vboxmanage controlvm [vmname] poweroff```
+
+**Shut down VM** gracefully via ACPI
+
+```vboxmanage controlvm [vmname] acpipowerbutton```
+
+**Save VM state** and stop it
+
+```vboxmanage controlvm [vmname] savestate```
+
+**Show VM details** in a parsable format
+
+```vboxmanage showvminfo [vmname] --machinereadable```
 
 **Create VM**
 
 ```vboxmanage createvm --name [vmname] --register```
 
-**Snapshot**
+**Take a snapshot**
 
 ```vboxmanage snapshot [vmname] take [snapname]```
+
+**Restore a snapshot**
+
+```vboxmanage snapshot [vmname] restore [snapname]```
 
 # SYNOPSIS
 
@@ -71,13 +91,22 @@ VirtualBox command-line management interface
 > Execute commands within guest OS.
 
 **--type** _TYPE_
-> Start type (gui, headless, separate).
+> Start type (gui, headless, sdl, separate).
 
 **-q**, **--nologo**
 > Suppress logo output for scripting.
 
 **--machinereadable**
 > Machine-parsable output format.
+
+**--settingspw** _PASSWORD_, **--settingspwfile** _FILE_
+> Supply the settings password as a value or from a file.
+
+**-V**, **--version**
+> Display version information.
+
+**-h**, **--help**
+> Display help information.
 
 # DESCRIPTION
 
@@ -87,8 +116,18 @@ The tool uses subcommands for different operations: **createvm** and **modifyvm*
 
 # CAVEATS
 
-VirtualBox must be installed. Most **modifyvm** changes require the VM to be powered off. Guest Additions must be installed for advanced features like shared folders and guest control.
+VirtualBox must be installed. Most **modifyvm** changes require the VM to be powered off. Guest Additions must be installed for advanced features like shared folders and guest control. The binary is named **VBoxManage**; the lowercase **vboxmanage** name is provided on Linux.
 
 # SEE ALSO
 
-[qemu](/man/qemu)(1), [virsh](/man/virsh)(1)
+[vboxmanage-list](/man/vboxmanage-list)(1), [vboxmanage-startvm](/man/vboxmanage-startvm)(1), [vboxmanage-controlvm](/man/vboxmanage-controlvm)(1), [vboxmanage-createvm](/man/vboxmanage-createvm)(1), [vboxmanage-modifyvm](/man/vboxmanage-modifyvm)(1), [vboxmanage-showvminfo](/man/vboxmanage-showvminfo)(1), [qemu](/man/qemu)(1), [virsh](/man/virsh)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/VirtualBox/virtualbox)```
+
+```[Homepage](https://www.virtualbox.org/)```
+
+```[Documentation](https://www.virtualbox.org/manual/topics/vboxmanage.html)```
+
+<!-- verified: 2026-11-09 -->

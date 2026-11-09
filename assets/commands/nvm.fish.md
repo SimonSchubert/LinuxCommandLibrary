@@ -20,6 +20,10 @@ Node Version Manager for Fish shell
 
 ```nvm use [version]```
 
+**Use** the system-installed Node.js
+
+```nvm use system```
+
 **List installed** versions
 
 ```nvm list```
@@ -27,6 +31,10 @@ Node Version Manager for Fish shell
 **List all available** remote versions
 
 ```nvm list-remote```
+
+**List remote** versions matching a **regex**
+
+```nvm list-remote [regex]```
 
 **Set default** version for new shells
 
@@ -43,7 +51,7 @@ Node Version Manager for Fish shell
 # PARAMETERS
 
 **install** _VERSION_
-> Install a Node.js version. Accepts specific versions (v18.4.0), partial versions (v18), or aliases (latest, lts).
+> Install and activate a Node.js version. Accepts specific versions (v18.4.0), partial versions (v18), aliases (latest, lts), or LTS codenames (carbon). Without a version, uses the nearest **.nvmrc** or **.node-version** file.
 
 **use** _VERSION_
 > Activate an installed Node.js version in the current environment.
@@ -51,14 +59,23 @@ Node Version Manager for Fish shell
 **list**
 > List installed Node.js versions, including system Node if present.
 
-**list-remote**
-> Show all available Node.js versions from the mirror.
+**list-remote** [_REGEX_]
+> Show all available Node.js versions from the mirror, optionally filtered by a regular expression.
 
 **current**
 > Show the currently active Node.js version.
 
 **uninstall** _VERSION_
 > Remove an installed Node.js version.
+
+**-s**, **--silent**
+> Suppress standard output.
+
+**-v**, **--version**
+> Print the version of nvm.fish.
+
+**-h**, **--help**
+> Print the help message.
 
 # CONFIGURATION
 
@@ -73,6 +90,9 @@ Node Version Manager for Fish shell
 
 **$nvm_mirror**
 > Node.js binary download mirror. Defaults to https://nodejs.org/dist.
+
+**$nvm_arch**
+> Override the detected architecture, e.g. x64-musl.
 
 # DESCRIPTION
 
@@ -94,3 +114,8 @@ Fish shell specific and not compatible with bash nvm or its configuration. The *
 
 [nvm](/man/nvm)(1), [fish](/man/fish)(1), [fnm](/man/fnm)(1), [node](/man/node)(1), [fisher](/man/fisher)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/jorgebucaran/nvm.fish)```
+
+<!-- verified: 2026-11-09 -->

@@ -39,3 +39,9 @@ Part of the **Impacket** library, originally developed by SecureAuth (now mainta
 # SEE ALSO
 
 [ping](/man/ping)(1), [impacket-ping6](/man/impacket-ping6)(1), [nmap](/man/nmap)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/fortra/impacket)```
+
+<!-- verified: 2026-11-09 -->

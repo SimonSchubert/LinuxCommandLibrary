@@ -20,9 +20,21 @@ List libvirt storage pools
 
 ```virsh pool-list --all --details```
 
+**List persistent pools** that start automatically
+
+```virsh pool-list --all --persistent --autostart```
+
+**List pools of specific types**
+
+```virsh pool-list --all --type [dir,logical]```
+
+**Print only pool names** for scripting
+
+```virsh pool-list --all --name```
+
 # SYNOPSIS
 
-**virsh** **pool-list** [_options_]
+**virsh** **pool-list** [**--inactive**|**--all**] [**--persistent**|**--transient**] [**--autostart**|**--no-autostart**] [**--details**|**--uuid**|**--name**] [**--type** _types_]
 
 # PARAMETERS
 
@@ -32,17 +44,29 @@ List libvirt storage pools
 **--inactive**
 > List only inactive pools.
 
-**--details**
-> Show detailed information including capacity, allocation, and available space.
+**--persistent**
+> List only persistent pools.
 
-**--uuid**
-> Display pool UUIDs.
-
-**--name**
-> Display pool names only.
+**--transient**
+> List only transient pools.
 
 **--autostart**
-> Show autostart status.
+> List only pools with autostart enabled.
+
+**--no-autostart**
+> List only pools with autostart disabled.
+
+**--details**
+> Additionally show persistence, capacity, allocation, and available space. Cannot be combined with **--uuid** or **--name**.
+
+**--uuid**
+> Print only pool UUIDs.
+
+**--name**
+> Print only pool names. Combined with **--uuid**, prints UUIDs and names side by side without a header.
+
+**--type** _types_
+> Comma-separated pool types to list, such as dir, fs, netfs, logical, disk, iscsi, scsi, mpath, rbd, gluster, or zfs.
 
 # DESCRIPTION
 
@@ -52,3 +76,12 @@ List libvirt storage pools
 
 [virsh](/man/virsh)(1), [virsh-pool-info](/man/virsh-pool-info)(1), [virsh-pool-define-as](/man/virsh-pool-define-as)(1), [virsh-pool-start](/man/virsh-pool-start)(1), [virsh-pool-destroy](/man/virsh-pool-destroy)(1)
 
+# RESOURCES
+
+```[Source code](https://gitlab.com/libvirt/libvirt)```
+
+```[Homepage](https://libvirt.org/)```
+
+```[Documentation](https://libvirt.org/manpages/virsh.html)```
+
+<!-- verified: 2026-11-09 -->

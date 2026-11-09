@@ -22,15 +22,19 @@ React Native integration platform for native apps
 
 **Add a dependency** to a MiniApp
 
-```ern add [dependency]```
+```ern add [package]```
 
-**Start the development** server for MiniApps
+**Create a Container** locally
+
+```ern create-container --miniapps [miniapp] -p [android]```
+
+**Start the packager** serving a composite of MiniApps
 
 ```ern start```
 
 **Push an OTA update** via CodePush
 
-```ern code-push [miniapps] -d [descriptor]```
+```ern code-push release --miniapps [miniapps] -d [descriptor]```
 
 # SYNOPSIS
 
@@ -38,11 +42,8 @@ React Native integration platform for native apps
 
 # PARAMETERS
 
-_COMMAND_
-> ERN operation to perform.
-
 **create-miniapp** _NAME_
-> Create a new MiniApp project (equivalent to react-native init).
+> Create a new MiniApp in a new directory named after it.
 
 **run-android**
 > Run MiniApp on Android emulator or device.
@@ -54,19 +55,40 @@ _COMMAND_
 > Create a new API with generated client code.
 
 **start**
-> Start the Electrode Native development server (packager).
+> Create a composite bundle of MiniApps and start the React Native packager to serve it.
 
-**add** _DEPENDENCY_
-> Add a JavaScript or native dependency to a MiniApp.
+**add** _PACKAGES_
+> Add JavaScript or native dependencies to a MiniApp.
 
 **cauldron** _COMMAND_
 > Manage the Cauldron (version registry for native app containers).
 
-**code-push** _MINIAPPS_
-> Push OTA updates via CodePush.
+**code-push** _release_|_patch_|_promote_
+> Release, patch or promote OTA updates via CodePush.
 
-**link**
-> Link a MiniApp for local development and debugging.
+**link**, **unlink**
+> Link or unlink a MiniApp directory for local development and debugging.
+
+**create-container**
+> Create a Container locally.
+
+**publish-container**
+> Publish a Container to a repository.
+
+**create-api-impl**
+> Create an implementation of an API.
+
+**regen-api**
+> Regenerate an API from its schema.
+
+**compat-check**
+> Check MiniApp compatibility with a native application version.
+
+**upgrade-miniapp**
+> Upgrade a MiniApp to a newer platform version.
+
+**platform** _COMMAND_
+> Manage installed Electrode Native platform versions and configuration.
 
 **--help**
 > Display help information.
@@ -81,7 +103,7 @@ ERN enables incremental React Native adoption in existing mobile applications.
 
 # CAVEATS
 
-Requires native development setup (Android SDK and/or Xcode). Complex architecture learning curve. Integrates with existing apps differently than standalone React Native.
+Requires native development setup (Android SDK and/or Xcode). Complex architecture learning curve. The latest npm release (1.1.1) dates from June 2020. Integrates with existing apps differently than standalone React Native.
 
 # HISTORY
 
@@ -90,3 +112,11 @@ Electrode React Native was developed by **Walmart Labs** to enable their gradual
 # SEE ALSO
 
 [react-native](/man/react-native)(1), [npm](/man/npm)(1), [yarn](/man/yarn)(1), [node](/man/node)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/electrode-io/electrode-native)```
+
+```[Homepage](https://native.electrode.io/)```
+
+<!-- verified: 2026-11-09 -->

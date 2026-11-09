@@ -28,13 +28,17 @@ Identity and Access Management for Google Cloud
 
 ```gcloud iam roles describe [roles/editor]```
 
+**Allow a principal to use a service account**
+
+```gcloud iam service-accounts add-iam-policy-binding [email] --member="user:[user@example.com]" --role="roles/iam.serviceAccountUser"```
+
 **List grantable roles for a resource**
 
 ```gcloud iam list-grantable-roles [//cloudresourcemanager.googleapis.com/projects/my-project]```
 
 # SYNOPSIS
 
-**gcloud iam** _group_ _command_ [_options_]
+**gcloud iam** _group_ | _command_ [_options_]
 
 # PARAMETERS
 
@@ -50,8 +54,23 @@ Identity and Access Management for Google Cloud
 **workload-identity-pools** _CMD_
 > Manage workload identity pools for external identity federation.
 
+**workforce-pools** _CMD_
+> Create and manage workforce pools.
+
+**access-policies**, **policy-bindings**, **principal-access-boundary-policies** _CMD_
+> Manage access policies, policy bindings and principal access boundary policies.
+
+**oauth-clients** _CMD_
+> Create and manage OAuth clients.
+
+**simulator** _CMD_
+> Understand how an IAM policy change could impact access before deploying it.
+
 **list-grantable-roles** _RESOURCE_
 > List grantable roles for a given resource.
+
+**list-testable-permissions** _RESOURCE_
+> List testable permissions for a given resource.
 
 **--iam-account** _EMAIL_
 > Service account email (used with service-accounts keys subcommands).
@@ -78,3 +97,11 @@ gcloud iam is part of the **Google Cloud SDK** for managing IAM, Google Cloud's 
 # SEE ALSO
 
 [gcloud](/man/gcloud)(1), [gcloud-auth](/man/gcloud-auth)(1), [gcloud-config](/man/gcloud-config)(1), [gcloud-projects](/man/gcloud-projects)(1)
+
+# RESOURCES
+
+```[Homepage](https://cloud.google.com/cli)```
+
+```[Documentation](https://docs.cloud.google.com/sdk/gcloud/reference/iam)```
+
+<!-- verified: 2026-11-09 -->

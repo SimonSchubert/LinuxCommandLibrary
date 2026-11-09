@@ -32,39 +32,76 @@ Terminal-based data exploration spreadsheet
 
 ```vd -f json [file.txt]```
 
-**Open with read-only mode**
+**Convert a file** without opening the interface
 
-```vd --readonly [file.csv]```
+```vd -b [input.csv] -o [output.json]```
+
+**Open a CSV with no header row**
+
+```vd --header 0 [file.csv]```
+
+**Replay a saved command log**
+
+```vd -p [script.vdj]```
 
 # SYNOPSIS
 
 **vd** [_options_] [_file_...]
 
+**vd** [_options_] **-p** _cmdlog_ [**-b**] [**-o** _output_] [_field_=_value_...]
+
 # PARAMETERS
 
-**-f** _filetype_
-> Force input file type.
+**-f**, **--filetype** _filetype_
+> Force input file type instead of using the file extension (aliases: **-if**, **--input-filetype**).
 
-**-p** _cmdlog_
+**-p**, **--play** _cmdlog_
 > Replay a saved command log file within the interface.
 
 **-b**, **--batch**
 > Run in batch mode (no interface): replay cmdlog and exit.
 
-**-o** _file_
-> Save the final sheet to file on exit (used with -b).
+**-i**, **--interactive**
+> Stay in the interface after a batch replay.
 
-**--readonly**
-> Disable saving/modifying.
+**-w**, **--replay-wait** _seconds_
+> Wait the given number of seconds between replayed commands.
 
-**-d** _delimiter_
-> Field delimiter for text files.
+**-o**, **--output** _file_
+> Save the final visible sheet to file at the end of replay.
 
-**-c** _cmdlog_
-> Execute cmdlog file.
+**-of**, **--output-filetype** _filetype_
+> Use the given saver for **-o** instead of the file extension.
 
-**--diff** _file_
-> Show diff between sources.
+**-d**, **--delimiter** _delimiter_
+> Field delimiter for tsv/csv files.
+
+**--header** _N_
+> Parse the first N rows as column names (default: 1, use 0 for none).
+
+**--skip** _N_
+> Skip N rows before the header.
+
+**--encoding** _encoding_
+> Text encoding used to read files (default: utf-8-sig).
+
+**-y**
+> Auto-accept all confirmation prompts, including file overwrite.
+
+**-ro**
+> Do not overwrite existing files.
+
+**-N**, **--nothing**
+> Do not load .visidatarc or plugin addons.
+
+**-n**, **--nonglobal**
+> Apply subsequent options only to the paths given on the command line.
+
+**-g**, **--global**
+> Apply subsequent options globally (default).
+
+**+**_toplevel_:_subsheet_:_col_:_row_
+> Start with the given subsheet on top and the cursor at the given column and row. All parts are optional.
 
 **-h**, **--help**
 > Display help information.
@@ -116,11 +153,23 @@ Terminal-based data exploration spreadsheet
 **S**
 > Open the Sheets sheet to switch between open sheets.
 
+**e**
+> Edit current cell.
+
+**U**/**R**
+> Undo/redo the last modification.
+
+**Space**
+> Run a command by its longname.
+
 **Ctrl+s**
 > Save current sheet.
 
 **q**
 > Quit current sheet.
+
+**gq**
+> Quit all sheets.
 
 # DESCRIPTION
 
@@ -128,7 +177,7 @@ Terminal-based data exploration spreadsheet
 
 Navigation uses vim-style keys. Sheets stack like buffers; **q** closes current sheet, returning to previous. The sheets sheet (**S**) shows all open sheets.
 
-Data analysis features include frequency tables (**F**), column statistics (**I**), and aggregations (**+**). Group rows with **g** prefix commands. Create pivot tables and perform joins between sheets.
+Data analysis features include frequency tables (**F**), column statistics (**I**), and aggregations (**+**). The **g** prefix generally widens a command (for example to all rows or columns) and **z** narrows it. Create pivot tables and perform joins between sheets.
 
 Selection (**s**/**t**/**u**) marks rows for operations. Use **|** to select by regex or **,** for exact match. **"** opens selected rows as new sheet.
 
@@ -145,3 +194,13 @@ VisiData was created by **Saul Pwanson** and first released in **2016**. It was 
 # SEE ALSO
 
 [sc-im](/man/sc-im)(1), [csvkit](/man/csvkit)(1), [miller](/man/miller)(1), [xsv](/man/xsv)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/saulpw/visidata)```
+
+```[Homepage](https://www.visidata.org/)```
+
+```[Documentation](https://www.visidata.org/docs/)```
+
+<!-- verified: 2026-11-09 -->

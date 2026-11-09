@@ -66,7 +66,7 @@ search Exploit Database archive locally
 > Case-sensitive search
 
 **-e**, **--exact**
-> Exact match search
+> Exact and ordered match on the exploit title. Implies **-t**
 
 **-s**, **--strict**
 > Strict search; disable fuzzy version matching
@@ -75,16 +75,16 @@ search Exploit Database archive locally
 > Search exploit titles only (default: title and path)
 
 **--exclude** _TERM_
-> Exclude results containing term
+> Exclude results containing term. Separate multiple values with **|**, as in **--exclude="term1|term2"**
 
 **-p**, **--path**
-> Show full path to exploit file
+> Show full path to exploit file and copy it to the clipboard if possible
 
 **-m**, **--mirror** _ID_
 > Copy exploit to current directory
 
 **-x**, **--examine** _ID_
-> Display exploit content
+> Open the exploit using **$PAGER**
 
 **-j**, **--json**
 > Output in JSON format
@@ -107,20 +107,20 @@ search Exploit Database archive locally
 **-v**, **--verbose**
 > Display extended information
 
-**--colour**
+**--disable-colour**
 > Disable color highlighting in search results
 
 **-u**, **--update**
-> Update local database
+> Check for and install exploitdb package updates (apt, brew, or git)
 
 **-h**, **--help**
 > Display help
 
 # DESCRIPTION
 
-**searchsploit** is a command-line tool for searching the Exploit Database (exploit-db.com) archive locally. It provides offline access to thousands of public exploits, shellcodes, papers, and vulnerability information maintained by Offensive Security.
+**searchsploit** is a command-line tool for searching the Exploit Database (exploit-db.com) archive locally. It provides offline access to thousands of public exploits, shellcodes, papers, and vulnerability information maintained by OffSec.
 
-The tool searches both exploit titles and file paths by default. Multiple search terms are combined with AND logic—all terms must match. Use quotes for exact phrases and exclude patterns with **--exclude**. Results show the exploit title and local path.
+The tool searches both exploit titles and file paths by default. Multiple search terms are combined with AND logic: all terms must match. Use quotes for exact phrases and exclude patterns with **--exclude**. Results show the exploit title and local path.
 
 Once an exploit is found, use **-m** to copy it to your current directory or **-x** to view its content. The **--cve** option searches by CVE identifier for known vulnerabilities. The database requires periodic updates with **-u**.
 
@@ -130,8 +130,18 @@ Exploits are provided for authorized security testing only. Many exploits requir
 
 # HISTORY
 
-SearchSploit is part of the **Exploit Database** project maintained by **Offensive Security**, the creators of Kali Linux. The Exploit Database was launched in **2004** as a public archive of exploits for penetration testers and security researchers. SearchSploit provides offline access to this database, essential for testing in air-gapped environments. The database includes exploits from various sources and continues to grow with community contributions.
+SearchSploit is part of the **Exploit Database** project maintained by **OffSec** (formerly Offensive Security), the creators of Kali Linux. The Exploit Database is a public archive of exploits for penetration testers and security researchers. SearchSploit provides offline access to this database, essential for testing in air-gapped environments. The database includes exploits from various sources and continues to grow with community contributions.
 
 # SEE ALSO
 
 [msfconsole](/man/msfconsole)(1), [nmap](/man/nmap)(1), [nikto](/man/nikto)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.com/exploit-database/exploitdb)```
+
+```[Homepage](https://www.exploit-db.com/)```
+
+```[Documentation](https://www.exploit-db.com/searchsploit)```
+
+<!-- verified: 2026-11-09 -->

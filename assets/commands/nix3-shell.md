@@ -24,6 +24,14 @@ Start a shell providing specific packages
 
 ```nix shell github:NixOS/nixpkgs/[nixos-24.05]#[hello]```
 
+**Run several commands** in the shell environment
+
+```nix shell nixpkgs#[gnumake] --command sh -c "[cd src && make]"```
+
+**Clear the environment** except for selected variables
+
+```nix shell nixpkgs#[hello] --ignore-env --keep-env-var [HOME] --command [hello]```
+
 # SYNOPSIS
 
 **nix** **shell** [_options_] _installables_
@@ -36,11 +44,17 @@ _INSTALLABLES_
 **--command**, **-c** _CMD_ [_ARGS_]
 > Run a command in the shell environment instead of starting an interactive shell.
 
-**--ignore-environment**, **-i**
-> Clear the entire environment (except those specified with --keep).
+**--ignore-env**, **-i**
+> Clear the entire environment, except variables given with --keep-env-var. Alias: --ignore-environment.
 
-**--keep** _NAME_
-> Keep the specified environment variable when using --ignore-environment.
+**--keep-env-var**, **-k** _NAME_
+> Keep the specified environment variable when using --ignore-env. Alias: --keep.
+
+**--unset-env-var**, **-u** _NAME_
+> Unset the specified environment variable. Alias: --unset.
+
+**--set-env-var**, **-s** _NAME_ _VALUE_
+> Set the specified environment variable.
 
 **--keep-going**
 > Continue building other derivations if one fails.
@@ -56,7 +70,7 @@ _INSTALLABLES_
 
 # DESCRIPTION
 
-**nix shell** starts a shell environment with the specified packages available in `$PATH`. It is the flake-based replacement for `nix-shell -p` and does not require a shell.nix or default.nix file.
+**nix shell** runs a command in an environment where `$PATH` provides the specified packages. If no command is given, it starts the user's default shell from `$SHELL`. It is the flake-based replacement for `nix-shell -p` and does not require a shell.nix or default.nix file. It is also available under the name **nix env shell**.
 
 Packages are specified as flake references (e.g., `nixpkgs#jq`). The packages are built or fetched as needed and made available only in the spawned shell session. Nothing is permanently installed.
 
@@ -68,3 +82,12 @@ Requires the experimental `nix-command` and `flakes` features to be enabled. Pac
 
 [nix](/man/nix)(1), [nix-shell](/man/nix-shell)(1), [nix3-develop](/man/nix3-develop)(1), [nix3-run](/man/nix3-run)(1), [nix3-build](/man/nix3-build)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/NixOS/nix)```
+
+```[Homepage](https://nixos.org/)```
+
+```[Documentation](https://nix.dev/manual/nix/latest/command-ref/new-cli/nix3-env-shell.html)```
+
+<!-- verified: 2026-11-09 -->

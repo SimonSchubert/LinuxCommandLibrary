@@ -28,6 +28,12 @@ OpenSSL private key generation utility
 
 ```openssl genpkey -algorithm RSA -aes256 -pass stdin -out [key.pem]```
 
+**Generate EC parameters**, then a key from them
+
+```openssl genpkey -genparam -algorithm EC -pkeyopt ec_paramgen_curve:[P-384] -out [params.pem]```
+
+```openssl genpkey -paramfile [params.pem] -out [key.pem]```
+
 # SYNOPSIS
 
 **openssl genpkey** [_options_]
@@ -35,7 +41,7 @@ OpenSSL private key generation utility
 # PARAMETERS
 
 **-algorithm** _ALG_
-> Key algorithm: RSA, EC, ED25519, ED448, X25519, X448.
+> Key algorithm, such as RSA, RSA-PSS, EC, ED25519, ED448, X25519 or X448. Must precede any -pkeyopt options.
 
 **-out** _FILE_
 > Output file (default: stdout).
@@ -43,8 +49,11 @@ OpenSSL private key generation utility
 **-pkeyopt** _OPT:VALUE_
 > Algorithm-specific option (e.g., rsa_keygen_bits:4096, ec_paramgen_curve:P-256).
 
+**-outpubkey** _FILE_
+> Also write the public key to this file.
+
 **-aes256**
-> Encrypt output key with AES-256-CBC.
+> Encrypt output key with AES-256-CBC. Any other supported cipher name can be given in the same form.
 
 **-pass** _ARG_
 > Passphrase source for encryption: pass:phrase, stdin, file:path, env:var.
@@ -54,6 +63,15 @@ OpenSSL private key generation utility
 
 **-text**
 > Print key details in human-readable form in addition to encoded output.
+
+**-genparam**
+> Generate a parameter set instead of a private key. Must precede -algorithm, -paramfile or -pkeyopt.
+
+**-paramfile** _FILE_
+> Generate the key from a parameter file. Must precede any -pkeyopt options.
+
+**-quiet**
+> Do not print progress output during key generation.
 
 **-help**
 > Display help information.
@@ -77,3 +95,13 @@ genpkey was added to **OpenSSL** as a unified key generation command, replacing 
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [openssl-genrsa](/man/openssl-genrsa)(1), [openssl-pkey](/man/openssl-pkey)(1), [openssl-req](/man/openssl-req)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/openssl/openssl)```
+
+```[Homepage](https://www.openssl.org/)```
+
+```[Documentation](https://docs.openssl.org/master/man1/openssl-genpkey/)```
+
+<!-- verified: 2026-11-09 -->

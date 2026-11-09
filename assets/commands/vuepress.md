@@ -24,6 +24,10 @@ Vue-powered static documentation generator
 
 ```vuepress build [docs] --dest [dist]```
 
+**Clear temp and cache files** before starting
+
+```vuepress dev [docs] --clean-temp --clean-cache```
+
 **Show environment information**
 
 ```vuepress info```
@@ -91,12 +95,22 @@ Configuration is done through a .vuepress/config.js or .vuepress/config.ts file 
 
 # CAVEATS
 
-Requires Node.js 18.19.0 or higher. VuePress v1 is in maintenance mode; v2 or VitePress (the successor) are recommended for new projects. The `eject` command from v1 does not exist in v2. Large documentation sites may have slow build times. Custom themes require Vue.js knowledge.
+VuePress 2 requires Node.js 20.9.0 or higher and is still published as a release candidate (2.0.0-rc.x). VuePress v1 is in maintenance mode; v2 or VitePress (the successor) are recommended for new projects. The **eject** command from v1 does not exist in v2. Large documentation sites may have slow build times. Custom themes require Vue.js knowledge.
 
 # HISTORY
 
-**VuePress** was created by **Evan You**, the creator of Vue.js, in **April 2018**. It was originally developed to document Vue.js itself but became a standalone project due to its utility for technical documentation. VuePress v2, released in **2022**, was rebuilt with Vue 3 support. **VitePress**, using Vite instead of Webpack, is now the recommended alternative for new projects.
+**VuePress** was created by **Evan You**, the creator of Vue.js, in **April 2018**. It was originally developed to document Vue.js itself but became a standalone project due to its utility for technical documentation. VuePress v2 was rebuilt on Vue 3 and remains in the release-candidate stage. **VitePress**, using Vite instead of Webpack, is now the recommended alternative for new projects.
 
 # SEE ALSO
 
 [vitepress](/man/vitepress)(1), [vue](/man/vue)(1), [docusaurus](/man/docusaurus)(1), [mkdocs](/man/mkdocs)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/vuepress/core)```
+
+```[Homepage](https://vuepress.vuejs.org/)```
+
+```[Documentation](https://vuepress.vuejs.org/reference/cli.html)```
+
+<!-- verified: 2026-11-09 -->

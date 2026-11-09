@@ -24,6 +24,18 @@ Overview of Linux kernel namespaces for resource isolation
 
 ```unshare --user --map-root-user [command]```
 
+**List namespaces** of one type
+
+```lsns -t [net]```
+
+**Show the namespaces** of a process
+
+```ls -l /proc/[PID]/ns```
+
+**Start a shell in new PID** and mount namespaces
+
+```sudo unshare --pid --fork --mount-proc [bash]```
+
 # SYNOPSIS
 
 **namespaces** - Linux kernel namespace overview
@@ -32,7 +44,7 @@ Overview of Linux kernel namespaces for resource isolation
 
 **Namespaces** are a Linux kernel feature that wraps global system resources in an abstraction layer, making it appear to processes within a namespace that they have their own isolated instance of the resource. They are fundamental to container technologies like Docker and LXC.
 
-Each namespace type isolates a different aspect of the system.
+Each namespace type isolates a different aspect of the system. A process's namespaces are exposed as symbolic links in **/proc/PID/ns**, and limits on namespace creation are set by the files in **/proc/sys/user/**.
 
 # NAMESPACE TYPES
 
@@ -71,8 +83,18 @@ Some operations require root/capabilities. Namespace limits exist. User namespac
 
 # HISTORY
 
-Namespaces were incrementally added to Linux starting with mount namespaces in kernel **2.4.19** (2002). Full container support matured around kernel **3.8** (2013).
+Namespaces were incrementally added to Linux starting with mount namespaces in kernel **2.4.19** (2002). UTS and IPC namespaces followed in **2.6.19**, PID namespaces in **2.6.24**, network namespaces during **2.6.24** to **2.6.29**, and user namespaces were completed in **3.8** (2013), when full container support matured. Cgroup namespaces arrived in **4.6** and time namespaces in **5.6**.
 
 # SEE ALSO
 
 [unshare](/man/unshare)(1), [nsenter](/man/nsenter)(1), [lsns](/man/lsns)(8), [clone](/man/clone)(2), [ip](/man/ip)(8), [cgroups](/man/cgroups)(7)
+
+# RESOURCES
+
+```[Source code](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/)```
+
+```[Homepage](https://www.kernel.org/)```
+
+```[Documentation](https://man7.org/linux/man-pages/man7/namespaces.7.html)```
+
+<!-- verified: 2026-11-09 -->

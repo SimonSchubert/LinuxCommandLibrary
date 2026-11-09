@@ -16,13 +16,21 @@ Search **installed packages** by name
 
 ```pacsift --local --name [pattern]```
 
-Find **foreign** (AUR/manually installed) packages
+Find **large installed** packages
 
-```pacsift --local --foreign```
+```pacsift --local --size '>[1.5GB]'```
 
-Find **explicitly installed** packages
+Find the package that **owns a file**
 
-```pacsift --local --reason explicit```
+```pacsift --local --exact --owns-file="$(which [command])"```
+
+**Check** whether a package is installed
+
+```pacsift --local --exists --satisfies [package] && echo "installed"```
+
+Show matches with **brief details**
+
+```pacsift --name [pattern] | pacinfo --short```
 
 Combine filters with **exact** matching
 
@@ -67,20 +75,38 @@ Combine filters with **exact** matching
 **--invert**
 > Return packages that do NOT match
 
-**--any**
+**--any**, **--or**
 > Return the union rather than the intersection of matches
 
-**--foreign**
-> Show packages not found in sync databases (e.g., AUR packages)
+**--exists**
+> Exit with a non-zero value if no matches are found
 
-**--native**
-> Show packages found in sync databases
+**--not-exists**
+> Exit with a non-zero value if matches are found
 
-**--reason** _reason_
-> Filter by install reason (explicit or depend)
+**--cache**
+> Search packages in cache directories (experimental)
+
+**--base** _val_, **--description** _val_, **--packager** _val_, **--license** _val_, **--url** _val_, **--architecture** _val_
+> Filter by the given string field
+
+**--owns-file** _path_
+> Filter by owned file path
+
+**--conflicts** _pkg_, **--replaces** _pkg_, **--optdepends** _pkg_
+> Filter by the given dependency field
+
+**--size** _size_, **--installed-size** _size_, **--download-size** _size_
+> Filter by size, optionally prefixed with a comparison (=, !=, <, <=, >, >=) and followed by a unit
+
+**--install-date** _date_, **--build-date** _date_
+> Filter by date, as epoch seconds or %Y-%m-%d [%H:%M[:%S]], with an optional comparison prefix
 
 **--null**[=_sep_]
-> Set alternate separator for stdin values (default: NUL)
+> Set alternate separator for stdin values (default: newline; NUL if no _sep_ is given)
+
+**--config** _path_, **--dbpath** _path_, **--root** _path_, **--sysroot** _path_, **--dbext** _ext_
+> Use an alternate configuration file, database path, installation root, system root or sync database extension
 
 # DESCRIPTION
 
@@ -88,12 +114,18 @@ Combine filters with **exact** matching
 
 The tool can filter by various attributes: name patterns, repository, installation status, dependencies, groups, and more. Multiple filters can be combined to narrow down results.
 
-Output is a list of package names suitable for piping to other pacutils commands or pacman.
+By default the intersection of matches is returned; a field given multiple times matches the union for that field. Output is a list of packages suitable for piping to other pacutils commands or pacman. If stdin is not a terminal, packages to filter are read from stdin.
 
 # CAVEATS
 
-Part of the pacutils package, not installed by default on Arch. Filter syntax differs from pacman's built-in search. For simple searches, **pacman -Ss** may be more convenient.
+Part of the pacutils package, not installed by default on Arch. Filter syntax differs from pacman's built-in search. For simple searches, **pacman -Ss** may be more convenient, and **pacman -Qm** lists foreign packages, which pacsift has no filter for. In scripts or pipelines where stdin is not a terminal but holds no packages, close it with **<&-**.
 
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [paclog](/man/paclog)(1), [pactree](/man/pactree)(8), [pacinfo](/man/pacinfo)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/andrewgregory/pacutils)```
+
+<!-- verified: 2026-11-09 -->

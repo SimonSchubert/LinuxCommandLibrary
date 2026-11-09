@@ -32,6 +32,26 @@ Unified code quality linting and formatting
 
 ```trunk check --filter [eslint]```
 
+**Run several linters** on the whole repository
+
+```trunk check --all --filter=[eslint,isort]```
+
+**Run every linter except some**
+
+```trunk check --all --filter=-[clang-tidy],-[shellcheck]```
+
+**Try each linter on a few files** to test the setup
+
+```trunk check --sample=[5]```
+
+**Enable a linter**
+
+```trunk check enable [eslint]```
+
+**List available linters**
+
+```trunk check list```
+
 **Upgrade trunk and all managed tools**
 
 ```trunk upgrade```
@@ -54,23 +74,50 @@ Unified code quality linting and formatting
 **upgrade**
 > Upgrade trunk CLI and all managed tool versions.
 
+**check enable**|**disable**|**list**
+> Enable or disable linters, or list them.
+
 **actions**
 > Manage trunk actions (git hooks, notifications, etc.).
 
 **tools**
 > Manage linter and formatter tool installations.
 
-**login**
-> Authenticate with the Trunk platform.
+**login**, **logout**
+> Authenticate with the Trunk platform, or log out.
 
-**--all**
+**version**
+> Output the version.
+
+**-a**, **--all**
 > Check or format all files in the repository, not just changed files.
 
-**--fix**
-> Automatically apply fixes for issues that support auto-fixing.
+**-y**, **--fix**
+> Automatically apply all fixes without prompting.
 
-**--filter** _linter_
-> Restrict check to a specific linter or formatter.
+**-n**, **--no-fix**
+> Do not automatically apply fixes.
+
+**--filter** _linters_
+> Comma-separated list of linters and/or issue codes to include, or to exclude with a leading -.
+
+**--exclude** _linters_
+> Shorthand for an inverse --filter.
+
+**--scope** _scope_
+> Scope of checks to run: all or security.
+
+**--ignore** _glob_
+> Glob pattern to exclude files from linting.
+
+**--sample** _N_
+> Run each linter on N files.
+
+**--show-existing**
+> Show existing issues otherwise hidden by hold-the-line.
+
+**-j**, **--jobs** _N_
+> Number of concurrent jobs.
 
 **--upstream** _branch_
 > Explicitly set the upstream branch for change detection (auto-detected by default).
@@ -79,10 +126,13 @@ Unified code quality linting and formatting
 > Suppress progress reporting during checks.
 
 **--ci**
-> Run in CI mode with appropriate output formatting.
+> Run in non-interactive mode designed for CI environments.
 
 **--output** _format_
-> Set output format (e.g., text, json).
+> Set output format: text (default) or json.
+
+**--output-file** _file_
+> Write JSON results to the specified file.
 
 # DESCRIPTION
 
@@ -96,3 +146,10 @@ Configuration is stored in `.trunk/trunk.yaml` where linters, formatters, and ac
 
 [eslint](/man/eslint)(1), [prettier](/man/prettier)(1)
 
+# RESOURCES
+
+```[Homepage](https://trunk.io/)```
+
+```[Documentation](https://docs.trunk.io/)```
+
+<!-- verified: 2026-11-09 -->

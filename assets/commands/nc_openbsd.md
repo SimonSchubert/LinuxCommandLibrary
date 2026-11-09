@@ -32,6 +32,10 @@ OpenBSD rewrite of netcat for TCP/UDP connections and port scanning
 
 ```nc.openbsd -l [port] > [received_file]```
 
+**Transfer a file** (sender, closing the connection at end of file)
+
+```nc.openbsd -N [host] [port] < [file]```
+
 **Send CRLF line endings** (useful for HTTP/SMTP)
 
 ```nc.openbsd -C [host] [port]```
@@ -54,6 +58,9 @@ _PORT_
 **-6**
 > Use IPv6 addresses only.
 
+**-b**
+> Allow broadcast.
+
 **-C**
 > Send CRLF as line-ending (LF is translated to CR+LF).
 
@@ -66,6 +73,12 @@ _PORT_
 **-F**
 > Pass the first connected socket to stdout using sendmsg(2) and exit.
 
+**-h**
+> Print the help text and exit.
+
+**-I** _length_
+> Set the size of the TCP receive buffer.
+
 **-i** _interval_
 > Sleep for interval seconds between lines of text sent and received.
 
@@ -73,7 +86,7 @@ _PORT_
 > Keep listening for another connection after the current one completes (requires -l).
 
 **-l**
-> Listen for an incoming connection rather than initiating one.
+> Listen for an incoming connection rather than initiating one. Cannot be used with -x or -z.
 
 **-M** _ttl_
 > Set the TTL / hop limit of outgoing packets.
@@ -87,14 +100,17 @@ _PORT_
 **-n**
 > Do not perform domain name resolution.
 
+**-O** _length_
+> Set the size of the TCP send buffer.
+
 **-P** _proxy_username_
-> Username to present to a proxy server requiring authentication.
+> Username to present to a proxy server requiring authentication (HTTP CONNECT proxies only).
 
 **-p** _source_port_
 > Specify the source port nc should use.
 
 **-q** _seconds_
-> After EOF on stdin, wait the specified number of seconds and then quit.
+> After EOF on stdin, wait the specified number of seconds and then quit. A negative value waits forever (default).
 
 **-r**
 > Choose source and/or destination ports randomly.
@@ -107,6 +123,9 @@ _PORT_
 
 **-T** _keyword_
 > Change the IPv4 TOS or IPv6 traffic class value.
+
+**-t**
+> Send RFC 854 DON'T and WON'T responses to DO and WILL requests, allowing telnet sessions to be scripted.
 
 **-U**
 > Use Unix-domain sockets.
@@ -132,6 +151,9 @@ _PORT_
 **-x** _proxy_address_[:_port_]
 > Connect to destination using the specified proxy.
 
+**-Z**
+> Use DCCP mode.
+
 **-z**
 > Only scan for listening daemons, without sending any data.
 
@@ -145,7 +167,7 @@ Unlike some other netcat implementations, the OpenBSD version does not have **-c
 
 # CAVEATS
 
-OpenBSD variant of netcat, commonly the default on Debian/Ubuntu systems. Port scanning (**-z**) cannot be used with listen mode (**-l**). The **-k** flag only works with **-l**. No **-c** or **-e** option exists for executing commands, unlike some other netcat variants.
+OpenBSD variant of netcat, commonly the default on Debian/Ubuntu systems. Port scanning (**-z**) cannot be used with listen mode (**-l**). The **-k** flag only works with **-l**. No **-c** or **-e** option exists for executing commands, unlike some other netcat variants. On native OpenBSD **nc**, **-c** enables TLS and **-e** checks the TLS peer name, but the Debian build used for **nc.openbsd** has no TLS options.
 
 # HISTORY
 
@@ -155,3 +177,10 @@ nc.openbsd is the **OpenBSD** rewrite of the original netcat by Hobbit (1995). T
 
 [nc](/man/nc)(1), [ncat](/man/ncat)(1), [socat](/man/socat)(1)
 
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/netcat-openbsd)```
+
+```[Documentation](https://man.openbsd.org/nc.1)```
+
+<!-- verified: 2026-11-09 -->

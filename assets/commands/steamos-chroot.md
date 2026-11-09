@@ -12,6 +12,10 @@ Switch to partition on **another drive**
 
 ```steamos-chroot -d [/dev/sdX] -p [A|B]```
 
+Enter a partition set from a **recovery image**
+
+```sudo steamos-chroot --disk [nvme0n1] --partset [A] --no-overlay```
+
 Display **help**
 
 ```steamos-chroot -h```
@@ -27,6 +31,9 @@ Display **help**
 
 **-d**, **--disk** _DEVICE_
 > Target a specific disk device
+
+**--no-overlay**
+> Do not use an overlay. Required on recent recovery images, not supported on older ones.
 
 **-h**, **--help**
 > Display help
@@ -47,4 +54,10 @@ Requires root privileges. Changes made in the chroot affect the target partition
 
 # SEE ALSO
 
-[steamos-readonly](/man/steamos-readonly)(1), [chroot](/man/chroot)(1)
+[steamos-readonly](/man/steamos-readonly)(1), [arch-chroot](/man/arch-chroot)(8), [chroot](/man/chroot)(1)
+
+# RESOURCES
+
+```[Homepage](https://store.steampowered.com/steamos)```
+
+<!-- verified: 2026-11-09 -->

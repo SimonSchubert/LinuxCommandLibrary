@@ -18,7 +18,7 @@ Dynamic function call tracer using Frida
 
 **Trace Java** methods on an Android device
 
-```frida-trace -U -f [com.example.app] -j "[pattern]"```
+```frida-trace -U -f [com.example.app] -j "[class_pattern!method_pattern]"```
 
 **Spawn** a program and trace its **imports**
 
@@ -135,11 +135,23 @@ Dynamic function call tracer using Frida
 **-P** _JSON_, **--parameters** _JSON_
 > Parameters as JSON, exposed as a global named 'parameters'
 
+**--ui-host** _HOST_
+> Host to serve the web UI on (default localhost)
+
+**--ui-port** _PORT_
+> TCP port to serve the web UI on
+
+**--stdio** _{inherit,pipe}_
+> Stdio behavior when spawning a process
+
+**--realm** _{native,emulated}_
+> Realm to attach in
+
 # DESCRIPTION
 
 **frida-trace** is a tool for dynamically tracing function calls in running processes. It can hook **native functions** (C/C++), **Objective-C** methods, **Swift** functions, and **Java** methods, logging their invocation with arguments and return values.
 
-When you trace a function, frida-trace auto-generates JavaScript handler stubs in a **\_\_handlers\_\_/** directory that you can customize to log arguments, modify return values, or implement arbitrary instrumentation logic. If a handler file already exists, it will not be overwritten.
+When you trace a function, frida-trace auto-generates JavaScript handler stubs in a **\_\_handlers\_\_/** directory that you can customize to log arguments, modify return values, or implement arbitrary instrumentation logic. If a handler file already exists, it will not be overwritten. While tracing, a local web UI is also served for viewing events and editing handlers.
 
 The include (**-i**, **-I**) and exclude (**-x**, **-X**) options are procedural; each operates on the current working set of functions, so their order matters.
 
@@ -149,8 +161,18 @@ Tracing many functions with broad glob patterns (like **-i "\*"**) can severely 
 
 # HISTORY
 
-**frida-trace** was one of the earliest tools built on top of the Frida core, included in the **frida-tools** package since Frida's public release in **2014**. Its function tracing capability leverages Frida's **Stalker** code tracing component. Over the years, support was added for Objective-C methods, Swift functions, and Java methods, reflecting the tool's evolution alongside the mobile security research community.
+**frida-trace** was one of the earliest tools built on top of the Frida core and ships today in the **frida-tools** Python package. Its handlers are attached with Frida's **Interceptor** API. Over the years, support was added for Objective-C methods, Swift functions, and Java methods, reflecting the tool's evolution alongside the mobile security research community.
 
 # SEE ALSO
 
 [frida](/man/frida)(1), [frida-ps](/man/frida-ps)(1), [strace](/man/strace)(1), [ltrace](/man/ltrace)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/frida/frida-tools)```
+
+```[Homepage](https://frida.re/)```
+
+```[Documentation](https://frida.re/docs/frida-trace/)```
+
+<!-- verified: 2026-11-09 -->

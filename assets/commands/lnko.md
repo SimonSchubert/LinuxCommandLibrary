@@ -24,9 +24,17 @@ Simple stow-like dotfile linker
 
 ```lnko status```
 
+**Show status as JSON**
+
+```lnko status --json```
+
 **Remove orphaned symlinks**
 
 ```lnko clean```
+
+**Remove orphaned symlinks without prompting**
+
+```lnko clean --remove-orphans```
 
 **Force-overwrite conflicting files**
 
@@ -57,25 +65,43 @@ Simple stow-like dotfile linker
 > Specify target directory for symlinks (default: $HOME).
 
 **-n**, **--dry-run**
-> Preview changes without creating symlinks.
+> Show what would be done without making changes (link, unlink, clean).
 
 **-v**, **--verbose**
 > Output detailed debugging information.
 
 **-b**, **--backup**
-> Auto-resolve conflicts by backing up existing files to .lnko-backup/.
+> Auto-resolve conflicts by backing up existing files to _target_/.lnko-backup/ (link).
 
 **-s**, **--skip**
-> Auto-resolve conflicts by skipping conflicting files.
+> Auto-resolve conflicts by skipping conflicting files (link).
 
 **-f**, **--force**
-> Auto-resolve conflicts by force-overwriting.
+> Auto-resolve conflicts by force-overwriting (link).
 
-**--ignore** _pattern_
-> Exclude files matching pattern (repeatable).
+**--ignore** _glob_
+> Exclude files matching a glob (repeatable, link). Globs containing / are path-scoped, others match the basename.
 
 **--no-folding**
-> Prevent directory folding into symlinks.
+> Prevent directory folding into symlinks (link).
+
+**--json**
+> Output machine-readable JSON (status).
+
+**--remove-orphans**
+> Remove orphan symlinks without prompting (clean).
+
+**--keep-orphans**
+> Keep orphan symlinks without prompting (clean).
+
+**--config** _file_
+> Use a specific config file instead of .lnkorc in the source directory (also settable via LNKO_CONFIG).
+
+**-h**, **--help**
+> Show help.
+
+**--version**
+> Show version.
 
 # DESCRIPTION
 
@@ -83,14 +109,22 @@ Simple stow-like dotfile linker
 
 It supports tree folding, ignore patterns, dry-run mode, and multiple conflict resolution strategies. When conflicts are detected, lnko provides an interactive prompt with backup, skip, overwrite, and diff options unless an auto-resolve flag is given. Compatible with existing GNU Stow symlinks.
 
+An optional **.lnkorc** file in the source directory, written as a Lua table, sets defaults for dir, target, ignore, no_folding and packages. Command-line flags take precedence.
+
 # CAVEATS
 
-Requires Lua and LuaFileSystem to be installed.
+The LuaRocks install requires Lua and LuaFileSystem; the standalone binary has no dependencies. The .lnkorc file is executable Lua, so only use configs you trust.
 
 # HISTORY
 
-**lnko** was created by **luanvil** and is written in **Lua**.
+**lnko** is written in **Lua** and maintained under the **Owloops** GitHub organization. The repository was previously published as luanvil/lnko.
 
 # SEE ALSO
 
 [stow](/man/stow)(8), [ln](/man/ln)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Owloops/lnko)```
+
+<!-- verified: 2026-11-09 -->

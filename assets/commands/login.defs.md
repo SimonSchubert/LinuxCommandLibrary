@@ -28,6 +28,10 @@ Configuration file for the shadow password suite
 
 ```UMASK 077```
 
+**Show active settings** without comments
+
+```grep -Ev '^\s*(#|$)' /etc/login.defs```
+
 # SYNOPSIS
 
 **/etc/login.defs**
@@ -35,7 +39,7 @@ Configuration file for the shadow password suite
 # PARAMETERS
 
 **PASS_MAX_DAYS**
-> Maximum days password valid.
+> Maximum days a password may be used. If not specified, -1 is assumed, which disables the restriction.
 
 **PASS_MIN_DAYS**
 > Minimum days between changes.
@@ -52,17 +56,26 @@ Configuration file for the shadow password suite
 **GID_MIN**, **GID_MAX**
 > GID range for groups.
 
+**SYS_UID_MIN**, **SYS_UID_MAX**
+> UID range for system accounts.
+
+**SYS_GID_MIN**, **SYS_GID_MAX**
+> GID range for system groups.
+
 **UMASK**
-> Default umask.
+> Initial file mode creation mask (022 if not specified). Also used for new home directories unless **HOME_MODE** is set.
+
+**HOME_MODE**
+> Mode for new home directories.
 
 **ENCRYPT_METHOD**
-> Password hash algorithm (DES, MD5, SHA256, SHA512, YESCRYPT).
+> Default hash algorithm: BCRYPT, SHA256, SHA512 (default) or YESCRYPT. Older releases also accept DES and MD5. With PAM this only affects group passwords.
 
 **CREATE_HOME**
-> Create home directory by default (yes/no).
+> Create a home directory by default for new non-system users (yes/no).
 
 **USERGROUPS_ENAB**
-> Enable user private groups (yes/no).
+> Create a group named after each new user, remove it with the user if empty, and set the umask group bits to match the owner bits (yes/no).
 
 **LOGIN_RETRIES**
 > Maximum number of login retries on password failure.
@@ -74,7 +87,7 @@ Configuration file for the shadow password suite
 
 **login.defs** is the configuration file for the shadow password suite, located at **/etc/login.defs**. It defines default values for user account creation, password aging, and login behavior.
 
-Settings affect useradd, usermod, passwd, groupadd, and other shadow utilities. On systems using PAM, some settings (notably PASS_MIN_LEN) may be overridden by PAM modules.
+Settings affect useradd, usermod, passwd, groupadd, and other shadow utilities. On systems using PAM, some settings (notably PASS_MIN_LEN) may be overridden by PAM modules, and user passwords are hashed according to the PAM configuration, so **ENCRYPT_METHOD** should be kept consistent with it.
 
 # EXAMPLE CONFIG
 
@@ -91,8 +104,16 @@ UMASK           077
 
 # CAVEATS
 
-PAM may override some settings. Changes don't affect existing users. Some values system-specific. Requires shadow utilities.
+PAM may override some settings. Password aging values apply only when an account is created; use **chage** for existing users. Some values system-specific. Requires shadow utilities.
 
 # SEE ALSO
 
 [passwd](/man/passwd)(1), [useradd](/man/useradd)(8), [usermod](/man/usermod)(8), [groupadd](/man/groupadd)(8), [chage](/man/chage)(1), [login](/man/login)(1), [pam](/man/pam)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/shadow-maint/shadow)```
+
+```[Documentation](https://man7.org/linux/man-pages/man5/login.defs.5.html)```
+
+<!-- verified: 2026-11-09 -->

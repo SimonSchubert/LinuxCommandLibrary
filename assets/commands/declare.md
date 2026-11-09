@@ -32,6 +32,10 @@ bash builtin for declaring variables with attributes
 
 ```declare -u [upper]="hello"```
 
+**Create a name reference** to another variable
+
+```declare -n [ref]=[variable_name]```
+
 **Display attributes and value of a variable**
 
 ```declare -p [variable_name]```
@@ -53,10 +57,10 @@ bash builtin for declaring variables with attributes
 > Declare associative array (bash 4+).
 
 **-f**
-> Display or declare functions.
+> Restrict the action or display to function names and definitions.
 
 **-F**
-> Display function names only.
+> Display function names and attributes only, without definitions.
 
 **-g**
 > Create global variable (in functions).
@@ -74,7 +78,7 @@ bash builtin for declaring variables with attributes
 > Make read-only (constant).
 
 **-t**
-> Give trace attribute (debugging).
+> Give trace attribute: traced functions inherit the DEBUG and RETURN traps. No special meaning for variables.
 
 **-u**
 > Convert to uppercase on assignment.
@@ -89,7 +93,7 @@ bash builtin for declaring variables with attributes
 > Display attributes and values.
 
 **+**_attr_
-> Remove attribute.
+> Remove attribute. **+a** and **+A** cannot destroy arrays and **+r** cannot remove read-only.
 
 # DESCRIPTION
 
@@ -105,8 +109,16 @@ Associative arrays require bash 4+, and name references require bash 4.3+. Decla
 
 # HISTORY
 
-The **declare** builtin originated in **ksh** (Korn Shell) and was adopted by bash. It provides a more explicit way to define variables than simple assignment. Bash has extended declare over versions, adding associative arrays in **bash 4.0** (2009) and name references in **bash 4.3** (2014).
+**declare** is the Bash name for this builtin; **typeset**, which originated in **ksh** (Korn Shell), is kept as a synonym for compatibility. It provides a more explicit way to define variables than simple assignment. Bash has extended declare over versions, adding associative arrays in **bash 4.0** (2009) and name references in **bash 4.3** (2014).
 
 # SEE ALSO
 
 [typeset](/man/typeset)(1), [local](/man/local)(1), [readonly](/man/readonly)(1), [export](/man/export)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.gnu.org/software/bash/)```
+
+```[Documentation](https://www.gnu.org/software/bash/manual/bash.html)```
+
+<!-- verified: 2026-11-09 -->

@@ -16,6 +16,10 @@ distributed SQL database CLI
 
 ```cockroach sql --insecure -e "[SELECT * FROM users]"```
 
+**Start a node** of a multi-node cluster
+
+```cockroach start --insecure --store=[node1] --listen-addr=[localhost:26257] --http-addr=[localhost:8080] --join=[localhost:26257,localhost:26258]```
+
 **Initialize cluster**
 
 ```cockroach init --insecure --host=[localhost]```
@@ -23,6 +27,10 @@ distributed SQL database CLI
 **Show node status**
 
 ```cockroach node status --insecure```
+
+**Drain a node** and shut it down
+
+```cockroach node drain --self --shutdown --insecure --host=[localhost]```
 
 **Create database**
 
@@ -67,10 +75,7 @@ The tool supports both secure production deployments with TLS certificates and i
 > Open SQL shell or execute statements
 
 **node**
-> Manage cluster nodes
-
-**quit**
-> Drain and shut down node
+> List, inspect, drain, decommission and recommission cluster nodes
 
 **cert**
 > Create CA, node, and client certificates
@@ -84,6 +89,24 @@ The tool supports both secure production deployments with TLS certificates and i
 **nodelocal upload**
 > Upload a file to a node's local file system
 
+**userfile**
+> Upload, list, get and delete files in user-scoped storage
+
+**gen**
+> Generate man pages, bash completion, example data or an HAProxy config
+
+**sqlfmt**
+> Reformat SQL queries
+
+**statement-diag**
+> Manage and download statement diagnostics bundles
+
+**convert-url**
+> Convert a connection URL for a supported client driver
+
+**auth-session**
+> Manage web sessions and authentication tokens for the HTTP interface
+
 **version**
 > Show version
 
@@ -96,16 +119,19 @@ The tool supports both secure production deployments with TLS certificates and i
 > Disable TLS (development only)
 
 **--host**=_address_
-> Server address
+> Server address for client commands
 
 **--port**=_port_
-> Server port (default: 26257)
+> Server port for client commands (default: 26257)
 
 **--certs-dir**=_path_
-> Certificate directory
+> Certificate directory (default: ${HOME}/.cockroach-certs/)
 
 **--store**=_path_
-> Data storage location
+> Data storage location (default: cockroach-data)
+
+**--join**=_addresses_
+> Addresses of nodes to join; required by **start**
 
 **-e**, **--execute**=_sql_
 > Execute SQL statement
@@ -117,7 +143,25 @@ The tool supports both secure production deployments with TLS certificates and i
 > Directory for log files
 
 **--listen-addr**=_address_
-> Address and port to listen on (default: localhost:26257)
+> Address and port to listen on (default: all IP addresses on port 26257)
+
+**--advertise-addr**=_address_
+> Address and port to advertise to other nodes (default: value of --listen-addr)
+
+**--http-addr**=_address_
+> Address for the DB Console and HTTP API (default: port 8080)
+
+**--locality**=_tiers_
+> Key-value pairs describing the node location
+
+**--cache**=_size_
+> Storage engine cache size (default: 256 MiB)
+
+**--max-sql-memory**=_size_
+> Memory for SQL queries (default: 25%)
+
+**--background**
+> Start the node in the background
 
 # ENVIRONMENT
 
@@ -125,8 +169,18 @@ Flags can be set via environment variables: COCKROACH_HOST, COCKROACH_PORT, COCK
 
 # CAVEATS
 
-Use --insecure only for development. Production requires TLS certificates. Compatible with PostgreSQL wire protocol.
+Use --insecure only for development. Production requires TLS certificates. Compatible with PostgreSQL wire protocol. For **cockroach start**, --host and --port are deprecated in favor of --listen-addr and --advertise-addr. The old **cockroach quit** command is replaced by **cockroach node drain --shutdown**.
 
 # SEE ALSO
 
 [psql](/man/psql)(1), [mysql](/man/mysql)(1), [sqlite3](/man/sqlite3)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/cockroachdb/cockroach)```
+
+```[Homepage](https://www.cockroachlabs.com/)```
+
+```[Documentation](https://docs.cockroachlabs.com/docs/stable/cockroach-commands)```
+
+<!-- verified: 2026-11-09 -->

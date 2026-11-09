@@ -8,72 +8,82 @@ Markdown-based API test specification runner
 
 ```cotton [spec.md]```
 
-**Run all specs in a directory**
+**Run all specs in a directory** (files ending in .spec.md)
 
 ```cotton [tests/]```
 
-**Run with a custom base URL**
+**Run specs matching a glob**
 
-```cotton -u [https://api.example.com] [tests/]```
-
-**Run in detail mode** (verbose output)
-
-```cotton -d [spec.md]```
-
-**Inject a predefined variable**
-
-```cotton -p [token=abc123] [spec.md]```
+```cotton "[tests/*.spec.md]"```
 
 **Stop on the first failure**
 
-```cotton -s [tests/]```
+```cotton -f [tests/]```
 
-**Watch for changes** and rerun automatically
+**Enable debug** logging
 
-```cotton -w [tests/]```
+```cotton -d [spec.md]```
+
+**Set the HTTP timeout** in milliseconds
+
+```cotton --timeout [10000] [tests/]```
+
+Run **quietly** and rely on the exit code
+
+```cotton -q [tests/]```
+
+Write a **JSON report**
+
+```cotton --json-report [report.json] [tests/]```
 
 # SYNOPSIS
 
-**cotton** [_-u baseurl_] [_-i_] [_-d_] [_-w_] [_-s_] [_-p name=value_] _test-cases_
+**cotton** [_options_] _file|directory|glob_...
 
 # PARAMETERS
 
-**-u** _url_
-> Base URL for all requests (default: http://localhost:8080).
-
-**-i**
-> Insecure mode: disable TLS certificate verification.
-
 **-d**
-> Detail mode: print comprehensive output for each test.
+> Enable debug logging.
 
-**-w**
-> Watch mode: rerun tests automatically when files change.
+**-q**
+> Silence execution, reporting only through the exit code.
 
-**-s**
-> Panic mode: halt execution on the first failure.
+**-m**
+> Monochrome logging.
 
-**-p** _name=value_
-> Inject a predefined variable into test specs (repeatable).
+**-f**
+> Fail fast: stop on the first failure.
 
-**-h**
-> Display help information.
+**--timeout** _ms_
+> HTTP timeout in milliseconds (default 30000, maximum 60000).
+
+**--json-report** _file_
+> Generate a JSON report.
+
+**--html-report** _file_
+> Reserved for an HTML report; not yet implemented.
 
 **-v**
-> Display version information.
+> Show version and exit.
 
 # DESCRIPTION
 
 **cotton** is a command-line test runner that executes RESTful API tests written in Markdown format. Test specifications are Markdown files containing HTTP request descriptions and expected response assertions, making tests human-readable as living documentation.
 
-Cotton reads each Markdown spec, extracts HTTP request definitions and expectations, executes the requests against the target API, and reports pass/fail results. The `_test-cases_` argument can be a single Markdown file, a directory of Markdown files, or a glob pattern.
+Cotton reads each Markdown spec, extracts HTTP request definitions and expectations, executes the requests against the target API, and reports pass/fail results. Each argument can be a single Markdown file, a directory searched recursively for **.spec.md** files, or a glob pattern.
 
-Variables can be injected with **-p** and referenced inside specs using `{{ variable_name }}` syntax. Cotton supports setup and teardown operations within spec files, and distinguishes between test cases (with assertions) and executables (without).
+Variables are declared in the spec, as immediate values or JSON paths into the response, and referenced using `{{ variable_name }}` syntax. Expectations use GJSON paths such as `$.data.id` with comparison and regex operators. Markdown links before the first code fence run as setup, links after it as teardown. Specs with expectations are test cases, those without are executables.
 
 # CAVEATS
 
-Tests are written in a specific Markdown dialect; see the project documentation for the spec format. TLS verification is enabled by default; use `-i` only in development. The base URL defaults to http://localhost:8080 and must be overridden for remote APIs.
+Tests are written in a specific Markdown dialect; see the project documentation for the spec format. Options must come before file arguments. A variable with no value at substitution time aborts the spec with an error. Command-line options changed between major releases, so older examples may not work with version 2.
 
 # SEE ALSO
 
-[curl](/man/curl)(1)
+[curl](/man/curl)(1), [hurl](/man/hurl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/chonla/cotton)```
+
+<!-- verified: 2026-11-09 -->

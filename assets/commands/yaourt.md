@@ -24,9 +24,17 @@ Deprecated Arch Linux AUR helper
 
 ```yaourt -Q```
 
-**Download and build** a package from AUR without installing
+**Build a package** from source (ABS or AUR) and install it
 
 ```yaourt -Sb [package]```
+
+**Download a PKGBUILD** to the current directory
+
+```yaourt -G [package]```
+
+**Show statistics** about installed packages
+
+```yaourt --stats```
 
 **Get information** about a package
 
@@ -45,7 +53,22 @@ Deprecated Arch Linux AUR helper
 > Synchronize databases and update all packages including AUR.
 
 **-Sb** _PACKAGE_
-> Download and build a package without installing.
+> Build from source: ABS for official packages, AUR otherwise. Specify **-b** twice to also build all dependencies.
+
+**-G**, **--getpkgbuild** _PACKAGE_
+> Get the PKGBUILD from ABS or AUR.
+
+**-a**, **--aur**
+> Also search the AUR database. With **-u**, also upgrade AUR packages.
+
+**--devel**
+> With **-u**, also upgrade development (VCS) packages.
+
+**-C**
+> Manage .pac* configuration files.
+
+**--stats**
+> Show statistics about installed packages.
 
 **-Rs** _PACKAGE_
 > Remove a package and its unneeded dependencies.
@@ -73,7 +96,7 @@ It combines official repository and AUR package management in a single interface
 
 # HISTORY
 
-**yaourt** was one of the first popular AUR helpers but is now deprecated. Users are recommended to switch to yay, paru, or other maintained alternatives.
+**yaourt** was one of the first popular AUR helpers but is now deprecated: its repository was marked unmaintained and archived on **August 9, 2019**. Users are recommended to switch to yay, paru, or other maintained alternatives.
 
 # CAVEATS
 
@@ -82,3 +105,9 @@ Deprecated and no longer maintained. Consider using yay or paru instead. AUR pac
 # SEE ALSO
 
 [yay](/man/yay)(8), [paru](/man/paru)(8), [pacman](/man/pacman)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/archlinuxfr/yaourt)```
+
+<!-- verified: 2026-11-09 -->

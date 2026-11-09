@@ -6,9 +6,21 @@ Regular expression syntax reference
 
 This is a reference page for regular expression syntax, not a standalone command.
 
+**Match lines** with an extended regex
+
+```grep -E "^(foo|bar)+$" [file]```
+
+**Extract matches** with a Perl-compatible regex
+
+```grep -oP "\d{3}-\d{4}" [file]```
+
+**Replace using** a capture group
+
+```sed -E "s/(foo)bar/\1baz/" [file]```
+
 # SYNOPSIS
 
-**regex** — regular expression pattern matching syntax
+**regex** - regular expression pattern matching syntax
 
 # DESCRIPTION
 
@@ -24,6 +36,9 @@ This is a reference page for regular expression syntax, not a standalone command
 **[^abc]**: Match any character not in brackets
 **[a-z]**: Match character range
 **\\**: Escape special character
+**\(...\)**: Grouping (BRE syntax)
+**\{n,m\}**: Repetition (BRE syntax)
+**\1**: Backreference to the first group
 
 # EXTENDED REGEX (ERE)
 
@@ -37,9 +52,9 @@ This is a reference page for regular expression syntax, not a standalone command
 
 # CHARACTER CLASSES
 
-**\d**: Digit (PCRE) — equivalent to [0-9]
-**\w**: Word character — [a-zA-Z0-9_]
-**\s**: Whitespace — [ \t\n\r\f]
+**\d**: Digit (PCRE): equivalent to [0-9]
+**\w**: Word character: [a-zA-Z0-9_]
+**\s**: Whitespace: [ \t\n\r\f]
 **\D**, **\W**, **\S**: Negated versions
 
 # POSIX CLASSES
@@ -67,8 +82,14 @@ Different tools support different regex flavors: BRE (basic), ERE (extended), PC
 
 Escape sequences and metacharacters vary between flavors. Test patterns with your specific tool.
 
-Greedy vs. non-greedy: **\*** and **+** are greedy by default. Use **\*?** and **+?** for non-greedy matching (PCRE).
+Greedy vs. non-greedy: **\*** and **+** are greedy by default. Use **\*?** and **+?** for non-greedy matching (PCRE). Lookaround such as **(?=...)** and **(?<=...)** is also PCRE only.
 
 # SEE ALSO
 
 [grep](/man/grep)(1), [sed](/man/sed)(1), [awk](/man/awk)(1), [perlre](/man/perlre)(1)
+
+# RESOURCES
+
+```[Documentation](https://man7.org/linux/man-pages/man7/regex.7.html)```
+
+<!-- verified: 2026-11-09 -->

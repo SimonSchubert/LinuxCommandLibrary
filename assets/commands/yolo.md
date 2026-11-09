@@ -6,11 +6,11 @@ Ultralytics YOLO object detection and computer vision CLI
 
 **Run object detection** on an image
 
-```yolo detect predict model=[yolo11n.pt] source=[image.jpg]```
+```yolo detect predict model=[yolo26n.pt] source=[image.jpg]```
 
 **Train a model** on a custom dataset
 
-```yolo detect train data=[data.yaml] model=[yolo11n.pt] epochs=[100] imgsz=[640]```
+```yolo detect train data=[data.yaml] model=[yolo26n.pt] epochs=[100] imgsz=[640]```
 
 **Validate model** accuracy
 
@@ -22,23 +22,31 @@ Ultralytics YOLO object detection and computer vision CLI
 
 **Track objects** in video
 
-```yolo detect track model=[yolo11n.pt] source=[video.mp4]```
+```yolo detect track model=[yolo26n.pt] source=[video.mp4]```
 
 **Run pose estimation**
 
-```yolo pose predict model=[yolo11n-pose.pt] source=[image.jpg]```
+```yolo pose predict model=[yolo26n-pose.pt] source=[image.jpg]```
 
 **Benchmark** model performance across export formats
 
-```yolo benchmark model=[yolo11n.pt] imgsz=[640]```
+```yolo benchmark model=[yolo26n.pt] imgsz=[640]```
+
+**Resume** an interrupted training run
+
+```yolo detect train resume model=[last.pt]```
+
+Show **environment and dependency** information
+
+```yolo checks```
 
 # SYNOPSIS
 
-**yolo** _TASK_ _MODE_ [_arg=value_...]
+**yolo** [_TASK_] _MODE_ [_arg=value_...]
 
-# PARAMETERS
+**yolo** **help**|**checks**|**version**|**settings**|**cfg**|**copy-cfg**
 
-## Tasks
+# TASKS
 
 **detect**
 > Object detection.
@@ -52,10 +60,16 @@ Ultralytics YOLO object detection and computer vision CLI
 **pose**
 > Pose estimation.
 
+**semantic**
+> Semantic segmentation.
+
+**depth**
+> Depth estimation.
+
 **obb**
 > Oriented bounding box detection.
 
-## Modes
+# MODES
 
 **train**
 > Train a model on a dataset.
@@ -75,10 +89,10 @@ Ultralytics YOLO object detection and computer vision CLI
 **benchmark**
 > Benchmark model speed and accuracy across export formats.
 
-## Common Arguments
+# PARAMETERS
 
 **model=**_path_
-> Model file path (e.g., yolo11n.pt).
+> Model file path (e.g., yolo26n.pt).
 
 **data=**_path_
 > Dataset configuration YAML file.
@@ -114,8 +128,18 @@ Each command accepts an optional task type (detect, segment, classify, pose, obb
 
 # CAVEATS
 
-Requires Python and PyTorch. GPU recommended for training. Pre-trained model weights are downloaded automatically on first use. Use `yolo cfg` to view all available configuration arguments.
+Requires Python and PyTorch. GPU recommended for training. Pre-trained model weights are downloaded automatically on first use. Use `yolo cfg` to view all available configuration arguments. Arguments must use **arg=value** form; `--arg value` and `arg value` are rejected.
 
 # SEE ALSO
 
 [python](/man/python)(1), [pip](/man/pip)(1), [nvidia-smi](/man/nvidia-smi)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ultralytics/ultralytics)```
+
+```[Homepage](https://www.ultralytics.com/)```
+
+```[Documentation](https://docs.ultralytics.com/usage/cli/)```
+
+<!-- verified: 2026-11-09 -->

@@ -28,7 +28,7 @@ It has been pre-installed on Ubuntu since version 7.10, providing a user-friendl
 
 # PARAMETERS
 
-**-p**, **--http-proxy**
+**-p**, **--http-proxy** _proxy_
 > Specify an HTTP proxy for package downloads
 
 **apt:_package_**
@@ -46,6 +46,9 @@ It has been pre-installed on Ubuntu since version 7.10, providing a user-friendl
 **?refresh=yes**
 > Force a repository refresh before looking for the package
 
+**?minver=**
+> Minimum version that the package candidate must provide
+
 # CAVEATS
 
 Requires a graphical environment (X11/Wayland). Should only be used with trusted links. Verification dialogs should be read carefully. Exit codes: 0 = success, 1 = cancelled, 2 = error, 3 = invalid arguments.
@@ -56,4 +59,12 @@ Requires a graphical environment (X11/Wayland). Should only be used with trusted
 
 # SEE ALSO
 
-[apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [dpkg](/man/dpkg)(1), [snap](/man/snap)(8)
+[apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [dpkg](/man/dpkg)(1), [snap](/man/snap)(8), [gdebi](/man/gdebi)(8)
+
+# RESOURCES
+
+```[Source code](https://git.launchpad.net/apturl)```
+
+```[Homepage](https://launchpad.net/apturl)```
+
+<!-- verified: 2026-11-09 -->

@@ -20,6 +20,10 @@ Python deterministic profiler
 
 ```python -m cProfile -s tottime [script.py]```
 
+**Profile a module** run as a script
+
+```python -m cProfile -m [module]```
+
 **Profile specific function in code**
 
 ```import cProfile; cProfile.run('[function_call()]')```
@@ -34,34 +38,34 @@ Python deterministic profiler
 
 # SYNOPSIS
 
-**python -m cProfile** [**-o** _output_] [**-s** _sort_] _script.py_ [_args_]
+**python -m cProfile** [**-o** _output_] [**-s** _sort_] (_script.py_ | **-m** _module_) [_args_]
 
 # PARAMETERS
 
-**-o** _file_
+**-o**, **--outfile** _file_
 > Save profile statistics to file for later analysis.
 
-**-s** _sort_
-> Sort output by specified column.
+**-s**, **--sort** _sort_
+> Sort output by specified column. Applies only when **-o** is not given.
 
-**-m** _module_
-> Profile a module run as a script (passed to python -m).
+**-m**
+> Treat the first argument as a module name and profile it as with python -m.
 
 # SORT OPTIONS
 
 **calls** / **ncalls**: Number of calls
 **cumulative** / **cumtime**: Cumulative time (including subcalls)
 **tottime** / **time**: Total time in function (excluding subcalls)
-**filename**: File name
-**module**: Module name
-**name** / **nfl**: Function name (name/file/line)
+**file** / **filename** / **module**: File name
+**name**: Function name
+**nfl**: Function name/file/line
 **pcalls**: Primitive call count
 **stdname**: Standard name
 **line**: Line number
 
 # DESCRIPTION
 
-**cProfile** is Python's built-in deterministic profiler that measures how much time is spent in each function. It's implemented in C for low overhead, making it suitable for profiling production code.
+**cProfile** is Python's built-in deterministic profiler that measures how much time is spent in each function. It's implemented in C for low overhead, making it suitable for profiling long-running programs. Since Python 3.15 the implementation lives in **profiling.tracing**, and **cProfile** remains available as a backward-compatible name.
 
 The profiler tracks every function call and return, recording the number of calls and time spent. Output shows each function with call count, total time, time per call, cumulative time, and cumulative time per call.
 
@@ -89,8 +93,18 @@ Profiling adds overhead that can affect measurements, especially for fast functi
 
 # HISTORY
 
-cProfile was added to Python in version **2.5** (2006) as a faster alternative to the pure-Python **profile** module. It was based on **lsprof** contributed by **Armin Rigo**. The C implementation provides roughly 10x less overhead than the original profiler while maintaining the same interface.
+cProfile was added to Python in version **2.5** (2006) as a faster alternative to the pure-Python **profile** module. It was based on **lsprof** contributed by **Armin Rigo**. The C implementation has much lower overhead than the original profiler while maintaining the same interface.
 
 # SEE ALSO
 
 [py-spy](/man/py-spy)(1), [python](/man/python)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/python/cpython)```
+
+```[Homepage](https://www.python.org/)```
+
+```[Documentation](https://docs.python.org/3/library/profiling.tracing.html)```
+
+<!-- verified: 2026-11-09 -->

@@ -8,13 +8,21 @@ local .deb package installer with dependency resolution
 
 ```gdebi [path/to/package.deb]```
 
+Install **without prompting** (dangerous)
+
+```sudo gdebi --non-interactive [path/to/package.deb]```
+
+**Simulate** only and print the required package changes
+
+```gdebi --apt-line [path/to/package.deb]```
+
 Do not show **progress** information
 
 ```gdebi --quiet [path/to/package.deb]```
 
 Set an **APT configuration option**
 
-```gdebi --option [APT_OPTS] [path/to/package.deb]```
+```gdebi --option [Name=Value] [path/to/package.deb]```
 
 Use **alternative root** directory
 
@@ -34,19 +42,22 @@ Display **version**
 > Suppress progress information
 
 **-o**, **--option** _APT_OPTS_
-> Set an APT configuration option
+> Set an APT configuration option. May be repeated.
 
 **--root** _DIR_
 > Use alternative root directory
 
 **-n**, **--non-interactive**
-> Run non-interactively (assume yes to all prompts)
+> Run non-interactively, installing without asking for confirmation. Upstream labels this as dangerous.
 
 **--apt-line**
-> Simulate only; print an apt-get install compatible line to stderr
+> Simulate only and print the packages to install and remove in apt-get compatible form
 
 **--version**
 > Display version information
+
+**-h**, **--help**
+> Display help
 
 # DESCRIPTION
 
@@ -58,7 +69,7 @@ A graphical version (**gdebi-gtk**) is also available for desktop use.
 
 # CAVEATS
 
-Requires configured APT repositories to resolve dependencies. Cannot resolve dependencies that aren't available in configured repositories. For packages with complex dependencies, prefer adding a proper repository rather than installing standalone .deb files.
+Installing requires root privileges. Requires configured APT repositories to resolve dependencies. Cannot resolve dependencies that aren't available in configured repositories. For packages with complex dependencies, prefer adding a proper repository rather than installing standalone .deb files. Modern APT can do the same job with **apt install ./package.deb**.
 
 # HISTORY
 
@@ -67,3 +78,9 @@ gdebi was developed for Ubuntu and Debian to solve the common problem of install
 # SEE ALSO
 
 [dpkg](/man/dpkg)(1), [apt](/man/apt)(8), [apt-get](/man/apt-get)(8)
+
+# RESOURCES
+
+```[Source code](https://launchpad.net/gdebi)```
+
+<!-- verified: 2026-11-09 -->

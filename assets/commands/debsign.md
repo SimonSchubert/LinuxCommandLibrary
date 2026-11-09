@@ -20,9 +20,13 @@ GPG signing tool for Debian packages
 
 ```debsign -m "[Name <email@example.com>]" [package.changes]```
 
-**Re-sign with** different key
+**Replace an existing signature** using a different key
 
-```debsign -e "[newemail@example.com]" [package.changes]```
+```debsign --re-sign -k [KEYID] [package.changes]```
+
+**Sign the .changes file** for the package in the current source tree
+
+```debsign```
 
 **Sign files on a remote host**
 
@@ -30,15 +34,15 @@ GPG signing tool for Debian packages
 
 # SYNOPSIS
 
-**debsign** [_options_] _changes-or-dsc-file_
+**debsign** [_options_] [_changes-file_|_dsc-file_|_commands-file_ ...]
 
 # PARAMETERS
 
 _FILE_
-> .changes or .dsc file to sign.
+> File to sign: .changes, .dsc, .buildinfo, or .commands. If omitted, the name of the .changes file is derived from debian/changelog.
 
 **-k** _KEYID_
-> GPG key ID to use for signing.
+> GPG key ID to use for signing. Overrides **-m** and **-e**.
 
 **-m** _MAINTAINER_
 > Specify maintainer for signing.
@@ -57,6 +61,12 @@ _FILE_
 
 **-a** _ARCH_
 > Specify the Debian architecture for .changes file search.
+
+**-t** _GNU-SYSTEM-TYPE_
+> Specify the GNU system type for .changes file search.
+
+**--multi**
+> Use the most recent multiarch .changes file, such as those produced by dpkg-cross.
 
 **--re-sign**
 > Recreate signature if file has been signed already.
@@ -78,8 +88,8 @@ _FILE_
 
 # CONFIGURATION
 
-**~/.devscripts**
-> Configuration file for default GPG key ID and signing behavior.
+**/etc/devscripts.conf**, **~/.devscripts**
+> Configuration files read in that order. Supported variables include **DEBSIGN_KEYID**, **DEBSIGN_MAINT**, **DEBSIGN_PROGRAM**, **DEBSIGN_ALWAYS_RESIGN**, and **DEBRELEASE_DEBS_DIR**.
 
 # DESCRIPTION
 
@@ -100,3 +110,11 @@ debsign is part of the **devscripts** package, developed for Debian package main
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [debuild](/man/debuild)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/devscripts)```
+
+```[Documentation](https://manpages.debian.org/testing/devscripts/debsign.1.en.html)```
+
+<!-- verified: 2026-11-09 -->

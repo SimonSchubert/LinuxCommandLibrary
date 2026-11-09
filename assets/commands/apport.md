@@ -4,9 +4,13 @@ Automatic crash reporting and diagnostics system
 
 # TLDR
 
-Show **crash report** for a PID
+**Regenerate stack traces** of a crash report and print them
 
 ```apport-retrace -s [/var/crash/_bin_foo.1000.crash]```
+
+**Retrace in a sandbox** with downloaded debug symbols and open gdb
+
+```apport-retrace -g -S system -C [~/.cache/apport-retrace] [/var/crash/report.crash]```
 
 **List** pending crash reports
 
@@ -20,24 +24,28 @@ Show **crash report** for a PID
 
 ```sudo systemctl enable apport```
 
+**Disable** apport crash reporting
+
+```sudo systemctl disable --now apport```
+
 File bug report **from crash**
 
 ```ubuntu-bug [/var/crash/report.crash]```
 
 # SYNOPSIS
 
-**apport** (system daemon)
+**/usr/share/apport/apport** [_--start_|_--stop_]
 
 # DESCRIPTION
 
 **apport** is Ubuntu's crash reporting system that automatically collects data when applications crash, including core dumps, package versions, and system information. It stores crash reports in /var/crash/ for later submission.
 
-When enabled, apport intercepts segmentation faults and other crashes, creating .crash files that can be reported to Launchpad or analyzed locally.
+When enabled, apport registers itself as the kernel's core dump handler, intercepting segmentation faults and other crashes and creating .crash files that can be reported to Launchpad or analyzed locally. It is not run directly by users; **apport-cli**, **apport-retrace**, **apport-unpack** and **ubuntu-bug** work with the reports it produces.
 
 # CONFIGURATION
 
 **/etc/default/apport**
-> Main configuration file. Set enabled=1 to collect crash reports or enabled=0 to disable.
+> Main configuration file. Set enabled=1 (the upstream default) to collect crash reports or enabled=0 to disable. Override once with **sudo service apport start force_start=1**.
 
 **/var/crash/**
 > Directory where crash report files are stored.
@@ -58,7 +66,7 @@ When enabled, apport intercepts segmentation faults and other crashes, creating 
 
 # CAVEATS
 
-Core dumps can consume significant disk space. Crash reports may contain sensitive information. Disabled by default in production environments.
+Core dumps can consume significant disk space. Crash reports may contain sensitive information such as memory contents, so review them before uploading.
 
 # HISTORY
 
@@ -67,3 +75,11 @@ Core dumps can consume significant disk space. Crash reports may contain sensiti
 # SEE ALSO
 
 [apport-cli](/man/apport-cli)(1), [apport-unpack](/man/apport-unpack)(1), [ubuntu-bug](/man/ubuntu-bug)(1), [coredumpctl](/man/coredumpctl)(1), [dmesg](/man/dmesg)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/canonical/apport)```
+
+```[Homepage](https://launchpad.net/apport)```
+
+<!-- verified: 2026-11-09 -->

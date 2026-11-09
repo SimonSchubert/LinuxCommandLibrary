@@ -8,13 +8,21 @@ Modern Mastodon TUI client for the terminal
 
 ```mastui```
 
-**Log in to a Mastodon instance**
+**Add another account**
 
-```mastui login```
+```mastui --add-account```
 
-**Select a theme**
+**Run in the browser** as a local web application
 
-```mastui theme```
+```mastui --web```
+
+**Serve the web interface** on a custom address with an access token
+
+```mastui --web --web-host [0.0.0.0] --web-port [8080] --web-token [secret] --no-browser```
+
+**Enable debug logging**
+
+```mastui --debug```
 
 # SYNOPSIS
 
@@ -22,27 +30,44 @@ Modern Mastodon TUI client for the terminal
 
 # PARAMETERS
 
-**login**
-> Authenticate with a Mastodon instance.
+**--add-account**
+> Add a new account.
 
-**theme**
-> Select a UI theme.
+**--debug**
+> Enable debug logging.
 
-**--help**
+**--no-ssl-verify**
+> Disable SSL verification.
+
+**--web**
+> Run Mastui in web browser / WebView mode.
+
+**--web-host** _HOST_
+> Host address for the web interface (default: 127.0.0.1).
+
+**--web-port** _PORT_
+> Port for the web interface (default: 8000).
+
+**--web-token** _TOKEN_
+> Secret token required to access the web terminal session.
+
+**--no-browser**
+> Do not automatically open a web browser.
+
+**-h**, **--help**
 > Display help information.
-
-**--version**
-> Display version information.
 
 # DESCRIPTION
 
-**mastui** is a fast, modern TUI client for Mastodon built with Python and Textual. It displays multi-column timelines (Home, Notifications, Federated) with persistent caching for smooth scrolling.
+**mastui** is a fast, modern TUI client for Mastodon built with Python and Textual. It displays multi-column timelines (Home, Local, Federated, Mentions, DMs) with a persistent SQLite cache for smooth scrolling and offline reading.
 
 Features include in-terminal image viewing (ANSI/Sixel/TGP), multiple light and dark themes, configurable per-timeline refresh intervals, a full-screen post composer with content warnings and language selection, and poll creation and management.
 
+Login and theme selection happen inside the application: the onboarding flow signs in to an instance, **o** opens the options screen, **d** toggles dark and light mode, **u** switches profile and **?** shows all key bindings. Each profile keeps its data under **~/.config/mastui/_profile_**.
+
 # CAVEATS
 
-Requires a Mastodon account and API access token. Image display capabilities depend on terminal emulator support.
+Requires a Mastodon account; the onboarding flow can create the API access token. Protect the web interface with **--web-token** when binding to anything other than localhost. Image display capabilities depend on terminal emulator support.
 
 # HISTORY
 
@@ -51,3 +76,9 @@ Requires a Mastodon account and API access token. Image display capabilities dep
 # SEE ALSO
 
 [toot](/man/toot)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/kimusan/mastui)```
+
+<!-- verified: 2026-11-09 -->

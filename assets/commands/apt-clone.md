@@ -20,6 +20,14 @@ Restore into a **specific directory** (debootstrap)
 
 ```sudo apt-clone restore [path/to/clone.tar.gz] --destination [path/to/directory]```
 
+**Simulate** a restore without changing the system
+
+```sudo apt-clone restore --simulate [path/to/clone.tar.gz]```
+
+Show **differences** between a clone file and the system
+
+```sudo apt-clone show-diff [path/to/clone.tar.gz]```
+
 Show **information** about a clone file
 
 ```apt-clone info [path/to/apt-clone-state-hostname.tar.gz]```
@@ -49,22 +57,37 @@ Clone files are compressed tar archives containing package lists and APT source 
 **restore-new-distro** _source_ _new_distro_codename_
 > Restore a clone file while attempting to upgrade packages to a new distribution release.
 
+**show-diff** _source_ [**--destination** _path_]
+> Show the difference between a clone file and the system.
+
 **info** _source_
 > Display information about a clone file.
 
 # PARAMETERS
 
 **--source** _path_
-> Specify an alternative source directory for cloning (default is /).
+> Source directory of the system or chroot for **clone** (default is /).
 
 **--destination** _path_
-> Specify the destination directory for restore (debootstraps the clone into this directory).
+> Destination directory for **restore**, **restore-new-distro** and **show-diff** (default is /).
 
 **--with-dpkg-repack**
-> Include package files for packages no longer available in repositories.
+> Add packages that can no longer be downloaded to the state bundle, using dpkg-repack. This can make the bundle rather big.
 
 **--with-dpkg-status**
-> Include the full dpkg status file.
+> Include a full copy of the dpkg status file, mostly useful for debugging.
+
+**--extra-files** _glob_...
+> Include extra files in the clone.
+
+**--simulate**
+> Only simulate **restore** or **restore-new-distro**.
+
+**--exclude** _package_...
+> Exclude the listed packages from **restore**.
+
+**--rewrite-server** _url_
+> Rewrite all URIs in sources.list to the given URL during **restore**.
 
 **-h**, **--help**
 > Show help message and exit.
@@ -79,3 +102,9 @@ Restoring a clone on a different release version may fail due to package incompa
 # SEE ALSO
 
 [apt](/man/apt)(8), [dpkg](/man/dpkg)(1), [apt-get](/man/apt-get)(8), [apt-mark](/man/apt-mark)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/mvo5/apt-clone)```
+
+<!-- verified: 2026-11-09 -->

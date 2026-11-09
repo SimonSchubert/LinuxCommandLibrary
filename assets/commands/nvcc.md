@@ -16,6 +16,14 @@ NVIDIA's CUDA compiler driver
 
 ```nvcc -arch=sm_[75] [program.cu] -o [program]```
 
+**Compile for the GPUs visible on this machine**
+
+```nvcc -arch=native [program.cu] -o [program]```
+
+**Compile and immediately run**
+
+```nvcc -run [program.cu]```
+
 **Generate PTX code**
 
 ```nvcc -ptx [kernel.cu]```
@@ -48,13 +56,13 @@ NVIDIA's CUDA compiler driver
 **-c**
 > Compile only, don't link.
 
-**-arch** _ARCH_
-> GPU architecture (sm_50, sm_75, sm_86, etc.).
+**-arch**, **--gpu-architecture** _ARCH_
+> GPU architecture (sm_75, sm_86, native, all, all-major, etc.).
 
-**-code** _CODE_
-> GPU code generation.
+**-code**, **--gpu-code** _CODE_
+> Target architectures to generate code for and embed in the binary.
 
-**-gencode** _SPEC_
+**-gencode**, **--generate-code** _SPEC_
 > Architecture/code pair (e.g., arch=compute_75,code=sm_75).
 
 **-ptx**
@@ -66,8 +74,17 @@ NVIDIA's CUDA compiler driver
 **-G**
 > Device debug symbols.
 
-**-O** _LEVEL_
-> Optimization level (0-3).
+**-O**, **--optimize** _LEVEL_
+> Optimization level for host and device code.
+
+**-D** _MACRO_[=_VALUE_]
+> Define a preprocessor macro.
+
+**-cuda**
+> Compile CUDA source to host C++ only.
+
+**-run**
+> Compile, link and execute the program.
 
 **-I** _DIR_
 > Include directory.
@@ -106,13 +123,16 @@ NVIDIA's CUDA compiler driver
 > Generate line-number information for device code (useful for profilers).
 
 **-use_fast_math**
-> Enable fast math optimizations (implies `-ftz=true -prec-div=false -prec-sqrt=false`).
+> Use the fast math library (implies `-ftz=true -prec-div=false -prec-sqrt=false -fmad=true`).
+
+**-extended-lambda**
+> Allow `__host__` and `__device__` annotations in lambda declarations.
 
 **-keep**
 > Retain intermediate compilation files.
 
-**-t** _N_
-> Parallelize compilation across N threads.
+**-t**, **--threads** _N_
+> Maximum number of threads for parallel compilation steps, useful with multiple architectures. 0 uses the number of CPUs.
 
 **-v**, **--verbose**
 > Verbose output.
@@ -136,7 +156,7 @@ CUDA libraries (cuBLAS, cuDNN, cuFFT) link like regular libraries. Header paths 
 
 # CAVEATS
 
-Requires NVIDIA GPU and drivers. Architecture mismatch causes runtime errors. Debug builds much slower. Large register usage limits occupancy.
+Requires the CUDA Toolkit and a supported host compiler; running the compiled program requires an NVIDIA GPU and driver. Architecture mismatch causes runtime errors. Debug builds much slower. Large register usage limits occupancy.
 
 # HISTORY
 
@@ -145,3 +165,11 @@ Requires NVIDIA GPU and drivers. Architecture mismatch causes runtime errors. De
 # SEE ALSO
 
 [nvidia-smi](/man/nvidia-smi)(1), [cuda-gdb](/man/cuda-gdb)(1), [gcc](/man/gcc)(1), [clang](/man/clang)(1)
+
+# RESOURCES
+
+```[Homepage](https://developer.nvidia.com/cuda/toolkit)```
+
+```[Documentation](https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/)```
+
+<!-- verified: 2026-11-09 -->

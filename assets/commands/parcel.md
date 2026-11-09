@@ -32,6 +32,10 @@ zero-configuration web application bundler
 
 ```parcel build [index.html] --no-optimize --no-content-hash```
 
+**Print per-asset sizes** in the build report
+
+```parcel build [index.html] --detailed-report```
+
 # SYNOPSIS
 
 **parcel** [_command_] [_options_] _entries_...
@@ -48,22 +52,43 @@ zero-configuration web application bundler
 > Start a development server with HMR (default command).
 
 **--dist-dir** _dir_
-> Output directory (default value for distDir in package.json targets).
+> Output directory to write to when unspecified by targets.
 
 **-p**, **--port** _port_
-> Dev server port (also settable via PORT env var).
+> Dev server port (serve and watch). Defaults to $PORT or 1234.
 
 **--host** _host_
 > Dev server host (default: all interfaces).
 
-**--open**
-> Automatically open entry in the default browser.
+**--open** [_browser_]
+> Automatically open the entry in the specified browser, or the default browser (serve only).
 
-**--lazy**
-> Defer building files until requested in the browser.
+**--lazy** [_includes_]
+> Build async bundles on demand when requested in the browser, optionally limited to a comma-separated list of source globs (serve only).
+
+**--lazy-exclude** _excludes_
+> Comma-separated source globs whose async bundles are not built lazily. Only valid with --lazy.
 
 **--https**
-> Enable HTTPS for the dev server.
+> Serve over HTTPS.
+
+**--cert** _path_
+> Path to the certificate to use with HTTPS.
+
+**--key** _path_
+> Path to the private key to use with HTTPS.
+
+**--no-hmr**
+> Disable hot module replacement.
+
+**--hmr-port** _port_
+> Hot module replacement port.
+
+**--hmr-host** _host_
+> Hot module replacement host.
+
+**--no-cors**
+> Disable CORS.
 
 **--target** _target_
 > Build only a specific target defined in package.json. May be specified multiple times.
@@ -81,10 +106,37 @@ zero-configuration web application bundler
 > Disable source maps.
 
 **--no-optimize**
-> Disable optimizations such as minification.
+> Disable minification (build only).
+
+**--no-scope-hoist**
+> Disable scope hoisting (build only).
 
 **--no-content-hash**
-> Disable content hashing of output file names.
+> Disable content hashing of output file names (build and watch).
+
+**--no-autoinstall**
+> Disable automatic installation of missing dependencies.
+
+**--watch-dir** _path_
+> Root watch directory. Defaults to the nearest lockfile or source control directory.
+
+**--watch-ignore** _paths_
+> Comma-separated directories the watcher should not track. Defaults to .git and .hg.
+
+**--detailed-report** [_count_]
+> Print asset timings and sizes in the build report.
+
+**--reporter** _name_
+> Run an additional reporter. May be specified multiple times.
+
+**--profile**
+> Enable sampling build profiling.
+
+**--trace**
+> Enable build tracing.
+
+**-V**, **--version**
+> Output the version number.
 
 **--log-level** _level_
 > Set the log level (none, error, warn, info, verbose).
@@ -109,3 +161,13 @@ Parcel was created by **Devon Govett** in **2017** as a zero-configuration alter
 # SEE ALSO
 
 [webpack](/man/webpack)(1), [vite](/man/vite)(1), [esbuild](/man/esbuild)(1), [rollup](/man/rollup)(1), [npm](/man/npm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/parcel-bundler/parcel)```
+
+```[Homepage](https://parceljs.org/)```
+
+```[Documentation](https://parceljs.org/features/cli/)```
+
+<!-- verified: 2026-11-09 -->

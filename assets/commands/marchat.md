@@ -18,7 +18,15 @@ Lightweight real-time terminal chat with E2E encryption
 
 **Connect as an admin**
 
-```marchat-client --server [ws://host:8080/ws] --admin --admin-key [key]```
+```marchat-client --server [ws://host:8080/ws] --username [name] --admin --admin-key [key]```
+
+**Connect with end-to-end encryption**
+
+```marchat-client --server [ws://host:8080/ws] --username [name] --e2e --keystore-passphrase [passphrase]```
+
+**Reconnect using a saved profile**
+
+```marchat-client --quick-start```
 
 **Show server diagnostics**
 
@@ -33,47 +41,68 @@ Lightweight real-time terminal chat with E2E encryption
 # PARAMETERS
 
 **--interactive**
-> Guided setup prompt for the server when environment variables are not set.
+> Server: guided setup wizard, used only when required configuration such as MARCHAT_ADMIN_KEY or MARCHAT_USERS is missing.
 
 **--admin-panel**
-> Enable the in-terminal admin interface on the server.
+> Server: enable the built-in admin panel TUI.
 
 **--web-panel**
-> Enable the web-based admin interface on the server.
+> Server: enable the web admin panel, served at /admin.
 
 **--config-dir** _PATH_
-> Override the default configuration directory.
+> Server: override the configuration directory (default: ./config in development, $XDG_CONFIG_HOME/marchat in production).
 
 **--doctor**
-> Display server diagnostics in text format.
+> Server and client: print environment and configuration diagnostics, then exit.
 
 **--doctor-json**
-> Display server diagnostics as JSON.
+> Server and client: same as --doctor with JSON output.
 
 **--username** _NAME_
-> Set the client username when connecting.
+> Client: username to connect with.
 
 **--server** _URL_
-> Server WebSocket address to connect to (e.g. `ws://localhost:8080/ws`).
+> Client: server WebSocket address to connect to (e.g. `ws://localhost:8080/ws`).
 
 **--admin**
-> Connect with admin privileges.
+> Client: connect with admin privileges (requires --admin-key).
 
 **--admin-key** _KEY_
-> Admin authentication key.
+> Client: admin authentication key. On the server this flag is deprecated in favor of MARCHAT_ADMIN_KEY.
 
 **--skip-tls-verify**
-> Skip TLS certificate verification (useful with self-signed certificates).
+> Client: skip TLS certificate verification (useful with self-signed certificates).
+
+**--e2e**
+> Client: enable end-to-end encryption.
+
+**--keystore-passphrase** _PASS_
+> Client: passphrase for the E2E keystore.
+
+**--quick-start**
+> Client: use the last connection or select from saved profiles.
+
+**--auto**
+> Client: connect automatically using the most recent profile.
+
+**--non-interactive**
+> Client: skip interactive prompts. With --e2e, --keystore-passphrase is required on the command line.
+
+**--theme** _THEME_
+> Client: color theme.
+
+**--config** _PATH_
+> Client: path to a config file.
 
 # DESCRIPTION
 
 **marchat** is a self-hosted, terminal-based group chat application with real-time WebSocket messaging, optional end-to-end encryption, a plugin system, file sharing, admin panel, and code snippet support. The TUI client is built with Bubble Tea and data is stored in SQLite.
 
-The server is configured via flags or environment variables (`MARCHAT_PORT`, `MARCHAT_ADMIN_KEY`, `MARCHAT_GLOBAL_E2E_KEY`, etc.). End-to-end encryption uses X25519/ChaCha20-Poly1305. The plugin system supports community-built extensions for ANSI image sharing, text filters, and custom commands.
+The server is configured via environment variables (`MARCHAT_PORT`, `MARCHAT_ADMIN_KEY`, `MARCHAT_USERS`, `MARCHAT_GLOBAL_E2E_KEY`, etc.), which replace the deprecated `--port` and `--admin-key` server flags. End-to-end encryption uses ChaCha20-Poly1305 with a shared symmetric key. The plugin system supports community-built extensions for ANSI image sharing, text filters, and custom commands.
 
 # CAVEATS
 
-Requires running your own server instance. End-to-end encryption is optional and must be explicitly enabled via `MARCHAT_GLOBAL_E2E_KEY`. Running either binary without arguments launches an interactive configuration prompt.
+Requires running your own server instance. End-to-end encryption is optional, is enabled per client with **--e2e**, and uses one key shared by all participants (from the keystore or `MARCHAT_GLOBAL_E2E_KEY`), so it is not pairwise. Running the client without arguments launches an interactive configuration prompt.
 
 # HISTORY
 
@@ -82,3 +111,9 @@ Requires running your own server instance. End-to-end encryption is optional and
 # SEE ALSO
 
 [irssi](/man/irssi)(1), [weechat](/man/weechat)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Cod-e-Codes/marchat)```
+
+<!-- verified: 2026-11-09 -->

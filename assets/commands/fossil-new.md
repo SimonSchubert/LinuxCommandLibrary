@@ -50,9 +50,34 @@ alias for fossil init
 
 # DESCRIPTION
 
-**fossil new** is an alias for **fossil init**. It creates a new Fossil repository file with identical functionality. All options and behaviors are identical to **fossil init**.
+**fossil new** is an alias for **fossil init**. It creates a new Fossil repository file with identical functionality. All options and behaviors are identical to **fossil init**. The repository is a single file; use **fossil open** to create a check-out from it.
+
+# INSTALL
+
+```apt: sudo apt install fossil```
+
+```dnf: sudo dnf install fossil```
+
+```pacman: sudo pacman -S fossil```
+
+```apk: sudo apk add fossil```
+
+```zypper: sudo zypper install fossil```
+
+```brew: brew install fossil```
+
+```nix: nix profile install nixpkgs#fossil```
+
+<!-- packages: 2026-11-09 -->
 
 # SEE ALSO
 
-[fossil-init](/man/fossil-init)(1), [fossil-commit](/man/fossil-commit)(1)
+[fossil](/man/fossil)(1), [fossil-init](/man/fossil-init)(1), [fossil-commit](/man/fossil-commit)(1)
 
+# RESOURCES
+
+```[Source code](https://fossil-scm.org/)```
+
+```[Documentation](https://fossil-scm.org/home/help/new)```
+
+<!-- verified: 2026-11-09 -->

@@ -73,7 +73,7 @@ _PROJECT_
 > Delete the output path before building (default: true).
 
 **--stats-json**
-> Generate a stats.json file for bundle analysis (default: false).
+> Generate a browser-stats.json file for bundle analysis, plus server-stats.json with SSR (default: false).
 
 **--progress**
 > Log progress to the console while building (default: true).
@@ -99,6 +99,24 @@ _PROJECT_
 **--prerender**
 > Enable Static Site Generation (prerendering) during build.
 
+**--output-mode** _mode_
+> Type of build output: static (any static host) or server (required for hybrid rendering or APIs).
+
+**--localize**
+> Translate the bundles in one or more locales.
+
+**--service-worker** _path_
+> Generate a service worker configuration from the given ngsw-config.json.
+
+**--app-shell**
+> Generate an application shell during build time.
+
+**--cross-origin** _value_
+> Crossorigin attribute for elements providing CORS support: none, anonymous or use-credentials (default: none).
+
+**--deploy-url** _url_
+> Customize the base path for URLs of resources in index.html and component stylesheets.
+
 **--help**
 > Display help information.
 
@@ -112,7 +130,7 @@ A "production" configuration with full optimizations is typically defined by def
 
 # CAVEATS
 
-Part of **Angular CLI**. Build configuration is managed in angular.json. Option names on the command line use dash-case, while in the configuration file they use camelCase. Some options can only be set through angular.json. The `--prod` flag was removed in Angular 12; use `--configuration production` instead.
+Part of **Angular CLI**. Build configuration is managed in angular.json. Option names on the command line use dash-case, while in the configuration file they use camelCase. Some options can only be set through angular.json. The `--prod` flag was deprecated in Angular 12 and removed in Angular 14; use `--configuration production` instead. Newly generated workspaces set production as the default configuration of the build target.
 
 # HISTORY
 
@@ -120,5 +138,14 @@ Part of **Angular CLI**. Build configuration is managed in angular.json. Option 
 
 # SEE ALSO
 
-[ng](/man/ng)(1), [ng-serve](/man/ng-serve)(1), [webpack](/man/webpack)(1)
+[ng](/man/ng)(1), [ng-serve](/man/ng-serve)(1), [esbuild](/man/esbuild)(1), [webpack](/man/webpack)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/angular/angular-cli)```
+
+```[Homepage](https://angular.dev)```
+
+```[Documentation](https://angular.dev/cli/build)```
+
+<!-- verified: 2026-11-09 -->

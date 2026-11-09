@@ -26,7 +26,7 @@ KubeVela application delivery CLI
 
 **Port-forward** to an application
 
-```vela port-forward [appname]```
+```vela port-forward [appname] [8080:80]```
 
 **Execute command** in application container
 
@@ -35,6 +35,22 @@ KubeVela application delivery CLI
 **Install KubeVela** on a Kubernetes cluster
 
 ```vela install```
+
+**Deploy and wait** until the application is healthy
+
+```vela up -f [app.yaml] --wait --timeout [300s]```
+
+**Preview** the rendered resources without applying them
+
+```vela dry-run -f [app.yaml]```
+
+**Show the resource tree** of an application
+
+```vela status [appname] --tree```
+
+**Enable an addon**
+
+```vela addon enable [addon]```
 
 # SYNOPSIS
 
@@ -66,6 +82,27 @@ KubeVela application delivery CLI
 **install**
 > Install KubeVela on a Kubernetes cluster.
 
+**uninstall**
+> Remove KubeVela from a Kubernetes cluster.
+
+**init**
+> Create an application description interactively.
+
+**dry-run**
+> Render an application and print the resulting Kubernetes resources without applying them.
+
+**live-diff**
+> Compare an application file with a deployed revision.
+
+**addon**
+> List, enable, disable, and upgrade addons.
+
+**env**
+> Manage delivery environments.
+
+**cluster**
+> Manage Kubernetes clusters for multi-cluster delivery.
+
 **show**
 > Show reference documentation for components, traits, or workflow types.
 
@@ -73,7 +110,7 @@ KubeVela application delivery CLI
 > List available component types.
 
 **workflow**
-> Operate application delivery workflows (suspend, resume, restart, rollback).
+> Operate application delivery workflows (suspend, resume, terminate, restart, rollback, logs, debug).
 
 **version**
 > Print version information.
@@ -86,6 +123,21 @@ KubeVela application delivery CLI
 
 **-y**, **--yes**
 > Assume yes for all prompts.
+
+**-f**, **--file** _PATH_
+> Application file path or remote URL (up).
+
+**-w**, **--wait**
+> Wait until the application is healthy (up) or fully deleted (delete).
+
+**--timeout** _DURATION_
+> Time limit for **--wait** on up (default: 300s).
+
+**-c**, **--component** _NAME_
+> Filter pods or endpoints by component name (status, logs, exec, port-forward).
+
+**-t**, **--tree**
+> Display application resources as a tree (status).
 
 # DESCRIPTION
 
@@ -104,3 +156,13 @@ Requires a running Kubernetes cluster with KubeVela installed. Familiarity with 
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [helm](/man/helm)(1), [argocd](/man/argocd)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/kubevela/kubevela)```
+
+```[Homepage](https://kubevela.io/)```
+
+```[Documentation](https://kubevela.io/docs/)```
+
+<!-- verified: 2026-11-09 -->

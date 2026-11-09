@@ -4,38 +4,49 @@ manages Jira projects from the command line
 
 # TLDR
 
-**List all projects**
+**List all accessible projects**
 
 ```jira project list```
 
-**View project details**
+**List projects using a specific configuration file**
 
-```jira project view [PROJECT_KEY]```
+```jira project list -c [path/to/config.yml]```
 
-**List projects in plain table format**
+**List projects using the short aliases**
 
-```jira project list --plain```
+```jira projects ls```
 
 # SYNOPSIS
 
-**jira** **project** _subcommand_ [_options_]
+**jira** **project** **list** [_options_]
 
 # PARAMETERS
 
-**list**
-> List all accessible projects.
+**list**, **lists**, **ls**
+> List the Jira projects the current user has access to.
 
-**view** _key_
-> View project details by key (e.g., PROJ).
+**-c**, **--config** _FILE_
+> Use the given configuration file.
 
-**--plain**
-> Display output in plain table format without borders.
+**--debug**
+> Turn on debug output.
 
 # DESCRIPTION
 
-**jira project** manages Jira projects from the command line. Part of **jira-cli** (by ankitpokhrel), it allows listing and viewing project information including project keys, names, leads, and project types.
+**jira project** manages Jira projects from the command line. Part of **jira-cli** (by ankitpokhrel), it currently offers the **list** subcommand, which prints a table with each project's key, name, type and lead through the configured pager.
+
+The command is also available under the alias **jira projects**.
+
+# CAVEATS
+
+There is no subcommand for viewing a single project; **list** is the only one available. Requires a configured jira-cli (**jira init**).
 
 # SEE ALSO
 
 [jira](/man/jira)(1), [jira-issue](/man/jira-issue)(1), [jira-sprint](/man/jira-sprint)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/ankitpokhrel/jira-cli)```
+
+<!-- verified: 2026-11-09 -->

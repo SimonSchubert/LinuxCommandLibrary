@@ -36,6 +36,14 @@ Convert HTML pages to images
 
 ```wkhtmltoimage --zoom [1.5] [input.html] [output.png]```
 
+**Allow a local HTML file** to load local images and stylesheets
+
+```wkhtmltoimage --enable-local-file-access [input.html] [output.png]```
+
+**Render a PNG** with a transparent background
+
+```wkhtmltoimage --transparent [input.html] [output.png]```
+
 **Wait for JavaScript** to finish
 
 ```wkhtmltoimage --javascript-delay [2000] [input.html] [output.png]```
@@ -70,8 +78,20 @@ Convert HTML pages to images
 **--crop-h** _int_
 > Height for cropping.
 
+**--transparent**
+> Make the background transparent in PNG output.
+
+**--enable-smart-width**
+> Extend **--width** to fit unbreakable content (default).
+
 **-n**, **--disable-javascript**
 > Disable JavaScript execution.
+
+**--enable-javascript**
+> Allow web pages to run JavaScript (default).
+
+**--debug-javascript**
+> Show JavaScript console output.
 
 **--javascript-delay** _msec_
 > Wait milliseconds for JavaScript to finish.
@@ -80,7 +100,13 @@ Convert HTML pages to images
 > Apply custom CSS stylesheet.
 
 **--cookie** _name_ _value_
-> Set a cookie (repeatable).
+> Set a cookie (repeatable). The value should be URL encoded.
+
+**--cookie-jar** _path_
+> Read and write cookies from and to the given file.
+
+**--post** _name_ _value_
+> Add a POST field (repeatable).
 
 **--custom-header** _name_ _value_
 > Set custom HTTP header (repeatable).
@@ -109,6 +135,15 @@ Convert HTML pages to images
 **--load-error-handling** _handler_
 > How to handle pages that fail to load: abort, ignore, or skip (default: abort).
 
+**--load-media-error-handling** _handler_
+> How to handle media files that fail to load: abort, ignore, or skip.
+
+**--enable-local-file-access**
+> Allow a local input file to read other local files.
+
+**--disable-local-file-access**
+> Block a local input file from reading other local files, unless allowed with **--allow**.
+
 **--allow** _path_
 > Allow files from the specified folder to be loaded (repeatable).
 
@@ -123,6 +158,9 @@ Convert HTML pages to images
 
 **--log-level** _level_
 > Set log level: none, error, warn, or info.
+
+**--use-xserver**
+> Use the X server instead of rendering headlessly.
 
 **-q**, **--quiet**
 > Suppress output messages (equivalent to --log-level none).
@@ -140,18 +178,28 @@ Convert HTML pages to images
 
 **wkhtmltoimage** converts HTML pages to images using the WebKit rendering engine. It can process local HTML files or fetch remote URLs, producing PNG, JPEG, BMP, or SVG output.
 
-The tool runs headlessly without requiring a display server, making it suitable for server-side image generation. It supports JavaScript execution, custom stylesheets, cookies, and HTTP authentication.
+Builds using the patched Qt run headlessly without requiring a display server, making it suitable for server-side image generation. It supports JavaScript execution, custom stylesheets, cookies, and HTTP authentication.
 
 Part of the **wkhtmltopdf** suite, it shares the same rendering engine and many options with its PDF counterpart.
 
 # CAVEATS
 
-wkhtmltoimage is based on an older Qt WebKit version and may not render modern JavaScript frameworks correctly. For complex pages, consider alternatives like Puppeteer or Playwright. The project is in maintenance mode with limited updates.
+wkhtmltoimage is based on an older Qt WebKit version and may not render modern JavaScript frameworks correctly. For complex pages, consider alternatives like Puppeteer or Playwright. The upstream repository is archived and the project is no longer maintained: avoid rendering untrusted content. Since version 0.12.6, access to local files is blocked by default, so local pages referencing other files may need **--enable-local-file-access** or **--allow**.
 
 # HISTORY
 
-wkhtmltoimage was created by **Jakob Truelsen** as part of the **wkhtmltopdf** project, first released around **2008**. It leverages Qt's WebKit implementation for rendering. The project gained popularity for server-side HTML-to-PDF/image conversion. Development has slowed as the underlying Qt WebKit has been deprecated in favor of Qt WebEngine.
+wkhtmltoimage was created by **Jakob Truelsen** as part of the **wkhtmltopdf** project, first released around **2008**. It leverages Qt's WebKit implementation for rendering. The project gained popularity for server-side HTML-to-PDF/image conversion. Development ended as Qt WebKit was deprecated in favor of Qt WebEngine, and the repository has since been archived.
 
 # SEE ALSO
 
 [wkhtmltopdf](/man/wkhtmltopdf)(1), [convert](/man/convert)(1), [puppeteer](/man/puppeteer)(1), [playwright](/man/playwright)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/wkhtmltopdf/wkhtmltopdf)```
+
+```[Homepage](https://wkhtmltopdf.org/)```
+
+```[Documentation](https://wkhtmltopdf.org/usage/wkhtmltopdf.txt)```
+
+<!-- verified: 2026-11-09 -->

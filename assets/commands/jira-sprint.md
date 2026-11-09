@@ -20,9 +20,17 @@ manages Jira sprints from the command line
 
 ```jira sprint list --state future,active -p [PROJECT]```
 
-**Add issue to sprint**
+**List issues in a specific sprint as plain text**
 
-```jira sprint add [SPRINT_ID] [PROJ-123]```
+```jira sprint list [SPRINT_ID] --plain```
+
+**Add one or more issues to a sprint**
+
+```jira sprint add [SPRINT_ID] [PROJ-123] [PROJ-456]```
+
+**Close a sprint**
+
+```jira sprint close [SPRINT_ID]```
 
 **List current sprint issues assigned to you**
 
@@ -34,11 +42,14 @@ manages Jira sprints from the command line
 
 # PARAMETERS
 
-**list**
-> List sprints and sprint issues in an interactive explorer view.
+**list** [_SPRINT_ID_]
+> List sprints and sprint issues in an interactive explorer view. With a sprint ID, list that sprint's issues. Aliases: **lists**, **ls**.
 
-**add** _SPRINT_ _ISSUE_
-> Add issue to a sprint.
+**add** _SPRINT_ID_ _ISSUE_...
+> Add one or more issues to a sprint. Alias: **assign**.
+
+**close** _SPRINT_ID_
+> Close a sprint. Alias: **complete**.
 
 **--current**
 > Show issues in the current active sprint.
@@ -50,13 +61,16 @@ manages Jira sprints from the command line
 > Show issues in the next planned sprint.
 
 **--state** _STATES_
-> Filter sprints by state (comma-separated: active, closed, future).
+> Filter sprints by state (comma-separated: future, active, closed). Defaults to active,closed.
+
+**--show-all-issues**
+> Show sprint issues from all projects.
 
 **-a** _ASSIGNEE_
 > Filter issues by assignee.
 
-**-p** _PROJECT_
-> Project key.
+**-p**, **--project** _PROJECT_
+> Project key. Defaults to the project in the jira-cli config file.
 
 **--table**
 > Display results in table view instead of explorer view.
@@ -66,6 +80,15 @@ manages Jira sprints from the command line
 
 **--no-headers**
 > Omit column headers (useful with --plain for scripting).
+
+**--columns** _COLUMNS_
+> Comma-separated list of columns to display in plain mode.
+
+**--fixed-columns** _N_
+> Number of fixed columns in the interactive mode (default 1).
+
+**--no-truncate**
+> Show all fields in plain mode.
 
 **--help**
 > Display help information.
@@ -87,3 +110,9 @@ jira sprint is part of **jira-cli**, an open-source Go-based tool by **Ankit Pok
 # SEE ALSO
 
 [jira](/man/jira)(1), [jira-issue](/man/jira-issue)(1), [jira-sprints](/man/jira-sprints)(1), [jira-me](/man/jira-me)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ankitpokhrel/jira-cli)```
+
+<!-- verified: 2026-11-09 -->

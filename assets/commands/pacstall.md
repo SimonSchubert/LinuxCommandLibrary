@@ -28,6 +28,14 @@ AUR-inspired package manager for Ubuntu and Debian-based distributions
 
 ```pacstall -Up```
 
+**List** available upgrades
+
+```pacstall -Lu```
+
+**Hold** a package back from upgrades
+
+```pacstall -M [package] hold```
+
 Display **information** about an installed package
 
 ```pacstall -Ci [package]```
@@ -70,8 +78,8 @@ Install a package without prompts, keeping build files
 **-Rr**, **--remove-repo** _repo_
 > Remove a repository from pacstall.
 
-**-U**, **--update**
-> Update pacstall and needed scripts.
+**-U**, **--update** [_user_] [_branch_]
+> Update pacstall and needed scripts, optionally from a specific fork and branch.
 
 **-Up**, **--upgrade**
 > Upgrade packages that have a newer version.
@@ -79,8 +87,14 @@ Install a package without prompts, keeping build files
 **-L**, **--list**
 > List installed packages.
 
+**-Lu**, **--list-upgrades**
+> List upgrades for installed packages.
+
+**-M**, **--mark** _package_ _hold|unhold_
+> Toggle upgrade checking of an installed package.
+
 **-T**, **--tree** _package_
-> Display a tree graph of a package's dependencies.
+> Display a tree graph of an installed package.
 
 **-D**, **--download** _package_
 > Download pacscript to the current directory.
@@ -90,6 +104,12 @@ Install a package without prompts, keeping build files
 
 **-V**, **--version**
 > Display version information.
+
+**-h**, **--help**
+> Display help.
+
+**-x**, **--debug**
+> Enable debug output. Must be the first argument.
 
 **-P**, **--disable-prompts**
 > Disable prompts and accept all defaults.
@@ -113,11 +133,11 @@ Install a package without prompts, keeping build files
 
 **pacstall** is a package manager for Ubuntu and Debian-based distributions that brings AUR-like functionality by allowing users to install packages from community-maintained build scripts called pacscripts (similar to Arch's PKGBUILDs).
 
-The tool maintains its own repositories of build scripts, separate from the system's apt repositories. Users can add custom repositories hosted on GitHub or GitLab, enabling community-driven package distribution outside official channels.
+The tool maintains its own repositories of build scripts, separate from the system's apt repositories, and packages each pacscript into a .deb before installing it. Users can add custom repositories hosted on GitHub or GitLab, enabling community-driven package distribution outside official channels.
 
 # CAVEATS
 
-Packages are built from source, which can be time-consuming. Requires build dependencies to be installed. Not officially supported by Ubuntu/Debian; packages may conflict with system packages. Always review pacscripts before installation.
+Source-based pacscripts can be time-consuming to build. Requires build dependencies to be installed. Not officially supported by Ubuntu/Debian; packages may conflict with system packages. Always review pacscripts before installation.
 
 # HISTORY
 
@@ -126,3 +146,11 @@ Created to bring the AUR (Arch User Repository) experience to Ubuntu users. Deve
 # SEE ALSO
 
 [apt](/man/apt)(8), [dpkg](/man/dpkg)(1), [yay](/man/yay)(8), [makepkg](/man/makepkg)(8), [nala](/man/nala)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/pacstall/pacstall)```
+
+```[Homepage](https://pacstall.dev/)```
+
+<!-- verified: 2026-11-09 -->

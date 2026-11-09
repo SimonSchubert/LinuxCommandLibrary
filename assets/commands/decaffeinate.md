@@ -16,9 +16,13 @@ convert CoffeeScript to modern JavaScript
 
 ```decaffeinate --use-js-modules [file.coffee]```
 
-**Write output to a specific file**
+**Convert every CoffeeScript file in a directory**
 
-```decaffeinate -o [output.js] [file.coffee]```
+```decaffeinate [src/]```
+
+**Read from stdin** and write to stdout
+
+```decaffeinate < [file.coffee]```
 
 **Convert multiple files at once**
 
@@ -30,18 +34,23 @@ convert CoffeeScript to modern JavaScript
 
 # SYNOPSIS
 
-**decaffeinate** [_options_] _files..._
+**decaffeinate** [_options_] _path_...
+
+**decaffeinate** [_options_] < _input_
 
 # PARAMETERS
-
-**-o**, **--output** _file_
-> Write output to the specified file path.
 
 **--use-cs2**
 > Treat input as CoffeeScript 2 code (default assumes CoffeeScript 1).
 
 **--use-js-modules**
 > Convert `require`/`module.exports` to ES6 `import`/`export` syntax.
+
+**--loose-js-modules**
+> Allow named exports when converting to JS modules.
+
+**--safe-import-function-identifiers** _names_
+> Comma-separated function names that may appear in the import section without disqualifying later requires.
 
 **--modernize-js**
 > Treat the input as JavaScript and apply only JS-to-JS transforms (no CoffeeScript conversion).
@@ -50,7 +59,22 @@ convert CoffeeScript to modern JavaScript
 > Treat input as Literate CoffeeScript.
 
 **--loose**
-> Enable all loose transformation options for simpler output (may have minor semantic differences).
+> Enable all **--loose-...** options for simpler output (may have minor semantic differences).
+
+**--loose-default-params**
+> Convert CoffeeScript default params to JS default params.
+
+**--loose-for-expressions**
+> Do not wrap expression loop targets in `Array.from`.
+
+**--loose-for-of**
+> Do not wrap JS `for...of` loop targets in `Array.from`.
+
+**--loose-includes**
+> Do not wrap in `Array.from` when converting `in` to `includes`.
+
+**--loose-comparison-negation**
+> Allow unsafe simplifications like `!(a > b)` to `a <= b`.
 
 **--prefer-let**
 > Use `let` instead of `const` for most variables in the output.
@@ -67,8 +91,17 @@ convert CoffeeScript to modern JavaScript
 **--logical-assignment**
 > Use ES2021 logical assignment operators (`&&=`, `||=`, `??=`).
 
-**--disable-babel-constructor-workaround**
-> Disable Babel class constructor workaround.
+**--no-array-includes**
+> Do not use `Array.prototype.includes` in generated code.
+
+**--disallow-invalid-constructors**
+> Give an error when constructors use `this` before `super` or omit the `super` call in a subclass.
+
+**-h**, **--help**
+> Display help.
+
+**-v**, **--version**
+> Display the version.
 
 # DESCRIPTION
 
@@ -78,8 +111,16 @@ Useful for migrating CoffeeScript codebases to JavaScript.
 
 # CAVEATS
 
-Some CoffeeScript patterns may require manual cleanup. Review generated code for edge cases.
+Some CoffeeScript patterns may require manual cleanup. Review generated code for edge cases. Each input file is written to a **.js** file next to it; there is no output path option. With **--modernize-js**, files are changed in place. Without paths, input is read from stdin and output goes to stdout.
 
 # SEE ALSO
 
 [coffee](/man/coffee)(1), [babel](/man/babel)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/decaffeinate/decaffeinate)```
+
+```[Homepage](https://decaffeinate-project.org/)```
+
+<!-- verified: 2026-11-09 -->

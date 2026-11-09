@@ -54,7 +54,7 @@ _FILES_
 > Rotate image by the given number of degrees clockwise.
 
 **-quality** _VALUE_
-> Set compression quality (0-100 for JPEG/PNG, higher is better quality).
+> Set compression quality (1-100 for JPEG, higher is better quality). For PNG the value selects zlib compression level and filter type instead.
 
 **-strip**
 > Remove all image profiles, comments, and metadata.
@@ -69,7 +69,7 @@ _FILES_
 > Set the image colorspace (e.g., sRGB, Gray, CMYK).
 
 **-auto-orient**
-> Rotate image based on EXIF orientation tag and remove the tag.
+> Rotate image based on the EXIF orientation tag and reset the orientation to top-left.
 
 **-thumbnail** _GEOMETRY_
 > Resize and strip profiles, optimized for creating thumbnails.
@@ -85,9 +85,18 @@ When using **-format** to change the output type, new files are created with the
 
 # CAVEATS
 
-Overwrites original files by default unless **-format** or **-path** is used. This is the ImageMagick 6 specific variant; use **mogrify** for ImageMagick 7.
+Overwrites original files by default unless **-format** or **-path** is used, so test on copies first. This is the ImageMagick 6 specific variant name used by Debian-based distributions; use **magick mogrify** for ImageMagick 7. Distribution security policies in /etc/ImageMagick-6/policy.xml can block some formats such as PDF.
 
 # SEE ALSO
 
-[mogrify](/man/mogrify)(1), [convert](/man/convert)(1), [identify](/man/identify)(1), [composite.im6](/man/composite.im6)(1), [identify.im6](/man/identify.im6)(1)
+[mogrify](/man/mogrify)(1), [convert](/man/convert)(1), [identify](/man/identify)(1), [composite.im6](/man/composite.im6)(1), [identify.im6](/man/identify.im6)(1), [magick-mogrify](/man/magick-mogrify)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/ImageMagick/ImageMagick6)```
+
+```[Homepage](https://legacy.imagemagick.org/)```
+
+```[Documentation](https://legacy.imagemagick.org/script/mogrify.php)```
+
+<!-- verified: 2026-11-09 -->

@@ -49,7 +49,10 @@ Git integration for Debian package building
 > Import an existing Debian source package into a Git repository.
 
 **import-orig**
-> Import a new upstream source tarball into a Git repository.
+> Import a new upstream source from a tarball, or from a Git tag and tarball, into a Git repository.
+
+**import-ref**
+> Merge upstream Git commits onto the Debian branch.
 
 **export-orig**
 > Recreate upstream tarballs from a Git repository.
@@ -73,18 +76,33 @@ Git integration for Debian package building
 > Manage debian/patches as Git topic branches (patch queue).
 
 **create-remote-repo**
-> Create a remote Git repository and push the local repository into it.
+> Create a remote Git repository.
 
 **import-dscs**
 > Import several Debian source packages into a Git repository, sorted by version.
 
+**--list-cmds**
+> List all available commands.
+
+**--version**
+> Print the program version.
+
+**--help**
+> Print help.
+
 # CONFIGURATION
 
-**debian/gbp.conf**
-> Project-specific settings for branch names, build options, and pristine-tar configuration.
+**/etc/git-buildpackage/gbp.conf**
+> System-wide defaults.
 
 **~/.gbp.conf**
 > User-level defaults for gbp behavior across all projects.
+
+**.gbp.conf**, **debian/gbp.conf**
+> Project-specific settings for branch names, build options, and pristine-tar configuration.
+
+**.git/gbp.conf**
+> Per-clone settings that are not committed.
 
 # DESCRIPTION
 
@@ -96,12 +114,22 @@ gbp supports building in clean environments via pbuilder, sbuild, or cowbuilder 
 
 # CAVEATS
 
-Requires understanding of both Git branching and Debian packaging. Branch naming conventions (upstream, debian, pristine-tar) must be followed. Complex merge scenarios may require manual intervention. Options prefixed with **--git-** are for gbp itself; other options are passed through to the underlying build command.
+Requires understanding of both Git branching and Debian packaging. By default the packaging branch is **master** and the upstream branch is **upstream**; other names must be set in gbp.conf or on the command line. Complex merge scenarios may require manual intervention. In **gbp buildpackage**, options prefixed with **--git-** are for gbp itself; other options are passed through to the underlying build command.
 
 # HISTORY
 
-git-buildpackage was created by Guido Gunther and first released around **2007**. It became a standard tool for Debian developers who wanted to combine the benefits of Git's distributed version control with Debian's packaging system.
+git-buildpackage was created by Guido Günther and first released in **2006**. It became a standard tool for Debian developers who wanted to combine the benefits of Git's distributed version control with Debian's packaging system.
 
 # SEE ALSO
 
 [debuild](/man/debuild)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1), [pbuilder](/man/pbuilder)(8), [sbuild](/man/sbuild)(1), [git](/man/git)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/agx/git-buildpackage)```
+
+```[Homepage](https://honk.sigxcpu.org/piki/projects/git-buildpackage/)```
+
+```[Documentation](https://honk.sigxcpu.org/projects/git-buildpackage/manual-html/gbp.html)```
+
+<!-- verified: 2026-11-09 -->

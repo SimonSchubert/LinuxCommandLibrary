@@ -28,6 +28,14 @@ Select the active **kernel** sources
 
 ```sudo eselect kernel set [number]```
 
+**Switch** the system profile
+
+```sudo eselect profile set [number]```
+
+Read unread Gentoo **news** items
+
+```eselect news read```
+
 # SYNOPSIS
 
 **eselect** [_global options_] _module_ _action_ [_options_]
@@ -35,10 +43,16 @@ Select the active **kernel** sources
 # GLOBAL OPTIONS
 
 **--brief**
-> Reduce output verbosity.
+> Set brief output mode, for use as input to other programs (experimental).
 
-**--colour=**_yes_|_no_|_auto_
+**--colour=**_yes_|_no_|_auto_, **--color=**_yes_|_no_|_auto_
 > Control colored output (default: auto).
+
+**--eprefix=**_path_
+> Offset-prefix path to use for operations. Only relevant for cross-prefix builds.
+
+**--root=**_path_
+> Target root filesystem to use for operations (default: the **ROOT** environment variable).
 
 # DESCRIPTION
 
@@ -64,7 +78,10 @@ The tool's modular design means each aspect of system configuration is handled b
 > Refresh configuration if unset or invalid.
 
 **version**
-> Display module version.
+> Display module version. Without a module, print the version of eselect itself.
+
+**usage**
+> Display a minimal help screen (built-in, used without a module).
 
 # COMMON MODULES
 
@@ -96,3 +113,13 @@ Gentoo Linux specific. Available modules depend on installed packages. Some modu
 # SEE ALSO
 
 [eselect-kernel](/man/eselect-kernel)(1), [eselect-locale](/man/eselect-locale)(1), [eselect-profile](/man/eselect-profile)(1), [emerge](/man/emerge)(1)
+
+# RESOURCES
+
+```[Source code](https://gitweb.gentoo.org/proj/eselect.git/)```
+
+```[Homepage](https://wiki.gentoo.org/wiki/Project:Eselect)```
+
+```[Documentation](https://wiki.gentoo.org/wiki/Eselect)```
+
+<!-- verified: 2026-11-09 -->

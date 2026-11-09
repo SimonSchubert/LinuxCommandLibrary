@@ -8,6 +8,10 @@ open-source cryptocurrency trading bot
 
 ```octobot```
 
+**Start standalone** with the trading web interface
+
+```octobot --standalone```
+
 **Start in simulated trading mode**
 
 ```octobot --simulate```
@@ -34,8 +38,6 @@ open-source cryptocurrency trading bot
 
 **octobot** **tentacles** [_options_]
 
-**octobot** **node** [_options_]
-
 # PARAMETERS
 
 **-s**, **--simulate**
@@ -48,7 +50,7 @@ open-source cryptocurrency trading bot
 > Start without the Telegram interface.
 
 **-nl**, **--no_logs**
-> Disable backtesting logs.
+> Disable OctoBot logs in backtesting.
 
 **-b**, **--backtesting**
 > Start in backtesting mode using settings from config.json.
@@ -74,6 +76,27 @@ open-source cryptocurrency trading bot
 **-u**, **--update**
 > Update OctoBot to the latest available version.
 
+**--standalone**
+> Start standalone OctoBot with the trading web interface instead of the default node mode. Also enabled by OCTOBOT_STANDALONE=true.
+
+**--host** _HOST_
+> Host to bind the node server to.
+
+**--port** _PORT_
+> Port to bind the node server to (default 8000).
+
+**--master**
+> Enable master node mode, which schedules and executes tasks.
+
+**--consumer_only**
+> Start the node in consumer-only mode (requires a PostgreSQL database).
+
+**--user-folder** _PATH_
+> User data root for config, profiles and reference tentacles.
+
+**--log-folder** _PATH_
+> Log files directory, overriding LOGS_FOLDER and the default logs directory.
+
 **--encrypter**
 > Start the exchange API key encryption tool.
 
@@ -89,12 +112,18 @@ open-source cryptocurrency trading bot
 
 The bot can run headless from the command line or with a web interface for configuration and monitoring. It supports backtesting for strategy evaluation and simulated trading for risk-free testing. Strategies and exchanges are configured through plugins called tentacles, managed via the `tentacles` subcommand.
 
-The `node` subcommand starts OctoBot in network node mode, supporting `--host`, `--port`, `--master`, and `--consumer_only` options for distributed deployments.
+Since OctoBot 3.0 the default startup is node mode, controlled by the top-level `--host`, `--port`, `--master` and `--consumer_only` options. `--standalone` starts the classic trading web interface and cannot be combined with `--master` or `--consumer_only`.
 
 # CAVEATS
 
-Requires Python 3.10+. Exchange API keys needed for live trading. Trading involves financial risk. Available via pip or Docker.
+Current versions require Python 3.13+. Exchange API keys needed for live trading. Trading involves financial risk. Available via pip or Docker.
 
 # SEE ALSO
 
 [freqtrade](/man/freqtrade)(1), [hummingbot](/man/hummingbot)(1), [cointop](/man/cointop)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Drakkar-Software/OctoBot)```
+
+<!-- verified: 2026-11-09 -->

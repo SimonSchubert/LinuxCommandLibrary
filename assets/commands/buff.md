@@ -28,9 +28,17 @@ Lint, format, and manage Protocol Buffer files
 
 ```buf push```
 
-**Add a dependency**
+**Update dependencies** and the lock file
 
-```buf dep add [buf.build/googleapis/googleapis]```
+```buf dep update```
+
+**Check formatting** in CI
+
+```buf format --diff --exit-code```
+
+**Log in** to the Buf Schema Registry
+
+```buf registry login```
 
 # SYNOPSIS
 
@@ -57,7 +65,7 @@ Lint, format, and manage Protocol Buffer files
 > Push module to Buf Schema Registry (BSR).
 
 **dep**
-> Manage dependencies (add, update).
+> Manage module dependencies (graph, prune, update).
 
 **convert**
 > Convert a message between binary, text, or JSON.
@@ -74,17 +82,44 @@ Lint, format, and manage Protocol Buffer files
 **registry**
 > Manage assets on the Buf Schema Registry.
 
+**plugin**
+> Manage check plugins declared in configuration (prune, push, update).
+
+**policy**
+> Manage policies declared in configuration (prune, push, update).
+
+**stats**
+> Print statistics for an input.
+
 **--against** _reference_
 > Reference to compare against for breaking changes.
 
 **-w**, **--write**
 > Write formatted output back to files.
 
+**-d**, **--diff**
+> Display a diff instead of the formatted content (format).
+
+**--exit-code**
+> Exit with a non-zero status if the diff is not empty (format).
+
+**-o**, **--output** _path_
+> Output location (build, format) or base output directory (generate).
+
+**--template** _path_
+> Alternate buf.gen.yaml location or inline data (generate).
+
+**--path** _path_
+> Limit the operation to the given files or directories (repeatable).
+
+**--exclude-path** _path_
+> Exclude the given files or directories (repeatable).
+
 **--config** _path_
 > Path to buf.yaml configuration.
 
 **--error-format** _format_
-> Error output format: text, json, msvs, github-actions.
+> Error output format: text, json, msvs, junit, github-actions, or gitlab-code-quality. **buf lint** also accepts config-ignore-yaml.
 
 # DESCRIPTION
 
@@ -107,7 +142,7 @@ Code generation is configured via **buf.gen.yaml**, replacing complex protoc com
 
 # CAVEATS
 
-buf.yaml configuration is required for most operations. The BSR requires authentication for pushing modules. Breaking change detection may flag intentional changes as breaking; review carefully. Some protoc plugins may not be directly compatible with buf generate.
+Without a buf.yaml, buf falls back to default settings; a configuration file is needed to declare dependencies, workspaces, and custom rules. The BSR requires authentication for pushing modules. Breaking change detection may flag intentional changes as breaking; review carefully. Some protoc plugins may not be directly compatible with buf generate.
 
 # HISTORY
 
@@ -116,3 +151,13 @@ Buf was created by **Peter Edge**, a former Uber engineer, and founded as **Buf 
 # SEE ALSO
 
 [protoc](/man/protoc)(1), [grpcurl](/man/grpcurl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/bufbuild/buf)```
+
+```[Homepage](https://buf.build/)```
+
+```[Documentation](https://buf.build/docs/)```
+
+<!-- verified: 2026-11-09 -->

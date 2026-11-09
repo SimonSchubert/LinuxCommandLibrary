@@ -12,7 +12,7 @@ Kill LSF batch jobs
 
 ```bkill 0```
 
-**Kill a job by name**
+Kill your most recent job with a **name**
 
 ```bkill -J [job_name]```
 
@@ -20,15 +20,15 @@ Kill LSF batch jobs
 
 ```bkill -q [queue_name] 0```
 
-**Force kill a job** (no cleanup)
+**Remove a job** from LSF immediately (force)
 
 ```bkill -r [job_id]```
 
 **Send a specific signal** to a job
 
-```bkill -s [SIGTERM] [job_id]```
+```bkill -s [TERM] [job_id]```
 
-**Kill jobs matching a pattern**
+Kill **all jobs** matching a name pattern
 
 ```bkill -J "[pattern*]" 0```
 
@@ -44,7 +44,7 @@ Kill LSF batch jobs
 
 **bkill** terminates LSF (Load Sharing Facility) batch jobs. It sends a signal to running jobs or removes pending jobs from the queue. Using job ID 0 targets all of your own jobs.
 
-For running jobs, bkill first sends SIGINT, waits for a grace period, then sends SIGTERM, and finally SIGKILL if the job doesn't terminate. The -r option skips this sequence and forces immediate removal.
+For running jobs, bkill sends SIGINT and SIGTERM so the job can clean up, then SIGKILL if it does not terminate. The interval is set by **JOB_TERMINATE_INTERVAL** in lsb.params. The -r option sends the same signals but removes the job from LSF immediately, without waiting for it to terminate.
 
 bkill is part of IBM Spectrum LSF workload management system used in HPC environments.
 
@@ -54,10 +54,10 @@ bkill is part of IBM Spectrum LSF workload management system used in HPC environ
 > Force removal: remove the job from LSF immediately, mark it EXIT, and release monitored resources. Cannot be combined with **-s**.
 
 **-s** _signal_
-> Send a specific signal by name or number instead of the default SIGINT/SIGTERM/SIGKILL sequence.
+> Send a specific signal by name without the SIG prefix (such as KILL) or by number instead of the default sequence.
 
 **-J** _name_
-> Kill jobs matching name or name pattern.
+> Kill jobs matching name or name pattern. Without a job ID or **0**, only the most recent matching job is killed.
 
 **-q** _queue_
 > Kill jobs in specific queue.
@@ -78,10 +78,22 @@ bkill is part of IBM Spectrum LSF workload management system used in HPC environ
 > Kill jobs belonging to a specific service class.
 
 **-b**
-> Kill jobs quickly; pending jobs are removed immediately without waiting.
+> Kill large numbers of jobs as soon as possible; pending local jobs are removed immediately and not logged to lsb.acct.
+
+**-d**
+> Kill jobs, then mark them DONE after they exit. Applies only to RUN, USUSP or SSUSP jobs.
+
+**-stat** _run_|_pend_|_susp_
+> Kill large numbers of jobs in the given status as soon as possible.
+
+**-C** _reason_
+> Attach a reason for the kill (up to 4095 characters).
 
 **-l**
 > Display the signal names supported by bkill on this platform.
+
+**-h**
+> Display usage information.
 
 **-V**
 > Display LSF version information.
@@ -91,7 +103,7 @@ bkill is part of IBM Spectrum LSF workload management system used in HPC environ
 
 # CAVEATS
 
-Only administrators can kill other users' jobs. Force kill (-r) may leave orphan processes on execution hosts. Killing a job array master kills all elements. Pending jobs are removed immediately without signal sequence. Some jobs may not respond to signals and require force kill.
+Only root and LSF administrators can kill other users' jobs. Removing a job with -r may leave orphan processes on execution hosts. Without a job ID or 0, filter options such as -J and -q affect only the most recently submitted qualifying job. Killing a job array master kills all elements. Pending jobs are removed immediately without signal sequence. Some jobs may not respond to signals and require force kill.
 
 # HISTORY
 
@@ -99,4 +111,10 @@ Only administrators can kill other users' jobs. Force kill (-r) may leave orphan
 
 # SEE ALSO
 
-[bjobs](/man/bjobs)(1), [bsub](/man/bsub)(1)
+[bjobs](/man/bjobs)(1), [bsub](/man/bsub)(1), [bhist](/man/bhist)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.ibm.com/products/spectrum-lsf)```
+
+<!-- verified: 2026-11-09 -->

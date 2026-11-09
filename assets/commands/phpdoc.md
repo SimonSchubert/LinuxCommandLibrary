@@ -20,6 +20,18 @@ generates API documentation from PHP source code
 
 ```phpdoc -f [file.php] -t [docs/]```
 
+**Ignore paths** matching a glob
+
+```phpdoc -d [src/] -t [docs/] -i "[tests/**/*]"```
+
+**Include only public and protected** elements
+
+```phpdoc -d [src/] -t [docs/] --visibility=[public,protected]```
+
+**Force a full rebuild**, including syntax highlighted source
+
+```phpdoc -d [src/] -t [docs/] --force --sourcecode```
+
 # SYNOPSIS
 
 **phpdoc** [_options_]
@@ -27,10 +39,10 @@ generates API documentation from PHP source code
 # PARAMETERS
 
 **-d**, **--directory** _path_
-> Source directory.
+> Directory to parse, glob patterns supported. May be repeated.
 
 **-f**, **--filename** _file_
-> Single file to parse.
+> File to parse, glob patterns supported. May be repeated.
 
 **-t**, **--target** _path_
 > Output directory.
@@ -41,17 +53,50 @@ generates API documentation from PHP source code
 **--template** _name_
 > Template to use.
 
-**--ignore** _pattern_
-> Patterns to ignore (supports globs, e.g., `"**/*test.php"`).
+**-i**, **--ignore** _pattern_
+> Files and directories to ignore, relative to the source directory (supports globs, e.g., `"**/*test.php"`). May be repeated.
 
 **--visibility** _level_
 > Filter by visibility: public, protected, private, api, or internal.
 
 **--title** _text_
-> Set browser and template title.
+> Set the project title.
 
 **--encoding** _encoding_
 > Set file encoding (default: UTF-8).
+
+**--extensions** _ext_
+> File extension to parse (default: php). May be repeated.
+
+**--cache-folder** _path_
+> Path where cache files are stored.
+
+**--force**
+> Force a full build instead of incrementing existing documentation.
+
+**--sourcecode**, **--no-sourcecode**
+> Whether to include syntax highlighted source code.
+
+**--hidden**
+> Also parse files and directories that begin with a period.
+
+**--ignore-tags** _tag_
+> Tag to ignore (package, subpackage and ignore cannot be ignored). May be repeated.
+
+**--defaultpackagename** _name_
+> Name to use for the default package.
+
+**-m**, **--markers** _list_
+> Comma-separated list of markers or tags to filter.
+
+**--validate**
+> Validate every processed file with PHP Lint (slow).
+
+**-s**, **--setting** _key=value_
+> Provide a custom setting. May be repeated.
+
+**--list-settings**
+> List available settings.
 
 # DESCRIPTION
 
@@ -75,19 +120,23 @@ generates API documentation from PHP source code
 
 ```xml
 <?xml version="1.0"?>
-<phpdocumentor>
+<phpdocumentor configVersion="3">
     <paths>
         <output>docs</output>
     </paths>
-    <source>
-        <path>src</path>
-    </source>
+    <version number="latest">
+        <api>
+            <source dsn=".">
+                <path>src</path>
+            </source>
+        </api>
+    </version>
 </phpdocumentor>
 ```
 
 # CAVEATS
 
-Requires proper DocBlocks. Large projects take time to process. Template quality varies.
+Current versions require PHP 8.1 or higher. Requires proper DocBlocks. Large projects take time to process. Template quality varies.
 
 # HISTORY
 
@@ -96,3 +145,13 @@ phpDocumentor was created by **Joshua Eichorn** and is now maintained by **Mike 
 # SEE ALSO
 
 [doxygen](/man/doxygen)(1), [php](/man/php)(1), [composer](/man/composer)(1), [phpunit](/man/phpunit)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/phpDocumentor/phpDocumentor)```
+
+```[Homepage](https://phpdoc.org/)```
+
+```[Documentation](https://docs.phpdoc.org/)```
+
+<!-- verified: 2026-11-09 -->

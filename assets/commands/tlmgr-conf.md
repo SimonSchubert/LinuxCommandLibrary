@@ -20,6 +20,10 @@ Display and modify TeX Live configuration
 
 ```tlmgr conf tlmgr [setting] [value]```
 
+**Disable shell escape** (\write18) after installation
+
+```tlmgr conf texmf shell_escape 0```
+
 **Delete a setting from the tlmgr config file**
 
 ```tlmgr conf tlmgr --delete [setting]```
@@ -45,10 +49,10 @@ Display and modify TeX Live configuration
 # PARAMETERS
 
 **texmf**
-> Show or set values in texmf.cnf.
+> Show or set values in ROOT/texmf.cnf.
 
 **tlmgr**
-> Show or set values in the tlmgr configuration file.
+> Show or set values in the user-specific tlmgr configuration file.
 
 **updmap**
 > Show or set values in the first found updmap.cfg.
@@ -73,7 +77,20 @@ The **auxtrees** subcommand manages additional texmf trees that are searched alo
 
 Part of the TeX Live Manager.
 
+# CAVEATS
+
+No error checking is done on keys or values, so upstream discourages tinkering with settings this way. Trees added with **auxtrees** should not contain an ls-R file, or files will not be found once it becomes stale.
+
 # SEE ALSO
 
 [tlmgr-option](/man/tlmgr-option)(1), [tlmgr](/man/tlmgr)(1)
 
+# RESOURCES
+
+```[Homepage](https://www.tug.org/texlive/)```
+
+```[Documentation](https://www.tug.org/texlive/doc/tlmgr.html)```
+
+```[Source code](https://www.tug.org/texlive/svn/)```
+
+<!-- verified: 2026-11-09 -->

@@ -22,7 +22,7 @@ Display Vagrant VM port forwarding mappings
 
 # SYNOPSIS
 
-**vagrant** **port** [_options_] [_name_]
+**vagrant** **port** [_options_] [_name_|_id_]
 
 # PARAMETERS
 
@@ -40,3 +40,12 @@ Display Vagrant VM port forwarding mappings
 
 [vagrant](/man/vagrant)(1), [vagrant-status](/man/vagrant-status)(1), [vagrant-ssh](/man/vagrant-ssh)(1), [vagrant-ssh-config](/man/vagrant-ssh-config)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/hashicorp/vagrant)```
+
+```[Homepage](https://developer.hashicorp.com/vagrant)```
+
+```[Documentation](https://developer.hashicorp.com/vagrant/docs/cli/port)```
+
+<!-- verified: 2026-11-09 -->

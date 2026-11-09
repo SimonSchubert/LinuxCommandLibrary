@@ -22,7 +22,7 @@ Alternative form of pct move-volume that moves container volumes
 
 # SYNOPSIS
 
-**pct move_volume** _vmid_ _volume_ [_storage_] [_options_]
+**pct move_volume** _vmid_ _volume_ [_storage_] [_target-vmid_] [_target-volume_] [_options_]
 
 # PARAMETERS
 
@@ -57,6 +57,20 @@ _storage_
 
 **pct move_volume** is an alternative form of **pct move-volume** that moves container volumes to different storage backends in Proxmox VE. The underscore variant is provided for compatibility. It can move volumes between storages within the same container or to a different container entirely.
 
+# CAVEATS
+
+The container must be stopped and must not be protected. The **rootfs** volume cannot be moved to or from another container. Unused volumes cannot be moved to another storage.
+
 # SEE ALSO
 
 [pct](/man/pct)(1), [pct-move-volume](/man/pct-move-volume)(1), [pvesm](/man/pvesm)(1)
+
+# RESOURCES
+
+```[Source code](https://git.proxmox.com/?p=pve-container.git)```
+
+```[Homepage](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview)```
+
+```[Documentation](https://pve.proxmox.com/pve-docs/pct.1.html)```
+
+<!-- verified: 2026-11-09 -->

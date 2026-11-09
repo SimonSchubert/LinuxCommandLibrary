@@ -36,6 +36,14 @@ Check for **updates**
 
 ```sudo synopkg install [path/to/package.spk]```
 
+**Install from the Synology server** by package ID
+
+```sudo synopkg install_from_server [package]```
+
+Show the installed **version** of a package
+
+```synopkg version [package]```
+
 # SYNOPSIS
 
 **synopkg** _command_ [_OPTIONS_]
@@ -47,6 +55,9 @@ Check for **updates**
 
 **install** _file.spk_
 > Install package from SPK file
+
+**install_from_server** _package_
+> Download and install a package and its dependencies from the Synology server
 
 **uninstall** _package_
 > Remove installed package
@@ -65,6 +76,9 @@ Check for **updates**
 
 **is_onoff** _package_
 > Check if package is enabled
+
+**version** _package_
+> Show installed package version
 
 **checkupdate** _package_
 > Check for package updates
@@ -87,7 +101,7 @@ Check for **updates**
 
 **synopkg** is the package management utility for Synology DiskStation Manager (DSM), the operating system for Synology NAS devices. It provides command-line control over package installation, updates, and service management.
 
-The tool wraps each package's start/stop scripts located at `/var/packages/<package>/scripts/start-stop-status`. It automatically handles dependency resolution when installing packages and integrates with DSM's Package Center.
+The tool wraps each package's start/stop scripts located at **/var/packages/PACKAGE/scripts/start-stop-status**. It automatically handles dependency resolution when installing packages and integrates with DSM's Package Center.
 
 # CAVEATS
 
@@ -100,3 +114,9 @@ Requires root privileges for install/uninstall/start/stop operations. SSH access
 # SEE ALSO
 
 [synoupgrade](/man/synoupgrade)(8), [synoservice](/man/synoservice)(8)
+
+# RESOURCES
+
+```[Homepage](https://www.synology.com/en-global/dsm)```
+
+<!-- verified: 2026-11-09 -->

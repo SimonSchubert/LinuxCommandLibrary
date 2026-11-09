@@ -40,47 +40,76 @@ Java Archive tool
 
 ```jar cf [output.jar] -C [build/classes] .```
 
+**Print the module descriptor** of a JAR
+
+```jar --describe-module --file [archive.jar]```
+
+**Validate** a JAR file
+
+```jar --validate --file [archive.jar]```
+
 # SYNOPSIS
 
-**jar** [_options_] [_manifest_] _destination_ _input-files_
+**jar** [_OPTION_ ...] [[**--release** _VERSION_] [**-C** _dir_] _files_] ...
 
 # PARAMETERS
 
-**c**
+**-c**, **--create**
 > Create new archive.
 
-**x**
+**-x**, **--extract**
 > Extract archive.
 
-**t**
+**-t**, **--list**
 > List table of contents.
 
-**u**
+**-u**, **--update**
 > Update existing archive.
 
-**f** _file_
+**-d**, **--describe-module**
+> Print the module descriptor or automatic module name.
+
+**--validate**
+> Validate the contents of the JAR file.
+
+**-f** _file_, **--file=**_file_
 > Specify archive filename.
 
-**m** _manifest_
+**-m** _file_, **--manifest=**_file_
 > Include manifest file.
 
-**e** _class_
+**-e** _class_, **--main-class=**_class_
 > Set entry point (main class).
 
-**v**
+**-v**, **--verbose**
 > Verbose output.
 
-**0**
+**-0**, **--no-compress**
 > Store only (no compression).
 
-**M**
+**-M**, **--no-manifest**
 > Do not create a manifest file.
 
-**i**
-> Generate index information for specified JAR files.
+**-i** _file_, **--generate-index=**_file_
+> Generate index information for the specified JAR file. Deprecated.
 
-**C** _dir_
-> Change to directory before including the following files.
+**-C** _dir_
+> Change to directory before including the following files. In extract mode, sets the destination directory.
+
+**--dir** _dir_
+> Directory to extract into.
+
+**-k**, **--keep-old-files**
+> Do not overwrite existing files when extracting.
+
+**--date=**_timestamp_
+> Timestamp to use for entries, useful for reproducible builds.
+
+**--module-version=**_version_
+> Module version recorded when creating or updating a modular JAR.
+
+**-p**, **--module-path**
+> Location of module dependencies for generating hashes.
 
 **--release** _VERSION_
 > (Java 9+) Place following files in a versioned directory for multi-release JARs.
@@ -110,3 +139,11 @@ The jar tool has been part of the **JDK** since Java 1.1 (1997). It's essential 
 # SEE ALSO
 
 [java](/man/java)(1), [javac](/man/javac)(1), [jarsigner](/man/jarsigner)(1), [zip](/man/zip)(1), [unzip](/man/unzip)(1), [tar](/man/tar)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/openjdk/jdk)```
+
+```[Documentation](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jar.html)```
+
+<!-- verified: 2026-11-09 -->

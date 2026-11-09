@@ -27,3 +27,13 @@ The pct command suite is part of **Proxmox VE**, providing comprehensive LXC con
 # SEE ALSO
 
 [pct](/man/pct)(1), [pct-create](/man/pct-create)(1), [pct-config](/man/pct-config)(1), [pct-status](/man/pct-status)(1), [pct-enter](/man/pct-enter)(1), [pct-destroy](/man/pct-destroy)(1), [pct-restore](/man/pct-restore)(1), [pvesh](/man/pvesh)(1), [lxc-ls](/man/lxc-ls)(1)
+
+# RESOURCES
+
+```[Source code](https://git.proxmox.com/?p=pve-container.git)```
+
+```[Homepage](https://www.proxmox.com/en/proxmox-virtual-environment)```
+
+```[Documentation](https://pve.proxmox.com/pve-docs/pct.1.html)```
+
+<!-- verified: 2026-11-09 -->
