@@ -2445,6 +2445,7 @@ flatpak.md
 flavours.md
 flex.md
 flexget.md
+flide.md
 flint.md
 flips.md
 flit.md
@@ -3026,6 +3027,7 @@ gitlab.md
 gitleaks.md
 gitlint.md
 gitlogue.md
+gitman.md
 gitmoji.md
 gitnr.md
 gitremote-helpers.md
@@ -4874,6 +4876,7 @@ mix.md
 mixxx.md
 mk.md
 mk_modmap.md
+mkarchiso.md
 mkcert.md
 mkdir.md
 mkdocs.md
