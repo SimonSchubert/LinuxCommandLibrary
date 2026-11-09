@@ -8,25 +8,33 @@ MVC web framework for Node.js
 
 ```sails new [project-name]```
 
+**Create an API-only app** without frontend assets
+
+```sails new [project-name] --no-frontend```
+
 **Start development server**
 
 ```sails lift```
 
-**Generate API**
+**Start on a specific port**
+
+```sails lift --port [8080]```
+
+**Generate API** (model and controller)
 
 ```sails generate api [user]```
 
-**Generate model**
+**Generate model** with attributes
 
-```sails generate model [user]```
+```sails generate model [user] [username] [isAdmin:boolean]```
 
 **Generate controller**
 
 ```sails generate controller [user]```
 
-**Open console**
+**Open console** without starting the HTTP server
 
-```sails console```
+```sails console --dontLift```
 
 **Show version**
 
@@ -38,29 +46,50 @@ MVC web framework for Node.js
 
 # PARAMETERS
 
-**new** _NAME_
-> Create new app.
+**new** [_PATH_]
+> Create a new app. Accepts **--no-frontend** and **--fast** (skip installing node modules).
 
-**lift**
-> Start server.
+**lift**, **l**
+> Start the app in the current directory.
 
 **generate** _TYPE_ _NAME_
-> Generate component.
+> Generate code. Types include api, model, controller, action, helper, hook, page, response, adapter and generator.
 
-**console**
-> Interactive REPL.
+**console**, **c**
+> Interactive REPL with the app loaded. **--dontLift** starts it without the HTTP server.
+
+**run** _SCRIPT_
+> Run a script from the scripts/ folder.
+
+**test**, **lint**
+> Run the app's test or lint script.
+
+**inspect**
+> Start the app with the Node inspector.
 
 **debug**
-> Start app in debug mode.
+> Legacy debugger for Node v5 and below; use **inspect** on newer versions.
 
-**--version**
+**debug-console**, **dc**
+> Start the console with the debugger attached.
+
+**www**
+> Compile assets into a standalone www folder.
+
+**version**, **-v**, **--version**
 > Show installed Sails version.
 
 **--port** _PORT_
-> Set server port.
+> Listen on the given port with **lift** (default 1337).
 
 **--prod**
-> Start in production mode.
+> Lift in the production environment.
+
+**--staging**
+> Lift in the staging environment.
+
+**--silent**, **--verbose**, **--silly**
+> Set the log level for **lift** and **console**.
 
 # DESCRIPTION
 
@@ -72,7 +101,7 @@ Built-in Socket.io integration enables real-time features, allowing Blueprint ro
 
 # CAVEATS
 
-Framework has learning curve. Configuration can be complex. Performance tuning may be needed.
+**sails lift** prefers the Sails version in the app's own node_modules over a globally installed one. In development, asset and view changes apply on reload, but changes to config/, api/ or node_modules/ need a restart.
 
 # HISTORY
 
@@ -81,3 +110,13 @@ Framework has learning curve. Configuration can be complex. Performance tuning m
 # SEE ALSO
 
 [node](/man/node)(1), [npm](/man/npm)(1), [express](/man/express)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/balderdashy/sails)```
+
+```[Homepage](https://sailsjs.com)```
+
+```[Documentation](https://sailsjs.com/documentation/reference/command-line-interface)```
+
+<!-- verified: 2026-11-09 -->

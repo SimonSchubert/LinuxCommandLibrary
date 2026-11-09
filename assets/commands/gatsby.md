@@ -4,9 +4,9 @@ React-based static site generator
 
 # TLDR
 
-**Create new site**
+**Create new site** interactively
 
-```gatsby new [site-name]```
+```gatsby new```
 
 **Create from starter**
 
@@ -15,6 +15,10 @@ React-based static site generator
 **Start development server**
 
 ```gatsby develop```
+
+**Start development server** on all interfaces
+
+```gatsby develop -H [0.0.0.0] -p [8000]```
 
 **Build for production**
 
@@ -28,7 +32,7 @@ React-based static site generator
 
 ```gatsby clean```
 
-**Show info**
+**Show environment info**
 
 ```gatsby info```
 
@@ -38,7 +42,7 @@ React-based static site generator
 
 # SUBCOMMANDS
 
-**new**
+**new** [_rootPath_] [_starter_]
 > Create new site.
 
 **develop**
@@ -51,13 +55,25 @@ React-based static site generator
 > Serve production build.
 
 **clean**
-> Clean cache and artifacts.
+> Wipe the local cache and built assets.
 
 **info**
 > Show environment info.
 
 **repl**
-> Interactive REPL.
+> Open a Node REPL with the Gatsby environment.
+
+**plugin** _docs|ls_
+> Commands relating to Gatsby plugins.
+
+**telemetry** [_--enable|--disable_]
+> Enable or disable anonymous analytics collection.
+
+**feedback** [_--enable|--disable_]
+> Opt in or out of feedback requests.
+
+**options** [_cmd_] [_key_] [_value_]
+> View or set gatsby-cli configuration such as the package manager.
 
 # PARAMETERS
 
@@ -71,10 +87,19 @@ React-based static site generator
 > Open the site in the default browser.
 
 **-S**, **--https**
-> Enable HTTPS for the development server.
+> Use HTTPS for the development server.
 
-**--inspect**
-> Open a debugging port for Node.js inspector.
+**-c**, **--cert-file** _path_
+> Custom HTTPS certificate file (also requires --https and --key-file).
+
+**-k**, **--key-file** _path_
+> Custom HTTPS key file (also requires --https and --cert-file).
+
+**--inspect** [_port_]
+> Open a port for the Node.js inspector.
+
+**--inspect-brk** [_port_]
+> Open a debug port and wait for a debugger to attach.
 
 **--prefix-paths**
 > Build/serve with path prefix (requires pathPrefix in gatsby-config).
@@ -88,16 +113,14 @@ React-based static site generator
 **--verbose**
 > Turn on verbose output.
 
+**--no-color**
+> Turn off the color in output.
+
+**--json**
+> Turn on the JSON logger.
+
 **-C**, **--clipboard**
 > Copy environment info to clipboard (gatsby info).
-
-# CONFIGURATION
-
-**gatsby-config.js** (or **gatsby-config.ts**)
-> Main configuration file for plugins, site metadata, and build settings.
-
-**gatsby-node.js** (or **gatsby-node.ts**)
-> Node API configuration for dynamic page creation and build-time customization.
 
 # DESCRIPTION
 
@@ -107,9 +130,17 @@ Gatsby builds static HTML at build time while maintaining React's interactive ca
 
 The development server includes hot module replacement for rapid iteration, while production builds are optimized for performance with techniques like prefetching, lazy loading, and asset optimization.
 
+# CONFIGURATION
+
+**gatsby-config.js** (or **gatsby-config.ts**)
+> Main configuration file for plugins, site metadata, and build settings.
+
+**gatsby-node.js** (or **gatsby-node.ts**)
+> Node API configuration for dynamic page creation and build-time customization.
+
 # CAVEATS
 
-Build times can be slow for large sites. GraphQL layer has learning curve. Some plugins may be outdated. Real-time data requires client-side fetching. Requires Node.js and npm.
+Build times can be slow for large sites. GraphQL layer has learning curve. Some plugins may be outdated, and releases have become infrequent since the Netlify acquisition. Real-time data requires client-side fetching. Requires Node.js, with **gatsby-cli** installed globally or run through **npx**.
 
 # HISTORY
 
@@ -119,3 +150,12 @@ Gatsby was created by **Kyle Mathews** in **2015** as a modern static site gener
 
 [npm](/man/npm)(1), [node](/man/node)(1), [hugo](/man/hugo)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/gatsbyjs/gatsby)```
+
+```[Homepage](https://www.gatsbyjs.com/)```
+
+```[Documentation](https://www.gatsbyjs.com/docs/reference/gatsby-cli/)```
+
+<!-- verified: 2026-11-09 -->

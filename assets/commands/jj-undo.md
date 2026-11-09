@@ -4,54 +4,85 @@ reverses the last repository operation
 
 # TLDR
 
-**Undo last operation**
+**Undo the last operation**
 
 ```jj undo```
 
-**Undo the last two operations**
+**Undo the operation before that** (run again)
 
-```jj undo 2```
+```jj undo```
+
+**Redo an undone operation**
+
+```jj redo```
 
 **Show the operation log to find operation IDs**
 
-```jj operation log```
+```jj op log```
 
-**Restore to a specific operation by ID**
+**Restore the repo to a specific operation**
 
-```jj operation restore [op_id]```
+```jj op restore [op_id]```
+
+**Revert one specific older operation**
+
+```jj op revert [op_id]```
+
+**Undo an operation performed in another workspace**
+
+```jj undo --allow-cross-workspace```
 
 # SYNOPSIS
 
-**jj undo** [_options_] [_count_]
+**jj undo** [_options_]
 
 # PARAMETERS
 
-_COUNT_
-> Number of operations to undo.
+**--allow-cross-workspace**
+> Allow undoing an operation that was performed in another workspace.
 
 **-R**, **--repository** _path_
 > Path to the repository to operate on.
 
-**--what** _what_
-> What portions of the local state to restore (can be `repo` or `remote-tracking`).
-
-**--help**
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**jj undo** reverses the last repository operation by creating a new operation that restores the previous state from the operation log. Unlike `jj operation restore`, which discards intermediate operations, `jj undo` preserves the full operation history.
+**jj undo** undoes the last operation by restoring the state of its parent from the operation log. Run repeatedly, it restores increasingly older operations, and **jj redo** moves forward again. Each undo is recorded as a new operation, so the log keeps the full history.
 
-The command enables safe experimentation with history. Any jj operation can be undone, including merges, rebases, and bookmark changes.
+Almost every jj operation can be undone, including rebases, merges and bookmark changes. To revert a specific operation other than the most recent, use **jj op revert**; to return the whole repo to an earlier state, use **jj op restore**.
 
 # CAVEATS
 
-Subcommand of jj. Undoes jj operations only. Operation log has retention limit.
+By default, **jj undo** refuses to undo an operation from another workspace. It only restores jj's own view of the repo: a fetch or push already sent to a remote is not undone there. The numeric or operation argument and the **--what** flag are deprecated or gone; use **jj op revert** and **jj op restore --what** instead.
 
 # HISTORY
 
-jj undo is part of **Jujutsu**, leveraging its operation log for powerful undo capabilities.
+Since **jj 0.33.0** (September 2025) **jj undo** is sequential and repeated invocations step further back. Before that release, running it twice was effectively a no-op, and **jj redo** did not exist.
+
+# INSTALL
+
+```pacman: sudo pacman -S jujutsu```
+
+```apk: sudo apk add jujutsu```
+
+```zypper: sudo zypper install jujutsu```
+
+```brew: brew install jujutsu```
+
+```nix: nix profile install nixpkgs#jujutsu```
+
+<!-- packages: 2026-11-09 -->
 
 # SEE ALSO
 
-[jj](/man/jj)(1), [jj-operation](/man/jj-operation)(1), [jj-restore](/man/jj-restore)(1)
+[jj](/man/jj)(1), [jj-redo](/man/jj-redo)(1), [jj-operation](/man/jj-operation)(1), [jj-operation-log](/man/jj-operation-log)(1), [jj-operation-restore](/man/jj-operation-restore)(1), [jj-operation-revert](/man/jj-operation-revert)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/jj-vcs/jj)```
+
+```[Documentation](https://docs.jj-vcs.dev/latest/operation-log/)```
+
+<!-- verified: 2026-11-09 -->

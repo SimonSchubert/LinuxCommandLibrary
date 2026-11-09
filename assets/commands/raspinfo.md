@@ -12,36 +12,34 @@ Display system information **paged**
 
 ```raspinfo | more```
 
+**Save** the report for a bug report
+
+```raspinfo > [raspinfo.txt]```
+
 # SYNOPSIS
 
 **raspinfo**
 
 # DESCRIPTION
 
-**raspinfo** displays comprehensive system information for Raspberry Pi devices. It collects and presents hardware details, OS version, memory usage, CPU information, and other diagnostic data.
+**raspinfo** is a short script that dumps diagnostic information about a Raspberry Pi to standard output, intended for attaching to bug reports. It takes no options.
 
-The output includes Raspberry Pi model identification, firmware versions, temperature readings, and configuration settings. It's useful for troubleshooting and system documentation.
-
-# OUTPUT
-
-Displays:
-- Raspberry Pi model and revision
-- OS and kernel version
-- CPU and memory information
-- Video configuration
-- Network interfaces
-- USB devices
-- Temperature and voltage
-- Clock frequencies and memory allocations
+The report covers the board model and OS release, kernel version, throttling status, camera detection, VideoCore firmware version, filesystems, installed package versions, networking, USB devices, display and audio configuration, firmware settings, and the **dmesg** log.
 
 # CAVEATS
 
-Raspberry Pi specific tool, installed by default even on Lite images. Output format designed for support tickets. Some information requires root for full details.
+Raspberry Pi specific tool, installed by default even on Lite images. Several steps call **sudo** internally, so it may prompt for a password. MAC and IP addresses are masked by a filter, but read the output before posting it publicly.
 
 # HISTORY
 
-**raspinfo** is part of the Raspberry Pi utilities package, created by the Raspberry Pi Foundation to help users gather system information for troubleshooting and support purposes.
+Maintained by Raspberry Pi in the **raspberrypi/utils** repository. On Raspberry Pi OS it ships in the **raspinfo** package, which the **raspi-utils** metapackage pulls in.
 
 # SEE ALSO
 
 [raspi-config](/man/raspi-config)(1), [vcgencmd](/man/vcgencmd)(1), [pinout](/man/pinout)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/raspberrypi/utils)```
+
+<!-- verified: 2026-11-09 -->

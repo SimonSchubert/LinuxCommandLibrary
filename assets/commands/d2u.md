@@ -1,6 +1,6 @@
 # TAGLINE
 
-DOS to Unix line ending converter
+DOS to Unix line ending converter (Cygwin alias of dos2unix)
 
 # TLDR
 
@@ -12,74 +12,117 @@ DOS to Unix line ending converter
 
 ```d2u [file1.txt] [file2.txt] [file3.txt]```
 
-**Convert and keep backup** of original
-
-```d2u -b [file.txt]```
-
-**Convert with custom backup** suffix
-
-```d2u -b -e [.bak] [file.txt]```
-
-**Convert to a new file** instead of in-place
+**Convert to a new file**, keeping the original
 
 ```d2u -n [input.txt] [output.txt]```
 
-**Convert files in place** silently
+**Keep the original timestamp**
+
+```d2u -k [file.txt]```
+
+**Convert files quietly**
 
 ```d2u -q [file.txt]```
 
+**Print information about line breaks** without converting
+
+```d2u -i [file.txt]```
+
+**Force conversion** of a file detected as binary
+
+```d2u -f [file.txt]```
+
 # SYNOPSIS
 
-**d2u** [_options_] [_file_...]
+**d2u** [_options_] [_file_...] [**-n** _infile_ _outfile_ ...]
 
 # PARAMETERS
 
 _FILE_
 > File(s) to convert. Converts in place by default.
 
-**-b**, **--backup**
-> Keep backup of original file.
+**-n**, **--newfile** _infile_ _outfile_ ...
+> New file mode: convert infile and write to outfile. File names must be given in pairs.
 
-**-e** _SUFFIX_, **--extension** _SUFFIX_
-> Backup file extension (default: .bak).
+**-o**, **--oldfile** _file_ ...
+> Old file (in-place) mode. This is the default.
 
-**-n**, **--newfile** _infile_ _outfile_
-> Convert infile and write to outfile (new file mode).
+**-O**, **--to-stdout**
+> Write to standard output, like a Unix filter.
 
 **-q**, **--quiet**
-> Quiet mode, suppress output.
+> Suppress all warnings and messages.
+
+**-v**, **--verbose**
+> Print extra verbose messages.
 
 **-k**, **--keepdate**
-> Preserve original file timestamp.
+> Keep the date stamp of the output file the same as the input file.
 
 **-f**, **--force**
-> Force conversion even on binary files.
+> Force conversion of binary files.
+
+**-s**, **--safe**
+> Skip binary files (default).
 
 **-l**, **--newline**
-> Add an additional newline after each converted line break.
+> Add an additional newline: DOS line breaks are changed to two Unix line breaks.
 
-**-o**, **--oldfile**
-> In-place conversion mode (default).
+**-e**, **--add-eol**
+> Add a line break to the last line if there is none.
+
+**-c**, **--convmode** _MODE_
+> Conversion mode: ascii (default), 7bit, iso, or mac.
+
+**-b**, **--keep-bom**
+> Keep the Byte Order Mark.
+
+**-m**, **--add-bom**
+> Add a Byte Order Mark to the output.
+
+**-r**, **--remove-bom**
+> Remove the Byte Order Mark.
+
+**-i**, **--info**[=_FLAGS_] _file_ ...
+> Display file information (line break counts, BOM, text or binary). No conversion is done.
+
+**-F**, **--follow-symlink**
+> Follow symbolic links and convert the targets.
+
+**-R**, **--replace-symlink**
+> Replace symbolic links with the converted files.
+
+**-S**, **--skip-symlink**
+> Keep symbolic links and targets unchanged (default).
 
 **-h**, **--help**
 > Display help information.
 
+**-V**, **--version**
+> Display version information.
+
 # DESCRIPTION
 
-**d2u** converts text files from DOS/Windows line endings (CRLF - Carriage Return + Line Feed) to Unix line endings (LF - Line Feed only). It is an alias or alternative name for the **dos2unix** utility.
+**d2u** converts text files from DOS/Windows line endings (CRLF) to Unix line endings (LF). It is another name for **dos2unix**, shipped by the Cygwin dos2unix package for users accustomed to the old command. Any option of dos2unix applies.
 
-The tool modifies files in place by default, making it convenient for batch conversion. It automatically detects binary files and skips them unless forced. Multiple files can be processed in a single command.
-
-This conversion is commonly needed when transferring text files from Windows to Unix/Linux systems, or when working with files that have mixed line endings from version control systems.
+The tool modifies files in place by default. It automatically detects binary files and skips them unless forced, and leaves non-regular files such as directories and FIFOs alone.
 
 # CAVEATS
 
-Binary files may be corrupted if converted; the tool attempts to detect and skip them. In-place conversion without backup can lose original data. Some files may have intentional CRLF sequences that should not be converted.
+**d2u** is Cygwin-specific: on Linux use **dos2unix**, which does not install this name. There is no backup option; use **-n** to preserve the original. **-b** means keep BOM, not backup. In-place conversion cannot be undone. Newer options such as **-e** and **-O** need a recent dos2unix release.
 
 # HISTORY
 
-d2u is typically an alias for **dos2unix**, which has been a standard Unix utility for decades. The need for line ending conversion arose from the different conventions adopted by CP/M, DOS, and Unix in the late 1970s and 1980s.
+**d2u** began as a Cygwin alias in the **cygutils** package, a hardlink to its **conv** program. When Cygwin adopted the standalone dos2unix package in the 2010s, that package took over providing **d2u** and **u2d** for compatibility. dos2unix itself was modelled after the SunOS/Solaris tool of the same name.
 
 # SEE ALSO
 
 [dos2unix](/man/dos2unix)(1), [unix2dos](/man/unix2dos)(1), [u2d](/man/u2d)(1), [tr](/man/tr)(1)
+
+# RESOURCES
+
+```[Homepage](https://dos2unix.sourceforge.io/)```
+
+```[Documentation](https://dos2unix.sourceforge.io/dos2unix/man1/dos2unix.htm)```
+
+<!-- verified: 2026-11-09 -->

@@ -28,9 +28,19 @@ Display **stopped** processes
 
 ```jobs -s```
 
+Show the status of a **specific job**
+
+```jobs %[1]```
+
+Run a command with job specs **replaced by process IDs**
+
+```jobs -x [kill -CONT] %[1]```
+
 # SYNOPSIS
 
-**jobs** [_options_] [_jobspec_]
+**jobs** [**-lnprs**] [_jobspec_ ...]
+
+**jobs** **-x** _command_ [_args_]
 
 # PARAMETERS
 
@@ -50,22 +60,22 @@ Display **stopped** processes
 > Display only stopped jobs
 
 **-x** _command_
-> Replace jobspec in command with process group ID and execute it
+> Replace each jobspec in command with the process group ID, then execute it
 
 # DESCRIPTION
 
 **jobs** is a shell builtin that displays the status of jobs started in the current shell session. Jobs are processes started with & (background) or suspended with Ctrl+Z.
 
-Each job has a job number (shown in brackets) that can be used with fg, bg, and kill commands using the %n syntax. The + indicates the current job, and - indicates the previous job.
+Each job has a job number (shown in brackets) that can be used with fg, bg, and kill using the %n syntax. The + marks the current job and - the previous job. Other job specs include %+, %- and %_string_ for a job whose command starts with that string.
 
 # CAVEATS
 
-Shell builtin - behavior may vary between shells. Options -n, -r, -s are Bash-specific. Jobs are specific to the current shell session and not visible to other shells.
+Shell builtin, so behavior varies between shells. POSIX specifies only **-l** and **-p**. **-n**, **-r**, **-s** and **-x** are extensions that vary by shell. Jobs belong to the current shell session and are not visible to other shells.
 
 # HISTORY
 
-Job control was introduced in the C shell (csh) in the late **1970s** and adopted by other shells including Bash. It allows users to manage multiple processes within a single terminal session.
+Job control was first implemented in the C shell by **Jim Kulp** at IIASA in Austria, using features of the **4.1BSD** kernel, and was adopted by other shells including Bash.
 
 # SEE ALSO
 
-[fg](/man/fg)(1), [bg](/man/bg)(1), [disown](/man/disown)(1), [kill](/man/kill)(1)
+[fg](/man/fg)(1), [bg](/man/bg)(1), [disown](/man/disown)(1), [kill](/man/kill)(1), [wait](/man/wait)(1)

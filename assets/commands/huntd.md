@@ -4,11 +4,11 @@ server daemon for the hunt game
 
 # TLDR
 
-**Start hunt server**
+**Start the hunt server**
 
 ```huntd```
 
-**Specify port**
+**Host a private game on a specific port**
 
 ```huntd -p [9999]```
 
@@ -16,42 +16,67 @@ server daemon for the hunt game
 
 ```huntd -s```
 
-**Fork into background** (log errors via syslog)
+**Fork into the background** (OpenBSD only, logs via syslog)
 
 ```huntd -b```
 
+**Listen on one interface address only** (BSD only)
+
+```huntd -a [192.168.1.10]```
+
+**Override a game setting for this run** (BSD only)
+
+```huntd -D [linger=-1]```
+
 # SYNOPSIS
 
-**huntd** [_options_]
+**huntd** [**-bs**] [**-a** _addr_] [**-D** _var=value_] [**-p** _port_]
 
 # PARAMETERS
 
 **-p** _port_
-> Change the UDP port number used to rendezvous with the player process.
+> Change the UDP port number used to rendezvous with the player process, allowing private games.
 
 **-s**
-> Run in server mode (run forever). Consumes a process table entry when no one is playing.
+> Run in server mode (run forever). Similar to running under inetd, but consumes a process table entry when no one is playing, and monitor clients are not disconnected.
 
 **-b**
-> Fork into the background. Errors are logged via syslog instead of stderr.
+> Fork into the background. Errors are logged via syslog instead of stderr. OpenBSD only.
 
 **-a** _addr_
-> Listen only on a specific interface address (given as an IP address).
+> Listen only on a specific interface address (given as an IP address). BSD only.
+
+**-D** _var=value_
+> Override a value read from the configuration files. BSD only.
 
 # DESCRIPTION
 
-**huntd** is the server daemon for the hunt game. It manages the game world and coordinates multiple players.
+**huntd** is the back-end daemon of the multi-player **hunt** game. It manages the maze and handles player connections, shots and scoring.
 
-The server creates the maze and handles player connections, shots, and scoring. Multiple players connect via the hunt client.
+When **hunt** starts, it broadcasts on attached networks to find a game in progress. A **huntd** that hears the request replies with the port number for the player to connect to.
+
+# CONFIGURATION
+
+On BSD systems, game parameters are read from **/etc/hunt.conf**, **$HOME/.hunt.conf** and **./.hunt.conf**, in that order, as lines of the form **var = value**. Examples include **linger**, the seconds to keep a game open with no players (default 90, -1 means forever).
+
+To run from inetd, add a line such as **hunt dgram udp wait nobody /usr/games/huntd HUNT** to **/etc/inetd.conf** and pass no options. Use **/etc/services** to choose a private port.
 
 # CAVEATS
 
-Part of BSD games. Can be run standalone with -s or under inetd. Without -s, the daemon exits when all players disconnect.
+Options differ by system: the Debian and Ubuntu **bsdgames** package only accepts **-s** and **-p**, while **-a**, **-b** and **-D** come from the BSDs. Incoming connections are checked with **hosts_access** using the service name **huntd**.
 
 # HISTORY
 
-huntd is the server component of **hunt**, a classic BSD network game from the 1980s.
+**hunt** was written by **Conrad Huang**, **Ken Arnold** and **Greg Couch** at the University of California, San Francisco Computer Graphics Lab.
 
 # SEE ALSO
 
 [hunt](/man/hunt)(6), [bsdgames](/man/bsdgames)(6)
+
+# RESOURCES
+
+```[Source code](https://github.com/openbsd/src/tree/master/games/hunt)```
+
+```[Documentation](https://man.openbsd.org/huntd.6)```
+
+<!-- verified: 2026-11-09 -->

@@ -1,53 +1,42 @@
 # TAGLINE
 
-starts applications with input method support
+starts the configured input method framework and executes a session program
 
 # TLDR
 
-**Launch with input method**
+**Start the configured input method daemon and run a session program**
 
-```im-launch [application]```
+```im-launch [x-session-manager]```
 
-**Launch application with a specific input method (e.g., ibus, fcitx)**
+**Start the input method daemon without running another program**
 
-```im-launch -n [ibus] [application]```
-
-**Show what input method would be used without launching**
-
-```im-launch -v [application]```
+```im-launch```
 
 # SYNOPSIS
 
-**im-launch** [_options_] _command_
+**im-launch** [_session-program_ [_arguments_]]
 
 # PARAMETERS
 
-_COMMAND_
-> Application to launch.
-
-**-n** _METHOD_
-> Specify input method.
-
-**-v**
-> Verbose mode.
-
-**--help**
-> Display help information.
+_SESSION-PROGRAM_
+> Program to execute after the input method framework has been started, such as x-session-manager.
 
 # DESCRIPTION
 
-**im-launch** starts applications with input method support. It sets up environment variables for the selected input framework.
+**im-launch** starts an input method framework server daemon such as ibus-daemon or fcitx, sets up the appropriate environment variables for client programs, and then executes the given session program.
 
-The tool ensures applications can use IBus, Fcitx, or other input methods. It's useful for launching apps needing international input.
+It is normally not invoked by hand, but from **/etc/X11/Xsession.d/70im-config_launch** during X session startup. The framework used is the one selected with **im-config**, which is stored in **~/.xinputrc**.
 
 # CAVEATS
 
-Part of im-config package. Environment variable setup. Debian/Ubuntu specific.
-
-# HISTORY
-
-im-launch is part of **im-config** for launching applications with input method support.
+Debian and Ubuntu specific, part of the **im-config** package. The script has no command-line options and depends on the **IM_CONFIG_LAUNCH** environment set by the Xsession caller; without it, no daemon is started. If startup fails, check the first part of **~/.xsession-errors**.
 
 # SEE ALSO
 
-[im-config](/man/im-config)(1), [ibus](/man/ibus)(1), [fcitx](/man/fcitx)(1)
+[im-config](/man/im-config)(1), [ibus](/man/ibus)(1), [fcitx](/man/fcitx)(1), [fcitx5](/man/fcitx5)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/input-method-team/im-config)```
+
+<!-- verified: 2026-11-09 -->

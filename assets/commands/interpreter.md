@@ -1,6 +1,6 @@
 # TAGLINE
 
-Natural language interface that lets language models execute code locally
+Terminal coding agent for open and low-cost language models
 
 # TLDR
 
@@ -8,115 +8,132 @@ Natural language interface that lets language models execute code locally
 
 ```interpreter```
 
-**Auto-run code without confirmation**
+**Start a session with an initial prompt**
 
-```interpreter -y```
+```interpreter "[fix the failing test]"```
 
 **Use a specific model**
 
-```interpreter --model [gpt-4o]```
+```interpreter --model [model]```
 
-**Use a local model**
+**Use a local model via Ollama or LM Studio**
 
-```interpreter --local```
+```interpreter --oss --local-provider [ollama]```
 
-**Enable fast mode with a smaller model**
+**Resume the most recent session**
 
-```interpreter --fast```
+```interpreter resume --last```
 
-**Set context window and max tokens**
+**Run one task non-interactively**
 
-```interpreter --local --max_tokens [1000] --context_window [3000]```
+```interpreter exec "[find one bug in src/parser.rs]"```
 
-**Load a saved profile**
+**Read the task from stdin**
 
-```interpreter --profile [my_profile.yaml]```
+```cat [task.md] | interpreter exec -```
 
-**Pipe input from stdin**
+**Run read-only, with no write access**
 
-```echo "[What OS am I using?]" | interpreter --stdin -y```
+```interpreter --sandbox read-only```
 
 # SYNOPSIS
 
-**interpreter** [_options_]
+**interpreter** [_options_] [_prompt_]
+
+**interpreter** _command_ [_options_]
 
 # PARAMETERS
 
-**-y**, **--auto-run**
-> Run code without manual confirmation at each step
+_PROMPT_
+> Optional initial prompt.
 
-**--model** _MODEL_
-> Specify which model to use (e.g., gpt-4o, claude-3-sonnet)
+**-m**, **--model** _MODEL_
+> Override the configured model.
 
-**--local**
-> Use a local model for code interpretation (via Ollama, LM Studio, jan.ai, etc.)
+**-i**, **--image** _PATH_
+> Attach image files to the initial prompt (comma-separated).
 
-**--fast**
-> Use a faster, smaller model for quicker responses
+**--oss**
+> Use the configured local open source provider.
 
-**--verbose**
-> Activate verbose mode for detailed output
+**--local-provider** _PROVIDER_
+> Use ollama or lmstudio with **--oss**.
 
-**--os**
-> Enable OS mode for controlling your computer (mouse, keyboard, screen)
+**-p**, **--profile** _NAME_
+> Load a config profile.
 
-**--max_tokens** _N_
-> Maximum tokens for model output
+**-s**, **--sandbox** _MODE_
+> Select read-only, workspace-write or danger-full-access.
 
-**--context_window** _N_
-> Context window size (must be larger than max_tokens)
+**-a**, **--ask-for-approval** _POLICY_
+> Select untrusted, on-request or never.
 
-**--profile** _FILE_
-> Load configuration from a YAML profile
+**-C**, **--cd** _PATH_
+> Start in another working directory.
 
-**--save-profile** _NAME_
-> Save current configuration as a named profile
+**--add-dir** _PATH_
+> Add a writable workspace root.
 
-**--tools** _LIST_
-> Enable specific tools (default: interpreter,editor)
+**--search**
+> Request live web search.
 
-**--stdin**
-> Accept input from stdin for Unix-style piping
+**--enable** _FEATURE_
+> Enable a feature for this run.
 
-**--custom_instructions** _TEXT_
-> Append custom instructions to the system message (e.g., system info, preferred languages).
+**--disable** _FEATURE_
+> Disable a feature for this run.
 
-**--api_base** _URL_
-> Custom API base URL for model provider.
+**-c**, **--config** _KEY=VALUE_
+> Override a config value for this run.
 
-**--api_key** _KEY_
-> API key for authentication.
+**--no-alt-screen**
+> Disable alternate-screen TUI mode.
 
-# IN-SESSION COMMANDS
+**--yolo**
+> Bypass approvals and sandboxing. Dangerous.
 
-**%reset**
-> Reset the current session's conversation
+**resume**
+> Resume an interactive session.
 
-**%undo**
-> Remove the previous message and AI response
+**fork**
+> Fork an interactive session.
 
-**%tokens** _[prompt]_
-> Calculate tokens and estimate cost for next prompt
+**exec**
+> Run non-interactively. Accepts **--json**, **--output-schema** _FILE_ and **-o**, **--output-last-message** _FILE_.
 
-**%verbose true|false**
-> Toggle verbose mode during chat
+**mcp**
+> Manage MCP server config.
+
+**mcp-server**
+> Expose Open Interpreter as an MCP server over stdio.
+
+**update**
+> Run the configured installer for the latest release.
 
 # DESCRIPTION
 
-**Open Interpreter** provides a natural language interface for computers, allowing language models to execute code (Python, JavaScript, Shell, and more) locally on your machine. It functions like ChatGPT's Code Interpreter but runs in your terminal with full access to your local environment.
+**Open Interpreter** is a coding agent that lives in the terminal. It reads and edits files and runs commands, and is designed to get good results from low-cost and open models. It is a fork of OpenAI's Codex and keeps a Codex-style surface: sessions, MCP, AGENTS.md, skills, hooks, permissions and subagents.
 
-The tool equips function-calling language models with an exec() function that accepts a programming language and code to run. Since code executes in your local environment, it can interact with files, install packages, browse the web, and control system settings. By default, interpreter asks for confirmation before executing code.
-
-Open Interpreter supports multiple model providers including OpenAI, Anthropic, and local models via Ollama, LM Studio, or jan.ai. Configuration can be saved to YAML profiles for easy switching between setups.
+The command is also installed as **i**. Configuration lives in **~/.openinterpreter/config.toml** or **.openinterpreter/config.toml** in a project. Use **/model** in the composer to switch models during a session.
 
 # CAVEATS
 
-Generated code runs with full access to your local environment, which can lead to data loss or security risks. Always review code before confirming execution. The **-y** flag bypasses confirmation and should be used with caution. Local models may have reduced capabilities compared to cloud APIs.
+Older tutorials describe the legacy Python version, whose flags such as **-y**, **--local**, **--os** and **--fast** and whose **%** session commands do not apply to the current CLI. **pip install open-interpreter** installs that legacy version. A zero exit status from **interpreter exec** means the turn completed, not that the requested change happened, so check the outputs in automation.
 
 # HISTORY
 
-Open Interpreter was created by **Killian Lucas** and released on **September 5, 2023**. It became the #1 trending repository on GitHub within its first week, gaining over 20,000 stars. The project is based in Seattle, Washington, and has grown to over 50,000 GitHub stars as an open-source Agent-Computer-Interface project.
+Open Interpreter was created by **Killian Lucas** in **2023** as a Python tool that let language models run code locally. The last Python releases were in the **0.4** series from late **2024**. It was later rewritten as a Rust coding agent forked from Codex, and the Python version continues as a community fork at **endolith/open-interpreter**.
 
 # SEE ALSO
 
-[claude](/man/claude)(1), [codex](/man/codex)(1), [aider](/man/aider)(1), [python](/man/python)(1)
+[claude](/man/claude)(1), [codex](/man/codex)(1), [aider](/man/aider)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.openinterpreter.com/)```
+
+```[Source code](https://github.com/OpenInterpreter/open-interpreter)```
+
+```[Documentation](https://www.openinterpreter.com/docs/terminal)```
+
+<!-- verified: 2026-11-09 -->

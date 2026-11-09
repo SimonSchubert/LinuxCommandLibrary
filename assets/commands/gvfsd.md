@@ -6,19 +6,19 @@ GVFS daemon that handles virtual filesystem operations
 
 **Start GVFS daemon**
 
-```gvfsd```
+```/usr/libexec/gvfsd```
 
 **Replace existing daemon**
 
-```gvfsd --replace```
+```/usr/libexec/gvfsd --replace```
 
-**Debug mode**
+**Start in a terminal with debug output** from backends
 
-```gvfsd --debug```
+```/usr/libexec/gvfsd --replace --debug```
 
-**No fuse support**
+**Start without the FUSE mount**
 
-```gvfsd --no-fuse```
+```/usr/libexec/gvfsd --no-fuse```
 
 # SYNOPSIS
 
@@ -26,13 +26,13 @@ GVFS daemon that handles virtual filesystem operations
 
 # PARAMETERS
 
-**--replace**
-> Replace running daemon.
+**-r**, **--replace**
+> Replace the currently running gvfsd instance.
 
 **--no-fuse**
-> Disable FUSE support.
+> Do not start the FUSE filesystem. The **GVFS_DISABLE_FUSE** environment variable has the same effect.
 
-**--debug**
+**-d**, **--debug**
 > Enable debug output.
 
 **-h**, **--help**
@@ -45,16 +45,20 @@ GVFS daemon that handles virtual filesystem operations
 
 **gvfsd** is the main daemon for the GVFS virtual filesystem. It provides the `org.gtk.vfs.Daemon` name on the session bus and is autostarted by GIO clients if not already running.
 
-The primary task of gvfsd is to act as a mount tracker/manager. It spawns new backends when requested, keeps track of their lifecycle, maintains a list of active mounts, and creates direct connections to them. GVFS backends run as children of the gvfsd process.
+The primary task of gvfsd is to act as a mount tracker/manager. It spawns new backends when requested, keeps track of their lifecycle, maintains a list of active mounts, and creates direct connections to them. GVFS backends run as children of the gvfsd process. It also starts **gvfsd-fuse** and provides it the mount point.
 
 # CAVEATS
 
-Usually auto-started by D-Bus. Requires proper D-Bus session. GNOME specific.
-
-# HISTORY
-
-gvfsd was developed as part of **GVFS** for the **GNOME** desktop environment to provide virtual filesystem support.
+Not normally run by hand: it is started automatically on the session bus. It is an internal program usually installed outside **$PATH**, typically under **/usr/libexec** or **/usr/lib/gvfs** depending on the distribution.
 
 # SEE ALSO
 
 [gvfs-open](/man/gvfs-open)(1), [gvfsd-fuse](/man/gvfsd-fuse)(1), [gio](/man/gio)(1), [dbus-daemon](/man/dbus-daemon)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gvfs)```
+
+```[Homepage](https://wiki.gnome.org/Projects/gvfs)```
+
+<!-- verified: 2026-11-09 -->

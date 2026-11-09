@@ -1,55 +1,48 @@
 # TAGLINE
 
-MicroStation DGN file compiler and processor
+NetHack dungeon compiler
 
 # TLDR
 
-**Compile a DGN file**
+**Compile a dungeon description file**
 
-```dgn_comp [input.dgn] [output]```
+```dgn_comp [dungeon.def]```
 
-**Compile with verbose** output
+**Compile a description read from standard input**
 
-```dgn_comp -v [input.dgn]```
-
-**List supported options**
-
-```dgn_comp --help```
+```dgn_comp < [dungeon.def]```
 
 # SYNOPSIS
 
-**dgn_comp** [_options_] _input_ [_output_]
+**dgn_comp** [_file_]
 
 # PARAMETERS
 
-_INPUT_
-> DGN (MicroStation design) file to process.
-
-_OUTPUT_
-> Output file path.
-
-**-v**, **--verbose**
-> Verbose output.
-
-**--help**
-> Display help information.
+_FILE_
+> Dungeon description file to compile. If no argument is given, standard input is read.
 
 # DESCRIPTION
 
-**dgn_comp** is a utility for processing and compiling DGN (Design) files, the native format of Bentley MicroStation CAD software. It may be used for format validation, conversion, or preprocessing of design files.
+**dgn_comp** is the dungeon compiler for NetHack version 3.2 and higher. It takes a description file and produces a dungeon "script" that is loaded by NetHack at runtime, letting administrators and implementors create a custom dungeon for the game without recompiling it.
 
-DGN files contain 2D and 3D vector graphics data used in engineering, architecture, and GIS applications. Tools like dgn_comp facilitate working with these files in automated workflows or on systems without full CAD software.
-
-The specific functionality depends on the implementation, as various tools with this name exist for different DGN processing tasks.
+The description file defines the dungeon structure with statements such as **DUNGEON**, **DESCRIPTION**, **ALIGNMENT**, **ENTRY**, **PROTOFILE**, **BRANCH**, **LEVEL**, **RNDLEVEL** and **CHAINLEVEL**. Lines beginning with **#** are comments.
 
 # CAVEATS
 
-DGN format has multiple versions with varying compatibility. Some features may require licensing. Complex designs may need full CAD software for accurate processing.
+Not a general-purpose tool: it only produces data for NetHack. It belongs to the NetHack 3.6 and earlier build; the 3.7 development branch replaces the compiled format with **dungeon.lua** and no longer ships dgn_comp.
 
 # HISTORY
 
-DGN format was developed by **Intergraph** and later maintained by **Bentley Systems** for their MicroStation software. Various open-source and third-party tools have been developed to work with DGN files outside the proprietary ecosystem.
+Written by **M. Stephenson**, based on the level compiler by Jean-Christophe Collet.
 
 # SEE ALSO
 
-[ogr2ogr](/man/ogr2ogr)(1)
+[nethack](/man/nethack)(6), [lev_comp](/man/lev_comp)(6)
+
+# RESOURCES
+
+```[Source code](https://github.com/NetHack/NetHack)```
+
+```[Homepage](https://www.nethack.org/)```
+
+<!-- verified: 2026-11-09 -->

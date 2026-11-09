@@ -6,27 +6,35 @@ Establish Proton VPN connections
 
 **Connect to the fastest server available**
 
-```protonvpn connect --fastest```
+```protonvpn connect```
 
 **Connect to the fastest server in a specific country**
 
-```protonvpn connect --cc [US]```
+```protonvpn connect --country [US]```
+
+**Connect to the fastest server in a specific city**
+
+```protonvpn connect --city "[New York]"```
 
 **Connect to a specific server**
 
-```protonvpn connect [server_name]```
+```protonvpn connect [CH#242]```
 
-**Connect to the fastest P2P server**
+**Connect to the fastest P2P server** in a country
 
-```protonvpn connect --p2p```
+```protonvpn connect --country [IT] --p2p```
 
-**Connect to the fastest Secure Core server**
+**Connect through a Secure Core server**
 
-```protonvpn connect --sc```
+```protonvpn connect --securecore```
 
-**Connect using TCP protocol**
+**Connect to a Tor server**
 
-```protonvpn connect --fastest -p tcp```
+```protonvpn connect --tor```
+
+**Connect to a random server**
+
+```protonvpn connect --random```
 
 # SYNOPSIS
 
@@ -34,41 +42,52 @@ Establish Proton VPN connections
 
 # PARAMETERS
 
-**--fastest**
-> Connect to the fastest available server.
+_SERVER_
+> Name of a specific server to connect to, such as CH#242.
 
-**--random**
-> Connect to a random server.
+**--country** _COUNTRY_
+> Connect to the fastest server in a country, given as a code (US, GB, DE) or full name.
 
-**--cc** _CODE_
-> Connect to the fastest server in specified country.
+**--city** _CITY_
+> Connect to the fastest server in a city. Quote multi-word names.
 
 **--p2p**
-> Connect to the fastest P2P server.
+> Connect to the fastest P2P-optimized server.
 
-**--sc**
+**-sc**, **--securecore**
 > Connect to the fastest Secure Core server.
 
-**-p** _PROTOCOL_
-> Specify transmission protocol (udp or tcp).
+**--tor**
+> Connect to the fastest Tor server.
 
-**-h**, **--help**
+**--random**
+> Connect to a random available server.
+
+**--help**
 > Display help message.
 
 # DESCRIPTION
 
-**protonvpn connect** establishes a connection to Proton VPN service. It can automatically select the fastest available server or connect to a specific server, country, or city.
+**protonvpn connect** establishes a connection to the Proton VPN service. With no arguments it selects the fastest server available on your plan, and it can also target a specific server, country, or city.
 
-The command is part of the Proton VPN CLI tool for Linux, providing secure VPN connectivity through the Proton network.
+The command is part of the official Proton VPN CLI for Linux. Settings are stored under `~/.config/Proton/VPN/` and logs under `~/.cache/Proton/VPN/logs/`.
 
 # CAVEATS
 
-Requires valid Proton VPN subscription and prior authentication with `protonvpn login`. Network configuration may require root privileges.
+Requires a Proton VPN account and prior authentication with `protonvpn signin`. Some features and locations require a paid plan. The CLI uses WireGuard only, cannot run alongside the Proton VPN GUI app, and does not currently support headless setups.
 
 # HISTORY
 
-Part of **Proton VPN** CLI client for Linux, developed by Proton AG for secure internet access through their VPN infrastructure.
+Proton released this CLI as a replacement for its earlier Python **linux-cli**, whose repository is now archived. Options from the old client, such as **--fastest**, **--cc**, **--sc** and **-p**, do not exist in this one.
 
 # SEE ALSO
 
-[protonvpn](/man/protonvpn)(1), [openvpn](/man/openvpn)(8)
+[protonvpn](/man/protonvpn)(1), [wg](/man/wg)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/ProtonVPN/proton-vpn-cli)```
+
+```[Documentation](https://protonvpn.com/support/use-linux-cli)```
+
+<!-- verified: 2026-11-09 -->

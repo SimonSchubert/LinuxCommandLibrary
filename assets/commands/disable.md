@@ -62,10 +62,6 @@ The command extends beyond builtins to aliases (**-a**), functions (**-f**), res
 
 Only available in **zsh**. In **bash**, the equivalent functionality for builtins is provided by **enable -n**, but bash does not support disabling aliases, functions, reserved words, or glob operators this way. Disabling critical builtins like **cd** or **exit** can make the shell difficult to use. The effect does not persist across shell sessions unless added to **~/.zshrc** or another configuration file.
 
-# HISTORY
-
-The concept of selectively disabling builtins originated in **bash** with the **enable -n** syntax. **Zsh** provides the dedicated **disable** command as part of its more modular approach to shell configuration, extending the concept to functions, aliases, reserved words, suffix aliases, and glob pattern operators.
-
 # SEE ALSO
 
 [builtin](/man/builtin)(1), [zsh](/man/zsh)(1)

@@ -4,29 +4,37 @@ creates Debian live system images
 
 # TLDR
 
-**Initialize live build**
+**Create a build configuration** in the current directory
 
 ```lb config```
 
-**Build live image**
+**Build the live image**
 
-```lb build```
+```sudo lb build```
 
-**Clean build directory**
+**Clean the build directory, keeping the cache**
 
-```lb clean```
+```sudo lb clean```
 
-**Configure with options**
+**Remove only binary artifacts before a rebuild**
 
-```lb config --distribution [bookworm] --archive-areas "main contrib"```
+```sudo lb clean --binary```
+
+**Remove everything, including all caches**
+
+```sudo lb clean --purge```
+
+**Configure a distribution and archive areas**
+
+```lb config --distribution [trixie] --archive-areas "[main contrib non-free-firmware]"```
 
 **Build a specific image type**
 
-```lb config --binary-images [iso-hybrid]```
+```lb config --binary-image [iso-hybrid]```
 
-**Clean including cache**
+**Set boot parameters for the live system**
 
-```lb clean --cache```
+```lb config --bootappend-live "[boot=live components quiet]"```
 
 # SYNOPSIS
 
@@ -35,34 +43,61 @@ creates Debian live system images
 # PARAMETERS
 
 **config**
-> Initialize configuration.
+> Create a config/ hierarchy with the build configuration.
 
 **build**
-> Build live image.
+> Build the live image. Requires root.
 
 **clean**
-> Clean build artifacts.
+> Clean build artifacts. Requires root.
 
-**--distribution** _NAME_
-> Target distribution.
+**-d**, **--distribution** _CODENAME_
+> For **lb config**: target distribution (default: testing).
 
 **--archive-areas** _AREAS_
-> Repository areas (e.g. "main contrib non-free").
+> For **lb config**: repository areas, default main only.
 
-**--binary-images** _TYPE_
-> Image type: iso, iso-hybrid, netboot, tar, hdd.
+**-b**, **--binary-image** _TYPE_
+> For **lb config**: image type: iso, iso-hybrid, netboot, tar or hdd. Older versions spell it **--binary-images**.
 
-**--architecture** _ARCH_
-> Target architecture (defaults to host architecture).
+**-a**, **--architecture** _ARCH_
+> For **lb config**: target architecture (defaults to host architecture).
 
 **--bootappend-live** _PARAMS_
-> Boot parameters for live system.
+> For **lb config**: boot parameters for the live system.
+
+**--all**
+> For **lb clean**: remove chroot, binary, stage and source. The default.
 
 **--cache**
-> Clean cache directories (not cleaned by default).
+> For **lb clean**: remove the cache directories.
+
+**--chroot**
+> For **lb clean**: unmount and remove the chroot directory.
+
+**--binary**
+> For **lb clean**: remove binary-related caches, files, directories and stage files.
+
+**--stage**
+> For **lb clean**: remove all stage files.
+
+**--source**
+> For **lb clean**: remove source-related caches, files, directories and stage files.
+
+**--remove**
+> For **lb clean**: remove everything including the package cache, but not the stage cache. config/ is kept.
+
+**--purge**
+> For **lb clean**: remove everything, including all caches. config/ is kept.
 
 **--force**
-> Force helper execution, even if stage file exists.
+> Force helper execution, even if a stage file exists.
+
+**--debug**
+> Show debug information.
+
+**--color**, **--no-color**
+> Enable or disable color in messages.
 
 **--quiet**
 > Suppress output messages.
@@ -70,23 +105,34 @@ creates Debian live system images
 **--verbose**
 > Show detailed output.
 
-**--help**
+**-h**, **--help**
 > Display help information.
+
+**-v**, **--version**
+> Display version information.
 
 # DESCRIPTION
 
-**lb** (live-build) creates Debian live system images. It builds bootable ISO, netboot, and HDD images.
+**lb** is the front end of **live-build**, the Debian Live tool suite. It creates bootable ISO, netboot, tar and HDD live images from a config/ directory.
 
-The tool supports customization of packages, configs, and hooks. It's the standard tool for Debian live images. By default, `lb clean` removes chroot, binary, and source stages but preserves the cache.
+Run **lb config** in an empty directory, adjust the generated configuration, then run **lb build**. Packages, included files and hooks can be customized under config/. Each stage records completion in a stage file, so a repeated build only redoes unfinished stages.
 
 # CAVEATS
 
-Debian/Ubuntu specific. Root required. Disk space needed.
+Debian and derivatives only. **lb build** and **lb clean** need root and a lot of disk space. Run **lb clean** after a configuration change, or stale stages are reused. Cross-building for an architecture the host cannot execute is not possible.
 
 # HISTORY
 
-live-build was created by the **Debian Live** project for building customizable live system images.
+live-build was written by **Daniel Baumann** for the **Debian Live** project and is now maintained by the Debian Live team.
 
 # SEE ALSO
 
 [debootstrap](/man/debootstrap)(1), [mksquashfs](/man/mksquashfs)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/live-team/live-build)```
+
+```[Documentation](https://live-team.pages.debian.net/live-manual/)```
+
+<!-- verified: 2026-11-09 -->

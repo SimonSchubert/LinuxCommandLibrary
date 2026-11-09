@@ -24,6 +24,10 @@ NVIDIA CUDA kernel debugger
 
 ```CUDA_VISIBLE_DEVICES=[0] cuda-gdb [./program]```
 
+**Compile a program for debugging**
+
+```nvcc -g -G [program.cu] -o [program]```
+
 # SYNOPSIS
 
 **cuda-gdb** [_options_] [_executable_] [_core_|_pid_]
@@ -33,7 +37,7 @@ NVIDIA CUDA kernel debugger
 **--args**
 > Pass arguments to the debugged program.
 
-**-p** _pid_
+**-p** _pid_, **--pid** _pid_
 > Attach to running process.
 
 **-x** _file_
@@ -45,34 +49,28 @@ NVIDIA CUDA kernel debugger
 **-q**, **--quiet**
 > Suppress startup messages.
 
-**--cuda-use-lockfile=0**
-> Disable GPU lockfile (for multi-instance debugging).
+**--cuda-use-lockfile=** _0|1_
+> Use a GPU lockfile to prevent concurrent debug sessions. Defaults to 0 since CUDA-GDB 12.0.
+
+**--disable-python**
+> Do not load the embedded Python interpreter.
 
 # CUDA-SPECIFIC COMMANDS
 
-**cuda kernel**
+**cuda kernel** _n_
 > Switch to specified kernel.
 
-**cuda block**
+**cuda block** _x,y,z_
 > Switch to specified block.
 
-**cuda thread**
+**cuda thread** _x,y,z_
 > Switch to specified thread within block.
 
-**info cuda kernels**
-> List active CUDA kernels.
-
-**info cuda threads**
-> List CUDA threads.
+**cuda device** _n_
+> Switch to specified device. Also accepts **sm**, **warp** and **lane** coordinates.
 
 **info cuda devices**
 > List CUDA devices.
-
-**cuda device**
-> Switch to specified device.
-
-**cuda grid**
-> Switch to specified grid.
 
 **info cuda sms**
 > List CUDA streaming multiprocessors.
@@ -83,31 +81,50 @@ NVIDIA CUDA kernel debugger
 **info cuda lanes**
 > List CUDA lanes.
 
+**info cuda kernels**
+> List active CUDA kernels.
+
+**info cuda blocks**
+> List CUDA blocks.
+
+**info cuda threads**
+> List CUDA threads.
+
+**info cuda barriers**
+> Display CUDA barriers.
+
 **info cuda launch trace**
 > Show kernel launch trace.
 
-**set cuda break_on_launch**
-> Break when kernel launches (application or system).
-
-**set cuda memcheck on**
-> Enable memory checking for out-of-bounds accesses.
+**set cuda break_on_launch** _none|application|all_
+> Break when a kernel launches. The **system** value also exists but is deprecated.
 
 # DESCRIPTION
 
 **cuda-gdb** is NVIDIA's extension of GNU GDB for debugging CUDA applications. It enables debugging both CPU and GPU code simultaneously, supporting breakpoints, single-stepping, and variable inspection in CUDA kernels.
 
-The debugger can stop execution at specific threads or blocks within a kernel, inspect device memory, and catch memory errors. It integrates CUDA's parallel execution model into GDB's interface, allowing navigation between thousands of concurrent threads.
+The debugger can stop execution at specific threads or blocks within a kernel and inspect device memory. It integrates CUDA's parallel execution model into GDB's interface, allowing navigation between thousands of concurrent threads through a focus on a device, kernel, block, or thread.
 
-Focus modes let developers examine specific blocks and threads. Memory checking catches out-of-bounds accesses and other errors. Integration with NVIDIA Nsight systems provides IDE-based debugging.
+It works with GDB front ends through the MI interface (for example **cuda-gdb -i=mi** in Emacs, or **ddd --debugger cuda-gdb**), and **cuda-gdbserver** provides remote debugging.
 
 # CAVEATS
 
-Requires NVIDIA GPU with compute capability 2.0+. Debugging mode disables some GPU optimizations and forces **-O0** compilation. Only one debugging session per GPU unless using **--cuda-use-lockfile=0**. Some GDB features may not work with GPU code. CUDA kernels must be compiled with **nvcc -g -G** flags (or **-lineinfo** for line-level debugging with optimizations).
+CUDA kernels should be compiled with **nvcc -g -G**, which disables optimizations; **-lineinfo** gives line-number information only and can be used with optimized code. Older GPU architectures have been progressively deprecated and dropped; check the release notes for your toolkit. Simultaneous debugging sessions on one GPU require compute capability 6.0 or higher; on older devices use **CUDA_VISIBLE_DEVICES** to give each session its own GPU. Memory checking via cuda-memcheck was removed in CUDA 12.0 in favor of Compute Sanitizer. Debugging on macOS is no longer supported and the macOS host client was removed in 12.5.
 
 # HISTORY
 
-cuda-gdb was introduced by **NVIDIA** alongside CUDA 2.2 in **2009** to provide kernel debugging capabilities. It extended the familiar GDB interface to handle GPU parallelism, addressing a major need for CUDA developers who previously had limited debugging options. The tool has evolved with each CUDA toolkit release, adding features like memory checking and improved multi-GPU support.
+cuda-gdb first shipped in beta alongside the **CUDA 2.1** toolkit in **late 2008**, initially on 32-bit Linux only. Support for 64-bit Linux followed with 2.2. NVIDIA tracks upstream GDB, updating the base version over time, and publishes the source as open source.
 
 # SEE ALSO
 
 [gdb](/man/gdb)(1), [nvcc](/man/nvcc)(1), [nvidia-smi](/man/nvidia-smi)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/NVIDIA/cuda-gdb)```
+
+```[Homepage](https://developer.nvidia.com/cuda-gdb)```
+
+```[Documentation](https://docs.nvidia.com/cuda/cuda-gdb/index.html)```
+
+<!-- verified: 2026-11-09 -->

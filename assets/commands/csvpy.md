@@ -39,72 +39,99 @@ Interactive Python shell for CSV files
 # PARAMETERS
 
 _FILE_
-> CSV file to load into the Python environment. Also accepts piped input from stdin.
+> CSV file to load into the Python environment. Piped input from stdin is not accepted.
 
 **-d** _CHAR_, **--delimiter** _CHAR_
-> Field delimiter character (default: comma).
+> Field delimiter of the input file.
 
 **-t**, **--tabs**
-> Use tab characters as the field delimiter.
+> Input file is tab-delimited. Overrides **-d**.
 
 **-q** _CHAR_, **--quotechar** _CHAR_
-> Character used for quoting fields.
+> Character used to quote strings in the input file.
+
+**-u** _0|1|2|3_, **--quoting** _0|1|2|3_
+> Input quoting style: 0 minimal, 1 all, 2 non-numeric, 3 none.
+
+**-b**, **--no-doublequote**
+> Whether double quotes are doubled in the input file.
+
+**-p** _CHAR_, **--escapechar** _CHAR_
+> Character that escapes the delimiter with **--quoting 3** or the quote character with **--no-doublequote**.
+
+**-z** _N_, **--maxfieldsize** _N_
+> Maximum length of a single field in the input.
 
 **-e** _ENCODING_, **--encoding** _ENCODING_
-> Specify the input file encoding (e.g., utf-8, latin1).
+> Encoding of the input file (e.g. utf-8, latin1).
 
-**-H**, **--no-header-row**
-> Indicate that the file has no header row.
+**-L** _LOCALE_, **--locale** _LOCALE_
+> Locale (e.g. en_US) of any formatted numbers.
 
-**-K** _N_, **--skip-lines** _N_
-> Skip the first N lines of the input before processing.
-
-**--agate**
-> Load the file as an agate Table instead of a csv.reader object. The data is available as a variable named **table**.
-
-**--dict**
-> Load as a csv.DictReader where each row is a dictionary keyed by column headers.
-
-**-I**, **--no-inference**
-> Disable type inference when used with --agate, keeping all values as strings.
-
-**-S**
-> Disable CSV dialect sniffing.
+**-S**, **--skipinitialspace**
+> Ignore whitespace immediately following the delimiter.
 
 **--blanks**
-> Do not convert empty strings to None.
+> Do not convert "", "na", "n/a", "none", "null" or "." to NULL.
 
 **--null-value** _VALUES_
-> Convert specified values to None (can specify multiple).
+> Additional values to convert to NULL. Can be specified multiple times.
 
-**-y** _N_, **--sniff-limit** _N_
-> Limit the number of bytes used for CSV dialect sniffing.
+**--date-format** _FORMAT_
+> strptime format for parsing dates, like "%m/%d/%Y".
 
-**-l**, **--linenumbers**
-> Insert a column of line numbers at the beginning of the output.
+**--datetime-format** _FORMAT_
+> strptime format for parsing datetimes.
 
-**-z** _N_, **--field-size-limit** _N_
-> Maximum length of a single field in the input CSV.
+**-H**, **--no-header-row**
+> The file has no header row. Default headers (a, b, c, ...) are created.
+
+**-K** _N_, **--skip-lines** _N_
+> Number of initial lines to skip before the header row.
+
+**--dict**
+> Load as a DictReader, where each row is a dictionary keyed by column header.
+
+**--agate**
+> Load as an agate Table instead of a reader. The data is available as a variable named **table**.
+
+**--no-number-ellipsis**
+> Disable the ellipsis if the maximum precision is exceeded.
+
+**-y** _N_, **--snifflimit** _N_
+> Limit CSV dialect sniffing to N bytes (default 1024). 0 disables sniffing, -1 sniffs the entire file.
+
+**-I**, **--no-inference**
+> Disable type inference when parsing the input, keeping all values as strings.
+
+**-v**, **--verbose**
+> Print detailed tracebacks when errors occur.
 
 **-V**, **--version**
-> Display version information.
+> Display version information and exit.
 
 # DESCRIPTION
 
-**csvpy** is part of csvkit that loads a CSV file into an interactive Python shell for exploration and analysis. If IPython is installed, it is used as the shell for a richer experience.
+**csvpy** is part of csvkit that loads a CSV file into an interactive Python shell for exploration and analysis. If IPython is installed, it is used as the shell; otherwise the running Python shell is used.
 
-In default mode, the CSV data is loaded into a variable named **reader**, a csv.reader object. With **--dict**, it becomes a DictReader where each row is a dictionary. With **--agate**, it becomes a **table** variable with full analysis capabilities including sorting, filtering, and aggregation.
-
-This tool is useful for quick data exploration, testing data transformations, and prototyping analysis code. The interactive environment allows immediate feedback while working with the data.
+In default mode, the CSV data is loaded into a variable named **reader**, an agate.csv.reader object. With **--dict**, **reader** is a DictReader where each row is a dictionary. With **--agate**, the data is available as a **table** variable with full analysis capabilities including sorting, filtering, and aggregation.
 
 # CAVEATS
 
-Large files may use significant memory when loaded entirely. The default csv.reader is consumed after a single iteration; use **--agate** for reusable data. Requires familiarity with Python for effective use.
+Cannot read from stdin, due to platform limitations. The default reader is consumed after a single iteration; use **--agate** for reusable data. Requires familiarity with Python for effective use.
 
 # HISTORY
 
-**csvpy** is part of **csvkit**, created by Christopher Groskopf in **2011**. It provides a quick way to drop into Python for ad-hoc data analysis without writing boilerplate file loading code.
+**csvpy** is part of **csvkit**, created by Christopher Groskopf in **2011**.
 
 # SEE ALSO
 
 [csvkit](/man/csvkit)(1), [csvlook](/man/csvlook)(1), [csvstat](/man/csvstat)(1), [csvcut](/man/csvcut)(1), [csvgrep](/man/csvgrep)(1), [python](/man/python)(1), [ipython](/man/ipython)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/wireservice/csvkit)```
+
+```[Documentation](https://csvkit.readthedocs.io/en/latest/scripts/csvpy.html)```
+
+<!-- verified: 2026-11-09 -->

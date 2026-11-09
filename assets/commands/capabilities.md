@@ -57,14 +57,17 @@ Linux process privilege capabilities system
 **setcap -q**
 > Quiet mode, suppress warnings.
 
+**setcap -v** _cap=flags_ _file_
+> Verify that the file has the given capabilities instead of setting them.
+
 **capsh --print**
 > Print current capabilities and securebits.
 
-**capsh --decode** _hex_
+**capsh --decode**=_hex_
 > Decode capability bitmask into human-readable names.
 
-**capsh --drop** _cap_
-> Drop a capability from the bounding set.
+**capsh --drop**=_cap-list_
+> Drop capabilities from the bounding set.
 
 **capsh --caps**=_cap-set_
 > Set the prevailing process capabilities.
@@ -106,3 +109,13 @@ POSIX capabilities were proposed in the POSIX.1e draft standard in the **1990s**
 # SEE ALSO
 
 [getcap](/man/getcap)(8), [setcap](/man/setcap)(8), [capsh](/man/capsh)(1)
+
+# RESOURCES
+
+```[Source code](https://git.kernel.org/pub/scm/libs/libcap/libcap.git)```
+
+```[Homepage](https://sites.google.com/site/fullycapable/)```
+
+```[Documentation](https://man7.org/linux/man-pages/man7/capabilities.7.html)```
+
+<!-- verified: 2026-11-09 -->

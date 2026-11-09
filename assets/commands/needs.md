@@ -8,6 +8,10 @@ Check if required executables are installed on the system
 
 ```needs [tool1] [tool2] [tool3]```
 
+**Check the binaries listed in a needsfile** in the current directory
+
+```needs```
+
 **Check without retrieving version information**
 
 ```needs --no-versions [tool1] [tool2]```
@@ -40,30 +44,36 @@ Check if required executables are installed on the system
 > Stay quiet, only communicate results via exit code (0 if all found, 1 if any missing).
 
 **-v**, **--verbosity**
-> Increase verbosity level. Can be repeated for more detail (e.g., -vvv for logs, -vvvv for timing info).
+> Increase verbosity level. Can be repeated (-vvv for logs, -vvvv for per-binary timings).
 
-**--help**
+**-h**, **--help**
 > Display help information.
 
-**--version**
+**-V**, **--version**
 > Show the version of needs itself.
 
 # DESCRIPTION
 
-**needs** is a CLI tool that verifies whether specified executables are installed on a system and optionally retrieves their version information. It runs checks using multi-threaded execution for speed, provides colored output, and supports pipe-friendly output.
+**needs** verifies whether specified executables are available in the PATH and optionally retrieves their versions. Version checks run in parallel to reduce the time spent waiting on slow programs.
 
-Binary names can be provided as command-line arguments or listed in a `needsfile` (one or more binaries per line).
+If no binaries are given, it looks for a file named `needsfile` or `.needsfile` in the current directory.
 
-Exit codes indicate whether all required tools are present (0 for success, 1 for missing), making it suitable for use in scripts and CI pipelines.
+Exit codes indicate whether all required tools are present (0 for success, 1 for missing), making it suitable for scripts and CI pipelines.
 
 # CAVEATS
 
-Version detection relies on each tool supporting a standard version flag (`--version` or `-v`). Some tools may not have their version detected correctly. The `--no-versions` and `--full-versions` flags are only available when compiled with the `version-retrieval` feature (enabled by default).
+Version retrieval actually runs each binary with `--version`, which can be slow and, for programs that ignore the flag, may trigger their normal behavior. Use **--no-versions** when checking unfamiliar programs. The **--no-versions** and **--full-versions** flags only exist when built with the default `version-retrieval` feature. Windows is not a supported target.
 
 # HISTORY
 
-**needs** was created by **NQMVD** and is written in **Rust**.
+**needs** was created by **NQMVD**, is written in **Rust**, and was inspired by the **has** shell script.
 
 # SEE ALSO
 
 [which](/man/which)(1), [command](/man/command)(1), [has](/man/has)(1), [type](/man/type)(1), [whereis](/man/whereis)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/nmb4/needs)```
+
+<!-- verified: 2026-11-09 -->

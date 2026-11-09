@@ -28,6 +28,10 @@ combine images using ImageMagick 6
 
 ```composite.im6 -gravity center [overlay.png] [background.png] [output.png]```
 
+**Tile the overlay** across the background
+
+```composite.im6 -tile [overlay.png] [background.png] [output.png]```
+
 # SYNOPSIS
 
 **composite.im6** [_options_] _overlay_ _background_ [_mask_] _output_
@@ -49,8 +53,8 @@ combine images using ImageMagick 6
 **-dissolve** _PERCENT_
 > Dissolve overlay into background at specified percentage.
 
-**-watermark** _BRIGHTNESS_
-> Apply overlay as watermark with given brightness.
+**-watermark** _GEOMETRY_
+> Apply overlay as a watermark, given percent brightness and saturation.
 
 **-tile**
 > Tile the overlay image across the background.
@@ -67,22 +71,35 @@ combine images using ImageMagick 6
 **-alpha** _TYPE_
 > Activate, deactivate, or reset the alpha channel.
 
+**-channel** _TYPE_
+> Apply the operation to the selected channels.
+
 # DESCRIPTION
 
-**composite.im6** is the ImageMagick version 6 command for combining images through compositing operations. It is functionally identical to **composite** but explicitly references the ImageMagick 6 installation, useful on systems where both ImageMagick 6 and 7 are installed.
+**composite.im6** is the ImageMagick version 6 command for combining images through compositing operations. It is functionally identical to the ImageMagick 6 **composite** but explicitly references the ImageMagick 6 installation.
 
-The tool overlays one image on another using various blending modes and positioning options. It supports mask-based compositing, watermarking, and dozens of composition operators matching professional image editing capabilities.
-
-On most systems, this command exists as a versioned alternative to ensure compatibility with scripts written for ImageMagick 6 when ImageMagick 7 is also present. The **im6** suffix indicates the legacy API version.
+The tool overlays one image on another using various blending modes and positioning options. It supports mask-based compositing, watermarking, and dozens of composition operators.
 
 # CAVEATS
 
-ImageMagick 6 is in maintenance mode; new features are added to ImageMagick 7. Some systems may only have one version installed. Scripts using **composite.im6** explicitly will fail on systems with only ImageMagick 7 installed.
+The **.im6** suffix is a distribution packaging name, not an upstream ImageMagick command. Debian 12 ships the binary as **composite-im6.q16** instead, and newer Debian releases package ImageMagick 7, so scripts that call **composite.im6** may fail. Check what your system provides, or use **composite** or **magick composite**.
+
+ImageMagick 6 receives maintenance updates; new features go to ImageMagick 7.
 
 # HISTORY
 
-ImageMagick was created by John Cristy in **1990**. Version 6 was a long-standing stable release. When ImageMagick 7 introduced breaking changes in **2016**, versioned command names were added to allow both versions to coexist, with **.im6** suffix denoting version 6 commands.
+ImageMagick was created by John Cristy in **1990**.
 
 # SEE ALSO
 
 [composite](/man/composite)(1), [convert](/man/convert)(1), [mogrify.im6](/man/mogrify.im6)(1), [display.im6](/man/display.im6)(1), [magick](/man/magick)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ImageMagick/ImageMagick6)```
+
+```[Homepage](https://imagemagick.org)```
+
+```[Documentation](https://legacy.imagemagick.org/script/composite.php)```
+
+<!-- verified: 2026-11-09 -->

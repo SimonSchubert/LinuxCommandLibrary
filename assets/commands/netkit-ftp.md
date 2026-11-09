@@ -8,6 +8,10 @@ netkit FTP client
 
 ```netkit-ftp [ftp.example.com]```
 
+**Connect to a server on a specific port**
+
+```netkit-ftp [ftp.example.com] [2121]```
+
 **Connect in passive mode (useful behind firewalls)**
 
 ```netkit-ftp -p [ftp.example.com]```
@@ -30,12 +34,17 @@ netkit FTP client
 
 # SYNOPSIS
 
-**netkit-ftp** [_options_] [_host_]
+**netkit-ftp** [**-46pinegvd**] [_host_ [_port_]]
+
+**pftp** [**-46inegvd**] [_host_ [_port_]]
 
 # PARAMETERS
 
 _HOST_
 > FTP server hostname.
+
+_PORT_
+> Port to connect to on the server.
 
 **-4**
 > Use only IPv4 to contact the host.
@@ -52,6 +61,9 @@ _HOST_
 **-n**
 > Do not attempt auto-login upon initial connection (skip .netrc lookup).
 
+**-e**
+> Disable command editing and history support, if compiled in.
+
 **-g**
 > Disable file name globbing.
 
@@ -67,13 +79,12 @@ _HOST_
 
 # CAVEATS
 
-Transfers are unencrypted, including passwords. This is a legacy tool that is no longer actively maintained. Consider **sftp** or **lftp** for secure transfers.
+Transfers are unencrypted, including passwords. Consider **sftp** or **lftp** for secure transfers. The binary name depends on packaging, and it is often installed simply as **ftp**. Recent Debian releases build their **ftp** package from tnftp instead of netkit, so its options may differ.
 
 # HISTORY
 
-netkit-ftp is part of **netkit**, providing standard Unix network utilities since the early internet era.
+netkit-ftp comes from **Linux NetKit**, a collection of network utilities whose last release was 0.17. Upstream is no longer active and the code survives through distribution patches.
 
 # SEE ALSO
 
 [ftp](/man/ftp)(1), [sftp](/man/sftp)(1), [lftp](/man/lftp)(1)
-

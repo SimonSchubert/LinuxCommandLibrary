@@ -12,17 +12,17 @@ ImageMagick MSL script interpreter
 
 ```conjure.im6 -verbose [script.msl]```
 
-**Execute a script with custom defines**
+**Pass key/value pairs** to a script
 
-```conjure.im6 -define [key]=[value] [script.msl]```
+```conjure.im6 -[key] [value] [script.msl]```
 
 **Run in debug mode**
 
 ```conjure.im6 -debug all [script.msl]```
 
-**Execute with specific resource limits**
+**Display version information**
 
-```conjure.im6 -limit memory [256MB] [script.msl]```
+```conjure.im6 -version```
 
 # SYNOPSIS
 
@@ -33,14 +33,11 @@ ImageMagick MSL script interpreter
 **-debug** _EVENTS_
 > Enable debugging output for specified event types.
 
-**-define** _KEY=VALUE_
-> Set a configuration value accessible within the script.
-
-**-limit** _TYPE VALUE_
-> Set resource limits (memory, map, disk, file, thread, time).
+**-help**
+> Print program options.
 
 **-log** _FORMAT_
-> Log output format specification.
+> Format of debugging information.
 
 **-monitor**
 > Monitor progress of image processing operations.
@@ -62,20 +59,28 @@ ImageMagick MSL script interpreter
 
 # DESCRIPTION
 
-**conjure.im6** is the ImageMagick version 6 interpreter for Magick Scripting Language (MSL). MSL is an XML-based scripting language for performing complex image processing operations programmatically.
+**conjure.im6** is the ImageMagick version 6 interpreter for Magick Scripting Language (MSL). MSL is an XML-based scripting language for performing image processing operations.
 
-MSL scripts define image manipulation workflows using XML tags that correspond to ImageMagick operations. This allows creating reusable, parameterized image processing pipelines without writing shell scripts or using programming language bindings.
-
-MSL is particularly useful for batch processing and creating complex image manipulation templates that can be applied consistently across many images. It is primarily aimed at users who want custom image processing without needing a programming language or compiler.
+MSL scripts define image manipulation workflows using XML tags that correspond to ImageMagick operations. Any other **-key value** pairs on the command line are made available to the script, for example **conjure.im6 -size 100x100 -color blue -foo bar script.msl**. It is primarily aimed at users who want custom image processing without needing a programming language or compiler.
 
 # CAVEATS
 
-MSL is a specialized language with limited adoption compared to using ImageMagick from shell scripts or programming languages. ImageMagick 6 is in maintenance mode; ImageMagick 7 uses different scripting approaches. The **.im6** suffix ensures version 6 is used on systems with both versions installed.
+The **.im6** suffix is a distribution packaging name, not an upstream ImageMagick command. Debian 12 ships the binary as **conjure-im6.q16** instead, and newer Debian releases package ImageMagick 7, so scripts that call **conjure.im6** may fail. ImageMagick's MSL has limited adoption compared to using ImageMagick from shell scripts or programming languages.
 
 # HISTORY
 
-conjure was part of ImageMagick's scripting capabilities, allowing XML-based batch image processing. ImageMagick was created by John Cristy in **1990**. The versioned **conjure.im6** command was introduced when ImageMagick 7 brought breaking changes in **2016**, allowing both versions to coexist.
+ImageMagick was created by John Cristy in **1990**.
 
 # SEE ALSO
 
 [composite.im6](/man/composite.im6)(1), [display.im6](/man/display.im6)(1), [mogrify.im6](/man/mogrify.im6)(1), [magick](/man/magick)(1), [convert](/man/convert)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ImageMagick/ImageMagick6)```
+
+```[Homepage](https://imagemagick.org)```
+
+```[Documentation](https://legacy.imagemagick.org/script/conjure.php)```
+
+<!-- verified: 2026-11-09 -->

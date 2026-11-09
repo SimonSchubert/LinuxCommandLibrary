@@ -8,9 +8,13 @@ manages compute instances in OpenStack clouds
 
 ```openstack server list```
 
-**Create server**
+**List servers in a given state**
 
-```openstack server create --flavor [m1.small] --image [ubuntu] --network [private] [server_name]```
+```openstack server list --status [ACTIVE]```
+
+**Create server** and wait until it is ready
+
+```openstack server create --flavor [m1.small] --image [ubuntu] --network [private] --key-name [mykey] --wait [server_name]```
 
 **Show server details**
 
@@ -28,9 +32,13 @@ manages compute instances in OpenStack clouds
 
 ```openstack server stop [server_name]```
 
-**Reboot a server**
+**Hard reboot a server**
 
-```openstack server reboot [server_name]```
+```openstack server reboot --hard [server_name]```
+
+**Resize a server, then confirm**
+
+```openstack server resize --flavor [m1.large] --wait [server_name] && openstack server resize confirm [server_name]```
 
 **SSH into a server**
 
@@ -61,16 +69,46 @@ manages compute instances in OpenStack clouds
 > Stop server.
 
 **reboot** _name_
-> Reboot server.
+> Reboot server (**--soft** or **--hard**).
+
+**rebuild** _name_
+> Rebuild server from an image.
+
+**resize** _name_ **--flavor** _flavor_
+> Resize server to a different flavor.
+
+**resize confirm** _name_
+> Confirm a resize and release the old server.
+
+**resize revert** _name_
+> Roll back a resize.
+
+**add volume** _server_ _volume_
+> Attach a volume to the server.
+
+**add floating ip** _server_ _ip_
+> Associate a floating IP with the server.
+
+**image create** _name_
+> Create a new image from the server.
+
+**ssh** _name_
+> SSH into the server. Arguments after **--** are passed to ssh.
+
+**migrate** _name_
+> Migrate server to another host (**--live-migration** for live migration).
 
 **--flavor** _flavor_
-> Instance flavor/size.
+> Instance flavor/size (required for create).
 
 **--image** _image_
 > Boot image.
 
+**--volume** _volume_
+> Boot from this volume instead of an image.
+
 **--network** _network_
-> Network to attach.
+> Network to attach (repeatable).
 
 **--key-name** _key_
 > SSH key pair.
@@ -81,14 +119,14 @@ manages compute instances in OpenStack clouds
 **--availability-zone** _zone_
 > Availability zone for the server.
 
-**resize** _name_ **--flavor** _flavor_
-> Resize server to a different flavor.
+**--user-data** _file_
+> File to inject as user data, such as a cloud-init script.
 
-**ssh** _name_
-> SSH into the server.
+**--wait**
+> Wait for the operation to complete.
 
-**migrate** _name_
-> Migrate server to another host.
+**--all-projects**
+> Include servers from all projects (admin only).
 
 # DESCRIPTION
 
@@ -96,9 +134,18 @@ manages compute instances in OpenStack clouds
 
 # CAVEATS
 
-Requires valid OpenStack credentials (typically sourced from an openrc file or OS_* environment variables). Some operations like resize require confirmation. Server names may not be unique; use IDs for scripted operations.
+Requires valid OpenStack credentials (typically sourced from an openrc file or OS_* environment variables). A resize stays in the VERIFY_RESIZE state until confirmed or reverted. Server names may not be unique; use IDs for scripted operations.
 
 # SEE ALSO
 
 [openstack](/man/openstack)(1), [openstack-flavor](/man/openstack-flavor)(1), [openstack-image](/man/openstack-image)(1), [openstack-network](/man/openstack-network)(1), [openstack-volume](/man/openstack-volume)(1)
 
+# RESOURCES
+
+```[Source code](https://opendev.org/openstack/python-openstackclient)```
+
+```[Homepage](https://www.openstack.org)```
+
+```[Documentation](https://docs.openstack.org/python-openstackclient/latest/cli/command-objects/compute/v2/index.html)```
+
+<!-- verified: 2026-11-09 -->

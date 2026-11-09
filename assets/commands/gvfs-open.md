@@ -1,6 +1,6 @@
 # TAGLINE
 
-opens files and URIs with their default applications
+opens files and URIs with their default applications (removed, use gio open)
 
 # TLDR
 
@@ -19,6 +19,10 @@ opens files and URIs with their default applications
 **Open directory in file manager**
 
 ```gvfs-open [directory]```
+
+**Modern equivalent**
+
+```gio open [file.pdf]```
 
 # SYNOPSIS
 
@@ -39,16 +43,24 @@ _FILE_
 
 **gvfs-open** opens files with the default application registered to handle files of that type. It obtains MIME type information from the shared-mime-info database, and the default handler is stored per-user in `$XDG_DATA_HOME/applications/mimeapps.list`.
 
-The tool handles local files, remote URIs, and URLs. When a running GNOME session is detected, `xdg-open` actually calls `gvfs-open` internally.
+The tool handles local files, remote URIs, and URLs. Current **xdg-open** versions call **gio open** on GNOME and only fall back to **gvfs-open** when it is unavailable.
 
 # CAVEATS
 
-Deprecated in favor of gio open. GNOME specific. Requires proper MIME associations.
+No longer shipped: removed from GVFS in version **1.37.2**. Use **gio open** or **xdg-open** on current systems.
 
 # HISTORY
 
-gvfs-open was developed as part of **GVFS** for GNOME, now largely replaced by the **gio** and **xdg-open** commands.
+gvfs-open was part of the **GVFS** utilities. They were deprecated in GVFS **1.31.1** (2016) in favor of the **gio** tool added in GLib **2.50**, and removed in GVFS **1.37.2**.
 
 # SEE ALSO
 
 [gio](/man/gio)(1), [xdg-open](/man/xdg-open)(1), [open](/man/open)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gvfs)```
+
+```[Homepage](https://wiki.gnome.org/Projects/gvfs)```
+
+<!-- verified: 2026-11-09 -->

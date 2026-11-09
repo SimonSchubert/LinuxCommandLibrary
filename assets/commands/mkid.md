@@ -30,54 +30,71 @@ Display **statistics** after building the database
 
 # SYNOPSIS
 
-**mkid** [**-o** _outfile_] [**-i** _langs_] [**-x** _langs_] [**-p** _names_] [**-s**] [**-v**] [_file_...]
+**mkid** [_options_] [_file_...]
 
 # PARAMETERS
 
-**-o, --output _outfile_**
-> Specify output database file; default is ID in current directory
+**-o**, **--output** _OUTFILE_
+> Output database file; default is ID in the current directory
 
-**-f, --file _outfile_**
-> Alias for --output
+**-f**, **--file** _OUTFILE_
+> Synonym for **--output**
 
-**-i, --include _langs_**
-> Include only specified languages; default is C, C++, asm
+**-i**, **--include** _LANGS_
+> Include only these languages; default is "C C++ asm"
 
-**-x, --exclude _langs_**
-> Exclude specified languages from indexing
+**-x**, **--exclude** _LANGS_
+> Exclude these languages from indexing
 
-**-m, --lang-map _mapfile_**
-> Use custom filename-to-language mapping
+**-l**, **--lang-option** _L:OPT_
+> Pass OPT as a default for language L
 
-**-d, --default-lang _lang_**
-> Set default language for unrecognized files
+**-m**, **--lang-map** _MAPFILE_
+> Use MAPFILE to map file names onto source languages
 
-**-p, --prune _names_**
-> Skip named files and directories during scanning
+**-d**, **--default-lang** _LANG_
+> Make LANG the default source language
 
-**--files0-from _file_**
-> Read file list from specified file (NUL-terminated)
+**-p**, **--prune** _NAMES_
+> Exclude the named files and directories
 
-**-v, --verbose**
-> Display per-file processing statistics
+**--files0-from** _FILE_
+> Tokenize only the files named in FILE, NUL-terminated
 
-**-s, --statistics**
-> Display summary statistics after completion
+**-v**, **--verbose**
+> Report per-file statistics
+
+**-s**, **--statistics**
+> Report statistics at end of run
+
+**--help**
+> Display help information
+
+**--version**
+> Display version information
 
 # DESCRIPTION
 
 **mkid** builds an identifier database for source code files, enabling fast searches with **lid**, **gid**, and other GNU idutils tools. It scans source files, extracts identifiers (function names, variables, macros), and stores them in a compact database.
 
-The tool recursively processes directories, recognizing multiple programming languages including C, C++, assembly, Perl, and plain text. The database format optimizes lookup speed for subsequent searches.
+The tool recursively processes directories, recognizing languages including C, C++, Java, assembly, Perl, Lisp and plain text. Each file argument may be a file or a directory; the current directory is searched by default.
 
 # CAVEATS
 
-The --include and --exclude options are mutually exclusive. Large codebases may require significant time and memory for initial database creation. The database must be rebuilt when source files change to reflect current identifiers.
+The --include and --exclude options are mutually exclusive. The database must be rebuilt when source files change to reflect current identifiers.
 
 # HISTORY
 
-**mkid** is part of **GNU idutils**, originally written by Greg McGary. The package provides tools for building and querying identifier databases, designed for large-scale software development. It has been part of the GNU project since the early 1990s.
+**Greg McGary** conceived the ID utilities in **1984** while working on the Unix kernel and first posted them to comp.sources.unix in **1987** under the name id. **Tom Horsley** released mkid version 2 in **1990**, and McGary returned in **1995** to develop mkid version 3, which is linear in time and space. The tools are distributed as **GNU idutils**.
 
 # SEE ALSO
 
 [lid](/man/lid)(1), [grep](/man/grep)(1), [ctags](/man/ctags)(1)
+
+# RESOURCES
+
+```[Source code](https://git.savannah.gnu.org/cgit/idutils.git)```
+
+```[Documentation](https://www.gnu.org/software/idutils/manual/idutils.html)```
+
+<!-- verified: 2026-11-09 -->

@@ -1,6 +1,6 @@
 # TAGLINE
 
-Copy files using the GVFS virtual file system (deprecated)
+Copy files using the GVFS virtual file system (removed, use gio copy)
 
 # TLDR
 
@@ -28,9 +28,13 @@ Copy files using the GVFS virtual file system (deprecated)
 
 ```gvfs-copy --preserve [source] [destination]```
 
+**Modern equivalent**
+
+```gio copy [source] [destination]```
+
 # SYNOPSIS
 
-**gvfs-copy** [_options_] _source_ _destination_
+**gvfs-copy** [_options_] _source_... _destination_
 
 # PARAMETERS
 
@@ -40,6 +44,9 @@ _SOURCE_
 _DESTINATION_
 > Destination file path or URI.
 
+**-T**, **--no-target-directory**
+> Do not copy into the destination even if it is a directory.
+
 **-p**, **--progress**
 > Show a progress indicator during the copy operation.
 
@@ -47,33 +54,42 @@ _DESTINATION_
 > Prompt before overwriting an existing destination file.
 
 **--preserve**
-> Preserve file attributes such as timestamps and permissions.
+> Preserve all attributes of copied files.
 
 **-b**, **--backup**
 > Create a backup of the destination file if it already exists.
 
-**--no-dereference**
-> Do not follow symbolic links; copy the link itself.
+**-P**, **--no-dereference**
+> Never follow symbolic links.
+
+**--version**
+> Show program version.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**gvfs-copy** copies files using GVFS (GNOME Virtual File System). It supports local files and remote URIs including SMB, FTP, SFTP, DAV, and other protocols supported by GVFS backends.
+**gvfs-copy** copied files using GVFS (GNOME Virtual File System). It supports local files and remote URIs including SMB, FTP, SFTP, DAV, and other protocols supported by GVFS backends.
 
-The tool handles network protocols transparently, copying files across different backends. It integrates with GNOME's file system abstraction layer.
-
-This command is deprecated and has been replaced by **gio copy**, which provides the same functionality.
+The same options exist on its replacement, **gio copy**, which also adds **--default-permissions**.
 
 # CAVEATS
 
-Deprecated in favor of **gio copy**. Requires GNOME/GVFS libraries and a running GVFS daemon.
+No longer shipped: removed from GVFS in version **1.37.2**. Use **gio copy** on current systems. Only old installations still have this command.
 
 # HISTORY
 
-gvfs-copy was developed as part of **GVFS** for GNOME, now largely replaced by the **gio** command introduced in GLib 2.36.
+gvfs-copy was part of the **GVFS** utilities. They were deprecated in GVFS **1.31.1** (2016) in favor of the **gio** tool added in GLib **2.50**, and removed in GVFS **1.37.2**.
 
 # SEE ALSO
 
 [gio](/man/gio)(1), [cp](/man/cp)(1), [gvfs-move](/man/gvfs-move)(1), [gvfs-ls](/man/gvfs-ls)(1), [rsync](/man/rsync)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gvfs)```
+
+```[Homepage](https://wiki.gnome.org/Projects/gvfs)```
+
+<!-- verified: 2026-11-09 -->

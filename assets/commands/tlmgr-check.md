@@ -22,7 +22,7 @@ Verify TeX Live installation integrity
 
 **Check ls-R file consistency**
 
-```tlmgr check lsr```
+```tlmgr check texmfdbs```
 
 **Run checks with verbose output**
 
@@ -30,7 +30,7 @@ Verify TeX Live installation integrity
 
 # SYNOPSIS
 
-**tlmgr check** [_what_] [_options_]
+**tlmgr check** [_option_...] [_what_]
 
 # PARAMETERS
 
@@ -38,7 +38,7 @@ Verify TeX Live installation integrity
 > Check that all files listed in the local TLPDB are actually present on disk.
 
 **depends**
-> List packages that are dependencies of an installed collection but are not themselves installed, and packages not contained in any collection.
+> List packages that are dependencies of an installed collection but are not themselves installed, and packages not contained in any collection. The old name **collections** still runs this check, with a warning.
 
 **executes**
 > Check that files referred to by execute directives in the TeX Live Database are present.
@@ -46,11 +46,14 @@ Verify TeX Live installation integrity
 **runfiles**
 > List filenames that occur more than once in the runfiles sections, except for known duplicates.
 
-**lsr**
-> Check consistency of the ls-R files. Useful after defining new trees or changing TEXMF variables.
+**texmfdbs**
+> Check consistency of the ls-R files and the TEXMF and TEXMFDBS variables. Useful after defining new trees or changing those variables.
 
 **all**
-> Run all of the above checks.
+> Run all of the above checks. This is the default when no check is named.
+
+**--use-svn**
+> Use the output of **svn status** instead of listing the files, for checking the TeX Live development repository.
 
 # DESCRIPTION
 
@@ -60,3 +63,12 @@ Verify TeX Live installation integrity
 
 [tlmgr](/man/tlmgr)(1), [tlmgr-install](/man/tlmgr-install)(1), [tlmgr-update](/man/tlmgr-update)(1)
 
+# RESOURCES
+
+```[Homepage](https://www.tug.org/texlive/)```
+
+```[Documentation](https://www.tug.org/texlive/doc/tlmgr.html)```
+
+```[Source code](https://www.tug.org/texlive/svn/)```
+
+<!-- verified: 2026-11-09 -->

@@ -1,6 +1,6 @@
 # TAGLINE
 
-update Go code for newer API versions
+modernize Go code using the fixers of the go toolchain
 
 # TLDR
 
@@ -14,7 +14,19 @@ update Go code for newer API versions
 
 **Preview changes as a unified diff without modifying files**
 
-```go fix -diff [package]```
+```go fix -diff ./...```
+
+**Run only one fixer**
+
+```go fix -[any] ./...```
+
+**Run all fixers except one**
+
+```go fix -[any]=false ./...```
+
+**List the available fixers**
+
+```go tool fix help```
 
 **Output fixes as JSON instead of applying them**
 
@@ -26,7 +38,7 @@ update Go code for newer API versions
 
 # SYNOPSIS
 
-**go fix** [_-diff_] [_-json_] [_-fixtool=prog_] [_packages_]
+**go fix** [_build flags_] [**-fixtool** _prog_] [_fix flags_] [_packages_]
 
 # PARAMETERS
 
@@ -34,13 +46,22 @@ _PACKAGES_
 > Packages to fix. Use ./... for all packages in the current module.
 
 **-diff**
-> Print changes as a unified diff instead of applying them. Useful for CI pipelines.
+> Print changes as a unified diff instead of applying them. Exits non-zero if the diff is not empty.
 
 **-json**
-> Emit fixes as JSON output instead of applying them.
+> Emit diagnostics and fixes as JSON instead of applying them. Cannot be combined with **-diff**.
 
 **-fixtool** _prog_
 > Select a different analysis tool with alternative or additional fixers. The default is go tool fix.
+
+**-**_analyzer_
+> Enable only the named fixer, such as **-any** or **-forvar**. Negate with **-**_analyzer_**=false** to run all others.
+
+**-C** _dir_
+> Change to dir before running.
+
+**-tags** _list_
+> Comma-separated build tags to consider.
 
 **-v**
 > Verbose output.
@@ -53,22 +74,46 @@ _PACKAGES_
 
 # DESCRIPTION
 
-**go fix** updates Go code for newer Go versions. It applies transformations for API changes and deprecated patterns, helping maintain code across Go releases.
+**go fix** runs the Go fix tool (cmd/fix) on the named packages and applies suggested fixes. Since Go 1.26 it is the home of Go's modernizers, which update code to the latest idioms and library APIs without changing behavior, for example replacing interface{} with any, using min/max builtins, or removing redundant loop variable copies. A source-level inliner also applies user API migrations marked with **//go:fix inline** directives.
 
-The tool runs specific fixers (analyzers) that handle known changes between Go versions. As of Go 1.24, go fix uses the same analysis framework as go vet and supports selecting specific analyzers by name.
-
-Available analyzers include fixes for: replacing interface{} with any, using min/max builtins, modernizing string operations, updating fmt.Appendf patterns, range-over-int, and more.
-
-Files are modified in place by default, so version control is recommended before running.
+It is built on the same analysis framework as **go vet**, and runs all analyzers by default. Fixes touching generated files are discarded. Use **go tool fix help** _name_ for details of a specific fixer.
 
 # CAVEATS
 
-Modifies files in place unless -diff is used. Use version control. May need manual review. Limited to known fixes. Each run analyzes only one build configuration; run with different GOARCH/GOOS values for multi-platform projects.
+Modifies files in place unless **-diff** or **-json** is used. Start from a clean version control state. Each run analyzes only one build configuration; run with different GOARCH/GOOS values for multi-platform projects. Go versions before 1.26 have a different go fix with a different flag set.
 
 # HISTORY
 
-go fix is part of the **Go** toolchain. Originally introduced for handling breaking API changes during Go 1.x development, it was significantly enhanced in **Go 1.24** to use the analysis framework, gaining support for custom analyzers and modernization fixes.
+**gofix** was introduced in **April 2011** to rewrite code for breaking API changes during the run-up to Go 1. The command was completely rewritten for **Go 1.26** (February 2026), removing all the historical fixers, which had become obsolete.
+
+# INSTALL
+
+```apt: sudo apt install golang-go```
+
+```dnf: sudo dnf install golang```
+
+```pacman: sudo pacman -S go```
+
+```apk: sudo apk add go```
+
+```zypper: sudo zypper install go```
+
+```brew: brew install go```
+
+```nix: nix profile install nixpkgs#go```
+
+<!-- packages: 2026-11-09 -->
 
 # SEE ALSO
 
-[go](/man/go)(1), [go-vet](/man/go-vet)(1), [go-fmt](/man/go-fmt)(1)
+[go](/man/go)(1), [go-vet](/man/go-vet)(1), [go-fmt](/man/go-fmt)(1), [gofmt](/man/gofmt)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/golang/go)```
+
+```[Homepage](https://go.dev/)```
+
+```[Documentation](https://pkg.go.dev/cmd/fix)```
+
+<!-- verified: 2026-11-09 -->

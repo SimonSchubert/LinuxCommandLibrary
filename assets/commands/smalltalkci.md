@@ -4,74 +4,99 @@ Continuous integration for Smalltalk projects
 
 # TLDR
 
-**Run tests**
+**Run tests** using a config file
 
-```smalltalkci```
+```smalltalkci [path/to/.smalltalk.ston]```
 
-**Run with config**
+**Choose the Smalltalk image**
 
-```smalltalkci [.smalltalk.ston]```
+```smalltalkci -s [Squeak64-trunk] [path/to/.smalltalk.ston]```
 
-**Specify Smalltalk**
+**Open the VM with a GUI** and keep the image open
 
-```smalltalkci -s [Squeak64-5.3]```
-
-**Headless mode**
-
-```smalltalkci --headless```
+```smalltalkci -s [Pharo64-stable] --headful [path/to/.smalltalk.ston]```
 
 **Debug mode**
 
-```smalltalkci -d```
+```smalltalkci -d [path/to/.smalltalk.ston]```
+
+**Clear the cache** and delete builds
+
+```smalltalkci --clean```
+
+**Install a symlink** to this smalltalkCI checkout
+
+```bin/smalltalkci --install```
 
 # SYNOPSIS
 
-**smalltalkci** [_-s smalltalk_] [_-d_] [_options_] [_config_]
+**smalltalkci** [_options_] [_path/to/project.ston_]
 
 # PARAMETERS
 
-**-s** _SMALLTALK_
-> Smalltalk image version to use (e.g., Squeak64-5.3, Pharo-10.0).
+**-s**, **--smalltalk** _IMAGE_
+> Overwrite the image selection (e.g., Squeak64-trunk, Pharo64-stable, GemStone64-3.7.x, Moose64-trunk).
 
-**-d**
-> Debug mode for additional output when troubleshooting.
+**-d**, **--debug**
+> Enable debug mode.
 
-**--headless**
-> Run the Smalltalk VM without graphical display (default for CI).
+**--headful**
+> Open the VM in headful mode and do not close the image.
 
 **--image** _FILE_
-> Use a specific Smalltalk image file.
+> Use a custom image for the build (Squeak/Pharo).
 
-**--baseline** _NAME_
-> Define the Metacello baseline to load or test.
+**--vm** _FILE_
+> Use a custom VM for the build (Squeak/Pharo).
 
-**--dir** _PATH_
-> Set the working directory for the project. Defaults to the current directory.
+**--clean**
+> Clear the cache and delete builds.
 
-**--cache-dir** _PATH_
-> Directory where Smalltalk images and VMs are cached.
+**--force-cache**
+> Force use of the cache for all images (overrides **--overwrite-cache**).
 
-**--github-token** _TOKEN_
-> GitHub token for accessing private repositories or increasing API rate limits.
+**--overwrite-cache**
+> Download the newest image and cache it.
+
+**--install**
+> Install a symlink to this smalltalkCI instance.
+
+**--uninstall**
+> Remove a symlink to any smalltalkCI instance.
+
+**--print-env**
+> Print all environment variables used by smalltalkCI.
+
+**--no-color**
+> Disable colored output.
 
 **--no-tracking**
-> Opt out of anonymous build metrics collection.
+> Disable collection of anonymous build metrics (Travis CI and AppVeyor only).
 
-**--help**
+**-v**, **--verbose**
+> Enable **set -x**.
+
+**-h**, **--help**
 > Show help.
 
 # DESCRIPTION
 
-**smalltalkci** provides continuous integration testing for Smalltalk projects across multiple dialects including Squeak, Pharo, GemStone/S, and Moose. It automates the process of downloading the appropriate Smalltalk virtual machine, loading project code, running tests, and reporting results.
+**smalltalkci** provides continuous integration testing for Smalltalk projects across dialects including Squeak, Pharo, GemStone/S, Moose and GToolkit. It automates the process of downloading the appropriate Smalltalk virtual machine, loading project code, running tests, and reporting results.
 
-Configuration is defined in a **.smalltalk.ston** file using STON (Smalltalk Object Notation) format, specifying which Smalltalk platform to use, packages to load, and test classes to run. The tool integrates with GitHub Actions, Travis CI, and other CI/CD platforms.
+Configuration is defined in a **.smalltalk.ston** file using STON (Smalltalk Object Notation) format, specifying packages to load and tests to run. The tool integrates with GitHub Actions, Travis CI, and other CI/CD platforms. Without a path, it tries to locate a STON file itself.
 
-Tests run in headless mode by default, requiring no graphical display. Debug mode provides additional output for troubleshooting failed builds, and a custom Smalltalk image can be specified for projects with specific environment requirements.
+Tests run headless by default, requiring no graphical display. GemStone builds accept further **--gs-** options such as **--gs-PRODUCTS=** and **--gs-REPOS=**.
 
 # CAVEATS
 
-Smalltalk-specific. Configuration via .smalltalk.ston required. VM download may be slow on first run as images are cached.
+The launcher is **bin/smalltalkci** inside a clone of the repository; use **--install** to get it on the PATH. VM download may be slow on first run; images are cached. On Windows it must run from a Bash shell.
 
 # SEE ALSO
 
 [pharo](/man/pharo)(1), [squeak](/man/squeak)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/hpi-swa/smalltalkCI)```
+
+<!-- verified: 2026-11-09 -->

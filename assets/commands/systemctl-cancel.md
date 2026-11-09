@@ -45,16 +45,22 @@ Cancel **user** job
 
 **systemctl cancel** cancels one or more pending jobs in the systemd service manager. Jobs represent pending operations like starting, stopping, or restarting units. When called without arguments, all pending jobs are cancelled.
 
-Job IDs can be found using `systemctl list-jobs`. Cancelling a job aborts the pending operation without affecting the current state of the unit.
+Job IDs can be found using `systemctl list-jobs`.
 
 # CAVEATS
 
-Cannot cancel already completed jobs. Some jobs may have dependencies that restart them. Cancelling critical boot jobs may leave the system in an inconsistent state.
-
-# HISTORY
-
-The **cancel** subcommand is part of **systemctl** in the **systemd** project. It provides control over the job queue that manages unit state transitions.
+Cancelling removes a job from the queue if it has not started, but generally does not abort a job already being executed. Calling it without arguments during boot or shutdown also cancels jobs other units are waiting on.
 
 # SEE ALSO
 
 [systemctl](/man/systemctl)(1), [systemctl-list-jobs](/man/systemctl-list-jobs)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-09 -->

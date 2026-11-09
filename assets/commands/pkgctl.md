@@ -8,13 +8,17 @@ Arch Linux package maintainer toolset
 
 ```pkgctl auth login```
 
+**Clone** a packaging repository from GitLab
+
+```pkgctl repo clone [pkgbase]```
+
 **Build** a package inside a clean chroot
 
 ```pkgctl build```
 
-**Update** the binary repository database after a release
+**Rebuild**, release and update the database in one step
 
-```pkgctl db update```
+```pkgctl build --rebuild --release --db-update --message "[rebuild reason]"```
 
 **Compare** the current package with the repository version
 
@@ -24,55 +28,99 @@ Arch Linux package maintainer toolset
 
 ```pkgctl release```
 
-**Clone** a packaging repository from GitLab
+**Update** the binary repository database after a release
 
-```pkgctl repo clone [pkgbase]```
+```pkgctl db update```
 
-Display **version** information
+**Check** package versions against upstream
 
-```pkgctl version```
+```pkgctl version check```
+
+Display **pkgctl version** information
+
+```pkgctl --version```
 
 # SYNOPSIS
 
-**pkgctl** [_command_] [_options_]
+**pkgctl** _command_ [_options_]
+
+# PARAMETERS
+
+**-V**, **--version**
+> Show pkgctl version information.
+
+**-h**, **--help**
+> Show help text.
 
 # COMMANDS
 
+**aur**
+> Interact with the Arch User Repository
+
 **auth**
-> Authenticate with GitLab and other services
+> Authenticate with services like GitLab
 
 **build**
-> Build packages in clean chroot
+> Build packages inside a clean chroot
+
+**db move**
+> Move packages between pacman repositories
+
+**db remove**
+> Remove packages from pacman repositories
 
 **db update**
-> Update binary repository database
+> Update the pacman database as the final release step
 
 **diff**
-> Compare package files
+> Compare package files using different modes
+
+**issue**
+> Work with GitLab packaging issues
+
+**license**
+> Check and manage package licenses
 
 **release**
-> Release build artifacts
+> Commit, tag and upload build artifacts
 
 **repo**
-> Manage Git packaging repositories
+> Manage Git packaging repositories and their configuration
 
-**version**
-> Display version information
+**search**
+> Search for an expression across the GitLab packaging group
+
+**version check**
+> Compare local package versions against upstream
+
+**version setup**
+> Detect and set up a basic nvchecker configuration
+
+**version upgrade**
+> Adjust the PKGBUILD to match the latest upstream version
 
 # DESCRIPTION
 
 **pkgctl** is the unified command-line interface for Arch Linux package maintainer tools. It consolidates various devtools commands into a single entry point, simplifying the workflow for building and releasing Arch packages.
 
-The tool integrates with Arch infrastructure including GitLab, the binary repositories, and the Arch Build System (ABS).
+The tool integrates with Arch infrastructure including GitLab and the binary repositories.
 
 # CAVEATS
 
-Intended for Arch package maintainers. Requires devtools package. Authentication needed for some operations. Understanding of PKGBUILD files required.
+Intended for Arch package maintainers. Provided by the **devtools** package. Releasing packages and updating the repository databases require maintainer access, and GitLab operations require authentication. Understanding of PKGBUILD files required.
 
 # HISTORY
 
-**pkgctl** was introduced as part of modernizing Arch Linux devtools. It provides a unified interface replacing scattered tools like archbuild, archrelease, and others, improving the package maintainer experience.
+**pkgctl** was added to **devtools** in **May 2023**, around Arch Linux's move of its packaging sources to Git on GitLab.
 
 # SEE ALSO
 
-[makepkg](/man/makepkg)(8), [pacman](/man/pacman)(8), [devtools](/man/devtools)(7), [asp](/man/asp)(1), [pkgctl-build](/man/pkgctl-build)(1)
+[makepkg](/man/makepkg)(8), [pacman](/man/pacman)(8), [devtools](/man/devtools)(7), [pkgctl-build](/man/pkgctl-build)(1), [pkgctl-repo](/man/pkgctl-repo)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.archlinux.org/archlinux/devtools)```
+
+```[Documentation](https://man.archlinux.org/man/pkgctl.1)```
+
+<!-- verified: 2026-11-09 -->

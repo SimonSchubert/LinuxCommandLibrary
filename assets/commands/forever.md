@@ -24,26 +24,34 @@ Node.js process daemon and monitor
 
 ```forever restart [app.js]```
 
-**Start with log file**
+**Start with log files**
 
 ```forever start -l [forever.log] -o [out.log] -e [err.log] [app.js]```
 
+**Restart on file changes**
+
+```forever start -w [app.js]```
+
+**Run a non-Node script**
+
+```forever start -c [python3] [app.py]```
+
 # SYNOPSIS
 
-**forever** [_options_] _command_ [_script_] [_args_]
+**forever** [_action_] [_options_] _script_ [_script-options_]
 
 # PARAMETERS
 
 **start** _script_
 > Start script as daemon.
 
-**stop** _script|pid|index_
+**stop** _id|uid|pid|index|script_
 > Stop running process.
 
 **stopall**
 > Stop all processes.
 
-**restart** _script|pid|index_
+**restart** _script_
 > Restart process.
 
 **restartall**
@@ -52,8 +60,26 @@ Node.js process daemon and monitor
 **list**
 > List running processes.
 
-**logs** _script|pid|index_
-> Show log files.
+**logs** [_script|index_]
+> List log files, or tail the logs of a script.
+
+**cleanlogs**
+> Delete all historical forever log files.
+
+**config**
+> List forever user configuration.
+
+**set** _key_ _value_
+> Set a forever configuration key.
+
+**clear** _key_
+> Clear a forever configuration key.
+
+**columns** _add|rm|set|reset_ [_col_]
+> Change the columns shown by **forever list**.
+
+**-m** _max_
+> Only run the script MAX times.
 
 **-l** _logfile_
 > Log file for forever output.
@@ -64,43 +90,100 @@ Node.js process daemon and monitor
 **-e** _errfile_
 > Stderr log file.
 
-**-w**, **--watch**
-> Watch for file changes.
+**-p** _path_
+> Base path for forever related files (pid files, etc.).
 
-**-m** _max_
-> Maximum restarts.
-
-**-s**, **--silent**
-> Run script silencing stdout and stderr.
+**-c** _command_
+> Command to execute (default: node).
 
 **-a**, **--append**
 > Append to log files instead of overwriting.
 
-**--minUptime** _ms_
-> Minimum uptime before considering a restart as a crash (default: 1000ms).
+**-f**, **--fifo**
+> Stream logs to stdout.
 
-**--killTree**
+**-n**, **--number** _lines_
+> Number of log lines to print.
+
+**--pidFile** _file_
+> The pid file.
+
+**--uid** _name_
+> Process uid, usable as a namespace with **stop**.
+
+**--sourceDir** _dir_
+> Directory the script path is relative to.
+
+**--workingDir** _dir_
+> Working directory in which the script runs.
+
+**--minUptime** _ms_
+> Minimum uptime for a script not to be considered spinning (default: 1000).
+
+**--spinSleepTime** _ms_
+> Time to wait between launches of a spinning script.
+
+**-w**, **--watch**
+> Watch for file changes.
+
+**--watchDirectory** _dir_
+> Top-level directory to watch from.
+
+**--watchIgnore** _pattern_
+> Pattern to ignore when watching. Can be repeated.
+
+**-s**, **--silent**
+> Run script silencing stdout and stderr.
+
+**-t**, **--killTree**
 > Kill the entire child process tree on stop.
+
+**--killSignal** _signal_
+> Exit signal to use, for graceful restarts (default: SIGKILL).
+
+**-d**, **--debug**
+> Log debug output.
+
+**-v**, **--verbose**
+> Turn on verbose messages.
+
+**--plain**
+> Disable output coloring.
+
+**--version**
+> Print the current version.
+
+**-h**, **--help**
+> Display help.
+
+# DESCRIPTION
+
+**forever** runs scripts continuously, restarting them automatically when they exit. Without an action it runs in the foreground, printing logs; with **start** it runs as a daemon.
+
+It is most commonly used for Node.js scripts, though **-c** allows running any other interpreter.
 
 # CONFIGURATION
 
 **~/.forever/config.json**
-> Global configuration for forever settings and defaults.
+> User configuration, managed with the **config**, **set** and **clear** actions. The root directory can be changed with **FOREVER_ROOT**.
 
-# DESCRIPTION
-
-**forever** runs Node.js scripts continuously, restarting them automatically if they crash. It's designed for production deployment of Node.js applications, ensuring applications stay running.
-
-The tool monitors processes and restarts them on exit. It supports logging, multiple instances, and can watch files for development auto-restart.
+_app.json_
+> Start options can be stored in a JSON file (fields such as **script**, **sourceDir**, **logFile**, **watch**) and passed to **forever start** in place of a script. A JSON array defines multiple applications.
 
 # CAVEATS
 
-Node.js only. Consider PM2 for production use (more features). Log files can grow large. Watch mode may miss some changes. Process management is basic compared to alternatives.
+The project now depends on the community for fixes and features; its README recommends **pm2** or **nodemon** for new installations. The last commit to the repository was in **2023**. Log files can grow large; use **cleanlogs** with care. Without **--killSignal**, stopping sends SIGKILL.
 
 # HISTORY
 
-forever was created by **Charlie Robbins** and the **Nodejitsu** team in the early **2010s** as one of the first process managers for Node.js. While PM2 has largely replaced it for production use, forever remains simple and functional.
+forever was created by **Charlie Robbins** in **2010** and maintained by the **Nodejitsu** team as one of the first process managers for Node.js.
 
 # SEE ALSO
 
 [pm2](/man/pm2)(1), [nodemon](/man/nodemon)(1), [node](/man/node)(1), [npm](/man/npm)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/foreversd/forever)```
+
+<!-- verified: 2026-11-09 -->

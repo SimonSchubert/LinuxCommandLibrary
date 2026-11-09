@@ -8,13 +8,17 @@ Push arguments onto the shell buffer stack
 
 ```pushln "[text to push]"```
 
-**Push a command to be edited** before execution
+**Pre-fill the next prompt** with a command to edit before running
 
 ```pushln "ls -la /tmp"```
 
 **Push multiple words** onto the buffer stack as one entry
 
 ```pushln [word1] [word2] [word3]```
+
+**Read the top entry back** into a variable
+
+```getln [variable]```
 
 # SYNOPSIS
 
@@ -30,10 +34,14 @@ This is equivalent to **print -nz** (push onto the editing buffer stack without 
 
 Only available in zsh. The buffer stack is cleared when the shell exits. In interactive use, pushed lines appear as editable input at the next prompt. Arguments are concatenated with spaces (like **print -nz**), not pushed as separate stack entries.
 
-# HISTORY
-
-**pushln** is part of **zsh's** buffer stack mechanism, introduced as a complement to **getln** for the Z Shell's unique line buffering system.
-
 # SEE ALSO
 
-[getln](/man/getln)(1), [print](/man/print)(1), [zsh](/man/zsh)(1)
+[getln](/man/getln)(1), [print](/man/print)(1), [read](/man/read)(1), [zsh](/man/zsh)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.zsh.org)```
+
+```[Documentation](https://zsh.sourceforge.io/Doc/Release/Shell-Builtin-Commands.html)```
+
+<!-- verified: 2026-11-09 -->

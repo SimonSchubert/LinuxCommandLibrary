@@ -32,55 +32,90 @@ Find which package **owns** a file
 
 ```equery belongs [/path/to/file]```
 
+Show the **ebuild path** Portage would use
+
+```equery which [package]```
+
 # SYNOPSIS
 
-**equery** _command_ [_options_] [_package_]
-
-# DESCRIPTION
-
-**equery** is a powerful query tool for viewing information about Portage packages on Gentoo Linux. It provides detailed information about installed packages, their dependencies, owned files, USE flag settings, and more. The tool can search both the local installed package database and the Portage tree including overlays.
-
-As part of the gentoolkit package, equery offers a more user-friendly interface than raw Portage queries, making it easier to investigate package relationships, troubleshoot installation issues, and understand the state of the system. It's an essential tool for Gentoo system administration and package management.
+**equery** [_global-options_] _module_ [_local-options_] [_package_]
 
 # PARAMETERS
 
-**list** _pattern_
-> List packages matching pattern
+**belongs** (**b**) _file_
+> Find which package owns a file.
 
-**depends** _package_
-> Show reverse dependencies
+**check** (**k**) _package_
+> Verify checksums and timestamps of installed files.
 
-**depgraph** _package_
-> Show dependency graph
+**depends** (**d**) _package_
+> Show reverse dependencies. **-a** includes packages that are not installed.
 
-**files** _package_
-> List installed files
+**depgraph** (**g**) _package_
+> Show dependency graph.
 
-**uses** _package_
-> Show USE flags for a package
+**files** (**f**) _package_
+> List installed files. **--tree** displays them as a tree.
 
-**belongs** _file_
-> Find which package owns a file
+**has** (**a**) _key_ _value_
+> List packages matching a VDB key and value.
 
-**hasuse** _flag_
-> Find packages with a specific USE flag
+**hasuse** (**h**) _flag_
+> Find packages with a specific USE flag.
 
-**size** _package_
-> Show disk space used by a package
+**keywords** (**y**) _package_
+> Display keywords for specified packages.
 
-**-p**, **--portage-tree**
-> Include Portage tree
+**list** (**l**) _pattern_
+> List packages matching pattern. **-p** includes the Portage tree and **-o** overlays.
 
-**-o**, **--overlay-tree**
-> Include overlays
+**meta** (**m**) _package_
+> Display metadata from metadata.xml.
 
-**--tree**
-> Display as tree
+**size** (**s**) _package_
+> Show disk space used by a package.
+
+**uses** (**u**) _package_
+> Show USE flags and their descriptions.
+
+**which** (**w**) _package_
+> Print the path to the ebuild Portage would use.
+
+**-q**, **--quiet**
+> Be less verbose where possible.
+
+**-C**, **--no-color**
+> Do not colorize output.
+
+**-N**, **--no-pipe**
+> Turn off automatic pipe detection.
+
+**-V**, **--version**
+> Display Gentoolkit's version.
+
+**-h**, **--help**
+> Output a help message.
+
+# DESCRIPTION
+
+**equery** is a collection of modules for querying the state of Gentoo packages, files and USE flags. It provides detailed information about installed packages, their dependencies, owned files, USE flag settings, and more. Each module has a long and a one-letter short name, and `equery module --help` lists its local options.
 
 # CAVEATS
 
-Gentoo Linux specific. Part of gentoolkit package. Only queries local database, not remote repositories.
+Gentoo Linux specific. Works from the local package database and repositories on disk, so results for uninstalled packages are only as fresh as the last repository sync. **-p** and **-o** are options of the **list**, **has** and **hasuse** modules, not global options.
+
+# HISTORY
+
+Originally written by **Karl Trygve Kalleberg** in **2003** as part of Gentoo's gentoolkit.
 
 # SEE ALSO
 
-[emerge](/man/emerge)(1), [eix](/man/eix)(1)
+[emerge](/man/emerge)(1), [eix](/man/eix)(1), [euse](/man/euse)(1), [portageq](/man/portageq)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/gentoo/gentoolkit)```
+
+```[Documentation](https://wiki.gentoo.org/wiki/Equery)```
+
+<!-- verified: 2026-11-09 -->

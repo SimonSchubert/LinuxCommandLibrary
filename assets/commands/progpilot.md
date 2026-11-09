@@ -4,53 +4,33 @@ Static security analyzer for PHP code
 
 # TLDR
 
-**Scan PHP files**
+**Scan a directory**
 
 ```progpilot [src/]```
 
-**Scan specific file**
+**Scan specific files and directories**
 
-```progpilot [file.php]```
+```progpilot [file.php] [folder/]```
 
-**Use configuration**
+**Use a configuration file**
 
-```progpilot --configuration [config.yml] [src/]```
+```progpilot --configuration [configuration.yml] [src/]```
 
-**Scan with custom include and exclude paths**
+**Save the JSON report to a file**
 
-```progpilot --include [app/] --exclude [vendor/] [src/]```
-
-**Output to file**
-
-```progpilot --output [report.json] [src/]```
-
-**Verbose mode**
-
-```progpilot -v [src/]```
+```progpilot [src/] > [report.json]```
 
 # SYNOPSIS
 
-**progpilot** [_--configuration file_] [_--json_] [_--output file_] [_options_] _files_
+**progpilot** [**--configuration** _file_] _files_...
 
 # PARAMETERS
 
+_files_
+> PHP files and directories to analyze.
+
 **--configuration** _FILE_
-> YAML config file.
-
-**--json**
-> JSON output format.
-
-**--output** _FILE_
-> Output file.
-
-**-v**, **--verbose**
-> Verbose output.
-
-**--include** _PATH_
-> Include path.
-
-**--exclude** _PATH_
-> Exclude path.
+> YAML configuration file. Without it, the default configuration is used.
 
 **--help**
 > Show help.
@@ -65,25 +45,27 @@ Static security analyzer for PHP code
 
 # DESCRIPTION
 
-**progpilot** performs static security analysis on PHP code by tracing the flow of user-controlled data through the application. It uses taint analysis to identify points where unsanitized input reaches dangerous functions such as database queries, shell commands, or HTML output, flagging potential SQL injection, XSS, command injection, and path traversal vulnerabilities.
+**progpilot** performs static security analysis on PHP code by tracing the flow of user-controlled data through the application. It uses taint analysis to identify points where unsanitized input reaches dangerous functions such as database queries, shell commands, or HTML output.
 
-The analysis works by modeling sources (where user input enters), sinks (where dangerous operations occur), and sanitizers (functions that neutralize tainted data). All three are configurable through a YAML configuration file, allowing teams to define custom security rules, add application-specific sensitive functions, and suppress false positives.
+The analysis models sources (where user input enters), sinks (where dangerous operations occur), sanitizers and validators. All of these are configurable, allowing teams to define application-specific sensitive functions and custom rules. Upstream strongly recommends customizing them for the application being analyzed.
 
-Output includes the vulnerability type, file location, and affected code path. JSON output mode enables integration with CI/CD pipelines for automated security checks during development.
+Results are printed to standard output as JSON, or as SARIF when **sarif_output** is enabled in the configuration. The command exits with status 1 when vulnerabilities are found, which suits CI pipelines.
 
 # CONFIGURATION
 
-**progpilot.yml** (or custom path via **--configuration**)
-> YAML configuration file defining sources, sinks, sanitizers, include/exclude paths, and custom vulnerability rules for the analysis.
+**configuration.yml** (any path, passed with **--configuration**)
+> YAML file defining sources, sinks, sanitizers, validators, custom rules, **inclusions**, **exclusions**, false positives and output options.
 
 # CAVEATS
 
-Static analysis has false positives. Complex code paths may be missed. PHP version coverage varies.
-
-# HISTORY
-
-**progpilot** was created by **designsecurity** as an open-source PHP static security analyzer. It uses taint analysis techniques to trace user-controlled data through application code.
+Static analysis has false positives. Complex code paths may be missed. There are no command-line flags for include or exclude paths or for output files: use the configuration file and shell redirection.
 
 # SEE ALSO
 
 [phpstan](/man/phpstan)(1), [psalm](/man/psalm)(1), [php](/man/php)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/designsecurity/progpilot)```
+
+<!-- verified: 2026-11-09 -->
