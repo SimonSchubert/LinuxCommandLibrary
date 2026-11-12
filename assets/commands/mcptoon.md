@@ -4,6 +4,10 @@ Token-efficient Model Context Protocol (MCP) CLI client
 
 # TLDR
 
+**Set up** in one command (discover + configure + show tools)
+
+```mcptoon quickstart```
+
 **Create** a sample config at **~/.mcptoon/config.json**
 
 ```mcptoon init```
@@ -28,6 +32,10 @@ Token-efficient Model Context Protocol (MCP) CLI client
 
 ```mcptoon doctor```
 
+**Check** that every configured server answers
+
+```mcptoon health```
+
 **Export** the tool manifest for OpenAI function calling
 
 ```mcptoon manifest --format openai > [functions.json]```
@@ -40,63 +48,107 @@ Token-efficient Model Context Protocol (MCP) CLI client
 
 **mcptoon** is a zero-dependency Python CLI that connects to MCP servers (stdio or HTTP) and returns tool lists and results in **TOON** (Token-Optimized Object Notation) or other compact formats instead of verbose JSON. Agents that shell out to **mcptoon** can discover and invoke tools with far fewer context tokens than raw MCP JSON envelopes.
 
-Configure servers once with **mcptoon add** (stored in **~/.mcptoon/config.json**, optional project override **./.mcptoon.json**). **manifest** lists tools; **call** invokes them; **discover** and **doctor** check health. Dangerous-looking operations are blocked unless **--destructive** is passed. Optional tool-poisoning heuristics refuse results that look like prompt injection.
+Configure servers once with **mcptoon add** (stored in **~/.mcptoon/config.json**, optional project override **./.mcptoon.json**). **manifest** lists tools; **call** invokes them; **discover** finds servers already configured elsewhere on the machine; **health** checks that each one answers; **doctor** self-diagnoses the runtime. Dangerous-looking operations are blocked unless **--destructive** is passed. Optional tool-poisoning heuristics refuse results that look like prompt injection.
 
-Global output flags select **--toon**, **--json**, **--compact**, **--raw**, truncation (**--head**, **--max-chars**), and export formats (**--format** openai|openapi|mcp). Setting **MCPTOON_AGENT_TYPE=claude** prefers TOON by default.
+Global output flags select **--toon**, **--json**, **--compact**, **--raw**, truncation (**--head**, **--max-chars**), and export formats (**--format** openai|openapi|mcp|json|human). Setting **MCPTOON_AGENT_TYPE=claude** prefers TOON by default.
 
 # PARAMETERS
 
-**init**
+**quickstart** | **qs**
 
-> Write a sample config under **~/.mcptoon/**.
+> One-command onboarding: discover servers, write the config, and show the tool list.
 
-**add** _name_ **--stdio** _cmd_ [_args_...] | **--http** _url_ [**--header** _H_]
+**init** [**--auto**] [**--force**]
 
-> Register an MCP server.
+> Write a sample config under **~/.mcptoon/**. **--auto** discovers instead of writing the sample.
+
+**add** _name_ **--stdio** _cmd_ [_args_...] | **--http** _url_ [**--header** _H_] [**--force**]
+
+> Register an MCP server. Everything after **--stdio** belongs to the child command.
 
 **remove** _name_
 
 > Drop a configured server.
 
-**list**
+**list** | **servers**
 
 > Show configured servers and transports.
 
-**manifest** [**--full**] [**--format** _fmt_]
+**manifest** [**--full**] [**--format** _fmt_] [**--sort** _default|alpha|usage|recent_] [**--top** _N_] | **tools**
 
-> List tools (compact names, full schemas, or export formats). Alias **tools**.
+> List tools (compact names, full schemas, or export formats).
 
 **inspect** _server_ _tool_
 
 > Show one tool's schema.
 
-**call** _server_ _tool_ [_json-args_] [**--stdin**] [**--destructive**]
+**search** _query_
+
+> Search tool names and descriptions across every configured server.
+
+**select** _task_ [**--top** _N_]
+
+> Rank the few tools worth showing an agent for one task.
+
+**call** _server_ _tool_ [_json-args_] [**--stdin**] [**--destructive**] [**--auto**]
 
 > Invoke a tool. Use **--stdin** for large JSON payloads.
 
-**discover**
+**discover** [**--write**] [**--http** _url_] [**--health**]
 
-> Health-check configured servers.
+> Find MCP servers already configured in other clients and probe them. **--write** merges them into the config; **--health** runs the legacy health check.
+
+**health** [**--timeout** _s_] [**--json**]
+
+> Check every configured server and report which answer. Exits 1 if any is unreachable.
 
 **doctor**
 
 > Self-diagnose runtime, config, and connectivity.
 
+**status** | **brief**
+
+> One screen: what is configured, what it saves, and how to undo it.
+
 **usage**
 
 > Local call statistics under **~/.cache/mcptoon/**.
 
-**completion** _bash|zsh|fish|ps_
+**activity** [**--since** _when_] [**--tool** _name_] [**--failures**] [**--summary**]
 
-> Print shell completion script.
+> The activity ledger: which tools were called, by which host, and what failed.
+
+**import** [**--from** _client_] [**--file** _path_] [**--write**]
+
+> Bring servers over from Claude Desktop, Cursor, Cline, Windsurf or VS Code.
+
+**sync** [**--agent** _name_] [**--dry**] [**--self**] [**--takeover**]
+
+> Write the gateway entry into the AI agent configs on this machine.
+
+**install** [**--search** _query_] [**--npm**|**--pip**|**--url**] [**--list**] [**--dry**]
+
+> Install, list or remove MCP servers with automatic config registration.
+
+**serve** [**--listen** _addr_] [**--http**] [**--auth**] [**--background**] [**--status**] [**--stop**]
+
+> Run mcptoon itself as an MCP server, so a host can reach every configured server through one entry. **--listen** sets an HTTP address; the default is stdio.
+
+**exec** _lang_ _code_ | **--file** _path_ | **--langs**
+
+> Run code so only its stdout reaches the context.
+
+**completion** _bash|zsh|fish|ps_ [**--install**] [**--uninstall**] [**--dry**]
+
+> Print a shell completion script, or wire it into the shell's rc file.
 
 **--toon**, **--json**, **--compact**, **--raw**
 
-> Output rendering mode.
+> Output rendering mode. **--raw** is the unparsed response body, which matters for **call** results; commands that print their own report ignore it.
 
 **--format** _openai|openapi|mcp|json|human_
 
-> Manifest export style.
+> Manifest export style. Any other value is an error, not a silent fallback.
 
 **--head** _N_, **--max-chars** _N_, **--full**
 
@@ -136,7 +188,7 @@ Servers must be running or launchable (for example via **npx**). TOON is a compa
 
 # HISTORY
 
-**mcptoon** is a 2025–2026 Apache-2.0 project by **activeing123**, aimed at cutting MCP tool-discovery and result overhead for multi-agent shell workflows. v0.2.x added **--stdin**, **doctor**, fuzzy "did you mean", poisoning guard, and cross-agent manifest export.
+**mcptoon** is a 2025–2026 Apache-2.0 project by **activeing123**, aimed at cutting MCP tool-discovery and result overhead for multi-agent shell workflows. v0.2.x added **--stdin**, **doctor**, fuzzy "did you mean", poisoning guard, and cross-agent manifest export. Later releases grew the surface well past the handful of verbs this page covers: **0.8.x** added **skills**, **serve**, **plugin**, **activity** and **statusline**, and the per-command option table that makes a flag belonging to another command an error instead of a silent no-op.
 
 # SEE ALSO
 
@@ -148,4 +200,4 @@ Servers must be running or launchable (for example via **npx**). TOON is a compa
 
 ```[Homepage](https://pypi.org/project/mcptoon/)```
 
-<!-- verified: 2026-08-11 -->
+<!-- verified: 2026-11-13 -->
