@@ -80,5 +80,5 @@ Exposes services to the public internet -- use with caution. Funnel must be enab
 
 # SEE ALSO
 
-[tailscale](/man/tailscale)(1), [tailscale-up](/man/tailscale-up)(1), [ngrok](/man/ngrok)(1)
+[tailscale](/man/tailscale)(1), [tailscale-serve](/man/tailscale-serve)(1), [tailscale-up](/man/tailscale-up)(1), [ngrok](/man/ngrok)(1)
 

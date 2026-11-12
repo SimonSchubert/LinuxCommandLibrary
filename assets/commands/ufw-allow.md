@@ -96,7 +96,7 @@ Part of **ufw** (Uncomplicated Firewall), the Ubuntu-originated frontend for ipt
 
 # SEE ALSO
 
-[ufw](/man/ufw)(8), [ufw-enable](/man/ufw-enable)(8), [ufw-disable](/man/ufw-disable)(8), [iptables](/man/iptables)(8), [nftables](/man/nftables)(8)
+[ufw](/man/ufw)(8), [ufw-deny](/man/ufw-deny)(8), [ufw-reject](/man/ufw-reject)(8), [ufw-enable](/man/ufw-enable)(8), [ufw-disable](/man/ufw-disable)(8), [iptables](/man/iptables)(8), [nftables](/man/nftables)(8)
 
 # RESOURCES
 

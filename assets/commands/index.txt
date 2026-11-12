@@ -150,6 +150,7 @@ airdecap-ng.md
 airdecloak-ng.md
 aireplay-ng.md
 airflow.md
+airgap-check.md
 airmon-ng.md
 airodump-ng-oui-update.md
 airodump-ng.md
@@ -310,6 +311,7 @@ apx-pkgmanagers.md
 apx-stacks.md
 apx-subsystems.md
 apx.md
+aq.md
 ar.md
 arandr.md
 arc.md
@@ -515,6 +517,7 @@ aws-efs.md
 aws-eks.md
 aws-elb.md
 aws-elbv2.md
+aws-emulator.md
 aws-events.md
 aws-firehose.md
 aws-glue.md
@@ -810,6 +813,7 @@ bore.md
 borg.md
 borgbackup.md
 bosh.md
+botan.md
 bottom.md
 bough.md
 boundary.md
@@ -1433,6 +1437,7 @@ coredumpctl.md
 corepack.md
 coreutils.md
 corral.md
+cosh.md
 cosign.md
 cotp.md
 cotton.md
@@ -1793,6 +1798,7 @@ djxl.md
 dkms.md
 dlb.md
 dlltool.md
+dlt.md
 dlv.md
 dm-crypt.md
 dm-tool.md
@@ -2436,10 +2442,13 @@ flashrom.md
 flask-unsign.md
 flask.md
 flatpak-builder.md
+flatpak-config.md
+flatpak-history.md
 flatpak-install.md
 flatpak-mask.md
 flatpak-remote-info.md
 flatpak-run.md
+flatpak-uninstall.md
 flatpak-update.md
 flatpak.md
 flavours.md
@@ -4164,6 +4173,7 @@ kividb.md
 kiwi-ng.md
 kjv.md
 kl.md
+klad.md
 klog.md
 kmod.md
 kmon.md
@@ -4522,6 +4532,7 @@ look.md
 lookandfeeltool.md
 lookbib.md
 loopsy.md
+loopt.md
 lorder.md
 lore.md
 lorem.md
@@ -8103,6 +8114,7 @@ tailcat.md
 tailf.md
 tailscale-file.md
 tailscale-funnel.md
+tailscale-serve.md
 tailscale-set.md
 tailscale-ssh.md
 tailscale-up.md
@@ -8533,7 +8545,9 @@ ufw-deny.md
 ufw-disable.md
 ufw-enable.md
 ufw-limit.md
+ufw-reject.md
 ufw-reload.md
+ufw-reset.md
 ufw-status.md
 ufw-version.md
 ufw.md
@@ -9358,6 +9372,7 @@ zic.md
 zig.md
 zigfetch.md
 ziggity.md
+zigzag.md
 zile.md
 zinc.md
 zinit.md
