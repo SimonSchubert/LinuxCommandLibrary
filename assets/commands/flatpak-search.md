@@ -26,14 +26,14 @@ Choose which **columns** to print
 > Search remotes configured for the per-user installation.
 
 **--columns**=_FIELDS_
-> Comma-separated columns to print, such as `name`, `application`, and `version`.
+> Comma-separated columns to print, such as **name**, **application**, and **version**.
 
 **-h**, **--help**
 > Show help and exit.
 
 # DESCRIPTION
 
-**flatpak search** queries the Flatpak remotes already configured on this machine and prints matching applications and runtimes. It is a subcommand of [flatpak](/man/flatpak)(1), not a separate program. It does not install anything. Use [flatpak-install](/man/flatpak-install)(1) for that.
+**flatpak search** queries the Flatpak remotes already configured on this machine and prints matching applications and runtimes. It is a subcommand of **flatpak**, not a separate program. It does not install anything. Use **flatpak-install** for that.
 
 # INSTALL
 

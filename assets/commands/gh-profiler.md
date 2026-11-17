@@ -63,14 +63,14 @@ _TARGET_
 > Still profile contributors the tool would otherwise treat as trusted.
 
 **--generate-workflow**
-> Write a workflow that runs `gh-profiler --concise` on new pull requests and issues.
+> Write a workflow that runs **gh-profiler --concise** on new pull requests and issues.
 
 **-h**, **--help**
 > Show help and exit.
 
 # DESCRIPTION
 
-**gh-profiler** prints a short read of a GitHub account and of that account's recent pull requests and issues, so a reviewer can decide how much time to spend. It is its own command. It is not a [gh](/man/gh)(1) extension. After install it can also be run as a Python module:
+**gh-profiler** prints a short read of a GitHub account and of that account's recent pull requests and issues, so a reviewer can decide how much time to spend. It is its own command. It is not a **gh** extension. After install it can also be run as a Python module:
 
 ```python -m gh_profiler```
 

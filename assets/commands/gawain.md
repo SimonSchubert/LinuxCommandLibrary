@@ -37,32 +37,32 @@ _PATHS_
 > Skip the type-checker pass. Presence checks still run.
 
 **--format** _text|json_
-> `text` (the default) or one JSON object.
+> **text** (the default) or one JSON object.
 
 **--mode** _MODE_
-> How obvious values are judged. Overrides `mode` in `[tool.gawain]`. `obvious` is the default. `strict` requires an annotation on every assignment.
+> How obvious values are judged. Overrides **mode** in **[tool.gawain]**. **obvious** is the default. **strict** requires an annotation on every assignment.
 
 **--checker** _CHECKER_
-> Type checker for the types phase. Overrides `checker` in `[tool.gawain]`. `ty` is the default. `pyrefly` is the other built-in choice.
+> Type checker for the types phase. Overrides **checker** in **[tool.gawain]**. **ty** is the default. **pyrefly** is the other built-in choice.
 
 **-h**, **--help**
 > Show help and exit.
 
 # DESCRIPTION
 
-**gawain** checks that Python variables, parameters, returns, and class attributes are annotated, then optionally runs a type checker. The only subcommand is `check`.
+**gawain** checks that Python variables, parameters, returns, and class attributes are annotated, then optionally runs a type checker. The only subcommand is **check**.
 
-The default mode, `obvious`, allows a name to omit an annotation when the value's type is obvious and the name is not assigned again: a literal, a container of literals, or a constructor call. `strict` asks for an annotation on every assignment.
+The default mode, **obvious**, allows a name to omit an annotation when the value's type is obvious and the name is not assigned again: a literal, a container of literals, or a constructor call. **strict** asks for an annotation on every assignment.
 
 Rules reported by the presence pass:
 
 - GW001 — assignment with no annotation
 - GW002 — parameter with no annotation
 - GW003 — function with no return annotation
-- GW004 — class attribute with no annotation, or `self.x` not declared on the class
-- GW010 — constant not annotated `Final[T]`
-- GW011 — bare `Final` with no type
-- GW020 — `Any` in an annotation
+- GW004 — class attribute with no annotation, or **self.x** not declared on the class
+- GW010 — constant not annotated **Final[T]**
+- GW011 — bare **Final** with no type
+- GW020 — **Any** in an annotation
 - GW000 — file cannot be read
 - GW900 and GW901 — broken or unused suppression
 
@@ -70,11 +70,11 @@ Silence one line with a comment that names the code:
 
 ```# gawain: ignore[GW001]```
 
-Configuration is a `[tool.gawain]` table. `--mode` and `--checker` override it for one run.
+Configuration is a **[tool.gawain]** table. **--mode** and **--checker** override it for one run.
 
-Install the checker extra you want. `gawain[ty]` pins ty 0.0.100. `gawain[pyrefly]` pins pyrefly 1.4.1 and does not install ty. A bare install of `gawain` provides the command only. It then needs a checker on `PATH`, or `--no-types`.
+Install the checker extra you want. **gawain[ty]** pins ty 0.0.100. **gawain[pyrefly]** pins pyrefly 1.4.1 and does not install ty. A bare install of **gawain** provides the command only. It then needs a checker on **PATH**, or **--no-types**.
 
-A pre-commit hook with id `gawain` builds from the repository and needs Rust 1.97 or newer.
+A pre-commit hook with id **gawain** builds from the repository and needs Rust 1.97 or newer.
 
 # EXIT STATUS
 

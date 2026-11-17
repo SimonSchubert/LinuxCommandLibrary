@@ -24,9 +24,9 @@ Check **without writing** repairs
 
 # DESCRIPTION
 
-**fsck.ext4** is the program [fsck](/man/fsck)(8) runs for an ext4 filesystem. On a normal e2fsprogs install it is a link to [e2fsck](/man/e2fsck)(8), and it accepts the same options. Unmount the filesystem first, or check it read-only.
+**fsck.ext4** is the program **fsck** runs for an ext4 filesystem. On a normal e2fsprogs install it is a link to **e2fsck**, and it accepts the same options. Unmount the filesystem first, or check it read-only.
 
-The ext2 name is [fsck.ext2](/man/fsck.ext2)(8). Both names are the same program. [fsck.exfat](/man/fsck.exfat)(8) is a different tool, for exFAT.
+The ext2 name is **fsck.ext2**. Both names are the same program. **fsck.exfat** is a different tool, for exFAT.
 
 # INSTALL
 

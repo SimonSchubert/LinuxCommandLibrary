@@ -82,7 +82,7 @@ Repair and **test** clusters for read errors
 > Run an extra verification pass.
 
 **--variant** _TYPE_
-> `standard` (Microsoft) or `atari`.
+> **standard** (Microsoft) or **atari**.
 
 **-w**
 > Write each repair as soon as it is decided. By default changes stay in memory and are written after every check.
@@ -101,7 +101,7 @@ Two on-disk variants exist: the standard Microsoft layout and a legacy Atari lay
 
 Changes are held in memory and written once, after the checks finish, unless **-w** is set. A read-only run is **-n**.
 
-Salvaged data is written into the filesystem root as files named `fsck0000.rec`, `fsck0001.rec`, and so on. Entirely empty directories are left in place.
+Salvaged data is written into the filesystem root as files named **fsck0000.rec**, **fsck0001.rec**, and so on. Entirely empty directories are left in place.
 
 The same program has also been installed under the names dosfsck, fsck.msdos, and fsck.vfat. Those names are not separate tools.
 
@@ -113,7 +113,7 @@ The same program has also been installed under the names dosfsck, fsck.msdos, an
 
 # CAVEATS
 
-Repair a mounted filesystem only when you mean to, and prefer **-n** first. Automatic repair (**-a**, **-p**, **-y**) can drop directory entries. Recovered chains become files such as `fsck0000.rec` in the root, not their original names.
+Repair a mounted filesystem only when you mean to, and prefer **-n** first. Automatic repair (**-a**, **-p**, **-y**) can drop directory entries. Recovered chains become files such as **fsck0000.rec** in the root, not their original names.
 
 # INSTALL
 

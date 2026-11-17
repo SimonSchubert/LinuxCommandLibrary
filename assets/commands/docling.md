@@ -42,10 +42,10 @@ Show **help**
 > Write converted files under this directory instead of the current directory.
 
 **--image-export-mode** _MODE_
-> `placeholder` replaces figures with placeholders. `referenced` writes PNG files and links them from the output.
+> **placeholder** replaces figures with placeholders. **referenced** writes PNG files and links them from the output.
 
 **--to** _FORMAT_
-> Output format: `json`, `html`, `md`, or `text`.
+> Output format: **json**, **html**, **md**, or **text**.
 
 **--no-ocr**
 > Do not run OCR. Faster on PDFs that already contain text.
@@ -60,7 +60,7 @@ Show **help**
 
 **docling** converts PDF, Office, HTML, and image inputs into Markdown or another structured form. It uses layout analysis and, unless **--no-ocr** is set, OCR. A source can be a local path or a URL.
 
-The package needs Python 3.10 or newer. Release 2.70.0 dropped Python 3.9. The command is the console script of the `docling` Python package. The CLI also exposes further subcommands; `docling --help` lists them.
+The package needs Python 3.10 or newer. Release 2.70.0 dropped Python 3.9. The command is the console script of the **docling** Python package. The CLI also exposes further subcommands; **docling --help** lists them.
 
 Optional pieces such as a VLM model are selected with flags. They are not separate programs.
 

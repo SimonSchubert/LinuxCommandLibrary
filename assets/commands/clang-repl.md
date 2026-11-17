@@ -44,9 +44,9 @@ Show **meta-command help**
 
 **clang-repl** is LLVM's interactive C++ interpreter. It reads statements, compiles them with Clang, and prints results. A statement can be given on the command line or typed at the prompt. To bring in a file, pass a quoted include of that path.
 
-Lines that start with `%` are meta-commands, not C++. `%undo` drops the last statement, `%lib` loads a dynamic library, `%help` lists the meta-commands, and `%quit` exits. Ctrl-C also leaves the session.
+Lines that start with **%** are meta-commands, not C++. **%undo** drops the last statement, **%lib** loads a dynamic library, **%help** lists the meta-commands, and **%quit** exits. Ctrl-C also leaves the session.
 
-This is its own program. It is not a subcommand of [clang](/man/clang)(1), though it ships with the same LLVM/Clang toolchain.
+This is its own program. It is not a subcommand of **clang**, though it ships with the same LLVM/Clang toolchain.
 
 # CAVEATS
 

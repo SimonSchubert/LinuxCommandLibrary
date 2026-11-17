@@ -44,7 +44,7 @@ Show the **installed size**
 
 # DESCRIPTION
 
-**flatpak info** prints details of an installed Flatpak application or runtime. It is a subcommand of [flatpak](/man/flatpak)(1), not a separate program. The ref is an application id such as `com.example.app`, optionally followed by a branch name.
+**flatpak info** prints details of an installed Flatpak application or runtime. It is a subcommand of **flatpak**, not a separate program. The ref is an application id such as **com.example.app**, optionally followed by a branch name.
 
 # INSTALL
 

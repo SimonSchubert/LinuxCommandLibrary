@@ -54,7 +54,7 @@ Show origin, size, and other **details**
 
 # DESCRIPTION
 
-**flatpak list** prints Flatpak applications and runtimes that are installed. It is a subcommand of [flatpak](/man/flatpak)(1), not a separate program. Without **--user**, the default system installation is listed.
+**flatpak list** prints Flatpak applications and runtimes that are installed. It is a subcommand of **flatpak**, not a separate program. Without **--user**, the default system installation is listed.
 
 # INSTALL
 

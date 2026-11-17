@@ -42,16 +42,16 @@ Override for the **current user** only, and drop a socket
 > Print the overrides instead of changing them.
 
 **--filesystem**=_PATH_
-> Grant filesystem access. Well-known values include `home`, `host`, and `xdg-download`. Append `:ro` for read-only access.
+> Grant filesystem access. Well-known values include **home**, **host**, and **xdg-download**. Append **:ro** for read-only access.
 
 **--unshare**=_SUBSYSTEM_
-> Remove a share granted by the runtime. `network` is one subsystem.
+> Remove a share granted by the runtime. **network** is one subsystem.
 
 **--env**=_VAR=VALUE_
 > Set an environment variable inside the sandbox.
 
 **--nosocket**=_SOCKET_
-> Remove access to a socket such as `wayland` or `x11`.
+> Remove access to a socket such as **wayland** or **x11**.
 
 **--reset**
 > Delete overrides. With an application id, only that application. Without one, the global overrides.
@@ -64,13 +64,13 @@ Override for the **current user** only, and drop a socket
 
 # DESCRIPTION
 
-**flatpak override** stores permission changes on top of the finish-args that an application shipped with. It is a subcommand of [flatpak](/man/flatpak)(1), not a separate program.
+**flatpak override** stores permission changes on top of the finish-args that an application shipped with. It is a subcommand of **flatpak**, not a separate program.
 
 Without an application id, the override applies to every application. Without **--user**, the default system-wide installation is changed.
 
 # CAVEATS
 
-A filesystem override of `host` or a home directory gives the application access outside the sandbox. Reset with **--reset** when the extra permission is no longer wanted.
+A filesystem override of **host** or a home directory gives the application access outside the sandbox. Reset with **--reset** when the extra permission is no longer wanted.
 
 # INSTALL
 

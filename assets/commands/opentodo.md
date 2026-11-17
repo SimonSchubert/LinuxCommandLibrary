@@ -16,7 +16,7 @@ Tell the server its **public URL**
 
 ```OPENTODO_BASE_URL=https://todo.example.com docker run -d -p 8080:8080 -v opentodo-data:/data ghcr.io/opentodoapp/opentodo:stable```
 
-Run a **release binary**. It listens on port 8080 and stores data in `./data`
+Run a **release binary**. It listens on port 8080 and stores data in **./data**
 
 ```./opentodo```
 
@@ -32,17 +32,17 @@ Build from a checkout and run it
 
 **opentodo** is the OpenTodo server: one Go binary plus SQLite. It serves the web app, the REST API, and sync on port 8080. The first visit creates an account when no setup code is required.
 
-The container image is `ghcr.io/opentodoapp/opentodo`, published for `linux/amd64` and `linux/arm64`. Tag `stable` tracks the latest release, `1` tracks the 1.x line, and `latest` tracks the main branch. Data in the example above is the Docker volume `opentodo-data`, mounted at `/data`.
+The container image is **ghcr.io/opentodoapp/opentodo**, published for **linux/amd64** and **linux/arm64**. Tag **stable** tracks the latest release, **1** tracks the 1.x line, and **latest** tracks the main branch. Data in the example above is the Docker volume **opentodo-data**, mounted at **/data**.
 
-A release binary is named `opentodo` plus the OS and architecture. It keeps its data in `./data` next to the process. Building from source needs Go 1.26 or newer and Node.js 22 or newer: `make build` writes `./bin/opentodo`.
+A release binary is named **opentodo** plus the OS and architecture. It keeps its data in **./data** next to the process. Building from source needs Go 1.26 or newer and Node.js 22 or newer: **make build** writes **./bin/opentodo**.
 
-The server does not include the [ot](/man/ot)(1) client. Install that separately.
+The server does not include the **ot** client. Install that separately.
 
 Nothing is required to start. Further settings are environment variables documented in the project's configuration reference. Two that the install guide names:
 
 ```OPENTODO_SETUP_CODE```
 
-Set to `required` so a server that is reachable from the network cannot be claimed by the first visitor.
+Set to **required** so a server that is reachable from the network cannot be claimed by the first visitor.
 
 ```OPENTODO_BASE_URL```
 

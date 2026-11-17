@@ -59,7 +59,7 @@ Show the **version**
 > Default X font. An empty string draws boxes instead of text.
 
 **-ps** _file_
-> Default PostScript output name. The default is `out.ps`.
+> Default PostScript output name. The default is **out.ps**.
 
 **-V**
 > Print the version and exit.
@@ -71,13 +71,13 @@ Show the **version**
 
 **lefty** is a two-view graphics editor for technical pictures, shipped with Graphviz. The picture is a program: functions draw it and functions edit it. Mouse and keyboard events are bound to those functions. Beside the drawing, the editor shows the program text.
 
-The file argument is optional. `-` reads the program from standard input.
+The file argument is optional. **-** reads the program from standard input.
 
 Two environment variables apply. Put them in a context that keeps the underscores:
 
 ```LEFTYPATH```
 
-A colon-separated list of directories. Lefty searches that path when it opens a file, and it searches that path before `PATH` when it starts another process.
+A colon-separated list of directories. Lefty searches that path when it opens a file, and it searches that path before **PATH** when it starts another process.
 
 ```LEFTYOPTIONS```
 
@@ -85,7 +85,7 @@ Default options. Options on the command line override them.
 
 # CAVEATS
 
-Graphviz marks lefty as deprecated. New pictures should be drawn with [dot](/man/dot)(1) and the other layout programs.
+Graphviz marks lefty as deprecated. New pictures should be drawn with **dot** and the other layout programs.
 
 # HISTORY
 

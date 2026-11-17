@@ -43,19 +43,19 @@ Show **help**
 # PARAMETERS
 
 **--input-mach** _machine_
-> Match only files whose ELF machine is _machine_. Without this option, every machine matches. Names are case-insensitive. Accepted names include `none`, `i386`, `iamcu`, `l1om`, `k1om`, and `x86-64`.
+> Match only files whose ELF machine is _machine_. Without this option, every machine matches. Names are case-insensitive. Accepted names include **none**, **i386**, **iamcu**, **l1om**, **k1om**, and **x86-64**.
 
 **--output-mach** _machine_
 > Write _machine_ into the ELF header. Same names as **--input-mach**.
 
 **--input-type** _type_
-> Match only files of this ELF type. Without this option, every type matches. Names: `none`, `rel`, `exec`, `dyn`.
+> Match only files of this ELF type. Without this option, every type matches. Names: **none**, **rel**, **exec**, **dyn**.
 
 **--output-type** _type_
 > Write _type_ into the ELF header. Same names as **--input-type**.
 
 **--input-osabi** _osabi_
-> Match only files with this OS ABI. Without this option, every OS ABI matches. Names are case-insensitive. `Linux` is an alias of `GNU`. `elfedit --help` prints the names that build accepts. The binutils manual documents `none`, `HPUX`, `NetBSD`, `GNU`, `Solaris`, `AIX`, `Irix`, `FreeBSD`, `TRU64`, `Modesto`, `OpenBSD`, `OpenVMS`, `NSK`, `AROS`, and `FenixOS`.
+> Match only files with this OS ABI. Without this option, every OS ABI matches. Names are case-insensitive. **Linux** is an alias of **GNU**. **elfedit --help** prints the names that build accepts. The binutils manual documents **none**, **HPUX**, **NetBSD**, **GNU**, **Solaris**, **AIX**, **Irix**, **FreeBSD**, **TRU64**, **Modesto**, **OpenBSD**, **OpenVMS**, **NSK**, **AROS**, and **FenixOS**.
 
 **--output-osabi** _osabi_
 > Write _osabi_ into the ELF header. Same names as **--input-osabi**.
@@ -87,7 +87,7 @@ Show **help**
 > Show the version and exit.
 
 **@**_file_
-> Read more options from _file_. The file may itself contain `@file` options.
+> Read more options from _file_. The file may itself contain **@file** options.
 
 # DESCRIPTION
 
@@ -95,7 +95,7 @@ Show **help**
 
 Pass at least one output option or one x86-feature option. Input options only narrow which files are changed. 32-bit and 64-bit ELF files are accepted, including ELF members inside archives.
 
-The machine name `x86-64` is the form to type. The same parser also accepts the underscore spelling.
+The machine name **x86-64** is the form to type. The same parser also accepts the underscore spelling.
 
 Feature options are compiled in when binutils was built with mmap support. A build without them rejects those flags.
 

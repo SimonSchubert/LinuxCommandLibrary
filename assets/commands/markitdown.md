@@ -77,16 +77,16 @@ _FILENAME_
 > Content Understanding analyzer id. If omitted, an analyzer is chosen from the file type.
 
 **--cu-file-types** _LIST_
-> Comma-separated file types to send to Content Understanding, such as `pdf,jpeg,mp4`. If omitted, every supported type is sent.
+> Comma-separated file types to send to Content Understanding, such as **pdf,jpeg,mp4**. If omitted, every supported type is sent.
 
 **--docintel-model-id** _ID_
-> Document Intelligence model id, such as `prebuilt-layout`. That id is the default.
+> Document Intelligence model id, such as **prebuilt-layout**. That id is the default.
 
 **--docintel-query-fields** _LIST_
 > Comma-separated field names for the Document Intelligence queryFields add-on (OCR file types).
 
 **--docintel-features** _LIST_
-> Comma-separated Document Intelligence add-ons for OCR file types: `barcodes`, `formulas`, `keyValuePairs`, `languages`, `ocrHighResolution`, `styleFont`. `none` requests none. Some add-ons are billed extra.
+> Comma-separated Document Intelligence add-ons for OCR file types: **barcodes**, **formulas**, **keyValuePairs**, **languages**, **ocrHighResolution**, **styleFont**. **none** requests none. Some add-ons are billed extra.
 
 **-p**, **--use-plugins**
 > Enable third-party plugins. Plugins are off unless this is set.
@@ -107,7 +107,7 @@ _FILENAME_
 
 **markitdown** converts PDF, Office, HTML, images, audio, and other files to Markdown. It is Microsoft's Python package of the same name. Supported Python versions are 3.10 through 3.14.
 
-With no filename it reads standard input, which is how a pipe or a container invocation feeds it a file. Optional extras turn on individual formats (PDF, Office, audio, Azure). The extra named `all` installs every optional dependency. Plugins, including the OCR plugin, stay disabled until **--use-plugins**.
+With no filename it reads standard input, which is how a pipe or a container invocation feeds it a file. Optional extras turn on individual formats (PDF, Office, audio, Azure). The extra named **all** installs every optional dependency. Plugins, including the OCR plugin, stay disabled until **--use-plugins**.
 
 Document Intelligence and Content Understanding cannot be selected together. Cloud conversion needs the matching extra and an endpoint.
 

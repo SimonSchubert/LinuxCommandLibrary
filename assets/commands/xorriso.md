@@ -44,17 +44,17 @@ Show sessions and size (**table of contents**)
 
 # DESCRIPTION
 
-**xorriso** is the GNU libburnia program for ISO 9660 filesystems. It can build an image, load one, change files inside it, and write it. Commands are options that run in order: `-outdev` names a new image, `-indev` opens one for reading, `-dev` opens one for update, `-map` copies a disk path into the image, `-ls` lists a directory, `-find` searches, and `-toc` prints sessions.
+**xorriso** is the GNU libburnia program for ISO 9660 filesystems. It can build an image, load one, change files inside it, and write it. Commands are options that run in order: **-outdev** names a new image, **-indev** opens one for reading, **-dev** opens one for update, **-map** copies a disk path into the image, **-ls** lists a directory, **-find** searches, and **-toc** prints sessions.
 
-`-osirrox on` allows extraction back to the disk. `-extract` then copies an image path to a local path.
+**-osirrox on** allows extraction back to the disk. **-extract** then copies an image path to a local path.
 
-`-as mkisofs` accepts a subset of [mkisofs](/man/mkisofs)(8) options, including `-o` for the output file, `-V` for the volume label, and `-J` and `-R` for Joliet and Rock Ridge. On some distributions the `mkisofs` command itself is this compatibility mode.
+**-as mkisofs** accepts a subset of **mkisofs** options, including **-o** for the output file, **-V** for the volume label, and **-J** and **-R** for Joliet and Rock Ridge. On some distributions the **mkisofs** command itself is this compatibility mode.
 
-The program also drives optical drives. `-indev` accepts a device such as `/dev/sr0` as well as a file.
+The program also drives optical drives. **-indev** accepts a device such as **/dev/sr0** as well as a file.
 
 # CAVEATS
 
-Writing with `-dev` or `-outdev` pointed at a real drive records a disc. Point those options at a file path unless a disc is intended.
+Writing with **-dev** or **-outdev** pointed at a real drive records a disc. Point those options at a file path unless a disc is intended.
 
 The option set is large. The examples above are the common ones. The GNU manual is the full command list. The separate programs xorrecord and osirrox are front ends of the same project and are not documented here.
 
