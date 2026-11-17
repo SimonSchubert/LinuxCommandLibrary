@@ -148,4 +148,4 @@ Some GCC-specific features not supported. Different optimization behavior than G
 
 # SEE ALSO
 
-[gcc](/man/gcc)(1), [clang++](/man/clang++)(1)
+[gcc](/man/gcc)(1), [clang++](/man/clang++)(1), [clang-repl](/man/clang-repl)(1)

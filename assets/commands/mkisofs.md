@@ -114,4 +114,4 @@ Basic ISO9660 limits filenames to 8.3 format; use -R or -J for longer names. The
 
 # SEE ALSO
 
-[genisoimage](/man/genisoimage)(1), [wodim](/man/wodim)(1), [cdrecord](/man/cdrecord)(1), [isoinfo](/man/isoinfo)(8)
+[genisoimage](/man/genisoimage)(1), [xorriso](/man/xorriso)(1), [wodim](/man/wodim)(1), [cdrecord](/man/cdrecord)(1), [isoinfo](/man/isoinfo)(8)

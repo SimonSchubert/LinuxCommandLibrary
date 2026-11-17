@@ -134,4 +134,4 @@ Unlike objdump, readelf operates independently of the BFD library and may show d
 
 # SEE ALSO
 
-[objdump](/man/objdump)(1), [nm](/man/nm)(1), [strings](/man/strings)(1), [strip](/man/strip)(1), [size](/man/size)(1), [elf](/man/elf)(5)
+[objdump](/man/objdump)(1), [nm](/man/nm)(1), [strings](/man/strings)(1), [strip](/man/strip)(1), [size](/man/size)(1), [elfedit](/man/elfedit)(1), [elf](/man/elf)(5)

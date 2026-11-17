@@ -1136,6 +1136,8 @@ cephadm.md
 certbot.md
 certtool.md
 certutil.md
+cerulion-install-rust.md
+cerulion.md
 cewl.md
 cf.md
 cfdisk.md
@@ -1185,6 +1187,7 @@ checksec.md
 checkupdates-aur.md
 checkupdates.md
 cheese.md
+cheesedb.md
 chef.md
 chem.md
 chezmoi.md
@@ -1242,6 +1245,7 @@ clang++.md
 clang-check.md
 clang-cpp.md
 clang-format.md
+clang-repl.md
 clang-tidy.md
 clang.md
 clangd.md
@@ -1636,6 +1640,7 @@ datamimic.md
 datasette.md
 date.md
 daxctl.md
+db-branch.md
 db_load.md
 dbclient.md
 dbeaver.md
@@ -1925,6 +1930,7 @@ docker-update.md
 docker-volume.md
 docker.md
 dockerd.md
+docling.md
 docsify.md
 doctl-1-click.md
 doctl-account.md
@@ -2173,6 +2179,7 @@ electron-packager.md
 electron.md
 electrum.md
 elf.md
+elfedit.md
 elfeed.md
 elif.md
 elink.md
@@ -2444,10 +2451,14 @@ flask.md
 flatpak-builder.md
 flatpak-config.md
 flatpak-history.md
+flatpak-info.md
 flatpak-install.md
+flatpak-list.md
 flatpak-mask.md
+flatpak-override.md
 flatpak-remote-info.md
 flatpak-run.md
+flatpak-search.md
 flatpak-uninstall.md
 flatpak-update.md
 flatpak.md
@@ -2569,6 +2580,9 @@ fs_cli.md
 fsadm.md
 fsarchiver.md
 fsck.exfat.md
+fsck.ext2.md
+fsck.ext4.md
+fsck.fat.md
 fsck.md
 fscrypt.md
 fselect.md
@@ -2613,6 +2627,7 @@ gat.md
 gatsby.md
 gau.md
 gauge.md
+gawain.md
 gawk.md
 gbp.md
 gc.md
@@ -2754,6 +2769,7 @@ gh-pr-merge.md
 gh-pr-view.md
 gh-pr.md
 gh-preview.md
+gh-profiler.md
 gh-project.md
 gh-reference.md
 gh-release.md
@@ -4376,6 +4392,7 @@ ledctl.md
 ledger.md
 ledit.md
 lefthook.md
+lefty.md
 legionlinuxtui.md
 legit.md
 lein.md
@@ -4473,6 +4490,7 @@ llm-logs.md
 llm-models.md
 llm.md
 llmcat.md
+llmtee.md
 llvd.md
 llvm-ar.md
 llvm-as.md
@@ -4733,6 +4751,7 @@ marimo.md
 markdown.md
 markdown2pdf.md
 markdownlint.md
+markitdown.md
 marky.md
 marp.md
 marzban-cli.md
@@ -5692,6 +5711,7 @@ openstack-subnet.md
 openstack-volume.md
 openstack.md
 openstego.md
+opentodo.md
 openttd.md
 opentunnel.md
 openvpn.md
@@ -5725,6 +5745,7 @@ osmium.md
 ospfd.md
 ostree.md
 osv-scanner.md
+ot.md
 otel-cli.md
 oterm.md
 otpu-chat.md
@@ -6510,6 +6531,7 @@ postman.md
 postmap.md
 postqueue.md
 potrace.md
+pots.md
 powerline.md
 poweroff.md
 powerprofilesctl.md
@@ -6722,6 +6744,7 @@ puffin.md
 pug.md
 pullrun.md
 pulsar-admin.md
+pulsar.md
 pulseaudio-ctl.md
 pulseaudio.md
 pulsemixer.md
@@ -7633,6 +7656,7 @@ skaffold.md
 skate.md
 skicka.md
 skillfile.md
+skillset.md
 skillshub-cli.md
 skipfish.md
 skopeo.md
@@ -7868,6 +7892,7 @@ steamos-update.md
 steamosctl.md
 steghide.md
 stegsnow.md
+stellar.md
 step-ca.md
 step.md
 steppewm.md
@@ -7933,6 +7958,7 @@ surf.md
 surfraw.md
 surge.md
 suricata.md
+sutra.md
 sv.md
 svg2png.md
 svgcleaner.md
@@ -8269,6 +8295,7 @@ timetrap.md
 timew.md
 timg.md
 timidity.md
+timon.md
 tinboard.md
 tinifier.md
 tint.md
@@ -8493,6 +8520,7 @@ tura.md
 turbo.md
 turbostat.md
 turm.md
+turri.md
 tuxi.md
 tv.md
 tw.md
@@ -9181,6 +9209,7 @@ xmount.md
 xmrig.md
 xo.md
 xonsh.md
+xorriso.md
 xpdf.md
 xpdig.md
 xpilot-ng.md

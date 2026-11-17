@@ -124,4 +124,4 @@ Never run e2fsck on a mounted filesystem unless it's read-only. The **-y** optio
 
 # SEE ALSO
 
-[fsck](/man/fsck)(8), [tune2fs](/man/tune2fs)(8), [dumpe2fs](/man/dumpe2fs)(8), [mke2fs](/man/mke2fs)(8), [badblocks](/man/badblocks)(8), [debugfs](/man/debugfs)(8)
+[fsck](/man/fsck)(8), [fsck.ext2](/man/fsck.ext2)(8), [fsck.ext4](/man/fsck.ext4)(8), [tune2fs](/man/tune2fs)(8), [dumpe2fs](/man/dumpe2fs)(8), [mke2fs](/man/mke2fs)(8), [badblocks](/man/badblocks)(8), [debugfs](/man/debugfs)(8)

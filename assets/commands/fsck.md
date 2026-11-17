@@ -119,4 +119,4 @@ Never run fsck on a mounted filesystem (except in read-only mode). Automatic rep
 
 # SEE ALSO
 
-[e2fsck](/man/e2fsck)(8), [xfs_repair](/man/xfs_repair)(8), [mount](/man/mount)(8), [fstab](/man/fstab)(5)
+[e2fsck](/man/e2fsck)(8), [fsck.ext2](/man/fsck.ext2)(8), [fsck.ext4](/man/fsck.ext4)(8), [fsck.fat](/man/fsck.fat)(8), [xfs_repair](/man/xfs_repair)(8), [mount](/man/mount)(8), [fstab](/man/fstab)(5)

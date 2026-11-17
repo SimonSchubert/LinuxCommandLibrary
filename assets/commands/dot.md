@@ -124,7 +124,7 @@ dot grew out of graph-drawing research at **AT&T Bell Labs**, and later AT&T Lab
 
 # SEE ALSO
 
-[neato](/man/neato)(1), [circo](/man/circo)(1), [fdp](/man/fdp)(1), [twopi](/man/twopi)(1), [graphviz](/man/graphviz)(7)
+[neato](/man/neato)(1), [circo](/man/circo)(1), [fdp](/man/fdp)(1), [twopi](/man/twopi)(1), [lefty](/man/lefty)(1), [graphviz](/man/graphviz)(7)
 
 # RESOURCES
 
