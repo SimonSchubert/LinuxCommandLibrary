@@ -40,22 +40,16 @@ Serve it on **another address**
 
 **og** is the interactive binary of open-geocode. With no subcommand it opens a terminal UI: pick a region, build a Pack, search it, and geocode CSV files. **build** and **serve** do the same two jobs from the shell.
 
-A Pack is one file set of addresses, places, and boundaries built from OpenStreetMap extracts, optionally merged with OpenAddresses. **build** downloads the region's Geofabrik extract, builds the Pack, and keeps both under the og home. **serve** listens on **127.0.0.1:8080** unless **--bind** is set. The Pack argument is a name under the home's `packs/` directory, such as `canada-ontario`, or a filesystem path when that directory does not exist.
+A Pack is one file set of addresses, places, and boundaries built from OpenStreetMap extracts, optionally merged with OpenAddresses. **build** downloads the region's Geofabrik extract, builds the Pack, and keeps both under the og home. **serve** listens on **127.0.0.1:8080** unless **--bind** is set. The Pack argument is a name under the home's **packs/** directory, such as **canada-ontario**, or a filesystem path when that directory does not exist.
 
-The home is the **OG** **HOME** environment variable when it is set (those two words joined with an underscore). Otherwise it is the platform local data directory plus `open-geocode`. On Linux that is usually `~/.local/share/open-geocode`. Layout:
+The home is the **OG** **HOME** environment variable when it is set (those two words joined with an underscore). Otherwise it is the platform local data directory plus **open-geocode**. On Linux that is usually **~/.local/share/open-geocode**. Extracts are **pbf/** under that home, finished Packs are **packs/**, and **builds.jsonl** lists each build.
 
-```
-<home>/pbf/<region id>.osm.pbf
-<home>/packs/<slug>/
-<home>/builds.jsonl
-```
-
-The binary is crate feature **tui** of the **open-geocode** package. From a clone: `cargo install --path . --features tui --bin og`. The lower-level **open-geocode** binary builds Packs from local `.osm.pbf` files and does not download Geofabrik regions. The container image serves a Pack with that binary. The license of current releases is Apache 2.0.
+The binary is crate feature **tui** of the **open-geocode** package. From a clone: **cargo install --path . --features tui --bin og**. The lower-level **open-geocode** binary builds Packs from local **.osm.pbf** files and does not download Geofabrik regions. The container image serves a Pack with that binary. The license of current releases is Apache 2.0.
 
 # COMMANDS
 
 **build**
-> Download one or more catalog regions and build one Pack. **--region** is required and repeatable. A single region is named from its id (`canada/ontario` becomes `canada-ontario`). Several regions need **--name**, or their ids are joined. A build that stopped leaves a checkpoint. The next **build** of that Pack refuses to start until **--resume** or **--fresh**.
+> Download one or more catalog regions and build one Pack. **--region** is required and repeatable. A single region is named from its id (**canada/ontario** becomes **canada-ontario**). Several regions need **--name**, or their ids are joined. A build that stopped leaves a checkpoint. The next **build** of that Pack refuses to start until **--resume** or **--fresh**.
 
 **serve** _PACK_
 > HTTP API for a finished Pack. **GET /version** reports the server version and which Pack is loaded.
@@ -63,7 +57,7 @@ The binary is crate feature **tui** of the **open-geocode** package. From a clon
 # PARAMETERS
 
 **--region** _ID_
-> Catalog id, for example `canada/ontario`. Repeat for one Pack that covers several regions.
+> Catalog id, for example **canada/ontario**. Repeat for one Pack that covers several regions.
 
 **--name** _NAME_
 > Pack name when several regions are built together. Ignored for a single region.
@@ -95,7 +89,7 @@ The binary is crate feature **tui** of the **open-geocode** package. From a clon
 # CONFIGURATION
 
 **OG HOME**
-> Root of extracts, Packs, and `builds.jsonl`. Unset, the platform local data directory is used. Set it when that directory cannot be discovered.
+> Root of extracts, Packs, and **builds.jsonl**. Unset, the platform local data directory is used. Set it when that directory cannot be discovered.
 
 # CAVEATS
 

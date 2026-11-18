@@ -54,11 +54,11 @@ Add a **media file** to the asset manifest
 
 An export draws frames in headless Chrome. The first export downloads Chrome for Testing into the CutCraft browser cache under the user cache directory. **browser install** does that download ahead of time. A Chrome 153 or newer binary can be named instead of the downloaded one; the environment variable is **CUTCRAFT** then **CHROMIUM**, joined with an underscore. The cache directory override is **CUTCRAFT** then **BROWSER** then **CACHE**, joined with underscores.
 
-The asset manifest is `cutcraft.json`, found in the file's folder or the nearest folder above it, unless the TSX file exports its own `manifest` or **--manifest** names another file. Media sits in the file's folder, beside the manifest, or in `media/` beside the manifest, one file per asset id, unless **--media** names a folder. **add** writes manifest entries and picks up a transcript beside the media (`talk.json`, `talk.vtt`, or `talk.srt`).
+The asset manifest is **cutcraft.json**, found in the file's folder or the nearest folder above it, unless the TSX file exports its own **manifest** or **--manifest** names another file. Media sits in the file's folder, beside the manifest, or in **media/** beside the manifest, one file per asset id, unless **--media** names a folder. **add** writes manifest entries and picks up a transcript beside the media (**talk.json**, **talk.vtt**, or **talk.srt**).
 
 **inspect** prints the timeline as text and does not start a browser. **look** draws many frames into one contact sheet. **where** prints each on-screen box at the moments you name. **--check-layout** prints overlays that leave the frame, leave the safe zone, or cover captions or the subject, and writes no media file. Layout issues exit **3**. Usage errors exit **2**. Other failures exit **1**.
 
-Output extension selects the container: `.mp4` is H.264 and AAC, `.webm` is VP9 and Opus, `.mp3` or `.wav` is the soundtrack alone, `.png` or `.jpg` is a still. The license is MIT.
+Output extension selects the container: **.mp4** is H.264 and AAC, **.webm** is VP9 and Opus, **.mp3** or **.wav** is the soundtrack alone, **.png** or **.jpg** is a still. The license is MIT.
 
 # COMMANDS
 
@@ -66,13 +66,13 @@ Output extension selects the container: `.mp4` is H.264 and AAC, `.webm` is VP9 
 > Print each track and element with its times, words, effects, keyframes, and cuts. **--at** adds what is on screen and heard at those moments. **--json** prints flat rows.
 
 **look** _FILE.tsx_
-> One contact sheet (default `look.png`) plus a JSON legend. With no **--at** or **--around**, the sheet is the first frame of each clip, both sides of every cut, and each overlay. **--around** samples a transition or an element. **--without** draws each frame with and without an effect or overlay. **--motion** is a strip of frames across a time range or an element id. **--listen** draws a waveform under the cells. **--frames** also writes each full frame as a PNG.
+> One contact sheet (default **look.png**) plus a JSON legend. With no **--at** or **--around**, the sheet is the first frame of each clip, both sides of every cut, and each overlay. **--around** samples a transition or an element. **--without** draws each frame with and without an effect or overlay. **--motion** is a strip of frames across a time range or an element id. **--listen** draws a waveform under the cells. **--frames** also writes each full frame as a PNG.
 
 **where** _FILE.tsx_ **--at** _MOMENTS_
 > Print each thing's box in pixels, whether it is inside the frame and the safe zones, and what it overlaps. A part marked in the layer source with a data-name attribute is listed too. **--json** prints the same data.
 
 **fonts**
-> List bundled families and a short Google Fonts list. **--for** filters by role (`headline`, `body`, `captions`, `numbers`, `accent`). **--category** filters by `sans`, `serif`, `slab`, `condensed`, `display`, `handwriting`, or `mono`. **--sheet** draws them as one image.
+> List bundled families and a short Google Fonts list. **--for** filters by role (**headline**, **body**, **captions**, **numbers**, **accent**). **--category** filters by **sans**, **serif**, **slab**, **condensed**, **display**, **handwriting**, or **mono**. **--sheet** draws them as one image.
 
 **add** _MEDIA_...
 > Append each file to the manifest: kind, duration, size, frame rate, and audio, plus words from the transcript beside it. **--id** sets the asset id (default: the file name without its extension). **--transcript** names a different transcript.
@@ -83,7 +83,7 @@ Output extension selects the container: `.mp4` is H.264 and AAC, `.webm` is VP9 
 # PARAMETERS
 
 **--out** _FILE_
-> Where to write. The extension picks the container. For **look**, the contact sheet path (default `look.png`). For **fonts --sheet**, the font image.
+> Where to write. The extension picks the container. For **look**, the contact sheet path (default **look.png**). For **fonts --sheet**, the font image.
 
 **--still** _SECONDS_
 > Write the frame at this time instead of a video.
@@ -92,16 +92,16 @@ Output extension selects the container: `.mp4` is H.264 and AAC, `.webm` is VP9 
 > Render only this part of the composition.
 
 **--draft**
-> A preview render: every second frame, shown twice as long, at half resolution and a low quality preset. Written beside **--out** as a `.draft` file. It does not replace the video.
+> A preview render: every second frame, shown twice as long, at half resolution and a low quality preset. Written beside **--out** as a **.draft** file. It does not replace the video.
 
 **--quality** _PRESET_
-> `very-low`, `low`, `medium`, `high`, or `very-high`, instead of **--bitrate**.
+> **very-low**, **low**, **medium**, **high**, or **very-high**, instead of **--bitrate**.
 
 **--bitrate** _BPS_
 > Video bits per second. Default is about 0.1 per pixel per frame.
 
 **--codec** _NAME_
-> `avc` (default for `.mp4`), `vp9` (default for `.webm`), or `av1` in either container.
+> **avc** (default for **.mp4**), **vp9** (default for **.webm**), or **av1** in either container.
 
 **--copy**
 > Copy encoded pictures from a VP9 source where a cut shows nothing else, and render only the ends.
@@ -113,16 +113,16 @@ Output extension selects the container: `.mp4` is H.264 and AAC, `.webm` is VP9 
 > Props for the file's component, over its defaults.
 
 **--manifest** _FILE_
-> Asset manifest. Default: the file's `manifest` export, then the nearest `cutcraft.json`.
+> Asset manifest. Default: the file's **manifest** export, then the nearest **cutcraft.json**.
 
 **--media** _DIR_
 > Folder of one file per asset id.
 
 **--import** _SPEC_
-> A module the file may import beyond `react`, `zod`, and the kit: `three`, or `name=specifier`. Repeatable. The specifier is a package or a path relative to the file.
+> A module the file may import beyond **react**, **zod**, and the kit: **three**, or **name=specifier**. Repeatable. The specifier is a package or a path relative to the file.
 
 **--font** _SPEC_
-> An extra font: `Name=file.ttf`, `Name:700=file.ttf`, or `Name:700:italic=file.ttf`. Repeatable.
+> An extra font: **Name=file.ttf**, **Name:700=file.ttf**, or **Name:700:italic=file.ttf**. Repeatable.
 
 **--srt** _FILE_, **--vtt** _FILE_
 > Also write the captions the cut plays, timed like the export. Either flag alone writes only the subtitle file.
@@ -131,7 +131,7 @@ Output extension selects the container: `.mp4` is H.264 and AAC, `.webm` is VP9 
 > Report layout problems and write no media. **--json** prints JSON and exits **3** when it finds issues.
 
 **--safe-zone** _ZONE_
-> `tiktok`, `reels`, `shorts`, `title-safe` (default), `action-safe`, or four fractions `top,right,bottom,left`.
+> **tiktok**, **reels**, **shorts**, **title-safe** (default), **action-safe**, or four fractions **top,right,bottom,left**.
 
 **--subject** _X,Y,W,H_
 > Subject box as fractions of the frame, when the manifest has no subjects.
@@ -152,7 +152,7 @@ Output extension selects the container: `.mp4` is H.264 and AAC, `.webm` is VP9 
 > No progress.
 
 **--no-cache**
-> For **look** and **--still**, draw every frame again. Otherwise frames are kept in `.cutcraft/cache` beside the file.
+> For **look** and **--still**, draw every frame again. Otherwise frames are kept in **.cutcraft/cache** beside the file.
 
 **--help**, **-h**
 > Print the usage text.

@@ -46,11 +46,11 @@ Send internet traffic **through another device**
 
 Addresses come from the carrier-grade NAT range **100.64.0.0/10**. Devices find each other with STUN and hole punching, and fall back to relays that members run. The control channel is TCP with TLS 1.3 and raw public keys, on port **41641** by default. Packet traffic is WireGuard.
 
-On macOS and Linux the upstream install script places the binary in `/usr/local/bin/kith`, installs a launchd or systemd service, and turns it on. **kith up** enables it now and at boot. **kith down** stops it and leaves it stopped across restarts. On other systems, run **kith daemon** under the service manager. From source the binary is crate **kith-cli**: `cargo build --release -p kith-cli`.
+On macOS and Linux the upstream install script places the binary in **/usr/local/bin/kith**, installs a launchd or systemd service, and turns it on. **kith up** enables it now and at boot. **kith down** stops it and leaves it stopped across restarts. On other systems, run **kith daemon** under the service manager. From source the binary is crate **kith-cli**: **cargo build --release -p kith-cli**.
 
-A network can hold several of these meshes at once, each with its own addresses, policy, and DNS. Phones join through **kith wg export**, which prints WireGuard configs as QR codes for the stock WireGuard app. DNS names live under `<network>.kith.internal`, next to a name for each device.
+A network can hold several of these meshes at once, each with its own addresses, policy, and DNS. Phones join through **kith wg export**, which prints WireGuard configs as QR codes for the stock WireGuard app. DNS names live under **<network>.kith.internal**, next to a name for each device.
 
-The daemon keeps a device identity (mode **0600**), one ledger per network, and an optional `config.toml` in its state directory. IPC allows the daemon's user and root to change state. Anyone who can reach the socket may read status.
+The daemon keeps a device identity (mode **0600**), one ledger per network, and an optional **config.toml** in its state directory. IPC allows the daemon's user and root to change state. Anyone who can reach the socket may read status.
 
 The license is AGPL-3.0-only, with a separate commercial license from the author. The project describes itself as alpha: the CLI, wire formats, and on-disk state can still break.
 
@@ -69,7 +69,7 @@ The license is AGPL-3.0-only, with a separate commercial license from the author
 > Create a network. This device is the first member and its admin. The device name defaults to the hostname.
 
 **invite** [**--expires** _DURATION_] [**--uses** _N_] _NETWORK_
-> Print a `kith://join/...` link. Duration examples: `30m`, `24h`, `7d`. Default expiry is **24h**. Default uses is **1**. **--uses unlimited** does not cap how many devices may join.
+> Print a **kith://join/...** link. Duration examples: **30m**, **24h**, **7d**. Default expiry is **24h**. Default uses is **1**. **--uses unlimited** does not cap how many devices may join.
 
 **join** [**--device-name** _NAME_] _LINK_
 > Join with an invite link.
@@ -139,7 +139,7 @@ The license is AGPL-3.0-only, with a separate commercial license from the author
 > Optional file in the state directory. **kith config show** prints the effective settings. **kith config check** validates a file. Every field has a default, so a missing file is a working configuration.
 
 **State directory**
-> Holds `identity/@device` (mode **0600**), `networks/@<network-id>` (ledger operations), and the optional config file.
+> Holds **identity/@device** (mode **0600**), **networks/@<network-id>** (ledger operations), and the optional config file.
 
 # CAVEATS
 

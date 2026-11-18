@@ -60,13 +60,13 @@ Pick a **provider and model**
 
 **agav** is a terminal coding agent. With no subcommand it opens an interactive session: it can read the repository, edit files, and run commands, subject to the permission mode. **run** does the same work without the interactive UI. **-P** / **--print** asks once and prints a final response. Piping text into **agav -P** feeds that text as the prompt.
 
-The upstream install is a self-contained binary from `https://agav.dev/install.sh` (or the Windows installers). A release can also be downloaded from the GitHub releases page. **agav update** replaces the installed release. Set the no-update environment variable to `1` to skip the automatic update check; the name is **AGAV** then **NO** then **UPDATE**, joined with underscores.
+The upstream install is a self-contained binary from **https://agav.dev/install.sh** (or the Windows installers). A release can also be downloaded from the GitHub releases page. **agav update** replaces the installed release. Set the no-update environment variable to **1** to skip the automatic update check; the name is **AGAV** then **NO** then **UPDATE**, joined with underscores.
 
-Provider and model, when you did not pass flags, come from the resumed session, otherwise from the last session, otherwise from `~/.agav/config.json`. On Windows that directory is under the user profile. **--provider** without **--model** keeps the saved model only when it belongs to that provider.
+Provider and model, when you did not pass flags, come from the resumed session, otherwise from the last session, otherwise from **~/.agav/config.json**. On Windows that directory is under the user profile. **--provider** without **--model** keeps the saved model only when it belongs to that provider.
 
-Credentials are environment variables read by the provider: Anthropic, OpenAI, OpenRouter, NVIDIA NIM, DeepSeek, Gemini, a Vertex AI service-account file, or Ollama. **--openai-api chat** selects the Chat Completions API for OpenAI-compatible servers that do not implement the Responses API. The default for OpenAI is `responses`.
+Credentials are environment variables read by the provider: Anthropic, OpenAI, OpenRouter, NVIDIA NIM, DeepSeek, Gemini, a Vertex AI service-account file, or Ollama. **--openai-api chat** selects the Chat Completions API for OpenAI-compatible servers that do not implement the Responses API. The default for OpenAI is **responses**.
 
-Tool confirmation defaults to asking. **--auto-accept** / **-y** skips ordinary confirmations. **--deny-writes** blocks writes. **--permission** takes a JSON tool policy and applies to **agav run** (the interactive `/permission` command is a separate session mode). Shell commands can be sandboxed with Seatbelt or Bubblewrap. **--sandbox-network deny** blocks their network. **--sandbox-required** refuses the run command and run tests tools (each name is two words joined with an underscore) when the OS sandbox is unavailable.
+Tool confirmation defaults to asking. **--auto-accept** / **-y** skips ordinary confirmations. **--deny-writes** blocks writes. **--permission** takes a JSON tool policy and applies to **agav run** (the interactive **/permission** command is a separate session mode). Shell commands can be sandboxed with Seatbelt or Bubblewrap. **--sandbox-network deny** blocks their network. **--sandbox-required** refuses the run command and run tests tools (each name is two words joined with an underscore) when the OS sandbox is unavailable.
 
 The project is experimental. The license is Apache 2.0.
 
@@ -85,27 +85,27 @@ The project is experimental. The license is Apache 2.0.
 > A foreground daemon that ticks every 15 seconds. **status** exits **0** when it is running and **3** when it is not.
 
 **agents list** | **install** _URL-OR-PATH_ | **remove** _NAME_ | **enable** _NAME_ | **disable** _NAME_
-> Installed agents. **install** accepts a local directory or a GitHub URL and defaults to a global destination. **--alias** renames on install. **--destination** is `global` or `project`. **agents** alone is **list**.
+> Installed agents. **install** accepts a local directory or a GitHub URL and defaults to a global destination. **--alias** renames on install. **--destination** is **global** or **project**. **agents** alone is **list**.
 
 **skills list** | **add** _URL-OR-PATH_ | **remove** _NAME_ | **disable** _NAME_ | **enable** _NAME_ | **clear**
-> Skills. Bundled skills can be disabled but not removed. Enabled state is stored under `~/.agav/skills/registry.json` and applies on the next start. **skills** alone is **list**.
+> Skills. Bundled skills can be disabled but not removed. Enabled state is stored under **~/.agav/skills/registry.json** and applies on the next start. **skills** alone is **list**.
 
 **sessions delete** _ID_, **sessions rm** _ID_
 > Delete one saved session by exact id or a unique prefix. An ambiguous prefix is rejected.
 
 **login**, **logout**
-> Enroll with an organization control plane, or drop the cached policy. **--auth-code**, **--device**, **--oidc**, and **--saml** force a flow. **--control-plane** sets the plane's URL. Interactive login and device login also need **--issuer** and **--client-id**. **logout** removes the cached policy under `~/.agav/enterprise/`. Restart **agav** afterward.
+> Enroll with an organization control plane, or drop the cached policy. **--auth-code**, **--device**, **--oidc**, and **--saml** force a flow. **--control-plane** sets the plane's URL. Interactive login and device login also need **--issuer** and **--client-id**. **logout** removes the cached policy under **~/.agav/enterprise/**. Restart **agav** afterward.
 
 # PARAMETERS
 
 **--provider** _NAME_, **-p** _NAME_
-> `anthropic`, `openai`, `openrouter`, `nvidia`, `deepseek`, `gemini`, `vertex-ai`, or `ollama`.
+> **anthropic**, **openai**, **openrouter**, **nvidia**, **deepseek**, **gemini**, **vertex-ai**, or **ollama**.
 
 **--model** _ID_, **-m** _ID_
 > Model id for that provider.
 
 **--effort** _LEVEL_
-> `minimal`, `low`, `medium`, `high`, or `max`.
+> **minimal**, **low**, **medium**, **high**, or **max**.
 
 **--print**, **-P**
 > Print one final response and exit.
@@ -117,7 +117,7 @@ The project is experimental. The license is Apache 2.0.
 > Check print-mode output against a JSON Schema.
 
 **--max-turns** _N_
-> Agent iterations per prompt, in interactive, print, and run modes. Decimal digits only, at least 1. Overrides `maxIterations` for this session. The budget resets on each new interactive prompt and is shared with subagents and tool calls.
+> Agent iterations per prompt, in interactive, print, and run modes. Decimal digits only, at least 1. Overrides **maxIterations** for this session. The budget resets on each new interactive prompt and is shared with subagents and tool calls.
 
 **--config** _KEY=VALUE_, **-c** _KEY=VALUE_
 > Override one config value for this session. Repeatable; the later value wins. Dotted paths set a nested field. Booleans and numbers are coerced; objects and arrays are JSON. Unknown keys fail immediately. Dedicated flags win over **-c**. **login**, **logout**, **job**, **mcp**, and **workflows** reject **-c** because they run before a session exists.
@@ -138,16 +138,16 @@ The project is experimental. The license is Apache 2.0.
 > Enable the web search tool for this session.
 
 **--provider-idle-timeout** _MS_
-> Idle timeout, in milliseconds, while waiting for provider stream events. A positive integer up to 2147483647, or `disabled` / `off`. Tool runs and confirmation prompts do not count.
+> Idle timeout, in milliseconds, while waiting for provider stream events. A positive integer up to 2147483647, or **disabled** / **off**. Tool runs and confirmation prompts do not count.
 
 **--ollama-host**, **--ollama-port**, **--ollama-endpoint**, **--ollama-api-key**
 > Ollama address. **--ollama-endpoint** is a full base URL and replaces host plus port.
 
 **--openai-api** _responses|chat_
-> OpenAI wire protocol. Default: `responses`.
+> OpenAI wire protocol. Default: **responses**.
 
 **--sandbox-network** _deny|allow_
-> Network policy for sandboxed shell commands. Default: `allow`. **--sandbox-no-network** and **--sandbox-allow-network** are aliases.
+> Network policy for sandboxed shell commands. Default: **allow**. **--sandbox-no-network** and **--sandbox-allow-network** are aliases.
 
 **--sandbox-required**
 > Refuse shell and test execution when no OS sandbox is available.

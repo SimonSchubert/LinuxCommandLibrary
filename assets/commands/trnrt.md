@@ -40,15 +40,15 @@ Build the **compile cache** on a CPU host, one step at a time
 
 # DESCRIPTION
 
-**trnrt** is the command-line entry of TrnRT, an inference engine for large language models on AWS Trainium. The console script is **trnrt**, the same entry as `python -m trnrt`. It serves an OpenAI-compatible chat and completions API, including streaming, tool calls, and reasoning output.
+**trnrt** is the command-line entry of TrnRT, an inference engine for large language models on AWS Trainium. The console script is **trnrt**, the same entry as **python -m trnrt**. It serves an OpenAI-compatible chat and completions API, including streaming, tool calls, and reasoning output.
 
-**serve** starts several engines on disjoint NeuronCores and a session-affine router in front of them. Each session stays on one engine so that engine's prefix cache can be reused. The default is two engines of 32 tensor-parallel ranks on one `trn2.48xlarge`, listening on port **8000**. Engine _i_ listens on the router port plus 1 plus _i_, on localhost only. Engines start one at a time and must answer `/health` before the next starts.
+**serve** starts several engines on disjoint NeuronCores and a session-affine router in front of them. Each session stays on one engine so that engine's prefix cache can be reused. The default is two engines of 32 tensor-parallel ranks on one **trn2.48xlarge**, listening on port **8000**. Engine _i_ listens on the router port plus 1 plus _i_, on localhost only. Engines start one at a time and must answer **/health** before the next starts.
 
 **engine** is one engine and its own API, with no router. **serve** launches it as a child. The child is marked to receive SIGTERM when the parent exits, so an engine does not keep its NeuronCores after the server is gone.
 
 **compile** builds the cache those engines load. Graphs are captured on a CPU host. The serving host compiles nothing unless **--allow-compile** is set. A missing graph stops start-up. The README quickstart runs each subcommand inside the project's Docker image, which carries the Neuron SDK.
 
-The supported model at the time of writing is GLM-5.3-Flash. The served defaults are a 1,048,576-token context, FP8 KV cache, 256-token pages, and decode batches of up to 12 requests per engine (**--preset batch12**). **--preset batch8** is the other non-speculative configuration. Presets whose names start with `mtp-` turn on speculative decoding with the model's MTP layer. A preset only changes defaults; an explicit flag still wins. Capture and serve must use the same preset, or the server will not find its graphs.
+The supported model at the time of writing is GLM-5.3-Flash. The served defaults are a 1,048,576-token context, FP8 KV cache, 256-token pages, and decode batches of up to 12 requests per engine (**--preset batch12**). **--preset batch8** is the other non-speculative configuration. Presets whose names start with **mtp-** turn on speculative decoding with the model's MTP layer. A preset only changes defaults; an explicit flag still wins. Capture and serve must use the same preset, or the server will not find its graphs.
 
 With no subcommand, or with **--help**, **trnrt** prints the module docstring and exits **0**. An unknown subcommand exits **2**. An engine that stops because a graph is missing from the cache exits **3**. An engine that refuses to start because its devices are busy or host memory is too fragmented exits **4**.
 
@@ -84,7 +84,7 @@ With no subcommand, or with **--help**, **trnrt** prints the module docstring an
 > Commit, branch, or tag when **--model** is a repo id. Host-only; it does not change graphs.
 
 **--preset** _NAME_
-> Named configuration: `batch12` (default values), `batch8`, `mtp-batch8`, `mtp-always`, `mtp-batch12`, or `mtp-batch24`.
+> Named configuration: **batch12** (default values), **batch8**, **mtp-batch8**, **mtp-always**, **mtp-batch12**, or **mtp-batch24**.
 
 **--port** _N_
 > Router port for **serve** (default **8000**). Engine _i_ uses that port plus 1 plus _i_. For **engine**, the API port (default **8001**).
@@ -102,7 +102,7 @@ With no subcommand, or with **--help**, **trnrt** prints the module docstring an
 > First logical NeuronCore for **engine** (default **0**).
 
 **--served-model-name** _NAME_
-> Name clients send as the model (default `glm`).
+> Name clients send as the model (default **glm**).
 
 **--device** _neuron|cpu_
 > Where the engine runs (default **neuron**). NKI kernels do not run on **cpu**.
@@ -111,7 +111,7 @@ With no subcommand, or with **--help**, **trnrt** prints the module docstring an
 > Compile a graph that is missing from the cache on this host instead of failing. That compile takes minutes to hours per graph.
 
 **--startup-timeout** _SECONDS_
-> How long each engine has to load, warm every graph, and answer `/health` (default **3600**). **0** waits forever. Past the limit, **serve** stops every engine and exits **1**.
+> How long each engine has to load, warm every graph, and answer **/health** (default **3600**). **0** waits forever. Past the limit, **serve** stops every engine and exits **1**.
 
 **--out** _DIR_
 > Work directory for **compile** (shapes, capture, and the cache root).
@@ -121,7 +121,7 @@ With no subcommand, or with **--help**, **trnrt** prints the module docstring an
 
 # CAVEATS
 
-Serving needs a `trn2.48xlarge` and a compile cache built for the same arguments. The cache is not optional. **--allow-compile** on the serving box is the escape hatch, and it is slow.
+Serving needs a **trn2.48xlarge** and a compile cache built for the same arguments. The cache is not optional. **--allow-compile** on the serving box is the escape hatch, and it is slow.
 
 **--max-running** only limits how many requests run at once. It does not change graphs. Bucket lists, page size, and speculative presets do change graphs, so they belong in the capture command as well as in **serve**.
 
