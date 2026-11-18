@@ -118,6 +118,7 @@ aft-mtp-mount.md
 aftr.md
 ag.md
 agate.md
+agav.md
 age-inspect.md
 age-keygen.md
 age.md
@@ -1602,6 +1603,7 @@ curlie.md
 curseofwar.md
 cursor.md
 cut.md
+cutcraft.md
 cutycapt.md
 cuyo.md
 cvs.md
@@ -4184,6 +4186,7 @@ kiterunner-scan.md
 kiterunner-wordlist.md
 kiterunner.md
 kitex.md
+kith.md
 kitty.md
 kividb.md
 kiwi-ng.md
@@ -5592,6 +5595,7 @@ ods-server.md
 oeis-tui.md
 offlineimap.md
 offpunk.md
+og.md
 ogr2ogr.md
 ogrinfo.md
 ogrmerge.py.md
@@ -5633,6 +5637,7 @@ ooniprobe.md
 op.md
 opam.md
 opamui.md
+open-geocode.md
 open.fish.md
 open.md
 open_oscar_server.md
@@ -7744,6 +7749,7 @@ solana.md
 solc.md
 solcjs.md
 solidcraft-cli.md
+soliloquy.md
 solo.md
 solvecraft-cli.md
 sonar-scanner.md
@@ -8461,6 +8467,7 @@ trippy.md
 tripwire.md
 trivy.md
 trizen.md
+trnrt.md
 troff.md
 true.md
 truffle.md
@@ -8623,6 +8630,7 @@ unoconv.md
 unopkg.md
 unp.md
 unrar.md
+unref.md
 unrtf.md
 unset.md
 unsetopt.md
