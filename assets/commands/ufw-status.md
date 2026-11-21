@@ -64,7 +64,7 @@ Part of **ufw** (Uncomplicated Firewall), Ubuntu's frontend for iptables/nftable
 
 # SEE ALSO
 
-[ufw](/man/ufw)(8), [ufw-enable](/man/ufw-enable)(8), [ufw-disable](/man/ufw-disable)(8), [ufw-allow](/man/ufw-allow)(8), [iptables](/man/iptables)(8)
+[ufw](/man/ufw)(8), [ufw-enable](/man/ufw-enable)(8), [ufw-disable](/man/ufw-disable)(8), [ufw-allow](/man/ufw-allow)(8), [ufw-logging](/man/ufw-logging)(8), [ufw-show](/man/ufw-show)(8), [iptables](/man/iptables)(8)
 
 # RESOURCES
 

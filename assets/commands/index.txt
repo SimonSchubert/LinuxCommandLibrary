@@ -1281,6 +1281,7 @@ clisp.md
 clitest.md
 clj.md
 cloc.md
+clock-rs.md
 clockify.md
 clockwork-cli.md
 cloctui.md
@@ -2458,6 +2459,7 @@ flatpak-install.md
 flatpak-list.md
 flatpak-mask.md
 flatpak-override.md
+flatpak-ps.md
 flatpak-remote-info.md
 flatpak-run.md
 flatpak-search.md
@@ -3232,6 +3234,7 @@ gradle-wrapper.md
 gradle.md
 graf.md
 grafana-cli.md
+grafana-server.md
 grafana.md
 graft.md
 grammarly.md
@@ -3430,6 +3433,7 @@ heh.md
 helix.md
 hello.md
 helm-install.md
+helm-upgrade.md
 helm.md
 helmfile.md
 help.md
@@ -5660,6 +5664,8 @@ opencode-upgrade.md
 opencode-web.md
 opencode.md
 opencomplai.md
+opencomputer-create.md
+opencomputer.md
 openconnect.md
 opencubicplayer.md
 openfortivpn.md
@@ -7288,6 +7294,7 @@ rpmkeys.md
 rpmsign.md
 rpmspec.md
 rr.md
+rs-rnsd.md
 rscript.md
 rsh.md
 rsi.md
@@ -8580,9 +8587,11 @@ ufw-deny.md
 ufw-disable.md
 ufw-enable.md
 ufw-limit.md
+ufw-logging.md
 ufw-reject.md
 ufw-reload.md
 ufw-reset.md
+ufw-show.md
 ufw-status.md
 ufw-version.md
 ufw.md

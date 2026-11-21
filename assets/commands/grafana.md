@@ -102,4 +102,4 @@ Grafana was created by **Torkel Odegaard** in **2014**, initially as a fork of K
 
 # SEE ALSO
 
-[prometheus](/man/prometheus)(1)
+[grafana-server](/man/grafana-server)(1), [grafana-cli](/man/grafana-cli)(1), [prometheus](/man/prometheus)(1)
