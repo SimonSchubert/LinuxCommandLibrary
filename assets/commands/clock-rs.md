@@ -89,35 +89,24 @@ A command-line flag overrides the same setting in the configuration file.
 
 # CONFIGURATION
 
-The file is TOML. On Linux it is **~/.config/clock-rs/conf.toml**. Another path, or **None** to ignore the file, is the environment variable in this assignment:
+The file is TOML. On Linux it is **~/.config/clock-rs/conf.toml**. Point the variable **CONF PATH** (one underscore between the words) at another file, or set it to **None** to ignore the file on disk:
 
 ```
 CONF_PATH=None
 ```
 
-```
-[general]
-color = "magenta"
-interval = 250
-blink = true
-bold = true
+**[general]**
+> **color** (default white), **interval** in milliseconds (default 200), **blink** (default false), **bold** (default false). These match **--color**, **--interval**, **--blink**, and **--bold**.
 
-[position]
-horizontal = "center"
-vertical = "center"
+**[position]**
+> **horizontal** and **vertical**, each **start**, **center**, or **end**. Default **center**. These match **--x-pos** and **--y-pos**.
 
-[date]
-fmt = "%A, %B %d, %Y"
-use_12h = true
-utc = true
-hide_seconds = true
-```
-
-**general.color**, **general.interval**, **general.blink**, and **general.bold** match the display flags. **position.horizontal** and **position.vertical** match **--x-pos** and **--y-pos**. The four **date** keys in the example match **--fmt**, **-t**, **--utc**, and **--hide-seconds**, in that order.
+**[date]**
+> **fmt** is a chrono strftime pattern (default **%d-%m-%Y**) and matches **--fmt**. **utc** matches **--utc**. The 12-hour key and the hide-seconds key match **-t** and **--hide-seconds**. Each of those two keys is two words joined by an underscore: use and 12h, hide and seconds.
 
 # CAVEATS
 
-**-t** is only a short flag. The matching configuration key is the 12-hour key under **date** in the example above.
+**-t** is only a short flag. The matching configuration key is the 12-hour key under **date**.
 
 # INSTALL
 
