@@ -88,5 +88,5 @@ Lua was created in 1993 at **PUC-Rio** in Brazil, designed as a lightweight embe
 
 # SEE ALSO
 
-[luajit](/man/luajit)(1), [luac](/man/luac)(1)
+[luajit](/man/luajit)(1), [luac](/man/luac)(1), [lua-language-server](/man/lua-language-server)(1)
 

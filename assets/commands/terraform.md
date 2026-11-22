@@ -145,4 +145,4 @@ Terraform was created by **HashiCorp** and first released in **2014** by Mitchel
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [ansible](/man/ansible)(1), [pulumi](/man/pulumi)(1), [tofu](/man/tofu)(1)
+[aws](/man/aws)(1), [ansible](/man/ansible)(1), [pulumi](/man/pulumi)(1), [tofu](/man/tofu)(1), [terraform-version](/man/terraform-version)(1)

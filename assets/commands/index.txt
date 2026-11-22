@@ -122,6 +122,7 @@ agav.md
 age-inspect.md
 age-keygen.md
 age.md
+agent-mcts.md
 agent-run.md
 agent-skills-eval.md
 agent-vault.md
@@ -1132,6 +1133,7 @@ cec-client.md
 cec-ctl.md
 celerator.md
 celld.md
+cells.md
 ceph.md
 cephadm.md
 certbot.md
@@ -2345,6 +2347,7 @@ far2l.md
 farge.md
 farol.md
 fasd.md
+fast-anything.md
 fast.md
 fastapi.md
 fastboot.md
@@ -4612,6 +4615,7 @@ lsusb.md
 lsyncd.md
 lt.md
 ltrace.md
+lua-language-server.md
 lua.md
 luac.md
 luacheck.md
@@ -4674,6 +4678,8 @@ lychee.md
 lynis.md
 lynx.md
 lz.md
+lz0.md
+lz0dec.md
 lz4.md
 lzcat.md
 lzcmp.md
@@ -5561,6 +5567,7 @@ oatmeal.md
 oauth2c.md
 obabel.md
 obexftp.md
+obfusecate.md
 objcopy.md
 objdump.md
 obs.md
@@ -8240,6 +8247,7 @@ terraform-taint.md
 terraform-tui.md
 terraform-untaint.md
 terraform-validate.md
+terraform-version.md
 terraform-workspace.md
 terraform.md
 terraformer.md
