@@ -40,9 +40,17 @@ Configure SteamOS chainloader and kernel boot debugging
 
 ```sudo steamos-bootdebug log show```
 
+**Enable kernel debug** for a specific image only
+
+```sudo steamos-bootdebug kernel-debug [image]```
+
 # SYNOPSIS
 
-**steamos-bootdebug** _command_ [_image_]
+**steamos-bootdebug** **menu** | **verbose** | **quiet** | **status**
+
+**steamos-bootdebug** **log** **enable** | **disable** | **show**
+
+**steamos-bootdebug** **kernel-debug** | **kernel-debug-once** | **kernel-quiet** [_image_]
 
 # PARAMETERS
 
@@ -56,16 +64,16 @@ Configure SteamOS chainloader and kernel boot debugging
 > Disable both the menu and verbose console output.
 
 **log enable**
-> Persist chainloader logs to a file on the EFI System Partition (**/esp**).
+> Persist chainloader logs to **steamcl-debug.log**, a fixed-size circular file next to the chainloader on the EFI System Partition (**/esp**).
 
 **log disable**
 > Stop persisting chainloader logs to the filesystem.
 
 **log show**
-> Print the contents of the chainloader log file.
+> Print the contents of the chainloader log file, sorted by line number. This is the default for **log** without an argument.
 
 **kernel-debug** [_image_]
-> Enable kernel debug output (no **quiet** parameter, debug messages on console) for the named slot _image_, or both if omitted.
+> Enable kernel logging to the console for the named _image_ (as listed by **steamos-bootconf list-images**), or for the default image if omitted.
 
 **kernel-debug-once** [_image_]
 > Enable kernel debug for **only the next boot**, then automatically revert.
@@ -73,24 +81,27 @@ Configure SteamOS chainloader and kernel boot debugging
 **kernel-quiet** [_image_]
 > Restore the standard silent kernel boot.
 
+**-h**, **--help**, **help**
+> Show usage information.
+
 **status**
-> Print the current debug configuration of both slots.
+> Print the menu, console-logging, and log-file state of each chainloader, the kernel logging state of every image, and the current, next, and default boot paths.
 
 # DESCRIPTION
 
-**steamos-bootdebug** is a small administration script that ships with SteamOS 3+ on the **Steam Deck**. It surfaces controls for the SteamOS **chainloader** — the small bootloader stub that decides which of the two A/B system images to load — and for the kernel command line baked into each image.
+**steamos-bootdebug** is a small administration script that ships with SteamOS 3+ on the **Steam Deck**. It surfaces controls for the SteamOS **chainloader** (**steamcl**, the stage 1 bootloader that decides which of the two A/B system images to load) and for the kernel logging setting stored per image.
 
-The chainloader runs before GRUB and normally boots the active slot silently. **steamos-bootdebug menu** flips it into interactive mode so the user can edit GRUB entries (useful for adding **systemd.unit=rescue.target**, alternate **root=** parameters, and so on). **verbose** and **quiet** toggle whether chainloader log lines go to the console or are suppressed; **log enable**/**disable**/**show** capture those lines to a file in the EFI System Partition for post-mortem inspection.
+The chainloader runs before GRUB and normally boots the active slot silently. **steamos-bootdebug menu** creates a **steamcl-menu** flag file in **/esp/efi/boot** and **/esp/efi/steamos**, which flips it into interactive mode so the user can edit GRUB entries (useful for adding **systemd.unit=rescue.target**, alternate **root=** parameters, and so on). **verbose** (flag file **steamcl-verbose**) and **quiet** toggle whether chainloader log lines go to the console or are suppressed; **log enable**/**disable**/**show** capture those lines to a file in the EFI System Partition for post-mortem inspection.
 
-The **kernel-debug**/**kernel-quiet** family edits the kernel command line of one or both A/B images: enabling kernel debug removes the **quiet** parameter, enables verbose printk output, and is invaluable for diagnosing display, GPU, or storage init issues. **kernel-debug-once** is the safest option — it self-reverts after a single boot, so you cannot accidentally leave the system in a noisy state.
+The **kernel-debug**/**kernel-quiet** family sets the **verbose** option of an image through **steamos-bootconf** (1 for on, 0 for off, 255 for next boot only), so the kernel logs to the console during boot. This is invaluable for diagnosing display, GPU, or storage init issues. **kernel-debug-once** is the safest option: it self-reverts after a single boot, so you cannot accidentally leave the system in a noisy state.
 
 # CAVEATS
 
-**Read-only rootfs**: SteamOS uses an immutable root, so **steamos-bootdebug** writes to the EFI System Partition rather than **/etc**. Boot menu output is rendered on whichever display the firmware picks; if you boot the Steam Deck while docked and undock during the menu, the menu may be lost on the internal panel and you must blindly navigate or reboot. The optional _image_ argument selects the **A** or **B** slot — if omitted, both slots are modified.
+**Read-only rootfs**: SteamOS uses an immutable root, so **steamos-bootdebug** writes to the EFI System Partition rather than **/etc**. Boot menu output is rendered on whichever display the firmware picks; if you boot the Steam Deck while docked and undock during the menu, the menu may be lost on the internal panel and you must blindly navigate or reboot. All commands, including **status**, require root. The optional _image_ argument must match a name from **steamos-bootconf list-images**; if omitted, **steamos-bootconf** applies the change to its default image.
 
 # HISTORY
 
-**steamos-bootdebug** is shipped by Valve in **SteamOS 3** (the Arch-based Linux distribution running on the Steam Deck since **February 2022**). It is part of the **steamos-customizations** family of scripts that adapt a stock Arch install to the read-only A/B image model used on the Deck.
+**steamos-bootdebug** is shipped by Valve in **SteamOS 3** (the Arch-based Linux distribution running on the Steam Deck since **February 2022**). It is part of Valve's **steamos-efi** project, which also provides the **steamcl** chainloader used by the read-only A/B image model on the Deck.
 
 # SEE ALSO
 

@@ -12,6 +12,10 @@ update Angular packages and run automatic migrations
 
 ```ng update @angular/core @angular/cli```
 
+**Update to a specific major version** (one major at a time)
+
+```ng update @angular/core@[19] @angular/cli@[19]```
+
 **Update a specific package**
 
 ```ng update [package-name]```
@@ -78,7 +82,7 @@ The command refuses to run by default if the repository has uncommitted changes;
 
 # CAVEATS
 
-Always commit or stash work in progress before running **ng update**; running with **--allow-dirty --force** can leave the repository in a hard-to-recover state. Migrations are written and tested for one minor version step at a time, so jumping multiple major versions in a single command is unsupported: update one major version at a time.
+Always commit or stash work in progress before running **ng update**; running with **--allow-dirty --force** can leave the repository in a hard-to-recover state. Migrations are written and tested for one major version step at a time, so jumping multiple major versions in a single command is unsupported: update one major version at a time. The interactive Angular Update Guide lists manual steps per version pair.
 
 # HISTORY
 
@@ -86,4 +90,14 @@ Always commit or stash work in progress before running **ng update**; running wi
 
 # SEE ALSO
 
-[ng](/man/ng)(1), [ng-add](/man/ng-add)(1)
+[ng](/man/ng)(1), [ng-add](/man/ng-add)(1), [ng-new](/man/ng-new)(1), [npm-update](/man/npm-update)(1), [npm-outdated](/man/npm-outdated)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/angular/angular-cli)```
+
+```[Homepage](https://angular.dev)```
+
+```[Documentation](https://angular.dev/cli/update)```
+
+<!-- verified: 2026-11-23 -->

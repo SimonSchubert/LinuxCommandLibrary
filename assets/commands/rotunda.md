@@ -4,9 +4,9 @@ Agent-first web browser driven from the command line
 
 # TLDR
 
-**Download** the bundled browser build
+**Download** the latest Rotunda browser build
 
-```uvx rotunda agent fetch```
+```uvx rotunda fetch```
 
 Create a **named browser profile**
 
@@ -16,7 +16,7 @@ Open a new **context** inside an existing profile
 
 ```uvx rotunda agent new-context [agent-demo]```
 
-**Navigate** the context to a URL
+**Navigate** a page (index printed by previous commands) to a URL
 
 ```uvx rotunda agent navigate [3] [https://example.com]```
 
@@ -24,95 +24,124 @@ Open a new **context** inside an existing profile
 
 ```uvx rotunda agent describe [3]```
 
-**Click** an element by reference
+**Click** an element, or **fill** an input, by reference
 
-```uvx rotunda agent click [3] [ref_id]```
+```uvx rotunda agent click [ref]```
 
-Save a **screenshot** of the viewport
+```uvx rotunda agent fill [ref] "[text]" --submit```
 
-```uvx rotunda agent screenshot [3] --path [page.png]```
+**Extract** the page as markdown
+
+```uvx rotunda agent extract [3] --format markdown```
+
+Save a **full-page screenshot**
+
+```uvx rotunda agent screenshot [3] [page.png] --full-page```
+
+**Stop** the profile daemon
+
+```uvx rotunda agent stop [1]```
 
 # SYNOPSIS
 
-**rotunda agent** _subcommand_ [_context-id_] [_options_]
+**rotunda** **fetch** | **sync** | **list** | **set** | **remove** | **test** | **server** | **gui**
+
+**rotunda agent** _subcommand_ [_page_] [_ref_] [_options_]
 
 # DESCRIPTION
 
-**Rotunda** is a browser purpose-built for AI agents. It bundles a stealthy Chromium build, exposes high-level primitives for navigation, inspection, and form interaction, and persists profiles, daemon sessions, and short resource indexes under **~/.rotunda** so that later **uvx rotunda** calls can attach to the same profile without rebooting it.
+**Rotunda** is a browser purpose-built for AI agents. It is a patched **Firefox** build driven through Playwright's Juggler protocol (building on the camoufox project), designed to avoid automation signatures and humanize mouse and keyboard input rather than spoof the browser fingerprint. The **agent** subcommands persist profiles, daemon sessions, and short resource indexes under **~/.rotunda** so that later **uvx rotunda** calls can attach to the same profile.
 
-The agent CLI is grouped into a few families of subcommands: profile and session management (**fetch**, **new-profile**, **new-context**, **stop**), navigation primitives (**navigate**, **back**, **forward**, **reload**, **wait**), inspection (**describe**, **screenshot**, **extract**), and interaction (**click**, **hover**, **fill**, **type**, **select**, **check**, **press**, **upload**, **dialog**). Each element-targeted command refers to a numeric context id and an element reference returned by **describe**.
+The agent CLI is grouped into families of subcommands: profile and session management (**new-profile**, **new-context**, **new-page**, **pages**, **close-page**, **resources**, **stop**), navigation (**navigate**, **back**, **forward**, **reload**, **wait**), inspection (**describe**, **info**, **screenshot**, **extract**), interaction (**click**, **hover**, **fill**, **type**, **select**, **check**, **uncheck**, **press**, **scroll**, **drag**, **upload**, **dialog**) and downloads (**downloads**, **save-download**). Page-level commands take a numeric page index; element commands take a ref returned by **describe**, and the page index is optional once a ref is known. After each action the CLI reports whether the page fully refreshed or prints a compact element delta.
 
-Rotunda is also importable as a Python library on top of **Playwright**, but the CLI is the recommended entry point for shell-based agents.
+Rotunda is also importable as a Python library (**NewBrowser**, **NewContext**) on top of **Playwright**.
 
 # PARAMETERS
 
-**fetch**
-> Download the bundled browser build to ~/.rotunda.
+**fetch** [_version_]
+> Download and install the latest (or given) browser build for the active channel.
 
-**new-profile** **--name** _name_
-> Create a persistent browser profile.
+**list** [**installed**|**all**], **set**, **remove**
+> Manage installed browser builds and the active channel.
+
+**new-profile** [**--name** _name_] [**--headless**]
+> Create a persistent browser profile, optionally headless.
 
 **new-context** _profile_
-> Open a fresh browser context in the named profile; prints a numeric context id.
+> Open a fresh browser context in the named profile and print the page index.
 
-**navigate** _ctx_ _url_
-> Load _url_ in the given context.
+**navigate** _page_ _url_ [**--wait-until** _state_]
+> Load _url_; state is commit, domcontentloaded (default), load or networkidle.
 
-**describe** _ctx_
-> Print page structure and reference ids that other commands consume.
+**describe** _page_ [**--max-items** _n_]
+> Print page structure and element refs that other commands consume.
 
-**click** _ctx_ _ref_, **hover** _ctx_ _ref_
+**info** _ref_
+> Print full attributes, state, bounds and select options for one element.
+
+**click** _ref_, **hover** _ref_, **check** _ref_, **uncheck** _ref_
 > Mouse interaction with a referenced element.
 
-**fill** _ctx_ _ref_ _text_
-> Replace the value of an input field.
+**fill** _ref_ _text_ [**--submit**]
+> Replace the value of an input field, optionally pressing Enter.
 
-**type** _ctx_ _text_
-> Type text at the current focus position.
+**type** _ref_ _text_ [**--submit**]
+> Append text at the focused cursor position.
 
-**select** _ctx_ _ref_ _value_
-> Choose a dropdown option by value.
+**select** _ref_ _value_ [**--by** _value|label|index_]
+> Choose dropdown options.
 
-**check** _ctx_ _ref_, **press** _ctx_ _key_
-> Toggle a checkbox / send a keyboard key.
+**press** [_ref_] _key_, **scroll** [_ref_] _direction_ [**--amount** _px_], **drag** _from-ref_ _to-ref_
+> Keyboard, scroll and drag interaction.
 
-**extract** _ctx_ [_--format_ _text|html|markdown|links_]
-> Pull text, raw HTML, markdown, or link lists out of the page.
+**extract** _page_ [**--format** _text|html|markdown|links|forms_] [**--output** _file_]
+> Pull content out of the page.
 
-**screenshot** _ctx_ [_--full-page_] [_--path_ _file_]
-> Capture the viewport or the entire page.
+**screenshot** _page_ [_path_] [**--full-page**] [**--element** _ref_]
+> Capture the viewport, full page or one element; without a path a temp PNG is written and its path printed.
 
-**upload** _ctx_ _ref_ _file_
-> Attach _file_ to a file-input element.
+**wait** _page_ [_value_] [**--for** _load|domcontentloaded|networkidle|selector|text|url|timeout_] [**--timeout-ms** _ms_]
+> Block until a page condition is met.
 
-**dialog** _ctx_ _action_
-> Accept or dismiss browser dialogs (alert/confirm/prompt).
+**upload** _ref_ _file_ ...
+> Attach files to a file-input element.
 
-**wait** _ctx_ _condition_
-> Block until a page condition is met (load state, selector, timeout).
+**dialog** _page_ _list|accept|dismiss|fill_ [_text_]
+> Arm how the next browser dialog is handled; unarmed dialogs are dismissed.
 
-**back**, **forward**, **reload** _ctx_
+**downloads**, **save-download** _download_ _path_
+> List and save downloaded files.
+
+**back**, **forward**, **reload**, **close-page** _page_
 > Standard navigation primitives.
 
-**stop**
+**stop** [_profile_]
 > Shut down the profile daemon.
 
 # CONFIGURATION
 
 **~/.rotunda/**
-> Persistent profiles, daemon sockets, and short resource indexes shared between **uvx rotunda** invocations.
+> Persistent profiles, daemon state, and short resource indexes shared between **uvx rotunda** invocations.
 
-**~/.rotunda/profiles/**_name_
-> One subdirectory per named profile created via **new-profile**.
+**ROTUNDA_DEBUG_DUMP_DIR**, **ROTUNDA_DEBUG_DUMP**
+> Enable fingerprint debugging dumps (VM calls, network, console) for diagnosing bot detection.
 
 # CAVEATS
 
-Requires **uv / uvx** to be installed; **uvx rotunda** downloads and runs the project on demand. Contexts are addressed by numeric ids that are only valid for the lifetime of the daemon — calling **stop** invalidates them. Bot-detection avoidance is best-effort; some sites will still block automated traffic.
+Requires **uv / uvx** (or a Python project with **rotunda** installed). Page indexes and refs are only valid for the lifetime of the daemon; calling **stop** invalidates them. Bot-detection avoidance is best-effort and the browser is intended for delegated agent tasks, not bulk crawling.
 
 # HISTORY
 
-**Rotunda** was published by **MonkeySee AI** in **2026** as an agent-friendly browser layer that fills the gap between raw Playwright scripting and full-featured commercial browser-automation services. Its CLI surface is intentionally narrow and stable so that LLM-driven agents can call it without a tool-specific SDK.
+**Rotunda** was published by **MonkeySee AI** (Pierce Freeman) in **2026**, building on daijro's camoufox Firefox patching work, as an agent-friendly browser layer between raw Playwright scripting and commercial browser-automation services.
 
 # SEE ALSO
 
-[playwright](/man/playwright)(1), [chromium](/man/chromium)(1), [puppeteer](/man/puppeteer)(1), [uv](/man/uv)(1)
+[playwright](/man/playwright)(1), [firefox](/man/firefox)(1), [puppeteer](/man/puppeteer)(1), [uv](/man/uv)(1), [uvx](/man/uvx)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/MonkeySee-AI/rotunda)```
+
+```[Homepage](https://rotunda.sh)```
+
+<!-- verified: 2026-11-23 -->

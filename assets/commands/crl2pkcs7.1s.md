@@ -8,21 +8,21 @@ CRL to PKCS#7 format converter
 
 ```openssl crl2pkcs7 -in [crl.pem] -certfile [cert.pem] -out [result.p7b]```
 
-**Create PKCS#7 from CRL** only (no certificates)
-
-```openssl crl2pkcs7 -in [crl.pem] -nocrl -out [result.p7b]```
-
-**Create PKCS#7 from multiple** CRLs
-
-```openssl crl2pkcs7 -in [crl1.pem] -in [crl2.pem] -out [result.p7b]```
-
-**Output in DER format**
-
-```openssl crl2pkcs7 -in [crl.pem] -outform DER -out [result.p7b]```
-
-**Include certificate chain**
+**Bundle certificates only** (no CRL) into a .p7b file
 
 ```openssl crl2pkcs7 -nocrl -certfile [chain.pem] -out [certs.p7b]```
+
+**Add certificates from multiple files**
+
+```openssl crl2pkcs7 -nocrl -certfile [root.pem] -certfile [intermediate.pem] -out [chain.p7b]```
+
+**Convert a DER CRL** and write DER output
+
+```openssl crl2pkcs7 -inform DER -in [crl.der] -outform DER -out [result.p7b]```
+
+**Inspect the result** by listing the contained certificates
+
+```openssl pkcs7 -in [result.p7b] -print_certs -noout```
 
 # SYNOPSIS
 
@@ -31,22 +31,28 @@ CRL to PKCS#7 format converter
 # PARAMETERS
 
 **-in** _FILE_
-> Input CRL file (can be specified multiple times).
+> Input CRL file (default: standard input). Only one CRL can be read.
 
 **-out** _FILE_
-> Output PKCS#7 file.
+> Output PKCS#7 file (default: standard output).
 
 **-certfile** _FILE_
-> File containing certificates to include.
+> PEM file containing one or more certificates to include. Can be given more than once.
 
 **-nocrl**
-> Don't include the CRL in the output (certificates only).
+> Don't include a CRL in the output and don't read one from the input (certificates only).
 
 **-inform** _FORMAT_
-> Input CRL format: PEM or DER.
+> Input CRL format: PEM (default) or DER.
 
 **-outform** _FORMAT_
-> Output PKCS#7 format: PEM or DER.
+> Output PKCS#7 format: PEM (default) or DER.
+
+**-provider** _NAME_
+> Load and initialize the named provider (OpenSSL 3.0+).
+
+**-help**
+> Print a usage message.
 
 # DESCRIPTION
 
@@ -58,7 +64,7 @@ The **-nocrl** option allows creating PKCS#7 files containing only certificates,
 
 # CAVEATS
 
-The PKCS#7 output is a "degenerate" form containing only certificates and/or CRLs, with no signed content. Some applications expect the .p7b or .p7c extension for these files. The certificates in the output are not validated; any PEM certificates in the certfile are included.
+The PKCS#7 output is a "degenerate" form containing only certificates and/or CRLs, with no signed content. Some applications expect the .p7b or .p7c extension for these files. The certificates in the output are not validated; any PEM certificates in the certfile are included. **-certfile** only accepts PEM; convert DER certificates first with **openssl x509 -inform DER**.
 
 # HISTORY
 
@@ -67,3 +73,13 @@ PKCS#7 was defined by RSA Security as part of the Public-Key Cryptography Standa
 # SEE ALSO
 
 [openssl](/man/openssl)(1), [openssl-crl](/man/openssl-crl)(1), [openssl-x509](/man/openssl-x509)(1), [x509](/man/x509)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/openssl/openssl)```
+
+```[Homepage](https://openssl-library.org)```
+
+```[Documentation](https://docs.openssl.org/master/man1/openssl-crl2pkcs7/)```
+
+<!-- verified: 2026-11-23 -->

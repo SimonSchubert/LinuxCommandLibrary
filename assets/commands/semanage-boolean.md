@@ -16,9 +16,21 @@ Manage persistent SELinux boolean settings
 
 ```sudo semanage boolean -m --on|--off [haproxy_connect_any]```
 
+**Show** a specific boolean
+
+```sudo semanage boolean -l | grep [httpd_can_sendmail]```
+
+**Export** local boolean customizations as semanage commands
+
+```sudo semanage boolean -E```
+
+**Remove** all local boolean customizations
+
+```sudo semanage boolean -D```
+
 # SYNOPSIS
 
-**semanage boolean** [**-l**|**-m**] [_options_] [_boolean_]
+**semanage boolean** [**-h**] [**-n**] [**-N**] [**-S** _store_] [**-E** | **-D** | **-l** [**-C**] | **-m** (**--on** | **--off**) _boolean_]
 
 # PARAMETERS
 
@@ -40,16 +52,39 @@ Manage persistent SELinux boolean settings
 **-0, --off**
 > Set boolean to off/false
 
+**-E, --extract**
+> Print local customizations as commands, for use within a transaction
+
+**-D, --deleteall**
+> Remove all local boolean customizations
+
+**-N, --noreload**
+> Do not reload policy after commit
+
+**-S, --store** _STORE_
+> Select an alternate SELinux policy store to manage
+
+**-h, --help**
+> Show help message and exit
+
 # DESCRIPTION
 
 **semanage boolean** manages persistent SELinux boolean settings. Booleans allow administrators to customize how SELinux policy rules affect confined processes without modifying the policy itself.
 
-Unlike **setsebool**, which can make temporary changes, semanage boolean changes persist across system reboots. The **-C** flag shows which booleans have been customized from their default values.
+Unlike **setsebool** without **-P**, which only changes the runtime value, semanage boolean changes persist across reboots (**semanage boolean -m --on** is equivalent to **setsebool -P ... on**). The **-C** flag shows which booleans have been customized from their default values.
 
 # CAVEATS
 
-Requires root privileges. Boolean changes take effect immediately but are also saved persistently. Use **getsebool -a** for a quick non-persistent view of all booleans.
+Requires root privileges. Boolean changes take effect immediately but are also saved persistently. Modifying a boolean rebuilds the policy store, which can take a few seconds. Use **getsebool -a** for a quick view of current runtime values.
 
 # SEE ALSO
 
 [semanage](/man/semanage)(8), [getsebool](/man/getsebool)(8), [setsebool](/man/setsebool)(8), [sestatus](/man/sestatus)(8), [selinuxenabled](/man/selinuxenabled)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/SELinuxProject/selinux)```
+
+```[Documentation](https://man7.org/linux/man-pages/man8/semanage-boolean.8.html)```
+
+<!-- verified: 2026-11-23 -->

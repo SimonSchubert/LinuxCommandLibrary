@@ -20,6 +20,10 @@ High-performance Cassandra-compatible NoSQL database
 
 ```cqlsh -f [script.cql]```
 
+**Execute a single statement** and exit
+
+```cqlsh -e "[DESCRIBE KEYSPACES;]"```
+
 **Check node status**
 
 ```nodetool status```
@@ -36,11 +40,17 @@ High-performance Cassandra-compatible NoSQL database
 
 ```nodetool flush```
 
+**Find the hottest partitions** of a table over 5 seconds
+
+```nodetool toppartitions [keyspace] [table] [5000]```
+
 # SYNOPSIS
 
 **cqlsh** [_options_] [_host_] [_port_]
 
 **nodetool** [_options_] _command_ [_args_]
+
+**scylla** [_options_]
 
 # CQLSH PARAMETERS
 
@@ -53,17 +63,23 @@ High-performance Cassandra-compatible NoSQL database
 **-k**, **--keyspace** _keyspace_
 > Initial keyspace.
 
-**-f** _file_
-> Execute CQL file.
+**-f**, **--file** _file_
+> Execute commands from a CQL file, then exit.
 
-**-e** _statement_
-> Execute single CQL statement.
+**-e**, **--execute** _statement_
+> Execute a single CQL statement, then exit.
 
 **--ssl**
 > Use SSL connection.
 
+**--cqlshrc** _file_
+> Use a non-default cqlshrc file.
+
+**--connect-timeout** _secs_
+> Connection timeout (default: 2).
+
 **--request-timeout** _secs_
-> Query timeout.
+> Request timeout (default: 10).
 
 # NODETOOL COMMANDS
 
@@ -102,20 +118,20 @@ High-performance Cassandra-compatible NoSQL database
 
 # SCYLLADB-SPECIFIC
 
-**nodetool toppartitions** _keyspace_ _table_ _duration_
-> Identify hot partitions causing load.
+**nodetool toppartitions** _keyspace_ _table_ _duration_ms_
+> Sample reads and writes for the given time and report the most active partitions.
 
 **nodetool setlogginglevel** _logger_ _level_
 > Adjust logging dynamically.
 
-**scylla --developer-mode** _mode_
-> Development mode flag.
+**scylla --developer-mode** _1_|_0_
+> Skip production checks (I/O tuning, XFS, etc.), for development and testing only.
 
 **scylla --smp** _cores_
-> Number of CPU cores to use.
+> Number of CPU cores (shards) to use.
 
 **scylla --memory** _amount_
-> Memory allocation.
+> Amount of memory to use, e.g. **4G**.
 
 # DESCRIPTION
 
@@ -123,7 +139,7 @@ High-performance Cassandra-compatible NoSQL database
 
 **cqlsh** executes CQL statements. Keyspaces, tables, and query syntax match Cassandra. ScyllaDB adds lightweight transactions (LWT) improvements and materialized views.
 
-**nodetool** manages cluster operations. ScyllaDB extends it with **toppartitions** for identifying hot spots that cause load imbalance.
+**nodetool** manages cluster operations through the node's REST API (port 10000, set with **-p**). Current releases ship a native C++ implementation built into the server binary, also invocable as **scylla nodetool**; operations not listed in the ScyllaDB docs are unsupported.
 
 ScyllaDB's shard-per-core architecture eliminates locking between CPU cores. The **--smp** flag controls core allocation. Configuration differs from Cassandra, using scylla.yaml.
 
@@ -146,8 +162,18 @@ While CQL-compatible, some Cassandra features differ or are unsupported. Configu
 
 # HISTORY
 
-ScyllaDB was founded in **2015** by **Avi Kivity** (KVM creator) and **Dor Laor**. The first release came in **2015** as a drop-in Cassandra replacement written in C++ using the Seastar framework. Version 2.0 (2017) added materialized views. ScyllaDB Open Source is Apache-licensed; Enterprise adds features like encryption and LDAP.
+The company behind ScyllaDB was founded in **2013** (as Cloudius Systems) by **Avi Kivity** (KVM creator) and **Dor Laor**. The first public release came in **2015** as a drop-in Cassandra replacement written in C++ using the Seastar framework. Version 2.0 (2017) added materialized views. ScyllaDB Open Source was licensed under the **AGPL**, with a separate Enterprise edition; starting with **2025.1** both were merged into a single release under the **ScyllaDB Source Available License**.
 
 # SEE ALSO
 
 [cqlsh](/man/cqlsh)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/scylladb/scylladb)```
+
+```[Homepage](https://www.scylladb.com)```
+
+```[Documentation](https://docs.scylladb.com)```
+
+<!-- verified: 2026-11-23 -->

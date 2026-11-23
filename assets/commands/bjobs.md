@@ -36,6 +36,18 @@ Display information about LSF batch jobs
 
 ```bjobs -u all```
 
+**Show pending jobs with pending reasons**
+
+```bjobs -p -l```
+
+**Custom output columns** as JSON
+
+```bjobs -o "[jobid stat queue job_name]" -json```
+
+**Summary** of unfinished jobs by state
+
+```bjobs -sum```
+
 # SYNOPSIS
 
 **bjobs** [_options_] [_job_id_...]
@@ -54,31 +66,46 @@ bjobs is part of IBM Spectrum LSF, a workload management platform for scheduling
 > Show all jobs including recently finished.
 
 **-d**
-> Show recently finished jobs.
+> Show only recently finished jobs.
 
 **-l**
 > Long format with detailed information.
 
 **-p**
-> Show pending jobs only.
+> Show pending jobs only, with the reasons they were not dispatched.
 
 **-r**
 > Show running jobs only.
 
 **-s**
-> Show suspended jobs only.
+> Show suspended jobs only, with the suspending reason.
 
 **-w**
 > Wide format, don't truncate fields.
 
 **-W**
-> Show estimated start time for pending jobs.
+> Show resource usage: project name, CPU used, memory, swap, PIDs, start and finish time.
+
+**-WF**
+> Show the estimated finish time for running or pending jobs (actual time for finished jobs).
+
+**-WL**
+> Show the estimated remaining run time.
+
+**-WP**
+> Show the estimated completion percentage.
 
 **-q** _queue_
 > Show jobs from specific queue.
 
 **-u** _user_
-> Show jobs for specific user (or "all").
+> Show jobs for specific user or user group (or "all").
+
+**-G** _group_
+> Show jobs associated with a user group.
+
+**-P** _project_
+> Show jobs belonging to a project.
 
 **-m** _host_
 > Show jobs on specific execution host.
@@ -90,7 +117,19 @@ bjobs is part of IBM Spectrum LSF, a workload management platform for scheduling
 > Show jobs in specific job group.
 
 **-o** _format_
-> Custom output format.
+> Custom output format (field names with optional widths, e.g. "jobid stat:5 queue").
+
+**-json**
+> Print customized (**-o**) output in JSON format.
+
+**-sum**
+> Show summary counts of unfinished jobs.
+
+**-UF**
+> Unformatted detailed output, easier to parse in scripts.
+
+**-X**
+> Show noncondensed host group and compute unit names.
 
 **-noheader**
 > Suppress header line.
@@ -106,3 +145,9 @@ Recently finished jobs disappear from bjobs after a configurable time (typically
 # SEE ALSO
 
 [bsub](/man/bsub)(1), [bkill](/man/bkill)(1), [bhist](/man/bhist)(1)
+
+# RESOURCES
+
+```[Documentation](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=reference-bjobs)```
+
+<!-- verified: 2026-11-23 -->

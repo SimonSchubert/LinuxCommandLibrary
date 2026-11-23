@@ -8,29 +8,33 @@ captures screenshots of websites at specified viewport sizes
 
 ```pageres [https://example.com]```
 
-**Specify viewport size**
+**Specify viewport size** (default is 1366x768)
 
 ```pageres [https://example.com] [1024x768]```
 
-**Multiple sizes**
+**Multiple URLs and sizes**
 
-```pageres [https://example.com] [1024x768] [1920x1080]```
+```pageres [https://example.com] [https://example.org] [1024x768] [1920x1080]```
 
 **Crop to viewport** (default is full page)
 
 ```pageres [https://example.com] [1024x768] --crop```
 
-**Set output filename**
+**Set output filename** using a template
 
-```pageres [https://example.com] --filename=[screenshot]```
+```pageres [https://example.com] [1366x768] --filename='<%= date %> - <%= url %>'```
 
 **Delay before capture**
 
 ```pageres [https://example.com] --delay=[3]```
 
-**Set output directory**
+**Dark mode** at 2x scale
 
-```pageres [https://example.com] -d [./screenshots]```
+```pageres [https://example.com] [1366x768] --darkMode --scale=[2]```
+
+**Screenshot a local HTML file** in JPEG format
+
+```pageres [page.html] [1366x768] --format=[jpg]```
 
 **Capture a specific element**
 
@@ -42,30 +46,29 @@ captures screenshots of websites at specified viewport sizes
 
 # SYNOPSIS
 
-**pageres** [_options_] _url_ [_sizes_...]
+**pageres** [_options_] _url_... [_size_...]
+
+**pageres** [ _url_ _size_... [_options_] ] [ _url_ _size_... [_options_] ]
 
 # PARAMETERS
 
-**-d**, **--dest** _DIR_
-> Output directory.
-
 **--filename** _TEMPLATE_
-> Filename template.
+> Custom filename template (lodash template with variables such as _url_, _size_, _width_, _height_, _crop_, _date_, _time_).
 
-**--delay** _SECONDS_
-> Delay before screenshot.
+**-d**, **--delay** _SECONDS_
+> Delay screenshot capture (default: _0_).
 
 **-c**, **--crop**
 > Crop image to the specified viewport height (default captures the full scrolling page).
 
 **--overwrite**
-> Overwrite existing files.
+> Overwrite the file if it exists (default appends an incrementing suffix).
 
 **--format** _FORMAT_
 > Image format: _png_ (default) or _jpg_.
 
 **--scale** _FACTOR_
-> Pixel-density scale multiplier.
+> Scale webpage (device scale factor, default: _1_).
 
 **--selector** _SELECTOR_
 > Capture only the DOM element matching the CSS selector.
@@ -91,9 +94,6 @@ captures screenshots of websites at specified viewport sizes
 **--password** _PASS_
 > HTTP basic auth password.
 
-**--user-agent** _UA_
-> User agent string.
-
 **--transparent**
 > Use a transparent background instead of white.
 
@@ -101,16 +101,16 @@ captures screenshots of websites at specified viewport sizes
 > Emulate the user's dark color scheme preference.
 
 **--timeout** _SECONDS_
-> Request timeout in seconds.
+> Request timeout in seconds (default: _60_).
 
 **-v**, **--verbose**
 > Print detailed error output.
 
 # DESCRIPTION
 
-**pageres** captures screenshots of websites at specified viewport sizes. It's useful for responsive design testing.
+**pageres** captures screenshots of websites at specified viewport sizes. It's useful for responsive design testing. URLs and sizes can be given in any order; the URL may also be a local file path. Screenshots are saved in the current directory.
 
-Multiple viewport sizes can be specified in a single command. Each size produces a separate image.
+Multiple viewport sizes can be specified in a single command. Each size produces a separate image. Arguments can be grouped with square brackets, and options inside a group override the outer ones.
 
 Full-page screenshots capture content below the fold. Cropping limits output to visible viewport.
 
@@ -120,7 +120,7 @@ Output supports PNG and JPEG formats. Filenames can include URL and size variabl
 
 # CAVEATS
 
-Requires headless Chrome/Chromium. JavaScript-heavy sites may need delays. Some sites block automated screenshots.
+Requires Node.js; screenshots are taken with headless Chrome via Puppeteer. Device keywords (e.g. _iphone 5s_) were removed in pageres 9.0, use explicit sizes instead. There is no output directory option, so **cd** into the target directory first. JavaScript-heavy sites may need delays. Some sites block automated screenshots.
 
 # HISTORY
 
@@ -129,3 +129,9 @@ Requires headless Chrome/Chromium. JavaScript-heavy sites may need delays. Some 
 # SEE ALSO
 
 [chromium](/man/chromium)(1), [puppeteer](/man/puppeteer)(1), [shot-scraper](/man/shot-scraper)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/sindresorhus/pageres-cli)```
+
+<!-- verified: 2026-11-23 -->

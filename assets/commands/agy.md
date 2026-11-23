@@ -1,94 +1,136 @@
 # TAGLINE
 
-Google Antigravity IDE launcher and command-line client
+Google Antigravity CLI: AI coding agent in the terminal
 
 # TLDR
 
-**Launch Antigravity** in the current directory
+**Start an interactive session** in the current directory
 
-```agy .```
+```agy```
 
-**Open a specific project folder** in Antigravity
+**Start a session with an initial prompt**
 
-```agy [path/to/project]```
+```agy -i "[explain this codebase]"```
 
-**Open a specific file** for editing
+**Run a single prompt non-interactively** and print the result
 
-```agy [path/to/file]```
+```agy -p "[summarize the changes in this branch]"```
 
-**Open a file at a specific line**
+**Output headless results as JSON**
 
-```agy --goto [path/to/file]:[line]```
+```agy -p "[prompt]" --output-format json```
 
-**Start a new window** rather than reusing an existing one
+**Continue the most recent conversation**
 
-```agy --new-window [path/to/project]```
+```agy -c```
 
-**Show installed version**
+**Pick a model** for the session (list names with agy models)
 
-```agy --version```
+```agy --model "[model name]"```
+
+**Start in plan mode** with an extra workspace directory
+
+```agy --mode plan --add-dir [path/to/other/repo]```
+
+**Run sandboxed**
+
+```agy --sandbox```
 
 # SYNOPSIS
 
-**agy** [_options_] [_path_ ...]
+**agy** [_options_]
+
+**agy** **models** | **agents**
 
 # PARAMETERS
 
-**-n**, **--new-window**
-> Open a new window instead of reusing an existing one.
+**-i**, **--prompt-interactive** _PROMPT_
+> Run an initial prompt, then keep the interactive session open.
 
-**-r**, **--reuse-window**
-> Reuse the most recently active window.
+**-p**, **--print**, **--prompt** _PROMPT_
+> Run one prompt non-interactively (headless) and print the response.
 
-**-g**, **--goto** _file:line[:column]_
-> Open the file at the given line (and optional column).
+**-c**, **--continue**
+> Continue the most recent conversation.
 
-**-d**, **--diff** _file1 file2_
-> Open a diff editor comparing two files.
+**--conversation** _ID_
+> Resume a conversation by ID.
 
-**-a**, **--add** _folder_
-> Add the folder to the most recently active window.
+**--model** _MODEL_
+> Model for the session; **agy models** lists valid names.
 
-**-w**, **--wait**
-> Wait for the files to be closed before returning.
+**--effort** _LEVEL_
+> Reasoning effort, from low up to max depending on the model.
 
-**--user-data-dir** _DIR_
-> Use a custom directory for user data.
+**--agent** _NAME_
+> Agent for the session; **agy agents** lists valid names.
 
-**--extensions-dir** _DIR_
-> Use a custom location for installed extensions.
+**--mode** _MODE_
+> Execution mode: accept-edits, auto, or plan. **auto** requires the terminal sandbox.
 
-**--list-extensions**
-> List installed extensions and exit.
+**--add-dir** _DIR_
+> Add a directory to the workspace. Repeatable.
 
-**--install-extension** _EXT_
-> Install or update the given extension.
+**--output-format** _FORMAT_
+> Print-mode output: text (default), json, or stream-json.
 
-**--uninstall-extension** _EXT_
-> Uninstall the given extension.
+**--input-format** _FORMAT_
+> Print-mode input: text (default) or stream-json.
 
-**-v**, **--version**
+**--json-schema** _SCHEMA_
+> Schema string or file enforcing structured output in print mode.
+
+**--print-timeout** _DURATION_
+> Time limit for print mode (0 waits for the turn to complete).
+
+**--sandbox**
+> Run in the terminal sandbox with OS-level containment.
+
+**--dangerously-skip-permissions**
+> Approve all tool permission requests without prompting.
+
+**--remote-agent**, **--project** _ID_, **--new-project**
+> Run conversations on Remote Agents in a given or new project.
+
+**--log-file** _PATH_
+> Override the log file path.
+
+**--version**
 > Print version information and exit.
 
-**-h**, **--help**
+**--help**
 > Print help and exit.
 
 # DESCRIPTION
 
-**agy** is the command-line launcher for **Google Antigravity**, an AI-first development environment built on the Visual Studio Code foundation. It opens files, folders, and workspaces in the Antigravity editor and provides access to its agentic coding features, including the **Gemini**-powered agent panel and the Manager surface for coordinating multiple AI agents.
+**agy** is the **Antigravity CLI**, a terminal user interface for Google's **Antigravity** agentic coding platform and the successor to the Gemini CLI. It reads and edits code, runs shell commands, produces reviewable artifacts such as plans and walkthroughs, and supports skills, hooks, subagents and plugins, powered by **Gemini** models.
 
-The launcher follows the conventions of VS Code style CLIs: paths passed as positional arguments are opened as either files or folders, and flags control window behavior, extensions, and user-data directories. On macOS it is typically installed via the "Install 'agy' command in PATH" action from inside Antigravity; on Linux distributions the binary may also be exposed as **antigravity**, in which case a symlink such as **/usr/local/bin/agy → /usr/bin/antigravity** is commonly used to satisfy tools that detect Antigravity by the **agy** name.
+Inside a session, slash commands such as **/plan**, **/model**, **/permissions**, **/resume**, **/compact**, **/diff**, **/usage** and **/exit** control the agent, **!** toggles shell mode, and **Shift+Tab** cycles execution modes (auto, plan, default, accept-edits). Tool permission modes range from request-review (default) to proceed-in-sandbox, always-proceed and strict.
 
-In addition to opening the GUI, **agy** is the integration point for the Gemini CLI and other tools that delegate edits or sessions to Antigravity. It does not run a headless agent itself; for that, Antigravity exposes separate companion binaries.
+# CONFIGURATION
+
+**~/.gemini/antigravity-cli/settings.json**
+> User settings such as color scheme, model, status line and trusted workspaces; also editable with **/config** or **/settings**.
+
+**GEMINI_API_KEY**
+> API key for direct Gemini API access when the model provider is set to gemini.
 
 # CAVEATS
 
-On some Linux installations the binary is named **antigravity**; create a symlink to **agy** if other tooling (for example the Gemini CLI) expects that name. The CLI is in active development and flag behavior closely mirrors VS Code, so subtle differences may appear between releases.
+Requires signing in with a Google account on first run. The installer places the binary in **~/.local/bin/agy**, which must be on PATH. **--dangerously-skip-permissions** and **--mode auto** let the agent act without review; use them only in trusted or sandboxed environments. Gemini CLI configuration can be migrated with **agy plugin import gemini**.
 
 # HISTORY
 
-Antigravity was introduced by **Google** in **November 2025** as an "agent-first" IDE fork of Visual Studio Code, with the **agy** launcher shipped alongside the desktop application for Linux, macOS, and Windows. The tool is closely tied to the Gemini model family and to Google's broader investment in agentic developer tools.
+Google released the **Antigravity** IDE, an agent-first fork of Visual Studio Code, in **November 2025**; early on, **agy** was also used as the shell launcher for that editor. At **Google I/O in May 2026** Google announced Antigravity 2.0 together with the standalone **Antigravity CLI** (**agy**), retiring the Gemini CLI for individual users in its favor.
 
 # SEE ALSO
 
-[code](/man/code)(1), [gemini](/man/gemini)(1), [claude](/man/claude)(1)
+[gemini](/man/gemini)(1), [claude](/man/claude)(1), [codex](/man/codex)(1), [copilot](/man/copilot)(1), [code](/man/code)(1)
+
+# RESOURCES
+
+```[Homepage](https://antigravity.google)```
+
+```[Documentation](https://antigravity.google/docs/cli/reference/)```
+
+<!-- verified: 2026-11-23 -->

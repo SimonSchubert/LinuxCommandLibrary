@@ -8,6 +8,10 @@ List available Python interpreter versions on Debian
 
 ```pyversions -i```
 
+**List installed versions as bare numbers**
+
+```pyversions -i -v```
+
 **Show supported versions**
 
 ```pyversions -s```
@@ -16,13 +20,17 @@ List available Python interpreter versions on Debian
 
 ```pyversions -d```
 
-**Show requested versions**
+**Show versions requested** by the package in the current directory
 
 ```pyversions -r```
 
+**Resolve a version string**
+
+```pyversions -r "[>= 2.6]"```
+
 # SYNOPSIS
 
-**pyversions** [_options_]
+**pyversions** [**-h**] [**-v**] [_options_]
 
 # PARAMETERS
 
@@ -35,21 +43,24 @@ List available Python interpreter versions on Debian
 **-d**, **--default**
 > Print the default Python version (target of **/usr/bin/python**).
 
-**-r**, **--requested** [_pkg_|_setup.py_|_debian/control_]
-> Print the Python versions requested by a package source (defaults to the **debian/control** in the current directory).
+**-r**, **--requested** [_version-string_|_control-file_]
+> Read the **XS-Python-Version** field of a control file (falling back to **debian/pyversions**) and print the matching versions. The argument is treated as a version string if it is not a file name. Without an argument, checks **debian/control** and **debian/pyversions**, then falls back to the supported versions.
 
 **-v**, **--version**
-> Combined with one of the above, also print the corresponding interpreter path.
+> Limit the output to version numbers (e.g. _2.7_ instead of _python2.7_).
+
+**-h**, **--help**
+> Print a help text.
 
 # DESCRIPTION
 
-**pyversions** is a Debian-specific helper that reports information about **Python 2** interpreter versions available on the system. It lists installed versions, the default version, the versions supported by the current Debian release, and the versions a source package requests via its **X-Python-Version** field in **debian/control**. It is used by Debian's Python packaging infrastructure (debhelper, dh_python2) to drive build-time decisions.
+**pyversions** is a Debian-specific helper that reports information about **Python 2** interpreter versions available on the system. It lists installed versions, the default version, the versions supported by the current Debian release, and the versions a source package requests via its **XS-Python-Version** field in **debian/control**. It is used by Debian's Python packaging infrastructure (debhelper, dh_python2) to drive build-time decisions.
 
-The Python 3 counterpart is **py3versions**, which is the tool you should use today; **pyversions** itself was retired together with Python 2 in **Debian 11 (bullseye)** and removed from later releases.
+The Python 3 counterpart is **py3versions**, which is the tool you should use today; **pyversions** itself was retired together with Python 2: the last releases shipping it are **Debian 11 (bullseye)** and **Ubuntu 22.04**.
 
 # CAVEATS
 
-Debian/Ubuntu specific and Python-2 only. The package providing it (**python**) was dropped in Debian 11+ and Ubuntu 20.04+. On modern systems, use **py3versions** instead.
+Debian/Ubuntu specific and Python-2 only. Its last home was the **python2-minimal** package, which was removed in Debian 12+ and Ubuntu 24.04+. On modern systems, use **py3versions** instead.
 
 # HISTORY
 
@@ -59,3 +70,10 @@ Debian/Ubuntu specific and Python-2 only. The package providing it (**python**) 
 
 [python](/man/python)(1), [py3versions](/man/py3versions)(1), [update-alternatives](/man/update-alternatives)(1)
 
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/cpython-team/python-defaults)```
+
+```[Documentation](https://manpages.debian.org/bullseye/python2-minimal/pyversions.1.en.html)```
+
+<!-- verified: 2026-11-23 -->
