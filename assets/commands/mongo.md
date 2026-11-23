@@ -14,19 +14,23 @@ legacy MongoDB shell
 
 **Connect with authentication**
 
-```mongo -u [user] -p [password] [dbname]```
+```mongo --host [host] -u [user] -p --authenticationDatabase admin [dbname]```
 
 **Execute JavaScript file**
 
 ```mongo [dbname] [script.js]```
 
-**Evaluate expression**
+**Evaluate expression** without the banner
 
-```mongo --eval "[db.collection.find()]"```
+```mongo --quiet [dbname] --eval "[printjson(db.collection.findOne())]"```
 
-**Connect with SSL**
+**Connect with TLS**
 
-```mongo --ssl --host [host]```
+```mongo --tls --host [host]```
+
+**Start without connecting** to a database
+
+```mongo --nodb```
 
 # SYNOPSIS
 
@@ -37,27 +41,42 @@ legacy MongoDB shell
 _DB_ADDRESS_
 > Database connection string.
 
-**-u** _USER_
+**--host** _HOST_
+> Server hostname (default localhost). Also accepts _replSet/host1,host2_.
+
+**--port** _PORT_
+> Server port (default 27017).
+
+**-u**, **--username** _USER_
 > Username for authentication.
 
-**-p** _PASSWORD_
-> Password for authentication.
+**-p**, **--password** [_PASSWORD_]
+> Password for authentication. Prompts if the value is omitted.
+
+**--authenticationDatabase** _DB_
+> Database in which the user was created.
 
 **--eval** _EXPR_
 > Evaluate JavaScript expression.
 
-**--ssl**
-> Use SSL connection.
+**--quiet**
+> Suppress the startup banner and most log output.
 
-**--host** _HOST_
-> Server hostname.
+**--nodb**
+> Start the shell without connecting to a database.
+
+**--shell**
+> Enter the interactive shell after running the given files or **--eval**.
+
+**--tls**
+> Use a TLS connection (MongoDB 4.2+). **--ssl** is the older, deprecated alias.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**mongo** is the original interactive shell shipped with the **MongoDB** server up through release **4.4**. It is a JavaScript REPL that connects to a **mongod** or **mongos** process via the MongoDB wire protocol and exposes the database as a tree of JavaScript objects: **db**, **db.collection**, and helper methods like **find()**, **insertOne()**, and **aggregate()**.
+**mongo** is the original interactive shell shipped with the **MongoDB** server up through release **5.0**. It is a JavaScript REPL that connects to a **mongod** or **mongos** process via the MongoDB wire protocol and exposes the database as a tree of JavaScript objects: **db**, **db.collection**, and helper methods like **find()**, **insertOne()**, and **aggregate()**.
 
 Connections accept a MongoDB URI (**mongodb://** or **mongodb+srv://**) or individual flags such as **--host**, **--port**, **-u** / **-p** / **--authenticationDatabase** for authentication, and **--tls** / **--ssl** for encrypted transports. A trailing JavaScript file plus **--eval** lets the shell be used in scripts, returning the result of the last expression on stdout.
 
@@ -75,3 +94,8 @@ The **mongo** shell appeared with the very first public MongoDB releases in **20
 
 [mongosh](/man/mongosh)(1), [mongod](/man/mongod)(1), [mongoimport](/man/mongoimport)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/mongodb/mongo)```
+
+<!-- verified: 2026-11-23 -->

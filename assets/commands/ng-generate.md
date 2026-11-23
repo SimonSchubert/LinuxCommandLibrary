@@ -12,9 +12,13 @@ creates Angular artifacts using schematics
 
 ```ng generate service [name]```
 
-**Generate module**
+**Generate a route guard**
 
-```ng generate module [name]```
+```ng generate guard [name]```
+
+**Generate component** without a test file and with SCSS
+
+```ng generate component [name] --skip-tests --style scss```
 
 **Generate with shorthand**
 
@@ -56,12 +60,18 @@ creates Angular artifacts using schematics
 > Add a new application to a multi-project workspace.
 
 **environments**
-> Create environment files for a project.
+> Create environment files for a project (Angular 15+).
+
+**service-worker** / **web-worker** / **app-shell** / **config**
+> Add a service worker, a web worker, an app shell, or a CLI config file (karma, browserslist).
 
 # PARAMETERS
 
 **--dry-run**, **-d**
 > Show what would be generated without writing files.
+
+**--defaults**
+> Disable interactive prompts for options that have a default.
 
 **--force**
 > Overwrite existing files.
@@ -73,7 +83,16 @@ creates Angular artifacts using schematics
 > Do not import the generated piece into its NgModule.
 
 **--standalone**
-> Generate a standalone component/directive/pipe (Angular 14+).
+> Generate a standalone component/directive/pipe. Default **true** since Angular 17; use **--standalone false** for NgModule-based declarations.
+
+**--flat**
+> Create files at the top level of the target path instead of in their own folder.
+
+**--change-detection**, **-c** _strategy_
+> Component change detection strategy. Current releases accept **OnPush** (the default) or **Eager**; older releases used **Default** or **OnPush**.
+
+**--type** _type_
+> Append a type to the file name (for example _name.component.ts_). Since Angular 20 generated files omit the type suffix by default.
 
 **--inline-template**, **-t**
 > Place HTML inline in the component decorator.
@@ -84,18 +103,18 @@ creates Angular artifacts using schematics
 **--style** _ext_
 > Stylesheet extension: css, scss, sass, less, none.
 
-**--prefix** _prefix_
+**--prefix**, **-p** _prefix_
 > Override the project's selector prefix.
 
 **--export**
-> Export the generated declaration from its NgModule.
+> Export the generated declaration from its NgModule (non-standalone only).
 
 **--project** _name_
 > Target a specific project in the workspace.
 
 # DESCRIPTION
 
-**ng generate** creates Angular artifacts using schematics. It scaffolds components, services, modules, directives, pipes, guards, interceptors, and more, wiring them into the project's NgModule (or generating them as standalone in newer Angular versions) and adding matching .spec.ts files. The shorthand **ng g** is equivalent.
+**ng generate** creates Angular artifacts using schematics. It scaffolds components, services, modules, directives, pipes, guards, interceptors, and more, generating them as standalone (the default since Angular 17) or wiring them into an NgModule and adding matching .spec.ts files. The shorthand **ng g** is equivalent.
 
 Schematics live in **@schematics/angular** and other npm packages; libraries shipped via **ng add** can register their own (for example, **@angular/material** adds **material:navigation**). The available list can be inspected with **ng generate --help**.
 
@@ -107,3 +126,10 @@ Must be run inside an Angular CLI workspace (a directory containing **angular.js
 
 [ng](/man/ng)(1), [ng-add](/man/ng-add)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/angular/angular-cli)```
+
+```[Documentation](https://angular.dev/cli/generate)```
+
+<!-- verified: 2026-11-23 -->

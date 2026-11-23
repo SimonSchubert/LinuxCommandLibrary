@@ -4,70 +4,94 @@ Manage IoT device fleets
 
 # TLDR
 
-**Login** to Balena Cloud
+**Login** to balenaCloud
 
 ```balena login```
 
-**List** devices
+**List** devices, optionally filtered by fleet
 
-```balena devices```
+```balena device list --fleet [myorg/myfleet]```
 
-**Push** code to device
+**Create** a new fleet for a device type
 
-```balena push [myApp]```
+```balena fleet create [MyFleet] --type [raspberrypi4-64]```
 
-**SSH** into device
+**Push** source code to be built and deployed to a fleet
 
-```balena ssh [device-uuid]```
+```balena push [myorg/myfleet]```
 
-**View** logs
+**Push** to a local mode device on the network
 
-```balena logs [device-uuid]```
+```balena push [192.168.1.10]```
 
-Create **new application**
+**SSH** into a device's host OS or a service container
 
-```balena app create [myApp]```
+```balena device ssh [device-uuid] [service]```
+
+**Stream** device logs
+
+```balena device logs [device-uuid] --tail```
+
+**Set** a fleet-wide environment variable
+
+```balena env set [NAME] [value] --fleet [myorg/myfleet]```
+
+**Detect** balenaOS devices on the local network
+
+```balena device detect```
 
 # SYNOPSIS
 
-**balena** _command_ [_options_]
+**balena** _command_ [_subcommand_] [_arguments_] [_options_]
 
 # DESCRIPTION
 
-**balena** is the command-line interface for Balena (formerly Resin.io), a platform for deploying and managing IoT device fleets. It enables building, deploying, and monitoring containerized applications on edge devices.
+**balena** is the command-line interface for balenaCloud and openBalena (formerly Resin.io), a platform for deploying and managing fleets of IoT devices running **balenaOS**. It builds, deploys, and monitors containerized applications on edge devices.
 
-The CLI provides tools for device provisioning, application deployment, remote access, and fleet management.
+The CLI provides tools for device provisioning, OS image configuration and flashing, release deployment, remote access, and fleet management. Commands are grouped as _noun verb_ (for example **device list**, **fleet create**, **env set**).
 
 # PARAMETERS
 
 **login**
-> Authenticate with Balena Cloud
+> Authenticate with balenaCloud (web, token, credentials or API key)
 
-**push** _application_
-> Deploy code to application
+**push** _fleet_|_device-ip_
+> Build releases on balenaCloud builders, or on a local mode device
 
-**devices**
-> List devices
+**build** / **deploy**
+> Build images locally with Docker and deploy them as a release
 
-**ssh** _device_
-> SSH into device
+**device list**
+> List devices (filter with **--fleet**)
 
-**logs** _device_
-> View device logs
+**device ssh** _fleet_|_uuid_|_ip_ [_service_]
+> Open a shell on the host OS or in a service container
 
-**scan**
-> Scan for local Balena devices
+**device logs** _uuid_|_ip_
+> Show device logs (**--tail** to stream, **--service**, **--system** to filter)
 
-**os**
-> OS image management commands
+**device detect**
+> Scan the local network for balenaOS devices
 
-**env**
-> Environment variable management
+**device tunnel** _uuid_ **-p** _remote:local_
+> Tunnel local TCP ports to a device
 
-**--application**, **-a** _name_
-> Application name
+**fleet create** _name_
+> Create a fleet (**--type**, **--organization**)
 
-**--device**, **-d** _uuid_
+**os download** / **os configure**
+> Download and configure balenaOS images
+
+**local flash** _image_
+> Flash an image to a local drive
+
+**env list** / **env set** / **env rm**
+> Manage environment and configuration variables
+
+**-f**, **--fleet** _name|slug_
+> Fleet name or slug (slug **org/fleet** preferred)
+
+**-d**, **--device** _uuid_
 > Device UUID
 
 # FEATURES
@@ -85,25 +109,35 @@ The CLI provides tools for device provisioning, application deployment, remote a
 # Login
 balena login
 
-# Create app
-balena app create myApp
+# Create fleet
+balena fleet create myFleet --type raspberrypi4-64
 
 # Push code
 cd my-project
-balena push myApp
+balena push myorg/myfleet
 
 # Monitor
-balena logs <device>
+balena device logs <device-uuid> --tail
 ```
 
 # CAVEATS
 
-Requires Balena account. Device must run BalenaOS. Internet connectivity needed for cloud features. Some operations require payment plan. Local mode available for offline development.
+Requires a balenaCloud account (or an openBalena server). Devices must run balenaOS. Internet connectivity needed for cloud features. Some operations require payment plan. Local mode available for offline development. Command names changed across major versions: **app** became **fleet** in v13, and older top-level commands such as **devices**, **ssh**, **logs** and **scan** were replaced by **device list**, **device ssh**, **device logs** and **device detect**.
 
 # HISTORY
 
-**Balena CLI** was developed by Balena (formerly Resin.io) starting around **2013** as a platform for IoT fleet management and edge computing.
+**Balena CLI** was developed by Balena (formerly Resin.io, renamed in **2018**) as the command-line client for its IoT fleet management and edge computing platform, which started around **2013**. It is written in TypeScript on Node.js.
 
 # SEE ALSO
 
 [docker](/man/docker)(1), [kubectl](/man/kubectl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/balena-io/balena-cli)```
+
+```[Homepage](https://www.balena.io/)```
+
+```[Documentation](https://docs.balena.io/reference/balena-cli/latest/)```
+
+<!-- verified: 2026-11-23 -->

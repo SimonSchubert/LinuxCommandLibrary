@@ -8,11 +8,11 @@ GNOME Shell integrated debugger and inspector
 
 ```> Alt+F2, type "lg", press Enter```
 
-**Enable Looking Glass on systems where it is hidden**
+**Re-enable Looking Glass** if it was disabled (enabled by default)
 
 ```gsettings set org.gnome.shell development-tools true```
 
-**Re-disable Looking Glass**
+**Disable Looking Glass** and the other Alt+F2 developer commands
 
 ```gsettings set org.gnome.shell development-tools false```
 
@@ -24,9 +24,13 @@ GNOME Shell integrated debugger and inspector
 
 ```> r([number])```
 
+**Inspect** the actor under the given screen coordinates
+
+```> inspect([x], [y])```
+
 **Slow GNOME Shell animations for debugging**
 
-```> St.set_slow_down_factor([factor])```
+```> St.Settings.get().slow_down_factor = [5]```
 
 # SYNOPSIS
 
@@ -36,7 +40,7 @@ GNOME Shell integrated debugger and inspector
 
 **Looking Glass** is the integrated debugger, inspector, and JavaScript REPL of **GNOME Shell**. It is opened from inside a running GNOME session by pressing **Alt+F2** and entering the keyword **lg**. It is intended for debugging the shell itself and writing or troubleshooting GNOME Shell extensions.
 
-The interface offers four panes. The **Evaluator** is an interactive JavaScript prompt with full access to the GNOME Shell process, including the **St**, **Clutter**, **Meta**, and **GLib** APIs. The **Windows** pane lists open windows. The **Extensions** pane shows installed shell extensions and links to their source. The **Errors** pane displays logged errors (in newer releases these are typically routed to **journalctl**).
+The interface offers five tabs. The **Evaluator** is an interactive JavaScript prompt with full access to the GNOME Shell process, including the **St**, **Clutter**, **Meta**, **Shell**, **Gio** and **GLib** APIs. The **Windows** tab lists open windows. The **Extensions** tab shows installed shell extensions, their state and errors. The **Actors** tab shows the scene graph as a tree. The **Flags** tab toggles Clutter and Mutter debug flags. Shell log output and errors go to the system journal (**journalctl /usr/bin/gnome-shell**).
 
 A **picker tool** in the top-left lets the user click a UI element on screen to retrieve the corresponding actor in the evaluator for inspection.
 
@@ -50,16 +54,19 @@ Press **Esc** in the evaluator pane to dismiss Looking Glass.
 **r(_n_)**
 > Reference the result with index _n_.
 
-**St.set_slow_down_factor(_f_)**
-> Multiply animation durations by _f_ (>1 makes them slower); useful when debugging transitions.
+**inspect(_x_, _y_)**
+> Return the actor at the given stage coordinates.
+
+**St.Settings.get().slow_down_factor = _f_**
+> Multiply animation durations by _f_ (>1 makes them slower); useful when debugging transitions. The toolbar also has a slow-down toggle.
 
 # CONFIGURATION
 
-Looking Glass is exposed to GNOME Shell through the **org.gnome.shell** GSettings schema. Set **development-tools** to **true** to enable it on distributions where it is hidden by default. Command history is persisted to dconf.
+Looking Glass is exposed to GNOME Shell through the **org.gnome.shell** GSettings schema. The **development-tools** key (default **true**) enables Looking Glass and the other internal Alt+F2 commands (**rt** to reload the theme, **debugexit**). Evaluator history is stored in the **looking-glass-history** key.
 
 # CAVEATS
 
-Not a stand-alone CLI tool: **lg** is a keyword interpreted by GNOME Shell's run dialog, not a binary in **PATH**. Available only inside a running GNOME Shell session (X11 or Wayland). It runs JavaScript directly inside the shell process, so a buggy snippet can freeze or crash the desktop session.
+Not a stand-alone CLI tool: **lg** is an internal command interpreted by GNOME Shell's run dialog, not a binary in **PATH**. Available only inside a running GNOME Shell session (X11 or Wayland). It runs JavaScript directly inside the shell process, so a buggy snippet can freeze or crash the desktop session.
 
 # HISTORY
 
@@ -68,3 +75,11 @@ Looking Glass was introduced with **GNOME Shell 3.0** in **April 2011** as an in
 # SEE ALSO
 
 [gsettings](/man/gsettings)(1), [dconf](/man/dconf)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.gnome.org/GNOME/gnome-shell)```
+
+```[Documentation](https://gjs.guide/extensions/development/debugging.html)```
+
+<!-- verified: 2026-11-23 -->

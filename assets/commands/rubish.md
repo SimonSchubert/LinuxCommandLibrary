@@ -30,11 +30,11 @@ UNIX shell written in pure Ruby
 
 # DESCRIPTION
 
-**rubish** is an interactive UNIX shell implemented entirely in Ruby. It parses familiar bash syntax and compiles it to Ruby for execution, so existing scripts keep working while the full Ruby language becomes available on the command line. It can be used as a login shell via **chsh**.
+**rubish** is an interactive UNIX shell implemented entirely in Ruby. It parses bash syntax (aiming for full bash compatibility) and compiles it to Ruby code executed by the Ruby VM, so existing scripts keep working while the full Ruby language becomes available on the command line. It can be used as a login shell via **chsh**.
 
 The shell blurs the line between shell and scripting language. External commands return objects that can be chained with dot notation (for example **ls().sort.uniq**), output can be processed line by line with Ruby iterators such as **.each** and **.map**, and Ruby expressions may be used as conditions in **if**, **while**, and **until** by wrapping them in **{ }**. A line beginning with a capital letter is evaluated directly as Ruby code, and functions can be defined with Ruby's **def...end** syntax.
 
-For familiarity it also supports a number of zsh conveniences, including **setopt**, **autoload**, and abbreviated path expansion, along with custom dynamically-generated prompts and lazy loading of slow initializations in background threads.
+For familiarity it also supports a number of zsh conveniences, including **setopt**, **compdef**/**compinit**, **autoload**, **RPROMPT**, and abbreviated path expansion, along with fish-style inline auto-suggestions, tab completion derived from each tool's **--help** output, custom Ruby prompts, and lazy loading of slow initializations in background threads.
 
 # PARAMETERS
 
@@ -42,11 +42,20 @@ For familiarity it also supports a number of zsh conveniences, including **setop
 > Execute _command_ as a single string and exit.
 
 **-r**
-> Restricted mode: disable Ruby integration features for running untrusted scripts.
+> Restricted mode: disable Ruby integration (inline evaluation, lambdas, blocks, Ruby conditions, array literals) for running untrusted scripts.
 
 # CONFIGURATION
 
-Rubish is configured in Ruby rather than a bespoke config language. Prompts are defined as Ruby functions for fully dynamic prompt strings, options can be toggled with zsh-style **setopt**, and expensive startup work can be deferred with lazy loading so the shell stays responsive.
+**~/.config/rubish/config** or **~/.rubishrc**
+> Interactive shell startup file (falls back to **~/.bashrc**). A project-local **./.rubishrc** is also read.
+
+**~/.config/rubish/profile** or **~/.rubish_profile**
+> Login shell startup file, read after **/etc/profile** (falls back to **~/.bash_profile**, **~/.bash_login**, **~/.profile**).
+
+**~/.config/rubish/logout** or **~/.rubish_logout**
+> Read when a login shell exits.
+
+Prompts can be defined as Ruby functions (**rubish_prompt**, **rubish_right_prompt**), and slow initializations such as **rbenv init** can be wrapped in **lazy_load { ... }** blocks.
 
 # CAVEATS
 
@@ -54,8 +63,14 @@ Rubish requires a compatible Ruby interpreter to be available. As a young projec
 
 # HISTORY
 
-**rubish** was created by **Atsushi Matsuda** (amatsuda), a prominent Ruby on Rails core contributor, as a shell written in pure Ruby. It is released as open-source software under the **MIT** license.
+**rubish** was created in **2026** by **Akira Matsuda** (amatsuda), a Ruby and Ruby on Rails committer, as a shell written in pure Ruby. It is released as open-source software under the **MIT** license.
 
 # SEE ALSO
 
 [bash](/man/bash)(1), [zsh](/man/zsh)(1), [fish](/man/fish)(1), [ruby](/man/ruby)(1), [irb](/man/irb)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/amatsuda/rubish)```
+
+<!-- verified: 2026-11-23 -->

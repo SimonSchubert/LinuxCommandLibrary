@@ -26,9 +26,9 @@ Unicode-aware uppercase filter
 
 # DESCRIPTION
 
-**uc** reads text from standard input (or the named files), applies the full Unicode **toUpper** case mapping, and writes the result to standard output. Unlike a naive **tr 'a-z' 'A-Z'**, it handles case folds that change length (German **ß** → **SS**, the **ﬃ** ligature → **FFI**) and respects language-specific rules for Greek, Cyrillic, Armenian, and other scripts.
+**uc** reads text from standard input (or the named files), decomposes it (NFD), applies Perl's full Unicode uppercase mapping, recomposes it (NFC), and writes the result to standard output. Unlike a naive **tr 'a-z' 'A-Z'**, it handles case folds that change length (German **ß** to **SS**, the **ﬃ** ligature to **FFI**) and works for Greek, Cyrillic, Armenian, and other cased scripts.
 
-It ships as one of roughly thirty small filter scripts in **Tom Christiansen's Unicode::Tussle** Perl distribution, alongside companions such as **lc** (lowercase), **tc** (titlecase), **nfd**/**nfc**/**nfkd**/**nfkc** (normalization), **ucsort**, **uniwc**, and **tcgrep** — together forming a Unicode-correct replacement for many GNU coreutils.
+It ships as one of roughly thirty small filter scripts in **Tom Christiansen's Unicode::Tussle** Perl distribution, alongside companions such as **lc** (lowercase), **tc** (titlecase), **nfd**/**nfc**/**nfkd**/**nfkc** (normalization), **ucsort**, **uniwc**, and **tcgrep**, together forming a Unicode-correct replacement for many GNU coreutils.
 
 # CAVEATS
 
@@ -40,4 +40,10 @@ The name **uc** is ambiguous and collides with Perl's built-in **uc()** function
 
 # SEE ALSO
 
-[tc](/man/tc)(1), [tr](/man/tr)(1), [iconv](/man/iconv)(1)
+[tr](/man/tr)(1), [iconv](/man/iconv)(1), [perl](/man/perl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/briandfoy/unicode-tussle)```
+
+<!-- verified: 2026-11-23 -->

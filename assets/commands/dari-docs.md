@@ -1,88 +1,111 @@
 # TAGLINE
 
-Test documentation clarity with simulated developer agents
+Check whether docs changes help coding agents complete real tasks
 
 # TLDR
 
-**Check** local docs against a developer task
+**Set up** the repository (writes the config and a GitHub workflow)
 
-```dari-docs check . --managed --task "[Install the SDK and make a first API call]"```
+```dari-docs init```
 
-**Optimize** docs and download proposed edits
+**Add a task** that a reader of the docs should be able to complete
 
-```dari-docs optimize . --managed --wait --task "[Install the SDK and make a first API call]"```
+```dari-docs tasks add "[Install the SDK and make a first API call]"```
 
-**Check** a public docs URL instead of a local directory
+**Add tasks** from a file (one per paragraph or bullet)
 
-```dari-docs check [https://docs.example.com] --managed --task "[Set up auth]"```
+```dari-docs tasks add --file [docs-tasks.txt]```
 
-**Authenticate** with the hosted dari.dev service
+**List tasks** and their approval state
 
-```dari-docs auth login```
+```dari-docs tasks list```
 
-**Wait** for a managed run to complete inside the same invocation
+**Preview** the changed docs and ablation scripts without calling SelfBench
 
-```dari-docs check . --managed --wait --task "[...]"```
+```dari-docs check --base [origin/main] --head [HEAD] --dry-run```
+
+**Run a check** for a pull request without commenting on it
+
+```dari-docs check --pr [123] --no-comment```
+
+**Stop** a pull request's comparison and delete its ablations
+
+```dari-docs cleanup --pr [123]```
 
 # SYNOPSIS
 
-**dari-docs** _command_ [_path_|_url_] [_options_]
+**dari-docs** _command_ [_options_]
 
-Commands: **check**, **optimize**, **auth**
+Commands: **init**, **check**, **cleanup**, **tasks add**, **tasks list**
 
 # PARAMETERS
 
-**check** _PATH_|_URL_
-> Run tester agents against the docs at _PATH_ (local directory) or _URL_ (public docs site) and report where they got stuck.
+**init**
+> Check that the repository is connected to SelfBench, pick a model and credentials, and write **.dari-docs/config.json** and **.github/workflows/dari-docs.yml**. Options: **--dir**, **--org**, **--repo**, **--model**, **--force**.
 
-**optimize** _PATH_|_URL_
-> Run tester agents and then editor agents; download proposed doc edits into **.dari-docs/updated/** without touching the repo.
+**check**
+> Compare agent results on the configured tasks with the docs before and after a change. In a pull request job it reads the PR from the GitHub event.
 
-**auth login** / **auth logout**
-> Authenticate (or sign out) against the hosted dari.dev Docs service.
+**cleanup**
+> Stop a pull request's comparison and delete its ablations.
 
-**--task** _STRING_
-> The developer task the agents should attempt using only the docs. Repeat the flag for multiple tasks.
+**tasks add** [_TEXT_]
+> Have SelfBench write a task from a scenario; options **--title**, **--file**, **--commit**, **--difficulty** (easy, medium, hard).
 
-**--managed**
-> Submit the run to hosted Dari Docs agents (default mode). Without it, the CLI expects a **self-managed** setup driven by **dari.yml**.
+**tasks list**
+> Show every task in the repository, its state, and whether checks run it.
 
-**--wait**
-> Block until the run finishes; print the report and (for **optimize**) download proposed edits.
+**--base** _REV_, **--head** _REV_
+> Revisions to compare (default: the pull request's base/head, else **origin/main** and **HEAD**).
 
-**--run-id** _ID_
-> Resume waiting on or fetch results for a previously submitted run.
+**--pr** _N_
+> Pull request number (default: from the GitHub event).
 
-**--help**
-> Show usage for the CLI or a subcommand.
+**--dry-run**
+> Print the changed docs, both ablation scripts, and the comparison without calling SelfBench.
+
+**--fresh**
+> Start a new comparison even if this exact check already ran.
+
+**--no-comment**
+> Don't comment on the pull request.
+
+**--github-token** _TOKEN_
+> Token used to comment on the pull request (default: **GITHUB_TOKEN**).
+
+**--config** _FILE_, **--repo** _OWNER/NAME_
+> Config file and connected repository to use.
 
 # DESCRIPTION
 
-**dari-docs** is a CLI for measuring whether technical documentation is clear enough for an AI agent (and, by proxy, a new developer) to complete real tasks unaided. It packages a local docs directory (or accepts a public docs URL) and submits it along with one or more **--task** descriptions to hosted tester agents. The agents read only the provided docs and attempt the task, reporting the exact points where they got blocked, misled, or had to guess.
+**dari-docs** is a CLI and GitHub bot built on **SelfBench** that measures whether a documentation change helps or hurts coding agents. For each pull request that changes docs, it builds the repository's approved tasks twice as SelfBench repo ablations, once with the changed docs as they were and once as the pull request has them, runs the chosen models on both, and posts a comment listing tasks that now pass, now fail, or fail either way.
 
-**check** stops at that diagnostic report. **optimize** additionally runs editor agents that propose concrete documentation edits to fix the issues, downloading them into **.dari-docs/updated/** for human review before any change lands in the repo.
-
-The default **--managed** mode uses Dari's hosted tester and editor agents and is the fastest way to get value. **Self-managed** mode (configured through a **dari.yml** file) lets teams customize agent prompts, skills, setup scripts, and execution environment within their own dari.dev organization.
+Only the paths matching **docs** in the config are swapped between the two runs, so the docs change is the only difference. Pushing again reuses builds for unchanged docs.
 
 # CONFIGURATION
 
-**dari.yml**
-> Project-level configuration for self-managed runs. Defines tester/editor agent prompts, skills, setup commands, and the docs surface to expose. Only read when **--managed** is not set.
+**.dari-docs/config.json**
+> Written by **init**. Lists the docs paths, **tasks**, model and credentials, plus options such as **failOnRegression**, **timeoutMinutes** (default 240) and **apiUrl** for a self-hosted SelfBench.
 
-**.dari-docs/**
-> Created by the CLI inside the target directory. **updated/** holds proposed edits from **optimize**; review and copy into the repo manually.
-
-**dari.dev account**
-> Both managed and self-managed modes require authentication via **dari-docs auth login**, which stores a token in the user's config directory.
+**SELFBENCH_API_KEY**
+> Repository secret used by the generated workflow.
 
 # CAVEATS
 
-Runs are billed against a dari.dev account and require network access; **--managed** sends the bundled docs to Dari's hosted agents, so private documentation may need self-managed mode or a private deployment. Proposed edits are agent-generated suggestions and should be reviewed for factual accuracy before merging. Public-URL inputs are fetched by the agents themselves, so paywalled or auth-gated docs cannot be evaluated that way.
+Requires a SelfBench workspace with the repository connected and the **self-bench** CLI signed in. Model and sandbox usage is billed to the workspace, and each check builds every approved task twice. One trial per task per side means a single flip can be noise. Docs changes over about 64 KB compressed are refused, and pull requests from forks are skipped.
 
 # HISTORY
 
-**dari-docs** is developed by **mupt-ai** and lives at **github.com/mupt-ai/dari-docs**, part of the broader **dari.dev** platform for agent-driven documentation quality. It launched as the agent-era successor to traditional docs-linting tools, shifting the measure of quality from style conformance to task completability.
+**dari-docs** is developed by **mupt-ai** in **Go**. Early 2026 releases ran hosted tester and editor agents via **check**/**optimize**; version **0.2.0** (November 2026) rebuilt it as a SelfBench pull-request bot.
 
 # SEE ALSO
 
-[vale](/man/vale)(1), [markdownlint](/man/markdownlint)(1), [alex](/man/alex)(1)
+[vale](/man/vale)(1), [markdownlint](/man/markdownlint)(1), [gh](/man/gh)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/mupt-ai/dari-docs)```
+
+```[Documentation](https://docs.selfbench.dev/)```
+
+<!-- verified: 2026-11-23 -->

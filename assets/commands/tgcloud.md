@@ -78,11 +78,11 @@ The tool is designed for automation and scripting workflows, allowing DevOps tea
 
 # CAVEATS
 
-Requires a TigerGraph Cloud account and active subscription. Authentication via **tgcloud login** is mandatory before other commands. Terminate operations are irreversible and delete all data in the solution unless a backup exists.
+The command names and subcommands on this page could not be verified against any official source; confirm with **tgcloud --help** on an installed binary before relying on them. Requires a TigerGraph Cloud account and active subscription. Authentication via **tgcloud login** is mandatory before other commands. Terminate operations are irreversible and delete all data in the solution unless a backup exists.
 
 # HISTORY
 
-**tgcloud** is the official CLI for **TigerGraph Cloud**, the managed offering of the TigerGraph graph database platform.
+No official TigerGraph documentation or upstream repository for a **tgcloud** binary could be found. TigerGraph's own Cloud documentation describes management through the web portal and REST APIs; the TigerGraph DevLabs **TigerGraph-CLI** (**tg cloud login**, **tg cloud list**, etc.) is the closest known command-line tool.
 
 # SEE ALSO
 
