@@ -36,6 +36,8 @@ android {
         libs.versions.android.compileSdk
             .get()
             .toInt()
+    // Compose 1.13 (BOM 2026.11.01) AARs require compile SDK 37.1.
+    compileSdkMinor = 1
     defaultConfig {
         applicationId = "com.inspiredandroid.linuxcommandbibliotheca"
         minSdk =
