@@ -14,7 +14,11 @@ Start an interactive Nix expression evaluator
 
 **Open a REPL with a flake's outputs in scope**
 
-```nix repl [.#]```
+```nix repl [.]```
+
+**Load the nixpkgs flake** (its outputs, e.g. legacyPackages, are in scope)
+
+```nix repl [nixpkgs]```
 
 **Load a Nix file's attributes into scope**
 
@@ -22,24 +26,27 @@ Start an interactive Nix expression evaluator
 
 # SYNOPSIS
 
-**nix** **repl** [_options_] [_files_]
+**nix** **repl** [_options_] [_installables_...]
 
 # PARAMETERS
 
-_FILES_
-> Nix files whose top-level attributes are brought into scope.
+_INSTALLABLES_
+> Flake references (e.g. **nixpkgs** or **.**) or, with **--file**/**--expr**, attribute paths whose attributes are brought into scope.
 
 **--expr** _EXPR_
 > Evaluate the given expression and bring its attributes into scope.
 
-**--file** _PATH_
-> Load attributes from the given Nix file (deprecated positional form still works).
+**-f**, **--file** _PATH_
+> Load attributes from the given Nix file instead of a flake.
 
 **--arg** _NAME_ _EXPR_
 > Pass the named argument as a Nix expression to the loaded file or flake.
 
 **--argstr** _NAME_ _STRING_
 > Pass the named argument as a string.
+
+**--stdin**
+> Read installables from standard input.
 
 **--help**
 > Display help information.
@@ -52,8 +59,17 @@ _FILES_
 **:l** _PATH_
 > Load a Nix file and add its attributes to the scope.
 
+**:lf** _REF_
+> Load a flake and add its outputs to the scope.
+
 **:r**
 > Reload all loaded files.
+
+**:p** _EXPR_
+> Evaluate and print the expression recursively (strict).
+
+**:doc** _EXPR_
+> Show documentation for a builtin or documented function.
 
 **:b** _EXPR_
 > Build a derivation and print its output paths.
@@ -63,6 +79,9 @@ _FILES_
 
 **:t** _EXPR_
 > Show the type of the given expression.
+
+**:log** _EXPR_
+> Show the build log of a derivation.
 
 **:q**
 > Exit the REPL (Ctrl-D also works).
@@ -75,13 +94,20 @@ Expressions are evaluated lazily. The REPL offers tab completion for attribute n
 
 # CAVEATS
 
-Part of the experimental `nix` command (enable with `experimental-features = nix-command flakes`). The older standalone `nix-repl` binary is deprecated in favor of `nix repl`. Use `:?` inside the REPL for the full command list.
+Part of the experimental `nix` command (enable with `experimental-features = nix-command flakes`). The older standalone `nix-repl` binary is obsolete; use `nix repl`. Without flakes, legacy forms like `nix repl '<nixpkgs>'` still load a path from NIX_PATH. Use `:?` inside the REPL for the full command list.
 
 # HISTORY
 
-`nix repl` provides interactive evaluation for exploring and debugging Nix expressions. It superseded the separate `nix-repl` tool when the unified `nix` command was introduced.
+`nix repl` provides interactive evaluation for exploring and debugging Nix expressions. It superseded the separate `nix-repl` tool by Eelco Dolstra when the unified `nix` command was introduced in **Nix 2.0** (2018).
 
 # SEE ALSO
 
 [nix](/man/nix)(1), [nix-eval](/man/nix-eval)(1), [nix-instantiate](/man/nix-instantiate)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/NixOS/nix)```
+
+```[Documentation](https://nix.dev/manual/nix/latest/command-ref/new-cli/nix3-repl.html)```
+
+<!-- verified: 2026-11-23 -->

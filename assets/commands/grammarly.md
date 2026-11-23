@@ -4,27 +4,23 @@ AI-powered writing assistant
 
 # TLDR
 
-**Use Grammarly browser extension**
+**Open the Grammarly web editor** from a Linux terminal
 
-```Install from browser extension store```
-
-**Use Grammarly for desktop**
-
-```grammarly```
+```xdg-open https://app.grammarly.com```
 
 # DESCRIPTION
 
-**Grammarly** is a writing assistant that checks grammar, spelling, punctuation, and style. It is primarily used through browser extensions, desktop applications, and integrations with text editors.
+**Grammarly** is a writing assistant that checks grammar, spelling, punctuation, clarity, and style. It is used through browser extensions, desktop applications, mobile keyboards, a web editor, and integrations with apps such as Microsoft Office and Google Docs. It is not a command-line tool and has no official CLI.
 
-Grammarly provides real-time suggestions as you write, with premium features including tone detection, clarity improvements, and plagiarism checking.
+Grammarly provides real-time suggestions as you write. Paid plans add full-sentence rewrites, tone adjustments, plagiarism detection, and more generative AI usage.
 
 # PLATFORMS
 
 - Browser extensions (Chrome, Firefox, Safari, Edge)
 - Desktop applications (Windows, macOS)
+- Web editor (app.grammarly.com)
 - Mobile keyboards (iOS, Android)
-- Microsoft Office integration
-- Google Docs add-on
+- Microsoft Office and Google Docs integrations
 
 # FEATURES
 
@@ -32,22 +28,28 @@ Grammarly provides real-time suggestions as you write, with premium features inc
 - Grammar and spelling
 - Punctuation
 - Conciseness
+- Limited generative AI prompts
 
 **Premium tier:**
-- Clarity and engagement
-- Word choice
-- Tone detection
+- Clarity and full-sentence rewrites
+- Word choice and fluency
+- Tone adjustments
 - Plagiarism detection
-- Expert writing assistance
 
 # CAVEATS
 
-Subscription required for full features. Sends text to cloud for analysis. Privacy considerations for sensitive documents. No official Linux desktop app.
+Subscription required for full features. Text is sent to Grammarly's cloud for analysis, which matters for sensitive or confidential documents. There is no native Linux desktop app; on Linux, use the browser extension or web editor. For offline, local, or scriptable checking, use tools like **vale** or **hunspell** instead.
 
 # HISTORY
 
-Grammarly was founded in **2009** by **Alex Shevchenko**, **Max Lytvyn**, and **Dmytro Lider** in Kyiv, Ukraine. It has grown to serve millions of users and became one of the most popular writing assistance tools.
+Grammarly was founded in **2009** by **Alex Shevchenko**, **Max Lytvyn**, and **Dmytro Lider** in Kyiv, Ukraine. It grew into one of the most widely used writing assistants. In **2025** the company acquired the Superhuman email client and renamed itself **Superhuman**, keeping Grammarly as a product name.
 
 # SEE ALSO
 
-[aspell](/man/aspell)(1), [hunspell](/man/hunspell)(1), [vale](/man/vale)(1), [proselint](/man/proselint)(1)
+[aspell](/man/aspell)(1), [hunspell](/man/hunspell)(1), [vale](/man/vale)(1), [proselint](/man/proselint)(1), [xdg-open](/man/xdg-open)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.grammarly.com/)```
+
+<!-- verified: 2026-11-23 -->

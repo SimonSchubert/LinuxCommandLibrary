@@ -6,19 +6,31 @@ Local-first read-only AI SRE for alert triage and incident investigation
 
 **Start** the web dashboard
 
-```python -m ninoxai serve```
+```ninoxai serve```
 
 **Import** alerts from a JSON file
 
-```python -m ninoxai import data/mock_alerts.json```
+```ninoxai import [data/mock_alerts.json]```
 
 **Recluster** alerts and refresh recommendations
 
-```python -m ninoxai reprocess```
+```ninoxai reprocess```
 
 **Generate** mock alert data for testing
 
-```python -m ninoxai generate-mocks```
+```ninoxai generate-mocks```
+
+**Investigate** a host or container with the AI agent
+
+```ninoxai investigate --host [container_or_host] --provider [anthropic|openai|mistral]```
+
+**Apply** database migrations
+
+```ninoxai migrate```
+
+**Run** a distributed read-only ninox runner
+
+```ninoxai runner```
 
 **Run** with Docker Compose
 
@@ -26,12 +38,14 @@ Local-first read-only AI SRE for alert triage and incident investigation
 
 # SYNOPSIS
 
-**ninoxai** _subcommand_
+**ninoxai** _subcommand_ [_options_]
+
+**python -m ninoxai** _subcommand_ [_options_]
 
 # PARAMETERS
 
 **serve**
-> Start the dashboard and API on port 8765 by default
+> Start the dashboard and API (port 8765 by default) plus the background source poller
 
 **import** _file_
 > Load alerts from JSON or CSV
@@ -40,18 +54,33 @@ Local-first read-only AI SRE for alert triage and incident investigation
 > Normalize, cluster, score noise, and rebuild recommendations
 
 **generate-mocks**
-> Create synthetic alert data for offline demos
+> Create 500 reproducible mock alerts in **data/mock_alerts.json** for offline demos
 
-**investigate**
-> Run the read-only AI investigator against an incident
+**migrate**
+> Apply database migrations (alembic upgrade head)
+
+**seed** _file_
+> Idempotently bind sources and repositories from a JSON file
+
+**poll-sources-once**
+> Run one poll cycle over all UI-configured sources
+
+**investigate** **--host** _target_ [**--provider** _name_]
+> Run the read-only AI investigator against a container or host; needs a tool-calling LLM provider
+
+**runner**
+> Run a ninox: an outbound-only, read-only runner that exposes local capabilities to the central instance
+
+**llm-test**, **grafana-test**, **github-test**, **host-test**, **aws-test**, **k8s-test**, **mcp-test**
+> Smoke-test the LLM provider or an investigator capability
 
 # DESCRIPTION
 
-**ninoxai** (also known as Nightwatch) is an open-source AI SRE layer that sits above monitoring systems such as Prometheus, Checkmk, Icinga2, Zabbix, and generic webhooks. It ingests non-OK alerts, groups related noise into incidents, scores flaky checks, and proposes tuning recommendations.
+**ninoxai** (published as the **nightwatch** repository) is an open-source AI SRE layer that sits above monitoring systems such as Prometheus Alertmanager, Checkmk, Icinga2, Zabbix, and generic webhooks, plus JSON/CSV import. It ingests non-OK alerts, groups related noise into incidents, scores flaky checks, and proposes tuning recommendations.
 
 The tool is read-only by design. It observes live systems through typed allowlisted capabilities for Docker, Kubernetes, AWS, Grafana, GitHub, Git mirrors, and host metrics, then forms a root-cause hypothesis and suggests fixes for human approval. It does not execute remediation, acknowledge alerts, or write back to production.
 
-A **template** LLM mode works fully offline with no API keys for summaries and rule-based recommendations. Connecting Anthropic, OpenAI, Mistral, or a local model enables the investigator agent.
+A **template** LLM mode works fully offline with no API keys for summaries and rule-based recommendations. Connecting a tool-calling provider (Anthropic, Mistral, or OpenAI-compatible endpoints including local Ollama, vLLM or LM Studio) enables the investigator agent. Additional tools can be added through MCP servers or Python capability plugins.
 
 Distributed **ninox** runners can expose read-only capabilities from environments the central brain cannot reach directly. Runners dial out over outbound-only connections and keep credentials local.
 
@@ -68,11 +97,13 @@ Distributed **ninox** runners can expose read-only capabilities from environment
 
 # CAVEATS
 
-Remote LLM providers receive redacted alert and investigation context. Use the offline **template** provider if no data should leave the host.
+Remote LLM providers receive redacted and secret-scrubbed alert and investigation context. Use the offline **template** provider if no data should leave the host.
 
 Connector adapters are read-only, but misconfigured credentials can still expose sensitive infrastructure metadata to the dashboard and investigator.
 
 Sandbox verification features require Docker and are marked beta.
+
+The original upstream repository (github.com/ninoxAI/nightwatch) is no longer reachable; only third-party copies remain.
 
 # SEE ALSO
 

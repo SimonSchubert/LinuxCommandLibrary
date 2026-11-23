@@ -1,6 +1,6 @@
 # TAGLINE
 
-CPU-only OCR for screenshots, images, PDFs, and webpages
+CPU-only OCR for screenshots, images, and webpages
 
 # TLDR
 
@@ -12,11 +12,11 @@ CPU-only OCR for screenshots, images, PDFs, and webpages
 
 ```textsnap [https://example.com/image.png]```
 
-**OCR a webpage** (renders the page, then extracts text)
+**OCR the most prominent image** in a webpage's main content
 
 ```textsnap [https://example.com/article]```
 
-**OCR an image already on the clipboard**, no arguments
+**OCR an image already on the clipboard** (text is copied back to the clipboard)
 
 ```textsnap```
 
@@ -24,91 +24,111 @@ CPU-only OCR for screenshots, images, PDFs, and webpages
 
 ```textsnap [image.png] -o [out.txt]```
 
-**Strip markdown** and emit plain text only
+**Batch OCR** several images into a directory, loading the models once
 
-```textsnap [image.png] --plaintext```
+```textsnap [scans/*.png] -o [path/to/outdir/]```
 
-**Cap the decoder** at 1024 generated tokens
+**Keep tables and headings** as Markdown using the vision-language model
 
-```textsnap [image.png] --max-tokens 1024```
+```textsnap [image.png] --structured```
 
-**Use a custom local model directory**
+**Never fall back** to the large model (fastest)
 
-```textsnap [image.png] --model-dir [path/to/model]```
+```textsnap [image.png] --min-quality 0```
 
-**Show progress diagnostics** on stderr
+**Judge recognized words** against French and English dictionaries
 
-```textsnap -v [image.png]```
+```textsnap [scan.png] --lang fr,en```
+
+**Print the recognized text** directly
+
+```textsnap [image.png] | xargs cat```
 
 # SYNOPSIS
 
-**textsnap** [_options_] [_FILE_|_URL_]
+**textsnap** [_options_] [_FILE_|_URL_...]
+
+**ocr** [_options_] [_FILE_|_URL_...]
 
 # PARAMETERS
 
 **-o**, **--output** _PATH_
-> Write the OCR text to _PATH_. Default: **./textsnaps/_name_\_ocr.txt**.
+> Output .txt path, or a directory (required to be a directory with several inputs). Default: **./textsnaps/_name_\_ocr.txt**.
 
 **-v**, **--verbose**
-> Print progress diagnostics to stderr.
+> Print progress diagnostics (engine used, page-quality score, decode speed) to stderr.
+
+**--structured**, **--markdown**
+> Skip PP-OCRv6 and run PaddleOCR-VL directly, keeping its native Markdown (tables, headings).
 
 **--plaintext**
-> Convert the default Markdown output into plain text (no tables, no headings).
+> With **--structured**: flatten the Markdown to plain text. Default output is already plain text.
+
+**--min-quality** _Q_
+> Page-quality threshold from 0 to 1 below which the VLM re-reads the page. Default **0.8**; **0** never falls back.
+
+**--lang** _L_
+> Comma-separated wordfreq language codes used by the quality check. Default **en**.
 
 **--model-dir** _PATH_
-> Use ONNX model files from _PATH_ instead of the cached download.
+> Use model files from _PATH_ (**ppocr/**, **onnx/**, **tokenizer.json**) instead of portable mode or the cache.
 
 **--max-tokens** _N_
-> Cap the decoder at _N_ generated tokens (default **2048**).
+> VLM: cap generated tokens (default **2048**). Raise for very dense pages.
 
 **--max-pixels** _N_
-> Limit the vision encoder pixel budget per image to _N_.
+> VLM: pixel budget fed to the vision encoder. Lower is faster but less accurate.
+
+**--vision** _q8_|_q4_
+> VLM vision-encoder variant. Default **q8**; **q4** is a smaller download.
 
 **--no-verify**
 > Skip SHA-256 verification of downloaded model files.
 
 **--generate-checksums**
-> Re-download the model and rewrite the checksum manifest.
+> Download the pinned model files, write a fresh checksum manifest, and exit.
+
+**--version**
+> Print the version and exit.
 
 # DESCRIPTION
 
-**textsnap** is a command-line OCR utility built around the **PaddleOCR-VL-1.5** vision-language model exported to ONNX. It reads an image from a file path, a URL, or the system clipboard and writes the recognized text to a file inside **./textsnaps/**, printing only the output path on stdout so it composes cleanly in shell pipelines.
+**textsnap** is a command-line OCR utility that runs entirely on the CPU via ONNX Runtime, with no GPU and no cloud calls. Every image first goes through **PP-OCRv6 medium**, a small text detector and line recognizer. Each line is scored with cheap heuristics (confidence, symbol ratio, dictionary words); if the page score falls below **--min-quality**, the page is re-read by **PaddleOCR-VL-1.5**, a 0.9B vision-language model.
 
-The model runs entirely on the CPU, no GPU and no cloud calls. Default output is Markdown so structure such as tables, headings, and lists is preserved; **--plaintext** flattens it for callers that only want raw text. Webpage URLs are rendered before OCR, which makes the tool usable as a "screenshot to text" pipeline for content that is hard to copy directly.
+Input can be a file path, a direct image URL, a webpage URL, or the system clipboard (no argument). For webpages, textsnap isolates the main content with readability and OCRs the most prominent image, not the whole rendered page. Several inputs can be given at once; models are loaded only once for the batch.
 
-# INPUT MODES
-
-**No argument**
-> Read an image from the system clipboard. The OCR text is also copied back to the clipboard.
-
-**Local file**
-> Process a local image. Supported formats: PNG, JPG, JPEG, WebP, BMP, GIF, TIFF.
-
-**Image URL**
-> Fetch and OCR a remote image.
-
-**Webpage URL**
-> Render the page and OCR the resulting screenshot.
+Output is plain UTF-8 text in reading order, written to **./textsnaps/** by default. Only the path of the written file is printed on stdout (one per line in batch mode), so it composes cleanly in shell pipelines. **--structured** keeps the VLM's Markdown output instead. The package also installs **ocr** as an alias.
 
 # CONFIGURATION
 
 **~/.cache/textsnap/**
-> Cached ONNX model files (about **890 MB**) downloaded on first use. Contains the vision encoder (q4 quantized), the autoregressive decoder (q4 quantized), token embeddings (fp32), and a **model_checksums.sha256** manifest.
+> Cached model files: PP-OCRv6 (about **140 MB**) on first use, PaddleOCR-VL (about **1.1 GB**) the first time a page falls back or **--structured** is used.
 
 **./textsnaps/**
-> Default output directory, created in the current working directory on first run.
+> Default output directory, created in the current working directory.
 
 **TEXTSNAP_DECODE_THREADS**
-> Environment variable that overrides the decoder thread count. Defaults to the number of physical cores.
+> Overrides the VLM decoder thread count. Defaults to a value derived from the physical core count.
+
+**TEXTSNAP_MIN_QUALITY**, **TEXTSNAP_LANG**, **TEXTSNAP_VISION**
+> Defaults for **--min-quality**, **--lang** and **--vision**.
 
 # CAVEATS
 
-The first invocation downloads the model bundle (about 890 MB), so be ready for the initial wait and the disk usage. The tool is CPU-only, so OCR of large images or long PDFs takes longer than GPU pipelines. Webpage OCR requires a working headless browser stack provided by the package.
+The first run downloads about 140 MB, plus about 1.1 GB the first time the VLM is needed; afterwards it works offline. Plain-text mode does not understand layout: multi-column pages interleave and tables lose their grid, so use **--structured** for those. PP-OCRv6 mode has no rotation handling. For non-English text pass **--lang**, otherwise clean pages may fall back to the slow VLM needlessly. Reading the clipboard on Linux needs **xclip** or **wl-clipboard**. PDFs are not supported directly.
+
+Version 0.4 changed the default output from the VLM's Markdown to PP-OCRv6 plain text; use **--structured** for the old behavior.
 
 # HISTORY
 
-**textsnap** was published by **kouhxp** in 2026 under the MIT license. The bundled model, **PaddleOCR-VL-1.5**, is released by **PaddlePaddle** under the Apache-2.0 license. The CLI is distributed through PyPI and depends on **onnxruntime** and **huggingface_hub**.
+**textsnap** was published by **kouhxp** in 2026 under the MIT license and is distributed through PyPI. It originally ran only **PaddleOCR-VL-1.5**; version 0.4 made **PP-OCRv6** the default engine with the VLM as fallback. Both models are released by **PaddlePaddle** under the Apache-2.0 license.
 
 # SEE ALSO
 
-[tesseract](/man/tesseract)(1), [pdftotext](/man/pdftotext)(1), [imagemagick](/man/imagemagick)(1), [curl](/man/curl)(1)
+[tesseract](/man/tesseract)(1), [ocrmypdf](/man/ocrmypdf)(1), [pdftotext](/man/pdftotext)(1), [imagemagick](/man/imagemagick)(1), [xclip](/man/xclip)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/kouhxp/textsnap)```
+
+<!-- verified: 2026-11-23 -->

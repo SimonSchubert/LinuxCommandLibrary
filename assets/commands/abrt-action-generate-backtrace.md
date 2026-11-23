@@ -12,7 +12,7 @@ generate human-readable backtrace from a coredump
 
 ```abrt-action-generate-backtrace -v -d [/var/spool/abrt/ccpp-2024-01-15]```
 
-**Generate backtrace** with a timeout for gdb
+**Kill gdb** if it runs longer than 5 minutes
 
 ```abrt-action-generate-backtrace -d [problem_dir] -t [300]```
 
@@ -23,13 +23,13 @@ generate human-readable backtrace from a coredump
 # PARAMETERS
 
 **-d** _DIR_
-> Path to the problem directory containing the coredump file. Defaults to the current working directory
+> Path to the problem directory containing the coredump file
 
 **-v**
 > Be more verbose; can be specified multiple times for increased verbosity
 
 **-t** _NUM_
-> Kill gdb if it runs for more than NUM seconds (timeout)
+> Kill gdb if it runs for more than NUM seconds (default 1800, i.e. 30 minutes)
 
 # DESCRIPTION
 
@@ -39,7 +39,7 @@ The tool runs **gdb** on a file named "coredump" in the specified problem direct
 
 For best results, the corresponding debuginfo packages should be installed for the crashed application and its libraries. Without debugging symbols, the backtrace will contain only memory addresses rather than function names and line numbers.
 
-The tool integrates with libreport events and is typically invoked automatically by ABRT when analyzing C/C++ application crashes.
+The tool integrates with libreport events and is typically invoked automatically by ABRT as the analyzer for C/C++ crashes, e.g. via **EVENT=analyze analyzer=CCpp** rules in **report_event.conf**. Settings are read from **CCpp.conf**.
 
 # CAVEATS
 
@@ -51,7 +51,7 @@ ABRT (Automatic Bug Reporting Tool) was developed by **Red Hat** starting around
 
 # SEE ALSO
 
-[gdb](/man/gdb)(1), [abrt-cli](/man/abrt-cli)(1), [coredumpctl](/man/coredumpctl)(1), [abrt](/man/abrt)(1)
+[gdb](/man/gdb)(1), [abrt-cli](/man/abrt-cli)(1), [coredumpctl](/man/coredumpctl)(1), [abrt](/man/abrt)(1), [abrt-action-analyze-backtrace](/man/abrt-action-analyze-backtrace)(1), [debuginfod-find](/man/debuginfod-find)(1)
 
 # RESOURCES
 
@@ -59,4 +59,4 @@ ABRT (Automatic Bug Reporting Tool) was developed by **Red Hat** starting around
 
 ```[Documentation](https://abrt.readthedocs.io/)```
 
-<!-- verified: 2026-06-10 -->
+<!-- verified: 2026-11-23 -->

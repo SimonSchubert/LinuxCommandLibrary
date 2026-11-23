@@ -8,6 +8,14 @@ Run plain-language `.babo` scripts compiled by Claude Code
 
 ```babo hello.babo```
 
+**Pass arguments** to the generated program
+
+```babo [greet.babo] [Alice] [--loud]```
+
+**Run a script directly** via its `#!/usr/bin/env babo` shebang
+
+```chmod +x [hello.babo] && ./[hello.babo]```
+
 **Force a rebuild** after editing the source description
 
 ```babo build hello.babo```
@@ -26,15 +34,17 @@ Run plain-language `.babo` scripts compiled by Claude Code
 
 # SYNOPSIS
 
-**babo** [_run_] _file.babo_ [_args_...]
+**babo** [**run**] _file.babo_ [_args_...]
 
-**babo** _check_|_build_|_info_|_clean_ _file.babo_
+**babo** **check**|**build**|**info** _file.babo_
+
+**babo** **clean**
 
 # DESCRIPTION
 
-**babo** is a Python CLI that turns `.babo` files — short natural-language program descriptions — into runnable Python programs. On first run it sends the description to **Claude Code** (`claude -p`), which generates an entry point, optional `requirements.txt`, and an isolated virtual environment under `.baboc/<name>.baboc/` next to the source file (similar in spirit to Python's `__pycache__`).
+**babo** is a Python CLI that turns `.babo` files, short natural-language program descriptions, into runnable Python programs. On first run it sends the description to **Claude Code** (`claude -p`), which generates an entry point and an optional `requirements.txt`; babo then creates an isolated virtual environment, installs the packages under `.baboc/<name>.baboc/` next to the source file (similar in spirit to Python's `__pycache__`).
 
-Subsequent runs skip the build when the `.babo` file is older than its cache directory. Arguments after the script path are forwarded to the generated program. A shebang `#!/usr/bin/env babo` lets `.babo` files execute directly once **babo** is on **PATH**.
+Subsequent runs skip the build when the `.babo` file is older than its cache directory; editing the source makes the cache stale and triggers an automatic rebuild. Arguments after the script path are forwarded to the generated program. A shebang `#!/usr/bin/env babo` lets `.babo` files execute directly once **babo** is on **PATH**.
 
 Babo scripts can call other `.babo` modules via a generated `runtime.call_babo()` helper, each module keeping its own venv so dependencies do not collide.
 
@@ -58,16 +68,30 @@ Babo scripts can call other `.babo` modules via a generated `runtime.call_babo()
 
 **clean**
 
-> Delete every `.baboc/` cache directory under the current tree.
+> Recursively delete every `.baboc/` cache directory below the current working directory.
+
+**-h**, **--help**
+
+> Show usage.
 
 # CAVEATS
 
-Requires **Python** 3.10+, the **claude** CLI installed and authenticated, and network access during builds. Builds are not offline. The tool is experimental and depends on Claude Code API availability.
+Requires **Python** 3.10+, the **claude** CLI installed, authenticated and on **PATH**, and network access during builds. Builds are not offline and consume Claude usage. Generated code is not reviewed before it runs, so only build descriptions you trust, and the same `.babo` file can yield different programs on each rebuild. Not published on PyPI; install from the repository with `pip install -e .`.
 
 # CONFIGURATION
 
-No global config file. Each `.babo` file owns a `.baboc/<stem>.baboc/` cache with `venv/`, `requirements.txt`, `metadata.json`, and the generated `babo` executable entry point.
+No global config file. Each `.babo` file owns a `.baboc/<stem>.baboc/` cache with `venv/`, `requirements.txt`, `packages.txt`, `metadata.json`, the `runtime` helper module, and the generated `babo` executable entry point.
+
+# HISTORY
+
+**babo** ("fool" in Korean, also a recursive acronym for "Babo Always Builds Output") was published by **armbox** in 2026 under the MIT license. It revives a failed 1997 student project idea of a universal plain-language programming language. The repository includes **babo.babo**, a description from which babo can rebuild itself.
 
 # SEE ALSO
 
 [claude](/man/claude)(1), [python3](/man/python3)(1), [pip](/man/pip)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/armbox/babo)```
+
+<!-- verified: 2026-11-23 -->

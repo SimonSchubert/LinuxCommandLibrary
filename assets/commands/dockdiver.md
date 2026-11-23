@@ -24,6 +24,10 @@ explore and extract Docker registry contents
 
 ```dockdiver -url [registry_host] -bearer [token] -insecure -dump-all```
 
+**Route requests through a proxy** at a lower rate
+
+```dockdiver -url [registry_host] -proxy [http://127.0.0.1:8080] -rate [1] -list```
+
 # SYNOPSIS
 
 **dockdiver** [_options_]
@@ -92,8 +96,14 @@ Only registries reachable over the HTTP API V2 are supported. Use against regist
 
 # HISTORY
 
-dockdiver is an open-source Go tool published on GitHub by MachiavelliII. It ships with a registry lab environment in its lab directory for safe testing.
+dockdiver is an open-source Go tool published on GitHub by MachiavelliII under the GPL-3.0 license, inspired by DockerRegistryGrabber. It ships with a Docker Compose based registry lab in its lab directory for safe testing.
 
 # SEE ALSO
 
-[dive](/man/dive)(1), [trivy](/man/trivy)(1), [grype](/man/grype)(1), [docker-pull](/man/docker-pull)(1)
+[dive](/man/dive)(1), [trivy](/man/trivy)(1), [grype](/man/grype)(1), [docker-pull](/man/docker-pull)(1), [skopeo](/man/skopeo)(1), [regctl](/man/regctl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/MachiavelliII/dockdiver)```
+
+<!-- verified: 2026-11-23 -->

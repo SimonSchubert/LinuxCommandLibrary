@@ -1,50 +1,63 @@
 # TAGLINE
 
-Install built files in Sailfish OS build target
+Run the %install step of a Sailfish OS package build
 
 # TLDR
 
-**Install** the previously built project into the build target sysroot
+**Run the %install section** of the spec file to populate the RPM buildroot
 
 ```sfdk make-install```
 
-**Install to a custom destination** directory
+**Run it for a specific build target**
 
-```sfdk make-install DESTDIR=[path]```
+```sfdk -c target=[target_name] make-install```
 
-**Install in parallel** using N jobs
+**Use a specific spec file**
 
-```sfdk make-install -j[N]```
+```sfdk -c specfile=[rpm/myapp.spec] make-install```
 
-**Install verbosely**
+**Typical step-by-step build** (prepare, configure, build, install, package)
 
-```sfdk make-install V=1```
+```sfdk prepare && sfdk qmake && sfdk make && sfdk make-install && sfdk package```
 
 # SYNOPSIS
 
-**sfdk make-install** [_make_arguments_...]
+**sfdk** [**-c** _option_=_value_]... **make-install**
 
 # DESCRIPTION
 
-**sfdk make-install** runs the `install` target of the underlying build system (typically **make**, **cmake**, or **qmake**-generated Makefiles) inside the Sailfish OS build target. It is a thin wrapper around **sfdk make** that selects the install target and forwards any additional arguments to the build tool.
+**sfdk make-install** runs **rpmbuild** inside the Sailfish SDK build engine and executes just the **%install** section of the project's RPM spec file, populating the RPM buildroot. It is one of the individual build steps that **sfdk build** otherwise runs all at once, useful when iterating on a single step.
 
-The command is normally executed after **sfdk build** or **sfdk make** as part of the development workflow when staging files for inclusion in an RPM package, or when deploying built artifacts to the build target sysroot for testing.
+This is not the same as running **make install**: whatever commands the spec file's **%install** section contains are executed, typically **make install DESTDIR=%{buildroot}** or the CMake equivalent. The command takes no arguments of its own.
 
-# PARAMETERS
+# CONFIGURATION
 
-**DESTDIR=**_path_
-> Stage installation into _path_ rather than the default sysroot prefix. Standard make/autotools convention.
+Relevant options are set with **sfdk config** or per invocation with **-c**:
 
-**-j**_N_
-> Run up to _N_ install jobs in parallel.
+**target**
+> Build target to use (required).
 
-**V=1**
-> Enable verbose build output.
+**specfile**
+> Path to the RPM spec file, if not found automatically.
+
+**build-shell.args**
+> Extra arguments for the build shell.
+
+**[no-]snapshot**, **[no-]fix-version**, **dirty-version-suffix**
+> Target snapshot and version handling, as for the other build steps.
 
 # CAVEATS
 
-Requires an initialized Sailfish SDK build engine and an active build target configured via **sfdk config**. The project must already be built; **sfdk make-install** does not trigger compilation. Behavior depends on the project's own install rules.
+Requires a configured build target. The project must already be built with **sfdk make** (or **sfdk build**); **make-install** does not compile anything. Behavior depends entirely on the spec file's **%install** section.
 
 # SEE ALSO
 
-[sfdk](/man/sfdk)(1), [sfdk-make](/man/sfdk-make)(1)
+[sfdk](/man/sfdk)(1), [sfdk-make](/man/sfdk-make)(1), [sfdk-config](/man/sfdk-config)(1), [sfdk-build-shell](/man/sfdk-build-shell)(1), [rpmbuild](/man/rpmbuild)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/sailfishos/sailfish-qtcreator)```
+
+```[Documentation](https://docs.sailfishos.org/Tools/Sailfish_SDK/)```
+
+<!-- verified: 2026-11-23 -->

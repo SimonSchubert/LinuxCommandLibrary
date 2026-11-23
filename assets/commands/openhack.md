@@ -1,79 +1,169 @@
 # TAGLINE
 
-Agentic open-source security scanner for codebases
+Local AI security scanner for source code
 
 # TLDR
 
-**Launch** the interactive TUI
+**Open** the local dashboard (starts it in the background if needed)
 
 ```openhack```
 
-**Scan** the current directory headlessly (CI-friendly)
+**Scan** the current directory from the terminal
 
 ```openhack scan```
 
-**Scan** a specific repository path
+**Scan** a project with a specific provider and model
 
-```openhack scan [path/to/repo]```
+```openhack scan [path/to/repo] --anthropic --model [model_id]```
 
-**List** saved scan sessions
+**Scan using an existing Claude Code or Codex login**
 
-```openhack sessions```
+```openhack scan [path/to/repo] --claude-code```
+
+**Fail a CI job** on high-severity findings and print a JSON report
+
+```openhack scan . --json --fail-on high```
+
+**List open high-severity findings** for the current project
+
+```openhack findings --severity high --state open```
 
 **Resume** an interrupted scan
 
-```openhack resume [session-id]```
+```openhack resume [scan_id]```
 
-**Classify** frameworks without LLM calls
+**Stop** the background dashboard
 
-```openhack classify [path]```
+```openhack dashboard stop```
 
 # SYNOPSIS
 
-**openhack** [_options_]
+**openhack** [**--port** _port_] [**--no-open**]
 
-**openhack** **scan** [_path_]
+**openhack** **scan** [_directory_] [_options_]
 
-**openhack** **sessions**
+**openhack** **scans** | **findings** [_directory_] [**--all**] [**--json**]
 
-**openhack** **resume** _session-id_
+**openhack** **show** | **resume** _scan-id_
 
-**openhack** **classify** [_path_]
+**openhack** **status** _scan-id:finding-id_ **open**|**resolved**|**dismissed**
 
-**openhack** **login**
+**openhack** **note** _scan-id:finding-id_ _text_
 
-**openhack** **setup**
+**openhack** **dashboard** [**start**|**stop**|**status**]
+
+**openhack** **providers** | **config** [**set** _key_ _value_] | **version** | **help** [_command_]
+
+# COMMANDS
+
+**scan** [_directory_]
+> Scan the current directory or the given project path.
+
+**scans** [_directory_]
+> Show scan history for the project (alias **history**).
+
+**findings** [_directory_]
+> List current findings (alias **list**). Filter with **--severity** critical|high|medium|low and **--state** open|resolved|dismissed.
+
+**show** _scan-id_
+> Show a saved scan from any project.
+
+**resume** _scan-id_
+> Resume unfinished work with the scan's original provider, model and settings. The source must be unchanged.
+
+**status** _scan-id:finding-id_ _state_
+> Set a finding's triage state to open, resolved or dismissed.
+
+**note** _scan-id:finding-id_ _text_
+> Save a note on a finding; an empty string clears it.
+
+**dashboard** [**start**|**stop**|**status**]
+> Manage the dashboard server. Without an action it runs in the foreground until Ctrl+C; **stop** checkpoints running scans first.
+
+**providers**
+> Check API-key configuration and Codex/Claude Code logins (alias **doctor**).
+
+**config** [**set** _key_ _value_]
+> Show or change settings: provider, model, workers, steps, reasoning, context or port (alias **settings**).
 
 # PARAMETERS
 
-**--help**
-> Show usage information.
+**--codex**, **--claude-code**, **--openai**, **--anthropic**, **--provider** _ID_
+> Provider to use for this scan only; saved settings are not changed.
+
+**--model** _ID_
+> Model to use for this scan.
+
+**--workers** _N_
+> Number of parallel review workers (1 to 32).
+
+**--steps** _N_
+> Tool rounds per review task (1 to 30).
+
+**--reasoning** _LEVEL_
+> Reasoning effort for the model.
+
+**--context** _TEXT_
+> Extra project context for reviewers, e.g. the security boundary to verify.
+
+**--fail-on** _SEVERITY_
+> Exit with code 2 when an open validated finding meets this severity.
+
+**--json**
+> Write machine-readable output to stdout.
+
+**--all**
+> Include all projects (scans, findings).
+
+**--port** _PORT_
+> Dashboard port (default 6969).
+
+**--no-open**
+> Start the dashboard without opening a browser.
+
+**--home** _DIRECTORY_
+> Use a different workspace instead of ~/.openhack.
+
+**-h**, **--help** / **-v**, **--version**
+> Show help or the version.
 
 # DESCRIPTION
 
-**openhack** is an agentic security scanner that runs a multi-stage pipeline against a codebase: **recon** (builds a project model), **hunters** (category- and feature-specific vulnerability search), **validation** (confirms or rejects candidates), and optional **verification** (sandbox or browser exploitation tests). It is designed as an open-source alternative to proprietary agentic security tools and uses open-source models via the OpenHack inference API.
+**openhack** is an open-source agentic security scanner that reviews a codebase with an AI model. Its v2 harness maps the project, assigns focused source reviews, challenges candidate findings and judges the evidence, producing findings with severity, source evidence and remediation guidance.
 
-The interactive TUI is the default entry point. On first run, **openhack setup** walks through account login (browser OAuth, includes free credits) or API key configuration. Inside the TUI, slash commands drive the workflow: **/scan** _path_ starts a scan, the **Trace** tab shows live agent activity, and the **Findings** tab lists confirmed issues with severity, CVSS score, file location, vulnerable code, and recommended fixes.
+Running **openhack** without a command opens a local web dashboard at **http://127.0.0.1:6969** with onboarding, live scan progress, findings triage and settings. The dashboard keeps running in the background after the browser is closed. All scan functionality is also available from the terminal for scripts and CI: progress goes to stderr, and **--json** writes the final report to stdout.
 
-Headless mode (**openhack scan**) runs the same pipeline for scripts and CI, printing progress to stdout and writing a JSON report to **~/.openhack/scans/**_session-id_**.json**. Scans are checkpointed after each stage; **openhack resume** continues from the last checkpoint if interrupted.
+A provider is required: an OpenAI or Anthropic API key (saved in settings or via **OPENAI_API_KEY** / **ANTHROPIC_API_KEY**), or an existing **Codex** or **Claude Code** CLI login. Source excerpts needed for each review are sent to the selected provider; project code is read but never executed.
 
-Optional **/verify sandbox** (requires Docker) spins up the application and attempts live HTTP exploitation. **/verify browser** adds headless-browser checks for client-side issues such as XSS and CSRF. Source code is processed locally; only LLM tokens are sent to the inference API, not raw files.
+Scan exit codes are 0 for complete, 1 for failed/partial or invalid input, 2 when **--fail-on** is triggered and 130 for cancellation. Ctrl+C saves a checkpoint that **resume** can continue from.
 
 # CONFIGURATION
 
-**~/.openhack/config**
-> Persistent configuration including the API bearer token (mode **0600**).
+**~/.openhack/**
+> Workspace holding settings.json, credentials.json (saved API keys, owner-only permissions), dashboard logs, and per-project scan reports and triage state.
 
-**OPENHACK_API_KEY**
-> Environment variable override for the inference API token.
+**OPENHACK_HOME**
+> Alternative workspace directory (same as **--home**).
 
-**OPENHACK_DEV=1**
-> Point the CLI at local development servers for self-hosted setups.
+**.openhackignore**
+> Paths to exclude from scanning, in addition to **.gitignore**.
 
 # CAVEATS
 
-Sandbox and browser verification require a running Docker daemon. The TUI captures mouse events by default; hold **Option** (macOS) or **Shift** (Linux) while dragging to select text, or run **/mouse** to disable capture. AGPL-3.0 licensing applies; commercial use without AGPL obligations requires a separate license from the project maintainers.
+Scanning is not offline: source excerpts are sent to a remote AI provider, so add sensitive paths to **.openhackignore** first. Findings are AI source reviews, not proven runtime exploits, and a **Partial** scan does not mean the code is clean. Standalone builds target macOS and glibc-based Linux (no musl/Alpine). There is no automatic updater. Licensed AGPL-3.0-only; v2.0.0 and earlier revisions were MIT.
+
+# HISTORY
+
+Earlier releases used a terminal TUI with an OpenHack-hosted inference API and account login. **v2.0.0** replaced this with a local browser dashboard, a new scanning harness and bring-your-own provider support. Written in TypeScript and shipped as a single executable bundling the Bun runtime.
 
 # SEE ALSO
 
 [semgrep](/man/semgrep)(1), [trivy](/man/trivy)(1), [grype](/man/grype)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/openhackai/OpenHack)```
+
+```[Homepage](https://openhack.com)```
+
+<!-- verified: 2026-11-23 -->
