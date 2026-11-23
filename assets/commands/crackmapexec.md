@@ -36,7 +36,7 @@ post-exploitation tool for Windows/AD networks
 
 **crackmapexec** (CME) is a post-exploitation tool for penetration testing Windows/Active Directory environments. It automates common tasks like credential validation, share enumeration, and command execution across multiple hosts.
 
-The tool supports SMB, WinRM, LDAP, MSSQL, and SSH protocols. It's designed for authorized security assessments and red team operations.
+The tool supports SMB, WinRM, LDAP, MSSQL, SSH, RDP and FTP protocols. It's designed for authorized security assessments and red team operations.
 
 # PARAMETERS
 
@@ -80,12 +80,18 @@ The tool supports SMB, WinRM, LDAP, MSSQL, and SSH protocols. It's designed for 
 
 Only for authorized penetration testing. May trigger security alerts. Requires valid credentials or hashes. Some features need admin privileges. Network policies may block access.
 
-**Deprecated**: the upstream project has stopped releasing updates; a community fork called **NetExec** (`nxc`) is the actively maintained successor and is a drop-in replacement.
+**Deprecated**: the upstream repository was archived in **December 2023** and the last release is **5.4.0** (November 2022). The community fork **NetExec** (`nxc`) is the actively maintained successor with a largely compatible command line.
 
 # HISTORY
 
-**crackmapexec** was created by **byt3bl33d3r** (Marcello Salvati) around **2015**. It evolved from the need for a unified tool for Windows network penetration testing. The project is widely used in the security community and is actively maintained.
+**crackmapexec** was created by **byt3bl33d3r** (Marcello Salvati) around **2015**. It evolved from the need for a unified tool for Windows network penetration testing. The project became one of the most widely used tools in Active Directory assessments. After the maintainers moved on, development continued in the **NetExec** fork and the original repository was archived in 2023.
 
 # SEE ALSO
 
-[impacket](/man/impacket)(1), [nmap](/man/nmap)(1), [enum4linux](/man/enum4linux)(1)
+[netexec](/man/netexec)(1), [nxc](/man/nxc)(1), [impacket](/man/impacket)(1), [evil-winrm](/man/evil-winrm)(1), [smbclient](/man/smbclient)(1), [nmap](/man/nmap)(1), [enum4linux](/man/enum4linux)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/byt3bl33d3r/CrackMapExec)```
+
+<!-- verified: 2026-11-23 -->

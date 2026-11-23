@@ -4,76 +4,69 @@ deploy Cradle PHP applications to servers
 
 # TLDR
 
-**Deploy to production** server
+**Deploy code** to the configured servers
 
 ```cradle deploy production```
 
-**Deploy to staging** environment
+Upload **static assets to Amazon S3**
 
-```cradle deploy staging```
+```cradle deploy s3```
 
-**Deploy with custom configuration**
+Upload static assets **including the Yarn components** folder
 
-```cradle deploy --config [deploy.yml]```
+```cradle deploy s3 --include-yarn```
 
-**Preview changes** without deploying
+Upload static assets **including the upload** folder
 
-```cradle deploy --dry-run production```
+```cradle deploy s3 --include-upload```
 
-**Deploy specific branch**
+Show **help** for the deploy commands
 
-```cradle deploy production --branch [release]```
-
-**Skip database migrations** during deploy
-
-```cradle deploy --no-migrate production```
+```cradle deploy help```
 
 # SYNOPSIS
 
-**cradle deploy** [_options_] _environment_
+**cradle deploy** **production**
+
+**cradle deploy** **s3** [**--include-yarn**] [**--include-upload**]
+
+**cradle deploy** [**help**]
 
 # PARAMETERS
 
-_ENVIRONMENT_
-> Target deployment environment (production, staging, development).
+**production**
+> Deploy code to the servers defined in **config/deploy.php**.
 
-**--config** _FILE_
-> Use custom deployment configuration file.
+**s3**
+> Upload static assets to Amazon S3, using the credentials in **config/services.php**.
 
-**--dry-run**
-> Preview deployment without making changes.
+**--include-yarn**
+> With **s3**: also upload the Yarn components folder.
 
-**--branch** _BRANCH_
-> Deploy a specific Git branch.
+**--include-upload**
+> With **s3**: also upload the upload folder.
 
-**--no-migrate**
-> Skip database migrations during deployment.
-
-**--force**
-> Force deployment even with uncommitted changes.
-
-**--verbose**
-> Show detailed deployment output.
-
-**--help**
-> Display help information.
+**help**
+> Show the available deploy commands.
 
 # DESCRIPTION
 
-**cradle deploy** is a deployment command for the Cradle PHP framework. It automates the process of deploying applications to remote servers, handling tasks like code synchronization, dependency installation, database migrations, and cache clearing.
+**cradle deploy** is part of the command line tools of **Cradle**, a PHP 7 content management system and framework. The **production** subcommand pushes the project code to the servers listed in **config/deploy.php**, while **s3** publishes static assets to an S3 bucket configured in **config/services.php**.
 
-The command reads deployment configuration specifying server details, deployment paths, and environment-specific settings. It supports multiple environments, allowing different configurations for production, staging, and development servers.
-
-Deployment typically involves pushing code changes, running composer install, executing migrations, and clearing caches. The dry-run option lets you preview what changes will be made before committing to the deployment.
+Related commands are **cradle connect** _server_ to open a connection to a server defined in config/deploy.php, and **cradle install** / **cradle update** for setting up and updating the project.
 
 # CAVEATS
 
-Requires SSH access to target servers. Deployment configuration must specify correct paths and credentials. Use **--dry-run** first to verify deployment steps. Database migrations should be tested before production deployment.
-
-# HISTORY
-
-cradle deploy was created as part of the Cradle framework's CLI tooling to simplify the deployment workflow. It follows patterns established by other PHP framework deployment tools, providing a consistent interface for pushing applications to servers.
+Requires SSH access to the target servers and correctly configured **config/deploy.php** and **config/services.php** files. The Cradle project has seen no development since **2022**.
 
 # SEE ALSO
 
 [cradle](/man/cradle)(1), [rsync](/man/rsync)(1), [ssh](/man/ssh)(1), [composer](/man/composer)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/CradlePHP/cradle)```
+
+```[Documentation](https://cradlephp.github.io/docs/3.B.-Reference-Command-Line-Tools.html)```
+
+<!-- verified: 2026-11-23 -->

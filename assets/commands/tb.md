@@ -16,6 +16,10 @@ Terminal task and note board
 
 ```tb -t @[work] [Finish report]```
 
+Create a **high-priority** task
+
+```tb -t [Fix issue 42] p:3```
+
 **Create a note**
 
 ```tb -n [Remember to call John]```
@@ -26,7 +30,19 @@ Terminal task and note board
 
 **Set task priority** (1=normal, 2=medium, 3=high)
 
-```tb -p [1] [3]```
+```tb -p @[1] [3]```
+
+**Start/pause** working on tasks
+
+```tb -b [2] [3]```
+
+**Move** an item to other boards
+
+```tb -m @[1] [board1] [board2]```
+
+**List** pending items on a board
+
+```tb -l [work] pending```
 
 **Delete items**
 
@@ -35,6 +51,10 @@ Terminal task and note board
 **Search for items**
 
 ```tb -f [keyword]```
+
+**Delete all checked** tasks
+
+```tb --clear```
 
 **Display timeline view**
 
@@ -61,23 +81,23 @@ Terminal task and note board
 **-s**, **--star** _ids_
 > Star or unstar items
 
-**-p**, **--priority** _id_ _level_
+**-p**, **--priority** @_id_ _level_
 > Set task priority (1=normal, 2=medium, 3=high)
 
-**-m**, **--move** _id_ _@board_
-> Move item to a different board
+**-m**, **--move** @_id_ _board_ ...
+> Move item to one or more boards (board names without @)
 
 **-d**, **--delete** _ids_
 > Delete items (moves to archive)
 
-**-e**, **--edit** _id_ _description_
+**-e**, **--edit** @_id_ _description_
 > Edit item description
 
 **-f**, **--find** _keywords_
 > Search items by keywords
 
 **-l**, **--list** _attributes_
-> List items filtered by attributes
+> List items filtered by board names and attributes such as pending, done, task, note, starred
 
 **-a**, **--archive**
 > Display archived items
@@ -95,7 +115,7 @@ Terminal task and note board
 > Display items grouped by creation date
 
 **--taskbook-dir** _path_
-> Use a custom taskbook storage directory
+> Use a custom taskbook storage directory (also settable with the **TASKBOOK_DIR** environment variable)
 
 **-h**, **--help**
 > Show help information
@@ -109,13 +129,13 @@ Terminal task and note board
 
 Items are organized into boards using the **@boardname** syntax. Tasks without a board assignment go to the default "My Board". Multiple boards can be assigned to a single item. The interface displays completion statistics showing pending, done, and note counts.
 
-Tasks can have priorities (shown with different colors), be starred for emphasis, and marked as in-progress with the begin command. Deleted items are archived and can be restored. The timeline view groups items by creation date instead of boards.
+Tasks can have priorities (shown with different colors, set at creation with **p:2** or **p:3** in the description), be starred for emphasis, and marked as in-progress with the begin command. Deleted items are archived and can be restored. The timeline view groups items by creation date instead of boards.
 
-Data is stored in JSON format at **~/.taskbook/storage**. Configuration options can be set in **~/.taskbook.json**.
+Data is stored in JSON format at **~/.taskbook/storage**. Configuration options (**taskbookDirectory**, **displayCompleteTasks**, **displayProgressOverview**) can be set in **~/.taskbook.json**.
 
 # CAVEATS
 
-Taskbook requires Node.js and npm for installation. The archive grows over time with deleted items; periodic manual cleanup may be needed. Board names are case-sensitive.
+Taskbook requires Node.js and is installed with **npm install --global taskbook**. Commands that change a single item (**-p**, **-e**, **-m**) take the item id prefixed with **@**, unlike **-c**, **-d** and others that take bare ids. The last release (0.3.0) dates from 2019 and the project sees little maintenance. The archive grows over time with deleted items; periodic manual cleanup may be needed. Board names are case-sensitive.
 
 # HISTORY
 
@@ -124,3 +144,11 @@ Taskbook requires Node.js and npm for installation. The archive grows over time 
 # SEE ALSO
 
 [task](/man/task)(1), [todo.txt-cli](/man/todo.txt-cli)(1), [todoist](/man/todoist)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/klaudiosinani/taskbook)```
+
+```[Homepage](https://klaudiosinani.com/taskbook)```
+
+<!-- verified: 2026-11-23 -->

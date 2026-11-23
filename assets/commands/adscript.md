@@ -1,56 +1,69 @@
 # TAGLINE
 
-Audio and digital signal processing language compiler
+Compiler for the s-expression based Adscript language
 
 # TLDR
 
-**Compile** an ADscript file
+**Compile** a file to an object file
 
-```adscript [script.ad]```
+```adscript -o [path/to/file.o] [path/to/input.adscript]```
 
-Compile with **output file**
+Compile and link a **standalone executable**
 
-```adscript [script.ad] -o [output]```
+```adscript -e -o [path/to/program] [path/to/input.adscript]```
 
-**Run** an ADscript directly
+Emit **LLVM IR** instead of native machine code
 
-```adscript -r [script.ad]```
+```adscript -l -o [path/to/file.ll] [path/to/input.adscript]```
+
+**Cross-compile** for another architecture or operating system
+
+```adscript -t [i386-linux-elf] -o [path/to/file.o] [path/to/input.adscript]```
+
+Show the **version**
+
+```adscript -v```
 
 # SYNOPSIS
 
-**adscript** [_options_] _file_
+**adscript** [**-ehlv**] [**-o** _file_] [**-t** _target-triple_] _files_
 
 # DESCRIPTION
 
-**adscript** is a compiler for the ADscript programming language, a domain-specific language designed for audio and digital signal processing applications. It generates optimized code for audio processing tasks.
+**adscript** is the compiler for **Adscript**, a high-performance programming language based on **s-expressions** (Lisp-like syntax) that is compiled natively through **LLVM**.
 
-ADscript combines functional programming concepts with audio-specific primitives, making it suitable for developing audio plugins, synthesis engines, and signal processing algorithms.
+By default the compiler produces an object file for the host platform. It can alternatively link a standalone executable, emit textual LLVM IR, or cross-compile for any target triple LLVM supports. Data literals use **adn** (Adscript Data Notation), a modified version of EDN.
 
 # PARAMETERS
 
-**-o** _file_
-> Specify output file name
+**-e**, **--executable**
+> Generate an executable instead of an object file.
 
-**-r**
-> Run the script directly instead of compiling
+**-l**, **--llvm-ir**
+> Emit LLVM IR instead of native code.
 
-**-O** _level_
-> Optimization level (0-3)
+**-o**, **--output** _FILE_
+> Specify the output file.
 
-**-v**, **--verbose**
-> Enable verbose output
+**-t**, **--target-triple** _TRIPLE_
+> Target triple to compile for (e.g. i386-linux-elf).
 
-**--help**
-> Display help information
+**-h**, **--help**
+> Print a short help text.
+
+**-v**, **--version**
+> Print information about the Adscript version.
 
 # CAVEATS
 
-ADscript is a specialized language; general-purpose programming may be better suited to other languages. Performance depends on target platform and optimization settings.
-
-# HISTORY
-
-ADscript was developed for audio programming applications, providing a high-level abstraction over low-level audio processing operations while maintaining performance characteristics needed for real-time audio.
+Adscript is a small hobby project; the language specification is incomplete. Building the compiler requires **LLVM 12 or 13** specifically; newer LLVM versions are not supported. The upstream repository has seen no development since **2022**.
 
 # SEE ALSO
 
-[csound](/man/csound)(1)
+[clang](/man/clang)(1), [llc](/man/llc)(1), [clojure](/man/clojure)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Amplus2/Adscript)```
+
+<!-- verified: 2026-11-23 -->

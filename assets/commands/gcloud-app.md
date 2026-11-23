@@ -4,17 +4,25 @@ Google App Engine management commands
 
 # TLDR
 
-**Deploy application**
+**Create** an App Engine app in the current project (once per project, region cannot be changed later)
+
+```gcloud app create --region=[us-central1]```
+
+**Deploy** the app described by app.yaml in the current directory
 
 ```gcloud app deploy```
+
+**Deploy a new version without sending traffic** to it
+
+```gcloud app deploy [app.yaml] --version=[v2] --no-promote```
 
 **Browse deployed app**
 
 ```gcloud app browse```
 
-**View logs**
+**Stream logs** of a service
 
-```gcloud app logs tail```
+```gcloud app logs tail -s [default]```
 
 **List services**
 
@@ -26,11 +34,15 @@ Google App Engine management commands
 
 **Split traffic between versions**
 
-```gcloud app services set-traffic [service] --splits [v1=0.5,v2=0.5]```
+```gcloud app services set-traffic [service] --splits=[v1=0.5,v2=0.5]```
+
+**List versions** of all services
+
+```gcloud app versions list```
 
 **Delete a version**
 
-```gcloud app versions delete [version-id]```
+```gcloud app versions delete [version-id] --service=[service]```
 
 # SYNOPSIS
 
@@ -38,26 +50,47 @@ Google App Engine management commands
 
 # PARAMETERS
 
-_COMMAND_
-> Operation: deploy, browse, logs, services, etc.
+**create** **--region**=_REGION_
+> Create an App Engine application within the current project.
 
-**deploy** [_YAML_]
-> Deploy application.
+**deploy** [_DEPLOYABLES_...]
+> Deploy local code and/or configuration (app.yaml, dispatch.yaml, cron.yaml, ...).
+
+**--version**=_VERSION_, **-v** _VERSION_
+> (deploy) Version ID to use instead of a generated one.
+
+**--no-promote**
+> (deploy) Do not route all traffic to the new version.
+
+**--stop-previous-version**
+> (deploy) Stop the previously running version once the new one serves traffic. Has no effect on auto-scaled standard services.
 
 **browse**
-> Open app in browser.
-
-**logs tail**
-> Stream application logs.
-
-**services list**
-> List deployed services.
-
-**versions list**
-> List app versions.
+> Open the current app in a web browser.
 
 **describe**
-> Show app information.
+> Display all data about the existing application.
+
+**open-console**
+> Open the App Engine dashboard or log viewer in a browser.
+
+**update**
+> Update application settings such as **--split-health-checks** or **--service-account**.
+
+**logs tail** | **logs read**
+> Stream or read application logs.
+
+**services** list | describe | browse | set-traffic | delete
+> Manage services and traffic splitting.
+
+**versions** list | describe | browse | start | stop | migrate | delete
+> Manage deployed versions.
+
+**instances**, **domain-mappings**, **firewall-rules**, **ssl-certificates**, **operations**, **regions**, **runtimes**
+> Further command groups for managing the application.
+
+**--project**=_PROJECT_
+> Global flag selecting the Google Cloud project.
 
 **--help**
 > Display help information.
@@ -72,7 +105,7 @@ Monitoring capabilities include streaming logs and viewing application status. T
 
 # CAVEATS
 
-Requires App Engine enabled. Deployments may take time. Costs based on usage.
+An app must first be created with **gcloud app create**, and its region cannot be changed afterwards. Each project has at most one App Engine application. Old versions are kept until deleted and can incur costs if they keep running.
 
 # HISTORY
 
@@ -81,3 +114,11 @@ gcloud app is part of the **Google Cloud SDK** for managing App Engine, Google's
 # SEE ALSO
 
 [gcloud](/man/gcloud)(1), [gcloud-compute](/man/gcloud-compute)(1)
+
+# RESOURCES
+
+```[Homepage](https://cloud.google.com/appengine)```
+
+```[Documentation](https://docs.cloud.google.com/sdk/gcloud/reference/app)```
+
+<!-- verified: 2026-11-23 -->

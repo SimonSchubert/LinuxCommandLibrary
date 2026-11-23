@@ -16,26 +16,43 @@ decrypt data using Cloud KMS keys
 
 ```gcloud kms decrypt --ciphertext-file=[encrypted.enc] --plaintext-file=- --key=[key] --keyring=[keyring] --location=[global]```
 
+Decrypt using the **full key resource name**
+
+```gcloud kms decrypt --key=projects/[project]/locations/[global]/keyRings/[keyring]/cryptoKeys/[key] --ciphertext-file=[encrypted.enc] --plaintext-file=[decrypted.txt]```
+
+Decrypt data that was encrypted with **additional authenticated data**
+
+```gcloud kms decrypt --ciphertext-file=[encrypted.enc] --plaintext-file=[decrypted.txt] --additional-authenticated-data-file=[aad.txt] --key=[key] --keyring=[keyring] --location=[global]```
+
 # SYNOPSIS
 
-**gcloud kms decrypt** [_options_]
+**gcloud kms decrypt** **--ciphertext-file**=_FILE_ **--plaintext-file**=_FILE_ [**--key**=_KEY_] [**--keyring**=_KEYRING_] [**--location**=_LOCATION_] [_options_]
 
 # PARAMETERS
 
 **--ciphertext-file** _FILE_
-> Encrypted input file.
+> Encrypted input file (output of **gcloud kms encrypt**). Use **-** to read from stdin.
 
 **--plaintext-file** _FILE_
-> Decrypted output file.
+> Decrypted output file. Use **-** to write to stdout.
 
 **--key** _KEY_
-> Crypto key name.
+> Crypto key name or full resource ID. For symmetric keys the key version is detected from the ciphertext and must not be specified.
 
 **--keyring** _KEYRING_
 > Key ring name.
 
 **--location** _LOCATION_
 > Key location.
+
+**--additional-authenticated-data-file** _FILE_
+> File with the additional authenticated data (AAD) used during encryption (max 64 KiB). Use **-** for stdin.
+
+**--skip-integrity-verification**
+> Skip the CRC32C integrity checks on request and response (enabled by default).
+
+**--project** _PROJECT_
+> Global flag selecting the project that owns the key.
 
 **--help**
 > Display help information.
@@ -50,7 +67,7 @@ The command supports reading from files or stdin and writing to files or stdout,
 
 # CAVEATS
 
-Requires KMS permissions. Key must match encryption key. Location must be correct.
+Requires the **roles/cloudkms.cryptoKeyDecrypter** (or EncrypterDecrypter) IAM role on the key. Only works for ciphertext produced by symmetric **encrypt**; asymmetric keys use **gcloud kms asymmetric-decrypt**. Direct encryption is limited to 64 KiB of plaintext, so larger data should use envelope encryption. The ciphertext and AAD cannot both be read from stdin. Ciphertext from a destroyed key version cannot be decrypted.
 
 # HISTORY
 
@@ -58,4 +75,10 @@ gcloud kms decrypt is part of the **Google Cloud SDK** for Cloud KMS, Google's m
 
 # SEE ALSO
 
-[gcloud](/man/gcloud)(1)
+[gcloud](/man/gcloud)(1), [gcloud-iam](/man/gcloud-iam)(1)
+
+# RESOURCES
+
+```[Documentation](https://docs.cloud.google.com/sdk/gcloud/reference/kms/decrypt)```
+
+<!-- verified: 2026-11-23 -->

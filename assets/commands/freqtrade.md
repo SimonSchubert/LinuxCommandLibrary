@@ -8,13 +8,21 @@ cryptocurrency trading bot framework
 
 ```freqtrade trade --config [config.json] --strategy [StrategyName]```
 
-**Run backtesting** on historical data
+**Force dry-run** (simulated trades, exchange secrets removed)
 
-```freqtrade backtesting --config [config.json] --strategy [StrategyName]```
+```freqtrade trade --config [config.json] --strategy [StrategyName] --dry-run```
+
+**Run backtesting** on historical data for a time range
+
+```freqtrade backtesting --config [config.json] --strategy [StrategyName] --timerange [20240101-20240601]```
 
 **Download historical data** for backtesting
 
-```freqtrade download-data --config [config.json] --pairs [BTC/USDT] --timeframes [1h]```
+```freqtrade download-data --config [config.json] --pairs [BTC/USDT] --timeframes [1h] --timerange [20240101-]```
+
+**Create the user data directory** structure
+
+```freqtrade create-userdir --userdir [user_data]```
 
 **Create a new configuration file** interactively
 
@@ -22,7 +30,7 @@ cryptocurrency trading bot framework
 
 **Optimize strategy parameters** with hyperopt
 
-```freqtrade hyperopt --config [config.json] --strategy [StrategyName] --hyperopt-loss [SharpeHyperOptLoss]```
+```freqtrade hyperopt --config [config.json] --strategy [StrategyName] --hyperopt-loss [SharpeHyperOptLoss] --spaces [buy sell] --epochs [100]```
 
 **List available exchanges**
 
@@ -47,7 +55,7 @@ cryptocurrency trading bot framework
 # PARAMETERS
 
 **-c**, **--config** _PATH_
-> Specify configuration file (default: config.json)
+> Specify configuration file (default: config.json). Can be given multiple times; **-** reads from stdin
 
 **-s**, **--strategy** _NAME_
 > Specify strategy class name
@@ -55,26 +63,32 @@ cryptocurrency trading bot framework
 **--strategy-path** _PATH_
 > Additional strategy lookup path
 
-**-d**, **--datadir** _PATH_
+**-d**, **--datadir**, **--data-dir** _PATH_
 > Path to historical data directory
 
-**--userdir** _PATH_
+**--userdir**, **--user-data-dir** _PATH_
 > Path to user data directory
 
 **-v**, **--verbose**
 > Verbose mode (-vv for more, -vvv for all)
 
-**--logfile** _FILE_
-> Log to specified file
+**--logfile**, **--log-file** _FILE_
+> Log to specified file; special values _syslog_ and _journald_ are supported
 
 **--no-color**
-> Disable colorized output
+> Disable colorized hyperopt output
 
 **--db-url** _URL_
-> Database URL for trade storage
+> Database URL for trade storage (default: sqlite:///tradesv3.sqlite, or tradesv3.dryrun.sqlite in dry-run)
 
 **--dry-run**
-> Run in simulation mode without real trades
+> Enforce dry-run: remove exchange secrets and simulate trades
+
+**--timerange** _RANGE_
+> Limit data to a range such as _20240101-20240601_ (backtesting, hyperopt, download-data)
+
+**-i**, **--timeframe** _TF_
+> Timeframe for backtesting and hyperopt, e.g. _5m_, _1h_
 
 **-V**, **--version**
 > Show version number
@@ -101,11 +115,26 @@ cryptocurrency trading bot framework
 **hyperopt**
 > Optimize strategy parameters
 
+**hyperopt-list**, **hyperopt-show**
+> List or show results of previous hyperopt runs
+
+**backtesting-show**
+> Show results of previous backtesting runs
+
+**lookahead-analysis**, **recursive-analysis**
+> Check a strategy for lookahead bias and recursive indicator issues
+
 **download-data**
 > Download historical OHLCV data
 
 **new-config**
 > Create new configuration interactively
+
+**new-strategy**
+> Create a new strategy from a template
+
+**show-config**
+> Print the resolved configuration
 
 **create-userdir**
 > Create user data directory structure
@@ -113,8 +142,14 @@ cryptocurrency trading bot framework
 **list-exchanges**
 > Print available exchanges
 
-**list-pairs**
-> Print available trading pairs
+**list-markets**, **list-pairs**
+> Print markets or trading pairs on an exchange
+
+**list-data**
+> List downloaded data
+
+**test-pairlist**
+> Show the pairs the configured pairlist would produce
 
 **list-strategies**
 > Print available strategies
@@ -132,7 +167,7 @@ cryptocurrency trading bot framework
 > Plot profit over time
 
 **webserver**
-> Start the FreqUI web interface
+> Run the REST API and FreqUI in webserver mode for backtesting
 
 **install-ui**
 > Install the FreqUI web interface
@@ -141,9 +176,9 @@ cryptocurrency trading bot framework
 
 **freqtrade** is an open-source cryptocurrency trading bot written in Python. It supports automated trading on major exchanges including Binance, Kraken, Coinbase, and many others through the CCXT library.
 
-The bot executes user-defined trading strategies that specify entry and exit conditions based on technical indicators. Strategies are Python classes that can be backtested against historical data before live deployment. The hyperopt feature uses machine learning to optimize strategy parameters.
+The bot executes user-defined trading strategies that specify entry and exit conditions based on technical indicators. Strategies are Python classes that can be backtested against historical data before live deployment. The hyperopt feature uses Bayesian-style optimization (Optuna in current releases) to search for good strategy parameters.
 
-Freqtrade operates in dry-run mode by default, simulating trades without real money. It can be controlled via Telegram bot or the FreqUI web interface. Trade data is stored in a SQLite database for analysis and the plot commands visualize strategy performance.
+Configurations generated by **new-config** start in dry-run mode, simulating trades without real money. A running bot can be controlled via Telegram or the FreqUI web interface (REST API). Trade data is stored in a SQLite database for analysis and the plot commands visualize strategy performance.
 
 # CAVEATS
 
@@ -156,3 +191,11 @@ Freqtrade was started in **2017** as a community-driven open-source project. Wri
 # SEE ALSO
 
 [ccxt](/man/ccxt)(1), [python](/man/python)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/freqtrade/freqtrade)```
+
+```[Documentation](https://www.freqtrade.io/en/stable/)```
+
+<!-- verified: 2026-11-23 -->

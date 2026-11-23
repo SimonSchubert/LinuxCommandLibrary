@@ -24,17 +24,25 @@ CLI for building Angular web applications
 
 ```ng generate service [service-name]```
 
-**Build the application** for production
+**Build the application** (production configuration by default)
 
-```ng build --configuration production```
+```ng build```
+
+**Add a library** and run its setup schematic
+
+```ng add [@angular/material]```
+
+**Update** Angular packages to the next major version
+
+```ng update @angular/core @angular/cli```
 
 **Run unit tests**
 
 ```ng test```
 
-**Run end-to-end tests**
+**Preview generated files** without writing them
 
-```ng e2e```
+```ng generate component [component-name] --dry-run```
 
 # SYNOPSIS
 
@@ -93,6 +101,9 @@ CLI for building Angular web applications
 **extract-i18n**
 > Extract i18n messages from the source code
 
+**mcp**
+> Start an MCP (Model Context Protocol) server that exposes Angular CLI tools to AI assistants
+
 **--help**
 > Display help for any command
 
@@ -113,7 +124,7 @@ The CLI automates common development tasks through schematics - templates that g
 
 Projects are configured through **angular.json**, which defines build targets, file paths, and environment-specific settings. The CLI supports multiple projects within a single workspace, enabling monorepo-style development.
 
-The **serve** command provides a development server with hot module replacement, automatically rebuilding and refreshing the browser when source files change. Production builds use **build --configuration production** which enables optimizations like ahead-of-time compilation, tree shaking, and minification.
+The **serve** command provides a development server (Vite based since Angular 17) with hot module replacement, automatically rebuilding and refreshing the browser when source files change. **ng build** uses the production configuration by default (since Angular 12), enabling ahead-of-time compilation, tree shaking, and minification; the modern build system is based on **esbuild**.
 
 # CONFIGURATION
 
@@ -125,12 +136,22 @@ The **serve** command provides a development server with hot module replacement,
 
 # CAVEATS
 
-Requires Node.js and npm to be installed. Global installation via **npm install -g @angular/cli** provides the ng command system-wide, but projects can also use locally installed versions. Some commands like **deploy** require additional packages to be installed first using **ng add**.
+Requires Node.js and npm to be installed. Global installation via **npm install -g @angular/cli** provides the ng command system-wide, but projects can also use locally installed versions. Some commands like **deploy**, **lint**, and **e2e** have no builder by default and require an additional package to be installed first using **ng add** (e.g. **ng add @angular-eslint/schematics**).
 
 # HISTORY
 
-Angular CLI was introduced alongside **Angular 2** in **September 2016** to simplify project setup and development workflows. It replaced the manual configuration required for TypeScript compilation, module bundling, and build optimization. The CLI has evolved significantly, with major updates accompanying each Angular version, introducing features like differential loading, Ivy compilation, and standalone components.
+Angular CLI was introduced alongside **Angular 2** in **September 2016** to simplify project setup and development workflows. It replaced the manual configuration required for TypeScript compilation, module bundling, and build optimization. The CLI has evolved significantly, with major updates accompanying each Angular version, introducing features like Ivy compilation, standalone components, the esbuild/Vite build system, and Vitest as the default unit test runner.
 
 # SEE ALSO
 
-[npm](/man/npm)(1), [node](/man/node)(1), [webpack](/man/webpack)(1), [react-scripts](/man/react-scripts)(1), [vue](/man/vue)(1)
+[npm](/man/npm)(1), [node](/man/node)(1), [ng](/man/ng)(1), [vite](/man/vite)(1), [webpack](/man/webpack)(1), [react-scripts](/man/react-scripts)(1), [vue](/man/vue)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/angular/angular-cli)```
+
+```[Homepage](https://angular.dev/)```
+
+```[Documentation](https://angular.dev/cli)```
+
+<!-- verified: 2026-11-23 -->

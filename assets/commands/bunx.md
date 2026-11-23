@@ -10,7 +10,7 @@ Auto-install and run package executables
 
 **Run specific package version**
 
-```bunx [email protected] [app.js]```
+```bunx [uglify-js@3.14.0] [app.js]```
 
 **Run when binary name differs from package**
 
@@ -24,19 +24,25 @@ Auto-install and run package executables
 
 ```bunx prettier [file.js]```
 
-**Run create-react-app**
+Run **only if already installed**, never download
 
-```bunx create-react-app [my-app]```
+```bunx --no-install [package]```
+
+**Run a command** with a package's binaries on the PATH
+
+```bunx -p [typescript] sh -c "[tsc --version]"```
 
 # SYNOPSIS
 
-**bunx** [_options_] _package_ [_arguments_]
+**bunx** [_options_] _package_[@_version_] [_arguments_]
+
+**bun x** [_options_] _package_[@_version_] [_arguments_]
 
 # DESCRIPTION
 
-**bunx** auto-installs and runs executables from npm packages. It's Bun's equivalent of npx, roughly 100x faster for locally installed packages due to Bun's fast startup times.
+**bunx** auto-installs and runs executables from npm packages. It is an alias for **bun x** and Bun's equivalent of npx or yarn dlx, roughly 100x faster than npx for locally installed packages due to Bun's fast startup times.
 
-Packages not found in local node_modules are automatically installed into a global shared cache.
+A locally installed package is used first; otherwise the package is installed into Bun's global shared cache. When a version is given (e.g. _pkg@2_) the local copy is ignored. Cached packages are checked for newer versions once a day, or on every run with _pkg@latest_.
 
 # PARAMETERS
 
@@ -47,7 +53,19 @@ Packages not found in local node_modules are automatically installed into a glob
 > Force running with Bun even if the executable carries a Node shebang.
 
 **--no-install**
-> Fail instead of fetching when the package is not already cached.
+> Skip installation if the package is not already installed.
+
+**--cwd** _dir_
+> Set the working directory.
+
+**--env-file** _file_
+> Load environment variables from the specified file(s).
+
+**--minimum-release-age** _seconds_
+> Only install packages published at least N seconds ago.
+
+**--trust**
+> Run the lifecycle scripts of the package and all of its dependencies during installation.
 
 **--silent**
 > Suppress installation-related output.
@@ -57,7 +75,7 @@ Packages not found in local node_modules are automatically installed into a glob
 
 # BEHAVIOR
 
-By default, bunx respects **#!/usr/bin/env node** shebangs in scripts. Use **--bun** to override and run with Bun runtime.
+By default, bunx respects **#!/usr/bin/env node** shebangs in scripts. Use **--bun** to override and run with Bun runtime. Flags for bunx itself must appear before the package name; anything after it is passed to the executable.
 
 # WINDOWS
 
@@ -69,4 +87,12 @@ Packages are cached globally after first use. Use **--bun** flag when you specif
 
 # SEE ALSO
 
-[bun](/man/bun)(1), [bun-run](/man/bun-run)(1), [npx](/man/npx)(1)
+[bun](/man/bun)(1), [bun-run](/man/bun-run)(1), [bun-x](/man/bun-x)(1), [npx](/man/npx)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/oven-sh/bun)```
+
+```[Documentation](https://bun.com/docs/pm/bunx)```
+
+<!-- verified: 2026-11-23 -->
