@@ -10,46 +10,65 @@ Print specific **Pokémon**
 
 Print **shiny** variant
 
-```pokego --name [spheal] -s```
+```pokego --name [spheal] --shiny```
 
 Print **alternative form**
 
-```pokego --name [blastoise] --form mega```
+```pokego --name [charizard] --form [mega-y]```
 
 Print **random** from generations 1-3
 
 ```pokego --random 1-3```
 
+Print **random** from specific generations
+
+```pokego --random 1,3,6```
+
 Print without **name title**
 
 ```pokego --random 1-3 --no-title```
 
+**List** all Pokémon names
+
+```pokego --list```
+
 # SYNOPSIS
 
-**pokego** [**--name** _pokemon_] [**--random** _range_] [**-s**|**--shiny**] [**--form** _form_] [**--no-title**]
+**pokego** [**-n** _pokemon_ [**-f** _form_]] [**-r** _generations_] [**-s**] [**--no-title**]
+
+**pokego** **completion** _shell_
 
 # PARAMETERS
 
-**--name _pokemon_**
-> Display specific Pokémon by name
+**-n**, **--name** _pokemon_
+> Display a specific Pokémon by name.
 
-**--random _range_**
-> Display random Pokémon from generation range
+**-r**, **--random** _generations_
+> Display a random Pokémon, optionally limited to generations 1 to 8, given as a range (**1-3**) or a comma-separated list (**1,3,6**).
 
-**-s, --shiny**
-> Display shiny color variant
+**-s**, **--shiny**
+> Display the shiny color variant.
 
-**--form _form_**
-> Display alternative form (mega, gmax, etc.)
+**-f**, **--form** _form_
+> Display an alternative form (e.g. mega, mega-x, gmax, alola, galar). Used with **--name**.
 
 **--no-title**
-> Don't display Pokémon name
+> Don't print the Pokémon name above the sprite.
+
+**-l**, **--list**
+> List the base names of all Pokémon (alternate forms are not listed).
+
+**-v**, **--version**
+> Show version.
+
+**completion** _bash_|_zsh_|_fish_|_powershell_
+> Generate a shell completion script.
 
 # DESCRIPTION
 
 **pokego** displays Pokémon sprites as colored ASCII art in the terminal. It's a fun tool for customizing terminal prompts or adding personality to shell sessions.
 
-The tool includes sprites for all Pokémon including regional forms, mega evolutions, and shiny variants. It's written in Go for fast performance.
+It includes all 905 Pokémon from generations 1 to 8, with shiny, mega, Gigantamax and regional variants. Random Pokémon have a 1/128 chance of being shiny, as in the games. All sprites are embedded in the single Go binary, so no external assets are needed at runtime.
 
 # CAVEATS
 
@@ -57,8 +76,14 @@ Requires terminal with color support. Best viewed with dark background. Sprite q
 
 # HISTORY
 
-**pokego** was created by **rubiin** as a faster alternative to pokemon-colorscripts. Written in Go, it offers improved performance while maintaining the fun of displaying Pokémon in terminals.
+**pokego** was created by **rubiin** as a Go rewrite of **pokemon-colorscripts** by phoneybadger, offering faster startup while keeping the same sprites and options.
 
 # SEE ALSO
 
-[neofetch](/man/neofetch)(1), [fastfetch](/man/fastfetch)(1), [cowsay](/man/cowsay)(1)
+[pokemon-colorscripts](/man/pokemon-colorscripts)(1), [neofetch](/man/neofetch)(1), [fastfetch](/man/fastfetch)(1), [cowsay](/man/cowsay)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/rubiin/pokego)```
+
+<!-- verified: 2026-11-23 -->

@@ -1,32 +1,40 @@
 # TAGLINE
 
-AWS SQS queue management CLI
+AWS SQS queue inspection CLI
 
 # TLDR
 
-**List queues**
+**List queues**, optionally filtered by name prefix
 
-```sqsc list```
+```sqsc lq [queue-prefix]```
 
-**Send message**
+**List messages** in a queue with timestamps
 
-```sqsc send [queue-url] "[message]"```
+```sqsc ls [queue-name] --timestamp```
 
-**Receive messages**
+**List** at most a number of messages
 
-```sqsc receive [queue-url]```
+```sqsc ls [queue-name] --limit [10]```
 
-**Delete message**
+**Copy** all messages to another queue
 
-```sqsc delete [queue-url] [receipt-handle]```
+```sqsc cp [from-queue] [to-queue]```
 
-**Purge queue**
+**Move** all messages, e.g. redrive a dead letter queue
 
-```sqsc purge [queue-url]```
+```sqsc mv [queue-dlq] [queue]```
 
-**Create queue**
+**Describe** queue attributes
 
-```sqsc create [queue-name]```
+```sqsc describe [queue-name]```
+
+**Pull** messages into the local SQLite database for querying
+
+```sqsc pull [queue-name]```
+
+**Query** pulled messages with SQL
+
+```sqsc query "SELECT body FROM [queue-name] WHERE body LIKE '%[user]%'"```
 
 # SYNOPSIS
 
@@ -34,41 +42,65 @@ AWS SQS queue management CLI
 
 # PARAMETERS
 
-**list**
-> List queues.
+**lq** [_prefix_]
+> List queues, optionally only those whose name starts with _prefix_.
 
-**send**
-> Send message.
+**ls** _queue-name_
+> List messages in a queue.
 
-**receive**
-> Receive messages.
+**cp** _from-queue-name_ _to-queue-name_
+> Copy all messages to another queue.
 
-**delete**
-> Delete message.
+**mv** _from-queue-name_ _to-queue-name_
+> Move all messages to another queue.
 
-**purge**
-> Clear queue.
+**describe** _queue-name_
+> Show queue attributes.
 
-**create**
-> Create queue.
+**pull** _queue-name_
+> Store the queue's messages in a local SQLite database.
 
-**--region** _REGION_
-> AWS region.
+**query** _sql_
+> Run an SQL query against pulled messages; the queue name is used as the table name.
+
+**list-table**
+> List queues that have been pulled and can be queried.
+
+**schema**
+> Show the table schema used for pulled messages.
+
+**--timeout** _SECONDS_
+> Visibility timeout for received messages (default 30); used by **ls**, **cp**, **mv** and **pull**.
+
+**--timestamp**
+> Show message timestamps (**ls**).
+
+**--limit** _N_
+> Maximum number of messages to list (**ls**).
+
+**--hide-headers**
+> Omit column headers from **query** output, e.g. to pipe the body into jq.
 
 # DESCRIPTION
 
-**sqsc** is a command-line client for Amazon Simple Queue Service (SQS). It provides queue management operations including creating queues, sending and receiving messages, deleting processed messages, and purging queues.
+**sqsc** is a command-line tool for inspecting and moving messages in Amazon Simple Queue Service (SQS) queues, addressed by queue name rather than URL. It is a Node.js tool installed with **npm install -g sqsc**.
 
-The tool uses standard AWS credential configuration for authentication. It supports common SQS workflows such as sending messages to queue URLs, receiving batches of messages for processing, and deleting messages by receipt handle after successful processing.
+Messages can be pulled into a local SQLite database and analyzed with SQL, including SQLite's **json_extract()** for JSON message bodies. Credentials come from the standard AWS SDK configuration; the region is read from **~/.aws/config** for the profile in **AWS_PROFILE** (default **default**).
 
 # CAVEATS
 
-AWS account needed. Credentials required. Region specific.
+**ls**, **cp**, **mv** and **pull** actually receive messages: each receive increases the message's receive count, so messages can land in a dead letter queue once **maxReceiveCount** is reached. sqsc resets the visibility timeout at the end of the command. FIFO queues and server-side encryption are not supported. The project has not been updated since 2020.
 
 # HISTORY
 
-**sqsc** is a lightweight command-line client for Amazon Simple Queue Service, created as an alternative to the verbose AWS CLI for common SQS operations like listing, sending, receiving, and purging queues.
+**sqsc** was created by **yongfei25** in 2017 and is written in **TypeScript**, as a lighter alternative to the AWS CLI for browsing and moving SQS messages.
 
 # SEE ALSO
 
-[aws](/man/aws)(1)
+[aws](/man/aws)(1), [sqlite3](/man/sqlite3)(1), [jq](/man/jq)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/yongfei25/sqsc)```
+
+<!-- verified: 2026-11-23 -->

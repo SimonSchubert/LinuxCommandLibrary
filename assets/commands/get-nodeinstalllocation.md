@@ -1,28 +1,39 @@
 # TAGLINE
 
-Print the installation path of the active Node.js version
+Print the directory where ps-nvm installs Node.js versions
 
 # TLDR
 
-**Print the path** of the currently active Node.js installation
+**Print the install directory** used by ps-nvm
 
-```get-nodeinstalllocation```
+```Get-NodeInstallLocation```
+
+**Change the install directory**, then confirm it
+
+```Set-NodeInstallLocation -Path [C:\nodejs]; Get-NodeInstallLocation```
 
 # SYNOPSIS
 
-**get-nodeinstalllocation**
+**Get-NodeInstallLocation**
 
 # DESCRIPTION
 
-**get-nodeinstalllocation** is a helper shim that outputs the absolute filesystem path of the Node.js installation currently on the user's **PATH**. It is typically provided by Node.js version managers or distribution packaging scripts so that tooling (installers, build systems, editor integrations) can locate the active Node.js tree without parsing environment variables.
+**Get-NodeInstallLocation** is a PowerShell cmdlet from the **ps-nvm** module. It returns the root directory into which **Install-NodeVersion** downloads and unpacks Node.js versions. It takes no parameters.
 
-The equivalent query using plain Node.js is `node -e "console.log(process.execPath)"` or, on POSIX systems, `dirname "$(readlink -f "$(command -v node)")"`.
+The value is read from the **InstallPath** entry of the module's **settings.json**. If no setting exists, the default is the **vs** folder inside the ps-nvm module directory. **Set-NodeInstallLocation -Path** _DIR_ changes it to _DIR_**\\.nvm**, which is commonly used on Windows to avoid long-path problems with deep module trees.
 
 # CAVEATS
 
-This is a vendor-specific wrapper rather than an upstream Node.js command. Behavior depends on how your Node.js was installed; if no such script exists on your system, prefer `which node` / `command -v node` or `node -p "process.execPath"` to obtain the same information.
+Part of ps-nvm and only available inside PowerShell (**pwsh** or Windows PowerShell) after importing the module. It reports where versions are stored, not the path of the currently active **node** binary; use **(Get-Command node).Source** or **node -p "process.execPath"** for that.
 
 # SEE ALSO
 
-[node](/man/node)(1), [which](/man/which)(1), [readlink](/man/readlink)(1)
+[ps-nvm](/man/ps-nvm)(1), [get-nodeversions](/man/get-nodeversions)(1), [pwsh](/man/pwsh)(1), [node](/man/node)(1)
 
+# RESOURCES
+
+```[Source code](https://github.com/aaronpowell/ps-nvm)```
+
+```[Documentation](https://github.com/aaronpowell/ps-nvm/blob/master/.docs/reference.md)```
+
+<!-- verified: 2026-11-23 -->

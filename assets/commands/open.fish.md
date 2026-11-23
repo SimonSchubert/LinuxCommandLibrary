@@ -26,29 +26,42 @@ Fish shell function that opens files with the default application
 
 # SYNOPSIS
 
-**open** [_file_...]
+**open** [**-h**] _file_...
 
 # PARAMETERS
 
 _FILE_
 > One or more files, directories, or URLs to open.
 
+**-h**, **--help**
+> Display help for the function.
+
 # DESCRIPTION
 
-**open** is a built-in function shipped with the Fish shell that opens files, directories, and URLs with the user's default application, regardless of the host operating system. It is defined in **share/fish/functions/open.fish** in the Fish installation.
+**open** is a function shipped with the Fish shell that opens files, directories, and URLs with the user's default application. It is defined in **share/functions/open.fish** and autoloaded on first use.
 
-On macOS and Haiku the function delegates to the native **open** binary. On other Unix-like systems it dispatches to **xdg-open**, **gnome-open**, or **kde-open**, whichever is present. On systems lacking any of these helpers the function prints an error explaining that no opener is available.
+The function is only defined when no **open** command already exists on **$PATH**. On Cygwin it calls **cygstart** for each argument; elsewhere it calls **xdg-open** for each argument. If neither is available it prints an error suggesting to install **xdg-utils**.
 
-Because it is implemented as a Fish function, it only exists inside interactive Fish sessions and is not available to scripts run with **sh**, **bash** or **zsh**.
+On macOS the native **open(1)** binary is found first, so the Fish function is never defined there and the system command runs instead.
 
 # CAVEATS
 
-Only defined inside the Fish shell; not an executable on **$PATH**. Behavior on Linux depends on the installed desktop helpers — on a minimal server without **xdg-open** the function will fail. On macOS, Fish prefers the system **open(1)** and bypasses any user-defined function named **open**.
+Only exists inside Fish; it is not an executable on **$PATH** and is not available to **sh**, **bash** or **zsh** scripts. On Linux it depends on **xdg-open**, so a minimal server without xdg-utils will only print an error. On systems where another **open** command is installed (for example Debian's **open** alternative pointing to **openvt**), that command takes precedence and behaves differently.
 
 # HISTORY
 
-The **open** function has shipped with Fish since its early releases as a portable alternative to macOS's **open(1)** and Linux's **xdg-open**. It is updated along with Fish itself.
+The **open** function has shipped with Fish for many years as a portable equivalent of macOS's **open(1)**. It is updated along with Fish itself.
 
 # SEE ALSO
 
 [open](/man/open)(1), [xdg-open](/man/xdg-open)(1), [fish](/man/fish)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/fish-shell/fish-shell)```
+
+```[Homepage](https://fishshell.com)```
+
+```[Documentation](https://fishshell.com/docs/current/cmds/open.html)```
+
+<!-- verified: 2026-11-23 -->
