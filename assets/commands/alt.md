@@ -20,6 +20,10 @@ Find alternate files for source and test switching
 
 ```find . -type f -print | alt -f - [path/to/file.rb]```
 
+**Score** candidates in **parallel** threads on large projects
+
+```alt -j [path/to/file.rb]```
+
 # SYNOPSIS
 
 **alt** [_options_] _path_
@@ -37,8 +41,17 @@ By default, **alt** ignores hidden directory entries, globs defined in a **.igno
 **-a**
 > Include hidden files and directories in the search.
 
-**-f** _-_
-> Read file paths from standard input instead of scanning the directory.
+**-f**, **--file** _FILE_
+> Read candidate paths from _FILE_ instead of walking the directory tree. Use **-** to read them from stdin.
+
+**-j**
+> Score similarity in parallel threads (default: off).
+
+**--filename-weight** _WEIGHT_
+> Weight of the filename in the scoring algorithm (default: 10.0).
+
+**--path-weight** _WEIGHT_
+> Weight of the directory path in the scoring algorithm (default: 1.0).
 
 **-t** _N_, **--truncate** _N_
 > Truncate output to N alternate files (default 0, meaning show all).
@@ -51,7 +64,7 @@ By default, **alt** ignores hidden directory entries, globs defined in a **.igno
 
 # CAVEATS
 
-Alternate file matching relies on path similarity ranking based on common naming conventions; unusual project structures may produce unexpected results. By default, all possible alternates are shown in ranked order; use **--truncate 1** to get only the best match.
+Alternate file matching relies on path similarity ranking based on common naming conventions; unusual project structures may produce unexpected results. By default, all possible alternates are shown in ranked order; use **--truncate 1** to get only the best match. Reading candidates with **-f** is slower than the built-in directory walk. The original uptech/alt GitHub repository is no longer publicly available.
 
 # HISTORY
 

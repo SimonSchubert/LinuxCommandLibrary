@@ -20,9 +20,17 @@ command-line client for the **aptdaemon** package management service
 
 ```aptdcon --upgrade "[package]"```
 
-**Upgrade the whole system**
+**Upgrade the whole system** safely (no removals)
 
-```aptdcon --upgrade-system```
+```aptdcon --safe-upgrade```
+
+**Full upgrade**, allowing packages to be installed or removed
+
+```aptdcon --full-upgrade```
+
+**Install a local .deb file**
+
+```aptdcon --install [path/to/package.deb]```
 
 **Refresh the package cache**
 
@@ -32,24 +40,28 @@ command-line client for the **aptdaemon** package management service
 
 ```aptdcon --fix-depends```
 
-**Install packages while showing dpkg's terminal output**
+**Add a repository**
 
-```aptdcon --install "[package]" --show-terminal```
+```aptdcon --add-repository "[deb http://example.com/debian stable main]"```
+
+**Install without attaching to the dpkg terminal**
+
+```aptdcon --install "[package]" --hide-terminal```
 
 # SYNOPSIS
 
-**aptdcon** [_action_] [_options_]
+**aptdcon** _action_ [_options_]
 
 # DESCRIPTION
 
 **aptdcon** is a command-line client for **aptdaemon**, a system-wide D-Bus service that serializes APT operations and performs PolicyKit-based authentication. It exposes the same backend used by GNOME Software, Software-Properties-GTK, and update-manager, so actions dispatched via `aptdcon` cooperate cleanly with running GUI package managers.
 
-Operations are queued on the daemon; multiple `aptdcon` invocations simply hand off to `aptd`, which runs them in sequence. PolicyKit prompts for authentication as needed (via a graphical or tty agent).
+Operations are queued on the daemon; multiple `aptdcon` invocations simply hand off to `aptd`, which runs them in sequence. PolicyKit prompts for authentication as needed (via a graphical or tty agent). Only one action is performed per invocation; to operate on several packages, put the names in one quoted, space-separated argument. By default aptdcon attaches to the dpkg terminal so configuration prompts can be answered.
 
 # PARAMETERS
 
 **-i** _PKGS_, **--install** _PKGS_
-> Install the listed packages.
+> Install the listed packages, or a single local `.deb` file.
 
 **--reinstall** _PKGS_
 > Reinstall the listed packages.
@@ -63,65 +75,73 @@ Operations are queued on the daemon; multiple `aptdcon` invocations simply hand 
 **-u** _PKGS_, **--upgrade** _PKGS_
 > Upgrade the listed packages.
 
-**--upgrade-system**
-> Upgrade all packages on the system (equivalent to `apt upgrade`).
+**--downgrade** _PKGS_
+> Downgrade the listed packages (use _name=version_).
 
-**--refresh**
+**--safe-upgrade**
+> Upgrade the system without installing or removing packages. **--upgrade-system** is a deprecated alias.
+
+**--full-upgrade**
+> Upgrade the system, possibly installing and removing packages.
+
+**-c**, **--refresh**
 > Update the package lists.
 
 **--fix-install**
-> Complete a previously cancelled installation via dpkg.
+> Complete a previously interrupted installation (like `dpkg --configure -a`).
 
 **--fix-depends**
-> Attempt to resolve unsatisfied dependencies.
+> Try to resolve broken dependencies. Potentially dangerous, since it may remove many packages.
 
-**--add-vendor-key** _PUBLIC_KEY_FILE_
-> Install a vendor signing key from a file.
+**--clean**
+> Remove downloaded package files from the cache.
 
-**--add-vendor-key-from-keyserver** _KEY_ID_
-> Fetch and install a vendor key from a keyserver.
+**--reconfigure** _PKGS_
+> Reconfigure installed packages via debconf.
 
-**--key-server** _KEYSERVER_
-> Use _KEYSERVER_ for key downloads.
-
-**--remove-vendor-key** _FINGERPRINT_
-> Remove the vendor key with the given fingerprint.
-
-**--list-trusted-vendors**
-> List trusted software vendors and their keys.
+**--priority** _PRIORITY_
+> Minimum debconf priority of questions shown with **--reconfigure**.
 
 **--add-repository** _'DEB_LINE'_
-> Add the given `deb` line to sources.
+> Add the given `deb` line to the APT sources.
 
 **--sources-file** _FILE_
-> Alternative sources.list location for repository management.
-
-**--show-terminal**
-> Attach to dpkg's interactive terminal (prompts, progress).
+> Alternative file in sources.list.d to which repositories are added.
 
 **--hide-terminal**
-> Suppress dpkg terminal output.
+> Do not attach to the dpkg terminal.
 
 **--allow-unauthenticated**
-> Allow install of packages that are not from a trusted vendor.
+> Allow installing packages from unauthenticated sources.
 
-**-d**, **--debug**
-> Print extra diagnostic information.
+**-d**, **--show-details**
+> Show additional information about the packages (currently the version numbers).
+
+**--add-vendor-key** _FILE_, **--add-vendor-key-from-keyserver** _KEY_ID_, **--keyserver** _SERVER_, **--remove-vendor-key** _FINGERPRINT_, **--list-trusted-vendors**
+> Manage trusted APT signing keys (aptdaemon 1.x only, removed in 2.0).
 
 **-h**, **--help**
 > Show help.
 
-**-v**, **--version**
+**--version**
 > Show aptdcon version.
 
 # CAVEATS
 
-Requires the **aptdaemon** service. On systems without aptd (modern Ubuntu/Debian are migrating to `packagekit`), `apt` or `apt-get` is the direct replacement. PolicyKit authorization is required for all mutating actions, so expect a password prompt in a GUI agent or tty.
+Requires the **aptdaemon** service. Debian dropped aptdaemon after Debian 8 (jessie); Ubuntu still packages it (2.0.x), though most frontends now use **PackageKit** instead. Elsewhere, `apt`, `apt-get`, or `pkcon` are the direct replacements. PolicyKit authorization is required for all mutating actions, so expect a password prompt in a GUI agent or tty.
 
 # HISTORY
 
-**aptdaemon** (and its clients `aptdcon` and `aptd-cli`) was written by **Sebastian Heinlein** for Ubuntu to provide a single D-Bus-coordinated place for PackageKit/Software Center/Update Manager to call APT.
+**aptdaemon** (and its client **aptdcon**) was written by **Sebastian Heinlein** around 2008 for Ubuntu to provide a single D-Bus-coordinated place for Software Center, Update Manager, and other frontends to call APT, including a PackageKit compatibility layer. Version 2.0 (December 2024) dropped the vendor key management actions.
 
 # SEE ALSO
 
 [aptd](/man/aptd)(1), [apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [pkcon](/man/pkcon)(1), [pkexec](/man/pkexec)(1)
+
+# RESOURCES
+
+```[Source code](https://git.launchpad.net/aptdaemon)```
+
+```[Homepage](https://launchpad.net/aptdaemon)```
+
+<!-- verified: 2026-11-23 -->

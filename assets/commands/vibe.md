@@ -14,11 +14,19 @@ Mistral AI command-line coding assistant
 
 **Run non-interactively for scripting**
 
-```vibe --prompt "[add unit tests for the auth module]"```
+```vibe -p "[add unit tests for the auth module]"```
 
-**Auto-approve all tool executions**
+**Run headless and approve all tool calls**
 
-```vibe --auto-approve```
+```vibe -p "[fix the failing tests]" --auto-approve```
+
+**Pipe input into a headless run**
+
+```git diff | vibe -p "[review this diff]"```
+
+**Limit turns and cost in non-interactive mode**
+
+```vibe -p "[fix lint errors]" --max-turns [10] --max-price [2.50]```
 
 **Use a custom agent configuration**
 
@@ -28,13 +36,13 @@ Mistral AI command-line coding assistant
 
 ```vibe --continue```
 
-**Resume a specific session**
+**Pick a session to resume** (or pass a session ID)
 
-```vibe --resume [session_id]```
+```vibe --resume```
 
-**Limit turns and cost in non-interactive mode**
+**Work in an isolated git worktree**
 
-```vibe --prompt "[fix lint errors]" --max-turns [10] --max-price [2.50]```
+```vibe --worktree [feature-name]```
 
 **Reference a file in prompt**
 
@@ -48,45 +56,99 @@ Mistral AI command-line coding assistant
 
 **vibe** [_options_] [_prompt_]
 
+**vibe** **mcp** **add** | **remove** [_args_]
+
+**vibe** **config** **schema**
+
+**vibe** **update**
+
 # PARAMETERS
 
-**--prompt** _TEXT_
-> Run non-interactively with the provided prompt (auto-approve enabled by default).
+**-p**, **--prompt** [_TEXT_]
+> Run in headless (programmatic) mode: send the prompt, print the response, and exit. Without _TEXT_, the prompt is read from stdin.
 
-**--auto-approve**
-> Automatically approve all tool executions without prompting.
+**--prompt-file** _PATH_
+> Run headless with the prompt read from a file.
+
+**--auto-approve**, **--yolo**
+> Approve all tool calls without prompting. Without it, headless mode denies any tool call that would need approval.
+
+**--smart-approve**
+> Classify each tool call and auto-run the safe ones, prompting only for risky ones.
+
+**--approval-policy** _NAME_
+> Approval policy: ask, accept-edits (default), smart-approve, auto-approve, or a custom one.
 
 **--agent** _NAME_
-> Select an agent profile (built-ins: default, plan, accept-edits, auto-approve) or load a custom TOML from the agents directory.
+> Select an agent profile (built-in, or custom from `~/.vibe/agents/NAME.toml`). Defaults to the `default_agent` config setting.
 
 **-c**, **--continue**
-> Resume the most recent session.
+> Continue the last session in this folder.
 
-**--resume** _SESSION_ID_
-> Resume a specific session by ID.
+**--resume** [_SESSION_ID_]
+> Resume a specific session, or show an interactive picker without an ID.
+
+**--model** _ALIAS_
+> Use this model alias instead of `active_model` (headless mode, new sessions, not saved).
+
+**--thinking** _LEVEL_
+> Thinking level: off, low, medium, high, xhigh, max (headless mode, new sessions).
 
 **--max-turns** _N_
-> Limit the number of assistant turns in non-interactive mode.
+> Limit the number of assistant turns (headless mode only).
 
 **--max-price** _DOLLARS_
-> Abort the session if cost exceeds the specified dollar amount.
+> Stop once the cumulative cost reaches this amount (headless mode only).
 
-**--enabled-tools** _TOOL_
-> Restrict which built-in tools are available (supports glob patterns).
+**--max-tokens** _N_
+> Stop once the cumulative prompt and completion tokens reach this budget (headless mode only).
+
+**--time-limit** _SECONDS_
+> Interrupt the run after this many seconds; the session can be resumed later.
 
 **--output** _FORMAT_
-> Output format: `text`, `json`, or `stream`.
+> Headless output format: `text` (default), `json` (all messages at the end), or `streaming` (newline-delimited JSON).
+
+**--output-dir** _DIR_
+> Write `export.json` (usage, cost, outcome) and a copy of the session journal to _DIR_.
+
+**--system-prompt-file** _PATH_
+> Replace Vibe's own system prompt instructions with the file's text (headless mode only).
+
+**--enabled-tools** _TOOL_
+> Enable specific tools; in headless mode all others are disabled. Repeatable; supports globs and `re:` regexes.
+
+**--disabled-tools** _TOOL_
+> Disable specific tools after **--enabled-tools** filtering. Repeatable.
 
 **--workdir** _PATH_
-> Set the working directory for the session.
+> Change to this directory before running.
+
+**--add-dir** _PATH_
+> Grant file access to an additional directory. Repeatable.
+
+**--trust**
+> Trust the working directory for this invocation only.
+
+**--worktree** [_NAME_]
+> Run inside a git worktree under `$VIBE_HOME/worktrees`, creating or reusing branch _NAME_.
 
 **--setup**
-> Run interactive API key configuration.
+> Set up the API key and exit.
+
+**--check-upgrade**, **update**
+> Check for a Vibe update now and prompt to install it.
+
+**-v**, **--version**
+> Show version and exit.
 
 # INTERACTIVE CONTROLS
 
-**Ctrl+J** or **Shift+Enter**
+**Ctrl+J**, **Alt+Enter**, or **Shift+Enter**
 > Insert newline for multi-line input.
+
+**Escape**
+> Interrupt the current operation; press twice to rewind to a previous message.
 
 **Ctrl+G**
 > Edit the current input in an external editor.
@@ -94,14 +156,17 @@ Mistral AI command-line coding assistant
 **Ctrl+O**
 > Toggle the tool output view.
 
-**Ctrl+T**
-> Toggle the todo list view.
-
 **Ctrl+R**
-> Start voice recording (Escape to cancel).
+> Search prompt history.
+
+**Ctrl+T**
+> Start or stop voice recording when voice mode is on.
+
+**Alt+\\**
+> Toggle the todo list panel.
 
 **Shift+Tab**
-> Toggle auto-approve mode on/off.
+> Cycle through agents (approval modes).
 
 **@**_filename_
 > Autocomplete file paths in prompts.
@@ -110,38 +175,59 @@ Mistral AI command-line coding assistant
 > Execute shell commands directly, bypassing the agent.
 
 **/**_command_
-> Run a built-in or custom slash command (e.g. `/help`).
+> Run a built-in or custom slash command (e.g. `/help`, `/model`, `/compact`, `/resume`, `/mcp`).
 
 # BUILT-IN TOOLS
 
-**read_file**, **write_file**, **search_replace**
+**read_file**, **write_file**, **edit**
 > File operations for reading, writing, and modifying code
 
 **bash**
-> Stateful terminal for command execution
+> Terminal command execution
 
 **grep**
 > Code search with ripgrep support
 
-**todo**
-> Task tracking and list management
+**web_fetch**, **web_search**
+> Fetch pages and search the web
+
+**todo**, **task**, **ask_user_question**
+> Task tracking, subagents, and clarifying questions
 
 # DESCRIPTION
 
-**Mistral Vibe CLI** is an open-source command-line coding assistant powered by Devstral 2, Mistral's 123B-parameter coding model with a 256K context window. It explores, modifies, and executes changes across your codebase using natural language.
+**Mistral Vibe** is an open-source command-line coding agent from Mistral AI, originally launched with Devstral 2, Mistral's 123B-parameter coding model with a 256K context window. It reads your code, edits files, and runs commands using natural language, asking for approval before risky actions.
 
-The tool provides project-aware context by automatically scanning your file structure and Git status. Features include smart file references with @ autocomplete, shell command execution with !, and multi-file orchestration that understands your entire codebase. It supports the Agent Communication Protocol (ACP) for IDE integration.
+The tool provides project-aware context by scanning your file structure, Git status, and **AGENTS.md** files. Features include smart file references with @ autocomplete, shell command execution with !, slash commands, skills, MCP servers, subagents, and git worktree sessions. It supports the Agent Client Protocol (ACP) for IDE integration via the **vibe-acp** entry point.
 
-Vibe runs in interactive chat mode by default, offering a conversational AI agent that breaks down complex tasks into actionable steps. Non-interactive mode enables scripting and automation workflows.
+Vibe runs in interactive mode by default. Headless mode (**-p**) enables scripting and automation workflows; commands the agent runs see `VIBE_SESSION=1` in their environment.
+
+# CONFIGURATION
+
+**~/.vibe/config.toml**
+> User configuration (active model, default agent and approval policy, telemetry, theme). A project-level `.vibe/config.toml` is used in trusted folders.
+
+**~/.vibe/agents/**_NAME_**.toml**
+> Custom agent profiles with tool permissions and allowlists.
 
 # CAVEATS
 
-Requires a Mistral API key set via **MISTRAL_API_KEY** environment variable or stored in **~/.vibe/.env** (override the config home with **VIBE_HOME**). Install via `curl -LsSf https://mistral.ai/vibe/install.sh | bash`, `uv tool install mistral-vibe`, or `pip install mistral-vibe`. Linux and macOS are the primary platforms; Windows is supported but secondary. Auto-approve mode executes commands without confirmation and can be destructive — prefer the **plan** agent for review-first workflows.
+Requires signing in with a Mistral account or a Mistral API key (**MISTRAL_API_KEY**, or stored under **~/.vibe**; override the config home with **VIBE_HOME**). Install via `curl -LsSf https://mistral.ai/vibe/install.sh | bash` or `uv tool install --python 3.14 mistral-vibe`; Python 3.12 or later is required. Auto-approve mode executes commands without confirmation and can be destructive. Telemetry is on by default; set `enable_telemetry = false` in config.toml to disable it.
 
 # HISTORY
 
-Mistral Vibe CLI was announced by **Mistral AI** on **December 9, 2025** alongside Devstral 2. It is released under the Apache 2.0 license and built in Python. Mistral offered free API access to Devstral 2 through December 2025, with pricing beginning January 2026. The tool integrates with the Zed IDE as an extension.
+Mistral Vibe CLI was announced by **Mistral AI** on **December 9, 2025** alongside Devstral 2. It is released under the Apache 2.0 license and was originally written in Python; the interactive terminal UI has since been rewritten in **Rust**, launched through the Python package. The project does not accept external pull requests.
 
 # SEE ALSO
 
 [claude](/man/claude)(1), [codex](/man/codex)(1), [gemini](/man/gemini)(1), [aider](/man/aider)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/mistralai/mistral-vibe)```
+
+```[Homepage](https://mistral.ai/products/vibe)```
+
+```[Documentation](https://docs.mistral.ai/vibe/code/overview)```
+
+<!-- verified: 2026-11-23 -->

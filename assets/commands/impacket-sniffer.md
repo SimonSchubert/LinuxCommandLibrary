@@ -33,7 +33,7 @@ Unlike **tcpdump**, this tool does not accept an interface argument or BPF filte
 
 # CAVEATS
 
-Requires root/administrator privileges for raw socket access. Does not support interface selection or BPF filters. For comprehensive packet analysis, dedicated tools like **Wireshark** or **tcpdump** are more appropriate.
+Requires root/administrator privileges for raw socket access. Does not support interface selection or BPF filters. Only IPv4 (**AF_INET**) is captured, and Linux raw sockets of this kind see incoming packets only, not locally generated outgoing traffic. Unknown protocol names are ignored with a warning. The command is named **impacket-sniffer** in Debian/Kali packages and **sniffer.py** when Impacket is installed with pip. For comprehensive packet analysis, dedicated tools like **Wireshark** or **tcpdump** are more appropriate.
 
 # HISTORY
 
@@ -42,3 +42,9 @@ Part of the **Impacket** library, originally by SecureAuth (now maintained by Fo
 # SEE ALSO
 
 [tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [impacket-sniff](/man/impacket-sniff)(1), [tshark](/man/tshark)(1), [ngrep](/man/ngrep)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/fortra/impacket)```
+
+<!-- verified: 2026-11-23 -->

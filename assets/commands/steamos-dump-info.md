@@ -1,70 +1,45 @@
 # TAGLINE
 
-Collect SteamOS system diagnostics
+Print basic SteamOS system information for debugging
 
 # TLDR
 
-**Dump all system information**
+**Print SteamOS system information**
 
 ```sudo steamos-dump-info```
 
-**List available sections**
+**Show the copy logged to the kernel log** at boot
 
-```steamos-dump-info --list-sections```
+```sudo dmesg | grep "SteamOS System Info"```
 
-**Dump with verbose output**
+**Check the boot-time service** that runs it
 
-```sudo steamos-dump-info --verbose```
-
-**Dump without compressing output**
-
-```sudo steamos-dump-info --no-compress```
-
-**Dump only a specific section**
-
-```sudo steamos-dump-info --section [network]```
+```systemctl status steamos-dump-info.service```
 
 # SYNOPSIS
 
-**steamos-dump-info** [_options_]
-
-# PARAMETERS
-
-**-h**, **--help**
-> Display help message.
-
-**-L**, **--list-sections**
-> List all available sections that can be dumped individually.
-
-**--section** _NAME_
-> Dump only the specified section. Can be used multiple times.
-
-**-V**, **--version**
-> Display version information.
-
-**-v**, **--verbose**
-> Enable verbose output with more detail about the collection process.
-
-**-q**, **--quiet**
-> Suppress most output, showing only critical messages.
-
-**--no-compress**
-> Create an uncompressed directory instead of a compressed archive.
+**steamos-dump-info**
 
 # DESCRIPTION
 
-**steamos-dump-info** collects comprehensive system diagnostics from a SteamOS installation into a compressed archive. The output includes system logs (journalctl, /var/log), hardware information (lspci, lsusb, /proc entries), network configuration, Steam client logs, Xorg logs, and system configuration files.
+**steamos-dump-info** is a small shell script from Valve's **steamos-customizations** package that prints a summary of the system state, with every line prefixed by **SteamOS System Info:**. It reports:
 
-The resulting archive is commonly requested by Valve support for troubleshooting Steam Deck and SteamOS issues, and can be uploaded to bug trackers or support tickets.
+- The OS name (**PRETTY_NAME** from _/etc/os-release_)
+- The current A/B root partition, as reported by **steamos-partition**
+- The board and product serial numbers from _/sys/class/dmi/id_
+- The first battery's model name, status and charge level
+- The A/B boot configuration (boot attempts, boot count, boot time, invalid image flags) from **steamos-bootconf dump-config**
+
+The **steamos-dump-info.service** systemd unit runs it once at every boot and writes its output to _/dev/kmsg_, so the information appears in the kernel log and in **journalctl -k**, where it is readily available in bug reports.
 
 # CAVEATS
 
-Requires root privileges for full system information. Specific to SteamOS (Steam Deck and other Valve devices). The output archive may contain sensitive system information.
+Must be run as root, otherwise it exits with an error. It takes no options. It is specific to SteamOS 3 (Steam Deck and other SteamOS devices). The output includes the device serial numbers, so redact them before sharing logs publicly. Values that cannot be read (for example in a virtual machine) are printed as placeholders instead of failing.
 
 # HISTORY
 
-**steamos-dump-info** is part of the SteamOS system tools developed by **Valve** for the Steam Deck and other SteamOS-based devices.
+Added to **steamos-customizations** by **Valve** in **2023** for SteamOS 3.
 
 # SEE ALSO
 
-[uname](/man/uname)(1), [lshw](/man/lshw)(1), [dmidecode](/man/dmidecode)(8), [steamos-finalize-install](/man/steamos-finalize-install)(1)
+[dmesg](/man/dmesg)(1), [journalctl](/man/journalctl)(1), [systemctl](/man/systemctl)(1), [dmidecode](/man/dmidecode)(8), [steamos-finalize-install](/man/steamos-finalize-install)(1)

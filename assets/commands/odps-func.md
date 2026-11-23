@@ -12,9 +12,17 @@ Manage MaxCompute user-defined functions from odpscmd
 
 ```desc function [name];```
 
-**Create a function** from an uploaded resource
+**Upload a JAR** resource containing the UDF code
+
+```add jar [path/to/udf.jar];```
+
+**Create a Java function** from an uploaded resource
 
 ```create function [name] as '[package.ClassName]' using '[resource.jar]';```
+
+**Create a Python function** from a resource in another project
+
+```create function [name] as '[script_name.ClassName]' using '[project]/resources/[script.py]';```
 
 **Drop a function**
 
@@ -23,6 +31,10 @@ Manage MaxCompute user-defined functions from odpscmd
 **Show built-in functions**
 
 ```show builtin functions;```
+
+**Look up one built-in function**
+
+```show builtin functions [abs];```
 
 # SYNOPSIS
 
@@ -42,7 +54,7 @@ Executed inside the **odpscmd** client as SQL-like statements:
 > Show a function's owner, creation time, class, and resources.
 
 **create function** _name_ **as** '_class_' **using** '_resources_'
-> Register a new UDF. _class_ is the fully-qualified Java class or Python module; _resources_ is a comma-separated list of already-uploaded resources.
+> Register a new UDF. _class_ is the case-sensitive fully qualified Java class, or **script_name.ClassName** for Python; _resources_ is a comma-separated list of already-uploaded resources (JARs, Python files, and any file, table or archive resources the UDF reads). Use **project/resources/name** to reference a resource from another project.
 
 **drop function** _name_
 > Remove a UDF (requires delete permission).
@@ -57,7 +69,7 @@ Executed inside the **odpscmd** client as SQL-like statements:
 
 MaxCompute UDFs are managed through SQL-style statements issued from the **odpscmd** command-line client. The resource (jar, py file, archive) must be uploaded first with `add jar` / `add py` / `add archive` before a function can reference it.
 
-Function names are unique per project. Users need write permission on the project to create functions and delete permission to drop them.
+Function names are unique per project, and a UDF cannot overwrite a built-in function (only the project owner may register a UDF with a built-in's name). Users need write permission on the project to create functions and delete permission to drop them.
 
 # CAVEATS
 
@@ -69,4 +81,12 @@ Part of the **Alibaba Cloud MaxCompute** (ODPS) CLI toolchain. UDF support has b
 
 # SEE ALSO
 
-[odps](/man/odps)(1), [odps-resource](/man/odps-resource)(1)
+[odps](/man/odps)(1), [odpscmd](/man/odpscmd)(1), [odps-resource](/man/odps-resource)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/aliyun/aliyun-odps-console)```
+
+```[Documentation](https://www.alibabacloud.com/help/en/maxcompute/user-guide/function-operations)```
+
+<!-- verified: 2026-11-23 -->

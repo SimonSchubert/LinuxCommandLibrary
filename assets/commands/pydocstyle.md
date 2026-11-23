@@ -24,37 +24,41 @@ Check Python docstring conventions
 
 ```pydocstyle --select [D200,D201] [module.py]```
 
-**Show source**
+**Show source and an explanation** for each error
 
-```pydocstyle --source [module.py]```
+```pydocstyle --source --explain [module.py]```
 
-**Count errors only**
+**Use a convention but also skip specific checks**
 
-```pydocstyle --count [module.py]```
+```pydocstyle --convention [numpy] --add-ignore [D105,D107] [src/]```
+
+**Print the total number of errors** after the report
+
+```pydocstyle --count [src/]```
 
 # SYNOPSIS
 
-**pydocstyle** [_--convention name_] [_--ignore codes_] [_--select codes_] [_options_] _files_
+**pydocstyle** [_options_] [_path_ ...]
 
 # PARAMETERS
 
 **--convention** _NAME_
-> Convention (pep257, numpy, google).
+> Check the errors of a predefined convention: pep257 (default), numpy, or google.
 
 **--ignore** _CODES_
-> Errors to ignore.
+> Check all errors except the comma-separated _CODES_ (prefixes like `D2` allowed).
 
 **--select** _CODES_
-> Errors to check.
+> Check only the comma-separated _CODES_.
 
-**--source**
-> Show source code.
+**-s**, **--source**
+> Show the source code for each error.
 
-**--explain**
-> Explain errors.
+**-e**, **--explain**
+> Show an explanation of each error.
 
 **--count**
-> Count only.
+> Print the total number of errors to stdout after the report.
 
 **--match** _PATTERN_
 > Only check files whose names match the regular expression _PATTERN_ (default: `(?!test_).*\.py`).
@@ -68,6 +72,15 @@ Check Python docstring conventions
 **--add-select** _CODES_
 > Add codes to the existing select list (does not replace).
 
+**--ignore-decorators** _REGEX_
+> Ignore functions and methods decorated with a decorator matching _REGEX_.
+
+**--property-decorators** _NAMES_
+> Comma-separated decorator names that mark a method as a property (default: property, cached_property, functools.cached_property).
+
+**--ignore-self-only-init**
+> Ignore `__init__` methods whose only parameter is `self`.
+
 **--config** _FILE_
 > Use the specified configuration file instead of auto-discovery.
 
@@ -79,9 +92,14 @@ Check Python docstring conventions
 
 # CONVENTIONS
 
-**pep257** - PEP 257 conventions
-**numpy** - NumPy docstring style
-**google** - Google Python style
+**pep257**
+> PEP 257 conventions (the default).
+
+**numpy**
+> NumPy docstring style.
+
+**google**
+> Google Python style.
 
 # DESCRIPTION
 
@@ -89,7 +107,7 @@ Check Python docstring conventions
 
 Conventions define expected format. PEP 257, NumPy, and Google styles are supported.
 
-Error codes identify specific issues. D100 series for modules, D200 for formatting, etc.
+Error codes identify specific issues: D1xx for missing docstrings, D2xx for whitespace, D3xx for quotes, and D4xx for docstring content.
 
 Source display shows problematic code. Helps identify and fix issues quickly.
 
@@ -103,14 +121,14 @@ Configuration files set project defaults. pyproject.toml and setup.cfg supported
 **setup.cfg**
 > Alternative project configuration with a `[pydocstyle]` section supporting the same options.
 
-**.pydocstyle**
-> Standalone configuration file for pydocstyle settings.
+**.pydocstyle**, **.pydocstyle.ini**, **.pydocstylerc**, **tox.ini**
+> Other discovered configuration files, searched from the checked file upward.
 
 # CAVEATS
 
-Style preferences vary. May need tuning for project needs. Not all edge cases covered.
+**--select**, **--ignore**, and **--convention** are mutually exclusive; use **--add-select** and **--add-ignore** to adjust one of them. Files named `test_*.py` are skipped by default because of the **--match** pattern.
 
-**Deprecated:** as of late 2023 pydocstyle is no longer actively maintained; its checks were reimplemented in **Ruff** under the `D` prefix, which is the recommended replacement.
+**Deprecated:** the project was officially deprecated and its repository archived in November 2023; its checks were reimplemented in **Ruff** under the `D` prefix, which is the recommended replacement.
 
 # HISTORY
 
@@ -119,3 +137,11 @@ Style preferences vary. May need tuning for project needs. Not all edge cases co
 # SEE ALSO
 
 [ruff](/man/ruff)(1), [pylint](/man/pylint)(1), [flake8](/man/flake8)(1), [mypy](/man/mypy)(1), [black](/man/black)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/PyCQA/pydocstyle)```
+
+```[Documentation](https://www.pydocstyle.org/)```
+
+<!-- verified: 2026-11-23 -->

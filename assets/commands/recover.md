@@ -1,105 +1,66 @@
 # TAGLINE
 
-alias for **restore** — extract files from a dump(8) backup
+interactively undelete files on ext2 filesystems
 
 # TLDR
 
-This command is commonly an alias/symlink for **restore**. See the full documentation:
+**Start the interactive recovery** (asks for device, deletion date, size, owner, ...)
 
-```tldr restore```
+```sudo recover```
 
-**Interactive restore** from a dump file
+**Recover from a specific device**
 
-```recover -if [backup.dump]```
+```sudo recover [/dev/sdXN]```
 
-**List the table of contents** of a dump archive
+**Dump all deleted inodes** without filtering
 
-```recover -tf [backup.dump]```
+```sudo recover [/dev/sdXN] --all```
 
-**Full filesystem restore** (to the current directory)
+**Show help**
 
-```recover -rf [backup.dump]```
+```recover --help```
 
-**Extract specific files**
+**List deleted inodes manually** with the underlying tool
 
-```recover -xvf [backup.dump] [path/to/file]```
-
-**Compare archive with filesystem**
-
-```recover -Cf [backup.dump]```
+```sudo debugfs -R lsdel [/dev/sdXN]```
 
 # SYNOPSIS
 
-**recover** [**-irtxCR**] [_options_] [_files_]
-
-# DESCRIPTION
-
-**recover** is an alternative name/symlink for the **restore** utility used by the **dump/restore** ext2/3/4 backup system. It reads a backup archive produced by `dump(8)` and writes the selected files back to disk. Interactive mode (`-i`) gives you a tiny shell for browsing the archive: `ls`, `cd`, `pwd`, `add`, `delete`, `extract`, `quit`.
-
-On some systems (notably **NSR/NetWorker**), `recover` refers instead to a very different tool — the client-side restore interface for the Legato/EMC NetWorker backup server. The flags and behavior below describe the dump/restore lineage; for NetWorker, consult `recover(8)` on that system.
+**recover** [_device_] [_options_]
 
 # PARAMETERS
 
-**-i**
-> Interactive restore: browse the archive and pick files.
+_device_
+> The ext2 block device (any argument starting with `/dev/`). If omitted, recover scans for ext2 partitions and asks for one.
 
-**-r**
-> Restore an entire filesystem. Run in an empty, freshly created filesystem.
+**-a**, **--all**
+> No filtering: dump all deleted inodes on the device.
 
-**-R**
-> Resume a previously interrupted `-r` restore.
+**-h**, **--help**
+> Print help and exit.
 
-**-t**
-> Print the table of contents of the archive.
+# DESCRIPTION
 
-**-x**
-> Extract the named files (or the whole archive if no names given).
+**recover** automates the steps of the Ext2fs-Undeletion mini-HOWTO by Aaron Crane. It uses `debugfs -R lsdel` to list every deleted inode on an ext2 filesystem, then narrows the list down by asking questions about the lost file:
 
-**-C**
-> Compare archive contents with the filesystem.
+- year, month, and weekday of deletion, and the possible range of days
+- minimum and maximum file size
+- earliest and latest possible deletion hour and minute
+- user ID of the file's owner
+- a text string the file contained (optional, `*` to skip)
 
-**-f** _file_
-> Archive file or device (e.g. `/dev/nst0` or `backup.dump`). Use `-` for stdin.
-
-**-v**
-> Verbose: print each file as it is processed.
-
-**-N**
-> Do everything except actually writing files to disk (dry run).
-
-**-y**
-> Do not ask whether to abort on tape errors; always try to continue.
-
-**-h**
-> Do not recurse into directory hierarchies when extracting.
-
-**-m**
-> Extract by inode number instead of name.
-
-**-s** _n_
-> Skip to the _n_th dump file on a multi-file tape.
-
-**-b** _size_
-> Block size (in kilobytes) for reads.
-
-# INTERACTIVE COMMANDS
-
-`ls` [_dir_] — list entries
-`cd` _dir_ — change directory within the archive
-`pwd` — print current archive directory
-`add` _name_ — mark for extraction
-`delete` _name_ — unmark
-`extract` — extract marked files
-`setmodes` — set owners/permissions on extracted directories
-`verbose` — toggle verbose output
-`quit` — exit
+The matching inodes are then dumped with `debugfs` into a directory you choose, as files named `dump<inode>`. The original file names are not recovered, so the results have to be identified by content.
 
 # CAVEATS
 
-Only understands archives created by `dump(8)`; `tar`, `cpio`, `rsync` archives require their own restore tools. Full (`-r`) restores must run in an empty filesystem. Restores preserve inode numbers, so restoring onto a live tree can overwrite or interleave files.
+Only works on **ext2**. ext3 and ext4 clear the block pointers of deleted inodes, so the data cannot be found this way; use **extundelete**, **ext4magic**, or a file carver such as **photorec** instead. Unmount the filesystem (or remount it read-only) before trying, and write the recovered files to a different filesystem, otherwise the deleted blocks may be overwritten. Must run as root to read the raw device.
 
-`recover` may not exist on your system; use `restore` directly if it is missing. On NetWorker systems, `recover` is a different program entirely.
+The program has not been maintained since 2002 and was dropped from Debian after version 7 (wheezy). Other unrelated programs share the name: the `recover` client of Dell EMC NetWorker restores files from a NetWorker backup server, and the `restore` command from the dump package (not `recover`) restores **dump**(8) archives.
+
+# HISTORY
+
+**recover** was written by **Tom Pycke** in **1999**; the last version, 1.3c, dates from 2002. It was packaged in Debian from woody to wheezy.
 
 # SEE ALSO
 
-[dump](/man/dump)(8), [tar](/man/tar)(1), [rsync](/man/rsync)(1), [dd](/man/dd)(1), [extundelete](/man/extundelete)(1)
+[debugfs](/man/debugfs)(8), [extundelete](/man/extundelete)(1), [testdisk](/man/testdisk)(8), [photorec](/man/photorec)(8), [dump](/man/dump)(8)

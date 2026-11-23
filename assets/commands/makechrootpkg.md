@@ -20,6 +20,14 @@ builds Arch Linux packages in a clean chroot environment
 
 ```makechrootpkg -r [chroot] -I [package.pkg.tar.zst]```
 
+**Build in a temporary copy** that is deleted afterwards
+
+```makechrootpkg -c -T -r [/var/lib/archbuild/extra-x86_64]```
+
+**Drop into a shell** in the chroot if the build fails
+
+```makechrootpkg -c -x failure -r [chroot]```
+
 **Run namcap and checkpkg on the built package**
 
 ```makechrootpkg -c -n -C -r [chroot]```
@@ -42,10 +50,10 @@ builds Arch Linux packages in a clean chroot environment
 > Chroot directory to build in (required).
 
 **-c**
-> Clean the chroot copy before building.
+> Clean the chroot before building (recreate the working copy from **root**).
 
 **-u**
-> Update the working copy (chroot) before building.
+> Update the working copy of the chroot before building. Useful for rebuilds without dirtying the pristine root.
 
 **-I** _pkg_
 > Install the given package file into the working copy before building.
@@ -57,10 +65,10 @@ builds Arch Linux packages in a clean chroot environment
 > Bind-mount a host directory into the chroot as read-only.
 
 **-t** _dir[:opts]_
-> Mount a tmpfs at the specified directory inside the chroot.
+> Mount a tmpfs at the specified directory inside the chroot (see **--tmpfs** in systemd-nspawn).
 
-**-l** _name_
-> Name of the working copy directory (defaults to `$USER`).
+**-l** _copy_
+> Name of the working copy directory, useful for maintaining multiple copies (default: `$USER`).
 
 **-n**
 > Run **namcap** quality checks on the built package.
@@ -69,13 +77,13 @@ builds Arch Linux packages in a clean chroot environment
 > Run **checkpkg** validation against the previous package version.
 
 **-T**
-> Build inside a temporary copy (discarded after the build).
+> Build in a temporary working copy that is removed after the build.
 
 **-U** _user_
 > Run **makepkg** as the specified user.
 
 **-x** _when_
-> Launch an interactive shell inside the chroot: `never`, `always`, or `failure`.
+> Inspect the chroot with an interactive shell after the build: `never` (default), `always`, or `failure`.
 
 **-h**
 > Display usage information.
@@ -84,7 +92,9 @@ builds Arch Linux packages in a clean chroot environment
 
 **makechrootpkg** builds a PKGBUILD inside a clean, isolated chroot environment. This ensures reproducible builds by insulating the build from the host system's installed packages and configuration, making it the standard method for building official Arch Linux packages.
 
-The chroot is managed as a root template plus per-user working copies that are cloned from it. Options such as **-c** and **-u** refresh the working copy, while **-I** and **-d** let you customize the build environment.
+The chroot directory contains a **root** template plus per-user working copies (e.g. _chrootdir_/**$USER**) that are cloned from it as needed. Options such as **-c** and **-u** refresh the working copy, while **-I** and **-d** let you customize the build environment.
+
+Default makepkg arguments are **--syncdeps --noconfirm --log --holdver --skipinteg**. **SRCDEST**, **SRCPKGDEST**, **PKGDEST**, **LOGDEST**, **NPROC**, **MAKEFLAGS**, and **PACKAGER** are read from makepkg.conf if not set in the environment.
 
 # SETUP
 
@@ -99,7 +109,7 @@ makechrootpkg -c -r /var/lib/archbuild/extra-x86_64
 
 # CAVEATS
 
-Requires the **devtools** package. The chroot must be initialized with **mkarchroot** before first use. Root privileges are needed; slower than running **makepkg** directly but produces cleaner, more reproducible builds. Anything after **--** is forwarded to **makepkg**.
+Requires the **devtools** package. The chroot must be initialized with **mkarchroot** _chrootdir_/**root** before first use (note the **/root** suffix, which **-r** omits). Root privileges are needed; slower than running **makepkg** directly but produces cleaner, more reproducible builds. Anything after **--** is forwarded to **makepkg**. For official Arch packaging, **pkgctl build** wraps this workflow and manages the chroots automatically.
 
 # HISTORY
 
@@ -107,4 +117,12 @@ Requires the **devtools** package. The chroot must be initialized with **mkarchr
 
 # SEE ALSO
 
-[makepkg](/man/makepkg)(8), [pacman](/man/pacman)(8), [devtools](/man/devtools)(7), [pkgctl](/man/pkgctl)(1), [systemd-nspawn](/man/systemd-nspawn)(1)
+[makepkg](/man/makepkg)(8), [pacman](/man/pacman)(8), [namcap](/man/namcap)(1), [devtools](/man/devtools)(7), [pkgctl](/man/pkgctl)(1), [systemd-nspawn](/man/systemd-nspawn)(1)
+
+# RESOURCES
+
+```[Source code](https://gitlab.archlinux.org/archlinux/devtools)```
+
+```[Documentation](https://wiki.archlinux.org/title/DeveloperWiki:Building_in_a_clean_chroot)```
+
+<!-- verified: 2026-11-23 -->

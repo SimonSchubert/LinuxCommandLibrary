@@ -28,13 +28,25 @@ TUI package searcher for Arch Linux repositories and AUR
 
 ```pacsea -l --exp```
 
+**Remove packages** with a confirmation prompt
+
+```pacsea -r [package]```
+
+**Update the system and refresh mirrors** first
+
+```pacsea -u --mirrors```
+
+**Show unread Arch news** in the terminal
+
+```pacsea -n --unread```
+
+**Search with JSON output** for scripting
+
+```pacsea -s [query] --json```
+
 **Preview operations without making changes**
 
 ```pacsea --dry-run```
-
-**Refresh the package database before launching**
-
-```pacsea -y```
 
 # SYNOPSIS
 
@@ -54,44 +66,67 @@ TUI package searcher for Arch Linux repositories and AUR
 **-r**, **--remove** _package_...
 > Remove packages with a confirmation prompt.
 
-**-u**, **--update**
-> Update official and AUR packages.
+**-R** _file_
+> Remove packages listed in a file.
 
-**-l** [**--exp** | **--imp** | **--all**]
+**-u**, **--update**
+> System update (sync and upgrade official and AUR packages).
+
+**--mirrors**
+> With **--update**, refresh pacman mirrors first using `selected_countries` and `mirror_count` from settings.conf.
+
+**-l**, **--list** [**--exp** | **--imp** | **--all**]
 > List installed packages (explicit, implicit, or all).
 
-**-n** [**--read** | **--unread** | **--all**]
-> Display Arch Linux news feed.
+**-n**, **--news** [**--read** | **--unread** | **-a**, **--all-news**]
+> Print the Arch Linux news feed to the terminal.
 
-**-y**, **--refresh**
-> Refresh the package database before launching the TUI.
+**--json**
+> Output machine-readable JSON on stdout (with **--search**, **--list**, and **--news**).
+
+**--config-dir** _dir_
+> Use an alternative configuration directory (default: `~/.config/pacsea`), also used for caches, lists, and logs.
 
 **--clear-cache**
-> Remove all cached files.
+> Remove all cache files (dependencies, files, services, sandbox) and exit.
 
 **--dry-run**
 > Preview operations without making actual changes.
 
 **-v**, **--verbose**
-> Enable verbose output.
+> Enable verbose output (equivalent to `--log-level debug`).
 
 **--log-level** _level_
-> Set the log level (trace, debug, info, warn, error).
+> Set the log level: trace, debug, info (default), warn, error.
 
 **--no-color**
 > Disable colored output.
 
-**--version**
+**-V**, **--version**
 > Display version information.
 
-**--help**
+**-h**, **--help**
 > Show the help message.
 
 # DESCRIPTION
 
 **pacsea** is a fast, Rust-based terminal user interface for searching, inspecting, and queueing packages from both the official Arch Linux repositories and the AUR. It offers keyboard-first, Vim-friendly navigation across reorderable panels showing search results, package details, PKGBUILD previews, and AUR comments.
 
-In addition to the interactive TUI, pacsea exposes a CLI for direct search, installation, removal, and upgrade operations. It includes an integrated news feed combining Arch news, security advisories, and update notifications, plus optional AUR security scanning using tools such as ClamAV, Trivy, Semgrep, ShellCheck, and VirusTotal.
+In addition to the interactive TUI, pacsea exposes a CLI for direct search, installation, removal, and upgrade operations. It includes an integrated news feed combining Arch news, security advisories, and update notifications, plus optional AUR security scanning using tools such as ClamAV, Trivy, Semgrep, ShellCheck, VirusTotal, and aur-sleuth. Operations run inside the TUI with live output, using **sudo** or **doas** for privilege escalation.
+
+# CONFIGURATION
+
+**~/.config/pacsea/settings.conf**
+> App behavior: layout, defaults, scans, news, privilege tool (`privilege_tool`: auto, sudo, doas) and `auth_mode`.
+
+**~/.config/pacsea/theme.conf**
+> Colors and styling.
+
+**~/.config/pacsea/keybinds.conf**
+> Keyboard shortcuts.
+
+**~/.config/pacsea/repos.conf**
+> Optional third-party sync repositories included in search.
 
 # CAVEATS
 
@@ -99,8 +134,18 @@ Only works on Arch Linux and Arch-based distributions. Requires an AUR helper su
 
 # HISTORY
 
-**pacsea** was created by **Firstp1ck** and is written in **Rust**. It is distributed via `cargo install pacsea` and the AUR.
+**pacsea** was created by **Firstp1ck** and is written in **Rust**. It is MIT-licensed and distributed via `cargo install pacsea` and the AUR (**pacsea-bin**, **pacsea-git**).
 
 # SEE ALSO
 
 [pacman](/man/pacman)(8), [pacseek](/man/pacseek)(1), [paru](/man/paru)(1), [yay](/man/yay)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Firstp1ck/Pacsea)```
+
+```[Homepage](https://firstp1ck.github.io/Pacsea/)```
+
+```[Documentation](https://github.com/Firstp1ck/Pacsea/wiki)```
+
+<!-- verified: 2026-11-23 -->
