@@ -160,7 +160,7 @@ Requires TeX Live (not distro packages). Some distributions manage separately. N
 
 # SEE ALSO
 
-[latex](/man/latex)(1), [pdflatex](/man/pdflatex)(1), [texdoc](/man/texdoc)(1), [install-tl](/man/install-tl)(1)
+[latex](/man/latex)(1), [pdflatex](/man/pdflatex)(1), [texdoc](/man/texdoc)(1), [install-tl](/man/install-tl)(1), [tlmgr-init-usertree](/man/tlmgr-init-usertree)(1)
 
 # RESOURCES
 

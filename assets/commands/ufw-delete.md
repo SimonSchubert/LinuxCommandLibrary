@@ -87,7 +87,7 @@ Part of **ufw** (Uncomplicated Firewall), the Ubuntu-originated frontend for ipt
 
 # SEE ALSO
 
-[ufw](/man/ufw)(8), [ufw-status](/man/ufw-status)(8), [ufw-allow](/man/ufw-allow)(8), [ufw-deny](/man/ufw-deny)(8), [ufw-default](/man/ufw-default)(8), [iptables](/man/iptables)(8)
+[ufw](/man/ufw)(8), [ufw-status](/man/ufw-status)(8), [ufw-allow](/man/ufw-allow)(8), [ufw-deny](/man/ufw-deny)(8), [ufw-default](/man/ufw-default)(8), [ufw-insert](/man/ufw-insert)(8), [ufw-prepend](/man/ufw-prepend)(8), [ufw-route](/man/ufw-route)(8), [iptables](/man/iptables)(8)
 
 # RESOURCES
 

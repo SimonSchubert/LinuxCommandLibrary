@@ -203,4 +203,4 @@ Default policies are deny incoming, allow outgoing, deny forwarding. Enabling uf
 
 # SEE ALSO
 
-[iptables](/man/iptables)(8), [ip6tables](/man/ip6tables)(8), [nft](/man/nft)(8), [firewall-cmd](/man/firewall-cmd)(1)
+[iptables](/man/iptables)(8), [ip6tables](/man/ip6tables)(8), [nft](/man/nft)(8), [firewall-cmd](/man/firewall-cmd)(1), [ufw-insert](/man/ufw-insert)(8), [ufw-prepend](/man/ufw-prepend)(8), [ufw-route](/man/ufw-route)(8)

@@ -8345,6 +8345,7 @@ tlmgr-dump-tlpdb.md
 tlmgr-generate.md
 tlmgr-gui.md
 tlmgr-info.md
+tlmgr-init-usertree.md
 tlmgr-install.md
 tlmgr-key.md
 tlmgr-option.md
@@ -8594,11 +8595,14 @@ ufw-delete.md
 ufw-deny.md
 ufw-disable.md
 ufw-enable.md
+ufw-insert.md
 ufw-limit.md
 ufw-logging.md
+ufw-prepend.md
 ufw-reject.md
 ufw-reload.md
 ufw-reset.md
+ufw-route.md
 ufw-show.md
 ufw-status.md
 ufw-version.md
@@ -9393,6 +9397,7 @@ zcomplete.md
 zdb.md
 zdiff.md
 zdump.md
+zean.md
 zebra.md
 zed.md
 zeditor.md
