@@ -8,7 +8,7 @@ re-enable a masked systemd unit
 
 ```systemctl unmask [service_name]```
 
-**Unmask and start** it immediately
+**Unmask and start** it immediately (systemd 263+)
 
 ```systemctl unmask --now [service_name]```
 
@@ -16,9 +16,13 @@ re-enable a masked systemd unit
 
 ```systemctl --user unmask [service_name]```
 
-**Unmask only until reboot** (runtime mask)
+**Remove a runtime mask** (one created with `mask --runtime`)
 
 ```systemctl unmask --runtime [service_name]```
+
+**Check** whether a unit is still masked
+
+```systemctl is-enabled [service_name]```
 
 **Unmask several units** at once
 
@@ -32,7 +36,7 @@ re-enable a masked systemd unit
 
 **systemctl unmask** removes the mask from one or more systemd units, making them startable again. Masking a unit links its unit file to `/dev/null`, which makes the unit completely unstartable (manually or as a dependency); unmasking removes that symlink and restores the original unit file.
 
-If the unit was previously masked at runtime (with `--runtime`), it can only be unmasked at runtime. Unmasking does not automatically start the unit — pair with `--now` to start immediately after unmasking.
+If the unit was previously masked at runtime (with `--runtime`, symlink under `/run`), it must be unmasked with `--runtime` as well. Unmasking does not start the unit; since systemd 263 `--now` can be added to start it right after unmasking. The manager configuration is reloaded automatically afterwards (equivalent to `daemon-reload`) unless `--no-reload` is given.
 
 # PARAMETERS
 
@@ -40,7 +44,7 @@ _UNIT_
 > One or more unit names (e.g. `nginx.service`, `getty@tty1.service`) to unmask.
 
 **--now**
-> Also start the unit(s) after unmasking.
+> Also start the unit(s) after unmasking (systemd 263 and later).
 
 **--user**
 > Operate on the calling user's units instead of system units.
@@ -49,25 +53,41 @@ _UNIT_
 > Operate on system units (default).
 
 **--global**
-> Unmask for all users (enabled in `/etc/systemd/user/`).
+> Operate on the global user configuration directory (`/etc/systemd/user/`), affecting all users.
 
 **--runtime**
-> Apply changes only for the current boot; reset on reboot.
+> Remove a runtime mask (under `/run`) instead of a persistent one.
 
 **--no-block**
 > Do not wait for the start job (with `--now`) to finish before returning.
+
+**--no-reload**
+> Do not implicitly reload the manager configuration after unmasking.
+
+**--root** _PATH_
+> Operate on unit files below an alternate root directory (e.g. a mounted image).
 
 **-q**, **--quiet**
 > Suppress informational messages.
 
 # CAVEATS
 
-Unmasking a unit does not start it unless `--now` is given. If a unit was masked at runtime it can only be unmasked with `--runtime`; persistent masks require unmasking without `--runtime`. After unmasking, `systemctl daemon-reload` may be needed for the manager to pick up the restored unit file. Units masked via drop-in files instead of symlinks must be unmasked by editing or removing those files.
+Unmasking a unit does not start or enable it; use `--now`, or run `systemctl enable` / `systemctl start` separately. A runtime mask is only removed with `--runtime`, a persistent mask only without it. On systemd versions older than 263, `--now` is rejected for unmask. Requires root for system units.
 
 # HISTORY
 
-**systemctl unmask** is part of **systemd**, introduced by **Lennart Poettering** and others. Mask/unmask semantics were added to replace the older `/dev/null` symlink trick used with SysV init scripts.
+**systemctl** is part of **systemd**, started by **Lennart Poettering** and **Kay Sievers** in **2010**. Support for combining **unmask** with **--now** was added in **systemd 263**.
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [systemctl-mask](/man/systemctl-mask)(1), [systemctl-enable](/man/systemctl-enable)(1), [systemctl-disable](/man/systemctl-disable)(1)
+[systemctl](/man/systemctl)(1), [systemctl-mask](/man/systemctl-mask)(1), [systemctl-enable](/man/systemctl-enable)(1), [systemctl-disable](/man/systemctl-disable)(1), [systemctl-start](/man/systemctl-start)(1), [systemctl-daemon-reload](/man/systemctl-daemon-reload)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/systemd/systemd)```
+
+```[Homepage](https://systemd.io/)```
+
+```[Documentation](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)```
+
+<!-- verified: 2026-11-23 -->

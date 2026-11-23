@@ -8,67 +8,95 @@ SSH-based chat server you join with your existing SSH client
 
 ```ssh [devzat.hackclub.com]```
 
-**Pick a display name** by passing it as the SSH username
+**Pick a display name** on first login by passing it as the SSH username
 
 ```ssh [nickname]@[devzat.hackclub.com]```
 
-**Connect over port 443** (useful behind restrictive firewalls)
+**Connect over port 443** (behind restrictive firewalls, or without an SSH key)
 
 ```ssh [devzat.hackclub.com] -p 443```
 
-**Run your own Devzat server** (binary built from source)
+**Run your own Devzat server** (listens on port 2221 by default)
 
 ```devzat```
 
 **Run a server on a custom port**
 
-```devzat --port [4242]```
+```PORT=[4242] devzat```
+
+**Run a server with a specific config file**
+
+```DEVZAT_CONFIG=[path/to/devzat.yml] devzat```
 
 # SYNOPSIS
 
 **ssh** [_user_@]_devzat-host_ [**-p** _port_]
 
-**devzat** [**--port** _N_] [**--admin** _key_] [_options_]   _(server-side)_
+**devzat**   _(server-side)_
 
 # DESCRIPTION
 
-**Devzat** is a custom SSH server that drops connecting clients into a real-time chat room instead of giving them a shell. Because the protocol is plain SSH, **there is no client to install** — every device with an SSH client (Linux, macOS, Windows, even mobile SSH apps) can join.
+**Devzat** is a custom SSH server that drops connecting clients into a real-time chat room instead of giving them a shell. Because the protocol is plain SSH, **there is no client to install**: every device with an SSH client (Linux, macOS, Windows, even mobile SSH apps) can join.
 
-The display name shown in chat is the username supplied during the SSH handshake (**user@host**); change it by reconnecting with a different name or by using the in-room **/nick** command. Servers identify users by their SSH public key, so the same key consistently maps to the same identity across reconnects.
+On first login, the display name is the username supplied during the SSH handshake (**user@host**); change it later with the in-chat **nick** command. Servers identify users by their SSH public key, so the same key maps to the same identity across reconnects.
 
-The **devzat** binary referenced on the command line is the **server**; end users almost never run it. Self-hosters use it to expose their own chat instance.
+Chat supports rooms, direct messages, Markdown with syntax-highlighted code fences, per-user timezones, emoji shortcodes, and small built-in games. Self-hosted instances can bridge to Slack and Discord and expose a gRPC plugin API.
 
-# IN-ROOM COMMANDS
+The **devzat** binary is the **server**; end users never need it. It takes no command-line flags: it reads **devzat.yml** in the current directory (or the path in **DEVZAT_CONFIG**), writing a default config on first run.
 
-**/users**
+# IN-CHAT COMMANDS
+
+**users**
 > List users currently in the room.
 
-**/dm** _user_ _message_ (or **/msg**)
-> Send a private message to another user.
+**=**_user_ _message_
+> Send a direct message to another user.
 
-**/nick** _name_
+**cd** [_#room_|_user_]
+> Join a room or a DM, or list rooms when run without arguments.
+
+**nick** _name_
 > Change your display name.
 
-**/rooms**
-> List available chat rooms.
+**tz** _Zone/City_ [**24h**]
+> Set your timezone for message timestamps.
 
-**/join** _room_
-> Switch to another room (creates it if missing).
+**man** _cmd_
+> Show help for a specific command.
 
-**/help**
-> Show all available slash commands.
+**cmds**
+> List all available commands (**rest** lists uncommon ones).
 
-**/exit**
+**exit**
 > Leave the chat (Ctrl+C also works).
+
+# CONFIGURATION
+
+**devzat.yml**
+> Server config: **port**, **alt_port**, **admins**, **allowlist** (private mode), **integration_config** and more.
+
+**PORT**
+> Overrides the configured SSH listen port (default 2221).
+
+**DEVZAT_CONFIG**
+> Path to the config file.
 
 # CAVEATS
 
-The **devzat** package on most package managers installs the **server**, not a client. To chat, just use **ssh** — the previous "client CLI" usage documented in some places never existed. Server operators see all messages in plaintext (the SSH transport is encrypted hop-to-server only); do not share secrets in chat.
+If the server rejects you with **Permission denied (publickey)**, generate a key with **ssh-keygen** or join on port 443, which does not require a key. Server operators can read all messages (SSH only encrypts the hop to the server); do not share secrets in chat.
 
 # HISTORY
 
-**Devzat** was created by **Arjun Salyan / Ishan Goel (quackduck)** to let developers chat over the SSH infrastructure they already trust. The flagship public instance runs at **devzat.hackclub.com**, sponsored by Hack Club.
+**Devzat** was created by **Ishan Goel** (quackduck) in **April 2021** and is written in **Go**. The flagship public instance runs at **devzat.hackclub.com**, associated with Hack Club.
 
 # SEE ALSO
 
-[ssh](/man/ssh)(1), [weechat](/man/weechat)(1), [irssi](/man/irssi)(1)
+[ssh](/man/ssh)(1), [ssh-keygen](/man/ssh-keygen)(1), [weechat](/man/weechat)(1), [irssi](/man/irssi)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/quackduck/devzat)```
+
+```[Documentation](https://github.com/quackduck/devzat/blob/main/Admin's%20Manual.md)```
+
+<!-- verified: 2026-11-23 -->

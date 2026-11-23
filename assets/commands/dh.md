@@ -4,76 +4,80 @@ debhelper sequence executor for Debian packaging
 
 # TLDR
 
-**Execute debhelper commands** sequentially
+**Minimal debian/rules** using dh for every target
 
-```dh [sequence]```
+```printf '#!/usr/bin/make -f\n%%:\n\tdh $@\n' > debian/rules```
 
-**Build package** with debhelper
+**Run a build sequence**
 
-```dh build```
+```dh [binary]```
 
 **Clean build artifacts**
 
 ```dh clean```
 
-**Run with verbose output**
+**List the commands** a sequence would run, without running them
 
-```dh [sequence] --verbose```
+```dh [binary-arch] --no-act```
 
-**List all commands** in sequence
+**Enable an addon**
 
-```dh [sequence] --no-act```
+```dh [binary] --with [python3]```
 
-**Skip specific commands**
+**Pass verbose mode** to every dh_* command
 
-```dh [sequence] --until [dh_auto_configure]```
+```dh [binary] -v```
+
+**List all available addons**
+
+```dh --list```
 
 # SYNOPSIS
 
-**dh** _sequence_ [_options_] [_debhelper-options_]
+**dh** _sequence_ [**--with** _addon_[,_addon_...]] [**--list**] [_debhelper-options_]
 
 # PARAMETERS
 
 _SEQUENCE_
-> Build sequence: build, clean, install, binary, etc.
+> Sequence to run: **build**, **build-arch**, **build-indep**, **install**, **install-arch**, **install-indep**, **binary**, **binary-arch**, **binary-indep**, or **clean**.
 
-**--verbose**
-> Enable verbose mode for all commands.
-
-**--no-act**, **-n**
-> Show what would be done without executing.
-
-**--with** _ADDON_
-> Use specified addon (e.g., python3, systemd).
+**--with** _ADDON_[,_ADDON_...]
+> Add the commands of the given addon(s) to the sequence. A Build-Depends on **dh-sequence-**_addon_ has the same effect.
 
 **--without** _ADDON_
-> Disable specified addon.
+> Disable the given addon.
 
-**--until** _CMD_
-> Run until specified command.
+**-l**, **--list**
+> List all available addons.
 
-**--after** _CMD_
-> Start after specified command.
+**--no-act**
+> Print the commands that would run for the sequence, without running them.
 
-**--help**
-> Display help information.
+**-v**, **--verbose**
+> Common debhelper option, passed on to each command: show every command that modifies files.
 
 # DESCRIPTION
 
 **dh** is the debhelper sequence executor that runs a series of dh_* commands in the correct order for building Debian packages. It simplifies debian/rules files by automatically determining which commands to run.
 
-The tool reads debian/rules overrides to customize behavior. Override targets (override_dh_*) in debian/rules let maintainers modify specific steps. Addon support extends functionality for specific packaging scenarios.
-
-dh significantly reduces boilerplate in debian/rules, replacing explicit command lists with simple sequence invocations that automatically handle most packaging tasks.
+Maintainers customize individual steps with hook targets in debian/rules: **override_dh_**_command_ replaces a command, while **execute_before_dh_**_command_ and **execute_after_dh_**_command_ (compat 10 and later, debhelper 12.8+) run extra steps around it. Addons extend the sequence for specific ecosystems (python3, nodejs, etc.). Options not understood by dh itself are passed on to every command it runs.
 
 # CAVEATS
 
-Behavior depends on debhelper compatibility level (set in debian/compat or Build-Depends). Override syntax varies between compat levels. Some packages require explicit command sequences.
+Behavior depends on the debhelper compatibility level, now normally declared as **Build-Depends: debhelper-compat (= 13)** in debian/control instead of the older debian/compat file. The old manual sequence control options (**--until**, **--before**, **--after**, **--remaining**) were dropped in compat 10 and are rejected at every compat level since debhelper 12.4; use override or hook targets instead. dh skips commands it knows will do nothing, so **--no-act** shows the full list. Use **dh_assistant** to inspect detected hook targets on newer debhelper.
 
 # HISTORY
 
-dh was introduced in **debhelper v7** (2008) by **Joey Hess** to simplify Debian packaging. It enabled the "dh short form" rules files that dramatically reduced packaging complexity.
+dh was introduced in **debhelper 7** (2008) by **Joey Hess** to simplify Debian packaging. It enabled the "dh short form" rules files that dramatically reduced packaging complexity. debhelper is now maintained by **Niels Thykier** and the Debian community.
 
 # SEE ALSO
 
-[debhelper](/man/debhelper)(7), [dpkg-buildpackage](/man/dpkg-buildpackage)(1), [lintian](/man/lintian)(1)
+[debhelper](/man/debhelper)(7), [dpkg-buildpackage](/man/dpkg-buildpackage)(1), [debuild](/man/debuild)(1), [lintian](/man/lintian)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/debhelper)```
+
+```[Documentation](https://manpages.debian.org/unstable/debhelper/dh.1.en.html)```
+
+<!-- verified: 2026-11-23 -->

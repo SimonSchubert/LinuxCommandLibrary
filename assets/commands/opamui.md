@@ -14,32 +14,44 @@ TUI for browsing and searching OCaml opam packages
 
 # DESCRIPTION
 
-**opamui** is a terminal user interface for browsing and searching OCaml opam packages. It launches a full-screen TUI listing packages from the configured opam switch and lets you filter by name, see which packages are installed, and inspect package metadata such as version, synopsis, dependencies, and homepage.
+**opamui** is a terminal user interface for browsing and searching OCaml opam packages. It launches a full-screen TUI listing the packages available in your opam repository, marks which ones are already installed, filters the list as you type, and shows detailed package information when you press Enter.
 
-It does **not** install or modify packages — it is purely a read-only browser that wraps **opam**'s package listing and inspection commands.
+It does **not** install or remove packages; it is a read-only browser built on top of **opam**.
 
 # KEY BINDINGS
 
-**↑** / **↓**
+**Up** / **Down**
 > Move selection in the package list.
 
-**/**
-> Filter packages by substring.
+**Typing**
+> Filter packages by name in real time.
 
 **Enter**
-> Open the metadata view for the selected package.
+> Open the details view for the selected package, or return to the list.
 
-**q**
+**Backspace**
+> Delete the last search character, or return to the list.
+
+**Esc**
+> Clear the search, or return to the list.
+
+**q**, **Q**, **Ctrl+C**
 > Quit.
 
 # CAVEATS
 
-Requires **opam** to be installed and an opam switch to be initialized (**opam init**). The set of packages shown reflects the currently active switch; run **opam switch** to see another set.
+Requires **opam** to be installed and initialized (**opam init**). The packages shown reflect the currently active switch. Building from source needs OCaml 4.08 or newer and Dune 3.20 or newer.
 
 # HISTORY
 
-**opamui** was created by **Nicolas Lamirault** (nlamirault) and is written in OCaml. It targets developers who want to explore the opam ecosystem without leaving the terminal.
+**opamui** was created by **Nicolas Lamirault** (nlamirault) in **2025**. It is written in OCaml and uses the Notty library for terminal rendering.
 
 # SEE ALSO
 
 [opam](/man/opam)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/nlamirault/opamui)```
+
+<!-- verified: 2026-11-23 -->

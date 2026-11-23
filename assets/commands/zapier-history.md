@@ -1,46 +1,55 @@
 # TAGLINE
 
-View Zapier integration deployment history
+View the change history of a Zapier integration
 
 # TLDR
 
-**Show version history** for the current integration
+**Show the history** of the current integration
 
-```zapier history```
+```zapier-platform history```
 
-**Show in JSON format**
+**Show history as JSON** (pipeable to jq)
 
-```zapier history --format=json```
+```zapier-platform history --format=json```
 
-**Limit number of entries**
+**Save history to a file** for auditing
 
-```zapier history --limit=[20]```
+```zapier-platform history --format=json > [history.json]```
+
+**Show debug output**
+
+```zapier-platform history --debug```
 
 # SYNOPSIS
 
-**zapier** **history** [_options_]
+**zapier-platform** **history** [_options_]
 
 # PARAMETERS
 
-**--format** _FORMAT_
-> Output format: **plain**, **json**, **raw**, **row**, or **table** (default: table).
+**-f**, **--format** _FORMAT_
+> Output format: **plain**, **json**, **raw**, **row**, or **table** (default: table). Use **json** or **raw** to pipe into other tools.
 
-**--limit** _N_
-> Maximum number of history entries to display.
-
-**--debug**
-> Show debug logs alongside output.
+**-d**, **--debug**
+> Show extra debugging output.
 
 # DESCRIPTION
 
-**zapier history** displays the deployment and migration history for a Zapier CLI integration. Each row shows the action performed (push, migrate, promote, deprecate), the version affected, the user who performed it, and the timestamp.
+**zapier-platform history** lists all changes made over the lifetime of a Zapier CLI integration: creation, version pushes, migrations, promotions, deprecations, and admin and invitee changes. Each row shows the action, a message, the user who made the change, the affected version, and the timestamp.
 
 The command is useful for auditing rollouts, finding the version a migration moved users to, and spotting when a version was promoted to production.
 
 # CAVEATS
 
-Run inside a Zapier integration project directory, after authenticating with **zapier login**. History only covers the integration linked to the current directory.
+Run inside an integration directory that is linked to a registered integration (see **zapier-platform link**), after authenticating with **zapier-platform login**. Older releases of the CLI installed the binary as **zapier**; current releases of **zapier-platform-cli** name it **zapier-platform**. There is no option to limit the number of entries; filter the JSON output (e.g. with **jq**) instead.
 
 # SEE ALSO
 
-[zapier](/man/zapier)(1), [zapier-versions](/man/zapier-versions)(1)
+[zapier](/man/zapier)(1), [zapier-versions](/man/zapier-versions)(1), [jq](/man/jq)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/zapier/zapier-platform)```
+
+```[Documentation](https://github.com/zapier/zapier-platform/blob/main/packages/cli/docs/cli.md)```
+
+<!-- verified: 2026-11-23 -->

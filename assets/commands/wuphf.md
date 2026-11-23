@@ -1,6 +1,6 @@
 # TAGLINE
 
-Multi-agent collaboration office for AI coding assistants
+Multi-agent office for AI coding assistants (renamed gawkbot)
 
 # TLDR
 
@@ -10,52 +10,54 @@ Multi-agent collaboration office for AI coding assistants
 
 **Run** with a specific agent provider
 
-```npx wuphf --provider [codex]```
+```wuphf --provider [codex]```
 
-**Use** the tmux-based terminal UI instead of the web interface
+**Use** a local Ollama model without opening the browser
 
-```npx wuphf --tui```
+```wuphf --provider ollama --no-open```
 
 **Pick** a predefined agent team pack
 
-```npx wuphf --pack [coding-team]```
-
-**Choose** a memory backend
-
-```npx wuphf --memory-backend [markdown]```
+```wuphf --pack [coding-team]```
 
 **Start a one-on-one** session with a specific agent
 
-```npx wuphf --1o1 [ceo]```
-
-**Run** without opening the browser automatically
-
-```npx wuphf --no-open```
+```wuphf --1o1 [cro]```
 
 **Use a custom** web UI port
 
-```npx wuphf --web-port [7891]```
+```wuphf --web-port [8080]```
+
+**Use** the legacy tmux terminal UI instead of the web interface
+
+```wuphf --legacy-tui```
+
+**List** or switch isolated workspaces
+
+```wuphf workspace [list|switch name]```
 
 # SYNOPSIS
 
-**wuphf** [_options_] [_subcommand_]
+**wuphf** [_options_]
+
+**wuphf** _subcommand_ [_args_]
 
 # PARAMETERS
 
-**--memory-backend** _name_
-> Select the shared-memory backend: **nex**, **gbrain**, **markdown** (default), or **none**.
+**--provider** _name_
+> Runtime that drives each agent: **claude-code** (default), **codex**, **opencode**, **ollama**, **hermes-agent**, or **openclaw-http**.
 
 **--pack** _name_
 > Choose a preconfigured agent team: **starter**, **founding-team**, **coding-team**, **lead-gen-agency**, or **revops**.
 
-**--provider** _name_
-> LLM CLI to drive each agent: **claude-code** (default), **codex**, or **openclaw**.
-
-**--tui**
-> Use the tmux-based terminal UI instead of the web UI.
+**--memory-backend** _name_
+> Override the built-in Markdown wiki with **nex**, **gbrain**, or **none** (legacy installs only).
 
 **--no-nex**
-> Disable the Nex backend while keeping local integrations.
+> Skip the Nex backend (no context graph, no Nex-managed integrations).
+
+**--legacy-tui**
+> Use the legacy tmux-based TUI instead of the web UI.
 
 **--no-open**
 > Do not open the default browser when the web UI starts.
@@ -64,43 +66,63 @@ Multi-agent collaboration office for AI coding assistants
 > Upgrade the CEO agent from Sonnet to Opus.
 
 **--collab**
-> Enable collaborative mode (default).
+> Collaborative mode where all agents see all messages (default).
 
 **--unsafe**
-> Bypass agent permission checks; intended only for local experimentation.
+> Bypass agent permission checks; intended only for local development.
 
 **--web-port** _N_
 > Web UI port (default **7891**).
+
+**--workspace** _name_
+> Use a specific workspace for one command without changing the active one.
 
 **--1o1** [_agent_]
 > Start a one-on-one chat with the CEO, or with the named agent if given.
 
 **init**
-> Run initial setup and write a configuration file.
+> Run first-time setup.
+
+**share**
+> Invite one team member over Tailscale or WireGuard.
 
 **shred**
-> Terminate the active office session and clean up local state.
+> Delete workspace state and reopen onboarding.
+
+**workspace list**, **workspace switch** _name_
+> List isolated workspaces or change the active one.
+
+**skills publish** | **skills install** _name_
+> Publish a skill to, or install one from, a skill registry.
 
 # DESCRIPTION
 
-**wuphf** is a "Slack for AI employees" — a multi-agent collaboration layer that spawns a small office of role-based agents (CEO, PM, engineers, designer, CMO, CRO) sharing a common memory store and a chat-style channel. Instead of running each AI assistant in isolation, wuphf lets them see each other's messages, claim tasks, and ship work together while preserving context across sessions.
+**wuphf** is a "Slack for AI employees": a multi-agent collaboration layer that spawns a small office of role-based agents (CEO, PM, engineers, designer, CMO, CRO) sharing a common memory store and a chat-style channel. Instead of running each AI assistant in isolation, wuphf lets them see each other's messages, claim tasks, and ship work together while preserving context across sessions.
 
-Under the hood wuphf delegates each agent to an existing CLI such as **claude-code**, **codex**, or **openclaw**, and exposes a web UI by default at **http://localhost:7891** with the team roster, a shared channel, and a message composer. A **--tui** mode renders the same office inside a tmux session for terminal-only environments.
+Under the hood wuphf delegates each agent to an existing CLI or endpoint such as **claude-code**, **codex**, **opencode**, or a local **Ollama** server, and exposes a web UI by default at **http://localhost:7891** with the team roster, a shared channel, and a message composer.
 
-Memory is pluggable via **--memory-backend**: the **markdown** backend keeps a human-readable Markdown brain on disk, while **nex** and **gbrain** integrate with hosted services. Agent rosters are described by the **--pack** option, and custom packs can be defined in configuration.
+Memory defaults to a built-in Markdown wiki stored under **~/.wuphf/**; the **nex** and **gbrain** backends remain available for older installs.
 
 # CONFIGURATION
 
-After **wuphf init**, configuration is stored locally and read on each launch. Required runtime dependencies are **node** / **npx**, **python3**, **curl**, **tmux** (for **--tui** mode), and at least one supported LLM CLI on **PATH** (**claude**, **codex**, or **openclaw**). API keys are taken from the underlying CLI's own configuration — wuphf does not store them itself.
+State, workspaces and the shared wiki live under **~/.wuphf/**. Custom OpenAI-compatible endpoints for **--provider ollama** are set with **WUPHF_OLLAMA_BASE_URL** and **WUPHF_OLLAMA_MODEL**; the **hermes-agent** and **openclaw-http** providers read **WUPHF_HERMES_AGENT_*** and **WUPHF_OPENCLAW_HTTP_*** variables. API keys are taken from the underlying CLI's own configuration.
 
 # CAVEATS
 
-wuphf is an early-stage orchestration layer; flag names and pack contents change between releases. The **--unsafe** flag disables per-agent permission checks and should never be used outside isolated, throw-away environments. Because agents call external LLM CLIs, costs and rate limits depend on the provider account behind each CLI.
+The project was renamed **gawkbot** in **August 2026**: the GitHub repository moved and new releases ship as the **gawkbot** npm package and binary, so **wuphf** (last npm release **0.235.1**) no longer receives updates. The **--unsafe** flag disables per-agent permission checks and should never be used outside isolated, throw-away environments. Because agents call external LLM CLIs, costs and rate limits depend on the provider account behind each CLI.
 
 # HISTORY
 
-**wuphf** is developed by **Nex** and published at **github.com/nex-crm/wuphf**. The name is a nod to the fictional notification service from the TV show *Parks and Recreation*. It is distributed via **npm** and runs without a global install through **npx wuphf**.
+**wuphf** was developed by **Nex** (nex-crm) and distributed via **npm**, runnable without a global install through **npx wuphf**. The name is a nod to Ryan Howard's fictional social networking startup from the TV show *The Office*. In 2026 the project was renamed **gawkbot** and refocused on always-on bots supervised from a Mac app and iPhone companion.
 
 # SEE ALSO
 
 [claude](/man/claude)(1), [codex](/man/codex)(1), [tmux](/man/tmux)(1), [npx](/man/npx)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/najmuzzaman-mohammad/gawkbot)```
+
+```[Homepage](https://gawk.bot)```
+
+<!-- verified: 2026-11-23 -->

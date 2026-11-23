@@ -22,7 +22,7 @@ PAM module that succeeds for UID 0
 
 It is typically combined with the **sufficient** control flag, so that root passes immediately and other users continue down the stack to be authenticated normally (e.g. by **pam_unix** or **pam_wheel**).
 
-The module provides only the **auth** management group; it has no session, password, or account semantics.
+The module provides the **auth**, **account**, and **password** module types, but is almost always used in the **auth** group.
 
 # PARAMETERS
 
@@ -32,14 +32,14 @@ The module provides only the **auth** management group; it has no session, passw
 # EXAMPLES
 
 ```
-# /etc/pam.d/su — let root su to anyone without a password
+# /etc/pam.d/su: let root su to anyone without a password
 auth   sufficient   pam_rootok.so
 auth   required     pam_unix.so
 ```
 
 # CAVEATS
 
-Only useful in **auth** stacks. The module checks the real UID, so it relies on the calling process actually running as root. Misconfigured PAM stacks that place this module in the wrong service file can grant unintended privilege escalation.
+Mostly used in **auth** stacks; Linux-PAM also provides the **account** and **password** module types with the same UID check. The module checks the real UID, so it relies on the calling process actually running as root. Misconfigured PAM stacks that place this module in the wrong service file can grant unintended privilege escalation.
 
 # HISTORY
 
@@ -48,3 +48,11 @@ Only useful in **auth** stacks. The module checks the real UID, so it relies on 
 # SEE ALSO
 
 [pam](/man/pam)(8), [su](/man/su)(1), [pam_wheel](/man/pam_wheel)(8), [pam_unix](/man/pam_unix)(8)
+
+# RESOURCES
+
+```[Source code](https://github.com/linux-pam/linux-pam)```
+
+```[Documentation](https://man7.org/linux/man-pages/man8/pam_rootok.8.html)```
+
+<!-- verified: 2026-11-23 -->

@@ -12,6 +12,14 @@ Output **names** only
 
 ```vrms --sparse```
 
+Print nothing if **no non-free** packages are installed
+
+```vrms --quiet```
+
+Hide the **explanations** of why packages are non-free
+
+```vrms --noexplain```
+
 # SYNOPSIS
 
 **vrms** [_OPTIONS_]
@@ -21,17 +29,20 @@ Output **names** only
 **-s**, **--sparse**
 > Output only package names, suitable for piping to other tools.
 
-**-e**, **--explain**
-> Show why packages are considered non-free (current upstream packaging only — not present in older versions).
+**-e**, **--explain**, **--noexplain**
+> Show (default) or hide the reasons why packages are considered non-free, read from the reason directory.
 
 **-q**, **--quiet**
-> Suppress non-essential output.
+> Print nothing if no non-free or contrib packages are installed.
 
-**--help**
+**--reason-dir** _DIR_
+> Read the non-free reason files from _DIR_.
+
+**-d**, **--debug**
+> Print debug output; repeat for more detail.
+
+**-h**, **--help**
 > Display help information.
-
-**--version**
-> Display version information.
 
 # DESCRIPTION
 
@@ -41,12 +52,20 @@ The tool lists packages from non-free and contrib repositories along with their 
 
 # CAVEATS
 
-Debian-based systems only. Package classification depends on repository metadata. Some packages may be misclassified.
+Since **Debian 12** (bookworm) the tool ships as **check-dfsg-status**; Debian 11 is the last release with a **vrms** package. Debian-based systems only. Package classification depends on repository metadata. Some packages may be misclassified.
 
 # HISTORY
 
-**vrms** is named after Richard M. Stallman, founder of the Free Software Foundation, who advocates for software freedom.
+**vrms** was originally written by **Bdale Garbee** and **Bill Geddes** as a playful tool named after Richard M. Stallman, founder of the Free Software Foundation. It was renamed to **check-dfsg-status** following Debian bug #962696.
 
 # SEE ALSO
 
-[apt](/man/apt)(8), [dpkg](/man/dpkg)(1)
+[check-dfsg-status](/man/check-dfsg-status)(1), [apt](/man/apt)(8), [dpkg](/man/dpkg)(1)
+
+# RESOURCES
+
+```[Source code](https://salsa.debian.org/debian/check-dfsg-status)```
+
+```[Documentation](https://manpages.debian.org/bullseye/vrms/vrms.1.en.html)```
+
+<!-- verified: 2026-11-23 -->

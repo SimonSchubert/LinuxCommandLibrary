@@ -12,13 +12,25 @@ Command-line client for Atlassian Jira
 
 ```jira issue list```
 
-**Filter issues** by JQL
+**List issues** assigned to you that are in progress
 
-```jira issue list --jql "[project = PROJ AND status = Open]"```
+```jira issue list -a$(jira me) -s"[In Progress]"```
+
+**Filter issues** by raw JQL within the project
+
+```jira issue list -q "[summary ~ cli]"```
+
+**Print** issues as plain text for scripting
+
+```jira issue list --plain --no-headers```
 
 **Create an issue** interactively
 
 ```jira issue create```
+
+**Create an issue** non-interactively
+
+```jira issue create -t[Bug] -s"[Summary]" -b"[Description]" --no-input```
 
 **View an issue**
 
@@ -28,13 +40,17 @@ Command-line client for Atlassian Jira
 
 ```jira issue move [PROJ-123] "[In Progress]"```
 
-**Assign an issue** to a user
+**Assign an issue** to yourself
 
-```jira issue assign [PROJ-123] [username]```
+```jira issue assign [PROJ-123] $(jira me)```
 
 **Add a comment**
 
 ```jira issue comment add [PROJ-123] "[comment body]"```
+
+**List issues** in the current sprint
+
+```jira sprint list --current```
 
 **Open issue in browser**
 
@@ -64,6 +80,9 @@ Command-line client for Atlassian Jira
 **board**
 > List boards in a project.
 
+**release**
+> List project versions (releases).
+
 **me**
 > Show the currently authenticated user.
 
@@ -78,7 +97,7 @@ Command-line client for Atlassian Jira
 **-p**, **--project** _key_
 > Override the default project key for the current invocation.
 
-**--config** _file_
+**-c**, **--config** _file_
 > Path to a config file other than the default.
 
 **--debug**
@@ -91,15 +110,21 @@ Command-line client for Atlassian Jira
 
 **jira** (jira-cli) is an open-source command-line client for Atlassian Jira Cloud and Data Center. It provides interactive TUI flows for the common workflow operations (create, transition, comment) and JQL-driven listings suitable for piping into shell scripts.
 
-Authentication is handled via API tokens stored in **~/.config/.jira/.config.yml**. The tool supports multiple Jira instances, custom fields, and templates for issue creation.
+Connection settings are stored in **~/.config/.jira/.config.yml** and the API token is read from **JIRA_API_TOKEN**. The tool supports multiple Jira instances, custom fields, and templates for issue creation.
 
 # CONFIGURATION
 
 **~/.config/.jira/.config.yml**
-> Stores server URL, default project, user/email, and API token.
+> Stores server URL, installation type, login, default project, board and custom field metadata.
 
 **JIRA_API_TOKEN**
-> Environment variable that overrides the stored API token.
+> API token (Cloud), password (basic auth) or personal access token; can alternatively be supplied via **.netrc** or the system keychain.
+
+**JIRA_AUTH_TYPE**
+> Set to **bearer** to authenticate with a personal access token on Data Center/Server.
+
+**JIRA_CONFIG_FILE**
+> Alternative configuration file, like **--config**.
 
 # CAVEATS
 
@@ -107,8 +132,14 @@ Requires a Jira account and API token (Atlassian Cloud) or personal access token
 
 # HISTORY
 
-**jira-cli** was created by **Ankit Pokhrel** to provide a fast, scriptable interface to Jira from the terminal. The project is written in Go.
+**jira-cli** was created by **Ankit Pokhrel** in **2020** to provide a fast, scriptable interface to Jira from the terminal. It is written in **Go**.
 
 # SEE ALSO
 
 [gh](/man/gh)(1), [glab](/man/glab)(1), [git](/man/git)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/ankitpokhrel/jira-cli)```
+
+<!-- verified: 2026-11-23 -->

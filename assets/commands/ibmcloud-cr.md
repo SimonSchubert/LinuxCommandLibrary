@@ -4,29 +4,41 @@ manages IBM Cloud Container Registry
 
 # TLDR
 
-**Login to registry**
+**Log Docker in** to the registry
 
 ```ibmcloud cr login```
+
+**Log Podman in** to the registry
+
+```ibmcloud cr login --client podman```
+
+**Set the target region**
+
+```ibmcloud cr region-set [us-south]```
+
+**Create a namespace** in a resource group
+
+```ibmcloud cr namespace-add -g [resource_group] [namespace]```
 
 **List images**
 
 ```ibmcloud cr image-list```
 
-**Create namespace**
+**List images in one namespace** as repository:tag
 
-```ibmcloud cr namespace-add [namespace]```
+```ibmcloud cr image-list --restrict [namespace] -q```
 
-**Build image**
+**Show the vulnerability report** for an image
 
-```ibmcloud cr build -t [registry/namespace/image:tag] [.]```
+```ibmcloud cr va [us.icr.io/namespace/image:tag]```
 
-**Remove image**
+**Remove an image**
 
-```ibmcloud cr image-rm [image]```
+```ibmcloud cr image-rm [us.icr.io/namespace/image:tag]```
 
-**List namespaces**
+**Restore a deleted image** from the trash
 
-```ibmcloud cr namespace-list```
+```ibmcloud cr image-restore [us.icr.io/namespace/image@digest]```
 
 # SYNOPSIS
 
@@ -34,59 +46,81 @@ manages IBM Cloud Container Registry
 
 # PARAMETERS
 
-_COMMAND_
-> Container Registry command.
+**login** [**--client** _docker_|_podman_]
+> Log the local Docker or Podman client in to the registry (needed for push/pull).
 
-**login**
-> Log the local Docker daemon in to the IBM Cloud registry.
+**region-set** [_REGION_]
+> Target a registry region (e.g. _us-south_, _eu-de_, _jp-tok_, _global_); lists regions when run without an argument.
 
-**image-list**
-> List images in your account/namespaces.
-
-**image-rm** _IMAGE_
-> Remove one or more images from the registry.
-
-**image-tag** _SRC_ _DST_
-> Add a new tag to an existing image.
-
-**namespace-add** _NAME_
-> Create a namespace.
+**namespace-add** [**-g** _GROUP_] _NAME_
+> Create a namespace, optionally in a resource group.
 
 **namespace-list**
 > List namespaces in the targeted account.
 
 **namespace-rm** _NAME_
-> Delete a namespace (must be empty).
+> Delete a namespace and the images in it.
 
-**build** _CONTEXT_
-> Build a container image with IBM Cloud's remote builder and push the result.
+**image-list** (alias **images**)
+> List tagged images. **--restrict** limits to a namespace/repository, **-q** prints only repository:tag, **--no-trunc** shows full digests.
 
-**va** _IMAGE_
-> Show Vulnerability Advisor results for an image.
+**image-digests**
+> List all images, including untagged ones, with full digests.
 
-**quota**
-> Display storage and pull-traffic quota for the account.
+**image-inspect** _IMAGE_
+> Show details about an image.
 
-**region-set** _REGION_
-> Switch the registry region (e.g., _us-south_, _eu-de_, _jp-tok_).
+**image-tag** _SOURCE_ _TARGET_
+> Add a tag to an existing image.
+
+**image-untag** _IMAGE_
+> Remove a tag from an image.
+
+**image-rm** _IMAGE_...
+> Delete images; they move to the trash for 30 days.
+
+**image-prune-untagged**
+> Delete all untagged images.
+
+**trash-list**, **image-restore** _IMAGE_
+> List images in the trash and restore one.
+
+**vulnerability-assessment** (alias **va**) _IMAGE_...
+> Show the Vulnerability Advisor report for images.
+
+**retention-policy-set**, **retention-run**
+> Configure or run image retention to keep only the newest images per repository.
+
+**quota**, **quota-set**
+> Show or set storage and pull-traffic quotas.
+
+**plan**, **plan-upgrade**
+> Show or upgrade the registry service plan.
+
+**info**
+> Show the registry domain and account.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**ibmcloud cr** manages IBM Cloud Container Registry. It provides private Docker image storage and vulnerability scanning.
+**ibmcloud cr** is the IBM Cloud CLI plugin for **IBM Cloud Container Registry**, a managed private registry for OCI/Docker images. Images live in namespaces under a regional domain such as **us.icr.io** or **de.icr.io**, or the global **icr.io**.
 
-The tool handles namespaces, images, and registry authentication. It integrates with IBM Cloud Kubernetes Service.
+The plugin manages namespaces, images, tags, quotas, retention, and Vulnerability Advisor scans. Images themselves are pushed and pulled with **docker** or **podman** after **ibmcloud cr login**. It integrates with IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud.
 
 # CAVEATS
 
-Registry plugin required. Namespace quotas apply. Vulnerability scanning available.
-
-# HISTORY
-
-ibmcloud cr is the Container Registry plugin for **IBM Cloud** CLI.
+Requires the **container-registry** plugin (**ibmcloud plugin install container-registry**) and an **ibmcloud login**. The former **ibmcloud cr build** command was removed; build images locally and push them, or use a CI service. Namespace names must be unique within a region. Free plan quotas apply to storage and pull traffic.
 
 # SEE ALSO
 
-[ibmcloud](/man/ibmcloud)(1), [docker](/man/docker)(1), [ibmcloud-ks](/man/ibmcloud-ks)(1)
+[ibmcloud](/man/ibmcloud)(1), [docker](/man/docker)(1), [podman](/man/podman)(1), [ibmcloud-ks](/man/ibmcloud-ks)(1)
+
+# RESOURCES
+
+```[Homepage](https://www.ibm.com/products/container-registry)```
+
+```[Documentation](https://cloud.ibm.com/docs/Registry?topic=Registry-containerregcli)```
+
+<!-- verified: 2026-11-23 -->

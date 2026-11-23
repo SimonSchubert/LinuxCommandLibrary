@@ -20,13 +20,21 @@ network authentication protocol
 
 ```kpasswd```
 
-**Forward ticket**
+**Request a forwardable ticket** valid for 10 hours
 
-```kinit -f [principal]```
+```kinit -f -l [10h] [user@EXAMPLE.COM]```
 
 **Renew ticket**
 
 ```kinit -R```
+
+**Get a ticket from a keytab** (non-interactive, for services and scripts)
+
+```kinit -k -t [/path/to/file.keytab] [principal]```
+
+**List keys in a keytab**
+
+```klist -k [/etc/krb5.keytab]```
 
 # SYNOPSIS
 
@@ -46,14 +54,20 @@ Kerberos commands: **kinit**, **klist**, **kdestroy**, **kpasswd**
 **kpasswd**
 > Change Kerberos password.
 
-**-f**
-> Get forwardable ticket.
+**kinit -f**
+> Request a forwardable ticket (needed for delegation, e.g. SSH GSSAPI forwarding).
 
-**-R**
-> Renew existing ticket.
+**kinit -R**
+> Renew an existing renewable ticket.
 
-**-l** _LIFETIME_
-> Ticket lifetime.
+**kinit -l** _LIFETIME_
+> Requested ticket lifetime (e.g. **10h**, **1d**); capped by KDC policy.
+
+**kinit -k** [**-t** _KEYTAB_]
+> Authenticate with a key from a keytab instead of a password.
+
+**klist -k**
+> List the keys in a keytab instead of the credential cache.
 
 # DESCRIPTION
 
@@ -74,12 +88,22 @@ The user-facing CLI is built around four small commands: **kinit** (request a TG
 
 # CAVEATS
 
-Clocks between client, KDC, and target service must agree to within a few minutes (default skew: 5 minutes). DNS forward and reverse records must match the principal name; broken reverse DNS is the most common cause of `KRB_AP_ERR_BAD_INTEGRITY` and `Server not found in Kerberos database` errors.
+Clocks between client, KDC, and target service must agree to within a few minutes (default skew: 5 minutes), otherwise requests fail with **Clock skew too great**. Service principals are derived from host names, so wrong DNS names or mismatched reverse DNS commonly cause **Server not found in Kerberos database**. Realm names are case-sensitive and conventionally uppercase.
 
 # HISTORY
 
-Kerberos was developed at **MIT** as part of Project Athena in the late 1980s. **Kerberos v5** (RFC 4120) is the current standard; v4 is obsolete and removed from modern Linux distributions. The two interoperable implementations in widespread use are **MIT Kerberos** and **Heimdal**.
+Kerberos was developed at **MIT** as part of **Project Athena** in the 1980s; version 4 was published in 1989. **Kerberos v5** was first specified in RFC 1510 (1993) and is now defined by RFC 4120 (2005); v4 is obsolete and removed from modern Linux distributions. The two interoperable implementations in widespread use are **MIT Kerberos** and **Heimdal**.
 
 # SEE ALSO
 
 [kinit](/man/kinit)(1), [smbclient](/man/smbclient)(1), [ldapsearch](/man/ldapsearch)(1)
+
+# RESOURCES
+
+```[Homepage](https://web.mit.edu/kerberos/)```
+
+```[Source code](https://github.com/krb5/krb5)```
+
+```[Documentation](https://web.mit.edu/kerberos/krb5-latest/doc/)```
+
+<!-- verified: 2026-11-23 -->

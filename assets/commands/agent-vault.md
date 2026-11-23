@@ -4,25 +4,37 @@ HTTP credential proxy and vault for AI agents
 
 # TLDR
 
-**Start the vault server** and credential proxy (HTTP API + TLS proxy)
+**Start the vault server** in the background (prompts for the master password)
 
 ```agent-vault server -d```
 
-**Run an AI agent command** with transparent credential brokering
+**Start the server** non-interactively, reading the master password from stdin
 
-```agent-vault vault run -- [claude]```
+```echo "[password]" | agent-vault server --password-stdin -d```
 
-**Run any subprocess** through the credential proxy
-
-```agent-vault vault run -- [curl https://api.example.com]```
-
-**Stop the background** server daemon
+**Stop the background** server
 
 ```agent-vault server stop```
 
-**Check the version**
+**Log in** to a server from the CLI
 
-```agent-vault --version```
+```agent-vault login --address [http://127.0.0.1:14321]```
+
+**Store a credential** in the active vault
+
+```agent-vault vault credential set [ANTHROPIC_API_KEY]=[sk-ant-...]```
+
+**Run an AI agent** with transparent credential brokering
+
+```agent-vault run -- [claude]```
+
+**Run an agent** in an isolated container instead of on the host
+
+```agent-vault run --isolation container -- [claude]```
+
+**Print version** and build information
+
+```agent-vault version```
 
 # SYNOPSIS
 
@@ -30,53 +42,100 @@ HTTP credential proxy and vault for AI agents
 
 # PARAMETERS
 
-**server**
-> Start the HTTP API (default port **14321**) and the TLS-encrypted transparent HTTPS proxy (default port **14322**).
+**server** [_options_]
+> Start the server: HTTP API and web UI on port **14321**, transparent HTTP/HTTPS (MITM) proxy on port **14322**.
 
-**server** **-d**, **--daemon**
-> Run the server in the background as a daemon.
+**server -d**, **--detach**
+> Run the server in the background after unlocking.
+
+**server -p**, **--port** _PORT_
+> Port for the API/UI (default **14321**; also respects the **PORT** environment variable).
+
+**server --host** _HOST_
+> Address to bind to (default **127.0.0.1**).
+
+**server --mitm-port** _PORT_
+> Port for the transparent proxy (default **14322**; **0** disables it).
+
+**server --password-stdin**
+> Read the master password from stdin for non-interactive use.
+
+**server --database-url** _URL_
+> Use PostgreSQL instead of the default local SQLite database (also respects **DATABASE_URL**).
+
+**server --log-level** _LEVEL_
+> **info** (default) or **debug** for per-request proxy logs.
 
 **server stop**
-> Stop a running server daemon.
+> Stop a running server.
 
-**vault run** **--** _command_
-> Execute _command_ with credential brokering enabled. Automatically creates a scoped session, injects **HTTPS_PROXY** and CA-trust environment variables, and transparently proxies outgoing HTTPS requests.
+**login** [**--address** _URL_] [**--email** _EMAIL_]
+> Authenticate the CLI against a server with email and password.
 
-**--config** _FILE_
-> Use an alternative configuration file.
+**run** [_options_] **--** _command_ [_args_]
+> Wrap an agent process with Agent Vault access: creates a scoped session, sets **HTTPS_PROXY** and CA trust in the child's environment, and brokers credentials on outbound requests. Also available as **vault run**.
 
-**--port** _PORT_
-> Override the HTTP API port (default **14321**).
+**run --isolation** **host**|**container**
+> Run the agent directly on the host (default) or inside a Docker container with egress firewall rules.
 
-**--proxy-port** _PORT_
-> Override the HTTPS proxy port (default **14322**).
+**run --ttl** _SECONDS_
+> Session lifetime (300 to 604800; server default is 24h).
 
-**--version**
-> Print the Agent Vault version and exit.
+**run --vault** _NAME_
+> Target vault, overriding the active context.
 
-**--help**
-> Show help for Agent Vault or for a specific subcommand.
+**vault create** _NAME_
+> Create a new vault.
+
+**vault init**
+> Bind the current directory to a vault (writes **agent-vault.json**).
+
+**vault credential** **list**|**get**|**set**|**delete**
+> Manage credentials stored in a vault.
+
+**migrate-db --to** _URL_
+> Migrate existing data to a PostgreSQL database.
+
+**version**
+> Print the version and build information (**--version** also works).
 
 # DESCRIPTION
 
-**agent-vault** is an HTTP credential proxy and vault designed to keep secrets away from AI agents while still letting them call authenticated APIs. Instead of handing raw API keys or tokens to the agent process, Agent Vault runs the agent as a child process with **HTTPS_PROXY** pointed at a local TLS-terminating proxy. The proxy injects the correct credentials into outbound HTTPS requests for allowed destinations, so the agent never sees the secret itself.
+**agent-vault** is an HTTP credential proxy and vault designed to keep secrets away from AI agents while still letting them call authenticated APIs. Credentials (e.g. **ANTHROPIC_API_KEY**, a GitHub token) are stored in Agent Vault, and the agent is given dummy placeholder values such as **__anthropic_api_key__**. Outbound requests are routed through the proxy, which substitutes the real credentials or rewrites auth headers before forwarding to the target API, so the agent never holds the secret.
 
-The server exposes an HTTP API on port **14321** (where credentials, policies, and sessions are managed via a web UI) and a transparent HTTPS proxy on port **14322**. The **agent-vault vault run -- <command>** wrapper spawns a short-lived scoped session, sets **HTTPS_PROXY** and the proxy's CA certificate in the child's environment, and tears the session down when the command exits.
+A single binary acts as both server and CLI client. The server exposes a management web UI and API on port **14321** and a transparent proxy on port **14322** that handles **CONNECT** for HTTPS upstreams and forward-proxy requests for HTTP. Service rules control which hosts and endpoints each agent may reach, and authenticated traffic is logged. Requests not matching a service are forwarded as plain proxy traffic unless the vault is set to deny unmatched hosts.
 
-This reduces the blast radius of a compromised or misbehaving agent: even if the agent is tricked into exfiltration, it cannot leak credentials it never held.
+Agents connect using the **AGENT_VAULT_ADDR**, **AGENT_VAULT_TOKEN** and **AGENT_VAULT_VAULT** environment variables, or by being launched through **agent-vault run**.
 
 # CONFIGURATION
 
-The web UI at **http://localhost:14321** is used to register credentials, define which hosts an agent session may reach, and inspect session activity. The server persists state under a data directory (e.g. the Docker volume **agent-vault-data** at **/data**).
+**AGENT_VAULT_MASTER_PASSWORD**
+> Master password used to encrypt stored data; read once at startup and then unset from the process.
+
+**AGENT_VAULT_ADDR**, **AGENT_VAULT_TOKEN**, **AGENT_VAULT_VAULT**
+> Server address, agent token, and target vault for agents running against a remote Agent Vault.
+
+**DATABASE_URL**
+> PostgreSQL connection string for production or multi-instance deployments.
+
+The web UI at **http://localhost:14321** is used to create the owner account, vaults, credentials, service rules and agents. With Docker, state is kept in the **/data** volume.
 
 # CAVEATS
 
-Requires the agent to honor the **HTTPS_PROXY** environment variable and to trust the proxy's CA certificate; processes that bypass the proxy (e.g. via direct TCP or pinned certificates) will not benefit from credential brokering. The proxy terminates TLS locally, so traffic between the agent and the proxy is re-encrypted by Agent Vault rather than end-to-end to the remote host.
+The upstream repository now marks this standalone open-source project as **no longer recommended** for new setups; Infisical directs users to **Agent Vault in Infisical** instead. The agent must honor **HTTPS_PROXY** and trust the proxy's CA certificate; processes that bypass the proxy or pin certificates are not brokered. Upstream recommends running Agent Vault on a separate host from the agents and keeping the proxy port private to the agents' network.
 
 # HISTORY
 
-**agent-vault** is developed by **Infisical** as part of their focus on secrets management for AI workloads, addressing the risk of giving autonomous agents long-lived credentials.
+**agent-vault** was released as open source by **Infisical** in **2026**, written in **Go**. Its functionality has since been integrated into the Infisical platform, which is now the recommended way to run it.
 
 # SEE ALSO
 
 [vault](/man/vault)(1), [mitmproxy](/man/mitmproxy)(1), [curl](/man/curl)(1)
+
+# RESOURCES
+
+```[Source code](https://github.com/Infisical/agent-vault)```
+
+```[Documentation](https://docs.agent-vault.dev)```
+
+<!-- verified: 2026-11-23 -->
