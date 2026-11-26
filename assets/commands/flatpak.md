@@ -105,4 +105,4 @@ System-wide data is stored in $prefix/var/lib/flatpak/, while per-user data is i
 
 # SEE ALSO
 
-[flatpak-install](/man/flatpak-install)(1), [flatpak-uninstall](/man/flatpak-uninstall)(1), [flatpak-run](/man/flatpak-run)(1), [flatpak-info](/man/flatpak-info)(1), [flatpak-list](/man/flatpak-list)(1), [flatpak-ps](/man/flatpak-ps)(1), [flatpak-search](/man/flatpak-search)(1), [flatpak-override](/man/flatpak-override)(1), [ostree](/man/ostree)(1)
+[flatpak-install](/man/flatpak-install)(1), [flatpak-uninstall](/man/flatpak-uninstall)(1), [flatpak-run](/man/flatpak-run)(1), [flatpak-info](/man/flatpak-info)(1), [flatpak-list](/man/flatpak-list)(1), [flatpak-remotes](/man/flatpak-remotes)(1), [flatpak-ps](/man/flatpak-ps)(1), [flatpak-search](/man/flatpak-search)(1), [flatpak-override](/man/flatpak-override)(1), [ostree](/man/ostree)(1)

@@ -37,7 +37,7 @@ Manage GitHub pull requests from the command line
 > List pull requests.
 
 **checkout**
-> Check out a PR branch locally.
+> Check out a PR branch locally. **co** is an alias: **gh pr co**.
 
 **view**
 > View pull request details.

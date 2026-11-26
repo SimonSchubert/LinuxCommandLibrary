@@ -117,4 +117,4 @@ glab was created by **Clement Sam** and later became the official GitLab CLI. It
 
 # SEE ALSO
 
-[gh](/man/gh)(1), [git](/man/git)(1), [gitlab-runner](/man/gitlab-runner)(1)
+[gh](/man/gh)(1), [git](/man/git)(1), [glab-label](/man/glab-label)(1), [glab-variable](/man/glab-variable)(1), [gitlab-runner](/man/gitlab-runner)(1)

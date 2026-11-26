@@ -122,6 +122,10 @@ agav.md
 age-inspect.md
 age-keygen.md
 age.md
+agent-browse-mcp.md
+agent-eval-mcp.md
+agent-eval.md
+agent-first-browse.md
 agent-mcts.md
 agent-run.md
 agent-skills-eval.md
@@ -284,6 +288,7 @@ apptainer.md
 apropos.md
 apsw.md
 apt-add-repository.md
+apt-autoremove.md
 apt-cache.md
 apt-cdrom.md
 apt-clone.md
@@ -297,6 +302,7 @@ apt-key.md
 apt-list.md
 apt-mark.md
 apt-moo.md
+apt-remove.md
 apt-secure.md
 apt-sortpkgs.md
 apt.md
@@ -383,6 +389,8 @@ asdf.md
 aseqdump.md
 aseqnet.md
 ash.md
+asm-gpt-train.md
+asm-llm.md
 asn.md
 asn1parse.1s.md
 asnmap.md
@@ -860,6 +868,7 @@ brew-uninstall.md
 brew-update.md
 brew-upgrade.md
 brew.md
+brickie.md
 bridge.md
 brightnessctl.md
 briskdb.md
@@ -1420,6 +1429,7 @@ configure.md
 conjure.im6.md
 conky.md
 conntrack.md
+console-tty.md
 consolechars.md
 consul-kv.md
 consul.md
@@ -1450,6 +1460,7 @@ cosign.md
 cotp.md
 cotton.md
 couchdb.md
+counter-strike-1.6.md
 counter-strike-2.md
 countmail.md
 countryfetch.md
@@ -2464,6 +2475,7 @@ flatpak-mask.md
 flatpak-override.md
 flatpak-ps.md
 flatpak-remote-info.md
+flatpak-remotes.md
 flatpak-run.md
 flatpak-search.md
 flatpak-uninstall.md
@@ -2702,6 +2714,7 @@ gemtopbm.md
 gemtopnm.md
 genact.md
 gendesk.md
+genesis.md
 geneva.md
 genfstab.md
 genhtml.md
@@ -3048,6 +3061,7 @@ git.md
 gita.md
 gitbook.md
 gitea.md
+gitfold.md
 gitgres.md
 github-copilot-cli.md
 github-label-sync.md
@@ -3079,12 +3093,14 @@ gksudo.md
 glab-alias.md
 glab-auth.md
 glab-issue.md
+glab-label.md
 glab-mr-create.md
 glab-mr-merge.md
 glab-mr.md
 glab-pipeline.md
 glab-release.md
 glab-repo.md
+glab-variable.md
 glab.md
 gladtex.md
 glance.md
@@ -3299,9 +3315,11 @@ grub-install.md
 grub-mkconfig.md
 grub-mkdevicemap.md
 grub-mkfont.md
+grub-mkimage.md
 grub-mklayout.md
 grub-mkrelpath.md
 grub-mkrescue.md
+grub-mkstandalone.md
 grub-mount.md
 grub-probe.md
 grub-reboot.md
@@ -4401,6 +4419,7 @@ lebab.md
 ledctl.md
 ledger.md
 ledit.md
+left-4-dead-2.md
 lefthook.md
 lefty.md
 legionlinuxtui.md
@@ -5172,6 +5191,7 @@ nanomuse.md
 nanosleep.md
 nap.md
 napalm.md
+narayanastra.md
 nasm.md
 native-image.md
 nativefier.md
@@ -6483,6 +6503,7 @@ podman-rmi.md
 podman-run.md
 podman-save.md
 podman-tui.md
+podman-volume.md
 podman.md
 podselect.md
 poedit.md
@@ -6548,6 +6569,7 @@ posting.md
 postman.md
 postmap.md
 postqueue.md
+postvec.md
 potrace.md
 pots.md
 powerline.md
@@ -6646,6 +6668,7 @@ pproftui.md
 ppt.md
 pptp.md
 pptpsetup.md
+pqcrypta-proxy.md
 pqrs.md
 pqviewer.md
 pr-lens.md
@@ -7475,6 +7498,7 @@ scontrol.md
 scooter.md
 scour.md
 scout.md
+scp-secret-laboratory.md
 scp.md
 scrapy.md
 scrcpy.md
@@ -8390,6 +8414,7 @@ togglesebool.md
 toilet.md
 toipe.md
 tokei.md
+token-tv.md
 tokensift.md
 toktop.md
 tomb.md
@@ -8556,6 +8581,7 @@ twurl-authorize.md
 twurl.md
 tye.md
 type.md
+typec.md
 typeinc.md
 typeorm.md
 typer.md

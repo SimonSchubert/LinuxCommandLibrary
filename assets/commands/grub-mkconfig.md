@@ -69,4 +69,4 @@ This command must be run as root. The generated configuration depends on scripts
 
 # SEE ALSO
 
-[grub-install](/man/grub-install)(8), [update-grub](/man/update-grub)(8), [grub-set-default](/man/grub-set-default)(8)
+[grub-install](/man/grub-install)(8), [grub-mkimage](/man/grub-mkimage)(1), [grub-mkstandalone](/man/grub-mkstandalone)(1), [update-grub](/man/update-grub)(8), [grub-set-default](/man/grub-set-default)(8)

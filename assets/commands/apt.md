@@ -146,7 +146,7 @@ Intended for interactive use; for scripts, **apt-get** is recommended for more s
 <!-- packages: 2026-07-22 -->
 # SEE ALSO
 
-[apt-get](/man/apt-get)(8), [apt-cache](/man/apt-cache)(8), [dpkg](/man/dpkg)(1), [aptitude](/man/aptitude)(8)
+[apt-get](/man/apt-get)(8), [apt-cache](/man/apt-cache)(8), [apt-remove](/man/apt-remove)(8), [apt-autoremove](/man/apt-autoremove)(8), [dpkg](/man/dpkg)(1), [aptitude](/man/aptitude)(8)
 
 # RESOURCES
 
