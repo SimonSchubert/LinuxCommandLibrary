@@ -34,7 +34,7 @@ int main(int argc, char* argv[])
     };
 
     lclStart();
-    mark("kotlin runtime + index");
+    mark("command index");
 
     QQmlApplicationEngine engine;
     engine.addImageProvider(QStringLiteral("icons"), new IconProvider);

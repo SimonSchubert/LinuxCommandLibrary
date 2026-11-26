@@ -5,10 +5,11 @@
 #include <QString>
 #include <QVariantList>
 
+#include "LclCore.h"
+
 /**
- * Shared plumbing for the bridge models: a row count that is fetched on first use and
- * a reset helper. Counting lazily keeps asset parsing off the startup path for the
- * sections the user has not opened.
+ * Qt models over the content layer in LclCore. This base only holds the plumbing they
+ * share.
  */
 class LclListModel : public QAbstractListModel {
     Q_OBJECT
@@ -18,31 +19,16 @@ public:
 
     int rowCount(const QModelIndex& parent = QModelIndex()) const override
     {
-        if (parent.isValid())
-            return 0;
-        if (m_count < 0)
-            m_count = countNow();
-        return m_count;
+        return parent.isValid() ? 0 : count();
     }
 
 protected:
-    /** Current size according to the shared layer. Called once, then cached. */
-    virtual int countNow() const { return 0; }
+    virtual int count() const = 0;
 
     bool has(const QModelIndex& index) const
     {
         return index.isValid() && index.row() >= 0 && index.row() < rowCount();
     }
-
-    void resetTo(int count)
-    {
-        beginResetModel();
-        m_count = count;
-        endResetModel();
-    }
-
-private:
-    mutable int m_count = -1;
 };
 
 /**
@@ -57,10 +43,16 @@ public:
 
     using LclListModel::LclListModel;
 
+    QVariant data(const QModelIndex& index, int role) const override;
     QHash<int, QByteArray> roleNames() const override { return { { TitleRole, "title" } }; }
 
     /** Blocks of one row as [{kind, text}, ...], for a Repeater inside a card. */
-    Q_INVOKABLE virtual QVariantList blocksAt(int index) const = 0;
+    Q_INVOKABLE QVariantList blocksAt(int index) const;
+
+protected:
+    int count() const override { return int(m_items.size()); }
+
+    std::vector<lcl::Titled> m_items;
 };
 
 /** Rows are the current (optionally filtered) command list. */
@@ -71,7 +63,7 @@ class CommandsModel : public LclListModel {
 public:
     enum Roles { NameRole = Qt::UserRole + 1 };
 
-    using LclListModel::LclListModel;
+    explicit CommandsModel(QObject* parent = nullptr);
 
     QVariant data(const QModelIndex& index, int role) const override;
     QHash<int, QByteArray> roleNames() const override;
@@ -83,13 +75,14 @@ signals:
     void queryChanged();
 
 protected:
-    int countNow() const override;
+    int count() const override { return int(m_results.size()); }
 
 private:
     QString m_query;
+    std::vector<std::string> m_results;
 };
 
-/** Sections of one command, parsed by the shared MarkdownParser. */
+/** Sections of one command. */
 class SectionsModel : public TitledBlocksModel {
     Q_OBJECT
     Q_PROPERTY(QString command READ command WRITE setCommand NOTIFY commandChanged)
@@ -97,23 +90,17 @@ class SectionsModel : public TitledBlocksModel {
 public:
     using TitledBlocksModel::TitledBlocksModel;
 
-    QVariant data(const QModelIndex& index, int role) const override;
-    QVariantList blocksAt(int index) const override;
-
     QString command() const { return m_command; }
     void setCommand(const QString& command);
 
 signals:
     void commandChanged();
 
-protected:
-    int countNow() const override;
-
 private:
     QString m_command;
 };
 
-/** The basics categories, in the shared layer's own display order. */
+/** The basics categories, in display order. */
 class CategoriesModel : public LclListModel {
     Q_OBJECT
 
@@ -126,10 +113,10 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
 protected:
-    int countNow() const override;
+    int count() const override;
 };
 
-/** Groups of one basics category, rendered to Markdown by the shared layer. */
+/** Groups of one basics category. */
 class GroupsModel : public TitledBlocksModel {
     Q_OBJECT
     Q_PROPERTY(QString categoryId READ categoryId WRITE setCategoryId NOTIFY categoryIdChanged)
@@ -137,17 +124,11 @@ class GroupsModel : public TitledBlocksModel {
 public:
     using TitledBlocksModel::TitledBlocksModel;
 
-    QVariant data(const QModelIndex& index, int role) const override;
-    QVariantList blocksAt(int index) const override;
-
     QString categoryId() const { return m_categoryId; }
     void setCategoryId(const QString& id);
 
 signals:
     void categoryIdChanged();
-
-protected:
-    int countNow() const override;
 
 private:
     QString m_categoryId;
@@ -171,5 +152,5 @@ public:
     Q_INVOKABLE QVariantList blocksAt(int index) const;
 };
 
-/** Starts the Kotlin runtime and loads the command index. Call once, before the models. */
+/** Loads the command index. Call once, before the models. */
 void lclStart();

@@ -258,54 +258,15 @@ jobs:
           name: linux-tar-package
           path: LinuxCommandLibrary-linux-x86_64.tar.gz
 
-  # Kotlin/Native cannot run on linux-aarch64 hosts (only linux-x64, windows-x64,
-  # and macOS). Cross-compile both shared libraries here, same as cli-linux.
-  linux-gui-libs:
-    name: Build Linux Qt native libraries
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup JDK
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: "21"
-      - name: Set execution flag for gradlew
-        run: chmod +x gradlew
-      - name: Build Kotlin/Native shared libraries
-        run: |
-          ./gradlew :viewmodels:linkReleaseSharedLinuxX64 :viewmodels:linkReleaseSharedLinuxArm64 --stacktrace
-          test -f viewmodels/build/bin/linuxX64/releaseShared/liblcl.so
-          test -f viewmodels/build/bin/linuxX64/releaseShared/liblcl_api.h
-          test -f viewmodels/build/bin/linuxArm64/releaseShared/liblcl.so
-          test -f viewmodels/build/bin/linuxArm64/releaseShared/liblcl_api.h
-      - name: Upload linuxX64 native library
-        uses: actions/upload-artifact@v4
-        with:
-          name: liblcl-linux-x64
-          path: viewmodels/build/bin/linuxX64/releaseShared/
-      - name: Upload linuxArm64 native library
-        uses: actions/upload-artifact@v4
-        with:
-          name: liblcl-linux-arm64
-          path: viewmodels/build/bin/linuxArm64/releaseShared/
-
   # The x86_64 binary must be linked against Arch's Qt: Arch builds Qt with
   # -mno-direct-extern-access, and a binary linked against another distro's Qt
   # is rejected by Arch's loader (see aur/lcl-gui-bin/PKGBUILD).
   linux-gui-x64:
     name: Generate Linux Qt GUI (x86_64)
-    needs: [linux-gui-libs]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Download linuxX64 native library
-        uses: actions/download-artifact@v4
-        with:
-          name: liblcl-linux-x64
-          path: viewmodels/build/bin/linuxX64/releaseShared
       - name: Set execution flag for packager
         run: chmod +x scripts/package-linux-gui.sh
       - name: Build Qt GUI against Arch Qt
@@ -318,7 +279,7 @@ jobs:
             archlinux:latest \
             bash -lc 'set -euo pipefail
               pacman -Sy --noconfirm cmake ninja gcc qt6-base qt6-declarative qt6-svg
-              exec scripts/package-linux-gui.sh "$VERSION" x86_64 viewmodels/build/bin/linuxX64/releaseShared
+              exec scripts/package-linux-gui.sh "$VERSION" x86_64
             '
       - name: Upload Linux Qt GUI x86_64 Artifact
         uses: actions/upload-artifact@v4
@@ -328,16 +289,10 @@ jobs:
 
   linux-gui-arm64:
     name: Generate Linux Qt GUI (aarch64)
-    needs: [linux-gui-libs]
     runs-on: ubuntu-24.04-arm
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Download linuxArm64 native library
-        uses: actions/download-artifact@v4
-        with:
-          name: liblcl-linux-arm64
-          path: viewmodels/build/bin/linuxArm64/releaseShared
       - name: Set execution flag for packager
         run: chmod +x scripts/package-linux-gui.sh
       - name: Install Qt 6 and CMake
@@ -347,7 +302,7 @@ jobs:
       - name: Build and package Qt GUI
         run: |
           VERSION="${GITHUB_REF_NAME#v}"
-          scripts/package-linux-gui.sh "$VERSION" aarch64 viewmodels/build/bin/linuxArm64/releaseShared
+          scripts/package-linux-gui.sh "$VERSION" aarch64
       - name: Upload Linux Qt GUI aarch64 Artifact
         uses: actions/upload-artifact@v4
         with:

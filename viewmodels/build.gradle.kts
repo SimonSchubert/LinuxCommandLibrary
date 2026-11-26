@@ -32,15 +32,6 @@ kotlin {
     }
 
     listOf(
-        linuxX64(),
-        linuxArm64(),
-    ).forEach {
-        it.binaries.sharedLib {
-            baseName = "lcl"
-        }
-    }
-
-    listOf(
         iosArm64(),
         iosSimulatorArm64(),
     ).forEach {

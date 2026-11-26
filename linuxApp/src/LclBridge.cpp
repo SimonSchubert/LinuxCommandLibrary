@@ -1,47 +1,25 @@
 #include "LclBridge.h"
 
-#include "liblcl_api.h"
-
 namespace {
 
-liblcl_ExportedSymbols* lib()
+// Packages install the assets under /usr/share/lcl/assets; LCL_ASSETS_DIR overrides
+// that for development.
+lcl::Library& library()
 {
-    static liblcl_ExportedSymbols* symbols = liblcl_symbols();
-    return symbols;
-}
-
-// Every const char* the Kotlin side returns is owned by us and must be disposed.
-QString take(const char* value)
-{
-    if (!value)
-        return QString();
-    const QString result = QString::fromUtf8(value);
-    lib()->DisposeString(value);
-    return result;
-}
-
-auto& lclApi()
-{
-    return lib()->kotlin.root.com.linuxcommandlibrary.app.nativeapi.LclApi;
-}
-
-auto api()
-{
-    static auto instance = lclApi()._instance();
+    const QString dir = qEnvironmentVariable("LCL_ASSETS_DIR");
+    static lcl::Library instance(dir.isEmpty() ? "/usr/share/lcl/assets" : dir.toStdString());
     return instance;
 }
 
-// Blocks are fetched the same way for sections, groups and tips; only the three
-// accessors differ.
-template <typename Kind, typename Text>
-QVariantList collectBlocks(int count, Kind kind, Text text)
+QVariantList blocksOf(const std::vector<lcl::Titled>& items, int index)
 {
     QVariantList blocks;
-    blocks.reserve(count);
-    for (int i = 0; i < count; ++i) {
+    if (index < 0 || index >= int(items.size()))
+        return blocks;
+    for (const lcl::Block& block : items[index].blocks) {
         blocks.append(QVariantMap {
-            { QStringLiteral("kind"), take(kind(i)) },
-            { QStringLiteral("text"), take(text(i)) },
+            { QStringLiteral("kind"), QString::fromLatin1(block.kind) },
+            { QStringLiteral("text"), QString::fromStdString(block.text) },
         });
     }
     return blocks;
@@ -51,21 +29,36 @@ QVariantList collectBlocks(int count, Kind kind, Text text)
 
 void lclStart()
 {
-    lclApi().start(api());
+    library().commands();
+}
+
+// --- Titled rows: command sections and basics groups ---
+
+QVariant TitledBlocksModel::data(const QModelIndex& index, int role) const
+{
+    if (!has(index) || role != TitleRole)
+        return {};
+    return QString::fromStdString(m_items[index.row()].title);
+}
+
+QVariantList TitledBlocksModel::blocksAt(int index) const
+{
+    return blocksOf(m_items, index);
 }
 
 // --- Commands ---
 
-int CommandsModel::countNow() const
+CommandsModel::CommandsModel(QObject* parent)
+    : LclListModel(parent)
+    , m_results(library().commands())
 {
-    return lclApi().resultCount(api());
 }
 
 QVariant CommandsModel::data(const QModelIndex& index, int role) const
 {
     if (!has(index) || role != NameRole)
         return {};
-    return take(lclApi().resultName(api(), index.row()));
+    return QString::fromStdString(m_results[index.row()]);
 }
 
 QHash<int, QByteArray> CommandsModel::roleNames() const
@@ -78,59 +71,41 @@ void CommandsModel::setQuery(const QString& query)
     if (query == m_query)
         return;
     m_query = query;
-    lclApi().setQuery(api(), query.toUtf8().constData());
-    resetTo(lclApi().resultCount(api()));
+    beginResetModel();
+    m_results = library().search(query.toStdString());
+    endResetModel();
     emit queryChanged();
 }
 
 // --- Command sections ---
-
-int SectionsModel::countNow() const
-{
-    return lclApi().sectionCount(api());
-}
-
-QVariant SectionsModel::data(const QModelIndex& index, int role) const
-{
-    if (!has(index) || role != TitleRole)
-        return {};
-    return take(lclApi().sectionTitle(api(), index.row()));
-}
-
-QVariantList SectionsModel::blocksAt(int index) const
-{
-    return collectBlocks(
-        lclApi().sectionBlockCount(api(), index),
-        [index](int block) { return lclApi().sectionBlockKind(api(), index, block); },
-        [index](int block) { return lclApi().sectionBlockText(api(), index, block); });
-}
 
 void SectionsModel::setCommand(const QString& command)
 {
     if (command == m_command)
         return;
     m_command = command;
-    // The selection is pushed once here, so the row reads below are index-only.
-    lclApi().selectCommand(api(), command.toUtf8().constData());
-    resetTo(lclApi().sectionCount(api()));
+    beginResetModel();
+    m_items = library().sections(command.toStdString());
+    endResetModel();
     emit commandChanged();
 }
 
 // --- Basics categories ---
 
-int CategoriesModel::countNow() const
+int CategoriesModel::count() const
 {
-    return lclApi().categoryCount(api());
+    return int(library().categories().size());
 }
 
 QVariant CategoriesModel::data(const QModelIndex& index, int role) const
 {
     if (!has(index))
         return {};
+    const lcl::Category& category = library().categories()[index.row()];
     if (role == IdRole)
-        return take(lclApi().categoryId(api(), index.row()));
+        return QString::fromStdString(category.id);
     if (role == TitleRole)
-        return take(lclApi().categoryTitle(api(), index.row()));
+        return QString::fromStdString(category.title);
     return {};
 }
 
@@ -141,33 +116,14 @@ QHash<int, QByteArray> CategoriesModel::roleNames() const
 
 // --- Groups of a category ---
 
-int GroupsModel::countNow() const
-{
-    return lclApi().groupCount(api());
-}
-
-QVariant GroupsModel::data(const QModelIndex& index, int role) const
-{
-    if (!has(index) || role != TitleRole)
-        return {};
-    return take(lclApi().groupTitle(api(), index.row()));
-}
-
-QVariantList GroupsModel::blocksAt(int index) const
-{
-    return collectBlocks(
-        lclApi().groupBlockCount(api(), index),
-        [index](int block) { return lclApi().groupBlockKind(api(), index, block); },
-        [index](int block) { return lclApi().groupBlockText(api(), index, block); });
-}
-
 void GroupsModel::setCategoryId(const QString& id)
 {
     if (id == m_categoryId)
         return;
     m_categoryId = id;
-    lclApi().selectCategory(api(), id.toUtf8().constData());
-    resetTo(lclApi().groupCount(api()));
+    beginResetModel();
+    m_items = library().groups(id.toStdString());
+    endResetModel();
     emit categoryIdChanged();
 }
 
@@ -175,23 +131,22 @@ void GroupsModel::setCategoryId(const QString& id)
 
 int Tips::count() const
 {
-    return lclApi().tipCount(api());
+    return int(library().tips().size());
 }
 
 QString Tips::titleAt(int index) const
 {
-    return take(lclApi().tipTitle(api(), index));
+    const auto& tips = library().tips();
+    return index >= 0 && index < int(tips.size()) ? QString::fromStdString(tips[index].title) : QString();
 }
 
 int Tips::weightAt(int index) const
 {
-    return lclApi().tipWeight(api(), index);
+    const auto& tips = library().tips();
+    return index >= 0 && index < int(tips.size()) ? lcl::weight(tips[index]) : 0;
 }
 
 QVariantList Tips::blocksAt(int index) const
 {
-    return collectBlocks(
-        lclApi().tipBlockCount(api(), index),
-        [index](int block) { return lclApi().tipBlockKind(api(), index, block); },
-        [index](int block) { return lclApi().tipBlockText(api(), index, block); });
+    return blocksOf(library().tips(), index);
 }

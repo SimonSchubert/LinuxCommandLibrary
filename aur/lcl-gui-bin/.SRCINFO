@@ -9,7 +9,6 @@ pkgbase = lcl-gui-bin
 	depends = gcc-libs
 	depends = glibc
 	depends = hicolor-icon-theme
-	depends = libxcrypt-compat
 	depends = qt6-base
 	depends = qt6-declarative
 	depends = qt6-svg

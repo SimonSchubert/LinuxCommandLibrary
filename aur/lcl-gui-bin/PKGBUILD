@@ -12,8 +12,6 @@ depends=(
   'gcc-libs'
   'glibc'
   'hicolor-icon-theme'
-  # The Kotlin/Native runtime links libcrypt.so.1; Arch ships libcrypt.so.2.
-  'libxcrypt-compat'
   'qt6-base'
   'qt6-declarative'
   'qt6-svg'
@@ -45,7 +43,6 @@ package() {
     cd "${srcdir}/lcl-gui-${pkgver}"
 
     install -Dm755 bin/lcl-gui "${pkgdir}/usr/bin/lcl-gui"
-    install -Dm755 lib/liblcl.so "${pkgdir}/usr/lib/liblcl.so"
 
     install -dm755 "${pkgdir}/usr/share/lcl"
     cp -r share/lcl/assets "${pkgdir}/usr/share/lcl/assets"
