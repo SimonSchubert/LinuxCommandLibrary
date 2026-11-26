@@ -95,6 +95,22 @@ EXTRA_CANDIDATES: dict[str, list[str]] = {
 # Full install maps that replace resolver output (known collisions / enrichments).
 # Manager → package. Empty dict = force no INSTALL (do not auto-apply garbage).
 INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
+    "lssh": {},
+    "paccheck": {"pacman": "pacutils"},
+    "paccapability": {"pacman": "pacutils"},
+    "pacconf": {"pacman": "pacutils"},
+    "pacfile": {"pacman": "pacutils"},
+    "pacinfo": {"pacman": "pacutils"},
+    "pacini": {"pacman": "pacutils"},
+    "pacinstall": {"pacman": "pacutils"},
+    "paclock": {"pacman": "pacutils"},
+    "pacremove": {"pacman": "pacutils"},
+    "pacrepairdb": {"pacman": "pacutils"},
+    "pacrepairfile": {"pacman": "pacutils"},
+    "pacsync": {"pacman": "pacutils"},
+    "pacdiff": {"pacman": "pacman-contrib"},
+    "pactree": {"pacman": "pacman-contrib"},
+    "optimus-manager": {"aur": "optimus-manager-git"},
     "ip-maddress": {"apt": "iproute2", "pacman": "iproute2", "apk": "iproute2-minimal", "zypper": "iproute2", "brew": "iproute2", "nix": "iproute2"},
     "ip-monitor": {"apt": "iproute2", "pacman": "iproute2", "apk": "iproute2-minimal", "zypper": "iproute2", "brew": "iproute2", "nix": "iproute2"},
     "ip-route": {"apt": "iproute2", "pacman": "iproute2", "apk": "iproute2-minimal", "zypper": "iproute2", "brew": "iproute2", "nix": "iproute2"},
@@ -135,8 +151,21 @@ INSTALL_OVERRIDES: dict[str, dict[str, str]] = {
     "graf": {},
     # gat: brew/nix/AUR "gat" is koki-develop/gat (cat alternative), not getgat-dev/gat
     "gat": {},
+    # aws-emulator: prefix inherit from aws → aws-cli; official install is AWS's own packages
+    "aws-emulator": {},
+    # aq: AUR "aq" is rossmacarthur/aq (jq for JSON/TOML/YAML), not nodo-labs-uk/attention-queue
+    "aq": {},
+    # cosh: nixpkgs "cosh" is tomhrr/cosh (concatenative shell), not DiegoZaluski/co-sh
+    "cosh": {},
     # cells: AUR "cells" is FlorianFe/Cells (Game of Life), not kborer/cells (terminal-cells)
     "cells": {},
+    # stellar: apt seqan-apps and AUR fastmonkeys/stellar are different tools.
+    # The Stellar network CLI formula is stellar-cli; the binary is stellar.
+    "stellar": {"brew": "stellar-cli"},
+    # gh-profiler is not a gh subcommand; prefix inherit would install GitHub CLI.
+    "gh-profiler": {},
+    # pulsar: Debian maps the name to odin. This page is yocontra/pulsar, not that binary.
+    "pulsar": {},
     # gauge: brew/nix "gauge" is ThoughtWorks Gauge (gauge.org), not @withgauge/cli
     "gauge": {},
     # vp: brew alias vp → vite-plus; AUR/nix "vp" are Virtual Pascal / erikg slideshow
